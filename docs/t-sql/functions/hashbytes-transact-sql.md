@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aeb87d4408f1fbe1ba269d8373e8cc648efba55e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4364afdd649fe91f5e779170d9f80a4071118ea0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65948378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145411"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,19 +47,19 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
   
  **@input**  
- 指定包含要对其执行哈希操作的数据的变量。 @input 为 varchar、nvarchar 或 varbinary。  
+ 指定包含要对其执行哈希操作的数据的变量。 @input 为 varchar、nvarchar 或 varbinary     。  
   
  **'** input **'**   
  指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
   
  输出符合算法标准：MD2、MD4 和 MD5 为 128 位（16 个字节）；SHA 和 SHA1 为 160 位（20 个字节）；SHA2_256 为 256 位（32 个字节），SHA2_512 为 512 位（64 个字节）。  
   
-适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
   
  对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更早版本，允许的输入值限制为 8000 个字节。  
   
 ## <a name="return-value"></a>返回值  
- varbinary（最大 8000 个字节）  
+ varbinary（最大 8000 个字节）   
 
 ## <a name="remarks"></a>Remarks  
 请考虑使用 `CHECKSUM` 或 `BINARY_CHECKSUM` 作为替代方案，以计算哈希值。
@@ -68,7 +68,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  
- 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA1` 哈希值。  
+ 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA1` 哈希值  。  
   
 ```sql  
 DECLARE @HashThis nvarchar(4000);  
@@ -97,8 +97,7 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-[CHECKSUM_AGG (Transact-SQL)](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)  
-[BINARY_CHECKSUM  (Transact-SQL)](../../t-sql/functions/binary-checksum-transact-sql.md)  
-  
+[选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+[CHECKSUM_AGG &#40;TRANSACT-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

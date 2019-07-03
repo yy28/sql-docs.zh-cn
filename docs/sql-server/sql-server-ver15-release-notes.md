@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 发行说明 | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: e8f54884f7f4338ce7cea4556fc59b4778b4c978
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166370"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400096"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 预览版发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "67166370"
 本文介绍 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 社区技术预览 (CTP) 版本的限制和已知问题。 若要了解相关信息，请参阅：
 - [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name="ctp-30"></a>CTP 3.0
+## <a name="ctp-31"></a>CTP 3.1
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公开版本。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公开版本。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 仅以评估版形式提供。 不提供任何其他版本。 
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 仅以评估版形式提供。 不提供任何其他版本。
 
 有关 CTP 版本的支持和许可的完整详情可在安装介质的 `license_Eval.rtf` 中查看。
 
@@ -68,11 +68,11 @@ ms.locfileid: "67166370"
 
 ## <a name="updated-compiler"></a>更新后的编译器
 
-- **问题及其对客户的影响**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是通过更新后的编译器构建的。 CTP 2.1 具有一项已知问题，即浮点和其他转换方案的结果可能因更新后的编译器而返回与先前版本不同的值。 CTP 2.2 内附可确保受影响的方案与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 先前版本返回相同结果的任务。 自 CTP 3.0 版本起，已解决所有历史问题。 请将与 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] 比较得出的所有结果异常立即报告给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](http://aka.ms/sqlfeedback)。
+- **问题及其对客户的影响**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是通过更新后的编译器构建的。 CTP 2.1 具有一项已知问题，即浮点和其他转换方案的结果可能因更新后的编译器而返回与先前版本不同的值。 CTP 2.2 内附可确保受影响的方案与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 先前版本返回相同结果的任务。 自 CTP 3.1 版本起，已解决所有历史问题。 请将与 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] 比较得出的所有结果异常立即报告给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](http://aka.ms/sqlfeedback)。
 
 - **解决方法**：N/A
 
-- **适用对象**：SQL Server 2019 CTP 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **适用对象**：SQL Server 2019 CTP 3.1、CTP 3.0, CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>安装向导可能会在 EULA 页面之间等待
 
@@ -95,25 +95,30 @@ ms.locfileid: "67166370"
  
 - **解决方法**：没有针对 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 的解决方法。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1 和 CTP 2.0。
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
-### <a name="loading-enclave-fails"></a>无法加载 enclave
-
-- **问题及其对客户的影响**：无法为 Always Encrypted 加载 enclave，并且错误日志中捕获了以下消息：`Internal enclave error: Cannot initialize the 1 enclave`。
-
-- **解决方法**：无。 已为 CTP 3.1 计划解决方案。
-
-- **适用对象**：CTP 3.0
-
-### <a name="rich-computations-performance"></a>丰富的计算性能
-
-- **问题及其对客户的影响**：富计算正在等待多项性能优化，包括有限的功能（无索引等），并且当前默认处于禁用状态。
+- **问题及其对客户的影响**：富计算将挂起性能优化和错误处理增强，默认当前已禁用。
 
 - **解决方法**：若要启用富计算，请运行 `DBCC traceon(127,-1)`。 有关详细信息，请参阅[启用富计算](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、2.2 和 CTP 2.1、2.0。
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
+
+## <a name="sql-server-configuration-manager-may-not-start"></a>SQL Server 配置管理器可能无法启动
+
+- **问题及其对客户的影响**：SQL Server 配置管理器 (SSCM) 无法在没有 VCRuntime 140 的计算机上启动。 启动 SSCM 时，用户可能会看到下面的对话框： 
+
+  `
+  MMC could not create the snap-in. The snap-in might not have been installed correctly.
+  `
+
+- **解决方法**：安装最新的 VC 运行时 2013 (x86)：
+
+  - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+  - [直接](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

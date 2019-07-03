@@ -13,11 +13,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661114"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "52526524"
 ## <a name="prerequisites"></a>必备条件
 
 - 在数据库中配置始终加密。 这涉及为选定数据库列预配始终加密密钥和设置加密。 如果还没有配置了始终加密的数据库，请按照 [始终加密入门](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5)中的说明操作。
-- 确保在开发计算机上安装 .NET Framework 4.6 版或更高版本。 有关详细信息，请参阅 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)。 还需确保将 .NET Framework 4.6 版或更高版本配置为开发环境中的目标 .NET Framework 版本。 如果使用的是 Visual Studio，请参考 [如何：面向 .NET Framework 的某个版本](https://msdn.microsoft.com/library/bb398202.aspx)。 
+- 确保在开发计算机上安装 .NET Framework 4.6 版或更高版本。 有关详细信息，请参阅 [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx)。 还需确保将 .NET Framework 4.6 版或更高版本配置为开发环境中的目标 .NET Framework 版本。 如果使用的是 Visual Studio，请参阅[如何：面向 .NET Framework 的某个版本](https://msdn.microsoft.com/library/bb398202.aspx)。 
 
 > [!NOTE]
 > 特定 .NET Framework 版本对始终加密的支持级别有所不同。 有关详细信息，请参阅下面的“始终加密 API 参考”一节。 
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>为应用程序查询启用始终加密
-若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将“列加密设置”连接字符串关键字的值设置为“已启用”。
+若要对参数启用加密，以及对面向加密列的查询结果启用解密，最简单的方法是将“列加密设置”连接字符串关键字的值设置为“已启用”  。
 
 以下是启用始终加密的连接字符串示例：
 ```
@@ -282,7 +282,7 @@ cmd.ExecuteNonQuery();
 | 类 | 描述 | 提供程序（查找）名称 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 类| 用于 Windows 证书存储的提供程序。 | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注意：** 此提供程序在 .NET Framework 4.6.1 及更高版本中可用。 |用于支持 [Microsoft 加密 API：下一代 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)的密钥存储的提供程序。 这类存储通常是硬件安全模块 — 一种用于保护和管理数字密钥并提供加密处理的物理设备。  | MSSQL_CNG_STORE|
+|[SqlColumnEncryptionCngProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注意：** 此提供程序在 .NET Framework 4.6.1 及更高版本中可用。 |用于支持 [Microsoft 加密 API：下一代 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx) 的密钥存储的提供程序。 这类存储通常是硬件安全模块 — 一种用于保护和管理数字密钥并提供加密处理的物理设备。  | MSSQL_CNG_STORE|
 | [SqlColumnEncryptionCspProvider 类](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**注意：** 此提供程序在 .NET Framework 4.6.1 或更高版本中可用。| 用于支持 [Microsoft 加密 API (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx)的密钥存储的提供程序。 这类存储通常是硬件安全模块 — 一种用于保护和管理数字密钥并提供加密处理的物理设备。| MSSQL_CSP_PROVIDER |
   
 你无需对应用程序代码进行任何更改便可使用这些提供程序，但请注意以下事项：
@@ -378,7 +378,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 在 .NET Framework 4.6.2 和更高版本中，用于 SQL Server 的 .NET Framework 数据提供程序会为每个查询语句缓存 **sys.sp_describe_parameter_encryption** 的结果。 因此，如果多次执行相同查询语句，则驱动程序仅调用 **sys.sp_describe_parameter_encryption** 一次。 查询语句的加密元数据缓存大大减少了从数据库提取元数据的性能开销。 缓存默认为启用状态。 可以通过将  [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled 属性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) 设置为 false 来禁用参数元数据缓存，但是不建议这样做，除非是在如下所述的极少数情况下：
 
-请考虑一个具有两个不同架构的数据库：s1 和 s2。 每个架构都包含一个具有相同名称的表：t。 s1.t 和 s2.t 表的定义是相同的，除了与加密相关的属性：s1.t 中名为 c 的列未加密，而该列在 s2.t 中进行了加密。 该数据库具有两个用户：u1 和 u2。 u1 用户的默认架构是 s1。 u2 的默认架构是 s2。 一个 .NET 应用程序打开与该数据库之间的两个连接，在一个连接上模拟 u1 用户，在另一个连接上模拟 u2 用户。 该应用程序在用于用户 u1 的连接上发送具有面向 c 列的参数的查询（该查询未指定架构，因此采用默认用户架构）。 接下来，该应用程序在用于 u2 用户的连接上发送相同查询。 如果启用了查询元数据缓存，则在第一个查询之后，缓存会使用指示 c 列（查询参数目标）未加密的元数据进行填充。 因为第二个查询具有相同的查询语句，所以会使用存储在缓存中的信息。 因此，驱动程序会在未加密参数的情况下发送查询（这是不正确的，因为目标列 s2.t.c 进行了加密），从而向服务器泄露参数的纯文本值。 服务器会检测该不兼容行，会强制驱动程序刷新缓存，因此该应用程序会以透明方式重新发送具有正确加密的参数值的查询。 在这种情况下，应禁用缓存以防止向服务器泄露敏感值。 
+请考虑一个具有两个不同架构的数据库：s1 和 s2。 每个架构都包含一个具有相同名称的表：t。 除与加密相关的属性外，S1.t 和 s2.t 表的定义是相同的：名为 c 的列，在 s1.t 中未加密，在 s2.t 中已加密。 该数据库具有两个用户：u1 和 u2。 u1 用户的默认架构是 s1。 u2 的默认架构是 s2。 一个 .NET 应用程序打开与该数据库之间的两个连接，在一个连接上模拟 u1 用户，在另一个连接上模拟 u2 用户。 该应用程序在用于用户 u1 的连接上发送具有面向 c 列的参数的查询（该查询未指定架构，因此采用默认用户架构）。 接下来，该应用程序在用于 u2 用户的连接上发送相同查询。 如果启用了查询元数据缓存，则在第一个查询之后，缓存会使用指示 c 列（查询参数目标）未加密的元数据进行填充。 因为第二个查询具有相同的查询语句，所以会使用存储在缓存中的信息。 因此，驱动程序会在未加密参数的情况下发送查询（这是不正确的，因为目标列 s2.t.c 进行了加密），从而向服务器泄露参数的纯文本值。 服务器会检测该不兼容行，会强制驱动程序刷新缓存，因此该应用程序会以透明方式重新发送具有正确加密的参数值的查询。 在这种情况下，应禁用缓存以防止向服务器泄露敏感值。 
 
 
 
@@ -392,11 +392,11 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 若要控制单个查询的始终加密行为，需使用 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 的此构造函数和 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)。 下面是一些有用的指导原则：
 - 如果客户端应用程序通过数据库连接发送的大多数查询访问的是加密列，则可执行以下操作：
-    - 将“列加密设置”连接字符串关键字设置为“已启用”。
+    - 将“列加密设置”  连接字符串关键字设置为“已启用”  。
     - 对于不访问任何加密列的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Disabled**。 这将禁止调用 sys.sp_describe_parameter_encryption，同时禁止尝试对结果集中的任何值解密。
     - 对于其参数不需要加密但会从加密列检索数据的单个查询，则设置 **SqlCommandColumnEncryptionSetting.ResultSet** 。 这将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 - 如果客户端应用程序通过数据库连接发送的大多数查询不访问加密列，则可执行以下操作：
-    - 将“列加密设置”连接字符串关键字设置为“已禁用”。
+    - 将“列加密设置”  连接字符串关键字设置为“已禁用”  。
     - 对于有参数需要加密的单个查询，则设置 **SqlCommandColumnEncryptionSetting.Enabled**。 这将允许调用 sys.sp_describe_parameter_encryption，同时允许对从加密列中检索到的任何查询结果解密。
     - 对于其参数不需要加密但会从加密列检索数据的查询，则设置 **SqlCommandColumnEncryptionSetting.ResultSet** 。 这将禁止调用 sys.sp_describe_parameter_encryption 和参数加密。 查询将能够解密来自加密列的结果。
 
@@ -446,7 +446,7 @@ connection, null, SqlCommandColumnEncryptionSetting.ResultSetOnly))
 
 ## <a name="enabling-additional-protection-for-a-compromised-sql-server"></a>对遭到入侵的 SQL Server 启用附加保护
 
-默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序依赖于数据库系统（SQL Server 或 Azure SQL 数据库）来提供有关数据库中的哪些列进行加密以及如何加密的元数据。 加密元数据使用于 SQL Server 的 .NET Framework 数据提供程序可以加密查询参数并解密查询结果，而无需从应用程序进行任何输入，从而大大减少了应用程序中所需的更改量。 但是，如果 SQL Server 进程遭到入侵，并且攻击者篡改 SQL Server 发送给用于 SQL Server 的 .NET Framework 数据提供程序的元数据，则攻击者可能能够窃取敏感信息。 本部分介绍可帮助针对这种类型的攻击提供附加保护级别（以降低透明度为代价）的 API。 
+默认情况下，用于 SQL Server 的 .NET Framework 数据提供程序  依赖于数据库系统（SQL Server 或 Azure SQL 数据库）来提供有关数据库中的哪些列进行加密以及如何加密的元数据。 加密元数据使用于 SQL Server 的 .NET Framework 数据提供程序可以加密查询参数并解密查询结果，而无需从应用程序进行任何输入，从而大大减少了应用程序中所需的更改量。 但是，如果 SQL Server 进程遭到入侵，并且攻击者篡改 SQL Server 发送给用于 SQL Server 的 .NET Framework 数据提供程序的元数据，则攻击者可能能够窃取敏感信息。 本部分介绍可帮助针对这种类型的攻击提供附加保护级别（以降低透明度为代价）的 API。 
 
 ### <a name="forcing-parameter-encryption"></a>强制实施参数加密 
 
@@ -542,7 +542,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>始终加密 API 参考
 
-**命名空间：**[System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**命名空间:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
 
 **程序集：** System.Data（在 System.Data.dll 中）
 
@@ -571,7 +571,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 - [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [始终加密博客](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-- [SQL 数据库教程：使用始终加密保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [SQL 数据库教程：使用 Always Encrypted 保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 
 

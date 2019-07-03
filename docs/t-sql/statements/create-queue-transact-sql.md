@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503240"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232556"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|消息的唯一标识符。|  
   
 ## <a name="permissions"></a>权限  
- db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建队列的权限。  
+ `db_ddladmin` 或 `db_owner` 固定数据库角色或 `sysadmin` 固定服务器角色的成员拥有创建队列的权限。  
   
- 默认情况下，队列所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有队列的 REFERENCES 权限。  
+ 默认情况下，队列所有者、`db_ddladmin` 或 `db_owner` 固定数据库角色的成员或 `sysadmin` 固定服务器角色的成员拥有队列的 `REFERENCES` 权限。  
   
- 默认情况下，队列所有者、db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员具有队列的 RECEIVE 权限。  
+ 默认情况下，队列所有者、`db_owner` 固定数据库角色的成员或 `sysadmin` 固定服务器角色的成员具有队列的 `RECEIVE` 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. 不使用参数创建队列  
  下面的示例创建一个可用于接收消息的队列。 没有为该队列指定激活存储过程。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. 创建不可用队列  
  以下示例创建了一个不可用于接收消息的队列。 没有为该队列指定激活存储过程。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. 创建队列并指定内部激活信息  
  下面的示例创建一个可用于接收消息的队列。 消息进入队列时，队列将启动存储过程 `expense_procedure`。 该存储过程以用户 `ExpenseUser` 的身份执行。 该队列最多启动存储过程的 `5` 个实例。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. 在特定文件组中创建一个队列  
  以下示例将在文件组 `ExpenseWorkFileGroup` 中创建一个队列。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. 创建具有多个参数的队列  
  以下示例在 `DEFAULT` 文件组中创建一个队列。 该队列不可用。 消息被保留在队列中，直到消息所属的会话结束。 通过 ALTER QUEUE 启用队列后，该队列将启动存储过程 `2008R2.dbo.expense_procedure` 来处理消息。 此存储过程以运行 `CREATE QUEUE` 语句的用户的身份执行。 该队列最多启动存储过程的 `10` 个实例。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e15b2614b64b6c5161e8648574f88700d4fd6d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797035"
 ---
 # <a name="mssqlserver802---database-engine-error"></a>MSSQLSERVER_802 - 数据库引擎错误
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47787398"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Memory Manager** 的性能监视器计数器。  
+2.  开始收集以下内容的性能监视器计数器：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:Buffer Manager、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  :Memory Manager  。  
   
 3.  检查下面的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存配置参数：  
   

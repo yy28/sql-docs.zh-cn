@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c035ee265f913a91f49b7c9b3c9e5c562ab1477a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043276"
 ---
 # <a name="republish-data"></a>重新发布数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47823525"
   
  ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
   
- 任何服务器都既可用作发布服务器又可用作订阅服务器。 例如，考虑一下下面这个关系图：表的发布位于伦敦，且必须分发到美国四个不同的城市，即芝加哥、纽约、圣地亚哥和西雅图。 之所以选择位于纽约的服务器来订阅源于伦敦的已发布表，是因为纽约的站点满足下列条件：  
+ 任何服务器都既可用作发布服务器又可用作订阅服务器。 例如，请考虑下面这个关系图，其中表的发布位于伦敦，且必须分发到美国四个不同的城市：芝加哥、纽约、圣地亚哥和西雅图。 之所以选择位于纽约的服务器来订阅源于伦敦的已发布表，是因为纽约的站点满足下列条件：  
   
 -   返回伦敦的网络链接相对可靠。  
   

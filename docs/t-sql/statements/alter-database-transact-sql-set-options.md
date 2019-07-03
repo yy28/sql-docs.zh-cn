@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826933"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313983"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -2897,49 +2897,45 @@ SET QUERY_STORE = ON
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
 
-> [!NOTE]
-> 可以使用 [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) 来为当前会话配置很多数据库 SET 选项，当它们连接时通常通过应用程序来配置。 会话级 SET 选项覆盖 **ALTER DATABASE SET** 值。 下面所述的数据库选项是可以为未明确提供其他 SET 选项值的会话设置的值。
-
 ## <a name="syntax"></a>语法
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>参数
 
-database_name  要修改的数据库的名称。
+*database_name*
 
-**\<auto_option> ::=**
+要修改的数据库的名称。
 
-控制自动选项。
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+适用于 Azure SQL 数据仓库（预览）
 
-权限 - 需要以下权限  ：
+连接到 `master` 数据库时，必须运行此命令。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 在你为数据库禁用结果缓存后，以前保留的结果缓存会立即从 Azure SQL 数据仓库存储中删除。 `sys.databases` 中引入了新列 is_result_set_caching_on，用于显示数据库的结果缓存设置。  
 
-- 服务器级别主体登录名（由预配进程创建），或者
-- `dbmanager` 数据库角色的成员。
+ON   
+指定要在 Azure SQL 数据仓库存储中缓存从此数据库返回的查询结果集。
 
-数据库所有者无法更改数据库，除非所有者是 dbmanager 角色的成员。
-
-> [!Note]
-> 虽然此功能正在推广到所有区域，但请检查部署到实例的版本以及最新的 [Azure SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)以了解功能可用性。
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } 仅适用于 Azure SQL 数据仓库 Gen2（预览版）此命令必须在连接到主数据库时运行。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 禁用数据库的结果缓存后，以前保留的结果缓存将立即从 Azure SQL 数据仓库存储中删除。 名为 is_result_set_caching_on 的新列被引入到 sys.databases 中，以显示数据库的结果缓存设置。  
-
-ON 指定从该数据库返回的查询结果集将在 Azure SQL 数据仓库存储中缓存。
-
-OFF 指定从该数据库返回的查询结果集不会在 Azure SQL 数据仓库存储中缓存。
-用户可以通过使用特定的 request_id 查询 sys.pdw_request_steps 来了解所执行的查询的结果缓存命中或失误。   如果存在缓存命中，查询结果将具有包含以下详细信息的单个步骤：
+OFF   
+指定不在 Azure SQL 数据仓库存储中缓存从此数据库返回的查询结果集。 用户可以通过使用特定的 request_id 查询 sys.pdw_request_steps 来了解所执行的查询的结果缓存命中或失误。   如果存在缓存命中，查询结果将具有包含以下详细信息的单个步骤：
 
 |**列名** |**“运算符”** |**ReplTest1** |
 |----|----|----|
@@ -2948,6 +2944,25 @@ OFF 指定从该数据库返回的查询结果集不会在 Azure SQL 数据仓�
 |location_type|=|Control|
 command|Like|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Remarks
+
+如果满足以下所有要求，则会为查询重用缓存的结果集：
+
+1. 执行查询的用户可以访问该查询中引用的所有表。
+1. 新查询与生成结果集缓存的上一个查询之间存在完全匹配。
+1. 生成缓存结果集的表中没有任何数据或架构更改。  
+
+数据库启用结果集缓存之后，将缓存所有查询（DateTime.Now() 等具有非确定性函数的查询除外）的结果，直到缓存已满。   在创建结果缓存时，具有大型结果集（例如，大于 1 百万行）的查询在第一次运行期间可能会遇到性能降低。
+
+## <a name="permissions"></a>权限
+
+需要以下权限：
+
+- 服务器级别主体登录名（由预配进程创建），或者
+- `dbmanager` 数据库角色的成员。
+
+数据库所有者无法更改数据库，除非所有者是 dbmanager 角色的成员。
 
 ## <a name="examples"></a>示例
 

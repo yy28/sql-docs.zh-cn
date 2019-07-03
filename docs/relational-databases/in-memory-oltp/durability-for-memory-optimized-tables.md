@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047731"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e2bf0ddde51d69567393a77b18a1f72478101b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6a8832f60ae4552b825dd5d0845b15592dc58b7
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145495"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314052"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -52,7 +52,7 @@ ms.locfileid: "67145495"
 
 为 PolyBase 查询创建外部数据源。 外部数据源用于建立连接以及支持以下这些用例：
 
-- 使用 [PolyBase][intro_pb] 进行数据虚拟化和数据加载
+- 使用 [PolyBase][intro_pb] 执行数据虚拟化和数据加载
 - 使用 `BULK INSERT` 或 `OPENROWSET` 大容量加载操作
 
 适用范围：  SQL Server 2016 或更高版本
@@ -117,7 +117,7 @@ WITH
 
 驱动程序的名称是必需的（最基本的要求），但设置其他选项（例如 `APP='<your_application_name>'` 或 `ApplicationIntent= ReadOnly|ReadWrite`）也很有用，可以帮助进行故障排除。
 
-有关允许的 [CONNECTION_OPTIONS][connection_options] 列表，请参阅 `ODBC` 产品文档
+请参阅 `ODBC` 产品文档，获取允许的 [CONNECTION_OPTIONS][connection_options] 列表
 
 ### <a name="pushdown--on--off"></a>PUSHDOWN = 打开 | 关闭 
 
@@ -148,7 +148,7 @@ WITH
 指定要配置的外部数据源的类型。 此参数并非总是必需的。
 
 - 如果外部数据源是 Cloudera、Hortonworks、Azure Blob 存储，请使用 HADOOP。
-- 在使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 对 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
+- 在使用 [BULK INSERT][bulk_insert] , or [OPENROWSET][openrowset] 和 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
@@ -318,7 +318,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作
 
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-对使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
+对使用 [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -337,7 +337,7 @@ WITH
 ;
 ```
 
-若要查看正在使用的示例，请参阅 [BULK INSERT][bulk_insert_example]。
+若要查看这一使用中的示例，请参阅 [BULK INSERT][bulk_insert_example]。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -356,7 +356,7 @@ WITH
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
 [create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
 [create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
 
@@ -453,12 +453,12 @@ WITH
 
 - 使用 RDBMS 通过 SQL 数据库中的弹性查询进行跨数据库查询。  
 - 在连接到分片的 SQL 数据库时，使用 SHARD_MAP_MANAGER 创建外部数据源。
-- 在使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 执行批量操作时，可使用 BLOB_STORAGE。
+- 在使用 [BULK INSERT][bulk_insert] , or [OPENROWSET][openrowset] 执行批量操作时，可使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
-有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#e-create-external-data-source-to-reference-azure-blob-storage)。
+有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#d-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="databasename--databasename"></a>DATABASE_NAME = database_name 
 
@@ -512,7 +512,7 @@ WITH
 ;
 ```
 
-有关分步教程，请参阅[分片（水平分区）的弹性查询入门][sharded_eq_tutorial]。
+有关分步教程，请参阅[跨扩展云数据库进行报告（预览）][sharded_eq_tutorial]。
 
 ### <a name="b-create-an-rdbms-external-data-source"></a>B. 创建 RDBMS 外部数据源
 
@@ -538,7 +538,7 @@ WITH
 ;
 ```
 
-有关 RDBMS 的分步教程，请参阅[跨数据库查询（纵向分区）入门][remote_eq_tutorial]。
+有关 RDBMS 的分步教程，请参阅[跨数据库查询（纵向分区）入门（预览）][remote_eq_tutorial]。
 
 ## <a name="examples-bulk-operations"></a>示例：批量操作
 
@@ -547,7 +547,7 @@ WITH
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作
 
-对使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
+对使用 [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -566,7 +566,7 @@ WITH
 ;
 ```
 
-若要查看正在使用的示例，请参阅 [BULK INSERT][bulk_insert_example]。
+若要查看这一使用中的示例，请参阅 [BULK INSERT][bulk_insert_example]。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -614,10 +614,10 @@ WITH
 
 ## <a name="overview-azure-sql-data-warehouse"></a>概述：Azure SQL 数据仓库
 
-为 PolyBase 创建外部数据源。 外部数据源用于建立连接以及支持以下主要用例：使用 [PolyBase][intro_pb] 进行数据虚拟化和数据加载
+为 PolyBase 创建外部数据源。 外部数据源用于建立连接以及支持以下主要用例：使用 [PolyBase][intro_pb] 执行数据虚拟化和数据加载
 
 > [!IMPORTANT]  
-> 使用 SQL 数据库的[弹性查询][remote_eq]创建远程外部数据源，以查询 SQL 数据仓库实例，请查阅 [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current)
+> 使用 SQL 数据库的[弹性查询][remote_eq]创建外部数据源，以查询 SQL 数据仓库实例，请参阅 [SQL 数据库](create-external-data-source-transact-sql.md?view=azuresqldb-current)。
 
 ## <a name="syntax"></a>语法
 
@@ -835,7 +835,7 @@ WITH
 
 ## <a name="overview-analytics-platform-system"></a>概述：分析平台系统
 
-为 PolyBase 查询创建外部数据源。 外部数据源用于建立连接以及支持以下用例：使用 [PolyBase][intro_pb] 进行数据虚拟化和数据加载
+为 PolyBase 查询创建外部数据源。 外部数据源用于建立连接以及支持以下用例：使用 [PolyBase][intro_pb] 执行数据虚拟化和数据加载
 
 ## <a name="syntax"></a>语法
 

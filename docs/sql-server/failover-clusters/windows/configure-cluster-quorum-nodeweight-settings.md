@@ -14,19 +14,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9663732206ec3697379a241ae7eecf6d12a3b749
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037516"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>配置群集仲裁 NodeWeight 设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何配置 Windows Server 故障转移群集 (WSFC) 群集中成员节点的 NodeWeight 设置。 在仲裁投票期间，使用 NodeWeight 设置来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的灾难恢复和多子网方案。  
   
--   **准备工作：**[先决条件](#Prerequisites)、[安全性](#Security)  
+-   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **若要查看仲裁 NodeWeight 设置，请使用：**[使用 Powershell](#PowerShellProcedure)、[使用 Cluster.exe](#CommandPromptProcedure)  
+-   **若要查看仲裁 NodeWeight 设置，请使用：** [使用 PowerShell](#PowerShellProcedure)、[使用 Cluster.exe](#CommandPromptProcedure)  
   
 -   [相关内容](#RelatedContent)  
   
@@ -38,12 +38,12 @@ ms.locfileid: "52407724"
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中没有仲裁投票的群集节点  
   
 > [!TIP]  
 >  如果未安装此修补程序，本主题中的示例将为 NodeWeight 返回空或 NULL 值。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0a4a2850af0bcd954db1c257adef209d5876c8
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946227"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67219000"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "64946227"
  通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。  
   
 > [!NOTE]  
->  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**生成的 10。0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 无法读取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**。  
+>  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 可以读取由 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 生成的 10.0 版格式化文件，但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bcp 无法读取由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bcp 生成的 11.0 版格式化文件     。  
   
  本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（ **-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64946227"
  **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
->  为区分非 XML 格式化文件，我们建议使用 .fmt 作为文件扩展名，例如 MyTable.fmt。  
+> 为区分非 XML 格式化文件，我们建议使用 .fmt 作为文件扩展名，例如 MyTable.fmt。  
   
  有关非 XML 格式化文件结构和字段的信息，请参阅 [非 XML 格式化文件 (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)早期版本支持的原始格式。  
   
@@ -172,7 +172,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
->  为区分 XML 格式化文件，我们建议使用 .xml 作为文件扩展名，例如 MyTable.xml。  
+> 为区分 XML 格式化文件，我们建议使用 .xml 作为文件扩展名，例如 MyTable.xml。  
   
  有关 XML 格式化文件结构和字段的信息，请参阅 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)早期版本支持的原始格式。  
   
@@ -180,7 +180,6 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  本部分包含以下示例，演示如何使用 **bcp** 命令创建 XML 格式化文件：  
   
 -   A. 为字符数据创建 XML 格式化文件  
-  
 -   B. 为本机数据创建 XML 格式化文件  
   
  本示例使用 `HumanResources.Department` 示例数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表。 `HumanResources.Department` 表包含四列： `DepartmentID`、 `Name`、 `GroupName`和 `ModifiedDate`。  
@@ -203,7 +202,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  生成的格式化文件 `Department-c.xml`包含以下 XML 元素：  
@@ -242,7 +241,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  在 Windows 命令提示符下，输入以下 `bcp` 命令：  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  生成的格式化文件 `Department-n.xml`包含以下 XML 元素：  

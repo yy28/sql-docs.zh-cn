@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdbaeb17e6ce722c0b14fcd9eac99982c5bf8684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803651"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046632"
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47803651"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC_DUPLICATE_KEYS|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)。 页 P_ID1 槽 SLOT1 和页 P_ID2 槽 SLOT2 中的重复键。|  
+|消息正文|表错误:对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)。 页 P_ID1 槽 SLOT1 和页 P_ID2 槽 SLOT2 中的重复键。|  
   
 ## <a name="explanation"></a>解释  
 两个指定的槽具有相同的键，其中包含任何 **uniqueifier**。  

@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428644"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316673"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>参数  
-sequence_name  
-指定数据库中标识序列的唯一名称。 类型为 sysname。  
+sequence_name   
+指定数据库中标识序列的唯一名称。 类型为 sysname  。  
   
 [ built_in_integer_type | user-defined_integer_type  
 序列可定义为任何整数类型。 允许使用下面的类型。  
@@ -69,27 +69,27 @@ sequence_name
 -   **decimal** 或 **numeric**，小数位数为 0。  
 -   基于这些允许类型之一的任何用户定义数据类型（别名类型）。  
   
-如果未提供任何数据类型，则将 bigint 数据类型用作默认数据类型。  
+如果未提供任何数据类型，则将 bigint 数据类型用作默认数据类型  。  
   
 START WITH \<constant>  
-序列对象返回的第一个值。 START 值必须小于或等于序列对象的最大值并大于或等于其最小值。 新序列对象的默认起始值是升序序列对象的最小值和降序序列对象的最大值。  
+序列对象返回的第一个值。 START 值必须小于或等于序列对象的最大值并大于或等于其最小值  。 新序列对象的默认起始值是升序序列对象的最小值和降序序列对象的最大值。  
   
 INCREMENT BY \<constant>  
-每次调用 NEXT VALUE FOR 函数时序列对象值递增（如果为负数，则为递减）的值。 如果增量是负值，则序列对象为降序，否则为升序。 增量不能为 0。 新序列对象的默认增量为 1。  
+每次调用 NEXT VALUE FOR 函数时序列对象值递增（如果为负数，则为递减）的值  。 如果增量是负值，则序列对象为降序，否则为升序。 增量不能为 0。 新序列对象的默认增量为 1。  
   
-[ MINVALUE \<constant> | NO MINVALUE ]  
+[ MINVALUE \<constant> | NO MINVALUE ]   
 指定序列对象的边界。 一个新序列对象的默认最小值是该序列对象的数据类型的最小值。 对于 **tinyint** 数据类型，此值为零，对于所有其他数据类型则为负数。  
   
-[ MAXVALUE \<constant> | NO MAXVALUE  
+[ MAXVALUE \<constant> | NO MAXVALUE   
 指定序列对象的边界。 一个新序列对象的默认最大值是该序列对象的数据类型的最大值。  
   
-[ CYCLE | NO CYCLE ]  
+[ CYCLE | NO CYCLE ]   
 此属性指定当超过序列对象的最小值或最大值时，序列对象是应从最小值（对于降序序列对象，则为最大值）重新开始，还是应引发异常。 新序列对象的默认循环选项是 NO CYCLE。  
   
 > [!NOTE]
 > 循环 SEQUENCE 从最小值或最大值（而不是从起始值）重新开始。  
   
-[ CACHE [\<constant> ] | NO CACHE ]  
+[ CACHE [\<constant> ] | NO CACHE ]   
 通过最大限度地减少生成序列编号所需的磁盘 IO 数，可以提高使用序列对象的应用程序的性能。 默认值为 CACHE。  
   
 例如，如果选择的缓存大小为 50，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不会缓存 50 个单个值。 它只是缓存当前值和缓存中保留的值数。 这意味着，存储缓存所需的内存量始终为序列对象的数据类型的两个实例。  
@@ -97,13 +97,13 @@ INCREMENT BY \<constant>
 > [!NOTE]  
 > 如果启用缓存选项而不指定缓存大小，数据库引擎将选择一个大小。 但是，所选的大小并不是一成不变。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会更改计算缓存大小的方法而不另行通知。  
   
-当使用 CACHE 选项创建时，意外关机（如电源故障）可能导致缓存中保留的序列号丢失。  
+当使用 CACHE 选项创建时，意外关机（如电源故障）可能导致缓存中保留的序列号丢失  。  
   
 ## <a name="general-remarks"></a>一般备注  
- 序列号在当前事务的作用域之外生成。 无论提交还是回滚使用序列号的事务，都会占用序列号。  
+ 序列号在当前事务的作用域之外生成。 无论提交还是回滚使用序列号的事务，都会占用序列号。 只有在完全填充记录后才会发生重复验证。 这可能导致在某些情况下，即在创建过程中将相同数字用于多个记录，但随后将其识别为副本。 如果发生这种情况并且其他自动编号值已应用于后续记录，则可能会导致自动编号值与预期行为之间存在差距。
   
 ### <a name="cache-management"></a>缓存管理  
- 为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会预分配 CACHE 参数所指定数量的序列号。  
+ 为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会预分配 CACHE 参数所指定数量的序列号  。  
   
  例如，用起始值 1 和缓存大小 15 创建一个新序列。 在需要第一个值时，便可从内存中使用值 1 到 15。 最后缓存的值 (15) 将写入磁盘上的系统表中。 使用完所有的 15 个数字后，下一个请求（数字 16）将导致重新分配缓存。 新的最后缓存值 (30) 将写入系统表中。  
   
@@ -111,17 +111,17 @@ INCREMENT BY \<constant>
   
  在 SQL Server 重新启动并且需要一个序列号之后，将从系统表中读取起始编号 (23)。 会为内存分配 15 个数字 (23-38) 的缓存量，并将下一个非缓存编号 (39) 写入到系统表。  
   
- 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]因某事件（如电源故障）异常停止，序列将使用从系统表中读取的编号 (39) 重新开始。 分配给内存（但用户或应用程序永远不会请求）的任何序列号都将丢失。 此功能可能会留有间隙，但可以保证不会两次为单个序列对象发出同一个值，除非该对象定义为 CYCLE 或手动重新启动。  
+ 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]因某事件（如电源故障）异常停止，序列将使用从系统表中读取的编号 (39) 重新开始。 分配给内存（但用户或应用程序永远不会请求）的任何序列号都将丢失。 此功能可能会留有间隙，但可以保证不会两次为单个序列对象发出同一个值，除非该对象定义为 CYCLE 或手动重新启动  。  
   
  将通过跟踪当前值（发出的最后一个值）和缓存中留下的值数量来在内存中保留缓存。 因此，缓存所使用的内存量始终为序列对象的数据类型的两个实例。  
   
- 如果将缓存参数设置为 NO CACHE，则每次使用序列时都会将当前的序列值写入系统表。 这样会增加磁盘访问，从而降低性能，但可以减少出现意外间隙的机会。 如果使用 NEXT VALUE FOR 或 sp_sequence_get_range 函数请求编号，但之后不使用该编号或在未提交的事务中使用该编号，那么仍然会出现间隙。  
+ 如果将缓存参数设置为 NO CACHE，则每次使用序列时都会将当前的序列值写入系统表  。 这样会增加磁盘访问，从而降低性能，但可以减少出现意外间隙的机会。 如果使用 NEXT VALUE FOR 或 sp_sequence_get_range 函数请求编号，但之后不使用该编号或在未提交的事务中使用该编号，那么仍然会出现间隙   。  
   
- 当序列对象使用 CACHE 选项时，如果重新启动该序列对象或改变 INCREMENT、CYCLE、MINVALUE、MAXVALUE 或缓存大小属性，则会导致在更改发生之前将缓存写入系统表。 然后，从当前值（即没有跳过任何数字）开始重新加载缓存。 更改缓存大小将立即生效。  
+ 当序列对象使用 CACHE 选项时，如果重新启动该序列对象或改变 INCREMENT、CYCLE、MINVALUE、MAXVALUE 或缓存大小属性，则会导致在更改发生之前将缓存写入系统表      。 然后，从当前值（即没有跳过任何数字）开始重新加载缓存。 更改缓存大小将立即生效。  
   
  **缓存的值可用时的 CACHE 选项**  
   
- 每当请求序列对象以便为 CACHE 选项生成下一个值时，如果在序列对象的内存中缓存中提供未使用的值，则会发生以下过程。  
+ 每当请求序列对象以便为 CACHE 选项生成下一个值时，如果在序列对象的内存中缓存中提供未使用的值，则会发生以下过程  。  
   
 1.  计算序列对象的下一个值。  
   
@@ -131,7 +131,7 @@ INCREMENT BY \<constant>
   
 **缓存用尽时的 CACHE 选项**  
   
- 每当请求序列对象以便为 CACHE 选项生成下一个值时，如果缓存已用完，都会发生以下过程：  
+ 每当请求序列对象以便为 CACHE 选项生成下一个值时，如果缓存已用完，都会发生以下过程  ：  
   
 1.  计算序列对象的下一个值。  
   
@@ -141,7 +141,7 @@ INCREMENT BY \<constant>
   
 **NO CACHE 选项**  
   
- 每当请求序列对象以便为 NO CACHE 选项生成下一个值时，都会发生以下过程：  
+ 每当请求序列对象以便为 NO CACHE 选项生成下一个值时，都会发生以下过程  ：  
   
 1.  计算序列对象的下一个值。  
   
@@ -154,7 +154,7 @@ INCREMENT BY \<constant>
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求对 SCHEMA 拥有 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 权限。  
   
 -   db_owner 和 db_ddladmin 固定数据库角色的成员可以创建、更改和删除序列对象。  
@@ -167,15 +167,15 @@ INCREMENT BY \<constant>
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
- 可以使用 ALTER AUTHORIZATION 语句转让序列对象的所有权。  
+ 可以使用 ALTER AUTHORIZATION 语句转让序列对象的所有权  。  
   
  如果序列使用用户定义的数据类型，则序列的创建者必须对该类型拥有 REFERENCES 权限。  
   
 ### <a name="audit"></a>审核  
- 若要审核 CREATE SEQUENCE，请监视 SCHEMA_OBJECT_CHANGE_GROUP。  
+ 若要审核 CREATE SEQUENCE，请监视 SCHEMA_OBJECT_CHANGE_GROUP   。  
   
 ## <a name="examples"></a>示例  
- 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
   
  下面的大多数示例都在名为 Test 的架构中创建序列对象。  
   
@@ -252,7 +252,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`current_value`|`-9223372036854775808`|  
   
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. 创建具有特定数据类型的序列  
- 以下示例使用 smallint 数据类型（范围为 -32,768 到 32,767）创建一个序列。  
+ 以下示例使用 smallint 数据类型（范围为 -32,768 到 32,767）创建一个序列  。  
   
 ```sql  
 CREATE SEQUENCE SmallSeq 
@@ -260,7 +260,7 @@ CREATE SEQUENCE SmallSeq
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. 使用所有参数创建序列  
- 以下示例使用 decimal 数据类型（范围为 0 到 255）创建一个名为 DecSeq 的序列。 序列以 125 开始，每次生成数字时递增 25。 因为该序列配置为可循环，所以，当值超过最大值 200 时，序列将从最小值 100 重新开始。  
+ 以下示例使用 decimal 数据类型（范围为 0 到 255）创建一个名为 DecSeq 的序列  。 序列以 125 开始，每次生成数字时递增 25。 因为该序列配置为可循环，所以，当值超过最大值 200 时，序列将从最小值 100 重新开始。  
   
 ```sql  
 CREATE SEQUENCE Test.DecSeq  

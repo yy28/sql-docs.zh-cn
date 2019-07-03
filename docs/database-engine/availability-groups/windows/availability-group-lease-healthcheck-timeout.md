@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140612"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166399"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -56,7 +56,7 @@ Always On 资源 DLL 监视内部 SQL Server 组件的状态。 `sp_server_diagn
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>群集超时与租用超时之间的关系 
 
-租用机制的主要功能是：如果在执行到另一个节点的故障转移时群集服务无法与实例通信，则采用 SQL Server 资源。 当群集对 AG 群集资源执行脱机操作时，群集服务会对 rhs.exe 执行 RPC 调用以使资源脱机。 资源 DLL 使用存储过程通知 SQL Server 以使 AG 脱机，但此存储过程可能失败或超时。 资源主机也会在脱机调用期间停止自己的续租线程。 在最坏的情况下，SQL Server 将导致租用在 ½ \* LeaseTimeout 内过期并将实例转换为解析状态。 故障转移可以由多个不同方发起，但至关重要的是群集状态视图在整个群集和不同 SQL Server 实例上一致。 例如，假设主实例与群集其余部分失去连接。 由于群集超时值，群集中的每个节点都会在相似时间确定故障，但只有主节点可以与主 SQL Server 实例交互以强制它放弃主角色。 
+租用机制的主要功能是：如果在执行到另一个节点的故障转移时群集服务无法与实例通信，则脱机采用 SQL Server 资源。 当群集对 AG 群集资源执行脱机操作时，群集服务会对 rhs.exe 执行 RPC 调用以使资源脱机。 资源 DLL 使用存储过程通知 SQL Server 以使 AG 脱机，但此存储过程可能失败或超时。 资源主机也会在脱机调用期间停止自己的续租线程。 在最坏的情况下，SQL Server 将导致租用在 ½ \* LeaseTimeout 内过期并将实例转换为解析状态。 故障转移可以由多个不同方发起，但至关重要的是群集状态视图在整个群集和不同 SQL Server 实例上一致。 例如，假设主实例与群集其余部分失去连接。 由于群集超时值，群集中的每个节点都会在相似时间确定故障，但只有主节点可以与主 SQL Server 实例交互以强制它放弃主角色。 
 
 从主节点的角度来看，群集服务将丢失仲裁，服务将开始自行终止。 群集服务将对资源主机发出一个 RPC 调用来终止该进程。 此终止调用负责让 AG 在 SQL Server 实例上脱机。 此脱机调用通过 T-SQL 完成，但不能保证 SQL 和资源 DLL 之间的连接将成功建立。 
 

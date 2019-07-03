@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 569b085d28a0339927049fca0d758286dd1b6e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737245"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686098"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47737245"
   
 |数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|CPU|**int**|CPU 使用率，以毫秒为单位。|18|用户帐户控制|  
+|CPU|**int**|CPU 使用率，以毫秒为单位。|18|是|  
 |EventClass|**int**|214|27|否|  
-|EventSubClass|**int**|CPU 限制冲突。|21|用户帐户控制|  
-|GroupID|**int**|发生冲突的组 ID。|66|用户帐户控制|  
-|OwnerID|**int**|导致冲突的进程的 SPID。|58|用户帐户控制|  
-|SPID|**int**|激发此事件的服务器进程的 ID。<br /><br /> 注意：如果系统线程将验证 CPU 使用率作为后台任务，则此 ID 可能与实际用户的 SPID 不同。|12|用户帐户控制|  
-|StartTime|**datetime**|此事件的激发时间。|14|用户帐户控制|  
+|EventSubClass|**int**|CPU 限制冲突。|21|是|  
+|GroupID|**int**|发生冲突的组 ID。|66|是|  
+|OwnerID|**int**|导致冲突的进程的 SPID。|58|是|  
+|SPID|**int**|激发此事件的服务器进程的 ID。<br /><br /> 注意：如果系统线程将验证 CPU 使用率作为后台任务，则此 ID 可能与实际用户的 SPID 不同。|12|是|  
+|StartTime|**datetime**|此事件的激发时间。|14|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
