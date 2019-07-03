@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96a48d60cc0c127f41e6e1b79b9faf29ea4392cf
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280421"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533825"
 ---
 # <a name="driver-manager-connection-pooling"></a>驱动程序管理器连接池
 连接池使应用程序能够从无需每次使用重新建立的连接池使用连接。 一旦创建并放入池连接，应用程序可以重复使用该连接，而不执行整个连接过程。  
@@ -31,7 +31,7 @@ ms.locfileid: "63280421"
  除了获得性能提升，连接池体系结构还允许的环境和其关联的连接以供在单个进程中的多个组件。 这意味着在同一进程中的独立组件可以彼此交互，而能够相互识别。 通过多个组件，可以重复使用的连接池中的连接。  
   
 > [!NOTE]
->  暴露 ODBC 2 ODBC 应用程序可以使用连接池。*x*行为，只要应用程序可以调用*SQLSetEnvAttr*。 当使用连接池时，应用程序必须执行 SQL 语句更改数据库或数据库，如更改的上下文\<*数据库 * * 名称*>，这将更改使用的目录数据源。  
+>  暴露 ODBC 2 ODBC 应用程序可以使用连接池。*x*行为，只要应用程序可以调用*SQLSetEnvAttr*。 当使用连接池时，应用程序必须执行 SQL 语句更改数据库或数据库，如更改的上下文\<*数据库名称*>，这将更改数据使用的目录源。  
 
 
  ODBC 驱动程序必须是完全线程安全的并且连接必须具有线程关联，以支持连接池。 这意味着该驱动程序能够在任何时候处理任何线程上的调用，并且能够连接上一个线程，另一个线程上使用的连接，并且第三个线程上断开连接。  
