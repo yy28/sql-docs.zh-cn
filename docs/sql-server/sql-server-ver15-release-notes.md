@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993947"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166370"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 预览版发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -98,6 +98,16 @@ ms.locfileid: "65993947"
 - **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1 和 CTP 2.0。
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
+
+### <a name="loading-enclave-fails"></a>无法加载 enclave
+
+- **问题及其对客户的影响**：无法为 Always Encrypted 加载 enclave，并且错误日志中捕获了以下消息：`Internal enclave error: Cannot initialize the 1 enclave`。
+
+- **解决方法**：无。 已为 CTP 3.1 计划解决方案。
+
+- **适用对象**：CTP 3.0
+
+### <a name="rich-computations-performance"></a>丰富的计算性能
 
 - **问题及其对客户的影响**：富计算正在等待多项性能优化，包括有限的功能（无索引等），并且当前默认处于禁用状态。
 
