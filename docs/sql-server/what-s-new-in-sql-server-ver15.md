@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.date: 05/28/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
-ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
+ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298217"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469101"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -28,15 +28,46 @@ ms.locfileid: "67298217"
 
 使用[最新工具](#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验  。
 
-## <a name="ctp-30-may-2019"></a>CTP 3.0（2019 年 5 月）
+## <a name="ctp-31-june-2019"></a>CTP 3.1（2019 年 6 月）
 
-社区技术预览版 (CTP) 3.0 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公开版本。 此版本包含来自 CTP 历史版本的改进功能，可修复 bug、增强安全性和优化性能。
+社区技术预览版 (CTP) 3.1 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]的最新公开发行版。 此版本包含来自 CTP 历史版本的改进功能，可修复 bug、增强安全性和优化性能。
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
 有关从支持中排除的特定功能，请参阅[发行说明](sql-server-ver15-release-notes.md)。
 
-此外，下面是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 的新增功能或增强功能。
+此外，还为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1 新增或增强了以下功能。
+
+### <a name="big-data-clusters"></a>大数据群集
+
+| 新增功能或更新 | 详细信息 |
+|:---|:---|
+| `mssqlctl` 命令更改 | `mssqlctl cluster` 命令已重命名为 `mssqlctl bdc`。 有关详细信息，请参阅 [`mssqlctl` 参考](../big-data-cluster/reference-mssqlctl.md)。 |
+|`mssqlsctl` 新增了状态命令|`mssqlctl` 新增了命令，以补充现有监视命令。 这些命令替换已从这一版中删除的群集管理门户。|
+| Spark 计算池 | 可以创建其他节点来增加 Spark 计算能力，而无需扩展存储。 此外，还可以启动不用于 Spark 的存储池节点。 Spark 和存储已分离。 有关详细信息，请参阅[配置无需 Spark 的存储](../big-data-cluster/deployment-custom-configuration.md#sparkstorage)。 |
+| MSSQL Spark 连接器 | 支持对数据池外部表执行读/写操作。 旧版本仅支持对 MASTER 实例表执行读/写操作。 有关详细信息，请参阅[如何使用 MSSQL Spark 连接器从 Spark 对 SQL Server 执行读写操作](../big-data-cluster/spark-mssql-connector.md)。 |
+| 使用 MLeap 的机器学习 | [可以在 Spark 中训练 MLeap 机器学习模型，并使用 Java 语言扩展在 SQL Server 中对它进行评分](../big-data-cluster/spark-create-machine-learning-model.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>数据库引擎
+
+| 新增功能或更新 | 详细信息 |
+|:---|:---|
+|对加密列创建索引|可以对使用随机加密和已启用 enclave 的密钥加密的列创建索引，以提升丰富查询的性能（使用 `LIKE` 和比较运算符）。 请参阅[包含安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+|在安装时设置 `MIN` 和 `MAX` 服务器内存值 |可以在安装过程中设置服务器内存值。 使用默认值、计算出的推荐值，或在选择“推荐”  选项（请参阅[服务器内存服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)）后手动指定你自己的值。
+|新增图形函数 - `SHORTEST_PATH` | 可以使用 `MATCH` 内的 `SHORTEST_PATH` 来查找图中任意 2 个节点之间的最短路径，或执行任意长度遍历。|
+|对图形数据库的表和索引进行分区|已分区表和已分区索引的数据被划分为多个单元，这些单元可以跨图形数据库中的多个文件组分散。 |
+|新增索引选项 - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|可以在数据库引擎内启用优化，有助于提高索引中高并发插入的吞吐量。 此选项旨在用于易发生最后一页插入争用的索引，常见于有顺序键（如标识列、序列或日期/时间列）的索引。 有关详细信息，请参阅 [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)。|
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
+
+| 新增功能或更新 | 详细信息 |
+|:-----|:-----|
+| Tempdb 改进 | 默认情况下，Linux 上的 SQL Server 新安装会根据逻辑核心数创建多个 tempdb 数据文件（最多 8 个数据文件）。 这不适用于就地次要版本或主版本升级。 每个 tempdb 文件的大小为 8MB，且自动增长大小为 64MB。 此行为类似于 Windows 上的默认 SQL Server 安装。 |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-30-may-2019"></a>CTP 3.0（2019 年 5 月）
 
 ### <a name="big-data-clusters"></a>大数据群集
 
@@ -82,6 +113,7 @@ ms.locfileid: "67298217"
 |:---|:---|
 |通过计算组提供对表格模型的 MDX 查询支持。 |此版本消除了[计算组](#calc-ctp24)中的早期限制。 |
 |使用计算组动态设置度量值的格式。 |通过此功能，可使用[计算组](#calc-ctp24)有条件地更改度量值的格式字符串。 例如，通过货币转换，可以使用不同的外币格式显示度量值。|
+| &nbsp; | &nbsp; |
 
 ## <a name="ctp-25-april-2019"></a>CTP 2.5（2019 年 4 月）
 
