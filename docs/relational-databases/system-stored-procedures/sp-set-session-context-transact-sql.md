@@ -1,9 +1,9 @@
 ---
-title: sp_set_session_context (TRANSACT-SQL) |Microsoft Docs
+title: sp_set_session_context (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/04/2017
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -18,16 +18,16 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 25f9d67ee50f7c33391027d69c7db87aac8d7210
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811868"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559425"
 ---
-# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 会话上下文中设置键 / 值对。  
   
@@ -43,16 +43,16 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @key=] N'key  
+ [ @key= ] N'key'  
  正在设置的类型的键**sysname**。 最大密钥大小为 128 个字节。  
   
- [ @value=] 'value'  
+ [ @value= ] 'value'  
  类型的指定键的值**sql_variant**。 设置的值为 NULL 释放的内存。 最大大小为 8,000 个字节。  
   
  [ @read_only= ] { 0 | 1 }  
  类型的标志**位**。 如果为 1，然后指定键的值不能再次更改此逻辑连接。 如果可以更改 0 （默认值），则值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户可以为其会话设置会话上下文。  
   
 ## <a name="remarks"></a>备注  
