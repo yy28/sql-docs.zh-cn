@@ -11,12 +11,12 @@ ms.author: maghan
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 74ec0cd11e1c13363905c71a64096f6c4eb8b053
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: 0be9bae60c46aa43c6f0acb5de5204d33a318450
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263537"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399667"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -56,7 +56,7 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 | 新项| 详细信息|
 | :-------| :------|
-| 数据库关系图 | SSMS 中添加回了数据库关系图。 有关详细信息，请参阅[数据库关系图](https://feedback.azure.com/forums/908035/suggestions/37507828)。 |
+| 数据库关系图 | [SSMS 中再现数据库关系图](https://feedback.azure.com/forums/908035/suggestions/37507828)。
 | SSBDIAGNOSE.EXE |SQL Server 诊断命令行工具已被添加回 SSMS 包。|
 | Integration Services (SSIS) | 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划...  右键单击 Azure 中 SSIS 目录中的 SSIS 包时显示的菜单项，“在 Azure 中安排执行 SSIS 包”菜单项，位于“工具”菜单项下的“迁移到 Migrate”菜单项，以及右键单击 Azure SQL 数据库托管实例中的 SQL Server 代理下的作业文件夹时显示的“在 Azure 中安排执行 SSIS”    。|
 
@@ -101,6 +101,12 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SQL 代理 | 修复了以下问题：“作业步骤属性”中的“查看”按钮不会始终处于启用状态，从而阻止查看给定作业步骤的输出  。 |
 | XEvent UI | 在 XEvents 列表中添加了“Package”列，以区分具有相同名称的事件。 |
 | XEvent UI | 向 XEventUI 添加了缺少的“EXTERNAL LIBRARY”类类型映射。 |
+
+### <a name="known-issues-181"></a>已知问题 (18.1)
+
+- 用户在将对象资源管理器中的表对象拖动到查询编辑器时可能收到错误。 我们已注意到此问题并计划在下一版本中提供修补程序。
+
+- 关闭 SSMS 18.1 之后，“选项”->“文本编辑器”->“编辑器选项卡”和“状态栏”->“状态栏布局和颜色”下的“组连接”和“单服务器连接”颜色选项将消失   。 重新打开 SSMS 后，“状态栏布局和颜色”选项会还原为默认设置（白色）。
 
 ## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 
@@ -368,9 +374,9 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 - 在对象资源管理器中删除了“维护 > 旧版”节点。
   - 无法再访问真正陈旧的“数据库维护计划”和“SQL Mail”节点。 新式“数据库邮件”和“维护计划”节点将继续按照常工作。
 
-### <a name="known-issues"></a>已知问题
+### <a name="known-issues-180"></a>已知问题 (18.0)
 
-安装版本 18.0 时可能会遇到以下问题：无法运行 SQL Server Management Studio。 如果遇到此问题，请按照 [SSMS2018 - 已安装，但不运行](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run)一文中的步骤进行操作。
+- 安装版本 18.0 时可能会遇到以下问题：无法运行 SQL Server Management Studio。 如果遇到此问题，请按照 [SSMS2018 - 已安装，但不运行](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run)一文中的步骤进行操作。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![下载](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -454,7 +460,7 @@ Microsoft Azure 集成：
 - 修复了 SSMS 仅显示前 50 个订阅（“Always Encrypted”对话框、“从 URL 备份/还原”对话框以及其他对话框）的问题。
 - 修复了尝试（在“从 URL 中还原备份”对话框中）登录到不含任何存储帐户的 Microsoft Azure 帐户时，SSMS 引发异常（“索引超出范围”）的问题。 
 
-对象脚本： 
+对象脚本：
 
 - SSMS 现在可避免在编写脚本“删除和创建”时生成动态 T-SQL。
 - 编写数据库对象的脚本时，SSMS 现在不生成脚本来设置数据库范围内配置（如果设置为默认值的话）。
