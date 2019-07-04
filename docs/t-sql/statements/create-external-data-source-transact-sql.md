@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6a8832f60ae4552b825dd5d0845b15592dc58b7
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314052"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419060"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -378,7 +378,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|** _\* SQL 数据库 \*_ ** &nbsp;|[SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_SQL 数据库 \*\*_ ** &nbsp;|[SQL 数据<br />数据仓库](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -457,8 +457,6 @@ WITH
 
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
-
-有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#d-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="databasename--databasename"></a>DATABASE_NAME = database_name 
 
@@ -678,7 +676,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
-有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#e-create-external-data-source-to-reference-azure-blob-storage)。
+有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#a-create-external-data-source-to-reference-azure-blob-storage)。
 
 ## <a name="permissions"></a>权限
 
@@ -897,7 +895,7 @@ WITH
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
-有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#e-create-external-data-source-to-reference-azure-blob-storage)。
+有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#d-create-external-data-source-to-reference-azure-blob-storage)。
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' 
 
@@ -924,7 +922,7 @@ WITH
 > [!IMPORTANT]  
 > 创建外部数据源时，不会验证 RESOURCE_MANAGER_LOCATION 值。 每次尝试下推时，输入不正确的值都可能会导致查询执行失败，因为提供的值无法解析。
 
-[创建外部数据源以引用启用了下推功能的 Hadoop](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) 中提供了具体示例和详细指南。
+[创建外部数据源以引用启用了下推功能的 Hadoop](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) 中提供了具体示例和详细指南。
 
 ## <a name="permissions"></a>权限
 

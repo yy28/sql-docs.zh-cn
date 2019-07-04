@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: jroth
-ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778375"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556893"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>连接[!INCLUDE[name-sos](../includes/name-sos-short.md)]到 SQL Server 使用 Windows 身份验证的 Kerberos 
 
@@ -160,7 +160,7 @@ DOMAIN.COMPANY.COM = {
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-查看可用的票证使用 kinit。 如果 kinit 成功，应看到一个票证。 
+查看使用 klist 可用票证。 如果 kinit 成功，应看到一个票证。 
 
 ```bash
 klist
