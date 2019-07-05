@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -9,16 +9,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: ronortloff
-ms.author: rortloff
+author: XiaoyuL-Preview
+ms.author: xiaoyul
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836189"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564174"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,6 +44,8 @@ ms.locfileid: "65836189"
 |importance|**nvarchar(32)**|设置请求的重要性与已提交。 具有重要性较低的请求将保持排队状态处于挂起状态，如果提交较高的重要性请求。  之前已提交的较低重要性请求之前将执行请求的较高的优先级。  重要性的详细信息，请参阅[工作负荷重要性](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)。  |NULL</br>低</br>below_normal</br>正常 （默认值）</br>above_normal</br>高|
 |group_name| |保留供内部使用。</br>适用范围：Azure SQL 数据仓库|
 |resource_allocation_percentage| |保留供内部使用。</br>适用范围：Azure SQL 数据仓库|
+|result_set_cache|**bit**|详细信息是否已完成的查询是结果缓存命中 (1) 还是失败 (0)。|0,1|
+||||
   
  此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题。   
   

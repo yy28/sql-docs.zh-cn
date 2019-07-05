@@ -3,7 +3,7 @@ title: 有关 Azure 数据 Studio sandDance
 titleSuffix: Azure Data Studio
 description: 如何在 Azure Data Studio 中使用 SandDance
 ms.custom: seodec18
-ms.date: 04/18/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798082"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563993"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance 的 Azure 数据 Studio （预览版）
 Azure Data Studio 现在提供了一种方法来创建您正在从事的.csv 和.tsv 文件的快速可视化效果。 这包括在你的 SQL Server 2019 大数据群集中的本地文件或 HDFS 上的文件。 如果想要具有快速查看数据，并了解这怎么回事，此扩展插件十分有用。 我们使用从 Microsoft Research，可以生成数据的就地可视化效果称为 SandDance 的技术。
@@ -36,9 +36,9 @@ SandDance 使用单元可视化效果，在屏幕应用您的数据库中的行�
 
 ## <a name="known-issues"></a>已知问题
 
-当前你的数据应具有唯一标识符的第一列。
+目前，你的数据应具有唯一标识符的第一列。
 
-现在我们不会制定可视化的行计数。 但是，内存使用量超过按比例到数量的行，因此，我们建议的数据集或视图仅限于大约 100 万行。
+现在，我们不会制定可视化的行计数。 但是，内存使用量超过按比例到数量的行，因此，我们建议的数据集或视图仅限于大约 100 万行。
 
 请参阅[已知问题](https://microsoft.github.io/SandDance/#known-issues)
 
