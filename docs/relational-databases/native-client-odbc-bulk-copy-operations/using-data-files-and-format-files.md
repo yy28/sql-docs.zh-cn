@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4c377bbfbe4170b5631ba1ac9c017af1176b279
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0f26d2484c7626a689dd83955d1bfb498365449
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013972"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584085"
 ---
 # <a name="using-data-files-and-format-files"></a>使用数据文件和格式化文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "63013972"
 2.  调用[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)与*eOption*设置为 BCPHINTS 并*iValue*设置为指向包含 TRANSACT-SQL 语句的 SQLTCHAR 字符串的指针。  
   
 3.  调用**bcp_exec**以执行大容量复制操作。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以是生成某一结果集的任何语句。 将创建包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的第一个结果集的数据文件。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句生成多个结果集，则大容量复制将忽略第一个结果集之后的所有结果集。  
   
  若要创建哪一列中数据存储在不同的格式比表中的数据文件，请调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)若要指定将更改多少列，然后调用[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)的每个列的格式你想要更改。 这是之后调用**bcp_init**但在通过调用**bcp_exec**。 **bcp_colfmt**指定列的数据存储在数据文件的格式。 大容量复制入或签出时可以使用它。此外可以使用**bcp_colfmt**设置行和列终止符。 例如，如果数据不包含任何制表符，您可以创建制表符分隔文件通过使用**bcp_colfmt**将制表符设置为每个列的终止符。  

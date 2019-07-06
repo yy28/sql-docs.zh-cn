@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dd1128bfafb052936e742f7ce56529b1222333a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dde2a96b34485fd6d460699a20055e289f2f1ad
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690848"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597468"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -55,7 +55,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  排序后， **DrilldownMemberTop**函数返回包含父成员的子成员中指定数量的集中*计数，* 具有最高值，且同时包含两个集内.  
   
- 如果**递归**函数对第一个集进行排序，如前面所述，然后以递归方式比较的第一个集中，成员按层次结构中，针对第二个集指定 *。* 此函数检索数目的第一个集还存在第二个集中的每个成员的子级的最顶层。  
+ 如果**递归**指定，则该函数对第一个集进行排序，如前面所述，然后以递归方式比较的第一组的成员按层次结构中，针对第二个集。 此函数检索数目的第一个集还存在第二个集中的每个成员的子级的最顶层。  
   
  第一个集可以包含元组，但不能包含成员。 元组的深化是 OLE DB 的扩展，它返回元组集而非成员集。  
   

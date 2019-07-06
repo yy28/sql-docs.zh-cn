@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3eb73528800d45daf0ea8b68ae94536f63c25df
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620540"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585478"
 ---
 # <a name="create-a-distributed-transaction"></a>创建分布式的事务
 
@@ -54,6 +54,8 @@ MSDTC 调用 SQL Server Native Client 驱动程序通过开放式数据库连接
     - 如果在 SQL Server y 轴上的更新失败，将回滚这两个 SQL Server 实例上所有未提交的更新。
 
 4. 最后，应用程序通过调用结束事务[SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)，使用 SQL_COMMIT 或 SQL_ROLLBACK 选项。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 _(1)_ MSDTC 可以没有 ODBC 调用。 在这种情况下，MSDTC 将成为事务管理器和应用程序不能再使用**SQLEndTran**。
 

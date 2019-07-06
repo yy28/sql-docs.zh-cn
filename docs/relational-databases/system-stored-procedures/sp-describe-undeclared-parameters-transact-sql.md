@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088508"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584612"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -236,7 +236,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 3.  如果两个类似的数据类型按照规则 1，例如**varchar(8000)** 并**varchar （max)** 较小数据类型 (**varchar(8000)** ) 选择。 相同原则也适用于**nvarchar**并**varbinary**数据类型。  
   
 4.  就规则 1 而言，类型推断算法倾向于将某些转换视为比其他转换好。 转换从最好到最坏依次为：  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  不同长度的相同基本数据类型之间的转换。  
   
     2.  相同的数据类型的固定长度和可变长度版本之间的转换 (例如， **char**到**varchar**)。  

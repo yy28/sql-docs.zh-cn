@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656756"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584050"
 ---
 # <a name="creating-an-assembly"></a>创建程序集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   所调用或被引用的程序集是在同一个数据库中创建的。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>创建程序集时指定安全性  
- 创建程序集时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库中，您可以指定三个不同级别的安全性可以在其中运行你的代码之一：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**. 当**CREATE ASSEMBLY**运行语句时，可能会导致无法在服务器上注册的程序集对代码程序集上执行某些检查。 有关详细信息，请参阅 》 上模拟示例[CodePlex](https://msftengprodsamples.codeplex.com/)。  
+ 创建程序集时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库，可以指定三个不同的代码可以在其中运行的安全级别之一：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**。 当**CREATE ASSEMBLY**运行语句时，可能会导致无法在服务器上注册的程序集对代码程序集上执行某些检查。 有关详细信息，请参阅 》 上模拟示例[CodePlex](https://msftengprodsamples.codeplex.com/)。  
   
  **安全**是默认权限集，适用于大多数方案。 若要指定给定的安全级别，您可以按如下所示修改 CREATE ASSEMBLY 语句的语法：  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  程序集经过了强名称签名或使用证书进行了 Authenticode 签名。 此强名称 （或证书） 内创建[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]作为非对称密钥 （或证书），并且具有与相应的登录名**EXTERNAL ACCESS ASSEMBLY**权限 （对于外部访问程序集） 或**UNSAFE ASSEMBLY**权限 （对于不安全的程序集）。  
   
 2.  数据库所有者 (DBO) 拥有**EXTERNAL ACCESS ASSEMBLY** (对于**外部访问**程序集) 或**UNSAFE ASSEMBLY** (对于**UNSAFE**程序集） 的权限，并且数据库已[TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md)设置为**ON**。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  在加载程序集（包括执行）时，也将检查上面所列的两个条件。 至少必须满足这些条件之一才能加载程序集。  
   
  我们建议[TRUSTWORTHY 数据库属性](../../../relational-databases/security/trustworthy-database-property.md)在数据库上不是设置为**ON**仅将运行公共语言运行时 (CLR) 代码，在服务器进程中。 而是建议在 master 数据库中通过程序集文件创建非对称密钥。 然后，必须创建映射到此非对称密钥的登录名，并且必须授予该登录名**EXTERNAL ACCESS ASSEMBLY**或**UNSAFE ASSEMBLY**权限。  

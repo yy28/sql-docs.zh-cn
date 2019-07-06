@@ -17,12 +17,12 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697953"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597559"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定搜索、 起始行和偏移量开始的行的方向。 找到的记录; 如果满足条件，则设置的当前行位置否则，将位置设置为的终点 （或起点）**记录集**。  
@@ -39,10 +39,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  一个**字符串**值，该值包含在搜索中指定要使用的列名称、 比较运算符和值的语句。  
   
  *SkipRows*  
- 可选 *。* 一个**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将从当前行开始。  
+ 可选。 一个**长**值，其默认值为零，用于指定从当前行的行偏移量或*启动*书签以开始执行搜索。 默认情况下，搜索将从当前行开始。  
   
  *SearchDirection*  
- 可选 *。* 一个[SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定搜索是否应在当前行或搜索的方向中的下一个可用行上开始。 结尾处停止时的不成功搜索**记录集**如果值为**adSearchForward**。 不成功搜索停止的开头**记录集**如果值为**adSearchBackward**。  
+ 可选。 一个[SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定搜索是否应在当前行或搜索的方向中的下一个可用行上开始。 结尾处停止时的不成功搜索**记录集**如果值为**adSearchForward**。 不成功搜索停止的开头**记录集**如果值为**adSearchBackward**。  
   
  *开始*  
  可选。 一个**变体**充当搜索的起始位置的书签。  

@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff7b05cf91351973fc7c7f0efbc9af0dfa901dea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cefa1cfe2bd7ea792035bdc16de93ccc35591aee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720698"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580892"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>应用 XSL 转换（SQLXML 托管类）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,9 @@ class Test
      这将创建一个可执行文件 (DocSample.exe)。  
   
 4.  在命令提示符下，执行 DocSample.exe。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>在 .NET Framework 中应用 XSL 转换  
  与在中间层应用 XSL 转换相反，如先前所述，可以在客户端一侧（在 .NET Framework 中）应用 XSL 转换。 以下经过修改的 C# 代码演示如何在 .NET Framework 中应用 XSL 转换。  
   

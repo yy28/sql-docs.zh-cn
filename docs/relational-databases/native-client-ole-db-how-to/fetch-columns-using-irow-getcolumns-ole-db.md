@@ -14,24 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d152adb1d2b24b70e64a0924935416cdcf09af
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00edc71fdec53ac7606f11d913a2c1089ecf0216
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675106"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586222"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取列 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  通过 IRow 接口可以直接访问结果集中某一行的列。 因而，IRow 是一种从具有一行的结果集中检索列的有效方法。  
+  通过 IRow 接口可以直接访问结果集中某一行的列  。 因而，IRow 是一种从具有一行的结果集中检索列的有效方法  。  
   
- 所提供的代码示例显示如何使用 IRow 提取单一行。 在本示例中，将一次从该行中检索一列。 此示例说明：  
+ 所提供的代码示例显示如何使用 IRow 提取单一行  。 在本示例中，将一次从该行中检索一列。 此示例说明：  
   
 -   如何提取一组列（依次）。  
   
--   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns() 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据。  
+-   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns() 的调用只返回实际列长度     。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据  。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -45,7 +45,9 @@ ms.locfileid: "51675106"
 3.  执行 IRow::GetColumns() 以提取结果行中的一列或多列。 如果您要在提取数据之前查找实际列大小，请将 DBCOLUMNACCESS 中的 pData 设置为 NULL。 对于 IRow::GetColumns() 的这一调用只返回列宽度。 再次调用 IRow::GetColumns() 将提取数据。  
   
 4.  执行 IRow::GetColumns()，直到访问您需要的所有列。 必须依次访问这些列。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>示例  
  此示例显示如何使用 IRow 接口实现对结果集中某一行的列的直接访问。 该示例演示：  
   
@@ -53,7 +55,7 @@ ms.locfileid: "51675106"
   
 -   如何两次访问某列 - 第一次获取实际列宽，稍后访问实际数据。  
   
- 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns 以检索实际数据。 IA64 平台不支持此示例。  
+ 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，那么调用 IRow->GetColumns 只会返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns，以检索实际数据。 IA64 平台不支持此示例。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   

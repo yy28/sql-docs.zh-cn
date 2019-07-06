@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702654"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597501"
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 URL
-URL 指定存储在本地或网络计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等 *。*  
+URL 指定存储在本地或网络计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等。  
   
  *绝对 URL*包含定位资源所需的所有信息。  
   
@@ -53,7 +53,7 @@ URL 指定存储在本地或网络计算机上的目标的位置。 目标可以
   
  使用 ADO 2.7 或更高版本中，绝对 URL 还可以定义一个上下文。 例如，当[记录](../../../ado/reference/ado-api/record-object-ado.md)使用绝对 URL，打开对象**连接**隐式创建对象来表示 URL 指定资源。  
   
- 可以指定绝对 URL，用于定义上下文*ActiveConnection*的参数**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 绝对 URL 还可以指定的值作为"URL **=** "中的关键字**连接**对象[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法*ConnectionString*参数，并[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法*ActiveConnection*参数。  
+ 可以指定绝对 URL，用于定义上下文*ActiveConnection*的参数**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 绝对 URL 还可以指定的值作为"URL ="中的关键字**连接**对象[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法*ConnectionString*参数，而[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法*ActiveConnection*参数。  
   
  此外可以通过打开定义上下文**记录**或**记录集**对象，表示一个目录，因为这些对象已有隐式或显式声明**连接**指定上下文的对象。  
   

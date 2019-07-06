@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661557"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579785"
 ---
 # <a name="creating-user-defined-types---coding"></a>创建用户定义类型 - 编码
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ using Microsoft.SqlServer.Server;
  **Microsoft.SqlServer.Server**命名空间包含您的 UDT 的各种属性所需的对象和**System.Data.SqlTypes**命名空间包含表示类[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用于该程序集的本机数据类型。 当然，还可能存在程序集正常运行所需的其他命名空间。 **点**UDT 还使用**System.Text**用于处理字符串的命名空间。  
   
 > [!NOTE]  
->  Visual c + + 数据库对象，例如使用编译的 Udt **/clr: pure**不再支持执行。  
+>  VisualC++数据库对象，例如使用编译的 Udt **/clr: pure**不支持执行。  
   
 ## <a name="specifying-attributes"></a>指定属性  
  属性确定如何使用序列化来构造 UDT 的存储表示形式以及如何按值将 UDT 传输到客户端。  
@@ -93,7 +93,7 @@ public struct Point : INullable
   
  必须创建一个名为属性**IsNull**，需要确定值是否为 null 从 CLR 代码中。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发现 UDT 的 Null 实例时，会使用正常的 Null 处理方法来保留 UDT。 如果服务器不必序列化或反序列化 UDT，它不会在这些方面浪费时间；此外，它也不会浪费空间来存储 Null UDT。 每次从 CLR 中引入 UDT 时都会执行这种 Null 检查，也就是说，始终都应可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 构造来检查有无 Null UDT。 **IsNull**属性还由服务器用来测试实例是否为 null。 一旦服务器确定 UDT 为 Null，它便可以使用其本机 Null 处理方法。  
   
- **Get （)** 方法**IsNull**不以任何方式的特殊情况。 如果**点**变量**@p**是**Null**，然后**@p.IsNull** ，默认情况下，计算结果将为"NULL"，不是"1"。 这是因为**SqlMethod(OnNullCall)** 的属性**IsNull get （)** 方法默认值为 false。 因为对象是**Null**，该对象不反序列化，不调用该方法，并返回默认值为"NULL"请求属性时。  
+ **Get （)** 方法**IsNull**不以任何方式的特殊情况。 如果**点**变量 **@p** 是**Null**，然后 **@p.IsNull** ，默认情况下，计算结果将为"NULL"，不是"1"。 这是因为**SqlMethod(OnNullCall)** 的属性**IsNull get （)** 方法默认值为 false。 因为对象是**Null**，该对象不反序列化，不调用该方法，并返回默认值为"NULL"请求属性时。  
   
 ### <a name="example"></a>示例  
  在下面的示例中，`is_Null` 变量是私有的并且保存了 UDT 实例的 Null 状态。 您的代码必须保留 `is_Null` 的相应值。 UDT 还必须具有一个名为的静态属性**Null**返回 UDT 的 null 值实例。 这样，如果该实例在数据库中确实为 Null，UDT 便可返回 Null 值。  
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  **Microsoft.SqlServer.Server.SqlMethodAttribute**类提供可用于标记方法定义以便指定 null 调用行为的确定性，以及指定的方法是否是赋值函数的自定义属性。 使用的是这些属性的默认值，仅在需要非默认值时才使用自定义特性。  
   
 > [!NOTE]  
->  **SqlMethodAttribute**类继承自**SqlFunctionAttribute**类，因此**SqlMethodAttribute**继承**FillRowMethodName**并**TableDefinition**字段从**SqlFunctionAttribute**。 这意味着可以编写一个不属于此情况的表值方法。 方法能够编译并且程序集部署，但出现错误有关**IEnumerable**返回类型是在运行时出现以下消息:"方法、 属性或字段 '\<名称 >' 中类\<类> 中的程序集\<程序集 > 具有无效的返回类型。"  
+>  **SqlMethodAttribute**类继承自**SqlFunctionAttribute**类，因此**SqlMethodAttribute**继承**FillRowMethodName**并**TableDefinition**字段从**SqlFunctionAttribute**。 这意味着可以编写一个不属于此情况的表值方法。 该方法能够编译和程序集部署，但出现错误有关**IEnumerable**返回类型是在运行时出现以下消息："方法、 属性或字段 '\<名称 >' 中类\<类 > 中的程序集\<程序集 > 具有无效的返回类型。"  
   
  下表介绍的部分相关**Microsoft.SqlServer.Server.SqlMethodAttribute**属性可在 UDT 方法，并列出其默认值。  
   
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  使用**编写**方法**货币**UDT 便可确定如何保持 UDT 在磁盘上，因此如何比较和排序的 UDT 值[!INCLUDE[tsql](../../includes/tsql-md.md)]操作。  
   
 3.  保存**货币**使用以下二进制格式的 UDT:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  将区域性另存为 UTF-16 编码的字符串并用第 0-19 个字节表示，右侧以 Null 字符填充。  
   
     2.  使用第 20 个字节及以后的字节包含货币的十进制值。  

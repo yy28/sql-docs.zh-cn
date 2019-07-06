@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33a35a56cb433e860eb1cc66b7e0178db3eed925
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f23c7ace1a4a83b07d5ac25972c8fd4028d173f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667536"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583796"
 ---
 # <a name="set-large-data-ole-db"></a>设置大型数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51667536"
 
   此示例显示如何设置 BLOB 数据、创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值。 IA64 平台不支持此示例。  
   
- 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法。  
+ 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法   。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
@@ -38,18 +38,20 @@ ms.locfileid: "51667536"
   
 #### <a name="to-set-blob-data"></a>设置 BLOB 数据  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的 dwFlag 元素设置为 STGM_READ，并将 iid 元素设置为 IID_ISequentialStream（要公开的接口）。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的 dwFlag 元素设置为 STGM_READ，并将 iid 元素设置为 IID_ISequentialStream（要公开的接口）   。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构   。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
-5.  调用 GetNextRows 将后续的行提取到行集中。 调用 GetData 以读取行集中的数据。  
+5.  调用 GetNextRows 将后续的行提取到行集中  。 调用 GetData 以读取行集中的数据  。  
   
-6.  若要设置数据，创建一个存储对象（其中包含数据以及长度指示器），然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）。  
-  
+6.  若要设置数据，创建一个存储对象（其中包含数据以及长度指示器），然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）   。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>Description  

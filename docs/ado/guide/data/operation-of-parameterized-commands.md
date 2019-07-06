@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701863"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597456"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
 如果你正在使用较大的子**记录集**，尤其是相对于父级的大小**记录集**，但需要访问仅在几个子级的章节中，你可能会发现使用更加高效参数化的命令。  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 父和子表具有列名称中常见，cust_id *。* *子命令*具有"？"的占位符，RELATE 子句中引用 (即，"...参数 0"）。  
+ 父和子表具有列名称的共同*cust_id*。 *子命令*具有"？"的占位符，RELATE 子句中引用 (即，"...参数 0"）。  
   
 > [!NOTE]
 >  参数子句仅与形状命令语法。 未与任一 ADO 关联[参数](../../../ado/reference/ado-api/parameter-object.md)对象或[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  

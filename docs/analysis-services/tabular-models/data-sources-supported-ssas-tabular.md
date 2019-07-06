@@ -1,6 +1,6 @@
 ---
 title: 在 SQL Server Analysis Services 表格 1200年模型中支持的数据源 |Microsoft Docs
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: a1ef7ae48e3d1500d08c9adba5e39db6214125c5
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269680"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597360"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>数据源支持在 SQL Server Analysis Services 中表格 1200年模型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +30,7 @@ Azure Analysis Services，请参阅[支持 Azure Analysis Services 中的数据�
   
 |||||  
 |-|-|-|-|  
-|数据源|版本|文件类型|访问接口|  
+|Source|版本|文件类型|访问接口|  
 |Access 数据库|Microsoft Access 2010 及更高版本。|.accdb 或 .mdb|ACE 14 OLE DB 访问接口<sup> [1](#dnu)</sup>|  
 |SQL Server 关系数据库|SQL Server 2008 和更高版本、 SQL Server 数据仓库 2008年和更高版本、 Azure SQL 数据库，Azure SQL 数据仓库、 Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) 旧称为 SQL Server 并行数据仓库 (PDW)。 最初，从 Analysis Services 连接到 PDW 需要特殊的数据提供程序。 在 SQL Server 2012 中，此提供程序进行了替换。 对于 SQL Server 2012 及更高版本，需要使用 SQL Server Native Client 连接到 PDW/APS。 |（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 10.0 Client OLE DB 提供程序<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
 |Oracle 关系数据库|Oracle 9i 及更高版本。|（不适用）|Oracle OLE DB 访问接口<br /><br /> 用于 Oracle 客户端的 .NET Framework 数据访问接口<br /><br /> 用于 SQL Server 的 .NET Framework 数据访问接口<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
@@ -58,9 +58,20 @@ Microsoft SQL Server    |  2008 及更高版本      |       SQL Server 的 OLE 
 Microsoft Azure SQL 数据库    |   All      |  SQL Server 的 OLE DB 提供程序、SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序            
 Microsoft Azure SQL 数据仓库     |   All     |  SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序       
 Microsoft SQL 分析平台系统 (APS)     |   All      |  SQL Server 的 OLE DB 提供程序、SQL Server Native Client OLE DB 提供程序、SQL 客户端的 .NET Framework 数据提供程序       
+|Microsoft SQL Server Always Encrypted <sup> [2](#ae)</sup> | 2016 及更高版本。 2014 及更早版本仅限于 Enterprise edition。 | 用于 SQL 客户端的 .NET Framework 数据访问接口
+|始终加密的 azure SQL 数据库<sup> [2](#ae)</sup>| All | 用于 SQL 客户端的 .NET Framework 数据访问接口
 Oracle 关系数据库     |  Oracle 9i 及更高版本       |  Oracle OLE DB 访问接口       
 Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 .NET 数据访问接口    
 
+
+### <a name="using-sql-server-analysis-services-with-always-encrypted"></a>使用 SQL Server Analysis Services 与始终加密
+
+<a name="ae">[2]</a> SQL Server Analysis Services 可以作为数据库使用的客户端[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)中 SQL Server 或 Azure SQL 数据库在以下情况下： 
+
+*  保护已加密的列的列主密钥必须存储在 Windows 证书存储区中的证书。 不支持列主密钥的密钥存储在 Azure 密钥保管库中。   
+*  在其安装 Analysis Services 的 Windows 计算机已安装必要的列主密匙证书。 若要了解详细信息，请参阅[在 Windows 证书存储区中创建列主密钥的密钥](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store)。
+*  Analysis Services 用于连接到 SQL 数据源基于.Net Framework 提供程序，并且必须启用数据源上的属性的列加密设置。 .NET framework 4.6.1 或更高版本必须是 Analysis Services 服务器上存在。
+*  SQL Server 或 SQL 数据库数据源必须是*提供程序*支持 1200年兼容级别的数据源类型。 它不会使用 Power Query*结构化*在 1400年兼容性级别中引入的数据源。
   
 ##  <a name="bkmk_tips"></a> 选择数据源的提示  
   
@@ -72,7 +83,7 @@ Teradata 关系数据库    |  Teradata V2R6 及更高版本     | Teradata 的 
   
 OLE DB 访问接口有时可以提供更快的大型数据的性能。 在为同一数据源选择不同访问接口时，应首先尝试 OLE DB 访问接口。  
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [数据源支持在 SQL Server Analysis Services 中表格 1400年模型](data-sources-supported-ssas-tabular-1400.md)
 

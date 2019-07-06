@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285692"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597534"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>创建预测（数据挖掘基础教程）
   已测试挖掘模型的准确性，并决定你感到满意结果后，您然后可以在使用预测查询生成器来生成预测**挖掘模型预测**对数据挖掘模型中的选项卡设计器。  
@@ -96,7 +96,7 @@ ms.locfileid: "63285692"
   
      这将指定 `PredictProbability` 函数的目标列。 有关函数的详细信息，请参阅[数据挖掘扩展插件&#40;DMX&#41;函数引用](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
-5.  单击下一步中的空行**源**列，，然后选择 TM_Decision_Tree 挖掘模型 **。**  
+5.  单击下一步中的空行**源**列，，然后选择**TM_Decision_Tree**挖掘模型。  
   
 6.  在中`TM_Decision_Tree`行，在**字段**列中，选择`Bike Buyer`。  
   

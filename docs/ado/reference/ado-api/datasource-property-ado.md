@@ -16,18 +16,18 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: f913d6ef342a110d6484e05a2f1925e47d5abdac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c62953f958ef14134d7463c899f5b842d94f596
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718493"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597582"
 ---
 # <a name="datasource-property-ado"></a>DataSource 属性 (ADO)
 指示一个对象，包含数据而无法表示为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
   
 ## <a name="remarks"></a>备注  
- 此属性用于数据环境下创建数据绑定控件。 数据环境负责维护数据 （数据源） 包含集合的命名对象 （数据成员） 将表示为**记录集**对象 *。*  
+ 此属性用于数据环境下创建数据绑定控件。 数据环境负责维护数据 （数据源） 包含集合的命名对象 （数据成员） 将表示为**记录集**对象。  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md)并**数据源**属性必须结合使用。  
   

@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e907f1dd39164a4273ae994fe510de59d16c499d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494329"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583604"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,9 @@ sp_add_log_shipping_secondary_primary
 1.  为指定的主服务器和主数据库生成一个辅助 ID。  
   
 2.  执行以下操作：  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  中的辅助 ID 添加一个条目**log_shipping_secondary**使用所提供的参数。  
   
     2.  为禁用的辅助 ID 创建一个复制作业。  

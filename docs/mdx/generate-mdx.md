@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224884"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597437"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  以字符串表达式表示的有效分隔符。  
   
 ## <a name="remarks"></a>备注  
- 如果指定第二个集，则**生成**函数将返回通过将第二个集中的元组应用到第一个集中每个元组生成一组 *，* ，然后对所得到的联合设置。 如果**所有**指定，则该函数将保留在结果集中的重复项。  
+ 如果指定第二个集，则**生成**函数将返回一组生成的第二个集中的元组应用到第一个集中每个元组，然后对所得到的联合设置。 如果**所有**指定，则该函数将保留在结果集中的重复项。  
   
- 如果指定的字符串表达式，则**Generate**函数返回生成的第一个集中每个元组对指定的字符串表达式求值的字符串 *，* 再串联得到结果。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
+ 如果指定的字符串表达式，则**生成**函数返回计算指定的字符串表达式对第一个集中每个元组和再串联得到的结果生成的字符串。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
   
 ## <a name="examples"></a>示例  
   

@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8858ba41bf1ff3a6acf4161865c535fd5b10f412
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 54b15c11eacdd29eeea01b867f9f1c7e8a7186b4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203296"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580273"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>管理 text 和 image 列 - 使用执行时数据列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53203296"
     -   调用 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 一次或多次以发送列数据，直到 length 已发送。  
   
 4.  调用 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 以指示最后一个执行时数据列的所有数据已发送。 它不会返回 SQL_NEED_DATA。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>示例  
  此示例显示如何使用 SQLGetData 读取 SQL_LONG 变量字符数据。 IA64 平台不支持此示例。  
   

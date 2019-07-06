@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_cleanup_change_table (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700695"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583285"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @capture_instance =] '*capture_instance*  
+ [ @capture_instance = ] '*capture_instance*'  
  与更改表关联的捕获实例的名称。 *capture_instance*是**sysname**，无默认值，且不能为 NULL。  
   
  *capture_instance*必须指定当前数据库中存在的捕获实例的名称。  
   
- [ @low_water_mark =] *low_water_mark*  
- 是用作新低水印的日志序列号 (LSN)*捕获实例*。 *low_water_mark*是**binary(10)**，无默认值。  
+ [ @low_water_mark = ] *low_water_mark*  
+ 是用作新低水印的日志序列号 (LSN)*捕获实例*。 *low_water_mark*是**binary(10)** ，无默认值。  
   
  如果值为非 null，则必须显示为中的当前项的 start_lsn 值[cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)表。 如果 cdc.lsn_time_mapping 中的其他条目共享与新的低水印所标识的条目相同的提交时间，则选择与该组条目关联的最小 LSN 作为低水印。  
   
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  新的低水印可能不是在存储过程调用中指定的低水印。 如果 cdc.lsn_time_mapping 表中的其他条目共享相同的提交时间，则在这组条目中表示的最小 start_lsn 将被选为调整后的低水印。 如果@low_water_mark参数为 NULL 或者当前低水印大于新低水印，start_lsn 值为捕获实例保持不变。  
   
 2.  然后删除其 __$start_lsn 值小于低水印的更改表条目。 删除阈值用于限制在单个事务中删除的行数。 如果未成功删除条目，将进行报告，但不影响可能已基于此调用而对捕获实例低水印进行的任何更改。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  在以下环境中使用 sys.sp_cdc_cleanup_change_table：  
   
 -   清理代理作业报告删除失败。  
@@ -87,7 +89,7 @@ sys.sp_cdc_cleanup_change_table
   
      因为此存储过程对单个捕获实例执行清理，因此可以用它生成自定义清理策略，以便根据各个具体的捕获实例调整清理规则。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ## <a name="see-also"></a>请参阅  

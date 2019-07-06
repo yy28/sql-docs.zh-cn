@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16bbc20d98a313be039f207556b963ac43fa541
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 43f213ca1abcbb9b8fae1e20e338b773907a0b38
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035718"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581890"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>批注解释 - sql:relationship 和键排序规则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   由于 XML 大容量加载在其节点进入作用域时会生成记录，并在其节点退出作用域时会将这些记录发送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，因此，有关记录的数据必须存在于节点的作用域中。  
   
- 请看以下 XSD 架构，在其中之间的一个对多关系**\<客户 >** 并**\<顺序 >** （一个客户可以下多个订单） 的元素是使用指定的 **\<sql: relationship >** 元素：  
+ 请看以下 XSD 架构，在其中之间的一个对多关系 **\<客户 >** 并 **\<顺序 >** （一个客户可以下多个订单） 的元素是使用指定的 **\<sql: relationship >** 元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -61,7 +61,7 @@ ms.locfileid: "56035718"
 </xsd:schema>  
 ```  
   
- 作为**\<客户 >** 元素节点进入作用域，则 XML 大容量加载将生成客户记录。 此记录一直保持，直到 XML 大容量加载读取 **\</Customer >**。 在处理过程中**\<顺序 >** 元素节点，XML 大容量加载使用 **\<sql: relationship >** 获取 CustOrder 表的 CustomerID 外键列的值从**\<客户 >** 父元素，因为**\<顺序 >** 元素不指定**CustomerID**属性。 这意味着该中定义**\<客户 >** 元素中，您必须指定**CustomerID**中指定的架构属性 **\<sql:关系 >**。 否则为当**\<顺序 >** 元素进入作用域、 XML 大容量加载将生成 CustOrder 表的记录和当 XML 大容量加载到达 **\</o >** 结束标记时，它将发送到记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]而无需 CustomerID 外键列的值。  
+ 作为 **\<客户 >** 元素节点进入作用域，则 XML 大容量加载将生成客户记录。 此记录一直保持，直到 XML 大容量加载读取 **\</Customer >** 。 在处理过程中 **\<顺序 >** 元素节点，XML 大容量加载使用 **\<sql: relationship >** 获取 CustOrder 表的 CustomerID 外键列的值从 **\<客户 >** 父元素，因为 **\<顺序 >** 元素不指定**CustomerID**属性。 这意味着该中定义 **\<客户 >** 元素中，您必须指定**CustomerID**中指定的架构属性 **\<sql:关系 >** 。 否则为当 **\<顺序 >** 元素进入作用域、 XML 大容量加载将生成 CustOrder 表的记录和当 XML 大容量加载到达 **\</o >** 结束标记时，它将发送到记录[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]而无需 CustomerID 外键列的值。  
   
  将在该示例中提供的架构另存为 SampleSchema.xml。  
   
@@ -107,7 +107,9 @@ ms.locfileid: "56035718"
     ```  
   
 3.  若要执行 XML 大容量加载，请将下面的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) 示例另存为 MySample.vbs，并执行它：  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -118,7 +120,7 @@ ms.locfileid: "56035718"
     set objBL=Nothing  
     ```  
   
-     结果是 XML 大容量加载在 CustOrder 表的 CustomerID 外键列中插入一个 NULL 值。 如果要修改的 XML 示例数据，以便 **\<CustomerID >** 子元素出现之前**\<顺序 >** 子元素，您将得到预期的结果：XML 大容量加载将指定的外键值插入到列。  
+     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
   
  以下是等效的 XDR 架构：  
   

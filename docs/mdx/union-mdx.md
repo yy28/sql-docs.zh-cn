@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653457"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597383"
 ---
 # <a name="union--mdx"></a>并集 (MDX)
 
@@ -43,7 +43,7 @@ Alternate syntax 2
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- 此函数返回的并集的两个或多个指定集 *。* 使用标准语法和替代语法 1，默认情况下消除重复项。 使用标准语法中，使用**所有**标志可以集中保留重复项。 从该集的尾部删除重复项。 使用替代语法 2 时始终会保留重复项。  
+ 此函数返回的并集的两个或多个指定的集。 使用标准语法和替代语法 1，默认情况下消除重复项。 使用标准语法中，使用**所有**标志可以集中保留重复项。 从该集的尾部删除重复项。 使用替代语法 2 时始终会保留重复项。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示的行为**Union**函数使用每种语法。  

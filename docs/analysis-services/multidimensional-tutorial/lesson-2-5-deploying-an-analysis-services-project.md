@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3d6fe74ecf361392da9000286427679194e15de9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e73a5b2d7924d67f7c8bc2e41414e158aa0ff6b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65404039"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597505"
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>课程 2-5-部署 Analysis Services 项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "65404039"
     查看项目的部署属性。 默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目模板将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目配置为将所有项目增量部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，以创建一个与此项目同名的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，并在部署后使用默认处理选项处理这些对象。 有关详细信息，请参阅 [配置 Analysis Services 项目属性 (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
     > [!NOTE]  
-    > 如果你想要将项目部署到的命名实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在本地计算机上或在远程服务器实例，更改**服务器**属性设置为相应的实例名称，例如\< *ServerName **>\\<** InstanceName * * >* 。  
+    > 如果你想要将项目部署到的命名实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在本地计算机上或在远程服务器实例，更改**服务器**属性设置为相应的实例名称，例如\< **ServerName**>\\\<**InstanceName**>。  
   
 3.  单击“确定”  。  
   

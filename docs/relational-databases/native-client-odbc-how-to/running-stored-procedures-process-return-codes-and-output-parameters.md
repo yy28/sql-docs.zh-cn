@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79b84888a788c34b9f103e1ae55b2f38d6d87f60
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1541309fa19bbbf9ca4ee234c5b4831ee616ceea
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210479"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580955"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>运行存储过程 - 处理返回代码和输出参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "53210479"
 3.  使用执行语句**SQLExecDirect**。  
   
 4.  处理结果集直到**SQLFetch**或**SQLFetchScroll**处理最后一个结果集时，或直到返回 SQL_NO_DATA **SQLMoreResults**返回 sql_no_data 为止。 这时，将以返回的数据值填充绑定到返回代码和输出参数的变量。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>示例  
  此示例显示如何处理返回代码和输出参数。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
   

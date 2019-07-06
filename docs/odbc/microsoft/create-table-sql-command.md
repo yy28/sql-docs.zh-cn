@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232295"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597535"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 创建某个表具有指定的字段。  
@@ -121,7 +121,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  一个表可以有多个候选项索引。  
   
  FOREIGN KEY *eExpression4*TAG *TagName4*[NODUP]  
- 创建外 （非主键） 索引并建立与父表的关系。 *eExpression4*指定外索引键表达式，并*TagName4*指定的名称创建的索引外键标记 *。* 索引的标记名称可包含最多 10 个字符。 包括 NODUP 创建候选外索引。  
+ 创建外 （非主键） 索引并建立与父表的关系。 *eExpression4*指定外索引键表达式，并*TagName4*指定创建的索引外键标记的名称。 索引的标记名称可包含最多 10 个字符。 包括 NODUP 创建候选外索引。  
   
  您可以创建多个外的索引对于表，但外索引表达式必须指定表中的不同字段。  
   

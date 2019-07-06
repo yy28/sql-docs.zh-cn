@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663046"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585688"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 数据库对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51663046"
 2.  解决所有生成错误和警告，然后将程序集部署到测试服务器。  
   
 3.  选择**部署**从**生成**菜单。 随后，将在 Visual Studio 中首次创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 项目时指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和数据库中注册程序集。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>使用 Transact-SQL 部署程序集  
   
 1.  使用 .NET Framework 附带的命令行编译器编译源文件中的程序集。  
@@ -87,17 +89,17 @@ ms.locfileid: "51663046"
   
 1.  打开 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，然后连接到注册要部署的托管程序集或数据库对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
-2.  在中**对象资源管理器**，展开**\<服务器名称 >** 并**数据库**树。 右键单击托管的数据库对象的位置已注册，请选择该数据库**任务**，然后选择**生成脚本**。 将打开脚本向导。  
+2.  在中**对象资源管理器**，展开 **\<服务器名称 >** 并**数据库**树。 右键单击托管的数据库对象的位置已注册，请选择该数据库**任务**，然后选择**生成脚本**。 将打开脚本向导。  
   
 3.  从列表框中选择数据库，然后单击**下一步**。  
   
 4.  在中**选择脚本选项**窗格中，单击**下一步**，或更改的选项，然后单击**下一步**。  
   
-5.  在中**选择对象类型**窗格中，选择要部署的数据库对象的类型。 单击“下一步” 。  
+5.  在中**选择对象类型**窗格中，选择要部署的数据库对象的类型。 单击“下一步”  。  
   
 6.  对于每个对象类型中所选**选择对象类型**窗格中，**选择\<类型 >** 显示窗格。 在此窗格中，可以从在指定数据库中注册的该数据库对象类型的所有实例中进行选择。 选择一个或多个对象，然后单击**下一步**。  
   
-7.  **输出选项**窗格中，将出现所有所需的数据库对象已选择类型。 选择**将脚本保存到文件**并指定脚本文件的路径。 选择“下一步” 。 查看你的选择，然后单击**完成**。 部署脚本将保存到指定的文件路径。  
+7.  **输出选项**窗格中，将出现所有所需的数据库对象已选择类型。 选择**将脚本保存到文件**并指定脚本文件的路径。 选择“**下一步**”。 查看你的选择，然后单击**完成**。 部署脚本将保存到指定的文件路径。  
   
 ## <a name="post-deployment-scripts"></a>后期部署脚本  
  您可以运行后期部署脚本。  

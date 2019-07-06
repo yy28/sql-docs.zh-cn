@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33bdeff7f34993681fbdede0200e9bcab8ab96e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa5370e91aa5a8f5012a9c8f35f3fb98b3b3e726
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040068"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581917"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>批注解释 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大容量加载进程**sql： 映射**批注，预期的 XSD 架构，则如果映射架构指定**sql： 映射 ="false"** XML 大容量加载不为任何元素或属性，尝试在相应列中存储相关联的数据。  
   
- XML 大容量加载忽略未映射的元素和属性 (因为它们不描述在架构中，或使用在 XSD 架构中批注**sql： 映射 ="false"**)。 未映射的所有数据都将进入溢出列中，如果这样的列通过使用指定**sql:overflow-字段**。  
+ XML 大容量加载忽略未映射的元素和属性 (因为它们不描述在架构中，或使用在 XSD 架构中批注**sql： 映射 ="false"** )。 未映射的所有数据都将进入溢出列中，如果这样的列通过使用指定**sql:overflow-字段**。  
   
  例如，请看此 XSD 架构：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56040068"
 </xsd:schema>  
 ```  
   
- 因为**HomePhone**特性指定**sql： 映射 ="false"**，XML 大容量加载不映射到相应的列的此属性。 XSD 架构标识一个溢出列 (**OverflowColumn**) XML 大容量加载在其中存储此未用完的数据。  
+ 因为**HomePhone**特性指定**sql： 映射 ="false"** ，XML 大容量加载不映射到相应的列的此属性。 XSD 架构标识一个溢出列 (**OverflowColumn**) XML 大容量加载在其中存储此未用完的数据。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   
@@ -86,7 +86,9 @@ ms.locfileid: "56040068"
     ```  
   
 4.  若要执行 XML 大容量加载，将此 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) 示例另存为 Sample.vbs 并执行该示例：  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
