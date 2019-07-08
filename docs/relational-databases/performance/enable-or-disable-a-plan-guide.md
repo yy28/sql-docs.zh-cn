@@ -15,12 +15,12 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3e102f509d289c4bc0e3a4a4100ec7c091636acd
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 0aef47aa00c52bd5adb0069baf0a1d06a6848d43
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143407"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580770"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>启用或禁用计划指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ ms.locfileid: "54143407"
   
 -   禁用一个已禁用的计划指南或启用一个已启用的计划指南将不起作用，且运行时没有错误。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  禁用或启用 OBJECT 计划指南要求对计划指南引用的对象（例如：函数、存储过程）具有 ALTER 权限。 其他所有计划指南都需要 ALTER DATABASE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,17 +61,19 @@ ms.locfileid: "54143407"
   
 2.  单击加号以便展开 **“计划指南”** 文件夹。  
   
-3.  右键单击要禁用或启用的计划指南，然后选择“禁用”或“启用”。  
+3.  右键单击要禁用或启用的计划指南，然后选择“禁用”  或“启用”  。  
   
-4.  在 **“禁用计划指南”** 或 **“启用计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”**。  
-  
+4.  在 **“禁用计划指南”** 或 **“启用计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>禁用或启用数据库中的所有计划指南  
   
 1.  单击加号以便展开您要禁用或启用计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”文件夹，然后选择“全部启用”或“全部禁用”。  
+2.  右键单击“计划指南”  文件夹，然后选择“全部启用”  或“全部禁用”  。  
   
-3.  在 **“禁用所有计划指南”** 或 **“启用所有计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”**。  
+3.  在 **“禁用所有计划指南”** 或 **“启用所有计划指南”** 对话框中，验证所选操作已经成功，然后单击 **“关闭”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +81,9 @@ ms.locfileid: "54143407"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     --Create a procedure on which to define the plan guide.  
@@ -123,9 +125,9 @@ ms.locfileid: "54143407"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     --Disable all plan guides in the database.  

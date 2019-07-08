@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a65a662ad178eaf5e6ae620c7b66a64fd63e75ae
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ec7d60a0e7b89720b28c20b3e50cfa8354aea77b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387965"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585465"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,6 +53,8 @@ Import-Module "SqlServer"
 一些 Always Encrypted cmdlet 适用于数据库中的数据或元数据，并要求你首先应连接到数据库。 使用 SqlServer 模块配置 Always Encrypted 时，建议使用两种方法来连接到数据库： 
 1. 使用 SQL Server PowerShell 连接。
 2. 使用 SQL Server 管理对象 (SMO) 连接。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-sql-server-powershell"></a>使用 SQL Server PowerShell
 

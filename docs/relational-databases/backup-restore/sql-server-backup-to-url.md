@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046690"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582763"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "67046690"
 |RESTORE HEADERONLY|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
 |RESTORE LABELONLY|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
 |RESTORE VERIFYONLY|是||需要定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，如果使用存储帐户密钥作为机密定义了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则需要指定 WITH CREDENTIAL 参数|  
-|RESTORE REWINDONLY|−|||  
+|RESTORE REWINDONLY|?|||  
   
  有关备份语句的语法和一般信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
   
@@ -151,9 +151,9 @@ ms.locfileid: "67046690"
 |COMPRESSION&#124;NO_COMPRESSION|是|对文件快照备份不支持||  
 |DESCRIPTION|是|||  
 |NAME|是|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||不能追加到 blob。 要覆盖备份，请使用 **WITH FORMAT** 参数。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 **WITH FORMAT** 参数以避免保留使用原始备份创建的孤立文件快照。|  
-|NOSKIP &#124; SKIP|−|||  
+|EXPIREDATE &#124; RETAINDAYS|?|||  
+|NOINIT &#124; INIT|?||不能追加到 blob。 要覆盖备份，请使用 **WITH FORMAT** 参数。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 **WITH FORMAT** 参数以避免保留使用原始备份创建的孤立文件快照。|  
+|NOSKIP &#124; SKIP|?|||  
 |NOFORMAT &#124; FORMAT|是||除非指定 **WITH FORMAT** ，否则对现有 blob 执行的备份将失败。 指定 **WITH FORMAT** 时，将覆盖现有 blob。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 FORMAT 参数以避免保留使用原始文件快照备份创建的孤立文件快照。 但是，当使用文件快照备份（使用 **WITH FILE_SNAPSHOT** 参数）时，不允许使用 **WITH FORMAT** 参数以避免保留使用原始备份创建的孤立文件快照。|  
 |MEDIADESCRIPTION|是|||  
 |MEDIANAME|是|||  
@@ -163,8 +163,8 @@ ms.locfileid: "67046690"
 |NO_CHECKSUM &#124; CHECKSUM|是|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|是|||  
 |STATS|是|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |NORECOVERY &#124; STANDBY|是|||  
 |NO_TRUNCATE|是|||  
   
@@ -186,19 +186,19 @@ ms.locfileid: "67046690"
 |REPLACE|是|||  
 |RESTART|是|||  
 |RESTRICTED_USER|是|||  
-|FILE|−|||  
+|FILE|?|||  
 |PASSWORD|是|||  
 |MEDIANAME|是|||  
 |MEDIAPASSWORD|是|||  
 |BLOCKSIZE|是|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
+|BUFFERCOUNT|?|||  
+|MAXTRANSFERSIZE|?|||  
 |CHECKSUM &#124; NO_CHECKSUM|是|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|是|||  
 |FILESTREAM|是|对快照备份不支持||  
 |STATS|是|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |KEEP_REPLICATION|是|||  
 |KEEP_CDC|是|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|是|||  
@@ -219,7 +219,9 @@ ms.locfileid: "67046690"
 2.  展开“数据库”  ，右键单击所需数据库，指向“任务”  ，然后单击“备份...”  。
   
 3.  在“常规”  页上，“目标”  部分中，**URL**选项在“备份到：”  下拉列表中可用。  **URL**选项用于向 Microsoft Azure 存储创建备份。 单击  “添加”，  “选择备份目标”对话框将打开：
-   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  **Azure 存储容器：** 用于存储备份文件的 Microsoft Azure 存储容器名称。  从下拉列表中选择一个现有容器或手动输入该容器。 
   
     2.  **共享访问策略：** 对手动输入的容器输入共享访问签名。  如果已选择现有容器，则此字段不可用。 

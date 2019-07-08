@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d32ec82d15e8d66295a715fe62f98960fd7ad26
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2763cd39d1be3318bfa297539f56720838cde6d9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510704"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584431"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -236,7 +236,9 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   节点 `b`，因为在 XQuery 表达式中一个谓词应用于节点`b` 。  
   
 2.  **原则 2**：为了获得最佳性能，请为针对某一给定 XQuery 表达式进行求值所需的所有节点建立索引。 如果您仅对其中某些节点建立索引，则选择性 XML 索引将改进只包含已建立索引的节点的子表达式的求值。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  为了提高上面所示的 SELECT 语句的性能，您可以创建以下选择性 XML 索引：  
   
 ```sql  

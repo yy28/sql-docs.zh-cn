@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
-ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
+ms.openlocfilehash: 0928eb2cd30ba16466c3c091ab2c810c2f3a17d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725458"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585361"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,9 @@ ms.locfileid: "57725458"
 1.  确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理正在镜像上运行。  
   
 2.  在主体服务器因故障而转由镜像服务器接替其工作后，在镜像服务器上创建捕获作业和清除作业。 若要创建作业，请使用 [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) 存储过程。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  有关数据库镜像的详细信息，请参阅[数据库镜像 (SQL Server) ](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 #### <a name="transactional-replication"></a>事务复制  

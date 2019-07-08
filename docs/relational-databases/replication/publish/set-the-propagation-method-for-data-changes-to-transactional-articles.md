@@ -14,12 +14,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5231236fea77859bcdd7b1e18979480a944ec22c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bb0fb9bc3403ca35c6b4fef986e68f8aff14dac
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639192"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582875"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>为事务项目的数据更改设置传播方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "62639192"
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>生成和使用自定义存储过程  
   
 1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。     

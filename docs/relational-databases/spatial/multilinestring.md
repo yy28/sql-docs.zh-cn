@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8df41184356f29e3037f36d519c9957f2f3e5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b0b3156d97670832ba040693a2ea0dc20540f2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936440"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584071"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,9 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 1.  组成 **MultiLineString** 实例的所有实例必须是有效的 **LineString** 实例。  
   
 2.  组成 **LineString** 实例的任何两个 **MultiLineString** 实例在某个间隔内都不会重叠。 **LineString** 实例只能与其自身或其他 **LineString** 实例在有限数量的点相交或接触。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 以下示例显示三个有效的 **MultiLineString** 实例和一个无效的 **MultiLineString** 实例。  
   
 ```sql  
