@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82344082225f2dfa4e5c3517e50f48fa8221a81d
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: e9df2387d36f68692a38b71d9bd995997b47f34f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388104"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579389"
 ---
 # <a name="set-index-options"></a>设置索引选项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,18 +73,20 @@ ms.locfileid: "67388104"
   
 2.  单击加号以便展开 **“表”** 文件夹。  
   
-3.  右键单击你要修改索引属性的表，然后选择“设计”。  
+3.  右键单击你要修改索引属性的表，然后选择“设计”  。  
   
-4.  在“表设计器”菜单上，单击“索引/键”。  
+4.  在“表设计器”  菜单上，单击“索引/键”  。  
   
 5.  选择要修改的索引。 其属性将显示在主网格中。  
   
 6.  更改任意属性的设置以自定义索引。  
   
-7.  单击 **“关闭”**。  
+7.  单击 **“关闭”** 。  
   
-8.  在“文件”菜单上，选择“保存”以保存 _table_name_。  
-  
+8.  在“文件”  菜单上，选择“保存”  以保存 _table_name_。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在对象资源管理器中修改索引的属性  
   
 1.  在对象资源管理器中，单击加号以便展开包含您要修改索引属性的表的数据库。  
@@ -95,13 +97,13 @@ ms.locfileid: "67388104"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要修改其属性的索引，然后选择“属性”。  
+5.  右键单击要修改其属性的索引，然后选择“属性”  。  
   
-6.  在 **“选择页”** 下，选择 **“选项”**。  
+6.  在 **“选择页”** 下，选择 **“选项”** 。  
   
 7.  更改任意属性的设置以自定义索引。  
   
-8.  若要添加、删除或更改索引列的位置，请从“索引属性 - index_name”对话框中选择“常规”页。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
+8.  若要添加、删除或更改索引列的位置，请从“索引属性 -  index_name”  对话框中选择“常规”  页。 有关详细信息，请参阅 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -109,9 +111,9 @@ ms.locfileid: "67388104"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -143,9 +145,9 @@ ms.locfileid: "67388104"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/set-index-options_1.sql)]  
   
