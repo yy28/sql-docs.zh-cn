@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa09ddef11c733abda1a5e706c1b788c3745c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be0398f868eaac63ca13aaf8989ad8316ae06476
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511876"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584285"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52511876"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建用户定义的数据类型别名，使用：**  
   
@@ -48,16 +48,16 @@ ms.locfileid: "52511876"
   
 -   用户定义的数据类型别名必须符合标识符的规则。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name*的 ALTER 权限。 如果未指定 *schema_name* ，则将应用用于确定当前用户的架构的默认名称解析规则。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>创建用户定义数据类型  
   
-1.  在“对象资源管理器”中，依次展开“数据库”、一个数据库、“可编程性”和“类型”，右键单击“用户定义数据类型”，然后单击“新建用户定义数据类型”。  
+1.  在“对象资源管理器”中，依次展开“数据库”、一个数据库、“可编程性”和“类型”，右键单击“用户定义数据类型”，然后单击“新建用户定义数据类型”      。  
   
      **允许 Null**  
      指定用户定义数据类型是否可以接受 Null 值。 不能编辑现有的用户定义数据类型的为 NULL 性。  
@@ -71,7 +71,7 @@ ms.locfileid: "52511876"
      **长度/精度**  
      相应地显示数据类型的长度或精度。 **长度** 适用于基于字符的用户定义数据类型； **精度** 仅适用于基于数字的用户定义数据类型。 该标签会根据先前所选的数据类型而相应地改变。 如果所选数据类型的长度或精度是固定的，则不能编辑此框。  
   
-     不会显示 **nvarchar(max)**、 **varchar(max)** 或 **varbinary(max)** 数据类型的长度。  
+     不会显示 **nvarchar(max)** 、 **varchar(max)** 或 **varbinary(max)** 数据类型的长度。  
   
      **名称**  
      如果创建新的用户定义数据类型别名，请键入用于在整个数据库中表示用户定义数据类型的唯一名称。 最大字符数必须符合系统的 **sysname** 数据类型的要求。 不能编辑现有的用户定义数据类型别名的名称。  
@@ -97,9 +97,9 @@ ms.locfileid: "52511876"
   
      对于 **nchar** 和 **nvarchar** 数据类型，存储值始终是 **“长度”** 中值的两倍。  
   
-     不会显示 **nvarchar(max)**、**varchar(max)** 或 **varbinary(max)** 数据类型的存储。  
+     不会显示 **nvarchar(max)** 、**varchar(max)** 或 **varbinary(max)** 数据类型的存储。  
   
-2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构。  
+2.  在“新建用户定义数据类型”对话框的“架构”框中，键入此数据类型别名所属的架构，或使用浏览按钮选择架构   。  
   
 3.  在 **“名称”** 框中，键入新数据类型别名的名称。  
   
@@ -110,16 +110,18 @@ ms.locfileid: "52511876"
 6.  如果新数据类型别名允许 Null 值，请选中 **“允许 NULL”** 。  
   
 7.  如果希望为新数据类型别名绑定默认值或规则，请在 **“绑定”** 区域中，填写 **“默认值”** 框或 **“规则”** 框。 默认值和规则不能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建。 改用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模板资源管理器中提供了创建默认值和规则的示例代码。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例基于系统提供的 `varchar` 数据类型创建一个数据类型别名。 `ssn` 数据类型别名用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例基于系统提供的 `varchar` 数据类型创建一个数据类型别名。 `ssn` 数据类型别名用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
   
 ```sql  
 CREATE TYPE ssn  

@@ -11,12 +11,12 @@ ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e754837f27d34877df48663f57e7f9d8086b206
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: f60959f3aebc7d6ff05d38f209dda48d90a6be59
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570866"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585720"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>使用存储过程创建手动跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "51570866"
 2.  指定任何事件筛选器。 有关详细信息，请参阅[设置跟踪筛选器 (Transact SQL)](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md)。  
   
 3.  使用 **sp_trace_create** 为捕获的事件数据指定目的。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  有关使用跟踪存储过程的示例，请参阅[创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
  **设置跟踪定义默认值**  

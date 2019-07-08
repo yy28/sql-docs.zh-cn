@@ -15,12 +15,12 @@ ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb922b535966a52ab3395533ef44277b5c382a04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18adf5da6b6b04f4153f956fe48759098a46c278
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680285"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581078"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在备份或还原期间启用或禁用备份校验和 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47680285"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要启用或禁用备份校验和，请使用：**  
   
@@ -41,9 +41,9 @@ ms.locfileid: "47680285"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  BACKUP  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
@@ -60,15 +60,17 @@ ms.locfileid: "47680285"
   
 1.  执行以下步骤以便 [创建数据库备份](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
   
-2.  在 **“选项”** 页的 **“可靠性”** 部分中，单击 **“写入介质前检查校验和”**。  
-  
+2.  在 **“选项”** 页的 **“可靠性”** 部分中，单击 **“写入介质前检查校验和”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-backup-operation"></a>为备份操作启用或禁用备份校验和  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  若要启用备份校验和，请在 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 语句中指定 WITH CHECKSUM 选项。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行校验和。  
   
@@ -81,9 +83,9 @@ GO
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-restore-operation"></a>为还原操作启用或禁用备份校验和  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  若要启用备份校验和，请在 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句中指定 WITH CHECKSUM 选项。 这是压缩备份的默认行为。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行备份校验和。  
   

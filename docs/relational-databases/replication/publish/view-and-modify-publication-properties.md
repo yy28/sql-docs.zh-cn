@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25808ffd9a65a62d1f2849f54ca5fcb3ed5015b6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e11c0b6a3f7ef8ebeeb0c8059e26e37494ab345e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133577"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585509"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "54133577"
 -   创建发布之后，某些属性更改要求新的快照。 如果发布具有多个订阅，某些更改还会要求重新初始化所有订阅。 有关详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)和[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在“发布属性 - \<发布>”对话框（在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器中可用）中查看和修改发布属性。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+ 可在“发布属性 - \<发布>”对话框（在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器中可用）中查看和修改发布属性。  有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
- “发布属性 - \<发布>”对话框中包括以下页：  
+ “发布属性 - \<发布>”对话框中包括以下页：   
   
 -   **“常规”** 页，包含发布名称和说明、数据库名称、发布类型以及订阅过期设置。  
   
@@ -87,17 +87,19 @@ ms.locfileid: "54133577"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击发布，然后单击 **“属性”**。  
+3.  右键单击发布，然后单击 **“属性”** 。  
   
-4.  根据需要修改属性，然后单击 **“确定”**。  
-  
+4.  根据需要修改属性，然后单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>在复制监视器中查看和修改发布属性  
   
 1.  在复制监视器的左侧窗格中展开发布服务器组，然后展开一个发布服务器。  
   
-2.  右键单击发布，然后单击 **“属性”**。  
+2.  右键单击发布，然后单击 **“属性”** 。  
   
-3.  根据需要修改属性，然后单击 **“确定”**。  
+3.  根据需要修改属性，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改发布以及返回其属性。 您使用的存储过程取决于发布的类型。  
@@ -111,7 +113,7 @@ ms.locfileid: "54133577"
 1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，在 **@property** 参数中指定要更改的发布属性，并在 **@value** 参数指定该发布的名称。  
   
     > [!NOTE]  
-    >  如果该更改将要求生成新快照，则还必须将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot**，而如果该更改将要求重新初始化订阅服务器，则必须将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription**。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果该更改将要求生成新快照，则还必须将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** ，而如果该更改将要求重新初始化订阅服务器，则必须将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription** 。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>查看合并发布的属性  
   
@@ -160,7 +162,7 @@ ms.locfileid: "54133577"
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
-4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符（在 Microsoft Visual C# 中为**&** ，在 Microsoft Visual Basic 中为 **And** ）可确定是否为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性设置了给定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用逻辑 OR 运算符（在 Visual C# 中为**|** ，在 Visual Basic 中为 **Or** ）和逻辑异或运算符（在 Visual C# 中为**^** ，在 Visual Basic 中为 **Xor** ）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
+4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符（在 Microsoft Visual C# 中为 **&** ，在 Microsoft Visual Basic 中为 **And** ）可确定是否为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性设置了给定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用逻辑 OR 运算符（在 Visual C# 中为 **|** ，在 Visual Basic 中为 **Or** ）和逻辑异或运算符（在 Visual C# 中为 **^** ，在 Visual Basic 中为 **Xor** ）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
 5.  （可选）如果已将 **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法以在服务器上提交更改。 如果将 **false** 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> （默认值），则会将更改立即发送到服务器。  
   
@@ -172,7 +174,7 @@ ms.locfileid: "54133577"
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 **false**，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
-4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符（在 Microsoft Visual C# 中为**&** ，在 Visual Basic 中为 **And** ）可确定是否为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性设置了给定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用逻辑 OR 运算符（在 Visual C# 中为**|** ，在 Visual Basic 中为 **Or** ）和逻辑异或运算符（在 Visual C# 中为**^** ，在 Visual Basic 中为 **Xor** ）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
+4.  （可选）若要更改属性，为一个或多个可设置的属性设置新值。 使用逻辑 AND 运算符（在 Microsoft Visual C# 中为 **&** ，在 Visual Basic 中为 **And** ）可确定是否为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性设置了给定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用逻辑 OR 运算符（在 Visual C# 中为 **|** ，在 Visual Basic 中为 **Or** ）和逻辑异或运算符（在 Visual C# 中为 **^** ，在 Visual Basic 中为 **Xor** ）可更改 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 属性的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
 5.  （可选）如果已将 **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，则调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法以在服务器上提交更改。 如果将 **false** 的值指定为 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> （默认值），则会将更改立即发送到服务器。  
   

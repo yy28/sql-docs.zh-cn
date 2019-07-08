@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571227"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579839"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571227"
 2.  标识包含所需信息的数据和数据列。  
   
 3.  标识所需数据的子集并基于该数据子集定义筛选器。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  例如，您可能只对超过一定时间长度的事件感兴趣。 您可以创建包括事件（其中 **Duration** 数据列超过 300 毫秒）的跟踪。 跟踪将不包括在 300 毫秒内完成的事件。  
   
  您可以使用 SQL Server Profiler 或 Transact-SQL 存储过程创建筛选器。  

@@ -15,12 +15,12 @@ ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 706c100a68a2b077a000e88d6cf093efbddb0ede
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 4118a30ffe84210bd7829522d50dc0f163e88639
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570656"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582395"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>查看保存的跟踪 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,10 @@ ms.locfileid: "51570656"
 ### <a name="to-view-a-specific-trace"></a>查看特定的跟踪  
   
 1.  通过指定需要获得其信息的跟踪的 ID 来执行 **fn_trace_getinfo** 。 此函数将返回一个表，表中列出了跟踪、跟踪属性以及有关属性的信息。  
-  
-     请按以下方式调用此函数：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Invoke the function this way:  
   
     ```  
     SELECT *  

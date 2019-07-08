@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: edb599f3ae735ddc07755f73499a3e71d0c20746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270243"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500189"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定义 - 预定义角色
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安装了预定义角色，您可以使用它们授予对报表服务器操作的访问权限。 每个预定义角色都描述了一个相关任务的集合。 可以向预定义角色分配组帐户和用户帐户，以提供对报表服务器操作的立即访问。  
   
 ## <a name="how-to-use-predefined-roles"></a>如何使用预定义角色  
   
-1. 检查预定义角色，以确定是否可以按原样使用它们。 如果需要调整任务或额外定义角色，应该在开始向用户分配特定角色之前执行这些操作。  
+1. 检查预定义角色，以确定是否可以按原样使用它们。 如果需要调整任务或额外定义角色，应该在开始向用户分配特定角色之前执行这些操作。 若要创建或编辑自定义角色，请使用 SQL Server Management Studio。 有关详细信息，请参阅 [创建、删除或修改角色 (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)。
   
 2. 明确需要访问报表服务器的用户和组以及访问级别。 应该为大多数用户分配 **“浏览者”** 角色或 **“报表生成者”** 角色。 应该为少量用户分配 **“发布者”** 角色。 应该只为极少数用户分配 **“内容管理员”** 角色。  
 

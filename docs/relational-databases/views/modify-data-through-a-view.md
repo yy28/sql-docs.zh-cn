@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a9120013d1a654460553bcba7a378560cef9ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2677dbe1bc4a1cc45f609d98abcd0b42896231d3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749075"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582361"
 ---
 # <a name="modify-data-through-a-view"></a>通过视图修改数据
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,36 +35,38 @@ ms.locfileid: "47749075"
 -   请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 中的“可更新的视图”一节。  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  需要对目标表的 UPDATE、INSERT 或 DELETE 权限（取决于执行的操作）。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>通过视图修改表数据  
   
-1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”**。  
+1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”** 。  
   
-2.  右键单击该视图，然后选择“编辑前 200 行”。  
+2.  右键单击该视图，然后选择“编辑前 200 行”  。  
   
 3.  可能需要在 **SQL** 窗格中修改 SELECT 语句以返回要修改的行。  
   
-4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”。 若要更改一个或多个列中的数据，请修改列中的数据。  
+4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”  。 若要更改一个或多个列中的数据，请修改列中的数据。  
   
     > **重要说明!!** 如果视图引用多个基表，则不能删除行。 只能更新属于单个基表的列。  
   
 5.  若要插入行，请向下滚动到行的结尾并插入新值。  
-  
-    > **重要说明！** 如果视图引用多个基表，则不能插入行。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-update-table-data-through-a-view"></a>通过视图更新表数据  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例通过引用视图 `StartDate` 中的列为特定雇员更改 `EndDate` 和 `HumanResources.vEmployeeDepartmentHistory`列中的值。 此视图从两个表返回值。 此语句会成功，因为修改的列都来自一个基表。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例通过引用视图 `StartDate` 中的列为特定雇员更改 `EndDate` 和 `HumanResources.vEmployeeDepartmentHistory`列中的值。 此视图从两个表返回值。 此语句会成功，因为修改的列都来自一个基表。  
   
     ```  
     USE AdventureWorks2012 ;   
@@ -79,11 +81,11 @@ ms.locfileid: "47749075"
   
 #### <a name="to-insert-table-data-through-a-view"></a>通过视图插入表数据  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例通过指定视图 `HumanResouces.Department` 中的相关列，将一个新行插入到基表 `HumanResources.vEmployeeDepartmentHistory`。 该语句会成功，因为只指定了一个基表中的列，基表中的其他列具有默认值。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例通过指定视图 `HumanResouces.Department` 中的相关列，将一个新行插入到基表 `HumanResources.vEmployeeDepartmentHistory`。 该语句会成功，因为只指定了一个基表中的列，基表中的其他列具有默认值。  
   
     ```  
     USE AdventureWorks2012 ;  

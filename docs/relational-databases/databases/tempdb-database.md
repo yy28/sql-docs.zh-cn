@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994240"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583441"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 
@@ -244,6 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     ```
 3. 针对内存优化表的查询不支持锁定和隔离提示，因此针对内存优化 TempDB 目录视图的查询将不会遵循锁定和隔离提示。 与 SQL Server 中的其他系统目录视图一样，针对系统视图的所有事务都将处于 READ COMMITTED（或在本例中为 READ COMMITTED SNAPSHOT）隔离。
 4. 启用了内存优化的 tempdb 元数据时，临时表上的列存储索引可能会存在一些问题。 对于此预览版，最好在使用内存优化 tempdb 元数据时避免在临时表上使用列存储索引。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > 这些限制仅适用于引用 TempDB 系统视图的情况，如果需要，可在访问用户数据库中内存优化表的同一事务中创建临时表。

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581201"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492842"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在 Web 门户中查找和查看报表（报表生成器和 SSRS）
   报表管理器是一种基于 Web 的工具，该工具包含查看和管理报表的功能。 它是报表服务器安装的一部分。 若要打开报表管理器，请在浏览器窗口中键入报表管理器 URL。 有关浏览器要求的信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。 有关如何可在报表服务器上配置报表管理器 URL 的详细信息，请与系统管理员联系。 有关详细信息，请参阅[配置报表管理器（本机模式）](../../reporting-services/report-server/configure-report-manager-native-mode.md)。  
@@ -40,8 +40,8 @@ ms.locfileid: "65581201"
 ## <a name="opening-a-report"></a>打开报表  
  找到报表后，单击报表名称可打开该报表。 该报表会以 HTML 格式呈现，并显示在报表管理器中的“内容”页中。 报表始终由浏览器会话进行缓存，因此如果打开一个报表，通常可以通过单击 **“后退”** 按钮返回到该报表。 即使在要求您提供用户名和密码才能运行报表的情况下，也是如此。 只有关闭浏览器，您才能完全关闭已呈现的报表。  
   
- 并不是所有在文件夹层次结构中可见的报表都是可立即访问的。 有些报表可能会提示您输入用户名和密码，以确定您是否有权访问该报表的数据源。 有关在报表管理器中打开报表的详细信息，请参阅[打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
-  
+ 并不是所有在文件夹层次结构中可见的报表都是可立即访问的。 有些报表可能会提示您输入用户名和密码，以确定您是否有权访问该报表的数据源。 
+
  此外，您还可以通过报表生成器浏览到报表并从报表服务器直接打开报表。 
   
 ## <a name="to-search-for-items"></a>搜索项目  

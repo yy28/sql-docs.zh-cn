@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775054"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581243"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -91,6 +91,8 @@ ms.locfileid: "64775054"
      此选项还将启用 Microsoft 分布式事务处理协调器 (MSDTC) 防火墙连接并修改 MSDTC 注册表设置。  
    
 6. 在 PolyBase 配置页上，指定具有至少六个端口的端口范围。 SQL Server 安装程序分配该范围中的前六个可用端口。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > 安装后，必须[启用 PolyBase 功能](#enable)。

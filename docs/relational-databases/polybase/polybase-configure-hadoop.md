@@ -10,12 +10,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: e9d3cee432adea10c4a92198a7e8486d2e8ee27f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd3690bf7ecdf8cb08a641d141825abbf2a01f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65198053"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585525"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -61,6 +61,8 @@ ms.locfileid: "65198053"
    ```  
 
 2. 必须使用  services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    - SQL Server PolyBase 数据移动服务  
    - SQL Server PolyBase 引擎  

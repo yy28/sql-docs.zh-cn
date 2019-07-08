@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 19043cd42f89c16dbbab88264bf5710c50d14067
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072221"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586449"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "58072221"
 3.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装 Oracle 客户端软件和 OLE DB 访问接口，然后重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 如果分发服务器运行在 64 位平台上，则必须使用 64 位版本的 Oracle OLE DB 访问接口。  
   
 4.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上将 Oracle 数据库配置为发布服务器。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持下列异类事务复制和快照复制方案：  
   
@@ -57,7 +59,7 @@ ms.locfileid: "58072221"
 > [!NOTE]  
 >  删除 **MSSQLSERVERDISTRIBUTOR** 公共同义词和用 **CASCADE** 选项配置的 Oracle 复制用户，会删除 Oracle 发布服务器上的所有复制对象。  
   
- 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 后，该脚本位于以下目录下：*\<驱动器>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql。 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
+ 有一个示例脚本可以帮助建立 Oracle 复制用户架构。 安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 后，该脚本位于以下目录下： *\<驱动器>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql。 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)主题中也包括了此脚本。  
   
  使用具有 DBA 权限的帐户连接到 Oracle 数据库并执行此脚本。 此脚本将提示输入复制管理用户架构的用户名和密码以及用于创建对象的默认表空间（此表空间必须已存在于 Oracle 数据库中）。 有关为对象指定其他表空间的信息，请参阅[管理 Oracle 表空间](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。 可以任选用户名和强密码，但要将它们记下来，因为以后将 Oracle 数据库配置为发布服务器时必须提供此信息。 建议只将此架构用于复制所需的对象，而不要在此架构下创建要发布的表。  
   
@@ -113,9 +115,9 @@ ms.locfileid: "58072221"
   
  成功连接到 Oracle 发布服务器后，请尝试使用与您所创建的复制管理用户架构关联的帐户和密码登录数据库。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务所使用的 Windows 帐户下运行时必须执行下列操作：  
   
-1.  单击 **“启动”**，再单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  键入 `cmd` ，然后单击 **“确定”**。  
+2.  键入 `cmd` ，然后单击 **“确定”** 。  
   
 3.  在命令提示符下，键入：  
   

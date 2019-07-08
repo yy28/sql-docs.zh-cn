@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb65ec8874d6fc006f3c765ba91667233bb5571c
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.openlocfilehash: 7709a7d43d99daae1eaec74472b1332c2bf5fa4d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742087"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585058"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>将列从一个表复制到另一个表 (数据库引擎)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,25 +46,27 @@ ms.locfileid: "55742087"
 ###  <a name="Restrictions"></a> 限制和局限  
  当将具有别名数据类型的列从一个数据库复制到另一个数据库时，别名数据类型在目标数据库中可能不可用。 在这种情况下，将为该列分配该数据库中可用的匹配度最高的基数据类型。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>将列定义从一个表复制到另一个表  
   
-1.  右键单击相应表，然后单击“设计”，打开要复制的列所在的表以及要复制到的表。  
+1.  右键单击相应表，然后单击“设计”  ，打开要复制的列所在的表以及要复制到的表。  
   
 2.  单击包含要复制的列的表的选项卡，然后选择这些列。  
   
-3.  在 **“编辑”** 菜单中，单击 **“复制”**。  
+3.  在 **“编辑”** 菜单中，单击 **“复制”** 。  
   
 4.  单击要将列复制到的表的选项卡。  
   
-5.  选择要排在插入列之后的列，然后在 **“编辑”** 菜单中，单击 **“粘贴”**。  
-  
+5.  选择要排在插入列之后的列，然后在 **“编辑”** 菜单中，单击 **“粘贴”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-copy-data-from-one-table-to-another"></a>将数据从一个表复制到另一个表  
   
 1.  按照以上关于复制列定义的说明执行操作。  
@@ -74,13 +76,13 @@ ms.locfileid: "55742087"
   
 2.  打开一个新的查询编辑器窗口。 
 
-3.  右键单击查询编辑器，然后单击“在编辑器中设计查询”。 
+3.  右键单击查询编辑器，然后单击“在编辑器中设计查询”  。 
 
-4.  在“添加表”对话框中，选择源和目标表，单击“添加”，然后关闭“添加表”对话框。 
+4.  在“添加表”  对话框中，选择源和目标表，单击“添加”  ，然后关闭“添加表”  对话框。 
 
-5.  右键单击查询编辑器的打开区域，指向“更改类型”，然后单击“插入结果”。  
+5.  右键单击查询编辑器的打开区域，指向“更改类型”，然后单击“插入结果”   。  
 
-6.  在“选择插入结果的目标表”对话框中，选择目标表。 
+6.  在“选择插入结果的目标表”  对话框中，选择目标表。 
 
 7.  在查询设计器的上半部分，单击源表中的源列。
 
@@ -99,9 +101,9 @@ ms.locfileid: "55742087"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

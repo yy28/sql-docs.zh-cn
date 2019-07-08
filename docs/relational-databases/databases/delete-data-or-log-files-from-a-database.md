@@ -19,12 +19,12 @@ ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08abccdf7f10b2ffea795ba53a6db6fbf51a788e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e3c456dfafae92bec2cd34de1e5b9e33857d3c8e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558374"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580564"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>删除数据库中的数据文件或日志文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51558374"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **删除数据库中的数据文件或日志文件，使用：**  
   
@@ -50,9 +50,9 @@ ms.locfileid: "51558374"
   
 -   文件必须为空后才能删除。 有关详细信息，请参阅 [收缩文件](../../relational-databases/databases/shrink-a-file.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,23 +61,25 @@ ms.locfileid: "51558374"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，右键单击要从其中删除文件的数据库，再单击 **“属性”**。  
+2.  展开 **“数据库”** ，右键单击要从其中删除文件的数据库，再单击 **“属性”** 。  
   
 3.  选择 **“文件”** 页。  
   
-4.  在 **“数据库文件”** 网格中，选择要删除的文件，然后单击 **“删除”**。  
+4.  在 **“数据库文件”** 网格中，选择要删除的文件，然后单击 **“删除”** 。  
   
-5.  单击“确定” 。  
-  
+5.  单击“确定”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>删除数据库中的数据文件或日志文件  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例删除文件 `test1dat4`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例删除文件 `test1dat4`。  
   
  [!code-sql[DatabaseDDL#AlterDatabase4](../../relational-databases/databases/codesnippet/tsql/delete-data-or-log-files_1.sql)]  
   

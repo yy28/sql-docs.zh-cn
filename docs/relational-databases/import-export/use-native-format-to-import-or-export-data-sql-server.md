@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170104d07302b7921dd06b30f91b386238fe6d55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c617d46174b44bb43add44314c5d3192bc6cd94
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946388"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579600"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,9 @@ ms.locfileid: "64946388"
 1.  将源表中的数据批量导出到数据文件中  
   
 2.  将数据文件中的数据批量导入到目标表中  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 在相同的表之间使用本机格式避免了在各数据类型与字符格式之间进行不必要的转换，从而节省了时间和空间。 但是，若要获得最佳的传输速率，应执行几个有关数据格式的检查。 为了防止加载的数据出现问题，请参阅以下限制列表。  
 
 |本主题内容：|

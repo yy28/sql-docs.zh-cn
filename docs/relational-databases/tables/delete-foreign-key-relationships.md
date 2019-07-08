@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ebe7fa94a66482be35026b2049bdc57e357d9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac28860d9aabbf9a0d767737436345adeed00002
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515993"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580685"
 ---
 # <a name="delete-foreign-key-relationships"></a>删除外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "62515993"
 2.  右键单击该约束，然后单击“删除”  。  
   
 3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>删除外键约束  

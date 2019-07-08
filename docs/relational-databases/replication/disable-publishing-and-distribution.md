@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5504030fb8d5759056ce8c5c938f81fcab207b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08813aa3faad6738bb023a0c04c92f331bf5a457
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656675"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581163"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +65,12 @@ ms.locfileid: "47656675"
   
 1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到要禁用的发布服务器或分发服务器，然后展开该服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，再单击 **“禁用发布和分发”**。  
+2.  右键单击 **“复制”** 文件夹，再单击 **“禁用发布和分发”** 。  
   
 3.  完成禁用发布和分发向导中的步骤。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式禁用发布和分发。  
   

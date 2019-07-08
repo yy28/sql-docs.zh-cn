@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15be60fe093bfc28d29e5d9b8883f3928936883b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523491"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583199"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52523491"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建筛选索引，使用：**  
   
@@ -98,9 +98,9 @@ ms.locfileid: "52523491"
 
 - 在 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) 语法中查看创建筛选索引所需的 SET 选项
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。 若要修改筛选索引表达式，请使用 CREATE INDEX WITH DROP_EXISTING。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -113,29 +113,31 @@ ms.locfileid: "52523491"
   
 3.  单击加号以便展开您要创建筛选索引的表。  
   
-4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”。  
+4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”    。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在“索引键列”下，单击“添加…”。  
+6.  在“索引键列”下，单击“添加…”   。  
   
-7.  在“从 table\_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+7.  在“从 table\_name  选择列”  对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
-9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式。  
+9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式   。  
   
-10. 单击“确定” 。  
-  
+10. 单击“确定”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>创建筛选索引  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -175,9 +177,9 @@ ms.locfileid: "52523491"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

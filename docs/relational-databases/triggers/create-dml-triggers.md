@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 245ff3f542bead93290c09bf4dd3de25337795cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 927967c01e03327512bbb9876e2893f89c4f0082
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624265"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584691"
 ---
 # <a name="create-dml-triggers"></a>创建 DML 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47624265"
 ### <a name="limitations-and-restrictions"></a>限制和局限  
  有关与创建 DML 触发器相关的限制和局限的列表，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  需要对要创建触发器的表或视图具有 ALTER 权限。  
   
 ##  <a name="Procedures"></a> 如何创建 DML 触发器  
@@ -50,11 +50,11 @@ ms.locfileid: "47624265"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，展开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，展开 **“表”** ，然后展开表 **Purchasing.PurchaseOrderHeader**。  
+2.  展开 **“数据库”** ，展开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，展开 **“表”** ，然后展开表 **Purchasing.PurchaseOrderHeader**。  
   
-3.  右键单击“触发器”，然后选择“新建触发器”。  
+3.  右键单击“触发器”，然后选择“新建触发器”   。  
   
-4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”对话框。  
+4.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”** 。 或者，你可以按下 (Ctrl-Shift-M) 以便打开“指定模板参数的值”  对话框。  
   
 5.  在 **“指定模板参数的值”** 对话框中，输入下列所示的参数值。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47624265"
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|从列表中删除 UPDATE 和 DELETE。|  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 7.  在 **“查询编辑器”** 中，使用以下语句替换注释 `-- Insert statements for trigger here` ：  
   
@@ -94,21 +94,23 @@ ms.locfileid: "47624265"
     END;  
     ```  
   
-8.  若要验证语法是否有效，请在 **“查询”** 菜单上单击 **“分析”**。 如果返回错误消息，则请将该语句与上述信息进行比较，视需要进行更正并且重复此步骤。  
+8.  若要验证语法是否有效，请在 **“查询”** 菜单上单击 **“分析”** 。 如果返回错误消息，则请将该语句与上述信息进行比较，视需要进行更正并且重复此步骤。  
   
-9. 若要创建 DML 触发器，请在 **“查询”** 菜单上单击 **“执行”**。 该 DML 触发器作为数据库中的对象创建。  
+9. 若要创建 DML 触发器，请在 **“查询”** 菜单上单击 **“执行”** 。 该 DML 触发器作为数据库中的对象创建。  
   
-10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”。  
-  
+10. 若要查看在“对象资源管理器”中列出的 DML 触发器，请右键单击“触发器”，然后选择“刷新”   。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [开始之前](#Top)  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  从 **“文件”** 菜单中，单击 **“新建查询”**。  
+2.  从 **“文件”** 菜单中，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将创建与上面相同的存储的 DML 触发器。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建与上面相同的存储的 DML 触发器。  
   
     ```sql  
     -- Trigger valid for multirow and single row inserts  

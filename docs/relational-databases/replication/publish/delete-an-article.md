@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40a543a8b95853cacfb00f284e916ca216cd57b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f45e0cd36dd858105f1eb6dd01ed57c0b8ae77d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759216"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580033"
 ---
 # <a name="delete-an-article"></a>删除项目
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,15 @@ ms.locfileid: "47759216"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>从快照或事务发布中删除项目  
   
-1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot**。  
+1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>从合并发布删除项目  
   
-1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 如有必要，可将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** 并将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription**。  
+1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 以从由 **@publication** 指定的发布中删除由 **@article** 指定的项目。 如有必要，可将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** 并将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
   

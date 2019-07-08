@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2f413d9f82d128dbff31a8aea02bc2e31022234
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505730"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584994"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52505730"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **获取有关视图的信息，使用：**  
   
@@ -51,9 +51,9 @@ ms.locfileid: "52505730"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  使用 `sp_helptext` 返回视图的定义需要 **public** 角色的成员身份。 使用 `sys.sql_expression_dependencies` 查找视图的所有依赖关系需要对该数据库的 VIEW DEFINITION 权限以及对数据库的 `sys.sql_expression_dependencies` 的 SELECT 权限。 系统对象定义（如 SELECT OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,50 +62,52 @@ ms.locfileid: "52505730"
   
 1.  在 **“对象资源管理器”** 中，单击包含要查看属性的视图的数据库旁边的加号，然后单击加号以展开 **“视图”** 文件夹。  
   
-2.  右键单击要查看其属性的视图，然后选择“属性”。  
+2.  右键单击要查看其属性的视图，然后选择“属性”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties show in the **View Properties** dialog box.  
   
-     **“视图属性”** 对话框中显示以下属性：  
-  
-     **“数据库”**  
-     包含此视图的数据库的名称。  
+     **Database**  
+     The name of the database containing this view.  
   
      **Server**  
-     当前服务器实例的名称。  
+     The name of the current server instance.  
   
-     **用户**  
-     此连接的用户名。  
+     **User**  
+     The name of the user of this connection.  
   
-     **创建日期**  
-     显示视图的创建日期。  
+     **Created date**  
+     Displays the date the view was created.  
   
-     **名称**  
-     当前视图的名称。  
+     **Name**  
+     The name of the current view.  
   
-     **架构**  
-     显示视图所属的架构。  
+     **Schema**  
+     Displays the schema that owns the view.  
   
-     **系统对象**  
-     指示视图是否为系统对象。 值为 True 和 False。  
+     **System object**  
+     Indicates whether the view is a system object. Values are True and False.  
   
      **ANSI NULLs**  
-     指示创建对象时是否选择了 ANSI NULLs 选项。  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **已加密**  
-     指示视图是否已加密。 值为 True 和 False。  
+     **Encrypted**  
+     Indicates whether the view is encrypted. Values are True and False.  
   
-     **带引号的标识符**  
-     指示创建对象时是否选择了“带引号的标识符”选项。  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **架构已绑定**  
-     指示视图是否绑定到架构。 值为 True 和 False。 有关绑定到架构的视图的信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) 的 SCHEMABINDING 部分。  
+     **Schema bound**  
+     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>使用视图设计器工具获取视图属性  
   
 1.  在 **“对象资源管理器”** 中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要查看其属性的视图，然后选择“设计”。  
+2.  右键单击要查看其属性的视图，然后选择“设计”  。  
   
-3.  右键单击“关系图”窗格中的空白区域，再单击“属性”。  
+3.  右键单击“关系图”窗格中的空白区域，再单击“属性”  。  
   
      **“属性”** 窗格中显示以下属性：  
   
@@ -140,16 +142,16 @@ ms.locfileid: "52505730"
      显示所有列是否都由所选视图返回。 这是在创建视图时设置的。  
   
      **SQL 注释**  
-     显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。 您的注释可以包含视图使用者和使用时间等信息。  
+     显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)  。 您的注释可以包含视图使用者和使用时间等信息。  
   
      **Top 规范**  
-     展开此项可显示“Top”、“表达式”、“百分比”和“等同值”属性的属性。  
+     展开此项可显示“Top”  、“表达式”  、“百分比”  和“等同值”  属性的属性。  
   
      **(最前面)**  
      指定视图将包括 TOP 子句，该子句只返回结果集中的前 n 行或前百分之 n 行。 默认情况下，视图将在结果集中返回前 10 行。 使用此项可更改返回的行数或指定不同的百分比  
   
      **表达式**  
-     显示视图将返回的百分比（如果“百分比”设置为“是”）或记录（如果“百分比”设置为“否”）。  
+     显示视图将返回的百分比（如果“百分比”  设置为“是”  ）或记录（如果“百分比”  设置为“否”  ）。  
   
      **百分比**  
      指定查询将包含一个 **TOP** 子句，仅返回结果集中前百分之 n 行  
@@ -158,25 +160,25 @@ ms.locfileid: "52505730"
      指定视图将包括 **WITH TIES** 子句。 如果视图包含**WITH TIES** 子句和基于百分比的 **WITH TIES** 子句， **WITH TIES** 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 **ORDER BY** 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。  
   
      **更新规范**  
-     展开此项可显示“使用视图规则更新”和“Check 选项”属性。  
+     展开此项可显示“使用视图规则更新”  和“Check 选项”  属性。  
   
      **(使用视图规则更新)**  
      指示对视图的所有更新和插入将由 Microsoft 数据访问组件 (MDAC) 转换为引用视图的 SQL 语句，而非转换为直接引用视图的基表的 SQL 语句。  
   
-     在某些情况下，MDAC 将视图更新和视图插入操作表示为针对视图的基本基表的更新和插入。 通过选择 **“使用视图规则更新”**，您可以确保 MDAC 针对视图本身生成更新和插入操作。  
+     在某些情况下，MDAC 将视图更新和视图插入操作表示为针对视图的基本基表的更新和插入。 通过选择 **“使用视图规则更新”** ，您可以确保 MDAC 针对视图本身生成更新和插入操作。  
   
      **Check 选项**  
-     指示当打开此视图并修改“结果”窗格时，数据源检查添加或修改的数据是否满足视图定义的 **WHERE** 子句的要求。 如果您的修改不满足 **WHERE** 子句的要求，将看到一个包含详细信息的错误。  
+     指示当打开此视图并修改“结果”  窗格时，数据源检查添加或修改的数据是否满足视图定义的 **WHERE** 子句的要求。 如果您的修改不满足 **WHERE** 子句的要求，将看到一个包含详细信息的错误。  
   
 #### <a name="to-get-dependencies-on-the-view"></a>获取视图的依赖关系  
   
 1.  在 **“对象资源管理器”** 中，展开包含要查看属性的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要查看其属性的视图，然后选择“查看依赖关系”。  
+2.  右键单击要查看其属性的视图，然后选择“查看依赖关系”  。  
   
-3.  选择“依赖于 [视图名称] 的对象”可以显示引用该视图的对象。  
+3.  选择“依赖于 [视图名称] 的对象”  可以显示引用该视图的对象。  
   
-4.  选择“[视图名称] 依赖的对象”可以显示由该视图引用的对象。  
+4.  选择“[视图名称] 依赖的对象”  可以显示由该视图引用的对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -184,9 +186,9 @@ ms.locfileid: "52505730"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -214,9 +216,9 @@ ms.locfileid: "52505730"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

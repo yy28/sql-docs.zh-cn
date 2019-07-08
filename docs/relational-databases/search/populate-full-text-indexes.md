@@ -25,16 +25,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 577de0bc80ce718c393cf8d3691e8f8051dfe56f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042266"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586119"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
+  创建和维护全文索引涉及使用称为“填充”  （也称为“爬网”  ）的过程填充索引。  
   
 ##  <a name="types"></a> Types of population  
 全文索引支持以下填充类型：
@@ -176,39 +176,41 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 1.  在 Management Studio 的对象资源管理器中展开服务器。  
   
-2.  展开“数据库”，然后展开包含全文索引的数据库。  
+2.  展开“数据库”  ，然后展开包含全文索引的数据库。  
   
-3.  展开 **“表”**。  
+3.  展开 **“表”** 。  
   
-    右键单击对其定义了全文索引的表，选择“全文索引”，然后在“全文索引”上下文菜单中单击“属性”。 此时将打开“全文索引属性”对话框。  
+    右键单击对其定义了全文索引的表，选择  “全文索引”，然后在  “全文索引”上下文菜单中单击  “属性”。 此时将打开“全文索引属性”  对话框。  
 
     > [!IMPORTANT]  
     >  如果基表或视图不包含 **timestamp** 数据类型的列，则无法执行增量填充。
       
-1.  在“选择页”窗格中选择“计划”。  
+1.  在“选择页”窗格中选择“计划”。    
   
      使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动对全文索引基表或索引视图的表增量填充。  
 
      选项如下所示：  
   
-    -   若要**创建**新计划，请单击“新建”。  
+    -   若要**创建**新计划，请单击“新建”。   
   
-        此时将打开“新建全文索引表计划”对话框，你可以在此对话框中创建计划。 若要保存计划，请单击 **“确定”**。  
+        此时将打开“新建全文索引表计划”  对话框，你可以在此对话框中创建计划。 若要保存计划，请单击 **“确定”** 。  
   
         > [!IMPORTANT]  
-        >  在退出“全文索引属性”对话框之后，SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）将与新计划相关联。 如果你针对同一全文索引创建多个计划，这些计划都将使用同一作业。  
+        >  在退出“全文索引属性”  对话框之后，SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）将与新计划相关联。 如果你针对同一全文索引创建多个计划，这些计划都将使用同一作业。  
   
-    -   若要**更改**现有的计划，选择该计划，然后单击“编辑”。  
+    -   若要**更改**现有的计划，选择该计划，然后单击“编辑”。   
   
-         此时将打开“新建全文索引表计划” 对话框，你可以在此对话框中修改计划。  
+         此时将打开“新建全文索引表计划”  对话框，你可以在此对话框中修改计划。  
   
         > [!NOTE]  
         >  有关修改 SQL Server 代理作业的信息，请参阅[修改作业](../../ssms/agent/modify-a-job.md)。  
   
-    -   若要**删除**现有的计划，选择该计划，然后单击“删除”。  
+    -   若要**删除**现有的计划，选择该计划，然后单击“删除”。   
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="crawl"></a>排查全文填充（爬网）错误  
 如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 默认情况下，给定实例（在此示例中为默认实例）的爬网日志文件位于 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 文件夹中。
  
@@ -217,8 +219,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 爬网日志文件名的可变部分如下。
--   <**DatabaseID**> - 数据库的 ID。 \<dbid> 是一个带有前导零的五位数。  
--   <**FullTextCatalogID**> - 全文目录 ID。 \<catid>是一个带有前导零的五位数。  
+-   <**DatabaseID**> - 数据库的 ID。 \<dbid  > 是一个带有前导零的五位数。  
+-   <**FullTextCatalogID**> - 全文目录 ID。 \<catid  >是一个带有前导零的五位数。  
 -   <**n**> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
   
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  

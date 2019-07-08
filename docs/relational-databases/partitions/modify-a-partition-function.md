@@ -11,12 +11,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b529ce2337fa92a5c5ae6fe3ed2810a8b6c7ec11
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: bd863e5869e820d07e67baf6094fe00a5b9b4a56
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414142"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580792"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53414142"
   
 -   ALTER PARTITION FUNCTION 只能用于将一个分区拆分为两个，或将两个分区合并为一个。 若要更改表或索引的分区方式（例如，从 10 个分区变为 5 个分区），可以使用下列选项之一：  
   
-    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“管理分区向导”将旧表中的数据插入新表。  
+    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的  “管理分区向导”将旧表中的数据插入新表。  
   
     -   为堆创建分区聚集索引。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "53414142"
   
 -   ALTER PARTITION FUNCTION 所影响的全部文件组都必须处于联机状态。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  可以使用以下任意权限执行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -82,19 +82,21 @@ ms.locfileid: "53414142"
   
 2.  展开 **“分区函数”** 文件夹。  
   
-3.  右键单击要删除的分区函数，然后选择“删除”。  
+3.  右键单击要删除的分区函数，然后选择  “删除”。  
   
-4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”**。  
-  
+4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>将一个分区拆分为两个分区  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
@@ -117,9 +119,9 @@ ms.locfileid: "53414142"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  

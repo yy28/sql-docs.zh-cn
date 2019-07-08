@@ -13,12 +13,12 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836385"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585888"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 1. 打开 SQL Server Management Studio  。
 2. 连接 SQL Server 数据库引擎实例或 localhost。
 3. 展开“数据库”，右键单击数据库（下方示例的测试），指向“任务”，然后单击导入数据上方的“导入平面文件”    。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![向导菜单](media/import-flat-file-wizard/importffmenu.png)
 

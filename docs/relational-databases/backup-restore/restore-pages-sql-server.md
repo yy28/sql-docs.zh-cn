@@ -20,12 +20,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d16a118ccdf5714e0f4b5493c1c0d3266a1d33
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506379"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583742"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,9 @@ ms.locfileid: "62506379"
      **页**  
   
 7.   若要还原在页网格中列出的页，请单击“确定”。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  若要在 RESTORE DATABASE 语句中指定一页，需要知道该页所在文件的文件 ID 和该页的页 ID。 所需语法如下：  
   

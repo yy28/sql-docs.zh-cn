@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 920fe0f3e450448a1d8c9a262d2ae0e372e6769f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939041"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584435"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,9 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  创建程序集和 Transact-SQL 用户定义函数来启动该 CLR 类。  
   
 3.  通过使用用户定义函数来定义插入、更新和删除触发器，以维护属性表。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  若要如此，首先创建流式 CLR 函数。 **xml** 数据类型在 ADO.NET 中作为托管类 SqlXml 公开，并且支持返回 XmlReader 的 **CreateReader()** 方法。  
   
 > [!NOTE]  

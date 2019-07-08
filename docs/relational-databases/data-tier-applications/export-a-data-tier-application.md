@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ebee4a462cd865ef606d38ecf205bf41065a0d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513821"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580275"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "52513821"
 1.  导出操作在导出文件中生成 DAC 定义（BACPAC 文件），DAC 提取操作以同样的方式在 DAC 包文件中生成 DAC 定义。 导出的 DAC 定义包含当前数据库中的所有对象。 如果针对最初从 DAC 部署的数据库运行导出过程，且在部署后对数据库直接进行了更改，则导出的定义与数据库中的对象集匹配，而不是与原始 DAC 中定义的内容相匹配。  
   
 2.  导出操作从数据库中的所有表中大容量复制数据，然后将这些数据集成到导出文件中。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  导出过程将 DAC 版本设置为 1.0.0.0，并将导出文件中的 DAC 说明设置为空字符串。 如果从 DAC 部署数据库，则导出文件中的 DAC 定义包含为原始 DAC 指定的名称，否则，将把 DAC 名称设置为数据库名称。  
   
 
@@ -50,10 +52,10 @@ ms.locfileid: "52513821"
   
  如果数据库有 DAC 中不支持的对象或包含用户，则不能导出该数据库。 有关 DAC 中支持的对象类型的详细信息，请参阅 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  导出 DAC 至少要求 ALTER ANY LOGIN 和数据库范围内的 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。
  
-在 Azure SQL DB 上，需要为每个数据库授予对所有表或特定表的“查看定义”和“选择”权限
+在 Azure SQL DB 上，需要为每个数据库  授予对所有表或特定表的“查看定义”和“选择”权限
 
   
 ##  <a name="UsingDeployDACWizard"></a> 使用“导出数据层应用程序向导”  
@@ -65,7 +67,7 @@ ms.locfileid: "52513821"
   
 3.  右键单击数据库名称。  
   
-4.  单击“任务”，然后选择“导出数据层应用程序…”  
+4.  单击“任务”，然后选择“导出数据层应用程序…”    
   
 5.  完成向导对话框：  
   
@@ -88,26 +90,26 @@ ms.locfileid: "52513821"
   
  **不再显示此页。** - 选中此复选框可以停止在将来显示“简介”页。  
   
- **下一步** - 继续到“选择 DAC 包”页。  
+ **下一步** - 继续到“选择 DAC 包”  页。  
   
  **取消** - 取消操作并关闭向导。  
   
 ##  <a name="Export_settings"></a> “导出设置”页  
  使用此页可以指定要创建 BACPAC 文件的位置。  
   
--   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
+-   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径  。 路径名必须包含文件名和 .bacpac 扩展名。  
   
 -   **保存到 Windows Azure** - 在 Windows Azure 容器中创建 BACPAC 文件。 若要验证此选项，则您必须连接到 Microsoft Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 请注意，将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
  若要指定要导出的表的子集，请使用 **“高级”** 选项。  
   
 ##  <a name="Validation"></a> “验证”页  
- 使用验证页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”确保验证成功。  
+ 使用验证页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”  确保验证成功。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导出操作，请单击 **“完成”**。 若要取消导出操作并退出向导，请单击 **“取消”**。  
+ 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导出操作，请单击 **“完成”** 。 若要取消导出操作并退出向导，请单击 **“取消”** 。  
   
 ##  <a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  

@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099967"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584356"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
 
@@ -175,7 +175,9 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 3. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开 **“管理”** ，然后展开 **“数据收集”** 。 右键单击“CDC 性能数据收集器”，然后单击“启动数据收集组”   。  
   
 4. 在步骤 1 配置的数据仓库中，找到表 custom_snapshots.cdc_log_scan_data。 该表提供日志扫描会话中的数据的历史快照。 此数据可以用于分析与时间有关的滞后时间、吞吐量和其他性能度量值。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> 脚本升级模式
 
 在向实例应用累积更新或服务包时，在重启时，实例可进入脚本升级模式。 在此模式下，SQL Server 可能会运行一个步骤以分析和升级内部 CDC 表，这可能会导致在捕获表上重新创建对象，如索引。 根据涉及的数据量，此步骤可能会需要一些时间，或者导致已启用的 CDC 数据库的高事务日志使用情况。

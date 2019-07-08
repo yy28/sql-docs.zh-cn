@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454589"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579888"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454589"
 ## <a name="security-principals"></a>安全主体  
  安全主体是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并可以为其分配执行操作的权限的标识的正式名称。 它们通常是人员或人员组，但可以是伪装成人员的其他实体。 安全主体可以使用列出的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]来进行创建和管理。  
   
- 登录名  
+##### <a name="logins"></a>登录名  
  登录名是用于登录到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的单个用户帐户。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 支持基于 Windows 身份验证的登录名和基于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的登录名。 有关这两种类型的登录名的信息，请参阅 [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md)。  
   
- 固定服务器角色  
+##### <a name="fixed-server-roles"></a>固定服务器角色  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，固定服务器角色是一组预配置的角色，便于对服务器级别权限进行分组。 可以使用 `ALTER SERVER ROLE ... ADD MEMBER` 语句将登录名添加到角色。 有关详细信息，请参阅 [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md)。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 不支持固定服务器角色，但在 master 数据库中有两个角色（`dbmanager` 和 `loginmanager`）充当服务器角色。  
   
- 用户定义的服务器角色  
+##### <a name="user-defined-server-roles"></a>用户定义的服务器角色  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，可以创建你自己的服务器角色并向它们分配服务器级权限。 可以使用 `ALTER SERVER ROLE ... ADD MEMBER` 语句将登录名添加到服务器角色。 有关详细信息，请参阅 [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md)。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 不支持用户定义的服务器角色。  
   
- 数据库用户  
+##### <a name="database-users"></a>数据库用户  
  通过在数据库中创建数据库用户并将该数据库用户映射到登录名来授予登录名对数据库的访问权限。 通常，数据库用户名与登录名相同，尽管它不必要相同。 每个数据库用户均映射到单个登录名。 一个登录名只能映射到数据库中的一个用户，但可以映射为多个不同数据库中的数据库用户。  
   
  也可以创建不具有相应登录名的数据库用户。 这些数据库用户称为“包含的数据库用户”  。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓励使用包含的数据库用户，因为这样可以更轻松地将你的数据库移到另一个服务器。 与登录名类似，包含的数据库用户可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
   
  有 12 种类型的用户，它们在如何进行身份验证以及所表示的人员方面略有差异。 若要查看用户列表，请参阅 [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)。  
   
- 固定数据库角色  
+##### <a name="fixed-database-roles"></a>固定数据库角色  
  固定数据库角色是一组预配置的提供方便的数据库级权限组的角色。 可以使用 `ALTER ROLE ... ADD MEMBER` 语句将数据库用户和用户定义的数据库角色添加到固定数据库角色。 有关详细信息，请参阅 [ALTER ROLE (Transact-SQL)](../../../t-sql/statements/alter-role-transact-sql.md)。  
   
- 用户定义的数据库角色  
+##### <a name="user-defined-database-roles"></a>用户定义的数据库角色  
  具有 `CREATE ROLE` 权限的用户可以创建新的用户定义的数据库角色来表示具有常用权限的用户组。 通常对整个角色授予或拒绝权限，从而简化了权限管理和监视。 可以使用 `ALTER ROLE ... ADD MEMBER` 语句向数据库角色添加数据库用户。 有关详细信息，请参阅 [ALTER ROLE (Transact-SQL)](../../../t-sql/statements/alter-role-transact-sql.md)。  
   
- 其他主体  
+##### <a name="other-principals"></a>其他主体  
  这里不讨论的其他安全主体包括基于证书或非对称密钥的应用程序角色、登录名和用户。  
   
  有关显示 Windows 用户、Windows 组、登录名和数据库用户之间关系的图形，请参阅 [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)。  
@@ -66,7 +66,9 @@ ms.locfileid: "66454589"
 2.  创建表示工作单位和工作职能的 Windows 组。  
   
 3.  将 Windows 用户添加到 Windows 组。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>如果连接的人员将连接到多个数据库  
   
 1.  为 Windows 组创建登录名。 （如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，请跳过 Active Directory 步骤，并在此处创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证登录名。）  

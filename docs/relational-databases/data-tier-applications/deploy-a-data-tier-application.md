@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f734365cbfd8ca0b2ac1114853b0b412cb0e6d7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999646"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580978"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,9 @@ ms.locfileid: "62999646"
 2.  右键单击“数据库”节点，然后选择“部署数据层应用程序…”    
   
 3.  完成向导对话框的操作，然后单击“完成”。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 下面的部分向导页的详细信息： 
      
 ### <a name="select-dac-package-page"></a>“选择 DAC 包”页  

@@ -11,12 +11,12 @@ ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 955bbdf7932516623eb09f043bd7885455155e50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0c0f69ded37422581ffedf4428b344b07968e001
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671896"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584271"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>发布数据库 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "51671896"
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>将数据库发布到 Web 服务  
   
-1.  在对象资源管理器中，展开“数据库”，右键单击某个数据库，指向“任务”，然后单击“生成和发布脚本”。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
+1.  在对象资源管理器中，展开“数据库”  ，右键单击某个数据库，指向“任务”  ，然后单击“生成和发布脚本”  。 按照向导中的步骤，创建用于发布的数据库对象的脚本。  
   
 2.  在 **“选择对象”** 页上，选择要发布到 Web 宿主服务的对象。  
   
-3.  在 **“设置脚本编写选项”** 页中，选择 **“发布到 Web 服务”**。  
+3.  在 **“设置脚本编写选项”** 页中，选择 **“发布到 Web 服务”** 。  
   
     1.  在 **“提供程序”** 框中，指定 Web 服务的提供程序。 如果您尚未配置 Web 宿主提供程序，请选择 **“管理提供程序”** ，然后使用 **“管理提供程序”** 对话框来为您的 Web 服务配置一个提供程序。  
   
@@ -45,7 +45,9 @@ ms.locfileid: "51671896"
 4.  在 **“摘要”** 页上，查看您的选择。 单击 **“上一步”** 以更改您的选择。 单击 **“下一步”** 以发布所选的对象。  
   
 5.  在 **“保存或发布脚本”** 页上，监视发布的进度。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>另请参阅  
  [生成脚本 (SQL Server Management Studio)](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
  [将数据库复制到其他服务器](../../relational-databases/databases/copy-databases-to-other-servers.md)  

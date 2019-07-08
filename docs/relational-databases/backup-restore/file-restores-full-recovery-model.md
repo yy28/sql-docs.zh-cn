@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242118"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579420"
 ---
 # <a name="file-restores-full-recovery-model"></a>文件还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,18 +42,18 @@ ms.locfileid: "54242118"
   
 -   脱机文件还原  
   
-     在“脱机文件还原” 中，还原已损坏的文件或文件组时，数据库处于脱机状态。 还原顺序结束时，数据库将联机。  
+     在“脱机文件还原”  中，还原已损坏的文件或文件组时，数据库处于脱机状态。 还原顺序结束时，数据库将联机。  
   
      所有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都支持脱机文件还原。  
   
 -   联机文件还原  
   
-     在“联机文件还原” 中，如果数据库在还原时处于联机状态，则该数据库在文件还原过程中将保持联机状态。 不过，各文件组中如果有文件正在被还原，则该文件组在还原操作过程中将处于脱机状态。 恢复脱机文件组中的所有文件之后，该文件组将自动变为联机状态。  
+     在“联机文件还原”  中，如果数据库在还原时处于联机状态，则该数据库在文件还原过程中将保持联机状态。 不过，各文件组中如果有文件正在被还原，则该文件组在还原操作过程中将处于脱机状态。 恢复脱机文件组中的所有文件之后，该文件组将自动变为联机状态。  
   
      有关联机页和文件还原支持的信息，请参阅 [SQL Server 2016 版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)。
   
     > [!TIP]  
-    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE。  
+    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE  。  
   
   
 ##  <a name="Overview"></a> 从文件备份还原损坏的文件  
@@ -76,7 +76,9 @@ ms.locfileid: "54242118"
      必须还原在文件备份后创建的事务日志备份才能使数据库处于一致状态。 事务日志备份可以快速前滚，因为仅应用了对还原文件所做的更改。 与还原整个数据库相比，更好的方式是还原单个文件，因为并不会复制并随后前滚未损坏的文件。 但是，仍需要读取整个日志备份链。  
   
 5.  恢复数据库。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  文件备份可用于将数据库还原到早期时间点。 必须还原一组完整的文件备份，然后依次将事务日志备份还原到目标点（目标点是结束最近还原的文件备份后的时间点），才能执行此操作。 有关时点恢复的详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dfb480335b36dde5ce7faece207fb214d1dba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0454483882af5bcd55b607b63336587590d3ebf8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620676"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580676"
 ---
 # <a name="delete-tables-database-engine"></a>删除表（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47620676"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具删除表：**  
   
@@ -60,9 +60,9 @@ ms.locfileid: "47620676"
   
 -   任何引用已删除表的视图或存储过程都必须显式删除或修改，以便删除对该表的引用。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要拥有该表所属架构的 ALTER 权限、该表的 CONTROL 权限或 **db_ddladmin** 固定数据库角色中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -71,22 +71,24 @@ ms.locfileid: "47620676"
   
 1.  在对象资源管理器中选择要删除的表。  
   
-2.  右键单击该表，再从快捷菜单中选择“删除”。  
+2.  右键单击该表，再从快捷菜单中选择“删除”  。  
   
-3.  此时，将显示一个消息框，提示您确认删除。 单击 **“是”**。  
-  
+3.  此时，将显示一个消息框，提示您确认删除。 单击 **“是”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    >  删除一个表将自动移除与该表之间的所有关系。  
+    >  Deleting a table automatically removes any relationships to it.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-table-in-query-editor"></a>在查询编辑器中删除表  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     DROP TABLE dbo.PurchaseOrderDetail;  

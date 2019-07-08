@@ -25,12 +25,12 @@ ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d73ac7a360743e057b99e4b026a7464952cf9f89
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a096d3b60a8836b112639c6c95c393a889d0dbaf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559307"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584299"
 ---
 # <a name="move-user-databases"></a>移动用户数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,9 @@ ms.locfileid: "51559307"
     ```  
   
 5.  通过运行以下查询来验证文件更改。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
     FROM sys.master_files  
@@ -121,7 +123,7 @@ ms.locfileid: "51559307"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  对于要移动的每个文件，请使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 运行以下语句。  
   

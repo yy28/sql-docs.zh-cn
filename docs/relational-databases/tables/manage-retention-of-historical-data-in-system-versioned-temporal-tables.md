@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef2848efb4a66ccf2d8d1b2271bd70c455b27fd9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466684"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582635"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理版本由系统控制的临时表中历史数据的保留期
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ ms.locfileid: "62466684"
      ![Stretch Database 向导的“选择 IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 向导的“选择 IP 地址”页")  
   
 6.  向导完成后，验证数据库已成功启用延伸。 请注意对象资源管理器中的图标指示数据库已延伸  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **注意**：如果“启用数据库延伸”失败，请查看错误日志。 一种常见的错误是防火墙规则配置不正确。  
   
  请参阅：  

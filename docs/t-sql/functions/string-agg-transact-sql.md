@@ -16,16 +16,16 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a2da75020ff7e84bcbef2e20a0fa9a0e0ce83d08
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947536"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564170"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 串联字符串表达式的值，并在其间放置分隔符值。 不能在字符串末尾添加分隔符。
  
@@ -40,7 +40,8 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   
 ```
 
-## <a name="arguments"></a>参数 
+## <a name="arguments"></a>参数
+
 *expression*  
 是任何类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 串联期间，表达式被转换为 `NVARCHAR` 或 `VARCHAR` 类型。 非字符串类型被转换为 `NVARCHAR` 类型。
 
@@ -57,8 +58,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
  
   可用于对结果进行排序的一系列非常量[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 每个查询只允许使用一个 `order_by_expression`。 默认的排序顺序为升序。   
   
-
-## <a name="return-types"></a>返回类型 
+## <a name="return-types"></a>返回类型
 
 返回类型取决于第一个参数（表达式）。 如果输入参数是字符串类型（`NVARCHAR``VARCHAR`，则结果类型与输入类型相同。 下表列出了自动转换：  
 
@@ -70,8 +70,8 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
+## <a name="remarks"></a>Remarks
 
-## <a name="remarks"></a>Remarks  
 `STRING_AGG` 是一个聚合函数，用于提取行中的所有表达式，并将这些表达式串联成一个字符串。 表达式值隐式转换为字符串类型，然后串联在一起。 隐式转换为字符串的过程遵循现有的数据类型转换规则。 有关数据类型转换的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
 如果输入表达式的类型为 `VARCHAR`，则分隔符的类型不能是 `NVARCHAR`。 
@@ -80,9 +80,10 @@ null 值会被忽略，且不会添加相应的分隔符。 若要为 null 值�
 
 `STRING_AGG` 适用于任何兼容级别。
 
-## <a name="examples"></a>示例 
+## <a name="examples"></a>示例
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 生成以新行分隔的姓名列表 
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 生成以新行分隔的姓名列表
+
 下面的示例在一个结果单元格中生成姓名列表，并将其以回车符分隔。
 ```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
@@ -98,7 +99,8 @@ FROM Person.Person;
 > [!NOTE]  
 >  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。   
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成使用逗号分隔且不带 NULL 值的姓名列表   
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 生成使用逗号分隔且不带 NULL 值的姓名列表
+
 下面的示例在一个结果单元格中返回以逗号分隔的姓名，并使用“N/A”替换 null 值。  
 ```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
@@ -111,8 +113,9 @@ FROM Person.Person;
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-### <a name="c-generate-comma-separated-values"></a>C. 生成采用逗号分隔的值 
-```sql   
+### <a name="c-generate-comma-separated-values"></a>C. 生成采用逗号分隔的值
+
+```sql
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -120,7 +123,7 @@ FROM Person.Person;
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|姓名 | 
+|姓名 |
 |--- |
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
@@ -128,7 +131,8 @@ FROM Person.Person;
 >  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。   
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 返回带有相关标记的新闻文章 
-文章及其标记被分隔到不同的表中。 开发人员想在返回时将每篇文章及其所有相关标记作为一行。 请使用以下查询： 
+文章及其标记被分隔到不同的表中。 开发人员想在返回时将每篇文章及其所有相关标记作为一行。 请使用以下查询：
+
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
@@ -146,7 +150,9 @@ GROUP BY a.articleId, title;
 |177 |狗继续比猫更受人喜爱 |民意调查,动物| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 生成按城市分类的电子邮件列表
-下面的查询用于查找员工的电子邮件地址，并将结果按城市分类： 
+
+下面的查询用于查找员工的电子邮件地址，并将结果按城市分类：
+
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
@@ -178,7 +184,8 @@ GROUP BY town;
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+ 
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  

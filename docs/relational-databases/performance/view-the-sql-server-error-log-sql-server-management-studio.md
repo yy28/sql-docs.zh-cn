@@ -16,12 +16,12 @@ ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 71945328b2efeae919725ec687669104ce3d9951
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 38d99822b2d77e25259c793d350e4d329d4c0af7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376299"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582220"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>查看 SQL Server 错误日志 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,20 +29,22 @@ ms.locfileid: "53376299"
 
 ## <a name="view-the-logs"></a>查看日志
 
-1. 在 SQL Server Management Studio 中选择“对象资源管理器”。 按 F8 打开“对象资源管理器”。 或者，在顶部菜单上选择“视图”，然后选择“对象资源管理器”：
+1. 在 SQL Server Management Studio 中选择“对象资源管理器”  。 按 F8 打开“对象资源管理器”  。 或者，在顶部菜单上选择“视图”，然后选择“对象资源管理器”   ：
     
     ![Object_explorer](../../relational-databases/performance/media/object-explorer.png) 
 
-2. 在“对象资源管理器”中，连接到某个 SQL Server 实例，然后展开该实例。
+2. 在“对象资源管理器”  中，连接到某个 SQL Server 实例，然后展开该实例。
   
-3. 找到并展开“管理”部分（假设你有权查看它）。
+3. 找到并展开“管理”  部分（假设你有权查看它）。
 
-4. 右键单击“SQL Server 日志”，选择“查看”，然后选择“SQL Server 日志”。
+4. 右键单击“SQL Server 日志”，选择“查看”，然后选择“SQL Server 日志”    。
 
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
-5. 将显示“日志文件查看器”（可能需要等一段时间），其中包含可供查看的一个日志列表。
-  
+5. 将显示“日志文件查看器”  （可能需要等一段时间），其中包含可供查看的一个日志列表。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   ## <a name="see-also"></a>另请参阅
   有关详细信息，请参阅 [MSSQLTips.com](https://www.mssqltips.com/) 上的实用帖[确定 SQL Server 错误日志文件的位置](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)。
 

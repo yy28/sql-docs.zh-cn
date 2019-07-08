@@ -15,12 +15,12 @@ ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d38354f7533deebba413028a5b925c37de6e8fe3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ceb7ba945ae36e09b32bbba37776a6a933059d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606455"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582897"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>设置合并发布的兼容级别
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47606455"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在新建发布向导的 **“订阅服务器类型”** 页上设置兼容级别。 有关访问本向导的详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)中设置合并发布的兼容级别。 创建了发布快照后，可以提高兼容级别但不能降低兼容级别。 在“发布属性 - \<发布>”对话框的“常规”页上提高兼容性级别。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 如果要提高发布兼容级别，则运行该兼容级别的早期版本的服务器上的所有现有订阅都将不能同步。  
+ 在新建发布向导的 **“订阅服务器类型”** 页上设置兼容级别。 有关访问本向导的详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)中设置合并发布的兼容级别。 创建了发布快照后，可以提高兼容级别但不能降低兼容级别。 在“发布属性 - \<发布>”  对话框的“常规”  页上提高兼容性级别。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。 如果要提高发布兼容级别，则运行该兼容级别的早期版本的服务器上的所有现有订阅都将不能同步。  
   
 > [!NOTE]  
 >  由于兼容级别具有其他发布属性的含义，并且项目属性对这些含义有效。因此，请不要使用同一个对话框更改兼容级别和其他属性。 应该在更改属性后重新生成发布的快照。  
@@ -46,7 +46,7 @@ ms.locfileid: "47606455"
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>提高发布兼容级别  
   
--   在“发布属性 - \<发布>”对话框的“常规”页上，选择**兼容性级别**。  
+-   在“发布属性 - \<发布>”  对话框的“常规”  页上，选择**兼容性级别**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以在创建发布时以编程方式设置合并发布的兼容级别，或者以后以编程方式进行修改。 可使用复制存储过程来设置或更改此发布属性。  
@@ -54,7 +54,9 @@ ms.locfileid: "47606455"
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>设置合并发布的发布兼容级别  
   
 1.  在发布服务器上，执行 [sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，并为 **@publication_compatibility_level** 指定值，以使该发布与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的早期版本兼容。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>更改合并发布的发布兼容级别  
   
 1.  执行 [sp_changemergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，并为 **@property** 指定 **publication_compatibility_level**，为 **@value** 指定相应的发布兼容级别。  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057308"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581353"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>排除故障：查找 SQL Server 事务复制错误 
 如果对事务复制的工作机制没有基本的了解，那么排查复制错误可能会遭遇挫败。 创建发布的第一步是使用快照代理创建快照并将其保存到快照文件夹。 接下来，分发代理将该快照应用于订阅服务器。 
@@ -25,6 +25,8 @@ ms.locfileid: "63057308"
 1. 事务发生在复制对象上，并在事务日志中将其标记为“用于复制”。 
 2. 日志读取器代理扫描事务日志并查找标记为“用于复制”的事务。 然后这些事务将保存到分发数据库。 
 3. 分发代理使用读取器线程扫描分发数据库。 然后，通过使用编写器线程，此代理连接到订阅服务器，将这些更改应用于订阅服务器。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 此过程的任何一步都可能发生错误。 查找这些错误可能是故障排除同步问题最具挑战性的方面。 还好可使用复制监视器简化此过程。 
 

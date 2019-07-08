@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 68c611986bba308dc06476a7fd61328353c9075d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589521"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580591"
 ---
 # <a name="duplicate-tables"></a>复制表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "53589521"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  在目标数据库中要求 CREATE TABLE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -57,32 +57,34 @@ ms.locfileid: "53589521"
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   
-2.  在对象资源管理器中，右键单击“表”，再单击“新建表”。  
+2.  在对象资源管理器中，右键单击  “表”，再单击  “新建表”。  
   
-3.  在对象资源管理器中，右键单击要复制的表，再单击“设计”。  
+3.  在对象资源管理器中，右键单击要复制的表，再单击  “设计”。  
   
-4.  在现有表中选择列，在 **“编辑”** 菜单上单击 **“复制”**。  
+4.  在现有表中选择列，在 **“编辑”** 菜单上单击 **“复制”** 。  
   
 5.  切换回新表并选择第一行。  
   
-6.  在 **“编辑”** 菜单上，单击 **“粘贴”**。  
+6.  在 **“编辑”** 菜单上，单击 **“粘贴”** 。  
   
-7.  从“文件”菜单上，单击“保存”表格名称。  
+7.  从“文件”  菜单上，单击“保存”  表格名称  。  
   
-8.  在 **“选择名称”** 对话框中，键入新表的名称，然后单击 **“确定”**。  
-  
+8.  在 **“选择名称”** 对话框中，键入新表的名称，然后单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-duplicate-a-table-in-query-editor"></a>在查询编辑器中复制表  
   
 1.  请确保您已经连接到要在其中创建表的数据库并在对象资源管理器中选中该数据库。  
   
-2.  右键单击要复制的表，指向“编写表脚本为”，然后指向“CREATE 到”，再选择“新查询编辑器窗口”。  
+2.  右键单击要复制的表，指向  “编写表脚本为”，然后指向  “CREATE 到”，再选择  “新查询编辑器窗口”。  
   
 3.  更改表的名称。  
   
 4.  删除新表中不需要的列。  
   
-5.  单击“执行” 。  
+5.  单击“执行”  。  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0b215dbc61be9d7a710300301ec63f8796a915
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f2b2a7a957bd964b52f4dcda847de84cdef3cbc0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129507"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581270"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,19 @@ ms.locfileid: "54129507"
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 存储过程的 **@schema_option** 参数设置为   
     **0x40000000000**及更高版本支持此功能。  
   
-3.  在项目属性窗口中，将“启用内存优化”  设置为“true” 。  
+3.  在项目属性窗口中，将“启用内存优化”  设置为“true”  。  
   
 4.  启动快照代理作业以为此发布生成初始快照。 有关详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
-5.  此时，创建新订阅。 在“新建订阅向导”  中，将“内存优化订阅”  设置为“true” 。  
-  
+5.  此时，创建新订阅。 在“新建订阅向导”  中，将“内存优化订阅”  设置为“true”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  内存优化表现在应该开始从发布服务器接收更新。  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>重新配置现有的事务复制  
   
-1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅”  设置为“true” 。 只有在重新初始化订阅之后，系统才会应用这些更改。  
+1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅”  设置为“true”  。 只有在重新初始化订阅之后，系统才会应用这些更改。  
   
      如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 **@memory_optimized** 存储过程的 **@memory_optimized** 参数设置为“true”。  
   

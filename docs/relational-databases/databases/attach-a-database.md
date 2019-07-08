@@ -16,12 +16,12 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 292c180b70143826ebdb8ea75b015dcbe6a2011f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c7b7588801419f57d04996d6bd2cad335a9eede
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523927"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583231"
 ---
 # <a name="attach-a-database"></a>附加数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "52523927"
  
 不建议对“备份和恢复”使用分离和附加。 没有事务日志备份，并且可能会意外删除文件。
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
 文件访问权限可在很多数据库操作过程中设置，其中包括分离或附加数据库。 有关分离或附加数据库时设置的文件权限的信息，请参阅 [联机丛书（仍为有效读物！）中的](https://technet.microsoft.com/library/ms189128.aspx) 保护数据和日志文件 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 
   
 建议您不要附加或还原来自未知或不可信源的数据库。 此类数据库可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。 有关附加数据库的详细信息以及在附加数据库时对元数据进行的更改的信息，请参阅 [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
 需要 `CREATE DATABASE`、`CREATE ANY DATABASE` 或 `ALTER ANY DATABASE` 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -55,35 +55,37 @@ ms.locfileid: "52523927"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后单击以在 SSMS 中展开该实例视图。  
   
-2.  右键单击“数据库”，然后单击“附加”。  
+2.  右键单击“数据库”  ，然后单击“附加”  。  
   
-3.  在 **“附加数据库”** 对话框中，若要指定要附加的数据库，请单击 **“添加”**，然后在 **“定位数据库文件”** 对话框中选择数据库所在的磁盘驱动器并展开目录树，以查找并选择数据库的 .mdf 文件。例如：  
-  
+3.  在 **“附加数据库”** 对话框中，若要指定要附加的数据库，请单击 **“添加”** ，然后在 **“定位数据库文件”** 对话框中选择数据库所在的磁盘驱动器并展开目录树，以查找并选择数据库的 .mdf 文件。例如：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > 尝试选择已附加的数据库将生成错误。  
+    > Trying to select a database that is already attached generates an error.  
   
-     **要附加的数据库**  
-     显示所选数据库的有关信息。  
+     **Databases to attach**  
+     Displays information about the selected databases.  
   
-     \<无列标题>  
-     显示一个图标，用以指示附加操作的状态。 下面的 **“状态”** 说明中介绍可能的图标。  
+     \<no column header>  
+     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
   
-     **MDF 文件位置**  
-     显示选定 MDF 文件的路径和文件名。  
+     **MDF File Location**  
+     Displays the path and file name of the selected MDF file.  
   
      **Database Name**  
-     显示数据库的名称。  
+     Displays the name of the database.  
   
-     **附加为**  
-     根据需要，可以指定要附加数据库的其他名称。  
+     **Attach As**  
+     Optionally, specifies a different name for the database to attach as.  
   
-     **“所有者”**  
-     提供数据库可能所有者的下拉列表，您可以根据需要从其中选择其他所有者。  
+     **Owner**  
+     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
   
-     **“状态”**  
-     显示下表中相应的数据库状态。  
+     **Status**  
+     Displays the status of the database according to the following table.  
   
     |图标|状态文本|描述|  
     |----------|-----------------|-----------------|  
@@ -94,44 +96,44 @@ ms.locfileid: "52523927"
     |包含左、右两个黑色象限和上、下两个白色象限的圆圈|已停止|由于用户停止了附加操作，该操作未成功完成。|  
     |包含一个指向逆时针方向的曲线箭头的圆圈|已回滚|附加操作已成功，但已对其进行回滚，因为在附加其他对象的过程中出现了错误。|  
   
-     **消息**  
-     显示空消息或“找不到文件”超链接。  
+     **Message**  
+     Displays either a blank message or a "File not found" hyperlink.  
   
-     **“添加”**  
-     查找必需的主数据库文件。 当用户选择 .mdf 文件时，就会在 **“要附加的数据库”** 网格的相应字段中自动填充合适的信息。  
+     **Add**  
+     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
   
-     **删除**  
-     从 **“要附加的数据库”** 网格中删除选定文件。  
+     **Remove**  
+     Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **”数据库详细信息**  
-     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮（“…”）。  
+     **"** *<database_name>* **" database details**  
+     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  
-    > 如果文件不存在，则 **“消息”** 列显示“找不到”。 如果找不到日志文件，则说明它位于其他目录中或者已被删除。 您需要更新 **“数据库详细信息”** 网格中该文件的路径使其指向正确的位置，或者从网格中删除该日志文件。 如果找不到 .ndf 数据文件，则需要更新网格中该文件的路径使其指向正确的位置。  
+    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
   
-     **原始文件名**  
-     显示属于数据库的已附加文件的名称。  
+     **Original File Name**  
+     Displays the name of the attached file belonging to the database.  
   
-     **文件类型**  
-     指示文件类型，即 **“数据”** 或 **“日志”**。  
+     **File Type**  
+     Indicates the type of file, **Data** or **Log**.  
   
-     **当前文件路径**  
-     显示所选数据库文件的路径。 可以手动编辑该路径。  
+     **Current File Path**  
+     Displays the path to the selected database file. The path can be edited manually.  
   
-     **消息**  
-     显示空消息或 **“找不到文件”** 超链接。  
+     **Message**  
+     Displays either a blank message or a "**File not found**" hyperlink.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 ### <a name="to-attach-a-database"></a>附加数据库  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  使用带 `FOR ATTACH` 子句的 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
   
-     将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
+     将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
   
     ```sql  
     CREATE DATABASE MyAdventureWorks   
@@ -144,7 +146,7 @@ ms.locfileid: "52523927"
     > 或者，你可以使用 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 或 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 存储过程。 但是，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将删除这些存储过程。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 建议改用 `CREATE DATABASE ... FOR ATTACH` 。  
   
 ##  <a name="FollowUp"></a> 跟进：在升级 SQL Server 数据库之后  
-在使用附加方法升级数据库后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”或“重新生成”，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”时，如果全文目录不可用，将重新生成关联的全文检索。  
+在使用附加方法升级数据库后，该数据库将立即变为可用，然后自动进行升级。 如果数据库具有全文检索，升级过程将导入、重置或重新生成它们，具体取决于**全文升级选项**服务器属性的设置。 如果将升级选项设置为“导入”  或“重新生成”  ，在升级过程中将无法使用全文检索。 导入可能需要数小时，而重新生成所需的时间最多时可能十倍于此，具体取决于要编制索引的数据量。 另请注意，当升级选项设置为“导入”  时，如果全文目录不可用，将重新生成关联的全文检索。  
   
 如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   

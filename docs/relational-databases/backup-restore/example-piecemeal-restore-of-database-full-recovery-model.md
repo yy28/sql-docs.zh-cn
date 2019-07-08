@@ -15,12 +15,12 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bf9130dadbc0b7a851856d70d78403b6f0008e1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: caae503d57460d88d2396842f565125ff32c9378
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581842"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579436"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例如：数据库的段落还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,16 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
      此时，主文件组和文件组 `A` 以及 `C` 处于联机状态。 文件组 `B` 中的文件仍保持恢复挂起状态，而该文件组处于脱机状态。 解析延迟的事务后，日志被截断。  
   
 3.  对文件组 `B`进行联机还原。  
-  
-     在第三个还原顺序中，数据库管理员将还原文件组 `B`。 文件组 `B` 的备份是在该文件组变为只读状态之后进行的，因此，在恢复过程中无需将其前滚。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
     ```  
   
-     所有文件组现在都处于联机状态。  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>其他示例  
   

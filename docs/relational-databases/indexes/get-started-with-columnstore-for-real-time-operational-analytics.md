@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 38d58dc9156488e9c80e199ba2074b96015df7f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294445"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583170"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储适进行实时运行分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,9 @@ ms.locfileid: "56294445"
     ```  
   
 3.  这就是要执行的所有操作！  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  现在，无需对应用程序进行任何更改，就能运行实时运营分析。  分析查询将针对列存储索引运行，OLTP 操作将针对 OLTP btree 索引不断运行。 OLTP 工作负载将继续执行，但维护列存储索引会产生更多的开销。 请参阅下一部分中有关性能优化的信息。  
   
 ## <a name="blog-posts"></a>博客文章  

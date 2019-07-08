@@ -21,19 +21,19 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d90c284494fe3f351d66932c019dbc3140aac433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c025b791559fb63ba82826f112e04b6da837be1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698035"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581771"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>使用标记的事务一致地恢复相关的数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
- 在对两个或更多数据库（“相关数据库” ）进行相关更新时，可以使用事务标记将它们恢复到逻辑上一致的点。 但是，此恢复将丢失在作为恢复点的标记之后提交的所有事务。 只有您在测试相关数据库或不介意丢失近期提交的事务时，标记事务才适用。  
+ 在对两个或更多数据库（“相关数据库”  ）进行相关更新时，可以使用事务标记将它们恢复到逻辑上一致的点。 但是，此恢复将丢失在作为恢复点的标记之后提交的所有事务。 只有您在测试相关数据库或不介意丢失近期提交的事务时，标记事务才适用。  
   
  在每个相关数据库中定期标记相关事务将在数据库中建立一系列公用恢复点。 事务标记将记录在事务日志中并包括在日志备份中。 发生灾难时，可以将各数据库还原到相同的事务标记，从而将它们恢复到一致的点。  
   
@@ -63,7 +63,9 @@ ms.locfileid: "47698035"
 4.  用 WITH NORECOVERY 还原数据库备份。  
   
 5.  用 WITH STOPATMARK 还原日志。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="considerations-for-using-marked-transactions"></a>使用标记事务的注意事项  
  在将已命名的标记插入事务日志之前，请注意以下事项：  
   

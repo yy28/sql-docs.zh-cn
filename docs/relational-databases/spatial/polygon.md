@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761446"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581694"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ ms.locfileid: "66761446"
 2.  图 2 是由外部环和两个内部环定义其边界的 **Polygon** 实例。 内部环内的面积是 **Polygon** 实例的外部环的一部分。  
   
 3.  图 3 是一个有效的 **Polygon** 实例，因为其内部环在单个切点处相交。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>接受的实例  
  已接受的 **Polygon** 实例是可以在不引发异常的情况下存储到 **geometry** 或 **geography** 变量中的实例。 下面是一些已接受的 **Polygon** 实例：  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a93f71f886484d38996a867bebbc6ef32c33c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175623"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492870"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
   在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
@@ -75,7 +75,7 @@ Web 门户通常包含文件夹、报表、数据源以及“我的报表”文�
   
 运行报表后，可以将其导出为其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 还可以使用逗号分隔值 (CSV) 呈现扩展插件之类的数据扩展插件导出报表，然后使用 CSV 数据文件作为对其他应用程序的输入。 有关导出报表的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。
   
- 选择和运行报表的最简单方法是打开 Web 门户，然后搜索或浏览到要查看的报表。 有关如何打开报表的分步说明，请参阅[打开和关闭报表](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
+ 选择和运行报表的最简单方法是打开 Web 门户，然后搜索或浏览到要查看的报表。  
   
  在运行某一报表后，您可以刷新该报表以查看新数据。  
   

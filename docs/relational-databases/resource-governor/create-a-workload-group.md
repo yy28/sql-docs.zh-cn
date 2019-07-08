@@ -13,21 +13,21 @@ ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 665e88f2b86276beb16acb043dd270d0a8cf6da5
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: f09c3fecff6dd64934a456fafc0eabfcb134c30f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689830"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581828"
 ---
 # <a name="create-a-workload-group"></a>创建工作负荷组
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建工作负荷组。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要创建工作负荷组，请使用：[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   若要创建工作负荷组，请使用：  [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -38,7 +38,7 @@ ms.locfileid: "55689830"
   
  允许索引创建操作使用比最初授予的工作区内存多的工作区内存，以便提高性能。 这个特别处理由资源调控器支持，然而，最初授予及任何其他内存授予都受工作负荷组和资源池设置的限制。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  创建工作负荷组需要 CONTROL SERVER 权限。  
   
 ##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建工作负荷组  
@@ -46,7 +46,7 @@ ms.locfileid: "55689830"
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的资源池。  
   
-2.  右键单击“工作负荷组”文件夹，然后单击“新建工作负荷组”。  
+2.  右键单击“工作负荷组”  文件夹，然后单击“新建工作负荷组”  。  
   
 3.  在 **“资源池”** 网格中，确保突出显示要添加工作负荷组的资源池。  
   
@@ -56,8 +56,10 @@ ms.locfileid: "55689830"
   
 6.  在行中单击或双击要更改其默认设置的任何其他单元，然后输入新值。  
   
-7.  若要保存更改，请单击 **“确定”**。  
-  
+7.  若要保存更改，请单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 创建工作负荷组  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

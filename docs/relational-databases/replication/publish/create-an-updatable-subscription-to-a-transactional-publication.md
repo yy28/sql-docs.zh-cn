@@ -14,12 +14,12 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 690e84fb754f7a50137ff6879bb8866127e2ed7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 683e916810766430d9fe1c26f5473b709bb82d0b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661099"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580134"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>创建事务发布的可更新订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +54,8 @@ ms.locfileid: "62661099"
     有关链接服务器帐户所需权限的信息，请参阅[在此处输入链接说明](../../../relational-databases/replication/security/secure-the-subscriber.md)的**排队更新订阅**部分。
 
 8. 完成向导。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>从订阅服务器配置可更新订阅
 

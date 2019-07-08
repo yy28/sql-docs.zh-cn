@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b9983c4627be4b3d60b6fdb40e10932f380b970
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665614"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580991"
 ---
 # <a name="page-compression-implementation"></a>页压缩的实现
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "62665614"
 2.  前缀压缩  
   
 3.  字典压缩  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  当使用页压缩时，将仅使用行压缩来压缩索引的非叶级别页。 有关行压缩的详细信息，请参阅 [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)。  
   
 ## <a name="prefix-compression"></a>前缀压缩  

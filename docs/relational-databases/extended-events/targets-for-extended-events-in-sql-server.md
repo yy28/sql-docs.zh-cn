@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478132"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583390"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 
@@ -157,7 +157,7 @@ CREATE EVENT SESSION [event_counter_1]
 > [!NOTE]
 > Azure SQL 数据库仅支持在 Azure Blob 存储中存储 `xel` 文件。 
 >
-> 有关特定于 SQL 数据库和 SQL 数据库托管实例的“event_file”代码示例，请参阅 [SQL 数据库中扩展事件的事件文件目标代码](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)。
+> 有关特定于 SQL 数据库和 SQL 数据库托管实例的“event_file”代码示例，请参阅 [SQL 数据库中扩展事件的事件文件目标代码](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)  。
 
 ::: moniker-end
 
@@ -280,8 +280,8 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 
 **source_type** 参数是控制 histogram 目标的关键：
 
-- **source_type = 0** - 表示为事件字段收集数据）。
-- **source_type = 1** - 表示为操作收集数据）。
+- **source_type = 0** - 表示为事件字段  收集数据）。
+- **source_type = 1** - 表示为操作  收集数据）。
     - 1 为默认值。
 
 
@@ -290,7 +290,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 例如，slots=59 四舍五入为 = 64。
 
 
-### <a name="action-example-for-histogram"></a>histogram 的“操作”示例
+### <a name="action-example-for-histogram"></a>histogram 的“操作”  示例
 
 
 在其 TARGET...SET 子句上，以下 Transact-SQL CREATE EVENT SESSION 语句指定 **source_type=1** 的目标参数赋值。 1 表示 histogram 目标跟踪某项操作。
@@ -359,7 +359,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### <a name="event-field-example-for-histogram"></a>histogram 的事件“字段”示例
+### <a name="event-field-example-for-histogram"></a>histogram 的事件“字段”  示例
 
 
 以下示例设置 **source_type=0**。 分配给 **source=** 的值就是事件字段（而非操作）。
@@ -521,6 +521,7 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. 故意不发出 COMMIT TRANSACTION，直到我们检查完目标。
 4. 测试完成后，发出 COMMIT TRANSACTION。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 简单的 **event_counter** 目标提供以下输出行。 因为 52-50=2，输出结果告诉我们，检查成对匹配目标中的输出时，应该会看到 2 个不成对的 lock_acquired 事件。
 

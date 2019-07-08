@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256022"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581420"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ ms.locfileid: "54256022"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  使用 **sys.sql_expression_dependencies** 查找函数的依赖关系要求对该数据库具有 VIEW DEFINITION 权限，以及对数据库具有 **sys.sql_expression_dependencies** 的 SELECT 权限。 系统对象定义（如 OBJECT_DEFINITION 中返回的对象定义）是公开可见的。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,48 +69,50 @@ ms.locfileid: "54256022"
   
     -   Aggregate 函数  
   
-4.  右键单击要查看其属性的函数，然后选择“属性”。  
+4.  右键单击要查看其属性的函数，然后选择“属性”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     以下属性将显示在“函数属性 - function_name”对话框。  
-  
-     **“数据库”**  
-     包含此函数的数据库的名称。  
+     **Database**  
+     The name of the database containing this function.  
   
      **Server**  
-     当前服务器实例的名称。  
+     The name of the current server instance.  
   
-     **用户**  
-     此连接的用户名。  
+     **User**  
+     The name of the user of this connection.  
   
-     **创建日期**  
-     显示函数的创建日期。  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **执行身份**  
-     执行该函数的上下文。  
+     **Execute As**  
+     Execution context for the function.  
   
-     **名称**  
-     当前函数的名称。  
+     **Name**  
+     The name of the current function.  
   
-     **架构**  
-     显示函数所属的架构。  
+     **Schema**  
+     Displays the schema that owns the function.  
   
-     **系统对象**  
-     指示该函数是否为系统对象。 值为 True 和 False。  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
      **ANSI NULLs**  
-     指示创建对象时是否选择了 ANSI NULLs 选项。  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **已加密**  
-     指示该函数是否已加密。 值为 True 和 False。  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **函数类型**  
-     用户定义函数的类型。  
+     **Function Type**  
+     The type of user defined function.  
   
-     **带引号的标识符**  
-     指示创建对象时是否选择了“带引号的标识符”选项。  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **架构已绑定**  
-     指示该函数是否已绑定到架构。 值为 True 和 False。 有关绑定到架构的函数的信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 的 SCHEMABINDING 部分。  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -118,9 +120,9 @@ ms.locfileid: "54256022"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -159,9 +161,9 @@ ms.locfileid: "54256022"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

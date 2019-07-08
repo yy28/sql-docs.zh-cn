@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ed9959bf001855e869262c9f91f2821bf7c59744
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 95c7b2a185786c37687a28978fc4786c45a99958
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689900"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586184"
 ---
 # <a name="view-resource-governor-properties"></a>查看资源调控器属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,20 +49,22 @@ ms.locfileid: "55689900"
   
  可以通过查询 [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 动态管理视图来获取 is_configuration_pending 的当前状态以确定是否存在配置挂起。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  查看资源调控器属性需要 VIEW SERVER STATER 权限。 资源调控器配置任务需要 CONTROL SERVER 权限。  
   
 ##  <a name="ViewRGProp"></a> 资源调控器属性页  
  **若要查看资源调控器属性，请使用资源调控器属性页 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”，然后单击“属性”，这将打开“资源调控器属性”页。  
+2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
   
 3.  有关该页中的字段的说明，请参阅 [资源调控器属性](#RGProp)。  
   
-4.  若要保存任何更改，请单击 **“确定”**。  
-  
+4.  若要保存任何更改，请单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **分类器函数名称**  
  通过从列表中选择来指定分类器函数。  
@@ -71,7 +73,7 @@ ms.locfileid: "55689900"
  通过选中或清除复选框来启用或禁用资源调控器。  
   
  **资源池**  
- 通过使用提供的网格来创建或更改资源池及外部资源池配置。 此网格使用预定义的内部和默认池的信息进行填充。 通过单击池中某行的第一列来选择要处理的池。 若要创建新的资源池，请单击带星号 (&#42;) 前缀的行。  
+ 通过使用提供的网格来创建或更改资源池及外部资源池配置。 此网格使用预定义的内部和默认池的信息进行填充。 通过单击池中某行的第一列来选择要处理的池。 若要创建新的资源池，请单击带星号 (&#42;) 前缀的行  。  
   
  **名称**  
  指定资源池的名称。  
@@ -91,7 +93,7 @@ ms.locfileid: "55689900"
  有关详细信息，请参阅 [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md) 和 [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)。  
   
  **资源池的工作负荷组**  
- 通过使用提供的网格创建或更改工作负荷组配置。 此网格使用预定义的内部和默认组的信息进行填充。 通过单击池中某行的第一列来选择要处理的组。 若要创建新的工作组，请单击带星号 (&#42;) 前缀的行。  
+ 通过使用提供的网格创建或更改工作负荷组配置。 此网格使用预定义的内部和默认组的信息进行填充。 通过单击池中某行的第一列来选择要处理的组。 若要创建新的工作组，请单击带星号 (&#42;) 前缀的行  。  
   
  **名称**  
  指定工作负荷组的名称。  

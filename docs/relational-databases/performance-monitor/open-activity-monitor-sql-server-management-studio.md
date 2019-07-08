@@ -16,12 +16,12 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7f867024e3dbfa005fdf04e7052c4993fa9ce2c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3afa266112b29f75b7a26a0e5cb9093d2776276
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693800"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583984"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>打开活动监视器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62693800"
 3.  在“启动时”下拉列表中，选择“打开对象资源管理器和活动监视器”。    
 
 4.  单击“确定”  。
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   

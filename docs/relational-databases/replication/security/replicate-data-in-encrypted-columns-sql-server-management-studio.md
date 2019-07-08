@@ -15,12 +15,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a692cb2d5862699abb68d5a0814b948a25158fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02aefc777283f98964c54e6845452bdbc739a489
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129547"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581251"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "54129547"
 6.  使用与步骤 1 中相同的 ALGORITHM、KEY_SOURCE 和 IDENTITY_VALUE 值在订阅服务器上重新创建对称密钥。  
   
 7.  访问加密列数据。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  您应当使用对称密钥来加密列数据。 可以在发布服务器和订阅服务器上采取不同方式为对称密钥本身进行保护。  
   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 63fa87597bfb1f98fa25342d42cf5a32d0eef024
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711999"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581842"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,12 @@ ms.locfileid: "52711999"
   
 1.  启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-2.  单击 **“新建查询”**。  
+2.  单击 **“新建查询”** 。  
   
 3.  将此代码粘贴到新查询窗口中并执行各部分。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  
@@ -138,7 +140,7 @@ ms.locfileid: "52711999"
   
 2.  在对象资源管理器中，右键单击您要报告的数据库。  
   
-3.  在上下文菜单中，选择“报表” -> “标准报表” -> “内存优化对象的内存使用情况”  
+3.  在上下文菜单中，选择“报表”   -> “标准报表”   -> “内存优化对象的内存使用情况”   
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

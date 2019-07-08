@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18e1db56b747f5932a5fd6ee727cd99864517682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca55227cadb8516accf623bf18e7f40ebdf14e74
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762015"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584379"
 ---
 # <a name="view-the-table-definition"></a>查看表定义
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47762015"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用以下工具显示表属性：**  
   
@@ -43,9 +43,9 @@ ms.locfileid: "47762015"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果您拥有某个表或者已对该表授予权限，则只能查看该表中的属性。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -54,17 +54,19 @@ ms.locfileid: "47762015"
   
 1.  在对象资源管理器中，选择要显示其属性的表。  
   
-2.  右键单击该表，然后从快捷菜单中选择“属性”。 有关详细信息，请参阅 [表属性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
-  
+2.  右键单击该表，然后从快捷菜单中选择“属性”  。 有关详细信息，请参阅 [表属性 - SSMS](../../relational-databases/tables/table-properties-ssms.md)。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-show-table-properties"></a>显示表属性  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例返回指定对象的 `sys.tables` 目录视图中的所有列。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例返回指定对象的 `sys.tables` 目录视图中的所有列。  
   
     ```  
     SELECT * FROM sys.tables  

@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668877"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585801"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668877"
 4.  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制侦听器设置相应权限。  
   
 5.  在诊断模式下运行 Web 同步，以便测试与正在运行 IIS 的计算机的连接，并确保已正确安装 SSL 证书。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>配置安全套接字层  
  若要配置 SSL，请指定一个供正在运行 IIS 的计算机使用的证书。 用于合并复制的 Web 同步支持使用服务器证书，但不支持使用客户端证书。 若要为部署配置 IIS，就必须首先从证书颁发机构 (CA) 获取证书。 证书颁发机构是一个实体，负责确保属于用户、计算机或其他证书颁发机构的公共加密密钥的真实性并为其担保。 有关证书的详细信息，请参阅 IIS 文档。 安装证书后，必须使该证书与 Web 同步所用的网站相关联。  
   

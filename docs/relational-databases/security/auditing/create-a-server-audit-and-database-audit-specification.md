@@ -16,12 +16,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 455a0f9b8d570adcaa4fadae6f81163e1648a6c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716114"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582016"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,9 @@ ms.locfileid: "62716114"
 2.  右键单击“审核”文件夹，然后选择“新建审核…”   。有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  在完成选项选择后，请单击 **“确定”** 。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-database-level-audit-specification"></a>创建数据库级别审核规范  
   
 1.  在“对象资源管理器”中，展开要创建审核规范的数据库。  

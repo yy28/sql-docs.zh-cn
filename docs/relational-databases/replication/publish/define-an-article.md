@@ -19,12 +19,12 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c719c6897edfa956c70b7863811ccea98bee68b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ee2fcc90061bbd003081f747fb7f4a50b6755f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507664"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585824"
 ---
 # <a name="define-an-article"></a>定义项目
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "62507664"
 3.  单击 **“新建发布”** 。  
   
 4.  按照新建发布向导中的页完成以下任务：  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   如果尚未在服务器上配置分发，请指定分发服务器。 有关如何配置分发的详细信息，请参阅[配置发布和分发](../../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   
          如果在 **“分发服务器”** 页上指定将发布服务器用作其自己的分发服务器（本地分发服务器），而未将服务器配置为分发服务器，则新建发布向导将配置该服务器。 在 **“快照文件夹”** 页中指定分发服务器的快照文件夹。 快照文件夹只是指定共享的目录。向此文件夹中执行读写操作的代理必须对其具有足够的访问权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  

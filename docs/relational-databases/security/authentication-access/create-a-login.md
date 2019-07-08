@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 728981e3b05aa82d80138006c0f1a13648cbcd25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: add5c623faef50f1b5a0d7b582524d446a0080d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105589"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579911"
 ---
 # <a name="create-a-login"></a>创建一个登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,9 @@ ms.locfileid: "65105589"
 10. 从 **“默认语言”** 列表中，选择登录名的默认语言。  
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="additional-options"></a>其他选项  
  “登录名 - 新建”对话框中还提供了其他四个页面上选项：  “服务器角色”、“用户映射”、“安全对象”和“状态”     。  
   

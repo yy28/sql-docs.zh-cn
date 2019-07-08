@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 074802ff3717b8935015071fdf37e43923d752c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671316"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582978"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>内存优化表的还原和恢复
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "51671316"
     在基于磁盘的表和内存优化表上的前述操作完成后，数据库将可供访问。  
   
 3.  **撤消**。 在此阶段中，将回滚未提交的事务。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="process-for-improving-load-time"></a>缩短加载时间的进程
 将内存优化表加载到内存中可能会影响恢复时间目标 (RTO) 的性能。 为缩短从数据和差异文件加载内存优化的数据的时间，内存中 OLTP 引擎按如下所示并行加载数据/差异文件：  
   

@@ -12,12 +12,12 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8ad7bbe4ff7ab1ccf72e84c51d91c1732face24a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 6e0d1da7b4910e4d3d6268be23c36fb69b16dc62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997479"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583666"
 ---
 # <a name="back-up-the-service-master-key"></a>备份服务主密钥
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53997479"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>权限
 要求对数据库具有 CONTROL 权限。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -50,9 +50,9 @@ ms.locfileid: "53997479"
   
 5. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-6. 在标准菜单栏上，单击 **“新建查询”**。  
+6. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- Creates a backup of the service master key.
@@ -69,5 +69,7 @@ ms.locfileid: "53997479"
 8. 将文件复制到备份介质上并验证该副本是否完好。  
   
 9. 将备份存储在另外一个安全的位置。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../../t-sql/statements/open-master-key-transact-sql.md) 和 [BACKUP MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-master-key-transact-sql.md)。  

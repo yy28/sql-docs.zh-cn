@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2e095dafe61a2745f6401f7596e7dffcdeb05a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 3f1c47068d35da60877f9523a905c539cfac9e17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974126"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579809"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,12 @@ ms.locfileid: "57974126"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>查看和更改全文搜索的服务器属性  
   
-1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”。  
+1.  在“对象资源管理器”中，右键单击服务器，再单击“属性”  。  
   
-2.  在“服务器属性”对话框中，单击“高级”页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
-  
+2.  在“服务器属性”  对话框中，单击“高级”  页以查看有关全文搜索的服务器信息。 全文属性如下所示：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **默认全文语言**  
   
          指定全文检索列的默认语言。 全文检索数据的语言分析取决于数据的语言。 该选项的默认值为服务器的语言。 有关与所显示设置相对应的语言，请参阅 [sys.fulltext_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  

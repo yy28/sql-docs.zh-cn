@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0e8c720660c17c262f66e5a14841dff490c008b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9a7986803518b9227d873a303b87358829cde3cd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412094"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581459"
 ---
 # <a name="delete-user-defined-functions"></a>删除用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52412094"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除用户定义函数，请使用：**  
   
@@ -45,9 +45,9 @@ ms.locfileid: "52412094"
   
 -   如果存在引用此函数并且已生成索引的计算列，则您将无法删除该函数。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要具有对该函数所属架构的 ALTER 权限，或对该函数的 CONTROL 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -66,12 +66,14 @@ ms.locfileid: "52412094"
   
     -   Aggregate 函数  
   
-4.  右键单击要删除的函数，然后选择“删除”。  
+4.  右键单击要删除的函数，然后选择“删除”  。  
   
-5.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
-  
+5.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!IMPORTANT]  
-    >  单击“删除对象”对话框中的“显示依赖关系”，打开“_function\_name_**依赖关系**”对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
+    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _function\_name_**Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +81,9 @@ ms.locfileid: "52412094"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates function called "Sales.ufn_SalesByStore"  

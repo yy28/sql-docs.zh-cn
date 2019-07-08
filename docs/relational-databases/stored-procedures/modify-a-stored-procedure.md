@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 597b0e7d39d178eb2ed6f8ede8db5a1852117dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e299541e48de590474b9f1e13996ab921b9246d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018652"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580505"
 ---
 # <a name="modify-a-stored-procedure"></a>修改存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "63018652"
 6.  若要将修改信息保存到过程定义中，请在 **“查询”** 菜单上单击 **“执行”** 。  
   
 7.  若要将更新的过程定义另存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，请在 **“文件”** 菜单上单击 **“另存为”** 。 接受该文件名或将其替换为新的名称，再单击 **“保存”** 。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!IMPORTANT]  
 >  验证所有用户的输入。 验证前请勿连接用户输入。 绝对不要执行根据尚未验证的用户输入构造的命令。  
   

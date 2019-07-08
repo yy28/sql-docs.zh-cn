@@ -16,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d87ebe37c4dcf669243262c97422337b1669be6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6043372a62776b4f7417b3a666417be9a811bfce
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973707"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585496"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ SQL Server 数据库默认已启用全文搜索。 但是，在运行全文查�
 可通过两个基本步骤来设置全文搜索：  
 1.  创建全文目录。  
 2.  在要搜索的表或索引视图上创建全文索引。 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 每个全文索引必须属于一个全文目录。 您可以为每个全文索引创建一个单独的文本目录，也可以将多个全文索引与给定目录关联起来。 全文目录是虚拟对象，不属于任何文件组。 该目录是表示一组全文索引的逻辑概念。
 

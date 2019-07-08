@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6169d09cd048c9883836c3d34ff8912e9101ba07
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542037"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586323"
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "59542037"
   
 -   确定你关注的时间段内（过去一小时、昨天、上周等）执行指标已降级的所有查询。 在 **中使用** 回归查询 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 加快分析速度。  
   
--   在回归查询中，很容易找到那些有多个计划的查询，以及由于计划选择错误而降级的查询。 使用“回归查询”中的“计划摘要”窗格来显示回归查询的所有计划及其在某个时间段的查询性能。  
+-   在回归查询中，很容易找到那些有多个计划的查询，以及由于计划选择错误而降级的查询。 使用“回归查询”  中的“计划摘要”  窗格来显示回归查询的所有计划及其在某个时间段的查询性能。  
   
--   强制实施历史记录中的旧计划（如果该计划经证明效果更好）。 使用“回归查询”中的“强制计划”按钮，强制实施针对查询选择的计划。  
+-   强制实施历史记录中的旧计划（如果该计划经证明效果更好）。 使用“回归查询”  中的“强制计划”  按钮，强制实施针对查询选择的计划。  
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59542037"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>识别并优化资源使用排名靠前的查询  
  虽然你的工作负荷可能会生成数千个查询，但通常情况下，使用大部分系统资源的实际上只是其中一部分查询，因此你只需要注意这部分查询。 通常情况下，在资源使用排名靠前的查询中，你会发现有些查询是回归性查询，有些查询则可在进一步优化后获得性能改善。  
   
- 开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面将分为三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。  此外，还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
+ 开始浏览时，最方便的方式是打开 **中的“资源使用排名靠前的查询”。** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面将分为三个窗格：一个直方图，代表资源使用排名靠前的查询（左）；一个针对所选查询的计划摘要（右）；一个针对所选计划的可视化查询计划（底部）。 单击“配置”按钮即可控制要分析的查询个数，以及要设置的时间间隔。  此外，还可以在不同的资源消耗维度（持续时间、CPU、内存、IO、执行数）和基线（平均、最小、最大、总计、标准偏差）之间进行选择。  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -67,7 +67,9 @@ ms.locfileid: "59542037"
 4.  确保查询所使用的索引已进行碎片整理。  
   
 5.  考虑重新编写成本高的查询。 例如，可以充分利用查询参数化，减少动态 SQL 的使用。 在读取数据时实施最佳逻辑（在数据库端而非应用程序端应用数据筛选）。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ab-testing"></a>A/B 测试  
  在计划引入应用程序更改之前和之后，使用 Query Store 来比较工作负荷性能。 在下表包含的多个示例中，你可以使用 Query Store 来评估环境或应用程序更改对工作负荷性能的影响：  
   
@@ -91,13 +93,13 @@ ms.locfileid: "59542037"
   
 4.  对 #1 和 #3 的结果进行比较。  
   
-    1.  打开“数据库总体使用情况”以确定对整个数据库的影响。  
+    1.  打开“数据库总体使用情况”  以确定对整个数据库的影响。  
   
-    2.  打开“资源使用排名靠前的查询”（或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 运行你自己的分析），以便分析所做的更改对最重要查询的影响。  
+    2.  打开“资源使用排名靠前的查询”  （或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 运行你自己的分析），以便分析所做的更改对最重要查询的影响。  
   
 5.  决定是保留所做的更改，还是在无法接受新性能的情况下进行回退。  
   
-下图显示了如何在创建缺失索引的情况下进行 Query Store 分析（步骤 4）。 打开“资源使用排名靠前的查询”/“计划摘要”窗格，此时将显示会受索引创建操作影响的查询的该视图：  
+下图显示了如何在创建缺失索引的情况下进行 Query Store 分析（步骤 4）。 打开“资源使用排名靠前的查询”  /“计划摘要”窗格，此时将显示会受索引创建操作影响的查询的该视图：  
   
 ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
@@ -133,16 +135,16 @@ ms.locfileid: "59542037"
     B.  如果存在未能强制执行的查询计划，或者如果性能仍不足，请考虑将[数据库兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)还原到之前的设置，然后寻求 Microsoft 客户支持。  
     
 > [!TIP]
-> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 升级数据库任务，升级数据库的[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)。 有关详细信息，请参阅[使用查询优化助手升级数据库](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
+> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 升级数据库  任务，升级数据库的[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)。 有关详细信息，请参阅[使用查询优化助手升级数据库](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>识别并改进即席工作负荷  
-某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对较大的不同查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源都消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”（[强烈建议](best-practice-with-the-query-store.md)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
+某些工作负荷并没有优化后即可改进应用程序总体性能的主查询。 通常情况下，这些工作负荷的特点是有相对较大的不同查询，每个查询都会消耗一部分系统资源。 这些查询在性质上很独特，执行次数很少（通常仅执行一次，因此才称为即席查询），因此其运行时消耗并不重要。 另一方面，由于应用程序总是在生成全新的查询，因此大部分系统资源都消耗在没有进行优化的查询编译上。 这对于 Query Store 来说并不是一种理想的情形，因为大量的查询和计划会占据你所保留的空间，这意味着 Query Store 可能很快就会进入只读模式。 如果你激活了“基于大小的清除策略”  （[强烈建议](best-practice-with-the-query-store.md)使用它来让 Query Store 始终处于启动和运行状态），则大部分时间会由后台进程清理 Query Store 结构，这也会消耗大量系统资源。  
   
- 你可以通过“资源使用排名靠前的查询”视图，率先了解工作负荷的即席性质：  
+ 你可以通过“资源使用排名靠前的查询”视图，率先了解工作负荷的即席性质  ：  
   
 ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
-可以通过“执行计数”度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 从上图可以看出，90% 的“资源使用排名靠前的查询”仅执行一次。  
+可以通过“执行计数”  度量值来分析排名靠前的查询是否为即席查询（这需要使用 `QUERY_CAPTURE_MODE = ALL` 运行 Query Store）。 从上图可以看出，90% 的“资源使用排名靠前的查询”仅执行一次  。  
   
 此外，还可以通过运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本来获取系统中查询文本、查询和计划的总数，并可通过比较 query_hash 和 plan_hash 来确定其差异：  
   
@@ -203,7 +205,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
   
 某些情况下，你的应用程序可能会生成大量不同的查询，而这些查询并不适合进行自动参数化。 在这种情况下，你会看到系统中存在大量查询，但唯一查询和唯一 `query_hash` 之间的比率可能接近 1。  
   
-在这种情况下，建议启用“[针对即席工作负荷进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)”服务器选项，防止将缓存内存浪费在不大可能再次执行的查询上。 若要防止在 Query Store 中捕获这些查询，可将 `QUERY_CAPTURE_MODE` 设置为 `AUTO`。  
+在这种情况下，建议启用“[针对即席工作负荷进行优化](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)”服务器选项，防止将缓存内存浪费在不大可能再次执行的查询上  。 若要防止在 Query Store 中捕获这些查询，可将 `QUERY_CAPTURE_MODE` 设置为 `AUTO`。  
   
 ```sql  
 EXEC sys.sp_configure N'show advanced options', N'1' RECONFIGURE WITH OVERRIDE

@@ -14,15 +14,17 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1535618a2f5ed180d679bad982c0b77e05a66f95
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513024"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579787"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>对 XML 列使用全文搜索
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
   您可以对 XML 列创建全文索引，这种索引对 XML 值的内容进行索引，但忽略 XML 标记。 元素标记用作标记边界。 将对以下项进行索引：  
   
 -   XML 元素的内容。  
@@ -34,11 +36,13 @@ ms.locfileid: "58513024"
 1.  首先，使用 SQL 全文搜索筛选感兴趣的 XML 值。  
   
 2.  然后，查询那些使用 XML 列的 XML 索引的 XML 值。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>例如：将全文搜索和 XML 查询结合起来  
  对 XML 列创建了全文索引后，下面的查询将检查 XML 值是否在书的标题中包含“custom”一词：  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'custom')   
@@ -54,7 +58,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
 ## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例如：使用词干分解对 XML 值进行全文搜索  
  通常不能消除上一个示例中执行的 XQuery **contains()** 检查。 请看下面的查询：  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'run')   

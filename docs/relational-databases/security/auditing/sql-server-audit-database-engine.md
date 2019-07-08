@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bba79c497f9999f263de90622b5c306d035ec823
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716076"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582000"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "62716076"
 3.  启用审核。  
   
 4.  通过使用 Windows“事件查看器”  、“日志文件查看器”  或 fn_get_audit_file 函数来读取审核事件。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [创建服务器审核和数据库审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
 ## <a name="considerations"></a>注意事项  

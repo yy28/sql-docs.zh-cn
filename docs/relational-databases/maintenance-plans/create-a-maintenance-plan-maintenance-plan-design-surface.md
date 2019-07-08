@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f09611e71c39902e81580d752d302fee604be9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514389"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584141"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52514389"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   [使用维护计划设计图面创建维护计划](#SSMSProcedure)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "52514389"
   
 -   **db_ssisadmin** 和 **dc_admin** 角色的成员可以将其特权提升为 **sysadmin**。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 **代理的** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全上下文可以执行这些包，所以可以实现特权提升。 若要防止在运行维护计划、数据收集组和其它 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时提升特权，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为具有有限特权的代理帐户，或仅将 **sysadmin** 成员添加到 **db_ssisadmin** 和 **dc_admin** 角色。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要创建或管理维护计划，您必须是 **sysadmin** 固定服务器角色的成员。 对象资源管理器只为属于 **sysadmin** 固定服务器角色成员的用户显示 **“维护计划”** 节点。  
   
 ##  <a name="SSMSProcedure"></a> 使用维护计划设计图面  
@@ -55,9 +55,9 @@ ms.locfileid: "52514389"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”  文件夹，然后选择“新建维护计划” 。  
+3.  右键单击“维护计划”  文件夹，然后选择“新建维护计划”  。  
   
-4.  在 **“新建维护计划”** 对话框的 **“名称”** 框中，为该计划键入一个名称，然后单击 **“确定”**。 这将打开工具箱和 *maintenance_plan_name* **[设计]** 图面，其中包含在主网格中创建的 **Subplan_1** 子计划。  
+4.  在 **“新建维护计划”** 对话框的 **“名称”** 框中，为该计划键入一个名称，然后单击 **“确定”** 。 这将打开工具箱和 *maintenance_plan_name* **[设计]** 图面，其中包含在主网格中创建的 **Subplan_1** 子计划。  
   
      在设计空间的标头中提供以下选项。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "52514389"
      显示“服务器”  对话框，用于选择要运行子计划中的任务的服务器。 此选项仅在多服务器环境中的主服务器上启用。 有关详细信息，请参阅[创建多服务器环境](../../ssms/agent/create-a-multiserver-environment.md)和[维护计划（服务器）](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)。  
   
      **名称**  
-     显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  
+     显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名”  。  
   
      **Description**  
      查看或指定维护计划的说明。 说明的最大长度为 512 个字符。  
@@ -94,7 +94,7 @@ ms.locfileid: "52514389"
      **设计器图面**  
      设计和维护维护计划。 使用设计器图面，可以向计划中添加维护任务、从计划中删除任务、指定任务之间的优先链接以及指示任务分支和并行情况。  
   
-     两个任务之间的优先链接会在任务之间建立关系。 只有当第一项任务（前置任务 ）的执行结果与指定的条件相匹配时，才执行第二项任务（依赖任务 ）。 通常，指定的执行结果为 **“成功”**、 **“失败”** 或 **“完成”**。 有关详细信息，请参阅下面的步骤 **8** 。  
+     两个任务之间的优先链接会在任务之间建立关系。 只有当第一项任务（前置任务  ）的执行结果与指定的条件相匹配时，才执行第二项任务（依赖任务  ）。 通常，指定的执行结果为 **“成功”** 、 **“失败”** 或 **“完成”** 。 有关详细信息，请参阅下面的步骤 **8** 。  
   
 5.  在设计图面的标头中，双击 **Subplan_1** ，然后在“子计划属性”  对话框中输入子计划的名称和说明。  
   
@@ -142,17 +142,17 @@ ms.locfileid: "52514389"
   
      向 **“工具箱”** 中添加任务：  
   
-    1.  在 **“工具”** 菜单上，单击 **“选择工具箱项”**。  
+    1.  在 **“工具”** 菜单上，单击 **“选择工具箱项”** 。  
   
-    2.  选择想要显示在 **“工具箱”** 中的工具，然后单击 **“确定”**。  
+    2.  选择想要显示在 **“工具箱”** 中的工具，然后单击 **“确定”** 。  
   
-     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”** 中。 有关上述各个任务的详细信息，请参阅“启动维护计划向导”下的 [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
+     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”** 中。 有关上述各个任务的详细信息，请参阅“启动维护计划向导”下的  [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 8.  定义各任务之间的工作流：  
   
-    1.  右键单击前置任务，然后选择“添加优先约束” 。  
+    1.  右键单击前置任务，然后选择“添加优先约束”  。  
   
-    2.  在 **“控制流”** 对话框的 **“到”** 列表中，选择依赖任务，然后单击 **“确定”**。  
+    2.  在 **“控制流”** 对话框的 **“到”** 列表中，选择依赖任务，然后单击 **“确定”** 。  
   
     3.  双击两个任务之间的连接器以便打开 **“优先约束编辑器”** 对话框。  
   
@@ -162,16 +162,16 @@ ms.locfileid: "52514389"
          定义约束在两个任务之间的工作方式。  
   
            “求值运算”列表  
-         指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”** 和 **“表达式或约束”**。  
+         指定优先约束使用的求值运算。 运算包括：“约束”  、“表达式”  、“表达式和约束”  和“表达式或约束”  。  
   
           “值”列表  
-         指定约束值：“成功” 、“失败” 或“完成” 。 **“成功”** 的默认值。  
+         指定约束值：“成功”  、“失败”  或“完成”  。 **“成功”** 的默认值。  
   
         > [!NOTE]  
-        >  优先约束线的含义：绿色表示“成功” ，红色表示“失败” ，蓝色表示“完成” 。  
+        >  优先约束线的含义：绿色表示“成功”  ，红色表示“失败”  ，蓝色表示“完成”  。  
   
          **“表达式”**  
-         若要使用“表达式” 、“表达式和约束” 或“表达式或约束” 运算，请键入表达式。 表达式的计算结果必须为布尔值。  
+         若要使用“表达式”  、“表达式和约束”  或“表达式或约束”  运算，请键入表达式。 表达式的计算结果必须为布尔值。  
   
          **测试**  
          验证表达式。  
@@ -195,85 +195,87 @@ ms.locfileid: "52514389"
   
 10. 添加与其他服务器的连接：  
   
-    1.  在设计空间的工具栏中，单击 **“管理连接”**。  
+    1.  在设计空间的工具栏中，单击 **“管理连接”** 。  
   
-    2.  在 **“管理连接”** 对话框中，单击 **“添加”**。  
+    2.  在 **“管理连接”** 对话框中，单击 **“添加”** 。  
   
     3.  在 **“连接属性”** 对话框的 **“连接名称”** 框中，输入要创建的连接的名称。  
   
-    4.  在“指定下列选项以连接到 SQL Server 数据”下的“选择或输入服务器名称”框中，输入要使用的 SQL Server 的名称，或者单击省略号 (…) 并在 SQL Server 对话框中选择某一服务器。 如果您从 **SQL Server** 对话框中选择某一服务器，则单击 **“确定”**。  
+    4.  在“指定下列选项以连接到 SQL Server 数据”下的“选择或输入服务器名称”框中，输入要使用的 SQL Server 的名称，或者单击省略号 (…) 并在 SQL Server 对话框中选择某一服务器     。 如果您从 **SQL Server** 对话框中选择某一服务器，则单击 **“确定”** 。  
   
-    5.  在 **“输入登录服务器所需的信息”** 下，选择 **“使用 Windows NT 集成安全性”** 或 **“使用特定用户名和密码”**。 如果您选择使用特定的用户名和密码，则分别在 **“用户名”** 和 **“密码”** 框中输入该信息。  
+    5.  在 **“输入登录服务器所需的信息”** 下，选择 **“使用 Windows NT 集成安全性”** 或 **“使用特定用户名和密码”** 。 如果您选择使用特定的用户名和密码，则分别在 **“用户名”** 和 **“密码”** 框中输入该信息。  
   
-    6.  单击 **“连接属性”** 对话框中的 **“确定”**。  
+    6.  单击 **“连接属性”** 对话框中的 **“确定”** 。  
   
-    7.  在 **“管理连接”** 对话框中，单击 **“关闭”**。  
+    7.  在 **“管理连接”** 对话框中，单击 **“关闭”** 。  
   
 11. 指定报告选项：  
   
-    1.  在设计空间的工具栏中，单击 **“报告和记录”**。  
+    1.  在设计空间的工具栏中，单击 **“报告和记录”** 。  
   
     2.  在 **“报告和记录”** 对话框的 **“报告”** 下，选择 **“生成文本文件报告”** 和/或 **“将报告发送给电子邮件收件人”** 。  
   
-        1.  如果您选择了 **“生成文本文件报告”**，则选择 **“创建新文件”** 或 **“追加到文件”**。  
+        1.  如果您选择了 **“生成文本文件报告”** ，则选择 **“创建新文件”** 或 **“追加到文件”** 。  
   
-        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号 (...) 并从“定位文件夹 -server\_name”或“定位数据库文件 -server\_name”对话框中选择该文件夹的路径或文件名。  
+        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号 (...) 并从“定位文件夹 -server\_name”或“定位数据库文件 -server\_name”对话框中选择该文件夹的路径或文件名      。  
   
-        3.  如果您选择 **“将报告发送给电子邮件收件人”**，则在 **“代理操作员”** 列表上，选择以电子邮件形式发送的报告的收件人。  
+        3.  如果您选择 **“将报告发送给电子邮件收件人”** ，则在 **“代理操作员”** 列表上，选择以电子邮件形式发送的报告的收件人。  
   
             > [!NOTE]  
             >  为发送电子邮件，SQL Server 代理必须配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
-    3.  若要保存更详细的信息，请在 **“记录”** 下选择 **“记录扩展信息”**。  
+    3.  若要保存更详细的信息，请在 **“记录”** 下选择 **“记录扩展信息”** 。  
   
     4.  若要将维护计划结果信息写入其他服务器，请选择 **“在远程服务器上进行日志记录”** ，并且或者从 **“连接”** 列表中选择某一服务器连接，或者单击 **“新建”** 并在 **“连接属性”** 对话框中输入连接信息。  
   
-    5.  在 **“报告和记录”** 对话框中，单击 **“确定”**。  
+    5.  在 **“报告和记录”** 对话框中，单击 **“确定”** 。  
   
-12. 若要在日志文件查看器中查看结果，请在“对象资源管理器” 中右键单击“维护计划”  文件夹或特定维护计划，然后选择“查看历史记录” 。  
+12. 若要在日志文件查看器中查看结果，请在“对象资源管理器”  中右键单击“维护计划”  文件夹或特定维护计划，然后选择“查看历史记录”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
-     “日志文件查看器 -server\_name”对话框中提供以下选项。  
+     **Load Log**  
+     Open a dialog box where you can specify a log file to load.  
   
-     **加载日志**  
-     打开一个对话框，您可以在其中指定要加载的日志文件。  
+     **Export**  
+     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
   
-     **导出**  
-     打开一个对话框，你可以使用该对话框将“日志文件摘要”  网格中显示的信息导入到文本文件中。  
+     **Refresh**  
+     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
   
-     **“刷新”**  
-     刷新选定日志的视图。 在应用任何筛选器设置时， **“刷新”** 按钮重新从目标服务器中读取选定的日志。  
+     **Filter**  
+     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
   
-     **筛选**  
-     打开一个对话框，你可以使用该对话框指定用于筛选日志文件的设置，例如“连接” 、“日期” 或其他“常规”  筛选条件。  
+     **Search**  
+     Search the log file for specific text. Searching with wildcard characters is not supported.  
   
-     **搜索**  
-     在日志文件中搜索特定文本。 不支持在搜索中使用通配符。  
+     **Stop**  
+     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
   
-     **停止**  
-     停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
-  
-     **日志文件摘要**  
-     此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”**。 如果对日志应用了筛选器，你将看到以下文本：**“基于以下条件筛选日志条目:**  \<筛选条件>”。  
+     **Log file summary**  
+     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
   
      **Date**  
-     显示事件的日期。  
+     Displays the date of the event.  
   
-     **数据源**  
-     显示从其创建事件的源功能，例如服务的名称（如 MSSQLSERVER）。 并非对所有日志类型都显示此项。  
+     **Source**  
+     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
   
-     **消息**  
-     显示与事件相关联的任何消息。  
+     **Message**  
+     Displays any messages associated with the event.  
   
-     **日志类型**  
-     显示事件所属的日志类型。 所有选定的日志都显示在日志文件摘要窗口中。  
+     **Log Type**  
+     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
   
-     **日志源**  
-     显示在其中捕获事件的源日志的说明。  
+     **Log Source**  
+     Displays a description of the source log in which the event is captured.  
   
-     **所选行详细信息**  
-     选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
+     **Selected row details**  
+     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
   
-     **实例**  
-     发生事件的实例的名称。 这显示为：计算机名称\\实例名称。  
+     **Instance**  
+     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
   
   

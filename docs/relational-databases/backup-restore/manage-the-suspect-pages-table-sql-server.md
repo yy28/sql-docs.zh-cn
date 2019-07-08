@@ -19,12 +19,12 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621545"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584022"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47621545"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要管理 suspect_pages 表，可使用：**  
   
@@ -117,32 +117,34 @@ ms.locfileid: "47621545"
   
      数据库管理员还可以插入或更新记录。 例如，如果数据库管理员知道某个特定的可疑页实际上没问题但想要暂时保留记录，更新行可能就很有用。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  任何拥有 **msdb** 访问权限的人员都可以读取 **suspect_pages** 表中的数据。 任何拥有 suspect_pages 表的 UPDATE 权限的人员都可以更新它的记录。 **msdb** 上的 **db_owner** 固定数据库角色或 **sysadmin** 固定服务器角色的成员都可以插入、更新和删除记录。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  依次展开“系统数据库” 、“msdb” 、“表” 和“系统表” 。  
+2.  依次展开“系统数据库”  、“msdb”  、“表”  和“系统表”  。  
   
-3.  展开“dbo.suspect_pages”  ，然后右键单击“编辑前 200 行” 。  
+3.  展开“dbo.suspect_pages”  ，然后右键单击“编辑前 200 行”  。  
   
 4.  在查询窗口中，编辑、更新或删除所需的行。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例将删除 `suspect_pages` 表中的一些行。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例将删除 `suspect_pages` 表中的一些行。  
   
 ```  
 -- Delete restored, repaired, or deallocated pages.  

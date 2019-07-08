@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 510da94cb6eb83a208c6135441b5705fdacaa760
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094355"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586341"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "65094355"
     2.  如果未提供 **FILETABLE_COLLATE_FILENAME**的值，或指定了 **database_default**，则该列继承当前数据库的排序规则。 如果当前数据库排序规则区分大小写，将引发错误， **CREATE TABLE** 操作将失败。  
   
 3.  您还可以指定要用于 3 个主键的名称和自动创建的唯一约束。 如果您不提供名称，则系统会生成名称，如本主题后面所述。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  

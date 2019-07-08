@@ -13,12 +13,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c6e0a2429bfb78f2cee7ae5871cef98660ccce1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665499"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585700"
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,9 @@ ms.locfileid: "62665499"
     -   如果要编辑现有的联接，则必须手动进行编辑。  
   
 3.  **指定联接选项**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   如果在筛选的表中要联接的列是唯一的，请选择 **“唯一键”** 。 对于唯一列，在合并过程中还可以使用一些专门的性能优化选项。  
   
         > [!CAUTION]  

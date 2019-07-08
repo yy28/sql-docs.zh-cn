@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514146"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584675"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>验证上次同步版本  
  更改的相关信息将保留有限的一段时间。 时间长度是由 CHANGE_RETENTION 参数控制的，可以将该参数指定为 ALTER DATABASE 的一部分。  
   
- 请注意，为 CHANGE_RETENTION 指定的时间决定了所有应用程序必须每隔多长时间从数据库中请求一次更改。 如果应用程序使用的 *last_synchronization_version* 值早于表的最低有效同步版本，该应用程序将无法执行有效的更改枚举。 这是因为，可能已清除了某些更改信息。 在应用程序使用 CHANGETABLE(CHANGES …) 获取更改之前，该应用程序必须验证计划传递给 CHANGETABLE(CHANGES …) 的 last_synchronization_version 值。如果 *last_synchronization_version* 的值无效，则该应用程序必须重新初始化所有数据。  
+ 请注意，为 CHANGE_RETENTION 指定的时间决定了所有应用程序必须每隔多长时间从数据库中请求一次更改。 如果应用程序使用的 *last_synchronization_version* 值早于表的最低有效同步版本，该应用程序将无法执行有效的更改枚举。 这是因为，可能已清除了某些更改信息。 在应用程序使用 CHANGETABLE(CHANGES …) 获取更改之前，该应用程序必须验证计划传递给 CHANGETABLE(CHANGES …) 的 last_synchronization_version 值  。如果 *last_synchronization_version* 的值无效，则该应用程序必须重新初始化所有数据。  
   
  下面的示例说明了如何验证每个表的 `last_synchronization_version` 值的有效性。  
   
@@ -207,7 +207,9 @@ ON
 3.  使用 CHANGETABLE(CHANGES …) 获取对 Sales 表所做的更改。  
   
 4.  使用 CHANGETABLE(CHANGES …) 获取对 SalesOrders 表所做的更改。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  数据库中运行的两个进程可能会影响上述步骤返回的结果：  
   
 -   清除进程在后台运行，并删除早于指定保持期的更改跟踪信息。  

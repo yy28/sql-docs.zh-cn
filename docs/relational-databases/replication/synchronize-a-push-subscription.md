@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ae64c33cc55d45ff28257b9d0b6b6c4c972e370
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7603fca90995053da7aef12283e5666efaa85d85
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205676"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586408"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步推送订阅
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,25 +50,27 @@ ms.locfileid: "53205676"
   
 3.  展开要同步其订阅的发布。  
   
-4.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
+4.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
   
-5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
+5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
   
-6.  单击 **“关闭”**。  
-  
+6.  单击 **“关闭”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>在 Management Studio 中按需同步推送订阅（在订阅服务器中）  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到订阅服务器，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
+3.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
   
-4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定” 。  
+4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定”  。  
   
-5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
+5.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
   
-6.  单击 **“关闭”**。  
+6.  单击 **“关闭”** 。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>在复制监视器中按需同步推送订阅  
   
@@ -76,9 +78,9 @@ ms.locfileid: "53205676"
   
 2.  单击 **“所有订阅”** 选项卡。  
   
-3.  右键单击要同步的订阅，然后单击 **“开始同步”**。  
+3.  右键单击要同步的订阅，然后单击 **“开始同步”** 。  
   
-4.  若要查看同步进度，请右键单击该订阅，然后单击 **“查看详细信息”**。  
+4.  若要查看同步进度，请右键单击该订阅，然后单击 **“查看详细信息”** 。  
   
 ##  <a name="ReplProg"></a> 使用复制代理  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步推送订阅。 被调用的复制代理可执行文件将取决于推送订阅所属的发布的类型。  

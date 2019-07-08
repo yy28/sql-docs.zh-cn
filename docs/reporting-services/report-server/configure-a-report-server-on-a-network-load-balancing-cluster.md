@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937239"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564000"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
 
@@ -62,16 +62,16 @@ ms.locfileid: "65937239"
     下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. 打开报表服务器的 Web.config 文件，并在 <`system.web`> 部分粘贴所生成的 <`machineKey`> 元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config 中。  
+2. 打开报表服务器的 Web.config 文件，并在 <`system.web`> 部分粘贴所生成的 <`MachineKey`> 元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config 中。  
   
 3. 保存该文件。  
   
 4. 对扩展部署中的每个报表服务器重复上述步骤。  
   
-5. 确保 \Reporting Services\Reportserver 文件夹中所有 Web.Config 文件的 <`system.web`> 部分都包含相同的 <`machineKey`> 元素。  
+5. 确保 \Reporting Services\Reportserver 文件夹中所有 Web.Config 文件的 <`system.web`> 部分都包含相同的 <`MachineKey`> 元素。  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ ms.locfileid: "65937239"
     下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。 报表服务器需要正确的大小写。
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. 保存该文件。

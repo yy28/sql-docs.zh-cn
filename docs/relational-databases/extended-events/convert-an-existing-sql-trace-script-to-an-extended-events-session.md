@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669290"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583851"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>将现有 SQL 跟踪脚本转换为扩展事件会话
 
@@ -37,7 +37,9 @@ ms.locfileid: "62669290"
 3.  使用 fn_trace_getfilterinfo 函数列出要使用的筛选器和等效的扩展事件操作。  
   
 4.  手动创建扩展事件会话，并且使用等效的扩展事件的事件、操作和谓词（筛选器）。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>获取跟踪 ID  
   
 1.  在查询编辑器中打开 SQL 跟踪脚本，然后执行该脚本以便创建跟踪会话。 请注意，无需运行该跟踪会话即可完成此过程。  

@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b0b31cb616e5e7d8c2b5c83386f247729a115cbe
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591051"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583545"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53591051"
   
      [安全性](#Security)  
   
--   **若要将数据库恢复到数据库快照，请使用：**[Transact-SQL](#TsqlProcedure)  
+-   **若要将数据库恢复到数据库快照，请使用：** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -80,9 +80,9 @@ ms.locfileid: "53591051"
   
 -   删除当前数据库中存在的任何其他快照。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  任何具有源数据库 RESTORE DATABASE 权限的用户都可以将其恢复至创建数据库快照时的状态。  
   
 ##  <a name="TsqlProcedure"></a> 如何将数据库恢复到数据库快照（使用 Transact-SQL）  
@@ -101,7 +101,7 @@ ms.locfileid: "53591051"
   
      恢复操作要求对源数据库具有 RESTORE DATABASE 权限。 若要恢复数据库，请使用下列 Transact-SQL 语句：  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      其中， *database_name* 是源数据库的名称， *database_snapshot_name* 是要将数据库恢复到的快照的名称。 注意，必须在此语句中指定快照名称而非备份设备。  
   
@@ -118,7 +118,9 @@ ms.locfileid: "53591051"
 5.  启动数据库。  
   
 6.  尤其在使用完整（或大容量日志）恢复模式时，可以选择备份恢复后的数据库。 备份数据库，请参阅[创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本节包含演示如何将数据库恢复到数据库快照的以下示例：  
   

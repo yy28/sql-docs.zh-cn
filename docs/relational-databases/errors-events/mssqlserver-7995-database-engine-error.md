@@ -12,12 +12,12 @@ ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4afcdeef25dd28a97cf5b9096e8ac5635ca0c35f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6c3ec14df307f0868444e58e7adbaa375591487
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797685"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585073"
 ---
 # <a name="mssqlserver7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ DBCC CHECKDB 进程包含以下三个阶段：
 2.  系统表一致性检查。 这等效于对所需系统基表的小列表运行 DBCC CHECKTABLE。  
   
 3.  完成数据库一致性检查。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 MSSQLEngine_7995 在第 2 阶段中引发，指示 DBCC CHECKDB 找到该命令无法修复的错误或者尚未指定 REPAIR。 DBCC CHECKDB 无法继续执行第 3 阶段，因为相关的系统基表存储数据库中所有对象的元数据，或者系统基表已损坏。  
   
 ## <a name="user-action"></a>用户操作  

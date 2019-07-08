@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ea144a638bd64446e61b5bcbfed8397d5784d6a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521548"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585431"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,6 +109,8 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 7.  在“添加/删除管理单元”  对话框中，单击“确定”  。
 8.  在“证书”管理单元中的“证书”>“个人”文件夹中找到证书，右键单击证书，指向“所有任务”，然后单击“管理私钥”。    
 9.  在“安全”  对话框中，根据需要添加用户帐户的读取权限。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>创建 Azure 密钥保管库中的列主密钥
 

@@ -13,12 +13,12 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abcbeb3cd6abfd1712217ed5577f2fafd4d5b4a3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089034"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582254"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "65089034"
 1.  文件 I/O API 访问一般通过获得文件或目录的逻辑 UNC 路径来开始。 应用程序可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与 [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 函数结合使用来获取文件或目录的逻辑路径。 有关详细信息，请参阅 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 2.  然后，应用程序使用此逻辑路径来获取文件或目录的句柄并对该对象执行操作。 可将此路径传递给任何支持的文件系统 API 函数（如 CreateFile() 或 CreateDirectory()），以创建或打开文件并获取句柄。 然后，该句柄可用于流式传输数据、枚举或组织目录、获取或设置文件属性、删除文件或目录等。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="create"></a> 在 FileTable 中创建文件和目录  
  可以通过调用文件 I/O API（如 CreateFile 或 CreateDirectory）在 FileTable 中创建文件或目录。  
   

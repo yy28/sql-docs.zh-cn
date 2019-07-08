@@ -13,12 +13,12 @@ ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 486669acdea63950c0d7b6f3d8d57a389831b4d0
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 5c3a8ee9af1451d275f4168c86e5067fc26c06bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512372"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584909"
 ---
 # <a name="import-a-policy-based-management-policy"></a>导入基于策略的管理策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51512372"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要导入策略实例，请使用：**  
   
@@ -41,25 +41,26 @@ ms.locfileid: "51512372"
 ###  <a name="Restrictions"></a> 限制和局限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附带可用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的策略。 默认情况下， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中未安装这些策略；不过，可以从默认位置 C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 或从 64 位安装上的 C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 导入这些策略。
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-import-a-policy-instance"></a>导入策略实例  
   
-1.  在“对象资源管理器” 中，单击加号以展开新导入的策略实例要存储到的服务器。  
+1.  在“对象资源管理器”  中，单击加号以展开新导入的策略实例要存储到的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
-4.  右键单击“策略”文件夹，然后选择“导入策略”。  
+4.  右键单击“策略”  文件夹，然后选择“导入策略”  。  
   
-5.  在“导入”对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 (**...**) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)。  
+5.  在“导入”  对话框中，键入该文件的路径和名称；或者使用“浏览”按钮 ( **...** ) 查找包含策略的 XML 文件，然后选择该文件。 有关 **“导入”** 对话框中可用选项的详细信息，请参阅 [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)。  
   
-6.  完成后，单击 **“确定”**。  
-  
-  
+6.  完成后，单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

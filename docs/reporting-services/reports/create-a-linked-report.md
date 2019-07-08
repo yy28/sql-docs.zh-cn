@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506642"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492816"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
   链接报表是提供对现有报表的访问点的报表服务器项。 从概念上说，它与用于运行程序或打开文件的程序快捷方式类似。  
@@ -45,7 +45,7 @@ ms.locfileid: "66506642"
      ![链接报表图标](../../reporting-services/report-server/media/hlp-16linked.gif "链接报表图标")  
   
 ## <a name="see-also"></a>另请参阅  
- [打开和关闭报表&#40;web 门户&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+
  [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)
   

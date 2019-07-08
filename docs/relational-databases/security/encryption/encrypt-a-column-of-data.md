@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: eb7a66bd1c433843db58d64dc2ea7a5a4a217a19
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997539"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585364"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53997539"
 
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  下面的权限是执行以下步骤所必需的：  
   
 - 针对数据库的 CONTROL 权限。  
@@ -57,10 +57,12 @@ PASSWORD = '<some strong password>';
   
 1. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2. 在标准菜单栏上，单击 **“新建查询”**。  
+2. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
-  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     USE AdventureWorks2012;  
     GO  
@@ -115,9 +117,9 @@ PASSWORD = '<some strong password>';
   
 1. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2. 在标准菜单栏上，单击 **“新建查询”**。  
+2. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     USE AdventureWorks2012;  

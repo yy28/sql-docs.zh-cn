@@ -16,12 +16,12 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67866652e7c010a00018c394677c9d1e7e1cb8d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 128dbeaf9ae2e46c8b0376a981ab0d2c9c3dafdc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62508400"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580062"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定义和修改合并项目间的联接筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,9 @@ ms.locfileid: "62508400"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-a-join-filter"></a>修改联接筛选器  
   
 1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。       

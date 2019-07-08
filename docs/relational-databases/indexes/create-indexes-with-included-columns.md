@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b515cbf3da95ffdab82ad609937b7a1738684678
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539725"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492878"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,12 @@ ms.locfileid: "52539725"
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，添加包含列（或非键列）以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
   
 -   它们可以是不允许作为索引键列的数据类型。  
-  
 -   在计算索引键列数或索引键大小时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不考虑它们。  
   
  当查询中的所有列都作为键列或非键列包含在索引中时，带有包含性非键列的索引可以显著提高查询性能。 这样可以实现性能提升，因为查询优化器可以在索引中找到所有列值；不访问表或聚集索引数据，从而减少磁盘 I/O 操作。  
   
 > [!NOTE]  
-> 当索引包含查询引用的所有列时，它通常称为“覆盖查询”。  
+> 当索引包含查询引用的所有列时，它通常称为“覆盖查询”  。  
    
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -69,9 +68,9 @@ ms.locfileid: "52539725"
   
     -   增加 **varchar**、 **nvarchar**或 **varbinary** 列的长度。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -84,23 +83,23 @@ ms.locfileid: "52539725"
   
 3.  单击加号以便展开您要创建带有非键列的索引的表。  
   
-4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”。  
+4.  右键单击“索引”文件夹，指向“新建索引”，然后选择“非群集索引…”    。  
   
 5.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-6.  在“索引键列”选项卡下，单击“添加…”。  
+6.  在“索引键列”选项卡下，单击“添加…”   。  
   
-7.  在“从 _table\_name_ 中选择列”对话框中，选中要添加到索引的一个或多个表列的复选框。  
+7.  在“从 _table\_name_ 中选择列”  对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
-9. 在“包含性列”选项卡下，单击“添加…”。  
+9. 在“包含性列”选项卡下，单击“添加…”   。  
   
-10. 在“从 _table\_name_ 中选择列”对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
+10. 在“从 _table\_name_ 中选择列”  对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
-12. 在 **“新建索引”** 对话框中，单击 **“确定”**。  
+12. 在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -108,9 +107,9 @@ ms.locfileid: "52539725"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     USE AdventureWorks2012;  

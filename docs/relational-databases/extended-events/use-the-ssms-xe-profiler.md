@@ -17,12 +17,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86060ab437019e19c5b6f47e41df96ddc206a582
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 29fa2889373d602839d921a9117ba21cdbe4ca4f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477962"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583363"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 探查器
 
@@ -38,7 +38,7 @@ XEvent 探查器是 SQL Server Management Studio (SSMS) 的功能，可显示扩
 ## <a id="getting-started"></a>入门
 若要访问 XEvent 探查器，请执行以下步骤：
 
-1. 打开 SQL Server Management Studio。
+1. 打开 SQL Server Management Studio  。
 
 2. 连接 SQL Server 数据库引擎实例或 localhost。
 
@@ -46,11 +46,13 @@ XEvent 探查器是 SQL Server Management Studio (SSMS) 的功能，可显示扩
 
    ![XEProfiler 菜单](media/xevents-xe-profiler-menu.png)
 
-4. 若想要在会话中查看所有扩展事件，双击“标准”。 若想要查看记录的 SQL 语句，单击“T-SQL”。 如果尚未创建会话，将为你创建一个。
+4. 若想要在会话中查看所有扩展事件，双击“标准”  。 若想要查看记录的 SQL 语句，单击“T-SQL”  。 如果尚未创建会话，将为你创建一个。
 
    ![XEProfiler 会话](media/xevents-xe-profiler-start-session.png)
 
 5. 现在可以查看扩展事件。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ![XEProfiler 查看器](media/xevents-xe-profiler-start-viewer.png)
 

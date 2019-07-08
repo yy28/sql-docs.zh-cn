@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894de6f944f8e47c90cdd1338c694ab251d23d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 557136026e518d54d81bda44b9694f9fe86e7c9d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848936"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580654"
 ---
 # <a name="disable-check-constraints-for-replication"></a>对复制禁用 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "47848936"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -45,21 +45,23 @@ ms.locfileid: "47848936"
   
 1.  在 **“对象资源管理器”** 中，展开具有要修改的 CHECK 约束的表，再展开 **“约束”** 文件夹。  
   
-2.  右键单击要修改的 CHECK 约束，然后单击 **“修改”**。  
+2.  右键单击要修改的 CHECK 约束，然后单击 **“修改”** 。  
   
-3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”**，对 **“强制用于复制”** 选择 **“否”** 值。  
+3.  在 **“CHECK 约束”** 对话框中的 **“表设计器”** ，对 **“强制用于复制”** 选择 **“否”** 值。  
   
-4.  单击 **“关闭”**。  
-  
+4.  单击 **“关闭”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>对复制禁用 CHECK 约束  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 第一个示例创建包含一个 IDENTITY 列的表和表中的一个 CHECK 约束。 然后，该示例删除该约束，并通过指定 NOT FOR REPLICATION 子句重新创建约束。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 第一个示例创建包含一个 IDENTITY 列的表和表中的一个 CHECK 约束。 然后，该示例删除该约束，并通过指定 NOT FOR REPLICATION 子句重新创建约束。  
   
     ```  
     USE AdventureWorks2012;  

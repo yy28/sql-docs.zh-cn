@@ -15,12 +15,12 @@ ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: afd93dd5543d515c6dc77548f5a9f70542af9ea1
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: edd786253bb39d947671757f82b240f6d7c5022f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512468"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582531"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>配置基于策略的管理的常规属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51512468"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **配置基于策略的管理，使用：**  
   
@@ -40,20 +40,20 @@ ms.locfileid: "51512468"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-configure-policy-based-management"></a>配置基于策略的管理  
   
-1.  在“对象资源管理器”中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
+1.  在“对象资源管理器”  中，单击加号以展开你要在其中配置基于策略的管理属性的服务器。  
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”，然后选择“属性”。  
+3.  右键单击“策略管理”  ，然后选择“属性”  。  
   
      在 **“策略管理属性”** 对话框中提供以下选项。  
   
@@ -70,17 +70,19 @@ ms.locfileid: "51512468"
   
     -   如果该值为 true，则成功和失败的策略评估都会记录。  
   
-4.  完成后，单击 **“确定”**。  
-  
+4.  完成后，单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-configure-policy-based-management"></a>配置基于策略的管理  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- enables Policy-Based Management   
