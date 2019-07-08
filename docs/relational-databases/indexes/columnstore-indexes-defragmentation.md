@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511544"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388137"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>列存储索引 - 碎片整理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52511544"
   对列存储索引进行碎片整理的任务。  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>使用 ALTER INDEX REORGANIZE 对列存储索引进行在线碎片整理  
- **适用对象：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **适用对象：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 加载任何类型的数据之后，增量存储中会有多个较小的行组。 可以使用 `ALTER INDEX REORGANIZE` 将所有行组强制载入列存储，然后将行组合并成具有更多行的较少行组。  重新组织操作还将删除已从列存储中删除的行。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52511544"
   
 使用 [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) 中的示例来计算碎片。 这可帮助你确定它是否值得执行 REORGANIZE 操作。  
   
-### <a name="example-how-reorganizing-works"></a>示例：重新组织的工作原理  
+### <a name="example-how-reorganizing-works"></a>例如：重新组织的工作原理  
  此示例演示 ALTER INDEX REORGANIZE 如何将所有增量存储行组强制转到列存储中，然后合并行组。  
   
 1.  运行此 Transact SQL 以创建包含 300,000 行的临时表。 我们将使用它来将行批量加载到列存储索引中。  
@@ -55,6 +55,9 @@ ms.locfileid: "52511544"
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  
@@ -127,7 +130,7 @@ ms.locfileid: "52511544"
     GO  
     ```  
   
-4.  通过使用 sys.dm_db_column_store_row_group_physical_stats 动态管理视图 (DMV) 来查看行组。  
+4.  通过使用 sys.dm_db_column_store_row_group_physical_stats 动态管理视图 (DMV) 来查看行组  。  
   
     ```sql  
     -- Run this dynamic management view (DMV) to see the OPEN rowgroups.   
@@ -141,7 +144,7 @@ ms.locfileid: "52511544"
     ORDER BY row_group_id;  
     ```  
   
-     在此示例中，结果显示 8 个 OPEN 行组，每个包含 37,500 行。 OPEN 行组的数目取决于 max_degree_of_parallelism 设置。  
+     在此示例中，结果显示 8 个 OPEN 行组，每个包含 37,500 行。 OPEN 行组的数目取决于 max_degree_of_parallelism 设置  。  
   
      ![OPEN 行组](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN 行组")  
   

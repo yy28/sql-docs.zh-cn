@@ -20,12 +20,12 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae19cf74753b07dba1e6c274f1a102e1fe745f1c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 209f11341fa8825e7c67281a8a58ccb338a1376b
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325520"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463577"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多个版本和实例
 
@@ -39,7 +39,7 @@ ms.locfileid: "58325520"
 
 - Analysis Services
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - Reporting Services
 ::: moniker-end
 
@@ -116,7 +116,7 @@ ms.locfileid: "58325520"
 
 ## <a name="preventing-ip-address-conflicts"></a>防止 IP 地址冲突
 
-并行安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例与 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 若将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为使用不同的端口，则在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例失败到备用节点时，将防止出现会阻止实例启动的意外 IP 地址/TCP 端口冲突。
+并行安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例与 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的独立实例时，请注意避免 IP 地址上的 TCP 端口号冲突。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的两个实例都配置为使用默认 TCP 端口 (1433) 时，通常会发生冲突。 要避免冲突，请将一个实例配置为使用非默认的固定端口。 在独立实例上配置固定端口通常是最简单的。 如果将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置为使用不同的端口，可以防止在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例无法切换到备用节点时，出现阻止实例启动的意外 IP 地址/TCP 端口冲突。
   
 ## <a name="see-also"></a>另请参阅
 

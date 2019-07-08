@@ -12,20 +12,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101905"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400083"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 这些发行说明适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS)。
-
-有关新增功能和已更改功能的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)。
 
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
@@ -72,6 +70,7 @@ SSDT for Visual Studio 2017。
 | :---------- | :------ |
 | 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 | 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。 |
 | 版本高于 15.8 的 SSDT for Visual Studio 2017 不支持设计包含 Teradata 源/目标的包。 | 使用 SSDT for Visual Studio 2017 (15.8)。 |
+| 无法在包部署模型中创建或编辑数据源。 | 无法打开数据源向导。 |
 | 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持 OData v4。 | &nbsp; |
 | 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持使用 ODBC 连接到 Oracle。 | &nbsp; |
 | 未本地化 Power Query 源。 | &nbsp; |

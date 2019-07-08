@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822958"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413157"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 跟踪标志用于设置特定服务器特征或更改特定行为。 例如，跟踪标志 3226 是一种常用的启动跟踪标志，可取消显示错误日志中的成功备份消息。 跟踪标志经常用于诊断性能问题或调试存储过程或复杂的计算机系统，但 Microsoft 支持部门还可能建议将它们用于解决会对特定工作负载产生负面影响的行为。  当按照指示使用时，所有记录的跟踪标志和 Microsoft 支持部门推荐的跟踪标志在生产环境中都完全受支持。  请注意，此列表中的跟踪标志在其特定用途方面可能会有一些其他注意事项，因此建议仔细查看此处和/或支持工程师提供的所有建议。 此外，与 SQL Server 中的任何配置更改一样，最好在部署标志之前在非生产环境中全面测试该标志。
+
+## <a name="remarks"></a>Remarks  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有三种跟踪标志：查询、会话和全局。 查询跟踪标志在特定查询的上下文中处于活动状态。 会话跟踪标志对某个连接有效，且只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 某些标志只能作为全局标志启用，而某些标志在全局或会话作用域都可以启用。  
+  
+ 下列规则适用：  
+-   全局跟踪标志必须全局启用。 否则，跟踪标志无效。 建议在启动时通过使用 **-T** 命令行选项来启用全局跟踪标志。 这样可确保跟踪标志在服务器重新启动后保持活动状态。 若要让跟踪标志生效，请重启 SQL Server。 
+-   如果跟踪标志有全局、会话或查询作用域，则可以用合适的作用域来启用它。 在会话级别启用的跟踪标志永远不会影响另一个会话，并且当打开会话的 SPID 注销时，该跟踪标志将失效。  
+  
+使用以下方法之一可将跟踪标志设置为开或关：
+-   使用 DBCC TRACEON 和 DBCC TRACEOFF 命令。  
+     例如，若要全局启用 2528 跟踪标志，请在使用 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) 时使用 -1 参数：`DBCC TRACEON (2528, -1)`。 重新启动服务器时，使用 DBCC TRACEON 启用全局跟踪标志的方法将失效。 若要关闭全局跟踪标志，请在使用 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) 时使用 -1 参数。  
+-   使用 **-T** 启动选项可以指定跟踪标志在启动期间设置为开。  
+     **-T** 启动选项会全局启用跟踪标志。 使用启动选项无法启动会话级别的跟踪标志。 这样可确保跟踪标志在服务器重新启动后保持活动状态。 有关启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
+-   在查询级别，通过使用 QUERYTRACEON [查询提示](https://support.microsoft.com/kb/2801413)。 QUERYTRACEON 选项只能用于上表中所述的查询优化器跟踪标志。
+  
+使用 `DBCC TRACESTATUS` 命令确定哪些跟踪标志当前是活动的。
+
+## <a name="trace-flags"></a>跟踪标志
+
   
 下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的跟踪标志，并进行了说明。
  
@@ -156,21 +175,7 @@ ms.locfileid: "66822958"
 |**11023**|对于未将采样率显式指定为 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 语句一部分的所有后续统计信息更新，禁止使用上一个持续采样率。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4039284)。<br /><br />**作用域**：全局或会话|    
 |**11024**|当任何分区的修改计数超过本地[阈值](../../relational-databases/statistics/statistics.md#AutoUpdateStats)时，允许触发统计信息的自动更新。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4041811)。<br /><br />注意：  此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局或会话| 
   
-## <a name="remarks"></a>Remarks  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有三种跟踪标志：查询、会话和全局。 查询跟踪标志在特定查询的上下文中处于活动状态。 会话跟踪标志对某个连接有效，且只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 某些标志只能作为全局标志启用，而某些标志在全局或会话作用域都可以启用。  
-  
- 下列规则适用：  
--   全局跟踪标志必须全局启用。 否则，跟踪标志无效。 建议在启动时通过使用 **-T** 命令行选项来启用全局跟踪标志。 这样可确保跟踪标志在服务器重新启动后保持活动状态。  
--   如果跟踪标志有全局、会话或查询作用域，则可以用合适的作用域来启用它。 在会话级别启用的跟踪标志永远不会影响另一个会话，并且当打开会话的 SPID 注销时，该跟踪标志将失效。  
-  
-使用以下方法之一可将跟踪标志设置为开或关：
--   使用 DBCC TRACEON 和 DBCC TRACEOFF 命令。  
-     例如，若要全局启用 2528 跟踪标志，请在使用 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) 时使用 -1 参数：`DBCC TRACEON (2528, -1)`。 重新启动服务器时，使用 DBCC TRACEON 启用全局跟踪标志的方法将失效。 若要关闭全局跟踪标志，请在使用 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) 时使用 -1 参数。  
--   使用 **-T** 启动选项可以指定跟踪标志在启动期间设置为开。  
-     **-T** 启动选项会全局启用跟踪标志。 使用启动选项无法启动会话级别的跟踪标志。 这样可确保跟踪标志在服务器重新启动后保持活动状态。 有关启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
--   在查询级别，通过使用 QUERYTRACEON [查询提示](https://support.microsoft.com/kb/2801413)。 QUERYTRACEON 选项只能用于上表中所述的查询优化器跟踪标志。
-  
-使用 `DBCC TRACESTATUS` 命令确定哪些跟踪标志当前是活动的。
+
   
 ## <a name="examples"></a>示例  
  以下示例使用 DBCC TRACEON 针对服务器级别的所有会话将跟踪标志 3205 设置为开。  

@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b858639e60419d955a32981ceeac56d8acc42110
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e455c56de9231bfd9f750a45eb96eeb10945c8aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133177"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580322"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "54133177"
   
 -   在还原顺序中尽早指定时间点  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -62,9 +62,9 @@ ms.locfileid: "54133177"
   
 1.  在“对象资源管理器”中，连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开服务器树。  
   
-2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”** 。  根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再指向“还原”，然后单击“数据库”。  
+3.  右键单击数据库，指向“任务”  ，再指向“还原”  ，然后单击“数据库”  。  
   
 4.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：  
   
@@ -77,11 +77,11 @@ ms.locfileid: "54133177"
   
     -   **“设备”**  
   
-         单击“浏览”按钮 (**...**) 以打开“选择备份设备”对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”**。  
+         单击“浏览”按钮 ( **...** ) 以打开“选择备份设备”  对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”** 。  
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在“源:设备:数据库”列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称**。  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -89,16 +89,16 @@ ms.locfileid: "54133177"
   
 6.  单击 **“时间线”** 以访问 **“备份时间线”** 对话框。  
   
-7.  在 **“还原到”** 部分中，单击 **“具体日期和时间”**。  
+7.  在 **“还原到”** 部分中，单击 **“具体日期和时间”** 。  
   
 8.  使用 **“日期”** 和 **“时间”** 框或滑动条来指定应停止还原的具体日期和时间。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  使用“时间线间隔”框更改时间线上显示的时间量。  
+    >  使用“时间线间隔”  框更改时间线上显示的时间量。  
   
 9. 指定具体时点后，数据库恢复顾问确保只有需要还原到该时点的那些备份在 **“要还原的备份集”** 网格的 **“还原”** 列中处于选中状态。 这些选定的备份构成了为您的时点还原建议的还原计划。 应当仅使用选定的备份进行时点还原操作。  
   
-     有关“用于还原的备份集”网格中的列的信息，请参阅[还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)。 有关数据库恢复顾问的信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
+     有关“用于还原的备份集”  网格中的列的信息，请参阅[还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)。 有关数据库恢复顾问的信息，请参阅[还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  
   
 10. 在 **“选项”** 页的 **“还原选项”** 面板中，可以根据您的实际情况选择下列任意选项：  
   
@@ -120,12 +120,14 @@ ms.locfileid: "54133177"
   
      有关这些选项的说明，请参阅[还原数据库（“选项”页）](../../relational-databases/backup-restore/restore-database-options-page.md)。  
   
-12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
+12. 如果对于选择的时间点是必需的，则选择“还原前进行结尾日志备份”  。 无需修改此设置，但可以选择备份日志尾部（即使不需要）。  
   
 13. 如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。  
   
 14. 如果要在每个还原操作之间进行提示，请选择 **“还原每个备份之前进行提示”** 。 除非数据库过大并且您要监视还原操作的状态，否则通常没有必要选中该选项。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **Before you begin**  
   
@@ -135,7 +137,7 @@ ms.locfileid: "54133177"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…  
+ RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…      
   
  恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
   
@@ -155,7 +157,7 @@ ms.locfileid: "54133177"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY)。  
+4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  

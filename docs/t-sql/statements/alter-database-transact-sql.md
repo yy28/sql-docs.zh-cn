@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0753f6459ac832bd4b5564e356a62bcc8b54aa30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944711"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351723"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "65944711"
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -123,28 +123,28 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>参数
 
-database_name  要修改的数据库的名称。
+database_name 要修改的数据库的名称。
 
 > [!NOTE]
 > 此选项在包含的数据库中不可用。
 
-CURRENT 适用范围  ：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+CURRENT 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 指定应更改当前使用的数据库。
 
-MODIFY NAME =  new_database_name  使用指定的名称 new_database_name  重命名数据库。
+MODIFY NAME =new_database_name 使用指定的名称 new_database_name 重命名数据库。
 
-COLLATE collation_name  指定数据库的排序规则。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称  。 如果不指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的排序规则指定为数据库的排序规则。
+COLLATE collation_name 指定数据库的排序规则。 collation_name 既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果不指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的排序规则指定为数据库的排序规则。
 
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能更改排序规则。
 
-在创建使用非默认排序规则的数据库时，数据库中的数据将始终遵循指定的排序规则。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，创建包含的数据库时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认排序规则 Latin1_General_100_CI_AS_WS_KS_SC 来维护内部目录信息  。
+在创建使用非默认排序规则的数据库时，数据库中的数据将始终遵循指定的排序规则。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，创建包含的数据库时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认排序规则 Latin1_General_100_CI_AS_WS_KS_SC 来维护内部目录信息。
 
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE](~/t-sql/statements/collations.md)。
 
-**\<delayed_durability_option> ::=** 
-适用范围  ：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**\<delayed_durability_option> ::=**
+适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 有关详细信息，请参阅 [ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md)和[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。
 
@@ -189,7 +189,7 @@ COLLATE collation_name  指定数据库的排序规则。 collation_name 既可�
 - 您是当前数据库的唯一用户。
 - 没有依赖数据库排序规则的架构绑定对象。
 
-如果数据库中存在下列依赖于数据库排序规则的对象，则 ALTER DATABASE database_name COLLATE 语句将失败  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对每个阻塞 `ALTER` 操作的对象返回一条错误消息：
+如果数据库中存在下列依赖于数据库排序规则的对象，则 ALTER DATABASE database_name COLLATE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对每个阻塞 `ALTER` 操作的对象返回一条错误消息：
 
 - 通过 SCHEMABINDING 创建的用户定义函数和视图
 - 计算列
@@ -273,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\*SQL 数据库<br />单一数据库/弹性池\*_ ** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\*SQL 数据库<br />单一数据库/弹性池\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -366,18 +366,18 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>参数
 
-database_name  要修改的数据库的名称。
+database_name 要修改的数据库的名称。
 
 CURRENT 指定应更改当前使用的数据库。
 
-MODIFY NAME =  new_database_name  使用指定的名称 new_database_name  重命名数据库。 以下示例将 `db1` 数据库的名称更改为 `db2`：
+MODIFY NAME =new_database_name 使用指定的名称 new_database_name 重命名数据库。 以下示例将 `db1` 数据库的名称更改为 `db2`：
 
 ```sql
 ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION = ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) 更改数据库的服务层  。
+MODIFY (EDITION = ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) 更改数据库的服务层。
 
 以下示例将版本更改为 `premium`：
 
@@ -389,10 +389,10 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > 如果数据库的 MAXSIZE 属性设置为该版本支持的有效范围之外的值，则 EDITION 更改会失败。
 
-MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB) 指定数据库的最大大小  。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。
+MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB) 指定数据库的最大大小。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。
 
 > [!NOTE]
->  MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模服务层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
+> MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模服务层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
 
 **基于 DTU 的模型**
 
@@ -478,8 +478,8 @@ MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB) 指定数据库的最�
 
 以下规则适用于 MAXSIZE 和 EDITION 参数：
 
-- 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard 并且未指定 MAXSIZE，则 MAXSIZE 将自动设置为 500 MB。
-- 如果 MAXSIZE 和 EDITION 均未指定，则 EDITION 设置为 Standard (S0)，MAXSIZE 设置为 250 GB。
+- 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard，且未指定 MAXSIZE，那么 MAXSIZE 自动设置为 250MB。
+- 如果 MAXSIZE 和 EDITION 均未指定，EDITION 设置为“常规用途”，MAXSIZE 设置为“32GB”。
 
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>) 指定性能级别。 以下示例将高级数据库的服务目标更改为 `P6`：
 
@@ -488,7 +488,7 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```
 
-- 针对单一数据库和入池数据库 
+- 针对单一数据库和入池数据库
 
   - 指定性能级别。 服务目标的可用值为：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`。
 
@@ -510,7 +510,7 @@ ADD SECONDARY ON SERVER \<partner_server_name>
 > [!IMPORTANT]
 > 超大规模服务层当前不支持异地复制。
 
-WITH ALLOW_CONNECTIONS { ALL | NO } When ALLOW_CONNECTIONS 未指定 ALLOW_CONNECTIONS 时，它在默认情况下会设置为 ALL  。 如果它设置为 ALL，则是允许拥有适当权限的所有登录名进行连接的只读数据库。
+WITH ALLOW_CONNECTIONS { ALL | NO } When ALLOW_CONNECTIONS 未指定 ALLOW_CONNECTIONS 时，它在默认情况下会设置为 ALL。 如果它设置为 ALL，则是允许拥有适当权限的所有登录名进行连接的只读数据库。
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }
 
@@ -659,7 +659,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|** _\* SQL 数据库<br />托管实例\*_ ** &nbsp;|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL 数据库<br />托管实例\*_** &nbsp;|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -721,7 +721,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>参数
 
-database_name  要修改的数据库的名称。
+database_name 要修改的数据库的名称。
 
 CURRENT 指定应更改当前使用的数据库。
 
@@ -780,7 +780,7 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_  &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_&nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -821,9 +821,9 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>参数
 
-database_name  指定要修改的数据库的名称。
+database_name 指定要修改的数据库的名称。
 
-MODIFY NAME = new_database_name  使用指定的名称 new_database_name  重命名数据库。
+MODIFY NAME = new_database_name 使用指定的名称 new_database_name 重命名数据库。
 
 MAXSIZE 默认为 245,760 GB (240 TB)。
 
@@ -848,7 +848,7 @@ SERVICE_OBJECTIVE 指定性能级别。 有关 SQL 数据仓库的服务目标�
 
 ## <a name="general-remarks"></a>一般备注
 
-当前数据库必须不同于你正在更改的数据库，因此连接到 master 数据库之后必须运行 ALTER  。
+当前数据库必须不同于你正在更改的数据库，因此连接到 master 数据库之后必须运行 ALTER。
 
 SQL 数据仓库设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
 
@@ -864,7 +864,7 @@ SQL 数据仓库设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详
 
 ## <a name="examples"></a>示例
 
-在运行这些示例之前，请确保所更改的数据库不是当前数据库。 当前数据库必须不同于你正在更改的数据库，因此连接到 master 数据库之后必须运行 ALTER  。
+在运行这些示例之前，请确保所更改的数据库不是当前数据库。 当前数据库必须不同于你正在更改的数据库，因此连接到 master 数据库之后必须运行 ALTER。
 
 ### <a name="a-change-the-name-of-the-database"></a>A. 更改数据库的名称
 
@@ -901,7 +901,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -935,15 +935,15 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>参数
 
-database_name  要修改的数据库的名称。 要在设备上显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。
+database_name 要修改的数据库的名称。 要在设备上显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。
 
 AUTOGROW = { ON | OFF } 更新 AUTOGROW 选项。 当 AUTOGROW 为 ON 时，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 根据需要自动为复制表、分布式表和事务日志增大分配空间，以适应存储需求的增长。 当 AUTOGROW 为 OFF 时，如果复制表、分布式表或事务日志超出最大大小设置，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 会返回一个错误。
 
-REPLICATED_SIZE = size  [GB] 指定每个计算节点的新最大 GB 数，以便存储要更改的数据库中的所有复制表。 如果正在计划设备存储空间，需要用 REPLICATED_SIZE 乘以设备中的计算节点数。
+REPLICATED_SIZE = size [GB] 指定每个计算节点的新最大 GB 数，以便存储要更改的数据库中的所有复制表。 如果正在计划设备存储空间，需要用 REPLICATED_SIZE 乘以设备中的计算节点数。
 
-DISTRIBUTED_SIZE = size  [GB] 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有分布式表。 该大小分布到设备的所有计算节点中。
+DISTRIBUTED_SIZE = size [GB] 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有分布式表。 该大小分布到设备的所有计算节点中。
 
-LOG_SIZE = size  [GB] 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有事务日志。 该大小分布到设备的所有计算节点中。
+LOG_SIZE = size [GB] 指定每个数据库的新的最大 GB 数，以便存储要更改的数据库中的所有事务日志。 该大小分布到设备的所有计算节点中。
 
 ENCRYPTION { ON | OFF } 将数据库设置为加密的 (ON) 或未加密的 (OFF)。 只能在 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) 已设置为 **1** 时为 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 配置加密。 必须先创建数据库加密密钥，然后才能配置透明数据加密。 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。
 

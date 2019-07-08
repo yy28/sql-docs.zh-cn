@@ -19,22 +19,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20e587aeb7c0ed34762bf1f90488a06cafc0ec93
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776111"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412995"
 ---
 # <a name="write-international-transact-sql-statements"></a>编写国际化 Transact-SQL 语句
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   如果遵循以下指导原则，则使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的数据库和数据库应用程序将变得更易于在语言之间移植，或者将支持多种语言：  
 
 -   从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，使用以下任一选项：
-    -   具有[已启用 UTF-8 的排序规则](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support)的 char、varchar 和 varchar(max) 数据类型    。
-    -   具有任何排序规则的 nchar、nvarchar 和 nvarchar(max) 数据类型    。      
+    -   已启用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的排序规则结合使用的 char  、varchar  和 varchar(max)  数据类型。
+    -   与已启用[附属字符](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)的排序规则结合使用的 nchar  、nvarchar  和 nvarchar(max)  数据类型。      
 
-    这避免了代码页转换问题。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+    这避免了代码页转换问题。 有关其他注意事项，请参阅 [UTF-8 与 UTF-16 的存储差异](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。  
 
 -   到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 为止，将 char、varchar 和 varchar(max) 数据类型的所有使用替换为 nchar、nvarchar 和 nvarchar(max)       。 这避免了代码页转换问题。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 
     > [!IMPORTANT]

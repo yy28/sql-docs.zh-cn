@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765716"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388109"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>创建域独立可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Windows Server 2016 引入了一种基于与 Active Directory 分离的群集的
 10. 系统将提示重启计算机。 如果不想立即重启，单击“稍后重启”，否则单击“立即重启”。
 11. 重新启动服务器后，再次查看系统，验证已配置常见 DNS 后缀。
 
-
 ![成功配置了 DNS 后缀][4]
+
+  > [!NOTE]
+  > 若要使用多个子网且有静态 DNS，必须先制定用于更新与侦听器关联的 DNS 记录的流程，再执行故障转移，否则网络名称将无法联机。
 
 ## <a name="create-a-domain-independent-availability-group"></a>创建域独立可用性组
 

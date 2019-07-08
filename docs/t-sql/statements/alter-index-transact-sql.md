@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413644"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388845"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -467,7 +468,13 @@ ALLOW_PAGE_LOCKS = { ON | OFF }
   
 > [!NOTE]
 >  ALLOW_PAGE_LOCKS 设置为 OFF 时，无法重新组织索引。  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF  }
+
+**适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。
+
+指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
+
  MAXDOP = max_degree_of_parallelism   
  
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
@@ -686,7 +693,7 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
 使用 ALTER INDEX REBUILD 语句或 CREATE INDEX WITH DROP_EXISTING 语句启用索引。 重新生成已禁用聚集索引不能在 ONLINE 选项设置为 ON 时执行。 有关详细信息，请参阅 [禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。  
   
 ## <a name="setting-options"></a>“设置选项”  
-您可以为指定的索引设置选项 ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE，而不重新生成或重新组织该索引。 修改的值立即应用于索引。 若要查看这些设置，请使用 **sys.indexes**。 有关详细信息，请参阅 [设置索引选项](../../relational-databases/indexes/set-index-options.md)。  
+可以为指定索引设置选项 ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、OPTIMIZE_FOR_SEQUENTIAL_KEY、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE，而无需重新生成或重新组织此索引。 修改的值立即应用于索引。 若要查看这些设置，请使用 **sys.indexes**。 有关详细信息，请参阅 [设置索引选项](../../relational-databases/indexes/set-index-options.md)。  
   
 ### <a name="row-and-page-locks-options"></a>行锁和页锁选项  
 如果 ALLOW_ROW_LOCKS = ON 并且 ALLOW_PAGE_LOCK = ON，则当访问索引时将允许行级别、页级别和表级别的锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将选择相应的锁，并且可以将锁从行锁或页锁升级到表锁。  

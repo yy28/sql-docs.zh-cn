@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255272"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343919"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 
@@ -90,7 +90,7 @@ ms.locfileid: "54255272"
 ### <a name="batch-mode-execution"></a>批处理模式执行    
  批处理模式执行是指为提高执行效率将一组行（通常最多 900 行）一起处理。 例如，查询 `SELECT SUM (Sales) FROM SalesData` 从表 SalesData 聚合了总销售额。 以批处理模式执行时，查询执行引擎以 900 个值为一组计算聚合。 这样会将元数据（访问成本和其他类型的开销）分布到批处理的所有行中，而不是支付每行的成本，从而大大减少了代码路径。 批处理模式处理在可能的情况下会对压缩数据运行，并消除了行模式处理所用的一些交换运算符。 这可以将分析查询的执行速度提高好几个数量级。    
     
- 并非所有查询执行运算符都可以在批处理模式下执行。 例如，DML 操作（如 Insert、Delete 或 Update）一次执行一行。 批处理模式运算符面向可提高查询性能的运算符（如 Scan、Join、Aggregate、sort 等）。 由于列存储索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的，因此需要付出不懈努力来扩展可以批处理模式执行的运算符。 下表按照产品版本显示了以批处理模式运行的运算符。    
+ 并非所有查询执行运算符都可以在批处理模式下执行。 例如，DML 操作（如 Insert、Delete 或 Update）一次执行一行。 批处理模式运算符面向可提高查询性能的运算符（如 Scan、Join、Aggregate、sort 等）。 由于列存储索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的，因此需要持续扩展可以在批处理模式下执行的运算符。 下表按照产品版本显示了以批处理模式运行的运算符。    
     
 |批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|注释|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    

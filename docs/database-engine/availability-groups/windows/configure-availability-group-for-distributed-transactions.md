@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1498a7d78e88055052499027a8255743ca3da6dc
+ms.sourcegitcommit: fb9114df7224446696e7772024f64735c3e46c8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772629"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345147"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +89,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >从 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 开始，可更改分布式事务的可用性组。 对于 Service Pack 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 版本，则需要进行删除，然后使用 `DTC_SUPPORT = PER_DB` 设置重新创建可用性组。 
+
+若要禁用分布式事务，请使用以下 Transact-SQL 命令：
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分布式事务 - 技术概念
 

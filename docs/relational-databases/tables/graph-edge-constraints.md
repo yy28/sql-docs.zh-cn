@@ -1,7 +1,7 @@
 ---
 title: 图形边缘约束 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774653"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343884"
 ---
 # <a name="edge-constraints"></a>边缘约束
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  边缘约束可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 图形数据库中的边缘表上强制执行数据完整性和特定语义。 
-  
-本文包含以下各节。  
-  
-[边缘约束](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[边缘约束](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[相关任务](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+边缘约束可用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 图形数据库中的边缘表强制执行数据完整性和特定语义。
+
 ##  <a name="Connection"></a> 边缘约束
  在图形功能的第一个版本中，边缘表没有对边缘的终结点强制执行任何操作。 也就是说，无论何种类型，图形数据库中的边缘都可以将任何节点连接到任何其他节点。 
 
@@ -66,3 +57,5 @@ ms.locfileid: "64774653"
 |介绍如何删除边缘约束。|[删除边缘约束](../../relational-databases/tables/delete-edge-constraint.md)|  
 |介绍如何修改边缘约束。|[修改边缘约束](../../relational-databases/tables/modify-edge-constraint.md)|  
 |介绍如何查看边缘约束属性。|[查看边缘约束属性](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| SQL Server 中的图形技术概述 | [SQL Server 和 Azure SQL 数据库中的图形处理](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

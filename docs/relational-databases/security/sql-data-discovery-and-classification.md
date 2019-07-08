@@ -2,22 +2,22 @@
 title: SQL 数据发现和分类 | Microsoft Docs
 description: SQL 数据发现和分类
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316692"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351734"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67316692"
 * 控制对包含高度敏感数据的数据库/列的访问，并加强其安全性。
 
 > [!NOTE]
-> SQL Server 2008 及更高版本支持数据发现和分类  。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](https://go.microsoft.com/fwlink/?linkid=866265)。
+> SQL Server 2008 及更高版本支持数据发现和分类，这些功能可用于 SSMS 17.5 或更高版本  。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](https://go.microsoft.com/fwlink/?linkid=866265)。
 
 ## <a id="subheading-1"></a>概述
 数据发现和分类引入了一套高级服务，形成了一种旨在保护各种数据（而不只是数据库）的全新 SQL 信息保护范例：

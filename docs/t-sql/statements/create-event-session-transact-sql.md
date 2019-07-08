@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49570a5dd2c5d0e45e75a51a4835df28b63aa783
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354518"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388122"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "66354518"
   
 ```    
 CREATE EVENT SESSION event_session_name  
-ON SERVER  
+ON { SERVER | DATABASE }
 {  
     <event_definition> [ ,...n]  
     [ <event_target_definition> [ ,...n] ]  
@@ -241,7 +241,7 @@ ON SERVER
 逻辑运算符的优先顺序是 `NOT`（最高），然后是 `AND`，最后是 `OR`。  
   
 ## <a name="permissions"></a>权限  
-需要 `ALTER ANY EVENT SESSION` 权限。  
+在 SQL Server 上，需要 `ALTER ANY EVENT SESSION` 权限。 在 SQL 数据库上，需要在数据库中拥有 `ALTER ANY DATABASE EVENT SESSION` 权限。
   
 ## <a name="examples"></a>示例  
  以下示例说明如何创建一个名为 `test_session` 的事件会话。 此示例添加了两个事件并使用 Windows 事件跟踪目标。  
@@ -269,7 +269,6 @@ GO
  [DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
- [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
-  
+ [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)   
   
 

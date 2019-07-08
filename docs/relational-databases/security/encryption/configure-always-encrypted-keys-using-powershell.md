@@ -1,7 +1,7 @@
 ---
 title: 使用 PowerShell 配置 Always Encrypted 密钥 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327468"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388004"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>使用 PowerShell 配置 Always Encrypted 密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "54327468"
 
 ## <a name="KeyProvisionWithoutRoles"></a> 不使用角色分隔的密钥预配
 
-本部分描述的密钥预配方法不支持安全管理员和 DBA 间的角色分隔。 下面的一些步骤将对物理密钥的操作与对密钥元数据的操作组合在一起。 因此，如果组织使用的是 DevOps 模型，或者数据库托管在云中且主要目的是限制云管理员（而不是本地 DBA）访问敏感数据，则推荐使用此密钥预配方法。 如果潜在对手包括 DBA，或者 DBA 只应不具有敏感数据访问权限，则不推荐使用该方法。
+本部分描述的密钥预配方法不支持安全管理员和 DBA 间的角色分隔。 下面的一些步骤将对物理密钥的操作与对密钥元数据的操作组合在一起。 因此，如果组织使用的是 DevOps 模型，或者数据库托管在云中且主要目的是限制云管理员（而不是本地 DBA）访问敏感数据，则推荐使用此密钥预配方法。 如果潜在对手包括 DBA，或 DBA 不得有权访问敏感数据，不推荐使用这种方法。
 
 在运行任何涉及访问纯文本密钥或密钥存储（在下表的 **访问纯文本密钥/密钥存储** 列中标识）的步骤之前，请确保 PowerShell 不是在托管数据库的计算机上运行，而是在另一台安全计算机上运行。 有关详细信息，请参阅 ***密钥管理的安全注意事项***。
 
 
 任务  |项目  |访问纯文本密钥/密钥存储  |访问数据库   
 ---------|---------|---------|---------
-步骤 1. 在密钥存储中创建列主密钥。<br><br>**注意：** SqlServer PowerShell 模块不支持此步骤。 若要从命令行完成此任务，请使用特定于所选密钥存储的工具。 |[创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 是 | 否     
+步骤 1. 在密钥存储中创建列主密钥。<br><br>**注意：** SqlServer PowerShell 模块不支持这一步。 若要从命令行完成此任务，请使用特定于所选密钥存储的工具。 |[创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 是 | 否     
 步骤 2.  启动 PowerShell 环境并导入 SqlServer PowerShell 模块。  |   [使用 PowerShell 配置“始终加密”功能](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    否    | 否         
 步骤 3.  连接到服务器和数据库。     |     [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    否     | 是         
 步骤 4.  创建 *SqlColumnMasterKeySettings* 对象，该对象中包含列主密钥的位置信息。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 使用特定于密钥存储的 cmdlet。   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   否      | 否         
@@ -132,7 +132,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 下面的脚本是一个端到端示例，用于在实现下一代加密技术 API (CNG) 的密钥存储中生成列主密钥、生成并加密列加密密钥，并在 SQL Server 数据库中创建密钥元数据。
 
-该示例利用的密钥存储使用 Microsoft 软件密钥存储提供程序。 你可选择将该示例修改为使用另一存储（例如你的硬件安全模块）。 为此，你将需要确保在计算机上正确安装为设备实现 CNG 的密钥存储提供程序 (KSP)。 你需要将“Microsoft Software Key Storage Provider”替换为你的设备的 KSP 名称。
+该示例利用的密钥存储使用 Microsoft 软件密钥存储提供程序。 你可选择将该示例修改为使用另一存储（例如你的硬件安全模块）。 为此，必须确保在计算机上正确安装为设备实现 CNG 的密钥存储提供程序 (KSP)。 必须将“Microsoft 软件密钥存储提供程序”替换为设备的 KSP 名称。
 
 
 ```
@@ -177,7 +177,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ## <a name="KeyProvisionWithRoles"></a> 不使用角色分隔的密钥设置
 
-本部分提供安全管理员无权访问数据库、数据库管理员无权访问密钥存储或纯文本密钥时配置加密的步骤。
+此部分分步介绍了如何配置加密，其中安全管理员无权访问数据库，且数据库管理员无权访问密钥存储或纯文本密钥。
 
 
 ### <a name="security-administrator"></a>安全管理员
@@ -186,12 +186,12 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 1.  运行 PowerShell 环境的安全计算机并非托管数据库的计算机。
 2.  你组织中的 DBA 没有对计算机的访问权限（这会违背角色分隔的目的）。
 
-有关详细信息，请参阅 [密钥管理的安全注意事项](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
+有关详细信息，请参阅 [密钥管理的安全注意事项](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 
 任务  |项目  |访问纯文本密钥/密钥存储  |访问数据库  
 ---------|---------|---------|---------
-步骤 1. 在密钥存储中创建列主密钥。<br><br>**注意：** SqlServer 模块不支持此步骤。 若要从命令行完成此任务，你需要使用特定于密钥存储类型的工具。     | [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    是    | 否 
+步骤 1. 在密钥存储中创建列主密钥。<br><br>**注意：** SqlServer 模块不支持这一步。 若要从命令行完成此任务，你需要使用特定于密钥存储类型的工具。     | [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    是    | 否 
 步骤 2.  启动 PowerShell 会话并导入 SqlServer 模块。      |     [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | 否 | 否         
 步骤 3.  创建 *SqlColumnMasterKeySettings* 对象，该对象中包含列主密钥的位置信息。 *SqlColumnMasterKeySettings* 是存在于内存中的对象（在 PowerShell 中）。 使用特定于密钥存储的 cmdlet。 |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | 否         | 否         
 步骤 4.  如果列主密钥存储在 Azure 密钥保管库中，请对 Azure 进行身份验证 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |是|否         

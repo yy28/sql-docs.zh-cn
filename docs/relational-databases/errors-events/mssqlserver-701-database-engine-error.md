@@ -12,12 +12,12 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8083e23a59c66185e9c289dc18cdbec1f4e5495
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8224e9daa4bf4a875248668118e8cbacca5fe6b4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694796"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582100"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "62694796"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始为以下实例收集性能监视器计数器：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:Buffer Manager **、** **SQL Server:Memory Manager  。  
+2.  开始为以下实例收集性能监视器计数器：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:Buffer Manager、** **SQL Server:Memory Manager**。  
   
 3.  检查以下 SQL Server 内存配置参数：  
   
@@ -62,7 +62,9 @@ ms.locfileid: "62694796"
 4.  在您看到这些错误消息时，观察 DBCC MEMORYSTATUS 输出及其变化情况。  
   
 5.  检查工作负荷（例如，并发会话数，当前执行的查询）。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 以下操作可能会为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供更多内存：  
   
 -   如果除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外的应用程序正在占用资源，请尝试停止运行这些应用程序，或者考虑在单独的服务器上运行它们。 这样做将消除外部内存压力。  

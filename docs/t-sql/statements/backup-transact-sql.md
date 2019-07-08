@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175309"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419070"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "66175309"
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -931,7 +931,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL 数据库<br />托管实例\*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL 数据库<br />托管实例\*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -980,7 +980,7 @@ DATABASE 指定一个完整数据库备份。 在数据库备份过程中，托�
 > [!IMPORTANT]
 > 在托管实例上创建的数据库备份只能在另一个托管实例上还原。 无法将其还原到 SQL Server 本地实例（类似于无法将 SQL Server 2016 数据库的备份还原到 SQL Server 2012 实例）。
 
-还原由 BACKUP DATABASE（“数据备份”  ）创建的备份时，将还原整个备份。 若要从 Azure SQL 数据库托管实例自动备份还原，请参阅 [SQL 数据库还原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
+还原由 BACKUP DATABASE（“数据备份”  ）创建的备份时，将还原整个备份。 若要从 Azure SQL 数据库托管实例自动备份还原，请参阅[将数据库还原为托管实例](/azure/sql-database/sql-database-managed-instance-get-started-restore)。
 
 { database_name   | @  database\_name\_var  } 是备份完整的数据库时所用的源数据库。 如果作为变量 (@  database\_name\_var  ) 提供，则可以将此名称指定为字符串常量 (@  database\_name\_var  =database  name  ) 或指定为字符串数据类型（ntext  或 text  数据类型除外）的变量。
 
@@ -1116,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 

@@ -4,7 +4,7 @@ Description: 通过收集完整内存转储来排查 SSMS 挂起或故障问题
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: how-to
+ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af7f9222a5de8c0e899d22d32e53d7638a4158cb
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983120"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412894"
 ---
 # <a name="get-full-memory-dump"></a>获取完整内存转储
 
@@ -31,9 +31,9 @@ ms.locfileid: "65983120"
 
 2. 将下载内容解压缩到文件夹中。
 
-3. 打开命令提示符，并运行以下命令。
+3. 打开命令提示符（如 `cmd.exe`），并运行以下命令。
 
-    ```cmd
+    ```
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 

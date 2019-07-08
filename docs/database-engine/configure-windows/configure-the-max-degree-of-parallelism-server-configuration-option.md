@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ef7132e61a646cd0c622a3f15a647cf2430d95c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794138"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351682"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>配置 max degree of parallelism 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "66794138"
 |具有多个 NUMA 节点的服务器|每个 NUMA 节点大于 16 个逻辑处理器|将 MAXDOP 保持为每个 NUMA 节点逻辑处理器数量的一半，最大值为 16|
   
 > [!NOTE]
-> 上表中的 NUMA 节点是指由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自动创建的 soft-NUMA 节点。   
+> 上表中的 NUMA 节点是指，由 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本自动创建的 soft-NUMA 节点，或基于硬件的 NUMA 节点（如果 soft-NUMA 已遭禁用的话）。   
 >  为 Resource Governor 工作负荷组设置“最大并行度”选项时，请使用这些相同的准则。 有关详细信息，请参阅 [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)。
   
 从 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，请使用以下准则配置“最大并行度”服务器配置值  ：

@@ -24,12 +24,12 @@ ms.author: dinethi
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033406"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399653"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -68,7 +68,6 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 SQL Server Management Studio 18.1：<br>
 [中文（中国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
 
@@ -79,7 +78,6 @@ SQL Server Management Studio 18.1：<br>
 - **Integration Services (SSIS)** - 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划...  右键单击 Azure 中 SSIS 目录中的 SSIS 包时显示的菜单项，“在 Azure 中安排执行 SSIS 包”菜单项，位于“工具”菜单项下的“迁移到 Migrate”菜单项，以及右键单击 Azure SQL 数据库托管实例中的 SQL Server 代理下的作业文件夹时显示的“在 Azure 中安排执行 SSIS”    。
 
 有关此版本中新增功能的详细信息，请参阅 [SSMS 发行说明](release-notes-ssms.md)。
-
 
 ## <a name="supported-sql-offerings-ssms-181"></a>受支持的 SQL 产品/服务 (SSMS 18.1)
 
@@ -93,7 +91,8 @@ SQL Server Management Studio 18.1：<br>
 
 - Windows 10（64 位）<sup>*</sup>
 - Windows 8.1（64 位）
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019（64 位）
+- Windows Server 2016（64 位）<sup>*</sup>
 - Windows Server 2012 R2（64 位）
 - Windows Server 2012（64 位）
 - Windows Server 2008 R2（64 位）
@@ -105,7 +104,7 @@ SQL Server Management Studio 18.1：<br>
 
 ## <a name="release-notes-ssms-181"></a>发行说明 (SSMS 18.1)
 
-此版本没有已知问题。
+此版本存在一些[已知问题](release-notes-ssms.md#known-issues-181)。
 
 有关此版本的详细信息，请参阅 [SSMS 发行说明](release-notes-ssms.md)。
 

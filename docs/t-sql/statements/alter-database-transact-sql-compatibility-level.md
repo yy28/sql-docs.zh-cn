@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626690"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469195"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-将某些数据库行为设置为与指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本兼容。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
+将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和查询处理行为设置为与指定版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]兼容。 有关其他 ALTER DATABASE 选项，请参阅 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。  
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
@@ -49,16 +49,18 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>参数
 
-database_name  要修改的数据库的名称。
+database_name       
+要修改的数据库的名称。
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是使数据库与之兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以配置以下兼容级别值（并非所有版本都支持所有以上列出的兼容级别）：
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
+要使数据库与之兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以配置以下兼容级别值（并非所有版本都支持所有以上列出的兼容级别）：
 
-|Product|数据库引擎版本|兼容级别指定|支持的兼容级别值|
+|Product|数据库引擎版本|默认兼容性级别标示|支持的兼容级别值|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150、140、130、120、110、100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140、130、120、110、100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库/弹性池|12|130|150、140、130、120、110、100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例|12|130|150、140、130、120、110、100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库/弹性池|12|140|150、140、130、120、110、100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例|12|140|150、140、130、120、110、100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130、120、110、100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120、110、100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110、100、90|
@@ -66,28 +68,6 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 是使数据
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|10|100|100、90、80|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90、80|
 |SQL Server 2000|8|80|80|
-
-> [!NOTE]
-> 从 2018 年 1 月起，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新创建的数据库的默认兼容性级别为 140  。 我们不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。 不过，强烈建议客户计划转到最新的兼容性级别，以便利用最新的改进。
->
-> 如果想要对整个数据库利用数据库兼容性级别 140，但有理由优先选择映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的基数估计模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是其关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`  。
->
-> 有关如何评估 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)。 注意，本文是指兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但同样的方法也适用于转到 140 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
-
-执行以下查询可确定连接到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。
-
-```sql
-SELECT SERVERPROPERTY('ProductVersion');
-```
-
-> [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上并不支持所有功能（因兼容级别而异）。
-
-若要确定当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的 compatibility_level  列。
-
-```sql
-SELECT name, compatibility_level FROM sys.databases;
-```
 
 ## <a name="remarks"></a>Remarks
 
@@ -106,6 +86,26 @@ SELECT name, compatibility_level FROM sys.databases;
 > [!NOTE]
 > 在早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建并已升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或 Service Pack 1 的[分发数据库](../../relational-databases/replication/distribution-database.md)采用兼容性级别 90，其他数据库不支持该级别。 这并不影响复制功能。 升级到更高版本的服务包和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本将导致分发数据库的兼容性级别增加到可与主数据库匹配  。
 
+从 2018 年 1 月起，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新创建的数据库的默认兼容性级别为 140  。 我们不会更新现有数据库的数据库兼容性级别。 这是由客户自行决定的。 Microsoft 强烈建议客户计划升级到最新兼容性级别，以利用最新查询优化改进。
+若要对整个数据库利用数据库兼容性级别 140，但选择启用映射到数据库兼容性级别 110 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [基数估计  ](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型，请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，尤其是它的关键字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
+
+有关如何评估 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)。 请注意，虽然本文中介绍的是兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但同样的方法也适用于为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 迁移到 140。
+
+若要确定连接到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]版本，请执行以下查询。
+
+```sql
+SELECT SERVERPROPERTY('ProductVersion');
+```
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上并不支持所有功能（因兼容级别而异）。
+
+若要确定当前兼容级别，请查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的 compatibility_level  列。
+
+```sql
+SELECT name, compatibility_level FROM sys.databases;
+```
+
 ## <a name="compatibility-levels-and-sql-server-upgrades"></a>兼容性级别和 SQL Server 升级
 
 数据库兼容性级别是一个重要的工具，可通过允许升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，同时通过维持相同的升级前数据库兼容性级别保持连接应用程序功能状态，从而帮助实现数据库现代化。
@@ -120,12 +120,14 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 有关兼容性级别之间的差异的详细信息，请参阅后文相应的部分。
 
-若要将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 升级到最新版，同时将数据库兼容性级别维持在升级前的级别并维持其可支持性状态，建议在数据库中使用 [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)工具 (DMA) 对应用程序代码执行静态函数外围应用验证。 DMA 工具输出中没有关于缺失或不兼容功能的错误，可保护应用程序免受新目标版本上的任何功能回归影响。 有关 DMA 工具的详细信息，请参阅[此处](https://blogs.msdn.microsoft.com/datamigration/dma)。
+若要将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]升级到最新版本，同时维持升级前的数据库兼容性级别及其可支持性状态，建议在数据库（存储过程、函数、触发器等可编程对象）和应用程序（使用捕获应用程序发送的动态代码的工作负荷跟踪）中，使用 [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)工具 (DMA) 对应用程序代码执行静态函数外围应用验证。 DMA 工具输出中没有关于缺失或不兼容功能的错误，可保护应用程序免受新目标版本上的任何功能回归影响。 有关 DMA 工具的详细信息，请参阅[此处](https://blogs.msdn.microsoft.com/datamigration/dma)。
 
 > [!NOTE]
-> DMA 支持数据库兼容性级别 100 及更高级别。 排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作为源版本。
+> DMA 支持数据库兼容性级别 100 及更高级别。 排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作为源版本。   
+
 > [!IMPORTANT]
-> Microsoft 建议执行一些最小测试来验证更新是否成功，同时维持之前的数据库兼容性级别。 应该确定适用于自己的应用程序和场景的最小测试。
+> Microsoft 建议执行一些最小测试来验证更新是否成功，同时维持之前的数据库兼容性级别。 应该确定适用于自己的应用程序和场景的最小测试。   
+
 > [!NOTE]
 > Microsoft 在下列情况下提供查询计划形状保护：
 >
@@ -136,20 +138,23 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>利用兼容性级别获得向后兼容
 
-数据库兼容性级别设置只影响指定数据库的行为，而不影响整个服务器的行为  。 数据库兼容性级别只实现与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本保持部分后向兼容。
+数据库兼容性级别设置只影响指定数据库的行为，而不影响整个服务器的行为  。 在与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和查询优化行为相关方面，数据库兼容性级别提供与旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的后向兼容性。 
 
 > [!TIP]
 > 因为数据库兼容级别  是数据库级设置，所以在较新的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上运行但使用较旧的数据库兼容级别的应用程序仍可利用服务器级增强功能，无需对应用程序进行任何更改。
 >
 > 其中包括丰富的监控和故障排除改进，并提供新的[系统动态管理视图](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)和[扩展事件](../../relational-databases/extended-events/extended-events.md)。 此外，还提升了可伸缩性，例如，提供[自动 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
 
-从兼容性模式 130 开始，任何影响功能的新查询计划都有意仅添加到新兼容性级别中。 这样做是为了在由于查询计划更改导致性能降低而引发的升级过程中尽量减少风险。 从应用程序的角度来看，目标仍应在某个时间点升级到最新兼容性级别以便继承某些新功能，以及在查询优化器空间中完成的性能改进，不过是采用可控方式实现此目标。 通过将较低兼容性级别用作更安全的迁移辅助工具，可解决相关兼容性级别设置控制的行为之间存在的版本差异问题。
+从兼容性模式 130 开始，任何影响功能的新查询计划都有意仅添加到新兼容性级别中。 这样做是为了最大限度地减少在升级过程中由于以下原因而引发的风险：新查询优化行为可能引入的查询计划更改导致性能降低。      
+从应用程序的角度来看，目标仍应是在某个时间点升级到最新兼容性级别，以继承[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)等一些新功能，区别在于采用可控方式实现此目标。 通过将较低兼容性级别用作更安全的迁移辅助工具，可解决相关兼容性级别设置控制的行为之间存在的版本差异问题。
 有关更多详细信息，包括升级数据库兼容性级别的建议工作流，请参阅后文的[升级数据库兼容性级别的最佳做法](#best-practices-for-upgrading-database-compatibility-level)。
 
 > [!IMPORTANT]
 > 给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入的废止功能不受兼容级别保护。 这指的是从 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中删除的功能。
-> 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容级别设置为 110 不会恢复废止的提示。
-> 有关废止功能的详细信息，请参阅 [SQL Server 2016 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2012 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)和 [SQL Server 2008 中废止的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。
+> 例如，`FASTFIRSTROW` 提示在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中废止，并替换为 `OPTION (FAST n )` 提示。 将数据库兼容级别设置为 110 不会恢复废止的提示。  
+>  
+> 若要详细了解已中断的功能，请参阅 [SQL Server 2016 中已中断的数据库引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中已中断的数据库引擎功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)和 [SQL Server 2012 中已中断的数据库引擎功能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)。    
+
 > [!IMPORTANT]
 > 给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版 本中引入的重大更改**可能**不受兼容级别保护。 这指的是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之间的行为变更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行为通常受兼容级别保护。 但是，已更改或删除的系统对象**不**受兼容级别保护。
 >
@@ -158,13 +163,13 @@ SELECT name, compatibility_level FROM sys.databases;
 > 兼容级别**不保护**的重大更改示例有：
 >
 > - 系统对象中更改了列名。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，sys.dm_os_sys_info 中的列 single_pages_kb  已重命名为 pages_kb  。 无论兼容级别如何，查询 `SELECT single_pages_kb FROM sys.dm_os_sys_info` 都会生成错误 207（列名无效）。
-> - 删除了系统对象。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，`sp_dboption` 已删除。 无论兼容级别如何，语句 `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` 都会生成错误 2812（找不到存储过程“sp_dboption”）。
+> - 删除了系统对象。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，`sp_dboption` 已删除。 无论兼容级别如何，语句 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 都会生成错误 2812（找不到存储过程“sp_dboption”）。
 >
-> 有关重大更改的详细信息，请参阅 [SQL Server 2017 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)[SQL Server 2014 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2012 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)和 [SQL Server 2008 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。
+> 有关重大更改的详细信息，请参阅 [SQL Server 2017 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)[SQL Server 2014 中数据库引擎功能的重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)、[SQL Server 2012 中数据库引擎功能的重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)和 [SQL Server 2008 中数据库引擎功能的重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai)。
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>升级数据库兼容性级别的最佳做法
 
-有关用于升级兼容级别的建议工作流，请参阅[更改数据库兼容性模式和使用查询存储](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。
+有关用于升级兼容级别的建议工作流，请参阅[更改数据库兼容性模式和使用查询存储](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 此外，有关升级数据库兼容性级别的协助体验，请参阅[使用查询优化助手升级数据库](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>兼容性级别和存储过程
 
@@ -178,13 +183,13 @@ SELECT name, compatibility_level FROM sys.databases;
 
 |兼容性级别设置为 140 或更低|兼容性级别设置为 150|
 |--------------------------------------------------|-----------------------------------------|
-|关系数据仓库和分析工作负荷可能由于 OLTP 开销、缺少供应商支持或其他限制而无法利用列存储索引。  如果没有列存储索引，这些工作负荷将不能受益于批处理执行模式。|批处理执行模式现在适用于分析工作负荷，而无需列存储索引。 有关详细信息，请参阅[行存储上的批处理模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore)。|
-|请求会导致溢出到磁盘的不充足内存授予大小的行模式查询可能会继续对连续执行产生问题。|请求会导致溢出到磁盘的不充足内存授予大小的行模式查询可能会提高连续执行的性能。 有关详细信息，请参阅[行模式内存授予反馈](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)。|
-|请求会导致并发问题的过多内存授予大小的行模式查询可能会继续对连续执行产生问题。|请求会导致并发问题的过多内存授予大小的行模式查询可能会改进连续执行的并发性。 有关详细信息，请参阅[行模式内存授予反馈](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)。|
-|引用 T-SQL 标量 UDF 的查询将使用迭代调用、缺乏成本计算并强制串行执行。 |T-SQL 标量 UDF 将转换为内联在调用查询中的等效关系表达式，这通常会使性能显著提升。 有关详细信息，请参阅 [T-SQL 标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining)。|
-|表变量使用固定猜测值来进行基数估计。  如果实际行数远高于猜测值，则下游操作的性能可能会受到影响。 |新计划将使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。 有关详细信息，请参阅[表变量延迟编译](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)。|
+|关系数据仓库和分析工作负荷可能由于 OLTP 开销、缺少供应商支持或其他限制而无法利用列存储索引。  如果没有列存储索引，这些工作负荷将不能受益于批处理执行模式。|批处理执行模式现在适用于分析工作负荷，而无需列存储索引。 有关详细信息，请参阅[行存储上的批处理模式](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)。|
+|请求会导致溢出到磁盘的不充足内存授予大小的行模式查询可能会继续对连续执行产生问题。|请求会导致溢出到磁盘的不充足内存授予大小的行模式查询可能会提高连续执行的性能。 有关详细信息，请参阅[行模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。|
+|请求会导致并发问题的过多内存授予大小的行模式查询可能会继续对连续执行产生问题。|请求会导致并发问题的过多内存授予大小的行模式查询可能会改进连续执行的并发性。 有关详细信息，请参阅[行模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。|
+|引用 T-SQL 标量 UDF 的查询将使用迭代调用、缺乏成本计算并强制串行执行。 |T-SQL 标量 UDF 将转换为内联在调用查询中的等效关系表达式，这通常会使性能显著提升。 有关详细信息，请参阅 [T-SQL 标量 UDF 内联](../../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。|
+|表变量使用固定猜测值来进行基数估计。  如果实际行数远高于猜测值，则下游操作的性能可能会受到影响。 |新计划将使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。 有关详细信息，请参阅[表变量延迟编译](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。|
 
-有关数据库兼容性级别 150 中启用的查询处理功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL 数据库中的智能查询处理](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)。
+有关数据库兼容性级别 150 中启用的查询处理功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL 数据库中的智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)。
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>兼容级别 130 与兼容级别 140 之间的差异
 

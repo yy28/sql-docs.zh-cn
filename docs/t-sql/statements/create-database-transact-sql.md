@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428960"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351692"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "66428960"
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current) | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current) | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*SQL 数据库<br />单一数据库/弹性池\*_ ** | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*SQL 数据库<br />单一数据库/弹性池\*_** | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ EDITION
 指定数据库的服务层。
 
 单一数据库/弹性池上的单一数据库和入池数据库。 可用的值包括：“basic”、“standard”、“premium”、“GeneralPurpose”、“BusinessCritical”和“Hyperscale”。
-
-在指定了 EDITION 但未指定 MAXSIZE 时，MAXSIZE 将设置为版本支持的限制性最高的大小。
 
 MAXSIZE     
 指定数据库的最大大小。 MAXSIZE 必须对指定 EDITION（服务层）有效。下面是服务层支持的 MAXSIZE 值和默认值 (D)。
@@ -1038,12 +1036,12 @@ SQL 数据库服务器上适用于单一数据库和入池数据库的基于 DTU
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |最大数据大小 (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 针对基于 vCore 的模型，有关其资源限制的其他详细信息，请参阅[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+如果在使用 vCore 模型时未设置 `MAXSIZE` 值，默认为 32GB。 针对基于 vCore 的模型，有关其资源限制的其他详细信息，请参阅[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
 
 以下规则适用于 MAXSIZE 和 EDITION 参数：
 
-- 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard，且未指定 MAXSIZE，那么 MAXSIZE 自动设置为 250MB。
-- 如果 MAXSIZE 和 EDITION 均未指定，则 EDITION 设置为 Standard (S0)，MAXSIZE 设置为 250 GB。
+- 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard 并且未指定 MAXSIZE，则 MAXSIZE 将自动设置为 250 MB。
+- 如果 MAXSIZE 和 EDITION 均未指定，EDITION 设置为“常规用途”，MAXSIZE 设置为“32GB”。
 
 SERVICE_OBJECTIVE     
 - 针对单一数据库和入池数据库 
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>版本的简单示例
-创建标准数据库的简单示例。
+创建常规用途数据库的简单示例。
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| ** _\*SQL 数据库<br />托管实例\*_ ** | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| ** _\*SQL 数据库<br />托管实例\*_** | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)| \*SQL 数据<br />仓库\*  | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)| \*SQL 数据<br />仓库\* | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

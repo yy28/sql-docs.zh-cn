@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b3ebbbcefcd3477af997cea4680ba5ce51621555
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516583"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388027"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "59516583"
 ##  <a name="ComponentsAndConcepts"></a> IP 地址资源注意事项  
  在一个多子网故障转移群集配置中，IP 地址不由该故障转移群集中的所有节点所拥有，并且在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启动期间可能不是全都处于联机状态。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以将 IP 地址资源依赖关系设置为 **OR**。 这使得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以在存在至少一个它可以绑定到的有效 IP 地址时处于联机状态。  
   
-> **注意**：在早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本中，在多站点群集配置中使用了拉伸 V-LAN 技术，以便为跨站点的故障转移公开单个 IP 地址。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨不同子网对节点建立群集的新功能，您现在无需实现拉伸 V-LAN 技术，便可以跨多个站点配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
+  > [!NOTE] 
+  > - 在早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 版本中，在多站点群集配置中使用了拉伸 V-LAN 技术，以便为跨站点的故障转移公开单个 IP 地址。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨不同子网对节点建立群集的新功能，您现在无需实现拉伸 V-LAN 技术，便可以跨多个站点配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
+
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 地址资源 OR 依赖关系注意事项  
  如果您将 IP 地址资源依赖关系设置为 **OR**，则可能要考虑以下故障转移行为：  
@@ -68,6 +70,9 @@ ms.locfileid: "59516583"
  对于旧版客户端库或第三方数据访问接口，您不能在连接字符串中使用 **MultiSubnetFailover** 参数。 为了帮助确保您的客户端应用程序在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中以最佳方式使用多子网 FCI，请尝试按照 21 秒的间隔为其他每个 IP 地址调整客户端连接字符串中的连接超时。 这将确保客户端的重新连接尝试在它能够循环访问多子网 FCI 中的所有 IP 地址之前不会超时。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的默认客户端连接超时期限为 15 秒。  
+ 
+ > [!NOTE]
+ > - 若要使用多个子网且有静态 DNS，必须先制定用于更新与侦听器关联的 DNS 记录的流程，再执行故障转移，否则网络名称将无法联机。
   
    
 ##  <a name="RelatedContent"></a> 相关内容  

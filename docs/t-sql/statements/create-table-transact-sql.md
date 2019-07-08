@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bf05845ce09fab783692d6b5c63f60fd91a98997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b067d81c83f266a59bda624f118a7113acbd53fe
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66036902"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388662"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -253,8 +253,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | IGNORE_DUP_KEY = { ON | OFF }
   | STATISTICS_NORECOMPUTE = { ON | OFF }
   | STATISTICS_INCREMENTAL = { ON | OFF }
-  | ALLOW_ROW_LOCKS = { ON | OFF}
-  | ALLOW_PAGE_LOCKS ={ ON | OFF}
+  | ALLOW_ROW_LOCKS = { ON | OFF }
+  | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | COMPRESSION_DELAY= {0 | delay [Minutes]}
   | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
        [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -804,6 +805,9 @@ ALLOW_ROW_LOCKS = { ON | OFF }
 
 ALLOW_PAGE_LOCKS = { ON | OFF }         
 如果为 ON，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。 如果为 OFF，则不使用页锁。 默认值为 ON。
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF  } **适用于**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 及更高版本。 <BR>
+指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
 
 FILETABLE_DIRECTORY = directory_name       
 

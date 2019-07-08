@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571136"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343850"
 ---
 # <a name="sequence-numbers"></a>序列号
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "51571136"
  序列对象根据其定义生成数值，但序列对象不控制生成数值的方式。 在回滚事务时、在某个序列对象由多个表共享时或者在分配序列号且不在多个表中使用它们时，插入到表中的序列号可能具有间断。 当使用 CACHE 选项创建时，意外关机（如电源故障）可能导致缓存中的序列号丢失。  
   
  如果在单个 **NEXT VALUE FOR** 语句中有多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的实例指定同一序列生成器，则所有这些实例返回该 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句独立于表来创建的。 此行为与 ANSI 标准保持一致。  
+ 
+ 序列号在当前事务的作用域之外生成。 无论提交还是回滚使用序列号的事务，都会占用序列号。 只有在记录被完全填充后，才会发生重复验证。 在某些情况下，这可能会导致在创建过程中将相同数字用于多个记录，但随后被识别为重复。 如果发生这种情况，且其他自动编号值已应用于后续记录，这可能会导致自动编号值之间存在差距。
   
 ## <a name="typical-use"></a>典型用法  
  若要创建从 -2,147,483,648 到 2,147,483,647 且增量为 1 的整数序列号，请使用以下语句。  

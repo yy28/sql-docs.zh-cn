@@ -1,7 +1,7 @@
 ---
 title: 教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241535"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388132"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "59241535"
 
 或者，可在另一台计算机上安装 SSMS。
 
->[!WARNING] 
->在生产环境中，切不可使用 SSMS 或其他工具来管理 Always Encrypted 密钥，或对 SQL Server 计算机上的加密数据运行查询，因为这将削弱或完全违背使用 Always Encrypted 的目的。
+> [!WARNING]
+> 在生产环境中，切不可使用 SSMS 或其他工具来管理 Always Encrypted 密钥，或对 SQL Server 计算机上的加密数据运行查询，因为这将削弱或完全违背使用 Always Encrypted 的目的。 有关详细信息，请参阅[密钥管理安全注意事项](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)。
 
 ### <a name="hgs-computer-requirements"></a>HGS 计算机要求
 
@@ -61,8 +61,8 @@ ms.locfileid: "59241535"
 - 8 GB RAM
 - 100 GB 存储
 
->[!NOTE]
->在开始之前，不应将 HGS 计算机加入域。
+> [!NOTE]
+> 在开始之前，不应将 HGS 计算机加入域。
 
 ## <a name="step-1-configure-the-hgs-computer"></a>第 1 步：配置 HGS 计算机
 
@@ -93,13 +93,14 @@ ms.locfileid: "59241535"
    Get-NetIPAddress  
    ```
 
->[!NOTE]
->或者，如果想通过 DNS 名称来引用 HGS 计算机，可设置一个转发器，从公司 DNS 服务器指向新的 HGS 域控制器。  
+> [!NOTE]
+> 或者，如果想通过 DNS 名称来引用 HGS 计算机，可设置一个转发器，从公司 DNS 服务器指向新的 HGS 域控制器。  
 
 ## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>第 2 步：将 SQL Server 计算机配置为受保护的主机
 在此步骤中，需将 SQL Server 计算机配置为受保护的主机，并使用主机密钥证明向 HGS 注册。
->[!NOTE]
->建议仅在测试环境中使用主机密钥证明。 对于生产环境，应使用 TPM 证明。
+
+> [!WARNING]
+> 建议仅在测试环境中使用主机密钥证明。 对于生产环境，应使用 TPM 证明。
 
 1. 以管理员身份登录到 SQL Server 计算机，打开提升的 Windows PowerShell 控制台，并通过访问 computername 变量检索计算机名称。
 
@@ -128,24 +129,22 @@ ms.locfileid: "59241535"
        Restart-Computer
        ```
 
-
-
-4. 再次以管理员身份登录 SQL Server 计算机，打开提升的 Windows PowerShell 控制台，生成唯一主机密钥，并将生成的公钥导出到文件。
+5. 再次以管理员身份登录 SQL Server 计算机，打开提升的 Windows PowerShell 控制台，生成唯一主机密钥，并将生成的公钥导出到文件。
 
    ```powershell
    Set-HgsClientHostKey 
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. 将上一步生成的主机密钥文件手动复制到 HGS 计算机。 以下说明假定文件名为 hostkey.cer 并且你正在将其复制到 HGS 计算机的桌面。
+6. 将上一步生成的主机密钥文件手动复制到 HGS 计算机。 以下说明假定文件名为 hostkey.cer 并且你正在将其复制到 HGS 计算机的桌面。
 
-6. 在 HGS 计算机上，打开提升的 Windows PowerShell 控制台并向 HGS 注册 SQL Server 计算机的主机密钥：
+7. 在 HGS 计算机上，打开提升的 Windows PowerShell 控制台并向 HGS 注册 SQL Server 计算机的主机密钥：
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. 在 SQL Server 计算机上，在提升的 Windows PowerShell 控制台中运行以下命令，告诉 SQL Server 计算机前往何处进行证明。 请确保已指定位于两个地址的 HGS 计算机的 IP 地址或 DNS 名称。 
+8. 在 SQL Server 计算机上，在提升的 Windows PowerShell 控制台中运行以下命令，告诉 SQL Server 计算机前往何处进行证明。 请确保已指定位于两个地址的 HGS 计算机的 IP 地址或 DNS 名称。 
 
    ```powershell
    # use http, and not https
@@ -164,8 +163,14 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
 在此步骤中，将在 SQL Server 实例中启用使用 enclave 的 Always Encrypted 功能。
 
-1. 打开 SSMS，以系统管理员身份连接到 SQL Server 实例，并打开新的查询窗口。
-2. 将安全 enclave 类型设置为基于虚拟化的安全性 (VBS)。
+1. 以 sysadmin 身份使用 SSMS 连接到 SQL Server 实例，无需为数据库连接启用 Always Encrypted。
+    1. 启动 SSMS。
+    1. 在“连接到服务器”对话框中，指定服务器名称，选择身份验证方法，并指定凭据。
+    1. 单击“选项 >>”，并选择“Always Encrypted”选项卡。
+    1. 务必取消选中“启用 Always Encrypted (列加密)”复选框。
+    1. 选择“连接”。
+
+2. 打开新查询窗口，并执行下面的语句，以将安全 enclave 类型设置为基于虚拟化的安全性 (VBS)。
 
    ```sql
    EXEC sys.sp_configure 'column encryption enclave type', 1;
@@ -199,19 +204,18 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 ## <a name="step-4-create-a-sample-database"></a>步骤 4：创建示例数据库
 在此步骤中，将创建包含一些示例数据的数据库，稍后将对其进行加密。
 
-1. 使用 SSMS 连接到 SQL Server 实例。
-2. 创建名为 ContosoHR 的新数据库。
+1. 使用上一步中的 SSMS 实例在查询窗口中执行下面的语句，以新建名为“ContosoHR”的数据库。
 
     ```sql
     CREATE DATABASE [ContosoHR];
     ```
 
-3. 确保已连接到新建的数据库。 创建名为“员工”的新表。
+1. 新建名为“Employees”的表。
 
     ```sql
     USE [ContosoHR];
     GO
-    
+
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -222,9 +226,12 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     ) ON [PRIMARY];
     ```
 
-4. 向“员工”表添加多条员工记录。
+1. 向“Employees”表添加一些员工记录。
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -235,7 +242,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
             , N'Catherine'
             , N'Abel'
             , $31692);
- 
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -252,9 +259,8 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
 在此步骤中，将创建允许 enclave 计算的列主密钥和列加密密钥。
 
-1. 使用 SSMS 连接到你的数据库。
-2. 在“对象资源管理器”中，展开数据库，然后导航到“安全” > “Always Encrypted 密钥”。
-3. 预配已启用 enclave 的新列主密钥：
+1. 使用上一步中的 SSMS 实例在“对象资源管理器”中展开数据库，并依次转到“安全性” > “Always Encrypted 密钥”。
+1. 预配已启用 enclave 的新列主密钥：
     1. 右键单击“Always Encrypted 密钥”，然后选择“新列主密钥...”。
     2. 选择列主密钥名称：CMK1。
     3. 请确保选择“Windows 证书存储(当前用户或本地计算机)”或“Azure Key Vault”。
@@ -264,8 +270,8 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     7. 选择“确定”。
 
         ![允许 enclave 计算](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-    
-4. 创建已启用 enclave 的新列加密密钥：
+
+1. 创建已启用 enclave 的新列加密密钥：
 
     1. 右键单击“Always Encrypted 密钥”，然后选择“新建列加密密钥”。
     2. 输入新列加密密钥的名称：CEK1。
@@ -274,43 +280,41 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>步骤 6：就地加密部分列
 
-在此步骤中，将加密存储在服务器端 enclave 内 SSN 和“工资”列中的数据，然后对数据进行 SELECT 查询测试。
+在这一步中，你将在服务器端 enclave 内加密“SSN”和“Salary”列中存储的数据，然后对数据测试 SELECT 查询。
 
-1. 在 SSMS 中，为数据库连接配置启用了 Always Encrypted 的查询窗口。
-    1. 在 SSMS 中，打开一个新的查询窗口。
-    2. 右键单击新查询窗口中的任意位置。
-    3. 选择“连接”\>“更改连接”。
-    4. 选择“选项”。 导航到“Always Encrypted”选项卡，选择“启用 Always Encrypted”，然后指定 enclave 证明 URL（例如，ht<span>tp://</span>hgs.bastion.local/Attestation）。
-    5. 选择“连接”。
-    6. 如果系统提示启用 Always Encrypted 查询参数化，请单击“启用”。
-2. 在 SSMS 中，为数据库连接配置另一个禁用了 Always Encrypted 的查询窗口。
-    1. 在 SSMS 中，打开一个新的查询窗口。
-    2. 右键单击新查询窗口中的任意位置。
-    3. 选择“连接”\>“更改连接”。
-    4. 选择“选项”。 导航到“Always Encrypted”选项卡，请确保未选中“启用 Always Encrypted”。
-    5. 选择“连接”。
-    6. 将数据库上下文更改为 ContosoHR 数据库。
-1. 加密 SSN 和“工资”列。 在启用了 Always Encrypted 的查询窗口中，粘贴并执行以下脚本：
+1. 打开新 SSMS 实例，并连接到已为数据库连接启用 Always Encrypted 的 SQL Server 实例。
+    1. 启动新 SSMS 实例。
+    1. 在“连接到服务器”对话框中，指定服务器名称，选择身份验证方法，并指定凭据。
+    1. 单击“选项 >>”，并选择“Always Encrypted”选项卡。
+    1. 选中“启用 Always Encrypted (列加密)”复选框，并指定 enclave 证明 URL（例如，ht<span>tp://</span>hgs.bastion.local/Attestation）。
+    1. 选择“连接”。
+    1. 如果系统提示启用 Always Encrypted 参数化查询，请选择“启用”。
+
+1. 使用相同的 SSMS 实例（已启用 Always Encrypted）打开新查询窗口，并通过运行以下查询来加密“SSN”和“Salary”列。
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
-     
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
- 
+
     ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+
     > [!NOTE]
     > 请注意上面的脚本中用于为数据库清除查询计划缓存的 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 语句。 更改表后，需要清除访问该表的所有批处理和存储过程的计划，以刷新参数加密信息。 
 
-4. 若要验证 SSN 和“工资”列现在是否已加密，请在禁用了 Always Encrypted 的查询窗口中，粘贴并执行以下语句。 查询窗口应返回 SSN 和“工资”列中的加密值。 在启用了 Always Encrypted 的查询窗口中尝试执行同一查询，查看解密数据。
+1. 若要验证“SSN”和“Salary”列现在是否已加密，请使用没有为数据库连接启用 Always Encrypted 的 SSMS 实例打开新查询窗口，并执行以下语句。 查询窗口应返回“SSN”和“Salary”列中的加密值。 如果使用已启用 Always Encrypted 的 SSMS 实例执行相同查询，应该会看到已解密的数据。
 
     ```sql
     SELECT * FROM [dbo].[Employees];
@@ -320,13 +324,13 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
 现在，可对加密列运行丰富查询。 部分查询处理将在服务器端 enclave 内执行。 
 
-1. 确保启用 Always Encrypted 参数化。
-    1. 在 SSMS 的主菜单中，选择“查询”。
-    2. 选择“查询选项…”。
-    3. 导航到“执行” > “高级”。
-    4. 确保选中“启用 Always Encrypted 参数化”。
+1. 在已启用 Always Encrypted 的SSMS 实例中，请确保也启用了 Always Encrypted 参数化。
+    1. 在 SSMS 的主菜单中，选择“工具”。
+    2. 选择“选项...”。
+    3. 导航到“查询执行” > “SQL Server” > “高级”。
+    4. 务必选中“启用 Always Encrypted 参数化”。
     5. 选择“确定”。
-2. 在启用了 Always Encrypted 的查询窗口中，粘贴并执行以下查询。 该查询应返回满足指定搜索条件的纯文本值和行。
+2. 打开新查询窗口，并粘贴和执行以下查询。 该查询应返回满足指定搜索条件的纯文本值和行。
 
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
@@ -334,10 +338,13 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
-3. 在未启用“Always Encrypted”的查询窗口中重试同一查询，并记录发生的故障。
+
+3. 在未启用 Always Encrypted 的 SSMS 实例中重试同一查询，并记录发生的故障。
 
 ## <a name="next-steps"></a>Next Steps
-请参阅[配置具有安全 enclave 的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)，了解其他用例。 此外，还可以进行以下尝试：
+转到[教程：在使用随机加密且已启用 enclave 的列上创建并使用索引](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)，它是本教程的延续。
+
+若要了解含安全 enclave 的 Always Encrypted 的其他用例，请参阅[配置含安全 enclave 的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)。 例如：
 
 - [配置 TPM 证明。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
 - [为 HGS 实例配置 HTTPS。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)

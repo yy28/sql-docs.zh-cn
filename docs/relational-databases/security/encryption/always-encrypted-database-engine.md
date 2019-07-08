@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185023"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419159"
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,11 +181,11 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 以下功能对加密的列不起作用：
 
 - 事务复制或合并复制
-- 分布式查询（链接服务器）
+- 分布式查询（链接服务器、OPENROWSET(T-SQL)、OPENDATASOURCE(T-SQL)）
 
 工具要求
 
-- 如果在“连接到服务器”  对话框的“其他属性”  选项卡中的“列加密设置”为启用  状态下进行连接，则 SQL Server Management Studio 可以解密从加密列中检索的结果。 至少需要 SQL Server Management Studio 版本 17 才能插入、更新或筛选加密的列。
+- 如果在“连接到服务器”  对话框的“其他属性”  选项卡中的“列加密设置”为启用  状态下进行连接，则 SQL Server Management Studio 可以解密从加密列中检索的结果。 至少需要 SQL Server Management Studio 版本 17 才能插入、更新或筛选加密的列。 有关用于客户端应用程序的连接字符串，请参阅 [Always Encrypted（客户端开发）](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 
 - `sqlcmd` 中的加密连接至少需要 13.1 版本（可从 [下载中心](https://go.microsoft.com/fwlink/?LinkID=825643)获取）。
 
