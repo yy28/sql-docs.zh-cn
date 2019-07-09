@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463546"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652839"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ SHORTEST_PATH 函数允许您查找：
 ## <a name="arbitrary-length-pattern"></a>任意长度的字符串模式
 此模式包含节点和边缘，直到达到所需的节点，或者直到模式中指定的迭代的最大数目必须重复遍历满足。 每次执行查询时，执行这种模式的结果将是节点和边缘从起始节点到结束节点遍历的路径的有序的集合。 这是一个正则表达式样式语法模式并支持以下两个模式限定符：
 
-* **‘+’** :一个或多个时间重复模式。 找到最短路径时，就立即终止。
-* **{1，n}** :重复执行模式 1 为 n 时间。 找到最短时，就立即终止。
+* **‘+’** :重复模式 1 次或多次。 找到最短路径后立即终止。
+* **{1,n}** ：重复模式 1到“n”次。 找到最短时，就立即终止。
 
 ## <a name="lastnode"></a>LAST_NODE
 LAST_NODE() 函数允许链接的两个任意长度的遍历模式。 它可以在方案中使用其中：    
@@ -94,7 +94,7 @@ STRING_AGG 函数采用一个表达式和分隔符作为输入，并返回一个
 此函数返回遍历的路径中提供的节点/边缘属性值或出现的表达式之和。
 
 ### <a name="count"></a>COUNT
-此函数返回路径中的所需的节点/边缘属性的非 null 值的数量。 COUNT 函数支持 * 运算符，其中节点或边界表的别名。 节点或边界表别名，使用 * 不明确，将导致错误。
+此函数返回路径中的所需的节点/边缘属性的非 null 值的数量。 COUNT 函数支持\*节点或边界表的别名使用的运算符。 节点或边界表别名的使用情况\*不明确，将导致错误。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

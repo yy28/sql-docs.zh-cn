@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7987b0cfb8be268a8e48fd25d7512b4969aea6fb
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542177"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652866"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59542177"
 |**last_execution_time**|**datetimeoffset**|上次执行时间的最后一个引用查询计划的结束的时间。|  
 |**avg_compile_duration**|**float**|计划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|  
 |**last_compile_duration**|**bigint**|计划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|  
-|**plan_forcing_type**|**int**|计划强制类型。<br /><br />0：无<br /><br />1：MANUAL<br /><br />2：AUTO|  
+|**plan_forcing_type**|**int**|计划强制类型。<br /><br />0：无<br /><br />1：MANUAL<br /><br />2:AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文本说明。<br /><br />NONE:没有计划强制<br /><br />手动：由用户强制执行的计划<br /><br />自动：计划强制进行自动优化|  
 
 ## <a name="plan-forcing-limitations"></a>计划强制限制
@@ -68,7 +68,7 @@ ms.locfileid: "59542177"
 * 对外部表的引用
 * 分布式查询或全文操作
 * 使用全局查询 
-* 游标
+* 动态或键集游标 （强制执行计划为静态和快进游标支持）
 * 无效的星型联接规范 
 
 其次，计划依赖的对象何时不再可用：

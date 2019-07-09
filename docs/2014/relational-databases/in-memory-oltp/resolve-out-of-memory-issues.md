@@ -10,12 +10,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468345"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624410"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 相比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 随着需求的不断增加，为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 安装和分配的内存量可能会不足。 这时内存就会不足。 本主题介绍如何从 OOM 情况恢复。 有关可帮助你避免很多 OOM 情况的指南，请参阅 [内存使用情况的监视和故障排除](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -69,7 +69,7 @@ ms.locfileid: "62468345"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>消除工作负荷的低内存或 OOM 情况的影响  
  当然，最好不要出现低内存或 OOM（内存不足）情况。 好的计划和监视有助于避免 OOM 情况。 但再好的计划也并不总能预见实际情况，最后仍有可能遇到低内存或 OOM 情况。 从 OOM 恢复有两个步骤：  
   
-1.  [打开 DAC （专用的管理员连接） ](#open-a-dac-dedicated-administrator-connection) 
+1.  [打开 DAC（专用管理员连接）](#open-a-dac-dedicated-administrator-connection) 
   
 2.  [采取纠正措施](#take-corrective-action) 
   

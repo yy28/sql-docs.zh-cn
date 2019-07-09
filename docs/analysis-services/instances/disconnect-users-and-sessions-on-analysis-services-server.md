@@ -1,6 +1,6 @@
 ---
 title: 断开用户连接和会话上 Analysis Services 服务器 |Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 07/05/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 696c6548dadda2412566acf7fae1e2cff2b28095
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144761"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624401"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>断开 Analysis Services 服务器上用户和会话的连接
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  作为工作负荷管理的一部分， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可能需要结束用户活动。 可以通过取消会话和连接来完成这一任务。 会话可以在运行查询时隐式自动形成，也可以在创建会话时由管理员显式命名。 连接是开放的管道，可以通过连接运行查询。 会话和连接均可在处于活动状态时结束。 例如，如果会话处理时间过长，或者对正在执行的命令是否被正确写入产生了怀疑，管理员可能要结束对会话的处理。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+  作为管理员，你可能需要结束用户活动作为工作负荷管理的一部分。 可以通过取消会话和连接来完成这一任务。 会话可以在运行查询时隐式自动形成，也可以在创建会话时由管理员显式命名。 连接是开放的管道，可以通过连接运行查询。 会话和连接均可在处于活动状态时结束。 例如，可能要结束处理时间太长，是否产生了怀疑正在执行的命令被正确写入并处理会话。  
   
 ## <a name="ending-sessions-and-connections"></a>结束会话和连接  
- 若要管理会话和连接，您可以使用动态管理视图 (DMV) 和 XMLA：  
+ 若要管理会话和连接，请使用动态管理视图 (Dmv) 和 XMLA:  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 Analysis Services 实例。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "50144761"
   
      `Select * from $System.Discover_Sessions`  
   
-     `Select * from $System.Discover_Connections`  
+     `Select * from $System.Discover_Connections`  （此查询不适用于 Azure Analysis Services）
   
      `Select * from $System.Discover_Commands`  
   
@@ -56,18 +56,12 @@ ms.locfileid: "50144761"
     ```  
   
 2.  按 F5 执行取消命令。  
+
+正在取消 SPID/SessionID 将取消与 SPID/SessionID 相对应的会话上运行任何活动命令。 正在取消连接将确定与连接关联的会话，并取消该会话上运行任何活动命令。 在极少数情况下，不会关闭连接如果引擎无法跟踪所有会话和 Spid 相关联的连接;例如，当多个会话在打开的 HTTP 方案中。   
   
- 结束连接将取消所有会话和 SPID，从而结束主机会话。  
+若要了解有关本主题中引用的 XMLA 的详细信息，请参阅[执行的方法&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)并[取消元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)。  
   
- 结束会话将停止会话中运行的所有命令 (SPID)。  
-  
- 结束 SPID 将取消特殊命令。  
-  
- 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 无法跟踪与连接关联的所有会话和 SPID（例如当 HTTP 方案中打开了多个会话时），则不会关闭连接，这种情况十分少见。  
-  
- 有关本主题中引用的 XMLA 的详细信息，请参阅[执行方法 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 和[取消元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)。  
-  
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理连接和会话 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [BeginSession 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
  [EndSession 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   

@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064686"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624369"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** 是一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，它用于报告 SQL Server 对象的目标集是否符合一个或多个基于策略的管理策略中指定的条件。  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** 的取值为一个对象或对象数组，它们表示目标集中的 SQL Server 对象。 例如，你可以创建 <xref:Microsoft.SqlServer.Management.Smo.Database> 类对象数组，并将其传递到 **-TargetObjects**使用。  
   
--   **-TargetExpressions** 的取值为一个字符串，其中包含一个指定目标集中对象的查询表达式。 查询表达式的格式是以“/”字符隔开的节点。 每个节点的格式为 ObjectType[Filter]。 ObjectType 是 SQL Server 管理对象 (SMO) 层次结构中的一个对象。 Filter 是一个用于筛选该节点的对象的表达式。 有关详细信息，请参阅 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
+-   **-TargetExpressions** 的取值为一个字符串，其中包含一个指定目标集中对象的查询表达式。 查询表达式的格式是以“/”字符隔开的节点。 每个节点的格式为 ObjectType[Filter]。 对象类型是 SQL Server 管理对象 (SMO) 对象层次结构中的对象。 Filter 是一个用于筛选该节点的对象的表达式。 有关详细信息，请参阅 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)。  
   
  指定 **-TargetObjects** 或 **-TargetExpression**，而不是两者。  
   
