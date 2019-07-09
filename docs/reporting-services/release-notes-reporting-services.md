@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037851"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533834"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 及更高版本的发行说明
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274，2019/07/01
+
+| 修复了问题 | 详细信息 |
+| :---------- | :------ |
+| 安全更新 | &nbsp; |
+| 无法选择工作日时创建共享的每周计划 | &nbsp; |
+| 报表不显示回车正确中的 Word 格式 | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 没有较长的适用于最新的 SSRS 2017 升级 | &nbsp; |
+| 当调用授权扩展插件的共享数据集时出错 | &nbsp; |
+| 逻辑上存储过程 GetAllProperties SSRS 2017 和 PBIRS，这会导致 Web 服务终结点 ReportingService2010.GetProperties 方法无法获取链接报表的任何数据更改 | &nbsp; |
+| 单击网格中的项时，移动报表中的简单网格行标题会消失 | &nbsp; |
+| 无法使用数据驱动订阅参数中的日期字段 | &nbsp; |
+| 嵌套的 tablix 显示很小的字体或部分字体 SSRS 2016 及更高版本 | &nbsp; |
+| 使用 DateTime 参数出错后具有不同的区域设置编辑订阅用户的订阅 | &nbsp; |
+| 使用 Null 传递扩展插件创建数据驱动订阅失败，而"出现传递错误" | &nbsp; |
+| Excel\Word 格式中的设置值时，URL 编码不正确 | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109，2019/02/12
 

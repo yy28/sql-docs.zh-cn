@@ -1,6 +1,6 @@
 ---
-title: 配置报表的执行属性（报表管理器）| Microsoft Docs
-ms.date: 03/01/2017
+title: 配置报表的执行属性 - Reporting Services | Microsoft Docs
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -12,21 +12,23 @@ helpviewer_keywords:
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27508400b63e1fe0cc95b290130d9c122399be32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570848"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492755"
 ---
-# <a name="configure-execution-properties-for-a-report--report-manager"></a>配置报表的执行属性（报表管理器）
+# <a name="configure-execution-properties-for-a-report"></a>配置报表的执行属性
   可以设置报表处理选项以指定何时为报表检索数据。 如果外部数据源按照特定的时间刷新（例如，每天或每周刷新数据仓库），并且您想要避免每当请求报表时对同一数据进行检索的开销，则为报表计划数据处理非常有用。 如果您想要控制外部数据库服务器上的处理负载，或者如果想要为必须使用相同数据集的多个用户提供一致的结果，则计划数据处理也很有用。 使用可变数据的按需运行报表每分钟都会生成不同的结果。 相反，报表快照则可用来针对包含同一时间点数据的其他报表或分析工具进行有效比较。  
   
  报表快照是一个报表，其中包含在特定时间点检索到的布局说明以及查询结果。 与按需运行报表（在选择该报表时可获得最新的查询结果）不同，报表快照按计划进行处理，再保存到报表服务器中。 当您选择报表快照进行查看时，报表服务器将在报表服务器数据库中检索存储的报表，然后显示快照创建时报表的数据和布局。  
   
  报表快照不以特定的呈现格式进行保存。 相反，将以用户或应用程序发出请求时的最终查看格式（如 HTML）来呈现报表快照。 延迟呈现会使快照具有可移植性。 报表可以采用适用于请求设备或 Web 浏览器的正确格式呈现。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-### <a name="to-configure-report-processing-options"></a>配置报表处理选项  
+## <a name="to-configure-report-processing-options"></a>配置报表处理选项  
   
 1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
@@ -46,9 +48,38 @@ ms.locfileid: "65570848"
   
 ## <a name="see-also"></a>另请参阅  
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
  [“内容”页（报表管理器）](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [“处理选项”属性页（报表管理器）](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)  
   
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
+## <a name="to-configure-report-execution-properties"></a>配置报表执行属性  
+  
+通过[报表服务器的 Web 门户（SSRS 本机模式）](../../reporting-services/web-portal-ssrs-native-mode.md)：  
+  
+1. 导航到你想要配置的执行属性的报表。  
+  
+2. 右键单击报表并选择**管理**从下拉列表菜单。
+
+3. 选择**历史记录快照**选项卡以显示**历史记录快照**页。  
+  
+4. 选择**计划和设置**按钮，并检查**按计划创建历史记录快照**如果未选中。
+  
+5. 选择任一**共享计划**或**报表特定计划**根据需要。  
+  
+6. 在中**高级**部分中，选择所需**保留**策略历史记录快照。  
+  
+7. 选择“应用”  。  
+  
+   >[!NOTE]
+   >如果你想要立即创建快照，请选择**新的历史记录快照**而不是按钮**计划和设置**将立即创建按钮和报表快照。  
+  
+## <a name="see-also"></a>另请参阅  
+ [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
+
+::: moniker-end

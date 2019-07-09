@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343919"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583223"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 
@@ -57,7 +57,7 @@ ms.locfileid: "67343919"
     
 -   列存储索引从磁盘读取压缩的数据，这意味着需要将更少字节的数据读取到内存。    
     
--   列存储索引以压缩形式将数据存储在内存中，这通过减少将相同数据读取到内存的次数来减少 I/O。 例如，与以未压缩形式存储数据相比，列存储索引使用 10 倍压缩率可以在内存中保留 10 倍更多数据。 由于内存中有更多数据，因此列存储索引更有可能通过从磁盘进行更多读取在内存中找到所需的数据。    
+-   列存储索引以压缩形式将数据存储在内存中，这通过减少将相同数据读取到内存的次数来减少 I/O。 例如，与以未压缩形式存储数据相比，列存储索引使用 10 倍压缩率可以在内存中保留 10 倍更多数据。 内存中的数据更多，列存储索引则更有可能无需从磁盘进行更多读取，而是在内存中找到所需的数据。    
     
 -   列存储索引按列（而不是按行）压缩数据，这可实现高压缩率并减少磁盘上存储的数据的大小。 每个列独自压缩和存储。  列中的数据将始终具有相同的数据类型，并往往具有相似的值。 当值相似时，数据压缩技术可以很好地实现更高的压缩率。    
     
@@ -92,7 +92,7 @@ ms.locfileid: "67343919"
     
  并非所有查询执行运算符都可以在批处理模式下执行。 例如，DML 操作（如 Insert、Delete 或 Update）一次执行一行。 批处理模式运算符面向可提高查询性能的运算符（如 Scan、Join、Aggregate、sort 等）。 由于列存储索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的，因此需要持续扩展可以在批处理模式下执行的运算符。 下表按照产品版本显示了以批处理模式运行的运算符。    
     
-|批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|注释|    
+|批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]？|注释|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 操作（insert、delete、update、merge）||否|否|否|DML 不是批处理模式操作，因为它不是并行的。 即使我们启用串行模式批处理操作，允许 DML 以批处理模式处理，我们也看不到明显的收益。|    
 |columnstore index scan|扫描|不适用|是|是|对于列存储索引，我们可以将谓词推送到 SCAN 节点。|    
@@ -111,7 +111,7 @@ ms.locfileid: "67343919"
 |top sort||否|否|是||    
 |window aggregates||不适用|不适用|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新运算符。|    
     
- ¹适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ?适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>聚合下推    
  聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。 尽管这提供了良好的性能，但使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件： 
@@ -146,7 +146,7 @@ FROM FactResellerSalesXL_CCI
     
 例如，事实可以是一条表示某一特定区域中某一特定产品的销售额的记录，而维度则表示一组区域、产品等。 事实数据表和维度表通过主键/外键关系进行连接。 最常用的分析查询将一个或多个维度表与事实数据表进行联接。    
     
-让我们设想一个维度表 `Products`。 典型的主键是通常用字符串数据类型表示的 `ProductCode`。 为提高查询性能，最佳做法是创建代理键（通常为整数列），从事实数据表引用维度表中的行。    
+让我们设想一个维度表 `Products`。 典型的主键是通常用字符串数据类型表示的 `ProductCode`。 为提高查询性能，最佳做法是创建代理键（通常为整数列），从事实数据表引用维度表中的行。 ? ?
     
 列存储索引非常高效地运行具有联接/涉及数值的谓词或基于整数的键的分析查询。 但是，在很多客户工作负荷中，我们发现使用基于字符串的列链接事实/维度表，结果是使用列存储索引的查询性能并不如预期。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通过将包含字符串列的谓词下推到 SCAN 节点，使用基于字符串的列显著提高了分析的性能。    
     
@@ -155,6 +155,9 @@ FROM FactResellerSalesXL_CCI
 使用字符串谓词下推，执行查询时针对字典中的值计算谓词，如果它符合条件，引用字典值的所有行都将自动符合条件。 这在两个方面提高了性能：
 1.  仅返回符合条件的行，从而减少了需要传递出 SCAN 节点的行数。 
 2.  显著减少了字符串比较次数。 在此示例中，只需要 100 次字符串比较，而不用比较 100 万次。 如下所述，有一些限制：    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   不能对增量行组执行字符串谓词下推。 增量行组中的列没有字典。    
     -   如果字典大小超过 64 KB，则不能执行字符串谓词下推。    
     -   不支持计算结果为 NULL 的表达式。    

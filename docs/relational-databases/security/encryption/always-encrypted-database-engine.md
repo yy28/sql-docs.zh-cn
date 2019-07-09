@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419159"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580711"
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,8 +81,10 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 若要成功更新列，请执行以下操作：
 
-1. 使用 SELECT 从 SSN 列中选择数据，并将其作为结果集存储在应用程序中。 这样可让应用程序（客户端驱动程序）解密列。
+1. 使用 SELECT 从 SSN 列中选择数据，并将其作为结果集存储在应用程序中。 这样可让应用程序（客户端驱动程序）解密列  。
 2. 使用 INSERT 将结果集中的数据插入 SQL Server。 
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > 在此方案中，数据在发送回服务器时不会加密，因为目标列是不接受加密数据的常规 varchar。 
@@ -90,7 +92,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>选择确定性加密或随机加密  
  数据库引擎始终不会对加密列中存储的纯文本数据进行操作，但仍支持对已加密数据的某些查询，具体取决于列的加密类型。 始终加密支持两种类型的加密：随机加密和确定性加密。  
   
-- 确定性加密始终对任何给定的纯文本值生成相同的加密值。 使用确定性加密允许对加密列进行点查找、等值联结、分组和建立索引。 但是，也可能允许未经授权的用户通过检查加密列中的模式来猜测有关加密值的信息，尤其是存在一个规模较小的可能加密值集合时，如 True/False 或 North/South/East/West 等区域。 确定性加密必须使用具有字符列的 binary2 排序顺序的列排序规则。
+- 确定性加密始终对任何给定的纯文本值生成相同的加密值。 使用确定性加密允许对加密列进行点查找、等值联结、分组和建立索引。 但也可能允许未经授权的用户通过检查加密列中的模式来猜测有关加密值的信息，尤其是存在一个规模较小的可能加密值集合时，如 True/False 或 North/South/East/West 等区域。 确定性加密必须使用具有字符列的 binary2 排序顺序的列排序规则。
 
 - 随机加密使用更不可预测的方式来加密数据。 随机加密更加安全，但不支持对加密列进行搜索、分组、索引和联接。
 
@@ -124,14 +126,14 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 >  有关该向导用法的视频，请参阅 [《Getting Started with Always Encrypted with SSMS》](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)（SSMS 中的始终加密入门）。
 
 1.  连接到现有数据库，该数据库中的表具有你想要使用 Management Studio 的 **对象资源管理器** 加密的列，或创建一个新的数据库，创建具有要加密的列的一个或多个表，并连接到该数据库。
-2.  右键单击数据库，将光标指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。
-3.  查看“简介”页，然后单击“下一步”。
+2.  右键单击数据库，将光标指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”    。
+3.  查看“简介”页，然后单击“下一步”。  
 4.  在“列选择”页上展开表，然后选择要加密的列。 
-5.  对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。
-6.  对于选择进行加密的每个列，选择“加密密钥”。 如果你以前没有为此数据库创建任何加密密钥，请选择自动生成的新密钥的默认选项，然后单击“下一步”。 
-7.  在“主密钥配置”页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”。
-8.  在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。
-9.  在“摘要”页上，查看你选择的选项，然后单击“完成”。 完成后关闭向导。
+5.  对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。   
+6.  对于选择进行加密的每个列，选择“加密密钥”。  如果你以前没有为此数据库创建任何加密密钥，请选择自动生成的新密钥的默认选项，然后单击“下一步”。 
+7.  在“主密钥配置”  页上，选择一个位置来存储新密钥，并选择主密钥源，然后单击“下一步”  。
+8.  在“验证”页上，选择是要立即运行脚本还是创建 PowerShell 脚本，然后单击“下一步”。  
+9.  在“摘要”页上，查看你选择的选项，然后单击“完成”。   完成后关闭向导。
 
   
 ## <a name="feature-details"></a>功能详细信息  
@@ -146,7 +148,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 -   更改已加密对象的定义之后，需执行 [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)，以更新该对象的 Always Encrypted 元数据。
   
-具有以下特征的列不支持 Always Encrypted（例如，如果某个列存在以下任何情况，则不能在 CREATE TABLE/ALTER TABLE 中针对该列使用 Encrypted WITH 子句）：  
+具有以下特征的列不支持 Always Encrypted（例如，如果某个列存在以下任何情况，则不能在 CREATE TABLE/ALTER TABLE 中针对该列使用 Encrypted WITH 子句）   ：  
   
 -   使用以下任一数据类型的列： **xml**、 **timestamp**/**rowversion**、 **image**、 **ntext**、 **text**、 **sql_variant**、 **hierarchyid**、 **geography**、 **geometry**、别名、用户定义类型。  
 - FILESTREAM 列  
