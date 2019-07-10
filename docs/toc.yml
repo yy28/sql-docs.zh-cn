@@ -1,5 +1,5 @@
 - name: 欢迎使用 SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 先前版本 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: 概述
@@ -30,7 +30,7 @@
         - name: SQL Server 2019
           href: sql-server/sql-server-ver15-release-notes.md
         - name: SQL Server 2017
-          href: sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+          href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
           href: sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -8763,14 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: 快速入门
+        - name: 教程
           items:
             - name: 连接并查询 SQL Server
               href: ssms/tutorials/connect-query-sql-server.md
-        - name: 教程
-          items:
-            - name: 在单一数据库中设计关系数据库
-              href: 'https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017'
         - name: 概念
           items:
             - name: SSMS 中的工具窗口
@@ -8907,12 +8903,11 @@
                   href: ssms/register-servers/register-servers.md
                 - name: “已注册的服务器”组件的 F1 帮助
                   href: ssms/register-servers/registered-servers-f1-help.md
-            - name: 脚本编写
+            - name: 使用 SSMS 编写脚本
               items:
                 - name: 查询和文本编辑器
+                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: 查询和文本编辑器
-                      href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                     - name: 数据库引擎查询编辑器
                       href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML 编辑器
@@ -9339,10 +9334,9 @@
                   href: ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
                 - name: 导入已注册的服务器信息
                   href: ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-            - name: 脚本编写
+            - name: 数据库引擎的脚本编写
+              href: ssms/scripting/database-engine-scripting.md
               items:
-                - name: 脚本编写
-                  href: ssms/scripting/database-engine-scripting.md
                 - name: 查询和文本编辑器
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                 - name: 数据库引擎查询编辑器
