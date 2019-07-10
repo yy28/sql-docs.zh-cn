@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469124"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681553"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -33,11 +33,11 @@ ms.locfileid: "67469124"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
-| `mssqlctl` 命令更改 | `mssqlctl cluster` 命令已重命名为`mssqlctl bdc`。 有关详细信息，请参阅[`mssqlctl`引用](reference-mssqlctl.md)。 |
+| `mssqlctl` 命令更改 | `mssqlctl cluster` 命令已重命名为 `mssqlctl bdc`。 有关详细信息，请参阅 [`mssqlctl` 参考](reference-mssqlctl.md)。 |
 | 新`mssqlctl`状态命令和群集管理门户中的删除。 | 群集管理门户将在此版本中删除。 已添加到新状态命令`mssqlctl`现有监视命令的补数。 |
-| Spark 计算池 | 创建其他节点，而无需纵向扩展存储提升 Spark 的计算能力。 此外，您可以开始不会使用 spark 的存储池节点。 分离 Spark 和存储。 有关详细信息，请参阅[配置存储，没有 spark](deployment-custom-configuration.md#sparkstorage)。 |
-| MSSQL Spark 连接器 | 读取/写入数据池外部表的支持。 上一版本支持读/写到主实例仅限表。 有关详细信息，请参阅[如何读取和写入到 SQL Server 从 Spark 使用 MSSQL Spark 连接器](spark-mssql-connector.md)。 |
-| 机器学习中使用 MLeap | [在 Spark 中的 MLeap 机器学习模型进行训练和评分中使用的 Java 语言扩展。 SQL Server](spark-create-machine-learning-model.md)。 |
+| Spark 计算池 | 可以创建其他节点来增加 Spark 计算能力，而无需扩展存储。 此外，还可以启动不用于 Spark 的存储池节点。 Spark 和存储已分离。 有关详细信息，请参阅[配置无需 Spark 的存储](deployment-custom-configuration.md#sparkstorage)。 |
+| MSSQL Spark 连接器 | 支持对数据池外部表执行读/写操作。 旧版本仅支持对 MASTER 实例表执行读/写操作。 有关详细信息，请参阅[如何使用 MSSQL Spark 连接器从 Spark 对 SQL Server 执行读写操作](spark-mssql-connector.md)。 |
+| 使用 MLeap 的机器学习 | [可以在 Spark 中训练 MLeap 机器学习模型，并使用 Java 语言扩展在 SQL Server 中对它进行评分](spark-create-machine-learning-model.md)。 |
 
 ### <a name="known-issues"></a>已知问题
 
@@ -125,7 +125,7 @@ ms.locfileid: "67469124"
 | mssqlctl 更新  | 多个 mssqlctl [命令和参数更新](../big-data-cluster/reference-mssqlctl.md)  。 这包括对“mssqlctl login”命令的更新，该命令现在以控制器用户名和终结点为目标  。 |
 | 存储增强功能 | 支持日志和数据的不同存储配置。 此外，减少了大数据群集的持久卷声明数。 |
 | 多个计算池实例 | 支持多个计算池实例。 |
-| 新池行为和功能 | 现在，默认情况下，计算池仅用于“ROUND_ROBIN”分发中的存储池和数据池操作  。 数据池现在可以使用新的新“REPLICATED”分发类型，这意味着同一数据在所有数据池实例上都有  。 |
+| 新池行为和功能 | 现在，默认情况下，计算池仅用于“ROUND_ROBIN”分发中的存储池和数据池操作  。 数据池现在可以使用一个新**复制**分布类型，这意味着数据池的所有实例上存在相同的数据。 |
 | 外部表的改进 | HADOOP 数据源类型的外部表现在支持读取最大 1 MB 的行。 外部表（ODBC、存储池、数据池）现在支持与 SQL Server 表一样宽的行。 |
 
 ### <a name="known-issues"></a>已知问题
@@ -312,7 +312,7 @@ ms.locfileid: "67469124"
 | 关于 GPU 支持在 Spark 中使用 TensorFlow 运行深度学习的指南。 | [部署具有 GPU 支持的大数据群集并运行 TensorFlow](spark-gpu-tensorflow.md)。 |
 | 默认情况下，不再继续创建数据源 SqlDataPool 和 SqlStoragePool   。 | 请根据需要手动创建它们。 查看[已知问题](#externaltablesctp24)。 |
 | 数据池的 `INSERT INTO SELECT` 支持。 | 有关示例，请参阅[教程：使用 Transact-SQL 将数据引入 SQL Server 数据池](tutorial-data-pool-ingest-sql.md)。 |
-| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项。 | 强制或禁用查询外部表的计算池的使用。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
+| `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项。 | 强制或禁用查询外部表的计算池的使用。 例如，`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
 | 更新的 AKS 部署建议。 | 当在 AKS 上评估大数据群集时，我们现在建议使用大小为 Standard_L8s 的单个节点  。 |
 | Spark 运行时升级到 Spark 2.4。 | |
 

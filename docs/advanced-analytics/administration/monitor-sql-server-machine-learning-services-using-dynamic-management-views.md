@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645546"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681626"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53645546"
 
 监视 SQL Server 中的机器学习工作负荷时，可以使用以下动态管理视图。 若要查询 Dmv，您需要`VIEW SERVER STATE`具有实例的权限。
 
-| 动态管理视图 | 类型 | Description |
+| 动态管理视图 | type | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 执行 | 为运行外部脚本的每个活动工作线程帐户都返回一行。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 执行 | 为每种类型的外部脚本请求返回一行。 |
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | 计数器 | Description |
 |---------|-------------|
 | 执行总次数 | 通过本地或远程调用启动的外部进程数。 |
-| 并行执行 | 脚本包含的次数_@parallel_规范和的[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成并使用并行查询计划。 |
+| 并行执行 | 脚本包含的次数 _@parallel_ 规范和的[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成并使用并行查询计划。 |
 | 流式执行 | 流式处理功能调用次数。 |
 | SQL CC 执行 | 作为计算上下文使用的运行位置调用远程实例化和 SQL Server 的外部脚本的数量。 |
 | 默示身份验证。登录名 | 使用隐式身份验证; 进行 ODBC 环回调用的次数也就是说，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]执行代表发送脚本请求的用户调用。 |
@@ -196,7 +196,7 @@ FROM sys.dm_os_sys_info;
 |--------|-------------|
 | physical_memory_kb | 在计算机上的物理内存总量。 |
 | committed_kb | 内存管理器中的千字节 (KB) 中的已提交的内存。 不包括内存管理器中的保留内存。 |
-| external_pool_peak_memory_kb | 总和的最大使用，以千字节，所有外部资源池的内存量。 |
+| external_pool_peak_memory_kb | 最大内存量之和使用，以千字节，所有外部资源池。 |
 
 ## <a name="memory-configuration"></a>内存配置
 
@@ -223,7 +223,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 | “列” | Description |
 |--------|-------------|
-| NAME | SQL Server 的外部资源池的名称。 |
+| name | SQL Server 的外部资源池的名称。 |
 | max_memory_percent | 可使用 SQL Server 或外部资源池的最大内存。 |
 
 ## <a name="resource-pools"></a>资源池
@@ -305,7 +305,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 |--------|-------------|
 | package | 已安装包的名称。 |
 | 版本 | 包的版本。 |
-| 位置 | 在哪里可以找到包的目录。 |
+| Location | 在哪里可以找到包的目录。 |
 
 ## <a name="next-steps"></a>后续步骤
 

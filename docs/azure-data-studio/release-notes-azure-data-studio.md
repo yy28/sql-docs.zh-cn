@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798103"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681618"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
@@ -367,7 +367,7 @@ _0.32.8 包含几个回归 0.32.7 中找到的修补程序 ([# 1971年](https://
 ### <a name="github-issues-fixes-june-2018"></a>已修复 GitHub 问题，2018 年 6 月
 
 - 功能请求 ([发出 1204年](https://github.com/Microsoft/azuredatastudio/issues/1204)):请到数据，使结果网格自动调整列宽度，请记住手动更改，如果重新运行相同的查询。
-- 修复[发出 1398年](https://github.com/Microsoft/azuredatastudio/issues/1398):应显示添加消息和链接的帐户为空时添加帐户客户按钮。
+- 修复[发出 1398年](https://github.com/Microsoft/azuredatastudio/issues/1398):应显示添加消息和链接的帐户为空时添加帐户按钮。
 - 修复[发出 1399年](https://github.com/Microsoft/azuredatastudio/issues/1399):视图处于折叠状态时，将断开链接的帐户选项卡。
 - 修复[发出 1374年](https://github.com/Microsoft/azuredatastudio/issues/1374):从磁盘打开的.sql 文件时，SQL 工具服务崩溃。
 - 修复[发出 1372年](https://github.com/Microsoft/azuredatastudio/issues/1372):缺少 SQL 关键字"BETWEEN"。

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388754"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681590"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 大数据群集 （预览版） 上的应用程序
 
@@ -107,7 +107,7 @@ mssqlctl app create --spec <directory containing spec file>
 mssqlctl app create --spec ./addpy
 ```
 
-这假定你已存储在应用程序`addpy`文件夹。 此文件夹还应包含名为被调用应用程序的规范文件`spec.yaml`。 请参阅[应用程序部署页](concept-application-deployment.md)有关详细信息`spec.yaml`文件。
+这假定你已存储在应用程序`addpy`文件夹。 此文件夹还应包含名为应用程序的规范文件`spec.yaml`。 请参阅[应用程序部署页](concept-application-deployment.md)有关详细信息`spec.yaml`文件。
 
 若要部署此应用程序示例应用，可在一个名为目录中创建以下文件`addpy`:
 
