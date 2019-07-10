@@ -1,9 +1,9 @@
 ---
 title: 行级安全性 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140600"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559450"
 ---
 # <a name="row-level-security"></a>行级安全性
 
@@ -38,8 +38,8 @@ ms.locfileid: "67140600"
 访问限制逻辑位于数据库层中，而不是在另一个应用层中远离数据。 数据库系统会在每次尝试从任何层进行数据访问时应用访问限制。 这样，你的安全系统可以通过减少安全系统的外围应用来更加可靠和强健。  
   
 可使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及作为 [内联表值函数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)创建的谓词来实现 RLS。  
-  
-**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[获取](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[获取](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。
   
 > [!NOTE]
 > Azure SQL 数据仓库仅支持筛选谓词。 Azure SQL 数据仓库暂不支持阻止谓词。
@@ -422,7 +422,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. 用户通过中间层应用程序连接到数据库的方案
 
 > [!NOTE]
-> 此示例不适用于 Azure SQL 数据仓库，因为当前不支持 SESSION_CONTEXT 和阻止谓词。
+> 在此示例中，Azure SQL 数据仓库当前不支持阻止谓词功能，因此 Azure SQL 数据仓库不会阻止插入错误用户 ID 的行。
 
 此示例演示一个中间层应用程序如何实现连接筛选，其中应用程序用户（或租户）共享同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户（应用程序）。 应用程序连接到数据库之后在 [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md) 中设置当前应用程序用户 ID，然后安全策略以透明方式筛选不应对此 ID 可见的行，同时阻止用户插入错误用户 ID 的行。 无需进行任何其他应用更改。  
   

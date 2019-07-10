@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce984371d1dd618c7a99b081667115208b7afb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21298500f7d5bc135b8e9068c97e2928d1853b6f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406464"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583573"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 完成此项工作有三种方法：过程定义中的 **WITH RECOMPILE** 选项，或在调用过程时，各个语句上的 **RECOMPILE** 查询提示，或者使用 **sp_recompile** 系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
+  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 完成此项工作有三种方法：过程定义中的 WITH RECOMPILE  选项，或在调用过程时，各个语句上的 RECOMPILE  查询提示，或者使用 sp_recompile  系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
   
  **本主题内容**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "52406464"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要重新编译存储过程，请使用：**  
   
@@ -53,9 +53,9 @@ ms.locfileid: "52406464"
   
 -   如果过程的中某些查询定期使用非典型值或临时值，则可通过使用这些查询中的 RECOMPILE 查询提示来改善过程性能。 由于仅使用此查询提示的查询将进行重新编译，而不是整个过程进行重新编译，因此将模仿 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句级重新编译行为。 但除了使用过程的当前参数值外，RECOMPILE 查询提示还在编译该语句时使用存储过程中本地变量的值。 有关详细信息，请参阅 [查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  **WITH RECOMPILE** 选项  
  如果在创建过程定义时使用此选项，则要求数据库中的 CREATE PROCEDURE 权限，还必须具有对架构（在其下创建过程）的 ALTER 权限。  
   
@@ -71,12 +71,14 @@ ms.locfileid: "52406464"
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建过程定义。  
-  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建过程定义。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -99,13 +101,13 @@ AS
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
   
-     然后，将第二个代码示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此操作将执行该过程，并重新编译过程的查询计划。  
+     然后，将第二个代码示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此操作将执行该过程，并重新编译过程的查询计划。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,13 +119,13 @@ GO
   
 #### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>使用 sp_recompile 重新编译存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
   
-     然后，将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
+     然后，将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
   
 ```sql  
 USE AdventureWorks2012;  

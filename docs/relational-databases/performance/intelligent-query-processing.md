@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776035"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580752"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -44,7 +44,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [交错执行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|请使用在首次编译时遇到的多语句表值函数的实际基数，而不是一个固定猜测值。|
 | [内存授予反馈（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
 | [内存授予反馈（行模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
-| [标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 将转换为内联在调用查询中的等效关系表达式，这通常会使性能显著提升。|
+| [标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 将转换为“内联”在调用查询中的等效关系表达式，这通常会使性能显著提升。|
 | [表变量延迟编译](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|请使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
@@ -75,6 +75,9 @@ WHERE [fo].[Quantity] = 360;
 1. 我们拥有新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。 对于该示例，阈值为 78 行。 包含 &gt;= 78 行的任何示例均将使用哈希联接。 如果小于阈值，将使用嵌套循环联接。
 1. 由于我们将返回 336 行，超过了阈值，因此第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
 1. 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  现将计划与同一查询进行对比，但此次针对表格中只有一行的的 Quantity 值  ：
  
 ```sql
@@ -127,7 +130,7 @@ WHERE [fo].[Quantity] = 361;
 如果自适应联接切换到嵌套循环操作，它将使用哈希联接生成已经读取的行。 运算符不会  再次重新读取外部引用行。
 
 ### <a name="adaptive-threshold-rows"></a>自适应阈值行
-下图显示了哈希联接的成本与嵌套循环联接替代的成本之间的示例交集。  在这个交点处，确定了阈值，该阈值将反过来确定将实际用于联接操作的算法。
+下图显示了哈希联接的成本与嵌套循环联接替代的成本之间的示例交集。 在这个交点处，确定了阈值，该阈值将反过来确定将实际用于联接操作的算法。
 
 ![联接阈值](./media/6_AQPJoinThreshold.png)
 

@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945573e16582ba2778ff29e7396a2fb6ea3dedce
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015461"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556943"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 
@@ -76,13 +76,13 @@ ms.locfileid: "63015461"
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对内存管理的更改
 
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，使用五种不同的机制分配内存：
--  **单页分配器 (SPA)** 它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制   。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
+-  单页分配器 (SPA)  ，它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制   。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
 -  **多页分配器 (MPA)** ，用于需要 8 KB 以上的内存分配。
 -  **CLR 分配器**，包含 CLR 初始化期间创建的 SQL CLR 堆及其全局分配。
 -  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的 **[线程堆栈](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的内存分配。
 -  **直接 Windows 分配 (DWA)** ，用于直接向 windows 进行的内存分配请求。 包括由加载到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的模块使用 Windows 堆和直接进行虚拟分配。 此类内存分配请求的示例包括从扩展存储过程 DLL 分配、使用自动化过程（sp_OA 调用）创建的对象以及从链接服务器提供程序分配。
 
-从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，单页分配、多页分配和 CLR 分配全部合并到“任意大小”页分配器中，受到由“max server memory (MB)”和“min server memory (MB)”配置选项控制的内存限制    。 此更改使通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器的所有内存要求能更准确地调整大小。 
+从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，单页分配、多页分配和 CLR 分配全部合并到“任意大小”页分配器中，受到由“最大服务器内存(MB)”和“最小服务器内存(MB)”配置选项控制的内存限制    。 此更改使通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器的所有内存要求能更准确地调整大小。 
 
 > [!IMPORTANT]
 > 升级到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后，请仔细检查当前的“max server memory (MB)”和“min server memory (MB)”配置   。 这是因为从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，与早期版本相比，这些配置现在包括并用于更多内存分配。 这些更改适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的 32 位和 64 位版本，以及 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 64 位版本。
@@ -97,7 +97,7 @@ ms.locfileid: "63015461"
 |线程堆栈内存|否|否|
 |从 Windows 直接分配|否|否|
 
-从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能会分配比 max server memory 设置中指定的值更多的内存。 当 Total Server Memory (KB)   值已达到 Total Server Memory (KB)  （由 max server memory 指定）时，可能会出现这种情况。 如果因内存碎片造成连续空闲内存不足，无法满足多页内存请求的需求（超过 8 KB），[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以执行超额承诺使用量，而不是拒绝内存请求。 
+从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能会分配比 max server memory 设置中指定的值更多的内存。 当 Total Server Memory (KB)  值已达到 Total Server Memory (KB)  （由 max server memory 指定）时，可能会出现这种情况。 如果因内存碎片造成连续空闲内存不足，无法满足多页内存请求的需求（超过 8 KB），[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以执行超额承诺使用量，而不是拒绝内存请求。 
 
 只要执行此分配，资源监视器后台任务就会开始向所有内存消耗者发送信号，指示其释放已分配的内存，并尝试使 Target Server Memory (KB) 值低于 Target Server Memory (KB) 规范    。 因此，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存使用情况可短暂超过 max server memory 设置。 在这种情况下，Total Server Memory (KB) 性能计数器读取将超过 max server memory 和 Target Server Memory (KB) 设置   。
 

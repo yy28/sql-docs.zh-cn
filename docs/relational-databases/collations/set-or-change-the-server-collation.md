@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 29b980fffbc4c6f670f48694cd238c521337ef70
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671134"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517746"
 ---
 # <a name="set-or-change-the-server-collation"></a>设置或更改服务器排序规则
 
@@ -30,7 +30,7 @@ ms.locfileid: "59671134"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>设置 SQL Server 中的服务器排序规则
 
-  服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间指定的。 默认服务器级排序规则为 SQL_Latin1_General_CP1_CI_AS。 无法将仅限 Unicode 的排序规则指定为服务器级排序规则。 有关详细信息，请参阅 [Collation and Unicode Support](collation-and-unicode-support.md)。
+  服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间指定的。 默认服务器级排序规则为 SQL_Latin1_General_CP1_CI_AS  。 无法将仅限 Unicode 的排序规则指定为服务器级排序规则。 有关详细信息，请参阅 [Collation and Unicode Support](collation-and-unicode-support.md)。
   
 ## <a name="changing-the-server-collation-in-sql-server"></a>更改 SQL Server 中的服务器排序规则
 
@@ -61,7 +61,7 @@ ms.locfileid: "59671134"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>设置托管实例中的服务器排序规则
 
-可以在创建实例时指定 Azure SQL 托管实例中的服务器级别排序规则（预览），以后不能更改。 创建实例时，可通过 [Azure 门户](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和资源管理器模板](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)设置服务器级别排序规则。 默认服务器级排序规则为 SQL_Latin1_General_CP1_CI_AS。 无法将仅限 Unicode 的排序规则和新的 UTF-8 排序规则指定为服务器级排序规则。
+可以在创建实例时指定 Azure SQL 托管实例中的服务器级别排序规则，以后不能更改。 创建实例时，可通过 [Azure 门户](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和资源管理器模板](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)设置服务器级别排序规则。 默认服务器级排序规则为 SQL_Latin1_General_CP1_CI_AS  。 无法将仅限 Unicode 的排序规则和新的 UTF-8 排序规则指定为服务器级排序规则。
 如果要将数据库从 SQL Server 迁移到托管实例，请使用 `SERVERPROPERTY(N'Collation')` 函数检查源 SQL Server 中的服务器排序规则，并创建与 SQL Server 排序规则匹配的托管实例。 使用不匹配的服务器级排序规则将数据库从 SQL Server 迁移到托管实例可能会导致查询中出现多个意外错误。 不能更改现有托管实例的服务器级排序规则。
 
 ## <a name="see-also"></a>另请参阅

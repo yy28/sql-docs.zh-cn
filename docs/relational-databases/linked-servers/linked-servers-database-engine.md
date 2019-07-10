@@ -20,14 +20,15 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5418ea8fa92e8e62cf28d1bb740091feb88f32d2
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354376"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556924"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   通过链接服务器，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)可从远程数据源中读取数据，并针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之外的 OLE DB 数据源等远程数据库服务器执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel 和 Azure CosmosDB。

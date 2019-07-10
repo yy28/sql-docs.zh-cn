@@ -1,7 +1,7 @@
 ---
 title: 使用查询存储监视性能 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356470"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581394"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,15 +37,17 @@ ms.locfileid: "58356470"
   
 #### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“查询存储”页  
   
-1.  在对象资源管理器中，右键单击数据库，然后单击“属性” 。  
+1.  在对象资源管理器中，右键单击数据库，然后单击“属性”  。  
   
     > [!NOTE]  
     > 至少需要 16 版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
 2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
   
-3.  在“操作模式(要求)”对话框中，选择“读写”。  
-  
+3.  在“操作模式(要求)”  对话框中，选择“读写”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 语句  
   
 使用 **ALTER DATABASE** 语句来启用查询存储。 例如：  
@@ -70,7 +72,7 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 > [!NOTE]
 > 查询存储收集 DML 语句（如 SELECT、INSERT、UPDATE、DELETE、MERGE 和 BULK INSERT）的计划。
 
- “等待统计信息”是有助于排除 SQL Server 中的性能问题的另一信息来源。 长期以来，等待统计信息仅适用于实例级别，难以回溯到实际查询。 在 SQL Server 2017 和 Azure SQL 数据库中，我们在跟踪等待统计信息的查询存储中添加了另一个维度。 
+ “等待统计信息”  是有助于排除 SQL Server 中的性能问题的另一信息来源。 长期以来，等待统计信息仅适用于实例级别，难以回溯到实际查询。 在 SQL Server 2017 和 Azure SQL 数据库中，我们在跟踪等待统计信息的查询存储中添加了另一个维度。 
 
  使用查询存储功能的常见方案为：  
   
@@ -83,9 +85,9 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   了解特定查询或计划的等待性质。
   
 查询存储包含三个存储：
-- 计划存储：用于保存执行计划信息。     
-- 运行时统计信息存储：用于保存执行统计信息。    
-- 等待统计信息存储：用于保存等待统计信息。     
+- 计划存储：用于保存执行计划信息  。     
+- 运行时统计信息存储：  用于保存执行统计信息。    
+- 等待统计信息存储：  用于保存等待统计信息。     
  
 **max_plans_per_query** 配置选项限制了计划存储中查询可存储的唯一计划数。 为增强性能，通过异步方式向存储写入信息。 为尽量减少空间使用量，将在按固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 可通过查询查询存储目录视图来查看这些存储中的信息。  
   
@@ -105,18 +107,18 @@ INNER JOIN sys.query_store_query_text AS Txt
   
 ![SSMS 对象资源管理器中的 SQL Server 2016 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 Query Store tree in SSMS Object Explorer")   ![SSMS 对象资源管理器中的 SQL Server 2017 查询存储树](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 Query Store tree in SSMS Object Explorer") 
   
-选择“回归查询”  ，以在 **中打开“回归查询”**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框根据各种条件筛选查询：持续时间（单位 ms，此为默认值）、CPU 时间 (ms)、逻辑读取 (KB)、逻辑写入 (KB)、物理读取 (KB)、CLR 时间 (ms)、DOP、内存使用量 (KB)、行计数、已用日志内存 (KB)、已用临时 DB 内存 (KB) 和等待时间 (ms)。  
+选择“回归查询”  ，以在 **中打开“回归查询”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 使用顶部的下拉框根据各种条件筛选查询：持续时间（单位 ms，此为默认值）、CPU 时间 (ms)、逻辑读取 (KB)、逻辑写入 (KB)、物理读取 (KB)、CLR 时间 (ms)、DOP、内存使用量 (KB)、行计数、已用日志内存 (KB)、已用临时 DB 内存 (KB) 和等待时间 (ms)  。  
 选择某个计划以查看图形查询计划。 可以使用按钮查看源查询、强制执行和取消强制执行查询计划、在网格和图表格式之间进行切换、比较所选的计划（如果选择多个）及刷新显示。  
   
 ![SSMS 对象资源管理器中的 SQL Server 2016 回归查询](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")  
   
-若要强制执行某一计划，请选择查询和计划，然后单击“强制计划” 。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。
+若要强制执行某一计划，请选择查询和计划，然后单击“强制计划”  。 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。
 
 ##  <a name="Waiting"></a>查找等待查询
 
-从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 开始，查询存储中将提供随时间变化每个查询的等待统计信息。 在查询存储中，等待类型将合并到等待类别中。 [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).中提供从等待类别到等待类型的映射。
+从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 开始，查询存储中将提供随时间变化每个查询的等待统计信息。 在查询存储中，等待类型将合并到等待类别中  。 [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table).中提供从等待类别到等待类型的映射。
 
-在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更高版本中，选择“查询等待统计信息”以打开“查询等待统计信息”窗格。 “查询等待统计信息”窗格显示包含查询存储中排在前面的等待类别的条形图。 使用顶部的下拉框选择等待时间的聚合条件：平均值、最大值、最小值、标准偏差和总计（默认）。
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更高版本中，选择“查询等待统计信息”以打开“查询等待统计信息”窗格   。 “查询等待统计信息”窗格显示包含查询存储中排在前面的等待类别的条形图。 使用顶部的下拉框选择等待时间的聚合条件：平均值、最大值、最小值、标准偏差和总计（默认）  。
 
  ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 Query Wait Statistics in SSMS Object Explorer")
 
@@ -124,9 +126,9 @@ INNER JOIN sys.query_store_query_text AS Txt
   
  ![SSMS 对象资源管理器中的 SQL Server 2017 查询等待统计信息的详细信息视图](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017 Query Wait Statistics detail view in SSMS Object Explorer")
 
-使用顶部的下拉框根据各种等待时间条件为所选等待类别筛选查询：平均值、最大值、最小值、标准偏差和总计（默认）。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
+使用顶部的下拉框根据各种等待时间条件为所选等待类别筛选查询：平均值、最大值、最小值、标准偏差和总计（默认）  。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
 
-等待类别可将不同等待类型按性质合并为类似的桶。 不同的等待类别需要不同的后续分析才能解决此问题，但相同类别的等待类型可引起非常相似的故障排除体验，并假定基于等待的受影响的查询会成为用于成功完成此类调查的大部分内容的缺少的部分。
+等待类别  可将不同等待类型按性质合并为类似的桶。 不同的等待类别需要不同的后续分析才能解决此问题，但相同类别的等待类型可引起非常相似的故障排除体验，并假定基于等待的受影响的查询会成为用于成功完成此类调查的大部分内容的缺少的部分。
 
 下面的示例介绍如何在查询存储中引入等待类别前后更深入了解工作负荷：
 
@@ -141,32 +143,32 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Options"></a> 配置选项 
 以下选项可用于配置查询存储参数。
 
-OPERATION_MODE  
-可以为 READ_WRITE（默认）或 READ_ONLY。  
+OPERATION_MODE   
+可以为 READ_WRITE（默认）或 READ_ONLY  。  
   
-CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)  
-配置 `STALE_QUERY_THRESHOLD_DAYS` 参数，以指定数据在查询存储中保留的天数。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。
+CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)   
+配置 `STALE_QUERY_THRESHOLD_DAYS` 参数，以指定数据在查询存储中保留的天数。 默认值为 30。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天  。
   
-DATA_FLUSH_INTERVAL_SECONDS  
-确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 此异步传输发生的频率通过 `DATA_FLUSH_INTERVAL_SECONDS` 进行配置。 默认值为 900（15 分钟）。  
+DATA_FLUSH_INTERVAL_SECONDS   
+确定写入到查询存储的数据保留到磁盘的频率。 为了优化性能，由查询存储收集的数据应以异步方式写入到磁盘。 此异步传输发生的频率通过 `DATA_FLUSH_INTERVAL_SECONDS` 进行配置。 默认值为 900（15 分钟）  。  
   
-MAX_STORAGE_SIZE_MB  
-配置查询存储的最大大小。 如果查询存储中的数据达到 `MAX_STORAGE_SIZE_MB` 限制，查询存储会自动从读写状态更改为只读状态，并停止收集新数据。  默认值为 100 MB。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB。
+MAX_STORAGE_SIZE_MB   
+配置查询存储的最大大小。 如果查询存储中的数据达到 `MAX_STORAGE_SIZE_MB` 限制，查询存储会自动从读写状态更改为只读状态，并停止收集新数据。  默认值为 100 MB。 对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 GB，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 10 MB   。
   
-INTERVAL_LENGTH_MINUTES  
+INTERVAL_LENGTH_MINUTES   
 确定运行时执行统计数据聚合到查询存储中的时间间隔。 为了优化空间使用情况，将在固定时间窗口上聚合运行时统计信息存储中的运行时执行统计信息。 此固定时间窗口通过 `INTERVAL_LENGTH_MINUTES` 进行配置。 默认值是 **60**秒。 
   
-SIZE_BASED_CLEANUP_MODE  
-控制当数据总量接近最大大小时是否自动激活清除进程。 可为“AUTO”（默认）或“OFF”。  
+SIZE_BASED_CLEANUP_MODE   
+控制当数据总量接近最大大小时是否自动激活清除进程。 可为“AUTO”（默认）或“OFF”  。  
   
-QUERY_CAPTURE_MODE  
-指定查询存储是捕获所有查询，还是基于执行计数和资源消耗捕获相关查询，或是停止添加新查询且仅跟踪当前查询。 可以是 ALL（捕获所有查询）、AUTO（忽略频率较低的查询以及编译和执行持续时间较短的查询）或 NONE（停止捕获新查询）。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）上的默认值为 ALL，而 Azure 上的默认值为 AUTO[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+QUERY_CAPTURE_MODE   
+指定查询存储是捕获所有查询，还是基于执行计数和资源消耗捕获相关查询，或是停止添加新查询且仅跟踪当前查询。 可以是 ALL（捕获所有查询）、AUTO（忽略频率较低的查询以及编译和执行持续时间较短的查询）或 NONE（停止捕获新查询）  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）上的默认值为 ALL，而 Azure 上的默认值为 AUTO[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
   
-MAX_PLANS_PER_QUERY  
-一个整数，表示为每个查询保留的最大计划数。 默认值为 200。  
+MAX_PLANS_PER_QUERY   
+一个整数，表示为每个查询保留的最大计划数。 默认值为 200  。  
  
-WAIT_STATS_CAPTURE_MODE  
-控制查询存储是否捕获等待统计信息。 可以为“OFF”或“ON”（默认）。  
+WAIT_STATS_CAPTURE_MODE   
+控制查询存储是否捕获等待统计信息。 可以为“OFF”或“ON”（默认）  。  
  
 查询 **sys.database_query_store_options** 视图以确定查询存储的当前选项。 有关值的详细信息，请参阅 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)。  
   
@@ -324,14 +326,14 @@ DEALLOCATE adhoc_queries_cursor;
   
  以上示例使用 **sp_query_store_remove_query** 扩展存储过程来删除不必要的数据。 还可以使用：  
   
--   sp_query_store_reset_exec_stats 用于清除给定计划的运行时统计信息。  
--   sp_query_store_remove_plan 用于删除单个计划。  
+-   sp_query_store_reset_exec_stats 用于清除给定计划的运行时统计信息  。  
+-   sp_query_store_remove_plan 用于删除单个计划  。  
  
   
 ###  <a name="Peformance"></a> 性能审核和疑难解答  
  查询存储将保存整个查询过程中的编译历史记录和运行时度量，使你能询问有关工作负载的问题。  
   
- 在数据库上执行的最后 n 个查询？  
+ 在数据库上执行的最后 n 个查询  ？  
   
 ```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -571,7 +573,7 @@ OPTION (MERGE JOIN);
   
 你还可以使用参数（自动参数化或手动参数化）来标识某一查询内不一致的查询性能。 你可以在不同计划中标识出对所有或大多数参数值而言足够快和最佳的计划，并强制执行此计划，为更大范围的用户方案保留可预测的性能。  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>强制执行查询计划（应用强制策略）
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>强制执行查询计划（应用强制策略）
 
 当强制执行某一查询的计划时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试在优化器中强制执行该计划。 如果计划强制实施失败，将触发 XEvent，并指示优化器正常优化。
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 使用 **sp_query_store_force_plan** 时，你只可以强制执行查询存储记录为该查询计划的那些计划。 换句话说，可用于查询的计划只有那些在查询存储处于活动状态时已用于执行该查询的计划。  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> 计划强制支持快进和静态游标
   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 查询存储支持为快进和静态 T-SQL 及 API 游标强制执行查询执行计划。 现在，通过 `sp_query_store_force_plan` 或通过 SQL Server Management Studio 查询存储报表支持强制执行。
+
 ### <a name="remove-plan-forcing-for-a-query"></a>删除为查询强制执行的计划
 
 若要再次依靠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器来计算最佳查询计划，请使用 **sp_query_store_unforce_plan** 来取消强制执行为查询选定的计划。  
@@ -588,7 +594,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
+
+
+
 ## <a name="see-also"></a>另请参阅  
  [查询存储最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

@@ -16,31 +16,31 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a423012af5d4fa7c89b38fda6739c142bc5b367b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d6be68be92ac6525e0fb3b128e8c02ab596c601
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648915"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584125"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a> 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“对象资源管理器”菜单选项或在查询编辑器中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]来查看存储过程的定义。 本主题介绍如何在对象资源管理器中查看过程的定义，以及如何在查询编辑器中使用系统存储过程、系统函数和对象目录视图来查看过程的定义。  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：** [安全性](#Security)  
   
--   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-    要查看过程的定义，请使用：[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  系统存储过程： **sp_helptext**  
  要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
- 系统函数： **OBJECT_DEFINITION**  
+ 系统函数：**OBJECT_DEFINITION**  
  系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定数据库角色的成员隐式具有这些权限。  
   
  sys.sql_modules 目录视图： **sys.sql_modules**  
@@ -58,19 +58,21 @@ ms.locfileid: "47648915"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  依次展开“数据库” 、过程所属的数据库以及“可编程性” 。  
+2.  展开 **“数据库”** 、过程所属的数据库以及 **“可编程性”** 。  
   
-3.  展开 **“存储过程”**，右键单击该过程，再单击 **“编写存储过程脚本为”**，然后单击下列选项之一： **“CREATE 到”**、 **“ALTER 到”** 或 **“DROP 和 CREATE 到”**。  
+3.  展开“存储过程”，右键单击该过程，再单击“编写存储过程脚本为”，然后单击下列选项之一：   “CREATE 到”、“ALTER 到”或“DROP 和 CREATE 到”。     
   
-4.  选择 **“新建查询编辑器窗口”**。 这将显示过程定义。  
-  
+4.  选择 **“新建查询编辑器窗口”** 。 这将显示过程定义。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中查看过程的定义**  
   
  系统存储过程： **sp_helptext**  
  1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在工具栏上，单击 **“新建查询”**。  
+2.  在工具栏上，单击 **“新建查询”** 。  
   
 3.  在查询窗口中，输入以下使用 **sp_helptext** 系统存储过程的语句。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
   
@@ -80,10 +82,10 @@ ms.locfileid: "47648915"
     EXEC sp_helptext N'AdventureWorks2012.dbo.uspLogError';  
     ```  
   
- 系统函数： **OBJECT_DEFINITION**  
+ 系统函数：**OBJECT_DEFINITION**  
  1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在工具栏上，单击 **“新建查询”**。  
+2.  在工具栏上，单击 **“新建查询”** 。  
   
 3.  在查询窗口中，输入以下使用 **OBJECT_DEFINITION** 系统函数的语句。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
   
@@ -96,7 +98,7 @@ ms.locfileid: "47648915"
  sys.sql_modules 目录视图： **sys.sql_modules**  
  1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在工具栏上，单击 **“新建查询”**。  
+2.  在工具栏上，单击 **“新建查询”** 。  
   
 3.  在查询窗口中，输入以下使用 **sys.sql_modules** 目录视图的语句。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
   

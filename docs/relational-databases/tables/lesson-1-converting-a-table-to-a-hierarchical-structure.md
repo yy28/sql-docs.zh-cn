@@ -13,12 +13,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661155"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582151"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 课：将表转换为层次结构
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +37,14 @@ ms.locfileid: "47661155"
 此处提供在 SSMS 中还原数据库的说明：[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>检查 Employee 表的当前结构
-示例 Adventureworks2017（或更高版本）数据库包含基于“HumanResources”架构的“Employee”表。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询 **HumanResources.EmployeeDemo** 表以查看在不使用 **hierarchyid** 数据类型的情况下表中数据的结构。  
+示例 Adventureworks2017（或更高版本）数据库包含基于“HumanResources”架构的“Employee”表   。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询 **HumanResources.EmployeeDemo** 表以查看在不使用 **hierarchyid** 数据类型的情况下表中数据的结构。  
   
 ### <a name="copy-the-employee-table"></a>复制 Employee 表  
   
 1.  在查询编辑器窗口中，运行下列代码以将 **Employee** 表中的表结构和数据复制到名为 **EmployeeDemo**的新表中。 由于原始表已使用 hierarchyid，本次查询实质上合会并层次结构，以便检索 employee 的管理员。 在本课程的后续部分中，我们将重新构建该层次结构。
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE AdventureWorks2017;  
     GO  
@@ -91,7 +93,7 @@ ms.locfileid: "47661155"
   
     结果在继续，共 290 行。  
   
-请注意， **ORDER BY** 子句会使输出将每个管理级别的直接下属都列在一起。 例如，MgrID 1 (ken0) 的所有七个直接下属都彼此紧挨着列出。 虽然有可能实现，但是要将最终向 MgrID 1 负责的所有雇员进行分组将会更加困难。  
+请注意， **ORDER BY** 子句会使输出将每个管理级别的直接下属都列在一起。 例如，MgrID 1 (ken0) 的所有七个直接下属都彼此紧挨着列出  。 虽然有可能实现，但是要将最终向 MgrID 1 负责的所有雇员进行分组将会更加困难  。  
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>使用现有层次结构数据填充表
@@ -224,10 +226,10 @@ ms.locfileid: "47661155"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
-在 **使用现有层次结构数据填充表** 任务中创建的 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 表包含所有雇员的信息，该表使用 **hierarchyid** 数据类型表示层次结构。 此任务添加了新的索引，以便支持对“hierarchyid”列的搜索。  
+在 **使用现有层次结构数据填充表** 任务中创建的 [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 表包含所有雇员的信息，该表使用 **hierarchyid** 数据类型表示层次结构。 此任务添加了新的索引，以便支持对“hierarchyid”  列的搜索。  
   
 
-“hierarchyid”列 (**OrgNode**) 是“NewOrg”表的主键。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
+“hierarchyid”  列 (**OrgNode**) 是“NewOrg”  表的主键。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”  列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
   
   
 ### <a name="create-index-on-neworg-table-for-efficient-searches"></a>为 NewOrg 表创建索引以提高搜索效率  
@@ -242,7 +244,7 @@ ms.locfileid: "47661155"
     GO  
     ```  
   
-2.  对“EmployeeID”列创建一个唯一索引。 即采用传统方式通过 **EmployeeID** 号单独查找一个雇员。 运行下列代码以便对 **EmployeeID**创建索引：  
+2.  对“EmployeeID”  列创建一个唯一索引。 即采用传统方式通过 **EmployeeID** 号单独查找一个雇员。 运行下列代码以便对 **EmployeeID**创建索引：  
   
     ```sql  
     CREATE UNIQUE INDEX EmpIDs_unq ON HumanResources.NewOrg(EmployeeID) ;  
@@ -290,7 +292,7 @@ ms.locfileid: "47661155"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID** 优先索引：各行按照 **EmployeeID** 顺序存储。  
+    **EmployeeID** 优先索引：各行按照 EmployeeID  顺序存储。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID
@@ -313,14 +315,14 @@ ms.locfileid: "47661155"
   
 ### <a name="drop-the-unnecessary-columns"></a>删除不需要的列  
   
-1.  “ManagerID” 列用于表示雇员/经理关系，现在由“OrgNode”列来表示。 如果其他应用程序不需要“ManagerID”列，可以考虑使用下列语句删除该列：  
+1.  “ManagerID”  列用于表示雇员/经理关系，现在由“OrgNode”  列来表示。 如果其他应用程序不需要“ManagerID”  列，可以考虑使用下列语句删除该列：  
   
     ```sql  
     ALTER TABLE HumanResources.NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  “EmployeeID”列也是冗余列。 “OrgNode”列可以唯一标识每个雇员。 如果其他应用程序不需要“EmployeeID”列，可以考虑使用下列代码先删除索引再删除该列：  
+2.  “EmployeeID”  列也是冗余列。 “OrgNode”  列可以唯一标识每个雇员。 如果其他应用程序不需要“EmployeeID”  列，可以考虑使用下列代码先删除索引再删除该列：  
   
     ```sql  
     DROP INDEX EmpIDs_unq ON HumanResources.NewOrg ;  
@@ -330,9 +332,9 @@ ms.locfileid: "47661155"
   
 ### <a name="replace-the-original-table-with-the-new-table"></a>使用新表替换原始表  
   
-1.  如果原始表包含任何其他索引或约束，请将它们添加到“NewOrg”表中。  
+1.  如果原始表包含任何其他索引或约束，请将它们添加到“NewOrg”  表中。  
   
-2.  将旧的“EmployeeDemo”表替换为新表。 运行下列代码以删除旧表，然后使用旧表的名称重新命名新表：  
+2.  将旧的“EmployeeDemo”  表替换为新表。 运行下列代码以删除旧表，然后使用旧表的名称重新命名新表：  
   
     ```sql  
     DROP TABLE HumanResources.EmployeeDemo ;  

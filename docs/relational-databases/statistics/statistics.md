@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: a34c21deff4314747f1477efeb3f20991d311fb5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229038"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585032"
 ---
 # <a name="statistics"></a>统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,40 +37,40 @@ ms.locfileid: "55229038"
   
 ##  <a name="DefinitionQOStatistics"></a> 组件和概念  
 ### <a name="statistics"></a>统计信息  
- 查询优化的统计信息是二进制大型对象 (BLOB)，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的基数或行数。 通过这些基数估计，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以根据谓词使用基数估计选择索引查找运算符而不是更耗资源的索引扫描运算符，假如这样做能提高查询性能。  
+ 查询优化的统计信息是二进制大型对象 (BLOB)，这些对象包含与值在表或索引视图的一列或多列中的分布有关的统计信息。 查询优化器使用这些统计信息来估计查询结果中的基数  或行数。 通过这些基数估计  ，查询优化器可以创建高质量的查询计划。 例如，查询优化器可以根据谓词使用基数估计选择索引查找运算符而不是更耗资源的索引扫描运算符，假如这样做能提高查询性能。  
   
- 每个统计信息对象都在包含一个或对个表列的列表上创建，并且包括将值的分布显示在第一列的直方图。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 
+ 每个统计信息对象都在包含一个或对个表列的列表上创建，并且包括将值的分布显示在第一列的直方图  。 在多列上的统计信息对象也存储与各列中的值的相关性有关的统计信息。 这些相关性统计信息（或 *密度*）根据列值的不同行的数目派生。 
 
 #### <a name="histogram"></a>直方图  
-直方图度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是以统计方式对行进行抽样或对表或视图中的所有行执行完全扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
+直方图  度量数据集中每个非重复值的出现频率。 查询优化器根据统计信息对象第一个键列中的列值来计算直方图，它选择列值的方法是以统计方式对行进行抽样或对表或视图中的所有行执行完全扫描。 如果直方图是根据一组抽样行创建的，存储的总行数和非重复值总数则为估计值，且不必为整数。
 
 > [!NOTE]
 > <a name="frequency"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的直方图仅为单个列生成 - 统计信息对象键列集的第一列。
   
 若要创建直方图，查询优化器将对列值进行排序，计算与每个非重复列值匹配的值数，然后将列值聚合到最多 200 个连续直方图梯级中。 每个直方图梯级都包含一个列值范围，后跟上限列值。 该范围包括介于两个边界值之间的所有可能列值，但不包括边界值自身。 最小排序列值是第一个直方图梯级的上限值。
 
-有关详细信息，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下三个步骤从已排序的列值集创建直方图：
+有关详细信息，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下三个步骤从已排序的列值集创建直方图  ：
 
-- **直方图初始化**：在第一步中，处理始于排序集开始处的一个值序列，并收集 range_high_key、equal_rows、range_rows 和 distinct_range_rows 的最多 200 个值（在此步骤中，range_rows 和 distinct_range_rows 始终为零）。 已用尽所有输入或已找到 200 个值时，结束第一步。 
-- **使用 Bucket 合并进行扫描**：第二步中，按排序顺序处理从统计信息键前导列算起的每个额外值；将每个相继值添加到最后一个范围或在末尾创建一个新范围（这可能是因输入值已排序所致）。 如果创建了一个新范围，则一对现有相邻范围折叠为单个范围。 选择这对范围以最大限度减少信息丢失。 此方法使用最大差异算法使直方图中的梯级数减至最少，并同时最大化边界值之间的差异。 折叠后，梯级数在整个步骤中保持为 200。
+- **直方图初始化**：在第一步中，处理始于排序集开始处的一个值序列，并收集 range_high_key、equal_rows、range_rows 和 distinct_range_rows 的最多 200 个值（在此步骤中，range_rows 和 distinct_range_rows 始终为零）       。 已用尽所有输入或已找到 200 个值时，结束第一步。 
+- **使用 Bucket 合并进行扫描**：第二步中，按排序顺序处理从统计信息键前导列算起的每个额外值；将每个相继值添加到最后一个范围或在末尾创建一个新范围（这可能是因输入值已排序所致）。 如果创建了一个新范围，则一对现有相邻范围折叠为单个范围。 选择这对范围以最大限度减少信息丢失。 此方法使用最大差异  算法使直方图中的梯级数减至最少，并同时最大化边界值之间的差异。 折叠后，梯级数在整个步骤中保持为 200。
 - **直方图合并**：第三步中，如果未丢失大量信息，可能折叠更多范围。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 因此，即使列包含超过 200 个唯一值，直方图具有的梯级数可能少于 200。 对于仅包含唯一值的列，合并的直方图具有三个梯级（最小梯级数）。
 
 > [!NOTE]
-> 如果是使用示例而非全扫描生成直方图，则估计 equal_rows、range_rows、distinct_range_rows 和 average_range_rows 的值，因此它们无需为整数。
+> 如果是使用示例而非全扫描生成直方图，则估计 equal_rows  、range_rows  、distinct_range_rows  和 average_range_rows  的值，因此它们无需为整数。
 
 下面的关系图显示包含六个梯级的直方图。 第一个上限值左侧的区域是第一个梯级。
   
 ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "直方图") 
   
 对于以上每个直方图步骤：
--   粗线表示上限值 (range_high_key) 和上限值的出现次数 (equal_rows)  
+-   粗线表示上限值 (range_high_key  ) 和上限值的出现次数 (equal_rows  )  
   
--   range_high_key 左侧的纯色区域表示列值范围和每个列值的平均出现次数 (average_range_rows)。 第一个直方图梯级的 average_range_rows 始终是 0。  
+-   range_high_key  左侧的纯色区域表示列值范围和每个列值的平均出现次数 (average_range_rows  )。 第一个直方图梯级的 average_range_rows  始终是 0。  
   
--   点线表示用于估计范围中的非重复值总数 (distinct_range_rows) 和范围中的总指数 (range_rows)。 查询优化器使用 range_rows 和 distinct_range_rows 计算 average_range_rows，且不存储抽样值。   
+-   点线表示用于估计范围中的非重复值总数 (distinct_range_rows  ) 和范围中的总指数 (range_rows  )。 查询优化器使用 range_rows  和 distinct_range_rows  计算 average_range_rows  ，且不存储抽样值。   
   
 #### <a name="density"></a>密度向量  
-密度 是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度与值的选择性成反比，密度越小，值的选择性越大。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 因为 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 
+密度  是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度与值的选择性成反比，密度越小，值的选择性越大。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 因为 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 
 
 > [!NOTE]
 > 频率是有关统计信息对象第一个键列中每个非重复值出现次数的信息，其计算公式为行计数 * 密度。 最大频率 1 出现在具有唯一值的列中。
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * 如果在评估时间统计信息时表基数为 500 或更低，则每达到 500 次修改时更新一次。
     * 如果在评估时间统计信息时表基数大于 500，则每达到 500 + 修改次数的百分之二十时更新一次。
 
-* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 与当前的表基数乘积的平方根。 例如，如果表中包含 200 万行，则计算为 sqrt (1000 * 2000000) = 44721.359。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。  
+* 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)为 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。 它的计算方式为 1000 与当前的表基数乘积的平方根。 例如，如果表中包含 200 万行，则计算为 sqrt (1000 * 2000000) = 44721.359。 进行此更改后，将会更频繁地更新大型表的统计信息。 但是，如果数据库的兼容性级别低于 130，则 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 阈值适用。 ?
 
 > [!IMPORTANT]
 > 从 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 开始到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或者在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，如果[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)低于 130，且使用[跟踪标志 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用递减的动态统计信息更新阈值，此阈值将根据表中的行数进行调整。
@@ -127,7 +127,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
  异步统计信息更新选项 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 默认情况下，异步统计信息更新选项为 OFF 状态，并且查询优化器以同步方式更新统计信息。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建的统计信息。  
  
  > [!NOTE]
- > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置异步统计信息更新选项，需在“数据库属性”窗口的“选项”页中同时将“自动更新统计信息”和“自动异步更新统计信息”选项设置为“True”。
+ > 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置异步统计信息更新选项，需在“数据库属性”  窗口的“选项”  页中同时将“自动更新统计信息”  和“自动异步更新统计信息”  选项设置为“True”  。
   
  统计信息更新可以是同步（默认设置）或异步的。 对于同步统计信息更新，查询将始终用最新的统计信息编译和执行；在统计信息过期时，查询优化器将在编译和执行查询前等待更新的统计信息。 对于异步统计信息更新，查询将用现有的统计信息编译，即使现有统计信息已过期。如果在查询编译时统计信息过期，查询优化器可以选择非最优查询计划。 在异步更新完成后编译的查询将从使用更新的统计信息中受益。  
   
@@ -162,7 +162,9 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 1.  在创建索引时，查询优化器为表或视图上的索引创建统计信息。 这些统计信息将创建在索引的键列上。 如果索引是一个筛选索引，则查询优化器将在为该筛选索引指定的行的同一子集上创建筛选统计信息。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)和 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)。  
   
 2.  在 [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) 为 ON 时，查询优化器为查询谓词中的单列创建统计信息。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 对于大多数查询，用于创建统计信息的这两个方法就可以确保高质量的查询计划；但在很少的情况下，可以通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建附加的统计信息来改进查询计划。 这些附加的统计信息可以捕获查询优化器在为索引或单列创建统计信息时并未考虑的统计关联。 应用程序可能在表数据中具有附加的统计关联，如果在统计信息对象中计入这些关联，可能会令查询优化器改进查询计划。 例如，针对数据行子集的筛选统计信息或针对查询谓词列的多列统计信息可改进查询计划。  
   
 在使用 CREATE STATISTICS 语句创建统计信息时，我们建议保持 AUTO_CREATE_STATISTICS 选项为 ON，以便查询优化器继续为查询谓词列定期创建单列统计信息。 有关查询谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
@@ -175,7 +177,7 @@ AUTO_UPDATE_STATISTICS 选项适用于为索引创建的统计信息对象、查
 * 查询缺少统计信息。  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>查询谓词包含多个相关列  
-在某一查询谓词包含具有跨列关系和相关性的多列时，针对多列的统计信息可能会改进查询计划。 针对多列的统计信息包含称作密度的跨列相关统计信息，这些统计信息不可用于单列统计信息。 在查询结果依赖于多列之间的数据关系时，密度可以改进基数估计。  
+在某一查询谓词包含具有跨列关系和相关性的多列时，针对多列的统计信息可能会改进查询计划。 针对多列的统计信息包含称作密度  的跨列相关统计信息，这些统计信息不可用于单列统计信息。 在查询结果依赖于多列之间的数据关系时，密度可以改进基数估计。  
   
 如果多个列已处于同一索引中，则多列统计信息对象已存在并且不必手动创建它。 如果这些列尚未处于同一索引中，则可以通过对多个列创建索引或通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句，创建多列统计信息。 与统计信息对象相比，它要求更多的系统资源来维护索引。 如果应用程序不要求多列索引，您可以通过创建统计信息对象但不创建索引，有效地利用系统资源。  
   
@@ -231,12 +233,12 @@ GO
 * 请确保数据库不是只读的。 如果数据库是只读的，则无法保存新统计信息对象。  
 * 通过使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 语句创建缺少的统计信息。  
   
-当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic 更改为 _readonly_database_statistic_scripted。  
+当有关只读数据库或只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 **tempdb**中进行维护。 当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 创建临时统计信息时，将在统计信息名称后追加后缀 _readonly_database_statistic  ，以便将临时统计信息与永久统计信息加以区分。 后缀 _readonly_database_statistic  是为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的统计信息预留的。 可以在读写数据库上创建和重新生成临时统计信息的脚本。 编写脚本时，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 将统计信息名称的后缀从 _readonly_database_statistic  更改为 _readonly_database_statistic_scripted  。  
   
 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建和更新临时统计信息。 但是，您可以使用用于永久统计信息的相同工具来删除临时统计信息和监视统计信息属性：  
   
 * 使用 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) 语句删除临时统计信息。  
-* 使用 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 和 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 目录视图监视统计信息。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
+* 使用 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 和 [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 目录视图监视统计信息   。 **sys_stats** 包含 **is_temporary** 列，用于指示哪些统计信息是永久的，哪些统计信息是临时的。  
   
  因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
     

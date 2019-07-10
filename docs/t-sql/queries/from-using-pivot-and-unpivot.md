@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928683"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559422"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-可以使用 `PIVOT` 和 `UNPIVOT` 关系运算符将表值表达式更改为另一个表。 `PIVOT` 轮换表值表达式，具体方法是将表达式某一列中的唯一值转换为输出中的多个列，并在必要时对最终输出中所需的其余任何列值运行聚合。 与 PIVOT 执行的操作相反，`UNPIVOT` 将表值表达式的列轮换为列值。  
+可以使用 `PIVOT` 和 `UNPIVOT` 关系运算符将表值表达式更改为另一个表。 `PIVOT` 通过将表达式中的一个列的唯一值转换为输出中的多列，来轮替表值表达式。 `PIVOT` 在需要对最终输出所需的所有剩余列值执行聚合时运行聚合。 与 PIVOT 执行的操作相反，`UNPIVOT` 将表值表达式的列轮换为列值。  
   
 `PIVOT` 提供的语法比一系列复杂的 `SELECT...CASE` 语句中所指定的语法更简单和更具可读性。 有关 `PIVOT` 语法的完整说明，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
@@ -75,7 +75,6 @@ GO
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
 GROUP BY DaysToManufacture;  
-  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

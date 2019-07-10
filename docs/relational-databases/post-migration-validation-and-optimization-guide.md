@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206363"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581231"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 
@@ -32,7 +32,7 @@ ms.locfileid: "54206363"
 
 ## <a name="CEUpgrade"></a> 由于 CE 版本变更导致的查询回归
 
-适用于：从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
+适用于：  从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 从较低版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新可用级别时，工作负载可能会面临性能回归风险。
 
@@ -53,7 +53,7 @@ ms.locfileid: "54206363"
 **适用范围：** 从外部平台（如 Oracle、DB2、MySQL 和 Sybase）到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移。
 
 > [!NOTE]
-> 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  将无法应对此方案。 
+> 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法应对此方案。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可针对存储过程编译查询计划，方法是在首次编译时截取输入参数，生成参数化且可重复使用的计划，然后对该输入数据分发进行优化。 即使未使用存储过程，生成普通计划的大多数据语句仍将被参数化。 缓存计划后，任何后期执行都会映射到之前缓存的计划中。
 如果首次编译未使用适用于常用工作负载的最常用参数集，可能会出现潜在问题。 对不同的参数使用相同的执行计划可能导致效率低下。 有关本主题的详细信息，请参阅[参数探查](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
@@ -94,7 +94,7 @@ ms.locfileid: "54206363"
 > [!NOTE]
 > 对于从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的迁移，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 源中已存在此问题，则按原样迁移到较新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法应对此方案。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器仅适用于编译时已知的信息。 如果工作负荷依赖于仅可在执行时已知的谓词，则选择不适合的计划的可能性会增加。 若要获得质量更佳的计划，谓词必须是 SARGable 或 Search Argumentable。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器仅适用于编译时已知的信息。 如果工作负荷依赖于仅可在执行时已知的谓词，则选择不适合的计划的可能性会增加。 若要获得质量更佳的计划，谓词必须是 SARGable 或 Search Argumentable     。
 
 非 SARGable 谓词的一些示例：
 -   隐式数据转换，例如从 VARCHAR 转换到 NVARCHAR，或从 INT 转换到 NVARCHAR。 查找实际执行计划中的运行时 CONVERT_IMPLICIT 警告。 从一种类型转换到另一种类型还会导致精度损失。
@@ -108,6 +108,9 @@ ms.locfileid: "54206363"
   -   这可能涉及将数据库中存储的任何用户定义的代码构造（如存储过程、用户定义函数或视图）与托管基础表中使用的数据类型信息的系统表（例如 [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)）进行比较。
 2. 如果无法将所有代码遍历到前一个点，则出于相同的目的，请更改表中的数据类型，使其匹配任何变量/参数声明。
 3. 了解以下结构的用途：
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   -   用作谓词的函数；
   -   通配符搜索；
   -   基于列数据的复杂表达式 - 评估是否需要改为创建可以索引的持久化计算列；

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 732ca10f49982c7e2de190cffd50d9780a986a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b53865a753cb538ebeb42573e473281057d4201
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499521"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556905"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -78,7 +78,7 @@ FORMAT ( value, format [, culture ] )
 |类别|类型|.NET 类型|  
 |--------------|----------|---------------|  
 |数字|BIGINT|Int64|  
-|数字|ssNoversion|Int32|  
+|数字|INT|Int32|  
 |数字|SMALLINT|Int16|  
 |数字|TINYINT|Byte|  
 |数字|Decimal|SqlDecimal|  
@@ -235,6 +235,12 @@ Format 返回显示 PM 的指定时间
 ```sql
 select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm tt') -- returns 02:00 PM
 select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm t') -- returns 02:00 P
+```
+  
+Format 返回采用 24 小时格式的指定时间
+
+```sql
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
 ```
   
 ## <a name="see-also"></a>另请参阅

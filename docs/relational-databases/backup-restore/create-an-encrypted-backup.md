@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8eab3ceeb9ace557f7e7f34b4bb267d6269d7fdc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bf26c7ea0384523370557e71069bf30233a74d6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521385"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586371"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52521385"
   
  按照以下步骤向本地磁盘创建数据库的加密备份。 本例使用一个名为 MyTestDB 的用户数据库。  
   
-1.  **创建 master 数据库的数据库主密钥：** 选择一个密码，用于加密将存储在数据库中的主密钥的副本。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+1.  **创建 master 数据库的数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”** 。  
   
     ```  
     -- Creates a database master key.   
@@ -43,7 +43,7 @@ ms.locfileid: "52521385"
   
     ```  
   
-2.  **创建备份证书：** 在 master 数据库中创建备份证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+2.  **创建备份证书：** 在 master 数据库中创建备份证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
     ```  
     Use Master  
@@ -54,8 +54,10 @@ ms.locfileid: "52521385"
   
     ```  
   
-3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
-  
+3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
@@ -78,11 +80,11 @@ ms.locfileid: "52521385"
   
  **先决条件：**  
   
--   Windows 存储帐户和容器。 有关详细信息，请参阅 [Lesson 1: Create Windows Azure Storage Objects](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)列中的一个值匹配。  
+-   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Windows Azure 存储对象](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
   
 -   master 数据库的数据库主密钥以及 SQL Server 实例上的证书或非对称密钥。 有关加密要求和权限，请参阅 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)。  
   
-1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，请连接到数据库引擎，打开新查询窗口并复制和粘贴到下例，然后单击 **“执行”**。  
+1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，请连接到数据库引擎、打开新查询窗口并复制和粘贴到下例，然后单击“执行”  。  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -90,7 +92,7 @@ ms.locfileid: "52521385"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **创建数据库主密钥：** 选择一个密码，用于加密将存储在数据库中的主密钥的副本。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+2.  **创建数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”** 。  
   
     ```  
     -- Creates a database master key.  
@@ -113,7 +115,7 @@ ms.locfileid: "52521385"
   
     ```  
   
-4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

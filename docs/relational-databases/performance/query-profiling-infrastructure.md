@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568271"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559463"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,6 +171,18 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+## <a name="query-profiling-infrastruture-usage-guidance"></a>查询分析基础结构使用指南
+下表总结了用于全局（在服务器级别）或在单个会话中启用标准分析或轻型分析的操作。 此外还包括其操作可用的最早版本。 
+
+|范围|标准分析|轻型分析|
+|---------------|---------------|---------------|
+|Global|包含 `query_post_execution_showplan` XE 的 xEvent 会话；从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始|跟踪标志 7412；从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始|
+|Global|包含 `Showplan XML` 跟踪事件的 SQL 跟踪和 SQL Server Profiler；从 SQL Server 2000 开始|包含 `query_thread_profile` XE 的 xEvent 会话；从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始|
+|Global|-|包含 `query_post_execution_plan_profile` XE 的 xEvent 会话；从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始|
+|Session|使用 `SET STATISTICS XML ON`；从 SQL Server 2000 开始|将 `QUERY_PLAN_PROFILE` 查询提示与包含 `query_plan_profile` XE 的 xEvent 会话一起使用；从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始|
+|Session|使用 `SET STATISTICS PROFILE ON`；从 SQL Server 2000 开始|-|
+|Session|单击 SSMS 中的[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)按钮；从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始|-|
 
 ## <a name="remarks"></a>Remarks
 

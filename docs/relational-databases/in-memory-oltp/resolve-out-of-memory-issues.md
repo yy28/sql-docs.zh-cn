@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518611"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582744"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518611"
   
 |主题|概述|  
 |-----------|--------------|  
-|[解决 OOM 导致的数据库还原故障](#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '\<databaseName>' 的还原操作失败”时应采取的操作。|  
+|[解决 OOM 导致的数据库还原故障](#bkmk_resolveRecoveryFailures)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '  \<databaseName>  ' 的还原操作失败”时应采取的操作。|  
 |[消除工作负荷的低内存或 OOM 情况的影响](#bkmk_recoverFromOOM)|发现内存不足问题对性能产生负面影响时应采取的操作。|  
-|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，不允许对数据库 '\<databaseName>' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|
+|[在提供足够内存时，解决由于内存不足导致的页分配失败问题](#bkmk_PageAllocFailure)|收到错误消息“由于资源池 '\<resourcePoolName>  ' 内存不足，不允许对数据库 '\<databaseName>  ' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|
 |[在 VM 环境下使用内存中 OLTP 的最佳做法](#bkmk_VMs)|在虚拟化环境中使用内存中 OLTP 需要注意的内容。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> 解决 OOM 导致的数据库还原故障  
- 尝试还原数据库时，你可能会收到错误消息：“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '\<databaseName>' 的还原操作失败”。这表明服务器没有足够的可用内存来还原数据库。 
+ 尝试还原数据库时，可能会收到错误消息：“由于资源池‘\<databaseName>’内存不足，数据库‘\<resourcePoolName>’的还原操作失败。”   这表明服务器没有足够的可用内存来还原数据库。 
    
 将数据库还原到的服务器必须有足够的可用内存用于数据库备份中的内存优化表，否则数据库不会联机，并且会被标记为可疑。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52518611"
      有关 MAX_MEMORY_PERCENT 最大值的信息，请参阅主题部分 [可用于内存优化表和索引的内存百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)。  
   
 -   增加 **最大服务器内存**。  
-    有关配置 max server memory 的信息，请参阅主题[“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。  
+    有关配置 max server memory 的信息，请参阅主题[“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  。  
   
 ##  <a name="bkmk_recoverFromOOM"></a> 消除工作负荷的低内存或 OOM 情况的影响  
  当然，最好不要出现低内存或 OOM（内存不足）情况。 好的计划和监视有助于避免 OOM 情况。 但再好的计划也并不总能预见实际情况，最后仍有可能遇到低内存或 OOM 情况。 从 OOM 恢复有两个步骤：  
@@ -77,7 +77,9 @@ ms.locfileid: "52518611"
 1.  [打开 DAC（专用管理员连接）](#bkmk_openDAC)  
   
 2.  [采取纠正措施](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> 打开 DAC（专用管理员连接）  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了专用管理员连接 (DAC)。 即使服务器对其他客户端连接停止响应，管理员也可以使用 DAC 访问正在运行的 SQL Server 数据库引擎实例来排除服务器上的故障。 `sqlcmd` 实用工具和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中都包含 DAC。  
   

@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973936"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586181"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "57973936"
 
 -   标注字符设置  
   
-     对于给定的同义词库，所有搜索模式或者区分标注字符或者不区分标注字符，例如波形符 (**~**)、锐音符 (**´**) 或元音变音符 (**¨**)（即， *区分重音* 或 *不区分重音*）。 例如，假设您在全文查询中指定要用其他模式替换“café”模式。 如果同义词库不区分重音，全文搜索将替换“café”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“café”模式。 默认情况下，同义词库不区分重音。  
+     对于给定的同义词库，所有搜索模式或者区分标注字符或者不区分标注字符，例如波形符 (~  )、锐音符 (´  ) 或元音变音符 (¨  )（即，区分重音  或不区分重音  ）。 例如，假定你在全文查询中指定 使用其他模式替换模式“café”。 如果同义词库不区分重音，全文搜索将替换模式“café” 和“cafe”。 如果同义词库区分重音，全文搜索仅替换“café”模式。 默认情况下，同义词库不区分重音。  
   
 ##  <a name="initial_thesaurus_files"></a>默认同义词库文件
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组 XML 同义词库文件，分别对应于每种支持的语言。 这些文件实际上是空的。 它们仅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同义词库通用的顶级 XML 结构以及注释掉的示例同义词库。  
@@ -83,6 +83,8 @@ ms.locfileid: "57973936"
 同义词库查询同时使用特定于语言的同义词库和全局同义词库。
 1.  首先，查询查找特定于语言的文件，并加载该文件以进行处理（除非已加载了该文件）。 该查询将进行扩展以包含同义词库文件中的扩展集和替换集规则所指定的特定于语言的同义词。 
 2.  然后，对全局同义词库重复执行这些步骤。 但是，如果字词已经是特定于语言的同义词库文件中的匹配项的一部分，则不会在全局同义词库中对该字词再次进行匹配。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a>同义词库文件的结构  
  每个同义词库文件都定义了一个 ID 为 `Microsoft Search Thesaurus` 的 XML 容器，以及一个包含示例同义词库的注释 `<!--`...`-->`。 同义词库是在 `<thesaurus>` 元素中定义的，其中包含定义标注字符设置、扩展集和替换集的子元素的示例。

@@ -14,12 +14,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667835"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582209"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47667835"
   
 -   “Oracle 服务器实例‘\<*OraclePublisherName*>'’以前配置为将‘\<*SQLServerDistributorName*>’作为其分发服务器。 若要开始使用‘\<*NewSQLServerDistributorName*>’作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，而这将删除该服务器实例上的所有发布。”  
   
--   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*’上的发布服务器‘\<*OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘*\<SynonymName>*’，以便重新创建。”  
+-   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* ’上的发布服务器‘\<*OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘ *\<SynonymName>* ’，以便重新创建。”  
   
  删除 Oracle 发布服务器时，会自动清除 Oracle 数据库中的复制对象。 但是，在某些情况下需要手动清除 Oracle 复制对象。 手动清除复制创建的 Oracle 复制对象：  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667835"
 2.  发出 SQL 命令 `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`。  
   
 3.  发出 SQL 命令 `DROP USER <replication_administrative_user_schema>``CASCADE;`。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>引发关于缺少主键的 SQL Server 错误 21663  
  事务发布中的项目必须具备有效的主键。 如果它们不具备有效的主键，则在尝试添加项目时会收到以下错误消息：  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47667835"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>引发关于重复链接服务器登录名的 SQL Server 错误 21642  
  在初始配置 Oracle 发布服务器时，会为发布服务器和分发服务器之间的连接创建一个链接服务器项。 该链接服务器的名称与 Oracle TNS 服务名称相同。 如果尝试创建具有相同名称的链接服务器，则会显示以下错误消息：  
   
- “异类发布服务器需要链接服务器。 名为‘*\<LinkedServerName>*’的链接服务器已存在。 请删除链接服务器或另选一个发布服务器名称。”  
+ “异类发布服务器需要链接服务器。 名为‘ *\<LinkedServerName>* ’的链接服务器已存在。 请删除链接服务器或另选一个发布服务器名称。”  
   
  如果尝试直接创建链接服务器，或者预先删除了 Oracle 发布服务器和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器之间的关系，而当前在尝试重新配置它，就会出现此错误。 如果尝试重新配置发布服务器时收到此错误，请用 [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) 删除链接服务器。  
   
@@ -103,11 +105,11 @@ ms.locfileid: "47667835"
   
  尝试在分发服务器上找到 SQL\*PLUS。 对于 Oracle 10g 客户端安装，此可执行文件的名称为 sqlplus.exe。 它通常安装在 %ORACLE_HOME%/bin 中。 若要验证 SQL\*PLUS 的路径是否显示在系统路径中，请检查系统变量 **Path** 的值：  
   
-1.  右键单击 **“我的电脑”**，再单击 **“属性”**。  
+1.  右键单击 **“我的电脑”** ，再单击 **“属性”** 。  
   
-2.  单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
+2.  单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
-3.  在 **“环境变量”** 对话框的 **“系统变量”** 列表中，选择 **Path** 变量，然后单击 **“编辑”**。  
+3.  在 **“环境变量”** 对话框的 **“系统变量”** 列表中，选择 **Path** 变量，然后单击 **“编辑”** 。  
   
 4.  在 **“编辑系统变量”** 对话框中：如果 **“变量值”** 文本框中未包含 sqlplus.exe 所在文件夹的路径，请编辑字符串以包含该路径。  
   
@@ -153,17 +155,17 @@ ms.locfileid: "47667835"
   
  查看并修改注册表设置：  
   
-1.  单击 **“启动”**，再单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  在 **“运行”** 对话框中，键入 **regedit**，然后单击 **“确定”**。  
+2.  在 **“运行”** 对话框中，键入 **regedit**，然后单击 **“确定”** 。  
   
-3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers。  
+3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers。  
   
      Providers 下应该包含一个名为 OraOLEDB.Oracle 的文件夹。 在此文件夹中应该有一个名为 **AllowInProcess**的 DWORD 值，它的值为 **1**。  
   
 4.  如果发现 **AllowInProcess** 被设置为 **0**，请将其更新为 **1**：  
   
-    1.  右键单击该注册表项，然后单击 **“修改”**。  
+    1.  右键单击该注册表项，然后单击 **“修改”** 。  
   
     2.  在 **“编辑字符串”** 对话框的 **“数值数据”** 字段中，键入 **1** 。  
   
@@ -237,11 +239,11 @@ ms.locfileid: "47667835"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中连接到 Oracle 发布服务器的分发服务器并展开服务器节点。  
   
-2.  右键单击 **“复制”**，然后单击 **“分发服务器属性”**。  
+2.  右键单击 **“复制”** ，然后单击 **“分发服务器属性”** 。  
   
 3.  在 **“分发服务器属性”** 对话框中的 **“发布服务器”** 页上，清除 Oracle 发布服务器的复选框。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
  **删除 Oracle 发布服务器 (Transact-SQL)**  
   

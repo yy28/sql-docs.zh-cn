@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ed869ccfbeb745229ce1bbf2780ce6beb7e12e2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539734"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579885"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52539734"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建应用程序角色，请使用：**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "52539734"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对数据库具有 ALTER ANY APPLICATION ROLE 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -59,20 +59,22 @@ ms.locfileid: "52539734"
   
 3.  展开 **“角色”** 文件夹。  
   
-4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”。  
+4.  右键单击“应用程序角色”文件夹，然后选择“新建应用程序角色…”   。  
   
-5.  在“常规”页的“应用程序角色 - 新建”对话框中，在“角色名称”框中输入新的应用程序角色的新名称。  
+5.  在“常规”页的“应用程序角色 - 新建”对话框中，在“角色名称”框中输入新的应用程序角色的新名称    。  
   
-6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号“(…)”以打开“定位架构”对话框。  
+6.  在 **“默认架构”** 框中，通过输入对象名称指定将拥有此角色创建的对象的架构。 或者，单击省略号“(…)”以打开“定位架构”对话框   。  
   
 7.  在 **“密码”** 框中，输入新角色的密码。 在 **“确认密码”** 框中再次输入该密码。  
   
-8.  在 **“此角色拥有的架构”**，选择或查看此角色将拥有的架构。 架构只能由一个架构或角色拥有。  
+8.  在 **“此角色拥有的架构”** ，选择或查看此角色将拥有的架构。 架构只能由一个架构或角色拥有。  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="additional-options"></a>其他选项  
- “应用程序角色 - 新建”对话框还在两个其他页上提供了选项：和“扩展属性”。  
+ “应用程序角色 - 新建”对话框还在两个其他页上提供了选项：  “安全对象”和“扩展属性”   。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   
@@ -84,9 +86,9 @@ ms.locfileid: "52539734"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Creates an application role called "weekly_receipts" that has the password "987Gbv876sPYY5m23" and "Sales" as its default schema.  

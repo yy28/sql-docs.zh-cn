@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a67d663f2f0970750b30686b443538cd66358fc5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228102"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583064"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>在 Always On 可用性组中设置复制分发数据库
 
@@ -116,6 +116,8 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
    `@working_directory` 的值应为独立于 DIST1、DIST2 和 DIST3 的网路路径。
 
 1. 在 DIST2 和 DIST3 上，运行：  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
@@ -238,7 +240,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>从分发数据库 AG 删除发布服务器
 
-此例从分发服务器的当前分发数据库 AG 中删除发布服务器，但不会影响此分发数据库 AG 服务的其他发布服务器。 在此例中，现有配置具有 AG 中的分发数据库。 DIST1、DIST2 和 DIST3 是分发服务器，`distribution` 是 AG 中的分发数据库，PUB1 和 PUB2 是 `distribution` 数据库服务的发布服务器。 此示例从这些分发服务器中删除 PUB1。
+此示例从分发服务器的当前分发数据库 AG 中删除发布服务器，但不会影响此分发数据库 AG 服务的其他发布服务器。 在此例中，现有配置具有 AG 中的分发数据库。 DIST1、DIST2 和 DIST3 是分发服务器，`distribution` 是 AG 中的分发数据库，PUB1 和 PUB2 是 `distribution` 数据库服务的发布服务器。 此示例从这些分发服务器中删除 PUB1。
 
 ### <a name="publisher-workflow"></a>发布服务器工作流
 
@@ -395,9 +397,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+EXEC?master.dbo.sp_addlinkedserver?@server?=?N'SQLNODE5',?@srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC?master.dbo.sp_addlinkedsrvlogin?@rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>另请参阅  

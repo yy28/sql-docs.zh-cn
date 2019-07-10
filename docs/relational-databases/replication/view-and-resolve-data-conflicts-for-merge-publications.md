@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a5aced367f3b046473887999ff8e72b24ff8156
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047335"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580462"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>合并复制的冲突解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "63047335"
   
     -   在上部网格中选择一行或多行，然后单击 **“删除”** ，这与单击 **“提交入选方”** 按钮的效果相同（不对数据进行任何更改）。  
   
-    -   单击属性按钮 ( **...** ) 查看有关冲突所涉及的列的详细信息。  
+    -   单击属性按钮 (...) 查看有关冲突所涉及的列的详细信息  。  
   
     -   编辑 **“冲突解决入选方”** 或 **“冲突解决落选方”** 列中的数据，然后再提交数据（如果列为灰色，则数据为只读）。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "63047335"
   
 6.  关闭复制冲突查看器。  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-  
 ## <a name="view-conflict-information"></a>查看冲突信息
 在合并复制中解决冲突后，落选行中的数据将写入冲突表中。 这些冲突数据可以使用复制存储过程以编程方式进行查看。 有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   

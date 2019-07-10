@@ -1,5 +1,5 @@
 ---
-title: T-SQL 教程：删除数据库对象 |Microsoft Docs
+title: T-SQL 教程：删除数据库对象 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4bd0a0d3c70b31f398c791c4e75dbd7ab1403e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b155862bd9983bc8b93b6088bfa6d5df254ffe7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621145"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579386"
 ---
 # <a name="lesson-3-delete-database-objects"></a>第 3 课：删除数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,33 +44,32 @@ ms.locfileid: "47621145"
 
 1. 使用 `DROP` 语句删除 `Mary` 对 `TestData` 数据库的访问权限：
   
-  ```sql  
-  DROP USER Mary;  
-  GO  
-  ```  
+   ```sql  
+   DROP USER Mary;  
+   GO  
+   ```  
 
 
 2. 使用 `DROP` 语句删除 `Mary` 对此 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]实例的访问权限。
   
-  ```sql  
-    DROP LOGIN [<computer_name>\Mary];  
-    GO   
-  ```  
+   ```sql  
+   DROP LOGIN [<computer_name>\Mary];  
+   GO   
+   ```  
   
-3.   使用 `DROP` 语句删除存储过程 `pr_Names`：  
+3. 使用 `DROP` 语句删除存储过程 `pr_Names`：  
   
-    ```sql  
-    DROP PROC pr_Names;  
-    GO  
-    ```  
+   ```sql  
+   DROP PROC pr_Names;  
+   GO   
+   ```  
   
-6.  使用 `DROP` 语句删除视图 `vw_Names`：  
+4. 使用 `DROP` 语句删除视图 `vw_Names`：  
   
-    ```sql  
-    DROP VIEW vw_Names;  
-    GO  
-  
-    ```  
+   ```sql  
+   DROP VIEW vw_Names;  
+   GO  
+   ```  
 
 ## <a name="delete-table"></a>删除表
   

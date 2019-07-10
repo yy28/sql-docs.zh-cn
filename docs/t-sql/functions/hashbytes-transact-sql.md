@@ -20,14 +20,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4364afdd649fe91f5e779170d9f80a4071118ea0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 400078e666f3854383cbd430cf8fd719ea720929
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145411"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533817"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回其在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的输入的 MD2、MD4、MD5、SHA、SHA1 或 SHA2 哈希值。  
@@ -43,14 +44,15 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** \<algorithm> **'**  
- 标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
+
+`<algorithm>`  
+标识用于对输入执行哈希操作的哈希算法。 这是必选参数，无默认值。 需要使用单引号。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，除 SHA2_256 和 SHA2_512 以外的所有算法都已过时。  
   
- **@input**  
- 指定包含要对其执行哈希操作的数据的变量。 @input 为 varchar、nvarchar 或 varbinary     。  
+`@input`  
+指定包含要对其执行哈希操作的数据的变量。 `@input` 为 varchar、nvarchar 或 varbinary    。  
   
- **'** input **'**   
- 指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
+'input'   
+指定一个表达式，其计算结果为要对其执行哈希操作的字符或二进制字符串。  
   
  输出符合算法标准：MD2、MD4 和 MD5 为 128 位（16 个字节）；SHA 和 SHA1 为 160 位（20 个字节）；SHA2_256 为 256 位（32 个字节），SHA2_512 为 512 位（64 个字节）。  
   
@@ -68,31 +70,30 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  
- 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA1` 哈希值  。  
+ 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA2_256` 哈希值  。  
   
 ```sql  
-DECLARE @HashThis nvarchar(4000);  
-SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
-SELECT HASHBYTES('SHA1', @HashThis);  
+DECLARE @HashThis nvarchar(32);  
+SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>返回表列的哈希  
- 下面的示例返回 `c1` 表 `Test1` 列中值的 SHA1 哈希。  
+ 下面的示例返回 `Test1` 表 `c1` 列中值的 SHA2_256 哈希。  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
+CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
-SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
+SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 -------------------------------------------  
-0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
-0xF643A82F948DEFB922B12E50B950CEE130A934D6  
-  
+0x741238C01D9DB821CF171BF61D72260B998F7C7881D90091099945E0B9E0C2E3 
+0x91DDCC41B761ACA928C62F7B0DA61DC763255E8247E0BD8DCE6B22205197154D  
 (2 row(s) affected)  
 ```  
   

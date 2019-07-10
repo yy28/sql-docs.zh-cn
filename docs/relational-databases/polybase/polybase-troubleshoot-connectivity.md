@@ -12,12 +12,12 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776012"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581219"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -31,6 +31,8 @@ ms.locfileid: "64776012"
 
 1. 已安装 PolyBase 的 SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 或更高版本
 1. 受 Kerberos（Active Directory 或 MIT）保护的 Hadoop 群集（Cloudera 或 Hortonworks）
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>简介
 

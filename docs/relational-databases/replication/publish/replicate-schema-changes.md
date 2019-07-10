@@ -14,12 +14,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d42e51bfb9e1c661fc35f457ff090f07879c679b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 16aafa04c2c5c8041384c04a035b984914748c18
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128157"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582924"
 ---
 # <a name="replicate-schema-changes"></a>复制架构更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,18 +53,20 @@ ms.locfileid: "54128157"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   ALTER TABLE … DROP COLUMN 语句将始终复制到所有其订阅包含要被删除的列的订阅服务器，即使禁用对架构更改的复制也是如此。  
+-   ALTER TABLE... DROP COLUMN 语句将始终复制到所有其订阅包含要被删除的列的订阅服务器，即使禁用对架构更改的复制也是如此。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。  有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>禁用对架构更改的复制  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，将“复制架构更改”属性值设置为“False”。  
+1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，将“复制架构更改”属性值设置为“False”。      
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
-     若要仅传播特定的架构更改，请在架构更改前将此属性设置为 **True** ，然后在更改后将其设置为 **False** 。 相反，若要传播大多数架构更改，而不是一个给定更改，请在架构更改前将此属性设置为 **“False”** ，然后在更改后将其设置为 **“True”** 。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     To propagate only specific schema changes, set the property to **True** before a schema change, and then set it to **False** after the change is made. Conversely, to propagate most schema changes, but not a given change, set the property to **False** before the schema change, and then set it to **True** after the change is made.  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程来指定是否复制这些架构更改。 您使用的存储过程取决于发布的类型。  

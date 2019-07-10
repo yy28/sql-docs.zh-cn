@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2e412e2ef25e9eb48a8068cbe6e75b2c1ec8797
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124338"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579831"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54124338"
   
 -   **@threshold** 参数，用于确定 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 或早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅何时需要新的标识范围。  
   
- 例如，可以将 **@identity_range** 指定为 10000，将 **@pub_identity_range**。 为运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器和所有订阅服务器（包括具有服务器订阅功能的订阅服务器）分配主范围 10000。 还为具有服务器订阅功能的订阅服务器分配主范围 500000，与重新发布订阅服务器同步的订阅服务器可以使用该范围（您还必须在重新发布订阅服务器为发布中的项目指定 **@identity_range**、 **@pub_identity_range**和 **@threshold** ）。  
+ 例如，可以将 **@identity_range** 指定为 10000，将 **@pub_identity_range** 。 为运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的发布服务器和所有订阅服务器（包括具有服务器订阅功能的订阅服务器）分配主范围 10000。 还为具有服务器订阅功能的订阅服务器分配主范围 500000，与重新发布订阅服务器同步的订阅服务器可以使用该范围（您还必须在重新发布订阅服务器为发布中的项目指定 **@identity_range** 、 **@pub_identity_range** 和 **@threshold** ）。  
   
  每个运行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的订阅服务器还接收辅助标识范围。 辅助范围的大小等于主范围的大小。主范围用尽后，可以使用辅助范围，而且合并代理将分配一个新范围给订阅服务器。 新范围将成为辅助范围，而由于订阅服务器使用标识值，处理将继续进行。  
   
@@ -97,10 +97,10 @@ ms.locfileid: "54124338"
   
 -   **@threshold** 参数，它用于确定订阅何时需要新的标识范围。  
   
- 例如，可以将 **@pub_identity_range**指定为 10000，将 **@identity_range** 指定为 1000（假定订阅服务器上的更新较少），将 **@threshold**。 在订阅服务器上进行 800 次插入后（即 1000 的 80%），将为订阅服务器分配一个新范围。 在发布服务器上进行 8000 次插入后，将为发布服务器分配一个新范围。 分配新范围后，表中的标识范围值之间将有一定的间隔。 指定较高的阈值会产生较小的间隔，但这会降低系统的容错能力：如果分发代理由于某种原因无法运行，订阅服务器就更容易用完标识。  
+ 例如，可以将 **@pub_identity_range** 指定为 10000，将 **@identity_range** 指定为 1000（假定订阅服务器上的更新较少），将 **@threshold** 。 在订阅服务器上进行 800 次插入后（即 1000 的 80%），将为订阅服务器分配一个新范围。 在发布服务器上进行 8000 次插入后，将为发布服务器分配一个新范围。 分配新范围后，表中的标识范围值之间将有一定的间隔。 指定较高的阈值会产生较小的间隔，但这会降低系统的容错能力：如果分发代理由于某种原因无法运行，订阅服务器就更容易用完标识。  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>为手动标识范围管理分配范围  
- 如果指定手动标识范围管理，则必须确保发布服务器和每个订阅服务器使用不同的标识范围。 例如，假设发布服务器上具有标识列定义为 `IDENTITY(1,1)`的表：标识列从 1 开始，在每次插入行时递增 1。 如果发布服务器上的表有 5,000 行，并预计表中的行数在应用程序生存期间会有增长，则发布服务器可使用范围 1-10,000。 假定有两个订阅服务器，订阅服务器 A 可以使用 10,001–20,000，订阅服务器 B 可使用 20,001-30,000。  
+ 如果指定手动标识范围管理，则必须确保发布服务器和每个订阅服务器使用不同的标识范围。 例如，假设发布服务器上具有标识列定义为 `IDENTITY(1,1)`的表：标识列从 1 开始，在每次插入行时递增 1。 如果发布服务器上的表有 5,000 行，并预计表中的行数在应用程序生存期间会有增长，则发布服务器可使用范围 1-10,000。 假定有两个订阅服务器，订阅服务器 A 可以使用 10,001-20,000，订阅服务器 B 可使用 20,001-30,000。  
   
  使用快照或其他方式初始化订阅服务器后，执行 DBCC CHECKIDENT，为订阅服务器分配其标识范围的起点。 例如，在订阅服务器 A 上，将执行 `DBCC CHECKIDENT('<TableName>','reseed',10001)`。 在订阅服务器 B 上，将执行 `CHECKIDENT('<TableName>','reseed',20001)`。  
   
@@ -112,7 +112,9 @@ ms.locfileid: "54124338"
 1.  停止所有订阅服务器上的所有活动。  
   
 2.  对包含标识列的每个已发布表：  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  在每个订阅服务器的订阅数据库中，执行 `IDENT_CURRENT('<TableName>')`。  
   
     2.  记录在所有订阅服务器中发现的最大值。  

@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744175"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556956"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "66744175"
 |数据库恢复顾问|是|是|是|是|是|
 |加密备份|是|是|否|否|否|
 |Microsoft Azure 的混合备份（URL 的备份）|是|是|否|否|否|
-|无群集的可用性组|是|是|否|否|否|否|
+|读取缩放可用性组|是|是|否|否|否|否|
 |最小副本提交可用性组|是|是|是|否|否|否|
   
 

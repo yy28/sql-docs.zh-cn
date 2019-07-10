@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135897"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585879"
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "54135897"
     |指定主机信息以标识数据库侦听器|主机是正在运行 Oracle 侦听器的计算机的名称或 DNS 别名，该计算机通常是该数据库所驻留的计算机。 对于某些协议，必须提供其他信息。 例如，如果选择 TCP，则必须提供相应的端口，以便侦听器侦听针对目标数据库的连接请求。 默认 TCP 配置使用 1521 端口。|  
   
 3.  创建快照发布或事务发布，为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用该发布，然后为订阅服务器创建推送订阅。 有关详细信息，请参阅 [为非 SQL Server 订阅服务器创建订阅](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="setting-directory-permissions"></a>设置目录权限  
  分发服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务运行所用的帐户必须具有对 Oracle 客户端网络软件安装目录（以及所有子目录）的读取和执行权限。  
   
@@ -60,9 +62,9 @@ ms.locfileid: "54135897"
   
  成功连接到 Oracle 订阅服务器后，尝试使用为订阅的分发代理配置的同一帐户和密码登录到该数据库：  
   
-1.  单击 **“启动”**，再单击 **“运行”**。  
+1.  单击 **“启动”** ，再单击 **“运行”** 。  
   
-2.  键入 `cmd` ，然后单击 **“确定”**。  
+2.  键入 `cmd` ，然后单击 **“确定”** 。  
   
 3.  在命令提示符下，键入：  
   
@@ -87,7 +89,7 @@ ms.locfileid: "54135897"
   
     -   确保不要将空字符串作为列值插入到已发布表中。  
   
-    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 **-SkipErrors** 参数。 指定 Oracle 错误代码 1400 (**-SkipErrors1400**)。  
+    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数  。 指定 Oracle 错误代码 1400 ( **-SkipErrors1400**)。  
   
     -   修改生成的创建表脚本，从任何可能包含关联空字符串的字符列中删除 NOT NULL 属性，并使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)参数将修改后的脚本作为项目的自定义创建脚本提供。  
   

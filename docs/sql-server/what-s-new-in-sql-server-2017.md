@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263495"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556933"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中的 **modified_extent_page_count** 列跟踪每个数据库文件中的差异更改，从而启用基于数据库中已更改页面百分比执行差异备份或完全备份的智能备份解决方案。 (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL 语法现支持使用 ON  关键字将表加载到用户默认文件组以外的文件组。 (CTP 2.0)
 - 现在，在属于 AlwaysOn 可用性组  的全部数据库（包括属于同一实例的数据库）中支持跨数据库事务。 请参阅 [事务 - AlwaysOn 可用性组和数据库镜像](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- 新的“可用性组”  功能包括无群集支持、最小副本提交可用性组设置和 Windows-Linux 跨操作系统迁移和测试。 (CTP 1.3)
+- 新的“可用性组”  功能包括无群集读取扩展支持、最小副本提交可用性组设置和 Windows-Linux 跨操作系统迁移和测试。 (CTP 1.3)
 - 新的动态管理视图：
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 公开摘要级别特性和有关事务日志文件的信息，这对于监视事务日志的运行状况很有用。 (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) 跟踪每个数据库的版本存储使用情况，有助于根据每个数据库的版本存储使用情况主动规划 tempdb 大小。 (CTP 2.0)

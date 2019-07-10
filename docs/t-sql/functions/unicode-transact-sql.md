@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3ebe7192142b47011864ab112d514187ead99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec799438a384ba8bf20e8070b84703e6f1e60e6f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946797"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500212"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +42,14 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** ncharacter_expression **'**   
- 是 nchar 或 nvarchar 表达式   。  
+**'** ncharacter_expression **'**   
+是 nchar 或 nvarchar 表达式   。  
   
 ## <a name="return-types"></a>返回类型  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函数返回一个在 0 到 0xFFFF 范围内的 UCS-2 代码点。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，若使用启用了[补充字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则时，UNICODE 会返回一个在 0 到 0x10FFFF 范围内的 UTF-16 代码点。  
+在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函数返回范围 000000 - 00FFFF（它能够表示 Unicode 基本多文种平面 (BMP) 中的 65,535 个字符）内的 UCS-2 码位。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，若使用启用了[补充字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则时，UNICODE 会返回一个在 000000 到 10FFFF 范围内的 UTF-16 码位。 有关 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 中的 Unicode 支持的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)。 
   
 ## <a name="examples"></a>示例  
   

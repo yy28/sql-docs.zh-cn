@@ -17,12 +17,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 057320ea2d739b89675a253f4dad80b0f78357f3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fbf0eac77eab02c63ef3e46941da93d47718bbd9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128247"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584892"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,19 +60,21 @@ ms.locfileid: "54128247"
      此存储过程使用合并代理传递给这些参数的值来实现自定义冲突解决逻辑；它必须返回结构与基表结构相同的单行结果集，并且包含该行的入选版本的数据值。  
   
 2.  向订阅服务器用来连接到发布服务器的任何登录名授予对存储过程的 EXECUTE 权限。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>将自定义冲突解决程序用于新的表项目  
   
 1.  执行 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 以定义一个项目，为 **@article_resolver** **参数指定值** MicrosoftSQL **@article_resolver** ，并为 **@resolver_info** 参数指定用于实现冲突解决程序逻辑的存储过程的名称。 有关详细信息，请参阅 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>将自定义冲突解决程序用于现有表项目  
   
-1.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication** 和 **@article**，将 **@property** 的值指定为 **article_resolver**，将 **@value** 的值指定为 **MicrosoftSQL** **Server Stored ProcedureResolver**。  
+1.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication** 和 **@article** ，将 **@property** 的值指定为 **article_resolver**，将 **@value** 的值指定为 **MicrosoftSQL** **Server Stored ProcedureResolver**。  
   
-2.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication**和 **@article**，将 **@property** 的值指定为 **@property**，同时为 **@value**中为合并项目实现自定义冲突解决程序。  
+2.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication** 和 **@article** ，将 **@property** 的值指定为 **@property** ，同时为 **@value** 中为合并项目实现自定义冲突解决程序。  
   
 ##  <a name="COM"></a> 使用基于 COM 的自定义冲突解决程序  
- <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个接口，可以利用该接口编写复杂的业务逻辑以处理事件并解决在合并复制同步过程中发生的冲突。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以编写自己的基于本机代码的自定义业务逻辑以解决冲突。 使用诸如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 之类的产品，此逻辑可作为 COM 组件生成并编译到动态链接库 (DLL) 中。 这类基于 COM 的自定义冲突解决程序必须实现 **ICustomResolver** 接口，该接口是专为解决冲突而设计的。  
+ <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个接口，可以利用该接口编写复杂的业务逻辑以处理事件并解决在合并复制同步过程中发生的冲突。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以编写自己的基于本机代码的自定义业务逻辑以解决冲突。 使用诸如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 之类的产品，此逻辑可作为 COM 组件生成并编译到动态链接库 (DLL) 中。 这类基于 COM 的自定义冲突解决程序必须实现 ICustomResolver 接口，该接口是专为解决冲突而设计的  。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>创建和注册基于 COM 的自定义冲突解决程序  
   
@@ -99,7 +101,7 @@ ms.locfileid: "54128247"
   
 8.  在发布服务器上，执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) 以验证该库尚未注册为自定义冲突解决程序。  
   
-9. 若要将该库注册为自定义冲突解决程序，请在分发服务器上执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 将 COM 对象的友好名称指定给 **@article_resolver**，将库的 ID (CLSID) 指定给 **@resolver_clsid**，将 **false** 的值指定为 **@is_dotnet_assembly**中为合并项目实现自定义冲突解决程序。  
+9. 若要将该库注册为自定义冲突解决程序，请在分发服务器上执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)。 将 COM 对象的友好名称指定给 **@article_resolver** ，将库的 ID (CLSID) 指定给 **@resolver_clsid** ，将 **false** 的值指定为 **@is_dotnet_assembly** 中为合并项目实现自定义冲突解决程序。  
   
     > [!NOTE]  
     >  当不再需要某个自定义冲突解决程序时，可使用 [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) 将其取消注册。  
@@ -110,13 +112,13 @@ ms.locfileid: "54128247"
   
 1.  在发布服务器上执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，并记下所需解决程序的友好名称。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 来定义项目。 将步骤 1 中项目冲突解决程序的友好名称指定给 **@article_resolver**中为合并项目实现自定义冲突解决程序。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
+2.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 来定义项目。 将步骤 1 中项目冲突解决程序的友好名称指定给 **@article_resolver** 中为合并项目实现自定义冲突解决程序。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>将自定义冲突解决程序用于现有表项目  
   
 1.  在发布服务器上执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，并记下所需解决程序的友好名称。  
   
-2.  执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication**、**@article**，为 **@property** 指定值 **article_resolver**，为 **@value** 指定项目解决程序的友好名称。  
+2.  执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication** 、 **@article** ，为 **@property** 指定值 **article_resolver**，为 **@value** 指定项目解决程序的友好名称。  
   
 
 ## <a name="see-also"></a>另请参阅  

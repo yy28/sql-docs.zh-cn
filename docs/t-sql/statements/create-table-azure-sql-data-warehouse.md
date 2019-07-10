@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE（Azure SQL 数据仓库）| Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 07/03/2019
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a137ff26240b23e99f2faeadb367b1379b8c0f8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413328"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564022"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 
@@ -164,21 +164,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  请在“示例”部分中查看[创建已分区表](#PartitionedTable)。
 
-### <a name="ordered-clustered-columnstore-index-option-preview"></a>有序聚集列存储索引选项（预览版）
+### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>有序聚集列存储索引选项（Azure SQL 数据仓库预览版）
 
 聚集列存储索引是用于在 Azure SQL 数据仓库中创建表的默认索引。  ORDER 规范默认采用 COMPOUND 键。  排序始终为升序。 如果没有指定 ORDER 子句，则不会对列存储进行排序。 由于排序过程的原因，与具有无序聚集列存储索引的表相比，具有有序聚集列存储索引的表的数据加载时间可能更长。 如果加载数据时需要更多的 tempdb 空间，你可以减少每个插入的数据量。
 
-在预览版期间，可以运行此查询来检查已启用 ORDER 的一个或多个列。  稍后将提供目录视图，其中包含此类信息和列序号（如果在 ORDER 中指定了多个列的话）。
+在预览版期间，可以运行此查询来检查已启用 ORDER 的一个或多个列。
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> 数据类型
@@ -594,7 +594,8 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>另请参阅
  
- [CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT（Azure SQL 数据仓库）](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

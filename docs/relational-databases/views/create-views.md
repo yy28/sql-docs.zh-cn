@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 23b29d5d7626986c957489249eb570eaa993f8f0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514645"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581685"
 ---
 # <a name="create-views"></a>创建视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52514645"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **创建视图，使用：**  
   
@@ -52,9 +52,9 @@ ms.locfileid: "52514645"
   
  视图最多可以包含 1,024 列。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -63,21 +63,23 @@ ms.locfileid: "52514645"
   
 1.  在 **“对象资源管理器”** 中，展开要创建新视图的数据库。  
   
-2.  右键单击“视图”文件夹，然后单击“新建视图...”。  
+2.  右键单击“视图”文件夹，然后单击“新建视图...”   。  
   
-3.  在 **“添加表”** 对话框中，从以下选项卡之一选择要在新视图中包含的元素：“表”、“视图”、“函数”和“同义词”。  
+3.  在“添加表”对话框中，从以下选项卡之一选择要在新视图中包含的元素：  “表”、“视图”、“函数”和“同义词”。  
   
-4.  单击 **“添加”**，再单击 **“关闭”**。  
+4.  单击 **“添加”** ，再单击 **“关闭”** 。  
   
 5.  在 **“关系图窗格”** 中，选择要在新视图中包含的列或其他元素。  
   
 6.  在 **“条件窗格”** 中，选择列的其他排序或筛选条件。  
   
-7.  在“文件”菜单上，单击“保存”以保存_视图名称_。  
+7.  在“文件”  菜单上，单击“保存”  以保存_视图名称_。  
   
-8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
-  
-     有关查询和视图设计器的详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
+8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -85,9 +87,9 @@ ms.locfileid: "52514645"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012 ;   

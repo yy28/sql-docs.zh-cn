@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6df72b8094f62ca2ab16bee617f9d1c442cc10d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706733"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583447"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,10 +168,13 @@ ON
 2.  *运行 Alter 语句时出错*   
     解决方法：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 有关第 7 课中提供的说明，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
-3.  *错误代码 5120 无法打开物理文件“%.\*ls”。操作系统错误 %d:“%ls”*    
-    解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且包含一个活动数据库文件，ServerB 意外启动并且也包含一个指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码为 *5120 无法打开物理文件 "%.\*ls".操作系统错误 %d：“%ls”* 。  
+3.  *错误代码 5120 无法打开物理文件“%.\*ls”。操作系统错误 %d：“%ls”*   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
-     要解决此问题，首先需要确定是否需要 ServerA 访问 Azure 存储中的数据库文件。 如果不需要，只需删除 ServerA 与 Azure 存储中数据库文件之间的任何连接。 为此，请按照下列步骤进行操作：  
+     To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
   
     1.  使用 ALTER Database 语句将 ServerA 的文件路径设置为本地文件夹。  
   

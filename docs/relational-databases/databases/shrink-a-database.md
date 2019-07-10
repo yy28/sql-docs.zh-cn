@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7642b2514f7a73034e8f0c2a5c75db71149d33e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae356a0f5ad27a92eb7ba7ba70fcf1553c0aa65c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559584"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583461"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51559584"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **收缩数据库，使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51559584"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[收缩数据库](#FollowUp)  
+-   **跟进：** [收缩数据库](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -75,9 +75,9 @@ ms.locfileid: "51559584"
   
     -   除非有特定要求，否则不要将 AUTO_SHRINK 数据库选项设置为 ON。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -86,9 +86,9 @@ ms.locfileid: "51559584"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“数据库”，再右键单击要收缩的数据库。  
+2.  展开  “数据库”，再右键单击要收缩的数据库。  
   
-3.  指向 **“任务”**，指向 **“收缩”**，然后单击 **“数据库”**。  
+3.  指向 **“任务”** ，指向 **“收缩”** ，然后单击 **“数据库”** 。  
   
      **“数据库”**  
      显示所选数据库的名称。  
@@ -105,17 +105,19 @@ ms.locfileid: "51559584"
      **收缩后文件中的最大可用空间**  
      输入在数据库收缩后数据库文件中剩余可用空间的最大百分比。 值可以介于 0 和 99 之间。  
   
-4.  单击“确定” 。  
-  
+4.  单击“确定”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>收缩数据库  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   

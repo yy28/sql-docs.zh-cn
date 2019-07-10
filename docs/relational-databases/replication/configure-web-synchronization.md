@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135577"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582523"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,11 @@ ms.locfileid: "54135577"
 3.  配置合并发布以允许使用 Web 同步。  
   
 4.  配置一个或多个订阅以使用 Web 同步。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
->  如果您计划复制大量数据或者使用大型数据类型（如 **varchar(max)**），请阅读本主题中的“复制大量数据”一节。  
+>  如果您计划复制大量数据或者使用大型数据类型（如 **varchar(max)** ），请阅读本主题中的“复制大量数据”一节。  
   
  若要成功设置 Web 同步，您必须决定如何配置安全性以满足您特定的要求和策略。 最好先作出以上决策并创建必要的帐户，然后再尝试配置 IIS、发布和订阅。  
   
@@ -104,7 +106,7 @@ ms.locfileid: "54135577"
   
 2.  选择与 Web 同步站点关联的应用程序池，然后单击 **“操作”** 窗格上的 **“高级设置”** 。  
   
-3.  在“高级设置”对话框的 **“处理模型”** 标题下，单击标为 **“最大工作线程数”** 的行。 更改属性值，然后单击 **“确定”**。  
+3.  在“高级设置”对话框的 **“处理模型”** 标题下，单击标为 **“最大工作线程数”** 的行。 更改属性值，然后单击 **“确定”** 。  
   
 ## <a name="configuring-the-publication"></a>配置发布  
  若要使用 Web 同步，需要创建一个发布（就像为标准合并拓扑创建发布一样）。 有关详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
@@ -132,11 +134,11 @@ ms.locfileid: "54135577"
   
  XML 文件的最大大小为 4 GB，但复制会成批地同步该文件的更改。 数据和元数据的最大批大小是 25 MB。 必须确保每批的数据不超过大约 20 MB，20 MB 足以容纳元数据和任何其他开销。 此限制具有以下含义：  
   
--   不能复制任何会导致数据和元数据超过 25 MB 的列。 如果要复制的行包含大型数据类型（如 **varchar(max)**），这可能会引发问题。  
+-   不能复制任何会导致数据和元数据超过 25 MB 的列。 如果要复制的行包含大型数据类型（如 **varchar(max)** ），这可能会引发问题。  
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“ 代”度量的，代是指每个项目的变更集。 每个批次中代的数量是使用合并代理的 **DownloadGenerationsPerBatch** 和 **UploadGenerationsPerBatch** 参数指定的。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 每个批次中代的数量是使用合并代理的 -DownloadGenerationsPerBatch 和 -UploadGenerationsPerBatch 参数指定的   。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

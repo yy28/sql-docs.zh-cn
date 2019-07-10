@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775140"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581426"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -136,6 +136,8 @@ SQL Server 2017 （兼容级别 140 及更早版本）中此查询的执行计�
 2. SQL Server 也推断出了隐式 `GROUP BY O_CUSTKEY on ORDERS` 并使用 IndexSpool + StreamAggregate 实现了它。
 3. SQL Server 现在在所有运算符中都使用并行。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 根据 UDF 中逻辑的复杂性，所生成的查询计划也可能变得更大更复杂。 我们可以看到，UDF 中的操作现在不再是黑盒，因此查询优化器能够降低成本并优化这些操作。 此外，由于 UDF 不再在计划中，因此将用完全避免函数调用开销的计划来取代迭代 UDF 调用。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>可内联标量 UDF 要求
@@ -182,7 +184,7 @@ SQL Server 2017 （兼容级别 140 及更早版本）中此查询的执行计�
 
 ## <a name="enabling-scalar-udf-inlining"></a>启用标量 UDF 内联
 
-可以通过对数据库启用兼容性级别 150 使工作负荷自动符合标量 UDF 内联。  可使用 Transact-SQL 进行此设置。 例如：  
+可以通过对数据库启用兼容性级别 150 使工作负荷自动符合标量 UDF 内联。 可使用 Transact-SQL 进行此设置。例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

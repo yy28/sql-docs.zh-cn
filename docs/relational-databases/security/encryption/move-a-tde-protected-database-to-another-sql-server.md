@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c1e9105b104d6fb79c43d23bdda6da4b4603d339
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590261"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585677"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53590261"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认情况下，将此处创建的文件存储在 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 中。 您的文件名和位置可能会有所不同。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
   
 -   要求针对 **master** 数据库的 **CONTROL DATABASE** 权限以便创建数据库主密钥。  
   
@@ -50,15 +50,15 @@ ms.locfileid: "53590261"
   
 2.  在 **master** 数据库中创建服务器证书的备份。 有关详细信息，请参阅下面的 **“使用 Transact-SQL”** 。  
   
-3.  在对象资源管理器中，右键单击 **“数据库”** 文件夹，并选择 **“新建数据库”**。  
+3.  在对象资源管理器中，右键单击 **“数据库”** 文件夹，并选择 **“新建数据库”** 。  
   
 4.  在 **“新建数据库”** 对话框的 **“数据库名称”** 框中，输入新数据库的名称。  
   
-5.  在 **“所有者”** 框中，输入新数据库的所有者的名称。 或者，单击省略号 (…) 以打开“选择数据库所有者”对话框。 有关创建新的数据库的详细信息，请参阅 [Create a Database](../../../relational-databases/databases/create-a-database.md)。  
+5.  在 **“所有者”** 框中，输入新数据库的所有者的名称。 或者，单击省略号 (…) 以打开“选择数据库所有者”对话框   。 有关创建新的数据库的详细信息，请参阅 [Create a Database](../../../relational-databases/databases/create-a-database.md)。  
   
 6.  在对象资源管理器中，右键单击加号以展开 **“数据库”** 文件夹。  
   
-7.  右键单击您所创建的数据库，指向 **“任务”**，然后选择 **“管理数据库加密”**。  
+7.  右键单击您所创建的数据库，指向 **“任务”** ，然后选择 **“管理数据库加密”** 。  
   
      **“管理数据库加密”** 对话框中提供了以下选项。  
   
@@ -74,15 +74,17 @@ ms.locfileid: "53590261"
      **将数据库加密设置为 ON**  
      将数据库更改为打开（选中）或关闭（取消选中）TDE。  
   
-8.  完成后，单击 **“确定”**。  
-  
+8.  完成后，单击 **“确定”** 。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlCreate"></a> 使用 Transact-SQL  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     -- Create a database master key and a certificate in the master database.  
@@ -142,7 +144,7 @@ ms.locfileid: "53590261"
   
 ###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
-1.  在对象资源管理器中，右键单击在前面已进行加密的数据库，指向“任务”，然后选择“分离…”。  
+1.  在对象资源管理器中，右键单击在前面已进行加密的数据库，指向“任务”，然后选择“分离…”   。  
   
      在 **“分离数据库”** 对话框中提供了以下选项。  
   
@@ -165,18 +167,18 @@ ms.locfileid: "53590261"
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
      **“状态”**  
-     显示以下状态之一：“就绪”或“未就绪”。  
+     显示以下状态之一：“就绪”或“未就绪”   。  
   
      **消息**  
      **“消息”** 列可显示关于数据库的如下信息：  
   
-    -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
+    -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”** 。  
   
-    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“\<number\_of\_active\_connections\> 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“\<number\_of\_active\_connections\> 个活动连接”，例如      ：“1 个活动连接”  。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
-2.  单击“确定” 。  
+2.  单击“确定”  。  
   
 3.  使用 Window 资源管理器，将数据库文件从源服务器移动到或复制到目标服务器上的相同位置。  
   
@@ -186,11 +188,11 @@ ms.locfileid: "53590261"
   
 6.  通过使用原始服务器证书备份文件重新创建服务器证书。 有关详细信息，请参阅下面的 **使用 Transact-SQL** 。  
   
-7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，右键单击“数据库”文件夹，然后选择“分离…”。  
+7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的对象资源管理器中，右键单击“数据库”文件夹，然后选择“分离…”   。  
   
-8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”** 下，单击 **“添加”**。  
+8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”** 下，单击 **“添加”** 。  
   
-9. 在“定位数据库文件 - server\_name”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”。  
+9. 在“定位数据库文件 - server\_name”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”    。  
   
      在 **“附加数据库”** 对话框中提供了以下选项。  
   
@@ -234,7 +236,7 @@ ms.locfileid: "53590261"
      从 **“要附加的数据库”** 网格中删除选定文件。  
   
      **"** _<database_name>_ **”数据库详细信息**  
-     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)。  
+     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)   。  
   
     > [!NOTE]  
     >  如果文件不存在，则 **“消息”** 列显示“找不到”。 如果找不到日志文件，则说明它位于其他目录中或者已被删除。 您需要更新 **“数据库详细信息”** 网格中该文件的路径使其指向正确的位置，或者从网格中删除该日志文件。 如果找不到 .ndf 数据文件，则需要更新网格中该文件的路径使其指向正确的位置。  
@@ -243,7 +245,7 @@ ms.locfileid: "53590261"
      显示属于数据库的已附加文件的名称。  
   
      **文件类型**  
-     指示文件类型，即 **“数据”** 或 **“日志”**。  
+     指示文件类型，即 **“数据”** 或 **“日志”** 。  
   
      **当前文件路径**  
      显示所选数据库文件的路径。 可以手动编辑该路径。  
@@ -255,9 +257,9 @@ ms.locfileid: "53590261"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql  
     -- Detach the TDE protected database from the source server.   

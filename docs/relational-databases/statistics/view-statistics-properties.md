@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 27fb2d88af957067af09baccd7cbd6f3629b7353
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256632"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585041"
 ---
 # <a name="view-statistics-properties"></a>查看统计信息属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "54256632"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要查看统计信息对象，用户必须是表所有者，或者是 **sysadmin** 固定服务器角色、 **db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -58,11 +58,11 @@ ms.locfileid: "54256632"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  双击要查看其属性的统计信息对象，然后选择“属性”。  
+5.  双击要查看其属性的统计信息对象，然后选择“属性”  。  
   
-6.  在“统计信息属性 - statistics_name”对话框的“选择页”窗格中，选择“详细信息”。  
+6.  在“统计信息属性 -  statistics_name”  对话框的“选择页”  窗格中，选择“详细信息”  。  
   
-     以下属性将显示在“统计信息属性 - statistics_name”对话框的“详细信息”页上。  
+     以下属性将显示在“统计信息属性 -   statistics_name”对话框的“详细信息”  页上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -91,13 +91,13 @@ ms.locfileid: "54256632"
      直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。  
   
      **Density**  
-     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
+     计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值  。 查询优化器不使用此 Density 值，显示此值的目的是为了与 SQL Server 2008 之前的版本实现向后兼容。  
   
      **Average Key Length**  
      统计信息对象中所有键列的每个值的平均字节数。  
   
      **String Index**  
-     Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)**、 **nvarchar(max)**、 **text**或 **ntext**类型，则基于其第一个键列创建字符串摘要统计信息。  
+     Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、 **varchar**、 **nchar**、 **nvarchar**、 **varchar(max)** 、 **nvarchar(max)** 、 **text**或 **ntext**类型，则基于其第一个键列创建字符串摘要统计信息。  
   
      **筛选表达式**  
      包含在统计信息对象中的表行子集的谓词。 NULL = 未筛选的统计信息。  
@@ -108,7 +108,7 @@ ms.locfileid: "54256632"
      下面的信息介绍结果集中为密度向量返回的列。  
   
      **All Density**  
-     密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
+     密度为 1/非重复值  。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 和 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)。  
   
      **Average Length**  
      存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。  
@@ -133,17 +133,19 @@ ms.locfileid: "54256632"
      **AVG_RANGE_ROWS**  
      重复列值位于直方图梯级内（不包括上限）的平均行数（如果 DISTINCT_RANGE_ROWS > 0，则为 RANGE_ROWS / DISTINCT_RANGE_ROWS）。  
   
-7.  单击“确定” 。  
-  
+7.  单击“确定”  。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>查看统计信息属性  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -159,9 +161,9 @@ ms.locfileid: "54256632"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   
