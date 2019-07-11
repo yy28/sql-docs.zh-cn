@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869685"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727738"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -30,7 +30,7 @@ ms.locfileid: "62869685"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DUP_KEY|  
-|消息正文|因为发现对象名称 '%.*ls' 和索引名称 '%.\*ls' 有重复的键，所以 CREATE UNIQUE INDEX 已终止。  重复的键值为 %ls。|  
+|消息正文|因为发现对象名称“%.\*ls”和索引名称“%.\*ls”有重复的键，所以 CREATE UNIQUE INDEX 已终止。  重复的键值为 %ls。|  
   
 ## <a name="explanation"></a>解释  
  如果表中有多行包含指定的重复值，那么，当您尝试创建唯一索引时，会发生此错误。 当您创建索引并指定 UNIQUE 关键字时，或者当您创建 UNIQUE 约束时，会创建唯一索引。 对于表内的任何行，索引或约束中所定义的列中都不能有重复值。  
@@ -50,7 +50,7 @@ ms.locfileid: "62869685"
   
  错误消息 1505 返回第一个违反唯一性约束的行。 该表中可能存在其他重复行。 若要查找所有的重复行，请查询指定的表，然后使用 GROUP BY 和 HAVING 子句报告重复行。 例如，下面的查询返回 **Employee** 表中具有重复名字和姓氏的行：  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
   
 ## <a name="user-action"></a>用户操作  
  请考虑以下解决方案。  

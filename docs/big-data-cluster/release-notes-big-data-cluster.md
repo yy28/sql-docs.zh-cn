@@ -2,20 +2,20 @@
 title: 发行说明
 titleSuffix: SQL Server big data clusters
 description: 本文介绍了最新的更新以及 SQL Server 2019 大数据群集 （预览版） 的已知的问题。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681553"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794093"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -113,6 +113,11 @@ ms.locfileid: "67681553"
 - SA_PASSWORD 是一部分的环境和可发现性 （例如在 cord 转储文件中）。 在部署后，必须重置 SA_PASSWORD 主实例上。 这不是一个 bug，但安全步骤。 有关如何更改 SA_PASSWORD Linux 容器中的详细信息，请参阅[更改 SA 密码](../linux/quickstart-install-connect-docker.md#sapassword)。
 
 - AKS 日志可能包含用于大数据群集部署的 SA 密码。
+
+#### <a name="kibana-logs-dashboards"></a>Kibana 日志仪表板
+
+- 之间 Aris CTP 3.0 和 3.1，已升级从 6.3.1 到 7.0.1 Kibana 版本。  这已在 Edge 浏览器与 Kibana 不兼容。 加载 Kibana 仪表板在 Edge 中的当前版本时，用户将看到一个空白页。 请参阅[此处]( https://www.elastic.co/support/matrix#matrix_browse)为 Kibana.rs 为支持的浏览器 
+
 
 ## <a id="ctp30"></a> CTP 3.0 （5 月）
 

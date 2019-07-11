@@ -15,19 +15,19 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3817b33aa294d6081b9fa2ee240e67ac38dd2a25
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199219"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793981"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 数据类型
 ODBC 定义应用程序变量和其对应的类型标识符所使用的 C 数据类型。 这些使用绑定到结果集列和语句参数的缓冲区。 例如，假设应用程序想要从以字符格式的结果集列中检索数据。 它声明的变量 SQLCHAR * 数据类型，并将此变量绑定到结果集列具有其类型标识符为 SQL_C_CHAR。 C 数据类型和类型标识符的完整列表，请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  ODBC 还定义从每个 SQL 数据类型为 C 数据类型的默认映射。 例如，数据源中的 2 字节整数映射到应用程序中的 2 字节整数。 若要使用的默认映射，应用程序，请指定 SQL_C_DEFAULT 类型标识符。 但是，建议不要使用此标识符的互操作性的原因。  
   
- 在 ODBC 1 中定义的所有整数 C 数据类型 *.x*是否已进行签名。 ODBC 2.0 添加了无符号的 C 数据类型和其对应的类型标识符。 正因为如此，应用程序和驱动程序需要特别注意处理 1 时 *.x*版本。  
+ 在 ODBC 中定义的所有整数 C 数据类型*1.x*是否已进行签名。 ODBC 2.0 添加了无符号的 C 数据类型和其对应的类型标识符。 因此，应用程序和驱动程序需要处理时特别小心*1.x*版本。  
   
 ## <a name="c-data-type-extensibility"></a>C 数据类型扩展能力  
  在 ODBC 3.8，可以指定特定于驱动程序的 C 数据类型。 这使您可以将 SQL 类型绑定为 ODBC 应用程序中的特定于驱动程序的 C 类型，当您调用[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)， [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)，或[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。 这可用于支持新的服务器类型，因为现有的 C 数据类型不能正确表示新的服务器数据类型。 使用特定于驱动程序的 C 类型可以提高驱动程序可以执行的转换数。  

@@ -20,12 +20,12 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536255"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793731"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函数
 **符合性**  
@@ -86,7 +86,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE 请求驱动程序无条件地检索统计信息。 （仅符合 Open Group 标准并不支持 ODBC 扩展驱动程序将不能以支持 SQL_ENSURE。）  
   
- SQL_QUICK 请求驱动程序检索基数和页仅当从服务器可迅速获得。 在这种情况下，驱动程序不能保证是最新值。 (Open Group 标准编写的应用程序将始终从 ODBC 3 获得 SQL_QUICK 行为 *.x*-兼容驱动程序。)  
+ SQL_QUICK 请求驱动程序检索基数和页仅当从服务器可迅速获得。 在这种情况下，驱动程序不能保证是最新值。 (Open Group 标准编写的应用程序将始终获得 SQL_QUICK 行为从 ODBC *3.x*-兼容驱动程序。)  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -94,7 +94,7 @@ SQLRETURN SQLStatistics(
 ## <a name="diagnostics"></a>诊断  
  当**SQLStatistics**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLStatistics** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
@@ -126,9 +126,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  有关常规使用、 参数以及 ODBC 目录函数返回的数据的详细信息，请参阅[目录函数](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 以下各列已重命名为 ODBC 3 *.x*。 列名称更改不会影响后向兼容性，因为应用程序将绑定的列号。  
+ 以下各列已重命名为 ODBC *3.x*。 列名称更改不会影响后向兼容性，因为应用程序将绑定的列号。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

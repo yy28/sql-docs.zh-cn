@@ -16,12 +16,12 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08c1c9b4338502f20e5f99885d371d713971aa38
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306209"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792704"
 ---
 # <a name="types-of-drivers"></a>驱动程序类型
 ODBC 驱动程序可以进行分类，如下所示：  
@@ -29,9 +29,9 @@ ODBC 驱动程序可以进行分类，如下所示：
 -   **32 位 ODBC 2。**  
      **_x_驱动程序**的 32 位驱动程序的：  
   
-    -   导出仅 ODBC 2 *.x*函数。  
+    -   导出仅 ODBC *2.x*函数。  
   
-    -   表现出 ODBC 2。*x*行为的更改的行为。  
+    -   表现出 ODBC *2.x*行为的更改的行为。  
   
 -   **ISO 和打开组兼容的驱动程序**的 32 位驱动程序的：  
   
@@ -45,13 +45,13 @@ ODBC 驱动程序可以进行分类，如下所示：
   
     -   导出仅作用减去 ODBC 3.0 中的过时的函数。  
   
-    -   它能够暴露 ODBC 2。*x*行为或与行为的变化，有关 ODBC 3.0 行为基于 SQL_ATTR_APP_ODBC_VERSION 环境属性。  
+    -   能够暴露 ODBC *2.x*行为或与行为的变化，有关 ODBC 3.0 行为基于 SQL_ATTR_APP_ODBC_VERSION 环境属性。  
   
 -   **ODBC 3.5 （或更高版本） 的 ANSI 驱动程序**的 32 位驱动程序的：  
   
     -   导出仅作用中减去的 ODBC 3.5 过时的函数。  
   
-    -   它能够暴露 ODBC 2。*x*行为或 ODBC 3.0 的行为或与行为的变化，有关 ODBC 3.5 行为基于 SQL_ATTR_APP_ODBC_VERSION 环境属性。  
+    -   能够暴露 ODBC *2.x*行为或 ODBC 3.0 的行为或与行为的变化，有关 ODBC 3.5 行为基于 SQL_ATTR_APP_ODBC_VERSION 环境属性。  
   
 -   **ODBC 3.5 （或更高版本） 的 Unicode 驱动程序**的 32 位驱动程序的：  
   
@@ -62,4 +62,4 @@ ODBC 驱动程序可以进行分类，如下所示：
     -   可以存储和处理数据源上的 Unicode 数据。  
   
 > [!NOTE]  
->  16 位 ODBC 驱动程序不会直接使用 ODBC 3。*x*驱动程序管理器。 但是，就可以使用 2.0 ODBC 驱动程序管理器，它随后最多 3 个 thunk 的 16 位驱动程序。*x*驱动程序管理器。
+>  16 位 ODBC 驱动程序不会直接使用 ODBC *3.x*驱动程序管理器。 但是，有 16 位驱动程序以使用 2.0 ODBC 驱动程序管理器，它随后 thunk 最多可能*3.x*驱动程序管理器。

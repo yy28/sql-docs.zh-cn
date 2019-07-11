@@ -2,20 +2,20 @@
 title: 加载示例数据
 titleSuffix: SQL Server big data clusters
 description: 本教程演示如何将示例数据加载到 SQL Server 大数据群集。 示例数据在 SQL Server 主实例中包括关系数据。 它还包括在存储池中的 HDFS 数据。 在本部分中，此数据支持的其他教程。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770829"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727343"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集
 
@@ -26,7 +26,7 @@ ms.locfileid: "66770829"
 > [!TIP]
 > 可以在 SQL Server 2019 大数据群集 （预览版） 的其他示例中找到[sql server 示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub 存储库。 这些文件位于**sql-server-samples/samples/features/sql-big-data-cluster/** 路径。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
@@ -62,7 +62,7 @@ ms.locfileid: "66770829"
 
 1. 启动脚本需要大数据群集的以下位置参数：
 
-   | 参数 | Description |
+   | 参数 | 描述 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 提供你的大数据群集的名称。 |
    | <SQL_MASTER_IP> | 主实例的 IP 地址。 |
@@ -98,7 +98,7 @@ ms.locfileid: "66770829"
 
 1. 启动脚本需要大数据群集的以下位置参数：
 
-   | 参数 | Description |
+   | 参数 | 描述 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 提供你的大数据群集的名称。 |
    | <SQL_MASTER_IP> | 主实例的 IP 地址。 |

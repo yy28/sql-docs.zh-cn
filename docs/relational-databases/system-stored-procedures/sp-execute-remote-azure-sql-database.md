@@ -12,16 +12,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716608"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  标识外部数据源执行该语句。 请参阅[创建外部数据源&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部数据源可以是类型的"RDBMS"或"SHARD_MAP_MANAGER"。  
   
  [ \@stmt= ] *statement*  
- 是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理。 \@语句必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定 Unicode 常量，则它必须带有前缀**N**。例如，Unicode 常量**N 'sp_who'** 有效，但是字符常量 **'sp_who'** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在 64 位服务器上的字符串的大小被限制为 2 GB 的最大大小**nvarchar （max)**。  
+ 是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理。 \@语句必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定 Unicode 常量，则它必须带有前缀**N**。例如，Unicode 常量**N 'sp_who'** 有效，但是字符常量 **'sp_who'** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在 64 位服务器上的字符串的大小被限制为 2 GB 的最大大小**nvarchar （max)** 。  
   
 > [!NOTE]  
 >  \@语句可以包含的参数将同一个窗体作为变量名称，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  

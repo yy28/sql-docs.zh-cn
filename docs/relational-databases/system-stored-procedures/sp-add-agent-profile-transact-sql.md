@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2afaf37cc82ccfee3c5a85c2945a7998457a979d
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493600"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716626"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0**指示系统配置文件。 **1**指示自定义配置文件。 可以使用此存储的过程; 创建只有自定义配置文件因此唯一有效的值是**1**。 仅[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建系统配置文件。  
   
-`[ @description = ] 'description'` 是配置文件的说明。 *描述*是**nvarchar(3000)**，无默认值。  
+`[ @description = ] 'description'` 是配置文件的说明。 *描述*是**nvarchar(3000)** ，无默认值。  
   
 `[ @default = ] default` 指示该配置文件是否为默认*agent_type * *。* *默认值*是**位**，默认值为**0**。 **1**指示要添加的配置文件将由指定的代理成为新的默认配置文件*agent_type*。  
   

@@ -17,15 +17,15 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658180"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794056"
 ---
 # <a name="new-features"></a>新功能
-在 ODBC 3 引入了以下新功能。*x*。 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序将不能使用此功能。 ODBC 3。*x*驱动程序管理器不映射这些功能时使用的 ODBC 2 *.x*驱动程序。  
+在 ODBC 中引入了以下新功能*3.x*。 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序将不能使用此功能。 ODBC *3.x*时使用的 ODBC 驱动程序管理器不映射这些功能*2.x*驱动程序。  
   
 -   采用一个说明符的函数处理作为自变量：**SQLSetDescField**， **SQLGetDescField**， **SQLSetDescRec**， **SQLGetDescRec**，并且**SQLCopyDesc**。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62658180"
   
 -   命名的参数。  
   
--   任何 ODBC 3。*x*的特定**SQLGetInfo**选项。 （如果检测到 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用 SQL_XXX_CURSOR_ATTRIBUTES1 信息类型，已取代多个 ODBC 2。*x*信息类型的一些信息可能可靠，但某些可能会不可靠。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)  
+-   任何 ODBC *3.x*的特定**SQLGetInfo**选项。 (如果 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序调用 SQL_XXX_CURSOR_ATTRIBUTES1 信息类型，已取代多个 ODBC *2.x*信息类型的一些信息可能可靠，但某些可能会不可靠。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)  
   
 -   将绑定的偏移量。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62658180"
   
 -   利用**SQLDescribeCol**并**SQLColAttribute**上第 0 列。  
   
--   使用的任何 ODBC 3。*x*的调用中的特定列属性**SQLColAttribute**。  
+-   使用任何 ODBC *3.x*的调用中的特定列属性**SQLColAttribute**。  
   
 -   使用多个环境句柄。  
   

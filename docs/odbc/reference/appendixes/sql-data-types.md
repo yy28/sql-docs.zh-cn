@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280915"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794163"
 ---
 # <a name="sql-data-types"></a>SQL 数据类型
 每个 DBMS 定义其自己的 SQL 类型。 每个 ODBC 驱动程序公开只有关联的 DBMS 定义这些 SQL 数据类型。 DBMS SQL 类型信息驱动程序的将映射到 ODBC 定义的 SQL 类型标识符和驱动程序将 DBMS SQL 类型映射到其自己特定于驱动程序的 SQL 类型标识符的方式通过调用返回**SQLGetTypeInfo**。 驱动程序还返回 SQL 数据类型时描述数据类型的列和参数通过调用**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，并**SQLSpecialColumns**。  
@@ -86,7 +86,7 @@ ms.locfileid: "63280915"
   
  [5] 具体取决于实现的 SQL_FLOAT 精度可以为 24 或 53： 如果它为 24，SQL_FLOAT 数据类型是 SQL_REAL; 相同如果它是 53，SQL_FLOAT 数据类型是 SQL_DOUBLE 相同。  
   
- [6] 在 ODBC 3 *.x*，SQL 日期、 时间和时间戳数据类型为 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，ODBC 2 中分别;。*x*，数据类型为 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP。  
+ [6] 在 ODBC *3.x*，SQL 日期、 时间和时间戳数据类型为 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP，在 ODBC 中分别; *2.x*，数据类型为 SQL_DATE、 SQL_TIME 和 SQL_时间戳。  
   
  [7] 的间隔 SQL 数据类型的详细信息，请参阅[Interval 数据类型](../../../odbc/reference/appendixes/interval-data-types.md)部分中的，稍后在本附录中。  
   

@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8067aaa2133648c1a1ea4fff81db08c139d5278
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245986"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793396"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 代理固定数据库角色
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有下列 **msdb** 数据库固定数据库角色，使管理员可以更好地控制对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的访问。 下面按从低到高的访问权限列出了角色：  
@@ -48,7 +48,7 @@ ms.locfileid: "63245986"
   
  下表汇总了 **SQLAgentUserRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
-|操作|运算符|本地作业<br /><br /> （仅限于所拥有的作业）|作业计划<br /><br /> （仅限于所拥有的计划）|代理|  
+|Action|运算符|本地作业<br /><br /> （仅限于所拥有的作业）|作业计划<br /><br /> （仅限于所拥有的计划）|代理|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
 |创建/修改/删除|否|是 <sup>1</sup>|是|否|  
 |视图列表（枚举）|是 <sup>2</sup>|是|是|是 <sup>3</sup>|  
@@ -75,7 +75,7 @@ ms.locfileid: "63245986"
   
  下表汇总了 **SQLAgentReaderRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
-|操作|运算符|本地作业|多服务器作业|作业计划|代理|  
+|Action|运算符|本地作业|多服务器作业|作业计划|代理|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
 |创建/修改/删除|否|是<sup>1</sup> （仅拥有的作业）|否|是（仅拥有的计划）|否|  
 |视图列表（枚举）|是 <sup>2</sup>|是|是|是|是 <sup>3</sup>|  
@@ -98,7 +98,7 @@ ms.locfileid: "63245986"
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole 权限  
  **SQLAgentOperatorRole** 是具有最高特权的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色。 它的权限包括 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的所有权限。 此角色的成员还可以查看运算符和代理的属性，并且可以枚举服务器上的可用代理和警报。  
   
- **SQLAgentOperatorRole** 的成员还拥有对本地作业和计划的其他权限。 它们可以执行、停止或启动所有本地作业，还可以删除服务器上的任何本地作业的作业历史记录。 它们还可以启用或禁用服务器上的所有本地作业和计划。 若要启用或禁用本地作业或计划，此角色的成员必须使用存储过程 **sp_update_job** 和 **sp_update_schedule**。 **SQLAgentOperatorRole** 的成员只能指定那些指定了作业名称、计划名称或标识符的参数和 **@enabled** 参数。 如果它们指定了任何其他参数，则执行这些存储过程将失败。 **SQLAgentOperatorRole** 的成员不能通过更改作业所有权来获得对它们还没有拥有的作业的访问权限。  
+ **SQLAgentOperatorRole** 的成员还拥有对本地作业和计划的其他权限。 它们可以执行、停止或启动所有本地作业，还可以删除服务器上的任何本地作业的作业历史记录。 它们还可以启用或禁用服务器上的所有本地作业和计划。 若要启用或禁用本地作业或计划，此角色的成员必须使用存储过程 **sp_update_job** 和 **sp_update_schedule**。 仅指定了作业或计划名称或标识符的参数和 **\@启用**可以将参数指定的成员**SQLAgentOperatorRole**。 如果它们指定了任何其他参数，则执行这些存储过程将失败。 **SQLAgentOperatorRole** 的成员不能通过更改作业所有权来获得对它们还没有拥有的作业的访问权限。  
   
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中，**SQLAgentOperatorRole** 的成员可以看到“作业”  、“警报”  、“操作员”  和“代理”  节点。 但此角色的成员看不到“错误日志”  节点。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63245986"
   
  下表汇总了 **SQLAgentOperatorRole** 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对象的权限。  
   
-|操作|警报|运算符|本地作业|多服务器作业|作业计划|代理|  
+|Action|警报|运算符|本地作业|多服务器作业|作业计划|代理|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
 |创建/修改/删除|否|否|是<sup>2</sup> （仅拥有的作业）|否|是（仅拥有的计划）|否|  
 |视图列表（枚举）|是|是 <sup>1</sup>|是|是|是|是|  
@@ -123,9 +123,9 @@ ms.locfileid: "63245986"
   
  <sup>2</sup>无法更改作业所有权。  
   
- <sup>3</sup> **SQLAgentOperatorRole**成员可以启用或禁用它们尚未拥有使用存储的过程的本地作业**sp_update_job**为指定值和 **@enabled** 并 **@job_id** (或 **@job_name** ) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
+ <sup>3</sup> **SQLAgentOperatorRole**成员可以启用或禁用它们尚未拥有使用存储的过程的本地作业**sp_update_job**为指定值和 **\@启用**并 **\@job_id** (或 **\@job_name**) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
   
- <sup>4</sup> **SQLAgentOperatorRole**成员可以启用或禁用它们尚未拥有使用存储的过程的计划**sp_update_schedule**为指定值和 **@enabled** 并 **@schedule_id** (或 **@name** ) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
+ <sup>4</sup> **SQLAgentOperatorRole**成员可以启用或禁用它们尚未拥有使用存储的过程的计划**sp_update_schedule**为指定值和 **\@启用**并 **\@schedule_id** (或 **\@名称**) 参数。 如果此角色的成员为此存储过程指定任何其他参数，则执行此过程将会失败。  
   
 ## <a name="assigning-users-multiple-roles"></a>为用户分配多个角色  
  **sysadmin** 固定服务器角色的成员可以访问所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理功能。 如果用户不是 **sysadmin** 角色的成员，但却是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的成员，那么记住这些角色具有相互包含的权限模型很重要。 因为较高特权的角色总是包含较低特权角色的所有权限，所以作为多个角色的成员的用户将自动将权限与其所属的最高特权的角色相关联。  

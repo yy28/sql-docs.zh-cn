@@ -18,21 +18,21 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181315"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793182"
 ---
 # <a name="mapping-deprecated-functions"></a>映射已弃用的函数
-本部分介绍如何已弃用的函数映射由 ODBC 3 *.x*驱动程序管理器，以保证向后兼容性的 ODBC 3 *.x*与 ODBC 2 一起使用的驱动程序。*x*应用程序。 驱动程序管理器执行此映射不考虑应用程序的版本。 因为每个 ODBC 2。*x*以下列表中的函数映射到相应 ODBC 3 *.x*函数在 ODBC 3 中调用时 *.x*驱动程序，ODBC 3 *.x*驱动程序不需要实现 ODBC 2。*x*函数。  
+本部分介绍如何已弃用的函数映射由 ODBC *3.x*驱动程序管理器，以保证向后兼容性的 ODBC *3.x*用于 ODBC 的驱动程序*2.x*应用程序。 驱动程序管理器执行此映射不考虑应用程序的版本。 因为每个 ODBC *2.x*以下列表中的函数映射到相应 ODBC *3.x*函数在 ODBC 中调用时*3.x*驱动程序，ODBC *3.x*驱动程序不需要实现 ODBC *2.x*函数。  
   
- 在列表中的映射触发驱动程序时 ODBC 3 *.x*驱动程序和驱动程序不支持要映射的函数。  
+ ODBC 驱动程序时，会触发在列表中的映射*3.x*驱动程序和驱动程序不支持要映射的函数。  
   
- 下表列出了所有重复的 ODBC 3 中引入的功能 *.x*。  
+ 下表列出了所有重复在 ODBC 中引入的功能*3.x*。  
   
-|ODBC 2。*x*函数|ODBC 3 *.x*函数|  
+|ODBC *2.x*函数|ODBC *3.x*函数|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -52,7 +52,7 @@ ms.locfileid: "63181315"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 即使 ODBC 2 中不存在此函数 *.x*，它是 Open Group 和 ISO 标准中。  
+ [1] 即使在 ODBC 中不存在此函数*2.x*，它是 Open Group 和 ISO 标准中。  
   
  [2] 这是 ODBC 1.0 函数。  
   

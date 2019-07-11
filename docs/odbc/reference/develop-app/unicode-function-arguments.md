@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305801"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793751"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函数自变量
 ODBC 3.5 （或更高版本） 驱动程序管理器支持所有函数接受字符串或 SQLPOINTER 中其自变量的指针的 ANSI 和 Unicode 的版本。 Unicode 函数作为函数实现 (为后缀*W*)，而不是宏。 ANSI 函数 (带有或不带后缀的可以调用*A*) 与当前的 ODBC API 函数完全相同。  
@@ -66,7 +66,7 @@ ODBC 3.5 （或更高版本） 驱动程序管理器支持所有函数接受字�
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  已弃用的函数具有 Unicode 到 ANSI 映射支持，因为 ODBC 3 *.x*驱动程序管理器支持重新编译 ODBC 2。*x*使用 UNICODE 的应用程序 **#define**。  
+>  已弃用的函数具有 Unicode 到 ANSI 映射支持，因为 ODBC *3.x*重新编译 ODBC 驱动程序管理器支持*2.x*应用程序使用 UNICODE **#define**.  
   
  本部分包含以下主题。  
   

@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addlogreader_agent
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b3968f7c196c63ed66b98f19acd1dcf4d972336
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 7aa2fc93806bdbce244643d78930c7c9c113bf01
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494339"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716618"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'` 登录名[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帐户下运行的代理。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
+`[ @job_login = ] 'job_login'` 登录名[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帐户下运行的代理。 *job_login*是**nvarchar(257)** ，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
 > [!NOTE]
 >  对于非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，这必须是相同的登录名中指定[sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。  

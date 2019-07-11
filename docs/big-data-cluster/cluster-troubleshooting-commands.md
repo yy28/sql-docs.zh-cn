@@ -2,20 +2,20 @@
 title: 监视和故障排除
 titleSuffix: SQL Server big data clusters
 description: 本文提供了用于监视和故障排除 SQL Server 2019 大数据群集 （预览版） 的有用命令。
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 404d81c8d16a6ee6c173de4ebc5a85edc070a6ca
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388717"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729216"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>监视和故障排除 SQL Server 大数据群集
 
@@ -112,7 +112,7 @@ kubectl get svc -n mssql-cluster
 
 以下服务支持大数据群集的外部连接：
 
-| 服务 | Description |
+| 服务 | 描述 |
 |---|---|
 | **master-svc-external** | 可以访问主实例。<br/>(**外部 IP，31433**并**SA**用户) |
 | **controller-svc-external** | 支持工具和管理群集的客户端。 |

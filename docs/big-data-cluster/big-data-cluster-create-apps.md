@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 将 Python 或 R 脚本部署为 SQL Server 2019 大数据群集 （预览版） 上的应用程序。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681590"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729286"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 大数据群集 （预览版） 上的应用程序
 
@@ -47,7 +46,7 @@ ms.locfileid: "67681590"
 
 在 SQL Server 2019 （预览版） 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
 
-|Command |Description |
+|Command |描述 |
 |:---|:---|
 |`mssqlctl login` | 登录到 SQL Server 大数据群集 |
 |`mssqlctl app create` | 创建应用程序。 |
@@ -111,7 +110,7 @@ mssqlctl app create --spec ./addpy
 
 若要部署此应用程序示例应用，可在一个名为目录中创建以下文件`addpy`:
 
-- `add.py` 的用户。 将以下 Python 代码复制到此文件：
+- `add.py`。 将以下 Python 代码复制到此文件：
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +118,7 @@ mssqlctl app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml` 的用户。 将以下代码复制到此文件：
+- `spec.yaml`。 将以下代码复制到此文件：
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

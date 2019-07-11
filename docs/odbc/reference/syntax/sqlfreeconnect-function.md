@@ -20,22 +20,22 @@ ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5296bcbe54aa90badf5e39a2c21287793c03fe83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d79776151f8fdf370b5b53231b7810fa371d4a3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62982278"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792570"
 ---
 # <a name="sqlfreeconnect-function"></a>SQLFreeConnect 函数
 **符合性**  
  版本引入了：ODBC 1.0 标准符合性：不推荐使用  
   
  **摘要**  
- 在 ODBC 3 *.x*，ODBC 2.0 函数**SQLFreeConnect**已由**SQLFreeHandle**。 有关详细信息，请参阅[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ 在 ODBC *3.x*，ODBC 2.0 函数**SQLFreeConnect**已由**SQLFreeHandle**。 有关详细信息，请参阅[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 > [!NOTE]
->  有关哪些驱动程序管理器时，将映射此函数可对 ODBC 2 详细信息 *.x*应用程序使用 ODBC 3 *.x*驱动程序，请参阅[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附录 g:为了向后兼容的驱动程序指南。  
+>  详细了解驱动程序管理器映射的内容到此函数时 ODBC *2.x*应用程序使用 ODBC *3.x*驱动程序，请参阅[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附录 g:为了向后兼容的驱动程序指南。  
   
 ## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

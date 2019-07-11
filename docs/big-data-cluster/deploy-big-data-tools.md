@@ -2,20 +2,20 @@
 title: 安装大数据工具
 titleSuffix: SQL Server big data clusters
 description: 了解如何安装与 SQL Server 2019 大数据群集 （预览版） 配合使用的工具。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 1862c6c16aaecca7888f00cb6ca5deeb7138ea03
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728977"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -29,7 +29,7 @@ ms.locfileid: "67412969"
 
 下表列出了常用的大数据群集工具以及如何安装它们：
 
-| Tool | Required | Description | 安装 |
+| Tool | 必填 | 描述 | 安装 |
 |---|---|---|---|
 | **mssqlctl** | 是 | 用于安装和管理大数据群集的命令行工具。 | [安装](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | 是 | 监视基础 Kuberentes 群集的命令行工具 ([的详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |

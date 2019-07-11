@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754914"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792613"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
   为了给数据库设置见证服务器，数据库所有者为见证服务器的角色分配数据库引擎实例。 见证服务器实例可以与主体服务器实例或镜像服务器实例运行于同一台计算机上，但这样会明显降低自动故障转移的可靠性。  
@@ -33,7 +33,7 @@ ms.locfileid: "62754914"
   
 ### <a name="to-establish-a-witness"></a>建立见证服务器  
   
-1.  在见证服务器实例上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果只将该服务器实例用于数据库镜像会话中的见证服务器，你可以为终结点分配见证服务器角色 (ROLE **=** WITNESS)。 如果要将该服务器实例用于其他数据库镜像会话中的伙伴，请将端点的角色分配为 ALL。  
+1.  在见证服务器实例上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果你想要在数据库镜像会话的见证服务器将该服务器实例，将分配到的终结点的见证服务器角色 (角色 **=** 见证服务器)。 如果要将该服务器实例用于其他数据库镜像会话中的伙伴，请将端点的角色分配为 ALL。  
   
      若要执行 SET WITNESS 语句，数据库镜像会话必须已启动（在伙伴之间），并且见证服务器端点的 STATE 必须设置为 STARTED。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62754914"
   
 3.  连接到主体服务器并执行下面的语句：  
   
-     ALTER DATABASE <database_name>  SET WITNESS **=** <server_network_address>   
+     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
   
      其中，<database_name>  是要镜像的数据库的名称（此名称在两个伙伴上相同），  <server_network_address> 是见证服务器实例的服务器网络地址。  
   

@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064297"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792926"
 ---
 # <a name="create-the-off-by-default-policy"></a>创建 Off By Default 策略
   此任务创建一个基于外围应用配置器方面的名为 Mail Off 的条件。 然后，创建一个名为 Off By Default 的条件。  
@@ -28,7 +28,7 @@ ms.locfileid: "66064297"
   
 3.  在“方面”  框中，确认选择了“外围应用配置器”  方面。  
   
-4.  在“表达式”  区域中，在“字段”  框中选择 **@DatabaseMailEnabled** ，在“运算符”  框中选择 **=** ，然后在“值”  中选择“False”  。  
+4.  在中**表达式**区域中**字段**框中，选择 **\@DatabaseMailEnabled**中**运算符**框中，选择 **=** ，然后在**值**选择**False**。  
   
 5.  在“说明”  页上输入条件说明，然后单击“确定”  以创建条件。  
   

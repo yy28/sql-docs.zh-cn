@@ -14,15 +14,15 @@ ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1872806265470327f3e7bff468be2ba6d9011421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b12c5286522bd0f1f8fbb40f101302aaa481cb8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199420"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792605"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 映射
-当应用程序调用**SQLFreeStmt**与*选项*参数通过 ODBC 3 SQL_DROP *.x*驱动程序，将会调用  
+当应用程序调用**SQLFreeStmt**与*选项*参数通过 ODBC SQL_DROP *3.x*驱动程序，将会调用  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   

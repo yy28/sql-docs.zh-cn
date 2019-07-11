@@ -2,20 +2,20 @@
 title: 部署指南
 titleSuffix: SQL Server big data clusters
 description: 了解如何将部署在 Kubernetes 上的 SQL Server 2019 大数据群集 （预览版）。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 75f4f7d046e144713efa271fb1980d4518843448
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413103"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728793"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -51,7 +51,7 @@ SQL Server 大数据群集至少需要版本最低为 Kubernetes 的 v1.10 服�
 
 您可以选择部署在三种方式中的 Kubernetes:
 
-| 部署 Kubernetes 上： | Description | 链接 |
+| 部署 Kubernetes 上： | 描述 | 链接 |
 |---|---|---|
 | **Azure Kubernetes 服务 (AKS)** | Azure 中的托管的 Kubernetes 容器服务。 | [说明](deploy-on-aks.md) |
 | **多台计算机 (kubeadm)** | 物理计算机或使用虚拟机上部署的 Kubernetes 群集**kubeadm** | [说明](deploy-with-kubeadm.md) |
@@ -140,7 +140,7 @@ mssqlctl bdc create
 
 以下环境变量用于未存储在一个部署配置文件的安全设置。 请注意，可以在配置文件中设置 Docker 设置凭据除外。
 
-| 环境变量 | Description |
+| 环境变量 | 描述 |
 |---|---|---|---|
 | **DOCKER_USERNAME** | 用于访问容器映像，以防在专用存储库中存储的用户名。 |
 | **DOCKER_PASSWORD** | 用于访问上述的专用存储库的密码。 |

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本文介绍如何配置分层外部 S3 文件系统装载到 HDFS，SQL Server 2019 大数据群集 （预览版） 上的 HDFS。
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: d782a2c8727f053b569c77af525795d81afebbc7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400022"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728751"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何装载 S3 分层大数据群集中的 hdfs
 

@@ -14,12 +14,12 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298269"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792835"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField 和 SQLSetDescRec（游标库）
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "63298269"
   
  游标库执行调用**SQLSetDescRec**书签列。  
   
- 当使用 ODBC 2。*x*驱动程序，该游标库返回 SQLSTATE HY090 （字符串或缓冲区长度无效） 时**SQLSetDescField**或**SQLSetDescRec**调用来设置 SQL_DESC_OCTET_值不等于 4 到 ARD 的书签记录的长度字段。 使用 ODBC 3 时 *.x*驱动程序，该游标库允许要为任意大小的缓冲区。  
+ 当使用 ODBC *2.x*驱动程序，该游标库返回 SQLSTATE HY090 （字符串或缓冲区长度无效） 时**SQLSetDescField**或**SQLSetDescRec**称为若要设置一个值为 ARD 的书签记录的 SQL_DESC_OCTET_LENGTH 字段不等于 4。 当使用 ODBC *3.x*驱动程序，该游标库允许要为任意大小的缓冲区。  
   
  游标库执行**SQLSetDescField**时被调用以返回 SQL_DESC_BIND_OFFSET_PTR、 SQL_DESC_BIND_TYPE、 SQL_DESC_ROW_ARRAY_SIZE 或 SQL_DESC_ROW_STATUS_PTR 字段的值。 对于任何行，而不仅仅是书签行，可以返回这些字段。  
   

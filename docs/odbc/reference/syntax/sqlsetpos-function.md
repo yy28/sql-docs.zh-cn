@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63bca42adcdfc83d1bdb96361680d0c70c9a031c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536320"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793131"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函数
 **符合性**  
@@ -60,7 +60,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  SQL_ADD 值*操作*自变量已被弃用 ODBC 3 *.x*。 ODBC 3。*x*驱动程序将需要向后兼容性支持 SQL_ADD。 此功能已由调用**SQLBulkOperations**与*操作*SQL_ADD。 当 ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序，驱动程序管理器将映射到调用**SQLBulkOperations**与*操作*的到 SQL_ADD **SQLSetPos**与*操作*SQL_ADD。  
+>  SQL_ADD 值*操作*自变量已弃用用于 ODBC *3.x*。 ODBC *3.x*驱动程序将需要向后兼容性支持 SQL_ADD。 此功能已由调用**SQLBulkOperations**与*操作*SQL_ADD。 当 ODBC *3.x*应用程序适用于 ODBC *2.x*驱动程序，驱动程序管理器将映射到调用**SQLBulkOperations**与*操作*的到 SQL_ADD **SQLSetPos**与*操作*SQL_ADD。  
   
  有关详细信息，请参阅"注释"。  
   
@@ -80,12 +80,12 @@ SQLRETURN SQLSetPos(
   
  对于所有这些 SQLSTATEs 可以返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除 01xxx SQLSTATEs)，将返回 SQL_SUCCESS_WITH_INFO，如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果发生错误，则返回 SQL_ERROR单行操作。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01001|游标操作冲突|*操作*参数为 SQL_DELETE 或 SQL_UPDATE，和任何行或多个行已删除或更新。 (有关对多个行的更新的详细信息，请参阅说明 SQL_ATTR_SIMULATE_CURSOR*特性*中**SQLSetStmtAttr**。)（函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> *操作*参数为 SQL_DELETE 或 SQL_UPDATE，并且操作失败，因为乐观并发。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据右截断|*操作*参数为 SQL_REFRESH，并导致截断了非空白字符或二进制数据的非空字符串或二进制数据返回为一列或列数据类型为 SQL_C_CHAR 或 SQL_C_BINARY。|  
-|01S01|行中的错误|*RowNumber*参数为 0，并执行与指定的操作时一个或多个行中出现错误*操作*参数。<br /><br /> （SQL_SUCCESS_WITH_INFO 返回如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果在单行操作出错，则返回 SQL_ERROR。）<br /><br /> (此 SQLSTATE 返回时，才**SQLSetPos**后，会调用**SQLExtendedFetch**，则该驱动程序是 ODBC 2。*x*不使用驱动程序和游标库。)|  
+|01S01|行中的错误|*RowNumber*参数为 0，并执行与指定的操作时一个或多个行中出现错误*操作*参数。<br /><br /> （SQL_SUCCESS_WITH_INFO 返回如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果在单行操作出错，则返回 SQL_ERROR。）<br /><br /> (此 SQLSTATE 返回时，才**SQLSetPos**后，会调用**SQLExtendedFetch**，则该驱动程序是一个 ODBC *2.x*不使用驱动程序和游标库。)|  
 |01S07|截断小数部分|*操作*参数为 SQL_REFRESH、 应用程序缓冲区的数据类型不为 SQL_C_CHAR 或 SQL_C_BINARY，返回到应用程序的一个或多个列缓冲区的数据已被截断。 对于数值数据类型，数字的小数部分被截断。 对于时间、 时间戳和 interval 数据类型包含时间部分，时间的小数部分被截断。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|无法为指定的数据类型转换的结果集中的列的数据值*TargetType*调用中**SQLBindCol**。|  
 |07009|描述符索引无效|自变量*操作*SQL_REFRESH 或 SQL_UPDATE，并将其列已绑定使用一个大于结果集中的列数的列数。|  
@@ -105,8 +105,8 @@ SQLRETURN SQLSetPos(
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
 |HY008|操作已取消|异步处理的已启用*StatementHandle*。 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数是在上再次*StatementHandle*。<br /><br /> 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自不同线程中多线程应用程序。|  
-|HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行调用 SQLSetPos 函数时。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 调用函数时没有首先调用**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> (DM) 驱动程序是 ODBC 2。*x*驱动程序，并**SQLSetPos**曾为*StatementHandle*后**SQLFetch**调用。|  
-|HY011|现在无法设置属性|(DM) 驱动程序是 ODBC 2。*x*驱动程序; SQL_ATTR_ROW_STATUS_PTR 设置语句属性; 然后**SQLSetPos**之前调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**调用。|  
+|HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行调用 SQLSetPos 函数时。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 调用函数时没有首先调用**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> (DM) 驱动程序是一个 ODBC *2.x*驱动程序，并**SQLSetPos**曾为*StatementHandle*后**SQLFetch**调用。|  
+|HY011|现在无法设置属性|(DM) 驱动程序是一个 ODBC *2.x*驱动程序; SQL_ATTR_ROW_STATUS_PTR 设置语句属性; 然后**SQLSetPos**之前调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**调用。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY090|字符串或缓冲区长度无效|*操作*参数为 SQL_UPDATE、 数据值为 null 指针，和的列长度值不是 0，SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORE，SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *操作*参数为 SQL_UPDATE; 数据值不是空指针; C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR; 和列长度值是小于 0 但不是等于 SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORESQL_NTS 或 SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 长度/指示器缓冲区中的值为 SQL_DATA_AT_EXEC;SQL 类型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源特定的数据类型;和中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**是"Y"。|  
 |HY092|无效的属性标识符|(DM) 为指定的值*操作*参数无效。<br /><br /> (DM) 为指定的值*LockType*参数无效。<br /><br /> *操作*参数 SQL_UPDATE 或 SQL_DELETE，而 sql_attr_concurrency 设置语句属性是 SQL_ATTR_CONCUR_READ_ONLY。|  
@@ -123,7 +123,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>注释  
   
 > [!CAUTION]
->  有关语句的信息表明**SQLSetPos**可中调用，它需要执行与 ODBC 2 的兼容性 *.x*应用程序，请参阅[块游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
+>  有关语句的信息表明**SQLSetPos**可在中调用，它需要为与 ODBC 兼容性*2.x*应用程序，请参阅[块游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
   
 ## <a name="rownumber-argument"></a>RowNumber 参数  
  *RowNumber*参数指定要对其执行由指定的操作在行集中的行数*操作*参数。 如果*RowNumber*为 0，则该操作适用于每个行集中的行。 *RowNumber*必须是介于 0 到行集中的行数。  

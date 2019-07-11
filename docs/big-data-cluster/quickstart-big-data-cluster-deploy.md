@@ -1,32 +1,32 @@
 ---
-title: 部署快速入门
+title: 部署脚本
 titleSuffix: SQL Server big data clusters
 description: 演练的 SQL Server 2019 大数据群集 （预览版） 在 Azure Kubernetes 服务 (AKS) 的部署。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798736"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728780"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-在本快速入门使用示例部署脚本部署到 Azure Kubernetes 服务 (AKS) 的 SQL Server 2019 大数据群集 （预览版）。 
+在本教程中，使用的示例部署脚本部署到 Azure Kubernetes 服务 (AKS) 的 SQL Server 2019 大数据群集 （预览版）。 
 
 > [!TIP]
 > AKS 是适用于大数据群集的托管 Kubernetes 的只有一个选项。 若要了解有关其他部署选项以及如何自定义部署选项，请参阅[如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)。
 
-此处使用默认大数据群集部署由 SQL 主实例、 一个计算池实例、 两个数据池实例和两个存储池实例组成。 数据将保留使用使用 AKS 默认存储类的 Kubernetes 永久性卷。 在本快速入门中使用的默认配置是适用于开发/测试环境。
+此处使用默认大数据群集部署由 SQL 主实例、 一个计算池实例、 两个数据池实例和两个存储池实例组成。 数据将保留使用使用 AKS 默认存储类的 Kubernetes 永久性卷。 在本教程中使用的默认配置是适用于开发/测试环境。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>下载部署脚本
 
-本快速入门可自动创建的大数据群集上使用 python 脚本的 AKS**部署的 sql-大的数据-aks.py**。 如果已安装的 python **mssqlctl**，您应能够在本快速入门中成功运行该脚本。 
+本教程会自动创建的大数据群集上使用 python 脚本的 AKS**部署的 sql-大的数据-aks.py**。 如果已安装的 python **mssqlctl**，可以在本教程中成功运行该脚本。 
 
 在 Windows PowerShell 或 Linux bash 提示符处，运行以下命令以从 GitHub 下载部署脚本。
 
@@ -73,7 +73,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 1. 出现提示时，输入以下信息：
 
-   | ReplTest1 | Description |
+   | ReplTest1 | 描述 |
    |---|---|
    | **Azure 订阅 ID** | 要用于 AKS 的 Azure 订阅 ID。 可通过运行列出的所有订阅和其 Id`az account list`从另一个命令行。 |
    | **Azure 资源组** | 要创建 AKS 群集的 Azure 资源组名称。 |

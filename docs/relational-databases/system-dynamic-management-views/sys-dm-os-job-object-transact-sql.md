@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc778a34a513c2aca12da0dd0e1245e50dc5d6a
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047034"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716274"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "63047034"
 
 作业对象是实现在操作系统级别的 CPU、 内存和 IO 资源调控的 Windows 构造。 有关作业对象的详细信息，请参阅[作业对象](/windows/desktop/ProcThread/job-objects)。 
   
-|“列”|数据类型|Description|  
+|“列”|数据类型|描述|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|指定 SQL Server 线程可以在每个计划的间隔期间使用的处理器时钟周期数的部分。 报告的值是 10000 周期计划间隔内可用的周期的百分比。 例如，线程可以使用 CPU 内核值 100 表示是其完整的容量。|
 |cpu_affinity_mask|**bigint**|SQL Server 进程可以使用处理器组中描述的逻辑处理器的位掩码。 例如，cpu_affinity_mask 255 (1111 二进制文件中) 表示的前八个逻辑处理器可用。|
@@ -52,7 +52,7 @@ ms.locfileid: "63047034"
 |peak_job_memory_used_mb|**bigint**|已创建的内存，单位为 MB，因为作业对象累积使用作业对象中的所有进程的最大资源量。|
   
 ## <a name="permissions"></a>权限  
-在 SQL 数据库托管实例，都需要`VIEW SERVER STATE`权限。 在 SQL 数据库上需要`VIEW DATABASE STATE`数据库中的权限。  
+在 SQL 数据库托管实例，都需要`VIEW SERVER STATE`权限。 在 SQL 数据库上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。  
  
 ## <a name="see-also"></a>请参阅  
 

@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc6e973b71b16817f3e3533544102bfeba3caeb4
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63472154"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793057"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +56,14 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  此存储过程会更改指定的配置文件是否为数据库用户的默认配置文件。 一个数据库用户只能有一个默认专用配置文件。  
   
  当关联的主体名称是**公共**或关联的主体 id 都**0**，则此存储的过程将更改公共配置文件。 只能有一个默认的公共配置文件。  
   
- 当 **@is_default** 是 **1**和主体与多个配置文件相关联，指定的配置文件的主体将成为默认配置文件。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
+ 当 **\@is_default**是**1**和主体与多个配置文件相关联，指定的配置文件的主体将成为默认配置文件。 以前的默认配置文件仍与主体数据库关联，但不再是默认配置文件。  
   
  存储的过程**sysmail_update_principalprofile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   

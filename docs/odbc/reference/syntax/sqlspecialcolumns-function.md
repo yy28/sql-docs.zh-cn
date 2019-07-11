@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536264"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793739"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函数
 **符合性**  
@@ -112,7 +112,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>诊断  
  当**SQLSpecialColumns**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可能会通过调用来获取**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLSpecialColumns** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
@@ -151,9 +151,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns**以按 SCOPE 排序标准结果集的形式返回结果。  
   
- 以下各列已重命名为 ODBC 3 *.x*。 列名称更改不会影响后向兼容性，因为应用程序将绑定的列号。  
+ 以下各列已重命名为 ODBC *3.x*。 列名称更改不会影响后向兼容性，因为应用程序将绑定的列号。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

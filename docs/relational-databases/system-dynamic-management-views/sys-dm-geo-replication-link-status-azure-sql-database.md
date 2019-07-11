@@ -14,16 +14,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2c416d0d2a39439e2b6fe79fbe755cdc62a4b8cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e94406cf30d1a942581f5fcfd30438c84ea2b159
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716701"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status（Azure SQL 数据库）
 
@@ -31,7 +31,7 @@ ms.locfileid: "56021750"
 
   包含每个异地复制合作关系中的主要和辅助数据库之间的复制链接的行。 这包括主和辅助数据库。 如果给定主数据库存在多个连续复制链接，此表为每个关系包含一行。 在所有数据库，包括逻辑 master 中创建视图。 但是，在主数据库中查询此视图将返回空集合。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|复制链接的唯一 ID。|  
 |partner_server|**sysname**|包含链接的数据库的 SQL 数据库服务器的名称。|  

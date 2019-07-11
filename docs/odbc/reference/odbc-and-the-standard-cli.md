@@ -17,12 +17,12 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273303"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794103"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和标准 CLI
 ODBC 与以下的规范和处理使用调用级别接口 (CLI) 的标准保持一致。 （ODBC 功能是每个这些标准的超集。）  
@@ -33,17 +33,17 @@ ODBC 与以下的规范和处理使用调用级别接口 (CLI) 的标准保持�
   
  由于这种调整，而满足以下条件：  
   
--   编写指向 Open Group 和 ISO CLI 规范的应用程序将使用 ODBC 3。*x*驱动程序或符合标准的驱动程序时使用 ODBC 3 编译。*x*标头文件，并与 ODBC 3 链接。*x*库，并当它获得通过 ODBC 3 驱动程序的访问权限。*x*驱动程序管理器。  
+-   Open Group 和 ISO CLI 规范编写的应用程序将使用 ODBC *3.x*驱动程序或符合标准的驱动程序时使用 ODBC 编译*3.x*标头文件，并与链接ODBC *3.x*库，并当它获得通过 ODBC 驱动程序的访问权限*3.x*驱动程序管理器。  
   
--   编写 Open Group 和 ISO CLI 规范的驱动程序将使用 ODBC 3 *.x*应用程序或符合标准的应用程序时使用 ODBC 3 编译 *.x*标头文件和链接ODBC 3 *.x*库，并当应用程序获得通过 ODBC 3 驱动程序的访问权限 *.x*驱动程序管理器。 (有关详细信息，请参阅[符合标准的应用程序和驱动程序](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
+-   编写 Open Group 和 ISO CLI 规范的驱动程序将使用 ODBC *3.x*应用程序或符合标准的应用程序时使用 ODBC 编译*3.x*标头文件和链接使用 ODBC *3.x*库，并当应用程序获得通过 ODBC 驱动程序的访问权限*3.x*驱动程序管理器。 (有关详细信息，请参阅[符合标准的应用程序和驱动程序](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
   
- 核心接口一致性级别包含 ISO CLI 中的所有功能和打开组 CLI 中的所有必需功能。 打开组 CLI 的可选功能，显示在更高版本的接口一致性级别。 因为所有 ODBC 3。*x*驱动程序以支持中核心接口一致性级别的功能，需要满足以下条件：  
+ 核心接口一致性级别包含 ISO CLI 中的所有功能和打开组 CLI 中的所有必需功能。 打开组 CLI 的可选功能，显示在更高版本的接口一致性级别。 因为所有 ODBC *3.x*驱动程序以支持中核心接口一致性级别的功能，需要满足以下条件：  
   
--   ODBC 3。*x*驱动程序将支持符合标准的应用程序使用的所有功能。  
+-   ODBC *3.x*驱动程序将支持符合标准的应用程序使用的所有功能。  
   
--   ODBC 3。*x*使用仅在 ISO CLI 中的功能和打开组 CLI 的必需功能的应用程序会使用任何符合标准的驱动程序。  
+-   ODBC *3.x*使用仅在 ISO CLI 中的功能和打开组 CLI 的必需功能的应用程序会使用任何符合标准的驱动程序。  
   
- 除了调用级别接口规范包含 ISO/IEC 和打开组 CLI 标准中，ODBC 将实现以下功能。 （其中一些功能的版本中存在 ODBC 3 之前的 ODBC。*x*。)  
+ 除了调用级别接口规范包含 ISO/IEC 和打开组 CLI 标准中，ODBC 将实现以下功能。 (其中一些功能的 ODBC 之前的 ODBC 版本中存在*3.x*。)  
   
 -   通过单个函数调用提取多行  
   

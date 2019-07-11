@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addarticle
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f24f7ca51f4836c8b1e446283eabb858eb8d387
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 045b1cb853603a2550110db18f5658453f19e6ce
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493889"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716755"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @destination_table = ] 'destination_table'` 是目标 （订阅） 表的名称，如果不同于*source_table*或存储的过程。 *destination_table*是**sysname**，默认值为 NULL，这意味着， *source_table*等于*destination_table * *。*  
   
-`[ @vertical_partition = ] 'vertical_partition'` 启用和禁用对表项目进行筛选的列。 *vertical_partition*是**nchar(5)**，默认值为 FALSE。  
+`[ @vertical_partition = ] 'vertical_partition'` 启用和禁用对表项目进行筛选的列。 *vertical_partition*是**nchar(5)** ，默认值为 FALSE。  
   
  **false**指示没有垂直筛选并且发布所有列。  
   
@@ -87,7 +87,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'` 是项目的类型。 *类型*是**sysname**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**仅限聚合架构**|仅具有架构的聚合函数。|  
 |**仅限 func 架构**|仅具有架构的函数。|  
@@ -105,13 +105,13 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|仅当存储过程在可串行事务上下文内执行时才复制存储过程的执行。 Oracle 发布服务器不支持。<br /><br /> 此外必须为要复制的过程执行显式事务内执行过程。|  
 |**仅限视图架构**|仅具有架构的视图。 Oracle 发布服务器不支持。 使用此选项时，还必须发布基表。|  
   
-`[ @filter = ] 'filter'` 用于水平筛选表的存储的过程 （使用 FOR REPLICATION 创建）。 *筛选器*是**nvarchar(386)**，默认值为 NULL。 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)并[sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)必须手动执行，以创建视图和筛选存储的过程。 如果不为 NULL，则不创建筛选过程（假定存储过程是手动创建的）。  
+`[ @filter = ] 'filter'` 用于水平筛选表的存储的过程 （使用 FOR REPLICATION 创建）。 *筛选器*是**nvarchar(386)** ，默认值为 NULL。 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)并[sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)必须手动执行，以创建视图和筛选存储的过程。 如果不为 NULL，则不创建筛选过程（假定存储过程是手动创建的）。  
   
-`[ @sync_object = ] 'sync_object'` 是表或视图用于生成用来表示该项目的快照的数据文件的名称。 *sync_object*是**nvarchar(386)**，默认值为 NULL。 如果为 NULL， [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)调用来自动创建用于生成输出文件的视图。 添加包含的任何列后就会出现[sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 如果不为 NULL，则不创建视图（假定视图是手动创建的）。  
+`[ @sync_object = ] 'sync_object'` 是表或视图用于生成用来表示该项目的快照的数据文件的名称。 *sync_object*是**nvarchar(386)** ，默认值为 NULL。 如果为 NULL， [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)调用来自动创建用于生成输出文件的视图。 添加包含的任何列后就会出现[sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)。 如果不为 NULL，则不创建视图（假定视图是手动创建的）。  
   
-`[ @ins_cmd = ] 'ins_cmd'` 是复制该项目的插入时使用的复制命令类型。 *ins_cmd*是**nvarchar(255)**，可以是下列值之一。  
+`[ @ins_cmd = ] 'ins_cmd'` 是复制该项目的插入时使用的复制命令类型。 *ins_cmd*是**nvarchar(255)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**NONE**|不执行任何操作。|  
 |**CALL sp_MSins_**<br /> **_表_** （默认值）<br /><br /> -或-<br /><br /> **调用 custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用该复制方法，使用*schema_option*来指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储的过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSins_*表*</strong>包含名称的目标表来代替 *（_t)* 参数的一部分。 当*destination_owner*预置到目标表名称的指定。 例如，对于**ProductCategory**表归**生产**订阅服务器上的架构，该参数应为`CALL sp_MSins_ProductionProductCategory`。 在对等复制拓扑中，一篇文章 *（_t)* 追加 GUID 值。 指定*custom_stored_procedure*不支持更新订阅服务器。|  
@@ -119,9 +119,9 @@ sp_addarticle [ @publication = ] 'publication'
   
  有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-`[ @del_cmd = ] 'del_cmd'` 是复制该项目的删除时使用的复制命令类型。 *del_cmd*是**nvarchar(255)**，可以是下列值之一。  
+`[ @del_cmd = ] 'del_cmd'` 是复制该项目的删除时使用的复制命令类型。 *del_cmd*是**nvarchar(255)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**NONE**|不执行任何操作。|  
 |**CALLsp_MSdel_**<br /> **_表_** （默认值）<br /><br /> -或-<br /><br /> **调用 custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用该复制方法，使用*schema_option*来指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储的过程。 *custom_stored_procedure*是用户创建的存储过程的名称。 <strong>sp_MSdel_*表*</strong>包含名称的目标表来代替 *（_t)* 参数的一部分。 当*destination_owner*预置到目标表名称的指定。 例如，对于**ProductCategory**表归**生产**订阅服务器上的架构，该参数应为`CALL sp_MSdel_ProductionProductCategory`。 在对等复制拓扑中，一篇文章 *（_t)* 追加 GUID 值。 指定*custom_stored_procedure*不支持更新订阅服务器。|  
@@ -130,9 +130,9 @@ sp_addarticle [ @publication = ] 'publication'
   
  有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-`[ @upd_cmd = ] 'upd_cmd'` 是复制该项目的更新时使用的复制命令类型。 *upd_cmd*是**nvarchar(255)**，可以是下列值之一。  
+`[ @upd_cmd = ] 'upd_cmd'` 是复制该项目的更新时使用的复制命令类型。 *upd_cmd*是**nvarchar(255)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**NONE**|不执行任何操作。|  
 |**CALL sp_MSupd_**<br /> **_table_**<br /><br /> -或-<br /><br /> **调用 custom_stored_procedure_name**|在订阅服务器中调用要执行的存储过程。 若要使用该复制方法，使用*schema_option*来指定自动创建存储过程，或在项目的每个订阅服务器的目标数据库中创建指定的存储的过程。|  
@@ -144,13 +144,13 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  对于传播到订阅服务器的数据量，CALL、MCALL、SCALL 和 XCALL 语法各不相同。 CALL 语法传递所有已插入和已删除的列的所有值。 SCALL 语法只传递受影响的列的值。 XCALL 语法传递所有列的值（无论更改与否），包括列以前的值。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-`[ @creation_script = ] 'creation_script'` 是的路径和用于在订阅数据库中创建项目的可选项目架构脚本的名称。 *creation_script*是**nvarchar(255)**，默认值为 NULL。  
+`[ @creation_script = ] 'creation_script'` 是的路径和用于在订阅数据库中创建项目的可选项目架构脚本的名称。 *creation_script*是**nvarchar(255)** ，默认值为 NULL。  
   
-`[ @description = ] 'description'` 是一文的说明项。 *描述*是**nvarchar(255)**，默认值为 NULL。  
+`[ @description = ] 'description'` 是一文的说明项。 *描述*是**nvarchar(255)** ，默认值为 NULL。  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'` 指定系统应执行的操作应用于该项目的快照时检测到订阅服务器上具有相同名称的现有对象时。 *pre_creation_cmd*是**nvarchar(10)**，可以是下列值之一。  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` 指定系统应执行的操作应用于该项目的快照时检测到订阅服务器上具有相同名称的现有对象时。 *pre_creation_cmd*是**nvarchar(10)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**none**|不使用命令。|  
 |**delete**|在应用快照之前从目标表中删除数据。 水平筛选项目时，将只删除筛选子句所指定的列中的数据。 定义水平筛选时，不支持用于 Oracle 发布服务器。|  
@@ -159,12 +159,12 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @filter_clause = ] 'filter_clause'` 是的限制 (WHERE) 子句，用于定义水平筛选器。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*是**ntext**，默认值为 NULL。 有关详细信息，请参阅[筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)。  
   
-`[ @schema_option = ] schema_option` 为给定项目的架构生成选项的位掩码。 *schema_option*是**binary(8)**，可以为[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品的一个或多个值：  
+`[ @schema_option = ] schema_option` 为给定项目的架构生成选项的位掩码。 *schema_option*是**binary(8)** ，可以为[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品的一个或多个值：  
   
 > [!NOTE]  
 >  如果该值为 NULL，则系统将为依赖于其他项目属性的项目自动生成有效的架构选项。 **默认架构选项**给定注释中的表显示了根据项目类型和复制类型的组合将选择的值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0x00**|禁用快照代理编写脚本，并使用*creation_script*。|  
 |**0x01**|生成对象创建脚本（CREATE TABLE、CREATE PROCEDURE 等）。 该值是存储过程项目的默认值。|  
@@ -179,7 +179,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x200**|复制外键约束。 如果被所引用的表不是发布的一部分，则不会复制已发布表的任何外键约束。 *对 Oracle 发布服务器不支持*。|  
 |**0x400**|复制检查约束。 *对 Oracle 发布服务器不支持*。|  
 |**0x800**|复制默认值。 *对 Oracle 发布服务器不支持*。|  
-|**0x1000**|复制列级排序规则。<br /><br /> **注意：** 应当为 Oracle 发布服务器设置该选项，以启用区分大小写的比较。|  
+|**0x1000**|复制列级排序规则。<br /><br /> **注意：** Oracle 发布服务器以启用区分大小写的比较，应设置此选项。|  
 |**0x2000**|复制与已发布项目源对象关联的扩展属性。 *对 Oracle 发布服务器不支持*。|  
 |**0x4000**|复制 UNIQUE 约束。 也会复制与约束相关的任何索引，即使选项**0x10**并**0x40**未启用。|  
 |**0x8000**|此选项对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 发布服务器无效。|  
@@ -196,7 +196,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x4000000**|在复制的索引**xml**列。|  
 |**0x8000000**|创建订阅服务器中尚不存在的任何架构。|  
 |**0x10000000**|将转换**xml**的列**ntext**在订阅服务器上。|  
-|**0x20000000**|将大型对象数据类型 (**nvarchar （max)**， **varchar （max)**，并**varbinary （max)**) 中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]到上受支持的数据类型[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+|**0x20000000**|将大型对象数据类型 (**nvarchar （max)** ， **varchar （max)** ，并**varbinary （max)** ) 中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]到上受支持的数据类型[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |**0x40000000**|复制的权限。|  
 |**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
 |**0x100000000**|使用此选项用于复制 FILESTREAM 属性，如果在指定**varbinary （max)** 列。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 包含 FILESTREAM 列的表复制[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑如何设置此架构选项。<br /><br /> 请参阅相关的选项**0x800000000**。|  
@@ -249,9 +249,9 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @artid = ] _article_ID_ OUTPUT` 为新项目的项目 ID。 *article_ID*是**int** ，默认值为 NULL，它是一个输出参数。  
   
-`[ @auto_identity_range = ] 'auto_identity_range'` 启用和禁用自动标识范围处理在创建的时发布。 *auto_identity_range*是**nvarchar(5)**，可以是下列值之一：  
+`[ @auto_identity_range = ] 'auto_identity_range'` 启用和禁用自动标识范围处理在创建的时发布。 *auto_identity_range*是**nvarchar(5)** ，可以是下列值之一：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**true**|启用自动标识范围处理|  
 |**false**|禁用自动标识范围处理|  
@@ -283,9 +283,9 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  该参数只应当用于 Oracle 发布服务器。 设置*use_default_datatypes*到**0**为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器将生成错误。  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption` 指定对项目中如何处理标识范围管理。 *identityrangemanagementoption*是**nvarchar(10)**，可以是下列值之一。  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` 指定对项目中如何处理标识范围管理。 *identityrangemanagementoption*是**nvarchar(10)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**none**|复制不会显式执行标识范围管理。 仅当为了保持与 SQL Server 早期版本的向后兼容性时，才建议使用该选项。 禁止用于对等复制。|  
 |**manual**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  
@@ -301,7 +301,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *发布服务器*添加到项目时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
-`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` 是复制的应用初始快照时执行用户触发器。 *fire_triggers_on_snapshot*是**nvarchar(5)**，默认值为 FALSE。 **true**意味着应用快照时执行复制的表的用户触发器。 为了使触发器要复制的位掩码值*schema_option*必须包含值**0x100**。  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` 是复制的应用初始快照时执行用户触发器。 *fire_triggers_on_snapshot*是**nvarchar(5)** ，默认值为 FALSE。 **true**意味着应用快照时执行复制的表的用户触发器。 为了使触发器要复制的位掩码值*schema_option*必须包含值**0x100**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

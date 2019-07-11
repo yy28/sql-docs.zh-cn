@@ -16,16 +16,16 @@ helpviewer_keywords:
 - resource_usage
 - sys.resource_usage
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9b0e16279615bf102c916793439d440211939839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a3a6baec134c715d5f15c0e3e45a19e17d5b5cf
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025403"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716308"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "63025403"
 |time|**datetime**|时间 (UTC)（以小时增量表示）。|  
 |database_name|**nvarchar**|用户数据库的名称。|  
 |sku|**nvarchar**|SKU 的名称。 下面是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> 基本<br /><br /> 标准<br /><br /> Premium|  
-|usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意：此列的 V11 已弃用，不适用于 V12。 **值始终设置为 0。**|  
+|usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意:此列的 V11 已弃用，不适用于 V12。 **值始终设置为 0。**|  
 |storage_in_megabytes|**decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
   
 ## <a name="permissions"></a>权限  

@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790656"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793432"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 客户端连接 (SQL Server)
   本主题介绍与 AlwaysOn 可用性组进行客户端连接时的注意事项，包括针对客户端配置和设置的先决条件、限制和建议。  
@@ -33,12 +33,12 @@ ms.locfileid: "62790656"
   
  下表概述了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的驱动程序支持：  
   
-|驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快进行单子网端点故障转移|多子网故障转移：群集实例的 SQL 命名的实例解析|  
+|驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快的单子网终结点故障转移|多子网故障转移：SQL 群集实例的命名实例解析|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|是|是|是|是|是|  
 |SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
-|ADO.NET 与.NET Framework 4.0 和连接性修补程序 **<sup>*</sup>**|是|是|是|是|是|  
-|ADO.NET 与.NET Framework 3.5 SP1 和连接性修补程序 **<sup>** </sup>**|是|是|是|是|是|  
+|ADO.NET 与.NET Framework 4.0 和连接性修补程序 **<sup>*</sup>** |是|是|是|是|是|  
+|ADO.NET 与.NET Framework 3.5 SP1 和连接性修补程序 **<sup>** </sup>** |是|是|是|是|是|  
 |Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
   
  **<sup>*</sup>**  下载.NET Framework 4.0 的 ADO.NET 连接性修补程序： [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211)。  

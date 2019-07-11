@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 本文介绍了 SQL Server 2019 大数据群集 （预览版） 的安全概念。 这包括描述群集终结点和群集身份验证。
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 49577ce5a29a0c014fea7c8c9a0c5c320a9b7174
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387944"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729106"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的安全性概念
 

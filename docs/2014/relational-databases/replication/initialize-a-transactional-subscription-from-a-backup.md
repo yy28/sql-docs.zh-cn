@@ -18,12 +18,12 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721115"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793303"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>从备份初始化事务订阅（复制 Transact-SQL 编程）
   虽然通常使用快照来初始化对事务发布的订阅，但也可以使用复制存储过程通过备份初始化订阅。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
@@ -34,7 +34,7 @@ ms.locfileid: "62721115"
   
     -   如果值为 **1**，则该发布支持此功能。  
   
-    -   如果值为 **0**，则在发布服务器上对发布数据库执行 [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 指定的值**allow_initialize_from_backup**有关 **@property** 并将值`true`为 **@value** 。  
+    -   如果值为 **0**，则在发布服务器上对发布数据库执行 [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 指定的值**allow_initialize_from_backup**有关 **\@属性**并将值`true`为 **\@值**。  
   
 2.  对于新发布，在发布服务器上对发布数据库执行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定的值`true`有关**allow_initialize_from_backup**。 有关详细信息，请参阅 [Create a Publication](publish/create-a-publication.md)。  
   
@@ -47,23 +47,23 @@ ms.locfileid: "62721115"
   
 5.  在发布服务器上对发布数据库执行存储过程 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定下列参数：  
   
-    -   **@sync_type** - 值为 **initialize with backup**。  
+    -   **\@sync_type**的值为**用备份初始化**。  
   
-    -   **@backupdevicetype** - 备份设备的类型： **logical** （默认）、 **disk**或 **tape**。  
+    -   **\@backupdevicetype** -备份设备的类型：**逻辑**（默认值），**磁盘**，或**磁带**。  
   
-    -   **@backupdevicename** - 用于还原的逻辑或物理备份设备。  
+    -   **\@backupdevicename** -要用于还原的逻辑或物理备份设备。  
   
          对于逻辑设备，指定使用 **sp_addumpdevice** 创建该设备时指定的备份设备的名称。  
   
          对于物理设备，指定完整的路径和文件名，比如 `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\BACKUP\Mybackup.dat'` 或 `TAPE = '\\.\TAPE0'`。  
   
-    -   （可选） **@password** - 创建备份集时提供的密码。  
+    -   （可选） **\@密码**-创建备份集时提供的密码。  
   
-    -   （可选） **@mediapassword** - 对介质集设置格式时提供的密码。  
+    -   （可选） **\@mediapassword** -格式化介质集时提供的密码。  
   
-    -   （可选） **@fileidhint** - 要还原的备份集的标识符。 例如，指定为 **1** 表示备份介质中的第一个备份集，而指定为 **2** 则表示第二个备份集。  
+    -   （可选） **\@fileidhint** -要还原的备份集的标识符。 例如，指定为 **1** 表示备份介质中的第一个备份集，而指定为 **2** 则表示第二个备份集。  
   
-    -   （对于磁带设备是可选的） **@unload** - 如果完成还原后应从驱动器卸载磁带，则将值指定为 **1** （默认），如果不用卸载磁带，则将值指定为 **0** 。  
+    -   （对于磁带设备是可选的） **\@卸载**的值指定为**1** （默认），如果完成还原后应从驱动器卸载磁带并**0**如果它不应卸载.  
   
 6.  （可选）对于请求订阅，在订阅服务器上对订阅数据库执行 [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) 和 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
   

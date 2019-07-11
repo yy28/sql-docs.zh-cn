@@ -14,12 +14,12 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057779"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794171"
 ---
 # <a name="odbc-glossary"></a>ODBC 术语表
 ## <a name="a"></a>A  
@@ -55,7 +55,7 @@ ms.locfileid: "63057779"
   
 ## <a name="b"></a>B  
  **行为更改**  
- 在 ODBC 3 中的某些功能的更改 *.x*对 ODBC 2 的行为。*x*行为，反之亦然。 引起更改 SQL_ATTR_ODBC_VERSION 环境属性。  
+ 在 ODBC 中的某些功能的更改*3.x*到 ODBC 行为*2.x*行为，反之亦然。 引起更改 SQL_ATTR_ODBC_VERSION 环境属性。  
   
  **二进制大型对象 (BLOB)**  
  超过某个数目的字节，如 255 任何二进制数据。 通常更长的时间。 此类数据通常是发送到和从部件中的数据源中检索。 也称为*长整型数据*。  
@@ -97,13 +97,13 @@ ms.locfileid: "63057779"
  **commit**  
  若要永久所做的更改在事务中。  
   
- 并发  
+ 并发   
  若要在同一时间访问相同的数据的多个事务能力。  
   
  **一致性级别**  
  一组离散的驱动程序或数据源支持的功能。 ODBC 定义 API 一致性级别和 SQL 一致性级别。  
   
- 连接  
+ 连接   
  驱动程序和数据源的特定实例。  
   
  **连接浏览**  
@@ -208,7 +208,7 @@ ms.locfileid: "63057779"
  **fetch**  
  若要从结果集中检索一个或多个行。  
   
- field  
+ field   
  *请参阅*列。  
   
  **基于文件的驱动程序**  
@@ -270,7 +270,7 @@ ms.locfileid: "63057779"
  通过使用由键集来检测更新和删除的行可滚动游标。  
   
 ## <a name="l"></a>L  
- literal  
+ literal   
  中的 SQL 语句的实际数据值的字符表示形式。  
   
  **locking**  
@@ -352,7 +352,7 @@ ms.locfileid: "63057779"
  **主键**  
  一个或多列唯一标识表中的行。  
   
- procedure  
+ procedure   
  一个或多个组预编译的存储为数据库中的命名对象的 SQL 语句。  
   
  **过程列**  
@@ -448,7 +448,7 @@ ms.locfileid: "63057779"
  **SQL 语句**  
  在 SQL 中，以一个关键字开始，并完全描述要执行的操作完成短语。 例如，选择 * 从订单。 不要将 SQL 语句与语句相混淆。  
   
- State  
+ **State**  
  明确定义符合以下条件的项。 例如，连接了七种状态，包括未分配、 分配、 已连接，且需要的数据。 仅当项处于特定状态时，可以在执行某些操作。 例如，仅当它是处于已分配状态并不是，示例中，当它处于连接状态时，可以释放连接。  
   
  **状态转换**  

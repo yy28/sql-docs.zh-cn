@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099961"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793610"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="arguments"></a>参数  
 `[ @acctname = ] 'account_name'` 是 Windows 用户或组授予访问权限的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *account_name*是**sysname**，默认值为 NULL。 如果*account_name*未指定，则所有 Windows 组和 Windows 用户被显式都授予登录权限的报告。 *account_name*必须是完全限定的。 例如，“ADVWKS4\macraes”或“BUILTIN\Administrators”。  
   
- **'all'** | **成员**  
- 指定是报告有关帐户的所有权限路径的信息，还是报告有关 Windows 组成员的信息。 **@option** 是**varchar(10)**，默认值为 NULL。 除非**所有**指定，则会显示仅第一个权限路径。  
+ **'all'**  | **成员**  
+ 指定是报告有关帐户的所有权限路径的信息，还是报告有关 Windows 组成员的信息。 **\@选项**是**varchar(10)** ，默认值为 NULL。 除非**所有**指定，则会显示仅第一个权限路径。  
   
-`[ @privilege = ] variable_name` 是一个输出参数，它返回指定的 Windows 帐户的权限级别。 *variable_name*是**varchar(10)**，默认值为 Not wanted。 权限级别，则返回**用户**，**管理员**，或**null**。  
+`[ @privilege = ] variable_name` 是一个输出参数，它返回指定的 Windows 帐户的权限级别。 *variable_name*是**varchar(10)** ，默认值为 Not wanted。 权限级别，则返回**用户**，**管理员**，或**null**。  
   
  OUTPUT  
  如果指定，将放*variable_name*输出参数中。  
@@ -57,7 +57,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**account name**|**sysname**|完全限定的 Windows 帐户名。|  
 |**type**|**char(8)**|Windows 帐户类型。 有效的值为**用户**或**组**。|  

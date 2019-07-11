@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 的 SQL Server 各个版本支持的功能 |Microsoft Docs
-ms.date: 06/25/2019
+title: SQL Server 各个版本支持的 analysis Services 功能 |Microsoft Docs
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 6d4f0cc16638963dbbbb091bc19cade36e45fe3b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388209"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792553"
 ---
 # <a name="analysis-services-features-supported-by-sql-server-edition"></a>支持的 SQL Server 版本的 analysis Services 功能
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 本文介绍了不同版本的 SQL Server 2016、 2017，2019 Analysis Services 支持的功能。 评估版支持企业版功能。
@@ -50,7 +51,7 @@ ms.locfileid: "67388209"
   
 |功能|Enterprise|标准|Web|Express with Advanced Services|Express with Tools|Express|开发人员|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|半累加性度量值|是|No <sup>1</sup>|||||是|  
+|半累加性度量值|是|否<sup> [1](#sameas)</sup>|||||是|  
 |层次结构|是|是|||||是|  
 |KPI|是|是|||||是|  
 |透视|是||||||是|  
@@ -59,12 +60,12 @@ ms.locfileid: "67388209"
 |时间智能|是|是|||||是|  
 |自定义汇总|是|是|||||是|  
 |写回多维数据集|是|是|||||是|  
-|写回维度|是||||||是|  
+|写回维度|是 <sup>[2](#wb)</sup>||||||是 <sup>[2](#wb)</sup>|  
 |写回单元|是|是|||||是|  
 |钻取|是|是|||||是|  
 |高级层次结构类型（父子、不规则层次结构）|是|是|||||是|  
 |高级维度（引用维度、多对多维度）|是|是|||||是|  
-|链接度量值和维度|是|是  <sup>2</sup> |||||是|  
+|链接度量值和维度|是|是<sup> [3](#linkmd)</sup> |||||是|  
 |翻译|是|是|||||是|  
 |Aggregations|是|是|||||是|  
 |多个分区|是|支持，最多 3 个|||||是|  
@@ -80,8 +81,12 @@ ms.locfileid: "67388209"
 |推送模式处理|是||||||是|  
 |度量值表达式|是||||||是|  
   
- <sup>1</sup> Standard Edition 支持 LastChild 半累加性度量值，但不支持其他半累加性度量值，例如 None、FirstChild、FirstNonEmpty、LastNonEmpty、AverageOfChildren 和 ByAccount。 在所有版本上都支持累加性度量值（如 Sum、Count、Min 和 Max）和非累加性度量值 (DistinctCount)。  
-  <sup>2</sup> Standard Edition 支持链接度量值和维度处于相同数据库，但不支持来自其他数据库或实例。
+<a name="sameas">[1]</a> Standard edition 支持 LastChild 半累加性度量值，但其他半累加性度量值，例如 None、 FirstChild、 FirstNonEmpty、 LastNonEmpty、 AverageOfChildren 和 ByAccount。 在所有版本上都支持累加性度量值（如 Sum、Count、Min 和 Max）和非累加性度量值 (DistinctCount)。 
+
+<a name="wb">[2]</a>写回维度已不再使用 SQL Server Analysis Services 2019 及更高版本。
+ 
+<a name="linkmd">[3]</a> Standard edition 支持链接度量值和维度处于相同的数据库，但不能从其他数据库或实例。
+  
   
 ## <a name="power-pivot-for-sharepoint"></a>Power Pivot for SharePoint  
   
@@ -95,6 +100,9 @@ ms.locfileid: "67388209"
 |PowerPivot 数据馈送|是||||||是|  
   
 ## <a name="data-mining"></a>数据挖掘  
+
+> [!NOTE]
+> 数据挖掘是[弃用](analysis-services-backward-compatibility-sql2017.md#deprecated-features)SQL Server Analysis Services 2017 中。
   
 |功能名称|Enterprise|标准|Web|Express with Advanced Services|Express with Tools|Express|开发人员|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  

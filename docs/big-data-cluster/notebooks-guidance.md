@@ -2,20 +2,20 @@
 title: 在 Azure Data Studio 中运行 notebook
 titleSuffix: SQL Server big data clusters
 description: 本文介绍如何在 Azure Data Studio 连接到 SQL Server 2019 大数据群集中运行的 Jupyter 笔记本。
-author: achatter
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: e4b24b70a427e7ac3e3f058b1db332b899729034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802815"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728760"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
@@ -97,7 +97,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 ![Jupyter 后端](media/notebooks-guidance/jupyter-backend.png)
 
-|内核|Description
+|内核|描述
 |:-----|:-----
 | SQL Kernel | 编写针对关系数据库的 SQL 代码。
 |PySpark3 和 PySpark 内核| 编写使用 Spark 计算群集中的 Python 代码。

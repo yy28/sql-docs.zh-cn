@@ -2,20 +2,20 @@
 title: 将数据引入到 SQL Server 数据池
 titleSuffix: SQL Server big data clusters
 description: 本教程演示如何将数据引入到 SQL Server 2019 大数据群集 （预览版） 的数据池。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 86aca5e5e9ccbddfebcdeb3dade057b7fb138c4d
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 52881f5102125cc008c1a35278b9bf46bef289f4
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388614"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728357"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
 

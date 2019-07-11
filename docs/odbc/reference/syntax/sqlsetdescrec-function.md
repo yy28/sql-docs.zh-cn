@@ -20,12 +20,12 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536278"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793160"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函数
 **符合性**  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>诊断  
  当**SQLSetDescRec**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_DESC 和一个*处理*的*DescriptorHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLSetDescRec** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07009|描述符索引无效|*RecNumber*参数设置为 0，并且*DescriptorHandle*称为 IPD 句柄。<br /><br /> *RecNumber*参数为小于 0。<br /><br /> *RecNumber*参数为大于最大号的列或参数的数据源可以支持，并*DescriptorHandle*参数是 APD、 IPD，还是 ARD。<br /><br /> *RecNumber*参数为等于 0，并且*DescriptorHandle*隐式分配 APD 引用参数。 （此不会出现错误与显式分配应用程序描述符因为不知道是否已显式分配应用程序描述符是 APD 或直到 ARD 执行时间。）|  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY016|无法修改实现行描述符|*DescriptorHandle*参数为与 IRD 相关联。|  
 |HY021|描述符信息不一致|*类型*字段中或与描述符中的 SQL_DESC_TYPE 字段相关联的任何其他字段不是有效或一致。<br /><br /> 一致性检查期间检查的描述符信息不是一致的。 （请参阅"一致性检查，"更高版本在本部分中）。|  
-|HY090|字符串或缓冲区长度无效|(DM) 驱动程序是 ODBC 2 *.x*驱动程序，该描述符是 ARD *ColumnNumber*参数设置为 0，并为该参数指定的值*BufferLength*是不等于 4。|  
+|HY090|字符串或缓冲区长度无效|(DM) 驱动程序是一个 ODBC *2.x*驱动程序，该描述符是 ARD *ColumnNumber*参数设置为 0，并为该参数指定的值*BufferLength*是不等于 4。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*DescriptorHandle*不支持该函数。|  

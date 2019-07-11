@@ -10,12 +10,12 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090616"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792915"
 ---
 # <a name="create-the-finance-name-policy"></a>创建 Finance Name 策略
   在本任务中，将创建一个名为 Finance 的数据库，然后创建一个要求所有表以字母 **fintbl** 开头的条件。 然后，将创建一个策略和策略类别，强制 Finance 数据库中的表执行某一命名标准。  
@@ -39,7 +39,7 @@ ms.locfileid: "66090616"
   
 3.  在“Facet”  列表中，选择“多部分名称”  。  
   
-4.  在“表达式”  区域中，在“字段”  框中选择 **@Name** ，在“运算符”  框中选择“Like”  ，然后在“值”  框中键入 **'fintbl%'** 以强制要求所有表名称以字母 **fintbl** 开头。  
+4.  在中**表达式**区域中**字段**框中，选择 **\@名称**; 在**运算符**框中，选择**像**; 然后在**值**框中，键入 **'fintbl %'** 若要强制所有表名称以字母开头**fintbl**。  
   
 5.  在“说明”  页中，键入 **Finance table names must begin with fintbl**，然后单击“确定”  以创建条件。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090616"
   
 6.  在“创建新条件”  对话框的“名称”  框中，键入 **Finance Database**。  
   
-7.  在“表达式”  框中，完成表达式以包含 **@Name = 'Finance'** ，然后单击“确定”  关闭条件页。  
+7.  在中**表达式**框中，完成表达式以包含 **\@名称 = 'Finance'** ，然后单击**确定**关闭条件页。  
   
     > [!NOTE]  
     >  可能需要按 Tab 键移出“值”  框才能启用“确定”  按钮。  

@@ -12,16 +12,16 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 889d8d618cf017d27e3b92ce845c8ebfee179048
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: 1bd16b4ac7fb0b27296fb2cc7e47ec683d761ed4
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342918"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716644"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "58342918"
   
  Sys.database_service_objectives 视图包含以下各列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|database_id|ssNoversion|在 Azure SQL 数据库服务器的实例中是唯一的数据库的 ID。 使用可加入[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
+|database_id|INT|在 Azure SQL 数据库服务器的实例中是唯一的数据库的 ID。 使用可加入[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |版本|sysname|数据库或数据仓库服务层：**基本**，**标准**， **Premium**或**数据仓库**。|  
 |service_objective|sysname|数据库的定价层。 如果数据库是在弹性池中，则返回**ElasticPool**。<br /><br /> 上**基本**层，返回**基本**。<br /><br /> **标准服务层中的单个数据库**返回以下值之一：S0、 S1、 S2、 S3、 S4、 S6、 S7、 S9 或 S12。<br /><br /> **高级层中的单个数据库**返回以下值：P1、 P2、 P4、 P6、 P11 或 P15。<br /><br /> **SQL 数据仓库**返回 DW100 通过 DW30000c。|  
 |elastic_pool_name|sysname|名称[弹性池](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)属于数据库。 返回**NULL**如果数据库是单一数据库或数据 warehoue。|  

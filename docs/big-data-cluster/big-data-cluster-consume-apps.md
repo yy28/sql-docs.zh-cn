@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 使用 SQL Server 2019 大数据群集使用 RESTful web 服务 （预览版） 上部署的应用程序。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801899"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729298"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服务的大数据群集上部署的应用
 
@@ -34,7 +33,7 @@ ms.locfileid: "66801899"
 
 部署到 SQL Server 2019 大数据群集 （预览版） 的应用程序后，可以访问和使用该应用程序使用 RESTful web 服务。 这使该应用从其他应用程序或服务 （例如，移动应用或网站） 的集成。 下表描述了可用于应用程序部署命令**mssqlctl**以获取有关你的应用的 RESTful web 服务的信息。
 
-|Command |Description |
+|Command |描述 |
 |:---|:---|
 |`mssqlctl app describe` | 介绍应用程序。 |
 

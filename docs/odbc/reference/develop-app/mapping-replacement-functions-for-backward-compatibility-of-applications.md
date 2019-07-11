@@ -19,17 +19,17 @@ ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032829"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793311"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>映射替换函数以实现应用程序后向兼容性
-ODBC 3 *.x*应用程序使用 ODBC 3 *.x*驱动程序管理器对 ODBC 2 起作用。*x*驱动程序，只要使用的任何新功能。 复制功能和行为的更改，但是，影响的方式，ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序。 当使用 ODBC 2。*x*驱动程序，驱动程序管理器将映射以下 ODBC 3。*x*函数，它已替换为一个或多个 ODBC 2。*x*函数，到相应的 ODBC 2。*x*函数。  
+ODBC *3.x*应用程序使用 ODBC *3.x*对 ODBC 驱动程序管理器起作用*2.x*驱动程序，只要使用的任何新功能。 复制功能和行为的更改，但是，影响的方式，ODBC *3.x*应用程序适用于 ODBC *2.x*驱动程序。 当使用 ODBC *2.x*驱动程序，驱动程序管理器将映射以下 ODBC *3.x*函数，它已替换为一个或多个 ODBC *2.x*函数，到相应的 ODBC *2.x*函数。  
   
-|ODBC 3。*x*函数|ODBC 2。*x*函数|  
+|ODBC *3.x*函数|ODBC *2.x*函数|  
 |-------------------------|-------------------------|  
 |**SQLAllocHandle**|**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
@@ -102,7 +102,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY091 （无效的描述符字段标识符）。 本部分中没有更多规则适用。  
   
-2.  驱动程序管理器将映射 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE 到 SQL_DESC_COUNT、 SQL_DESC_NAME 或 SQL_DESC_NULLABLE，分别。 (ODBC 2 *.x*驱动程序需要仅支持 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，和 SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 SQL_DESC_NAME 和 SQL_DESC_NULLABLE。)SQLColAttribute 对映射到：  
+2.  驱动程序管理器将映射 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE 到 SQL_DESC_COUNT、 SQL_DESC_NAME 或 SQL_DESC_NULLABLE，分别。 (ODBC *2.x*驱动程序需要仅支持 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，和 SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 SQL_DESC_NAME 和 SQL_DESC_NULLABLE。)SQLColAttribute 对映射到：  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -219,7 +219,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  将导致以下一系列步骤：  
   
-1.  如果*特性*不是驱动程序定义的连接或语句属性并不是 ODBC 2 中定义的属性。*x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 （属性/选项标识符无效）。 在本部分中没有更多的规则适用。  
+1.  如果*特性*不是驱动程序定义的连接或语句属性并不是在 ODBC 中定义的属性*2.x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 (无效的特性 /选项标识符）。 在本部分中没有更多的规则适用。  
   
 2.  如果*特性*等于 SQL_ATTR_AUTO_IPD 或 SQL_ATTR_METADATA_ID，驱动程序管理器返回具有 SQLSTATE HY092 SQL_ERROR （属性/选项标识符无效）。  
   
@@ -234,7 +234,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      请注意， *BufferLength*并*StringLengthPtr*将被忽略。  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- 当 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序调用**SQLGetData**与*ColumnNumber*参数等于 0，ODBC 3 *.x*驱动程序管理器将其映射到调用**SQLGetStmtOption**与*选项*属性设置为 SQL_GET_BOOKMARK。  
+ 当 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序调用**SQLGetData**与*ColumnNumber*参数等于 0，ODBC *3.x*驱动程序管理器将其映射到调用**SQLGetStmtOption**与*选项*属性设置为 SQL_GET_BOOKMARK。  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  驱动程序管理器可以将其映射到**SQLGetStmtOption**。 以下调用到**SQLGetStmtAttr**:  
@@ -245,7 +245,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  将导致以下一系列步骤：  
   
-1.  如果*特性*不是驱动程序定义的连接或语句属性并不是 ODBC 2 中定义的属性。*x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 （属性/选项标识符无效）。 在本部分中没有更多的规则适用。  
+1.  如果*特性*不是驱动程序定义的连接或语句属性并不是在 ODBC 中定义的属性*2.x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 (无效的特性 /选项标识符）。 在本部分中没有更多的规则适用。  
   
 2.  如果*特性*是以下之一：  
   
@@ -304,7 +304,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  将导致以下一系列步骤：  
   
-1.  如果*特性*不是驱动程序定义的连接或语句属性并不是 ODBC 2 中定义的属性。*x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 （属性/选项标识符无效）。 在本部分中没有更多的规则适用。  
+1.  如果*特性*不是驱动程序定义的连接或语句属性并不是在 ODBC 中定义的属性*2.x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 (无效的特性 /选项标识符）。 在本部分中没有更多的规则适用。  
   
 2.  如果*特性*等于 SQL_ATTR_AUTO_IPD，驱动程序管理器返回具有 SQLSTATE HY092 SQL_ERROR （属性/选项标识符无效）。  
   
@@ -319,7 +319,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
      其中*hdbc*， *fOption*，并*vParam*将设为的值*ConnectionHandle*，*属性*，并*ValuePtr*分别。 *StringLengthPtr*将被忽略。  
   
 > [!NOTE]  
->  已弃用的功能在连接级别上设置的语句属性。 语句应该永远不会将属性设置在连接级别上的 ODBC 3。*x*应用程序。  
+>  已弃用的功能在连接级别上设置的语句属性。 语句应该永远不会将属性设置在连接级别上的 ODBC *3.x*应用程序。  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  驱动程序管理器可以将其映射到**SQLSetStmtOption**。 以下调用到**SQLSetStmtAttr**:  
@@ -330,7 +330,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  将导致以下一系列步骤：  
   
-1.  如果*特性*不是驱动程序定义的连接或语句属性并不是 ODBC 2 中定义的属性。*x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 （属性/选项标识符无效）。 在本部分中没有更多的规则适用。  
+1.  如果*特性*不是驱动程序定义的连接或语句属性并不是在 ODBC 中定义的属性*2.x*，驱动程序管理器将返回 SQL_ERROR 具有 SQLSTATE HY092 (无效的特性 /选项标识符）。 在本部分中没有更多的规则适用。  
   
 2.  如果*特性*是以下之一：  
   
@@ -382,7 +382,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      其中*hstmt*， *fOption*，并*vParam*将设为的值*StatementHandle*，*属性*，并*ValuePtr*分别。 *StringLength*忽略参数。  
   
-     如果检测到 ODBC 2。*x*驱动程序支持字符串、 特定于驱动程序的语句选项，ODBC 3。*x*应用程序应调用**SQLSetStmtOption**设置这些选项。  
+     如果 ODBC *2.x*驱动程序支持字符串、 特定于驱动程序的语句选项，ODBC *3.x*应用程序应调用**SQLSetStmtOption**设置这些选项。  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>用于处理参数数组映射  
  当应用程序调用：  
@@ -399,23 +399,23 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
   
  驱动程序管理器更高版本返回一个指向此变量时在应用程序调用**SQLGetStmtAttr**检索 SQL_ATTR_PARAMS_PROCESSED_PTR。 驱动程序管理器不能更改此内部变量，直到语句句柄返回到已准备好或已分配状态。  
   
- ODBC 3。*x*应用程序可以调用**SQLGetStmtAttr**即使 APD 中的 SQL_DESC_ARRAY_SIZE 字段未显式设置，它具有获取 SQL_ATTR_PARAMS_PROCESSED_PTR 的值。 这种情况下也可能会发生，例如，应用程序必须检查当前"行"的参数的通用例程时正在处理**SQLExecute**返回 SQL_NEED_DATA。 此例程调用是否 SQL_DESC_ARRAY_SIZE 为 1 或大于 1。 若要考虑到这一点，驱动程序管理器将需要定义此内部变量是否已调用应用程序**SQLSetStmtAttr**设置 APD 中的 SQL_DESC_ARRAY_SIZE 字段。 如果尚未设置 SQL_DESC_ARRAY_SIZE，驱动程序管理器必须确保此变量包含之前从返回的值 1 **SQLExecDirect**或**SQLExecute**。  
+ ODBC *3.x*应用程序可以调用**SQLGetStmtAttr**即使 APD 中的 SQL_DESC_ARRAY_SIZE 字段未显式设置，它具有获取 SQL_ATTR_PARAMS_PROCESSED_PTR 的值。 这种情况下也可能会发生，例如，应用程序必须检查当前"行"的参数的通用例程时正在处理**SQLExecute**返回 SQL_NEED_DATA。 此例程调用是否 SQL_DESC_ARRAY_SIZE 为 1 或大于 1。 若要考虑到这一点，驱动程序管理器将需要定义此内部变量是否已调用应用程序**SQLSetStmtAttr**设置 APD 中的 SQL_DESC_ARRAY_SIZE 字段。 如果尚未设置 SQL_DESC_ARRAY_SIZE，驱动程序管理器必须确保此变量包含之前从返回的值 1 **SQLExecDirect**或**SQLExecute**。  
   
 ## <a name="error-handling"></a>错误处理  
- 在 ODBC 3。*x*，则调用**SQLFetch**或**SQLFetchScroll**填充 SQL_DESC_ARRAY_STATUS_PTR IRD 和给定的诊断记录的 SQL_DIAG_ROW_NUMBER 字段中包含与此记录相关的行集中的行数。 使用此，应用程序可以与给定的行位置关联的错误消息。  
+ 在 ODBC *3.x*，则调用**SQLFetch**或**SQLFetchScroll**填充 SQL_DESC_ARRAY_STATUS_PTR IRD 和给定诊断 SQL_DIAG_ROW_NUMBER 字段中记录包含与此记录相关的行集中的行数。 使用此，应用程序可以与给定的行位置关联的错误消息。  
   
- ODBC 2。*x*驱动程序将不能提供此功能。 但是，它将提供具有 SQLSTATE 01S01 错误分界 （行中的错误）。 ODBC 3。*x*正在使用的应用程序**SQLFetch**或**SQLFetchScroll**时将对 ODBC 2。*x*驱动程序需要考虑这一点。 此类应用程序将不能调用另请注意**SQLGetDiagField**实际上是否仍要获取 SQL_DIAG_ROW_NUMBER 字段。 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序将能够调用**SQLGetDiagField**仅与*DiagIdentifier* SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE 或 SQL_DIAG_ 的参数SQLSTATE。 ODBC 3 *.x*驱动程序管理器维护的诊断数据结构时使用的 ODBC 2。*x*驱动程序，但 ODBC 2。*x*驱动程序将返回仅这四个字段。  
+ ODBC *2.x*驱动程序将不能提供此功能。 但是，它将提供具有 SQLSTATE 01S01 错误分界 （行中的错误）。 ODBC *3.x*正在使用的应用程序**SQLFetch**或**SQLFetchScroll**时将针对 ODBC *2.x*需要注意的驱动程序这一事实。 此类应用程序将不能调用另请注意**SQLGetDiagField**实际上是否仍要获取 SQL_DIAG_ROW_NUMBER 字段。 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序将能够调用**SQLGetDiagField**仅与*DiagIdentifier*SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE 或 SQL_DIAG_SQLSTATE 的参数。 ODBC *3.x*驱动程序管理器维护的诊断数据结构时使用的 ODBC *2.x*驱动程序，但 ODBC *2.x*驱动程序将返回仅这四个字段。  
   
- 当 ODBC 2。*x*应用程序使用 ODBC 2。*x*驱动程序，如果某项操作可能会导致多个错误返回由驱动程序管理器中，不同的错误可能返回的 ODBC 3 *.x*比 ODBC 2 的驱动程序管理器。*x*驱动程序管理器。  
+ 当 ODBC *2.x*应用程序使用 ODBC *2.x*驱动程序，如果某项操作可能会导致多个错误返回由驱动程序管理器中，不同的错误可能会返回由 ODBC *3.x*比通过 ODBC 的驱动程序管理器*2.x*驱动程序管理器。  
   
 ## <a name="mappings-for-bookmark-operations"></a>书签操作的映射  
- ODBC 3 *.x*驱动程序管理器执行以下映射时 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序执行书签操作。  
+ ODBC *3.x*驱动程序管理器执行以下映射时 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序执行书签操作。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLBindCol**要绑定到列 0 *fCType*等于 SQL_C_VARBOOKMARK，ODBC 3 *.x*驱动程序管理器会检查是否*BufferLength*参数小于 4 或大于 4，以及如果是这样，将返回 SQLSTATE HY090 （字符串或缓冲区长度无效）。 如果*BufferLength*参数为等于 4，驱动程序管理器调用**SQLBindCol**中的驱动程序，替换后*fCType* SQL_C_BOOKMARK 使用。  
+ 当 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序调用**SQLBindCol**要绑定到列 0 *fCType*等于 SQL_C_VARBOOKMARK、 ODBC *3.x*驱动程序管理器会检查是否*BufferLength*参数小于 4 或大于 4，以及如果是这样，将返回 SQLSTATE HY090 （无效的字符串或缓冲区长度）。 如果*BufferLength*参数为等于 4，驱动程序管理器调用**SQLBindCol**中的驱动程序，替换后*fCType* SQL_C_BOOKMARK 使用。  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- 当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLColAttribute**与*ColumnNumber*参数设置为 0，驱动程序管理器返回*FieldIdentifier*值下表中列出。  
+ 当 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序调用**SQLColAttribute**与*ColumnNumber*参数设置为 0，驱动程序管理器返回*FieldIdentifier*下表中列出的值。  
   
 |*FieldIdentifier*|ReplTest1|  
 |-----------------------|-----------|  
@@ -447,7 +447,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- 当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLDescribeCol**与*ColumnNumber*参数设置为 0，驱动程序管理器将返回下表中列出的值。  
+ 当 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序调用**SQLDescribeCol**与*ColumnNumber*参数设置为 0，驱动程序管理器返回下表中列出的值。  
   
 |缓冲区|ReplTest1|  
 |------------|-----------|  
@@ -459,7 +459,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- 当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序，可以对以下调用**SQLGetData**检索书签：  
+ 当 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序，可以对以下调用**SQLGetData**检索书签：  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -473,9 +473,9 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  其中*hstmt*并*pvParam*设置为中的值*StatementHandle*并*TargetValuePtr*分别。 指向的缓冲区中返回该书签*pvParam* (*TargetValuePtr*) 参数。 指向缓冲区中的值*StrLen_or_IndPtr*调用中的参数**SQLGetData**设置为 4。  
   
- 此映射是帐户中的事例所需**SQLFetch**在调用之前调用了**SQLGetData**和 ODBC 2。*x*驱动程序不支持**SQLExtendedFetch**。 在这种情况下， **SQLFetch**将通过传递到 ODBC 2。*x*驱动程序，在其中不支持 case 书签检索。  
+ 此映射是帐户中的事例所需**SQLFetch**在调用之前调用了**SQLGetData**和 ODBC *2.x*驱动程序不支持**SQLExtendedFetch**。 在这种情况下， **SQLFetch**将通过传递到 ODBC *2.x*驱动程序，在其中不支持 case 书签检索。  
   
- **SQLGetData**不能在 ODBC 2 中调用多次。*x*驱动程序检索中部分，因此调用的书签**SQLGetData**与*BufferLength*参数设置为小于 4 的值和*ColumnNumber*设置为 0 的参数将返回 SQLSTATE HY090 （字符串或缓冲区长度无效）。 **SQLGetData** ，但是，可以调用多次来检索同一书签。  
+ **SQLGetData**不能在 ODBC 中多次调用*2.x*驱动程序来检索部分中的书签，因此调用**SQLGetData**与*BufferLength*参数设置为小于 4 的值和*ColumnNumber*参数设置为 0 将返回 SQLSTATE HY090 （字符串或缓冲区长度无效）。 **SQLGetData** ，但是，可以调用多次来检索同一书签。  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- 当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用**SQLSetStmtAttr**若要设置到 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARKS 属性，驱动程序管理器属性设置为在基础 ODBC 2 SQL_UB_ON。*x*驱动程序。
+ 当 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序调用**SQLSetStmtAttr**设置 SQL_ATTR_USE_BOOKMARKS 属性为 SQL_UB_VARIABLE，驱动程序管理器属性设置为在基础 ODBC SQL_UB_ON *2.x*驱动程序。

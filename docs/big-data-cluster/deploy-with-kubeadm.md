@@ -2,20 +2,20 @@
 title: 使用 kubeadm 配置 Kubernetes
 titleSuffix: SQL Server big data clusters
 description: 了解如何配置多个 Ubuntu 16.04 上的 Kubernetes 或用于 SQL Server 2019 大数据群集 （预览版） 部署 18.04 计算机 （物理或虚拟）。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: c48a8a8ad84a1378eed09727a3e51a51252b88c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5e59caaf408968f6b669364ccbe07e8ea973c34
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803065"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728897"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>配置用于 SQL Server 大数据群集部署的多台计算机上的 Kubernetes
 
@@ -26,7 +26,7 @@ ms.locfileid: "66803065"
 > [!TIP] 
 > 有关配置 Kubernetes 的示例脚本，请参阅[创建 Kubernetes 群集使用 Ubuntu 16.04 LTS 或 18.04 LTS 上 Kubeadm](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 3 个 Linux 物理机或虚拟机的最小值
 - 每台计算机的推荐的配置：

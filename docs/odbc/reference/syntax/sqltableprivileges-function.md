@@ -20,12 +20,12 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81659ae2cab2343a7fcf03327cbdc89c0db6c8c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3581c5ae7b9f4e41d0f8646f4e6e1d2cca1a2ca8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536310"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793716"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges Function（SQLTablePrivileges 函数）
 **符合性**  
@@ -82,7 +82,7 @@ SQLRETURN SQLTablePrivileges(
 ## <a name="diagnostics"></a>诊断  
  当**SQLTablePrivileges**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可能会通过调用来获取**SQLGetDiagRec**与*HandleType*设置为 SQL_HANDLE_STMT，和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLTablePrivileges** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明. 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
@@ -114,9 +114,9 @@ SQLRETURN SQLTablePrivileges(
 > [!NOTE]  
 >  有关常规使用、 参数以及 ODBC 目录函数返回的数据的详细信息，请参阅[目录函数](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 以下各列已重命名为 ODBC 3 *.x*。 列名称更改不会影响后向兼容性，因为应用程序将绑定的列号。  
+ 以下各列已重命名为 ODBC *3.x*。 列名称更改不会影响后向兼容性，因为应用程序将绑定的列号。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

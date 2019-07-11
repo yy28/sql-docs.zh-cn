@@ -19,25 +19,25 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93c8510bb23bb57244590a472073fc882f9fe64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208455"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793278"
 ---
 # <a name="writing-odbc-3x-applications"></a>编写 ODBC 3.x 应用程序
-当 ODBC 2。*x*应用程序升级到 ODBC 3。*x*，它应该这样编写的它适用于这两个 ODBC 2。*x*和 3。*x*驱动程序。 应用程序应将条件代码充分利用 ODBC 3。*x*功能。  
+当 ODBC *2.x*应用程序升级到 ODBC *3.x*，它应该这样编写的它适用于这两个 ODBC *2.x*并*3.x*驱动程序. 应用程序应结合条件代码，充分利用 ODBC *3.x*功能。  
   
- SQL_ATTR_ODBC_VERSION 环境属性应设置为 SQL_OV_ODBC2。 这将确保，驱动程序的行为类似于 ODBC 2 *.x*驱动程序的部分中所述的更改方面[行为的更改](../../../odbc/reference/develop-app/behavioral-changes.md)。  
+ SQL_ATTR_ODBC_VERSION 环境属性应设置为 SQL_OV_ODBC2。 这将确保，驱动程序的行为类似于 ODBC *2.x*驱动程序的部分中所述的更改方面[行为的更改](../../../odbc/reference/develop-app/behavioral-changes.md)。  
   
- 应用程序将使用的部分中所述的功能[新增功能](../../../odbc/reference/develop-app/new-features.md)，应使用条件代码以确定驱动程序是否为 ODBC 3。*x*或 ODBC 2 *.x*驱动程序。 应用程序使用**SQLGetDiagField**并**SQLGetDiagRec**若要获取 ODBC 3。*x* SQLSTATEs 的同时对这些条件的代码片段的处理的错误。 应考虑的新功能有关的以下几点：  
+ 应用程序将使用的部分中所述的功能[新增功能](../../../odbc/reference/develop-app/new-features.md)，用于确定是否有 ODBC 驱动程序的条件代码*3.x*或 ODBC *2.x*驱动程序。 应用程序使用**SQLGetDiagField**并**SQLGetDiagRec**若要获取 ODBC *3.x* SQLSTATEs 的同时对这些条件的代码片段的处理的错误。 应考虑的新功能有关的以下几点：  
   
--   受影响的行集大小行为中的更改应用程序应小心，不要调用**SQLFetch**数组大小大于 1 时。 这些应用程序应替换为调用**SQLExtendedFetch**通过调用**SQLSetStmtAttr**若要设置 SQL_ATTR_ARRAY_STATUS_PTR 语句属性和**SQLFetchScroll**，以便它们具有适用于这两个 ODBC 3 的通用代码。*x*和 ODBC 2。*x*驱动程序。 因为**SQLSetStmtAttr**使用 SQL_ATTR_ROW_ARRAY_SIZE 将映射到**SQLSetStmtAttr**与 ODBC 2 SQL_ROWSET_SIZE。*x*驱动程序，应用程序可以只将 SQL_ATTR_ROW_ARRAY_SIZE 设置为其多行提取操作。  
+-   受影响的行集大小行为中的更改应用程序应小心，不要调用**SQLFetch**数组大小大于 1 时。 这些应用程序应替换为调用**SQLExtendedFetch**通过调用**SQLSetStmtAttr**若要设置 SQL_ATTR_ARRAY_STATUS_PTR 语句属性和**SQLFetchScroll**，以便它们具有通用代码适用于这两个 ODBC *3.x*和 ODBC *2.x*驱动程序。 因为**SQLSetStmtAttr**使用 SQL_ATTR_ROW_ARRAY_SIZE 将映射到**SQLSetStmtAttr**使用用于 ODBC 的 SQL_ROWSET_SIZE *2.x*驱动程序，应用程序就可以设置 SQL其多行提取操作的 _ATTR_ROW_ARRAY_SIZE。  
   
--   要升级的大多数应用程序实际上不受 SQLSTATE 代码中的更改。 对于这些应用程序会受到影响，它们可以执行机械搜索和替换在大多数情况下使用"SQLSTATE 映射"部分中的错误转换表以转换 ODBC 3。*x*错误代码为 ODBC 2 *.x*代码。 ODBC 3 以来 *.x*驱动程序管理器将从 ODBC 2 执行映射。*x* SQLSTATEs 到 ODBC 3。*x* SQLSTATEs，这些应用程序编写器需要仅检查对 ODBC 3。*x* SQLSTATEs 并且不用担心包括 ODBC 2。*x* SQLSTATEs 中的条件代码。  
+-   要升级的大多数应用程序实际上不受 SQLSTATE 代码中的更改。 对于这些应用程序会受到影响，它们可以执行机械搜索和替换在大多数情况下使用"SQLSTATE 映射"部分中的错误转换表以转换 ODBC *3.x*到 ODBC 错误代码*2.x*代码。 因为 ODBC *3.x*驱动程序管理器将从 ODBC 执行映射*2.x*到 ODBC SQLSTATEs *3.x* SQLSTATEs，这些应用程序编写器需要仅检查适用于 ODBC *3.x* SQLSTATEs 并且不用担心包括 ODBC *2.x* SQLSTATEs 中的条件代码。  
   
--   如果应用程序充分利用了日期、 时间和时间戳数据类型，该应用程序可以将其自身声明为 ODBC 2。*x*应用程序和使用其现有的代码而不是使用空调代码。  
+-   如果应用程序充分利用了日期、 时间和时间戳数据类型，该应用程序可以声明本身是一个 ODBC *2.x*应用程序和使用其现有的代码而不是使用空调代码。  
   
  升级还应包括以下步骤：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63208455"
   
 -   替换为对所有调用**SQLTransact**通过调用**SQLEndTran**。 如果在最右侧的有效句柄**SQLTransact**调用是环境句柄， *HandleType*应在中使用参数设为 SQL_HANDLE_ENV **SQLEndTran**调用适当*处理*参数。 如果在最右侧的有效句柄你**SQLTransact**调用是连接句柄， *HandleType*应在中使用参数设为 SQL_HANDLE_DBC **SQLEndTran**调用适当*处理*参数。  
   
--   替换为对所有调用**SQLColAttributes**通过调用**SQLColAttribute**。 如果*FieldIdentifier*参数为 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 或 SQL_COLUMN_LENGTH 时，不会更改函数的名称之外的任何内容。 如果没有，请更改*FieldIdentifier*从到 SQL_DESC_XXXX SQL_COLUMN_XXXX。 如果*FieldIdentifier*为 SQL_DESC_CONCISE_TYPE 且数据类型为 datetime 数据类型，将更改为相应的 ODBC 3 *.x*数据类型。  
+-   替换为对所有调用**SQLColAttributes**通过调用**SQLColAttribute**。 如果*FieldIdentifier*参数为 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 或 SQL_COLUMN_LENGTH 时，不会更改函数的名称之外的任何内容。 如果没有，请更改*FieldIdentifier*从到 SQL_DESC_XXXX SQL_COLUMN_XXXX。 如果*FieldIdentifier*为 SQL_DESC_CONCISE_TYPE 且数据类型为 datetime 数据类型，将更改为相应的 ODBC *3.x*数据类型。  
   
 -   如果使用块游标、 可滚动游标，或这两者，应用程序执行以下任务：  
   

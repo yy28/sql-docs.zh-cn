@@ -2,19 +2,20 @@
 title: mssqlctl bdc 配置参考
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc 命令的参考文章。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f57ba87ea7cbd770380497bd340b5eaa4d80f29c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394159"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728689"
 ---
 # <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
 

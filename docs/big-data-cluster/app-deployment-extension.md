@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 将 Python 或 R 脚本部署为 SQL Server 2019 大数据群集 （预览版） 上的应用程序。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729310"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 来部署应用程序到 SQL Server 大数据群集
 
@@ -23,7 +23,7 @@ ms.locfileid: "66801905"
 
 本文介绍如何向 SQL Server 大数据群集应用程序部署扩展中使用 Visual Studio Code 部署应用程序。 CTP 2.3 中引入了此功能。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [Visual Studio Code](https://code.visualstudio.com/)。
 - [SQL Server 大数据群集](big-data-cluster-overview.md)CTP 2.3 或更高版本。
@@ -128,7 +128,7 @@ VS Code 会提示输入相应的终结点、 用户名和密码。 如果给出�
 - 输出参数
 - 链接
   - swagger
-  - 详细信息
+  - details
 
 如果单击`Links`，你将看到，您可以访问`swagger.json`的已部署的应用，以便您可以编写您自己调用您的应用程序的客户端：
 

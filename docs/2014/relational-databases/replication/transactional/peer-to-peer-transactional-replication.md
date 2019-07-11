@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274347"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793918"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   对等复制通过在多个服务器实例（又称为“节点”  ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
@@ -137,19 +137,19 @@ ms.locfileid: "63274347"
   
 -   分发代理参数 **-SubscriptionStreams** 和日志读取器代理参数 **-MaxCmdsInTran**。  
   
--   项目属性 **@destination_owner** 和 **@destination_table** ）上维护数据副本，提供了一种扩展的高可用性解决方案。  
+-   项目属性 **\@destination_owner**并 **\@destination_table**。  
 
 -   对等事务复制不支持创建针对对等发布的单向事务订阅
   
  以下属性具有特殊的注意事项：  
   
--   发布属性 **@allow_initialize_from_backup** 的值需要为`true`。  
+-   发布属性 **\@allow_initialize_from_backup**的值需要为`true`。  
   
--   项目属性 **@replicate_ddl** 的值需要为`true`; **@identityrangemanagementoption** 的值需要为`manual`; 并 **@status** 需要该选项**24**设置。  
+-   项目属性 **\@replicate_ddl**的值需要为`true`; **\@identityrangemanagementoption**的值需要为`manual`; 并 **\@状态**需要该选项**24**设置。  
   
--   项目属性的值 **@ins_cmd** ， **@del_cmd** ，以及 **@upd_cmd** 不能设置为`SQL`。  
+-   项目属性的值 **\@ins_cmd**，  **\@del_cmd**，以及 **\@upd_cmd**不能设置为`SQL`。  
   
--   订阅属性 **@sync_type** 的值需要为`none`或`automatic`。  
+-   订阅属性 **\@sync_type**的值需要为`none`或`automatic`。  
   
 ### <a name="maintenance-considerations"></a>维护注意事项  
  下列操作需要让系统静止。 也就是说，停止所有节点上已发布表中的活动，并确保每个节点都已收到来自所有其他节点的更改。  

@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistpublisher
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b7f55d89054ff7d950921e0c6762770c6e714500
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716745"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,14 +59,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
   
-`[ @login = ] 'login'` 是的登录名。 此参数是必需的如果*security_mode*是**0**。 login 的数据类型为 sysname，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
+`[ @login = ] 'login'` 是的登录名。 此参数是必需的如果*security_mode*是**0**。 login 的数据类型为 sysname，默认值为 NULL   。 复制代理使用该参数连接到发布服务器。  
   
 `[ @password = ] 'password']` 是的密码。 *密码*是**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
   
-`[ @working_directory = ] 'working_directory'` 是用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)**，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 名称应按 UNC 格式指定。  
+`[ @working_directory = ] 'working_directory'` 是用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)** ，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 名称应按 UNC 格式指定。  
 
  对于 Azure SQL 数据库，请使用`\\<storage_account>.file.core.windows.net\<share>`。
 
@@ -74,20 +74,20 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'` 此参数已弃用，提供是为了向后兼容性。 *受信任*是**nvarchar(5)**，并将其设置为任何内容，但是**false**将导致错误。  
+`[ @trusted = ] 'trusted'` 此参数已弃用，提供是为了向后兼容性。 *受信任*是**nvarchar(5)** ，并将其设置为任何内容，但是**false**将导致错误。  
   
 `[ @encrypted_password = ] encrypted_password` 设置*encrypted_password*不再受支持。 尝试将此项设置**位**参数**1**将导致错误。  
   
 `[ @thirdparty_flag = ] thirdparty_flag` 发布服务器时，是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *thirdparty_flag*是**位**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0** （默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**1**|非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
   
 `[ @publisher_type = ] 'publisher_type'` 当发布服务器不是指定的发布服务器类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *publisher_type*数据类型为 sysname，并可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> （默认值）|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**ORACLE**|指定标准的 Oracle 发布服务器。|  

@@ -2,19 +2,20 @@
 title: 将 Spark 连接到 SQL Server
 titleSuffix: SQL Server big data clusters
 description: 了解如何在 Spark 中使用 MSSQL Spark 连接器来读取和写入到 SQL Server。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469123"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727471"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何读取和写入到 SQL Server 从 Spark 使用 MSSQL Spark 连接器
 
@@ -39,7 +40,7 @@ SQL Server 2019 预览提供了**MSSQL Spark 连接器**适用于大数据群集
 
 下表描述已更改或新接口参数：
 
-| 属性名称 | 可选 | Description |
+| 属性名称 | 可选 | 描述 |
 |---|---|---|
 | **isolationLevel** | 是 | 此部分描述连接的隔离级别。 默认值为 MSSQLSpark 连接器**READ_COMMITTED** |
 
