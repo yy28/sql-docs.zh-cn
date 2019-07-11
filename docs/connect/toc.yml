@@ -2721,6 +2721,8 @@
           href: ../connect/odbc/bug-fixes.md
     - name: 下载 ODBC Driver for SQL Server
       href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+    - name: 使用 ODBC 的 C++ 示例应用程序
+      href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
     - name: ODBC 高级
       items:
         - name: Microsoft 开放式数据库连接 (ODBC)

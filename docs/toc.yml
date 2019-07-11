@@ -9056,7 +9056,7 @@
               items:
                 - name: 获取完整内存转储
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: 故障和挂起
+                - name: 获取诊断数据
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server 代理
               items:
