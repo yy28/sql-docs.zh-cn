@@ -1336,7 +1336,7 @@
       items:
         - name: 堆（没有聚集索引的表）
           href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-        - name: 描述的聚集索引和非聚集索引
+        - name: 聚集索引和非聚集索引
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
             - name: 创建
