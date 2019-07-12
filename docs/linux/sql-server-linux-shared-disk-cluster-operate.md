@@ -1,20 +1,21 @@
 ---
-title: 运行故障转移群集实例-Linux 上的 SQL Server |Microsoft Docs
+title: 运行故障转移群集实例 - Linux 上的 SQL Server
 description: 此文章介绍了如何运行在 Linux 上的 SQL Server 故障转移群集实例 (FCI)。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 86ba2672ee1ddb7d7c801556c817d93e6d2e0ceb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc0059f8e8dc43b2c65e432d7cdd56272218d36c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712920"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833155"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>运行故障转移群集实例 - Linux 上的 SQL Server
 

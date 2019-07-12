@@ -2,20 +2,20 @@
 title: Red Hat Enterprise Linux 上的 SQL Server 入门
 titleSuffix: SQL Server
 description: 本快速入门介绍如何在 Red Hat Enterprise Linux 上安装 SQL Server 2017 或 SQL Server 2019 然后创建和查询使用 sqlcmd 数据库。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b811ea193dd15b2d472224dfc7d719a60174ed4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e61449a8645dca651e3422306ae5b049b7a7e9d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713519"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834987"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：安装 SQL Server 和 Red Hat 上创建数据库
 
@@ -37,7 +37,7 @@ ms.locfileid: "66713519"
 > [!TIP]
 > 本教程需要用户输入和 Internet 连接。 如果您对[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 您必须具有的 RHEL 7.3、 7.4、 7.5 或 7.6 计算机**至少 2 GB**的内存。
 

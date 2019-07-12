@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c4f72522c1803a364d9a309b5fa2d21fd9f2fe18
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402642"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826492"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 身份验证和授权
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "52402642"
   
  对于现有的 Web 应用程序，使用以下说明来验证 Web 应用程序配置为使用 Windows 身份验证。  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”** 。  
   
 2.  选择 Web 应用程序。  
   
-3.  单击 **“身份验证访问接口”**。  
+3.  单击 **“身份验证访问接口”** 。  
   
 4.  验证您对于每个区域具有一个访问接口，默认区域设置为 Windows。  
   
@@ -100,11 +100,11 @@ ms.locfileid: "52402642"
 > [!NOTE]  
 >  与安全性相关的大多数设置适用于受信任位置。 如果你希望保留默认值或为不同站点使用不同值，则可以为包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅 [在管理中心中为 Power Pivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
-|区域|设置|Description|  
+|区域|设置|描述|  
 |----------|-------------|-----------------|  
 |Web 应用程序|Windows 身份验证访问接口|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 将它从 Excel Services 获得的声明标记转换为 Windows 用户标识。 任何使用 Excel Services 作为资源的 Web 应用程序都必须配置为使用 Windows 身份验证提供程序。|  
 |受信任位置|位置类型|此值必须设置为 **Microsoft SharePoint Foundation**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器检索 .xlsx 文件的副本，并将其加载到场中的 Analysis Services 服务器上。 此服务器只能从内容库中检索 .xlsx 文件。|  
-||允许外部数据|此值必须设置为 **“受信任的数据连接库和嵌入连接”**。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据连接嵌入在工作簿中。 如果你不允许嵌入的连接，则用户可以查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 缓存，但将不能与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据交互。|  
+||允许外部数据|此值必须设置为 **“受信任的数据连接库和嵌入连接”** 。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据连接嵌入在工作簿中。 如果你不允许嵌入的连接，则用户可以查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 缓存，但将不能与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据交互。|  
 ||刷新时警告|如果你正在使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库来存储工作簿和报表，则应禁用此值。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库包含一个文档预览功能，如果同时关闭“打开时刷新”和“刷新时警告”，则其效果最佳。|  
 |受信任的数据访问接口|MSOLAP.4<br /><br /> MSOLAP.5|默认情况下包含 MSOLAP.4，但是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问要求 MSOLAP.4 访问接口为 SQL Server 2008 R2 版本。<br /><br /> MSOLAP.5 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 版本一起安装。<br /><br /> 请勿从受信任的数据访问接口列表中删除这些访问接口。 在某些情况下，您可能需要在场中的其他 SharePoint 服务器上安装此访问接口的更多副本。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)。|  
 |受信任的数据连接库|可选。|可以在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿中使用 Office 数据连接 (.odc) 文件。 如果你使用 .odc 文件向本地 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿提供连接信息，则可以将相同的 .odc 文件添加到此库。|  

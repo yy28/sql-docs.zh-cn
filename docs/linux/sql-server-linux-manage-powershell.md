@@ -1,20 +1,20 @@
 ---
-title: 管理使用 PowerShell 在 Linux 上的 SQL Server |Microsoft Docs
+title: 管理使用 PowerShell 在 Linux 上的 SQL Server
 description: 本文提供使用 PowerShell 在 Linux 上的 SQL Server 与 Windows 上的概述。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 8398db9e03aabf6863bd770f8be6657b58be1591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21ce61a823281c5e6688bcfb8aee96d296cb671d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718082"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834934"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 
@@ -152,6 +152,6 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
 - [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)

@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728916"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826523"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 的大数据群集部署中配置 Azure Kubernetes 服务
 
@@ -30,7 +30,7 @@ AKS 轻松创建、 配置和管理 Kubernetes 群集以运行容器化应用程
 > [!TIP] 
 > 部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[快速入门：部署大数据群集在 Azure Kubernetes 服务 (AKS) 的 SQL Server](quickstart-big-data-cluster-deploy.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [部署 SQL Server 2019 大数据工具](deploy-big-data-tools.md):
    - **Kubectl**
@@ -76,9 +76,39 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>验证可用的 Kubernetes 版本
+
+使用 Kubernetes 的最新可用版本。 最新的可用版本取决于你在其中部署群集的位置。 以下命令将返回在特定位置中可用的 Kubernetes 版本。
+
+在运行该命令之前，更新的脚本。 替换为`<Azure data center>`与群集的位置。
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+选择你的群集的最新可用版本。 记录的版本号。 将在下一步中使用它。
+
 ## <a name="create-a-kubernetes-cluster"></a>创建 Kubernetes 群集
 
-1. 在与 AKS 创建 Kubernetes 群集[az aks 创建](https://docs.microsoft.com/cli/azure/aks)命令。 下面的示例创建名为的 Kubernetes 群集*kubcluster*具有一个 Linux 代理节点的大小**Standard_L8s**。 请确保你在前面几节中使用同一资源组中创建 AKS 群集。
+1. 在与 AKS 创建 Kubernetes 群集[az aks 创建](https://docs.microsoft.com/cli/azure/aks)命令。 下面的示例创建名为的 Kubernetes 群集*kubcluster*具有一个 Linux 代理节点的大小**Standard_L8s**。
+
+   在运行该脚本之前，替换`<version number>`与上一步中标识的版本号。
+
+   请确保你在前面几节中使用同一资源组中创建 AKS 群集。
 
    **bash:**
 
@@ -88,7 +118,7 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    可以增加或减少 Kubernetes 代理节点数，方法是更改`--node-count <n>`其中`<n>`是你想要使用的代理节点数。 这不包括在后台由 AKS 主 Kubernetes 节点。 前面的示例仅供评估使用的单个节点。

@@ -19,21 +19,21 @@ ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de6169af7c10972307a154e9830bc8e206854ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54bee97607e5fc2e09d7fd06c742760ff87aafe5
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724995"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826330"
 ---
 # <a name="sysdmxtptransactionstats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   报告自服务器启动以来有关运行的事务的统计信息。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |total_count|**bigint**|内存中 OLTP 数据库引擎中已运行的事务总数。|  
 |read_only_count|**bigint**|只读事务数。|  
@@ -66,7 +66,7 @@ ms.locfileid: "47724995"
 |write_conflicts|**bigint**|仅限内部使用。|  
 |unique_constraint_violations|**bigint**|唯一约束冲突的总数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

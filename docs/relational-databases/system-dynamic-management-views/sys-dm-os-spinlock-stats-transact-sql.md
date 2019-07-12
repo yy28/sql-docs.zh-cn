@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,26 +18,25 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420849"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826601"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 返回有关所有按类型整理的旋转锁等待的信息。  
   
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|旋转锁类型的名称。|  
 |冲突|**bigint**|一个线程尝试获取调节锁并被阻止，因为另一个在当前线程的次数保存自旋锁。|  
@@ -75,7 +71,7 @@ GO
    
  下表包含一些最常见的旋转锁类型的简短说明。  
   
-|旋转锁类型|Description|  
+|旋转锁类型|描述|  
 |-----------------|-----------------|  
 |ABR|仅限内部使用。|
 |ADB_CACHE|仅限内部使用。|
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|仅限内部使用。|
 |LIVE_TARGET_TVF|仅限内部使用。|
 |LOCK_FREE_LIST|仅限内部使用。|
-|LOCK_HASH|保护对将被持有的锁有关的信息存储在数据库中的锁管理器哈希表的访问。 请参阅[这篇文章](https://support.microsoft.comkb/2926217)有关详细信息。|
+|LOCK_HASH|保护对将被持有的锁有关的信息存储在数据库中的锁管理器哈希表的访问。 请参阅[这篇文章](https://support.microsoft.com/kb/2926217)有关详细信息。|
 |LOCK_NOTIFICATION|仅限内部使用。|
 |LOCK_RESOURCE_ID|仅限内部使用。|
 |LOCK_RW_ABTX_HASH_SET|仅限内部使用。|

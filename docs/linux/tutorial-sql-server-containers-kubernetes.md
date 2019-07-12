@@ -1,20 +1,21 @@
 ---
-title: 部署 SQL Server 容器在 Kubernetes 中使用 Azure Kubernetes 服务 (AKS) |Microsoft Docs
+title: 部署 SQL Server 容器在 Kubernetes 中使用 Azure Kubernetes 服务 (AKS)
 description: 本教程演示如何部署 SQL Server 高可用性解决方案与 Azure Kubernetes 服务上的 Kubernetes。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 236ae198b77f8fdc63a6c4d5069e3b335a44a472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704851"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832991"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 SQL Server 容器在 Kubernetes 中使用 Azure Kubernetes 服务 (AKS)
 
@@ -216,9 +217,9 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](https://kubernetes.io/
       >[!NOTE]
       >有关详细信息，请参阅[授权的 SQL Server 如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
 
-   * `persistentVolumeClaim`设置用户帐户 ：此值需要为一个条目`claimName:`，它映射到的永久性卷声明使用的名称。 本教程使用`mssql-data`。 
+   * `persistentVolumeClaim`：此值需要为一个条目`claimName:`，它映射到的永久性卷声明使用的名称。 本教程使用`mssql-data`。 
 
-   * `name: SA_PASSWORD`设置用户帐户 ：将容器映像设置 SA 密码配置为在本部分中定义。
+   * `name: SA_PASSWORD`：将容器映像设置 SA 密码配置为在本部分中定义。
 
      ```yaml
      valueFrom:

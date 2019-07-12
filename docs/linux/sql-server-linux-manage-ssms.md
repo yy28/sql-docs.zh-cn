@@ -1,20 +1,20 @@
 ---
-title: 使用 SSMS 管理 Linux 上的 SQL Server |Microsoft Docs
+title: 使用 SSMS 管理 Linux 上的 SQL Server
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eba01fdd332e86327da627dd934806c1eedc9d5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713153"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834937"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 SQL Server Management Studio 来管理 Linux 上的 SQL Server
 
@@ -56,7 +56,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 1. 在中**连接到服务器**窗口中，输入以下信息 (如果已在运行 SSMS，请单击**连接 > 数据库引擎**以打开**连接到服务器**窗口）：
 
-   | 设置 | Description |
+   | 设置 | 描述 |
    |-----|-----|
    | **服务器类型** | 默认为数据库引擎；请勿更改此值。 |
    | **服务器名称** | 输入目标 Linux SQL Server 计算机的名称或它的 IP 地址。 |
@@ -141,7 +141,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 展开某个窗格时，活动监视器会查询实例获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 可以同时展开一个或多个窗格，查看实例上不同种类的活动。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [什么是 SSMS？](../ssms/sql-server-management-studio-ssms.md)
 - [导出和导入的数据库使用 SSMS](sql-server-linux-migrate-ssms.md)
 - [教程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)

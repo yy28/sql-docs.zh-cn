@@ -10,13 +10,13 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794074"
+ms.locfileid: "67826514"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
@@ -24,7 +24,7 @@ ms.locfileid: "67794074"
 
 ## <a name="july-2019"></a>2019 年 7 月
 
-2019 年 7 月 10 日&nbsp;  /  &nbsp;版本：1.9.0 
+2019 年 7 月 11 日&nbsp;  /  &nbsp;版本：1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ ms.locfileid: "67794074"
 | Visual Studio 代码可能会发布合并 1.35 | 可以找到最新改进[此处](https://code.visualstudio.com/updates/v1_35)。 |
 | 已解决的 bug 和问题 | 在以前版本的 Azure Data Studio，如果从连接对话框中，连接时选择用户数据库，则生成的对象资源管理器入口范围只为该单个数据库。 在此版本中，开始正在更改行为，以便服务器级属性还会显示在对象资源管理器。 <br/> 有关修补程序的完整列表，请参阅[Bug 和问题，在 GitHub 上的](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)。 |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>2019 年 6 月

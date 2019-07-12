@@ -1,20 +1,20 @@
 ---
-title: 将数据库迁移到 Linux 上的 SQL Server |Microsoft Docs
+title: 将数据库迁移到 Linux 上的 SQL Server
 description: 本文介绍在 Linux 上的不同选项和数据库迁移到 SQL Server 的数据。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.openlocfilehash: 2443611a63bee3f62ae8225384d79d34dfcb18e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 325c492018f5afc41c660490e6210f06496247e4
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705293"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834904"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>将数据库和结构化数据迁移到 Linux 上的 SQL Server 
 

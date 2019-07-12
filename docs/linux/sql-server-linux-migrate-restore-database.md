@@ -1,20 +1,21 @@
 ---
-title: 将 SQL Server 数据库从 Windows 迁移到 Linux |Microsoft Docs
+title: 将 SQL Server 数据库从 Windows 迁移到 Linux
 description: 本教程演示如何在 Windows 上进行 SQL Server 数据库备份并将其还原到运行 SQL Server 的 Linux 计算机。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ec273a58c2a907b6059972816736382e10df883
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713123"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834892"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 
@@ -31,7 +32,7 @@ SQL Server 的备份和还原功能是从 Windows 上的 SQL Server 数据库迁
 
 此外可以创建 SQL Server Always On 可用性组以将 SQL Server 数据库从 Windows 迁移到 Linux。 请参阅[sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 完成本教程需要满足以下先决条件：
 

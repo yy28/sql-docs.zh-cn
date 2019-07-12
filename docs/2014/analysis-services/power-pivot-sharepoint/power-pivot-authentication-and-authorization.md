@@ -10,12 +10,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fe19165a8b9e0d419a1cba67eeb4ada6a3ce183
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071430"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826338"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 身份验证和授权
   在 SharePoint 2010 场中运行的 PowerPivot for SharePoint 部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 PowerPivot 内容和操作，因为所有与 PowerPivot 相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 PowerPivot 共享服务执行所有与 PowerPivot 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 PowerPivot 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  
@@ -100,7 +100,7 @@ ms.locfileid: "66071430"
 > [!NOTE]  
 >  与安全性相关的大多数设置适用于受信任位置。 如果您希望保留默认值或为不同站点使用不同值，则可以为包含 PowerPivot 数据的站点创建其他受信任位置，然后仅为该站点配置以下设置。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
-|区域|设置|Description|  
+|区域|设置|描述|  
 |----------|-------------|-----------------|  
 |Web 应用程序|Windows 身份验证访问接口|PowerPivot 将它从 Excel Services 获得的声明标记转换为 Windows 用户标识。 任何使用 Excel Services 作为资源的 Web 应用程序都必须配置为使用 Windows 身份验证提供程序。|  
 |受信任位置|位置类型|此值必须设置为 **Microsoft SharePoint Foundation**。 PowerPivot 服务器检索 .xlsx 文件的副本，并将其加载到场中的 Analysis Services 服务器上。 此服务器只能从内容库中检索 .xlsx 文件。|  

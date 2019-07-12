@@ -1,20 +1,20 @@
 ---
-title: 自动执行数据库迁移到 Linux 上的 SQL Server |Microsoft Docs
+title: 自动执行数据库迁移到 Linux 上的 SQL Server
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: eac6c206fe34af59ba7e5f6e5a7eb2508b842766
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5af1b21ac90bb0749f36ac18ebad34e36853fda
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713222"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834875"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>使用 SQL Server 迁移助手自动执行到 Linux 的数据库迁移
 
@@ -39,7 +39,7 @@ SSMA 支持不同的源数据库，包括 Oracle、 MySQL、 Sybase、 DB2 和 L
 
 接下来，请按照[SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx)若要将源数据库迁移到 Linux 上的 SQL Server。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [Microsoft 数据迁移博客](https://blogs.msdn.microsoft.com/datamigration)
 - [SQL Server Migration Assistant (SSMA) 博客](https://blogs.msdn.microsoft.com/ssma/)
 

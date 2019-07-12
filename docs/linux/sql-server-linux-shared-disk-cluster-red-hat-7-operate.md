@@ -1,20 +1,21 @@
 ---
-title: 运行 SQL Server 的 Red Hat Enterprise Linux 共享的群集 |Microsoft Docs
+title: 运行 SQL Server 的 Red Hat Enterprise Linux 共享的群集
 description: 为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: bc453b815c0aaee7a7cd30b153101f75c1dbeacf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e20824630fa9740ba8d9bc7d1c63e87fe08d1632
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712907"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833117"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
 
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 在对群集进行故障排除期间，有助于了解这三个守护程序是如何协同工作以管理群集资源的。 
 
-| 后台程序 | Description 
+| 后台程序 | 描述 
 | ----- | -----
 | Corosync | 提供仲裁成员身份并在群集节点之间发送消息。
 | Pacemaker | 驻留在 Corosync 顶部，并为资源提供状态机。 

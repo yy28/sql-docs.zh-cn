@@ -2,19 +2,19 @@
 title: SUSE Linux Enterprise Server 上的 SQL Server 的无人参与的安装
 titleSuffix: SQL Server
 description: SQL Server 脚本示例-SUSE Linux Enterprise Server 上的无人参与安装
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6216d7b1a241229fabf9ce9d9d2ed3a63658b2a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41f1a996698dbc0d8a08e049e7d8ed7d4e139acb
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713566"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834981"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>示例：适用于 SUSE Linux Enterprise Server 的无人参与的 SQL Server 安装脚本
 
@@ -25,7 +25,7 @@ ms.locfileid: "66713566"
 > [!TIP]
 > 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[快速入门： SLES](quickstart-install-connect-suse.md)。 有关其他安装程序的信息，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 需要至少 2 GB 的内存来在 Linux 上运行 SQL Server。
 - 必须在文件系统**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
