@@ -1,22 +1,22 @@
 ---
-title: 加密连接到 Linux 上的 SQL Server |Microsoft Docs
+title: 加密连接到 Linux 上的 SQL Server
 description: 本文介绍在 Linux 上的加密与 SQL Server 的连接。
-author: vin-yu
 ms.date: 01/30/2018
+author: vin-yu
 ms.author: vinsonyu
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca1a6b7a3530041def66ec74be9de547c6d98ea
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705667"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833772"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密连接到 Linux 上的 SQL Server
 
@@ -29,7 +29,7 @@ ms.locfileid: "66705667"
 - 当前系统时间必须晚于证书的属性从属性，该证书并有效之前有效。
 - 该证书必须用于服务器身份验证。 这要求指定服务器身份验证 (1.3.6.1.5.5.7.3.1) 的证书的增强型密钥用法属性。
 - 通过使用 AT_KEYEXCHANGE KeySpec 选项，必须创建该证书。 通常情况下，证书的密钥用法属性 (KEY_USAGE) 还包括密钥加密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
-- 证书的 Subject 属性必须指明公用名 (CN) 为主机名或服务器计算机的完全限定的域名 (FQDN) 是相同。 注意：支持通配符证书。
+- 证书的 Subject 属性必须指明公用名 (CN) 为主机名或服务器计算机的完全限定的域名 (FQDN) 是相同。 注意:支持通配符证书。
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>（可选） 用于配置 OpenSSL 库
 可创建中的符号链接`/opt/mssql/lib/`引用其中的目录`libcrypto.so`和`libssl.so`库应该用于加密。 这是你想要强制使用 OpenSSL 而不使用默认系统提供的特定版本的 SQL Server 的情况下很有用。 如果这些符号链接不存在，SQL Server 将加载在系统上的默认配置 OpenSSL 库。

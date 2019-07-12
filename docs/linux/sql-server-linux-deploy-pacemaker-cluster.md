@@ -1,19 +1,20 @@
 ---
-title: Linux 上的 SQL Server 部署 Pacemaker 群集 |Microsoft Docs
+title: Linux 上的 SQL Server 部署 Pacemaker 群集
 description: 本教程演示如何为 Linux 上的 SQL Server 部署 Pacemaker 群集。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: be1bae381cf9eb07180299130917cb6cbf3bfec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6fdd3fe9111a20811ecb748a42273deafd2c41e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705549"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833870"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Linux 上的 SQL Server 部署 Pacemaker 群集
 

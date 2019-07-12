@@ -1,20 +1,21 @@
 ---
-title: 在 Linux 上安装 SQL Server 语言扩展 (Java) |Microsoft Docs
+title: 在 Linux 上安装 SQL Server 语言扩展 (Java)
 description: 了解如何安装 SQL Server 语言扩展 (Java) 在 Red Hat、 Ubuntu 和 SUSE。
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399934"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834701"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安装 SQL Server 2019 语言扩展 (Java)
 
@@ -80,7 +81,7 @@ ls /opt/microsoft/mssql/bin
 
 在与 internet 连接的设备，包下载并安装独立于数据库引擎的每个操作系统使用包安装程序。 下表描述了所有可用的包。
 
-| 包名称 | Applies-to | Description |
+| 包名称 | Applies-to | 描述 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 所有语言 | 用于运行 Java 代码的可扩展性框架。 |
 |mssql-server-extensibility-java | Java | 用于加载的 Java 执行环境的 Java 扩展。 没有任何其他库或用于 Java 的包。 |
@@ -294,7 +295,7 @@ Linux 上的语言扩展和 Java 可扩展性是仍处于积极开发阶段。 �
 
 没有 Linux 和 Windows 的之间的奇偶校验[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)外部资源池，但的统计信息[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)当前具有Linux 上的不同单位。 在将来的 ctp 版本中将对齐单元。
  
-| 列名   | Description | Linux 上的值 | 
+| 列名   | 描述 | Linux 上的值 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 最大资源池使用的内存量。 | 在 Linux 上，此统计信息来源于 CGroups 内存子系统，其中的值是 memory.max_usage_in_bytes |
 |write_io_count | 写入自重置资源调控器统计信息以来发出的 Io 总数。 | 在 Linux 上，此统计信息来源于其中的值写入行是 blkio.throttle.io_serviced 的 CGroups blkio 子系统 | 

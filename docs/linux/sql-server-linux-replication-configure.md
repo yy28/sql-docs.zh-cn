@@ -1,21 +1,22 @@
 ---
-title: 在 Linux 上配置 SQL Server 复制 |Microsoft Docs
+title: 在 Linux 上配置 SQL Server 复制
 description: 本文介绍如何在 Linux 上配置 SQL Server 复制。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705335"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834794"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上配置 SQL Server 复制
 
@@ -71,7 +72,7 @@ ms.locfileid: "66705335"
 
 1. 在 SSMS 连接到的对象资源管理器中的 SQL Server 实例。
 
-1. 右键单击**复制**，然后单击**配置分发...**.
+1. 右键单击**复制**，然后单击**配置分发...** .
 
 1. 按照上的说明**配置分发向导**。
 
@@ -79,13 +80,13 @@ ms.locfileid: "66705335"
 
 若要创建的发布和文章：
 
-1. 在对象资源管理器，单击**复制** > **本地发布**> **新发布...**.
+1. 在对象资源管理器，单击**复制** > **本地发布**> **新发布...** .
 
 1. 按指令**新建发布向导**若要配置的类型的复制和属于该发布的文章。
 
 ### <a name="configure-the-subscription"></a>配置订阅
 
-若要在对象资源管理器中配置的订阅，请单击**复制** > **本地订阅**> **新订阅...**.
+若要在对象资源管理器中配置的订阅，请单击**复制** > **本地订阅**> **新订阅...** .
 
 ### <a name="monitor-replication-jobs"></a>监视复制作业
 

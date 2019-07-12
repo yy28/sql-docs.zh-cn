@@ -1,20 +1,20 @@
 ---
-title: 在 Linux 上安装 SQL Server 全文搜索 |Microsoft Docs
+title: 在 Linux 上安装 SQL Server 全文搜索
 description: 本文介绍如何在 Linux 上安装 SQL Server 全文搜索。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80d058fba56f091af7be92b908454f71fc8552e8
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705043"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834716"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
 
@@ -149,7 +149,7 @@ sudo zypper update mssql-server-fts
 
 您可以看到已安装的筛选器的列表，通过调用**sp_help_fulltext_system_components 'filter'** 。 对于 SQL Server，将安装以下筛选器：
 
-| 组件名称 | 类 ID | 版本 |
+| 组件名称 | 类 ID | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

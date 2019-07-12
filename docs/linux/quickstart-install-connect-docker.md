@@ -2,9 +2,9 @@
 title: 开始使用 Docker 上的 SQL Server Linux 容器
 titleSuffix: SQL Server
 description: 本快速入门介绍如何使用 Docker 运行 SQL Server 2017 和 2019年容器映像。 然后使用 sqlcmd 创建并查询数据库。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
 ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 667103945781e5c7814879456027a81b77cf7338
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e9dfbd9edbb7a363c3f88845bfe3a6331bbd7db9
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399929"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833622"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 
@@ -124,7 +124,7 @@ any changes to one section should be duplicated in the other-->
 
    下表对前一个 `docker run` 示例中的参数进行了说明：
 
-   | 参数 | Description |
+   | 参数 | 描述 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
@@ -243,7 +243,7 @@ SELECT @@SERVERNAME,
 
    下表对前一个 `docker run` 示例中的参数进行了说明：
 
-   | 参数 | Description |
+   | 参数 | 描述 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |

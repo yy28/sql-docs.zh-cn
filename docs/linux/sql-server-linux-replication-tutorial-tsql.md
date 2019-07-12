@@ -1,20 +1,21 @@
 ---
-title: 在 Linux 上配置 SQL Server 复制 |Microsoft Docs
+title: 在 Linux 上配置 SQL Server 复制
 description: 本教程演示如何在 Linux 上配置 SQL Server 快照复制。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e815a2c4c1f17caf1d07aad91d1ae30224bc9f21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0c2f2463abdc124f32d88fa9bd877c47a2fb76
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705122"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834754"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 配置复制
 
@@ -34,7 +35,7 @@ ms.locfileid: "66705122"
 
 可以使用配置所有的复制配置[复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
 若要完成本教程中，将需要：
 
 - Linux 上的 SQL Server 的最新版本的 SQL Server 的两个实例
@@ -284,7 +285,7 @@ ms.locfileid: "66705122"
 > * 配置订阅服务器 
 > * 运行复制作业
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 有关复制的详细信息，请参阅[SQL Server 复制文档](../relational-databases/replication/sql-server-replication.md)。
 

@@ -1,20 +1,21 @@
 ---
-title: 备份和还原 Linux 上的 SQL Server 数据库 |Microsoft 文档
+title: 备份和还原 Linux 上的 SQL Server 数据库
 description: 了解如何备份和还原 Linux 上的 SQL Server 数据库。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4722afd669893dc4bfa9cad23a7c97cdef5cc182
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713346"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834205"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>备份和还原 Linux 上的 SQL Server 数据库
 
@@ -103,11 +104,11 @@ SQL Server 将完成数据库备份。
 
 1. 找到您的数据库备份文件，然后单击**确定**。 
 
-1. 下**还原计划**，验证备份文件和设置。 单击“确定”  。 
+1. 下**还原计划**，验证备份文件和设置。 单击 **“确定”** 。 
 
 1. SQL Server 将还原数据库。 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [创建完整数据库备份 (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [备份事务日志 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

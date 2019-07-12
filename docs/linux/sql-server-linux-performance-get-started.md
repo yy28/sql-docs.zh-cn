@@ -1,20 +1,20 @@
 ---
-title: 开始使用 Linux 上的 SQL Server 的性能特点 |Microsoft Docs
+title: 开始使用 Linux 上的 SQL Server 的性能功能
 description: 本文提供的 Linux 用户刚接触 SQL Server 的 SQL Server 性能功能的介绍。 许多这些示例适用于所有平台，但这篇文章的上下文是 Linux。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713330"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834833"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上 SQL Server 的性能功能演练
 
@@ -158,7 +158,7 @@ SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL �
 ### <a name="learn-more-about-in-memory-oltp"></a>了解有关内存中 OLTP 的详细信息
 有关内存中 OLTP 的详细信息，请参阅以下主题：
 
-- [快速入门 1:更快的 Transact SQL 性能的内存中 OLTP 技术](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [迁移到内存中 OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [通过使用内存优化获得更快的临时表和表变量](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [内存使用情况的监视和故障排除](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

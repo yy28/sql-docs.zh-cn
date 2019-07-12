@@ -2,20 +2,20 @@
 title: 使用 Visual Studio Code 的 mssql 扩展适用于 SQL Server
 titleSuffix: SQL Server
 description: 使用适用于 Visual Studio Code 的 mssql 扩展编辑和 Linux 上运行 SQL Server Transact SQL 脚本。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcda7a310e7a9dc77ea9464dd82dbed7260b0b39
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705535"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833792"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>使用 Visual Studio Code 创建和运行 TRANSACT-SQL 脚本
 
@@ -84,7 +84,7 @@ Mssql 扩展启用 mssql 命令和 T-SQL IntelliSense 在代码编辑器中将�
 
 1. 按照提示指定为新的连接配置文件的属性。 指定每个值后，按**Enter**以继续。
 
-   | 连接属性 | Description |
+   | 连接属性 | 描述 |
    |---|---|
    | **服务器名称或 ADO 连接字符串** | 指定 SQL Server 实例名称。 使用*localhost*连接到本地计算机上的 SQL Server 实例。 若要连接到远程 SQL Server，请输入目标 SQL Server 的名称或其 IP 地址。 若要连接到 SQL Server 容器，请指定容器的主机计算机的 IP 地址。 如果您需要指定端口，使用逗号分隔的名称。 例如，对于端口 1401年上侦听的服务器，输入`<servername or IP>,1401`。<br/><br/>或者，可以为您在本文中的数据库输入在 ADO 连接字符串。 |
    | **数据库名称**（可选） | 要使用的数据库。 若要连接到的默认数据库，不指定数据库名称。 |

@@ -1,20 +1,20 @@
 ---
-title: Linux 上的 SQL Server 2019 预览版的发行说明 |Microsoft Docs
+title: Linux 上的 SQL Server 2019 预览版发行说明
 description: 本文包含的发行说明和在 Linux 上运行的 SQL Server 2019 预览版的支持的功能。 包含最新版本和多个以前版本的发行说明。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533846"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834817"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux 上的 SQL Server 2019 预览版发行说明
 
@@ -45,7 +45,7 @@ ms.locfileid: "67533846"
 
 下表列出了 SQL Server 2019 预览 CTP 版本发行历史记录。
 
-| 发行版本               | 版本       | 发布日期 |
+| 发行版本               | Version       | 发布日期 |
 |-----------------------|---------------|--------------|
 | [CTP 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
 | [CTP 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |

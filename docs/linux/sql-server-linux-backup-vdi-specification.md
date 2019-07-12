@@ -1,20 +1,21 @@
 ---
-title: VDI 备份规范-Linux 上的 SQL Server |Microsoft Docs
+title: VDI 备份规范-Linux 上的 SQL Server
 description: SQL Server 备份的虚拟设备接口规范。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: b3917f086361128ee0c3e0a73f44f2c7cc4049b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c684170ae6ca6420b6b5ebef91baae208ab0808
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713466"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834193"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 
@@ -81,7 +82,7 @@ ms.locfileid: "66713466"
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| | **名称** | 此用于标识出虚拟设备集。 必须遵循的规则 CreateFileMapping() 所使用的名称。 除反斜杠之外的任何字符 (\)可能会使用。 这是一个字符串。 建议前缀与用户的产品或公司名称和数据库名称的字符串。 |
+| | **name** | 此用于标识出虚拟设备集。 必须遵循的规则 CreateFileMapping() 所使用的名称。 除反斜杠之外的任何字符 (\)可能会使用。 这是一个字符串。 建议前缀与用户的产品或公司名称和数据库名称的字符串。 |
 | |**cfg** | 这是虚拟设备集的配置。 有关详细信息，请参阅本文档后面的"配置"。
 
 | 返回值 | 参数 | 解释
@@ -129,7 +130,7 @@ ms.locfileid: "66713466"
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| | **名称** |此用于标识出虚拟设备集。
+| | **name** |此用于标识出虚拟设备集。
 | | **ppVirtualDevice** |如果此函数成功，则会返回指向虚拟设备的指针。 此设备用于 GetCommand 和 CompleteCommand。
 
 | 返回值 | 参数 | 解释
@@ -217,7 +218,7 @@ ms.locfileid: "66713466"
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |None | 不适用
+| |无 | 不适用
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |
@@ -237,7 +238,7 @@ ms.locfileid: "66713466"
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |None |不适用
+| |无 |不适用
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |

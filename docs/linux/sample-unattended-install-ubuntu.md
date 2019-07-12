@@ -2,19 +2,19 @@
 title: Ubuntu 上的 SQL Server 的无人参与的安装
 titleSuffix: SQL Server
 description: SQL Server 脚本示例-在 Ubuntu 上的无人参与安装
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: caa08ab4780defb1ddcd6dedd49e261ea9c45625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bd5728e8046d7e48945fe815b64735362873ac1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713549"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834476"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例：适用于 Ubuntu 的无人参与的 SQL Server 安装脚本
 
@@ -25,7 +25,7 @@ ms.locfileid: "66713549"
 > [!TIP]
 > 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[快速入门适用于 Ubuntu](quickstart-install-connect-ubuntu.md)。 有关其他安装程序的信息，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 需要至少 2 GB 的内存来在 Linux 上运行 SQL Server。
 - 必须在文件系统**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。

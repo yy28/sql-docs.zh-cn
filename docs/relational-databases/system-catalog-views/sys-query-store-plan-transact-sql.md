@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652866"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833572"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含有关与查询关联的每个执行计划信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|主键。|  
 |**query_id**|**bigint**|外键。 加入[sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
@@ -57,7 +57,7 @@ ms.locfileid: "67652866"
 |**last_execution_time**|**datetimeoffset**|上次执行时间的最后一个引用查询计划的结束的时间。|  
 |**avg_compile_duration**|**float**|计划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|  
 |**last_compile_duration**|**bigint**|计划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零 (0)。|  
-|**plan_forcing_type**|**int**|计划强制类型。<br /><br />0：无<br /><br />1：MANUAL<br /><br />2:AUTO|  
+|**plan_forcing_type**|**int**|计划强制类型。<br /><br />0：无<br /><br />1:MANUAL<br /><br />2:AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文本说明。<br /><br />NONE:没有计划强制<br /><br />手动：由用户强制执行的计划<br /><br />自动：计划强制进行自动优化|  
 
 ## <a name="plan-forcing-limitations"></a>计划强制限制
@@ -68,8 +68,11 @@ ms.locfileid: "67652866"
 * 对外部表的引用
 * 分布式查询或全文操作
 * 使用全局查询 
-* 动态或键集游标 （强制执行计划为静态和快进游标支持）
+* 动态或键集游标 
 * 无效的星型联接规范 
+
+> [!NOTE]
+> Azure SQL 数据库和 SQL Server 2019 （预览版） 支持静态和快进游标的计划强制。
 
 其次，计划依赖的对象何时不再可用：
 * 数据库（计划来自的数据库不再存在时）

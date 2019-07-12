@@ -1,20 +1,20 @@
 ---
-title: SQL Server Always On 可用性组的部署模式 |Microsoft Docs
+title: SQL Server Always On 可用性组的部署模式
 ms.date: 04/17/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: linux
 ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35897b388e9bd026b643acbc6fbccda6c944c559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.reviewer: vanto
+manager: jroth
+ms.openlocfilehash: 69cc0c84d06c1be4065c7419b3eb35c6c30e0592
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705584"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834229"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -169,7 +169,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 > [!NOTE]
 > 运行上述命令时，主要是暂时降级为次要副本，然后再次进行升级。 资源更新将导致所有副本停止并重新启动。 新值`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`仅在副本重新启动，不在瞬间完成后设置。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Linux 上的可用性组](sql-server-linux-availability-group-overview.md)
 

@@ -1,19 +1,20 @@
 ---
-title: Linux 上的 SQL Server 的性能最佳做法 |Microsoft 文档
+title: Linux 上的 SQL Server 的性能最佳实践
 description: 本文提供在 Linux 上运行 SQL Server 性能最佳实践和准则。
 author: rgward
 ms.author: bobward
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8dc3cafb54fe91709bd3ee078dfeeb1dc5e3d649
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705171"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834850"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>性能最佳实践和 Linux 上的 SQL Server 配置准则
 
@@ -27,7 +28,7 @@ ms.locfileid: "66705171"
 
 建议以获得最佳性能应用程序在 Linux 上安装 SQL Server 之后执行以下配置任务。
 
-### <a name="best-practices"></a>最佳做法
+### <a name="best-practices"></a>最佳实践
 
 - **使用节点和/或 Cpu 的进程关联**
 

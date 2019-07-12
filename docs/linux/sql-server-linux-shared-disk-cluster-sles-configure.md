@@ -1,20 +1,21 @@
 ---
-title: 配置 SQL Server 的 SLES 共享的磁盘群集 |Microsoft Docs
+title: 配置适用于 SQL Server 的 SLES 共享磁盘群集
 description: 为 SQL Server 配置 SUSE Linux Enterprise Server (SLES) 共享的磁盘群集实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: e7f315e65702eab373430ede3adb23199f4edc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b65c2cca781dc077e72ff06fb7de5ae8ee2e8c5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712851"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834647"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
 
@@ -24,7 +25,7 @@ ms.locfileid: "66712851"
 
 有关群集配置、 资源代理选项、 管理、 最佳实践和建议的详细信息，请参阅[SUSE Linux Enterprise 高 Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 若要完成以下端到端方案，需要两台计算机部署两个节点群集和另一台服务器来配置 NFS 共享。 以下步骤概述了如何配置这些服务器。
 

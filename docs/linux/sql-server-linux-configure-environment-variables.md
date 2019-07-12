@@ -1,20 +1,20 @@
 ---
-title: 使用环境变量配置 SQL Server 设置 |Microsoft Docs
+title: 使用环境变量配置 SQL Server 设置
 description: 本文介绍如何使用环境变量在 Linux 上配置 SQL Server 2017 的特定设置。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2b32c965dfed3647484a1de54539c79af3777ce4
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400073"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834054"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -44,7 +44,7 @@ ms.locfileid: "67400073"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 环境变量 | Description |
+| 环境变量 | 描述 |
 |-----|-----|
 | **ACCEPT_EULA** | 在设置为任何值（例如“Y”）时接受 SQL Server 许可协议。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
@@ -68,7 +68,7 @@ ms.locfileid: "67400073"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 环境变量 | Description |
+| 环境变量 | 描述 |
 |-----|-----|
 | **ACCEPT_EULA** | 在设置为任何值（例如“Y”）时接受 SQL Server 许可协议。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |

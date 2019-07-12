@@ -1,21 +1,22 @@
 ---
-title: Docker 上的 SQL Server 配置选项 |Microsoft Docs
+title: Docker 上的 SQL Server 配置选项
 description: 了解不同使用和与 SQL Server 2017 和 2019年预览版容器映像在 Docker 中的进行交互的方式。 这包括保存数据，将文件，复制和故障排除。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 822fdbe60a9fe7740d2b7cb13ed9b8784e88945d
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 34320ca5f0e969443ecd60eae64ca80a6aeaec63
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500024"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834067"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
