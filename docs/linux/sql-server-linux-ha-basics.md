@@ -1,19 +1,20 @@
 ---
-title: 对于 Linux 部署 SQL Server 可用性基础知识 |Microsoft 文档
+title: 对于 Linux 部署 SQL Server 可用性基础知识
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719368"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833565"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>对于 Linux 部署 SQL Server 可用性基础知识
 
@@ -83,7 +84,7 @@ Samba，这是服务器消息块 (SMB) 的 Linux 变体，也可用于创建共�
 ### <a name="configure-the-firewall"></a>配置防火墙
 类似于 Windows，Linux 发行版具有内置防火墙。 如果你的公司使用的服务器的外部防火墙，禁用在 Linux 防火墙可能是可接受。 但是，无论其中启用了防火墙，端口需要打开。 下表介绍常见的端口所需的高度可用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 上的部署。
 
-| 端口号 | 类型     | Description                                                                                                                 |
+| 端口号 | type     | 描述                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba （如果使用） 的终结点映射程序                                                                                          |
