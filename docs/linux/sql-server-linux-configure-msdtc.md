@@ -1,20 +1,20 @@
 ---
-title: 如何在 Linux 上配置 MSDTC |Microsoft Docs
+title: 如何在 Linux 上配置 MSDTC
 description: 本文提供用于在 Linux 上配置 MSDTC 的演练。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2bcf87b91423ae7aa79ae6a5194aa8fc31ca71c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713262"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834021"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)
 
@@ -28,7 +28,7 @@ ms.locfileid: "66713262"
 
 SQL Server 2019 引入了 mssql-conf 实用工具的两个配置参数。
 
-| mssql-conf 设置 | Description |
+| mssql-conf 设置 | 描述 |
 |---|---|
 | **network.rpcport** | RPC 终结点映射器进程将绑定到 TCP 端口。 |
 | **distributedtransaction.servertcpport** | MSDTC 服务器侦听的端口。 如果未设置，MSDTC 服务在服务重新启动时，将使用随机临时端口和防火墙例外将需要重新配置以确保 MSDTC 服务能够持续通信。 |
@@ -183,7 +183,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 Linux 上的 SQL Server 的 MSDTC 不使用身份验证对 RPC 通信默认情况下中。 但是，当主机计算机加入到 Active Directory (AD) 域后，就可以配置 MSDTC 以使用已经过身份验证的 RPC 通信使用以下**mssql conf**设置：
 
-| 设置 | Description |
+| 设置 | 描述 |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | 配置安全的分布式事务的唯一 RPC 调用。 |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | 配置的安全性仅 RPC 调用的分布式事务。 |

@@ -1,20 +1,20 @@
 ---
-title: 在 Linux 上配置 SQL Server 设置 |Microsoft 文档
+title: 在 Linux 上配置 SQL Server 设置
 description: 本文介绍如何使用 mssql-conf 工具配置 Linux 上的 SQL Server 设置。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719402"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834012"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -394,7 +394,7 @@ ms.locfileid: "66719402"
 
     下表列出了可能**coredump.coredumptype**值。
 
-    | 类型 | Description |
+    | type | 描述 |
     |-----|-----|
     | **mini** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
     | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 和主机环境中，将下面的内存区域添加到转储的内部：</br></br> -各种全局变量</br> 的超过 64tb 所有内存</br> -所有命名区域中找到 **/proc/$ pid/maps**</br> 的来自线程和堆栈间接内存</br> 线程信息</br> -相关 Teb 和 Peb 的</br> 模块信息</br> VMM 和 VAD 树 |
@@ -508,7 +508,7 @@ sudo systemctl restart mssql-server
 
 有几个可用于监视和故障排除 MSDTC 的 mssql conf 其他设置。 下表简要介绍这些设置。 有关其用法的详细信息，请参阅 Windows 支持文章中的详细信息[如何对 MS DTC 中启用诊断跟踪](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)。
 
-| mssql-conf 设置 | Description |
+| mssql-conf 设置 | 描述 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 配置安全的分布式事务的唯一 RPC 调用 |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 为分布式配置安全仅 RPC 调用 |事务
@@ -614,7 +614,7 @@ outboundnetworkaccess = 1
 
 以下选项在 Linux 上运行的 SQL Server 实例配置 TLS。
 
-|Option |Description |
+|Option |描述 |
 |--- |--- |
 |**network.forceencryption** |如果为 1，然后[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]强制所有连接进行加密。 默认情况下，此选项为 0。 |
 |**network.tlscert** |证书的绝对路径文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 TLS。 例如： `/etc/ssl/certs/mssql.pem`  证书文件必须是可由 mssql 帐户访问。 Microsoft 建议将访问限制文件使用到`chown mssql:mssql <file>; chmod 400 <file>`。 |
