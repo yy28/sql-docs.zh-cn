@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530571"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866274"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|步骤的唯一标识符。|  
 |**step_name**|**sysname**|在作业中步骤的名称。|  
@@ -73,7 +73,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**on_success_step_id**|**int**|如果**on_success_action**为 4，即指明下一步执行。|  
 |**on_fail_action**|**tinyint**|如果步骤失败了，应采取什么后续操作。 与相同的有效值**on_success_action**。|  
 |**on_fail_step_id**|**int**|如果**on_fail_action**为 4，即指明下一步执行。|  
-|服务器|**sysname**|保留。|  
+|服务器 |**sysname**|保留。|  
 |**database_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是命令执行时所在的数据库。|  
 |**database_user_name**|**sysname**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，这是命令执行时所在的数据库用户上下文。|  
 |**retry_attempts**|**int**|应该对命令进行重试的最大次数（如果命令没有成功）。|  
@@ -81,7 +81,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**os_run_priority**|**int**|保留。|  
 |**output_file_name**|**nvarchar(200)**|输出应写入到哪个命令文件 ([!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**，和**PowerShell**仅步骤)。|  
 |**last_run_outcome**|**int**|步骤上一次运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
-|**last_run_duration**|**int**|步骤上一次运行的持续时间（以秒为单位）。|  
+|**last_run_duration**|**int**|该步骤上次运行时的持续时间 (hhmmss)。|  
 |**last_run_retries**|**int**|步骤上一次运行时，重试命令的次数。|  
 |**last_run_date**|**int**|步骤上一次开始执行的日期。|  
 |**last_run_time**|**int**|步骤上一次开始执行的时间。|  
