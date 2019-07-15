@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 136eade9df87a7d086af27ca0ab6d3075a3b8bd7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e29d2ecf2c910532789481e63e46e6129dfdc43c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207456"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732318"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER 的协议属性（“标志”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "53207456"
   
  有关加密的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书中的“加密与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接”。  
   
- 登录过程始终是加密的。 如果将 **ForceEncryption** 设为 **“是”**，则将对所有客户端/服务器通信进行加密，并必须将连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的客户端配置为信任服务器证书的根颁发机构。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的加密连接（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”，位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中。  
+ 登录过程始终是加密的。 如果将 **ForceEncryption** 设为 **“是”** ，则将对所有客户端/服务器通信进行加密，并必须将连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的客户端配置为信任服务器证书的根颁发机构。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的加密连接（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
   
 ## <a name="cluster-servers"></a>集群服务器  
- 若要在故障转移群集中使用加密，必须在故障转移群集中的所有节点上安装具有完全限定的虚拟服务器 DNS 名称的服务器证书。 例如，如果有一个包含两个分别名为“test1.\<your company>.com”和“test2.\<your company>.com”节点的群集，还有一个名为“virtsql”的虚拟服务器，则需要在这两个节点上安装“virtsql.\<your company>.com”的证书。 然后，可以选中 **SQL Server 配置管理器** 中的 **ForceEncryption** 复选框以将故障转移群集配置为使用加密。  
+ 若要在故障转移群集中使用加密，必须在故障转移群集中的所有节点上安装具有完全限定的虚拟服务器 DNS 名称的服务器证书。 例如，如果有一个包含两个分别名为“test1.\<your company>.com”和“test2.\<your company>.com”节点的群集，还有一个名为“virtsql”的虚拟服务器，则需要在这两个节点上安装“virtsql.\<your company>.com”的证书    。 然后，可以选中 **SQL Server 配置管理器** 中的 **ForceEncryption** 复选框以将故障转移群集配置为使用加密。  
   
 ## <a name="options"></a>选项  
  **ForceEncryption**  
@@ -44,6 +44,6 @@ ms.locfileid: "53207456"
  **HideInstance**  
  防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务向尝试通过使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] “浏览” **按钮来查找实例的客户端计算机公开此** 实例。 在服务器上存在命名实例的情况下，若要连接，则客户端应用程序必须指定协议端点信息。 例如，端口号或命名管道名（如 **tcp:server,5000**）。 有关详细信息，请参阅 [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)。  
   
- 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：启用数据库引擎的加密连接（SQL Server 配置管理器）”。  
+ 有关详细信息，请参阅联机丛书中的“如何启用数据库引擎的加密连接（SQL Server 配置管理器）”。  
   
   

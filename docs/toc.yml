@@ -9041,11 +9041,13 @@
             - name: 安装非英语版 SSMS
               href: ssms/install-other-languages.md
             - name: 使用 SSMS 中的模板
-              href: ssms/tutorials/templates-ssms.md
+              href: ssms/template/templates-ssms.md
             - name: 编写对象脚本
               href: ssms/tutorials/scripting-ssms.md
             - name: SSMS 配置
               href: ssms/tutorials/ssms-configuration.md
+            - name: 使用其他提示和技巧
+              href: ssms/tutorials/ssms-tricks.md
             - name: 自定义菜单和快捷键
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: 在 SQL Server 工具中将 WMI 配置为显示服务器状态
@@ -9959,8 +9961,6 @@
                   href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: Resources
           items:
-            - name: SQL Server Management Studio
-              href: ssms/tutorials/tutorial-sql-server-management-studio.md
             - name: SSMS 的支持策略
               href: ssms/support-policy.md
             - name: 企业用户支持选项
@@ -10180,15 +10180,15 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: 教程
       items:
-        - name: 1_从 Windows 迁移
+        - name: 从 Windows 迁移
           href: linux/sql-server-linux-migrate-restore-database.md
-        - name: 2_迁移到 Docker
+        - name: 迁移到 Docker
           href: linux/tutorial-restore-backup-in-sql-server-container.md
-        - name: 3_创建作业
+        - name: 创建作业
           href: linux/sql-server-linux-run-sql-server-agent-job.md
-        - name: 4_设置 AD 身份验证
+        - name: 设置 AD 身份验证
           href: linux/sql-server-linux-active-directory-authentication.md
-        - name: 5_创建故障转移群集实例
+        - name: 创建故障转移群集实例
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
             - name: iSCSI
@@ -10197,16 +10197,18 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: 6_运行故障转移群集实例 - Linux 上的 SQL Server
+        - name: 运行故障转移群集实例 - Linux 上的 SQL Server
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
-        - name: 7_部署 Pacemaker 群集
+        - name: 部署 Pacemaker 群集
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-        - name: 8_创建和配置可用性组
+        - name: 创建和配置可用性组
           href: linux/sql-server-linux-create-availability-group.md
-        - name: 9_在 Kubernetes 上部署
+        - name: 在 Kubernetes 上部署
           href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: 10_配置复制
+        - name: 配置复制
           href: linux/sql-server-linux-replication-tutorial-tsql.md
+        - name: 容器中的机器学习
+          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 概念
       items:
         - name: 安装

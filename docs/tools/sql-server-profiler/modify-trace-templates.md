@@ -14,15 +14,15 @@ helpviewer_keywords:
 - modifying trace templates
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7ca5a8fff488f827360f02a96992e01dcc3accb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34d3b69a345a9d7575cc850d4416695206b11a5e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747505"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733066"
 ---
 # <a name="modify-trace-templates"></a>修改跟踪模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,24 +32,24 @@ ms.locfileid: "47747505"
   
 ## <a name="to-modify-a-trace-template"></a>修改跟踪模板  
   
-1.  在 **“文件”** 菜单上，指向 **“模板”**，然后单击 **“编辑模板”**。  
+1.  在 **“文件”** 菜单上，指向 **“模板”** ，然后单击 **“编辑模板”** 。  
   
 2.  在 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡上，可以修改服务器类型和模板名称，或者选择将默认模板用于服务器类型。  
   
-3.  在“事件选择”选项卡上，使用网格控件来添加或删除跟踪文件中的事件和数据列，如下所示。  
+3.  在“事件选择”选项卡上，使用网格控件来添加或删除跟踪文件中的事件和数据列，如下所示  。  
   
     -   若要添加事件，请在 **“事件”** 列中展开相应的事件类别，再选择事件名称。  
   
     -   添加事件时，默认情况下将包含所有相关数据列。 若要从跟踪中删除某个事件的数据列，请清除此事件的该数据列中的复选框。  
   
-    -   若要添加筛选器，请单击数据列的名称，然后在 **“编辑筛选器”** 对话框中指定筛选条件。 也可以右键单击数据列名称，再单击“编辑列筛选器”，以启动“编辑筛选器”对话框。 单击 **“确定”** 以添加筛选器。  
+    -   若要添加筛选器，请单击数据列的名称，然后在 **“编辑筛选器”** 对话框中指定筛选条件。 也可以右键单击数据列名称，再单击“编辑列筛选器”  ，以启动“编辑筛选器”  对话框。 单击 **“确定”** 以添加筛选器。  
   
-4.  单击“保存”，或单击“另存为”将跟踪模板另存为其他名称。  
+4.  单击“保存”，或单击“另存为”将跟踪模板另存为其他名称   。  
   
 ## <a name="next-steps"></a>后续步骤  
 [启动跟踪](../../tools/sql-server-profiler/start-a-trace.md)  
 [创建跟踪](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [使用 Transact-SQL 修改现有跟踪](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
 [使用 SQL Server Profiler 指定跟踪的事件和数据列](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-[sp-跟踪-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[sp-trace-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

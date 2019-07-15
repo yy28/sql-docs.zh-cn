@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f1a48d9b2892033ee0e6203800a5b30cbd45b7c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213066"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731923"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,12 +25,12 @@ ms.locfileid: "53213066"
   
 ## <a name="options"></a>选项  
  **指定启动参数**  
- 若要添加某一参数，请键入该参数，然后单击 **“添加”**。  
+ 若要添加某一参数，请键入该参数，然后单击 **“添加”** 。  
   
- 若要修改所需的参数之一，请在 **“现有参数”** 框中键入该参数，更改 **“指定启动参数”** 框中的值，然后单击 **“更新”**。  
+ 若要修改所需的参数之一，请在 **“现有参数”** 框中键入该参数，更改 **“指定启动参数”** 框中的值，然后单击 **“更新”** 。  
   
  **“现有参数”**  
- 若要删除某一参数，请选择该参数，然后单击 **“删除”**。  
+ 若要删除某一参数，请选择该参数，然后单击 **“删除”** 。  
   
 ## <a name="parameter-format"></a>参数格式  
  不要在参数之间输入分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器会自动添加分隔符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器将强制以下参数要求。  
@@ -54,7 +54,7 @@ ms.locfileid: "53213066"
  有关如何移动 master 数据库的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“移动系统数据库”主题。  
   
 ## <a name="optional-parameters"></a>可选参数  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#*) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“跟踪标志（[!INCLUDE[tsql](../../includes/tsql-md.md)]）”主题。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书的“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”主题中介绍了所有支持的启动参数。 -T*trace#* 的启动参数指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例应该以有效的指定跟踪标志 (*trace#* ) 启动。 跟踪标记用于以非标准行为启动服务器。 有关跟踪标志的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“跟踪标志（[!INCLUDE[tsql](../../includes/tsql-md.md)]）”主题。  
   
 > [!CAUTION]  
 >  您可能会看到在 Internet 上描述的其他未记录的启动参数和跟踪标志。 创建未记录的启动参数和跟踪标志是为了满足某些不常见问题或者强制测试所需的某些条件。 使用未记录的启动参数可能会导致意外结果。 除非 Microsoft 客户支持服务部门指示，否则不要使用未记录的参数。  
@@ -80,6 +80,6 @@ ms.locfileid: "53213066"
 -   如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置为在域帐户下运行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用该域帐户。  
   
 ## <a name="books-online-references"></a>联机丛书参考  
- 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何：配置服务器启动选项（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何配置服务器启动选项（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
   
   
