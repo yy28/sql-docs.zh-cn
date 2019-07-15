@@ -64,7 +64,7 @@ ms.locfileid: "63201697"
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -127,17 +127,17 @@ ALTER DATABASE database_name
 
 指定要添加、删除或修改的文件。
 
-database_name 要修改的数据库的名称。
+database_name  要修改的数据库的名称。
 
 ADD FILE 向数据库中添加文件。
 
-TO FILEGROUP { filegroup_name } 指定要将指定文件添加到的文件组。 若要显示当前文件组和当前的默认文件组，请使用 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 目录视图。
+TO FILEGROUP { filegroup_name  } 指定要将指定文件添加到的文件组。 若要显示当前文件组和当前的默认文件组，请使用 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 目录视图。
 
 ADD LOG FILE 将要添加的日志文件添加到指定的数据库。
 
-REMOVE FILE logical_file_name 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中删除逻辑文件说明并删除物理文件。 除非文件为空，否则无法删除文件。
+REMOVE FILE logical_file_name  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中删除逻辑文件说明并删除物理文件。 除非文件为空，否则无法删除文件。
 
-logical_file_name 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。
+logical_file_name  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。
 
 > [!WARNING]
 > 删除具有与其关联的 `FILE_SNAPSHOT` 备份的数据库文件将会成功，但不会删除任何关联的快照，以免使引用该数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。
@@ -171,17 +171,17 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 
 控制文件属性。
 
-NAME logical_file_name 指定文件的逻辑名称。
+NAME logical_file_name  指定文件的逻辑名称。
 
-logical_file_name 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中引用文件时所用的逻辑名称。
+logical_file_name  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中引用文件时所用的逻辑名称。
 
-NEWNAME new_logical_file_name 指定文件的新逻辑名称。
+NEWNAME new_logical_file_name  指定文件的新逻辑名称。
 
-new_logical_file_name 用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。
+new_logical_file_name  用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。
 
-FILENAME { 'os\_file\_name' | 'filestream\_path' | 'memory\_optimized\_data\_path'} 指定操作系统（物理）文件名。
+FILENAME { '  os\_file\_name  '  | '  filestream\_path  '  | '  memory\_optimized\_data\_path  '  } 指定操作系统（物理）文件名。
 
-' os_file_name ' 对于标准 (ROWS) 文件组，这是在创建文件时操作系统所使用的路径和文件名。 该文件必须驻留在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上。 在执行 ALTER DATABASE 语句前，指定的路径必须已经存在。
+' os_file_name  ' 对于标准 (ROWS) 文件组，这是在创建文件时操作系统所使用的路径和文件名。 该文件必须驻留在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器上。 在执行 ALTER DATABASE 语句前，指定的路径必须已经存在。
 
 > [!NOTE]
 > 当为文件指定了 UNC 路径时，无法设置 `SIZE`、`MAXSIZE` 和 `FILEGROWTH` 参数。
@@ -192,12 +192,12 @@ FILENAME { 'os\_file\_name' | 'filestream\_path' | 'memory\_optimized\_data\_pat
 
 如果文件位于原始分区上，则 *os_file_name* 必须仅指定现有原始分区的驱动器号。 每个原始分区上只能存放一个文件。
 
-' filestream_path ' 对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyFilestreamData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyFilestreamData` 文件夹不能存在。
+' filestream_path '    对于 FILESTREAM 文件组，FILENAME 指向将存储 FILESTREAM 数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyFilestreamData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyFilestreamData` 文件夹不能存在。
 
 > [!NOTE]
 > SIZE 和 FILEGROWTH 属性不适用于 FILESTREAM 文件组。
 
-' memory_optimized_data_path ' 对于内存优化文件组，FILENAME 会引用将存储内存优化数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyData` 文件夹不能存在。
+'  memory_optimized_data_path  '  对于内存优化文件组，FILENAME 会引用将存储内存优化数据的路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。 例如，如果指定路径 `C:\MyFiles\MyData`，则 `C:\MyFiles` 必须存在才能运行 ALTER DATABASE，但 `MyData` 文件夹不能存在。
 
 必须在同一语句中创建文件组和文件 (`<filespec>`)。
 
@@ -206,9 +206,9 @@ FILENAME { 'os\_file\_name' | 'filestream\_path' | 'memory\_optimized\_data\_pat
 
 有关内存优化文件组的详细信息，请参阅[内存优化文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)。
 
-SIZE size 指定文件大小。 SIZE 不适用于 FILESTREAM 文件组。
+SIZE size  指定文件大小。 SIZE 不适用于 FILESTREAM 文件组。
 
-size 文件的大小。
+size  文件的大小。
 
 与 ADD FILE 一起指定时，*size* 是文件的初始大小。 与 MODIFY FILE 一起指定时，*size* 是文件的新大小，而且必须大于文件的当前大小。
 
@@ -222,18 +222,18 @@ size 文件的大小。
 > - 为文件指定了 UNC 路径时
 > - 用于 `FILESTREAM` 和 `MEMORY_OPTIMIZED_DATA` 文件组时
 
-MAXSIZE { max_size| UNLIMITED } 指定文件可增大到的最大文件大小。
+MAXSIZE { max_size  | UNLIMITED } 指定文件可增大到的最大文件大小。
 
-max_size 最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size*，文件大小将一直增长到磁盘变满为止。
+max_size  最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size*，文件大小将一直增长到磁盘变满为止。
 
 UNLIMITED 指定文件将增长到磁盘充满。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定为不限制增长的日志文件的最大大小为 2 TB，而数据文件的最大大小为 16 TB。 为 FILESTREAM 容器指定此选项时，没有最大大小。 它将继续增大，直到磁盘已满。
 
 > [!NOTE]
 > 当为文件指定了 UNC 路径时无法设置 `MAXSIZE`。
 
-FILEGROWTH growth_increment 指定文件的自动增量。 文件的 FILEGROWTH 设置不能超过 MAXSIZE 设置。 FILEGROWTH 不适用于 FILESTREAM 文件组。
+FILEGROWTH growth_increment  指定文件的自动增量。 文件的 FILEGROWTH 设置不能超过 MAXSIZE 设置。 FILEGROWTH 不适用于 FILESTREAM 文件组。
 
-growth_increment 每次需要新空间时为文件添加的空间量。
+growth_increment  每次需要新空间时为文件添加的空间量。
 
 该值可以 MB、KB、GB、TB 或百分比 (%) 为单位指定。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。 如果指定 %，则增量大小为发生增长时文件大小的指定百分比。 指定的大小舍入为最接近的 64 KB 的倍数。
 
@@ -264,7 +264,7 @@ OFFLINE 将文件设置为脱机并使文件组中的所有对象都不可访问
 
 在数据库中添加、修改或删除文件组。
 
-ADD FILEGROUP filegroup_name 向数据库中添加文件组。
+ADD FILEGROUP filegroup_name  向数据库中添加文件组。
 
 CONTAINS FILESTREAM 指定文件组在文件系统中存储 FILESTREAM 二进制大型对象 (BLOB)。
 
@@ -274,20 +274,20 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 指定文件组在文件系统中存储内存优化数据。 有关详细信息，请参阅[内存中 OLTP - 内存中优化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每个数据库只允许一个 `MEMORY_OPTIMIZED_DATA` 文件组。 在创建内存优化表时，文件组不能为空。 其中必须至少包含一个文件。 *filegroup_name* 引用一个路径。 在最后一个文件夹之前的路径必须存在，但不能存在最后一个文件夹。
 
-REMOVE FILEGROUP filegroup_name 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。
+REMOVE FILEGROUP filegroup_name  从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。
 
 > [!NOTE]
 > 除非 FILESTREAM 垃圾回收器已从 FILESTREAM 容器中删除所有文件，否则删除 FILESTREAM 容器的 `ALTER DATABASE REMOVE FILE` 操作将失败并返回错误。 请参阅本主题后面的[删除 FILESTREAM 容器](#removing-a-filestream-container)部分。
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。
 
 \<filegroup_updatability_option> 对文件组设置只读或读/写属性。
 
-DEFAULT 将默认数据库文件组改为 filegroup_name。 数据库中只能有一个文件组作为默认文件组。 有关详细信息，请参阅 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
+DEFAULT 将默认数据库文件组改为 filegroup_name  。 数据库中只能有一个文件组作为默认文件组。 有关详细信息，请参阅 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
 
-NAME = new_filegroup_name 将文件组名称改为 new_filegroup_name。
+NAME = new_filegroup_name  将文件组名称改为 new_filegroup_name  。
 
-AUTOGROW_SINGLE_FILE 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）
+AUTOGROW_SINGLE_FILE 适用范围  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）
 
 当文件组中的某个文件达到自动增长阈值时，只有该文件会增长。 这是默认设置。
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\*SQL 数据库<br />托管实例\*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\*SQL 数据库<br />托管实例\*_**<br />&nbsp;|
 
 &nbsp;
 
@@ -743,15 +743,15 @@ ALTER DATABASE database_name
 
 指定要添加、删除或修改的文件。
 
-database_name 要修改的数据库的名称。
+database_name  要修改的数据库的名称。
 
 ADD FILE 向数据库中添加文件。
 
-TO FILEGROUP { filegroup_name } 指定要将指定文件添加到的文件组。 若要显示当前文件组和当前的默认文件组，请使用 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 目录视图。
+TO FILEGROUP { filegroup_name  } 指定要将指定文件添加到的文件组。 若要显示当前文件组和当前的默认文件组，请使用 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 目录视图。
 
-REMOVE FILE logical_file_name 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中删除逻辑文件说明并删除物理文件。 除非文件为空，否则无法删除文件。
+REMOVE FILE logical_file_name  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中删除逻辑文件说明并删除物理文件。 除非文件为空，否则无法删除文件。
 
-logical_file_name 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。
+logical_file_name  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引用文件时所用的逻辑名称。
 
 MODIFY FILE 指定应修改的文件。 一次只能更改一个 \<filespec> 属性。 必须始终在 \<filespec> 中指定 NAME，以标识要修改的文件。 如果指定了 SIZE，那么新大小必须比文件当前大小要大。
 
@@ -759,17 +759,17 @@ MODIFY FILE 指定应修改的文件。 一次只能更改一个 \<filespec> 属
 
 控制文件属性。
 
-NAME logical_file_name 指定文件的逻辑名称。
+NAME logical_file_name  指定文件的逻辑名称。
 
-logical_file_name 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中引用文件时所用的逻辑名称。
+logical_file_name  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中引用文件时所用的逻辑名称。
 
-NEWNAME new_logical_file_name 指定文件的新逻辑名称。
+NEWNAME new_logical_file_name  指定文件的新逻辑名称。
 
-new_logical_file_name 用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。
+new_logical_file_name  用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。
 
-SIZE size 指定文件大小。
+SIZE size  指定文件大小。
 
-size 文件的大小。
+size  文件的大小。
 
 与 ADD FILE 一起指定时，*size* 是文件的初始大小。 与 MODIFY FILE 一起指定时，*size* 是文件的新大小，而且必须大于文件的当前大小。
 
@@ -777,15 +777,15 @@ size 文件的大小。
 
 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 若要指定兆字节的分数，请通过将数字乘以 1024 将该值转换为千字节。 例如，应指定 1536 KB 而不是 1.5MB (1.5 x 1024 = 1536)。
 
-MAXSIZE { max_size| UNLIMITED } 指定文件可增大到的最大文件大小。
+MAXSIZE { max_size  | UNLIMITED } 指定文件可增大到的最大文件大小。
 
-max_size 最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size*，文件大小将一直增长到磁盘变满为止。
+max_size  最大的文件大小。 后缀 KB、MB、GB 和 TB 可用于指定千字节、兆字节、千兆字节或兆兆字节。 默认值为 MB。 指定整数，不包含小数。 如果未指定 *max_size*，文件大小将一直增长到磁盘变满为止。
 
 UNLIMITED 指定文件将增长到磁盘充满。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定为不限制增长的日志文件的最大大小为 2 TB，而数据文件的最大大小为 16 TB。
 
-FILEGROWTH growth_increment 指定文件的自动增量。 文件的 FILEGROWTH 设置不能超过 MAXSIZE 设置。
+FILEGROWTH growth_increment  指定文件的自动增量。 文件的 FILEGROWTH 设置不能超过 MAXSIZE 设置。
 
-growth_increment 每次需要新空间时为文件添加的空间量。
+growth_increment  每次需要新空间时为文件添加的空间量。
 
 该值可以 MB、KB、GB、TB 或百分比 (%) 为单位指定。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。 如果指定 %，则增量大小为发生增长时文件大小的指定百分比。 指定的大小舍入为最接近的 64 KB 的倍数。
 
@@ -800,7 +800,7 @@ growth_increment 每次需要新空间时为文件添加的空间量。
 
 在数据库中添加、修改或删除文件组。
 
-ADD FILEGROUP filegroup_name 向数据库中添加文件组。
+ADD FILEGROUP filegroup_name  向数据库中添加文件组。
 
 下面的示例创建添加到一个添加到名为 sql_db_mi 的数据库的文件组，然后向该文件组添加一个文件。
 
@@ -810,15 +810,15 @@ GO
 ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_fg;
 ```
 
-REMOVE FILEGROUP filegroup_name 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。
+REMOVE FILEGROUP filegroup_name  从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。
 
 \<filegroup_updatability_option> 对文件组设置只读或读/写属性。
 
-DEFAULT 将默认数据库文件组改为 filegroup_name。 数据库中只能有一个文件组作为默认文件组。 有关详细信息，请参阅 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
+DEFAULT 将默认数据库文件组改为 filegroup_name  。 数据库中只能有一个文件组作为默认文件组。 有关详细信息，请参阅 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
 
-NAME = new_filegroup_name 将文件组名称改为 new_filegroup_name。
+NAME = new_filegroup_name  将文件组名称改为 new_filegroup_name  。
 
 AUTOGROW_SINGLE_FILE
 

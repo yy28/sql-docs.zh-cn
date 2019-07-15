@@ -46,7 +46,7 @@ ms.locfileid: "63243366"
 
 |                                   | 需要所有服务器对象和 VNN | 需要所有服务器对象和 VNN | 不需要服务器对象/VNN\* | 不需要服务器对象/VNN\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **是否为可用性组？  （是/否）**                  | **是  **                              | **否  **                                                            | **是  **    | **否  **    |
+| **是否为可用性组？  （是/否）**                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
 | **群集仅使用 SQL FCI**         | [应用场景 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [应用场景 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [应用场景 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [应用场景 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **群集使用独立实例** | [应用场景 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [应用场景 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [应用场景 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [应用场景 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
