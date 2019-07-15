@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d82c5abb5108c49281763465023cde9fc2cca275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1813499879df65dba847f3296dec71d58da6e1c4
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804575"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732602"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 属性（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47804575"
  显示发生错误时内存转储的存放位置。  
   
  **错误报告**  
- 当设置为“是”时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。 若要更改此值，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击服务器，再单击“属性”，然后单击“**杂项”。服务器设置”** 页。 这些选项将显示在 **“信息报告”** 区域中。  
+ 当设置为“是”  时，如果发生严重错误，Dr. Watson 程序将把相关信息转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，或转发给错误服务器。 有关错误报告的详细信息，请在联机丛书中搜索主题“错误和使用报告设置”。 若要更改此值，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中右键单击服务器，再单击“属性”  ，然后单击“**杂项”。服务器设置”** 页。 这些选项将显示在 **“信息报告”** 区域中。  
   
  **文件版本**  
  显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的版本。  

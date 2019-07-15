@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a710dd9b9cb67d8b0f56407ea3c8d8838a51b35b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: cec08c2709fc07bc912e399e1cdceb464868c194
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582513"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860748"
 ---
 # <a name="create-a-pull-subscription"></a>创建请求订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,9 +121,9 @@ ms.locfileid: "67582513"
   
 2.  在订阅服务器上，执行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** 以及下列参数：  
   
-    -   **@subscriber_type** ? 对于客户端订阅指定“local”，对于服务器订阅指定“global”   。  
+    -   **@subscriber_type** – 对于客户端订阅指定 **local** ，对于服务器订阅指定 **global** 。  
   
-    -   **@subscription_priority** ? 指定订阅的优先级（从“0.00”到“99.99”）   。 只有服务器订阅要求指定优先级。  
+    -   **@subscription_priority** – 指定订阅的优先级（从**0.00** 到 **99.99**）。 只有服务器订阅要求指定优先级。  
   
          有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   

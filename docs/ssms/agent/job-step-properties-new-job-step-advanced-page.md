@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f18312b685adc310af69473966f70ed81202390e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea71d3b9ec4d45cded2c0a0d26c6ca794c768dc0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095797"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686797"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作业步骤属性 - 新建作业步骤（“高级”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "65095797"
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -87,7 +87,7 @@ ms.locfileid: "65095797"
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -112,7 +112,7 @@ ms.locfileid: "65095797"
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  
@@ -144,7 +144,7 @@ ms.locfileid: "65095797"
 将作业步骤的输出记录到 **msdb** 数据库的 **sysjobstepslogs** 表中。  
   
 **“视图”**  
-在作业步骤至少运行一次后，单击“查看”即可在该表中查看输出。  
+在作业步骤至少运行一次后，单击“查看”  即可在该表中查看输出。  
   
 **将输出追加到表中的现有条目**  
 将输出追加到表的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的表内容。  

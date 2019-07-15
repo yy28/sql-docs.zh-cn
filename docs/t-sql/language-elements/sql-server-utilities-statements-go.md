@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981659"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832958"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 实用工具语句 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981659"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  如果基于 ODBC 或 OLE DB API 的应用程序试图执行 GO 命令，会收到语法错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具从不向服务器发送 GO 命令。  
   
- 不要将分号用作 GO 后的语句终止符。  
-  
-## <a name="permissions"></a>权限  
- GO 是一个不需任何权限的实用工具命令。 它可以由任何用户执行。  
-  
-```  
+ 不要将分号用作 GO 后的语句终止符。
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>权限  
+ GO 是一个不需任何权限的实用工具命令。 它可以由任何用户执行。    
   
 ## <a name="examples"></a>示例  
  以下示例创建两个批。 第一个批只包含一条 `USE AdventureWorks2012` 语句，用于设置数据库上下文。 其余的语句使用局部变量。 因此，所有局部变量声明必须组成一个批。 为此，必须在最后一条引用此变量的语句之后才使用 `GO` 命令。  

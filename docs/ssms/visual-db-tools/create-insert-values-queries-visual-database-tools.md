@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5f1fb77b9664de6806a5dd49420267919be28c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f819a9ef1dacf7247c318ff90be5036579e2882d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105892"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687765"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>创建“插入值”查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,14 +54,14 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
   
 1.  将要更新的表添加到“关系图”窗格中。  
   
-2.  在“查询设计器”菜单中，指向“更改类型”，再单击“插入值”。  
+2.  在“查询设计器”  菜单中，指向“更改类型”  ，再单击“插入值”  。  
   
     > [!NOTE]  
     > 如果启动“插入值”查询时“关系图”窗格中显示有多个表，则查询和视图设计器将显示[“选择插入值的目标表”对话框](../../ssms/visual-db-tools/choose-target-table-for-insert-values-dialog-box-visual-database-tools.md)，以提示你输入要更新的表名。  
   
 3.  在“关系图”窗格中，单击要为其提供新值的每个列的复选框。 这些列将显示在“条件”窗格中。 列只有在添加到查询后才能更新。  
   
-4.  在“条件”窗格的“新建值”列中，为列输入新值。 可以输入文字值、列名或表达式。 该值必须与要更新的列的数据类型相匹配（或兼容）。  
+4.  在“条件”窗格的“新建值”  列中，为列输入新值。 可以输入文字值、列名或表达式。 该值必须与要更新的列的数据类型相匹配（或兼容）。  
   
     > [!CAUTION]  
     > 查询和视图设计器无法检查值是否适合要插入的列的长度。 如果所提供的值太长，那么可能会在不提出警告的情况下截断该值。 例如，如果 `name` 列的长度为 20 个字符，但您指定的插入值为 25 个字符，那么可能会截断后 5 个字符。  

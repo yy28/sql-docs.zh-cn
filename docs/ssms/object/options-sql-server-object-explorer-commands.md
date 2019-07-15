@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 20102eeb26166d40bfdb87de49c8576eadc47261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 0d498cc3b60603c66c5032104f4a3cc1c9cc7800
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095714"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683468"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>选项（“SQL Server 对象资源管理器”-“命令”）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "65095714"
   
     在 Visual Database Tools 中打开填充了 200 行数据的表。  
   
-可使用“常规脚本选项”对话框更改要打开的行数。  
+可使用“常规脚本选项”  对话框更改要打开的行数。  
   
 ## <a name="general-scripting-options"></a>常规脚本选项  
 **“选择前 <n> 条审核记录”命令的值**  

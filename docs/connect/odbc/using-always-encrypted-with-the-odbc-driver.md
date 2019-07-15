@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801734"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680084"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 
-对连接启用 Always Encrypted 后，可以使用标准 ODBC API（请参阅 [ODBC 示例代码](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953)或 [ODBC 程序员参考](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)），来检索或修改加密数据列中的数据。 假设你的应用程序具备所需的数据库权限，并且可以访问列主密钥，驱动程序将加密任何面向加密列的查询参数，并将从加密列检索到的数据解密，以透明方式向应用程序呈现，就如同列未加密一般。
+一旦在连接上启用始终加密，可以使用标准 ODBC Api。 ODBC Api 可以检索或修改加密的数据库列中的数据。 以下文档项可能对此有帮助：
+
+- [ODBC 示例代码](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)
+
+你的应用程序必须具有所需的数据库权限，并且必须能够访问列主密钥。 然后，该驱动程序加密面向加密的列的任何查询参数。 该驱动程序还解密从加密列检索到的数据。 该驱动程序执行所有此加密和解密而无需任何帮助从你的源代码。 到你的程序，就像未加密的列。
 
 如果未启用 Always Encrypted，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 但是，驱动程序不会尝试进行任何解密，并且应用程序将收到二进制加密数据（字节数组形式）。
 

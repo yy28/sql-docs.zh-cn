@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7cebe288fe7400c671bfb45833e5a7c6399c192f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129437"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729393"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
 </Options>  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须作为交互用户、本地用户或域用户帐户运行管理工具。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。  
   
  有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  

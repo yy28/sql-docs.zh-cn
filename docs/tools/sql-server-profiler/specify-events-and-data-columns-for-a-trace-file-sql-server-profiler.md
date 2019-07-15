@@ -14,15 +14,15 @@ helpviewer_keywords:
 - removing events
 - traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d739cc236f25ef4a8aa30c9d778e94408b939a8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42afddebcea67362d1113da48979fed7cbe399d8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713475"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729783"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定跟踪文件的事件和数据列 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "47713475"
 4.  若要在跟踪中包括事件，请选中每个事件类的 **“事件”** 列中的复选框，或者选中对应于事件的数据列。  
   
 > [!IMPORTANT]  
->  如果跟踪要与系统监视器或性能监视器数据关联，则必须在跟踪中包括“开始时间”和“结束时间”数据列。  
+>  如果跟踪要与系统监视器或性能监视器数据关联，则必须在跟踪中包括“开始时间”  和“结束时间”  数据列。  
   
  如果已选中对应于事件的复选框，在包括事件类时，跟踪中也将包括关联的数据列。 如果选中某个特定列的复选框，跟踪中将只包括该列。  
   
-1.  若要从某个事件类删除数据列，请从事件类行中的数据列清除复选框，或右键单击列标题并选择“取消选择列”选项。  
+1.  若要从某个事件类删除数据列，请从事件类行中的数据列清除复选框，或右键单击列标题并选择“取消选择列”  选项。  
   
 2.  或者，对跟踪应用筛选器。 有关详细信息，请参阅[在跟踪中筛选事件 (SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   

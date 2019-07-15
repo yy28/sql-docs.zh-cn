@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25625a5340707efdf21589a735a177e0be667bd1
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 0ce840b73741bcb36868ab8d80cbb3113ffdd510
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586417"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860529"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

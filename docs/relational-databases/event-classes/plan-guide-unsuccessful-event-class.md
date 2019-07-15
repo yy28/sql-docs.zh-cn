@@ -13,15 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b5f3e49cbc458737dc0029e5678483d5e969cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0e1b1dc01dc3daee4262e714a28b10fbf8927a2
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694730"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833599"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
   Plan Guide Unsuccessful 事件类指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法为包含计划指南的查询或批处理生成执行计划。 相反，计划将在不使用计划指南的情况下进行编译。 当满足下列条件时，事件将激发：  
   
 -   计划指南定义中的批处理/模块与正在执行的批处理相匹配。  

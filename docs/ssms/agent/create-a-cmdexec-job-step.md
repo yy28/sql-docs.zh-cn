@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CmdExec jobs
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 452e88dfc3ff2bc1353013f2a7a140b68db5121f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35f2a4382d70aebf6c179bcc760b0914fd48e590
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698165"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688627"
 ---
 # <a name="create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51698165"
   
 -   **开始之前：**  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要创建 CmdExec 作业步骤，可使用：**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51698165"
 默认情况下，只有 **sysadmin** 固定服务器角色的成员可以创建 CmdExec 作业步骤。 除非 **sysadmin** 用户创建一个代理帐户，否则这些作业步骤将在 SQL Server 代理服务帐户的上下文中运行。 如果不属于 **sysadmin** 角色成员的用户具有访问 CmdExec 代理帐户的权限，则也可以创建 CmdExec 作业步骤。  
   
 #### <a name="Permissions"></a>Permissions  
-有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
+有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
@@ -57,13 +57,13 @@ ms.locfileid: "51698165"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，创建一个新作业或右键单击一个现有作业，再单击 **“属性”**。  
+2.  展开 **“SQL Server 代理”** ，创建一个新作业或右键单击一个现有作业，再单击 **“属性”** 。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
-5.  在 **“类型”** 列表中，选择 **“操作系统(CmdExec)”**。  
+5.  在 **“类型”** 列表中，选择 **“操作系统(CmdExec)”** 。  
   
 6.  在 **“运行身份”** 列表中，选择具有作业将使用的凭据的代理帐户。 默认情况下，CmdExec 作业步骤在 SQL Server 代理服务帐户的上下文中运行。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "51698165"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates a job step that uses CmdExec  
@@ -91,7 +91,7 @@ ms.locfileid: "51698165"
         @job_name = N'Weekly Sales Data Backup',  
         @step_name = N'Set database to read only',  
         @subsystem = N'CMDEXEC',  
-        @command = C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
+        @command = 'C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
         @retry_attempts = 5,  
         @retry_interval = 5 ;  
     GO  

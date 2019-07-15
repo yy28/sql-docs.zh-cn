@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 85e7e9cbc454785379fac029cbe970a492e0fffd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2da05501cca599f3aa22e083d07424f54715cca9
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760095"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731276"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 属性的协议（“证书”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47760095"
  通过它可以访问有关证书的其他详细信息。 只有在 **“证书”** 框中选择某个证书后，此选项才可用。 有关证书详细信息的其他信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 文档。  
   
  **Clear**  
- 从“证书”框中删除所选证书。  
+ 从“证书”框中删除所选证书。   
   
  **证书**  
  由安全提供程序确定的证书名称。 选择某个证书可以在属性网格中查看详细信息。  

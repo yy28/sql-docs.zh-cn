@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1bf151afae55d96323bb387f38e7f61553744e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c0ba0792ef3789ca3ca19445e3184155b21d48a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095561"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681232"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,21 +55,21 @@ ms.locfileid: "65095561"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，右键单击 **“作业”**，然后单击 **“管理计划”**。  
+2.  展开 **“SQL Server 代理”** ，右键单击 **“作业”** ，然后单击 **“管理计划”** 。  
   
-3.  在 **“管理计划”** 对话框中，单击 **“新建”**。  
+3.  在 **“管理计划”** 对话框中，单击 **“新建”** 。  
   
 4.  在 **“名称”** 框中，键入新计划的名称。  
   
 5.  如果不希望计划在创建后立即生效，请清除 **“启用”** 复选框。  
   
-6.  对于 **“计划类型”**，请选择下列操作之一：  
+6.  对于 **“计划类型”** ，请选择下列操作之一：  
   
-    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”**。  
+    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”** 。  
   
-    -   如果希望反复运行计划，请单击 **“重复执行”**。 若要设置重复执行的计划，请完成对话框上的 **“频率”**、 **“每天频率”** 和 **“持续时间”** 组。  
+    -   如果希望反复运行计划，请单击 **“重复执行”** 。 若要设置重复执行的计划，请完成对话框上的 **“频率”** 、 **“每天频率”** 和 **“持续时间”** 组。  
   
-    -   如果希望仅运行一次计划，请单击 **“执行一次”**。 若要设置 **“执行一次”** 计划，请完成对话框上的 **“执行一次”** 组。  
+    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置 **“执行一次”** 计划，请完成对话框上的 **“执行一次”** 组。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   
@@ -77,9 +77,9 @@ ms.locfileid: "65095561"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates a schedule named RunOnce.   

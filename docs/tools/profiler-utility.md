@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f1fa1e72ab814f6ff00d39cd72e6ed98cb57fb6
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 06ee31ac87f8bbdc8177ea7899b59a6f0e576365
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291294"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731572"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ profiler
 |ss|两位数秒数|  
   
 > [!NOTE]  
->  仅当在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中启用了“使用区域设置来显示日期和时间值”选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
+>  仅当在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中启用了“使用区域设置来显示日期和时间值”  选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
   
  **/R**  
  启用跟踪文件滚动。  

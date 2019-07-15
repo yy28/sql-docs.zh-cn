@@ -11,15 +11,15 @@ helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7410a9b202209ea1f91e81c444e9ec090ba19589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81304ea56165951cd1c57afe6676f7a749a3c9bb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713405"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731382"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>从正在运行的跟踪中派生模板 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47713405"
   
 1.  必要时，可切换到包含跟踪的窗口。  
   
-2.  在 **“文件”** 菜单上，指向 **“另存为”**，再单击 **“跟踪模板”**。  
+2.  在 **“文件”** 菜单上，指向 **“另存为”** ，再单击 **“跟踪模板”** 。  
   
-3.  键入名称或从列表中选择一个名称。 单击“确定” 。  
+3.  键入名称或从列表中选择一个名称。 单击“确定”  。  
   
 > [!NOTE]  
 >  如果选择现有模板文件，系统将会询问您是否希望覆盖现有文件。 可以只选择用户定义的模板。 无法覆盖预定义的系统跟踪模板。  

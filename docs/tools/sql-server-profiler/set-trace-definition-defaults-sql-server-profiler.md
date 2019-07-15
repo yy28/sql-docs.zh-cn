@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7d67c3190374cd5fd40ef37db5f08151e1ab6c2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b77992fd00105d605c1921ce63a9b96e5a0afb8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681135"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729836"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>设置跟踪定义默认设置 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,17 +26,17 @@ ms.locfileid: "47681135"
   
 ### <a name="to-set-trace-definition-defaults"></a>设置跟踪定义默认值  
   
-1.  在“文件”菜单上，选择“模板”，然后单击“编辑模板”。  
+1.  在“文件”  菜单上，选择“模板”  ，然后单击“编辑模板”  。  
   
-2.  在“跟踪模板属性”对话框的“常规”选项卡上，从“选择服务器类型”列表中选择一个服务器类型。  
+2.  在“跟踪模板属性”  对话框的“常规”  选项卡上，从“选择服务器类型”  列表中选择一个服务器类型。  
   
-3.  在“选择模板名称”列表中，选择想要用作跟踪定义默认设置的模板的名称。  
+3.  在“选择模板名称”  列表中，选择想要用作跟踪定义默认设置的模板的名称。  
   
-4.  选择 **“用作所选服务器类型的默认模板”**。  
+4.  选择 **“用作所选服务器类型的默认模板”** 。  
   
-5.  如有必要，请单击“事件选择”选项卡修改模板。  
+5.  如有必要，请单击“事件选择”  选项卡修改模板。  
   
-6.  单击 **“保存”**。  
+6.  单击 **“保存”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler 模板](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   

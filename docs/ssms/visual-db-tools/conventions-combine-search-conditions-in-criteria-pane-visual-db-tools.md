@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 040e07943bf90a0cae7a9afa262bb384631c3e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: abee94fda58ce46f9c9e34906928003d7e6293d5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65093334"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686185"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

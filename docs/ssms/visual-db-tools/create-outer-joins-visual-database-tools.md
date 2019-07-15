@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 07f168c018c33d5078dd47b0f8a38d07ddfdcdf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3b6ea4040b7f6126cc5b8582eefa332d28a8f1b7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095656"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682486"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>创建外部联接 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "65095656"
   
 1.  自动或手动创建外部联接。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) 或[手动联接表 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)。  
   
-2.  在“关系图”窗格中选择联接线，然后在“查询设计器”菜单中选择“选择 <tablename> 中的全部行”，选择包含要包含其中更多行的表的命令。  
+2.  在“关系图”窗格中选择联接线，然后在“查询设计器”  菜单中选择“选择 <tablename> 中的全部行”  ，选择包含要包含其中更多行的表的命令。  
   
     -   选择第一个表可以创建左外部联接。  
   

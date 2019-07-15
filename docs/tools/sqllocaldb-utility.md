@@ -12,19 +12,19 @@ helpviewer_keywords:
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bf71626fcec01b1140f85a67a03a69dc1a9736e8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728133"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SqlLocalDB 实用工具可用于创建 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] LocalDB 实例。 SqlLocalDB 实用工具 (SqlLocalDB.exe) 是一款简易命令行工具，可方便用户和开发人员创建和管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] LocalDB 实例。 有关如何使用 **LocalDB**的信息，请参阅 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
+  SqlLocalDB  实用工具可用于创建 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] LocalDB  实例。 SqlLocalDB  实用工具 (SqlLocalDB.exe) 是一款简易命令行工具，可方便用户和开发人员创建和管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] LocalDB  实例。 有关如何使用 **LocalDB**的信息，请参阅 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,8 +45,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 SqlLocalDB 使用由 \<instance-version> 参数指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二进制文件的版本。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为 **SqlLocalDB** 实用工具的版本。 添加 -s 可启动新的 LocalDB 实例。  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
+ 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 SqlLocalDB 使用由 \<instance-version> 参数指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二进制文件的版本   。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为 **SqlLocalDB** 实用工具的版本。 添加 -s  可启动新的 LocalDB  实例。  
   
  [ **共享** | **h** ]  
  使用指定的共享名称共享指定的 **LocalDB** 私有实例。 如果省略该用户 SID 或帐户名称，则默认为当前用户。  
@@ -57,16 +57,16 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<instance-name>*  
  删除指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。  
   
- [ **start** | **s** ] "*\<instance-name>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  启动指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 成功后，该语句返回 **LocalDB**的命名管道地址。  
   
- [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
- 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 添加 -i 可请求使用 NOWAIT 选项关闭实例。 添加 -k 可终止实例进程，而无需联系它。  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
+ 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 添加 -i  可请求使用 NOWAIT  选项关闭实例。 添加 -k  可终止实例进程，而无需联系它。  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
  列出当前用户拥有的所有 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 实例。  
   
- \<instance-name> 返回指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]LocalDB 实例的名称、版本、状态（正在运行或已停止）、上次启动时间，以及 LocalDB 的本地管道名称。  
+ \<instance-name> 返回指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]LocalDB 实例的名称、版本、状态（正在运行或已停止）、上次启动时间，以及 LocalDB 的本地管道名称    。  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** 为当前用户启用针对 **SqlLocalDB** API 调用的跟踪。 **trace off** 禁用跟踪。  
@@ -74,7 +74,7 @@ SqlLocalDB.exe
  **-?**  
  返回每个 **SqlLocalDB** 选项的简短说明。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  *实例名称* 参数必须遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符规则，或者必须将该参数放入双引号。  
   
  执行不带参数的 SqlLocalDB 将返回帮助文档。  

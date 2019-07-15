@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581231"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860503"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 

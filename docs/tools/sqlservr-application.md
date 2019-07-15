@@ -20,15 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 93a4572b44cf2be6fa8f1c0912fa7e8178e6c9a7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656907"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733356"
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  以最小配置启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。  
   
  **-e** *error_log_path*  
- 指示错误日志文件的完全限定路径。 如果不指定路径，则默认实例的默认位置是 \<驱动器>:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog，命名实例的默认位置是 \<驱动器>:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog。 在 **-e** 和 *error_log_path*之间没有空格。  
+ 指示错误日志文件的完全限定路径。 如果不指定路径，则默认实例的默认位置是 \<驱动器>:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog，命名实例的默认位置是 \<驱动器>:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog   。 在 **-e** 和 *error_log_path*之间没有空格。  
   
  **-l** *master_log_path*  
  指示 **master** 数据库事务日志文件的完全限定路径。 **-l** 与 *master_log_path*之间没有空格。  
@@ -75,10 +75,10 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  用于启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例。 如果不设置 **-s** 参数，则尝试启动默认实例。 必须先在命令提示符处切换到实例的相应 BINN 目录，然后才能启动 **sqlservr.exe**。 例如，如果 Instance1 为其二进制文件使用了 \mssql$Instance1，则用户必须位于 \mssql$Instance1\binn 目录中才能启动 **sqlservr.exe -s instance1**。 如果用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **选项启动** 实例，则最好也使用 **-e** 选项，否者将不会记录 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。  
   
  **-T** *trace#*  
- 指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#*) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
+ 指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#* ) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
 > [!IMPORTANT]  
->  指定跟踪标志时，请使用 **-T** 来传递跟踪标志号。 **接受小写的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 通常用于设置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持工程师所需的其他内部跟踪标志。  
+>  指定跟踪标志时，请使用 **-T** 来传递跟踪标志号。 **接受小写的 t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 通常用于设置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持工程师所需的其他内部跟踪标志。  
   
  **-v**  
  显示服务器的版本号。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a469266b493e1da741738984c1f99b2c1f755699
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 4441e281c207d94a062da45967a1724221977a56
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095688"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683303"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "65095688"
   
 2.  将此报表文件复制到您在数据库服务器上为自定义报表创建的文件夹中。  
   
-3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击对象资源管理器中的节点，指向“报表”，再单击“自定义报表”。 在“打开文件”对话框中，找到自定义报表文件夹并选择此报表文件，再单击“打开”。  
+3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击对象资源管理器中的节点，指向“报表”  ，再单击“自定义报表”。 在“打开文件”  对话框中，找到自定义报表文件夹并选择此报表文件，再单击“打开”  。  
   
-    第一次从对象资源管理器节点打开新的自定义报表时，该报表将添加到该节点的快捷菜单上“自定义报表”下最近使用的文件列表中。 第一次打开标准报表时，该报表也将出现在“自定义报表”下最近使用的文件列表中。 如果某个自定义报表文件已删除，则下一次选择该项时，系统将提示您从最近使用的文件列表中删除该项。  
+    第一次从对象资源管理器节点打开新的自定义报表时，该报表将添加到该节点的快捷菜单上“自定义报表”  下最近使用的文件列表中。 第一次打开标准报表时，该报表也将出现在“自定义报表”  下最近使用的文件列表中。 如果某个自定义报表文件已删除，则下一次选择该项时，系统将提示您从最近使用的文件列表中删除该项。  
   
-    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”菜单上单击“选项”，展开“环境”文件夹，再单击“常规”。  
+    1.  若要更改最近使用的文件列表中所显示的文件个数，请在“工具”  菜单上单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。  
   
-    2.  调整“显示最近使用列表中的文件”的数量。  
+    2.  调整“显示最近使用列表中的文件”  的数量。  
   
 ## <a name="custom-report-code-sample"></a>自定义报表代码示例  
 使用以下代码创建的报表将使用与对象资源管理器节点关联的参数。  

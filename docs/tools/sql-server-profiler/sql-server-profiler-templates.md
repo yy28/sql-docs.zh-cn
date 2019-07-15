@@ -15,15 +15,15 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c69319c2962dc8158e1c2565faee65e982812f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a3560f0f70b6fe7b74f4072ce9c719c9241f703
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689525"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729744"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47689525"
 ## <a name="default-template"></a>默认模板  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 自动指定 **Standard** 模板作为应用于任何新跟踪的默认模板。 但是，您可以将默认模板更改为其他任何预定义模板或用户定义模板。 若要更改默认模板，请在使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡创建或编辑模板时，选中 **“用作所选服务器类型的默认模板”** 复选框。  
   
- 若要导航到 **“跟踪模板属性”** 对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单中，选择 **“模板”**，然后单击 **“新建模板”** 或 **“编辑模板”**。  
+ 若要导航到 **“跟踪模板属性”** 对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单中，选择 **“模板”** ，然后单击 **“新建模板”** 或 **“编辑模板”** 。  
   
 > [!NOTE]  
 >  默认模板针对给定的服务器类型。 更改一个服务器类型的默认模板不会影响其他任何服务器类型的默认模板。 有关设置特定服务器的默认模板的详细信息，请参阅[设置跟踪定义默认值 (SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)。  

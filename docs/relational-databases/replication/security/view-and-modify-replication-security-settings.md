@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 873604d3a27d4f3f01eb501f76a39fd008248cdd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: aa4ed7aa2eaf3d10ec2b69860b71b8b612cc9ff8
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584812"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860622"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>查看和修改复制安全设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -220,7 +220,7 @@ ms.locfileid: "67584812"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>更改立即更新请求订阅的安全设置  
   
-1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，单击“发布服务器连接”行，然后单击行中的属性 (…) 按钮。     
+1.  在订阅服务器的“订阅属性 - \<订阅>”对话框中，单击“发布服务器连接”行，然后单击行中的属性 ( **…** ) 按钮。    
   
 2.  在 **“输入连接信息”** 对话框中，请选择下列选项之一：  
   

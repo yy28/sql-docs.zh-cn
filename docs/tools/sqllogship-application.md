@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728081"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|输出所有调试消息和跟踪消息。|  
   
  **-logintimeout** _timeout_value_  
- 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。默认值为 15 秒。 *timeout_value* 为 **int**_._  
+ 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。默认值为 15 秒。 *timeout_value* 为 **int** _._  
   
  **-querytimeout** _timeout_value_  
- 指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 *timeout_value* 为 **int**_._  
+ 指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 *timeout_value* 为 **int** _._  
   
 ## <a name="remarks"></a>Remarks  
  我们建议您尽可能使用备份、复制和还原作业来执行备份、复制和还原操作。 若要从批处理操作或其他应用程序启动这些作业，请调用 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 存储过程。  
@@ -76,10 +76,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  **sqllogship** 应用程序 SqlLogShip.exe 安装在 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 目录中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy**还是 **-restore** 选项。  
   
-|选项|目录访问权限|Permissions|  
+|选项|目录访问权限|权限|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要对备份目录的读/写访问权限。|需要与 BACKUP 语句相同的权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)。|  
 |**-copy**|需要对备份目录的读取访问权限以及对复制目录的写入访问权限。|需要与 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 存储过程相同的权限。|  

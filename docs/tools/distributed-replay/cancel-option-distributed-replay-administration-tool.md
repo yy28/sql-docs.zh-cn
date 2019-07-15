@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34e0cbc518044d5bc3a18b754d8146af8fca1462
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a03a7cc6182d2196195b73a3a8010cbbcda60920
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732179"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Cancel 选项（分布式重播管理工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ dreplay cancel [-m controller] [-q]
 dreplay cancel -m localhost -q  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须作为交互用户、本地用户或域用户帐户运行管理工具。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。  
   
  有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: edb0ea718666087552d4bc0061dd79da0e7b7136
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 9a8fcab75cfdbb8331f286f46f198288ac7a6d42
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728098"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令行选项（分布式重播实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Usage:
   
  RPC 将作为 RPC 而非语言事件进行重播。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须作为交互用户、本地用户或域用户帐户运行管理工具。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。  
   
  有关详细信息，请参阅 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)。  

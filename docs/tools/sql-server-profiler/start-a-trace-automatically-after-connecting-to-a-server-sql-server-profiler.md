@@ -12,15 +12,15 @@ helpviewer_keywords:
 - traces [SQL Server], starting
 - starting trace automatically
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96003d947f9ab3b466f19b01f7b016e3a256c45d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86e76b5186465eadf95728bf3de4edbb4554288f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751180"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729716"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>连接到服务器后自动启动跟踪 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,12 +28,12 @@ ms.locfileid: "47751180"
   
 ### <a name="to-start-a-trace-automatically-after-connecting-to-a-server-with-sql-server-profiler"></a>在使用 SQL Server Profiler 连接到服务器后自动启动跟踪  
   
-1.  在“工具”  菜单上，单击“选项” 。  
+1.  在“工具”  菜单上，单击“选项”  。  
   
 2.  选择 **“进行连接后立即启动跟踪”** 复选框。  
   
 > [!NOTE]  
->  如果选择“建立连接后立即开始跟踪”，则不会显示“跟踪属性”对话框，而是开始跟踪。 若要编辑跟踪属性，必须先关闭此设置。  
+>  如果选择“建立连接后立即开始跟踪”  ，则不会显示“跟踪属性”  对话框，而是开始跟踪。 若要编辑跟踪属性，必须先关闭此设置。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  

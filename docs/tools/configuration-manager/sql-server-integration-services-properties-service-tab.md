@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7f6d4f710d4feb56ae839bafc640b6e598a6e9f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e02a31b3551f9da5f5839620f83138b3df320bd4
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519912"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733129"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,6 +55,6 @@ ms.locfileid: "52519912"
 -   已禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 **“...”** 指示状态更改被挂起。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
   

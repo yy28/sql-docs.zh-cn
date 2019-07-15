@@ -11,16 +11,16 @@ helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
-ms.translationtype: HT
+ms.openlocfilehash: 1d5d24c9a1fa4527ca199d649318c0c927a9c821
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657891"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732053"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,9 +72,9 @@ sqlps
  指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从*script_block* 或其他 **script_block** 实用工具会话调用 **script_block** 实用工具时，才能指定 **script_block** 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
- 指定包含要运行的 PowerShell 命令的字符串。 使用 **"&{**_command_**}"** 格式。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
+ 指定包含要运行的 PowerShell 命令的字符串。 使用 **"&{** _command_ **}"** 格式。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  显示 **sqlps** 实用工具选项的语法摘要。  
   
 ## <a name="remarks"></a>Remarks  
@@ -98,7 +98,7 @@ sqlps
   
 -   使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序路径可以浏览 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。  
   
- 默认情况下， **sqlps** 实用工具在运行时将脚本执行策略设置为“受限” 。 这样可以防止运行任何 PowerShell 脚本。 可以使用 **Set-ExecutionPolicy** cmdlet 来启用运行签名的脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10))（运行 Windows PowerShell 脚本）。  
+ 默认情况下， **sqlps** 实用工具在运行时将脚本执行策略设置为“受限”  。 这样可以防止运行任何 PowerShell 脚本。 可以使用 **Set-ExecutionPolicy** cmdlet 来启用运行签名的脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10))（运行 Windows PowerShell 脚本）。  
   
  在 **和** 中，此版本的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 实用工具已作为 Windows PowerShell 1.0 微型外壳程序实现。 微型外壳程序具有某些限制，例如不允许用户加载不是由微型外壳程序所加载的管理单元。 这些限制并不适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本及更高的版本的实用工具，这些版本已更改为使用 **sqlps** 模块。  
   

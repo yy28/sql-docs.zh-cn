@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f98dfe69207b90c4564277ad9dc49e0752d087f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 898633d38c0cdc2c3e486a5371a5ea1a1e8d5c51
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095594"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67684850"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,11 +59,11 @@ ms.locfileid: "65095594"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，创建一个新作业或右键单击一个现有作业，再单击 **“属性”**。 有关创建作业的详细信息，请参阅 [创建作业](../../ssms/agent/create-jobs.md)。  
+2.  展开 **“SQL Server 代理”** ，创建一个新作业或右键单击一个现有作业，再单击 **“属性”** 。 有关创建作业的详细信息，请参阅 [创建作业](../../ssms/agent/create-jobs.md)。  
   
-3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”**。  
+3.  在 **“作业属性”** 对话框中，单击 **“步骤”** 页，再单击 **“新建”** 。  
   
-4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”**。  
+4.  在 **“新建作业步骤”** 对话框中，键入作业的 **“步骤名称”** 。  
   
 5.  在 **“类型”** 列表中单击 **PowerShell**。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "65095594"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates a PowerShell job step that finds the processes

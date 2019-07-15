@@ -16,16 +16,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5a8612dc30a39a033d32daac158799fb3868ae65
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128507"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733532"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,8 +81,8 @@ tablediff
  [ **-?** ]  
  返回支持参数的列表。  
   
- **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
- 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _命名实例的_**\\**_source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **-sourceserver** _source_server_name_[ **\\** _instance\_name_]  
+ 源服务器的名称。 指定 *默认实例的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _命名实例的_ **\\** _source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-sourcedatabase** _source_database_  
  源数据库的名称。  
@@ -105,8 +105,8 @@ tablediff
  **-sourcelocked**  
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定源表。  
   
- **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
- 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _命名实例的_**\\**_destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
+ 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _命名实例的_ **\\** _destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **-destinationdatabase** _subscription_database_  
  目标数据库的名称。  
@@ -130,7 +130,7 @@ tablediff
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定目标表。  
   
  **-b** _large_object_bytes_  
- 大型对象数据类型列中要比较的字节数，这些数据类型包括：**text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** 和 **varbinary(max)**。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
+ 大型对象数据类型列中要比较的字节数，这些数据类型包括：**text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** 和 **varbinary(max)** 。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
   
  **-bf**  _number_of_statements_  
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 选项时要写入到当前 **脚本文件中的** 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements*时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
@@ -174,7 +174,7 @@ tablediff
 |**2**|存在表差异|  
   
 ## <a name="remarks"></a>Remarks  
- tablediff 实用工具不能用于非 -[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
+ tablediff  实用工具不能用于非 -[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  不支持包含 **sql_variant** 数据类型列的表。  
   
@@ -215,7 +215,7 @@ tablediff
   
 -   **图像**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要比较表，您必须有要比较的表对象的 SELECT ALL 权限。  
   
  若要使用 **-et** 选项，必须是 db_owner 固定数据库角色的成员，或者在订阅数据库中至少拥有 CREATE TABLE 权限，并且对目标服务器中的目标所有者架构拥有 ALTER 权限。  

@@ -1,23 +1,22 @@
 ---
 title: 在 PolyBase 中下推计算 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 24320f6f60d336df54093dd761d2b8bc872e3cc9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 4cfaa18c314358c290fb06cfad23527a42e0369b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211456"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731139"
 ---
 # <a name="pushdown-computations-in-polybase"></a>在 PolyBase 中下推计算
-
 
 ## <a name="dmv"></a>DMV
 
@@ -66,7 +65,7 @@ SQL Server 允许以下谓词下推的基本表达式和运算符。
 
 运算符 BETWEEN、NOT、IN 和 LIKE 可能能够下推。 实际具体行为取决于查询优化器如何将运算符表达式重写为一系列使用基本关系运算符的语句。
 
-此示例中的查询有多个可以向下推送到 Hadoop 的谓词。 SQL Server 能够将 map-reduce 作业推送到 Hadoop，以便执行谓词 `customer.account_balance <= 200000`。 表达式 `BETWEEN 92656 and 92677` 也是由可以推送到 Hadoop 的二进制和逻辑运算符组成。 `customer.account_balance and customer.zipcode` 中的逻辑 AND 是最终表达式。
+此示例中的查询有多个可以向下推送到 Hadoop 的谓词。 SQL Server 能够将 map-reduce 作业推送到 Hadoop，以便执行谓词 `customer.account_balance <= 200000`。 表达式 `BETWEEN 92656 and 92677` 也是由可以推送到 Hadoop 的二进制和逻辑运算符组成。 `customer.account_balance and customer.zipcode` 中的逻辑 AND  是最终表达式。
 
 鉴于这种谓词组合，map-reduce 作业可以执行所有的 WHERE 子句。 只有符合 SELECT 条件的数据，才会复制回 SQL Server PDW。
 

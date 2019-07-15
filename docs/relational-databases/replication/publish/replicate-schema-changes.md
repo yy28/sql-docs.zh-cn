@@ -14,12 +14,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16aafa04c2c5c8041384c04a035b984914748c18
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a436eb86fdaad06e97da94e821d50437e6d938ee
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582924"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860575"
 ---
 # <a name="replicate-schema-changes"></a>复制架构更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "67582924"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   ALTER TABLE... DROP COLUMN 语句将始终复制到所有其订阅包含要被删除的列的订阅服务器，即使禁用对架构更改的复制也是如此。  
+-   ALTER TABLE …DROP COLUMN 语句将始终复制到所有其订阅包含要被删除的列的订阅服务器，即使禁用对架构更改的复制也是如此。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。  有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  

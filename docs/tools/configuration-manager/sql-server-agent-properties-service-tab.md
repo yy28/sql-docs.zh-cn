@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: dd5919844de2b880d3d707e19a1dd212d5da1803
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a567a35862c5b7fbfa39e3eda65ea89a24532b66
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538265"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733264"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server 代理属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,6 +55,6 @@ ms.locfileid: "52538265"
 -   已禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
   

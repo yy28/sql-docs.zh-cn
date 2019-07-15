@@ -12,15 +12,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b4273d1af6f4f740c7b6527359957abf447cc2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afdbe68aa8da7fbc6a6aa812d5e89b7ed089c158
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765395"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729945"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>在跟踪中筛选事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "47765395"
   
 2.  单击 **“列筛选器”.**  
   
-     此时将显示“编辑筛选器”对话框。 “编辑筛选器”对话框包含一个比较运算符列表，可以使用这些运算符在跟踪中筛选事件。  
+     此时将显示“编辑筛选器”  对话框。 “编辑筛选器”对话框包含一个比较运算符列表，可以使用这些运算符在跟踪中筛选事件  。  
   
 3.  若要应用筛选器，请单击比较运算符，再键入要用于该筛选器的值。  
   
-4.  单击“确定” 。  
+4.  单击“确定”  。  
   
  **注意事项：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47765395"
   
          -或-  
   
-    -   在 **“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 要查看“常规选项”对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“工具”菜单上单击“选项”。  
+    -   在 **“常规选项”** 对话框中选中了 **“使用区域设置来显示日期和时间值”** 。 要查看“常规选项”对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“工具”菜单上单击“选项”    。  
   
          -以及-  
   

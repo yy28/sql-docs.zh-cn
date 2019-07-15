@@ -27,15 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100942"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728107"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sqldiag
   
  1 = 使用 NTFS 压缩  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  按照以下格式指定开始收集诊断数据的日期和时间：  
   
  YYYYMMDD_HH:MM:SS  
@@ -140,7 +140,7 @@ sqldiag
   
  请注意， **SQLdiag** 使用运行实用工具的计算机上的本地时间。  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  按照以下格式指定停止收集诊断数据的日期和时间：  
   
  YYYYMMDD_HH:MM:SS  
@@ -296,7 +296,7 @@ SQLDIAG STOP /A Instance1
 >  使用 **SQLDiag STOP** 或 **SQLDIAG STOP_ABORT** 以停止 **SQLdiag** 服务。 请不要使用 Windows 服务控制台停止 **SQLdiag** 或其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务。  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>自动启动和停止 SQLdiag  
- 若要在指定时间自动启动和停止诊断数据收集，请使用 /Bstart\_time 和 /Estop\_time 参数（使用 24 小时制）。 例如，如果要解决一个总是在 02:00:00 左右出现的问题，可以配置 **SQLdiag** ，使其自动在 01:00 开始收集诊断数据，并自动在 03:00:00 停止收集。 可以使用 **/B** 和 **/E** 参数指定开始和停止时间。 请使用 24 小时制来指定确切的开始和停止日期和时间，格式为 YYYYMMDD_HH:MM:SS。 若要指定一个相对的开始或停止时间，请在开始和停止时间之前添加前缀 **+** ，并省略日期部分 (YYYYMMDD_)，如下例所示。在下例中，可使 **SQLdiag** 在等待 1 小时后开始收集信息，然后经过 3 小时的信息收集后便停止并退出：  
+ 若要在指定时间自动启动和停止诊断数据收集，请使用 /Bstart\_time 和 /Estop\_time 参数（使用 24 小时制）     。 例如，如果要解决一个总是在 02:00:00 左右出现的问题，可以配置 **SQLdiag** ，使其自动在 01:00 开始收集诊断数据，并自动在 03:00:00 停止收集。 可以使用 **/B** 和 **/E** 参数指定开始和停止时间。 请使用 24 小时制来指定确切的开始和停止日期和时间，格式为 YYYYMMDD_HH:MM:SS。 若要指定一个相对的开始或停止时间，请在开始和停止时间之前添加前缀 **+** ，并省略日期部分 (YYYYMMDD_)，如下例所示。在下例中，可使 **SQLdiag** 在等待 1 小时后开始收集信息，然后经过 3 小时的信息收集后便停止并退出：  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -357,12 +357,12 @@ SQLDIAG START /A Instance1
  不支持暂停 **SQLdiag** 服务。  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>运行多个 SQLdiag 实例  
- 通过在命令行中指定 /ASQLdiag\_application\_name，可以在同一台计算机上运行多个 SQLdiag 实例。 这对于同时从同一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例收集不同诊断信息集的操作会很有用。 例如，可以将 **SQLdiag** 命名实例配置为连续执行轻型数据收集。 然后，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中出现特定问题，则可以运行默认 **SQLdiag** 实例以收集该问题的诊断信息，也可以收集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客户支持服务部门要求你收集用以诊断问题的诊断信息集。  
+ 通过在命令行中指定 /ASQLdiag\_application\_name，可以在同一台计算机上运行多个 SQLdiag 实例    。 这对于同时从同一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例收集不同诊断信息集的操作会很有用。 例如，可以将 **SQLdiag** 命名实例配置为连续执行轻型数据收集。 然后，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中出现特定问题，则可以运行默认 **SQLdiag** 实例以收集该问题的诊断信息，也可以收集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客户支持服务部门要求你收集用以诊断问题的诊断信息集。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>从群集 SQL Server 实例中收集诊断数据  
- **SQLdiag** 支持从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断数据。 要从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请确保已在配置文件 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定了 "."，并且命令行中未指定 /G 参数。 默认情况下，将在配置文件中为 **name** 属性指定 **"."** ，并禁用 **/G** 参数。 通常，在从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息时，无需编辑配置文件或更改命令行参数。  
+ **SQLdiag** 支持从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断数据。 要从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请确保已在配置文件 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定了 "."，并且命令行中未指定 /G 参数     。 默认情况下，将在配置文件中为 **name** 属性指定 **"."** ，并禁用 **/G** 参数。 通常，在从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息时，无需编辑配置文件或更改命令行参数。  
   
- 如果将 **"."** 指定为计算机名称，则 **SQLdiag** 会检测到它正在群集中运行，同时从该群集中安装的所有虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中检索诊断信息。 如果只希望从计算机上运行的其中一个虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请在 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定该虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 如果将 **"."** 指定为计算机名称，则 **SQLdiag** 会检测到它正在群集中运行，同时从该群集中安装的所有虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中检索诊断信息。 如果只希望从计算机上运行的其中一个虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请在 SQLDiag.Xml 中为 \<Machine> 元素的 name 属性指定该虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]   。  
   
 > [!NOTE]  
 >  若要从群集 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 实例中收集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 跟踪信息，必须在群集中启用管理共享 (ADMIN$)。  

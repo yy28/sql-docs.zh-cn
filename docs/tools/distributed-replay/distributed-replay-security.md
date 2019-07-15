@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4fab6179453ccd21623a2da5ea0157d235eea40
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677746"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732114"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "51677746"
   
 1.  请根据所用操作系统执行以下两项操作之一：  
   
-    -   单击“开始”，在“搜索”框中键入 **services.msc**，然后按 Enter。  
+    -   单击“开始”  ，在“搜索”  框中键入 **services.msc**，然后按 Enter。  
   
-    -   依次单击 **“开始”**、 **“运行”**，键入 **services.msc**，然后按 Enter。  
+    -   依次单击 **“开始”** 、 **“运行”** ，键入 **services.msc**，然后按 Enter。  
   
-2.  在“服务”对话框中，右键单击要配置的服务，然后单击“属性”。  
+2.  在“服务”  对话框中，右键单击要配置的服务，然后单击“属性”  。  
   
-3.  在 **“登录”** 选项卡上，单击 **“本帐户”**。  
+3.  在 **“登录”** 选项卡上，单击 **“本帐户”** 。  
   
 4.  配置要使用的用户帐户。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "51677746"
   
  若要配置控制器 DCOM 权限，请按以下步骤执行操作：  
   
-1.  **打开 dcomcnfg.exe（组件服务管理单元）**：这是用于配置 DCOM 权限的工具。  
+1.  **打开 dcomcnfg.exe（组件服务管理单元）** ：这是用于配置 DCOM 权限的工具。  
   
-    1.  在控制器计算机上，单击 **“开始”**。  
+    1.  在控制器计算机上，单击 **“开始”** 。  
   
     2.  在“搜索”框中键入 **dcomcnfg.exe** 。   
   

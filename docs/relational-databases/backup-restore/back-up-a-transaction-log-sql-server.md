@@ -15,12 +15,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d36963c5107a1a25ce25201ac38883e5c0925315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 256dc3c1733ece7b03686d6911c327b697ec094e
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64478915"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652803"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>备份事务日志 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "64478915"
   
 7.  还可以根据需要选择 **“仅复制备份”** 创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)。  
   
-    >** 注意！**选择“差异”  选项时，无法创建仅复制备份。  
+    > [!NOTE]
+    > 选择“差异”  选项时，无法创建仅复制备份。  
   
 8.  可以接受 **“名称”** 文本框中建议的默认备份集名称，也可以为备份集输入其他名称。  
   

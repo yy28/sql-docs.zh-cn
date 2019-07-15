@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 23169fd3625c2501e295645201da89667731f0b6
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581328"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860681"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教程：在两个完全连接的服务器之间配置复制（事务）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "67581328"
   
    ![输入订阅数据库的名称](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. 在“分发代理安全性”页中，选择省略号 (...) 按钮   。 在“进程帐户”  框中输入 <Publisher_Machine_Name  >\repl_distribution  ，输入此帐户的密码，选择“确定”  ，然后选择“下一步”  。
+8. 在“分发代理安全性”页中，选择省略号 (…) 按钮   。 在“进程帐户”  框中输入 <Publisher_Machine_Name  >\repl_distribution  ，输入此帐户的密码，选择“确定”  ，然后选择“下一步”  。
 
    ![“分发代理安全性”对话框中的分发帐户信息](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

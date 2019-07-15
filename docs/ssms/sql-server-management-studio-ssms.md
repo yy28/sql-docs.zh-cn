@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 05/29/2019
-ms.openlocfilehash: 3f80cc74cc20c2ed02e32577fadbe13a5bf7dd38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aba53145a679503fde2a965b818949885edaa92a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500340"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680746"
 ---
-# <a name="what-is-sql-server-management-studio-ssms"></a>什么是 SQL Server Management Studio (SSMS)？
+# <a name="what-is-sql-server-management-studio-ssms"></a>什么是 SQL Server Management Studio (SSMS)？ 
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用于管理任何 SQL 基础结构的集成环境。 使用 SSMS，可以访问、配置、管理和开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL 数据库和 SQL 数据仓库的所有组件。 SSMS 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的访问权限。
 

@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5d1cc28e21235dfde9c1b7de00d9c97522bab2cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 905f4202adb55e75f132a8522b3bfa0773bdd22f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095847"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686890"
 ---
 # <a name="job-properties---new-job-notifications-page"></a>作业属性 - 新建作业（“通知”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,19 +31,19 @@ ms.locfileid: "65095847"
   
 ## <a name="options"></a>选项  
 **电子邮件**  
-选择此选项将在作业完成时发送电子邮件。 选择此选项后，选择要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
+选择此选项将在作业完成时发送电子邮件。 选择此选项后，选择要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”    。  
   
 **第**  
-选择此选项将在作业完成时将电子邮件发送到操作员的寻呼程序。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
+选择此选项将在作业完成时将电子邮件发送到操作员的寻呼程序。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”    。  
   
 **Net send**  
-选择此选项将在作业完成时通过 net send 通知操作员。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
+选择此选项将在作业完成时通过 net send 通知操作员。 选择此选项后，指定要通知的操作员以及触发该通知的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”    。  
   
 **写入 Windows 应用程序事件日志**  
-选择此选项将在作业完成时将条目写入到应用程序事件日志中。 选择此选项后，指定将触发写入条目的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
+选择此选项将在作业完成时将条目写入到应用程序事件日志中。 选择此选项后，指定将触发写入条目的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”    。  
   
 **自动删除作业**  
-选择此选项将在作业完成时删除该作业。 选择此选项后，指定将触发删除作业的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”。  
+选择此选项将在作业完成时删除该作业。 选择此选项后，指定将触发删除作业的条件：“当作业成功时”、“当作业失败时”或“当作业完成时”    。  
   
 ## <a name="see-also"></a>另请参阅  
 [执行作业](../../ssms/agent/implement-jobs.md)  

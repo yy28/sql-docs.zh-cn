@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190987"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731595"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和实用程序的 SQL Server、 Azure SQL 数据库和 Azure SQL 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,6 @@ ms.locfileid: "52190987"
 若要管理（查询、监视等）数据库，需要一个工具。 虽然数据库可以在云中、Windows 上或 [Linux](../linux/sql-server-linux-overview.md) 上运行，但工具不需与数据库在相同的平台上运行。 
 
 有许多可用的数据库工具，因此本文提供的说明和指南介绍了一些可用于处理 SQL 数据库的工具。 如果不知道如何确定所需的工具，请参阅[应使用哪种工具？](#which-tool-should-i-choose)。
-
 
 ## <a name="gui-tools-to-manage-databases"></a>管理数据库的 GUI 工具  
 
@@ -45,12 +44,12 @@ ms.locfileid: "52190987"
 
 | 工具 | 描述 | 运行平台 |
 |:--|:--|:--|
-|[**mssql-cli（预览版）**](mssql-cli.md)|**mssql-cli** 是一项用于查询 SQL Server 的交互式命令行工具。 | Windows、 macOS 和 Linux|
+|[**mssql-cli（预览版）** ](mssql-cli.md)|**mssql-cli** 是一项用于查询 SQL Server 的交互式命令行工具。 | Windows、 macOS 和 Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**是一个命令行实用工具，可以自动执行多个数据库开发任务。 macOS 和 Linux 版本的 sqlpackage 目前处于预览状态。 | Windows、 macOS 和 Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** 提供了用于处理 SQL 的 cmdlet| Windows、 macOS 和 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**实用工具，可以输入 TRANSACT-SQL 语句、 系统过程和脚本文件的命令提示符处。 | Windows、 macOS 和 Linux|
-|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。|Windows、 macOS 和 Linux|
-|[**mssql 脚本编写器 （预览版）**](https://github.com/Microsoft/mssql-scripter)|**mssql 脚本专家**是多平台命令行体验，用于编写脚本的 SQL Server 数据库|Windows、 macOS 和 Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据     。|Windows、 macOS 和 Linux|
+|[**mssql 脚本编写器 （预览版）** ](https://github.com/Microsoft/mssql-scripter)|**mssql 脚本专家**是多平台命令行体验，用于编写脚本的 SQL Server 数据库|Windows、 macOS 和 Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql-conf** 配置在 Linux 上运行的 SQL Server。|Linux|
 
 

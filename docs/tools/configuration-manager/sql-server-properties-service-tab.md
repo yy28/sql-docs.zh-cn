@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f80d1dc8540c2305811d249a7e537972b6ad4e38
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b1382b8922e863607f519d8b71b6bedecaa6a775
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543722"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731921"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
+  使用“MSSQLSERVER 属性”  对话框上的“服务”  选项卡查看或指定下列选项。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  
@@ -55,6 +55,6 @@ ms.locfileid: "52543722"
 -   已禁用：此服务无法启动。  
   
  **State**  
- 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
   

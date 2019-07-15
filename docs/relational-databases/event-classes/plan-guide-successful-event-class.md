@@ -13,15 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae1ba2efb9fc15e031e3f569f6ee0464f880f1fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4692d2715ec5e2e1203c4aada6f5d1b42775ac58
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694335"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833015"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful 事件类
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
   Plan Guide Successful 事件类指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已成功为包含计划指南的查询或批处理生成执行计划。 当满足下列条件时，事件将激发：  
   
 -   计划指南定义中的批处理或模块与正在执行的批处理或模块相匹配。  

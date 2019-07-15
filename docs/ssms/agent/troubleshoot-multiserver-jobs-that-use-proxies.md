@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f29451dec0707ab23c0d8582ed710f75033841ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1628af19adfb60875e0cb660d7999ecb360338ae
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097523"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681432"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>排除使用代理的多服务器作业的故障
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "65097523"
   
 -   “该作业步骤需要代理帐户，但是目标服务器上禁用了代理匹配功能。”  
   
-    若要解决此错误，请将 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.**_\<n\>_**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 注册表子项设置为“1 (true)”。 默认情况下，此子项设置为“0 (False)”。 **MSSQL.**\<*n*> 的值是实例名；例如，**MSSQL.1** 或 **MSSQL.3**  
+    若要解决此错误，请将 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 注册表子项设置为“1 (true)”  。 默认情况下，此子项设置为“0 (False)”   。 **MSSQL.** \<*n*> 的值是实例名；例如，**MSSQL.1** 或 **MSSQL.3**  
   
 -   “找不到代理。”  
   

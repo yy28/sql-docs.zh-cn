@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6703906dbe133436656ca2822ac18a9df42ad4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2a80a2a3e1cf0745553dbb494f8e39cde8f9d3e
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034269"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826594"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -547,6 +547,6 @@ ORDER BY SalesOrderNumber,ProductKey;
 ## <a name="see-also"></a>另请参阅  
  [聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [分析函数 (Transact-SQL)](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [Itzik Ben-Gan 在 sqlmag.com 上撰写的关于窗口函数和 OVER 的优秀博客文章](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [Itzik Ben-Gan 在 sqlmag.com 上撰写的关于窗口函数和 OVER 的优秀博客文章](https://www.itprotoday.com/sql-server/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   

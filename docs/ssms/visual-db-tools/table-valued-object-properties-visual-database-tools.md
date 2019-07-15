@@ -12,26 +12,26 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c01858a75b6f0660ee65a2725a19ebf5a56200e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 73b36a1e6888edae77633681e6e97a64a1b17e55
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098086"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689550"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>表值对象属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在 **查询设计器和视图设计器**中选择表值对象时，这些属性将显示在“属性”窗口中。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”窗口中为只读。  
+在 **查询设计器和视图设计器**中选择表值对象时，这些属性将显示在“属性”窗口中。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”  窗口中为只读。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 > [!NOTE]  
-> 根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。  
+> 根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”  菜单上选择“导入和导出设置”  。  
   
 **标识类别**  
-展开此项可显示“名称”和“TVO 类型”属性。  
+展开此项可显示“名称”  和“TVO 类型”  属性。  
   
 **名称**  
 显示所选表值对象的名称。  
@@ -40,7 +40,7 @@ ms.locfileid: "65098086"
 显示表值对象的类型。 其类型可以是基表、视图、表值函数或派生表。  
   
 **查询设计器类别**  
-展开此项可显示“别名”、“列列表”、“全名”和“参数列表”属性。  
+展开此项可显示“别名”  、“列列表”  、“全名”  和“参数列表”  属性。  
   
 **别名**  
 显示所选表值对象的别名。 若要添加或更改别名，请在字段中键入相应内容。  

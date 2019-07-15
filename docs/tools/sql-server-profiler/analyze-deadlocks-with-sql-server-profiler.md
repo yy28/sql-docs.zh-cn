@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], deadlocks
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 918856e619fbb44ef5b5bc382e5d95efc99aba0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c90dd4ee9872c558d552b19e99ad66d417d91a9e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833485"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731556"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47833485"
   
 -   使用 **“文件”** 菜单上的 **“提取 SQL Server 事件”** 选项。  
   
--   通过右键单击特定事件并选择“提取事件数据”，也可以提取并保存各个事件。  
+-   通过右键单击特定事件并选择“提取事件数据”  ，也可以提取并保存各个事件。  
   
 ## <a name="deadlock-graphs"></a>死锁图形  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用死锁等待图形描述死锁。 此死锁等待图形中包含进程节点、资源节点以及表示进程和资源之间关系的边。 等待图形的组件的定义如下表所示：  
@@ -49,7 +49,7 @@ ms.locfileid: "47833485"
  数据库对象。例如，表、索引或行。  
   
  边  
- 进程和资源之间的关系。 当进程等待资源时，将出现 **request** 边。 当资源等待进程时，将出现 **owner** 边。 边说明中包括了锁模式。 例如， **“模式: X”**。  
+ 进程和资源之间的关系。 当进程等待资源时，将出现 **request** 边。 当资源等待进程时，将出现 **owner** 边。 边说明中包括了锁模式。 例如， **“模式: X”** 。  
   
 ## <a name="deadlock-process-node"></a>死锁进程节点  
  在等待图形中，进程节点包含有关进程的信息。 下表介绍了进程的组件。  

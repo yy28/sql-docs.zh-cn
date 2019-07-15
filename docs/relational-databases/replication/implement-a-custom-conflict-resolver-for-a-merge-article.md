@@ -17,12 +17,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fbf0eac77eab02c63ef3e46941da93d47718bbd9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 296edae8bce8fad55d655a59449da9a9431d3a40
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584892"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860671"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "67584892"
 2.  执行 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@publication** 和 **@article** ，将 **@property** 的值指定为 **@property** ，同时为 **@value** 中为合并项目实现自定义冲突解决程序。  
   
 ##  <a name="COM"></a> 使用基于 COM 的自定义冲突解决程序  
- <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个接口，可以利用该接口编写复杂的业务逻辑以处理事件并解决在合并复制同步过程中发生的冲突。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以编写自己的基于本机代码的自定义业务逻辑以解决冲突。 使用诸如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 之类的产品，此逻辑可作为 COM 组件生成并编译到动态链接库 (DLL) 中。 这类基于 COM 的自定义冲突解决程序必须实现 ICustomResolver 接口，该接口是专为解决冲突而设计的  。  
+ <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 命名空间实现了一个接口，可以利用该接口编写复杂的业务逻辑以处理事件并解决在合并复制同步过程中发生的冲突。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。 您也可以编写自己的基于本机代码的自定义业务逻辑以解决冲突。 使用诸如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 之类的产品，此逻辑可作为 COM 组件生成并编译到动态链接库 (DLL) 中。 这类基于 COM 的自定义冲突解决程序必须实现 **ICustomResolver** 接口，该接口是专为解决冲突而设计的。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>创建和注册基于 COM 的自定义冲突解决程序  
   

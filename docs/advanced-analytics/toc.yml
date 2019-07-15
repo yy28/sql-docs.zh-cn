@@ -3,6 +3,7 @@
 - name: 欢迎使用 SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概述
+  expanded: true
   items:
     - name: 机器学习服务（R、Python）
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
@@ -18,8 +19,8 @@
       href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: 在 Windows 上安装 ML 服务
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
-    - name: 在 Linux 上安装 ML 服务 >>
-      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc.json
+    - name: 在 Linux 上安装 ML 服务
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: 安装 R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: 安装独立服务器（R、Python）

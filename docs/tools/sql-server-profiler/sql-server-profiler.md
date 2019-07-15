@@ -23,27 +23,27 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 549b08a7237492064cc6cf50470521ce3be804ee
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 1395cef2b706cc9e37610686ebae6561f2f22396
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439889"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729738"
 ---
-# <a name="sql-server-profiler"></a>SQL Server 事件探查器
+# <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一个界面，用于创建和管理跟踪并分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播一系列特定的步骤。  
   
 > [!IMPORTANT]
-> SQL 跟踪和[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不推荐使用。 包含 Microsoft SQL Server 跟踪和重播对象的 Microsoft.SqlServer.Management.Trace 命名空间也已遭弃用。 
+> 已弃用 SQL 跟踪和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 包含 Microsoft SQL Server 跟踪和重播对象的“Microsoft.SqlServer.Management.Trace”命名空间也已遭弃用  。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 请改用扩展事件。 有关详细信息[扩展事件](../../relational-databases/extended-events/extended-events.md)，请参阅[快速入门： SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)并[SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 请改用扩展事件。 有关[扩展事件](../../relational-databases/extended-events/extended-events.md)的详细信息，请参阅[快速入门：SQL Server 中的扩展事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE]
-> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 针对 Analysis Services 工作负荷不推荐使用，并将继续支持。
+> 针对 Analysis Services 工作负荷的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 尚未弃用，我们将继续提供支持。
 
  ## <a name="where-is-the-profiler"></a>在哪里可以启动探查器？
  
@@ -58,7 +58,7 @@ ms.locfileid: "52439889"
 |**跟踪捕获**|[扩展事件](../../relational-databases/extended-events/extended-events.md)中的图形用户界面 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**跟踪重播**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
-## <a name="sql-server-profiler"></a>SQL Server 事件探查器  
+## <a name="sql-server-profiler"></a>SQL Server Profiler  
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 跟踪的图形用户界面，用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的实例。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以对生产环境进行监视，了解哪些存储过程由于执行速度太慢影响了性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于如下活动：  
   
 -   逐步分析有问题的查询以找到问题的原因。  

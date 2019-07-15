@@ -11,20 +11,20 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
 - client protocols [SQL Server]
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 37d1c0b91053f5a09f1392315130ed0b90dc4215
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1be571905cb53f1a9317f9d02470d0db65dc6e85
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656856"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732770"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>客户端协议 - TCP/IP 属性（“协议”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，可使用“TCP/IP 属性”对话框的“协议”选项卡查看或指定下列选项。 若要连接到另一个端口，可以在 **“默认端口”** 框中键入端口号。 有关连接字符串的详细信息，请参阅 [使用 TCP IP 创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，可使用“TCP/IP 属性”对话框的“协议”选项卡查看或指定下列选项   。 若要连接到另一个端口，可以在 **“默认端口”** 框中键入端口号。 有关连接字符串的详细信息，请参阅 [使用 TCP IP 创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
   
 ## <a name="options"></a>选项  
  **“默认端口”**  
@@ -35,7 +35,7 @@ ms.locfileid: "51656856"
  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的命名实例时，客户端将尝试从在服务器上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务获取端口号。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务没有运行，则必须通过此设置或作为连接字符串的一部分提供端口号。  
   
  **已启用**  
- 可能的值为“是”和“否”。  
+ 可能的值为“是”  和“否”  。  
   
  **Keep Alive**  
  此参数（毫秒）控制 TCP 通过发送 **KEEPALIVE** 包尝试验证空闲连接是否仍保持原样的频率。 默认值为 30000 毫秒。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - viewing filter information
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e194fa956ba1f43ae53ee37f3be15af2dfa7d4a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1570ae23423d7b286bedf51cd7c2590bc3ab778
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600395"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729598"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>查看筛选器信息 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "47600395"
   
 ### <a name="to-view-filter-information"></a>查看筛选器信息  
   
-1.  打开跟踪文件、跟踪表或 SQL 脚本，在 **“文件”** 菜单上，单击 **“属性”**。 如果要编辑跟踪模板或创建新跟踪，请跳过此步骤。  
+1.  打开跟踪文件、跟踪表或 SQL 脚本，在 **“文件”** 菜单上，单击 **“属性”** 。 如果要编辑跟踪模板或创建新跟踪，请跳过此步骤。  
   
-2.  在“事件选择”选项卡上，右键单击要查看的筛选器的数据列名称，然后单击“编辑列筛选器”。  
+2.  在“事件选择”  选项卡上，右键单击要查看的筛选器的数据列名称，然后单击“编辑列筛选器”  。  
   
 3.  在 **“编辑筛选器”** 对话框中，展开筛选器比较运算符以查看为指定的标准分配的值。 对要查看筛选器信息的所有列，重复步骤 2 和步骤 3。  
   
