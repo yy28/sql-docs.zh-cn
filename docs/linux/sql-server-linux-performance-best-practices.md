@@ -4,17 +4,16 @@ description: 本文提供在 Linux 上运行 SQL Server 性能最佳实践和准
 author: rgward
 ms.author: bobward
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105439"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>性能最佳实践和 Linux 上的 SQL Server 配置准则
 
@@ -67,14 +66,14 @@ ms.locfileid: "67834850"
 | CPU 频率调控器 | 性能 | 请参阅**cpupower**命令 |
 | ENERGY_PERF_BIAS | 性能 | 请参阅**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | 请参阅 intel p 状态的文档 |
-| C-States | 仅 C1 | 请参阅有关如何确保只能 C 状态设置为 C1 的 Linux 或系统文档 |
+| C 状态 | 仅 C1 | 请参阅有关如何确保只能 C 状态设置为 C1 的 Linux 或系统文档 |
 
 下表提供了建议的磁盘设置：
 
 | 设置 | ReplTest1 | 详细信息 |
 |---|---|---|
 | 磁盘预读 | 4096 | 请参阅**blockdev**命令 |
-| sysctl 设置 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | 请参阅**sysctl**命令 |
+| sysctl 设置 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | 请参阅**sysctl**命令 |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>平衡的多节点 NUMA 系统的内核设置自动 numa
 

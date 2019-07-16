@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084742"
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>数据层应用程序表 - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的每个数据层应用程序 (DAC) 实例显示一行。 此表存储在 msdb 数据库中的 dbo 架构。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|DAC 实例的标识符。|  
 |instance_name|**sysname**|在部署 DAC 实例时指定的实例名称。|  

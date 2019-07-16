@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57fee409bbaa286f052c2fa11e15a956fcd7d540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0a2cf94ed3575a6da1ec072e9cf19df0b467741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086246"
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47699225"
   
  若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要查看仅具有失败状态的消息，请使用[sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)。 若要仅查看未发送或正在重试消息，使用[sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)。 若要查看电子邮件附件，请使用[sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。|  
 |**profile_id**|**int**|发送消息所用配置文件的标识符。|  
@@ -42,7 +41,7 @@ ms.locfileid: "47699225"
 |**subject**|**nvarchar(510)**|消息的主题行。|  
 |**正文**|**varchar(max)**|消息的正文。|  
 |**body_format**|**varchar(20)**|消息正文的格式。 可能的值为**文本**并**HTML**。|  
-|**重要性**|**varchar(6)**|**重要性**消息参数。|  
+|**importance**|**varchar(6)**|**重要性**消息参数。|  
 |**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
@@ -65,7 +64,7 @@ ms.locfileid: "47699225"
 ## <a name="remarks"></a>备注  
  排除数据库邮件故障时，该视图通过向您显示已成功发送的消息的属性，可帮助您确定问题的本质。 如果消息成功提交到 SMTP 邮件服务器，则数据库邮件将这些消息标记为已发送。 通常可在几分钟后收到电子邮件，但也可能由于 SMTP 服务器的问题而使电子邮件的接收延迟。 如果 SMTP 邮件服务器接受了消息，则数据库邮件将该消息标记为已发送。 SMTP 邮件服务器中出现的电子邮件错误（例如，无法传递的收件人电子邮件地址）不会返回到数据库邮件。 即使这些电子邮件未被传递，也会将它们记录为已发送。 请解决 SMTP 服务器中的此类错误。 此外，SMTP 邮件服务器还可能将无法传递的消息通知发送到数据库邮件帐户的答复电子邮件地址。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授予**sysadmin**固定的服务器角色和**databasemailuserrole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有已发送消息。 所有其他用户仅可查看他们已发送的消息。  
   
 ## <a name="see-also"></a>请参阅  

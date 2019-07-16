@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117925"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'` 是订阅服务器的类型。 *subscriber_type* 是 **nvarchar(15)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**本地**（默认值）|订阅服务器仅对发布服务器是已知的。|  
 |**global**|订阅服务器对所有服务器都是已知的。|  
@@ -103,7 +102,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval` 一天中的合并代理运行。 *frequency_interval*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -150,11 +149,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` 为合并代理停止的日期安排，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 是要执行的可选命令提示符。 *optional_command_line* 是 **nvarchar(4000)**，默认值为 NULL。 此参数用于添加捕获输出并将输出保存到文件的命令，或者用于指定配置文件或属性。  
+`[ @optional_command_line = ] 'optional_command_line'` 是要执行的可选命令提示符。 *optional_command_line* 是 **nvarchar(4000)** ，默认值为 NULL。 此参数用于添加捕获输出并将输出保存到文件的命令，或者用于指定配置文件或属性。  
   
-`[ @description = ] 'description'` 为该合并订阅的简短说明。 *描述*是**nvarchar(255)**，默认值为 NULL。 此值显示在复制监视器**友好名称**列，该列可用于对受监视发布的订阅进行排序。  
+`[ @description = ] 'description'` 为该合并订阅的简短说明。 *描述*是**nvarchar(255)** ，默认值为 NULL。 此值显示在复制监视器**友好名称**列，该列可用于对受监视发布的订阅进行排序。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以通过同步订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)** ，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 `[ @offloadagent = ] remote_agent_activation` 指定可以远程激活代理。 *remote_agent_activation*是**位**默认值为**0**。  
   
@@ -163,9 +162,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @offloadserver = ] 'remote_agent_server_name'` 指定要用于远程代理激活的服务器的网络名称。 *remote_agent_server_name* 是 **sysname**，默认值为 NULL。  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver'` 允许交互式地解决所有允许交互式解决方法的项目的冲突。 *use_interactive_resolver* 是 **nvarchar(5)**，默认值为 FALSE。  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` 允许交互式地解决所有允许交互式解决方法的项目的冲突。 *use_interactive_resolver* 是 **nvarchar(5)** ，默认值为 FALSE。  
   
-`[ @merge_job_name = ] 'merge_job_name'` *@merge_job_name*参数已弃用，并且不能设置。 *merge_job_name* 是 **sysname**，默认值为 NULL。  
+`[ @merge_job_name = ] 'merge_job_name'` *@merge_job_name* 参数已弃用，并且不能设置。 *merge_job_name* 是 **sysname**，默认值为 NULL。  
   
 `[ @hostname = ] 'hostname'` 返回的值将覆盖[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)参数化筛选器的 WHERE 子句中使用此函数时。 *主机名*是**sysname**，默认值为 NULL。  
   
@@ -178,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_addmergesubscription**合并复制中使用。  
   
- 当**sp_addmergesubscription**的成员执行**sysadmin**固定服务器角色，以创建推送订阅，合并代理作业隐式创建和运行下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户。 我们建议您执行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)并指定不同的、 特定于代理的 Windows 帐户凭据**@job_login**和 **@job_password**. 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 当**sp_addmergesubscription**的成员执行**sysadmin**固定服务器角色，以创建推送订阅，合并代理作业隐式创建和运行下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户。 我们建议您执行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)并指定不同的、 特定于代理的 Windows 帐户凭据 **@job_login** 和 **@job_password** . 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -191,8 +190,8 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)   
  [交互式冲突解决方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff99c2b63ad3f104b5bae4f6378af2e4fe0575bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2acff9f5d78549fe1e00397d566053ec19f628a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120244"
 ---
 # <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="tables-returned"></a>返回的表  
  返回以下信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**group_database_id**|**uniqueidentifier**|本地可用性组中的数据库的 ID。|  
   

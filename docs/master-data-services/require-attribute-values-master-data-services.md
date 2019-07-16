@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ae1eb0a03e7387c7985a4b05f9f0fba562d03d67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e430e158c301279398574bee64d744a40664b623
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085702"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求属性值 (Master Data Services)
 
@@ -39,9 +38,9 @@ ms.locfileid: "65485978"
   
 ### <a name="to-require-attribute-values"></a>要求属性值  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“系统管理”** 。  
   
-2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
+2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”** 。  
   
 3.  在“业务规则”  页上，从“模型”  下拉列表中选择一个模型。  
   
@@ -49,25 +48,25 @@ ms.locfileid: "65485978"
   
 5.  从“成员类型”  下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击 **“添加”**。  
+6.  单击 **“添加”** 。  
   
 7.  在“名称”  框中，键入业务规则的名称。  
   
 8.  （可选）在“说明”  字段中，键入业务规则描述。  
   
-9. 在“Then”  块下，单击“添加” 。 此时将显示一个面板。  
+9. 在“Then”  块下，单击“添加”  。 此时将显示一个面板。  
   
-10. 从“运算符”  下拉列表中，选择“必要操作” 。  
+10. 从“运算符”  下拉列表中，选择“必要操作”  。  
   
 11. 从  “属性”下拉列表中选择一个属性。  
   
-12. 单击“保存” 。 此时，系统会在“Then”  网格中新添加一行。  
+12. 单击“保存”  。 此时，系统会在“Then”  网格中新添加一行。  
   
-13. 单击“保存” 。  
+13. 单击“保存”  。  
   
-14. 单击“全部发布” 。  
+14. 单击“全部发布”  。  
   
-15. 在确认对话框中，单击 **“确定”**。 “业务规则状态”  列中的值为“有效” 。  
+15. 在确认对话框中，单击 **“确定”** 。 “业务规则状态”  列中的值为“有效”  。  
   
 ## <a name="next-steps"></a>后续步骤  
   

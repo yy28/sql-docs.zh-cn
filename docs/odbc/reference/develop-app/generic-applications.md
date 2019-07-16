@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139295"
 ---
 # <a name="generic-applications"></a>泛型应用程序
 通用应用程序有时会执行硬编码任务，如从数据库检索数据电子表格。 它们还可能执行的各种用户定义的任务，例如允许用户输入和执行 SQL 语句的一般查询应用程序。 通用应用程序具有的共同点是它们必须适用于各种不同的 Dbms 和，开发人员不会预先不知道这些 Dbms 是怎样的。  

@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125009"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有关服务器实例上 SQL Server 审核中的服务器审核规范的信息。 有关 SQL Server Audit 的详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|服务器规范的名称。|  
+|**name**|**sysname**|服务器规范的名称。|  
 |**server_specification_id**|**Int**|ID **server_specification**。|  
 |**create_date**|**日期时间**|审核服务器规范的创建日期。|  
 |**modified_date**|**日期时间**|审核服务器规范的上次修改日期。|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 74c9a97c2511bc9c9a738b9e63548a9179552489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086346"
 ---
 # <a name="new-features"></a>新功能
 在 ODBC 中引入了以下新功能*3.x*。 ODBC *3.x*应用程序使用 ODBC *2.x*驱动程序将不能使用此功能。 ODBC *3.x*时使用的 ODBC 驱动程序管理器不映射这些功能*2.x*驱动程序。  

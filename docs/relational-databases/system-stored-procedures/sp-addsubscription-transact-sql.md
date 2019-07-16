@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096217"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @article=] '*article*'  
  发布所订阅的项目。 *文章*是**sysname**，使用默认值为 all。 如果为 all，则订阅将添加到该发布的所有项目中。 Oracle 发布服务器只支持 all 或 NULL 值。  
   
- [ @subscriber=] '*subscriber*'  
+ [ @subscriber=] '*订阅服务器*  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
  [ @destination_db=] '*destination_db*'  
@@ -91,9 +90,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type=] '*sync_type*'  
  订阅同步类型。 *sync_type*是**nvarchar(255)** ，可以是下列值之一：  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|none|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意：此选项已弃用。 请改用仅支持复制。|  
+|无|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意:此选项已弃用。 请改用仅支持复制。|  
 |automatic（默认值）|已发布表的架构和初始数据将首先传输到订阅服务器。|  
 |replication support only|如果需要，在项目的订阅服务器上自动生成支持更新订阅的自定义存储过程和触发器。 假定订阅服务器已拥有已发布表的架构和初始数据。 在配置对等事务复制拓扑时，确保该拓扑中所有节点上的数据都相同。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。<br /><br /> *不支持非 SQL Server 发布的订阅。*|  
 |initialize with backup|从发布数据库的备份获取已发布表的架构和初始数据。 假定订阅服务器对发布数据库的备份具有访问权。 指定备份的备份和媒体类型的位置*backupdevicename*并*backupdevicetype*。 在使用此选项时，无需在配置期间停止对等事务复制拓扑。<br /><br /> *不支持非 SQL Server 发布的订阅。*|  
@@ -105,7 +104,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=] '*status*'  
  订阅状态。 *状态*是**sysname**，默认值为 NULL。 当此参数未显式设置时，复制会自动将其设置为下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |active|订阅已初始化并可接受更改。 当设置此选项的值*sync_type*为 none、 initialize with backup 或仅支持复制。|  
 |subscribed|订阅需要进行初始化。 当设置此选项的值*sync_type*是自动的。|  
@@ -119,7 +118,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=] '*update_mode*'  
  已更新的类型。*update_mode*是**nvarchar(30)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |read only（默认值）|该订阅是只读的。 在订阅服务器上所做的更改不会发送到发布服务器。|  
 |sync tran|支持立即更新订阅。 Oracle 发布服务器不支持。|  
@@ -132,7 +131,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=] '*loopback_detection*'  
  指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*是**nvarchar(5)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |true|分发代理不将从订阅服务器上发起的事务发送回该订阅服务器。 与双向事务复制一起使用。 有关详细信息，请参阅 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |false|分发代理将在订阅服务器上发起的事务发送回订阅服务器。|  
@@ -141,7 +140,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type=] *frequency_type*  
  安排分发任务所使用的频率。 *frequency_type*数据类型为 int，并可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |1|一次|  
 |2|按需|  
@@ -158,7 +157,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  分发代理的日期。 使用此参数时*frequency_type*设置为 32 （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |1|第一个|  
 |2|第二个|  
@@ -173,7 +172,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  在定义周期内重新调度的频率（分钟）。 *frequency_subday*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |1|一次|  
 |2|第二个|  
@@ -238,7 +237,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype= ] '*backupdevicetype*'  
  指定从备份初始化订阅服务器时使用的备份设备的类型。 *backupdevicetype*是**nvarchar(20)** ，可以是下列值之一：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |logical（默认值）|备份设备是逻辑设备。|  
 |disk|备份设备是磁盘驱动器。|  
@@ -276,7 +275,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  订阅服务器的类型。 *subscriber_type*是**tinyint**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0（默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器|  
 |1|ODBC 数据源服务器|  
@@ -322,8 +321,8 @@ sp_addsubscription [ @publication = ] 'publication'
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

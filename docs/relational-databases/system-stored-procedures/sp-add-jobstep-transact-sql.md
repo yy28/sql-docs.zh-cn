@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
+title: sp_add_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a3551716ad6841a7ed14c92afd4ae96d3cc297b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140494"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -73,7 +72,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'` 使用的子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务，才能执行*命令*。 *子系统*是**nvarchar(40)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |'**ACTIVESCRIPTING**|活动脚本<br /><br /> **\*\* 重要提示 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|操作系统命令或可执行程序|  
@@ -144,7 +143,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags` 控制行为的选项。 *标志*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0** （默认值）|覆盖输出文件|  
 |**2**|追加到输出文件|  
@@ -162,7 +161,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **sp_add_jobstep**必须从运行**msdb**数据库。  

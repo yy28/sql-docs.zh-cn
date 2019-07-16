@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c9c10327b6187b0cd789bd41bb3c0916e04451d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ccf6fdee46acc210b1a528c23523bcceac385d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117742"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 属性（ClientSettingsGeneralFlag 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51664156"
 object.FlagIndex [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示服务器设置的常规标志的 [ClientSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

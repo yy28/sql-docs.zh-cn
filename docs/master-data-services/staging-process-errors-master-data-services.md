@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce64900270fd1092320a12a6cc58a744eaadae7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085632"
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488019"
 
   当临时过程完成后，临时表中的所有已处理记录在 ErrorCode 列中都对应一个值。 下表中列出了这些值。  
   
-|代码|错误|发生条件/详细信息|适用于表|  
+|代码|Error|发生条件/详细信息|适用于表|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|临时表中多次出现同一成员代码。|您的临时批次多次包含同一成员代码。 既不创建也不更新成员。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210003|属性值引用不存在或非活动的成员。|暂存基于域的属性时，您必须使用代码而不是名称。 适用于 **ImportType0**、 **1**和 **2**。|叶<br /><br /> 合并|  

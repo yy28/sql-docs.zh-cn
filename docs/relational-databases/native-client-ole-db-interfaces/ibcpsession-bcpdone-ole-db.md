@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eda345764ef6f8b917f1496e05c8cb73471c9624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec04c6cd1fac02dd2ef128fe556fe4e011e2b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091060"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,17 +37,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>备注  
- 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作。 唯一的可能性是调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
+ 在调用 BCPDone 方法之后，不能对 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作  。 唯一的可能性是调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法  。  
   
 ## <a name="example"></a>示例  
- 该示例演示如何使用 IBCPSession 接口。  
+ 该示例演示如何使用 IBCPSession 接口  。  
   
  在运行此示例之前，必须执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -66,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  可以通过以下命令，使用 BCP 将此数据添加回表中：  
   
- bcp master..fltest in outfile.dat -n -T -S server  
+ bcp master..fltest in outfile.dat -n -T -S server    
   
  当编译此示例时，您需要指定 sqlncli11.lib。  
   

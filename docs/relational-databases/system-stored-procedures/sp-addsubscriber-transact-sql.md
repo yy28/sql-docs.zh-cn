@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079232"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,19 +64,19 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @type = ] type` 是订阅服务器的类型。 *类型*是**tinyint**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0** （默认值）|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器|  
 |**1**|ODBC 数据源服务器|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 数据库|  
 |**3**|OLE DB 访问接口|  
   
-`[ @login = ] 'login'` 是的登录名 ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 login 的数据类型为 sysname，默认值为 NULL。  
+`[ @login = ] 'login'` 是的登录名 ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 login 的数据类型为 sysname，默认值为 NULL   。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 执行时现在基于每个订阅指定的属性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @password = ] 'password'` 是的密码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 *密码*是**nvarchar(524)**，默认值为 NULL。  
+`[ @password = ] 'password'` 是的密码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 *密码*是**nvarchar(524)** ，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 执行时现在基于每个订阅指定的属性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
- [**@frequency_interval=** ] *frequency_interval*  
+ [ **@frequency_interval=** ] *frequency_interval*  
  是应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为 1。  
   
 > [!NOTE]  
@@ -124,7 +123,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 是复制代理的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**1** （默认值）|第一个|  
 |**2**|第二个|  
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 执行时现在基于每个订阅指定的属性[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @description = ] 'description'` 是订阅服务器上的文本说明。 *描述*是**nvarchar(255)**，默认值为 NULL。  
+`[ @description = ] 'description'` 是订阅服务器上的文本说明。 *描述*是**nvarchar(255)** ，默认值为 NULL。  
   
 `[ @security_mode = ] security_mode` 是实现的安全模式。 *security_mode*是**int**，默认值为 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  
   
@@ -208,7 +207,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

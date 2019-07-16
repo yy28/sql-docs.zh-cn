@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83dde1e60b9c9dd78a76c4bfa6afa86ac23f1bd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fd9177ad646a8086e00f9494e7e73488aace53d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140098"
 ---
 # <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
   返回有关与创建列加密密钥 (Cek) 的信息[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)语句。 每一行表示 CEK。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|CMK 的名称。|  
+|**name**|**sysname**|CMK 的名称。|  
 |**column_encryption_key_id**|**int**|CEK 的 ID。|  
 |**create_date**|**datetime**|CEK 的创建日期。|  
 |**modify_date**|**datetime**|CEK 的上次修改日期。|  

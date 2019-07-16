@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_catalog_usages (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_index_catalog_usages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,20 @@ ms.assetid: d095ab62-270b-484b-a541-9f9e7c951cf0
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 940abe85e598bee05e75b07426db24092e2ea6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0515e06636371689578d08fee0ae3f640539f680
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133829"
 ---
 # <a name="sysfulltextindexcatalogusages-transact-sql"></a>sys.fulltext_index_catalog_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   对于全文索引引用的每个全文目录，返回与其对应的一行。    
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|全文索引表的 ID。 在该数据库中是唯一的。|  
 |**index_id**|**int**|全文索引的 ID。|  

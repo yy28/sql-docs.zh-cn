@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 210dd27a8f91077e7e022c19ec97f41c7908a38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093115"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
 
@@ -43,7 +42,7 @@ ms.locfileid: "65489638"
   
  重新激活集合或成员时，将还原以前的所有事务。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您必须具有对 **“版本管理”** 功能区域的权限。  

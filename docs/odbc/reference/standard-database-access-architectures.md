@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5a0a8457dfde0090ac0d88d12079e88995b39efb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b2113167bb3440c0d772a99b4b8098104d7ed11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129250"
 ---
 # <a name="standard-database-access-architectures"></a>标准数据库访问体系结构
 在查看上一节中所述的数据库访问组件，事实证明，其中的编程的两个接口和数据流协议-非常适合进行标准化。 其他两个组件的 IPC 机制和网络协议的不只驻留在太低级别，但它们都高度依赖于网络和操作系统。 此外，还有可让用户实施标准化的第三个方法的网关的。  

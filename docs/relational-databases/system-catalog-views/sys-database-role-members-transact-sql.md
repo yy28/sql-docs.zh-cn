@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75d3e7924658bbb3cca4be6367d0a1a2a77d404c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079469"
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为每个数据库角色的每个成员返回一行。  数据库用户、 应用程序角色和其他数据库角色可以是数据库角色的成员。 若要向角色添加成员，请使用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)语句和`ADD MEMBER`选项。 携手[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)要返回的名称`principal_id`值。
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|数据库角色的主体 ID。|  
 |**member_principal_id**|**int**|成员的数据库主体 ID。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以查看自己的成员身份。 若要查看其他角色成员身份要求的成员身份`db_securityadmin`固定的数据库角色或`VIEW DEFINITION`在数据库上。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

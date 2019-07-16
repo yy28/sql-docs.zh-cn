@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62993129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124872"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` 为指定的新值*属性*。 *值*是**nvarchar(255)** ，可以是表中的值之一。  
   
-|属性|ReplTest1|Description|  
+|属性|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**description**||对该合并订阅的说明。|  
 |**priority**||子订阅的优先级。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。|  
@@ -68,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_login**||在订阅服务器上的登录名。|  
 |**subscriber_password**||提供的订阅服务器登录的强密码。|  
 |**sync_type**|**automatic**|已发布表的架构和初始数据将首先传输到订阅服务器。|  
-||**none**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
+||**无**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
 |**use_interactive_resolver**|**true**|允许交互式地解决所有允许交互式解决的项目的冲突。|  
 ||**false**|使用默认解决程序或自定义解决程序自动解决冲突。|  
 |NULL（默认值）|NULL（默认值）||  
@@ -85,9 +84,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changemergesubscription**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

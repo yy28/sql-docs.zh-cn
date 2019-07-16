@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f3bd38289067950428e2692806a595e8bbf23a99
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a916f98db163dfd9ff6a6de54af517f10212251d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116645"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly 属性（SqlServiceAdvancedProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51677839"
 object.IsReadOnly [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

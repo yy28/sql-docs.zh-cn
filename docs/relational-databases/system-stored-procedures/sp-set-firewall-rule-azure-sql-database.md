@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a096814c7d037fe517614e2701d5a821edcaa053
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 436396ed0982b12fffd5b894cb4c2a4006484ab0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104418"
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>参数  
  下表演示了支持的参数和选项在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-|“属性”|数据类型|Description|  
+|名称|数据类型|描述|  
 |----------|--------------|-----------------|  
 |[@name =] 'name'|**NVARCHAR(128)**|用来描述和区分服务器级防火墙设置的名称。|  
 |[@start_ip_address =] 'start_ip_address'|**VARCHAR(50)**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
-|[@end_ip_address =] 'end_ip_address'|**VARCHAR(50)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：时，才允许 azure 连接尝试这两个此字段和*start_ip_address*字段等于`0.0.0.0`。|  
+|[@end_ip_address =] 'end_ip_address'|**VARCHAR(50)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意:时，才允许 azure 连接尝试这两个此字段和*start_ip_address*字段等于`0.0.0.0`。|  
   
 ## <a name="remarks"></a>备注  
  服务器级防火墙设置的名称必须是唯一的。 如果为存储过程提供的设置的名称在防火墙设置表中已经存在，则将更新开始和结束 IP 地址。 否则，将创建新的服务器级防火墙设置。  

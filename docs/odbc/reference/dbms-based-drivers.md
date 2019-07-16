@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcd2221d9a0bb9cba42745901e5f00a6f8c8415e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111252"
 ---
 # <a name="dbms-based-drivers"></a>基于 DBMS 的驱动程序
 基于 DBMS 的驱动程序用于如 Oracle 或 SQL Server 提供驱动程序使用一个独立的数据库引擎的数据源。 这些驱动程序通过独立引擎; 访问的物理数据即，它们提交到 SQL 语句，并从引擎中检索结果。  

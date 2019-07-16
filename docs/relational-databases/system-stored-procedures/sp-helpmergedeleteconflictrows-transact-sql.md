@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137749"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 **%** 。 如果指定了发布，将返回由该发布限定的所有冲突。  
   
-`[ @source_object = ] 'source_object'` 是源对象的名称。 *source_object*是**nvarchar(386)**，默认值为 NULL。  
+`[ @source_object = ] 'source_object'` 是源对象的名称。 *source_object*是**nvarchar(386)** ，默认值为 NULL。  
   
 `[ @publisher = ] 'publisher'` 是发布服务器的名称。*发布服务器*是**sysname**，默认值为 NULL。  
   
@@ -51,7 +50,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|删除冲突的源对象。|  
 |**rowguid**|**uniqueidentifier**|删除冲突的行标识符。|  

@@ -1,5 +1,5 @@
 ---
-title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
+title: sp_execute_external_script (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ce26cd3d4e42d6d94e32a3454318a0ee841c486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124490"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -273,14 +272,14 @@ GO
 
 要进行评分，还可以使用本机 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Python 库和数据类型](../../advanced-analytics/python/python-libraries-and-data-types.md)  
  [R 库和 R 数据类型](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [SQL Server 机器学习服务的已知的问题](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [创建外部库&#40;Transact SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [external scripts enabled 服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

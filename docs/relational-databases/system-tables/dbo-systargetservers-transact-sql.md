@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8297c02d66671ea41b8a2dae4462514d4ef2fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c6304b108d75d6fe9ba00ccccdae322bf7cedde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095842"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   记录此多服务器操作域中当前登记的目标服务器。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|服务器 ID。|  
 |**server_name**|**sysname**|服务器名称。|  

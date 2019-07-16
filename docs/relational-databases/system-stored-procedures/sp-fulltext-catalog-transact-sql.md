@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c219189fbd10ca91d91f3f5a527f88c1804d6d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124373"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  可根据需要创建、删除和修改全文目录。 但请避免同时对多个目录的架构进行更改。 可以使用执行这些操作**sp_fulltext_table**存储过程，这是建议的方法。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**创建**|在文件系统中创建空的新的全文目录，并将添加中的关联的行**sysfulltextcatalogs**与*fulltext_catalog_name*并*root_directory*，（如果存在） 的值。 *fulltext_catalog_name*在数据库中必须唯一。|  
 |**Drop**|放弃*fulltext_catalog_name*从文件系统中移除并删除相关的行中通过**sysfulltextcatalogs**。 如果此目录中包含一个或多个表的索引，则此操作将失败。 **sp_fulltext_table** '*table_name*'，'drop' 应执行以删除目录中的表。<br /><br /> 如果目录不存在，则会显示错误。|  
@@ -72,7 +71,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **Start_full**操作用来创建中的全文索引数据的完整快照*fulltext_catalog_name*。 **Start_incremental**操作用来重新编制索引的数据库中仅已更改的行。 仅当表具有的类型的列，可以应用增量填充**时间戳**。 如果全文目录中的表不包含类型的列**时间戳**，则该表将进行完全填充。  
@@ -136,7 +135,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
+ [sp_fulltext_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

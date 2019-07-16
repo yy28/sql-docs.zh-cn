@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16b4bcfec2640c0dbd55d43be9df2391ed1f66c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82045d5dbbee356f084d587100edfbafd4947f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104634"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函数
 **符合性**  
@@ -65,7 +64,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>诊断  
  当**SQLEndTran**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可能会通过调用来获取**SQLGetDiagRec**具有相应*HandleType*并*处理*。 下表列出了通常返回的 SQLSTATE 值**SQLEndTran** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08003|连接未打开|（数据挖掘） *HandleType*已 SQL_HANDLE_DBC，并*处理*当时不处于连接状态。|  

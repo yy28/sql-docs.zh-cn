@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107981"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_name = ] 'profilename'` 要用于发送消息的数据库邮件配置文件的名称。 *profilename*是**nvarchar （128)**。 如果*profilename*未指定，则使用默认数据库邮件配置文件。  
+`[ @profile_name = ] 'profilename'` 要用于发送消息的数据库邮件配置文件的名称。 *profilename*是**nvarchar （128)** 。 如果*profilename*未指定，则使用默认数据库邮件配置文件。  
   
 `[ @id = ] id` 将消息发送到操作员的标识符。 *id*是**int**，默认值为 NULL。 之一*id*或*名称*必须指定。  
   
-`[ @name = ] 'name'` 将消息发送到操作员的名称。 *名称*是**nvarchar （128)**，默认值为 NULL。 之一*id*或*名称*必须指定。  
+`[ @name = ] 'name'` 将消息发送到操作员的名称。 *名称*是**nvarchar （128)** ，默认值为 NULL。 之一*id*或*名称*必须指定。  
   
-> **注意**：必须先为操作员定义一个电子邮件地址，然后他们才能接收消息。  
+> **注意**：在可以接收消息之前，必须为该运算符定义的电子邮件地址。  
   
 `[ @subject = ] 'subject'` 电子邮件主题。 *使用者*是**nvarchar(256)** ，无默认值。  
   
 `[ @body = ] 'message'` 电子邮件的正文。 *消息*是**nvarchar （max)** ，无默认值。  
   
-`[ @file_attachments = ] 'attachment'` 要将附加到电子邮件的文件的名称。 *附件*是**nvarchar(512)**，无默认值。  
+`[ @file_attachments = ] 'attachment'` 要将附加到电子邮件的文件的名称。 *附件*是**nvarchar(512)** ，无默认值。  
   
-`[ @mail_database = ] 'mail_host_database'` 指定邮件主机数据库的名称。 *mail_host_database*是**nvarchar （128)**。 如果没有*mail_host_database*指定，则**msdb**默认情况下使用数据库。  
+`[ @mail_database = ] 'mail_host_database'` 指定邮件主机数据库的名称。 *mail_host_database*是**nvarchar （128)** 。 如果没有*mail_host_database*指定，则**msdb**默认情况下使用数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -98,7 +97,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

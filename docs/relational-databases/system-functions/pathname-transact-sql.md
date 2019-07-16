@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140582"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- column_name  
+ column_name   
  列名称**varbinary （max)** FILESTREAM 列。 *column_name*必须是一个列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
   
  请求的任何其他数据类型或为的列的路径名**varbinary （max)** columnthat 不具有 FILESTREAM 存储属性将会导致查询编译时错误。  
@@ -48,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用于定义应如何格式化路径的服务器组件。 *@option* 可以是下列值之一。 默认值为 0。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -61,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  如果数据库所属的 Always On 可用性组时，值*use_replica_computer_name*具有以下效果的输出**路径名**函数：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  

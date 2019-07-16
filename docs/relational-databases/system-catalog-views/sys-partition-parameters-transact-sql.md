@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 464fc14c2dbb192fb5c06aee7c718cfec5806d54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32fe257f14c1e085a43b4150ee933888a83d5d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125343"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每个分区函数的参数在表中对应一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|此参数所属分区函数的 ID。|  
 |**parameter_id**|**int**|参数的 ID。 在分区函数中是唯一的，从 1 开始。|  
@@ -44,7 +43,7 @@ ms.locfileid: "47791155"
 |**collation_name**|**sysname**|如果参数基于字符，则为参数的排序规则名称；否则为 NULL。|  
 |**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id** = **system_type_id**。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

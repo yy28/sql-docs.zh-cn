@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078206"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
-`[ @server_name = ] 'server'` 目标作业服务器的名称。 *服务器*是**nvarchar(30)**，默认值为 （local）。 *服务器*可以是 **(LOCAL)** 为本地服务器或现有的目标服务器的名称。  
+`[ @server_name = ] 'server'` 目标作业服务器的名称。 *服务器*是**nvarchar(30)** ，默认值为 （local）。 *服务器*可以是 **(LOCAL)** 为本地服务器或现有的目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **@automatic_post** 中存在**sp_add_jobserver**，但没有列在参数。 **@automatic_post** 已保留供内部使用。  

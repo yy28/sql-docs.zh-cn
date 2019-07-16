@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083267"
 ---
 # <a name="compatibility-matrix"></a>兼容性矩阵
 下表描述了应用程序和驱动程序之前在本部分中定义的类型的兼容性。  
   
-|应用程序类型<br /><br /> 和版本|32 位 ODBC<br /><br /> *2.x* driver|ODBC *3.x*<br /><br /> 驱动程序|ODBC 3.8 驱动程序|ISO 和打开组的兼容驱动程序|  
+|应用程序类型<br /><br /> 和版本|32 位 ODBC<br /><br /> *2.x*驱动程序|ODBC *3.x*<br /><br /> 驱动程序|ODBC 3.8 驱动程序|ISO 和打开组的兼容驱动程序|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |16 位应用程序，任何版本|兼容|兼容|兼容|兼容|  
 |纯*2.x*应用程序|兼容|兼容|兼容|Not compatible[3]|  
 |纯*2.x*重新编译应用程序|兼容|Compatible[1]|Compatible[1]|Not compatible[3]|  
-|纯*2.x* Unicode 应用程序|兼容|Compatible[1]|Compatible[1]|Not Compatible[3]|  
+|纯*2.x* Unicode 应用程序|兼容|Compatible[1]|Compatible[1]|不兼容 [3]|  
 |纯打开组和符合 ISO 的应用程序|不兼容|Compatible[2]|Compatible[2]|Compatible[2]|  
 |纯 3.0 应用程序|不兼容|兼容|兼容|Not compatible[4]|  
 |纯 3.5 应用程序|不兼容|兼容|兼容|Not compatible[4]|  

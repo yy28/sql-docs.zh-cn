@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106538"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_type = ] 'job\_type'` 要添加的作业的类型。 *job_type*是**nvarchar(20)** 且不能为 NULL。 有效输入包括 **'capture'** 并 **'cleanup'**。  
+`[ @job_type = ] 'job\_type'` 要添加的作业的类型。 *job_type*是**nvarchar(20)** 且不能为 NULL。 有效输入包括 **'capture'** 并 **'cleanup'** 。  
   
 `[ @start_job = ] start_job` 标志，指示是否应添加后立即启动作业。 *start_job*是**位**默认值为 1。  
   
@@ -83,14 +82,14 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  当对数据库中的第一个表启用了变更数据捕获时，会使用默认值创建一个清理作业。 当对数据库中的第一个表启用了变更数据捕获并且该数据库不存在事务发布时，会使用默认值创建一个捕获作业。 如果存在事务发布，则可使用事务日志读取器来驱动捕获机制，此时既不需要也不允许独立的捕获作业。  
   
  因为清理和捕获作业是默认创建的，所以仅当显式删除某个作业并且必须重新创建它时才需要使用此存储过程。  
   
- 作业的名称是**cdc。**_\<数据库\_名称\>_**\_清理**或**cdc。**_\<数据库\_名称\>_**\_捕获**，其中 *< 数据库名称 >* 名称当前数据库中。 如果已存在具有相同名称的作业，名称追加一个句点 (**。**) 跟的唯一标识符，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ 作业的名称是**cdc。** _\<数据库\_名称\>_ **\_清理**或**cdc。** _\<数据库\_名称\>_ **\_捕获**，其中 *< 数据库名称 >* 名称当前数据库中。 如果已存在具有相同名称的作业，名称追加一个句点 ( **。** ) 跟的唯一标识符，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  若要查看清除或捕获作业的当前配置，请使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要更改作业的配置，请使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   

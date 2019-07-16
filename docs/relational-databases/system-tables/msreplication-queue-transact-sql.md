@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2370bfc06f9fd939f5778ad52e6cb09aeae2806
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080009"
 ---
 # <a name="msreplicationqueue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_queue**复制过程使用表来存储所有发出使用的基于 SQL 的排队更新订阅排入队列的排队的命令。 此表存储在订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**tranid**|**sysname**|执行排队命令时所使用的事务 ID。|  
 |**data**|**varbinary(8000)**|存储有关排队命令信息的压缩字节流。|  
 |**datalen**|**int**|数据的长度（字节）。|  

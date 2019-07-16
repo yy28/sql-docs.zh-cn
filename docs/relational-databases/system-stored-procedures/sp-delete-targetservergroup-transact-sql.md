@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetservergroup (Transact-SQL) | Microsoft Docs
+title: sp_delete_targetservergroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23eb166d4e601f9e126c8b4254a08153664ace19
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ae852d453d809979bc31d90868860b81020c5962
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111956"
 ---
 # <a name="spdeletetargetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  

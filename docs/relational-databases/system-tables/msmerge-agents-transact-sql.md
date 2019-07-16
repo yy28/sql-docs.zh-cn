@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1053b358a5854febe1147ceb5ec0a374468c5b69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 980ecd00a07e1119a64552a3f4c903434fd09029
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106445"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_agents**表包含每个合并代理在订阅服务器上运行的一个行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|合并代理的 ID。|  
-|**名称**|**nvarchar(100)**|合并代理的名称。|  
+|**name**|**nvarchar(100)**|合并代理的名称。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**subscriber_id**|**smallint**|订阅服务器 ID。|  
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
 |**local_job**|**bit**|指示在本地分发服务器上是否有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123823"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -48,7 +47,7 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id` 若要授予访问权限的子系统的 id 号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> **\*\* 重要\* \*** 将删除 ActiveX 脚本编写子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中的代理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |**3**|操作系统 (**CmdExec**)|  
@@ -65,7 +64,7 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'` 若要授予访问权限的子系统的名称。 **Subsystem_name**是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX 脚本|  
 |**CmdExec**|操作系统 (**CmdExec**)|  
@@ -116,7 +115,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_revoke_proxy_from_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_update_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  

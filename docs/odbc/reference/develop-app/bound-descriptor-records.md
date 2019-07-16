@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f7d21a1166868603f9389ab4ef5c5b3448b0312
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d0016a2849feb5656cb3cd6dd46eff444f37058
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118763"
 ---
 # <a name="bound-descriptor-records"></a>绑定描述符记录
 当应用程序，使其不再包含 null 值将设置 SQL_DESC_DATA_PTR 字段的描述符记录时，记录称*绑定*。  

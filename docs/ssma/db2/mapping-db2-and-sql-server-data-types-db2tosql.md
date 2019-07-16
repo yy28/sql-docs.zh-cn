@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 52322c9b3bf9d7b795458e379f5a8db65fcdbdee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141009"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>映射 DB2 和 SQL Server 数据类型 (DB2ToSQL)
 DB2 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型。 转换到 DB2 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，您必须指定如何将数据类型从 DB2 至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  

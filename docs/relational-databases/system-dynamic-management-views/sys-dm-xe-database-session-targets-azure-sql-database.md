@@ -9,14 +9,13 @@ ms.topic: language-reference
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4210e2defa71368129af868a3516eb4730dc6108
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 60d26d76f4d158799fe52e28be9927744ca98745
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090420"
 ---
 # <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "56016498"
 |-|  
 |**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和所有将来的版本。|  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 具有与 sys.dm_xe_database_sessions.address 的多对一关系。 不可为 null。|  
 |target_name|**nvarchar(60)**|会话中目标的名称。 不可为 null。|  

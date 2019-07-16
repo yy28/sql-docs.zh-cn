@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 17e43f9739b0306a42c4c454cf93fdf92b255177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122528"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'name'` 是用户定义的表或视图的限定或非限定名称。 仅当指定限定的表或视图名称时，才需要使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *名称*是**nvarchar(776)**，无默认值。  
+`[ @objname = ] 'name'` 是用户定义的表或视图的限定或非限定名称。 仅当指定限定的表或视图名称时，才需要使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *名称*是**nvarchar(776)** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|索引名。|  
 |**index_description**|**varchar(210)**|索引说明，其中包括索引所在的文件组。|  

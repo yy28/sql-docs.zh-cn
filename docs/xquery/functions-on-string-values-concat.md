@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099832"
 ---
 # <a name="functions-on-string-values---concat"></a>基于字符串值的函数 - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ fn:concat ($string as xs:string?
  本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 示例数据库。  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. 使用 concat() XQuery 函数连接字符串  
- 对于特定产品型号，此查询将返回通过连接保修期和保修说明而创建的字符串。 在目录说明文档中，<`Warranty`> 元素由 <`WarrantyPeriod`> 和 <`Description`> 子元素组成。  
+ 对于特定产品型号，此查询将返回通过连接保修期和保修说明而创建的字符串。 在目录说明文档中，<`Warranty`> 元素由组成的 <`WarrantyPeriod`> 和 <`Description`> 子元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -78,7 +77,7 @@ WHERE  PD.ProductModelID=28
   
 -   对其执行查询的文档将使用命名空间。 因此，**命名空间**关键字用于定义命名空间的前缀。 有关详细信息，请参阅[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  

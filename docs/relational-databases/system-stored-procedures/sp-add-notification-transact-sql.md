@@ -1,5 +1,5 @@
 ---
-title: sp_add_notification (Transact-SQL) | Microsoft Docs
+title: sp_add_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115064"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 `[ @notification_method = ] notification_method` 依据通知操作员的方法。 *notification_method*是**tinyint**，无默认值。 *notification_method*可以是一个或多个值结合**OR**逻辑运算符。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**1**|电子邮件|  
 |**2**|寻呼程序|  
@@ -57,7 +56,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **sp_add_notification**必须从运行**msdb**数据库。  
@@ -74,7 +73,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>示例  
  以下示例为指定的警报 (`Test Alert`) 添加电子邮件通知。  
   
-> **注意**：此示例假定 `Test Alert` 已经存在，并且 `François Ajenstat` 是有效的操作员名称。  
+> **注意**：此示例假定`Test Alert`已存在并且`François Ajenstat`是有效的运算符名称。  
   
 ```  
 USE msdb ;  
@@ -87,10 +86,10 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: eebc22fa4f17680b843f195777d7cc5f4b2835ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090451"
 ---
-# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 返回资源调控设置 Azure SQL 数据库数据库的配置和容量。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|INT|在 Azure SQL 数据库服务器中是唯一的数据库的 ID。|
 |**logical_database_guid**|UNIQUEIDENTIFIER|用户数据库和用户数据库的生命周期中保持逻辑 guid。  重命名或将数据库设置为另一种 SLO 将不会更改 GUID。 |

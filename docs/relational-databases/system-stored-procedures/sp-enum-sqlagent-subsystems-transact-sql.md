@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5aac3e1471f969ea324008c03f97b9b26c05c4ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124664"
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +39,14 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>参数  
- None  
+ 无  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**subsystem**|**nvarchar(40)**|子系统的名称。|  
 |**description**|**nvarchar(512)**|对子系统的说明。|  

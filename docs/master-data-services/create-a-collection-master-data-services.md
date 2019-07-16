@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 32171c1bf82b0a46fd5a70c1ace2cb2004675e9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8d770d32ee60c2ec2407b5f0bc805b2ee3a5aa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079764"
 ---
 # <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65484191"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要创建叶成员和合并成员的平面列表时，可以创建集合。 集合无需包括来自实体的所有成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -52,7 +51,7 @@ ms.locfileid: "65484191"
   
 8.  还可以在 **“说明”** 框中键入对集合的说明。  
   
-9. 单击“确定”  。  
+9. 单击 **“确定”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

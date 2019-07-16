@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 01e00d353f3585f7fd2568d5b8906e202263c212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140572"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的关键短语的信息。  
   
-|Column_name|类型|Description|  
+|Column_name|type|描述|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|从中对当前关键短语提取并编制索引的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**document_key**|**\***<br /><br /> 此键与源表中的唯一键的类型相匹配。|从中对当前关键短语进行索引的文档或行的唯一键值。|  

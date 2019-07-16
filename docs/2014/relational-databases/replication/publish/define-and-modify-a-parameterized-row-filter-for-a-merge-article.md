@@ -19,16 +19,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212117"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改参数化行筛选器。  
   
- 在创建表项目时，可以使用参数化行筛选器。 这些筛选器使用 [WHERE](/sql/t-sql/queries/where-transact-sql) 子句来选择要发布的相应数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数：[SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql)并[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
+ 在创建表项目时，可以使用参数化行筛选器。 这些筛选器使用 [WHERE](/sql/t-sql/queries/where-transact-sql) 子句来选择要发布的相应数据。 请勿在子句中指定文本值（像用静态行筛选器处理那样），而是指定以下一个或两个系统函数：[SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) 和 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql) 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
   
  
   
@@ -44,11 +44,11 @@ ms.locfileid: "52771659"
   
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上定义、修改和删除参数化行筛选器。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+ 可在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  对话框的“筛选行”  页上定义、修改和删除参数化行筛选器。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>定义参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，单击“添加”，然后单击“添加筛选器”。  
+1.  在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  的“筛选行”  页上，单击“添加”  ，然后单击“添加筛选器”  。  
   
 2.  在 **“添加筛选器”** 对话框中，从下拉列表框中选择要筛选的表。  
   
@@ -74,15 +74,15 @@ ms.locfileid: "52771659"
   
     -   **此表中的行将仅转到一个订阅**  
   
-     如果选择 **“此表中的行将仅转到一个订阅”**，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
+     如果选择 **“此表中的行将仅转到一个订阅”** ，则合并复制可以通过存储和处理较少的元数据来优化性能。 但是，必须确保在对数据分区时不能将行复制到多个订阅服务器。 有关详细信息，请参阅主题 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)中的“设置‘分区选项’”部分。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
+6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>修改参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。  
+1.  在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  的“筛选行”  页上，在“筛选的表”  窗格中选择筛选器，然后单击“编辑”  。  
   
 2.  在 **“编辑筛选器”** 对话框中，修改筛选器。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "52771659"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>删除参数化行筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。  
+1.  在新建发布向导的“筛选表行”  页或“发布属性 - \<发布>”  的“筛选行”  页上，在“筛选的表”  窗格中选择筛选器，然后单击“删除”  。  
   
 
   
@@ -99,7 +99,7 @@ ms.locfileid: "52771659"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>为合并发布中的项目定义参数化行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定 **@publication**，为 **@article**指定项目名称，为 **@source_object**指定要发布的表，为 **@subset_filterclause** 指定定义参数化筛选器的 WHERE 子句（不包括 `WHERE`），并为 **@partition_options**（说明从参数化行筛选器得出的分区类型）指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定 **@publication** ，为 **@article** 指定项目名称，为 **@source_object** 指定要发布的表，为 **@subset_filterclause** 指定定义参数化筛选器的 WHERE 子句（不包括 `WHERE`），并为 **@partition_options** （说明从参数化行筛选器得出的分区类型）指定下列值之一：  
   
     -   **0** - 对项目的筛选是静态的，或者不为每个分区生成唯一的数据子集（“重叠”分区）。  
   
@@ -111,9 +111,9 @@ ms.locfileid: "52771659"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>更改合并发布中的项目的参数化行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定**@publication**， **@article**，值为`subset_filterclause`对于**@property**，定义的参数化筛选器的表达式**@value** (不包括`WHERE`)，并将值**1**同时**@force_invalidate_snapshot**和 **@force_reinit_subscription**.  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定 **@publication** ， **@article** ，值为`subset_filterclause`对于 **@property** ，定义的参数化筛选器的表达式 **@value** (不包括`WHERE`)，并将值**1**同时 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** .  
   
-2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 指定**@publication**， **@article**，值为`partition_options`对于**@property**，和最适当的分区选项**@value** ，可以是以下值之一：  
+2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 。 指定 **@publication** ， **@article** ，值为`partition_options`对于 **@property** ，和最适当的分区选项 **@value** ，可以是以下值之一：  
   
     -   **0** - 对项目的筛选是静态的，或者不为每个分区生成唯一的数据子集（“重叠”分区）。  
   

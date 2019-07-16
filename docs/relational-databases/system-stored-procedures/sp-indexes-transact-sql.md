@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62961909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139922"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique= ] '*is_unique*'  
  要为其返回信息的索引的类型。 *is_unique*是**位**，默认值为 NULL，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |1|返回有关唯一索引的信息。|  
 |0|返回有关非唯一索引的信息。|  
@@ -71,7 +70,7 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |TABLE_CAT|**sysname**|指定的表所在的数据库的名称。|  
 |TABLE_SCHEM|**sysname**|表的架构。|  
@@ -102,12 +101,12 @@ EXEC sp_indexes @table_server = 'Seattle1',
   
 ## <a name="see-also"></a>请参阅  
  [分布式查询存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

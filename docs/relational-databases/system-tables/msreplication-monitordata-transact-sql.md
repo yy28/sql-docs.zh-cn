@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 898990152a86380ae9ba28e9766ae47675a39706
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079144"
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_monitordata**表包含复制监视器，用于为每个受监视的订阅的一个行的缓存的数据。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**lastrefresh**|**datetime**|刷新监视数据的日期和时间。|  
 |**computetime**|**int**|计算监视数据所花的时间（以秒为单位）。|  
@@ -38,7 +37,7 @@ ms.locfileid: "52775529"
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_srvid**|**int**|发布服务器的服务器 ID。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布的类型，可以是以下值之一：<br /><br /> **0** = 事务发布<br /><br /> **1** = 快照发布<br /><br /> **2** = 合并发布|  
 |**agent_type**|**int**|复制代理的类型，可以是下列值之一。<br /><br /> **1** = 快照代理<br /><br /> **2** = 日志读取器代理<br /><br /> **3** = 分发代理<br /><br /> **4** = 合并代理<br /><br /> **9** = 队列读取器代理|  
 |**agent_id**|**int**|复制代理的 ID。|  
@@ -50,7 +49,7 @@ ms.locfileid: "52775529"
 |**last_distsync**|**datetime**|最后一个日期和分发代理运行的时间。|  
 |**agentstoptime**|**datetime**|代理停止的日期和时间。|  
 |**distdb**|**sysname**|用于订阅的分发数据库的名称。|  
-|**保留期**|**int**|发布保持期。|  
+|**retention**|**int**|发布保持期。|  
 |**time_stamp**|**datetime**|仅供内部使用。|  
 |**worst_latency**|**int**|在事务发布中，由日志读取器代理或分发代理传播的数据更改的最长滞后时间（以秒为单位）。|  
 |**best_latency**|**int**|在事务发布中，由日志读取器代理或分发代理传播的数据更改的最短滞后时间（以秒为单位）。|  

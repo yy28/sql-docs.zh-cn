@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120052"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>参数  
 `[ @class = ] 'class'` 类别的类。 *类*是**varchar(8)** ，无默认值，并且必须具有下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**JOB**|删除作业类别。|  
-|**ALERT**|删除警报类别。|  
+|**发出警报**|删除警报类别。|  
 |**运算符**|删除操作员类别。|  
   
 `[ @name = ] 'name'` 要删除的类别的名称。 *名称*是**sysname**，无默认值。  
@@ -78,10 +77,10 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

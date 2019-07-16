@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a31b03208eba573fc6bd50f2348733ef0a07c2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3728fddb26d45107b0e695453bef6eeb9fa5de63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097784"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "63013326"
   
  此视图显示的最后 1000 个请求和活动请求; 的数据活动请求始终具有此视图中的数据。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|查询此 DMS 辅助进程是部分 of.request_id，step_index，和 dms_step_index 构成此视图的键。||  
 |step_index|**int**|查询此 DMS 辅助角色是的一部分的步骤。|请参阅中的步索引[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|dms_step_index|**int**|运行此工作线程在 DMS 计划中的步骤。|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|dms_step_index|**int**|运行此工作线程在 DMS 计划中的步骤。|请参阅[sys.dm_exec_dms_workers (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|**int**|辅助角色运行的节点。|请参阅[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|||  
 |type|**nvarcha(32)**|||  

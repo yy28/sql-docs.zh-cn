@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e70e321684ac9dfd738ae45130cee2e3ded070cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0d85f3906991b698c2d2c5a70e7c5e95f7421d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68221759"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>ExitCode 属性（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51666036"
 object.ExitCode [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

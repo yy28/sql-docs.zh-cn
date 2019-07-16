@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9207dde54a14e345e99d3c04d4cb66622d85972e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28fcf56293516937455afc387a8d478734f5b006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121381"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 函数
 **符合性**  
@@ -88,7 +87,7 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>诊断  
  当**SQLDataSources**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*HandleType*设为 SQL_HANDLE_ENV 和一个*处理*的*EnvironmentHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLDataSources** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|(DM) 特定于驱动程序管理器的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|(DM) 缓冲区\* *ServerName*是否不足够大以返回完整的数据源名称。 因此，名称已被截断。 在中返回整个数据源名称的长度\* *NameLength1Ptr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> (DM) 缓冲区\**说明*是否不足够大以返回完成驱动程序的描述。 因此，说明已被截断。 在返回未截断的数据源说明的长度 **NameLength2Ptr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  

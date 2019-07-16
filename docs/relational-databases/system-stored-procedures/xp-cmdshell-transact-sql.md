@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123771"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>参数  
  **'** *command_string*   
- 包含要传递到操作系统的命令的字符串。 *command_string*是**varchar(8000)** 或**nvarchar(4000)**，无默认值。 *command_string*不能包含多个集的两个双引号。 如果任何空格都存在于文件路径或程序中引用的名称，则需要一对引号*command_string*。 如果不方便使用内含的空格，则可考虑使用 FAT 8.3 文件名作为解决方法。  
+ 包含要传递到操作系统的命令的字符串。 *command_string*是**varchar(8000)** 或**nvarchar(4000)** ，无默认值。 *command_string*不能包含多个集的两个双引号。 如果任何空格都存在于文件路径或程序中引用的名称，则需要一对引号*command_string*。 如果不方便使用内含的空格，则可考虑使用 FAT 8.3 文件名作为解决方法。  
   
  **no_output**  
  可选参数，指定不应向客户端返回任何输出。  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  如果**xp_cmdshell**批处理中执行，并返回错误，批处理将失败。 这是行为的更改。 在早期版本的[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批处理将会继续执行。  
   
 ## <a name="xpcmdshell-proxy-account"></a>xp_cmdshell 代理帐户  
- 用户不是成员的调用时**sysadmin**固定服务器角色**xp_cmdshell**使用的帐户名称和密码存储在名为的凭据连接到 Windows **# #xp_cmdshell_proxy_account # #**。 该代理凭据不存在，如果**xp_cmdshell**将失败。  
+ 用户不是成员的调用时**sysadmin**固定服务器角色**xp_cmdshell**使用的帐户名称和密码存储在名为的凭据连接到 Windows **# #xp_cmdshell_proxy_account # #** 。 该代理凭据不存在，如果**xp_cmdshell**将失败。  
   
  可以通过执行创建代理帐户凭据**sp_xp_cmdshell_proxy_account**。 此存储过程将 Windows 用户名和密码作为参数使用。 例如，以下命令为具有 Windows 密码 `SHIPPING\KobeR` 的 Windows 域用户 `sdfh%dkc93vcMt0` 创建代理凭据。  
   

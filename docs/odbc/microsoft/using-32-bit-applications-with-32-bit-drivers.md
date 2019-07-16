@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088159"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>配合使用 32 位应用程序和 32 位驱动程序
 可以使用 32 位驱动程序运行 32 位应用程序。 32 位应用程序和 32 位驱动程序使用 Win32® API。  
@@ -33,12 +32,12 @@ ms.locfileid: "63213464"
 >  不要在 windows Nt/windows 2000 上使用 32 位形式转换安装程序 DLL。 尽管它具有与 32 位安装程序 DLL 文件同名，但它是一个不同的 DLL。  
   
 ## <a name="administration"></a>管理  
- 可以通过使用 ODBC 数据源管理器管理 32 位驱动程序的数据的源。 若要打开 ODBC 管理器中运行 Windows 2000 的计算机上，打开 Windows 控制面板中，双击**管理工具**，然后双击**数据源 (ODBC)**。 在计算机上运行的 Microsoft Windows 的早期版本，名为图标**32 位 ODBC**或只需**ODBC**。  
+ 可以通过使用 ODBC 数据源管理器管理 32 位驱动程序的数据的源。 若要打开 ODBC 管理器中运行 Windows 2000 的计算机上，打开 Windows 控制面板中，双击**管理工具**，然后双击**数据源 (ODBC)** 。 在计算机上运行的 Microsoft Windows 的早期版本，名为图标**32 位 ODBC**或只需**ODBC**。  
   
 ## <a name="components"></a>组件  
  ODBC 组件包括以下文件为运行 32 位驱动程序使用 32 位应用程序。 这些组件是 \Redist 目录中。  
   
-|File name|Description|  
+|File name|描述|  
 |---------------|-----------------|  
 |Odbc32.dll|32 位驱动程序管理器|  
 |Odbccp32.dll|32 位安装程序 DLL|  

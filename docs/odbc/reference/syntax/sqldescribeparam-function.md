@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 337ed5808b8eb3cf964977fcba70307984d1b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104708"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函数
 **符合性**  
@@ -84,7 +83,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="diagnostics"></a>诊断  
  当**SQLDescribeParam**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLDescribeParam** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07009|描述符索引无效|(DM) 的参数指定的值*ParameterNumber*小于 1。<br /><br /> 为参数指定的值*ParameterNumber*大于相关联的 SQL 语句中的参数数量。<br /><br /> 参数标记是一个非 DML 语句的一部分。<br /><br /> 参数标记为属于**选择**列表。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ecdc3192e0b6de26d7b829883d26cc7bbaa7e04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216390"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "54136017"
   
 -   程序集是受支持的程序集之一。 有关详细信息，请参阅[支持的.NET Framework 库](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
--   正在使用**创建程序集从**_\<位置 >，_ 和中提供了所有引用的程序集和其依赖项*\<位置 >*.  
+-   正在使用**创建程序集从** _\<位置 >，_ 和中提供了所有引用的程序集和其依赖项 *\<位置 >* .  
   
--   正在使用**创建程序集从**_\<字节...>，_ 和所有引用指定通过空格分隔的字节。  
+-   正在使用**创建程序集从** _\<字节...>，_ 和所有引用指定通过空格分隔的字节。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**程序集都必须满足以下条件：  

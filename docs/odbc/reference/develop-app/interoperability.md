@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 434b27bffe3b32aa9fa0c5c6fd3a7100e8c7ea8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138856"
 ---
 # <a name="interoperability"></a>互操作性
 *互操作性*是单个应用程序的许多不同的 Dbms 的能力。 需要编写通用、 可互操作的应用程序是领先的开发的 ODBC 的主要因素之一。 但是，互操作性不是简单的路径，然后从"不可互操作"到"完全可互操作。" 路径有许多分支，并且每个需要功能、 速度、 代码复杂性和开发时间之间的权衡。  

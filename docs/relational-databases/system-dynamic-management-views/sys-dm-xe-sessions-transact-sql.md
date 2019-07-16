@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5c46d9051fb1760791c16c9274a1803c58c1e90
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090225"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关处于活动状态的扩展事件会话的信息。 此会话是事件、操作和目标的集合。  
     
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary(8)**|会话的内存地址。 在本地系统，地址是唯一的。 不可为 null。|  
-|NAME|**nvarchar(256)**|会话的名称。 在本地系统是唯一的名称。 不可为 null。|  
+|name|**nvarchar(256)**|会话的名称。 在本地系统是唯一的名称。 不可为 null。|  
 |pending_buffers|**int**|正在挂起处理的已满缓冲区的数量。 不可为 null。|  
-|total_regular_buffers|**int**|与会话相关联的常规缓冲区的总数。 不可为 null。<br /><br /> 注意：大多数时候都在使用常规缓冲区。 这类缓冲区很大，足以容纳大量事件。 每个会话通常有三个或更多缓冲区。 常规缓冲区的数目由服务器根据通过 MEMORY_PARTITION_MODE 选项设置的内存分区自动确定。 常规缓冲区的大小等于 MAX_MEMORY 选项的值（默认值为 4 MB）除以缓冲区的数目。 有关 MEMORY_PARTITION_MODE 和 MAX_MEMORY 选项的详细信息，请参阅[CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)。|  
+|total_regular_buffers|**int**|与会话相关联的常规缓冲区的总数。 不可为 null。<br /><br /> 注意:大多数情况下，会使用常规缓冲区。 这类缓冲区很大，足以容纳大量事件。 每个会话通常有三个或更多缓冲区。 常规缓冲区的数目由服务器根据通过 MEMORY_PARTITION_MODE 选项设置的内存分区自动确定。 常规缓冲区的大小等于 MAX_MEMORY 选项的值（默认值为 4 MB）除以缓冲区的数目。 有关 MEMORY_PARTITION_MODE 和 MAX_MEMORY 选项的详细信息，请参阅[CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)。|  
 |regular_buffer_size|**bigint**|常规缓冲区的大小（以字节为单位）。 不可为 null。|  
-|total_large_buffers|**int**|大型缓冲区的总数。 不可为 null。<br /><br /> 注意：当事件大于常规缓冲区时，将使用大型缓冲区。 为此，需要显式保留这类缓冲区。 大型缓冲区在事件会话启动时分配，并根据 MAX_EVENT_SIZE 选项确定大小。 有关 MAX_EVENT_SIZE 选项确定大小的详细信息，请参阅[CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)。|  
+|total_large_buffers|**int**|大型缓冲区的总数。 不可为 null。<br /><br /> 注意:当事件大于常规缓冲区时，将使用大型缓冲区。 为此，需要显式保留这类缓冲区。 大型缓冲区在事件会话启动时分配，并根据 MAX_EVENT_SIZE 选项确定大小。 有关 MAX_EVENT_SIZE 选项确定大小的详细信息，请参阅[CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)。|  
 |large_buffer_size|**bigint**|大型缓冲区的大小（以字节为单位）。 不可为 null。|  
 |total_buffer_size|**bigint**|用于存储会话事件的内存缓冲区的总大小（以字节为单位）。 不可为 null。|  
 |buffer_policy_flags|**int**|指示会话事件缓冲区在所有缓冲区已满并且一个新事件被激发时的行为的位图。 不可为 null。|  

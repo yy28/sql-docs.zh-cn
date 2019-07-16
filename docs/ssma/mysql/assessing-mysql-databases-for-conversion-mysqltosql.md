@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 9983edb500e424be6bbb4f85ff005af00fd65aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139210"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>评估 MySQL 数据库以进行转换 (MySQLToSQL)
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您应该确定迁移将复杂程度，并且多长时间的迁移。 SSMA 可以创建评估报告，显示将成功转换的对象的百分比。 SSMA 还可以查看特定问题，导致转换失败。  

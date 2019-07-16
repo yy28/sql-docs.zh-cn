@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76846a5027ff5229997151b36a93b1ea553ddbc8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125746"
 ---
 # <a name="bookmark-c-data-type"></a>书签 C 数据类型
 书签 C 数据类型允许应用程序来检索一个书签。 书签 C 类型仅用于检索可以是变量的长度; 的书签值它们不应转换为其他数据类型。 应用程序将检索从第 0 列的结果与设置的书签**SQLBulkOperations** （带有 SQL_ADD 的操作）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 有关详细信息，请参阅[书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  

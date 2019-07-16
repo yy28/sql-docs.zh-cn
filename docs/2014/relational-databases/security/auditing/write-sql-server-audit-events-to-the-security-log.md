@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056777"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211972"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>将 SQL Server 审核事件写入安全日志
   在高度安全环境中，Windows 安全日志是写入记录对象访问的事件的合适位置。 其他审核位置也受支持，但是更易被篡改。  
@@ -45,7 +45,7 @@ ms.locfileid: "48056777"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要将 SQL Server 审核事件写入安全日志，请使用：**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48056777"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Restrictions"></a> 限制和局限  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员应了解安全日志的本地设置可能会被域策略覆盖。 在这种情况下，域策略可能会覆盖子类别设置 (**auditpol /get /subcategory:"application generated"**)。 这可能会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在无法检测 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 尝试审核的事件是否将不被记录的情况下记录事件的能力。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员应了解安全日志的本地设置可能会被域策略覆盖。 在这种情况下，域策略可能会覆盖子类别设置 (**auditpol /get /subcategory:"application generated"** )。 这可能会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在无法检测 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 尝试审核的事件是否将不被记录的情况下记录事件的能力。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48056777"
   
 1.  使用管理权限打开命令提示符。  
   
-    1.  在“开始”菜单中，依次指向“所有程序”、“附件”，右键单击“命令提示符”，然后单击“以管理员身份运行”。  
+    1.  在“开始”  菜单中，依次指向“所有程序”  、“附件”  ，右键单击“命令提示符”  ，然后单击“以管理员身份运行”  。  
   
-    2.  在 **“用户帐户控制”** 对话框打开时，单击 **“继续”**。  
+    2.  在 **“用户帐户控制”** 对话框打开时，单击 **“继续”** 。  
   
 2.  执行以下语句以从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]启用审核。  
   
@@ -83,17 +83,17 @@ ms.locfileid: "48056777"
   
 ##  <a name="secpolAccess"></a> 使用 secpol 将生成安全审核权限授予帐户  
   
-1.  对于任何 Windows 操作系统，在 **“开始”** 菜单上单击 **“运行”**。  
+1.  对于任何 Windows 操作系统，在 **“开始”** 菜单上单击 **“运行”** 。  
   
-2.  键入 **secpol.msc** ，然后单击 **“确定”**。 在显示 **“用户访问控制”** 对话框时，单击 **“继续”**。  
+2.  键入 **secpol.msc** ，然后单击 **“确定”** 。 在显示 **“用户访问控制”** 对话框时，单击 **“继续”** 。  
   
-3.  在“本地安全策略”工具中，依次展开 **“安全设置”**、 **“本地策略”**，然后单击 **“用户权限分配”**。  
+3.  在“本地安全策略”工具中，依次展开 **“安全设置”** 、 **“本地策略”** ，然后单击 **“用户权限分配”** 。  
   
-4.  在结果窗格中，双击“生成安全审核”。  
+4.  在结果窗格中，双击“生成安全审核”  。  
   
-5.  在 **“本地安全设置”** 选项卡上，单击 **“添加用户或组”**。  
+5.  在 **“本地安全设置”** 选项卡上，单击 **“添加用户或组”** 。  
   
-6.  在“选择用户、计算机或组”对话框中，键入用户帐户的名称，例如 **domain1\user1**，然后单击“确定”，或单击“高级”并搜索帐户。  
+6.  在“选择用户、计算机或组”  对话框中，键入用户帐户的名称，例如 **domain1\user1**，然后单击“确定”  ，或单击“高级”  并搜索帐户。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -103,15 +103,15 @@ ms.locfileid: "48056777"
   
 ##  <a name="secpolPermission"></a> 在 Windows 中使用 secpol 配置审核对象访问设置  
   
-1.  如果操作系统的版本早于 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008，则在 **“开始”** 菜单上单击 **“运行”**。  
+1.  如果操作系统的版本早于 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 或 Windows Server 2008，则在 **“开始”** 菜单上单击 **“运行”** 。  
   
-2.  键入 **secpol.msc** ，然后单击 **“确定”**。 在显示 **“用户访问控制”** 对话框时，单击 **“继续”**。  
+2.  键入 **secpol.msc** ，然后单击 **“确定”** 。 在显示 **“用户访问控制”** 对话框时，单击 **“继续”** 。  
   
-3.  在“本地安全策略”工具中，依次展开 **“安全设置”**、 **“本地策略”**，然后单击 **“审核策略”**。  
+3.  在“本地安全策略”工具中，依次展开 **“安全设置”** 、 **“本地策略”** ，然后单击 **“审核策略”** 。  
   
-4.  在结果窗格中，双击“审核对象访问”。  
+4.  在结果窗格中，双击“审核对象访问”  。  
   
-5.  在 **“本地安全设置”** 选项卡上的 **“审核这些操作”** 区域中，选择 **“成功”** 和 **“失败”**。  
+5.  在 **“本地安全设置”** 选项卡上的 **“审核这些操作”** 区域中，选择 **“成功”** 和 **“失败”** 。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

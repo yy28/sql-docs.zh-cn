@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138329"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
 类型映射项目设置，可以设置 SSMA 项目的默认类型映射。  
@@ -54,16 +53,16 @@ ms.locfileid: "63231822"
 |**MySQL 数据类型**|**SQL Server 数据类型**|  
 |BIGINT|BIGINT|  
 |bigint[*..255]|BIGINT|  
-|BINARY|binary[1]|  
-|binary[0..1]|binary[1]|  
+|BINARY|二进制 [1]|  
+|binary[0..1]|二进制 [1]|  
 |binary[2..255]|binary[*]|  
-|bit|binary[1]|  
-|bit[0..8]|binary[1]|  
-|bit[17..24]|binary[3]|  
+|bit|二进制 [1]|  
+|bit[0..8]|二进制 [1]|  
+|bit[17..24]|二进制文件 [3]|  
 |bit[25..32]|binary[4]|  
 |bit[33..40]|binary[5]|  
 |bit[41..48]|binary[6]|  
-|bit[49..56]|binary[7]|  
+|bit[49..56]|二进制 [7]|  
 |bit[57..64]|binary[8]|  
 |bit[9..16]|binary[2]|  
 |blob|varbinary(max)|  
@@ -73,9 +72,9 @@ ms.locfileid: "63231822"
 |bool|bit|  
 |boolean|bit|  
 |char|nchar[1]|  
-|char 字节|binary[1]|  
-|char byte[0..1]|binary[1]|  
-|char byte[2..255]|binary[*]|  
+|char 字节|二进制 [1]|  
+|char 字节 [0..1]|二进制 [1]|  
+|char 字节 [2..255]|binary[*]|  
 |char[0..1]|nchar[1]|  
 |char[2..255]|nchar[*]|  
 |character|nchar[1]|  
@@ -91,24 +90,24 @@ ms.locfileid: "63231822"
 |Decimal|Decimal|  
 |decimal[*..65]|decimal[*][0]|  
 |decimal[*..65][\*..30]|decimal[*][\*]|  
-|double|float[53]|  
-|double precision|float[53]|  
+|double|float [53]|  
+|double precision|float [53]|  
 |双精度 [*...255] [\*...30]|numeric[*][\*]|  
 |double[*..255][\*..30]|numeric[*][\*]|  
 |已修复|NUMERIC|  
 |fixed[*..65][\*..30]|numeric[*][\*]|  
 |FLOAT|float[24]|  
 |float[*..255][\*..30]|numeric[*][\*]|  
-|float[*..53]|float[53]|  
-|ssNoversion|ssNoversion|  
-|int[*..255]|ssNoversion|  
-|integer|ssNoversion|  
-|integer[*..255]|ssNoversion|  
+|float[*..53]|float [53]|  
+|INT|INT|  
+|int[*..255]|INT|  
+|integer|INT|  
+|integer[*..255]|INT|  
 |longblob|varbinary(max)|  
-|longtext|nvarchar(max)|  
+|长文本|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|ssNoversion|  
-|mediumint[*..255]|ssNoversion|  
+|mediumint|INT|  
+|mediumint[*..255]|INT|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar[1]|  
 |national char [0..1]|nchar[1]|  
@@ -122,13 +121,13 @@ ms.locfileid: "63231822"
 |区域字符集 [2..255]|nchar[*]|  
 |国家/地区 varchar|nvarchar[1]|  
 |国家/地区 varchar [0..1]|nvarchar[1]|  
-|national varchar[2..4000]|nvarchar[*]|  
+|国家/地区 varchar [2..4000]|nvarchar[*]|  
 |国家/地区 varchar [4001..*]|nvarchar(max)|  
 |NCHAR|nchar[1]|  
 |nchar varchar|nvarchar[1]|  
-|nchar varchar[0..1]|nvarchar[1]|  
-|nchar varchar[2..4000]|nvarchar[*]|  
-|nchar varchar[4001..*]|nvarchar(max)|  
+|nchar varchar [0..1]|nvarchar[1]|  
+|nchar varchar [2..4000]|nvarchar[*]|  
+|nchar varchar [4001..*]|nvarchar(max)|  
 |nchar[0..1]|nchar[1]|  
 |nchar[2..255]|nchar[*]|  
 |NUMERIC|NUMERIC|  
@@ -138,7 +137,7 @@ ms.locfileid: "63231822"
 |nvarchar[0..1]|nvarchar[1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
-|REAL|float[53]|  
+|REAL|float [53]|  
 |real[*..255][\*..30]|numeric[*][\*]|  
 |串行|BIGINT|  
 |SMALLINT|SMALLINT|  
@@ -161,28 +160,28 @@ ms.locfileid: "63231822"
 |无符号的小数|Decimal|  
 |无符号的小数 [*...65]|decimal[*][0]|  
 |无符号的小数 [*...65] [\*...30]|decimal[*][\*]|  
-|无符号的双精度|float[53]|  
-|无符号的双精度|float[53]|  
+|无符号的双精度|float [53]|  
+|无符号的双精度|float [53]|  
 |无符号的双精度 [*...255] [\*...30]|numeric[*][\*]|  
 |未签名的双精度 [*...255] [\*...30]|numeric[*][\*]|  
 |未签名的固定|NUMERIC|  
 |未签名的固定 [*...65] [\*...30]|numeric[*][\*]|  
 |无符号的浮点型|float[24]|  
 |无符号的 float [*...255] [\*...30]|numeric[*][\*]|  
-|无符号的 float [*...53]|float[53]|  
+|无符号的 float [*...53]|float [53]|  
 |unsigned int|BIGINT|  
 |无符号的整数 [*...255]|BIGINT|  
 |无符号的整数|BIGINT|  
 |无符号的整数 [*...255]|BIGINT|  
-|无符号的 mediumint|ssNoversion|  
-|无符号的 mediumint [*...255]|ssNoversion|  
+|无符号的 mediumint|INT|  
+|无符号的 mediumint [*...255]|INT|  
 |无符号的数字|NUMERIC|  
 |无符号的数字 [*...65]|numeric[*][0]|  
 |无符号的数字 [*...65] [\*...30]|numeric[*][\*]|  
-|无符号真正|float[53]|  
+|无符号真正|float [53]|  
 |未签名的实际 [*...255 [[\*...30]|numeric[*][\*]|  
-|无符号的 smallint|ssNoversion|  
-|无符号的 smallint [*...255]|ssNoversion|  
+|无符号的 smallint|INT|  
+|无符号的 smallint [*...255]|INT|  
 |无符号的 tinyint|TINYINT|  
 |无符号的 tinyint [*...255]|TINYINT|  
 |varbinary[0..1]|varbinary[1]|  

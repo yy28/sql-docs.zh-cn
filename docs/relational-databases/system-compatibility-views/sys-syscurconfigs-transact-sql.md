@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3ef0f49229ab374a0ca9e2dce12d7fa6ea5f59bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089182"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "62693836"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**value**|**int**|用户可修改的变量值。 仅在执行 RECONFIGURE 后，由[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用。|  
 |**config**|**smallint**|配置变量号。|  
-|**comment**|**nvarchar(255)**|对配置选项的解释。|  
+|**注释**|**nvarchar(255)**|对配置选项的解释。|  
 |**status**|**smallint**|表示选项状态的位图。 可能的值包括：<br /><br /> 0 = 静态。 重新启动服务器后，设置才会生效。<br /><br /> 1 = 动态。 执行 RECONFIGURE 语句后，变量才会生效。<br /><br /> 2 = 高级。 显示变量时，才**显示高级选项**设置。<br /><br /> 3 = 动态和高级。|  
   
 ## <a name="see-also"></a>请参阅  

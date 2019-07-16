@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf94358d5d4f06f787546ab98a8cbfcab2693bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63051407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109471"
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为当前数据库中创建的每个会话优先级都包含一行，如下表所示： 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|一个数字，用于唯一标识会话优先级。 不可为 NULL。|  
 |name|**sysname**|会话优先级的名称。 不可为 NULL。|  
@@ -69,7 +68,7 @@ ORDER BY priority_name, contract_name,
  [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [sys.services &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
+ [sys.services &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
  [sys.service_contracts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  
   
   

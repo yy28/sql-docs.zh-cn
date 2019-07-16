@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a007f4c7c92bf4254e4d36638cf2d92ba0764be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62902815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082025"
 ---
 # <a name="connection-string-format-and-attributes"></a>连接字符串格式和属性
 > [!IMPORTANT]  
@@ -40,7 +39,7 @@ ms.locfileid: "62902815"
   
  连接字符串的属性如下所示：  
   
-|特性|Description|默认值|  
+|特性|描述|默认值|  
 |---------------|-----------------|-------------------|  
 |DSN|数据源名称中的驱动程序选项卡列出**ODBC 数据源管理器**对话框。|""|  
 |PWD|你想要访问 Oracle 服务器的密码。 此驱动程序支持 Oracle 置于密码的限制。|""|  

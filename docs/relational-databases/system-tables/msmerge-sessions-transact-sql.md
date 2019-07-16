@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4290f3d41cf4e5210a7fde98132db533f8336810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106354"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_sessions**表包含以前的合并代理作业会话结果的历史记录行。 每运行一次合并代理，都会在表中添加一个新行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|合并代理作业会话的 ID。|  
 |**agent_id**|**int**|合并代理的 ID。|  

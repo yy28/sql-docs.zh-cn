@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 9e5ada5c47d49b801a9dba1a70f22754096f4b27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135172"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "58860718"
 ## <a name="table-returned"></a>返回的表  
 返回的计数器基于每个运算符和每个线程。 结果是动态的如不匹配的现有选项结果`SET STATISTICS XML ON`该查询完成时仅创建输出。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|标识运行此查询的会话。 引用 dm_exec_sessions.session_id。|  
 |request_id|**int**|确定目标请求。 引用 dm_exec_sessions.request_id。|  
@@ -92,10 +91,10 @@ ms.locfileid: "58860718"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
    
 ## <a name="examples"></a>示例  
- 第 1 步：登录到你打算运行将使用分析的查询的会话`sys.dm_exec_query_profiles`。 若要配置查询以分析使用`SET STATISTICS PROFILE ON`。 在同一会话中运行你的查询。  
+ 步骤 1：登录到你打算运行将使用分析的查询的会话`sys.dm_exec_query_profiles`。 若要配置查询以分析使用`SET STATISTICS PROFILE ON`。 在同一会话中运行你的查询。  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -109,7 +108,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 第 2 步：登录到不同于在其中运行查询的会话的第二个会话。  
+ 步骤 2：登录到不同于在其中运行查询的会话的第二个会话。  
   
  以下语句总结当前在会话 54 中运行的查询的进度。 为此，它基于每个节点的所有线程计算输出行的总数，然后将其与该节点的输出行的估算数目进行比较。  
   

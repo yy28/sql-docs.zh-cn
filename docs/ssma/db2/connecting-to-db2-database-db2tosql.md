@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141071"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库 (DB2ToSQL)
 将 DB2 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须连接到你想要迁移的 DB2 数据库。 连接时，SSMA 中获取所有的 DB2 架构有关的元数据，然后在 DB2 元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  

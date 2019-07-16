@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090851"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(255)** ，可以是表中的值之一。  
   
-|属性|ReplTest1|Description|  
+|属性|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||快照文件夹的存储位置（如果该位置不同于默认位置或是默认位置之外的位置）。|  
 |**description**||对该合并请求订阅的说明。|  
-|**distributor**||分发服务器的名称。|  
+|**分发服务器**||分发服务器的名称。|  
 |**distributor_login**||分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**distributor_password**||在分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
 |**distributor_security_mode**|**1**|连接分发服务器时，使用 Windows 身份验证。|  
@@ -66,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||仅为向后兼容而提供。 用于连接到 FTP 服务用户名。|  
 |**ftp_password**||仅为向后兼容而提供。 用于连接到 FTP 服务的用户密码。|  
 |**ftp_port**||仅为向后兼容而提供。 分发服务器 FTP 服务的端口号。|  
-|**hostname**||在联接筛选器或逻辑记录关系的 WHERE 子句中使用 HOST_NAME() 函数时，指定该函数的值。|  
+|**主机名**||在联接筛选器或逻辑记录关系的 WHERE 子句中使用 HOST_NAME() 函数时，指定该函数的值。|  
 |**internet_login**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
 |**internet_security_mode**|**1**|在连接到承载 Web 同步的 Web 服务器时使用 Windows 身份验证。|  
@@ -82,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|连接发布服务器时，使用 Windows 身份验证。|  
 ||**2**|同步触发器使用静态**sysservers**项执行远程过程调用 (RPC) 和发布者必须在定义**sysservers**表作为远程服务器或链接的服务器。|  
 |**sync_type**|**automatic**|已发布表的架构和初始数据将首先传输到订阅服务器。|  
-||**none**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
+||**无**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
 |**use_ftp**|**true**|使用 FTP 而不是典型协议来检索快照。|  
 ||**false**|使用典型协议来检索快照。|  
 |**use_web_sync**|**true**|可以通过 HTTP 同步订阅。|  
@@ -108,8 +107,8 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="see-also"></a>请参阅  
  [查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

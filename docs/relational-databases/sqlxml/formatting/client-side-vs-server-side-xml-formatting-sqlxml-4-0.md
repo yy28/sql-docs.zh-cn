@@ -1,5 +1,5 @@
 ---
-title: 客户端 与服务器端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
+title: 客户端与服务器端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd9f76b11edf684c68658f040b4aa3e0f63727d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d02eeb0ad64a62343fda53a1907cec2b4bb9e850
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220363"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端 与服务器端 XML 格式 (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端与服务器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题说明在 SQLXML 中客户端与服务器端 XML 格式的一般差异。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "56028828"
   
  您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个指定的查询分开 **\<sql:query >** 块，将获得所需的结果。  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp 在客户端与服务器端格式中的映射方式不同  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp 在客户端与。服务器端格式设置  
  在服务器端 XML 格式的数据库列**时间戳**类型映射到 i8 XDR 类型 （当在查询中指定了 XMLDATA 选项）。  
   
  在客户端 XML 格式中的数据库列**时间戳**类型映射到任一**uri**或**bin.base64** XDR 类型 (具体取决于二进制 base64选项指定在查询中）。 **Bin.base64** XDR 类型是使用 updategram 和 bulkload 功能的情况下很有用，因为此类型转换为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**时间戳**类型。 这样即可成功执行插入、更新或删除操作。  
@@ -53,7 +52,7 @@ ms.locfileid: "56028828"
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>服务器端 XML 格式使用深层 VARIANT  
  在服务器端 XML 格式中，使用深层类型的 VARIANT 类型。 如果使用客户端 XML 格式，变量将转换为 Unicode 字符串，并且不使用 VARIANT 的子类型。  
   
-## <a name="nested-mode-vs-auto-mode"></a>NESTED 模式与AUTO 模式  
+## <a name="nested-mode-vs-auto-mode"></a>NESTED 的模式与AUTO 模式  
  客户端 FOR XML 的 NESTED 模式类似于服务器端 FOR XML 的 AUTO 模式，不过以下方面除外：  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>使用服务器端的 AUTO 模式查询视图时，在生成的 XML 中将视图名称返回为元素名称。  
@@ -78,7 +77,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 执行该模板时，将返回以下 XML。 （仅显示部分结果。）请注意，元素名称就是对其执行查询的视图的名称。  
+ 执行该模板时，将返回以下 XML。 （仅部分显示结果。）请注意，元素名称对其执行查询的视图的名称。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -182,7 +181,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 如果在服务器上执行 XML 格式设置 (**客户端侧 xml ="0"**)，可以返回 dbobject 查询中的实际表和列 （即使您已经指定了别名） 返回名称的列使用别名。 例如，以下模板执行一个查询，并在服务器上执行 XML 格式设置 (**客户端侧 xml**未指定选项和**在客户端运行**不选择选项虚拟根目录）。 该查询还指定了 AUTO 模式（而不是客户端 NESTED 模式）。  
+ 如果在服务器上执行 XML 格式设置 (**客户端侧 xml ="0"** )，可以返回 dbobject 查询中的实际表和列 （即使您已经指定了别名） 返回名称的列使用别名。 例如，以下模板执行一个查询，并在服务器上执行 XML 格式设置 (**客户端侧 xml**未指定选项和**在客户端运行**不选择选项虚拟根目录）。 该查询还指定了 AUTO 模式（而不是客户端 NESTED 模式）。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -206,7 +205,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>客户端 与服务器端 XPath  
+### <a name="client-side-vs-server-side-xpath"></a>客户端与服务器端 XPath  
  客户端 XPath 与服务器端 XPath 的工作方式相同，以下几点除外：  
   
 -   使用客户端 XPath 查询时所应用的数据转换与使用服务器端 XPath 查询时所应用的数据转换有所不同。 客户端 XPath 使用 CAST 而不是 CONVERT 模式 126。  

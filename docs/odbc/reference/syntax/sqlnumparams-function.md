@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05e65eac94cffa0e31e3ec71179f18704a7e8b71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e88439d537d8b115d656fbe5389253efb3ea5580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138772"
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams 函数
 **符合性**  
@@ -56,7 +55,7 @@ SQLRETURN SQLNumParams(
 ## <a name="diagnostics"></a>诊断  
  当**SQLNumParams**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可能会通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLNumParams** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  

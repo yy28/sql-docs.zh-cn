@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f68abdfc2458284927cab68efad9c0b23eabe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: bf16f34ae878b03890a180c20d84ab64c6e7a34d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090606"
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "47681985"
 > [!NOTE]  
 > 若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_locks**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|表示资源类型。 该值可以是下列值之一：DATABASE、FILE、OBJECT、PAGE、KEY、EXTENT、RID、APPLICATION、METADATA、HOBT 或 ALLOCATION_UNIT。|  
+|**resource_type**|**nvarchar(60)**|表示资源类型。 该值可以是下列值之一：数据库、 文件、 对象、 页、 密钥、 范围、 RID、 应用程序、 元数据、 HOBT 或 ALLOCATION_UNIT。|  
 |**resource_subtype**|**nvarchar(60)**|表示的子类型**resource_type**。 从技术角度而言，可以在未持有父类型的非子类型化锁的情况下获取子类型锁。 不同的子类型之间以及与非子类型化的父类型之间都不会发生冲突。 并非所有资源类型都有子类型。|  
 |**resource_database_id**|**int**|此资源位于其范围之内的数据库的 ID。 由锁管理器处理的所有资源均按该数据库 ID 划分范围。|  
 |**resource_description**|**nvarchar(256)**|资源的说明，其中只包含从其他资源列中无法获取的信息。|  
@@ -55,16 +54,16 @@ ms.locfileid: "47681985"
 |**request_exec_context_id**|**int**|当前拥有该请求的进程的执行上下文 ID。|  
 |**request_request_id**|**int**|当前拥有该请求的进程的请求 ID（批处理 ID）。 每当事务的多个活动的结果集 (MARS) 连接更改时，该值便会更改。|  
 |**request_owner_type**|**nvarchar(60)**|拥有请求的实体类型。 锁管理器请求可由各种实体所拥有。 可能的值有：<br /><br /> TRANSACTION = 请求由事务所有。<br /><br /> CURSOR = 请求由游标所有。<br /><br /> SESSION = 请求由用户会话所有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 请求由事务工作区的共享部分所有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 请求由事务工作区的排他部分所有。<br /><br /> NOTIFICATION_OBJECT = 请求由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件所有。 此组件已经请求锁管理器在有其他组件等待获取锁时进行通知。 FileTable 功能是使用此值的一个组件。<br /><br /> **注意：** 工作空间在内部用于登记的会话持有锁。|  
-|**request_owner_id**|**bigint**|此请求的特定所有者的 ID。<br /><br /> 当事务是请求的所有者时，此值包含事务 ID。<br /><br /> 当 FileTable 是请求的所有者**request_owner_id**具有以下值之一。<br /><br /> <br /><br /> -4： 一个 FileTable 已获取数据库锁。<br /><br /> -3： 一个 FileTable 已获取表锁。<br /><br /> 其他值： 的值表示的文件句柄。 此值还显示为**fcb_id**动态管理视图[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
+|**request_owner_id**|**bigint**|此请求的特定所有者的 ID。<br /><br /> 当事务是请求的所有者时，此值包含事务 ID。<br /><br /> 当 FileTable 是请求的所有者**request_owner_id**具有以下值之一。<br /><br /> <br /><br /> -4:一个 FileTable 已获取数据库锁。<br /><br /> -3:一个 FileTable 已获取表锁。<br /><br /> 其他值：此值表示的文件句柄。 此值还显示为**fcb_id**动态管理视图[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
 |**request_owner_guid**|**uniqueidentifier**|此请求的特定所有者的 GUID。 该值仅供分布式事务使用，在该事务中，该值与事务的 MS DTC GUID 相对应。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 该值表示请求程序的锁空间 ID。 锁空间 ID 确定两个请求程序是否相互兼容以及在两者冲突的模式下是否可以向其授予锁。|  
 |**lock_owner_address**|**varbinary(8)**|用于跟踪该请求的内部数据结构的内存地址。 可以联接此列使用**resource_address**中的列**sys.dm_os_waiting_tasks**。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
  
 ## <a name="remarks"></a>备注  
  已授予请求状态指示已将资源上的锁授予请求程序。 等待请求指示尚未授予请求。 返回下列等待请求类型**request_status**列：  
@@ -196,15 +195,15 @@ ms.locfileid: "47681985"
   
  下表提供的格式**resource_description**每种资源类型的列。  
   
-|资源|“格式”|Description|  
+|Resource|格式|描述|  
 |--------------|------------|-----------------|  
 |DATABASE|不适用|数据库 ID 已推出**resource_database_id**列。|  
 |FILE|<file_id>|此资源所表示的文件 ID。|  
 |OBJECT|<object_id>|此资源所表示的对象 ID。 此对象可以是任何对象中列出**sys.objects**，而不仅仅是一个表。|  
-|PAGE|<file_id>:<page_in_file>|表示此资源所表示的页的文件和页 ID。|  
+|PAGE|< file_id >: < page_in_file >|表示此资源所表示的页的文件和页 ID。|  
 |KEY|<hash_value>|表示行中由此资源表示的键列的哈希。|  
-|EXTENT|<file_id>:<page_in_files>|表示此资源所表示的区的文件和页 ID。 区 ID 与区中的第一页的页 ID 相同。|  
-|RID|<file_id>:<page_in_file>:<row_on_page>|表示此资源所表示的行的页 ID 和行 ID。 请注意，如果关联的对象 ID 为 99，则此资源表示 IAM 链的第一个 IAM 页上的八个混合页槽之一。|  
+|EXTENT|< file_id >: < page_in_files >|表示此资源所表示的区的文件和页 ID。 区 ID 与区中的第一页的页 ID 相同。|  
+|RID|< file_id >: < page_in_file >: < row_on_page >|表示此资源所表示的行的页 ID 和行 ID。 请注意，如果关联的对象 ID 为 99，则此资源表示 IAM 链的第一个 IAM 页上的八个混合页槽之一。|  
 |APPLICATION|\<DbPrincipalId >:\<最多 32 个字符 >:(< hash_value >)|表示用于划分此应用程序锁资源范围的数据库主体的 ID。 还包含与此应用程序锁资源相对应的资源字符串，最多包含其中的 32 个字符。 在某些情况下，因不再提供完整字符串而只能显示 2 个字符。 只有在恢复过程中重新获取的应用程序锁处于数据库恢复期间才会发生此行为。 哈希值表示与此应用程序锁资源相对应的完整资源字符串的哈希。|  
 |HOBT|不适用|HoBt ID 是作为包含**resource_associated_entity_id**。|  
 |ALLOCATION_UNIT|不适用|分配单元 ID 是作为包含**resource_associated_entity_id**。|  

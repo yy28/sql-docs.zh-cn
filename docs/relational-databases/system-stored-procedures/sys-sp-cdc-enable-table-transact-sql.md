@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40b94782cf542800922b69291654ff7d46dcfde0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106461"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ sys.sp_cdc_enable_table
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  在可以对表启用变更数据捕获之前，必须先对数据库启用变更数据捕获。 若要确定数据库是否启用了变更数据捕获，请查询**is_cdc_enabled**中的列[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。 若要启用数据库，请使用[sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)存储过程。  

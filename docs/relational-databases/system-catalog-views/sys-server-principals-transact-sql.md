@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1fa743255397aee03b71a8b7d77f79237a8b009
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133089"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   每个服务器级别主体占一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|主体的名称。 是在服务器中唯一的。|  
+|**name**|**sysname**|主体的名称。 是在服务器中唯一的。|  
 |**principal_id**|**int**|主体的 ID 号。 是在服务器中唯一的。|  
 |**sid**|**varbinary(85)**|主体的 SID（安全标识符）。 如果是 Windows 主体，则它与 Windows SID 匹配。|  
 |**type**|**char(1)**|主体类型：<br /><br /> S = SQL 登录名<br /><br /> U = Windows 登录名<br /><br /> G = Windows 组<br /><br /> R = 服务器角色<br /><br /> C = 映射到证书的登录名<br /><br /> K = 映射到非对称密钥的登录名|  

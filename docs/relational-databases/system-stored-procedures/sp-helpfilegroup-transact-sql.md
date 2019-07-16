@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122535"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|文件组的名称。|  
 |**groupid**|**smallint**|数字文件组标识符。|  
@@ -55,14 +54,14 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
  如果*名称*是指定，则返回一个行文件组中每个文件。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|文件组中文件的逻辑名称。|  
 |**fileid**|**smallint**|数字文件标识符。|  
 |**filename**|**nchar(260)**|文件的物理名称，包括目录路径。|  
-|size|**nvarchar(15)**|文件大小 (KB)。|  
+|size |**nvarchar(15)**|文件大小 (KB)。|  
 |**maxsize**|**nvarchar(15)**|文件的最大大小。<br /><br /> 这是文件可增长到的最大大小。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
-|**growth**|**nvarchar(15)**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
+|**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

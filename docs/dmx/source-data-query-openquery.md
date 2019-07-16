@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 895c28f0989debb899c1e01c80a18483d3cda5a1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 1079fbb02026e2043767082d5def7fac37322ef2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077733"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;源数据查询&gt;-OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ OPENQUERY(<named datasource>, <query syntax>)
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [&#60;源数据查询&#62;](../dmx/source-data-query.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

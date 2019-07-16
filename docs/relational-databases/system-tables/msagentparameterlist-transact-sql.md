@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1fd8e84a443c87846b4c40c45152b1225e2bc7b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0ba22c75e36cc927fbd923af25aad48b3d02801
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119250"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSagentparameterlist**表包含复制代理参数信息，用于指定可以为给定的代理类型设置的参数。 此表存储中**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_type**|**tinyint**|代理的类型：<br /><br /> **1** = 快照代理。<br /><br /> **2** = 日志读取器代理。<br /><br /> **3** = 分发代理。<br /><br /> **4** = 合并代理。<br /><br /> **9** = 队列读取器代理。|  
 |**parameter_name**|**sysname**|有效代理参数的名称。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139145"
 ---
 # <a name="hard-coded-sql-statements"></a>硬编码 SQL 语句
 通常执行固定的任务的应用程序包含硬编码的 SQL 语句。 例如，订单输入系统可能会使用对列表打开销售订单的以下调用：  

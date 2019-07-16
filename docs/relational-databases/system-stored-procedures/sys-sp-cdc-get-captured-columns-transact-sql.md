@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2cffffa064bbfc5d5d1b106a06fb5429d6ca2c72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083743"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sys.sp_cdc_get_captured_columns
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @capture_instance =] '*capture_instance*  
+ [ @capture_instance = ] '*capture_instance*'  
  与源表关联的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
   
  若要报告表的捕获实例，请运行[sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)存储过程。  
@@ -55,7 +54,7 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|源表架构的名称。|  
 |source_table|**sysname**|源表的名称。|  
@@ -75,7 +74,7 @@ sys.sp_cdc_get_captured_columns
   
  使用[sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)来获取信息数据定义语言 (DDL) 语句应用于的源表。 任何修改所跟踪源列的结构的 DDL 更改都会在结果集中返回。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。 当调用方没有查看源数据的权限时，函数将返回错误 22981（对象不存在或访问被拒绝。）。  
   
 ## <a name="examples"></a>示例  

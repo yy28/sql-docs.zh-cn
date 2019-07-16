@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 213c86a7f7b81a997082aa5653e00a830197f9d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21f72a13f8f5f7ac93b0f31716632c9280df5fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107020"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>元数据 - 日期和时间与架构行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52415574"
   
 |列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|日期|DBTYPE_DBDATE|Clear|0|  
+|date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|将|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
@@ -69,9 +68,9 @@ ms.locfileid: "52415574"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 行集  
  对于日期/时间类型将返回以下行：  
   
-|类型 -><br /><br /> “列”|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|类型 -><br /><br /> “列”|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
@@ -83,7 +82,7 @@ ms.locfileid: "52415574"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -96,6 +95,6 @@ ms.locfileid: "52415574"
  对于数字和小数类型，OLE DB 仅定义了 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 time、datetime2 和 datetimeoffset 使用这些列是非标准行为。  
   
 ## <a name="see-also"></a>请参阅  
- [元数据&#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [元数据 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

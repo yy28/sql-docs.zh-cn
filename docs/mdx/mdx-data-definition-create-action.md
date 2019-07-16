@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098554"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 数据定义 - CREATE ACTION
 
@@ -81,20 +80,20 @@ FOR
 ## <a name="action-types"></a>操作类型  
  下表介绍了不同类型中提供的操作[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
-|操作类型|Description|  
+|操作类型|描述|  
 |-----------------|-----------------|  
-|**URL**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意：如果此操作不会以`https://`或`https://`，该操作将在浏览器对不可用除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
+|**URL**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意:如果此操作不会以`https://`或`https://`，该操作将在浏览器对不可用除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
 |**HTML**|返回的操作字符串是一个 HTML 脚本。 应将该字符串保存到文件中，并使用 Internet 浏览器来呈现该文件。 在这种情况下，整个脚本会在所生成的 HTML 中运行。|  
 |**语句**|返回的操作字符串是需要通过设置执行的语句**ICommand::SetText**为字符串并调用命令对象的方法**icommand:: Execute**方法。 如果该命令失败，会返回一条错误。|  
-|**DATASET**|返回的操作字符串是需要通过设置运行一个 MDX 语句**ICommand::SetText**为字符串并调用命令对象的方法**icommand:: Execute**方法。 所请求的接口 ID (IID) 应该**IDataset**。 如果创建了数据集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的数据集。|  
+|**数据集**|返回的操作字符串是需要通过设置运行一个 MDX 语句**ICommand::SetText**为字符串并调用命令对象的方法**icommand:: Execute**方法。 所请求的接口 ID (IID) 应该**IDataset**。 如果创建了数据集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的数据集。|  
 |**行集**|类似于**数据集**，而不是请求的 IID 是，但**IDataset**，客户端应用程序应寻求的 IID **IRowset**。 如果创建了行集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的行集。|  
 |**命令行**|客户端应用程序应执行该操作字符串。 该字符串是一个命令行。|  
-|**PROPRIETARY**|客户端应用程序不应显示和执行该操作，除非该应用程序针对该操作进行了特殊的自定义设置。 专有操作不返回到客户端应用程序，除非客户端应用程序明确要求这些通过设置适当的限制**APPLICATION_NAME**。|  
+|**专有**|客户端应用程序不应显示和执行该操作，除非该应用程序针对该操作进行了特殊的自定义设置。 专有操作不返回到客户端应用程序，除非客户端应用程序明确要求这些通过设置适当的限制**APPLICATION_NAME**。|  
   
 ## <a name="invocation-types"></a>调用类型  
  下表介绍了可在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中执行的各种调用。 调用类型仅用于帮助客户端应用程序来确定何时调用操作， 并不真正决定操作的调用行为。  
   
-|调用类型|Description|  
+|调用类型|描述|  
 |---------------------|-----------------|  
 |**交互式**|应该由客户端应用程序通过用户交互来调用操作。|  
 |**ON_OPEN**|应该在打开目标对象时由客户端应用程序调用操作。 目前尚未实现此调用类型。|  

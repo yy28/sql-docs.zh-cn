@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088211"
 ---
 # <a name="operators-mdx-syntax"></a>运算符（MDX 语法）
 
@@ -58,7 +57,7 @@ ms.locfileid: "63277595"
   
 -   DISTINCT  
   
--   解码的字符：  
+-   :  
   
 -   ^  
   
@@ -95,7 +94,7 @@ ms.locfileid: "63277595"
 |级别|将|\<级别 >.members|  
 |层次结构|成员|\<层次结构 >.defaultmember|  
 |成员|Tuple|(\<成员 >)|  
-|Tuple|成员|\<tuple>.item(0)|  
+|Tuple|成员|\<元组 >.item(0)|  
 |Tuple|Scalar|\<tuple>.value|  
   
 ## <a name="see-also"></a>请参阅  

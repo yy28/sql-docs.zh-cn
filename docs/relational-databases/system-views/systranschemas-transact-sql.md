@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3339cf1731c712cdfee7145390d5cc955c748a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094752"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Systranschemas**表用于跟踪事务发布和快照发布中发布的项目中的架构更改。 此表存储在发布数据库和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|标识发生了架构更改的表项目。|  
 |**startlsn**|**binary**|架构更改开始时的 LSN 值。|  

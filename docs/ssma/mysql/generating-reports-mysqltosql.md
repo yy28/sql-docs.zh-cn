@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: beebb6df04675e87ff65b51161191700e07f0199
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103013"
 ---
 # <a name="generating-reports-mysqltosql"></a>生成报告 (MySQLToSQL)
 在对象树中级别的 SSMA 控制台中生成使用命令来执行某些活动的报告。  
@@ -35,7 +34,7 @@ ms.locfileid: "63183054"
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |5|同步目标|TargetSynchronizationReport&lt;n&gt;.XML|  
     |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
@@ -103,7 +102,7 @@ ms.locfileid: "63183054"
   
 />  
 ```  
-**object-name:** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
@@ -111,7 +110,7 @@ ms.locfileid: "63183054"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
 该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
@@ -133,7 +132,7 @@ ms.locfileid: "63183054"
   
 />  
 ```  
-**object-name:** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
@@ -141,7 +140,7 @@ ms.locfileid: "63183054"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
