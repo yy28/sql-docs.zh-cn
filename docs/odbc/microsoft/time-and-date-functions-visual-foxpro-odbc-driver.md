@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912406"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>时间和日期函数（Visual FoxPro ODBC 驱动程序）
 下表列出了支持的 Visual FoxPro ODBC 驱动程序; ODBC 日期和时间函数在相同的功能的 Visual FoxPro 语法与 ODBC 语法不同，会列出等效 Visual FoxPro。  
@@ -38,7 +37,7 @@ ms.locfileid: "62632767"
 |MINUTE *(time_exp)*||  
 |MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|现在 *（)*|DATETIME *( )*|  
+|现在 *（)*|DATETIME *（)*|  
 |SECOND *(time_exp)*|SEC *(time_exp)*|  
 |WEEK *(date_exp)*||  
 |YEAR *(date_exp)*||  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8337a6e93aba36e8b5838dcbf6d2e084fe022f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924118"
 ---
 # <a name="static-cursors"></a>静态游标
 静态游标始终会显示结果集与第一次打开游标时一样。 具体取决于实现，静态游标是只读或读/写，并提供向前和向后滚动。 静态游标通常不会检测到的成员身份、 顺序或值的结果集打开游标后所做的更改。 尽管不需要，但静态游标可检测其自己的更新、删除和插入。  

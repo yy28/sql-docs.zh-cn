@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907392"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +31,14 @@ ms.locfileid: "62903664"
   
 ## <a name="definition"></a>定义  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|分发代理的 ID。|  
 |**runstatus**|**int**|运行状态：<br /><br /> **1** = 开始。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
 |**start_time**|**datetime**|开始执行作业的时间。|  
 |**time**|**datetime**|记录消息的时间。|  
 |**duration**|**int**|消息会话的持续时间（秒）。|  
-|**comments**|**nvarchar(4000)**|消息文本。|  
+|**注释**|**nvarchar(4000)**|消息文本。|  
 |**xact_seqno**|**varbinary(16)**|上次处理的事务序列号。|  
 |**current_delivery_rate**|**float**|自从最后一个历史记录条目后，平均每秒传送的命令数。|  
 |**current_delivery_latency**|**int**|自从最后一个历史记录条目后，命令从进入分发数据库到应用于订阅服务器之间的滞后时间。 以毫秒为单位。|  

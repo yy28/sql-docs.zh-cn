@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183206"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,21 +76,21 @@ ms.locfileid: "50145682"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **限制：** 无。  
+ **以下限制：** 无。  
   
 ### <a name="data-mining-extensions-dmx"></a>数据挖掘扩展插件 (DMX)  
  数据挖掘扩展插件 (DMX) 可以与其他命令接口（如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADOMD.Net）配合使用来创建、删除和查询挖掘结构和挖掘模型。  
   
 -   [数据挖掘扩展插件 (DMX) 数据定义语句](../../dmx/dmx-statements-data-definition.md)  
   
- **限制：** 使用 DMX 无法更改某些属性。  
+ **以下限制：** 某些属性不能使用 DMX 更改。  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) 是用于所有 Analysis Services 的数据定义语言。 XMLA 使您可以控制大多数数据挖掘对象和服务器操作。 客户端和服务器之间的所有管理操作都可通过使用 XMLA 来执行。 为了方便，可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 对 XML 进行换行。  
   
- **限制：**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成的某些 XMLA 语句仅支持在内部使用，而不能在 XML DDL 脚本中使用。  
+ **限制：** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成的某些 XMLA 语句仅支持在内部使用，而不能在 XML DDL 脚本中使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 开发人员文档](../../analysis-services/analysis-services-developer-documentation.md)  
   
   

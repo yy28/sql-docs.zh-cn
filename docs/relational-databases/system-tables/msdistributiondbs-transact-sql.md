@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 173e1a32b986e750ee924c1950fd12cc5ded0ab2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907343"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistributiondbs**表包含每个分发数据库在本地分发服务器上定义的一个行。 此表存储中**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|分发数据库的名称。|  
+|**name**|**sysname**|分发数据库的名称。|  
 |**min_distretention**|**int**|事务被删除前的最小保持期（小时）。|  
 |**max_distretention**|**int**|事务被删除前的最大保持期（小时）。|  
 |**history_retention**|**int**|保留历史记录的小时数。|  

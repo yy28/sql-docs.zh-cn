@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909213"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @principal_id = ] principal_id` 是数据库用户或角色中的 ID **msdb**要删除的关联的数据库。 *principal_id*是**int**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，请提供主体 ID **0**或主体的名称 **'public'**。 任一*principal_id*或*principal_name*必须指定。  
+`[ @principal_id = ] principal_id` 是数据库用户或角色中的 ID **msdb**要删除的关联的数据库。 *principal_id*是**int**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，请提供主体 ID **0**或主体的名称 **'public'** 。 任一*principal_id*或*principal_name*必须指定。  
   
-`[ @principal_name = ] 'principal_name'` 是数据库用户或角色中的名称**msdb**要删除的关联的数据库。 *principal_name*是**sysname**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，请提供主体 ID **0**或主体的名称 **'public'**。 任一*principal_id*或*principal_name*必须指定。  
+`[ @principal_name = ] 'principal_name'` 是数据库用户或角色中的名称**msdb**要删除的关联的数据库。 *principal_name*是**sysname**，默认值为 NULL。 若要使公共配置文件成为专用配置文件，请提供主体 ID **0**或主体的名称 **'public'** 。 任一*principal_id*或*principal_name*必须指定。  
   
 `[ @profile_id = ] profile_id` 是要删除的关联的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   

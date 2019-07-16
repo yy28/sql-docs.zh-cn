@@ -1,5 +1,5 @@
 ---
-title: CursorLocationEnum | Microsoft Docs
+title: CursorLocationEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43c2043917d6b21293fea71566dfdf1202b6f59e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919295"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 指定游标服务的位置。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|使用本地游标库通过提供客户端游标。 局部游标服务通常将允许驱动程序提供的游标不是，可能的许多功能，因此使用此设置可能会提供将启用的功能方面的优势。 为了向后兼容，同义词**adUseClientBatch**也受支持。|  
 |**adUseNone**|1|不使用游标服务。 （此常量已过时，将显示仅为了向后兼容性。）|  

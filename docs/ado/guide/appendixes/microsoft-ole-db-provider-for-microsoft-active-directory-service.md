@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926676"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序
 Active Directory 服务接口 (ADSI) 访问接口允许 ADO 连接到通过 ADSI 异类目录服务。 这样，ADO 应用程序只读访问权限对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务，除了任何符合 LDAP 的目录服务和 Novell 目录服务。 ADSI 本身基于提供程序模型，以便如果没有新的提供程序让访问到另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序是自由线程，并支持 Unicode。  
@@ -44,7 +43,7 @@ ADSDSOObject
   
  字符串包含以下关键字。  
   
-|关键字|Description|  
+|关键字|描述|  
 |-------------|-----------------|  
 |**提供程序**|指定 Active Directory 服务的 OLE DB 访问接口。|  
 |**用户 ID**|指定用户名称。 如果省略了此关键字，则使用当前登录名。|  
@@ -60,7 +59,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |*Root*|指示**ADsPath**对象从其开始搜索 （即，搜索的根）。|  
 |*Filter*|指示 RFC 1960 格式中的搜索筛选器。|  
@@ -92,24 +91,24 @@ objectClass='user' AND objectCategory='Person'"
   
 |属性|可用性|  
 |--------------|------------------|  
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|read/write|  
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|read/write|  
+|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|  
+|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|只读|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|read/write|  
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|read/write|  
+|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|读/写|  
+|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|始终**adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|read/write|  
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|read/write|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|  
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|  
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|read/write|  
+|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|只读|  
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|read/write|  
+|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|  
-|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|read/write|  
+|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
 |[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
 |[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
   

@@ -1,5 +1,5 @@
 ---
-title: Dynamic SQL | Microsoft Docs
+title: 动态 SQL |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 131abdd4a401e336ccd78ca79fdf6666b1911fee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915448"
 ---
 # <a name="dynamic-sql"></a>动态 SQL
 尽管静态 SQL 适用于很多情况下，没有应用程序的数据访问无法预先确定的类。 例如，假设一个电子表格，用户可以输入查询，该电子表格然后将发送到 DBMS 中检索数据。 此查询的内容很明显不能是已知的程序员写入电子表格程序时。  

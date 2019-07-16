@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5c1c3869b144bb770ca893595986288b07aa596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917001"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 指定的记录中搜索的方向[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adSearchBackward**|-1|搜索向后，在开头处停止**记录集**。 如果找不到匹配项，在定位记录指针[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)。|  
 |**adSearchForward**|1|向前搜索，在末尾处停止**记录集**。 如果找不到匹配项，在定位记录指针[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)。|  

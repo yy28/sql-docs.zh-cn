@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d693ccbeb06860cd4633a933e80b9ccbe6526a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925624"
 ---
 # <a name="data-shaping-overview"></a>数据整理概述
 *数据整理*意味着构建在查询中的两个或多个逻辑实体之间的层次结构关系。 在层次结构所示的一个记录之间的父-子关系[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和一个或多个记录 （也称为一章） 的另一个**记录集**。 在父-子关系中，父**记录集**包含子级**记录集**。 此类层次结构关系的一个示例是客户和订单。 对于在数据库中每位客户，可以有零个或多个订单。 层次结构关系可以是递归的这意味着，可以嵌套子记录中的孙级记录。 原则上，可以任意深度嵌套的分层记录。 在实践中，ADO 限制到最多 512 个递归**记录集**s。  

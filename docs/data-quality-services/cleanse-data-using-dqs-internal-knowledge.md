@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 0c56f5c2386f06c6ae35269dc62f82431ce0936b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a826d0f526a12e75a113375ec8f2398331dc4775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935600"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS（内部）知识清理数据
 
@@ -107,7 +106,7 @@ ms.locfileid: "66802175"
   
  根据置信度，值将显示在以下五个选项卡上：  
   
-|Tab|Description|  
+|Tab|描述|  
 |---------|-----------------|  
 |**建议**|显示 DQS 找到其建议值的域值，这些值的置信度高于  “自动建议阈值”，但是低于  “自动更正阈值”。<br /><br /> 建议值显示在 **“更正为”** 列中（与原始值相对照）。 您可以针对上部网格中的某个值单击 **“批准”** 或 **“拒绝”** 列中的单选按钮，以接受或拒绝对于该值所有实例的建议。 在此情况下，接受的值移到 **“已更正”** 选项卡，被拒绝的值移到 **“无效”** 选项卡。|  
 |**新建**|显示 DQS 没有足够信息，因此不能映射到任何其他选项卡的有效域。此外，此选项卡还包含这样的值：它们的置信度低于 *自动建议阈值* ，但是足以被标记为有效。<br /><br /> 如果您认为值是正确的，请单击 **“批准”** 列中的单选按钮。 否则，请单击 **“拒绝”** 列中的单选按钮。 接受的值移到 **“正确”** 选项卡，被拒绝的值移到 **“无效”** 选项卡。对于该值，还可以手动键入正确的值，以替换“更正为”列中的原始值，然后单击“批准”列中的单选按钮接受更改   。 在此情况下，值将移到 **“已更正”** 选项卡。|  

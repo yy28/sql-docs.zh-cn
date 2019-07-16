@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54c8c2fd0071090bef6d946614f2e7e143cb0597
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8de7dd1571f7b9082144e97c8b35d9a39d6cabe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907325"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdynamicsnapshotviews**表跟踪所有由快照代理创建的临时筛选的数据快照视图，并由系统来清除异常关闭时，SQL Server 代理的视图或快照代理。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**dynamic_snapshot_view_name**|**sysname**|临时筛选数据快照视图的名称。|  
   

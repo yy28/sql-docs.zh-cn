@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da578c61af08ff8167779d5ed86e671bba29e23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900388"
 ---
 # <a name="sysdmioclustershareddrives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47646455"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_io_cluster_shared_drives**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**DriveName**|**nchar(2)**|驱动器的名称（驱动器号），表示共享群集磁盘阵列中的单个磁盘。 此列不可为空值。|  
 |**pdw_node_id**|**int**|**适用于**: ssPDW<br /><br /> 对于此分布的节点标识符。|  
@@ -47,7 +46,7 @@ ms.locfileid: "47646455"
 > [!NOTE]  
 >  此视图将在未来版本中弃用。 我们建议你使用[sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)相反。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例拥有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

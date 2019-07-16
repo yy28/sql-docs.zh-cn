@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c9ec47ffb89724e8a7991dae1d2296aa813e0c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922806"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件 Connect 部分
 该处理程序的默认行为是拒绝所有连接。 **连接**节指定该行为的例外情况。 例如，如果所有**连接**部分已不存在或为空，则默认情况下无法不建立任何连接。  
@@ -54,12 +53,12 @@ connectionString
   
 ## <a name="remarks"></a>备注  
   
-|组成部分|Description|  
+|组成部分|描述|  
 |----------|-----------------|  
 |**“连接”**|文本字符串，用于指示这是一个连接字符串条目。|  
 |**_connectionString_**|一个字符串，将整个客户端的连接字符串。|  
 |**访问**|文本字符串，用于指示这是访问项。|  
-|**_accessRight_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
+|**_种_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  
   
  如果你想要允许任何连接 （实际上，禁用默认处理程序行为），在中设置的访问权限条目**连接默认**部分`Access=ReadWrite`，然后删除或注释掉任何其他**连接**_标识符_部分。  
   

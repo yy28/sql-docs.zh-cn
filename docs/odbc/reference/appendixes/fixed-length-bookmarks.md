@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21af6ef1be21e000d25582151650f274fe3561a4
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913586"
 ---
 # <a name="fixed-length-bookmarks"></a>定长书签
 如果 ODBC *3.x*驱动程序应使用 ODBC *2.x*使用定长书签，驱动程序必须支持以下应用程序：  

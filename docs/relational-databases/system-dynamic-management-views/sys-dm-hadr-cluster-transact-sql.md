@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58450f8e43c5f1f736fb4388008f7af3325e430d
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900654"
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "55570730"
  > [!TIP]
  > 从[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，此动态管理视图支持 Alwayson 故障转移群集实例除了 Always On 可用性组。
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 实例的 WSFC 群集的名称。|  
 |**quorum_type**|**tinyint**|此 WSFC 群集使用的仲裁的类型，可为下列值之一：<br /><br /> 0 = 节点的大多数。 此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，对于七个节点的群集，此仲裁配置可以承受三个节点故障。<br /><br /> 1 = 节点和磁盘的大多数。 如果磁盘见证服务器保持联机，此仲裁配置可以承受半数（舍入）节点故障。 例如，一个磁盘见证服务器保持联机的六节点群集可以承受三个节点故障。 如果磁盘见证服务器脱机或失败，此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，一个磁盘见证服务器已失败的六节点群集可以承受两个 (3-1=2) 节点故障。<br /><br /> 2 = 节点和文件共享的大多数。 此仲裁配置的工作方式与“节点和磁盘的大多数”的工作方式类似，但使用文件共享见证服务器而不是磁盘见证服务器。<br /><br /> 3 = 无大多数：仅限磁盘。 如果仲裁磁盘联机，此仲裁配置可以承受除一个节点之外的所有节点故障。<br /><br /> 4 = 未知的仲裁。 未知的仲裁的群集。<br /><br /> 5 = 云见证。 群集的仲裁仲裁利用 Microsoft Azure。 如果云见证服务器可用，群集可以承受半数 （舍入） 个节点故障。|  

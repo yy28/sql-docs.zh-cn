@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909022"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>映射 MySQL 和 SQL Server 字符集 (MySQLToSQL)
 可以为 MySQL 字符数据类型、 表达式和文本指定字符集 (Charset)。  
@@ -88,17 +87,17 @@ ms.locfileid: "63312371"
     |拉丁语 1|cp1252 西部欧洲|CHAR/VARCHAR （默认值）|  
     |latin2|ISO 8859-2 中欧|CHAR/VARCHAR （默认值）|  
     |swe7|7 位瑞典语|CHAR/VARCHAR （默认值）|  
-    |ascii|US ASCII|CHAR/VARCHAR （默认值）|  
+    |Ascii|US ASCII|CHAR/VARCHAR （默认值）|  
     |ujis|EUC-JP 日语|NCHAR/NVARCHAR （默认值）|  
     |sjis|Shift JIS 日语|NCHAR/NVARCHAR （默认值）|  
     |希伯来语|ISO 8859-8 希伯来语|CHAR/VARCHAR （默认值）|  
     |tis620|TIS620 泰语|CHAR/VARCHAR （默认值）|  
     |euckr|EUC-KR 朝鲜语|NCHAR/NVARCHAR （默认值）|  
     |koi8u|乌克兰语 KOI8-U|CHAR/VARCHAR （默认值）|  
-    |gb2312|GB2312 Simplified Chinese|NCHAR/NVARCHAR （默认值）|  
+    |gb2312|GB2312 简体中文|NCHAR/NVARCHAR （默认值）|  
     |希腊语|ISO 8859-7 希腊语|CHAR/VARCHAR （默认值）|  
     |cp 1250|Windows 中欧|CHAR/VARCHAR （默认值）|  
-    |gbk|GBK Simplified Chinese|NCHAR/NVARCHAR （默认值）|  
+    |gbk|中文 （简体） GBK|NCHAR/NVARCHAR （默认值）|  
     |latin5|ISO 8859-9 土耳其语|CHAR/VARCHAR （默认值）|  
     |armscii8|ARMSCII 8 亚美尼亚语|CHAR/VARCHAR （默认值）|  
     |utf8|Utf-8 Unicode|NCHAR/NVARCHAR （默认值）|  
@@ -108,10 +107,10 @@ ms.locfileid: "63312371"
     |macce|Mac 中欧|CHAR/VARCHAR （默认值）|  
     |macroman|Mac 西部欧洲|CHAR/VARCHAR （默认值）|  
     |cp852|DOS 中部欧洲|CHAR/VARCHAR （默认值）|  
-    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR （默认值）|  
-    |cp 1251|Windows Cyrillic|CHAR/VARCHAR （默认值）|  
-    |cp 1256|Windows Arabic|CHAR/VARCHAR （默认值）|  
-    |cp 1257|Windows Baltic|CHAR/VARCHAR （默认值）|  
+    |latin7|ISO-8859 13 波罗的语|CHAR/VARCHAR （默认值）|  
+    |cp 1251|Windows 西里尔文|CHAR/VARCHAR （默认值）|  
+    |cp 1256|Windows 阿拉伯语|CHAR/VARCHAR （默认值）|  
+    |cp 1257|Windows 波罗的语|CHAR/VARCHAR （默认值）|  
     |BINARY|二进制伪字符集|CHAR/VARCHAR （默认值）|  
     |geostd8|GEOSTD8 格鲁吉亚语|CHAR/VARCHAR （默认值）|  
     |cp932|Windows 日语 SJIS|NCHAR/NVARCHAR （默认值）|  

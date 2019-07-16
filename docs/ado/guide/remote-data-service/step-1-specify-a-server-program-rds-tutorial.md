@@ -1,5 +1,5 @@
 ---
-title: 第 1 步：指定服务器程序 （RDS 教程） |Microsoft Docs
+title: 步骤 1：指定服务器程序 （RDS 教程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 03d60a00a116f771e3854a4fe1b6b5ec512c0708
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cecddfe127bba43852412b6d804254f35103def
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922118"
 ---
-# <a name="step-1-specify-a-server-program-rds-tutorial"></a>第 1 步：指定服务器程序（RDS 教程）
+# <a name="step-1-specify-a-server-program-rds-tutorial"></a>步骤 1：指定服务器程序（RDS 教程）
 在最一般情况下，使用[rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)对象[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法，以指定默认的服务器程序，[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，或您自己的自定义服务器程序 （业务对象）。 在服务器和服务器程序的引用实例化服务器程序或*代理*，则返回。  
   
  本教程使用的默认服务器程序：  

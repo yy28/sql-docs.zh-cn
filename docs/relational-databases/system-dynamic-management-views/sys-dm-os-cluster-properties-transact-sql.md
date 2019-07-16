@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff0854e1252b4adc38c2c3d5f2022762fb3bd0f8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900231"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "52544125"
  使用这些属性设置的值将影响故障检测、故障响应时间以及用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的运行状况的日志记录。  
   
 
-|列名|属性|Description|  
+|列名|属性|描述|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|BIGINT|SQL Server 故障转移群集的日志记录级别。 可以通过启用详细日志记录在错误日志中提供更多详细信息以排除故障。 可以是以下值之一：<br /><br /> 0 - 关闭日志记录（默认值）<br /><br /> 1 - 仅限错误<br /><br /> 2 - 错误和警告<br /><br /> 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。|  
+|VerboseLogging|BIGINT|SQL Server 故障转移群集的日志记录级别。 可以通过启用详细日志记录在错误日志中提供更多详细信息以排除故障。 以下值之一：<br /><br /> 0 - 关闭日志记录（默认值）<br /><br /> 1 - 仅限错误<br /><br /> 2 - 错误和警告<br /><br /> 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。|  
 |SqlDumperDumpFlags|BIGINT|SQLDumper 转储标志确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的转储文件的类型。 默认设置为 0。|  
 |SqlDumperDumpPath|nvarchar(260)|SQLDumper 实用工具生成转储文件的位置。|  
 |SqlDumperDumpTimeOut|BIGINT|超时值（毫秒），一旦 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 失败，SQLDumper 实用工具即在该超时值后生成转储。 默认值为 0。|  

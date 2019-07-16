@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27906e593020d45a9fb5e79be6ac53bc0e7fafcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e62d2e8cf46de73bf8f0881b398437ab4ef58fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62904747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909054"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_identity_range**表用于跟踪分配给用于订阅发布的标识列的数值范围上复制自动管理这些范围分配。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|给定订阅的唯一标识号。|  
 |**artid**|**uniqueidentifier**|给定项目的唯一标识号。|  

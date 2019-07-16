@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910152"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个还原操作在表中占一行。 此表存储中**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|标识每个还原操作的唯一标识号。 标识，主键。|  
 |**restore_date**|**datetime**|日期和时间的还原操作的开始。 可以为 NULL。|  
 |**destination_database_name**|**nvarchar(128)**|还原操作的目标数据库的名称。 可以为 NULL。|  
 |**user_name**|**nvarchar(128)**|执行还原操作的用户的名称。 可以为 NULL。|  
-|**backup_set_id**|**int**|标识被还原的备份集的唯一标识号。 引用**backupset （backup_set_id)**。|  
+|**backup_set_id**|**int**|标识被还原的备份集的唯一标识号。 引用**backupset （backup_set_id)** 。|  
 |**restore_type**|**char(1)**|还原操作的类型：<br /><br /> D = 数据库<br /><br /> F = 文件<br /><br /> G = 文件组<br /><br /> I = 差异<br /><br /> L = 日志<br /><br /> V = 仅验证<br /><br /> 可以为 NULL。|  
 |**replace**|**bit**|指示还原操作是否指定了 REPLACE 选项：<br /><br /> 1 = 已指定<br /><br /> 0 = 未指定<br /><br /> 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，0 是唯一的选项。|  
 |**recovery**|**bit**|指示还原操作指定的是 RECOVERY 选项还是 NORECOVERY 选项：<br /><br /> 1 = RECOVERY<br /><br /> 可以为 NULL。<br /><br /> 当将数据库恢复到数据库快照时，1 是唯一的选项。<br /><br /> 0 = NORECOVERY|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e443a2c131fc2338660c6ddfd0a09b285e1dba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923344"
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
 XSLT 可以应用于生成的 XML，以将其转换为另一种格式。 了解在 ADO 中的 XML 格式时，可帮助开发 XSLT 模板，可以将它转换为更加用户友好格式。  

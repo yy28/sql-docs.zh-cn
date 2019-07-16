@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 959cb06535cf1f6530898c7da565ce281bf9df4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919912"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>集合（ADO for Visual C++ 语法）
 ## <a name="parameters"></a>Parameters  
@@ -44,7 +43,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 get_Count(long *c);  
@@ -75,7 +74,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 get_Count(long *c);  
@@ -103,7 +102,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 get_Count(long *c);  
@@ -116,7 +115,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
 -   [Item 属性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 ### <a name="methods"></a>方法  
   
@@ -128,7 +127,7 @@ Refresh(void);
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 get_Count(long *c);  

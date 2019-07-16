@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb2b494f55bb421312798a550da72fcfd5630286
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0faa6f595f4f2001dc3456fde6d01cac0d52355c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922305"
 ---
 # <a name="remote-data-service-rds"></a>远程数据服务 (RDS)
 远程数据服务 (RDS) 是一项功能的 ADO 中，通过它将数据从一台服务器移到客户端应用程序或网页、 操作在客户端上的数据并且将更新返回单个往返过程中的服务器。  

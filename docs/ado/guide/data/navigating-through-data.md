@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 77c9434fd92b8b3c30addce7967c4965d07cbb38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924784"
 ---
 # <a name="navigating-through-data"></a>浏览数据
 **记录集**支持多个方法和属性来浏览生成的数据集。 探讨如何使用此功能通过浏览我们的示例使用了几种方案**记录集**对象。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb835a84d83730e291afcfdf83910f9b520daea6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48b1c90b59b220841aa45f618fdfda5ff2db82da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920340"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark 属性 (ADO)
 指示一个书签，用于唯一标识中的当前记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象或设置当前记录中**记录集**标识的有效书签记录的对象。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53ab6ddfb8253b1df877c6e20df43f8327f0f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910387"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函数
 **符合性**  
@@ -81,7 +80,7 @@ SQLRETURN SQLSetConnectAttr(
   
  该驱动程序可以返回 SQL_SUCCESS_WITH_INFO 以提供有关设置选项的结果的信息。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S02|选项值已更改|该驱动程序不支持在指定的值*ValuePtr*和替换一个相近的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -130,17 +129,17 @@ SQLRETURN SQLSetConnectAttr(
   
 |特性|设置之前或之后连接？|  
 |---------------|-------------------------------------|  
-|SQL_ATTR_ACCESS_MODE|Either[1]|  
+|SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|之前或之后|  
-|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|Either[4]|  
+|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|是 [4]|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK|之前或之后|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT|之前或之后|  
-|SQL_ATTR_ASYNC_ENABLE|Either[2]|  
+|SQL_ATTR_ASYNC_ENABLE|任一 [2]|  
 |SQL_ATTR_AUTO_IPD|之前或之后|  
-|SQL_ATTR_AUTOCOMMIT|Either[5]|  
+|SQL_ATTR_AUTOCOMMIT|是 [5]|  
 |SQL_ATTR_CONNECTION_DEAD|After|  
 |SQL_ATTR_CONNECTION_TIMEOUT|之前或之后|  
-|SQL_ATTR_CURRENT_CATALOG|Either[1]|  
+|SQL_ATTR_CURRENT_CATALOG|[1]|  
 |SQL_ATTR_DBC_INFO_TOKEN|After|  
 |SQL_ATTR_ENLIST_IN_DTC|After|  
 |SQL_ATTR_LOGIN_TIMEOUT|早于|  
@@ -152,7 +151,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_TRACEFILE|之前或之后|  
 |SQL_ATTR_TRANSLATE_LIB|After|  
 |SQL_ATTR_TRANSLATE_OPTION|After|  
-|SQL_ATTR_TXN_ISOLATION|Either[3]|  
+|SQL_ATTR_TXN_ISOLATION|[3]|  
   
  [1] SQL_ATTR_ACCESS_MODE SQL_ATTR_CURRENT_CATALOG 设置和之前或之后连接，具体取决于驱动程序。 但是，可互操作应用程序设置这些连接之前由于某些驱动程序不支持更改这些连接后。  
   

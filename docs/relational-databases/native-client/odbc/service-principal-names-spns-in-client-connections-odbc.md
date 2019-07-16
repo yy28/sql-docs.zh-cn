@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7d352dd345fa6d8e3fb1f2d3502279fd8ca68c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51bb287f23a407b7e09ddf433c3f9b31aafcbc03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913138"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>客户端连接中的服务主体名称 (SPN) (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "63018630"
 ## <a name="connection-string-keywords"></a>连接字符串关键字  
  客户端应用程序使用以下连接字符串关键字可指定 SPN。  
   
-|关键字|值|  
+|关键字|ReplTest1|  
 |-------------|-----------|  
 |**ServerSPN**|服务器的 SPN。 默认值是空字符串，这将导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用默认的驱动程序生成的 SPN。|  
 |**FailoverPartnerSPN**|故障转移伙伴的 SPN。 默认值是空字符串，这将导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用默认的驱动程序生成的 SPN。|  
@@ -36,7 +35,7 @@ ms.locfileid: "63018630"
 ## <a name="connection-attributes"></a>连接属性  
  客户端应用程序使用以下连接属性可指定 SPN 和查询身份验证方法。  
   
-|“属性”|类型|用法|  
+|名称|type|用法|  
 |----------|----------|-----------|  
 |SQL_COPT_SS_SERVER_SPN<br /><br /> SQL_COPT_SS_FAILOVER_PARTNER_SPN|SQLTCHAR，读/写|指定服务器的 SPN。 默认值是空字符串，这将导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用默认的驱动程序生成的 SPN。<br /><br /> 只有在以编程方式设置该属性或打开连接之后才能查询该属性。 如果试图对未打开的连接查询该属性，并且尚未以编程方式设置该属性，则返回 SQL_ERROR 并生成具有 SQLState 08003 和消息“连接未打开”的诊断记录。<br /><br /> 如果在连接打开时试图设置该属性，则返回 SQL_ERROR 并生成具有 SQLState HY011 和消息“操作此时无效”的诊断记录。|  
 |SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD|SQLTCHAR，只读|返回用于连接的身份验证方法。 返回到应用程序的值是 Windows 返回到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的值。 可能的值有：<br /><br /> “NTLM”，使用 NTLM 身份验证打开连接时将返回该值。<br /><br /> “Kerberos”，使用 Kerberos 身份验证打开连接时将返回该值。<br /><br /> <br /><br /> 只能为使用 Windows 身份验证的打开的连接读取该属性。 如果试图在连接打开之前读取它，则返回 SQL_ERROR 并以 SQLState 08003 和消息“连接未打开”记录错误。<br /><br /> 如果对未使用 Windows 身份验证的连接查询该属性，则返回 SQL_ERROR 并以 SQLState HY092 和消息“属性/选项标识符无效(SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 只适用于可信连接)”记录错误。<br /><br /> 如果无法确定身份验证方法，则返回 SQL_ERROR 并以 SQLState HY000 和消息“常规错误”记录错误。|  

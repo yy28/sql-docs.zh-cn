@@ -1,5 +1,5 @@
 ---
-title: sp_helpdb (Transact-SQL) | Microsoft Docs
+title: sp_helpdb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903021"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|数据库名称。|  
+|**name**|**sysname**|数据库名称。|  
 |**db_size**|**nvarchar(13)**|数据库总计大小。|  
 |**owner**|**sysname**|数据库所有者，例如**sa**。|  
 |**dbid**|**smallint**|数据库 ID。|  
@@ -59,16 +58,16 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
  如果*名称*没有显示指定的数据库的文件分配的其他结果集的指定。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nchar(128)**|逻辑文件名称。|  
+|**name**|**nchar(128)**|逻辑文件名称。|  
 |**fileid**|**smallint**|文件 ID。|  
 |**filename**|**nchar(260)**|操作系统文件名（物理文件名称）。|  
 |**filegroup**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
-|size|**nvarchar(18)**|文件大小 (MB)。|  
+|size |**nvarchar(18)**|文件大小 (MB)。|  
 |**maxsize**|**nvarchar(18)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
-|**growth**|**nvarchar(18)**|文件的增量。 这表示添加到每个时间的新空间所需的文件的空间量。|  
-|**usage**|**varchar(9)**|文件用法。 对于数据文件，值是**仅限数据**并为日志文件的值是**仅记录**。|  
+|**增长**|**nvarchar(18)**|文件的增量。 这表示添加到每个时间的新空间所需的文件的空间量。|  
+|**使用情况**|**varchar(9)**|文件用法。 对于数据文件，值是**仅限数据**并为日志文件的值是**仅记录**。|  
   
 ## <a name="remarks"></a>备注  
  **状态**结果集中列的选项已设置为 ON 的数据库中的报表。 不报告所有数据库选项**状态**列。 若要查看当前数据库选项设置的完整列表，请使用**sys.databases**目录视图。  

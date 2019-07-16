@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909076"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +39,18 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@parameter_name** = ] **'***parameter_name***'**  
- 要检索的配置设置名称。 如果指定，在返回的配置设置的值**@parameter_value**输出参数。 如果未**@parameter_name**指定，则此存储的过程返回的结果集包含所有实例中的数据库邮件配置设置。  
+ [ **@parameter_name** = ] **'***parameter_name***'**  
+ 要检索的配置设置名称。 如果指定，在返回的配置设置的值 **@parameter_value** 输出参数。 如果未 **@parameter_name** 指定，则此存储的过程返回的结果集包含所有实例中的数据库邮件配置设置。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果未**@parameter_name**指定时，返回的结果集包含以下列。  
+ 如果未 **@parameter_name** 指定时，返回的结果集包含以下列。  
   
 ||||  
 |-|-|-|  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |**paramname**|**nvarchar(256)**|配置参数的名称。|  
 |**paramvalue**|**nvarchar(256)**|配置参数的值。|  
 |**description**|**nvarchar(256)**|配置参数的说明。|  
@@ -59,11 +58,11 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>备注  
  存储的过程**sysmail_help_configure_sp**列出该实例的当前数据库邮件配置设置。  
   
- 当**@parameter_name**指定，则为没有提供任何输出参数，但**@parameter_value**，此存储的过程会生成任何输出。  
+ 当 **@parameter_name** 指定，则为没有提供任何输出参数，但 **@parameter_value** ，此存储的过程会生成任何输出。  
   
  存储的过程**sysmail_help_configure_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称调用该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3c6565712d2cf567ef7ff2c61fd397463185bc17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49a82682e619bb2a33e5c04e049b40ac4733f427
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919875"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>命令（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  
@@ -32,7 +31,7 @@ CreateParameter(BSTR Name, DataTypeEnum Type, ParameterDirectionEnum Direction, 
 Execute(VARIANT *RecordsAffected, VARIANT *Parameters, long Options, _ADORecordset **ppirs)  
 ```  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 ```  
 get_ActiveConnection(_ADOConnection **ppvObject)  

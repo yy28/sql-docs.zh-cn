@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89c414c684ee41e7b7607acc1142d01c961566a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928504"
 ---
 # <a name="adox-objects"></a>ADOX 对象
 ## <a name="adox-object-summary"></a>ADOX 对象摘要  
   
-|Object|Description|  
+|Object|描述|  
 |------------|-----------------|  
 |[目录](../../../ado/reference/adox-api/catalog-object-adox.md)|包含描述的架构目录中的数据源的集合。|  
 |[列](../../../ado/reference/adox-api/column-object-adox.md)|表示从表、 索引或键的列。|  

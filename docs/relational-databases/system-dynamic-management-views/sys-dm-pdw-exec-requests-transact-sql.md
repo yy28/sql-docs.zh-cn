@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 8e6514991c0819342861a50a2a50b37e7d8748cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899400"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -26,7 +25,7 @@ ms.locfileid: "67564174"
 
   保存有关的所有请求的信息当前或最近中处于活动状态[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 它列出了每个请求/查询对应一行。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|此视图的键。 与请求关联的唯一数字 ID。|在系统中的所有请求之间是唯一的。|  
 |session_id|**nvarchar(32)**|与在其中运行此查询的会话相关联的唯一数字 ID。 请参阅[sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。||  
@@ -44,7 +43,7 @@ ms.locfileid: "67564174"
 |importance|**nvarchar(32)**|设置请求的重要性与已提交。 具有重要性较低的请求将保持排队状态处于挂起状态，如果提交较高的重要性请求。  之前已提交的较低重要性请求之前将执行请求的较高的优先级。  重要性的详细信息，请参阅[工作负荷重要性](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)。  |NULL</br>低</br>below_normal</br>正常 （默认值）</br>above_normal</br>高|
 |group_name| |保留供内部使用。</br>适用范围：Azure SQL 数据仓库|
 |resource_allocation_percentage| |保留供内部使用。</br>适用范围：Azure SQL 数据仓库|
-|result_set_cache|**bit**|详细信息是否已完成的查询是结果缓存命中 (1) 还是失败 (0)。|0,1|
+|result_set_cache|**bit**|详细信息是否已完成的查询是结果缓存命中 (1) 还是失败 (0)。|0，1|
 ||||
   
  此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题。   

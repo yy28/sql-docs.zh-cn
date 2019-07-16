@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6ff6704ca12fbb20c93133d7e73f29a5f72c9e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920759"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定的操作会影响哪些记录。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|如果不存在[筛选器](../../../ado/reference/ado-api/filter-property.md)应用于**记录集**，影响所有记录。<br /><br /> 如果**筛选器**属性设置为字符串条件 (如"作者 = Smith")，则该操作会影响当前的一章中可见的记录。<br /><br /> 如果**筛选器**属性设置为的成员[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或数组的书签，则该操作将影响的所有行**记录集**。 **注意： adAffectAll**隐藏在 Visual Basic 对象浏览器中。|  
 |**adAffectAllChapters**|4|影响所有记录中的所有同级章节**记录集**，包括那些通过任何不可见**筛选器**当前应用。|  

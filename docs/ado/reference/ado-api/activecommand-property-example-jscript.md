@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8a8885669a58673cc6c9a1d1448b7c2389206cb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad96904c913cadc451bc7d4c67fb5e4f8c59c70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921664"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 属性示例 (JScript)
 此示例演示[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActiveCommandJS.asp**。  

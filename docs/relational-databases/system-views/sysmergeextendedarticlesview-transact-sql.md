@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f91537880615fd7075db67ff8d89835944d1a79
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dd7e15e6e0a1a4097cbc79535ffec968f6776db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910075"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysmergeextendedarticlesview**视图可显示项目的信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|项目的名称。|  
-|**类型**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 仅过程架构。<br /><br /> **64** = 仅视图架构或仅限索引的视图架构。<br /><br /> **128** = 仅函数架构。<br /><br /> **160** = 仅同义词架构。|  
+|**name**|**sysname**|项目的名称。|  
+|**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 仅过程架构。<br /><br /> **64** = 仅视图架构或仅限索引的视图架构。<br /><br /> **128** = 仅函数架构。<br /><br /> **160** = 仅同义词架构。|  
 |**objid**|**int**|发布服务器对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图标识符。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图; 使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -68,7 +67,7 @@ ms.locfileid: "54125877"
 |**identity_support**|**int**|指定是否启用自动标识范围处理。 **1**表示启用标识范围处理，并**0**表示没有标识范围支持。|  
 |**destination_owner**|**sysname**|目标对象的所有者的名称。|  
 |**before_image_objid**|**int**|跟踪表对象 ID。 如果将发布配置为启用分区更改优化，则跟踪表将包含某些键列值。|  
-|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 应用仅发布创建与*@keep_partition_changes*  =  **true**。|  
+|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 应用仅发布创建与 *@keep_partition_changes*  =  **true**。|  
 |**verify_resolver_signature**|**int**|指定在合并复制中使用冲突解决程序之前是否验证数字签名：<br /><br /> **0** = 不验证签名。<br /><br /> **1** = 验证签名，以确定它是否来自可信来源。|  
 |**allow_interactive_resolver**|**bit**|指定是否对项目启用交互式冲突解决程序。 **1**指定对项目使用交互式冲突解决程序。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已启用合并代理来使用一条 UPDATE 语句在同一行的多个列中应用更改。<br /><br /> **0** = 为每个列的独立更新已更改的问题。<br /><br /> **1** = 发出 UPDATE 语句，这会导致要到在一个语句中的多个列进行更新。|  
@@ -80,8 +79,8 @@ ms.locfileid: "54125877"
 |**轻型**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**delete_proc**|**sysname**|由默认冲突解决程序用来在同步过程中删除行的过程。|  
 |**before_upd_view_objid**|**int**|在更新之前表视图的 ID。|  
-|**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除。<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 时的值*delete_tracking*是**0**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。<br /><br /> 注意：值为**0**导致非收敛性。|  
-|**compensate_for_errors**|**bit**|指示在同步期间遇到错误时是否采取补救措施。<br /><br /> **0** = 补救操作已被禁用。<br /><br /> **1** = 无法应用于订阅服务器或发布服务器通常会导致采取补救措施来撤消这些更改，这是合并复制的默认行为的更改。<br /><br /> 注意：值为**0**导致非收敛性。|  
+|**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除。<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 时的值*delete_tracking*是**0**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。<br /><br /> 注意:值为**0**导致非收敛性。|  
+|**compensate_for_errors**|**bit**|指示在同步期间遇到错误时是否采取补救措施。<br /><br /> **0** = 补救操作已被禁用。<br /><br /> **1** = 无法应用于订阅服务器或发布服务器通常会导致采取补救措施来撤消这些更改，这是合并复制的默认行为的更改。<br /><br /> 注意:值为**0**导致非收敛性。|  
 |**pub_range**|**bigint**|发布服务器标识范围大小。|  
 |**范围**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
 |**threshold**|**int**|标识范围阈值百分比。|  
@@ -92,7 +91,7 @@ ms.locfileid: "54125877"
 ## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [sysmergearticles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  

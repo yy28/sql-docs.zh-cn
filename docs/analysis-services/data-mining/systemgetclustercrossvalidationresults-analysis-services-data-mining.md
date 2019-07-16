@@ -1,5 +1,5 @@
 ---
-title: SystemGetClusterCrossValidationResults (Analysis Services-数据挖掘) |Microsoft 文档
+title: SystemGetClusterCrossValidationResults (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce11f7cb54d40336633d09a5d6601f0366c6bf55
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209631"
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +53,7 @@ SystemGetClusterCrossValidationResults(
  *折叠计数 (fold count)*  
  整数，指定将数据集分入的分区的数目。 最小值为 2。 最大倍数为 **maximum integer** 或事例数，取两者中的较低者。  
   
- 每个分区包含的事例数都将大致为：最大事例数/折叠计数。  
+ 每个分区包含的事例数都将大致为：最大事例数  /折叠计数  。  
   
  没有默认值。  
   
@@ -82,7 +83,7 @@ SystemGetClusterCrossValidationResults(
   
  下表介绍返回的列。  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |ModelName|所测试模型的名称。|  
 |AttributeName|可预测列的名称。 对于分类模型，始终为 **null**。|  
@@ -91,9 +92,9 @@ SystemGetClusterCrossValidationResults(
 |PartitionSize|一个整数，指示每个分区中包含的事例数。|  
 |测试|所执行测试的类型。|  
 |度量值|测试返回的度量值的名称。 每个模型的度量值都取决于可预测值的类型。 有关每个度量值的定义，请参阅[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。<br /><br /> 有关为每个可预测类型返回的度量值的列表，请参阅 [交叉验证报表中的度量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。|  
-|“值”|指定的测试度量值的值。|  
+|值|指定的测试度量值的值。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  若要为整个数据集返回准确性指标，请使用 [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
   
  此外，如果挖掘模型已分区为若干折叠，可以使用 [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)。  
@@ -118,22 +119,22 @@ CALL SystemGetClusterCrossValidationResults(
   
  示例结果：  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|“值”|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|测试|度量值|ReplTest1|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|群集 1|||1|3025|群集|事例可能性|0.930524511864121|  
+|分类 1|||1|3025|群集|事例可能性|0.930524511864121|  
 |群集 1|||2|3025|群集|事例可能性|0.919184178430778|  
 |分类 1|||3|3024|群集|事例可能性|0.929651120490248|  
 |Cluster 2|||1|1289|群集|事例可能性|0.922789726933607|  
 |Cluster 2|||2|1288|群集|事例可能性|0.934865535691068|  
 |Cluster 2|||3|1288|群集|事例可能性|0.924724595688798|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>要求  
  从 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 开始，交叉验证仅在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]中可用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SystemGetCrossValidationResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

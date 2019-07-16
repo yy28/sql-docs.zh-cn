@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 256a2c3ca6801e09bed0a96a63cc6d6540d466ff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907255"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_articlehistory**表跟踪与一个行的每个项目进行了更改的合并代理同步会话期间对项目所做的更改。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|中的合并代理作业会话的 ID [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)系统表。|  
 |**phase_id**|**int**|同步会话的阶段，可以是下列的一个值：<br /><br /> **1** = 上载。<br /><br /> **2** = 下载。<br /><br /> **4** = 清除。<br /><br /> **5** = 关闭。<br /><br /> **6** = 架构更改。<br /><br /> **7** = BCP。|  
@@ -42,7 +41,7 @@ ms.locfileid: "52791509"
 |**删除**|**int**|在同步期间应用到特定项目的删除的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**冲突**|**int**|同步期间发生的冲突的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**conflicts_resolved**|**int**|同步期间发生并已经解决的冲突的数目。 在同步过程中此值将增大，结束值代表总数。|  
-|**rows_retried**|**int**|在同步期间重试的错误行的数目。  在同步过程中此值将增大，结束值代表总数。|  
+|**rows_retried**|**int**|在同步期间重试的错误行的数目。 在同步过程中此值将增大，结束值代表总数。|  
 |**percent_complete**|**decimal**|在会话期间合并代理对项目进行同步所花费的时间占总同步时间的百分比。 在会话结束前，该值为 NULL。|  
 |**estimated_changes**|**int**|必须应用到项目的一个估计的行更改数。|  
 |**relative_cost**|**decimal**|将更改应用到项目所用的时间与整个会话的总时间的比值。|  

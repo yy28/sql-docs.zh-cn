@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b0fdece346bf77efb9ae78092717bfba9098089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910167"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个已还原的文件组在表中占一行。 此表存储中**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|标识相应还原操作的唯一标识号。 引用**restorehistory （restore_history_id)**。|  
+|**restore_history_id**|**int**|标识相应还原操作的唯一标识号。 引用**restorehistory （restore_history_id)** 。|  
 |**filegroup_name**|**nvarchar(128)**|被还原的文件组的名称 可以为 NULL。<br /><br /> 将数据库恢复到数据库快照时，此值的填充方式与完全还原时的填充方式相同。|  
   
 ## <a name="remarks"></a>备注  

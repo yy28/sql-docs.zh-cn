@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922763"
 ---
 # <a name="customization-file-userlist-section"></a>自定义文件 UserList 部分
 **Userlist**部分是关于**连接**的相同部分与部分*标识符*参数。  
@@ -35,7 +34,7 @@ ms.locfileid: "66699541"
  _userName_ **=**    
  **_accessRights_**  
   
-|组成部分|Description|  
+|组成部分|描述|  
 |----------|-----------------|  
 |*userName*|*用户名*表示使用此连接的人员。 有效的用户名称与 IIS 建立**Service Manager**对话框。|  
 |**_accessRights_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  

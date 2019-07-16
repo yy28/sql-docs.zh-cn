@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185093"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210114"
 ---
 # <a name="data-mining-ssas"></a>数据挖掘 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "54185093"
   
 -   集成的数据清理、数据管理和报表： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了用于分析和清理数据的工具。 可构建 ETL 过程，用于清理数据以准备建模，ssISnoversion 也可使重新定型和更新模型更加容易。  
   
--   多个可自定义的算法：除了提供聚类分析、 神经网络和决策树等算法之外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据挖掘还支持开发你自己的自定义插件算法。  
+-   多个可自定义算法：除了提供聚类分析、 神经网络和决策树等算法之外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据挖掘还支持开发你自己的自定义插件算法。  
   
--   模型测试基础结构：使用重要的统计工具（例如交叉验证、分类矩阵、提升图和散点图）测试你的模型和数据集。 轻松创建和管理测试和定型集。  
+-   模型测试基础结构：测试您的模型和使用重要的统计工具作为交叉验证的数据集，分类矩阵、 提升图和散点图。 轻松创建和管理测试和定型集。  
   
 -   查询和钻取：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘提供 DMX 语言，用于将预测查询集成到应用程序。 此外，还可以从模型中检索详细统计信息和模式，并钻取到事例数据。  
   
--   客户端工具：除了 SQL Server 提供的开发和设计工具之外，你还可以使用 Excel 数据挖掘外接程序来创建、查询和浏览模型。 或者，创建自定义的客户端，包括 Web 服务。  
+-   客户端工具：除了 SQL Server 提供的开发和设计工具，可以使用 excel 数据挖掘加载项来创建、 查询和浏览模型。 或者，创建自定义的客户端，包括 Web 服务。  
   
--   脚本语言支持和托管的 API：所有数据挖掘对象都是完全可编程的。 可通过用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 MDX、XMLA 或 PowerShell 扩展插件来撰写脚本。 使用数据挖掘扩展插件 (DMX) 语言来进行快速查询和脚本撰写。  
+-   脚本语言支持和托管 API:所有数据挖掘对象都是完全可编程的。 可通过用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 MDX、XMLA 或 PowerShell 扩展插件来撰写脚本。 使用数据挖掘扩展插件 (DMX) 语言来进行快速查询和脚本撰写。  
   
--   安全和部署：通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供基于角色的安全性，包括用于钻取到模型和结构数据的单独权限。 轻松地将模型部署到其他服务器，以便用户可以访问模式或执行预测。  
+-   安全和部署：提供基于角色的安全性通过[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，包括用于钻取到模型和结构数据的单独权限。 轻松地将模型部署到其他服务器，以便用户可以访问模式或执行预测。  
   
 ## <a name="in-this-section"></a>本节内容  
  本节中的主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据挖掘的主要功能和相关任务。  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d513da9588b8ae8fb4f20ece11390c29d71bcf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907547"
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdbms_datatype_mapping**表包含从数据类型的允许的数据类型映射到目标 DBMS 中的一个或多个特定的数据类型源数据库管理系统 (DBMS) 中。 此表存储中**msdb**数据库，用于异类数据库复制。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|标识每个唯一的数据类型映射。|  
 |**map_id**|**int**|标识源数据类型。|  
@@ -39,7 +38,7 @@ ms.locfileid: "62817025"
 |**dest_scale**|**int**|定义目标数据类型，其中的值为 NULL 表示不使用小数位数，小数位数的值**为-1**表明使用源数据类型的小数位数。|  
 |**dest_length**|**bigint**|定义目标数据类型，其中的值为 NULL 表示不使用长度，长度的值**为-1**表明使用源数据类型的长度。|  
 |**dest_nullable**|**bit**|指示映射中的目标列是否允许 NULL 值，其中 NULL 值意味着此定义不是必需的。|  
-|**dest_createparams**|**int**|位图，用于说明适用于每种数据类型的长度、精度和小数位数组合，其中包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = 长度。|  
+|**dest_createparams**|**int**|位图，用于说明适用于每种数据类型的长度、精度和小数位数组合，其中包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = 规模。<br /><br /> **0x4** = 长度。|  
   
 ## <a name="see-also"></a>请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

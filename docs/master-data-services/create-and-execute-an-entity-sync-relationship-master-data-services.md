@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 51724ea4c0adf1a98d7972898d15e20e626b7c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee63fa1a3521af7d8fb0679df3b0521486e7b8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906536"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
 
@@ -96,7 +95,7 @@ ms.locfileid: "65489534"
 ## <a name="sync-relationship-information"></a>同步关系信息  
  对于创建的每个同步关系，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“登录属性”|同步关系状态。<br /><br /> 单击“保存”或执行同步关系后，系统会显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示同步关系正在更新  。<br /><br /> 如果创建、编辑或执行同步关系时，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
 |源模型|源模型名称。|  

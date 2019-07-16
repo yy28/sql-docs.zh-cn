@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b3a5428fafd2429791b39d8c343024f9348ca22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919770"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>命令 (VisualC++使用 #import 语法索引)
 ## <a name="methods"></a>方法  
@@ -32,7 +31,7 @@ _RecordsetPtr Execute( VARIANT * RecordsAffected, VARIANT * Parameters, long Opt
 _ParameterPtr CreateParameter( _bstr_t Name, enum DataTypeEnum Type, enum ParameterDirectionEnum Direction, long Size, const _variant_t & Value = vtMissing );  
 ```  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 ```  
 _ConnectionPtr GetActiveConnection( );  

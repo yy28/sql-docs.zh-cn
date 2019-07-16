@@ -15,30 +15,29 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920800"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
 **ADORecordConstruction**界面用于构造 ADO**记录**从 OLE DB 对象**行**C 中的对象 /C++应用程序。  
   
  此接口支持以下属性：  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|只写。<br />设置容器的 OLE DB**行**对象上此 ADO**记录**对象。|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|读/写。<br />获取/设置 OLE DB**行**对象从/对此 ADO**记录**对象。|  
+|[行](../../../ado/reference/ado-api/row-property-ado.md)|读/写。<br />获取/设置 OLE DB**行**对象从/对此 ADO**记录**对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  无。  
   
 ## <a name="remarks"></a>备注  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4437f76a926e84ffe3592042f9d29b50f3eabf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62473903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908843"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>项目设置（同步）(MySQLToSQL)
 同步**项目设置**使您可以配置 MySQL 数据库对象的 SQL Server 数据库对象的同步方式。  

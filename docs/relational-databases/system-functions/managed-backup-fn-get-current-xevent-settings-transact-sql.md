@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1fa350d9ff9d5e90eb595f1f693b8e62a46fa555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910247"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>返回的表  
  默认情况下必须启用扩展事件的管理、分析和运行通道，并且不可配置这些通道。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|扩展事件类型|  
 |is_configurable|NVARCHAR(128)|此值设置为 **，则返回 True**如果事件是可配置，否则它设置为**False**。|  
@@ -57,7 +56,7 @@ smart_admin.fn_get_current_xevent_settings ()
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要**选择**函数上的权限。  
   
 ## <a name="examples"></a>示例  

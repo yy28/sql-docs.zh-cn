@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5a2aeb3dac59c356ae10e72df88f01a75dd1d1d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165363"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多维模型中的分区
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53072494"
   
 ## <a name="related-topics"></a>相关主题  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|包含有关如何使用筛选器或不含重复数据的不同事实表对数据分区的信息。|  
 |[设置分区存储（Analysis Services - 多维）](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|说明如何为分区配置存储。|  

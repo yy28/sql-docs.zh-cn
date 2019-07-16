@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b7934d914af50d61df554c2a82ae221a1d5490f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f8822b0e7c56fe109a251365050f5aed9cdef178
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907360"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdynamicsnapshotjobs**表跟踪应用以生成已筛选的数据快照的参数化的行筛选器信息。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|筛选数据快照作业的 ID。|  
-|**名称**|**sysname**|筛选的数据快照作业的名称。|  
+|**name**|**sysname**|筛选的数据快照作业的名称。|  
 |**pubid**|**uniqueidentifier**|此发布的唯一标识号。|  
 |**job_id**|**uniqueidentifier**|在分发服务器上的 SQL Server 代理作业的 ID。|  
 |**agent_id**|**int**|SQL Server 代理的 ID。|  

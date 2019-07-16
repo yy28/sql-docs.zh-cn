@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62650975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910692"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估访问数据库对象的转换 (AccessToSQL)
 然后加载对象和数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您应该确定多少的迁移将会成功，并且转换可能需要多长时间。 SSMA 可以创建显示已成功将转换为的对象的百分比评估报告[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 语法和时间估计为执行迁移。 SSMA 还允许您查看特定问题导致转换失败。  

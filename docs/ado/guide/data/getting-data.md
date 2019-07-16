@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf58d779c90394606a8e10411da837481ede6c66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925251"
 ---
 # <a name="getting-data"></a>获取数据
 [ADO 基础知识](../../../ado/guide/data/ado-fundamentals.md)，并[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)示例具体而言，引入了在创建 ADO 应用程序时涉及的四个主要操作： 获取数据、 检查数据、 编辑数据和更新数据。 本部分讨论更多详细信息中的获取数据。  

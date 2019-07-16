@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901362"
 ---
 # <a name="establishing-a-connection"></a>建立连接
 后分配环境和连接句柄并设置连接属性，该应用程序已准备好连接到数据源或驱动程序。 有三个不同的函数应用程序可用于执行此操作：**SQLConnect** （核心接口一致性级别）， **SQLDriverConnect** (Core) 和**SQLBrowseConnect** (级别 1)。 这三个用于在不同的方案中使用。 在连接时之前，应用程序可以确定这这些函数使用受支持**ConnectFunctions**返回的关键字**SQLDrivers**。  

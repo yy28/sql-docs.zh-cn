@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 70f74c9c3782cb8da5a12f5b785e410356a2c088
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925337"
 ---
 # <a name="filtering-for-updated-records"></a>筛选更新的记录
 在调用 UpdateBatch 之前，可以使用记录集筛选器属性，若要查看已打开记录集后已更改的记录或到 UpdateBatch 的最后一个调用。 若要执行此操作，请将筛选器设置为 adFilterPendingRecords 来确定将更新多少条记录下, 一节中的代码示例中所示。  

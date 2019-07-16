@@ -1,5 +1,5 @@
 ---
-title: PropertyAttributesEnum | Microsoft Docs
+title: PropertyAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99acfb2507701f0e4b47aff5b0595b61fc45c425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931560"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 指定的特性[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指示提供程序不支持该属性。|  
 |**adPropRequired**|1|指示在初始化数据源之前，用户必须指定此属性的值。|  
