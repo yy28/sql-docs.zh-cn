@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211568"
 ---
 # <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
   可以采用多种方式将业务逻辑添加到 XML 数据中：  
@@ -51,7 +51,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- 注册程序集并创建用户定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数之后（ **SqlXslTransform()** 对应于 **TransformXml()**），便可从 Transact-SQL 中调用该函数，如以下查询所示：  
+ 注册程序集并创建用户定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数之后（ **SqlXslTransform()** 对应于 **TransformXml()** ），便可从 Transact-SQL 中调用该函数，如以下查询所示：  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

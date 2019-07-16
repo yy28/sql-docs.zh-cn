@@ -1,5 +1,5 @@
 ---
-title: 表格模型 (Analysis Services) 中的翻译 |Microsoft 文档
+title: 表格模型 (Analysis Services) 中的翻译 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044171"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162410"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表格模型 (Analysis Services) 中的翻译
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 将添加翻译字符串支持的表格模型。 该模型中的单个对象可以拥有多个名称或说明翻译，使其可以在模型定义中支持多种语言。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 添加了翻译字符串支持的表格模型。 该模型中的单个对象可以拥有多个名称或说明翻译，使其可以在模型定义中支持多种语言。  
   
- 已翻译的字符串仅适用于出现在客户端工具（如 Excel 数据透视表列表）中的对象元数据（表和列的名称及说明）。  若要使用已翻译的字符串，客户端连接需指定区域性。 在“在 Excel 中分析”功能中，可以从下拉列表中选择语言。 对于其他工具，可能需要在连接字符串中指定区域性。  
+ 已翻译的字符串仅适用于出现在客户端工具（如 Excel 数据透视表列表）中的对象元数据（表和列的名称及说明）。  若要使用已翻译的字符串，客户端连接需指定区域性。 在“在 Excel 中分析”  功能中，可以从下拉列表中选择语言。 对于其他工具，可能需要在连接字符串中指定区域性。  
   
  此功能不适用于将已翻译的数据加载到模型中。 如果希望加载已翻译的数据值，应制定一种处理策略，包括如何从提供数据的数据源提取已翻译的字符串。  
   
@@ -39,15 +39,15 @@ ms.locfileid: "34044171"
 ## <a name="create-an-empty-translation-file"></a>创建一个空的翻译文件  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 添加翻译。  
   
-1.  单击“模型” > “翻译” > “管理翻译”。  
+1.  单击“模型”   > “翻译”   > “管理翻译”  。  
   
-2.  选择要为其提供翻译的语言，然后单击“添加” 。  
+2.  选择要为其提供翻译的语言，然后单击“添加”  。  
   
 3.  从列表中选择一种或多种语言，具体取决于你希望导入字符串的方式。  
   
      虽然翻译文件可以包含多种语言，但是你可能会发现如果每种语言创建一个翻译文件，那么翻译管理就更容易。 稍后将会完全导入你现在创建的翻译文件。 若要根据语言改变导入选项，每种语言都需位于其自己的文件中。  
   
-4.  单击“导出语言文件” 。  提供文件名和文件位置。  
+4.  单击“导出语言文件”  。  提供文件名和文件位置。  
   
  ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34044171"
 ## <a name="import-a-translation-file"></a>导入翻译文件  
  导入的翻译字符串会成为模型定义的永久部分。 导入这些字符串后，将不再引用翻译文件。  
   
-1.  单击“模型” > “翻译” > “导入翻译”。  
+1.  单击“模型”   > “翻译”   > “导入翻译”  。  
   
-2.  查找翻译文件，然后单击“打开” 。  
+2.  查找翻译文件，然后单击“打开”  。  
   
 3.  根据需要指定导入选项。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "34044171"
     |将导入结果写入日志文件|默认情况下，系统会将日志文件保存到项目文件夹。 导入结束后，系统将提供文件的确切路径。 日志文件名称是 SSDT_Translations_Log_\<时间戳 >。|  
     |导入前，将翻译备份到 JSON 文件|备份与要导入的字符串的区域性一致的现有翻译。  如果模型中不存在要导入的区域性，则备份将为空。<br /><br /> 如果以后需要还原此文件，可以将 model.bim 的内容替换为此 JSON 文件。|  
   
-4.  单击“导入” 。  
+4.  单击“导入”  。  
   
 5.  根据需要，如果已生成日志文件或备份，可以在项目文件夹（例如，C:\Users\Documents\Visual Studio 2015\Projects\Tabular1200-AW\Tabular1200-AW）中找到该文件。  
   
 6.  若要验证导入，请执行以下步骤：  
   
-    -   右键单击解决方案资源管理器中的“model.bim”文件，然后选择“查看代码”。 单击“是”以关闭设计视图，并在代码视图中重新打开“model.bim”。  如果已安装完整版的 Visual Studio（例如免费的社区版），则会在内置 JSON 编辑器中打开文件。  
+    -   右键单击解决方案资源管理器中的“model.bim”  文件，然后选择“查看代码”  。 单击“是”  以关闭设计视图，并在代码视图中重新打开“model.bim”  。  如果已安装完整版的 Visual Studio（例如免费的社区版），则会在内置 JSON 编辑器中打开文件。  
   
-    -   搜索“区域性”或特定的已翻译字符串，以验证希望看到的字符串实际存在。  
+    -   搜索“区域性”  或特定的已翻译字符串，以验证希望看到的字符串实际存在。  
   
 ## <a name="connect-using-a-locale-identifier"></a>使用区域设置标识符进行连接  
  本部分介绍了一种用于验证是否已从模型中返回正确字符串的方法。  
@@ -109,7 +109,7 @@ ms.locfileid: "34044171"
   
      创建数据透视表时，将看到已翻译的表和列名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 的全球化方案](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [在 Excel 中分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  

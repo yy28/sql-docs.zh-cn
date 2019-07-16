@@ -1,5 +1,5 @@
 ---
-title: 无法加载文件或程序集 Microsoft Data Services |Microsoft 文档
+title: 无法加载文件或程序集 Microsoft 数据服务 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9472fffb790d8d18ced8d2a528011927717aabc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164156"
 ---
 # <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>无法加载文件或程序集 Microsoft 数据服务
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34026594"
 |||  
 |-|-|  
 |适用于|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|找不到 ADO.NET Data Services 3.5 SP1。|  
 |消息正文|无法加载文件或程序集“Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”或其依赖项之一。 系统找不到指定的文件。|  
   
@@ -34,15 +34,15 @@ ms.locfileid: "34026594"
   
  如果 ADO.NET Data Services 未安装，则在您请求数据馈送时，将发生此错误。  
   
-## <a name="user-action"></a>使用者動作  
+## <a name="user-action"></a>用户操作  
   
-1.  转到 SharePoint 2010 的硬件和软件要求文档[确定硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)。  
+1.  转到针对 SharePoint 2010 的硬件和软件要求文档[确定硬件和软件要求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734) 。  
   
 2.  在 **“安装必备软件”** 中，找到用于与您正在使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
   
 3.  单击该链接并且运行安装该服务的安装程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将 Power Pivot 解决方案部署到 SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

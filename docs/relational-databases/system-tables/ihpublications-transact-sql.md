@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990333"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHpublications**系统表中占一行，为每个使用当前分发服务器的非 SQL Server 发布。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|为发布提供唯一 ID 的标识列。|  
-|**名称**|**sysname**|与发布关联的唯一名称。|  
+|**name**|**sysname**|与发布关联的唯一名称。|  
 |**repl_freq**|**tinyint**|复制频率：<br /><br /> **0** = 基于事务。<br /><br /> **1** = 计划表刷新。|  
 |**status**|**tinyint**|发布的状态，可以是以下状态之一。<br /><br /> **0** = 非活动状态。<br /><br /> **1** = 活动。|  
 |**sync_method**|**tinyint**|同步方法包括：<br /><br /> **1** = 字符大容量复制。<br /><br /> **4** = Concurrent_c，表示使用字符大容量复制但不是在快照期间锁定表。|  
@@ -58,7 +57,7 @@ ms.locfileid: "52802779"
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 均存储的冲突记录的发布服务器和订阅服务器导致冲突。<br /><br /> **1** = 的冲突记录存储在发布服务器。<br /><br /> *不支持用于非 SQL 发布服务器。*|  
 |**conflict_retention**|**int**|指定冲突保持期（天）。 *不支持用于非 SQL 发布服务器。*|  
 |**conflict_policy**|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。<br /><br /> *不支持用于非 SQL 发布服务器。*|  
-|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **2** = sql，它使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 不使用此列的非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。<br /><br /> 注意：已不推荐也不再支持使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列。<br /><br /> *对于非 SQL 发布服务器不支持此列。*|  
+|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **2** = sql，它使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 不使用此列的非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。<br /><br /> 注意:使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已被弃用，不再受支持。<br /><br /> *对于非 SQL 发布服务器不支持此列。*|  
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的全局唯一标识符 (GUID) 指定在发布该发布[!INCLUDE[msCoName](../../includes/msconame-md.md)]Active Directory 中，且 GUID 是相应的 Active Directory 发布对象**objectGUID**。 如果为 NULL，则不在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 *不支持用于非 SQL 发布服务器。*|  
 |**backward_comp_level**|**int**|数据库兼容性级别，可以是下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *不支持用于非 SQL 发布服务器。*|  
 |**description**|**nvarchar(255)**|发布的说明性条目。|  
@@ -66,7 +65,7 @@ ms.locfileid: "52802779"
 |**immediate_sync**|**bit**|指示同步文件是创建还是重新创建每次运行快照代理，其中**1**意味着每次运行代理时创建它们。|  
 |**allow_push**|**bit**|指示是否对该发布允许推送订阅其中**1**允许它们的方式。|  
 |**allow_pull**|**bit**|指示是否对该发布允许请求订阅其中**1**允许它们的方式。|  
-|**保留期**|**int**|为给定发布保存的更改数量（小时）。|  
+|**retention**|**int**|为给定发布保存的更改数量（小时）。|  
 |**allow_subscription_copy**|**bit**|指定是否已启用复制订阅该发布的订阅数据库的功能。 **1**意味着允许复制。|  
 |**allow_initialize_from_backup**|**bit**|指示订阅服务器是否能够从备份而不是从初始快照来初始化对此发布的订阅。 **1**意味着可以从备份初始化订阅并**0**表示不能。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。 *不支持用于非 SQL 发布服务器。*|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

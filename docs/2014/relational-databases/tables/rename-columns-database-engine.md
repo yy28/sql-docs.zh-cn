@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211817"
 ---
 # <a name="rename-columns-database-engine"></a>重命名列（数据库引擎）
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表列。  
@@ -54,17 +54,17 @@ ms.locfileid: "54135967"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在“对象资源管理器”中，右键单击要重命名其中的列的表，再选择“重命名”。  
+2.  在“对象资源管理器”  中，右键单击要重命名其中的列的表，再选择“重命名”  。  
   
 3.  键入新的列名称。  
   
 #### <a name="to-rename-a-column-using-table-designer"></a>使用表设计器重命名列  
   
-1.  在“对象资源管理器”中，右键单击要为其重命名列的表，再选择“设计”。  
+1.  在“对象资源管理器”  中，右键单击要为其重命名列的表，再选择“设计”  。  
   
 2.  在 **“列名”** 下，选择要更改的名称，并键入新名称。  
   
-3.  在“文件”菜单上，单击“保存”以保存表名。  
+3.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 > [!NOTE]  
 >  您也可以在 **“列属性”** 选项卡中更改列名。选择要更改名称的列，并为 **“名称”** 键入新值。  
@@ -76,9 +76,9 @@ ms.locfileid: "54135967"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  下面的示例将 `TerritoryID` 表中的 `Sales.SalesTerritory` 列重命名为 `TerrID`。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  下面的示例将 `TerritoryID` 表中的 `Sales.SalesTerritory` 列重命名为 `TerrID`。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

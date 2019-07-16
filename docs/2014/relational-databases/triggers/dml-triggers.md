@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196505"
 ---
 # <a name="dml-triggers"></a>DML 触发器
   DML 触发器为特殊类型的存储过程，可在发生数据操作语言 (DML) 事件时自动生效，以便影响触发器中定义的表或视图。 DML 事件包括 INSERT、UPDATE 或 DELETE 语句。 DML 触发器可用于强制业务规则和数据完整性、查询其他表并包括复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 将触发器和触发它的语句作为可在触发器内回滚的单个事务对待。 如果检测到错误（例如，磁盘空间不足），则整个事务即自动回滚。  

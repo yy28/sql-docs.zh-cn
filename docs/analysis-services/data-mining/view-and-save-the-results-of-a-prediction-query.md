@@ -1,5 +1,5 @@
 ---
-title: 查看和保存预测查询的结果 |Microsoft 文档
+title: 查看和保存预测查询的结果 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 34fed203898072ebafc183f299d58d263ae648db
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182298"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>查看和保存预测查询的结果
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34017964"
   
 ### <a name="save-the-results-of-a-prediction-query-to-a-table"></a>将预测查询的结果保存到表  
   
-1.  在数据挖掘设计器中，同 **“挖掘模型预测”** 选项卡工具栏上的 **“保存查询结果”**。  
+1.  在数据挖掘设计器中，同 **“挖掘模型预测”** 选项卡工具栏上的 **“保存查询结果”** 。  
   
      此时将打开 **“保存数据挖掘查询结果”** 对话框。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34017964"
   
 4.  如果希望将表添加到数据源视图中，请从 **“添加到数据源视图”** 中选择数据源视图。  
   
-5.  单击 **“保存”**。  
+5.  单击“保存”  。  
   
     > [!WARNING]  
     >  如果目标不支持分层行集，则可以向结果中添加 FALTTENED 关键字以另存为平面表。  

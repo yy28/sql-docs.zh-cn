@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘工具 |Microsoft 文档
+title: 数据挖掘工具 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210080"
 ---
 # <a name="data-mining-tools"></a>数据挖掘工具
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015144"
 ## <a name="data-mining-wizard"></a>中的  
  可使用数据挖掘向导开始创建数据挖掘解决方案。 该向导简单易用，可指导您完成创建数据挖掘结构和初始相关挖掘模型的过程，其中包括选择算法类型和数据源以及定义用于分析的事例数据等任务。  
   
- **有关详细信息：**[数据挖掘向导（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **有关详细信息：** [数据挖掘向导（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>数据挖掘设计器  
+## <a name="data-mining-designer"></a>Data Mining Designer  
  在使用数据挖掘向导创建挖掘结构和挖掘模型后，您可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用数据挖掘设计器来处理现有模型和结构。  
   
  该设计器包含用于执行以下任务的工具：  
@@ -80,10 +80,10 @@ ms.locfileid: "34015144"
   
 -   使用逻辑回归按风险划分传入客户。  
   
- **有关详细信息：**[数据挖掘解决方案的相关项目](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ **有关详细信息：** [数据挖掘解决方案的相关项目](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘扩展插件 & #40; DMX & #41;引用](../../dmx/data-mining-extensions-dmx-reference.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)  

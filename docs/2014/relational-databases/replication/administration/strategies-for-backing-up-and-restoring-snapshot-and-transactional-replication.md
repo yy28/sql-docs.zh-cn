@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210770"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
   在设计快照和事务复制的备份和还原策略时，需要考虑三个方面：  
@@ -148,7 +148,7 @@ ms.locfileid: "54125227"
   
          有关如何指定订阅服务器已包含数据的详细信息，请参阅 [Initialize a Subscription Manually](../initialize-a-subscription-manually.md)。  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>发布数据库：具有更新订阅的事务复制  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>发布数据库：带有更新订阅的事务复制  
   
 1.  还原发布数据库的最新备份。 转到步骤 2。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "54125227"
   
 9. 还原后，在数据库 **A** 中为每个表分配的标识范围也将在数据库 **B** 中使用。确保还原的数据库 **B** 已收到发生故障的数据库 **B** 中传播到数据库 **A** 和数据库 **C** 的所有更改；然后重设每个表的标识范围种子。  
   
-    1.  在数据库 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 上还原数据库 **B** ，并检索输出参数 **@request_id**。 转到步骤 b。  
+    1.  在数据库 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 上还原数据库 **B** ，并检索输出参数 **@request_id** 。 转到步骤 b。  
   
     2.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 有关详细信息，请参阅[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)或[启动和停止复制代理 (SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 转到步骤 c。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125227"
   
     1.  停止对等拓扑中已发布表上的所有活动。 转到步骤 b。  
   
-    2.  在数据库 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 上还原数据库 **B** ，并检索输出参数 **@request_id**。 转到步骤 c。  
+    2.  在数据库 [B](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 上还原数据库 **B** ，并检索输出参数 **@request_id** 。 转到步骤 c。  
   
     3.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 转到步骤 d。  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125227"
   
 2.  还原订阅数据库的最新备份。 转到步骤 3。  
   
-3.  如果订阅数据库仅包含推送订阅，则转到步骤 4。 如果订阅数据库包含任何请求订阅，提出以下问题：是最新的订阅信息？ 数据库是否包含故障发生时设置的所有表和选项？ 如果是，则转到步骤 4。 如果否，则重新初始化订阅。 恢复完成。  
+3.  如果订阅数据库仅包含推送订阅，则转到步骤 4。 如果订阅数据库包含任何请求订阅，则询问以下问题：订阅信息是否是最新的？ 数据库是否包含故障发生时设置的所有表和选项？ 如果是，则转到步骤 4。 如果否，则重新初始化订阅。 恢复完成。  
   
 4.  若要同步订阅服务器，运行分发代理。 恢复完成。  
   
@@ -350,7 +350,7 @@ ms.locfileid: "54125227"
  [备份和还原复制的数据库](back-up-and-restore-replicated-databases.md)   
  [“配置分发”](../configure-distribution.md)   
  [发布数据和数据库对象](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [订阅发布](../subscribe-to-publications.md)   
  [初始化订阅](../initialize-a-subscription.md)   
  [同步数据](../synchronize-data.md)  
   

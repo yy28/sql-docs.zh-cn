@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208826"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50147782"
 |术语|定义|  
 |----------|----------------|  
 |目的|一个返回 KPI 目标值的 MDX 数值表达式或计算。|  
-|ReplTest1|一个返回 KPI 实际值的 MDX 数值表达式。|  
+|值|一个返回 KPI 实际值的 MDX 数值表达式。|  
 |“登录属性”|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
 |走向|一个评估一段时间内 KPI 值的 MDX 表达式。 走向可以是任何基于时间的条件，该条件在特定的业务上下文中很有用。<br /><br /> 使用走向 MDX 表达式，业务用户可以确定 KPI 是随时间升高还是随时间降低。|  
 |状态指示器|一个提供 KPI 状态快速指示的可见元素。 该元素的显示内容由评估状态的 MDX 表达式的值确定。|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210007"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410664"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用数据挖掘设计器创建模型筛选器  
  可以通过更改挖掘模型的 **Filter** 属性在数据挖掘设计器中筛选模型。 可以在 **“属性”** 窗格中直接键入筛选表达式，也可以打开一个筛选器对话框来生成条件。  
   
- 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可使用 **AND**/**OR** 运算符链接多个条件。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 **greater than** 和 **less than** 运算符。 但是，对于离散值，则仅可使用 **=（等于）**、 **!=（不等于）** 和 **is null** 运算符。  
+ 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可使用 **AND**/**OR** 运算符链接多个条件。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 **greater than** 和 **less than** 运算符。 但是，对于离散值，则仅可使用 **=（等于）** 、 **!=（不等于）** 和 **is null** 运算符。  
   
 > [!NOTE]  
 >  不支持使用 **LIKE** 关键字。 如果您希望包括多个离散属性，则必须创建不同条件并使用 **OR** 运算符来链接它们。  
@@ -76,7 +76,7 @@ ms.locfileid: "52410664"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>我如何分辨是否正在使用筛选器？  
  可以使用多种方法确定是否对模型应用了筛选器：  
   
--   在设计器中，单击 **“挖掘模型”** 选项卡，打开 **“属性”**，然后查看挖掘模型的 **Filter** 属性。  
+-   在设计器中，单击 **“挖掘模型”** 选项卡，打开 **“属性”** ，然后查看挖掘模型的 **Filter** 属性。  
   
 -   DMV DMSCHEMA_MINING_MODELS 将输出一个包含筛选器文本的列。 您可以使用以下有关 DMV 的查询来返回模型的名称及其筛选器：  
   

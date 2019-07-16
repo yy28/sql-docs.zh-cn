@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797609"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189283"
 ---
-# <a name="job-properties-new-job-alerts-page"></a>作业属性：新建作业 （警报页）
+# <a name="job-properties-new-job-alerts-page"></a>作业属性：新建作业（“警报”页）
   使用此页可以查看和组织 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的警报。  
   
 ## <a name="options"></a>选项  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190973"
 ---
 # <a name="instance-configuration"></a>实例配置
   使用 **安装向导的** “实例配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页面可指定是创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是其命名实例。 如果尚未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则除非您指定命名实例，否则将创建默认实例。  
@@ -90,17 +90,17 @@ ms.locfileid: "56039878"
   
  共用同一实例名称的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件都必须满足以下条件：  
   
--   版本相同  
+-   版本相同   
   
--   版本类别相同  
+-   版本类别相同   
   
--   语言设置相同  
+-   语言设置相同   
   
--   聚集状态相同  
+-   聚集状态相同   
   
     > [!NOTE]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不能识别群集。  
   
--   操作系统相同  
+-   操作系统相同   
   
   

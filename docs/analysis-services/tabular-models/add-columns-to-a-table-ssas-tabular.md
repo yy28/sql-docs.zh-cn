@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a726f7dd8ef72ad30bd055d2f76cc58c7db6183d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163119"
 ---
 # <a name="add-columns-to-a-table"></a>向表中添加列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53072704"
   
 #### <a name="to-add-a-column-from-the-data-source-by-using-the-edit-table-properties-dialog-box"></a>使用“编辑表属性”对话框从数据源添加列  
   
-1.  在模型设计器中，单击要将列添加到的表，单击 **“表”** 菜单，然后单击  **“表属性”**。  
+1.  在模型设计器中，单击要将列添加到的表，单击 **“表”** 菜单，然后单击  **“表属性”** 。  
   
 2.  在 **“编辑表属性”** 对话框中，在表预览窗口中选择要添加的源列，然后单击“确定”。 已包含在表定义中的列将被选中。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "53072704"
   
 #### <a name="to-create-a-calculated-column"></a>创建计算列  
   
-1.  在模型设计器的“数据视图”中，选择要添加新的空白计算列的表，滚动到最右侧的列，或单击“列”菜单，然后单击“添加列”。  
+1.  在模型设计器的“数据视图”中，选择要添加新的空白计算列的表，滚动到最右侧的列，或单击“列”  菜单，然后单击“添加列”  。  
   
-     若要在两个现有列之间创建新列，请右键单击某个现有列，然后单击“插入列”。  
+     若要在两个现有列之间创建新列，请右键单击某个现有列，然后单击“插入列”  。  
   
 2.  在公式栏中，键入 DAX 公式以便为每个行添加属性。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "53072704"
   
 #### <a name="to-create-a-named-blank-column"></a>创建命名的空白列  
   
-1.  在模型设计器的“数据视图”中，选择要添加空白列的表，滚动到最右侧的列，或单击“列”菜单，然后单击“添加列”。  
+1.  在模型设计器的“数据视图”中，选择要添加空白列的表，滚动到最右侧的列，或单击“列”  菜单，然后单击“添加列”  。  
   
-     若要在两个现有列之间创建新列，请右键单击某个现有列，然后单击“插入列”。  
+     若要在两个现有列之间创建新列，请右键单击某个现有列，然后单击  “插入列”。  
   
 2.  单击顶部的单元，然后键入名称，按 Enter。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编辑表属性对话框](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [更改表、列或行筛选器映射](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

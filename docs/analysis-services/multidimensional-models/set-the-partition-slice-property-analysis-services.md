@@ -1,5 +1,5 @@
 ---
-title: 设置分区切片属性 (Analysis Services) |Microsoft 文档
+title: 设置分区切片属性 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e0eaeb3238f3d3d728f9c05cbe6d01bdcb05755
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165210"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>设置分区切片属性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   数据切片是一种很重要的优化功能，可以帮助将查询指向相应分区的数据。 通过覆盖为 MOLAP 和 HOLAP 分区生成的默认切片来显式设置 Slice 属性可提高查询性能。 此外，Slice 属性还在处理分区时提供额外的验证检查。  
   
- 创建分区后，但在处理它之前，可以使用 Slice 属性指定一个数据切片。 在“分区”选项卡上，展开一个度量值组，右键单击一个分区，然后选择“属性”。  
+ 创建分区后，但在处理它之前，可以使用 Slice 属性指定一个数据切片。 在“分区”选项卡上，展开一个度量值组，右键单击一个分区，然后选择“属性”  。  
   
  要了解有关数据切片好处的说明，请参阅 [对您的 SSAS 多维数据集分区设置切片](http://go.microsoft.com/fwlink/?LinkId=317783)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34021334"
 >   
 >  如果需要定义复杂的切片，我们建议使用 XMLA Alter 脚本在切片中定义元组。 然后，你可以使用 ascmd 命令行工具或 Integration Services 中的 [Analysis Services 执行 DDL 任务](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 运行该脚本并立即创建指定的成员集，之后再处理分区。  
   
-## <a name="see-also"></a>另请参阅  
- [创建和管理本地分区 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+ [创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

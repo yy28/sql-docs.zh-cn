@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: abd910573f512e32ee58c6c3afabac17664f4b24
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207762"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52983868"
 |---------------|---------------------|  
 |[在 Excel 中分析表格模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|本文介绍如何使用分析在 Excel 功能模型设计器中打开 Excel、 创建到模型工作区数据库的数据源连接并将数据透视表添加到工作表。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析 Excel 中的表格模型](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [透视](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  

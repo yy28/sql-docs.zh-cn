@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196710"
 ---
 # <a name="table-properties"></a>表的属性
   本主题介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“表属性”对话框中显示的表属性。 有关如何显示这些属性的详细信息，请参阅 [查看表定义](view-the-table-definition.md)。  
@@ -85,7 +85,7 @@ ms.locfileid: "53356283"
   
 ##  <a name="ChangeTracking"></a> “更改跟踪”页  
  **更改跟踪**  
- 指示是否对相应的表启用了更改跟踪。 默认值是 `False`。  
+ 指示是否对相应的表启用了更改跟踪。 默认值为 `False`。  
   
  只有对数据库启用了更改跟踪，此选项才可用。  
   

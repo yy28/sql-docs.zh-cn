@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e437507d139959c21f723f8a674ca4879570339f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181552"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>向 Analysis Services 实例授予服务器管理员权限
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "50145672"
   
 ## <a name="modify-server-role-membership"></a>修改服务器角色成员身份  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中右键单击实例名称，然后单击“属性”。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中右键单击实例名称，然后单击“属性”  。  
   
 2.  在 **“选择页”** 窗格中单击 **“安全性”** ，然后单击页底部的 **“添加”** 以将一个或多个 Windows 用户或组添加到服务器角色中。  
   
@@ -40,22 +40,22 @@ ms.locfileid: "50145672"
 ### <a name="add-computer-accounts"></a>添加计算机帐户  
  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 让计算机帐户成为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员组的成员。  
   
-1.  在“选择用户或组”  对话框中，单击“位置” 。  
+1.  在“选择用户或组”  对话框中，单击“位置”  。  
   
-2.  选择你要添加的计算机是其成员的域，或者选择“整个目录”  ，然后单击“确定” 。  
+2.  选择你要添加的计算机是其成员的域，或者选择“整个目录”  ，然后单击“确定”  。  
   
-3.  单击 **“对象类型”**。  
+3.  单击 **“对象类型”** 。  
   
-4.  单击“计算机”  ，并单击“确定” 。  
+4.  单击“计算机”  ，并单击“确定”  。  
   
      ![将计算机帐户添加为 ssas 管理员](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "将计算机帐户添加为 ssas 管理员")  
   
 5.  在“输入选择的对象名称”  文本框中，键入计算机名称，然后单击“检查名称”  以验证当前位置是否有该计算机帐户。 如果找不到该计算机帐户，请验证计算机名称以及该计算机是其成员的正确域。  
   
 ## <a name="nt-servicessastelemetry-account"></a>NT Service\SSASTelemetry 帐户  
- “NT Service/SSASTelemetry”是在安装过程中创建的低特权计算机帐户，专门用于运行客户体验改善计划 (CEIP) 服务的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实现。 此服务需要 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的管理员权限来运行多个发现命令。 有关详细信息，请参阅 [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) 和 [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) 。  
+ “NT Service/SSASTelemetry”  是在安装过程中创建的低特权计算机帐户，专门用于运行客户体验改善计划 (CEIP) 服务的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实现。 此服务需要 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的管理员权限来运行多个发现命令。 有关详细信息，请参阅 [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) 和 [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [安全角色（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aae3b89c52f5d1d8524681a3a4fd2eda9ab73907
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164238"
 ---
 # <a name="configure-power-pivot-health-rules"></a>配置 Power Pivot 运行状况规则
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 ##  <a name="bkmk_view"></a> 查看 Power Pivot 运行状况规则  
   
-1.  在 SharePoint 管理中心中，单击 **“监视”**，然后在 **“运行状况分析器”** 部分中，单击 **“审核规则定义”**。  
+1.  在 SharePoint 管理中心中，单击 **“监视”** ，然后在 **“运行状况分析器”** 部分中，单击 **“审核规则定义”** 。  
   
 2.  在“配置”部分中，找到具有 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:** 前缀的规则。 所有与 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]相关的运行状况规则都具有此前缀，以便帮助你将它们与内置的 SharePoint 规则区分开来。  
   
@@ -60,7 +60,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 ##  <a name="bkmk_HR_SSAS"></a> 配置用于评估服务器稳定性的运行状况规则 (SQL Server Analysis Services)  
  Analysis Services 实例包括在系统级别上检测问题的运行状况规则（用于缓存的 CPU、内存和磁盘空间）。 使用以下说明可以修改触发特定运行状况规则的阈值。  
   
-1.  在 SharePoint 管理中心的 **“系统设置”** 部分中，单击 **“管理服务器上的服务”**。  
+1.  在 SharePoint 管理中心的 **“系统设置”** 部分中，单击 **“管理服务器上的服务”** 。  
   
 2.  在页面的顶部，选择 SharePoint 场中包含 Analysis Services 实例的服务器（在下图中，该服务器的名称为 AW-SRV033）。 **“SQL Server Analysis Services”** 将出现在服务列表中。  
   
@@ -100,9 +100,9 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 ##  <a name="bkmk_evaluate_application_stability"></a> 配置用于评估应用程序稳定性的运行状况规则（Power Pivot 服务应用程序）  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
-2.  在“服务应用程序”页中，单击“默认 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序”。  
+2.  在“服务应用程序”页中，单击“默认 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序”  。  
   
      ![ManageService 应用程序的屏幕截图页面](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "ManageService 应用程序的屏幕截图页面")  
   

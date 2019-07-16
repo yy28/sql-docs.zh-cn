@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee2ff452e8544e37977e46055fdb9b32af877366
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206674"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用表值参数 (OLE DB)
   此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 此示例可执行下列操作：  

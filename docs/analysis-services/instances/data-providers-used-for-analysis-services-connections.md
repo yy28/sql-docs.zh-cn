@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5ba97f90b877896d68cd62598f11d0845fb698e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057845"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209531"
 ---
 # <a name="client-libraries-data-providers-used-for-analysis-services-connections"></a>用于 Analysis Services 连接的客户端库 （数据访问接口）
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -28,7 +28,7 @@ Analysis Services 提供了三个客户端库，也称为**数据提供程序**�
 
 若要获取最新版本，请参阅[用于连接到 Azure Analysis Services 客户端库](https://docs.microsoft.com/azure/analysis-services/analysis-services-data-providers)。 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

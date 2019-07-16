@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a75024264911642c0648e9c35b6168359f0db1f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196632"
 ---
 # <a name="view-foreign-key-properties"></a>查看外键属性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看关系的外键属性。  
@@ -47,7 +47,7 @@ ms.locfileid: "52763499"
   
 #### <a name="to-view-the-foreign-key-attributes-of-a-relationship-in-a-specific-table"></a>查看特定表中关系的外键属性  
   
-1.  对于包含要查看的外键的表，打开表设计器，在表设计器中单击右键，然后从快捷菜单中选择“关系”。  
+1.  对于包含要查看的外键的表，打开表设计器，在表设计器中单击右键，然后从快捷菜单中选择“关系”  。  
   
 2.  在 **“外键关系”** 对话框中，选择要查看其属性的关系。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "52763499"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例返回示例数据库中的表 `HumanResources.Employee` 的所有外键以及属性。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例返回示例数据库中的表 `HumanResources.Employee` 的所有外键以及属性。  
   
     ```  
     USE AdventureWorks2012;  

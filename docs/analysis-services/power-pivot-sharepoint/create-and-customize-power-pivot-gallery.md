@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208239"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52417118"
   
     > [!NOTE]  
     >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
-    > 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档” 。    
+    > 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档”  。    
     > 若要更改默认视图，请单击“库”  选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
     >  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客[推陈出新，第 2 部分：告别 ActiveX、 VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
@@ -66,19 +66,19 @@ ms.locfileid: "52417118"
   
 1.  1.  **SharePoint 2010**:单击**站点操作**在您的网站主页左上角。  
   
-    2.  单击 **“其他选项”**。  
+    2.  单击 **“其他选项”** 。  
   
-    3.  在“库”下，单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”。  
+    3.  在“库”下，单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”  。  
   
-    1.  **SharePoint 2013**:单击设置图标![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。 单击 **“网站内容”**。  
+    1.  **SharePoint 2013**:单击设置图标![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")。 单击 **“网站内容”** 。  
   
-    2.  单击 **“添加应用程序”**。  
+    2.  单击 **“添加应用程序”** 。  
   
-    3.  单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”。  
+    3.  单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”  。  
   
 2.  为库键入名称。 请务必添加描述性信息，以帮助用户确定此库可提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 Reporting Services 报表的丰富预览。  
   
-3.  单击 **“创建”**。  
+3.  单击 **“创建”** 。  
   
 4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅 [在管理中心中为 PowerPivot 站点创建受信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52417118"
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
   
-2.  在功能区中，单击 **“库”**。  
+2.  在功能区中，单击 **“库”** 。  
   
 3.  **SharePoint 2010：** 在自定义视图中，单击**修改此视图**。  
   
@@ -132,17 +132,17 @@ ms.locfileid: "52417118"
   
  下表介绍了使用不同的布局来显示每个预览网页的缩略图草图：  
   
-|“查看”|Description|  
+|“查看”|描述|  
 |----------|-----------------|  
 |图库视图（默认）|图库视图是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的默认视图。 预览显示在左侧。 每个工作表的更小缩略图按从左至右的顺序显示在预览旁边。|  
 |所有文档|这是文档库的标准布局。 您可以选择此视图，以管理单独的文档或以列表格式查看库内容。<br /><br /> 使用此视图可以编辑属性、删除或移动各个文档。<br /><br /> 如果您启用了版本控制，您必须使用此视图向库中签入文档或从库中签出文档。|  
-|影院视图和传送视图|这些是专用视图，如果您展示数量较少的相关文档，则其效果最佳。 缩略图的完全轮换包括库中所有文档的所有页。 如果您有大量的文档，则对于需要查找或打开特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的用户而言，这些视图可能不实用。<br /><br /> 影院视图：预览区域居中。 每个工作表的较小缩略图显示在页面任一侧的下方。<br /><br /> 传送视图：预览区域居中。 紧接在当前缩略图之前和之后的缩略图与预览区域相邻。|  
+|影院视图和传送视图|这些是专用视图，如果您展示数量较少的相关文档，则其效果最佳。 缩略图的完全轮换包括库中所有文档的所有页。 如果您有大量的文档，则对于需要查找或打开特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的用户而言，这些视图可能不实用。<br /><br /> 影院视图：预览区域居中显示。 每个工作表的较小缩略图显示在页面任一侧的下方。<br /><br /> 传送视图：预览区域居中显示。 紧接在当前缩略图之前和之后的缩略图与预览区域相邻。|  
   
 ### <a name="switch-to-a-different-view"></a>切换到其他视图  
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
   
-2.  在功能区中，单击 **“库”**。  
+2.  在功能区中，单击 **“库”** 。  
   
 3.  在“管理视图”的“当前视图”中，从列表中选择您要使用的视图。 预先设计的视图包括图库视图、影院视图和传送视图。 或者，如果您要移动、删除或管理库中的文档，则可以选择“所有文档”。  
   

@@ -1,5 +1,5 @@
 ---
-title: 在数据源视图 (Analysis Services) 中定义逻辑主键 |Microsoft 文档
+title: 在数据源视图 (Analysis Services) 中定义逻辑主键 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90684f55414fa9e3f0d68a8ec90884fdae4d2c0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178739"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>在数据源视图中定义逻辑主键 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +29,18 @@ ms.locfileid: "34021056"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中设置逻辑主键的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
   
-     若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项。  
+     若要查找表或视图，可以通过单击“数据源视图”  菜单或者右键单击“表”  或“关系图”  窗格的空白区域以使用“查找表”  选项。  
   
-3.  在“表”或“关系图”窗格中，右键单击要用于定义逻辑主键的一列或多列，再单击“设置逻辑主键”。  
+3.  在“表”  或“关系图”  窗格中，右键单击要用于定义逻辑主键的一列或多列，再单击“设置逻辑主键”  。  
   
      设置逻辑主键的选项仅可用于没有主键的表。  
   
      请注意，在设置该键后，键图标现在标识主键列。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在数据源视图 & #40; 中定义命名的计算Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名计算 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

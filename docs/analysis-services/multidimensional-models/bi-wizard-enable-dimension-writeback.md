@@ -1,5 +1,5 @@
 ---
-title: 启用维度写回 |Microsoft 文档
+title: 启用维度写回 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 561dc878302afe7636a2660a9e194ac14a35c7f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179116"
 ---
-# <a name="bi-wizard---enable-dimension-writeback"></a>BI 向导-启用维度写回
+# <a name="bi-wizard---enable-dimension-writeback"></a>BI 向导 - 启用维度写回
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   通过为多维数据集或维度添加维度写回增强功能，可以使用户手动修改维度结构和成员。 对允许写维度的更新直接记录在该维度表中。 此增强功能更改了维度的 **WriteEnabled** 属性设置。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34020314"
 ## <a name="setting-dimension-writeback-capability"></a>设置维度写回功能  
  在向导的第二个 **“启用维度写回”** 页中，实际设置 **“在维度中启用写回”** 选项。 选择此选项将使维度的 **WriteEnabled** 属性自动设置为 **True**。 清除此选项将使该属性自动设置为 **False**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  创建新成员时，必须包括维度中的所有属性。 您不能插入未指定维度的键属性值的成员。 因此，创建成员时，应服从对维度表定义的任何约束（例如，非空键值）。 您还应该考虑可能由维度属性指定的列，例如在 **CustomRollupColumn**、 **CustomRollupPropertiesColumn** 或 **UnaryOperatorColumn** 维度属性中指定的列。  
   
 > [!WARNING]  
@@ -43,7 +43,7 @@ ms.locfileid: "34020314"
 >   
 >  有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [写入的维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
+## <a name="see-also"></a>请参阅  
+ [启用写操作的维度](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215786"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165711"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +77,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主级别策略组合了用于系统程序集的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定策略和用于用户程序集的用户指定策略。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主策略的用户指定部分基于程序集所有者，此所有者将为每个程序集指定三个权限存储桶中的一个：  
   
-|权限设置|Description|  
+|权限设置|描述|  
 |------------------------|-----------------|  
 |**Safe**|提供内部计算权限。 此权限存储桶不分配访问 .NET Framework 中任何受保护资源的权限。 如果没有对 **PermissionSet** 属性指定任何权限存储桶，则这是程序集的默认权限存储桶。|  
 |**ExternalAccess**|提供和 **Safe** 设置相同的访问权限，以及访问外部系统资源的附加功能。 此权限存储桶无法保证安全性（尽管有可能保证这种情况的安全），但可以保证可靠性。|  
@@ -94,7 +94,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   如果某个中间 EXECUTE AS 更改了执行上下文，使之不再是原始调用方的上下文，则访问外部资源的尝试将失败。  
   
- **ImpersonationMode** 属性可设置为 **ImpersonateCurrentUser** 或 **ImpersonateAnonymous**。 默认设置 **ImpersonateCurrentUser**在当前用户的网络登录帐户下运行程序集。 如果使用 **ImpersonateAnonymous** 设置，则执行上下文对应于服务器上的 Windows 登录用户帐户 IUSER_servername。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
+ **ImpersonationMode** 属性可设置为 **ImpersonateCurrentUser** 或 **ImpersonateAnonymous**。 默认设置 **ImpersonateCurrentUser**在当前用户的网络登录帐户下运行程序集。 如果使用 **ImpersonateAnonymous** 设置，则执行上下文对应于服务器上的 Windows 登录用户帐户 IUSER_servername  。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
   
 ### <a name="application-domains"></a>应用程序域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不直接显示应用程序域。 由于一组程序集运行于同一个应用程序域中，因此应用程序域可以在执行期间使用 .NET Framework 中的 **System.Reflection** 命名空间或以其他方式发现彼此，并且可以用后期绑定的方式调用这些程序集。 此类调用将受到基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授权的安全性所使用的权限检查的约束。  

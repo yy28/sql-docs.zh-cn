@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207016"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 将 BLOB 数据发送到 SQL SERVER (OLE DB)
   此示例说明如何使用 IRowsetFastLoad 以流的形式发送每行的变长 BLOB 数据。  
@@ -24,7 +24,7 @@ ms.locfileid: "53349296"
   
  在源代码中，当您取消注释 #define USE_ISEQSTREAM 时，示例将使用 ISequentialStream。 流实现在示例中定义，只需更改 MAX_BLOB 即可发送任意大小的 BLOB 数据。 流数据不必容纳于内存中或以一个块的形式提供。 可以使用 IRowsetFastLoad::InsertRow 来调用此访问接口。 使用 IRowsetFastLoad::InsertRow 将一个指针连同可从流中读取的数据量传递到数据缓冲区（rgBinding.obValue 偏移量）中的流实现。 一些访问接口可能不必知道绑定时的数据长度。 在这种情况下，可以从绑定中忽略此长度。  
   
- 该示例不使用提供程序的流接口将数据写入到提供程序。 而是将一个指针传递到访问接口将用来读取数据的流对象。 通常，Microsoft 访问接口（SQLOLEDB 和 SQLNCLI）将从该对象读取数据（以 1024 字节为一个块），直到所有数据都得到处理。 SQLOLEDB 和 SQLNCLI 都没有完整的实现来允许使用者将数据写入访问接口的流对象。 只有零长度的数据可以通过访问接口的流对象发送。  
+ 此示例不使用访问接口的流接口将数据写入访问接口。 而是将一个指针传递到访问接口将用来读取数据的流对象。 通常，Microsoft 访问接口（SQLOLEDB 和 SQLNCLI）将从该对象读取数据（以 1024 字节为一个块），直到所有数据都得到处理。 SQLOLEDB 和 SQLNCLI 都没有完整的实现来允许使用者将数据写入访问接口的流对象。 只有零长度的数据可以通过访问接口的流对象发送。  
   
  通过将一个参数绑定为 DBTYPE_IUNKNOWN，可以将使用者实现的 ISequentialStream 对象与行集数据（IRowsetChange::InsertRow、IRowsetChange::SetData）以及参数一起使用。  
   

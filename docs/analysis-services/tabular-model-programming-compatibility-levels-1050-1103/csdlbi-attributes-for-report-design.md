@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c7f4b1ef3b46e4564ffc4622b39e8326adf443a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163454"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>用于报表设计的 CSDLBI 属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "52407897"
 ## <a name="model-attributes"></a>模型属性  
  这些属性定义的子元素的 CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)元素。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |--------------------|---------------|-----------------|  
 |Culture|Text|指示用于货币格式的区域性。 如果省略，则使用 EN-US。|  
 |IsRightToLeft|Boolean|指示文本字段值是否应默认为从右向左读取|  
@@ -31,7 +31,7 @@ ms.locfileid: "52407897"
 ## <a name="entity-attributes"></a>实体属性  
  这些属性是针对 CSDL EntitySet 或 EntityType 元素的子元素定义的。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |--------------------|---------------|-----------------|  
 |**ReferenceName**|Text|用于在 DAX 查询中引用此实体的标识符。 如果省略，则使用名称。|  
 |**Caption**|Text|实体的显示名称。|  
@@ -48,7 +48,7 @@ ms.locfileid: "52407897"
 ## <a name="field-attributes"></a>字段属性  
  CSDL 属性的子元素定义了这些属性或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)元素。  
   
-|属性名称|数据类型|Description|  
+|属性名称|数据类型|描述|  
 |--------------------|---------------|-----------------|  
 |**ReferenceName**|Text|用于在 DAX 查询中引用此实体的标识符。 如果省略，则使用字段名称。|  
 |**Caption**|Text|实体的显示名称。 如果省略，该字段的**ReferenceName**使用。|  
@@ -59,7 +59,7 @@ ms.locfileid: "52407897"
 |**对齐**|Enum|一个值，该值指示在表格显示中应该如何对齐字段值。 可能的值为**默认**， **Center**，**左侧**，**右侧**。 如果省略，默认值将确定基于字段的数据类型的对齐方式。|  
 |**FormatString**|Text|默认情况下应如何格式化字段的值，该值指示一个.NET 格式字符串。 如果省略，则假定采用以下格式：<br /><br /> -Datetime 字段： 区域短日期或"d"<br /><br /> 的浮点字段和整型字段默认值聚合函数： 区域数字或"n"<br /><br /> -无默认值整数聚合函数： 区域小数或"d"<br /><br /> 对于所有其他类型的字段，没有任何格式字符串适用。|  
 |**单位**|Text|适用于字段值以便表示单位的符号。 如果省略，则假定单位未知。|  
-|宽度|Integer|首选的宽度，以在表格显示中显示字段的值应保留的字符。 如果省略，则默认宽度基于字段的数据类型。|  
+|宽度 |Integer|首选的宽度，以在表格显示中显示字段的值应保留的字符。 如果省略，则默认宽度基于字段的数据类型。|  
 |**SortDirection**|Enum|指示通常如何对字段值进行排序的一个值。 可能的值为**默认**， **Ascending**，**降序**。 如果省略，默认值将分配排序方向基于字段的数据类型。|  
 |**IsRightToLeft**|Boolean|指示字段是否包含应该从右向左读取的文本。 如果省略，则假定采用模型设置。|  
 |**OrderBy**|MemberRef|对模型内用于定义此字段的值的排序顺序的另一个字段的引用。 这两个字段的值必须具有 1:1 映射，否则排序行为是未定义的。 如果省略，则基于字段自己的值对字段进行排序。|  

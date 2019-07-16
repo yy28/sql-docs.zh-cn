@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207514"
 ---
 # <a name="relationships"></a>关系 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53072524"
 ##  <a name="what"></a> 优势  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
-|CustomerID|“属性”|EMail|DiscountRate|OrderID|OrderDate|产品|Quantity|  
+|CustomerID|名称|EMail|DiscountRate|OrderID|OrderDate|产品|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -41,7 +41,7 @@ ms.locfileid: "53072524"
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|“属性”|EMail|  
+|[CustomerID]|名称|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -66,7 +66,7 @@ ms.locfileid: "53072524"
 ### <a name="columns-and-keys"></a>列和键  
  关系基于每个表中包含相同数据的列。 例如，Customers 和 Orders 表可以彼此相关，因为它们都包含存储客户 ID 的列。 在本示例中，列名称相同，但这不是必需的。 只要 Orders 表的所有行都包含也存储在 Customers 表中的 ID，一列可以是 CustomerID，另一列可以是 CustomerNumber。  
   
- 在关系数据库中，有几种类型的键 ，键通常是具有指定属性的列。 在关系数据库中，可以使用以下四种类型的键：  
+ 在关系数据库中，有几种类型的键  ，键通常是具有指定属性的列。 在关系数据库中，可以使用以下四种类型的键：  
   
 -   *主键*：唯一标识表中的一行，如 Customers 表中的 CustomerID。  
   
@@ -74,16 +74,16 @@ ms.locfileid: "53072524"
   
 -   *外键*：引用另一表中唯一列的列，如 Orders 表中的 CustomerID（可引用 Customers 表中的 CustomerID）。  
   
--   组合键：由多列组成的键。 表格模型中不支持组合键。 有关详细信息，请参阅本主题中的“组合键和查找列”。  
+-   组合键  ：由多列组成的键。 表格模型中不支持组合键。 有关详细信息，请参阅本主题中的“组合键和查找列”。  
   
- 在表格模型中，主键或备用键称为“相关查找列” 或“查找列” 。 如果表既有主键又有备用键，则主键和备用键都可作为查找列。 外键称为“源列”  或简单地称为“列” 。 在我们的示例中，将在 Orders 表的 CustomerID（列）和 Customers 表的 CustomerID（查找列）之间定义关系。 如果从关系数据库导入数据，默认情况下，模型设计器会从一个表中选择外键，从另一个表中选择相应的主键。 但是，您可以将具有唯一值的任意列用作查找列。  
+ 在表格模型中，主键或备用键称为“相关查找列”  或“查找列”  。 如果表既有主键又有备用键，则主键和备用键都可作为查找列。 外键称为“源列”  或简单地称为“列”  。 在我们的示例中，将在 Orders 表的 CustomerID（列）和 Customers 表的 CustomerID（查找列）之间定义关系。 如果从关系数据库导入数据，默认情况下，模型设计器会从一个表中选择外键，从另一个表中选择相应的主键。 但是，您可以将具有唯一值的任意列用作查找列。  
   
 ### <a name="types-of-relationships"></a>关系类型  
- Customers 与 Orders 之间的关系是“一对多关系”。 每个客户都可以有多个订单，但一个订单不能有多个客户。 其他关系类型还有“一对一”和“多对多”。 为每个客户定义一个折扣率的 CustomerDiscounts 表与 Customers 表具有一对一关系。 Products 和 Customers 之间的直接关系就是多对多关系的一个示例，在这种关系中，一个客户可以购买多种产品，同一种产品可由很多客户购买。 在用户界面中，模型设计器不支持多对多关系。 有关详细信息，请参阅本主题中的[多对多关系](#bkmk_many_to_many)。  
+ Customers 与 Orders 之间的关系是“一对多关系”  。 每个客户都可以有多个订单，但一个订单不能有多个客户。 其他关系类型还有“一对一”  和“多对多”  。 为每个客户定义一个折扣率的 CustomerDiscounts 表与 Customers 表具有一对一关系。 Products 和 Customers 之间的直接关系就是多对多关系的一个示例，在这种关系中，一个客户可以购买多种产品，同一种产品可由很多客户购买。 在用户界面中，模型设计器不支持多对多关系。 有关详细信息，请参阅本主题中的[多对多关系](#bkmk_many_to_many)。  
   
  下表显示了三个表之间的关系：  
   
-|关系|类型|查找列|“列”|  
+|关系|type|查找列|“列”|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|一对一|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|一对多|Customers.CustomerID|Orders.CustomerID|  
@@ -166,18 +166,18 @@ ms.locfileid: "53072524"
   
 |问题或消息|解决方法|  
 |------------------------|----------------|  
-|无法创建关系，因为这两个选定的列包含重复值。|若要创建有效的关系，您所选的一对列中应至少有一列必须包含唯一值。<br /><br /> 您可以编辑列来删除重复值，也可以反转列的顺序，以便将包含唯一值的列用作 **“相关查找列”**。|  
+|无法创建关系，因为这两个选定的列包含重复值。|若要创建有效的关系，您所选的一对列中应至少有一列必须包含唯一值。<br /><br /> 您可以编辑列来删除重复值，也可以反转列的顺序，以便将包含唯一值的列用作 **“相关查找列”** 。|  
 |该列包含 Null 值或空值。|对于 Null 值，无法将数据列相互联接。 对于每一行，关系中所用的两列都必须具有值。|  
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[创建两个表之间的关系](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|介绍如何手动创建两个表之间的关系。|  
 |[删除关系](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|描述如何删除关系和删除关系带来的后果。|  
 |[SQL Server 2016 Analysis Services 中适用于表格模型的双向交叉筛选器](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|描述相关表的双向交叉筛选。 如果两个表是相关的，且定义了双向交叉筛选器，则当跨第二个表关系查询时，可以使用第一个表关系的筛选上下文。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表和列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [导入数据](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   

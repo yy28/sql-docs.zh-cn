@@ -1,5 +1,5 @@
 ---
-title: 在维度设计器中启动商业智能向导 |Microsoft 文档
+title: 在维度设计器中启动商业智能向导 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dac1d67f4a3027b31deeb3b27feb754da80dd6c3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023564"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178940"
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>数据库维度的维度设计器中的 BI 向导
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,6 +22,6 @@ ms.locfileid: "34023564"
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>启动商业智能向导  
   
--   打开要添加商业智能的维度，然后单击工具栏上的 **“添加商业智能”** 按钮。 此外，也可以在对象资源管理器或解决方案资源管理器中右键单击维度，再单击“添加商业智能”。  
+-   打开要添加商业智能的维度，然后单击工具栏上的 **“添加商业智能”** 按钮。 此外，也可以在对象资源管理器或解决方案资源管理器中右键单击维度，再单击“添加商业智能”  。  
   
   

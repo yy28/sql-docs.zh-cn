@@ -1,5 +1,5 @@
 ---
-title: 挖掘模型列 |Microsoft 文档
+title: 挖掘模型列 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60967ccdd9339f12f0b684c8dea1375554180617
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182843"
 ---
 # <a name="mining-model-columns"></a>挖掘模型列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "34016824"
   
  有关使用 DMX 以编程方式设置用法属性和定义建模标志的详细信息，请参阅 [CREATE MINING MODEL (DMX)](../../dmx/create-mining-model-dmx.md)。 有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中设置用法属性和定义建模标志的详细信息，请参阅[移动数据挖掘对象](../../analysis-services/data-mining/moving-data-mining-objects.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [从挖掘模型中排除列](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)   
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)  

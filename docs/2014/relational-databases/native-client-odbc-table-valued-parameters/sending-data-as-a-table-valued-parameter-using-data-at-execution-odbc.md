@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205460"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
   它类似于[都在内存](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)过程中，但使用表值参数执行时数据。  
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  此示例演示您可以使用行流式处理，每次调用 SQLPutData 对 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的一个行。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  此示例演示您可以使用行流式处理，每次调用 SQLPutData 对 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的多个行。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  

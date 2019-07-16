@@ -1,5 +1,5 @@
 ---
-title: 在 Excel 中使用 BI 语义模型连接或 Reporting Services |Microsoft 文档
+title: 在 Excel 中使用 BI 语义模型连接或 Reporting Services |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bfd1bde3a39af9954437c6f777d82db1f1ffe187
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34035458"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163614"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 中使用 BI 语义模型连接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,23 +27,23 @@ ms.locfileid: "34035458"
   
  **从 SharePoint 启动**  
   
--   右键单击库中的某一 BI 语义模型连接，然后选择“启动 Excel”。  
+-   右键单击库中的某一 BI 语义模型连接，然后选择“启动 Excel”  。  
   
- ![屏幕快照的 BISM 快速启动命令](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "屏幕截图的 BISM 快速启动命令")  
+ ![屏幕截图的 BISM 快速启动命令](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "屏幕截图的 BISM 快速启动命令")  
   
  系统提示您启用数据连接时单击 **“启用”** 。 Excel 打开一个工作簿，该工作簿包含使用基础数据源中的字段填充的数据透视表字段列表。  
   
  **从 Excel 启动**  
   
-1.  启动 Excel 并打开工作簿。 在“数据”选项卡上的“获取外部数据”中，单击 **“从其他源”**。  
+1.  启动 Excel 并打开工作簿。 在“数据”选项卡上的“获取外部数据”中，单击 **“从其他源”** 。  
   
 2.  单击 **“从 Analysis Services”** 并且使用数据连接向导导入数据。  
   
-3.  输入 BI 语义模型连接文件的 SharePoint URL（例如 `http://mysharepoint/shared documents/myData.bism`）。 接受默认登录凭据选项 **“使用 Windows 身份验证”**。 系统提示您启用数据连接时单击 **“下一步”**。  
+3.  输入 BI 语义模型连接文件的 SharePoint URL（例如 `http://mysharepoint/shared documents/myData.bism`）。 接受默认登录凭据选项 **“使用 Windows 身份验证”** 。 系统提示您启用数据连接时单击 **“下一步”** 。  
   
 4.  在下一页上，再次单击 **“下一步”** 。 尽管系统会提示您选择某个数据库，但您只能使用在 BI 语义模型连接中指定的一个数据库。  
   
-5.  在最后一页上，您可以提供友好名称和说明。 单击 **“完成”**，然后在“导入数据”对话框上单击 **“确定”** 以便导入数据。  
+5.  在最后一页上，您可以提供友好名称和说明。 单击 **“完成”** ，然后在“导入数据”对话框上单击 **“确定”** 以便导入数据。  
   
  为使连接成功，您必须在客户端计算机上安装了 Excel 2010 和 MSOLAP.5.dll。 可以通过安装此版本当前的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 版本来获取该访问接口，或直接从 [功能包下载页](http://go.microsoft.com/fwlink/?linkid=214066)下载 Analysis Services OLE DB 访问接口。  
   

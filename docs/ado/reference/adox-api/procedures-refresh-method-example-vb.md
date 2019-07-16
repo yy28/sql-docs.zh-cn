@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0dbbe360864c401d5d8378d2e5c816cfe1a4120c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965378"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>过程 Refresh 方法示例 (VB)
 下面的代码演示如何刷新[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)系列[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 这必需的前[过程](../../../ado/reference/adox-api/procedure-object-adox.md)中的对象**目录**可访问。  
