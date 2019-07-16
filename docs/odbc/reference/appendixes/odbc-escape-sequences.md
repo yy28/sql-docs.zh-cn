@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990630"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 转义序列
 在 ODBC 中使用以下的转义序列。 在本部分中的语法使用中定义的某些元素[SQL 语句中使用元素](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)。  

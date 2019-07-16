@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987812"
 ---
 # <a name="outer-joins"></a>外部联接
 ODBC 支持 SQL-92 左、 右和完全外部联接语法。 外部联接转义序列  

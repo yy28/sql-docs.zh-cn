@@ -5,19 +5,18 @@ description: Mssqlctl bdc 配置部分命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f3ba7854b4df63495926e4cc207de7cbe6a9378
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958195"
 ---
-# <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc config section
+# <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc 配置节
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -27,7 +26,7 @@ ms.locfileid: "67728697"
 |     |     |
 | --- | --- |
 [mssqlctl bdc 配置部分中显示](#mssqlctl-bdc-config-section-show) | 配置配置文件中获取的节。
-[mssqlctl bdc config section set](#mssqlctl-bdc-config-section-set) | 设置用于配置配置文件的节。
+[mssqlctl bdc 配置部分，设置](#mssqlctl-bdc-config-section-set) | 设置用于配置配置文件的节。
 ## <a name="mssqlctl-bdc-config-section-show"></a>mssqlctl bdc 配置部分中显示
 从给定的 json 路径根据所选的配置的配置文件中获取指定的节。
 ```bash
@@ -112,9 +111,9 @@ mssqlctl bdc config section set --config-profile custom-config --patch ./patch.j
 想要设置的配置的 BDC 配置配置文件路径
 ### <a name="optional-parameters"></a>可选参数
 #### `--json-values -j`
-键值对列表的值的 json 路径： key1.subkey1=value1,key2.subkey2=value2。 你可能会提供内联的 json 值如： 键 = {"kind":"群集"，"name":"测试群集"}，或者提供文件路径，例如 key=./values.json。 如果你想要设置一个值，需要条件，请使用 jsonpath 表示法由起始你以 $ 的路径。 This will allow you to do a conditional such as -j $.key1.key2[?(@.key3=='someValue'].key4=value. 可能会看到下面的示例。 有关更多帮助，请参阅： https://jsonpath.com/
+键值对列表的值的 json 路径： key1.subkey1=value1,key2.subkey2=value2。 你可能会提供内联的 json 值如： 键 = {"kind":"群集"，"name":"测试群集"}，或者提供文件路径，例如 key=./values.json。 如果你想要设置一个值，需要条件，请使用 jsonpath 表示法由起始你以 $ 的路径。 这将允许你执行如-j 条件 $。 key1.key2 [？ (@.key3= = someValue'].key4 = value。 可能会看到下面的示例。 有关更多帮助，请参阅： https://jsonpath.com/
 #### `--patch-file -p`
-基于 jsonpatch 库修补程序 json 文件的路径： http://jsonpatch.com/ 。 你必须使用名为"patch"，其值是你想要的修补程序操作的数组的项启动修补程序 json 文件。 对于修补操作的路径，可能会使用点表示法，例如 key1.key2 来执行大部分操作。 如果你想要执行替换操作，并且你正在替换一个数组，其中需要在条件中的值，请使用 jsonpath 表示法由起始你以 $ 的路径。 This will allow you to do a conditional such as $.key1.key2[?(@.key3=='someValue'].key4. 请参阅下面的示例。 有关更多帮助，请参阅： https://jsonpath.com/ 。
+基于 jsonpatch 库修补程序 json 文件的路径： http://jsonpatch.com/ 。 你必须使用名为"patch"，其值是你想要的修补程序操作的数组的项启动修补程序 json 文件。 对于修补操作的路径，可能会使用点表示法，例如 key1.key2 来执行大部分操作。 如果你想要执行替换操作，并且你正在替换一个数组，其中需要在条件中的值，请使用 jsonpath 表示法由起始你以 $ 的路径。 这将允许你执行如 $ 的条件。 key1.key2 [？ (@.key3= = someValue'].key4。 请参阅下面的示例。 有关更多帮助，请参阅： https://jsonpath.com/ 。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 增加日志记录详细程度，以显示所有调试日志。

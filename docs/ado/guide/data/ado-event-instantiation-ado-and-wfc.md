@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a4bb76e9172458c26e59dc366e8a321a548f34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e83ffa37af2a6e33cad2645105b0df034f59d9f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926180"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件实例化：ADO 和 WFC
 ADO 的 Windows 基础类 (ADO/WFC) 建立 ADO 事件模型，并提供简化的应用程序的编程接口。 一般情况下，ADO/WFC 截获 ADO 事件、 将事件参数合并到单个事件类，然后调用事件处理程序。  

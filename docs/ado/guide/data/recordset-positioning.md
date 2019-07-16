@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c01d24a5f92b4bca1e5b41a0cbece980237fd961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924435"
 ---
 # <a name="recordset-positioning"></a>记录集定位
 使用**AbsolutePosition**属性将移动到一条记录，基于其序号位置**记录集**对象，或者想要确定当前记录的序号位置。 提供程序必须支持相应的功能，此属性才可用。  

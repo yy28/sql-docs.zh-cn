@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8ee54383074e624d082d2ab782d6b038fd03d06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061264"
 ---
 # <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_dbmmonitorupdate [ database_name ]
   
  更新数据库的镜像状态时**sp_dbmmonitorupdate**检查已为其任何镜像性能指标的指定警告阈值的最新值。 如果该值超过阈值，则该过程会向事件日志中添加信息性事件。 所有汇率都是自最后一次更新以来的平均值。 有关详细信息，请参阅 [使用镜像性能度量的警告阈值和警报 (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

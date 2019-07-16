@@ -2,19 +2,18 @@
 title: 使用 SCOM 的分析平台系统监视 |Microsoft Docs
 description: 使用 System Center Operations Manager (SCOM) 以监视 Analytics Platform System (APS) 设备。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960541"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>使用 System Center Operations Manager 的分析平台系统监视器
 使用 System Center Operations Manager (SCOM) 以监视 Analytics Platform System (APS) 设备。
@@ -44,12 +43,12 @@ ms.locfileid: "62639846"
 ### <a name="alerts"></a>警报  
 警报是在哪里可以找到要管理的当前警报。  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![警报](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>设备  
 您将在你的环境中发现当前发现和监视 SQL Server PDW 设备了设备。 如果设备未在此处显示，并且已创建的 ODBC 连接，然后可能有 PDWWatcher 帐户出现了一些问题。 如果它们显示为"未监视"，可能有 PDWMonitor 帐户出现了一些问题。 请耐心等待，因为 SCOM 不在真实时间中进行更改，但会定期检查新设备来监视并定期将查询发送到监视的设备。  
   
-![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![装置](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>工具关系图  
 设备关系图页是设备的您可以查看你的树视图的运行状况：  

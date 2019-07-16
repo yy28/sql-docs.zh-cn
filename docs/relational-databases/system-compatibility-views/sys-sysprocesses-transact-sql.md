@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2e1beebcb250f6a12ba612784ccb335c7b036774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f4cf3945ed026a311e8e8dc0ab37f95ec8aabb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986505"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47780325"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话 ID。|  
 |kpid|**smallint**|Windows 线程 ID。|  
@@ -70,7 +69,7 @@ ms.locfileid: "47780325"
 |stmt_start|**int**|为指定 sql_handle 运行当前 SQL 语句的起始偏移量。|  
 |stmt_end|**int**|所指定 sql_handle 的当前 SQL 语句的结束偏移量。<br /><br /> -1 指出当前语句为指定的 sql_handle 运行到 fn_get_sql 函数返回结果的结尾。|  
 |request_id|**int**|请求 ID。 用于标识在特定会话中运行的请求。|
-|page_resource |**binary(8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8 字节十六进制表示形式的页面资源如果`waitresource`列包含一个页面。 |  
+|page_resource |**binary(8)** |适用于  ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8 字节十六进制表示形式的页面资源如果`waitresource`列包含一个页面。 |  
   
 ## <a name="remarks"></a>备注  
  如果用户对服务器具有 VIEW SERVER STATE 权限，则该用户可查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有正在执行的会话；否则，该用户只能查看当前会话。  

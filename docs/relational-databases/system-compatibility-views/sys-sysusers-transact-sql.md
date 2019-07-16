@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1b5ade681827e28a67262c8514be35e1e914015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018060"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "47658875"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**uid**|**smallint**|用户 ID，在此数据库中是唯一的。<br /><br /> 1 = 数据库所有者<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**名称**|**sysname**|用户名或组名，在此数据库中是唯一的。|  
+|**name**|**sysname**|用户名或组名，在此数据库中是唯一的。|  
 |**sid**|**varbinary(85)**|此项的安全性标识符。|  
 |**角色**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|帐户的添加日期。|  

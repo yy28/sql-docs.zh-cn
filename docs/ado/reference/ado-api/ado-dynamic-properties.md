@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921097"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 动态属性
 可以将动态属性添加到[属性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，或者[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 这些属性的源是哪种数据提供程序，如[OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)，或服务提供程序，如[用于 OLE DB 的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)。 请参阅相应的数据提供程序或服务提供程序文档，了解有关特定的动态属性的详细信息。  
@@ -31,7 +30,7 @@ ms.locfileid: "66696863"
 |||  
 |-|-|  
 |[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否应在此字段创建索引。|  
-|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定的 OLE DB 访问接口是否应提示用户输入的初始化信息。|  
+|[提示](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定的 OLE DB 访问接口是否应提示用户输入的初始化信息。|  
 |[重新调整形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指定的名称**记录集**对象。|  
 |[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|指定用户提供的命令字符串**重新同步**要刷新中命名的表中的数据的方法问题**唯一表**动态属性。|  
 |[唯一表、 唯一架构、 唯一目录](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**唯一表**指定对其允许更新、 插入和删除操作的基础表的名称。<br /><br /> **唯一架构**指定架构或表的所有者的名称。<br /><br /> **唯一目录**指定的目录或包含的表的数据库的名称。|  

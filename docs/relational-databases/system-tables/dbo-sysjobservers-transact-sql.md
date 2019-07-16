@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 635c71efaeed6d41a9b9e62ef3e8c79b4e9aae95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 590fa6eff10c11af303b7bb9d4750ef98852cc44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004804"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   存储特定作业与一个或多个目标服务器的关联或关系。此表存储在 msdb 数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|作业标识号。|  
 |server_id|**int**|服务器标识号。|  

@@ -1,5 +1,5 @@
 ---
-title: sp_add_alert (Transact-SQL) | Microsoft Docs
+title: sp_add_alert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
-ms.translationtype: HT
+ms.openlocfilehash: b16fe1f29d132b900eeb4c8f450fcdbd66eb22b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942383"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'` 警报的名称。 该名称显示在为响应警报而发送的电子邮件或寻呼消息中。 它必须是唯一的并且可以包含百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
+`[ @name = ] 'name'` 警报的名称。 该名称显示在为响应警报而发送的电子邮件或寻呼消息中。 它必须是唯一的并且可以包含百分比 ( **%** ) 字符。 *名称*是**sysname**，无默认值。  
   
 `[ @message_id = ] message_id` 定义警报消息错误号。 (它通常与中的错误号相对应**sysmessages**表。)*message_id*是**int**，默认值为**0**。 如果*严重性*用来定义警报， *message_id*必须是**0**或为 NULL。  
   
@@ -73,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
   
  例如，当警报在短时间内重复产生时，通过设置该值就有可能避免发送重复的电子邮件。  
   
-`[ @notification_message = ] 'notification_message'` 发送给操作员的电子邮件的一部分的可选附加消息**网络发送**，或寻呼通知。 *notification_message*是**nvarchar(512)**，默认值为 NULL。 指定*notification_message*对于添加特殊说明如补救过程很有用。  
+`[ @notification_message = ] 'notification_message'` 发送给操作员的电子邮件的一部分的可选附加消息**网络发送**，或寻呼通知。 *notification_message*是**nvarchar(512)** ，默认值为 NULL。 指定*notification_message*对于添加特殊说明如补救过程很有用。  
   
 `[ @include_event_description_in = ] include_event_description_in` 是是否的说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误应包含在通知消息。 *include_event_description_in*是**tinyint**，默认值为**5** (电子邮件和**网络发送**)，并可以具有一个或多个值与组合**或**逻辑运算符。  
   
@@ -82,14 +81,14 @@ sp_add_alert [ @name = ] 'name'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|无|  
 |**1**|电子邮件|  
 |**2**|寻呼程序|  
 |**4**|**net send**|  
   
 `[ @database_name = ] 'database'` 在其中出现错误时必须触发该警报数据库。 如果*数据库*未提供，而不考虑发生错误的位置触发警报。 *数据库*是**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'` 一系列字符的说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误必须与之类似。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword_pattern*是**nvarchar(100)**，默认值为 NULL。 此参数可用于筛选对象名称 (例如， **%customer_table%**)。  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` 一系列字符的说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误必须与之类似。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword_pattern*是**nvarchar(100)** ，默认值为 NULL。 此参数可用于筛选对象名称 (例如， **%customer_table%** )。  
   
 `[ @job_id = ] job_id` 作业以响应该警报而运行的作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
@@ -102,17 +101,17 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'` 格式表示的值*itemcomparatorvalue*。 *performance_condition*是**nvarchar(512)** 默认值为 NULL，并包含这些元素。  
   
-|格式元素|Description|  
+|格式元素|描述|  
 |--------------------|-----------------|  
 |*项*|性能对象、性能计数器或计数器的命名实例|  
-|*Comparator*|下列运算符之一：>、< 或 =|  
+|*Comparator*|以下运算符之一： >，<，或 =|  
 |*ReplTest1*|计数器的数值|  
   
 `[ @category_name = ] 'category'` 警报类别的名称。 *类别*是**sysname**，默认值为 NULL。  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` 事件的查询的 WMI 命名空间。 *wmi_namespace*是**sysname**，默认值为 NULL。 只支持本地服务器上的命名空间。  
   
-`[ @wmi_query = ] 'wmi_query'` 指定警报的 WMI 事件查询。 *wmi_query*是**nvarchar(512)**，默认值为 NULL。  
+`[ @wmi_query = ] 'wmi_query'` 指定警报的 WMI 事件查询。 *wmi_query*是**nvarchar(512)** ，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -169,7 +168,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   

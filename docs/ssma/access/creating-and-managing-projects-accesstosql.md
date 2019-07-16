@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006617"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>创建和管理项目 (AccessToSQL)
 将 Access 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须首先创建 SSMA 项目。 项目是一个包含有关你想要迁移到 Access 数据库的元数据文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，有关的目标实例的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 迁移的对象和数据，将接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接信息和项目设置。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d63f01c937f4a690968fe5edb50ac84958e705ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925174"
 ---
 # <a name="handling-errors-in-jscript"></a>处理 JScript 中的错误
 你的 Microsoft® JScript® 代码必须检查**计数**的属性**连接**对象的**错误**集合。 如果值大于 0，循环访问集合，然后打印值，就像在任何其他语言中。  

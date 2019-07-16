@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da9e41d594890b399be975a9f1465a6bff50010a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920085"
 ---
 # <a name="charset-property-ado"></a>Charset 属性 (ADO)
 指示设置到其中的字符的文本内容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)应为存储中的内部缓冲区的翻译**Stream**对象。  

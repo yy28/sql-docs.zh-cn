@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6d2ea3d80496f84330802640ff99d951fd2416bb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146483"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210041"
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
+  “钻取”  意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "50146483"
 |有关特定的模型类型，请参阅钻取查询的示例。|[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)|  
 |获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对挖掘模型的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   

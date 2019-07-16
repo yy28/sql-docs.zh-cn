@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c61765f473874a7e5469a52ba87b813dfa09655a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966360"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 和 SetObjectOwner 方法示例 (VC++)
 此示例演示[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)并[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)方法。 此代码假定组是否存在记帐 (请参阅[组和用户 Append、 ChangePassword 方法示例 （VC + +）](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)若要了解如何将此组添加到系统)。 类别表的所有者设置为记帐。  

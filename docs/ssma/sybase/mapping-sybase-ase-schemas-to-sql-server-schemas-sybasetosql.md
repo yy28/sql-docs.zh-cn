@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028867"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>将 Sybase ASE 架构映射到 SQL Server 架构 (SybaseToSQL)
 在 Sybase Adaptive Server Enterprise (ASE)，每个数据库都有一个或多个架构。 默认情况下，SSMA 将数据库和架构中的所有对象都迁移到同一个数据库和架构中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 但是，自定义 ASE 之间的映射和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库和架构。  

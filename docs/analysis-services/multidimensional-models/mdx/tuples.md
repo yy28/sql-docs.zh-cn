@@ -1,5 +1,5 @@
 ---
-title: 元组 |Microsoft 文档
+title: 元组 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33bfe1d6e46a7687736afd837614eec350a941ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165764"
 ---
 # <a name="tuples"></a>元组
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  为查询中的集（此处由单个元组构成）指定轴时，必须在为行轴指定集之前先为列轴指定集。 列轴也可称为“axis(0)”或简称“0”。 有关 MDX 查询的详细信息，请参阅[基本 MDX 查询 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)。  
+>  为查询中的集（此处由单个元组构成）指定轴时，必须在为行轴指定集之前先为列轴指定集。 列轴也可称为“axis(0)”或简称“0”   。 有关 MDX 查询的详细信息，请参阅[基本 MDX 查询 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)。  
   
 ### <a name="tuples-as-values-or-member-references"></a>作为值或成员引用的元组  
  如前面的示例所示，您可以在查询中使用元组返回该元组所引用的单元的值。 或者您也可以在表达式中使用元组显式引用该元组中指定的成员。 查询或表达式可使用返回元组或获取元组的函数。 元组可用来引用它所指定的单元的值，或者用来指定成员组合（当元组用在函数中时）。  
@@ -65,10 +65,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  属性成员可以按成员名称或成员键引用。 在前面的示例中，您可以将对 [CY 2004] 的引用替换为对 &[2004] 的引用。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>请参阅  
+ [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [多维数据集空间](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [使用成员、 元组，和集 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [使用成员、元组和集 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

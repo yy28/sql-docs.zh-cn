@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186573"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
   **dta** 命令提示实用工具除了包含数据库引擎优化顾问提供的功能之外，还包含其他功能。  
   
- 通过数据库引擎优化顾问 XML 架构，您可以使用自己喜爱的 XML 工具创建实用工具的输入文件。 此架构在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时安装，并可在以下位置找到：C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd。  
+ 通过数据库引擎优化顾问 XML 架构，您可以使用自己喜爱的 XML 工具创建实用工具的输入文件。 在安装时安装此架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和，请参阅：C:\Program 文件 (x86) \Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd。  
   
  数据库引擎优化顾问 XML 架构也可通过 [此 Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)在线获得。  
   

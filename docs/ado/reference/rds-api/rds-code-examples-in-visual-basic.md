@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d512759827820a69fcbff44fe69d9f7b9eb55b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292f963ef1534cb9eb70e1e5a73d5f86af264181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963770"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic 中的 RDS 代码示例
 > [!IMPORTANT]
@@ -32,7 +31,7 @@ ms.locfileid: "66694763"
 > [!NOTE]
 >  将整个代码示例中的，从到 End Sub，子粘贴到您的代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 -   [Handler 属性示例](../../../ado/reference/rds-api/handler-property-example-vb.md)  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0262cb9928d678b814f39b21cf6e66efb69b494a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f6aa21345fe4ba16c06a5ead3381a6e1ccdef8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070386"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @dbname=] '*database_name*  
+ [ @dbname= ] '*database_name*'  
  要清理的数据库的名称。 *dbname*是**sysname**且不能为 NULL。  
   
  [ @cleaning_delay=] '*delay_in_seconds*  
@@ -61,7 +60,7 @@ sp_clean_db_free_space
   
  相关[sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)存储的过程可清除单个文件。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 db_owner 数据库角色中的成员身份。  
   
 ## <a name="examples"></a>示例  

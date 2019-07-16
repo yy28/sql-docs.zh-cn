@@ -2,19 +2,18 @@
 title: PDW 服务状态-分析平台系统 |Microsoft Docs
 description: 分析平台系统并行数据仓库 (PDW) 的服务状态。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960369"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>分析平台系统的并行数据仓库服务状态
 并行数据仓库**服务状态**页在 Microsoft 分析平台系统 Configuration Manager 中显示的当前状态的所有 SQL Server PDW 服务，并提供的功能来停止和启动 PDW 服务。 这是用于启动和停止 PDW 服务唯一受支持的方法。 请注意，单个组件或服务无法启动独立。  

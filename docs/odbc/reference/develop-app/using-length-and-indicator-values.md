@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902472"
 ---
 # <a name="using-length-and-indicator-values"></a>使用长度和指示器值
 长度/指示器缓冲区用于传递的数据缓冲区或如 SQL_NULL_DATA，指示数据为 NULL 的特殊指示器中的数据的字节长度。 根据使用它的函数，定义长度/指示器缓冲区为 SQLINTEGER 或 SQLSMALLINT。 因此，单个参数需要对其进行描述。 数据缓冲区是否 nondeferred 输入的缓冲区，则此参数包含数据本身的字节长度或指示器值。 它通常名为*StrLen_or_Ind*或类似名称。 例如，下面的代码调用**SQLPutData**传递缓冲区的数据; 的字节长度 (*ValueLen*) 直接传递，因为数据缓冲区 (*ValuePtr*) 是输入的缓冲区。  
@@ -69,6 +68,6 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
 -   SQL_NO_TOTAL。 该驱动程序无法确定长数据仍可用于在输出缓冲区中返回的字节数。 此值是只能用于从驱动程序检索到的 SQL 数据合法的。  
   
--   SQL_DEFAULT_PARAM. 一个过程是而不是相应的数据缓冲区中的值的过程中使用输入参数的默认值。  
+-   SQL_DEFAULT_PARAM。 一个过程是而不是相应的数据缓冲区中的值的过程中使用输入参数的默认值。  
   
--   SQL_COLUMN_IGNORE. **SQLBulkOperations**或**SQLSetPos**是忽略数据缓冲区中的值。 通过调用更新数据行时**SQLBulkOperations**或**SQLSetPos，** 列的值不会更改。 通过调用插入新数据行时**SQLBulkOperations**，列的值设置为其默认值; 如果列没有默认值为 NULL。
+-   SQL_COLUMN_IGNORE。 **SQLBulkOperations**或**SQLSetPos**是忽略数据缓冲区中的值。 通过调用更新数据行时**SQLBulkOperations**或**SQLSetPos，** 列的值不会更改。 通过调用插入新数据行时**SQLBulkOperations**，列的值设置为其默认值; 如果列没有默认值为 NULL。

@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962550"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能： 结果和资源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "62642675"
 3. 各种修改已应用到表，若要测试 SQL Server 功能，如页压缩，行压缩、 索引、 纵栏表数据存储区等的副本。
 4. 之前和之后应用了每个优化测量性能。
 
-| 表名| Description|
+| 表名| 描述|
 |------|------|
 | *airline* | 使用 `rxDataStep` 从原始 xdf 文件转换的数据|                          |
 | *airlineWithIntCol*   | *DayOfWeek* 已转换为整数而不是字符串。 另外，添加了 *rowNum* 列。|
@@ -90,7 +89,7 @@ metric time pct
 
 第一个测试与比较使用压缩和纵栏表来减小数据大小。
 
-| 表名            | “行”     | 保留   | 数据       | index_size | 未使用  | 节省率（保留） |
+| 表名            | “行”     | 保留   | Data       | index_size | 未使用  | 节省率（保留） |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -110,9 +109,9 @@ metric time pct
 | *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
 |                       | NoCompression-并行| 4        | 5.1775       |
 | *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
-|                       | PageCompression - parallel | 4        | 5.3225       |
+|                       | PageCompression-并行 | 4        | 5.3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
-|                       | RowCompression - parallel  | 4        | 5.2375       |
+|                       | RowCompression-并行  | 4        | 5.2375       |
 
 **结论**
 
@@ -180,7 +179,7 @@ metric time pct
 
 | 表名          | 测试名称   | 平均时间 |
 |---------------------|-------------|--------------|
-| *Airline*           | *FactorCol* | 10.72        |
+| *航空公司*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **结论**

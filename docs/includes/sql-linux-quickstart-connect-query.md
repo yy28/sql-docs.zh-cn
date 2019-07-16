@@ -1,8 +1,16 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215636"
+---
 ## <a name="connect-locally"></a>本地连接
 
-以下步骤使用 sqlcmd 本地连接到新的 SQL Server 实例。
+以下步骤使用 sqlcmd  本地连接到新的 SQL Server 实例。
 
-1. 使用 SQL Server 名称 (-S)，用户名 (-U) 和密码 (-P) 的参数运行 sqlcmd。 在本教程中，用户进行本地连接，因此服务器名称为 `localhost`。 用户名为 `SA`，密码是在安装过程中为 SA 帐户提供的密码。
+1. 使用 SQL Server 名称 (-S)，用户名 (-U) 和密码 (-P) 的参数运行 sqlcmd  。 在本教程中，用户进行本地连接，因此服务器名称为 `localhost`。 用户名为 `SA`，密码是在安装过程中为 SA 帐户提供的密码。
 
    ```bash
    sqlcmd -S localhost -U SA -P '<YourPassword>'
@@ -12,20 +20,20 @@
    > 可以在命令行上省略密码，以收到密码输入提示。
 
    > [!TIP]
-   > 如果以后决定进行远程连接，请指定 -S 参数的计算机名称或 IP 地址，并确保防火墙上的端口 1433 已打开。
+   > 如果以后决定进行远程连接，请指定 -S  参数的计算机名称或 IP 地址，并确保防火墙上的端口 1433 已打开。
 
-1. 如果成功，应会显示 sqlcmd 命令提示符：`1>`。
+1. 如果成功，应会显示 sqlcmd  命令提示符：`1>`。
 
 1. 如果连接失败，请首先尝试根据错误消息诊断问题。 然后查看[连接故障排除建议](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
 
 ## <a name="create-and-query-data"></a>创建和查询数据
-下面各部分将逐步介绍如何使用 sqlcmd 新建数据库、添加数据并运行简单查询。
+下面各部分将逐步介绍如何使用 sqlcmd  新建数据库、添加数据并运行简单查询。
 
 ### <a name="create-a-new-database"></a>新建数据库
 
 以下步骤创建一个名为 `TestDB` 的新数据库。
 
-1. 在 sqlcmd 命令提示符中，粘贴以下 Transact-SQL 命令以创建测试数据库：
+1. 在 sqlcmd  命令提示符中，粘贴以下 Transact-SQL 命令以创建测试数据库：
 
    ```sql
    CREATE DATABASE TestDB
@@ -44,13 +52,13 @@
    ```
 
 > [!TIP]
-> 若要详细了解如何编写 Transact-SQL 语句和查询，请参阅[教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。
+> 若要了解有关编写 TRANSACT-SQL 语句和查询的详细信息，请参阅[教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。
 
 ### <a name="insert-data"></a>插入数据
 
 接下来创建一个新表 `Inventory`，然后插入两个新行。
 
-1. 在 sqlcmd 命令提示符中，将上下文切换到新的 `TestDB` 数据库：
+1. 在 sqlcmd  命令提示符中，将上下文切换到新的 `TestDB` 数据库：
 
    ```sql
    USE TestDB
@@ -78,7 +86,7 @@
 
 现在，运行查询以从 `Inventory` 表返回数据。
 
-1. 通过 sqlcmd 命令提示符输入查询，以返回 `Inventory` 表中数量大于 152 的行：
+1. 通过 sqlcmd  命令提示符输入查询，以返回 `Inventory` 表中数量大于 152 的行：
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -92,7 +100,7 @@
 
 ### <a name="exit-the-sqlcmd-command-prompt"></a>退出 sqlcmd 命令提示符
 
-要结束 sqlcmd 会话，请键入 `QUIT`：
+要结束 sqlcmd  会话，请键入 `QUIT`：
 
 ```sql
 QUIT
@@ -108,15 +116,16 @@ QUIT
 
 |||
 |---|---|
-| [Azure 数据 Studio](../azure-data-studio/index.md) | 跨平台 GUI 数据库管理实用程序。 |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 用于运行 TRANSACT-SQL 命令的跨平台命令行界面。 |
+| [Azure Data Studio](../azure-data-studio/index.md) | 跨平台 GUI 数据库管理实用程序。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 运行 TRANSACT-SQL 语句，mssql 扩展通过一个跨平台 GUI 代码编辑器。 |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 基于 cmdlet 一个跨平台自动化和配置工具。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 用于运行 TRANSACT-SQL 命令的跨平台命令行界面。 |
 
 ## <a name="connecting-from-windows"></a>从 Windows 连接
 
 Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操作方式与连接到任何远程 SQL Server 实例一样。
 
-如果有一台可以连接到 Linux 计算机的 Windows 计算机，请从运行 sqlcmd 的 Windows 命令提示符尝试执行本主题中的相同步骤。 仅验证所使用的是目标 Linux 计算机名称或 IP 地址，而非 localhost，并确保 TCP 端口 1433 已打开。 如果从 Windows 进行连接存在任何问题，请参阅[连接故障排除建议](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
+如果有一台可以连接到 Linux 计算机的 Windows 计算机，请从运行 sqlcmd  的 Windows 命令提示符尝试执行本主题中的相同步骤。 仅验证所使用的是目标 Linux 计算机名称或 IP 地址，而非 localhost，并确保 TCP 端口 1433 已打开。 如果从 Windows 进行连接存在任何问题，请参阅[连接故障排除建议](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
 
 有关在 Windows 上运行，但连接到 Linux 上的 SQL Server 的其他工具，请参阅：
 

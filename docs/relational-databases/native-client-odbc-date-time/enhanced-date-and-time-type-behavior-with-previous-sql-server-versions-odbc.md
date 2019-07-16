@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c03726aa3d4ca4c3f6f405aa518d8128aca980a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: daa906f14711976587661640fba30130de1a01c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030383"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52527018"
   
 |SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|“确定”|确定 (1)|  
+|Datetime|Date|SQL_C_TYPE_DATE|“确定”|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|“确定”|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分为非零值将失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
@@ -46,7 +45,7 @@ ms.locfileid: "52527018"
 |||SQL_C_TYPE_TIMESTAMP|失败的无效的时间文字。|确定 (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|“确定”|确定 (1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|“确定”|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|date|SQL_C_TYPE_DATE|“确定”|“确定”|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|“确定”|“确定”|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|“确定”|“确定”|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
@@ -70,10 +69,10 @@ ms.locfileid: "52527018"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>SQLColumns、SQLProcedureColumns 和 SQLSpecialColumns 返回的列元数据  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|列类型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -87,9 +86,9 @@ ms.locfileid: "52527018"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>SQLGetTypeInfo 返回的数据类型元数据  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|列类型|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
@@ -101,7 +100,7 @@ ms.locfileid: "52527018"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2cf998ada7b0e6835265c8e58bfcab855d9c2361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47766dbbb273d9e5e4d42e8df6b5cf3c26bf356a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036042"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 函数
 **符合性**  
@@ -52,7 +51,7 @@ SQLRETURN SQLCloseCursor(
 ## <a name="diagnostics"></a>诊断  
  当**SQLCloseCursor**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可能会通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLCloseCursor** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |24000|游标状态无效|没有游标的上打开*StatementHandle*。 （这将返回仅由 ODBC 3。*x*驱动程序。)|  

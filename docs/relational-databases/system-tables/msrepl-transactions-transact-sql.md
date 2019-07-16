@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44ace7a4b203f3d34b7f9e8ee89dc916afab51e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: db034831d9c8a85285ae1ec99263496170fab655
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948624"
 ---
 # <a name="msrepltransactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_transactions**表包含每个重复事务占一行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**xact_id**|**varbinary(16)**|事务的 ID。|  

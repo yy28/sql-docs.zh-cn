@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 998fd4ee425f1a4356bdc675b53b23247d89c3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925494"
 ---
 # <a name="editing-data"></a>编辑数据
 我们已介绍了如何使用 ADO 来连接到数据源、 执行命令、 获取中的结果**记录集**对象，并在导航**记录集**。 本部分重点介绍下一步的基础 ADO 操作： 编辑数据。  

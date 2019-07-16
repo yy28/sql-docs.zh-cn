@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029007"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安装 SSMA 组件 (SybaseToSQL)
 除了安装 SSMA for 使用服务器端数据迁移，你还必须安装组件正在运行的计算机上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这些组件包括 SSMA 扩展包，它支持数据迁移和 Sybase 提供程序以启用服务器到服务器的连接。  

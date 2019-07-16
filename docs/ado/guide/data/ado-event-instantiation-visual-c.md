@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 500beed65583eea1e1e01b34a3bb585198b219e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926055"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件实例化：Visual C++
 这是如何在 Microsoft® Visual C++ ADO 事件实例化的示意性说明。 请参阅[ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)有关的完整说明。  

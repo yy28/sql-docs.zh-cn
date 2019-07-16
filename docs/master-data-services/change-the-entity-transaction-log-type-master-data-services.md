@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 994ead2df766436dfd6c28912faf6905ffac359c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9857a3c7d8d0f783c83e5bcb5b8fbe18aa7e7250
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052079"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>更改实体事务日志类型 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485313"
 
   可以将实体的事务日志类型更改为属性、成员或无。  
   
-|事务日志类型|Description|  
+|事务日志类型|描述|  
 |--------------------------|-----------------|  
 |特性|在属性级别保存实体更改日志。<br /><br /> 保存事务日志，与 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的行为一致。|  
 |成员|在行级别保存实体更改日志。<br /><br /> 任何属性更改都将触发新的行修订。<br /><br /> 当使用行事务日志类型时，实体存储为缓慢更改维度类型 4。 支持类型 2 订阅视图和类型 4（历史记录）订阅视图。 有关详细信息，请参阅[订阅视图格式 (Master Data Services)](../master-data-services/subscription-view-formats-master-data-services.md)<br /><br /> 提供较好的性能。|  

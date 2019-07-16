@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86f9dd843171c02654302694c669f40b6b51ab78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cae344e97bf6e5dc8affbf164f80eb8935846e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019027"
 ---
 # <a name="structured-query-language-sql"></a>结构化查询语言 (Structured Query Language) (SQL)
 典型的 DBMS 允许用户存储、 访问和修改数据的方式组织，高效。 最初，Dbms 的用户是程序员。 访问存储的数据所需 COBOL 类编程语言中编写程序。 虽然这些程序通常被编写为非技术用户提供友好的界面，对数据本身的访问所需的知识渊博的专家程序员的服务。 对数据的临时访问实际上并不是。  

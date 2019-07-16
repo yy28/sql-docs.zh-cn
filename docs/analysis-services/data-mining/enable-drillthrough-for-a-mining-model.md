@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ec6d880c6b32a092f6d4da8b85dfd6693280da7d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210029"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>对挖掘模型启用钻取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,21 +35,21 @@ ms.locfileid: "52535227"
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>对挖掘模型启用钻取  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中数据挖掘设计器的“挖掘模型”选项卡上，右键单击要针对其启用钻取的挖掘模型名称，再选择“属性”。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中数据挖掘设计器的“挖掘模型”  选项卡上，右键单击要针对其启用钻取的挖掘模型名称，再选择“属性”  。  
   
 2.  在 **“属性”** 窗口中，单击 **AllowDrillthrough**，再选择 **True**。  
   
-3.  在“挖掘模型”选项卡中，右键单击所需的模型，再选择“处理模型”。  
+3.  在“挖掘模型”选项卡中，右键单击所需的模型，再选择“处理模型”   。  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>启用挖掘结构的缓存功能  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘结构”选项卡上，右键单击挖掘结构的名称。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器的“挖掘结构”  选项卡上，右键单击挖掘结构的名称。  
   
 2.  打开 **“属性”** 窗口。  
   
 3.  在 **“属性”** 窗口中，找到 **CacheMode** 属性，然后从列表中选择 **KeepTrainingCases** 。  
   
-4.  在 **“数据集”** 菜单上，选择 **“处理”**。  
+4.  在 **“数据集”** 菜单上，选择 **“处理”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  

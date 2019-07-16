@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 013b7a7a2124788f3f1bcaa6d09b8ef7b10562e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999985"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -92,7 +91,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  通过更改说明标志的值，可以包括或排除位于指定级别或指定距离处的后代、位于指定级别或距离之前或之后（直到叶节点为止）的子成员以及位于任何级别或距离的叶子成员。 下表描述了中允许的标志*Desc_Flag*参数。  
   
-|标志|Description|  
+|标志|描述|  
 |----------|-----------------|  
 |SELF|仅返回指定级别或指定距离处的后代成员。 如果指定级别为指定成员所在的级别，该函数将包括指定成员。|  
 |AFTER|返回指定级别或指定距离处的所有从属级别的后代成员。|  

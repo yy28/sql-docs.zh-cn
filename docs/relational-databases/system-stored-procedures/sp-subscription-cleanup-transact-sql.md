@@ -1,5 +1,5 @@
 ---
-title: sp_subscription_cleanup (Transact-SQL) | Microsoft Docs
+title: sp_subscription_cleanup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e59a60279f4efa74ef21863212f75761eee99b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a96c75084b3a3730c3d302a7bf620a5185b57a75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032681"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +58,8 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_subscription_cleanup**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_expired_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
- [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
+ [sp_expired_subscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
+ [sp_mergesubscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

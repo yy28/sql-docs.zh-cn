@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207799"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206626"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>表值参数 (SQL Server Native Client)
   表值参数在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入，它们为将多个数据行传递到服务器提供了有效方式。 表值参数提供类似于参数数组的功能，但它们提供了更好的灵活性和与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的更紧密集成，并且可以极大地提高性能。 表值参数还可以参与基于集合的操作，而参数数组不能参与。  

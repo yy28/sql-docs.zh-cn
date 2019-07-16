@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4d3c98f54f6f72d111f96e58e1ddafaab27e949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005040"
 ---
 # <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47782815"
  在此 DMV 不会显示内存中列存储索引。  
  
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|具有列存储索引的表的 ID。|  
 |**index_id**|**int**|columnstore 索引的 ID。|  
@@ -42,7 +41,7 @@ ms.locfileid: "47782815"
 |**rowgroup_lock_wait_count**|**bigint**|累积次数数据库引擎上等待此行组锁自上次 SQL 重新启动。|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|累积毫秒数的数据库引擎上等待此行组锁自上次 SQL 重新启动。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要下列权限：  
   
 -   指定的 object_id 的表具有 CONTROL 权限。  
@@ -60,10 +59,10 @@ ms.locfileid: "47782815"
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

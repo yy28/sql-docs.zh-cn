@@ -1,5 +1,5 @@
 ---
-title: 逻辑回归模型的挖掘模型内容 |Microsoft 文档
+title: 逻辑回归模型的挖掘模型内容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,14 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8d5aab960b1987a0c076504b4e2858403a2ecb99
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182726"
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>逻辑回归模型的挖掘模型内容
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>了解逻辑回归模型的结构  
  逻辑回归模型是使用带有约束模型以消除隐藏节点的参数的 Microsoft 神经网络算法创建的。 因此，逻辑回归模型的总体结构几乎与神经网络的总体结构相同：每个模型都具有一个表示该模型及其元数据的单一父节点，以及一个提供有关在该模型中使用的输入的说明性统计信息的特殊边际统计信息节点 (NODE_TYPE = 24)。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="model-content-for-a-logistic-regression-model"></a>逻辑回归模型的模型内容  
  本部分提供的详细信息和示例仅针对挖掘模型内容中与逻辑回归有特殊关系的列。 模型内容与神经网络模型的内容几乎相同，但是为方便起见，此表可能将重复应用于神经网络模型的说明。  
   
- 有关此处未涵盖的架构行集中的通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息或有关挖掘模型术语的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 有关此处未涵盖的架构行集中的通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息或有关挖掘模型术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/10/2018
  NODE_TYPE  
  逻辑回归模型输出以下节点类型：  
   
-|节点类型 ID|Description|  
+|节点类型 ID|描述|  
 |------------------|-----------------|  
 |1|模型。|  
 |17|子网的组织程序节点。|  
@@ -178,9 +179,9 @@ ms.lasthandoff: 05/10/2018
   
  通过查看输出节点的 NODE_DISTRIBUTION 表，您可以使用这些 ID 确定输出属性如何与特定输入层属性关联。 该表中的每一行都包含一个会指到特定输入属性节点的 ID。 NODE_DISTRIBUTION 表还包含该输入-输出对的系数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 逻辑回归算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [神经网络模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [逻辑回归模型查询示例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft 逻辑回归算法技术参考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   

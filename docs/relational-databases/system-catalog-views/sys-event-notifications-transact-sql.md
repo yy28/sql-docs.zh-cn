@@ -19,35 +19,34 @@ helpviewer_keywords:
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60fb1fd10b448e7dc71d06aecaa36385f882f62f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048417"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为与事件通知，每个对象返回一行**sys.objects.type** = EN。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|事件通知的名称。|  
+|**name**|**sysname**|事件通知的名称。|  
 |**object_id**|**int**|对象标识号。 是在数据库中唯一。|  
 |**parent_class**|**tinyint**|父级的类。<br /><br /> 0 = 数据库<br /><br /> 1 = 对象或列|  
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|父对象的非零 ID。<br /><br /> 0 = 父类是数据库。|  
 |**create_date**|**datetime**|创建日期。|  
 |**modify_date**|**datetime**|始终等于**create_date**。|  
-|service_name|**nvarchar(256)**|向其发送通知的目标服务的名称。|  
+|service_name |**nvarchar(256)**|向其发送通知的目标服务的名称。|  
 |**broker_instance**|**nvarchar(128)**|向其发送通知的 Broker 实例。|  
 |**principal_id**|**int**|拥有此事件通知的数据库主体的 ID。|  
 |**creator_sid**|**varbinary(85)**|创建事件通知的登录的 SID。<br /><br /> 如果未指定 FAN_IN 选项，则为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01ecb5457ce3fbc343541063047cb935cbf85a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024529"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 函数
 **符合性**  
@@ -52,7 +51,7 @@ BOOL SQLRemoveDSNFromIni(
 ## <a name="diagnostics"></a>诊断  
  当**SQLRemoveDSNFromIni**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_INVALID_DSN|无效的 DSN|*LpszDSN*参数无效。|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918618"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定搜索、 起始行和偏移量开始的行的方向。 找到的记录; 如果满足条件，则设置的当前行位置否则，将位置设置为的终点 （或起点）**记录集**。  

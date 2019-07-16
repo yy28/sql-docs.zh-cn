@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 96b791d98aa7fee588e4f72b76a733f48917f77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4aae5c9725768a9c4c85fc7aaeaf4884dfba0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962665"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>用于 SQL Server 机器学习服务的扩展的事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +46,7 @@ AND p.name = 'SQLSatellite';
 
 ##  <a name="bkmk_xeventtable"></a> 扩展事件表
 
-|Event|Description|说明|  
+|Event|描述|说明|  
 |-----------|-----------------|---------|  
 |connection_accept|接受一个新连接时发生。 此事件用于记录所有连接尝试。||  
 |failed_launching|启动失败。|指示一个错误。|  
@@ -88,7 +87,7 @@ SQL Server 机器学习服务启动 SQL Server 进程外部运行的一些服务
   
     若要捕获与 Launchpad 相关的事件，请将 *.config* 文件放在 SQL Server 实例的 Binn 目录中。  在默认安装中，将为：
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn` 的用户。  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`。  
   
 + **BXLServer**是支持使用外部脚本语言时，R 或 Python 等 SQL 可扩展性的附属进程。 为每个外部语言实例启动 BxlServer 的单独实例。
   
@@ -177,6 +176,6 @@ SQL Server 机器学习服务启动 SQL Server 进程外部运行的一些服务
 + 将 *.config* 文件放在与 BXLServer 可执行文件相同的目录中。
 + 此文件必须命名为`bxlserver.xevents.xml`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [机器学习服务的自定义 Management Studio 报告](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

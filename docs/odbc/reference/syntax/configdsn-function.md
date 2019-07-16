@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9387ffefe2fdcc9b30824018a763b87b81b831dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78be24ea75fad04c7b7c1bdae103dfd3f92c78ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016724"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函数
 **符合性**  
@@ -70,7 +69,7 @@ BOOL ConfigDSN(
 ## <a name="diagnostics"></a>诊断  
  当**ConfigDSN**返回 FALSE，关联 *\*pfErrorCode*值通过调用传递到安装程序错误缓冲区**SQLPostInstallerError**和可以通过调用来获取**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|窗口句柄无效|*HwndParent*参数无效。|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|无效的关键字值对|*LpszAttributes*参数包含语法错误。|  

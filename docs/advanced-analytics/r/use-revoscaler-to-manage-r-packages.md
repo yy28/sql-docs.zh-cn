@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 93c46f9165d4fb2aa781242e6552db5f1306eb21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962399"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函数来查找或 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +24,7 @@ SQL Server 2017 机器学习服务已包括 RevoScaleR 的较新版本。 SQL Se
 
 下表介绍用于 R 包安装和管理的函数。
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 确定远程 SQL 服务器上的实例库的路径。 |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 获取远程的 SQL Server 上的一个或多个包的路径。 |
@@ -207,7 +206,7 @@ exec sp_execute_external_script
   @database_name = @database_name;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [启用远程 R 包管理](r-package-how-to-enable-or-disable.md)
 + [同步 R 包](package-install-uninstall-and-sync.md)

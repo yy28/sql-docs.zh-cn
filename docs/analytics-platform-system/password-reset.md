@@ -2,19 +2,18 @@
 title: 密码重置-分析平台系统 |Microsoft Docs
 description: 密码重置页，可更改使用的分析平台系统的管理员帐户的密码。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960463"
 ---
 # <a name="password-reset---analytics-platform-system"></a>密码重置-分析平台系统
 **密码重置**页使你可以更改使用的分析平台系统的管理员帐户的密码。  
@@ -24,7 +23,7 @@ ms.locfileid: "62639952"
   
 传递设备时，你可以分析平台系统密码。 始终为新值更改的密码，你可以将设备时。 有三个密码更新。 密码无需为彼此相同。  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \Administrator**  
 **管理员**的设备域。  
   
 **.\Administrator**  

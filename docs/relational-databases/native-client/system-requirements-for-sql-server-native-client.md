@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 147679798418dceb7de94ec8dbcc8489ad6fda3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8af6065a08cc85c7bdc2c36c6032506ba6d56c57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031760"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,11 +70,11 @@ ms.locfileid: "63026667"
 |数据类型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows 数据访问组件、MDAC 及<br /><br /> SQL Server Native Client OLE DB 应用程序（其中 DataTypeCompatibility=80）|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Image|  
+|varbinary(max)|varbinary|varbinary|图像|  
 |varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
-|CLR UDT (> 8 Kb)|udt|varbinary|Image|  
+|CLR UDT (> 8 Kb)|udt|varbinary|图像|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

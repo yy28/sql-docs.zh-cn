@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31efe56dcb5ae926d5da08aa00a1005597b17b91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922975"
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象将数据从 SQL Server 数据库绑定到可视对象 （在这种情况下，DHTML 表），应用程序的客户端 HTML 页中。 事件驱动的 VBScript 程序逻辑使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)到：  
@@ -51,7 +50,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>一般的对象标记参数  
  下表描述了与对象标记关联的参数。  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |***CLASSID***|一个唯一的 128 位数字标识系统的嵌入对象的类型。 此标识符被保存在本地计算机的系统注册表中。 (有关的类 Id **rds。DataControl**对象，请参阅[rds。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)|  
 |***ID***|定义用于标识代码中的嵌入对象的文档范围标识符。|  
@@ -59,9 +58,9 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS。DataControl Tag 参数  
  下表描述了特定于参数**rds。DataControl**对象。 (有关完整列表的**rds。DataControl**对象的参数，以及何时实现它们，请参阅[rds。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|如果使用 HTTP，值是前面的服务器计算机名称`https://`。|  
+|[服务器](../../../ado/reference/rds-api/server-property-rds.md)|如果使用 HTTP，值是前面的服务器计算机名称`https://`。|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|提供必要的连接信息**rds。DataControl**以连接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|设置或返回用来检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   

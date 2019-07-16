@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63030b34e4b607b850f25a67357d62a7184467c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bd75b2a1ffac44b14c9906e669421d55888c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003076"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函数
 **符合性**  
@@ -75,7 +74,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>诊断  
  当**SQLExtendedFetch**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以通过调用获取关联的 SQLSTATE 值**SQLError**。 下表列出了通常返回的 SQLSTATE 值**SQLExtendedFetch** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。 如果在单个列中，出现错误**SQLGetDiagField**可以使用调用*DiagIdentifier* SQL_DIAG_COLUMN_NUMBER 来确定该错误出现在; 的列的和**SQLGetDiagField**可以使用调用*DiagIdentifier*的 SQL_DIAG_ROW_NUMBER 以确定包含该列的行。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|字符串或二进制的列返回的数据时截断了非空白字符或非 NULL 的二进制数据。 如果它是一个字符串值，它是右侧被截断。 如果它是数字值，已被截断的数字的小数部分。  （函数返回 SQL_SUCCESS_WITH_INFO。）|  

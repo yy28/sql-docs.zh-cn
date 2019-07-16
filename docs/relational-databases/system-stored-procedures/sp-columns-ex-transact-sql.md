@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47a8665027ce251a391049aa71ba12b246c1c625
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070346"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +57,13 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'` 是正在使用的 ODBC 版本。 *ODBCVer*是**int**，默认值为 2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 有关版本 2 和 3 之间的行为差异的信息，请参阅 ODBC SQLColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表或视图限定符的名称。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表或视图限定符的名称。 多种 DBMS 产品支持表的三部分命名 (_限定符_ **。** _所有者_ **。** _名称_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**TABLE_SCHEM**|**sysname**|表或视图所有者的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，该列表示创建表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表或视图的名称。 此字段始终返回值。|  
 |**COLUMN_NAME**|**sysname**|每个列的列名**TABLE_NAME**返回。 此字段始终返回值。|  
@@ -75,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|小数点右边的数字位数。|  
 |**NUM_PREC_RADIX**|**smallint**|数字数据类型的基数。|  
 |**可以为 NULL**|**smallint**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
-|**REMARKS**|**varchar(** 254 **)**|该字段总是返回 NULL。|  
+|**备注**|**varchar(** 254 **)**|该字段总是返回 NULL。|  
 |**COLUMN_DEF**|**varchar(** 254 **)**|列的默认值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 此列是与相同**DATA_TYPE**列中，除**datetime**及 SQL-92**间隔**数据类型。 该列始终返回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|子类型代码**datetime**及 SQL-92**间隔**数据类型。 对于其他数据类型，该列返回 NULL。|  
@@ -109,13 +108,13 @@ EXEC sp_columns_ex 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_primarykeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

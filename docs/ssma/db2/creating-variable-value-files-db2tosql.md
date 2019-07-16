@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cf62d09de1180687598d817ff9199d7098008829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989771"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>创建变量值文件 (DB2ToSQL)
 变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **-v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  

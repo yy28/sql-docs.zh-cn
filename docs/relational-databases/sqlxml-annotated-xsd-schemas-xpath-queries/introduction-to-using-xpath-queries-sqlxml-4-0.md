@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa7b7004f1cfca9a1fbec27742af7df515c05c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073351"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,9 +97,9 @@ ms.locfileid: "63013353"
 |包含连续谓词和嵌套谓词的布尔值谓词||[在 XPath 查询中指定算数运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |所有关系运算符|=, !=, <, \<=, >, >=|[XPath 查询中指定关系运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算术运算符|+、-、*、div|[在 XPath 查询中指定算数运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|显式转换函数|**number()** , **string()** , **Boolean()**|[在 XPath 查询中指定显式转换函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|显式转换函数|**number （)** ， **string （)** ， **boolean （)**|[在 XPath 查询中指定显式转换函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布尔运算符|AND、OR|[XPath 查询中指定布尔运算符&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|布尔函数|**true()** , **false()** , **not()**|[在 XPath 查询中指定布尔函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|布尔函数|**true （)** ， **false （)** ， **not （)**|[在 XPath 查询中指定布尔函数&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 变量||[XPath 查询中指定 XPath 变量&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>不支持的功能  

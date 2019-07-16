@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019320"
 ---
 # <a name="c-to-sql-guid"></a>从 C 到 SQL：GUID
 GUID ODBC C 数据类型的标识符是：  
@@ -37,7 +36,7 @@ GUID ODBC C 数据类型的标识符是：
 |SQL_WCHAR|列的字符长度 > = 36|不适用|  
 |SQL_WVARCHAR|列的字符长度 < 36|22001|  
 |SQL_WLONGVARCHAR|数据值不是有效的 GUID|22018|  
-|SQL_GUID|None[a]|不适用|  
+|SQL_GUID|无 [a]|不适用|  
   
  [a] 所有的十六进制值都有效以 GUID 形式表示。  
   

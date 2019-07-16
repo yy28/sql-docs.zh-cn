@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997724"
 ---
 # <a name="set-exact-command"></a>SET EXACT 命令
 指定用于比较不同长度的两个字符串的规则。  
@@ -53,14 +52,14 @@ SET EXACT ON | OFF
   
 |比较|= 完全关闭|= 在确切|= = 确切 ON 或 OFF|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc" = "abc"|匹配项|匹配项|匹配项|  
-|"ab" = "abc"|没有匹配项|没有匹配项|没有匹配项|  
-|"abc" = "ab"|匹配项|没有匹配项|没有匹配项|  
-|"abc" = "ab_"|没有匹配项|没有匹配项|没有匹配项|  
-|"ab" = "ab_"|没有匹配项|匹配项|没有匹配项|  
-|"ab_" = "ab"|匹配项|匹配项|没有匹配项|  
+|"abc"="abc"|匹配项|匹配项|匹配项|  
+|"ab"="abc"|没有匹配项|没有匹配项|没有匹配项|  
+|"abc"="ab"|匹配项|没有匹配项|没有匹配项|  
+|"abc"="ab_"|没有匹配项|没有匹配项|没有匹配项|  
+|"ab"="ab_"|没有匹配项|匹配项|没有匹配项|  
+|"ab_"="ab"|匹配项|匹配项|没有匹配项|  
 |""="ab"|没有匹配项|没有匹配项|没有匹配项|  
-|"ab" = ""|匹配项|没有匹配项|没有匹配项|  
+|"ab"=""|匹配项|没有匹配项|没有匹配项|  
 |"__" = ""|匹配项|匹配项|没有匹配项|  
 |"" = "___"|没有匹配项|匹配项|没有匹配项|  
 |TRIM("___") = ""|匹配项|匹配项|匹配项|  

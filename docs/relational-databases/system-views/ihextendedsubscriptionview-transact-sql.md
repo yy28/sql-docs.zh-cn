@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30ba4a0947f98ab34ed8c11ef0e8f3a25c3e453b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029582"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHextendedSubscriptionView**视图显示有关对非 SQL Server 发布的订阅信息。 此视图存储在**分发**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|项目的唯一标识符。|  
 |**dest_db**|**sysname**|目标数据库的名称。|  

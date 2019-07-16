@@ -1,5 +1,5 @@
 ---
-title: IsolationLevelEnum | Microsoft Docs
+title: IsolationLevelEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aea36947856b26d33a0d777374eccf02a7cddb6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918374"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定的事务隔离级别[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|指示提供程序正在使用不同的隔离级别与指定，但不能确定级别。|  
 |**adXactChaos**|16|指示，挂起的更改程度更高隔离级别事务中不能被覆盖。|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942815"
 ---
 # <a name="updating-data-overview"></a>更新数据概述
 应用程序可以更新数据，通过执行 SQL 语句或通过调用**SQLSetPos**或**SQLBulkOperations**。 **更新**，**删除**，和**插入**语句直接对数据源和驱动程序通常支持。 搜索 update 和 delete 语句包含要更改的行的规范。 定位 update 和 delete 语句和**SQLSetPos**作用于数据源通过游标并不太广泛支持。  

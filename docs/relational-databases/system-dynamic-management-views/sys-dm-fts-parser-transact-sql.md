@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_parser (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900911"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
@@ -66,10 +65,10 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |关键字 (keyword)|**varbinary(128)**|断字符返回的给定关键字的十六进制表示形式。 该表示形式用于存储全文索引的关键字。 此值不是用户可读，但它对于相关给定的关键字输出返回的返回内容的一个全文索引的索引，如其他动态管理视图很有用[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 表示指示文件或数据集的末尾的特殊字符。|  
-|group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1：“服务器”<br />2:DB<br />3：DB|  
+|group_id|**int**|包含一个整数值，用于区分从中生成给定字词的逻辑组。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 生成以下英语 group_id 值：<br /><br /> 1:“服务器”<br />2:DB<br />3：DB|  
 |phrase_id|**int**|包含一个整数值，用于区别断字符给出复合词（如 full-text）替代形式的情况。 有时，如果存在复合词（“multi-millon”），断字符将给出替代形式。 这些替代形式（短语）有时需要加以区别。<br /><br /> 例如，'`multi-million`' 生成以下英语 phrase_id 值：<br /><br /> 1 表示 `multi`<br />1 表示 `million`<br />2 表示 `multimillion`|  
 |occurrence|**int**|指示分析结果中每个字词的顺序。 例如，对于短语“`SQL Server query processor`”，occurrence 会包含该英语短语中字词的以下 occurrence 值：<br /><br /> 1 表示 `SQL`<br />2 表示 `Server`<br />为 3 `query`<br />4 `processor`|  
 |special_term|**nvarchar(4000)**|包含有关断字符给出的字词特征的信息，可以是以下值之一：<br /><br /> Exact match<br /><br /> Noise word<br /><br /> End of Sentence<br /><br /> End of paragraph<br /><br /> End of Chapter|  

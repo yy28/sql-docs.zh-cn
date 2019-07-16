@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963145"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "67681626"
 
 监视 SQL Server 中的机器学习工作负荷时，可以使用以下动态管理视图。 若要查询 Dmv，您需要`VIEW SERVER STATE`具有实例的权限。
 
-| 动态管理视图 | type | Description |
+| 动态管理视图 | type | 描述 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 执行 | 为运行外部脚本的每个活动工作线程帐户都返回一行。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 执行 | 为每种类型的外部脚本请求返回一行。 |
@@ -78,7 +77,7 @@ WHERE name = 'external scripts enabled';
 
 该查询将返回以下列：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | IsMLServicesInstalled | 如果 SQL Server 机器学习服务安装的实例，则返回 1。 否则，返回 0。 |
 | ExternalScriptsEnabled | 如果为实例启用外部脚本，则返回 1。 否则，返回 0。 |
@@ -106,7 +105,7 @@ ON s.session_id = r.session_id;
 
 该查询将返回以下列：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | session_id | 标识与每个活动主连接关联的会话。 |
 | blocking_session_id | 正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。 |
@@ -142,7 +141,7 @@ ORDER BY language, counter_name;
 
 该查询将返回以下列：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | language | 已注册的外部脚本语言的名称。 |
 | counter_name | 已注册的外部脚本函数的名称。 |
@@ -164,7 +163,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters**输出外部脚本的以下性能计数器：
 
-| 计数器 | Description |
+| 计数器 | 描述 |
 |---------|-------------|
 | 执行总次数 | 通过本地或远程调用启动的外部进程数。 |
 | 并行执行 | 脚本包含的次数 _@parallel_ 规范和的[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成并使用并行查询计划。 |
@@ -192,7 +191,7 @@ FROM sys.dm_os_sys_info;
 
 该查询将返回以下列：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | physical_memory_kb | 在计算机上的物理内存总量。 |
 | committed_kb | 内存管理器中的千字节 (KB) 中的已提交的内存。 不包括内存管理器中的保留内存。 |
@@ -221,7 +220,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 该查询将返回以下列：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | name | SQL Server 的外部资源池的名称。 |
 | max_memory_percent | 可使用 SQL Server 或外部资源池的最大内存。 |
@@ -246,7 +245,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 该查询将返回以下列：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | pool_name | 资源池的名称。 SQL Server 资源池都带有前缀`SQL Server`和外部资源池都带有前缀`External Pool`。
 | total_cpu_usage_hours | 以毫秒为单位自重置资源调控器统计信息以来累积的 CPU 使用率。 |
@@ -275,10 +274,10 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 返回的列是：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | package | 已安装包的名称。 |
-| 版本 | 包的版本。 |
+| Version | 包的版本。 |
 | 依赖的对象 | 列出已安装的包依赖的包。 |
 | 许可证 | 已安装的程序包的许可证。 |
 | LibPath | 在哪里可以找到包的目录。 |
@@ -301,10 +300,10 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 返回的列是：
 
-| “列” | Description |
+| “列” | 描述 |
 |--------|-------------|
 | package | 已安装包的名称。 |
-| 版本 | 包的版本。 |
+| Version | 包的版本。 |
 | Location | 在哪里可以找到包的目录。 |
 
 ## <a name="next-steps"></a>后续步骤

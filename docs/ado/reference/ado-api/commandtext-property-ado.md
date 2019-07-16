@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ebc6a783aa8520c3ab16465143acdf1a6bf6628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919729"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 属性 (ADO)
 指示要对提供程序发出的命令的文本。  

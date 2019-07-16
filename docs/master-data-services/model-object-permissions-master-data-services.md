@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d41bad7792d21a5eae26b890bcbbfe43808b3faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e652d2c42c61e1694c1f8adfa7976f3c1eda8406
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055737"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型对象权限 (Master Data Services)
 
@@ -31,9 +30,9 @@ ms.locfileid: "65489185"
   
  若要确定通过每个属性值分配的安全设置，可以将模型对象权限与层次结构成员权限组合，从而确定用户可以访问哪些成员。  
   
- 若要授予用户访问“资源管理器” 之外的功能区域的权限，该用户必须是模型管理员，这也会涉及分配对象模型的管理权限。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+ 若要授予用户访问“资源管理器”  之外的功能区域的权限，该用户必须是模型管理员，这也会涉及分配对象模型的管理权限。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
- 模型对象权限是在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 中分配的，即“模型”选项卡上的“用户和组权限”功能区域。在此选项卡上，模型表示为树状结构。 将权限分配给树中的对象时，下面的所有对象都将继承该权限。 可以通过为单个对象分配权限来覆盖此类继承。  
+ 模型对象权限是在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户界面 (UI) 中分配的，即“模型”  选项卡上的“用户和组权限”  功能区域。在此选项卡上，模型表示为树状结构。 将权限分配给树中的对象时，下面的所有对象都将继承该权限。 可以通过为单个对象分配权限来覆盖此类继承。  
   
  你可以分配对模型对象的读取、创建、更新、删除或拒绝权限的组合。 如果没有在 **“模型”** 选项卡上分配任何权限，用户就不能在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中查看任何模型或数据。  
   

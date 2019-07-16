@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186143"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 模板
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建模板，定义要包含在跟踪中的事件类和数据列。 定义并保存模板后，可以运行跟踪来记录每个选定事件类的数据。 您可以将一个模板用于多个跟踪；模板本身并不会执行。  
@@ -54,7 +54,7 @@ ms.locfileid: "52779589"
 ## <a name="default-template"></a>默认模板  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 自动指定 **Standard** 模板作为应用于任何新跟踪的默认模板。 但是，您可以将默认模板更改为其他任何预定义模板或用户定义模板。 若要更改默认模板，请在使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡创建或编辑模板时，选中 **“用作所选服务器类型的默认模板”** 复选框。  
   
- 若要导航到 **“跟踪模板属性”** 对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单中，选择 **“模板”**，然后单击 **“新建模板”** 或 **“编辑模板”**。  
+ 若要导航到 **“跟踪模板属性”** 对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **“文件”** 菜单中，选择 **“模板”** ，然后单击 **“新建模板”** 或 **“编辑模板”** 。  
   
 > [!NOTE]  
 >  默认模板针对给定的服务器类型。 更改一个服务器类型的默认模板不会影响其他任何服务器类型的默认模板。 有关设置特定服务器的默认模板的详细信息，请参阅[设置跟踪定义默认值 (SQL Server Profiler)](set-trace-definition-defaults-sql-server-profiler.md)。  

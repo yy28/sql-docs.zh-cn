@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061798"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @configname = ] 'option_name'` 是一种配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
+`[ @configname = ] 'option_name'` 是一种配置选项的名称。 *option_name* 的数据类型为 **varchar(35)** ，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
   
  有关可用配置选项和其设置的信息，请参阅[服务器配置选项&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
@@ -77,9 +76,9 @@ RECONFIGURE
   
  值**config_value**并**run_value**不自动等价。 通过使用更新配置设置后**sp_configure**，系统管理员必须使用 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE 更新正在运行的配置值。 有关详细信息，请参阅“备注”部分。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar(35)**|配置选项的名称。|  
+|**name**|**nvarchar(35)**|配置选项的名称。|  
 |**最小值**|**int**|配置选项的最小值。|  
 |**最大值**|**int**|配置选项的最大值。|  
 |**config_value**|**int**|设置为值配置选项是使用**sp_configure** (中的值**sys.configurations.value**)。 有关这些选项的详细信息，请参阅[服务器配置选项&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)并[sys.configurations &#40;-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
@@ -98,7 +97,7 @@ RECONFIGURE
   
  RECONFIGURE 语句可以动态更新某些选项，而其他选项的更新则需要停止服务器再重新启动才能实现。 例如，**最小服务器内存**并**最大服务器内存**服务器内存选项中会动态更新[!INCLUDE[ssDE](../../includes/ssde-md.md)]; 因此，你可以更改它们而无需重新启动服务器。 与此相反，重新配置的运行值**填充因子**选项要求重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
- 运行 RECONFIGURE 之后配置选项，可以看到是否已动态更新选项通过执行**sp_configure'***option_name*****。 中的值**run_value**并**config_value**列应匹配的动态更新的选项。 您还可以检查以查看哪些选项是动态的通过查看**is_dynamic**的列**sys.configurations**目录视图。  
+ 运行 RECONFIGURE 之后配置选项，可以看到是否已动态更新选项通过执行**sp_configure'***option_name***** 。 中的值**run_value**并**config_value**列应匹配的动态更新的选项。 您还可以检查以查看哪些选项是动态的通过查看**is_dynamic**的列**sys.configurations**目录视图。  
   
 > [!NOTE]  
 >  如果指定*值*有关的选项，过高**run_value**列反映了这一事实，[!INCLUDE[ssDE](../../includes/ssde-md.md)]默认使用动态内存，而不是使用不是有效的设置。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26d7bf92a3720b802818fd5d5bacc8d5a9d7b819
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207452"
 ---
 # <a name="tabular-model-projects"></a>表格模型项目 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072044"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[创建新的表格模型项目 (Analysis Services)](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|本文介绍如何创建新的空白表格模型项目。|  
 |[从 Analysis Services 导入](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|本文介绍如何创建基于现有模型已在 Analysis Services 中的新表格模型项目。 从现有模型中提取元数据，并用于创建新模型。|  

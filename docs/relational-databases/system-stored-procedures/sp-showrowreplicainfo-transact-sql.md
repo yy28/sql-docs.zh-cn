@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032891"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>行信息的结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|承载生成行版本项目的数据库的服务器名称。|  
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
@@ -59,18 +58,18 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**version**|**int**|项的版本。|  
 |**current_state**|**nvarchar(9)**|返回有关行的当前状态的信息。<br /><br /> **y** -行数据表示行的当前状态。<br /><br /> **n** -行数据不表示行的当前状态。<br /><br /> **\<n/a >** -不适用。<br /><br /> **\<未知 >** -无法确定当前状态。|  
 |**rowversion_table**|**nchar(17)**|指示是否将行版本存储在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)表。|  
-|**comment**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
+|**注释**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-sets-for-column-information"></a>列信息的结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|承载生成列版本项目的数据库的服务器名称。|  
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  
 |**colname**|**sysname**|列版本项目表示的项目列的名称。|  
-|**comment**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
+|**注释**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-set-for-both"></a>行信息和列信息的结果集  
  如果该值**两者**为选择*显示*，则返回的行和列结果集。  

@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c007beeab554486fe490a0d2f6bfc335e1a50cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009755"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 用户定义聚合 - 需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  只要公共语言运行时 (CLR) 程序集中的类型实现了所需的聚合约定，就可以将它作为用户定义聚合函数注册。 此协定组成**SqlUserDefinedAggregate**属性和聚合约定方法。 聚合约定包括保存聚合中间状态的机制和机制以及累计新值，其中包括四个方法： **Init**， **Accumulate**， **合并**，并**终止**。 当满足这些要求后时，你将能够充分利用中的用户定义聚合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题的以下章节提供有关如何创建和使用用户定义聚合的其他详细信息。 有关示例，请参阅[Invoking CLR User-Defined 聚合函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
+  只要公共语言运行时 (CLR) 程序集中的类型实现了所需的聚合约定，就可以将它作为用户定义聚合函数注册。 此协定组成**SqlUserDefinedAggregate**属性和聚合约定方法。 聚合约定包括保存聚合中间状态的机制和机制以及累计新值，其中包括四个方法：**Init**，**累积**，**合并**，并且**终止**。 当满足这些要求后时，你将能够充分利用中的用户定义聚合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题的以下章节提供有关如何创建和使用用户定义聚合的其他详细信息。 有关示例，请参阅[Invoking CLR User-Defined 聚合函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  有关详细信息，请参阅[SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)。  
@@ -37,7 +36,7 @@ ms.locfileid: "51662466"
 ## <a name="aggregation-methods"></a>聚合方法  
  注册为用户定义聚合的类应支持以下实例方法。 这些是查询处理器计算聚合所用的方法。  
   
-|方法|语法|Description|  
+|方法|语法|描述|  
 |------------|------------|-----------------|  
 |**Init**|`public void Init();`|查询处理器使用此方法初始化聚合的计算。 对于查询处理器正在聚合的每个组调用此方法一次。 查询处理器可以选择重用聚合类的同一实例来计算多个组的聚合。 **Init**方法应执行任何清理根据上一次使用此实例中，并使其能够重新启动新的聚合计算。|  
 |**累积**|`public void Accumulate ( input-type value[, input-type value, ...]);`|表示该函数的参数的一个或多个参数。 *input_type*应为托管[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的本机等效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定的数据类型*input_sqltype*中**CREATE AGGREGATE**语句。 有关详细信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。<br /><br /> 对于用户定义类型 (UDT)，input-type 与 UDT 类型相同。 查询处理器使用此方法累计聚合值。 对于正在聚合的组中的每个值调用此方法一次。 查询处理器才仅在调用后调用此**Init**聚合类的给定实例上的方法。 此方法的实现应更新实例的状态以反映正在传递的参数值的累计。|  

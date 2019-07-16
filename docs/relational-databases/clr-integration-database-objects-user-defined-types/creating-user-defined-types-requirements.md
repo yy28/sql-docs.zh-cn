@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028266"
 ---
 # <a name="creating-user-defined-types---requirements"></a>创建用户定义类型 - 需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "49119745"
  指示此 UDT 的所有实例是否都具有相同的长度。  
   
  **MaxByteSize**  
- 实例的最大大小（以字节为单位）。 必须指定**MaxByteSize**与**UserDefined**序列化格式。 有关与指定，用户定义序列化 UDT **MaxByteSize**定义的用户是指其序列化的窗体中的 UDT 的总大小。 值**MaxByteSize**必须在 1 到 8000 的范围内或设置为-1 以指示 UDT 大于 8000 个字节 （总大小不能超过最大 LOB 大小）。 考虑这样一个 UDT 属性值为 10 个字符的字符串 (**System.Char**)。 当使用 BinaryWriter 序列化 UDT 时，序列化字符串的总大小为 22 字节：每个 Unicode UTF-16 字符占 2 个字节，乘以最大字符数，再加上因序列化二进制流而导致的系统开销 2 个控制字节。 因此，确定的值时**MaxByteSize**，必须考虑序列化 UDT 的总大小： 以二进制格式序列化的数据加上因序列化所产生的开销大小。  
+ 实例的最大大小（以字节为单位）。 必须指定**MaxByteSize**与**UserDefined**序列化格式。 有关与指定，用户定义序列化 UDT **MaxByteSize**定义的用户是指其序列化的窗体中的 UDT 的总大小。 值**MaxByteSize**必须在 1 到 8000 的范围内或设置为-1 以指示 UDT 大于 8000 个字节 （总大小不能超过最大 LOB 大小）。 考虑这样一个 UDT 属性值为 10 个字符的字符串 (**System.Char**)。 当使用 BinaryWriter 序列化 UDT 时，序列化字符串的总大小为 22 字节：每个 Unicode utf-16 字符占 2 个字节的字符，再加上 2 个控件的最大数目个字节的序列化二进制流所产生的开销的乘积。 因此，确定的值时**MaxByteSize**，必须考虑序列化 UDT 的总大小： 以二进制格式序列化的数据加上因序列化所产生的开销大小。  
   
  **ValidationMethodName**  
  用于验证 UDT 的实例的方法的名称。  
@@ -143,7 +142,7 @@ ms.locfileid: "49119745"
   
 -   大于或等于 (> =)  
   
--   小于或等于 (<=)  
+-   小于或等于 (< =)  
   
 ### <a name="implementing-nullability"></a>实现为 Null 性  
  除了正确指定程序集的属性外，类还必须支持为 Null 性。 加载到 Udt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是可识别 null 的但为了使 UDT 能够识别 null 值，该类必须实现**INullable**接口。 有关详细信息和如何在 UDT 中实现为 null 性的示例，请参阅[类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 991884e14f68cf279543b9194114c5ea1fc8d7dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039481"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函数
 **符合性**  
@@ -52,7 +51,7 @@ BOOL SQLValidDSN(
 ## <a name="diagnostics"></a>诊断  
  当**SQLValidDSN**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 一个 *\*pfErrorCode*如果，则返回仅当函数调用失败，不返回 FALSE，因为数据源名称无效。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  

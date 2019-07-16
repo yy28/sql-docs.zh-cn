@@ -1,5 +1,5 @@
 ---
-title: SQLAsyncNotificationCallback Function | Microsoft Docs
+title: SQLAsyncNotificationCallback 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915546"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 函数
 **符合性**  
  版本引入了：ODBC 3.8  
   
- 标准符合性：None  
+ 标准符合性：无  
   
  **摘要**  
  **SQLAsyncNotificationCallback**使驱动程序没有为当前的异步操作的某些进度后驱动程序返回 SQL_STILL_EXECUTING 时回调到驱动程序管理器。 **SQLAsyncNotificationCallback**只能由驱动程序调用。  
@@ -54,7 +53,7 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>诊断  
  **SQLAsyncNotificationCallback**可以返回 SQL_ERROR，以下两种情况下 （这些指示驱动程序或驱动程序管理器中的实现问题。  
   
-|错误|Description|  
+|Error|描述|  
 |-----------|-----------------|  
 |连接或语句没有请求通知。||  
 |无效*处理*|该驱动程序传递失败的内部驱动程序管理器验证测试的无效句柄。|  

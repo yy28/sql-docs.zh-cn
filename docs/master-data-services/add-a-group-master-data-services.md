@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 236596354139971c6fcceebff759a57f807cdefa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 725e43685f56c2a52c585acb7624064c85e01b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047930"
 ---
 # <a name="add-a-group-master-data-services"></a>添加组 (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "65484865"
   
 5.  或者单击 **“检查名称”** 。  
   
-6.  单击“确定”  。  
+6.  单击 **“确定”** 。  
   
     > [!NOTE]  
     >  当用户第一次访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]时，将用户的名称添加到 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 用户列表。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9db18a572fc82b05e75fb7bb286afb572fe500fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922369"
 ---
 # <a name="registering-a-custom-business-object"></a>注册自定义业务对象
 若要通过 Web 服务器已成功启动自定义业务对象 （.dll 或.exe），业务对象的 ProgID 必须输入到注册表中此过程所述。 此 RDS 功能通过运行批准的可执行文件来保护你的 Web 服务器的安全性。  

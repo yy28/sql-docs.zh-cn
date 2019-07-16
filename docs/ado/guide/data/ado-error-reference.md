@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05be5b1b9f3b23971017c74b5a6491f20ce4e49e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926247"
 ---
 # <a name="ado-errors"></a>ADO 错误
 **ErrorValueEnum**常量介绍 ADO 错误值。 包括的值，这些枚举常量的完整列表请参阅[附录 b:ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将检查的一些更有趣的错误，并介绍它们，或若要解决此问题的解决方案可以引发某些特定情况。 这两个**ErrorValueEnum**列出了常量和简短的正十进制数。

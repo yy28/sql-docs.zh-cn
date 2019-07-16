@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952610"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>对于 Linux 部署 SQL Server 可用性基础知识
 
@@ -200,7 +199,7 @@ Wsfc 监视参与节点的状态，并出现问题时处理它们。 Wsfc 的更
 #### <a name="cluster-log-location"></a>群集日志位置
 Pacemaker 群集的日志位置因分发而异。
 -   RHEL 和 SLES- `/var/log/cluster/corosync.log`
--   Ubuntu - `/var/log/corosync/corosync.log`
+-   Ubuntu — `/var/log/corosync/corosync.log`
 
 若要更改默认日志记录位置，请修改`corosync.conf`。
 

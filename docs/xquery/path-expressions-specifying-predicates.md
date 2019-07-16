@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7502cef1a02ff580b16b8df0d6f1c2c6c54fb8ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946427"
 ---
 # <a name="path-expressions---specifying-predicates"></a>路径表达式 - 指定谓词
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +70,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- 请注意，在每种情况下，谓词都绑定到应用该谓词的路径表达式中的节点。 例如，第一个路径表达式选择每个 /People/Person 节点中的第一个 <`Name`> 元素，然后使用提供的 XML 实例返回下列内容：  
+ 请注意，在每种情况下，谓词都绑定到应用该谓词的路径表达式中的节点。 例如，第一个路径表达式选择第一个 <`Name`> 元素中每个//people/person 节点，并使用提供的 XML 实例中，将返回以下：  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- 但是，第二个路径表达式选择第一个 /People/Person 节点下的所有 <`Name`> 元素。 因此，它将返回下列内容：  
+ 但是，第二个路径表达式选择所有 <`Name`> 元素的第一个//people/person 节点下。 因此，它将返回下列内容：  
   
 ```  
 <Name>John</Name>  
@@ -135,11 +134,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     此查询中的路径表达式仅返回指定了 LotSize 属性的 <`Location`> 元素节点。 如果谓词返回特定 <`Location`> 的空序列，将不在结果中返回该生产车间。  
+     此查询中的路径表达式仅返回 <`Location`> 指定了 LotSize 属性的元素节点。 如果谓词返回空序列的特定 <`Location`>，生产车间不返回结果。  
   
 2.  谓词值只能是 xs: integer、 xs: boolean、 或节点\*。 节点\*，谓词的计算结果为如果有任何节点，则为 True 和 False 空序列。 对于任何其他数值类型（如双精度类型和浮点类型），将生成静态类型化错误。 当且仅当所得到的整数等于上下文位置值时，表达式的谓词真值才为 True。 此外，只有整数文字值和**last （)** 函数减少为 1 将筛选的步骤表达式的基数。  
   
-     例如，下列查询将检索 <`Features`> 元素的第三个子元素节点。  
+     例如，以下查询检索的第三个的子元素节点 <`Features`> 元素。  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -157,7 +156,7 @@ WHERE ProductModelID=7
   
     -   在第三步中还指定了可表示节点测试中的任意节点的通配符 (*)。 但是，谓词将筛选节点，并且仅返回第三个位置的节点。  
   
-    -   查询将返回文档根级的 <`ProductDescription`> 元素子级的 <`Features`> 元素子级的第三个子元素节点。  
+    -   查询返回的第三个子元素节点 <`Features`> 元素子级的 <`ProductDescription`> 文档根元素子级。  
   
 3.  如果谓词表达式的值是一个布尔类型的简单类型值，则谓词真值将等于谓词表达式的值。  
   
@@ -194,7 +193,7 @@ WHERE ProductModelID=7
   
     -   中的表达式**为**循环具有两个步骤并第二个步骤指定一个谓词。 此谓词的值是一个布尔类型值。 如果此值为 True，则谓词的真值也为 True。  
   
-    -   该查询将返回 <`Customer`> 元素子级，其谓词值为 True 的\<调查 > 文档根元素子级。 结果如下：  
+    -   该查询将返回 <`Customer`> 元素子级，其谓词值为 True 的\<调查 > 文档根元素子级。 下面是结果：  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   

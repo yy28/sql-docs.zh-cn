@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029109"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>开始使用 SSMA for Sybase 控制台 (SybaseToSQL)
 本部分介绍启动并开始使用 SSMA for Sybase 控制台应用程序的过程。 此处还列出了所使用的约定在典型的 SSMA 控制台输出窗口中。  
@@ -57,7 +56,7 @@ ms.locfileid: "62631947"
   
 下表中将显示控制台输出的颜色的解释：  
   
-|颜色|Description|  
+|颜色|描述|  
 |---------|---------------|  
 |Red|执行期间出错|  
 |灰色|日期和时间戳，向用户显示消息|  
@@ -66,5 +65,5 @@ ms.locfileid: "62631947"
 |绿色|提示用户输入|  
 |蓝绿色|开始、 完成和操作的结果|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [安装 SSMA for SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

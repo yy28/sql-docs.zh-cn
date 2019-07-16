@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211293"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的信息。  
@@ -51,13 +51,13 @@ ms.locfileid: "54100232"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要在其中查看有关警报的信息的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击包含要查看的信息的警报，然后选择“属性”。  
+4.  右键单击包含要查看的信息的警报，然后选择“属性”  。  
   
-     有关 alert_name“警报属性”对话框中包含的可用选项的详细信息，请参阅：  
+     有关 alert_name  “警报属性”  对话框中包含的可用选项的详细信息，请参阅：  
   
     -   [警报属性-新建警报&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "54100232"
   
     -   [警报属性（“历史记录”页）](alert-properties-history-page.md)  
   
-5.  完成后，单击 **“确定”**。  
+5.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -75,9 +75,9 @@ ms.locfileid: "54100232"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

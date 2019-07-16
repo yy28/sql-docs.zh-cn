@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17ac06d65d519be86ec077e6c6d39896c7f5ad46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061474"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 函数
 **符合性**  
@@ -72,7 +71,7 @@ int SQLGetPrivateProfileString(
 ## <a name="diagnostics"></a>诊断  
  在调用**SQLGetPrivateProfileString**失败，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  

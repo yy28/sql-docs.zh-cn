@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197130"
 ---
 # <a name="ole-automation-sample-script"></a>OLE 自动化脚本示例
   本主题包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句批处理的一个示例，它使用 OLE 自动化存储过程在本地 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中创建和使用 SQL-DMO SQLServer 对象。 部分代码在 OLE 自动化系统存储过程的引用主题中用作示例。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178963"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,17 +33,17 @@ ms.locfileid: "52529106"
 ## <a name="analysis-services-data-types"></a>Analysis Services 数据类型  
  在绑定中使用的数据类型必须与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支持的数据类型匹配。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中定义了下列数据类型：  
   
-|Analysis Services 数据类型|Description|  
+|Analysis Services 数据类型|描述|  
 |---------------------------------|-----------------|  
 |BigInt|64 位有符号整数。 此数据类型映射到 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int64 数据类型和 OLE DB 中的 DBTYPE_I8 数据类型。|  
 |Bool|一个布尔值。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Boolean 数据类型和 OLE DB 中的 DBTYPE_BOOL 数据类型。|  
 |货币|货币值，范围在 -263（或 -922,337,203,685,477.5808）到 263-1（或 +922,337,203,685,477.5807）之间，精确到货币单位的万分之一。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Decimal 数据类型和 OLE DB 中的 DBTYPE_CY 数据类型。|  
-|date|日期数据，以双精度浮点数存储。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 DateTime 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
-|双精度|双精度浮点数，范围在 -1.79E +308 到 1.79E +308 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Double 数据类型或 OLE DB 中的 DBTYPE_R8 数据类型。|  
+|Date|日期数据，以双精度浮点数存储。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 DateTime 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
+|Double|双精度浮点数，范围在 -1.79E +308 到 1.79E +308 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Double 数据类型或 OLE DB 中的 DBTYPE_R8 数据类型。|  
 |Integer|32 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int32 数据类型和 OLE DB 中的 DBTYPE_I4 数据类型。|  
 |Single|单精度浮点数，范围在 -3.40E +38 到 3.40E +38 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Single 数据类型和 OLE DB 中的 DBTYPE_R4 数据类型。|  
 |SmallInt|16 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int16 数据类型和 OLE DB 中的 DBTYPE_I2 数据类型。|  
-|TinyInt|一个 8 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 SByte 数据类型和 OLE DB 中 DBTYPE_I1 数据类型。<br /><br /> 注意：如果数据源包含的字段属于 tinyint 数据类型，并且 AutoIncrement 属性设置为 True，则在数据源视图中这些字段将转换为整数。|  
+|TinyInt|一个 8 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 SByte 数据类型和 OLE DB 中 DBTYPE_I1 数据类型。<br /><br /> 注意:如果数据源包含字段属于 tinyint 数据类型，并且 AutoIncrement 属性设置为 True，则会将其转换为数据源视图中的整数。|  
 |UnsignedBigInt|一个 64 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt64 数据类型和 OLE DB 中的 DBTYPE_UI8 数据类型。|  
 |UnsignedInt|32 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt32 数据类型和 OLE DB 中的 DBTYPE_UI4 数据类型。|  
 |UnsignedSmallInt|16 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt16 数据类型和 OLE DB 中的 DBTYPE_UI2 数据类型。|  
@@ -145,11 +145,11 @@ ms.locfileid: "52529106"
   
  外部绑定是通过将可选 **Bindings** 集合对象与处理命令包含在一起而指定的。 可选的 **Bindings** 集合包含以下元素。  
   
-|属性|基数|类型|Description|  
+|属性|基数|类型|描述|  
 |--------------|-----------------|----------|-----------------|  
 |**Binding**|0-n|**Binding**|提供新绑定的集合。|  
 |**DataSource**|0-1|**DataSource**|替换服务器中本应使用的 **DataSource** 。|  
-|**DataSourceView**|0-1|**DataSourceView**|替换服务器中本应使用 **DataSourceView** <br /><br /> 。|  
+|**DataSourceView**|0-1|**DataSourceView**|替换服务器中本应使用 **DataSourceView**<br /><br /> 。|  
   
  与外部绑定相关的所有元素都是可选的。 对于所有未指定的元素，ASSL 将应用持久化对象的 DDL 中包含的规范。 **DataSource** 命令中的 **DataSourceView** 或 **Process** 的规范是可选的。 如果指定 **DataSource** 或 **DataSourceView** ，则将不对它们进行实例化，并且在 **Process** 命令完成后，不会保留它们。  
   

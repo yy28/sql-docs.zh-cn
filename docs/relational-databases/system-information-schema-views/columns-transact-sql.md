@@ -18,31 +18,30 @@ helpviewer_keywords:
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6a14751ea8a0b268c846935e5058c10d79b4d60
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 021e9e66b281a8bbca6d5c9e21e78ffa4069c5c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950790"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为当前数据库中当前用户可访问的每一列返回一行。  
   
- 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA**_.view_name_。  
+ 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA** _.view_name_。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **&#42;&#42;重要&#42; &#42;** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|表名。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|列名称。|  
 |**ORDINAL_POSITION**|**int**|列标识号。|  
-|**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|列的默认值。|  
-|**IS_NULLABLE**|**varchar (** 3 **)**|列的为空性。 如果列允许 NULL，则该列将返回 YES。 否则，返回 NO。|  
+|**COLUMN_DEFAULT**|**nvarchar(** 4000 **)**|列的默认值。|  
+|**IS_NULLABLE**|**varchar(** 3 **)**|列的为空性。 如果列允许 NULL，则该列将返回 YES。 否则，返回 NO。|  
 |**DATA_TYPE**|**nvarchar(** 128 **)**|系统提供的数据类型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字符）。<br /><br /> -1，表示**xml**和大值类型数据。 否则，返回 NULL。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字节）。<br /><br /> -1，表示**xml**和大值类型数据。 否则，返回 NULL。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7a3e6b18377f01d93dfb4bdda840bc6abc0dafee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 006a90ca082861aea4fecbe6934947afa2020335
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006667"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>连接到 SQL Server (AccessToSQL)
 使用**连接到 SQL Server**对话框以连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单中，单击**连接到 SQL Server**。  

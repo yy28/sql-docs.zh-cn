@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163182"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>在表格模型中的双向交叉筛选器
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用“双向交叉筛选器”，从而无需手动制定 DAX 解决方法来传播跨表上下文的筛选器上下文。  
+  SQL Server 2016 中新增一项内置功能，可让你在表格模型中启用“双向交叉筛选器”  ，从而无需手动制定 DAX 解决方法来传播跨表上下文的筛选器上下文。  
   
- 让我们分解这一概念的各个组成部分：“交叉筛选”是指能够基于相关表中的值对表设置筛选器上下文，“双向”是指将筛选器上下文传输到位于表关系另一端的另一个相关表。 顾名思义，你可以朝关系的两个方向而不只是一个方向切片。  在内部，双向筛选可以扩展筛选器上下文以查询数据的超集。  
+ 让我们分解这一概念的各个组成部分：“交叉筛选”  是指能够基于相关表中的值对表设置筛选器上下文，“双向”  是指将筛选器上下文传输到位于表关系另一端的另一个相关表。 顾名思义，你可以朝关系的两个方向而不只是一个方向切片。  在内部，双向筛选可以扩展筛选器上下文以查询数据的超集。  
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
@@ -46,15 +46,15 @@ ms.locfileid: "53072304"
   
  从项目级别来看，当你创建项目时，将会评估设置，因此，如果你将默认选项更改为双向，将在创建下一个项目时看到选定项的效果。  
   
-1.  在 SSDT 中，选择“工具” > “选项” > “Analysis Services 表格设计器” > “新项目设置”。  
+1.  在 SSDT 中，选择“工具”   > “选项”   > “Analysis Services 表格设计器”   > “新项目设置”  。  
   
-2.  将“默认筛选器方向”设置为“单向”或“双向”。  
+2.  将“默认筛选器方向”  设置为“单向”  或“双向”  。  
   
  或者，你可以在模型上更改默认方向。  
   
-1.  在解决方案资源管理器中，选择“Model.bim” > “属性”。  
+1.  在解决方案资源管理器中，选择“Model.bim”   > “属性”  。  
   
-2.  将“默认筛选器方向”设置为“单向”或“双向”。  
+2.  将“默认筛选器方向”  设置为“单向”  或“双向”  。  
   
 ## <a name="walkthrough-an-example"></a>演练示例  
  最好是通过一个示例来理解双向交叉筛选的值。 假设 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)中有以下数据集，该数据集反映按默认创建的基数和交叉筛选器。  
@@ -99,23 +99,23 @@ ms.locfileid: "53072304"
   
 1.  启动 SQL Server Data Tools for Visual Studio 2015。  
   
-2.  单击“文件” > “新建” > “项目” > “Analysis Services 表格模型”。  
+2.  单击“文件”   > “新建”   > “项目”   > “Analysis Services 表格模型”  。  
   
 3.  在表格模型设计器中，将工作区数据库设置为表格服务器模式的 SQL Server 2016 Preview Analysis Services 实例。  
   
 4.  确认模型兼容性级别设置为**SQL Server 2016 RTM (1200)** 或更高版本。  
   
-     单击 **“确定”** 以创建项目。  
+     单击**确定**以创建项目。  
   
 ### <a name="add-data"></a>添加数据  
   
-1.  单击“模型” > “从数据源导入” > “Microsoft SQL Server”。  
+1.  单击“模型”   > “从数据源导入”   > “Microsoft SQL Server”  。  
   
 2.  指定服务器、数据库和身份验证方法。  
   
 3.  选择 ContosoRetailDW 数据库。  
   
-4.  单击“下一步” 。  
+4.  单击“下一步”  。  
   
 5.  在选择表时，请按住 Ctrl 的同时选择以下表：  
   
@@ -142,36 +142,36 @@ ms.locfileid: "53072304"
   
  ![SSAS BIDI 2 模型](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2 模型")  
   
- 或者，单击“表” > “管理关系”查看表布局中的相同信息。  
+ 或者，单击“表”   > “管理关系”  查看表布局中的相同信息。  
   
  ![ssas bidi 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3 defaultrelationships")  
   
 ### <a name="create-measures"></a>创建度量值  
  你将需要来合计销售额聚合的维度数据的不同方面。 在 **DimProduct** 中，可以创建一个统计产品的度量值，然后使用该度量值来分析产品销售情况，以显示在给定年份、在给定区域或针对哪种客户类型销售了多少产品。  
   
-1.  单击“模型” > “模型视图” > “关系图视图”。  
+1.  单击“模型”   > “模型视图”   > “关系图视图”  。  
   
 2.  单击“FactOnlineSales”。   
   
 3.  选择“SalesAmount”列。   
   
-4.  单击“列” > “自动求和” > “求和”以创建销售度量值。  
+4.  单击“列”   > “自动求和”   > “求和”  以创建销售度量值。  
   
 5.  单击“DimProduct”。   
   
 6.  选择“ProductKeycolumn”。   
   
-7.  单击“列” > “自动求和” > “非重复计数”，以创建独特产品的度量值。  
+7.  单击“列”   > “自动求和”   > “非重复计数”  ，以创建独特产品的度量值。  
   
 ### <a name="analyze-in-excel"></a>在 Excel 中分析  
   
-1.  单击“模型” > “在 Excel 中分析”，以便在数据透视表中聚合所有数据。  
+1.  单击“模型”   > “在 Excel 中分析”  ，以便在数据透视表中聚合所有数据。  
   
 2.  选择你刚刚从字段列表创建的两个度量值。  
   
-3.  选择“产品” > “制造商”。  
+3.  选择“产品”   > “制造商”  。  
   
-4.  选择“日期” > “日历年”。  
+4.  选择“日期”   > “日历年”  。  
   
  可以看到，销售已根据预期按年份和制造商划分。 这是因为默认筛选器之间的上下文**FactOnlineSales**， **DimProduct**，并**DimDate**关系的多方上正常工作的度量值。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "53072304"
   
 ### <a name="change-the-cross-filter"></a>更改交叉筛选器  
   
-1.  返回到模型，选择“表” > “管理关系”。  
+1.  返回到模型，选择“表”   > “管理关系”  。  
   
 2.  编辑 **FactOnlineSales** 与 **DimProduct**之间的关系。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "53072304"
   
 3.  保存设置。  
   
-4.  在工作簿中，单击“刷新”以重新读取模型。  
+4.  在工作簿中，单击“刷新”  以重新读取模型。  
   
  现在，你应会看到，产品和销售已按相同的筛选器上下文进行筛选，不仅包括 **DimProducts** 中的制造商，而且包括 **DimDate**中的日历年。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "53072304"
   
  实际上，交叉筛选可以实现通常只能通过多对多构造实现的数据探索形式。 尽管如此，务必要识别该双向交叉筛选不是一个多对多构造。  此版本中的表格模型设计器仍不支持实际的多对多表配置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Power BI Desktop 中创建和管理关系](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [如何处理简单多到演示关系 Power Pivot 和表格模型中的一个实际示例](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [利用 DAX 交叉表筛选解析多对多关系](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   

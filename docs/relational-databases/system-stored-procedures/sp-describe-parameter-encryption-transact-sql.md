@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377a1e342970e9593b37924c3739ee7a706d5264
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053031"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_describe_parameter_encryption
   
  第一个结果集的每行描述一对密钥;加密的列加密密钥和其对应的列主密钥。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|在结果集中的行的 id。|  
 |**database_id**|**int**|数据库 id。|  
@@ -75,7 +74,7 @@ sp_describe_parameter_encryption
   
  第二个结果集的每一行都包含一个参数的加密元数据。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|在结果集中的行的 id。|  
 |**parameter_name**|**sysname**|其中一个参数中指定的名称 *\@params*参数。|  

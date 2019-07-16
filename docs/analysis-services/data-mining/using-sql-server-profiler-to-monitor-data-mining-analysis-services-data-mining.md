@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209547"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server 事件探查器监视数据挖掘（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51818493"
 ## <a name="using-traces-to-monitor-data-mining"></a>使用跟踪监视数据挖掘  
  如果在跟踪中捕获信息，则可以指定是否将该信息保存到 SQL Server 实例中的文件夹或表中。 无论使用什么方法存储该数据，都可以使用 SQL Server Profiler 根据事件查看跟踪和筛选。 下表列出了默认 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 跟踪中影响数据挖掘的一些事件和子类。  
   
-|EventClass|EventSubclass|Description|  
+|EventClass|EventSubclass|描述|  
 |----------------|-------------------|-----------------|  
 |**查询开始**<br /><br /> **查询结束**|**0 - MDXQuery**|包含对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程的所有调用的文本。|  
 |**查询开始**<br /><br /> **查询结束**|**1 - DMXQuery**|包含数据挖掘扩展插件 (DMX) 语句的文本和结果。|  
@@ -35,7 +35,7 @@ ms.locfileid: "51818493"
 |**查询开始**<br /><br /> **查询结束**|EXECUTESQL|包含正在执行的 Transact-SQL 查询的文本|  
 |**查询开始**<br /><br /> **查询结束**|**2- SQLQuery**|包含任意针对以系统表形式存在的架构行集的查询的文本。|  
 |**DISCOVER Begin**<br /><br /> **DISCOVER End**|多个|包含封装在 XMLA 中的 DMX 函数调用或 DISCOVER 语句的文本。|  
-|**错误**|（无）|包含服务器发送到客户端的错误的文本。<br /><br /> 以“错误(数据挖掘):”或“信息(数据挖掘):”开头的错误消息专门在响应 DMX 请求时生成。 但只查看这些错误消息是不够的。 其他错误（例如由分析器生成的错误）虽然不具有此前缀，但也与数据挖掘有关。|  
+|**错误**|（无）|包含服务器发送到客户端的错误的文本。<br /><br /> 以“错误(数据挖掘):”  或“信息(数据挖掘):”  开头的错误消息专门在响应 DMX 请求时生成。 但只查看这些错误消息是不够的。 其他错误（例如由分析器生成的错误）虽然不具有此前缀，但也与数据挖掘有关。|  
   
  通过查看跟踪日志中的命令语句，还可以看到由客户端发送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器的复杂语句（包括对系统存储过程的调用）的语法。 您可以借助该信息进行调试，或者也可以将有效语句用作创建新预测查询或模型的模板。 有关可以通过跟踪捕获的存储过程调用的一些示例，请参阅 [群集模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   

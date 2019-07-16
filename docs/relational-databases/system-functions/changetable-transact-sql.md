@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042898"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,12 +66,12 @@ CHANGETABLE (
  *last_sync_version*应该进行验证，以确保它不是太旧，因为部分或全部更改信息可能已清除了根据配置的数据库的保留期。 有关详细信息，请参阅[CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)并[ALTER DATABASE SET 选项&#40;-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  版本*表*，{< primary_key_values >}  
- 返回指定行的最新更改跟踪信息。 主键值必须标识该行。 <primary_key_values> 标识主键列并指定这些值。 可以按任意顺序指定主键列名称。  
+ 返回指定行的最新更改跟踪信息。 主键值必须标识该行。 < primary_key_values > 标识主键列，并指定这些值。 可以按任意顺序指定主键列名称。  
   
  *表*  
  是用户定义的从中获取更改跟踪信息的表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
   
- column_name  
+ column_name   
  指定一个或多个主键列的名称。 可以按任意顺序指定多个列名。  
   
  *ReplTest1*  
@@ -95,7 +94,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  指定了 CHANGES 时，返回零个或多个具有以下列的行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|与上次对行的更改关联的版本值|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|与上次插入操作关联的版本值。|  
@@ -107,7 +106,7 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  指定 VERSION 后，返回一个具有以下列的行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|与行关联的当前更改版本值。<br /><br /> 如果在超过更改跟踪保留期的时段内没有进行更改，或者在启用更改跟踪之后未更改行，则值为 NULL。|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|更改可以在 INSERT、UPDATE 或 DELETE 语句中使用 WITH 子句选择指定的上下文信息。|  
@@ -142,7 +141,7 @@ CHANGETABLE (
   
  如果未进行更改的时间超过保持期（例如，清除操作删除了更改信息），或者在为表启用更改跟踪后从未更改行，则 SYS_CHANGE_VERSION 的值可能为 NULL。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有以下权限由指定的表*表*值，以获取更改跟踪信息：  
   
 -   主键列的 SELECT 权限  

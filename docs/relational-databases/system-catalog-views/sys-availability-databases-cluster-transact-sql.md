@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7d312a5ecb60e1ab046b0108e01ef1834adaa900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 206c9b1c250cb95a6ad49ccf20f8badf11f870ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046531"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ ms.locfileid: "47842305"
 > [!NOTE]  
 >  将数据库添加到可用性组后，主数据库自动联接到该组。 必须在每个辅助副本上准备辅助数据库，之后才能将其联接到可用性组。   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|数据库参与其中的可用性组（如果有）的唯一标识符。<br /><br /> NULL = 数据库不是可用性组中的可用性副本的一部分。|  
 |**group_database_id**|**uniqueidentifier**|数据库在其参与的可用性组（如果有）中的唯一标识符。 **group_database_id**是相同的主副本上以及在其的数据库是否联接到可用性组的每个辅助副本。<br /><br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。|  
 |**database_name**|**sysname**|已添加到可用性组的数据库的名称。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  如果调用方**sys.availability_databases_cluster**不是数据库，请参阅相应的行是 ALTER ANY DATABASE 所需的最小权限或 VIEW ANY DATABASE 服务器级权限或创建的所有者中的数据库权限**主**数据库。  
   
 ## <a name="see-also"></a>请参阅  

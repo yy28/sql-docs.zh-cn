@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed8c72e0114804780cd3ee090b536eb28135e628
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018000"
 ---
 # <a name="change-data-capture---sysdmcdcerrors"></a>变更数据捕获-sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47743265"
   为变更数据捕获日志扫描会话中遇到的每个错误返回一行。  
  
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|会话的 ID。<br /><br /> 0 = 在日志扫描会话中未发生错误。|  
 |**phase_number**|**int**|表示发生错误时会话所在的阶段的数字。 每个阶段的说明，请参阅[sys.dm_cdc_log_scan_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)。|  
@@ -49,7 +48,7 @@ ms.locfileid: "47743265"
 ## <a name="remarks"></a>备注  
  **sys.dm_cdc_errors**包含前面 32 个会话的错误信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW DATABASE STATE 权限到查询**sys.dm_cdc_errors**动态管理视图。 动态管理视图权限的详细信息，请参阅[动态管理视图和函数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="see-also"></a>请参阅  

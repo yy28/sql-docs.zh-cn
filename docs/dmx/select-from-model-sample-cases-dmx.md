@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f4443f05fbee790f5f1d266f451e1105b9c00197
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928312"
 ---
 # <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM&lt;模型&gt;。SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可能生成样本事例，但其可能并不实际存在于定型数据中。 返回的事例代表指定的内容节点。  
   
  尽管[!INCLUDE[msCoName](../includes/msconame-md.md)]序列聚类分析算法是唯一[!INCLUDE[msCoName](../includes/msconame-md.md)]算法，支持使用 SELECT FROM\<模型 >。SAMPLE_CASES，第三方算法也可能支持它。  
@@ -61,7 +60,7 @@ WHERE IsInNode('000000003')
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

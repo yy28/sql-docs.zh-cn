@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2972e951446a28b399deec5f5a3cb86b3f28a89
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902234"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>批注解释 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56029458"
   
  因为它在溢出列中存储数据，XML 大容量加载还存储开始和结束标记的父元素为其**sql:overflow-字段**定义。  
   
- 例如，以下架构描述**\<客户 >** 并 **\<CustOrder >** 元素。 上述每个元素都标识一个溢出列：  
+ 例如，以下架构描述 **\<客户 >** 并 **\<CustOrder >** 元素。 上述每个元素都标识一个溢出列：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +75,9 @@ ms.locfileid: "56029458"
 </xsd:schema>  
 ```  
   
- 在架构中， **\<客户 >** 元素映射到 Cust 表和**\<顺序 >** 元素映射到 CustOrder 表。  
+ 在架构中， **\<客户 >** 元素映射到 Cust 表和 **\<顺序 >** 元素映射到 CustOrder 表。  
   
- 这两个**\<客户 >** 并**\<顺序 >** 元素标识一个溢出列。 因此，XML 大容量加载会将所有未用完的子元素和属性的**\<客户 >** Cust 表的溢出列中的元素和所有未用完的子元素和属性的**\<顺序 >** CustOrder 表的溢出列中的元素。  
+ 这两个 **\<客户 >** 并 **\<顺序 >** 元素标识一个溢出列。 因此，XML 大容量加载会将所有未用完的子元素和属性的 **\<客户 >** Cust 表的溢出列中的元素和所有未用完的子元素和属性的 **\<顺序 >** CustOrder 表的溢出列中的元素。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   

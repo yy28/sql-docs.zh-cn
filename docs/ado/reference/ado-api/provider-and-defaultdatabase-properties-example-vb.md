@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43909f1dd324a9e8ddfcbd6364b2c11d80f3bfbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931519"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 属性示例 (VB)
 此示例演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)通过打开三个属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象使用不同的提供程序。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性将默认数据库设置为 Microsoft ODBC 提供程序。  

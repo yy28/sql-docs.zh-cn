@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af101791b9ca921bfd5c638d3e7e4fd6002efeb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921797"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 属性示例 (JScript)
 此示例演示如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性可以跟踪枚举中的所有记录的循环的进度[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**通过将光标设置为客户端游标的属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AbsolutePositionJS.asp**。  

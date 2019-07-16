@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986353"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>不兼容的 Access 功能 (AccessToSQL)
 并非所有访问数据库功能都都与兼容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和访问具有不同的保留关键字集。 问题如这些可能会阻止成功迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用下表了解有关可能的迁移问题和如何应对这些信息。  
