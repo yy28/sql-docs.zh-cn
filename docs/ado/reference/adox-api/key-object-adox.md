@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6dbbb81d53755032725ad71ff9bbf49b9beb2f1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965906"
 ---
 # <a name="key-object-adox"></a>项对象 (ADOX)
 表示从数据库表的主键、 外，或唯一键字段。  

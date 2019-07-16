@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62689840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899411"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存有关所有会话信息当前或最近打开在设备上使用。 它列出了每个会话对应一行。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|当前查询或运行 （如果终止该会话，并在终止时执行查询） 的最后一个查询的 id。 此视图的键。|在不同的系统中的所有会话是唯一的。|  
 |status|**nvarchar(10)**|对于当前会话，标识该会话当前处于活动状态还是空闲。 对于以前的会话状态可能会显示在会话关闭或终止 （如果已强行关闭会话）。|'ACTIVE'、 已关闭，空闲、 已终止|  

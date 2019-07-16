@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210797"
 ---
 # <a name="manage-policy-categories"></a>管理策略类别
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将某类别的任意或所有可用策略应用到整个 [!INCLUDE[tsql](../../includes/tsql-md.md)]实例。  
@@ -57,7 +57,7 @@ ms.locfileid: "52817964"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”，然后选择“管理类别”。  
+3.  右键单击“策略管理”  ，然后选择“管理类别”  。  
   
      在 **“管理策略类别”** 对话框中提供以下信息：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52817964"
   
 4.  选中或清除 **“托管数据库订阅”** 下的任意或所有复选框，以将该策略类别应用到 SQL Server 实例。  
   
-5.  完成后，单击 **“确定”**。  
+5.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -77,9 +77,9 @@ ms.locfileid: "52817964"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb;  

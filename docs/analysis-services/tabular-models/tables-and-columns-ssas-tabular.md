@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072154"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207491"
 ---
 # <a name="tables-and-columns"></a>表和列 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "53072154"
   
 ##  <a name="bkmk_related_tasks"></a> 相关任务  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[向表中添加列](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|介绍如何将源列添加到表定义。|  
 |[删除列](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|说明如何使用模型设计器或“表属性”对话框删除模型表列。|  

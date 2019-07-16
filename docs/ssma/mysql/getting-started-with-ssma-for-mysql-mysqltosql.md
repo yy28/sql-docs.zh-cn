@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984535"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入门 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL，可以快速将 MySQL 数据库架构转换为 SQL Server 或 Azure SQL DB 架构、 将生成的架构上传到 SQL Server 或 Azure SQL DB，并将数据从 MySQL 迁移到 SQL Server 或 Azure SQL DB。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989754"
 ---
 # <a name="data-migration-report-db2tosql"></a>数据迁移报表 (DB2ToSQL)
 **数据迁移报表**迁移到的数据后，会出现对话框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +26,7 @@ ms.locfileid: "63298938"
 **From**  
 源表。  
   
-**若要**  
+**To**  
 目标表中。  
   
 **总行数**  

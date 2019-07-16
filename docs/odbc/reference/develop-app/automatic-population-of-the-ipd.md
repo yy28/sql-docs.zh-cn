@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1591843667ef01c6c88f5dfafb734f044679b2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909831"
 ---
 # <a name="automatic-population-of-the-ipd"></a>自动填充 IPD
 某些驱动程序都能参数化的查询已准备好后设置 IPD 的字段。 有关参数，包括数据类型、 精度、 小数位数和其他特征的信息自动填充的描述符字段。 这相当于支持**SQLDescribeParam**。 具有其他方式来发现它，例如使用应用程序不知道的参数执行即席查询的时间时，此信息可以是特别有价值的应用程序。  

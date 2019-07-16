@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_diag_processing_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f96dd7be6de1415abb8a71425b083c58e7012d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899542"
 ---
 # <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   显示与所有无法合并到由管理员定义的诊断会话的内部诊断事件相关的信息。 查询此视图，以了解该驱动器的所有其他 Dmv 填充的背后的诊断和事件处理子系统的统计信息。 有一组的每个节点上每个进程的队列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|此日志所在的设备节点。|  
 |**process_id**|**int**|运行提交此统计信息的进程的标识符。|  

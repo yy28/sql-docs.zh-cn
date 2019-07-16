@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3409376b5fd2f71ecff8d510d17ce3771e63fa73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990694"
 ---
 # <a name="numeric-literals"></a>数值
 数值数据值存储在字符字符串时，使用数字文本。 对于为 SQL_C_CHAR 字符串，数值 SQL 数据的转换或转换的数字的 C 数据为 SQL_CHAR 或 SQL_VARCHAR 字符串，数字文本语法用于指定在目标中存储的内容。 对于数值存储为 SQL_C_CHAR 字符串到数值的 SQL 数据或作为 SQL_CHAR 字符串到数值的 C 数据存储的数字的转换，此语法用于验证在源中存储的内容。  

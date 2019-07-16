@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f2773117b2578f22af63ed022a61f1eeb283295
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210070"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,16 +31,16 @@ ms.locfileid: "52511471"
   
 -   您要将哪些列或属性用于预测？ 哪些列或属性适合用作分析的输入？  
   
--   应使用哪种算法？  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
+-   应使用哪种算法？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
   
 -   您是否需要能针对统一数据集来测试模型？ 如果需要，请考虑使用为测试保留一些数据的选项。 您可以选择一个百分比，并根据需要用指定行数设置其上限。  
   
 ##  <a name="BKMK_Using_DM_Wizard"></a> 启动数据挖掘向导  
  若要使用数据挖掘向导，则必须已在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开至少包含一个数据挖掘或 OLAP 项目的解决方案。  
   
--   如果你的解决方案已做好数据挖掘准备，则只需在解决方案资源管理器中右键单击“挖掘结构”节点并选择“新建挖掘结构”即可启动该向导。  
+-   如果你的解决方案已做好数据挖掘准备，则只需在解决方案资源管理器中右键单击“挖掘结构”  节点并选择“新建挖掘结构”  即可启动该向导。  
   
--   如果解决方案中未包含任何现有项目，则可添加新的数据挖掘项目。 从 **“文件”** 菜单中，选择 **“新建”**，然后选择 **“项目”**。 确保选择模板 **“Analysis Services 多维和数据挖掘项目”**。  
+-   如果解决方案中未包含任何现有项目，则可添加新的数据挖掘项目。 从 **“文件”** 菜单中，选择 **“新建”** ，然后选择 **“项目”** 。 确保选择模板 **“Analysis Services 多维和数据挖掘项目”** 。  
   
 -   您还可以使用 Analysis Services 导入向导从现有数据挖掘解决方案获取元数据。 但是，您不能选择单个对象进行导入；将导入整个数据库，包括任何多维数据集、数据源视图等。另请注意，通过导入创建的新解决方案将自动配置为使用本地默认数据库。 您可能需要先将此更改为其他实例，然后才能处理或浏览对象，如果要从早期版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]导入，则可能需要更新对访问接口的引用。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52511471"
 ### <a name="completing-the-wizard"></a>完成向导  
  向导中的最后一步是对挖掘结构和关联的挖掘模型进行命名。 根据创建的模型类型，您还具有以下重要选项：  
   
--   如果选择 **“允许钻取”**，则会在模型中启用 *钻取* 。 利用钻取，具有相应权限的用户可以浏览用于生成模型的源数据。  
+-   如果选择 **“允许钻取”** ，则会在模型中启用 *钻取* 。 利用钻取，具有相应权限的用户可以浏览用于生成模型的源数据。  
   
 -   如果要生成 OLAP 模型，您可以选择 **“创建新数据挖掘多维数据集”** 或 **“创建数据挖掘维度”** 选项。 可利用这两个选项更轻松地浏览已完成的模型并钻取到基础数据。  
   

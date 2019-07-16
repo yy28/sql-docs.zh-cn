@@ -1,5 +1,5 @@
 ---
-title: 使用 RollupChildren 函数 (MDX) |Microsoft 文档
+title: 使用 RollupChildren 函数 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 135ab6e43a0b751639bd1ce1d93bf2183039f713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024095"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208776"
 ---
-# <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX 数据操作-RollupChildren 函数
+# <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX 数据操作 - RollupChildren 函数
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   多维表达式 (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) 函数可以汇总某个成员的子级（对每个子级应用不同的一元运算符），并以数字的形式返回此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
   
@@ -67,7 +67,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  MDX 语句检查子成员的一元运算符。 如果一元运算符用于减法（正如在考虑国内盈利和国外盈利成员的情况下）， **IIf** 函数将替代一元运算符 (~)。 否则， **IIf** 函数将使用子成员的一元运算符。 最后，将所返回的汇总总数乘以 1.1，得出国内和国外总销售额的预测值。  
   
-## <a name="see-also"></a>另请参阅  
- [操作数据 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>请参阅  
+ [操作数据 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

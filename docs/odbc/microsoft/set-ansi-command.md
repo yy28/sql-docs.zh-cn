@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997766"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 命令
 确定如何比较不同长度的字符串都是使用 = Visual FoxPro SQL 命令中的运算符。  

@@ -1,5 +1,5 @@
 ---
-title: OLAP 引擎服务器组件 |Microsoft 文档
+title: OLAP 引擎服务器组件 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2e8acd27d64d2aaed12cffd1e05fc2faf62da044
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208604"
 ---
 # <a name="olap-engine-server-components"></a>OLAP 引擎服务器组件
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -48,17 +48,17 @@ ms.locfileid: "34026924"
 ## <a name="xmla-listener"></a>XMLA 侦听器  
  XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 可以使用 msmdsrv.ini 文件中的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] **端口** 配置设置来指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例所侦听的端口。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
   
-|端口|Description|  
+|Port|描述|  
 |----------|-----------------|  
 |2383|默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
 |在服务器启动时动态分配|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的命名实例。|  
   
- 请参阅[Configure Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)有关详细信息。  
+ 请参阅[配置 Windows 防火墙以允许 Analysis Services 访问](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)的更多详细信息。  
   
-## <a name="see-also"></a>另请参阅  
- [命名规则的对象&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md)   
- [物理体系结构&#40;Analysis Services-多维数据&#41;](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+## <a name="see-also"></a>请参阅  
+ [对象命名规则&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md)   
+ [物理体系结构（Analysis Services - 多维数据）](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003043"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll Function（SQLFetchScroll 函数）
 **符合性**  
@@ -84,7 +83,7 @@ SQLRETURN SQLFetchScroll(
   
  对于所有这些 SQLSTATEs 可以返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除 01xxx SQLSTATEs)，将返回 SQL_SUCCESS_WITH_INFO，如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果发生错误，则返回 SQL_ERROR单行操作。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|字符串或二进制的列返回的数据时截断了非空白字符或非 NULL 的二进制数据。 如果它是一个字符串值，它是右侧被截断。|  
@@ -164,7 +163,7 @@ SQLRETURN SQLFetchScroll(
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
 |*在开始之前*|1|  
-|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*后端*|  
 |*后端*|*后端*|  
   
@@ -194,8 +193,8 @@ SQLRETURN SQLFetchScroll(
 |*(开始操作之前和 FetchOffset > 0)或者 (后端和 FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart 和 FetchOffset < = 0*|*在开始之前*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*在开始之前*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*在开始之前*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 和&#124;FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*在开始之前*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 和&#124;FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*后端*|  
 |*后端和 FetchOffset > = 0*|*后端*|  
@@ -212,8 +211,8 @@ SQLRETURN SQLFetchScroll(
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
 |*FetchOffset < 0 和&#124;FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*在开始之前*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 和&#124;FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*在开始之前*|  
+|*FetchOffset < 0 和&#124;FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*在开始之前*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*后端*|  
@@ -229,14 +228,14 @@ SQLRETURN SQLFetchScroll(
   
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
-|*Any*|*1*|  
+|*任何*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  以下规则适用。  
   
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow-RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 如果提取行的前一个调用后，发生了更改的行集大小，这是新的行集大小。  

@@ -21,23 +21,22 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca29b9925de2d2c1c80e18372a8abf6e818edd15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997584"
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回与任何 Alwayson 可用性组侦听程序在 Windows Server 故障转移群集 (WSFC) 群集中的每个 IP 地址的行。  
+  为 Windows Server 故障转移群集 (WSFC) 中任何 AlwaysOn 可用性组侦听程序的每个关联 IP 地址都返回一行。  
   
  主键： **listener_id** + **ip_address** + **ip_sub_mask**  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**nvarchar(36)**|来自 Windows Server 故障转移群集 (WSFC) 群集的资源 GUID。|  
 |**ip_address**|**nvarchar(48)**|可用性组侦听器的已配置虚拟 IP 地址。 返回一个 IPv4 或 IPv6 地址。|  
@@ -46,12 +45,12 @@ ms.locfileid: "47814716"
 |**network_subnet_ip**|**nvarchar(48)**|指定 IP 地址所属子网的网络子网 IP 地址。|  
 |**network_subnet_prefix_length**|**int**|IP 地址所属子网的网络子网前缀长度。|  
 |**network_subnet_ipv4_mask**|**nvarchar(45)**|IP 地址所属子网的网络子网掩码。 **network_subnet_ipv4_mask** WITH DHCP 子句中指定的 DHCP < network_subnet_option > 选项[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句。<br /><br /> NULL = IPv6 子网|  
-|State|**tinyint**|WSFC 群集中 IP 资源的“联机”/“脱机”状态，可为下列值之一：<br /><br /> 1 = 联机。 IP 资源处于联机状态。<br /><br /> 0 = 脱机。 IP 资源处于脱机状态。<br /><br /> 2 = 联机挂起。 IP 资源处于脱机状态，但正在联机。<br /><br /> 3 = 失败。 IP 资源尝试重新联机，但失败。|  
+|**State**|**tinyint**|WSFC 群集中 IP 资源的“联机”/“脱机”状态，可为下列值之一：<br /><br /> 1 = 联机。 IP 资源处于联机状态。<br /><br /> 0 = 脱机。 IP 资源处于脱机状态。<br /><br /> 2 = 联机挂起。 IP 资源处于脱机状态，但正在联机。<br /><br /> 3 = 失败。 IP 资源尝试重新联机，但失败。|  
 |**state_desc**|**nvarchar(60)**|说明**状态**、 一个的：<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

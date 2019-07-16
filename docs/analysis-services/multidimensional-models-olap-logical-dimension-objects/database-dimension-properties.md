@@ -1,5 +1,5 @@
 ---
-title: 数据库维度属性 |Microsoft 文档
+title: 数据库维度属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c7944ab279f2b036a3acd7cf75bd775d0ec6d6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180775"
 ---
 # <a name="database-dimension-properties"></a>数据库维度属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，由基于各种的维度属性的设置和上的属性或维度包含的层次结构的维度的元数据定义维度的特征。 下表说明了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度属性。  
+  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，维度特征基于各种维度属性的设置和属性或层次结构所包含的维度的维度的元数据由定义。 下表说明了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度属性。  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |**AttributeAllMemberName**|指定维度中属性的“全部”成员的名称。|  
 |**排序规则**|确定维度使用的排序规则。|  
 |**CurrentStorageMode**|包含维度的当前存储模式。|  
 |**DependsOnDimension**|包含维度所依赖的其他维度的 ID（如果有的话）。|  
-|**Description**|包含维度的说明。|  
+|**说明**|包含维度的说明。|  
 |**ErrorConfiguration**|可配置的错误处理设置，用于处理重复键、未知键、错误限制以及检测到错误执行的操作、错误日志文件和空键处理。|  
 |**ID**|包含维度的唯一标识符 (ID)。|  
 |**语言**|指定维度的默认语言。|  
@@ -45,12 +45,12 @@ ms.locfileid: "34021504"
 |**WriteEnabled**|指示维度写回是否可用（视安全权限而定）。|  
   
 > [!NOTE]  
->  有关使用 null 值和其他数据完整性问题时设置值 ErrorConfiguration 和 UnknownMember 属性的详细信息，请参阅[中 Analysis Services 2005 中处理数据完整性问题](http://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  有关处理 null 值和其他数据完整性问题时设置 ErrorConfiguration 和 UnknownMember 属性的值的详细信息，请参阅[在 Analysis Services 2005 中处理数据完整性问题](http://go.microsoft.com/fwlink/?LinkId=81891)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [用户层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [维度 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

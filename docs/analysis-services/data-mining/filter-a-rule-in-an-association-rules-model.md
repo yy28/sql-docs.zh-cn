@@ -1,5 +1,5 @@
 ---
-title: 筛选器中关联的规则规则模型 |Microsoft 文档
+title: 筛选器规则模型中关联的规则 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28d3601b18f792b957627e63630806453d971110
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209991"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34014484"
   
 ### <a name="filter-a-rule-in-an-association-model"></a>筛选关联模型中的规则  
   
-1.  使用 **“关联规则查看器”** 打开挖掘模型。 若要在 SQL Server Management Studio 中执行此操作，右键单击模型名称，然后选择 **“浏览”**。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中执行此操作，请双击包含该模型的挖掘结构，然后单击“数据挖掘设计器”的“挖掘模型查看器”选项卡。  
+1.  使用 **“关联规则查看器”** 打开挖掘模型。 若要在 SQL Server Management Studio 中执行此操作，右键单击模型名称，然后选择 **“浏览”** 。 若要在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中执行此操作，请双击包含该模型的挖掘结构，然后单击“数据挖掘设计器”的“挖掘模型查看器”选项卡   。  
   
 2.  单击 **“关联规则查看器”** 的 **“规则”** 选项卡。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "34014484"
   
      **“筛选规则”** 文本框支持用 .NET 语言定义的正则表达式。 因此，可使用如下所示的表达式： `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`。 此表达式将返回特定项集，其中包括的属性具有以各种顺序显示的词语“Helmets”和“Fenders”。  
   
-4.  对于 **“最小概率”**，增大概率值以查看较少的规则，减小概率值以查看较多的规则。  
+4.  对于 **“最小概率”** ，增大概率值以查看较少的规则，减小概率值以查看较多的规则。  
   
-5.  对于 **“最低重要性”**，增大重要性的值以查看较少的规则，减小该值以查看较多的规则。  
+5.  对于 **“最低重要性”** ，增大重要性的值以查看较少的规则，减小该值以查看较多的规则。  
   
-6.  对于 **“显示”**，选择以下选项之一： **“显示属性名称和值”**、 **“仅显示属性名称”** 或 **“仅显示属性值”**。  
+6.  有关**显示**，选择以下选项之一：**显示属性名称和值**，**仅显示属性名称**，或**仅显示属性值**。  
   
-7.  对于 **“最大行数”**，增大该值以增加符合指定条件的规则的总数，减小该值以限制返回的规则数。 规则按概率排序，所以您可以消除符合指定的概率或重要性条件的其他规则。  
+7.  对于 **“最大行数”** ，增大该值以增加符合指定条件的规则的总数，减小该值以限制返回的规则数。 规则按概率排序，所以您可以消除符合指定的概率或重要性条件的其他规则。  
   
 8.  选中或取消选中 **“显示长名称”** 复选框以切换规则名称的显示方式。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "34014484"
   
 -   [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 关联规则查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第 3 课： 生成市场篮方案 & #40; 数据挖掘中级教程 & #41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
+ [第 3 课：生成市场篮方案&#40;数据挖掘中级教程&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

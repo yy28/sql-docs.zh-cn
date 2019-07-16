@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ad9106bb9cde64953643e86bf81e72684858bd65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fffa30d0e252392c41cee34c1875b12b5b7a53b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907492"
 ---
 # <a name="msdbmsmap-transact-sql"></a>MSdbms_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdbms_map**表包含源数据类型信息，以及源和目标 DBMS 对的默认目标数据类型信息的链接。 此表存储中**msdb**数据库和用于异类发布。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|唯一标识数据类型映射。|  
 |**src_dbms_id**|**int**|通过指定标识源 DBMS 及其**dbms_id**中[MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md)表。|  

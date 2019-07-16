@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209599"
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "50145612"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>修改结构属性以创建测试数据集  
  如果您在创建和处理挖掘结构之后又决定取消一个测试数据集，可以修改挖掘结构的属性。 若要更改数据的分区方式，请编辑下列属性：  
   
-|“属性”|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|指定要包括在测试集内的最大事例数。|  
 |**HoldoutMaxPercent**|指定测试集内要包括的事例数在整个数据集中所占的百分比。 如果没有数据集，则将指定 0。|  
@@ -102,7 +102,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |提供用于创建维持集的 DMX 语法。|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
 |在定型集和测试集中检索有关事例的信息。|[数据挖掘架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [数据挖掘架构行集 (SSA)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘概念](../../analysis-services/data-mining/data-mining-concepts.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   

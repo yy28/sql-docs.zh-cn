@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196399"
 ---
 # <a name="modify-views"></a>修改视图
   视图定义之后，您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改其定义而无需删除并重新创建视图。  
@@ -60,17 +60,17 @@ ms.locfileid: "54135077"
   
 1.  在 **“对象资源管理器”** 中，单击视图所在的数据库旁边的加号，然后单击 **“视图”** 文件夹旁边的加号。  
   
-2.  右键单击要修改的视图，然后选择“设计”。  
+2.  右键单击要修改的视图，然后选择“设计”  。  
   
 3.  在查询设计器的关系图窗格中，通过以下一种或多种方式更改视图：  
   
     1.  选中或清除要添加或删除的任何元素的复选框。  
   
-    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列。  
+    2.  在关系图窗格中右键单击，选择“添加表…”，然后从“添加表”对话框选择要添加到视图的其他列   。  
   
-    3.  右键单击要删除的表的标题栏，然后选择“删除”。  
+    3.  右键单击要删除的表的标题栏，然后选择“删除”  。  
   
-4.  在“文件”菜单上，单击“保存”以保存_视图名称_。  
+4.  在“文件”  菜单上，单击“保存”  以保存_视图名称_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,9 +78,9 @@ ms.locfileid: "54135077"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例首先创建一个视图，然后使用 ALTER VIEW 修改该视图。 将一个 WHERE 子句添加到该视图定义。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例首先创建一个视图，然后使用 ALTER VIEW 修改该视图。 将一个 WHERE 子句添加到该视图定义。  
   
     ```  
     USE AdventureWorks2012 ;  

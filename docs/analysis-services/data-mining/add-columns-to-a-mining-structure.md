@@ -1,5 +1,5 @@
 ---
-title: 将列添加到挖掘结构 |Microsoft 文档
+title: 将列添加到挖掘结构 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4c09d4b263dc4e4274888f6cbd8bf1f27103dd8b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210216"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>向挖掘结构中添加列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34016284"
   
 1.  在数据挖掘设计器中选择 **“挖掘结构”** 选项卡。  
   
-2.  右键单击挖掘结构并选择“添加列”。  
+2.  右键单击挖掘结构并选择“添加列”  。  
   
      **“选择列”** 对话框将打开。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34016284"
 > [!NOTE]  
 >  如果您添加的列已经存在，则结构中将会包含一个副本，并在其名称后追加“1”。 在挖掘结构列的 **“名称”** 属性中键入新名称，可以更改已复制列的名称，使之更具说明性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

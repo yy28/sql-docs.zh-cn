@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901354"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 驱动程序管理器生成的事件
 > [!IMPORTANT]  
@@ -27,9 +26,9 @@ ms.locfileid: "63061635"
   
  单击启动 Visual Studio 分析器按钮时注册由 ODBC 驱动程序管理器生成的事件。 该工具本身提供了系统定义的事件和创建自定义事件的能力。 有关事件的详细信息，请参阅*Visual Studio 分析器参考指南*Visual Studio 系列产品文档中。  
   
-|Visual Studio Analyzer 事件|Description|  
+|Visual Studio Analyzer 事件|描述|  
 |----------------------------------|-----------------|  
-|**Call**|生成 ODBC API 的每个条目。|  
+|**调用**|生成 ODBC API 的每个条目。|  
 |**ReturnException**|生成每个 ODBC API 返回 SQL_ERROR 返回代码时。|  
 |**ReturnNormal**|生成每个 ODBC API 返回时，如果返回代码不是 SQL_ERROR。|  
 |**连接开始**|指示连接已开始;ODBC 驱动程序管理器调用驱动程序的连接的 Api 时生成。|  

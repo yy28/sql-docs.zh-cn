@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7bf6396ebe7cfe18aa7d1005d39095a35713e10b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208801"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中生成子多维数据集 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -36,13 +36,13 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
 ### <a name="what-a-subcube-contains"></a>子多维数据集包含的内容  
  尽管 CREATE SUBCUBE 语句使用起来非常简单，但是该语句本身并不明确显示构成子多维数据集的所有成员。 在定义子多维数据集时，需遵循下列规则：  
   
--   如果包含某个层次结构的“(全部)”成员，则包含该层次结构的每个成员。  
+-   如果包含某个层次结构的“(全部)”  成员，则包含该层次结构的每个成员。  
   
 -   如果包含任一成员，则包含该成员的祖先和后代。  
   
 -   如果包含某个级别的每个成员，则包含该层次结构的所有成员。 如果其他层次结构的成员不与此级别的成员共存，它们将被排除（例如，不对称的层次结构，如不包含客户的城市）。  
   
--   子多维数据集将始终包含多维数据集的每个“(全部)”成员。  
+-   子多维数据集将始终包含多维数据集的每个“(全部)”  成员。  
   
  另外，子多维数据集中的聚合数据将进行可视求和。 例如，一个子多维数据集包含 `USA`、 `WA`和 `OR`。 `USA` 的聚合值将是 `{WA,OR}` 的和，因为该子多维数据集只定义了 `WA` 和 `OR` 这两个州。 所有其他州将被忽略。  
   

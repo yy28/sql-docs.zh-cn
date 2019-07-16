@@ -1,5 +1,5 @@
 ---
-title: 数据源视图 (Analysis Services) 中定义命名的查询 |Microsoft 文档
+title: 数据源视图 (Analysis Services) 中定义命名的查询 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bee48d9927e9caaea28fd201480e507e5cfa7d9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208978"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名查询 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34026224"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中添加命名查询的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
   
-3.  在“表”或“关系图”窗格中，右键单击空白区域，再单击“新建命名查询”。  
+3.  在“表”  或“关系图”  窗格中，右键单击空白区域，再单击“新建命名查询”  。  
   
 4.  在 **“创建命名查询”** 对话框中，执行下列操作：  
   
@@ -54,10 +54,10 @@ ms.locfileid: "34026224"
     > [!NOTE]  
     >  查询生成用户界面 (UI) 取决于数据源。 您所得到的不是图形 UI，而是基于文本的一般 UI。 您可以使用这些不同的 UI 来实现同样的功能，但必须以不同的方式来操作。 有关详细信息，请参阅[“创建或编辑命名查询”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941)。  
   
-5.  单击 **“确定”**。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
+5.  单击 **“确定”** 。 一个显示两个重叠表的图标出现在表格表头上，指示此表已被一个命名查询替代。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在数据源视图 & #40; 中定义命名的计算Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名计算 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

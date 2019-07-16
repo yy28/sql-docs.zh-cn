@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67b4523b871e386fed62388a464a42ee6e9e10bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002562"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>参数  
  [ @objname=] '*对象*  
- 当前数据库中存储过程、触发器、表、视图或用户定义函数的限定或未限定的名称。 *对象*是**nvarchar(776)**，无默认值。 如果*对象*是存储过程、 触发器或用户定义函数，该存储过程，触发器的名称或函数将运行在下一步时重新编译。 如果*对象*是表或视图中，所有存储过程、 触发器名称或引用表或视图的用户定义函数将它们运行在下一步时重新编译。  
+ 当前数据库中存储过程、触发器、表、视图或用户定义函数的限定或未限定的名称。 *对象*是**nvarchar(776)** ，无默认值。 如果*对象*是存储过程、 触发器或用户定义函数，该存储过程，触发器的名称或函数将运行在下一步时重新编译。 如果*对象*是表或视图中，所有存储过程、 触发器名称或引用表或视图的用户定义函数将它们运行在下一步时重新编译。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  
@@ -55,7 +54,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在便利时自动对存储过程、触发器和用户定义函数进行重新编译。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有对指定对象的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
