@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bc15042a0f8f1cf08abadb0ee4a5fe1d5f36631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920789"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 接口
 **ADOStreamConstruction**界面用于构造 ADO **Stream**从 OLE DB 对象**IStream** C 中的对象 /C++应用程序。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 |||  
 |-|-|  
@@ -35,7 +34,7 @@ ms.locfileid: "66696567"
 ## <a name="methods"></a>方法  
  无。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  无。  
   
 ## <a name="remarks"></a>备注  

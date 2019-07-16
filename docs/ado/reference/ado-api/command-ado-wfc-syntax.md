@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 857b5c636cf3d86e2996284c877736114495daf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919829"
 ---
 # <a name="command-ado---wfc-syntax"></a>命令（ADO - WFC 语法）
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
   
 ### <a name="constructor"></a>构造函数  
   
@@ -47,7 +46,7 @@ public int executeUpdate()
   
  **ExecuteUpdate**方法是特殊的大小写方法，调用基础 ADO**执行**带有某些参数的方法。 **ExecuteUpdate**方法不支持的返回**记录集**对象，因此**执行**方法的*选项*参数是使用修改**AdoEnums.ExecuteOptions.NORECORDS**。 之后**执行**方法完成，其更新*RecordsAffected*参数传递回**executeUpdate**方法，最后返回作为**int**。  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 public com.ms.wfc.data.Connection getActiveConnection()  

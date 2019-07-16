@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9fb54ab264b6f1a247407d5bfdecdbdf6c4dc16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931445"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>读取、 ReadText、 写入和 WriteText 方法示例 (VB)
 此示例演示如何文本框中的内容读取到这两个文本[Stream](../../../ado/reference/ado-api/stream-object-ado.md)和二进制**Stream**。 包括其他属性和方法所示[位置](../../../ado/reference/ado-api/position-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)，[字符集](../../../ado/reference/ado-api/charset-property-ado.md)，以及[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 859bf3f53051a500e86742cb681885b8067f6a0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917363"
 ---
 # <a name="record-object-ado"></a>记录对象 (ADO)
 表示从行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或数据提供程序或返回由半结构化的数据提供程序，如文件或目录的对象。  

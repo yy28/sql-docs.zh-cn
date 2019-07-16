@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6b7a039fe3053e5ab55f7485fde2c426e3ff8b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd291d1615920c3b576386b3f026a4b4d7f29dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901676"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>创建自定义工作流 - XML 说明
 
@@ -66,7 +65,7 @@ ms.locfileid: "65488327"
   
  下表描述此 XML 所包含的一些标记：  
   
-|标记|Description|  
+|标记|描述|  
 |---------|-----------------|  
 |\<Type>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集  。|  
 |\<SendData>|由 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“消息中包括成员数据”复选框控制的一个布尔值  。 值 1 表示发送 \<MemberData> 部分；否则表示未发送 \<MemberData> 部分。|  

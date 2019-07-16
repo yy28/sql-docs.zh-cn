@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019115"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>将数据从 SQL 转换为 C 数据类型
 当应用程序调用**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驱动程序从数据源检索数据。 如果有必要，它将数据从转换中的驱动程序在检索到指定的数据类型的数据类型*TargetType*中的参数**SQLBindCol**或**SQLGetData。** 最后，它将数据存储在指向的位置*TargetValuePtr*中的参数**SQLBindCol**或**SQLGetData** （和 ARD SQL_DESC_DATA_PTR 字段）。  
@@ -55,9 +54,9 @@ ms.locfileid: "67793199"
   
 -   [从 SQL 到 c:字符](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [从 SQL 到 c:Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [从 SQL 到 c:数值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [从 SQL 到 c:Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [从 SQL 到 c:位](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
 -   [从 SQL 到 c:二进制文件](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   

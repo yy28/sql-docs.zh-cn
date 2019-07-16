@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923417"
 ---
 # <a name="working-with-recordsets"></a>使用记录集
 **记录集**对象有内置功能，可用于重新排列结果集中的数据的顺序，根据你提供的条件的特定记录中搜索并且甚至优化那些使用索引的搜索操作。 可使用这些功能是否取决于提供程序以及在某些情况下-例如[索引](../../../ado/reference/ado-api/index-property.md)属性的数据源本身的结构。  
@@ -112,7 +111,7 @@ ms.locfileid: "66704440"
 ### <a name="filtering-with-a-constant"></a>使用一个常量进行筛选  
  以下常量是可用于筛选**记录集**。  
   
-|常量|Description|  
+|常量|描述|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|用于查看仅受影响的最后一个的记录的筛选器**删除**，**重新同步**， **UpdateBatch**，或者**CancelBatch**调用。|  
 |**adFilterConflictingRecords**|用于查看失败的最后的批处理更新的记录的筛选器。|  

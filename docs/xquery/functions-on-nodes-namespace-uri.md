@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929945"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>基于节点的函数 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  由于指定的 QName 没有命名空间 URI 部分而只有本地名称部分，因此结果是长度为零的字符串。  
   
- 下面的查询指定类型的 instructions **xml**列。 表达式 (`namespace-uri(/AWMI:root[1]/AWMI:Location[1])`) 将返回 <`root`> 元素的第一个 <`Location`> 子元素的命名空间 URI。  
+ 下面的查询指定类型的 instructions **xml**列。 表达式中， `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`，返回的命名空间 URI 的第一个 <`Location`> 元素子级的 <`root`> 元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -99,7 +98,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 可以将以前查询中的命名空间 URI 更改为 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 然后，检索其展开的 QName 的命名空间 URI 部分为 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` 的 <`ProductDescription`> 元素的所有子元素节点。  
+ 可以将以前查询中的命名空间 URI 更改为 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 你随后会收到的所有元素节点子级 <`ProductDescription`> 元素展开的 QName 的命名空间 URI 部分是`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。  
   
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  

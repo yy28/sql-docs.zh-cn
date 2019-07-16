@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207957"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的服务器属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,9 +34,9 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-2. 在对象资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再单击“属性”。 随即出现“常规”页，显示更为常用的属性。  
+2. 在对象资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，再单击  “属性”。 随即出现“常规”页，显示更为常用的属性。  
 
-3.  若要查看更多属性，请选中该页底部的“显示高级(全部)属性”复选框。  
+3.  若要查看更多属性，请选中该页底部的  “显示高级(全部)属性”复选框。  
   
      只有表格模式服务器和多维模式服务器才支持修改服务器属性。 如果安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，除非 Microsoft 支持另有说明，否则请始终使用默认值。  
   
@@ -62,7 +62,7 @@ SQL Server Management Studio 中的“属性”页显示最可能需要修改的
   
  以下主题介绍了各种 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置属性：  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[常规属性](../../analysis-services/server-properties/general-properties.md)|常规属性既是基本属性，又是高级属性，包括定义数据目录、备份目录和其他服务器行为的属性。|  
 |[数据挖掘属性](../../analysis-services/server-properties/data-mining-properties.md)|数据挖掘属性控制着启用和禁用哪些数据挖掘算法。 默认情况下，启用所有算法。| 

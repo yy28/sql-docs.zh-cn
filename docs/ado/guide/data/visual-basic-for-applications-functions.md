@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923464"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
 以下 Visual Basic for Applications 函数可在数据整理 CALC 表达式：  
@@ -33,11 +32,11 @@ ms.locfileid: "66699704"
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|错误|Error$|Exp|Fix|格式|Format$|  
+|Error|Error$|Exp|Fix|格式|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
 |smallint|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
-|LeftB|Left$|LeftB$|Len|日志|LTrim|  
+|LeftB|Left$|后，leftb 将 $|Len|日志|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
 |现在|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Rate|RGB|Right|  

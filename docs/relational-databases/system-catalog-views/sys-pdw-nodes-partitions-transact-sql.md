@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e70d11a9161461a01189bbfe69e1959eed124543
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 00ce680a0648b7641249d5fba6b7d0fa493deebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001144"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含所有表和索引中的大多数类型的每个分区行[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]数据库。 所有表和索引都包含至少一个分区，无论它们显式分区。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |partition_id|`bigint`|分区的 id。 是在数据库中唯一。|  
 |object_id|`int`|此分区所属的对象的 id。 每个表或视图都至少包含一个分区。|  

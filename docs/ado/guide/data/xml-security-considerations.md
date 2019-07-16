@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa0e9e2df1e8ba3f44b10e662d25e536ac7962f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923359"
 ---
 # <a name="xml-security-considerations"></a>XML 安全注意事项
 ADO 保存和打开记录集对象上的方法不考虑安全操作，在 Internet Explorer 中运行。 因此，如果正在运行的应用程序或浏览器承载的控件中的脚本代码中使用这些方法，在浏览器的安全配置将会影响其行为。  

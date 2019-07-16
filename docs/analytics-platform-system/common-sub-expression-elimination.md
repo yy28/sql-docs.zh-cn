@@ -2,7 +2,6 @@
 title: 常见子表达式分析平台系统中所述 |Microsoft Docs
 description: 在分析平台系统 CU7.3 中引入的显示示例查询改进
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2dd02bed55f3d3781428eae3ec4bc2d0655819ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961316"
 ---
 # <a name="common-subexpression-elimination-explained"></a>所述的公用子表达式消除
 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d1ed05a99d46f523f2e7d119f097c5f5161d4ba2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 47bfaa2ceb0885379bd5633f0160d2a9b24cf3c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036031"
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +44,22 @@ srvproc
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc  
+ srvproc   
  指向作为特定客户端连接句柄（在这里为接收语言请求的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>Remarks  
- 对于发送到客户端的每行调用一次 srv_sendrow 函数。 在使用 srv_sendmsg、srv_status 或 srv_senddone 发送任何消息、状态值或完成状态之前，必须将所有行发送到客户端。  
+ 对于发送到客户端的每行调用一次 srv_sendrow 函数  。 在使用 srv_sendmsg、srv_status 或 srv_senddone 发送任何消息、状态值或完成状态之前，必须将所有行发送到客户端    。  
   
- 如果发送尚未使用 srv_describe 定义其所有列的某行，则会导致扩展存储过程 API 应用程序引发信息性错误消息并向客户端返回 FAIL。 在此情况下，将不发送该行。  
+ 如果发送尚未使用 srv_describe 定义其所有列的某行，则会导致扩展存储过程 API 应用程序引发信息性错误消息并向客户端返回 FAIL  。 在此情况下，将不发送该行。  
   
 > [!NOTE]  
->  扩展存储过程 API 不支持将计算行发送到客户端。 此外，如果将包含 ntext、text 或 image 数据的行发送到客户端，则不会包含文本指针和文本时间戳。  
+>  扩展存储过程 API 不支持将计算行发送到客户端。 此外，如果将包含 ntext、text 或 image 数据的行发送到客户端，则不会包含文本指针和文本时间戳    。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [srv_describe（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  

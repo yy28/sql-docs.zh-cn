@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact-SQL) | Microsoft Docs
+title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d143889672754be353b5868e955841d9e2869bc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902920"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @database = ] 'database_name'` 是为其返回属性的数据库名称。 *database_name*是**sysname**，默认值为**%** 对于与分发服务器，并且在其上关联的所有数据库用户拥有的权限。  
+`[ @database = ] 'database_name'` 是为其返回属性的数据库名称。 *database_name*是**sysname**，默认值为 **%** 对于与分发服务器，并且在其上关联的所有数据库用户拥有的权限。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|分发数据库的名称。|  
+|**name**|**sysname**|分发数据库的名称。|  
 |**min_distretention**|**int**|事务被删除前的最小保持期（以小时为单位）。|  
 |**max_distretention**|**int**|事务被删除前的最大保持期（以小时为单位）。|  
 |**历史记录保持期**|**int**|要保留历史记录的小时数。|  
@@ -70,7 +69,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

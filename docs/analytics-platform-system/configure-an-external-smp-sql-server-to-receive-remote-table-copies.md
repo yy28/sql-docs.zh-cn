@@ -2,19 +2,18 @@
 title: SQL Server 配置为接收远程表副本的并行数据仓库 |Microsoft Docs
 description: 介绍如何配置外部 SMP SQL Server 实例以从并行数据仓库接收远程表副本。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ad1ee005f5d28e7477fab7c1abe7ed4074e233d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961293"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>配置外部 SMP SQL Server 以接收远程表副本的并行数据仓库
 介绍如何配置外部的 SQL Server 实例，以从并行数据仓库接收远程表副本。  

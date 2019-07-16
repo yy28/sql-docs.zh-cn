@@ -7,13 +7,12 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 32f762de13a844f12144e89f4742409c3afcbab0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961925"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 课：使用 R 和 T-SQL 创建数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "58511964"
 
 ## <a name="about-feature-engineering"></a>有关功能设计
 
-几轮数据探索后，已从数据收集了一些见解，现可以继续“特征工程”。 从原始数据创建有意义的功能的此过程是在创建分析模型的关键步骤。
+几轮数据探索后，已从数据收集了一些见解，现可以继续“特征工程”  。 从原始数据创建有意义的功能的此过程是在创建分析模型的关键步骤。
 
 在此数据集，距离值根据报告的计量距离，并不一定表示地理距离或行程的实际距离。 因此，需要使用源 NYC Taxi 数据集中提供的坐标计算接客点和落客点之间的直接距离。 可通过使用自定义 [函数中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine formula [!INCLUDE[tsql](../../includes/tsql-md.md)] （半正矢公式）实现。
 
@@ -42,9 +41,9 @@ ms.locfileid: "58511964"
 
 该函数_fnCalculateDistance_应已下载并注册[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为本教程的准备工作的一部分。 花点时间查看代码。
   
-1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依次展开“可编程性”、“函数”及“标量值函数”。   
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依次展开“可编程性”  、“函数”  及“标量值函数”  。   
 
-2. 右键单击“fnCalculateDistance”，然后选择“修改”，以在新查询窗口中打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。
+2. 右键单击“fnCalculateDistance”  ，然后选择“修改”  ，以在新查询窗口中打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。
   
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  

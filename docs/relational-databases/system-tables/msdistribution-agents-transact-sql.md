@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907415"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistribution_agents**表为本地分发服务器上运行每个分发代理包含一行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|分发代理的 ID。|  
-|**名称**|**nvarchar(100)**|分发代理的名称。|  
+|**name**|**nvarchar(100)**|分发代理的名称。|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
@@ -50,7 +49,7 @@ ms.locfileid: "62817127"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|创建分发或合并代理时的日期时间。|  
-|**queue_id**|**sysname**|用于查找已排队的更新订阅操作所在队列的标识符。 对非排队订阅，该值为 NULL。 对于基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列的发布，该值为 GUID，它唯一标识用于订阅的队列。 对于基于 SQL Server 的队列发布，该列包含值**SQL**。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已被弃用，不再受支持。|  
+|**queue_id**|**sysname**|用于查找已排队的更新订阅操作所在队列的标识符。 对非排队订阅，该值为 NULL。 对于基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列的发布，该值为 GUID，它唯一标识用于订阅的队列。 对于基于 SQL Server 的队列发布，该列包含值**SQL**。<br /><br /> 注意:使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已被弃用，不再受支持。|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|指示是否可以远程激活代理。<br /><br /> **0**指定不能远程激活代理。<br /><br /> **1**指定远程以及在指定的远程计算机上，将激活代理*offload_server*属性。|  
 |**offload_server**|**sysname**|用于远程代理激活的服务器网络名称。|  

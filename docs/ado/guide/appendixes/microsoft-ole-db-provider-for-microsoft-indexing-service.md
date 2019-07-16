@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926667"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服务概述
 Microsoft OLE DB 访问接口用于 Microsoft 索引服务提供编程的只读访问，以文件系统和 Web 数据由 Microsoft 索引服务编制索引。 ADO 应用程序可以发出 SQL 查询来检索内容和文件属性信息。
@@ -45,7 +44,7 @@ MSIDXS
 
  该字符串包含这些关键字：
 
-|关键字|Description|
+|关键字|描述|
 |-------------|-----------------|
 |**提供程序**|指定用于 Microsoft 索引服务的 OLE DB 访问接口。 这通常是连接字符串中指定的唯一一个关键字。|
 |**数据源**|指定的索引服务目录名称。 如果未指定此关键字，则使用默认系统目录。|
@@ -69,24 +68,24 @@ MSIDXS
 
 |属性|可用性|
 |--------------|------------------|
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|read/write|
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|read/write|
+|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|
+|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|只读|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|
-|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)*|read/write|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|read/write|
+|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)*|读/写|
+|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|始终**adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|read/write|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|read/write|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|read/write|
+|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|只读|
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|read/write|
+|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|
-|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|read/write|
+|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|
 |[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|
 |[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|
 

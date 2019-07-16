@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e3035e8614dbe57d131ee77dc77fb85605499c15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918286"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator 属性 (ADO)
 指示要用作文本中的行分隔符的二进制字符[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  

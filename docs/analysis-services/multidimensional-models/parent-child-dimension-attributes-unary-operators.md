@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208590"
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>父子维度特性 - 一元运算符
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52539742"
   
  父属性的 **UnaryOperatorColumn** 属性的默认设置是“(none)”，它表示禁用自定义汇总运算符。 下表列出了一元运算符，并说明了将它们应用于某个级别时它们的行为。  
   
-|一元运算符|Description|  
+|一元运算符|描述|  
 |--------------------|-----------------|  
 |+（加号）|成员的值将添加到在该成员之前发生的同级成员的聚合值中。 如果没有为属性定义一元运算符列，那么，这是默认运算符。|  
 |-（负号）|从成员之前发生的同级成员的聚合值中减去该成员的值。|  
@@ -34,7 +34,7 @@ ms.locfileid: "52539742"
 |/（斜杠）|成员的值除以在该成员之前发生的同级成员的聚合值。|  
 |~（代字号）|忽略成员的值。|  
   
- 空值和在表中没找到的其他值将被视为使用加号 (+) 一元运算符。 因为没有运算符优先级，所以成员在一元运算符列存储的顺序决定了求值的顺序。 若要更改求值的顺序，请创建新的特性，并将其“类型”  属性设置为“顺序” ，然后在其“源列”  属性中分配对应于求值顺序的顺序号。 还必须按该属性对属性的成员排序。 有关如何使用商业智能向导对属性成员排序的信息，请参阅 [定义维度的排序](../../analysis-services/multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)。  
+ 空值和在表中没找到的其他值将被视为使用加号 (+) 一元运算符。 因为没有运算符优先级，所以成员在一元运算符列存储的顺序决定了求值的顺序。 若要更改求值的顺序，请创建新的特性，并将其“类型”  属性设置为“顺序”  ，然后在其“源列”  属性中分配对应于求值顺序的顺序号。 还必须按该属性对属性的成员排序。 有关如何使用商业智能向导对属性成员排序的信息，请参阅 [定义维度的排序](../../analysis-services/multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)。  
   
  可以使用 **UnaryOperatorColumn** 属性指定一个命名计算，以返回一元运算符作为该属性的所有成员的文字字符。 此操作就像在命名计算中键入文字字符（例如， `'*'` ）一样简单。 这会对属性的所有成员用乘法运算符（星号 (*)）来替换默认的运算符（加号 (+)）。 有关详细信息，请参阅[在数据源视图中定义命名计算 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)。  
   

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89d3859ad7f9f8f32dfc1cddd1ed805aa466867
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005294"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>记录生成过程 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -159,7 +158,7 @@ ms.locfileid: "56038418"
   
 -   当架构满足"包容"规则 (例如，与客户和订单相关联的所有数据在关联的范围内都定义 **\<客户 >** 和 **\<顺序 >** 元素节点)，大容量加载成功。  
   
--   在描述 **\<客户 >** 元素，以适当顺序指定了元素及其子项目。 在这种情况下，  **\<CustomerID >** 子元素指定之前 **\<顺序 >** 子元素。 这意味着，在输入 XML 数据文件中，  **\<CustomerID >** 元素的值是可用作外键时值 **\<顺序 >** 元素进入作用域。 首先指定键属性，此即“键排序规则”。  
+-   在描述 **\<客户 >** 元素，以适当顺序指定了元素及其子项目。 在这种情况下， **\<CustomerID >** 子元素指定之前 **\<顺序 >** 子元素。 这意味着，在输入 XML 数据文件中， **\<CustomerID >** 元素的值是可用作外键时值 **\<顺序 >** 元素进入作用域。 首先指定键属性，此即“键排序规则”。  
   
      如果指定 **\<CustomerID >** 子元素的后面 **\<顺序 >** 子元素，值不可用 **\<顺序 >** 元素进入作用域。 当 **\</o >** 然后读取结束标记、 CustOrder 表的记录视为完成并使用 NULL 值作为 CustomerID 列，这不是所需的结果在 CustOrder 表中插入。  
   

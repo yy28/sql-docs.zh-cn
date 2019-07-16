@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 944eac31-5691-432b-b9f5-f1e11c05191f
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 57b6bd92ded85345dc1b716df2fa395df17fff02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06f905b4750801080c6b645601261bfe96f1ee0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899433"
 ---
 # <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存所有请求或查询的执行过程中遇到的错误有关的信息。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|此视图的键。<br /><br /> 与错误关联的唯一数字 id。|跨系统中的所有查询错误是唯一的。|  
 |源 (source)|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
@@ -36,7 +35,7 @@ ms.locfileid: "62690512"
 |request_id|**nvarchar(32)**|如果任何涉及请求的标识符。 请求 id 的其他信息，请参阅[sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。||  
 |spid|**int**|如果任何涉及 SQL Server 会话的 spid。||  
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|详细信息|**nvarchar(4000)**|保存完整的错误文本说明。||  
+|details|**nvarchar(4000)**|保存完整的错误文本说明。||  
   
  此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题。  
   

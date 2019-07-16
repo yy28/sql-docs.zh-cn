@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246d894ff38cc0dd74e96bb0fcbdb7b170b51d53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924020"
 ---
 # <a name="streams-and-persistence"></a>流和暂留
 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象[保存](../../../ado/reference/ado-api/save-method.md)方法存储，或*仍然存在*即**记录集**在文件中，和[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法还原**记录集**从该文件。  

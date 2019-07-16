@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2689a75ed48e2affbe0c34bccb96014447cd7fae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906709"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>创建链接属性 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "66354368"
 > [!NOTE]  
 >  当用户输入链接属性的值时，该字符串必须以 https:// 开头，否则将显示错误  。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -42,12 +41,12 @@ ms.locfileid: "66354368"
 ## <a name="attribute-information"></a>属性信息  
  对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表对这些列进行了说明。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“登录属性”|属性状态。<br /><br /> 单击保存后，系统显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示属性正在更新。<br /><br /> 如果创建或编辑属性时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
-|“属性”|属性名称。|  
+|名称|属性名称。|  
 |显示名称|属性显示名称。|  
-|Description|属性说明。|  
+|描述|属性说明。|  
 |显示像素宽度|属性宽度。|  
 |类型和属性|属性的类型和数据类型信息。|  
 |启用更改跟踪|指定是否启用该属性以进行更改跟踪，并在括号中显示组号。|  

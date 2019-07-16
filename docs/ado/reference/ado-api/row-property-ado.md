@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67978362c7e55357c3cdbfea1c8590354277416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 134f5fe05f89d6c8662a68f9f782f460c4b5f0aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917116"
 ---
 # <a name="row-property-ado"></a>Row 属性 (ADO)
 获取或设置 OLE DB**行**对象或从[ADORecordConstruction 接口](../../../ado/reference/ado-api/adorecordconstruction-interface.md)对象。 当你使用**put_Row**若要设置**行**对象，一行转换为 ADO**记录**对象。  

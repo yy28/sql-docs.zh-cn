@@ -1,5 +1,5 @@
 ---
-title: RecordStatusEnum | Microsoft Docs
+title: RecordStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c57878b73c3c6a20f8dc0a8abd422c12a0446a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931287"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)的批更新和其他大容量操作的记录。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|指示由于操作被取消而不保存记录。|  
 |**adRecCantRelease**|0x400|指示由于现有记录已被锁定，而不保存新记录。|  

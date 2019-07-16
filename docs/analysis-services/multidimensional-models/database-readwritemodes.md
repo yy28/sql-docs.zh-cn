@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178851"
 ---
 # <a name="database-readwritemodes"></a>数据库 ReadWriteMode
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "50147162"
   
 |只读模式|受限操作|  
 |-------------------|---------------------------|  
-|XML/A 命令<br /><br /> <br /><br /> 注意：如果执行下列命令之一，则产生错误。|**创建**<br /><br /> **Alter**<br /><br /> **删除**<br /><br /> **处理**<br /><br /> **MergePartitions**<br /><br /> **Query**<br /><br /> **CommitTransaction**<br /><br /> **还原**<br /><br /> **同步**<br /><br /> **插入**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 注意：在设置为只读的数据库中允许单元写回；但是，不能提交更改。|  
-|MDX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 注意：由于分组功能是使用 **CREATE SESSION CUBE** 命令在内部实现的，因此 Excel 用户不能在透视表中使用该功能。|  
-|DMX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
+|XML/A 命令<br /><br /> <br /><br /> 注意:在执行这些命令之一时，引发错误。|**创建**<br /><br /> **Alter**<br /><br /> **删除**<br /><br /> **处理**<br /><br /> **MergePartitions**<br /><br /> **Query**<br /><br /> **CommitTransaction**<br /><br /> **还原**<br /><br /> **同步**<br /><br /> **插入**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 注意:设置为只读的; 的数据库中允许单元写回但是，所做的更改无法提交。|  
+|MDX 语句<br /><br /> <br /><br /> 注意:在执行这些语句之一时，引发错误。|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 注意:Excel 用户不能使用数据透视表中的分组功能，因为该功能在内部实现的使用**CREATE SESSION CUBE**命令。|  
+|DMX 语句<br /><br /> <br /><br /> 注意:在执行这些语句之一时，引发错误。|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |后台操作|禁用将修改数据库的所有后台操作。 这包括迟缓处理和主动缓存。|  
   
 ## <a name="readwritemode-usage"></a>ReadWriteMode 用法  
@@ -42,7 +42,7 @@ ms.locfileid: "50147162"
 > [!NOTE]  
 >  可以通过只读数据库创建本地多维数据集。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

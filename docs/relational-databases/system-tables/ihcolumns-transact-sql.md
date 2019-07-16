@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5d05f2667b6f7196338b182f2b9cca1a84e7b6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990395"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "62744169"
   
 ## <a name="definition"></a>定义  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|标识已发布列。|  
 |**publishercolumn_id**|**int**|将已发布的列中存储的列元数据与相关联[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)系统表。|  
-|**名称**|**sysname**|指定列名称。|  
+|**name**|**sysname**|指定列名称。|  
 |**article_id**|**int**|标识列所属的项目。|  
 |**column_ordinal**|**int**|按顺序标识列。|  
 |**mapped_type**|**tinyint**|订阅服务器中目标列的列数据类型。|  
@@ -51,6 +50,6 @@ ms.locfileid: "62744169"
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns&#40;系统视图&#41; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
- [sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
+ [sysarticlecolumns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   
   

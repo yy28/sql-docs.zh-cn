@@ -10,19 +10,18 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959439"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入门：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据库
 
 在此快速入门中，您将使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 Azure SQL 数据库服务器。 然后，将运行 TRANSACT-SQL (T-SQL) 语句来创建和查询中其他使用的 TutorialDB 数据库[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 若要完成本快速入门教程，需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 数据库服务器。
 

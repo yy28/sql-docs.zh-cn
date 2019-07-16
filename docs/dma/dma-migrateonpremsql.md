@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058817"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在本地 SQL Server 升级到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server
 
@@ -34,7 +33,7 @@ ms.locfileid: "66794364"
 
 2. 将源和目标服务器类型设置为**SQL Server**如果要在本地 SQL Server 升级到更高版本的本地 SQL 服务器。
 
-3. 选择“创建”。
+3. 选择“创建”  。
 
    ![创建迁移项目](../dma/media/NewCreate.png)
 
@@ -50,7 +49,7 @@ ms.locfileid: "66794364"
 
 5. 建议通过选择加密连接**对连接进行加密**中**连接属性**部分。
 
-6. 单击“下一步” 。
+6. 单击“下一步”  。
 
    ![指定源和目标页](../dma/media/SourceTarget.png)
 
@@ -108,7 +107,7 @@ ms.locfileid: "66794364"
 
 2. 查看已保存的文件以获取有关登录名迁移的详细信息，然后验证所做的更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [数据迁移助手 (DMA)](../dma/dma-overview.md)
 - [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

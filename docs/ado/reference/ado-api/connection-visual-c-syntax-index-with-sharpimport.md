@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94dfbf207ab73edaf6612633b182dedcc7559abc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933514"
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>连接 (VisualC++使用 #import 语法索引)
 ## <a name="methods"></a>方法  
@@ -41,7 +40,7 @@ _RecordsetPtr OpenSchema( enum SchemaEnum Schema, const
     SchemaID = vtMissing );  
 ```  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 ```  
 _bstr_t GetConnectionString( );  

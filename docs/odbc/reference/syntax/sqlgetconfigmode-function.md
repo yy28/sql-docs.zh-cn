@@ -1,5 +1,5 @@
 ---
-title: SQLGetConfigMode Function | Microsoft Docs
+title: SQLGetConfigMode 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d9065d48e8b4af686e1ff64272fbe902e066cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14fb43015db9113262320f78f0bae53f8a168f95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044551"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 函数
 **符合性**  
@@ -58,7 +57,7 @@ BOOL SQLGetConfigMode(
 ## <a name="diagnostics"></a>诊断  
  当**SQLGetConfigMode**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  
   

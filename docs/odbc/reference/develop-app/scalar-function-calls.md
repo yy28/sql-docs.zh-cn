@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897750"
 ---
 # <a name="scalar-function-calls"></a>标量函数调用
 标量函数返回每一行的值。 例如，该绝对值标量函数将数值列作为参数并返回列中的每个值的绝对值。 用于调用标量函数转义序列  

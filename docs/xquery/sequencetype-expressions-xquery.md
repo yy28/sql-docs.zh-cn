@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946280"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "54255122"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 请注意，`instance of`运算符， `Occurrence indicator`，指定的基数，所产生的序列中的项数。 如果未指定，则假定基数为 1。 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，仅问号 (**？)** 支持出现指示符。 **？** 出现指示符指示`Expression`可以返回零个或一个项。 如果 **？** 指定出现指示符，则`instance of`时，返回 True`Expression`类型与指定`SequenceType`，无论`Expression`返回单独序列还是空序列。  
+ 请注意，`instance of`运算符， `Occurrence indicator`，指定的基数，所产生的序列中的项数。 如果未指定，则假定基数为 1。 在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，仅问号 ( **？)** 支持出现指示符。 **？** 出现指示符指示`Expression`可以返回零个或一个项。 如果 **？** 指定出现指示符，则`instance of`时，返回 True`Expression`类型与指定`SequenceType`，无论`Expression`返回单独序列还是空序列。  
   
  如果 **？** 未指定出现指示符，则`sequence of`返回 True 时，才`Expression`键入匹配`Type`指定和`Expression`返回单一实例。  
   
- **请注意**加号 (**+**) 和星号 (**&#42;**) 中不支持出现指示符[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **请注意**加号 ( **+** ) 和星号 ( **&#42;** ) 中不支持出现指示符[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  下面的示例说明如何使用**的实例**XQuery 运算符。  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- 以下查询将返回 False，因为在 `instance of` 表达式中指定的 SequenceType 不是指定表达式的实际类型的最高父级。 即 <`TestElement`> 的值是整数类型。 最高父级为 xs:decimal。 但是，未将它指定为 `instance of` 运算符的第二个操作数。  
+ 以下查询将返回 False，因为在 `instance of` 表达式中指定的 SequenceType 不是指定表达式的实际类型的最高父级。 值，即 <`TestElement`> 是整数类型。 最高父级为 xs:decimal。 但是，未将它指定为 `instance of` 运算符的第二个操作数。  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>示例 D  
  在此示例中，您首先创建 XML 架构集合并使用它来键入**xml**变量。 类型化**xml**然后，查询变量来说明`instance of`功能。  
   
- 以下 XML 架构集合定义了一个简单类型 myType 和一个属于 myType 类型的元素 <`root`>：  
+ 以下 XML 架构集合定义的简单类型 myType 和一个元素，<`root`>，类型 mytype 类型的：  
   
 ```  
 drop xml schema collection SC  
@@ -239,7 +238,7 @@ go
   
 -   创建类型化**xml**变量，并将分配给它的示例 XML 实例。  
   
--   对变量指定查询。 查询表达式将从第一个 <`Customer`> 的 OrderList IDRERS 类型属性中检索第一个顺序 ID 值。 检索的值是 IDREF 类型。 因此， `instance of` ，则返回 True。  
+-   对变量指定查询。 查询表达式从第一个 OrderList IDRERS 类型属性中检索的第一个顺序 ID 值 <`Customer`>。 检索的值是 IDREF 类型。 因此， `instance of` ，则返回 True。  
   
 ```  
 create xml schema collection SC as  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   使用的窗体时**element （)** 序列类型的指定类型名称，例如`element(ElementName, TypeName)`，必须用问号 （？） 限定类型。 例如，`element(Title, xs:string?)` 指示元素可能为空。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持的运行时检测**xsi: nil**属性使用`instance of`。  
   
--   如果 `Expression` 中的值来自类型化为联合类型的元素或属性，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能识别派生了值类型的非派生的 primitive 类型。 例如，如果 <`e1`> 定义为静态类型 (xs:integer | xs:string)，则下面的语句将返回 False。  
+-   如果 `Expression` 中的值来自类型化为联合类型的元素或属性，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能识别派生了值类型的非派生的 primitive 类型。 例如，如果 <`e1`> 定义为具有静态类型 (xs: integer | xs: string)，以下将返回 False。  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

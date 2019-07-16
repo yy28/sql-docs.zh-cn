@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029558"
 ---
 # <a name="system-base-tables"></a>系统基表
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47833625"
 ## <a name="system-base-tables"></a>系统基表  
  下表列出并描述了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每个系统基表。  
   
-|基表|Description|  
+|基表|描述|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在于每个数据库中。 每一行表示数据库中的一个对象。|  
 |**sys.sysbinobjs**|存在于每个数据库中。 数据库中的每个 Service Broker 实体都存在对应的一行。 Service Broker 实体包括以下内容：<br /><br /> 消息类型<br /><br /> 服务约定<br /><br /> 服务<br /><br /> 名称和类型使用固定的二进制排序规则。|  
@@ -51,7 +50,7 @@ ms.locfileid: "47833625"
 |**sys.sysnsobjs**|存在于每个数据库中。 每个命名空间范围内的实体均存在对应的一行。 此表用于存储 XML 集合实体。|  
 |**sys.syscolpars**|存在于每个数据库中。 表、视图或表值函数的每个列均存在对应的一行。 过程或函数的每个参数也存在对应的行。|  
 |**sys.systypedsubobjs**|存在于每个数据库中。 每个类型化的子实体均存在对应的一行。 只有分区函数的参数属于此类别。|  
-|**sys.sysidxstats**|存在于每个数据库中。 表和索引视图的每个索引或统计信息均存在对应的一行<br /><br /> 注意： 每个索引 （除了堆） 是与具有相同的名称作为索引的统计信息相关联。|  
+|**sys.sysidxstats**|存在于每个数据库中。 表和索引视图的每个索引或统计信息均存在对应的一行<br /><br /> 注意:每个索引 （除了堆） 都具有相同的名称作为索引的统计信息相关联。|  
 |**sys.sysiscols**|存在于每个数据库中。 每个持久化索引和统计信息列均存在对应的一行。|  
 |**sys.sysscalartypes**|存在于每个数据库中。 每个用户定义类型或系统类型均存在对应的一行。|  
 |**sys.sysdbreg**|中存在**主**仅数据库。 每个注册数据库均存在对应的一行。|  
@@ -61,7 +60,7 @@ ms.locfileid: "47833625"
 |**sys.sysxlgns**|中存在**主**仅数据库。 每个服务器主体均存在对应的一行。|  
 |**sys.sysdbfiles**|存在于每个数据库中。 如果该列**dbid**为零，则该行表示一个属于此数据库的文件。 在中**主**数据库中，列**dbid**可以为非零值。 如果是这样，该行表示主文件。|  
 |**sys.sysusermsg**|中存在**主**仅数据库。 每一行表示用户定义的错误消息。|  
-|**sys.sysprivs**|存在于每个数据库中。 每个数据库或服务器级权限均存在对应的一行。<br /><br /> 注意： 服务器级权限存储在**主**数据库。|  
+|**sys.sysprivs**|存在于每个数据库中。 每个数据库或服务器级权限均存在对应的一行。<br /><br /> 注意:服务器级权限存储在**主**数据库。|  
 |**sys.sysowners**|存在于每个数据库中。 每一行表示一个数据库主体。|  
 |**sys.sysobjkeycrypts**|存在于每个数据库中。 每个与对象关联的对称密钥、加密或加密属性均存在对应的一行。|  
 |**sys.syscerts**|存在于每个数据库中。 数据库中的每个证书均存在对应的一行。|  

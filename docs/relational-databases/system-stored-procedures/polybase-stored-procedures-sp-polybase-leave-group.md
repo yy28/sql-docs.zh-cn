@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f155de0eb81918d5129d404e7cd2f236957152
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941928"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sp_polybase_leave_group;
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CONTROL SERVER 权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  仅可以从组中删除计算节点。  
   
  运行后的存储的过程，重启 PolyBase 引擎和 PolyBase 数据移动服务在计算机上。 若要验证的头节点上运行以下 DMV: **sys.dm_exec_compute_nodes**。  

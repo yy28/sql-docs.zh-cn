@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196436"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建索引视图。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。  
@@ -43,7 +43,7 @@ ms.locfileid: "54131807"
 5.  为视图创建唯一的聚集索引。  
   
 ###  <a name="Restrictions"></a> 索引视图所需的 SET 选项  
- 如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 CONCAT_NULL_YIELDS_NULL 设置为 ON 后，表达式 **'** abc **'** + NULL 会返回值 NULL。 但将 CONCAT_NULL_YIEDS_NULL 设置为 OFF 后，同一表达式会生成 **'** abc **'**。  
+ 如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 CONCAT_NULL_YIELDS_NULL 设置为 ON 后，表达式 **'** abc **'** + NULL 会返回值 NULL。 但将 CONCAT_NULL_YIEDS_NULL 设置为 OFF 后，同一表达式会生成 **'** abc **'** 。  
   
  为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 下表中的 SET 选项必须设置中显示的值为**RequiredValue**列出现以下情况时：  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54131807"
   
 -   创建索引时，IGNORE_DUP_KEY 选项必须设置为 OFF（默认设置）。  
   
--   在视图定义中，必须使用两部分名称（即 _schema_**.**_tablename_ ）来引用表。  
+-   在视图定义中，必须使用两部分名称（即 _schema_ **.** _tablename_ ）来引用表。  
   
 -   必须已使用 WITH SCHEMABINDING 选项创建了在视图中引用的用户定义函数。  
   
--   在视图中引用的任何用户定义函数都必须由两部分组成的名称 _schema_**.**_function_引用。  
+-   在视图中引用的任何用户定义函数都必须由两部分组成的名称 _schema_ **.** _function_引用。  
   
 -   用户定义函数的数据访问属性必须为 NO SQL，外部访问属性必须是 NO。  
   
@@ -157,9 +157,9 @@ ms.locfileid: "54131807"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建一个视图并为该视图创建索引。 包含两个使用该索引视图的查询。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个视图并为该视图创建索引。 包含两个使用该索引视图的查询。  
   
     ```  
     USE AdventureWorks2012;  

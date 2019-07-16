@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: adec8a50e6bcf0af25227e2e456f3f76692f6d67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29bf8d19b9e3c9ec9b4072edd9575add9947c8f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922214"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>设置 DCOM 流封送格式
 使用组件从 RDS 1.5 或更早版本的客户端计算机不符合使用组件从 RDS 2.0 或更高版本的服务器。 使用 DCOM 作为基础协议，RDS 2.0 或更高版本的支持时，传输时更高效[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 如果您的客户端运行组件从 RDS 1.5 或更早版本，可以设置你的服务器以使用以前的 RDS 支持 （称为 RDS 1.0） 或更高版本的 RDS 支持 (名为 RDS 2.0 或更高版本)。 设置以下注册表项之一：  

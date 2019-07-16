@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069105"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 数据库邮件及其附件存储在**msdb**数据库。 应该定期删除邮件以免**msdb**从增长超过预期大小并符合你组织的文档保持期计划。 使用**sysmail_delete_mailitems_sp**存储过程来从数据库邮件表中永久删除电子邮件。 某个可选参数通过提供日期和时间，允许您仅删除较早的电子邮件。 早于该参数的电子邮件将被删除。 另一个可选参数允许您删除某一类型的指定为仅电子邮件**sent_status**参数。 你必须提供一个参数为**@sent_before**或**@sent_status**。 若要删除的所有消息，请使用 **@sent_before = getdate （） 函数**。  
+ 数据库邮件及其附件存储在**msdb**数据库。 应该定期删除邮件以免**msdb**从增长超过预期大小并符合你组织的文档保持期计划。 使用**sysmail_delete_mailitems_sp**存储过程来从数据库邮件表中永久删除电子邮件。 某个可选参数通过提供日期和时间，允许您仅删除较早的电子邮件。 早于该参数的电子邮件将被删除。 另一个可选参数允许您删除某一类型的指定为仅电子邮件**sent_status**参数。 你必须提供一个参数为 **@sent_before** 或 **@sent_status** 。 若要删除的所有消息，请使用 **@sent_before = getdate （） 函数**。  
   
  删除电子邮件也会删除与这些邮件相关的附件。 删除电子邮件不会删除中的相应条目**sysmail_event_log**。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)从日志中删除项。  
   
@@ -87,9 +86,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

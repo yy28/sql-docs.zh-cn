@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 179885276bdda206e4414bd22675e97449df9129
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: fc61ad955be287faad20289245ca4520efcd4bbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913175"
 ---
 # <a name="create-a-distributed-transaction"></a>创建分布式的事务
 
@@ -79,6 +78,6 @@ Azure SQL 数据库或 Azure SQL 数据仓库的情况下不支持 MSDTC。
 - 使用 TRANSACT-SQL 的链接的服务器
 - JDBC 驱动程序
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [执行事务 (ODBC)](performing-transactions-in-odbc.md)

@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962003"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>快速入门：处理输入和输出在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +71,7 @@ SELECT * FROM RTestData
 
     ![返回表中的数据的 R 脚本输出](./media/r-output-rtestdata.png)
 
-2. 让我们来更改输入或输出变量的名称。 上述脚本使用了默认的输入和输出变量名称， _InputDataSet_并_OutputDataSet_。 若要定义与关联的输入的数据_InputDatSet_，则使用*@input_data_1*变量。
+2. 让我们来更改输入或输出变量的名称。 上述脚本使用了默认的输入和输出变量名称， _InputDataSet_并_OutputDataSet_。 若要定义与关联的输入的数据_InputDatSet_，则使用 *@input_data_1* 变量。
 
     在此脚本中，存储过程的输出和输入的变量名称已更改为*SQL_out*并*SQL_in*:
 
@@ -92,7 +91,7 @@ SELECT * FROM RTestData
 
     `WITH RESULT SETS`语句在 SQL Server 中定义的数据使用的架构。 您需要为你从 R.返回每个列提供 SQL 兼容的数据类型可以使用的架构定义来提供新的列名称也不需要使用 R 数据帧中的列名称。
 
-3. 此外可以生成使用 R 脚本的值，并保留中的输入的查询字符串_@input_data_1_保留为空。
+3. 此外可以生成使用 R 脚本的值，并保留中的输入的查询字符串 _@input_data_1_ 保留为空。
 
     ```sql
     EXECUTE sp_execute_external_script

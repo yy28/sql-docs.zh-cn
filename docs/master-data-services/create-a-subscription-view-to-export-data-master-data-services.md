@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896919"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>创建订阅视图以导出数据 (Master Data Services)
 
@@ -66,12 +65,12 @@ ms.locfileid: "65485065"
 ## <a name="view-information"></a>查看信息  
  对于创建的每个视图，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“登录属性”|视图状态。<br /><br /> 单击“保存”后，系统显示![更新状态图标 ](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示视图正在更新  。<br /><br /> 如果创建或编辑视图时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
 |“属性”|订阅视图名称。|  
 |“模型”|模型名称。|  
-|版本|版本名称。|  
+|Version|版本名称。|  
 |版本标志|版本标志名称。|  
 |派生层次结构|派生层次结构名称。|  
 |实体|实体名称。|  

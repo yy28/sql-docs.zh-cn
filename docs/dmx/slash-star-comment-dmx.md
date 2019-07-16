@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1d96c65ea1dd187d5678987447415ca419ad10d7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d0b929ba60915f116d9ff6843b4f20b3105a7ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942848"
 ---
 # <a name="slash-star-comment-dmx"></a>斜杠星型 （注释） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "38020745"
  *Comment_Text*  
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  多行的注释必须用 /* 和 \*/ 指明。  
   
  注释没有最大长度限制。  

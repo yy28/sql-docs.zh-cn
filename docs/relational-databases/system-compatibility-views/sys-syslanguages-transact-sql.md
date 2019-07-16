@@ -20,27 +20,26 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053392"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的每种语言都包含一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|唯一语言 ID。|  
 |dateformat|**nchar(3)**|日期顺序，如 DMY。|  
-|datefirst|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
-|升级|**int**|预留给系统使用。|  
-|NAME|**sysname**|正式语言名称，例如，Français。|  
+|datefirst|**tinyint**|一周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
+|upgrade|**int**|预留给系统使用。|  
+|name|**sysname**|正式语言名称，例如，Français。|  
 |alias|**sysname**|代替语言名称，如 French。|  
 |months|**nvarchar(372)**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
 |shortmonths|**nvarchar(132)**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  

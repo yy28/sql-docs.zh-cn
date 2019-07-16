@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d58edcfae92c94cfc635d3539f81faf834e382c7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921960"
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个部分标头包含方括号 ( **[]** ) 包含类型和参数。 四个部分类型由文本的字符串指示**连接**， **sql**， **userlist**，或者**日志**。 参数是字符串、 默认值、 用户指定的标识符，或执行任何操作。  
@@ -42,7 +41,7 @@ identifier
   
  部分标头有以下几个部分。  
   
-|组成部分|Description|  
+|组成部分|描述|  
 |----------|-----------------|  
 |**connect**|修改连接字符串的文本字符串。|  
 |**sql**|修改命令字符串的文本字符串。|  

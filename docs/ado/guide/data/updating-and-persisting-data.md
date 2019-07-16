@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b251da97fe14abb8b10abe974c40b9adf0b37898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923727"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保留数据
 前面几章讨论了如何使用 ADO 来访问数据源中的数据、 如何在数据中，移动和了解如何编辑数据。 当然，如果你的应用程序的目标是允许用户对数据进行更改，您需要了解如何保存这些更改。 您也可以保留**记录集**更改为文件使用**保存**方法，或者可以发送所做的更改回存储使用的数据源**更新**或**UpdateBatch**方法。  

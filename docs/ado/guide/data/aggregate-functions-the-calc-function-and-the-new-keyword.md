@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926000"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、CALC 函数和 NEW 关键字
 数据整理支持以下函数。 分配给包含的列的一章来操作的名称是*章别名*。  
   
  可以是完全限定，包含通向章包含每个章节列名称的一章别名*列名，* 各项之间由句点。 例如，如果父一章，chap1，包含子章节，chap2，具有一个 amount 列，amt 设置，则限定的名称将为 chap1.chap2.amt。  
   
-|聚合函数|Description|  
+|聚合函数|描述|  
 |-------------------------|-----------------|  
 |SUM (*章别名*。*列名称*)|计算指定列中的所有值的总和。|  
 |AVG (*章别名*。*列名称*)|计算指定列中的所有值的平均值。|  
@@ -38,11 +37,11 @@ ms.locfileid: "66702423"
 |STDEV (*章别名*。*列名称*)|计算指定列中的标准偏差。|  
 |任何 (*章别名*。*列名称*)|指定列的值。 仅当列的值是相同的一章中的所有行时，任何具有可预测的值。<br /><br /> **请注意**列不包含所有一章中的行的相同值，如果形状命令任意返回值的任何函数的值之一。|  
   
-|计算的表达式|Description|  
+|计算的表达式|描述|  
 |---------------------------|-----------------|  
 |CALC(*expression*)|计算的任意表达式，但只能在的行上**记录集**包含 CALC 函数。 任何表达式中使用这些[Visual Basic for Applications (VBA) 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)允许。|  
   
-|新的关键字|Description|  
+|新的关键字|描述|  
 |-----------------|-----------------|  
 |NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|将添加到指定的类型的空列**记录集**。|  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66702423"
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
+|DBTYPE_BYTES|adBinary，AdVarBinary，adLongVarBinary|  
 |DBTYPE_STR|每，以便您可以排除 adLongVarChar|  
 |DBTYPE_WSTR|adWChar，adVarWChar adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  

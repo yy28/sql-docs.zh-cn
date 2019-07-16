@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cca223510ebb6838048e3babbf8fdcada42f87a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039746"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函数
 
@@ -80,7 +79,7 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>诊断  
  当**SQLSetDescField**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_DESC 和一个*处理*的*DescriptorHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLSetDescField** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S02|选项值已更改|该驱动程序不支持在指定的值 *\*ValuePtr* (如果*ValuePtr*是指针) 或中的值*ValuePtr* (如果*ValuePtr*是一个整数值)，或 *\*ValuePtr*无效由于实现运行情况，因此驱动程序替换一个相近的值。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -140,12 +139,12 @@ SQLRETURN SQLSetDescField(
   
  下表概述了标头字段的初始化。  
   
-|标头字段名称|类型|R/W|默认|  
+|标头字段名称|type|R/W|默认|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD:R APD:R IRD:R IPD:R|ARD:有关 SQL_DESC_ALLOC_AUTO 隐式或 SQL_DESC_ALLOC_USER 为显式<br /><br /> APD:有关 SQL_DESC_ALLOC_AUTO 隐式或 SQL_DESC_ALLOC_USER 为显式<br /><br /> IRD:SQL_DESC_ALLOC_AUTO<br /><br /> IPD:SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN 生成|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD: [1] APD: [1] IRD:未使用的 IPD:未使用|  
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD:R/W APD:R/W IRD:R/W IPD:R/W|ARD:Ptr APD，则为 null:Ptr IRD，则为 null:Ptr IPD，则为 null:Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD:Ptr APD，则为 null:Ptr IRD，则为 null:未使用的 IPD:未使用|  
+|SQL_DESC_BIND_OFFSET_PTR|为 SQLLEN *|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD:Ptr APD，则为 null:Ptr IRD，则为 null:未使用的 IPD:未使用|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD:SQL_BIND_BY_COLUMN<br /><br /> APD:SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
 |SQL_DESC_COUNT|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD:0 APD:0 IRD:D IPD:0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ARD:未使用的 APD:未使用的 IRD:R/W IPD:R/W|ARD:未使用的 APD:未使用的 IRD:Ptr IPD，则为 null:Null ptr|  
@@ -154,7 +153,7 @@ SQLRETURN SQLSetDescField(
   
  记录的字段初始化为下表中所示。  
   
-|记录字段名称|类型|R/W|默认|  
+|记录字段名称|type|R/W|默认|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
@@ -204,7 +203,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_ALLOC_TYPE [All]**  
  此只读 SQLSMALLINT 标头字段指定驱动程序或显式由应用程序是否会自动分配的描述符。 应用程序可以获取，但不是修改此字段。 如果驱动程序自动分配的描述符，字段由驱动程序设置为 SQL_DESC_ALLOC_AUTO 中。 如果描述符已显式分配应用程序，它是由驱动程序设置 SQL_DESC_ALLOC_USER。  
   
- **SQL_DESC_ARRAY_SIZE [Application descriptors]**  
+ **SQL_DESC_ARRAY_SIZE [应用程序描述符]**  
  ARDs，在此 sqlulen 生成标头字段指定行集中的行的数。 这是通过调用返回的行数**SQLFetch**或**SQLFetchScroll**或通过调用要操作**SQLBulkOperations**或**SQLSetPos**.  
   
  Apd，在此 sqlulen 生成标头字段指定的每个参数的值的数目。  
@@ -275,7 +274,7 @@ SQLRETURN SQLSetDescField(
   
  APD 中的此字段还可以设置通过调用**SQLSetStmtAttr** SQL_ATTR_PARAM_OPERATION_PTR 属性。  
   
- **SQL_DESC_BIND_OFFSET_PTR [Application descriptors]**  
+ **SQL_DESC_BIND_OFFSET_PTR [应用程序描述符]**  
  此为 SQLLEN * 标头字段指向绑定偏移量。 默认情况下，它是设置为 null 指针。 如果此字段不是 null 指针，该驱动程序取消引用指针，并将取消引用的值添加到每个延迟的描述符记录 （SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 中有一个非 null 值的字段在提取时间，并使用新指针值绑定时。  
   
  绑定偏移量会始终直接添加到中的 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 字段的值。 如果偏移量更改为不同的值，新值是仍直接添加到每个描述符字段中的值。 新的偏移量不添加到字段值再加上任何早期的偏移量。  
@@ -286,7 +285,7 @@ SQLRETURN SQLSetDescField(
   
  有关详细信息，请参阅中的按行绑定的描述[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)并[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)。  
   
- **SQL_DESC_BIND_TYPE [Application descriptors]**  
+ **SQL_DESC_BIND_TYPE [应用程序描述符]**  
  此 SQLUINTEGER 标头字段将设置要使用绑定列或参数的绑定方向。  
   
  在 ARDs，此字段指定绑定方向时**SQLFetchScroll**或**SQLFetch**相关联的语句句柄上调用。  
@@ -377,15 +376,15 @@ SQLRETURN SQLSetDescField(
 |SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
 |SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
 |SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
-|SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_DAY_TO_SECOND / SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR / SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-|SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_MINUTE / SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND / SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
-|SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
+|SQL_INTERVAL_MINUTE_TO_SECOND / SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
 |SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-|SQL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
-|SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
+|SQL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_YEAR / SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
  有关数据的时间间隔，则此字段的详细信息，请参阅[数据类型标识符和描述符](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)。  
@@ -399,7 +398,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_FIXED_PREC_SCALE [实现描述符]**  
  如果列不是具有固定的精度和小数位数的精确数值列，此只读 SQLSMALLINT 记录字段是设置为 SQL_TRUE，如果为确切的数值列的列，并具有固定的精度和非零值的小数位数，或 SQL_FALSE。  
   
- **SQL_DESC_INDICATOR_PTR [Application descriptors]**  
+ **SQL_DESC_INDICATOR_PTR [应用程序描述符]**  
  在 ARDs，此为 SQLLEN * 记录字段指向指示器变量。 如果列的值为 NULL，则此变量包含 SQL_NULL_DATA。 为 Apd，指示器变量设置为 SQL_NULL_DATA 指定空的动态参数。 否则，该变量为零 （除非 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 中的值是相同的指针）。  
   
  如果在 ARD SQL_DESC_INDICATOR_PTR 字段为 null 指针，会阻止驱动程序返回有关列是否为 NULL 的信息。 如果该列为 NULL 和 SQL_DESC_INDICATOR_PTR null 指针，SQLSTATE 22002 （指示器变量，但未提供） 时返回的驱动程序尝试在调用后填充缓冲区**SQLFetch**或**SQLFetchScroll**。 如果在调用**SQLFetch**或**SQLFetchScroll**未返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，缓冲区的内容是不确定。  
@@ -434,7 +433,7 @@ SQLRETURN SQLSetDescField(
   
  在 Ipd，此字段是未定义，如果该驱动程序不支持命名的参数。 如果驱动程序支持命名的参数，并能够描述参数，参数名称是在此字段中返回。  
   
- **SQL_DESC_NULLABLE [Implementation descriptors]**  
+ **SQL_DESC_NULLABLE [实现描述符]**  
  IRDs，在此只读 SQLSMALLINT 记录字段是 SQL_NULLABLE，如果列可以具有 NULL 值，如果列不具有 NULL 值，SQL_NO_NULLS 或 SQL_NULLABLE_UNKNOWN，如果不知道列是否接受 NULL 值。 此字段与结果集列不基列。  
   
  在 Ipd，此字段始终设置为 SQL_NULLABLE 因为动态参数始终是可以为 null，不能通过应用程序设置。  
@@ -445,7 +444,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_OCTET_LENGTH [All]**  
  此为 SQLLEN 记录字段包含的长度，以字节为单位的字符串或二进制数据类型。 对于固定长度的字符或二进制类型，这是以字节为单位的实际长度。 对于可变长度字符或二进制类型，这是以字节为单位的最大长度。 此值始终不包括实现描述符的 null 终止字符的空间，并始终包括在应用程序描述符的 null 终止字符的空间。 对于应用程序数据，此字段包含缓冲区的大小。 对于 Apd，此字段仅对输出或输入/输出参数的定义。  
   
- **SQL_DESC_OCTET_LENGTH_PTR [Application descriptors]**  
+ **SQL_DESC_OCTET_LENGTH_PTR [应用程序描述符]**  
  此为 SQLLEN * 记录字段指向的变量将包含以字节为单位 （适用于参数描述符） 的动态自变量或绑定的列的值 （适用于行描述符） 的总长度。  
   
  对于 APD 中，此值将忽略除字符的字符串和二进制; 之外的所有参数如果此字段将指向 SQL_NTS，动态自变量必须是以 null 结尾。 若要指示绑定的参数将为执行时数据参数，应用程序设置此字段相应的记录的 APD 中为变量的请在执行时，将包含值 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的结果. 如果有多个此类字段，为唯一标识的参数的值设置 SQL_DESC_DATA_PTR，可以帮助确定哪些参数所请求的应用程序。  
@@ -504,10 +503,10 @@ SQLRETURN SQLSetDescField(
   
 |SQL_DESC_TYPE 值|其他字段隐式设置|  
 |------------------------------|---------------------------------|  
-|SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR, SQL_C_VARCHAR|SQL_DESC_LENGTH 设置为 1。 SQL_DESC_PRECISION 设置为 0。|  
+|SQL_CHAR、 SQL_VARCHAR、 SQL_C_CHAR SQL_C_VARCHAR|SQL_DESC_LENGTH 设置为 1。 SQL_DESC_PRECISION 设置为 0。|  
 |SQL_DATETIME|当 SQL_DESC_DATETIME_INTERVAL_CODE 设置为 SQL_CODE_DATE 或 SQL_CODE_TIME 时，SQL_DESC_PRECISION 设置为 0。 当它设置为 SQL_DESC_TIMESTAMP 时，SQL_DESC_PRECISION 设置为 6。|  
-|SQL_DECIMAL, SQL_NUMERIC, SQL_C_NUMERIC|SQL_DESC_SCALE 设置为 0。 SQL_DESC_PRECISION 设置为各自的数据类型的实现定义的精度。<br /><br /> 请参阅[从 SQL 到 c:数值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)有关如何手动将绑定 SQL_C_NUMERIC 值的信息。|  
-|SQL_FLOAT, SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 设置为实现定义的默认精度。|  
+|SQL_DECIMAL，SQL_NUMERIC，SQL_C_NUMERIC|SQL_DESC_SCALE 设置为 0。 SQL_DESC_PRECISION 设置为各自的数据类型的实现定义的精度。<br /><br /> 请参阅[从 SQL 到 c:数值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)有关如何手动将绑定 SQL_C_NUMERIC 值的信息。|  
+|SQL_FLOAT SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 设置为实现定义的默认精度。|  
 |SQL_INTERVAL|当 SQL_DESC_DATETIME_INTERVAL_CODE 设置为时间间隔数据类型时，SQL_DESC_DATETIME_INTERVAL_PRECISION 设置为 2 （默认间隔前导精度）。 如果间隔的秒组成部分，SQL_DESC_PRECISION 设置为 6 （默认间隔秒精度）。|  
   
  当应用程序调用**SQLSetDescField**设置字段的描述符，而不是调用**SQLSetDescRec**，首先必须声明数据类型，该应用程序。 当它执行隐式设置上表中所指示的其他字段。 如果任何值隐式集是不可接受，然后，应用程序可以调用**SQLSetDescField**或**SQLSetDescRec**显式设置不可接受的值。  

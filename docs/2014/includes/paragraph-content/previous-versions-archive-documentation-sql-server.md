@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 7bcf7ac382bb60e1a38b34ac6e3a26c2126e1e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68200853"
 ---
 
 我们通过一组存档网页来留存较早版本的 SQL Server 的相关文档。 已存档的网页不由搜索引擎，例如 Bing.com 和 Google.com 处理。 但您可以看到我们的文档在这些存档_以前版本 /_ 地址：

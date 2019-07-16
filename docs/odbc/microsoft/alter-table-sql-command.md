@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901372"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 命令
 以编程方式修改的表的结构。  
@@ -82,10 +81,10 @@ ALTER TABLE TableName1
   
  如果省略 NULL 和 NOT NULL，NULL 设置的当前设置确定字段中是否允许 null 值。 但是，如果你省略 NULL 和 NOT NULL 并且包括在主键或唯一的子句，忽略 SET NULL 的当前设置，该字段不是默认情况下为 NULL。  
   
- CHECK *lExpression1*  
+ 检查*lExpression1*  
  指定字段的验证规则。 *lExpression1*必须计算为逻辑表达式，而且可以是用户定义函数或存储的过程。 只要附加一个空记录，检查验证规则。 如果验证规则不允许空字段值在追加的记录中，将生成错误。  
   
- ERROR *cMessageText1*  
+ 错误*cMessageText1*  
  指定当字段验证规则将生成错误时显示错误消息。  
   
  默认*eExpression1*  
@@ -106,7 +105,7 @@ ALTER TABLE TableName1
   
  如果您正在修改现有字段，并且或者候选索引表达式组成的表中的字段，Visual FoxPro 会检查以查看它们是否包含 null 值或重复的记录的字段。 如果是这样，Visual FoxPro 生成错误，并不更改表。  
   
- REFERENCES *TableName2* TAG *TagName1*  
+ 引用*TableName2*标记*TagName1*  
  指定与之建立持久关系的父表。 标记*TagName1*指定关系所基于的父表的索引标记。 索引的标记名称可包含最多 10 个字符。  
   
  NOCPTRANS  
@@ -125,10 +124,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  设置默认值*eExpression2*  
  指定现有字段的新默认值。 数据类型*eExpression2*必须为该字段的数据类型相同。  
   
- SET CHECK *lExpression2*  
+ 集检查*lExpression2*  
  指定的新的验证规则的现有字段。 *lExpression2*计算结果必须为逻辑表达式，可能是用户定义函数或存储的过程。  
   
- ERROR *cMessageText2*  
+ 错误*cMessageText2*  
  指定当字段验证规则将生成错误时显示错误消息。 仅当浏览或编辑窗口中更改数据时，会显示消息。  
   
  DROP DEFAULT  
@@ -137,12 +136,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  删除检查  
  删除现有字段的验证规则。  
   
- DROP [COLUMN] *FieldName3*  
+ 拖放 [COLUMN] *FieldName3*  
  指定要从表中删除的字段。 从表中删除字段还会删除该字段的默认值设置和字段验证规则。  
   
  如果索引键或触发器表达式引用该字段，这些表达式无效时将删除的字段。 在这种情况下，将删除的字段但无效索引键或触发器表达式将在运行时生成错误时将不会生成错误。  
   
- SET CHECK *lExpression3*  
+ 集检查*lExpression3*  
  指定表验证规则。 *lExpression3*计算结果必须为逻辑表达式，可能是用户定义函数或存储的过程。  
   
  ERROR *cMessageText3*  
@@ -157,16 +156,16 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  删除主键  
  删除主索引和相应索引的标记。 因为一个表只能有一个主键，不需要指定为主键的名称。 删除主索引也会删除任何基于主键的永久关系。  
   
- ADD UNIQUE *eExpression4*[TAG *TagName3*]  
+ 添加 UNIQUE *eExpression4*[标记*TagName3*]  
  向表中添加一个候选项的索引。 *eExpression4*指定候选索引键的表达式，并*TagName3*指定候选索引标记的名称。 索引的标记名称可包含最多 10 个字符。 如果省略标记*TagName3* ; 如果*eExpression4*是单个字段，候选索引标记中指定的字段作为具有相同的名称*eExpression4*。  
   
- DROP UNIQUE TAG *TagName4*  
+ 删除唯一标记*TagName4*  
  删除候选索引和相应索引的标记。 因为一个表可以包含多个候选键，必须指定候选索引标记的名称。  
   
- ADD FOREIGN KEY [ *eExpression5*]TAG *TagName4*  
+ 添加外键 [ *eExpression5*] 标记*TagName4*  
  向表中添加外 （非主键） 索引。 *eExpression5*指定外索引键表达式，并*TagName4*指定外索引标记的名称。 索引的标记名称可包含最多 10 个字符。  
   
- REFERENCES *TableName2*[TAG *TagName5*]  
+ 引用*TableName2*[标记*TagName5*]  
  指定与之建立持久关系的父表。 包含标记*TagName5*建立基于现有索引标记为父表的关系。 索引的标记名称可包含最多 10 个字符。 如果省略标记*TagName5*，使用父表的主索引标记建立关系。  
   
  删除外键标记*TagName6*[保存]  

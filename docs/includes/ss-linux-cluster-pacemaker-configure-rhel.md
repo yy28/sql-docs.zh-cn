@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215619"
+---
 3. 在所有群集节点上，打开 Pacemaker 防火墙端口。 若要使用 `firewalld` 打开这些端口，请运行以下命令：
 
    ```bash
@@ -7,7 +15,7 @@
 
    > 如果防火墙没有内置高可用性配置，为 Pacemaker 打开以下端口。
    >
-   > * TCP：端口 2224、 3121、 21064
+   > * TCP:端口 2224、 3121、 21064
    > * UDP:端口 5405
 
 1. 在所有节点上安装 Pacemaker 包。

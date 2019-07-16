@@ -2,19 +2,18 @@
 title: 授予 T-SQL 的权限-并行数据仓库 |Microsoft Docs
 description: 并行数据仓库中的数据库操作的 Grant T-SQL 的权限。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15798edc4d6a9b1f00c8dd489dfed76a39e5f340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960947"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>并行数据仓库的 Grant T-SQL 的权限
 并行数据仓库中的数据库操作的 Grant T-SQL 的权限。
@@ -245,8 +244,8 @@ GO
   
 若要创建管理员登录名，请参阅[固定服务器角色](pdw-permissions.md#fixed-server-roles)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
+[创建用户](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [加载](load-overview.md)  

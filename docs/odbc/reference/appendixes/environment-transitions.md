@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b1de2f2147357f9e2ed4f71657b9298c4a13684
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910434"
 ---
 # <a name="environment-transitions"></a>环境转换
 ODBC 环境具有以下三种状态。  
   
-|State|Description|  
+|状态|描述|  
 |-----------|-----------------|  
 |E0|未分配的环境|  
 |E1|分配的环境中，未分配的连接|  

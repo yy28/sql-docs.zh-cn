@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64532403f495a65cd61fbf6a8bc95369a0a4add3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060548"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   数据库中的每个序列对象各占一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |\<继承列 >||继承中的所有列[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**start_value**|**sql_variant 不为 NULL**|序列对象的起始值。 如果使用 ALTER SEQUENCE 重新启动序列对象，它将以此值重新启动。 当序列对象周期它继续到**minimum_value**或**maximum_value**，而不**start_value**。|  

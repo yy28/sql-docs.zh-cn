@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 618c4b127c42aae6a5b8d7570f1962f8c8e38e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4c0eb20b0e0cd64065c7db0687b1dc36b2dbe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962758"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml （SQL Server 中的 Python 模块）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "62642358"
 
 ## <a name="1-training-functions"></a>1-训练函数
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | 训练模型的系综。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | 随机林。 |
@@ -68,14 +67,14 @@ ms.locfileid: "62642358"
 
 ### <a name="categorical-variable-handling"></a>分类变量的处理
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | 将文本列转换为类别。 |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 哈希处理并将文本列转换为类别。 |
 
 ### <a name="schema-manipulation"></a>架构操作
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 将多个列连接成单个向量。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | 从数据集中删除列。 |
@@ -84,7 +83,7 @@ ms.locfileid: "62642358"
 
 ### <a name="variable-selection"></a>变量选择
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |基于计数的特征选择。 |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 功能选择基于互信息。 |
@@ -92,7 +91,7 @@ ms.locfileid: "62642358"
 
 ### <a name="text-analytics"></a>文本分析
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 将文本列转换成数字特征。 |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 情绪分析。 |
@@ -100,7 +99,7 @@ ms.locfileid: "62642358"
 
 ### <a name="image-analytics"></a>图像分析 
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 加载图像。 |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 调整图像大小。 |
@@ -109,7 +108,7 @@ ms.locfileid: "62642358"
 
 ### <a name="featurization-functions"></a>特征化函数
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | 数据源的数据转换 |
 
@@ -117,7 +116,7 @@ ms.locfileid: "62642358"
 
 ## <a name="3-scoring-functions"></a>3 评分函数
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | 使用 Microsoft 机器学习模型评分 |
 
@@ -135,7 +134,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [Python 教程](../tutorials/sql-server-python-tutorials.md)
 + [教程：在 T-SQL 中嵌入 Python 代码](../tutorials/run-python-using-t-sql.md)

@@ -3,18 +3,17 @@ title: Linux 版 SQL Server 2017 的发行说明
 description: 本文包含的发行说明，并在 Linux 上运行的 SQL Server 2017 的支持的功能。 包含最新版本和多个以前版本的发行说明。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3f59495ffe4bc58ec673e643b0d011a501c51ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896176"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 

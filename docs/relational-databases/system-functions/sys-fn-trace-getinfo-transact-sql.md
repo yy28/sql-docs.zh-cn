@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6f43b362b0386b20103f139c2726bf19c41408df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059234"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="arguments"></a>参数  
  *trace_id*  
- 是的 ID。 *trace_id*是**int**。有效的输入包括跟踪的 ID 号、NULL、0 或 DEFAULT。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 指定 NULL、0 或 DEFAULT 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有跟踪的信息。  
+ 是的 ID。 *trace_id*是**int**。有效输入包括跟踪，NULL 的 ID 号 0 或 DEFAULT。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 指定 NULL、0 或 DEFAULT 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有跟踪的信息。  
   
 ## <a name="tables-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|跟踪的 ID。|  
 |属性|**int**|跟踪的属性：<br /><br /> 1= 跟踪选项。 有关详细信息，请参阅@options 中 [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)。<br /><br /> 2 = 文件名<br /><br /> 3 = 最大大小<br /><br /> 4 = 停止时间<br /><br /> 5 = 当前跟踪状态。 0 = 停止。 1 = 正在运行。|  
-|值|**sql_variant**|有关指定跟踪的属性的信息。|  
+|value|**sql_variant**|有关指定跟踪的属性的信息。|  
   
 ## <a name="remarks"></a>备注  
  当传递特定跟踪的 ID 时，fn_trace_getinfo 将返回有关该跟踪的信息。 传递无效 ID 时，此函数将返回空行集。  
@@ -63,7 +62,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
  有关使用跟踪存储过程的完整示例，请参阅[创建跟踪&#40;TRANSACT-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器具有 ALTER TRACE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -82,7 +81,7 @@ GO
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [sys.fn_trace_getfilterinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

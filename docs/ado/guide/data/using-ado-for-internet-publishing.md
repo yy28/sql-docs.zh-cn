@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac7922dda2d486f4783d1230296dc89b81cb4fe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923601"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 进行 Internet 发布
 [用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)显示了访问与 ADO 一起异类数据的特定示例。 尽管本部分中的示例将特定于使用 Internet 发布提供程序，与其他异类数据，如电子邮件存储区的提供者的提供程序使用 ADO 时应类似演示的原则。  

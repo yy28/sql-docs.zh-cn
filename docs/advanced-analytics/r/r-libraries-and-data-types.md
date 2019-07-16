@@ -7,13 +7,12 @@ ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a0e15d8fdca31971cd16d187ae88a180fb481f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962534"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 和 SQL Server 之间的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,7 +90,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL 数据库对数据类型转换
 
 ## <a name="verify-r-and-sql-data-schemas-in-advance"></a>提前验证 R 和 SQL 数据架构 
 
-一般情况下，每当你对特定的数据类型或数据结构在 R 中如何使用有疑问时，请使用  `str()` 函数获取 R 对象的内部结构和类型。 函数的结果将打印到 R 控制台，并且也在 **中的“消息”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]选项卡中的查询结果中可用。 
+一般情况下，每当你对特定的数据类型或数据结构在 R 中如何使用有疑问时，请使用  `str()` 函数获取 R 对象的内部结构和类型。 函数的结果将打印到 R 控制台，并且也在 **中的“消息”** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]选项卡中的查询结果中可用。 
 
 从 R 代码中使用的数据库中检索数据，你始终应该消除无法在 R 中，使用的列，以及不用于分析，例如 GUID （唯一标识符）、 时间戳和用于审核，其他列或沿袭的列所创建的 ETL 过程的信息。 
 
@@ -158,7 +157,7 @@ outputDataSet <- inputDataSet'
   
 -   **列 C2**。 列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `factor` 和输出结果集中的 **varchar(max)** 。  
   
-     注意输出如何变化；R 中的任何字符串（因子或常规字符串）将被表示为 **varchar(max)**，不论字符串的长度为多少。  
+     注意输出如何变化；R 中的任何字符串（因子或常规字符串）将被表示为 **varchar(max)** ，不论字符串的长度为多少。  
   
 -   **列 C3**。  列被表示为 **ssNoversion** 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R 中的 `character` 和输出结果集中的 **varchar(max)** 。
   
@@ -179,5 +178,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 

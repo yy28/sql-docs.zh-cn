@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985705"
 ---
 # <a name="atomization-xquery"></a>原子化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 隐式原子化的另一个示例是使用算术运算符。 ** + **运算符需要原子值，并且**data （)** 隐式应用来检索 LaborHours 属性的原子值。 针对的 Instructions 列指定了查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
+ 隐式原子化的另一个示例是使用算术运算符。 **+** 运算符需要原子值，并且**data （)** 隐式应用来检索 LaborHours 属性的原子值。 针对的 Instructions 列指定了查询**xml** ProductModel 表中的类型。 下面的查询将返回 LaborHours 属性三次。 在该查询中，请注意下列情况：  
   
 -   构造 OrignialLaborHours 属性时，原子化隐式应用于 `$WC/@LaborHours` 返回的单独序列。 LaborHours 属性的类型化值被分配给 OrignialLaborHours。  
   
--   在构造 UpdatedLaborHoursV1 属性时，算术运算符需要原子值。 因此， **data （)** 隐式应用于返回的 LaborHours 属性 (`$WC/@LaborHours`)。 然后，原子值 1 添加到该属性。 属性 UpdatedLaborHoursV2 的构造显示如何显式应用**data （)**，但不是必需的。  
+-   在构造 UpdatedLaborHoursV1 属性时，算术运算符需要原子值。 因此， **data （)** 隐式应用于返回的 LaborHours 属性 (`$WC/@LaborHours`)。 然后，原子值 1 添加到该属性。 属性 UpdatedLaborHoursV2 的构造显示如何显式应用**data （)** ，但不是必需的。  
   
 ```  
 SELECT Instructions.query('  

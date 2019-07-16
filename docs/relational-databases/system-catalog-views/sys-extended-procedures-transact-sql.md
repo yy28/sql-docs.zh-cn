@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8eb0d10f8be8c2e5d9f939dd7a631d22154d6608
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 350c8eeec6a88bf2fad3a3461675696ae75ab8e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054328"
 ---
 # <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "47613675"
   与扩展存储的过程，每个对象存在对应的一行**sys.objects.type** = X。因为扩展存储的过程安装**主**数据库，它们只会出现该数据库上下文中。 从选择**sys.extended_procedures**在任何其他数据库上下文中的视图将返回空结果集。  
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<从 sys.objects 继承的列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**dll_name**|nvarchar(260)|此扩展存储过程的 DLL 的名称，包括路径。|  
+|**dll_name**|nvarchar(260) |此扩展存储过程的 DLL 的名称，包括路径。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

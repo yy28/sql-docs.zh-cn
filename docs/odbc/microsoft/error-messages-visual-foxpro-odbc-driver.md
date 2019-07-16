@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6072a6e317ab87118376b08790fc0fb49c495e3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952517"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>错误消息（Visual FoxPro ODBC 驱动程序）
 出现错误时，Visual FoxPro 驱动程序将返回以下信息：  
@@ -47,9 +46,9 @@ ms.locfileid: "63127986"
   
  方括号 ([]) 中的前缀来标识错误的源定义下表中。  
   
-|数据源|Prefix|ReplTest1|  
+|数据源|前缀|ReplTest1|  
 |-----------------|------------|-----------|  
-|驱动程序管理器|[vendor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驱动程序管理器]<br />不可用|  
+|驱动程序管理器|[供应商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 驱动程序管理器]<br />不可用|  
 |Visual FoxPro 驱动程序|供应商]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC Visual FoxPro 驱动程序]<br />不可用|  
   
  例如，如果 Visual FoxPro ODBC 驱动程序找不到文件 employee.dbf，它可能会返回以下错误消息：  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 632df5807e1e857c852807d0088219dee4448b6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946708"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +59,15 @@ sp_update_proxy
   
 `[ @enabled = ] is_enabled` 是代理是否已启用。 *Is_enabled*标志**tinyint**，默认值为 NULL。 当*is_enabled*是**0**，代理未启用，并不能由作业步骤。 当此参数为 NULL 时，代理的状态保持不变。  
   
-`[ @description = ] 'description'` 新的代理的说明。 *描述*是**nvarchar(512)**，默认值为 NULL。 当此参数为 NULL 时，代理的说明保持不变。  
+`[ @description = ] 'description'` 新的代理的说明。 *描述*是**nvarchar(512)** ，默认值为 NULL。 当此参数为 NULL 时，代理的说明保持不变。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 任一**@proxy_name**或**@proxy_id**必须指定。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
+ 任一 **@proxy_name** 或 **@proxy_id** 必须指定。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
   
- 任一**@credential_name**或**@credential_id**必须指定要更改代理的凭据。 如果两个参数均被指定，则它们必须引用相同的凭据，否则存储过程将失败。  
+ 任一 **@credential_name** 或 **@credential_id** 必须指定要更改代理的凭据。 如果两个参数均被指定，则它们必须引用相同的凭据，否则存储过程将失败。  
   
  此过程将更改代理，但不更改对代理的访问权限。 若要更改对代理服务器访问权限，请使用**sp_grant_login_to_proxy**并**sp_revoke_login_from_proxy**。  
   

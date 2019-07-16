@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00a24ffca764c029b87470b7aa07d15f33b4c673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996452"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>注册表项（Visual FoxPro ODBC 驱动程序）
 在安装 Visual FoxPro ODBC 驱动程序时，安装程序更新您的系统注册表中，在注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，添加名为 Microsoft Visual FoxPro 驱动程序的新项。 在该注册表项，添加下表中描述的值。  
@@ -45,7 +44,7 @@ ms.locfileid: "63316826"
   
  将 Visual FoxPro ODBC 数据源添加到您的 ODBC 配置，每次添加新的密钥为该数据源名称。 数据源的值中设置的值对应**ODBC Visual FoxPro 设置**对话框，如以下表中列出。  
   
-|值名称 （关键字）|值类型|值|  
+|值名称 （关键字）|值类型|ReplTest1|  
 |----------------------------|----------------|-----------|  
 |逐份打印|REG_SQ|任何受支持的排序规则序列|  
 |描述|REG_SZ|数据源的用户说明|  

@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: 本快速入门介绍了如何在所选云端的 Linux 上运行 SQL Server。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 00b2f24de925c1d957e535030079ad0b1e18487d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910521"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入门：在云中运行 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "67833613"
 > [!NOTE]
 > 如果您选择运行 SQL Server 的付费的版本，然后您需要自带许可 (BYOL)。
 
-## <a name="amazon-web-services"></a>Amazon Web Services
+## <a name="amazon-web-services"></a>Amazon Web 服务
 1.  使用至少 2 GB 的内存从 marketplace 中创建 Linux AMI 
     * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)

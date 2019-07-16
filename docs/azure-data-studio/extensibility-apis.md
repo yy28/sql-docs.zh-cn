@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3cde890f16e14866238f24e5d8a6bd52efdc9ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959627"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 扩展性 Api
 
@@ -65,7 +64,7 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>顶级函数
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 获取对应于给定的连接和路径的对象资源管理器节点。 如果未不指定任何路径，它将返回给定连接的顶级节点。 如果没有节点在给定的路径，它返回`undefined`。 注意：`nodePath`对象生成的 SQL 工具服务后端，并且难以手动构造。 未来 API 改进将允许你获取基于元数据提供有关该节点，例如名称、 类型和架构的节点。
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 获取对应于给定的连接和路径的对象资源管理器节点。 如果未不指定任何路径，它将返回给定连接的顶级节点。 如果没有节点在给定的路径，它返回`undefined`。 注意:`nodePath`对象生成的 SQL 工具服务后端，并且难以手动构造。 未来 API 改进将允许你获取基于元数据提供有关该节点，例如名称、 类型和架构的节点。
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 获取所有活动的对象资源管理器连接节点。
 

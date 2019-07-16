@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6cc110a773981a7592f8cdd06b3fd10b2d83144
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208834"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授予对象元数据的读取定义权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "50146372"
 ## <a name="set-read-definition-permissions-on-a-database"></a>设置数据库的读取定义权限  
  授予读取数据库元数据的权限便同时授予了读取数据库中所有对象的元数据的权限。  
   
- 我们建议在为专用处理设置角色时，包括数据库级别的“读取定义”  权限。 拥有“读取定义”权限使得非管理员可以查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的模型对象层次结构并导航至单个对象进行后续处理。  
+ 我们建议在为专用处理设置角色时，包括数据库级别的“读取定义”  权限。 拥有“读取定义”  权限使得非管理员可以查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的模型对象层次结构并导航至单个对象进行后续处理。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
 2.  在 **“常规”** 选项卡中，选择 **“读取定义”** 选项。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "50146372"
   
 ## <a name="set-read-definition-permissions-on-individual-objects"></a>设置单个对象的读取定义权限  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，打开“数据库”文件夹，选择一个数据库，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建新的数据库角色）。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，打开“数据库”  文件夹，选择一个数据库，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建新的数据库角色）。  
   
 2.  在“常规”  窗格，为 **Read Definition**清除数据库权限。 此步骤清除了权限继承，这样便可对单个对象设置权限。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "50146372"
   
     -   在“维度”  窗格，为该维度单击“读取定义”  复选框。 有经验的分析人员和开发人员在没有能修改定义或查看其他对象（例如，其他维度、多维数据集对象或挖掘结构和模型）定义的权限的情况下，可能需要查看定义。  
   
-    -   在“挖掘结构”窗格，单击数据挖掘结构或模型的“读取定义”  复选框。 浏览数据模型需要“读取定义” 。 有关详细信息，请参阅[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)。  
+    -   在“挖掘结构”窗格，单击数据挖掘结构或模型的“读取定义”  复选框。 浏览数据模型需要“读取定义”  。 有关详细信息，请参阅[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)。  
   
 4.  在“成员身份”  窗格中，输入使用此角色连接到 Analysis Services 的 Windows 用户和组帐户。  
   
 5.  单击“确定”  ，完成角色创建。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
