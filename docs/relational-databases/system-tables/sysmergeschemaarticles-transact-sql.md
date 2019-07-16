@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029810"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   跟踪合并复制的仅限架构的项目。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|合并复制中仅限架构的项目的名称。|  
-|**类型**|**tinyint**|指示仅限架构的项目的类型，可以是以下类型之一：<br /><br /> **0x20** = 存储过程仅限架构的项目。<br /><br /> **0x40** = 视图仅限架构的项目或索引的视图仅限架构的项目。|  
+|**name**|**sysname**|合并复制中仅限架构的项目的名称。|  
+|**type**|**tinyint**|指示仅限架构的项目的类型，可以是以下类型之一：<br /><br /> **0x20** = 存储过程仅限架构的项目。<br /><br /> **0x40** = 视图仅限架构的项目或索引的视图仅限架构的项目。|  
 |**objid**|**int**|项目基对象的对象标识符。 可以是过程、视图、索引视图或用户定义函数的对象标识符。|  
 |**artid**|**uniqueidentifier**|文章 id。|  
 |**description**|**nvarchar(255)**|项目的说明。|  

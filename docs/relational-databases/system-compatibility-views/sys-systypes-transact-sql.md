@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acf3466615548e9c88b7743c48e39d3915f9c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018078"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "47602686"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|数据类型名称。|  
+|**name**|**sysname**|数据类型名称。|  
 |**xtype**|**tinyint**|物理存储类型。|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|扩展用户类型。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
-|**长度**|**smallint**|数据类型的物理长度。|  
+|**length**|**smallint**|数据类型的物理长度。|  
 |**xprec**|**tinyint**|服务器使用的内部精度。 不在查询中使用。|  
 |**xscale**|**tinyint**|服务器使用的内部小数位数。 不在查询中使用。|  
 |**tdefault**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
@@ -52,9 +51,9 @@ ms.locfileid: "47602686"
 |**保留**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|如果基于字符， **collationid**是当前数据库中; 的排序规则的 id，否则，则为 NULL。|  
 |**usertype**|**smallint**|用户类型 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
-|variable|**bit**|可变长度数据类型。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**variable**|**bit**|可变长度数据类型。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|指示此数据类型的默认为空性。 如果为 null 性指定通过使用此默认值通过[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)或[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)。|  
-|**类型**|**tinyint**|物理存储数据类型。|  
+|**type**|**tinyint**|物理存储数据类型。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|此数据类型的精度级别。<br /><br /> -1 = **xml**或大值类型。|  
 |**scale**|**tinyint**|此数据类型根据精度确定的小数位数。<br /><br /> NULL = 数据类型不是数值。|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949604"
 ---
 # <a name="level-object-ado-md"></a>级别对象 (ADO MD)
 包含一组的成员，其中每个层次结构中相同的排名。  
@@ -43,11 +42,11 @@ ms.locfileid: "62740187"
   
  **属性**集合包含提供程序提供的属性。 下表列出了可能可用的属性。 实际的属性列表可能不同的提供程序实现根据。 请参阅可用属性的更完整的列表为提供程序的文档。  
   
-|“属性”|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  
-|Description|级别的有意义说明。|  
+|描述|级别的有意义说明。|  
 |DimensionUniqueName|明确的名称[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)。|  
 |HierarchyUniqueName|明确的层次结构的名称。|  
 |LevelCaption|标签或标题与级别关联。|  

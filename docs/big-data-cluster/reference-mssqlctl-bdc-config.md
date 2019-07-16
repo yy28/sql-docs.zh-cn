@@ -5,19 +5,18 @@ description: Mssqlctl bdc 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958178"
 ---
-# <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
+# <a name="mssqlctl-bdc-config"></a>mssqlctl bdc 配置
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -27,9 +26,9 @@ ms.locfileid: "67728689"
 |     |     |
 | --- | --- |
 [mssqlctl bdc config show](#mssqlctl-bdc-config-show) | 获取大数据群集的当前配置。
-[mssqlctl bdc config init](#mssqlctl-bdc-config-init) | 初始化大数据群集可用于群集的配置文件创建。
-[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | 列出了可用的配置配置文件选项。
-[mssqlctl bdc config section](reference-mssqlctl-bdc-config-section.md) | 使用大数据群集配置配置文件的各个部分的命令。
+[mssqlctl bdc 配置 init](#mssqlctl-bdc-config-init) | 初始化大数据群集可用于群集的配置文件创建。
+[mssqlctl bdc 配置列表](#mssqlctl-bdc-config-list) | 列出了可用的配置配置文件选项。
+[mssqlctl bdc 配置节](reference-mssqlctl-bdc-config-section.md) | 使用大数据群集配置配置文件的各个部分的命令。
 ## <a name="mssqlctl-bdc-config-show"></a>mssqlctl bdc config show
 获取大数据群集的当前配置的配置文件并将其输出到目标目录或相当将其打印到控制台。
 ```bash
@@ -57,7 +56,7 @@ mssqlctl bdc config show
 JMESPath 查询字符串。 请参阅[ http://jmespath.org/ ](http://jmespath.org/])有关详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用--debug 可获取完整的调试日志。
-## <a name="mssqlctl-bdc-config-init"></a>mssqlctl bdc config init
+## <a name="mssqlctl-bdc-config-init"></a>mssqlctl bdc 配置 init
 初始化大数据群集可用于群集的配置文件创建。 可以从 3 个选项中的参数中指定的配置文件的特定源。
 ```bash
 mssqlctl bdc config init [--target -t] 
@@ -91,7 +90,7 @@ mssqlctl bdc config init --source aks-dev-test --target custom
 JMESPath 查询字符串。 请参阅[ http://jmespath.org/ ](http://jmespath.org/])有关详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用--debug 可获取完整的调试日志。
-## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc config list
+## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc 配置列表
 列出了可用的配置中使用的配置文件选项 `bdc config init`
 ```bash
 mssqlctl bdc config list [--config-profile -c] 

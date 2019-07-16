@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs
+title: sp_add_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cce551e7523f78489c7cc587e9c3bd052d09cbe9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e3f0afcd0007dc0e61424449e87851ca562b0cdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009201"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>参数  
 `[ @plan_id = ] 'plan_id'` 指定维护计划的计划 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效的 id。  
   
-`[ @db_name = ] 'database_name'` 指定要添加到维护计划的数据库的名称。 在添加到计划中之前，数据库必须已创建或存在。 database_name 的数据类型为 sysname。  
+`[ @db_name = ] 'database_name'` 指定要添加到维护计划的数据库的名称。 在添加到计划中之前，数据库必须已创建或存在。 database_name 的数据类型为 sysname   。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

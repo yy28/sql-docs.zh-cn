@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181776"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>数据库一致性检查器 (DBCC) Analysis services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "52413084"
  拾取自上次重新启动服务以来发生的任何损坏错误时，可能需要重新启动服务。 重新连接到服务器不足以拾取这些更改。  
   
 ### <a name="run-dbcc-commands-in-management-studio"></a>在 Management Studio 中运行 DBCC 命令  
- 若要运行即席查询，请在 SQL Server Management Studio 中打开一个 MDX 或 XMLA 查询窗口。 为此，请右键单击数据库 |“新建查询” | “XMLA”以运行命令并读取输出。  
+ 若要运行即席查询，请在 SQL Server Management Studio 中打开一个 MDX 或 XMLA 查询窗口。 为此，请右键单击数据库 |“新建查询”   | “XMLA”  以运行命令并读取输出。  
   
  ![在 Management Studio 中的 DBCC XML 命令](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "在 Management Studio 中的 DBCC XML 命令")  
   
@@ -160,7 +160,7 @@ Execution complete
   
 1.  启动跟踪。 有关如何在 Analysis Services 中使用 SQL Server Profiler 的帮助，请参阅 [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md) 。  
   
-2.  选择“命令开始”和“命令结束”，以及任一或所有的“进度报告”事件。  
+2.  选择“命令开始”  和“命令结束”  ，以及任一或所有的“进度报告”  事件。  
   
 3.  使用上一部分提供的语法，在 Management Studio 的 XMLA 或 MDX 查询窗口中运行 DBCC 命令。  
   
@@ -186,13 +186,13 @@ Execution complete
 ### <a name="trace-dbcc-output-in-an-xevent-session-in-ssms"></a>在 SSMS 的 xEvent 会话中跟踪 DBCC 输出  
  扩展的事件会话可以使用分析器事件或 xEvents。 有关添加 **Command** 和 **Progress Report** 事件的指导，请参阅上一部分。  
   
-1.  通过右键单击数据库 >“管理” >“扩展事件” >  “会话” > “新建会话”来启动会话。 有关详细信息，请参阅  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 。  
+1.  通过右键单击数据库 >“管理”   >“扩展事件”   >  “会话”   > “新建会话”  来启动会话。 有关详细信息，请参阅  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 。  
   
 2.  选择 Profiler 事件类别的任一或所有 **进度报告** 事件，或 PureXevent 类别的任一或所有 **RequestProgress** 事件。  
   
 3.  使用上一部分提供的语法，在 Management Studio 的 XMLA 或 MDX 查询窗口中运行 DBCC 命令。  
   
-4.  在 SSMS 中刷新“会话”文件夹。 右键单击会话名称 >“查看实时数据”。  
+4.  在 SSMS 中刷新“会话”文件夹。 右键单击会话名称 >“查看实时数据”  。  
   
 5.  查看 DBCC 为消息返回的 TextData 值。  TextData 是事件字段的属性，显示事件返回的状态和错误消息。  
   
@@ -259,7 +259,7 @@ Execution complete
 ## <a name="common-resolutions-for-error-conditions"></a>错误状态的常见解决方法  
  SQL Server Management Studio 或 msmdsrv.log 文件中出现以下错误。 如果未通过一项或多项检查，将出现这些错误。 根据具体的错误，建议的解决方法是重新处理对象、删除并重新部署解决方案，或者还原数据库。  
   
-|错误|问题|解决方法|  
+|Error|问题|解决方法|  
 |-----------|-----------|----------------|  
 |**元数据管理器出错**<br /><br /> 对象引用\<objectID > 无效。 它与元数据类层次结构的结构不匹配。|命令格式不正确|检查命令语法。 很有可能你包含了一个较低级别的对象但未指定它的一个或多个父对象。|  
 |**元数据管理器出错**<br /><br /> 任一\<对象 > id 为 '\<objectID >' 中不存在\<parentobject > id 为\<parentobjectID >，或者用户没有访问该对象的权限。|索引损坏（多维）|重新处理对象和所有依赖对象。|  

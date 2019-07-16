@@ -1,5 +1,5 @@
 ---
-title: ConnectPromptEnum | Microsoft Docs
+title: ConnectPromptEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40ce74748e15a2715de26e813007e00be0c33729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919447"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定是否应显示一个对话框以打开与数据源的连接时提示输入缺少的参数。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|始终提示。|  
 |**adPromptComplete**|2|如果需要更多的信息，提示。|  

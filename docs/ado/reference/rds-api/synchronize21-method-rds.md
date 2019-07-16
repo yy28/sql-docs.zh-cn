@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1d731738938eab5732dcbfa86c0d624ae7941ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963256"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 将给定的记录集与 ADO 2.1 一起使用的连接字符串由指定的数据库同步。  

@@ -2,26 +2,25 @@
 title: 卸载 Analytics Platform System 修补程序在 |Microsoft Docs
 description: 卸载 Analytics Platform System 修补程序。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7135972201fe8cce8a43cbd3c8fe547ce40248e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62675675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959907"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>卸载 Analytics Platform System 修补程序 
 以下步骤介绍如何卸载以前安装的 Analytics Platform System 修补程序。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>系统必备  
 若要执行这些步骤，将需要：  
   
 -   有权访问管理控制台来监视设备分析平台系统登录名。  

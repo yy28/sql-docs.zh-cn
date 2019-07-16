@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c9179506ac96c1902c40de271f6024ed7e5c54d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001998"
 ---
 # <a name="cursors"></a>游标
 应用程序提取使用数据*游标*。 光标位于不同于结果集：结果集是与特定搜索条件匹配的行集，而游标是返回的行应用程序的软件。 名称*游标，* 当其应用到数据库，可能源自终端的计算机上闪烁的光标。 就像该光标指示当前位置在屏幕上键入的词语将显示下一步，结果集的游标指示结果集和接下来将返回哪些行中的当前位置。  

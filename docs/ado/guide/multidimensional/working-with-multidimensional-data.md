@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: afe8ff8c788a740ca98eca385146ecc71b6e1e95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923135"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 一个*单元集*是多维数据的查询的结果。 它包含的轴，通常不超过四个轴，通常只有两个或三个集合。 *轴*是来自一个或多个维度的成员的集合，用于查找或筛选多维数据集中的特定值。  

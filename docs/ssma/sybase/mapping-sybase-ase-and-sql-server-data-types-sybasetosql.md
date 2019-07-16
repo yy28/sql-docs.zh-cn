@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028890"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>映射 Sybase ASE 和 SQL Server 数据类型 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库类型。 转换到 ASE 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象，必须指定如何将映射到 ASE 中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
@@ -64,7 +63,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框。  
   
-    5.  单击“确定”  。  
+    5.  单击 **“确定”** 。  
   
 3.  若要编辑的数据类型映射，请执行以下操作：  
   

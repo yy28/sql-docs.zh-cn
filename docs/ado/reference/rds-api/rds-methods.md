@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b733230abfe7d9fc3c9e73831f097955cd056b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963687"
 ---
 # <a name="rds-methods"></a>RDS 方法
 > [!IMPORTANT]
@@ -27,7 +26,7 @@ ms.locfileid: "66694746"
   
 |||  
 |-|-|  
-|[Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|取消执行的挂起异步方法调用。|  
+|[取消 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|取消执行的挂起异步方法调用。|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|取消对当前或新的行进行任何更改**记录集**对象。|  
 |[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|将转换**记录集**为 MIME 字符串，表示记录集数据。|  
 |[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|创建目标业务对象的代理，并返回的指针。|  
@@ -37,8 +36,8 @@ ms.locfileid: "66694746"
 |[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|返回一个指向所请求的接口的对象的功能更强大版本上。|  
 |[MoveFirst、 MoveLast、 MoveNext、 MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|将移动到 first、 last、 下一步，或上一个记录中指定**记录集**对象。|  
 |[查询 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|使用有效的 SQL 查询字符串返回**记录集**。|  
-|[Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|将重新查询中指定的数据源**Connect**属性和更新查询结果。|  
-|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|客户端上执行排序或筛选**记录集**、 根据指定的排序和筛选器属性。|  
+|[刷新 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|将重新查询中指定的数据源**Connect**属性和更新查询结果。|  
+|[重置 (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|客户端上执行排序或筛选**记录集**、 根据指定的排序和筛选器属性。|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|提交挂起的更改的本地缓存和可更新**记录集**到中指定的数据源**Connect**属性。|  
 |[Synchronize 方法 (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|将给定的记录集与指定连接字符串 （适用于与 ADO 2.5 及更高版本一起使用） 的数据库同步。|  
 |[Synchronize21 方法 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|将给定的记录集与指定连接字符串 （适用于与 ADO 2.1 一起使用） 的数据库同步。|

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a944d3f82940d9364312fb8033ec8b8937b0c49c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919371"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 指定的行为[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)方法。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|指示*源*提供程序尝试模拟使用下载的副本并上传操作，如果此方法无法*目标*在另一台服务器上或由不同服务于访问接口*源*。 请注意，不同提供程序的功能可能会导致性能下降或丢失数据。|  
 |**adCopyNonRecursive**|2|将当前目录，但无及其子目录复制到目标。 复制操作是非递归。|  

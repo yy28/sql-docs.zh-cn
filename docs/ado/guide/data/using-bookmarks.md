@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7e14e063d1aabcfce6391a85c0fcddbf0ff4e9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923609"
 ---
 # <a name="using-bookmarks"></a>使用书签
 通常很有用处： 返回后需要移动中直接与特定记录**记录集**而无需滚动浏览每个记录和比较值。 例如，如果你尝试搜索记录使用**查找**方法，但搜索未返回任何记录，系统会自动在的任何一端**记录集**。 如果您的提供程序支持它们，可以使用书签来标记在使用之前的位置**查找**方法，以便你可以返回到你的位置。 书签是**Variant**键入值，该值唯一地标识中的记录**记录集**对象。  

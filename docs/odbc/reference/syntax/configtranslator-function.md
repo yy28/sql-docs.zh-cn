@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b56a5ebd0ad00e2c3abb87b72d2de8735245f99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18bf7e3f66140ef92b520ea7c86b616ea7067b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016701"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 函数
 **符合性**  
@@ -56,7 +55,7 @@ BOOL ConfigTranslator(
 ## <a name="diagnostics"></a>诊断  
  当**ConfigTranslator**返回 FALSE，关联 *\*pfErrorCode*值发布到安装程序错误缓冲区调用**SQLPostInstallerError**，可以通过调用中获得**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|窗口句柄无效|*HwndParent*参数为无效或为 NULL。|  
 |ODBC_ERROR_DRIVER_SPECIFIC|特定于驱动程序或转换器错误|没有任何定义的 ODBC 安装程序错误特定于驱动程序的错误。 *SzError*调用中的参数**SQLPostInstallerError**函数应包含特定于驱动程序的错误消息。|  

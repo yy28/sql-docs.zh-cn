@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e7a9dfd6d68f25b98469a79850444fc4726d785
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 094406b6bd8a07123049837318c00238ffaa2b84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052808"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法（ServerSettings 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "51668076"
 object.SetDefaults(OverwriteAll)  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个[ServerSettings 类](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)对象，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端实例。  
   
 #### <a name="parameters"></a>Parameters  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |*OverwriteAll*|一个布尔值，指定是否覆盖现有值的实例上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: **true**若要覆盖现有数据，或**false**如果不希望覆盖现有数据。|  
   

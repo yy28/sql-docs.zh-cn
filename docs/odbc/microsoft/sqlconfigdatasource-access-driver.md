@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Access Driver) | Microsoft Docs
+title: SQLConfigDataSource （Access 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b515ed4c30d68e62a49e1044c4ddf6f5cc5ab1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985233"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource（Access 驱动程序）
 > [!NOTE]  
@@ -27,11 +26,11 @@ ms.locfileid: "62665402"
   
  **SQLConfigDataSource**函数，用于添加、 修改或删除数据源动态使用下列关键字。  
   
-|关键字|Description|  
+|关键字|描述|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|字段的排序顺序的序列。<br /><br /> 这将设置为相同的选项**排序规则序列**中设置的对话框。|  
 |COMPACT_DB|在数据库文件上执行数据压缩。 采用以下格式：COMPACT_DB = < path_name >< optionaL_sort_order >\<可选加密关键字 >。<br /><br /> 在使用 DSN 关键字在同一语句中使用 COMPACT_DB 关键字，此驱动程序将忽略 DSN 关键字。 因此，压缩的数据库并指定 DSN 是一个两步过程。|  
-|CREATE_DB|创建一个数据库文件。 采用以下格式：CREATE_DB = < path_name >\<optional_sort 顺序 >< optional_ENCRYPT 关键字 >，其中的路径名称是 Microsoft Access 数据库的完整路径。 如果路径名称指定现有数据库，将返回错误。 排序顺序即可作为组运行时在 Microsoft 访问设置对话框中按创建按钮，显示新建数据库对话框中。 如果未不指定任何排序顺序，则使用常规。<br /><br /> 在使用 DSN 关键字在同一语句中使用 CREATE_DB 关键字，此驱动程序将忽略 DSN 关键字。 因此，创建数据库并指定 DSN 是一个两步过程。当使用 CREATE_DB 关键字，如果要创建的 Microsoft Access 数据库的路径名称中包含一个或多个空格，然后整个路径名引必须括在双引号引起来，如以下示例所示：<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb (no quotation marks needed)|  
+|CREATE_DB|创建一个数据库文件。 采用以下格式：CREATE_DB = < path_name >\<optional_sort 顺序 >< optional_ENCRYPT 关键字 >，其中的路径名称是 Microsoft Access 数据库的完整路径。 如果路径名称指定现有数据库，将返回错误。 排序顺序即可作为组运行时在 Microsoft 访问设置对话框中按创建按钮，显示新建数据库对话框中。 如果未不指定任何排序顺序，则使用常规。<br /><br /> 在使用 DSN 关键字在同一语句中使用 CREATE_DB 关键字，此驱动程序将忽略 DSN 关键字。 因此，创建数据库并指定 DSN 是一个两步过程。当使用 CREATE_DB 关键字，如果要创建的 Microsoft Access 数据库的路径名称中包含一个或多个空格，然后整个路径名引必须括在双引号引起来，如以下示例所示：<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb （不需要引号）|  
 |CREATE_SYSDB|创建一个系统数据库文件。 采用以下格式：CREATE_SYSDB =\<路径名称 >\<可选排序顺序 >，其中的路径名称是 Microsoft Access 数据库的完整路径。 如果路径名称指定现有数据库，将返回错误。 排序顺序就会为组启动中**新的数据库**对话框中显示时**创建**中单击按钮**ODBC Microsoft 访问设置**对话框。 如果未不指定任何排序顺序，则使用常规。|  
 |CREATE_V2DB|创建与 Microsoft Access 2.0 兼容的数据库文件。 采用以下格式：CREATE_V2DB =\<路径名称 >\<可选排序顺序 >，其中的路径名称是 Microsoft Access 数据库的完整路径。 如果路径名称指定现有数据库，将返回错误。 排序顺序即可作为组运行时在 Microsoft 访问设置对话框中按创建按钮，显示新建数据库对话框中。 如果未不指定任何排序顺序，则使用常规。<br /><br /> 在使用 DSN 关键字在同一语句中使用 CREATE_V2DB 关键字，此驱动程序将忽略 DSN 关键字。 因此，创建数据库并指定 DSN 是一个两步过程。<br /><br /> 当使用 CREATE_V2DB 关键字，如果要创建的 Microsoft Access 数据库的路径名称中包含一个或多个空格，然后整个路径名引必须括在双引号引起来，如以下示例所示：<br /><br /> "C:\PROGRAM FILES\COMMON FILES\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb （不需要引号）|  
 |DBQ|数据库文件的名称。<br /><br /> 这将设置为相同的选项**数据库**中设置的对话框。|  

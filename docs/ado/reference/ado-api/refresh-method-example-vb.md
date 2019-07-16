@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c44797b663007600b66db3d40d910d7f2459ad89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 220703626f5cbe7aa1b7f8aa3d6ee24fee238827
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917302"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 方法示例 (VB)
 此示例演示如何使用[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法来刷新[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)存储过程的集合[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  

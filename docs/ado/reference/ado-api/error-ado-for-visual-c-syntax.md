@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a203e3737ab6157f7aa40db57817404e370e97bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f71246fa641f74579f181f93da46333e2ffe3f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933033"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>错误（ADO for Visual C++ 语法）
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 ```  
 get_Description(BSTR *pbstr)  

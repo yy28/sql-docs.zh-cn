@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e9dd0a0884c96a8f5b17948c21b7f891a2e997ab
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 879b3e3d4a213c4b6f1ae1fd2c8e6f8f302a4eda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961886"
 ---
 # <a name="explore-and-visualize-the-data"></a>浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +40,7 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
 
 每条费用记录都包括付费信息，如付款类型、总付款和小费金额。
 
-最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。 tipped 列只有是/否值，用于二元分类。 Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。
+最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。  tipped 列只有是/否值，用于二元分类。  Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。 
 
 使用标签列的值都基于`tip_amount`列中，使用以下业务规则：
 

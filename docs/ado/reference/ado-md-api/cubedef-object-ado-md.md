@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3831c78380d8ae34e1dab74e92514c7d84136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949787"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 对象 (ADO MD)
 表示从多维架构，其中包含一组相关的维度的多维数据集。  
@@ -39,7 +38,7 @@ ms.locfileid: "66709385"
   
  **属性**集合包含提供程序提供的属性。 下表列出了可能可用的属性。 实际的属性列表可能不同的提供程序实现根据。 请参阅可用属性的更完整的列表为提供程序的文档。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |CreatedOn|日期和时间的多维数据集创建。|  
@@ -47,7 +46,7 @@ ms.locfileid: "66709385"
 |CubeName|多维数据集的名称。|  
 |CubeType|多维数据集的类型。|  
 |DataUpdatedBy|执行的最后一个数据更新的人员的用户 ID。|  
-|Description|多维数据集的贴切描述。|  
+|描述|多维数据集的贴切描述。|  
 |LastSchemaUpdate|日期和时间的上次架构更新。|  
 |SchemaName|此多维数据集所属的架构的名称。|  
 |SchemaUpdatedBy|执行上次架构更新的人员的用户 ID。|  

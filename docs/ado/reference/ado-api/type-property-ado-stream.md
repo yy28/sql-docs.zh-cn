@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8cad8d669452fb5d3bdff154cd7c07239f25044
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938230"
 ---
 # <a name="type-property-ado-stream"></a>Type 属性（ADO 流）
 指示中包含的数据类型[Stream](../../../ado/reference/ado-api/stream-object-ado.md) （二进制或文本）。  

@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962827"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -232,7 +231,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>第 1 步：取消绑定
+### <a name="step-1-unbind"></a>步骤 1：取消绑定
 
 有两个用于回滚绑定选项： 重新重新运行安装程序或使用 SqlBindR 命令行实用程序。
 
@@ -257,7 +256,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>第 2 步：修复 SQL Server 实例
+###  <a name="step-2-repair-the-sql-server-instance"></a>步骤 2：修复 SQL Server 实例
 
 运行 SQL Server 安装程序修复 R 和 Python 功能的数据库引擎实例。 会保留现有的更新，但如果你错过了任何 SQL Server 服务对 R 和 Python 包的更新，此步骤适用于这些修补程序。
 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4ad701efe914780a74bba3b8f0530b4881d7709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94f823cdefe4b3e5a62beb62062356dad3a88a03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036125"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 函数
 **符合性**  
@@ -54,7 +53,7 @@ SQLRETURN SQLCancel(
 ## <a name="diagnostics"></a>诊断  
  当**SQLCancel**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLCancel** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)参数中 *\*MessageText*缓冲区描述错误以及其原因。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9121485ddbe3f4fd72bf40b4518a7af8b196fa23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041021"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47725405"
   
 ||  
 |-|  
-|**请注意**： 此存储的过程中已弃用[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 它不再需要并且不能使用，从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
+|**注意**：此存储的过程中已弃用[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 它不再需要并且不能使用，从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,12 +56,12 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  为数据文件中所示的事务的 (bigint) 上限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)。 对于无效的 transactonId 值将生成错误。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="cursors-returned"></a>返回的游标  
- None  
+ 无  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 sysadmin 固定服务器角色和 db_owner 固定数据库角色。  
   
 ## <a name="remarks"></a>备注  

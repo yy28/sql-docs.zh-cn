@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513911"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178446"
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署脚本文件 - 分区和角色部署选项
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52513911"
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>修改分区和角色部署选项  
  您可能要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的分区和角色选项中存储项目\<*项目名称*>.deploymentoptions 文件。 例如，你可能想保留现有分区、 角色和角色成员，而不是替换所有现有分区、 角色和成员，如下所示\<*项目名称*>.deploymentoptions 文件。  
   
- 若要修改分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，您不能更改项目中的分区和角色设置，因为*\<项目名称 >* **属性页**对话框中的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不显示这些选项。 如果你想要更改角色和分区的部署选项，则必须更改中的此信息\<*项目名称*>.deploymentoptions 文件本身。 以下过程介绍如何更改分区和角色部署选项\<*项目名称*>.deploymentoptions 文件。  
+ 若要修改分区和角色中的部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中，您不能更改项目中的分区和角色设置，因为 *\<项目名称 >* **属性页**对话框中的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不显示这些选项。 如果你想要更改角色和分区的部署选项，则必须更改中的此信息\<*项目名称*>.deploymentoptions 文件本身。 以下过程介绍如何更改分区和角色部署选项\<*项目名称*>.deploymentoptions 文件。  
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>在生成了输入文件后更改分区或角色的部署  
   

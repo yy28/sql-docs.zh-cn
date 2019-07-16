@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181679"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>配置 Analysis Services 和 Kerberos 约束委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52811149"
   
  ![工作簿用作数据源](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "工作簿用作数据源")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>方案 2:Analysis Services 表格模型链接到 Excel 工作簿  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>方案 2：Analysis Services 表格模型链接到 Excel 工作簿  
  Analysis Services 表格模型![请参阅 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "请参阅 1")链接到 Excel 工作簿包含 Powerpivot 模型。 在此方案中，当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 加载表格模型时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将检测指向该工作簿的链接。 在处理模型时， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 会将查询请求发送到 SharePoint，以加载工作簿。 在此方案中， **无需** 将客户端凭据从 Analysis Services 委派到 SharePoint，但是客户端应用程序可以覆盖外部绑定中的数据源信息。 如果外部绑定请求指定模拟当前用户，则必须委派用户凭据，这需要在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 SharePoint 之间配置 KCD。  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
@@ -55,7 +55,7 @@ ms.locfileid: "52811149"
   
 -   **角色：** Active Directory 域服务。 有关概述，请参阅 [在 Windows Server 2012 中配置 Active Directory (AD DS)](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)。  
   
--   **角色：** DNS Server  
+-   **角色：** DNS 服务器  
   
 -   **功能：** .NET Framework 3.5 功能/.NET Framework 3.5  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52811149"
   
      **注意：** 如果您看不到该帐户，在 Active Directory 用户和计算机，在委派选项卡，它是因为该帐户上没有任何 SPN。  你可以添加一个虚设的 SPN 使其显示出来，例如 `my/spn`。  
   
-     “仅信任此用户作为指定服务的委派” 和“使用任何身份验证协议” 。  
+     “仅信任此用户作为指定服务的委派”  和“使用任何身份验证协议”  。  
   
      这称为约束委派，并且为必需，因为 Windows 令牌将生成自“声明为 Windows 令牌服务(C2WTS)”，而改服务需要具有协议转换的约束委派。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "52811149"
   
      **注意：** 如果您看不到该帐户，在 Active Directory 用户和计算机，在委派选项卡，它是因为该帐户上没有任何 SPN。  你可以添加一个虚设的 SPN 使其显示出来，例如 `my/spn`。  
   
-     “仅信任此用户作为指定服务的委派” 和“使用任何身份验证协议” 。  
+     “仅信任此用户作为指定服务的委派”  和“使用任何身份验证协议”  。  
   
      这称为约束委派，并且为必需，因为 Windows 令牌将生成自“声明为 Windows 令牌服务(C2WTS)”，而改服务需要具有协议转换的约束委派。  然后允许向上面创建的 MSOLAPSvc.3 和 MSOLAPDisco.3 SPNs 进行委派。  
   
