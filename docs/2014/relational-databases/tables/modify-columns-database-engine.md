@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211839"
 ---
 # <a name="modify-columns-database-engine"></a>修改列（数据库引擎）
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改列的数据类型。  
@@ -50,13 +50,13 @@ ms.locfileid: "54126087"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>修改列的数据类型  
   
-1.  在“对象资源管理器”中，右键单击要更改其小数位数的列所在的表，再单击“设计”。  
+1.  在“对象资源管理器”  中，右键单击要更改其小数位数的列所在的表，再单击“设计”  。  
   
 2.  选择要修改其数据类型的列。  
   
-3.  在“列属性”选项卡中，单击“数据类型”属性的网格单元格，再从下拉列表中选择新的数据类型。  
+3.  在“列属性”  选项卡中，单击“数据类型”  属性的网格单元格，再从下拉列表中选择新的数据类型。  
   
-4.  在“文件”菜单上，单击“保存”以保存表名。  
+4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 > [!NOTE]  
 >  当您修改列的数据类型时，即使已为所选数据类型指定其他长度，表设计器也会使用该数据类型的默认长度。 在指定数据类型之后，始终需要将数据类型长度设置为所需的值。  
@@ -70,9 +70,9 @@ ms.locfileid: "54126087"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  

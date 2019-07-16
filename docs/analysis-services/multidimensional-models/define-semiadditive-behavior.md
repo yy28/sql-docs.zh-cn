@@ -1,5 +1,5 @@
 ---
-title: 定义半累加性行为 |Microsoft 文档
+title: 定义半累加性行为 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178646"
 ---
 # <a name="define-semiadditive-behavior"></a>定义半累加性行为
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "34023434"
   
 -   First Nonempty Child  
   
--   InclusionThresholdSetting  
+-   无  
   
- 此选项不会更改使用下列常规聚合函数的度量值： **Sum**、 **Min**、 **Max**、 **Count**，或者 **Distinct****Count**。  
+ 此选项不会更改使用下列常规聚合函数的度量值：**总和**， **Min**， **Max**，**计数**，或**不同 * * * 计数**。  
   
- **向导检测到包含半累加性成员的“账户”帐户维度。服务器将聚合根据为每个帐户类型指定的半累加性行为此维度的成员。**  
+ **向导检测到帐户"包含半累加性成员的帐户维度。服务器将聚合此维度根据为每个帐户类型指定的半累加性行为的成员。**  
  导致系统将按“帐户”类型维度进行维度化的度量值组中的所有度量值设置为“按帐户”聚合函数，并且服务器将根据为每个帐户类型指定的半累加性行为聚合此维度的成员。  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "34023434"
   
  对于每个度量值，可以从下表所描述的半累加性功能类型中进行选择。  
   
-|半累加性函数|Description|  
+|半累加性函数|描述|  
 |---------------------------|-----------------|  
 |Average of Children|成员的聚合是其子级的平均。|  
 |ByAccount|系统读取为帐户类型指定的半累加性行为。|  
@@ -74,7 +74,7 @@ ms.locfileid: "34023434"
 |LastNonEmpty|将成员值认定为其包含数据的沿时间维度的最后一个子级的值。|  
 |Max|应用标准的最大值聚合函数。|  
 |Min|应用标准的最小值聚合函数。|  
-|InclusionThresholdSetting|不应用聚合。|  
+|无|不应用聚合。|  
 |SUM|应用标准的求和函数。|  
   
  完成向导时，将覆盖任何现有的半累加性行为。  

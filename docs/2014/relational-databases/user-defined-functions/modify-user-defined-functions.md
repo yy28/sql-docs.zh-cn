@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133597"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196447"
 ---
 # <a name="modify-user-defined-functions"></a>修改用户定义函数
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的用户定义函数。 按如下所述修改用户定义函数将不会更改函数的权限，并且也不会影响任何依赖的函数、存储过程或触发器。  
@@ -66,11 +66,11 @@ ms.locfileid: "54133597"
   
     -   Aggregate 函数  
   
-4.  右键单击要修改的函数，然后单击“修改”。  
+4.  右键单击要修改的函数，然后单击“修改”  。  
   
 5.  在查询窗口中，对 ALTER FUNCTION 语句进行必要的更改。  
   
-6.  在“文件”菜单上，点击“保存”function_name。  
+6.  在“文件”  菜单上，点击“保存”  function_name  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,9 +78,9 @@ ms.locfileid: "54133597"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Scalar-Valued Function  

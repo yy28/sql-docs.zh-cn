@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b3f9d94d35d5aaa4ea86cf1f1d9dc845b67eaf4f
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162355"
 ---
 # <a name="workspace-database"></a>工作区数据库
 
@@ -61,7 +61,7 @@ ms.locfileid: "53072264"
   
 -   查询时可能滞后。  
   
--   “数据备份”属性不能设置为 **“备份到磁盘”**。  
+-   “数据备份”属性不能设置为 **“备份到磁盘”** 。  
   
 -   在使用“从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 导入”项目模板创建新的表格模型项目时，不能从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿导入数据。  
   
@@ -79,19 +79,19 @@ ms.locfileid: "53072264"
  工作区数据库属性包含在模型属性中。 若要查看模型属性，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“解决方案资源管理器”** 中，单击 **Model.bim** 文件。 可以使用 **“属性”** 窗口配置模型属性。 工作区数据库特定属性包括：  
   
 > [!NOTE]  
->  创建新模型项目时，“集成工作区模式”、“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页上（位于“工具\选项”对话框的“分析服务器”设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+>  创建新模型项目时，“集成工作区模式”  、“工作区服务器”  、“工作区保持期”  和“数据备份”  属性将应用默认设置。 可以在“数据建模”  页上（位于“工具\选项”对话框的“分析服务器”  设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-|属性|默认设置|Description|  
+|属性|默认设置|描述|  
 |--------------|---------------------|-----------------|  
-|**集成工作区模式**|True、False|如果创建项目时，为工作区数据库选择集成工作区模式，此属性将为 True。 如果创建项目时，选择“工作区服务器”模式，此属性将为 False。 | 
-|**工作区数据库**|“属性”|工作区数据库的名称。 当“集成工作区模式”为“True”时，无法编辑此属性。|  
-|**工作区保持期**|从内存中卸载|指定在关闭某一模型项目后将如何保留工作区数据库。 工作区数据库将包含模型元数据和导入的数据。 在某些情况下，工作区数据库可能会非常大并且占用大量内存。 默认情况下，关闭 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目时，将从内存中卸载工作区数据库。 在更改此设置时，一定要考虑您的可用内存资源以及计划处理该模型项目的频繁程度。 此属性设置具有以下选项：<br /><br /> **保留在内存中** - 指定在关闭模型项目后将工作区数据库保留在内存中。 此选项将会占用较多内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用较少的资源并且工作区数据库将更快加载。<br /><br /> **从内存中卸载** - 指定将工作区数据库保留在磁盘上，但在关闭模型项目后将不再保留在内存中。 此选项将会占用较少内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，必须重新附加工作区数据库；这样会占用更多资源，并且与工作区数据库保留在内存中相比，模型项目的加载速度将更慢。 在内存中资源受到限制或在处理远程工作区数据库时，将使用此选项。<br /><br /> **删除工作区** - 指定从内存中删除工作区数据库，在关闭模型项目后不将工作区数据库保留在磁盘上。 此选项将会占用较少内存和存储空间；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用附加的资源，并且与工作区数据库保留在内存中或磁盘上相比，模型项目的加载速度将更慢。 只有在偶尔处理模型项目时，才使用此选项。<br /><br /> 可以在“数据建模”页上（位于“工具\选项”对话框的“分析服务器”设置中）更改此属性的默认设置。 当“集成工作区模式”为“True”时，无法编辑此属性。|  
-|**工作区服务器**|localhost|此属性指定在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作模型项目时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的所有可用实例都将包括在列表框中。<br /><br /> 若要指定其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器（在表格模式下运行），请键入服务器名称。 登录的用户必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的管理员。<br /><br /> 注意：建议你将本地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器指定为工作区服务器。 对于远程服务器上的工作区数据库，不支持从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。<br /><br /> 可以在“数据建模”页上（位于“工具\选项”对话框的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 设置中）更改此属性的默认设置。 当“集成工作区模式”为“True”时，无法编辑此属性。|  
+|**集成工作区模式**|True、False|如果创建项目时，为工作区数据库选择集成工作区模式，此属性将为 True。 如果创建项目时，选择“工作区服务器”  模式，此属性将为 False。 | 
+|**工作区数据库**|名称|工作区数据库的名称。 当“集成工作区模式”  为“True”  时，无法编辑此属性。|  
+|**工作区保持期**|从内存中卸载|指定在关闭某一模型项目后将如何保留工作区数据库。 工作区数据库将包含模型元数据和导入的数据。 在某些情况下，工作区数据库可能会非常大并且占用大量内存。 默认情况下，关闭 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目时，将从内存中卸载工作区数据库。 在更改此设置时，一定要考虑您的可用内存资源以及计划处理该模型项目的频繁程度。 此属性设置具有以下选项：<br /><br /> **保留在内存中** - 指定在关闭模型项目后将工作区数据库保留在内存中。 此选项将会占用较多内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用较少的资源并且工作区数据库将更快加载。<br /><br /> **从内存中卸载** - 指定将工作区数据库保留在磁盘上，但在关闭模型项目后将不再保留在内存中。 此选项将会占用较少内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，必须重新附加工作区数据库；这样会占用更多资源，并且与工作区数据库保留在内存中相比，模型项目的加载速度将更慢。 在内存中资源受到限制或在处理远程工作区数据库时，将使用此选项。<br /><br /> **删除工作区** - 指定从内存中删除工作区数据库，在关闭模型项目后不将工作区数据库保留在磁盘上。 此选项将会占用较少内存和存储空间；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用附加的资源，并且与工作区数据库保留在内存中或磁盘上相比，模型项目的加载速度将更慢。 只有在偶尔处理模型项目时，才使用此选项。<br /><br /> 可以在“数据建模”  页上（位于“工具\选项”对话框的“分析服务器”  设置中）更改此属性的默认设置。 当“集成工作区模式”  为“True”  时，无法编辑此属性。|  
+|**工作区服务器**|localhost|此属性指定在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作模型项目时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的所有可用实例都将包括在列表框中。<br /><br /> 若要指定其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器（在表格模式下运行），请键入服务器名称。 登录的用户必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的管理员。<br /><br /> 注意：建议你将本地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器指定为工作区服务器。 对于远程服务器上的工作区数据库，不支持从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。<br /><br /> 可以在“数据建模”页上（位于“工具\选项”对话框的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 设置中）更改此属性的默认设置。 当“集成工作区模式”  为“True”  时，无法编辑此属性。|  
   
 ##  <a name="bkmk_use_ssms"></a> 使用 SSMS 管理工作区数据库  
  可以使用 SQL Server Management Studio (SSMS) 连接到托管工作区数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 通常，无需对工作区数据库进行管理；例外的情况是分离或删除工作区数据库，这必须从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行。 在模型设计器中打开项目时，不要使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来管理工作区数据库。 这样做可能导致数据丢失。
    
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [模型属性](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

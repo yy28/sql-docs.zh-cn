@@ -1,5 +1,5 @@
 ---
-title: 共享数据馈送使用数据馈送的库 (Power Pivot for SharePoint) |Microsoft 文档
+title: 使用数据馈送的库 (Powerpivot for SharePoint) 共享数据馈送 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f262fe19ba39f217135908173189bf93a7e68817
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163711"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>使用数据馈送库共享数据馈送 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "34030688"
   
 1.  在 SharePoint 站点上，打开数据馈送库或另一个您已添加和配置了数据服务内容类型的文档库。 若要查找以前创建的数据馈送库，请单击“快速启动”中的 **“查看全部”** 。  
   
-2.  在页顶部功能区的“文档工具”中，单击 **“文档”**。  
+2.  在页顶部功能区的“文档工具”中，单击 **“文档”** 。  
   
-3.  单击 **“新建文档”** ，然后选择 **“数据服务文档”**。  
+3.  单击 **“新建文档”** ，然后选择 **“数据服务文档”** 。  
   
 4.  在“新建数据服务文档”页中，输入以下信息：  
   
@@ -110,7 +110,7 @@ ms.locfileid: "34030688"
 ##  <a name="usedsdoc"></a> 下一步：使用数据服务文档  
  若要使用你在 SharePoint 库中创建的数据服务文档，可以使用 **数据源中的**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] “从数据馈送”导入选项。 有关说明，请参阅[使用数据馈送 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Power Pivot 数据馈送](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

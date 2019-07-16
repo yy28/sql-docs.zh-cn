@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347e8d170006cb289b421171851140b18e64f14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898420"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_updateextendedproperty
  与属性关联的值。 *值*是**sql_variant**，默认值为 NULL。 大小*值*可能超过 7500 个字节。  
   
  [ @level0type=] {'*level0_object_type*}  
- 用户或用户定义类型。 *level0_object_type*是**varchar （128)**，默认值为 NULL。 有效输入包括程序集、 协定、 事件通知、 文件组、 消息类型、 分区函数、 分区方案，计划指南、 REMOTE SERVICE BINDING、 路由、 架构、 服务、 用户、 触发器、 类型和为 NULL。  
+ 用户或用户定义类型。 *level0_object_type*是**varchar （128)** ，默认值为 NULL。 有效输入包括程序集、 协定、 事件通知、 文件组、 消息类型、 分区函数、 分区方案，计划指南、 REMOTE SERVICE BINDING、 路由、 架构、 服务、 用户、 触发器、 类型和为 NULL。  
   
 > [!IMPORTANT]  
 >  作为级别 0 类型的 USER 和 TYPE 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。 改用 SCHEMA 替代 USER 作为级别 0 类型。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
@@ -88,7 +87,7 @@ sp_updateextendedproperty
   
  给定一个有效*property_name*并*值*，如果所有对象类型和名称都均为 null，更新的属性属于当前数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  db_owner 和 db_ddladmin 固定数据库角色的成员可以更新任何对象的扩展属性，但以下情况例外：db_ddladmin 不能向数据库本身添加属性，也不能向用户或角色中添加属性。  
   
  用户可以更新其拥有的对象的扩展属性，也可更新其拥有 ALTER 或 CONTROL 权限的扩展属性。  
@@ -139,8 +138,8 @@ GO
 ## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

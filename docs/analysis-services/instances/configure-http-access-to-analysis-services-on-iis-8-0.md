@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182112"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 上配置对 Analysis Services 的 HTTP 访问
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "56079463"
   
  **IIS 8.0 中的额外配置**  
   
- IIS 8.0 的默认配置缺少 HTTP 访问 Analysis Services 所必需的组件。 位于“**Web 服务器 (IIS)**”角色的“**安全性**”和“**应用程序开发**”功能区的这些组件包括：  
+ IIS 8.0 的默认配置缺少 HTTP 访问 Analysis Services 所必需的组件。 位于“**Web 服务器 (IIS)** ”角色的“**安全性**”和“**应用程序开发**”功能区的这些组件包括：  
   
 -   “**安全性**” | “**Windows 身份验证**”或“**基本身份验证**”和你的数据访问方案所需的任何其他安全功能。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "56079463"
   
 -   “**应用程序开发**” | “**ISAPI 扩展插件**”  
   
- 若要验证或添加这些组件，请使用“**服务器管理器**” | “**管理**” | “**添加角色和功能**”。 逐步执行向导直至到达 **“服务器角色”**。 向下滚动以查找“**Web 服务器 (IIS)**”。  
+ 若要验证或添加这些组件，请使用“**服务器管理器**” | “**管理**” | “**添加角色和功能**”。 逐步执行向导直至到达 **“服务器角色”** 。 向下滚动以查找“**Web 服务器 (IIS)** ”。  
   
 1.  依次打开“**Web 服务器**” | “**安全**”，然后选择身份验证方法。  
   
@@ -91,12 +91,12 @@ ms.locfileid: "56079463"
 > [!NOTE]  
 >  请记住，为了允许与远程 Analysis Services 服务器的客户端连接，需取消阻止 Windows 防火墙中的端口。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a> 步骤 1：将 MSMDPUMP 文件复制到 Web 服务器上的某个文件夹  
+##  <a name="bkmk_copy"></a> 步骤 1：将 MSMDPUMP 文件复制到 Web 服务器上的文件夹  
  所创建的每个 HTTP 端点均必须有其自身的一组 MSMDPUMP 文件。 在此步骤中，从 Analysis Services 程序文件夹中将 MSMDPUMP 可执行文件、配置文件和资源文件复制到新的虚拟目录文件夹，你将在运行 IIS 的计算机的文件系统上创建此虚拟目录文件夹。  
   
  必须为 NTFS 文件系统格式化该驱动器。 指向您创建的文件夹的路径不得包含任何空格。  
   
-1.  复制以下文件，请参阅\<驱动器 >: SQL Server \Program Files\Microsoft\\< 实例\>\OLAP\bin\isapi:MSMDPUMP.DLL、MSMDPUMP.INI 和 Resources 文件夹。  
+1.  复制以下文件，请参阅\<驱动器 >: SQL Server \Program Files\Microsoft\\< 实例\>\OLAP\bin\isapi:MSMDPUMP。DLL，MSMDPUMP。INI 和 Resources 文件夹。  
   
      ![MSMDPUMP 文件的文件夹结构](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "MSMDPUMP 文件的文件夹结构")  
   
@@ -104,7 +104,7 @@ ms.locfileid: "56079463"
   
 3.  将先前复制的文件粘贴到这个新文件夹。  
   
-4.  确认 Web 服务器上的 \inetpub\wwwroot\OLAP 文件夹含有以下各项：MSMDPUMP.DLL、MSMDPUMP.INI 和 Resources 文件夹。 文件夹结构应类似于此：  
+4.  验证在 web 服务器上的 \inetpub\wwwroot\OLAP 文件夹包含以下：MSMDPUMP。DLL，MSMDPUMP。INI 和 Resources 文件夹。 文件夹结构应类似于此：  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -121,11 +121,11 @@ ms.locfileid: "56079463"
   
 1.  启动 IIS 管理器。  
   
-2.  打开服务器文件夹，右键单击“**应用程序池**”，然后单击“**添加应用程序池**”。 使用 .NET Framework 创建一个名为 **OLAP**的应用程序池，并且将托管的管道模式设置为“典型” 。  
+2.  打开服务器文件夹，右键单击“**应用程序池**”，然后单击“**添加应用程序池**”。 使用 .NET Framework 创建一个名为 **OLAP**的应用程序池，并且将托管的管道模式设置为“典型”  。  
   
      ![屏幕截图的添加应用程序池对话框](../../analysis-services/instances/media/ssas-httpaccess.PNG "屏幕截图的添加应用程序池对话框")  
   
-3.  默认情况下，IIS 将使用 **“ApplicationPoolIdentity”** 作为安全标识创建应用程序池，这是实现对 Analysis Services 的 HTTP 访问的有效选择。 如果你因为特定原因需要更改标识，右键单击“ **OLAP**”，然后选择“ **高级设置**”。 选择 **“ApplicationPoolIdentity”**。 单击此属性的“ **更改** ”按钮，以便用你要使用的自定义帐户替换该内置帐户。  
+3.  默认情况下，IIS 将使用 **“ApplicationPoolIdentity”** 作为安全标识创建应用程序池，这是实现对 Analysis Services 的 HTTP 访问的有效选择。 如果你因为特定原因需要更改标识，右键单击“ **OLAP**”，然后选择“ **高级设置**”。 选择 **“ApplicationPoolIdentity”** 。 单击此属性的“ **更改** ”按钮，以便用你要使用的自定义帐户替换该内置帐户。  
   
      ![屏幕截图的高级设置属性页](../../analysis-services/instances/media/ssas-httpaccess-advsettings.PNG "屏幕截图的高级设置属性页")  
   
@@ -133,7 +133,7 @@ ms.locfileid: "56079463"
   
 #### <a name="create-an-application"></a>创建应用程序  
   
-1.  在 IIS 管理器中，打开 **“站点”**，然后打开 **“默认网站”**。 将显示名为 **Olap**的文件夹。 这是你在 \inetpub\wwwroot 路径下创建的 OLAP 文件夹的引用。  
+1.  在 IIS 管理器中，打开 **“站点”** ，然后打开 **“默认网站”** 。 将显示名为 **Olap**的文件夹。 这是你在 \inetpub\wwwroot 路径下创建的 OLAP 文件夹的引用。  
   
      ![之前的 OLAP 文件夹转换为应用程序](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "前的 OLAP 文件夹转换为应用程序")  
   
@@ -143,7 +143,7 @@ ms.locfileid: "56079463"
   
      ![设置将应用程序转换](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "将转换应用程序设置")  
   
-4.  单击“确定” 。 刷新网站，请注意默认网站下 OLAP 文件夹现在是一个应用程序。 MSMDPUMP 文件的虚拟路径现已创建。  
+4.  单击 **“确定”** 。 刷新网站，请注意默认网站下 OLAP 文件夹现在是一个应用程序。 MSMDPUMP 文件的虚拟路径现已创建。  
   
      ![向应用程序转换后的 OLAP 文件夹](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "到应用程序转换后的 OLAP 文件夹")  
   
@@ -167,13 +167,13 @@ ms.locfileid: "56079463"
   
  初始测试期间经常使用**匿名身份验证** ，因为其易于配置，有助于快速验证与 Analysis Services 的 HTTP 连接。 只需几步，即可分配唯一用户帐户作为标识，向该帐户授予 Analysis Services 中的权限，使用该帐户验证客户端应用程序中的数据访问，然后在测试完毕后禁用匿名身份验证。  
   
- 如果用户没有 Windows 用户帐户，也可在生产环境中使用匿名身份验证，但要遵守在主机系统上锁定权限的最佳做法，如本文中所注：[启用匿名身份验证 (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 务必对虚拟目录（而不要对父级网站）设置身份验证以进一步降低帐户访问权限的级别。  
+ 如果你的用户不具有 Windows 用户帐户，但要遵守的主机系统上锁定权限的最佳做法，这篇文章中所述，您还可以在生产环境中使用匿名身份验证：[启用匿名身份验证 (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 务必对虚拟目录（而不要对父级网站）设置身份验证以进一步降低帐户访问权限的级别。  
   
  启用匿名后，将允许任何连接到该 HTTP 端点的用户以匿名用户的身份进行连接。 你将无法审核单个用户连接，也不使用用户标识来从模型中选择数据。 如您所见，使用匿名会影响从模型设计到数据刷新和访问权限的所有情况。 但是，如果用户没有 Windows 用户登录名可用，则也许只能使用匿名帐户。  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>设置身份验证类型并添加脚本映射  
   
-1.  在 IIS 管理器中，打开 **“站点”**，打开 **“默认网站”**，然后选择 **OLAP** 虚拟目录。  
+1.  在 IIS 管理器中，打开 **“站点”** ，打开 **“默认网站”** ，然后选择 **OLAP** 虚拟目录。  
   
 2.  在主页的 IIS 部分中双击“ **身份验证** ”。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "56079463"
   
      ![屏幕截图的添加脚本映射对话框](../../analysis-services/instances/media/ssas-httpaccess-addscript.png "屏幕截图的添加脚本映射对话框")  
   
-8.  在提示是否允许 ISAPI 扩展插件时，单击 **“是”**。  
+8.  在提示是否允许 ISAPI 扩展插件时，单击 **“是”** 。  
   
      ![添加 ISAPI 扩展插件的确认的屏幕截图](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "添加 ISAPI 扩展插件的确认的屏幕截图")  
   
@@ -275,13 +275,13 @@ ms.locfileid: "56079463"
   
  **使用 Excel 测试连接**  
   
-1.  在 Excel 的“数据”选项卡上的“获取外部数据”中，单击 **“从其他源”**，然后选择 **“从 Analysis Services”** 以启动数据连接向导。  
+1.  在 Excel 的“数据”选项卡上的“获取外部数据”中，单击 **“从其他源”** ，然后选择 **“从 Analysis Services”** 以启动数据连接向导。  
   
 2.  在“服务器名称”中，输入 msmdpump 扩展的 HTTP 地址： `http://my-web-srv01/OLAP/msmdpump.dll`。  
   
 3.  对于登录凭据，如果使用的是 Windows 集成安全性、NTLM 或匿名用户，则选择 **“使用 Windows 验证”** 。  
   
-     对于基本身份验证，选择 **“使用下列用户名和密码”**，然后指定用于登录的凭据。 随后将在连接字符串中将所提供的凭据传递给 Analysis Services。  
+     对于基本身份验证，选择 **“使用下列用户名和密码”** ，然后指定用于登录的凭据。 随后将在连接字符串中将所提供的凭据传递给 Analysis Services。  
   
  **使用 AMO 测试连接**  
   

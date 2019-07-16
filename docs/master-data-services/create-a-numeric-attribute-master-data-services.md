@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f00183cdc91fabfcf168ceee8871b6033af2fdc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c759b196c250f4f3f868fba81a45f161dd75f67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906642"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>创建数字属性 (Master Data Services)
 
@@ -45,7 +44,7 @@ ms.locfileid: "65477051"
 |“列”|描述|  
 |------------|-----------------|  
 |“登录属性”|属性状态。<br /><br /> 单击保存后，系统显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示属性正在更新。<br /><br /> 如果创建或编辑属性时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
-|“属性”|属性名称。|  
+|名称|属性名称。|  
 |显示名称|属性显示名称。|  
 |描述|属性说明。|  
 |显示像素宽度|属性宽度。|  

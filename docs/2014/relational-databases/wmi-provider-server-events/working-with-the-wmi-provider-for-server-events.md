@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195729"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用 WMI Provider for Server Events
   本主题为您提供在使用 WMI Provider for Server Events 编程前应考虑的一些准则。  
@@ -109,7 +109,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY 或 REVOKE（仅适用于 ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION 或 CREATE TRACE EVENT NOTIFICATION 权限。）  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>使用客户端的事件数据  
- WMI 提供程序后 for Server Events 在目标数据库中，创建所需的事件通知的事件通知将事件数据发送到名为 msdb 中的目标服务**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 目标服务将事件放在队列`msdb`名为**WMIEventProviderNotificationQueue**。 （服务和队列都是提供程序首次连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时动态创建的。）提供程序然后读取此队列中的 XML 事件数据，在将其返回给客户端应用程序前将其转换为托管对象格式 (MOF)。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，将 `SPID` 属性作为 CIM 类型 `Sint32` 返回。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
+ WMI 提供程序后 for Server Events 在目标数据库中，创建所需的事件通知的事件通知将事件数据发送到名为 msdb 中的目标服务**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 目标服务将事件放在队列`msdb`名为**WMIEventProviderNotificationQueue**。 (服务和队列动态创建提供程序时它首次连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。)然后，该提供程序从此队列读取 XML 事件数据，并返回到客户端应用程序之前将其转换为托管的对象格式 (MOF)。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，将 `SPID` 属性作为 CIM 类型 `Sint32` 返回。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
   
 ## <a name="see-also"></a>请参阅  
  [WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)  

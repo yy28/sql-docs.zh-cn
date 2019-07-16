@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210717"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
   应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 `GETDATE()` 函数的查询来实现此功能。 请考虑以下行筛选器语句：  

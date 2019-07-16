@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose 实用工具 (Service Broker) |Microsoft Docs
+title: ssbdiagnose 实用工具 (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211008"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
   **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
@@ -156,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  请求检查是否为对话正确配置了指定的加密级别：  
   
- **ON**:默认设置。 配置了完全对话安全设置。 已为对话双方部署了证书，存在远程服务绑定，且针对目标服务的 GRANT SEND 语句指定了发起方用户。  
+ **ON**：默认设置。 配置了完全对话安全设置。 已为对话双方部署了证书，存在远程服务绑定，且针对目标服务的 GRANT SEND 语句指定了发起方用户。  
   
- **关闭**:不配置任何对话安全。 未部署证书，没有创建任何远程服务绑定，且针对发起方服务的 GRANT SEND 指定了 **公共** 角色。  
+ **OFF**：未配置任何对话安全设置。 未部署证书，没有创建任何远程服务绑定，且针对发起方服务的 GRANT SEND 指定了 **公共** 角色。  
   
- **匿名**:配置了匿名对话安全。 已部署了一个证书，远程服务绑定指定了匿名子句，且针对目标服务的 GRANT SEND 指定了 **公共** 角色。  
+ **ANONYMOUS**：配置了匿名对话安全设置。 已部署了一个证书，远程服务绑定指定了匿名子句，且针对目标服务的 GRANT SEND 指定了 **公共** 角色。  
   
  **RUNTIME**  
  请求导致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话运行时错误的问题的报告。 如果 **-NEW** 和 **-ID** 都未指定，则 **ssbdiagnose** 将监视连接选项中指定的所有数据库中的所有会话。 如果指定了 **-NEW** 或 **-ID** ， **ssbdiagnose** 将生成参数中指定的 ID 列表。  
@@ -183,14 +183,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  标识应用程序中某个会话端点的唯一标识符。 每个会话端点的会话句柄都是唯一的，发起方端点和目标端点具有不同的会话句柄。  
   
- 会话句柄返回给应用程序通过*@dialog_handle*参数**BEGIN DIALOG**语句中，和`conversation_handle`结果集中列的**接收**语句。  
+ 会话句柄返回给应用程序通过 *@dialog_handle* 参数**BEGIN DIALOG**语句中，和`conversation_handle`结果集中列的**接收**语句。  
   
  在中报告会话句柄`conversation_handle`的列**sys.transmission_queue**并**sys.conversation_endpoints**目录视图。  
   
  *conversation_group_id*  
  标识会话组的唯一标识符。  
   
- 会话组 Id 返回给应用程序通过*@conversation_group_id*参数**GET CONVERSATION GROUP**语句和`conversation_group_id`结果集中的列**接收**语句。  
+ 会话组 Id 返回给应用程序通过 *@conversation_group_id* 参数**GET CONVERSATION GROUP**语句和`conversation_group_id`结果集中的列**接收**语句。  
   
  在中报告会话组 Id`conversation_group_id`的列**sys.conversation_groups**并**sys.conversation_endpoints**目录视图。  
   
@@ -200,7 +200,7 @@ WHERE database_id = DB_ID();
  在中报告会话 Id`conversation_id`的列**sys.conversation_endpoints**目录视图。  
   
  **-TIMEOUT** *timeout_interval*  
- 指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose**-**。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
+ 指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose   **-** 。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
   
  **\<runtimeconnectionoptions>**  
  指定数据库的连接信息，该数据库包含与受监视的会话元素关联的服务。 如果所有服务都位于同一数据库中，则只需指定一个 **CONNECT TO** 子句。 如果各服务位于不同的数据库中，必须为每个数据库提供一个 **CONNECT TO** 子句。 如果未指定 **runtimeconnectionoptions** ，则 **ssbdiagnose** 使用 **baseconnectionoptions**中的连接信息。  
@@ -219,7 +219,7 @@ WHERE database_id = DB_ID();
   
  如果 **-E** 和 **-U** 都未指定，则 **ssbdiagnose** 将使用 SQLCMDUSER 环境变量的值。 如果 SQLCMDUSER 也未设置，则 **ssbdiagnose** 会尝试使用 Windows 身份验证模式，基于运行 **ssbdiagnose**的用户的 Windows 帐户进行连接。  
   
- 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 -U 选项后跟多个参数，便会生成错误消息并退出程序。  
+ 如果将 **-U** 选项与 **-E** 选项一起使用，将生成错误消息。 如果 -U  选项后跟多个参数，便会生成错误消息并退出程序。  
   
  **-P** *password*  
  指定 **-U** 登录 ID 的密码。 密码是区分大小写的。 如果使用了 **-U** 选项而未使用 **-P** 选项，则 **ssbdiagnose** 将使用 SQLCMDPASSWORD 环境变量的值。 如果 SQLCMDPASSWORD 也未设置，则 **ssbdiagnose** 会提示用户输入密码。  
@@ -243,7 +243,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  指定承载要分析的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例。  
   
- 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命名实例的 server_name\\instance_name**。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
+ 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命名实例的 server_name\\instance_name ** 。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
   
  **-S** *database_name*  
  指定承载要分析的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务的数据库。 如果该数据库不存在，将生成错误消息。 如果未指定 **-d** ，则默认为登录帐户的默认数据库属性中指定的数据库。  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211865"
 ---
 # <a name="modify-statistics"></a>修改统计信息
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的现有统计信息。  
@@ -58,11 +58,11 @@ ms.locfileid: "52398950"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要修改的统计信息对象，然后选择“属性”。  
+5.  右键单击要修改的统计信息对象，然后选择  “属性”。  
   
-6.  在“统计信息属性 -”*statistics_name* 对话框中的“常规页”上，单击“添加”“删除”“上移”“下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性。  
+6.  在  “统计信息属性 -”*statistics_name* 对话框中的  “常规页”上，单击  “添加”  “删除”  “上移”  “下移”或上述任意组合，以更改统计信息的属性。 请记住，某一列在“统计信息列”网格内的位置可能会显著影响统计信息的有用性  。  
   
-7.  单击“确定” 。  
+7.  单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改统计信息**  

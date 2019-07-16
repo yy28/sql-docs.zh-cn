@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785189"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210757"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切换可更新事务性订阅的更新模式
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中切换可更新事务订阅的更新模式。 可以使用新建订阅向导，为可更新的订阅指定模式。 有关使用此向导时设置模式的信息，请参阅[查看和修改请求订阅属性](../view-and-modify-pull-subscription-properties.md)。  
@@ -47,19 +47,19 @@ ms.locfileid: "52785189"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击要为其设置更新模式的订阅，然后单击 **“设置更新方法”**。  
+3.  右键单击要为其设置更新模式的订阅，然后单击 **“设置更新方法”** 。  
   
-4.  在中**设置更新方法-\<订阅服务器 >:\<订阅数据库 >** 对话框中，选择**立即更新**或**排队更新**。  
+4.  在“设置更新方法 - \<订阅服务器>:  \<订阅数据库>”对话框中，选择“立即更新”  或“排队更新”  。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>设置请求订阅的更新模式  
   
-1.  在中**订阅属性-\<发布服务器 >:\<发布数据库 >** 对话框中，选择值**立即复制更改**或**对更改进行排队**有关**订阅服务器更新方法**选项。  
+1.  在“订阅属性 - \<发布服务器>:  \<发布数据库>”对话框中，为“订阅服务器更新方法”  选项选择“立即复制所做的更改”  或“排队更改”  的值。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 有关访问的详细信息**订阅属性-\<发布服务器 >:\<发布数据库 >** 对话框中，请参阅[查看和修改请求订阅属性](../view-and-modify-pull-subscription-properties.md)。  
+ 有关访问“订阅属性 -  \<发布服务器>:  \<发布数据库>”对话框的详细信息，请参阅[查看和修改请求订阅属性](../view-and-modify-pull-subscription-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52785189"
   
 1.  通过对请求订阅执行 [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) 或对推送订阅执行 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) ，验证订阅是否支持故障转移。 如果结果集中 **update mode** 的值为 **3** 或 **4**，则支持故障转移。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql)。 指定 **@publisher**、 **@publisher_db**、 **@publication**并为 **@failover_mode**指定以下值之一：  
+2.  在订阅服务器上，对订阅数据库执行 [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** 并为 **@failover_mode** 指定以下值之一：  
   
     -   **queued** - 在短暂断开连接时将故障转移到排队更新。  
   

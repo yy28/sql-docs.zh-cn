@@ -1,5 +1,5 @@
 ---
-title: bcp_init |Microsoft Docs
+title: bcp_init | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74400acc3030967a985fca6041a60b96947ef64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47c7c4f5324da021db2624e5e936493fd54ea45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895533"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +83,7 @@ RETCODE bcp_init (
   
 -   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 从复制时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp_exec**将基于数据库表中的列的序号位置的数据。  
   
--   如果数据库数据类型长度是可变的 (例如， **varbinary(22)**) 或数据库列可以包含 null 值，如果数据文件中的数据作为前缀长度 /null 指示符。 指示符的宽度因数据类型和大容量复制的版本而异。  
+-   如果数据库数据类型长度是可变的 (例如， **varbinary(22)** ) 或数据库列可以包含 null 值，如果数据文件中的数据作为前缀长度 /null 指示符。 指示符的宽度因数据类型和大容量复制的版本而异。  
   
  若要更改数据文件指定的数据格式值，请调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)并[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。  
   

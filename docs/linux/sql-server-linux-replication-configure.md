@@ -4,19 +4,18 @@ description: 本文介绍如何在 Linux 上配置 SQL Server 复制。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895939"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上配置 SQL Server 复制
 
@@ -34,7 +33,7 @@ ms.locfileid: "67834794"
   
 * 有关使用存储过程示例，请按照[Linux 上的配置 SQL Server 复制](sql-server-linux-replication-tutorial-tsql.md)教程。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 配置发布服务器、 分发服务器和订阅服务器之前, 需要完成 SQL Server 实例的几个配置步骤。
 

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178361"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>部署脚本文件-指定处理选项
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取处理选项从\<*项目名称*>.deploymentoptions 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用上指定的处理选项**部署**页*\<项目名称 >* **属性页**对话框中，若要创建\<*项目名称*>.deploymentoptions 文件。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取处理选项从\<*项目名称*>.deploymentoptions 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用上指定的处理选项**部署**页 *\<项目名称 >* **属性页**对话框中，若要创建\<*项目名称*>.deploymentoptions 文件。  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>检查部署的处理选项  
  中存储的配置设置\<*项目名称*>.deploymentoptions 文件如下所示：  

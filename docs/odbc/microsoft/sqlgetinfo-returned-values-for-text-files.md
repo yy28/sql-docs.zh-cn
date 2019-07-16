@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36188b0cb646106d2b54ea8bcec8e417aa05c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898810"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>文本文件的 SQLGetInfo 返回值
 下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅[ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)。  

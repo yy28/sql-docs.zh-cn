@@ -1,5 +1,5 @@
 ---
-title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
+title: sp_helpdynamicsnapshot_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cede3c4419f4e11d2110e7c3f735c3dec2474ec4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 6b009fc8d08b9494a6ad3a33169fbb7d783b92be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902895"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**，表示将返回具有指定的所有已筛选的数据快照作业的信息*dynamic_snapshot_jobid*并*dynamic_snapshot_jobname*的所有发布。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 **%** ，表示将返回具有指定的所有已筛选的数据快照作业的信息*dynamic_snapshot_jobid*并*dynamic_snapshot_jobname*的所有发布。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 是已筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，默认值为**%**，这会返回包含指定的发布的所有动态作业*dynamic_snapshot_jobid*。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 是已筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，默认值为 **%** ，这会返回包含指定的发布的所有动态作业*dynamic_snapshot_jobid*。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -58,7 +57,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识已筛选的数据快照作业。|  
 |**job_name**|**sysname**|已筛选数据快照作业的名称。|  

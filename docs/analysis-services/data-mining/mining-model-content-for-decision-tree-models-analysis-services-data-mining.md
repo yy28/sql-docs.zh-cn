@@ -1,5 +1,5 @@
 ---
-title: 决策树模型的挖掘模型内容 |Microsoft 文档
+title: 决策树模型的挖掘模型内容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 493ee56380a3e4665b10cbe27ef1cd1ea764438b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182771"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34019364"
 > [!NOTE]  
 >  如果模型包含多个树，则在 **Microsoft 树查看器**中一次只能查看一个树。 但是，在 **一般内容树查看器** 中，可同时显示相同模型中的所有树。  
   
- ![结构的决策树模型内容](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "的决策树模型内容的结构")  
+ ![结构的决策树模型内容](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "的决策树模型内容结构")  
   
  每个可预测属性的树所包含的信息描述选择的输入列如何影响该特定可预测属性的结果。 每个树以包含可预测属性的节点 (NODE_TYPE = 9) 作为开头，后跟一系列表示输入属性的节点 (NODE_TYPE = 10)。 属性对应于事例级别列或嵌套表列的值，后者通常是嵌套表的 **键** 列中的值。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34019364"
  Microsoft 决策树算法不允许使用连续数据类型作为输入；因此，如果任何列具有连续数值数据类型，将对该值进行离散化处理。 该算法在拆分点针对所有连续属性执行其自己的离散化处理。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会自动选择一个用于存储桶的连续属性; 方法但是，可以控制如何连续输入中的值设置到的挖掘结构列的内容类型 discretized **Discretized** ，然后设置<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>属性。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择的属性进行装桶连续; 方法但是，您可以控制如何连续值在输入中的挖掘结构列的内容类型设置的离散化**Discretized** ，然后设置<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>或<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>属性。  
   
  [Top](#bkmk_Top)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "34019364"
  NODE_TYPE  
  在决策树模型中，将创建以下类型的节点：  
   
-|节点类型|Description|  
+|节点类型|描述|  
 |---------------|-----------------|  
 |1（模型）|模型的根节点。|  
-|2（树）|模型中分类树的父节点。 标记为 **“全部”**。|  
+|2（树）|模型中分类树的父节点。 标记为 **“全部”** 。|  
 |3（内部）|内部分支的头，位于分类树或回归树中。|  
 |4（分布）|叶节点，位于分类树或回归树中。|  
-|25（回归树）|模型中回归树的父节点。 标记为 **“全部”**。|  
+|25（回归树）|模型中回归树的父节点。 标记为 **“全部”** 。|  
   
  NODE_CAPTION  
  显示时使用的友好名称。  
@@ -155,7 +155,7 @@ ms.locfileid: "34019364"
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  决策树模型没有用于存储整个模型的统计信息的单独节点，这与 Naive Bayes 或神经网络模型中的边际统计信息节点不同。 该模型为每个可预测属性创建一个单独的树，树的顶部为“(全部)”节点。 每个树独立于其他树。 如果模型仅包含一个可预测属性，则只有一个树，因此只有一个“(全部)”节点。  
   
  表示输出属性的每个树还进一步细分为表示拆分的内部分支 (NODE_TYPE = 3)。 其中的每个树都包含有关目标属性的分布的统计信息。 此外，每个叶节点 (NODE_TYPE = 4) 包含说明输入属性及其值以及支持每个属性值对的事例数目的统计信息。 因此，在决策树的任何分支中，可以方便地查看数据的概率或分布，而不需要查询源数据。 树的每个级别必须表示其直接子节点的总和。  
@@ -202,7 +202,7 @@ ms.locfileid: "34019364"
  XML 片段可以表示简单或复杂的属性。 简单属性包含模型列的名称以及属性的值。 如果模型列包含嵌套表，嵌套表属性则表示为串联在一起的表名称、键值和属性。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持 2.0 版本的 PMML 标准，并带有支持使用嵌套表的扩展插件。 如果数据包含嵌套表，并且生成 PMML 版本的模型，则模型中包括谓词的所有元素均被标记为扩展。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持 2.0 版本的 PMML 标准，并带有支持嵌套表使用的扩展插件。 如果数据包含嵌套表，并且生成 PMML 版本的模型，则模型中包括谓词的所有元素均被标记为扩展。  
   
  [Top](#bkmk_Top)  
   
@@ -231,7 +231,7 @@ ms.locfileid: "34019364"
 |Age < 30|40|Age < 30 且 Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 且 Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 在所有模型中进行小幅调整，以便将可能的 Missing 值的情况考虑在内。 对于连续属性，每个值范围表示为一种状态 (例如，时间\<月 30 日，年龄 = 30，和保留时间 > 30) 和概率的计算方式如下： 状态存在 (值 = 1)，存在一些其他状态 (值 = 0)，状态是**缺少**。 有关如何调整概率以表示 Missing 值的详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
+ 在所有模型中进行小幅调整，以便将可能的 Missing 值的情况考虑在内。 对于连续属性，每个值的范围表示为一种状态 (例如，Age\<月 30 日，Age = 30，和 Age > 30) 和概率的计算方法，如下所示： 状态存在 (值 = 1)，存在某些其他状态 (值 = 0)，状态是**缺少**。 有关如何调整概率以表示 Missing 值的详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
  每个节点的概率几乎是通过分布情况直接计算出的，如下所示：  
   
@@ -251,7 +251,7 @@ ms.locfileid: "34019364"
   
  对于 <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 枚举中的类型，在分类树中使用以下类型。  
   
-|值类型|Description|  
+|值类型|描述|  
 |----------------|-----------------|  
 |1（缺失）|指示与 Missing 值相关的计数、概率或其他统计信息。|  
 |4（离散）|指示与离散或离散化值相关的计数、概率或其他统计信息。|  
@@ -267,7 +267,7 @@ ms.locfileid: "34019364"
   
  对于树中的所有其他节点（叶节点除外），每个节点的分数表示当前节点的最佳拆分分数减去父节点的拆分分数。 通常，父节点的拆分分数应始终优于其任一子节点的拆分分数。 这是因为在理想情况下，决策树模型首先在最重要的属性上拆分。  
   
- 有多种方式计算拆分分数，具体选择哪种方式取决于您选择的算法参数。 有关如何针对每种评分方法计算分数的讨论不属于本主题的讨论范围。 有关详细信息，请参阅[研究网站上的“](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)Learning Bayesian Networks: The Combination of Knowledge and Statistical Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] ”（了解 Bayesian 网络：知识与统计数据的组合）。  
+ 有多种方式计算拆分分数，具体选择哪种方式取决于您选择的算法参数。 有关如何针对每种评分方法计算分数的讨论不属于本主题的讨论范围。 有关详细信息，请参阅"[学习 Bayesian 网络：组合的知识和统计数据](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)"，然后在[!INCLUDE[msCoName](../../includes/msconame-md.md)]Research Web 站点。  
   
 > [!NOTE]  
 >  如果创建的决策树模型同时具有连续可预测属性和离散可预测属性，表示每个树类型的“(全部)”节点中将显示完全不同的分数。 应单独考虑每个模型，并且对回归评分所使用的方法完全不同于对分类评分所使用的方法。 无法比较节点分数值。  
@@ -279,7 +279,7 @@ ms.locfileid: "34019364"
   
  通常，回归映射连续依赖项（可预测变量）中的更改作为输入中的更改函数。 如果依赖变量具有任何连续输入，并且输入和预测值之间的关系非常稳定，足以将其作为线形图计算，那么，回归节点则包含一个公式。  
   
- 但是，如果输入和预测值之间是“非线性” 关系，则转而创建拆分，这与标准决策树类似。 例如，假定 A 是可预测属性，B 和 C 是输入，其中 C 是连续值类型。 如果 A 和 C 之间的关系在部分数据中相当稳定，而在其他数据中不稳定，该算法将创建拆分以便表示数据的不同区域。  
+ 但是，如果输入和预测值之间是“非线性”  关系，则转而创建拆分，这与标准决策树类似。 例如，假定 A 是可预测属性，B 和 C 是输入，其中 C 是连续值类型。 如果 A 和 C 之间的关系在部分数据中相当稳定，而在其他数据中不稳定，该算法将创建拆分以便表示数据的不同区域。  
   
 |拆分条件|节点结果|  
 |---------------------|--------------------|  
@@ -289,8 +289,8 @@ ms.locfileid: "34019364"
   
  有关回归节点的详细信息，请参阅[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

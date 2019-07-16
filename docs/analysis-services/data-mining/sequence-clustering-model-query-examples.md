@@ -1,5 +1,5 @@
 ---
-title: 序列聚类分析模型查询示例 |Microsoft 文档
+title: 序列聚类分析模型查询示例 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e14fd39a1e917532b61b9f55415281e53598e564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209671"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34019254"
 ##  <a name="bkmk_ContentQueries"></a> 查找有关顺序分析和聚类分析模型的信息  
  若要对挖掘模型的内容创建有意义的查询，您必须了解模型内容的结构以及哪些节点类型存储哪类信息。 有关详细信息，请参阅 [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)。  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1：使用数据挖掘架构行集返回模型参数  
+###  <a name="bkmk_Query1"></a> 示例查询 1:使用数据挖掘架构行集返回模型参数  
  通过查询数据挖掘架构行集，您可以找到关于模型的各类信息，包括基本元数据、模型的创建日期和时间、上次处理模型的日期和时间、模型所基于的挖掘结构的名称以及用作可预测属性的列。  
   
  下面的查询返回用于生成模型 `[Sequence Clustering]`和为其定型的参数。 您可以在 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)的第 5 课中创建此模型。  
@@ -62,7 +62,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  默认值使用 10 是因为减少分类数更便于大多数人浏览并了解数据中的分组。 但是，每个模型和数据集是不同的。 您可以试用不同的分类数，从而发现哪个参数值能产生最精确的模型。  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2：获取某种状态的序列列表  
+###  <a name="bkmk_Query2"></a> 示例查询 2:获取某种状态的序列的列表  
  挖掘模型内容存储在定型数据中找到的序列，序列由第一种状态与所有相关第二种状态的列表组成。 第一种状态用作该序列的标签，相关的第二种状态称为转换。  
   
  例如，在序列分组到各分类中之前，下面的查询返回模型中第一种状态的完整列表。  获取此列表的方法是返回将模型根节点作为父节点 (PARENT_UNIQUE_NAME = 0) 的序列 (NODE_TYPE = 13) 的列表。 FLATTENED 关键字可使结果更易读。  
@@ -85,7 +85,7 @@ AND [PARENT_UNIQUE_NAME] = 0
   
 |NODE_UNIQUE_NAME|Product 1|Sequence Support|Sequence Probability|  
 |------------------------|---------------|----------------------|--------------------------|  
-|1081327|缺少|0|#######|  
+|1081327|Missing|0|#######|  
 |1081327|All-Purpose Bike Stand|17|0.00111|  
 |1081327|Bike Wash|64|0.00418|  
 |1081327|（第 4-36 行省略）|||  
@@ -138,7 +138,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  例如，如果有 4 个分类，则特定序列可能有 40% 的几率属于分类 1、30% 的几率属于分类 2、20% 的几率属于分类 3 以及 10% 的几率属于分类 4。 在算法确定转换最有可能属于的分类后，它使用分类先验概率来衡量转换在该分类中的概率。  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3：使用系统存储过程  
+###  <a name="bkmk_Query3"></a> 示例查询 3:使用系统存储过程  
  从这些查询示例中，可以看到模型中存储的信息很复杂，您可能需要创建多个查询才能获取所需的信息。 不过，Microsoft 顺序分析和聚类分析查看器提供了一组功能强大的工具，可用于以图形方式浏览顺序分析和聚类分析模型中包含的信息，您还可以使用该查看器来查询和深化模型。  
   
  在大多数情况下，Microsoft 顺序分析和聚类分析查看器中显示的信息是使用 Analysis Services 系统存储过程来查询模型而创建的。 您也可以编写针对模型内容的数据挖掘扩展插件 (DMX) 查询来检索同一信息，但是对于浏览或测试模型，使用 Analysis Services 系统存储过程非常简便快捷。  
@@ -177,10 +177,10 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- 有关详细信息，请参阅 [SELECT FROM &#60;模型&#62;.SAMPLE_CASES &#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md)。  
+ 有关详细信息，请参阅 [SELECT FROM <模型>.SAMPLE_CASES (DMX)](../../dmx/select-from-model-sample-cases-dmx.md)。  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>分类特征和分类对比  
- **“分类特征”** 选项卡汇总了每个分类的主属性，按概率进行排序。 您可以查看属于一个分类的事例数，以及该分类中的事例分布情况：每个特征都有一定的支持。 若要查看特定分类的特征，您必须知道该分类的 ID。  
+ **“分类特征”** 选项卡汇总了每个分类的主属性，按概率进行排序。 您可以查看有多少用例属于群集，以及在群集中的事例分布情况的相当：每个特征都有一定的支持。 若要查看特定分类的特征，您必须知道该分类的 ID。  
   
  以下示例使用系统存储过程 `GetClusterCharacteristics`返回概率值超过指定阈值 0.0005 的 Cluster 12 的所有特征。  
   
@@ -210,7 +210,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ## <a name="using-the-model-to-make-predictions"></a>使用模型进行预测  
  针对顺序分析和聚类分析模型的预测查询可使用许多适用于其他聚类分析模型的预测函数。 此外，还可以使用特殊预测函数 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md)建议或推测下一状态。  
   
-###  <a name="bkmk_Query4"></a> 示例查询 4：预测后面的一种或多种状态  
+###  <a name="bkmk_Query4"></a> 示例查询 4:预测后面的一种或多种状态  
  在给定值的情况下，可以使用 [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 函数来预测下一个最可能的状态。 还可以预测多个下一状态：例如，可以返回客户可能购买的前三种产品，以提供一个建议列表。  
   
  下面的示例查询是一个单独预测查询，它将返回前 5 个预测及其概率。 由于该模型包含一个嵌套表，因此进行预测时必须将嵌套表 `[v Assoc Seq Line Items]`用作列引用。 此外，提供输入值时，必须联接事例表和嵌套表列，如嵌套 SELECT 语句所示。  
@@ -254,23 +254,23 @@ AS t
 |[ClusterDistance (DMX)](../../dmx/clusterdistance-dmx.md)|返回输入事例与指定分类之间的距离；如果未指定分类，则返回输入事例与可能性最大的分类之间的距离。<br /><br /> 此函数可用于任何类型的聚类分析模型（EM、K-Means 等），但结果会因算法而异。|  
 |[ClusterProbability (DMX)](../../dmx/clusterprobability-dmx.md)|返回输入事例属于指定分类的概率。|  
 |[IsInNode (DMX)](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
+|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|返回指定状态调整后的概率。|  
 |[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|预测关联的成员身份。|  
 |[PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md)|返回输入事例适合现有模型的可能性。|  
-|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|返回一个表示给定列预测的直方图的表。|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|返回事例所属的节点的 Node_ID。|  
-|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
+|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回一个表示给定列预测的直方图的表。|  
+|[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|返回事例所属的节点的 Node_ID。|  
+|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|返回指定状态的概率。|  
 |[PredictSequence (DMX)](../../dmx/predictsequence-dmx.md)|为一组指定的序列数据预测将来的序列值。|  
 |[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](../../dmx/general-prediction-functions-dmx.md)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
- [Microsoft 顺序分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft 顺序分析和聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [序列聚类分析模型 & #40; 挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

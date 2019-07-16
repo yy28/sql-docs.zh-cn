@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782879"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211780"
 ---
 # <a name="tables"></a>表
   表是包含数据库中所有数据的数据库对象。 数据在表中的逻辑组织方式与在电子表格中相似，都是按行和列的格式组织的。 每一行代表一条唯一的记录，每一列代表记录中的一个字段。 例如，在包含公司雇员数据的表中，每一行代表一名雇员，各列分别代表该雇员的信息，如雇员编号、姓名、地址、职位以及家庭电话号码等。  

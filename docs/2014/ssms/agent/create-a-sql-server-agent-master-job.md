@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795829"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211453"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>创建 SQL Server 代理主作业
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建主 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
@@ -35,7 +35,7 @@ ms.locfileid: "52795829"
 ####  <a name="Permissions"></a> Permissions  
  如果分布式作业的步骤与某个代理相关联，则该作业将在目标服务器上该代理帐户的上下文下运行。 请确保满足以下条件，否则与代理关联的作业步骤将不会从主服务器下载到目标服务器上：  
   
--   注册表子项**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**(REG_DWORD) 设置为 1 (true)。 默认情况下，此子项设置为 0 (False)。  
+-   注册表子项 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**(REG_DWORD) 设置为 1 (true)。 默认情况下，此子项设置为 0 (False)。  
   
 -   目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "52795829"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要创建 SQL Server 代理作业的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
-3.  右键单击“作业”文件夹，然后选择“新建作业…”。  
+3.  右键单击“作业”文件夹，然后选择“新建作业…”   。  
   
 4.  在 **“新建作业”** 对话框的 **“常规”** 页上，修改作业的常规属性。 有关此页上的可用选项的详细信息，请参阅[作业属性和新的作业&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52795829"
   
 9. 在 **“目标”** 页上，管理作业的目标服务器。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;以页为目标&#41;](job-properties-new-job-targets-page.md)。  
   
-10. 完成后，单击 **“确定”**。  
+10. 完成后，单击 **“确定”** 。  
   
 
   
@@ -77,9 +77,9 @@ ms.locfileid: "52795829"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb ;  
@@ -127,7 +127,7 @@ ms.locfileid: "52795829"
   
 -   [sp_attach_schedule (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 
   

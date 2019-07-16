@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209613"
 ---
 # <a name="time-series-model-query-examples"></a>时序模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1，MINIMUM_SUPPORT = 10，PERIODICITY_HINT ={1,3}，...|  
+|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},....|  
   
  默认周期提示为 {1}，将出现在所有模型中；此示例模型是使用可能不在最终模型中出现的附加提示创建的。  
   

@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900669"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回的行中包含的信息旨在让您洞察 Windows Server 故障转移群集 (WSFC) 群集上每个 Always On 可用性组中的 Alwayson 可用性组中的可用性数据库的运行状况。 查询**sys.dm_hadr_database_replica_states**回答以下问题：  
+  返回一行信息，这些信息可便于洞察 Windows Server 故障转移群集 (WSFC) 上每个 AlwaysOn 可用性组中的可用性数据库的运行状况。 查询**sys.dm_hadr_database_replica_states**回答以下问题：  
   
 -   可用性组中的所有数据库是否都已做好故障转移准备？  
   
@@ -39,9 +38,9 @@ ms.locfileid: "47636675"
   
 -   如果主副本当前不可用，哪一个辅助副本在成为主副本后允许最低限度的数据丢失？  
   
--   时的值[sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc**列为"AVAILABILITY_REPLICA"，可用性组中的哪一个辅助副本正在阻止给定主数据库上的日志截断?     
+-   时的值[sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc**列为"AVAILABILITY_REPLICA"，可用性组中的哪一个辅助副本正在阻止给定主数据库上的日志截断?  
    
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|可用性组内可用性副本的标识符。|  
 |**group_database_id**|**uniqueidentifier**|可用性组内数据库的标识符。 在此数据库联接到的每个副本上，该标识符都是相同的。|  
@@ -54,7 +53,7 @@ ms.locfileid: "47636675"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

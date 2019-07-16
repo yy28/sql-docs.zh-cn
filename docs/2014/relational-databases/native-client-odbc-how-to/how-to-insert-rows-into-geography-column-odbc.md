@@ -1,5 +1,5 @@
 ---
-title: 如何： 将行插入到 Geography 列 (ODBC) |Microsoft Docs
+title: 如何：将行插入到 Geography 列 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206807"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何在 Geography 列中插入行 (ODBC)
-  此示例使用两个不同的绑定（SQLCCHAR 和 SQLCBINARY）从 WellKnownBinary (WKB) 中向具有地理位置列的表中插入两行。 然后从该表中选择一行并使用 ::STAsText() 显示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，应用程序将以下内容显示到控制台：POINT(56.4595 -2.9842)。  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：在 Geography 列中插入行 (ODBC)
+  此示例使用两个不同的绑定（SQLCCHAR 和 SQLCBINARY）从 WellKnownBinary (WKB) 中向具有地理位置列的表中插入两行。 然后，它从该表中选择一行并使用:: stastext （) 以显示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0 和应用程序将打印到控制台：点 (56.4595-2.9842)。  
   
  此示例不需要 ODBC 数据源，但它默认情况下运行在 SQL Server 的本地实例上。  
   

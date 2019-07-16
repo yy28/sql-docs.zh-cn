@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b044fb7b3b8dd0cc0586cc9908daab8f0a2b6424
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350214"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189522"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
   可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中创建 [!INCLUDE[tsql](../../includes/tsql-md.md)]代理作业的计划。  
@@ -48,21 +48,21 @@ ms.locfileid: "53350214"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，右键单击 **“作业”**，然后单击 **“管理计划”**。  
+2.  展开 **“SQL Server 代理”** ，右键单击 **“作业”** ，然后单击 **“管理计划”** 。  
   
-3.  在 **“管理计划”** 对话框中，单击 **“新建”**。  
+3.  在 **“管理计划”** 对话框中，单击 **“新建”** 。  
   
 4.  在 **“名称”** 框中，键入新计划的名称。  
   
 5.  如果不希望计划在创建后立即生效，请清除 **“启用”** 复选框。  
   
-6.  对于 **“计划类型”**，请选择下列操作之一：  
+6.  对于 **“计划类型”** ，请选择下列操作之一：  
   
-    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”**。  
+    -   若要在 CPU 达到空闲条件时启动作业，请单击 **“CPU 空闲时启动”** 。  
   
-    -   如果希望反复运行计划，请单击 **“重复执行”**。 若要设置重复执行的计划，请完成对话框上的 **“频率”**、 **“每天频率”** 和 **“持续时间”** 组。  
+    -   如果希望反复运行计划，请单击 **“重复执行”** 。 若要设置重复执行的计划，请完成对话框上的 **“频率”** 、 **“每天频率”** 和 **“持续时间”** 组。  
   
-    -   如果希望仅运行一次计划，请单击 **“执行一次”**。 若要设置 **“执行一次”** 计划，请完成对话框上的 **“执行一次”** 组。  
+    -   如果希望仅运行一次计划，请单击 **“执行一次”** 。 若要设置 **“执行一次”** 计划，请完成对话框上的 **“执行一次”** 组。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -70,9 +70,9 @@ ms.locfileid: "53350214"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates a schedule named RunOnce.   

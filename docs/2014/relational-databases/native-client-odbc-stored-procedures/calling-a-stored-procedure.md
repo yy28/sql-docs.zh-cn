@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207034"
 ---
 # <a name="calling-a-stored-procedure"></a>调用存储过程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持这两个 ODBC CALL 转义序列和[!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)语句用于执行存储过程; ODBC CALL 转义序列是首选的方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
@@ -33,7 +33,7 @@ ms.locfileid: "54127647"
   
  调用过程的 ODBC CALL 转义序列是：  
   
- {[**？ =**]**调用**_procedure_name_[([*参数*] [**，**[*参数*]]...)]}  
+ {[ **？ =** ]**调用**_procedure_name_[([*参数*] [ **，** [*参数*]]...)]}  
   
  其中*procedure_name*指定过程的名称和*参数*指定过程参数。 只有使用 ODBC CALL 转义序列的语句中才支持命名参数。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54127647"
   
  过程调用的输入和输入/输出参数可以省略。 如果使用括号但不带任何参数调用过程，驱动程序将指示数据源使用第一个参数的默认值。 例如：  
   
- {**调用** _procedure_name_**（)**}  
+ {**调用** _procedure_name_ **（)** }  
   
  如果该过程不具有任何参数，则它可能失败。 如果不带括号调用过程，驱动程序将不发送任何参数值。 例如：  
   

@@ -10,22 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f26430a70d3ff6f2688727b135e8bf46649af62
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181339"
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot 最低权限示例-SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   本主题介绍具有最低权限的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置示例。 该配置将不同的帐户用于三个组件中的每个组件，并且每个帐户都具有最低的权限级别。  
   
 ## <a name="summary-of-accounts"></a>帐户摘要  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 支持将 Network Service 帐户用于 Analysis Services 服务帐户。 Network Service 帐户不是针对 SharePoint 2010 的支持的方案。 有关服务帐户的详细信息，请参阅[配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(http://msdn.microsoft.com/library/ms143504.aspx)。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 支持将 Network Service 帐户用于 Analysis Services 服务帐户。 Network Service 帐户不是针对 SharePoint 2010 的支持的方案。 有关服务帐户的详细信息，请参阅[配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(http://msdn.microsoft.com/library/ms143504.aspx) 。  
   
  下表总结了在此最低权限配置示例中使用的三个帐户。  
   
-|范围|“属性”|  
+|范围|名称|  
 |-----------|----------|  
 |SharePoint 管理员帐户|**SPAdmin**|  
 |SharePoint 场帐户|**SPFarm**|  
@@ -54,7 +54,7 @@ ms.locfileid: "40394602"
   
 2.  选择“配置服务帐户”   
   
-3.  选择“注册新的托管帐户” 。  
+3.  选择“注册新的托管帐户”  。  
   
  **SPSvc** 帐户没有本地管理员权限，并且 SPsvc 在 SharePoint 数据库中将不具有任何权限。 SPsvc 要求的唯一权限是对 Analysis Services 的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 实例的管理权限。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "40394602"
   
 1.  在 SharePoint 管理中心，选择“安全性”。   
   
-2.  选择“配置服务帐户” 。  
+2.  选择“配置服务帐户”  。  
   
 3.  选择 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序使用的服务应用程序池。 然后选择 SPSvc 帐户。  
   

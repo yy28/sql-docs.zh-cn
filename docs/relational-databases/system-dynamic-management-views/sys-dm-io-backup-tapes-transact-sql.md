@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 195c8dc2db7011801023e7e21e68ed1f5ed75a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c58f34404119592308515f95934e23cfc94e1fc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900396"
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回磁带设备的列表和用于备份的装入请求的状态。   
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|可以执行备份的实际物理设备的名称。 不可为 null。|  
 |**logical_device_name**|**nvarchar(256)**|用户指定该驱动器的名称 (从**sys.backup_devices**)。 如果用户指定名称不可用，则为 NULL。 可以为 Null。|  
@@ -52,7 +51,7 @@ ms.locfileid: "47603465"
 |**mount_request_type**|**int**|装入请求的类型：<br /><br /> 1 = 特定磁带。 标识的磁带**media_\*** 字段是必需的。<br /><br /> 2 = 下一个介质簇。 请求尚未还原的下一个介质簇。 用于从比介质簇更少的设备进行还原时。<br /><br /> 3 = 延续磁带。 介质簇正在扩展，并且请求延续磁带。<br /><br /> 可以为 Null。|  
 |**mount_request_type_desc**|**nvarchar(120)**|装入请求的类型：<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须对服务器拥有 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

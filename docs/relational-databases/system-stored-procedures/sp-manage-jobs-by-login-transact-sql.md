@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62957149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894995"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_manage_jobs_by_login
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  若要运行此存储的过程，必须授予用户**sysadmin**固定的服务器角色。  

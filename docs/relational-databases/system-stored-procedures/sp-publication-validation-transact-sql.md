@@ -1,5 +1,5 @@
 ---
-title: sp_publication_validation (Transact-SQL) | Microsoft Docs
+title: sp_publication_validation (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896619"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] **'**_publication'_  
+ [ **@publication=** ] **'** _publication'_  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *rowcount_only*  
  指示是否只返回表的行计数。 *rowcount_only*是**smallint**可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
-|**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意：水平筛选项目时，将执行行计数操作，而不是校验和操作。|  
+|**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意:当项目进行水平筛选时，而不是校验和操作执行行计数操作。|  
 |**1** （默认值）|仅执行行计数检查。|  
-|**2**|执行行计数和二进制校验和。<br /><br /> 注意：对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版订阅服务器，只执行行计数验证。|  
+|**2**|执行行计数和二进制校验和。<br /><br /> 注意:有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行版本 7.0 订阅服务器，仅行计数验证。|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *full_or_fast*  
  用于计算行计数的方法。 *full_or_fast*是**tinyint**可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -85,8 +84,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [验证订阅服务器上的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

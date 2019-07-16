@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195635"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  
@@ -115,7 +115,7 @@ EXEC sp_xml_removedocument @docHandle;
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>标识要处理的节点的 XPath 表达式 (rowpattern)  
   指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。  
   
- XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。 例如，如果 rowpattern 以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。   
+ XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。 例如，如果 rowpattern 以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。    
   
 ### <a name="description-of-the-rowset-to-be-generated"></a>对要生成的行集的说明  
  OPENXML 使用行集架构来生成结果行集。 指定行集架构时，可以使用下列选项。  
@@ -137,7 +137,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  下表介绍了边缘表的结构。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|文档节点的唯一 ID。<br /><br /> 根元素具有的 ID 值为 0。 保留负的 ID 值。|  
 |**parentid**|**bigint**|标识节点的父节点。 此 ID 标识的父节点不一定是父元素。 但具体情况取决于此 ID 所标识节点的子节点的节点类型。 例如，如果节点为文本节点，则其父节点可能是一个属性节点。<br /><br />  如果节点位于 XML 文档的顶层，则其 ParentID 为 NULL。|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165199"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>设置模拟选项（SSAS - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52533814"
 3.  选择本主题的 [模拟选项](#bkmk_options) 中所述的一个选项。  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>在 Management Studio 中设置模拟选项  
- 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，通过针对这些对话框的以下属性单击省略号 (**...**) 按钮，打开“模拟信息”对话框：  
+ 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，通过针对这些对话框的以下属性单击省略号 ( **...** ) 按钮，打开“模拟信息”  对话框：  
   
 -   **“数据库属性”** 对话框（通过“数据源模拟信息”属性）。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52533814"
  对话框中的所有选项都可用，但并非所有选项都适合每种情况。 使用以下信息来确定最适合于您的情况的选项。  
   
  **使用特定用户名和密码**  
- 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用按以下格式指定的 Windows 用户帐户的安全凭据：*\<域名 >***\\***\<用户帐户名 >*。  
+ 选择此选项将使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象使用按以下格式指定的 Windows 用户帐户的安全凭据： *\<域名 >***\\***\<用户帐户名 >* 。  
   
  选择此选项可使用一个专用的最小权限的 Windows 用户标识，该用户标识是您为数据访问目的而专门创建的。 例如，如果您定期创建用于检索在报表中使用的数据的通用帐户，则可以在此处指定该帐户。  
   
@@ -73,8 +73,8 @@ ms.locfileid: "52533814"
   
  使用外部绑定的本地多维数据集和处理除外，多维数据库不支持此选项。  
   
- “默认值”或“继承”  
- 此对话框对于在数据库级别设置的模拟选项使用“默认值”；而对于在数据源级别设置的模拟选项使用“继承”。  
+ “默认值”  或“继承”   
+ 此对话框对于在数据库级别设置的模拟选项使用“默认值”  ；而对于在数据源级别设置的模拟选项使用“继承”  。  
   
  **数据源-继承选项**  
   
@@ -82,11 +82,11 @@ ms.locfileid: "52533814"
   
  要在数据库级别指定 Windows 用户名和密码，请执行以下操作：  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击该数据库并选择“属性”。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击该数据库并选择“属性”  。  
   
 2.  在 **“数据源模拟信息”** 中，指定 Windows 用户名和密码。  
   
-3.  右键单击每个数据源并查看其属性，以便确保每个数据源都在使用“继承”选项。  
+3.  右键单击每个数据源并查看其属性，以便确保每个数据源都在使用“继承”选项  。  
   
  有关数据库级别的默认设置的详细信息，请参阅[设置多维数据库属性 (Analysis Services)](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)。  
   

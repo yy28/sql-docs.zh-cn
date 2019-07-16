@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084029"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206820"
 ---
 # <a name="using-cursors-odbc"></a>使用游标 (ODBC)
   ODBC 支持允许以下项的游标模型：  
@@ -38,7 +38,7 @@ ms.locfileid: "48084029"
   
  下面是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本和 ODBC 应用程序如何使用游标的比较。  
   
-|操作|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
 |定义游标行为|通过 DECLARE CURSOR 参数进行指定|通过设置游标属性[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
 |打开游标|声明游标打开*cursor_name*|**SQLExecDirect**或**SQLExecute**|  

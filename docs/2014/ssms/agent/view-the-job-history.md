@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec79de6769f8059819ebe4e6eacaa3aff6d2dbec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211284"
 ---
 # <a name="view-the-job-history"></a>View the Job History
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业历史记录日志。  
@@ -49,13 +49,13 @@ ms.locfileid: "53364279"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，再展开 **“作业”**。  
+2.  展开 **“SQL Server 代理”** ，再展开 **“作业”** 。  
   
-3.  右键单击一个作业，再单击 **“查看历史记录”**。  
+3.  右键单击一个作业，再单击 **“查看历史记录”** 。  
   
 4.  在日志文件查看器中，查看作业历史记录。  
   
-5.  若要更新作业历史记录，请单击 **“刷新”**。 若要只查看几行，请单击 **“筛选”** 按钮并输入筛选参数。  
+5.  若要更新作业历史记录，请单击 **“刷新”** 。 若要只查看几行，请单击 **“筛选”** 按钮并输入筛选参数。  
   
 ##  <a name="TSQL"></a> 使用 Transact-SQL  
   
@@ -63,9 +63,9 @@ ms.locfileid: "53364279"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- lists all job information for the NightlyBackups job.  

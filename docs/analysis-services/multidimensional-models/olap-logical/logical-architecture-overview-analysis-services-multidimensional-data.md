@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579437"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208638"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,12 +86,12 @@ ms.locfileid: "57579437"
 |||第三季度|6119|1444|4675|99/09/30|99/09/18|99/09/30|  
 |||第四季度|7818|2126|5692|99/12/29|99/12/22|99/12/29|  
   
- 定义多维数据集之后，可以创建新的聚合，也可以更改现有聚合以设置一些选项，比如是在处理期间预先计算聚合，还是在查询时进行计算。 **相关的主题：**[聚合和聚合设计](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+ 定义多维数据集之后，可以创建新的聚合，也可以更改现有聚合以设置一些选项，比如是在处理期间预先计算聚合，还是在查询时进行计算。 **相关的主题：** [聚合和聚合设计](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>映射度量值、属性和层次结构  
  示例多维数据集中的度量值、属性和层次结构派生自多维数据集事实数据表和维度表中的以下各列。  
   
-|度量值或属性（级别）|成员|源表|源列|示例列值|  
+|度量值或属性（级别）|Members|源表|源列|示例列值|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |“包”度量值|不适用|ImportsFactTable|包|12|  
 |“上一次”度量值|不适用|ImportsFactTable|上一次|99/05/03|  
@@ -116,9 +116,9 @@ ms.locfileid: "57579437"
   
  在上表中，每个行都有相同的值**RouteKey**， **SourceKey**，并**TimeKey** ，该值指示这些行参与到同一多维数据集单元格的列。  
   
- 这里显示的示例提供了一个非常简单的多维数据集，该多维数据集仅有一个度量值组，并且所有维度表均与事实数据表以星型架构联接。 另一个常见的架构为雪花型架构，在该架构中，一个或多个维度表联接到其他维度表，而不是直接联接到事实数据表。 **相关的主题：**[维度&#40;Analysis Services-多维数据&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
+ 这里显示的示例提供了一个非常简单的多维数据集，该多维数据集仅有一个度量值组，并且所有维度表均与事实数据表以星型架构联接。 另一个常见的架构为雪花型架构，在该架构中，一个或多个维度表联接到其他维度表，而不是直接联接到事实数据表。 **相关的主题：** [维度&#40;Analysis Services-多维数据&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
   
- 此处显示的示例仅包含一个事实数据表。 如果多维数据集具有多个事实数据表，则会将每个事实数据表中的度量值组织到度量值组中，并且通过已定义的维度关系使每个度量值组都与一组特定的维度相关。 这些关系是通过指定数据源视图中的参与表以及关系的粒度来定义的。 **相关的主题：**[维度关系](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
+ 此处显示的示例仅包含一个事实数据表。 如果多维数据集具有多个事实数据表，则会将每个事实数据表中的度量值组织到度量值组中，并且通过已定义的维度关系使每个度量值组都与一组特定的维度相关。 这些关系是通过指定数据源视图中的参与表以及关系的粒度来定义的。 **相关的主题：** [维度关系](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [多维模型数据库](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

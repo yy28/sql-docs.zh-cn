@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896865"
 ---
 # <a name="create-an-index-master-data-services"></a>创建索引 (Master Data Services)
 
@@ -51,10 +50,10 @@ ms.locfileid: "65477093"
   
  对于你创建的每个索引，系统都会在网格中添加一行（其中包含四列）。 下表介绍了这些列。  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |“登录属性”|索引状态。<br /><br /> 单击“保存”后，系统会显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示索引正在更新  。<br /><br /> 如果创建或编辑索引时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标 ](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
-|“属性”|索引名称。|  
+|名称|索引名称。|  
 |是唯一的|指定索引是否是唯一的。|  
 |对应属性|显示在其上定义索引的属性的显示名称。|  
   

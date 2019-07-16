@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130317"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211846"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
   当您希望更改约束表达式或更改对特定条件启用或禁用约束的选项时，可通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改 CHECK 约束。  
@@ -48,9 +48,9 @@ ms.locfileid: "54130317"
   
 #### <a name="to-modify-a-check-constraint"></a>修改 CHECK 约束  
   
-1.  在“对象资源管理器” 中，右键单击包含 CHECK 约束的表，然后选择“设计”。  
+1.  在“对象资源管理器”  中，右键单击包含 CHECK 约束的表，然后选择“设计”  。  
   
-2.  在“表设计器”菜单上，单击“CHECK 约束…”。  
+2.  在“表设计器”菜单上，单击“CHECK 约束…”   。  
   
 3.  在 **“CHECK 约束”** 对话框中，在 **“选定的 CHECK 约束”** 下选择要编辑的约束。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "54130317"
     > [!NOTE]  
     >  对于 CHECK 约束，有些数据库具有不同的功能。  
   
-5.  单击 **“关闭”**。  
+5.  单击 **“关闭”** 。  
   
-6.  在“文件”菜单上，单击“保存”以保存表名。  
+6.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改 CHECK 约束**  

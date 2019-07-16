@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205962"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>“通知操作员”任务（维护计划）
   使用 **“‘通知操作员’任务”** 对话框可以向此维护计划中添加自动通知。 若要使用此任务，必须启用数据库邮件并将 MSDB 正确配置为邮件主机数据库，而且还要具有一个带有有效电子邮件地址的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员。  

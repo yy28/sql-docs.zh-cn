@@ -1,5 +1,5 @@
 ---
-title: 功能选择 （数据挖掘） |Microsoft 文档
+title: 功能选择 （数据挖掘） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a93e503978779e56250ddf190c61b1b2411050b9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183280"
 ---
 # <a name="feature-selection-data-mining"></a>功能选择（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019184"
   
  在功能选择过程中，分析师、建模工具或算法会基于属性对分析的可用性来主动选择或放弃属性。  分析师可能会执行功能工程以添加功能，并删除或修改现有数据，而机器学习算法通常会对列评分，并验证其在模型中的可用性。  
   
- ![功能选择和工程过程](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "功能选择和工程过程")  
+ ![功能选择和工程过程](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "特征选择和工程过程")  
   
  简而言之，功能选择有助于解决两个问题：无价值的数据过多或有价值的数据过少。 你的功能选择目标应该是确定数据源中对生成模型有重要意义的列的最小数目。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34019184"
   
  除了上述用于功能选择的方法之外，您还可以通过对模型设置“建模标志”  或者对结构设置“分布标志”  ，提高算法标识或改进有意义属性的能力。 有关这些概念的详细信息，请参阅[建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)和[列分布（数据挖掘）](../../analysis-services/data-mining/column-distributions-data-mining.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义挖掘模型和结构](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   

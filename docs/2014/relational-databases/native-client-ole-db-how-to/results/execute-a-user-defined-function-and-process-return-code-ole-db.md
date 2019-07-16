@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c5a54f678f9b52551523b04af4658539d98ef56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206703"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>执行用户定义函数并处理返回代码 (OLE DB)
   在此示例中，将执行一个用户定义函数并输出返回代码。 IA64 平台不支持此示例。  

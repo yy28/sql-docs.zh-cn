@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3cd28375a60dc2cbf7447068fde8c5a1c7dba07
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163130"
 ---
 # <a name="analyze-a-tabular-model-in-excel"></a>在 Excel 中分析表格模型  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,17 +27,17 @@ ms.locfileid: "53072224"
   
 #### <a name="to-analyze-a-tabular-model-project-by-using-the-analyze-in-excel-feature"></a>使用“在 Excel 中分析”功能分析表格模型项目  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”** 。  
   
 2.  在 **“选择凭据和透视”** 对话框中，选择以下凭据选项之一以连接到模型工作区数据源：  
   
-    -   若要使用当前用户帐户，请选择 **“当前 Windows 用户”**。  
+    -   若要使用当前用户帐户，请选择 **“当前 Windows 用户”** 。  
   
-    -   若要使用其他用户帐户，请选择 **“其他 Windows 用户”**。  
+    -   若要使用其他用户帐户，请选择 **“其他 Windows 用户”** 。  
   
          通常，此用户帐户将是某个角色的成员。 不需要密码。 只能在工作区数据库的 Excel 连接的上下文中使用此帐户。  
   
-    -   若要使用安全角色，请选择 **“角色”**，然后在列表框中选择一个或多个角色。  
+    -   若要使用安全角色，请选择 **“角色”** ，然后在列表框中选择一个或多个角色。  
   
          必须使用角色管理器定义安全角色。 有关详细信息，请参阅[创建和管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "53072224"
      必须使用“透视”对话框定义透视（非默认值）。 有关详细信息，请参阅[创建和管理透视](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)。  
   
 > [!NOTE]  
->  当您在模型设计器中更改模型项目时，Excel 中的数据透视表字段列表不会自动刷新。 若要刷新 Excel 中的数据透视表字段列表，请在 **“选项”** 功能区上单击 **“刷新”**。  
+>  当您在模型设计器中更改模型项目时，Excel 中的数据透视表字段列表不会自动刷新。 若要刷新 Excel 中的数据透视表字段列表，请在 **“选项”** 功能区上单击 **“刷新”** 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Excel 中分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d117224e9afb331979556d12c6cddc0869382f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5279284c905384ea93c90ab10522a3998c906029
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896907"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>创建显式层次结构 (Master Data Services)
 
@@ -59,7 +58,7 @@ ms.locfileid: "65477160"
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个显式层次结构，系统都会在网格中添加一行（其中包含七列）。 下面介绍了这些列。  
   
-|“属性”|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |“登录属性”|实体状态。 单击“保存”  时，将显示下图，指示实体正在更新。<br /><br /> ![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")<br /><br /> 如果在创建或编辑实体时出错，将显示下面的图像。<br /><br /> ![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")|  
 |“属性”|显式层次结构名称。|  

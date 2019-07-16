@@ -21,11 +21,11 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8ae2babba09f30b03ea512a85bdc6f06c4bf7f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688275"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68204717"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "47688275"
   
 由于有版本控制的记录以二进制数据的形式存储，因此不同的数据库可以采用不同的排序规则。 使用**sys.dm_tran_version_store_space_usage**为基于 SQL Server 实例中的数据库版本存储空间使用情况的监视和规划 tempdb 大小。
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|数据库的数据库 ID。|  
 |**reserved_page_count**|**bigint**|有关版本的 tempdb 中保留的页的总计数将存储的数据库记录。|  
 |**reserved_space_kb**|**bigint**|用在 tempdb 中的千字节为单位的版本的总空间存储的数据库记录。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 
 ## <a name="examples"></a>示例  

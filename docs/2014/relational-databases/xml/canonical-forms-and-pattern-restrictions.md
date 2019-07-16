@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530921"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211559"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>规范格式和模式限制
   XSD 模式方面允许对简单类型的词法空间进行限制。 当把模式限制加在存在多个可能的词法表示形式的类型上时，某些值可能引起对验证的意外行为。  

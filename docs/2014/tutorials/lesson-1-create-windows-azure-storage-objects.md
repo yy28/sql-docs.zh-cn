@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210960"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>第 1 课：创建 Windows Azure 存储对象
   在云存储中创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份之前，必须先创建存储帐户，然后再创建 Blob 容器。 第 1 课将指导您完成登录 Windows Azure 管理门户以创建存储帐户和 Blob 容器的步骤。  

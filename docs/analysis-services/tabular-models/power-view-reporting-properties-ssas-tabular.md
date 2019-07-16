@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 302a4885833c6e26f9c4eaf6e3acf57d2b278845
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162729"
 ---
 # <a name="power-view---reporting-properties"></a>Power View - 报表属性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53072254"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[配置 Power View 报表的默认字段集](../../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)|说明如何配置默认字段集；该字段集是一个列和度量值的预定义列表，当在报表字段列表中选择表时，这些列和度量值会自动添加到 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表画布中。|  
 |[为 Power View 报表配置表行为属性](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|说明如何配置以更高粒度级别展示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息生成更好的默认位置。|  

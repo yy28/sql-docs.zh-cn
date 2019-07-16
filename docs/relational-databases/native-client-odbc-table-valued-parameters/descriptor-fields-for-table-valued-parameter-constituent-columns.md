@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7399a5f2764bfbdcdac04a2f973f500ee2e797e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3987d21f69e6dfa74a1996428dbaf337633b2abf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895520"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>表值参数构成列的描述符字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "62738453"
 ## <a name="remarks"></a>备注  
  SQL_DESC_AUTO_UNIQUE_VALUE 用于表值参数以及其他功能。  
   
-|属性名称|类型|Description|  
+|属性名称|type|描述|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE 指示该列是标识列。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用此信息来优化性能，但不是要求应用程序将其设置为标识列。|  
   
  以下属性将添加到应用程序参数描述符 (APD) 和实现参数描述符 (IPD) 中的所有参数类型：  
   
-|属性名称|类型|Description|  
+|属性名称|type|描述|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE 指示该列是计算列。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用此信息来优化性能，但不是要求应用程序将其设置为计算列。<br /><br /> 对于非表值参数列的绑定，将忽略此属性。|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE 指示表值参数列参与唯一键。 这可能导致查询性能提高。 对于非表值参数列的绑定，将忽略此属性。|  

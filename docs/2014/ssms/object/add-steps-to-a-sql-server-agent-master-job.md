@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188313"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向 SQL Server 代理主作业添加步骤。  
@@ -50,15 +50,15 @@ ms.locfileid: "52822681"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要添加步骤的作业的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以便展开 **“作业”** 文件夹。  
   
-4.  右键单击要向其添加步骤的作业，然后选择“属性”。  
+4.  右键单击要向其添加步骤的作业，然后选择“属性”  。  
   
-5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
+5.  在“作业属性 - job_name”  对话框中的“选择页”下，选择“步骤”    。 有关此页上的可用选项的详细信息，请参阅[作业属性： 新建作业&#40;步骤页&#41;](../agent/job-properties-new-job-steps-page.md)。  
 
-6.  完成后，单击 **“确定”**。  
+6.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -66,9 +66,9 @@ ms.locfileid: "52822681"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates a job step that changes database access to read-only for the Sales database.   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163937"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53207496"
   
  这两个工具仅可用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]实例。 不能使用它们安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
-|“属性”|支持的 SharePoint 版本|详细配置|  
+|名称|支持的 SharePoint 版本|详细配置|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置|SharePoint 2013|[配置或修复 Power Pivot for SharePoint 2013（Power Pivot 配置工具）](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具|SharePoint 2010 和 SharePoint 2010|[配置或修复 Power Pivot for SharePoint 2010（Power Pivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
@@ -64,10 +64,10 @@ ms.locfileid: "53207496"
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 配置|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具|  
 |--------------------------------------------------------------|-----------------------------------------------|  
 |主页提供了用于 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server for Excel Services**的新选项。 此选项对于在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持新的体系结构。 您可以将 Excel Services 配置为使用一个或多个在 SharePoint 模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。<br /><br /> ![新的配置工具中的 PowerPivot 服务器](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "新配置工具中的 PowerPivot 服务器")||  
-||2010 工具包括“在本地服务器上注册 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])”页，以配置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的本地实例。 该页面不是 2013 工具的组成部分，因为没有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本地实例。<br /><br /> ![作为旧配置工具中的服务帐户](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "作为旧配置工具中的服务帐户")|  
-||“创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”页具有一个额外的选项，即“升级工作簿以启用数据刷新”。 此选项在 2013 工具中不可用。<br /><br /> ![升级旧配置工具中的工作簿](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升级旧配置工具中的工作簿")|  
-|2013 工具具有一个新页面，即“配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器”。 此页支持在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新体系结构。 默认情况下，在主页的“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server for Excel Services”文本框中键入的服务器名称也列在“配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器”上。<br /><br /> ![注册 PowerPivot 服务器新配置工具](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "注册 PowerPivot 服务器新配置工具")||  
-|2013 工具具有一个新页面，即“将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 加载项注册为 Excel Services 用法跟踪程序”。 SharePoint 2010 Excel Services 不跟踪 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]的使用数据。||  
+||2010 工具包括“在本地服务器上注册 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])”  页，以配置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的本地实例。 该页面不是 2013 工具的组成部分，因为没有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本地实例。<br /><br /> ![作为旧配置工具中的服务帐户](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "作为旧配置工具中的服务帐户")|  
+||“创建 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”  页具有一个额外的选项，即“升级工作簿以启用数据刷新”  。 此选项在 2013 工具中不可用。<br /><br /> ![升级旧配置工具中的工作簿](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升级旧配置工具中的工作簿")|  
+|2013 工具具有一个新页面，即“配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器”  。 此页支持在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新体系结构。 默认情况下，在主页的“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server for Excel Services”  文本框中键入的服务器名称也列在“配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器”  上。<br /><br /> ![注册 PowerPivot 服务器新配置工具](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "注册 PowerPivot 服务器新配置工具")||  
+|2013 工具具有一个新页面，即“将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 加载项注册为 Excel Services 用法跟踪程序”  。 SharePoint 2010 Excel Services 不跟踪 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]的使用数据。||  
 ||2010 工具包含“将 MSOLAP.5 作为受信任提供程序添加”  页以注册 MSOLAP，以便 SharePoint 2010 中的 Excel Services 可以加载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型。 此页不是 2013 工具的组成部分。 SharePoint 2013 Excel Services 不使用 MSOLAP 访问接口来加载模型。|  
   
 ##  <a name="bkmk_overview"></a> 使用 Power Pivot 配置工具的概述  
@@ -93,7 +93,7 @@ ms.locfileid: "53207496"
   
 1.  在“开始”  屏幕上，键入 **powerpivot**  
   
-     在“开始”屏幕上，键入 **powerpivot**，或者，在“开始”菜单上，依次单击“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”，然后单击下列项之一：  
+     在“开始”  屏幕上，键入 **powerpivot**，或者，在“开始”  菜单上，依次单击“所有程序”  、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”  ，然后单击下列项之一：  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具**。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53207496"
   
 3.  可以执行下列一项或多项任务，具体取决于您的安装的当前状态：  
   
-    1.  单击“配置或修复 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint”以完成安装后的任务或修复安装。  
+    1.  单击“配置或修复 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint”  以完成安装后的任务或修复安装。  
   
     2.  单击 **“删除功能、服务、应用程序和解决方案”** ，从场中删除功能和解决方案。  
   

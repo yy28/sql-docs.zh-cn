@@ -1,5 +1,5 @@
 ---
-title: 在数据源视图 (Analysis Services) 中定义命名的计算 |Microsoft 文档
+title: 数据源视图 (Analysis Services) 中定义命名的计算 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f0324dc3b2b2c5f250cb6c49a136a5fb7e2a06e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178661"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,14 +55,14 @@ FROM
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开项目或连接到数据库，此项目或数据库包含要在其中定义命名计算的数据源视图。  
   
-2.  在解决方案资源管理器中，展开“数据源视图”文件夹，然后双击数据源视图。  
+2.  在解决方案资源管理器中，展开“数据源视图”  文件夹，然后双击数据源视图。  
   
-3.  在“表”或“关系图”窗格中，右键单击要在其中定义命名计算的表，再单击“新建命名计算”。 请务必右键单击表名称而不是属性。 菜单应该如下所示：  
+3.  在“表”或“关系图”窗格中，右键单击要在其中定义命名计算的表，再单击“新建命名计算”    。 请务必右键单击表名称而不是属性。 菜单应该如下所示：  
   
-     ![屏幕快照的关系图工作区中，右键单击菜单](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "屏幕截图的关系图工作区中，右键单击菜单")  
+     ![屏幕截图的关系图工作区中，右键单击菜单](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "屏幕截图的关系图工作区中，右键单击菜单")  
   
     > [!NOTE]  
-    >  若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项。  
+    >  若要查找表或视图，可以通过单击“数据源视图”菜单或者右键单击“表”或“关系图”窗格的空白区域以使用“查找表”选项     。  
   
 4.  在 **“创建命名计算”** 对话框中，执行下列操作：  
   
@@ -72,14 +72,14 @@ FROM
   
     -   在 **“表达式”** 文本框中，使用适用于数据访问接口的 SQL 方言键入生成新列内容的表达式。  
   
-5.  单击 **“确定”**。  
+5.  单击 **“确定”** 。  
   
      命名计算列显示为数据源视图表的最后一列。 计算器符号指示该列包含命名计算。  
   
 ## <a name="delete-a-named-calculation"></a>删除命名计算  
  尝试删除命名计算时，系统将提示您删除会使在项目或数据库中定义的对象列表失效。 在删除计算之前仔细查看该列表。  
   
-## <a name="see-also"></a>另请参阅  
- [在数据源视图 & #40; 中定义命名的查询Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+ [在数据源视图中定义命名查询 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700325"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181992"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 缓存
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,15 +46,15 @@ ms.locfileid: "51700325"
   
  清除缓存要求您向 XMLA 查询中的 **ClearCache** 语句提供对象标识符。 本主题中的第一步解释如何获取对象标识符。  
   
-#### <a name="step-1-get-the-object-identifier"></a>第 1 步：获取对象标识符  
+#### <a name="step-1-get-the-object-identifier"></a>步骤 1：获取对象标识符  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个对象，选择“属性”，然后复制“属性”窗格中 ID 属性的值。 这种方法适用于数据库、多维数据集、维度或表。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个对象，选择“属性”，然后复制“属性”窗格中 ID 属性的值   。 这种方法适用于数据库、多维数据集、维度或表。  
   
-2.  若要获取度量值组 ID，请右键单击该度量值组并选择“编写度量值组脚本为”。 选择 **“创建”** 或 **“更改”**，并将查询发送到一个窗口。 度量值组的 ID 将在对象定义中可见。 复制对象定义的 ID。  
+2.  若要获取度量值组 ID，请右键单击该度量值组并选择“编写度量值组脚本为”  。 选择 **“创建”** 或 **“更改”** ，并将查询发送到一个窗口。 度量值组的 ID 将在对象定义中可见。 复制对象定义的 ID。  
   
-#### <a name="step-2-run-the-query"></a>第 2 步：运行查询  
+#### <a name="step-2-run-the-query"></a>步骤 2：运行查询  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个数据库，指向“新建查询”，然后选择 XMLA。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个数据库，指向“新建查询”，然后选择 XMLA   。  
   
 2.  将以下代码示例复制到 XMLA 查询窗口中。 将 **DatabaseID** 更改为当前连接的数据库的 ID。  
   

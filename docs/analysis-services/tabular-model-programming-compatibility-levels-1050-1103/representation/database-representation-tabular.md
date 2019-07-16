@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 807e1f2c864f4e6574188e3f3d717e9bdf571c93
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207884"
 ---
 # <a name="database-representationtabular"></a>数据库表示形式（表格）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 若要实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅“表格 AMO 2012”示例中的源代码；具体来讲，请查看以下源文件：Database.cs。 该示例位于 Codeplex。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
+ 实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅此表格 AMO 2012 示例; 中的源代码具体查看以下源文件：Database.cs。 该示例位于 Codeplex。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
   
   

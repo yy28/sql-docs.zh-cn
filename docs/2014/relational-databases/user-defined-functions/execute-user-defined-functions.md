@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7e9c170a187fc3ccf28301a2ee1c9ee7b626169f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081583"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196441"
 ---
 # <a name="execute-user-defined-functions"></a>执行用户定义函数
-  您可以执行中的用户定义函数[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+  您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的用户定义函数。  
   
  **本主题内容**  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48081583"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要执行用户定义函数，请使用：**  
   
@@ -49,11 +49,11 @@ ms.locfileid: "48081583"
   
 #### <a name="to-execute-a-user-defined-function"></a>若要执行的用户定义函数  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

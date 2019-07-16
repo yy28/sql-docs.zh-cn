@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190047"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安装中的新增功能
   Windows Vista 不是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的支持的操作系统。 Service Pack 1 仍将作为针对 [!INCLUDE[win7](../../includes/win7-md.md)] 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 操作系统的最低要求。 有关操作系统要求的详细信息，请参阅[的硬件和软件要求安装 SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  

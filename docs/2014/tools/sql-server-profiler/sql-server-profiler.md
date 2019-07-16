@@ -26,13 +26,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211045"
 ---
-# <a name="sql-server-profiler"></a>SQL Server 事件探查器
+# <a name="sql-server-profiler"></a>SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一个功能丰富的界面，用于创建和管理跟踪并分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。  
   
 > [!IMPORTANT]  
@@ -43,8 +43,8 @@ ms.locfileid: "52780719"
 ||||  
 |-|-|-|  
 |**功能\目标工作负荷**|**关系引擎**|**Analysis Services**|  
-|**跟踪捕获**|SQL Server Management Studio 中的扩展事件图形用户界面|SQL Server 事件探查器|  
-|**跟踪重播**|分布式重播|SQL Server 事件探查器|  
+|**跟踪捕获**|SQL Server Management Studio 中的扩展事件图形用户界面|SQL Server Profiler|  
+|**跟踪重播**|分布式重播|SQL Server Profiler|  
   
 ## <a name="benefits-of-sql-server-profiler"></a>SQL Server Profiler 的优点  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是 SQL 跟踪的图形用户界面，用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 Analysis Services 的实例。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以对生产环境进行监视，了解哪些存储过程由于执行速度太慢影响了性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于如下活动：  

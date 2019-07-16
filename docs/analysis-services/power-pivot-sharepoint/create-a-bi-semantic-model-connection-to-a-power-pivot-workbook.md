@@ -1,5 +1,5 @@
 ---
-title: 创建与 Power Pivot 工作簿的 BI 语义模型连接 |Microsoft 文档
+title: 创建与 Power Pivot 工作簿的 BI 语义模型连接 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 992e8a3f84af3de9cb9c8ae461b5c6c0505c1b66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164145"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>创建与 Power Pivot 工作簿的 BI 语义模型连接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34026504"
   
  您必须具有支持 BI 语义模型连接内容类型的库。 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)。  
   
- 你必须知道的 URL[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿为其设置 BI 语义模型连接 (例如， `http://adventure-works/shared documents/myworkbook.xlsx`)。 工作簿必须位于同一场中。  
+ 您必须知道的 URL[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿为其设置 BI 语义模型连接 (例如， `http://adventure-works/shared documents/myworkbook.xlsx`)。 工作簿必须位于同一场中。  
   
  参与连接序列的所有计算机和用户都必须处于同一个域或可信域（双向信任）中。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34026504"
   
 1.  在将包含 BI 语义模型连接的库中，单击 SharePoint 功能区上的 **“文档”** 。 单击“新建文档”上的向下箭头，然后选择 **“BISM 连接文件”** 以便打开“新建 BI 语义模型连接”页。  
   
-     ![SharePoint 库中的新文档子菜单](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 库中的新文档子菜单")  
+     ![在 SharePoint 库中的新文档子菜单](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 库中的新建文档子菜单")  
   
 2.  设置**服务器**属性的 SharePoint url[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]工作簿 (例如， `http://mysharepoint/shared documents/myWorkbook.xlsx`。 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 部署中，数据可从场中的任何服务器上加载。 因此，与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的数据源连接仅指定指向工作簿的路径。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务确定哪一台服务器将加载数据。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34026504"
   
      页面的外观应该如下图所示。  
   
-     ![BISM 连接页显示到工作簿的 URL](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "BISM 连接页显示到工作簿的 URL")  
+     ![显示 URL 到工作簿的 BISM 连接页](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "到工作簿中显示 URL 的 BISM 连接页")  
   
      或者，如果您具有针对工作簿的 SharePoint 权限，则要执行一个附加的验证步骤，以便确保该位置有效。 如果您没有对数据的访问权限，则会向您提供一个无需验证响应即保存 BI 语义模型连接的选项。  
   
@@ -66,27 +66,27 @@ ms.locfileid: "34026504"
   
  您必须是网站所有者才能更改权限。  
   
-1.  在“网站操作”中，单击 **“网站权限”**。  
+1.  在“网站操作”中，单击 **“网站权限”** 。  
   
 2.  单击“创建组”  并将新组命名为 **BISM Users**。  
   
-3.  选择 **“读取”** 权限级别，然后单击 **“创建”**。  
+3.  选择 **“读取”** 权限级别，然后单击 **“创建”** 。  
   
 4.  在“人员和组”中选择 **BISM Users** 。  
   
-5.  指向“新建”，单击 **“添加用户”**，然后添加用户或组帐户。  
+5.  指向“新建”，单击 **“添加用户”** ，然后添加用户或组帐户。  
   
      此时，这些用户和组将拥有对整个网站的“读取”权限，包括从网站级别继承权限的所有库和列表。 如果这些权限太高，则可以选择从特定的库、列表或项中删除此组。  
   
  若要选择性地删除项目级别的权限，请执行以下操作：  
   
-1.  在库中选择一个文档。 单击右下箭头，然后单击 **“管理权限”**。  
+1.  在库中选择一个文档。 单击右下箭头，然后单击 **“管理权限”** 。  
   
-2.  默认情况下，项会继承权限。 若要更改此库中的单个文档的权限，请单击 **“停止继承权限”**。  
+2.  默认情况下，项会继承权限。 若要更改此库中的单个文档的权限，请单击 **“停止继承权限”** 。  
   
-3.  选中 “BISM 用户”旁的复选框。  
+3.  选中  “BISM 用户”旁的复选框。  
   
-4.  单击 **“删除用户权限”**。  
+4.  单击 **“删除用户权限”** 。  
   
 ##  <a name="bkmk_userdb"></a> 配置针对工作簿的 SharePoint 权限  
  如果你在一个 Excel 工作簿内使用某一 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据库，则针对该 Excel 工作簿的 SharePoint 权限将确定通过 BI 语义模型连接进行的数据访问。 为了将工作簿用作外部数据源，访问该工作簿的所有用户都必须对工作簿具有读取权限。  
@@ -96,9 +96,9 @@ ms.locfileid: "34026504"
 ##  <a name="bkmk_next"></a> 后续步骤  
  创建了 BI 语义模型连接并且确保其安全后，可以将该连接指定为数据源。 有关详细信息，请参阅 [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [PowerPivot BI 语义模型连接 (.bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [使用在 Excel 或 Reporting Services 中的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

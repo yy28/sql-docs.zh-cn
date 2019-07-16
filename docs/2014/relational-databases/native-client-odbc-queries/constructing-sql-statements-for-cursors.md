@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228757"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207079"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>为游标构造 SQL 语句
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用服务器游标实现 ODBC 规范中定义的游标功能。 ODBC 应用程序通过使用控制游标行为[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)设置不同的语句属性。 以下为属性及其默认值。  
   
-|Attribute|，则“默认”|  
+|特性|默认|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  

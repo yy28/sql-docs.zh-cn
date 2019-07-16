@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206970"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server Cursor Manager by Type 对象
   **SQLServer:Cursor Manager by Type** 对象提供计数器（按类型分组）来监视游标。  
   
  此表介绍了 SQL Server **Cursor Manager by Type** 计数器。  
   
-|Cursor Manager by Type 计数器|Description|  
+|Cursor Manager by Type 计数器|描述|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|活动游标数。|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
@@ -38,7 +38,7 @@ ms.locfileid: "52804247"
   
  对象中的每个计数器均包含以下实例：  
   
-|Cursor Manager 实例|Description|  
+|Cursor Manager 实例|描述|  
 |-----------------------------|-----------------|  
 |**_Total**|所有游标的信息。|  
 |**API 游标**|仅 API 游标信息。|  

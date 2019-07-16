@@ -1,5 +1,5 @@
 ---
-title: 关联模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 关联模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b9c977cbe5a31672d6738e2aaa7f3f911975e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017574"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182790"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>关联模型的挖掘模型内容（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34017574"
 ## <a name="understanding-the-structure-of-an-association-model"></a>了解关联模型的结构  
  关联模型结构非常简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有项集和规则的平面列表。 项集和规则不是按树组织的，它们的顺序是项集在先、规则在后，如下面的关系图所示。  
   
- ![关联模型的模型内容的结构](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "关联模型的模型内容的结构")  
+ ![关联模型的模型内容的结构](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "的关联模型的模型内容结构")  
   
  每个项集均包含在其自己的节点中 (NODE_TYPE = 7)。 “节点  ”包含项集定义、含有此项集的事例的数目以及其他信息。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34017574"
  NODE_TYPE  
  关联模型仅输出以下节点类型：  
   
-|节点类型 ID|类型|  
+|节点类型 ID|type|  
 |------------------|----------|  
 |1（模型）|根节点或父节点。|  
 |7（项集）|项集，或属性-值对的集合。 示例：<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 或<br /><br /> `Gender = Male`。|  
@@ -89,7 +89,7 @@ ms.locfileid: "34017574"
   
  **父节点** 包括一个逗号分隔列表，该列表包含有关该模型的以下信息：  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |ITEMSET_COUNT|模型中所有项集的计数。|  
 |RULE_COUNT|模型中所有规则的计数。|  
@@ -97,10 +97,10 @@ ms.locfileid: "34017574"
 |MAX_SUPPORT|为任何单个项集找到的最大支持。<br /><br /> **注意** 值可能不同于为 *MAXIMUM_SUPPORT* 参数设置的值。|  
 |MIN_ITEMSET_SIZE|最小项集的大小，由项目的计数表示。<br /><br /> 值为 0 指示 **Missing** 状态被视为独立项目。<br /><br /> **注意** *MINIMUM_ITEMSET_SIZE* 参数的默认值为 1。|  
 |MAX_ITEMSET_SIZE|指示找到的最大项集的大小。<br /><br /> **注意** 此值受创建模型时为 *MAX_ITEMSET_SIZE* 参数设置的值的约束。 该值永远不可大于、但可小于为该参数设置的值。 默认值为 3。|  
-|MIN_PROBABILITY|为模型中的任何单个项集或规则检测到的最小概率。<br /><br /> 示例：0.400390625<br /><br /> **注意** 对于项集，此值始终大于创建模型时为 *MINIMUM_PROBABILITY* 参数设置的值。|  
-|MAX_PROBABILITY|为模型中的任何单个项集或规则检测到的最大概率。<br /><br /> 示例：1<br /><br /> **注意** 没有参数来约束项集的最大概率。 若要消除出现过于频繁的项目，请改用 *MAXIMUM_SUPPORT* 参数。|  
-|MIN_LIFT|该模型为任何项集提供的最小提升量。<br /><br /> 示例：0.14309369632511<br /><br /> 注意：了解最小提升可帮助你确定对任何一个项集的提升是否有效。|  
-|MAX_LIFT|该模型为每个项集提供的最大提升量。<br /><br /> 示例：1.95758227647523 **注意** 了解最大提升可帮助您确定对任何一个项集的提升是否有效。|  
+|MIN_PROBABILITY|为模型中的任何单个项集或规则检测到的最小概率。<br /><br /> 例如：0.400390625<br /><br /> **注意** 对于项集，此值始终大于创建模型时为 *MINIMUM_PROBABILITY* 参数设置的值。|  
+|MAX_PROBABILITY|为模型中的任何单个项集或规则检测到的最大概率。<br /><br /> 例如：1<br /><br /> **注意** 没有参数来约束项集的最大概率。 若要消除出现过于频繁的项目，请改用 *MAXIMUM_SUPPORT* 参数。|  
+|MIN_LIFT|该模型为任何项集提供的最小提升量。<br /><br /> 例如：0.14309369632511<br /><br /> 注意:了解最小提升可帮助您确定对任何一个项集的提升是否有效。|  
+|MAX_LIFT|该模型为每个项集提供的最大提升量。<br /><br /> 例如：1.95758227647523**注意**了解最大提升可帮助您确定对任何一个项集的提升是否有效。|  
   
  **项集节点** 项集节点包含一个项目列表，该列表显示为一个以逗号分隔的文本字符串。  
   
@@ -186,8 +186,8 @@ ms.locfileid: "34017574"
  MSOLAP_NODE_SHORT_CAPTION  
  空白。  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)  
   

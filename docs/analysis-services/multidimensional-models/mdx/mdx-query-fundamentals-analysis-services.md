@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 158b02c3589b3b20a90e59491372751d596d3c53
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176474"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 查询基础知识 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52983828"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[基本 MDX 查询 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)|提供 MDX SELECT 语句的基本语法信息。|  
 |[用查询和切片器轴限定查询&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)|说明什么是查询轴和切片器轴，以及如何指定它们。|  

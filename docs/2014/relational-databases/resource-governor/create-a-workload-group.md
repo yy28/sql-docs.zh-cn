@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198927"
 ---
 # <a name="create-a-workload-group"></a>创建工作负荷组
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建工作负荷组。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要创建工作负荷组，请使用：**[SQL Server Management Studio](#CreWGProp)， [Transact SQL](#CreWGTSQL)  
+-   若要创建工作负荷组，请使用：  [SQL Server Management Studio](#CreWGProp)、[Transact-SQL](#CreWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52814049"
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的资源池。  
   
-2.  右键单击“工作负荷组”文件夹，然后单击“新建工作负荷组”。  
+2.  右键单击“工作负荷组”  文件夹，然后单击“新建工作负荷组”  。  
   
 3.  在 **“资源池”** 网格中，确保突出显示要添加工作负荷组的资源池。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52814049"
   
 6.  在行中单击或双击要更改其默认设置的任何其他单元，然后输入新值。  
   
-7.  若要保存更改，请单击 **“确定”**。  
+7.  若要保存更改，请单击 **“确定”** 。  
   
 ##  <a name="CreWGTSQL"></a> 使用 Transact-SQL 创建工作负荷组  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

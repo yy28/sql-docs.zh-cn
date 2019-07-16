@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207608"
 ---
 # <a name="measures"></a>度量值组
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -70,7 +70,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> 度量值属性  
  每个度量值具有定义它的属性。 可以在“属性”窗口中编辑度量值属性以及关联的列属性。 度量值具有以下属性：  
   
-|属性|默认设置|Description|  
+|属性|默认设置|描述|  
 |--------------|---------------------|-----------------|  
 |**说明**|空白|度量值的说明。 该说明将不与度量值一起显示在报告客户端中。|  
 |**格式**|从公式表达式中引用的列的数据类型自动确定。|度量值的格式。 例如，货币或百分比。|  
@@ -78,13 +78,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**“度量值名称”**|使用“自动求和”时，度量值名称将位于后跟冒号的列名之前。 如果输入自定义公式，请键入名称并且后跟冒号，然后键入该公式。|显示在报告客户端的字段列表中的度量值名称。|  
   
 ##  <a name="bkmk_KPI"></a> 在 KPI 中使用度量值  
- KPI（关键绩效指标）由“基础”值（由度量值定义）定义，用于与“目标”值（也由度量值或绝对值定义）进行对比。 KPI 还包括以图形格式显示的“状态” ，这是一种计算，其中会根据各阈值之间的目标值对基础值进行评估。 业务专业人员通常使用 KPI 来确定关键业务度量的趋势。  
+ KPI（关键绩效指标）由“基础”值（由度量值定义）定义，用于与“目标”值（也由度量值或绝对值定义）进行对比   。 KPI 还包括以图形格式显示的“状态”  ，这是一种计算，其中会根据各阈值之间的目标值对基础值进行评估。 业务专业人员通常使用 KPI 来确定关键业务度量的趋势。  
   
- 任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 若要了解详细信息，请参阅[Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
+ 任何度量值都可以作为 KPI 的基础度量值。 若要创建 KPI，请在度量值网格中右键单击某度量值，然后单击“创建 KPI”  。 将显示“关键绩效指标”对话框，您可以在此指定目标值（由度量值或绝对值定义）、定义状态阈值和图形类型。 若要了解详细信息，请参阅[Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[创建和管理度量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|说明如何使用模型设计器中的度量值网格创建和管理度量值。|  
   

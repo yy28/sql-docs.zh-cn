@@ -1,5 +1,5 @@
 ---
-title: 聚类分析模型查询示例 |Microsoft 文档
+title: 聚类分析模型查询示例 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6e415c0b82738ec153b20cb79e19af59bacba16
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210171"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34019424"
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1：使用 DMX 获取模型元数据  
+###  <a name="bkmk_Query1"></a> 示例查询 1:使用 DMX 获取模型元数据  
  下面的查询返回您在基本数据挖掘教程中创建的聚类分析模型 `TM_Clustering`的基本元数据。 聚类分析模型的父节点中可用的元数据包括模型的名称、存储模型的数据库以及模型中的子节点数目。 此查询使用 DMX 内容查询从模型的父节点中检索元数据：  
   
 ```  
@@ -73,13 +73,13 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|全部|  
+|NODE_DESCRIPTION|All|  
   
  有关这些列在聚类分析模型中的含义的定义，请参阅[聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)。  
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2：从架构行集中检索模型元数据  
+###  <a name="bkmk_Query2"></a> 示例查询 2:从架构行集中检索模型元数据  
  通过查询数据挖掘架构行集，可以找到在 DMX 内容查询中返回的相同信息。 但是，架构行集还提供一些额外的列。 这包括创建模型时使用的参数、上次处理模型的日期和时间以及模型的所有者。  
   
  下面的示例返回创建、修改和上次处理模型的日期，以及用于生成模型的聚类分析参数和定型集的大小。 这些信息对于模型的归档或者确定使用了哪些聚类分析选项来创建现有模型很有用。  
@@ -105,7 +105,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>查找有关分类的信息  
  聚类分析模型中最有用的内容查询通常返回与使用 **“分类查看器”** 可浏览的信息同类的信息。 这包括分类配置文件、分类特征以及分类对比。 本节提供检索这些信息的查询示例。  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3：返回分类或分类列表  
+###  <a name="bkmk_Query3"></a> 示例查询 3:返回分类列表  
  因为所有分类的节点类型都为 5，所以通过仅仅查询该类型的节点的模型内容可轻松地检索分类的列表。 您还可以筛选按概率或支持所返回的节点，如下例所示。  
   
 ```  
@@ -131,7 +131,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a> 示例查询 4：返回分类的属性  
+###  <a name="bkmk_Query4"></a> 示例查询 4:返回分类的属性  
  对于每个分类， **“分类查看器”** 都显示列出属性及其值的配置文件。 此查看器还显示一个直方图，以显示当模型中完全填充了事例时值的分布。 如果您是在查看器中浏览模型，则可以轻松地将直方图从挖掘图例复制并粘贴到 Excel 或 Word 文档。 您还可以使用查看器的“分类特征”窗格以图形方式比较不同分类的属性。  
   
  但是，如果您必须一次获取多个分类的值，则查询模型更容易。 例如，浏览模型时，您可能注意到最上面的两个分类在属性 `Number Cars Owned`上存在不同。 因此，您需要提取每个分类的值。  
@@ -163,17 +163,17 @@ WHERE NODE_TYPE = 5
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
-|001|缺少|0|  
+|001|Missing|0|  
 |002|0|0.576980023|  
 |002|1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
-|002|缺少|0|  
+|002|Missing|0|  
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> 示例查询 5：使用系统存储过程返回分类配置文件  
+###  <a name="bkmk_Query5"></a> 示例查询 5:返回分类配置文件使用系统存储过程  
  作为一种快捷方式，您还可以调用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用来处理分类的系统存储过程，而不是使用 DMX 编写自己的查询。 下面的示例说明如何使用内部存储过程来返回 ID 为 002 的分类的配置文件。  
   
 ```  
@@ -188,7 +188,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  示例结果：  
   
-|属性|值|频率|支持|  
+|特性|值|频率|支持|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
 |地区|North America|0.999852875241508|899|  
@@ -199,8 +199,8 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> 示例查询 6：查找分类的对比因子  
- 使用**分类查看器**的“分类对比”选项卡，可以轻松地将一个分类与另一个分类进行比较，或者将一个分类与其余所有事例（分类的补充）进行比较。  
+###  <a name="bkmk_Query6"></a> 示例查询 6:查找分类的对比因子  
+ 使用**分类查看器**的“分类对比”  选项卡，可以轻松地将一个分类与另一个分类进行比较，或者将一个分类与其余所有事例（分类的补充）进行比较。  
   
  但是，创建查询来返回这些信息很复杂，您可能需要在客户端上进行一些额外的处理来存储临时结果并比较两个或更多查询的结果。 作为一种快捷方式，可以使用系统存储过程。  
   
@@ -212,7 +212,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  示例结果：  
   
-|属性|值|分数|  
+|特性|值|分数|  
 |----------------|------------|-----------|  
 |地区|North America|100|  
 |English Occupation|技术工人|94.9003803898654|  
@@ -230,7 +230,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> 示例查询 7：返回属于分类的事例  
+###  <a name="bkmk_Query7"></a> 示例查询 7:返回属于分类的事例  
  如果对挖掘模型启用了钻取，则可以创建查询来返回有关在模型中使用的事例的详细信息。 此外，如果对挖掘结构启用了钻取，则可以通过使用 [StructureColumn （DMX）](../../dmx/structurecolumn-dmx.md) 函数来包括基础结构中的列。  
   
  下面的示例返回模型中使用的两列 Age 和 Region，以及模型中未使用的一列 First Name。 此查询仅仅返回归为分类 1 的事例。  
@@ -252,7 +252,7 @@ WHERE IsInNode('001')
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a> 示例查询 8：从聚类分析模型中预测结果  
+###  <a name="bkmk_Query8"></a> 示例查询 8:从聚类分析模型中预测结果  
  如果您创建的聚类分析模型包含可预测的属性，则可以使用该模型来对结果进行预测。 但是，根据您将可预测列设置为 **Predict** 还是 **PredictOnly**，模型处理该可预测属性的方式也不同。 如果您将列的用法设置为 **Predict**，则该属性的值会添加到聚类分析模型，并在完成的模型中显示为属性。 但是，如果将列的用法设置为 **PredictOnly**，则值不会用于创建分类。 模型完成后，聚类分析算法会基于每个事例所属的分类为 **PredictOnly** 属性创建新的值。  
   
  下面的查询向模型提供一个新事例，在该模型中，有关该事例的唯一信息是年龄和性别。 SELECT 语句指定你关注的可预测属性/值对，而 [PredictProbability (DMX)](../../dmx/predictprobability-dmx.md) 函数则指出具有这些属性的事例具有目标结果的概率。  
@@ -305,7 +305,7 @@ NATURAL PREDICTION JOIN
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> 示例查询 9：确定分类成员身份  
+###  <a name="bkmk_Query9"></a> 示例查询 9:确定分类成员身份  
  本示例使用 [分类 (DMX)](../../dmx/cluster-dmx.md) 函数来返回新事例最有可能属于的分类，并使用 [ClusterProbability (DMX)](../../dmx/clusterprobability-dmx.md) 函数来返回该分类中的成员身份的概率。  
   
 ```  
@@ -328,7 +328,7 @@ NATURAL PREDICTION JOIN
   
  [返回页首](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a> 示例查询 10：返回具有概率和距离的所有可能分类  
+###  <a name="bkmk_Query10"></a> 示例查询 10:返回具有概率和距离的所有可能分类  
  在上一个示例中，概率分数不是非常高。 若要确定是否存在更好的分类，可以将 [PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md) 函数与 [分类 (DMX)](../../dmx/cluster-dmx.md) 函数一起使用，以返回包括所有可能的分类以及新事例属于每个分类的概率的嵌套表。 FLATTENED 关键字用于将分层行集改为平面表，以便于查看。  
   
 ```  
@@ -369,21 +369,21 @@ NATURAL PREDICTION JOIN
 |[分类 (DMX)](../../dmx/cluster-dmx.md)|返回最可能包含输入事例的分类。|  
 |[ClusterDistance (DMX)](../../dmx/clusterdistance-dmx.md)|返回输入事例与指定分类之间的距离；如果未指定分类，则返回输入事例与可能性最大的分类之间的距离。<br /><br /> 返回输入事例属于指定分类的概率。|  
 |[ClusterProbability (DMX)](../../dmx/clusterprobability-dmx.md)|返回输入事例属于指定分类的概率。|  
-|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
-|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
+|[IsDescendant (DMX)](../../dmx/isdescendant-dmx.md)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[IsInNode (DMX)](../../dmx/isinnode-dmx.md)|指示指定的节点是否包含当前事例。|  
+|[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|返回加权的概率。|  
+|[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|预测关联数据集中的成员身份。|  
 |[PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md)|返回输入事例适合现有模型的可能性。|  
 |[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|返回与当前预测值相关的值的表。|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
-|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
-|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
+|[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|返回每个事例的 Node_ID。|  
+|[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|返回预测值的概率。|  
+|[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|返回指定列的预测标准偏差。|  
+|[PredictSupport (DMX)](../../dmx/predictsupport-dmx.md)|返回指定状态的支持值。|  
+|[PredictVariance (DMX)](../../dmx/predictvariance-dmx.md)|返回指定列的方差。|  
   
  有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 聚类分析算法技术参考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  

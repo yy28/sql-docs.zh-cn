@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ab758f83bde2cb587d3cfab8764fd7eb8fe2577
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788849"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197998"
 ---
 # <a name="using-capture-mode"></a>使用捕获模式
   SMO 程序可以捕获和记录该程序发出的等效 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，代替（或外加）该程序执行的语句。 通过使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象，或者通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server> 属性，启用捕获模式。  

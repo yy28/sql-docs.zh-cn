@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 3ad5bed93bf69f004276fd751f7f2fdef1ea9997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685734"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210276"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 向后兼容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "57685734"
 |多维|数据挖掘|
 |多维|远程链接的度量值组|
 |表格|1100年和 1103年兼容级别模型|
-|表格|表格对象模型属性：Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|表格|表格对象模型属性：Column.TableDetailPosition，Column.IsDefaultLabel，Column.IsDefaultImage|
 |工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|跟踪重播 <br />替代功能的 Server Profiler。 没有替代功能。|  
-|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置：Microsoft.SqlServer.Management.XEvent<br />-跟踪读取：Microsoft.SqlServer.XEvent.Linq<br />-跟踪重播：None|  
+|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置：Microsoft.SqlServer.Management.XEvent<br />-跟踪读取：Microsoft.SqlServer.XEvent.Linq<br />-跟踪重播：无|  
 
 
 ## <a name="discontinued-features"></a>废弃的功能
@@ -65,5 +65,5 @@ ms.locfileid: "57685734"
 更改 MDSCHEMA_MEASUREGROUP_DIMENSIONS 和 DISCOVER_CALC_DEPENDENCY，详述[什么是 Analysis Services 的 SQL Server 2017 CTP 2.1 中的新增功能](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/)公告。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Analysis Services 向后兼容性 (SQL Server 2016)](analysis-services-backward-compatibility.md)

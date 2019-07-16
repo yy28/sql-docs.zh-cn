@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195576"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
   如果主要是对少数元素和属性值进行查询，您可能希望将这些数量提升到关系列。 检索整个 XML 实例，但只对一小部分 XML 数据进行查询时，这很有用。 不必对 XML 列创建 XML 索引。 但可以对提升的列进行索引。 必须编写查询才能使用提升的列。 也就是说，查询优化器不会将对 XML 列的查询再定向到提升的列。  
@@ -28,7 +28,7 @@ ms.locfileid: "58533309"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>基于 xml 数据类型的计算列  
  可以通过使用调用用户定义函数创建计算的列`xml`数据类型方法。 计算列的类型可以是任何 SQL 类型，包括 XML。 下面的示例说明了这一点。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例如：基于计算列的 xml 数据类型方法  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例如：基于 xml 数据类型方法的计算列  
  为书的 ISBN 号创建用户定义函数：  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以按通常的方式对计算列创建索引。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例如：对计算列基于 xml 数据类型方法查询  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例如：针对基于 xml 数据类型方法的计算列的查询  
  若要获得其 ISBN 为 0-7356-1588-2 的 <`book`>：  
   
 ```  
@@ -91,7 +91,7 @@ WHERE  ISBN = '0-7356-1588-2'
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例如：创建用户定义函数来从 XML 实例生成行集  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例如：创建用户定义函数以从 XML 实例生成行集  
  以下表值函数 udf_XML2Table 接受主键值和 XML 实例。 它检索 <`book`> 元素的所有作者的名字，然后返回主键-名字对行集。  
   
 ```  
@@ -154,7 +154,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例如：查找其作者具有相同的第一个名称的 XML 实例  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例如：查找其作者名字相同的 XML 实例  
  可以对 XML 列执行此查询。 此外，它也可以在属性表中搜索名字“David”，然后与基表进行后向联接以返回 XML 实例。 例如：  
   
 ```  
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例如：解决方案使用 CLR 流式表值函数  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例如：使用 CLR 流式处理表值函数的解决方案  
  此解决方案包括下列步骤：  
   
 1.  定义 CLR 类 SqlReaderBase，它实现 ISqlReader，并通过在 XML 实例上应用路径表达式来生成流式表值输出。  

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211180"
 ---
 # <a name="creating-views-and-stored-procedures"></a>创建视图和存储过程
   既然 Mary 可以访问 **TestData** 数据库，你可能希望创建一些数据库对象（如视图和存储过程），再将它们的访问权限授予 Mary。 视图是存储的 SELECT 语句，而存储过程是以批处理方式执行的一条或多条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  

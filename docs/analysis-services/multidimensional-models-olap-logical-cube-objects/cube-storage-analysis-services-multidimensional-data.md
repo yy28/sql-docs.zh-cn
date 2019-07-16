@@ -1,5 +1,5 @@
 ---
-title: 多维数据集存储 (Analysis Services-多维数据) |Microsoft 文档
+title: 多维数据集存储 (Analysis Services-多维数据) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05ff45fa98b578fce295ab2113abf301bc3b78ed
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181001"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>多维数据集存储（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  存储可能仅包括多维数据集元数据，也可能包括事实数据表中的所有源数据以及通过与度量值组相关的维度所定义的聚合。 存储的数据数量取决于所选择的存储模式和聚合数。 存储的数据的量会直接影响查询性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 尽量减少存储的多维数据集数据和聚合所需的空间使用几种方法：  
+  存储可能仅包括多维数据集元数据，也可能包括事实数据表中的所有源数据以及通过与度量值组相关的维度所定义的聚合。 存储的数据数量取决于所选择的存储模式和聚合数。 存储的数据的量会直接影响查询性能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用几种方法来最小化存储多维数据集数据和聚合所需的空间：  
   
 -   使用存储选项，您可以选择最适合于多维数据集数据的存储模式和位置。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "34027497"
   
 -   不为空单元分配存储空间。  
   
- 存储按分区进行定义，并且对于多维数据集中的每个度量值组，至少存在一个分区。 有关详细信息，请参阅[分区&#40;Analysis Services-多维数据&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)，[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)，和[在多维模型中创建度量值和度量值组](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
+ 存储按分区进行定义，并且对于多维数据集中的每个度量值组，至少存在一个分区。 有关详细信息，请参阅[分区&#40;Analysis Services-多维数据&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)，[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)，并[在多维模型中创建度量值和度量值组](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
 ## <a name="partition-storage"></a>分区存储  
  度量值组的存储空间可以分成多个分区。 使用分区，您可以将度量值组分散到单个服务器或多个服务器上的离散段中，并优化存储和查询性能。 度量值组中的每个分区都可基于不同的数据源，并使用不同的存储设置进行存储。  
@@ -35,12 +35,12 @@ ms.locfileid: "34027497"
   
  分区最初使用其所属度量值组的存储设置进行创建。 存储设置确定是将详细信息和聚合数据以多维格式存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中，还是以关系格式存储在源服务器上，或者是两者的组合。 存储设置还确定是否使用主动缓存来自动处理对存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的多维数据所进行的源数据更改。  
   
- 用户看不到多维数据集的分区。 但是，为不同分区选择的存储设置可能影响到数据的即时性、所用磁盘空间的数量和查询性能。 分区可以存储在多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中。 这为多维数据集存储提供了群集途径，并将工作负荷分散到多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上。 有关详细信息，请参阅[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[远程分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)，和[分区&#40;Analysis Services-多维数据&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
+ 用户看不到多维数据集的分区。 但是，为不同分区选择的存储设置可能影响到数据的即时性、所用磁盘空间的数量和查询性能。 分区可以存储在多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中。 这为多维数据集存储提供了群集途径，并将工作负荷分散到多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上。 有关详细信息，请参阅[分区存储模式和处理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)，[远程分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)，并[分区&#40;Analysis Services-多维数据&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
   
 ## <a name="linked-measure-groups"></a>链接度量值组  
  在不同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上存储多个多维数据集副本可能需要相当大的磁盘空间，但可以通过用链接度量值组替换度量值组副本来大大减少所需空间。 链接度量值组基于其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（位于相同或不同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中）的多维数据集中的度量值组。 链接度量值组还只能与来自同一源多维数据集的链接维度一起使用。 链接维度和度量值组都使用源多维数据集的聚合，并且对它们自己的聚合没有数据存储要求。 因此，通过在一个数据库中维护源度量值组和维度，而在其他数据库的多维数据集中创建链接多维数据集和维度，您可以因存储所用空间的大大降低而节约大量磁盘空间。 有关详细信息，请参阅[链接度量值组](../../analysis-services/multidimensional-models/linked-measure-groups.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

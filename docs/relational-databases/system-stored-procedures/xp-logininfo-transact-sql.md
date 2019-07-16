@@ -1,5 +1,5 @@
 ---
-title: xp_logininfo (Transact-SQL) | Microsoft Docs
+title: xp_logininfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898410"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +58,9 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**account name**|**sysname**|完全限定的 Windows 帐户名。|  
+|**帐户名称**|**sysname**|完全限定的 Windows 帐户名。|  
 |**type**|**char(8)**|Windows 帐户类型。 有效的值为**用户**或**组**。|  
-|**privilege**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效的值为**管理员**，**用户**，或**null**。|  
+|**特权**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的访问特权。 有效的值为**管理员**，**用户**，或**null**。|  
 |**映射的登录名**|**sysname**|拥有用户特权的用户帐户**映射登录名**显示了映射的登录名的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]尝试前面添加的映射的规则使用的域名与此帐户登录时使用。|  
 |**权限路径**|**sysname**|使帐户得到访问权限的组成员身份。|  
   

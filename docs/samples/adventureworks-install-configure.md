@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894929"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安装和配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,10 +66,10 @@ AdventureWorks 下载链接和安装说明。
 
 1. 打开 SQL Server Management Studio 并连接到目标 SQL Server 实例。
 2. 右键单击**数据库**节点，然后选择**Restore Database**。
-3. 选择**设备**，然后单击省略号 (**...**)
-4. 在对话框**选择备份设备**，单击**添加**，导航到的服务器的文件系统中的数据库备份，并选择的备份。 单击“确定” 。
+3. 选择**设备**，然后单击省略号 ( **...** )
+4. 在对话框**选择备份设备**，单击**添加**，导航到的服务器的文件系统中的数据库备份，并选择的备份。 单击 **“确定”** 。
 5. 如果需要更改数据的目标位置，并在日志文件，**文件**窗格。 请注意，它将数据和日志文件的不同驱动器上的最佳做法。
-6. 单击“确定” 。 这将启动数据库还原。 完成后，必须安装 SQL Server 实例上的 AdventureWorks 数据库。
+6. 单击 **“确定”** 。 这将启动数据库还原。 完成后，必须安装 SQL Server 实例上的 AdventureWorks 数据库。
 
 有关还原 SQL Server 数据库的详细信息，请参阅[使用 SSMS 将数据库备份还原](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)。
 
@@ -82,7 +81,7 @@ AdventureWorks 下载链接和安装说明。
 2. 右键单击**数据库**节点，然后选择**附加**。
 3. 选择**添加**并导航到。你想要附加的 MDF 文件。 
 1. 选择该文件，然后单击**确定**。 
-    1. 您选择的数据库应显示在底部窗口中。 如果列出该文件为"未找到"，选择省略号 (**...**) 旁边的文件名和更新的正确路径的路径。 
+    1. 您选择的数据库应显示在底部窗口中。 如果列出该文件为"未找到"，选择省略号 ( **...** ) 旁边的文件名和更新的正确路径的路径。 
     1. 如果只有数据文件 (.mdf)，而不是日志文件 (.ldf)，然后突出显示在底部窗口.ldf 并选择**删除**。 这将创建新的日志文件。 
 1. 选择**确定**可以附加的文件。 附加文件后，必须安装 SQL Server 实例上的 AdventureWorks 数据库。  
 
@@ -101,6 +100,6 @@ AdventureWorks 下载链接和安装说明。
 1. 选择**创建**创建新 SQL 数据库，这是在 AdventureWorksLT 数据库的已还原的副本。 
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [SQL Server Management studio 教程](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [有关 SQL Server 数据库引擎教程](../relational-databases/database-engine-tutorials.md)

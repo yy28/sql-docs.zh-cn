@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b75ec5d7433931a81a0fa6e2c648f85335fbedc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002189"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208969"
 ---
 # <a name="deployment-script-files---input-used-to-create-deployment-script"></a>部署脚本文件-输入用于创建部署脚本
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   在生成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]生成的项目文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将这些文件放在输出文件夹的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 默认情况下，输出将输出到 \Bin 文件夹之中。 下表列出了 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建的 XML 文件。  
   
-|文件|Description|  
+|文件|描述|  
 |---------------|-----------------|  
 |\<*项目名称*>.asdatabase|用于多维或 1100年/1103年表格模型项目的 XMLA 文件或表格 1200年和更高版本的模型项目的 JSON 文件。 包含项目中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的声明性定义。|  
 |\<*项目名称*>.deploymenttargets|包含将在其中创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例和数据库的名称。|  

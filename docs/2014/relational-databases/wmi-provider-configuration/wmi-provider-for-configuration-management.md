@@ -16,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778571"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211625"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>用于配置管理的 WMI 提供程序的概念
   WMI 提供程序是与一起使用的已发布的层[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器管理单元[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台 (MMC) 和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  

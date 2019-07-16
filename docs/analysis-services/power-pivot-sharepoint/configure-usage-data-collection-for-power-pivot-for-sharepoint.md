@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164151"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>配置使用情况数据收集 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,15 +46,15 @@ ms.locfileid: "52420278"
 ##  <a name="events"></a> 启用使用情况数据收集并选择触发数据收集的事件  
  在 SharePoint 管理中心中配置使用情况数据收集。  
   
-1.  在管理中心中，单击 **“监视”**。  
+1.  在管理中心中，单击 **“监视”** 。  
   
-2.  在 **“报告”** 部分中，单击 **“配置 Usage and Health Data Collection”**。  
+2.  在 **“报告”** 部分中，单击 **“配置 Usage and Health Data Collection”** 。  
   
-3.  选中 **“启用使用率数据集”**。  
+3.  选中 **“启用使用率数据集”** 。  
   
 4.  在 **“要记录的事件”** 部分中，选中或清除有关复选框以启用或禁用以下 Analysis Services 事件：  
   
-    |事件|Description|  
+    |事件|描述|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 连接**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 连接事件用于监视代表用户进行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器连接。|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 加载数据使用情况**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 加载数据使用情况用于监视将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据加载到服务器内存中的请求。 为从内容数据库或从缓存加载的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据文件生成加载事件。|  
@@ -77,9 +77,9 @@ ms.locfileid: "52420278"
   
  若要查看或更改这些属性，请使用 **“Usage and Health Data Collection”** 页。  
   
-1.  在管理中心的主页上，单击 **“监视”**。  
+1.  在管理中心的主页上，单击 **“监视”** 。  
   
-2.  在“监视”部分中，单击 **“配置 Usage and Health Data Collection”**。  
+2.  在“监视”部分中，单击 **“配置 Usage and Health Data Collection”** 。  
   
 3.  在“使用率数据集设置”中，查看或修改文件位置、名称或最大文件大小。 如果您指定的最大文件大小过小，则该文件大小将很快达到最大值限制，并且在其内容移到中心使用情况数据收集数据库之前，不会有新条目添加到该文件。  
   
@@ -92,17 +92,17 @@ ms.locfileid: "52420278"
   
  如果需要更频繁地刷新出现在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板中的管理报告，则按照以下步骤执行。  
   
-1.  在管理中心中，单击 **“监视”**。  
+1.  在管理中心中，单击 **“监视”** 。  
   
-2.  单击 **“检查作业定义”** 在“计时器作业”部分中：  
+2.  单击 **“检查作业定义”** 在“计时器作业”  部分中：  
   
-3.  单击 **“Microsoft SharePoint Foundation 使用情况数据导入”**。  
+3.  单击 **“Microsoft SharePoint Foundation 使用情况数据导入”** 。  
   
-4.  单击 **“立即运行”**。 如果禁用 **“立即运行”** 按钮，请依次单击 **“启用”** 和 **“立即运行”**。  
+4.  单击 **“立即运行”** 。 如果禁用 **“立即运行”** 按钮，请依次单击 **“启用”** 和 **“立即运行”** 。  
   
-5.  在“作业定义”列表中，单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据管理面板处理计时器作业”。  
+5.  在“作业定义”列表中，单击“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据管理面板处理计时器作业”  。  
   
-6.  单击 **“立即运行”**。  
+6.  单击 **“立即运行”** 。  
   
 7.  检查报告以查看刷新数据。 有关详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
@@ -123,12 +123,12 @@ ms.locfileid: "52420278"
   
      数据实际在发生下一个事件时被数据。 仅当系统处理某一事件时，才检查对使用情况数据历史记录的限制。  
   
-3.  单击“确定” 。  
+3.  单击 **“确定”** 。  
   
  有关如何收集和存储使用情况数据的详细信息，请参阅 [PowerPivot 使用情况数据收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)。  
   
 ##  <a name="qrh"></a> 出于报告目的定义快速、中等和较慢的查询响应类别  
- 查询处理性能根据预定义的类别进行测量，这些预定义的类别按完成所用的时间长度定义请求-响应周期。 预定义的类别包括：一般、快速、预期、长时间运行和超出。 对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的每个请求都将基于完成时间属于上述类别之一。  
+ 查询处理性能根据预定义的类别进行测量，这些预定义的类别按完成所用的时间长度定义请求-响应周期。 预定义的类别包括：简单、 快速、 预期、 长时间运行和超出了阈值。 对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器的每个请求都将基于完成时间属于上述类别之一。  
   
  查询响应信息用于活动报告中。 在这些报表内，为了更好地揭示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统的性能趋势，每种类别的用法都各不相同。 例如，一般请求将被完全排除，因为这样做可以消除数据中的干扰并且使用其余类别显示更有意义的趋势。 相反，长时间运行或超出的请求统计信息是报告中的重点，以便管理员或工作簿所有者可以立即采取纠正措施。  
   
@@ -136,24 +136,24 @@ ms.locfileid: "52420278"
   
 1.  [打开“Power Pivot 服务应用程序”页](#openconfig)。  
   
-2.  在“使用情况数据收集”部分的“一般响应上限”中，输入设置完成一般响应的上限的值（毫秒）。 属于此类别的请求通常包括服务器 ping、会话初始化和元数据查询。 默认值为 500 毫秒（或半秒钟）。  
+2.  在“使用情况数据收集”  部分的“一般响应上限”  中，输入设置完成一般响应的上限的值（毫秒）。 属于此类别的请求通常包括服务器 ping、会话初始化和元数据查询。 默认值为 500 毫秒（或半秒钟）。  
   
 3.  在“快速请求上限”中，输入设置完成快速响应的上限的值（毫秒）。 属于此类别的请求包含对非常小的数据集或大型数据集的元数据服务器的查询。 默认值为 1000 毫秒（或 1 秒钟）。  
   
-4.  在“预期响应上限”中，输入设置在预期或平均时间范围内完成某一响应的上限的值（毫秒）。 属于此类别的请求包括将数据加载到查看器中。 默认值为 3000 毫秒（或 3 秒钟）。  
+4.  在“预期响应上限”  中，输入设置在预期或平均时间范围内完成某一响应的上限的值（毫秒）。 属于此类别的请求包括将数据加载到查看器中。 默认值为 3000 毫秒（或 3 秒钟）。  
   
-5.  在“长时间响应上限”中，输入设置完成长时间运行响应的上限的值（毫秒）。 属于此类别的请求的运行时间比预期时间要长，但仍在可接受的范围内。 默认值为 10000 毫秒（或 10 秒钟）。  
+5.  在“长时间响应上限”  中，输入设置完成长时间运行响应的上限的值（毫秒）。 属于此类别的请求的运行时间比预期时间要长，但仍在可接受的范围内。 默认值为 10000 毫秒（或 10 秒钟）。  
   
-     超出此限制的任何请求输入“超出” 类别。 对于“超出” 类别，没有可配置的阈值。 根据您在“长请求上限”中指定的上限推断出该值。 属于“超出”类别的请求的运行时间长于您定义的 SLA 所允许的时间。  
+     超出此限制的任何请求输入“超出”  类别。 对于“超出”  类别，没有可配置的阈值。 根据您在“长请求上限”中指定的上限推断出该值。 属于“超出”类别的请求的运行时间长于您定义的 SLA 所允许的时间。  
   
-6.  单击“确定” 。  
+6.  单击 **“确定”** 。  
   
 ##  <a name="ttr"></a> 指定向使用情况数据收集系统报告查询统计信息的频率  
  生成报告的时间间隔指定向使用情况数据收集系统报告查询统计信息的频率。 查询统计信息在进程中累积，并且定期作为单个事件报告。 您可以调整该时间间隔以便写入日志文件的间隔更长或更短。  
   
 1.  [打开“Power Pivot 服务应用程序”页](#openconfig)。  
   
-2.  在“使用情况数据收集”部分的“查询报告间隔”中，输入经过多少秒后服务器将所有类别（一般、快速、预期、长时间运行和超出）的查询统计信息作为单个事件报告给使用情况数据收集系统。  
+2.  在“使用情况数据收集”  部分的“查询报告间隔”  中，输入经过多少秒后服务器将所有类别（一般、快速、预期、长时间运行和超出）的查询统计信息作为单个事件报告给使用情况数据收集系统。  
   
     -   该范围是 1 到任意正整数。  
   
@@ -161,27 +161,27 @@ ms.locfileid: "52420278"
   
      如果您将该值提高得过多，则在报告之前可能会丢失统计信息。 例如，服务重新启动将导致查询统计信息丢失。 相反，如果内置活动报告中显示数据不足，请考虑减少该时间间隔以便更频繁地获取生成报告事件。  
   
-3.  单击“确定” 。  
+3.  单击 **“确定”** 。  
   
 ##  <a name="openconfig"></a> 打开“Power Pivot 服务应用程序”页以访问配置设置  
  您必须是场管理员或服务管理员才能修改服务应用程序设置。 如果在场中定义了多个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序，则必须单独修改每个应用程序。  
   
-1.  在 SharePoint 管理中心内，在 **“应用程序管理”** 中单击 **“管理服务应用程序”**。  
+1.  在 SharePoint 管理中心内，在 **“应用程序管理”** 中单击 **“管理服务应用程序”** 。  
   
-2.  查找 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 您可以通过类型来确定服务应用程序。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序类型是“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”。  
+2.  查找 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。 您可以通过类型来确定服务应用程序。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序类型是“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”  。  
   
 3.  单击 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称。 将打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板。  
   
-4.  在 **“操作”** 中，单击 **“配置服务应用程序设置”**。 将打开“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序设置”页。  
+4.  在 **“操作”** 中，单击 **“配置服务应用程序设置”** 。 将打开“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序设置”页。  
   
 ##  <a name="defaultconfig"></a> Power Pivot 使用情况数据收集的默认配置  
  可以使用默认设置启用针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务操作的使用情况数据收集，以使其立即可用于支持 Analysis Services 集成功能的应用程序。 默认设置包括触发使用情况数据收集的事件、对存储多长时间的使用情况数据的限制以及用于对查询响应时间进行分类的阈值。  
   
  下表显示了使用情况数据收集配置的默认值。  
   
-|设置|默认值|类型|有效范围|  
+|设置|Default Value|type|有效范围|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用事件** （连接、加载、卸载、请求）|\<启用 >|Boolean|这些值可以启用或禁用。|  
+|**Analysis Services 使用事件** （连接、加载、卸载、请求）|\<enabled>|Boolean|这些值可以启用或禁用。|  
 |**查询报告间隔**|300（以秒为单位）|Integer|1 到任意正整数。 默认为 5 分钟。|  
 |**Usage data history**|365（以天为单位）|Integer|0 指定无限制，但您也可以设置使历史数据过期并将自动删除它的上限。 有限保留期的有效值为 1 到 5000（单位为天）。|  
 |一般响应上限|500（以毫秒为单位）|Integer|设置定义一般请求-响应交换的上限。 在 0 到 500 毫秒之间完成的任何请求都是一般请求，并且出于报告目的将被忽略。|  

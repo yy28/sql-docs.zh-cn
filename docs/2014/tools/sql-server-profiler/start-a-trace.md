@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211035"
 ---
 # <a name="start-a-trace"></a>启动跟踪
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]定义新跟踪或创建模板之后，可以使用新的跟踪定义或模板来启动、暂停或停止捕获数据。  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206745"
 ---
 # <a name="binding-parameters"></a>绑定参数
   在执行 SQL 语句前，该语句中的每个参数标记都必须与应用程序中的某个变量关联或绑定到某个变量。 这是通过调用[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)函数。 **SQLBindParameter**描述程序变量 （地址、 C 数据类型等） 向驱动程序。 它还通过指示其序数值来标识参数标记，然后描述它所表示的 SQL 对象的特点（SQL 数据类型、精度等）。  

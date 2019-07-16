@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184419"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>将预测函数应用于模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "52540663"
   
 ### <a name="choose-a-mining-model-to-use-for-prediction"></a>选择用于预测的挖掘模型  
   
-1.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击模型，然后选择“生成预测查询”。  
+1.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击模型，然后选择“生成预测查询”  。  
   
      -- 或者 --  
   
-     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击选项卡 **“挖掘模型预测”**，然后单击 **“挖掘模型”** 表中的  **“选择模型”** 。  
+     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击选项卡 **“挖掘模型预测”** ，然后单击 **“挖掘模型”** 表中的  **“选择模型”** 。  
   
-2.  在 **“选择挖掘模型”** 对话框中，选择挖掘模型，然后单击 **“确定”**。  
+2.  在 **“选择挖掘模型”** 对话框中，选择挖掘模型，然后单击 **“确定”** 。  
   
      您可以选择当前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的任何模型。 若要使用其他数据库中的模型创建查询，则必须在该数据库的上下文中打开新查询窗口，或打开包含该模型的解决方案文件。  
   
@@ -78,9 +78,9 @@ ms.locfileid: "52540663"
   
 1.  如果没有可用于生成此示例查询的聚类分析模型，请使用 [数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)创建 [TM_Clustering] 模型。  
   
-2.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击模型 [TM_Clustering]，然后选择“生成预测查询”。  
+2.  从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，右键单击模型 [TM_Clustering]，然后选择“生成预测查询”  。  
   
-3.  从 **“挖掘模型”** 菜单中选择 **“单独查询”**。  
+3.  从 **“挖掘模型”** 菜单中选择 **“单独查询”** 。  
   
 4.  在 **“单独查询输入”** 对话框中，将以下值设置为输入：  
   
@@ -88,15 +88,15 @@ ms.locfileid: "52540663"
   
     -   Commute Distance = 5-10 miles  
   
-5.  在查询网格中，为“源”选择 TM_Clustering 挖掘模型并添加列 [Bike Buyer]。  
+5.  在查询网格中，为“源”  选择 TM_Clustering 挖掘模型并添加列 [Bike Buyer]。  
   
 6.  为 **“源”** 选择 **“预测函数”** 并添加函数 **Cluster**。  
   
-7.  为“源”选择“预测函数”，添加函数 **PredictSupport**，并将模型列 [Bike Buyer] 拖入“条件/参数”框。 在“别名”列中键入 **Support** 。   
+7.  为“源”  选择“预测函数”  ，添加函数 **PredictSupport**，并将模型列 [Bike Buyer] 拖入“条件/参数”  框。 在“别名”列中键入 **Support** 。   
   
-     从“条件/参数”框复制表示预测函数和列引用的表达式。  
+     从“条件/参数”  框复制表示预测函数和列引用的表达式。  
   
-8.  为 **“源”** 选择 **“自定义表达式”**，键入别名，然后使用以下语法引用 Excel CEILING 函数：  
+8.  为 **“源”** 选择 **“自定义表达式”** ，键入别名，然后使用以下语法引用 Excel CEILING 函数：  
   
     ```  
     Excel![CEILING](<arguments) as <return type>  

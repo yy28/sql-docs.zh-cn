@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189158"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
   作业步骤是作业对数据库或服务器执行的操作。 每个作业必须至少有一个作业步骤。 作业步骤可以为：  
@@ -75,7 +75,7 @@ ms.locfileid: "52768449"
   
 -   命令成功完成时返回的进程退出代码。  
   
--   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这是该程序和程序的参数的名称，例如：**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe-e-q"sp_who"**  
+-   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是程序名称以及程序参数，例如：C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"   
   
     > [!NOTE]  
     >  如果系统路径或执行作业步骤的用户的路径指定的目录中不包含此可执行程序，则必须提供可执行程序的完整路径。  
@@ -191,7 +191,7 @@ Set oServer = nothing
   
 -   添加或修改命令行选项。  
   
- 请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
+ 请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”  选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
   
  有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的作业步骤的详细信息，请参阅[包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   

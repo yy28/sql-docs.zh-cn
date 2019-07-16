@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209747"
 ---
 # <a name="prediction-queries-data-mining"></a>预测查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52506044"
 ##  <a name="bkmk_PredQuery"></a> 基本的预测查询设计  
  创建预测时，通常会提供一些新数据，并要求模型基于新数据生成一个预测。  
   
--   在批预测查询中，可通过使用“预测联接” 将模型映射到外部数据源。  
+-   在批预测查询中，可通过使用“预测联接”  将模型映射到外部数据源。  
   
 -   在单独预测查询中，可键入一个或多个值以用作输入。 您可以使用单独预测查询来创建多个预测。 但是，如果您需要创建多个预测，那么使用批查询时的性能会更好。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52506044"
 > [!WARNING]  
 >  不管名称如何，单独预测查询并不只是生成单个预测 — 您可以生成为每个输入集的多个预测。 并且可以通过为每个输入事例创建一个 SELECT 语句并将它们与 UNION 操作符相结合，提供多个输入事例。  
   
- 创建单独预测查询时，必须以 PREDICTION JOIN 的形式向模型提供新数据。 这意味着即使不映射到实际表，也必须确保新数据与挖掘模型中的现有列匹配。 如果新数据列与新数据完全匹配，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动映射列。 这称为“NATURAL PREDICTION JOIN” 。 但是，如果列不匹配，或者新数据在类型和量上与模型所包含的数据并不相同，则必须指定模型中的哪些列映射到新数据，或者指定缺少的值。  
+ 创建单独预测查询时，必须以 PREDICTION JOIN 的形式向模型提供新数据。 这意味着即使不映射到实际表，也必须确保新数据与挖掘模型中的现有列匹配。 如果新数据列与新数据完全匹配，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动映射列。 这称为“NATURAL PREDICTION JOIN”  。 但是，如果列不匹配，或者新数据在类型和量上与模型所包含的数据并不相同，则必须指定模型中的哪些列映射到新数据，或者指定缺少的值。  
   
 ###  <a name="bkmk_BatchQuery"></a> 批预测查询  
  如果您有想用来进行预测的外部数据，则批预测查询很有用。 例如，您可能已构建一个按客户的联机活动和购买历史记录对客户进行分类的模型。 您可以向最新获取的销售线索列表应用该模型，以创建销售投影或标识建议活动的目标。  

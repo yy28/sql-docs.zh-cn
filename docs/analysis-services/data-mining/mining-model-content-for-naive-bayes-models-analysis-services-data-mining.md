@@ -1,5 +1,5 @@
 ---
-title: Naive Bayes 模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft 文档
+title: Naive Bayes 模型的挖掘模型内容 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbfb701bf6c4a90cf285e4643377b38e51121dd3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182687"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>了解 Naive Bayes 模型的结构  
  Naive Bayes 模型具有表示该模型及其元数据的单一父节点，并且在该父节点下，还存在任意数目的表示所选可预测属性的独立树。 除表示属性的树以外，每个模型还包含一个提供有关定型事例集的说明性统计信息的边际统计信息节点 (NODE_TYPE = 26)。 有关详细信息，请参阅 [边际统计信息节点中的信息](#bkmk_margstats)。  
@@ -28,12 +28,12 @@ ms.locfileid: "34019404"
 > [!NOTE]  
 >  由于 Naive Bayes 模型不允许使用连续数据类型，因此，输入列的所有值均被视为离散或离散化值。 您可以指定值的离散化方式。 有关详细信息，请参阅 [更改挖掘模型中列的离散化](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)。  
   
- ![结构的 naïve bayes 模型内容](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "的 naïve bayes 模型内容的结构")  
+ ![结构的模型内容朴素贝叶斯](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "的朴素贝叶斯的模型内容结构")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Native Bayes 模型的模型内容  
  本节提供的详细信息和示例仅针对挖掘模型内容中与 Naive Bayes 模型有特殊关系的列。  
   
- 有关此处未涵盖的架构行集中的通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息或有关挖掘模型术语的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 有关此处未涵盖的架构行集中的通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息或有关挖掘模型术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  
@@ -67,7 +67,7 @@ ms.locfileid: "34019404"
  NODE_TYPE  
  Naive Bayes 模型输出以下节点类型：  
   
-|节点类型 ID|Description|  
+|节点类型 ID|描述|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|包含描述模型的整个定型事例集的统计信息。|  
 |9（可预测属性）|包含可预测属性的名称。|  
@@ -184,7 +184,7 @@ ms.locfileid: "34019404"
 |---------------|----------------------------|  
 |模型根 (1)|始终为 0。|  
 |边际统计信息节点 (26)|任意 ID 值。|  
-|可预测属性 (9)|以 10000000 开头的十六进制数<br /><br /> 例如：100000001、10000000b|  
+|可预测属性 (9)|以 10000000 开头的十六进制数<br /><br /> 例如：100000001 10000000b|  
 |输入属性 (10)|一个由两部分组成的十六进制数字，其中第一个部分始终为 20000000，第二个部分以相关可预测属性的十六进制标识符作为开头。<br /><br /> 例如：20000000b00000000<br /><br /> 在本示例中，相关可预测属性为 10000000b。|  
 |输入属性状态 (11)|一个由三部分组成的十六进制数字，其中第一个部分始终为 30000000，第二个部分以相关可预测属性的十六进制标识符作为开头，第三个部分表示该值的标识符。<br /><br /> 例如：30000000b00000000200000000<br /><br /> 在本示例中，相关可预测属性为 10000000b。|  
   
@@ -252,26 +252,26 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  预期的结果：  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|缺少|0|0|1|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- 在这些结果中，SUPPORT 列的值显示已购买自行车且具有指定婚姻状况的客户的计数。 PROBABILITY 列包含每个属性值的概率（仅针对该节点计算）。 有关 NODE_DISTRIBUTION 表中所使用术语的常规定义，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 在这些结果中，SUPPORT 列的值显示已购买自行车且具有指定婚姻状况的客户的计数。 PROBABILITY 列包含每个属性值的概率（仅针对该节点计算）。 有关 NODE_DISTRIBUTION 表中所使用术语的常规定义，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_margstats"></a> 边际统计信息节点中的信息  
  在 Naive Bayes 模型中，边际统计节点的嵌套表包含整个定型数据集中的值的分布。 例如，下表包含 `TM_NaiveBayes`模型的 NODE_DISTRIBUTION 嵌套表的部分统计信息列表：  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|缺少|0|0|0|1|  
+|Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
 |Bike Buyer|1|8615|0.492736216|0|4|  
-|婚姻状况|缺少|0|0|0|1|  
+|婚姻状况|Missing|0|0|0|1|  
 |婚姻状况|S|7999|0.457504004|0|4|  
 |婚姻状况|M|9485|0.542495996|0|4|  
-|Total Children|缺少|0|0|0|1|  
+|Total Children|Missing|0|0|0|1|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
 |Total Children|1|3406|0.19480668|0|4|  
@@ -282,8 +282,8 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  将 **Missing** 值 (VALUE_TYPE = 1) 添加到每个输入和输出属性，以表示定型数据中未提供的潜在值。 您必须注意区分字符串“missing”和默认的 **Missing** 值。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Naive Bayes 算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

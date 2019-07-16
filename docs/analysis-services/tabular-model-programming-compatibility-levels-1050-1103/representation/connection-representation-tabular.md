@@ -1,5 +1,5 @@
 ---
-title: 连接表示形式 （表格） |Microsoft 文档
+title: 连接表示形式 （表格） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2aa92dddc61d1b09c7a18ad0b334554b0026a228
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039301"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163450"
 ---
 # <a name="connection-representation-tabular"></a>连接表示形式（表格）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>“表格 AMO 2012”示例  
- 为了更好地理解如何使用 AMO 创建和操作连接表示形式，请参阅“表格 AMO 2012”示例中的源代码；请具体查看以下源文件：Database.cs。 可从 Codeplex 获取该示例。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
+ 为了更好地了解如何使用 AMO 创建和操作连接表示形式，请参阅表格 AMO 2012 示例; 中的源代码具体查看以下源文件：Database.cs。 该示例位于 Codeplex。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
   
   

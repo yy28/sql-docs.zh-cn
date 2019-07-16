@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_population (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 223277050e7c758d2fcd5d46e62cf171fc2a1cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9abc42027d991697d13a135fb30a78258d8577f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900933"
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中当前正在进行的全文索引填充和语义关键字短语填充的信息。  
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含正在填充的全文索引的数据库 ID。|  
 |**catalog_id**|**int**|包含此全文索引的全文目录的 ID。|  
@@ -61,7 +60,7 @@ ms.locfileid: "65947306"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
   
 ## <a name="physical-joins"></a>物理联接  
  ![此动态管理视图的重要联接](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "此动态管理视图的重要联接")  

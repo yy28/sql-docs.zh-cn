@@ -1,5 +1,5 @@
 ---
-title: 授予数据库权限 (Analysis Services) |Microsoft 文档
+title: 授予数据库权限 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,27 +10,27 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177623"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   如果你在介绍关系数据库中具有后台的 Analysis Services 数据库管理，则需要理解的首要事项为在数据访问方面，数据库不是 Analysis Services 中的主要安全对象。  
   
- Analysis Services 中的主要查询结构为多维数据集（或表格模型），且这些特定对象设置了用户权限。 与相关的数据库引擎（数据库从此登录并且在此对数据库自身设置用户权限（通常是 **db_datareader**））比较，Analysis Services 数据库主要用作数据模型中的主要查询对象的容器。 如果你的近期目标是为多维数据集或表格模型启用数据访问，那么你现在可以不使用数据库权限，请直接进入此主题：[授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
+ Analysis Services 中的主要查询结构为多维数据集（或表格模型），且这些特定对象设置了用户权限。 与相关的数据库引擎（数据库从此登录并且在此对数据库自身设置用户权限（通常是 **db_datareader**））比较，Analysis Services 数据库主要用作数据模型中的主要查询对象的容器。 如果你的近期目标是为多维数据集或表格模型启用数据访问，可以现在不使用数据库权限，请直接进入此主题：[授予多维数据集或模型权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
  Analysis Services 中的数据库权限启用了管理功能；如果你在委派处理操作，“完全控制”数据库权限的情况会同样如此或者风格会更为精细。 如以下插图和描述所示，在“创建角色”  对话框的“常规”  窗格上可指定 Analysis Services 数据库权限级别。  
   
  Analysis Services 中没有登录名。 可以简单地在“成员身份”  窗格中创建角色并分配 Windows 帐户。 所有用户（包括管理员）使用 Windows 帐户连接到 Analysis Services。  
   
- ![创建对话框显示数据库权限的角色](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "创建对话框显示数据库权限的角色")  
+ ![创建对话框中显示数据库权限的角色](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "创建对话框中显示数据库权限的角色")  
   
  在数据库级别可指定三种类型的权限。  
   
- “完全控制（管理员）”- 完全控制是一种包罗万象的权限，它通过 Analysis Services 数据库传达了广泛的功能，比如：在数据库内查询或处理任何对象的功能以及管理角色安全的功能。 完全控制与数据库管理员状态同义。 当选择 **Full Control**时， **Process Database** 和 **Read Definition** 权限也被选择，并且不能被移除。  
+ “完全控制（管理员）”- 完全控制是一种包罗万象的权限，它通过 Analysis Services 数据库传达了广泛的功能，比如：在数据库内查询或处理任何对象的功能以及管理角色安全的功能。  完全控制与数据库管理员状态同义。 当选择 **Full Control**时， **Process Database** 和 **Read Definition** 权限也被选择，并且不能被移除。  
   
 > [!NOTE]  
 >  服务器管理员（服务器管理员角色成员）对服务器上的每个数据库也具有隐式完全控制。  
@@ -58,24 +58,24 @@ ms.locfileid: "34024634"
   
 #### <a name="create-roles-in-ssms"></a>在 SSMS 中创建角色  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到的实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，打开**数据库**文件夹中，选择一个数据库，然后右键单击**角色** | **新角色**.  
+1.  在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到的实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，打开**数据库**文件夹，选择一个数据库，并右键单击**角色** | **新角色**.  
   
 2.  在“常规”  窗格中，输入名称（例如：DBAdmin）。  
   
-3.  为多维数据集选择“完全控制(管理员)”复选框。 请注意， **Process Database** 和 **Read Definition** 被自动选择。 这些权限始终包含在包括了 **Full Control**的角色中。  
+3.  为多维数据集选择“完全控制(管理员)”复选框。  请注意， **Process Database** 和 **Read Definition** 被自动选择。 这些权限始终包含在包括了 **Full Control**的角色中。  
   
 4.  在“成员身份”  窗格中，输入使用此角色连接到 Analysis Services 的 Windows 用户和组帐户。  
   
 5.  单击“确定”  ，完成角色创建。  
   
 ## <a name="process-database"></a>Process Database  
- 定义授予了数据库权限的角色时，你可跳过“完全控制”  ，并只选择“处理数据库” 。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ 定义授予了数据库权限的角色时，你可跳过“完全控制”  ，并只选择“处理数据库”  。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
 ## <a name="read-definition"></a>读取定义  
- 如同“处理数据库” ，在数据库级别设置“读取定义”  权限对数据库内的其它对象有级联作用。 如果想在更为精细的级别上设置“读取定义”权限，则必须清除“常规”窗格中作为数据库属性的“读取定义”。 有关详细信息，请参阅[授予对象元数据的读取定义权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)。  
+ 如同“处理数据库”  ，在数据库级别设置“读取定义”  权限对数据库内的其它对象有级联作用。 如果想在更为精细的级别上设置“读取定义”权限，则必须清除“常规”窗格中作为数据库属性的“读取定义”。 有关详细信息，请参阅[授予对象元数据的读取定义权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [授予处理权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [授予处理权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

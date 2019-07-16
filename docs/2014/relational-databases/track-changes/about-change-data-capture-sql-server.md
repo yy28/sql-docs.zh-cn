@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211730"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
   变更数据捕获可记录应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动。 这样，就可以按易于使用的关系格式提供这些更改的详细信息。 将为修改的行捕获列信息以及将更改应用于目标环境所需的元数据，并将其存储在镜像所跟踪源表的列结构的更改表中。 系统提供了一些表值函数，以便使用者可以系统地访问更改数据。  
@@ -43,7 +43,7 @@ ms.locfileid: "52748523"
   
  应用于源表的每个插入或删除操作在更改表中各占一行。 插入操作生成的行的数据列包含插入后的列值。 删除操作生成的行的数据列包含删除前的列值。 更新操作需要两行数据：一行用于标识更新前的列值，另一行用于标识更新后的列值。  
   
- 更改表中的每一行还包含其他元数据，用于解释更改操作的情况。 __$start_lsn 列标识为更改指定的提交日志序列号 (LSN)。 提交 LSN 不仅标识在同一事务中提交的更改，而且还对这些事务进行排序。 可以使用 \_\_$seqval 列对同一事务中进行的其他更改进行排序。 该列\_ \_$operation 记录与更改关联的操作：1 = 删除，2 = 插入，3 = 更新 （前像），4 = 更新 （后像）。 \_\_$update_mask 列是一个可变的位掩码，每个捕获列都有一个对应的定义位。 对于插入和删除项，更新掩码始终设定所有位。 但是，更新行仅设定与更改列对应的那些位。  
+ 更改表中的每一行还包含其他元数据，用于解释更改操作的情况。 __$start_lsn 列标识为更改指定的提交日志序列号 (LSN)。 提交 LSN 不仅标识在同一事务中提交的更改，而且还对这些事务进行排序。 可以使用 \_\_$seqval 列对同一事务中进行的其他更改进行排序。 列 \_\_$operation 记录与更改相关的操作：1 = 删除、2 = 插入、3 = 更新（前映象）、4 = 更新（后映像）。 \_\_$update_mask 列是一个可变的位掩码，每个捕获列都有一个对应的定义位。 对于插入和删除项，更新掩码始终设定所有位。 但是，更新行仅设定与更改列对应的那些位。  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>数据库的变更数据捕获有效性间隔  
  数据库的变更数据捕获有效性间隔是指更改数据可供捕获实例使用的时段。 有效性间隔从为数据库表创建第一个捕获实例时开始，并一直持续到当前时间。  

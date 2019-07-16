@@ -1,5 +1,5 @@
 ---
-title: 创建查询作用域的单元计算 (MDX) |Microsoft 文档
+title: 创建查询作用域的单元计算 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208780"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX 单元计算的查询作用域的单元计算
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX 单元计算-查询作用域的单元计算
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   在多维表达式 (MDX) 中，可以使用 **WITH** 关键字描述查询上下文中的计算单元。 **WITH** 关键字的语法如下：  
   
@@ -26,12 +26,12 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  `CellCalc_Identifier` 值是计算单元的名称。 `String_Expression` 值包含一个一维正交 MDX 集表达式列表。 这些集表达式中的每个表达式都必须解析为下表中列出的一个类别。  
   
-|类别|Description|  
+|Category|描述|  
 |--------------|-----------------|  
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
-|级别成员集|解析为单个级别的成员的 MDX 集表达式。 此类集表达式的一个示例是 Level_Expression.**Members** MDX 函数。 若要包括计算成员，请使用 Level_Expression **AllMembers** MDX 函数。 有关详细信息，请参阅 [AllMembers (MDX)](../../../mdx/allmembers-mdx.md)。|  
-|后代集|解析为指定成员的后代的 MDX 集表达式。 此类集表达式的一个示例是 **Descendants**(Member_Expression, Level_Expresion, Desc_Flag) MDX 函数。 有关详细信息，请参阅 [Descendants (MDX)](../../../mdx/descendants-mdx.md)。|  
+|级别成员集|解析为单个级别的成员的 MDX 集表达式。 此类集表达式的一个示例是 Level_Expression.**Members** MDX 函数。  若要包括计算成员，请使用 Level_Expression  **AllMembers** MDX 函数。 有关详细信息，请参阅 [AllMembers (MDX)](../../../mdx/allmembers-mdx.md)。|  
+|后代集|解析为指定成员的后代的 MDX 集表达式。 此类集表达式的一个示例是 **Descendants**(Member_Expression, Level_Expresion, Desc_Flag) MDX 函数。    有关详细信息，请参阅 [Descendants (MDX)](../../../mdx/descendants-mdx.md)。|  
   
  如果 `String_Expression` 参数不描述维度，出于构造计算子多维数据集的目的，MDX 将假设包含所有成员。 因此，如果 `String_Expression` 参数为 NULL，计算单元的定义将应用于整个多维数据集。  
   
@@ -50,7 +50,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  另一方面，只要对多维数据集发出的 MDX 查询涉及计算单元定义中包含的单元，MDX 将就会处理计算公式。 此处理的发生不受创建作用域的限制。  
   
-## <a name="see-also"></a>另请参阅  
- [创建单元格计算语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+## <a name="see-also"></a>请参阅  
+ [CREATE CELL CALCULATION 语句 (MDX)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

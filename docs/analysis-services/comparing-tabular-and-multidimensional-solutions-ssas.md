@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d36c20e0278a90bc5afcbd312afea2cb596e9c51
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: c1ca9d710ca0e87e69bcc237848c02b758c724cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210257"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比较表格和多维解决方案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,33 +52,33 @@ ms.locfileid: "53072535"
 |||| 
 |-|-|-|
 ||多维|表格|
-|操作|用户帐户控制|否|
-|Aggregations|用户帐户控制|否|
-|计算列|否|用户帐户控制|  
-|计算度量值|用户帐户控制|用户帐户控制| 
+|操作|是|否|
+|Aggregations|是|否|
+|计算列|否|是|  
+|计算度量值|是|是| 
 |计算表|否|是<sup>1</sup>|  
-|自定义程序集|用户帐户控制|否|
-|自定义汇总|用户帐户控制|否| 
-|默认成员|用户帐户控制|否|  
-|显示文件夹|用户帐户控制|是<sup>1</sup>|  
-|Distinct Count|用户帐户控制|是（通过 DAX）|
-|钻取|用户帐户控制|是 （取决于客户端应用程序）|
-|层次结构|用户帐户控制|用户帐户控制|
-|KPI|用户帐户控制|用户帐户控制| 
-|链接对象|用户帐户控制|是（链接表）|
+|自定义程序集|是|否|
+|自定义汇总|是|否| 
+|默认成员|是|否|  
+|显示文件夹|是|是<sup>1</sup>|  
+|Distinct Count|是|是（通过 DAX）|
+|钻取|是|是 （取决于客户端应用程序）|
+|层次结构|是|是|
+|KPI|是|是| 
+|链接对象|是|是（链接表）|
 |M 表达式|否|是<sup>1</sup>|
-|多对多关系|用户帐户控制|否 (但没有[双向交叉筛选器](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)1200年及更高版本的兼容性级别)| 
-|命名集|用户帐户控制|否| 
-|不规则层次结构|用户帐户控制|是<sup>1</sup>|  
-|父子层次结构|用户帐户控制|是（通过 DAX）|
-|“度量值组”|用户帐户控制|用户帐户控制| 
-|透视|用户帐户控制|用户帐户控制|
-|行级安全性|用户帐户控制|用户帐户控制| 
-|对象级安全性|用户帐户控制|是<sup>1</sup>|
-|半累加性度量值|用户帐户控制|用户帐户控制| 
-|翻译|[是](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|用户帐户控制| 
-|用户定义的层次结构|用户帐户控制|用户帐户控制|
-|写回|用户帐户控制|否| 
+|多对多关系|是|否 (但没有[双向交叉筛选器](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)1200年及更高版本的兼容性级别)| 
+|命名集|是|否| 
+|不规则层次结构|是|是<sup>1</sup>|  
+|父子层次结构|是|是（通过 DAX）|
+|“度量值组”|是|是| 
+|透视|是|是|
+|行级安全性|是|是| 
+|对象级安全性|是|是<sup>1</sup>|
+|半累加性度量值|是|是| 
+|翻译|[是](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|是| 
+|用户定义的层次结构|是|是|
+|写回|是|否| 
   
  <sup>1</sup>请参阅[Analysis Services 中表格的兼容性级别模型](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)有关兼容性级别之间的功能差异的信息。  
   

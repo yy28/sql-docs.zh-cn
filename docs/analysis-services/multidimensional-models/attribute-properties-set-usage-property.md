@@ -1,5 +1,5 @@
 ---
-title: 设置用法属性 |Microsoft 文档
+title: 设置用法属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 603ef66e0021c2250987a0605fe9b28aae5e3490
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209171"
 ---
-# <a name="attribute-properties---set-usage-property"></a>特性属性-设置用法属性
+# <a name="attribute-properties---set-usage-property"></a>特性属性 - 设置用法属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   可以使用维度设计器中的 **“维度结构”** 视图来设置属性的用法，可通过 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  
   
@@ -24,11 +24,11 @@ ms.locfileid: "34020084"
   
 ### <a name="to-set-usage-for-an-attribute"></a>设置属性的用法  
   
-1.  在解决方案资源管理器中，右键单击某个维度，再单击“打开”。  
+1.  在解决方案资源管理器中，右键单击某个维度，再单击“打开”。   
   
      默认情况下，将打开 **“维度结构”** 视图。  
   
-2.  在“属性”中，右键单击要为其设置用法的属性，指向“设置属性用法”，再单击下列选项之一：  
+2.  在“属性”中，右键单击要为其设置用法的属性，指向“设置属性用法”，再单击下列选项之一：    
   
     -   **Regular**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34020084"
   
     -   **Parent**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [向维度中添加属性](../../analysis-services/multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md)  
   

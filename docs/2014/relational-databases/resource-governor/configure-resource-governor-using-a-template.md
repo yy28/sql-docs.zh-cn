@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198937"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>使用模板配置资源调控器
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的模板配置资源调控器。  
   
--   **开始之前：**[权限](#Permissions)  
+-   **开始之前：** [权限](#Permissions)  
   
 -   **若要创建工作负荷组，使用：**  [模板](#ConfRGTemplate)  
   
@@ -35,17 +35,17 @@ ms.locfileid: "52754009"
 ##  <a name="ConfRGTemplate"></a> 使用模板配置资源调控器  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器”  。  
   
-2.  在**模板资源管理器**中，展开“资源调控器”，然后双击“配置资源调控器”。  
+2.  在**模板资源管理器**中，展开“资源调控器”  ，然后双击“配置资源调控器”  。  
   
-3.  在 **“连接到数据库引擎”** 中，输入所需信息，然后单击 **“确定”**。 查询编辑器中提供模板 Configure Resource Governor.sql。 使用此模板可创建和配置资源池、工作负荷组和分类器函数。  
+3.  在 **“连接到数据库引擎”** 中，输入所需信息，然后单击 **“确定”** 。 查询编辑器中提供模板 Configure Resource Governor.sql。 使用此模板可创建和配置资源池、工作负荷组和分类器函数。  
   
 4.  若要更改模板中的值，请按 CTRL+SHIFT+M。 在 **“指定模板参数的值”** 窗口中，输入要使用的值。  
   
-5.  若要保存对该模板所做的更改，请单击 **“确定”**。  
+5.  若要保存对该模板所做的更改，请单击 **“确定”** 。  
   
-6.  若要运行查询，请单击 **“执行”**。  
+6.  若要运行查询，请单击 **“执行”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [资源调控器](resource-governor.md)   

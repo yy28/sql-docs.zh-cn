@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4c96a85ceb4347d663735dfb310764be1052860e
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208719"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "52984048"
   
  下表提供关于将 Analysis Services 连接到自定义应用程序所用的客户端库的更多详细信息和链接。  
   
-|接口|Description|  
+|接口|描述|  
 |---------------|-----------------|  
 |Analysis Services 管理对象 (AMO)|AMO 是在代码中管理 Analysis Services 实例和多维数据库的主要对象模型。 例如，SQL Server Management Studio 使用 AMO 支持服务器和数据库管理。 有关详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。|  
 |ADOMD.NET|ADOMD.NET 是在自定义应用程序中创建和访问多维数据的主要对象模型。 可以在托管客户端应用程序中使用 ADOMD.NET，以便使用通用 Microsoft .NET Framework 数据访问接口来检索 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 信息。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 和 [ADOMD.NET 客户端编程](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)。|  

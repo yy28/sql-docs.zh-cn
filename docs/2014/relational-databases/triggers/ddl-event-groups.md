@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211720"
 ---
 # <a name="ddl-event-groups"></a>DDL 事件组
   下表列出了可用于运行 DDL 触发器或事件通知的 DDL 事件组以及它们所涵盖的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请注意事件组的内在关系。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 触发器或事件通知涵盖 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 触发器或事件通知涵盖 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 类型下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
@@ -27,12 +27,12 @@ ms.locfileid: "52812749"
 > [!NOTE]  
 >  执行 DDL 式操作的特定系统存储过程也可以激发 DDL 触发器或事件通知。 请测试您的 DDL 触发器和事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和 **sp_addtype** 存储过程都将激发针对 CREATE_TYPE 事件创建的 DDL 触发器或事件通知。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  DDL_DATABASE_LEVEL_EVENTS 下列出的事件在服务器（实例）或数据库级别执行。 DDL_SERVER_LEVEL_EVENTS 下列出的事件只在服务器级别执行。  
   
 ||||  
 |-|-|-|  
-|parent_type|type|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

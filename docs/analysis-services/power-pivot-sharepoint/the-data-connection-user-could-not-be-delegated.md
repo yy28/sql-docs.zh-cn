@@ -1,5 +1,5 @@
 ---
-title: 数据连接用户无法进行委托 |Microsoft 文档
+title: 无法对用户数据的连接进行委托 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208011"
 ---
-# <a name="the-data-connection-user-could-not-be-delegated"></a>数据连接用户无法进行委托
+# <a name="the-data-connection-user-could-not-be-delegated"></a>不能委派用户数据的连接
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   对于包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的 Excel 工作簿，如果 Excel Services 无法连接到 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器实例，则会返回此错误。  
   
@@ -25,9 +25,9 @@ ms.locfileid: "34028338"
 |||  
 |-|-|  
 |适用于|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|產品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|在尝试使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问接口时出现连接错误。|  
-|訊息文字|数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。 以下连接刷新失败： [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据|  
+|消息正文|数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。 以下连接无法刷新：[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据|  
   
 ## <a name="explanation"></a>解释  
  有多个原因会导致出现此错误消息。 但所有这些原因都具有一个共性，就是 Excel Services 无法从 SharePoint 的声明令牌中获取有效的 Windows 用户标识。 在 Excel 工作簿包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据时，如果以下任何条件成立，则会出现此错误：  
@@ -49,9 +49,9 @@ ms.locfileid: "34028338"
   
 #### <a name="enable-claims-to-windows-token-service"></a>启用 Claims to Windows Token Service  
   
-1.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”**。  
+1.  在管理中心的“系统设置”中，单击 **“管理服务器上的服务”** 。  
   
-2.  选择 **“Claims to Windows Token Service”**，然后单击 **“开始”**。  
+2.  选择 **“Claims to Windows Token Service”** ，然后单击 **“开始”** 。  
   
 3.  验证服务是否也在“服务”控制台上运行：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34028338"
   
     2.  如果 Claims to Windows Token Service 未运行，则启动它。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置 Power Pivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

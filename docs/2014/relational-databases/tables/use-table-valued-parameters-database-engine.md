@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794839"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211765"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
   表值参数是使用用户定义的表类型来声明的。 使用表值参数，可以不必创建临时表或许多参数，即可向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或例程（如存储过程或函数）发送多行数据。  
