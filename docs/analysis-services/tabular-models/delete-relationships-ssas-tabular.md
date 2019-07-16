@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 360de0e85048a491f3cfc750ac5288de73c65c95
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207711"
 ---
 # <a name="delete-relationships"></a>删除关系 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,21 +35,21 @@ ms.locfileid: "53072765"
   
 #### <a name="to-delete-a-relationship-by-using-diagram-view"></a>使用“关系图视图”删除关系  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击 **“模型”** 菜单，然后指向 **“模型视图”** ，再单击 **“关系图视图”** 。  
   
-2.  右键单击两个表之间的关系线，然后单击“删除”。  
+2.  右键单击两个表之间的关系线，然后单击“删除”  。  
   
 #### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>使用“管理关系”对话框删除关系  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“表”** 菜单，然后单击 **“管理关系”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“表”** 菜单，然后单击 **“管理关系”** 。  
   
 2.  在 **“管理关系”** 对话框中，从列表中选择一个或多个关系。  
   
      若要选择多个关系，请按住 Ctrl 键，同时单击各个关系。  
   
-3.  单击 **“删除关系”**。  
+3.  单击 **“删除关系”** 。  
   
-4.  在 **“管理关系”** 对话框中，单击 **“关闭”**。  
+4.  在 **“管理关系”** 对话框中，单击 **“关闭”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [关系](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   

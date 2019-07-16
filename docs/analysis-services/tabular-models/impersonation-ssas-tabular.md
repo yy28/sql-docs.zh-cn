@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207652"
 ---
 # <a name="impersonation"></a>Impersonation 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "56852902"
   
 **表格 1400年和更高版本的模型**
  
-|选项|Description|  
+|Option|描述|  
 |------------|-----------------|  
-|**模拟帐户**|指定模型使用的 Windows 用户帐户导入或处理来自数据源的数据。 域和用户帐户的名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。|  
+|**模拟帐户**|指定模型使用的 Windows 用户帐户导入或处理来自数据源的数据。 域和用户帐户的名称使用以下格式： **\<域名 >\\< 用户帐户名\>** 。|  
 |**模拟当前用户**|指定应从数据源使用的发送请求的用户标识访问数据。 此设置仅适用于 DirectQuery 模式下。|  
 |**模拟标识**|指定用户名即可访问数据源，但并不需要指定该帐户的密码。 Kerberos 委派，并指定应使用 S4U 身份验证，仅适用于此设置。|  
 |**模拟服务帐户**|指定模型使用与管理该模型的 Analysis Services 服务实例关联的安全凭据。|  
@@ -70,9 +70,9 @@ ms.locfileid: "56852902"
 
 **表格 1200年模型**
  
-|选项|Description|  
+|Option|描述|  
 |------------|-----------------|  
-|**特定 Windows 用户名和密码**|此选项指定模型使用的 Windows 用户帐户导入或处理来自数据源的数据。 域和用户帐户的名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 创建新模型，使用表导入向导时，此设置是默认选项。|  
+|**特定 Windows 用户名和密码**|此选项指定模型使用的 Windows 用户帐户导入或处理来自数据源的数据。 域和用户帐户的名称使用以下格式： **\<域名 >\\< 用户帐户名\>** 。 创建新模型，使用表导入向导时，此设置是默认选项。|  
 |**服务帐户**|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
 ##  <a name="bkmk_impers_sec"></a> 安全性  
@@ -83,7 +83,7 @@ ms.locfileid: "56852902"
   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [表格模型解决方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   

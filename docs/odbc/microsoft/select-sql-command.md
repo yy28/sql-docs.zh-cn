@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943789"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 命令
 从一个或多个表中检索数据。  
@@ -48,7 +47,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  一个*子查询*、 中以下自变量引用、 select 语句中 SELECT 和必须括在括号中。 可以在同一级别上具有最多两个的子查询 （不嵌套） 在 WHERE 子句中。 （请参阅参数的该部分。）子查询可以包含多个联接条件。  
   
- [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
+ [所有&#124;DISTINCT]  [*别名*。]*Select_Item* [AS *Column_Name*] [，[*别名*。]*Select_Item* [AS *Column_Name*]...]  
  SELECT 子句指定字段、 常量和查询结果中显示的表达式。  
   
  默认情况下，所有查询结果中显示的所有行。  
@@ -100,11 +99,11 @@ FROM [DatabaseName!]Table [Local_Alias]
  FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  列出包含该查询将检索的数据的表。 如果没有表处于打开状态，将显示 Visual FoxPro**打开**对话框中，以便您可以指定文件位置。 已打开后，表查询完成后保持打开状态。  
   
- *DatabaseName*! 指定与数据源指定的数据库的名称。 必须包含与数据源未指定的数据库包含的表的数据库的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  
+ *DatabaseName*！ 指定与数据源指定的数据库的名称。 必须包含与数据源未指定的数据库包含的表的数据库的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  
   
  *Local_Alias*指定的表中命名的临时名称*表*。 如果指定本地别名，则必须使用本地的别名，而不是整个 SELECT 语句的表名称。 本地别名不会影响 Visual FoxPro 环境。  
   
- WHERE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; OR *FilterCondition* [AND &#124; OR *FilterCondition* ...]]  
+ 其中*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;或者*FilterCondition* [AND&#124;或者*FilterCondition* ...]]  
  告知 Visual FoxPro 查询结果中包含的特定记录。 在需要从多个表中检索数据。  
   
  *JoinCondition*指定链接在 FROM 子句中的表的字段。 如果您在查询中包含多个表，则应后第一个指定每个表的联接条件。  
@@ -153,7 +152,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  当筛选器条件包括所有时，该字段必须满足查询结果中包括的记录之前，先由子查询生成的所有值的比较条件。  
   
- **Example 4** *FieldName Comparison* ANY &#124; SOME (*Subquery*)  
+ **示例 4** *FieldName 比较*ANY &#124; SOME (*子查询*)  
   
  `company < ANY ;`  
   
@@ -177,7 +176,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `orders.postalcode)`  
   
- **Example 7** *FieldName* [NOT] IN *Value_Set*  
+ **示例 7** *FieldName* [NOT] IN *Value_Set*  
   
  `customer.postalcode NOT IN ("98052","98072","98034")`  
   
@@ -197,7 +196,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  此筛选条件搜索匹配的每个字段*cExpression*。 可以使用百分号 （%）和下划线 (_) 通配符作为的一部分*cExpression*。 下划线表示一个未知的字符在字符串中。  
   
- GROUP BY *GroupColumn* [, *GroupColumn* ...]  
+ GROUP BY *GroupColumn* [， *GroupColumn* ...]  
  基于一个或多个列中的值在查询中的行进行分组。 *GroupColumn*可以是以下之一：  
   
 -   常规表字段的名称。  
@@ -259,7 +258,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  占位符必须与它们所表示的字段相同的类型。 如果此字段为日期类型，应为占位符 {/ /}。 如果该字段是字符字段，占位符应为空字符串 ("")。  
   
- ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
+ 排序依据*Order_Item* [ASC &#124; DESC] [， *Order_Item* [ASC &#124; DESC]...]  
  排序查询结果基于一个或多个列中的数据。 每个*Order_Item*必须对应于查询结果中的列和可以是以下之一：  
   
 -   也是主要的 SELECT 子句 （不在子查询） 中选择项的从表中的字段。  
@@ -282,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
  当你的应用程序将发送到数据源的 ODBC SQL 语句选择时，Visual FoxPro ODBC 驱动程序将无需转换的 Visual FoxPro 选择命令转换为命令除非该命令包含 ODBC 转义序列。 ODBC 转义序列中的项将转换为 Visual FoxPro 语法。 有关使用 ODBC 转义序列，请参阅[时间和日期函数](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)并在*Microsoft ODBC 程序员参考*，请参阅[ODBC 中的转义序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
 ## <a name="see-also"></a>请参阅  
- [CREATE TABLE - SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [创建表的 SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
- [SET EXACT](../../odbc/microsoft/set-exact-command.md)
+ [设置完全](../../odbc/microsoft/set-exact-command.md)

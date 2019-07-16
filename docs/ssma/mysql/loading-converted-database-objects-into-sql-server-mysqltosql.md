@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b2e58eb534088482493e6f36c3841f36644183af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6966209300e6959e7ba9cb1afa11eb42b855d82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909014"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>将转换数据库对象加载到 SQL Server (MySQLToSQL)
 转换为的 MySQL 数据库后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以加载到生成的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 SSMA 此外，还允许使用的实际内容更新目标元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库。  

@@ -5,17 +5,16 @@ description: 本文介绍如何在 Azure Data Studio 连接到 SQL Server 2019 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958291"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
@@ -52,7 +51,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 ![PostgreSQL 连接](media/notebooks-guidance/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>SQL 内核
 
 笔记本，类似于我们的查询编辑器中的代码单元中，我们支持现代 SQL 编码的内置功能，例如丰富的 SQL 编辑器、 IntelliSense 和内置代码段简化日常任务的体验。 代码片段，可生成正确的 SQL 语法来创建数据库、 表、 视图、 存储的过程、 等，并更新现有数据库对象。 使用代码片段来快速创建开发或测试用途的数据库的副本并生成和执行脚本。
 
@@ -60,7 +59,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 若要连接到 SQL Server 实例的 SQL 内核
 
-![SQL Kernel](media/notebooks-guidance/intellisense-code-cell.png)
+![SQL 内核](media/notebooks-guidance/intellisense-code-cell.png)
 
 查询结果
 
@@ -99,10 +98,10 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 |内核|描述
 |:-----|:-----
-| SQL Kernel | 编写针对关系数据库的 SQL 代码。
+| SQL 内核 | 编写针对关系数据库的 SQL 代码。
 |PySpark3 和 PySpark 内核| 编写使用 Spark 计算群集中的 Python 代码。
 |Spark 内核|编写使用 Spark 计算群集中的 Scala 和 R 代码。
-|Python Kernel|编写 Python 代码进行本地开发。
+|Python 内核|编写 Python 代码进行本地开发。
 
 `Attach to` 提供要附加的内核的上下文。 如果使用的 SQL 内核，然后，你可以`Attach to`任何 SQL Server 实例。
 

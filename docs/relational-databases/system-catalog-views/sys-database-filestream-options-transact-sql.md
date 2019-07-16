@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3038b27084dce6a84436e658c66b77dc61ead49e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95d9c980927d565b907d666af1317e883126087e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915029"
 ---
 # <a name="sysdatabasefilestreamoptions-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52543010"
  有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
   
-|“列”|类型|Description|  
+|“列”|type|描述|  
 |------------|----------|-----------------|  
 |**database_id**|**int**|数据库的 ID。 此值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
 |**directory_name**|**nvarchar(255)**|所有 FileTable 命名空间的数据库级别目录。|  

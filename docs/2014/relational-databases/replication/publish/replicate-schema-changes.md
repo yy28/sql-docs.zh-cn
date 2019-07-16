@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a2c275604d9c74699eeb2b3c77a90e2d819fb6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199328"
 ---
 # <a name="replicate-schema-changes"></a>复制架构更改
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中复制架构更改。  
@@ -54,11 +54,11 @@ ms.locfileid: "52778699"
 -   ALTER TABLE …DROP COLUMN 语句将始终复制到所有其订阅包含要被删除的列的订阅服务器，即使禁用对架构更改的复制也是如此。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
+ 如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。  有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>禁用对架构更改的复制  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，将“复制架构更改”属性值设置为“False”。  
+1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，将“复制架构更改”属性值设置为“False”。      
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

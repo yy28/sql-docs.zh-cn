@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: de89d59c6205dd2ab0789492a746b925fa74b5c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 265c285781484ab06a329a617f5a0f9433a6b4d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904047"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
 
@@ -35,11 +34,11 @@ ms.locfileid: "65486036"
 ## <a name="when-notifications-are-sent"></a>何时发送通知  
  配置通知后，可以在以下实例中发送自动化的电子邮件通知。  
   
-|实例|Description|  
+|实例|描述|  
 |--------------|-----------------|  
-|数据未能通过业务规则验证|各个业务规则还必须配置为在属性值未能通过业务规则验证时发送电子邮件。 通知包含以下信息。<br /><br /> “模型”<br /><br /> 版本<br /><br /> 实体<br /><br /> 成员代码<br /><br /> 失败的业务规则<br /><br /> 链接到其属性值未通过业务规则的成员<br /><br /> 通知发出的时间<br /><br /> 有关详细信息，请参阅 [配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)中配置通知。|  
-|模型版本状态更改|每当模型版本的状态更改时，作为模型管理员的用户将自动收到通知。 通知包含以下信息。<br /><br /> “模型”<br /><br /> 版本<br /><br /> 版本的先前和当前状态<br /><br /> 通知发出的时间<br /><br /> 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。|  
-|变更集状态更改|实体的变更集状态每次发生更改时，均需要审批，实体管理员和/或更改集的所有者会自动收到通知。 通知包含以下信息。<br /><br /> “模型”<br /><br /> 版本<br /><br /> 变更集名称<br /><br /> 先前状态<br /><br /> 当前状态<br /><br /> 用于应用变更集以便查看和修改挂起更改的链接。<br /><br /> 有关详细信息，请参阅[变更集 (Master Data Services)](../master-data-services/changesets-master-data-services.md)。|  
+|数据未能通过业务规则验证|各个业务规则还必须配置为在属性值未能通过业务规则验证时发送电子邮件。 通知包含以下信息。<br /><br /> “模型”<br /><br /> Version<br /><br /> 实体<br /><br /> 成员代码<br /><br /> 失败的业务规则<br /><br /> 链接到其属性值未通过业务规则的成员<br /><br /> 通知发出的时间<br /><br /> 有关详细信息，请参阅 [配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)中配置通知。|  
+|模型版本状态更改|每当模型版本的状态更改时，作为模型管理员的用户将自动收到通知。 通知包含以下信息。<br /><br /> “模型”<br /><br /> Version<br /><br /> 版本的先前和当前状态<br /><br /> 通知发出的时间<br /><br /> 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。|  
+|变更集状态更改|实体的变更集状态每次发生更改时，均需要审批，实体管理员和/或更改集的所有者会自动收到通知。 通知包含以下信息。<br /><br /> “模型”<br /><br /> Version<br /><br /> 变更集名称<br /><br /> 先前状态<br /><br /> 当前状态<br /><br /> 用于应用变更集以便查看和修改挂起更改的链接。<br /><br /> 有关详细信息，请参阅[变更集 (Master Data Services)](../master-data-services/changesets-master-data-services.md)。|  
   
 ## <a name="system-settings"></a>系统设置  
  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有多个设置可以影响通知。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的“系统设置”表中调整这些设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  

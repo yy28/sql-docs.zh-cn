@@ -1,4 +1,12 @@
-## <a name="prerequisites"></a>必要條件
+---
+ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215581"
+---
+## <a name="prerequisites"></a>先决条件
 
 创建可用性组前，需要：
 
@@ -41,7 +49,7 @@
    sudo vi /etc/hosts
    ```
 
-   下面的示例演示了 node1 上的 `/etc/hosts`，并补充了 node1、node2 和 node3。 本文档中**node1**指托管主要副本的服务器。 并**node2**并**node3**到承载辅助副本的服务器，请参阅。
+   下面的示例演示了 node1 上的 `/etc/hosts`，并补充了 node1、node2 和 node3     。 本文档中**node1**指托管主要副本的服务器。 并**node2**并**node3**到承载辅助副本的服务器，请参阅。
 
     ```
     127.0.0.1   localhost localhost4 localhost4.localdomain4

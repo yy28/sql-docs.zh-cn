@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e1aea5bd9166386662fc090a7a6d41737a9eecb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962566"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>在 SQL Server 中使用 R 包的提示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -75,7 +74,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + 知道哪些包库是与实例相关联。 有关详细信息，请参阅[SQL Server 中的默认 R 和 Python 包](../package-management/default-packages.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [安装新 R 包](install-additional-r-packages-on-sql-server.md)
 + [安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)

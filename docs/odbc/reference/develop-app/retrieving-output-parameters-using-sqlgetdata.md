@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020509"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>使用 SQLGetData 检索输出参数
 ODBC 3.8 之前应用程序可以仅检索具有绑定的输出缓冲区的查询的输出参数。 但是，很难参数值的大小非常大 （例如，一个大图像） 时分配非常大的缓冲区。 ODBC 3.8 引入了检索输出参数部分中的新方法。 应用程序现在可以调用**SQLGetData**用小缓冲区多次来检索大型参数值。 这是类似于检索大型列数据。  

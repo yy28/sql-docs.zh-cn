@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211207"
 ---
 # <a name="creating-a-login"></a>创建登录名
   若要访问[!INCLUDE[ssDE](../includes/ssde-md.md)]，用户需要有登录名。 登录名可以将用户身份表示为 Windows 帐户或 Windows 组成员，登录名也可以是仅存在于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录名。 应该尽可能使用 Windows 身份验证。  
@@ -28,11 +28,11 @@ ms.locfileid: "48221927"
   
 1.  单击**启动**，单击**运行**，在**打开**框中，键入`%SystemRoot%\system32\compmgmt.msc /s`，然后单击**确定**打开计算机管理程序。  
   
-2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。  
+2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。      
   
-3.  在“用户名”框中，键入“Mary”。  
+3.  在“用户名”框中，键入“Mary”。    
   
-4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。  
+4.  在“密码”和“确认密码”框中，键入强密码，再单击“创建”创建新的本地 Windows 用户。     
   
 ### <a name="to-create-a-login"></a>创建登录名  
   

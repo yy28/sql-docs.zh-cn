@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务和操作指南 |Microsoft 文档
+title: 数据挖掘查询任务和操作指南 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3c06f78302aa46fdebe05b95d394905116b973f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210094"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>数据挖掘查询任务和操作指南
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,40 +23,40 @@ ms.locfileid: "34014384"
 ## <a name="creating-queries-with-prediction-query-builder"></a>使用预测查询生成器创建查询  
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中均提供预测查询生成器，作为以图形形式对数据挖掘模型生成查询的一种方法。 下面的主题说明如何选择模型、指定数据源、自定义预测和保存输出。  
   
--   [创建预测查询使用预测查询生成器](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [在数据挖掘设计器中创建单独查询](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)  
   
--   [创建预测查询使用预测查询生成器](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [查看和保存预测查询的结果](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)  
   
 -   [手动编辑预测查询](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)  
   
--   [对模型应用预测函数](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)  
+-   [将预测函数应用于模型](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)  
   
--   [选择和映射为预测查询的输入的数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)  
+-   [为预测查询选择和映射输入数据](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)  
   
 ## <a name="using-other-data-mining-query-tools"></a>使用其他数据挖掘查询工具  
  除了使用预测查询生成器之外，还可以使用 DMX 或 XMLA 将查询直接键入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。 您还可以通过编程方式生成预测查询并且将这些查询发送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 下面的主题提供有关如何在预测查询生成器之外创建和使用预测查询的详细信息。  
   
- [从模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
  介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的工具来生成并运行预测查询。  
   
- [从模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [通过模板创建单独预测查询](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
  介绍如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的模板来向预测查询添加参数。  
   
  [更改数据挖掘查询的超时值](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)  
  介绍如何在服务器上设置可控制数据挖掘查询的相关行为的属性。  
   
- [在挖掘模型上创建内容查询](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [针对挖掘模型创建内容查询](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
  介绍如何通过使用数据挖掘架构行集来创建返回挖掘模型中存储的详细信息的查询。  
   
  [使用 XMLA 创建数据挖掘查询](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)  
  介绍如何通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 XMLA 模板，创建针对挖掘模型内容的查询。  
   
-## <a name="see-also"></a>另请参阅  
- [查询和表达式语言参考 & #40;Analysis Services & #41;](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527)   
- [数据挖掘存储过程 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [查询和表达式语言参考 (Analysis Services)](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527)   
+ [数据挖掘存储过程（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   

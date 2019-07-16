@@ -1,5 +1,5 @@
 ---
-title: 配置度量值组属性 |Microsoft 文档
+title: 配置度量值组属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eed879fa9bdeab12398f53d424bb5eaf8aea5bc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209124"
 ---
 # <a name="configure-measure-group-properties"></a>配置度量值组属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34023886"
 |--------------|----------------|  
 |**AggregationPrefix**|适用于 ROLAP 存储。 将公共前缀分配给 SQL Server 中的索引视图，用于为与此度量值组关联的分区存储聚合。|  
 |**DataAggregation**|此属性是保留供将来使用，当前不起任何作用。 因此，建议你不要修改此设置。|  
-|**Description**|你可以使用此属性来记录度量值组。|  
+|**说明**|你可以使用此属性来记录度量值组。|  
 |**ErrorConfiguration**|可配置的错误处理设置，用于处理重复键、未知键、空键、错误限制、检测到错误时的操作以及错误日志文件。 请参阅[多维数据集、分区和维度处理的错误配置（SSAS - 多维）](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)。|  
 |**EstimatedRows**|指定事实数据表中的估计行数。|  
 |**EstimatedSize**|指定度量值组的估计大小(字节)。|  

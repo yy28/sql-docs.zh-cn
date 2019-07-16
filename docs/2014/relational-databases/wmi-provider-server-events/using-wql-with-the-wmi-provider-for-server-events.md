@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211589"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>将 WQL 与 WMI Provider for Server Events 结合使用
   管理应用程序通过发出 WMI 查询语言 (WQL) 语句来访问使用 WMI Provider for Server Events 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是结构化查询语言 (SQL) 的简化子集，它还包含一些特定于 WMI 的扩展。 当使用 WQL 时，应用程序将针对特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、数据库或数据库对象（当前唯一支持的对象为队列）来检索事件类型。 WMI Provider for Server Events 会将查询转换为数据库范围或对象范围事件通知，或在目标数据库中创建的事件通知**主**服务器作用域的事件的数据库通知。  
@@ -91,7 +91,7 @@ WHERE where_condition
   
  WMI Provider for Server Events 使用从下到上的最先适应算法为基础 EVENT NOTIFICATION 生成尽可能小的范围。 该算法试图将服务器上的内部活动和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例与 WMI 主机进程之间的网络通信流量降至最低。 提供程序检查*event_type* FROM 子句和 WHERE 子句中的条件中指定，并尝试尽可能小的范围注册基础 EVENT NOTIFICATION。 如果提供程序无法在最小的范围内注册，则它会依次尝试在更大的范围内注册，直到注册最终成功为止。 如果它达到服务器级别的最大范围且失败，则它将向使用者返回一个错误。  
   
- 例如，如果 DatabaseName =**'** AdventureWorks **'** 提供程序尝试注册事件通知在 WHERE 子句中指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库存在且调用客户端拥有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中创建事件通知所需的权限，则注册成功。 否则，将尝试在服务器级别注册事件通知。 如果 WMI 客户端拥有所需的权限，则注册成功。 但是，在这种情况下，在创建完 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库之前不会将事件返回给客户端。  
+ 例如，如果 DatabaseName = **'** AdventureWorks **'** 提供程序尝试注册事件通知在 WHERE 子句中指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库存在且调用客户端拥有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中创建事件通知所需的权限，则注册成功。 否则，将尝试在服务器级别注册事件通知。 如果 WMI 客户端拥有所需的权限，则注册成功。 但是，在这种情况下，在创建完 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库之前不会将事件返回给客户端。  
   
  *Where_condition*也可用作筛选器，此外限制对特定数据库、 架构或对象的查询。 例如，请考虑下列 WQL 查询：  
   

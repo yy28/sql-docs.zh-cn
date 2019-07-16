@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 08e73462f3536f1aff6aecbf44692a7f24f54aa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944894"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -26,7 +25,7 @@ ms.locfileid: "65480177"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序可以使用 HTTP 或 HTTPS，但不是同时使用这两者。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须是安装了 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的 Web 服务器上的管理员。  
@@ -47,7 +46,7 @@ ms.locfileid: "65480177"
   
 6.  选择 SSL 证书。  
   
-7.  单击“确定”  。  
+7.  单击 **“确定”** 。  
   
 8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http**的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”** 。  
   

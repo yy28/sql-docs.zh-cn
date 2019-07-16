@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783879"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188832"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”  。  
   
  **本主题内容**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52783879"
   
 -   通过执行 sp_start_job 存储过程。  
   
- 作业中的每个操作都是一个“作业步骤” 。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
+ 作业中的每个操作都是一个“作业步骤”  。 例如，作业步骤可以运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、执行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包或向 Analysis Services 服务器发出命令。 作业步骤作为作业的一部分进行管理。  
   
  所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52783879"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了下表中列出的子系统：  
   
-|子系统名称|Description|  
+|子系统名称|描述|  
 |--------------------|-----------------|  
 |Microsoft ActiveX 脚本|运行 ActiveX 脚本作业步骤。<br /><br /> **\*\* 重要\* \*** 将删除 ActiveX 脚本编写子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中的代理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |操作系统 (**CmdExec**)|运行可执行程序。|  

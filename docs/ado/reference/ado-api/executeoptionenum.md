@@ -1,5 +1,5 @@
 ---
-title: ExecuteOptionEnum | Microsoft Docs
+title: ExecuteOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 589519e7c4a075d5fb06b5f2640d48e5d4ed898d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932848"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 指定如何提供程序应执行的命令。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|指示应以异步方式执行该命令。<br /><br /> 此值不能合并在一起[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。|  
 |**adAsyncFetch**|0x20|指示的各行中指定的初始数量后[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)应以异步方式检索属性。|  

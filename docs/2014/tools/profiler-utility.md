@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211097"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
   **Profiler** 实用工具可以启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
@@ -109,7 +109,7 @@ ms.locfileid: "52780769"
 |ss|两位数秒数|  
   
 > [!NOTE]  
->  仅当在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中启用了“使用区域设置来显示日期和时间值”选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
+>  仅当在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中启用了“使用区域设置来显示日期和时间值”  选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
   
  **/R**  
  启用跟踪文件滚动。  

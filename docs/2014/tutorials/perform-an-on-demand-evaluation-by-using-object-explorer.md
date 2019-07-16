@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210947"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>通过使用对象资源管理器执行按需评估
   在此任务中，您将使用对象资源管理器为 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的单个实例上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]执行最佳实践策略的按需评估。  
@@ -38,13 +38,13 @@ ms.locfileid: "56028278"
     > [!NOTE]  
     >  默认情况下，本地实例用作策略的源。 如果您以前导入了最佳实践策略，将会列出它们，一起还会列出您已创建的任何其他策略。 您可以选择任何导入的最佳实践策略，然后单击**Evaluate**。 如果您尚未导入最佳实践策略，则继续此过程。  
   
-3.  在中**评估策略**对话框旁边**源**框中，单击省略号 (**...**) 按钮。  
+3.  在中**评估策略**对话框旁边**源**框中，单击省略号 ( **...** ) 按钮。  
   
 4.  在中**选择源**对话框中，您可以选择**文件**或**Server**作为要评估的策略文件的源。 如果单击**Server**，可以执行任何以前导入到本地或远程服务器上的基于策略的管理的最佳实践策略的按需评估。 您将在本教程中，单击**文件**，然后选择你想要评估的单独的策略文件。 为此，请按照下列步骤进行操作：  
   
     1.  单击**文件**。  
   
-    2.  下一步**文件**，单击省略号 (**...**) 按钮。  
+    2.  下一步**文件**，单击省略号 ( **...** ) 按钮。  
   
     3.  在中**选择策略**对话框中，浏览到包含最佳实践策略的以下文件夹：  
   

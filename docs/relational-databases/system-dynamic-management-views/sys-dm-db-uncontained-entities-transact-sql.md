@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026917"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "54405607"
 ||||  
 |-|-|-|  
 |**列名**|**类型**|**说明**|  
-|class|**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
+|class |**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
 |*class_desc*|**nvarchar(120)**|对实体的类的说明。 以下项之一以匹配的类：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|实体的 ID。<br /><br /> 如果*类*= 1，则 object_id<br /><br /> 如果*类*= 4，则 sys.database_principals.principal_id。<br /><br /> 如果*类*= 5，则 sys.assemblies.assembly_id。<br /><br /> 如果*类*= 6，则 sys.types.user_type_id。<br /><br /> 如果*类*= 7，则 sys.indexes.index_id。<br /><br /> 如果*类*= 12，则 sys.triggers.object_id。<br /><br /> 如果*类*= 19，则为 sys.routes.route_id。<br /><br /> 如果*类*= 30，则 sys。 database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**int**|如果此类是一个模块，则返回找到非包含使用所在的行号。  否则，值为 Null。|  

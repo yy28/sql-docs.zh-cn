@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 77a048ce7785d9efb6748961c8caea51baedb93d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07fe23064173ba6e5c64294f9ea89615909cb10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966604"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 和 DateModified 属性示例 (VC++)
 此示例演示[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)并[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)添加一个新的属性[列](../../../ado/reference/adox-api/column-object-adox.md)到现有[表](../../../ado/reference/adox-api/table-object-adox.md)和创建一个新**表**。 若要运行此示例需要 DateOutput 过程。  

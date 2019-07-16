@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207627"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  在表格模型中，KPI（关键绩效指标）用于根据目标值（由度量值或绝对值定义）度量某一值（由基础度量值定义）的性能。 本文提供了表格模型作者在表格模型中的 Kpi 基本的了解。  
+  在表格模型中，KPI（关键绩效指标）用于根据目标值（由度量值或绝对值定义）度量某一值（由基础度量值定义）的性能    。 本文提供了表格模型作者在表格模型中的 Kpi 基本的了解。  
   
 ##  <a name="bkmk_benefits"></a> 优势  
  在业务术语中，关键绩效指标 (KPI) 是一个用于度量业务目标的可计量度量值。 经常会在一段时间内评估 KPI。 例如，组织的销售部门可以使用 KPI 来根据预计的毛利润来度量每月毛利润。 会计部门可以度量每月的支出与收入之比以便评估成本，而人力资源部门可以度量每季度员工流失情况。 这两个都是 KPI 的示例。 业务专业人员经常使用以业务计分卡形式分组在一起的 KPI 获取迅速且精确的业务绩效历史摘要或标识趋势。  
@@ -67,11 +67,11 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
 ##  <a name="bkmk_create"></a> Create and edit KPIs  
  为了在模型设计器中创建 KPI，您将使用“关键绩效指标”对话框。 因为 KPI 必须与某一度量值相关联，所以，您将通过以下方式创建 KPI：扩展求值结果为某一基础值的度量值，然后或者创建求值结果为目标值的度量值，或者输入绝对值。 在定义了基础度量值（值）和目标值之后，您可以定义基础值和目标值之间的状态阈值参数。 使用可选的图标、条、图形或颜色以图形格式显示该状态。 然后，可以将基础值和目标值以及状态以可以对其他数据字段执行切片操作的值的形式添加到报表或数据透视表中。  
   
- 若要查看“关键绩效指标”对话框，请在表的度量值网格中，右键单击将充当基础值的度量值，然后单击 **“创建 KPI”**。 在某一度量值已作为基础值扩展到 KPI 后，一个图标将出现在度量值网格中的该度量值名称旁，以便将该度量值标识为与某一 KPI 相关联。  
+ 若要查看“关键绩效指标”对话框，请在表的度量值网格中，右键单击将充当基础值的度量值，然后单击 **“创建 KPI”** 。 在某一度量值已作为基础值扩展到 KPI 后，一个图标将出现在度量值网格中的该度量值名称旁，以便将该度量值标识为与某一 KPI 相关联。  
   
 ##  <a name="bkmk_related_tasks"></a> 相关任务  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[创建和管理 KPI](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|说明如何使用基础度量值、目标度量值和状态阈值创建 KPI。|  
   

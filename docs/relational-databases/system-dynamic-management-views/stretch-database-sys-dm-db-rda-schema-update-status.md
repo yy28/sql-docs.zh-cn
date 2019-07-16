@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 85c12ae224203def43c9f9953cada0c336e9ebbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937017"
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database-sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "65947391"
   
  **dm_db_rda_schema_update_status**的范围限定为当前数据库上下文。 请确保你想要查看架构更新状态的已启用延伸的表的数据库上下文中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|正在更新本地已启用延伸的表的远程数据存档架构的 ID。|  
 |**database_id**|**int**|包含本地启用延伸的表的数据库的 ID。|  

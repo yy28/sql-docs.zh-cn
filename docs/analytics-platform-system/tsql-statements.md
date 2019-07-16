@@ -2,19 +2,18 @@
 title: T-SQL 语句-并行数据仓库 |Microsoft Docs
 description: T-SQL 语句的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959958"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>并行数据仓库的 T-SQL 语句
 TRANSACT-SQL (T-SQL) 语句的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
@@ -23,30 +22,30 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (APS) SQL Server 并行数据�
 * [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
-* [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
+* [更改架构](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-* [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [创建数据库范围凭据](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)
 * [创建函数](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
-* [CREATE SCHEMA](../t-sql/statements/create-schema-transact-sql.md)
+* [创建架构](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 * [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 * [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
 * [删除外部数据源](../t-sql/statements/drop-external-data-source-transact-sql.md)
-* [DROP EXTERNAL FILE FORMAT](../t-sql/statements/drop-external-file-format-transact-sql.md)
-* [DROP EXTERNAL TABLE](../t-sql/statements/drop-external-table-transact-sql.md)
+* [删除外部文件格式](../t-sql/statements/drop-external-file-format-transact-sql.md)
+* [删除外部表](../t-sql/statements/drop-external-table-transact-sql.md)
 * [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md)
 * [删除过程](../t-sql/statements/drop-procedure-transact-sql.md)
-* [DROP STATISTICS](../t-sql/statements/drop-statistics-transact-sql.md)
+* [删除统计信息](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
-* [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
+* [删除架构](../t-sql/statements/drop-schema-transact-sql.md)
 * [删除视图](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
@@ -87,22 +86,22 @@ TRANSACT-SQL (T-SQL) 语句的分析平台系统 (APS) SQL Server 并行数据�
 ## <a name="security-statements"></a>安全语句
 * 权限：[授予](../t-sql/statements/grant-transact-sql.md)， [DENY](../t-sql/statements/deny-transact-sql.md)，[撤消](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
-* [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
-* [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
+* [更改证书](../t-sql/statements/alter-certificate-transact-sql.md)
+* [更改数据库加密密钥](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
 * [ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
-* [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)
-* [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
+* [更改角色](../t-sql/statements/alter-role-transact-sql.md)
+* [更改用户](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [创建证书](../t-sql/statements/create-certificate-transact-sql.md)
-* [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
+* [创建数据库加密密钥](../t-sql/statements/create-database-encryption-key-transact-sql.md)
 * [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
 * [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)
-* [CREATE USER](../t-sql/statements/create-user-transact-sql.md)
+* [创建用户](../t-sql/statements/create-user-transact-sql.md)
 * [删除证书](../t-sql/statements/drop-certificate-transact-sql.md)
-* [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+* [删除数据库加密密钥](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
 * [删除角色](../t-sql/statements/drop-role-transact-sql.md)

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207948"
 ---
 # <a name="network-properties"></a>网络属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53072354"
  **IPV4Support**  
  有符号 32 位整数属性，用于定义 IPv4 协议支持。 此属性具有下表所列的值之一：  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |*0*|禁用 IPv4；客户端无法连接。|  
 |*1*|（默认值）要求使用 IPv4；如果服务器无法侦听 IPv4，则不启动服务器。|  
@@ -65,7 +65,7 @@ ms.locfileid: "53072354"
  **EnableCompression**  
  布尔值属性，指定是否对请求启用压缩。  
   
-## <a name="responses"></a>响应  
+## <a name="responses"></a>Responses  
  **CompressionLevel**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   

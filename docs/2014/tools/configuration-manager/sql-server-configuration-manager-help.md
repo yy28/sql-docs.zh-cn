@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9968f22db053bf12a28e3e491817a2c3ac23008
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186768"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 配置管理器帮助
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络连接。 若要创建或管理数据库对象、配置安全性以及编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
@@ -50,7 +50,7 @@ ms.locfileid: "52781769"
 -   配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络协议  
   
 > [!NOTE]  
->  有关如何配置协议和连接到的简短教程[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，请参阅[教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
+>  有关如何配置协议和连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的简短教程，请参阅[教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
   
 ## <a name="sql-server-native-client-configuration"></a>SQL Server Native Client 配置  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 网络库连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以完成下列与此计算机上的客户端应用程序相关的任务：  
@@ -65,7 +65,7 @@ ms.locfileid: "52781769"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>打开 SQL Server 配置管理器  
   
--   在“开始”菜单上，依次指向“所有程序”、“Microsoft SQL Server”（版本）、“配置工具”，然后单击“SQL Server 配置管理器”。  
+-   在“开始”  菜单上，依次指向“所有程序”  、“Microsoft SQL Server”  （版本）、“配置工具”  ，然后单击“SQL Server 配置管理器”  。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 服务](../../../2014/tools/configuration-manager/sql-server-services.md)   

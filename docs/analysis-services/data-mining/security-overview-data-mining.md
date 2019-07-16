@@ -1,5 +1,5 @@
 ---
-title: 安全性概述 （数据挖掘） |Microsoft 文档
+title: 安全性概述 （数据挖掘） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8cf7958cdde480bf48c26dfed7e3056385439a4d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209690"
 ---
 # <a name="security-overview-data-mining"></a>安全性概述（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,13 +23,13 @@ ms.locfileid: "34016884"
 ##  <a name="bkmk_Architecture"></a> 安全体系结构  
  查看以下资源以了解 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的基本安全体系结构，包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证来对用户访问进行身份验证的。  
   
--   [安全角色 & #40;Analysis Services-多维数据 & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [安全角色（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [安全属性](../../analysis-services/server-properties/security-properties.md)  
   
--   [配置服务帐户 & #40;Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [授权访问对象和操作 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> 为 Analysis Services 配置登录帐户  
  您必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 选择相应的登录帐户，并为该帐户指定权限。 同时，还必须确保 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登录帐户只拥有执行必要任务所需的必要权限，其中包括基础数据源的相应权限。  
@@ -53,7 +53,7 @@ ms.locfileid: "34016884"
   
  如果使用 Integration Services 包清理数据、更新挖掘模型或进行预测，则必须确保 Integration Services 服务拥有存储有模型的数据库的相应权限，以及源数据的相应权限。  
   
-## <a name="see-also"></a>另请参阅  
- [角色和权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+ [角色和权限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

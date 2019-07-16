@@ -1,5 +1,5 @@
 ---
-title: 教程：编写 TRANSACT-SQL 语句 |Microsoft Docs
+title: 教程：编写 Transact-SQL 语句 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211190"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教程：编写 Transact-SQL 语句
   欢迎学习“编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句”教程。 本教程适用于对编写 SQL 语句不熟悉的用户。 本教程通过回顾一些用于创建表和插入数据的基本语句，帮助新用户入门。 本教程使用 [!INCLUDE[tsql](../includes/tsql-md.md)]，后者是 SQL 标准的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 实现。 本教程旨在简介 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言，但不是要取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 课程。 本教程特意选用了简单的语句，因此它们不能代表标准生产数据库中存在的语句的复杂程度。  
@@ -28,7 +28,7 @@ ms.locfileid: "52807579"
 >  数据库初学者通常会发现，使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 而不是编写 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 语句，能够更容易地使用 [!INCLUDE[tsql](../includes/tsql-md.md)]。  
   
 ## <a name="finding-more-information"></a>查找详细信息  
- 若要查找有关任何特定语句的详细信息，请在 SQL Server 联机丛书中按名称搜索该语句，或使用“目录”浏览在 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)下按字母顺序列出的 1,800 个语言元素。 另一种查找信息的好办法是搜索与您感兴趣的主题相关的关键字。 例如，如果想要知道如何返回日期的一部分（例如月份），请在索引中搜索 **dates [SQL Server]**，然后选择 **dateparts**。 这会让你转到主题[日期部分 (Transact-SQL)](/sql/t-sql/functions/datepart-transact-sql)。 作为另一个示例，若要了解如何使用字符串，请搜索 **string functions**。 这会让你转到主题[字符串函数 (Transact-SQL)](/sql/t-sql/functions/string-functions-transact-sql)。  
+ 若要查找有关任何特定语句的详细信息，请在 SQL Server 联机丛书中按名称搜索该语句，或使用“目录”浏览在 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)下按字母顺序列出的 1,800 个语言元素。 另一种查找信息的好办法是搜索与您感兴趣的主题相关的关键字。 例如，如果想要知道如何返回日期的一部分（例如月份），请在索引中搜索 **dates [SQL Server]** ，然后选择 **dateparts**。 这会让你转到主题[日期部分 (Transact-SQL)](/sql/t-sql/functions/datepart-transact-sql)。 作为另一个示例，若要了解如何使用字符串，请搜索 **string functions**。 这会让你转到主题[字符串函数 (Transact-SQL)](/sql/t-sql/functions/string-functions-transact-sql)。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
  本教程将介绍如何创建数据库、在数据库中创建表、将数据插入到表中、更新数据、读取数据、删除数据，然后删除表。 您将创建视图和存储过程，并为数据库和数据配置用户。  
@@ -38,7 +38,7 @@ ms.locfileid: "52807579"
  [第 1 课：创建数据库对象](lesson-1-creating-database-objects.md)  
  在本课中，将介绍如何创建数据库、在数据库中创建表、将数据插入到表中、更新数据，然后读取数据。  
   
- [第 2 课：配置对数据库对象的权限](lesson-2-configuring-permissions-on-database-objects.md)  
+ [第 2 课：配置数据库对象的权限](lesson-2-configuring-permissions-on-database-objects.md)  
  在本课中，将介绍如何创建登录名和用户。 还将创建视图和存储过程，再将用户权限授予存储过程。  
   
  [第 3 课：删除数据库对象](lesson-3-1-deleting-database-objects.md)  

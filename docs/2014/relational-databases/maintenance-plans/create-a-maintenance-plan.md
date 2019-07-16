@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206040"
 ---
 # <a name="create-a-maintenance-plan"></a>创建维护计划
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建单服务器或多服务器维护计划。 通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，您可以通过以下两种方式之一创建这些维护计划：使用维护计划向导或设计图面。 向导是创建基本维护计划的最佳方法，而使用设计图面创建计划允许您使用增强的工作流。  
@@ -54,7 +54,7 @@ ms.locfileid: "52801539"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”文件夹，然后选择“维护计划向导”。  
+3.  右键单击“维护计划”  文件夹，然后选择“维护计划向导”  。  
   
 4.  按照向导中显示的步骤创建维护计划。 有关详细信息，请参阅 [Use the Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52801539"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”文件夹，然后选择“新建维护计划”。  
+3.  右键单击“维护计划”  文件夹，然后选择“新建维护计划”  。  
   
 4.  按照[创建维护计划（维护计划设计图面）](create-a-maintenance-plan-maintenance-plan-design-surface.md)中的步骤创建维护计划。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "52801539"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb;  

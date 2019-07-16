@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207147"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>补充课程 - 不规则层次结构
 
@@ -27,9 +27,9 @@ ms.locfileid: "57685394"
 
 在 1400年兼容级别表格模型有一个额外**隐藏成员**层次结构的属性。 **默认**设置假定在任何级别上没有空白成员。 **隐藏空白成员**设置添加到数据透视表或报表时，层次结构中排除空白成员。  
   
-学完本课的预计时间：**20 分钟**  
+估计的时间才能完成本课程中：**20 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
 本文补充课程是表格建模教程的一部分。 执行任务之前在本补充课程中，应当已完成前面的课程或具有已完成的 Adventure Works Internet Sales 示例模型项目。 
 
 如果已创建 AW Internet Sales 项目作为本教程的一部分，您的模型不尚未包含任何数据或不规则的层次结构。 若要完成本补充课程中，首先需要通过添加一些其他表中创建问题、 创建关系、 计算的列、 度量值和新的组织层次结构。 该部分需要花费大约 15 分钟。 然后，您可以解决此问题在几分钟。  
@@ -48,11 +48,11 @@ ms.locfileid: "57685394"
 
     | 表 1           | “列”       | 筛选器方向   | 表 2     | “列”      | 在职 |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | 默认            | DimDate     | date        | 用户帐户控制    |
-    | FactResellerSales | DueDate      | 默认            | DimDate     | date        | 否     |
-    | FactResellerSales | ShipDateKey  | 默认            | DimDate     | date        | 否     |
-    | FactResellerSales | ProductKey   | 默认            | DimProduct  | ProductKey  | 用户帐户控制    |
-    | FactResellerSales | EmployeeKey  | 对两个表 | DimEmployee | EmployeeKey | 用户帐户控制    |
+    | FactResellerSales | OrderDateKey | 默认            | DimDate     | Date        | 是    |
+    | FactResellerSales | DueDate      | 默认            | DimDate     | Date        | 否     |
+    | FactResellerSales | ShipDateKey  | 默认            | DimDate     | Date        | 否     |
+    | FactResellerSales | ProductKey   | 默认            | DimProduct  | ProductKey  | 是    |
+    | FactResellerSales | EmployeeKey  | 对两个表 | DimEmployee | EmployeeKey | 是    |
 
 5. 在中**DimEmployee**表中，创建以下[计算列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 

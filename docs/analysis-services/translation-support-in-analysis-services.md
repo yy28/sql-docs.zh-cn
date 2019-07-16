@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd727b56649ce9ffc237575b0311db256ec9b2fc
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207418"
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻译支持
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "54184923"
   
 -   [多维模型中的翻译](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 的全球化方案](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [语言和排序规则 (Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md)   
  [设置或更改列排序规则](../relational-databases/collations/set-or-change-the-column-collation.md)   

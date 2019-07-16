@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962029"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入门：处理数据类型和对象在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "54046771"
 + 有时需要执行强制转换和转换操作
 + R 和 SQL 使用不同的数据对象
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 上一个快速入门中， [SQL Server 中存在验证 R](quickstart-r-verify.md)、 提供的信息和链接设置为本快速入门所需的 R 环境。
 
@@ -62,7 +61,7 @@ EXECUTE sp_execute_external_script
 
 结果为何有这么大的差别？ 
 
-使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。
+使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。  
 
 若要找出示例 1 和示例 2 的结果为何有这么大的差别，请在每个语句的 _@script_ 变量定义末尾插入 `str(OutputDataSet)` 行，如下所示：
 
@@ -88,7 +87,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-现在，查看“消息”中的文本，了解输出为何不相同的原因。
+现在，查看“消息”中的文本，了解输出为何不相同的原因。 
 
 **结果 - 示例 1**
 

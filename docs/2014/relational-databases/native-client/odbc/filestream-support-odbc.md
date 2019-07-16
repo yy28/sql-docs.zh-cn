@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206593"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支持 (ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../features/filestream-support.md)。 演示对 FILESTREAM 的 ODB 支持的示例，请参阅[发送和接收数据以增量方式与 FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48111130"
  如果对绑定列调用 SQLFetch，你将收到"数据被截断"警告，如果缓冲区足以容纳整个值。 忽略此警告，并使用 SQLParamData 和 SQLPutData 调用更新此绑定的列中的数据。 可以使用 SQLBindCol 绑定的情况使用 SQLSetPos 更新 FILESTREAM 数据。  
   
 ## <a name="example"></a>示例  
- FILESTREAM 列的行为与 `varbinary(max)` 列完全相似，但没有大小限制。 它们被绑定为 SQL_VARBINARY。 （SQL_LONGVARBINARY 用于图像列，并且对该类型有限制。 例如，SQL_LONGVARBINARY 不能用作输出参数。）以下示例显示对 FILESTREAM 列的直接 NTFS 访问。 这些示例假定已在数据库中执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 代码：  
+ FILESTREAM 列的行为与 `varbinary(max)` 列完全相似，但没有大小限制。 它们被绑定为 SQL_VARBINARY。 （SQL_LONGVARBINARY 用于图像列，并且对该类型有限制。 例如，SQL_LONGVARBINARY 不能用作输出参数。)以下示例演示对 FILESTREAM 列的直接 NTFS 访问。 这些示例假定已在数据库中执行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 代码：  
   
 ```  
 CREATE TABLE fileStreamDocs(  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211672"
 ---
 # <a name="modify-data-through-a-view"></a>通过视图修改数据
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改基础基表的数据。  
@@ -30,7 +30,7 @@ ms.locfileid: "48130305"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要通过视图修改表数据使用：**  
   
@@ -53,13 +53,13 @@ ms.locfileid: "48130305"
   
 #### <a name="to-modify-table-data-through-a-view"></a>通过视图修改表数据  
   
-1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”**。  
+1.  在 **“对象资源管理器”** 中，展开包含视图的数据库，然后展开 **“视图”** 。  
   
-2.  右键单击该视图，然后选择“编辑前 200 行”。  
+2.  右键单击该视图，然后选择“编辑前 200 行”  。  
   
 3.  可能需要在 **SQL** 窗格中修改 SELECT 语句以返回要修改的行。  
   
-4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”。 若要更改一个或多个列中的数据，请修改列中的数据。  
+4.  在 **“结果”** 窗格中，找到要更改或删除的行。 若要删除行，请右键单击该行，然后选择“删除”  。 若要更改一个或多个列中的数据，请修改列中的数据。  
   
     > [!IMPORTANT]  
     >  如果视图引用多个基表，则不能删除行。 只能更新属于单个基表的列。  
@@ -75,9 +75,9 @@ ms.locfileid: "48130305"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例通过引用视图 `StartDate` 中的列为特定雇员更改 `EndDate` 和 `HumanResources.vEmployeeDepartmentHistory`列中的值。 此视图从两个表返回值。 此语句会成功，因为修改的列都来自一个基表。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例通过引用视图 `StartDate` 中的列为特定雇员更改 `EndDate` 和 `HumanResources.vEmployeeDepartmentHistory`列中的值。 此视图从两个表返回值。 此语句会成功，因为修改的列都来自一个基表。  
   
     ```  
     USE AdventureWorks2012 ;   
@@ -94,9 +94,9 @@ ms.locfileid: "48130305"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例通过指定视图 `HumanResouces.Department` 中的相关列，将一个新行插入到基表 `HumanResources.vEmployeeDepartmentHistory`。 该语句会成功，因为只指定了一个基表中的列，基表中的其他列具有默认值。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例通过指定视图 `HumanResouces.Department` 中的相关列，将一个新行插入到基表 `HumanResources.vEmployeeDepartmentHistory`。 该语句会成功，因为只指定了一个基表中的列，基表中的其他列具有默认值。  
   
     ```  
     USE AdventureWorks2012 ;  

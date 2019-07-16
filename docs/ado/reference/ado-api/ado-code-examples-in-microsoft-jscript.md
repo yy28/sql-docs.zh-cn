@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 08dbea83f84a1b4606d48a79c80b8b6ef082d023
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7ddf42eb5a34d17c735066cd4e936c75e64ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921217"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript 中的 ADO 代码示例
 使用下面的代码示例来了解如何使用 ADO 方法、 属性和事件时在 JScript 中编写。  
@@ -40,7 +39,7 @@ ms.locfileid: "66697024"
   
 -   [GetRows 方法示例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 -   [AbsolutePage、 PageCount、 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   

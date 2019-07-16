@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 543eb6d96d2666d6395960c06a1c41727eb1f414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965558"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 属性示例 (VB)
 此示例演示[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)并[Unique](../../../ado/reference/adox-api/unique-property-adox.md)的属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码包含两个列创建一个新表。 **PrimaryKey**并**Unique**属性用于使一个列将不允许重复值的主键。  

@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e521d410328edd75d2cb37bd995cb4da8ced9e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: d7235217173217b01b224e1772629dc3a7fc87ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908260"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 执行存储过程并处理输出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,17 +5,16 @@ description: Mssqlctl bdc 存储池装入命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b6a412c6d7cab9fb869a9aa8ee1b62ae0ed3f717
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958005"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>mssqlctl bdc 存储池装入
 
@@ -26,8 +25,8 @@ ms.locfileid: "67727476"
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[mssqlctl bdc storage-pool mount create](#mssqlctl-bdc-storage-pool-mount-create) | 在 HDFS 中创建的远程存储的装载。
-[mssqlctl bdc storage-pool mount delete](#mssqlctl-bdc-storage-pool-mount-delete) | 删除远程存储在 HDFS 中的装载。
+[mssqlctl bdc 存储池装入创建](#mssqlctl-bdc-storage-pool-mount-create) | 在 HDFS 中创建的远程存储的装载。
+[mssqlctl bdc 存储池装入删除](#mssqlctl-bdc-storage-pool-mount-delete) | 删除远程存储在 HDFS 中的装载。
 [mssqlctl bdc 存储池装入状态](#mssqlctl-bdc-storage-pool-mount-status) | Mount(s) 的状态。
 ## <a name="mssqlctl-bdc-storage-pool-mount-create"></a>mssqlctl bdc 存储池装入创建
 在 HDFS 中创建的远程存储的装载。 应为逗号分隔的键列表中使用环境变量 MOUNT_CREDENTIALS 指定的凭据用于访问远程存储，如果有，= 值对。 中键或值的任何逗号必须进行转义。

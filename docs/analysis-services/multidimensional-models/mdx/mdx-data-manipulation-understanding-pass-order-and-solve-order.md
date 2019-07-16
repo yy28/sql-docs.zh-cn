@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176573"
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 数据操作-了解传递顺序和求解次序
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52545397"
 ## <a name="solve-order"></a>求解次序  
  求解次序决定了出现相互竞争的表达式时的计算优先级。 在一个传递中，求解次序决定了两点：  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的次序。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的次序。  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算自定义成员、计算成员、自定义汇总和计算单元的次序。  
   

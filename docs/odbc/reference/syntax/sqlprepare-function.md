@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c77f8e6bd137b557b150ba91c143abb5438778c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292b1c4d9cd0281de610af4e53f25aa3d0ab6f90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005764"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 函数
 **符合性**  
@@ -60,7 +59,7 @@ SQLRETURN SQLPrepare(
 ## <a name="diagnostics"></a>诊断  
  当**SQLPrepare**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLPrepare** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S02|选项值已更改|指定的语句属性实现运行情况，由于无效，因此已暂时替换一个相近的值。 (**SQLGetStmtAttr**可以调用以确定暂时被替换的值是什么。)替换值是否为有效*StatementHandle*直到关闭游标。 可以更改的语句属性有：SQL_ATTR_CONCURRENCY 设置 SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  

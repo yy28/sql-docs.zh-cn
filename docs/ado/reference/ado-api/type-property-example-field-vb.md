@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94bec3334bb637bf27189d35194fccd605931789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936685"
 ---
 # <a name="type-property-example-field-vb"></a>Type 属性示例（字段）(VB)
 此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性[类型](../../../ado/reference/ado-api/type-property-ado.md)属性的所有[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 若要运行此过程需要 FieldType 函数。  

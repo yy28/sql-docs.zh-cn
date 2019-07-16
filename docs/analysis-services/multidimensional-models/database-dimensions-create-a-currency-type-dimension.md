@@ -1,5 +1,5 @@
 ---
-title: 创建货币类型维度 |Microsoft 文档
+title: 创建货币类型维度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 73c44e299e448606ce37848ee8f58dd0e15aea76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178885"
 ---
 # <a name="database-dimensions---create-a-currency-type-dimension"></a>数据库维度-创建货币类型维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "34027084"
 ## <a name="defining-account-intelligence-with-the-business-intelligence-wizard"></a>通过商业智能向导定义帐户智能  
  如果定义了帐户维度并将该维度添加到了多维数据集中，则可以使用商业智能向导来为维度添加帐户智能功能（如标识和映射帐户类型）。 有关详细信息，请参阅 [向维度中添加帐户智能](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [商业智能向导的 F1 帮助](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [维度类型](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

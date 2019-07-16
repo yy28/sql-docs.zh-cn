@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7e41f604bf9d87b2db0b22749f58ee7fd2acf2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a6b0660635812a216525665832b0f16f64538b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894937"
 ---
 # <a name="msmergedynamicsnapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_dynamic_snapshots**表跟踪为具有参数化的行筛选器为合并发布定义每个分区的已筛选的数据快照的位置。 此表存储中**发布**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|合并分区的 ID。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|分区的已筛选数据快照的位置。|  

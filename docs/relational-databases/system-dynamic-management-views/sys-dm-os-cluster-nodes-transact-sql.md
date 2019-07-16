@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f43d395238bb7b100fd4374e7e10a6382370fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900258"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ ms.locfileid: "62506896"
   
 > **注意**：若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_cluster_nodes**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置中的节点名称。|  
-|status|**int**|中的节点的状态[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例：0, 1, 2, 3, -1. 有关详细信息，请参阅[GetClusterNodeState 函数](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
+|status|**int**|中的节点的状态[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例：0、 1、 2、 3、-1。 有关详细信息，请参阅[GetClusterNodeState 函数](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
 |status_description|**nvarchar(20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集节点的状态的描述。<br /><br /> 0 = 正常运行<br /><br /> 1 = 停止<br /><br /> 2 = 已暂停<br /><br /> 3 = 正在联接<br /><br /> -1 = 未知|  
 |is_current_owner|bit|1 表示此节点是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集资源的当前所有者。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
@@ -66,9 +65,9 @@ FROM sys.dm_os_cluster_nodes;
 |Node3|1|下|0|  
   
 ## <a name="see-also"></a>请参阅  
- [sys.dm_os_cluster_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
+ [sys.dm_os_cluster_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys.fn_virtualservernodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

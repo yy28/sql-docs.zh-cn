@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aabd005381dc2e18b01fb88d125ddeeb3f8b6428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905177"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|源表架构的名称。|  
 |source_table|**sysname**|源表的名称。|  
@@ -86,7 +85,7 @@ sys.sp_cdc_help_change_data_capture
 ## <a name="remarks"></a>备注  
  当同时*source_schema*并*source_name*默认为 NULL，或显式设置为 NULL，此存储的过程返回所有数据库的信息捕获实例的调用方已选择访问权限。 当*source_schema*并*source_name*是非 null 时，返回特定的命名启用表的唯一信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  当*source_schema*并*source_name*为 NULL 时，调用方的授权将确定哪些启用的表包括在结果集中。 调用方必须对捕获实例的所有捕获列拥有 SELECT 权限，还要有任何所定义的门户角色中的成员身份，才能获得要包括的表信息。 db_owner 数据库角色的成员可以查看有关所有定义的捕获实例的信息。 在请求特定的启用表的信息时，相同的 SELECT 和成员身份条件将应用于命名表。  
   
 ## <a name="examples"></a>示例  

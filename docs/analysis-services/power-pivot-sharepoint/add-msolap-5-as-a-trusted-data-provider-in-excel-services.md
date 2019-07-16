@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7576aadda3739709acdffcb1b2419c20d39ed4e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164458"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "38979449"
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>将受信任的访问接口添加到 Excel Services  
   
-1.  在“管理中心”中，单击 **“管理服务应用程序”**，然后单击 Excel Services 服务应用程序。  
+1.  在“管理中心”中，单击 **“管理服务应用程序”** ，然后单击 Excel Services 服务应用程序。  
   
-2.  单击 **“受信任的数据访问接口”**。  
+2.  单击 **“受信任的数据访问接口”** 。  
   
 3.  验证 MSOLAP.5 显示在列表中。 根据你配置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的不同方式，MSOLAP.5 可能已受信任。  
   
-4.  如果它未列出，请单击 **“添加受信任的数据访问接口”**。  
+4.  如果它未列出，请单击 **“添加受信任的数据访问接口”** 。  
   
 5.  在“访问接口 ID”中，键入 **MSOLAP.5**。  
   

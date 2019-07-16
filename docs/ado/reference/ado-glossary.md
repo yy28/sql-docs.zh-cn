@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911695"
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -49,7 +48,7 @@ ms.locfileid: "66709972"
  绑定项  
  在表中的字段和变量之间的映射。 在 ADO VisualC++扩展中，**记录集**字段映射到 C /C++变量。  
   
- bitmask  
+ 位掩码  
  数字值适用于与其他数字值的按位值比较通常用于标记中的参数或返回值的选项。 通常这种比较通过按位逻辑运算符，如**并**并**或者**在 Visual Basic 中 **&** 并 **&#124;** 在C++。  
   
  例如，ADO **FieldAttributeEnum**值可以使用为位掩码，以确定字段的特性。 假设你想要确定字段是否可更新。 可以使用以下表达式在 Visual Basic 中对此进行测试：`Field.Attributes AND adFldUpdatable`  
@@ -230,7 +229,7 @@ ms.locfileid: "66709972"
  父级 (parent)  
  层次结构关系中的控制方。 层次结构中父层次结构中具有一个或多个直接位于其下方的子节点。 另请参阅父别名、 父-子关系和子级。  
   
- parent-alias  
+ 父别名  
  一个父引用的别名。 请参阅参阅别名和父级。  
   
  父-子关系  
@@ -279,10 +278,10 @@ ms.locfileid: "66709972"
  存储过程  
  例如 SQL 语句和可选控制流语句的代码的预编译的集合用一个名称存储并作为一个单元处理。 存储的过程存储在一个数据库;它们可以通过从应用程序一次调用执行，并且允许用户声明的变量、 条件执行和其他功能强大的编程功能。  
   
- stub  
+ 存根 （stub)  
  一个特定于接口的对象，提供的参数封送处理和通信所需的应用程序对象接收从客户端运行在不同的执行环境中，如另一个线程上或另一个进程中调用。 存根 （stub） 位于与应用程序对象，并与调用它的客户端所在的相应代理进行通信。 另请参阅代理服务器。  
   
- sub-node  
+ 子节点  
  请参阅子级。  
   
  同步操作  

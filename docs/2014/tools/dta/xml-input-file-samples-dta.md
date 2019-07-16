@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186519"
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 输入文件示例 (DTA)
   本节包含可以用于 **dta** 命令行工具的 XML 输入文件示例。 此工具是数据库引擎优化顾问的用户界面之一，数据库引擎优化顾问是一种可用于优化数据库以改进查询性能的工具。 数据库引擎优化顾问可分析工作负荷对一个数据库或多个数据库的影响。 工作负荷是一组针对要优化的数据库执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 在完成工作负荷影响的分析后，数据库引擎优化顾问将创建关于添加索引、索引视图或分区策略（将提高数据库查询性能）的建议。  

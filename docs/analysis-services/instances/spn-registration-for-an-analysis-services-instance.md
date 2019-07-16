@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b4516470b1b55c697cbfee065dbf53c3187a6a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209417"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52526497"
   
  下表介绍 Analysis Services SPN 的每个部分。  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
 |服务类|MSOLAPSvc.3 将服务标识为 Analysis Services 实例。 .3 表示在 Analysis Services 传输中使用的 XMLA-over-TCP/IP 协议的版本。 它与产品发行版无关。 因此，在修订协议本身之前，MSOLAPSvc.3 是针对 SQL Server 2005、2008、2008 R2、2012 和 Analysis Services 的任何将来发行版的正确的服务类。|  
 |主机名称|标识正在运行服务的计算机。 该名称可以是完全限定域名称或 NetBIOS 名称。 应当为二者都注册 SPN。<br /><br /> 为服务器 NetBIOS 名称注册 SPN 时，务必使用 `SetupSPN -S` 检查是否存在重复的注册。 我们不保证 NetBIOS 名称在林中是唯一的，而拥有重复 SPN 注册可能会导致连接失败。<br /><br /> 对于 Analysis Services 负载平衡群集，主机名应该是分配给群集的虚拟名称。<br /><br /> 切勿使用 IP 地址创建 SPN。 Kerberos 使用域的 DNS 解析功能。 指定 IP 地址会绕过该功能。|  
@@ -76,13 +76,13 @@ ms.locfileid: "52526497"
 |服务帐户|这是 **“MSSQLServerOLAPService”** Windows 服务的启动帐户。 它可以是 Windows 域用户帐户、虚拟帐户、托管服务帐户 (MSA) 或内置帐户，例如服务 SID、NetworkService 或 LocalSystem。 Windows 域用户帐户可按照域 \ 用户格式设置或user@domain。|  
   
 ##  <a name="bkmk_virtual"></a> 虚拟帐户的 SPN 注册  
- 对于 SQL Server 服务，虚拟帐户是默认的帐户类型。 虚拟帐户是**NT Service\MSOLAPService**对于默认实例和**NT Service\MSOLAP$**\<实例名称 > 对于命名实例。  
+ 对于 SQL Server 服务，虚拟帐户是默认的帐户类型。 虚拟帐户是**NT Service\MSOLAPService**对于默认实例和**NT Service\MSOLAP$** \<实例名称 > 对于命名实例。  
   
  如名称所示，这些帐户不存在于 Active Directory 中。 虚拟帐户只存在于本地计算机上。 连接外部服务、应用程序或设备时，使用本地计算机帐户进行连接。 因此，在虚拟帐户上运行 Analysis Services 的 SPN 注册实际上是计算机帐户的 SPN 注册。  
   
  **以 NT Service\MSOLAPService 身份运行的默认实例的示例语法**  
   
- 此示例为在默认虚拟帐户下运行的 Analysis Services 默认实例显示 **“setspn”** 语法。 在此示例中，计算机主机名为 **AW-SRV01**。 如前所述，SPN 注册必须指定“计算机帐户”  而不是虚拟帐户 **“NT Service\MSOLAPService”**。  
+ 此示例为在默认虚拟帐户下运行的 Analysis Services 默认实例显示 **“setspn”** 语法。 在此示例中，计算机主机名为 **AW-SRV01**。 如前所述，SPN 注册必须指定“计算机帐户”  而不是虚拟帐户 **“NT Service\MSOLAPService”** 。  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01  
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **以 NT Service\MSOLAP$ 运行的命名实例的示例语法\<实例名称 >**  
   
- 此示例为在默认虚拟帐户下运行的 Analysis Services 命名实例显示 **“setspn”** 语法。 在此示例中，计算机主机名为 **AW-SRV02**，实例名为 **AW-FINANCE**。 同样，为 SPN 指定的计算机帐户而不是虚拟帐户是**NT Service\MSOLAP$**\<实例名称 >。  
+ 此示例为在默认虚拟帐户下运行的 Analysis Services 命名实例显示 **“setspn”** 语法。 在此示例中，计算机主机名为 **AW-SRV02**，实例名为 **AW-FINANCE**。 同样，为 SPN 指定的计算机帐户而不是虚拟帐户是**NT Service\MSOLAP$** \<实例名称 >。  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -131,14 +131,14 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **以 LocalService 身份运行的 SQL Browser Service 的 SPN 示例语法**  
   
- 服务类为 **“MSOLAPDisco.3”**。 默认情况下，此服务会以 NT AUTHORITY\LocalService 身份运行，这意味着已为计算机帐户设置了 SPN 注册。 在此示例中，计算机帐户为 **AW-SRV01**，与计算机名相对应。  
+ 服务类为 **“MSOLAPDisco.3”** 。 默认情况下，此服务会以 NT AUTHORITY\LocalService 身份运行，这意味着已为计算机帐户设置了 SPN 注册。 在此示例中，计算机帐户为 **AW-SRV01**，与计算机名相对应。  
   
 ```  
 Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01  
 ```  
   
 ##  <a name="bkmk_spnCluster"></a> 针对 SSAS 群集的 SPN 注册  
- 对于 Analysis Services 故障转移群集，主机名应该是分配给群集的虚拟名称。 此为 SQL Server 网络名，是当你在现有 WSFC 基础上安装 Analysis Services 后，SQL Server 安装期间指定的。 可在 Active Directory 中找到此名称。 还可在 **“故障转移群集管理器”** | **“角色”** | **“资源”** 选项卡中找到它。“资源”选项卡上的服务器名应在 SPN 命令中作为“虚拟名称”使用。  
+ 对于 Analysis Services 故障转移群集，主机名应该是分配给群集的虚拟名称。 此为 SQL Server 网络名，是当你在现有 WSFC 基础上安装 Analysis Services 后，SQL Server 安装期间指定的。 可在 Active Directory 中找到此名称。 还可在 **“故障转移群集管理器”**  |  **“角色”**  |  **“资源”** 选项卡中找到它。“资源”选项卡上的服务器名应在 SPN 命令中作为“虚拟名称”使用。  
   
  **Analysis Services 群集的 SPN 语法**  
   

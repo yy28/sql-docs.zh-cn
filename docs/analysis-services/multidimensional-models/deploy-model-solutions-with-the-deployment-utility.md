@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178513"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署实用工具部署模型解决方案
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -59,7 +59,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  **/d** 参数只在输出模式下使用。 在应答模式或静默模式下，将忽略此参数。 有关各种模式的详细信息，请参阅本主题后面的 [模式](#Modes)部分。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Microsoft.AnalysisServices.Deployment** 实用工具将使用一组文件，这些文件可以提供对象定义、部署目标、部署选项和配置设置。同时，该实用工具将使用指定的部署选项和配置设置，尝试将对象定义部署到指定的部署目标。 如果在应答文件中或在输出模式下调用此实用工具，此工具可提供一个用户界面。 有关如何使用为此实用工具提供的用户界面创建应答文件的详细信息，请参阅 [使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)。  
   
  此实用工具位于 \Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio 文件夹中。  
@@ -67,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> 模式  
  此实用工具可以在下表列出的模式下运行。  
   
-|“模式”|Description|  
+|模式|描述|  
 |----------|-----------------|  
 |静默模式|不会显示任何用户界面，部署所需要的全部信息均由输入文件提供。 在静默模式下，此实用工具不显示进度。 但可使用可选的日志文件捕获进度和错误信息供以后查看。|  
 |应答模式|显示部署向导用户界面，并将用户响应保存到指定的输入文件供以后部署。 不会在应答模式下进行部署。 应答模式的唯一用途是捕获用户响应|  

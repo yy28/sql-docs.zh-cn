@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210748"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
   复制分发代理是一个可执行文件，它能将快照（对于快照复制和事务复制）和保存在分发数据库表中的事务（对于事务复制）移动到订阅服务器上的目标表中。  
@@ -89,14 +89,14 @@ ms.locfileid: "56028058"
  **-?**  
  输出所有可用的参数。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 *server_name*。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 订阅服务器的名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-SubscriberDB** _subscriber_database_  
  订阅服务器数据库的名称。  
@@ -134,7 +134,7 @@ ms.locfileid: "56028058"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  分发代理建立连接时使用的安全套接字层 (SSL) 加密级别。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -167,9 +167,9 @@ ms.locfileid: "56028058"
  用于连接到 FTP 服务的用户名。  如果不指定，则使用 anonymous。  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
- 指定分发操作期间记录的历史信息量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
+ 指定分发操作期间记录的历史信息量。  选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|进度消息将写入控制台或输出文件。 不在分发数据库中记录历史记录。|  
 |**1**|默认值。 总是更新具有相同状态（启动、进行中、成功等）的上一历史记录消息。 如果不存在状态相同的上一记录，将插入新记录。|  
@@ -183,7 +183,7 @@ ms.locfileid: "56028058"
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将分发代理标记为可疑。 默认值为 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 登录超时前等待的秒数。 默认值为 15 秒。  
+ 登录超时前等待的秒数。  默认值为 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。  默认值是处理器数目的 **2**倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads**指定了什么数值，都将使用一个线程。  
@@ -204,13 +204,13 @@ ms.locfileid: "56028058"
  如果源上没有可用的已复制事务，代理将向分发服务器报告无事务消息。 此选项可指定代理在报告另一条无事务消息前将等待多长时间。 在上次处理已复制事务后，如果代理在源上没有检测到任何可用的事务，则总是会报告一条无事务消息。 默认值为 60 秒。  
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
- 指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 -UseOledbStreaming 指定为使用此参数。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  
+ 指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 -UseOledbStreaming 指定为使用此参数  。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  
   
  **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。  如果详细级别为 0，则只输出错误消息。  如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-PacketSize** _packet_size_  
  数据包大小（按字节计）。 默认值为 4096（字节）。  
@@ -230,7 +230,7 @@ ms.locfileid: "56028058"
  **-QuotedIdentifier** _quoted_identifier_  
  指定要使用的带引号的标识符字符。 该值的第一个字符表示分发代理使用的值。 如果使用不带有任何值的 **QuotedIdentifier** ，则分发代理使用一个空格。 如果未使用 **QuotedIdentifier** ，则分发代理使用订阅服务器支持的任意带引号的标识符。  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  以冒号分隔的列表，指定此代理要跳过的错误号。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -248,7 +248,7 @@ ms.locfileid: "56028058"
  **-SubscriberType** [ **0**| **1**| **3**]  
  指定分发代理使用的订阅服务器连接类型。  
   
-|SubscriberType 值|Description|  
+|SubscriberType 值|描述|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC 数据源|  
@@ -273,7 +273,7 @@ ms.locfileid: "56028058"
  指定分发的订阅类型。  值为 **0** ，表示推送订阅，值为 **1** ，表示请求订阅，值为 2，表示匿名订阅。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 请参见前面的 -MessageInterval 参数。  
+ 指定历史日志记录的事务间隔。 如果自历史日志记录上一实例之后的已提交事务数大于此选项，将记录历史记录消息。 默认值为 100。 值 **0** 表示无限 **TransactionsPerHistory**。 请参见前面的 -MessageInterval 参数  。  
   
  **-UseDTS**  
  必须指定为允许数据转换的发布的参数。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8874a442897bd5dd887d7e9903777f81824cb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165045"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "52543535"
   表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据存储方式，查询隐式度量值可能需要长时间。 因此，在 Power View 中不提供隐式度量值。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>维度、属性和层次结构  
- 多维数据集维度显示为表格元数据中的表。 在 Power View 字段列表中，维度属性在显示文件夹中显示为列。  将 AttributeHierarchyEnabled 属性设置为 false（例如Customer 维度中的 Birth Date 属性）或将 AttributeHierarchyVisible 属性设置为 false 的维度属性将不显示在 Power View 字段列表中。 多级层次结构或用户层次结构（例如 Customer 维度中的 Customer Geography）显示为 Power View 字段列表中的层次结构。 维度属性的隐藏 UnknownMember 在 DAX 查询和 Power View 中显示。  
+ 多维数据集维度显示为表格元数据中的表。 在 Power View 字段列表中，维度属性在显示文件夹中显示为列。  具有将 AttributeHierarchyEnabled 属性设置为 false; 的维度属性例如：在 Customer 维度或 AttributeHierarchyVisible 属性设置为 false 的出生日期属性不会在 Power View 字段列表中。 多级层次结构或用户层次结构（例如 Customer 维度中的 Customer Geography）显示为 Power View 字段列表中的层次结构。 维度属性的隐藏 UnknownMember 在 DAX 查询和 Power View 中显示。  
   
  **SQL Server Data Tools (SSDT) 和 Power View 字段列表中的维度、属性和层次结构**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52543535"
  多维模型通过角色支持维度和单元级安全性。 使用 Power View 连接到多维数据集的用户需要经过身份验证并判断他是否具有合适的权限。 应用维度安全性时，Power View 中的用户将看不到相应的维度成员；但是如果用户定义了限制某些单元的单元安全性权限，则该用户无法使用 Power View 连接到多维数据集。 在某些情况下，在从受保护的数据计算一部分数据时用户可以看到聚合的数据。  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>不可聚合的属性/层次结构  
- 在多维模型中，维度的属性可能将 IsAggregatable 属性设置为 false。 这意味着模型作者已指定当客户端应用程序查询数据时，不应聚合层次结构（属性或多个级别）上的数据。 在 Power View 中，此维度属性显示为无法计算小计的列。 在下图中，你可以看到一个不可聚合的层次结构的示例：帐户。 Accounts 父子层次结构的最高级别是不可聚合的，而其他级别则可以聚合。 在 Accounts 层次结构的矩阵可视化对象（前两个级别）中，您看到 Account Level 02 的小计但是看不到最高级别 (Account Level 01) 的小计。  
+ 在多维模型中，维度的属性可能将 IsAggregatable 属性设置为 false。 这意味着模型作者已指定当客户端应用程序查询数据时，不应聚合层次结构（属性或多个级别）上的数据。 在 Power View 中，此维度属性显示为无法计算小计的列。 在下图中，可以看到非聚合的层次结构的示例：帐户。 Accounts 父子层次结构的最高级别是不可聚合的，而其他级别则可以聚合。 在 Accounts 层次结构的矩阵可视化对象（前两个级别）中，您看到 Account Level 02 的小计但是看不到最高级别 (Account Level 01) 的小计。  
   
  **Power View 中不可聚合的层次结构**  
   
@@ -217,11 +217,11 @@ ms.locfileid: "52543535"
   
  DISCOVER_CSDL_METADATA 请求具有以下限制：  
   
-|“属性”|Required|Description|  
+|名称|Required|描述|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|用户帐户控制|目录\数据库名称。|  
+|CATALOG_NAME|是|目录\数据库名称。|  
 |PERSPECTIVE_NAME|是（如果多维数据集包含多个透视）。 如果只有一个多维数据集或有一个默认透视，则为可选的。|多维数据库中的多维数据集名称或透视名称。|  
-|VERSION|用户帐户控制|客户端请求的 CSDL 版本。 在版本 2.0 中支持多维功能和构造。|  
+|VERSION|是|客户端请求的 CSDL 版本。 在版本 2.0 中支持多维功能和构造。|  
   
  返回的 CSDL out 文档将模型表示为命名空间，其中包含实体、关联和属性。  
   

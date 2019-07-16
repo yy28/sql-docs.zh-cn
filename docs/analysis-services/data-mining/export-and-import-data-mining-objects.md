@@ -1,5 +1,5 @@
 ---
-title: 导出和导入数据挖掘对象 |Microsoft 文档
+title: 导出和导入数据挖掘对象 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb1726006db1693e94e12326617436bdff7ae73e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210017"
 ---
 # <a name="export-and-import-data-mining-objects"></a>导出和导入数据挖掘对象
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "34018934"
   
  您还可以使用 **Restore** 命令来导入挖掘结构或挖掘模型。 您的模型或结构将被还原到与其所导出的数据库同名的数据库中。 有关详细信息，请参阅 [Restore Options](../../analysis-services/multidimensional-models/restore-options.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  如果服务器中已存在同名模型或结构，则不能将模型或结构导入该服务器。 同样，也不能先导出数据挖掘对象，然后在导出文件中修改对象的名称。 因此，如果预计会出现命名冲突，请删除目标服务器上的数据挖掘对象，或在导出定义前重新命名该数据挖掘对象。  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘解决方案和对象的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+## <a name="see-also"></a>请参阅  
+ [管理数据挖掘解决方案和对象](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

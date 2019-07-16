@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caad25759038fde0107fa7602394de2a8a01e38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931057"
 ---
 # <a name="size-property-ado-parameter"></a>Size 属性（ADO 参数）
 指示的最大大小，以字节或字符，[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  

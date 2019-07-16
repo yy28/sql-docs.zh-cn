@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8924ffbbbbbedccdc3bb99469c92667efb822a4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006654"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB (AccessToSQL)
 若要将 Access 数据库迁移到 SQL Azure，必须连接到 SQL Azure 的目标实例。 连接时，SSMA 获取有关 SQL Azure 实例中的所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储有关的实例的 SQL Azure 连接到，但不存储密码的信息。  
@@ -64,7 +63,7 @@ ms.locfileid: "63138916"
   
 6.  SSMA 建议加密的连接到 SQL Azure。  
   
-7.  单击 **“连接”**。  
+7.  单击 **“连接”** 。  
   
 > [!IMPORTANT]  
 > 适用于 Access 的 SSMA 不支持连接到**主**SQL Azure 中的数据库。  

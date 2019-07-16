@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904888"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>使用示例控制台脚本文件 (MySQLToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -84,7 +83,7 @@ ms.locfileid: "63288573"
   
     -   `source-schema:` 指定转换所需的源数据库。  
   
-    -   `sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库  
+    -   `sql-server-schema`：指定是要迁移到目标数据库  
   
     **命令名**  
   
@@ -96,7 +95,7 @@ ms.locfileid: "63288573"
   
     **Attribute**  
   
-    `object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
+    `object-name`：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
     **命令名**  
   

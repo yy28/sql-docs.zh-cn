@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160887"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205554"
 ---
 # <a name="support-for-large-udts"></a>支持大型 UDT
   此示例解决方案包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 该表中的一个列将属于该程序集中定义的一个类型。默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  

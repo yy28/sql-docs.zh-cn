@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 783654f312590d64c57c1c47481886c865d203c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188166"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>创建中央管理服务器和服务器组 (SQL Server Management Studio)
   本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 指定一个 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例作为中央管理服务器。 中央管理服务器存储组织到一个或多个中央管理服务器组中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例列表。 使用中央管理服务器组执行的操作将作用于服务器组中的所有服务器。 这包括使用对象资源管理器连接到服务器以及在多个服务器上同时执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和基于策略的管理策略。  
@@ -53,27 +53,27 @@ ms.locfileid: "52792749"
   
 #### <a name="create-a-central-management-server"></a>创建中央管理服务器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
   
-2.  在“已注册的服务器”中，展开“数据库引擎”，右键单击“中央管理服务器”，然后单击“注册中央管理服务器”。  
+2.  在“已注册的服务器”中，展开“数据库引擎”  ，右键单击“中央管理服务器”  ，然后单击“注册中央管理服务器”  。  
   
-3.  在“新建服务器注册”对话框中，从服务器下拉列表中选择要作为中央管理服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 必须为此中央管理服务器使用 Windows 身份验证。  
+3.  在“新建服务器注册”  对话框中，从服务器下拉列表中选择要作为中央管理服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。 必须为此中央管理服务器使用 Windows 身份验证。  
   
 4.  在 **“已注册的服务器”** 中，输入服务器名称和可选说明。  
   
 5.  在 **“连接属性”** 选项卡上，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](../f1-help/connect-to-server-connection-properties-page-database-engine.md)。  
   
-6.  单击 **“测试”**，对连接进行测试。  
+6.  单击 **“测试”** ，对连接进行测试。  
   
-7.  单击“保存” 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将出现在 **“中央管理服务器”** 文件夹下。  
+7.  单击“保存”  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将出现在 **“中央管理服务器”** 文件夹下。  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>创建新服务器组并向该组添加服务器  
   
-1.  在 **“已注册的服务器”** 中，展开 **“中央管理服务器”**。 右键单击在上述步骤中添加的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后选择“新建服务器组”。  
+1.  在 **“已注册的服务器”** 中，展开 **“中央管理服务器”** 。 右键单击在上述步骤中添加的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后选择“新建服务器组”  。  
   
 2.  在 **“新建服务器组属性”** 中，输入组名和可选说明。  
   
-3.  在“已注册的服务器”中，右键单击服务器组，然后单击“新建服务器注册”。  
+3.  在“已注册的服务器”  中，右键单击服务器组，然后单击“新建服务器注册”  。  
   
 4.  在新服务器注册中，选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[创建新的已注册的服务器 (SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md). 根据需要添加更多服务器。  
   

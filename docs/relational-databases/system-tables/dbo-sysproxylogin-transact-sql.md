@@ -1,5 +1,5 @@
 ---
-title: dbo.sysproxylogin (Transact-SQL) | Microsoft Docs
+title: dbo.sysproxylogin (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00a3b3b53bcede7f43aad556465358b957331f45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984881"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   记录与各个 SQL Server 代理的代理帐户关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此表存储中**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的 ID。 此值对应于**proxy_id**中的列**sysproxies**表。|  
 |**sid**|**varbinary(85)**|Microsoft Windows *security_identifier* SQL Server 登录名。|  
@@ -43,6 +42,6 @@ ms.locfileid: "62470679"
  只有的成员**sysadmin**固定的服务器角色才能访问此表。  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [dbo.sysproxies &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

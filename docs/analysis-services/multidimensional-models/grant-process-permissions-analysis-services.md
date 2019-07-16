@@ -1,5 +1,5 @@
 ---
-title: 授予处理权限 (Analysis Services) |Microsoft 文档
+title: 授予处理权限 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c855bf2ecc14490b2298cf1fa240509a07369cf1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177517"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34024064"
   
     -   在“多维数据集”  窗格，为每个多维数据集选中“处理”  复选框。  
   
-    -   在“维度”  窗格，选择“所有数据库维度” ，然后为每个维度选中“处理”  复选框。 或者，选择所有行，然后使用 Shift + 单击来切换复选框选项。  
+    -   在“维度”  窗格，选择“所有数据库维度”  ，然后为每个维度选中“处理”  复选框。 或者，选择所有行，然后使用 Shift + 单击来切换复选框选项。  
   
 5.  在“成员身份”  窗格，添加有权限处理这些对象的 Windows 用户和组帐户。  
   
@@ -65,16 +65,16 @@ ms.locfileid: "34024064"
   
 ## <a name="test-processing"></a>测试处理  
   
-1.  按住 Shift 键并右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“以不同用户身份运行”并使用分配到正在进行测试的角色的 Windows 帐户连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例。  
+1.  按住 Shift 键并右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，选择“以不同用户身份运行”  并使用分配到正在进行测试的角色的 Windows 帐户连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例。  
   
 2.  打开“数据库”文件夹，选择一个数据库。 你将只会看见对角色可见的数据库，你的帐户具有此角色的成员身份。  
   
-3.  右键单击多维数据集或维度并选择“处理”。 选中处理选项。 为对象的所有组合测试所有选项。 如果由于缺失对象而出现错误，请添加对象到角色。  
+3.  右键单击多维数据集或维度并选择“处理”  。 选中处理选项。 为对象的所有组合测试所有选项。 如果由于缺失对象而出现错误，请添加对象到角色。  
   
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>设置数据挖掘结构的处理权限  
  你可以创建一个授予处理数据挖掘结构权限的角色。 这包括处理所有挖掘模型。  
   
- 用于浏览挖掘模型和结构的“钻取” 和“读取定义”  权限是原子的且可被添加到同一角色或者被分隔到不同角色。  
+ 用于浏览挖掘模型和结构的“钻取”  和“读取定义”  权限是原子的且可被添加到同一角色或者被分隔到不同角色。  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，打开“数据库”文件夹，并选择一个数据库。  
   
@@ -86,10 +86,10 @@ ms.locfileid: "34024064"
   
 5.  单击“确定”  ，完成角色定义。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Grant 数据库权限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [授予读取定义权限对象元数据 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [授予对象元数据的读取定义权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

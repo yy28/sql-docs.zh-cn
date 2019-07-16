@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186703"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 属性（“服务”选项卡）
   使用“ **属性”对话框中的“服务”选项卡可以查看或指定下列选项** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  。  
@@ -45,13 +45,13 @@ ms.locfileid: "52755869"
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：此服务不会在计算机启动时自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：计算机启动时，此服务将尝试启动。  
+-   自动：此服务将尝试启动此计算机启动时。  
   
--   禁用：此服务无法启动。  
+-   已禁用：无法启动此服务。  
   
  **状态**  
- 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
   

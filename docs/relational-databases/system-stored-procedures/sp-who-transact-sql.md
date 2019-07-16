@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950519"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +55,13 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>结果集  
  **sp_who**返回的结果集包含以下信息。  
   
-|“列”|数据类型|Description|  
+|“列”|数据类型|描述|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|会话 ID。|  
 |**ecid**|**smallint**|与特定会话 ID 相关联的给定线程的执行上下文 ID。<br /><br /> ECID = {0、 1、 2、 3...*n*}，其中 0 始终表示主或父线程，并且 {1、 2、 3...*n*} 表示子线程。|  
 |**status**|**nchar(30)**|进程状态。 可能的值有：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重置会话。<br /><br /> **运行**。 会话正在运行一个或多个批。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**。 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **回滚**。 会话具有正在处理的事务回滚。<br /><br /> **挂起**。 会话正在等待工作线程变为可用。<br /><br /> **可运行**。 会话的任务在等待获取时间量程时位于计划程序的可运行队列中。<br /><br /> **spinloop**。 会话的任务正在等待调节锁变为可用。<br /><br /> **挂起**。 会话正在等待事件（如 I/O）完成。|  
 |**loginame**|**nchar(128)**|与特定进程相关联的登录名。|  
-|**hostname**|**nchar(128)**|每个进程的主机或计算机名。|  
+|**主机名**|**nchar(128)**|每个进程的主机或计算机名。|  
 |**blk**|**char(5)**|如果存在阻塞进程，则是该阻塞进程的会话 ID。 否则该列为零。<br /><br /> 当与指定会话 ID 相关联的事务受到孤立分布式事务的阻塞时，该列将对阻塞孤立事务返回“-2”。|  
 |**dbname**|**nchar(128)**|进程使用的数据库。|  
 |**cmd**|**nchar(16)**|为该进程执行的[!INCLUDE[ssDE](../../includes/ssde-md.md)]命令（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程等等）。|  
@@ -122,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

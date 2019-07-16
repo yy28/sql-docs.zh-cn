@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186115"
 ---
 # <a name="start-sql-server-profiler"></a>启动 SQL Server Profiler
   可以通过多种方法启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，以支持在各种情况下收集跟踪输出。 启动 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方法包括：从 **“开始”** 菜单启动、从 **优化顾问中的** “工具” [!INCLUDE[ssDE](../../includes/ssde-md.md)] 菜单启动以及从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的多个位置启动。  
@@ -28,7 +28,7 @@ ms.locfileid: "52775559"
   
 ### <a name="to-start-sql-server-profiler-from-the-start-menu"></a>从“开始”菜单启动 SQL Server Profiler  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“性能工具”**，然后单击 **SQL Server Profiler**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“性能工具”** ，然后单击 **SQL Server Profiler**。  
   
 ### <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>在数据库引擎优化顾问中启动 SQL Server Profiler  
   
@@ -41,22 +41,22 @@ ms.locfileid: "52775559"
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>从“工具”菜单启动 SQL Server Profiler  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“工具”菜单中，单击“SQL Server Profiler”。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“工具”菜单中，单击“SQL Server Profiler”   。  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>从查询编辑器启动 SQL Server Profiler  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的菜单栏上，单击 **“新建查询”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的菜单栏上，单击 **“新建查询”** 。  
   
-2.  在查询编辑器中右键单击，然后选择“在 SQL Server Profiler 中跟踪查询” 。  
+2.  在查询编辑器中右键单击，然后选择“在 SQL Server Profiler 中跟踪查询”  。  
   
     > [!NOTE]  
     >  该连接上下文为编辑器连接，跟踪模板为 TSQL_SPs，应用的筛选器为 SPID = query window SPID。  
   
 #### <a name="to-start-sql-server-profiler-from-activity-monitor"></a>从活动监视器启动 SQL Server Profiler  
   
-1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，然后单击“活动监视器” 。  
+1.  在对象资源管理器中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，然后单击“活动监视器”  。  
   
-2.  单击“进程”  窗格，右键单击要探查的进程，然后单击“在 SQL Server Profiler 中跟踪进程” 。  
+2.  单击“进程”  窗格，右键单击要探查的进程，然后单击“在 SQL Server Profiler 中跟踪进程”  。  
   
     > [!NOTE]  
     >  选定某个进程后，打开活动监视器时连接上下文为对象资源管理器连接。 跟踪模板为基于服务器类型的默认模板，并且 SPID 等于所选进程的 SPID。  

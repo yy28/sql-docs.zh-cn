@@ -9,11 +9,11 @@ ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
 ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213537"
 ---
 ## <a name="specifying-application-intent"></a>指定应用程序意向
 
@@ -21,7 +21,7 @@ ms.locfileid: "51019062"
 
 当**ApplicationIntent = ReadOnly**，客户端连接时将请求读取工作负荷。 在连接时和在期间，服务器强制执行该意向**使用**数据库语句。
 
-ApplicationIntent 关键字不适用于早期的只读数据库。  
+ ApplicationIntent 关键字不适用于早期的只读数据库。  
 
 
 #### <a name="targets-of-readonly"></a>ReadOnly 的目标

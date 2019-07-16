@@ -1,5 +1,5 @@
 ---
-title: bcp_bind |Microsoft Docs
+title: bcp_bind | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895734"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +121,7 @@ bcp_bind(hdbc, szName, 0,
   
  *EDataType*参数枚举[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中的数据类型标记、 不 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLINT2 类型指定一个两个字节的整数：ODBC 类型的 SQL_C_SHORT。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了对 SQLXML 和 SQLUDT 数据类型标记中支持**_eDataType_** 参数。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了对 SQLXML 和 SQLUDT 数据类型标记中支持 **_eDataType_** 参数。  
  
  下表列出了有效的枚举数据类型以及相应的 ODBC C 数据类型。
   
@@ -144,9 +143,9 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|ssNoversion|  
+|SQLINT4|INT|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1：SQLINT1<br /> 2：SQLINT2<br /> 4：SQLINT4<br /> 8:SQLINT8|  
+|SQLINTN|*cbIndicator*<br /> 1:SQLINT1<br /> 2:SQLINT2<br /> 4：SQLINT4<br /> 8:SQLINT8|  
 |SQLFLT4|FLOAT|  
 |SQLFLT8|FLOAT|  
 |SQLFLTN|*cbIndicator*<br /> 4：SQLFLT4<br /> 8:SQLFLT8|  
@@ -165,8 +164,8 @@ bcp_bind(hdbc, szName, 0,
 |SQLIMAGE|unsigned char *|  
 |SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|除以下数据类型之外的任意数据类型：<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
-|SQLXML|支持的 C 数据类型：<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
+|SQLVARIANT|除以下数据类型之外的任意数据类型  ：<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|支持的 C 数据类型： <br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
   
  *idxServerCol*  
  数据复制的目标数据库表中的列的序号位置。 表中的第一列为列 1。 报告列的序号位置[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)。  
@@ -189,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
   
  如果*pData*的列设置为 NULL，因为其值将通过调用提供[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)，与任何后续列*eDataType*设置为 SQLTEXT、 SQLNTEXT，SQLXML、 SQLUDT、 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY、 SQLNCHAR 或 SQLIMAGE 也必须绑定与*pData*设置为 NULL，且它们的值还必须提供通过调用**bcp_moretext**.  
   
- 对于新的大值类型，如**varchar （max)**， **varbinary （max)**，或**nvarchar （max)**，可以使用 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY 和SQLNCHAR 作为类型中的指示符*eDataType*参数。  
+ 对于新的大值类型，如**varchar （max)** ， **varbinary （max)** ，或**nvarchar （max)** ，可以使用 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY 和SQLNCHAR 作为类型中的指示符*eDataType*参数。  
   
  如果*cbTerm*是不为 0，（1、 2、 4 或 8） 的任何值是有效的前缀 (*cbIndicator*)。 在此情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将搜索终止符，计算终止符的数据长度 (*我*)，并设置*cbData*为 i 和的值的小的值前缀。  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f597f1968f947b9e0dd792568ea59f42af1d2a0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521094"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209447"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "52521094"
 ##  <a name="bkmk_location"></a> 日志的位置和类型  
  Analysis Services 提供有以下所述日志。  
   
-|文件名或位置|类型|用于|在默认情况下启用|  
+|文件名或位置|type|用于|在默认情况下启用|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|错误日志|例程监控和基本故障排除|用户帐户控制|  
+|Msmdsrv.log|错误日志|例程监控和基本故障排除|是|  
 |关系数据库中的 OlapQueryLog 表|查询日志|为使用情况优化向导收集输入|否|  
 |SQLDmp\<guid >.mdmp 文件|崩溃和异常|深度故障排除|否|  
   
- 我们强烈建议使用以下链接查看此主题中未涉及的其他信息资源：[初始数据集合提示从 Microsoft 支持部门](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
+ 我们强烈建议以下链接查看此主题中未涉及的其他信息资源的：[初始数据集合提示从 Microsoft 支持部门](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
 ##  <a name="bkmk_general"></a> 日志文件配置设置的一般信息  
  你可在 msmdsrv.ini 服务器配置文件中找到每个日志的部分，此文件位于 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 文件夹。 有关编辑文件的说明，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md) 。  
@@ -146,7 +146,7 @@ ms.locfileid: "52521094"
   
  **配置崩溃报告**  
   
- 除非 Microsoft 支持另有指示，否则大多数管理员使用默认设置。 此较旧的知识库文章仍用于提供如何配置转储文件的说明：[如何配置 Analysis Services 以生成内存转储文件](http://support.microsoft.com/kb/919711)。  
+ 除非 Microsoft 支持另有指示，否则大多数管理员使用默认设置。 此较旧的知识库文章仍用于提供有关如何配置转储文件的说明：[如何配置 Analysis Services 以生成内存转储文件](http://support.microsoft.com/kb/919711)。  
   
  最可能修改的配置设置是用于确定是否生成内存转储文件的 **CreateAndSendCrashReports** 设置。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "52521094"
   
 -   配置 msmdsrv.log 文件以控制 msmdsrv 日志文件的大小和数量。 默认情况下不启用这些设置，请确保将其添加为安装后步骤。 请参阅本主题中的 [MSMDSRV 服务日志文件](#bkmk_msmdsrv) 。  
   
--   查看来自 Microsoft 客户支持的这篇博文，了解其使用什么资源来获取有关服务器操作的信息：[初始数据收集](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   查看 Microsoft 客户支持部门以了解其使用以获取有关服务器操作的信息的哪些资源这篇博客文章：[初始数据收集](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   使用 ASTrace2012（而非查询日志）查找谁正在查询多维数据集。 查询日志通常用于提供输入到基于使用情况的优化向导，其捕获的数据不易读取或解释。 ASTrace2012 是一种广泛使用的用于捕获查询操作的社区工具。 请参阅[Microsoft SQL Server 社区示例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
   

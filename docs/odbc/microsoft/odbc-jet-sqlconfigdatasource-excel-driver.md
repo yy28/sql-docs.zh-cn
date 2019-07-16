@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbad3b1e6dda82a9f9fc584683e53f8e2a109cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab33bfdef2b633cd5a7a3e215a3f6522d8d664ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915698"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource（Excel 驱动程序）
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "63233598"
   
  **SQLConfigDataSource**函数，用于添加、 修改或删除数据源动态使用下列关键字。  
   
-|关键字|Description|  
+|关键字|描述|  
 |-------------|-----------------|  
 |DBQ|为 Microsoft Excel 驱动程序访问 Microsoft Excel 5.0 或更高版本的文件时的工作簿文件的名称。<br /><br /> 这将设置为相同的选项**数据库**中设置的对话框。|  
 |DEFAULTDIR|所指定的路径的目录。<br /><br /> 这将设置为相同的选项**选择目录**或**选择工作簿**中设置的对话框。|  

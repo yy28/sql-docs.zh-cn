@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88d3900417bfbdaec6d2408d503b1537b8dff2da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925567"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果您处理的记录集，在直接模式下，则要少得多的并发问题发生的机会。 另一方面，如果你的应用程序使用批处理模式更新，可能有一个好机会的另一个用户编辑同一条记录所做的更改在保存前一个用户将更改记录。 在这种情况下，您将希望应用程序来适当地处理冲突。 它可能是您所希望的最后一个人将更新发送到服务器"wins"。 或者，可能想要让最新的用户，可以决定哪种更新应优先通过为他提供两个冲突值之间进行选择。  

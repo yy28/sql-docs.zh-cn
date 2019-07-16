@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c9f883b7eafc59a3d9d93541e07fe4c4db08b9c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950597"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|同步会话的阶段，可以是下列值之一：<br /><br /> **0** = 初始化或汇总行<br /><br /> **1** = 上载<br /><br /> **2** = 下载|  
 |**ArticleName**|**sysname**|被同步的项目的名称。 **ArticleName**还包含结果集中的行，无法表示文章详细信息的摘要信息。|  
@@ -56,7 +55,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**ErrorID**|**int**|会话错误的 ID。|  
 |**SeqNo**|**int**|结果集中会话的顺序。|  
 |**RowType**|**int**|指示结果集中的每一行所提供的信息类型。<br /><br /> **0** = 初始化<br /><br /> **1** = 上载摘要<br /><br /> **2** = 项目上载详细信息<br /><br /> **3** = 下载摘要<br /><br /> **4** = 项目下载详细信息|  
-|**SchemaChanges**|**int**|会话中的架构更改数。|  
+|**架构**|**int**|会话中的架构更改数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

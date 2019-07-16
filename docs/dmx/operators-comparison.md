@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8049f2bad6e78ff301b460b1375a0a73807ccd8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcbfb95070783db002d34870e5508df5322210d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008197"
 ---
 # <a name="operators---comparison"></a>运算符 - 比较
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "62501949"
   
  下表标识了 DMX 支持的比较运算符。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[&#60;&#40;小于&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|对于计算结果为非 Null 值的参数，如果左侧的参数值小于右侧的参数值，则返回 TRUE；否则返回 FALSE。 如果其中一个参数的计算结果为 Null 值或这两个参数的计算结果均为 Null 值，则该运算符返回 Null 值。|  
 |[&#62;&#40;大于&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|对于计算结果为非 null 值的参数，返回 TRUE 左侧参数的值是否大于右侧; 参数的值否则返回 FALSE。 如果其中一个参数的计算结果为 Null 值或这两个参数的计算结果均为 Null 值，则该运算符返回 Null 值。|  
@@ -43,7 +42,7 @@ ms.locfileid: "62501949"
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [表达式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

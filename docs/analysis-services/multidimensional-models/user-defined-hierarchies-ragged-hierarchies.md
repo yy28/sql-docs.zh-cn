@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164852"
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>用户定义的层次结构 - 不规则层次结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "52529336"
   
 1.  在 SSDT 中，双击一个维度可在维度设计器中将其打开。 第一个选项卡“维度结构”在“层次结构”窗格中显示属性层次结构。  
   
-2.  右键单击层次结构中的成员并选择“属性”。 将 **HideMemberIf** 设置为下面描述的值之一。  
+2.  右键单击层次结构中的成员并选择“属性”  。 将 **HideMemberIf** 设置为下面描述的值之一。  
   
-    |HideMemberIf 设置|Description|  
+    |HideMemberIf 设置|描述|  
     |--------------------------|-----------------|  
     |**从不**|级别成员从不隐藏。 这是默认值。|  
     |**OnlyChildWithNoName**|如果级别成员是其父级的唯一子级，并且名称为空或空字符串，则隐藏该级别成员。|  
@@ -63,7 +63,7 @@ ms.locfileid: "52529336"
 ##  <a name="bkmk_Mdx"></a> 设置 MDX 兼容性以确定如何在客户端应用程序中表示占位符  
  在层次结构级别上设置 **HideMemberIf** 后，您还应在发送自客户端应用程序的连接字符串中设置 **MDX Compatibility** 属性。 **MDX Compatibility** 设置确定是否使用 **HideMemberIf** 。  
   
-|MDX Compatibility 设置|Description|用法|  
+|MDX Compatibility 设置|描述|用法|  
 |-------------------------------|-----------------|-----------|  
 |**1**|显示占位符值。|这是 Excel、SSDT 和 SSMS 使用的默认值。 它指示服务器在深化不规则层次结构中的空级别时返回占位符值。 如果单击占位符值，则可继续深化直到到达子（叶）节点。<br /><br /> Excel 拥有用于连接到 Analysis Services 的连接字符串，并且它始终在每个新连接上将 **MDX Compatibility** 设置为 1。 此行为将保留向后兼容性。|  
 |**2**|隐藏占位符值（null 值或父级别的重复项），但显示具有相关值的其他级别和节点。|**MDX Compatibility**=2 通常被视为与不规则层次结构相关的首选设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和一些第三方客户端应用程序可保留此设置。|  

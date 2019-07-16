@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815429"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199460"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
   复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的已发布对象进行以下任何架构更改时，默认情况下更改都将传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  
@@ -89,7 +89,7 @@ ms.locfileid: "52815429"
   
 -   若要将一个新列添加到表中但不在现有发布中包括此列，请禁用架构更改复制，然后执行 ALTER TABLE \<Table> ADD \<Column>。  
   
--   若要在现有发布中包括现有列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。  
+-   若要在现有发布中包括现有列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。   
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 这要求重新初始化订阅。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52815429"
   
 -   若要从现有发布中删除列并从发布服务器中的表中删除该列，请执行 ALTER TABLE \<Table> DROP \<Column>。 默认情况下，该列然后将从所有订阅服务器中的表中删除。  
   
--   若要从现有发布中删除列但在发布服务器中的表中保留该列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。  
+-   若要从现有发布中删除列但在发布服务器中的表中保留该列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 或“发布属性 - \<发布>”对话框。   
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。 这要求生成一个新的快照。  
   

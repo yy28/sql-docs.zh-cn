@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206829"
 ---
 # <a name="using-data-files-and-format-files"></a>使用数据文件和格式化文件
   最简单的大容量复制程序执行以下操作：  
@@ -43,7 +43,7 @@ ms.locfileid: "48071927"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可以是生成某一结果集的任何语句。 将创建包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的第一个结果集的数据文件。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句生成多个结果集，则大容量复制将忽略第一个结果集之后的所有结果集。  
   
- 若要创建哪一列中数据存储在不同的格式比表中的数据文件，请调用[bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)若要指定将更改多少列，然后调用[bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)的每个列的格式你想要更改。 这是之后调用**bcp_init**但在通过调用**bcp_exec**。 **bcp_colfmt**指定列的数据存储在数据文件的格式。 在大容量复制入或复制出时可以使用该函数。此外可以使用**bcp_colfmt**设置行和列终止符。 例如，如果数据不包含任何制表符，您可以创建制表符分隔文件通过使用**bcp_colfmt**将制表符设置为每个列的终止符。  
+ 若要创建哪一列中数据存储在不同的格式比表中的数据文件，请调用[bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)若要指定将更改多少列，然后调用[bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)的每个列的格式你想要更改。 这是之后调用**bcp_init**但在通过调用**bcp_exec**。 **bcp_colfmt**指定列的数据存储在数据文件的格式。 大容量复制入或签出时可以使用它。此外可以使用**bcp_colfmt**设置行和列终止符。 例如，如果数据不包含任何制表符，您可以创建制表符分隔文件通过使用**bcp_colfmt**将制表符设置为每个列的终止符。  
   
  当大容量复制和使用**bcp_colfmt**，可以轻松创建描述已通过调用创建的数据文件的格式文件[bcp_writefmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)在最后一个调用**bcp_colfmt**.  
   

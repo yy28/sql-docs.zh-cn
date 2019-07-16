@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5383fe83963a9b388413b9b829b4fac7fc11788
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207967"
 ---
 # <a name="lock-manager-properties"></a>锁管理器属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "53071584"
   
  **适用范围：** 多维和表格服务器模式  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>properties  
  **DefaultLockTimeoutMS**  
  有符号 32 位整数属性，用于定义内部锁请求的默认锁超时值（毫秒）。  
   

@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37ec05a27421b8b55fb0085dbac97ab564bc5bff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915097"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每个存储在数据库本身中的数据库文件在表中占用一行。 这是一个基于每个数据库的视图。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|数据库内文件的 ID。|  
 |**file_guid**|**uniqueidentifier**|文件的 GUID。<br /><br /> NULL = 数据库是从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的。|  
-|**类型**|**tinyint**|文件类型：<br /><br /> 0 = 行（包括升级到的或在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建的全文目录的文件。）<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前的全文目录；升级到的或在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建的全文目录将报告文件类型 0。）|  
+|**type**|**tinyint**|文件类型：<br /><br /> 0 = 行（包括升级到的或在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建的全文目录的文件。）<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前的全文目录；升级到的或在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建的全文目录将报告文件类型 0。）|  
 |**type_desc**|**nvarchar(60)**|文件类型的说明：<br /><br /> ROWS（包括升级到的或在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中创建的全文目录的文件）。<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT（[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前的全文目录。）|  
 |**data_space_id**|**int**|该值可以是 0 或大于 0。 值为 0 表示数据库日志文件，值大于 0 表示存储此数据文件的文件组的 ID。|  
 |**名称**|**sysname**|数据库中文件的逻辑名称。|  
-|**physical_name**|nvarchar(260)|操作系统文件名。 如果数据库承载由某一 AlwaysOn[可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)， **physical_name**指示主副本数据库的文件位置。 对于正确的文件位置的可读辅助数据库，查询[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
-|State|**tinyint**|文件状态：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
+|**physical_name**|nvarchar(260) |操作系统文件名。 如果数据库承载由某一 AlwaysOn[可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)， **physical_name**指示主副本数据库的文件位置。 对于正确的文件位置的可读辅助数据库，查询[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
+|State |**tinyint**|文件状态：<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|文件状态的说明：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。|  
-|size|**int**|文件的当前大小（以 8 KB 页为单位）。<br /><br /> 0 = 不适用<br /><br /> 对于数据库快照来说，size 表示该快照可以一直用于文件的最大空间。<br /><br /> FILESTREAM 文件组容器大小反映当前使用的容器的大小。|  
+|size |**int**|文件的当前大小（以 8 KB 页为单位）。<br /><br /> 0 = 不适用<br /><br /> 对于数据库快照来说，size 表示该快照可以一直用于文件的最大空间。<br /><br /> FILESTREAM 文件组容器大小反映当前使用的容器的大小。|  
 |**max_size**|**int**|最大文件大小（以 8 KB 为单位的页数）：<br /><br /> 0 = 不允许增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 对于 FILESTREAM 文件组容器，max_size 反映容器的最大大小。<br /><br /> 请注意不受限制的日志文件大小与升级的数据库将报告为-1 的日志文件的最大大小。|  
-|**growth**|**int**|0 = 文件大小固定，不会增长。<br /><br /> >0 = 文件将自动增长。<br /><br /> is_percent_growth = 0，则增量以 8 KB 页为单位，并舍入到最近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，增量将用整数百分比表示。|  
+|**增长**|**int**|0 = 文件大小固定，不会增长。<br /><br /> > 0 = 文件将自动增长。<br /><br /> is_percent_growth = 0，则增量以 8 KB 页为单位，并舍入到最近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，增量将用整数百分比表示。|  
 |**is_media_read_only**|**bit**|1 = 文件位于只读介质上。<br /><br /> 0 = 文件位于读写介质上。|  
 |**is_read_only**|**bit**|1 = 文件标记为只读。<br /><br /> 0 = 文件标记为读/写。|  
 |**is_sparse**|**bit**|1 = 文件是稀疏文件。<br /><br /> 0 = 文件不是稀疏文件。<br /><br /> 有关详细信息，请参阅[查看数据库快照的稀疏文件大小 (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。|  

@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c39d19807cfe01ca9c96b47de020abb9227c43a0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4092de07d19d4d33bd56025076e606269c2b04e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962157"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>SQL Server 使用 R 可视化数据 （SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "58513074"
 此时，所做的修改仅影响的数据源对象中 R;任何新数据包含尚未写入到数据库表。 但是，sumOut 变量中捕获的数据可用于创建可视化效果和摘要。 
 
 > [!TIP]
-> 如果你忘记了您正在使用哪个计算上下文，运行**rxGetComputeContext()**。 "RxLocalSeq 计算上下文"的返回值指示运行本地计算上下文中。
+> 如果你忘记了您正在使用哪个计算上下文，运行**rxGetComputeContext()** 。 "RxLocalSeq 计算上下文"的返回值指示运行本地计算上下文中。
 
 ## <a name="visualize-data-using-rxhistogram"></a>使用 rxHistogram 可视化数据
 

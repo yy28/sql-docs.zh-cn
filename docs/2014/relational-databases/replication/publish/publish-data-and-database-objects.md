@@ -42,11 +42,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199386"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
   创建发布时，可以选择希望发布的表和其他数据库对象。 您可以使用复制来发布下列数据库对象。  
@@ -168,7 +168,7 @@ ms.locfileid: "52777129"
 -   如果发布的数据库对象依赖于一个或多个其他数据库对象，则必须发布所有被引用对象。 例如，如果要发布的视图依赖于一个表，则也必须发布该表。  
   
     > [!NOTE]  
-    >  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 **@processing_order** 的 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；为 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，为参数 **@article**。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
+    >  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 **@processing_order** 的 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；为 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，为参数 **@article** 。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
   
 -   发布名称中不能包含以下字符：% * [ ] | : " ? \ / \< >。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "52777129"
   
 -   通过 [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) 创建的绑定默认值（绑定默认值会对用 ALTER TABLE 或 CREATE TABLE 的关键字 DEFAULT 创建的默认值不利）将不复制。  
   
--   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 `NOEXPAND` 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 `NOEXPAND` 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，为这些函数创建脚本并使用提供该脚本*@post_snapshot_script*参数的`sp_addpublication`。  
+-   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 `NOEXPAND` 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 `NOEXPAND` 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，为这些函数创建脚本并使用提供该脚本 *@post_snapshot_script* 参数的`sp_addpublication`。  
   
 ### <a name="schemas-and-object-ownership"></a>架构和对象所有权  
  在新建发布向导中，复制在架构和对象所有权方面具有以下默认行为：  
@@ -197,7 +197,7 @@ ms.locfileid: "52777129"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle、sp_addmergearticle、sp_changearticle 和 sp_changemergearticle。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle  、sp_addmergearticle  、sp_changearticle  和 sp_changemergearticle  。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>将数据发布到运行 SQL Server 早期版本的订阅服务器  
   

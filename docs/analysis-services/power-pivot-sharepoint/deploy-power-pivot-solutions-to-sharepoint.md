@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208224"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>将 Power Pivot 解决方案部署到 SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,26 +28,26 @@ ms.locfileid: "52544269"
   
  [先决条件：确认 Web 应用程序使用经典模式身份验证](#bkmk_classic)  
   
- [第 1 步：部署场解决方案](#bkmk_farm)  
+ [步骤 1：部署场解决方案](#bkmk_farm)  
   
- [步骤 2:将 Power Pivot Web 应用程序解决方案部署到管理中心](#deployCA)  
+ [步骤 2：将 Power Pivot Web 应用程序解决方案部署到管理中心](#deployCA)  
   
- [步骤 3:将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序](#deployUI)  
+ [步骤 3：将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序](#deployUI)  
   
  [重新部署或收回解决方案](#retract)  
   
  [关于 Power Pivot 解决方案](#intro)  
   
-##  <a name="bkmk_classic"></a> 先决条件：确认 Web 应用程序使用经典模式身份验证  
+##  <a name="bkmk_classic"></a>先决条件：确认 Web 应用程序使用经典模式身份验证  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 只有使用 Windows 经典模式身份验证的 Web 应用程序才支持 PowerPivot for SharePoint。 若要检查应用程序是否使用经典模式，请运行以下 PowerShell cmdlet 从**SharePoint 2010 Management Shell**，并替换**http://\<顶层站点名称 >** 与您的 SharePoint 站点的名称：  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- 返回值应为 **false**。 如果返回值为“True” ，则不能使用此 Web 应用程序访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
+ 返回值应为 **false**。 如果返回值为“True”  ，则不能使用此 Web 应用程序访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
-##  <a name="bkmk_farm"></a> 步骤 1:部署场解决方案  
+##  <a name="bkmk_farm"></a> 步骤 1：部署场解决方案  
  本部分将向你演示如何使用 PowerShell 部署解决方案，但你也可以使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具来完成此任务。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  在安装 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 后，此任务只需要执行一次。  
@@ -68,7 +68,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 步骤 2:将 Power Pivot Web 应用程序解决方案部署到管理中心  
+##  <a name="deployCA"></a> 步骤 2：将 Power Pivot Web 应用程序解决方案部署到管理中心  
  在您部署了场解决方案后，必须将 Web 应用程序解决方案部署到管理中心。 此步骤将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理仪表板添加到管理中心。  
   
 1.  使用 **“以管理员身份运行”** 选项打开 SharePoint 2010 Management Shell。  
@@ -95,31 +95,31 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  现在，Web 应用程序解决方案已部署到管理中心，您可以使用管理中心完成所有其余配置步骤。  
   
-##  <a name="deployUI"></a> 步骤 3:将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序  
+##  <a name="deployUI"></a> 步骤 3：将 Power Pivot Web 应用程序解决方案部署到其他 Web 应用程序  
  在上一个任务中，您将 Powerpivotwebapp.wsp 部署到了管理中心。 在这一部分，你可以在支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的每个现有 Web 应用程序上部署 powerpivotwebapp.wsp。 如果您在以后添加更多的 Web 应用程序，请确保对于这些附加的 Web 应用程序都重复执行此步骤。  
   
-1.  在管理中心的“系统设置”中，单击 **“管理场解决方案”**。  
+1.  在管理中心的“系统设置”中，单击 **“管理场解决方案”** 。  
   
-2.  单击 **“powerpivotwebapp.wsp”**。  
+2.  单击 **“powerpivotwebapp.wsp”** 。  
   
-3.  单击 **“部署解决方案”**。  
+3.  单击 **“部署解决方案”** 。  
   
-4.  在“部署到？” 中，选择要为其添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能支持的 SharePoint Web 应用程序。  
+4.  在“部署到？”  中，选择要为其添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能支持的 SharePoint Web 应用程序。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”** 。  
   
 6.  对也支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问的其他 SharePoint Web 应用程序重复此过程。  
   
 ##  <a name="retract"></a> 重新部署或收回解决方案  
  尽管 SharePoint 管理中心提供解决方案收回，但您无需收回 powerpivotwebapp.wsp 文件，除非您在系统地排除安装或修补程序部署问题。  
   
-1.  在 SharePoint 2010 管理中心的“系统设置”中，单击 **“管理场解决方案”**。  
+1.  在 SharePoint 2010 管理中心的“系统设置”中，单击 **“管理场解决方案”** 。  
   
 2.  单击 **Powerpivotwebapp.wsp**。  
   
-3.  单击 **“收回解决方案”**。  
+3.  单击 **“收回解决方案”** 。  
   
- 如果遇到回溯到场解决方案的服务器部署问题，则可以通过在 **配置工具中运行“修复”**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 选项，重新部署解决方案。 应优先通过工具进行修复操作，因为这样只需执行较少的步骤。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
+ 如果遇到回溯到场解决方案的服务器部署问题，则可以通过在 **配置工具中运行“修复”** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 选项，重新部署解决方案。 应优先通过工具进行修复操作，因为这样只需执行较少的步骤。 有关详细信息，请参阅 [配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
  如果您仍想要重新部署所有解决方案，则请确保按照下面的顺序进行重新部署：  
   
@@ -142,7 +142,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  首先，会将 Web 应用程序部署到管理中心，然后会将后续解决方案部署到支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据请求的任何其他 Web 应用程序。 若要将 Web 应用程序解决方案部署到管理中心，必须使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具或 PowerShell cmdlet。 对于所有其他 Web 应用程序，您可以使用管理中心或 PowerShell 手动部署 Web 应用程序解决方案。  
   
-|解决方案|Description|  
+|解决方案|描述|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|将 Microsoft.AnalysisServices.SharePoint.Integration.dll 添加到全局程序集中。<br /><br /> 将 Microsoft.AnalysisServices.ChannelTransport.dll 添加到全局程序集中。<br /><br /> 安装功能和资源文件，并且注册内容类型。<br /><br /> 为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库和数据馈送库添加库模板。<br /><br /> 为服务应用程序配置、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板、数据刷新和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加应用程序页。|  
 |“powerpivotwebapp.wsp”|将 Microsoft.AnalysisServices.SharePoint.Integration.dll 资源文件添加到 Web 前端上的 Web 服务器扩展插件文件夹中。<br /><br /> 将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 服务添加到 Web 前端。<br /><br /> 为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加缩略图生成。|  

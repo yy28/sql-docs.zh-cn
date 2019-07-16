@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162870"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>在 SSDT 中启用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53206296"
   
 ### <a name="enable-directquery"></a>启用 DirectQuery  
   
-在 SSDT 中，在 **Model.bim** 文件的“属性”窗格中，将属性“DirectQuery Mode”更改为“On”。  
+在 SSDT 中，在 **Model.bim** 文件的“属性”  窗格中，将属性“DirectQuery Mode”  更改为“On”  。  
 
 ![在 SSDT 中启用 DirectQuery 模式](../../analysis-services/tabular-models/media/enable-directquery-mode-in-ssdt.png)
   
@@ -42,10 +42,10 @@ ms.locfileid: "53206296"
 可以为每个表创建示例分区，并添加示例数据，以便在生成模型时验证模型行为。 你添加的任何示例数据将会用在 **Analyze for Excel** 或其他可以连接到工作区数据库的客户端工具中。 有关详细信息，请参阅 [在设计模式下将示例数据添加到 DirectQuery 模型中](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 。  
   
 > [!TIP]
->  即使在空模型的 DirectQuery 模式下，也始终都能查看每个表的小型内置行集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，请单击“表” > “表属性”来查看 50 行的数据集。  
+>  即使在空模型的 DirectQuery 模式下，也始终都能查看每个表的小型内置行集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，请单击“表” > “表属性”来查看 50 行的数据集   。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [在 SSMS 中启用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)
 
 [在设计模式下将示例数据添加到 DirectQuery 模型中](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md)

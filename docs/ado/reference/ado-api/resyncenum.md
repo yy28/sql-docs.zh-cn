@@ -1,5 +1,5 @@
 ---
-title: ResyncEnum | Microsoft Docs
+title: ResyncEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bc43e772ab8f1e330d393461944cb2ecd585149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931248"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 指定基础值将覆盖通过调用[重新同步](../../../ado/reference/ado-api/resync-method.md)。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|默认值。 将覆盖数据，并且将取消挂起的更新。|  
 |**adResyncUnderlyingValues**|1|不会覆盖数据，并且未取消挂起的更新。|  

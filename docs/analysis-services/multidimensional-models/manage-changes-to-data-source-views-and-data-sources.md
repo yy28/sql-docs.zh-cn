@@ -1,5 +1,5 @@
 ---
-title: 管理对数据源视图和数据源更改 |Microsoft 文档
+title: 管理对数据源视图和数据源的更改 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f8cb72fe4650cd76465207f3e7cd529e2a7b032
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208808"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>管理对数据源视图和数据源所做的更改
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34026004"
   
  另一方面，如果您将数据源连接字符串更改为先前生成的其他数据库，则不会生成任何错误。 将会使用新的数据库，并且不会对先前数据库进行任何更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [了解增量生成](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   

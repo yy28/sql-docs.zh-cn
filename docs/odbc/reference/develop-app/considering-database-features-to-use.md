@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951872"
 ---
 # <a name="considering-database-features-to-use"></a>考虑使用数据库功能
 基本级别的互操作性已知后，必须考虑应用程序使用的数据库功能。 例如，哪些 SQL 语句将该应用程序执行？ 将应用程序使用可滚动游标？ 事务？ 过程？ 长整型数据？ 有关所有 Dbms 可能不都支持哪些功能的看法，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，并[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数描述，以及[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可能会消除某些 Dbms 从目标 Dbms 的列表。 它们还可能会显示该应用程序可以轻松地面向许多 Dbms。  

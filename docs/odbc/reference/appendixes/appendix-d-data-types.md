@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996213"
 ---
 # <a name="appendix-d-data-types"></a>附录 D：数据类型
 ODBC 定义数据类型的两个的集：SQL 数据类型以及 C 数据类型。 SQL 数据类型表示存储在数据源的数据的数据类型。 C 数据类型表示应用程序缓冲区中存储的数据的数据类型。  

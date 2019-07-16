@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a01e17ea9c786a724e5869a28bf4d8927b58ac81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925696"
 ---
 # <a name="current-record-and-size-of-recordset"></a>当前记录和记录集的大小
 本部分介绍如何在此示例中找到光标的当前位置**记录集**中[JScript 代码示例返回一个记录集](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)。  

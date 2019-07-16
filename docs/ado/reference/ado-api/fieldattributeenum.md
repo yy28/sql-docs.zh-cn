@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0f6984c464c08518c7b3143986a041b195cce69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918705"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定的一个或多个特性[字段](../../../ado/reference/ado-api/field-object.md)对象。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|指示提供程序缓存字段值和从缓存，可以完成，后续读取。|  
 |**adFldFixed**|0x10|指示该字段包含固定长度的数据。|  

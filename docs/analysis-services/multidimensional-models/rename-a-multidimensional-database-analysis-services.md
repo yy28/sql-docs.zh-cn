@@ -1,5 +1,5 @@
 ---
-title: 重命名多维数据库 (Analysis Services) |Microsoft 文档
+title: 重命名多维数据库 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e894db8be928f3d4bb5c53b93ead85feae94128
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208554"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重命名多维数据库 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34027104"
   
 1.  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]，直接连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
-2.  在解决方案资源管理器中，右键单击该数据库，再单击“编辑数据库”。  
+2.  在解决方案资源管理器中，右键单击该数据库，再单击“编辑数据库”  。  
   
 3.  在 **“数据库名称”** 文本框中，更改数据库名称。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34027104"
   
 1.  打开 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。  
   
-2.  在解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，再单击“属性”。  
+2.  在解决方案资源管理器中，右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，再单击“属性”  。  
   
 3.  在 **“属性页”** 对话框中，单击 **“配置属性”** 部分中的 **“部署”** 。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "34027104"
   
 -   右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并且编辑 Name 属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [设置多维数据库属性 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)   
- [配置 Analysis Services 项目属性 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [部署 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [设置多维数据库属性 (Analysis Services)](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)   
+ [配置 Analysis Services 项目属性 (SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

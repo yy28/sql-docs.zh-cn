@@ -1,5 +1,5 @@
 ---
-title: 将 BI 语义模型连接内容类型添加到库 |Microsoft 文档
+title: 将 BI 语义模型连接内容类型添加到库 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce6afcf0a00473760a35a062f51ef3b87c5a75d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208366"
 ---
 # <a name="add-bi-semantic-model-connection-content-type-to-library"></a>将 BI 语义模型连接内容类型添加到库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,29 +30,29 @@ ms.locfileid: "34021364"
   
 1.  打开要为其启用 BI 语义模型连接内容类型的文档库。  
   
-2.  在 SharePoint 功能区的“库工具”中，单击 **“库”**。  
+2.  在 SharePoint 功能区的“库工具”中，单击 **“库”** 。  
   
-3.  单击 **“库设置”**。  
+3.  单击 **“库设置”** 。  
   
-4.  在“常规设置”中，单击 **“高级设置”**。  
+4.  在“常规设置”中，单击 **“高级设置”** 。  
   
-5.  在“内容类型”的“允许内容类型的管理?”部分中， 单击 **“是”**。  
+5.  在“内容类型”的“允许内容类型的管理?”部分中， 单击 **“是”** 。  
   
-6.  单击 **“确定”**。  
+6.  单击 **“确定”** 。  
   
-7.  在“内容类型”部分中，单击 **“从现有网站内容类型添加”**。 如果您看不到此页，则返回网站，在“库工具”中单击 **“库”** ，然后单击 **“库设置”**。  
+7.  在“内容类型”部分中，单击 **“从现有网站内容类型添加”** 。 如果您看不到此页，则返回网站，在“库工具”中单击 **“库”** ，然后单击 **“库设置”** 。  
   
-8.  在“内容类型”中，单击 **“从现有网站内容类型添加”**。  
+8.  在“内容类型”中，单击 **“从现有网站内容类型添加”** 。  
   
-9. 在“从以下列表中选择网站内容类型:”中，选择 **“商业智能”**。  
+9. 在“从以下列表中选择网站内容类型:”中，选择 **“商业智能”** 。  
   
-10. 在“可用网站内容类型”中，单击 **“BI 语义模型连接文件”**，然后单击 **“添加”** 将所选内容类型移至“要添加的内容类型”列表中。  
+10. 在“可用网站内容类型”中，单击 **“BI 语义模型连接文件”** ，然后单击 **“添加”** 将所选内容类型移至“要添加的内容类型”列表中。  
   
-11. 单击 **“确定”**。  
+11. 单击 **“确定”** 。  
   
 12. 若要验证您是否添加了此连接类型，请返回到库，然后单击库功能区的“文档”区域上的 **“新建文档”** 。 您应该会在“新建文档”列表中看到 **“BI 语义模型连接文件”** 。  
   
-     ![SharePoint 库中的新文档子菜单](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 库中的新文档子菜单")  
+     ![在 SharePoint 库中的新文档子菜单](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 库中的新建文档子菜单")  
   
  在为库启用了 BI 语义模型连接内容类型后，您可以创建一个连接，用于提供对可供 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表使用的商业语义模型数据的重定向。 从以下链接中进行选择，以了解有关下一步的详情：  
   
@@ -60,8 +60,8 @@ ms.locfileid: "34021364"
   
  [创建与表格模型数据库的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [PowerPivot BI 语义模型连接 (.bism)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [使用在 Excel 或 Reporting Services 中的 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

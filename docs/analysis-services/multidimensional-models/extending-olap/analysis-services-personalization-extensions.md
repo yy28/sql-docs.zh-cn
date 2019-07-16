@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 个性化扩展 |Microsoft 文档
+title: Analysis Services 个性化设置扩展 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,50 +10,50 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 85d4761b228a8b79e6c90ca0aa7f0c9a32738a03
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208901"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 个性化设置扩展
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化扩展是了解实现插件体系结构的基础。 在插件体系结构中，您可以动态地开发新的多维数据集对象和功能，并可以与其他开发人员方便地共享。 在这种情况下，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展提供了使它能够实现以下功能：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展是概念的实现插件体系结构的基础。 在插件体系结构中，您可以动态地开发新的多维数据集对象和功能，并可以与其他开发人员方便地共享。 在这种情况下，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展提供可实现以下功能：  
   
--   **动态设计和部署**立即后，你可以设计和部署[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化扩展，用户在下一步的用户会话的开始处有权访问的对象和功能。  
+-   **动态设计和部署**立即后在设计和部署[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展，用户下一步的用户会话开始时有权访问的对象和功能。  
   
--   **接口独立性**无论接口，用于创建[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化扩展，用户可以使用任何接口访问的对象和功能。  
+-   **接口独立**而不考虑用于创建界面[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展，用户可以使用任何接口访问的对象和功能。  
   
--   **会话上下文**[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化扩展都不是永久对象中的现有基础结构，不需要重新处理该多维数据集。 在用户连接到数据库时，它们将公开并为该用户创建，并在整个用户会话期间保持可用。  
+-   **会话上下文**[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展不是现有基础结构中的永久对象，不需要重新处理该多维数据集。 在用户连接到数据库时，它们将公开并为该用户创建，并在整个用户会话期间保持可用。  
   
--   **快速分发**共享[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化扩展与其他软件开发人员而无需进入有关在何处的详细的规范或如何查找此扩展的功能。  
+-   **快速分布**共享[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展与其他软件开发人员而无需了解有关在何处的详细的规范或如何找到此扩展的功能。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展具有多种用途。 例如，您的公司的销售涉及到多种货币。 您可创建一个计算成员，以本地货币返回访问此多维数据集的人员的总销售额。 首先要此成员创建为个性化设置扩展。 然后，将此计算成员与一组用户共享。 共享后，这些用户将拥有立即访问计算成员，只要用户连接到服务器。 即使用户使用的接口不是用于创建该计算成员的接口，也可以访问该计算成员。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展具有多种用途。 例如，您的公司的销售涉及到多种货币。 您可创建一个计算成员，以本地货币返回访问此多维数据集的人员的总销售额。 首先要此成员创建为个性化设置扩展。 然后，将此计算成员与一组用户共享。 共享后，这些用户将拥有该计算成员的直接访问，只要它们连接到服务器。 即使用户使用的接口不是用于创建该计算成员的接口，也可以访问该计算成员。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化扩展现有的托管程序集体系结构的简单又优雅修改并在整个公开[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]<xref:Microsoft.AnalysisServices.AdomdServer>对象模型、 多维表达式 (MDX) 语法和架构行集。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展是对现有托管程序集体系结构的既简单又优雅的修改，在整个公开[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]<xref:Microsoft.AnalysisServices.AdomdServer>对象模型、 多维表达式 (MDX) 语法和架构行集。  
   
 ## <a name="logical-architecture"></a>逻辑体系结构  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展的体系结构以托管程序集体系结构以及以下四个基本元素为基础：  
   
  [PlugInAttribute] 自定义属性  
- 启动服务时,[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]加载所需的程序集，并确定哪些类具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自定义属性。  
+ 当启动服务时，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]加载所需的程序集，并确定哪个类具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自定义属性。  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将定义自定义属性作为描述代码及影响运行时行为的方式。 有关详细信息，请参阅主题中，"[的特性概述](http://go.microsoft.com/fwlink/?LinkId=82929)，"在[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]MSDN 上的开发人员指南。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 将定义自定义属性作为描述代码及影响运行时行为的方式。 有关详细信息，请参阅本主题中，"[的特性概述](http://go.microsoft.com/fwlink/?LinkId=82929)，"在[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]MSDN 上的开发人员指南。  
   
- 对于所有类<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自定义特性，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]调用其默认构造函数。 调用在启动的所有构造函数提供用来创建新对象的常见位置和独立于任何用户活动。  
+ 与所有类<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自定义特性，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]调用其默认构造函数。 调用在启动时的所有构造函数提供一个用来创建新对象的公共位置和不受任何用户活动。  
   
  除了生成创作和管理个性化设置相关信息的少量缓存，类构造函数通常会订阅 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> 和 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> 事件。 未能订阅这些事件可能会导致将类错误地标记为由公共语言运行时 (CLR) 垃圾收集器进行清理。  
   
  会话上下文  
- 对于基于个性化设置扩展的那些对象，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 会在客户端会话期间创建执行环境，并在此环境中动态地生成大多数对象。 与其他任何 CLR 程序集一样，此执行环境还可以访问其他函数和存储过程。 用户会话结束时，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中删除动态创建的对象和关闭的执行环境。  
+ 对于基于个性化设置扩展的那些对象，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 会在客户端会话期间创建执行环境，并在此环境中动态地生成大多数对象。 与其他任何 CLR 程序集一样，此执行环境还可以访问其他函数和存储过程。 用户会话结束时，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]删除动态创建的对象，并关闭执行环境。  
   
- 事件  
- 由会话的事件触发对象创建**多维数据集 OpenedCubeOpened**和**多维数据集 ClosingCubeClosing**。  
+ Events  
+ 由会话事件触发对象创建**多维数据集 OpenedCubeOpened**并**多维数据集 ClosingCubeClosing**。  
   
  客户端与服务器之间的通信是通过特定事件发生的。 这些事件使客户端了解会导致生成客户端对象的情况。 客户端环境是使用两种事件动态创建的：会话事件和多维数据集事件。  
   
- 会话事件与服务器对象关联。 当客户端登录到服务器，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]创建一个会话和触发器<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened>事件。 客户端结束在服务器上，会话时[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]触发器<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>事件。  
+ 会话事件与服务器对象关联。 当客户端登录到服务器，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]创建会话，并触发<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened>事件。 客户端结束服务器上的会话时[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]触发器<xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>事件。  
   
  多维数据集事件与连接对象关联。 连接到多维数据集会触发 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened> 事件。 关闭到多维数据集的连接（通过关闭多维数据集或更改到其他多维数据集）将触发 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing> 事件。  
   
@@ -113,34 +113,34 @@ ms.locfileid: "34024124"
 #### <a name="adomdcommand-class"></a>AdomdCommand 类  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 类现在支持以下 MDX 命令：  
   
--   [创建成员语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)  
+-   [CREATE MEMBER 语句 (MDX)](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [更新成员语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
+-   [UPDATE MEMBER 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP 成员语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [DROP MEMBER 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [创建 SET 语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)  
+-   [CREATE SET 语句 (MDX)](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [拖放 SET 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [DROP SET 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [创建 KPI 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [CREATE KPI 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
 -   [DROP KPI 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>MDX 扩展和增强功能  
- 使用 CREATE MEMBER 命令进行增强**标题**属性， **display_folder**属性，与**associated_measure_group**属性。  
+ CREATE MEMBER 命令进行了增强与**标题**属性， **display_folder**属性，并且**associated_measure_group**属性。  
   
- 添加 UPDATE MEMBER 命令是为了在求解计算丢失优先顺序时需要更新的情况下避免重新创建成员。 更新不能更改作用域的计算成员，将计算的成员移到不同的父级，或定义其他**solveorder**。  
+ 添加 UPDATE MEMBER 命令是为了在求解计算丢失优先顺序时需要更新的情况下避免重新创建成员。 更新不能更改计算成员的作用域将计算的成员移动到不同的父级，也无法定义其他**solveorder**。  
   
- 使用 CREATE SET 命令进行增强**标题**属性， **display_folder**属性，并且新**静态 |动态**关键字。 *静态*意味着，仅在创建时被评估为组。 *动态*意味着，对集进行评估在查询中使用集每次。 默认值是**静态**如果省略一个关键字。  
+ CREATE SET 命令增强**标题**属性， **display_folder**属性，并且新**静态 |动态**关键字。 *静态*意味着仅在创建时计算集。 *动态*意味着每次在查询中使用一组计算集。 默认值是**静态**如果省略了关键字。  
   
  在 MDX 语法中增加了 CREATE KPI 和 DROP KPI 命令。 可以从任意 MDX 脚本动态创建 KPI。  
   
 ### <a name="schema-rowsets-extensions"></a>架构行集扩展  
- 上 MDSCHEMA_MEMBERS*作用域*添加列。 作用域值如下：MDMEMBER_SCOPE_GLOBAL=1、MDMEMBER_SCOPE_SESSION=2。  
+ 在 MDSCHEMA_MEMBERS 上*作用域*添加列。 作用域值如下所示：MDMEMBER_SCOPE_GLOBAL = 1、 MDMEMBER_SCOPE_SESSION = 2。  
   
- 上 MDSCHEMA_SETS *set_evaluation_context*添加列。 将计算上下文值设置为：MDSET_RESOLUTION_STATIC = 1、MDSET_RESOLUTION_DYNAMIC = 2。  
+ 在 MDSCHEMA_SETS 上*set_evaluation_context*添加列。 将计算上下文值如下所示：MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- 在 MDSCHEMA_KPIS 上，增加了作用域列。 作用域值如下：MDKPI_SCOPE_GLOBAL=1、MDKPI_SCOPE_SESSION=2。  
+ 在 MDSCHEMA_KPIS 上，增加了作用域列。 作用域值如下所示：MDKPI_SCOPE_GLOBAL = 1、 MDKPI_SCOPE_SESSION = 2。  
   
   
