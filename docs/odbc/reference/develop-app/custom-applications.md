@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 240bdf074fbe7fd28f5aafff5c1bbab7651d0c71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067467"
 ---
 # <a name="custom-applications"></a>自定义应用程序
 自定义应用程序通常执行特定任务的几个 Dbms。 例如，应用程序可能检索单个 DBMS 中的数据并生成报告，或者它可能在多个 Dbms 之间的数据传输。 这些应用程序具有的共同点是这些 Dbms 之前编写的应用程序已知的且不太可能更改应用程序的生命周期。  

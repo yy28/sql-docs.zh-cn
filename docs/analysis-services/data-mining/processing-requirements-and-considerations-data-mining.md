@@ -1,5 +1,5 @@
 ---
-title: 处理要求和注意事项 （数据挖掘） |Microsoft 文档
+title: 处理要求和注意事项 （数据挖掘） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182468"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>处理要求和注意事项（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "34016144"
   
  处理模型时，模型不会从数据源中重新读取数据，而从挖掘结构获取数据摘要。 服务器将使用创建的多维数据集以及缓存的索引和事例数据来创建独立的线程，以便为模型定型。  
   
- 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支持并行模型处理，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+ 有关版本的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的支持并行模型处理，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ##  <a name="bkmk_ProcessStructures"></a> 处理挖掘结构  
  可以一起处理所有相关模型的挖掘结构，也可以单独进行处理。 在预期某些模型要用较长时间进行处理并且您想要延迟该操作时，从各模型单独处理挖掘结构可能会很有用。  
   
  有关详细信息，请参阅 [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md)。  
   
- 如果您十分关注对硬盘空间的节省，则请注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构缓存保留在本地。 也就是说，所有定型数据都将写在本地硬盘上。 如果不希望更改缓存数据，则可更改默认值，方法是将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为 **ClearAfterProcessing**。 这会在处理模型之后破坏缓存；但是，这还会在挖掘结构中禁用钻取功能。 有关详细信息，请参阅[钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如果您十分关注对硬盘空间的节省，则请注意 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构缓存保留在本地。 也就是说，所有定型数据都将写在本地硬盘上。 如果不希望更改缓存数据，则可更改默认值，方法是将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为 **ClearAfterProcessing**。 这会在处理模型之后破坏缓存；但是，这还会在挖掘结构中禁用钻取功能。 有关详细信息，请参阅 [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
  此外，如果您清理了缓存，则将无法使用维持测试集；如果已定义一个维持测试集，则此测试集分区的定义也将丢失。 有关维持测试集的详细信息，请参阅 [定型和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "34016144"
   
  在以下方案中也处理挖掘模型：  
   
- **部署项目**：部署项目时，项目中的挖掘模型通常依赖于项目设置和项目的当前状态进行完全处理。  
+ **部署项目**:具体取决于项目设置和项目的当前状态，在项目中的挖掘模型时通常处理完全部署该项目。  
   
- 启动部署时处理即自动开始，除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上有以前处理过的版本且没有发生结构更改。 可以通过选中下拉列表中的“部署解决方案”或按 F5 键来部署项目。 您可以  
+ 启动部署时处理即自动开始，除非 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上有以前处理过的版本且没有发生结构更改。 可以通过选中下拉列表中的“部署解决方案”  或按 F5 键来部署项目。 您可以  
   
  有关如何设置控制挖掘模型部署方式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署属性的详细信息，请参阅 [部署数据挖掘解决方案](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)。  
   
- **移动挖掘模型**：在您通过使用 EXPORT 命令移动某一挖掘模型时，将只导出该模型的定义，这包括应该向该模型提供数据的挖掘结构的名称。  
+ **移动挖掘模型**:当通过使用 EXPORT 命令移动挖掘模型时，只有模型的定义导出的这包括需要向模型提供数据挖掘结构的名称。  
   
  针对以下方案使用 EXPORT 和 IMPORT 命令进行重新处理的要求：  
   
@@ -82,9 +82,9 @@ ms.locfileid: "34016144"
   
  有关详细信息，请参阅 [导出和导入数据挖掘对象](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

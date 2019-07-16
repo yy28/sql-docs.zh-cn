@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b672ce067d5d1f10754f346c77967b4e3fbe34ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963164"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>缩放并发执行的 SQL Server 机器学习服务中的外部脚本的
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "62659508"
 
 可以使用 Python 或 R 脚本的资源受 SQL Server。 我们建议使用 SQL Server DMV 监视资源用量，或者查看关联 Windows 作业对象中的性能计数器，并相应地调整服务器内存用量。 如果有 SQL Server Enterprise Edition 时，你可以分配用于通过配置来运行外部脚本的资源[外部资源池](how-to-create-a-resource-pool.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 有关配置容量的其他信息，请参阅以下文章：
 

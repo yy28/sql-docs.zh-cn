@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59a58e143809848640db7d92d912e3eac619d0b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dcf3788480a6e3dbb3bde20ef3f9e6a43269c9e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026727"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ## <a name="arguments"></a>参数  
 `[ @group_name = ] 'group_name'` 组的名称。 *group_name*是**sysname**，无默认值。  
   
-`[ @server_name = ] 'server_name'` 要从指定组中删除的服务器的名称。 *server_name*是**nvarchar(30)**，无默认值。  
+`[ @server_name = ] 'server_name'` 要从指定组中删除的服务器的名称。 *server_name*是**nvarchar(30)** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -67,7 +66,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_targetsvrgrp_member &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
+ [sp_add_targetsvrgrp_member &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

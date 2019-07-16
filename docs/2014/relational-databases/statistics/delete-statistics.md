@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0a72a030e504fca472596fd8e98faec0b98e5803
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164257"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211879"
 ---
 # <a name="delete-statistics"></a>删除统计信息
   你可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，删除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中表和视图中的统计信息，或 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -29,7 +29,7 @@ ms.locfileid: "48164257"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要从表或视图中删除统计信息，请使用：**  
   
@@ -62,19 +62,19 @@ ms.locfileid: "48164257"
   
 4.  单击加号以便展开 **“统计信息”** 文件夹。  
   
-5.  右键单击要删除的统计信息对象，然后选择“删除”。  
+5.  右键单击要删除的统计信息对象，然后选择“删除”  。  
   
-6.  在 **“删除对象”** 对话框中，确保已选择正确的统计信息，然后单击 **“确定”**。  
+6.  在 **“删除对象”** 对话框中，确保已选择正确的统计信息，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>从表或视图中删除统计信息  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

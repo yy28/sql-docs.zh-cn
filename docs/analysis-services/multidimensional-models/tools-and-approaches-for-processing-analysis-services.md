@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208452"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "50147732"
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到 Analysis Services。  
   
-2.  右键单击要处理的 Analysis Services 对象，然后单击“处理”。 可以在以下任何级别处理数据：  
+2.  右键单击要处理的 Analysis Services 对象，然后单击“处理”  。 可以在以下任何级别处理数据：  
   
-    -   “数据库”  
+    -   数据库  
   
     -   多维数据集  
   
@@ -71,7 +71,7 @@ ms.locfileid: "50147732"
   
 5.  还可以单击 **“更改设置”** 来修改处理顺序、与特定类型的错误相关的处理行为或其他设置。  
   
-6.  单击“确定” 。  
+6.  单击 **“确定”** 。  
   
      “处理进度”对话框为每个命令提供当前状态。 如果状态消息被截断，则可以单击 **“查看详细信息”** 来读取完整消息。  
   
@@ -81,27 +81,27 @@ ms.locfileid: "50147732"
   
 2.  在解决方案资源管理器中，在已部署项目下，展开 **“维度”** 文件夹。  
   
-3.  右键单击某个维度，然后单击“处理”。 您可以右键单击多个维度，以便一次处理多个对象。 有关详细信息，请参阅[批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
+3.  右键单击某个维度，然后单击“处理”  。 您可以右键单击多个维度，以便一次处理多个对象。 有关详细信息，请参阅[批处理 (Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)。  
   
-4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”** 列中，验证此列的选项是否为 **“处理全部”**。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”。  
+4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”** 列中，验证此列的选项是否为 **“处理全部”** 。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”   。  
   
-5.  单击 **“运行”**。  
+5.  单击 **“运行”** 。  
   
-6.  处理结束时，单击 **“关闭”**。  
+6.  处理结束时，单击 **“关闭”** 。  
   
 ##  <a name="bkmk_impactanalysis"></a> 运行影响分析，以确定对象依赖关系和操作的作用域  
   
 1.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中处理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]对象之前，可以通过单击 **“处理对象”** 对话框之一中的 **“影响分析”** 来分析对相关对象的影响。  
   
-2.  右键单击某个维度、多维数据集、度量值组或分区，打开“处理对象”对话框。  
+2.  右键单击某个维度、多维数据集、度量值组或分区，打开“处理对象”  对话框。  
   
-3.  单击 **“影响分析”**。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为与选定要处理的对象相关的对象扫描模型并报告重新处理要求。  
+3.  单击 **“影响分析”** 。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为与选定要处理的对象相关的对象扫描模型并报告重新处理要求。  
   
 ### <a name="processing-objects-using-xmla"></a>使用 XMLA 处理对象  
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到 Analysis Services。  
   
-2.  右键单击待处理的对象，然后单击“处理”。  
+2.  右键单击待处理的对象，然后单击“处理”  。  
   
 3.  在 **“处理”** 对话框中，选择要使用的处理选项。 修改任何其他设置。 运行“影响分析”以标识您可能需要进行的任何更改。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "50147732"
   
 6.  或者，如果您要在同一批中处理其他对象，则可以继续向该脚本添加对象。 若要继续操作，请重复之前的步骤，追加生成的脚本，这样您可以在一个脚本中包含所有要处理的操作。 若要查看示例，请参阅 [Schedule SSAS Administrative Tasks with SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)。  
   
-7.  在菜单栏中，单击 **“查询”**，然后单击 **“执行”**。  
+7.  在菜单栏中，单击 **“查询”** ，然后单击 **“执行”** 。  
   
 ### <a name="processing-objects-using-powershell"></a>使用 PowerShell 处理对象  
   
@@ -139,7 +139,7 @@ ms.locfileid: "50147732"
   
     -   **“错误”** ，捕获任何错误  
   
-    -   **“进度报告开始”**、 **“进度报告当前状态”** 和 **“进度报告结束”** ，报告处理状态并显示用于检索数据的 SQL 查询  
+    -   **“进度报告开始”** 、 **“进度报告当前状态”** 和 **“进度报告结束”** ，报告处理状态并显示用于检索数据的 SQL 查询  
   
     -   **“开始执行 MDX 脚本”** 和 **“结束执行 MDX 脚本”** ，显示多维数据集的计算  
   
@@ -149,11 +149,11 @@ ms.locfileid: "50147732"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，创建一个使用 Analysis Services 处理任务的包，以便在对源关系数据库进行定期更新时使用新数据自动填充对象。  
   
-2.  在“SSIS 工具箱”中，双击“Analysis Services 处理”将其添加到包中。  
+2.  在“SSIS 工具箱”中，双击“Analysis Services 处理”将其添加到包中   。  
   
 3.  编辑该任务，指定与数据库的连接、处理哪些对象以及处理选项。 有关如何执行此任务的详细信息，请参阅 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 链接度量值组 |Microsoft 文档
+title: 链接度量值组 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a18e61e3c59a36fbeea576234e90ce2f54123a9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023764"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176940"
 ---
 # <a name="linked-measure-groups"></a>链接度量值组
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34023764"
   
 2.  在解决方案资源管理器中，双击要向其添加链接度量值组的多维数据集。 此步骤在多维数据集设计器中打开多维数据集。  
   
-3.  在多维数据集设计器中的“度量值”窗格或“维度”窗格上，右键单击任一窗格中的任何位置，然后选择“新建链接对象”。 这会启动链接对象向导。  
+3.  在多维数据集设计器中的“度量值”窗格或“维度”窗格上，右键单击任一窗格中的任何位置，然后选择“新建链接对象”  。 这会启动链接对象向导。  
   
 4.  在第一页上，指定数据源。 此步骤建立原始度量值组的位置。 默认值是当前数据库中的当前多维数据集，不过也可以选择其他 Analysis Services 数据库。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34023764"
   
  为了定义或使用链接度量值组，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的 Windows 服务帐户必须属于在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上对源多维数据集和度量值组具有 **ReadDefinition** 和 **Read** 访问权的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色，或必须属于源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrators 角色。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [定义链接维度](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

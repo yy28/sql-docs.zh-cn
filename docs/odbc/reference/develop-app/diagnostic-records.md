@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928e9ffa4701568aac8c519a23e7e371596a36eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90133b4a18876c52b9b6b6bffbe4c8c02c953e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039877"
 ---
 # <a name="diagnostic-records"></a>诊断记录
 关联的每个环境中，连接、 语句和描述符句柄都*诊断记录*。 这些记录包含有关使用特定的句柄的最后一个函数调用的诊断信息。 仅当使用该句柄调用另一个函数时，将替换记录。 可以存储在任何一次的诊断记录数没有限制。  

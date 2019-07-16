@@ -1,5 +1,5 @@
 ---
-title: Microsoft 逻辑回归算法 |Microsoft 文档
+title: Microsoft 逻辑回归算法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d293b386cf02d492e3a78a6cef34396f22277ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182996"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34016934"
   
 -   有关查询逻辑回归模型的示例，请参阅 [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 -   不支持钻取， 这是因为挖掘模型中节点的结构不一定直接与基础数据对应。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34016934"
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 逻辑回归算法技术参考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [逻辑回归模型查询示例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  

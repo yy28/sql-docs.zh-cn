@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ae12ee7c40fe72e78bde2602177f741093a83c4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183036"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 逻辑回归算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "57579567"
  所有 Analysis Services 数据挖掘算法均会自动使用功能选择来改善分析效果以及减轻处理工作量。 逻辑回归模型中用于功能选择的方法由属性的类型确定。 由于逻辑回归基于 Microsoft 神经网络算法，因此，其所使用的功能选择方法为适用于神经网络的功能选择方法集的子集。 有关详细信息，请参阅[功能选择（数据挖掘）](../../analysis-services/data-mining/feature-selection-data-mining.md)。  
   
 ### <a name="scoring-inputs"></a>计分输入  
- 在神经网络模型或逻辑回归模型中，“计分” 表示将数据中的值转换为一组使用同一刻度值的值，从而可相互进行比较。 例如，假设 Income 的输入范围为 0 到 100,000，而 [Number of Children] 的输入范围为 0 到 5。 转换处理可使你比较每个输入的重要程度，而不用考虑值之间的差异。  
+ 在神经网络模型或逻辑回归模型中，“计分”  表示将数据中的值转换为一组使用同一刻度值的值，从而可相互进行比较。 例如，假设 Income 的输入范围为 0 到 100,000，而 [Number of Children] 的输入范围为 0 到 5。 转换处理可使你比较每个输入的重要程度，而不用考虑值之间的差异。  
   
  对于定型集中显示的每个状态，模型均会生成一个输入。 对于离散输入或离散化输入，只要定型集中出现缺失状态，就会创建一个额外的输入，以表示“Missing”状态。 对于连续输入，至多创建两个节点：一个用于缺失值（如果出现在定型数据中），一个用于现有值，即非 Null 值。 使用 z-score 规范化方法 `(x - μ)\StdDev`，将每个输入调整为数值格式。  
   
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  适用于挖掘结构列。  
   
  MODEL_EXISTENCE_ONLY  
- 表示该列将被视为具有两个可能状态:**缺少**并**现有**。 Null 表示缺失值。  
+ 意味着，该列将被视为具有两个可能状态：**缺少**并**现有**。 Null 表示缺失值。  
   
  适用于挖掘模型列。  
   

@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029772"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   数据库中定义的每个合并发布在表中各占一行。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|默认服务器的名称。|  
 |**publisher_db**|**sysname**|默认发布服务器数据库的名称。|  
-|**名称**|**sysname**|发布的名称。|  
+|**name**|**sysname**|发布的名称。|  
 |**description**|**nvarchar(255)**|对发布的简短说明。|  
 |**retention**|**int**|整个发布集，其中的值指示单元的保留期**retention_period_unit**列。|  
 |**publication_type**|**tinyint**|指示发布是否经过筛选：<br /><br /> **0** = 未筛选。<br /><br /> **1** = 筛选。|  
@@ -77,11 +76,11 @@ ms.locfileid: "62817013"
 |**allow_subscriber_initiated_snapshot**|**bit**|指示订阅服务器是否可以启动使用参数化筛选器为发布生成快照的进程。 **1**指示订阅服务器可以启动快照进程。|  
 |**dynamic_snapshot_queue_timeout**|**int**|指定使用参数化筛选器时，订阅服务器必须在队列中等待快照生成进程开始的分钟数。|  
 |**dynamic_snapshot_ready_timeout**|**int**|指定使用参数化筛选器时，订阅服务器在队列中等待快照生成进程完成的分钟数。|  
-|**distributor**|**sysname**|发布的分发服务器的名称。|  
+|**分发服务器**|**sysname**|发布的分发服务器的名称。|  
 |**snapshot_jobid**|**binary(16)**|订阅服务器可以启动快照生成进程时，标识生成快照的代理作业。|  
 |**allow_web_synchronization**|**bit**|指定是否为 Web 同步启用发布位置**1**表示 Web 同步启用发布。|  
 |**web_synchronization_url**|**nvarchar(500)**|指定用于 Web 同步的 Internet URL 的默认值。|  
-|**allow_partition_realignment**|**bit**|指示对发布服务器上的行所做的修改导致了更改其分区时，是否向订阅服务器发送删除指令。<br /><br /> **0** = 数据来自旧分区将保留在订阅服务器，其中对此发布服务器上的数据所做的更改不会复制到此订阅服务器，但在订阅服务器上所做的更改将复制到发布服务器上。<br /><br /> **1** = 删除到订阅服务器以通过删除不是不再属于订阅服务器的分区的数据来反映分区更改的结果。<br /><br /> 有关详细信息，请参阅[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意：当此值为保留在订阅服务器上的数据**0**应视为如同它是只读的; 但是，这不严格强制复制系统。|  
+|**allow_partition_realignment**|**bit**|指示对发布服务器上的行所做的修改导致了更改其分区时，是否向订阅服务器发送删除指令。<br /><br /> **0** = 数据来自旧分区将保留在订阅服务器，其中对此发布服务器上的数据所做的更改不会复制到此订阅服务器，但在订阅服务器上所做的更改将复制到发布服务器上。<br /><br /> **1** = 删除到订阅服务器以通过删除不是不再属于订阅服务器的分区的数据来反映分区更改的结果。<br /><br /> 有关详细信息，请参阅[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意:当此值为保留在订阅服务器上的数据**0**应视为如同它是只读的; 但是，这不严格强制复制系统。|  
 |**retention_period_unit**|**tinyint**|定义在定义时使用的单位*保留*，可以是下列值之一：<br /><br /> **0** = 天。<br /><br /> **1** = 周。<br /><br /> **2** = 月。<br /><br /> **3** = 年。|  
 |**decentralized_conflicts**|**int**|指示是否在导致冲突的订阅服务器上存储冲突记录：<br /><br /> **0** = 记录不存储在订阅服务器冲突。<br /><br /> **1** = 的冲突记录存储在订阅服务器。|  
 |**generation_leveling_threshold**|**int**|指定生成中包含的更改次数。 生成是指传递到发布服务器或订阅服务器的更改的集合。|  

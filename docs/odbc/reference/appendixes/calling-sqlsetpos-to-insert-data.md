@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86647601dfc0223dd6fa4f0ffcc0e5db695868b5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037714"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>调用 SQLSetPos 以插入数据
 当 ODBC *2.x*应用程序使用 ODBC *3.x*驱动程序调用**SQLSetPos**与*操作*SQL_ADD，参数驱动程序管理器不会映射到此调用**SQLBulkOperations**。 如果 ODBC *3.x*驱动程序应使用调用的应用程序**SQLSetPos** SQL_ADD，使用该驱动程序应支持该操作。  

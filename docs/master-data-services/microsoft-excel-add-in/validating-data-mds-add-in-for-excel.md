@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 67a91feab955f0e62e1f6837a00030833d581b19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48124bf61c39a24f07ede4a184db70a85b040b02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074382"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>验证数据（用于 Excel 的 MDS 外接程序）
 
@@ -40,7 +39,7 @@ ms.locfileid: "65484557"
   
  有关其他状态的信息，请参阅[验证状态 (Master Data Services)](../../master-data-services/validation-statuses-master-data-services.md)  
   
-|“登录属性”|Description|  
+|“登录属性”|描述|  
 |------------|-----------------|  
 |验证失败|行中的一个或多个值未通过针对 MDS 管理员定义的业务规则的验证。|  
 |验证成功|行中的所有值都已根据业务规则通过了验证。|  
@@ -48,9 +47,9 @@ ms.locfileid: "65484557"
 ## <a name="input-statuses"></a>输入状态  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，以下输入状态是可能的  
   
-|“登录属性”|Description|  
+|“登录属性”|描述|  
 |------------|-----------------|  
-|错误|行中的一个或多个值不符合长度或数据类型之类的系统要求。 值在 MDS 存储库中不更新。|  
+|Error|行中的一个或多个值不符合长度或数据类型之类的系统要求。 值在 MDS 存储库中不更新。|  
 |新行|该行中的值尚未发布到 MDS 存储库中。|  
 |只读|登录用户对该行中的一个或多个值具有只读权限，并且这些值不能更新。|  
 |不变|行中没有任何值在工作表中进行了更改。 这并不意味着存储库中的值已更改；若要获取工作表中的最新数据，请在 **“连接并加载”** 组中单击 **“加载或刷新”** 。<br /><br /> 这是每一行的默认设置。|  

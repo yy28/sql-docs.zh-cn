@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022449"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
-`[ @scriptfile = ] 'scriptfile'` 是 SQL 脚本文件的完整路径。 *scriptfile*是**nvarchar(4000)**，无默认值。  
+`[ @scriptfile = ] 'scriptfile'` 是 SQL 脚本文件的完整路径。 *scriptfile*是**nvarchar(4000)** ，无默认值。  
   
 `[ @skiperror = ] 'skiperror'` 指示是否将分发代理或合并代理应停止脚本处理过程中遇到错误时。 *SkipError*是**位**，默认值为 0。  
   
