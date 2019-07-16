@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b649696a21fac7ba789f5d02ba6929c989c036bb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14abc2b77a042b104e47ff6cc578a7ba64cac44e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097775"
 ---
 # <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存有关运行 PolyBase 计算节点上的 DMS 服务的所有信息。 它列出了每个服务实例的一个行。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|使用 DMS core 相关联的唯一数字 id。 此视图的键。|唯一的 id。|  
 |compute_node_id|**int**|此 DMS 服务正在其运行的节点 ID|请参阅*compute_node_id*中[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  

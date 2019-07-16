@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 60485350a3958eb74b5647293c7a4bbc6525ff19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 044cdc1b334732a0730cd2c223d5690e4089a0cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140635"
 ---
 # <a name="managedbackupfnismasterswitchon-transact-sql"></a>managed_backup.fn_is_master_switch_on (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ managed_backup.fn_is_master_switch_on ()
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要针对此函数的 SELECT 权限。  
   
 ## <a name="see-also"></a>请参阅  

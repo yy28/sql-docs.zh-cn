@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094352"
 ---
 # <a name="sequence-of-status-records"></a>状态记录的序列
 如果返回了两个或多个状态记录，驱动程序管理器和驱动程序对其进行排序根据以下规则。 具有最高排名的记录是第一条记录。 记录 （驱动程序管理器、 驱动程序、 网关，等） 的源不被视为时排名记录。  

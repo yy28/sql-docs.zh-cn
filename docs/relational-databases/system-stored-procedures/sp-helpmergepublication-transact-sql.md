@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137652"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @found **=** ] **'***找到***'** 输出  
  用于指示返回行的标志。 *找到*是**int**而且是 OUTPUT 参数，默认值为 NULL。 **1**指示已找到发布。 **0**指示找不到该发布。  
   
- [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** 输出  
  发布的标识号。 *publication_id*是**uniqueidentifier**而且是 OUTPUT 参数，默认值为 NULL。  
   
  [ @reserved **=** ] **'***保留***’**  
@@ -63,7 +62,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**int**|发布在结果集列表中的连续顺序。|  
 |name|**sysname**|发布的名称。|  
@@ -83,7 +82,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |enabled_for_internet|**int**|确定是否为 Internet 启用发布。 如果**1**，为发布的同步文件放入`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`目录。 用户必须创建文件传输协议 (FTP) 目录。 如果**0**，该发布无法进行 Internet 访问权限。|  
 |dynamic_filter|**int**|指示是否使用参数化行筛选器。 **0**表示不使用参数化的行筛选器。|  
 |has_subscription|**bit**|指示发布是否具有任何订阅。 **0**意味着当前不存在对此发布的订阅。|  
-|snapshot_in_default_folder|**bit**|指定快照文件是否存储在默认文件夹中。<br /><br /> 如果**1**，可以在默认文件夹中找到快照文件。<br /><br /> 如果**0**，快照文件存储在指定的备用位置**alt_snapshot_folder**。 备用位置可以是另一台服务器、 网络驱动器或可移动媒体 （如 CD-ROM 或可移动磁盘）。 也可以将快照文件保存到 FTP 站点以供订阅方以后检索。<br /><br /> 注意：此参数可以是 true，仍有一个位置**alt_snapshot_folder**参数。 这个组合指定将快照文件存储在默认位置和替代位置。|  
+|snapshot_in_default_folder|**bit**|指定快照文件是否存储在默认文件夹中。<br /><br /> 如果**1**，可以在默认文件夹中找到快照文件。<br /><br /> 如果**0**，快照文件存储在指定的备用位置**alt_snapshot_folder**。 备用位置可以是另一台服务器、 网络驱动器或可移动媒体 （如 CD-ROM 或可移动磁盘）。 也可以将快照文件保存到 FTP 站点以供订阅方以后检索。<br /><br /> 注意:此参数可以是 true，仍有一个位置**alt_snapshot_folder**参数。 这个组合指定将快照文件存储在默认位置和替代位置。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照的备用文件夹的位置。|  
 |pre_snapshot_script|**nvarchar(255)**|指定一个指向 **.sql**应用在订阅服务器上的快照时，合并代理运行之前复制的任何的对象文件的脚本。|  
 |post_snapshot_script|**nvarchar(255)**|指定一个指向 **.sql**文件的合并代理所有运行的其他复制对象脚本和数据已应用在初始同步过程。|  
@@ -93,7 +92,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|指定当使用 FTP 传递快照时，快照文件供合并代理拾取的位置。|  
 |ftp_login|**sysname**|用于连接到 FTP 服务用户名。|  
 |conflict_retention|**int**|指定保留冲突的保持期（天）。 指定的天数过后，冲突行将从冲突表中清除掉。|  
-|keep_partition_changes|**int**|指定是否对此发布的同步进行优化。 **keep_partition_changes**的默认值为**0**。 值为**0**意味着不优化同步，并且一个分区中的数据更改时验证发送到所有订阅服务器的分区。<br /><br /> **1**表示优化同步，订阅者，已更改的分区内具有行受影响。<br /><br /> 注意：默认情况下，合并发布使用预计算的分区，提供了更大的优化程度比此选项。 有关详细信息，请参阅[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)并[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
+|keep_partition_changes|**int**|指定是否对此发布的同步进行优化。 **keep_partition_changes**的默认值为**0**。 值为**0**意味着不优化同步，并且一个分区中的数据更改时验证发送到所有订阅服务器的分区。<br /><br /> **1**表示优化同步，订阅者，已更改的分区内具有行受影响。<br /><br /> 注意:默认情况下，合并发布使用预计算的分区，提供了更大的优化程度比此选项。 有关详细信息，请参阅[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)并[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
 |allow_subscription_copy|**int**|指定是否已启用复制订阅该发布的订阅数据库的功能。 值为**0**表示不允许复制。|  
 |allow_synctoalternate|**int**|指定是否允许备用同步伙伴与该发布服务器同步。 值为**0**意味着不允许使用同步伙伴。|  
 |validate_subscriber_info|**nvarchar(500)**|列出用于检索订阅服务器信息和验证订阅服务器上的参数化行筛选条件的函数。 有助于验证信息分区是否与每个合并一致。|  
@@ -131,7 +130,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

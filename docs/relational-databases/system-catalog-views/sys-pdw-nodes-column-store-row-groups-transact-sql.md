@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,28 +11,27 @@ dev_langs:
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8604cdc89c755dcd1564e842963f3afa311f1786
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e89405e04a06e8171c69b81066be743ee99d4534
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106711"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   若要帮助管理员作出系统管理决策中的每个段基础上提供聚集列存储索引信息[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 **sys.pdw_nodes_column_store_row_groups**包含列 （包括那些已标记为已删除） 以物理方式存储的行的总数和标记为已删除的行数的列。 使用**sys.pdw_nodes_column_store_row_groups**来确定哪些行组具有较高百分比的已删除的行和应重新生成。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|基础表的 ID。 这是在计算节点上，不控制节点上的逻辑表的 object_id 的物理表。 例如，object_id 不会与在 sys.tables object_id 不匹配。<br /><br /> 若要加入 sys.tables，使用 sys.pdw_index_mappings。|  
 |**index_id**|**int**|在聚集列存储索引的 ID *object_id*表。|  
 |**partition_number**|**int**|包含行组的表分区的 ID *row_group_id*。 可以使用*partition_number*若要将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|**int**|此行组的 ID。 这在分区中是唯一的。|  
 |**dellta_store_hobt_id**|**bigint**|delta 行组的 hobt_id；或如果行组类型不是 delta，则为 NULL。 delta 行组是正在接受新记录的读/写行组。 Delta 行组具有**打开**状态。 delta 行组仍采用行存储格式，并且尚未压缩成列存储格式。|  
-|State|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**State**|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|行组的持久状态的说明：<br /><br /> 打开-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充，但尚未由元组搬运者进程压缩的行组。<br /><br /> 压缩的已填充和压缩的行组。|  
 |**total_rows**|**bigint**|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|**bigint**|以物理方式存储在行组标记为删除的行数。<br /><br /> 始终 0 表示增量行组。|  
@@ -52,7 +51,7 @@ ms.locfileid: "56031968"
  如果列存储行组已填充，它将进行压缩并停止接受新行。 当从压缩组中删除行时，这些行将保留但标记为已删除。 对压缩组的更新将实现为压缩组中的删除以及对打开组的插入。  
   
 ## <a name="permissions"></a>权限  
- 需要 VIEW SERVER STATE 权限。  
+ 需要 VIEW SERVER STATE 权限  。  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例联接**sys.pdw_nodes_column_store_row_groups**表与其他系统表，以返回有关特定表的信息。 计算的 `PercentFull` 列是对行组效率的估计。 若要查找有关单个表删除 WHERE 子句的前面的注释连字符，并提供表名。  

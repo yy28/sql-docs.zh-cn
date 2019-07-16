@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70728908f081ab89e08cad1265f04394f29b66ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138965"
 ---
 # <a name="identifier-case"></a>标识符大小写
 在 SQL 语句和目录函数自变量中，标识符和带引号的标识符可以是区分大小写或不是，该应用程序可以确定通过调用**SQLGetInfo** SQL_IDENTIFIER_CASE 和 SQL_QUOTED_IDENTIFIER_CASE 选项。  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140671"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 如果删除某个数据库然后重新创建它，则将返回所有数据库的备份集。 输出按 database_guid（唯一标识每个数据库）排列。   
 如果 LSN 中存在间距，则表示日志链中存在中断，则表将为每个缺少的 LSN 段包含一个特殊行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|备份文件的 URL。|  
 |backup_type|NVARCHAR(6)|'DB' 数据库的备份 LOG 代表日志备份|  

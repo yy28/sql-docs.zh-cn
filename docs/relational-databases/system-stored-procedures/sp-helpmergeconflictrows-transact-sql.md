@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137774"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表包含有关冲突行**WA**并**CA**发布，传入发布名称**CA**检索属于冲突**CA**发布。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 **%** 。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表包含有关冲突行**WA**并**CA**发布，传入发布名称**CA**检索属于冲突**CA**发布。  
   
-`[ @conflict_table = ] 'conflict_table'` 是的冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表与格式名称**MSmerge_conflict\__发布\_文章_**，使用每个已发布项目的一个表。  
+`[ @conflict_table = ] 'conflict_table'` 是的冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表与格式名称**MSmerge_conflict\__发布\_文章_** ，使用每个已发布项目的一个表。  
   
 `[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
@@ -55,7 +54,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="result-sets"></a>结果集  
  **sp_helpmergeconflictrows**返回的结果集由基表结构和这些额外的列组成。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|冲突的起源。|  
 |**conflict_type**|**int**|表示冲突类型的代码：<br /><br /> **1** = 更新冲突：在行级别检测到冲突。<br /><br /> **2** = 列更新冲突：在列级检测到冲突。<br /><br /> **3** = 更新删除入选冲突：删除在冲突中获胜。<br /><br /> **4** = 更新入选删除冲突：冲突中落选的已删除的 rowguid 将记录在此表。<br /><br /> **5** = 上载插入失败：无法在发布服务器上应用来自订阅服务器上的插入。<br /><br /> **6** = 下载插入失败：无法在订阅服务器上应用来自发布服务器的插入。<br /><br /> **7** = 上载删除失败：到发布服务器，无法上载在订阅服务器上删除。<br /><br /> **8** = 下载删除失败：在发布服务器上删除无法下载到订阅服务器。<br /><br /> **9** = 上载更新失败：无法在发布服务器上应用在订阅服务器的更新。<br /><br /> **10** = 下载更新失败：在发布服务器的更新无法应用于订阅服务器。<br /><br /> **12** = 逻辑记录更新 Wins 删除：此表中记录冲突中落选的已删除逻辑记录。<br /><br /> **13** = 逻辑记录冲突插入更新：插入到与更新逻辑记录冲突。<br /><br /> **14** = 逻辑记录删除入选更新冲突：此表中记录冲突中落选的已更新逻辑记录。|  

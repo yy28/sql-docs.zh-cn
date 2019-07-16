@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 495dd51ede4adf27b488fa35847117fddf64cafc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e65e33e8fc11bbe01497758542d3b332a862a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125331"
 ---
 # <a name="syspartitionfunctions-transact-sql"></a>sys.partition_functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每个分区函数都占一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|分区函数的名称。 在该数据库中是唯一的。|  
+|**name**|**sysname**|分区函数的名称。 在该数据库中是唯一的。|  
 |**function_id**|**int**|分区函数 ID。 在该数据库中是唯一的。|  
-|**类型**|**char(2)**|函数类型。<br /><br /> R = 范围|  
+|**type**|**char(2)**|函数类型。<br /><br /> R = 范围|  
 |**type_desc**|**nvarchar(60)**|函数类型。<br /><br /> RANGE|  
 |**端数**|**int**|函数创建的分区数。|  
 |**boundary_value_on_right**|**bit**|用于区域划分。<br /><br /> 1 = 边界值包括在边界的 RIGHT 区域内。<br /><br /> 0 = 边界值包括在边界的 LEFT 区域中。|  
@@ -45,7 +44,7 @@ ms.locfileid: "47645125"
 |**create_date**|**datetime**|函数的创建日期。|  
 |**modify_date**|**datetime**|上次使用 ALTER 语句修改函数的日期。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

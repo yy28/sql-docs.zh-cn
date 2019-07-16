@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139715"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscription_properties**表包含在订阅服务器上运行复制代理所需的参数信息的行。 对于请求订阅，该表存储在订阅服务器的订阅数据库中；对于推送订阅，该表存储在分发服务器的分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
@@ -39,7 +38,7 @@ ms.locfileid: "63032995"
 |**publisher_login**|**sysname**|发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**publisher_password**|**nvarchar(524)**|发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（已加密）。|  
 |**publisher_security_mode**|**int**|在发布服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 身份验证。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。<br /><br /> **2** = 同步触发器使用静态**sysservers**项执行远程过程调用 (RPC) 和*发布者*必须在定义**sysservers**为远程服务器或链接的服务器的表。|  
-|**distributor**|**sysname**|分发服务器的名称。|  
+|**分发服务器**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|在分发服务器用于 SQL Server 身份验证的登录名 ID。|  
 |**distributor_password**|**nvarchar(524)**|分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
 |**distributor_security_mode**|**int**|在分发服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。<br /><br /> **1** = Windows 身份验证。|  
@@ -63,13 +62,13 @@ ms.locfileid: "63032995"
 |**internet_password**|**nvarchar(524)**|合并代理连接到承载 Web 同步使用的 Web 服务器时使用的登录名的密码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_security_mode**|**int**|连接到其中的值承载 Web 同步的 Web 服务器时使用的身份验证模式**1**表示 Windows 身份验证，值为**0**意味着[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_timeout**|**int**|表示 Web 同步请求在多长时间之后过期的时间长度（秒）。|  
-|**hostname**|**sysname**|指定的值**HOST_NAME**中使用此函数时**其中**子句的联接筛选器或逻辑记录关系。|  
+|**主机名**|**sysname**|指定的值**HOST_NAME**中使用此函数时**其中**子句的联接筛选器或逻辑记录关系。|  
   
 ## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

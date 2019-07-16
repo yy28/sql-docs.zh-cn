@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d138d5ef09c4de32b0fb279287898a4933eb4e84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfefde49bb86833025fc14c2ea84782e8caa84a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107091"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +32,11 @@ ms.locfileid: "47612555"
   
 -   格式**datetime**并**datetimeoffset**字符串是：  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[。*9999999*] [为*hh*:*mm*]]  
+     yyyy  -mm  -dd  [ hh  :mm  :ss  [.9999999  ][ ± hh  :mm  ]]  
   
--   时间字符串的格式为：  
+-   时间字符串的格式为  ：  
   
-     hh:mm:ss[.9999999]  
+     hh:mm:ss[.9999999]      
   
 -   格式**日期**字符串是：  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47612555"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更高版本执行的某些转换不同于 OLE DB 规范。  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅中的"数据格式： 字符串和文字"部分[OLE DB 日期和时间改进的数据类型支持](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅"数据格式：在字符串和文字"一节[OLE DB 日期和时间改进的数据类型支持](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
  下面是一般的转换规则：  
   

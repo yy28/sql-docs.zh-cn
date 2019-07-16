@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216360"
 ---
 # <a name="getting-long-data"></a>获取 Long 数据
 定义 Dbms*长整型数据*为任何字符或二进制数据而非特定大小，如 255 个字符。 此数据可能很小，可存储在一个缓冲区，例如一部分描述的多个几千个字符。 但是，它可能太长，无法存储在内存中，如长文本文档或位图。 由于此类数据不能存储在一个缓冲区，将从使用部件中的驱动程序中检索**SQLGetData**已提取的行中的其他数据之后。  

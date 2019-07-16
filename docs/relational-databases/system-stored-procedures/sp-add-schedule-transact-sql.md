@@ -1,5 +1,5 @@
 ---
-title: sp_add_schedule (Transact-SQL) | Microsoft Docs
+title: sp_add_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088508"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minutes|  
 |**0x8**|Hours|  
   
-`[ @freq_subday_interval = ] freq_subday_interval` 数*freq_subday_type*周期每次执行作业之间。 *freq_subday_interval*是**int**，默认值为**0**。 注意：间隔应大于 10 秒。 *freq_subday_interval*在这些情况下忽略其中*freq_subday_type*等于**1**。  
+`[ @freq_subday_interval = ] freq_subday_interval` 数*freq_subday_type*周期每次执行作业之间。 *freq_subday_interval*是**int**，默认值为**0**。 注意:间隔应大于 10 秒。 *freq_subday_interval*在这些情况下忽略其中*freq_subday_type*等于**1**。  
   
 `[ @freq_relative_interval = ] freq_relative_interval` 作业的匹配项*freq_interval*中每个月中，如果*freq_interval*为 32 （每月相对）。 *freq_relative_interval*是**int**，默认值为**0**，可以是下列值之一。 *freq_relative_interval*在这些情况下忽略其中*freq_type*不等于 32。  
   
@@ -130,7 +129,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  

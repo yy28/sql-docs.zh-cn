@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ab74e76db2820d5a0242e386aa70130597e7e9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801997509242bae7af2d2ae438dfdb952be9e1fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090813"
 ---
 # <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47718535"
   对于每个磁盘卷返回有关当前资源池 IO 统计信息的信息。 此信息在资源池级别还有[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|资源池的 ID。 不可为 null。|  
 |volume_name|**sysname**|磁盘卷的名称。 不可为 null。|  
@@ -54,10 +53,10 @@ ms.locfileid: "47718535"
 |io_issue_violations_total|**int**|总 IO 发出违反数。 即 IO 发出率低于保留比率时的次数。 不可为 null。|  
 |io_issue_delay_total_ms|**bigint**|预定发出 IO 和实际发出 IO 之间的总时间（毫秒）。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   

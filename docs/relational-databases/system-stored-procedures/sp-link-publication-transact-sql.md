@@ -1,5 +1,5 @@
 ---
-title: sp_link_publication (Transact-SQL) | Microsoft Docs
+title: sp_link_publication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139900"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +59,11 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用为此存储过程中指定的登录名进行身份验证*登录名*并*密码*。<br /><br /> 注意：在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此选项用于指定动态远程过程调用 (RPC)。|  
-|**1**|使用在订阅服务器上进行更改的用户的安全上下文（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Windows 身份验证）。<br /><br /> 注意：此帐户还必须存在于发布服务器具有足够特权。 使用 Windows 身份验证时，必须支持安全策略帐户委托。|  
+|**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用为此存储过程中指定的登录名进行身份验证*登录名*并*密码*。<br /><br /> 注意:在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此选项用于指定动态远程过程调用 (RPC)。|  
+|**1**|使用在订阅服务器上进行更改的用户的安全上下文（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Windows 身份验证）。<br /><br /> 注意:此帐户还必须存在于发布服务器具有足够特权。 使用 Windows 身份验证时，必须支持安全策略帐户委托。|  
 |**2**|使用现有的、 用户定义链接的服务器登录名创建使用**sp_link_publication**。|  
   
-`[ @login = ] 'login'` 是的登录名。 login 的数据类型为 sysname，默认值为 NULL。 此参数必须是指定何时*security_mode*是**0**。  
+`[ @login = ] 'login'` 是的登录名。 login 的数据类型为 sysname，默认值为 NULL   。 此参数必须是指定何时*security_mode*是**0**。  
   
 `[ @password = ] 'password'` 是的密码。 *密码*是**sysname**，默认值为 NULL。 此参数必须是指定何时*security_mode*是**0**。  
   
@@ -89,9 +88,9 @@ sp_link_publication [ @publisher = ] 'publisher'
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_link_publication**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_subscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

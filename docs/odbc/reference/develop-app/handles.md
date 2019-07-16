@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139043"
 ---
 # <a name="handles"></a>控点
 句柄是不透明的 32 位值，标识特定的项;在 ODBC 中，此项可以是环境、 连接、 语句或描述符。 当应用程序调用**SQLAllocHandle**、 驱动程序管理器或驱动程序创建指定类型的新项并返回其句柄到应用程序。 更高版本的应用程序使用该句柄来调用 ODBC 函数时标识该项。 驱动程序管理器和驱动程序使用该句柄来查找有关项目的信息。  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b486237208e5a374d5cae6da6fd82a22ee0ebe18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124828"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ sp_dropserver [ @server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>参数  
- 服务器  
+ 服务器   
  要删除的服务器。 *server* 的数据类型为 **sysname**，无默认值。 *服务器*必须存在。  
   
  *droplogins*  
- 指示相关服务器远程和链接服务器登录名*服务器*如果还必须删除**droplogins**指定。 **`@droplogins`** 是**char （10)**，默认值为 NULL。  
+ 指示相关服务器远程和链接服务器登录名*服务器*如果还必须删除**droplogins**指定。 **`@droplogins`** 是**char （10)** ，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,7 +54,7 @@ sp_dropserver [ @server = ] 'server'
   
  **sp_dropserver**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LINKED SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -67,9 +66,9 @@ sp_dropserver 'ACCOUNTS', 'droplogins';
   
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9964e16fa543c6e5d4e4670af846992314f0818
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 977a5e0428f59a45a823dd82e30b3f4c63520c0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090217"
 ---
 # <a name="sysdmxesessiontargets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关会话目标的信息。  
   
-  |列名|数据类型|Description|  
+  |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 与 sys.dm_xe_sessions.address 之间具有多对一关系。 不可为 null。|  
 |target_name|**nvarchar(60)**|会话中目标的名称。 不可为 null。|  
@@ -41,12 +40,12 @@ ms.locfileid: "47649475"
 |execution_duration_ms|**bigint**|目标已经执行的总时间（以毫秒为单位）。 不可为 null。|  
 |target_data|**nvarchar(max)**|目标维护的数据，例如事件聚合信息。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_targets.event_session_address|sys.dm_xe_sessions.address|多对一|  
   

@@ -1,5 +1,5 @@
 ---
-title: 命令行管理工具： SqlLocalDB.exe |Microsoft Docs
+title: 命令行管理工具：SqlLocalDB.exe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ apilocation:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e97cd1d95196b838585148e240cb8cf50a47a041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126950"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>命令行管理工具：SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47683225"
 ## <a name="sqllocaldb-options"></a>SqlLocalDB 选项  
  SqlLocalDB 支持以下选项。  
   
-|选项|作用|  
+|Option|作用|  
 |------------|------------------|  
 |`-?`|打印帮助文本。|  
 |`create\|c "instance name" [version-number] [-s]`|创建具有指定名称和版本的新 LocalDB 实例。<br /><br /> 如果省略 [version-number] 参数，则它默认为 SqlLocalDB 内部版本。<br /><br /> -s 在创建新的 LocalDB 实例后启动它。|  

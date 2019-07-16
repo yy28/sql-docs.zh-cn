@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a808c1ece5e7fdecceadd22f881040466c38a9e9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 82692482e198f80476df9d1a5b01d513541c81f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110163"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "53210478"
   
  运行此示例时，必须传递服务器名称或“服务器\实例名称”，以及一个介于 4 MB (0x400001) 与 4 GB (0xFFFFFFFF) 之间的值，指示写入的数据量。  
   
- 第四个 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表删除此示例创建的数据库。  
+ 第四个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表删除此示例创建的数据库。  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

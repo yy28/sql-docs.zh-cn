@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084841"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  一个数字，指示操作员的当前状态 (**1**当前已启用，如果**0**如果没有)。 *已启用*是**tinyint**，默认值为 NULL。 如果未启用，操作员将不接收警报通知。  
   
  [ @email_address=] '*email_address*'  
- 操作员的电子邮件地址。 此字符串将直接传递到电子邮件系统。 *email_address*是**nvarchar(100)**，默认值为 NULL。  
+ 操作员的电子邮件地址。 此字符串将直接传递到电子邮件系统。 *email_address*是**nvarchar(100)** ，默认值为 NULL。  
   
  [ @pager_address=] '*pager_number*'  
- 操作员的寻呼地址。 此字符串将直接传递到电子邮件系统。 *pager_number*是**nvarchar(100)**，默认值为 NULL。  
+ 操作员的寻呼地址。 此字符串将直接传递到电子邮件系统。 *pager_number*是**nvarchar(100)** ，默认值为 NULL。  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  指定从星期一到星期五可向此操作员发送寻呼通知的时间段的开始时间。 *weekday_pager_start_time*是**int**，默认值为 NULL，且必须使用格式为 HHMMSS 输入 24 小时制。  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|星期六|  
   
  [ @netsend_address=] '*netsend_address*'  
- 要将网络消息发送到的操作员的网络地址。 *netsend_address*是**nvarchar(100)**，默认值为 NULL。  
+ 要将网络消息发送到的操作员的网络地址。 *netsend_address*是**nvarchar(100)** ，默认值为 NULL。  
   
  [ @category_name=] '*类别*  
  该警报的类别名称。 *类别*是**sysname**，默认值为 NULL。  
@@ -112,7 +111,7 @@ sp_update_operator
 ## <a name="remarks"></a>备注  
  sp_update_operator 必须基于 msdb 数据库运行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下授予 sysadmin 固定服务器角色的成员执行此过程的权限。  
   
 ## <a name="examples"></a>示例  
@@ -134,9 +133,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
