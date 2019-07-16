@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ddaae66e60f77156b2d7c7e975875bb78d56cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d853d843e7b2cf168516fa4007883f280029e53b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006234"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函数
 **符合性**  
@@ -75,7 +74,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>诊断  
  当**SQLFreeHandle**可能从该句柄的诊断数据结构中获取返回 SQL_ERROR，关联的 SQLSTATE 值的**SQLFreeHandle**尝试免费，但没有成功。 下表列出了通常由返回的 SQLSTATE 值**SQLFreeHandle** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
 |HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  

@@ -20,22 +20,21 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5021a2074d49d7a8b1da88d82c52b175f16ff3c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900633"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  在 Windows Server 故障转移群集 (WSFC) 群集中返回的每个 Alwayson 可用性副本 （而不考虑其联接状态） 的所有 Always On 可用性组 （不论副本位于） 的行。  
+  为 Windows Server 故障转移群集 (WSFC) 群集中所有 AlwaysOn 可用性组（无论副本位置如何）的每个 AlwaysOn 可用性副本（无论加入状态如何）都返回一行。  
   
 ##  <a name="connected_state"></a>  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|可用性副本的唯一标识符。|  
 |**replica_server_name**|**nvarchar(256)**|承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
@@ -45,7 +44,7 @@ ms.locfileid: "47806215"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

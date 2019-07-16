@@ -1,5 +1,5 @@
 ---
-title: sp_detach_db (Transact-SQL) | Microsoft Docs
+title: sp_detach_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912896"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +54,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定与所分离的数据库关联的全文索引文件将不删除期间数据库分离操作。 *KeepFulltextIndexFile*是**nvarchar(10)** 值，该值具有默认值为**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据被删除，除非数据库是只读的。 如果为 NULL 或 **，则返回 true**，全文索引相关的元数据保留。  
   
 > [!IMPORTANT]
->  **@keepfulltextindexfile**中的未来版本将删除参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
+>  **@keepfulltextindexfile** 中的未来版本将删除参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  分离数据库时，会删除其所有元数据。 如果该数据库是任何登录帐户的默认数据库**主**成为其默认数据库。  

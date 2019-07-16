@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7741cc84b27991cc0831e5e28f397f46d22020a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926808"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 数据整理服务的 OLE DB 概述
 > [!IMPORTANT]
@@ -37,7 +36,7 @@ ms.locfileid: "66701216"
 ## <a name="dynamic-properties"></a>动态属性
  当调用该服务提供程序时，将以下动态属性添加到[属性](../../../ado/reference/ado-api/properties-collection-ado.md)系列[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。
 
-|动态属性名称|Description|
+|动态属性名称|描述|
 |---------------------------|-----------------|
 |**唯一调整形状名称**|指示是否**记录集**具有重复值的对象及其**重新调整形状名称**允许使用属性。 如果此动态属性是 **，则返回 True**和一个新**记录集**创建具有相同的用户指定调整形状名称与现有**记录集**，然后新**记录集**修改对象的形状名称使其成为唯一。 如果此属性为**False**和一个新**记录集**创建具有相同的用户指定调整形状名称与现有**记录集**，这两个**记录集**对象将具有相同的调整形状名称。 因此，既不**记录集**考虑，只要这两个记录集存在。<br /><br /> 该属性的默认值是**False**。|
 |**数据提供程序**|指示将提供的形状的行的提供程序的名称。 如果提供程序不会用于提供行，此值可以为 NONE。|

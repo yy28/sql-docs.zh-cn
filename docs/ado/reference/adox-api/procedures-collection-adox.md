@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 101cb855ea4d73b5f537e8738ab3177b7f618fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965433"
 ---
 # <a name="procedures-collection-adox"></a>过程集合 (ADOX)
 包含所有[过程](../../../ado/reference/adox-api/procedure-object-adox.md)的目录对象。  
   
 ## <a name="remarks"></a>备注  
- [追加](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法**过程**是唯一的 ADOX 集合。 您可以：  
+ [追加](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法**过程**是唯一的 ADOX 集合。 你可以：  
   
 -   将新的过程添加到具有集合**追加**方法。  
   
- 剩余的属性和方法是标准到 ADO 集合。 您可以：  
+ 剩余的属性和方法是标准到 ADO 集合。 你可以：  
   
 -   访问集合中具有过程[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
   

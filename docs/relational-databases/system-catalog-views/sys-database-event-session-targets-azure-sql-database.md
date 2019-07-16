@@ -10,14 +10,13 @@ ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8828532142bbcd8c188286ba87c16c3b824a279c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e736adef1648785ec0d037688c340f31a0e1bda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915101"
 ---
 # <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "62751528"
 |-|  
 |**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |target_id|**int**|目标的 ID。 ID 在事件会话对象中是唯一的。 不可为 null。|  

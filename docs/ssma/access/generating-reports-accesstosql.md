@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fe6f45b2e35761fac5f8c49012b1eb370645bcb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9d1879cd5583ee7b87c12edb19bf5486cee4fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986430"
 ---
 # <a name="generating-reports-accesstosql"></a>生成报告 (AccessToSQL)
 在对象树中级别的 SSMA 控制台中生成使用命令来执行某些活动的报告。  
@@ -32,7 +31,7 @@ ms.locfileid: "62759491"
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
-    |4|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |4|同步目标|TargetSynchronizationReport&lt;n&gt;.XML|  
     |5|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
@@ -102,7 +101,7 @@ ms.locfileid: "62759491"
   
 />  
 ```  
-**object-name:** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62759491"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
 该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
@@ -132,7 +131,7 @@ ms.locfileid: "62759491"
   
 />  
 ```  
-**object-name:** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
@@ -140,7 +139,7 @@ ms.locfileid: "62759491"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台 （访问）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

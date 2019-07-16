@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff5bd9978be59f6a512ce4173b851692b9506d96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997553"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
  返回在订阅服务器中修改数据所用的模式。 *failover_mode*是**nvarchar(10)** 默认值为 NULL。 是**输出**参数。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**immediate**|立即更新：使用两阶段提交协议 (2PC)，将订阅服务器中的更新立即传播到发布服务器。|  
-|**queued**|排队更新：将订阅服务器中的更新存储在队列中。|  
+|**排入队列**|排队更新：将订阅服务器中的更新存储在队列中。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

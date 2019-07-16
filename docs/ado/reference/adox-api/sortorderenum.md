@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0c8b2730b1c90e289bf653e4c8c303ad67eddf5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965185"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 指定索引列的排序顺序。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adSortAscending**|1|默认值。 列的排序顺序为升序。|  
 |**adSortDescending**|2|列的排序顺序为降序。|  

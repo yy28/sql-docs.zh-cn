@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196678"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
   UNIQUE 约束和 CHECK 约束是可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中强制数据完整性的两种类型的约束。 这些是重要的数据库对象。  

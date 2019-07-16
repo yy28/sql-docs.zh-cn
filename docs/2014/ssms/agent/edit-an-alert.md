@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211408"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中编辑 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报。  
@@ -49,15 +49,15 @@ ms.locfileid: "52795739"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要编辑的警报的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”**。  
+2.  单击加号以展开 **“SQL Server 代理”** 。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要编辑的警报，然后选择“属性”。  
+4.  右键单击要编辑的警报，然后选择“属性”  。  
   
-5.  在 **“常规”**、 **“响应”** 和 **“选项”** 页上更新警报属性。  
+5.  在 **“常规”** 、 **“响应”** 和 **“选项”** 页上更新警报属性。  
   
-6.  完成后，单击 **“确定”**。  
+6.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52795739"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- changes the enabled setting of Test Alert to 0  

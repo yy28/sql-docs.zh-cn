@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003524"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 数据操作语句 (MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "63187644"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[CALL 语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|运行一个存储过程，它在当前作用域或指定的多维数据集（可选）中返回空值。|  
 |[CLEAR CALCULATIONS 语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|从多维数据集中删除所有计算，并将多维数据集恢复为计算传递 0。|  

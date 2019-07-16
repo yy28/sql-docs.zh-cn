@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a2971ef09877a3a6e86334563913941282244f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005739"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns Function（SQLProcedureColumns 函数）
 **符合性**  
@@ -92,7 +91,7 @@ SQLRETURN SQLProcedureColumns(
 ## <a name="diagnostics"></a>诊断  
  当**SQLProcedureColumns**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*设置为 SQL_HANDLE_STMT，和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLProcedureColumns** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前的驱动程序返回 SQLSTATEs 说明管理器。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  

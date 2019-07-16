@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f017daa75375f8522284ae71b2f6efb6e7263c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d27eae0e6bf4bc5f5932bbf578f1162822516805
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987651"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>在不使用格式化文件的情况下进行大容量复制 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "51665456"
   
     -   接收任何大容量复制错误消息的数据文件的名称（如果您不需要消息文件，请指定 NULL）。  
   
-    -   复制的方向：如果是从文件到视图或表则为 DB_IN，如果是从表或视图到文件则为 DB_OUT。  
+    -   复制方向：Db_in 表示从文件到视图或表或 DB_OUT 文件从表或视图。  
   
 5.  调用[bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以执行大容量复制操作。  
   

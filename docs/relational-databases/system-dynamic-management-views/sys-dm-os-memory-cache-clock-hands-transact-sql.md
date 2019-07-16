@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b39f40a36a9b9a639b8b6c90f6a6a37f7a32a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47dbe34459bc3774a9588fb347eca019f9de3e1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900068"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +33,10 @@ ms.locfileid: "63047179"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_memory_cache_clock_hands**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|与时钟关联的缓存的地址。 不可为 null。|  
-|**名称**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
 |**type**|**nvarchar(60)**|缓存存储的类型。 可存在相同类型的多个缓存。 不可为 null。|  
 |**clock_hand**|**nvarchar(60)**|手的类型。 这是以下值之一：<br /><br /> External<br /><br /> 内部<br /><br /> 不可为 null。|  
 |**clock_status**|**nvarchar(60)**|时钟的状态。 这是以下值之一：<br /><br /> 挂起<br /><br /> 正在运行<br /><br /> 不可为 null。|  
@@ -53,7 +52,7 @@ ms.locfileid: "63047179"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将信息存储在内存中一个称为内存缓存的结构中。 缓存中的信息可以是数据、索引条目、编译的过程计划以及其他各种类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 若要避免重新创建信息，尽可能将信息保留在内存缓存中，通常当信息太旧而失去用处或新信息需要使用内存空间时，会将旧信息从缓存中删除。 删除旧信息的过程称为内存清扫。 内存清扫是经常执行的操作，但不是连续执行的操作。 时钟算法控制内存缓存的清扫。 每个时钟能够控制几个内存清扫，称为指针。 内存缓存时钟指针是指一个内存清扫指针的当前位置。  

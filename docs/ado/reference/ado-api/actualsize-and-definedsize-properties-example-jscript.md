@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eba72bf4ddf9a67b85435cec924897b0d0fbc17c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b465f5e567262aead6ffe73f696968d736b472eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921507"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 和 DefinedSize 属性示例 (JScript)
 此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)并[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小字段的属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActualSizeJS.asp**。  

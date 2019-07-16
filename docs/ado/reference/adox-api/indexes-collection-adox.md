@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6898c7fbf326209e7b2071b4bdedf383cefc0642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966044"
 ---
 # <a name="indexes-collection-adox"></a>索引集合 (ADOX)
 包含所有[索引](../../../ado/reference/adox-api/index-object-adox.md)表的对象。  
   
 ## <a name="remarks"></a>备注  
- [追加](../../../ado/reference/adox-api/append-method-adox-indexes.md)方法**索引**是唯一的 ADOX 集合。 您可以：  
+ [追加](../../../ado/reference/adox-api/append-method-adox-indexes.md)方法**索引**是唯一的 ADOX 集合。 你可以：  
   
 -   将新的索引添加到具有集合**追加**方法。  
   
- 剩余的属性和方法是标准到 ADO 集合。 您可以：  
+ 剩余的属性和方法是标准到 ADO 集合。 你可以：  
   
 -   访问集合中具有索引[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
   

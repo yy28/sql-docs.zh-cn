@@ -1,5 +1,5 @@
 ---
-title: 从挖掘模型钻取到事例数据 |Microsoft 文档
+title: 从挖掘模型钻取到事例数据 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210050"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>从挖掘模型钻取到事例数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/10/2018
 |**Microsoft 顺序分析和聚类分析查看器**|**“项集”** 选项卡|单击包含项集的行。|  
   
 > [!NOTE]  
->  某些模型不能使用钻取。 能否使用钻取取决于创建模型所用的算法。 有关支持钻取功能的挖掘模型类型的列表，请参阅[钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+>  某些模型不能使用钻取。 能否使用钻取取决于创建模型所用的算法。 有关支持钻取功能的挖掘模型类型的列表，请参阅 [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)，向现有的挖掘模型添加钻取功能。  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>查看挖掘模型的钻取数据  
   
@@ -45,15 +46,15 @@ ms.lasthandoff: 05/10/2018
   
 2.  在数据挖掘设计器中，单击 **“挖掘模型查看器”** 选项卡。  
   
-3.  从“挖掘模型”下拉列表中选择模型。  
+3.  从“挖掘模型”  下拉列表中选择模型。  
   
-4.  从“查看器”下拉列表中选择一个查看器，然后右键单击特定节点。  
+4.  从“查看器”  下拉列表中选择一个查看器，然后右键单击特定节点。  
   
-5.  选择 **“钻取”**，然后选择 **“仅限于模型列”**或 **“模型和结构列”** 以打开 **“钻取”** 窗口。  
+5.  选择 **“钻取”** ，然后选择 **“仅限于模型列”** 或 **“模型和结构列”** 以打开 **“钻取”** 窗口。  
   
-6.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”。  
+6.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”  。  
   
-## <a name="see-also"></a>另请参阅  
- [钻取查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

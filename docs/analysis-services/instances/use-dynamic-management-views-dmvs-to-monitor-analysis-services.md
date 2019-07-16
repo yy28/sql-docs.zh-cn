@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984098"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209413"
 ---
 # <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV) 
 
@@ -103,7 +103,7 @@ ORDER BY TABLE_NAME ASC
 
 ### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>行集 [MS-SSAS-T] 中所述：SQL Server Analysis Services 表格协议
 
-|行集  |Description  |
+|行集  |描述  |
 |---------|---------|
 |[TMSCHEMA_ANNOTATIONS](https://msdn.microsoft.com/library/mt704370)|提供有关批注对象模型中的信息。|
 |[TMSCHEMA_ATTRIBUTE_HIERARCHIES](https://msdn.microsoft.com/library/mt704362)     |   为列提供有关 AttributeHierarchy 对象的信息。      |
@@ -136,7 +136,7 @@ ORDER BY TABLE_NAME ASC
 
 ### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>行集 [MS-SSAS] 中所述：SQL Server Analysis Services 协议
 
-|行集|Description|  
+|行集|描述|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS](https://msdn.microsoft.com/library/ee302115)|描述在服务器进行访问的目录。|  
 |[DBSCHEMA_COLUMNS](https://msdn.microsoft.com/library/ee301789)|返回每个度量值、 每个多维数据集维度属性和每个架构行集列，显示为列的行。|  

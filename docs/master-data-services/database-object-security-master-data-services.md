@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65aa1f12870d47e61a0fa634f0281f8bde9c9462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906475"
 ---
 # <a name="database-object-security-master-data-services"></a>数据库对象安全性 (Master Data Services)
 
@@ -46,7 +45,7 @@ ms.locfileid: "65487732"
 ##  <a name="Staging"></a> 临时处理数据  
  在下表中，每个安全对象都将“name”作为名称的一部分。 这指示在创建实体时指定的临时表的名称。 有关详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|操作|安全对象|权限|  
+|Action|安全对象|权限|  
 |------------|----------------|-----------------|  
 |创建、更新和删除叶成员及其属性。|stg.name_Leaf|必需：Insert<br /><br /> 可选：SELECT 和 UPDATE|  
 |将数据从叶临时表加载到相应的 MDS 数据库表中。|stg.udp_name_Leaf|在运行 CREATE 语句前执行|  
@@ -60,7 +59,7 @@ ms.locfileid: "65487732"
   
 ##  <a name="rules"></a> 根据业务规则对数据进行验证  
   
-|操作|安全对象|权限|  
+|Action|安全对象|权限|  
 |------------|---------------|-----------------|  
 |根据业务规则验证数据版本|mdm.udpValidateModel|在运行 CREATE 语句前执行|  
   
@@ -68,7 +67,7 @@ ms.locfileid: "65487732"
   
 ##  <a name="Versions"></a> 删除版本  
   
-|操作|安全对象|权限|  
+|Action|安全对象|权限|  
 |------------|----------------|-----------------|  
 |确定要删除的版本的 ID|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |删除模型的版本|mdm.udpVersionDelete|在运行 CREATE 语句前执行|  
@@ -77,7 +76,7 @@ ms.locfileid: "65487732"
   
 ##  <a name="Hierarchy"></a> 立即应用层次结构成员权限  
   
-|操作|安全对象|权限|  
+|Action|安全对象|权限|  
 |------------|----------------|-----------------|  
 |立即应用成员权限|mdm.udpSecurityMemberProcessRebuildModel|在运行 CREATE 语句前执行|  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1aac155aef874303f3281893db021b9492eef289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3c1a54ea3f101449d18fcae00373344b7ecf11c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966731"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command 和 CommandText 属性示例 (VC++)
 下面的代码演示如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)属性更新过程的文本。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 032677452fa80502d37383af8172ff9475dea363
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923863"
 ---
 # <a name="transaction-processing"></a>事务处理
 一个*事务*分隔的开头和结尾的一系列通过连接执行的数据访问操作。 视您的数据源，事务性功能而定**连接**对象还允许您创建和管理事务。 例如，使用 Microsoft OLE DB Provider for SQL Server 访问 Microsoft SQL Server 上的数据库，您可以创建多个嵌套的事务执行的命令。  

@@ -1,5 +1,5 @@
 ---
-title: RecordCreateOptionsEnum | Microsoft Docs
+title: RecordCreateOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d57f1bc241e5e27618a9598895ea7be089ce20dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917346"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是否将现有**记录**应为打开或一个新**记录**为创建[记录](../../../ado/reference/ado-api/record-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 可以使用 AND 运算符组合这些值。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|创建一个新**记录**在指定的节点*源*参数，而不是打开的现有**记录**。 如果源指向现有节点，则会出现运行时错误，除非**adCreateCollection**结合**adOpenIfExists**或**adCreateOverwrite**。|  
 |**adCreateNonCollection**|0|创建一个新**记录**类型的[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)。|  

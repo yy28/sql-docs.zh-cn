@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920901"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 对象和接口
 在中表示这些对象之间的关系[ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)。  

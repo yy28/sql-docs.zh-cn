@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e53a719c4fef684f4b7ec81f2e5c9266adf942b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162547"
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>管理已部署的表格模型数据库
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53072244"
   
 
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表格模型解决方案](../../analysis-services/tabular-models/tabular-models-ssas.md)  
 
 [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  

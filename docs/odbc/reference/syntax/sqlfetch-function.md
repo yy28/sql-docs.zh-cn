@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003074"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函数
 **符合性**  
@@ -54,7 +53,7 @@ SQLRETURN SQLFetch(
   
  对于所有这些 SQLSTATEs 可以返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除 01xxx SQLSTATEs)，将返回 SQL_SUCCESS_WITH_INFO，如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果发生错误，则返回 SQL_ERROR单行操作。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|字符串或二进制的列返回的数据时截断了非空白字符或非 NULL 的二进制数据。 如果它是一个字符串值，它是右侧被截断。|  
@@ -107,8 +106,8 @@ SQLRETURN SQLFetch(
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
 |在开始之前|1|  
-|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|后端|  
+|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|后端|  
 |后端|后端|  
   
  [1] 如果提取行集大小为发生更改，这是用于上次提取的行集大小。  
@@ -177,7 +176,7 @@ SQLRETURN SQLFetch(
   
  行状态数组中返回以下值。  
   
-|行状态数组值|Description|  
+|行状态数组值|描述|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|行已成功提取和上一次提取此结果集从之后未发生更改。|  
 |SQL_ROW_SUCCESS_WITH_INFO|行已成功提取和上一次提取此结果集从之后未发生更改。 但是，有关行返回一条警告。|  
@@ -232,10 +231,10 @@ SQLRETURN SQLFetch(
   
 |描述符字段|Desc。|中的字段|通过设置|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|标头|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
+|SQL_DESC_ARRAY_SIZE|ARD|标头|SQL_ATTR_ROW_ARRAY_SIZE 语句属性|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|标头|SQL_ATTR_ROW_STATUS_PTR 语句属性|  
-|SQL_DESC_BIND_OFFSET_PTR|ARD|标头|SQL_ATTR_ROW_BIND_OFFSET_PTR statement attribute|  
-|SQL_DESC_BIND_TYPE|ARD|标头|SQL_ATTR_ROW_BIND_TYPE statement attribute|  
+|SQL_DESC_BIND_OFFSET_PTR|ARD|标头|SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性|  
+|SQL_DESC_BIND_TYPE|ARD|标头|SQL_ATTR_ROW_BIND_TYPE 语句属性|  
 |SQL_DESC_COUNT|ARD|标头|*ColumnNumber*自变量的**SQLBindCol**|  
 |SQL_DESC_DATA_PTR|ARD|记录|*TargetValuePtr*自变量的**SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|ARD|记录|*StrLen_or_IndPtr*中的参数**SQLBindCol**|  

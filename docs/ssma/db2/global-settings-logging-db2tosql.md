@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989558"
 ---
 # <a name="global-settings-logging-db2tosql"></a>全局设置 （日志记录） (DB2ToSQL)
 使用**全局设置**对话框可以指定 SSMA 的日志记录设置。 通常情况下，仅当与产品支持人员时，才会更改这些设置。  
@@ -26,17 +25,17 @@ ms.locfileid: "63299221"
 **消息级别**  
 下以下选项将可用**消息级别**:  
   
-|Option|Description|  
+|Option|描述|  
 |----------|---------------|  
 |**[所有类别]**|用于设置以下选项中的所有日志记录级别。|  
 |**Collector**|收集有关源架构的元数据并将其保存到项目。|  
-|**Converter**|转换为结构的源数据库对象，如表和存储的过程对应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]结构。|  
+|**转换器**|转换为结构的源数据库对象，如表和存储的过程对应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]结构。|  
 |**数据迁移器**|将数据迁移从源数据库到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**格式化程序**|为生成脚本的转换器的子组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构。|  
 |**图形用户界面**|使用 SSMA 工具时出现的消息。|  
 |**链接器**|解析的 SQL 标识符，并提供对其他组件的信息。|  
 |**其他**|不在任何其他类别中的所有消息。|  
-|**Parser**|分析源架构。|  
+|**分析器**|分析源架构。|  
 |**同步器**|加载源数据库对象到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**TreeConverter**|将转换到的源元数据中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据。|  
 |**测试人员**|使用 SSMA 测试人员时，将显示的消息。|  

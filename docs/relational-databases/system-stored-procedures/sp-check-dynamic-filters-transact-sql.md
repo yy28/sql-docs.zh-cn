@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc961ef5f3c22d8da7a97f53b387cd1d0c09c679
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 59011e56766d46f768e579a21207dde2ecf84be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905284"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|是发布是否限定使用预计算的分区;其中**1**意味着，可以使用分区，预计算并**0**意味着不能使用它们。|  
 |**has_dynamic_filters**|**bit**|如果已发布; 中定义至少一个参数化的行筛选器其中**1**意味着存在一个或多个参数化的行筛选器，并**0**意味着存在任何动态筛选器。|  
@@ -77,7 +76,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [参数化筛选器为合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_join_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
  [sp_check_subset_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

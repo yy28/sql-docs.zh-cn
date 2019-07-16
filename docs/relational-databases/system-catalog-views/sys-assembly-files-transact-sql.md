@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7f4f6b017b1251b873f0e45ab7688d9fd2c6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001151"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   组成程序集的每个文件在表中各对应一行。  
     
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|此文件所属的程序集的 ID。|  
-|**名称**|nvarchar(260) |程序集文件的名称。|  
+|**name**|nvarchar(260) |程序集文件的名称。|  
 |**file_id**|**int**|文件的 ID。 在程序集中是唯一的。 编号为 1 的文件 ID 表示程序集 DLL。|  
-|**content**|**varbinary(max)**|文件的内容。|  
+|**内容**|**varbinary(max)**|文件的内容。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

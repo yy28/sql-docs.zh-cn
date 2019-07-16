@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f5cfa2b6bb4566f42dfe7f5049cb9d55282f8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 333e147ebf74b8062852f838db4d1797ef6e457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915965"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>排除业务规则 (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65484001"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您不希望永久删除业务规则，而又不希望针对此规则验证数据，则可以排除该规则。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 76c3cc2b3165ce1d607fa3896c187ebd5ec1e87b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3722234ec1e82431bbefae355391a614c7e980a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992066"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>将域导出到 .dqs 文件
 
@@ -53,7 +52,7 @@ ms.locfileid: "66769022"
   
 5.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留默认名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”     。  
   
-6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击“确定”  。  
+6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击 **“确定”** 。  
   
 ##  <a name="FollowUp"></a> 跟进：将域导出到 .dqs 文件后  
  将域导出到 .dqs 文件后，您可以将该域导入到另一个知识库。  

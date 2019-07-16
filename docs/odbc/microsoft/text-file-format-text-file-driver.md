@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912444"
 ---
 # <a name="text-file-format-text-file-driver"></a>文本文件格式（文本文件驱动程序）
 ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 文本文件包含可选的标头行和零个或多个文本行。  
@@ -42,7 +41,7 @@ ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 �
 |------------|--------------------|  
 |非斜体|根据所示，必须输入的字符|  
 |*italics*|在语法中其他位置定义的参数|  
-|brackets ([])|可选项|  
+|方括号 ([])|可选项|  
 |大括号 ({})|互相排斥的选项列表|  
 |垂直条 (&#124;)|单独互斥选项|  
 |省略号 （...）|可以重复的一个或多个时间的项|  

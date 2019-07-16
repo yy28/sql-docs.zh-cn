@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927028"
 ---
 # <a name="ado-programming-task-table"></a>ADO 编程任务表
 下表列出了中包含的编程任务*ADO 程序员指南*并为每个任务提供参考。 这些引用可以是文字说明或在其中可以找到有关 ADO 功能用于执行的任务的信息的代码示例。
 
-|ADO 任务|References|
+|ADO 任务|参考资料|
 |--------------|----------------|
 |连接到数据提供程序|[连接到数据源](../../ado/guide/data/connecting-to-data-sources.md)|
 |执行命令或调用存储的过程|[准备和执行命令](../../ado/guide/data/preparing-and-executing-commands.md)|

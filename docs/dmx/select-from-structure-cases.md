@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928297"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;结构&gt;。用例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  该表达式可以包括列标识符、用户定义函数和 VBA 函数。  
   
- *结构*  
+ *structure*  
  结构的名称。  
   
  *条件表达式*  
@@ -78,7 +77,7 @@ WHERE [Bike Buyer] = 1
 ORDER BY Age DESC;  
 ```  
   
-### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>示例 2：只钻取到测试或定型事例  
+### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>示例 2：钻取到测试或定型事例仅  
  下面的示例返回保留用于测试的目标邮件的结构事例列表。 如果挖掘结构不包含维持测试集，则默认将所有事例视为定型事例，并且此查询返回 0 个事例。  
   
 ```  
@@ -90,7 +89,7 @@ WHERE IsTestCase();
  若要返回定型事例，请替换函数 `IsTrainingCase()`。  
   
 ## <a name="see-also"></a>请参阅  
- [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

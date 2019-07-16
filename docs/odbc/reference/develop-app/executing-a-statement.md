@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d95226e9d895bf78e15176744f651b7e830a1a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901347"
 ---
 # <a name="executing-a-statement"></a>执行语句
 有四种方法执行语句，具体取决于在编译 （准备） 数据库引擎和用户定义它们时：  

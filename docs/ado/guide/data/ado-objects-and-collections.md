@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 62616ecebb8fa7795462c7e22437aabebb56bcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926044"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 对象和集合
 ADO 由以下九个对象和四个集合组成。  
   
-|对象或集合|Description|  
+|对象或集合|描述|  
 |--------------------------|-----------------|  
 |**连接**对象|表示与某一数据源的唯一会话。 对于客户端/服务器数据库系统，它可能与实际的网络连接到服务器。 具体取决于提供程序、 一些集合、 方法或属性的支持的功能**连接**对象可能不可用。|  
 |**Command** 对象|用于定义特定的命令，例如用于对数据源运行的 SQL 查询。|  

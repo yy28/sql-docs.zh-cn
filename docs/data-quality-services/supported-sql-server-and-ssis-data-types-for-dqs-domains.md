@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 4e0fed979571c27aa42e01a9e876abae81aaff9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a75eacaf4283b957a24ade9319ea0dc46c436bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991760"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 域支持的 SQL Server 和 SSIS 数据类型
 
@@ -34,7 +33,7 @@ ms.locfileid: "66783826"
 |--------------------------|------------------------------------|  
 |Date|日期|  
 |Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> REAL<br /><br /> SMALLMONEY|  
-|Integer|BIGINT<br /><br /> ssNoversion<br /><br /> smallint<br /><br /> TINYINT|  
+|Integer|BIGINT<br /><br /> INT<br /><br /> smallint<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   
  其余 SQL Server 数据类型在 DQS 中不受支持。 有关所有 SQL Server 数据类型的信息，请参阅[数据类型 (Transact-SQL)](../t-sql/data-types/data-types-transact-sql.md)。  

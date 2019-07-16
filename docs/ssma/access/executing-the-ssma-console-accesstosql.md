@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006567"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL)
 Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
@@ -531,7 +530,7 @@ migrate-data
   
 **Command**  
   
-synchronize-target  
+同步目标  
   
 1.  将目标对象与目标数据库同步。  
   
@@ -551,7 +550,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 4.  `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -616,7 +615,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 4.  `report-errors-to:` 刷新操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**SourceDBRefreshReport.XML**创建。  
   

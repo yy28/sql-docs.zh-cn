@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b825139c99fe97cfce27d03e65429bb076558413
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 98b34b985650f92fb840b14daba8d5bf16d8454a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924361"
 ---
 # <a name="required-providers-for-data-shaping"></a>数据整理所需的提供程序
 数据整理通常需要两个提供程序。 服务提供商，[适用于 OLE DB Data Shaping 服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，提供数据整理功能和数据提供程序，如 SQL Server 的 OLE DB 访问接口，提供行的数据来填充形状[记录集](../../../ado/reference/ado-api/recordset-object-ado.md).  

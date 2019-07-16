@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6afd68ddf99799288939eeb0c6522275ec4d273f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923514"
 ---
 # <a name="using-pages"></a>使用页
 使用**PageCount**属性来确定多少页的数据位于**记录集**对象。 *页面*是一组记录的大小等于**PageSize**属性设置。 即使最后一页是不完整，因为有比记录更少**PageSize**值，它计为中的其他页**PageCount**值。 如果**记录集**对象不支持此属性，请**PageCount**将为-1 指示**PageCount**是无法确定。  

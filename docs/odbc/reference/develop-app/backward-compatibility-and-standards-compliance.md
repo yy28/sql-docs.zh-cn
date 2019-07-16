@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc89fd8d43df4b906f47ab1ef6b6932a5a814a86
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7588859abb8298a9191409e5c05df1949e85ba89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909869"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>后向兼容性和标准符合性
 向后兼容性是较新的 ODBC 组件的功能，以便使用旧的 ODBC 组件。 以下各节讨论这些组件在 ODBC 中的更改的影响*3.x*。 主要包含在其中的信息解决写入 ODBC *3.x*应用程序和如何向后兼容性问题由 ODBC 驱动程序。 有关如何向后兼容性的特定指南问题影响的 ODBC 写入*3.x*驱动程序，请参阅[附录 g:为了向后兼容的驱动程序指南](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  

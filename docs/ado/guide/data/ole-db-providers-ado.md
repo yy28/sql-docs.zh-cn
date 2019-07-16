@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 926e5abc1c65db152c5ca5927c5acd2c932d6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924758"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供程序 (ADO)
 OLE DB 定义一组 COM 接口，从而提供对存储在各种信息源中的数据进行统一访问的应用程序。 这种方法可以将数据源以共享其数据通过支持的 DBMS 功能适用于数据源的接口。 根据设计，OLE DB 的高性能体系结构基于其使用的灵活的、 基于组件的服务模型。 而不是让规定的数量的应用程序和数据之间的中间层，OLE DB 要求仅在所需的组件完成特定任务。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aac31af80ff5774d464f76f130d2d113002e60a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001397"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>选择数据源或驱动程序
 数据源或驱动程序使用的应用程序有时是硬编码应用程序中。 例如，编写由 MIS 部门将传输到另一个数据源中的数据将包含名称的自定义应用程序的这些数据源的应用程序只需将不起作用的任何其他数据源。 另一个示例是垂直的应用程序，例如一个用于订单条目。 此类应用程序始终使用相同数据源，该源具有已知的应用程序的预定义的架构。  

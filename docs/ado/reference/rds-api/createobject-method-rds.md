@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964548"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 创建目标业务对象的代理，并返回的指针。 用来与业务对象的通信通过 Internet 发送的请求和数据服务器端存根 （stub） 代理包和封送数据。 对于进程内组件对象，不使用代理，提供只需指向对象的指针。  

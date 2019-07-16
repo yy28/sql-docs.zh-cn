@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a090ec4cfd06846f78259b84b0bd35f4a198933a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f39e5802e08fd47f5442cd7d394b6589ce56c597
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917348"
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>记录 (VisualC++使用 #import 语法索引)
 ## <a name="methods"></a>方法  
@@ -49,7 +48,7 @@ HRESULT Open( const _variant_t & Source, const _variant_t
     Options, _bstr_t UserName, _bstr_t Password );  
 ```  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 ```  
 _variant_t GetActiveConnection( );  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 982c379f24731f80f30249b98ed2a571111de1f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920726"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append 和 CreateParameter 方法示例 (JScript)
 此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)并[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)执行带有输入参数的存储的过程的方法。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AppendJS.asp**。  
