@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 08cde6e2e0b33272852413692be50e8232f2a195
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b118feb24ab22346c8bb28c37eded49b1679df9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923737"
 ---
 # <a name="understanding-recordset-structure"></a>了解记录集结构
 每个**记录集**已**字段**包含的一个或多个集合**字段**对象。 一个**字段**对象通常表示表列。 以下主题将介绍如何通过导航**字段**集合并获取有关每个字段的信息。 然后他们将讨论哪类信息可供你通过**字段**对象以及如何使用它。  

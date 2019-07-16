@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990708"
 ---
 # <a name="mapping-deprecated-functions"></a>映射已弃用的函数
 本部分介绍如何已弃用的函数映射由 ODBC *3.x*驱动程序管理器，以保证向后兼容性的 ODBC *3.x*用于 ODBC 的驱动程序*2.x*应用程序。 驱动程序管理器执行此映射不考虑应用程序的版本。 因为每个 ODBC *2.x*以下列表中的函数映射到相应 ODBC *3.x*函数在 ODBC 中调用时*3.x*驱动程序，ODBC *3.x*驱动程序不需要实现 ODBC *2.x*函数。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33cc979e0a3af9b684899cf7563573fd6ac8dadd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932038"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
 清除当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象并返回下一步**记录集**方法通过一系列命令。  

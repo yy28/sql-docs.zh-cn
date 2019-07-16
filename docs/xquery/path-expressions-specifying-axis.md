@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946485"
 ---
 # <a name="path-expressions---specifying-axis"></a>路径表达式 - 指定轴
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +43,12 @@ ms.locfileid: "51670325"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 实现支持以下轴步骤：  
   
-|Axis|Description|  
+|Axis|描述|  
 |----------|-----------------|  
 |**child**|返回上下文节点的子级。|  
 |**descendant**|返回上下文节点的所有后代。|  
 |**parent**|返回上下文节点的父级。|  
-|**属性**|返回上下文节点的属性。|  
+|**attribute**|返回上下文节点的属性。|  
 |**self**|返回上下文节点本身。|  
 |**descendant-or-self**|返回上下文节点及其所有后代。|  
   
@@ -107,13 +106,13 @@ select @y
 </b>  
 ```  
   
- 在此表达式中，如果为路径表达式指定了 descendant 轴   
+ 在此表达式中，如果为路径表达式指定了 descendant 轴  
   
- `/child::a/child::b/descendant::*`，则您请求的是 <`b`> 元素节点的所有后代。  
+ `/child::a/child::b/descendant::*`则您请求的所有后代 <`b`> 元素节点。  
   
  节点测试中的星号 (*) 以一个节点测试表示节点名称。 因此，descendant 轴的主节点类型（元素节点）确定返回节点的类型。 即表达式返回所有元素节点。 但不返回文本节点。 有关主节点类型和及其与节点测试的关系的详细信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)主题。  
   
- 此时返回元素节点 <`c`> 和 <`d`>，结果如下所示：  
+ 元素节点 <`c`> 和 <`d`> 将返回以下结果中所示：  
   
 ```  
 <c>text2  
@@ -122,9 +121,9 @@ select @y
 <d>text3</d>  
 ```  
   
- 如果您指定的是 descendant-or-self 轴而不是 descendant 轴，`/child::a/child::b/descendant-or-self::*` 返回上下文节点、元素 <`b`> 及其后代。  
+ 如果指定了后代或自身轴而不是 descendant 轴，`/child::a/child::b/descendant-or-self::*`返回上下文节点中，元素 <`b`>，及其后代。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <b>text1  
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. 指定 parent 轴  
- 以下查询从 `Production.ProductModel` 表中存储的产品目录 XML 文档返回 <`ProductDescription`> 元素的 <`Summary`> 元素子级。  
+ 下面的查询返回 <`Summary`> 元素子级的 <`ProductDescription`> 元素中的产品目录 XML 文档存储在`Production.ProductModel`表。  
   
- 此示例使用 parent 轴来返回 <`Feature`> 元素的父级，并检索 <`ProductDescription`> 元素的 <`Summary`> 元素子级。  
+ 此示例使用 parent 轴来返回到父级的 <`Feature`> 元素并检索 <`Summary`> 元素子级的 <`ProductDescription`> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- 为了给每个 `ProductModelID`> 元素添加 `<Feature`，指定了 `parent` 轴：  
+ 若要添加`ProductModelID`为每个`<Feature`> 元素，`parent`指定轴：  
   
 ```  
 SELECT CatalogDescription.query('  

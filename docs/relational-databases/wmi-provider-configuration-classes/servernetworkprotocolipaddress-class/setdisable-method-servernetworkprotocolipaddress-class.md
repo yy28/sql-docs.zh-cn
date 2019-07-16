@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 05d4921d2249573a46fa9862eaa6b7396500ded1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 19bd72dc7ee010fcf0570b50b72fc855d2da9996
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933627"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>SetDisable 方法（ServerNetworkProtocolIPAddress 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51672016"
 object.SetDisable()  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示 [实例上的网络协议 IP 地址的](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) ServerNetworkProtocolIPAdress 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

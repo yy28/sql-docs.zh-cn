@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926618"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>有关 SQL Server 概述 Microsoft OLE DB 提供程序
 Microsoft OLE DB 提供程序的 SQL Server，SQLOLEDB，允许 ADO 访问 Microsoft SQL Server。
@@ -48,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  该字符串包含这些关键字：
 
-|关键字|Description|
+|关键字|描述|
 |-------------|-----------------|
 |**提供程序**|指定 SQL Server 的 OLE DB 提供的程序。|
 |**数据源**或**服务器**|指定的服务器的名称。|
@@ -62,7 +61,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>提供程序特定的连接参数
  此提供程序支持除 ADO 定义的多个提供程序特定的连接参数。 如 ADO 连接的属性，使用这些特定于提供程序的属性可以设置通过[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的[连接](../../../ado/reference/ado-api/connection-object-ado.md)或可被设置为的一部分**连接字符串**.
 
-|参数|Description|
+|参数|描述|
 |---------------|-----------------|
 |Trusted_Connection|指示用户身份验证模式。 此属性可以设置为**是**或**No**。 默认值是**No**。 如果将此属性设置为**是**，SQLOLEDB 使用 Microsoft Windows NT 身份验证模式来授权用户访问指定的 SQL Server 数据库**位置**和[数据源](../../../ado/reference/ado-api/datasource-property-ado.md)属性的值。 如果将此属性设置为**No**，SQLOLEDB 使用混合模式来授权用户访问 SQL Server 数据库。 在中指定的 SQL Server 登录和密码**用户 Id**和**密码**属性。|
 |当前语言|指示 SQL Server 语言名称。 标识用于系统消息选择和格式化的语言。 语言必须安装在 SQL Server 中，否则为连接将失败的开始。|

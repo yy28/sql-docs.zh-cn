@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f965bb76f13c01531ba5007d82de9e42c8138f05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a5e2f64294652586a87fcd25fda3c29517dc295d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990266"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +31,14 @@ ms.locfileid: "52802489"
   
 ## <a name="definition"></a>定义  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|标识已发布列。|  
 |**table_id**|**int**|标识从源表[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)列属于。|  
 |**publisher_id**|**smallint**|标识非 SQL Server 发布服务器从其发布该列。|  
-|**名称**|**sysname**|已发布列的名称。|  
+|**name**|**sysname**|已发布列的名称。|  
 |**column_ordinal**|**int**|按顺序标识列。|  
-|**类型**|**varchar(255)**|发布服务器上源列的列数据类型。|  
+|**type**|**varchar(255)**|发布服务器上源列的列数据类型。|  
 |**length**|**bigint**|发布服务器上源列的长度。|  
 |**prec**|**int**|发布服务器上源列的精度。|  
 |**scale**|**int**|发布服务器上源列的小数位数。|  

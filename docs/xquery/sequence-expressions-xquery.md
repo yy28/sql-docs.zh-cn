@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946305"
 ---
 # <a name="sequence-expressions-xquery"></a>序列表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ FROM Person.Contact
 WHERE ContactID=3  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -132,7 +131,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>筛选序列  
- 可以通过向表达式中添加谓词来筛选表达式返回的序列。 有关详细信息，请参阅[路径表达式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。 例如，以下查询返回由三个 <`a`> 元素节点构成的序列：  
+ 可以通过向表达式中添加谓词来筛选表达式返回的序列。 有关详细信息，请参阅[路径表达式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。 例如，以下查询将返回一系列三个 <`a`> 元素节点：  
   
 ```  
 declare @x xml  
@@ -144,7 +143,7 @@ set @x = '<root>
 SELECT @x.query('/root/a')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <a attrA="1">111</a>  
@@ -152,7 +151,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- 若要仅检索具有属性 attrA 的 <`a`> 元素，可以在谓词中指定筛选器。 筛选得到的序列将仅包含一个 <`a`> 元素。  
+ 若要仅检索 <`a`> 具有属性 attrA 的元素可以在谓词中指定筛选器。 所产生的序列将仅包含一个 <`a`> 元素。  
   
 ```  
 declare @x xml  
@@ -164,7 +163,7 @@ set @x = '<root>
 SELECT @x.query('/root/a[@attrA]')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <a attrA="1">111</a>  
@@ -196,14 +195,14 @@ SELECT @x.query('
 ')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <c>C under a</c>  
 <c>C under b</c>  
 ```  
   
- 下面的示例应用谓词筛选器。 该表达式查找包含元素 <`c`> 的元素 <`a`> 和元素 <`b`>。  
+ 下面的示例应用谓词筛选器。 该表达式查找元素 <`a`> 和 <`b`> 元素包含 <`c`>。  
   
 ```  
 declare @x xml  
@@ -223,7 +222,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <a>  

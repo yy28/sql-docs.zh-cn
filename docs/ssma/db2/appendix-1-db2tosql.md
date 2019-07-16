@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ee92addc2d77c8393c3378762618504344b8d477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70d916526f5b7d7d36c9237624ef311befca39c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938351"
 ---
 # <a name="appendix---1-db2tosql"></a>附录-1 (DB2ToSQL)
 SSMA 控制台命令行选项的快速视图：  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b40da961e3e659bf4cd3e3692b4674399bce47a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2f2bcd3fef2946e5b983c1bbdeee1efe4776512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018926"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 函数
 **符合性**  
@@ -58,7 +57,7 @@ BOOL SQLSetConfigMode(
 ## <a name="diagnostics"></a>诊断  
  当**SQLSetConfigMode**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|无效的参数序列|*WConfigMode* ODBC_USER_DSN、 ODBC_SYSTEM_DSN 或 ODBC_BOTH_DSN 不包含参数。|  
   

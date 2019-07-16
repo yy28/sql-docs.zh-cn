@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1ae4f8cba9235700edf410904862d39ed4f7f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926768"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 暂留提供程序概述
 Microsoft OLE DB 永久性提供程序使您可以保存[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象到文件中，并在以后还原该**记录集**文件中的对象。 架构信息和数据，而挂起的更改将保留。
@@ -37,7 +36,7 @@ Microsoft OLE DB 永久性提供程序使您可以保存[记录集](../../../ado
 ## <a name="errors"></a>错误
  可以在应用程序中检测到此提供程序颁发以下错误。
 
-|常量|Description|
+|常量|描述|
 |--------------|-----------------|
 |E_BADSTREAM|打开的文件不具有有效的格式 （即，格式不是 ADTG 或 XML）。|
 |E_CANTPERSISTROWSET|**记录集**保存对象具有防止将其存储的特征。|

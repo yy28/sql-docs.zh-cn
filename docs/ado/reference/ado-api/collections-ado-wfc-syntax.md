@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 943fdce253fe7197d5ac8793502bfe707cbb10ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b26c78f514ef6786f642c534b2621d0c81c71e51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919906"
 ---
 # <a name="collections-ado---wfc-syntax"></a>集合（ADO - WFC 语法）
-**package com.ms.wfc.data**  
+**包 com.ms.wfc.data**  
   
 ## <a name="parameters"></a>Parameters  
   
@@ -39,7 +38,7 @@ public Parameter getItem(int n)
 public Parameter getItem(String s)  
 ```  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 public int getCount()  
@@ -60,7 +59,7 @@ public com.ms.wfc.data.Field getItem(int n)
 public com.ms.wfc.data.Field getItem(String s)  
 ```  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 public int getCount()  
@@ -77,7 +76,7 @@ public com.ms.wfc.data.Error getItem(int n)
 public com.ms.wfc.data.Error getItem(String s)  
 ```  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 public int getCount()  

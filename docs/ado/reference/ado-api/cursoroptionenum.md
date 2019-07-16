@@ -1,5 +1,5 @@
 ---
-title: CursorOptionEnum | Microsoft Docs
+title: CursorOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9136a3057000258518cb64d048a8cc6245e7c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933267"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 指定哪些功能[支持](../../../ado/reference/ado-api/supports-method.md)应测试方法。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|支持[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法来添加新记录。|  
 |**adApproxPosition**|0x4000|支持[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)并[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性。|  

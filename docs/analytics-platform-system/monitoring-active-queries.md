@@ -2,24 +2,23 @@
 title: 监视活动查询的并行数据仓库 |Microsoft Docs
 description: 使用管理控制台和并行数据仓库系统视图来监视在分析平台系统上的活动查询。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960497"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>监视活动查询的并行数据仓库
 本文介绍如何使用管理控制台和 SQL Server PDW 系统视图来监视活动的查询。 请参阅[通过使用管理控制台监视设备](monitor-the-appliance-by-using-the-admin-console.md)并[系统视图](tsql-system-views.md)有关这些工具的信息。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
 而不考虑用于监视活动查询的方法，该登录名必须具有在中使用所有的"管理员控制台"中所述的权限[授予权限以使用管理控制台](grant-permissions.md#grant-permissions-to-use-the-admin-console)。  
   
 ## <a name="PermsAdminConsole"></a>监视活动查询  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 089a261eaea2701354af6082827c12491810b74c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919798"
 ---
 # <a name="command-object-ado"></a>命令对象 (ADO)
 定义要对数据源执行的特定命令。  

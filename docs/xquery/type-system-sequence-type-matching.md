@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6850f15718cb810b5428f75980983fc4a8a0a88
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946227"
 ---
 # <a name="type-system---sequence-type-matching"></a>类型系统 - 序列类型匹配
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "54255242"
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>例如：确定序列是否为空  
  **Empty （)** 序列类型可以使用序列类型表达式，以确定是否返回指定表达式的序列为空序列。  
   
- 在下面的示例中，XML 架构允许 <`root`> 元素为空：  
+ 在以下示例中，XML 架构允许 <`root`> 元素为空：  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -52,7 +51,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 现在，如果类型化的 XML 实例为 <`root`> 元素指定值，则 `instance of empty()` 将返回 False。  
+ 现在，如果类型化的 XML 实例指定的值 <`root`> 元素，`instance of empty()`返回 False。  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -62,7 +61,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- 如果 <`root`> 元素在实例中为空，则它的值将是一个空序列并且 `instance of empty()` 将返回 True。  
+ 如果 <`root`> 元素中该实例为空，其值是一个空序列和`instance of empty()`，则返回 True。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -113,7 +112,7 @@ GO
 ```  
   
 ### <a name="example-cardinality-in-sequence-expressions"></a>例如：在序列表达式中的基数  
- 此示例说明基数在序列表达式中的作用。 下列 XML 架构定义了 <`root`> 元素，该元素属于字节类型且可为空。  
+ 此示例说明基数在序列表达式中的作用。 下面的 XML 架构定义 <`root`> 元素属于字节类型且可为空。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +131,7 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- 如果使 <`root`> 元素为空，则它的值将是一个空序列。 也就是说，表达式 `/root[1]` 将返回一个空序列。 因此，`instance of xs:byte` 将返回 False。 注意，在这种情况下默认基数为 1。  
+ 如果进行 <`root`> 元素 nil，其值是一个空序列。 也就是说，表达式 `/root[1]` 将返回一个空序列。 因此，`instance of xs:byte` 将返回 False。 注意，在这种情况下默认基数为 1。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -199,14 +198,14 @@ SET @var = '<?xml-stylesheet href="someValue" type="text/xsl" ?>
 </root>'  
 ```  
   
- 在第一个查询中，表达式返回元素 <`a`> 的类型化值。 在第二个查询中，表达式返回元素 <`a`>。 两个返回值都是项。 因此，两个查询都返回 True。  
+ 在第一个查询表达式返回元素的类型化的值 <`a`>。 在第二个查询中，表达式返回元素 <`a`>。 两个返回值都是项。 因此，两个查询都返回 True。  
   
 ```  
 SELECT @var.query('data(/root[1]/a[1]) instance of item()')  
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- 下列三个查询中的所有 XQuery 表达式都返回 <`root`> 元素节点子级。 因此，序列类型表达式 `instance of node()` 将返回 True，另外两个表达式 `instance of text()` 和 `instance of document-node()` 将返回 False。  
+ 以下三个查询中的所有 XQuery 表达式都返回元素节点子级的 <`root`> 元素。 因此，序列类型表达式 `instance of node()` 将返回 True，另外两个表达式 `instance of text()` 和 `instance of document-node()` 将返回 False。  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -214,7 +213,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- 在下列查询中，`instance of document-node()` 表达式将返回 True，因为 <`root`> 元素的父级是文档节点。  
+ 在下面的查询`instance of document-node()`表达式返回 True，因为的父级 <`root`> 元素是文档节点。  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -256,7 +255,7 @@ element(*, ElementType?)
  下面的示例说明了适合采用元素测试和属性测试的情形。  
   
 ### <a name="example-a"></a>示例 A  
- 以下 XML 架构定义 `CustomerType` 复杂类型，其中 <`firstName`> 和 <`lastName`> 元素是可选的。 对于指定的 XML 实例，您可能需要确定特定客户的名字是否存在。  
+ 下面的 XML 架构定义`CustomerType`复杂类型的 <`firstName`> 和 <`lastName`> 元素是可选的。 对于指定的 XML 实例，您可能需要确定特定客户的名字是否存在。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -280,7 +279,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- 下列查询使用 `instance of element (firstName)` 表达式确定 <`customer`> 的第一个子元素是否名为 <`firstName`>。 在这种情况下，查询将返回 True。  
+ 下面的查询使用`instance of element (firstName)`表达式以确定是否的第一个子元素 <`customer`> 是其名称是一个元素 <`firstName`>。 在这种情况下，查询将返回 True。  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -288,7 +287,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- 如果从实例中删除 <`firstName`> 元素，查询将返回 False。  
+ 如果你删除 <`firstName`> 实例元素，则查询将返回 False。  
   
  您也可以使用下列内容：  
   
@@ -309,7 +308,7 @@ GO
 ### <a name="example-b"></a>示例 B  
  下列示例说明如何确定表达式返回的节点是否为具有特定名称的元素节点。 它使用**element （)** 测试。  
   
- 在下面的示例中，正在查询的 XML 实例中的两个 <`Customer`> 元素属于两种不同的类型：`SpecialCustomerType` 和 `CustomerType`。 假定您希望知道表达式返回的 <`Customer`> 元素的类型。 以下 XML 架构集合定义 `CustomerType` 和 `SpecialCustomerType` 类型。  
+ 在下面的示例中，这两个 <`Customer`> 正在查询 XML 实例中的元素有两种不同类型，`CustomerType`和`SpecialCustomerType`。 假设你想要知道的类型 <`Customer`> 由表达式返回的元素。 以下 XML 架构集合定义 `CustomerType` 和 `SpecialCustomerType` 类型。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -336,7 +335,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 此 XML 架构集合用于创建类型化**xml**变量。 分配给此变量的 XML 实例具有两个属于两种不同类型的 <`customer`> 元素。 第一个元素属于 `CustomerType` 类型，第二个元素属于 `SpecialCustomerType` 类型。  
+ 此 XML 架构集合用于创建类型化**xml**变量。 分配给此变量的 XML 实例具有两个 <`customer`> 两种不同类型的元素。 第一个元素属于 `CustomerType` 类型，第二个元素属于 `SpecialCustomerType` 类型。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -359,10 +358,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- 如果更改上一个查询的表达式并检索第二个 <`customer`> 元素 (`instance of`)，则 `/x:customer)[2]` 将返回 True。  
+ 如果您更改的上一个查询表达式并检索第二个 <`customer`> 元素 (`/x:customer)[2]`)，则`instance of`将返回 True。  
   
 ### <a name="example-c"></a>示例 C  
- 此示例使用属性测试。 下列 XML 架构定义了带有 CustomerID 属性和 Age 属性的 CustomerType 复杂类型。 Age 属性是可选的。 对于特定的 XML 实例，您可能希望确定 <`customer`> 元素中是否存在 Age 属性。  
+ 此示例使用属性测试。 下列 XML 架构定义了带有 CustomerID 属性和 Age 属性的 CustomerType 复杂类型。 Age 属性是可选的。 对于特定的 XML 实例，您可能想要确定在 Age 属性中是否存在 <`customer`> 元素。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -421,7 +420,7 @@ RETURN
 ### <a name="implementation-limitations"></a>实现限制  
  具体的限制如下：  
   
--   在元素测试中，类型名称必须跟有出现指示符 (**？**)。  
+-   在元素测试中，类型名称必须跟有出现指示符 ( **？** )。  
   
 -   **element （ElementName，TypeName）** 不受支持。  
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d2b9a08dd6c9951d9603c1c27bc56c6691433cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931380"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>记录集（ADO - WFC 语法）
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
   
 ### <a name="constructors"></a>构造函数  
   
@@ -82,7 +81,7 @@ public void updateBatch()
 public void updateBatch(int affectRecords)  
 ```  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
   
 ```  
 public int getAbsolutePage()  
@@ -135,7 +134,7 @@ public com.ms.wfc.data.Fields getFields()
 public AdoProperties getProperties()  
 ```  
   
-### <a name="events"></a>事件  
+### <a name="events"></a>Events  
  有关 ADO/WFC 事件的详细信息，请参阅[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
   
 ```  

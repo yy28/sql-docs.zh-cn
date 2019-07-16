@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 251c35977421d63027fbc9d6042e193125da854d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933290"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 创建一个新[参数](../../../ado/reference/ado-api/parameter-object.md)对象使用指定的属性。  

@@ -5,17 +5,16 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: b3b5b5a8a1386086f03681db49b72aca5a294d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961660"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 机器学习服务中的新增功能
 
@@ -64,7 +63,7 @@ SQL Server 2017 机器学习服务的 R 组件是 SQL Server 2016 R Services 下
 
 ### <a name="r-libraries"></a>R 库
 
-| package | Description |
+| package | 描述 |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中，MicrosoftML 包含在默认 R 安装中，消除了以前的 SQL Server 2016 R Services 中所需的升级步骤。 MicrosoftML 提供最先进的机器学习算法和数据转换，可进行缩放或在远程计算上下文中运行。 算法包括可自定义的深度神经网络、 快速决策树和决策林、 线性回归和逻辑回归。  |
 
@@ -80,7 +79,7 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 ### <a name="python-libraries"></a>Python 库
 
-| package | Description |
+| package | 描述 |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Python 等效于 RevoScaleR。 可以创建用于线性回归和逻辑回归、 决策树、 提升的树和随机林，所有可并行化，并能够在远程计算上下文中正在运行的 Python 模型。 此包支持使用多个数据源和远程计算上下文。 在远程 SQL 服务器上，若要浏览数据或生成模型，而无需移动数据，数据科学家或开发人员可以执行 Python 代码。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 包的 Python 等效。 |

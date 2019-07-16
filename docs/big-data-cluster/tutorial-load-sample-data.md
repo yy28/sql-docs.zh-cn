@@ -5,17 +5,16 @@ description: 本教程演示如何将示例数据加载到 SQL Server 大数据�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957789"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集
 
@@ -26,7 +25,7 @@ ms.locfileid: "67727343"
 > [!TIP]
 > 可以在 SQL Server 2019 大数据群集 （预览版） 的其他示例中找到[sql server 示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub 存储库。 这些文件位于**sql-server-samples/samples/features/sql-big-data-cluster/** 路径。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)

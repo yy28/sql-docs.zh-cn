@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6018cc0d5b4c74e15cf39c5b57e71ce57d1a39ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32c1905ffa7466da8c053cfb23a22cbc5d1a382e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939982"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 枚举常量
 若要帮助调试，ADO MD 枚举常量列出每个常量的值。 但是，此值是纯粹是参考性的并且可能从一个版本的 ADO MD 更改为另一个。 你的代码应仅依赖名称不是实际值的枚举常量。  

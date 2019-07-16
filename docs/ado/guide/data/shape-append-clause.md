@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cc89f54dd030604e5d5d842aabb68713e46fd4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924184"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 形状命令 APPEND 子句将列或列追加**记录集**。 通常情况下，这些列是章节列，请参阅子**记录集**。  
@@ -31,7 +30,7 @@ ms.locfileid: "66718672"
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  此子句的部分如下所示：  
   
  *parent-command*  

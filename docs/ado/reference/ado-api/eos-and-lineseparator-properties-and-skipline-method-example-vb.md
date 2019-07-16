@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 644e9adf4537b3ac9b852131e010e4be9bfaa3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933064"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 和 LineSeparator 属性 SkipLine 方法示例 (VB)
 此示例演示如何一次处理一行文本流。 从默认回车/换行更改的行分隔符后的效果 (**adCRLF**) 到只需换行 (**adLF**) 或回车符 (**adCR**) 所示。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3734c2efaaefae44a17381cab46029f2d57666a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63207847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948516"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>转换 SAP ASE 数据库对象 (SybaseToSQL)
 连接到 SAP Adaptive Server Enterprise (ASE) 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 和将项目设置和数据映射选项，可以将转换为 SAP Adaptive Server Enterprise (ASE) 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库对象。  
@@ -126,6 +125,6 @@ SAP ASE 的某些对象可能不进行转换。 您可以查看摘要转换报�
 ## <a name="next-steps"></a>后续步骤  
 迁移过程中的下一步是[加载到 SQL Server 转换数据库对象 / SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SAP ASE 数据库迁移到 SQL Server-Azure SQL 数据库&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: EventStatusEnum | Microsoft Docs
+title: EventStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7ce25eda44c3581362bd145fa13efaa8359f20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932867"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定的事件执行的当前状态。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|请求取消导致事件发生的操作。|  
 |**adStatusCantDeny**|3|指示该操作不能请求取消的挂起的操作。|  

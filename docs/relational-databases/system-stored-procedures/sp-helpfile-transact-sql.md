@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (Transact-SQL) | Microsoft Docs
+title: sp_helpfile (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943499"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|逻辑文件名称。|  
+|**name**|**sysname**|逻辑文件名称。|  
 |**fileid**|**smallint**|文件的数字标识符。 如果不返回*名称*指定 *。*|  
 |**filename**|**nchar(260)**|物理文件名。|  
 |**filegroup**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件是日志文件。 它决不是文件组的一部分。|  
-|size|**nvarchar(15)**|文件大小 (KB)。|  
+|size |**nvarchar(15)**|文件大小 (KB)。|  
 |**maxsize**|**nvarchar(15)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
-|**growth**|**nvarchar(15)**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
-|**usage**|**varchar(9)**|对于数据文件的值是**仅限数据**并为日志文件的值是**仅记录**。|  
+|**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
+|**使用情况**|**varchar(9)**|对于数据文件的值是**仅限数据**并为日志文件的值是**仅记录**。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

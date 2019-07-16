@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928360"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  算法提供程序定义要返回的内容以及这些内容的组织方式。 例如，提供程序可能会限制维度内容中说明的节点数。  
   
  下表列出了可进行维度内容查询的列，以及每个列作为数据挖掘维度来执行的函数。  
@@ -69,7 +68,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  该示例从 `[TM Decision Tree]` 模型内容中选择了所有列，这些模型内容与用作维度的模型相关。  
   
 ### <a name="code"></a>代码  
@@ -80,7 +79,7 @@ FROM [TM Decision Tree].Dimension_Content
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

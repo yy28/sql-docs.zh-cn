@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 21303e8b4fbf6f1d03fa2487a31457355febc2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac16ab79970e642a2e13000babb9bc9ba8679442
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947618"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用向导创建模型部署包
 
@@ -28,7 +27,7 @@ ms.locfileid: "65487431"
 
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导可创建只包含模型对象的包。 如果需要在包中包含数据，请参阅 [使用 MDSModelDeploy 创建模型部署包](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，您必须有权访问 **“系统管理”** 功能区域。  

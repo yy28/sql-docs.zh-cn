@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924147"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape COMPUTE 子句生成父级**记录集**，其列包含的引用的子**记录集**; 可选列是其内容的一章，新的或计算的列，或子级上执行聚合函数的结果**记录集**或以前成型**记录集**; 以及从子级的所有列**记录集**中列出可选的 BY 子句。  
@@ -33,7 +32,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  此子句的部分如下所示：  
   
  *child-command*  
@@ -77,7 +76,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  例如，假设您有一个名为人口统计信息，其中包括状态、 城市和填充字段。 （表中的填充图提供了仅作为示例）。  
   
-|State|City|人口数|  
+|状态|City|人口数|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |或|Medford|200,000|  
@@ -105,7 +104,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs。填充）|rs|State|  
+|SUM (rs。填充）|rs|状态|  
 |---------------------------|--------|-----------|  
 |1,300,000|对 child1 引用|CA|  
 |1,200,000|对 child2 引用|WA|  
@@ -113,21 +112,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|State|City|人口数|  
+|状态|City|人口数|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|人口数|  
+|状态|City|人口数|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|人口数|  
+|状态|City|人口数|  
 |-----------|----------|----------------|  
 |或|Medford|200,000|  
 |或|Portland|400,000|  

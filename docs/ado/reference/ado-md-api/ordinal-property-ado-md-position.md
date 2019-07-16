@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a40ecbd61bc6cb98996fd08ad0ac264a48024ca9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c212b9a31c72b96444649129f0c54a4c52226de4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949306"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal 属性（ADO MD 位置）
 唯一标识[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)沿某个轴。  

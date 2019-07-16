@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962896"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>安装 SQL Server 机器学习命令行中的 R 和 Python 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,9 +45,9 @@ ms.locfileid: "58511744"
 
 通过命令提示符安装时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 /QS 开关仅显示进度，不接受任何输入，也不显示错误消息（如果遇到）。 仅当指定 /Action=install 时才支持 /QS 参数。
 
-| 参数 | Description |
+| 参数 | 描述 |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 安装中数据库版本：SQL Server 2017 机器学习服务 （数据库内） 或 SQL Server 2016 R Services （数据库内）。  |
+| / 功能 = AdvancedAnalytics | 安装中数据库版本：SQL Server 2017 机器学习服务 （数据库内） 或 SQL Server 2016 R Services （数据库内）。  |
 | /FEATURES = SQL_INST_MR | 适用于仅 SQL Server 2017。 与 AdvancedAnalytics 配对这。 安装 （数据库内） R 功能，包括 Microsoft R Open 和专有 R 包。 SQL Server 2016 R Services 功能是 R 仅，因此没有适用于版参数。|
 | /FEATURES = SQL_INST_MPY | 适用于仅 SQL Server 2017。 与 AdvancedAnalytics 配对这。 安装的 Python （数据库内） 功能，包括 Anaconda 和专有的 Python 包。 |
 | /FEATURES = SQL_SHARED_MR | 安装独立版本的 R 功能：SQL Server 2017 机器学习服务器 （独立版） 或 SQL Server 2016 R Server （独立版）。 独立服务器是未绑定到数据库引擎实例的"共享的功能"。|

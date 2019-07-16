@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925130"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData：简单的 ADO 应用程序
 此简单应用程序的四个主要的 ADO 操作每个步骤： 获取、 查看、 编辑和更新数据。 对 Microsoft® SQL Server 附带的 Northwind 示例数据库执行这些操作。 若要专注于 ADO 的基础知识并防止混乱代码，该示例中的错误处理很小。  
@@ -45,17 +44,17 @@ ms.locfileid: "66700634"
   
 |控件类型|属性|ReplTest1|  
 |------------------|--------------|-----------|  
-|Form|“属性”|Form1|  
+|Form|名称|Form1|  
 ||高度|6500|  
 ||宽度|6500|  
 |MS DataGrid|“属性”|grdDisplay1|  
 |TextBox|名称|txtDisplay1|  
 ||多行|true|  
-|命令按钮|“属性”|cmdGetData|  
+|命令按钮|名称|cmdGetData|  
 ||Caption|获取数据|  
 |命令按钮|名称|cmdExamineData|  
 ||Caption|检查数据|  
-|命令按钮|“属性”|cmdEditData|  
+|命令按钮|名称|cmdEditData|  
 ||Caption|编辑数据|  
-|命令按钮|名称|cmdUpdateData|  
+|命令按钮|“属性”|cmdUpdateData|  
 ||Caption|更新数据|

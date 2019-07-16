@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b36c576fb5bb3bb3cc168430902223802ca937a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933867"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropmessage [ @msgnum = ] message_number
  要求的成员身份**sysadmin**并**serveradmin**固定服务器角色的成员。  
   
 ## <a name="remarks"></a>备注  
- 除非**所有**为指定*语言*、 所有本地化美国之前必须删除一条消息的版本才能删除消息的美国英语版本。  
+ 除非**所有**为指定*语言*、 所有本地化美国之前必须删除一条消息的版本可以删除消息的英文版本。  
   
 ## <a name="examples"></a>示例  
   
@@ -134,7 +133,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

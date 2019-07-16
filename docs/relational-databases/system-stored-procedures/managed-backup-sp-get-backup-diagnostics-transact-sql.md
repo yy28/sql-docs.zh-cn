@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942047"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 参数  
  @xevent_channel  
- 扩展事件的类型。 默认值设置为返回之前 30 分钟内记录的所有事件。 记录的事件取决于所启用扩展事件的类型。 您可以使用此参数对存储过程进行筛选，仅显示特定类型的事件。 你可以指定完整的事件名称，或指定一个子字符串，如：**管理员**，**分析**，**操作**，并且 **'Debug'**。 @event_channel是**VARCHAR (255)**。  
+ 扩展事件的类型。 默认值设置为返回之前 30 分钟内记录的所有事件。 记录的事件取决于所启用扩展事件的类型。 您可以使用此参数对存储过程进行筛选，仅显示特定类型的事件。 可以指定完整的事件名称，也可以指定子字符串，如：**管理员**，**分析**，**操作**，并且 **'Debug'** 。 @event_channel是**VARCHAR (255)** 。  
   
  若要获取的事件类型当前启用了使用列表**managed_backup.fn_get_current_xevent_settings**函数。  
   
@@ -60,9 +59,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |event_type|NVARCHAR(512)|扩展事件的类型。|  
-|事件|NVARCHAR(512)|事件日志的摘要。|  
+|Event|NVARCHAR(512)|事件日志的摘要。|  
 |时间戳|timestamp|显示事件发生时间的事件时间戳。|  
   
 ## <a name="security"></a>安全性  

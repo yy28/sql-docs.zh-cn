@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940207"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含服务器实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|“属性”|**sysname**|审核规范的名称。|  
+|名称|**sysname**|审核规范的名称。|  
 |database_specification_id|**int**|数据库规范的 ID。|  
 |create_date|**datetime**|创建审核规范的日期。|  
 |modified_date|**datetime**|上次修改审核规范的日期。|  
@@ -47,7 +46,7 @@ ms.locfileid: "52522982"
 ## <a name="permissions"></a>权限  
  具有主体**ALTER ANY DATABASE AUDIT**或**VIEW DEFINITION**权限、 dbo 角色以及 db_owners 固定的数据库角色的成员有权访问此目录视图。 此外，不得被拒绝主体**VIEW DEFINITION**权限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 的用户。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   

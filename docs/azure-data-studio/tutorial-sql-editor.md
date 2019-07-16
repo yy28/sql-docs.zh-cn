@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959015"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程：使用 TRANSACT-SQL 编辑器来创建数据库对象， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -72,7 +71,7 @@ ms.locfileid: "66797942"
 
 3. 创建存储的过程代码片段有两个字段设置以进行快速编辑*StoredProcedureName*并*SchemaName*。 选择*StoredProcedureName*，右键单击，然后选择**更改所有匹配项**。 现在，键入*getCustomer*和全部*StoredProcedureName*条目更改为*getCustomer*。
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![代码片段](./media/tutorial-sql-editor/snippet.png)
 
 5. 更改所有匹配项*SchemaName*到*dbo*。 
 6. 代码段中包含占位符参数和需要更新的正文文本。 *EXECUTE*语句还包含占位符文本，因为它不知道该过程将具有的参数的数目。 对于本教程中更新该代码段因此看起来如以下代码：

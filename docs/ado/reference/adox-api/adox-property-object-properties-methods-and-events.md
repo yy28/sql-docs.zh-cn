@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 54a39c4c0e3ea975dc86f0531863be333af3aefa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930357"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX 属性对象属性、方法和事件
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
  [Attributes 属性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)  
   
  [Name 属性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
@@ -33,7 +32,7 @@ ms.locfileid: "66708593"
 ## <a name="methods"></a>方法  
  无。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  无。  
   
 ## <a name="see-also"></a>请参阅  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926971"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附录 A：数据和服务提供商
 本部分解决了三种类型的提供程序： 数据提供程序、 服务提供程序和服务组件。 提供程序分为两类： 提供数据和提供服务。 一个*数据提供程序*拥有其自己的数据，并以表格形式向你的应用程序公开。 一个*服务提供商*对服务生成和使用数据，并增加 ADO 应用程序中的功能进行封装。 此外可以将服务提供商进一步定义作为*服务组件*，其必须与其他服务提供程序或组件一起工作。
@@ -42,14 +41,14 @@ ms.locfileid: "66701556"
 
 |区域|主题|
 |----------|-----------|
-|ODBC 数据库|[Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
+|ODBC 数据库|[用于 ODBC 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Microsoft 索引服务|[用于 Microsoft 索引服务的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Active Directory 服务|[Microsoft Active Directory 服务的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|Microsoft Jet 数据库|[OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
-|Microsoft SQL Server|[Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
+|Microsoft Jet 数据库|[适用于 Microsoft Jet 的 OLE DB 访问接口](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Microsoft SQL Server|[SQL Server 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle 数据库|[Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Internet 发布|[用于 Internet 发布的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|简单的数据源|[Microsoft OLE DB Simple Provider](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|简单的数据源|[Microsoft OLE DB 简单的提供程序](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
 ## <a name="provider-specific-dynamic-properties"></a>特定于提供程序的动态属性
  [属性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，以及[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象包括特定的动态属性提供程序。 这些属性为 ADO 支持的内置属性以外的提供程序提供特定功能有关的信息。

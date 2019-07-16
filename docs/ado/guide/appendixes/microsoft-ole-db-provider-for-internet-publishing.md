@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48c6e95a644c643721a7cb1c6f15c5eaf1e5a995
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926755"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB 提供程序用于 Internet 发布概述
 Microsoft OLE DB 访问接口用于 Internet 发布允许 ADO 访问由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。
@@ -49,7 +48,7 @@ MSDAIPP.DSO
 
  该字符串包含这些关键字：
 
-|关键字|Description|
+|关键字|描述|
 |-------------|-----------------|
 |**提供程序**|指定用于 Internet 发布的 OLE DB 访问接口。|
 |**数据源**-或- **URL**|指定的文件或目录已发布的 Web 文件夹中的 URL。|

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c85930cf8296ac6589e0c7b768c28f298ee31296
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 87edbeaac26ca1c332efe981901cbf0bc57fed30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945960"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 语言参考 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ WHERE ProductModelID=7
   
  下表列出了有助于理解如何在 [!INCLUDE[ssDE](../includes/ssde-md.md)]中实现 XQuery 的相关主题。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)|介绍为支持**xml**中的数据类型[!INCLUDE[ssDE](../includes/ssde-md.md)]以及可以对此数据类型使用的方法。 **Xml**数据类型的形成输入的 XQuery 数据模型执行的 XQuery 表达式。|  
 |[XML 架构集合 (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)|说明如何类型化数据库中存储的 XML 实例。 这意味着可以将 XML 架构集合与相关联**xml**类型列。 列中存储的所有实例根据集合中的架构进行验证和类型化，并为 XQuery 提供类型信息。|  
@@ -70,7 +69,7 @@ WHERE ProductModelID=7
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[XQuery 基础知识](../xquery/xquery-basics.md)|简要介绍了 XQuery 概念，以及表达式计算（静态和动态上下文）、原子化、有效的布尔值、XQuery 类型系统、序列类型匹配和错误处理。|  
 |[XQuery 表达式](../xquery/xquery-expressions.md)|介绍 XQuery 主表达式、路径表达式、序列表达式、算术比较和逻辑表达式、XQuery 构造、FLWOR 表达式、条件和定量表达式以及序列类型的各种表达式。|  

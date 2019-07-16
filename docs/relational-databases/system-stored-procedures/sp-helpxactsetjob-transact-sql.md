@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
+title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048194"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Oracle 作业编号。|  
 |**lastdate**|**varchar(22)**|作业运行的最后日期。|  
@@ -51,7 +50,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**nextdate**|**varchar(22)**|作业将要运行的下一个日期。|  
 |**broken**|**varchar(1)**|指示作业是否中断的标志。|  
 |**interval**|**varchar(200)**|作业的间隔。|  
-|**failures**|**int**|作业失败的次数。|  
+|**失败**|**int**|作业失败的次数。|  
 |**xactsetjobwhat**|**varchar(200)**|作业执行的过程的名称。|  
 |**xactsetjob**|**varchar(1)**|作业的状态，可以是以下状态之一：<br /><br /> **1** -启用作业。<br /><br /> **0** -已禁用的作业。|  
 |**xactsetlonginterval**|**int**|作业的长间隔。|  

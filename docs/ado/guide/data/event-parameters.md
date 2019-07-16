@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925369"
 ---
 # <a name="event-parameters"></a>事件参数
 每个事件处理程序有一个状态参数，用于控制事件处理程序。 对于完整事件，此参数还用于指示成功或失败的生成事件的操作。 最完整的事件还具有错误参数来提供有关可能发生，任何错误以及一个或多个引用用来执行该操作的 ADO 对象的对象参数的信息。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包括对象的参数**命令**，**记录集**，以及**连接**对象与事件关联。 在以下 Microsoft® Visual Basic® 示例中，您可以看到 pCommand、 pRecordset 和 pConnection 对象表示**命令**，**记录集**，和**连接**使用的对象**Execute**方法。  
@@ -44,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>状态参数  
  当调用的事件处理程序例程时，*状态*参数设置为以下值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**adStatusOK**|传递给将和完成事件数。 此值表示引发事件已成功完成的操作。|  
 |**adStatusErrorsOccurred**|传递给完成事件数。 此值表示引发事件的操作不成功，或将事件已取消该操作。 检查*错误*参数的更多详细信息。|  
@@ -54,7 +53,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  如果不再想要处理的事件，则可以设置*状态*到**adStatusUnwantedEvent**和你的应用程序将不会再收到该事件的通知。 但请记住，某些事件可以引发多个原因。 在这种情况下，必须指定**adStatusUnwantedEvent**对每个可能的原因。 例如，若要停止接收通知的挂起**RecordChange**事件，必须设置*状态*参数**adStatusUnwantedEvent**为**adRsnAddNew**， **adRsnDelete**， **adRsnUpdate**， **adRsnUndoUpdate**， **adRsnUndoAddNew**，**adRsnUndoDelete**，并**adRsnFirstChange**发生。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|请求此事件处理程序接收任何进一步的通知。|  
 |**adStatusCancel**|请求取消将要发生的操作。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925914"
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
 **记录集**支持**BOF**并**EOF**属性来描述的开头和结尾，分别将数据集。 您可以看作**BOF**并**EOF**作为定位在开头和末尾的"虚拟"记录**记录集**。 计数**BOF**并**EOF**，我们的示例**记录集**现在如下所示：  
@@ -30,7 +29,7 @@ ms.locfileid: "66702346"
 |BOF|||  
 |7|柳贡干的梨|30.0000|  
 |14|豆腐|23.2500|  
-|28|Rssle Sauerkraut|45.6000|  
+|28|Rssle 泡菜口味|45.6000|  
 |51|猪肉干|53.0000|  
 |74|Longlife 豆腐|10.0000|  
 |EOF|||  

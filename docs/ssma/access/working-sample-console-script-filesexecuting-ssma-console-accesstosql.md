@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938387"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>使用示例控制台脚本文件执行 SSMA 控制台 (AccessToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -57,10 +56,10 @@ ms.locfileid: "63453588"
   
 -   **ConversionAndDataMigrationSample.xml:** 此示例使用户能够从转换到数据迁移执行端到端迁移。 下面列出了必需的属性值，它们将需要更改的列表：  
   
-    |命令名|Description|特性|  
+    |命令名|描述|特性|  
     |----------------|---------------|-------------|  
-    |`map-schema`|源数据库到目标架构的架构映射。|`source-schema:` 指定转换所需的源数据库。<br /><br />`sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库|  
-    |`convert-schema`|执行架构转换从源到目标架构。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。|`object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
+    |`map-schema`|源数据库到目标架构的架构映射。|`source-schema:` 指定转换所需的源数据库。<br /><br />`sql-server-schema`：指定是要迁移到目标数据库|  
+    |`convert-schema`|执行架构转换从源到目标架构。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。|`object-name`：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
     |`synchronize-target`|将目标对象与目标数据库同步。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。|`object-name:` 指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
     |`migrate-data`|将源数据迁移到目标。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`命令的示例 2 的示例控制台脚本文件。|`object-name:` 指定源数据库/表迁移所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
   

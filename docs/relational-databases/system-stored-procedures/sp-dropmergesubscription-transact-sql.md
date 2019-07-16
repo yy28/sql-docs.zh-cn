@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933875"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +48,11 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber_db = ] 'subscriber_db'` 是订阅数据库的名称。 *subscription_database*是**sysname**，默认值为 NULL。  
   
-`[ @subscription_type = ] 'subscription_type'` 是订阅的类型。 *subscription_type*是**nvarchar(15)**，可以是下列值之一。  
+`[ @subscription_type = ] 'subscription_type'` 是订阅的类型。 *subscription_type*是**nvarchar(15)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**all**|推送订阅、请求订阅和匿名订阅|  
+|**所有**|推送订阅、请求订阅和匿名订阅|  
 |**匿名**|匿名订阅。|  
 |**push**|推送订阅。|  
 |**pull**|请求订阅。|  
@@ -78,8 +77,8 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="see-also"></a>请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

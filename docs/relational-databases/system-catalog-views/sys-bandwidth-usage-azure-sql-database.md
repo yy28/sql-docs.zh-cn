@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942576"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -47,7 +46,7 @@ ms.locfileid: "67716603"
 |**direction**|占用带宽的类型，为以下选项之一：<br /><br /> 入口：数据正移入[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 出口：数据正移出[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |class |占用带宽的类别，为以下选项之一：<br />内部：Azure 平台内移动的数据。<br />外部：移出 Azure 平台的数据。<br /><br /> 仅在数据库与区域处于连续复制关系 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 时返回此类别。 如果给定的数据库不参与任何连续复制关系，则不会返回"Interlink"行。 有关详细信息，请参阅本主题后面的"备注"部分。|  
 |**time_period**|峰值或非高峰期，使用情况发生的时间段。 The Peak time is based on the region in which the server was created. 例如，如果在“US_Northwest”地区创建了服务器，则高峰期时间定义为 PST 时间上午 10:00 点 到下午 6:00 太平洋标准时间。|  
-|**quantity**|占用的带宽量 (KB)。|  
+|**数量**|占用的带宽量 (KB)。|  
   
 ## <a name="permissions"></a>权限
 

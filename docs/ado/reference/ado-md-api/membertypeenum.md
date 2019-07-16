@@ -1,5 +1,5 @@
 ---
-title: MemberTypeEnum | Microsoft Docs
+title: MemberTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 10d96f7c89198b2267654073570fdfdbac38257b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949401"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 指定的设置[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)的属性[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|指示**成员**对象都表示级别的所有成员。|  
 |**adMemberFormula**|3|指示**成员**对象使用公式表达式进行计算。|  

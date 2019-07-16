@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930119"
 ---
 # <a name="functions-on-nodes---number"></a>基于节点的函数 - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  将以数字返回其值的节点。  
   
 ## <a name="remarks"></a>备注  
- 如果 *$arg*是未指定，则返回上下文节点，转换为双精度型的数值。 在 SQL Server 中， **fn:number()** 没有仅可以使用上下文相关的谓词的上下文中的参数。 特别要指出的是，它只能在方括号 ([ ]) 内使用。 例如，下面的表达式返回 <`ROOT`> 元素。  
+ 如果 *$arg*是未指定，则返回上下文节点，转换为双精度型的数值。 在 SQL Server 中， **fn:number()** 没有仅可以使用上下文相关的谓词的上下文中的参数。 特别要指出的是，它只能在方括号 ([ ]) 内使用。 例如，以下表达式返回 <`ROOT`> 元素。  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ WHERE ProductModelID=7
   
 -   有关查询**LotSizeD**演示如何使用算术运算中的数字值。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 ProductModelID   Result  

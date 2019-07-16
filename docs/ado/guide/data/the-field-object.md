@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a709b8c26c3cdee3a6087444e4acebbd212caf66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923984"
 ---
 # <a name="the-field-object"></a>字段对象
 每个**字段**对象通常对应于数据库表中的列。 但是，**字段**还表示到另一个指针**记录集**，名为一章。 将在本指南的后面介绍异常，如章节列。  

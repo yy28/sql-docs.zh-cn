@@ -2,19 +2,18 @@
 title: 远程表复制-并行数据仓库 |Microsoft Docs
 description: 分析平台系统并行数据仓库中使用远程表副本。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960206"
 ---
 # <a name="remote-table-copy"></a>远程表复制
 介绍如何使用远程表复制功能将表从 SQL Server PDW 的数据库复制到远程的 （非设备） SMP SQL Server 数据库。 使用 SQL Server PDW 远程表复制到启用中心和分支方案。  

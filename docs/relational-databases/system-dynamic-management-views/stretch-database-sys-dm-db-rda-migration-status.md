@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 257d83e522b398cce8358c1e30f4966dd951739e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937064"
 ---
 # <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database-sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "65945461"
   
  在中[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的输出**sys.dm_db_rda_migration_status**限制为 200 行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|从中迁移了行的表的 ID。|  
 |**database_id**|**int**|从中迁移了行的数据库的 ID。|  

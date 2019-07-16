@@ -5,17 +5,16 @@ description: 本文介绍如何在 SQL Server 2019 大数据群集 （预览版�
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e103acdcfd11b3693e6b1ba343258ee00c16572
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 43d65ce9b9335d22b453114139f7032613ac5359
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958820"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>什么是 SQL Server 2019 大数据群集上的应用程序部署？
 

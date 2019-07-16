@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 659701a984a675418b8654e9f747efe5d9e07762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924130"
 ---
 # <a name="specifying-connection-properties"></a>指定连接属性
 你可以提供由指定的信息的大部分[连接字符串](../../../ado/guide/data/creating-a-connection-string.md)通过设置的属性**连接**之前打开连接的对象。 例如，可以达到同样的效果，如连接字符串中所述[创建的连接字符串](../../../ado/guide/data/creating-a-connection-string.md)通过使用下面的代码。  

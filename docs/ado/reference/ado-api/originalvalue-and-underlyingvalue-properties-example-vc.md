@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c299416eeed65fcefbb0eaad750ed356d803bf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931829"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 属性示例 （VC + +）
 此示例演示[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)并[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)通过显示一条消息，如果一条记录的基础数据的属性已更改期间[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)批处理更新。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1b098733eccd03db7bafff084fdc2416ddff5845
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927039"
 ---
 # <a name="ado-security-design-features"></a>ADO 安全设计功能
 以下各节介绍安全设计功能在 ActiveX 数据对象 (ADO) 2.8 和更高版本。 这些更改是在 ADO 中 2.8 为了提高安全性。 ADO 6.0 中，包含在 Windows Vista 中的 Windows DAC 6.0 中，是功能上等效于 ADO 2.8，它包括在 Windows XP 和 Windows Server 2003 中的 MDAC 2.8。 本主题提供有关如何最好地保护 ADO 2.8 或更高版本中的应用程序的信息。

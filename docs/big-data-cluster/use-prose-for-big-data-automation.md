@@ -5,17 +5,16 @@ description: 本文介绍如何使用 Azure 数据 Studio 中的 PROSE 代码加
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957686"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码 Accelerator 数据 Wrangling
 
@@ -120,7 +119,7 @@ builder.learn().code()
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-Apr-67      |
-| 4 |Maya de Villiers          |19-Mar-60      |
+| 4 |Maya de Villiers          |19 年 3 月 60      |
 
 根据的数量和多样性数据中的，编写列中的不同模式的正则表达式可以是非常耗时的任务。 `FindPatternsBuilder`是一个功能强大的代码加速工具，通过生成有关列表的字符串的正则表达式来解决上述问题。
 

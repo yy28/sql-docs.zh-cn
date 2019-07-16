@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22eb60ce88c0d7d0a623a90c202c77a9828e3a34
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 08997f610b00f22d436a5c91d34beb2a8fc2cc1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944856"
 ---
 # <a name="affected-odbc-components"></a>受影响的 ODBC 组件
 向后兼容性介绍引入新版本的驱动程序管理器如何影响应用程序、 驱动程序管理器和驱动程序。 这会影响应用程序和驱动程序时或这两个文件保留在旧版本。 有，因此，三种类型的向后兼容性，还需要考虑以下表中所示。  

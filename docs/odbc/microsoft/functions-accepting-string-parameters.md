@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952484"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字符串参数的函数
 采用字符串参数的所有函数将都转换为 Unicode。 （导出函数的"W"形式。）转换的字节数进行计数的字符，对于这些适用的 ODBC Api。 这适用于以下函数：  
@@ -47,9 +46,9 @@ ms.locfileid: "63127325"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (becomes **SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (将成为**SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (becomes **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (将成为**SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   

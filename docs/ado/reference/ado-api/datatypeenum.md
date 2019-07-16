@@ -1,5 +1,5 @@
 ---
-title: DataTypeEnum | Microsoft Docs
+title: DataTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cb3e56d0219973be97b694ee2b22dbbb58eb0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933224"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定的数据类型[字段](../../../ado/reference/ado-api/field-object.md)，[参数](../../../ado/reference/ado-api/parameter-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)。 相应的 OLE DB 类型指示器显示在下表描述列中的括号中。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|与另一个数据类型常量，用于指示其他数据类型的数组始终结合使用标记值。 不适用于 ADOX。|  
 |**adBigInt**|20|指示一个 8 字节有符号的整数 (DBTYPE_I8)。|  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Provider for ODBC | Microsoft Docs
+title: Microsoft OLE DB Provider for ODBC |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926639"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调用到数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源是尚未公开这种方式。 但是，可以通过 ODBC 访问大多数系统 （DBMS） 目前所用。
@@ -50,7 +49,7 @@ MSDASQL
 
  该字符串包含这些关键字：
 
-|关键字|Description|
+|关键字|描述|
 |-------------|-----------------|
 |**提供程序**|指定用于 ODBC 的 OLE DB 访问接口。|
 |**DSN**|指定数据源名称。|
@@ -93,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>特定于提供程序的连接属性
  用于 ODBC 的 OLE DB 访问接口将添加到多个属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)系列**连接**对象。 下表列出了这些属性与在括号中相应的 OLE DB 属性名称。
 
-|属性名|Description|
+|属性名|描述|
 |-------------------|-----------------|
 |可访问的过程 (KAGPROP_ACCESSIBLEPROCEDURES)|指示用户是否有权访问的存储过程。|
 |可访问的表 (KAGPROP_ACCESSIBLETABLES)|指示用户是否具有执行针对数据库表的 SELECT 语句的权限。|
@@ -120,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>特定于提供程序的记录集和命令属性
  用于 ODBC 的 OLE DB 访问接口将添加到多个属性**属性**系列**记录集**并**命令**对象。 下表列出了这些属性与在括号中相应的 OLE DB 属性名称。
 
-|属性名|Description|
+|属性名|描述|
 |-------------------|-----------------|
 |基于查询的更新/删除/插入 (KAGPROP_QUERYBASEDUPDATES)|指示是否可以通过使用 SQL 查询执行更新、 删除和插入操作。|
 |ODBC 并发类型 (KAGPROP_CONCURRENCY)|指示用于减少可能导致两个用户尝试从数据源同时访问同一数据的问题的方法。|
@@ -175,23 +174,23 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |属性|ForwardOnly|动态|Keyset|Static|
 |--------------|-----------------|-------------|------------|------------|
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|read/write|read/write|
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|read/write|read/write|
-|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|read/write|read/write|read/write|read/write|
+|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
+|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
+|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|读/写|读/写|读/写|读/写|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|只读|只读|只读|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|不可用|不可用|read/write|read/write|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|read/write|read/write|read/write|read/write|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|read/write|read/write|read/write|read/write|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|read/write|read/write|read/write|read/write|
+|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
+|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|读/写|读/写|读/写|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|读/写|读/写|读/写|读/写|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|只读|只读|只读|只读|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|read/write|read/write|read/write|read/write|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|read/write|read/write|read/write|read/write|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|read/write|read/write|read/write|read/write|
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|read/write|read/write|read/write|read/write|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|read/write|不可用|只读|只读|
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|read/write|read/write|read/write|read/write|
-|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|read/write|不可用|只读|只读|
-|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|read/write|read/write|read/write|read/write|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|读/写|读/写|读/写|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|读/写|读/写|读/写|读/写|
+|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|读/写|读/写|读/写|
+|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|读/写|不可用|只读|只读|
+|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|读/写|读/写|读/写|
+|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
+|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
 |[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
 |[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
 
