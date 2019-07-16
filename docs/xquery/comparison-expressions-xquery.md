@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039028"
 ---
 # <a name="comparison-expressions-xquery"></a>比较表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "51661830"
   
  下表中定义了常规运算符。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |=|等于|  
 |!=|不等于|  
@@ -122,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 \<act:number   
@@ -140,7 +139,7 @@ WHERE ContactID=1
   
  下表中定义了值比较运算符。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |eq|等于|  
 |ne|不等于|  
@@ -174,7 +173,7 @@ WHERE ProductModelID=19
   
 -   请注意，由于值运算符只适用于原子值**data （)** 函数隐式用于检索节点值。 也就是说，`data($P/PD:Size) eq "small"` 生成相同的结果。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 \<PD:Picture   
@@ -208,7 +207,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 ProductModelID       Result          
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  下面是根据文档顺序所做的比较：  
   
--   `<<` : Does**操作数 1**前加上**操作数 2**按文档顺序。  
+-   `<<` :Does**操作数 1**前加上**操作数 2**按文档顺序。  
   
--   `>>` : Does**操作数 1**按照**操作数 2**按文档顺序。  
+-   `>>` :Does**操作数 1**按照**操作数 2**按文档顺序。  
   
  下面的查询返回 True，如果产品目录说明\<担保 > 元素之前出现\<维护 > 某一特定产品的文档顺序中的元素。  
   

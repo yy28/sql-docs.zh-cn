@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed99ab72e3d5112588a0b1c93df34b01aff7acdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044917"
 ---
 # <a name="character-data-and-c-strings"></a>字符数据和 C 字符串
 引用变长字符数据 （如列名称、 动态参数和字符串特性值） 的输入的参数有一个关联的长度参数。 如果在应用程序终止 null 字符，因为是在 C 中典型的字符串，它提供了作为自变量中，是以字节为单位的字符串 （不包括 null 终止符） 的长度或 SQL_NTS （Null-Terminated 字符串）。 非负长度参数指定关联的字符串的实际长度。 长度参数可能为 0 以指定长度为零的字符串，即不同于 NULL 值。 负值 SQL_NTS 指示驱动程序以通过定位 null 终止字符确定字符串的长度。  

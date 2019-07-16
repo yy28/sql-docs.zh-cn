@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eafcc668-9244-4e1e-a857-d9bd2585ed0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5684abc8100700146c3dbb7f9db8ff75c5132b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0197edbc2280b5df9ca91567ad56afc4a68d80df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63024248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043824"
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY 与 GROUP BY
 ORDER BY 可以执行任意表达式在 GROUP BY*表达式列表*或任何列的结果集。

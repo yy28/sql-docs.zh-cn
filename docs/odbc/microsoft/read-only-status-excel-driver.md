@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17425e76814a8397b9d2e6167248f35e52ac6cfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39f9d2e7ba40ba067659a86f45d2006c83594f3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988045"
 ---
 # <a name="read-only-status-excel-driver"></a>只读状态（Excel 驱动程序）
 使用 Microsoft Excel 驱动程序时，默认情况下以只读方式打开数据源表和源一次只能有一个用户可以打开。 即使表具有只读状态，但是，应用程序可以执行插入和更新的 Microsoft Excel 表。  

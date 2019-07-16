@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038989"
 ---
 # <a name="constructor-functions-xquery"></a>构造函数 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函数检索以前的产品说明  
- 在此示例中，示例 XML 文档首先分配给**xml**类型的变量。 此文档包含三个示例 <`ProductDescription`> 元素，每个元素都包含一个 <`DateCreated`> 子元素。  
+ 在此示例中，示例 XML 文档首先分配给**xml**类型的变量。 本文档包含三个示例 <`ProductDescription`> 元素，其中包含每个 <`DateCreated`> 子元素。  
   
  然后，查询该变量以便仅检索在特定日期之前创建的那些产品说明。 为了进行比较，该查询使用**xs:dateTime()** 构造函数键入日期。  
   
@@ -174,13 +173,13 @@ select @x.query('
   
  请注意上述查询的以下方面：  
   
--   FOR ...WHERE 循环结构用于检索\<ProductDescription > 满足 WHERE 子句中指定的条件元素。  
+-   FOR...WHERE 循环结构用于检索\<ProductDescription > 满足 WHERE 子句中指定的条件元素。  
   
 -   **Datetime （)** 构造函数用于构造**dateTime**类型值，因此可以进行适当比较。  
   
 -   然后，该查询将构造得到的 XML。 由于构造一系列属性，因此在 XML 构造中要使用逗号和括号。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Product   

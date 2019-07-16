@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002448"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新项目 (SSMA) (AccessToSQL)
 使用**新的项目**对话框创建新的 SSMA 项目。 访问**新的项目**对话框中，在**文件**菜单中，单击**新项目**。  

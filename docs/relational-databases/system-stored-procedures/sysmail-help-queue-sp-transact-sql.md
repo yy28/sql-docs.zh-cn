@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9181cfc0203bc9c37b5c8eece8d742d628e4bba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044427"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果将参数**@queue_type**未指定，则存储的过程的每个队列返回一行。  
+  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果将参数 **@queue_type** 未指定，则存储的过程的每个队列返回一行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,13 +46,13 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="result-set"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|队列的类型。 可能的值为**邮件**并**状态**。|  
 |**length**|**int**|指定队列中邮件项的数量。|  
-|State|**nvarchar(64)**|监视器的状态。 可能的值为**非活动**（队列处于非活动状态）， **NOTIFIED** (队列已被通知发生)，并且**RECEIVES_OCCURRING** （接收队列）。|  
-|**last_empty_rowset_time**|**DATETIME**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
-|**last_activated_time**|**DATETIME**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
+|**State**|**nvarchar(64)**|监视器的状态。 可能的值为**非活动**（队列处于非活动状态）， **NOTIFIED** (队列已被通知发生)，并且**RECEIVES_OCCURRING** （接收队列）。|  
+|**last_empty_rowset_time**|**日期时间**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
+|**last_activated_time**|**日期时间**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
   
 ## <a name="remarks"></a>备注  
  当数据库邮件故障排除，使用**sysmail_help_queue_sp**若要查看队列中有多少项，状态队列，以及上一次激活。  

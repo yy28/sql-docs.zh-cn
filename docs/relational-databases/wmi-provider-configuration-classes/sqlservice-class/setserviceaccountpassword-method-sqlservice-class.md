@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ead4a08e653c1898a183b808ad85a3709c14370f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: e4f373a9e2a398cf7b1bd64db71ac7bbfb34ea43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054808"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword 方法（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51217595"
 object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  

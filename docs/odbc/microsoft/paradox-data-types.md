@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043687"
 ---
 # <a name="paradox-data-types"></a>Paradox 数据类型
 ODBC Paradox 驱动程序将 Paradox 数据类型映射为 ODBC SQL 数据类型。 下表列出了所有 Paradox 数据类型，并显示数据类型映射到的 ODBC SQL。  
@@ -31,14 +30,14 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射为 ODBC SQL 数据类型
 |Paradox 数据类型|ODBC 数据类型|  
 |-----------------------|--------------------|  
 |字母数字|SQL_VARCHAR|  
-|AUTOINCREMENT[1]|SQL_INTEGER|  
+|AUTOINCREMENT [1]|SQL_INTEGER|  
 |BCD[1]|SQL_DOUBLE|  
 |BYTES[1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGE[2]|SQL_LONGVARBINARY|  
 |LOGICAL[1]|SQL_BIT|  
-|LONG[1]|SQL_INTEGER|  
-|MEMO[2]|SQL_LONGVARCHAR|  
+|长时间 [1]|SQL_INTEGER|  
+|备注 [2]|SQL_LONGVARCHAR|  
 |MONEY[1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |短|SQL_SMALLINT|  
@@ -54,7 +53,7 @@ ODBC Paradox 驱动程序将 Paradox 数据类型映射为 ODBC SQL 数据类型
   
  下表显示有关 Paradox 数据类型的限制。  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |字母数字|创建零的字母数字列或未指定的长度实际上返回一个 255 字节的列。|  
 |BYTES|如果您具有 Paradox5 驱动程序的二进制列中插入 NULL，则将它更改为 0。|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7b4e3991331e1a6f9dd731466cc2f514f75bbc9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ca73b5b9b41c99bd6db8e6181fa3582cae47c1d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046901"
 ---
 # <a name="duplicated-features"></a>重复的功能
 以下 ODBC *2.x* odbc 复制了函数*3.x*函数。 因此，ODBC *2.x*函数在 ODBC 中已弃用*3.x*。 ODBC *3.x*函数称为替换函数。  
@@ -43,7 +42,7 @@ ms.locfileid: "67793335"
 |**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions**|**SQLSetStmtAttr**, **SQLGetStmtAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**， **SQLGetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**|**SQLBindParameter**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  

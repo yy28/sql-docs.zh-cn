@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041709"
 ---
 # <a name="like-escape-sequence"></a>LIKE 转义序列
 ODBC LIKE 子句中使用转义序列。 此转义序列的语法如下所示：  
@@ -38,8 +37,8 @@ ODBC LIKE 子句中使用转义序列。 此转义序列的语法如下所示：
   
  *escape-character* ::= *character*  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC esc 启动器*:: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC esc 终止符*:: =}  
   
  若要确定驱动程序是否支持 LIKE 转义序列，应用程序可以调用**SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 信息类型。

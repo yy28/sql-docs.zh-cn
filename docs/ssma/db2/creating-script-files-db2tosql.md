@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989834"
 ---
 # <a name="creating-script-files-db2tosql"></a>创建脚本文件 (DB2ToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建变量值文件和服务器连接文件。  
@@ -26,7 +25,7 @@ ms.locfileid: "63453413"
   
 2.  **服务器：** 使用户能够设置源/目标服务器定义。 这也可以是单独的服务器连接文件中。  
   
-3.  **script-commands:** 使用户能够执行 SSMA 工作流命令。  
+3.  **脚本命令：** 使用户能够执行 SSMA 工作流命令。  
   
 下面将详细介绍每个部分：  
   
@@ -84,7 +83,7 @@ ms.locfileid: "63453413"
   
     即使用只有一个或另一个指定的属性：  
   
-    -   source-use-last-used="true" (default) or source-server="source_servername"  
+    -   源-使用-上次使用 ="true"（默认值） 或源服务器 ="source_servername"  
   
     -   target-use-last-used="true" (default) or target-server="target_servername"  
   

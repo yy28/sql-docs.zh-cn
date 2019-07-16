@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10695dd9bf044e270bb1ce1d26de78e53a1dd85a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a8385c8efb1ab7dcee651e5acb52062292a0bcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045025"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 数据类型
 下表显示了如何将 Microsoft Excel 驱动程序数据类型映射到 ODBC SQL 数据类型。 Microsoft Excel 驱动程序将这些数据类型分配给基于列中的数据在 Microsoft Excel 表中的列。  
@@ -41,7 +40,7 @@ ms.locfileid: "63026778"
   
  下表显示有关 Microsoft Excel 数据类型的限制。  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |加密数据|Microsoft Excel 驱动程序无法读取加密的数据。|  
 |错误字符串|Microsoft Excel 驱动程序不能返回字符串的 Microsoft Excel 错误值 (# n/A ！，#VALUE ！，#REF ！，#DIV/0 ！，#NUM ！，#NAME？，和 #NULL ！)，但改为返回 NULL。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc71dedfebf25d7414ac1864ea0fb7c9282334dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 077cd7adea70facc2033da2bcf54643f6188fda0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042690"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue 方法（SqlServiceAdvancedProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "62515373"
 object.SetBoolValue [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
+## <a name="parts"></a>部件  
  *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |*BoolValue*|一个指定高级属性的值的布尔值。|  
   

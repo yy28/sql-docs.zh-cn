@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d44d8031daaac656cb99a7477991dc6c30ce864
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037318"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系统存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51666506"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|类别|Description|  
+|Category|描述|  
 |--------------|-----------------|  
 |[活动异地复制存储过程](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用于管理来管理 Azure SQL 数据库中的活动异地复制配置|  
 |[目录存储的过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用于实现 ODBC 数据字典功能，并隔离 ODBC 应用程序以使其不受基础系统表更改的影响。|  

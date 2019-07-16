@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046372"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>参数  
  *lsn_value*  
- LSN 值。 *lsn_value*是**binary(10)**。  
+ LSN 值。 *lsn_value*是**binary(10)** 。  
   
 ## <a name="return-type"></a>返回类型  
  **binary(10)**  
@@ -54,7 +53,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
  若要系统地查询随时间变化的更改数据流，可以定期重复调用该查询函数，每次调用时指定一个新的查询间隔来限定查询中返回的更改的范围。 为帮助确保不丢失数据，通常使用前一个查询的上限来生成后一个查询的下限。 由于查询间隔是一个闭区间，因此新的下限必须大于前一个上限，但要足够小，以确保不存在 LSN 值介于此值与旧上限之间的更改。 sys.fn_cdc_increment_lsn 函数就是用来获取此值的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有公用数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  

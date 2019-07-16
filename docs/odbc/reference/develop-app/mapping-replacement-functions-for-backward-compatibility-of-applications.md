@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036388"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>映射替换函数以实现应用程序后向兼容性
 ODBC *3.x*应用程序使用 ODBC *3.x*对 ODBC 驱动程序管理器起作用*2.x*驱动程序，只要使用的任何新功能。 复制功能和行为的更改，但是，影响的方式，ODBC *3.x*应用程序适用于 ODBC *2.x*驱动程序。 当使用 ODBC *2.x*驱动程序，驱动程序管理器将映射以下 ODBC *3.x*函数，它已替换为一个或多个 ODBC *2.x*函数，到相应的 ODBC *2.x*函数。  

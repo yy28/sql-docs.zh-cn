@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f95c4c9f96609352c668c34bdf5fe5becf79d724
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9a1bafd47bce0ddca73d00e32e21f0c3c8b5d72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995460"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName 属性（ClientNetLibInfo 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51677446"
 object.FileName [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示有关客户端网络库的信息的 [ClientNetLibInfo 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

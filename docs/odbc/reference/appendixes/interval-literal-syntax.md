@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041620"
 ---
 # <a name="interval-literal-syntax"></a>间隔文本语法
 以下语法用于间隔 ODBC 中的文本。  
   
- *interval-literal ::= INTERVAL* [+ *&#124;* -] *interval-string interval-qualifier*  
+ *间隔文本:: = 间隔*[+ *&#124;* -]*时间间隔字符串间隔限定符*  
   
  *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
@@ -47,7 +46,7 @@ ms.locfileid: "63188818"
   
  *days-value* ::= *datetime-value*  
   
- *hours-value* ::= *datetime-value*  
+ *小时值*:: =*日期时间值*  
   
  *minutes-value* ::= *datetime-value*  
   
@@ -75,6 +74,6 @@ ms.locfileid: "63188818"
   
  *interval-leading-field-precision* ::= *unsigned-integer*  
   
- *quote* ::= '  
+ *引号*:: =  
   
- *unsigned-integer* ::= *digit...*
+ *无符号整数*:: =*数字...*

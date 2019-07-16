@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13f4c879f94118a2e2302a2032991e85551be0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036213"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函数
 
@@ -100,7 +99,7 @@ SQLRETURN SQLBindParameter(
 
  当**SQLBindParameter**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLBindParameter** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
 
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|由标识的数据类型*ValueType*自变量不能转换为标识的数据类型*ParameterType*参数。 请注意，可能会返回此错误**SQLExecDirect**， **SQLExecute**，或**SQLPutData**在执行时，而不是由**SQLBindParameter**.|  
@@ -135,13 +134,13 @@ SQLRETURN SQLBindParameter(
   
  *InputOutputType*参数是下列值之一：  
   
--   SQL_PARAM_INPUT. 该参数将不会调用过程中，如的 SQL 语句中的参数标记**插入**语句，或者将标记一个过程中的输入的参数。 例如，在参数**INSERT INTO 员工 VALUES (？，？，？)** 而是输入的参数中的参数 **{调用 AddEmp (？，？，？)}** 可以但不一定是，输入的参数。  
+-   SQL_PARAM_INPUT。 该参数将不会调用过程中，如的 SQL 语句中的参数标记**插入**语句，或者将标记一个过程中的输入的参数。 例如，在参数**INSERT INTO 员工 VALUES (？，？，？)** 而是输入的参数中的参数 **{调用 AddEmp (？，？，？)}** 可以但不一定是，输入的参数。  
   
      驱动程序时执行该语句，将为该参数的数据发送到数据源;\* *ParameterValuePtr*缓冲区必须包含有效的输入的值，或 **StrLen_or_IndPtr*缓冲区必须包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT 结果_EXEC 宏。  
   
      如果应用程序不能确定在过程调用参数的类型，它会设置*InputOutputType*为 SQL_PARAM_INPUT; 如果数据源返回的值对于参数，驱动程序将放弃它。  
   
--   SQL_PARAM_INPUT_OUTPUT. 该参数将标记一个过程中的输入/输出参数。 例如，在参数 **{调用 GetEmpDept(?)}** 是接受雇员的姓名，并返回该雇员的部门的名称的输入/输出参数。  
+-   SQL_PARAM_INPUT_OUTPUT。 该参数将标记一个过程中的输入/输出参数。 例如，在参数 **{调用 GetEmpDept(?)}** 是接受雇员的姓名，并返回该雇员的部门的名称的输入/输出参数。  
   
      驱动程序时执行该语句，将为该参数的数据发送到数据源;\* *ParameterValuePtr*缓冲区必须包含有效的输入的值，则\* *StrLen_or_IndPtr*缓冲区必须包含 SQL_NULL_DATA、 SQL_DATA_AT_EXEC 或的结果SQL_LEN_DATA_AT_EXEC 宏。 执行该语句后，驱动程序将参数数据返回到应用程序，如果数据源不返回输入/输出参数的值，该驱动程序设置 **StrLen_or_IndPtr*缓冲区为 SQL_NULL_DATA。  
   
@@ -154,7 +153,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_INPUT_OUTPUT_STREAM. 指示应进行流处理输入/输出参数。 **SQLGetData**可以读取部件中的参数值。 *BufferLength*被忽略，因为缓冲区长度取决于调用**SQLGetData**。 值*StrLen_or_IndPtr*缓冲区必须包含 SQL_NULL_DATA、 SQL_DEFAULT_PARAM、 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的结果。 如果它将输出在流式传输，必须在输入的数据在执行 (DAE) 参数作为绑定参数。 *ParameterValuePtr*可以是任何非 null 指针值，将返回该值**SQLParamData**如用户定义令牌，其值与传递*ParameterValuePtr*为这两个输入和输出。 有关详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
--   SQL_PARAM_OUTPUT_STREAM. SQL_PARAM_INPUT_OUTPUT_STREAM，为输出参数相同。 **StrLen_or_IndPtr*在输入上被忽略。  
+-   SQL_PARAM_OUTPUT_STREAM。 SQL_PARAM_INPUT_OUTPUT_STREAM，为输出参数相同。 **StrLen_or_IndPtr*在输入上被忽略。  
   
  下表列出了不同的组合*InputOutputType*和 **StrLen_or_IndPtr*:  
   
@@ -253,7 +252,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_NULL_DATA. 参数值为 NULL。  
   
--   SQL_DEFAULT_PARAM. 一个过程是使用一个参数，默认值而不是从应用程序检索的值。 此值是仅在 ODBC 规范语法中，被调用的过程中有效，然后才*InputOutputType*参数为 SQL_PARAM_INPUT、 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT_STREAM。 当\* *StrLen_or_IndPtr*是 SQL_DEFAULT_PARAM， *ValueType*， *ParameterType*， *ColumnSize*， *DecimalDigits*， *BufferLength*，和*ParameterValuePtr*参数对于输入参数，将忽略和仅用于定义输入输出参数值 /输出参数。  
+-   SQL_DEFAULT_PARAM。 一个过程是使用一个参数，默认值而不是从应用程序检索的值。 此值是仅在 ODBC 规范语法中，被调用的过程中有效，然后才*InputOutputType*参数为 SQL_PARAM_INPUT、 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT_STREAM。 当\* *StrLen_or_IndPtr*是 SQL_DEFAULT_PARAM， *ValueType*， *ParameterType*， *ColumnSize*， *DecimalDigits*， *BufferLength*，和*ParameterValuePtr*参数对于输入参数，将忽略和仅用于定义输入输出参数值 /输出参数。  
   
 -   结果 SQL_LEN_DATA_AT_EXEC (*长度*) 宏。 参数的数据将发送具有**SQLPutData**。 如果*ParameterType*参数为 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或长时间，数据源特定的数据类型，并且驱动程序将返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是要为参数; 发送数据的字节数，否则为*长度*必须是一个非负值，并且将被忽略。 有关详细信息，请参阅"传递参数值，稍后在本部分中。  
   

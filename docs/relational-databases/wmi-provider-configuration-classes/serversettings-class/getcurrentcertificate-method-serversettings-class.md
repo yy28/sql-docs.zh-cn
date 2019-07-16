@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a76ebaf25bb96f1f809b8b257e99595f5eebba7e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f55a54ac0e92fbe12842a2574336e0555b497072
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052925"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 方法（ServerSettings 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "51657416"
 object.GetCurrentCertificate(SHA)  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个**ServerSettings**对象，表示的实例上的服务器设置[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 #### <a name="parameters"></a>Parameters  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |*SHA*|一个在方法完成后指定当前安全证书的字符串对象值（输出参数）。|  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 496148e51e56ebbeea239101660b37e45cfa7eba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036167"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函数
 **符合性**  
@@ -62,7 +61,7 @@ SQLRETURN SQLBulkOperations(
   
  对于所有这些 SQLSTATEs 可以返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除 01xxx SQLSTATEs)，将返回 SQL_SUCCESS_WITH_INFO，如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果发生错误，则返回 SQL_ERROR单行操作。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据右截断|*操作*参数为 SQL_FETCH_BY_BOOKMARK，并导致截断了非空白字符或二进制数据的非空字符串或二进制数据返回为一列或列数据类型为 SQL_C_CHAR 或 SQL_C_BINARY。|  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046307"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,12 +55,12 @@ fn_ check_object_signatures (
  \@*类*是**sysname**。  
   
  { \@*指纹*}  
- 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 \@*指纹*是**varbinary(20)**。  
+ 用来对密钥进行加密的证书的 SHA-1 哈希，或用来对密钥进行加密的非对称密钥的 GUID。 \@*指纹*是**varbinary(20)** 。  
   
 ## <a name="tables-returned"></a>返回的表  
  下表列出的列的**fn_check_object_signatures**返回。  
   
-|“列”|类型|Description|  
+|“列”|type|描述|  
 |------------|----------|-----------------|  
 |type|**nvarchar(120)**|返回类型说明或程序集。|  
 |entity_id|**int**|返回要计算的对象的对象 ID。|  
@@ -71,7 +70,7 @@ fn_ check_object_signatures (
 ## <a name="remarks"></a>备注  
  使用**fn_check_object_signatures**确认，恶意用户未篡改对象。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对证书或非对称密钥拥有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

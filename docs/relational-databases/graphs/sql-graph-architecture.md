@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035984"
 ---
 # <a name="sql-graph-architecture"></a>SQL 图形体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "63026832"
 ## <a name="edge-table"></a>边缘表
 边缘表表示关系图中的关系。 边缘始终定向，并连接两个节点。 边缘表，对多对多关系建模关系图中的用户。 边缘表可能会或可能没有任何用户定义的特性中。 每次创建边缘表时，以及用户定义的特性，边缘表中创建三个隐式列：
 
-|列名    |Description  |
+|列名    |描述  |
 |---   |---  |
 |`$edge_id`   |唯一标识数据库中的一个给定的边缘。 它是生成的列和值是边缘表和内部生成的 bigint 值的 object_id 的组合。 但是，当`$edge_id`选择列，显示中的 JSON 字符串形式的计算的值。 `$edge_id` 是一个伪列，映射到在其中的十六进制字符串与内部名称。 当选择`$edge_id`从表中，列名称将显示为`$edge_id_\<hex_string>`。 在查询中使用伪列名称是推荐的方法来查询内部`$edge_id`应避免列和十六进制字符串，使用内部名称。 |
 |`$from_id`   |存储`$node_id`节点从边缘在哪里产生。  |
@@ -68,7 +67,7 @@ ms.locfileid: "63026832"
 ### <a name="systables"></a>sys.tables
 以下新，bit 类型，会将列添加到 SYS。表。 如果`is_node`设置为 1，指示表是节点表并且如果`is_edge`设置为 1，指示表是边界表。
  
-|列名 |数据类型 |Description |
+|列名 |数据类型 |描述 |
 |--- |---|--- |
 |is_node |bit |1 = 这是节点表 |
 |is_edge |bit |1 = 这是一个边缘表 |
@@ -76,14 +75,14 @@ ms.locfileid: "63026832"
 ### <a name="syscolumns"></a>sys.columns
 `sys.columns`视图中的其他列`graph_type`和`graph_type_desc`，指示节点和边缘表中列的类型。
  
-|列名 |数据类型 |Description |
+|列名 |数据类型 |描述 |
 |--- |---|--- |
-|graph_type |ssNoversion |使用一组值的内部列。 值是之间的关系图列 1-8 和其他人的 NULL。  |
+|graph_type |INT |使用一组值的内部列。 值是之间的关系图列 1-8 和其他人的 NULL。  |
 |graph_type_desc |nvarchar(60)  |内部使用的一组值的列 |
  
 下表列出了有效的值为`graph_type`列
 
-|列的值  |Description  |
+|列的值  |描述  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -120,7 +119,7 @@ ms.locfileid: "63026832"
 ### <a name="system-functions"></a>系统函数
 添加下列内置函数。 这些功能帮助用户从生成的列中提取信息。 请注意，这些方法将不会验证用户输入。 如果用户指定了无效`sys.node_id`方法将提取的相应部分，并将其返回。 例如，将采用 OBJECT_ID_FROM_NODE_ID`$node_id`作为输入，并将返回 object_id 的表，此节点所属。 
  
-|内置   |Description  |
+|内置   |描述  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |提取从 object_id `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |提取从 graph_id `node_id`  |
@@ -141,7 +140,7 @@ ms.locfileid: "63026832"
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` 现已扩展为支持创建表 AS 节点或 AS 边界。 请注意，边缘表可能会或可能没有任何用户定义的特性。  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|可以更改节点和边缘表的关系表，使用的相同方式`ALTER TABLE`。 用户可以添加或修改用户定义的列、 索引或约束。 但是，更改内部图表列，喜欢`$node_id`或`$edge_id`，将导致错误。  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |用户可以对伪列和用户定义的节点和边缘表中的列创建索引。 支持所有索引类型，包括聚集和非聚集列存储索引。  |
-|创建边缘约束    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |用户可以立即创建边缘表以强制实施特定的语义的边缘约束和维护数据完整性  |
+|创建边缘约束    |[边缘约束&#40;Transact SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |用户可以立即创建边缘表以强制实施特定的语义的边缘约束和维护数据完整性  |
 |DROP TABLE |[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)  |在关系表，使用的相同方式删除节点和边界表`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点和支持级联的删除边缘节点或节点表在删除时。 建议删除节点表后，如果用户删除该节点表手动维护完整性的关系图中的节点连接到任何边缘。  |
 
 

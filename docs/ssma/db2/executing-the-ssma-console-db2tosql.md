@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989679"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>执行 SSMA 控制台 (DB2ToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。 接下来的几节详细介绍相同。 控制台应用程序在本部分中使用作为枚举的某些标准脚本文件命令。  
@@ -431,7 +430,7 @@ convert-schema
   
 **Command**  
   
-map-schema  
+映射架构  
   
 源数据库到目标架构的架构映射。  
   
@@ -452,7 +451,7 @@ map-schema
 ```  
 **Command**  
   
-map-schema  
+映射架构  
   
 源数据库到目标架构的架构映射。  
   
@@ -479,7 +478,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步目标  
   
 -   将目标对象与目标数据库同步。  
   
@@ -499,7 +498,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 -   `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -564,7 +563,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 -   `report-errors-to:` 刷新操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**SourceDBRefreshReport.XML**创建。  
   

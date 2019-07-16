@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6cfd7e6b263bf3d33bf06f7ae1a3396f2447f16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e12ef7cf4be0259029b6214bd821bf85f89df73b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047777"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>为事务添加批注 (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65489731"
 > [!NOTE]  
 >  您无法删除批注。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   若要为创建的事务添加批注，您必须有权访问 **“资源管理器”** 功能区域，并且必须至少对要添加批注的模型对象具有 **“更新”** 权限。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "65489731"
   
 4.  在 **“事务批注”** 窗格的 **“批注”** 框中，键入您的批注。  
   
-5.  单击“确定”  。  
+5.  单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [批注 (Master Data Services)](../master-data-services/annotations-master-data-services.md)   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038276"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 数据定义 - CREATE SUBCUBE
 
@@ -44,10 +43,10 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |原始默认成员|可以聚合|嵌套 select 语句|修改后的默认成员|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|是|{Time.Year.2003}|无更改|  
-|Time.Year.[1997]|是|{Time.Year.2003}|Time.Year.All|  
-|Time.Year.[1997]|否|{Time.Year.2003}|Time.Year.[2003]|  
-|Time.Year.[1997]|是|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year.[1997]|否|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 或<br /><br /> Time.Year.[2004]|  
+|Time.Year。[1997]|是|{Time.Year.2003}|Time.Year.All|  
+|Time.Year。[1997]|否|{Time.Year.2003}|Time.Year。[2003]|  
+|Time.Year。[1997]|是|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time.Year。[1997]|否|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 或<br /><br /> Time.Year.[2004]|  
   
  子多维数据集中始终存在 [All] 成员。  
   

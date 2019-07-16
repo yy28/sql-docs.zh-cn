@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 336eebbc8bcc98ec684faaaa1092b511cf95f100
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b673f87ffd04a1cf89b063cc129c769c258791ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038232"
 ---
 # <a name="mdx-data-definition---drop-kpi"></a>MDX 数据定义 - DROP KPI
 
@@ -36,7 +35,7 @@ DROP KPI CURRENTCUBE | Cube_Name.KPI_Name
  指定要删除的 KPI 的名称的有效字符串。  
   
 ## <a name="see-also"></a>请参阅  
- [CREATE KPI Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-kpi.md)   
+ [CREATE KPI 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-kpi.md)   
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

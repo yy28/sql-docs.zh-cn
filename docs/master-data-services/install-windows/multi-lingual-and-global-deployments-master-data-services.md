@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d144a0ff4259b966d8e6a47db98dfb7aacf85629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30635148aa0110a4110398ecc8334e56a3634ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944929"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多语言和全球部署 (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65480195"
 ## <a name="how-languages-are-used"></a>如何使用语言  
  下表说明了对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 组件和工具的语言支持情况。  
   
-|组件或工具|Description|  
+|组件或工具|描述|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装程序|当希望以不同于安装程序语言的语言来提供和支持 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序时，请选择“英语”安装程序。 有关详细信息，请参阅下面的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 说明。|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|安装程序语言决定 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 语言。 例如，如果为安装程序语言选择了“德语”，则在该计算机上提供德语形式的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。|  

@@ -8,13 +8,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
-ms.openlocfilehash: 69cc0c84d06c1be4065c7419b3eb35c6c30e0592
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996426"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -143,7 +142,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 例如，具有三个同步副本： 一个主副本和两个同步辅助副本的可用性组。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 为 1;(3 / 2-> 1)。
 
 - 所需的数量的副本响应预升级操作为 2;(3-1 = 2)。 
 

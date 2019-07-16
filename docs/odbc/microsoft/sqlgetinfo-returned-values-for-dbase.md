@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd6b25ebc06df82fa9974b3274ae527e6f6fa347
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003159"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>dBASE 的 SQLGetInfo 返回值
 下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  

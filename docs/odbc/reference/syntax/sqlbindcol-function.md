@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17b907be3e2641fe1dcbbb8fbd96586132e054ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3860243580981d995e6581d883e12afe3f033d3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036217"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函数
 **符合性**  
@@ -114,7 +113,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>诊断  
  当**SQLBindCol**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLBindCol** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|（数据挖掘） *ColumnNumber*参数为 0，并且*TargetType* SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK 参数不是。|  
@@ -236,7 +235,7 @@ SQLRETURN SQLBindCol(
   
  其中公式的变量定义如下表中所述。  
   
-|变量|Description|  
+|变量|描述|  
 |--------------|-----------------|  
 |*绑定地址*|数据缓冲区，使用指定的地址*TargetValuePtr*中的参数**SQLBindCol**。<br /><br /> 长度/指示器缓冲区，使用指定的地址*StrLen_or_IndPtr*中的参数**SQLBindCol**。 有关详细信息，请参阅"描述符和 SQLBindCol"部分中的"附加注释"。<br /><br /> 如果绑定的地址为 0，不返回任何数据值，即使上面的公式计算得出的地址为非零值。|  
 |*绑定偏移量*|如果使用按行绑定，则使用 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性将指定的地址上存储的值。<br /><br /> 如果使用按列绑定或 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性的值为 null 指针，*绑定的偏移量*为 0。|  

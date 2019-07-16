@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62799011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987834"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 静态游标
 静态游标是一个结果集似乎是静态的。 它通常不检测到的成员身份、 顺序或值的结果集打开游标后所做的更改。 例如，假定静态游标提取行和另一个应用程序，然后更新该行。 静态游标提取此行，如果它发现的值保持不变，尽管其他应用程序所做的更改。  
