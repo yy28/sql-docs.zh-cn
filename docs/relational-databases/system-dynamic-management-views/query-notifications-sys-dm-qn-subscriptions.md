@@ -18,32 +18,31 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061923"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>查询通知-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关服务器中的活动查询通知订阅的信息。 可以使用此视图检查服务器或指定数据库中的活动订阅，或者检查指定服务器主体。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|订阅的 ID。|  
 |**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
 |**sid**|**varbinary(85)**|创建并拥有该订阅的服务器主体的安全 ID。|  
 |**object_id**|**int**|存储有关订阅参数信息的内部表的 ID。|  
 |**创建**|**datetime**|日期和时间创建的订阅。|  
-|**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意： 实际的激发时间可能大于指定的超时。但是，如果在指定的超时之后、激发订阅之前发生了使订阅无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会确保激发在发生更改的时候进行。|  
+|**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意:实际的激发时间可能会大于指定的超时。但是，如果使订阅发生之后指定的超时，但之前激发订阅，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]确保激发在发生在进行了更改的时间。|  
 |**status**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|On|类型|  
+|From|若要|On|type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多对一|  
@@ -53,7 +52,7 @@ ms.locfileid: "51657246"
   
  下面的状态代码指示由于更改而激发了订阅：  
   
-|代码|次要状态|信息|  
+|代码|次要状态|T:System.Diagnostics.Switch|  
 |----------|------------------|----------|  
 |65798|因为更改数据而激发订阅|由插入触发的订阅|  
 |65799|因为更改数据而激发订阅|DELETE|  
@@ -70,7 +69,7 @@ ms.locfileid: "51657246"
   
  下面的状态代码指示无法创建订阅：  
   
-|代码|次要状态|信息|  
+|代码|次要状态|T:System.Diagnostics.Switch|  
 |----------|------------------|----------|  
 |132609|因为不支持此语句而导致订阅创建失败|查询过于复杂|  
 |132610|因为不支持此语句而导致订阅创建失败|用于订阅的语句无效|  
@@ -81,7 +80,7 @@ ms.locfileid: "51657246"
   
  下面的状态代码供内部使用，它们归类为检查终止和初始化模式：  
   
-|代码|次要状态|信息|  
+|代码|次要状态|T:System.Diagnostics.Switch|  
 |----------|------------------|----------|  
 |198656|供内部使用：检查终止和初始化模式|未确定的信息模式|  
 |198928|订阅已损坏|因为数据库分离而激发订阅|  
@@ -91,7 +90,7 @@ ms.locfileid: "51657246"
 |199168|订阅处于活动状态。|未确定的信息模式|  
 |199424|该订阅已初始化，但尚未处于活动状态|未确定的信息模式|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要针对服务器的 VIEW SERVER STATE 权限。  
   
 > [!NOTE]  

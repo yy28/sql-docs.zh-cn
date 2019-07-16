@@ -2,19 +2,18 @@
 title: 使用 Integration Services-并行数据仓库加载数据 |Microsoft Docs
 description: 提供用于使用 SQL Server Integration Services (SSIS) 包来加载数据到并行数据仓库 (PDW) 的引用和部署信息。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960671"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用 Integration Services 并行数据仓库加载数据
 提供了数据加载到 SQL Server 并行数据仓库，通过使用 SQL Server Integration Services (SSIS) 包的引用和部署信息。  
@@ -254,7 +253,7 @@ Integration Services 在计算机上运行包。
 [入门 (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [动态程序包生成示例](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [设计 SSIS 包以实现并发性 （SQL Server 视频）](https://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server 社区示例：Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[Microsoft SQL Server 社区示例：集成服务](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [通过变更数据捕获改善增量加载](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [渐变维度转换](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [大容量插入任务](../integration-services/control-flow/bulk-insert-task.md)  

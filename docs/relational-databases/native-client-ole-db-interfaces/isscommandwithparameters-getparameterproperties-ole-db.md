@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e13ede890599c7424c2bb181a966608b09b0b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5e03e1ef1cd62dda40cd9b138c3d2ff3d7395ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050987"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,10 +39,10 @@ HRESULT GetParameterProperties(
 ```  
   
 ## <a name="arguments"></a>参数  
- pcParams[out][in]  
- 一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量。  
+ pcParams[out][in]   
+ 一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量  。  
   
- prgParamProperties[out]  
+ prgParamProperties[out]   
  指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存，并返回此内存; 地址使用者释放此内存以及**imalloc:: Free**它不再需要这些结构。 然后再调用**imalloc:: Free**有关*prgParamProperties*，使用者还必须调用**VariantClear**有关*vValue*属性为了防止内存泄漏情况下，该变量包含引用的每个 DBPROP 结构的类型 （例如 BSTR。)如果*pcParams*是零个在输出或发生错误 DB_E_ERRORSOCCURRED 之外，该提供程序不会分配任何内存并且可确保*prgParamProperties*是输出的 null 指针。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -64,11 +63,11 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
-|iOrdinal|所传递参数的序号。|  
-|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
-|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|iOrdinal |所传递参数的序号。|  
+|*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量  。|  
+|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  

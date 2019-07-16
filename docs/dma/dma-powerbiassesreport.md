@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 996bf79c296ff11c708c687f5a084d73b0bcde95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b97ed315b8266c165a14a7f2b05912a7ae530b1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054682"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析创建的数据迁移助手使用 Power BI 的合并的评估报表
 
@@ -137,7 +136,7 @@ ms.locfileid: "66794327"
 
 ![只读数据库不能为升级问题](../dma/media/ReadOnlyDatabases.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据迁移助手概述](../dma/dma-overview.md)
 

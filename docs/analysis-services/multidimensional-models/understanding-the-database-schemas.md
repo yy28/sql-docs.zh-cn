@@ -1,5 +1,5 @@
 ---
-title: 了解数据库架构 |Microsoft 文档
+title: 了解数据库架构 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164964"
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34023474"
 ## <a name="dimension-tables"></a>维度表  
  对于每个维度，架构生成向导都会生成一个要包含在主题区域数据库中的维度表。 维度表的结构取决于在设计它所基于的维度时所做的选择。  
   
- 列  
+ “列”  
  向导将为与维度表所基于的维度中的每个特性关联的绑定（例如，每个特性的 **KeyColumns**、 **NameColumn**、 **ValueColumn**、 **CustomRollupColumn**、 **CustomRollupPropertiesColumn**和 **UnaryOperatorColumn** 属性的绑定）生成一列。  
   
  关系  
@@ -56,7 +56,7 @@ ms.locfileid: "34023474"
 ## <a name="fact-tables"></a>事实数据表  
  对于多维数据集中的每个度量值组，架构生成向导都会生成一个要包含在主题区域数据库中的事实数据表。 事实数据表的结构取决于在设计它所基于的度量值组时所做的选择，以及在度量值组和任何包含的维度之间建立的关系。  
   
- 列  
+ “列”  
  除了使用 **Count** 聚合函数的度量值以外，向导为每个度量值生成一列。 此类度量值在事实数据表中不需要对应的列。  
   
  如果适用，向导还会为度量值组中每个常规维度关系的每个粒度属性列生成一列；为与维度（与该表基于的度量值组具有事实维度关系）的每个属性关联的绑定生成一列或多列。  
@@ -87,8 +87,8 @@ ms.locfileid: "34023474"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [了解增量生成](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [管理对数据源视图和数据源更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [管理对数据源视图和数据源所做的更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

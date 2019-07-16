@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008918"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 > [!IMPORTANT]  
 >  不要使用密码为空。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
-`[ @loginame = ] 'login'` 是受密码更改影响的登录名的名称。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在，可以指定只能由的成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
+`[ @loginame = ] 'login'` 是受密码更改影响的登录名的名称。 login 的数据类型为 sysname，默认值为 NULL   。 *登录名*必须已经存在，可以指定只能由的成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

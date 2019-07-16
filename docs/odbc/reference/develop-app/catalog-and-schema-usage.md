@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84f7ef61-1ef1-46f3-9678-b087aa8e8e34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e10460df120451502d798376453d69d111051ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064411"
 ---
 # <a name="catalog-and-schema-usage"></a>目录和架构使用情况
 数据源不一定支持目录和架构名称作为所有 SQL 语句中的对象名称标识符。 数据源可能支持目录和架构名称在一个或多个 SQL 语句的以下类：数据操作语言 (DML) 语句、 过程调用中，表定义语句、 索引定义语句和特权定义语句。 若要确定名称可以使用哪些目录和架构中的 SQL 语句的类，应用程序调用**SQLGetInfo** SQL_CATALOG_USAGE 和 SQL_SCHEMA_USAGE 选项。

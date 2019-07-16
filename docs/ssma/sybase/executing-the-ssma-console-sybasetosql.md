@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029151"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>执行 SSMA 控制台 (SybaseToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。 接下来的几节详细介绍相同。  
@@ -372,7 +371,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 > [!NOTE]  
 > 设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
-### <a name="map-schema"></a>map-schema  
+### <a name="map-schema"></a>映射架构  
 此命令提供的架构映射的源数据库到目标架构。  
   
 -   `source-schema` 指定要迁移的源架构。  
@@ -393,7 +392,7 @@ sql-server-schema="<target-schema>"/>
 > [!NOTE]  
 > 设置的迁移命令的默认控制台输出是使用不进行详细的错误报告的完整的输出报表：在源对象树的根节点的唯一摘要。  
   
-### <a name="synchronize-target"></a>synchronize-target  
+### <a name="synchronize-target"></a>同步目标  
 此命令将目标对象与目标数据库同步。  
  
 如果对源数据库执行此命令时，遇到错误。  
@@ -410,7 +409,7 @@ sql-server-schema="<target-schema>"/>
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 -   `report-errors-to:` 指定为同步操作 （可选属性） 的错误报告的位置。 如果仅指定文件夹路径，然后将文件按名称**TargetSynchronizationReport.XML**创建。  
   
@@ -471,7 +470,7 @@ fail-script>" (optional)
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 -   `report-errors-to:` 指定刷新操作 （可选属性） 的错误报告的位置。 如果仅指定文件夹路径，然后将文件按名称**SourceDBRefreshReport.XML**创建。  
   

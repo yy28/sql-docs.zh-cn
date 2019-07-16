@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38b3da74ce30799a01f28f3961a4fa0461d7543f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060176"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>项目设置 （同步) (DB2ToSQL)
 同步页**项目设置**对话框中包含的自定义如何 SSMA 加载和刷新到数据库对象，如表和存储的过程设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

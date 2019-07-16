@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 41c8dad185ad310cda38521819fc46146fe57743
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ac063fa59d22308cb90206816555eea8474acca6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009769"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 标量值函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` 指示应生成一个库，而非可执行程序。 可执行程序无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行注册。  
   
 > [!NOTE]  
->  使用 visual c + + 数据库对象编译 **/clr: pure**上不支持执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，此类数据库对象包含标量值函数。  
+>  VisualC++数据库对象使用编译 **/clr: pure**上不支持执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，此类数据库对象包含标量值函数。  
   
  用于注册程序集和 UDF 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询及示例调用如下：  
   

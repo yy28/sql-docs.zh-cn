@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 126a419f52ee88349d1d64fcfe756fcb3681c03a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62745269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069183"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "62745269"
  新的连接行为由客户端实现，因此这种行为不特定于某个版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-servers-and-delegation"></a>链接服务器和委托  
- 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 @provstr 参数可用于指定服务器和故障转移伙伴的 SPN。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：它是更简单且更可靠地建立使用 Kerberos 身份验证的连接。  
+ 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 @provstr 参数可用于指定服务器和故障转移伙伴的 SPN  。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：它是更简单且更可靠地建立使用 Kerberos 身份验证的连接。  
   
  使用链接服务器的委托要求 Kerberos 身份验证。  
   

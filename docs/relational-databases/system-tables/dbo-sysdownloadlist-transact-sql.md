@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061188"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含所有目标服务器的下载指令队列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|对提供行的自然插入顺序的列进行标识。|  
 |**source_server**|**sysname**|源服务器的名称。|  
-|**operation_code**|**tinyint**|作业的操作代码：<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = 开始<br /><br /> **5** = STOP|  
+|**operation_code**|**tinyint**|作业的操作代码：<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = 开始<br /><br /> **5** = 停止|  
 |**object_type**|**tinyint**|对象类型代码。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|对象标识号。|  
 |**target_server**|**sysname**|目标服务器的名称。|  

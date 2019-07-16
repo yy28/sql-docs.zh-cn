@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196717"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定将在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的列中输入的默认值。 如果您没有分配默认值，并且将该列保留为空白，则：  
@@ -45,7 +45,7 @@ ms.locfileid: "54100662"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   如果“默认值”字段中的项替换绑定的默认值（以不带圆括号的形式显示），则将提示你解除对默认值的绑定，并将其替换为新的默认值。  
+-   如果“默认值”  字段中的项替换绑定的默认值（以不带圆括号的形式显示），则将提示你解除对默认值的绑定，并将其替换为新的默认值。  
   
 -   若要输入文本字符串，请用单引号 (') 将值括起来；不要使用双引号 (")，因为双引号已保留用于带引号的标识符。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "54100662"
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>指定列的默认值  
   
-1.  在“对象资源管理器”中，右键单击要更改其小数位数的列所在的表，再单击“设计”。  
+1.  在“对象资源管理器”  中，右键单击要更改其小数位数的列所在的表，再单击“设计”  。  
   
 2.  选择要为其指定默认值的列。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54100662"
     > [!NOTE]  
     >  若要输入数值默认值，请输入该数字。 对于对象或函数，请输入其名称。 对于字母数字默认值，请输入该值，两边用单引号引起来。  
   
-4.  在“文件”菜单上，单击“保存”以保存表名。  
+4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +79,9 @@ ms.locfileid: "54100662"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     CREATE TABLE dbo.doc_exz ( column_a INT, column_b INT) ;  

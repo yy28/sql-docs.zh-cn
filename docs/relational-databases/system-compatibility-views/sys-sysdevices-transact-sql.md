@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: be4c586e3a3bdf4387601d1221bd7afeab852677
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cbd14a7ce8dd1cfb1571874a83a615065200014
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053519"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,15 +35,15 @@ ms.locfileid: "47595295"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|备份文件或数据库文件的逻辑名称。|  
-|size|**int**|以两千字节 (KB) 页为单位的文件大小。|  
+|**name**|**sysname**|备份文件或数据库文件的逻辑名称。|  
+|size |**int**|以两千字节 (KB) 页为单位的文件大小。|  
 |**低**|**int**|维护该列只是为了向后兼容。|  
 |**高**|**int**|维护该列只是为了向后兼容。|  
 |**status**|**smallint**|指示设备类型的位图：<br /><br /> 1 = 默认磁盘<br /><br /> 2 = 物理磁盘<br /><br /> 4 = 逻辑磁盘<br /><br /> 8 = 跳过标头<br /><br /> 16 = 备份文件<br /><br /> 32 = 串行写<br /><br /> 4096 = 只读|  
 |**cntrltype**|**smallint**|控制器类型：<br /><br /> 0 = 非 CD-ROM 数据库文件<br /><br /> 2 = 磁盘备份文件<br /><br /> 3 - 4 = 软盘备份文件<br /><br /> 5 = 磁带备份文件<br /><br /> 6 = 命名管道文件|  
-|**phyname**|nvarchar(260)|物理文件的名称。|  
+|**phyname**|nvarchar(260) |物理文件的名称。|  
   
 ## <a name="see-also"></a>请参阅  
  [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

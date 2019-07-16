@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23234a490f664c4be0811152b2b77ae7c0b73761
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069834"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>基于文件的驱动程序诊断示例
 基于文件的驱动程序充当 ODBC 驱动程序和数据源同时。 在 ODBC 连接并作为数据源，它会因此生成错误和警告都作为一个组件。 因为它也是接口与驱动程序管理器的组件，其格式，并返回参数**SQLGetDiagRec**。  

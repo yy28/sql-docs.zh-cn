@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a56efcc95965d3af9d01f618baba416a65226ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017699"
 ---
 # <a name="msmergegenhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_genhistory**表订阅服务器 （在保持期内） 所了解的每个生成占一行。 用于避免在交换时发送公用生成，并使从备份还原的订阅服务器重新同步。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|由订阅服务器的生成标识的更改的全局标识符。|  
 |**pubid**|**uniqueidentifier**|发布标识符。|  
-|**生成**|**bigint**|代值。|  
+|**generation**|**bigint**|代值。|  
 |**art_nick**|**int**|项目的别名。|  
 |**昵称**|**varbinary(1001)**|已悉知具有此生成的其他订阅服务器的别名列表。 用来避免将生成发送给已看到那些更改的订阅服务器。 别名列表中的别名按顺序排序，以便提高搜索效率。 如果别名数目超过此字段的容量，将不会从此优化中获益。|  
 |**coldate**|**datetime**|将当前生成添加到表时的日期。|  

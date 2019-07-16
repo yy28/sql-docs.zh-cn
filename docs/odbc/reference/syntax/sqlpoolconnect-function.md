@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 297c856cc2481a6d3266d7654797f81b9b9f5c11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005799"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 函数
 **符合性**  

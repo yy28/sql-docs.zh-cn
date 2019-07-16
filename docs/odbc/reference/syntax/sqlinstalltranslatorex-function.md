@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57a2fb53226af9aeb6e546f6109a3e182ffc754f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019005"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函数
 **符合性**  
@@ -56,7 +55,7 @@ BOOL SQLInstallTranslatorEx(
   
  **转换器**并**安装程序**关键字必须包含在*lpszTranslator*字符串。 DLL 列出与翻译**转换器**关键字和转换器安装程序 DLL 的下列出了带有**安装程序**关键字。 每个对终止 NULL 字节，并且整个列表终止 NULL 字节。 （也就是说，两个 NULL 字节标记列表的末尾。）格式*lpszTranslator*如下所示：  
   
- \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
+ \0Translator=*转换器 DLL 文件名*\0[Setup=*安装程序 DLL 文件名*\0]\0  
   
  *lpszPathIn*  
  [输入]转换器将在安装或 null 指针的完整路径。 如果*lpszPath*是 null 指针，转换器将安装在系统目录中。  
@@ -88,7 +87,7 @@ BOOL SQLInstallTranslatorEx(
 ## <a name="diagnostics"></a>诊断  
  当**SQLInstallTranslatorEx**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|无效缓冲区长度|*LpszPathOut*参数不是足够大以包含输出路径。 在缓冲区中包含的被截断的路径。<br /><br /> *CbPathOutMax*参数为 0，并且*fRequest*参数为 ODBC_INSTALL_COMPLETE。|  

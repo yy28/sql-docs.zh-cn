@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065379"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -94,7 +93,7 @@ ProductName
 WITH FILTER(EXISTS (Products))  
 ```  
   
-### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>示例查询 1：从挖掘结构返回列  
+### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>示例查询 1:从挖掘结构返回列  
  以下示例查询返回作为挖掘模型一部分定义的 `CustomerName` 列和 `Age` 列。 但是，该查询还返回 `Age` 列，该列是结构的一部分，但不是挖掘模型的一部分。  
   
 ```  
@@ -104,7 +103,7 @@ WHERE Age > 30
   
  请注意，对将事例限制为 30 岁以上客户的行的筛选发生在模型级别。 因此，此表达式不会返回包含在结构数据中但模型不使用的事例。 由于用于创建模型的筛选条件 (`EXISTS (Products)`) 仅将事例限制为购买产品的那些客户，因此结构中还可能存在该查询没有返回的事例。  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>示例查询 2：对结构列应用筛选器  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>示例查询 2:对结构列应用筛选器  
  以下示例查询不仅返回模型列 `CustomerName` 和 `Age` 以及嵌套表 `Products`，而且返回嵌套表中不是模型一部分的 `Quantity` 列的值。  
   
 ```  
@@ -115,7 +114,7 @@ WHERE StructureColumn('Occupation') = 'Architect'
   
  请注意，在此示例中，筛选器应用于要将事例限制为职业是架构师的客户的结构列 (`WHERE StructureColumn('Occupation') = 'Architect'`)。 由于创建模型时模型筛选条件始终应用于事例，因此只有在 `Products` 表中至少包含一个合格行的事例才包含在模型事例中。 因此，将应用针对嵌套表 `Products` 的筛选器和针对事例 `('Occupation')` 的筛选器。  
   
-### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>示例查询 3：从嵌套表中选择列  
+### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>示例查询 3:从嵌套表中选择列  
  以下示例查询从模型中返回用作培训事例的客户的姓名。 对于每个客户，查询还返回包含购买详细信息的嵌套表。 虽然该模型包含`ProductName`列中，该模型不使用的值`ProductName`列。 该模型仅检查是否以常规购买产品 (`NOT``OnSale`) 价格。 此查询不仅返回产品名称，而且返回未包含在模型中的购买的数量。  
   
 ```  
@@ -126,7 +125,7 @@ FROM MyModel.CASES
   
  请注意，不能返回 `ProductName` 列或 `Quantity` 列，除非对挖掘模型启用钻取。  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>示例查询 4：筛选和返回嵌套的表中的列  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>示例查询 4:筛选和返回嵌套的表中的列  
  以下示例查询返回包含在挖掘结构中但不包含在模型中的事例和嵌套表列。 该模型已经针对是否为 `OnSale` 产品进行了筛选，但此查询将针对挖掘结构列 `Quantity` 添加筛选器：  
   
 ```  

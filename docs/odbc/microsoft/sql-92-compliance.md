@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063372"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 符合性
 ODBC 桌面数据库驱动程序和基础 Microsoft Jet 引擎不是 SQL-92 兼容。 它们支持已在 SQL-92 中定义的许多功能。 在 SQL-92 中不支持在驱动程序支持某些功能。 有关详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。 两者之间的主要差异如下：  
