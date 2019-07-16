@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62473893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066697"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>从数据库刷新 (MySQLToSQL)
 **从数据库刷新**对话框允许您选择要从 MySQL 数据库刷新的对象。 在对话框中的行进行了颜色编码基于元数据的状态：  

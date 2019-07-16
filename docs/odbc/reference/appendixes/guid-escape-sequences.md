@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947584"
 ---
 # <a name="guid-escape-sequences"></a>GUID 转义序列
 ODBC 使用 GUID 文字的转义序列。 此转义序列的语法如下所示：  
@@ -32,12 +31,12 @@ ODBC 使用 GUID 文字的转义序列。 此转义序列的语法如下所示�
 ## <a name="remarks"></a>备注  
  BNF 表示法中的语法是按如下所示：  
   
- *ODBC-guid-escape* ::=  
+ *Guid 的 ODBC 转义*:: =  
      *ODBC esc 启动器 guid* '*guid 值* *ODBC esc 终止符*  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC esc 启动器*:: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC esc 终止符*:: =}  
   
  *guid-value* ::= *clock-low-value guid-separator clock-middle-value guid-separator clock-high-value guid-separator clock-seq-value guid-separator node-value*  
   

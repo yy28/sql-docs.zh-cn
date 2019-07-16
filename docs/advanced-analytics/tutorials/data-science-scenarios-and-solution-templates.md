@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962295"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,14 +79,14 @@ ms.locfileid: "58645489"
 
 [能源需求预测与 SQL Server R Services 模板](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**什么：**:需求预测是一个重要问题包括能源、 零售和服务的各个领域。 准确需求预测可帮助公司进行规划，资源分配的更好地生产并做出其他重要业务决策。 在能源行业，需求预测是减少能源存储成本和平衡供给和需求的关键。
+**什么：** :需求预测是一个重要问题包括能源、 零售和服务的各个领域。 准确需求预测可帮助公司进行规划，资源分配的更好地生产并做出其他重要业务决策。 在能源行业，需求预测是减少能源存储成本和平衡供给和需求的关键。
 
 **如何：** 此模板使用 SQL Server R Services 预测对电力的需求。 用于预测的模型是基于的随机林回归模型**rxDForest**、 高性能机器学习算法，包括 Microsoft R Server 中。 解决方案包括一个需求模拟器、用于定型模型的所有 R 和 T-SQL 代码以及可用于生成和报告预测的存储过程。 
 
 
 ## <a name="bkmk_HowTo"></a>如何使用模板
 
-要下载每个模板中包含的文件，可以使用 GitHub 命令，或者可以打开链接，然后单击“下载 Zip 文件”将所有文件都保存到计算机。  下载后，解决方案通常会包含这些文件夹：
+要下载每个模板中包含的文件，可以使用 GitHub 命令，或者可以打开链接，然后单击“下载 Zip 文件”  将所有文件都保存到计算机。  下载后，解决方案通常会包含这些文件夹：
   
 -   **数据**:包含每个应用程序的示例数据。
   

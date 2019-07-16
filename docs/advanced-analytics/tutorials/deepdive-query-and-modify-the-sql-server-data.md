@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d2768399ecd3d504e5bc51d4c7cbd151488782a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 35583815be7c89707efcf9bb31488cd80e3836e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962180"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查询和修改 SQL Server 数据 （SQL Server 和 RevoScaleR 教程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,7 +69,7 @@ Var 9: fraudRisk, Type: integer
         "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY")
     ```
 
-2. 接下来，创建名为 ccColInfo 的列信息对象，该对象指定现有整数值到分类级别（州名的缩写）的映射。
+2. 接下来，创建名为 ccColInfo  的列信息对象，该对象指定现有整数值到分类级别（州名的缩写）的映射。
   
     此语句还为 gender 和 cardholder 创建因子变量。
   
@@ -103,10 +102,10 @@ Var 9: fraudRisk, Type: integer
     rowsPerRead = sqlRowsPerRead)
     ```
   
-    - 对于 table 参数，可传入变量 sqlFraudTable，其中包含之前创建的数据源。
-    - 对于 colInfo 参数，可传入 ccColInfo 变量，其中包含列数据类型和因子级别。
+    - 对于 table  参数，可传入变量 sqlFraudTable  ，其中包含之前创建的数据源。
+    - 对于 colInfo  参数，可传入 ccColInfo  变量，其中包含列数据类型和因子级别。
 
-4.  现在可使用函数 rxGetVarInfo 查看新数据源中的变量。
+4.  现在可使用函数 rxGetVarInfo  查看新数据源中的变量。
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)

@@ -2,26 +2,25 @@
 title: 证书预配-分析平台系统 |Microsoft Docs
 description: 分析平台系统中预配的证书。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 98fffc189aab674f46030086a8277395e84f7f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0da49afe13ab0f8cc92e8dd58e78f40564ff53c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960222"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>分析平台系统中预配证书
 **PDW 证书预配**页的分析平台系统**Configuration Manager**导入或删除 PDW 所使用的证书。 
 
 使用，对通信进行加密的证书可以帮助保护通信到控制节点通过 SQL Server 客户端，使用 SQL Server PDW 驱动程序的工具[管理员控制台](monitor-the-appliance-by-using-the-admin-console.md)，和 Integration Services 将加载。 
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
 之前安装证书，请执行以下操作：  
   
 1.  获取安全证书。 如果需要有关如何获取安全证书的详细信息，请联系 Microsoft 支持部门。  

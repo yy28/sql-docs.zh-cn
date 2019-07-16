@@ -1,5 +1,5 @@
 ---
-title: 复制挖掘模型的视图 |Microsoft 文档
+title: 复制挖掘模型的视图 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 685d4ce90312e9f34dcf9b8a6e0c94b419f37ee4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210164"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>复制挖掘模型的视图
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,15 +53,15 @@ ms.locfileid: "34014234"
   
 1.  从 **“挖掘模型查看器”** 选项卡上的 **“挖掘模型”** 列表中，选择要查看的挖掘模型。  
   
-2.  从“查看器”下拉列表中，选择“Microsoft 一般内容树查看器”。  
+2.  从“查看器”  下拉列表中，选择“Microsoft 一般内容树查看器”  。  
   
-3.  在“节点标题(唯一 ID)”窗格中，单击一个节点。  
+3.  在“节点标题(唯一 ID)”  窗格中，单击一个节点。  
   
-4.  右键单击“节点详细信息”窗格，然后选择“全选”。  
+4.  右键单击“节点详细信息”  窗格，然后选择“全选”  。  
   
-5.  右键再次单击“节点详细信息”窗格，然后选择“复制”。  
+5.  右键再次单击“节点详细信息”  窗格，然后选择“复制”  。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

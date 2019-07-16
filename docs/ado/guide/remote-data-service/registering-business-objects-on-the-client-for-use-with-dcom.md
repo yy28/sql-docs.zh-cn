@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bbd0266dac1edc66bf70a21e51c9967af4d5fc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922359"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>在用于 DCOM 的客户端中注册业务对象
 自定义业务对象需要确保客户端可以将其程序名称 (ProgId) 映射到可以通过 DCOM 使用的标识符 (CLSID)。 出于此原因，DCOM 对象的 ProgID 必须为客户端的注册表中，将映射到的服务器端业务对象的类 ID。 对于其他支持的协议 （HTTP、 HTTPS 和进程内），这是不必要。  

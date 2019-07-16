@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a8b746d46bc98066c14f4e0be88417f96a818db3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920582"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes 和 Name 属性示例 (VB)
 此示例中显示的值[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[字段](../../../ado/reference/ado-api/field-object.md)，以及[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。 它使用[名称](../../../ado/reference/ado-api/name-property-ado.md)属性来显示每个名称**字段**并**属性**对象。  

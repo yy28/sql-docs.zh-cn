@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206788"
 ---
 # <a name="process-odbc-errors-odbc"></a>处理 ODBC 错误 (ODBC)
   可以使用两个 ODBC 函数调用来检索 ODBC 消息：[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)并[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 `SQLGetDiagField` 来检索。  
@@ -26,7 +26,7 @@ ms.locfileid: "53354718"
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  此示例显示一个简单的错误处理程序，它调用 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 以获取标准 ODBC 信息。 然后，该示例测试是否存在有效连接，如果存在，它会对特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的诊断字段调用 `SQLGetDiagField`。 IA64 平台不支持此示例。  
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  

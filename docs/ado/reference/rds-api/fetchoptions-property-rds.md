@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a85f6938ec0f97ff69eab1782c0a24b78a5a6e8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964127"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 属性 (RDS)
 指示异步获取数据的类型。  
@@ -30,7 +29,7 @@ ms.locfileid: "66712689"
 ## <a name="setting-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
   
-|常量|Description|  
+|常量|描述|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|中的所有记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)在控制返回到应用程序之前提取。 完整**记录集**提取之前允许该应用程序以使用它执行任何操作。|  
 |**adcFetchBackground**|只要已提取的记录的第一批，控件可以返回到应用程序。 后续读取**记录集**尝试访问未获取第一个批处理中的记录将延迟到实际提取所发现的记录，同时控制将返回到应用程序。|  

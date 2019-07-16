@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990709"
 ---
 # <a name="numeric-literal-syntax"></a>数值语法
 以下语法用于 ODBC 中的数字文本：  
@@ -33,17 +32,17 @@ ms.locfileid: "63181287"
   
  *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
- *sign* ::= *plus-sign &#124; minus-sign*  
+ *登录*:: =*加号&#124;负号*  
   
- *approximate-numeric-literal* ::= *mantissa E exponent*  
+ *近似数值文字*:: =*尾数 E 指数*  
   
  *mantissa* ::= *exact-numeric-literal*  
   
- *exponent* ::= *signed-integer*  
+ *指数*:: =*已签名整数*  
   
- *signed-integer* ::= [*sign*] *unsigned-integer*  
+ *已签名整数*:: = [*符号*]*无符号整数*  
   
- *unsigned-integer* ::= *digit...*  
+ *无符号整数*:: =*数字...*  
   
  *plus-sign* ::= *+*  
   

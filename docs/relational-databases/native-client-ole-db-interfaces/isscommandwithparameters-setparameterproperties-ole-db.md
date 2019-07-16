@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01d61838d1267b54eedd1c389c198d50fa52f7d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e4ec4a160920d8490cb7578de76656a1253adac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63052848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050958"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +75,7 @@ HRESULT SetParameterProperties(
   
  从数据库引擎中的改进[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 isscommandwithparameters:: Setparameterproperties 若要获取的预期的结果更准确描述。 这些更准确的结果可能不同于 isscommandwithparameters:: Setparameterproperties 的早期版本中返回的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
-|成员|Description|  
+|成员|描述|  
 |------------|-----------------|  
 |iOrdinal |所传递参数的序号。|  
 |*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量  。|  

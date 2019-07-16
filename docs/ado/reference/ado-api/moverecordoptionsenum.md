@@ -1,5 +1,5 @@
 ---
-title: MoveRecordOptionsEnum | Microsoft Docs
+title: MoveRecordOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8119b553ba7d85b9a3e1cabc49975967a0a751af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932048"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 指定的行为[记录](../../../ado/reference/ado-api/record-object-ado.md)对象[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)方法。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|默认值。 执行默认移动操作：如果目标文件或目录已存在，并且该操作将更新超文本链接，该操作将失败。|  
 |**adMoveOverWrite**|1|将覆盖目标文件或目录，即使它已存在。|  

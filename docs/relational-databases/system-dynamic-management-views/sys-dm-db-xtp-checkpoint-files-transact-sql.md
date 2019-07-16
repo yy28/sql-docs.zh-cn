@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026908"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   显示有关检查点文件的信息，包括文件大小、物理位置和事务 ID。  
   
-> **注意：** 未关闭，s 的状态列的当前检查点`ys.dm_db_xtp_checkpoint_files`的新文件将为 UNDER CONSTRUCTION。 检查点会自动关闭时没有足够的事务日志增长，因为最后一个检查点，或者如果发出`CHECKPOINT`命令 ([检查点&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
+> **注意**：未关闭，s 的状态列的当前检查点`ys.dm_db_xtp_checkpoint_files`的新文件将为 UNDER CONSTRUCTION。 检查点会自动关闭时没有足够的事务日志增长，因为最后一个检查点，或者如果发出`CHECKPOINT`命令 ([检查点&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
   
  内存优化文件组在内部使用仅限追加的文件来存储内存中表的插入和删除行。 有两种类型的文件。 数据文件包含插入的行，而差异文件包含对已删除的行的引用。 
   
@@ -42,9 +41,9 @@ ms.locfileid: "52510870"
  有关详细信息，请参阅[创建和管理存储的内存优化对象](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本  
- 下表描述的列`sys.dm_db_xtp_checkpoint_files`开头**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
+ 下表描述的列`sys.dm_db_xtp_checkpoint_files`开头 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
-|列名|类型|Description|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 中与 file_id 联接[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|容器，该根、 数据或差异文件的 GUID。 与 file_guid sys.database_files 表中联接。|  
@@ -65,19 +64,19 @@ ms.locfileid: "52510870"
 |end_checkpoint_id|**bigint**|最终检查点的 ID。|  
 |last_updated_checkpoint_id|**bigint**|更新此文件的最后一个检查点的 ID。|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; 密钥 1 加密<br /><br /> 2 = &GT; 加密使用密钥 2。 仅对活动文件有效。|  
+|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > 密钥 1 加密<br /><br /> 2 = > 加密使用密钥 2。 仅对活动文件有效。|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表描述的列`sys.dm_db_xtp_checkpoint_files`，对于**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
+ 下表描述的列`sys.dm_db_xtp_checkpoint_files`，对于 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
-|列名|类型|Description|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|数据或差异文件所属的容器 ID（在 sys.database_files 中表示为类型为 FILESTREAM 的文件）。 中与 file_id 联接[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)。|  
 |container_guid|**uniqueidentifier**|数据或差异文件所属的容器的 GUID。|  
 |checkpoint_file_id|**GUID**|数据或差异文件的 ID。|  
 |relative_file_path|**nvarchar(256)**|数据或差异文件的路径（相对于容器的位置）。|  
 |file_type|**tinyint**|0 表示数据文件。<br /><br /> 1 表示差异文件。<br /><br /> 如果状态列设置为 7，则为 NULL。|  
-|file_type_desc|**nvarchar(60)**|文件类型：如果状态列设置为 7，则为 DATA_FILE、DELTA_FILE 或 NULL。|  
+|file_type_desc|**nvarchar(60)**|文件类型：DATA_FILE、 DELTA_FILE 或 NULL，如果状态列设置为 7。|  
 |internal_storage_slot|**int**|内部存储数组中的文件的索引。 如果状态列不是 2 或 3，则为 NULL。|  
 |checkpoint_pair_file_id|**uniqueidentifier**|对应的数据或差异文件。|  
 |file_size_in_bytes|**bigint**|所用文件的大小。 如果状态列设置为 5、6 或 7，则为 NULL。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2c229d31941d5cef0da253545cecd7d1496ee4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076826"
 ---
 # <a name="deferred-fields"></a>延迟的字段
 值*延迟的字段*时设置，但该驱动程序将保存的延迟影响的变量的地址不使用。 为应用程序参数描述符，驱动程序使用的变量的内容时对调用**SQLExecDirect**或**SQLExecute**。 为应用程序行描述符，驱动程序在提取时使用的变量的内容。  

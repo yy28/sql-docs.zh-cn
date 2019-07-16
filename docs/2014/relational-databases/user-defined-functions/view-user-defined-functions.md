@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211688"
 ---
 # <a name="view-user-defined-functions"></a>查看用户定义函数
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]可以获取有关用户定义函数的定义或属性的信息。 您可能需要查看函数的定义，以理解其数据从源表中派生的方式或查看函数所定义的数据。  
@@ -66,9 +66,9 @@ ms.locfileid: "54100552"
   
     -   Aggregate 函数  
   
-4.  右键单击要查看其属性的函数，然后选择“属性”。  
+4.  右键单击要查看其属性的函数，然后选择“属性”  。  
   
-     以下属性将显示在“函数属性 - function_name”对话框。  
+     以下属性将显示在“函数属性 - function_name”对话框   。  
   
      **“数据库”**  
      包含此函数的数据库的名称。  
@@ -115,9 +115,9 @@ ms.locfileid: "54100552"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -156,9 +156,9 @@ ms.locfileid: "54100552"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

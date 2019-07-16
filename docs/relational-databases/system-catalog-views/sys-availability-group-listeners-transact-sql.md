@@ -21,23 +21,22 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041057"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  对于每个 Always On 可用性组中，将返回零行，该值指示没有网络名称与该可用性组，或返回行，每个可用性组侦听器配置在 Windows Server 故障转移群集 (WSFC)群集。 此视图显示从群集中收集的实时配置。  
+  对于每个 AlwaysOn 可用性组，返回零行（指明没有与可用性组关联的网络名称），或为 Windows Server 故障转移群集 (WSFC) 中的每个可用性组侦听程序配置都返回一行。 此视图显示从群集中收集的实时配置。  
   
 > [!NOTE]  
 >  此目录视图不说明 WSFC 群集中定义的 IP 配置的详细信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|可用性组 ID (**group_id**) 从[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)。|  
 |**listener_id**|**nvarchar(36)**|群集资源 ID 的 GUID。|  

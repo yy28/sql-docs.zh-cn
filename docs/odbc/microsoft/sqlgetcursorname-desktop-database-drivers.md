@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 76399d74-1121-4c63-92ee-7d2984ac74af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff6498fc11cb13d9aef818275f636b7267952f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63c5dd6cd20f30281e9cf83c920b85e4f024ad35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003439"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName（桌面数据库驱动程序）
 **SQLGetCursorName**支持，但只能在使用游标库时，因为在驱动程序不支持定位的操作。

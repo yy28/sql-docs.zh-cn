@@ -2,19 +2,18 @@
 title: 获取和配置加载服务器的并行数据仓库 |Microsoft Docs
 description: 本文介绍如何获取和将加载服务器配置为用于提交数据加载到并行数据仓库 (PDW) 的非设备 Windows 系统。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961613"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>获取和并行数据仓库配置加载服务器
 本文介绍如何获取和将加载服务器配置为用于提交数据加载到并行数据仓库 (PDW) 的非设备 Windows 系统。  
@@ -45,7 +44,7 @@ ms.locfileid: "63231103"
   
 -   Windows Server 2012 或 Windows Server 2012 R2。 这些操作系统的系统要求以 FDR 网络适配器。  
   
--   Windows Server 2008 R2. 此 OS 需要 DDR 网络适配器。  
+-   Windows Server 2008 R2。 此 OS 需要 DDR 网络适配器。  
   
 服务器必须使用 EN-US 区域设置，才能使用 dwloader 命令行加载工具。 dwloader 不支持其他区域设置。  
   

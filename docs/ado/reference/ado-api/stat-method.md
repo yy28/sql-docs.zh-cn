@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5f19d1b9ef0dc3b200a895d05728f6985544203b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916872"
 ---
 # <a name="stat-method"></a>Stat 方法
 检索有关的信息[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -43,7 +42,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  指定此方法不返回的某些成员在 STATSTG 结构中，从而节省内存分配操作。 值取自 STATFLAG 枚举。 STATFLAG 枚举具有两个值  
   
-|常量|值|  
+|常量|ReplTest1|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  

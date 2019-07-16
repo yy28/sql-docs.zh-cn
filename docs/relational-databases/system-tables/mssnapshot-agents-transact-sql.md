@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3449893576870b9ff4f02da044a5b86d09cab286
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079958"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsnapshot_agents**表包含一行，为每个快照代理与本地分发服务器相关联。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|快照代理的 ID。|  
-|**名称**|**nvarchar(100)**|快照代理的名称。|  
+|**name**|**nvarchar(100)**|快照代理的名称。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = 事务。<br /><br /> **1** = 快照。<br /><br /> **2** = 合并。|  
 |**local_job**|**bit**|指示在本地分发服务器上是否有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|  
 |**job_id**|**binary(16)**|作业标识号。|  

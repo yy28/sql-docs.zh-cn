@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40677971cc2bc5b97c62aad1e638e52deb24c67e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924740"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>操作非参数化命令
 对于非参数化命令，执行所有提供程序命令和**记录集**命令执行时创建。 如果该命令同步执行的所有**记录集**将完全填充。 如果选择了异步填充模式，填充的状态**记录集**将取决于填充模式和的大小**记录集**。  

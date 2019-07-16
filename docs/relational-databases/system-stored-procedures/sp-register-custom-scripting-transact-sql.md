@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075748"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +40,16 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @type = ] 'type'` 为其注册的自定义存储的过程或脚本的类型。 *类型*是**varchar(16)**，无默认值，并且可以是以下值之一。  
+`[ @type = ] 'type'` 为其注册的自定义存储的过程或脚本的类型。 *类型*是**varchar(16)** ，无默认值，并且可以是以下值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**insert**|复制 INSERT 语句时，将执行注册的自定义存储过程。|  
 |**update**|复制 UPDATE 语句时，将执行注册的自定义存储过程。|  
 |**delete**|复制 DELETE 语句时，将执行注册的自定义存储过程。|  
 |**custom_script**|在数据定义语言 (DDL) 触发器的末尾执行脚本。|  
   
-`[ @value = ] 'value'` 存储的过程或名称和完全限定的路径名称[!INCLUDE[tsql](../../includes/tsql-md.md)]正在注册的脚本文件。 *值*是**nvarchar(1024)**，无默认值。  
+`[ @value = ] 'value'` 存储的过程或名称和完全限定的路径名称[!INCLUDE[tsql](../../includes/tsql-md.md)]正在注册的脚本文件。 *值*是**nvarchar(1024)** ，无默认值。  
   
 > [!NOTE]  
 >  指定为 NULL 来*值*参数将注销以前注册的脚本，这是与运行相同[sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)。  

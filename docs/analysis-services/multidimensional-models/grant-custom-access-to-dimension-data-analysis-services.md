@@ -1,5 +1,5 @@
 ---
-title: 授予对维度数据 (Analysis Services) 的自定义访问权限 |Microsoft 文档
+title: 授予对维度数据 (Analysis Services) 的自定义访问权限 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208858"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   启用对多维数据集的读取访问权限后，可以设置明确允许或拒绝访问维度成员的其他权限（包括包含在度量值维度中的度量值，此维度包含在多维数据集中使用的全部度量值）。 例如，假设有多个经销商类别，您可能想要设置权限以排除某个具体业务类型的数据。 下图是拒绝访问“经销商”维度中“仓库”业务类型的前后对比效果。  
   
- ![数据透视表使用和不使用的维度成员](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "数据透视表使用和不使用的维度成员")  
+ ![数据透视表不包含维度成员与](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "数据透视表使用和不使用的维度成员")  
   
  默认情况下，如果可以读取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中的数据，则自动拥有对该多维数据集关联的所有度量值和维度成员的读取权限。 虽然这种行为可能足够应对许多方案，但有时安全要求需要一个更细化的授权策略，不同用户在同一维度的访问权限级别不同。  
   
@@ -31,12 +31,12 @@ ms.locfileid: "34024724"
 > [!NOTE]  
 >  以下说明假设有一个在 MDX 中发出查询的客户端连接。 如果该客户端使用 DAX（如 Power BI 中的 Power View），则维度安全性在查询结果中不明显。 有关详细信息，请参阅[了解用于多维模型的 Power View](understanding-power-view-for-multidimensional-models.md)。
       
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  并非所有度量值或维度成员都可用于自定义访问方案。 如果某个角色限制访问默认度量值或成员，或者限制访问属于度量值表达式的度量值，则连接将失败。  
   
  **检查对维度安全性的阻碍：默认度量值、默认成员和度量值表达式中使用的度量值**  
   
-1.  在 SQL Server Management Studio，右键单击多维数据集，然后选择**脚本多维数据集作为** | **ALTER To** | **新查询编辑器窗口**。  
+1.  在 SQL Server Management Studio 中，右键单击多维数据集，然后选择**作为多维数据集脚本** | **ALTER To** | **新查询编辑器窗口**。  
   
 2.  搜索 **DefaultMeasure**。 应发现一个针对多维数据集的度量值和一个针对每个透视的度量值。 定义维度安全性时，避免限制访问默认度量值。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "34024724"
   
 ## <a name="basic-dimension-security"></a>基本维度安全性  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例，在对象资源管理器中展开相应数据库的“角色”  ，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
      此角色应已具有对多维数据集的读取访问权限。 如果需要此步骤的帮助信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
-2.  在“维度数据” | “基本”上，选择要设置权限的维度。  
+2.  在“维度数据”   | “基本”  上，选择要设置权限的维度。  
   
 3.  选择属性层次结构。 并非所有属性都可用。 只有那些具有“AttributeHierarchyEnabled”  的属性才出现在  “属性层次结构”列表中。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024724"
 ## <a name="hiding-measures"></a>隐藏度量值  
  在 [授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)中，已介绍了完全隐藏度量值的所有可视方面（不只其单元数据）要求具有对维度成员的权限。 本节将介绍如何拒绝访问度量值的对象元数据。  
   
-1.  上**维度数据** | **基本**，向下的滚动直到多维数据集维度，然后选择维度列表**度量值维度**。  
+1.  上**维度数据** | **基本**，向下的滚动维度列表直到到达多维数据集维度，然后选择**度量值维度**。  
   
 2.  从度量值列表中，清除不应对通过该角色连接的用户显示的度量值复选框。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "34024724"
 >  检查先决条件，了解如何标识可能中断角色安全性的度量值。  
   
 ## <a name="advanced-dimension-security"></a>高级维度安全性  
- 如果您具备 MDX 专业知识，另一种方法则是编写 MDX 表达式，设置允许或拒绝访问的成员的标准。 依次单击“创建角色” | “维度数据” | “高级”来提供脚本。  
+ 如果您具备 MDX 专业知识，另一种方法则是编写 MDX 表达式，设置允许或拒绝访问的成员的标准。 依次单击“创建角色”   | “维度数据”   | “高级”  来提供脚本。  
   
  可以使用 MDX 生成器编写 MDX 语句。 有关详细信息，请参阅 [MDX 生成器（Analysis Services -多维数据）](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)。 **“高级”** 选项卡包含以下选项：  
   
- **属性**  
+ **Attribute**  
  选择要管理成员安全性的属性。  
   
  **允许的成员集**  
@@ -87,7 +87,7 @@ ms.locfileid: "34024724"
  创建 AllowedSet 会在该属性加入多层层次结构时产生波纹效果。 例如，假设角色允许访问“华盛顿州”（假设这样一个场景：角色为公司华盛顿州销售部门授予权限）。 对于通过该角色连接的用户，包括上级（美国）或下级（西雅图和雷德蒙德）的查询将只能查看包括华盛顿州在内的链中的成员。 由于其他州未获得显式允许，因此效果将如同其被拒绝访问一样。  
   
 > [!NOTE]  
->  如果定义一个空集 ({}) 的属性成员属性的任何成员都将可见到数据库角色。 缺少允许集不会被解释为空集。  
+>  如果定义了一个空集 ({}) 的属性成员的属性的任何成员都将对数据库角色可见。 缺少允许集不会被解释为空集。  
   
  **拒绝的成员集**  
  DeniedSet 属性可以解析为“无成员”、“全部成员”（默认）或“部分属性成员”。 当拒绝集只包含一组特定属性成员时，将仅对那些特定成员和下级（如果该属性位于多层层次结构中）拒绝访问数据库角色。 以华盛顿州销售部门为例。 如果“华盛顿”位于 DeniedSet，则通过该角色连接的用户可以看到除华盛顿及其下级属性以外的所有其他州。  
@@ -115,10 +115,10 @@ ms.locfileid: "34024724"
  **检查**  
  单击以测试此页面上定义的 MDX 语法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [授予多维数据集或模型权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授予对单元数据的自定义访问权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [授予对数据挖掘结构和模型的权限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予对数据源对象 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予单元数据的自定义访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予数据源对象的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055230"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>参数  
 `[ @class = ] 'class'` 有关哪些请求信息的类。 *类*是**varchar(8)** ，默认值为**作业**。 *类*可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**JOB**|提供有关作业类别的信息。|  
-|**ALERT**|提供有关警报类别的信息。|  
+|**发出警报**|提供有关警报类别的信息。|  
 |**运算符**|提供有关操作员类别的信息。|  
   
 `[ @type = ] 'type'` 为其请求信息的类别的类型。 *类型*是**varchar(12)** ，默认值为 NULL，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**LOCAL**|本地作业类别。|  
 |**MULTI -SERVER**|多服务器作业类别。|  
@@ -69,19 +68,19 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>结果集  
  当 **@suffix** 是**0**， **sp_help_category**返回以下结果集：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|类别 ID|  
 |**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = 无|  
-|**名称**|**sysname**|类别名称|  
+|**name**|**sysname**|类别名称|  
   
  当 **@suffix** 是**1**， **sp_help_category**返回以下结果集：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|类别 ID|  
 |**category_type**|**sysname**|类别的类型。 之一**本地**，**多服务器**，或**NONE**|  
-|**名称**|**sysname**|类别名称|  
+|**name**|**sysname**|类别名称|  
   
 ## <a name="remarks"></a>备注  
  **sp_help_category**必须从运行**msdb**数据库。  
@@ -129,7 +128,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

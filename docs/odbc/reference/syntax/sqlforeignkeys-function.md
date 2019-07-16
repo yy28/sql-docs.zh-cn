@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1aeaef9b120a0bd4be008adafe8e9a24724279a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58f69b9f3088c063faa39da677f2865abdfc6476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003010"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函数
 **符合性**  
@@ -118,7 +117,7 @@ SQLRETURN SQLForeignKeys(
 ## <a name="diagnostics"></a>诊断  
  当**SQLForeignKeys**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLForeignKeys** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  

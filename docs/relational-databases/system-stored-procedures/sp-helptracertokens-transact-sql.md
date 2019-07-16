@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e365c4a71c7bfdb5deece18e19c9950dd2ddf45
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 83d5789fed1ee9ff8d92d549feeb1ae47a8ed38c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048231"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helptracertokens [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**tracer_id**|**int**|标识跟踪令牌记录。|  
 |**publisher_commit**|**datetime**|在发布服务器的发布数据库中提交标记记录的日期和时间。|  

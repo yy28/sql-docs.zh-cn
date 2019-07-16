@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24784fd337a80b7fd545cca04f76ad9a548ebe6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001295"
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   数据库中的每个分配单元都在表中占一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|分配单元的 ID。 是在数据库中唯一。|  
 |type|**tinyint**|分配单元的类型：<br /><br /> 0 = 已删除<br /><br /> 1 = 行内数据（所有数据类型，但 LOB 数据类型除外）<br /><br /> 2 = 大型对象 (LOB) 数据 (**文本**， **ntext**，**图像**， **xml**，大值类型和 CLR 用户定义类型)<br /><br /> 3 = 行溢出数据|  
@@ -47,7 +46,7 @@ ms.locfileid: "47613165"
 > [!NOTE]  
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，删除或截断大型对象之后立即由 sys.allocation_units 返回的值可能不会反映实际可用的磁盘空间。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc968281f9aec0cc86f7b5f8f92fb035d9854af9
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47443141"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209543"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,18 +33,18 @@ ms.locfileid: "47443141"
 ## <a name="logon-account-recommendations"></a>登录帐户推荐  
  在故障转移群集中，Analysis Services 的所有实例应配置为使用 Windows 域用户帐户。 将相同帐户分配给所有实例。 有关详情，请参见 [如何群集 Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) 。  
   
- 单独的实例应使用默认虚拟帐户，针对默认实例使用 **NT Service\MSSQLServerOLAPService** ，或针对命名实例使用 **NT Service\MSOLAP$**_instance-name_ 。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
+ 单独的实例应使用默认虚拟帐户，针对默认实例使用 **NT Service\MSSQLServerOLAPService** ，或针对命名实例使用 **NT Service\MSOLAP$** _instance-name_ 。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>向 Analysis Services 授予权限  
  此部分阐释了 Analysis Services 用于本地、内部操作所需的权限，例如，启动可执行程序、读取配置文件和从数据目录加载数据库。 若要查找关于设置外部数据访问的权限以及与其他服务和应用程序的互操作性的指南，请进一步参阅此主题中的 [授予特定服务器操作的其他权限](#bkmk_tasks) 。  
   
  对于内部操作，Analysis Services 中的权限持有者不是登录帐户，而是安装程序创建的包含 Per-service SID 的本地 Windows 安全组。 向安全组分配权限与以前版本的 Analysis Services 一致。 此外，登录帐户可能随时间而变化，但是 Per-service SID 和本地安全组在服务器安装的生存期内保持不变。 对于 Analysis Services，这使得安全组（而不是登录帐户）成为持有权限的更好选择。 只要手动向服务实例授予权限（无论是文件系统权限还是 Windows 特权），请务必将权限授予为服务器实例创建的本地安全组。  
   
- 安全组的名称遵循某种模式。 前缀始终是 **SQLServerMSASUser$**，后跟计算机名，以实例名结尾。 默认实例是 **MSSQLSERVER**。 命名实例是在设置过程中提供的名称。  
+ 安全组的名称遵循某种模式。 前缀始终是 **SQLServerMSASUser$** ，后跟计算机名，以实例名结尾。 默认实例是 **MSSQLSERVER**。 命名实例是在设置过程中提供的名称。  
   
  可以在本地安全设置中查看此安全组：  
   
--   运行 compmgmt.msc |**本地用户和组** | **组** | **SQLServerMSASUser$**\<服务器名称 >**$MSSQLSERVER** （对于默认实例）。  
+-   运行 compmgmt.msc |**本地用户和组** | **组** | **SQLServerMSASUser$** \<服务器名称 > **$MSSQLSERVER** （对于默认实例）。  
   
 -   双击安全组，查看其成员。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47443141"
   
 |||  
 |-|-|  
-|**增加进程工作集** (SeIncreaseWorkingSetPrivilege)|默认情况下，此特权通过 **用户** 安全组对所有用户可用。 如果你通过移除此组的特权来锁定服务器，Analysis Services 可能无法启动，并且将记录此错误：“客户端没有所需的特权。” 此错误发生后，通过将特权授予正确的 Analysis Services 安全组，将特权还原到 Analysis Services。|  
+|**增加进程工作集** (SeIncreaseWorkingSetPrivilege)|默认情况下，此特权通过 **用户** 安全组对所有用户可用。 如果通过移除此组的特权来锁定服务器停机，Analysis Services 可能无法启动，记录此错误："所需的权限不具有客户端。" 此错误发生后，通过将特权授予正确的 Analysis Services 安全组，将特权还原到 Analysis Services。|  
 |**调整进程的内存配额** (SeIncreaseQuotaPrivilege)|此特权用于当进程因受制于为实例建立的内存阀值而没有足够资源来完成其执行时请求更多内存。|  
 |**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但你通过将 **VertiPaqPagingPolicy** 设置时为 0 来阻止其使用 Windows 分页。<br /><br /> 将**VertiPaqPagingPolicy** 设置为 1（默认情况下），指示表格服务器实例使用 Windows 分页文件。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置（其中 **VertiPaqPagingPolicy** = 1），你不需要对表格实例授予 **锁定内存页** 特权。<br /><br /> **VertiPaqPagingPolicy** 为 0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 当 **VertiPaqPagingPolicy** 后的强制执行 = 0 时，Analysis Services 依赖 **锁定内存页** 权限。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 关于 [VertiPaqPagingPolicy](../../analysis-services/server-properties/memory-properties.md) 的详细信息，请参阅 **Memory Properties**。|  
   
@@ -71,9 +71,9 @@ ms.locfileid: "47443141"
   
 2.  查看 **SQLServerMSASUser$** 等现有策略。 这是在安装 Analysis Services 的计算机上找到的本地安全组。 Windows 特权和文件文件夹权限都授予此安全组。 双击 **作为服务登录** 策略，查看如何在你的系统上指定安全组。 安全组的全名会根据你是否将 Analysis Services 作为命名实例安装而变化。 添加账户特权时，使用此安全组，而不是实际的服务账户。  
   
-3.  若要在 GPEDIT 中添加账户特权，右键单击 **“增加进程工作集”** ，然后选择 **“属性”**。  
+3.  若要在 GPEDIT 中添加账户特权，右键单击 **“增加进程工作集”** ，然后选择 **“属性”** 。  
   
-4.  单击 **“添加用户或组”**。  
+4.  单击 **“添加用户或组”** 。  
   
 5.  输入 Analysis Services 实例的用户组。 请牢记，服务账户是本地安全组的一个成员，要求你将本地计算机作为账户的域进行预置。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47443141"
   
  数据文件、程序可执行文件、配置文件、日志文件和临时文件上的权限持有者是由 SQL Server 安装程序创建的一个本地安全组。  
   
- 有一个安全组是为你安装的每个实例而创建的。 安全组或者命名实例**SQLServerMSASUser$ MSSQLSERVER**对于默认实例中，或**SQLServerMSASUser$**\<服务器名 >$\<实例名 > 对于命名实例。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果你检查 \MSAS13.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
+ 有一个安全组是为你安装的每个实例而创建的。 安全组或者命名实例**SQLServerMSASUser$ MSSQLSERVER**对于默认实例中，或**SQLServerMSASUser$** \<服务器名 >$\<实例名 > 对于命名实例。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果你检查 \MSAS13.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
   
  该安全组仅包含一个成员： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例启动帐户的 per-service 安全标识符 (SID)。 安装程序将 Per-service SID 添加到本地安全组。 与部署 Database Engine 相比， SQL Server 安装程序部署 Analysis Services 小而明显的不同之处在于使用了本地安全组及其 SID 成员身份。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "47443141"
   
      成员 SID 应与步骤 1 的 per-service SID 匹配。  
   
-3.  使用“计算机管理器”  |  |  |“MSASxx.MSSQLServer”|“”  |  验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
+3.  使用“计算机管理器”   |    |   |“MSASxx.MSSQLServer”|“”   |   验证是否在步骤 2 中向安全组授予了文件夹安全属性。  
   
 > [!NOTE]  
 >  切勿删除或修改 SID。 若要还原无意删除的每个服务 SID，请参阅[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
@@ -145,8 +145,8 @@ ms.locfileid: "47443141"
   
 ## <a name="see-also"></a>请参阅  
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 服务帐户和每个服务 SID （博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 使用服务 SID 来提供服务隔离 （知识库文章）](http://support.microsoft.com/kb/2620201)   
+ [SQL Server 服务帐户和 Per-Service SID（博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server 使用服务 SID 来提供服务隔离（知识库文章）](http://support.microsoft.com/kb/2620201)   
  [访问令牌 (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
  [安全标识符 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [访问令牌 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

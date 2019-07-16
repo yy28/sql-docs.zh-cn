@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0416ea7890b3afd430dfd1892cdfc3cd03ca3cfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d32d79b0a0481d2ade05a78c80d72587817a04b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918574"
 ---
 # <a name="getoledbcommand-method"></a>get_OLEDBCommand 方法
 返回基础 OLE DB 命令，首先传播到 OLE DB 命令 ADO 命令上设置的任何参数信息。  

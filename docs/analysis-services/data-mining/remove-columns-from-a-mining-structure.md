@@ -1,5 +1,5 @@
 ---
-title: 从挖掘结构中删除列 |Microsoft 文档
+title: 从挖掘结构中删除列 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd8691d8ec0cc1546e27e8195e7d0bbc20709f59
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209685"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>从挖掘结构中删除列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "34015874"
   
 2.  展开挖掘结构树，以显示所有列。  
   
-3.  右键单击要删除的列，再选择“删除”。  
+3.  右键单击要删除的列，再选择“删除”  。  
   
-4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

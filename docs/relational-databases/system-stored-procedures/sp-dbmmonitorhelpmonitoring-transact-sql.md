@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf4f012856241028c9ea632ff55e9fd55e964136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91668795513969c9c0bda7a2a1a7203e557f1819
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899198"
 ---
 # <a name="spdbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +40,15 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>参数  
- None  
+ 无  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
  返回当前更新周期，即数据库镜像状态表的更新间隔分钟数。 此值范围是从 1 到 120 分钟。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

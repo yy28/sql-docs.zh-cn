@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207351"
 ---
 # <a name="create-measures"></a>创建度量值
 
@@ -23,15 +23,15 @@ ms.locfileid: "57685644"
 
 在本课程中，将创建要包含在模型中度量值。 与你创建的计算列类似，度量值是通过使用 DAX 公式创建的计算。 但是，与计算列不同的度量值计算基于所选的用户*筛选器*。 例如，特定列或切片器添加到数据透视表中的行标签字段。 然后，由所应用的度量值计算出筛选器中每个单元的值。 度量值是你想要包括在几乎所有表格模型中以对数值数据执行动态计算的功能强大、 灵活的计算。 若要了解详细信息，请参阅[度量值](../tabular-models/measures-ssas-tabular.md)。
   
-若要创建度量值，请使用*度量值网格*。 默认情况下，每个表具有一个空的度量值网格;但是，您通常不要创建每个表的度量值。 在数据视图中时，度量值网格显示在模型设计器中的表下方。 若要隐藏或显示表的度量值网格，请单击“表”  菜单，然后单击“显示度量值网格” 。  
+若要创建度量值，请使用*度量值网格*。 默认情况下，每个表具有一个空的度量值网格;但是，您通常不要创建每个表的度量值。 在数据视图中时，度量值网格显示在模型设计器中的表下方。 若要隐藏或显示表的度量值网格，请单击“表”  菜单，然后单击“显示度量值网格”  。  
   
 可以通过单击度量值网格中的空单元格，然后在编辑栏中键入一个 DAX 公式创建度量值。 当您单击 ENTER 填写公式，该度量值会显示在单元格。 您还可以创建度量值使用标准聚合函数，通过单击某个列，然后单击自动求和按钮 (**∑**) 工具栏上。 使用自动求和功能创建的度量值显示在列下方的度量值网格单元格中，但可以移动。  
   
 在本课中，您将创建度量值，通过这两个输入 DAX 公式在公式栏中，并使用自动求和功能。  
   
-学完本课的预计时间：**30 分钟**  
+估计的时间才能完成本课程中：**30 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
 
 本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 5 课：创建计算的列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "57685644"
   
 2.  单击**SalesOrderNumber**列标题。  
   
-3.  在工具栏上，单击“自动求和”(**∑**) 按钮旁边的向下箭头，然后选择“DistinctCount” 。  
+3.  在工具栏上，单击“自动求和”(**∑**) 按钮旁边的向下箭头，然后选择“DistinctCount”  。  
   
     “自动求和”功能使用 DistinctCount 标准聚合公式自动为所选列创建度量值。  
     

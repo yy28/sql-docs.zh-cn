@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077007"
 ---
 # <a name="data-type-conversions"></a>数据类型转换
 数据可以从一种类型到另一个在转换一个四次： 时数据从一个应用程序变量时转移到另一个 (C 到 C)，应用程序变量中的数据发送到语句参数 (C 到 SQL) 中返回结果集列中的数据时应用程序变量 (SQL 到 C)，并当数据从一个数据源列的传输另一个 (从 SQL 到 SQL)。  

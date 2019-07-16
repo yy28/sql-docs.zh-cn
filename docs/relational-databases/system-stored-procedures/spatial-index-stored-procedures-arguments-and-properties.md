@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950400"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程的参数和属性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +58,8 @@ ms.locfileid: "58528809"
   
 `[ @xml_output = ] 'xml_output'` 集 XML 片段中返回结果的输出参数。 *xml_output*是**xml** ，无默认值。  
   
-## <a name="properties"></a>属性  
- 设置**@verboseoutput** = 0，以返回下; 表中所示的核心属性**@verboseoutput** > 0，则返回空间索引的所有属性。  
+## <a name="properties"></a>properties  
+ 设置 **@verboseoutput** = 0，以返回下; 表中所示的核心属性 **@verboseoutput** > 0，则返回空间索引的所有属性。  
   
  **Base_Table_Rows**  
  基表中的行数 值是**bigint**。  
@@ -319,7 +318,7 @@ ms.locfileid: "58528809"
   
 ## <a name="see-also"></a>请参阅  
  [空间索引存储过程&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基础知识](../../xquery/xquery-basics.md)   
  [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  

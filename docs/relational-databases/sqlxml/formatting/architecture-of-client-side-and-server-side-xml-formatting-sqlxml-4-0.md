@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e8d02cd90000a3a473a2e864345c483e5fda9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8b46b6dd56744d0c55a7276e000db2a49889d1fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005260"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>客户端和服务器端 XML 格式的体系结构 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "56028938"
   
  ![在客户端 XML 格式的体系结构。](../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "客户端上的体系结构的 XML 格式。")  
   
- 在该示例中，客户端使用 SQLXMLOLEDB 访问接口。 连接字符串中的数据提供程序属性必须设置为 SQLOLEDB。 （在 SQLXML 4.0 中这是唯一接受的值。）在客户端上执行的命令将发送到服务器。 在服务器上生成的行集则发送到客户端。 由行集转换至 XML 文档的格式设置操作将在客户端上执行。  
+ 在该示例中，客户端使用 SQLXMLOLEDB 访问接口。 连接字符串中的数据提供程序属性必须设置为 SQLOLEDB。 （这是唯一接受在 SQLXML 4.0 中的值）。在客户端执行的命令发送到服务器。 在服务器上生成的行集则发送到客户端。 由行集转换至 XML 文档的格式设置操作将在客户端上执行。  
   
  在 SQLXML 4.0 中，可以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) 或 SQLOLEDB 访问接口用作数据访问接口。 您应当可以访问任何数据源。 只要查询返回单个行集，就可以在客户端应用 XML 转换。  
   

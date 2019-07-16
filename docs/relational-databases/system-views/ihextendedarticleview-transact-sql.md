@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bc5734c0c8bed79516d94b96e7c6060e3650066
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029541"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHextendedArticleView**视图显示有关非 SQL Server 发布中的项目信息。 此视图存储在**分发**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|发布服务器的唯一标识符。|  
 |**publication_id**|**int**|发布的唯一标识符。|  
@@ -46,9 +45,9 @@ ms.locfileid: "52771399"
 |**ins_cmd**|**nvarchar(255)**|执行 INSERT 的命令。|  
 |**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的预创建命令：<br /><br /> **0** = none。<br /><br /> **1** = DROP。<br /><br /> **2** = DELETE。<br /><br /> **3** = 截断。|  
 |**status**|**tinyint**|项目选项和状态的位掩码，可以是对以下一个或多个值执行逻辑位或运算的结果：<br /><br /> **1** = 项目处于活动状态。<br /><br /> **8** = 包括 INSERT 语句中的列名称。<br /><br /> **16** = 使用参数化语句。<br /><br /> **24** = 同时在 INSERT 语句中包括的列名称并使用参数化的语句。<br /><br /> 例如，使用参数化的语句的活动项目将具有值**17**此列中。 值为**0**意味着项目处于非活动状态并且未定义任何其他属性。|  
-|**类型**|**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的项目。<br /><br /> **3** = 具有手动筛选器基于日志的项目。<br /><br /> **5** = 具有手动视图并且基于日志的项目。<br /><br /> **7** = 具有手动筛选器和手动视图并且基于日志的项目。|  
+|**type**|**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的项目。<br /><br /> **3** = 具有手动筛选器基于日志的项目。<br /><br /> **5** = 具有手动视图并且基于日志的项目。<br /><br /> **7** = 具有手动筛选器和手动视图并且基于日志的项目。|  
 |**upd_cmd**|**nvarchar(255)**|执行 UPDATE 的命令。|  
-|**schema_option**|**binary**|指示将写入脚本的内容。请参阅[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)有关支持的架构选项的列表。|  
+|**schema_option**|**binary**|指示什么是将写入脚本。请参阅[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)有关支持的架构选项的列表。|  
 |**dest_owner**|**sysname**|在目标数据库中已发布对象的所有者。|  
   
 ## <a name="see-also"></a>请参阅  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9ad683af9cea8ca4f5bc1736a48f0662656b6ef1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923459"
 ---
 # <a name="what-is-a-cursor"></a>什么是游标？
 关系数据库中的操作会对整个行集起作用。 由 SELECT 语句返回的行集包括满足该语句的 WHERE 子句中条件的所有行。 这种由语句返回的完整行集称为结果集。 应用程序，尤其是那些以交互式且已联机，总能有效地处理使用整个结果集作为一个单元中。 这些应用程序需要一种机制以便每次处理一行或一部分行。 游标就是提供这种机制的对结果集的一种扩展。  

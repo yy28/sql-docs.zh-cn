@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2cf3cf85b0efb024d65744f6eea0f5eea47ead83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074854"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +37,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *filename*  
  要作为字符串导出的文件的名称和位置。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果语句指定了挖掘模型，则结果文件也将包含关联的挖掘结构。 如果该语句指定**带有 WITH DEPENDENCIES**，.abf 文件中包括处理的对象 （例如，数据源和数据源视图） 所需的所有对象。  
   
  您必须是数据库或服务器管理员联系以导出或导入对象从[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。  
@@ -61,7 +60,7 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
- [导入&AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
+ [导入&#40;DMX&#41;](../dmx/import-dmx.md)   
  [导出和导入数据挖掘对象](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

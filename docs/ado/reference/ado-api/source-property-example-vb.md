@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 359e7b44284ad72ef79016efe07fe7950dc58036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5161dc2aa0a0a213095a160cf0473c138cdf2cf5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930910"
 ---
 # <a name="source-property-example-vb"></a>Source 属性示例 (VB)
 此示例演示[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)通过打开三个属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象基于不同的数据源。  

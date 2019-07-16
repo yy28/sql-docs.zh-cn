@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09874df6d9e09da8b6dc0df3e9670e4ff130c511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919687"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定应如何解释命令参数。  
   
  务必要验证用户提供*CommandString*值以避免让应用程序用户有机会来插入具有潜在危险 ADO 执行的命令。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|不会指定命令类型参数。|  
 |**adCmdText**|1|计算结果[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)作为文本定义的命令或存储的过程的调用。|  

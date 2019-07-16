@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4484f714bc9ebb5bb82378cd5f877e847f8d6001
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d053c47cbe51026e6c3ee71a523cadf176d6ff1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899961"
 ---
 # <a name="sysdmosmemorycachehashtables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47749065"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_memory_cache_hash_tables**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存条目的地址（主键）。 不可为 null。|  
-|**名称**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|**类型**|**nvarchar(60)**|缓存类型。 不可为 null。|  
+|**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|**type**|**nvarchar(60)**|缓存类型。 不可为 null。|  
 |**table_level**|**int**|哈希表编号。 某个特定缓存可能有多个对应于不同哈希函数的哈希表。 不可为 null。|  
 |**buckets_count**|**int**|哈希表中的存储桶数。 不可为 null。|  
 |**buckets_in_use_count**|**int**|当前使用的存储桶数。 不可为 null。|  
@@ -54,10 +53,10 @@ ms.locfileid: "47749065"
 |**buckets_avg_scan_miss_length**|**int**|在搜索未成功结束之前，存储桶中已检查条目的平均数。 不可为 null。|  
 |**pdw_node_id**|**int**|对于此分布的节点标识符。<br /><br /> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>Permissions 
+## <a name="permissions"></a>权限 
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
 
 ## <a name="see-also"></a>请参阅  
  

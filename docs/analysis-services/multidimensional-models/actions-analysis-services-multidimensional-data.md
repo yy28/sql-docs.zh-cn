@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180381"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "50146362"
 ## <a name="types-of-actions"></a>操作的类型  
  下表列出了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中包含的操作类型：  
   
-|操作类型|Description|  
+|操作类型|描述|  
 |-----------------|-----------------|  
 |CommandLine|在命令提示符下执行命令|  
 |数据集|将数据集返回到客户端应用程序。|  
@@ -59,13 +59,13 @@ ms.locfileid: "50146362"
 |专有|使用除此表列出的这些类型以外的其他接口执行操作。|  
 |报告|将基于参数化 URL 的请求提交到报表服务器，并将报表返回到客户端应用程序。|  
 |行集|将行集返回到客户端应用程序。|  
-|。|运行 OLE DB 命令。|  
+|声明专用纸|运行 OLE DB 命令。|  
 |URL|在 Internet 浏览器中显示动态网页。|  
   
 ## <a name="resolving-and-executing-actions"></a>解析并执行操作  
  当业务用户在访问已为其定义了命令对象的对象时，系统将自动解析与操作关联的语句，以使它对客户端应用程序可用，但操作不会自动执行。 操作只在业务用户执行启动它的客户端特定操作时才被执行。 例如，当业务用户右键单击特定的成员或单元时，客户端应用程序可能以弹出菜单的形式显示一组操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的操作](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

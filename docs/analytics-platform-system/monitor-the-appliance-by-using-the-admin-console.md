@@ -2,19 +2,18 @@
 title: 使用管理控制台的分析平台系统监视 |Microsoft Docs
 description: Analytics Platform system 管理员控制台是一个 web 应用程序，它会显示设备状态、 运行状况和性能信息。 用户连接到 internet 浏览器通过在管理控制台。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960480"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>监视设备，但在管理控制台的分析平台系统
 在管理控制台是一个 SQL Server PDW web 应用程序，它会显示设备状态、 运行状况和性能信息。 用户连接到 Internet 资源管理器通过在管理控制台。  
@@ -22,7 +21,7 @@ ms.locfileid: "63027552"
 ## <a name="About"></a>有关在管理控制台  
 ![工具控制台主页](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Appliance**  
+**设备**  
 主页  
 提供的设备状态的快速摘要。  
   

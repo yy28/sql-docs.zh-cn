@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13f769ae3d2b8ddcc720df33596093ff9562af99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99c3d2a615abe64a6ea5fc79cab8fb3dc083178d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925146"
 ---
 # <a name="handling-errors-in-vbscript"></a>处理 VBScript 中的错误
 没有 Visual Basic 中使用的方法和那些与 VBScript 一起使用的一些区别。 主要区别在于，VBScript 不支持通过在一个标签位置继续执行处理的错误的概念。 换而言之，不能使用`On Error GoTo`在 VBScript 中。 请改用`On Error Resume Next`，然后检查这两**Err.Number**并且**计数**属性**错误**集合，如下面的示例中所示：  

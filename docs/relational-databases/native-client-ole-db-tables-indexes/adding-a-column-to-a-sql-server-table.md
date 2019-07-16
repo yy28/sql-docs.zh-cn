@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb1ffaf8f75f73ead1742f9a9284c06c81e83ef6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49f73e958f10b122047cfc551b8de3cfb5322be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069600"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>向 SQL Server 表添加列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +33,13 @@ ms.locfileid: "47853255"
   
 -   如果 DBPROP_COL_AUTOINCREMENT 为 VARIANT_TRUE，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
   
--   如果相应列是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] timestamp 数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
+-   如果相应列是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] timestamp 数据类型定义的，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE  。  
   
 -   对于任何其他列定义，DBPROP_COL_NULLABLE 都必须为 VARIANT_TRUE。  
   
- 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串。 pTableID 的 eKind 成员必须是 DBKIND_NAME。  
+ 在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串    。 pTableID 的 eKind 成员必须是 DBKIND_NAME   。  
   
- 在 uName 联合（位于 DBCOLUMNDESC 参数 pColumnDesc 的 dbcid 成员中）的 pwszName 成员中，将新列的名称指定为 Unicode 字符串。 eKind 成员必须为 DBKIND_NAME。  
+ 在 uName 联合（位于 DBCOLUMNDESC 参数 pColumnDesc 的 dbcid 成员中）的 pwszName 成员中，将新列的名称指定为 Unicode 字符串     。 eKind 成员必须为 DBKIND_NAME  。  
   
 ## <a name="see-also"></a>请参阅  
  [表和索引](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)   

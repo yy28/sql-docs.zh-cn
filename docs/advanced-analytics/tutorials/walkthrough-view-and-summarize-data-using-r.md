@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 613053b05d675963ceef89a71de4e8ac73352fad
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c91733601949e8a084fef72e6ae388c25b569085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961686"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>查看和汇总 SQL Server 数据使用 R （演练）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "58510904"
     sqlConsoleOutput <- FALSE
     ```
 
-    - 在工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机之间来回序列化 R 对象时，R 会使用临时目录。 可指定用作 sqlShareDir 的本地目录，或者接受默认目录。
+    - 在工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机之间来回序列化 R 对象时，R 会使用临时目录。 可指定用作 sqlShareDir  的本地目录，或者接受默认目录。
   
     - 使用*sqlWait*以指示您是否要 R 等待来自服务器的结果。  与非等待作业正在等待的讨论，请参阅[分布式计算和使用 Microsoft R 中的 RevoScaleR 的并行计算](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)。
   

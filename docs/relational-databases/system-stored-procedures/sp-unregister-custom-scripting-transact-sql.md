@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017901"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +39,9 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @type = ] 'type'` 正在删除自定义存储的过程或脚本的类型。 *类型*是**varchar(16)**，无默认值，并且可以是以下值之一。  
+`[ @type = ] 'type'` 正在删除自定义存储的过程或脚本的类型。 *类型*是**varchar(16)** ，无默认值，并且可以是以下值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**insert**|复制 INSERT 语句时，执行注册的自定义存储过程或脚本。|  
 |**update**|复制 UPDATE 语句时，执行注册的自定义存储过程或脚本。|  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fae4f476005cb227b198b193712e4a564a1418fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046450"
 ---
 # <a name="sysfncdcgetmaxlsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.fn_cdc_get_max_lsn ()
   
  该函数通常用于获取查询间隔内的相应高端点。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有公用数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  

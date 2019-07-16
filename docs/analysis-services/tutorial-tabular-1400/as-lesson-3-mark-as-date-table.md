@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 41ff4c51d3dc357f253a42689565849f07235ff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685564"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162139"
 ---
 # <a name="mark-as-date-table"></a>标记为日期表
 
@@ -29,7 +29,7 @@ ms.locfileid: "57685564"
 
 标记日期表和日期列之前，它是做一些调整以使您的模型更易于理解的好时机。 请注意，DimDate 表中名为的列**FullDateAlternateKey**。 此列的表中包含每个日历年中每一天中占一行。 在度量值公式和报表中大量使用此列。 但是，FullDateAlternateKey 实际上并不是本专栏的很好标识符。 为其重命名**日期**，使其更轻松地识别以及包括在公式中。 只要有可能，它是一个好办法重命名对象，如表和列，以使其更轻松地识别在 SSDT 和客户端报告应用程序中。 
   
-学完本课的预计时间：**3 分钟**  
+估计的时间才能完成本课程中：**3 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 
@@ -44,11 +44,11 @@ ms.locfileid: "57685564"
   
 ### <a name="to-set-mark-as-date-table"></a>标记为日期表  
   
-1.  选择“日期”列，然后在“属性”窗口的“数据类型”下面确保已选中“日期”。  
+1.  选择“日期”  列，然后在“属性”  窗口的“数据类型”  下面确保已选中“日期”  。  
   
-2.  单击“表”菜单，然后依次单击“日期”和“标记为日期表”。  
+2.  单击“表”  菜单，然后依次单击“日期”  和“标记为日期表”  。  
   
-3.  在“标记为日期表”对话框的“日期”列表框中，选择“日期”列作为唯一标识符。 默认情况下通常选择它。 单击“确定” 。 
+3.  在“标记为日期表”  对话框的“日期”  列表框中，选择“日期”  列作为唯一标识符。 默认情况下通常选择它。 单击 **“确定”** 。 
 
     ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   

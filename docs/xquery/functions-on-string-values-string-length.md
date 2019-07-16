@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8193643e59c89d1bdc2877e72105f83a1fd6df3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004651"
 ---
 # <a name="functions-on-string-values---string-length"></a>基于字符串值的函数 - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  本主题提供了一些针对 XML 实例存储在各种 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. 使用 string-length() XQuery 函数检索带有较长摘要说明的产品  
- 对于摘要说明大于 50 个字符的产品，下面的查询将检索产品 ID、摘要说明的长度以及摘要本身（即 <`Summary`> 元素）。  
+ 对于其摘要说明大于 50 个字符的产品，下面的查询检索产品 ID 的长度的摘要说明，以及摘要本身，<`Summary`> 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -100,9 +99,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. 使用 string-length() XQuery 函数检索保修说明较短的产品  
- 对于保修说明少于 20 个字符的产品，下面的查询将检索包含产品 ID、长度、保修说明以及 <`Warranty`> 元素本身的 XML。  
+ 对于保修说明较长时间不超过 20 个字符的产品，下面的查询检索产品 ID、 长度、 保修说明的 XML 和 <`Warranty`> 元素本身。  
   
- 保修是厂商为产品提供的服务之一。 可选的 <`Warranty`> 子元素位于 <`Features`> 元素后面。  
+ 保修是厂商为产品提供的服务之一。 可选的 <`Warranty`> 子元素如下所示之后 <`Features`> 元素。  
   
 ```  
 WITH XMLNAMESPACES (  

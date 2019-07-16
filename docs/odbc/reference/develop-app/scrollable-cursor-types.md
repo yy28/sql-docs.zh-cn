@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061627"
 ---
 # <a name="scrollable-cursor-types"></a>可滚动游标类型
 四种类型的可滚动游标是静态、 动态、 由键集驱动和混合。 静态游标检测少或没有更改，但相对比较便宜，来实现。 动态游标检测到的所有更改，但难以实现。 由键集驱动和混合游标介于二者之间，能检测到大部分变化，但在更少的开销比动态游标。  

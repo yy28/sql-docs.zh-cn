@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10a8184fdad0c25c2377c5ed9df0a318aba736a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 777e9b2afceb3e9a58030a225a0cbff34375165b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914966"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +40,17 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'` 是的远程服务器的名称。 *发布服务器*是**sysname**，默认值为**%**，表示返回所有发布服务器的信息。  
+`[ @publisher = ] 'publisher'` 是的远程服务器的名称。 *发布服务器*是**sysname**，默认值为 **%** ，表示返回所有发布服务器的信息。  
   
-`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**，这会返回所有发布服务器数据库。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 **%** ，这会返回所有发布服务器数据库。  
   
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**，这会返回所有发布。 如果此参数等于 ALL，唯一的请求订阅 independent_agent = **0**返回。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 **%** ，这会返回所有发布。 如果此参数等于 ALL，唯一的请求订阅 independent_agent = **0**返回。  
   
-`[ @show_push = ] 'show_push'` 是否要返回所有推送订阅。 *show_push*是**nvarchar(5)**，默认值为 FALSE，表示不返回推送订阅。  
+`[ @show_push = ] 'show_push'` 是否要返回所有推送订阅。 *show_push*是**nvarchar(5)** ，默认值为 FALSE，表示不返回推送订阅。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**发布服务器数据库**|**sysname**|发布服务器数据库名。|  
@@ -59,7 +58,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
 |**订阅类型**|**int**|发布的订阅类型。|  
 |**分发代理**|**nvarchar(100)**|处理订阅的分发代理。|  
-|**publication description**|**nvarchar(255)**|对发布的说明。|  
+|**发布说明**|**nvarchar(255)**|对发布的说明。|  
 |**上次更新时间**|**date**|订阅信息上次更新的时间。 这是由 ISO 日期 (114) 和 ODBC 时间 (121) 组成的 UNICODE 字符串。 格式为 yyyymmdd hh:mi:sss.mmm，其中“yyyy”表示年，“mm”表示月，“dd”表示日，“hh”表示小时，“mi”表示分钟，“sss”表示秒，“mmm”表示毫秒。|  
 |**订阅名称**|**varchar(386)**|订阅的名称。|  
 |**最后一个事务时间戳**|**varbinary(16)**|上一个复制的事务的时间戳。|  
@@ -69,10 +68,10 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**订阅 guid**|**binary(16)**|订阅服务器上的发布的版本的全局标识符。|  
 |**subid**|**binary(16)**|匿名订阅的全局标识符。|  
 |**immediate_sync**|**bit**|表示是否在每次快照代理运行时创建或重新创建同步文件。|  
-|**publisher login**|**sysname**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
+|**发布服务器登录名**|**sysname**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**发布服务器密码**|**nvarchar(524)**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
-|**publisher security_mode**|**int**|在发布服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证<br /><br /> **2** = 同步触发器使用静态**sysservers**项执行远程过程调用 (RPC) 和*发布者*必须在定义**sysservers**为远程服务器或链接的服务器的表。|  
-|**distributor**|**sysname**|分发服务器的名称。|  
+|**发布服务器 security_mode**|**int**|在发布服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证<br /><br /> **2** = 同步触发器使用静态**sysservers**项执行远程过程调用 (RPC) 和*发布者*必须在定义**sysservers**为远程服务器或链接的服务器的表。|  
+|**分发服务器**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|在分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**distributor_password**|**nvarchar(524)**|在分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
 |**distributor_security_mode**|**int**|在分发服务器上实施的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
@@ -92,7 +91,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_summary**|**sysname**|对上一次同步结果的说明。|  
 |**last_sync_time**|**datetime**|订阅信息上次更新的时间。 这是由 ISO 日期 (114) 和 ODBC 时间 (121) 组成的 UNICODE 字符串。 格式为 yyyymmdd hh:mi:sss.mmm，其中“yyyy”表示年，“mm”表示月，“dd”表示日，“hh”表示小时，“mi”表示分钟，“sss”表示秒，“mmm”表示毫秒。|  
 |**job_login**|**nvarchar(512)**|是运行分发代理的 Windows 帐户的格式返回*域*\\*用户名*。|  
-|**job_password**|**sysname**|出于安全原因，值为"**\*\*\*\*\*\*\*\*\*\***"是始终返回。|  
+|**job_password**|**sysname**|出于安全原因，值为" **\*\*\*\*\*\*\*\*\*\*** "是始终返回。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -104,8 +103,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helppullsubscription** 。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

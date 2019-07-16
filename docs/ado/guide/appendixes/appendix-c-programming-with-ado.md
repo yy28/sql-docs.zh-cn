@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926875"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>附录 C：使用在开发环境中的 ADO 编程
 ADO 是一个 COM 自动化接口组件，可以在许多编程语言，包括 Microsoft Visual Basic、 VBScript、 JScript 和视觉对象C++。 ADO 的版本与每个这些工具和其他应用程序，如 Microsoft Office 和 Microsoft SQL Server 安装。

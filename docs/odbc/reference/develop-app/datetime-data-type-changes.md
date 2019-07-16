@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56e0c7d633c6e15b1958d370e8d69c08505edbb6
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 6bc7e07ab65b5894c3ac2b913e5d4afcbd4f98f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076966"
 ---
 # <a name="datetime-data-type-changes"></a>Datetime 数据类型更改
 在 ODBC *3.x*、 的标识符的日期、 时间和时间戳 SQL 数据类型已更改从 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP (的实例，并用 **#define** 9、 10 和 11 的标头文件中) 到 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的实例，并用 **#define** 91、 92 和 93 的标头文件中)，分别。 相应的 C 类型标识符都更改 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分别。  
@@ -34,7 +33,7 @@ ms.locfileid: "67793842"
   
  下表显示如何 ODBC *3.x*驱动程序管理器执行的输入中的日期、 时间和时间戳 C 数据类型映射*TargetType*自变量的**SQLBindCol**并**SQLGetData**中或在*ValueType*自变量**SQLBindParameter**。  
   
-|数据类型<br /><br /> 输入代码|*2.x*到应用<br /><br /> *2.x* driver|*2.x*到应用<br /><br /> *3.x* driver|*3.x*到应用<br /><br /> *2.x* driver|*3.x*到应用<br /><br /> *3.x* driver|  
+|数据类型<br /><br /> 输入代码|*2.x*到应用<br /><br /> *2.x*驱动程序|*2.x*到应用<br /><br /> *3.x*驱动程序|*3.x*到应用<br /><br /> *2.x*驱动程序|*3.x*到应用<br /><br /> *3.x*驱动程序|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
 |SQL_C_DATE (9)|无映射|SQL_C_TYPE_DATE (91)|无映射 [1]|SQL_C_TYPE_DATE (91)|  
 |SQL_C_TYPE_DATE (91)|错误 （从数据挖掘）|错误 （从数据挖掘）|SQL_C_DATE (9)|[2] 没有映射|  
@@ -49,7 +48,7 @@ ms.locfileid: "67793842"
   
  下表显示如何 ODBC *3.x*驱动程序管理器执行的输入中的日期、 时间和时间戳 SQL 数据类型映射*ParameterType*自变量的**SQLBindParameter**或在*数据类型*自变量**SQLGetTypeInfo**。  
   
-|数据类型<br /><br /> 输入代码|*2.x*到应用<br /><br /> *2.x* driver|*2.x*到应用<br /><br /> *3.x* driver|*3.x*到应用<br /><br /> *2.x* driver|*3.x*到应用<br /><br /> *3.x* driver|  
+|数据类型<br /><br /> 输入代码|*2.x*到应用<br /><br /> *2.x*驱动程序|*2.x*到应用<br /><br /> *3.x*驱动程序|*3.x*到应用<br /><br /> *2.x*驱动程序|*3.x*到应用<br /><br /> *3.x*驱动程序|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
 |SQL_DATE (9)|无映射|SQL_TYPE_DATE (91)|无映射 [1]|SQL_TYPE_DATE (91)|  
 |SQL_TYPE_DATE (91)|错误 （从数据挖掘）|错误 （从数据挖掘）|SQL_DATE (9)|[2] 没有映射|  

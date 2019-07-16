@@ -29,14 +29,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfbe6f41150e7d437a6ee1df20e62e41b799c8c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e202e2b8a7766d4dde711a7f89d27177d176b3a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073654"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "62668833"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|传递<sup>6，7</sup>|N/A <sup>2</sup>|不可用|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果的服务器类型不是使用指定 DBTYPE_XML **icommandwithparameters:: Setparameterinfo**取值函数类型为 DBTYPE_XML，执行该语句时出错 (DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）;否则将数据发送到服务器，但服务器返回一个错误，指出没有从 XML 到参数的数据类型的隐式转换。  
+ <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo  指定了除 DBTYPE_XML 以外的服务器类型，而取值函数类型为 DBTYPE_XML，那么就会在执行语句时出错（DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）；否则，数据发送到服务器，但服务器会返回错误，指明不存在将 XML 转换为参数的数据类型的隐式转换。  
   
  <sup>2</sup>超出了本主题的范围。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "62668833"
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 架构行集  
  COLUMNS 和 PROCEDURE_PARAMETERS 架构行集添加了以下列。  
   
-|列名|类型|Description|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|在其中定义 XML 架构集合的架构的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
@@ -151,7 +150,7 @@ ms.locfileid: "62668833"
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 架构行集  
  所引入的新的架构行集 SS_XMLSCHEMA 可供客户端检索 XML 架构信息。 SS_XMLSCHEMA 行集包含以下列。  
   
-|列名|类型|Description|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所属的目录。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所属的架构。|  
@@ -171,7 +170,7 @@ ms.locfileid: "62668833"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了支持**xml**通过 OLE DB 数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 实现新的 DBPROPSET_SQLSERVERPARAMETER 属性集，其中包含以下值。  
   
-|“属性”|类型|Description|  
+|名称|type|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录（数据库）的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|架构集合内 XML 架构的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
@@ -180,7 +179,7 @@ ms.locfileid: "62668833"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  若要支持中的表创建**ITableDefinition**接口， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 向 DBPROPSET_SQLSERVERCOLUMN 属性集添加三个新列。  
   
-|“属性”|类型|Description|  
+|“属性”|type|描述|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定在其中存储 XML 架构的目录的名称。 对于其他列类型，此属性返回空字符串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定定义此列的 XML 架构的名称。|  
@@ -200,7 +199,7 @@ ms.locfileid: "62668833"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端中添加以下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-返回的行集的特定列**icolumnrowset:: Getcolumnsrowset**方法。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
   
-|列名|类型|Description|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 架构集合所属的目录，<br /><br /> 否则为 Null。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 架构集合所属的架构。 否则为 Null。|  
@@ -216,7 +215,7 @@ ms.locfileid: "62668833"
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 接口  
  使用者可以通过两种方法更新列中的 XML 实例。 第一种方法是使用提供程序创建的存储对象 ISequentialStream  。 使用者可调用 ISequentialStream::Write 方法直接更新提供程序返回的 XML 实例  。  
   
- 第二种方法是通过 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法   。 在此方法中，使用者的缓冲区中的 XML 实例可以指定的类型为 DBTYPE_BSTR、 DBTYPE_WSTR、 DBTYPE_VARIANT、 DBTYPE_XML 或 DBTYPE_IUNKNOWN 绑定中。  
+ 第二种方法是通过 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法   。 使用这种方法，可以在类型为 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML 或 DBTYPE_IUNKNOWN 的绑定中，指定使用者缓冲区内的 XML 实例。  
   
  对于 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，访问接口将位于使用者缓冲区中的 XML 实例存储到适当的列中。  
   

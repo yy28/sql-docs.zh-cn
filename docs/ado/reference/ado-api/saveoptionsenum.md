@@ -1,5 +1,5 @@
 ---
-title: SaveOptionsEnum | Microsoft Docs
+title: SaveOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 537c5bfa6e1da125b562d4cc26820a2fcb5618fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931149"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 指定文件是否应创建或覆盖从保存时[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。 值可以是**adSaveCreateNotExist**或**adSaveCreateOverWrite**...  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adSaveCreateNotExist**|1|默认值。 如果指定的文件创建一个新文件*文件名*参数尚不存在。|  
 |**adSaveCreateOverWrite**|2|使用来自当前打开的数据将覆盖文件**Stream**对象，如果指定的文件*Filename*参数已存在。 如果指定的文件*文件名*参数不存在，创建一个新文件。|  

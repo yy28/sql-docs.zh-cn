@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024756"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 （选择位置） (AccessToSQL)
 在查找数据库向导的选择位置页上，查找访问数据库的输入的搜索参数。  

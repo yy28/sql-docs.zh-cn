@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897718"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函数
 **符合性**  
@@ -68,7 +67,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>诊断  
  当**SQLGetFunctions**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_DBC 和一个*处理*的*ConnectionHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLGetFunctions** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|描述|  
+|SQLSTATE|Error|描述|  
 |--------|-----|-----------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
@@ -139,7 +138,7 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle**将返回为仅在受支持的驱动程序支持同时**SQLCancel**并**SQLCancelHandle**。 如果**SQLCancel**支持，但**SQLCancelHandle**不是，应用程序仍然可以调用**SQLCancelHandle**上语句句柄，因为它将映射到**SQLCancel**。  
   
-## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 宏  
  SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 宏用于确定是否支持 ODBC 3 *.x*早期函数后的或**SQLGetFunctions**已使用调用*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 参数。 在应用程序调用与 SQL_FUNC_EXISTS *SupportedPtr*参数设置为*SupportedPtr*传入*SQLGetFunctions*，并使用*FunctionID*参数设置为 **#define**函数。 SQL_FUNC_EXISTS 否则返回支持的函数，如果 SQL_TRUE 和 SQL_FALSE。  
   
 > [!NOTE]

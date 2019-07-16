@@ -7,13 +7,12 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c0284577d8e30871b354607cf9af978e6d53df63
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: abf7028c8b55f4f97770586f2a678a538f01b29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963044"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 语言扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +33,7 @@ SQL Server 不会修改 Python 可执行文件，但必须使用安装由安装�
 
 Microsoft 通过添加并行和分布式工作负荷的 Python 包包括以下库。
 
-| 库 | Description |
+| 库 | 描述 |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支持数据源对象和数据探索、 操作、 转换和可视化效果。 它支持远程计算上下文，以及各种可缩放的机器学习模型的创建，如**rxLinMod**。 有关详细信息，请参阅[revoscalepy 模块与 SQL Server](../python/ref-py-revoscalepy.md)。  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含机器学习算法，经过优化的速度和准确性，以及行中使用文本和图像的转换。 有关详细信息，请参阅[microsoftml 模块与 SQL Server](../python/ref-py-microsoftml.md)。 |
@@ -92,7 +91,7 @@ Microsoft 通过添加并行和分布式工作负荷的 Python 包包括以下�
 8. SQL Satellite 管理与 SQL Server 和相关的作业对象清理的通信。
 9. SQL Server 会将结果传递回客户端。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)
 + [revoscalepy 函数参考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 

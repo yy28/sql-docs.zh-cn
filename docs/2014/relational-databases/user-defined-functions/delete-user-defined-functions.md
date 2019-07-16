@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196461"
 ---
 # <a name="delete-user-defined-functions"></a>删除用户定义函数
   你可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 删除 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的用户定义函数 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -63,12 +63,12 @@ ms.locfileid: "52529270"
   
     -   Aggregate 函数  
   
-4.  右键单击要删除的函数，然后选择“删除”。  
+4.  右键单击要删除的函数，然后选择“删除”  。  
   
-5.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+5.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”对话框中的“显示依赖关系”，打开“_function_name_ 依赖关系”对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
+    >  单击“删除对象”  对话框中的“显示依赖关系”  ，打开“_function_name_ 依赖关系”  对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -76,9 +76,9 @@ ms.locfileid: "52529270"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- creates function called "Sales.ufn_SalesByStore"  

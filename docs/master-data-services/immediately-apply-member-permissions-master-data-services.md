@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7d3a62a552bb94150b30ab24bec24152bf27b58b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f818bcff93fb5f246f7c02676a740c0cc6cada9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945147"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>立即应用成员权限 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65484387"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以立即应用成员权限，而不必等待定期应用的成员安全性。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须具有在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中执行 mdm.udpSecurityMemberProcessRebuildModel 存储过程的权限。 有关详细信息，请参阅[数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)。  

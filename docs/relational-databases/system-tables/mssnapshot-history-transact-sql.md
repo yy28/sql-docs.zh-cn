@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca24fdce036c4f63e49e7d0eb12054d2d67aa6aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997278"
 ---
 # <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsnapshot_history**表包含与本地分发服务器关联的快照代理历史记录行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|快照代理的 ID。|  
 |**runstatus**|**int**|运行状态：<br /><br /> **1** = 开始。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 268f75902f752551e33467e422b6f33ea6c4dcb7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211357"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置通知选项，以便 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可向操作员发送与作业相关的通知。  
@@ -52,11 +52,11 @@ ms.locfileid: "53369179"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“SQL Server 代理”，展开“作业”，右键单击要编辑的作业，再选择“属性”。  
+2.  展开“SQL Server 代理”  ，展开“作业”  ，右键单击要编辑的作业，再选择“属性”  。  
   
 3.  在 **“作业属性”** 对话框中，选择 **“通知”** 页。  
   
-4.  如果想通过电子邮件通知操作员，请选中“电子邮件”，再从列表中选择操作员，然后选择下列选项之一：  
+4.  如果想通过电子邮件通知操作员，请选中“电子邮件”  ，再从列表中选择操作员，然后选择下列选项之一：  
   
     -   **当作业成功时** - 在作业成功完成后通知操作员。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53369179"
   
     -   **当作业完成时** ，无论完成情况如何，都通知该操作员。  
   
-5.  如果您想通过寻呼程序来通知操作员，请选中 **“寻呼程序”**，再从列表中选择操作员，然后选择下列选项之一：  
+5.  如果您想通过寻呼程序来通知操作员，请选中 **“寻呼程序”** ，再从列表中选择操作员，然后选择下列选项之一：  
   
     -   **当作业成功时** - 在作业成功完成后通知操作员。  
   
@@ -86,9 +86,9 @@ ms.locfileid: "53369179"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  

@@ -1,5 +1,5 @@
 ---
-title: FieldStatusEnum | Microsoft Docs
+title: FieldStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba7fe546f7ac8e1a036fc8fe7e5f523ebf09d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918659"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[状态](../../../ado/reference/ado-api/status-property-ado-field.md)的[Field 对象](../../../ado/reference/ado-api/field-object.md)。  
   
  **AdFieldPending\*** 值指示该操作导致状态为设置，并可配合其他状态的值。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指示指定的字段已存在。|  
 |**adFieldBadStatus**|12|指示从 ADO 发送无效的状态值，到 OLE DB 访问接口。 可能的原因包括 OLE DB 1.0 或 1.1 提供程序或不正确的组合[值](../../../ado/reference/ado-api/value-property-ado.md)并[状态](../../../ado/reference/ado-api/status-property-ado-field.md)。|  

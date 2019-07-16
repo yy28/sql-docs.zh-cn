@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006628"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>转换访问数据库对象 (AccessToSQL)
 在访问数据库添加并连接到后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure、 SSMA 显示访问元数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象。 你可以现在选择访问数据库对象，然后将转换到架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 架构。  
@@ -56,7 +55,7 @@ ms.locfileid: "63139013"
   
 |访问对象|生成的 SQL Server 对象|  
 |-----------------|-------------------------------|  
-|表|表|  
+|table|table|  
 |column|column|  
 |索引|索引|  
 |外键 (foreign key)|外键 (foreign key)|  
@@ -111,7 +110,7 @@ ms.locfileid: "63139013"
   
     将光标移出已更改的属性的单元格。 可以通过单击其他行或按 Tab 键来执行此操作。  
   
-3.  单击 **“应用”**。  
+3.  单击 **“应用”** 。  
   
 现在可以在查看代码中的更改**SQL**选项卡。  
   
