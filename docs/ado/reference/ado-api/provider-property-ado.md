@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a8c571bf143d4aa68fc5785b91929635864e9ce8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae46773befb13105ed9dcd81b1116be48cf0675
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931450"
 ---
 # <a name="provider-property-ado"></a>Provider 属性 (ADO)
 指示提供程序的名称[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -44,5 +43,5 @@ ms.locfileid: "66702872"
 ## <a name="see-also"></a>请参阅  
  [Provider 和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider 和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
+ [用于 ODBC 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f155e6bf823c687a52939e68fcfe10329bd33a35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65476741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074498"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概述：将数据导出到 Excel (MDS Add-in for Excel)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65476741"
   
  可以导出的数据仅限于你具有访问权限的数据。 访问数据的权限是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中或以编程方式设置的。  
   
- 导出大量数据时，可以设置在数据可能需要较长时间加载时显示警告。 若要执行此操作，请在 **“选项”** 组中单击 **“设置”**。 在 **“数据”** 选项卡上，选择 **“显示针对大型数据集的筛选警告”**。  
+ 导出大量数据时，可以设置在数据可能需要较长时间加载时显示警告。 若要执行此操作，请在 **“选项”** 组中单击 **“设置”** 。 在 **“数据”** 选项卡上，选择 **“显示针对大型数据集的筛选警告”** 。  
   
 > [!WARNING]  
 >  只能使用用于 Excel 的 MDS 外接程序在 Excel 中打开和更新启用 MDS 的工作薄。 不支持在未安装 MDS Excel 外接程序的计算机上的 Excel 中打开启用 MDS 的工作簿，并且可能导致工作簿文件损坏。 若要与他人共享数据，应该通过电子邮件向他人发送快捷查询文件，而不是保存该工作表并通过电子邮件发送。 有关查询的详细信息，请参阅[以电子邮件形式发送快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)。  

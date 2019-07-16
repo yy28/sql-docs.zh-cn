@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989864"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>转换 DB2 架构 (DB2ToSQL)
 已连接到 DB2 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并将项目设置和数据映射选项，可以将转换到 DB2 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象。  
@@ -74,7 +73,7 @@ ms.locfileid: "63298968"
 |昵称|部分映射。 所需的基础对象的手动处理|  
 |同义词|映射。|  
 |在 DB2 中的标准函数|SSMA 映射 DB2 标准函数等功能在 SQL Server 中不可用：|  
-|授权|未映射。|  
+|Authorization|未映射。|  
 |谓词|映射。|  
 |SELECT INTO 语句|未映射。|  
 |值 INTO 语句|未映射。|  

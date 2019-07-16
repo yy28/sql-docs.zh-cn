@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db39751059d84e4e3a7950acbbbcb7f1a2b0b00d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056858"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>从 SQL 到 C：日期时间间隔
 
@@ -42,11 +41,11 @@ ms.locfileid: "63270433"
 
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|所有日期时间 C 间隔类型|不会被截断尾随的字段部分<br /><br /> 截断尾随的字段部分<br /><br /> 前导精度是目标的不足够大以保存数据源中|数据<br /><br /> 截断的数据<br /><br /> 未定义|数据的长度<br /><br /> 数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|时间间隔精度是单个字段和数据转换而无需截断<br /><br /> 时间间隔精度是单个字段，并截断小数部分<br /><br /> 时间间隔精度是单个字段或整个已截断<br /><br /> 时间间隔精度不是单个字段|数据<br /><br /> 截断的数据<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> 数据的长度<br /><br /> 数据的长度<br /><br /> C 数据类型的大小|不适用<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|数据<br /><br /> 未定义|数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 数字位数 （而不是小数部分） 的整个 < *BufferLength*<br /><br /> 数字位数整体 （而不是小数） > = *BufferLength*|数据<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 数字位数 （而不是小数部分） 的整个 < *BufferLength*<br /><br /> 数字位数整体 （而不是小数） > = *BufferLength*|数据<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|所有日期时间 C 间隔类型|不会被截断尾随的字段部分<br /><br /> 截断尾随的字段部分<br /><br /> 前导精度是目标的不足够大以保存数据源中|Data<br /><br /> 截断的数据<br /><br /> 未定义|数据的长度<br /><br /> 数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|时间间隔精度是单个字段和数据转换而无需截断<br /><br /> 时间间隔精度是单个字段，并截断小数部分<br /><br /> 时间间隔精度是单个字段或整个已截断<br /><br /> 时间间隔精度不是单个字段|Data<br /><br /> 截断的数据<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> 数据的长度<br /><br /> 数据的长度<br /><br /> C 数据类型的大小|不适用<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 数字位数 （而不是小数部分） 的整个 < *BufferLength*<br /><br /> 数字位数整体 （而不是小数） > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 数字位数 （而不是小数部分） 的整个 < *BufferLength*<br /><br /> 数字位数整体 （而不是小数） > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
   
  [a] 的日期时间间隔 SQL 类型可以转换为任何一天时间间隔 C 类型。  
   

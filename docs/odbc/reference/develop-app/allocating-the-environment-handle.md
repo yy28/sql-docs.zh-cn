@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077184"
 ---
 # <a name="allocating-the-environment-handle"></a>分配环境句柄
 任何 ODBC 应用程序的第一个任务是加载驱动程序管理器;如何做到这一点与操作系统相关。 例如，在运行 Microsoft® Windows NT® Server/Windows 2000 Server、 Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98 的计算机，该应用程序或者链接到驱动程序管理器库或调用**LoadLibrary**加载驱动程序管理器 DLL。  

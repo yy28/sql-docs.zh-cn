@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987945"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 文件（文本文件驱动程序）
 使用文本驱动程序时，使用架构信息文件来确定文本文件的格式。 架构信息文件是始终命名为 Schema.ini，始终放置在文本数据源所在的同一目录中。 架构信息文件提供了有关的信息的一般格式的文件、 列名称和数据类型信息和几个其他数据特征 IISAM。 Schema.ini 文件始终都需要访问固定长度的数据。 当文本表包含日期时间、 货币或小数数据或只要您希望更好地控制的表中的数据处理时，应使用 Schema.ini 文件。  
@@ -54,9 +53,9 @@ ms.locfileid: "63127900"
   
 |格式说明符|表格式|Schema.ini 格式语句|  
 |----------------------|------------------|---------------------------------|  
-|**制表符分隔**|由制表符分隔文件中的字段。|Format=TabDelimited|  
+|**制表符分隔**|由制表符分隔文件中的字段。|格式 = TabDelimited|  
 |**CSV 分隔**|文件中的字段由逗号 （以逗号分隔值） 分隔。|格式 = CSVDelimited|  
-|**自定义分隔符**|选择输入到对话框中的任何字符分隔文件中的字段。 除双引号 （"） 外所有允许，包括保留为空。|格式 = 带分隔符 (*自定义字符*)<br /><br /> -或-<br /><br /> 与任何指定的分隔符：<br /><br /> Format=Delimited( )|  
+|**自定义分隔符**|选择输入到对话框中的任何字符分隔文件中的字段。 除双引号 （"） 外所有允许，包括保留为空。|格式 = 带分隔符 (*自定义字符*)<br /><br /> -或-<br /><br /> 与任何指定的分隔符：<br /><br /> 格式 = 带分隔符 （）|  
 |**固定的长度**|在文件中的字段是固定长度。|格式 = FixedLength|  
   
 ## <a name="specifying-the-fields"></a>指定的字段  
@@ -97,10 +96,10 @@ n=ColumnNametype [#]
 ## <a name="remarks"></a>备注  
  下表描述的每个部分**Col**_n_条目。  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |*ColumnName*|文本列的名称。 如果列名称包含嵌入的空格，则必须将其括在双引号。|  
-|*type*|数据类型是按如下所示：<br /><br /> **Microsoft Jet 的数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> 双精度<br /><br /> DateTime<br /><br /> Text<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （相同短格式）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
+|*type*|数据类型是按如下所示：<br /><br /> **Microsoft Jet 的数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （相同短格式）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
 |宽度 |文本字符串值`Width`。 指示下面的编号，将指定的列的宽度 （对于字符分隔的文件是可选的; 对于固定长度的文件所需）。|  
 |*#*|指定列的宽度的整数值 (需要**宽度**指定)。|  
   
@@ -114,7 +113,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>指定数据类型格式和转换  
  Schema.ini 文件包含几个选项，可用于指定数据转换或显示方式。 下表列出了每个选项。  
   
-|Option|Description|  
+|Option|描述|  
 |------------|-----------------|  
 |**DateTimeFormat**|可以设置为一个格式字符串，表示日期和时间。 如果使用相同的格式处理中导入/导出的所有日期/时间字段，则应指定此项。 所有 Microsoft Jet 格式，除了上午 和下午 支持。 如果没有任何格式字符串，使用 Windows 控制面板短日期图片和时间选项。|  
 |**DecimalSymbol**|可以设置为任何单个字符，用于分隔和数字的小数部分的整数。|  
@@ -123,7 +122,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|指示可以用于在文本文件中的货币值的货币符号。 示例包括美元符号 （$） 和数据挖掘。|  
 |**CurrencyPosFormat**|可以设置为以下值之一：<br /><br /> 货币符号前缀，并且没有分隔 ($1)<br />具有任何单独的货币符号后缀 (1$)<br />用一个字符分隔 ($ 1) 的货币符号前缀<br />用一个字符分隔的货币符号后缀 (1 $)|  
 |**CurrencyDigits**|指定用于货币金额的小数部分的位数。|  
-|**CurrencyNegFormat**|可以是以下值之一：<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-   1$-<br />-   -1 $<br />-   -$ 1<br />-   1 $-<br />-   $ 1-<br />-   $ -1<br />-   1- $<br />-   ($ 1)<br />-   (1 $)<br /><br /> 此示例演示美元符号，但应将其替换适当**CurrencySymbol**实际程序中的值。|  
+|**CurrencyNegFormat**|可以是以下值之一：<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-$ 1<br />-   1$-<br />--1 $<br />-   -$ 1<br />-1-<br />-   $ 1-<br />-   $ -1<br />-$ 1<br />-   ($ 1)<br />-   (1 $)<br /><br /> 此示例演示美元符号，但应将其替换适当**CurrencySymbol**实际程序中的值。|  
 |**CurrencyThousandSymbol**|指示可以由数以千计的分隔文本文件中的货币值的单字符符号。|  
 |**CurrencyDecimalSymbol**|可以设置为任何单个字符，用于整个分开货币金额的小数部分。|  
   

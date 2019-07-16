@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067416"
 ---
 # <a name="data-buffer-type"></a>数据缓冲区类型
 由应用程序指定的缓冲区的 C 数据类型。 使用一个变量，这发生在应用程序将该变量分配。 与一般内存-即，由类型 void 的指针指向的内存发生这种情况时应用程序将强制转换为特定类型的内存。 该驱动程序将发现两种方法中的使用此类型：  

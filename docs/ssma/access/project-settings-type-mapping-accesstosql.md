@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066661"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>项目设置 （类型映射） (AccessToSQL)
 类型映射项目设置，可以设置 SSMA 项目的默认类型映射。 此外可以指定单个数据库对象的类型映射。 有关详细信息，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
@@ -55,11 +54,11 @@ ms.locfileid: "63299131"
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
+|**备注**|**nvarchar(max)**|  
 |**备注**-适用于 Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  
-|**text[\*..\*]** - for Access 97|**varchar[\*]**|  
+|**文本 [\*...\*]** -对于 Access 97|**varchar[\*]**|  
   
 **“添加”**  
 单击此项可将数据类型添加到映射列表。  
@@ -70,7 +69,7 @@ ms.locfileid: "63299131"
 **删除**  
 单击以从映射列表中删除所选的数据类型映射。  
   
-重置为默认值  
+重置为默认值   
 单击重置为 SSMA 默认值的所有数据类型映射。  
   
 ## <a name="see-also"></a>请参阅  

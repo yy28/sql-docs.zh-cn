@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0b4ffd576c9be5f219a1f7d792aa04f00ed1b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 430008b1a689c413bf69c9907a60f4129dc8e5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006875"
 ---
 # <a name="mspeerconflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   用于在对等复制中存储每个节点对拓扑范围内配置请求的响应。 该表存储在发布数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|标识中的冲突配置请求项[MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)表。|  
 |peer_node|**sysname**|生成响应的服务器实例的名称。|  

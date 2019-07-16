@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211151"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
@@ -47,14 +47,14 @@ ms.locfileid: "52757549"
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：此服务不会在计算机启动时自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：计算机启动时，此服务将尝试启动。  
+-   自动：此服务将尝试启动此计算机启动时。  
   
--   禁用：此服务无法启动。  
+-   已禁用：无法启动此服务。  
   
  **状态**  
- 指示此服务是正在运行、已停止还是已禁用。 “...”指明状态更改是挂起的。  
+ 指示此服务是正在运行、已停止还是已禁用。 “...  ”指明状态更改是挂起的。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Browser 服务](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  

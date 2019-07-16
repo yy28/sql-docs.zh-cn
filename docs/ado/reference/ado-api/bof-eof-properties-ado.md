@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920384"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 属性 (ADO)
 -   **BOF**指示当前记录的位置是在中的第一个记录之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -50,9 +49,9 @@ ms.locfileid: "66696288"
   
 ||MoveFirst、<br /><br /> MoveLast|MovePrevious，<br /><br /> 移动 < 0|移动 0|MoveNext，<br /><br /> 移动 > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**， **EOF**=**False**|Allowed|错误|错误|Allowed|  
-|**BOF**=**False**， **EOF**= **，则返回 True**|Allowed|Allowed|错误|错误|  
-|同时 **，则返回 True**|错误|错误|错误|错误|  
+|**BOF**=**True**， **EOF**=**False**|Allowed|Error|Error|Allowed|  
+|**BOF**=**False**， **EOF**= **，则返回 True**|Allowed|Allowed|Error|Error|  
+|同时 **，则返回 True**|Error|Error|Error|Error|  
 |同时**False**|Allowed|Allowed|Allowed|Allowed|  
   
  允许**移动**方法并不保证该方法将成功定位到一条记录; 而只是意味着，调用指定**移动**方法将不会生成错误。  
@@ -62,7 +61,7 @@ ms.locfileid: "66696288"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**， **MoveLast**|设置为 **，则返回 True**|设置为 **，则返回 True**|  
-|**Move** 0|无更改|无更改|  
+|**移动**0|无更改|无更改|  
 |**MovePrevious**，**移动**< 0|设置为 **，则返回 True**|无更改|  
 |**MoveNext**，**移动**> 0|无更改|设置为 **，则返回 True**|  
   

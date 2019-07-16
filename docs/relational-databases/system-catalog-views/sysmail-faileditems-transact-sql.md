@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e8031b42b3b0b54aac09913e7eb54e5be07e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060216"
 ---
 # <a name="sysmailfaileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47624085"
   
  若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要仅查看未发送的消息，请使用[sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)。 若要查看已发送的消息，请使用[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。 若要查看电子邮件附件，请使用[sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。|  
 |**profile_id**|**int**|提交消息所用配置文件的标识符。|  
@@ -42,7 +41,7 @@ ms.locfileid: "47624085"
 |**subject**|**nvarchar(510)**|消息的主题行。|  
 |**正文**|**varchar(max)**|消息的正文。|  
 |**body_format**|**varchar(20)**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
-|**重要性**|**varchar(6)**|**重要性**消息参数。|  
+|**importance**|**varchar(6)**|**重要性**消息参数。|  
 |**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**Attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
@@ -65,7 +64,7 @@ ms.locfileid: "47624085"
 ## <a name="remarks"></a>备注  
  使用**sysmail_faileditems**视图，以查看通过数据库邮件未发送的消息。 排除数据库邮件故障时，该视图可以向您显示未发送的消息的属性，从而帮助您确定问题的性质。 若要查看失败的原因，请参阅中的失败消息的条目[sysmail_event_log &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授予**sysadmin**固定的服务器角色和**databasemailuserrole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有失败的消息。 所有其他用户仅可查看他们已提交的失败的消息。  
   
   

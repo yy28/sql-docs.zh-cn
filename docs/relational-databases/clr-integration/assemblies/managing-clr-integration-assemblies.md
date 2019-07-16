@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054447"
 ---
 # <a name="managing-clr-integration-assemblies"></a>管理 CLR 集成程序集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +28,10 @@ ms.locfileid: "47686535"
   
  程序集信息存储在**sys.assembly_files**已经安装该程序集在数据库中的表。 **Sys.assembly_files**表包含以下列。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |assembly_id|为程序集定义的标识符。 此编号分配到与同一程序集相关的所有对象。|  
-|NAME|对象的名称。|  
+|name|对象的名称。|  
 |file_id|一个数字，指明每个对象，与关联的第一个对象给定**assembly_id**该值为 1。 如果多个对象具有相同关联**assembly_id**，然后每个后续**file_id**值加 1。|  
 |content|程序集或文件的十六进制表示形式。|  
   

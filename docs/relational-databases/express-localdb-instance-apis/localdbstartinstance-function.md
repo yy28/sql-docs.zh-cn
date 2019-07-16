@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022087"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>详细信息  
  连接缓冲区参数 (*wszSqlConnection*) 和连接缓冲区大小参数 (*lpcchSqlConnection*) 都是可选的。 下表显示了为使用这些参数提供的选项及其结果。  
   
-|缓冲区|缓冲区大小|理由|操作|  
+|缓冲区|缓冲区大小|理由|Action|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|用户想要启动实例，并且不需要管道名称。|启动实例（不返回管道且不要求返回缓冲区大小）。|  
 |NULL|现值|用户要求提供输出缓冲区大小。 （在下一次调用中，用户将可能要求实际启动。)|返回所需的缓冲区大小（不启动且不返回管道）。 结果为 S_OK。|  

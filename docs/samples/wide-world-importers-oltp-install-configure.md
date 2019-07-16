@@ -9,19 +9,18 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067674"
 ---
 # <a name="installation-and-configuration"></a>安装和配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers OLTP 数据库安装和配置说明。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更高版本） 或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 对于该示例的完整版本，使用 SQL Server 评估/开发人员/企业版。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
@@ -38,7 +37,7 @@ Wide World Importers OLTP 数据库安装和配置说明。
 
 [wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安装
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -48,9 +47,9 @@ Wide World Importers OLTP 数据库安装和配置说明。
 1. 打开 SQL Server Management Studio 并连接到目标 SQL Server 实例。
 2. 右键单击**数据库**节点，然后选择**Restore Database**。
 3. 选择**设备**，然后单击按钮 **...**
-4. 在对话框**选择备份设备**，单击**添加**，导航到的服务器的文件系统中的数据库备份，并选择的备份。 单击“确定” 。
+4. 在对话框**选择备份设备**，单击**添加**，导航到的服务器的文件系统中的数据库备份，并选择的备份。 单击 **“确定”** 。
 5. 如果需要更改数据的目标位置，并在日志文件，**文件**窗格。 请注意，它将数据和日志文件的不同驱动器上的最佳做法。
-6. 单击“确定” 。 这将启动数据库还原。 完成后，您将拥有数据库安装在您的 SQL Server 实例上的 WideWorldImporters。
+6. 单击 **“确定”** 。 这将启动数据库还原。 完成后，您将拥有数据库安装在您的 SQL Server 实例上的 WideWorldImporters。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
@@ -76,7 +75,7 @@ Wide World Importers OLTP 数据库安装和配置说明。
 
 ### <a name="sql-server-audit"></a>SQL Server 审核
 
-适用范围： SQL Server
+适用范围：SQL Server
 
 启用 SQL Server 中的审核要求服务器配置。 若要启用 SQL Server 审核 WideWorldImporters 示例，请在数据库中运行以下语句：
 
@@ -86,7 +85,7 @@ Wide World Importers OLTP 数据库安装和配置说明。
 
 ### <a name="row-level-security"></a>行级安全性
 
-适用于： Azure SQL 数据库
+适用范围：Azure SQL Database
 
 WideWorldImporters 的 bacpac 下载中默认情况下不启用行级别安全性。 若要在数据库中启用行级别安全性，请运行以下存储的过程：
 
