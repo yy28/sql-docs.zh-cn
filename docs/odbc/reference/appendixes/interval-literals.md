@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041908"
 ---
 # <a name="interval-literals"></a>间隔文本
 ODBC 需要的所有驱动程序支持 SQL_CHAR 或 SQL_VARCHAR 数据类型转换为所有的 C 间隔数据类型。 如果基础数据源不支持 interval 数据类型，但是，需要知道 SQL_CHAR 字段中的值的正确格式，才能支持这些转换该驱动程序。 同样，ODBC 要求应具有任何 ODBC C 类型可以转换为 SQL_CHAR 或 SQL_VARCHAR，因此，驱动程序需要知道何种格式存储在字符字段中的时间间隔。 本部分介绍间隔文字，驱动程序编写器需要使用在到或从 C 间隔数据类型转换过程中验证 SQL_CHAR 字段的语法。  
@@ -72,26 +71,26 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |文字的转义子句|指定时间间隔|  
 |---------------------------|------------------------|  
 |{INTERVAL '326' YEAR(4)}|指定 326 年的时间间隔。 间隔起始精度为 4。|  
-|{INTERVAL '326' MONTH(3)}|指定 326 几个月的时间间隔。 间隔起始精度为 3。|  
+|{间隔"326"MONTH(3)}|指定 326 几个月的时间间隔。 间隔起始精度为 3。|  
 |{INTERVAL '3261' DAY(4)}|指定 3261 天的间隔。 间隔起始精度为 4。|  
-|{INTERVAL '163' HOUR(3)}|指定 163 天的间隔。 间隔起始精度为 3。|  
+|{间隔"163"HOUR(3)}|指定 163 天的间隔。 间隔起始精度为 3。|  
 |{间隔"163"MINUTE(3)}|指定 163 分钟的间隔。 间隔起始精度为 3。|  
-|{INTERVAL '223.16' SECOND(3,2)}|指定 223.16 秒的间隔。 时间间隔前导精度为 3，并且秒精度为 2。|  
+|{间隔"223.16"SECOND(3,2)}|指定 223.16 秒的间隔。 时间间隔前导精度为 3，并且秒精度为 2。|  
 |{为月间隔"163-11 YEAR(3)}|指定 163 年 11 个月的时间间隔。 间隔起始精度为 3。|  
 |{INTERVAL '163 12' DAY(3) TO HOUR}|指定 163 天 12 小时的间隔。 间隔起始精度为 3。|  
 |{INTERVAL '163 12:39' DAY(3) TO MINUTE}|指定 163 天，12 小时和 39 分钟的间隔。 间隔起始精度为 3。|  
 |{INTERVAL '163 12:39:59.163' DAY(3) TO SECOND(3)}|指定 163 天，12 小时，39 分和 59.163 秒的间隔。 时间间隔前导精度为 3，并且秒精度为 3。|  
-|{INTERVAL '163:39' HOUR(3) TO MINUTE}|指定 163 小时 39 分钟的间隔。 间隔起始精度为 3。|  
-|{INTERVAL '163:39:59.163' HOUR(3) TO SECOND(4)}|指定 163 小时，39 分钟和 59.163 秒的间隔。 间隔前导精度为 3，而秒的精度为 4。|  
-|{INTERVAL '163:59.163' MINUTE(3) TO SECOND(5)}|指定 163 分钟 59.163 秒的间隔。 时间间隔前导精度为 3，和秒的精度为 5。|  
+|{间隔"163:39"为分钟 HOUR(3)}|指定 163 小时 39 分钟的间隔。 间隔起始精度为 3。|  
+|{间隔"163:39:59.163"到 SECOND(4) HOUR(3)}|指定 163 小时，39 分钟和 59.163 秒的间隔。 间隔前导精度为 3，而秒的精度为 4。|  
+|{间隔"163:59.163"到 SECOND(5) MINUTE(3)}|指定 163 分钟 59.163 秒的间隔。 时间间隔前导精度为 3，和秒的精度为 5。|  
 |{间隔-"16 23:39:56.23"一天到第二个}|指定减去 16 天，23 小时，39 分和 56.23 秒的间隔。 隐含的前导精度为 2，并暗示的秒的精度是 6。|  
   
  下表列出了无效的间隔文本的示例：  
   
 |文字的转义子句|原因无效的原因|  
 |---------------------------|------------------------|  
-|{INTERVAL '163' HOUR(2)}|间隔前导精度为 2，但 163 前导字段的值。|  
-|{INTERVAL '223.16' SECOND(2,2)}<br /><br /> {INTERVAL '223.16' SECOND(3,1)}|在第一个示例中，前导精度为太小，并且在第二个示例中，秒的精度太小。|  
-|{INTERVAL '223.16' SECOND}<br /><br /> {INTERVAL '223' YEAR}|前导精度未指定，因为它默认为 2，这是太小而无法保存指定的文本。|  
+|{间隔"163"HOUR(2)}|间隔前导精度为 2，但 163 前导字段的值。|  
+|{INTERVAL '223.16' SECOND(2,2)}<br /><br /> {间隔"223.16"SECOND(3,1)}|在第一个示例中，前导精度为太小，并且在第二个示例中，秒的精度太小。|  
+|{INTERVAL '223.16' SECOND}<br /><br /> {间隔"223"年}|前导精度未指定，因为它默认为 2，这是太小而无法保存指定的文本。|  
 |{INTERVAL '22.1234567' SECOND}|秒的精度是未指定的因此它将默认为 6。 文本在小数点后具有 7 位。|  
-|{为月间隔"163-13' YEAR(3)}<br /><br /> {INTERVAL '163 65' DAY(3) TO HOUR}<br /><br /> {INTERVAL '163 62:39' DAY(3) TO MINUTE}<br /><br /> {INTERVAL '163 12:125:59.163' DAY(3) TO SECOND(3)}<br /><br /> {INTERVAL '163:144' HOUR(3) TO MINUTE}<br /><br /> {INTERVAL '163:567:234.163' HOUR(3) TO SECOND(4)}<br /><br /> {间隔"163:591.163"到 SECOND(5) MINUTE(3)}|尾随的字段不遵循公历日历以来的规则。|
+|{为月间隔"163-13' YEAR(3)}<br /><br /> {INTERVAL '163 65' DAY(3) TO HOUR}<br /><br /> {INTERVAL '163 62:39' DAY(3) TO MINUTE}<br /><br /> {INTERVAL '163 12:125:59.163' DAY(3) TO SECOND(3)}<br /><br /> {间隔"163:144"为分钟 HOUR(3)}<br /><br /> {间隔"163:567:234.163"到 SECOND(4) HOUR(3)}<br /><br /> {间隔"163:591.163"到 SECOND(5) MINUTE(3)}|尾随的字段不遵循公历日历以来的规则。|

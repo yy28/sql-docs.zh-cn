@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 26716906460905b307dfc9ca0e959ec3e61fd224
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e81ea322405352f5f78a29d0c7d45a8bd25307e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052528"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 属性（SInstance 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62515492"
 object.NumberOfFlags [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
+## <a name="parts"></a>部件  
  *object*  
  [SInstance 类](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)对象，表示服务器实例。  
   

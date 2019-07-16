@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048162"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="result-sets"></a>结果集  
  下表显示了结果集当没有用户帐户也不是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为指定 Windows 用户或*security_account*。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|当前数据库中的用户。|  
 |**RoleName**|**sysname**|角色所属**用户名**所属。|  
@@ -63,14 +62,14 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  下表显示未指定用户帐户，并且当前数据库中存在别名时的结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|当前数据库中已经化名为用户名的登录名。|  
 |**UserNameAliasedTo**|**sysname**|当前数据库中登录名要化名为的用户名。|  
   
  下表显示了结果集时为指定角色*security_account*。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**Role_name**|**sysname**|当前数据库中角色的名称。|  
 |**Role_id**|**smallint**|当前数据库中角色的角色 ID。|  

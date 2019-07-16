@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab77fa15bb4d3d1e68b8335a1c9026b1831a8619
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7121626f3de850c670f160a945ba3de8533cd7ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064293"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>将结果集发送到服务器（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "62742113"
   
 -   **Srv_sendmsg**之前或之后发送所有行 （如果有），可能会按任意顺序调用函数**srv_sendrow**。 与发送完成状态之前的所有消息必须都发送到客户端**srv_senddone**。  
   
--   对于发送到客户端的每行调用一次 srv_sendrow 函数。 必须将所有行都发送到客户端之前任何消息、 状态值或完成状态会自动都发送带有**srv_sendmsg**，则**srv_status**自变量**srv_pfield**，或**srv_senddone**。  
+-   对于发送到客户端的每行调用一次 srv_sendrow 函数  。 必须将所有行都发送到客户端之前任何消息、 状态值或完成状态会自动都发送带有**srv_sendmsg**，则**srv_status**自变量**srv_pfield**，或**srv_senddone**。  
   
 -   发送的某行未与定义其所有列**srv_describe**导致应用程序引发信息性错误消息并向客户端返回 FAIL。 在此情况下，将不发送该行。  
   

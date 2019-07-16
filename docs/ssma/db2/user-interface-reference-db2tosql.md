@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63080668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059962"
 ---
 # <a name="user-interface-reference-db2tosql"></a>用户界面参考 (DB2ToSQL)
 本部分包括帮助主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2。  
@@ -25,7 +24,7 @@ ms.locfileid: "63080668"
   
 |||  
 |-|-|  
-|主题|Description|  
+|主题|描述|  
 |[高级对象选择&#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|使用**高级对象选择**对话框可以通过使用筛选器条件来查找数据库对象，然后选择或清除这些对象。|  
 |[评估报告&#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|评估报告用于查看到 DB2 对象转换的结果[!INCLUDE[tsql](../../includes/tsql-md.md)]语法，并估计的时间和为迁移的复杂度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用**连接到 DB2**对话框以连接到你想要迁移的 DB2 数据库。|  

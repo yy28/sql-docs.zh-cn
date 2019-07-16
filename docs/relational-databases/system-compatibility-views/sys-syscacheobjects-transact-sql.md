@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba5cd0f3ec426e52da602098be0968569bf7c31a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df4b83cb7b1e69191e8964730a534c1b24fbac2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010777"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47831535"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|存储桶 ID。 该值表示从 0 到（目录大小 - 1）的范围。 目录大小为哈希表的大小。|  
 |**cacheobjtype**|**nvarchar(17)**|缓存中的对象类型：<br /><br /> 编译计划<br /><br /> 可执行计划<br /><br /> 分析树<br /><br /> 游标<br /><br /> 扩展存储过程|  
-|**objtype**|**nvarchar(8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> 即席查询 ([!INCLUDE[tsql](../../includes/tsql-md.md)]作为语言事件提交**sqlcmd**或**osql**实用程序，而不是远程过程调用)<br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> “查看”<br /><br /> ，则“默认”<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 检查<br /><br /> 规则|  
+|**objtype**|**nvarchar(8)**|对象的类型：<br /><br /> 存储过程<br /><br /> 预定义语句<br /><br /> 即席查询 ([!INCLUDE[tsql](../../includes/tsql-md.md)]作为语言事件提交**sqlcmd**或**osql**实用程序，而不是远程过程调用)<br /><br /> ReplProc（复制过程）<br /><br /> 触发器<br /><br /> “查看”<br /><br /> 默认<br /><br /> 用户表<br /><br /> 系统表<br /><br /> 检查<br /><br /> 规则|  
 |**objid**|**int**|用于在缓存中查找对象的主键之一。 这是 ID 中存储的对象**sysobjects**的数据库对象 （过程、 视图、 触发器等）。 对于缓存对象 （如临时或已准备好的 SQL) **objid**是内部生成的值。|  
 |**dbid**|**smallint**|在其中编译缓存对象的数据库 ID。|  
 |**dbidexec**|**smallint**|执行查询的数据库 ID。<br /><br /> 对于大多数对象， **dbidexec**具有相同的值**dbid**。<br /><br /> 对于系统视图**dbidexec**是从其执行查询的数据库 ID。<br /><br /> 对于即席查询， **dbidexec**为 0。 这意味着**dbidexec**具有相同的值**dbid**。|  

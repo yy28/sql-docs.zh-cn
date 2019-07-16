@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04d86251149708aa521166018d643fe8735d3ec6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c274d20590601ea2b089f53a9edf10b6a5ac0163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022688"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,17 +35,17 @@ ms.locfileid: "47837525"
 > [!IMPORTANT]  
 >  列级别权限的优先级高于同一实体的对象级别权限。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|class|**tinyint**|标识权限所在的类。<br /><br /> 0 = 数据库<br />1 = 对象或列<br />3 = 架构<br />4 = 数据库主体<br />5 = 程序集-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />6 = 类型<br />10 = XML 架构集合的 <br />                      **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />15 = 消息类型-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />16 = 服务约定-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />17 = 服务-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />18 = 远程服务绑定-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />19 = 的路由-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />23 = 全文目录-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />24 = 对称密钥-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />25 = 证书-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />26 = 非对称密钥-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|class |**tinyint**|标识权限所在的类。<br /><br /> 0 = 数据库<br />1 = 对象或列<br />3 = 架构<br />4 = 数据库主体<br />5 = 程序集-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />6 = 类型<br />10 = XML 架构集合的 <br />                      **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />15 = 消息类型-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />16 = 服务约定-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />17 = 服务-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />18 = 远程服务绑定-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />19 = 的路由-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />23 = 全文目录-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />24 = 对称密钥-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />25 = 证书-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />26 = 非对称密钥-**适用范围**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**class_desc**|**nvarchar(60)**|权限所针对的类的说明。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|存在权限的对象的 ID，根据类解释。 通常情况下，**则 major_id**是只是一种的适用于类所表示的 ID。 <br /><br /> 0 = 数据库本身 <br /><br /> > 0 = 用户对象的对象 Id <br /><br /> \<0 = 针对系统对象的对象 Id |  
 |**minor_id**|**int**|存在权限的对象的辅助 ID，根据类解释。 通常情况下， **minor_id**为零，因为没有任何子类别可用于对象的类。 否则，将表的列 ID。|  
 |**grantee_principal_id**|**int**|向其授予权限的数据库主体 ID。|  
 |**grantor_principal_id**|**int**|这些权限的授权者的数据库主体 ID。|  
-|**类型**|**char(4)**|数据库权限类型。 有关权限类型的列表，请参阅下一个表。|  
+|**type**|**char(4)**|数据库权限类型。 有关权限类型的列表，请参阅下一个表。|  
 |**permission_name**|**nvarchar(128)**|权限名称。|  
-|State|**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
+|**State**|**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
 |**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>数据库权限   
@@ -110,7 +109,7 @@ ms.locfileid: "47837525"
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|删除|DATABASE、OBJECT、SCHEMA|  
+|DL|DELETE|DATABASE、OBJECT、SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|在运行 CREATE 语句前执行|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|User|  
@@ -129,14 +128,14 @@ ms.locfileid: "47837525"
 |VWCT|VIEW CHANGE TRACKING|TABLE、SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何用户都可以查看自己的权限。 要查看其他用户的权限，需要获取 VIEW DEFINITION、ALTER ANY USER 或任何相关的用户权限。 要查看用户定义的角色，需要获取 ALTER ANY ROLE 或相关的角色（如公共）成员身份。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A：列出数据库主体的所有权限  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>A:列出数据库主体的所有权限  
  以下查询将列出明确对数据库主体授予或拒绝的权限。  
   
 > [!IMPORTANT]  
@@ -150,7 +149,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B：列出对数据库中架构对象的权限  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B：列出数据库中架构对象的权限  
  以下查询将 sys.database_principals 和 sys.database_permissions 与 sys.objects 和 sys.schemas 联接，以列出对特定架构对象授予或拒绝的权限。  
   
 ```  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de00026a0d48a9850d7c13b18525c1a1d84820f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 269afec77614cdcd92e23b1fa66915c44cfa28e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069516"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>将应用程序从 MDAC 更新到 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "52511813"
   
 -   Microsoft OLE DB provider for ODBC (MSDASQL) 不支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 如果将 MDAC SQLODBC 驱动程序用于 MSDASQL 或将 MDAC SQLODBC 驱动程序用于 ADO，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中使用 OLE DB。  
   
--   MDAC 连接字符串允许通过布尔值 (**，则返回 true**) 用于**Trusted_Connection**关键字。 一个[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 连接字符串必须使用**是**或**没有**。  
+-   MDAC 连接字符串允许通过布尔值 ( **，则返回 true**) 用于**Trusted_Connection**关键字。 一个[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 连接字符串必须使用**是**或**没有**。  
   
 -   警告和错误已发生小的改动。 现在，服务器返回的警告和错误在传递给 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时会保留相同的严重性。 如果要依赖于捕获特定的警告和错误，则应当确保已经全面测试了应用程序。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "52511813"
   
 -   在 TABLE_TYPE 设置为 SYNONYM 的情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口返回 TABLES 和 TABLE_INFO 架构行集中的同义词。  
   
--   返回数据类型的值**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**， **udt**，或其他大型对象类型不能返回到客户端版本早于[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 如果希望将这些类型用作返回值，则必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。  
+-   返回数据类型的值**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ， **xml**， **udt**，或其他大型对象类型不能返回到客户端版本早于[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 如果希望将这些类型用作返回值，则必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。  
   
 -   MDAC 允许在手动事务和隐式事务启动时执行以下语句，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不允许。 这些语句必须以自动提交模式执行。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "52511813"
   
 -   使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端，ITransactionLocal::BeginTransaction 将导致事务立即启动。 如果使用 MDAC，则事务会延迟，直到应用程序已执行要求事务处于隐式事务模式的语句后才启动。 有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
   
--   使用时，可能会遇到错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 驱动程序和使用 System.Data.Odbc 访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]新的服务器计算机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的特定数据类型或功能。 System.Data.Odbc 提供一般 ODBC 实现并且随后不会公开供应商特定的功能或扩展。 （[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序已更新为可本机支持最新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。）解决此问题，您可以恢复到 MDAC 或迁移到 System.Data.SqlClient。  
+-   使用时，可能会遇到错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 驱动程序和使用 System.Data.Odbc 访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]新的服务器计算机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的特定数据类型或功能。 System.Data.Odbc 提供一般 ODBC 实现并且随后不会公开供应商特定的功能或扩展。 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序更新以本机方式支持最新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能。)解决此问题，您可以恢复到 MDAC 或迁移到 System.Data.SqlClient。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都支持使用行版本控制的已提交读事务隔离，但只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持快照事务隔离。 （就编程而言，使用行版本控制的已提交读事务隔离等同于已提交读事务。）  
   

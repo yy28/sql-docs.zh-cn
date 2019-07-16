@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017720"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +41,27 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@parameter_name** =] **'**_parameter_name_  
+ [ **@parameter_name** =] **'** _parameter_name_   
  要更改的参数的名称。  
   
- [**@parameter_value** =] **'**_parameter_value_  
+ [ **@parameter_value** =] **'** _parameter_value_   
  参数的新值。  
   
- [**@description** =] **'**_说明_  
+ [ **@description** =] **'** _说明_   
  参数的说明。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  数据库邮件使用以下参数：  
   
 ||||  
 |-|-|-|  
-|参数名称|Description|默认值|  
+|参数名称|描述|Default Value|  
 |*AccountRetryAttempts*|外部电子邮件进程尝试使用指定配置文件中的每个帐户发送电子邮件的次数。|**1**|  
 |*AccountRetryDelay*|外部邮件进程在两次尝试发送邮件之间的等待时间（以秒为单位）。|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|外部邮件进程保持活动状态的最少时间（以秒为单位）。 如果数据库邮件要发送多个邮件，增加此值可以使数据库邮件保持活动状态，避免频繁启动和停止的开销。|**600**|  

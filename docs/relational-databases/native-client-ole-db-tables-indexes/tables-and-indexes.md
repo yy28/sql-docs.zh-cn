@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfcb5a9f287936303fce50d5a2f1e3babccc1ed6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07c5eeeecae56415c4703417f89bfaca94ed8ed8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069504"
 ---
 # <a name="tables-and-indexes"></a>表和索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "47665339"
   
  在特定于访问接口的 DBPROPSET_SQLSERVERCOLUMN 属性集中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了以下属性。  
   
-|属性 ID|Description|  
+|属性 ID|描述|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|类型：VT_BSTR<br /><br /> R/W：写<br /><br /> 默认值：Null<br /><br /> 说明：该属性只能在 ITableDefinition 中使用。 该属性中指定的字符串可在创建 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 语句时使用。|  
+|SSPROP_COL_COLLATIONNAME|键入：VT_BSTR<br /><br /> R/W:写入<br /><br /> 默认：Null<br /><br /> 说明:仅在使用此属性**ITableDefinition**。 该属性中指定的字符串可在创建 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)<br /><br /> 语句时使用。|  
   
 ## <a name="in-this-section"></a>本节内容  
   

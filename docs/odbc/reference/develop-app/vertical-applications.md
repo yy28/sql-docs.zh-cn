@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022097"
 ---
 # <a name="vertical-applications"></a>垂直应用程序
 垂直应用程序通常执行针对单个 DBMS 明确定义的任务。 例如，订单输入应用程序跟踪在一家公司中的订单。 这些类型的应用程序具有的共同点是由应用程序开发人员通常设计数据库架构和，尽管应用程序可能适用于大量的不同 Dbms，它适用于与单个 DBMS 单个客户。  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: c6427f786de727f22c3dd74b0dcf91d63b36c4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004872"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>参数  
- *database_id* | NULL | 0 | DEFAULT  
+ *database_id* |NULL |0 |默认值  
  是数据库的 ID。 *database_id*是**smallint**。 有效的输入包括数据库的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
   
  指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果指定为空， *database_id*，则还必须指定为 NULL *object_id*， *index_id*，以及*partition_number*。  
@@ -75,7 +74,7 @@ sys.dm_db_index_physical_stats (
   
  指定 NULL 可返回基表或视图的所有索引的信息。 如果指定为空， *index_id*，则还必须指定为 NULL *partition_number*。  
   
- *partition_number* | NULL | 0 | DEFAULT  
+ *partition_number* |NULL |0 |默认值  
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆中，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
   
  指定 NULL，以返回有关所属对象的所有分区的信息。  
@@ -87,7 +86,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|表或视图的数据库 ID。|  
 |object_id|**int**|表或视图的索引位于对象 ID。|  
@@ -95,7 +94,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|所属对象内从 1 开始的分区号；表、视图或索引。<br /><br /> 1 = 未分区的索引或堆。|  
 |index_type_desc|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列存储映射索引 （内部）<br /><br /> 列存储 deletebuffer 会完全索引 （内部）<br /><br /> 列存储 DELETEBITMAP 索引 （内部）|  
 |hobt_id|**bigint**|堆或 B 树索引或分区的 ID。<br /><br /> 除了返回用户定义的索引的 hobt_id，这还将返回内部的列存储索引的 hobt_id。|  
-|alloc_unit_type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 分配单元包含类型的列中存储的数据**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，并**xml**。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 分配单元包含类型的列中存储的数据**varchar （n)**， **nvarchar(n)**， **varbinary （n)**，和**sql_变体**已推送到行外。|  
+|alloc_unit_type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 分配单元包含类型的列中存储的数据**文本**， **ntext**，**图像**， **varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，并**xml**。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 分配单元包含类型的列中存储的数据**varchar （n)** ， **nvarchar(n)** ， **varbinary （n)** ，和**sql_变体**已推送到行外。|  
 |index_depth|**tinyint**|索引级别数。<br /><br /> 1 = 堆，或 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。|  
 |index_level|**tinyint**|索引的当前级别。<br /><br /> 0 表示索引叶级别、堆以及 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。<br /><br /> 大于 0 的值表示非叶索引级别。 *index_level*索引的根级别将是最高。<br /><br /> 索引的非叶级别才处理何时*模式下*= 详细。|  
 |avg_fragmentation_in_percent|**float**|索引的逻辑碎片，或 IN_ROW_DATA 分配单元中堆的区碎片。<br /><br /> 此值按百分比计算，并将考虑多个文件。 有关逻辑碎片和区碎片的定义，请参阅“注释”。<br /><br /> 0 表示 LOB_DATA 和 ROW_OVERFLOW_DATA 分配单元。<br /><br /> 为 NULL 时堆*模式下*= SAMPLED。|  
@@ -178,7 +177,7 @@ GO
   
  **逻辑碎片**  
   
- 这是索引的叶级页中出错页所占的百分比。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页指针所指向的页。  
+ 这是索引的叶级页中出错页所占的百分比。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页  指针所指向的页。  
   
  **区碎片**  
   
@@ -429,7 +428,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [系统视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

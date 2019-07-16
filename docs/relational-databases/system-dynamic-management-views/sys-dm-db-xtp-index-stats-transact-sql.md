@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026831"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  包含上次重新启动数据库后收集的统计信息。   
+  包含上次重新启动数据库后收集的统计信息。  
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)并[Guidelines for Using Indexes on Memory-Optimized Tables](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)。  
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|该索引所属对象的 ID。|  
-|xtp_object_id|**bigint**|该对象的当前版本相对应的内部 ID。<br /><br /> 注意：适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
+|xtp_object_id|**bigint**|该对象的当前版本相对应的内部 ID。<br /><br /> 注意:适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
 |index_id|**bigint**|索引的 ID。 该 index_id 只在该对象中是唯一的。|  
 |scans_started|**bigint**|执行的内存中 OLTP 索引扫描的次数。 每次进行选择、插入、更新或删除时都需要进行索引扫描。|  
 |scans_retries|**bigint**|需要重试的索引扫描次数，|  

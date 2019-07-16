@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
+title: sp_help_jobs_in_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0f892bf81811538eeb06b18feb725778464910b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054905"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>结果集  
  返回以下结果集：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
 |**originating_server**|**nvarchar(30)**|作业来自的服务器的名称。|  
-|**名称**|**sysname**|作业的名称。|  
+|**name**|**sysname**|作业的名称。|  
 |**enabled**|**tinyint**|指示是否启用要执行的作业。|  
 |**description**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
@@ -85,7 +84,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|**类型**|**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业有没有目标服务器。|  
+|**type**|**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业有没有目标服务器。|  
   
 ## <a name="remarks"></a>备注  
  此过程列出有关附加到指定计划的作业的信息。  

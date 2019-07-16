@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053111"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,28 +51,28 @@ sp_describe_cursor_columns
  声明的用于接收游标输出的游标变量的名称。 *output_cursor_variable*是**光标**，无默认值，并且不能与任何游标相关联的调用 sp_describe_cursor_columns 时。 返回的游标是可滚动的动态只读游标。  
   
  [ @cursor_source=] {N'local' |N'global' |N'variable'}  
- 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 该参数是**nvarchar(30)**。  
+ 指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 该参数是**nvarchar(30)** 。  
   
  [ @cursor_identity=] N'*local_cursor_name*  
- 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句创建的游标名称。 *local_cursor_name*是**nvarchar （128)**。  
+ 由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句创建的游标名称。 *local_cursor_name*是**nvarchar （128)** 。  
   
  [ @cursor_identity=] N'*global_cursor_name*  
- 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标名称。 *global_cursor_name*是**nvarchar （128)**。  
+ 由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标名称。 *global_cursor_name*是**nvarchar （128)** 。  
   
  *global_cursor_name*也可以是 API 服务器游标，ODBC 应用程序打开然后通过调用 SQLSetCursorName 名为的名称。  
   
  [ @cursor_identity=] N'*input_cursor_variable*  
- 与打开的游标关联的游标变量的名称。 *input_cursor_variable*是**nvarchar （128)**。  
+ 与打开的游标关联的游标变量的名称。 *input_cursor_variable*是**nvarchar （128)** 。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="cursors-returned"></a>返回的游标  
  sp_describe_cursor_columns 将作为其报表封装[!INCLUDE[tsql](../../includes/tsql-md.md)]**光标**输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这也意味着无法直接从数据库 API 函数调用该过程。 **游标**输出参数必须绑定到程序变量，但是数据库 Api 不支持绑定**光标**参数或变量。  
   
  下表显示了通过使用 sp_describe_cursor_columns 返回的游标的格式。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (可以为 null)|为结果集列分配的名称。 如果指定列时不带 AS 子句，则该列为 NULL。|  
 |ordinal_position|**int**|从结果集最左边一列算起的相对位置。 首列的位置为 0。|  
@@ -83,7 +82,7 @@ sp_describe_cursor_columns
 |column_precision|**tinyint**|为每个列的最大精度*bPrecision* OLE DB 中的值。|  
 |column_scale|**tinyint**|数字的小数点右侧位数**数值**或**十进制**数据类型为每个*bScale* OLE DB 中的值。|  
 |order_position|**int**|如果此列参与结果集排序，则表示它在排序键中相对于最左边的列的位置。|  
-|order_direction|**varchar(1)**(可以为 null)|A = 该列位于排序键中，按升序排列。<br /><br /> D = 该列位于排序键中，按降序排列。<br /><br /> NULL = 该列没有参与排序。|  
+|order_direction|**varchar(1)** (可以为 null)|A = 该列位于排序键中，按升序排列。<br /><br /> D = 该列位于排序键中，按降序排列。<br /><br /> NULL = 该列没有参与排序。|  
 |hidden_column|**smallint**|0 = 此列出现在选择列表中。<br /><br /> 1 = 保留以供将来使用。|  
 |columnid|**int**|基列的列 ID。 如果结果集列由表达式生成，则 columnid 为 -1。|  
 |objectid|**int**|提供列的对象或基表的对象 ID。 如果结果集列由表达式生成，则 objectid 为 -1。|  
@@ -93,7 +92,7 @@ sp_describe_cursor_columns
 ## <a name="remarks"></a>备注  
  sp_describe_cursor_columns 描述服务器游标结果集中的列属性，例如每个游标的名称和数据类型。 使用 sp_describe_cursor 描述服务器游标的全局特性。 使用 sp_describe_cursor_tables 报告游标引用的基表。 若要获取连接中可见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标的报表，请使用 sp_cursor_list。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

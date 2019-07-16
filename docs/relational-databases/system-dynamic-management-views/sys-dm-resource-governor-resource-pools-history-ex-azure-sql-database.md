@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 130c4f9c38e5eb7ee47d31377a224c5b602b5b35
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053302"
 ---
-# <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 返回快照在 15 秒间隔过去 30 分钟的资源池统计信息为 Azure SQL 数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|INT|资源池的 ID。 不可为 null。
-|**名称**|sysname|资源池的名称。 不可为 null。|
+|**name**|sysname|资源池的名称。 不可为 null。|
 |**snapshot_time**|datetime2|拍摄的资源池统计信息快照的日期时间|
 |**duration_ms**|INT|当前和以前的快照之间的持续时间|
 |**statistics_start_time**|datetime2|为该池重置统计信息的时间。 不可为 null。|

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 35e2af3f371d66ce38df5cb376516d40d01006bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e36d05c39fb3bc4fc19d2ea0c28def7cd626fbf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052526"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 类
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +38,15 @@ class SQLErrorLogEvent
 };  
 ```  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
  SQLErrorLogEvent 类定义以下属性。  
   
 |||  
 |-|-|  
 |FileName|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 错误日志文件的名称。|  
-|InstanceName|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：Key<br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
-|LogDate|数据类型：**日期时间**<br /><br /> 访问类型：只读<br /><br /> 限定符：Key<br /><br /> <br /><br /> 在日志文件中记录该事件的日期和时间。|  
-|消息|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 事件消息。|  
+|InstanceName|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
+|LogDate|数据类型：**日期时间**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 在日志文件中记录该事件的日期和时间。|  
+|Message|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 事件消息。|  
 |ProcessInfo|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 与事件的源服务器进程 ID (SPID) 有关的信息。|  
   
 ## <a name="remarks"></a>备注  

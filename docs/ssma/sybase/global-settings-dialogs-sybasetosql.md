@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 23d5177ace1079525ae880b36617904a164ad5d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029077"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>全局设置 （对话框） (SybaseToSQL)
 使用的对话框页面**全局设置**对话框可以指定的默认用户执行任何操作和 SSMA 的警告设置。  

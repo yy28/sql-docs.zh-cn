@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fbbe2e782da5892640ab66a93911b959317d0538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022291"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 是要更改的发布属性。 *属性*是**sysname**，无默认值。  
   
-`[ @value = ] 'value'` 新的属性值。 *值*是**nvarchar(524)**，默认值为 NULL。  
+`[ @value = ] 'value'` 新的属性值。 *值*是**nvarchar(524)** ，默认值为 NULL。  
   
  下表说明了可以更改的分发服务器代理作业的属性，以及对这些属性值的限制。  
   
-|属性|ReplTest1|Description|  
+|属性|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理作业的 Windows 帐户的密码。|  

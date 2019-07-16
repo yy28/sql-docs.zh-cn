@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dceda172caab5f93295eac9cf4cf86a07495fe3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df55c4e17640710b5ada50a0aa12edb046822821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053244"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "47824996"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_resource_governor_workload_groups**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|工作负荷组的 ID。 不可为 null。|  
-|NAME|**sysname**|工作负荷组的名称。 不可为 null。|  
+|name|**sysname**|工作负荷组的名称。 不可为 null。|  
 |pool_id|**int**|资源池的 ID。 不可为 null。|  
 |external_pool_id|**int**|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 外部资源池的 ID。 不可为 null。|  
 |statistics_start_time|**datetime**|为工作负荷组重置统计信息集合的时间。 不可为 null。|  
@@ -58,7 +57,7 @@ ms.locfileid: "47824996"
 |total_reduced_memgrant_count|**bigint**|达到了最大查询大小限制的内存授予累计计数。 不可为 null。|  
 |max_request_grant_memory_kb|**bigint**|统计信息重置之后单个请求的最大内存授予大小，以千字节为单位。 不可为 null。|  
 |active_parallel_thread_count|**bigint**|并行线程使用情况的当前计数。 不可为 null。|  
-|importance|**sysname**|此工作负荷组中请求的相对重要性的当前配置值。 重要性为下列值之一，中等是默认值： 低、 中或高。<br /><br /> 不可为 null。|  
+|importance|**sysname**|此工作负荷组中请求的相对重要性的当前配置值。 重要性为下列任一，默认值为 Medium:低、 中或高。<br /><br /> 不可为 null。|  
 |request_max_memory_grant_percent|**int**|单个请求的最大内存授予的当前设置，以百分比表示。 不可为 null。|  
 |request_max_cpu_time_sec|**int**|单个请求的最大 CPU 使用限制的当前设置，以秒为单位。 不可为 null。|  
 |request_memory_grant_timeout_sec|**int**|单个请求的内存授予超时的当前设置，以秒为单位。 不可为 null。|  
@@ -71,7 +70,7 @@ ms.locfileid: "47824996"
   
  当成功执行 ALTER RESOURCE GOVERNOR RESET STATISTICS 后时，以下计数器将重置： statistics_start_time、 total_request_count、 total_queued_request_count、 total_cpu_limit_violation_count、 total_cpu_usage_ms，max_request_cpu_time_ms、 total_lock_wait_count、 total_lock_wait_time_ms、 total_query_optimization_count、 total_suboptimal_plan_generation_count、 total_reduced_memgrant_count 和 max_request_grant_memory_kb。 statistics_start_time 设置为当前系统日期和时间，其他计数器设置为零 (0)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

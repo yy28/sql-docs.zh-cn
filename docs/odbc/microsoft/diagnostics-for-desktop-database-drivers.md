@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4e7c8ea96708886f9edf54047bd2a2104ba0ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031219"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>桌面数据库驱动程序的诊断
 由驱动程序处理所有错误和警告不检查或部分选中由驱动程序管理器。 该驱动程序还映射本机错误或错误返回给 SQLSTATEs 的数据源。 中列出的每个函数*ODBC 程序员参考*包含指定状态和消息的"诊断"部分。  

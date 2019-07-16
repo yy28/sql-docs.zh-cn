@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71df952769ae509ba25b256ecdc9ddef3a54ebe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926646"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 概述
 适用于 Microsoft Jet OLE DB 访问接口允许访问 Microsoft Jet 数据库的 ADO。
@@ -43,7 +42,7 @@ Microsoft.Jet.OLEDB.4.0
 
  该字符串包含这些关键字：
 
-|关键字|Description|
+|关键字|描述|
 |-------------|-----------------|
 |**提供程序**|指定 Microsoft Jet 的 OLE DB 访问接口。|
 |**数据源**|指定数据库路径和文件名 (例如， `c:\Northwind.mdb`)。|
@@ -58,13 +57,13 @@ Microsoft.Jet.OLEDB.4.0
 
  下表列出了这些属性以及相应的 OLE DB 属性名称在括号中。
 
-|参数|Description|
+|参数|描述|
 |---------------|-----------------|
 |Jet OLEDB:Compact 回收的空间量 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|指示以字节为单位，可以通过压缩数据库来回收的空间量的估计值。 建立数据库连接之后，此值才有效。|
 |Jet OLEDB:Connection 控件 (DBPROP_JETOLEDB_CONNECTIONCONTROL)|指示用户是否可以连接到数据库。|
-|Jet OLEDB:Create System Database (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|指示是否应创建新的数据源时创建系统数据库。|
+|Jet OLEDB： 创建系统数据库 (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|指示是否应创建新的数据源时创建系统数据库。|
 |Jet oledb： 数据库锁定模式 (DBPROP_JETOLEDB_DATABASELOCKMODE)|指示此数据库的锁定模式。 若要打开的数据库的第一个用户确定数据库处于打开状态时所用的模式。|
-|Jet OLEDB:Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|指示数据库密码。|
+|Jet oledb： 数据库密码 (DBPROP_JETOLEDB_DATABASEPASSWORD)|指示数据库密码。|
 |Jet OLEDB： 不要复制 Compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE) 上的区域设置|指示是否压缩数据库时，Jet 应复制的区域设置信息。|
 |Jet OLEDB： 加密数据库 (DBPROP_JETOLEDB_ENCRYPTDATABASE)|指示是否应加密压缩的数据库。 如果未设置此属性，也加密原始数据库将加密压缩的数据库。|
 |Jet OLEDB:Engine 类型 (DBPROP_JETOLEDB_ENGINE)|指示用于访问当前数据存储区的存储引擎。|
@@ -92,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>特定于提供程序的记录集和命令属性
  Jet 访问接口还支持多个提供程序特定**记录集**并**命令**属性。 这些属性是访问，通过设置**属性**系列**记录集**或**命令**对象。 表列出了 ADO 的属性名称和其相应的 OLE DB 属性名称在括号中。
 
-|属性名|Description|
+|属性名|描述|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk 事务 (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|指示 SQL 大容量操作进行事务处理。 事务处理，由于资源延迟时，大容量操作可能会失败。|
 |Jet OLEDB:Enable Fat 游标 (DBPROP_JETOLEDB_ENABLEFATCURSOR)|指示是否填充远程行源的记录集时，Jet 应缓存多个行。|

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036407"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 数据和 SQLSetPos 及 SQLBulkOperations
 更新行时在 SQL 语句中使用参数的情况一样，可以发送长数据**SQLBulkOperations**或**SQLSetPos**或插入的行时**SQLBulkOperations**. 将数据发送中使用多个调用部件**SQLPutData**。 在执行时为其发送数据的列被称为*执行时数据列*。  

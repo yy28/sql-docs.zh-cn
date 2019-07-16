@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921182"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 代码示例
 使用下面的代码示例来了解如何使用 ADO 方法、 属性和事件时在 Microsoft Visual 中编写C++。  
@@ -76,7 +75,7 @@ ms.locfileid: "66696882"
   
 -   [UpdateBatch 和 CancelBatch 方法示例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 -   [AbsolutePage、 PageCount、 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   

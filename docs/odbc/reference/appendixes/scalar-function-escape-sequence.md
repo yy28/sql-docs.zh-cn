@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057074"
 ---
 # <a name="scalar-function-escape-sequence"></a>标量函数转义序列
 ODBC 标量函数中使用转义序列。 此转义序列的语法如下所示：  
@@ -32,7 +31,7 @@ ODBC 标量函数中使用转义序列。 此转义序列的语法如下所示�
 ## <a name="remarks"></a>备注  
  BNF 表示法中的语法是按如下所示：  
   
- *ODBC-scalar-function-escape* ::=  
+ *ODBC 标量函数转义*:: =  
   
  *ODBC esc 启动器*fn*标量函数 ODBC esc 终止符*  
   
@@ -40,8 +39,8 @@ ODBC 标量函数中使用转义序列。 此转义序列的语法如下所示�
   
  (非终止符的定义*函数名*并*函数名称*(*自变量列表*) 从列表中的标量函数派生[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。)  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC esc 启动器*:: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC esc 终止符*:: =}  
   
  若要确定是否在数据源支持过程，驱动程序支持 ODBC 过程调用语法，应用程序可以调用**SQLGetInfo**。 有关详细信息，请参阅[附录 e:标量函数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。

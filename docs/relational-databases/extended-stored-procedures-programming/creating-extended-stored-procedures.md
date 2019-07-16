@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032037"
 ---
 # <a name="creating-extended-stored-procedures"></a>创建扩展存储过程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47711801"
   
  创建扩展存储过程 DLL 时需要这些文件。  
   
-|文件|Description|  
+|文件|描述|  
 |----------|-----------------|  
 |Srv.h|扩展存储过程 API 头文件|  
 |Opends60.lib|Opends60.dll 的导入库|  
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) 是 Microsoft 特定的编译器扩展名。 如果您的编译器不支持此指令，则应在 DEF 文件的 EXPORTS 部分之下导出此函数。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开始使用跟踪标志-t260 开始，或者如果具有系统管理员特权的用户运行 DBCC TRACEON (260)，并且如果扩展存储过程 DLL 不支持 __getxpversion （），一条警告消息 (错误 8131： 扩展存储的过程DLL '%' 不导出\__GetXpVersion().) 打印到错误日志。 (请注意， \__GetXpVersion() 以两个下划线开头。)  
+ 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开始使用跟踪标志-t260 开始，或者如果具有系统管理员特权的用户运行 DBCC TRACEON (260)，并且如果扩展存储过程 DLL 不支持 __getxpversion （），一条警告消息 (错误 8131:扩展存储的过程 DLL '%' 不导出\__GetXpVersion().) 打印到错误日志。 (请注意， \__GetXpVersion() 以两个下划线开头。)  
   
  如果扩展存储过程 DLL 导出 __GetXpVersion()，但函数返回的版本低于服务器所要求的版本，则会向错误日志中打印一条警告消息，其中说明函数返回的版本和服务器预期的版本。 如果收到此消息，您要返回不正确的值从\__GetXpVersion()，或您正在使用早的 srv.h 版本进行编译。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d05990396c10836c0a2130e5d9f4392ae56ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069860"
 ---
 # <a name="fetching-a-row-of-data"></a>提取数据的行
 若要提取的数据行，应用程序调用**SQLFetch**。 **SQLFetch**可以调用与任何类型的游标，但它仅会移动行集只进的方向。 **SQLFetch**将光标前进到下一行，并返回调用绑定所有列的数据**SQLBindCol**。 光标在到达最终结果的设置，请**SQLFetch**返回 sql_no_data 为止。 例如，调用**SQLFetch**，请参阅[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  

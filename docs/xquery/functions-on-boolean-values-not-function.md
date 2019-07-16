@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038911"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>基于布尔值的函数 - not Function 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
  本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 使用 not （） XQuery 函数查找产品型号目录说明不包括\<规范 > 元素。  
- 以下查询将为目录说明中不包括 <`Specifications`> 元素的产品型号构造包含产品型号 ID 的 XML。  
+ 以下查询将构造包含产品型号 Id 的产品型号目录说明不包括 XML <`Specifications`> 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,7 +93,7 @@ WHERE ProductModelID=7
   
 -   在查询中，**不 (@MachineHours)** 谓词将返回 True，如果没有任何**MachineHours**属性。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 ProductModelID Result   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adbddf6f26c28c5fba396b00892b97d828e60222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026674"
 ---
 # <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "52757989"
   
 ## <a name="definition"></a>定义  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|标识中的状态请求项[MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md)表。|  
-|**对等**|**sysname**|生成响应的对等方。|  
+|**peer**|**sysname**|生成响应的对等方。|  
 |**peer_db**|**sysname**|生成响应的对等方的订阅数据库。|  
 |**received_date**|**datetime**|收到对等请求的日期和时间。|  
   

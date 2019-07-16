@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d07a3fadfd2439c35b9d5255ff94d58c79bbbae5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044758"
 ---
 # <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_errorlineage**表包含已删除在订阅服务器上，但不是会删除传播到发布服务器的行。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|分配给为合并复制发布的表的整数值。 对应于别名字段**sysmergearticles**表。|  
 |**rowguid**|**uniqueidentifier**|行标识符。|  

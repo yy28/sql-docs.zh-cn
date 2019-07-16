@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a94bd053dac04c4d595e4f2077c02d1d79858e56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020843"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>使用测试存储库 (SybaseToSQL)
 SSMA 测试存储库存储 SSMA 测试人员的测试用例和测试结果以供将来使用。 存储库数据保存在 SQL Server 表**TestCaseRepository**并**RunTestCaseResultRepository**架构中**ssma_sybase_utilities** 的**ssmatesterdb_syb**数据库。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 63664133370cb001fd4ee20e54f57819bde4a500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 239b3b2131dd5da345fe415dcaa0d6846a62e1ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047608"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性组 (Master Data Services)
 
@@ -28,7 +27,7 @@ ms.locfileid: "65478612"
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，属性组帮助组织实体中的属性。 如果实体具有很多属性，属性组可以改进实体在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中显示的方式。  
   
 ## <a name="how-attribute-groups-change-the-display"></a>属性组如何更改显示方式  
- 属性组显示为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的“资源管理器”功能区域的网格上的选项卡。  
+ 属性组显示为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的“资源管理器”  功能区域的网格上的选项卡。  
   
  在某一实体具有大量属性并且您在 **“资源管理器”** 的网格中查看该实体时，必须向右滚动以便查看所有属性。 若要禁止这一滚动，您可以创建属性组。  
   

@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68bca208f7e199ad65ff93a70f4d6c4a3b97fd8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032571"
 ---
 # <a name="msqreaderagents-transact-sql"></a>MSqreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSqreader_agents**表为本地分发服务器上运行每个队列读取器代理包含一行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|队列读取器代理的 ID。|  
-|**名称**|**nvarchar(100)**|队列读取器代理的名称。|  
+|**name**|**nvarchar(100)**|队列读取器代理的名称。|  
 |**job_id**|**binary(16)**|中的唯一作业 ID 号**sysjobs**表。|  
 |**profile_id**|**int**|从配置文件 ID **MSagent_profiles**表。|  
 |**job_step_uid**|**uniqueidentifier**|启动代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的唯一 ID。|  

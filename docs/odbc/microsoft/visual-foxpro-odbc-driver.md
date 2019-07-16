@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80a388fd459ab9fb71a115ca7f9cf9149c872caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030677"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 驱动程序
 Microsoft Visual FoxPro 是数据库构造和应用程序开发功能强大的面向对象的环境。 Microsoft Visual FoxPro ODBC 驱动程序使应用程序以打开查询，并更新 Visual FoxPro 和早期版本的 FoxPro 通过开放式数据库连接 (ODBC) 界面中的数据。  

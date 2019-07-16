@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053052"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,9 +42,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ \@tsql = ] 'Transact-SQL_batch'` 一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
+`[ \@tsql = ] 'Transact-SQL_batch'` 一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)** 。  
   
-`[ \@params = ] N'parameters'` \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)**。  
+`[ \@params = ] N'parameters'` \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)** 。  
   
  是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 在语句中指定的每个参数必须定义在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，\@参数不是必需的。 为此参数默认值为 NULL。  
   
@@ -63,15 +62,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>结果集  
  此公共元数据作为结果集返回，结果元数据中的每列对应于一行。 每一行以下面一节所说明的格式描述列的类型和为 Null 性。 如果对于每个控制路径不存在第一个语句，则返回的结果集不包含任何行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**位 NOT NULL**|指示列是出于浏览信息目的而额外添加的列，该列不会实际显示在结果集中。|  
 |**column_ordinal**|**int NOT NULL**|在结果集中包含列的序号位置。 第一列的位置将指定为 1。|  
-|**名称**|**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
+|**name**|**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
 |**is_nullable**|**位 NOT NULL**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int NOT NULL**|包含在 sys.types 中指定列的数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256) NULL**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
-|**max_length**|**smallint NOT NULL**|列的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将是 16，或者设置的值**sp_tableoption 'text in row'**。|  
+|**max_length**|**smallint NOT NULL**|列的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将是 16，或者设置的值**sp_tableoption 'text in row'** 。|  
 |**精度**|**tinyint NOT NULL**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
 |**scale**|**tinyint NOT NULL**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname NULL**|如果列包含的是字符，则为该列的排序规则的名称。 否则，返回 NULL。|  
@@ -92,11 +91,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**source_schema**|**sysname**|此结果中的列返回的源架构的名称。 如果无法确定该架构，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_table**|**sysname**|此结果中的列返回的源表的名称。 如果无法确定该表，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_column**|**sysname**|结果列返回的源列的名称。 如果无法确定该列，则返回 NULL。 仅在请求浏览信息填充。|  
-|**is_identity_column**|**bit NULL**|如果列是标识列，则返回 1；否则，返回 0。 如果无法确定列是否为标识列，则返回 NULL。|  
-|**is_part_of_unique_key**|**bit NULL**|如果列是唯一索引的一部分（包括唯一和主要的约束），则返回 1；否则，返回 0。 如果无法确定列是否为唯一索引的一部分，则返回 NULL。 仅在请求浏览信息时填充它。|  
-|**is_updateable**|**bit NULL**|如果可以更新列，则返回 1；否则，返回 0。 如果无法确定是否可以更新列，则返回 NULL。|  
-|**is_computed_column**|**bit NULL**|如果列是计算列，则返回 1；否则，返回 0。 如果无法确定该列是计算的列，返回 NULL。|  
-|**is_sparse_column_set**|**bit NULL**|如果列是稀疏列，则返回 1；否则，返回 0。 如果无法确定列是稀疏列集的一部分，则返回 NULL。|  
+|**is_identity_column**|**位 NULL**|如果列是标识列，则返回 1；否则，返回 0。 如果无法确定列是否为标识列，则返回 NULL。|  
+|**is_part_of_unique_key**|**位 NULL**|如果列是唯一索引的一部分（包括唯一和主要的约束），则返回 1；否则，返回 0。 如果无法确定列是否为唯一索引的一部分，则返回 NULL。 仅在请求浏览信息时填充它。|  
+|**is_updateable**|**位 NULL**|如果可以更新列，则返回 1；否则，返回 0。 如果无法确定是否可以更新列，则返回 NULL。|  
+|**is_computed_column**|**位 NULL**|如果列是计算列，则返回 1；否则，返回 0。 如果无法确定该列是计算的列，返回 NULL。|  
+|**is_sparse_column_set**|**位 NULL**|如果列是稀疏列，则返回 1；否则，返回 0。 如果无法确定列是稀疏列集的一部分，则返回 NULL。|  
 |**ordinal_in_order_by_list**|**smallint NULL**|此列在 ORDER BY 列表中的位置。 ORDER BY 列表中不显示该列或无法唯一确定 ORDER BY 列表则返回 NULL。|  
 |**order_by_list_length**|**smallint NULL**|ORDER BY 列表的长度。 如果没有 ORDER BY 列表，或者无法唯一确定 ORDER BY 列表，则返回 NULL。 请注意，此值将是相同的返回的所有行**sp_describe_first_result_set。**|  
 |**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不为 NULL， **order_by_is_descending**列报告此列的 ORDER BY 子句的方向。 否则，它报告 NULL。|  
@@ -140,15 +139,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)** 到**varchar(a')** 其中 >。  
   
-    -   **varchar(a)** to **varchar(max)**  
+    -   **varchar(a)** 到**varchar （max)**  
   
     -   **nvarchar(a)** 到**nvarchar(a')** 其中 >。  
   
-    -   **nvarchar(a)** to **nvarchar(max)**  
+    -   **nvarchar(a)** 到**nvarchar （max)**  
   
     -   **varbinary(a)** 到**varbinary(a')** 其中 >。  
   
-    -   **varbinary(a)** to **varbinary(max)**  
+    -   **varbinary(a)** 到**varbinary （max)**  
   
  **sp_describe_first_result_set**不支持间接递归。  
   
@@ -191,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -204,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|（英文）。|dbo|t|（英文）。|1|  
@@ -217,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -298,7 +297,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 结果：错误，类型不匹配 (**varchar(10)** 与**nvarchar(10)**)。  
+ 结果：错误，类型不匹配 (**varchar(10)** 与**nvarchar(10)** )。  
   
 #### <a name="result-set-can-return-an-error"></a>结果集可以返回一个错误  
  第一次结果集是错误或结果集。  

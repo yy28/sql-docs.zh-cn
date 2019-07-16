@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e62555db2e88c6573f3bdca0d4a1a2733d428b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006246"
 ---
 # <a name="column-name-limitations"></a>列名限制
 列名称可以包含任何有效的字符 （例如，空格）。 如果列名称中包含除字母、 数字和下划线的任何字符，必须由括在单引号 （'）） 后分隔名称。  

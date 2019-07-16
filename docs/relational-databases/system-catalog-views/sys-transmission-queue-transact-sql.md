@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a039ebee35dbea950f73500ab2284d63bf93553
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022605"
 ---
 # <a name="systransmissionqueue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   此目录视图中的每一行对应于传输队列中的一条消息，如下表所示：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**conversation_handle**|**uniqueidentifier**|此消息所属会话的标识符。 不可为 NULL。|  
 |**to_service_name**|**nvarchar(256)**|此消息要发送到的服务的名称。 可以为 NULL。|  
@@ -48,7 +47,7 @@ ms.locfileid: "47761485"
 |**transmission_status**|**nvarchar(4000)**|此消息位于队列中的原因。 这通常是一条错误消息，说明未能发送该消息的原因。 如果为空白，则尚未发送此消息。 可以为 NULL。|  
 |**priority**|**tinyint**|为此消息指定的优先级。 不可为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

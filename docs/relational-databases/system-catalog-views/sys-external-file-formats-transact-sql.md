@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048396"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -28,10 +27,10 @@ ms.locfileid: "52532360"
   
  在服务器上针对每个外部文件格式存在对应的一行[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|外部文件格式的对象 ID。||  
-|NAME|**sysname**|文件格式的名称。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，这是唯一的数据库。 在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，这是唯一的服务器。||  
+|name|**sysname**|文件格式的名称。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，这是唯一的数据库。 在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，这是唯一的服务器。||  
 |format_type|**tinyint**|文件格式类型。|DELIMITEDTEXT，RCFILE、 ORC 和 PARQUET|  
 |field_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT，这是字段终止符。||  
 |string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT，这是字符串分隔符。||  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 936006a3205d7ce043e664b68c5c8605253e4aa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f7c48db940a192f1506fb1c6c8e371e9d5a7958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047467"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>业务规则条件 (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65485413"
   
 ## <a name="business-rule-conditions"></a>业务规则条件  
   
-|条件名称|Description|  
+|条件名称|描述|  
 |--------------------|-----------------|  
 |**等于**|所选属性 **“等于”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本、数字、日期和链接值有效。|  
 |**不等于**|所选属性 **“不等于”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本、数字、日期和链接值有效。|  

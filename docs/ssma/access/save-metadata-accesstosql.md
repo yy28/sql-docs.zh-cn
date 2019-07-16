@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051551"
 ---
 # <a name="save-metadata-accesstosql"></a>保存元数据 (AccessToSQL)
 **保存元数据**对话框会提示您保存它之前加载到 SSMA 项目的元数据。 这样，便有一个完整的项目文件，可以脱机使用，并发送给其他人，例如技术支持人员。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039016"
 ---
 # <a name="conditional-expressions-xquery"></a>条件表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ else
   
 -   **其他**表达式是必需的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
   
- 例如，下面的查询指定针对**xml**类型的变量。 **如果**测试条件的 SQL 变量的值 (@v) 通过使用 XQuery 表达式中[sql:variable() 函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数。 如果变量值为“FirstName”，则返回 <`FirstName`> 元素。 否则，返回 <`LastName`> 元素。  
+ 例如，下面的查询指定针对**xml**类型的变量。 **如果**测试条件的 SQL 变量的值 (@v) 通过使用 XQuery 表达式中[sql:variable() 函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数。 如果变量的值为"FirstName"，它将返回 <`FirstName`> 元素。 否则，它将返回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- 以下查询从特定产品样式的产品目录说明中检索前两个功能说明。 如果文档有多个功能，则添加空内容的 <`there-is-more`> 元素。  
+ 以下查询从特定产品样式的产品目录说明中检索前两个功能说明。 如果文档有更多的功能，它将添加 <`there-is-more`> 具有空内容元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 在以下查询中，如果生产车间不指定安装时间，则返回具有 LocationID 属性的 <`Location`> 元素。  
+ 在以下查询中，<`Location`> 如果生产车间不指定安装时间，则返回具有 LocationID 属性元素。  
   
 ```  
 SELECT Instructions.query('  

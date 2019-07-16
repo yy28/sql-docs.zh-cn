@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899635"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62998006"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_waiting_tasks**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|等待任务的地址。|  
 |**session_id**|**smallint**|与任务关联的会话的 ID。|  
@@ -55,7 +54,7 @@ ms.locfileid: "62998006"
   
  **线程池资源所有者：**  
   
--   threadpool id=scheduler\<hex-address>  
+-   线程池 id = 计划程序\<十六进制地址 >  
   
  **并行查询资源所有者：**  
   
@@ -83,13 +82,13 @@ ms.locfileid: "62998006"
   
      **\<类型特定于说明 > 可以是：**  
   
-    -   For DATABASE: databaselock subresource=\<databaselock-subresource> dbid=\<db-id>  
+    -   对于数据库： databaselock subresource =\<databaselock subresource > dbid =\<-i >  
   
     -   对于文件： filelock fileid =\<的文件 id > subresource =\<filelock subresource > dbid =\<-i >  
   
-    -   For OBJECT: objectlock lockPartition=\<lock-partition-id> objid=\<obj-id> subresource=\<objectlock-subresource> dbid=\<db-id>  
+    -   对于对象： objectlock lockPartition =\<锁分区 id > objid =\<obj id > subresource =\<objectlock subresource > dbid =\<-i >  
   
-    -   For PAGE: pagelock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id> subresource=\<pagelock-subresource>  
+    -   对于 PAGE: pagelock fileid =\<的文件 id > pageid =\<-i > dbid =\<-i > subresource =\<pagelock 子资源 >  
   
     -   对于密钥： keylock hobtid =\<hobt id > dbid =\<-i >  
   
@@ -111,11 +110,11 @@ ms.locfileid: "62998006"
   
  **外部资源所有者：**  
   
--   External ExternalResource=\<wait-type>  
+-   外部 ExternalResource =\<等待类型 >  
   
  **常规资源所有者：**  
   
--   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
+-   TransactionMutex TransactionInfo 工作区 =\<工作区 id >  
   
 -   Mutex  
   
@@ -129,16 +128,16 @@ ms.locfileid: "62998006"
   
  **闩锁资源所有者：**  
   
--   \<db-id>:\<file-id>:\<page-in-file>  
+-   \<-i >:\<的文件 id >:\<页面中文件 >  
   
--   \<GUID>  
+-   \<GUID >  
   
 -   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
  
 ## <a name="example"></a>示例
 此示例将标识已阻塞的会话。  执行[!INCLUDE[tsql](../../includes/tsql-md.md)]查询中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。

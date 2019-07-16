@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c249564821f40bcd70bcfe367c4970727a5a01a0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066825"
 ---
 # <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_help_log_shipping_primary_secondary
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**secondary_server**|辅助实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。|  
 |**secondary_database**|日志传送配置中辅助数据库的名称。|  

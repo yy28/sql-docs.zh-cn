@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029636"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHsyscolumns**视图显示从非 SQL Server 发布服务器的项目的列信息。 此视图存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|列名或过程参数的名称。|  
+|**name**|**sysname**|列名或过程参数的名称。|  
 |**id**|**int**|此列所属的表的对象 ID，或与此参数关联的存储过程的 ID。|  
 |**xtype**|**tinyint**|将物理存储类型从[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -52,9 +51,9 @@ ms.locfileid: "52747881"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|此列将显示的行中的偏移量。|  
 |**collationid**|**int**|列的排序规则的 ID。 对于基于非字符的列为 NULL。|  
-|**语言**|**int**|列的语言标识符。|  
+|**language**|**int**|列的语言标识符。|  
 |**status**|**int**|用于描述列或参数的属性的位图：<br /><br /> **0x08** = 列允许 null 值。<br /><br /> **0x10** = ANSI 填充生效时**varchar**或**varbinary**已将列添加。 尾随空格会保留，以便**varchar**并保留尾部零**varbinary**列。<br /><br /> **0x40** = 参数是输出参数。<br /><br /> **0x80** = 列是标识列。|  
-|**类型**|**int**|将物理存储类型从[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
+|**type**|**int**|将物理存储类型从[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**usertype**|**tinyint**|从用户定义数据类型的 ID [sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|此列的精度级别。|  

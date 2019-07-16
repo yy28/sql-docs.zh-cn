@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_add_principalprofile_sp (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 0a8db1f3b8d9bc209b6f8ed238cbf0be6177e578
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017824"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** （成功） 或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 若要使公共配置文件，指定**@principal_id**的**0**或**@principal_name**的**公共**。 公共配置文件可供中的所有用户**msdb**数据库，但用户还必须属于**DatabaseMailUserRole**执行**sp_send_dbmail**。  
+ 若要使公共配置文件，指定 **@principal_id** 的**0**或 **@principal_name** 的**公共**。 公共配置文件可供中的所有用户**msdb**数据库，但用户还必须属于**DatabaseMailUserRole**执行**sp_send_dbmail**。  
   
- 数据库用户只能有一个默认的配置文件。 当**@is_default**是**1**和用户已与一个或多个配置文件关联、 指定的配置文件将成为该用户的默认配置文件。 以前的默认配置文件仍与该用户关联，但不再是默认配置文件。  
+ 数据库用户只能有一个默认的配置文件。 当 **@is_default** 是**1**和用户已与一个或多个配置文件关联、 指定的配置文件将成为该用户的默认配置文件。 以前的默认配置文件仍与该用户关联，但不再是默认配置文件。  
   
- 当**@is_default**是**0**并不存在其他关联，则存储的过程返回错误。  
+ 当 **@is_default** 是**0**并不存在其他关联，则存储的过程返回错误。  
   
  存储的过程**sysmail_add_principalprofile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   

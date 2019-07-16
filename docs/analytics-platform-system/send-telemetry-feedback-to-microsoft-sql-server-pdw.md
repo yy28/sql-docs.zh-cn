@@ -2,19 +2,18 @@
 title: 遥测数据的反馈-分析平台系统 |Microsoft Docs
 description: Analytics Platform system 向 Microsoft 发送遥测反馈。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 347879cd468d67b3feee0c92dcd154334df4c237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960097"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform system 向 Microsoft 发送遥测反馈
 分析平台系统具有一个可选的遥测功能，将管理控制台数据发送到 Microsoft。 

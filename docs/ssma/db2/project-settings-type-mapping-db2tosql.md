@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060164"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>项目设置 （类型映射） (DB2ToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 数据类型设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
@@ -60,9 +59,9 @@ ms.locfileid: "63270008"
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
-|binary_integer|ssNoversion|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
+|binary_integer|INT|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -72,15 +71,15 @@ ms.locfileid: "63270008"
 |clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|Decimal|float[53]|  
-|double precision|float[53]|  
-|FLOAT|float[53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|Decimal|float [53]|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|varchar(max)|  
 |原始长时间|varbinary(max)|  
-|long raw[\*..8000]<sup>\*</sup>|varbinary[\*]|  
-|long raw[8001..\*]<sup>\*</sup>|varbinary(max)|  
+|长时间原始 [\*...8000]<sup>\*</sup>|varbinary [\*]|  
+|长时间原始 [8001...\*]<sup>\*</sup>|varbinary(max)|  
 |national char|nvarchar(max)|  
 |national char varying|nvarchar(max)|  
 |区域字符集|nvarchar(max)|  
@@ -88,12 +87,12 @@ ms.locfileid: "63270008"
 |不同的国家/地区字符<sup>\*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
-|NUMERIC|float[53]|  
+|number|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|ssNoversion|  
+|pls_integer|INT|  
 |raw|varbinary(max)|  
-|REAL|float[53]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
@@ -103,7 +102,7 @@ ms.locfileid: "63270008"
 |带时区的时间戳|datetimeoffset|  
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
-|varchar2|varchar(max)|  
+|Varchar2|varchar(max)|  
 |xmltype|xml|  
   
 <sup>\*</sup> 适用于返回值类型映射仅。  
@@ -116,15 +115,15 @@ ms.locfileid: "63270008"
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|char varying[\*..\*]|varchar[\*]|  
-|char[\*..\*]|char[\*]|  
+|char varying [\*...\*]|varchar [\*]|  
+|char[\*..\*]|char [\*]|  
 |character|char|  
-|character varying[\*..\*]|varchar[\*]|  
-|character[\*..\*]|char[\*]|  
+|不同的字符 [\*...\*]|varchar [\*]|  
+|character[\*..\*]|char [\*]|  
 |clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
@@ -133,37 +132,37 @@ ms.locfileid: "63270008"
 |Decimal|decimal[38][0]|  
 |decimal[\*..\*]|decimal[\*][0]|  
 |decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|double precision|float[53]|  
-|FLOAT|float[53]|  
-|float[\*..53]|float[\*]|  
-|float[54..\*]|float[53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
+|float [\*...53]|float [\*]|  
+|float[54..\*]|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|varchar(max)|  
 |原始长时间|varbinary(max)|  
-|长时间原始 [\*...8000]|varbinary[\*]|  
+|长时间原始 [\*...8000]|varbinary [\*]|  
 |长时间原始 [8001...\*]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|long[\*..8000]|varchar[\*]|  
-|long[8001..\*]|varchar(max)|  
+|long[\*..8000]|varchar [\*]|  
+|长 [8001...\*]|varchar(max)|  
 |national char|NCHAR|  
-|national char varying [\*...\*]|nvarchar[\*]|  
-|national char [\*...\*]|nchar[\*]|  
+|national char varying [\*...\*]|nvarchar [\*]|  
+|national char [\*...\*]|nchar [\*]|  
 |区域字符集|NCHAR|  
-|不同的区域字符集 [\*...\*]|nvarchar[\*]|  
-|区域字符集 [\*...\*]|nchar[\*]|  
+|不同的区域字符集 [\*...\*]|nvarchar [\*]|  
+|区域字符集 [\*...\*]|nchar [\*]|  
 |NCHAR|NCHAR|  
-|nchar[\*]|nchar[\*]|  
+|nchar [\*]|nchar [\*]|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
+|number|float [53]|  
 |number[\*..\*]|numeric[\*]|  
 |number[\*..\*][\*..\*]|numeric[\*][\*]|  
 |NUMERIC|NUMERIC|  
 |numeric[\*..\*]|numeric[\*]|  
 |numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
-|nvarchar2[\*..\*]|nvarchar[\*]|  
-|raw[\*..\*]|varbinary[\*]|  
-|REAL|float[53]|  
+|nvarchar2[\*..\*]|nvarchar [\*]|  
+|raw[\*..\*]|varbinary [\*]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |TIMESTAMP|datetime2|  
@@ -174,8 +173,8 @@ ms.locfileid: "63270008"
 |timestamp[\*..\*]|datetime2[\*]|  
 |urowid|UNIQUEIDENTIFIER|  
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
-|varchar[\*..\*]|varchar[\*]|  
-|varchar2[\*..\*]|varchar[\*]|  
+|varchar[\*..\*]|varchar [\*]|  
+|varchar2[\*..\*]|varchar [\*]|  
 |Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>默认本地变量的类型映射  
@@ -184,21 +183,21 @@ ms.locfileid: "63270008"
 |DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
-|binary_interger|ssNoversion|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
+|binary_interger|INT|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
-|char varying[\*..8000]|varchar[\*]|  
+|char varying [\*...8000]|varchar [\*]|  
 |char varying [8001...\*]|varchar(max)|  
-|char[\*..8000]|char[\*]|  
-|char[8001..\*]|varchar(max)|  
+|char[\*..8000]|char [\*]|  
+|char [8001...\*]|varchar(max)|  
 |字符|char|  
-|character varying[\*..8000]|varchar[\*]|  
+|不同的字符 [\*...8000]|varchar [\*]|  
 |不同的字符 [8001...\*]|varchar(max)|  
-|character[\*..8000]|char[\*]|  
-|character[8001..\*]|varchar(max)|  
+|character[\*..8000]|char [\*]|  
+|字符 [8001...\*]|varchar(max)|  
 |clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
@@ -207,49 +206,49 @@ ms.locfileid: "63270008"
 |Decimal|decimal[38][0]|  
 |decimal[\*..\*]|decimal[\*][0]|  
 |decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
-|double precision|float[53]|  
-|float|float[53]|  
-|float[\*..53]|float[\*]|  
-|float[54..\*]|float[53]|  
-|smallint|ssNoversion|  
-|Integer|ssNoversion|  
+|double precision|float [53]|  
+|float|float [53]|  
+|float [\*...53]|float [\*]|  
+|float[54..\*]|float [53]|  
+|smallint|INT|  
+|Integer|INT|  
 |integer[\*..\*]|numeric[\*][0]|  
 |Long|varchar(max)|  
 |原始长时间|varbinary(max)|  
-|长时间原始 [\*...8000]|varbinary[\*]|  
+|长时间原始 [\*...8000]|varbinary [\*]|  
 |长时间原始 [8001...\*]|varbinary(max)|  
 |national char|NCHAR|  
-|national char varying [\*...4000]|nvarchar[\*]|  
+|national char varying [\*...4000]|nvarchar [\*]|  
 |national char varying [4001...\*]|nvarchar(max)|  
-|national char [\*...4000]|nchar[\*]|  
+|national char [\*...4000]|nchar [\*]|  
 |national char [4001...\*]|nvarchar(max)|  
 |区域字符集|NCHAR|  
-|区域字符集 [\*...4000]|nvarchar[\*]|  
+|区域字符集 [\*...4000]|nvarchar [\*]|  
 |区域字符集 [4001...\*]|nvarchar(max)|  
-|不同的区域字符集 [\*...4000]|nvarchar[\*]|  
+|不同的区域字符集 [\*...4000]|nvarchar [\*]|  
 |不同的区域字符集 [4001...\*]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar[\*..4000]|nchar[\*]|  
-|nchar[4001..\*]|nvarchar(max)|  
-|不同的 nchar [\*...4000]|nvarchar[\*]|  
+|nchar[\*..4000]|nchar [\*]|  
+|nchar [4001...\*]|nvarchar(max)|  
+|不同的 nchar [\*...4000]|nvarchar [\*]|  
 |不同的 nchar [4001...\*]|nvarchar(max)|  
-|Nclob|nvarchar(max)|  
-|Number|float[53]|  
+|nclob|nvarchar(max)|  
+|Number|float [53]|  
 |number[\*..\*]|numeric[\*]|  
 |number[\*..\*][\*..\*]|numeric[\*][\*]|  
 |Numeric|numeric[38][0]|  
 |numeric[\*..\*]|numeric[\*]|  
 |numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
-|nvarchar2[\*..4000]|nvarchar[\*]|  
+|nvarchar2[\*..4000]|nvarchar [\*]|  
 |nvarchar2[4001..\*]|nvarchar(max)|  
-|pls_integer|ssNoversion|  
-|raw[\*..8000]|varbinary[\*]|  
-|raw[8001..\*]|varbinary(max)|  
-|Real|float[53]|  
+|pls_integer|INT|  
+|原始 [\*...8000]|varbinary [\*]|  
+|原始 [8001...\*]|varbinary(max)|  
+|Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |Smallint|SMALLINT|  
-|string[\*..8000]|varchar[\*]|  
+|string[\*..8000]|varchar [\*]|  
 |string[8001..\*]|varchar(max)|  
 |TIMESTAMP|datetime2|  
 |使用本地时区的时间戳|datetimeoffset|  
@@ -259,10 +258,10 @@ ms.locfileid: "63270008"
 |timestamp[\*..\*]|datetime2[\*]|  
 |urowid|UNIQUEIDENTIFIER|  
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
-|varchar[\*..8000]|varchar[\*]|  
-|varchar[8001..\*]|varchar(max)|  
-|varchar2[\*..8000]|varchar[\*]|  
-|varchar2[8001..\*]|varcha(max)|  
+|varchar[\*..8000]|varchar [\*]|  
+|varchar [8001...\*]|varchar(max)|  
+|varchar2[\*..8000]|varchar [\*]|  
+|varchar2 [8001...\*]|varcha(max)|  
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>请参阅  

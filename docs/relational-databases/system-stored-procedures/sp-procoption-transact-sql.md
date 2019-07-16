@@ -1,5 +1,5 @@
 ---
-title: sp_procoption (Transact-SQL) | Microsoft Docs
+title: sp_procoption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 218371ab6d8133dbaf1865eeffc11f92883b4305
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896588"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @ProcName = ] 'procedure'` 是要为其设置选项的名称。 *过程*是**nvarchar(776)**，无默认值。  
+`[ @ProcName = ] 'procedure'` 是要为其设置选项的名称。 *过程*是**nvarchar(776)** ，无默认值。  
   
 `[ @OptionName = ] 'option'` 是要设置的名称。 唯一的值为*选项*是**启动**。  
   
-`[ @OptionValue = ] 'value'` 是否要选项设置为 on (**，则返回 true**或**上**) 或禁用 (**false**或者**关闭**)。 *值*是**varchar(12)**，无默认值。  
+`[ @OptionValue = ] 'value'` 是否要选项设置为 on ( **，则返回 true**或**上**) 或禁用 (**false**或者**关闭**)。 *值*是**varchar(12)** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或错误号（失败）  

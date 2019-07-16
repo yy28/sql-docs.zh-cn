@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62942970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051123"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的转义序列
 通常的 Dbms 实现的语言功能，例如外部联接和标量函数调用数。 但是，这些功能的语法往往是特定于 DBMS 的即使标准语法定义各种标准团体。 因此，ODBC 定义包含以下语言功能的标准语法的转义序列：  

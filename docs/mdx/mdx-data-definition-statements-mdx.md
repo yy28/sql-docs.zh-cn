@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038121"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX 数据定义语句 (MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "62629781"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[ALTER CUBE 语句 (MDX)](../mdx/mdx-data-definition-alter-cube.md)|更改指定多维数据集的结构。|  
 |[CREATE ACTION 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|创建可以与多维数据集、维度、层次结构或从属对象关联的操作。|  
@@ -36,7 +35,7 @@ ms.locfileid: "62629781"
 |[DROP ACTION 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|从指定多维数据集中删除指定的操作。|  
 |[DROP CELL CALCULATION 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|删除指定的单元计算。|  
 |[DROP MEMBER 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)|删除一个计算成员。|  
-|[DROP SET Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|删除一个命名集。|  
+|[DROP SET 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|删除一个命名集。|  
 |[DROP SUBCUBE 语句&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)|删除指定的子多维数据集，以恢复到以前定义的具有指定名称的多维数据集或子多维数据集定义。|  
 |[刷新多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|刷新多维数据集的客户端缓存。|  
   

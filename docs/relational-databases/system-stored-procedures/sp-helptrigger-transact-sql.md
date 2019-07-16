@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048217"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tabname = ] 'table'` 是要为其返回触发器信息的当前数据库中的名称。 *表*是**nvarchar(776)**，无默认值。  
+`[ @tabname = ] 'table'` 是要为其返回触发器信息的当前数据库中的名称。 *表*是**nvarchar(776)** ，无默认值。  
   
-`[ @triggertype = ] 'type'` 是要返回其信息的 DML 触发器的类型。 *类型*是**char(6)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @triggertype = ] 'type'` 是要返回其信息的 DML 触发器的类型。 *类型*是**char(6)** ，默认值为 NULL，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**DELETE**|返回 DELETE 触发器信息。|  
 |**INSERT**|返回 INSERT 触发器信息。|  
@@ -58,7 +57,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>结果集  
  下表显示了结果集中包含的信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|触发器的名称。|  
 |**trigger_owner**|**sysname**|对其定义触发器的表的所有者名称。|  
