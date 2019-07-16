@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d225bac273558b928e3e8fd2f41bd121a723f6ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952372"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>桌面数据库驱动程序的历史记录
 下表显示了桌面数据库驱动程序版本历史记录。  
   
-|版本|发布日期|Description|  
+|Version|发布日期|描述|  
 |-------------|------------------|-----------------|  
 |1.0|1993 年 8 月|使用生成的 PageAhead 软件 SIMBA 查询处理器。 SIMBA 收到 ODBC 调用和 SQL 语句、 为 Microsoft Jet 的可安装 ISAM 调用，处理它们，然后调用 Microsoft Jet ISAM 调度层来加载并调用相应的可安装 ISAM 驱动程序。|  
 |2.0|1994 年 12 月|与 ODBC 2.0，显著扩大 ODBC 功能一起使用。 在 2.0 版中的主要更改是 Microsoft Jet 数据库引擎替换 SIMBA 查询处理器。 使用 Microsoft Jet 数据库引擎，桌面数据库驱动程序集成更紧密 Microsoft Jet 可安装 ISAM 驱动程序和 Microsoft Access 技术。 介绍了重要的增强功能：<br /><br /> 的对于可滚动游标本机支持。<br />的外部联接、 可更新与异类联接和事务本机支持。<br />-32 位版本的驱动程序的 Microsoft Windows NT。|  

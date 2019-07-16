@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961855"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>训练和保存使用 T-SQL 的 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,7 +115,7 @@ ms.locfileid: "58511244"
 
     数据处理和模型调整可能需要几分钟。 将其通过管道传递到 Python 的消息**stdout**流显示在**消息**窗口中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
 
-    *来自外部脚本的 STDOUT 消息：*
+    *来自外部脚本的 STDOUT 消息：* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. 打开表*nyc\_taxi_models*。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
@@ -180,10 +179,10 @@ ms.locfileid: "58511244"
 
     数据处理和模型调整可能需要一段时间。 将其通过管道传递到 Python 的消息**stdout**流显示在**消息**窗口中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 例如：
 
-    *来自外部脚本的 STDOUT 消息：*
+    *来自外部脚本的 STDOUT 消息：* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
-3. 打开表 nyc_taxi_models。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
+3. 打开表 nyc_taxi_models  。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
     *revoscalepy_model* *0x8003637265766F7363616c....*
 

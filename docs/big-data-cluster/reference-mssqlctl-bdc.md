@@ -5,17 +5,16 @@ description: Mssqlctl bdc 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a9da2de60248246bee3daeeaee40d3071da69c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957956"
 ---
 # <a name="mssqlctl-bdc"></a>mssqlctl bdc
 
@@ -26,15 +25,15 @@ ms.locfileid: "67727485"
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[mssqlctl bdc create](#mssqlctl-bdc-create) | 创建大数据群集。
-[mssqlctl bdc delete](#mssqlctl-bdc-delete) | 删除大数据群集。
-[mssqlctl bdc config](reference-mssqlctl-bdc-config.md) | 配置命令。
-[mssqlctl bdc endpoint](reference-mssqlctl-bdc-endpoint.md) | 终结点的命令。
-[mssqlctl bdc status](reference-mssqlctl-bdc-status.md) | 状态的命令。
-[mssqlctl bdc debug](reference-mssqlctl-bdc-debug.md) | 调试命令。
+[mssqlctl bdc 创建](#mssqlctl-bdc-create) | 创建大数据群集。
+[mssqlctl bdc 删除](#mssqlctl-bdc-delete) | 删除大数据群集。
+[mssqlctl bdc 配置](reference-mssqlctl-bdc-config.md) | 配置命令。
+[mssqlctl bdc 终结点](reference-mssqlctl-bdc-endpoint.md) | 终结点的命令。
+[mssqlctl bdc 状态](reference-mssqlctl-bdc-status.md) | 状态的命令。
+[mssqlctl bdc 调试](reference-mssqlctl-bdc-debug.md) | 调试命令。
 [mssqlctl bdc storage-pool](reference-mssqlctl-bdc-storage-pool.md) | 存储池命令。
-[mssqlctl bdc control](reference-mssqlctl-bdc-control.md) | 控制命令。
-[mssqlctl bdc pool](reference-mssqlctl-bdc-pool.md) | 池的命令。
+[mssqlctl bdc 控件](reference-mssqlctl-bdc-control.md) | 控制命令。
+[mssqlctl bdc 池](reference-mssqlctl-bdc-pool.md) | 池的命令。
 ## <a name="mssqlctl-bdc-create"></a>mssqlctl bdc 创建
 创建 SQL Server 大数据群集-kube 配置要求以及以下环境变量 [CONTROLLER_USERNAME、 CONTROLLER_PASSWORD、 DOCKER_USERNAME、 DOCKER_PASSWORD、 MSSQL_SA_PASSWORD、 KNOX_PASSWORD] 在系统上。
 ```bash

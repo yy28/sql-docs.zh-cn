@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64368e9f68b62f61b84d0bcb45278870bfab8689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb8193dd3e345ab8290239e0f01cbea82221a64c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945094"
 ---
 # <a name="import-statuses-master-data-services"></a>导入状态 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485862"
 
   在 **“集成管理”** 功能区域中的 **“临时批处理”** 页上，以下状态可能会出现。  
   
-|“登录属性”|Description|Status_ID|  
+|“登录属性”|描述|Status_ID|  
 |------------|-----------------|----------------|  
 |排队待运行|批处理尚未开始处理。|1|  
 |正在运行|批处理正在处理。|2|  

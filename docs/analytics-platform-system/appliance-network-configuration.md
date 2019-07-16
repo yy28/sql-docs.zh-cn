@@ -2,19 +2,18 @@
 title: 设备网络网络的分析平台系统 |Microsoft Docs
 description: 生成和配置修补程序在所有服务器和从 IHV 的工厂车间适用设备的 IP 地址一 Analytics Platform System (APS) 设备。 设备的传递，时必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bc836e3e05525b18ea994e768f65012e5c3d945
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961471"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>分析平台系统的设备的网络配置
 生成和配置修补程序在所有服务器和从 IHV 的工厂车间适用设备的 IP 地址一 Analytics Platform System (APS) 设备。 设备的传递，时必须重新配置外部 （以太网） IP 地址以匹配特定客户的数据中心的要求。  

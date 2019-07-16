@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28f3ebe1887e188513c01881f68d5d7f323e31f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962247"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程：SQL Server 数据使用 RevoScaleR R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ ms.locfileid: "62641302"
 
 在此多部分教程中，为您介绍了一系列**RevoScaleR**用于与数据科学任务的函数。 在过程中，您将了解如何创建远程计算上下文，本地和远程计算上下文之间移动数据和远程 SQL Server 上执行 R 代码。 你还了解如何分析和本地和远程服务器上绘制数据以及如何创建和部署模型。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 + [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)与 R 功能或[SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)
   

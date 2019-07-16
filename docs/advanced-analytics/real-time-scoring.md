@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: cccbae1e1957baedaba665e68a3a058db69f4885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962377"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server 机器学习中 sp_rxPredict 实时评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ ms.locfileid: "58645469"
 
 ## <a name="how-real-time-scoring-works"></a>如何实时评分的工作原理
 
-实时评分对 RevoScaleR 或 MicrosoftML 函数如基于特定模型类型支持在 SQL Server 2016 和 SQL Server 2017 [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 它使用本机 c + + 库来生成评分，根据用户输入提供给机器学习模型存储在特殊的二进制格式。
+实时评分对 RevoScaleR 或 MicrosoftML 函数如基于特定模型类型支持在 SQL Server 2016 和 SQL Server 2017 [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 它使用本机C++库来生成评分，根据用户输入提供给机器学习模型存储在特殊的二进制格式。
 
 可用于训练的模型评分而无需调用外部语言运行时，由于减少了多个进程的开销。 这用于生产评分方案支持更快的预测性能。 因为数据不会离开 SQL Server，则可以生成结果，并将其插入到新表中不使用任何 R 和 SQL 之间的数据转换。
 
@@ -33,7 +32,7 @@ ms.locfileid: "58645469"
 3. 提供新的输入的数据进行评分，表格或单个行，作为模型的输入。
 4. 若要生成评分，调用[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)存储过程。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 + [启用 SQL Server CLR 集成](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)。
 
@@ -168,7 +167,7 @@ Sp 所需的二进制格式\_rxPredict 是使用 PREDICT 函数所需的格式�
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>步骤 3. Call sp_rxPredict
+### <a name="step-3-call-sprxpredict"></a>步骤 3. 调用 sp_rxPredict
 
 Sp 调用\_rxPredict 作为您像对任何其他存储过程。 在当前版本中，存储的过程将只有两个参数： _\@模型_中的二进制格式，模型和 _\@inputData_要计分中，使用的数据定义为有效的 SQL 查询。
 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b25594feb96fe10f0a04ad0ab542fd582089759
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950984"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +36,17 @@ ms.locfileid: "52411624"
   
 |**列**|**类型**|**说明**|  
 |----------------|--------------|---------------------|  
-|database_id|ssNoversion|与句柄关联的数据库的 ID。|  
-|object_id|ssNoversion|与句柄关联的 FileTable 的对象 ID。|  
-|handle_id|ssNoversion|唯一的句柄上下文标识符。 通过使用[sp_kill_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)存储过程来终止特定句柄。|  
-|file_object_type|ssNoversion|句柄的类型。 此类型指示句柄针对其打开的层次结构的级别，即：数据库或项。|  
+|database_id|INT|与句柄关联的数据库的 ID。|  
+|object_id|INT|与句柄关联的 FileTable 的对象 ID。|  
+|handle_id|INT|唯一的句柄上下文标识符。 通过使用[sp_kill_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)存储过程来终止特定句柄。|  
+|file_object_type|INT|句柄的类型。 此类型指示句柄针对其打开的层次结构的级别，即：数据库或项。|  
 |file_object_type_desc|nvarchar(120)|"未定义"<br />"SERVER_ROOT"<br />"DATABASE_ROOT"<br />"TABLE_ROOT"<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary(8)|包含发起请求的进程的唯一标识符。|  
 |correlation_thread_id|varbinary(8)|包含发起请求的线程的唯一标识符。|  
 |file_context|varbinary(8)|指向此句柄使用的文件对象的指针。|  
-|state|ssNoversion|句柄的当前状态。 可处于活动、已关闭或已终止状态。|  
+|state|INT|句柄的当前状态。 可处于活动、已关闭或已终止状态。|  
 |state_desc|nvarchar(120)|"活动"，<br />"已关闭"<br />"终止"|  
-|current_workitem_type|ssNoversion|此句柄当前正在由哪一状态处理。|  
+|current_workitem_type|INT|此句柄当前正在由哪一状态处理。|  
 |current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType"<br />"FFtPreCreateWorkitem"<br />"FFtGetPhysicalFileNameWorkitem"<br />"FFtPostCreateWorkitem"<br />"FFtPreCleanupWorkitem"<br />"FFtPostCleanupWorkitem"<br />"FFtPreCloseWorkitem"<br />"FFtQueryDirectoryWorkItem"<br />"FFtQueryInfoWorkItem"<br />"FFtQueryVolumeInfoWorkItem"<br />"FFtSetInfoWorkitem"<br />"FFtWriteCompletionWorkitem"|  
 |fcb_id|BIGINT|FileTable 文件控制块 ID。|  
 |item_id|varbinary(892)|文件或目录的项 ID。 对于服务器根句柄可能为 Null。|  
@@ -58,8 +57,8 @@ ms.locfileid: "52411624"
 |table_directory_name|nvarchar(512)|opened_file_name 中表示表目录名称的部分。|  
 |remaining_file_name|nvarchar(512)|opened_file_name 中表示其余目录名称的部分。|  
 |open_time|DATETIME|打开句柄的时间。|  
-|flags|ssNoversion|ShareFlagsUpdatedToFcb = 0x1、<br />DeleteOnClose = 0x2、<br />NewFile = 0x4、<br />PostCreateDoneForNewFile = 0x8、<br />StreamFileOverwritten = 0x10、<br />RequestCancelled = 0x20、<br />NewFileCreationRolledBack = 0x40|  
-|login_id|ssNoversion|打开句柄的主体的 ID。|  
+|flags|INT|ShareFlagsUpdatedToFcb = 0x1、<br />DeleteOnClose = 0x2、<br />NewFile = 0x4、<br />PostCreateDoneForNewFile = 0x8、<br />StreamFileOverwritten = 0x10、<br />RequestCancelled = 0x20、<br />NewFileCreationRolledBack = 0x40|  
+|login_id|INT|打开句柄的主体的 ID。|  
 |login_name|nvarchar(512)|打开句柄的主体的名称。|  
 |login_sid|varbinary(85)|打开句柄的主体的 SID。|  
 |read_access|bit|打开以供读取。|  

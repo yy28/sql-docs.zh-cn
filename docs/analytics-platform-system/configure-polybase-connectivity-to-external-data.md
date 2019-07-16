@@ -2,19 +2,18 @@
 title: 配置 PolyBase 连接-分析平台系统 |Microsoft Docs
 description: 介绍如何在并行数据仓库，若要连接到外部 Hadoop 或 Microsoft Azure 存储 blob 数据源中配置 PolyBase。 使用 PolyBase 将运行集成来自多个源，包括 Hadoop、 Azure blob 存储和并行数据仓库的数据的查询。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c218d686951e8855dd0687e35c1b777b0ae29617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961252"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
 PolyBase 使可以处理可以从中读取数据并将数据写入到外部数据源的 TRANSACT-SQL 查询在 Analytics Platform System (APS)。 访问外部数据的相同查询还可以在您的 AP 中包含的关系表。 这样即可将数据从外部源与高价值 APS 数据库中的关系数据合并。
