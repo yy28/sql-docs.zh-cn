@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5312413386dae9915b9ac6649b4210541d45b1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022324"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_monitor
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**last_run**|时间**sp_monitor**上次运行的时间。|  
 |**current_run**|时间**sp_monitor**正在运行。|  
@@ -65,7 +64,7 @@ sp_monitor
   
  对于每个列，统计信息打印窗体中*数量*(*数量*)-*数*%或*数*(*数*). 第一个*数量*指的秒数 (对于**cpu_busy**， **io_busy**，和**空闲**) 或总数目 （对于其他变量） 由于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已重新启动。 *数量*在括号中引用的秒数或总数目自从上次**sp_monitor**已运行。 百分比是以来的时间百分比**sp_monitor**上次运行的时间。 例如，如果此报表显示**cpu_busy**为 4250 （215)-68 %cpu 一直以来的繁忙 4250 秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上次启动以来 215 秒**sp_monitor**是最后一个运行，并有 68%的总时间以来**sp_monitor**上次运行的时间。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

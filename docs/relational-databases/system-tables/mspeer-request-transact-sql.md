@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 904919bfac6dc9fc0c5bf638605d363eba5a68f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25e9a7f2e13af0aafacdfa1882bb6ac5da37b91c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026716"
 ---
 # <a name="mspeerrequest-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   MSpeer_request 表用来在对等复制中跟踪给定发布的状态请求。 该表存储在发布数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**int**|标识一个请求。|  
 |publication|**sysname**|为其发起状态请求的发布的名称。|  

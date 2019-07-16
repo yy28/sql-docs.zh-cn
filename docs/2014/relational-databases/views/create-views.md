@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211666"
 ---
 # <a name="create-views"></a>创建视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建视图。 可以将视图用于以下用途：  
@@ -60,19 +60,19 @@ ms.locfileid: "54134397"
   
 1.  在 **“对象资源管理器”** 中，展开要创建新视图的数据库。  
   
-2.  右键单击“视图”文件夹，然后单击“新建视图...”。  
+2.  右键单击“视图”文件夹，然后单击“新建视图...”   。  
   
-3.  在中**添加表**对话框框中，选择你想要在您从以下选项卡之一的新视图中包含的元素:表、 视图、 函数和同义词。  
+3.  在“添加表”对话框中，从以下选项卡之一选择要在新视图中包含的元素：  “表”、“视图”、“函数”和“同义词”。  
   
-4.  单击 **“添加”**，再单击 **“关闭”**。  
+4.  单击 **“添加”** ，再单击 **“关闭”** 。  
   
 5.  在 **“关系图窗格”** 中，选择要在新视图中包含的列或其他元素。  
   
 6.  在 **“条件窗格”** 中，选择列的其他排序或筛选条件。  
   
-7.  在“文件”菜单上，单击“保存”以保存_视图名称_。  
+7.  在“文件”  菜单上，单击“保存”  以保存_视图名称_。  
   
-8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”**。  
+8.  在 **“选择名称”** 对话框中，输入新视图的名称并单击 **“确定”** 。  
   
      有关查询和视图设计器的详细信息，请参阅[查询和视图设计器工具（可视化数据库工具）](../../ssms/visual-db-tools/visual-database-tools.md)。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "54134397"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012 ;   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206839"
 ---
 # <a name="bulk-copying-from-program-variables"></a>从程序变量执行大容量复制
   可以直接从程序变量执行大容量复制。 分配变量以保存行和调用的数据后[bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)若要开始大容量复制，调用[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)为每个列指定的位置和相关联的程序变量的格式与列。 填充每个变量的数据，然后调用[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)以向服务器发送一行数据。 重复填充变量和调用的过程**bcp_sendrow**直到向服务器发送所有行，然后调用[bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)指定操作已完成。  

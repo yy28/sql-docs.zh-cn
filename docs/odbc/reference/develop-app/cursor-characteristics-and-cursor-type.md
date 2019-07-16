@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbef278f3f25b572ddc44e87d60b5cdcd33058c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8803e7827102f564be63454b0387df938064d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002054"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>游标特征和游标类型
 应用程序可以指定而不是指定游标类型 （只进、 静态、 由键集驱动或动态） 游标的特征。 若要执行此操作，该应用程序 （通过设置 SQL_ATTR_CURSOR_SCROLLABLE 语句属性） 的游标的可滚动性和敏感性 （通过设置 SQL_ATTR_CURSOR_SENSITIVITY 语句属性） 前选中打开的游标语句句柄。 然后，驱动程序选择的最有效地提供的特征的游标类型请求的应用程序。  

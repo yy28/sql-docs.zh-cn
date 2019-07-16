@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061624"
 ---
 # <a name="row-wise-binding"></a>按行绑定
 在使用按行绑定时，应用程序定义的结构，其中包含一个或两个，或在某些情况下三种模型，数据将返回每个列的元素。 第一个元素保留的数据值和第二个元素均包含长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果执行此操作，该结构包含第三个元素。 然后，应用程序分配一个数组这些结构，其中包含任意多个元素的行集中的行一样。  

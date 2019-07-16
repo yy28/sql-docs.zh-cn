@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14e1012530745e0e695c70efaf8b1b1e16b8a064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932311"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 属性示例 （VC + +）
 此示例使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)以打开一个独占的连接，并[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)属性可以打开的事务的执行中的其他事务隔离。  
@@ -235,7 +234,7 @@ void PrintComError(_com_error &e) {
 **计算机特别爱看美食-決的心理学**  
 **但它是用户友好？-popular_comp**  
 **硅谷-popular_comp 的秘密**  
-**Net Etiquette -  popular_comp**  
+**Net 刷屏-popular_comp**  
 **计算机 Phobic 和非恐惧症的个人：行为变体-self_help**  
 **是愤怒的防范对象？-self_help**  
 **而无需担心-self_help 生命**  

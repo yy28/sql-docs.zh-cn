@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5c980cbc6f8d212cf615469c199f6ccafcd70b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075633"
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*是**nvarchar(255)** ，无默认值。 *resource_name*是二进制比较，因此是区分大小写，无论当前数据库的排序规则设置为何。  
   
  [ @LockOwner=] '*指定的 lock_owner*  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*指定的 lock_owner*值是**事务**，也可由默认设置还是显式指定，sp_getapplock 必须在从事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值  。 lock_owner 是 nvarchar(32)   。 该值可以是 Transaction（默认值）或 Session   。 当*指定的 lock_owner*值是**事务**，也可由默认设置还是显式指定，sp_getapplock 必须在从事务内执行。  
   
  [ @DbPrincipal=] '*database_principal*  
- 对数据库中的对象具有权限的用户、角色或应用程序角色。 该函数的调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员，才可成功调用该函数。 默认值为 public。  
+ 对数据库中的对象具有权限的用户、角色或应用程序角色。 该函数的调用方必须是 database_principal、dbo 或 db_owner 固定数据库角色的成员，才可成功调用该函数  。 默认值为 public。  
   
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功） 或 < 0 （失败）  
@@ -66,7 +65,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
   
  服务器因任何原因而关闭时都将释放锁。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211117"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   直接在 XML 输入文件中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本工作负荷。  
@@ -37,13 +37,13 @@ ms.locfileid: "52769509"
   
 ## <a name="element-attributes"></a>元素属性  
   
-|Attribute|Description|  
+|特性|描述|  
 |---------------|-----------------|  
 |`Weight`|可选。 为指定的事件指定查询加权系数（重要性系数）。 使用 `float` 数据类型指定加权。 例如，`Weight`="100.01"。 可为 `Weight` 指定的最小值为“0”。|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|`string`，无限长。|  
 |**默认值**|无。|  

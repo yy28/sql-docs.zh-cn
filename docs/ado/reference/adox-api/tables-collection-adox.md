@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba06c10b3f890f08abac371346c3d03a0278aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965132"
 ---
 # <a name="tables-collection-adox"></a>表集合 (ADOX)
 包含所有[表](../../../ado/reference/adox-api/table-object-adox.md)的目录对象。  
   
 ## <a name="remarks"></a>备注  
- [追加](../../../ado/reference/adox-api/append-method-adox-tables.md)方法**表**是唯一的 ADOX 集合。 您可以：  
+ [追加](../../../ado/reference/adox-api/append-method-adox-tables.md)方法**表**是唯一的 ADOX 集合。 你可以：  
   
 -   将新表添加到具有集合**追加**方法。  
   
- 剩余的属性和方法是标准到 ADO 集合。 您可以：  
+ 剩余的属性和方法是标准到 ADO 集合。 你可以：  
   
 -   访问集合中具有表[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
   

@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f31da296bf55b7da55a4e5a8398d411bc5a5b0ea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d5a434b6e089cd77a2bd685506e5552c4e1e7f6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961948"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "58510314"
 
 ## <a name="python-quickstarts-and-tutorials"></a>Python 快速入门和教程
 
-| 链接 | Description |
+| 链接 | 描述 |
 |------|-------------|
 | [快速入门：SQL Server 中的"hello world"Python 脚本](quickstart-python-run-using-t-sql.md) | 了解如何在 T-SQL 中调用 Python 的基础知识。 |
 | [快速入门：创建、 定型和 SQL Server 中使用存储过程中使用 Python 模型](quickstart-python-train-score-in-tsql.md) | 介绍了在提供输入和存储的过程执行的存储过程中嵌入 Python 代码的机制。 |
@@ -42,12 +41,12 @@ ms.locfileid: "58510314"
 
 这些示例和演示 SQL Server 开发团队提供的突出显示您可以在实际应用程序中使用嵌入式的分析方法。
 
-| 链接 | Description |
+| 链接 | 描述 |
 |------|-------------|
 | [构建预测模型使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 介绍了雪橇租赁公司如何使用机器学习来预测未来的租赁情况，可帮助业务和人员计划以满足未来的需求。 |
 | [执行客户使用 Python 和 SQL Server 聚类分析](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | 了解如何使用 k 均值算法执行无人监督聚类分析的客户。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [到 SQL Server 的 Python 扩展](../concepts/extension-python.md)
 + [SQL Server 机器学习服务教程](machine-learning-services-tutorials.md)

@@ -8,26 +8,25 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071062"
 ---
-# <a name="dmx-statements---data-manipulation"></a>DMX 语句-数据操作
+# <a name="dmx-statements---data-manipulation"></a>DMX 语句 - 数据操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   下表列出的语句是数据挖掘扩展插件 (DMX) 中使用的部分数据挖掘数据操作语言 (DML) 语句。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
-|[删除&AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|从挖掘模型中清除已定型的内容。|  
-|[将插入到&AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|为挖掘模型定型。|  
-|[选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)|浏览挖掘模型。|  
+|[删除&#40;DMX&#41;](../dmx/delete-dmx.md)|从挖掘模型中清除已定型的内容。|  
+|[将插入到&#40;DMX&#41;](../dmx/insert-into-dmx.md)|为挖掘模型定型。|  
+|[选择&#40;DMX&#41;](../dmx/select-dmx.md)|浏览挖掘模型。|  
 |[&#60;源数据查询&#62;](../dmx/source-data-query.md)|两个查询数据源**INSERT INTO**并**选择**语句。|  
-|[更新&AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|更改挖掘模型中的内容。|  
+|[更新&#40;DMX&#41;](../dmx/update-dmx.md)|更改挖掘模型中的内容。|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   

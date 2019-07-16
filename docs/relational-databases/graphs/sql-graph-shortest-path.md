@@ -17,16 +17,15 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035878"
 ---
-# <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
+# <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   指定的图形，这是一个搜索条件搜索以递归方式或重复损坏。 SHORTEST_PATH 可用于在匹配图形节点和边缘表，在 SELECT 语句中。 
@@ -49,7 +48,7 @@ SHORTEST_PATH 函数允许您查找：
 ## <a name="arbitrary-length-pattern"></a>任意长度的字符串模式
 此模式包含节点和边缘，直到达到所需的节点，或者直到模式中指定的迭代的最大数目必须重复遍历满足。 每次执行查询时，执行这种模式的结果将是节点和边缘从起始节点到结束节点遍历的路径的有序的集合。 这是一个正则表达式样式语法模式并支持以下两个模式限定符：
 
-* **‘+’** :重复模式 1 次或多次。 找到最短路径后立即终止。
+* **'+'** :重复模式 1 次或多次。 找到最短路径后立即终止。
 * **{1,n}** ：重复模式 1到“n”次。 找到最短时，就立即终止。
 
 ## <a name="lastnode"></a>LAST_NODE

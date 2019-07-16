@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 68d57ac2db4149178a61424affef5e8948de0063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070954"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>数据挖掘扩展插件 (DMX) 函数参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持一些使用数据挖掘扩展插件 (DMX) 语言的函数。 这些函数扩展了预测查询的结果，在结果中包括了可进一步说明预测的信息。 通过使用这些函数，还可对预测结果的返回方式进行更好的控制。 下表提供了指向资源的链接，有助于您了解如何在 DMX 中使用函数。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)|列出可用于所有模型类型的函数，并提供指向如何查询特定挖掘模型类型的相关详细信息的链接。|  
 |[DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|提供有关如何使用 DMX 构建预测查询的概述。|  
@@ -29,31 +28,31 @@ ms.locfileid: "37998419"
   
  下表列出了 DMX 支持的函数。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|返回一个表，该表包含表表达式的最后 n 个项目行，依据排名表达式按升序排列。|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|返回一个表，该表包含满足指定百分比表达式，但数量最小的最底层的行，并根据排名表达式按排名的升序排列。|  
 |[BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)|返回一个表，该表包含满足指定求和表达式，但数量最小的最底层的行，并根据排名表达式按排名的升序排列。|  
-|[群集&#40;DMX&#41;](../dmx/cluster-dmx.md)|返回最可能包含输入事例的分类。|  
-|[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|返回输入事例属于该分类的概率。|  
+|[分类 (DMX)](../dmx/cluster-dmx.md)|返回最可能包含输入事例的分类。|  
+|[ClusterProbability (DMX)](../dmx/clusterprobability-dmx.md)|返回输入事例属于该分类的概率。|  
 |[存在&#40;DMX&#41;](../dmx/exists-dmx.md)|只要指定的 SELECT 语句返回的结果集包含行，就返回 True。|  
-|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|指示当前节点是否源自指定节点。|  
-|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|指示指定节点是否包含事例。|  
+|[IsDescendant (DMX)](../dmx/isdescendant-dmx.md)|指示当前节点是否源自指定节点。|  
+|[IsInNode (DMX)](../dmx/isinnode-dmx.md)|指示指定节点是否包含事例。|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|指示事例是否属于测试事例集。|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|指示事例是否属于定型事例集。|  
-|[延隔时间&#40;DMX&#41;](../dmx/lag-dmx.md)|返回当前事例的日期与数据中最后日期之间的时间段。|  
-|[预测&#40;DMX&#41;](../dmx/predict-dmx.md)|对指定列执行预测。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|返回调整后的指定可预测列的概率。|  
-|[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|预测列中的关联成员身份。|  
-|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|返回输入的事例适合现有模型中的可能性。 此函数仅可用于聚类分析模型。|  
-|[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|返回一个表，该表包含指定列的直方图。|  
-|[PredictNodeId &#40;DMX&#41;](../dmx/predictnodeid-dmx.md)|返回选定事例的 NodeID。|  
-|[PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|返回指定列的概率。|  
-|[PredictSequence &#40;DMX&#41;](../dmx/predictsequence-dmx.md)|预测序列中接下来的值。|  
-|[PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)|检索指定列的标准偏差值。|  
-|[PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)|返回列的支持值。|  
-|[PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md)|预测一个时序的未来值。|  
-|[PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)|返回指定列的方差值。|  
+|[Lag (DMX)](../dmx/lag-dmx.md)|返回当前事例的日期与数据中最后日期之间的时间段。|  
+|[Predict (DMX)](../dmx/predict-dmx.md)|对指定列执行预测。|  
+|[PredictAdjustedProbability (DMX)](../dmx/predictadjustedprobability-dmx.md)|返回调整后的指定可预测列的概率。|  
+|[PredictAssociation (DMX)](../dmx/predictassociation-dmx.md)|预测列中的关联成员身份。|  
+|[PredictCaseLikelihood (DMX)](../dmx/predictcaselikelihood-dmx.md)|返回输入的事例适合现有模型中的可能性。 此函数仅可用于聚类分析模型。|  
+|[PredictHistogram (DMX)](../dmx/predicthistogram-dmx.md)|返回一个表，该表包含指定列的直方图。|  
+|[PredictNodeId (DMX)](../dmx/predictnodeid-dmx.md)|返回选定事例的 NodeID。|  
+|[PredictProbability (DMX)](../dmx/predictprobability-dmx.md)|返回指定列的概率。|  
+|[PredictSequence (DMX)](../dmx/predictsequence-dmx.md)|预测序列中接下来的值。|  
+|[PredictStdev (DMX)](../dmx/predictstdev-dmx.md)|检索指定列的标准偏差值。|  
+|[PredictSupport (DMX)](../dmx/predictsupport-dmx.md)|返回列的支持值。|  
+|[PredictTimeSeries (DMX)](../dmx/predicttimeseries-dmx.md)|预测一个时序的未来值。|  
+|[PredictVariance (DMX)](../dmx/predictvariance-dmx.md)|返回指定列的方差值。|  
 |[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|返回为指定离散化列发现的预测存储桶的上限值。|  
 |[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)|返回为指定离散化列发现的预测存储桶的中点值。|  
 |[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|返回为离散化列发现的预测存储桶的下限值。|  

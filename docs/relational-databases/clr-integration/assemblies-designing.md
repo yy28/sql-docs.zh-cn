@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d1fc46d8ccffa84ad820153a060b6b02c2deb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028036"
 ---
 # <a name="assemblies---designing"></a>程序集 - 设计
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47808025"
 -   如果托管代码需要更高的权限，最好将该代码与不需要更高权限的代码分开，并将其放入单独的程序集。  
   
 ## <a name="managing-assembly-security"></a>管理程序集安全性  
- 当程序集运行托管代码时，可以控制程序集访问受 .NET 代码访问安全性保护的资源的程度。 可以通过在创建或修改程序集时指定三个权限集（SAFE、EXTERNAL_ACCESS 或 UNSAFE）之一执行以上操作。  
+ 当程序集运行托管代码时，可以控制程序集访问受 .NET 代码访问安全性保护的资源的程度。 执行此操作通过在创建或修改程序集时指定三个权限集之一：安全的 EXTERNAL_ACCESS 或 UNSAFE。  
   
 ### <a name="safe"></a>SAFE  
  SAFE 是默认的权限集，并且最具限制性。 使用具有 SAFE 权限的程序集运行的代码不能访问外部系统资源（例如文件、网络、环境变量或注册表）。 SAFE 代码可以从本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库访问数据，或执行不涉及访问本地数据库以外资源的计算和业务逻辑。  

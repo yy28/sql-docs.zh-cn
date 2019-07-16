@@ -1,5 +1,5 @@
 ---
-title: CursorTypeEnum | Microsoft Docs
+title: CursorTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd3469b826ac4f577ff0e883b1a92a3acec4a981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933274"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 指定的游标中使用的类型[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|使用动态游标。 添加、 更改和删除操作的其他用户是可见的并且所有类型的通过移动**记录集**都允许，书签除外，如果提供程序不支持它们。|  
 |**adOpenForwardOnly**|0|默认值。 使用只进游标。 与静态游标相同，只不过您可以仅向前滚动记录。 这样可以提高性能，当您需要只进行一次传递时**记录集**。|  

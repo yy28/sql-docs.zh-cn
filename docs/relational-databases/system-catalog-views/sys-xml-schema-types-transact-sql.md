@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ce5530e160fe6473ff84fca0978b5fc467fe688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a78730509cc1f9eeec83b8d9ff9cb0917e0ed99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060429"
 ---
 # <a name="sysxmlschematypes-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回每个 XML 架构组件，是一种类型，一行**symbol_space**的**T**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**||继承中的列[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)。|  
 |**is_abstract**|**bit**|1 = 类型是抽象类型。 此类型的元素的所有实例必须都使用**xsi: type**以指示不是抽象的派生的类型。<br /><br /> 0 = 类型不是抽象的。 （默认值）|  

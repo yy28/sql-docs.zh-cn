@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80a84d208ecd75b86df312d8d520a332669a8ce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030263"
 ---
 # <a name="managing-users-roles-and-logins"></a>管理用户、角色和登录名
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中，登录名由 <xref:Microsoft.SqlServer.Management.Smo.Login> 对象表示。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中存在登录名时，可将其添加到服务器角色中。 服务器角色由<xref:Microsoft.SqlServer.Management.Smo.ServerRole>对象。 数据库角色由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 对象表示，而应用程序角色由 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 对象表示。  
+  在 SMO 中，登录名由 <xref:Microsoft.SqlServer.Management.Smo.Login> 对象表示。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中存在登录名时，可将其添加到服务器角色中。 服务器角色由 <xref:Microsoft.SqlServer.Management.Smo.ServerRole> 对象表示。 数据库角色由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 对象表示，而应用程序角色由 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 对象表示。  
   
- 属性的形式列出了与服务器级别关联的特权<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>对象。 服务器级别特权可以对各个登录帐户授予、拒绝或从各个登录帐户撤消。  
+ 与服务器级别关联的特权将作为 <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 对象的属性列出。 服务器级别特权可以对各个登录帐户授予、拒绝或从各个登录帐户撤消。  
   
- 每个<xref:Microsoft.SqlServer.Management.Smo.Database>对象具有<xref:Microsoft.SqlServer.Management.Smo.UserCollection>对象，它指定在数据库中的所有用户。 每个用户都与一个登录名相关联。 一个登录名可以与多个数据库中的用户相关联。 <xref:Microsoft.SqlServer.Management.Smo.Login>对象的<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>方法可用于列出与登录名相关联的每个数据库中的所有用户。 另外，<xref:Microsoft.SqlServer.Management.Smo.User> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 属性可指定与用户关联的登录名。  
+ 每个 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象都有一个指定数据库中所有用户的 <xref:Microsoft.SqlServer.Management.Smo.UserCollection> 对象。 每个用户都与一个登录名相关联。 一个登录名可以与多个数据库中的用户相关联。 <xref:Microsoft.SqlServer.Management.Smo.Login> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 方法可用于列出与登录名关联的每个数据库中的所有用户。 另外，<xref:Microsoft.SqlServer.Management.Smo.User> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 属性可指定与用户关联的登录名。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库还具有指定的一组让用户执行特定任务的数据库级别特权的角色。 与服务器角色不同，数据库角色不是固定的。 可以创建、修改和删除数据库角色。 可以将特权和用户分配给数据库角色以进行大容量管理。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库还具有指定一组数据库级别特权的角色，用户可利用这些特权执行特定任务。 与服务器角色不同，数据库角色不是固定的。 可以创建、修改和删除数据库角色。 可以将特权和用户分配给数据库角色以进行大容量管理。  
   
 ## <a name="example"></a>示例  
  对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>在 Visual C# 中枚举登录名和关联的用户  
- 数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例创建一个登录名和用户在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库，以确保有要枚举的映射信息。  
+ 数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例将在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库中创建一个登录名和用户以确保有要枚举的映射信息。  
   
 ```csharp  
 {   
@@ -64,7 +63,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>在 PowerShell 中枚举登录名和关联的用户  
- 数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例创建一个登录名和用户在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库，以确保有要枚举的映射信息。  
+ 数据库中的每个用户都与一个登录名相关联。 该登录名可以与多个数据库中的用户相关联。 此代码示例说明如何调用 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法以列出与登录名关联的所有数据库用户。 该示例将在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 数据库中创建一个登录名和用户以确保有要枚举的映射信息。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

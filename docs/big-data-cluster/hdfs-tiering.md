@@ -5,17 +5,16 @@ description: 本文介绍如何配置 HDFS 的分层，从而在 SQL Server 2019
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958315"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>配置 SQL Server 大数据群集上分层的 HDFS
 
@@ -35,7 +34,7 @@ HDFS 分层提供的功能来装载外部的在 HDFS 中的 HDFS 兼容文件系
 
 以下部分提供如何配置 HDFS 分层与 Azure 数据湖存储第 2 代数据源的示例。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)

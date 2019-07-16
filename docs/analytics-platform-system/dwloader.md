@@ -2,19 +2,18 @@
 title: dwloader 命令行加载器-并行数据仓库 |Microsoft Docs
 description: dwloader 是将表行批量加载到现有表的并行数据仓库 (PDW) 命令行工具。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961029"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 命令行加载程序，用于并行数据仓库
 **dwloader**是将表行批量加载到现有表的并行数据仓库 (PDW) 命令行工具。 当加载行，可以将所有行都添加到表的末尾 (*追加模式*或*fastappend 模式*)、 追加新行和更新现有行 (*upsert 模式*)，或删除所有现有的行之前加载，然后将所有行都插入到一个空表 (*重新加载模式*)。  
@@ -157,7 +156,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *target_database_name。* [*架构*]。*table_name*  
 目标表的三部分组成的名称。  
   
 * *-I***source_data_location*  
@@ -222,7 +221,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-t** *field_delimiter*  
 行中每个字段 （列） 为分隔符。 字段分隔符为一个或多个这些 ASCII 转义字符或 ASCII 十六进制值。  
   
-|“属性”|转义符|十六进制字符|  
+|名称|转义符|十六进制字符|  
 |--------|--------------------|-----------------|  
 |Tab|\t|0x09|  
 |回车符 (CR)|\r|0x0d|  
@@ -236,7 +235,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 示例：  
   
--t "|"  
+-t"|"  
   
 -t ' '  
   
@@ -340,7 +339,7 @@ LF 的示例：
   
 需要 Unix LF。 需要 Windows CR。  
   
-**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
 在输入文件中指定的月 (m) 和日 (d)，年 (y) 的所有日期时间字段的顺序。 默认顺序是要求使用 ymd。 若要指定的同一源文件中的多个订单格式，请使用-dt 选项。  
   
 要求使用 ymd |dmy  
@@ -363,10 +362,10 @@ mdy
 -   01011975  
   
 myd  
-年 3 月的输入文件示例 04,2010:03-2010-04, 3/2010/4  
+年 3 月的输入文件示例 04,2010:03-2010年-04，3/2010年/4  
   
 dym  
-2010 年 3 月 4 日的输入的文件示例：04-2010-03, 4/2010/3  
+2010 年 3 月 4 日的输入的文件示例：04-2010年-03、 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format*是一种自定义日期格式 (例如，MM/dd/yyyy) 进行同步后向兼容性。 dwloader 不强制实施自定义日期格式。 相反，当指定自定义日期格式**dwloader**会将它转换为相应的设置的要求使用 ymd、 ydm、 mdy、 myd、 dym 或 dmy。  
@@ -426,7 +425,7 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 <reject_options>  
 指定用于确定加载程序将允许加载失败的数目的选项。 如果加载失败次数超过了阈值，则加载程序将暂停并提交任何行。  
   
-**-rt** { **value** | percentage }  
+**-rt** {**值**| 百分比}  
 指定是否-*reject_value*中 **-rv** *reject_value*选项是大量文本的行 （值） 或失败 （百分比） 的速率。 默认值为。  
   
 百分比选项是-rs 选项根据时间间隔发生的实时计算。  

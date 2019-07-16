@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 361b1d318a7db08007d4506531441ab19347ea62
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9538e66180fa401059135a5f8714ea39dd4e3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058812"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
 以下分步说明可帮助您可以使用数据迁移助手的本地 SQL Server 或 SQL Server Azure Vm 上的运行升级或迁移到 Azure SQL 数据库执行成功缩放的评估。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 指定工具的计算机将会启动 DMA 在网络上。 请确保此计算机已连接到 SQL Server 目标。
 - 下载并安装：
@@ -114,7 +113,7 @@ ms.locfileid: "67680262"
 
 介绍了下表与 dmaDataCollector 函数相关联的参数。
 
-|参数  |Description |
+|参数  |描述 |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为**SqlServer**并**CSV**。<br/>有关详细信息，请参阅[创建的 SQL Server 清单](#create-inventory)。 |
 |**csvPath** | 在 CSV 清单文件的路径。  使用的时，才**getServerListFrom**设置为**CSV**。 |
@@ -137,7 +136,7 @@ ms.locfileid: "67680262"
 
 介绍了下表与 dmaProcessor 函数相关联的参数。
 
-|参数  |Description |
+|参数  |描述 |
 |---------|---------|
 |**processTo** | 将向其处理的 JSON 文件的位置。 可能的值为**SQLServer**并**AzureSQLDatabase**。 |
 |**serverName** | SQL Server 实例处理数据。  如果指定**AzureSQLDatabase**有关**processTo**参数，则包括仅 SQL Server 名称 (不包括。 database.windows.net)。 面向 Azure SQL 数据库; 时将提示输入两个登录名第一个是你的 Azure 租户凭据，而第二个是您为 Azure SQL Server 的管理员登录名。 |
@@ -215,7 +214,7 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 要显示在任何以下各项上当前是否应用了筛选器的报表页的左下角还有一个提示：
 
 - FactAssessment-InstanceName
-- FactAssessment – DatabaseName
+- FactAssessment-DatabaseName
 - dimDBOwner-DBOwner
 
 ![应用筛选器提示](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)

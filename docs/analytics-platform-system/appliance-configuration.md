@@ -2,19 +2,18 @@
 title: 分析平台系统的配置清单-|Microsoft Docs
 description: 提供自己的环境配置分析平台系统所需的任务的清单。 可以使用该设备，还需要执行这些配置任务。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9977ac8ea73e37afef85a46d6794ea5136357b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961598"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>分析平台系统的设备配置清单
 提供自己的环境配置分析平台系统所需的任务的清单。 可以使用该设备，还需要执行这些配置任务。  
@@ -24,7 +23,7 @@ ms.locfileid: "63276051"
   
 ## <a name="BeforeTasks"></a>开始之前  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>系统必备  
   
 1.  设备必须安装在数据中心，且已打开电源。  
   
@@ -49,7 +48,7 @@ SQL Server PDW**Configuration Manager** (PDWCM) 是 SQL Server PDW 系统管理�
   
 使用**Configuration Manager**执行以下配置任务。  
   
-|配置任务|Description|  
+|配置任务|描述|  
 |----------------------|---------------|  
 |熟悉物理组件名称|[PDW 和设备结构物理组件&#40;分析平台系统&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |启动 SQL Server PDW 配置管理器|[启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)|  
@@ -67,7 +66,7 @@ SQL Server PDW**Configuration Manager** (PDWCM) 是 SQL Server PDW 系统管理�
 ## <a name="AddTasks"></a>执行其他配置任务  
 执行后**Configuration Manager**任务，执行下面列出的其他配置任务。 其中一些任务是可选的。  
   
-|配置任务|Description|  
+|配置任务|描述|  
 |----------------------|---------------|  
 |第三方防病毒软件可以安装和配置 SQL Server PDW 设备的面向外部的节点上。<br /><br />（可选）|有关详细信息，请参阅[防病毒软件&#40;Analytics Platform System&#41;](antivirus-software.md)。|  
 |可以更改为 DSRM 密码。<br /><br />（可选）|有关详细信息，请参阅[设置用于登录到 AD 节点以目录服务还原模式管理员密码&#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)。|  

@@ -7,13 +7,12 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c3f72a755d0ca75ca699465f7eb7a62ea48ff81f
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 216adc526f558152d90f4c8639b4ca1ba5dc67ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963069"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 语言扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +31,7 @@ SQL Server 不会修改基本的 R 可执行文件，但必须使用的 R 安装
 
 Microsoft 通过添加并行和分布式工作负荷的 R 包包括以下库。
 
-| 库 | Description |
+| 库 | 描述 |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 支持数据源对象和数据探索、 操作、 转换和可视化效果。 它支持远程计算上下文，以及各种可缩放的机器学习模型的创建，如**rxLinMod**。 这些 API 已经过优化，可以分析由于过大而无法装入内存的数据集，以及执行分布在多个核心或处理器之间的计算。 RevoScaleR 包还支持 XDF 文件格式来加速移动和数据分析时使用的存储。 XDF 格式使用纵栏表存储且可移植，可用于加载并处理来自各种来源（包括文本、SPSS 或 ODBC 连接）的数据。 |
 | [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含机器学习算法，经过优化的速度和准确性，以及行中使用文本和图像的转换。 有关详细信息，请参阅[SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
@@ -81,7 +80,7 @@ Microsoft 通过添加并行和分布式工作负荷的 R 包包括以下库。
 8. SQL Satellite 管理与 SQL Server 和相关的作业对象清理的通信。
 9. SQL Server 会将结果传递回客户端。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [SQL Server 中的可扩展性框架](extensibility-framework.md)
 + [Python 和机器学习中 SQL Server 的扩展](extension-python.md)

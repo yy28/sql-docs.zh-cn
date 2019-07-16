@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e91217f725251b17dadbcdddeb04b4d06d82642
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 68ceb35ee3ef2cb3db3233c7050380584163c317
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067926"
 ---
-# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
+# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   包含有关查询的等待信息的信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|表示 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 的等待统计信息的行的标识符。 它是唯一的仅为过去的运行时统计信息时间间隔。 当前处于活动状态的间隔时间，都可能有多个行表示引用的 plan_id，与表示 execution_type 和由 wait_category 等待此等待类别的执行类型的计划的等待统计信息。 通常情况下，一行表示等待统计信息将被刷新到磁盘，而其他 (s) 表示内存中状态。 因此，若要获取的每个时间间隔的实际状态需要聚合指标按 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 分组。 |  
 |**plan_id**|**bigint**|外键。 加入[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
@@ -65,9 +64,9 @@ ms.locfileid: "59476663"
 |**7**|**编译***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR %、 SQLCLR %|
 |**9**|**镜像**|DBMIRROR %|
-|**10**|**事务**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_ %，LAZYWRITER_SLEEP、 SQLTRACE_BUFFER_FLUSH、 SQLTRACE_INCREMENTAL_FLUSH_SLEEP、 SQLTRACE_WAIT_ENTRIES、 FT_IFTS_SCHEDULER_IDLE_WAIT、 XE_DISPATCHER_WAIT、 REQUEST_FOR_DEADLOCK_SEARCH、 LOGMGR_QUEUE、 ONDEMAND_TASK_QUEUE、 CHECKPOINT_队列 XE_TIMER_EVENT|
-|**12**|**Preemptive**|PREEMPTIVE_%|
+|**10**|**事务**|XACT %、 DTC %、 TRAN_MARKLATCH_ %、 MSQL_XACT_ %、 TRANSACTION_MUTEX|
+|**11**|**空闲**|SLEEP_ %，LAZYWRITER_SLEEP、 SQLTRACE_BUFFER_FLUSH、 SQLTRACE_INCREMENTAL_FLUSH_SLEEP、 SQLTRACE_WAIT_ENTRIES、 FT_IFTS_SCHEDULER_IDLE_WAIT、 XE_DISPATCHER_WAIT、 REQUEST_FOR_DEADLOCK_SEARCH、 LOGMGR_QUEUE、 ONDEMAND_TASK_QUEUE、 CHECKPOINT_队列 XE_TIMER_EVENT|
+|**12**|**Preemptive**|PREEMPTIVE_ %|
 |**13**|**Service Broker**|BROKER_ % **（但不是 BROKER_RECEIVE_WAITFOR）**|
 |**14**|**事务日志 IO**|数据库、 LOGBUFFER、 LOGMGR_RESERVE_APPEND、 LOGMGR_FLUSH、 LOGMGR_PMM_LOG、 CHKPT、 WRITELOG|
 |**15**|**网络 IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
@@ -77,7 +76,7 @@ ms.locfileid: "59476663"
 |**19**|**跟踪**|TRACEWRITE、 SQLTRACE_LOCK、 SQLTRACE_FILE_BUFFER、 SQLTRACE_FILE_WRITE_IO_COMPLETION、 SQLTRACE_FILE_READ_IO_COMPLETION、 SQLTRACE_PENDING_BUFFER_WRITERS、 SQLTRACE_SHUTDOWN、 QUERY_TRACEOUT、 TRACE_EVTNOTIFF|
 |**20**|**全文搜索**|FT_RESTART_CRAWL、 全文收集器、 MSSEARCH、 FT_METADATA_MUTEX、 FT_IFTSHC_MUTEX、 FT_IFTSISM_MUTEX、 FT_IFTS_RWLOCK、 FT_COMPROWSET_RWLOCK、 FT_MASTER_MERGE、 FT_PROPERTYLIST_CACHE、 FT_MASTER_MERGE_COORDINATOR、 PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**21**|**其他磁盘 IO**|ASYNC_IO_COMPLETION、 IO_COMPLETION、 BACKUPIO、 WRITE_COMPLETION、 IO_QUEUE_LIMIT、 IO_RETRY|
-|**22**|**复制**|SE_REPL_ %、 REPL_ %、 HADR_ % **（但不是 HADR_THROTTLE_LOG_RATE_GOVERNOR）**，PWAIT_HADR_ %，REPLICA_WRITES、 FCB_REPLICA_WRITE、 FCB_REPLICA_READ、 PWAIT_HADRSIM|
+|**22**|**复制**|SE_REPL_ %、 REPL_ %、 HADR_ % **（但不是 HADR_THROTTLE_LOG_RATE_GOVERNOR）** ，PWAIT_HADR_ %，REPLICA_WRITES、 FCB_REPLICA_WRITE、 FCB_REPLICA_READ、 PWAIT_HADRSIM|
 |**23**|**日志速率调控器**|LOG_RATE_GOVERNOR，POOL_LOG_RATE_GOVERNOR，HADR_THROTTLE_LOG_RATE_GOVERNOR INSTANCE_LOG_RATE_GOVERNOR|
 
 **编译**目前不支持等待类别。

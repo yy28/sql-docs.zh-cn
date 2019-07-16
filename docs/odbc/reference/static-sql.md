@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e6d053e4d2a5520432c4c1debbafb35fdb17bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016738"
 ---
 # <a name="static-sql"></a>静态 SQL
 嵌入式的 SQL 中所示[嵌入式 SQL 示例](../../odbc/reference/embedded-sql-example.md)称为静态 SQL。 由于在程序中的 SQL 语句都是静态的; 因此，称为静态 SQL也就是说，它们不会更改每次运行该程序。 如前一部分中所述，这些语句进行编译时编译的程序的其余部分。  

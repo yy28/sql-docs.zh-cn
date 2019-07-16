@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196532"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除或禁用 DML 触发器。  
@@ -64,21 +64,21 @@ ms.locfileid: "58536789"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要删除的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要删除的触发器的表。  
   
-3.  展开 **“触发器”**，右键单击要删除的触发器，再单击 **“删除”**。  
+3.  展开 **“触发器”** ，右键单击要删除的触发器，再单击 **“删除”** 。  
   
-4.  在 **“删除对象”** 对话框中，确认要删除的触发器，然后单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，确认要删除的触发器，然后单击 **“确定”** 。  
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要禁用的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要禁用的触发器的表。  
   
-3.  展开 **“触发器”**，右键单击要禁用的触发器，再单击 **“禁用”**。  
+3.  展开 **“触发器”** ，右键单击要禁用的触发器，再单击 **“禁用”** 。  
   
-4.  若要启用触发器，请单击 **“启用”**。  
+4.  若要启用触发器，请单击 **“启用”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,7 +86,7 @@ ms.locfileid: "58536789"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 执行 [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) 语句以创建 `Sales.bonus_reminder` 触发器。 若要删除该触发器，请执行 [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) 语句。  
   
@@ -120,7 +120,7 @@ GO
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 执行 [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) 语句以创建 `Sales.bonus_reminder` 触发器。 若要禁用和启用该触发器，请分别执行 [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) 语句和 [ENABLE TRIGGER](/sql/t-sql/statements/enable-trigger-transact-sql) 语句。  
   

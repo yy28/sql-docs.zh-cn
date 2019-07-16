@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072666"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>参数  
  [ @loginame=] '*登录名*  
- 登录的名称。 *登录名*是**sysname**，无默认值。  
+ 登录的名称。 *登录名* 是 **sysname** ，无默认值。  
   
  [ @passwd= ] '*password*'  
  登录的密码。 *密码*是**sysname**，默认值为 NULL。  
@@ -68,12 +67,12 @@ sp_addlogin [ @loginame = ] 'login'
  登录的默认语言。 *语言*是**sysname**，默认值为 NULL。 如果*语言*未指定，默认*语言*的新登录名设置为服务器的当前默认语言。  
   
  [ @sid=] '*sid*  
- 安全标识号 (SID)。 *sid*是**varbinary(16)**，默认值为 NULL。 如果*sid*为 NULL，则系统将生成新的登录名的 SID。 尽管使用**varbinary**数据类型，NULL 以外的值必须是 16 个字节的长度，并且不能已存在。 指定*sid*非常有用，例如，当您要编写脚本或移动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从一台服务器的登录名到另一个并且您想要在不同服务器上使用相同的 SID 的登录名。  
+ 安全标识号 (SID)。 *sid*是**varbinary(16)** ，默认值为 NULL。 如果*sid*为 NULL，则系统将生成新的登录名的 SID。 尽管使用**varbinary**数据类型，NULL 以外的值必须是 16 个字节的长度，并且不能已存在。 指定*sid*非常有用，例如，当您要编写脚本或移动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从一台服务器的登录名到另一个并且您想要在不同服务器上使用相同的 SID 的登录名。  
   
  [ @encryptopt=] '*encryption_option*  
- 指定是以明文形式，还是以明文密码的哈希运算结果来传递密码。 注意，不进行加密。 在本讨论中使用“加密”一词是为了向后兼容。 如果传入明文密码，将对它进行哈希运算。 哈希值将存储起来。 *encryption_option*是**varchar （20)**，可以是下列值之一。  
+ 指定是以明文形式，还是以明文密码的哈希运算结果来传递密码。 注意，不进行加密。 在本讨论中使用“加密”一词是为了向后兼容。 如果传入明文密码，将对它进行哈希运算。 哈希值将存储起来。 *encryption_option*是**varchar （20)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |NULL|以明文形式传递密码。 这是默认设置。|  
 |**skip_encryption**|密码已经过哈希运算。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]应存储值，且不对其重新进行哈希运算。|  
@@ -97,14 +96,14 @@ sp_addlogin [ @loginame = ] 'login'
   
  下表显示了数个与 sp_addlogin 一起使用的存储过程。  
   
-|存储过程|Description|  
+|存储过程|描述|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|添加 Windows 用户或组。|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|更改用户密码。|  
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)|更改用户的默认数据库。|  
 |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md)|更改用户的默认语言。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  
@@ -144,6 +143,6 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
  [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

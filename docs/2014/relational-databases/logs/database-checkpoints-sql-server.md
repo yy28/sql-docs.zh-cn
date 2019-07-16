@@ -27,25 +27,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206109"
 ---
 # <a name="database-checkpoints-sql-server"></a>数据库检查点 (SQL Server)
   本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检查点的概述。  “检查点”会创建一个已知的正常点，在意外关闭或崩溃后进行恢复的过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 可以从该点开始应用日志中所包含的更改。  
   
   
 ##  <a name="Overview"></a> 检查点的概述  
- 出于性能方面的考虑，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期发出对每个数据库的检查点命令。  “检查点”将当前内存中已修改的页（称为“脏页” ）和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。  
+ 出于性能方面的考虑，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 对内存（缓冲区缓存）中的数据库页进行修改，但在每次更改后不将这些页写入磁盘。 相反， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 定期发出对每个数据库的检查点命令。  “检查点”将当前内存中已修改的页（称为“脏页”  ）和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支持几种类型的检查点：自动、间接、手动和内部。 下表总结了检查点类型。  
   
-|“属性”|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|Description|  
+|名称|[!INCLUDE[tsql](../../includes/tsql-md.md)] 接口|描述|  
 |----------|----------------------------------|-----------------|  
-|自动|EXEC sp_configure **'`recovery interval`'，'*`seconds`***|在后台以满足时间上限由建议自动发出`recovery interval`服务器配置选项。 运行自动检查点直到完成。  基于未完成的写操作数和[!INCLUDE[ssDE](../../includes/ssde-md.md)]是否检测到写入滞后时间超过 20 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
-|间接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 默认目标恢复时间为 0，这将导致对数据库使用自动检查点试探方法。 如果您使用 ALTER DATABASE 并将 TARGET_RECOVERY_TIME 设置为 >0，则将使用此值替代为服务器实例指定的恢复间隔。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
+|自动|EXEC sp_configure **'`recovery interval`'，' *`seconds`***|在后台以满足时间上限由建议自动发出`recovery interval`服务器配置选项。 运行自动检查点直到完成。  基于未完成的写操作数和[!INCLUDE[ssDE](../../includes/ssde-md.md)]是否检测到写入滞后时间超过 20 毫秒的写操作增加，来调控自动检查点。<br /><br /> 有关详细信息，请参阅 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
+|间接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS &#124; MINUTES }|在后台发出，以满足给定数据库的用户指定的目标恢复时间要求。 默认目标恢复时间为 0，这将导致对数据库使用自动检查点试探方法。 如果您使用 ALTER DATABASE 并将 TARGET_RECOVERY_TIME 设置为 >0，则将使用此值替代为服务器实例指定的恢复间隔。<br /><br /> 有关详细信息，请参阅 [更改数据库的目标恢复时间 (SQL Server)](change-the-target-recovery-time-of-a-database-sql-server.md)服务器配置选项。|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令时发出。 在连接的当前数据库中执行手动检查点操作。 默认情况下，手动检查点运行至完成。 调控方式与自动检查点的调控方式相同。  （可选） *checkpoint_duration* 参数指定完成检查点所需的时间（秒）。<br /><br /> 有关详细信息，请参阅 [检查点 (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql)。|  
 |内部|无。|由各种服务器操作（如备份和数据库快照创建）发出，以确保磁盘映像与日志的当前状态匹配。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 定义常规关系和常规关系属性 |Microsoft 文档
+title: 定义常规关系和常规关系属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9ee79742f919d7f47ae73968666d96622e3429bc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209017"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>定义常规关系和常规关系属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

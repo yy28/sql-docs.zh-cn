@@ -10,22 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90fd3a238d7b4ab3e573c4ecef76bdbdd3bde7f1
-ms.sourcegitcommit: 3f19c843b38d3835d07921612f0143620eb9a0e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179025"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>配置 Analysis Services 项目属性 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目是使用特定默认属性定义的，这些属性影响 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的生成和部署。  
   
- 若要更改项目属性，请右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目对象，再单击“属性”。 或者，您可以单击“项目”菜单上的 **“属性”** 。  
+ 若要更改项目属性，请右键单击 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目对象，再单击“属性”  。 或者，您可以单击“项目”菜单上的 **“属性”** 。  
   
 ## <a name="property-description"></a>属性说明  
  下表说明每个项目的属性，列出其默认值，并提供有关更改属性值的信息。  
   
-|属性|默认设置|Description|  
+|属性|默认设置|描述|  
 |--------------|---------------------|-----------------|  
 |生成/部署服务器版本|用于部署项目的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|指定最终要将项目部署到其中的服务器的版本。 当多个开发人员共同处理项目时，这些开发人员需要了解服务器版本，以便知道要将哪些功能合并到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。|  
 |生成 / 部署服务器版本|用于开发项目的版本|指定最终要将项目部署到其中的服务器的版本。|  

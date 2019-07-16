@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13568aae4723a695dd2ce3e611d5e92f96deffb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078607"
 ---
 # <a name="syssystemviews-transact-sql"></a>sys.system_views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]附带的每个系统视图都在表中对应一行。 所有系统视图都包含在架构中名为**sys**或**INFORMATION_SCHEMA**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |\<继承列 >||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_replicated**|**bit**|1 = 视图已复制。|  
@@ -42,7 +41,7 @@ ms.locfileid: "47714895"
 |**with_check_option**|**bit**|1 = 在视图定义中指定了 WITH CHECK OPTION。|  
 |**is_date_correlation_view**|**bit**|1 = 系统存储之间的相关信息自动创建视图**datetime**列。 通过将 DATE_CORRELATION_OPTIMIZATION 设置为 ON，启用创建此视图。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

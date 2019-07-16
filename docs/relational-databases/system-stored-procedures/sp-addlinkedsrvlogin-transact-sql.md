@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs
+title: sp_addlinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072672"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  应用登录映射的链接服务器的名称。 *rmtsrvname*是**sysname**，无默认值。  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- 确定是否连接到*rmtsrvname*通过模拟本地登录名或显式提交登录名和密码。 数据类型是**varchar (** 8 **)**，默认值为 TRUE。  
+ 确定是否连接到*rmtsrvname*通过模拟本地登录名或显式提交登录名和密码。 数据类型是**varchar (** 8 **)** ，默认值为 TRUE。  
   
  值为 TRUE 指定登录名使用自己的凭据来连接到*rmtsrvname*，使用*rmtuser*并*rmtpassword*参数被忽略。 FALSE 指定*rmtuser*并*rmtpassword*参数用于连接到*rmtsrvname*指定*locallogin*. 如果*rmtuser*并*rmtpassword*也是设置为 NULL、 没有登录名或密码用于连接到链接服务器。  
   
@@ -120,7 +119,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 ## <a name="see-also"></a>请参阅  
  [链接的服务器目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

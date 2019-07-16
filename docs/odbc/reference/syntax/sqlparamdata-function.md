@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d92abe17128bff382d4b291fa9d20fe5c4fa77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41cb718b5425315856fe4db27658cce873f90e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018941"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 函数
 **符合性**  
@@ -56,7 +55,7 @@ SQLRETURN SQLParamData(
 ## <a name="diagnostics"></a>诊断  
  当**SQLParamData**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLParamData** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |07006|受限制的数据类型属性冲突|标识的数据值*ValueType*中的参数**SQLBindParameter**无法为数据类型由标识转换绑定的参数为*ParameterType*中的参数**SQLBindParameter**。<br /><br /> 参数绑定为 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT 不无法转换为标识的数据类型返回的数据值*ValueType*中的参数**SQLBindParameter**。<br /><br /> （如果无法转换为一个或多个行的数据值，但没有成功返回一个或多个行，此函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -86,7 +85,7 @@ SQLRETURN SQLParamData(
   
  其中变量定义下表中所示。  
   
-|变量|Description|  
+|变量|描述|  
 |--------------|-----------------|  
 |*绑定地址*|使用指定的地址*TargetValuePtr*中的参数**SQLBindCol**。|  
 |*绑定偏移量*|存储与 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性指定的地址的值。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c16ec959f847f1b2dba5bdfbea8f886bb00545a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996235"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>附录 A：ODBC 错误代码
 本主题讨论为 ODBC 3 的 SQLSTATE 值。*x*。 有关 ODBC 3 的详细信息。*x* SQLSTATE 值，请参阅[SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
@@ -32,7 +31,7 @@ ms.locfileid: "63026794"
 > [!NOTE]  
 >  尽管返回 SQL_SUCCESS 值通常指示函数的成功执行，但 SQLSTATE 00000 还表示成功。  
   
-|SQLSTATE|错误|可以从返回|  
+|SQLSTATE|Error|可以从返回|  
 |--------------|-----------|--------------------------|  
 |01000|常规警告|除以外的所有 ODBC 函数：<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|游标操作冲突|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  

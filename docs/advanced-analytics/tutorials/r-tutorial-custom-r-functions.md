@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961957"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 的 SQL Server 上运行自定义 R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -124,15 +123,15 @@ ms.locfileid: "58509904"
     length(sqlServerExec)
     ```
   
-    + 使用 timesToRun 参数，指示执行函数的次数。  在这种情况下，将掷 20 次骰子。
+    + 使用 timesToRun  参数，指示执行函数的次数。  在这种情况下，将掷 20 次骰子。
   
-    + 可使用 RNGseed 和 RNGkind 参数控制随机数的生成。 将 RNGseed 设置为“自动”时，会在每个辅助角色上初始化并行随机数流。
+    + 可使用 RNGseed  和 RNGkind  参数控制随机数的生成。 将 RNGseed  设置为“自动”  时，会在每个辅助角色上初始化并行随机数流。
   
-2. rxExec 函数会创建一个列表，其中一次运行一个元素；但是，在列表完成前，不会看到太多操作执行。 当所有迭代都都完成时，使用开头的行**长度**将返回一个值。
+2. rxExec  函数会创建一个列表，其中一次运行一个元素；但是，在列表完成前，不会看到太多操作执行。 当所有迭代都都完成时，使用开头的行**长度**将返回一个值。
   
     然后可以转到下一步，获得输赢记录的汇总。
   
-3. 使用 R 的 unlist 函数将返回的列表转换为向量，并使用 table 函数汇总结果。
+3. 使用 R 的 unlist  函数将返回的列表转换为向量，并使用 table  函数汇总结果。
   
     ```R
     table(unlist(sqlServerExec))

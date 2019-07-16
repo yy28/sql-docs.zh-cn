@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912325"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支持的 Visual FoxPro 命令和函数（Visual FoxPro ODBC 驱动程序）
 下表列出了 FoxPro 命令和函数，不受 Visual FoxPro ODBC 驱动程序，但支持的 Microsoft® Visual FoxPro®。  
@@ -50,7 +49,7 @@ ms.locfileid: "62633367"
 |ActivateCell 方法|添加类命令|ADIR （） 函数|  
 |AFONT （） 函数|AINSTANCE （） 函数|可系统内存变量|  
 |AMEMBERS （） 函数|ANSITOOEM （） 函数|APRINTERS （） 函数|  
-|ASELOBJ( ) Function|帮助命令||  
+|ASELOBJ （） 函数|帮助命令||  
   
 ## <a name="b"></a>B  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62633367"
 |CHDIR 命令|CHRSAW （） 函数|关闭备注命令|  
 |CNTBAR （） 函数|CNTPAD （） 函数|列号 （） 函数|  
 |编译命令|编译数据库命令|编译窗体命令|  
-|COMPOBJ( ) Function|容器对象|控件对象|  
+|COMPOBJ （） 函数|容器对象|控件对象|  
 |复制文件命令|复制备注命令|创建类的命令|  
 |创建 CLASSLIB 命令|创建颜色 SET 命令|创建命令|  
 |创建连接的命令|创建数据库的命令|创建窗体的命令|  
@@ -84,7 +83,7 @@ ms.locfileid: "62633367"
   
 ||||  
 |-|-|-|  
-|_DBLCLICK 系统内存变量|_DIARYDATE 系统内存变量|DBSETPROP( ) Function|  
+|_DBLCLICK 系统内存变量|_DIARYDATE 系统内存变量|DBSETPROP （） 函数|  
 |DDE 函数|停用菜单命令|停用弹出项命令|  
 |停用窗口命令|声明的 DLL 命令|声明命令|  
 |定义命令栏|定义框命令|定义类命令|  
@@ -111,7 +110,7 @@ ms.locfileid: "62633367"
 |-|-|-|  
 |_FOXDOC 系统内存变量|_FOXGRAPH 系统内存变量|FEOF （） 函数|  
 |FCLOSE （） 函数|FCREATE （） 函数|FGETS （） 函数|  
-|FERROR( ) Function|FFLUSH （） 函数|FKLABEL （） 函数|  
+|FERROR （） 函数|FFLUSH （） 函数|FKLABEL （） 函数|  
 |文件管理器命令|查找命令|FOPEN （） 函数|  
 |FKMAX （） 函数|FONTMETRIC （） 函数|FSEEK （） 函数|  
 |FPUTS （） 函数|FREAD （） 函数||  
@@ -237,7 +236,7 @@ ms.locfileid: "62633367"
 |重命名连接命令|重命名表命令|从命令还原|  
 |报表命令|再次查询 （） 函数|还原窗口命令|  
 |还原宏命令|还原屏幕命令|RGBSCHEME （） 函数|  
-|RESUME 命令|RGB （） 函数|RUN &#124; ! Command|  
+|RESUME 命令|RGB （） 函数|运行&#124;！ Command|  
 |RMDIR 命令|ROW （） 函数||  
 |RUNSCRIPT 命令|RDLEVEL （） 函数||  
   

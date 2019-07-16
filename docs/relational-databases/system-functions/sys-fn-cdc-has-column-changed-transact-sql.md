@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d3df1bd07e73c3c363a0fd275e910c3c32cbe71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c409581771055e2c6d85d2cdd01937e2f033ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046377"
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  要报告的指定捕获实例中的已捕获列。 *column_name*是**sysname**。  
   
  *update_mask*  
- 用于标识任何关联更改行中的更新列的掩码。 *update_mask*是**varbinary(128)**。  
+ 用于标识任何关联更改行中的更新列的掩码。 *update_mask*是**varbinary(128)** 。  
   
 ## <a name="return-type"></a>返回类型  
  **bit**  
@@ -60,7 +59,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
   
  当此信息将作为更改数据查询的一部分返回时，我们建议使用函数[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)并[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)而不是此函数。 在查询更改数据之前，请使用函数 fn_cdc_get_column_ordinal，以便所需的列序号只计算一次。 在查询中使用 fn_cdc_is_bit_set 可以从每个返回行的更新掩码中提取信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="see-also"></a>请参阅  

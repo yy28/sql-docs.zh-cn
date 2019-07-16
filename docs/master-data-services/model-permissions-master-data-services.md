@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1f42513c7f8fa52fddfa9d3f77f537d81a34c0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 027240f161ec2853aa2d40a7b4792ccea82c7e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000020"
 ---
 # <a name="model-permissions-master-data-services"></a>模型权限 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65484085"
 > [!NOTE]  
 >  如果用户是模型管理员，则在用户界面的所有功能区域显示该模型。 否则，仅在 **“资源管理器”** 功能区域显示该模型。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|用户可以读取成员、属性、层次结构成员身份或集合成员身份。|  
 |**创建**|用户可以创建成员，并在创建过程中指定属性值。|  

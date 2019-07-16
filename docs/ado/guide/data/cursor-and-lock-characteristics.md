@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3a206a21cf7c6680a656c89c48b8f52d1069d78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4d6f86539e1abc7ee74087b130e0186322346e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925676"
 ---
 # <a name="cursor-and-lock-characteristics"></a>游标和锁定特征
 游标的特征取决于提供程序的功能，而以下优点和缺点通常适用于各种类型的游标和锁定。  

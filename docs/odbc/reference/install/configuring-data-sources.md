@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068622"
 ---
 # <a name="configuring-data-sources"></a>配置数据源
 有关数据源的信息存储在系统注册表中。 用户修改通过管理计划的数据源信息。 这可以是 ODBC 管理器、 ODBC 控制面板设备或应用程序或驱动程序的开发人员编写的管理程序。  

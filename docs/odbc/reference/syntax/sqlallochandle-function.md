@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8bcf70823401f60efc316caabe283f5be59f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f4f82a24e594a25b0b1ec9bbeab2256624ae6e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036249"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 函数
 **符合性**  
@@ -86,7 +85,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>诊断  
  当**SQLAllocHandle**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**具有相应*HandleType*并*处理*设置的值为*InputHandle*。 为可以返回 SQL_SUCCESS_WITH_INFO （但不是 SQL_ERROR） *OutputHandle*参数。 下表列出了通常由返回的 SQLSTATE 值**SQLAllocHandle** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08003|连接未打开|（数据挖掘） *HandleType*参数为 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC，但通过指定的连接*InputHandle*参数未打开。 必须成功完成连接过程 （和必须打开连接） 的驱动程序分配一个语句或描述符处理。|  

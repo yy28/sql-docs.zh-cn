@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054097"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource（dBASE 驱动程序）
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "62665349"
   
  **SQLConfigDataSource**函数，用于添加、 修改或删除数据源动态使用下列关键字。  
   
-|关键字|Description|  
+|关键字|描述|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|字段的排序顺序的序列。<br /><br /> 序列可以是：ASCII （默认值） 或国际。<br /><br /> 这将设置为相同的选项**排序规则序列**中设置的对话框。|  
 |DEFAULTDIR|所指定的路径的目录。|  

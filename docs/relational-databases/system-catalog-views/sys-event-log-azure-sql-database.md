@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061379"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -39,7 +38,7 @@ ms.locfileid: "56041528"
   
  `sys.event_log` 视图包含以下各列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库的名称。 如果连接失败，并且用户未指定数据库名称，则此列为空白。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 对于聚合事件，时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -48,7 +47,7 @@ ms.locfileid: "56041528"
 |**event_type**|**nvarchar(64)**|事件的类型。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
 |**event_subtype**|**int**|发生的事件的子类型。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
 |**event_subtype_desc**|**nvarchar(64)**|事件子类型的说明。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
-|severity|**int**|错误的严重性。 可能的值有：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
+|severity |**int**|错误的严重性。 可能的值有：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
 |**event_count**|**int**|次数发生此事件的指定数据库中指定的时间间隔 (**start_time**并**end_time**)。|  
 |**description**|**nvarchar(max)**|对事件的详细说明。<br /><br /> 请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)有关可能的值的列表。|  
 |**additional_data**|**XML**|*注意：此值始终为 NULL 的 Azure SQL 数据库 V12。请参阅[示例](#Deadlock)部分，了解如何检索有关 V12 的死锁事件。*<br /><br /> 有关**死锁**事件，此列包含死锁图形。 对于其他事件类型，该列为 NULL。 |  
@@ -62,7 +61,7 @@ ms.locfileid: "56041528"
 > [!NOTE]  
 > 此视图不包括所有可能发生的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库事件，而仅限此处列出的事件。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的未来版本中可能会添加其他类别、事件类型和子类型。  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity|**description**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity |**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**连接**|**connection_successful**|0|**connection_successful**|0|已成功连接到数据库。|  
 |**连接**|**connection_failed**|0|**invalid_login_name**|2|登录名在此版本的 SQL Server 中无效。|  
@@ -77,13 +76,13 @@ ms.locfileid: "56041528"
 |**连接**|**connection_failed**|9|**reconfiguration**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
 |**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
 |**连接**|**connection_terminated**|1|**reconfiguration**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
-|**连接**|**throttling**|*\<原因代码 >*|**reason_code**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >*。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**连接**|**限制**|*\<原因代码 >*|**reason_code**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >* 。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**engine**|**deadlock**|0|**deadlock**|2|发生死锁。|  
+|**引擎**|**deadlock**|0|**deadlock**|2|发生死锁。|  
   
 ## <a name="permissions"></a>权限
 
@@ -100,7 +99,7 @@ ms.locfileid: "56041528"
   
  例如，如果用户在 2/5/2012 (UTC) 的 11:00 到 11:05 之间由于登录名无效而七次均无法连接到数据库 Database1，则此信息将出现在此视图的单一行内：  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity|**event_count**|**description**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|severity |**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -231,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>请参阅
 
- [Azure SQL 数据库中扩展的事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL 数据库中的扩展事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

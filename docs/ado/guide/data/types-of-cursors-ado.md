@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 717229c9645384477b89e67b569c15179e9f3bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923858"
 ---
 # <a name="types-of-cursors-ado"></a>游标类型 (ADO)
 作为一般规则，你的应用程序应使用的最简单的游标的提供所需的数据访问。 每个只进、 只读、 静态、 滚动 （无缓冲） 的基础知识以外的其他游标特征具有价格-在客户端内存、 网络负载或性能。 在许多情况下，默认游标选项生成更复杂的游标不是应用程序实际需要。  

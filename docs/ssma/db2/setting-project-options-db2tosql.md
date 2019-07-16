@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060033"
 ---
 # <a name="setting-project-options-db2tosql"></a>设置项目选项 (DB2ToSQL)
 对于每个 SSMA 项目可以设置项目级别选项。 这些选项用于指定对象转换、 对象加载、 用户界面和数据迁移设置。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，验证配置选项是否适用于该项目。  

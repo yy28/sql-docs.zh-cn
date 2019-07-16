@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020987"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>选择并配置受影响的对象 (SybaseToSQL)
 在此页可以选择表和外键，在其中更改应进行比较时 SSMA 验证在上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
@@ -49,10 +48,10 @@ SSMA 测试人员无法验证任何这些对象，如果你将看到标记为链
 ## <a name="sql"></a>Sql  
 SQL 选项卡包含"创建表"选定的表的 SQL。  
   
-## <a name="data"></a>数据  
+## <a name="data"></a>Data  
 数据选项卡显示所选择的表中的数据。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
 属性选项卡显示所选表的属性。 以下字段是属性选项卡下存在：  
   
 -   创建或上次修改时间  

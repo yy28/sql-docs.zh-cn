@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68aaaf9db4b2376a1c950bc4c2b463bd2b7b6391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029331"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>自定义调用顺序 (SybaseToSQL)
 在此步骤中您选择将在其中调用要测试的对象的顺序。  

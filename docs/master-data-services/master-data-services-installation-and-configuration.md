@@ -10,13 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985286"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -130,7 +129,7 @@ ms.locfileid: "65994116"
   
 3.  上**数据库服务器**页上，指定 SQL Server 实例。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 添加了对 SQL Server 托管实例支持。 设置的值**SQL Server 实例**的主机的 Azure SQL 数据库托管实例。 例如， `xxxxxx.xxxxxx.database.windows.net` 。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 添加了对 SQL Server 托管实例支持。 设置的值**SQL Server 实例**的主机的 Azure SQL 数据库托管实例。 例如，`xxxxxx.xxxxxx.database.windows.net` 。
 
 4. 选择**身份验证类型**，然后单击**测试连接**以确认可以连接到使用所选的身份验证类型的凭据的数据库。 单击“下一步”  。
 

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 460f5e8605e7a855430231083bf9a0bd0477542b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162487"
 ---
 # <a name="tabular-model-roles"></a>表格模型角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53071854"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |[使用 SSMS 管理角色](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)|说明如何创建角色、在角色中添加和删除成员、更改角色的权限以及如何使用 DAX 添加、编辑或删除行级筛选器。|  
   

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29454fefde7850e5e45ca6a916540e7d38e2b286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070902"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>数据挖掘扩展插件 (DMX) 参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "38032723"
   
  该规范以数据挖掘模型虚拟对象的形式定义数据挖掘的基础。 数据挖掘模型对象将封装所有有关特定挖掘模型的已知内容。 数据挖掘模型对象的结构与 SQL 表类似，包含用于说明模型的列、数据类型和元信息。 该结构允许您使用 DMX 语言（一种 SQL 扩展语言）来创建和处理模型。  
   
- **有关详细信息：** [挖掘结构&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ **有关详细信息：** [挖掘结构（Analysis Services - 数据挖掘）](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 ##  <a name="BKMK_DMXStatements"></a> DMX 语句  
  可以使用 DMX 语句创建、处理、删除、复制、浏览和预测数据挖掘模型。 DMX 中有两种类型的语句：数据定义语句和数据操作语句。 可以使用每种类型的语句执行各种不同的任务。  
@@ -73,13 +72,13 @@ ms.locfileid: "38032723"
   
 -   扩展 SELECT 语句以便浏览在模型定型期间计算并存储在数据挖掘模型中，例如源数据的统计信息的信息。 以下是可以包含以扩展功能的 SELECT 语句的子句：  
   
-    -   [SELECT DISTINCT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
+    -   [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
     -   [SELECT FROM&#60;模型&#62;。内容&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
     -   [SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
-    -   [SELECT FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+    -   [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
     -   [SELECT FROM&#60;模型&#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "38032723"
   
  使用 DMX 函数可以获取在模型定型过程中发现的信息，并且还可以计算新的信息。 这些函数可用于多种用途，包括返回说明基础数据或预测精确性的统计信息，或返回预测的详细说明。  
   
- **有关详细信息****信息：** [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)，[通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[数据挖掘扩展插件&#40;DMX&#41;函数参考  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **有关详细信息** **信息：** [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)，[通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[数据挖掘扩展&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [返回到 DMX 语句](#BKMK_DMXStatements)  
   

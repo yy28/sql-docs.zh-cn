@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab361c4e83ae5e2b2bb6614bdc4a513e0bdd77ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059006"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>捕获的跟踪将在数据库实验助手
 
@@ -74,10 +73,10 @@ ms.locfileid: "66794498"
   
 |事件名称|文本数据 (1)|二进制数据 (2)|数据库 ID 为 (3)|主机名 (8)|应用程序名称 (10)|登录名 (11)|SPID (12)|开始时间 (14)|结束时间 (15)|数据库名称 (35)|事件序列 (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
-|**RPC:Completed (10)**||*|*|*|*|*|*|*|*|*|*|*|  
+|**RPC： 已完成 (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC： 正在启动 (11)**||*|*|*|*|*|*|*||*|*|*|  
 |**RPC Output Parameter (100)**|*||*|*|*|*|*|*||*|*|*|  
-|**SQL:BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
+|**Sql: batchcompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**Sql: batchstarting (13)**|*||*|*|*|*|*|*||*|*|*|  
 |**审核登录名 (14)**|*|*|*|*|*|*|*|*||*|*|*|  
 |**审核注销 (15)**|*||*|*|*|*|*|*|*|*|*|*|  

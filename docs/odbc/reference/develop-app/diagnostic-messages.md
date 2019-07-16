@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039889"
 ---
 # <a name="diagnostic-messages"></a>诊断消息
 带有每个返回的诊断消息。 有很多不同的消息的通常返回相同的 SQLSTATE。 例如，SQL 语法中的大多数错误返回 SQLSTATE 42000 （语法错误或访问冲突）。 但是，每个语法错误很可能通过不同的消息进行描述。  
@@ -37,7 +36,7 @@ ms.locfileid: "63034914"
   
  对于错误和数据源中出现的警告，诊断消息必须使用以下格式：  
   
- **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
+ **[** *供应商标识符* **] [** *ODBC 组件标识符* **] [** *数据源标识符* **]** *数据源的提供的文本*  
   
  下表显示了每个元素的含义。  
   

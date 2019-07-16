@@ -1,5 +1,5 @@
 ---
-title: 测试和验证 （数据挖掘） |Microsoft 文档
+title: 测试和验证 （数据挖掘） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e4ce983ed5d5a645f32466ab38d5c67ff1c68897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182304"
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,17 +43,17 @@ ms.locfileid: "34018404"
   “有用性”包括说明模型是否提供了有用信息的各种指标。 例如，将商店位置与销售额相关联的数据挖掘模型可能既是准确的，也是可靠的，但可能是无用的，因为不能通过在同一位置增加更多商店来推广该结果。 而且，它没有回答为什么某些位置销售额较高这一基本商业问题。 您可能还会发现，如果模型基于数据中的交叉关联，它看起来是成功，但实际上没有意义。  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>用于测试和验证挖掘模型的的工具  
- 对于支持数据挖掘测试方法的所有阶段的数据挖掘解决方案，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持多种验证方法。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持多种验证方法。  
   
 -   将数据分区为测试集和定型集  
   
 -   筛选模型以便定型和测试同一源数据的不同组合。  
   
--   测量“提升”  和“增长” 。 “提升图”  是将使用数据挖掘模型获得的改进与随机推测进行对比时，可视化所获得改进的方法。  
+-   测量“提升”  和“增长”  。 “提升图”  是将使用数据挖掘模型获得的改进与随机推测进行对比时，可视化所获得改进的方法。  
   
--   执行数据集的交叉验证  
+-   执行数据集的交叉验证   
   
--   生成“分类矩阵” 。 这些图在表中对准确和不准确的推测进行排序，以便可以快速方便地衡量模型预测目标值的准确程度。  
+-   生成“分类矩阵”  。 这些图在表中对准确和不准确的推测进行排序，以便可以快速方便地衡量模型预测目标值的准确程度。  
   
 -   创建“散点图”  以评估回归公式的拟合度。  
   
@@ -67,14 +67,14 @@ ms.locfileid: "34018404"
   
 |主题|链接|  
 |------------|-----------|  
-|了解如何使用向导或 DMX 命令设置测试数据集|[定型集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|了解提供的准确性图表类型。|[提升图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|了解如何使用向导或 DMX 命令设置测试数据集|[定型数据集和测试数据集](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|了解有关提供的准确性图表类型。|[提升图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)   
- [测试和验证任务和操作指南 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

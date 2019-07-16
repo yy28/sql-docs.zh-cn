@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e71447143e08ebf117b6fe0eab002569ec48d020
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963583"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 属性 (RDS)
 指示的进度[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)检索到的数据对象及其[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -30,7 +29,7 @@ ms.locfileid: "66694876"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|仍在执行当前查询和已提取的任何行。 **DataControl**对象的**记录集**不是可供使用。|  
 |**adcReadyStateInteractive**|一组初始检索当前查询的行的已存储在**DataControl**对象的**记录集**和可供使用。 仍在获取剩余行。|  

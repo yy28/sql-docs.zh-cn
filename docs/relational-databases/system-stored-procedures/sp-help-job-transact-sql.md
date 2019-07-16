@@ -1,5 +1,5 @@
 ---
-title: sp_help_job (Transact-SQL) | Microsoft Docs
+title: sp_help_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054990"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'` 要显示的作业属性。 *job_aspect*是**varchar(9)** ，默认值为 NULL，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**ALL**|作业特征信息|  
 |**JOB**|作业信息|  
@@ -106,11 +105,11 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>结果集  
  如果未不指定任何参数， **sp_help_job**返回以下结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
 |**originating_server**|**nvarchar(30)**|作业来自的服务器的名称。|  
-|**名称**|**sysname**|作业的名称。|  
+|**name**|**sysname**|作业的名称。|  
 |**enabled**|**tinyint**|指示是否启用要执行的作业。|  
 |**description**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
@@ -145,7 +144,7 @@ sp_help_job { [ @job_id = ] job_id
   
  下面是针对作业步骤的结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|步骤的唯一（是针对该作业的）标识符。|  
 |**step_name**|**sysname**|步骤的名称。|  
@@ -173,7 +172,7 @@ sp_help_job { [ @job_id = ] job_id
   
  下面是针对作业计划的结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|计划的标识符（对所有作业都是唯一的）。|  
 |**schedule_name**|**sysname**|计划的名称（只对该作业是唯一的）。|  
@@ -197,7 +196,7 @@ sp_help_job { [ @job_id = ] job_id
   
  下面是针对作业目标服务器的结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|目标服务器的标识符。|  
 |**server_name**|**nvarchar(30)**|目标服务器的计算机名称。|  

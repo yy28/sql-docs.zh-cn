@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043042"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>参数  
  *from_lsn*  
- LSN，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn*是**binary(10)**。  
+ LSN，它表示要包含在结果集中的 LSN 范围的低端点。 *from_lsn*是**binary(10)** 。  
   
  仅在行[cdc。&#91;捕获实例&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中 __ $start_lsn 大于或等于的值*from_lsn*包括在结果集中。  
   
  *to_lsn*  
- LSN，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn*是**binary(10)**。  
+ LSN，它表示要包含在结果集中的 LSN 范围的高端点。 *to_lsn*是**binary(10)** 。  
   
  仅在行[cdc。&#91;捕获实例&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)更改表中 __ $start_lsn 小于或等于的值*from_lsn*或等于*to_lsn*包括在结果集中。  
   
@@ -73,20 +72,20 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  返回的行和元数据列 __ $start_lsn 中应用该行所需的操作的最终更改的 LSN 和\_ \_$operation。 此外，当更新操作返回 (\_\_$operation = 4) 的更新中修改过的捕获的列中返回的值中进行标记\_ \_$update_mask。  
   
  all with merge  
- 返回对元数据列 __$start_lsn 中的行所做的最终更改的 LSN。 该列\_ \_$operation 将是两个值之一： 1 表示删除，5 表示应用更改所需的操作是插入或更新。 该列\_ \_$update_mask 始终为 NULL。  
+ 返回对元数据列 __$start_lsn 中的行所做的最终更改的 LSN。 该列\_ \_$operation 将是两个值之一：1 表示删除，5 表示应用更改所需的操作是插入或更新。 该列\_ \_$update_mask 始终为 NULL。  
   
  由于用来确定给定更改的精确操作的逻辑会增加查询的复杂性，所以，在只需指出应用更改数据所需的操作是插入还是更新但不必明确区分这两者时，使用该选项可提高查询性能。 在可直接使用合并操作的目标环境（如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 环境）中，此选项非常有用。  
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |__$start_lsn|**binary(10)**|与更改的提交事务关联的 LSN。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的更新操作修改两个行中的两个列，则更改表将包含四行，每个都具有相同的 __ $start_lsnvalue。|  
 |__$operation|**int**|标识将更改数据行应用到目标数据源所需的数据操作语言 (DML) 操作。<br /><br /> 如果 row_filter_option 参数的值为 all 或 all with mask，则此列中的值可以是以下值之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 4 = 更新<br /><br /> 如果 row_filter_option 参数的值为 all with merge，则此列中的值可以是以下值之一：<br /><br /> 1 = 删除|  
 |__$update_mask|**varbinary(128)**|位掩码，为捕获实例标识的每个已捕获列均对应于一个位。 如果 __$operation = 1 或 2，该值将所有已定义的位设置为 1。 当\_ \_$operation = 3 或 4，则只有那些对应已更改列的位设置为 1。|  
-|\<捕获的源表列>|不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中未指定任何列，则将返回源表中的所有列。|  
+|\<捕获的源表列> |不定|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中未指定任何列，则将返回源表中的所有列。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。 当调用方没有查看源数据的权限时，函数将返回错误 208（对象名无效）。  
   
 ## <a name="remarks"></a>备注  
@@ -129,8 +128,8 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
 ## <a name="see-also"></a>请参阅  
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

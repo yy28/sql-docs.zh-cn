@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067836"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关每个复制的事务或变更数据捕获事务的信息。  
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|事务是否位于使用对等事务复制发布的数据库中。 如果为 true，该值为 1；否则该值为 0。|  
 |**db_ver**|**int**|数据库版本。|  
@@ -44,7 +43,7 @@ ms.locfileid: "51664958"
 |**rows**|**int**|事务中复制的命令的 ID。|  
 |**xdesid**|**nvarchar(64)**|事务 id。|  
 |**artcache_table_address**|**varbinary(8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
-|服务器|**nvarchar(514)**|服务器名称。|  
+|服务器 |**nvarchar(514)**|服务器名称。|  
 |**server_len_in_bytes**|**smallint**|服务器名称的字符长度（字节）。|  
 |**database**|**nvarchar(514)**|数据库名称。|  
 |**db_len_in_bytes**|**smallint**|数据库名称的字符长度（字节）。|  
@@ -68,7 +67,7 @@ ms.locfileid: "51664958"
 |**is_known_cdc_tran**|**bit**|指示变更数据捕获所跟踪的事务。<br /><br /> 0 = 事务复制事务。<br /><br /> 1 = 变更数据捕获事务。|  
 |**error_count**|**int**|遇到的错误数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对发布数据库或启用了变更数据捕获的数据库拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="remarks"></a>备注  

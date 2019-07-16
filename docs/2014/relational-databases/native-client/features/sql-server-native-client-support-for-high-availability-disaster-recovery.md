@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206643"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>对高可用性、灾难恢复的 SQL Server Native Client 支持
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]的支持（[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 新增功能）。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本：可读辅助副本 （AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "56040228"
   
 -   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
   
--   基于以下身份验证类型，使用 `MultiSubnetFailover` 连接属性的应用程序的行为将不会受到影响：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
+-   使用的应用程序的行为`MultiSubnetFailover`连接属性不受影响的身份验证的类型：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证、 Kerberos 身份验证或 Windows 身份验证。  
   
 -   您可以增加 `loginTimeout` 的值，以便满足故障转移时间和减少应用程序连接重试次数。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "56040228"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 应用程序可以使用以下三个函数之一进行连接：  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|`SQLBrowseConnect` 返回的服务器列表将不包括 VNN。 如果服务器是独立服务器，或是 Windows Server Failover Clustering (WSFC) 群集中的主服务器或辅助服务器，该群集包含已为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用的两个或多个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例，您将只能看到不带任何指示信息的服务器列表。 如果连接到服务器失败，可能是因为您已连接到某服务器而 `ApplicationIntent` 设置与该服务器配置不兼容。<br /><br /> 由于 `SQLBrowseConnect` 无法识别 Windows Server Failover Clustering (WSFC) 群集（该群集包含已为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启用的两个或多个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例）中的服务器，`SQLBrowseConnect` 将忽略 `MultiSubnetFailover` 连接字符串关键字。|  
 |[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` 通过数据源名称 (DSN) 或连接属性支持 `ApplicationIntent` 和 `MultiSubnetFailover`。|  
@@ -145,7 +145,7 @@ ms.locfileid: "56040228"
  `IDBProperties::SetProperties`  
  若要设置 `ApplicationIntent` 属性值，请调用 `IDBProperties::SetProperties`，它传递 `SSPROP_INIT_APPLICATIONINTENT` 属性的值 `ReadWrite` 或 `ReadOnly` 或传递 `DBPROP_INIT_PROVIDERSTRING` 属性的值（该值包含 `ApplicationIntent=ReadOnly` 或 `ApplicationIntent=ReadWrite`）。  
   
- 可以在“数据链接属性”对话框的“全部”选项卡的“应用程序意向属性”字段中指定应用程序意向。  
+ 可以在“数据链接属性”  对话框的“全部”选项卡的“应用程序意向属性”字段中指定应用程序意向。  
   
  建立隐式连接时，隐式连接将使用父连接的应用程序意向设置。 同样，从同一数据源创建的多个会话将继承数据源的应用程序意向设置。  
   

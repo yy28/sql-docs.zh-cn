@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060218"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   数据库邮件系统返回的每个 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息都在视图中占一行。 （在此上下文中的消息将引用一条消息，例如错误消息，不是电子邮件。）配置**日志记录级别**使用的参数**配置系统参数**对话框中的数据库邮件配置向导，或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)存储过程来确定返回的消息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|日志中项的标识符。|  
 |**event_type**|**varchar(11)**|插入日志中的通告的类型。 可能值为错误、警告、信息性消息、成功消息以及其他内部消息。|  

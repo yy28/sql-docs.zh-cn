@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020467"
 ---
 # <a name="retrieving-results-basic"></a>检索结果（基本）
 一个*结果集*是一组与某些条件匹配的数据源上的行。 它是一个概念性的表的查询的结果，即以表格形式的应用程序可以。 **选择**语句、 目录函数和某些过程创建结果集。 在以下示例中，第一条 SQL 语句创建包含所有行和 Orders 表中的所有列的结果集和第二个 SQL 语句将创建包含订单表中的行的 OrderID、 销售人员和状态列的结果集在其中状态是已打开：  

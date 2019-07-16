@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181307"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "52505225"
 |创建于|\<|支持和行为|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 工作簿将自动升级文档库中的，如果启用了自动升级是[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中 SharePoint 场中，系统服务<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|**体验：** 用户可与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|  
-|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel**|不支持|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。 计划数据刷新可用。<br /><br /> **升级：** 不支持自动升级。 用户可以将其工作簿手动升级到 Office 2013 版本。<br /><br /> **计划数据刷新：** 支持。|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|所有功能|**体验：** 用户可以与在浏览器中工作簿交互，并将其用作数据源的其他解决方案。<br /><br /> **升级：** 工作簿将自动升级文档库中的，如果启用了自动升级是[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]中 SharePoint 场中，系统服务<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|**体验：** 用户可以与工作簿交互，并将其用作数据源的其他解决方案。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|  
+|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel**|不支持|所有功能|**体验：** 用户可以与在浏览器中工作簿交互，并将其用作数据源的其他解决方案。 计划数据刷新可用。<br /><br /> **升级：** 不支持自动升级。 用户可以将其工作簿手动升级到 Office 2013 版本。<br /><br /> **计划数据刷新：** 支持。|  
 |**Excel 2013**|不支持|不支持|所有功能|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> 从 2008 R2 工作簿升级到 SQL Server 2012 Service Pack 1 (SP1) 工作簿  
@@ -58,7 +58,7 @@ ms.locfileid: "52505225"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2013。  
   
- **如何升级工作簿：** 在将工作簿升级到 2012 工作簿之前，计划的数据刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：  
+ **如何升级工作簿：** 该工作簿升级到 2012年工作簿之前，计划的数据刷新将无法工作。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：  
   
 -   下载工作簿并在安装有 SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52505225"
   
  **如何配置在数据刷新过程中自动升级**  
   
- 若要使用自动升级，你必须在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 配置工具中选中“自动升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便从服务器启用数据刷新”复选框。 在该工具中，该复选框位于“升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系统服务”页上和“创建 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”页上（如果你在配置新安装）。  
+ 若要使用自动升级，你必须在 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 配置工具中选中“自动升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿以便从服务器启用数据刷新”  复选框。 在该工具中，该复选框位于“升级 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 系统服务”  页上和“创建 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务应用程序”  页上（如果你在配置新安装）。  
   
  您可以运行以下 cmdlet 以便验证是否启用了自动升级：  
   
@@ -141,7 +141,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
 ###  <a name="bkmk_msolapxslx"></a> 如何检查 Power Pivot 工作簿中的 MSOLAP 数据提供程序信息  
  使用下面的说明检查 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿中使用的是哪个 OLE DB 提供程序。 检查数据连接信息不需要安装 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 外接程序。  
   
-1.  在 Excel 中的“数据”选项卡上，单击 **“连接”**。 单击 **“属性”**。  
+1.  在 Excel 中的“数据”选项卡上，单击 **“连接”** 。 单击 **“属性”** 。  
   
 2.  在 **“定义”** 选项卡上，访问接口的版本显示在连接字符串的开头。  
   

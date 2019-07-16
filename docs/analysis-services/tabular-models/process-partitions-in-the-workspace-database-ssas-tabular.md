@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71d2eea055276558765d7787e736e74400b2c7a9
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405907"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162662"
 ---
 # <a name="process-partitions-in-the-workspace-database"></a>在工作区数据库中处理分区 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "54405907"
   
 ###  <a name="bkmk_create_new"></a> 处理分区  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依次单击“模型”菜单、“处理”（“刷新”）和“处理分区”。  
+1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，依次单击“模型”菜单、“处理”（“刷新”）和“处理分区”。     
   
 2.  在 **“模式”** 列表框中，选择以下处理模式之一：  
   
-    |模式|Description|  
+    |模式|描述|  
     |----------|-----------------|  
     |**处理默认值**|检测分区对象的处理状态，执行必要的处理，将未处理的分区对象或部分处理的分区对象交付为已完全处理的分区对象。 为空表和分区加载数据；生成或重新生成层次结构、计算列和关系。|  
     |**处理全部**|处理分区对象及其包含的所有对象。 对已处理的对象运行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 在对对象进行结构更改后，需要这种类型的处理。|  
@@ -36,7 +36,7 @@ ms.locfileid: "54405907"
     |**处理清除**|删除分区中的所有数据。|  
     |**处理添加**|以增量方式用新数据更新分区。|  
   
-3.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”**。  
+3.  在 **“处理”** 复选框列中，选择要用所选模式处理的分区，然后单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [分区](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   

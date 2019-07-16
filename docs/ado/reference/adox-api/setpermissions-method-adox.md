@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965224"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象上。  
@@ -49,7 +48,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *权限*  
  一个**长**值，它可以是一个位掩码的一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量，指示要设置的权限。  
   
- *Inherit*  
+ *继承*  
  可选。 一个**长**值，它可以是其中一个的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常量，它指定如何对象将继承这些权限。 默认值是**adInheritNone**。  
   
  *ObjectTypeId*  

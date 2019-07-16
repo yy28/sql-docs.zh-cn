@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53534d9d269803a4bce0902c1f22349dfe6c57e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058895"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>重播的跟踪将在数据库实验助手
 
@@ -45,7 +44,7 @@ ms.locfileid: "66794452"
 1. 展开**组件服务** > **计算机** > **我的计算机** > **DCOM 配置** >  **DReplayController**。
 1. 右键单击**DReplayController**，然后选择**属性**。
 1. 上**安全**选项卡上，选择**编辑**若要添加的用户帐户。
-1. 选择 **确定**。
+1. 选择“确定”  。
 
 ### <a name="verify-setup"></a>验证设置
 
