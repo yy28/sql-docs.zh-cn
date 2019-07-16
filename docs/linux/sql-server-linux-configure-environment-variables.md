@@ -3,18 +3,17 @@ title: 使用环境变量配置 SQL Server 设置
 description: 本文介绍如何使用环境变量在 Linux 上配置 SQL Server 2017 的特定设置。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 2e28c995e5c2c0bb08938bf7ca73bda718c44ff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967497"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -48,7 +47,7 @@ ms.locfileid: "67834054"
 |-----|-----|
 | **ACCEPT_EULA** | 在设置为任何值（例如“Y”）时接受 SQL Server 许可协议。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
-| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**产品密钥**</br></br>如果指定产品密钥，它必须是格式为 # # #-# # #-# # #-# # #-# # #，其中 # 是数字或字母。|
+| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**企业版**</br>**产品密钥**</br></br>如果指定产品密钥，它必须是格式为 # # #-# # #-# # #-# # #-# # #，其中 # 是数字或字母。|
 | **MSSQL_LCID** | 设置要用于 SQL Server 的语言 ID。 例如 1036年为法语。 |
 | **MSSQL_COLLATION** | 设置 SQL Server 的默认排序规则。 这会重写排序规则的语言 id (LCID) 的默认的映射。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 设置 SQL Server 可使用的内存 （以 mb 为单位） 的最长。 默认情况下它是总物理内存的 80%。 |
@@ -72,7 +71,7 @@ ms.locfileid: "67834054"
 |-----|-----|
 | **ACCEPT_EULA** | 在设置为任何值（例如“Y”）时接受 SQL Server 许可协议。 |
 | **MSSQL_SA_PASSWORD** | 配置 SA 用户密码。 |
-| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**产品密钥**</br></br>如果指定产品密钥，它必须是格式为 # # #-# # #-# # #-# # #-# # #，其中 # 是数字或字母。|
+| **MSSQL_PID** | 设置 SQL Server 版本或产品密钥。 可能的值包括： </br></br>**Evaluation**</br>**开发人员**</br>**Express**</br>**Web**</br>**Standard**</br>**企业版**</br>**产品密钥**</br></br>如果指定产品密钥，它必须是格式为 # # #-# # #-# # #-# # #-# # #，其中 # 是数字或字母。|
 | **MSSQL_LCID** | 设置要用于 SQL Server 的语言 ID。 例如 1036年为法语。 |
 | **MSSQL_COLLATION** | 设置 SQL Server 的默认排序规则。 这会重写排序规则的语言 id (LCID) 的默认的映射。 |
 | **MSSQL_MEMORY_LIMIT_MB** | 设置 SQL Server 可使用的内存 （以 mb 为单位） 的最长。 默认情况下它是总物理内存的 80%。 |

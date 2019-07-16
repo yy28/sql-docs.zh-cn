@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900090"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63047185"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_loaded_modules**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|进程中的模块的地址。|  
 |**file_version**|**varchar(23)**|文件的版本。 按如下格式显示：<br /><br /> x.x:x.x|  
@@ -45,10 +44,10 @@ ms.locfileid: "63047185"
 |**private_build**|**bit**|1 = 模块是专用版本的已加载模块。|  
 |**special_build**|**bit**|1 = 模块是特殊版本的已加载模块。|  
 |**language**|**int**|模块的版本信息语言。|  
-|**company**|**nvarchar(256)**|创建模块的公司的名称。|  
+|**公司**|**nvarchar(256)**|创建模块的公司的名称。|  
 |**description**|**nvarchar(256)**|模块的说明。|  
-|**名称**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
-|**pdw_node_id**|**int**|适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
+|**name**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
+|**pdw_node_id**|**int**|适用于  ：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

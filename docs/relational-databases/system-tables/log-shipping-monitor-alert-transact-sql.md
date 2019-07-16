@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e5bdee7bfd46e99424169e0890c6aa6bf4d4187
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a97fe48c710fb2945cd377da92808404addd094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990076"
 ---
 # <a name="logshippingmonitoralert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   存储用于日志传送的警报作业 ID。 此表存储中**msdb**数据库。   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**alert_job_id**|**uniqueidentifier**|日志传送警报作业的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业 ID。|  
   

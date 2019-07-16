@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_model_groups (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_model_groups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22e6e8b75dc488a159756cd8d4aa2c47b558b72b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 041b09d544d5301d42d929e29c7f42b3502e294b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060534"
 ---
 # <a name="sysxmlschemamodelgroups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回每个 XML 架构组件，是一个模型组，一行**symbol_space**的**M**...  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**||继承中的列[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)。|  
 |**compositor**|**char(1)**|组的排序种类：<br /><br /> A = XSD\<所有 > 组<br /><br /> C = XSD\<选择 > 组<br /><br /> S = XSD\<序列 > 组|  

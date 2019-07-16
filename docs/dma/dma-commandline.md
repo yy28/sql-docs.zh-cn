@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 18ac429a536b657b7f7c0cf91c100eed8a152e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058914"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 
@@ -41,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|参数  |Description  | 必需 （是/否）
+|参数  |描述  | 必需 （是/否）
 |---------|---------|---------------|
 | `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | N
 |`/AssessmentName`     |   评估项目的名称   | Y
@@ -249,7 +248,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|参数  |Description  | 必需 （是/否）
+|参数  |描述  | 必需 （是/否）
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | 执行 SKU 评估，请参阅 DMA 命令行 | Y
 |`/SkuRecommendationInputDataFilePath` | 从承载数据库的计算机收集的性能计数器文件的完整路径 | Y
@@ -338,6 +337,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [数据迁移助手](https://aka.ms/get-dma)下载。
 - 文章[标识适当 Azure SQL 数据库的 SKU 的本地数据库](https://aka.ms/dma-sku-recommend-sqldb)。

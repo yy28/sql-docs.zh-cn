@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 34218bbe7e8ac2e94acbb55ceb8bd64008e67c1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1ad817a6659bd1ee6bd9f6d042c90d04c337193
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992038"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
 
@@ -70,7 +69,7 @@ ms.locfileid: "66776336"
 ##  <a name="CommandPrompt"></a> 从命令提示符运行 DQSInstaller.exe  
  您可以从命令提示符处使用以下命令行参数运行 DQSInstaller.exe：  
   
-|DQSInstaller.exe 参数|Description|示例语法|  
+|DQSInstaller.exe 参数|描述|示例语法|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]时要使用的服务器排序规则。<br /><br /> DQS 仅支持不区分大小写的排序规则。 如果您指定了区分大小写的排序规则，则该安装程序将尝试使用指定排序规则的不区分大小写版本。 如果没有不区分大小写的排序规则，或者 SQL 不支持排序规则，则 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装将失败。<br /><br /> 如果未指定服务器排序规则，则使用默认排序规则 SQL_Latin1_General_CP1_CI_AS。|`dqsinstaller.exe -collation <collation_name>`|  
 |-upgradedlls|跳过重新创建 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA），并且仅更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库中的 DQS 所使用的 SQL 公共语言运行时 (SQLCLR) 程序集。<br /><br /> 有关详细信息，请参阅 [.NET Framework 更新后升级 SQLCLR 程序集](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  

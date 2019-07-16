@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0035e5105f877d27114ded02f0cce5beb92c5881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66009841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003225"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Access 的 SQLGetInfo 返回值
 下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  

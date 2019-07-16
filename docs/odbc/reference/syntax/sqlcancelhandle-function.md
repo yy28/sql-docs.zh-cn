@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f572e9e76f77b0c535cd57ff4ed6cd091aec0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 629ff63f6fd06aaccc1f60209231f5c937f4a67d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036131"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 函数
 **符合性**  
  版本引入了：ODBC 3.8  
   
- 标准符合性：None  
+ 标准符合性：无  
   
  应大多数 ODBC 3.8 （及更高版本） 驱动程序将实现此函数。 如果驱动程序不是，请调用**SQLCancelHandle**具有连接以处理*处理*参数将返回 SQL_ERROR SQLSTATE IM001 和消息驱动程序不支持此函数调用向**SQLCancelHandle**与语句一起处理作为*处理*参数将映射到调用**SQLCancel**由驱动程序管理器，并且如果可以处理该驱动程序实现**SQLCancel**。 应用程序可以使用**SQLGetFunctions**若要确定驱动程序是否支持**SQLCancelHandle**。  
   
@@ -59,7 +58,7 @@ SQLRETURN SQLCancelHandle(
   
  下表列出了通常返回的 SQLSTATE 值**SQLCancelHandle** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息[SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)参数中 *\*MessageText*缓冲区描述错误以及其原因。|  

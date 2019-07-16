@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 33e2d1f4630228d4c59487c2a5f9de891e87ece5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4017ed07681a74da4832db2db3aeabddf22edb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020329"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函数
 **符合性**  
@@ -66,7 +65,7 @@ SQLRETURN SQLGetCursorName(
 ## <a name="diagnostics"></a>诊断  
  当**SQLGetCursorName**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*HandleType*设置为 SQL_HANDLE_STMT，和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLGetCursorName** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|描述|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|缓冲区\* *CursorName*是否不足够大以返回整个游标名称，因此游标名称已被截断。 在返回未截断的游标名称的长度 **NameLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  

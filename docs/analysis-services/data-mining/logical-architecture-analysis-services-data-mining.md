@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209938"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "50145523"
   
  处理模型时，存储在挖掘结构缓存中的定型数据用于基于数据的统计属性和算法及其参数定义的试探方法生成模式。 这称为“定型  ”模型。  
   
- 定型的结果是一组汇总数据，包含在“模型内容” 中，它描述找到的模式并提供生成预测的规则。 有关详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+ 定型的结果是一组汇总数据，包含在“模型内容”  中，它描述找到的模式并提供生成预测的规则。 有关详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
  在有限事例中，还可以将模型的逻辑结构导出到一个文件，该文件根据标准格式（预测建模标记语言 PMML）表示模型公式和数据绑定。 可以将此逻辑结构导入其他使用 PMML 的系统，然后所述的模型就可以用于预测了。 有关详细信息，请参阅 [了解 DMX Select 语句](../../dmx/understanding-the-dmx-select-statement.md)。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "50145523"
  必须注册每个新算法，之后才能使用它。 为了注册某个算法，您将算法所需的元数据添加到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的 .ini 文件中。 必须将该信息添加到要计划使用新算法的每个实例。 添加算法后，可以重新启动实例，使用 MINING_SERVICES 架构行集来查看新算法，包括算法支持的选项和提供程序。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)  
   

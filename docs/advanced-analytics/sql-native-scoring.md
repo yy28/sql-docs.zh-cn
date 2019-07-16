@@ -7,24 +7,23 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bd0a79a3991c34ddbcf874aca80160299074919a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962314"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用预测 T-SQL 函数的本机计分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本机计分用途[预测 T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和本机 c + + 扩展功能，SQL Server 2017 中的以生成预测值或*分数*附近真实时间中的新数据输入。 此方法提供预测和预测工作负荷的最快可以处理速度，但附带了平台和库要求： 仅从 RevoScaleR 和 revoscalepy 函数具有 c + + 实现。
+本机计分用途[预测 T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和本机C++SQL Server 2017 中的扩展功能来生成预测值或*分数*附近真实时间中的新数据输入。 此方法提供预测和预测工作负荷的最快可以处理速度，但附带了平台和库要求： 仅从 RevoScaleR 和 revoscalepy 函数具有C++实现。
 
 本机计分要求你具有已训练的模型。 在 SQL Server 2017 Windows 或 Linux，或在 Azure SQL 数据库中，您可以调用 PREDICT 函数中 TRANSACT-SQL 来调用本机针对作为输入参数提供的新数据评分。 PREDICT 函数返回所提供的数据输入评分。
 
 ## <a name="how-native-scoring-works"></a>本机评分的工作原理
 
-本机计分使用本机 c + + 库可以读取已训练的模型，Microsoft 提供的以前存储在特殊的二进制格式或保存到磁盘以原始字节流的形式，为你提供的新数据输入生成评分。 对模型进行训练，因为已发布和存储，它可以用于评分而无需调用 R 或 Python 解释器。 在这种情况下，多个进程交互的开销已降低，从而在企业生产方案中要快得多的预测性能。
+本机计分使用本机C++库可以读取已定型的 Microsoft 提供的模型，以前存储在特殊的二进制格式或保存到磁盘以原始字节流的形式和为你提供的新数据输入生成评分。 对模型进行训练，因为已发布和存储，它可以用于评分而无需调用 R 或 Python 解释器。 在这种情况下，多个进程交互的开销已降低，从而在企业生产方案中要快得多的预测性能。
 
 若要使用本机计分，调用预测 T-SQL 函数并传递所需的以下输入：
 

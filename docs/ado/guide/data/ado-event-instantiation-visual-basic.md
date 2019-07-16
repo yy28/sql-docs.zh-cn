@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 590a3c282492fd07a86eae1715ffc9b027764fac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926071"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO 事件实例化：Visual Basic
 若要处理 Microsoft® Visual Basic® 中的 ADO 事件，必须声明模块级变量 using **WithEvents**关键字。 变量可以声明仅为类模块的一部分，且必须在模块级别声明。 这不是限制性最高，因为它看上去，但是，因为 Visual Basic**窗体**对象也是类。 处理 ADO 事件的最简单方法是声明变量的使用**WithEvents**。 下面的示例处理**ConnectComplete**事件**连接**对象：  

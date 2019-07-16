@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 497bbda56028394547414aff5b360473445da9c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e60af25238f52e9a1f6245fc938cee1aabec0bab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945209"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
 
@@ -38,9 +37,9 @@ ms.locfileid: "65485886"
   
  层次结构权限应用于您向其分配权限的模型版本，并应用于版本的任何将来副本。 它们不应用于比您向其分配权限的版本更早的版本。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
-|**读取**|显示成员。<br /><br /> <br /><br /> 注意：如果仅将“读取”权限分配给“根”，则“根”下的成员是只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。     |  
+|**读取**|显示成员。<br /><br /> <br /><br /> 注意:如果仅将“读取”权限分配给“根”，则“根”下的成员是只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。     |  
 |**创建**|层次结构成员权限中不提供创建权限。|  
 |**Update**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
 |**删除**|显示成员，用户可以删除它们。|  

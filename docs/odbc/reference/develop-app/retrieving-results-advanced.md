@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5199fb82cbc6b2a9da644554db12dc525cc0be40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22a88a96b856ba0976dcb8600d26f78b772654bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020502"
 ---
 # <a name="retrieving-results-advanced"></a>检索结果（高级）
 应用程序可以指定偏移量添加以绑定到数据缓冲区地址和相应的长度/指示器缓冲区地址何时**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**调用。 这些新增功能的结果确定这些操作中使用的地址。  

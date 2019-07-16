@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196613"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
   可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中查看表的依赖关系。  
@@ -31,7 +31,7 @@ ms.locfileid: "54100742"
   
      [安全性](#Security)  
   
--   使用以下工具查看表的依赖关系：  
+-   使用以下工具查看表的依赖关系：   
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,13 +48,13 @@ ms.locfileid: "54100742"
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>查看表的依赖关系  
   
-1.  在 **“对象资源管理器”** 中，展开 **“数据库”**，再展开其中的某个数据库，然后展开 **“表”**。  
+1.  在 **“对象资源管理器”** 中，展开 **“数据库”** ，再展开其中的某个数据库，然后展开 **“表”** 。  
   
-2.  右键单击某个表，然后单击“查看依赖关系”。  
+2.  右键单击某个表，然后单击“查看依赖关系”  。  
   
-3.  在“对象依赖关系 \<对象名称>”对话框中，选择“依赖于 \<对象名称> 的对象”或“\<对象名称> 依赖的对象”。  
+3.  在“对象依赖关系 \<对象名称>”   对话框中，选择“依赖于 \<对象名称> 的对象”   或“\<对象名称> 依赖的对象”    。  
   
-4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”框中。  
+4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”  框中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -62,9 +62,9 @@ ms.locfileid: "54100742"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -79,9 +79,9 @@ ms.locfileid: "54100742"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  下面的示例返回依赖于表 `Production.Product`的对象。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  下面的示例返回依赖于表 `Production.Product`的对象。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   

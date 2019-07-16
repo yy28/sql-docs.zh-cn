@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070851"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>数据挖掘扩展插件 (DMX) 语法元素
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,11 +51,11 @@ ms.locfileid: "37989919"
  [使用&#40;DMX&#41;](../dmx/usage-dmx.md)  
  定义挖掘模型使用其所包含的列的方式。  
   
- [建模标志&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
+ [建模标志 (DMX)](../dmx/modeling-flags-dmx.md)  
  定义算法可用于处理挖掘模型的附加提示。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   

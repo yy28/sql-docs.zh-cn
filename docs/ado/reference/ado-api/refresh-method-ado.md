@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0fee14a397104f8320fc01ce29f8364384151922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931255"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新以反映，从可用对象的集合和特定于中的对象，提供程序。  
@@ -51,7 +50,7 @@ collection.Refresh
 ### <a name="fields"></a>字段  
  使用**刷新**方法[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合具有明显的效果。 若要检索从基础数据库结构更改，必须使用任一[再次查询](../../../ado/reference/ado-api/requery-method.md)方法; 如果[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象不支持书签， [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>properties  
  使用**刷新**方法**属性**某些对象的集合填充与该提供程序公开的动态属性集合。 这些属性为内置属性 ADO 支持以外的提供程序提供特定功能有关的信息。  
   
 ## <a name="applies-to"></a>适用范围  

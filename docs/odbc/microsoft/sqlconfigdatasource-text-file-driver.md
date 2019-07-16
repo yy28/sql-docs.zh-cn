@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054083"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource（文本文件驱动程序）
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "62665253"
   
  **SQLConfigDataSource**函数，用于添加、 修改或删除数据源动态使用下列关键字。  
   
-|关键字|Description|  
+|关键字|描述|  
 |-------------|-----------------|  
 |CHARACTERSET|对于文本驱动程序中，OEM 或 ANSI。|  
 |COLNAMEHEADER|对于文本驱动程序，该值指示第一个记录的数据是否将指定的列名称。 TRUE 或 FALSE。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020576"
 ---
 # <a name="retrieving-bookmarks"></a>检索书签
 如果应用程序将使用书签，它必须设置为 SQL_UB_VARIABLE 之前准备或执行该语句的 SQL_ATTR_USE_BOOKMARKS 语句属性。 这是必要的因为它们使用构建和维护的书签可能代价高昂的操作，因此仅当应用程序可以进行良好时，才应启用书签。  

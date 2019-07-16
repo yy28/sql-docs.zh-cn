@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 444e41699c1a61acb82acc419a2f23db6142f7bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c99b63800d8b007ed11c21a042edc4f51ff7c92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003218"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect 函数
 **符合性**  
@@ -52,7 +51,7 @@ SQLRETURN SQLDisconnect(
 ## <a name="diagnostics"></a>诊断  
  当**SQLDisconnect**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可能会通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_DBC 和一个*处理*的*ConnectionHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLDisconnect** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01002|断开连接错误|在断开连接期间出错。 但是，已成功断开连接。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770189"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196756"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
   主键和外键是两种类型的约束，可用于强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据完整性。 这些是重要的数据库对象。  
@@ -38,7 +38,7 @@ ms.locfileid: "52770189"
   
  如果为表指定了主键约束， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将通过为主键列自动创建唯一索引来强制数据的唯一性。 当在查询中使用主键时，此索引还允许对数据进行快速访问。 如果对多列定义了主键约束，则一列中的值可能会重复，但来自主键约束定义中所有列的值的任何组合必须唯一。  
   
- 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合。 这样可以防止插入重复的行。  
+ 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合    。 这样可以防止插入重复的行。  
   
  ![组合主键约束](../../database-engine/media/fund04.gif "组合主键约束")  
   

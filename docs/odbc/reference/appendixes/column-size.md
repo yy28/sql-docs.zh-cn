@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019231"
 ---
 # <a name="column-size"></a>列大小
 数值数据类型的列 （或参数） 的大小被指由列或参数的数据类型或数据的精度的最大位数。 对于字符类型，这是以字符为单位的数据; 的长度对于二进制数据类型，列大小被指数据的长度以字节为单位。 对于时间、 时间戳和所有 interval 数据类型，这是此数据的字符表示形式中的字符数。 为每种简洁的 SQL 数据类型定义的列大小是下表中所示。  
@@ -46,7 +45,7 @@ ms.locfileid: "63224465"
 |SQL_INTERVAL_DAY_TO_SECOND|其中*p*为间隔起始精度和*s*秒精度 9 +*p* (如果*s*= 0) 或 10 +*p*+ *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|其中*p*为间隔起始精度和*s*秒精度 6 +*p* (如果*s*= 0) 或 7 +*p* + *s* (如果*s*> 0)。 [d]|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|其中*p*为间隔起始精度和*s*秒精度 3 +*p* (如果*s*= 0) 或 4 +*p* + *s* (如果*s*> 0)。 [d]|  
-|SQL_INTERVAL_YEAR  SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*，其中*p*为间隔起始精度。 [d]|  
+|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*，其中*p*为间隔起始精度。 [d]|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*，其中*p*为间隔起始精度。 [d]|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*，其中*p*为间隔起始精度。 [d]|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*，其中*p*为间隔起始精度。 [d]|  

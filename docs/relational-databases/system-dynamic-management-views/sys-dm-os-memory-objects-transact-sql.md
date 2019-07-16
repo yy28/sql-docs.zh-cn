@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc006a940318ba84c3670ed9d10b96f728219668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd7d1ddf40805eb94ca71594c7e4f7f6dae6ca7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899944"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   返回当前由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配的内存对象。 可以使用**sys.dm_os_memory_objects**来分析内存使用情况并标识可能出现的内存泄漏。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|内存对象的地址。 不可为 null。|  
 |**parent_address**|**varbinary(8)**|父内存对象的地址。 可以为 Null。|  
@@ -41,8 +40,8 @@ ms.locfileid: "47800641"
 |**pages_in_bytes**|**bigint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此内存对象实例分配的内存量（以字节为单位）。 不可为 null。|  
 |**creation_options**|**int**|仅限内部使用。 可以为 Null。|  
 |**bytes_used**|**bigint**|仅限内部使用。 可以为 Null。|  
-|**类型**|**nvarchar(60)**|内存对象的类型。<br /><br /> 它指示该内存对象所属的特定组件，或指示内存对象的函数。 可以为 Null。|  
-|**名称**|**varchar(128)**|仅限内部使用。 可以为 NULL。|  
+|**type**|**nvarchar(60)**|内存对象的类型。<br /><br /> 它指示该内存对象所属的特定组件，或指示内存对象的函数。 可以为 Null。|  
+|**name**|**varchar(128)**|仅限内部使用。 可以为 NULL。|  
 |**memory_node_id**|**smallint**|该内存对象所用的内存节点的 ID。 不可为 null。|  
 |**creation_time**|**datetime**|仅限内部使用。 可以为 Null。|  
 |**max_pages_allocated_count**|**int**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 由该内存对象分配的最大页数。 不可为 null。|  
@@ -59,10 +58,10 @@ ms.locfileid: "47800641"
   
  **partition_type**， **contention_factor**， **waiting_tasks_count**，并且**exclusive_access_count**尚未实现在[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
 
 ## <a name="remarks"></a>备注  
  内存对象是指多个堆。 它们所提供的分配的粒度比内存分配器所提供的分配的粒度更精细。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用内存对象，而不使用内存分配器。 内存对象使用内存分配器的页分配器接口来分配页。 内存对象不使用虚拟内存接口或共享内存接口。 根据分配模式的不同，组件可以创建不同的内存对象类型来分配任意大小的区域。  
@@ -85,7 +84,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
   [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

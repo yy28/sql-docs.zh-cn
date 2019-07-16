@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997570"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbname'` 是数据库的名称。 *dbname*是**sysname**，默认值为**%**。 如果**%**，则结果集包含发布服务器上的所有数据库，否则指定的数据库上的唯一信息返回。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
+`[ @dbname = ] 'dbname'` 是数据库的名称。 *dbname*是**sysname**，默认值为 **%** 。 如果 **%** ，则结果集包含发布服务器上的所有数据库，否则指定的数据库上的唯一信息返回。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
   
 `[ @type = ] 'type'` 结果集要包含仅在其上的数据库限制为指定的复制选项*类型*值已启用。 *类型*是**sysname**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**publish**|允许事务复制。|  
 |**合并发布**|允许合并复制。|  
@@ -54,9 +53,9 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|数据库的名称。|  
+|**name**|**sysname**|数据库的名称。|  
 |**id**|**int**|数据库标识符。|  
 |**transpublish**|**bit**|如果该数据库启用快照或事务发布;其中的值**1**表示启用快照或事务发布。|  
 |**mergepublish**|**bit**|如果已启用数据库进行合并发布;其中的值**1**启用合并发布的方式。|  
@@ -75,7 +74,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  成员**sysadmin**固定的服务器角色可以执行**sp_helpreplicationdboption**的任何数据库。 成员**db_owner**固定的数据库角色可以执行**sp_helpreplicationdboption**该数据库。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950664"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@dbname=**] **'***dbname***’**  
+ [ **@dbname=** ] **'***dbname***’**  
  要设置其复制数据库选项的数据库。 *db_name*是**sysname**，无默认值。  
   
- [**@optname=**] **'***optname***’**  
+ [ **@optname=** ] **'***optname***’**  
  要启用或禁用的复制数据库选项。 *optname*是**sysname**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**合并发布**|数据库可用于合并发布。|  
 |**publish**|数据库可用于其他类型的发布。|  
@@ -79,7 +78,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [删除发布](../../relational-databases/replication/publish/delete-a-publication.md)   
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.sysdatabases &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

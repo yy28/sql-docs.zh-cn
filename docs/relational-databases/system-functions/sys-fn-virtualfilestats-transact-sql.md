@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e30668dc103c478d0308d1fd8ee09689822129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059194"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,14 +44,14 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="arguments"></a>参数  
  *database_id* |为 NULL  
- 是数据库的 ID。 database_id 的数据类型为 int，无默认值。 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。  
+ 是数据库的 ID。 database_id 的数据类型为 int，无默认值   。 指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。  
   
  *file_id* |为 NULL  
  文件的 ID。 *file_id*是**int**，无默认值。 指定 NULL 可为数据库中的所有文件返回信息。  
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|数据库 ID。|  
 |**FileId**|**smallint**|文件 ID。|  
@@ -70,7 +69,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ## <a name="remarks"></a>备注  
  **fn_virtualfilestats**是的系统文件执行表值函数，提供统计信息，如的 I/o 总数。 可使用该函数来帮助跟踪用户读取文件或写入到文件必须等待的时间长度。 该函数还可帮助您识别出发生了大量 I/O 活动的文件。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

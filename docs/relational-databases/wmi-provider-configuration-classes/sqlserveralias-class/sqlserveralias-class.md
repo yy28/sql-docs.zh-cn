@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 91c7333f47306da90d634e45f50df44d1b6ae0f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cdcbd34978738d64d52b3c70a280507b6cb0c391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052373"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 类
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51675326"
   
 -   客户端连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例侦听备用命名管道。  
   
- **注意：** [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)继承**放**从提供程序类的方法。 但是，它不返回任何结果所示**Provider::Put**方法。 有关详细信息，请参阅 WMI 文档。  
+ **注意：** [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)继承**放置**从提供程序类的方法。 但是，它不返回任何结果所示**Provider::Put**方法。 有关详细信息，请参阅 WMI 文档。  
   
 ## <a name="see-also"></a>请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  

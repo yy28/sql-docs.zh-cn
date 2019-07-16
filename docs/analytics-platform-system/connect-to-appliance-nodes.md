@@ -2,19 +2,18 @@
 title: 连接到设备节点的分析平台系统 |Microsoft Docs
 description: 此文章介绍了连接到分析平台系统设备的每个节点的各种方法。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae40d38768f081ea6c439c40059065d695ebee23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66186796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961088"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>连接到分析平台系统中的设备节点
 此文章介绍了连接到分析平台系统设备的每个节点的各种方法。  

@@ -2,19 +2,18 @@
 title: 什么是分析平台系统-向外缩放数据仓库中的新增功能
 description: 请参阅什么是 Microsoft Analytics Platform System 承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备中的新增功能。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959805"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
@@ -115,7 +114,7 @@ APS 支持 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/databa
 ### <a name="bug-fixes"></a>Bug 修复
 我们已升级到 SQL Server 2016 SP2 CU2 APS CU7.1 使用。 升级解决了如下所述的一些问题。
 
-| 标题 | Description |
+| 标题 | 描述 |
 |:---|:---|
 | **潜在的元组搬运者进程死锁** |升级分布式事务和元组发动机后台线程中修复，长期的合作可能导致死锁。 在安装后 CU7.1，TF634 用于停止为 SQL Server 启动参数或全局跟踪标志的元组发动机的客户可以放心删除它。 | 
 | **某些 lag/lead 查询失败** |将错误的嵌套的 lag/lead 函数使用 CCI 表的某些查询现已修复此升级。 | 

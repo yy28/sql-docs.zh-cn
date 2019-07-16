@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_cores (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_cores (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: b3f09b15-0863-4418-9347-a4f5fd2ab7c7
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d0ef7c4424f4a8d1a18d3b6c7a5776e9df0f5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76a154639a71b22bfe3f119233f3abbcd329f7c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899529"
 ---
 # <a name="sysdmpdwdmscores-transact-sql"></a>sys.dm_pdw_dms_cores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存设备在计算节点上运行的所有 DMS 服务有关的信息。 它列出了每个服务实例，这是当前每个节点的一行对应一行。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|与此 DMS core 相关联的唯一数字 id。<br /><br /> 此视图的键。|将设置为 pdw_node_id 的节点上运行此 DMS 核心的。|  
 |pdw_node_id|**int**|此 DMS 服务正在其运行的节点 ID。|请参阅中的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  

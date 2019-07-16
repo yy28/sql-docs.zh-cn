@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038919"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>表达式上下文和查询计算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "54256872"
   
 -   如果查询类型化**xml**列或变量，将导入到静态上下文与列或变量相关联的 XML 架构集合的组件。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
--   对于导入架构中的每个原子类型，也可在静态上下文中使用转换函数。 下面的示例说明了这一点。 在此示例中，指定一个查询针对类型化**xml**变量。 与此变量关联的 XML 架构集合定义了原子类型 myType。 此类型的转换函数相对应**myType()**，可在静态分析过程。 查询表达式 (`ns:myType(0)`) 返回 myType 类型的值。  
+-   对于导入架构中的每个原子类型，也可在静态上下文中使用转换函数。 下面的示例说明了这一点。 在此示例中，指定一个查询针对类型化**xml**变量。 与此变量关联的 XML 架构集合定义了原子类型 myType。 此类型的转换函数相对应**myType()** ，可在静态分析过程。 查询表达式 (`ns:myType(0)`) 返回 myType 类型的值。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -120,7 +119,7 @@ ms.locfileid: "54256872"
   
 2.  解析在表达式中指定的函数和类型名称。  
   
-3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，以下查询返回静态错误，因为**+** 运算符要求 numeric primitive 类型参数：  
+3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，以下查询返回静态错误，因为 **+** 运算符要求 numeric primitive 类型参数：  
   
     ```  
     declare @x xml  

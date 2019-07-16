@@ -2,19 +2,18 @@
 title: 防病毒软件的分析平台系统 |Microsoft Docs
 description: 如果你的数据中心需要防病毒软件，使用这些准则在分析平台系统上安装防病毒软件。 我们建议不要安装防病毒软件，除非它是数据中心的硬性要求。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961607"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform system 防病毒软件
 如果你的数据中心需要防病毒软件，使用这些准则在分析平台系统上安装防病毒软件。 我们建议不要安装防病毒软件，除非它是数据中心的硬性要求。  

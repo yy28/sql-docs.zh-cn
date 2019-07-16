@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52a3c04463eb4384d48e333e6d81097a33fd9ac1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022239"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>参数  
  **@cookie**  
- 指定在激活应用程序角色时创建的 Cookie。 通过创建 cookie [sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary(8000)**。  
+ 指定在激活应用程序角色时创建的 Cookie。 通过创建 cookie [sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary(8000)** 。  
   
 > [!NOTE]  
->  **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 应用程序应继续保留**varbinary(8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增量时在将来的版本。  
+>  **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)** 。 应用程序应继续保留**varbinary(8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增量时在将来的版本。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0 （成功） 和 1 （失败）  
@@ -54,7 +53,7 @@ sp_unsetapprole @cookie
   
  应用程序角色的概述，请参阅[应用程序角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**公共**和激活应用程序角色时保存的 cookie 知识。  
   
 ## <a name="examples"></a>示例  

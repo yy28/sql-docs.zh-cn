@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 5c89956fca8f0295a0f78b9f61aa97a35c47684f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59cf81243c76da1747c558c7ab6e0c15323eff62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992046"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
 
@@ -64,7 +63,7 @@ ms.locfileid: "66776456"
   
 9. 如果电子表格中的第一行表示域名，并且所有其他行表示有效的域值，则选择 **“将第一行用作标头”** 。  
   
-10. 单击“确定”  。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
+10. 单击 **“确定”** 。 将显示一个进度栏，指示成功导入了多少个值、未导入多少个值以及值的总数。 单击 **“取消”** 按钮将取消该过程。  
   
 11. 确认“导入完成”显示在“导入域值”对话框中  。 在此对话框中查看哪些值已成功导入、哪些值未导入。 该对话框将指示文件的名称和路径、操作的完成状态、成功导入了多少个值、未导入多少个值以及处理的值的总数。  
   

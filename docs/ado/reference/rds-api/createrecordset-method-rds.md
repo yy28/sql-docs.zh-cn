@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964514"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空断开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -47,11 +46,11 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  一个**Variant**的定义中的每列的属性数组**记录集**创建。 每个列定义中包含的四个必需的属性和一个可选属性的数组。  
   
-|特性|Description|  
+|特性|描述|  
 |---------------|-----------------|  
-|“属性”|列标题的名称。|  
-|类型|数据类型的整数。|  
-|大小|以字符为单位，而不考虑数据类型为宽度的整数。|  
+|名称|列标题的名称。|  
+|type|数据类型的整数。|  
+|Size|以字符为单位，而不考虑数据类型为宽度的整数。|  
 |可空性|布尔值。|  
 |规模 （可选）|此可选属性定义的数值字段的小数位数。 如果未指定此值，数值将被截断为 3 的小数位数。 精度不受影响，但将为三个截断小数点后面的数字个数。|  
   

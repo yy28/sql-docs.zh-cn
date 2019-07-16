@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_text_query_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4329b8fcbddb0050f529e401da8d6c7c14f065d9
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 5016f6f556967fa45364460280080ca829e521b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936884"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>参数  
 *plan_handle*  
-是一个标记，用于唯一标识已执行的批次查询执行计划，其计划驻留在计划缓存中，或当前正在执行。 *plan_handle*是**varbinary(64)**。   
+是一个标记，用于唯一标识已执行的批次查询执行计划，其计划驻留在计划缓存中，或当前正在执行。 *plan_handle*是**varbinary(64)** 。   
 
 *Plan_handle*可以从以下动态管理对象中获得： 
   
@@ -66,10 +65,10 @@ sys.dm_exec_text_query_plan
 
 -   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 *statement_start_offset* | 0 | DEFAULT  
-指示行所说明的查询在其批处理或持久性对象文本中的起始位置（字节）。 *statement_start_offset*是**int**。值 0 指示批处理的起始处。 默认值为 0。  
+指示行所说明的查询在其批处理或持久性对象文本中的起始位置（字节）。 *statement_start_offset*是**int**。值为 0 指示批处理的开始。 默认值为 0。  
   
 可以从下列动态管理对象中获得语句起始偏移量：  
   
@@ -82,16 +81,16 @@ sys.dm_exec_text_query_plan
   
 *statement_start_offset*是**int**。  
   
-值 -1 指示批查询的结尾处。 默认值为-1。  
+值 -1 指示批查询的结尾处。 默认值为 -1。  
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|在编译对应于此计划的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时有效的上下文数据库的 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。<br /><br /> 此列可为空值。|  
 |**objectid**|**int**|此查询计划的对象（如存储过程或用户定义函数）的 ID。 对于临时和预定义的批处理，则此列为**null**。<br /><br /> 此列可为空值。|  
 |**number**|**smallint**|为存储过程编号的整数。 例如，一组的过程**订单**可能名为应用程序**orderproc; 1**， **orderproc; 2**，依次类推。 对于临时和预定义的批处理，则此列为**null**。<br /><br /> 此列可为空值。|  
-|**encrypted**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
+|**加密**|**bit**|指示对应的存储过程是否已加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密<br /><br /> 此列不可为空值。|  
 |**query_plan**|**nvarchar(max)**|包含与指定的查询执行计划的编译时显示计划表示形式*plan_handle*。 显示计划采用文本格式。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。<br /><br /> 此列可为空值。|  
   
 ## <a name="remarks"></a>备注  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6e494ed-c7cb-4b1b-bf3b-c4361850b51a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a66c28295b4b2678903d0fe7115b724db419edd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cb0d006a6d380ed21cbe73f77abe3c2aa42a71f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901386"
 ---
 # <a name="aggregate-function-limitations"></a>聚合函数限制
 聚合函数和非聚合列引用不能同时用作单个 SQL 语句的参数。

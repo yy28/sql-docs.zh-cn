@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80918c74613e0fb608a9d48c1e56ad2cf206b06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940290"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为每个已注册的加密提供程序返回一行。  
     
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|加密提供程序的标识号。|  
-|**名称**|**sysname**|加密提供程序的名称。|  
+|**name**|**sysname**|加密提供程序的名称。|  
 |**guid**|**uniqueidentifier**|唯一的提供程序 GUID。|  
 |**version**|**nvarchar(50)**|版本格式的提供程序*aa.bb.cccc.dd*。|  
 |**dll_path**|**nvarchar(512)**|实现可扩展密钥管理 (EKM) 应用程序编程接口 (API) 的 DLL 的路径。|  
@@ -45,7 +44,7 @@ ms.locfileid: "47791235"
 ## <a name="remarks"></a>备注  
  **Sys.cryptographic_providers**视图是公开显示的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

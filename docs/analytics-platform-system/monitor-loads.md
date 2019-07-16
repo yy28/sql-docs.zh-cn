@@ -2,19 +2,18 @@
 title: 有关并行数据仓库中监视加载 |Microsoft Docs
 description: 使用 Analytics Platform System (APS) 管理员控制台或并行数据仓库 (PDW) 系统视图监视活动和最新的加载。"
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960606"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>监视器将加载到并行数据仓库
 监视活动和最新[dwloader](dwloader.md)通过使用 Analytics Platform System (APS) 管理员控制台或并行数据仓库 (PDW) 加载[系统视图](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
@@ -26,7 +25,7 @@ ms.locfileid: "62639964"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
 无论哪种方法，用于监视负载，该登录名必须有权访问基础数据源。 
 
 <!-- MISSING LINKS

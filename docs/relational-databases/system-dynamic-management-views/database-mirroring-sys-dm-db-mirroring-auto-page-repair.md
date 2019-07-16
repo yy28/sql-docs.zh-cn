@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 976992cfe5d68659b95a62cc0b4e839f19f8cdd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017914"
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>数据库镜像-sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对服务器实例上所有镜像数据库的每个自动页修复尝试返回一行。 该视图包含对应于给定镜像数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。 只要一个数据库对应的行达到最大值，则它的下个自动页修复尝试对应的行将替换现有的一个项。 下表定义了各个列的含义。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|此行对应的数据库的 ID。|  
 |**file_id**|**int**|页所在文件的 ID。|  
@@ -44,7 +43,7 @@ ms.locfileid: "47638425"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

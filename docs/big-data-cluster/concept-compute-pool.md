@@ -5,17 +5,16 @@ description: 本指南介绍了 SQL Server 2019 大数据群集 （预览版） 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6da6e2b948027446623e47a58670e44cd99886de
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d9ae112369ddad91bec125ec19713040a5aae915
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958800"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中的计算池有哪些？
 

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def4c6231ef180e0fc7ff42bed1f170bf36884dd
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207443"
 ---
 # <a name="test-a-model-in-directquery-mode"></a>在 DirectQuery 模式下测试模型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53071884"
   
 ## <a name="test-in-excel"></a>在 Excel 中测试 
   
- 在 SSDT 中设计模型时，可使用“在 Excel 中分析”功能来测试针对内存中示例数据集或针对关系数据库的建模决策。  单击“在 Excel 中分析”时，会打开一个对话框，你可在该对话框中指定选项。
+ 在 SSDT 中设计模型时，可使用“在 Excel 中分析”  功能来测试针对内存中示例数据集或针对关系数据库的建模决策。  单击“在 Excel 中分析”时，会打开一个对话框，你可在该对话框中指定选项。
  
  ![“在 Excel 中分析”DirectQuery 选项](../../analysis-services/tabular-models/media/analyze-in-excel-directquery-options.png)
  

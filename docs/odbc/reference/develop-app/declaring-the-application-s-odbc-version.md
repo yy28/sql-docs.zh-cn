@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f1dc43ee81f1be386d0518625d36464f029dc0f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076843"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>声明应用程序&#39;s ODBC 版本
 应用程序分配连接之前，它必须设置 SQL_ATTR_ODBC_VERSION 环境属性。 此属性规定应用程序，如下所示 ODBC *2.x*或 ODBC *3.x*规范时使用以下各项：  

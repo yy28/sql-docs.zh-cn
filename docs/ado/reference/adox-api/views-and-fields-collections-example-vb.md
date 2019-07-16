@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d0c9af0bf459c77414c5c7f63d176d396b9e671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16145ad1dd52a6ad535c9a51a64f410a85e12e18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964827"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>视图和字段集合示例 (VB)
 下面的代码演示如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)属性和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)要检索字段信息的视图对象。  

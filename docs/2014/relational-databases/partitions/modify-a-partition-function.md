@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206986"
 ---
 # <a name="modify-a-partition-function"></a>修改分区函数
   通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在已分区的表或已分区的索引的分区函数中增加或减少指定的分区数（加 1 或减 1），可以更改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的表或索引的分区方式。 增加分区的方法是将某个现有的分区“拆分”为两个分区并重新定义新分区的边界。 减少分区的方法是将两个分区的边界“合并”成一个。 减少分区操作将重新填充一个分区而不对另一个分区进行分配。  
@@ -43,7 +43,7 @@ ms.locfileid: "52763669"
   
 -   ALTER PARTITION FUNCTION 只能用于将一个分区拆分为两个，或将两个分区合并为一个。 若要更改表或索引的分区方式（例如，从 10 个分区变为 5 个分区），可以使用下列选项之一：  
   
-    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“管理分区向导”将旧表中的数据插入新表。  
+    -   使用所需的分区函数创建一个新的已分区表，然后使用 INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的  “管理分区向导”将旧表中的数据插入新表。  
   
     -   为堆创建分区聚集索引。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "52763669"
   
 2.  展开 **“分区函数”** 文件夹。  
   
-3.  右键单击要删除的分区函数，然后选择“删除”。  
+3.  右键单击要删除的分区函数，然后选择  “删除”。  
   
-4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，确保已选择正确的分区函数，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -90,9 +90,9 @@ ms.locfileid: "52763669"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
@@ -115,9 +115,9 @@ ms.locfileid: "52763669"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  

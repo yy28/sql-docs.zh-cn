@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908871"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>项目设置（转换）(MySQLToSQL)
 转换页**项目设置**对话框包含自定义如何 SSMA 将 MySQL 语法转换为 SQL Server 或 SQL Azure 的语法设置的。  
@@ -59,7 +58,7 @@ ms.locfileid: "63162024"
 |-|-|  
 |**术语**|**定义**|  
 |**没有默认值的列中插入和替换的值**|如果是，引用表使用非 MyISAM 和 InnoDb 存储的引擎的所有语句应都标记为警告转换消息。<br /><br />**默认模式**:将添加到列的列表<br /><br />**乐观模式**:将添加到列的列表<br /><br />**完整模式**: 将添加到列的列表|  
-|**除数为零转换生成**|指定模拟 MySQL，而无需 ERROR_FOR_DIVISION_BY_ZERO 行为。<br /><br />**默认模式**: 错误<br /><br />**乐观模式**:错误<br /><br />**完整模式**: NULL|  
+|**除数为零转换生成**|指定模拟 MySQL，而无需 ERROR_FOR_DIVISION_BY_ZERO 行为。<br /><br />**默认模式**: Error<br /><br />**乐观模式**:Error<br /><br />**完整模式**: NULL|  
 |**IN 运算符**|指定如何将 MySQL IN 运算符的转换。<br /><br />**默认模式**: 始终将转换为 IN<br /><br />**乐观模式**:始终将转换为 IN<br /><br />**完整模式**: 如有必要展开|  
 |**MySQL 函数转换**|指定如何将转换 MySQL 标准函数。<br /><br />**默认模式**: 乐观<br /><br />**乐观模式**:乐观<br /><br />**完整模式**: Precise|  
 |**不支持存储引擎**|如果是，引用表使用非 MyISAM 和 InnoDb 存储的引擎的所有语句应都标记为警告转换消息。<br /><br />**默认模式**: 否<br /><br />**乐观模式**:否<br /><br />**完整模式**: 是|  

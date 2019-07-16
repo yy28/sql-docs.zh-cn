@@ -1,5 +1,5 @@
 ---
-title: ParameterAttributesEnum | Microsoft Docs
+title: ParameterAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ade713272a4916a1ea316fe33724246d6e4248bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95ba0d84d99d2f0cd51b363a42b8620b55459b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917756"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 指定的特性[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|指示参数接受有符号的值。|  
 |**adParamNullable**|64|指示参数接受 null 值。|  

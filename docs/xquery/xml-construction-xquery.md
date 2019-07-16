@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946171"
 ---
 # <a name="xml-construction-xquery"></a>XML 构造 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询构造了一个 <`NewRoot`> 元素，该元素有一个子元素 <`e`>。 元素的值 <`e`> 通过指定在大括号 （"{...}"） 内的路径表达式计算。  
+ 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询构造 <`NewRoot`> 元素有一个子元素 (<`e`>)。 元素的值 <`e`> 通过指定在大括号 （"{...}"） 内的路径表达式计算。  
   
 ```sql
 DECLARE @x xml;  
@@ -137,7 +136,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- 下面的查询是使用直接元素构造函数来构造元素的另一个示例。 此外，<`FirstLocation`> 元素的值是通过执行大括号中的表达式获取的。 该查询表达式返回 Production.ProductModel 表的 Instructions 列中的第一个生产车间的生产步骤。  
+ 下面的查询是使用直接元素构造函数来构造元素的另一个示例。 此外的值 <`FirstLocation`> 元素通过执行在大括号中的表达式。 该查询表达式返回 Production.ProductModel 表的 Instructions 列中的第一个生产车间的生产步骤。  
   
 ```sql
 SELECT Instructions.query('  
@@ -235,7 +234,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 构造的元素 <`ProductModel`> 包含 ProductModelID 属性和下列子节点：  
+ 构造的元素 <`ProductModel`> 包含 ProductModelID 属性和这些子节点：  
   
 -   文本节点 `This is product model catalog description.`  
   
@@ -337,7 +336,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   不支持异类序列。 任何将异类序列指定为属性值的尝试都将返回一个错误，如下面的示例所示。 在本例中，由字符串“Item”和元素 <`x`> 组成的异类序列被指定为属性值：  
+-   不支持异类序列。 任何将异类序列指定为属性值的尝试都将返回一个错误，如下面的示例所示。 在本示例中，异类序列，字符串"Item"和元素 <`x`>，被指定为属性值：  
   
     ```sql
     DECLARE @x xml  
@@ -382,7 +381,7 @@ where ProductModelID=7;
 -   在 XQuery prolog 中。  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>使用命名空间声明属性添加命名空间  
- 下面的示例在元素 <`a`> 的构造中使用命名空间声明属性来声明默认的命名空间。 子元素 <`b`> 的构造撤消了父元素中声明的默认命名空间声明。  
+ 下面的示例使用命名空间声明属性的元素构造中 <`a`> 若要声明默认命名空间。 构造的子元素 <`b`> 撤消的父元素中声明的默认命名空间声明。  
   
 ```sql
 declare @x xml  
@@ -401,7 +400,7 @@ select @x.query( '
 </a>  
 ```  
   
- 可以将前缀指定给命名空间。 前缀是在元素 <`a`> 的构造中指定的。  
+ 可以将前缀指定给命名空间。 元素的构造中指定了前缀 <`a`>。  
   
 ```sql
 declare @x xml  
@@ -420,7 +419,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- 您可以不声明 XML 构造中的默认命名空间，但是必须声明命名空间前缀。 由于必须声明元素 <`b`> 的构造中指定的前缀，下面的查询返回了一个错误。  
+ 您可以不声明 XML 构造中的默认命名空间，但是必须声明命名空间前缀。 以下查询返回错误，因为不能取消的声明的元素构造中指定的前缀 <`b`>。  
   
 ```sql
 declare @x xml  
@@ -431,7 +430,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- 新构造的命名空间可在查询中使用。 例如，下面的查询在构造元素 <`FirstLocation`> 时声明了一个命名空间，并在 LocationID 和 SetupHrs 属性值的表达式中指定了前缀。  
+ 新构造的命名空间可在查询中使用。 例如，以下查询将声明中构造元素的命名空间 <`FirstLocation`>，并在 LocationID 和 SetupHrs 属性值的表达式中指定的前缀。  
   
 ```sql
 SELECT Instructions.query('  
@@ -445,7 +444,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 注意，用此方法创建新的命名空间前缀将覆盖此前缀以前存在的所有命名空间声明。 例如，查询 prolog 中的命名空间声明 `AWMI="https://someURI"` 被 <`FirstLocation`> 元素中的命名空间声明覆盖。  
+ 注意，用此方法创建新的命名空间前缀将覆盖此前缀以前存在的所有命名空间声明。 例如，命名空间声明`AWMI="https://someURI"`，在查询 prolog 中的命名空间声明重写 <`FirstLocation`> 元素。  
   
 ```sql
 SELECT Instructions.query('  
@@ -471,7 +470,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- 注意，在元素 <`b`> 的构造中，已指定空字符串作为命名空间声明属性的值。 这将取消声明父级中所声明的默认命名空间。  
+ 请注意，在构造的元素 <`b`>，使用一个空字符串作为其值指定命名空间声明属性。 这将取消声明父级中所声明的默认命名空间。  
   
 
 下面是结果：  
@@ -549,7 +548,7 @@ test
   
  **请注意**使用显式文本节点构造函数的示例，请参阅中的特定示例[插入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
   
- 在下面的查询中，构造的 XML 包括一个元素、两个属性、一个注释和一个处理指令。 注意，由于正在构造序列，因此要在 <`FirstLocation`> 前使用逗号。  
+ 在下面的查询中，构造的 XML 包括一个元素、两个属性、一个注释和一个处理指令。 请注意，之前使用逗号 <`FirstLocation`>，因为正在构造一个序列。  
   
 ```sql
 SELECT Instructions.query('  

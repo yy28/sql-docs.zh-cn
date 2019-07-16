@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027228"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 谓词转义字符
 在中**如**谓词，百分号 （%）匹配零个或多个任意字符和下划线 (_) 匹配的任何一个字符。 若要匹配实际的百分比符号或下划线中**如**谓词，转义符必须在之前的百分比符号或下划线。 定义的转义序列**如**谓词转义符是：  
   
- **{escape '** *escape-character* **'}**  
+ **{转义 '** *转义符* **}**  
   
  其中*转义符*是数据源支持的任何字符。  
   
