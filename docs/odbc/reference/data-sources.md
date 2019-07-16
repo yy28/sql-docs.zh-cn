@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135633"
 ---
 # <a name="data-sources"></a>“数据源”
 一个*数据源*是只需的数据源。 它可以是文件，DBMS 或甚至实时数据源上的特定数据库。 数据可能不位于该程序，在同一台计算机上，也可以在网络上的某个位置的另一台计算机上。 例如，数据源可能是由 Novell® Netware; 访问 OS/2® 操作系统系统上运行 Oracle DBMS通过网关; 访问 IBM DB2 DBMS服务器目录，则在 Xbase 文件的集合或本地的 Microsoft® Access 数据库文件。  

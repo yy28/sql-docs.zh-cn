@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48778b3c84a739bb6773077a0c703e893d461632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085320"
 ---
 # <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_delete_log_shipping_alert_job
 ## <a name="remarks"></a>备注  
  **sp_delete_log_shipping_alert_job**必须从运行**主**在监视服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  

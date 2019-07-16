@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e200b3bc2cd20ef54b9cd0385a93b876fae1945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18d8a456673088f63f6733e9837e81deeec1d224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125360"
 ---
 # <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   有关每个数据空间的分区方案是使用表中占一行**类型**= ps。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**||继承中的列[sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)。|  
 |**function_id**|**int**|方案中使用的分区函数的 ID。|  

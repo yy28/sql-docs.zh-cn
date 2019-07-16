@@ -3,18 +3,17 @@ title: 在 Linux 上配置 SQL Server 设置
 description: 本文介绍如何使用 mssql-conf 工具配置 Linux 上的 SQL Server 设置。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077599"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -27,7 +26,7 @@ ms.locfileid: "67834012"
 
 |||
 |---|---|
-| [代理](#agent) | 启用 SQL Server 代理 |
+| [代理](#agent) | 启用 SQL Server 代理。 |
 | [排序规则](#collation) | 在 Linux 上为 SQL Server 设置新的排序规则。 |
 | [客户反馈](#customerfeedback) | 选择 SQL Server 将反馈发送给 Microsoft。 |
 | [数据库邮件配置文件](#dbmail) | 设置 SQL Server 的 Linux 上的默认数据库邮件配置文件。 |
@@ -396,7 +395,7 @@ ms.locfileid: "67834012"
 
     | type | 描述 |
     |-----|-----|
-    | **mini** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
+    | **最小** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
     | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 和主机环境中，将下面的内存区域添加到转储的内部：</br></br> -各种全局变量</br> 的超过 64tb 所有内存</br> -所有命名区域中找到 **/proc/$ pid/maps**</br> 的来自线程和堆栈间接内存</br> 线程信息</br> -相关 Teb 和 Peb 的</br> 模块信息</br> VMM 和 VAD 树 |
     | **filtered** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
     | **full** | 完全位于中包括所有区域的完整过程转储 **/proc/$ pid/maps**。 这不受**coredump.captureminiandfull**设置。 |

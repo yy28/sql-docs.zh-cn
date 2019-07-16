@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 430f7d53baa507a86f4b9060a41ce513adeef904
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088586"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "56031178"
   返回有关通过复制发布的表列的信息。  
   
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|已发布的表项目的缓存架构结构的内存中地址。|  
 |**tabid**|**bigint**|已复制的表的 ID。|  

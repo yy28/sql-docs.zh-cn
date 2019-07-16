@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108448"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +45,14 @@ sp_cursoroption cursor, code, value
  *代码*  
  用于规定游标返回值的不同因素。 *代码*需要以下项之一**int**输入值：  
   
-|ReplTest1|“属性”|Description|  
+|ReplTest1|名称|描述|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|返回某些指定文本或图像列的文本指针，而非实际数据。<br /><br /> TEXTPTR_ONLY 允许将文本指针用作*句柄*blob 对象的更高版本可以有选择地检索或更新使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 DBLIB 工具 （例如[!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 或 DBLIB DBWRITETEXT）。<br /><br /> 如果分配了值“0”，则选择列表中的所有文本和图像列将返回文本指针而非数据。|  
 |0x0002|CURSOR_NAME|在指定的名称分配*值*到光标处。 这反过来允许 ODBC 使用[!INCLUDE[tsql](../../includes/tsql-md.md)]对通过 sp_cursoropen 打开的游标中定位的 UPDATE/DELETE 语句。<br /><br /> 可以将此字符串指定为任何字符或 Unicode 数据类型。<br /><br /> 由于[!INCLUDE[tsql](../../includes/tsql-md.md)]定位的 UPDATE/DELETE 语句操作，默认情况下，fat 游标中的第一行上 sp_cursor SETPOSITION 应该用于将光标放置在发出定位的 UPDATE/DELETE 语句之前。|  
 |0x0003|TEXTDATA|为后续提取中的某些文本或图像列返回实际数据，而非文本指针（也即，此操作撤消了 TEXTPTR_ONLY 的效果）。<br /><br /> 如果为某特定列启用了 TEXTDATA，则将重新提取或刷新此行，然后将它发送回 TEXTPTR_ONLY。 借助于 TEXTPTR_ONLY，值参数是一个整数，它指定列编号，并且零值返回所有文本或图像列。|  
 |0x0004|SCROLLOPT|滚动选项。 有关其他信息，请参阅本主题后面的“返回代码值”。|  
 |0x0005|CCOPT|并发控制选项。 有关其他信息，请参阅本主题后面的“返回代码值”。|  
-|0x0006|ROWCOUNT|结果集中的当前行数。<br /><br /> 注意：可能已更改行计数，因为如果正在使用异步填充 sp_cursoropen 返回的值。 如果行数未知，则返回值为-1。|  
+|0x0006|ROWCOUNT|结果集中的当前行数。<br /><br /> 注意:可能已更改行计数，因为如果正在使用异步填充 sp_cursoropen 返回的值。 如果行数未知，则返回值为-1。|  
   
  *value*  
  指定返回的值*代码*。 *值*是一个必需的参数，0x0001，0x0002，或 0x0003*代码*输入值。  
@@ -64,7 +63,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>返回代码值  
  *值*参数可能会返回以下值之一*代码*值。  
   
-|返回值|Description|  
+|返回值|描述|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -72,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  *值*参数返回以下 SCROLLOPT 值之一。  
   
-|返回值|Description|  
+|返回值|描述|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,7 +80,7 @@ sp_cursoroption cursor, code, value
   
  *值*参数返回以下 CCOPT 值之一。  
   
-|返回值|Description|  
+|返回值|描述|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  
@@ -89,7 +88,7 @@ sp_cursoroption cursor, code, value
   
 ## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
+ [sp_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
+ [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   
   

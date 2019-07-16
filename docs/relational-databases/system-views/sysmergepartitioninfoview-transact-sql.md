@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094826"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysmergepartitioninfoview**视图公开表项目的分区信息。 此视图存储在发布服务器的发布数据库以及订阅服务器的订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|项目的名称。|  
-|**类型**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **0x0a** = 表。<br /><br /> **0x20** = 纯过程架构。<br /><br /> **0x40** = 仅视图架构或仅限索引的视图架构。<br /><br /> **0x80** = 仅函数架构。|  
+|**name**|**sysname**|项目的名称。|  
+|**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **0x0a** = 表。<br /><br /> **0x20** = 纯过程架构。<br /><br /> **0x40** = 仅视图架构或仅限索引的视图架构。<br /><br /> **0x80** = 仅函数架构。|  
 |**objid**|**int**|已发布对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图的对象 ID。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图; 使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -84,8 +83,8 @@ ms.locfileid: "54124679"
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|更新前表视图的 ID。|  
-|**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除。<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 时的值*delete_tracking*是**0**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。<br /><br /> 注意：值为**0**导致非收敛性。|  
-|**compensate_for_errors**|**bit**|指示在同步期间遇到错误时是否采取补救措施。<br /><br /> **0** = 补救操作已被禁用。<br /><br /> **1** = 无法应用于订阅服务器或发布服务器通常会导致采取补救措施来撤消这些更改，这是合并复制的默认行为的更改。<br /><br /> 注意：值为**0**导致非收敛性。|  
+|**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除。<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 时的值*delete_tracking*是**0**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。<br /><br /> 注意:值为**0**导致非收敛性。|  
+|**compensate_for_errors**|**bit**|指示在同步期间遇到错误时是否采取补救措施。<br /><br /> **0** = 补救操作已被禁用。<br /><br /> **1** = 无法应用于订阅服务器或发布服务器通常会导致采取补救措施来撤消这些更改，这是合并复制的默认行为的更改。<br /><br /> 注意:值为**0**导致非收敛性。|  
 |**pub_range**|**bigint**|发布服务器标识范围大小。|  
 |**范围**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
 |**threshold**|**int**|标识范围阈值百分比。|  
@@ -105,13 +104,13 @@ ms.locfileid: "54124679"
 |**logical_record_level_conflict_detection**|**bit**|指示应在逻辑记录级还是行级或列级检测冲突。<br /><br /> **0** = 行或列级别使用冲突检测。<br /><br /> **1** = 使用逻辑记录级冲突检测，则在发布服务器上的行中的更改和更改的单独行的同一逻辑记录在订阅服务器会被视为冲突。<br /><br /> 当该值为 1 时，只能使用逻辑记录级别的冲突解决。|  
 |**logical_record_level_conflict_resolution**|**bit**|指示是否应在逻辑记录级或在行级或列级解决冲突。<br /><br /> **0** = 行或列级别使用解决方法。<br /><br /> **1** = 以防的冲突时，来自入选方的整个逻辑记录覆盖落选方的整个逻辑记录。<br /><br /> 值 1 既可用于逻辑记录级别的检测，也可用于行或列级别的检测。|  
 |**partition_options**|**tinyint**|定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *Partition_options*可以是下列值之一。<br /><br /> **0** = 对项目的筛选是静态的或者不会生成唯一的每个分区的数据子集，即"重叠"分区。<br /><br /> **1** = 分区重叠，并且在订阅服务器所做的 DML 更新无法更改行所属的分区。<br /><br /> **2** = 筛选的项目生成不重叠分区，但多个订阅服务器可以接收相同的分区。<br /><br /> **3** = 筛选项目生成对于每个订阅都唯一的非重叠分区。|  
-|**名称**|**sysname**|分区的名称。|  
+|**name**|**sysname**|分区的名称。|  
   
 ## <a name="see-also"></a>请参阅  
  [参数化筛选器为合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepartition &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   
   
