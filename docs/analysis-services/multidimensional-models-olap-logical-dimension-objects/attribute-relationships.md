@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9eddac84f4db92770daa2bbf32b51597f84eb3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209293"
 ---
 # <a name="attribute-relationships"></a>的维度设计器中，可以在“维度结构”视图的
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52542765"
   
 -   性别  
   
--   电子邮件  
+-   Email  
   
 -   City  
   

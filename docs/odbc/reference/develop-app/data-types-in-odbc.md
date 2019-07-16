@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96e9b93ef3ef52feeab61c9f7a62ce757f682634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076998"
 ---
 # <a name="data-types-in-odbc"></a>ODBC 中的数据类型
 ODBC 使用数据类型的两个的集：SQL 数据类型以及 C 数据类型。 在数据源中，使用 SQL 数据类型和应用程序中的 C 代码中使用 C 数据类型。  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 308281ed30b7f0a56acbe397c0294932afeae121
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211751"
 ---
 # <a name="view-the-table-definition"></a>查看表定义
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示 [!INCLUDE[tsql](../../includes/tsql-md.md)]中某个表的属性。  
@@ -50,7 +50,7 @@ ms.locfileid: "52782019"
   
 1.  在对象资源管理器中，选择要显示其属性的表。  
   
-2.  右键单击该表，然后从快捷菜单中选择“属性”。 有关详细信息，请参阅 [Table Properties](table-properties-ssms.md)。  
+2.  右键单击该表，然后从快捷菜单中选择“属性”  。 有关详细信息，请参阅 [Table Properties](table-properties-ssms.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -58,9 +58,9 @@ ms.locfileid: "52782019"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例返回指定对象的 `sys.tables` 目录视图中的所有列。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例返回指定对象的 `sys.tables` 目录视图中的所有列。  
   
     ```  
     SELECT * FROM sys.tables  

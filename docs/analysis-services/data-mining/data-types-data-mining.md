@@ -1,5 +1,5 @@
 ---
-title: 数据类型 （数据挖掘） |Microsoft 文档
+title: 数据类型 （数据挖掘） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b62c9a4ebc9caf9875a1e5b6aef987bf0b4fa8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183352"
 ---
 # <a name="data-types-data-mining"></a>数据类型（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,21 +24,21 @@ ms.locfileid: "34014634"
   
 |数据类型|支持的内容类型|  
 |---------------|-----------------------------|  
-|**文本**|Cyclical、Discrete、Discretized、Key Sequence、Ordered 和 Sequence|  
+|**Text**|Cyclical、Discrete、Discretized、Key Sequence、Ordered 和 Sequence|  
 |**Long**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered、Sequence 和 Time<br /><br /> Classified|  
 |**Boolean**|Cyclical、Discrete 和 Ordered|  
 |**双精度**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered、Sequence 和 Time<br /><br /> Classified|  
-|**日期**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time 和 Ordered|  
+|**Date**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time 和 Ordered|  
   
 > [!NOTE]  
 >  只有第三方算法支持 Time 和 Sequence 内容类型。 支持 Cyclical 和 Ordered 内容类型，但大多数算法将它们视为离散值，不会进行特殊处理。  
   
- 该表还显示了每种数据类型支持的内容类型。  
+ 该表还显示了每种数据类型支持的内容类型  。  
   
- 内容类型特定于数据挖掘，你可以自定义在挖掘模型中处理或计算数据的方式。 例如，即使列中包含数字，你可能还是需要将其作为离散值进行建模。 如果列中包含数字，你还可以指定它们是装箱还是离散化，或者指定模型是否将它们作为连续值处理。 因此，内容类型对模型有极大的影响... 有关所有内容类型列表的信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
+ 内容类型特定于数据挖掘，你可以自定义在挖掘模型中处理或计算数据的方式。 例如，即使列中包含数字，你可能还是需要将其作为离散值进行建模。 如果列中包含数字，你还可以指定它们是装箱还是离散化，或者指定模型是否将它们作为连续值处理。 因此，内容类型对模型有极大的影响... 有关所有内容类型列表的信息，请参阅 [内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
 > [!NOTE]  
->  在其他机器学习系统中，你可能会遇到以下术语：名义数据、因素或类别、序号数据或序列数据。 通常，这些术语与内容类型相对应。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，数据类型仅指定存储的值类型，不指定其在模型中的用法。  
+>  在其他机器学习系统中，你可能会遇到以下术语：名义数据  、因素  或类别  、序号数据  或序列数据  。 通常，这些术语与内容类型相对应。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，数据类型仅指定存储的值类型，不指定其在模型中的用法。  
   
 ## <a name="specifying-a-data-type"></a>指定数据类型  
  如果直接使用数据挖掘扩展插件 (DMX) 创建挖掘模型，则可以在定义该模型时定义每一列的数据类型，同时 Analysis Services 将创建对应的包含指定数据类型的挖掘结构。 如果通过使用向导创建挖掘模型或挖掘结构，Analysis Services 将建议一种数据类型，或者您可以从列表中选择一种数据类型。  

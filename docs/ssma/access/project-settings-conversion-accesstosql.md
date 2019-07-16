@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929456"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>项目设置 （转换） (AccessToSQL)
 转换项目设置允许你配置如何将对象转换到访问数据库对象从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象。  
@@ -64,7 +63,7 @@ ms.locfileid: "63299146"
   
 -   **乐观模式**:没有消息  
   
--   **完整模式**:错误  
+-   **完整模式**:Error  
   
 **当外键列具有不同大小的消息类型**  
 指定的 SSMA 显示了输出窗格中，找到不正确的文本外键时的消息 （警告、 错误或执行任何操作） 的类型。  
@@ -73,7 +72,7 @@ ms.locfileid: "63299146"
   
 -   **乐观模式**:没有消息  
   
--   **完整模式**:错误  
+-   **完整模式**:Error  
   
 **Memo 列编制索引时的消息类型**  
 指定的 SSMA 显示了输出窗格中，找到包含的索引时的消息 （警告、 错误或执行任何操作） 的类型**memo**列。  
@@ -82,7 +81,7 @@ ms.locfileid: "63299146"
   
 -   **乐观模式**:没有消息  
   
--   **完整模式**:错误  
+-   **完整模式**:Error  
   
 **当一个复杂的查询使用通配符，则发出警告 (\&#42;)**  
 SELECT 语句中的列名为通配符 （*） 时，将输出窗格和错误列表中显示警告。  

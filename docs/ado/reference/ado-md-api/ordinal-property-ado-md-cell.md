@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4a40c59ad222c943cefe089ffaddd53f2cec25a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 194b72ce66eb2efdc3a246f24948b01c790f7b8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949377"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal 属性（ADO MD 单元）
 唯一标识[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)按其单元集内的位置。  

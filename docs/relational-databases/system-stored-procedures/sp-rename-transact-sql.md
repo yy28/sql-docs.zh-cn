@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006941"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,24 +50,24 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname = ] '*object_name*'  
  用户对象或数据类型的当前限定或非限定名称。 如果要重命名的对象是表中的列*object_name*必须在窗体*table.column*或*schema.table.column 中使用*。 如果要重命名的对象的索引*object_name*必须在窗体*table.index*或*schema.table.index*。 如果要重命名的对象是一个约束*object_name*必须在窗体*schema.constraint*。  
   
- 只有在指定了限定对象时才必须使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *object_name*是**nvarchar(776)**，无默认值。  
+ 只有在指定了限定对象时才必须使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *object_name*是**nvarchar(776)** ，无默认值。  
   
- [ @newname =] '*new_name*  
+ [ @newname = ] '*new_name*'  
  指定对象的新名称。 *new_name*必须是名称的一部分并且必须遵循有关标识符的规则。 *newname*是**sysname**，无默认值。  
   
 > [!NOTE]  
 >  触发器名称不能以 # 或 ## 开头。  
   
  [ @objtype = ] '*object_type*'  
- 要重命名的对象的类型。 *object_type*是**varchar(13)**，默认值为 NULL，并且可以是下列值之一。  
+ 要重命名的对象的类型。 *object_type*是**varchar(13)** ，默认值为 NULL，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |COLUMN|要重命名的列。|  
 |DATABASE|用户定义数据库。 重命名数据库时需要此对象类型。|  
 |INDEX|用户定义索引。 重命名带统计信息的索引时，也会自动重命名统计信息。|  
 |OBJECT|一种类型的项中跟踪[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 例如，OBJECT 可用于重命名包含约束（CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY）、用户表和规则的对象。|  
-|STATISTICS|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 由用户显式创建的统计信息或使用索引隐式创建的统计信息。 重命名索引的统计信息时，也会自动重命名索引。|  
+|STATISTICS|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。<br /><br /> 由用户显式创建的统计信息或使用索引隐式创建的统计信息。 重命名索引的统计信息时，也会自动重命名索引。|  
 |USERDATATYPE|一个[CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)通过执行添加[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)或[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -85,7 +84,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  重命名表或列等对象将不会自动重命名对该对象的引用。 您必须手动修改引用已重命名对象的任何对象。 例如，如果您重命名表列，并且触发器中引用了该列，则必须修改触发器以反映新的列名。 请使用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 在重命名对象之前列出对象的依赖关系。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要重命名对象、列和索引，则需要对该对象具有 ALTER 权限。 若要重命名用户类型，则需要对该类型具有 CONTROL 权限。 若要重命名数据库，则需要具备 sysadmin 或 dbcreator 固定服务器角色的成员身份  
   
 ## <a name="examples"></a>示例  

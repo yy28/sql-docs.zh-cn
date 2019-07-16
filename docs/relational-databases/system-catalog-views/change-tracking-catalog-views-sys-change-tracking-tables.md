@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a9bc9e99600fdc2aa80e04fc7af3fb5de362453
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 158203b7dedfec3228821f6368c8f6c92b8041f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050868"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingtables"></a>更改跟踪目录视图的 sys.change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   为当前数据库中已启用更改跟踪的每个表返回一行。  
    
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|具有更改日志的表的 ID。 即使更改跟踪当前已关闭，表仍然可以具有更改日志。<br /><br /> 此表 ID 在数据库中是唯一的。|  
 |is_track_columns_updated_on|**bit**|该表的更改跟踪的当前状态：<br /><br /> 0 = OFF<br /><br /> 1 = ON|  
@@ -42,7 +41,7 @@ ms.locfileid: "51673117"
 |cleanup_version|**bigint**|一个版本，在该版本以前的版本中，清除操作可能会删除更改跟踪信息。|  
 |min_valid_version|**bigint**|该表可用的更改跟踪信息的最低有效版本。<br /><br /> 从该表中获取与该行关联的更改时，last_sync_version 的值必须大于或等于此列报告的版本。 有关详细信息，请参阅[CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

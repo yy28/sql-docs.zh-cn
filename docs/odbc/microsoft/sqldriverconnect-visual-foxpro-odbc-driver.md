@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053887"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
@@ -41,11 +40,11 @@ ms.locfileid: "63238080"
 |-------------------------------------------------|---------------------|  
 |BackgroundFetch|"是"或者"No"|  
 |逐份打印|"计算机"或其他排序序列。 有关受支持的排序规则序列的列表，请参阅[设置 COLLATE](../../odbc/microsoft/set-collate-command.md)。|  
-|Description||  
+|描述||  
 |排他|"是"或者"No"|  
 |SourceDB|到一个目录，其中包含零个或更多的完全限定的路径[免费表](../../odbc/microsoft/visual-foxpro-terminology.md)，或为的绝对路径和文件名称[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)。|  
 |SourceType|"DBC"或者"DBF"|  
-|版本||  
+|Version||  
   
  如果未指定数据源名称，驱动程序管理器会提示用户输入的信息 (具体取决于设置*fDriverCompletion*参数)，然后继续。 如果需要详细信息，Visual FoxPro ODBC 驱动程序将显示提示对话框。  
   

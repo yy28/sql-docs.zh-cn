@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211654"
 ---
 # <a name="rename-views"></a>重命名视图
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名视图。  
@@ -40,7 +40,7 @@ ms.locfileid: "52393701"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在重命名视图之后](#FollowUp)  
+-   **跟进：** [在重命名视图之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -58,7 +58,7 @@ ms.locfileid: "52393701"
   
 1.  在 **“对象资源管理器”** 中，展开包含要重命名的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要重命名的视图，然后选择 **“重命名”**。  
+2.  右键单击要重命名的视图，然后选择 **“重命名”** 。  
   
 3.  输入视图的新名称。  
   

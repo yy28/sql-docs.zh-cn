@@ -2,19 +2,18 @@
 title: 安装 SCOM 管理包的分析平台系统 |Microsoft Docs
 description: 请按照下列步骤以下载并安装用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的 SQL Server PDW 所需的管理包。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac213e71d3754ccf610ba5c0874cea32c3737760
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960810"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>针对分析平台系统中安装 SQL Server Operations Manager (SCOM) 管理包
 请按照下列步骤以下载并安装用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的 SQL Server PDW 所需的管理包。  

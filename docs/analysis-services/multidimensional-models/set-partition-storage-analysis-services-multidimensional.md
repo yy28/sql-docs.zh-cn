@@ -1,5 +1,5 @@
 ---
-title: 设置分区存储 (Analysis Services-多维) |Microsoft 文档
+title: 设置分区存储 (Analysis Services-多维) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3410a8b26b9b9e26046a39f8ed5250ae9b82e67d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165159"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>设置分区存储（Analysis Services - 多维）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供多种标准存储配置的存储模式和缓存选项。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为存储模式和缓存选项提供了几种标准存储配置。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
   
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中多维数据集的“分区”选项卡中或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的分区属性页面指定分区存储。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34022894"
   
 ## <a name="storage-settings-descriptions"></a>存储设置说明  
   
-|标准存储设置|Description|  
+|标准存储设置|描述|  
 |------------------------------|-----------------|  
 |实时 ROLAP|OLAP 是实时的。 详细信息数据和聚合以关系格式存储。 当数据发生更改且所有查询都反映数据的当前状态时（零滞后时间），服务器侦听通知。<br /><br /> 通常将此设置用于经常不断地发生更新且其用户总是需要最新数据的数据源。 根据客户端应用程序生成的查询的类型，此方法可以保证提供最长的响应时间。|  
 |实时 HOLAP|OLAP 是实时的。 详细信息数据以关系格式存储，而聚合以多维格式存储。 当数据发生更改并根据需要刷新多维 OLAP (MOLAP) 聚合时，服务器侦听通知。 不创建 MOLAP 缓存。 只要数据源发生了更新，服务器就切换到实时关系 OLAP (ROLAP) 直到聚合被刷新。 所有查询都反映数据的当前状态（零滞后时间）。<br /><br /> 通常将此设置用于经常不断地发生更新（但没有对实时 ROLAP 要求的那么频繁）且其用户总是需要最新数据的数据源。 一般情况下，此方法提供的总体性能要高于 ROLAP 存储。 如果数据源足够长时间地保持不变，则使用此设置的用户可以获得 MOLAP 般的性能。|  
@@ -50,7 +50,7 @@ ms.locfileid: "34022894"
 |MOLAP|不启用主动缓存。 详细信息数据和聚合均以多维格式存储。 如果数据发生更改，服务器将不会收到通知。 必须对处理进行预定，或者手动执行它。<br /><br /> 如果数据源中的定期更新对客户端程序来说不是必要的但高性能对其来说很关键，则通常为数据源使用此设置。<br /><br /> 如果应用程序不需要最新的数据，则不使用主动缓存的 MOLAP 会提供最佳性能。 尽管可以通过在临时服务器上更新和处理多维数据集及使用数据库同步将更新的和已处理的 MOLAP 对象复制到生产服务器上等方法来最大限度地减少停机时间，但是它的确需要停机时间来处理更新的对象。|  
   
 ## <a name="custom-storage-options"></a>自定义存储选项  
- 您可以手动配置存储和主动缓存，而不是使用某个标准存储设置。 创建自定义存储设置之前，可能需要首先单击 **“标准设置”** 选项，然后将滑块移动到与要使用的配置最相匹配的标准设置。 然后，若要创建自定义配置，请单击 **“自定义设置”** 选项并单击 **“选项”**。  
+ 您可以手动配置存储和主动缓存，而不是使用某个标准存储设置。 创建自定义存储设置之前，可能需要首先单击 **“标准设置”** 选项，然后将滑块移动到与要使用的配置最相匹配的标准设置。 然后，若要创建自定义配置，请单击 **“自定义设置”** 选项并单击 **“选项”** 。  
   
 -   可以指定数据源中的更改是否触发对缓存的更新。 若要允许可接受级别的偏差，可以指定更新数据源后的一个最小静默间隔。 还可以指定一个静默间隔覆盖，如果对数据源进行的更改之间的间隔从未达到最小值，则它将在指定期限之后更新缓存。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34022894"
   
  如果选中 **“对维度应用设置”** 复选框，则同一存储设置还将应用到与该度量值组相关的维度。 维度值最初与分区值相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的分区](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

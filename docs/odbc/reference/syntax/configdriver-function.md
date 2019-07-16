@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce34e46a49e88167606543a341aaef55591493ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016754"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 函数
 **符合性**  
@@ -84,7 +83,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>诊断  
  当**ConfigDriver**返回 FALSE，关联 *\*pfErrorCode*值通过调用传递到安装程序错误缓冲区**SQLPostInstallerError**可以通过调用中获得**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|窗口句柄无效|*HwndParent*参数无效。|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*FRequest*参数不是以下之一：<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> 特定于驱动程序的选项是小于或等于 ODBC_CONFIG_DRIVER_MAX。|  

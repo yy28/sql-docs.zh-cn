@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061585"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>滚动和提取行 (ODBC)
 使用可滚动游标时，应用程序调用**SQLFetchScroll**来定位游标和提取行。 **SQLFetchScroll**支持相对滚动 (下一步，以前版本中，且相对*n*行)，绝对滚动 (first、 last、 和行*n*)，并按书签定位。 *FetchOrientation*并*FetchOffset*中的自变量**SQLFetchScroll**指定哪些行集提取，如以下关系图中所示。  

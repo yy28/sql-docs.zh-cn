@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210150"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,17 +28,17 @@ ms.locfileid: "50145072"
   
 #### <a name="to-create-a-dmx-model-content-query"></a>创建 DMX 模型内容查询  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器”  。  
   
 2.  在 **“模板资源管理器”** 窗格中，单击四方体图标，以更改列表并显示 Analysis Services 模板。  
   
-3.  在模板类别列表中，展开“DMX”，再展开“模型内容”，然后双击“内容查询”。  
+3.  在模板类别列表中，展开“DMX”，再展开“模型内容”，然后双击“内容查询”    。  
   
-4.  在 **“连接到 Analysis Services”** 对话框中，选择包含要查询的挖掘模型的实例，然后单击 **“连接”**。  
+4.  在 **“连接到 Analysis Services”** 对话框中，选择包含要查询的挖掘模型的实例，然后单击 **“连接”** 。  
   
      此时将在相应代码编辑器中打开 **“内容查询”** 模板。 元数据窗格列出了当前数据库中的可用模型。 若要更改数据库，请从 **“可用数据库”** 列表中选择不同的数据库。  
   
-5.  在一行中，输入挖掘模型的名称`FROM`[*\<挖掘模型、 名称、 MyModel >*]`.CONTENT`。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
+5.  在一行中，输入挖掘模型的名称`FROM`[ *\<挖掘模型、 名称、 MyModel >* ]`.CONTENT`。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
   
      如果不希望键入名称，则可以在 **对象资源管理器** 中选择某个挖掘模型，并将其拖放到模板中。  
   
@@ -48,15 +48,15 @@ ms.locfileid: "50145072"
   
 7.  或者，您也可以在模板的 WHERE 子句中键入条件，以将返回的行限制为特定的节点或值。  
   
-8.  单击 **“执行”**。  
+8.  单击 **“执行”** 。  
   
 ## <a name="querying-the-data-mining-schema-rowsets"></a>查询数据挖掘架构行集  
   
 #### <a name="to-create-a-query-against-the-data-mining-schema-rowset"></a>对数据挖掘架构行集创建查询  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“新建查询”** 工具栏中，单击 **“Analysis Services DMX 查询”** 或 **“Analysis Services MDX 查询”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 **“新建查询”** 工具栏中，单击 **“Analysis Services DMX 查询”** 或 **“Analysis Services MDX 查询”** 。  
   
-2.  在 **“连接到 Analysis Services”** 对话框中，选择包含要查询的对象的实例，然后单击 **“连接”**。  
+2.  在 **“连接到 Analysis Services”** 对话框中，选择包含要查询的对象的实例，然后单击 **“连接”** 。  
   
      此时将在相应代码编辑器中打开 **“内容查询”** 模板。 元数据窗格列出了当前数据库中的可用对象。 若要更改数据库，请从 **“可用数据库”** 列表中选择不同的数据库。  
   
@@ -68,14 +68,14 @@ ms.locfileid: "50145072"
   
      `WHERE MODEL_NAME = '<model name>'`  
   
-4.  单击 **“执行”**。  
+4.  单击 **“执行”** 。  
   
      “结果”窗格将显示模型的内容。  
   
     > [!NOTE]  
-    >  若要查看当前实例上可查询的所有架构行集的列表，请使用以下查询： `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，若要查看特定于数据挖掘的架构行集的列表，请参阅 [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)。  
+    >  若要查看当前实例的可查询的所有架构行集的列表，请使用以下查询：`SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，若要查看特定于数据挖掘的架构行集的列表，请参阅 [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   

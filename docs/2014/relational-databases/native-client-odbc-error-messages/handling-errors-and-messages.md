@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207096"
 ---
 # <a name="handling-errors-and-messages"></a>处理错误和消息
   当应用程序调用 ODBC 函数时，该驱动程序执行的函数和两种方式返回诊断信息：返回代码指示总体成功或失败的 ODBC 函数，并诊断记录提供有关该函数的详细的信息。 诊断记录包含标题记录和状态记录。 即使该函数成功，也仍将至少返回一条诊断记录，即标题记录。  

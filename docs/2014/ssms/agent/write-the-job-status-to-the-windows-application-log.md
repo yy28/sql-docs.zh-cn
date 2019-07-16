@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 526e95490644b4fddae3e02e9ee73b57c00797c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211277"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>将作业状态写入 Windows 应用程序日志
   本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理对象在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以便将作业状态写入 Windows 应用程序事件日志。  
@@ -57,17 +57,17 @@ ms.locfileid: "52786719"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“SQL Server 代理”**，展开 **“作业”**，右键单击要编辑的作业，再单击 **“属性”**。  
+2.  展开 **“SQL Server 代理”** ，展开 **“作业”** ，右键单击要编辑的作业，再单击 **“属性”** 。  
   
 3.  选择 **“通知”** 页。  
   
-4.  请检查 **“写入 Windows 应用程序事件日志”**，然后执行下列操作之一：  
+4.  请检查 **“写入 Windows 应用程序事件日志”** ，然后执行下列操作之一：  
   
-    -   单击“当作业成功时”，以在作业成功完成时记录作业状态。  
+    -   单击“当作业成功时”  ，以在作业成功完成时记录作业状态。  
   
-    -   单击“当作业失败时”，以在作业未成功完成时记录作业状态。  
+    -   单击“当作业失败时”  ，以在作业未成功完成时记录作业状态。  
   
-    -   单击“当作业完成时”，以便无论完成状态如何，都记录作业状态。  
+    -   单击“当作业完成时”  ，以便无论完成状态如何，都记录作业状态。  
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理对象  
  **将作业状态写入 Windows 应用程序日志**  

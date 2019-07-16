@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685598"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207357"
 ---
 # <a name="create-relationships"></a>创建关系
 
@@ -23,9 +23,9 @@ ms.locfileid: "57685598"
 
 在本课程中，将验证导入数据时自动创建的关系和不同的表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，DimProduct 表和 DimProductSubcategory 表基于每个产品属于某个子类别的事实具有某种关系。 若要了解详细信息，请参阅[关系](../tabular-models/relationships-ssas-tabular.md)。
   
-学完本课的预计时间：**10 分钟**  
+估计的时间才能完成本课程中：**10 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
 
 本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 3 课：标记为日期表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。 
   
@@ -60,11 +60,11 @@ ms.locfileid: "57685598"
   
     |在职|表|相关查找表|  
     |----------|---------|------------------------|  
-    |用户帐户控制|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |用户帐户控制|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |用户帐户控制|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |用户帐户控制|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |用户帐户控制|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |是|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |是|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |是|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |是|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |是|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     如果缺少任意关系，则验证您的模型包括以下各表：DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同时间之间的任何关系相同的数据源连接中的表导入这些表将不会创建，并且必须手动创建。 如果没有关系出现，则表示在数据源没有任何关系。 您可以手动创建这些数据模型中。
 

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208104"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理仪表板和使用情况数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "55087746"
 ##  <a name="items"></a> “面板”各个部分的概述  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理仪表板包含深化到特定信息类别的 Web 部件和嵌入式报表。 下面的列表介绍面板的每个部分：  
   
-|面板|Description|  
+|面板|描述|  
 |---------------|-----------------|  
 |基础结构 - 服务器运行状况|显示 CPU 使用情况、内存消耗量和查询响应时间随时间推移而变化的趋势，以便您可以评估系统资源是接近最大容量还是未充分利用。|  
 |操作|包含指向管理中心中其他页的链接，包括当前服务应用程序、服务应用程序的列表和使用情况日志记录。|  
@@ -42,13 +42,13 @@ ms.locfileid: "55087746"
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>从“常规应用程序设置”打开面板  
   
-1.  在管理中心的“常规应用程序设置”组中，单击“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板”。  
+1.  在管理中心的“常规应用程序设置”  组中，单击“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板”  。  
   
 2.  在主页上，选择你要查看其操作数据的 Power Pivot 服务应用程序。  
   
 ### <a name="open-the-dashboard-from-a-power-pivot-service-application"></a>从 Power Pivot 服务应用程序中打开仪表板  
   
-1.  在管理中心的 **“应用程序管理”** 中，单击 **“管理服务应用程序”**。  
+1.  在管理中心的 **“应用程序管理”** 中，单击 **“管理服务应用程序”** 。  
   
 2.  单击 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序的名称。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理仪表板显示当前服务应用程序的操作数据。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "55087746"
   
 1.  在顶部[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理仪表板中，记下当前服务应用程序的名称，例如**默认[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]服务应用程序**。  
   
-2.  在 **“操作”** 面板中单击 **“列出服务应用程序”**。  
+2.  在 **“操作”** 面板中单击 **“列出服务应用程序”** 。  
   
 3.  单击要查看管理仪表板报表的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序的名称。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "55087746"
   
 -   [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 为了捕获有关 Power Pivot 服务器系统的数据，请验证是否为每个 Power Pivot 服务应用程序启用了事件消息传送、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果您关闭事件或使用情况历史记录，则组合报表将会不完整或出错。  
+ 为了捕获有关 Power Pivot 服务器系统的数据，请验证是否为每个 Power Pivot 服务应用程序启用了事件消息传送、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果您关闭事件或使用情况历史记录，则组合报表将不完整或出错。  
   
 ##  <a name="edit"></a> 编辑 Power Pivot 仪表板  
  如果您具有面板开发或自定义方面的专业知识，则可以编辑此面板以加入新的 Web 部件。 还可以编辑包含在面板中的 Web 部件属性。  
@@ -81,7 +81,7 @@ ms.locfileid: "55087746"
  为帮助你开始自定义报表制作， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板提供了一个 Office 数据连接 (.odc) 文件用于连接到源工作簿。 例如，您可以在 Excel 中使用 .odc 文件来创建其他报表。  
   
 > [!NOTE]  
->  编辑文件，以避免当尝试在 Excel 中使用 .odc 文件时出现以下错误：“数据源初始化失败”。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
+>  编辑文件以尝试使用在 Excel 中的.odc 文件时出现以下错误："数据源初始化失败"。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
   
  你必须是场或服务管理员，才能生成基于管理中心内的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的报表。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "55087746"
   
 2.  滚动到页底部的 **“报表”** 部分。  
   
-3.  单击“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理数据”。  
+3.  单击“[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理数据”  。  
   
 4.  将 .odc 文件保存到本地文件夹。  
   
@@ -101,39 +101,39 @@ ms.locfileid: "55087746"
   
 8.  1.  启动 Excel 2013  
   
-    2.  在 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** 功能区中，单击“管理” 。  
+    2.  在 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** 功能区中，单击“管理”  。  
   
-    3.  单击 **“获取外部数据”** ，然后单击 **“现有连接”**。  
+    3.  单击 **“获取外部数据”** ，然后单击 **“现有连接”** 。  
   
     4.  如果看到 .ODC 文件，请单击它。 如果看不到 .ODC 文件，请单击 **“浏览更多”** ，然后在文件路径中指定 .odc 文件。  
   
-    5.  单击 **“打开”**。  
+    5.  单击 **“打开”** 。  
   
     6.  单击 **“测试连接”** 以验证连接成功。  
   
-    7.  单击键入连接的名称，然后单击 **“下一步”**。  
+    7.  单击键入连接的名称，然后单击 **“下一步”** 。  
   
     8.  在指定 MDX 查询中，单击**设计**以打开 MDX 查询设计器以组合您要使用的数据**如果你看到错误消息**"编辑模式的属性名称格式不正确。"，验证你的编辑。ODC 文件。  
   
-    9. 单击 **“确定”** ，然后单击 **“完成”**。  
+    9. 单击 **“确定”** ，然后单击 **“完成”** 。  
   
     10. 创建数据透视表或数据透视图报表以便在 Excel 中直观显示数据。  
   
 9. 1.  启动 Excel 2010。  
   
-    2.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 功能区中，单击“启动 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 窗口”。  
+    2.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 功能区中，单击“启动 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 窗口”  。  
   
-    3.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 窗口的“设计”功能区中，单击“现有连接” 。  
+    3.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 窗口的“设计”功能区中，单击“现有连接”  。  
   
-    4.  单击 **“浏览更多”**。  
+    4.  单击 **“浏览更多”** 。  
   
     5.  在文件路径中，指定 .odc 文件。  
   
-    6.  单击 **“打开”**。 此时将启动“表导入向导”，该向导使用包含使用情况数据的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的连接字符串。  
+    6.  单击 **“打开”** 。 此时将启动“表导入向导”，该向导使用包含使用情况数据的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 工作簿的连接字符串。  
   
     7.  单击 **“测试连接”** 以确认您具有访问权限。  
   
-    8.  输入连接的友好名称，然后单击 **“下一步”**。  
+    8.  输入连接的友好名称，然后单击 **“下一步”** 。  
   
     9. 在“指定 MDX 查询”中，单击 **“设计”** 打开 MDX 查询设计器以组合您要使用的数据，然后创建数据透视表或数据透视图报表以便在 Excel 中直观显示数据。  
   

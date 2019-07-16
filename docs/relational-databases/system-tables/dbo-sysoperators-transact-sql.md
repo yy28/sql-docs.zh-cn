@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3796714cbdfb55900447bf23904136ac5abefa9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984907"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员包含一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作员 ID。|  
-|**名称**|**sysname**|操作员名称。|  
+|**name**|**sysname**|操作员名称。|  
 |**enabled**|**tinyint**|警报通知的状态 (Boolean)。 如果**1**，发生警报时，此运算符可接收通知。|  
 |**email_address**|**nvarchar(100)**|该操作员的电子邮件地址。|  
 |**last_email_date**|**int**|该操作员上次接收电子邮件警报通知的日期。|  

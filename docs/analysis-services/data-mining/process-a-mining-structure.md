@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999729"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182501"
 ---
 # <a name="process-a-mining-structure"></a>处理挖掘结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "37999729"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA：“处理”命令  
+-   XMLA:处理命令  
   
  有关如何处理单个模型的信息，请参阅 [处理挖掘模型](../../analysis-services/data-mining/process-a-mining-model.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "37999729"
   
 1.  从 **中的** “挖掘模型” **菜单项中，选择** “处理挖掘结构和所有模型” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
-     如果更改了结构，则在处理模型之前，系统会提示您重新部署该结构。 单击 **“是”**。  
+     如果更改了结构，则在处理模型之前，系统会提示您重新部署该结构。 单击 **“是”** 。  
   
 2.  单击**运行**中**处理挖掘结构-\<结构 >** 对话框。  
   

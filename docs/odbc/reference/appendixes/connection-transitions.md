@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019190"
 ---
 # <a name="connection-transitions"></a>连接转换
 ODBC 连接具有以下状态。  
   
-|State|Description|  
+|状态|描述|  
 |-----------|-----------------|  
 |C0|未分配的环境中，未分配的连接|  
 |C1|分配的环境中，未分配的连接|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d9251a09039d93d473963ced235669c66f99431b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207602"
 ---
 # <a name="model-properties"></a>模型属性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53072184"
 ##  <a name="bkmk_model_properties"></a> 模型属性  
  **高级**  
   
-|属性|默认设置|Description|  
+|属性|默认设置|描述|  
 |--------------|---------------------|-----------------|  
 |**生成操作**|编译|此属性指定文件如何与生成和部署过程相关。 此属性设置具有以下选项：<br /><br /> **编译**-发生常规的生成操作。 针对模型对象的定义将写入 .asdatabase 文件中。<br /><br /> **无**-指向.asdatabase 文件的输出将为空。|  
 |**复制到输出目录**|不复制|此属性指定源文件将复制到输出目录。 此属性设置具有以下选项：<br /><br /> **不要复制**-输出目录中创建任何副本。<br /><br /> **始终复制**-始终在输出目录中创建副本。<br /><br /> **如果较新则复制** - 只有在存在对 model.bim 文件的更改时，才在输出目录中创建副本。|  
@@ -42,7 +42,7 @@ ms.locfileid: "53072184"
 > [!NOTE]  
 >  在创建新模型项目时，“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改新模型的默认设置。 可以在“属性”窗口中为每个模型设置这些属性以及其他属性。 有关详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-|属性|默认设置|Description|  
+|属性|默认设置|描述|  
 |--------------|---------------------|-----------------|  
 |**排序规则**|用于安装 Visual Studio 的计算机的默认排序规则。|模型的排序规则指示符。|  
 |**兼容级别**|默认值或在创建项目时选择的其他值。|适用于 SQL Server 2012 Analysis Services SP1 或更高版本。 指定可用于此模型的功能和设置。 有关详细信息，请参阅 [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
@@ -54,11 +54,11 @@ ms.locfileid: "53072184"
 |**语言**|英语|模型的默认语言。 该默认语言由 Visual Studio 语言确定。 不能在“属性”窗口中设置此属性。|  
 |**工作区数据库**|项目名称，后跟一个下划线，再后跟一个 GUID。|用于存储和编辑所选 model.bim 文件的内存中模型的工作区数据库的名称。 此数据库将出现在“工作区服务器”属性中指定的 Analysis Services 实例中。 不能在“属性”窗口中设置此属性。 有关详细信息，请参阅[工作区数据库](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)。|  
 |**工作区保持期**|从内存中卸载|指定在关闭某一模型后将如何保留工作区数据库。 工作区数据库将包括模型元数据、导入到模型中的数据以及模拟凭据（已加密）。 在某些情况下，工作区数据库可能会非常大并且占用大量内存。 默认情况下，工作区数据库将从内存中卸载。 在更改此设置时，一定要考虑您的可用内存资源以及计划处理该模型的频繁程度。 此属性设置具有以下选项：<br /><br /> **保留在内存中** - 指定在关闭模型后将工作区数据库保留在内存中。 此选项将会占用较多内存；但打开某一模型时，将会占用较少的资源并且工作区数据库将更快加载。<br /><br /> **从内存中卸载** - 指定将工作区数据库保留在磁盘上，但在关闭模型后将不再保留在内存中。 此选项将会占用较少内存；但打开某一模型时，将会占用附加的资源，并且与工作区数据库保留在内存中相比，模型的加载速度将更慢。 在内存中资源受到限制或在处理远程工作区数据库时，将使用此选项。<br /><br /> **删除工作区** - 指定从内存中删除工作区数据库，在关闭模型后不将工作区数据库保留在磁盘上。 此选项将会占用较少内存和存储空间；但打开某一模型时，将会占用附加的资源，并且与工作区数据库保留在内存中或磁盘上相比，模型的加载速度将更慢。 只有在偶尔处理模型时，才使用此选项。<br /><br /> <br /><br /> 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改此属性的默认设置。|  
-|**工作区服务器**|localhost|此属性指定创作模型时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 Analysis Services 的所有可用实例都将包括在列表框中。<br /><br /> 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改此属性的默认设置。<br /><br /> <br /><br /> 注意：建议您始终将一个本地 Analysis Services 服务器指定为工作区服务器。 对于远程服务器上的工作区数据库，不支持从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。|  
+|**工作区服务器**|localhost|此属性指定创作模型时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 Analysis Services 的所有可用实例都将包括在列表框中。<br /><br /> 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改此属性的默认设置。<br /><br /> <br /><br /> 注意:建议您始终指定为工作区服务器本地的 Analysis Services 服务器。 对于远程服务器上的工作区数据库，不支持从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。|  
   
 ##  <a name="bkmk_conf_model_prop"></a> 配置模型属性设置  
   
-1.  在 SSDT 的“解决方案资源管理器” 中，单击 **Model.bim** 文件。  
+1.  在 SSDT 的“解决方案资源管理器”  中，单击 **Model.bim** 文件。  
   
 2.  在 **“属性”** 窗口中，单击某个属性，然后键入值或单击向下箭头选择设置选项。  
   

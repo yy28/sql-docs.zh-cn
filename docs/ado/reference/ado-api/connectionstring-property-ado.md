@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933491"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 属性 (ADO)
 指示用来建立与数据源的连接的信息。  
@@ -38,7 +37,7 @@ ms.locfileid: "66695953"
 |--------------|-----------------|  
 |*Provider=*|指定要用于连接的提供程序的名称。|  
 |*文件名称 =*|指定的特定于提供程序的文件 （例如，持久化的数据源对象） 包含预设的连接信息的名称。|  
-|*Remote Provider=*|指定要打开客户端连接时使用的提供程序的名称。 （仅在远程数据服务中。）|  
+|*远程提供程序 =*|指定要打开客户端连接时使用的提供程序的名称。 （仅在远程数据服务中。）|  
 |*Remote Server=*|指定要打开客户端连接时使用的服务器的路径名称。 （仅在远程数据服务中。）|  
 |*URL=*|连接字符串指定为标识资源，例如文件或目录的绝对 URL。|  
   

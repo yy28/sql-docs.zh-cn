@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c7f9c03794ce375e902773f6d0231bf76e2031b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b81ad98725bb48fe03e472cdf5cfdbbf047aaef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965531"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 和 Unique 属性示例 (VC++)
 此示例演示[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)并[Unique](../../../ado/reference/adox-api/unique-property-adox.md)的属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码包含两个列创建一个新表。 **PrimaryKey**并**Unique**属性用于使一个列将不允许重复值的主键。  

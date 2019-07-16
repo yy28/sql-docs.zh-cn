@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e9b7229882b3b7f94e6b059e04c6496bde09641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938045"
 ---
 # <a name="about-drivers-and-data-sources"></a>关于驱动程序和数据源
 *驱动程序*是处理 ODBC 请求并将数据返回到应用程序的组件。 如有必要，驱动程序将修改到理解数据源的窗体应用程序的请求。 必须使用驱动程序的安装程序以添加或删除驱动程序从您的计算机。  
   
  *数据源*是数据库或访问的驱动程序文件，并由数据源名称 (DSN) 标识。 使用 ODBC 数据源管理器添加、 配置和从系统中删除数据源。 下表所述的可用数据源的类型。  
   
-|数据源|Description|  
+|数据源|描述|  
 |-----------------|-----------------|  
 |“用户”|用户 Dsn 计算机本地，并可以仅由当前用户。 它们是在 HKEY_CURRENT_USER 注册表子树中进行注册。|  
 |系统|系统 Dsn 是本地的计算机而不是专用于用户。 系统或具有权限的用户可以使用数据源使用的系统 DSN 设置。 在 HKEY_LOCAL_MACHINE 注册表子树中注册系统 Dsn。|  
