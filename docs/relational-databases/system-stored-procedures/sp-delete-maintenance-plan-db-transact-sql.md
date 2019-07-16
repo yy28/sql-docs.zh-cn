@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
+title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a260e68064b0a9218da07a8a65cf6b584382b4b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056518"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>参数  
 `[ @plan_id = ] 'plan\_id'` 指定维护计划 id。 *plan_id*是**uniqueidentifier**。  
   
-`[ @db_name = ] 'database\_name'` 指定要从维护计划中删除的数据库名称。 database_name 的数据类型为 sysname。  
+`[ @db_name = ] 'database\_name'` 指定要从维护计划中删除的数据库名称。 database_name 的数据类型为 sysname   。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

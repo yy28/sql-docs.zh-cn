@@ -1,5 +1,5 @@
 ---
-title: sp_adddistpublisher (Transact-SQL) | Microsoft Docs
+title: sp_adddistpublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b7f55d89054ff7d950921e0c6762770c6e714500
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 5c9cab9530a67b01274bf5d1bafa579199f0a4d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072784"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -110,7 +109,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="see-also"></a>请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c87b8ecc730c70bbe0b49c1fe071c08079816a42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074592"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
 
@@ -45,9 +44,9 @@ ms.locfileid: "65477071"
   
 -   *entity* 是一个数据列表。 您可以将实体视作数据库中的表。  例如，Color 实体可能包含一个颜色列表。 有关详细信息，请参阅[实体 (Master Data Services)](../../master-data-services/entities-master-data-services.md)。  
   
--   成员是一行数据（一条记录）。 每个实体都包含成员。 **Blue**就是成员的一个示例。 有关详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。  
+-   成员  是一行数据（一条记录）。 每个实体都包含成员。 **Blue**就是成员的一个示例。 有关详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。  
   
--   *attribute* 是数据列。 每个成员都具有属性。 例如，“Blue”成员的“代码”属性是“B”有关属性的详细信息，请参阅[属性 (Master Data Services)](../../master-data-services/attributes-master-data-services.md)。  
+-   *attribute* 是数据列。 每个成员都具有属性。 例如，“Blue”  成员的“代码”  属性是“B”  有关属性的详细信息，请参阅[属性 (Master Data Services)](../../master-data-services/attributes-master-data-services.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

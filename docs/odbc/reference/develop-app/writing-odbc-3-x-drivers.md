@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb403cef47f901cdb43bbb32c669ba68aa34913d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078897"
 ---
 # <a name="writing-odbc-3x-drivers"></a>编写 ODBC 3.x 驱动程序
 下表显示了在 ODBC 3 函数支持。*x*驱动程序和 ODBC 应用程序，以及针对 ODBC 3 调用函数时执行由驱动程序管理器中的映射。*x*驱动程序。  
   
-|函数|支持<br /><br /> 通过<br /><br /> ODBC 3.*x*<br /><br /> 驱动程序？|支持<br /><br /> 通过<br /><br /> ODBC 3.*x*<br /><br /> 应用程序？|映射的/受支持<br /><br /> 通过 ODBC 3 中。*x*<br /><br /> 为驱动程序管理器<br /><br /> ODBC 3。*x*驱动程序？|  
+|函数|支持<br /><br /> 通过<br /><br /> ODBC 3。*x*<br /><br /> 驱动程序？|支持<br /><br /> 通过<br /><br /> ODBC 3。*x*<br /><br /> 应用程序？|映射的/受支持<br /><br /> 通过 ODBC 3 中。*x*<br /><br /> 为驱动程序管理器<br /><br /> ODBC 3。*x*驱动程序？|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|否|No[1]|是|  
 |**SQLAllocEnv**|否|No[1]|是|  

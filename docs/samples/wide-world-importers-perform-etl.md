@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067619"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51674106"
 
 接下来，一系列的数据流任务加载每个维度。 然后，它们的加载每个事实。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - SQL Server 2016 （或更高版本），与 WideWorldImporters 和 WideWorldImportersDW 数据库 （在相同或不同的 SQL Server 实例）
 - SQL Server Management Studio
@@ -49,7 +48,7 @@ ms.locfileid: "51674106"
 
 若要重新创建示例数据库的源代码，请参阅[wide world importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)。
 
-## <a name="install"></a>Install
+## <a name="install"></a>安装
 
 1. 部署 Integration Services 包：
    1. 在 Windows 资源管理器中打开*每日 ETL.ispac*包。 这将启动 SQL Server Integration Services 部署向导。

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069774"
 ---
 # <a name="freeing-descriptors"></a>释放描述符
 可以是显式分配的描述符是显式释放通过调用**SQLFreeHandle**与*HandleType* SQL_HANDLE_DESC，或隐式时，将释放连接句柄。 显式分配的描述符被释放时，会自动应用的已释放的描述符还原为隐式为其分配的描述符到的所有语句句柄。  

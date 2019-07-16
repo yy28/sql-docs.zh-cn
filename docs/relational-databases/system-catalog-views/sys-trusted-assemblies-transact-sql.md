@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5830d394330778fae6aab795286c7fbc9e211072
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061365"
 ---
-# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact SQL)  
+# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 每个受信任程序集的服务器占一行。
@@ -34,12 +33,12 @@ ms.locfileid: "47710715"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|列名 |数据类型 |Description |
+|列名 |数据类型 |描述 |
 |--- |--- |--- |
 |密切相关的文章 |varbinary(8000) |SHA2_512 哈希值的程序集内容。 |
 |description |nvarchar(4000) |程序集的可选用户定义说明。 Microsoft 建议使用简单名称、 版本号、 区域性、 公钥，以及要信任的程序集的体系结构进行编码的规范名称。 此值唯一标识公共语言运行时 (CLR) 端上的程序集，并在 sys.assemblies clr_name 值相同。 |
 |create_date |datetime2 |程序集添加到受信任的程序集列表的日期。 |
-|created_by |nvarchar （128) |程序集添加到列表的主体的登录名。 |
+|created_by |nvarchar(128) |程序集添加到列表的主体的登录名。 |
 | | | |
 
 

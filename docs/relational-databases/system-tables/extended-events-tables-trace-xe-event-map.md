@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc823459c701bd0045e594f753a803a0a092a244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07810bcd1f43bd3fd2428361e5f429edb9c7c3d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056238"
 ---
 # <a name="extended-events-tables---tracexeeventmap"></a>扩展事件表 - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   映射到 SQL 跟踪事件类的每个扩展事件各占一行。 此表存储在 master 数据库的 sys 架构中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |trace_event_id|**smallint**|正在映射的 SQL 跟踪事件类的 ID。|  
 |package_name|**nvarchar(60)**|映射事件所在的扩展事件包的名称。|  

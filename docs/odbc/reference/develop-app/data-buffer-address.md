@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f07f835361fcf29143376fe468a55f0bf26e31e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7cd157edd6111dec29ae238a1c383879e66ac0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067434"
 ---
 # <a name="data-buffer-address"></a>数据缓冲区地址
 应用程序将数据缓冲区的地址传递给在参数中，通常名为驱动程序*ValuePtr*或类似名称。 例如，在下面的示例调用到**SQLBindCol**，应用程序指定的地址*日期*变量：  

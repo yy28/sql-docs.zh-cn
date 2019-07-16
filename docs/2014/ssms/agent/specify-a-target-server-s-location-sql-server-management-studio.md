@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211338"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>指定目标服务器的位置 (SQL Server Management Studio)
   本主题介绍了如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的多服务器管理配置中指定目标服务器的位置。  
@@ -53,11 +53,11 @@ ms.locfileid: "52780509"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开要指定目标服务器的位置的 master 服务器。  
   
-2.  右键单击“SQL Server 代理”，指向“多服务器管理”，然后选择“管理目标服务器”。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后选择“管理目标服务器”  。  
   
-3.  右键单击某一目标服务器，再选择“属性”。  
+3.  右键单击某一目标服务器，再选择“属性”  。  
   
-4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”**。  
+4.  在 **“位置”** 框中，输入该服务器的位置，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52780509"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb ;  

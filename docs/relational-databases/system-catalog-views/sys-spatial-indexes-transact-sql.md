@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b206a8e1a4290a9ac4a2db6b88b8e326ed44b42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b2172e48ec787c37fd9b3daab6cafb5c49f88f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078630"
 ---
 # <a name="sysspatialindexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   表示空间索引的主索引信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |\<继承列 >||继承中的列[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。|  
 |spatial_index_type|**tinyint**|空间索引的类型：<br /><br /> 1 = 几何空间索引<br /><br /> 2 = 地理空间索引|  
 |spatial_index_type_desc|**nvarchar(60)**|空间索引的类型说明：<br /><br /> GEOMETRY = 几何空间索引<br /><br /> GEOGRAPHY = 地理空间索引|  
-|tessellation_scheme|**sysname**|分割方案的名称：<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注意： 有关分割方案的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。|  
+|tessellation_scheme|**sysname**|分割方案的名称：<br /><br /> GEOMETRY_GRID、GEOMETRY_AUTO_GRID、<br /><br /> GEOGRAPHY_GRID、GEOGRAPHY_AUTO_GRID<br /><br /> 注意:有关分割方案的信息，请参阅[空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。|  
 |\<继承列 >||继承中的列[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。<br /><br /> 继承的列 has_filter 和 filter_definition 显示在特定于空间索引的列之后。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>请参阅  

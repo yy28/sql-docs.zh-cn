@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068071"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   数据库中的每个计划指南都在表中对应一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|数据库中计划指南的唯一标识符。|  
-|**名称**|**sysname**|计划指南的名称。|  
+|**name**|**sysname**|计划指南的名称。|  
 |**create_date**|**datetime**|计划指南的创建日期和时间。|  
 |**modify_date**|**日期时间**|上次修改计划指南的日期。|  
 |**is_disabled**|**bit**|1 = 禁用计划指南。<br /><br /> 0 = 启用计划指南。|  
@@ -46,7 +45,7 @@ ms.locfileid: "63032985"
 |**scope_object_id**|**Int**|如果作用域为 OBJECT，则为定义计划指南作用域的对象的 object_id。<br /><br /> 如果计划指南的作用域不是 OBJECT，则其值为 NULL。|  
 |**scope_batch**|**nvarchar(max)**|批处理文本，如果**scope_type**是 SQL。<br /><br /> 如果批处理类型不是 SQL，则其值为 NULL。<br /><br /> 如果为 NULL 并且**scope_type**是 SQL 的值**query_text**适用。|  
 |**参数**|**nvarchar(max)**|定义与计划指南关联的参数列表的字符串。<br /><br /> NULL = 没有与计划指南关联的参数列表。|  
-|**hints**|**nvarchar(max)**|与计划指南关联的 OPTION 子句提示。|  
+|**提示**|**nvarchar(max)**|与计划指南关联的 OPTION 子句提示。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

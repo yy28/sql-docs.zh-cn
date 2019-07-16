@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b76e642e2760f0a10a44c77c9859876502d944ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ee2c0623df9ce285e466cc80287f323ac9706351
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070774"
 ---
 # <a name="data-types-dmx"></a>数据类型 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,21 +22,21 @@ ms.locfileid: "37992632"
   
  数据类型取决于算法。 每种算法决定了受支持的数据类型及其使用方式。 Microsoft 算法支持下列数据类型：  
   
--   文本  
+-   Text  
   
 -   Long  
   
 -   Boolean  
   
--   双精度  
+-   Double  
   
--   date  
+-   Date  
   
  有关类型的详细信息数据[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持，请参阅[数据类型&#40;数据挖掘&#41;](../analysis-services/data-mining/data-types-data-mining.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   

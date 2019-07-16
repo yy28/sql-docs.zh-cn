@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078985"
 ---
 # <a name="writing-an-interoperable-application"></a>编写交互式应用程序
 每当应用程序使用多个驱动程序对相同的代码，该代码必须是可在这些驱动程序之间的互操作。 在大多数情况下，这是一个简单的任务。 例如，用于提取与只进游标的行的代码是相同的所有驱动程序。 在某些情况下，这可以更加困难。 例如，若要构造 SQL 语句中使用的标识符的代码需要考虑标识符的大小写，用引号括起来，和的一部分、 两部分和三部分命名约定。  

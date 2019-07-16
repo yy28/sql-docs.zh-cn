@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e3d83f0aa27641c9dde164f51319a0e78d456ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073836"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 服务提供程序接口 (SPI) 参考
 传统上，ODBC 定义应用程序编程接口 (API)。 在 API 函数可以调用应用程序和驱动程序管理器和驱动程序中实现它们。  

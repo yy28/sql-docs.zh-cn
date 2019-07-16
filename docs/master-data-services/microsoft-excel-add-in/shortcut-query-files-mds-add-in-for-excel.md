@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c02c20f55e6d814d2b1a95087f94da3824de57b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3028682669ae1a7e33cb85847fbf6e9456c11d42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074394"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>快捷查询文件（用于 Excel 的 MDS 外接程序）
 
@@ -41,7 +40,7 @@ ms.locfileid: "65486073"
 ## <a name="queryopener-application"></a>QueryOpener 应用程序  
  安装了 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 的所有用户都装有名为 QueryOpener 的应用程序。 此应用程序用于在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中打开快捷查询文件。 如果双击快捷查询文件，将自动使用此应用程序在该外接程序中打开该文件。  
   
- 使用此应用程序打开快捷查询文件时，系统会提示将该连接视为“安全”连接，这意味着你信任此位置的内容。 （通过选中提示窗口中的“始终允许连接到此地址”，可以确保连接的安全性。）每次将某个连接标记为安全连接后，该连接都会添加到列表中。 如果要清空该列表，请打开 **“设置”** 对话框，然后在 **“添加到安全列表的服务器”** 部分中，单击 **“全部清除”**。  
+ 使用此应用程序打开快捷查询文件时，系统会提示将该连接视为“安全”连接，这意味着你信任此位置的内容。 （通过选中提示窗口中的“始终允许连接到此地址”  ，可以确保连接的安全性。）每次将某个连接标记为安全连接后，该连接都会添加到列表中。 如果要清空该列表，请打开 **“设置”** 对话框，然后在 **“添加到安全列表的服务器”** 部分中，单击 **“全部清除”** 。  
   
  该应用程序的默认位置为 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe。  
   

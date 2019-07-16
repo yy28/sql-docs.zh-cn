@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: ed8d04f571deb231f3dbea4d840ee69e3ea1b140
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078555"
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +66,13 @@ OBJECT_ID('table_name')
   
 ## <a name="table-returned"></a>返回的表  
   
-|“列”|数据类型|Description|  
+|“列”|数据类型|描述|  
 |------------|---------------|-----------------|  
-|关键字 (keyword)|**nvarchar(4000)**|存储在全文索引中的关键字的十六进制表示形式。<br /><br /> 注意：OxFF 表示指示文件或数据集的末尾的特殊字符。|  
-|display_term|**nvarchar(4000)**|关键字的可读格式。 此格式是从全文索引中存储的内部格式派生的。<br /><br /> 注意：OxFF 表示指示文件或数据集的末尾的特殊字符。|  
+|关键字 (keyword)|**nvarchar(4000)**|存储在全文索引中的关键字的十六进制表示形式。<br /><br /> 注意:OxFF 表示指示文件或数据集的末尾的特殊字符。|  
+|display_term|**nvarchar(4000)**|关键字的可读格式。 此格式是从全文索引中存储的内部格式派生的。<br /><br /> 注意:OxFF 表示指示文件或数据集的末尾的特殊字符。|  
 |column_id|**int**|从中对当前关键字进行全文索引的列的 ID。|  
 |document_id|**int**|从中对当前字词进行全文索引的文档或行的 ID。 此 ID 对应于该文档或行的全文键值。|  
-|property_id|**int**|您在 OBJECT_ID 中指定的表的全文索引内的搜索属性的内部属性 ID (*table_name*) 参数。<br /><br /> 在将给定属性添加到搜索属性列表时，全文引擎会注册该属性并为其指定特定于该属性列表的内部属性 ID。 内部属性 ID 是一个整数，对给定的搜索属性列表唯一。 如果为多个搜索属性列表注册给定属性，则可能会为每个搜索属性列表指定不同的内部属性 ID。<br /><br /> 注意：内部属性 ID 与将属性添加到搜索属性列表时指定的属性整数标识符不同。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。<br /><br /> 若要查看 property_id 与属性名称之间的关联：<br />                    [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
+|property_id|**int**|您在 OBJECT_ID 中指定的表的全文索引内的搜索属性的内部属性 ID (*table_name*) 参数。<br /><br /> 在将给定属性添加到搜索属性列表时，全文引擎会注册该属性并为其指定特定于该属性列表的内部属性 ID。 内部属性 ID 是一个整数，对给定的搜索属性列表唯一。 如果为多个搜索属性列表注册给定属性，则可能会为每个搜索属性列表指定不同的内部属性 ID。<br /><br /> 注意:内部属性 ID 与将属性添加到搜索属性列表时指定的属性整数标识符不同。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。<br /><br /> 若要查看 property_id 与属性名称之间的关联：<br />                    [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
 ## <a name="remarks"></a>备注  
  此动态管理视图可以回答诸如以下的各个问题：  
@@ -134,7 +133,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [全文搜索](../../relational-databases/search/full-text-search.md)   
  [改进全文索引的性能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
- [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
  [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   

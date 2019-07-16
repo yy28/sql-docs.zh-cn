@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d4f819a92885cf5d173bcdda53ebf3291c958eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060101"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>删除 SSMA for DB2 组件 (DB2ToSQL)
 完成后将数据库迁移在 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能需要卸载 SSMA 组件。 您可以在任何时候卸载客户端组件。 但是，不应卸载扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非你已迁移的数据库不能再使用中的函数**ssma_DB2**的架构**sysdb**数据库。  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e79b997540ecf8dbe95b3bb0423c3524b941c433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 70d737e8c73d3e5b6876c2669fbafbc71bea66e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986466"
 ---
 # <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_errors**表包含具有扩展分发代理和合并代理失败信息的行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|错误 ID。|  
 |**time**|**datetime**|出现错误的时间。|  

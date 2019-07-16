@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068947"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 清单架构 (AccessToSQL)
 以下各节介绍的表导出到 Access 架构时创建的 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -50,7 +49,7 @@ ms.locfileid: "62759692"
 ## <a name="databases"></a>数据库  
 数据库元数据导出到**SSMA_Access_InventoryDatabases**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|用于唯一标识每个数据库的 GUID。 此列也是表的主键。|  
 |**DatabaseName**|**nvarchar(4000)**|访问数据库的名称。|  
@@ -75,7 +74,7 @@ ms.locfileid: "62759692"
 ## <a name="tables"></a>表  
 表元数据导出到**SSMA_Access_InventoryTables**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含此表的数据库。|  
 |**TableId**|**uniqueidentifier**|用于唯一标识表的 GUID。 此列也是表的主键。|  
@@ -88,7 +87,7 @@ ms.locfileid: "62759692"
 ## <a name="columns"></a>“列”  
 列元数据导出到**SSMA_Access_InventoryColumns**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含此列的数据库。|  
 |**TableId**|**uniqueidentifier**|标识包含此列的表。|  
@@ -104,7 +103,7 @@ ms.locfileid: "62759692"
 ## <a name="indexes"></a>索引  
 索引的元数据导出到**SSMA_Access_InventoryIndexes**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含此索引的数据库。|  
 |**TableId**|**uniqueidentifier**|标识包含此索引的表。|  
@@ -118,7 +117,7 @@ ms.locfileid: "62759692"
 ## <a name="foreign-keys"></a>外键  
 外键元数据导出到**SSMA_Access_InventoryForeignKeys**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含该外键的数据库。|  
 |**TableId**|**uniqueidentifier**|标识包含此外键的表。|  
@@ -134,7 +133,7 @@ ms.locfileid: "62759692"
 ## <a name="queries"></a>查询  
 查询元数据导出到**SSMA_Access_InventoryQueries**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含此查询的数据库。|  
 |**QueryId**|**int**|一个递增的整数，用于标识查询。 此列是表的主键。|  
@@ -147,7 +146,7 @@ ms.locfileid: "62759692"
 ## <a name="forms"></a>窗体  
 表格元数据导出到**SSMA_Access_InventoryForms**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含此窗体的数据库。|  
 |**FormId**|**int**|一个用于标识窗体的递增整数。 此列是表的主键。|  
@@ -156,7 +155,7 @@ ms.locfileid: "62759692"
 ## <a name="macros"></a>宏  
 宏元数据导出到**SSMA_Access_InventoryMacros**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含宏的数据库。|  
 |**MacroId**|**int**|一个用于标识该宏的递增整数。 此列是表的主键。|  
@@ -165,7 +164,7 @@ ms.locfileid: "62759692"
 ## <a name="reports"></a>报表  
 报表元数据导出到**SSMA_Access_InventoryReports**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含该报表的数据库。|  
 |**ReportId**|**int**|一个用于标识报表的递增整数。 此列是表的主键。|  
@@ -174,7 +173,7 @@ ms.locfileid: "62759692"
 ## <a name="modules"></a>模块  
 模块元数据导出到**SSMA_Access_InventoryModules**表。 此表包含以下列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含该模块的数据库。|  
 |**ModuleId**|**int**|一个用于标识模块的递增整数。 此列是表的主键。|  

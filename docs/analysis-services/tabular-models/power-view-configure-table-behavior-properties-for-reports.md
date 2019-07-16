@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579607"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207550"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-报表配置表行为属性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "57579607"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，单击要为其配置默认字段列表的表。  
   
-2.  在 **“属性”** 窗口的 **“表行为”** 属性中，单击 **“单击可编辑”**。  
+2.  在 **“属性”** 窗口的 **“表行为”** 属性中，单击 **“单击可编辑”** 。  
   
-3.  在 **“表行为”** 对话框中，设置 **“行标识符”**，然后在此对话框中指定其他属性。  
+3.  在 **“表行为”** 对话框中，设置 **“行标识符”** ，然后在此对话框中指定其他属性。  
   
 ## <a name="setting-the-row-identifier-property"></a>设置行标识符属性  
  在该表中，行标识符指定单一列，其中仅包含唯一值且不包含空值。 行标识符属性用于更改分组，以便组不基于行的字段构成，而不是基于始终用于唯一标识行，而不考虑特定的报表布局中使用的字段的固定列。  
@@ -106,7 +106,7 @@ ms.locfileid: "57579607"
  ![行数据包含基于行 ID 的重复项](../../analysis-services/tabular-models/media/ssas-jonyang.gif "行数据包含基于行 ID 的重复项")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>矩阵布局太拥挤  
- 当您在矩阵中显示详细信息表时，默认分组提供每列的汇总值。 根据您的目标，这种汇总值可能比您需要的更多。 要更改此行为，您可以设置 **“行标识符”**。 不需要设置其他属性；设置行标识符就足以更改分组，以便基于每行的唯一行标识符对该行计算汇总值。  
+ 当您在矩阵中显示详细信息表时，默认分组提供每列的汇总值。 根据您的目标，这种汇总值可能比您需要的更多。 要更改此行为，您可以设置 **“行标识符”** 。 不需要设置其他属性；设置行标识符就足以更改分组，以便基于每行的唯一行标识符对该行计算汇总值。  
   
  比较下面的设置之前和之后的图像，它们显示了设置此属性对于矩阵布局的影响。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "57579607"
  ![按行标识符分组的矩阵布局](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "按行标识符分组的矩阵布局")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>图表在轴上显示的项和级别过多  
- 显示详细信息数据的图表报表应将行标识符用作轴。 如果没有行标识符，则轴是不确定的，这会导致最佳猜测的布局，而这种布局可能没有意义。 要更改此行为，您可以设置 **“行标识符”**。 不需要设置其他属性；设置行标识符就足以更改分组，以便基于每行的唯一行标识符对该行计算汇总值。  
+ 显示详细信息数据的图表报表应将行标识符用作轴。 如果没有行标识符，则轴是不确定的，这会导致最佳猜测的布局，而这种布局可能没有意义。 要更改此行为，您可以设置 **“行标识符”** 。 不需要设置其他属性；设置行标识符就足以更改分组，以便基于每行的唯一行标识符对该行计算汇总值。  
   
  比较下面的设置之前和之后的图像，它们显示了设置此属性对于图表布局的影响。 它是同一报表，具有完全相同的字段和显示格式。 唯一的差别是底部图像显示对 Items 表设置 **“行标识符”** 之后的报表。  
   

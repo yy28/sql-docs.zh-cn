@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032840"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,11 +70,11 @@ sp_special_columns [ @table_name = ] 'table_name'
  所使用的 ODBC 版本。 *ODBCVer*是**int (** 4 **)** ，默认值为 2。 这指示 ODBC 版本 2.0。 有关 ODBC 2.0 版和 ODBC 3.0 版之间差别的详细信息，请参阅 ODBC 3.0 版的 ODBC SQLSpecialColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|行 ID 的实际作用域。 可以为 0、1 或 2。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 0。 此字段始终返回值。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID 只有位于该行上时才能保证有效。 如果另一个事务更新或删除了该行，则以后使用该行 ID 重新选择时，可能无法返回一个行。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID 在当前事务期间保证有效。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID 在会话（跨事务边界）期间保证有效。|  
 |COLUMN_NAME|**sysname**|每个列的列名*表*返回。 此字段始终返回值。|  

@@ -1,5 +1,5 @@
 ---
-title: 从 SQL 到 C：Time | Microsoft Docs
+title: 从 SQL 到 C：时间 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99f8219ef53f72b0d7ab1477bba5d24d441a3141
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065080"
 ---
 # <a name="sql-to-c-time"></a>从 SQL 到 C：Time
 ODBC SQL 数据类型是次标识符：  
@@ -31,11 +30,11 @@ ODBC SQL 数据类型是次标识符：
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> *9* <= *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 9|数据<br /><br /> [A] 的截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> *9* <= *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 9|数据<br /><br /> [A] 的截断的数据<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|None[b]|数据|6[d]|不适用|  
-|SQL_C_TYPE_TIMESTAMP|None[b]|Data[c]|16[d]|不适用|  
+|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> *9* <= *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 9|Data<br /><br /> [A] 的截断的数据<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> *9* <= *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 9|Data<br /><br /> [A] 的截断的数据<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|无 [b]|Data|6[d]|不适用|  
+|SQL_C_TYPE_TIMESTAMP|无 [b]|数据 [c]|16 [d]|不适用|  
   
  [a] 将被截断秒的小数部分的时间。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78ee14838b467cfe6e555c97f1e74c65cccf98ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e39b70f92f7b239b011cdd4fdd6abd36c27561c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076806"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>使用 SQLSetPos 删除行集中的行
 删除操作的**SQLSetPos**使数据源中删除一个或多个所选的表的行。 若要删除的行**SQLSetPos**，应用程序调用**SQLSetPos**与*操作*设置为 SQL_DELETE 和*RowNumber*设置为若要删除的行数。 如果*RowNumber*为 0，则删除行集中的所有行。  

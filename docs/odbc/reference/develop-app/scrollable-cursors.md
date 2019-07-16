@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38eb4c8e5cc859297a36115ba5cc6dd2c0529304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061616"
 ---
 # <a name="scrollable-cursors"></a>可滚动游标
 在现代基于屏幕的应用程序，在用户滚动向后和向前浏览数据。 对于此类应用程序，返回到之前提取的行是一个问题。 一种可能性是关闭和重新打开游标，然后提取行，直到光标达到所需的行。 另一种可能性是读取结果集、 其缓存到本地，并实现应用程序中滚动。 这两种可能性也仅使用较小的结果集和第二种可能性是难以实现。 更好的解决方案是使用*可滚动游标，* 这可以向后移动并转发结果集中。  

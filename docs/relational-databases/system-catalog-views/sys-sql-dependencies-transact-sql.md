@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb596b4971edb41e406467e1b60a076768fbab3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073178"
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "47645215"
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)相反。  
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|class|**tinyint**|标识被引用的实体的类：<br /><br /> 0 = 对象或列 （仅限非架构绑定引用）<br /><br /> 1 = 对象或列（架构绑定引用）<br /><br /> 2 = 类型（架构绑定引用）<br /><br /> 3 = XML 架构集合（架构绑定引用）<br /><br /> 4 = 分区函数（架构绑定引用）|  
+|class |**tinyint**|标识被引用的实体的类：<br /><br /> 0 = 对象或列 （仅限非架构绑定引用）<br /><br /> 1 = 对象或列（架构绑定引用）<br /><br /> 2 = 类型（架构绑定引用）<br /><br /> 3 = XML 架构集合（架构绑定引用）<br /><br /> 4 = 分区函数（架构绑定引用）|  
 |**class_desc**|**nvarchar(60)**|被引用的实体的类的说明：<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
 |**object_id**|**int**|引用对象的 ID。|  
 |**column_id**|**int**|如果引用 ID 是一列，则为引用列的 ID；否则为 0。|  
@@ -48,7 +47,7 @@ ms.locfileid: "47645215"
 |**is_updated**|**bit**|更新了对象或列。|  
 |**is_select_all**|**bit**|对象用在了 SELECT * 子句中（仅限对象级）。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

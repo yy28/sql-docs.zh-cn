@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025687"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,8 +49,8 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@start_ip_address** =] '*start_ip_address*'  
  数据库级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最低 IP 地址为 `0.0.0.0`。 *start_ip_address*是**varchar(50)** ，无默认值。  
   
- [**@end_ip_address** =] '*end_ip_address*'  
- 数据库级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。 *end_ip_address* is **varchar(50)** with no default value.  
+ [ **@end_ip_address** =] '*end_ip_address*'  
+ 数据库级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例。 可能的最高 IP 地址为 `255.255.255.255`。 *end_ip_address*是**varchar(50)** ，无默认值。  
   
  下表演示了支持的参数和选项在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -64,7 +63,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  如果添加的开始和结束 IP 地址都等于数据库级防火墙设置`0.0.0.0`，启用访问权限中的数据库[!INCLUDE[ssSDS](../../includes/sssds-md.md)]从任何 Azure 资源的服务器。 提供到值*名称*参数，它将帮助您记住防火墙设置的目的。  
   
 ## <a name="permissions"></a>权限  
- 需要针对数据库的 CONTROL 权限。  
+ 需要针对数据库的 CONTROL 权限  。  
   
 ## <a name="examples"></a>示例  
  下面的代码创建的数据库级防火墙设置调用`Allow Azure`启用到你的数据库从 Azure 访问。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209571"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用嵌套表数据作为准确性图表的输入
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "52505314"
   
 4.  单击浏览按钮 **（...）** 若要从当前服务器上的数据源视图的列表中选择外部数据集。  
   
-5.  单击“选择事例表” 。 在 **“选择表”** 对话框中，从包含事例数据的数据源视图中选择事例表，然后单击 **“确定”**。  
+5.  单击“选择事例表”  。 在 **“选择表”** 对话框中，从包含事例数据的数据源视图中选择事例表，然后单击 **“确定”** 。  
   
-6.  单击 **“选择嵌套表”**。 在 **“选择表”** 对话框中，选择包含嵌套数据的表，然后单击 **“确定”**。  
+6.  单击 **“选择嵌套表”** 。 在 **“选择表”** 对话框中，选择包含嵌套数据的表，然后单击 **“确定”** 。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

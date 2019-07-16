@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c8ac59b6a9798f04efaf756c83b6862e9fa9871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b677e0f6c9be058650a46aee3465811b8f3eecc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990145"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62719607"
   
 ## <a name="definition"></a>定义  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|唯一地标识已发布的项目。|  
 |**srvid**|**smallint**|订阅服务器的服务器 ID。|  
@@ -51,7 +50,7 @@ ms.locfileid: "62719607"
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

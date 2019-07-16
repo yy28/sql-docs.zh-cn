@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c263f7e3df69b6eb3d9517b2dc973a1cb4102f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060204"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提交到数据库邮件的每个附件都在视图中占一行。 如果需要有关数据库附件的信息，则请使用该视图。 若要查看通过数据库邮件使用处理的所有电子邮件[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|附件的标识符。|  
 |**mailitem_id**|**int**|包含附件的邮件项的标识符。|  
@@ -45,7 +44,7 @@ ms.locfileid: "47627305"
   
  附件存储在系统表中可能会导致**msdb**数据库增长。 使用**sysmail_delete_mailitems_sp**若要删除邮件项及其关联的附件。 有关详细信息，请参阅[创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授予**sysadmin**固定的服务器角色和**DatabaseMailUserRole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有附件。 所有其他用户仅可查看他们已提交的消息的附件。  
   
 ## <a name="see-also"></a>请参阅  

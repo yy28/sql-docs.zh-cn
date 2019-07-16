@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078961"
 ---
 # <a name="was-a-result-set-created"></a>是否创建了一个结果集？
 在大多数情况下，应用程序程序员知道其应用程序执行的语句是否将创建一个结果集。 如果应用程序使用硬编码的 SQL 语句将程序员编写的这是这种情况。 应用程序在运行时构造 SQL 语句时，它通常是这种情况：程序员可以轻松地添加标记的代码是否**选择**语句或**插入**构造语句。 在少数情况下，程序员可能不知道语句是否将创建一个结果集。 这是如果应用程序提供了一种方法为用户输入和执行 SQL 语句，则返回 true。 此外，应用程序构造的语句在运行时执行过程时对它也是如此。  

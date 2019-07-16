@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032936"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,14 +43,14 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` 是触发器和架构的名称为其所属，如果适用，其顺序是要设置或更改。 [_triggerschema_**。**]*triggername*是**sysname**。 如果名称与触发器不对应，或者名称与 INSTEAD OF 触发器对应，则该过程将返回错误。 *triggerschema*不能为 DDL 或登录触发器指定。  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` 是触发器和架构的名称为其所属，如果适用，其顺序是要设置或更改。 [_triggerschema_ **。** ]*triggername*是**sysname**。 如果名称与触发器不对应，或者名称与 INSTEAD OF 触发器对应，则该过程将返回错误。 *triggerschema*不能为 DDL 或登录触发器指定。  
   
 `[ @order = ] 'value'` 是触发器的新顺序的设置。 *值*是**varchar(10)** ，可以是下列值中的任何一个。  
   
 > [!IMPORTANT]  
 >  **第一个**并**最后一个**触发器必须是两个不同的触发器。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**第一个**|触发器被第一个触发。|  
 |**上一次**|触发器被最后一个触发。|  
@@ -61,8 +60,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  触发器可以指定为**第一个**或**最后一个**为某个语句类型才为该语句类型的触发器已定义该触发器的触发器。 例如，触发**TR1**可以指定**第一个**表**T1**如果**TR1**定义为 INSERT 触发器。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]返回一个错误，如果**TR1**，其中已被定义为 INSERT 触发器，仅被设置为**第一个**，或**最后一个**，UPDATE 语句的触发器。 有关详细信息，请参阅“备注”部分。  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
- 当*triggername*为 DDL 触发器时， **@namespace**指定是否*triggername*创建具有数据库作用域还是服务器作用域。 如果*triggername*是登录触发器，必须指定服务器。 有关 DDL 触发器作用域的详细信息，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，则*triggername*是 DML 触发器。  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
+ 当*triggername*为 DDL 触发器时， **@namespace** 指定是否*triggername*创建具有数据库作用域还是服务器作用域。 如果*triggername*是登录触发器，必须指定服务器。 有关 DDL 触发器作用域的详细信息，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，则*triggername*是 DML 触发器。  
   
 ||  
 |-|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b5e9fea64986bf595676540d74bb87a6e62521c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070009"
 ---
 # <a name="using-data-type-identifiers"></a>使用数据类型标识符
 应用程序通过两种方式使用数据类型标识符： 来描述其缓冲区指向该驱动程序，并检索有关结果集从驱动程序，以便他们可以确定哪种类型的 C 缓冲要用于存储数据的元数据。 应用程序调用以下函数来执行这些任务：  

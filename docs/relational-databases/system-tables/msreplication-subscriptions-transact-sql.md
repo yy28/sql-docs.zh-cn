@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0fa68012f419939c3f77980020795f23c4ca4672
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079995"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_subscriptions**表包含每个分发代理维护本地订阅服务器数据库的复制信息的一行。 此表存储在订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> 0 = 推送。<br /><br /> 1 = 请求。<br /><br /> 2 = 匿名。|  
 |**distribution_agent**|**sysname**|分发代理的名称。|  

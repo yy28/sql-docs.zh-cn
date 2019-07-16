@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076283"
 ---
 # <a name="processing-a-sql-statement"></a>处理 SQL 语句
 在讨论之前用于以编程方式使用 SQL 的技术，有必要讨论如何处理 SQL 语句。 尽管每种技术在不同时间执行它们所涉及的步骤是普遍适用于所有这三种技术。 下图显示所涉及步骤中处理 SQL 语句，对此进行讨论本部分的其余部分。  

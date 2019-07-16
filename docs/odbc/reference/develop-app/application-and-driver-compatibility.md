@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077084"
 ---
 # <a name="application-and-driver-compatibility"></a>应用程序和驱动程序兼容性
 ODBC 应用程序和驱动程序分为许多类别，除了其版本。 与某些驱动程序; 不兼容的这些应用程序一些在其他情况下，应用程序或驱动程序的类型可能会它们之间的向后兼容性问题重的负担。  

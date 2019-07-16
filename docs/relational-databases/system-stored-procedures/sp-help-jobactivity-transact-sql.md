@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054985"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>结果集  
  返回以下结果集：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|代理会话标识号。|  
 |**job_id**|**uniqueidentifier**|作业标识符。|  
@@ -70,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|作业停止运行的时间。|  
 |**next_scheduled_run_date**|**datetime**|计划下一次作业运行的时间。|  
 |**job_history_id**|**int**|作业历史记录表中作业历史记录的标识符。|  
-|message|**nvarchar(1024)**|上次运行作业期间产生的消息。|  
+|message |**nvarchar(1024)**|上次运行作业期间产生的消息。|  
 |**run_status**|**int**|作业上次运行时返回的状态：<br /><br /> **0** = 出错失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 状态未知|  
 |**operator_id_emailed**|**int**|作业完成时通过电子邮件通知的操作员的 ID 号。|  
 |**operator_id_netsent**|**int**|通过通知的操作员的 ID 号**网络发送**在作业完成。|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4439cddb4af80a5d76a5b4e3600fd5e5ede6b900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02ec95d318825c1759067455b62f3dae6a86c184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053335"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "62744047"
 
 返回有关当前的外部资源池配置 CPU 关联信息。
   
-|列名|数据类型|Description|
+|列名|数据类型|描述|
 |----------------|---------------|-----------------|
 |pool_id|**int**|外部资源池的 ID。 不可为 null。|
 |processor_group|**smallint**|Windows 逻辑处理器组的 ID。 不可为 null。|
@@ -47,11 +46,11 @@ ms.locfileid: "62744047"
 
 需要 `VIEW SERVER STATE` 权限。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
-[sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [“已启用外部脚本”服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

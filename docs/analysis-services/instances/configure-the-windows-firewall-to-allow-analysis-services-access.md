@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211576"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181924"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>将 Windows 防火墙配置为允许 Analysis Services 访问
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "53211576"
 ##  <a name="bkmk_default"></a> 为 Analysis Services 的默认实例配置 Windows 防火墙  
  默认的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例侦听 TCP 端口 2383。 如果您安装了默认实例并且想要使用此端口，则仅需在 Windows 防火墙中取消阻止对 TCP 端口 2383 的入站访问，以便允许远程访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的默认实例。 如果您安装了该默认实例，但是想要将服务配置为侦听固定端口，请参阅本主题中的 [将固定端口用于 Analysis Services 的默认实例或命名实例](#bkmk_fixed) 。  
   
- 若要确认该服务是否正作为默认实例 (MSSQLServerOLAPService) 运行，请在 SQL Server 配置管理器中查看服务名称。 Analysis Services 的默认实例始终作为“SQL Server Analysis Services (MSSQLSERVER)”列出。  
+ 若要确认该服务是否正作为默认实例 (MSSQLServerOLAPService) 运行，请在 SQL Server 配置管理器中查看服务名称。 Analysis Services 的默认实例始终作为“SQL Server Analysis Services (MSSQLSERVER)”列出  。  
   
 > [!NOTE]  
 >  不同的 Windows 操作系统为配置 Windows 防火墙提供可供选择的工具。 其中大多数工具都允许您在打开特定端口还是程序可执行文件之间进行选择。 除非您有具体原因来指定程序可执行文件，否则，我们建议您指定端口。  
@@ -83,19 +83,19 @@ ms.locfileid: "53211576"
   
 #### <a name="windows-firewall-with-advanced-security"></a>高级安全 Windows 防火墙  
   
-1.  在 Windows 7 或 Windows Vista 上，单击“控制面板”中的 **“系统和安全”**，选择 **“Windows 防火墙”**，然后单击 **“高级设置”**。 在 Windows Server 2008 或 2008 R2 上，打开“管理员工具”，然后单击 **“高级安全 Windows 防火墙”**。 在 Windows Server 2012 上，打开“应用程序”页并键入 **Windows 防火墙**。  
+1.  在 Windows 7 或 Windows Vista 上，单击“控制面板”中的 **“系统和安全”** ，选择 **“Windows 防火墙”** ，然后单击 **“高级设置”** 。 在 Windows Server 2008 或 2008 R2 上，打开“管理员工具”，然后单击 **“高级安全 Windows 防火墙”** 。 在 Windows Server 2012 上，打开“应用程序”页并键入 **Windows 防火墙**。  
   
-2.  右键单击“入站规则”，然后选择“新建规则”。  
+2.  右键单击“入站规则”  ，然后选择“新建规则”  。  
   
-3.  在“规则类型”中，单击 **“端口”** ，然后单击 **“下一步”**。  
+3.  在“规则类型”中，单击 **“端口”** ，然后单击 **“下一步”** 。  
   
 4.  在“协议和端口”中，选择“TCP”  ，然后在“特定本地端口”  中键入 **2383**。  
   
-5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”**。  
+5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”** 。  
   
-6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”**。  
+6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”** 。  
   
-7.  在“名称”中，键入此规则的说明性名称（例如 **SQL Server Analysis Services (tcp-in) 2383**），然后单击“完成”。  
+7.  在“名称”中，键入此规则的说明性名称（例如 **SQL Server Analysis Services (tcp-in) 2383**），然后单击“完成”  。  
   
 8.  若要确认远程连接已启用，请在另一台计算机上打开 SQL Server Management Studio 或 Excel，然后通过在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “服务器名称” **中指定服务器的网络名称来连接到**。  
   
@@ -136,19 +136,19 @@ ms.locfileid: "53211576"
   
 #### <a name="windows-firewall-with-advanced-security"></a>高级安全 Windows 防火墙  
   
-1.  在 Windows 7 或 Windows Vista 上，单击“控制面板”中的 **“系统和安全”**，选择 **“Windows 防火墙”**，然后单击 **“高级设置”**。 在 Windows Server 2008 或 2008 R2 上，打开“管理员工具”，然后单击 **“高级安全 Windows 防火墙”**。 在 Windows Server 2012 上，打开“应用程序”页并键入 **Windows 防火墙**。  
+1.  在 Windows 7 或 Windows Vista 上，单击“控制面板”中的 **“系统和安全”** ，选择 **“Windows 防火墙”** ，然后单击 **“高级设置”** 。 在 Windows Server 2008 或 2008 R2 上，打开“管理员工具”，然后单击 **“高级安全 Windows 防火墙”** 。 在 Windows Server 2012 上，打开“应用程序”页并键入 **Windows 防火墙**。  
   
-2.  若要取消阻止对 SQL Server Browser 服务的访问，请右键单击“入站规则”，然后选择“新建规则”。  
+2.  若要取消阻止对 SQL Server Browser 服务的访问，请右键单击“入站规则”  ，然后选择“新建规则”  。  
   
-3.  在“规则类型”中，单击 **“端口”** ，然后单击 **“下一步”**。  
+3.  在“规则类型”中，单击 **“端口”** ，然后单击 **“下一步”** 。  
   
 4.  在“协议和端口”中，选择“TCP”  ，然后在“特定本地端口”  中键入 **2382**。  
   
-5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”**。  
+5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”** 。  
   
-6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”**。  
+6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”** 。  
   
-7.  在“名称”中，键入此规则的说明性名称（例如 **SQL Server Browser Service (tcp-in) 2382**），然后单击“完成”。  
+7.  在“名称”中，键入此规则的说明性名称（例如 **SQL Server Browser Service (tcp-in) 2382**），然后单击“完成”  。  
   
 8.  若要确认远程连接已启用，另一台计算机上打开 SQL Server Management Studio 或 Excel 并连接到 Analysis Services 通过按以下格式指定服务器的网络名称和实例名称：\<服务器名 >\\< 实例名\>。 例如，在具有 **Finance** 的命名实例的名为 **AW-SRV01** 的服务器上，服务器名称为 **AW-SRV01\Finance**。  
   
@@ -160,19 +160,19 @@ ms.locfileid: "53211576"
   
 #### <a name="windows-firewall-with-advanced-security"></a>高级安全 Windows 防火墙  
   
-1.  在 Windows 7 或 Windows Vista 上，单击“控制面板”中的 **“系统和安全”**，选择 **“Windows 防火墙”**，然后单击 **“高级设置”**。 在 Windows Server 2008 或 2008 R2 上，打开“管理员工具”，然后单击 **“高级安全 Windows 防火墙”**。 在 Windows Server 2012 上，打开“应用程序”页并键入 **Windows 防火墙**。  
+1.  在 Windows 7 或 Windows Vista 上，单击“控制面板”中的 **“系统和安全”** ，选择 **“Windows 防火墙”** ，然后单击 **“高级设置”** 。 在 Windows Server 2008 或 2008 R2 上，打开“管理员工具”，然后单击 **“高级安全 Windows 防火墙”** 。 在 Windows Server 2012 上，打开“应用程序”页并键入 **Windows 防火墙**。  
   
-2.  若要取消阻止对 Analysis Services 的访问，请右键单击“入站规则”，然后选择“新建规则”。  
+2.  若要取消阻止对 Analysis Services 的访问，请右键单击“入站规则”  ，然后选择“新建规则”  。  
   
-3.  在“规则类型”中，单击 **“端口”** ，然后单击 **“下一步”**。  
+3.  在“规则类型”中，单击 **“端口”** ，然后单击 **“下一步”** 。  
   
 4.  在“协议和端口”中，选择 **“TCP”** ，然后在 **“特定本地端口”** 中键入固定端口。  
   
-5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”**。  
+5.  在“操作”中，单击 **“允许连接”** ，然后单击 **“下一步”** 。  
   
-6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”**。  
+6.  在“配置文件”中，清除不适用的所有网络位置，然后单击 **“下一步”** 。  
   
-7.  在“名称”中，键入此规则的说明性名称（例如 **SQL Server Analysis Services on port 54321**），然后单击“完成”。  
+7.  在“名称”中，键入此规则的说明性名称（例如 **SQL Server Analysis Services on port 54321**），然后单击“完成”  。  
   
 8.  若要确认远程连接已启用，另一台计算机上打开 SQL Server Management Studio 或 Excel，并通过按以下格式指定服务器和端口号的网络名称连接到 Analysis Services:\<服务器名 >:\<端口号 >。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8aad9f67b155c1f247426053b948cc6dd29e4cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006897"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**article id**|**int**|项目的 ID。|  
+|**文章 id**|**int**|项目的 ID。|  
 |**partial_command**|**bit**|指示这是否为部分命令。|  
 |**command**|**varbinary(1024)**|命令值。|  
 |**xactid**|**binary(10)**|事务 id。|  

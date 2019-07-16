@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 251e5f79c03c02499aec9f3c0f90f42902d32474
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078674"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51656606"
  携带 SOAP 类型负载的服务器中的每个端点在该表中对应一行。 此视图中的每一行，对于没有对应的行具有相同**endpoint_id**中**sys.http_endpoints**目录携带 HTTP 配置元数据的视图。  
   
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**< 继承的列 >**||此视图所继承的列的列表，请参阅[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
 |**is_sql_language_enabled**|**bit**|1 = 指定了 BATCHES = ENABLED 选项，表示端点上允许使用即席 SQL 批。|  
@@ -50,7 +49,7 @@ ms.locfileid: "51656606"
 |**login_type**|**nvarchar(60)**|此端点允许的身份验证类型。<br /><br /> WINDOWS<br /><br /> MIXED|  
 |**header_limit**|**int**|允许的最大 SOAP 标头大小。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

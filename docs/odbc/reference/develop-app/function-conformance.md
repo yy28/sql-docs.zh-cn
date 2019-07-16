@@ -15,79 +15,78 @@ helpviewer_keywords:
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069751"
 ---
 # <a name="function-conformance"></a>函数一致性
 下表指示这是定义完善的一致性级别的每个 ODBC 函数。  
   
 |函数|一致性级别|  
 |--------------|-----------------------|  
-|**SQLAllocHandle**|核心|  
-|**SQLBindCol**|核心|  
+|**SQLAllocHandle**|Core|  
+|**SQLBindCol**|Core|  
 |**SQLBindParameter**|Core[1]|  
 |**SQLBrowseConnect**|级别 1|  
 |**SQLBulkOperations**|级别 1|  
 |**SQLCancel**|Core[1]|  
-|**SQLCloseCursor**|核心|  
+|**SQLCloseCursor**|Core|  
 |**SQLColAttribute**|Core[1]|  
 |**SQLColumnPrivileges**|级别 2|  
-|**SQLColumns**|核心|  
-|**SQLConnect**|核心|  
-|**SQLCopyDesc**|核心|  
-|**SQLDataSources**|核心|  
+|**SQLColumns**|Core|  
+|**SQLConnect**|Core|  
+|**SQLCopyDesc**|Core|  
+|**SQLDataSources**|Core|  
 |**SQLDescribeCol**|Core[1]|  
 |**SQLDescribeParam**|级别 2|  
-|**SQLDisconnect**|核心|  
-|**SQLDriverConnect**|核心|  
-|**SQLDrivers**|核心|  
+|**SQLDisconnect**|Core|  
+|**SQLDriverConnect**|Core|  
+|**SQLDrivers**|Core|  
 |**SQLEndTran**|Core[1]|  
-|**SQLExecDirect**|核心|  
-|**SQLExecute**|核心|  
-|**SQLFetch**|核心|  
+|**SQLExecDirect**|Core|  
+|**SQLExecute**|Core|  
+|**SQLFetch**|Core|  
 |**SQLFetchScroll**|Core[1]|  
 |**SQLForeignKeys**|级别 2|  
-|**SQLFreeHandle**|核心|  
-|**SQLFreeStmt**|核心|  
-|**SQLGetConnectAttr**|核心|  
-|**SQLGetCursorName**|核心|  
-|**SQLGetData**|核心|  
-|**SQLGetDescField**|核心|  
-|**SQLGetDescRec**|核心|  
-|**SQLGetDiagField**|核心|  
-|**SQLGetDiagRec**|核心|  
-|**SQLGetEnvAttr**|核心|  
-|**SQLGetFunctions**|核心|  
-|**SQLGetInfo**|核心|  
-|**SQLGetStmtAttr**|核心|  
-|**SQLGetTypeInfo**|核心|  
+|**SQLFreeHandle**|Core|  
+|**SQLFreeStmt**|Core|  
+|**SQLGetConnectAttr**|Core|  
+|**SQLGetCursorName**|Core|  
+|**SQLGetData**|Core|  
+|**SQLGetDescField**|Core|  
+|**SQLGetDescRec**|Core|  
+|**SQLGetDiagField**|Core|  
+|**SQLGetDiagRec**|Core|  
+|**SQLGetEnvAttr**|Core|  
+|**SQLGetFunctions**|Core|  
+|**SQLGetInfo**|Core|  
+|**SQLGetStmtAttr**|Core|  
+|**SQLGetTypeInfo**|Core|  
 |**SQLMoreResults**|级别 1|  
-|**SQLNativeSql**|核心|  
-|**SQLNumParams**|核心|  
-|**SQLNumResultCols**|核心|  
-|**SQLParamData**|核心|  
-|**SQLPrepare**|核心|  
+|**SQLNativeSql**|Core|  
+|**SQLNumParams**|Core|  
+|**SQLNumResultCols**|Core|  
+|**SQLParamData**|Core|  
+|**SQLPrepare**|Core|  
 |**SQLPrimaryKeys**|级别 1|  
 |**SQLProcedureColumns**|级别 1|  
 |**SQLProcedures**|级别 1|  
-|**SQLPutData**|核心|  
-|**SQLRowCount**|核心|  
+|**SQLPutData**|Core|  
+|**SQLRowCount**|Core|  
 |**SQLSetConnectAttr**|Core[2]|  
-|**SQLSetCursorName**|核心|  
+|**SQLSetCursorName**|Core|  
 |**SQLSetDescField**|Core[1]|  
-|**SQLSetDescRec**|核心|  
+|**SQLSetDescRec**|Core|  
 |**SQLSetEnvAttr**|Core[2]|  
 |**SQLSetPos**|级别 1 [1]|  
 |**SQLSetStmtAttr**|Core[2]|  
 |**SQLSpecialColumns**|Core[1]|  
-|**SQLStatistics**|核心|  
+|**SQLStatistics**|Core|  
 |**SQLTablePrivileges**|级别 2|  
-|**SQLTables**|核心|  
+|**SQLTables**|Core|  
   
  [1] 重要的功能，此函数仅在更高的符合性级别均可用。  
   

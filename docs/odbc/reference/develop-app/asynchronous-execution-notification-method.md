@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077065"
 ---
 # <a name="asynchronous-execution-notification-method"></a>异步执行（通知方法）
 ODBC 允许连接和语句操作的异步的执行。 应用程序线程可以在异步模式下调用 ODBC 函数和函数可返回在操作完成后，允许应用程序线程执行其他任务之前。 在 Windows 7 SDK 中，为异步语句或连接操作，将异步操作已完成使用轮询方法确定应用程序。 有关详细信息，请参阅[异步执行 （轮询方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 从 Windows 8 SDK 开始，您可以确定异步操作已完成使用的通知方法。  

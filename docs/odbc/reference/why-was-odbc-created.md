@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cfdd0babe84d309391b3e1ca546c4e05fdf1331
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049176"
 ---
 # <a name="why-was-odbc-created"></a>为何创建 ODBC？
 从历史上看，公司使用单个 DBMS。 通过该系统的前端或通过编写以独占方式使用该系统的应用程序，已完成的所有数据库访问。 但是，在使用计算机的大小增长和更多计算机硬件和软件变得可用时，公司开始获取不同的 Dbms。 之所以很多原因：人们购买了什么是成本最低，什么是最快，他们已经知道，是什么最适合单个应用程序在市场上最新。 其他原因是重组和合并，其中部门以前单一 DBMS 现在必须在多个。  

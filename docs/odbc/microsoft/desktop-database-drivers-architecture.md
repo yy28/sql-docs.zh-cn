@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccd1f14b0cfbcbdbc675a142ebabf11932409832
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071911"
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面数据库驱动程序体系结构
 这些驱动程序旨在用于使用 Microsoft Windows 95 或更高版本，或 Windows NT 4.0 和 Windows 2000。 仅 32 位应用程序支持 Windows 95 上或更高版本;在 Windows NT 4.0 和 Windows 2000 上支持 16 位和 32 位应用程序。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210135"
 ---
 # <a name="data-definition-queries-data-mining"></a>数据定义查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "50148272"
 ###  <a name="bkmk_Scripts"></a> 脚本数据定义语句  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多种脚本语言和编程语言，可以用来创建或更改数据挖掘对象，也可以用来定义数据源。  虽然 DMX 旨在加快执行数据挖掘任务，但您也可以同时使用 XMLA 和 AMO 来操作脚本或自定义代码中的对象。  
   
- 用于 Excel 的数据挖掘外接程序还包含了多个查询模板，并提供了“高级查询编辑器”，有助于编写复杂的 DMX 语句。 可以通过交互方式生成查询，然后切换到 SQL 视图以捕获 DMX 语句。  
+ 用于 Excel 的数据挖掘外接程序还包含了多个查询模板，并提供了“高级查询编辑器”  ，有助于编写复杂的 DMX 语句。 可以通过交互方式生成查询，然后切换到 SQL 视图以捕获 DMX 语句。  
   
 ##  <a name="bkmk_Export"></a> 导出和导入模型  
  可以使用 DMX 中的数据定义语句来导出模型的定义及其所需的结构和数据源，然后再将该定义导入其他服务器。 使用导出和导入是在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之间移动数据挖掘模型和挖掘结构的最快且最便捷的方法。 有关详细信息，请参阅 [管理数据挖掘解决方案和对象](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "50148272"
 |了解如何管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的模型。|[导出和导入数据挖掘对象](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (DMX)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (DMX)](../../dmx/import-dmx.md)|  
 |了解有关 OPENROWSET 和用于查询外部数据的其他方法的详细信息。|[<源数据查询>](../../dmx/source-data-query.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘向导（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
+title: sp_addextendedproc (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072756"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +43,15 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @functname = ] 'procedure'` 是要动态链接库 (DLL) 内调用的名称。 *过程*是**nvarchar(517)**，无默认值。 *过程*选择可以在窗体中包含所有者名称*owner.function*。  
+`[ @functname = ] 'procedure'` 是要动态链接库 (DLL) 内调用的名称。 *过程*是**nvarchar(517)** ，无默认值。 *过程*选择可以在窗体中包含所有者名称*owner.function*。  
   
-`[ @dllname = ] 'dll'` 是包含该函数的 DLL 的名称。 *dll*是**varchar(255)**，无默认值。 建议指定 DLL 的完整路径。  
+`[ @dllname = ] 'dll'` 是包含该函数的 DLL 的名称。 *dll*是**varchar(255)** ，无默认值。 建议指定 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  创建扩展存储的过程后，必须将它添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用**sp_addextendedproc**。 有关详细信息，请参阅[将扩展存储过程添加到 SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)。  

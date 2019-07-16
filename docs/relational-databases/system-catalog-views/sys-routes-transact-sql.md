@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 098ff2a0a3e4827a9d80c3955cc6f2689c3fa53e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904439"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   在目录视图中，每个路由对应一行。 Service Broker 使用路由定位服务的网络地址。   
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|路由名称，在数据库中唯一。 不可为 NULL。|  
+|**name**|**sysname**|路由名称，在数据库中唯一。 不可为 NULL。|  
 |**route_id**|**int**|路由的标识符。 不可为 NULL。|  
 |**principal_id**|**int**|拥有路由的数据库主体的标识符。 可以为 NULL。|  
 |**remote_service_name**|**nvarchar(256)**|远程服务的名称。 可以为 NULL。|  

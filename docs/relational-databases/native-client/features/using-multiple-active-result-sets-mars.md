@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b072c3c07ea2f70e365ca04be83d407203d48b01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1248add51d33b46978230ffcb0467ec6ed25e976
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076634"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +113,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server （从 2016年开始） 具有列存储索引支持 MARS。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 发生这种情况时，SQL Server 会终止连接并中止事务。   SQL Server 2012 具有只读列存储索引和 MARS 不适用于它们。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性，它在 DBPROPSET_SQLSERVERDBINIT 属性集中实现 MARS。 此外，还添加了新的连接字符串关键字 MarsConn。 它接受 **，则返回 true**或**false**值;**false**是默认值。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性，它在 DBPROPSET_SQLSERVERDBINIT 属性集中实现 MARS。 此外，还添加了新的连接字符串关键字 MarsConn  。 它接受 **，则返回 true**或**false**值;**false**是默认值。  
   
  数据源属性 DBPROP_MULTIPLECONNECTIONS 默认为 VARIANT_TRUE。 这意味着访问接口将生成多个连接以支持多个并发命令和行集对象。 如果启用了 MARS，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端可以支持多个命令和行集对象上单个连接，因此默认情况下 MULTIPLE_CONNECTIONS 设置为 VARIANT_FALSE。  
   

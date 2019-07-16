@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054930"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status` 作业执行状态。 *run_status*是**int**，默认值为 NULL，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**0**|失败|  
 |**1**|已成功|  
@@ -89,9 +88,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @oldest_first = ] oldest_first` 要使用最早的作业开始显示输出。 *oldest_first*是**int**，默认值为**0**，表示首先显示最新的作业。 **1**首先显示最早的作业。  
   
-`[ @server = ] 'server'` 执行作业的服务器的名称。 *服务器*是**nvarchar(30)**，默认值为 NULL。  
+`[ @server = ] 'server'` 执行作业的服务器的名称。 *服务器*是**nvarchar(30)** ，默认值为 NULL。  
   
-`[ @mode = ] 'mode'` 是 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的汇总。 *模式*是**varchar(7)**，默认值为**摘要**。  
+`[ @mode = ] 'mode'` 是 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的汇总。 *模式*是**varchar(7)** ，默认值为**摘要**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -99,7 +98,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>结果集  
  实际列的列表取决于的值*模式下*。 最全面的列如下所示，情况时将返回*模式下*为 FULL。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|历史记录条目标识号。|  
 |**job_id**|**uniqueidentifier**|作业标识号。|  
@@ -108,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|步骤名称（对于作业历史记录将为 NULL）。|  
 |**sql_message_id**|**int**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，为运行命令时遇到的最近的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误号。|  
 |**sql_severity**|**int**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，为运行命令时遇到的最高级别的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误严重性。|  
-|message|**nvarchar(1024)**|作业或步骤历史记录消息。|  
+|message |**nvarchar(1024)**|作业或步骤历史记录消息。|  
 |**run_status**|**int**|作业或步骤的结果。|  
 |**run_date**|**int**|作业或步骤开始执行的日期。|  
 |**run_time**|**int**|作业或步骤开始执行的时间。|  
@@ -117,7 +116,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar(20)**|接收有关该作业的网络消息的操作员（对于步骤历史记录为 NULL）。|  
 |**operator_paged**|**nvarchar(20)**|接收有关该作业的寻呼的操作员（对于步骤历史记录为 NULL）。|  
 |**retries_attempted**|**int**|步骤的重试次数（对于作业历史记录始终为 0）。|  
-|服务器|**nvarchar(30)**|执行步骤或作业的服务器。 始终 (**本地**)。|  
+|服务器 |**nvarchar(30)**|执行步骤或作业的服务器。 始终 (**本地**)。|  
   
 ## <a name="remarks"></a>备注  
  **sp_help_jobhistory**返回具有指定的计划作业的历史记录的报表。 如果没有指定参数，则该报表包含所有预定作业的历史记录。  

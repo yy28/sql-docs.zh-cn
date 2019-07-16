@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f32e23be700f17fee88cc6354f8652bb1333a12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad1e3dc4901fc7251528e6040b9250469f8fef6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053664"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 函数
 **符合性**  
@@ -74,7 +73,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>诊断  
  当**SQLReadFileDSN**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|无效缓冲区长度|*LpszString*参数为 NULL。<br /><br /> *CbString*参数为小于或等于 0。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 680712fb2ac5b31484fc7650a8a4fab8047fc7af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067740"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的关键短语的信息。  
   
-|Column_name|类型|Description|  
+|Column_name|type|描述|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|在源文档和匹配文档之间促进相似性的关键短语。|  
 |**score**|**REAL**|一个相对值，用来表示此关键短语与两篇文档间相似的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  

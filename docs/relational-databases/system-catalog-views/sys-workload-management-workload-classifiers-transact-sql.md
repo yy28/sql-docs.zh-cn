@@ -11,22 +11,21 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5d125f6bdbc024e0f72cb138075e5abb97ae93eb
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: c6947ae0df357c1a1bd1da2973ff3bf6a81717f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059328"
 ---
-# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
+# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
  返回工作负荷分类器的详细信息。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分类器的唯一 ID。 不可为 Null。||
 group_name|**sysname**|分类器所分配到的工作负荷组的名称。 不可为 null。 |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>动态资源类</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|

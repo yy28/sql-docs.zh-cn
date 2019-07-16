@@ -19,14 +19,13 @@ ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f10134d4aa4d71c4471e5e3120b3f8fbd8ee1748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7f79a4d756a76dc6b59e76bbbfc28076ba36eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067052"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>将 XSD 数据类型映射到 XPath 数据类型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "65980785"
   
 |XSD 数据类型|XDR 数据类型|等效<br /><br /> XPath 数据类型|SQL Server<br /><br /> 使用的转换|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **HexBinary**|**无**<br /><br /> **bin.base64bin.hex**|**不适用**|None<br /><br /> EmployeeID|  
+|**Base64Binary**<br /><br /> **HexBinary**|**无**<br /><br /> **bin.base64bin.hex**|**不适用**|无<br /><br /> EmployeeID|  
 |**Boolean**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
 |**小数、 整数、 float、 字节、 short、 int、 long、 float、 double、 unsignedByte、 无符号 Short、 unsignedInt、 unsignedLong**|**数字、 int、 float、 i1、 i2、 i4、 i8、 r4，r8ui1、 ui2、 ui4、 ui8**|**number**|CONVERT(float(53), EmployeeID)|  
 |**id、 idref、 idrefsentity、 实体、 表示法、 nmtoken、 nmtokens、 DateTime、 string、 AnyURI**|**id、 idref、 idrefsentity、 实体、 枚举、 表示法、 nmtoken、 nmtokens、 char、 dateTime、 dateTime.tz、 字符串、 uri、 uuid**|**string**|CONVERT(nvarchar(4000), EmployeeID, 126)|  

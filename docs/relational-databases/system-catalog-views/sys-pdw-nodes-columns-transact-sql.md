@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_columns (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,24 +11,23 @@ dev_langs:
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 949d8a90892e1954ee0a96f0025cb623569fbe55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059406"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   显示用户定义表和用户定义视图的列。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此列所属对象的 ID。||  
-|NAME|**sysname**|列的名称。 对象中是唯一的。||  
+|name|**sysname**|列的名称。 对象中是唯一的。||  
 |column_id|**int**|列的 ID。 对象中是唯一的。||  
 |system_type_id|**tinyint**|系统类型的列的 ID。||  
 |user_type_id|**int**|用户定义的列类型的 ID。||  

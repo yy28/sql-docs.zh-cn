@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5da958d15c211063165de110d91910e378c940b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33c32949d57784d1579a3641c1b65e36e97fbf29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055127"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ## <a name="result-sets"></a>结果集  
  此表显示了结果集，按排序**ftcatid**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文目录的标识符。|  
 |**NAME**|**sysname**|全文目录的名称。|  
