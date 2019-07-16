@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47711a7e974373e9da4ac8068295029d88accaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e744d3de177197923540fc3101c58dcbb4d3490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990727"
 ---
 # <a name="numeric-functions"></a>数值函数
 下表介绍 ODBC 标量函数集中包含的数值函数。 通过调用**SQLGetInfo**与*信息类型*的 SQL_NUMERIC_FUNCTIONS，应用程序可以确定由驱动程序支持的数值的函数。  
@@ -34,7 +33,7 @@ ms.locfileid: "63181306"
   
  ODBC 3.0 以符合 SQL-92 中添加了 CURRENT_DATE、 CURRENT_TIME 和 CURRENT_TIMESTAMP 标量函数。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |**ABS(** _numeric_exp_ **)**  (ODBC 1.0)|返回的绝对值*则 numeric_exp*。|  
 |**ACOS(** _float_exp_ **)**  (ODBC 1.0)|返回的反余弦*float_exp*作为角度以弧度表示。|  
@@ -50,11 +49,11 @@ ms.locfileid: "63181306"
 |**LOG(** _float_exp_ **)**  (ODBC 1.0)|返回自然对数*float_exp*。|  
 |**LOG10(** _float_exp_ **)**  (ODBC 2.0)|返回基数为 10 的对数*float_exp*。|  
 |**MOD(** _integer_exp1_, _integer_exp2_ **)**  (ODBC 1.0)|返回余数 （取模） *integer_exp1*除以*integer_exp2*。|  
-|**PI( )**  (ODBC 1.0)|浮点值形式返回 pi 的常量值。|  
+|**PI （)** (ODBC 1.0)|浮点值形式返回 pi 的常量值。|  
 |**POWER(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|返回的值*则 numeric_exp*的幂*integer_exp*。|  
 |**RADIANS(** _numeric_exp_ **)**  (ODBC 2.0)|返回从转换为弧度数*则 numeric_exp*度。|  
 |**RAND(** [*integer_exp*] **)**  (ODBC 1.0)|返回随机浮点值使用*integer_exp*作为可选的种子值。|  
-|**ROUND(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|返回*则 numeric_exp*舍入到*integer_exp*放置的小数点右侧。 如果*integer_exp*为负，*则 numeric_exp*舍入到&#124; *integer_exp* &#124;将放置到小数点左侧。|  
+|**ROUND (** _则 numeric_exp_， _integer_exp_ **)** (ODBC 2.0)|返回*则 numeric_exp*舍入到*integer_exp*放置的小数点右侧。 如果*integer_exp*为负，*则 numeric_exp*舍入到&#124; *integer_exp* &#124;将放置到小数点左侧。|  
 |**SIGN(** _numeric_exp_ **)**  (ODBC 1.0)|返回的符号的指示器*则 numeric_exp*。 如果*则 numeric_exp*小于零，-1 返回。 如果*则 numeric_exp*等于零，则返回 0。 如果*则 numeric_exp*是大于零，则返回 1。|  
 |**SIN(** _float_exp_ **)**  (ODBC 1.0)|返回的正弦*float_exp*，其中*float_exp*是以弧度为单位表示的角。|  
 |**SQRT(** _float_exp_ **)**  (ODBC 1.0)|返回的平方根*float_exp*。|  

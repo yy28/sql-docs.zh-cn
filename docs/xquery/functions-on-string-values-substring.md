@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3185da6f25f0e224240ad0891ad448267b26465c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004640"
 ---
 # <a name="functions-on-string-values---substring"></a>基于字符串值的函数 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ fn:substring($sourceString as xs:string?,
  本主题提供了一些针对 XML 实例存储在各种 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. 使用 substring() XQuery 函数来检索部分概要产品型号说明  
- 该查询将检索文档中说明产品型号的文本（<`Summary`> 元素）中的前 50 个字符。  
+ 该查询将检索说明产品型号的文本的前 50 个字符 <`Summary`> 文档中的元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,9 +85,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  请注意上述查询的以下方面：  
   
--   **String （)** 函数返回的字符串值 <`Summary`> 元素。 使用此函数是因为 <`Summary`> 元素既包含文本又包含子元素（html 格式的元素），还因为将跳过这些元素并检索所有文本。  
+-   **String （)** 函数返回的字符串值 <`Summary`> 元素。 使用此函数，因为 <`Summary`> 元素包含文本和子元素 (html 格式的元素)，因为将跳过这些元素并检索所有文本。  
   
--   **Substring （)** 函数来检索的字符串值中检索前 50 个字符**string （)**。  
+-   **Substring （)** 函数来检索的字符串值中检索前 50 个字符**string （)** 。  
   
  这是部分结果：  
   

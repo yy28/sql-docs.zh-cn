@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 030f2e002c4dba8148a1e4bbcbb9eff9033308f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47ea988c3c9ec2b784109e46ce30d1a0ed56dc61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987513"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +26,11 @@ ms.locfileid: "47688993"
 
   FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息，请参阅[FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)。  
   
- 默认情况下，在打开数据库连接时，@@TEXTSIZE 将设置为 -1（“无限制”）。  
+ 默认情况下，在打开数据库连接时，@@TEXTSIZE 将设置为 -1（“无限制”）  。  
   
  还可以使用 Windows 文件系统 API 访问和更新 FILESTREAM 列。  
   
- 有关详细信息，请参阅以下主题：  
+ 有关详细信息，请参阅下列主题：  
   
 -   [FILESTREAM 支持&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "47688993"
   
  如 SQLColumns 在 ODBC 目录函数不会报告列是否是 FILESTREAM 列。  
   
- 若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 目录视图的 is_filestream 列。  
+ 若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 目录视图的 is_filestream 列  。  
   
  以下是一个示例：  
   

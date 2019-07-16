@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0fe23c41f6a22a05e6a4c1d61f94a357f3c28c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966187"
 ---
 # <a name="groups-collection-adox"></a>组集合 (ADOX)
 包含所有存储[组](../../../ado/reference/adox-api/group-object-adox.md)目录或用户的对象。  
@@ -31,11 +30,11 @@ ms.locfileid: "66706676"
 ## <a name="remarks"></a>备注  
  **组**系列[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示所有目录的组帐户。 **组**集合[用户](../../../ado/reference/adox-api/user-object-adox.md)表示只有该用户所属的组。  
   
- [追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法**组**是唯一的 ADOX 集合。 您可以：  
+ [追加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法**组**是唯一的 ADOX 集合。 你可以：  
   
 -   将新的安全组添加到具有集合**追加**方法。  
   
- 剩余的属性和方法是标准到 ADO 集合。 您可以：  
+ 剩余的属性和方法是标准到 ADO 集合。 你可以：  
   
 -   访问集合中具有一组[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
   
