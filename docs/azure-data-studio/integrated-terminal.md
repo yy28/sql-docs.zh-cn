@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: d29234810e30efd204f498e2f7c63ba6571cbfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959536"
 ---
 # <a name="integrated-terminal"></a>集成的终端
 
@@ -110,12 +109,12 @@ ms.locfileid: "66797529"
 
 它们分别是：
 
-* `workbench.action.terminal.focus`设置用户帐户 ：重点放在终端。 这类似于切换，但主要而不是隐藏它，终端，如果可见。
-* `workbench.action.terminal.focusNext`设置用户帐户 ：主要的下一个终端实例。
-* `workbench.action.terminal.focusPrevious`设置用户帐户 ：主要的上一个终端实例。
-* `workbench.action.terminal.kill`设置用户帐户 ：删除当前终端实例。
-* `workbench.action.terminal.runSelectedText`设置用户帐户 ：在终端实例中运行所选的文本。
-* `workbench.action.terminal.runActiveFile`设置用户帐户 ：在终端实例中运行活动的文件。
+* `workbench.action.terminal.focus`：重点放在终端。 这类似于切换，但主要而不是隐藏它，终端，如果可见。
+* `workbench.action.terminal.focusNext`：主要的下一个终端实例。
+* `workbench.action.terminal.focusPrevious`：主要的上一个终端实例。
+* `workbench.action.terminal.kill`：删除当前终端实例。
+* `workbench.action.terminal.runSelectedText`：在终端实例中运行所选的文本。
+* `workbench.action.terminal.runActiveFile`：在终端实例中运行活动的文件。
 
 ### <a name="run-selected-text"></a>运行选定的文本
 

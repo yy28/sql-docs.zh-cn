@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e02fd7318925ef04b5baf18353cac9253a2ea9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9655281302eddb65e693da9a9516c1eecbbce1dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940069"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 代码示例
 使用下面的代码示例来了解如何使用 ADO MD 对象、 方法和属性。 这些示例是随 Microsoft SQL Server OLAP Services 进行 SQL Server 7.0 一起安装的示例应用程序的子集。  

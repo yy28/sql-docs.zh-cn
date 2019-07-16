@@ -6,16 +6,15 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027338"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入到 Active Directory 域 Linux 主机上的 SQL Server
 
@@ -23,7 +22,7 @@ ms.locfileid: "67834443"
 
 本文提供有关如何将 SQL Server Linux 主机加入到 Active Directory (AD) 域的常规指南。 有两种方法： 使用内置的 SSSD 包或使用第三方 Active Directory 提供程序。 第三方域联接产品的示例包括[PowerBroker 标识服务 (PBI)](https://www.beyondtrust.com/)，[一个标识](https://www.oneidentity.com/products/authentication-services/)，并[Centrify](https://www.centrify.com/)。 本指南包括检查 Active Directory 配置的步骤。 但是，它不用于提供有关如何将计算机加入到域时使用第三方实用程序的说明。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 配置 Active Directory 身份验证之前，需要设置 Active Directory 域控制器，Windows，在网络上。 然后将您的 SQL Server 加入到 Active Directory 域的 Linux 主机上。
 

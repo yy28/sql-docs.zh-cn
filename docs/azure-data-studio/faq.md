@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959549"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常见问题
 
@@ -97,7 +96,7 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 |深色模式|是||
 |Azure 资源浏览器|预览||
 |生成脚本向导||是
-|Import\Export DACPAC||是|
+|导入 \ 导出 DACPAC||是|
 |对象属性||是|
 |表设计器||是|
 

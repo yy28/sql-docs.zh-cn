@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906732"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。内容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,14 +46,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
- **SELECT FROM** _\<模型 >_**。内容**语句可以返回特定于每个算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 可以使用**SELECT FROM\<模型 >。内容**语句来返回模型的 NODE_RULE 列中的值。  
+ **SELECT FROM** _\<模型 >_ **。内容**语句可以返回特定于每个算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 可以使用**SELECT FROM\<模型 >。内容**语句来返回模型的 NODE_RULE 列中的值。  
   
  下表列出了挖掘模型内容中包含的列。  
   
 > [!NOTE]  
 >  算法可能会为了正确表示内容而对列做出不同的解释。 有关挖掘模型内容的每个算法和有关如何解释和查询挖掘模型内容的每个模型类型提示的说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
-|CONTENT 行集列|Description|  
+|CONTENT 行集列|描述|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|目录名称。 如果提供程序不支持目录，则为 NULL。|  
 |MODEL_SCHEMA|未限定的架构名称。 如果提供程序不支持架构，则为 NULL。|  
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>请参阅  
- [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   

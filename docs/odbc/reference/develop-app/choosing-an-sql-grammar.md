@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036551"
 ---
 # <a name="choosing-an-sql-grammar"></a>选择 SQL 语法
 可以在构造 SQL 语句时使用的第一个决定是要使用的语法。 除了可从各种标准主体，例如 Open Group、 ANSI 和 ISO 语法几乎每个 DBMS 供应商定义其自己的语法，其中每个稍有不同标准。  

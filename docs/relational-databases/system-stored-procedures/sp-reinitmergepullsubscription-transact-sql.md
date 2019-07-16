@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: edda5c400ebc9158fbc18e4c8ad8c9a118d9e476
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 08a62e26c130b3753c90cfe05f7e4077ef86d5a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075716"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，使用默认值为 ALL。  
   
-`[ @upload_first = ] 'upload_first'` 为重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*是**nvarchar(5)**，默认值为 FALSE。 如果 **，则返回 true**，该订阅重新初始化之前上载更改。 如果**false**，不上载更改。  
+`[ @upload_first = ] 'upload_first'` 为重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*是**nvarchar(5)** ，默认值为 FALSE。 如果 **，则返回 true**，该订阅重新初始化之前上载更改。 如果**false**，不上载更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

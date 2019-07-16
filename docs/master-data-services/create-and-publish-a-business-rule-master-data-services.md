@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9822b9f4b26897b1162a336b1adaa6f38c5ff117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025059"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
 
@@ -103,11 +102,11 @@ ms.locfileid: "65489613"
 ## <a name="grid-columns"></a>网格列  
  对于你创建的每个业务规则，系统都会在网格中添加一行（其中包含六列）。 下面介绍了这些列。  
   
-|“属性”|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |“登录属性”|在你单击“保存”  后，系统会显示下面的图像，指明业务规则正在更新。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果在创建或编辑业务规则时出错，系统会显示下面的图像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果状态为“正常”，则将显示下面的图像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|“属性”|业务规则名称。|  
-|Description|业务规则描述。|  
+|名称|业务规则名称。|  
+|描述|业务规则描述。|  
 |业务规则状态|以下业务规则状态之一：未定义规则、有效、已排除、待更改、待排除、待删除。|  
 |已排除|指定是否排除业务规则。|  
 |通知|指定要向其发送电子邮件通知的选定用户或组。|  

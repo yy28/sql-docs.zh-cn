@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 686b172ce75252e4098ef669a1a8df749e3605ec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62fa2db01ff17008a0b6a7cd4e5fd0a2bce71189
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910915"
 ---
 # <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,35 +72,35 @@ msglen
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc  
+ srvproc   
  指向作为特定客户端连接句柄（在这里为接收语言请求的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- msgtype  
+ msgtype   
  SRV_MSG_INFO 或 SRV_MSG_ERROR，具体取决于服务器发送的是信息性消息还是错误消息。  
   
- msgnum  
+ msgnum   
  4 字节消息编号。  
   
- class  
+ class   
  指定错误严重性。 严重性小于或等于 10 将被视为信息性消息。  
   
- State  
+ State   
  提供当前消息的错误状态编号。 错误状态编号提供有关错误上下文的信息。 有效的状态编号介于 0 到 255 之间。  
   
- rpcname  
+ rpcname   
  当前不受支持。  
   
- rpcnamelen  
+ rpcnamelen   
  当前不受支持。  
   
- linenum  
- 消息应用到的语言命令批处理中的行号。 行号从 1 开始。 如果 linenum 不适用于消息，则设置为 0。  
+ linenum   
+ 消息应用到的语言命令批处理中的行号。 行号从 1 开始。 如果 linenum 不适用于消息，则设置为 0  。  
   
- message  
+ message   
  指向要发送到客户端的字符串的指针。  
   
- msglen  
- 指定消息的长度（以字节为单位）。 如果消息以 null 值结束，则将 msglen 设置为 SRV_NULLTERM。  
+ msglen   
+ 指定消息的长度（以字节为单位）  。 如果消息以 null 值结束，则将 msglen 设置为 SRV_NULLTERM   。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL  
@@ -109,9 +108,9 @@ msglen
 ## <a name="remarks"></a>Remarks  
  此函数向客户端发送错误或信息性消息。 每一要发送的消息都调用一次该函数。  
   
- 可以在使用 srv_sendrow 发送所有行（如果有）之前或之后，使用 srv_sendmsg 以任意顺序向客户端发送消息。 在使用 srv_senddone 发送完成状态之前，所有消息（如果有）都必须发送到客户端。  
+ 可以在使用 srv_sendrow 发送所有行（如果有）之前或之后，使用 srv_sendmsg 以任意顺序向客户端发送消息   。 在使用 srv_senddone 发送完成状态之前，所有消息（如果有）都必须发送到客户端  。  
   
- 如果通过 Unicode 发送消息，请使用 srv_wsendmsg 而不是 srv_sendmsg。  
+ 如果通过 Unicode 发送消息，请使用 srv_wsendmsg 而不是 srv_sendmsg   。  
   
  有关详细信息，请参阅 [Unicode 数据和服务器代码页](../../relational-databases/extended-stored-procedures-programming/unicode-data-and-server-code-pages.md)。  
   

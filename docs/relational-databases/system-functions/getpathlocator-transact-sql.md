@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7770ced88953fd64d9ce48b624416b9a7e787f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cec490522f8bacc774213ec1af5cce1af0eefef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910256"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ GetPathLocator(filenamespace_path)
   
 ## <a name="arguments"></a>参数  
  *filenamespace_path*  
- FileTable 中的命名空间路径。 类型的命名空间路径是**nvarchar （max)**。  
+ FileTable 中的命名空间路径。 类型的命名空间路径是**nvarchar （max)** 。  
   
  如果数据库所属的 Always On 可用性组，则**GetPathLocator**函数接受虚拟网络名称 (VNN) 或计算机名称。  
   

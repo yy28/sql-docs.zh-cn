@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename |Microsoft Docs
+title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895554"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,10 +41,10 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>参数  
- *令牌*  
+ *token*  
  指示 BCP 类型标记的值。  
   
- field  
+ field   
  指示请求的标记是否为 max 类型。  
   
 ## <a name="returns"></a>返回  
@@ -56,7 +55,7 @@ RETCODE bcp_gettypename (
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
   
-|BCP 类型名称|MaxType|“输出”|  
+|BCP 类型名称|MaxType|Output|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|之前或之后|**decimal**|  
 |**SQLNUMERIC**|之前或之后|**numeric**|  
@@ -66,7 +65,7 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|之前或之后|**money**|  
 |**SQLFLT8**|之前或之后|**float**|  
 |**SQLDATETIME 转换**|之前或之后|**datetime**|  
-|**SQLBITN**|之前或之后|**位 null**|  
+|**SQLBITN**|之前或之后|**bit-null**|  
 |**SQLBIT**|之前或之后|**bit**|  
 |**SQLBIGCHAR**|否|**char**|  
 |**SQLCHARACTER**|否|**char**|  
@@ -77,10 +76,10 @@ RETCODE bcp_gettypename (
 |**SQLBINARY**|否|**二进制**|  
 |**SQLBIGVARBINARY**|否|**varbinary**|  
 |**SQLVARBINARY**|否|**varbinary**|  
-|**SQLIMAGE**|之前或之后|**图像**|  
+|**SQLIMAGE**|之前或之后|**Image**|  
 |**SQLINTN**|之前或之后|**int-null**|  
-|**SQLDATETIMN**|之前或之后|**日期时间为 null**|  
-|**SQLMONEYN**|之前或之后|**资金 null**|  
+|**SQLDATETIMN**|之前或之后|**datetime-null**|  
+|**SQLMONEYN**|之前或之后|**money-null**|  
 |**SQLFLTN**|之前或之后|**float-null**|  
 |**SQLAOPSUM**|之前或之后|**Sum**|  
 |**SQLAOPAVG**|之前或之后|**Avg**|  
@@ -96,17 +95,17 @@ RETCODE bcp_gettypename (
 |**SQLNTEXT**|之前或之后|**ntext**|  
 |**SQLVARIANT**|之前或之后|**sql_variant**|  
 |**SQLINT8**|之前或之后|**Bigint**|  
-|**SQLCHARACTER**|用户帐户控制|**varchar(max)**|  
-|**SQLBIGCHAR**|用户帐户控制|**varchar(max)**|  
-|**SQLBIGVARCHAR**|用户帐户控制|**varchar(max)**|  
-|**SQLVARCHAR**|用户帐户控制|**varchar(max)**|  
-|**SQLBINARY**|用户帐户控制|**varbinary(max)**|  
-|**SQLBIGBINARY**|用户帐户控制|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|用户帐户控制|**varbinary(max)**|  
-|**SQLVARBINARY**|用户帐户控制|**varbinary(max)**|  
-|**SQLNCHAR**|用户帐户控制|**nvarchar(max)**|  
-|**SQLNVARCHAR**|用户帐户控制|**nvarchar(max)**|  
-|**SQLXML**|用户帐户控制|**Xml**|  
+|**SQLCHARACTER**|是|**varchar(max)**|  
+|**SQLBIGCHAR**|是|**varchar(max)**|  
+|**SQLBIGVARCHAR**|是|**varchar(max)**|  
+|**SQLVARCHAR**|是|**varchar(max)**|  
+|**SQLBINARY**|是|**varbinary(max)**|  
+|**SQLBIGBINARY**|是|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|是|**varbinary(max)**|  
+|**SQLVARBINARY**|是|**varbinary(max)**|  
+|**SQLNCHAR**|是|**nvarchar(max)**|  
+|**SQLNVARCHAR**|是|**nvarchar(max)**|  
+|**SQLXML**|是|**Xml**|  
 |**SQLUDT**|之前或之后|**udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 对日期和时间增强功能的支持  

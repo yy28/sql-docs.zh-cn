@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f08d007395c85ef6b423c7db6c1aed5b39cb27ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920795"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction**界面用于构造 ADO**记录集**从 OLE DB 对象**行集**C 中的对象 /C++应用程序。  
   
  此接口支持以下属性：  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
   
 |||  
 |-|-|  
@@ -39,7 +38,7 @@ ms.locfileid: "66718546"
 ## <a name="methods"></a>方法  
  无。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  无。  
   
 ## <a name="remarks"></a>备注  

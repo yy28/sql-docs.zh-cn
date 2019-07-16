@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71f0da7bbd7ef1a37a1f48539c7230bff0ceda15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909916"
 ---
 # <a name="attribute-conformance"></a>属性一致性
 下表指示这是定义完善的一致性级别的每个 ODBC 环境属性。  
@@ -70,7 +69,7 @@ ms.locfileid: "62672532"
 |SQL_ATTR_CONCURRENCY|级别 1/级别 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|级别 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|级别 2|  
-|SQL_ATTR_CURSOR_TYPE|Core/Level 2[3]|  
+|SQL_ATTR_CURSOR_TYPE|核心/级别 2 [3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|级别 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|级别 2|  
 |SQL_ATTR_IMP_PARAM_DESC|Core|  

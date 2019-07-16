@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 2766005287a522a84d209d995be0de9a94e45c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aaadf6f4226b2c9a457c7437412f35c1bbe20fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054708"
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手概述
 数据迁移助手 (DMA) 可帮助您将升级到现代数据平台检测可能会影响新版本的 SQL Server 或 Azure SQL 数据库中的数据库功能的兼容性问题。 DMA 建议性能和可靠性改进为目标环境，并允许您将架构、 数据和非包含的对象从源服务器移动到目标服务器。
@@ -82,7 +81,7 @@ DMA 替换所有以前版本的 SQL Server 升级顾问，应使用的大多数 
 - Azure SQL Database
 - Azure SQL 数据库托管实例
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [评估 SQL Server 迁移](../dma/dma-assesssqlonprem.md)     
 [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)     
 [使用数据迁移助手迁移的本地 SQL Server](../dma/dma-migrateonpremsql.md)     

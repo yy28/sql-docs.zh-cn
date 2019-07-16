@@ -7,13 +7,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c9195a6c2b9a2192e9d8fd04ce3e5d2592b1b23e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d58125cc8e6ffe4378759d4ceb4bdd0354e2e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962361"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 代码分析函数来提高性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +60,7 @@ help("Sys.time")
 
 Microsoft R Open，默认情况下安装的文档包括开发的讨论了 R 语言扩展的手册[分析和调试](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)在详细信息。 您可以在 C:\Program Files\Microsoft SQL Server\MSSQL13 向计算机上发现相同的文档。MSSQLSERVER\R_SERVICES\doc\manual。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [utils R 包](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
 + ["高级的 R"由 Hadley wickham 编写](http://adv-r.had.co.nz)

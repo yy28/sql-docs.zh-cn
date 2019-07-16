@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7f4d2c2278304b66bc2692e147a8bf48c81b0bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b028625f1c236c96c39e75f08057f82fa852bd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945187"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何确定权限 (Master Data Services)
 
@@ -39,7 +38,7 @@ ms.locfileid: "65484403"
   
  ![mds_conc_security_no_overlap](../master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>第 1 步：确定有效属性权限。  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>步骤 1：确定有效属性权限。  
  下面的列表说明如何确定有效属性权限：  
   
 -   分配给模型对象的权限确定用户可以访问哪些属性。  
@@ -54,7 +53,7 @@ ms.locfileid: "65484403"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>第 2 步：如果分配了层次结构成员权限，则需要确定有效的成员权限。  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>步骤 2：如果分配了层次结构成员权限，则需要确定有效的成员权限。  
  下面的列表说明如何确定有效的层次结构成员权限：  
   
 -   分配给层次结构节点的权限确定用户可以访问哪些成员。  

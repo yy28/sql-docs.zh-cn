@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070113"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 映射
 **SQLTransact**现被替代**SQLEndTran**。 两个函数之间的主要区别在于**SQLEndTran**包含的参数*HandleType*，它指定要完成工作的范围。 *HandleType*参数可指定环境的信息或连接句柄。 以下调用到**SQLTransact**:  

@@ -1,5 +1,5 @@
 ---
-title: 配置最大文件上载大小 (Power Pivot for SharePoint) |Microsoft 文档
+title: 配置最大文件上载大小 (Powerpivot for SharePoint) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ce366acc4244db16f0b58bbdc8226e9327416c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164276"
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>配置最大文件上载大小 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,15 +28,15 @@ ms.locfileid: "34027224"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>配置针对 Excel Services 的最大文件大小  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”** 。  
   
 2.  单击 Excel Services 应用程序的名称。  
   
-3.  单击 **“受信任文件位置”**。  
+3.  单击 **“受信任文件位置”** 。  
   
 4.  单击该位置以编辑属性。 默认情况下，Excel Services 将默认 Web 应用程序视作可信站点。 如果你在使用默认 Web 应用程序，则单击 **http://** 以便打开针对此位置的配置页。  
   
-5.  滚动到 **“工作簿属性”**。  
+5.  滚动到 **“工作簿属性”** 。  
   
 6.  在“工作簿最大大小”中，将文件大小从 10（默认值）增加到 50 或者适合您在使用的文件的更大大小。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "34027224"
   
      您可以指定的最大值是 2 GB（或“管理中心”中指定的 2047 MB）。  
   
-7.  单击 **“确定”**。  
+7.  单击 **“确定”** 。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>为 SharePoint Web 应用程序配置最大文件大小  
   
-1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”**。  
+1.  在“管理中心”的“应用程序管理”中，单击 **“管理 Web 应用程序”** 。  
   
     > [!NOTE]  
     >  仅当在 Excel Services 中增加过“工作簿最大大小”时，才执行以下步骤。  
@@ -57,12 +57,12 @@ ms.locfileid: "34027224"
   
 3.  在“Web 应用程序”功能区上，单击“常规设置”按钮上的向下箭头。  
   
-4.  单击 **“常规设置”**。  
+4.  单击 **“常规设置”** 。  
   
-5.  滚动到 **“最大上载大小”**。  
+5.  滚动到 **“最大上载大小”** 。  
   
 6.  将该属性设置为与 Excel Services 中的“工作簿最大大小”相同或更大的数值。  
   
-7.  单击 **“确定”**。  
+7.  单击 **“确定”** 。  
   
   

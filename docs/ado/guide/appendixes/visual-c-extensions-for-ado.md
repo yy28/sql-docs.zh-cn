@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ccd783bdb7bf266bfdc83c3a02520345d707ceea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926372"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO 的 Visual C++ 扩展
 编程 ADO 与视觉对象的首选的方法C++使用 **#import**指令，如中所述[Microsoft Visual C++ ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 但是，早期版本的 ADO 使用视觉对象的编程的另一种方法随一起提供C++： 视觉对象C++扩展。 本部分介绍此功能对于那些必须维护视觉对象C++扩展的代码，但新的 ADO 代码应使用编写 #**导入**。

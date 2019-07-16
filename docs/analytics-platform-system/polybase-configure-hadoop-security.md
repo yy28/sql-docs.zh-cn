@@ -2,19 +2,18 @@
 title: 在分析平台系统中配置 PolyBase Hadoop 安全性 |Microsoft Docs
 description: 介绍如何在并行数据仓库，若要将连接到外部 Hadoop 配置 PolyBase。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cef02b909d533d8cf0e5bc870c524c204885a6eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1aebac3f63a105f0276e676ccc807aaebdbf097d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960297"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 配置和安全
 

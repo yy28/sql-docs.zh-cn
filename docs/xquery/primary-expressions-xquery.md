@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946383"
 ---
 # <a name="primary-expressions-xquery"></a>主表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 内置布尔函数**true （)** 并**false （)**，可以用于表示布尔值，如下面的示例中所示。  
+ 内置布尔函数**true （)** 并**false （)** ，可以用于表示布尔值，如下面的示例中所示。  
   
 ```  
 DECLARE @var XML  
@@ -157,7 +156,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>上下文项表达式  
  上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 此外可以更改由 nodes （） 方法，在 XPath 表达式的上下文或 [] 谓词。  
   
- 上下文项由包含点 (.) 的表达式返回。 例如，下面的查询将计算每个元素 <`a`>，以确定是否存在属性 `attr`。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
+ 上下文项由包含点 (.) 的表达式返回。 例如，以下查询计算每个元素 <`a`> 的属性是否存在`attr`。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
   
 ```  
 DECLARE @var XML  

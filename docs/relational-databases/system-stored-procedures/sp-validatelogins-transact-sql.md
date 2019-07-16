@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b60478b4ca3bdd6f2688f5a77c18cdce7166b37d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021047"
 ---
 # <a name="spvalidatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ sp_validatelogins
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|SID|**varbinary(85)**|Windows 用户或组的 Windows 安全性标识符 (SID)。|  
+|**SID**|**varbinary(85)**|Windows 用户或组的 Windows 安全性标识符 (SID)。|  
 |**NT 登录名**|**sysname**|Windows 用户或组的名称。|  
   
 ## <a name="remarks"></a>备注  
@@ -54,7 +53,7 @@ sp_validatelogins
   
  若要删除映射到 Windows 用户和组不再存在，请使用[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**或**securityadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75638344b249274e8e4a7b637330c1c6806b0c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924954"
 ---
 # <a name="intervening-shape-compute-clauses"></a>中间 Shape COMPUTE 子句
 它是有效嵌入父级和子级之间的一个或多个 COMPUTE 子句在参数化的形状命令中，如以下示例所示：  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 46bfec04cce3e1fef87e41c04842e572d94058a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 553df37cf728b3c48c91d0bf7edc50ac924b1106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047737"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>向版本分配标志 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65478571"
 > [!NOTE]  
 >  版本标志一次只能分配给一个版本。 如果您分配的标志已分配给另一个版本，则该标志将移到您选择的版本。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  

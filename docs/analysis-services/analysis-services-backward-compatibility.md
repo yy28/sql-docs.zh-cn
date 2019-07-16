@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210262"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 向后兼容性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37984689"
 |表格|未来版本中将不支持表格模型 1100 和 1103 兼容性级别。 替换是将模型设置兼容级别 1200年或更高版本，将模型定义转换为表格元数据。 请参阅 [Analysis Services 中表格模型的兼容级别](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
 |工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|跟踪重播 <br />替代功能的 Server Profiler。 没有替代功能。|  
-|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置： Microsoft.SqlServer.Management.XEvent<br />-跟踪读取： Microsoft.SqlServer.XEvent.Linq<br />-   跟踪重播：无|  
+|跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置：Microsoft.SqlServer.Management.XEvent<br />-跟踪读取：Microsoft.SqlServer.XEvent.Linq<br />-跟踪重播：无|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中以前弃用的功能公告仍然有效。 由于尚未从本产品中删除支持这些功能的代码，因此该版本中仍存在其中的许多功能。 在以前已弃用的功能时可能是可访问，它们仍被视为已弃用，并且可能以物理方式从产品中删除在任何时间。  
@@ -112,5 +112,5 @@ using Microsoft.AnalysisServices.Core;
  从较旧的兼容性级别设置的较新的 1200年及更高版本的兼容性级别中没有完全对应在于 DirectQuery 模型无就地升级。 如果必须在 DirectQuery 模式下运行的现有表格模型，您应在 SQL Server Data Tools 中打开模型，关闭 DirectQuery，设置**兼容性级别**属性设为 1200年或更高版本，以及然后重新配置 DirectQuery属性。 请参阅[DirectQuery 模式下](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)有关详细信息。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Analysis Services 向后兼容性 (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)

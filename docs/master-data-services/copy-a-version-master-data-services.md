@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc92e04a39fce48c25362a5db61d004420f4e959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079745"
 ---
 # <a name="copy-a-version-master-data-services"></a>复制版本 (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65484367"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，复制某一模型的版本以便为其创建新版本。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
@@ -38,16 +37,16 @@ ms.locfileid: "65484367"
   
 ### <a name="to-copy-a-version"></a>复制版本  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”**。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，单击 **“版本管理”** 。  
   
 2.  在 **“管理版本”** 页上，选择要复制的版本对应的行。  
   
     > [!NOTE]  
     >  根据 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的设置，您可能只能复制状态为 **“已提交”** 的版本。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
-3.  单击 **“复制”**。  
+3.  单击 **“复制”** 。  
   
-4.  在确认对话框中，单击 **“确定”**。  
+4.  在确认对话框中，单击 **“确定”** 。  
   
 ## <a name="next-steps"></a>后续步骤  
   

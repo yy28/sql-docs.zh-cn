@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 155e1e810309ee4efa40badac55ca749a4329182
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926061"
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 有关以编程方式访问、 编辑和更新数据的各种数据源通过 OLE DB 系统接口，使开发人员功能强大、 逻辑的对象模型。 ADO 的最常见的用法是查询表或关系数据库中的表、 检索和应用程序中显示的结果以及可能允许用户更改和保存更改的数据。 其他任务包括：  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cd4c0ea515020067cb7dd5c49b97db69ca6a756c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209956"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52401284"
  [返回页首](#bkmk_Top)  
   
 ### <a name="lift-chart-with-target-value"></a>带有目标值的提升图  
- 下图显示了在 **Basic Data Mining Tutorial** 中创建的目标邮递 [](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)模型的提升图。 在此图中，目标属性为 [Bike Buyer]，并且目标值为 1，表示预测客户将会购买自行车。 因此，此提升图显示了在标识这些可能的客户时模型提供的改进。  
+ 下图显示了在 **Basic Data Mining Tutorial** 中创建的[目标邮递](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)模型的提升图。 在此图中，目标属性为 [Bike Buyer]，并且目标值为 1，表示预测客户将会购买自行车。 因此，此提升图显示了在标识这些可能的客户时模型提供的改进。  
   
  此图包含基于相同数据的多个模型。 这些模型之一已被自定义为目标特定客户。 您可以通过对用于定型的数据添加筛选器，自定义模型。 该筛选器将在定型和评估中使用的事例限制为年龄低于 30 的客户。 请注意，筛选的影响之一是基本模型和筛选后的模型将使用不同的数据集，因此用于在提升图中进行评估的事例数目也将不同。 解释预测结果和其他统计信息时应牢记这一点，这非常重要。  
   

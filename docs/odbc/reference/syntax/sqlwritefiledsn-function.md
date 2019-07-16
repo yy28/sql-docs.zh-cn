@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58002ec0e8ceacae49f4d54be5d3406ea3014d59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b1ce34074a2326d17a199537b308a9a670d8163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039428"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 函数
 **符合性**  
@@ -64,7 +63,7 @@ BOOL SQLWriteFileDSN(
 ## <a name="diagnostics"></a>诊断  
  当**SQLWriteFileDSN**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|描述|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_INVALID_PATH|无效的安装路径|中指定的文件名称的路径*lpszFileName*参数无效。|  

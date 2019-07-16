@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile (Transact-SQL) | Microsoft Docs
+title: sp_help_agent_profile (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35e0ace5f88e15ce4afc0da797d949039398e898
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055207"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|配置文件的 ID。|  
 |**profile_name**|**sysname**|对代理类型唯一。|  

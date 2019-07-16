@@ -1,5 +1,5 @@
 ---
-title: 多维模型数据库 (SSAS) |Microsoft 文档
+title: 多维模型数据库 (SSAS) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ec839c9638b3baf79cba0148cc932ead7820f7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022055"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208681"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多维模型数据库 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "34022055"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 通过与源代码管理软件集成来支持多个开发人员同时使用一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的不同对象。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 开发人员也可以与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库直接进行交互，而不通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，但是这样做的风险是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象可能会与用于其部署的  项目不同步。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署之后，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来管理  数据库。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库（例如对分区和角色）进行某些更改，这些更改也可能会导致 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的对象与用于其部署的  项目不同步。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
  [备份和还原 Analysis Services 数据库](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
- [Document and Script Analysis Services 数据库](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+ [记录和编写 Analysis Services 数据库脚本](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
  [修改或删除 Analysis Services 数据库](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "34022055"
   
  [同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在联机模式下连接到 Analysis Services 数据库](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   
  [创建 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [使用 MDX 查询多维数据](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  

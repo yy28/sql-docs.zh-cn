@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004582"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>与 QName 相关的函数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- 结果如下： 请注意，QName 类型的元素 <`ElemQN`> 现在有了一个新的值：  
+ 结果如下： 请注意，在元素 <`ElemQN`> 的 QName 类型现在具有新值：  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -158,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- 以下示例尝试添加其他 <`root`> 元素，但未成功，因为 XML 构造不支持 expanded-QName() 函数。  
+ 以下示例尝试添加另一个 <`root`> 元素但未成功，因为 XML 构造中不支持 expanded-qname （） 函数。  
   
 ```  
 update T SET xmlCol.modify('  
@@ -166,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- 解决方案是：首先为 <`root`> 元素插入带有值的实例，然后再修改它。 在此示例中，当插入 <`root`> 元素时初始值为空。 此示例中的 XML 架构集合允许 <`root`> 元素的值为空。  
+ 此解决方案是首先插入值的实例 <`root`> 元素，然后修改它。 在此示例中，使用初始值为空时 <`root`> 插入元素。 在此示例中的 XML 架构集合允许值为空 <`root`> 元素。  
   
 ```  
 update T SET xmlCol.modify('  

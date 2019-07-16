@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0d46bad2e0b37c5e6751a4895cdf1899aee4b01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070097"
 ---
 # <a name="statement-transitions"></a>语句转换
 ODBC 语句具有以下状态。  
   
-|State|Description|  
+|状态|描述|  
 |-----------|-----------------|  
 |S0|未分配的语句。 （连接状态必须是 C4、 C5 或 C6。 有关详细信息，请参阅[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)。)|  
 |S1|已分配的语句。|  
@@ -92,7 +91,7 @@ ODBC 语句具有以下状态。
   
 |S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|-- [s] S8 [d] S11 [x]|-- [s] S8 [d] S11 [x]|HY010|  
+|-[s] S8 [d] S11 [x]|-[s] S8 [d] S11 [x]|HY010|  
   
 ## <a name="sqlcancel"></a>SQLCancel  
   
@@ -128,13 +127,13 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|24000|24000|24000|S1 [np] S3 [p]|HY010|HY010|  
+|IH|24000|24000|24000|S1 np S3 [p]|HY010|HY010|  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|请参阅下一个表|24000|-- [s] S11 [x]|HY010|NS [c] HY010 o|  
+|IH|HY010|请参阅下一个表|24000|-[s] S11 [x]|HY010|NS [c] HY010 o|  
   
 ## <a name="sqlcolattribute-prepared-states"></a>SQLColAttribute （已准备状态）  
   
@@ -183,7 +182,7 @@ ODBC 语句具有以下状态。
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|24000[1]|-- [s]  S11 [x]|  
+|24000[1]|-[s] S11 [x]|  
   
  [1]该行显示的转换时*SourceDescHandle*参数为 IRD。  
   
@@ -197,19 +196,19 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|请参阅下一个表|24000|-- [s]  S11 [x]|HY010|NS [c] HY010 o|  
+|IH|HY010|请参阅下一个表|24000|-[s] S11 [x]|HY010|NS [c] HY010 o|  
   
 ## <a name="sqldescribecol-prepared-states"></a>SQLDescribeCol （已准备状态）  
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|07005|-- [s]  S11 [x]|  
+|07005|-[s] S11 [x]|  
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-- [s]  S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
+|IH|HY010|-[s] S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
@@ -267,7 +266,7 @@ ODBC 语句具有以下状态。
   
 |S2<br /><br /> 无结果|S3<br /><br /> 结果|  
 |-----------------------|--------------------|  
-|S4 [s]  S8 [d]  S11 [x]|S5 [s]  S8 [d]  S11 [x]|  
+|S4 [s] [d] S8 S11 [x]|S5 [s] [d] S8 S11 [x]|  
   
 ## <a name="sqlexecute-cursor-states"></a>SQLExecute （游标状态）  
   
@@ -319,7 +318,7 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH [1]|--|--|S1 [np]  S2 [p]|S1 [np]  S3 [p]|HY010|HY010|  
+|IH [1]|--|--|S1 np S2 [p]|S1 np S3 [p]|HY010|HY010|  
 |IH [2]|--|--|--|--|HY010|HY010|  
   
  [1] 此行显示转换时*选项*已 SQL_CLOSE。  
@@ -419,7 +418,7 @@ ODBC 语句具有以下状态。
   
  [2] 的语句属性是 SQL_ATTR_ROW_NUMBER。  
   
-## <a name="sqlgetstmtattr-cursor-states"></a>SQLGetStmtAttr (Cursor States)  
+## <a name="sqlgetstmtattr-cursor-states"></a>SQLGetStmtAttr （游标状态）  
   
 |S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
@@ -453,13 +452,13 @@ ODBC 语句具有以下状态。
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-- [s]  S11 [x]|-- [s]  S11 [x]|-- [s]  S11 [x]|HY010|NS [c] HY010 [o]|  
+|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
 |S0<br /><br /> 未分配|S1<br /><br /> 分配|S2-S3<br /><br /> Prepared|S4<br /><br /> 执行|S5-S7<br /><br /> 游标|S8-S10<br /><br /> 需要数据|S11-S12<br /><br /> 异步|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-- [s]  S11 [x]|-- [s]  S11 [x]|-- [s]  S11 [x]|HY010|NS [c] HY010 [o]|  
+|IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
@@ -575,7 +574,7 @@ ODBC 语句具有以下状态。
   
 |S5<br /><br /> 打开|S6<br /><br /> SQLFetch 或 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
-|24000|-- [s]  S8 [d]  S11 [x]  24000 [b]  HY109 [i]|-- [s]  S8 [d]  S11 [x]  24000 [b]  HY109 [i]|  
+|24000|-[s] S8 [d] [x] 24000 [b] HY109 S11 [i]|-[s] S8 [d] [x] 24000 [b] HY109 S11 [i]|  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
   

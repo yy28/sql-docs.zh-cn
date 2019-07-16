@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b428a06679bdb0cade14314195d576a1ccc596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920927"
 ---
 # <a name="ado-methods"></a>ADO 方法
 
@@ -71,7 +70,7 @@ ms.locfileid: "66696853"
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|刷新在当前数据**记录集**对象，或**字段**的集合**记录**对象，从基础数据库。|  
 |[保存](../../../ado/reference/ado-api/save-method.md)|将保存**记录集**文件中或**Stream**对象。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|将保存的二进制内容组成**Stream**到文件。|  
-|[Seek](../../../ado/reference/ado-api/seek-method.md)|搜索的索引**记录集**快速找到匹配指定的值，并将更改为该行的当前行位置的行。|  
+|[查找](../../../ado/reference/ado-api/seek-method.md)|搜索的索引**记录集**快速找到匹配指定的值，并将更改为该行的当前行位置的行。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|设置流的末尾的位置。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|读取文本流时，将跳过一个整行。|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|获取有关打开的流的统计信息。|  

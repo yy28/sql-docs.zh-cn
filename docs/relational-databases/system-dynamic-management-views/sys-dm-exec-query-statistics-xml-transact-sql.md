@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_statistics_xml (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 06091ffc26ea036a4a0bd7e30196545bcaca60d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936948"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +46,24 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="table-returned"></a>返回的表
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|会话的 ID。 不可为 Null。|
 |request_id|**int**|请求的 ID。 不可为 Null。|
-|sql_handle|**varbinary(64)**|请求的 SQL 文本的哈希映射。 可以为 NULL。|
-|plan_handle|**varbinary(64)**|查询计划哈希映射。 可以为 NULL。|
-|query_plan|**xml**|使用部分统计信息的 Showplan XML。 可以为 NULL。|
+|sql_handle|**varbinary(64)**|是一个令牌，用于唯一标识批处理或存储的过程的查询。 可以为 NULL。|
+|plan_handle|**varbinary(64)**|是唯一标识当前正在执行的批次查询执行计划的令牌。 可以为 NULL。|
+|query_plan|**xml**|包含运行时使用指定的查询执行计划的显示计划表示形式*plan_handle*包含部分统计信息。 显示计划的格式为 XML。 为包含即席 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、存储过程调用以及用户定义函数调用等内容的每个批查询生成一个计划。 可以为 NULL。|
 
 ## <a name="remarks"></a>备注
 此系统函数是从开始提供[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。 请参阅知识库[3190871](https://support.microsoft.com/en-us/help/3190871)
 
-此系统函数下都适用**标准**并**轻型**查询执行统计信息分析基础结构。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)。  
+此系统函数下都适用**标准**并**轻型**查询执行统计信息分析基础结构。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。  
+
+在以下情况下不显示计划输出中返回**query_plan**返回的表的列**sys.dm_exec_query_statistics_xml**:  
+  
+-   对应于指定的查询计划，如果*session_id*不再执行**query_plan**列返回的表为 null。 例如，可能会发生此问题，如果没有捕获计划句柄的和已使用与时间之间的时间延迟**sys.dm_exec_query_statistics_xml**。  
+    
+由于在允许的嵌套级别数的限制造成**xml**数据类型**sys.dm_exec_query_statistics_xml**不能返回达到或超过 128 级的嵌套元素的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 和更高版本**query_plan**列返回 NULL。   
 
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  

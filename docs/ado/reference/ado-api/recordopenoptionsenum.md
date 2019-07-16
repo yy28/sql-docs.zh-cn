@@ -1,5 +1,5 @@
 ---
-title: RecordOpenOptionsEnum | Microsoft Docs
+title: RecordOpenOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0ed637d8e77ef7fc152f994da81db010fa80900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931426"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定用于打开选项[记录](../../../ado/reference/ado-api/record-object-ado.md)。 这些值可以组合使用或者。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|向与关联的字段的提供程序指示**记录**最初，不需要检索，但可以在首次尝试访问该字段进行检索。 此标志，缺少所指示的默认行为是检索所有**记录**对象字段。|  
 |**adDelayFetchStream**|0x4000|向默认流与关联的提供程序指示**记录**最初不需要检索。 此标志，缺少所指示的默认行为是检索与关联的默认流**记录**对象。|  

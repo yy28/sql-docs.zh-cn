@@ -16,14 +16,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198416"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
-  “审核”[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
+  “审核”  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的审核级别有若干种，具体取决于您的安装的政府要求或标准要求。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核提供若干必需的工具和进程，用于启用、存储和查看对各个服务器和数据库对象的审核。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53373519"
 > [!IMPORTANT]  
 >  任何经过身份验证的用户可以读取和写入到 Windows 应用程序事件日志。 应用程序事件日志要求的权限比 Windows 安全事件日志低，安全性低于 Windows 安全事件日志。  
   
- 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问” 安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在中[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]或 Windows Server 2008 中，可以设置更精细**生成应用程序**策略从命令行通过使用审核策略程序 (`AuditPol.exe)`。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](https://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
+ 必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户应添加到 **生成安全审核** 策略中才能写入 Windows 安全日志。 默认情况下，本地系统、本地服务和网络服务都是此策略的一部分。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 此外，对于“成功”  和“失败”  均必须启用“审核对象访问”  安全策略。 此设置可通过使用安全策略管理单元 (secpol.msc) 配置。 在中[!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)]或 Windows Server 2008 中，可以设置更精细**生成应用程序**策略从命令行通过使用审核策略程序 (`AuditPol.exe)`。 有关启用 Windows 安全日志写入的步骤的详细信息，请参阅 [将 SQL Server 审核事件写入安全日志](write-sql-server-audit-events-to-the-security-log.md)。 有关 Auditpol.exe 程序的详细信息，请参阅知识库文章 921469 [如何使用组策略配置详细的安全审核设置](https://support.microsoft.com/kb/921469/)。 Windows 事件日志对于 Windows 操作系统具有全局性。 有关 Windows 事件日志的详细信息，请参阅 [事件查看器概述](https://go.microsoft.com/fwlink/?LinkId=101455)。 如果需要关于审核的更精准权限，请使用二进制文件目标。  
   
  在您将审核信息保存到某一文件时，为了帮助避免被篡改，可以通过以下方式限制对文件位置的访问：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "53373519"
 ## <a name="overview-of-using-sql-server-audit"></a>使用 SQL Server 审核概述  
  可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 定义审核。 在创建并启用审核后，目标将接收各项。  
   
- 您可以使用 Windows 中的 **“事件查看器”** 实用工具来读取 Windows 事件。 对于文件目标，你可以使用 **中的“日志文件查看器”**[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) 函数来读取目标文件。  
+ 您可以使用 Windows 中的 **“事件查看器”** 实用工具来读取 Windows 事件。 对于文件目标，你可以使用 **中的“日志文件查看器”** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [fn_get_audit_file](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql) 函数来读取目标文件。  
   
  以下是创建和使用审核的一般过程。  
   
@@ -100,14 +100,14 @@ ms.locfileid: "53373519"
   
 3.  启用审核。  
   
-4.  通过使用 Windows“事件查看器” 、“日志文件查看器” 或 fn_get_audit_file 函数来读取审核事件。  
+4.  通过使用 Windows“事件查看器”  、“日志文件查看器”  或 fn_get_audit_file 函数来读取审核事件。  
   
  有关详细信息，请参阅 [创建服务器审核和服务器审核规范](create-a-server-audit-and-server-audit-specification.md) 和 [创建服务器审核和数据库审核规范](create-a-server-audit-and-database-audit-specification.md)。  
   
 ## <a name="considerations"></a>注意事项  
- 如果在启动审核期间出现问题，则服务器将不会启动。 在这种情况下，可以在命令行中使用 -f 选项来启动服务器。  
+ 如果在启动审核期间出现问题，则服务器将不会启动。 在这种情况下，可以在命令行中使用 -f 选项来启动服务器  。  
   
- 如果由于为审核指定了 ON_FAILURE=SHUTDOWN 而使得审核失败导致服务器关闭或不启动，则 MSG_AUDIT_FORCED_SHUTDOWN 事件将写入日志。 由于在第一次遇到此设置时将出现关机，此事件将写入一次。 在出现有关审核导致关闭的失败消息后，将写入此事件。 管理员可以使用 -m 标志以单用户模式启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，从而绕过审核引起的关闭。 如果在单用户模式下启动，则会将指定了 ON_FAILURE=SHUTDOWN 的任何审核降级为在相应会话中以 ON_FAILURE=CONTINUE 运行。 使用 -m 标志启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，MSG_AUDIT_SHUTDOWN_BYPASSED 消息将写入错误日志。  
+ 如果由于为审核指定了 ON_FAILURE=SHUTDOWN 而使得审核失败导致服务器关闭或不启动，则 MSG_AUDIT_FORCED_SHUTDOWN 事件将写入日志。 由于在第一次遇到此设置时将出现关机，此事件将写入一次。 在出现有关审核导致关闭的失败消息后，将写入此事件。 管理员可以使用 -m 标志以单用户模式启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，从而绕过审核引起的关闭  。 如果在单用户模式下启动，则会将指定了 ON_FAILURE=SHUTDOWN 的任何审核降级为在相应会话中以 ON_FAILURE=CONTINUE 运行。 使用 -m 标志启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，MSG_AUDIT_SHUTDOWN_BYPASSED 消息将写入错误日志  。  
   
  有关服务启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53373519"
 ### <a name="database-mirroring-and-sql-server-audit"></a>数据库镜像和 SQL Server 审核  
  已定义了数据库审核规范并使用数据库镜像的数据库将包括此数据库审核规范。 若要对已镜像的 SQL 实例进行正确的处理，必须配置下列项：  
   
--   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID 配置`=`*\<GUID from source Server Audit*>。  
+-   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID 配置`=` *\<GUID from source Server Audit*>。  
   
 -   对于二进制文件目标，镜像服务器服务帐户对要写入审核记录的位置必须具有相应的权限。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "53373519"
 ### <a name="dynamic-views-and-functions"></a>动态视图和函数  
  下表列出了可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的动态视图和函数。  
   
-|动态视图和函数|Description|  
+|动态视图和函数|描述|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|为可在审核日志中报告的每项审核操作以及可配置为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 一部分的每个审核操作组返回一行。|  
 |[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|提供有关当前审核状态的信息。|  
@@ -155,7 +155,7 @@ ms.locfileid: "53373519"
 ### <a name="catalog-views"></a>目录视图  
  下表列出了可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的目录视图。  
   
-|目录视图|Description|  
+|目录视图|描述|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|包含所有数据库的服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
@@ -213,7 +213,7 @@ ms.locfileid: "53373519"
  [DDL 触发器](../../triggers/ddl-triggers.md)  
  介绍如何使用数据定义语言 (DDL) 触发器来跟踪对数据库的更改。  
   
- [Microsoft TechNet:SQL Server 技术中心：SQL Server 2005 安全和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server 技术中心：SQL Server 2005 安全性和保护](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新信息。  
   
 ## <a name="see-also"></a>请参阅  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057207"
 ---
 # <a name="reserved-keywords"></a>保留关键字
 保留了下列关键字以用于 ODBC 函数调用。 这些单词不限定最小 SQL 语法;但是，若要确保与支持核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**SQL_ODBC_KEYWORDS 值包含逗号分隔这些关键字的列表。  

@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fa3c8cfcb4eb90c34bbab94a0d61998a6bc3c916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033956"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>创建自定义工作流 (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "65485566"
 5.  SQL Server MDS Workflow Integration Services 将数据路由到您的工作流处理程序程序集。  
   
 > [!NOTE]  
->  注意：SQL Server MDS Workflow Integration Service 旨在触发简单的过程。 如果您的自定义代码需要复杂处理，请在单独的线程中或工作流进程之外完成您的处理。  
+>  注意:SQL Server MDS Workflow Integration Service 旨在触发简单的过程。 如果您的自定义代码需要复杂处理，请在单独的线程中或工作流进程之外完成您的处理。  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>为自定义工作流配置 Master Data Services  
  创建自定义工作流需要编写一些自定义代码，并将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 配置为将工作流数据传递给工作流处理程序。 请按照以下步骤启用自定义工作流处理：  
@@ -145,7 +144,7 @@ ms.locfileid: "65485566"
   
 1.  使用“服务”管理单元以停止服务。  
   
-2.  打开命令提示符，导航到服务的位置并在控制台模式下运行服务，通过输入：Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  打开命令提示符，导航到服务的位置并在控制台模式下运行服务，通过输入：Microsoft.MasterDataServices.Workflow.exe-控制台。  
   
 3.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，更新您的成员，并再次应用业务规则。 控制台窗口中将显示详细日志。  
   

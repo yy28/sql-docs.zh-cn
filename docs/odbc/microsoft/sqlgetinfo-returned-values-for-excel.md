@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb1fcf2a88824a2ddef2e8b896b2ee585fa2623a
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: c544668ebadab4a20b07f53fca9e1b501f6b1cf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003173"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Excel 的 SQLGetInfo 返回值
 下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  

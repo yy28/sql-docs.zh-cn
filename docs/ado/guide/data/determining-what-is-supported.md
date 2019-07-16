@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c6af51d8d69f5897021733468ee93290e1b5e280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925521"
 ---
 # <a name="determining-what-is-supported"></a>确定支持的功能
 **支持**方法用于确定是否指定**记录集**对象支持特定类型的功能。 它具有以下语法：  

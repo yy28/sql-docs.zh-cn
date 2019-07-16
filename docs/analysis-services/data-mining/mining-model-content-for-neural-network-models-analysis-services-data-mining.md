@@ -1,5 +1,5 @@
 ---
-title: 神经网络模型的挖掘模型内容 |Microsoft 文档
+title: 神经网络模型的挖掘模型内容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e01fea742e5af04efa470bd80da4e2c75c5eebc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182669"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "34018524"
   
 -   第一个节点 (NODE_TYPE = 18) 始终表示输入层的顶端节点。 在该顶端节点下，您可以找到包含实际输入属性及其值的输入节点 (NODE_TYPE = 21)。  
   
--   每个后续节点各包含一个不同的“子网”(NODE_TYPE = 17)。 每个子网始终包含一个隐藏层 (NODE_TYPE = 19) 以及该子网的输出层 (NODE_TYPE = 20)。  
+-   每个后续节点各包含一个不同的“子网”  (NODE_TYPE = 17)。 每个子网始终包含一个隐藏层 (NODE_TYPE = 19) 以及该子网的输出层 (NODE_TYPE = 20)。  
   
- ![结构的神经网络模型内容](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "的神经网络模型内容的结构")  
+ ![神经网络模型内容结构](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "的神经网络模型内容结构")  
   
  输入层中的信息简单明了：每个输入层的顶端节点 (NODE_TYPE = 18) 充当输入节点 (NODE_TYPE = 21) 集合的组织程序。 下表说明了输入节点的内容。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34018524"
  NODE_TYPE  
  神经网络模型输出以下节点类型：  
   
-|节点类型 ID|Description|  
+|节点类型 ID|描述|  
 |------------------|-----------------|  
 |1|模型。|  
 |17|子网的组织程序节点。|  
@@ -178,7 +178,7 @@ ms.locfileid: "34018524"
  MSOLAP_NODE_SHORT_CAPTION  
  对于神经网络模型，始终为空白。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  定型神经网络模型的目的是确定与从输入到中点、再从中点到终结点的每个转换关联的权重。 因此，该模型的输入层的主要存在目的是存储用于生成该模型的实际值。 隐藏层存储计算的权重，并提供回指到输入属性的指针。 输出层存储可预测值，并提供回指到隐藏层的中点的指针。  
   
 ##  <a name="bkmk_NodeIDs"></a> 使用节点名称和 ID  
@@ -206,11 +206,11 @@ ms.locfileid: "34018524"
 ### <a name="input-nodes"></a>输入节点  
  输入层为模型中使用的属性的每个值各包含一个节点。  
   
- **离散属性：** 输入节点仅在 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 列中存储属性的名称和值。 例如，如果列为 [Work Shift]，则为模型中使用的该列的每个值（例如 AM 和 PM）创建一个单独的节点。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
+ **离散属性：** 输入的节点存储属性和其值的名称仅在 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 列中。 例如，如果列为 [Work Shift]，则为模型中使用的该列的每个值（例如 AM 和 PM）创建一个单独的节点。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
- **离散化数值属性：** 输入节点存储属性的名称和值，该值可以是一个范围或一个特定值。 所有值均通过表达式表示，例如将 [Time Per Issue] 的值表示为“77.4 - 87.4”或“< 64.0”。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
+ **离散化数值属性：** 输入的节点存储属性和值，该值可以是一个范围或特定值的名称。 所有值均通过表达式表示，例如将 [Time Per Issue] 的值表示为“77.4 - 87.4”或“< 64.0”。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
- **连续属性：** 输入节点存储属性的平均值。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
+ **连续属性：** 输入的节点存储属性的平均值。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
 ### <a name="hidden-layer-nodes"></a>隐藏层节点  
  隐藏层包含可变数目的节点。 在每个节点中，NODE_DISTRIBUTION 表包含从隐藏层到输入层中的节点的映射。 ATTRIBUTE_NAME 列包含与输入层中的节点对应的节点 ID。 ATTRIBUTE_VALUE 列包含与输入节点和隐藏层节点的该组合关联的权重。 表中的最后一行包含表示隐藏层中的该隐藏节点的权重的系数。  
@@ -220,14 +220,14 @@ ms.locfileid: "34018524"
   
  NODE_DISTRIBUTION 表根据属性类型包含以下其他信息：  
   
- **离散属性：** NODE_DISTRIBUTION 表的最后两行包含整个节点的系数和属性的当前值。  
+ **离散属性：** NODE_DISTRIBUTION 表的最后两行包含该节点作为一个整体和该属性的当前值的系数。  
   
- **离散化数值属性：** 除非该属性的值是一个值范围，否则该属性与离散属性相同。  
+ **离散化数值属性：** 与离散属性相同，但该属性的值的值范围。  
   
- **连续属性：** NODE_DISTRIBUTION 表的最后两行包含该属性的平均值、整个节点的系数和系数的方差。  
+ **连续属性：** NODE_DISTRIBUTION 表的最后两行包含属性的平均值、 整个节点的系数和系数的方差。  
   
-## <a name="see-also"></a>另请参阅  
- [Microsoft 神经网络算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>请参阅  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 神经网络算法技术参考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

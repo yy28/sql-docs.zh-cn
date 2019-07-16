@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069885"
 ---
 # <a name="features-to-watch-for"></a>要监视的功能
 本部分介绍大量的应用程序开发人员往往需要理所当然的功能。 实际上，这些功能差异很大支持和 Dbms; 支持的方式故障代码，使其很可能会导致可互操作应用程序中的问题。  

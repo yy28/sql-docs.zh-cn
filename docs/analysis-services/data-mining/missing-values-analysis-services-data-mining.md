@@ -1,5 +1,5 @@
 ---
-title: 缺少值 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 缺失值 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 662fdd55fc5929fe56734b9894bf971962ff2a7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182606"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Missing 值（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34017644"
   
  例如，下表显示了为自行车购买者教程创建的决策树模型中的（所有）节点的值的分布。 在示例方案中，[Bike Buyer] 列为可预测属性，其中，1 表示“是”，0 表示“否”。  
   
-|“值”|事例|  
+|ReplTest1|事例|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -49,7 +49,7 @@ ms.locfileid: "34017644"
   
  此分布显示大约一半的客户已经购买了自行车，而一半的客户还没有购买自行车。 此特定数据集十分清晰；因此，每个事例的 [Bike Buyer] 列中都有一个值，并且 **Missing** 值的计数为 0。 但是，只要事例的 [Bike Buyer] 字段值为 Null， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就会将该行计为具有 **Missing** 值的事例。  
   
- 如果输入为连续的列，则模型将属性的两个可能的状态 **Existing** 和 **Missing**排列成表格报表的形式。 也就是说，该列或者包含某种数值数据类型的值，或者不包含任何值。 对于有值的事例，模型会计算平均值、标准偏差以及其他有意义的统计。 对于没有值的事例，模型将提供 **Missing** 值的计数并相应调整预测。 调整预测的方法因算法而异，下面一节将对其进行介绍。  
+ 如果输入为连续列，该模型以表格形式的属性的两个可能状态列出：**现有**并**缺少**。 也就是说，该列或者包含某种数值数据类型的值，或者不包含任何值。 对于有值的事例，模型会计算平均值、标准偏差以及其他有意义的统计。 对于没有值的事例，模型将提供 **Missing** 值的计数并相应调整预测。 调整预测的方法因算法而异，下面一节将对其进行介绍。  
   
 > [!NOTE]  
 >  对于嵌套表中的属性，Missing 值为非信息性内容。 例如，如果某个客户未购买某种产品，则嵌套 **Products** 表中将不会有对应该产品的行，挖掘模型也不会为该缺少的产品创建属性。 但是，如果您对未购买某种产品的客户感兴趣，则可以创建一个模型，在该模型中对嵌套表中的不存在的产品进行筛选，其方法是在模型筛选器中使用 NOT EXISTS 语句。 有关详细信息，请参阅 [对挖掘模型应用筛选器](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "34017644"
 ## <a name="adjusting-probability-for-missing-states"></a>调整 Missing 状态的概率  
  除了对值进行计数外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还计算整个数据集中的任何值的概率。 这对于 **Missing** 值同样适用。 例如，下表显示了前面示例中事例的概率：  
   
-|“值”|事例|概率|  
+|值|事例|概率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -84,7 +84,7 @@ ms.locfileid: "34017644"
   
  StateProbability = (NodePriorProbability)* (StateSupport + 1) / (NodeSupport + TotalStates)  
   
-决策树算法提供了额外的调整，可帮助该算法补偿模型，这可能导致在定型期间排除许多状态筛选器存在。  
+决策树算法提供了额外的调整，可帮助该算法补偿模型，这可能导致在定型期间排除许多状态的筛选器存在。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，如果在定型期间存在某种状态，但是恰巧在某个节点中有零支持，则将进行标准调整。 但是，如果在定型期间从未遇到某种状态，该算法会将其概率精确设置为零。 此项调整不仅适用于 **Missing** 状态，还适用于在定型数据中存在、但模型筛选结果具有零支持的其他状态。  
   
@@ -96,18 +96,18 @@ ms.locfileid: "34017644"
   
  此调整的净效果是保持树的稳定性。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  下列主题提供有关如何处理 Missing 值的详细信息。  
   
 |“任务”|链接|  
 |-----------|-----------|  
-|将标志添加到各个模型列来控制对 Missing 值的处理|[查看或更改建模标志 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|将标志添加到各个模型列来控制对 Missing 值的处理|[查看或更改建模标志（数据挖掘）](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |设置挖掘模型的属性来控制对 Missing 值的处理|[更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|了解如何在 DMX 中指定建模标志|[建模标志 & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
+|了解如何在 DMX 中指定建模标志|[建模标志 (DMX)](../../dmx/modeling-flags-dmx.md)|  
 |更改挖掘结构处理 Missing 值的方式|[更改挖掘结构的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [建模标志 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ErrorValueEnum | Microsoft Docs
+title: ErrorValueEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932877"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 运行时错误的类型。  
@@ -32,12 +31,12 @@ ms.locfileid: "66695223"
   
 -   完整的错误号的负小数十进制转换。  
   
--   完整的错误号的十六进制十六进制表示形式。 Windows 设备代码为第四个数字。 ADO 错误号的设施代码*A*。例如：0x800***A***0E7B.  
+-   完整的错误号的十六进制十六进制表示形式。 Windows 设备代码为第四个数字。 ADO 错误号的设施代码*A*。例如：0x800***A***0E7B。  
   
 > [!NOTE]
 >  OLE DB 错误可能会传递到 ADO 应用程序。 通常情况下，可以通过的 Windows 设备代码标识这些*4*。 例如，0x800***4***。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|不能更改**ActiveConnection**的属性**记录集**对象，它具有**命令**对象作为其源。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|服务器无法完成该操作。|  

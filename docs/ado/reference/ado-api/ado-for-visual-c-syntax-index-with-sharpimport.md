@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 987dbf95c4db08d5ac88d56dbd7097b8a45afe77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920967"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO 视觉对象C++使用 #import 语法索引
 此索引是对基于 Microsoft Visual ADO 语言参考的交叉引用C++并 **#import**指令。  

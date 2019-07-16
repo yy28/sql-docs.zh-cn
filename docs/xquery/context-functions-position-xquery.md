@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038980"
 ---
 # <a name="context-functions---position-xquery"></a>上下文函数 - position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ fn:position() as xs:integer
  本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. 使用 position() XQuery 函数检索前两个产品功能  
- 以下查询从产品型号目录说明检索前两个功能，即 <`Features`> 元素的前两个子元素。 如果有更多功能，将向结果添加 <`there-is-more/`> 元素。  
+ 下面的查询检索前两个功能的前两个子元素 <`Features`> 元素中的，从产品型号目录说明。 如果有更多的功能，它将添加 <`there-is-more/`> 元素的结果。  
   
 ```  
 SELECT CatalogDescription.query('  

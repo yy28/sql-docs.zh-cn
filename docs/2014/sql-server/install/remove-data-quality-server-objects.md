@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190669"
 ---
 # <a name="remove-data-quality-server-objects"></a>删除数据质量服务器对象
   从 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例中卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或者完全删除具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 实例并不删除某些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象，包括 DQS 数据库。 这意味着，如果您使用 SQL Server 安装程序卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，并不会丢失您的 DQS 数据。 在卸载过程完成后，您必须手动删除这些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象。  
@@ -33,7 +33,7 @@ ms.locfileid: "53211878"
   
 -   来自 master 数据库的 DQInitDQS_MAIN 存储过程。  
   
- 你可以通过右键单击对象，然后在快捷菜单中单击“删除”，在 SQL Server Management Studio 中删除这些对象。  
+ 你可以通过右键单击对象，然后在快捷菜单中单击“删除”  ，在 SQL Server Management Studio 中删除这些对象。  
   
 > [!IMPORTANT]  
 >  如果通过命令提示符使用 `-uninstall` 命令行参数从 SQL Server 实例中仅卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，则在卸载过程中将删除所有 DQS 对象。 您不必在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]之后手动删除它们。 若要从命令提示符处卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，请在命令提示符处键入以下命令，然后按 ENTER：   

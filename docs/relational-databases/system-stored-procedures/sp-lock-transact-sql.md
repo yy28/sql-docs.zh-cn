@@ -1,5 +1,5 @@
 ---
-title: sp_lock (Transact-SQL) | Microsoft Docs
+title: sp_lock (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb2c193b975d46eedf5139771ffe261bd6bfe93d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029987"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ## <a name="result-sets"></a>结果集  
  **Sp_lock**结果集包含由指定的会话保持每个锁的一行 **@spid1** 并 **@spid2** 参数。 如果既没有 **@spid1** 也不 **@spid2** 结果集将报告在锁定的所有会话的实例中当前处于活动状态的指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**spid**|**smallint**|请求锁的进程的[!INCLUDE[ssDE](../../includes/ssde-md.md)]会话 ID 号。|  
 |**dbid**|**smallint**|保留锁的数据库的标识号。 可以使用 DB_NAME() 函数来标识数据库。|  
@@ -106,7 +105,7 @@ GO
  [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  
   
   

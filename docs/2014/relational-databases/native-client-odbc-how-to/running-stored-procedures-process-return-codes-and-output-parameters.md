@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205573"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>处理返回代码和输出参数 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数从服务器发送的最后一个数据包和不可用于应用程序，直到[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)返回 sql_no_data 为止。 如果从存储过程返回错误，则调用 SQLMoreResults 可以前进到下一个结果，直到返回 SQL_NO_DATA。  

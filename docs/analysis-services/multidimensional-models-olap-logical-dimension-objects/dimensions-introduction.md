@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b5f47146f02559e9b546d7e5ec164462ad2fdba1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180738"
 ---
 # <a name="dimensions---introduction"></a>维度 - 简介
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "59042396"
   
  在上图中， **FactResellerSales**事实数据表没有外的键关系与**DimGeography**维度表。 但是， **FactResellerSales**事实数据表具有外的键关系与**DimReseller**维度表，该表又具有外的键关系与**DimGeography**维度表。 若要定义包含有关每个分销商的地理位置信息的分销商维度，您将不得不从这些属性中检索**DimGeography**并**DimReseller**维度表。 但是，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，通过先创建两个单独的维度，然后通过定义这两个维度之间的引用维度关系将其链接到一个度量值组内，也可以完成上述操作。 有关引用维度关系的详细信息，请参阅[维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
- 在此方案中使用引用维度关系的一个优点是：可以先创建一个地域维度，然后根据该地域维度创建多个多维数据集维度，而不需要任何额外的存储空间。 例如，可以将其中一个地域多维数据集维度链接到分销商维度，将另一个地域多维数据集维度链接到客户维度。 **相关主题：**[维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)，[定义引用关系和被引用关系属性](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ 在此方案中使用引用维度关系的一个优点是：可以先创建一个地域维度，然后根据该地域维度创建多个多维数据集维度，而不需要任何额外的存储空间。 例如，可以将其中一个地域多维数据集维度链接到分销商维度，将另一个地域多维数据集维度链接到客户维度。 **相关主题：** [维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)，[定义引用关系和被引用关系属性](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>处理维度  
  创建维度之后，必须先处理维度，然后才能查看该维度中属性和层次结构的成员。 更改了维度的结构，或者更新了该维度基础表中的信息之后，必须再次对维度进行处理，然后才能查看更改。 在发生结构更改后对维度进行处理时，还必须处理任何包括该维度的多维数据集，否则无法查看多维数据集。  

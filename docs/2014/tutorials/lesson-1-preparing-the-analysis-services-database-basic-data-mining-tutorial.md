@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036848"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185759"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>第 1 课：准备 Analysis Services 数据库 （数据挖掘基础教程）
   是的新员工[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]设计中的业务智能应用程序需要[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 希望利用您[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据挖掘经验发现有关已经购买自行车的人的兴趣和可行信息。 然后，他们希望您预测哪些预期客户将来最有可能购买自行车。  

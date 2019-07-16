@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dbc6e9e78fc08be2bba08d0fbeb897496a2058b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918248"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 指定锁，在编辑期间放置在记录的类型。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|表示开放式批量更新。 所需的批更新模式。|  
 |**adLockOptimistic**|3|指示乐观锁定，记录的记录。 提供程序使用乐观锁定，锁定记录仅在调用[更新](../../../ado/reference/ado-api/update-method.md)方法。|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5fe4081d0786ace40dd027606a830982798075e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044956"
 ---
 # <a name="data-type-support"></a>数据类型支持
 ODBC 驱动程序必须支持至少一个 SQL_CHAR 和 SQL_VARCHAR。 支持的其他数据类型取决于驱动程序或数据源的 SQL-92 的一致性级别。 应用程序应调用**SQLGetTypeInfo**以确定驱动程序支持的数据类型。  

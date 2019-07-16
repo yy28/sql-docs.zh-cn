@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43e5b145122f5b2586d8eb976162afb0615f89d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004833"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47846315"
   
 ## <a name="tables-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |数据库 ID |  
 |recovery_model |**nvarchar(60)**   |   数据库的恢复模式。 可能的值包括： <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
@@ -76,7 +75,7 @@ ms.locfileid: "47846315"
 ## <a name="remarks"></a>备注
 运行时`sys.dm_db_log_stats`针对参与可用性组作为次要副本的数据库，将返回上面所述的字段的一个子集。  目前，仅`database_id`， `recovery_model`，和`log_backup_time`对辅助数据库运行时，会返回。   
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要`VIEW DATABASE STATE`数据库中的权限。   
   
 ## <a name="examples"></a>示例  

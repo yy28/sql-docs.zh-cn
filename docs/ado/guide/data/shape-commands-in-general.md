@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44063e4f1994e01f3685fdb2c7c47a5c41d4998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924178"
 ---
 # <a name="shape-commands-in-general"></a>常用 Shape 命令
 数据整理定义的形状的列**记录集**，所列的方式表示的实体之间的关系**记录集**用数据填充。  
   
  形状**记录集**可以包含以下类型的列。  
   
-|列类型|Description|  
+|列类型|描述|  
 |-----------------|-----------------|  
 |data|字段从**记录集**查询命令返回到数据提供程序，表或以前形状**记录集**。|  
 |一章|对另一个引用**记录集**称为*章*。 章节列使其可以定义*父-子*关系其中*父*是**记录集**的包含章节列和*子*是**记录集**由一章。|  

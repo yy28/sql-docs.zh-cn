@@ -1,5 +1,5 @@
 ---
-title: 第 2 步：初始化主列表框 |Microsoft Docs
+title: 步骤 2：初始化主列表框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0df631ccaa9cd3a6177cb4e4e8e63c65286ad361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924087"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>第 2 步：初始化主列表框
+# <a name="step-2-initialize-the-main-list-box"></a>步骤 2：初始化主列表框
 若要声明全局记录和记录集对象，请插入 （常规） （声明） 为 Form1 的以下代码：  
   
 ```  

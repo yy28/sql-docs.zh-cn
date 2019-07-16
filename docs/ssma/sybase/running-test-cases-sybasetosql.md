@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021019"
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 SSMA 测试人员运行时测试用例，它执行所选测试对象，并创建有关验证结果的报告。 如果结果为在这两个平台上完全相同，测试成功。 Sybase 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -45,7 +44,7 @@ SSMA 测试人员会检查测试的测试执行开始前是否满足所有先决
   
 以下对象创建在 Sybase SSMATESTER2005db 或 SSMATESTER2008db 数据库中并在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb_syb 数据库中。  
   
-|“属性”|类型|Description|  
+|“属性”|type|描述|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
 |USER_TABLE$Aud|表|保存已删除和覆盖的行的表。|  
@@ -57,7 +56,7 @@ SSMA 测试人员会检查测试的测试执行开始前是否满足所有先决
   
 已验证表在 Sybase 数据库中创建以下对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-|“属性”|类型|Description|  
+|名称|type|描述|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
   

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8abf4d73342105bf244adbccfe59e550b9f70c4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b49ed0d0569359177c1d556cf01fe8eda7bfe46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072850"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 访问接口简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,18 +39,18 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>特定于访问接口的 SQLXMLOLEDB 属性  
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的连接属性。  
   
-|连接<br /><br /> 属性|默认<br /><br /> （如果有）|Description|  
+|连接<br /><br /> 属性|默认<br /><br /> （如果有）|描述|  
 |-----------------------------|----------------------------|-----------------|  
 |数据提供程序||提供 SQLXMLOLEDB 执行命令所使用的 OLE DB 访问接口的 PROGID。 从 SQLXML 4.0 和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，此访问接口包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中；因此，此属性值限制为“SQLNCLI11”。 有关详细信息，请参阅 [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)。|  
   
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的命令属性。  
   
-|Command<br /><br /> 属性|默认<br /><br /> （如果有）|Description|  
+|Command<br /><br /> 属性|默认<br /><br /> （如果有）|描述|  
 |--------------------------|----------------------------|-----------------|  
 |基路径|""|指定基本文件路径。 基本文件路径用于指定 XML 样式表语言 (XSL) 或映射架构文件的位置。 基本文件路径还用于解析的 XSL 或映射中的 XSL 或映射架构属性已指定的架构文件的相对路径。<br /><br /> 在其中使用此属性的示例，请参阅[执行 XPath 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|如果希望在客户端上执行行集到 XML 的转换过程，而不是在服务器上执行，请将此属性设置为 True。 在希望将性能负载移到中间层时，此操作很有用。<br /><br /> 在其中使用此属性的示例，请参阅[执行 SQL 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)或[执行模板，包含 SQL 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
 |内容类型||返回输出内容类型。 这是一个 READ ONLY 属性。<br /><br /> 该属性向浏览器提供有关内容类型的信息（例如 TEXT/XML、TEXT/HTML、image/jpeg 等）。 此属性的值将成为**内容类型**发送到 HTTP 标头，其中包含作为正文发送的文档 MIME 类型 （多用途 Internet 邮件扩展） 的一部分的浏览器的字段。|  
-|映射架构|NULL|如果客户端应用程序针对映射架构（XDR 或 XSD）执行 XPath 查询，该属性则用于指定映射架构的名称。<br /><br /> 指定的路径可以是相对路径 (xyz/abc/MySchema.xml)，也可以是绝对路径 (C:\MyFolder\abc\MySchema.xml)。<br /><br /> 如果指定了相对路径，由基路径属性指定的基路径用于解析该相对路径。 如果已在基路径属性中不指定任何路径，相对路径是相对于当前目录。<br /><br /> 在指定的映射架构属性的值，可以指定本地目录路径或 URL (https://...)。如果指定 URL，则必须配置 WinHTTP 以便通过代理服务器访问 HTTP 和 HTTPS 服务器。 执行 Proxycfg.exe 实用工具可实现这一目的。 有关详细信息，请参阅 MSDN 库中的“使用 WinHTTP 代理配置实用工具”。<br /><br /> 在其中使用此属性的示例，请参阅[执行 XPath 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
+|映射架构|NULL|如果客户端应用程序针对映射架构（XDR 或 XSD）执行 XPath 查询，该属性则用于指定映射架构的名称。<br /><br /> 指定的路径可以是相对路径 (xyz/abc/MySchema.xml)，也可以是绝对路径 (C:\MyFolder\abc\MySchema.xml)。<br /><br /> 如果指定了相对路径，由基路径属性指定的基路径用于解析该相对路径。 如果已在基路径属性中不指定任何路径，相对路径是相对于当前目录。<br /><br /> 在指定的映射架构属性的值，可以指定本地目录路径或 URL (https://...)。如果指定 URL，则必须配置 WinHTTP 来通过代理服务器访问 HTTP 和 HTTPS 服务器。 执行 Proxycfg.exe 实用工具可实现这一目的。 有关详细信息，请参阅 MSDN 库中的“使用 WinHTTP 代理配置实用工具”。<br /><br /> 在其中使用此属性的示例，请参阅[执行 XPath 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |命名空间||该属性允许执行使用命名空间的 XPath 查询。 在其中使用此属性的示例，请参阅[执行带命名空间的 XPath 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)。|  
 |ss Stream Flags||该属性用于指定特定类型的安全性限制。 例如，您可能希望禁用对文件的 URL 引用或文件的绝对路径（如外部站点）， 或者您可能不希望在模板中进行查询。<br /><br /> 可为此属性分配以下值：<br /><br /> 1 = STREAM_FLAGS_DISALLOW_URL 2 = STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = STREAM_FLAGS_DISALLOW_QUERY 8 = STREAM_FLAGS_ DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL<br /><br /> 下一个表中提供了有关这些值的其他信息。|  
 |xml root||该属性用于定义生成的 XML 的根标记。 例如，如果针对数据库执行 SQL 查询，并且生成的 XML 文档没有任何单个根元素，则使用该属性的值向文档添加单个根元素。<br /><br /> 在其中使用此属性的示例，请参阅[执行 SQL 查询&#40;sqlxmloledb 访问接口&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)。|  
@@ -59,7 +58,7 @@ oTestCommand.Execute , , adExecuteStream
   
  下表包含 ss Stream 标志属性值的说明。  
   
-|属性值|Description|  
+|属性值|描述|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|映射架构或 XSL 不接受 URL。|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|为映射架构或 XSL 指定的路径必须是相对于模板自身的基本路径的相对路径。|  

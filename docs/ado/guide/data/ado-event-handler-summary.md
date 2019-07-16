@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1901892b3e48446f3598b24ebb0a529360b9edf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926201"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
 两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**上与操作相关系列**连接**对象，并**RecordsetEvent**系列上与操作相关**记录集**对象。
@@ -30,14 +29,14 @@ ms.locfileid: "66702642"
 
  下表汇总了事件及其说明。
 
-|ConnectionEvent|Description|
+|ConnectionEvent|描述|
 |---------------------|-----------------|
 |[BeginTransComplete，CommitTransComplete，RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**事务管理**-启动连接的当前事务后，通知已提交或回滚。|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)， [ConnectComplete，断开连接](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**连接管理**-通知的当前连接将启动，启动后，或已结束。|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**命令执行管理**-通知的连接上的当前命令执行将开始或已结束。|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**信息性**-通知将有关当前操作的其他信息。|
 
-|RecordsetEvent|Description|
+|RecordsetEvent|描述|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)， [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**检索状态**-通知进度的数据检索操作，或检索操作完成后。 这些事件才可用如果**记录集**使用客户端游标已打开。|
 |[WillChangeField FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**字段更改管理**-当前字段的值将发生更改，或已更改的通知。|

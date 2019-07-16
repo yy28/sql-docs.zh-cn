@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f88562c25982ce8c5d6c8d4b87dd629e4ba57c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5251b4da6334e8aeba1c467ff921f6f25b2ab26a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008376"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 本文列出了每个版本中添加的数据迁移助手 (DMA)。
@@ -165,6 +164,6 @@ DMA 的 1.0 版版本是初始版本，它提供了：
   * 存储
 * 若要执行评估的现代用户体验。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据迁移助手概述](../dma/dma-overview.md)

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c3149979852c68c5bf8a21edc15fb658b49a5c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1333cfc819b8027260c715ed3398c0099f96a854
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005552"
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +48,22 @@ len
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc  
+ srvproc   
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- field  
- 指定要返回的 srvproc 字段。  
+ field   
+ 指定要返回的 srvproc 字段  。  
   
 |字段|描述|返回类型|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|当前会话消息 LCID。|ULONG*|  
 |SRV_INSTANCENAME|实例名称（如果已命名）；否则返回 NULL。|WCHAR*|  
   
- len  
- 指向一个 int 变量的指针，该变量包含所返回的 field 值的长度（以字节为单位）。 如果 len 为 NULL，则不返回长度。 返回 NULL 时，*len 设置为 0。  
+ len   
+ 指向一个 int 变量的指针，该变量包含所返回的 field 值的长度（以字节为单位）   。 如果 len 为 NULL，则不返回长度  。 返回 NULL 时，*len 设置为 0  。  
   
 ## <a name="returns"></a>返回  
- 一个指针，指向其类型取决于 field 的数据。 len 为 NULL 或 srvproc 为 NULL 时，则返回 NULL。 如果 field 未知，则返回 NULL。 返回 NULL 时，*len 设置为 0。  
+ 一个指针，指向其类型取决于 field 的数据  。 len 为 NULL 或 srvproc 为 NULL 时，则返回 NULL   。 如果 field 未知，则返回 NULL  。 返回 NULL 时，*len 设置为 0  。  
   
 > [!IMPORTANT]  
 >  从服务器返回的缓冲区应为只读的。 否则，可能损坏服务器状态。  

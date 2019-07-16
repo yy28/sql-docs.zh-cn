@@ -1,5 +1,5 @@
 ---
-title: 在依赖关系网络中查找特定的节点 |Microsoft 文档
+title: 查找特定节点中的依赖关系网络 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad00f715533e5da24cbec9c61dc79a045fa035ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183250"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在依赖关系网络中查找特定节点
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "34014464"
   
      此时将筛选节点列表，只显示那些包含部分搜索路径的节点。  
   
-3.  从列表中选择正确的节点，然后单击 **“确定”**。  
+3.  从列表中选择正确的节点，然后单击 **“确定”** 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

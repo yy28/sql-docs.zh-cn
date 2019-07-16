@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb02a96e6ee3d28c67e21996677c02b58fc97c07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925040"
 ---
 # <a name="how-event-handlers-work-together"></a>事件处理程序的协同工作原理
 除非在 Visual Basic 中的所有事件处理程序中进行编程**连接**并**记录集**必须实现的事件，无论是否实际处理的所有事件。 您只需实现工作取决于您的编程语言。 有关详细信息，请参阅[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  

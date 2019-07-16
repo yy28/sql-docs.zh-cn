@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951679"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "51664865"
   
  **SqlContext**连接可以访问以下组件：  
   
--   **SqlPipe**: **SqlPipe**对象表示通过结果发送到客户端的"管道"。 有关详细信息**SqlPipe**对象，请参阅[SqlPipe 对象](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)。  
+-   **SqlPipe**:**SqlPipe**对象表示通过结果发送到客户端的"管道"。 有关详细信息**SqlPipe**对象，请参阅[SqlPipe 对象](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)。  
   
--   **SqlTriggerContext**: **SqlTriggerContext**对象只能从 CLR 触发器中检索。 它提供有关导致触发器被激发的操作的信息，以及所更新的列的映射。 有关详细信息**SqlTriggerContext**对象，请参阅[SqlTriggerContext 对象](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)。  
+-   **SqlTriggerContext**:**SqlTriggerContext**对象只能从 CLR 触发器中检索。 它提供有关导致触发器被激发的操作的信息，以及所更新的列的映射。 有关详细信息**SqlTriggerContext**对象，请参阅[SqlTriggerContext 对象](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)。  
   
--   **IsAvailable**: **IsAvailable**属性用于确定上下文可用性。  
+-   **IsAvailable**:**IsAvailable**属性用于确定上下文可用性。  
   
--   **WindowsIdentity**: **WindowsIdentity**属性用于检索调用方的 Windows 标识。  
+-   **WindowsIdentity**:**WindowsIdentity**属性用于检索调用方的 Windows 标识。  
   
 ## <a name="determining-context-availability"></a>确定上下文可用性  
  查询**SqlContext**类，以查看当前执行的代码是否正在运行的进程。 若要执行此操作，请检查**IsAvailable**的属性**SqlContext**对象。 **IsAvailable**属性是只读的并返回**True**如果调用代码运行内部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和其他**SqlContext**成员可访问。 如果**IsAvailable**属性将返回**False**，所有其他**SqlContext**成员引发**InvalidOperationException**，如果使用. 如果**IsAvailable**返回**False**，任何尝试打开的连接对象的具有"上下文连接 = true"的连接字符串中将失败。  

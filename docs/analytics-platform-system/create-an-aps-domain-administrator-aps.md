@@ -2,19 +2,18 @@
 title: 创建的域管理员的分析平台系统 |Microsoft Docs
 description: 某些操作需要分析平台系统域管理员权限。 这解释了如何创建其他设备域管理员。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51ed729cda33b5d68a4d115c71f712e2b81d1a65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961095"
 ---
 # <a name="create-an-aps-domain-administrator"></a>创建 APS 域管理员
 某些操作需要分析平台系统域管理员权限。 这解释了如何创建其他设备域管理员。  
@@ -26,7 +25,7 @@ ms.locfileid: "63134378"
   
 1.  登录到 active AD 节点 **(_装置\_域_-AD01**或 **_设备\_域_-AD02**)使用现有的设备域管理员帐户。  
   
-2.  在“开始”菜单上，单击“运行”  。 在中**开放**框中，键入**dsa.msc**。 单击“确定”  。  
+2.  在“开始”菜单上，单击“运行”  。 在中**开放**框中，键入**dsa.msc**。 单击 **“确定”** 。  
   
 3.  在中**Active Directory 用户和计算机**程序中，右键单击**用户**，指向**新建**，然后单击**用户**。  
   
@@ -43,9 +42,9 @@ ms.locfileid: "63134378"
   
 6.  上**隶属**选项卡上，单击**添加**。  
   
-    类型**域管理员;PdwControlNodeAccess** ，然后单击**检查名称**。 单击“确定”  。  
+    类型**域管理员;PdwControlNodeAccess** ，然后单击**检查名称**。 单击 **“确定”** 。  
   
-    这会添加新用户添加到**Domain Admins**组和**PdwControlNodeAccess**组。 单击“确定”  。  
+    这会添加新用户添加到**Domain Admins**组和**PdwControlNodeAccess**组。 单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
 [启动配置管理器&#40;分析平台系统&#41;](launch-the-configuration-manager.md)  

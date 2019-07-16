@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9ffc34dd95ac2f5ef6e26e796c4c05cd91b28ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924307"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用于检查数据的示例记录集
 首先，让我们看看**记录集**对象返回使用以下 SQL 查询，执行针对 Microsoft SQL Server 中的基的 Northwind 示例数据。  
@@ -36,7 +35,7 @@ WHERE CategoryID = 7
 |---------------|-----------------|---------------|  
 |7|柳贡干的梨|30.0000|  
 |14|豆腐|23.2500|  
-|28|Rssle Sauerkraut|45.6000|  
+|28|Rssle 泡菜口味|45.6000|  
 |51|猪肉干|53.0000|  
 |74|Longlife 豆腐|10.0000|  
   
