@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b940eac1548582285e7d41e0014cfe911dfb1137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c344c1d8b3a4702728807af9dae7ed9ca7c5cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020379"
 ---
 # <a name="role-of-the-driver"></a>驱动程序的角色
 驱动程序检查所有错误和警告不会检查由驱动程序管理器，它将生成的状态记录进行排序。 (ODBC 2。*x*驱动程序不排序状态记录。)这包括在数据截断、 数据转换、 语法和某些状态转换的错误和警告。 错误和警告部分选中由驱动程序管理器中，可能还会检查驱动程序。 例如，尽管驱动程序管理器检查是否的值*操作*中**SQLSetPos**是合法的该驱动程序必须检查是否支持。  

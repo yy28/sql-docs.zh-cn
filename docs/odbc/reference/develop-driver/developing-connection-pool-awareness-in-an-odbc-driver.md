@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897737"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>在 ODBC 驱动程序中开发连接池感知
 本主题讨论开发包含有关该驱动程序应如何提供连接池的服务的信息的 ODBC 驱动程序的详细信息。  
@@ -87,7 +86,7 @@ ms.locfileid: "62636217"
   
  由于连接信息可能来自多个源 （连接字符串、 连接属性和 DSN），该驱动程序可能需要分析连接字符串和解析这些源中每个以上的函数调用之间的冲突。  
   
- 因此，引入新的 ODBC 句柄：SQL_HANDLE_DBC_INFO_TOKEN. 使用 SQL_HANDLE_DBC_INFO_TOKEN，驱动程序不需要以分析连接字符串并不止一次解决连接信息中的冲突。 由于这是一种特定于驱动程序的数据结构，该驱动程序可以存储数据，例如连接信息或池 id。  
+ 因此，引入新的 ODBC 句柄：SQL_HANDLE_DBC_INFO_TOKEN。 使用 SQL_HANDLE_DBC_INFO_TOKEN，驱动程序不需要以分析连接字符串并不止一次解决连接信息中的冲突。 由于这是一种特定于驱动程序的数据结构，该驱动程序可以存储数据，例如连接信息或池 id。  
   
  此句柄仅用作驱动程序管理器和驱动程序之间的接口。 应用程序不能直接分配此句柄。  
   

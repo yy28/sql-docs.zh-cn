@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbf289e73cd3cb94418521f3d4070cf155a7fdf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeac8c848f01f01e8969f94c571ad15f5e7f615a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923910"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>用于 OLE DB 的 Microsoft 游标服务
 当你选择的客户端游标，或设置**CursorLocation**属性设置为**adUseClient**，用于 OLE DB 调用 Microsoft 游标服务。 您可能还会看到对"客户端游标引擎"，这是 ADO 的上下文中实质上是相同的操作的引用。 此服务对数据访问接口的游标支持函数进行了补充。 因此，您就可以理解来自所有数据提供程序相对统一的功能。  

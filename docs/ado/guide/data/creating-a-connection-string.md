@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ed1a2ec745b1e1ca961c71c81d44ff659789efea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925764"
 ---
 # <a name="creating-a-connection-string"></a>创建连接字符串
 连接字符串包含用分号分隔的参数/值对 （即，参数） 的列表。 例如：  
@@ -32,7 +31,7 @@ ms.locfileid: "66700871"
   
  ADO 认识到连接字符串中的以下五个参数。  
   
-|参数|Description|  
+|参数|描述|  
 |--------------|-----------------|  
 |*提供程序*|指定要用于连接的提供程序的名称。|  
 |*文件名*|指定的特定于提供程序的文件 （例如，持久化的数据源对象） 包含预设的连接信息的名称。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924519"
 ---
 # <a name="records-and-provider-supplied-fields"></a>记录和提供程序提供的字段
 当[记录](../../../ado/reference/ado-api/record-object-ado.md)打开对象，其源可以是一种开放的当前行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，绝对 URL 或打开与结合使用的相对 URL[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象.  
@@ -56,13 +55,13 @@ ms.locfileid: "66700443"
 ## <a name="resource-recordset-columns"></a>资源记录集列  
  一个*资源记录集*以下列组成。  
   
-|列名|类型|描述|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|只读。 指示该资源的 URL。|  
 |RESOURCE_PARENTNAME|AdVarWChar|只读。 指示父记录的绝对 URL。|  
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|只读。 指示资源，这是 PARENTNAME 和 PARSENAME 的串联的绝对 URL。|  
-|RESOURCE_ISHIDDEN|AdBoolean|如果资源处于隐藏状态，则为 true。 除非显式创建行集的命令选择的行，其中 RESOURCE_ISHIDDEN 是 True，则会不返回任何行。|  
-|RESOURCE_ISREADONLY|AdBoolean|如果资源是只读的则为 true。 尝试打开此资源具有 DBBINDFLAG_WRITE 和将因 DB_E_READONLY 失败。 即使在仅进行读取打开的资源时，可以编辑此属性。|  
+|RESOURCE_ISHIDDEN|adBoolean|如果资源处于隐藏状态，则为 true。 除非显式创建行集的命令选择的行，其中 RESOURCE_ISHIDDEN 是 True，则会不返回任何行。|  
+|RESOURCE_ISREADONLY|adBoolean|如果资源是只读的则为 true。 尝试打开此资源具有 DBBINDFLAG_WRITE 和将因 DB_E_READONLY 失败。 即使在仅进行读取打开的资源时，可以编辑此属性。|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|指示文档最有可能使用-例如，某个律师的简短。 这可能对应于用于创建文档的 Office 模板。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|指示文档，如指示格式的 MIME 类型"`text/html`"。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|指示在其中存储内容的语言。|  
@@ -70,12 +69,12 @@ ms.locfileid: "66700443"
 |RESOURCE_LASTACCESSTIME|AdFileTime|只读。 指示 FILETIME 结构，其中包含上一次访问该资源的时间。 时间采用 UTC 格式。 FILETIME 成员均为零，如果提供程序不支持此时间成员。|  
 |RESOURCE_LASTWRITETIME|AdFileTime|只读。 指示 FILETIME 结构，其中包含上次写入资源的时间。 时间采用 UTC 格式。 FILETIME 成员均为零，如果提供程序不支持此时间成员。|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|只读。 指示资源的默认流，以字节为单位的大小。|  
-|RESOURCE_ISCOLLECTION|AdBoolean|只读。 如果资源是一个集合，例如目录，则为 true。 如果资源是一个简单的文件，则为 false。|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|如果资源是结构化的文档，则为 true。 如果资源不是结构化的文档，则为 false。 它可能是一个集合或一个简单的文件。|  
+|RESOURCE_ISCOLLECTION|adBoolean|只读。 如果资源是一个集合，例如目录，则为 true。 如果资源是一个简单的文件，则为 false。|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|如果资源是结构化的文档，则为 true。 如果资源不是结构化的文档，则为 false。 它可能是一个集合或一个简单的文件。|  
 |DEFAULT_DOCUMENT|AdVarWChar|只读。 指示此资源包含文件夹的默认简单文档或结构化的文档的 URL。 从资源请求的默认流时使用。 此属性是一个简单的文件为空。|  
 |CHAPTERED_CHILDREN|AdChapter|只读。 可选。 指示包含资源的子级的行集的一章。 ( *OLE DB 访问接口用于 Internet 发布*不使用此列。)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|只读。 指示该资源的显示名称。|  
-|RESOURCE_ISROOT|AdBoolean|只读。 如果资源是集合或结构化的文档的根，则为 true。|  
+|RESOURCE_ISROOT|adBoolean|只读。 如果资源是集合或结构化的文档的根，则为 true。|  
   
 ## <a name="see-also"></a>请参阅  
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

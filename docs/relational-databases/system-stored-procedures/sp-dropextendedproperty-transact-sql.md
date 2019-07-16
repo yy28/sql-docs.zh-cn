@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e01b14407198ed88654527bd247a116c200fb1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934015"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropextendedproperty
  要删除的属性的名称。 *property_name*是**sysname**且不能为 NULL。  
   
  [ @level0type=] {'*level0_object_type*}  
- 所指定的级别 0 对象类型的名称。 *level0_object_type*是**varchar （128)**，默认值为 NULL。  
+ 所指定的级别 0 对象类型的名称。 *level0_object_type*是**varchar （128)** ，默认值为 NULL。  
   
  有效输入包括：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 NULL。  
   
@@ -81,11 +80,11 @@ sp_dropextendedproperty
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 为了指定扩展的属性中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库分为三个级别： 0、 1 和 2。 级别 0 是最高级别，定义为包含在数据库范围内的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。 引用某个级别中的对象必须用所有更高级别对象的类型和名称进行限制。  
+ 为了指定扩展的属性中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库分为三个级别：0、 1 和 2。 级别 0 是最高级别，定义为包含在数据库范围内的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。 引用某个级别中的对象必须用所有更高级别对象的类型和名称进行限制。  
   
  给定一个有效*property_name*，如果所有对象类型和名称都均为 null，并且在当前数据库上存在的属性，则删除该属性。 请参阅本主题后面部分中的示例 B。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  db_owner 和 db_ddladmin 固定数据库角色的成员可以删除任意对象的扩展属性，但以下情况例外：db_ddladmin 不能向数据库本身添加属性，也不能向用户或角色中添加属性。  
   
  用户可以删除他们所拥有的对象的扩展属性，或者删除他们对其具有 ALTER 或 CONTROL 权限的对象的扩展属性。  
@@ -135,7 +134,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   

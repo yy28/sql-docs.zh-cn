@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072204"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207662"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中启用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,15 +49,15 @@ ms.locfileid: "53072204"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到具有表格模型的实例。  
   
-2.  在对象资源管理器中，右键单击数据库 >“属性” > “兼容级别”。  
+2.  在对象资源管理器中，右键单击数据库 >“属性” > “兼容级别”。    
   
-     值可以是“SQL Server 2016 (1200)”或更早的级别，例如“SQL Server 2012 SP1 或更高版本 (1103)”。 下一步是根据兼容级别的相应说明进行操作。  
+     值可以是“SQL Server 2016 (1200)”或更早的级别，例如“SQL Server 2012 SP1 或更高版本 (1103)”。   下一步是根据兼容级别的相应说明进行操作。  
   
  将表格模型更改为 DirectQuery 模式时，新的数据存储模式会立即生效。  
   
 ## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>步骤 2a:将表格 1200年数据库切换成 DirectQuery 模式  
   
-1.  在对象资源管理器中，右键单击数据库 >“属性” > “模型” > “默认模式”。  
+1.  在对象资源管理器中，右键单击数据库 >“属性” > “模型” > “默认模式”。     
   
 2.  将模式设置为“DirectQuery”。   
   
@@ -69,7 +69,7 @@ ms.locfileid: "53072204"
   
 ## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>步骤 2b:将表格 1100-1103年数据库切换成 DirectQuery 模式  
   
-1.  在对象资源管理器中，右键单击数据库 >“属性” > “数据库” > “DirectQueryMode”。  
+1.  在对象资源管理器中，右键单击数据库 >“属性” > “数据库” > “DirectQueryMode”。     
   
 2.  将模式设置为“DirectQuery”。   
   
@@ -98,7 +98,7 @@ ms.locfileid: "53072204"
   
  查看 **Configure Analysis Services for Kerberos constrained delegation** 中的 [配置 Analysis Services 以实现可信委托](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) 部分，了解针对 DirectQuery 方案委派用户身份时的背景信息。  
   
-1.  在对象资源管理器中，展开“连接”，然后双击某个连接以查看其属性。  
+1.  在对象资源管理器中，展开“连接”，然后双击某个连接以查看其属性。   
   
      使用 DirectQuery 模型时，只应为数据库定义一个连接，数据源必须是关系数据源，且类型必须是支持的数据库类型。 请参阅[支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "53072204"
   
 3.  在跟踪中，你会看到针对关系数据库执行查询的证据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [兼容性级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [支持的数据源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

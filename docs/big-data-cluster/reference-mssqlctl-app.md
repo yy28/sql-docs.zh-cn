@@ -5,17 +5,16 @@ description: Mssqlctl 应用程序命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ac884a8d77aa241402cedce3eaedeef9f60512a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a14b548ed8c16776b4883e54f3ca47588dbb3e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958205"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl 应用
 
@@ -31,7 +30,7 @@ ms.locfileid: "67727535"
 [mssqlctl 应用创建](#mssqlctl-app-create) | 创建应用程序。
 [mssqlctl 应用更新](#mssqlctl-app-update) | 更新应用程序。
 [mssqlctl 应用列表](#mssqlctl-app-list) | 列出应用程序。
-[mssqlctl app delete](#mssqlctl-app-delete) | 删除应用程序。
+[mssqlctl 应用删除](#mssqlctl-app-delete) | 删除应用程序。
 [mssqlctl 应用运行](#mssqlctl-app-run) | 运行应用程序。
 [mssqlctl 应用描述](#mssqlctl-app-describe) | 介绍应用程序。
 ## <a name="mssqlctl-app-init"></a>mssqlctl 应用 init

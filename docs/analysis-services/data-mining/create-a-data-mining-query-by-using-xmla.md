@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d9741a81c10a71623f6e336795bb47ae199ee13d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184006"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 创建数据挖掘查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,21 +28,21 @@ ms.locfileid: "50146952"
   
 #### <a name="to-open-an-xmla-template"></a>打开 XML/A 模板  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器” 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“视图”  菜单上，单击“模板资源管理器”  。  
   
 2.  单击多维数据集图标以打开 Analysis Server 模板列表。  
   
-3.  在模板类别列表中，展开 **XMLA**，再展开“架构行集”，然后双击“发现架构行集”，在合适的代码编辑器中打开该模板。  
+3.  在模板类别列表中，展开 **XMLA**，再展开“架构行集”  ，然后双击“发现架构行集”  ，在合适的代码编辑器中打开该模板。  
   
-4.  在 **“连接到 Analysis Services”** 对话框中，填写连接信息，再单击 **“连接”**。 此时将打开一个新的查询编辑器窗口，其中包含 **“发现架构行集”** 模板。  
+4.  在 **“连接到 Analysis Services”** 对话框中，填写连接信息，再单击 **“连接”** 。 此时将打开一个新的查询编辑器窗口，其中包含 **“发现架构行集”** 模板。  
   
 #### <a name="to-discover-column-names-from-the-mining-model-content-schema-rowset"></a>从 MINING MODEL CONTENT 架构行集中发现列名  
   
-1.  打开 **“发现架构行集”** 模板后，单击 **“执行”**。  
+1.  打开 **“发现架构行集”** 模板后，单击 **“执行”** 。  
   
      **“结果”** 窗格中将显示返回的架构行集列表，该列表中包含当前实例中可用的所有行集的名称和行集列。  
   
-2.  在中**查询**窗格中，将后的光标**\<限制列表 >** 然后按 ENTER 以添加新行。  
+2.  在中**查询**窗格中，将后的光标 **\<限制列表 >** 然后按 ENTER 以添加新行。  
   
 3.  将光标置于空行和类型 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "50146952"
   
      `</Restrictions>`  
   
-4.  单击 **“执行”**。  
+4.  单击 **“执行”** 。  
   
      **“结果”** 窗格将显示指定架构行集的列名列表。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "50146952"
   
      替换为以下行：  
   
-     **\<RequestType > DMSCHEMA_MINING_MODEL_CONTENT\</RequestType >**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  向限制列表添加新条件，将限制列表更改为按名称指定挖掘模型。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "50146952"
   
      `</Restrictions>`  
   
-5.  单击 **“执行”**。  
+5.  单击 **“执行”** 。  
   
      “结果”窗格将显示架构定义以及指定模型的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   

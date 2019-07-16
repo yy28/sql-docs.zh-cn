@@ -2,19 +2,18 @@
 title: 错误消息-并行数据仓库 |Microsoft Docs
 description: 并行数据仓库 (PDW) 错误消息报告错误和问题遇到的 PDW 组件，还可以包括 SQL Server PDW 显示的错误。 这些错误消息使用一致的语法来显示信息。 了解此语法将允许你识别和更正问题。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ffc7a097845f4652f56d82c572ecfab868d33f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960960"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>并行数据仓库中的错误消息
 
@@ -27,7 +26,7 @@ ms.locfileid: "63042593"
   
 以下是每个字段的潜在值：  
   
-|字段|Description|示例|  
+|字段|描述|示例|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|单词"ERROR"或其他文本提醒用户出现问题。|error|  
 |*SQL_State_Code*|SQL 状态代码，根据 ODBC 规范。 驱动程序将生成相应的 SQL 状态代码消息返回应用程序的任何时间。 "Microsoft"的文本指示错误的源。|42000|  

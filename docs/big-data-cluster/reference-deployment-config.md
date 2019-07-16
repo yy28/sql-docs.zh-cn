@@ -5,17 +5,16 @@ description: 适用于大数据群集部署配置文件的引用。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0ddc730e677c70e0d25274ed1383ea6f9c21934
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958248"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>对于大数据群集的部署配置文件引用
 

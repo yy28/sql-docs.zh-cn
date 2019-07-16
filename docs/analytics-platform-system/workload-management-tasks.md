@@ -2,19 +2,18 @@
 title: 工作负荷管理任务的分析平台系统 |Microsoft Docs
 description: 分析平台系统中的工作负荷管理任务。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6b3785914781e73a8570c1282741f7c4b56298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959757"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理任务
 分析平台系统中的工作负荷管理任务。
@@ -47,7 +46,7 @@ WHERE
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>更改分配给请求的系统资源
 介绍如何找出哪些资源类下，运行 SQL Server PDW 请求以及如何更改该请求的系统资源。 更改资源请求需要更改正在使用中提交请求，该登录名的资源类成员身份，以便[ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)语句。  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>第 1 步：确定登录名运行请求的资源类。  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>步骤 1：确定登录名运行请求的资源类。  
 此查询显示成员的资源类服务器角色成员身份的登录名。 有三个资源类， **mediumrc**， **largerc**，并**xlargerc**。  
   
 > [!IMPORTANT]  
@@ -72,7 +71,7 @@ GO
   
 每个资源类的资源分配的列表，请参阅[工作负荷管理](workload-management.md)。  
   
-### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>第 2 步：使用不同的资源类的成员身份运行下一个登录名的请求  
+### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>步骤 2：使用不同的资源类的成员身份运行下一个登录名的请求  
 有两种方法以运行与任一更大或较小的系统资源的请求：  
   
 -   运行在不同的登录名，放大或缩小资源类的成员的请求。  

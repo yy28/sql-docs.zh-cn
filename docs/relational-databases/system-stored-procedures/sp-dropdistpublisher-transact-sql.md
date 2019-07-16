@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fcb1487d4291116bfb6fc0ad266b147e0fd69981
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927837"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  如果**0**，复制将验证远程发布服务器已卸载用作分发服务器的本地服务器。 如果发布服务器是本地服务器，则复制将验证没有发布对象或分发对象保留在本地服务器上。  
   
- 如果**1**，即使无法到达远程发布服务器，将删除与分发发布服务器相关联的所有复制对象。 完成后，远程发布服务器必须复制使用卸载[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)与**@ignore_distributor**  =  **1**。  
+ 如果**1**，即使无法到达远程发布服务器，将删除与分发发布服务器相关联的所有复制对象。 完成后，远程发布服务器必须复制使用卸载[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)与 **@ignore_distributor**  =  **1**。  
   
 `[ @ignore_distributor = ] ignore_distributor` 指定删除发布服务器时是否将分发对象保留在分发服务器。 *ignore_distributor*是**位**可以是下列值之一：  
   
@@ -70,7 +69,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

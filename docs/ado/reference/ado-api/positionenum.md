@@ -1,5 +1,5 @@
 ---
-title: PositionEnum | Microsoft Docs
+title: PositionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21a2ea98ea4592d9900cd9623502a8d918b34c9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5f7ca47177a953313ff983bb25f9178b73b4930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917607"
 ---
 # <a name="positionenum"></a>PositionEnum
 指定在记录指针的当前位置[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|指示当前记录指针位于 BOF (即[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性是**True**)。|  
 |**adPosEOF**|-3|指示当前记录指针位于 EOF (即[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性是**True**)。|  

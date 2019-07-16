@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs
+title: sys.dm_os_server_diagnostics_log_configurations |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3e03058b42e256991a525a70d6c1fe57e061e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a26ba08f6ddd7767dbd56371857c4d382b5ec15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899773"
 ---
 # <a name="sysdmosserverdiagnosticslogconfigurations"></a>sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   返回包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集诊断日志的当前配置的一行信息。 这些属性设置确定是否已启用诊断日志记录，以及日志文件的位置、数目和大小。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |is_enabled|**bit**|指示应启用还是禁用日志记录。<br /><br /> 1 - 启用诊断日志记录<br /><br /> 0 - 禁用诊断日志记录|  
 |max_size|**int**|以兆字节表示每个诊断日志可以增长到的最大大小。 默认值为 100 MB。|  

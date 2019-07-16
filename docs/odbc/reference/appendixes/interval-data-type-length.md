@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a456db12ddb2594dc7b4c9e4f5c26e9cb4245621
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947597"
 ---
 # <a name="interval-data-type-length"></a>间隔数据类型长度
 以下规则用于确定以字符为单位的时间间隔数据类型的长度。 中的字符数表示长度。 字节数取决于的字符集。 长度包括加在一起的以下值：  

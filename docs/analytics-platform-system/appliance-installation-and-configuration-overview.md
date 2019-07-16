@@ -2,19 +2,18 @@
 title: 设备安装和配置的分析平台系统 |Microsoft Docs
 description: 将引导完成设置和开始使用新设备的初始步骤 Analytics Platform System (APS) 设备管理员。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f32cbeccb9a71d1d4c801443b40df5a762b8f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961480"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>设备安装和配置分析平台系统
 将引导完成设置和开始使用新设备的初始步骤 Analytics Platform System (APS) 设备管理员。  

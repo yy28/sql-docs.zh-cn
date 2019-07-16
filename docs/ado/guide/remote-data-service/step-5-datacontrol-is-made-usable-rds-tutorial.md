@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f654bc1ccd913c5fc31f81cae67ffdb84e80f952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922059"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步骤 5：DataControl 变为可用（RDS 教程）
 返回**记录集**对象是可供使用。 您可以检查、 导航，或对其进行编辑，就像任何其他**记录集**。 使用可以做什么**记录集**取决于你的环境。 Visual Basic 和 VisualC++具有可视控件，可以使用**记录集**直接或间接的启用的数据控件的帮助。  

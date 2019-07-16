@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946115"
 ---
 # <a name="xqueries-involving-order"></a>涉及顺序的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 检索第二个生产车间的所有的属性。  
   
--   FLWOR 迭代 (FOR ... RETURN) 检索第二个生产车间的所有 <`step`> 子元素。  
+-   FLWOR 迭代 (为...RETURN) 检索所有 <`step`> 子元素的第二个工作中心位置。  
   
 -   [Sql: column 函数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)正在构造的 XML 中包括关系值。  
   
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 从产品目录中检索前两个产品的功能说明  
- 该查询针对某个特定产品型号，从产品型号目录中的 <`Features`> 元素中检索前两个功能说明。  
+ 查询针对某个特定产品型号，检索前的两个功能说明从 <`Features`> 产品型号目录中的元素。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  请注意上述查询的以下方面：  
   
- 查询主体构造了包含具有 ProductModelID 属性和 ProductModelName 属性的 <`ProductModel`> 元素的 XML。  
+ 查询主体构造的 XML <`ProductModel`> 具有 ProductModelID 和 ProductModelName 属性的元素。  
   
--   查询使用 FOR ... RETURN 循环检索产品型号的功能说明。 **Position （)** 函数用于检索前两个功能。  
+-   查询使用 FOR...RETURN 循环检索产品型号功能说明。 **Position （)** 函数用于检索前两个功能。  
   
  下面是结果：  
   

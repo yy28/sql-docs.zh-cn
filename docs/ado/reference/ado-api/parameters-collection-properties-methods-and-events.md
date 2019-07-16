@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db62b2ac69498debba80e23d208940d2aa97827c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bffb3dfc89f07169bdbedc0d8960325e3f780085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931680"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>参数集合属性、 方法和事件
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
  [Count 属性](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [项属性](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -33,7 +32,7 @@ ms.locfileid: "66703272"
   
  [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  无。  
   
 ## <a name="see-also"></a>请参阅  

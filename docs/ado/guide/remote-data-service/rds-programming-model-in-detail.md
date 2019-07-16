@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922529"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 编程模型的详细信息
 RDS 编程模型的关键元素如下：  
@@ -65,7 +64,7 @@ RDS 编程模型的关键元素如下：
   
  **Rds。DataControl**对象还具有它自己的方法用于导航、 排序和筛选关联的行**记录集**对象。 这些方法非常相似，但不是与 ADO 上的方法相同**记录集**对象。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  RDS 支持两个自己独立于 ADO 事件模型的事件。 [OnReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)调用事件时**rds。DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)属性更改，因此通知您已成功完成一个异步操作后，已终止，或遇到错误。 [OnError](../../../ado/reference/rds-api/onerror-event-rds.md)事件时出现错误，即使调用异步操作期间发生错误。  
   
 > [!NOTE]
@@ -75,7 +74,7 @@ RDS 编程模型的关键元素如下：
  [RDS 编程模型和对象](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace 对象 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS 方案](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 使用情况和安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

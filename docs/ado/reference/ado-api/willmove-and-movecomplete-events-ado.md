@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88a04ff636f06589515f409b7c2274217ae8f3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945915"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
 **WillMove**挂起操作更改中的当前位置之前调用事件[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **MoveComplete**中的当前位置后，将调用事件**记录集**更改。  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197768"
 ---
 # <a name="event-notifications"></a>事件通知
   事件通知将有关事件的信息发送给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。 执行事件通知可对各种 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据定义语言 (DDL) 语句和 SQL 跟踪事件做出响应，其方法是将这些事件的相关信息发送到 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。  
@@ -51,9 +51,9 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>事件通知概念  
  创建事件通知时，将会在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例和指定的目标服务之间打开一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话。 通常会话保持为打开状态，只要事件通知作为一个对象存在于服务器实例中。 在某些出错情况下，会话可以在删除事件通知之前关闭。 这些会话从不在事件通知之间共享。 每个事件通知都有自己的排他会话。 显式结束会话将阻止目标服务接收更多消息，下一次事件通知激发时，会话将不会重新打开。  
   
- 事件信息传递到[!INCLUDE[ssSB](../../includes/sssb-md.md)]服务类型的变量`xml`提供有关事件的发生时间、 受影响的数据库对象信息[!INCLUDE[tsql](../../includes/tsql-md.md)]涉及的批处理语句和其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
+ 事件信息作为 `xml` 类型的变量传递给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务，它提供了有关事件的发生时间、受影响的数据库对象、涉及的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理语句的信息以及其他信息。 有关事件通知生成的 XML 架构的详细信息，请参阅 [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)。  
   
-### <a name="event-notifications-vs-triggers"></a>事件通知与触发器  
+### <a name="event-notifications-vs-triggers"></a>事件通知与Triggers  
  下表对触发器和事件通知进行了比较。  
   
 |触发器|事件通知|  

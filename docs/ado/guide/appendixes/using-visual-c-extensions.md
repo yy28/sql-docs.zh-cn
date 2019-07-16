@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926453"
 ---
 # <a name="visual-c-extensions"></a>VisualC++扩展
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 接口
@@ -87,12 +86,12 @@ Update(CADORecordBinding *binding)
  有关详细信息，请参阅[附录 a:数据类型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程序员参考。
 
 ### <a name="begin-binding-entries"></a>开始绑定项
- **BEGIN_ADO_BINDING**(*Class*)
+ **BEGIN_ADO_BINDING**(*类*)
 
 ### <a name="fixed-length-data"></a>固定长度的数据
  **ADO_FIXED_LENGTH_ENTRY**(*序号、 数据类型、 缓冲区、 状态修改*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*序号、 数据类型，缓冲区中，修改*)
 
 ### <a name="numeric-data"></a>数值数据
  **ADO_NUMERIC_ENTRY**(*序号、 数据类型、 缓冲区、 精度、 小数位数、 状态修改*)
@@ -102,16 +101,16 @@ Update(CADORecordBinding *binding)
 ### <a name="variable-length-data"></a>长度可变的数据
  **ADO_VARIABLE_LENGTH_ENTRY**(*序号、 数据类型、 缓冲区、 大小、 状态、 长度、 修改*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*序号、 数据类型、 缓冲区、 大小、 状态修改*)
 
  **ADO_VARIABLE_LENGTH_ENTRY3**(*序号、 数据类型、 缓冲区、 大小、 长度、 修改*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*序号、 数据类型、 缓冲区、 大小、 修改*)
 
 ### <a name="end-binding-entries"></a>结束绑定项
  **END_ADO_BINDING**()
 
-|参数|Description|
+|参数|描述|
 |---------------|-----------------|
 |*类*|在其中的类绑定项和 C /C++定义了变量。|
 |*Ordinal*|一个中，对计数的序号**记录集**字段对应于在 C /C++变量。|
@@ -129,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  设置数据时*状态*可能会设置为**adFldNull**指示**记录集**字段应设置为 null。
 
-|常量|ReplTest1|Description|
+|常量|值|描述|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|返回非 null 字段值。|
 |**adFldBadAccessor**|1|绑定无效。|

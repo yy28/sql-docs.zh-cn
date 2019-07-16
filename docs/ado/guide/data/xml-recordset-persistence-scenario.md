@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923363"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集暂留方案
 在此方案中，将创建记录集对象的内容保存直接向 ASP 响应对象的 Active Server Pages (ASP) 应用程序。  
@@ -38,10 +37,10 @@ ms.locfileid: "66699692"
   
 -   接收和显示数据  
   
-## <a name="step-1-set-up-the-application"></a>第 1 步：设置应用程序  
+## <a name="step-1-set-up-the-application"></a>步骤 1：设置应用程序  
  创建权限脚本创建名为"XMLPersist"的 IIS 虚拟目录。 在虚拟目录指向，一个名为"XMLResponse.asp，"其他名为"Default.htm。"的文件夹中创建两个新的文本文件  
   
-## <a name="step-2-get-the-data"></a>第 2 步：获取数据  
+## <a name="step-2-get-the-data"></a>步骤 2：获取数据  
  在此步骤中，将编写代码以打开 ADO 记录集，并准备将其发送给客户端。 使用文本编辑器，例如记事本，打开文件 XMLResponse.asp 并插入以下代码。  
   
 ```  

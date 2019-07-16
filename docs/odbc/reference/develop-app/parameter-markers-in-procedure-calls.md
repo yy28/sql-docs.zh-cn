@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cda56f2b-6eec-4cbc-8dbb-36d8fa9f9216
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00aa87461c1b4a82fbedc7bd7faf1da6ff327265
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bb24fb628e9e49fd94104af05217511a8f57c3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912308"
 ---
 # <a name="parameter-markers-in-procedure-calls"></a>过程调用中的参数标记
 在调用接受参数的过程，可互操作应用程序应使用参数标记，而不是文字参数值。 某些数据源不支持在过程调用中使用文字参数值。 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)。 调用过程的详细信息，请参阅[过程调用](../../../odbc/reference/develop-app/procedure-calls.md)，在本部分中更高版本。

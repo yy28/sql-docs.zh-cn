@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63bf65118f876a0677592bfe1dd8056b05397f71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951038"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   显示命名空间所有者 (NSO) 在给定时刻正处理的 I/O 请求的列表。  
   
-|“列”|类型|Description|  
+|“列”|type|描述|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|显示包含来自驱动程序的 I/O 请求的 NSO 内存块的内部地址。 不可为 null。|  
 |**current_spid**|**smallint**|显示当前 SQL Server 的连接的系统进程 id (SPID)。 不可为 null。|  

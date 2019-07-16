@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 95d45e34c5e32e2ace95c2f0e86684aa0e5b575c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950621"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours` 是，以小时为单位为其返回历史代理会话信息的范围。 *小时*是**int**，可以是下列范围之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |< **0**|返回代理过去运行的信息，最多返回 100 条运行信息。|  
 |**0** （默认值）|返回代理过去运行的所有信息。|  
@@ -55,7 +54,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @session_type = ] session_type` 筛选结果集基于会话最终结果。 *session_type*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**1** （默认值）|具有重试或成功结果的代理会话。|  
 |**0**|具有失败结果的代理会话。|  
@@ -68,7 +67,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|代理作业会话的 ID。|  
 |**“状态”**|**int**|代理运行状态：<br /><br /> **1** = 开始<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  

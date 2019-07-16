@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946212"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的类型转换规则
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 因为您不知道文档实例中有多少顶级 <`root`> 元素，所以以下查询将返回一个静态错误。  
+ 以下查询将返回静态错误，因为您不知道多少顶级 <`root`> 元素是在文档实例中。  
   
 ```  
 declare @x xml(myCollection)  
@@ -106,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 通过在表达式中指定单独的 <`root`> 元素，查询会成功。 该查询将返回被类型化为 xs:string 的简单类型值序列。  
+ 通过指定单一实例 <`root`> 元素中的表达式中，成功执行查询。 该查询将返回被类型化为 xs:string 的简单类型值序列。  
   
 ```  
 declare @x xml(myCollection)  
@@ -116,7 +115,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- 在以下示例中，xml 类型变量包含了指定 XML 架构集合的文档关键字。 这说明 XML 实例必须是具有单个顶级元素的文档。 如果在该 XML 实例中创建两个 <`root`> 元素，则会返回错误。  
+ 在以下示例中，xml 类型变量包含了指定 XML 架构集合的文档关键字。 这说明 XML 实例必须是具有单个顶级元素的文档。 如果创建两个 <`root`> XML 实例中的元素，它将返回错误。  
   
 ```  
 declare @x xml(document myCollection)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926796"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>用于 OLE DB 概述 Microsoft 游标服务
 用于 OLE DB 的 Microsoft 游标服务补充数据访问接口的游标支持函数。 因此，用户可以体验从所有数据提供程序相对统一的功能。
@@ -57,9 +56,9 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  动态属性 DBPROP_SERVERDATAONINSERT 不受游标服务，即使基础数据提供程序支持。
 
-|属性名|Description|
+|属性名|描述|
 |-------------------|-----------------|
-|Auto Recalc (DBPROP_ADC_AUTORECALC)|此值指示通常如何使用 Data Shaping 服务创建的记录集的计算和聚合列进行计算。 默认值 (值 = 1) 是 Data Shaping 服务确定这些值已发生更改时重新计算。 如果值为 0，最初构建层次结构时，将仅计算的计算或聚合的列。|
+|自动重新计算 (DBPROP_ADC_AUTORECALC)|此值指示通常如何使用 Data Shaping 服务创建的记录集的计算和聚合列进行计算。 默认值 (值 = 1) 是 Data Shaping 服务确定这些值已发生更改时重新计算。 如果值为 0，最初构建层次结构时，将仅计算的计算或聚合的列。|
 |批大小 (DBPROP_ADC_BATCHSIZE)|指示可以在发送到数据存储区之前进行批处理的 update 语句数。 在批处理中的多个语句，往返次数较少的数据存储。|
 |缓存子行 (DBPROP_ADC_CACHECHILDROWS)|对于使用 Data Shaping 服务创建的记录集，此值指示是否将子记录集存储在缓存中供以后使用。|
 |游标引擎版本 (DBPROP_ADC_CEVER)|指示正在使用的游标服务的版本。|
@@ -71,7 +70,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |[唯一的架构](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指示中引用的表的所有者的名称**唯一表**属性。|
 |[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指示中的一个表的名称**记录集**创建从多个可以通过插入、 更新或删除操作修改的表。|
 |更新条件 (DBPROP_ADC_UPDATECRITERIA)|指示中的哪些字段**其中**子句用于处理在更新期间发生的冲突。|
-|[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|指示是否**重新同步**方法隐式调用之后[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法 （以及其行为），当**唯一表**属性是否生效。|
+|[更新重新同步](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)(DBPROP_ADC_UPDATERESYNC)|指示是否**重新同步**方法隐式调用之后[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法 （以及其行为），当**唯一表**属性是否生效。|
 
  此外可以设置或通过指定其名称为索引来检索动态属性**属性**集合。 例如，获取并打印的当前值[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)动态属性，然后设置新值，如下所示：
 
@@ -83,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>内置属性行为
  用于 OLE DB 游标服务还会影响某些内置属性的行为。
 
-|属性名|Description|
+|属性名|描述|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|对类型的游标可用于进行了补充**记录集**。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|对可用于锁的类型进行了补充**记录集**。 启用批处理更新。|

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900292"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* |为 NULL
 
- **适用对象：** SQL Server （从 2008年开始）、 Azure SQL 数据库
+ **适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
 
  数据库 ID。 *database_id*数据类型为 int，无默认值。 有效的输入包括数据库的 ID 号或 NULL。 如果指定 NULL，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有数据库。  
   
@@ -66,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* |为 NULL
 
-**适用对象：** SQL Server （从 2008年开始）、 Azure SQL 数据库
+**适用对象：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
  
 文件的 ID。 *file_id*数据类型为 int，无默认值。 有效输入为文件 ID 号或为 NULL。 如果指定 NULL，则返回数据库中的所有文件。  
   
@@ -74,7 +73,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库名称。</br></br>对于 SQL 数据仓库，这是数据库的存储在由 pdw_node_id 标识的节点上的名称。 每个节点都有一个具有 13 文件的 tempdb 数据库。 每个节点还具有一个数据库，每个分布区，并且每个分发数据库具有 5 个文件。 例如，如果每个节点包含 4 个分布区，则结果会显示 pdw_node_id 每 20 个分发数据库文件。 
 |**database_id**|**smallint**|数据库的 ID。|  
@@ -89,9 +88,9 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|用户等待在文件中完成 I/O 操作所用的总时间（毫秒）。|  
 |**size_on_disk_bytes**|**bigint**|该文件在磁盘上占用的字节数。 对于稀疏文件，此数字是数据库快照在磁盘上所占用的实际字节数。|  
 |**file_handle**|**varbinary**|用于此文件的 Windows 文件句柄。|  
-|**io_stall_queued_read_ms**|**bigint**|**不适用于：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
-|**io_stall_queued_write_ms**|**bigint**|**不适用于：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  针对写的 IO 资源调控所引入的总 IO 延迟。 不可为 null。|
-|**pdw_node_id**|**int**|适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分发节点的标识符。
+|**io_stall_queued_read_ms**|**bigint**|**不适用于：** :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_write_ms**|**bigint**|**不适用于：** :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  针对写的 IO 资源调控所引入的总 IO 延迟。 不可为 null。|
+|**pdw_node_id**|**int**|适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] </br></br>分发节点的标识符。
  
   
 ## <a name="permissions"></a>权限  
@@ -101,7 +100,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. 返回一个日志文件的统计信息
 
-**适用范围：** SQL Server （从 2008年开始）、 Azure SQL 数据库
+**适用范围：** SQL Server（从 2008 版开始）和 Azure SQL 数据库
 
  以下示例将返回有关 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的日志文件的统计信息。  
   

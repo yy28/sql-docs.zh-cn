@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 551e66805dc53f7113aeb0260716967bb8a78486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8171d552d850ec929f7aba5b55b6f0e2c6ae7265
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935638"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
 
@@ -57,7 +56,7 @@ ms.locfileid: "66780457"
   
 4.  在 **“域管理”** 屏幕中，单击 **“创建域”** 图标以创建一个域。 创建以下 4 个域：Address Line、City、State 和 Zip     。  
   
-5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击“确定”  。  
+5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击 **“确定”** 。  
   
 6.  在左侧的 **“域”** 窗格中，通过单击 **Address Verification**选择该复合域，然后单击右侧的 **“引用数据”** 选项卡。  
   

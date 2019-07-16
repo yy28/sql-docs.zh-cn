@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee9a48b4bec625e4d64caf20aa1b5c8eaefe34f3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946419"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路径表达式 - 使用缩写语法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      如果将路径表达式替换为缩写语法 `//act:telephoneNumber`，会收到相同的结果。  
   
--   **Self:: node （)** 在步骤中可缩写为单个点 （.）。 但是，圆点是不等效也能与之互换**self:: node （)**。  
+-   **Self:: node （)** 在步骤中可缩写为单个点 （.）。 但是，圆点是不等效也能与之互换**self:: node （)** 。  
   
      例如，在以下查询中，使用点表示的是一个值而不是节点：  
   

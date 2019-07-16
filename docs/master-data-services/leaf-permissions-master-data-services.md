@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5854df5b70664de7455e3da87cd7233b7f419c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007202"
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
 
@@ -38,7 +37,7 @@ ms.locfileid: "65488186"
   
 -   不强制向 **Name** 和 **Code** 属性分配权限。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|用户可以读取叶成员、属性。|  
 |**创建**|用户可以创建叶成员，并在创建过程中指定属性值。|  
@@ -51,18 +50,18 @@ ms.locfileid: "65488186"
 ## <a name="attribute-permissions"></a>属性权限  
  属性权限应用到该属性用于特定实体的值。 仅具有属性权限的用户不能添加或删除成员。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|用户可以读取属性。|  
 |**创建**|用户可以在创建成员时分配值。|  
 |**Update**|用户可以更新属性。|  
 |**删除**|无效。|  
-|**拒绝**|不显示属性。<br /><br /> 注意：不能明确拒绝访问 Name 和 Code 属性。|  
+|**拒绝**|不显示属性。<br /><br /> 注意:不能明确拒绝访问 Name 和 Code 属性。|  
   
 ### <a name="example"></a>示例  
  对于 Product 实体，将 **“更新”** 权限分配给 Subcategory 属性。 向所有其他属性分配“拒绝”权限。  
   
-|“属性”|代码|Subcategory（更新）|  
+|名称|代码|Subcategory（更新）|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} 山地车|  
 |Mountain-100|BK-M201|{5} 山地车|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99ced09e841e4a778b9920ced4023336a1668d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925790"
 ---
 # <a name="connecting-to-data-sources"></a>连接到数据源
 ADO**连接**对象表示与数据源，包括 DBMS、 文件存储区中或以逗号分隔的文本文件的唯一会话。 对于客户端/服务器数据库系统，ADO 连接可以是实际的网络连接到服务器。  

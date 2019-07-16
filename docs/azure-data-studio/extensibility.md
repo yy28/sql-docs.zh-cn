@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: ea432d05ea1fde8ec0d2585d0618ea6feba86ccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959590"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>开始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]扩展性
 
@@ -274,8 +273,8 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 |上下文变量| description|
 |:---|:---|
-|`connectionProvider` | 当前连接的提供程序的标识符的字符串。 例如： `connectionProvider == 'MSSQL'` 的用户。|
-|`serverName`|当前连接的服务器名称的字符串。 例如： `serverName == 'localhost'` 的用户。|
-|`databaseName` | 当前连接的数据库名称的字符串。 例如： `databaseName == 'master'` 的用户。|
+|`connectionProvider` | 当前连接的提供程序的标识符的字符串。 例如： `connectionProvider == 'MSSQL'`。|
+|`serverName`|当前连接的服务器名称的字符串。 例如： `serverName == 'localhost'`。|
+|`databaseName` | 当前连接的数据库名称的字符串。 例如： `databaseName == 'master'`。|
 |`connection` | 当前连接 (IConnectionProfile) 的完整的连接配置文件对象|
 |`dashboardContext` | 在目前的仪表板的页面的上下文字符串。 数据库或者服务器。 例如： `dashboardContext == 'database'`|

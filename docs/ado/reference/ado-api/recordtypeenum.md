@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eb33d68fcaf32fa92ae9a65e2ca216a86792a1be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df70838b7986993459df4f37af8b7043626a5d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931265"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 指定的类型[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。  
   
-|常量|ReplTest1|Description|  
+|常量|值|描述|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|指示*简单*（不包含子节点） 的记录。|  
 |**adCollectionRecord**|1|指示*集合*记录 （包含子节点）。|  
