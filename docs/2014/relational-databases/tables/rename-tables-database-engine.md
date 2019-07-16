@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196727"
 ---
 # <a name="rename-tables-database-engine"></a>重命名表（数据库引擎）
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的表。  
@@ -56,15 +56,15 @@ ms.locfileid: "54124587"
   
 #### <a name="to-rename-a-table"></a>重命名表  
   
-1.  在对象资源管理器中，右键单击要重命名的表，然后从快捷菜单中选择“设计”。  
+1.  在对象资源管理器中，右键单击要重命名的表，然后从快捷菜单中选择“设计”  。  
   
-2.  从 **“视图”** 菜单上选择 **“属性”**。  
+2.  从 **“视图”** 菜单上选择 **“属性”** 。  
   
 3.  在 **“属性”** 窗口的 **“名称”** 值字段中，为该表键入新名称。  
   
 4.  若要取消此操作，请在离开此字段前按 Esc 键。  
   
-5.  从“文件”菜单中，选择“保存表名”。  
+5.  从“文件”  菜单中，选择“保存表名”   。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -72,9 +72,9 @@ ms.locfileid: "54124587"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  下面的示例将 `SalesTerritory` 架构中的 `SalesTerr` 表重命名为 `Sales` 。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  下面的示例将 `SalesTerritory` 架构中的 `SalesTerr` 表重命名为 `Sales` 。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   

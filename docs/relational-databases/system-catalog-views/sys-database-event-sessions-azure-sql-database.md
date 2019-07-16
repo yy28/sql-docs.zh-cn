@@ -8,14 +8,13 @@ ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 844a002f7fc57e49fedabc353cdb0622964d7f28
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915078"
 ---
 # <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -29,11 +28,11 @@ ms.locfileid: "56031998"
 |-|  
 |**适用于**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]，以及任何更高版本。|  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的唯一 ID。 不可为 null。|  
-|NAME|**sysname**|标识事件会话的用户定义名称。 名称是唯一的。 不可为 null。|  
-|event_retention_mode|**nchar(1)**|确定如何处理事件丢失。 默认值为 S。不可为 Null 值。 可以是下列值之一：<br /><br /> S. Maps to event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. 映射到 event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> N. 映射到 event_retention_mode_desc = NO_EVENT_LOSS|  
+|name|**sysname**|标识事件会话的用户定义名称。 名称是唯一的。 不可为 null。|  
+|event_retention_mode|**nchar(1)**|确定如何处理事件丢失。 默认值为 S。不可为 Null 值。 可以是下列值之一：<br /><br /> S. 映射到 event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. 映射到 event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> N. 映射到 event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|介绍了如何处理事件丢失。 默认为 ALLOW_SINGLE_EVENT_LOSS。 不可为 null。 可以是下列值之一：<br /><br /> ALLOW_SINGLE_EVENT_LOSS。 事件可能从会话中丢失。 所有事件缓冲区都已满时仅删除单个事件。 通过在缓冲区已满时丢失单个事件，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可实现足以满足要求的性能特征，同时还可使处理过的事件流中的事件丢失下降到最低程度。<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS。 完整的事件缓冲区可能从会话中丢失。 事件丢失的数目取决于分配给会话的内存大小、内存的分区以及缓冲区中的事件大小。 在快速填充事件缓冲区时，此选项可将对服务器性能的影响降到最低。 不过，大量的事件可能从会话中丢失。<br /><br /> NO_EVENT_LOSS。 不允许事件丢失。 此选项可确保保留所有引发的事件。 使用此选项可强制所有可激发事件的任务都等到事件缓冲区中有可用空间时再执行。 事件会话处于活动状态时，这可能会导致可以察觉的性能下降。|  
 |max_dispatch_latency|**int**|在事件用于会话目标之前将其缓存在内存中的时间（以毫秒为单位）。 有效值为 1 到 2147483648 和 -1。 值 -1 表示调度滞后时间是无限期的。 可以为 Null。|  
 |max_memory|**int**|分配给会话的用于事件缓冲的内存量。 默认值为 4 MB。 可以为 Null。|  

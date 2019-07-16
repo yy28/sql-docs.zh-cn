@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e785fe0e4a5f0030beceff7b9393932a29eaa52
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163025"
 ---
 # <a name="create-and-manage-hierarchies"></a>创建和管理层次结构 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”**，再单击 **“关系图视图”**。  
+  可以在模型设计器的关系图视图中创建和管理层次结构。 若要在关系图视图中查看模型设计器，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中单击 **“模型”** 菜单，然后指向 **“模型视图”** ，再单击 **“关系图视图”** 。  
   
  本文包括以下任务：  
   
@@ -33,9 +33,9 @@ ms.locfileid: "57579546"
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>从上下文菜单创建层次结构  
   
-1.  在模型设计器（关系图视图）的表窗口中，右键单击某一列，然后单击“创建层次结构”。  
+1.  在模型设计器（关系图视图）的表窗口中，右键单击某一列，然后单击“创建层次结构”。   
   
-     若要选择多列，请单击每一列，右键单击以便打开上下文菜单，然后单击“创建层次结构”。  
+     若要选择多列，请单击每一列，右键单击以便打开上下文菜单，然后单击“创建层次结构”。   
   
      一个父层次结构级别将在表窗口的底部创建，并且所选列将作为子级别复制到该层次结构的下方。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "57579546"
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>更改层次结构或子级别的名称  
   
-1.  右键单击层次结构父级别或子级别，然后单击“重命名”。  
+1.  右键单击层次结构父级别或子级别，然后单击“重命名”。   
   
 2.  键入新名称或者编辑现有名称。  
   
@@ -67,14 +67,14 @@ ms.locfileid: "57579546"
   
 -   单击并将列拖到父级别或者层次结构的特定位置。 该列将作为层次结构中的子级别复制。  
   
--   或者，右键单击某一列，指向“添加到层次结构”，然后单击该层次结构。  
+-   或者，右键单击某一列，指向“添加到层次结构”，然后单击该层次结构。   
   
 > [!NOTE]  
 >  您可以将隐藏的列（从报表中隐藏的列）作为子级别添加到层次结构。 该子级别并不隐藏。  
   
 #### <a name="to-remove-a-child-level-from-a-hierarchy"></a>从层次结构中删除子级别  
   
--   右键单击子级别，然后单击“从层次结构中删除”。  
+-   右键单击子级别，然后单击“从层次结构中删除”。   
   
 -   或者，单击某一子级别，然后按下 **Delete**键。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "57579546"
   
 #### <a name="to-show-a-source-name"></a>显示源名称  
   
--   右键单击某一层次结构子级别，然后单击“显示源名称”。 此时将显示该子级别从其复制的列的名称。  
+-   右键单击某一层次结构子级别，然后单击“显示源名称”。  此时将显示该子级别从其复制的列的名称。  
   
 ##  <a name="bkmk_delete"></a> 删除层次结构  
   

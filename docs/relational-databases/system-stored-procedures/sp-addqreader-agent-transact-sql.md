@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ce192a0d3510f6034ff223f6573bf1e058516e9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0a1e37004d15d8758160edb3558b2a69d30dae54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031019"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'` 登录名[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帐户下运行的代理。 *job_login*是**nvarchar(257)**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
+`[ @job_login = ] 'job_login'` 登录名[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帐户下运行的代理。 *job_login*是**nvarchar(257)** ，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
 `[ @job_password = ] 'job_password'` 是用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
   

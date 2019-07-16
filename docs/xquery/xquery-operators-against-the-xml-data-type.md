@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945958"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 运算符
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "56038888"
 ### <a name="a-using-general-operators"></a>A. 使用一般运算符  
  此查询说明了应用于序列和比较序列的一般运算符的使用方法。 该查询将检索每个客户的电话号码序列**AdditionalContactInfo**的列**联系人**表。 然后，将这个序列与两个电话号码（“111-111-1111”、“222-2222”）序列进行比较。  
   
- 该查询使用**=** 比较运算符。 在右侧序列中的每个节点**=** 与左侧和右侧序列中每个节点比较运算符。 如果节点匹配，则节点比较结果将是 **，则返回 TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
+ 该查询使用 **=** 比较运算符。 在右侧序列中的每个节点 **=** 与左侧和右侧序列中每个节点比较运算符。 如果节点匹配，则节点比较结果将是 **，则返回 TRUE**。 然后将其转换为整数并与 1 进行比较，然后查询将返回客户 ID。  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -79,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. 使用值运算符  
- 下列查询将检索图片大小为“小”的产品型号的 <`Picture`> 元素：  
+ 以下查询将检索 <`Picture`> 针对某个产品型号图片大小为"小型"的元素：  
   
 ```sql
 SELECT CatalogDescription.query('  

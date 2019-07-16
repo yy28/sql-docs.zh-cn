@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053101"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,19 +65,19 @@ sp_depends [ @objname = ] '<object>'
   
  下面的结果集显示的对象所在 *\<对象 >* 取决于。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar(257** **)**|存在依赖项的项名称。|  
+|**name**|**nvarchar(257** **)**|存在依赖项的项名称。|  
 |**type**|**nvarchar(16)**|项的类型。|  
-|**updated**|**nvarchar(7)**|是否更新项。|  
-|**selected**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
+|**更新**|**nvarchar(7)**|是否更新项。|  
+|**选择**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
 |**column**|**sysname**|存在依赖项的列或参数。|  
   
  下面的结果集显示依赖于的对象 *\<对象 >* 。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar(257** **)**|存在依赖项的项名称。|  
+|**name**|**nvarchar(257** **)**|存在依赖项的项名称。|  
 |**type**|**nvarchar(16)**|项的类型。|  
   
 ## <a name="permissions"></a>权限  
@@ -107,6 +106,6 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sys.sql_dependencies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

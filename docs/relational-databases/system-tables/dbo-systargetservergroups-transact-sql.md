@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73a0679d4b482b34e48d193cb526ca9f373edaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 220871e8bbfd72958ef23db0980e097e85b4cee9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63472080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076461"
 ---
 # <a name="dbosystargetservergroups-transact-sql"></a>dbo.systargetservergroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "63472080"
   记录此多服务器环境中当前登记的目标服务器组。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|服务器组 ID|  
-|**名称**|**sysname**|服务器组名称|  
+|**name**|**sysname**|服务器组名称|  
   
   

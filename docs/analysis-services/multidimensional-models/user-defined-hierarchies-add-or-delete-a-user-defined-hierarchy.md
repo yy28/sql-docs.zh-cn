@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89f92c07753462fc26cb6de7447395f02e571e7a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164910"
 ---
 # <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>用户定义的层次结构 - 添加或删除用户定义层次结构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”选项卡上的维度中添加或删除用户定义的层次结构。  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，可以从维度设计器中的“维度结构”  选项卡上的维度中添加或删除用户定义的层次结构。  
   
  在添加用户定义的层次结构后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中实例化此层次结构并且处理维度之前，用户无法使用此层次结构。 有关详细信息，请参阅[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)并[处理多维模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "57578708"
   
      该维度会在维度设计器的 **“维度结构”** 选项卡上打开。  
   
-2.  将要在用户定义的层次结构中使用的属性从“属性”窗格拖至“层次结构”窗格。  
+2.  将要在用户定义的层次结构中使用的属性从“属性”  窗格拖至“层次结构”  窗格。  
   
 3.  拖动其他属性以在用户定义层次结构中建立级别。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "57578708"
   
 ### <a name="to-remove-a-user-defined-hierarchy-from-a-dimension"></a>从维度中删除用户定义层次结构  
   
--   在“维度结构” 选项卡上的“层次结构”窗格中，单击要删除的用户定义的层次结构。 在工具栏上，单击 **“删除”**。  
+-   在“维度结构”  选项卡上的“层次结构”  窗格中，单击要删除的用户定义的层次结构。 在工具栏上，单击 **“删除”** 。  
   
      - 或 -  
   
--   在“层次结构”窗格中右键单击要删除的用户定义的层次结构，然后单击“删除”。  
+-   在“层次结构”  窗格中右键单击要删除的用户定义的层次结构，然后单击“删除”  。  
   
      - 或 -  
   

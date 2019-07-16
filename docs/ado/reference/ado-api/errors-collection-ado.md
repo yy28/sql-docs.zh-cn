@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 109b7ff83e6b3f722560dae0a034c4bf37da137f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3c8f981d4dc40a4a6f618f3cca387379d51def9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932971"
 ---
 # <a name="errors-collection-ado"></a>错误集合 (ADO)
 包含所有[错误](../../../ado/reference/ado-api/error-object.md)到单个提供程序相关的失败的响应中创建的对象。  

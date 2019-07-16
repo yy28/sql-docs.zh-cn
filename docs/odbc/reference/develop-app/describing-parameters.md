@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040018"
 ---
 # <a name="describing-parameters"></a>描述参数
 **SQLBindParameter**包含描述此参数的参数： 其 SQL 类型、 精度和小数位数。 驱动程序使用此信息，或*元数据，* 将参数值转换为所需的数据源的类型。 第一次看到它可能看起来驱动程序位于更有利于知道比应用程序; 的参数元数据毕竟，该驱动程序可以轻松地发现元数据，为结果集列。 事实证明，这不是这种情况。 首先，大多数数据源未提供的驱动程序来发现参数元数据的方法。 第二个，大多数应用程序已经知道元数据。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 142d2a0ba403600d45f338596b5a581980ec79f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fa72bced2173f9de3d3edb9c3323294bb13c5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074407"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>保存快捷查询文件（用于 Excel 的 MDS 外接程序）
 
@@ -24,7 +23,7 @@ ms.locfileid: "65486094"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果经常需要访问同一组数据，可保存一个快捷查询文件。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   活动工作表必须包含所需格式的 MDS 管理的数据。 例如，您查看的列应该是应用任何筛选器后按照您希望的顺序来排序的列。 有关详细信息，请参阅[导出前筛选数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)和[对列重新排序（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)。  

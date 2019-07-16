@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d13dc442d1c0f5067b3db232d7fd6756503bb91c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209700"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52409954"
   
 1.  打开挖掘准确性图表生成器。  
   
-    -   在 SQL Server Management Studio 中，右键单击该模型，然后选择“查看提升图”。  
+    -   在 SQL Server Management Studio 中，右键单击该模型，然后选择“查看提升图”  。  
   
     -   在 SQL Server Data Tools 中，打开在其中创建了该模型的项目，然后单击 **“挖掘准确性图表”** 选项卡。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52409954"
     |**单项成本**|3|输入目标邮递活动的单位成本。<br /><br /> 该金额将乘以一个等于或小于 20,000 的数，具体数字取决于模型预测的客户中有多少个是合适的潜在客户。|  
     |**单项收入**|400|输入一个值，该值表示可以从成功结果获得利润或收入的金额。 在这种情况下，我们将假定邮寄目录导致平均的附件或自行车 $400 购买。<br /><br /> 该金额将用于预计与高概率事例关联的总利润。|  
   
-7.  在您设置了所需参数后，单击 **“确定”**。  
+7.  在您设置了所需参数后，单击 **“确定”** 。  
   
 8.  该图表将更新以显示利润曲线。  
   

@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185797"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>将计划的策略部署到多个实例
   通过使用已注册的服务器，可以从一个集中位置将计划的策略部署到多个托管服务器。 您可以从本地服务器组或中央管理服务器部署计划的策略。  
@@ -47,7 +47,7 @@ ms.locfileid: "56016718"
   
 1.  在你在上一任务中配置计划的策略服务器上，展开**管理**，展开**策略管理**，然后单击**策略**。  
   
-2.  在“视图”菜单中，单击“对象资源管理器详细信息”。  
+2.  在“视图”  菜单中，单击“对象资源管理器详细信息”  。  
   
 3.  在中**对象资源管理器详细信息**窗格中，选择所有计划的最佳实践策略，你想要将部署到通过已注册的服务器的其他服务器。  
   
@@ -64,14 +64,14 @@ ms.locfileid: "56016718"
   
 ### <a name="to-deploy-the-scheduled-policies-to-servers-that-are-managed-through-registered-servers"></a>将计划的政策部署到通过已注册服务管理的服务器  
   
-1.  在“视图”菜单上，单击“已注册的服务器”。  
+1.  在“视图”菜单上，单击“已注册的服务器”。    
   
 2.  展开**数据库引擎**，展开**本地服务器组**或**中央管理服务器**，右键单击你想要部署的策略，该节点，然后单击**导入策略**。  
   
     > [!NOTE]  
     >  如果您右键单击**本地服务器组**或中央管理服务器本身，则策略将部署到所有被管服务器。 如果右键单击特定的服务器组，则策略将只部署到该组中的服务器。 如果右键单击特定的已注册服务器，则策略将只部署到该服务器。  
   
-3.  下一步**文件导入**，单击省略号按钮 (**...**).  
+3.  下一步**文件导入**，单击省略号按钮 ( **...** ).  
   
 4.  在中**选择策略**对话框中，浏览到保存计划的策略的文件夹位置。 对于此示例中，浏览到位置**C:\Scheduled_BP_Policies**。  
   

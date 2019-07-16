@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039547"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函数
 **符合性**  
@@ -148,7 +147,7 @@ SQLRETURN SQLStatistics(
 |类型 (ODBC 1.0)|7|Smallint（非 NULL）|要返回的信息类型：<br /><br /> SQL_TABLE_STAT 指示 （中的基数或页面列中） 的表的统计信息。<br /><br /> SQL_INDEX_BTREE 指示 B 树索引。<br /><br /> SQL_INDEX_CLUSTERED 指示聚集的索引。<br /><br /> SQL_INDEX_CONTENT 指示内容索引。<br /><br /> SQL_INDEX_HASHED 指示哈希的索引。<br /><br /> SQL_INDEX_OTHER 指示索引的另一种类型。|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|列序列号的索引 （从 1 开始）;如果类型为 SQL_TABLE_STAT，则返回 NULL。|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|列名称。 如果列基于一个表达式，如薪金 + 优势，返回的表达式;如果无法确定该表达式，则返回空字符串。 如果类型为 SQL_TABLE_STAT，则返回 NULL。|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char(1)|列的排序顺序："A"升序;"D"表示降序;如果数据源不支持列排序顺序或类型是否为 SQL_TABLE_STAT，则返回 NULL。|  
+|ASC_OR_DESC (ODBC 1.0)|10|char （1)|列的排序顺序："A"升序;"D"表示降序;如果数据源不支持列排序顺序或类型是否为 SQL_TABLE_STAT，则返回 NULL。|  
 |基数 (ODBC 1.0)|11|Integer|基数的表或索引;如果类型是 SQL_TABLE_STAT; 在表中的行数如果类型不是 SQL_TABLE_STAT; 在索引中的唯一值的数量如果值从数据源不可用，则返回 NULL。|  
 |页 (ODBC 1.0)|12|Integer|用于存储索引或表; 的页面数表类型是否为 SQL_TABLE_STAT; 的页面数如果类型不是 SQL_TABLE_STAT; 索引的页面数如果值从数据源不可用或不可能适用于数据源，则返回 NULL。|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|如果索引是筛选的索引，这是筛选条件，如薪金 > 30000;如果不能确定筛选条件，，则为空字符串。<br /><br /> 如果索引不是筛选的索引，则为 NULL，不能确定是否索引为筛选的索引，或类型是 SQL_TABLE_STAT。|  

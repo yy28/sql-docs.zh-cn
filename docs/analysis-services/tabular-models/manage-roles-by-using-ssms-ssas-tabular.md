@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162804"
 ---
 # <a name="manage-roles-by-using-ssms"></a>使用 SSMS 管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "53072614"
   
 ###  <a name="bkmk_new_role"></a> 创建新角色  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开要为其创建新角色的表格模型数据库，右键单击 **“角色”**，然后单击 **“新建角色”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开要为其创建新角色的表格模型数据库，右键单击 **“角色”** ，然后单击 **“新建角色”** 。  
   
-2.  在 **“创建角色”** 对话框的“选择页”窗口中，单击 **“常规”**。  
+2.  在 **“创建角色”** 对话框的“选择页”窗口中，单击 **“常规”** 。  
   
 3.  在常规设置窗口的 **“名称”** 字段中，键入角色的名称。  
   
@@ -48,15 +48,15 @@ ms.locfileid: "53072614"
   
 4.  在 **“为此角色设置数据库权限”** 中，选择以下权限选项之一：  
   
-    |权限|Description|  
+    |权限|描述|  
     |----------------|-----------------|  
     |**完全控制(管理员)**|成员可以对模型架构进行修改并可以查看所有数据。|  
     |**处理数据库**|成员可以运行“处理”和“全部处理”操作。 不能修改模型架构且不能查看数据。|  
     |**读取**|允许成员查看数据（基于行筛选器），但不能对模型架构进行任何更改。|  
   
-5.  在 **“创建角色”** 对话框的“选择页”窗口中，单击 **“成员身份”**。  
+5.  在 **“创建角色”** 对话框的“选择页”窗口中，单击 **“成员身份”** 。  
   
-6.  在“成员身份设置”窗口中单击 **“添加”**，然后在 **“选择用户或组”** 对话框中，添加要作为成员添加的 Windows 用户或组。  
+6.  在“成员身份设置”窗口中单击 **“添加”** ，然后在 **“选择用户或组”** 对话框中，添加要作为成员添加的 Windows 用户或组。  
   
 7.  如果您创建的角色已具有“读取”权限，则可以使用 DAX 公式为任意表添加行筛选器。 若要在中添加行筛选器**角色属性- \<rolename >** 对话框中，在**选择页**，单击**行筛选器**。  
   
@@ -69,17 +69,17 @@ ms.locfileid: "53072614"
   
 ###  <a name="bkmk_copy_role"></a> 复制角色  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要复制的角色的表格模型数据库，展开 **“角色”**，右键单击该角色，然后单击 **“复制”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要复制的角色的表格模型数据库，展开 **“角色”** ，右键单击该角色，然后单击 **“复制”** 。  
   
 ###  <a name="bkmk_edit_role"></a> 编辑角色  
   
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要编辑的角色的表格模型数据库，展开 **“角色”**，右键单击该角色，然后单击 **“属性”**。  
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要编辑的角色的表格模型数据库，展开 **“角色”** ，右键单击该角色，然后单击 **“属性”** 。  
   
      在中**角色属性** \<rolename > 对话框中，可以更改权限、 添加或删除成员，以及添加/编辑行筛选器。  
   
 ###  <a name="bkmk_deletet_role"></a> 删除角色  
   
--   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要删除的角色的表格模型数据库，展开 **“角色”**，右键单击该角色，然后单击 **“删除”**。  
+-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要删除的角色的表格模型数据库，展开 **“角色”** ，右键单击该角色，然后单击 **“删除”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  

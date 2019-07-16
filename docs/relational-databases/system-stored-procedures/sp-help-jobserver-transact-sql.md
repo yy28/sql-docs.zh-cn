@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobserver (Transact-SQL) | Microsoft Docs
+title: sp_help_jobserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054880"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_help_jobserver
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|目标服务器的标识号。|  
 |**server_name**|**nvarchar(30)**|目标服务器的计算机名称。|  
@@ -66,7 +65,7 @@ sp_help_jobserver
   
  如果**sp_help_jobserver**情况下执行*show_last_run_details*设置为**1**，结果集包含下列附加列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|作业上一次在此目标服务器上开始执行的日期。|  
 |**last_run_time**|**int**|作业上一次在此服务器上开始执行的时间。|  

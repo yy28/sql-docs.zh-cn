@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8b5a107f5ed8cd1c6c45317e60cc515a2601316
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077268"
 ---
 # <a name="alignment"></a>对齐方式
 通常没有什么不同比任何其他应用程序是在 ODBC 应用程序中的对齐问题。 也就是说，大多数 ODBC 应用程序具有弱或根本没有问题的对齐方式。 用于不对齐地址损失因硬件和操作系统，可能是作为对略微的性能产生负面影响等小或为主要作为运行时错误。 因此，ODBC 应用程序和可移植的 ODBC 应用程序具体而言，应务必正确对齐的数据。  
