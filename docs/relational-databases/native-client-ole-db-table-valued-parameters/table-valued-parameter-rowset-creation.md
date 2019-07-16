@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67ef2448dd1b39bf03a43c942b2206199f087fb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8994747896c7a04f2527ff451fb566d5ee6f914
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133352"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +31,13 @@ ms.locfileid: "62516046"
 ## <a name="static-scenario"></a>静态方案  
  当已知的类型信息时，使用者使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 来实例化表值参数对应的表值参数行集对象。  
   
- *Guid*字段 (*pTableID*参数) 包含特殊 GUID (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称。 eKind 字段将设置为 DBKIND_GUID_NAME。 此名称在使用特殊 SQL 语句时是必需的，在使用过程调用时是可选的。  
+ *Guid*字段 (*pTableID*参数) 包含特殊 GUID (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称  。 eKind 字段将设置为 DBKIND_GUID_NAME  。 此名称在使用特殊 SQL 语句时是必需的，在使用过程调用时是可选的。  
   
  对于聚合，使用者传递*pUnkOuter*参数控制的 IUnknown。  
   
  表值参数行集对象属性只读的因此不应使用者中设置任何属性*rgPropertySets*。  
   
- 对于每个 DBCOLUMNDESC 结构中的 rgPropertySets 成员，使用者可为每列指定附加属性。 这些属性属于 DBPROPSET_SQLSERVERCOLUMN 属性集。 它们支持您为每一列指定计算设置和默认设置。 它们还支持现有列属性，如为空性和标识。  
+ 对于每个 DBCOLUMNDESC 结构中的 rgPropertySets 成员，使用者可为每列指定附加属性  。 这些属性属于 DBPROPSET_SQLSERVERCOLUMN 属性集。 它们支持您为每一列指定计算设置和默认设置。 它们还支持现有列属性，如为空性和标识。  
   
  要从表值参数行集对象中检索相应的信息，使用者应使用 IRowsetInfo::GetProperties。  
   

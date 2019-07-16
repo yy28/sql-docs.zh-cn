@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095948"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  下表列出了可以在跟踪中添加或删除的事件。  
   
-|事件号|事件名称|Description|  
+|事件号|事件名称|描述|  
 |------------------|----------------|-----------------|  
 |0-9|保留|保留|  
 |10|RPC:Completed|在完成了远程过程调用 (RPC) 时发生。|  
 |11|RPC:Starting|在启动了 RPC 时发生。|  
 |12|SQL:BatchCompleted|在完成了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理时发生。|  
 |13|SQL:BatchStarting|在启动了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理时发生。|  
-|14|审核登录|在用户成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时发生。|  
-|15|审核注销|在用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注销时发生。|  
+|14|Audit Login|在用户成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时发生。|  
+|15|Audit Logout|在用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注销时发生。|  
 |16|Attention|在发生需要关注的事件（如客户端中断请求或客户端连接中断）时发生。|  
 |17|ExistingConnection|检测在启动跟踪前连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的用户的所有活动。|  
 |18|Audit Server Starts and Stops|在修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务状态时发生。|  
@@ -206,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|创建、更改或删除了服务器主体时发生。|  
 |178|Audit Database Operation Event|发生数据库操作（如检查或订阅查询通知）时发生。|  
 |180|Audit Database Object Access Event|访问数据库对象（如架构）时发生。|  
-|181|TM: 正在启动 Begin Tran|BEGIN TRANSACTION 请求开始时发生。|  
-|182|TM: 已完成 Begin Tran|BEGIN TRANSACTION 请求完成时发生。|  
-|183|TM: 将提升 Tran starting|PROMOTE TRANSACTION 请求开始时发生。|  
-|184|TM: Promote Tran 完成|PROMOTE TRANSACTION 请求完成时发生。|  
-|185|TM: Commit Tran starting|COMMIT TRANSACTION 请求开始时发生。|  
-|186|TM: Commit Tran 完成|COMMIT TRANSACTION 请求完成时发生。|  
-|187|TM: 正在启动 rollback Tran|ROLLBACK TRANSACTION 请求开始时发生。|  
-|188|TM: 已完成 rollback Tran|ROLLBACK TRANSACTION 请求完成时发生。|  
+|181|TM:正在启动 Begin Tran|BEGIN TRANSACTION 请求开始时发生。|  
+|182|TM:已完成 Begin Tran|BEGIN TRANSACTION 请求完成时发生。|  
+|183|TM:将提升 Tran starting|PROMOTE TRANSACTION 请求开始时发生。|  
+|184|TM:Promote Tran 完成|PROMOTE TRANSACTION 请求完成时发生。|  
+|185|TM:Commit Tran starting|COMMIT TRANSACTION 请求开始时发生。|  
+|186|TM:Commit Tran 完成|COMMIT TRANSACTION 请求完成时发生。|  
+|187|TM:正在启动 rollback Tran|ROLLBACK TRANSACTION 请求开始时发生。|  
+|188|TM:已完成 rollback Tran|ROLLBACK TRANSACTION 请求完成时发生。|  
 |189|Lock: Timeout (timeout > 0)|对资源（如页）的锁请求超时时发生。|  
-|190|Progress Report: 联机索引操作|报告生成进程正在运行时，联机索引生成操作的进度。|  
-|191|TM: 保存 Tran starting|SAVE TRANSACTION 请求开始时发生。|  
-|192|TM: Save Tran 完成|SAVE TRANSACTION 请求完成时发生。|  
+|190|Progress Report:联机索引操作|报告生成进程正在运行时，联机索引生成操作的进度。|  
+|191|TM:保存 Tran starting|SAVE TRANSACTION 请求开始时发生。|  
+|192|TM:Save Tran 完成|SAVE TRANSACTION 请求完成时发生。|  
 |193|Background Job Error|后台作业不正常终止时发生。|  
 |194|OLEDB Provider Information|分布式查询运行并收集对应于提供程序连接的信息时发生。|  
 |195|Mount Tape|收到磁带装入请求时发生。|  
@@ -241,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  下表列出了可以为事件添加的列。  
   
-|列号|列名|Description|  
+|列号|列名|描述|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|与跟踪内捕获的事件类相关的文本值。|  
 |2|**BinaryData**|与在跟踪中捕获的事件类相关的二进制值。|  
@@ -257,12 +256,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |12|**SPID**|分配的服务器进程 ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到与客户端关联的进程。|  
 |13|**Duration**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
 |14|**StartTime**|事件开始的时间（如果可用）。|  
-|15|**EndTime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 它还不填充**哈希警告**事件。|  
+|15|**EndTime**|事件的结束时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 它还不填充**哈希警告**事件。|  
 |16|**Reads**|服务器代表事件所执行的逻辑磁盘读取次数。 不填充此列**锁定： 释放**事件。|  
 |17|**Writes**|服务器代表事件所执行的物理磁盘写入次数。|  
 |18|**CPU**|事件所用的 CPU 时间（毫秒）。|  
 |19|**权限**|显示权限的位图；由安全审核使用。|  
-|20|**Severity**|异常的严重级别。|  
+|20|**Severity**|异常错误的严重级别。|  
 |21|**EventSubClass**|事件子类的类型。 所有事件类都不填充此数据列。|  
 |22|**Exchange Spill**|系统分配的对象 ID。|  
 |23|**成功**|尝试使用权限的成功情况；审核时使用。<br /><br /> **1** = 成功**0** = 失败|  
@@ -308,14 +307,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 **sys.dm_exec_sql_text()** 以检索关联的 SQL 文本。|  
 |64|**SessionLoginName**|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
   
- **[ @on=]** *on*  
+ **[ @on=]** *上*  
  指定将事件设置为 ON (1) 还是 OFF (0)。 *上*是**位**，无默认值。  
   
  如果*上*设置为**1**，并*column_id*为 NULL，则将事件设置为 ON 并清除所有列。 如果*column_id*不为 null，则该事件将该列设置为 ON。  
   
  如果*上*设置为**0**，并*column_id*为 NULL，则会将事件转变 OFF 并清除所有列。 如果*column_id*不为 null，则列已关闭。  
   
- 此表说明了之间的交互**@on**并**@columnid**。  
+ 此表说明了之间的交互 **@on** 并 **@columnid** 。  
   
 |@on|@columnid|结果|  
 |---------|---------------|------------|  
@@ -327,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|Description|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |0|没有错误。|  
 |1|未知错误。|  
@@ -348,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 用户必须执行**sp_trace_setevent**为每个事件添加每个列。 每个在执行期间，如果**@on**设置为**1**， **sp_trace_setevent**将指定的事件添加到跟踪的事件的列表。 如果**@on**设置为**0**， **sp_trace_setevent**从列表中删除指定的事件。  
+ 用户必须执行**sp_trace_setevent**为每个事件添加每个列。 每个在执行期间，如果 **@on** 设置为**1**， **sp_trace_setevent**将指定的事件添加到跟踪的事件的列表。 如果 **@on** 设置为**0**， **sp_trace_setevent**从列表中删除指定的事件。  
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
@@ -360,7 +359,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="see-also"></a>请参阅  
  [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   

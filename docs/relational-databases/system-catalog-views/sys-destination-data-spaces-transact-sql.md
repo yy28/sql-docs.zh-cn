@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc3df492cbc85c1c98ab920d63b6694bdc4de859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68a9e46232246c5f3a088765f77f44a9bc018269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62858461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079372"
 ---
 # <a name="sysdestinationdataspaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   分区方案的每个数据空间目标对应一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**partition_scheme_id**|**int**|分区到数据空间的分区架构的 ID。|  
 |**destination_id**|**int**|分区架构内唯一的目标映射的 ID（从 1 开始的序号）。|  

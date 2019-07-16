@@ -1,5 +1,5 @@
 ---
-title: sp_trace_create (Transact-SQL) | Microsoft Docs
+title: sp_trace_create (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096034"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  下表列出了选项、说明和选项值。  
   
-|选项名|选项值|Description|  
+|选项名|选项值|描述|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|指定当*max_file_size*达到当前跟踪文件已关闭，并且创建一个新文件。 所有新记录都将写入新文件。 新文件将与前一个文件同名，但是在文件名后将附加一个整数以指示其序列。 例如，如果命名原始跟踪文件为 filename.trc，则命名下个跟踪文件为 filename_1.trc，命名再下一个跟踪文件为 filename_2.trc，等等。<br /><br /> 随着更多滚动更新跟踪文件的创建，附加到文件名的整数值继续增加。<br /><br /> SQL Server 使用的默认值*max_file_size* (5 MB) 如果此选项指定但未指定的值*max_file_size*。|  
 |SHUTDOWN_ON_ERROR|**4**|指定无论任何原因，如果不能将跟踪写入文件，则 SQL Server 将关闭。 执行安全审核跟踪时，该选项很有用。|  
@@ -92,7 +91,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|Description|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |0|没有错误。|  
 |1|未知错误。|  
@@ -128,7 +127,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 -   默认值*file_size*如与其他跟踪为 5 MB 并且可以更改。  
   
--   不能指定文件名。 文件将保存为：**N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
+-   不能指定文件名。 该文件将另存为：**N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
   
 -   跟踪中仅包含以下事件和它们的列：  
   
@@ -148,7 +147,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   

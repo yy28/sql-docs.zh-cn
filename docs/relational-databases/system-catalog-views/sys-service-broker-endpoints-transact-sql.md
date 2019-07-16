@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f93ac0b4a11e10d3db952fd850f4c83668a97d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132960"
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Service Broker 端点在此目录视图中占一行。 此视图中的每一行，对于没有对应的行具有相同**endpoint_id**中**sys.tcp_endpoints**包含 TCP 配置元数据的视图。 TCP 是唯一允许 Service Broker 使用的协议。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**|**--**|继承中的列[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
 |**is_message_forwarding_enabled**|**bit**|端点支持消息转发。 此值最初设置为**0** （禁用）。 不可为 NULL。|  
 |**message_forwarding_size**|**int**|兆字节的最大数目**tempdb**允许使用空格以用于要转发的消息。 此值最初设置为**10**。 不可为 NULL。|  
-|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** - NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE<br /><br /> 不可为 NULL。|  
+|**connection_auth**|**tinyint**|连接到此端点所需的连接身份验证的类型，为以下值之一：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -协商<br /><br /> **4** -证书<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE<br /><br /> 不可为 NULL。|  
 |**connection_auth_desc**|**nvarchar(60)**|连接到此端点所需的连接身份验证类型的说明，可以是下列值之一：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE<br /><br /> 可以为 NULL。|  
 |**certificate_id**|**int**|身份验证所用证书的 ID（如果有）。<br /><br /> 0 = 使用 Windows 身份验证。|  
 |**encryption_algorithm**|**tinyint**|加密算法。 以下是带有其说明和相应的 DDL 选项的可能值。<br /><br /> **0** :NONE。 相应的 DDL 选项：已禁用。<br /><br /> **1** :RC4. 相应的 DDL 选项: {所需&#124;所需的算法 RC4}。<br /><br /> **2** :AES。 相应的 DDL 选项：所需算法 AES。<br /><br /> **3** :无、 RC4。 相应的 DDL 选项: {支持&#124;支持算法 RC4}。<br /><br /> **4** :无、 AES。 相应的 DDL 选项：支持 AES 算法。<br /><br /> **5** :RC4 AES。 相应的 DDL 选项：所需算法 RC4 AES。<br /><br /> **6** :AES, RC4. 相应的 DDL 选项：所需算法 AES RC4。<br /><br /> **7** :无、 RC4 AES。 相应的 DDL 选项：支持算法 RC4 AES。<br /><br /> **8** :无、 AES RC4。 相应的 DDL 选项：受支持的算法 AES RC4。<br /><br /> 不可为 NULL。|  

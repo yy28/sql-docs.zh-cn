@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122625"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +43,15 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>参数  
  *securable*  
- 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式。 *安全对象*可以是多部分名称。  
+ 安全对象的名称。 如果安全对象为服务器或数据库，则该值应设置为 NULL。 securable 是 sysname 类型的标量表达式   。 *安全对象*可以是多部分名称。  
   
  '*securable_class*'  
- 为其列出权限的安全对象的类的名称。 *securable_class*是**sysname**。 *securable_class*必须是以下值之一： 应用程序角色、 程序集、 非对称密钥、 证书、 协定、 数据库、 终结点、 FULLTEXT CATALOG、 登录名、 消息类型、 对象、 REMOTE SERVICE BINDING、 角色、 路由、 架构、 服务器、 服务对称密钥、 类型、 用户、 XML 架构集合。  
+ 为其列出权限的安全对象的类的名称。 *securable_class*是**sysname**。 *securable_class*必须是以下值之一：应用程序角色、 程序集、 非对称密钥、 证书、 协定、 数据库、 终结点、 FULLTEXT CATALOG、 登录名、 消息类型、 对象、 远程服务绑定，角色、 路由、 架构、 服务器、 服务、 对称密钥、 类型、 用户、 XML 架构集合。  
   
 ## <a name="columns-returned"></a>返回的列  
  下表列出的列的**fn_my_permissions**返回。 返回的每一行说明了当前安全上下文拥有的对安全对象的一种权限。 如果查询失败，则返回 NULL。  
   
-|列名|类型|Description|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|对其有效授予所列权限的安全对象的名称。|  
 |subentity_name|**sysname**|如果安全对象具有列，则为列名；否则为 NULL。|  

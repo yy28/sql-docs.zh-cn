@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8a3f6118c2227ad81d368c012c7282e3ba962881
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53d14ec8fe32ef665571dde0b7cd4aa4c17c7388
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095493"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用 WMI Provider for Server Events
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +110,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY 或 REVOKE（仅适用于 ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION 或 CREATE TRACE EVENT NOTIFICATION 权限。）  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>使用客户端的事件数据  
- WMI 提供程序后 for Server Events 在目标数据库中，创建所需的事件通知的事件通知将事件数据发送到名为 msdb 中的目标服务**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 该目标服务将事件放入 **msdb** 中名为 **WMIEventProviderNotificationQueue**的队列。 （服务和队列都是提供程序首次连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时动态创建的。）提供程序然后读取此队列中的 XML 事件数据，在将其返回给客户端应用程序前将其转换为托管对象格式 (MOF)。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，`SPID`属性返回 CIM 类型为**Sint32**。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
+ WMI 提供程序后 for Server Events 在目标数据库中，创建所需的事件通知的事件通知将事件数据发送到名为 msdb 中的目标服务**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 该目标服务将事件放入 **msdb** 中名为 **WMIEventProviderNotificationQueue**的队列。 (服务和队列动态创建提供程序时它首次连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。)然后，该提供程序从此队列读取 XML 事件数据，并返回到客户端应用程序之前将其转换为托管的对象格式 (MOF)。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，`SPID`属性返回 CIM 类型为**Sint32**。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
   
 ## <a name="see-also"></a>请参阅  
  [WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)  

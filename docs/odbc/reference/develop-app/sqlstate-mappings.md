@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 597fe4f7697375cc2e75bef79059beeba9d91e14
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107366"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 映射
 本主题讨论用于 ODBC 的 SQLSTATE 值*2.x*和 ODBC *3.x*。 有关详细信息 ODBC *3.x* SQLSTATE 值，请参阅[附录 a:ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  

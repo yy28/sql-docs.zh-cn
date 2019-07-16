@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt Mapping | Microsoft Docs
+title: SQLFreeStmt 映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b12c5286522bd0f1f8fbb40f101302aaa481cb8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a92af35d8a1b1e98a484c69d7d2e66bf5bef3196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086082"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 映射
 当应用程序调用**SQLFreeStmt**与*选项*参数通过 ODBC SQL_DROP *3.x*驱动程序，将会调用  

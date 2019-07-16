@@ -20,11 +20,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 8bdbaf1fdb0fb0c27127611ace0fac00d861838f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
-ms.translationtype: MT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220276"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "50743132"
 > [!NOTE]  
 > 仅当已安装并启用支持外部脚本执行的功能，此动态管理视图 (DMV) 是可用。 有关详细信息，请参阅[SQL Server 2016 中的 R Services](../../advanced-analytics/r/sql-server-r-services.md)并[中的机器学习服务 （R、 Python） SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|已注册的外部脚本语言的名称。 每个外部脚本必须在脚本请求中指定语言以启动关联的启动器。 |  
 |counter_name|**nvarchar**|已注册的外部脚本函数的名称。 不可为 null。|  
 |counter_value|**integer**|已在服务器上调用已注册外部脚本函数的实例的总数。 此值是累计的（从在实例上安装该功能的时间开始），且不能重置。|  
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要针对服务器的 VIEW SERVER STATE 权限。  
   
 > [!NOTE]  
@@ -94,7 +94,7 @@ WHERE language = 'Python';
 ```  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md) 
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  

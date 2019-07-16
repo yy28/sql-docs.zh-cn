@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096463"
 ---
 # <a name="data-type-limitations"></a>数据类型限制
 Microsoft ODBC 桌面数据库驱动程序来实施对数据类型的以下限制：  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |所有数据类型|类型转换失败可能会导致受影响的列设置为 NULL。|  
 |BINARY|创建一个长度为零的二进制列实际返回 255 个字节的二进制列。|  

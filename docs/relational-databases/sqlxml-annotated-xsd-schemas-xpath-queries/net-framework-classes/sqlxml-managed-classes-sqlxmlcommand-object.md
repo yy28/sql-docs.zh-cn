@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9f6ad55aff8291e3c0f14e8f44085da71d2b594c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119522"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 托管类 - SqlXmlCommand 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,13 +69,13 @@ public SqlXmlCommand(string cnString)
   
  TheSqlXmlCommand 对象还支持这些其他方法：  
   
- SqlXmlParameter CreateParameter()  
+ SqlXmlParameter createparameter （)  
  创建一个 SqlXmlParameter 对象。 可以设置的值*名称*并*值*此对象的参数。 如果您希望将参数传递到某一命令，则此方法很有用。 有关工作示例，请参阅[执行 SQL 查询&#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
   
- void ClearParameters()  
+ void clearparameters （)  
  清除为给定命令对象创建的参数。 如果您想要对同一命令对象执行多个查询，则此方法很有用。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>properties  
  SqlXmlCommand 对象还支持以下属性：  
   
  ClientSideXml  
@@ -104,12 +103,12 @@ public SqlXmlCommand(string cnString)
  命令的文本。 此属性用于指定您要执行的命令的文本。 有关工作示例，请参阅[执行 SQL 查询&#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
   
  CommandStream  
- 命令流。 如果您要根据某一文件（例如 XML 模板）执行命令，则此属性很有用。 当您使用 CommandStream，仅 **"模板"**， **"UpdateGram"** 并 **"DiffGram"CommandType**支持值。 有关工作示例，请参阅[通过使用 CommandStream 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)。  
+ 命令流。 如果您要根据某一文件（例如 XML 模板）执行命令，则此属性很有用。 当您使用 CommandStream，仅 **"模板"** ， **"UpdateGram"** 并 **"DiffGram"CommandType**支持值。 有关工作示例，请参阅[通过使用 CommandStream 属性执行模板文件](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)。  
   
  CommandType  
  标识命令的类型。 此属性用于指定您要执行的命令的类型。 下表中的值确定命令的类型。 有关工作示例，请参阅[在.NET 环境中访问 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|执行某一 SQL 命令（例如 `SELECT * FROM Employees FOR XML AUTO`）。|  
 |SqlXmlCommandType.XPath|执行某一 XPath 命令（例如 `Employees[@EmployeeID=1]`）。|  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 529572f02568cb7e13ff8821ab8d48a86d908141
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3a50ce1b42c8963aac0bc152e08c6d39eec73eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094777"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions（系统视图）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Syssubscriptions**视图显示订阅信息。 此视图存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|订阅项目的唯一 ID。|  
 |**srvid**|**smallint**|订阅服务器的服务器 ID。|  
@@ -44,7 +43,7 @@ ms.locfileid: "52783448"
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 只读的。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0** = 发送回。<br /><br /> **1** = 不发回。|  
 |**queued_reinit**|**bit**|指定是否将项目标记为初始化或重新初始化。 值为**1**指定订阅的项目标记为初始化或重新初始化。|  
-|**nosync_type**|**tinyint**|订阅初始化的类型：<br /><br /> **0** = 自动 （快照）<br /><br /> **1** = 仅支持复制<br /><br /> **2** = 使用备份初始化<br /><br /> **3** = 从日志序列号 (LSN) 初始化<br /><br /> 有关详细信息，请参阅**@sync_type**参数[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nosync_type**|**tinyint**|订阅初始化的类型：<br /><br /> **0** = 自动 （快照）<br /><br /> **1** = 仅支持复制<br /><br /> **2** = 使用备份初始化<br /><br /> **3** = 从日志序列号 (LSN) 初始化<br /><br /> 有关详细信息，请参阅 **@sync_type** 参数[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|订阅服务器的名称。|  
   
 ## <a name="see-also"></a>请参阅  

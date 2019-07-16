@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078524"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51673556"
 > [!NOTE]  
 >  ROUTINE_DEFINITION 列包含创建函数或存储过程的源语句。 这些源语句有可能包含嵌入式回车符。 如果将该列返回给某个以文本格式显示结果的应用程序，那么 ROUTINE_DEFINITION 结果中的嵌入式回车符可能会影响整个结果集的格式。 如果选择 ROUTINE_DEFINITION 列，那么必须对嵌入式回车符进行调整，例如，可将结果集返回到一个网格或者将 ROUTINE_DEFINITION 返回到其自己的文本框。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|特定的目录名称。 该名称与 ROUTINE_CATALOG 相同。|  
 |SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|特定的架构名称。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
@@ -76,7 +75,7 @@ ms.locfileid: "51673556"
 |MAXIMUM_CARDINALITY|**bigint**|NULL。 保留供将来使用。|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL。 保留供将来使用。|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，返回 SQL；对于外部编写的函数，返回 EXTERNAL。<br /><br /> 函数将始终是 SQL 函数。|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|如果函数或存储过程未加密，返回函数或存储过程的定义文本最前面的 4000 字符。 否则，返回 NULL。<br /><br /> 若要确保获得完整定义，请查询[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函数或中的 definition 列[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图。|  
+|ROUTINE_DEFINITION|**nvarchar(** 4000 **)**|如果函数或存储过程未加密，返回函数或存储过程的定义文本最前面的 4000 字符。 否则，返回 NULL。<br /><br /> 若要确保获得完整定义，请查询[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函数或中的 definition 列[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图。|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL。 保留供将来使用。|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL。 保留供将来使用。|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL。 保留供将来使用。|  

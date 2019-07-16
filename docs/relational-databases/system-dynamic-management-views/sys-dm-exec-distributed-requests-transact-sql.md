@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097799"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52532788"
   
  基于会话和请求 ID，用户可以然后检索生成要执行的通过 sys.dm_exec_distributed_requests 的实际分布式的请求。 例如，涉及常规 SQL 和外部的 SQL 表的查询将分解为跨各种计算节点执行的各种语句/请求。 若要在所有计算节点跟踪分布式的步骤，我们介绍可以用于跟踪分别与一个特定的请求和运算符，相关联的计算节点上的所有操作的 global 的执行 ID。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|此视图的键。 与请求关联的唯一数字 id。|在系统中的所有请求之间是唯一的。|  
 |execution_id|**nvarchar(32**|与在其中运行此查询的会话相关联的唯一数字 id。||  

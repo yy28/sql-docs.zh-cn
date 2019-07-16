@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbb52087baa5c11f972ae531f6c619352fbd13a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6817e41f48df740a59e371da9b78e09dd6894af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079390"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,21 +34,21 @@ ms.locfileid: "65980990"
   
 如果数据库没有处于`ONLINE`，或`AUTO_CLOSE`设置为`ON`和数据库已关闭，某些列的值可能为`NULL`。 如果数据库处于`OFFLINE`，对应的行不是低权限的用户可见。 若要查看对应行，如果数据库处于`OFFLINE`，用户必须具有至少`ALTER ANY DATABASE`服务器级权限，或`CREATE DATABASE`中的权限`master`数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|数据库名称，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
+|**name**|**sysname**|数据库名称，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
 |**database_id**|**int**|数据库的 ID，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
 |**source_database_id**|**int**|Non-NULL = 该数据库快照的源数据库 ID。<br /> NULL = 非数据库快照。|  
 |**owner_sid**|**varbinary(85)**|注册到服务器的数据库外部所有者的 SID（安全标识符）。 有关谁可以拥有数据库的信息，请参阅**数据库的 ALTER AUTHORIZATION**一部分[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)。|  
 |**create_date**|**datetime**|数据库的创建或重命名日期。 有关**tempdb**，每次在服务器重新启动时更改此值。|  
-|**compatibility_level**|**tinyint**|对应于兼容行为的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整数：<br /> **值** &#124; **适用于**<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /> 150 &#124; [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
+|**compatibility_level**|**tinyint**|对应于兼容行为的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整数：<br /> **值** &#124; **适用于**<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /> 150&#124; [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
 |**collation_name**|**sysname**|数据库的排序规则。 作为数据库中的默认排序规则。<br /> NULL = 数据库未联机或 AUTO_CLOSE 设置为 ON 并且数据库已关闭。|  
 |**user_access**|**tinyint**|用户访问设置：<br /> 0 = 已指定 MULTI_USER<br /> 1 = 已指定 SINGLE_USER<br /> 2 = 已指定 RESTRICTED_USER|  
 |**user_access_desc**|**nvarchar(60)**|用户访问设置的说明。|  
 |**is_read_only**|**bit**|1 = 数据库为 READ_ONLY<br /> 0 = 数据库为 READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE 为 ON<br /> 0 = AUTO_CLOSE 为 OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK 为 ON<br /> 0 = AUTO_SHRINK 为 OFF|  
-|State|**tinyint**|**值&#124;适用于**<br /> 0 = ONLINE  <br /> 1 = RESTORING <br /> 2 = 正在恢复&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT  <br /> 5 = 紧急情况下&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 脱机&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：** 对于 Always On 数据库查询`database_state`或`database_state_desc`的列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
+|**State**|**tinyint**|**值&#124;适用于**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = 正在恢复&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = 紧急情况下&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = 脱机&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = 复制&#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY&#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注意：** 对于 Always On 数据库查询`database_state`或`database_state_desc`的列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。|  
 |**state_desc**|**nvarchar(60)**|数据库状态的说明。 请参阅状态。|  
 |**is_in_standby**|**bit**|对于还原日志而言，数据库是只读的。|  
 |**is_cleanly_shutdown**|**bit**|1 = 数据库完全关闭；在启动时不需要恢复<br /> 0 = 数据库并未完全关闭；在启动时需要恢复|  
@@ -97,27 +96,27 @@ ms.locfileid: "65980990"
 |**is_honor_broker_priority_on**|**bit**|指示数据库是否遵守会话优先级 (反映使用最后设置的状态`ALTER DATABASE SET HONOR_BROKER_PRIORITY`子句)。 可以是以下值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF|  
 |**replica_id**|**uniqueidentifier**|数据库参与的可用性组（如果有）的本地 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性副本的唯一标识符。<br /> NULL = 数据库不是可用性组中的可用性副本的一部分。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Always On 可用性组内，如果任何数据库参与数据库的唯一标识符。 **group_database_id**是相同的主副本上以及在其的数据库是否联接到可用性组的每个辅助副本。<br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**resource_pool_id**|**int**|映射到此数据库的资源池的 ID。 此资源池控制对该数据库中的内存优化表可用的总内存。<br /> 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**resource_pool_id**|**int**|映射到此数据库的资源池的 ID。 此资源池控制对该数据库中的内存优化表可用的总内存。<br /> 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
 |**default_language_lcid**|**smallint**|指示包含数据库的默认语言的本地 ID (lcid)。<br /> **注意：** 充当[配置默认语言服务器配置选项](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)的`sp_configure`。 此值是**null**非包含数据库。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_language_name**|**nvarchar(128)**|指示包含数据库的默认语言。<br /> 此值是**null**非包含数据库。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_lcid**|**int**|指示包含数据库的默认全文语言的区域设置 id (lcid)。<br /> **注意：** 作为默认值[配置的默认全文语言服务器配置选项](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md)的`sp_configure`。 此值是**null**非包含数据库。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_name**|**nvarchar(128)**|指示包含数据库的默认全文语言。<br /> 此值是**null**非包含数据库。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_nested_triggers_on**|**bit**|指示包含数据库中是否允许使用嵌套触发器。<br /> 0 = 不允许使用嵌套触发器<br /> 1 = 允许使用嵌套触发器<br /> **注意：** 充当[配置 nested 的 triggers 服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)的`sp_configure`。 此值是**null**非包含数据库。 请参阅[sys.configurations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)有关的详细信息。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_transform_noise_words_on**|**bit**|指示是否应在包含数据库中转换干扰词。<br /> 0 = 不应转换干扰词。<br /> 1 = 应转换干扰词。<br /> **注意：** 充当[transform noise words 服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)的`sp_configure`。 此值是**null**非包含数据库。 请参阅[sys.configurations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)有关的详细信息。<br /> 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**is_transform_noise_words_on**|**bit**|指示是否应在包含数据库中转换干扰词。<br /> 0 = 不应转换干扰词。<br /> 1 = 应转换干扰词。<br /> **注意：** 充当[transform noise words 服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)的`sp_configure`。 此值是**null**非包含数据库。 请参阅[sys.configurations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)有关的详细信息。<br /> 适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
 |**two_digit_year_cutoff**|**smallint**|指示 1753 到 9999 之间的数字值，以表示将两位数的年份解释为四位数的年份的截止年份。<br /> **注意：** 充当[配置 two digit year cutoff 服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)的`sp_configure`。 此值是**null**非包含数据库。 请参阅[sys.configurations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)有关的详细信息。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**containment**|**tinyint not null**|指示数据库的包含状态。<br />  0 = 数据库包含状态为 OFF。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = 数据库处于部分包含状态**适用范围**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**containment**|**tinyint 不为 null**|指示数据库的包含状态。<br />  0 = 数据库包含状态为 OFF。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = 数据库处于部分包含状态**适用范围**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**containment_desc**|**nvarchar(60) not null**|指示数据库的包含状态。<br /> NONE = 早期数据库（零包含）<br /> PARTIAL = 部分包含的数据库<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**target_recovery_time_in_seconds**|**int**|恢复数据库的估计时间（秒）。 可以为 NULL。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**delayed_durability**|**int**|延迟的持久性设置中：<br /> 0 = 已禁用<br /> 1 = 允许<br /> 2 = 强制<br /> 有关详细信息，请参阅[控制事务持续性](../../relational-databases/logs/control-transaction-durability.md)。<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**delayed_durability_desc**|**nvarchar(60)**|延迟的持久性设置中：<br /> DISABLED<br /> ALLOWED<br /> FORCED<br /> **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**is_memory_optimized_elevate_to_snapshot_on**|**bit**|在会话设置 TRANSACTION ISOLATION LEVEL 设置为较低的隔离级别、READ COMMITTED 或 READ UNCOMMITTED 时，使用 SNAPSHOT 隔离访问内存优化表。<br /> 1 = 最低隔离级别为 SNAPSHOT。<br /> 0 = 隔离级别未进行提升。|  
-|**is_federation_member**|**bit**|指示该数据库是否为联合的成员。<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_remote_data_archive_enabled**|**bit**|指示数据库是否延伸。<br /> 0 = 数据库不是已启用延伸的。<br /> 1 = 数据库处于已启用延伸的。<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
-|**is_mixed_page_allocation_on**|**bit**|指示是否在数据库中表和索引可以分配初始页从混合区。<br /> 0 = 表和数据库中的索引始终从统一区分配初始页。<br /> 1 = 表和数据库中的索引可以从混合区分配初始页。<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 有关详细信息，请参阅的 SET MIXED_PAGE_ALLOCATION 选项[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|  
-|**is_temporal_retention_enabled**|**bit**|指示是否启用临时保留策略清除任务。<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**适用对象**：Azure SQL 数据仓库 Gen2。 虽然此功能正在向所有区域推出，请检查部署到你的实例和最新版本[Azure SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)有关功能可用性。|
+|**is_federation_member**|**bit**|指示该数据库是否为联合的成员。<br /> 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_remote_data_archive_enabled**|**bit**|指示数据库是否延伸。<br /> 0 = 数据库不是已启用延伸的。<br /> 1 = 数据库处于已启用延伸的。<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
+|**is_mixed_page_allocation_on**|**bit**|指示是否在数据库中表和索引可以分配初始页从混合区。<br /> 0 = 表和数据库中的索引始终从统一区分配初始页。<br /> 1 = 表和数据库中的索引可以从混合区分配初始页。<br /> 适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /> 有关详细信息，请参阅的 SET MIXED_PAGE_ALLOCATION 选项[ALTER DATABASE SET 选项&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|  
+|**is_temporal_retention_enabled**|**bit**|指示是否启用临时保留策略清除任务。<br /> 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on 位于</br>0 = is_result_set_caching_on is off</br>**适用对象**：Azure SQL 数据仓库 Gen2。 虽然此功能正在向所有区域推出，请检查部署到你的实例和最新版本[Azure SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)有关功能可用性。|
   
 ## <a name="permissions"></a>权限  
  如果调用方`sys.databases`不是数据库的所有者，该数据库不是`master`或`tempdb`，查看对应行所需的最小权限`ALTER ANY DATABASE`或`VIEW ANY DATABASE`服务器级别权限，或者`CREATE DATABASE`中的权限`master`数据库。 始终可以在查看调用方连接到的数据库`sys.databases`。  
@@ -143,7 +142,7 @@ FROM sys.databases;
 ### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>B. 检查 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的复制状态  
  下面的示例查询`sys.databases`和`sys.dm_database_copies`视图以返回有关数据库的信息复制操作。  
   
-适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```sql  
 -- Execute from the master database.  
@@ -155,7 +154,7 @@ WHERE a.state = 7;
 ### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>C. 查看临时保留策略状态 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  下面的示例查询`sys.databases`是否启用了临时保留清理任务返回的信息。 请注意在还原操作之后，临时保留为默认情况下禁用。 使用`ALTER DATABASE`若要显式启用它。
   
-适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```sql  
 -- Execute from the master database.  
@@ -166,7 +165,7 @@ FROM sys.databases AS a;
 ## <a name="see-also"></a>请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [sys.database_recovery_status &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   
+ [sys.database_recovery_status &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)   
  [数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [sys.dm_database_copies（Azure SQL 数据库）](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
   
