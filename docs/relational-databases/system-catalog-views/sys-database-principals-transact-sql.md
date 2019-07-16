@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c369bfe81a86af7a11a370a4d827440cd4544a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022686"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的每个安全主体返回一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|主体名称，在数据库中唯一。|  
+|**name**|**sysname**|主体名称，在数据库中唯一。|  
 |**principal_id**|**int**|主体 ID，在数据库中唯一。|  
 |**type**|**char(1)**|主体类型：<br /><br /> A = 应用程序角色<br /><br /> C = 映射到证书的用户<br /><br /> E = 外部用户从 Azure Active Directory<br /><br /> G = Windows 组<br /><br /> K = 映射到非对称密钥的用户<br /><br /> R = 数据库角色<br /><br /> S = SQL 用户<br /><br /> U = Windows 用户<br /><br /> X = 从 Azure Active Directory 组或应用程序的外部组|  
 |**type_desc**|**nvarchar(60)**|主体类型的说明。<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
@@ -45,7 +44,7 @@ ms.locfileid: "62632674"
 |**owning_principal_id**|**int**|拥有此主体的主体的 ID。 除数据库角色以外的所有主体必须都属于**dbo**。|  
 |**sid**|**varbinary(85)**|主体的 SID （安全标识符）。  SYS 和 INFORMATION SCHEMAS 为 NULL。|  
 |**is_fixed_role**|**bit**|如果为 1，则该行表示与下面的某个固定数据库角色对应的条目：db_owner、db_accessadmin、db_datareader、db_datawriter、db_ddladmin、db_securityadmin、db_backupoperator、db_denydatareader、db_denydatawriter。|  
-|**authentication_type**|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示身份验证类型。 以下是可能的值和及其说明。<br /><br /> 0 :无身份验证<br />1 :实例身份验证<br />2 :数据库身份验证<br />3 :Windows 身份验证|  
+|**authentication_type**|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示身份验证类型。 以下是可能的值和及其说明。<br /><br /> 0:无身份验证<br />1:实例身份验证<br />2:数据库身份验证<br />3:Windows 身份验证|  
 |**authentication_type_desc**|**nvarchar(60)**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 身份验证类型说明。 以下是可能的值和及其说明。<br /><br /> NONE:无身份验证<br />实例：实例身份验证<br />数据库：数据库身份验证<br />WINDOWS:Windows 身份验证|  
 |**default_language_name**|**sysname**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示此主体的默认语言。|  
 |**default_language_lcid**|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示此主体的默认 LCID。|  

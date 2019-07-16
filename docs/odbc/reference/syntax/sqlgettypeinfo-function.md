@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo Function | Microsoft Docs
+title: SQLGetTypeInfo 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aef1e90053eba71db84e1fe89aa90684829a4941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c597cd4ca51ca578ca90c4e95db584dec4bcd6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030591"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 函数
 **符合性**  
@@ -59,7 +58,7 @@ SQLRETURN SQLGetTypeInfo(
 ## <a name="diagnostics"></a>诊断  
  当**SQLGetTypeInfo**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLGetTypeInfo** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01S02|选项值已更改|指定的语句属性实现运行情况，由于无效，因此已暂时替换一个相近的值。 (调用**SQLGetStmtAttr**来确定暂时被替换的值。)替换值是否为有效*StatementHandle*直到关闭游标。 可以更改的语句属性有：Sql_attr_concurrency 设置 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 SQL_ATTR_QUERY_TIMEOUT 和 SQL_ATTR_SIMULATE_CURSOR。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032746"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|表限定符名称。 该列可以为 NULL。|  
 |**TABLE_OWNER**|**sysname**|表所有者名称。 该列始终返回值。|  
@@ -80,11 +79,11 @@ sp_statistics [ @table_name = ] 'table_name'
 |**COLUMN_NAME**|**sysname**|每个列的列名**TABLE_NAME**返回。 该列始终返回值。|  
 |**COLLATION**|**char(1)**|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
 |**基数**|**int**|表中的行或索引中的唯一值数。|  
-|**PAGES**|**int**|若要存储的索引或表的页的数目。|  
+|**页**|**int**|若要存储的索引或表的页的数目。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  以升序按列显示在结果集中的索引**NON_UNIQUE**，**类型**， **INDEX_NAME**，以及**SEQ_IN_INDEX**。  

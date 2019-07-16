@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_operational_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004893"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>参数    
- *database_id* | NULL | 0 | DEFAULT    
+ *database_id* |NULL |0 |默认值    
  数据库 ID。 *database_id*是**smallint**。 有效的输入包括数据库的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果指定为空， *database_id*，则还必须指定为 NULL *object_id*， *index_id*，以及*partition_number*。    
@@ -72,7 +71,7 @@ sys.dm_db_index_operational_stats (
     
  指定 NULL 可返回基表或视图的所有索引的缓存信息。 如果指定为空， *index_id*，则还必须指定为 NULL *partition_number*。    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* |NULL |0 |默认值    
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆中，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回索引或堆的所有分区的缓存信息。    
@@ -81,7 +80,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>返回的表    
     
-|列名|数据类型|Description|    
+|列名|数据类型|描述|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|数据库 ID。|    
 |**object_id**|**int**|表或视图的 ID。|    
@@ -102,11 +101,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|从索引或堆开始的范围和表扫描的累积计数。|    
 |**singleton_lookup_count**|**bigint**|对索引或堆的单行检索的累积计数。|    
 |**forwarded_fetch_count**|**bigint**|通过前推记录提取的行计数。<br /><br /> 0 = 索引|    
-|**lob_fetch_in_pages**|**bigint**|从 LOB_DATA 分配单元检索到的大型对象 (LOB) 页的累积计数。 这些页包含的类型列中存储的数据**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar (max)**， **varbinary （max)**，和**xml**。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|    
+|**lob_fetch_in_pages**|**bigint**|从 LOB_DATA 分配单元检索到的大型对象 (LOB) 页的累积计数。 这些页包含的类型列中存储的数据**文本**， **ntext**，**图像**， **varchar （max)** ， **nvarchar (max)** ， **varbinary （max)** ，和**xml**。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|    
 |**lob_fetch_in_bytes**|**bigint**|检索到的 LOB 数据字节数的累积计数。|    
 |**lob_orphan_create_count**|**bigint**|为大容量操作创建的孤立 LOB 值的累积计数。<br /><br /> 0 = 非聚集索引|    
 |**lob_orphan_insert_count**|**bigint**|大容量操作期间插入的孤立 LOB 值的累积计数。<br /><br /> 0 = 非聚集索引|    
-|**row_overflow_fetch_in_pages**|**bigint**|从 ROW_OVERFLOW_DATA 分配单元检索到的行溢出数据页数的累积计数。<br /><br /> 这些页包含类型的列中存储的数据**varchar （n)**， **nvarchar(n)**， **varbinary （n)**，以及**sql_variant**已程序推送到行外。|    
+|**row_overflow_fetch_in_pages**|**bigint**|从 ROW_OVERFLOW_DATA 分配单元检索到的行溢出数据页数的累积计数。<br /><br /> 这些页包含类型的列中存储的数据**varchar （n)** ， **nvarchar(n)** ， **varbinary （n)** ，以及**sql_variant**已程序推送到行外。|    
 |**row_overflow_fetch_in_bytes**|**bigint**|检索到的行溢出数据字节数的累积计数。|    
 |**column_value_push_off_row_count**|**bigint**|已推出行外以使插入或更新的行可容纳在页中的 LOB 数据和行溢出数据的列值累积计数。|    
 |**column_value_pull_in_row_count**|**bigint**|已请求到行内的 LOB 数据和行溢出数据的列值的累积计数。 当更新操作释放记录中的空间，并提供将一个或多个行外值从 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元请求到 IN_ROW_DATA 分配单元中的机会时，就会出现此计数。|    
@@ -156,7 +155,7 @@ sys.dm_db_index_operational_stats (
     
      这些列指示索引或堆上是否存在闩锁争用以及争用的意义。    
     
--   **row_lock_count** and **page_lock_count**    
+-   **row_lock_count**和**page_lock_count**    
     
      这些列指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试获取行锁和页锁的次数。    
     
@@ -204,7 +203,7 @@ sys.dm_db_index_operational_stats (
  下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的所有索引和分区的信息。 执行此查询至少需要对 `Person.Address` 表具有 CONTROL 权限。    
     
 > [!IMPORTANT]    
->  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回了有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 sys.dm_db_index_operational_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。    
+>  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回了有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 sys.dm_db_index_operational_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值  。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。    
     
 ```    
 DECLARE @db_id int;    
@@ -243,7 +242,7 @@ GO
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     

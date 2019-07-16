@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bde0c339b369aaccce107ded51f3b124be3b37f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029616"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "65489776"
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 此表中写入日志记录条目**仅**包时使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志提供程序。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**int**|日志记录项的唯一标识符。|  
 |事件|**sysname**|生成日志记录项的事件的名称。|  

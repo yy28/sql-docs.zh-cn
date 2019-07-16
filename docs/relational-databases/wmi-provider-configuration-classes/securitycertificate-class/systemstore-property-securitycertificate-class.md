@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 961973131c1ee1089037630cd2151f08c4fb39ab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: af70858fdc4a242cc6b914f062fb8abd0200095a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071624"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore 属性（SecurityCertificate 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51659608"
 object.SystemStore [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

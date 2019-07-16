@@ -1,5 +1,5 @@
 ---
-title: 解码的字符：（范围）(MDX) |Microsoft Docs
+title: :（范围）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 882082d503bf88f21566ac79ea4393a24ee551e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020617"
 ---
-# <a name="-range-mdx"></a>解码的字符：（范围）(MDX)
+# <a name="-range-mdx"></a>:（范围）(MDX)
 
 
   执行一个集运算以返回一个自然排序集，它将两个指定成员作为端点，并将这两个指定成员之间的所有成员作为该集的成员。  

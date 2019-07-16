@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045778"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|ReplTest1|Description|  
+|属性|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||指定快照的备用文件夹的位置。 如果设置为 NULL，则将从发布服务器指定的默认位置提取快照文件。|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
@@ -74,18 +73,18 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|连接分发服务器时，使用 Windows 身份验证。|  
 ||**0**|连接分发服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**dts_package_name**||指定 SQL Server 2000 Data Transformation Services (DTS) 包的名称。 仅当发布为事务发布或快照发布时才能指定该值。|  
-|**dts_package_password**||指定包上的密码。 *dts_package_password*是**sysname**默认值为 NULL，这指定密码属性保持不变。<br /><br /> 注意：DTS 包必须具有密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
+|**dts_package_password**||指定包上的密码。 *dts_package_password*是**sysname**默认值为 NULL，这指定密码属性保持不变。<br /><br /> 注意:DTS 包必须具有密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
 |**dts_package_location**||存储 DTS 包的位置。 仅当发布为事务发布或快照发布时才能指定该值。|  
 |**dynamic_snapshot_location**||指定保存快照文件的文件夹的路径。 仅当发布为合并发布时才能指定该值。|  
 |**ftp_address**||仅为保持向后兼容。|  
 |**ftp_login**||仅为保持向后兼容。|  
 |**ftp_password**||仅为保持向后兼容。|  
 |**ftp_port**||仅为保持向后兼容。|  
-|**hostname**||连接到发布服务器时使用的主机名称。|  
+|**主机名**||连接到发布服务器时使用的主机名称。|  
 |**internet_login**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理使用的密码。|  
 |**internet_security_mode**|**1**|使用 Windows 集成身份验证进行 Web 同步。 建议您将基本身份验证与 Web 同步结合使用。 有关详细信息，请参阅 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。|  
-||**0**|使用基本身份验证进行 Web 同步。<br /><br /> 注意：Web 同步要求 SSL 连接到 Web 服务器。|  
+||**0**|使用基本身份验证进行 Web 同步。<br /><br /> 注意:Web 同步要求 SSL 连接到 Web 服务器。|  
 |**internet_timeout**||Web 同步请求过期之前的时间长度（秒）。|  
 |**internet_url**||表示 Web 同步的复制侦听器的位置的 URL。|  
 |**merge_job_login**||用来运行代理的 Windows 帐户的登录名。|  
@@ -117,7 +116,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

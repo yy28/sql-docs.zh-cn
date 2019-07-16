@@ -7,13 +7,12 @@ ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dafb4c9edfe830a354da61b72d330d800349781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962356"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "62642088"
 
 ## <a name="create-a-login"></a>创建登录名
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“对象资源管理器”中，展开“安全性” ，右键单击“登录名” ，然后选择“新建登录名” 。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“对象资源管理器”中，展开“安全性”  ，右键单击“登录名”  ，然后选择“新建登录名”  。
 
 2. 在中**登录名-新建**对话框中，选择**搜索**。 （无任何内容在框中键入尚未。）
     

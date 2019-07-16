@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bdab8cd50a16913f37115f0d38c00c5c699bc0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022331"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@username =** ] **N'***user***'**  
+ [ **@username =** ] **N'***user***'**  
  当前包含的数据库中的用户名称，该用户将映射到经过身份验证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 值是**sysname**，默认值为**NULL**。  
   
- [**@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
+ [ **@rename =** ] **N'***copy_login_name***'**  | **N'***keep_name***'**  
  如果基于登录名的数据库用户具有不同的用户名与登录名，使用*keep_name*在迁移期间保留的数据库用户名称。 使用*copy_login_name*若要创建新的包含的数据库用户的登录名，而不是用户的名称。 如果基于登录名的数据库用户具有与登录名相同的用户名，这两个选项将创建包含数据库用户而不更改名称。  
   
- [**@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
+ [ **@disablelogin =** ] **N'***disable_login***'**  | **N'***do_not_disable_login***'**  
  *disable_login*禁用登录名的 master 数据库中。 若要连接该登录名处于禁用状态时，该连接必须提供包含的数据库名称作为**初始目录**作为连接字符串的一部分。  
   
 ## <a name="return-code-values"></a>返回代码值  

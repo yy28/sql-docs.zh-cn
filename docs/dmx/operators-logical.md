@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008155"
 ---
 # <a name="operators---logical"></a>运算符 - 逻辑
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +22,11 @@ ms.locfileid: "62502566"
   
  下表标识了 DMX 支持的逻辑运算符。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
-|[AND &#40;DMX&#41;](../dmx/and-dmx.md)|对两个数值表达式执行逻辑与运算。|  
-|[NOT &#40;DMX&#41;](../dmx/not-dmx.md)|对数值表达式执行逻辑非运算。|  
-|[OR &#40;DMX&#41;](../dmx/or-dmx.md)|对数值表达式执行逻辑或运算。|  
+|[和&#40;DMX&#41;](../dmx/and-dmx.md)|对两个数值表达式执行逻辑与运算。|  
+|[不&#40;DMX&#41;](../dmx/not-dmx.md)|对数值表达式执行逻辑非运算。|  
+|[或者&#40;DMX&#41;](../dmx/or-dmx.md)|对数值表达式执行逻辑或运算。|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -38,7 +37,7 @@ ms.locfileid: "62502566"
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [表达式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

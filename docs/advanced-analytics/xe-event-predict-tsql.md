@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961624"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>用于监视 PREDICT 语句的扩展事件
 

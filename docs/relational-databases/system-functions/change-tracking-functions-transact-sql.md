@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcd12d2495c0be6ec3a643b5c5f0f34d2e50f156
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8dc2dceec177922369fe2bbef74bafeeef2ca27c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042957"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>更改跟踪函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   更改跟踪函数用于记录应用于被跟踪表的插入、更新和删除操作，同时采用易于使用的关系格式提供有关更改的详细信息。 下列函数返回有关更改的信息。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[CHANGETABLE (CHANGES)](../../relational-databases/system-functions/changetable-transact-sql.md)|返回自指定版本起对表所做的所有更改的跟踪信息。|  
 |[CHANGETABLE (VERSION) 函数](../../relational-databases/system-functions/changetable-transact-sql.md)|返回指定行的最新更改跟踪信息。|  

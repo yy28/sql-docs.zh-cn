@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30fbdd17e7ec5eb970948e1c7133020081222614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019186"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>公历的约束
 日期和日期时间数据类型和 interval 数据类型的尾部字段必须符合公历的约束。 这些约束如下所示：  

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f9fe3c7f5753788df339484bbf29e2d6e953dba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030428"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>由 C 到 SQL 的 datetime 数类型转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52417218"
 
   本主题列出了要考虑当你从 C 类型转换到的问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间类型。  
   
- 下表中介绍的转换适用于在客户端上所进行的转换。 在客户端指定了秒小数部分精度不同于在服务器上定义的参数的情况下，客户端转换可能成功，但服务器将返回错误时**SQLExecute**或**SQLExecuteDirect**调用。 特别是，ODBC 任何截断视为秒的小数部分的错误，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行为是要舍入; 例如，舍入发生时从转**datetime2(6)** 到**datetime2(2)**. Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
+ 下表中介绍的转换适用于在客户端上所进行的转换。 在客户端指定了秒小数部分精度不同于在服务器上定义的参数的情况下，客户端转换可能成功，但服务器将返回错误时**SQLExecute**或**SQLExecuteDirect**调用。 特别是，ODBC 任何截断视为秒的小数部分的错误，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行为是要舍入; 例如，舍入发生时从转**datetime2(6)** 到**datetime2(2)** . Datetime 列值舍入为 1/300 秒，服务器将 smalldatetime 列的秒数设置为零。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -49,7 +48,7 @@ ms.locfileid: "52417218"
   
 ## <a name="key-to-symbols"></a>符号含义  
   
--   **-**:不支持任何转换。 生成具有 SQLSTATE 07006 和消息“受限制的数据类型属性冲突”的诊断记录。  
+-   **-** ：不支持任何转换。 生成具有 SQLSTATE 07006 和消息“受限制的数据类型属性冲突”的诊断记录。  
   
 -   **1**：如果提供的数据无效，则生成具有 SQLSTATE 22007 和消息“日期时间格式无效”的诊断记录。  
   
@@ -57,11 +56,11 @@ ms.locfileid: "52417218"
   
 -   **3**：秒的小数部分必须为零，否则将生成具有 SQLSTATE 22008 和消息“小数部分截断”的诊断记录。  
   
--   **4**:忽略日期部分。  
+-   **4**：忽略日期部分。  
   
--   **5**:根据客户端的时区设置设置时区。  
+-   **5**：根据客户端的时区设置设置时区。  
   
--   **6**:时间设置为零。  
+-   **6**：时间设置为零。  
   
 -   **7**:日期设置为当前日期。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52417218"
   
     ||||  
     |-|-|-|  
-    |类型|暗指的小数位数<br /><br /> 0|暗指的小数位数<br /><br /> 1..9|  
+    |type|暗指的小数位数<br /><br /> 0|暗指的小数位数<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      但是，对于 SQL_C_TYPE_TIMESTAMP，如果秒的小数部分可以在不丢失数据的情况下由三位数表示，并且列大小为 23 或更大，则生成确切的三位数的秒小数部分。 此行为确保使用早期 ODBC 驱动程序开发的应用程序的向后兼容性。  

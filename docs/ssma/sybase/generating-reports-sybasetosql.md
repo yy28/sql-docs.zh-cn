@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029134"
 ---
 # <a name="generating-reports-sybasetosql"></a>生成报告 (SybaseToSQL)
 在对象树中级别的 SSMA 控制台中生成使用命令来执行某些活动的报告。  
@@ -37,7 +36,7 @@ ms.locfileid: "63126290"
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |5|同步目标|TargetSynchronizationReport&lt;n&gt;.XML|  
     |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
@@ -105,7 +104,7 @@ ms.locfileid: "63126290"
   
 />  
 ```  
-**object-name:** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
@@ -113,7 +112,7 @@ ms.locfileid: "63126290"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
 该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
@@ -135,7 +134,7 @@ ms.locfileid: "63126290"
   
 />  
 ```  
-**object-name:** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
@@ -143,7 +142,7 @@ ms.locfileid: "63126290"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台 (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959465"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入门：连接和查询 PostgreSQL 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门介绍如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]若要连接到 Postgres，以及如何将 SQL 语句来创建数据库*tutorialdb*和对其进行查询。
@@ -44,7 +43,7 @@ ms.locfileid: "66778331"
 
    ![新连接屏幕](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | 设置       | 示例值 | Description |
+   | 设置       | 示例值 | 描述 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | localhost | 完全限定的服务器名称 |
    | **用户名** | postgres | 你想要登录的用户名。 |

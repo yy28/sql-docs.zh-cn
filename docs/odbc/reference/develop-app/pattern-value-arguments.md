@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023356"
 ---
 # <a name="pattern-value-arguments"></a>模式值自变量
 在目录中的某些参数函数，如*TableName*中的参数**SQLTables**，接受搜索模式。 这些参数接受搜索模式如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;它们是如果此属性设置为 SQL_TRUE 不接受的搜索模式的标识符参数。  
@@ -35,7 +34,7 @@ ms.locfileid: "62861721"
   
  使用中的 SQL_SEARCH_PATTERN_ESCAPE 选项检索的转义字符**SQLGetInfo**。 它必须位于任何下划线、 百分比符号或转义符之前接受搜索模式，以包含该字符作为文字的参数中。 下表显示示例。  
   
-|搜索模式|Description|  
+|搜索模式|描述|  
 |--------------------|-----------------|  
 |%A%|包含字母 A 的所有标识符|  
 |ABC_|ABC 开头的所有四个字符标识符|  

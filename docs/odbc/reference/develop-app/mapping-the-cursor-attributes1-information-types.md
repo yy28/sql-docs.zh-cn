@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d95d3e67fdcd7159074e2f20ffa558f4c80bbcb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036353"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>映射游标 Attributes1 信息类型
 当 ODBC 3。*x*应用程序调用**SQLGetInfo** ODBC 2 中 *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 信息类型的驱动程序 (为动态的、 只进、 由键集驱动程序，或静态游标），返回由驱动程序管理器中的位的设置取决于 ODBC 2。*x*驱动程序将返回相应的 ODBC 2。*x*信息类型。 下表中所示设置了位。  

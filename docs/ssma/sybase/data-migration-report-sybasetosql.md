@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029398"
 ---
 # <a name="data-migration-report-sybasetosql"></a>数据迁移报表 (SybaseToSQL)
 **数据迁移报表**迁移到的数据后，会出现对话框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +26,7 @@ ms.locfileid: "63298529"
 **From**  
 源表。  
   
-**若要**  
+**To**  
 目标表中。  
   
 **总行数**  

@@ -17,21 +17,20 @@ helpviewer_keywords:
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 701cac875a9870de840f7955c3c327aee4133a3f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4d64e4aa90aadb45e7f3c2aa09d23e06e5bda187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026641"
 ---
 # <a name="mspeertopologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   用于在对等复制中存储每个节点对拓扑状态请求的响应。 该表存储在发布数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|标识中的拓扑状态请求项[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)表。|  
 |peer|**sysname**|生成响应的服务器实例的名称。|  

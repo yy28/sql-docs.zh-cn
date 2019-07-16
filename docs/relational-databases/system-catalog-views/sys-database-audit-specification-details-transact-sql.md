@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940288"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含所有数据库的服务器实例上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 有关列表的所有 audit_action_id 和它们的名称查询[sys.dm_audit_actions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|审核规范的 ID。|  
 |**audit_action_id**|**int**|审核操作的 ID。|  
-|**audit_action_name**|**Sysname**|审核操作或审核操作组的名称|  
+|**audit_action_name**|**sysname**|审核操作或审核操作组的名称|  
 |**类**|**int**|标识要审核的对象的类型。|  
 |**class_ desc**|**Nvarchar(60)**|正审核的对象的类的说明：<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|正审核的对象的主 ID，如表审核操作的表 ID。|  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a9ecac73840636e1ddf089f53ead61504767a61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029746"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含导致激发复制警报的情况的相关信息。 此表存储中**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警报的 ID。|  
 |**status**|**int**|用户定义的值：<br /><br /> **0** = 未服务。<br /><br /> **1** = 提供服务。|  
@@ -41,7 +40,7 @@ ms.locfileid: "52808689"
 |**time**|**datetime**|插入记录的时间。|  
 |**publisher**|**sysname**|与激发此警报的代理相关联的发布服务器的名称。|  
 |**publisher_db**|**sysname**|与激发此警报的代理相关联的发布服务器数据库。|  
-|**发布**|**sysname**|与激发此警报的代理相关联的发布。|  
+|**publication**|**sysname**|与激发此警报的代理相关联的发布。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = 快照。<br /><br /> **1** = 事务。<br /><br /> **2** = 合并。|  
 |**订阅服务器**|**sysname**|与激发此警报的代理相关联的订阅服务器的名称。|  
 |**subscriber_db**|**sysname**|与激发此警报的代理相关联的订阅服务器数据库的名称。|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e091dded3b9c763be6d5d891ac7026146feb0a0d
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: ec59e76cb90612a2a1dd8fd54f2ee71967a09606
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036017"
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +48,10 @@ desttype
 ```  
   
 ## <a name="arguments"></a>参数  
- srctype  
+ srctype   
  指示要转换的数据的数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- desttype  
+ desttype   
  指示源数据要转换成的目标数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
 ## <a name="returns"></a>返回  

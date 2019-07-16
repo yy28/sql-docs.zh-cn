@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59e639c1dd319d7db074d692d3776105abe89f0f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042728"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。  
   
-`[ @subscriber_type = ] 'subscriber_type'` 是订阅服务器的类型。 *subscriber_type*是**nvarchar(15)**，并且可以**全局**，**本地**或**匿名**。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，本地订阅称为客户端订阅和全局订阅称为服务器订阅。  
+`[ @subscriber_type = ] 'subscriber_type'` 是订阅服务器的类型。 *subscriber_type*是**nvarchar(15)** ，并且可以**全局**，**本地**或**匿名**。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，本地订阅称为客户端订阅和全局订阅称为服务器订阅。  
   
 `[ @subscription_priority = ] subscription_priority` 为订阅优先级。 *subscription_priority*是**实际**，默认值为 NULL。 对于本地和匿名订阅，优先级很**0.0**。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。 全局订阅服务器的订阅优先级必须低于 100，因为 100 是发布服务器的优先级。  
   
@@ -59,7 +58,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  我们不建议将值指定为**none**。  
   
-`[ @description = ] 'description'` 为此请求订阅的简短说明。 *描述*是**nvarchar(255)**，默认值为 NULL。 此值显示在复制监视器**友好名称**列，该列可用于对受监视发布的订阅进行排序。  
+`[ @description = ] 'description'` 为此请求订阅的简短说明。 *描述*是**nvarchar(255)** ，默认值为 NULL。 此值显示在复制监视器**友好名称**列，该列可用于对受监视发布的订阅进行排序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -81,9 +80,9 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c74a80bb38c406acb50e5e275f658a5f1d2b30d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93d23216db950ed861449061f3e35e5e88a637fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058789"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>在 ExtendedAnsiSQL_Set 的情况下，Jet 4.0 使用 SQL-92 保留字列表
 当打开 ExtendedAnsiSQL 标志时，Jet 4.0 使用 SQL-92 保留的字列表。 尝试使用 SQL-92 保留字，因为不带引号的对象名称会导致语法错误。 ExtendedAnsiSQL 标志处于关闭状态，当新的保留的字可用作对象名称作为之前。

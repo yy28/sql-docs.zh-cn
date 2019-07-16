@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d179cbef19e652472714b8010edcaeb12ebcc6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032536"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSqreader_history**表包含与本地分发服务器关联的队列读取器代理历史记录行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|队列读取器代理的 ID。|  
 |**publication_id**|**int**|发布 ID。|  

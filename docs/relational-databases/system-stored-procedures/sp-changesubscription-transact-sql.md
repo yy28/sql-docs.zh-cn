@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016529"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +56,11 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` 是订阅数据库的名称。 *destination_db*是**sysname**，无默认值。  
   
-`[ @property = ] 'property'` 是要更改给定订阅的属性。 *属性*是**nvarchar(30)**，可以是表中的值之一。  
+`[ @property = ] 'property'` 是要更改给定订阅的属性。 *属性*是**nvarchar(30)** ，可以是表中的值之一。  
   
-`[ @value = ] 'value'` 为指定的新值*属性*。 *值*是**nvarchar(4000)**，可以是表中的值之一。  
+`[ @value = ] 'value'` 为指定的新值*属性*。 *值*是**nvarchar(4000)** ，可以是表中的值之一。  
   
-|属性|ReplTest1|Description|  
+|属性|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理的 Windows 帐户的密码。|  
@@ -98,7 +97,7 @@ sp_changesubscription [ @publication = ] 'publication'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changesubscription**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

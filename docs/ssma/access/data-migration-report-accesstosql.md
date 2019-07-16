@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 199a9fb8587cb1c024ac5dd5c09c1264a1226191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006583"
 ---
 # <a name="data-migration-report-accesstosql"></a>数据迁移报表 (AccessToSQL)
 **数据迁移报表**迁移到的数据后，会出现对话框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +26,7 @@ ms.locfileid: "63138888"
 **From**  
 源表。  
   
-**若要**  
+**To**  
 目标表中。  
   
 **总行数**  

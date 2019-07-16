@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5a003abd67746da4ab62996311ed98594e2f403
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 1eea06d8be4d826315235836d2a1d47846381caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005341"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大容量加载的指导原则和限制 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "56016488"
   
      XML 大容量加载将忽略之前和之后的所有信息\<根 > XML 文档中的元素。 例如，XML 大容量加载将忽视所有 XML 声明、内部 DTD 定义、外部 DTD 引用和注释等。  
   
--   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，在架构中标识的表的顺序是用于加载到数据库中的顺序。例如，以下 XDR 架构将产生错误，使用在 XML 大容量加载中因为时**\<顺序 >** 之前描述元素**\<客户 >** 元素。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
+-   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，在架构中标识的表的顺序是用于加载到数据库中的顺序。例如，以下 XDR 架构将产生错误，使用在 XML 大容量加载中因为时 **\<顺序 >** 之前描述元素 **\<客户 >** 元素。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -80,7 +79,7 @@ ms.locfileid: "56016488"
   
 -   如果架构未指定溢出列使用**sql:overflow-字段**批注，XML 大容量加载将忽略在 XML 文档中存在但未在映射架构中描述的任何数据。  
   
-     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假定您具有描述的映射架构**\<客户 >** 元素。 XML 数据文件具有 **\<AllCustomers >** 根标记 （它不在架构中描述） 包含所有**\<客户 >** 元素：  
+     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假定您具有描述的映射架构 **\<客户 >** 元素。 XML 数据文件具有 **\<AllCustomers >** 根标记 （它不在架构中描述） 包含所有 **\<客户 >** 元素：  
   
     ```  
     <AllCustomers>  
@@ -90,9 +89,9 @@ ms.locfileid: "56016488"
     </AllCustomers>  
     ```  
   
-     在这种情况下，XML 大容量加载将忽略 **\<AllCustomers >** 元素，并开始在映射**\<客户 >** 元素。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
+     在这种情况下，XML 大容量加载将忽略 **\<AllCustomers >** 元素，并开始在映射 **\<客户 >** 元素。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
   
-     包含的另一个 XML 源数据文件，请考虑**\<顺序 >** 元素。 以下元素在映射架构中未描述：  
+     包含的另一个 XML 源数据文件，请考虑 **\<顺序 >** 元素。 以下元素在映射架构中未描述：  
   
     ```  
     <AllCustomers>  
@@ -108,11 +107,11 @@ ms.locfileid: "56016488"
     </AllCustomers>  
     ```  
   
-     XML 大容量加载将忽略这些**\<顺序 >** 元素。 但是，如果您使用**sql:overflow-字段**批注架构中要为某列标识为溢出列，则 XML 大容量加载将所有未用完的数据存储在此列。  
+     XML 大容量加载将忽略这些 **\<顺序 >** 元素。 但是，如果您使用**sql:overflow-字段**批注架构中要为某列标识为溢出列，则 XML 大容量加载将所有未用完的数据存储在此列。  
   
 -   CDATA 部分和实体引用在存储到数据库中之前将转换为等效的字符串。  
   
-     在此示例中，CDATA 部分包装的值**\<城市 >** 元素。 XML 大容量加载中提取的字符串值 ("NY") 之前它将插入**\<城市 >** 到数据库中的元素。  
+     在此示例中，CDATA 部分包装的值 **\<城市 >** 元素。 XML 大容量加载中提取的字符串值 ("NY") 之前它将插入 **\<城市 >** 到数据库中的元素。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -145,7 +144,7 @@ ms.locfileid: "56016488"
     </Schema>  
     ```  
   
-     在此 XML 数据中， **HireDate**属性是从第二个丢失**\<客户 >** 元素。 当 XML 大容量加载插入第二个**\<客户 >** 到数据库中的元素，它使用在架构中指定的默认值。  
+     在此 XML 数据中， **HireDate**属性是从第二个丢失 **\<客户 >** 元素。 当 XML 大容量加载插入第二个 **\<客户 >** 到数据库中的元素，它使用在架构中指定的默认值。  
   
     ```  
     <ROOT>  

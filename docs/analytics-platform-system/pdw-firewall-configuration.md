@@ -2,19 +2,18 @@
 title: PDW 防火墙配置的分析平台系统 |Microsoft 文档
 description: SQL Server PDW 配置管理器中的防火墙页，可启用或禁用防火墙规则，允许或阻止访问分析平台系统设备上的特定端口。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f650aac34e3a5299cabae500a8ee73250c3974d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960410"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>分析平台系统中的并行数据仓库防火墙配置
 
@@ -44,7 +43,7 @@ ms.locfileid: "66822430"
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL 加密连接 （进行内部通信，以访问管理控制台）|443|所有节点|  
 |SQL Server PDW 负载控制流的 Windows 凭据|8002|CTL|  
-|_Kerberos|88|AD01 和 AD02，|  
+|Kerberos （_k)|88|AD01 和 AD02，|  
 |_ldap|389|AD01 和 AD02|  
 | &nbsp; | &nbsp; | &nbsp; |
   

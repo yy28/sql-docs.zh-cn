@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbc4f4f1fb55603a6918357e4c6aa16e4a819f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018032"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>系统兼容性视图 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "47805467"
   
  当引用用户数据库中，系统表中曾宣布为 SQL Server 2000 中不推荐使用 (如**syslanguages**或**syscacheobjects**)，现在绑定到的后兼容性视图中**sys**架构。 因为多个版本均已不推荐使用 SQL Server 2000 系统表，此更改不被视为重大更改。  
   
- 示例： 如果用户创建名为的用户表**syslanguages**用户的数据库，在 SQL Server 2008 中，该语句中`SELECT * from dbo.syslanguages;`该数据库中将返回值表中的用户。 从 SQL Server 2012 开始，这种做法将返回的数据从系统视图**sys.syslanguages**。  
+ 例如：如果用户创建名为的用户表**syslanguages**用户的数据库，在 SQL Server 2008 中，该语句中`SELECT * from dbo.syslanguages;`该数据库中将返回值表中的用户。 从 SQL Server 2012 开始，这种做法将返回的数据从系统视图**sys.syslanguages**。  
   
 ## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

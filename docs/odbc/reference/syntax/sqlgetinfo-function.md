@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo Function | Microsoft Docs
+title: SQLGetInfo 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af4b2b5546e8b084afbdd769fb93c416964b0c13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0e62e7aaba276643a2874a22e74a08214cfe51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030660"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 函数
 **符合性**  
@@ -76,7 +75,7 @@ SQLRETURN SQLGetInfo(
 ## <a name="diagnostics"></a>诊断  
  当**SQLGetInfo**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_DBC 和一个*处理*的*ConnectionHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLGetInfo** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|缓冲区\* *InfoValuePtr*是否不足够大以返回所有请求的信息。 因此，信息已被截断。 在返回的在其未截断的窗体中所需的信息长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -350,16 +349,16 @@ SQLRETURN SQLGetInfo(
 ## <a name="information-type-descriptions"></a>信息的类型说明  
  下表按字母顺序列出了每种信息类型、 版本中引入它，ODBC 和及其说明。  
   
- SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
+ SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
  一个字符的字符串："Y"，如果用户可以执行所有过程返回的**SQLProcedures**;"N"如果可能有过程返回，用户不能执行。  
   
- SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
+ SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
  一个字符的字符串："Y"，如果用户保证**选择**返回的所有表的特权**SQLTables**;"N"如果可能存在的表返回该用户无法访问。  
   
- SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  SQLUSMALLINT 值，该值指定该驱动程序可以支持的活动环境的最大数目。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
  枚举对聚合函数的支持 SQLUINTEGER 位掩码：  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
@@ -387,7 +386,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_AD_ADD_CONSTRAINT_DEFERRABLE （完全级别） SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE （完全级别） SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED （完全级别） SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE （完全级别）  
   
- SQL_ALTER_TABLE(ODBC 2.0)  
+ SQL_ALTER_TABLE (ODBC 2.0)  
  枚举中的子句 SQLUINTEGER 位掩码**ALTER TABLE**数据源支持的语句。  
   
  此时必须支持此功能的 SQL-92 或 FIPS 符合性级别显示在每位掩码旁边的括号中。  
@@ -559,7 +558,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CVT_BIGINT (ODBC 1.0) SQL_CVT_BINARY (ODBC 1.0) SQL_CVT_BIT (ODBC 1.0) SQL_CVT_GUID (ODBC 3.5) SQL_CVT_CHAR (ODBC 1.0) SQL_CVT_DATE (ODBC 1.0) SQL_CVT_DECIMAL (ODBC 1.0) SQL_CVT_DOUBLE (ODBC 1.0) SQL_CVT_FLOAT (ODBC 1.0) SQL_CVT_INTEGER (ODBC 1.0) SQL_CVT_INTERVAL_YEAR_MONTH (ODBC 3.0) (ODBC 3.0) SQL_CVT_INTERVAL_DAY_TIME SQL_CVT_LONGVARBINARY (ODBC 1.0) SQL_CVT_LONGVARCHAR (ODBC 1.0) SQL_CVT_NUMERIC (ODBC 1.0) SQL_CVT_REAL ODBC 1.0) SQL_CVT_TIME (ODBC 1.0) SQL_CVT_ SQL_CVT_SMALLINT (ODBC 1.0)时间戳 (ODBC 1.0) SQL_CVT_TINYINT (ODBC 1.0) SQL_CVT_VARBINARY (ODBC 1.0) SQL_CVT_VARCHAR (ODBC 1.0)  
   
- SQL_CONVERT_FUNCTIONS(ODBC 1.0)  
+ SQL_CONVERT_FUNCTIONS (ODBC 1.0)  
  枚举支持的驱动程序和关联的数据源的标量转换函数 SQLUINTEGER 位掩码。  
   
  以下位掩码，用于确定支持的转换函数：  
@@ -796,12 +795,12 @@ SQLRETURN SQLGetInfo(
   
  驱动程序不需要实现 SQL_DRIVER_AWARE_POOLING_SUPPORTED 和驱动程序管理器不会对驱动程序的返回值。  
   
- SQL_DRIVER_HDBCSQL_DRIVER_HENV(ODBC 1.0)  
+ SQL_DRIVER_HDBCSQL_DRIVER_HENV (ODBC 1.0)  
  Sqlulen 生成值、 驱动程序的环境句柄或连接句柄，由自变量*信息类型*。  
   
  由驱动程序管理器就实施这些信息类型。  
   
- SQL_DRIVER_HDESC(ODBC 3.0)  
+ SQL_DRIVER_HDESC (ODBC 3.0)  
  Sqlulen 生成值，由驱动程序管理器的描述符句柄，必须在输入中传递的驱动程序的描述符句柄\* *InfoValuePtr*从应用程序。 在这种情况下， *InfoValuePtr*是这两个输入和输出参数。 输入的描述符句柄传入\* *InfoValuePtr*必须显式或隐式分配上*ConnectionHandle*。  
   
  应用程序应制作一份驱动程序管理器的描述符之前它将调用处理**SQLGetInfo**使用此信息类型，以确保不在输出上覆盖该句柄。  
@@ -1021,7 +1020,7 @@ SQLRETURN SQLGetInfo(
   
  有关这些位掩码的说明，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES2 （和替换"只进游标"的说明中的"动态游标"）。  
   
- SQL_GETDATA_EXTENSIONS(ODBC 2.0)  
+ SQL_GETDATA_EXTENSIONS (ODBC 2.0)  
  枚举扩展 SQLUINTEGER 位掩码**SQLGetData**。  
   
  以下的位屏蔽一起标志，用于确定有关驱动程序支持哪些常见的扩展插件**SQLGetData**:  
@@ -1055,7 +1054,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 条目级别符合的驱动程序将始终返回 SQL_GB_GROUP_BY_EQUALS_SELECT 选项，因为受支持。 所支持的 SQL-92 Full 级别符合的驱动程序将始终会返回 SQL_GB_COLLATE 选项。 如果支持任何选项，则**GROUP BY**子句不支持数据源。  
   
- SQL_IDENTIFIER_CASE(ODBC 1.0)  
+ SQL_IDENTIFIER_CASE (ODBC 1.0)  
  SQLUSMALLINT 值，如下所示：  
   
  SQL_IC_UPPER = SQL 中的标识符不区分大小写，并存储在系统目录中的大写。  
@@ -1068,7 +1067,7 @@ SQLRETURN SQLGetInfo(
   
  由于 SQL-92 中的标识符是永远不会区分大小写，严格符合 SQL-92 （任何级别） 的驱动程序将永远不会返回 SQL_IC_SENSITIVE，选项所支持。  
   
- SQL_IDENTIFIER_QUOTE_CHAR(ODBC 1.0)  
+ SQL_IDENTIFIER_QUOTE_CHAR (ODBC 1.0)  
  用作的起始和结束分隔符的带引号的字符串 （分隔） 中的 SQL 语句的标识符。 （标识符作为参数传递给 ODBC 函数无需用引号引起来。）如果数据源不支持带引号的标识符，则返回空白。  
   
  此字符串还可以用于 SQL_ATTR_METADATA_ID 的连接属性设置为 SQL_TRUE 时用引号括起来目录函数自变量。  
@@ -1088,7 +1087,7 @@ SQLRETURN SQLGetInfo(
   
  若要查看是否支持 CREATE INDEX 语句，应用程序调用**SQLGetInfo** SQL_DLL_INDEX 信息类型。  
   
- SQL_INFO_SCHEMA_VIEWS(ODBC 3.0)  
+ SQL_INFO_SCHEMA_VIEWS (ODBC 3.0)  
  枚举驱动程序支持在 INFORMATION_SCHEMA 视图 SQLUINTEGER 位掩码。 在中，视图和内容的 SQL-92 中定义为 INFORMATION_SCHEMA。  
   
  此时必须支持此功能的 SQL-92 或 FIPS 符合性级别显示在每位掩码旁边的括号中。  
@@ -1177,7 +1176,7 @@ SQLRETURN SQLGetInfo(
   
  有关这些位掩码的说明，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 （和替换"由键集驱动游标"的说明中的"动态游标"）。  
   
- SQL_KEYWORDS(ODBC 2.0)  
+ SQL_KEYWORDS (ODBC 2.0)  
  包含以逗号分隔列表的所有数据源特定关键字的字符串。 此列表不包含特定于 ODBC 的关键字或数据源和 ODBC 使用的关键字。 此列表表示所有保留的关键字;可互操作应用程序不应在对象名称中使用这些单词。  
   
  ODBC 关键字的列表，请参阅[保留关键字](../../../odbc/reference/appendixes/reserved-keywords.md)中[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 **#Define**值 SQL_ODBC_KEYWORDS 包含 ODBC 关键字的以逗号分隔列表。  
@@ -1187,7 +1186,7 @@ SQLRETURN SQLGetInfo(
  SQL_LIKE_ESCAPE_CLAUSE(ODBC 2.0)  
  一个字符的字符串："Y"，如果数据源支持的转义符为百分比字符 （%）和下划线字符 (_) 中**等**谓词和驱动程序支持 ODBC 语法的用于定义**如**谓词转义字符;"N"以其他方式。  
   
- SQL_MAX_ASYNC_CONCURRENT_STATEMENTS(ODBC 3.0)  
+ SQL_MAX_ASYNC_CONCURRENT_STATEMENTS (ODBC 3.0)  
  SQLUINTEGER 值，该值指定活动的并发语句的最大数目的驱动程序可以支持对给定连接的异步模式。 如果没有任何特定的限制或未知的限制是，此值为零。  
   
  SQL_MAX_BINARY_LITERAL_LEN(ODBC 2.0)  
@@ -1231,7 +1230,7 @@ SQLRETURN SQLGetInfo(
   
  FIPS 条目级别符合的驱动程序将返回至少为 100。 FIPS 中间级别符合的驱动程序将返回至少 250。  
   
- SQL_MAX_CONCURRENT_ACTIVITIES(ODBC 1.0)  
+ SQL_MAX_CONCURRENT_ACTIVITIES (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定该驱动程序可以支持的连接的活动语句的最大数目。 如果它已挂起、 包含字词"结果"含义中的行的结果，为活动定义语句**选择**操作或受影响的行**插入**，**更新**，或**删除**操作 （例如，行计数），或如果它处于 NEED_DATA 状态。 此值可以反映驱动程序或数据源所强加的限制。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_ACTIVE_STATEMENTS。  
@@ -1241,7 +1240,7 @@ SQLRETURN SQLGetInfo(
   
  FIPS 条目级别符合的驱动程序将返回至少为 18。 FIPS 中间级别符合的驱动程序将返回至少 128。  
   
- SQL_MAX_DRIVER_CONNECTIONS(ODBC 1.0)  
+ SQL_MAX_DRIVER_CONNECTIONS (ODBC 1.0)  
  一个 SQLUSMALLINT 值，指定的最大的驱动程序可以支持为环境的活动连接数。 此值可以反映驱动程序或数据源所强加的限制。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_ACTIVE_CONNECTIONS。  
@@ -1301,7 +1300,7 @@ SQLRETURN SQLGetInfo(
  SQL_NEED_LONG_DATA_LEN(ODBC 2.0)  
  一个字符的字符串：如果不是，"Y"，如果数据源需要该值之前的长数据值 （数据类型为 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或的长整型数据源特定的数据类型） 的长度是发送到数据源，"N"。 有关详细信息，请参阅[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)并[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
- SQL_NON_NULLABLE_COLUMNS(ODBC 1.0)  
+ SQL_NON_NULLABLE_COLUMNS (ODBC 1.0)  
  SQLUSMALLINT 值，该值指定数据源是否支持 NOT NULL 列中：  
   
  SQL_NNC_NULL = 所有列必须可为 null。  
@@ -1322,7 +1321,7 @@ SQLRETURN SQLGetInfo(
  SQL_NC_START = null 值进行排序的结果集，而不考虑 ASC 或 DESC 关键字开头。  
   
  SQL_NUMERIC_FUNCTIONS(ODBC 1.0)  
- 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意:在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举支持的驱动程序和关联的数据源的标量数字函数 SQLUINTEGER 位掩码。  
   
@@ -1384,13 +1383,13 @@ SQLRETURN SQLGetInfo(
   
  SQL_PAS_NO_SELECT = A 驱动程序不允许使用参数数组执行的结果集生成语句。  
   
- SQL_PROCEDURE_TERM(ODBC 1.0)  
+ SQL_PROCEDURE_TERM (ODBC 1.0)  
  过程; 的数据源供应商的名称字符的字符串例如，"数据库过程"、"存储的过程"，"过程"、"包"存储的查询"。  
   
- SQL_PROCEDURES(ODBC 1.0)  
+ SQL_PROCEDURES (ODBC 1.0)  
  一个字符的字符串："Y"，如果数据源支持过程和驱动程序支持 ODBC 过程调用语法;"N"以其他方式。  
   
- SQL_POS_OPERATIONS(ODBC 2.0)  
+ SQL_POS_OPERATIONS (ODBC 2.0)  
  枚举中的支持操作 SQLINTEGER 位掩码**SQLSetPos**。  
   
  以下的位屏蔽与标志一起使用，以确定支持哪些选项。  
@@ -1440,7 +1439,7 @@ SQLRETURN SQLGetInfo(
  这*信息类型*已重命名为从 ODBC 2.0 ODBC 3.0*信息类型*SQL_OWNER_USAGE。  
   
  SQL_SCROLL_OPTIONS(ODBC 1.0)  
- 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意:在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举支持的可滚动游标滚动选项 SQLUINTEGER 位掩码。  
   
@@ -1601,7 +1600,7 @@ SQLRETURN SQLGetInfo(
  有关这些位掩码的说明，请参阅 SQL_DYNAMIC_CURSOR_ATTRIBUTES2 （和替换"静态游标"的说明中的"动态游标"）。  
   
  SQL_STRING_FUNCTIONS(ODBC 1.0)  
- 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意:在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举支持的驱动程序和关联的数据源的标量字符串函数 SQLUINTEGER 位掩码。  
   
@@ -1655,7 +1654,7 @@ SQLRETURN SQLGetInfo(
  FIPS 过渡的级别符合的驱动程序将始终返回在其中设置所有这些位的位掩码。  
   
  SQL_TIMEDATE_FUNCTIONS(ODBC 1.0)  
- 注意：在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
+ 注意:在 ODBC 1.0; 中引入的信息类型位掩码，每个带有中引入的版本。  
   
  枚举的标量的日期和时间函数的驱动程序和关联的数据源支持 SQLUINTEGER 位掩码。  
   
@@ -1664,7 +1663,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_TD_CURRENT_DATE ODBC 3.0) (ODBC 3.0) SQL_FN_TD_CURRENT_TIME SQL_FN_TD_CURRENT_TIMESTAMP (ODBC 3.0) (ODBC 1.0) SQL_FN_TD_CURDATE SQL_FN_TD_CURTIME (ODBC 1.0) SQL_FN_TD_DAYNAME (ODBC 2.0) SQL_FN_TD_DAYOFMONTH (ODBC 1.0) SQL_FN_TD_DAYOFWEEK (ODBC 1.0) SQL_FN_TD_DAYOFYEAR (ODBC 1.0) SQL_FN_TD_EXTRACT (ODBC 3.0) (ODBC 1.0) SQL_FN_TD_HOUR SQL_FN_TD_MINUTE (ODBC 1.0) SQL_FN_TD_MONTH (ODBC 1.0) SQL_FN_TD_MONTHNAME (ODBC 2.0) SQL_FN_TD_NOW (ODBC 1.0) SQL_FN_TD_QUARTER (ODBC 1.0) SQL_FN_TD_第二个 (ODBC 1.0) SQL_FN_TD_TIMESTAMPADD (ODBC 2.0) SQL_FN_TD_TIMESTAMPDIFF (ODBC 2.0) SQL_FN_TD_WEEK (ODBC 1.0) SQL_FN_TD_YEAR (ODBC 1.0)  
   
  SQL_TXN_CAPABLE(ODBC 1.0)  
- 注意：在 ODBC 1.0; 中引入的信息类型每个返回值都标有中引入的版本。  
+ 注意:在 ODBC 1.0; 中引入的信息类型每个返回值都标有中引入的版本。  
   
  SQLUSMALLINT 值，描述在驱动程序或数据源中的事务支持：  
   
@@ -1708,16 +1707,16 @@ SQLRETURN SQLGetInfo(
  SQL_XOPEN_CLI_YEAR(ODBC 3.0)  
  表示与该版本的 ODBC 驱动程序管理器完全符合 Open Group 规范的发布的年份的字符串。  
   
- SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
+ SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
  一个字符的字符串："Y"，如果用户可以执行所有过程返回的**SQLProcedures**;"N"如果可能有过程返回，用户不能执行。  
   
- SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
+ SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
  一个字符的字符串："Y"，如果用户保证**选择**返回的所有表的特权**SQLTables**;"N"如果可能存在的表返回该用户无法访问。  
   
- SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  SQLUSMALLINT 值，该值指定该驱动程序可以支持的活动环境的最大数目。 如果没有指定的限制或未知的限制，则将此值设置为零。  
   
- SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
  枚举对聚合函数的支持 SQLUINTEGER 位掩码：  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
@@ -1745,7 +1744,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_AD_ADD_CONSTRAINT_DEFERRABLE （完全级别） SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE （完全级别） SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED （完全级别） SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE （完全级别）  
   
- SQL_ALTER_TABLE(ODBC 2.0)  
+ SQL_ALTER_TABLE (ODBC 2.0)  
  枚举中的子句 SQLUINTEGER 位掩码**ALTER TABLE**数据源支持的语句。  
   
  此时必须支持此功能的 SQL-92 或 FIPS 符合性级别显示在每位掩码旁边的括号中。  

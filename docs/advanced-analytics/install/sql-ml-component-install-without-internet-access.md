@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: da9676f029bb917adf15690b6870583fb0465fc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09934e01d6118bfa48a7c3f62e8086763ebf44c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962919"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65836218"
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python 打开     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2-获取 SQL Server 2017 安装介质
@@ -55,7 +54,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
-SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装这些版本之一：RTM, SP 1, SP 2. 基础安装到位后，便可应用累积更新。
+SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装这些版本之一：RTM，SP 1，SP 2。 基础安装到位后，便可应用累积更新。
 
 在连接到Internet的计算机上，下载安装程序使用的CAB文件，用于在SQL Server 2016上安装数据库内分析。 
 

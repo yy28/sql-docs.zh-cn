@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: baea56d983ac1c2fff9016d1a385c8b4d918fb7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029767"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个已知订阅服务器在表中对应一行，并且该表是发布服务器的本地表。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |subscriber_server|**sysname**|服务器的 ID。 将订阅数据库的复本迁移到其他服务器时，用于将 srvid 字段映射到服务器特定的值。|  
 |db_name|**sysname**|对订阅数据库的名称。|  

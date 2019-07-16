@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b35c095b2c00b4293062086b9a79f92b1fb4e77b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a1f22edf81e5e5e8ac7e2d9b44ce26e6b1f8bad2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032511"
 ---
 # <a name="msreplbackuplsns-transact-sql"></a>MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_backup_lsns**表包含事务日志序列号 (LSN) 为支持分发数据库的 'sync with backup 选项。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**valid_xact_id**|**varbinary(16)**|发送到发布服务器用以标记日志截断点的事务 ID。 仅当分发数据库处于 sync with backup 模式下使用。 包含已备份分发数据库中最新复制事务的 ID。 它将被发送到发布服务器以标记日志读取器所做的日志截断点。|  

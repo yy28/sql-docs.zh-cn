@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 515f3dad1f07535a5d0c8e590adadce0923180db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022756"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +36,10 @@ ms.locfileid: "62693914"
 > [!NOTE]  
 >  如果数据库不参与镜像，则所有带有"mirroring_"前缀的列将为 NULL。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|数据库 ID。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
-|**mirroring_guid**|**uniqueidentifier**|镜像合作关系的 ID。<br /><br /> NULL = 数据库不可访问或未镜像。<br /><br /> 注意：如果数据库不参与镜像，则所有带有"mirroring_"前缀的列将为 NULL。|  
+|**mirroring_guid**|**uniqueidentifier**|镜像合作关系的 ID。<br /><br /> NULL = 数据库不可访问或未镜像。<br /><br /> 注意:如果数据库不参与镜像，则所有带有"mirroring_"前缀的列将为 NULL。|  
 |**mirroring_state**|**tinyint**|镜像数据库的状态和数据库镜像会话的状态。<br /><br /> 0 = 已挂起<br /><br /> 1 = 与其他伙伴断开<br /><br /> 2 = 正在同步<br /><br /> 3 = 挂起故障转移<br /><br /> 4 = 已同步<br /><br /> 5 = 伙伴未同步。 现在无法进行故障转移。<br /><br /> 6 = 伙伴已同步。 可以进行故障转移。 了解有关故障转移，请参阅要求[Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_state_desc**|**nvarchar(60)**|镜像数据库状态和数据库镜像会话状态的说明，可以是下列值之一：<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> 有关详细信息，请参阅[镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。|  
 |**mirroring_role**|**tinyint**|本地数据库当前在数据库镜像会话中扮演的角色。<br /><br /> 1 = 主体<br /><br /> 2 = 镜像<br /><br /> NULL = 数据库不可访问或未镜像。|  

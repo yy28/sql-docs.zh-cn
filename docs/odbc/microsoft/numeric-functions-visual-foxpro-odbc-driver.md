@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044994"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>数字函数（Visual FoxPro ODBC 驱动程序）
 下表描述了支持的 Visual FoxPro ODBC 驱动程序; ODBC 数值函数在相同的功能的 Visual FoxPro 语法与 ODBC 语法不同，会列出等效 Visual FoxPro。  
@@ -42,17 +41,17 @@ ms.locfileid: "63045476"
 |LOG *(float_exp)*||  
 |LOG10 *(float_exp)*||  
 |MOD *(integer_exp1, integer_exp2)*||  
-|PI *( )*||  
+|PI *（)*||  
 |RADIANS *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
 |ROUND *(则 numeric_exp，integer_exp)*||  
-|SIGN *(numeric_exp)*||  
+|登录 *(则 numeric_exp)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
   
  不支持以下数值函数：  
   
- POWER *(numeric_exp, integer_exp)*  
+ POWER *(则 numeric_exp，integer_exp)*  
   
- TRUNCATE *(numeric_exp, integer_exp)*
+ 截断 *(则 numeric_exp，integer_exp)*

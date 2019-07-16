@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cea1f26a93627d2a3719ad362d2bd62ee1e3ba1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c188cf1ad72033976136496914844c14c3a35867
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029836"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提供有关每个项目的分区的信息。 本地数据库中定义的每个合并项目都在表中占一行。 此表存储在发布和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**artid**|**uniqueidentifier**|给定项目的唯一标识号。|  
 |**pubid**|**uniqueidentifier**|此发布的唯一标识号；在添加发布时生成。|  

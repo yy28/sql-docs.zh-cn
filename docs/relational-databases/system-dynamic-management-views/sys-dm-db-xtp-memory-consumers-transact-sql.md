@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026817"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "52522751"
   
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|内存消耗者的 ID（内部）。|  
 |memory_consumer_type|**int**|内存消耗者的类型：<br /><br /> 0=聚合。 （聚合两个或多个消耗者的内存使用量。 不应显示。）<br /><br /> 2=VARHEAP（跟踪长度可变的堆的内存占用情况。）<br /><br /> 3=HASH（跟踪索引的内存占用情况。）<br /><br /> 5=DB 页池（跟踪用于运行时操作的数据库页池的内存占用情况。 例如，表变量和某些可序列化扫描。 每个数据库只有一个此类型的内存消耗者。）|  
-|memory_consumer_type_desc|**nvarchar(64)**|内存消耗者的类型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0-（它应不显示。）<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|对内存消耗者实例的说明：<br /><br /> VARHEAP: <br />数据库堆。 用于为数据库分配用户数据（行）。<br />数据库系统堆。 用于分配将包含在内存转储中但不包含用户数据的数据库数据。<br />范围索引堆。 由范围索引用于分配 BW 页的专用堆。<br /><br /> 哈希：无说明，因为 object_id 指示表，index_id 指示哈希索引本身。<br /><br /> PGPOOL:对于数据库，只有一个页池数据库 64K 页池。|  
+|memory_consumer_type_desc|**nvarchar(64)**|内存消耗者的类型：VARHEAP、 HASH 或 PGPOOL。<br /><br /> 0-（它应不显示。）<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|对内存消耗者实例的说明：<br /><br /> VARHEAP: <br />数据库堆。 用于为数据库分配用户数据（行）。<br />数据库系统堆。 用于分配将包含在内存转储中但不包含用户数据的数据库数据。<br />范围索引堆。 由范围索引用于分配 BW 页的专用堆。<br /><br /> 哈希：无说明，因为 object_id 指示表，index_id 哈希索引本身。<br /><br /> PGPOOL:数据库是只有一个页池数据库 64k 页池。|  
 |object_id|**bigint**|所分配的内存所属的对象 ID。 负值表示系统对象。|  
 |xtp_object_id|**bigint**|内存优化表对象 ID。|  
 |index_id|**int**|消耗者的索引 ID（如果有）。 NULL 表示基表。|  

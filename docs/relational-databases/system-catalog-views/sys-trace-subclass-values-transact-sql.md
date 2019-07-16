@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f96a3966a3f7d6a7c3c115586929cf975d54e45c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a099d67d337544a33bfc922fe14e07af39bd619d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022618"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "47659007"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|跟踪事件的 ID。 此参数也是在**sys.trace_events**目录视图。|  
 |**trace_column_id**|**smallint**|用于枚举的跟踪列的 ID。 此参数也是在**sys.trace_columns**目录视图。|  
 |**subclass_name**|**nvarchar(128)**|列值的含义。|  
 |**subclass_value**|**smallint**|列值。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

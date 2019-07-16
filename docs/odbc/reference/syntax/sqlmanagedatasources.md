@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529c503bc10d3ed0b69a4c280c7fa63e72893f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018962"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **符合性**  
@@ -52,7 +51,7 @@ BOOL SQLManageDataSources(
 ## <a name="diagnostics"></a>诊断  
  当**SQLManageDataSources**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|Error|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_REQUEST_FAILED|*请求*失败|在调用**ConfigDSN**失败。|  
@@ -94,7 +93,7 @@ BOOL SQLManageDataSources(
   
  系统 DSN 的系统信息中，而不是在 HKEY_CURRENT_USER 项中的 HKEY_LOCAL_MACHINE 项中注册。 它位于未与某位用户使用其自己特定的用户名和密码登录，但可以使用该计算机的任何用户或者自动系统级服务。 系统 DSN，但是，与一台计算机。 它不支持使用远程计算机之间的 Dsn 的功能。 系统 Dsn 的系统信息中注册，如下所示：  
   
- HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
+ HKEY_LOCAL_MACHINE 软件 ODBC Odbc.ini  
   
 ## <a name="file-dsns"></a>文件 Dsn  
  文件数据源没有数据源名称，如计算机数据源，不会和未注册到任何一个用户或计算机。 可以将复制到任何计算机.dsn 文件中包含该数据源的连接信息。 文件数据源可以是可共享，在这种情况下.dsn 文件驻留在网络上，并可由同时在网络上的多个用户，只要用户具有适当的驱动程序。 文件数据源还可以共享，在这种情况下可以使用仅在一台计算机上。  

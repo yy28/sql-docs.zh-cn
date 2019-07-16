@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019117"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>将数据从 C 转换为 SQL 数据类型
 当应用程序调用**SQLExecute**或**SQLExecDirect**，该驱动程序检索数据的任何参数使用绑定**SQLBindParameter**从存储位置中应用程序。 当应用程序调用**SQLSetPos**，该驱动程序检索更新的数据或添加操作中使用绑定列**SQLBindCol**。 对于执行时数据参数，应用程序发送参数数据与**SQLPutData**。 如果有必要，驱动程序将数据从指定的数据类型*ValueType*中的参数**SQLBindParameter**由指定的数据类型为*ParameterType*中的参数**SQLBindParameter**，然后将数据发送到数据源。  
@@ -60,9 +59,9 @@ ms.locfileid: "63224676"
   
 -   [从 C 到 SQL:字符](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [从 C 到 SQL:Numeric](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [从 C 到 SQL:数值](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [从 C 到 SQL:Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [从 C 到 SQL:位](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
 -   [从 C 到 SQL:二进制文件](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   

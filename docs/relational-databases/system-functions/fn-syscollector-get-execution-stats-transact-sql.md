@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042741"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|平均输入包的数据流任务的行数。<br /><br /> 注意： 数据流任务是[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]处理数据的组件。 该数据采用关系格式，因此它具有由行组成的输入数据集。 这是进入该任务的行数。 数据在转换后成为由行组成的结果集输出。 数据流任务将转换数据并输出由行组成的结果集。 该输出是退出任务的行数。|  
+|avg_row_count_in|**int**|平均输入包的数据流任务的行数。<br /><br /> 注意:数据流任务是处理数据的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。 该数据采用关系格式，因此它具有由行组成的输入数据集。 这是进入该任务的行数。 数据在转换后成为由行组成的结果集输出。 数据流任务将转换数据并输出由行组成的结果集。 该输出是退出任务的行数。|  
 |min_row_count_in|**int**|进入包的数据流任务的最少行数。|  
 |max_row_count_in|**int**|最大输入的数据的行数数据流任务的包。|  
 |avg_row_count_out|**int**|退出包的数据流任务的平均行数。|  
@@ -59,7 +58,7 @@ fn_syscollector_get_execution_stats ( log_id )
 |min_duration|**int**|在包的数据流组件中消耗的最短时间，以毫秒为单位。|  
 |max_duration|**int**|在包的数据流组件中消耗的最长时间，以毫秒为单位。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要为选择**dc_operator**。  
   
 ## <a name="see-also"></a>请参阅  

@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 70b06749d1cbecc2127c70fee28b60f49583d5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959197"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 扩展（预览版）
 
@@ -24,7 +23,7 @@ ms.locfileid: "66797985"
 
 这种体验目前处于其初始预览状态。 请报告问题和功能请求[此处。](https://github.com/microsoft/azuredatastudio/issues)
 
-![data-actions](media/sql-server-dacpac-extension/data-tier-application-actions.png)
+![数据操作](media/sql-server-dacpac-extension/data-tier-application-actions.png)
 
  ### <a name="requirements"></a>要求
  * 此向导需要与 SQL Server 实例启动的活动连接。

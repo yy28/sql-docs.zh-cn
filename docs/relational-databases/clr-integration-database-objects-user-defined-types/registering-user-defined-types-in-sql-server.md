@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cad827776e525c55b41517ae1de05d547d88dd2a
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 18a22d892398bde8251470a3e85dde0b56582d2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028251"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中注册用户定义类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,13 +173,13 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **assembly_id**  
  为程序集定义的标识符。 此编号分配到与同一程序集相关的所有对象。  
   
- **名称**  
+ **name**  
  对象的名称。  
   
  **file_id**  
  一个数字，指明每个对象，与关联的第一个对象给定**assembly_id**该值为 1。 如果有多个对象具有相同关联**assembly_id**，然后每个后续**file_id**值加 1。  
   
- **content**  
+ **内容**  
  程序集或文件的十六进制表示形式。  
   
  可以使用 CAST 或 CONVERT 函数将转换的内容**内容**为可读文本的列。 以下查询将 Point.cs 文件的内容转换为可读文本，查询中使用 WHERE 子句中的名称将结果集限定为一行。  

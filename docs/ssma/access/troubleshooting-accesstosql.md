@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8167857b3ee1653eac81067cc19efd198d7aa032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051476"
 ---
 # <a name="troubleshooting-accesstosql"></a>故障排除 (AccessToSQL)
 不常见遇到迁移问题正好执行控制台脚本或命令。  

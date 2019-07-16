@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
-manager: jroth
-ms.openlocfilehash: 2f031ec68cc6ae342b8bac51c450ee40a9df0555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959084"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教程：创建 Azure Data Studio 扩展
 
@@ -31,7 +30,7 @@ ms.locfileid: "66797954"
 > * 打包你的扩展
 > * 将你的扩展发布到 marketplace
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使用 Visual Studio Code 构建 Azure Data Studio 的扩展。 若要开始，需要以下组件：
 

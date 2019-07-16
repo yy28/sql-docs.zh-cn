@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69a3fec4f785477a9ea4982a51a6ac84c9712971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd7a827c869456b2f4cd97a08b39e7b9be00cb86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068083"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为某种类型的过程是使用每个对象对应一行**sys.objects.type** = P、 X、 RF 和 PC。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<从 sys.objects 继承的列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = 在服务器启动时自动执行过程；否则为 0。 只能为 master 数据库中的过程设置此值。|  

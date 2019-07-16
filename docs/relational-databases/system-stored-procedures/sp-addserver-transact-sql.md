@@ -1,5 +1,5 @@
 ---
-title: sp_addserver (Transact-SQL) | Microsoft Docs
+title: sp_addserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab5c15d15c77688c06eedec1d54e82c7b8199380
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 616b835b2b190346df4891caa4d7295c8fb328e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022431"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_addserver [ @server = ] 'server' ,
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果计算机上安装了多个  实例，则实例将如同在一个独立服务器上运行。 通过引用指定命名的实例*服务器*作为*servername\instancename*。  
   
-`[ @local = ] 'LOCAL'` 指定要添加为本地服务器的服务器。 **@local** 是**varchar(10)**，默认值为 NULL。 指定**@local**作为**本地**定义**@server**作为名称的本地服务器和原因会 @@SERVERNAME函数返回值 *server* 。  
+`[ @local = ] 'LOCAL'` 指定要添加为本地服务器的服务器。 **@local** 是**varchar(10)** ，默认值为 NULL。 指定 **@local** 作为**本地**定义 **@server** 作为名称的本地服务器和原因会 @@SERVERNAME函数返回值 *server* 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会在安装过程中将此变量设置为计算机名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下，用户可通过计算机名连接到  的实例而无需额外的配置。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只有重新启动后，本地的定义才会生效。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]每个实例中只能定义一个本地服务器。  
   
-`[ @duplicate_ok = ] 'duplicate_OK'` 指定是否允许重复的服务器名称。 **@duplicate_OK** 是**varchar(13)**，默认值为 NULL。 **@duplicate_OK** 只能具有值**duplicate_OK**或为 NULL。 如果**duplicate_OK**指定且已添加的服务器名称存在，则不会引发错误。 如果未使用命名的参数， **@local**必须指定。  
+`[ @duplicate_ok = ] 'duplicate_OK'` 指定是否允许重复的服务器名称。 **@duplicate_OK** 是**varchar(13)** ，默认值为 NULL。 **@duplicate_OK** 只能具有值**duplicate_OK**或为 NULL。 如果**duplicate_OK**指定且已添加的服务器名称存在，则不会引发错误。 如果未使用命名的参数， **@local** 必须指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -80,7 +79,7 @@ sp_addserver 'ACCOUNTS', 'local';
 ## <a name="see-also"></a>请参阅  
  [重命名承载 SQL Server 的独立实例的计算机](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  

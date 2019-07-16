@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006580"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>编辑类型映射 (AccessToSQL)
 **编辑类型映射**对话框可以指定类型的源和目标数据库对象之间的映射方式。  
@@ -37,7 +36,7 @@ ms.locfileid: "63138859"
 **From**  
 指定此映射的最小长度。 例如，对于**文本**数据类型，可以输入 10，以指定的开始处的范围为此映射**text(10)** 。  
   
-**若要**  
+**To**  
 指定此映射的最大长度。 例如，对于**文本**数据类型，可以输入 20 来指定此映射的结束时间范围**text(20)** 。  
   
 **目标类型**  

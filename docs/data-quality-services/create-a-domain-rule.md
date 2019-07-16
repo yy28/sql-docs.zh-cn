@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 82a7b33a201a21d488ea2cef4b15b7609af47de8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b977d2fa47d7fd40e751e4db7c9389eac48a2993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935518"
 ---
 # <a name="create-a-domain-rule"></a>创建域规则
 
@@ -113,7 +112,7 @@ ms.locfileid: "66785783"
   
  您还可以选择创建一个域值。 例如，若要验证值是否以字母 A、B 或 C 开头，则您可以创建一个具有复杂条件的简单规则（例如，具有竖线字符的正则表达式），或者可以创建包含若干简单条件的复杂规则。 第一个规则的一个例子是“Value contains regular expression (^A|^B|^C)”。 第二个规则的一个例子是“'Value begins with A' OR 'Value begins with B' OR 'Value begins with C'”。  
   
-|条件|Description|示例|  
+|条件|描述|示例|  
 |---------------|-----------------|-------------|  
 |长度等于|只有包含由操作数指定的字符数的值才有效。|示例操作数：3<br /><br /> 有效值：BB1<br /><br /> 无效值：AA|  
 |长度大于或等于|只有包含由操作数指定的字符数或更多字符数的值才有效。|示例操作数：3<br /><br /> 有效的值：BB1, BBAA<br /><br /> 无效值：AA|  

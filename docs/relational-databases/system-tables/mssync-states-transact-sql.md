@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7c41d886550bef428590d4d2d39bb09434a9312
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7bc81e41299041b50e53074cd4a133c6bd9c0cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016508"
 ---
 # <a name="mssyncstates-transact-sql"></a>MSsync_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsync_states**表的跟踪哪个发布仍处于并发快照模式。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|发布服务器 ID。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
