@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f33d55cc8ac5dab37ce200a5a654bcb4be7cc9ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911365"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函数
 **符合性**  
@@ -96,7 +95,7 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>诊断  
  当**SQLGetData**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLGetData** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|描述|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|并非所有指定列的数据*Col_or_Param_Num*，可以在对函数的单个调用中检索。 SQL_NO_TOTAL 或保留在之前的当前调用的指定列中的数据的长度**SQLGetData**中返回\* *StrLen_or_IndPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> 有关详细信息进行多次调用**SQLGetData**单个列，请参阅"注释"。|  

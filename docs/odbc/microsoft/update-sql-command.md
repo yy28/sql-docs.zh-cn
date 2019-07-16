@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912334"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 命令
 使用新值更新表中的记录。  
@@ -36,12 +35,12 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>参数  
- UPDATE [ *DatabaseName1!* ] *TableName1*  
+ 更新 [ *DatabaseName1 ！* ]*TableName1*  
  指定使用新值更新记录的表。  
   
  *DatabaseName1!* 指定包含表的数据源与指定的数据库的数据库的名称。 必须包括包含表，如果数据库不是当前的数据库的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  
   
- SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ 设置*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
  指定更新的列及其新值。 如果省略 WHERE 子句，具有相同值更新列中的每个行。  
   
  其中*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  

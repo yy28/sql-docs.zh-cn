@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: c74e457d29f39201601a3a62d651cce97c52fa70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207320"
 ---
 # <a name="create-perspectives"></a>创建透视
 
@@ -27,7 +27,7 @@ ms.locfileid: "57684924"
   
 本课程的目的是介绍如何创建透视以及如何逐步熟悉表格模型创作工具。 如果您以后扩展此模型以包括其他表，可以创建其他透视以定义不同视点的模型，例如，库存和销售额。  
   
-学完本课的预计时间：**五分钟**  
+估计的时间才能完成本课程中：**五分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 
@@ -39,7 +39,7 @@ ms.locfileid: "57684924"
   
 1.  单击**模型**菜单 >**透视** > **创建和管理**。  
   
-2.  在“透视”对话框中，单击“新建透视”。  
+2.  在“透视”  对话框中，单击“新建透视”  。  
   
 3.  双击**新的透视**列标题，然后重命名**Internet Sales**。  
   

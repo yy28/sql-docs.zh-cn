@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912305"
 ---
 # <a name="procedure-parameters"></a>过程参数
 参数在过程调用中的可以输入、 输入/输出或输出参数。 这是从所有其他 SQL 语句，并且始终包含输入的参数中的参数不同。  

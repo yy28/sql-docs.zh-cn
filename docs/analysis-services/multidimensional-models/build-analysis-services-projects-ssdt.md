@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209129"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>生成 Analysis Services 项目 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50147264"
   
  如果验证成功，则 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 会生成 XML 文件。 生成之后，输出文件夹将包含下表中所述的文件。  
   
-|文件（在 bin 文件夹中）|Description|  
+|文件（在 bin 文件夹中）|描述|  
 |-----------------------------|-----------------|  
 |*Projectname*.asdatabase|包含在部署脚本文件中定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中对象的元数据的 ASSL 元素。 部署引擎使用此文件来将对象部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
 |*Projectname*.configsettings|包含部署过程中使用的配置设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些设置（例如用于数据源的连接字符串）。|  
@@ -46,7 +46,7 @@ ms.locfileid: "50147264"
 |*Projectname*.deploymentoptions|包含在部署过程中使用的各种选项设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些选项设置（例如存储位置）|  
 |*Assemblyname*/*dllname.* dll|用于每个被引用程序集的各个文件夹；每个文件夹包含程序集、被引用程序集以及输出调试信息的所有关联 .pdb 文件的 DLL。|  
   
-|文件（在 obj 文件夹中）|Description|  
+|文件（在 obj 文件夹中）|描述|  
 |-----------------------------|-----------------|  
 |\<配置名称 > \LastBuilt.xml|包含用来标识 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的上次生成时间的时间戳和哈希代码。|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "50147264"
   
  还会将被引用程序集（不包括标准系统和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集）复制到输出目录。 引用解决方案中的其他项目时，首先使用相应的项目配置以及由项目引用建立的生成依赖项生成这些项目，然后将这些项目复制到项目输出文件夹。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

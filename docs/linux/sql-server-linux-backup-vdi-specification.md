@@ -4,18 +4,17 @@ description: SQL Server 备份的虚拟设备接口规范。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 7c684170ae6ca6420b6b5ebef91baae208ab0808
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996445"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 
@@ -238,7 +237,7 @@ ms.locfileid: "67834193"
 
 | Parameters | 参数 | 解释
 | ----- | ----- | ------ |
-| |无 |不适用
+| |None |不适用
         
 | 返回值 | 参数 | 解释
 | ----- | ----- | ------ |

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21cb7f8773c0663d584f62bcaaaeab15c7eac108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917017"
 ---
 # <a name="seek-method"></a>Seek 方法
 搜索的索引[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)快速找到匹配指定的值，并将更改为该行的当前行位置的行。  
@@ -42,7 +41,7 @@ recordset.Seek KeyValues, SeekOption
  一个[SeekEnum](../../../ado/reference/ado-api/seekenum.md)值，该值指定要进行索引的列与相应之间的比较类型*架构*。  
   
 ## <a name="remarks"></a>备注  
- 使用**Seek**方法一起[索引](../../../ado/reference/ado-api/index-property.md)如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 方法，以确定基础提供程序是否支持**搜寻**，以及**Supports(adIndex)** 若要确定该提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**并**索引**。)  
+ 使用**Seek**方法一起[索引](../../../ado/reference/ado-api/index-property.md)如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** 方法，以确定基础提供程序是否支持**搜寻**，以及**Supports(adIndex)** 若要确定该提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**并**索引**。)  
   
  如果**Seek**不找到所需的行中，没有错误发生，而且行位于末尾处**记录集**。 设置**索引**之前执行此方法所需索引的属性。  
   

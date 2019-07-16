@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188288"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的自定义报表。  
@@ -32,9 +32,9 @@ ms.locfileid: "58618284"
 ## <a name="running-a-custom-report"></a>运行自定义报表  
  可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中通过以下方式运行自定义报表：  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”，再左键单击“自定义报表”。 在“打开文件”对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”  ，再左键单击“自定义报表”  。 在“打开文件”  对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
   
--   在对象资源管理器中，右键单击一个节点，指向“报表”，再指向“自定义报表”，然后从最近打开的文件列表中选择一个自定义报表。  
+-   在对象资源管理器中，右键单击一个节点，指向“报表”  ，再指向“自定义报表”  ，然后从最近打开的文件列表中选择一个自定义报表。  
   
 ## <a name="limitations"></a>限制  
  在使用自定义报表时，请注意以下限制：  
