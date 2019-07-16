@@ -5,17 +5,16 @@ description: 将 Python 或 R 脚本部署为 SQL Server 2019 大数据群集 �
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958913"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 来部署应用程序到 SQL Server 大数据群集
 
@@ -23,7 +22,7 @@ ms.locfileid: "67729310"
 
 本文介绍如何向 SQL Server 大数据群集应用程序部署扩展中使用 Visual Studio Code 部署应用程序。 CTP 2.3 中引入了此功能。 
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [Visual Studio Code](https://code.visualstudio.com/)。
 - [SQL Server 大数据群集](big-data-cluster-overview.md)CTP 2.3 或更高版本。
@@ -59,7 +58,7 @@ ms.locfileid: "67729310"
 
 SQL Server 大数据群集应用程序部署后安装扩展，它会提示你重新加载 VS Code。 现在应看到在 SQL Server BDC 应用程序资源管理器在 VS Code 侧栏中。
 
-### <a name="app-explorer"></a>App Explorer
+### <a name="app-explorer"></a>应用程序资源管理器
 
 单击侧栏以加载侧面板，其中显示在应用程序资源管理器中的扩展。 应用程序资源管理器的以下示例屏幕截图显示没有应用程序规范可用：
 

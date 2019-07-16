@@ -2,19 +2,18 @@
 title: 导入 SCOM 管理包的分析平台系统 |Microsoft Docs
 description: 按照以下步骤导入 System Center Operations Manager (SCOM) 管理包 Analytics Platform System (APS)。 监视 SCOM 中的并行数据仓库所需的管理包。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 070e7b73614f6884e45a5c91603d6086613d15ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960850"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>导入 SCOM 管理包中的分析平台系统
 按照以下步骤导入 System Center Operations Manager (SCOM) 管理包 Analytics Platform System (APS)。 监视 SCOM 中的并行数据仓库所需的管理包。 

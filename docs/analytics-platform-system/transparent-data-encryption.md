@@ -2,19 +2,18 @@
 title: 透明数据加密-并行数据仓库 |Microsoft Docs
 description: 透明数据加密 (TDE) 并行数据仓库 (PDW) 执行实时 I/O 加密和解密的数据和事务日志文件的特殊的 PDW 日志文件。"
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582c237819dab5f0a1e30e2bd4e27fe3cc9ae57f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959986"
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，对于物理媒体 （如驱动器或备份磁带） 都被盗的情况下，恶意方可以只还原或附加数据库并浏览的数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -120,9 +119,9 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
   
 |命令或函数|用途|  
 |-----------------------|-----------|  
-|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|创建一个用于加密数据库的密钥。|  
-|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|更改用于加密数据库的密钥。|  
-|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|删除用于加密数据库的密钥。|  
+|[创建数据库加密密钥](../t-sql/statements/create-database-encryption-key-transact-sql.md)|创建一个用于加密数据库的密钥。|  
+|[更改数据库加密密钥](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|更改用于加密数据库的密钥。|  
+|[删除数据库加密密钥](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|删除用于加密数据库的密钥。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|介绍用来启用 TDE 的 **ALTER DATABASE** 选项。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>目录视图和动态管理视图  
@@ -280,7 +279,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ## <a name="see-also"></a>请参阅  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
-[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[创建数据库加密密钥](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  

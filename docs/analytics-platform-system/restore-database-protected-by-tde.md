@@ -2,19 +2,18 @@
 title: 还原受 TDE-并行数据仓库数据库 |Microsoft Docs
 description: 使用以下步骤来还原的数据库，在分析平台系统并行数据仓库中使用透明数据加密进行加密。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c2f676f75c5a8c79bfc2f2417ff30c9806e3c80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960166"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>还原由并行数据仓库中的 TDE 保护的数据库
 使用以下步骤来还原的数据库，使用透明数据加密进行加密。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81b56aa57aeb6dd1cb2b2063c41c2dc9ccd6fb19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e2e1dbbf51533e03d3e1f5a6930dd0a022cf215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941105"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合权限（主数据服务）
 
@@ -28,9 +27,9 @@ ms.locfileid: "65484242"
   集合权限应用到实体的所有集合。 不能将权限授予特定集合，权限应用到所有集合。  
   
 > [!NOTE]  
->  这些权限仅应用到用户界面的“资源管理器”功能区域。  
+>  这些权限仅应用到用户界面的“资源管理器”  功能区域。  
   
-|权限|Description|  
+|权限|描述|  
 |----------------|-----------------|  
 |**读取**|用户可以读取集合成员和成员属性。|  
 |**创建**|用户可以创建集合成员并分配属性值。|  

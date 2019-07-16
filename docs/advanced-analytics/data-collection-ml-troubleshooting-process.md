@@ -6,13 +6,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe383652a63b0972097fc739cf33bd3fcbe2e7e6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3c9d8d6cc8c0a5cfdc697c5daaa3b56631d74116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963021"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>机器学习的数据集合疑难解答
 
@@ -302,6 +301,6 @@ SQL Server 生成单独的外部脚本语言运行时的日志。 这些错误�
 
 2. 确定是否已为 SQL Server 创建防火墙规则。 出于安全原因，在默认安装中，它可能无法远程 R 或 Python 客户端来连接到的实例。 有关详细信息，请参阅[故障排除连接到 SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [对 SQL Server 中的机器学习进行故障排除](machine-learning-troubleshooting-faq.md)

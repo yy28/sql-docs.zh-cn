@@ -2,19 +2,18 @@
 title: 配置 InfiniBand 的分析平台系统 |Microsoft Docs
 description: 介绍如何在要连接到控制节点上并行数据仓库 (PDW) 的非设备客户端服务器上配置无线带宽技术网络适配器。 使用这些指令的基本连接并以实现高可用性，以便加载、 备份以及其他进程会自动连接到活动的 InfiniBand 网络。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4739a79989321c215819bab90da1d1831764f820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961253"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>配置分析平台系统的 InfiniBand 网络适配器
 介绍如何在要连接到控制节点上并行数据仓库 (PDW) 的非设备客户端服务器上配置无线带宽技术网络适配器。 使用这些指令的基本连接并以实现高可用性，以便加载、 备份以及其他进程会自动连接到活动的 InfiniBand 网络。  

@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 609896357845aa4f466e874524b8136b34e32b9a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5a17eb0c39e45080de83e39d002d8f6693131688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961790"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server （演练） 创建数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -191,7 +190,7 @@ ms.locfileid: "58511694"
     > [!TIP]
     > 已修改此查询以获取较小数据，以更快地使本演练的示例。 如果你想要获取所有数据; 可以删除 TABLESAMPLE 子句但是，具体取决于你的环境，它可能无法加载到 R，从而导致错误的完整数据集。
   
-5. 使用下面的代码行来从 R 环境中调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，并将其应用于 featureEngineeringQuery 中定义的数据。
+5. 使用下面的代码行来从 R 环境中调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，并将其应用于 featureEngineeringQuery  中定义的数据。
   
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,

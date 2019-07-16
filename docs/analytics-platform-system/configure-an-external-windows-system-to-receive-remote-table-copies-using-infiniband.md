@@ -2,19 +2,18 @@
 title: 配置 Windows 以接收远程表副本的并行数据仓库 |Microsoft Docs
 description: 介绍如何购买和配置用于远程表复制功能在并行数据仓库中使用 InfiniBand 网络连接的非设备 Windows 系统。 Windows 系统将承载 SQL Server 数据库从 SQL Server PDW 数据库接收远程表副本。 它是独立于设备购买并连接到设备 InfiniBand 网络。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961300"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>配置外部 Windows 系统以接收远程表副本使用 InfiniBand 的并行数据仓库
 介绍如何购买和配置用于远程表复制功能在 SQL Server PDW 中使用 InfiniBand 网络连接的非设备 Windows 系统。 Windows 系统将承载 SQL Server 数据库从 SQL Server PDW 数据库接收远程表副本。 它是独立于设备购买并连接到设备 InfiniBand 网络。  

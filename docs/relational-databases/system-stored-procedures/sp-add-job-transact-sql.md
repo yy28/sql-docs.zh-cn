@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941741"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'` 作业的名称。 名称必须唯一且不能含有百分比 (**%**) 字符。 *job_name*是**nvarchar （128)**，无默认值。  
+`[ @job_name = ] 'job_name'` 作业的名称。 名称必须唯一且不能含有百分比 ( **%** ) 字符。 *job_name*是**nvarchar （128)** ，无默认值。  
   
 `[ @enabled = ] enabled` 指示添加的作业的状态。 *已启用*是**tinyint**，默认值为 1 （启用）。 如果**0**，不启用的作业并不会根据其计划运行; 但是，它可以手动运行。  
   
-`[ @description = ] 'description'` 作业的说明。 *描述*是**nvarchar(512)**，默认值为 NULL。 如果*说明*是省略，使用"无说明"。  
+`[ @description = ] 'description'` 作业的说明。 *描述*是**nvarchar(512)** ，默认值为 NULL。 如果*说明*是省略，使用"无说明"。  
   
 `[ @start_step_id = ] step_id` 要执行的作业的第一个步骤的标识号。 *step_id*是**int**，默认值为 1。  
   
@@ -67,16 +66,16 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id` 独立于语言的机制，用于指定作业类别。 *category_id*是**int**，默认值为 NULL。  
   
-`[ @owner_login_name = ] 'login'` 拥有作业的登录名的名称。 *登录名*是**sysname**，默认值为 NULL，它解释为当前的登录名。 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值**@owner_login_name**。 如果用户不是成员的**sysadmin**角色设置或更改的值**@owner_login_name**，此存储过程的执行会失败并返回错误。  
+`[ @owner_login_name = ] 'login'` 拥有作业的登录名的名称。 *登录名*是**sysname**，默认值为 NULL，它解释为当前的登录名。 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值 **@owner_login_name** 。 如果用户不是成员的**sysadmin**角色设置或更改的值 **@owner_login_name** ，此存储过程的执行会失败并返回错误。  
   
 `[ @notify_level_eventlog = ] eventlog_level` 指示何时将放入此作业在 Microsoft Windows 应用程序日志条目的值。 *eventlog_level*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**0**|从不|  
 |**1**|成功时|  
 |**2** （默认值）|在失败|  
-|**3**|始终|  
+|**3**|Always|  
   
 `[ @notify_level_email = ] email_level` 一个值，指示何时发送一封电子邮件时完成该作业。 *email_level*是**int**，默认值为**0**，指示从不。 *email_level*使用相同的值作为*eventlog_level*。  
   
@@ -101,7 +100,7 @@ sp_add_job [ @job_name = ] 'job_name'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **@originating_server** 中存在**sp_add_job**但没有列在参数。 **@originating_server** 已保留供内部使用。  
@@ -123,7 +122,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  信息的特定权限关联与每个这些固定数据库角色，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值**@owner_login_name**。 如果用户不是成员的**sysadmin**角色设置或更改的值**@owner_login_name**，此存储过程的执行会失败并返回错误。  
+ 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值 **@owner_login_name** 。 如果用户不是成员的**sysadmin**角色设置或更改的值 **@owner_login_name** ，此存储过程的执行会失败并返回错误。  
   
 ## <a name="examples"></a>示例  
   

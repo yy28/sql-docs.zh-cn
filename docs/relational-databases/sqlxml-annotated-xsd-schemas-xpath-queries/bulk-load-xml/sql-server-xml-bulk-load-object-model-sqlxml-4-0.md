@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6201ddd9a04fd95ae27b987710f94701161577cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005279"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "56011429"
  Execute  
  通过使用作为参数提供的架构文件和数据文件（或流），大容量加载数据。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>properties  
  BulkLoad  
  指定是否应执行大容量加载。 此属性很有用，如果你想要只生成的架构 （请参阅按照 SchemaGen、 SGDropTables 和 SGUseID 属性），并且执行大容量加载。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将执行。 当此属性设置为 FALSE 时，XML 大容量加载将不执行。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "56011429"
  默认值是 FALSE。  
   
  TempFilePath  
- 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （只有在 Transaction 属性设置为 TRUE 时，此属性才有用。）您必须确保[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
+ 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （此属性可仅当事务属性设置为 TRUE 时。）您必须确保[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
   
  事务  
  指定大容量加载是否应作为事务实现，在此情况下，如果大容量加载失败，则确保回滚。 此属性是一个布尔属性。 如果此属性设置为 TRUE，则大容量加载将在事务上下文中发生。 仅当事务设置为 TRUE 时，TempFilePath 属性是很有用。  

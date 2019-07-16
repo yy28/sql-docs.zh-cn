@@ -1,5 +1,5 @@
 ---
-title: sp_addmessage (Transact-SQL) | Microsoft Docs
+title: sp_addmessage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061837"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
-`[ \@replace = ] 'replace'` 如果指定为字符串*替换为*，用新的消息文本和严重级别覆盖现有错误消息。 *替换*是**varchar(7)** 默认值为 NULL。 必须指定此选项，如果*msg_id*已存在。 如果替换美国英语消息，为具有相同的所有其他语言中的所有消息替换英语消息，严重性级别*msg_id*。  
+`[ \@replace = ] 'replace'` 如果指定为字符串*替换为*，用新的消息文本和严重级别覆盖现有错误消息。 *替换*是**varchar(7)** 默认值为 NULL。 必须指定此选项，如果*msg_id*已存在。 如果替换美国为具有相同的所有其他语言中的所有消息替换英语消息，严重性级别*msg_id*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
- 对于非英语版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须已经存在美国英语版本的消息，然后才能使用另一种语言添加消息。 两种消息版本的严重性必须匹配。  
+ 对于非英语版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，美国可以使用另一种语言添加消息之前，必须已存在的一条消息的英文版。 两种消息版本的严重性必须匹配。  
   
  当本地化包含参数的消息时，使用与原始消息中的参数相应的参数。 在每个参数后都插入感叹号 (!)。  
   
@@ -93,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-adding-a-message-in-two-languages"></a>B. 用两种语言添加消息  
- 下面的示例首先用美国英语添加一条消息，然后用法语添加同一条消息`.`  
+ 下面的示例首先用美国添加一条消息然后用法语添加同一条消息`.`  
   
 ```  
 USE master;  
@@ -109,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-order-of-parameters"></a>C. 更改参数顺序  
- 下面的示例首先用美国英语添加一条消息，然后添加一条本地化消息，其中更改了参数顺序。  
+ 下面的示例首先用美国添加一条消息英语、，然后添加本地化的消息，其中更改参数顺序。  
   
 ```  
 USE master;  
@@ -159,7 +158,7 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>请参阅  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

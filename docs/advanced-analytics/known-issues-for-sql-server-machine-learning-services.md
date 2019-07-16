@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962814"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -204,7 +203,7 @@ SQL Server 2016 计算上下文中运行 R 代码时，它们可能会看到以�
 
 如果遇到资源限制，请检查当前的默认值。 如果 20%不够，请参阅的文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如何更改此值。
 
-**适用范围：** SQL Server 2016 R Services, Enterprise Edition
+**适用范围：** SQL Server 2016 R Services，企业版
 
 ## <a name="r-script-execution-issues"></a>R 脚本执行问题
 
@@ -216,7 +215,7 @@ SQL Server 2016 计算上下文中运行 R 代码时，它们可能会看到以�
 
 如果 SQL Server 实例已安装到非默认位置，如外部`Program Files`文件夹中，当您尝试运行安装包的脚本时引发 ACCESS_DENIED 警告。 例如：
 
-> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1":访问被拒绝*
+> *在`normalizePath(path.expand(path), winslash, mustWork)`： 路径 [2] ="~ExternalLibraries/R/8/1":访问被拒绝*
 
 原因是 R 函数尝试读取该路径，且如果失败的内置用户组**SQLRUserGroup**，不具有读取访问权限。 引发的警告不会阻止执行当前的 R 脚本，但警告可能会重复发生，每当用户在运行任何其他 R 脚本。
 
@@ -252,7 +251,7 @@ Ia 在即将推出的服务的版本中解决此问题。 解决此问题，请�
 
 此问题已在 SQL Server 2016 Service Pack 1 中解决。 我们建议您升级到最新的服务版本。
 
-**适用范围：** SQL Server 2016 R Services RTM version
+**适用范围：** SQL Server 2016 R Services RTM 版本
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5.在 SQL Server 计算环境中读取数据时，无法更改列类型
 
@@ -522,7 +521,7 @@ go
 
 SQLite ODBC 驱动程序修订版 0.92 与 RevoScaleR 不兼容。 修订版 0.88-0.91 和 0.93 和更高版本已知兼容。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)
 

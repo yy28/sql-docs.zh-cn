@@ -2,19 +2,18 @@
 title: 硬件安装的分析平台系统 |Microsoft Docs
 description: 本文介绍如何移动、 解压缩，并安装 SQL Server PDW 设备硬件。 本文仅供参考，旨在帮助您了解过程。 应解压缩、 安装，并且它移交给您之前，请验证你的设备。 客户参与是所必需的项，例如数据中心的访问权限、 电源和以太网连接。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c864a560bb37d27a5bb8ef306ac66815e8b5149c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960877"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>分析平台系统设备的硬件安装
 本文介绍如何移动、 解压缩，并安装 SQL Server PDW 设备硬件。 本文仅供参考，旨在帮助您了解过程。 应解压缩、 安装，并且它移交给您之前，请验证你的设备。 客户参与是所必需的项，例如数据中心的访问权限、 电源和以太网连接。  
@@ -22,7 +21,7 @@ ms.locfileid: "63157323"
 ## <a name="BeforeMoving"></a>之前从码头移动任何组件  
 移动、 解压缩，或机架的任何设备组件之前，请执行以下任务。  
   
-|任务|Description|  
+|任务|描述|  
 |--------|---------------|  
 |验证所有组件均已都到达|使用材料清单 (BOM) 可验证所有组件已送达以及在你的数据中心的接收停靠在其托盘上。|  
 |验证数据中心满足所有要求的设备|首先查看硬件规范和电缆线路 IHV 所提供的关系图，此任务。 接下来的步骤提供有关机架的具体信息空间和连接要求。|  
@@ -42,7 +41,7 @@ ms.locfileid: "63157323"
 >   
 > 永远不会尝试提升或移动设备节点或其他大量组件而无需协助或正确的设备。 有关每个组件的权重信息联系 IHV，以便您可以事先确定哪些帮助、 设备和需要以安全地在不造成损害的情况下处理每个组件的工具。  
   
-|任务|Description|  
+|任务|描述|  
 |--------|---------------|  
 |验证该货盘是级别|在开始移动或解压缩该货盘之前，请确保它是在级别地面上。|  
 |Unbolt 托盘中的节点|从开始在托盘的顶部，unbolt 从该货盘的顶级节点。|  
@@ -54,7 +53,7 @@ ms.locfileid: "63157323"
 ## <a name="AfterMoving"></a>安装其他组件  
 使用以下清单来安装其他组件。  
   
-|任务|Description||  
+|任务|描述||  
 |--------|---------------|-|  
 |解包和网络交换机和 Pdu 的机架|使用机架关系图将网络交换机和 Pdu 放置在机架中的适当位置。||  
 |连接根据电缆标签 Infiniband 和以太网电缆|请参阅缆线连接图。 每个网络指定它需要连接每一端具有标签。||  

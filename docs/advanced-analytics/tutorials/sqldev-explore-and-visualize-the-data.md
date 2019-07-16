@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99c96c860d2862b059077326be4f4fe313491cd3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 07a0ce0688e56f0d7b2edac5cdbc87116c75d5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961913"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "58511230"
   
 -   每条费用记录都包括付费信息，如付款类型、总付款和小费金额。
   
--   最后三列可用于各种机器学习任务。 _提示\_量_列包含连续数值，并可用作**标签**回归分析。 tipped 列只有是/否值，用于二元分类。 _提示\_类_列中有多个**类标签**并因此可以在该标签用于多类分类任务。
+-   最后三列可用于各种机器学习任务。 _提示\_量_列包含连续数值，并可用作**标签**回归分析。 tipped 列只有是/否值，用于二元分类。  _提示\_类_列中有多个**类标签**并因此可以在该标签用于多类分类任务。
   
     本演练只演示了二元分类任务；欢迎尝试构建其他两个机器学习任务、回归和多级分类的模型。
   

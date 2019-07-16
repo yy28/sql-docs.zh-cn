@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 59ae73cf8ef704c214c6bfc530216d849987705b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fbf22e7fd5db0a3af1128386940571c9fb0d30b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045773"
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>PropertyName 属性（SqlServiceAdvancedProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51677736"
 object.PropertyName [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

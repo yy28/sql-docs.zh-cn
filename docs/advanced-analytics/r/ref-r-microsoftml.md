@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e3dc94026f90ef769abb3889a716b5dadb317c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962505"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML （SQL Server 中的 R 库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "67140487"
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更高版本](https://docs.microsoft.com/machine-learning-server/)
-+ [Microsoft R client](set-up-a-data-science-client.md)
++ [Microsoft R 客户端](set-up-a-data-science-client.md)
 
 > [!NOTE]
 > 完整的产品发布版本是 Windows 限、 从 SQL Server 2017 开始。 针对 Linux 支持**MicrosoftML**中的新[SQL Server 2019 预览版](../../linux/sql-server-linux-setup-machine-learning.md)。
@@ -55,7 +54,7 @@ ms.locfileid: "67140487"
 
 ## <a name="1-machine-learning-algorithms"></a>1 机器学习算法
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | FastRank，MART 渐进提升算法的有效实现一个实现。  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | 随机林和分位回归林实现使用[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)。  |
@@ -69,7 +68,7 @@ ms.locfileid: "67140487"
 
 ## <a name="2-transformation-functions"></a>2 转换函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | 若要从多个列创建单列矢量值的转换。  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | 创建分类转换使用字典的指示器向量。  |
@@ -87,7 +86,7 @@ ms.locfileid: "67140487"
 
 ## <a name="3-scoring-and-training-functions"></a>3 评分和培训函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | 从 SQL Server，使用存储的过程或从 R 代码启用实时评分，以提供要快得多的预测性能，请运行评分的库。|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | 将数据从输入的数据集到输出数据集的转换。|
@@ -96,7 +95,7 @@ ms.locfileid: "67140487"
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>用于分类和回归的 4 丢失函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 指数分类损失函数的规范。 | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 日志分类损失函数的规范。  |
@@ -107,14 +106,14 @@ ms.locfileid: "67140487"
 
 ## <a name="5-feature-selection-functions"></a>5 功能选择函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | 计数模式中的功能选择的规范。 |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | 互信息模式中的功能选择的规范。 |
 
 ## <a name="6-ensemble-modeling-functions"></a>6 系综建模函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | 创建包含的函数名称和参数来训练具有的快速树模型的列表[rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble)。|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | 创建包含的函数名称和参数来训练具有的快速林模型的列表[rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble)。|
@@ -124,14 +123,14 @@ ms.locfileid: "67140487"
 
 ## <a name="7-neural-networking-functions"></a>7 神经网络函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | 指定用于优化算法[rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)机器学习算法。|
 
 
 ## <a name="8-package-state-functions"></a>8-包状态函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | 环境对象用于存储包范围的状态。 |
 
@@ -150,7 +149,7 @@ library(RevoScaleR);
 logisticRegression(args);
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [R 教程](../tutorials/sql-server-r-tutorials.md)
 + [了解如何使用计算上下文](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

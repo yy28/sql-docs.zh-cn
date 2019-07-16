@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c8e8ad13ddc34148f1718b7843e00545cd758c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962097"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R 和 Python 中的 SQL Server 机器学习教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,7 +65,7 @@ SQL Server 上支持与其他 Microsoft 产品中的等效语言支持的 R 和 
 
 这些示例和演示 SQL Server 和 R Server 开发团队提供的突出显示您可以在实际应用程序中使用嵌入式的分析方法。
 
-| 链接 | Description | 
+| 链接 | 描述 | 
 |------|-------------|
 | [执行客户使用 R 和 SQL Server 聚类分析](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 使用为客户分段基于销售数据的非监督式的学习。 此示例使用 Microsoft R 中的可缩放的 rxKmeans 算法来生成聚类分析模型。 |
 | [执行客户使用 Python 和 SQL Server 聚类分析](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | 了解如何使用 k 均值算法执行无人监督聚类分析的客户。 此示例中使用 Python 语言中的数据库。| SQL Server 2017 |

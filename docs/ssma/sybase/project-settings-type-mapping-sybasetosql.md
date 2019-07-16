@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028658"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置（类型映射）(SybaseToSQL)
 类型映射页**项目设置**对话框中包含自定义 SSMA 将 Sybase Adaptive Server Enterprise (ASE) 数据类型的转换设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
@@ -59,14 +58,14 @@ ms.locfileid: "62667917"
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char varying[\*..8000]**|**varchar[\*]**|  
-|**char varying[8001..\*]**|**varchar(max)**|  
+|**char varying [\*...8000]**|**varchar[\*]**|  
+|**char varying [8001...\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**不同的字符**|**varchar**|  
-|**character varying[\*..8000]**|**varchar[\*]**|  
-|**character varying[8001..\*]**|**varchar(max)**|  
+|**不同的字符 [\*...8000]**|**varchar[\*]**|  
+|**不同的字符 [8001...\*]**|**varchar(max)**|  
 |**character[\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
@@ -99,11 +98,11 @@ ms.locfileid: "62667917"
 |**不同的区域字符集 [\*...4000]**|**nvarchar[\*]**|  
 |**不同的区域字符集 [4001...\*]**|**nvarchar(max)**|  
 |**国家/地区 varchar**|**nvarchar**|  
-|**national varchar[\*..4000]**|**nvarchar[\*]**|  
-|**national varchar[4001..\*]**|**nvarchar(max)**|  
+|**国家/地区 varchar [\*...4000]**|**nvarchar[\*]**|  
+|**国家/地区 varchar [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**不同的 nchar**|**nvarchar**|  
-|**nchar varying[\*..4000]**|**nvarchar[\*]**|  
+|**不同的 nchar [\*...4000]**|**nvarchar[\*]**|  
 |**nchar varying[4001..\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
@@ -134,7 +133,7 @@ ms.locfileid: "62667917"
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
 |**无符号的 bigint**|**numeric[20][0]**|  
-|**无符号的整数**|**bigint**|  
+|**unsigned int**|**bigint**|  
 |**无符号的 smallint**|**int**|  
 |**无符号的 tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  

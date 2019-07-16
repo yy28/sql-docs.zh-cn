@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5915102164afccd8e2055e14d0ef9d63b2cf5937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949696"
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示在其中的一种方法的成员[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)可以聚合或"累加起来。" 维度可以针对一个或多个层次结构进行聚合。  
@@ -39,13 +38,13 @@ ms.locfileid: "66709145"
   
  **属性**集合包含提供程序提供的属性。 下表列出了可能可用的属性。 实际的属性列表可能不同的提供程序实现根据。 请参阅可用属性的更完整的列表为提供程序的文档。  
   
-|“属性”|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |AllMember|在层次结构中汇总的最高级别成员。|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  
 |DefaultMember|此层次结构的默认成员唯一名称。|  
-|Description|在层次结构有意义的说明。|  
+|描述|在层次结构有意义的说明。|  
 |DimensionType|此层次结构所属的维度的类型。|  
 |DimensionUniqueName|明确的维度的名称。|  
 |HierarchyCaption|与层次结构关联的标签或标题。|  

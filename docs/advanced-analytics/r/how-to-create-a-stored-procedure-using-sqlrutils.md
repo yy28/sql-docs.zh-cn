@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 014fb8344a0b2cf93dc7f375fffc717663f53a46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9519356bcd4add6887cf5ff41c754583607d1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962659"
 ---
 # <a name="create-a-stored-pprocedure-using-sqlrutils"></a>创建使用 sqlrutils 存储的 pProcedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "62641842"
 
 如果输入类型不是上述类型之一，则需进行序列化并作为 *raw*传入函数。 在这种情况下，该函数还必须包括要反序列化输入的代码。
 
-### <a name="outputs"></a>输出
+### <a name="outputs"></a>outputs
 
 该函数可输出以下项之一：
 
@@ -65,7 +64,7 @@ ms.locfileid: "62641842"
 
 R 对象时进行调用的每个函数，创建，你将更高版本作为参数传递到`StoredProcedure`，以创建完整的存储的过程。
 
-### <a name="outputs"></a>输出
+### <a name="outputs"></a>outputs
 
 **sqlrutils**转换 R 对象等所需的 SQL Server data.frame 还列出了为提供多个功能。
 如果函数直接输出数据帧，并未先将其包装到列表中，则可跳过此步骤。

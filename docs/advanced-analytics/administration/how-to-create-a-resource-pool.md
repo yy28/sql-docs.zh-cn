@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f180f6223f255734f353348c0d5fef58d19b0cbd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3f032a9e2a60a0428a2aac76ae8c3ee6baa62775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963154"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中创建用于机器学习的资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "58512084"
 
     **示例结果**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|默认值|0|100|0|100|100|0|0|
 
@@ -50,7 +49,7 @@ ms.locfileid: "58512084"
 
     **示例结果**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|默认值|100|20|0|2|
  
@@ -62,13 +61,13 @@ ms.locfileid: "58512084"
 
 ## <a name="modify-server-resource-usage"></a>修改服务器资源用量
 
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中运行以下语句，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存用量限制为“最大服务器内存”设置中的值的 **60%**。
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中运行以下语句，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存用量限制为“最大服务器内存”设置中的值的 **60%** 。
 
     ```sql
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  同样，请运行以下语句，将外部进程的内存用量限制为计算机资源总量的 **40%**。
+2.  同样，请运行以下语句，将外部进程的内存用量限制为计算机资源总量的 **40%** 。
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);
@@ -160,7 +159,7 @@ ms.locfileid: "58512084"
 
     **示例结果**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|内部|Medium|25|0|0|0|0|1|2|
     |2|默认值|Medium|25|0|0|0|0|2|2|
@@ -174,7 +173,7 @@ ms.locfileid: "58512084"
 
     **示例结果**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|默认值|100|20|0|2|
     |256|ds_ep|100|40|0|1|
@@ -189,7 +188,7 @@ ms.locfileid: "58512084"
   
      在本例中，由于池是使用 AUTO 相关性创建的，因此未显示任何信息。 有关详细信息，请参阅 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 有关管理服务器资源的详细信息，请参阅：
 

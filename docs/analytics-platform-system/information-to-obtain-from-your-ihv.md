@@ -2,19 +2,18 @@
 title: 从 IHV-分析平台系统中获取信息 |Microsoft Docs
 description: 若要从有关分析平台系统 appliance IHV 中获取的信息。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 57b61ed7741bc6d36b7531a62416893e7cc10fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 016a20567968e45456be79c8c67e77d7c3fbb2bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960837"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>若要从 IHV 中获取的信息
 当独立硬件供应商 (IHV) 为您提供新的 SQL Server PDW 设备时，它们还将提供它们在你的设备上执行的设备硬件和配置信息。 你将需要此信息来管理你的设备。  

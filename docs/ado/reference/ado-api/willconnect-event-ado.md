@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01b5c20668f97c80ae5abdcbb213914c012c7359
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945850"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**连接开始之前，将调用事件。  
   
- **适用于：**[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **适用于：** [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>语法  
   

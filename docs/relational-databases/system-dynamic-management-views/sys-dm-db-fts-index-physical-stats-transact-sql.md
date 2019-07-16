@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_fts_index_physical_stats (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e80aef6d8a0ee33aa7a9a0d9bb71abc3ddf1e15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c783eaf32e0f1ca37e14022ab981864747ca171
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004925"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62742017"
 ||||  
 |-|-|-|  
 |**列名**|**类型**|**说明**|  
-|**object_id**|ssNoversion|包含索引的表的对象 ID。|  
+|**object_id**|INT|包含索引的表的对象 ID。|  
 |**fulltext_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
 |**keyphrase_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
 |**similarity_index_page_count**|**bigint**|提取的逻辑大小（用索引页数表示）。|  
@@ -54,7 +53,7 @@ ms.locfileid: "62742017"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
 
 ## <a name="examples"></a>示例  
  下面的示例说明如何查询关联有全文或语义索引的每个表中的每个全文或语义索引的逻辑大小。  

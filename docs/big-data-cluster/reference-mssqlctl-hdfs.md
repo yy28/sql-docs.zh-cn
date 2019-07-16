@@ -5,17 +5,16 @@ description: Mssqlctl hdfs 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957918"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -28,11 +27,11 @@ ms.locfileid: "67728528"
 | --- | --- |
 [mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | HDFS shell 是 HDFS 文件系统的交互的简单命令 shell。
 [mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | 列出给定的文件或目录的状态。
-[mssqlctl hdfs exists](#mssqlctl-hdfs-exists) | 确定文件或目录是否存在。  返回存在则为 True 和 False 否则为。
+[mssqlctl hdfs 存在](#mssqlctl-hdfs-exists) | 确定文件或目录是否存在。  返回存在则为 True 和 False 否则为。
 [mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | 在指定的路径创建一个目录。
 [mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | 将指定的文件或路径移动到指定位置。
-[mssqlctl hdfs create](#mssqlctl-hdfs-create) | 在指定位置创建的文本文件。  可以通过数据参数添加简单的文本内容。
-[mssqlctl hdfs read](#mssqlctl-hdfs-read) | 读取文件的内容。  偏移量和长度 （字节） 是可选参数。
+[mssqlctl hdfs 创建](#mssqlctl-hdfs-create) | 在指定位置创建的文本文件。  可以通过数据参数添加简单的文本内容。
+[读取 mssqlctl hdfs](#mssqlctl-hdfs-read) | 读取文件的内容。  偏移量和长度 （字节） 是可选参数。
 [mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | 删除文件或目录。
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | 以递归方式删除文件或目录。
 [mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | 更改指定的文件或目录的权限。

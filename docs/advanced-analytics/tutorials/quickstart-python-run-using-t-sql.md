@@ -7,20 +7,19 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: a2d0987441f8f26304590f5ccbde15a2e15cf3c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962067"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入门：SQL Server 中的"hello world"Python 脚本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本快速入门教程，了解关键概念，通过运行"Hello World"Python 脚本 inT SQL，简介**sp_execute_external_script**系统存储过程。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 上一个快速入门中， [SQL Server 中存在验证 Python](quickstart-python-verify.md)、 提供的信息和链接设置为本快速入门所需的 Python 环境。
 

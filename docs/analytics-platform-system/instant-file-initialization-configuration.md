@@ -2,19 +2,18 @@
 title: 配置分析平台系统的即时文件初始化-|Microsoft Docs
 description: 在分析平台系统上配置即时文件初始化。 即时文件初始化功能允许数据文件操作，以更快地运行的 SQL Server 功能。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960736"
 ---
 # <a name="instant-file-initialization-configuration"></a>即时文件初始化配置
 即时文件初始化功能允许数据文件操作，以更快地运行的 SQL Server 功能。 选中的复选框以启用即时文件初始化会提高性能的 SQL Server PDW。 但是，如果这会带来安全风险，业务，然后取消选中框。  

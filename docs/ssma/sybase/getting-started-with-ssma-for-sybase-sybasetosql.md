@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029121"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>开始使用 SSMA 有关 SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 的 SAP ASE 可让您快速转换到 SAP Adaptive Server Enterprise (ASE) 的数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库架构上传到生成的架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库，并将数据从迁移为 SAP ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库。  
@@ -93,7 +92,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
 ### <a name="menus"></a>菜单  
 SSMA 包含以下菜单：  
   
-|菜单|Description|  
+|菜单|描述|  
 |--------|---------------|  
 |**File**|包含用于处理项目、 连接到 SAP ASE 和连接到命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库。|  
 |**编辑**|包含用于查找和使用中的详细信息页面，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL 的详细信息窗格中。 此外包含**管理书签**选项，其中可以看到一个现有书签列表。 可以使用对话框右侧的按钮来管理书签。|  
@@ -109,6 +108,6 @@ SSMA 包含以下菜单：
   
 -   错误列表窗格可以进行排序的列表中显示错误、 警告和信息性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [SAP ASE 数据库迁移到 SQL Server-Azure SQL 数据库&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [用户界面参考&#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

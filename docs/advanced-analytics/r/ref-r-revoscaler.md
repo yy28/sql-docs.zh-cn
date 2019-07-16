@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3745c6cd8c340ce4ad89cac84c5b6286126e3f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0691508ff3be52a4af744c1167ca799f8d23050
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962487"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR （SQL Server 中的 R 库）
 
@@ -38,7 +37,7 @@ RevoScaleR 充当用于分布式的数据科学平台。 例如，您可以使�
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更高版本](https://docs.microsoft.com/machine-learning-server/)
-+ [Microsoft R client](set-up-a-data-science-client.md)
++ [Microsoft R 客户端](set-up-a-data-science-client.md)
 
 > [!NOTE]
 > 完整的产品发布版本是 Windows 限、 从 SQL Server 2017 开始。 针对 Linux 支持**RevoScaleR**中的新[SQL Server 2019 预览版](../../linux/sql-server-linux-setup-machine-learning.md)。
@@ -53,7 +52,7 @@ RevoScaleR 充当用于分布式的数据科学平台。 例如，您可以使�
 
 SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和 R 数据类型之间的映射的列表，请参阅[R 到 SQL 数据类型](r-libraries-and-data-types.md)。
 
-| 函数| Description|
+| 函数| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  创建将计算推送到远程实例的 SQL Server 计算上下文对象。 多个**RevoScaleR**函数采用作为自变量的计算上下文。 |
 |[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 获取或设置活动计算上下文。 |
@@ -68,7 +67,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 
 如果必须在实例和数据库的必要权限的情况下，可以从 R 执行 DDL 语句。 以下函数使用 ODBC 调用执行 DDL 语句或检索数据库架构。
 
-| 函数| Description|
+| 函数| 描述|
 | ------- | ---------- |
 | [rxSqlServerTableExists 和 rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | 删除[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]表，或检查是否存在的数据库表或对象。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | 执行数据定义语言 (DDL) 命令，它定义或处理数据库对象。 此函数不能返回的数据，并仅用于检索或修改的对象架构或元数据。|
@@ -77,7 +76,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 
 创建数据源对象后，可以使用对象来将数据加载到其中，转换数据，或将新数据写入到指定的目标。 你还可以根据源中的数据大小将批大小定义为数据源的一部分，并成块移动数据。
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 检查数据源是否可用，请打开或关闭数据源、 从源读取数据、 将数据写入到目标，并关闭数据源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 将数据数据从源分片移动到文件存储或数据帧。|
@@ -87,7 +86,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 
 ## <a name="3-graphing-functions"></a>3 绘图函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |从数据创建直方图。 | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |从数据创建线图。 | 
@@ -98,7 +97,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 
 ## <a name="4-descriptive-statistics"></a>4 描述性统计信息
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |计算近似分位数的.xdf 文件和数据帧而不进行排序。 | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |数据，包括按组进行计算的基本摘要统计信息。 写入到不受支持的.xdf 文件组计算的。 | 
@@ -119,7 +118,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 
 ## <a name="5-prediction-functions"></a>5 预测函数
 
-| 函数名称 | Description |
+| 函数名称 | 描述 |
 |---------------|-------------|
 |[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |适合于数据的线性模型。 | 
 |[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |适合于数据的逻辑回归模型。 | 
@@ -147,7 +146,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 
 当你准备好将封装在存储过程中，R 脚本[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，我们建议为清晰地定义了输入和输出的单个函数重写代码。 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [R 教程](../tutorials/sql-server-r-tutorials.md)
 + [了解如何使用计算上下文](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

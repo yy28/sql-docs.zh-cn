@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7542f7619a261a07349c5c55b01a10042ee16bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033079"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>数据库镜像见证服务器目录视图-sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47715645"
   
   在数据库镜像会话中，执行自动故障转移需要使用见证服务器。 理想状况是，见证服务器驻留在与主体服务器和镜像服务器分离的单独的计算机上。 见证服务器不为数据库提供服务。 相反，它会监视主体服务器和镜像服务器的状态。 如果主体服务器出现故障，见证服务器可能会启动自动故障转移到镜像服务器。 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库镜像会话中数据库的两个副本的名称。|  
 |**principal_server_name**|**sysname**|伙伴服务器的名称，该服务器的数据库副本当前是主体数据库。|  
@@ -52,7 +51,7 @@ ms.locfileid: "47715645"
 |**partner_sync_state**|**tinyint**|镜像会话的同步状态：<br /><br /> 5 = 伙伴已同步。 可以进行故障转移。 了解有关故障转移，请参阅要求[角色数据库镜像会话期间切换&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。<br /><br /> 6 = 伙伴未同步。 现在无法进行故障转移。|  
 |**partner_sync_state_desc**|**nvarchar(60)**|镜像会话同步状态的说明：<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

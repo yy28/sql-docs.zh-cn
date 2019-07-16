@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a58fbca8f9b47e271881f636cabfc0e54a528e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933014"
 ---
 # <a name="error-object-properties-methods-and-events"></a>错误对象属性、方法和事件
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
  [Description 属性](../../../ado/reference/ado-api/description-property.md)  
   
  [HelpContext、HelpFile 属性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)  
@@ -37,7 +36,7 @@ ms.locfileid: "66719290"
 ## <a name="methods"></a>方法  
  无。  
   
-## <a name="events"></a>事件  
+## <a name="events"></a>Events  
  无。  
   
 ## <a name="see-also"></a>请参阅  

@@ -7,20 +7,19 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961811"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>生成 R 模型并保存到 SQL Server （演练）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在此步骤中，了解如何生成机器学习模型并将模型保存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 通过保存模型时，你可以调用它直接从[!INCLUDE[tsql](../../includes/tsql-md.md)]使用系统存储过程的代码[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)或[PREDICT (T-SQL) 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 此步骤假定正在进行 R 会话基于本演练中之前的步骤。 它使用这些步骤中创建的连接字符串和数据源对象。 使用以下工具和包来运行脚本。
 
@@ -204,7 +203,7 @@ GO
 
 生成一个模型并已确定其运行良好之后，你可能想要将其部署到使用该模型，或可能是重新训练和重新校准定期模型用户或组织中的人员可以在此处进行的站点。 此过程有时称为*实施*模型。 在 SQL Server 中，操作化是通过将 R 代码嵌入在存储过程中实现的。 代码驻留在该过程，因为它可以从任何应用程序可以连接到 SQL Server 调用。
 
-从外部应用程序中调用模型之前，你必须将模型保存到用于生产的数据库。 训练的模型存储在类型的单个列中的二进制格式**varbinary （max)**。
+从外部应用程序中调用模型之前，你必须将模型保存到用于生产的数据库。 训练的模型存储在类型的单个列中的二进制格式**varbinary （max)** 。
 
 典型的部署工作流包括以下步骤：
 

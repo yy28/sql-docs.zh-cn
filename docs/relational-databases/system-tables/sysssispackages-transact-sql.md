@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e25d69b4ba7887d20ef86ff771a3f10864ddbd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029640"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +30,9 @@ ms.locfileid: "65489799"
   保存到的每个包中对应一行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此表存储中**msdb**数据库。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|包的唯一标识符。|  
+|**name**|**sysname**|包的唯一标识符。|  
 |**id**|**uniqueidentifier**|包的 GUID。|  
 |**description**|**nvarchar**|包的可选说明。|  
 |**createdate**|**datetime**|包的创建日期。|  

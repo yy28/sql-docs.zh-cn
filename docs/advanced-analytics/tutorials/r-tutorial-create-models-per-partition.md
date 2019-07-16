@@ -8,14 +8,13 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b176cf4aa50292c3b3968107ded5fcdd3533d8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e2cbffcab6fd34d08e8338522e8dcc97ac50f4c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961975"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 上的 R 中创建基于分区的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "59582128"
 
 + SQL Server 2019 预览版数据库引擎实例中使用机器学习服务和 R 集成。
 
-检查版本，通过执行**`SELECT @@Version`** 作为查询工具中的 T-SQL 查询。 输出应为"Microsoft SQL Server 2019 (CTP 2.4)-15.0.x"。
+检查版本，通过执行 **`SELECT @@Version`** 作为查询工具中的 T-SQL 查询。 输出应为"Microsoft SQL Server 2019 (CTP 2.4)-15.0.x"。
 
 检查可用性的 R 包通过返回格式正确的数据库引擎实例与当前安装的所有 R 包列表：
 
@@ -173,7 +172,7 @@ GO
 默认情况下，查询优化器倾向于使用您在运行 **@parallel= 1**对表具有 256 个以上的行，但如果可以处理此显式设置 **@parallel= 1**这中所示脚本。
 
 > [!Tip]
-> 可以使用培训 workoads **@parallel**任何任意训练脚本，甚至包括那些使用非 Microsoft rx 算法。 通常情况下，仅 RevoScaleR 算法 （与 rx 前缀） 产品/服务中 SQL Server 中的培训方案的并行度。 但使用新参数，您可以并行化调用函数，包括开放源代码 R 函数，不是专门设计，提供该功能的脚本。 这有效，因为分区具有关联到特定的线程，因此在每个分区模式中，在给定的线程上执行所有操作在脚本中调用。
+> 可以使用培训 workoads **@parallel** 任何任意训练脚本，甚至包括那些使用非 Microsoft rx 算法。 通常情况下，仅 RevoScaleR 算法 （与 rx 前缀） 产品/服务中 SQL Server 中的培训方案的并行度。 但使用新参数，您可以并行化调用函数，包括开放源代码 R 函数，不是专门设计，提供该功能的脚本。 这有效，因为分区具有关联到特定的线程，因此在每个分区模式中，在给定的线程上执行所有操作在脚本中调用。
 
 <a name="training-step"></a>
 

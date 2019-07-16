@@ -7,13 +7,12 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e8b3122f4083d419797abeef5ff96944bac3e6a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e6063f8367e5b91e7e935d6f92515a6dd452dc56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963136"
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server 中机器学习的资源调控
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "58512984"
 > [!NOTE]
 > 不支持通过使用资源调控器快速启动板服务的直接管理。 快速启动板是一种受信任的服务，可以仅由 Microsoft 提供的宿主启动器。 受信任的启动器显式配置为避免消耗过多的资源。
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [管理机器学习集成](../r/managing-and-monitoring-r-solutions.md)
 + [为机器学习创建资源池](../r/how-to-create-a-resource-pool-for-r.md)

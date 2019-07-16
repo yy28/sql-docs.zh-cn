@@ -2,19 +2,18 @@
 title: Master 数据库的并行数据仓库 |Microsoft Docs
 description: 了解有关并行数据仓库中的 master 数据库。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960655"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 数据库的并行数据仓库
 SQL Server PDW 主数据库存储设备级登录名的信息和数据库目录。 它是 SQL Server master 数据库驻留在控制节点上。 在这种情况下，它提供类似的功能为 SQL Server PDW 如 master 提供对 SQL Server。  
@@ -42,7 +41,7 @@ SQL Server PDW 主数据库存储设备级登录名的信息和数据库目录�
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|任务|Description|  
+|任务|描述|  
 |--------|---------------|  
 |创建主节点的完整备份。|例如：<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />有关详细信息，请参阅[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)。|  
 |还原 master 数据库|若要还原 master 数据库，请使用[还原 Master 数据库](restore-the-master-database.md)配置管理器工具中的页。|  

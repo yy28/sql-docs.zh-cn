@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 829f924d8d4893d45a48c193cd27fdd7ac261e3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939715"
 ---
 # <a name="text-file-data-types"></a>文本文件数据类型
 下表显示了如何将文本数据类型映射到 ODBC SQL 数据类型。 请注意，并非所有 ODBC SQL 数据类型都支持 ODBC 文本驱动程序。  
@@ -40,7 +39,7 @@ ms.locfileid: "62633002"
   
  下表显示对文本数据类型的限制。  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |CHAR|创建零对 CHAR 列或未指定的长度实际上返回一个 255 bit 列。<br /><br /> 在带分隔符的文件，CHAR 列可能会或可能没有双引号分隔符开头和结尾;在固定长度的文件，作为分隔符不使用双引号引起来。|  
 |DATETIME|月-日-年 （例如，01-17-92）<br /><br /> MMM DD YY (例如，年 1 月-17-92)<br /><br /> DD-MMM-YY (例如，17 年 1 月 92)<br /><br /> 年-月-日 （例如，1992年-01-17）<br /><br /> 年-MMM-日 （例如，从 1992 年 1 月 17）<br /><br /> 在表中不允许混合的日期分隔符。<br /><br /> 文本 ISAM 格式取决于在 Windows 控制面板中的国际设置在美国或欧洲格式中，日期时间字段。|  

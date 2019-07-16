@@ -2,19 +2,18 @@
 title: 确定失败的群集节点的分析平台系统 |Microsoft Docs
 description: 本文介绍如何确定失败发生群集故障转移并引发了群集故障转移警报后 Analytics Platform System (APS) 节点的名称。 作为故障排除群集故障转移的一部分，必须确定联系 Microsoft 以帮助解决此问题之前失败的节点的名称。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c17fde577b71382cd3ee63b8c6f50818184eab0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961057"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>确定哪个群集节点的分析平台系统失败
 本主题介绍如何确定失败发生群集故障转移并引发了群集故障转移警报后 Analytics Platform System (APS) 节点的名称。 作为故障排除群集故障转移的一部分，必须确定联系 Microsoft 以帮助解决此问题之前失败的节点的名称。  

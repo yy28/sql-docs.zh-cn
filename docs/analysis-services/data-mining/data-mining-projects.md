@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210105"
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "57579377"
   
  在每个创建的数据挖掘项目中，您将执行以下步骤：  
   
-1.  选中一个“数据源” （如多维数据集、数据库、甚至 Excel 或文本文件），该数据源包含要用于生成模型的原始数据。  
+1.  选中一个“数据源”  （如多维数据集、数据库、甚至 Excel 或文本文件），该数据源包含要用于生成模型的原始数据。  
   
-2.  在数据源中定义用于分析的数据子集，并将其保存为“数据源视图” 。  
+2.  在数据源中定义用于分析的数据子集，并将其保存为“数据源视图”  。  
   
 3.  定义一个“挖掘结构”  以支持建模。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "57579377"
   
  根据您的需要，可以在单个项目中合并多个模型，或者为每个模型类型或分析任务创建单个项目。  
   
- 完成创建结构或模型之后，通过生成数据数学模型的算法来运行数据源视图中的数据“处理”  每个模型。 此过程也称为“对模型定型 ”。 有关详细信息，请参阅[处理要求和注意事项（数据挖掘）](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
+ 完成创建结构或模型之后，通过生成数据数学模型的算法来运行数据源视图中的数据“处理”  每个模型。 此过程也称为“对模型定型  ”。 有关详细信息，请参阅[处理要求和注意事项（数据挖掘）](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   
  处理模型之后，可以用可视化方式浏览挖掘模型，并创建针对该模型的预测查询。 如果已缓存来自定型过程的数据，则可以使用“钻取”  查询返回有关在模型中使用的事例的详细信息。  
   

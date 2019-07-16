@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a34cdf743ff0bcecbb4b3088d99efdf3bbfef744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938160"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ FROM <existing model>
   
  **WITH DRILLTHROUGH**子句可以对新的挖掘模型钻取功能。 只有在创建模型时，才能启用钻取功能。  
   
-## <a name="example-1-altering-the-parameters-of-the-model"></a>示例 1：更改模型参数  
+## <a name="example-1-altering-the-parameters-of-the-model"></a>示例 1：更改模型的参数  
  下面的示例创建新的挖掘模型基于现有挖掘模型， `TM_Clustering`，这在创建[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
   
 ```  
@@ -62,7 +61,7 @@ USING [Microsoft_Clustering] (CLUSTER_COUNT = 5)
 FROM [TM Clustering]  
 ```  
   
-## <a name="example-2-adding-a-filter-to-the-model"></a>示例 2：向模型中添加筛选器  
+## <a name="example-2-adding-a-filter-to-the-model"></a>示例 2：向模型添加筛选器  
  下面的示例基于现有挖掘模型创建一个新挖掘模型，并向其中添加了一个筛选器。 筛选器将定型数据限制为居住在特定区域的客户。  
   
 ```  

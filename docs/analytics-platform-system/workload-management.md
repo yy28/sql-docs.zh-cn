@@ -2,19 +2,18 @@
 title: 分析平台系统中的工作负荷管理 |Microsoft Docs
 description: 分析平台系统中的工作负荷管理。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959741"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
 
@@ -58,7 +57,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>资源类说明  
 下表描述了资源类和其系统资源分配。  
   
-|资源类|请求重要性|最大内存使用情况 *|并发槽数 (最大 = 32)|Description|  
+|资源类|请求重要性|最大内存使用情况 *|并发槽数 (最大 = 32)|描述|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |默认值|Medium|400 MB|1|默认情况下，每个登录名被允许的少量内存和并发为其请求的资源。<br /><br />当一个登录名添加到资源类时，新类将优先。 当所有资源类中删除的登录名时，该登录名会还原为默认资源分配。|  
 |MediumRC|Medium|1200 MB|3|可能需要中等资源类的请求的示例：<br /><br />CTAS 操作具有大型的哈希联接。<br /><br />选择需要更多内存来避免缓存到磁盘的操作。<br /><br />将数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织聚集列存储索引的较小的表具有 10-15 列。|  
@@ -127,7 +126,7 @@ SQL 语句和资源类控制的操作：
   
 -   使用加载数据**dwloader**。  
   
--   INSERT-SELECT  
+-   INSERT SELECT  
   
 -   UPDATE  
   

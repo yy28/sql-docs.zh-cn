@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 634fbc4ddd96fd407aa124c98ae2b55897edaa71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6adf267137533d7436349de5a42e8552072216bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942568"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为数据库中的每个证书返回一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|证书的名称。 在该数据库中是唯一的。|  
+|**name**|**sysname**|证书的名称。 在该数据库中是唯一的。|  
 |**certificate_id**|**int**|证书的 ID。 在该数据库中是唯一的。|  
 |**principal_id**|**int**|拥有此证书的数据库主体的 ID。|  
 |**pvt_key_encryption_type**|**char(2)**|私钥加密方式。<br /><br /> NA = 证书没有私钥<br /><br /> MK = 使用主密钥加密私钥<br /><br /> PW = 使用用户定义的密码加密私钥<br /><br /> SK = 使用服务主密钥加密私钥。|  
@@ -48,8 +47,8 @@ ms.locfileid: "52391215"
 |**subject**|**nvarchar(4000)**|此证书的主题。|  
 |**expiry_date**|**datetime**|证书的过期时间。|  
 |**start_date**|**datetime**|证书生效的时间。|  
-|**指纹**|**varbinary(32)**|证书的 SHA-1 哈希。 SHA-1 哈希在全局内唯一。|  
-|**attested_by**|nvarchar(260)|仅供系统使用。|  
+|**thumbprint**|**varbinary(32)**|证书的 SHA-1 哈希。 SHA-1 哈希在全局内唯一。|  
+|**attested_by**|nvarchar(260) |仅供系统使用。|  
 |pvt_key_last_backup_date|**datetime**|日期和时间上一次导出证书的私钥。|  
   
 ## <a name="permissions"></a>权限  

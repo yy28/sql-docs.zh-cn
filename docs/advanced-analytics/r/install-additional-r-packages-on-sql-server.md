@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962629"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +89,7 @@ R 和 Python 功能包括在多个 Microsoft 产品，所有这些无法同时�
 
 安装到 r_server LIBRARY 库的包仅由独立服务器和 SQL Server （数据库内） 实例无法访问。 始终使用`R_SERVICES`库安装你想要使用 SQL Server 上数据库中的包时。 有关路径的详细信息，请参阅[包库位置](../package-management/default-packages.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)
 + [教程、示例、解决方案](../tutorials/machine-learning-services-tutorials.md)

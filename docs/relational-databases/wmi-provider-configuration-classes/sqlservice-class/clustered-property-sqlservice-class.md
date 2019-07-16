@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b11a1d36686c1d97fe1afa2e9a092b4090ab7e85
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5052595dc30d0cb0959728f36f3e96acf96ab97d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929914"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 属性（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +34,8 @@ ms.locfileid: "51666296"
 object.Clustered [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

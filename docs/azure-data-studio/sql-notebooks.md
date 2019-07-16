@@ -10,13 +10,12 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959264"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -51,7 +50,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>SQL 内核
 
 笔记本，类似于我们的查询编辑器中的代码单元中，我们支持现代 SQL 编码的内置功能，例如丰富的 SQL 编辑器、 IntelliSense 和内置代码段简化日常任务的体验。 代码片段，可生成正确的 SQL 语法来创建数据库、 表、 视图、 存储的过程、 等，并更新现有数据库对象。 使用代码片段来快速创建开发或测试用途的数据库的副本并生成和执行脚本。
 
@@ -71,7 +70,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 查询结果
 
-![image20](media/sql-notebooks/pgsql-cell-results.png)
+![Image20](media/sql-notebooks/pgsql-cell-results.png)
 
 ### <a name="configure-python-for-notebooks"></a>适用于笔记本中配置 Python
 
@@ -83,12 +82,12 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|内核|Description
+|内核|描述
 |:-----|:-----
-| SQL Kernel | 编写针对关系数据库的 SQL 代码。
+| SQL 内核 | 编写针对关系数据库的 SQL 代码。
 |PySpark3 和 PySpark 内核| 编写使用 Spark 计算群集中的 Python 代码。
 |Spark 内核|编写使用 Spark 计算群集中的 Scala 和 R 代码。
-|Python Kernel|编写 Python 代码进行本地开发。
+|Python 内核|编写 Python 代码进行本地开发。
 
 `Attach to` 提供要附加的内核的上下文。 如果使用的 SQL 内核，然后，你可以`Attach to`任何 SQL Server 实例。
 
@@ -110,7 +109,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 Postg
 
 文本单元格外单击，则会显示 markdown 文本。
 
-![image10](media/sql-notebooks/notebook-markdown-preview.png)
+![Image10](media/sql-notebooks/notebook-markdown-preview.png)
 
 ### <a name="trusted-and-non-trusted"></a>受信任和非受信任
 
@@ -165,7 +164,7 @@ import <package-name>
 
 如果它返回`Module not Found`错误，然后单击**管理包**以启动向导体验。 
 
-![image17](media/sql-notebooks/manage-packages.png)
+![Image17](media/sql-notebooks/manage-packages.png)
 
 在此向导中，您将是一种能够看到**已安装**包。 您可以搜索列表和关联的每个包版本。 如果你需要**卸载**其中的任何包，然后您可以单击其中一个包，然后单击**卸载所选的包**选项。
 

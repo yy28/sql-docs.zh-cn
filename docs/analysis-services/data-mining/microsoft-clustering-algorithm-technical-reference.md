@@ -1,5 +1,5 @@
 ---
-title: Microsoft 聚类分析算法技术参考 |Microsoft 文档
+title: Microsoft 聚类分析算法技术参考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb86c8271599b56deb27fd3143fd205c11f52f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183117"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 聚类分析算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,12 +22,12 @@ ms.locfileid: "34018354"
   
  有关如何使用聚类分析模型的其他信息，请参阅下列主题：  
   
--   [群集模型 & #40; 挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft 聚类分析算法的实现  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法提供两种创建分类并为分类分配数据点的方法。 第一种方法是 *K-means* 算法，这是一种较难的聚类分析方法。 这意味着一个数据点只能属于一个分类，并会为该分类中的每个数据点的成员身份计算一个概率。 第二种方法是期望值最大化 (EM) 方法，这是软聚类分析方法。 这意味着一个数据点总是属于多个分类，并会为每个数据点和分类的组合计算一个概率。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法提供两种创建分类并为分类分配数据点的方法。 第一种方法是 *K-means* 算法，这是一种较难的聚类分析方法。 这意味着一个数据点只能属于一个分类，并会为该分类中的每个数据点的成员身份计算一个概率。 第二种方法是期望值最大化 (EM) 方法，这是软聚类分析方法。   这意味着一个数据点总是属于多个分类，并会为每个数据点和分类的组合计算一个概率。  
   
  可以通过设置 *CLUSTERING_METHOD* 参数来选择要使用的算法。 聚类分析的默认方法是可缩放的 EM。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34018354"
  有关介绍 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法中的 EM 的实现的技术报告，请参阅 [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)（针对大数据库对 EM (Expectation Maximization) 聚类分析进行扩展）。  
   
 ### <a name="k-means-clustering"></a>k-means 聚类分析  
- k-means 聚类分析是一种广为人知的方法，它通过尽量缩小一个分类中的项之间的差异，同时尽量拉大分类之间的距离，来分配分类成员身份。 k-means 中的 "means" 指的是分类的“中点”，它是任意选定的一个数据点，之后反复优化，直到真正代表该分类中的所有数据点的平均值。 "k" 指的是用于为聚类分析过程设种子的任意数目的点。 k-means 算法计算一个分类中的数据记录之间的欧几里得距离的平方，以及表示分类平均值的矢量，并在和达到最小值时在最后一组 k 分类上收敛。  
+ k-means 聚类分析是一种广为人知的方法，它通过尽量缩小一个分类中的项之间的差异，同时尽量拉大分类之间的距离，来分配分类成员身份。 k-means 中的 "means" 指的是分类的“中点”，它是任意选定的一个数据点，之后反复优化，直到真正代表该分类中的所有数据点的平均值。  "k" 指的是用于为聚类分析过程设种子的任意数目的点。 k-means 算法计算一个分类中的数据记录之间的欧几里得距离的平方，以及表示分类平均值的矢量，并在和达到最小值时在最后一组 k 分类上收敛。  
   
  k-means 算法仅仅将每个数据点分配给一个分类，并且不允许成员身份存在不确定性。 分类中的成员身份表示为与中点的距离。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34018354"
  k-means 算法提供两种对数据集进行抽样的方法：不可缩放的 K-means 和可缩放的 k-means，前者加载整个数据集并创建一个聚类分析阶段，后者使用前 50,000 个事例，并仅仅在需要更多数据才能使模型很好地适合数据时读取更多事例。  
   
 ### <a name="updates-to-the-microsoft-clustering-algorithm-in-sql-server-2008"></a>在 SQL Server 2008 中对 Microsoft 聚类分析算法的更新  
- 在 SQL Server 2008 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的默认配置已更改为使用内部参数 NORMALIZATION = 1。 使用 z-score 统计信息执行规范化，并且假定正态分布。 默认行为中的这一更改旨在尽量减小可能具有很大量度和许多离群值的属性的影响。 但是，z-score 规范化可能会更改针对并非正态的分布（例如均匀分布）的聚类分析结果。 为了避免规范化和获取与 SQL Server 2005 中的 K-means 聚类分析算法相同的行为，可以使用“参数设置”对话框添加自定义参数 NORMALIZATION 并将其值设置为 0。  
+ 在 SQL Server 2008 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的默认配置已更改为使用内部参数 NORMALIZATION = 1。 使用 z-score 统计信息执行规范化，并且假定正态分布。 默认行为中的这一更改旨在尽量减小可能具有很大量度和许多离群值的属性的影响。 但是，z-score 规范化可能会更改针对并非正态的分布（例如均匀分布）的聚类分析结果。 为了避免规范化和获取与 SQL Server 2005 中的 K-means 聚类分析算法相同的行为，可以使用“参数设置”对话框添加自定义参数 NORMALIZATION 并将其值设置为 0。   
   
 > [!NOTE]  
 >  NORMALIZATION 参数是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的内部属性并且不受支持。 通常，建议在聚类分析模型中使用规范化以便改进模型结果。  
@@ -81,7 +81,7 @@ ms.locfileid: "34018354"
  CLUSTERING_METHOD  
  指定算法要使用的聚类分析方法。 有下列聚类分析方法可用：  
   
-|ID|方法|  
+|id|方法|  
 |--------|------------|  
 |1|可缩放 EM|  
 |2|不可缩放 EM|  
@@ -146,9 +146,9 @@ ms.locfileid: "34018354"
 ### <a name="modeling-flags"></a>建模标志  
  此算法支持下列建模标志。 在创建挖掘结构或挖掘模型时会定义建模标志。 建模标志指定在分析过程中如何处理每一列中的值。  
   
-|建模标志|Description|  
+|建模标志|描述|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|该列将被视为具有两个可能状态：“缺失”和“现有”。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
+|MODEL_EXISTENCE_ONLY|该列将被视为具有两个可能状态：Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
 |NOT NULL|此列中不能包含 Null 值。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
   
 ## <a name="requirements"></a>要求  
@@ -157,7 +157,7 @@ ms.locfileid: "34018354"
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法支持下表中列出的特定输入列和可预测列。 有关内容类型在用于挖掘模型中时的含义的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|连续、循环、离散、离散化、键、表和已排序|  
 |可预测属性|连续、循环、离散、离散化、表和已排序|  
@@ -165,9 +165,9 @@ ms.locfileid: "34018354"
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 聚类分析算法](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [聚类分析模型查询示例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [群集模型 & #40; 挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

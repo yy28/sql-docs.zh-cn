@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f69acfa84272e73bcafb370eb85c6a14614a367c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938530"
 ---
 # <a name="dimension-object-ado-md"></a>维度对象 (ADO MD)
 表示多维数据集，其中包含一个或多个层次结构的成员的维度之一。  
@@ -39,12 +38,12 @@ ms.locfileid: "66709432"
   
  **属性**集合包含提供程序提供的属性。 下表列出了可能可用的属性。 实际的属性列表可能不同的提供程序实现根据。 请参阅可用属性的更完整的列表为提供程序的文档。  
   
-|“属性”|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  
 |DefaultHierarchy|默认层次结构的唯一名称。|  
-|Description|多维数据集的贴切描述。|  
+|描述|多维数据集的贴切描述。|  
 |DimensionCaption|标签或标题与维度相关联。|  
 |DimensionCardinality|维度中的成员数。|  
 |DimensionGUID|维度的 GUID。|  

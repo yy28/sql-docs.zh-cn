@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4e546aa56cf9831a0b519f5788359d8c58c41fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937970"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位信息
 从 Windows Server 2003 开始，Microsoft 操作系统必须支持 64 位 ODBC 库。 ODBC 标头和库首次随 MDAC 2.7 SDK 包含更改，以允许编程人员能够轻松地编写新的 64 位平台的代码。 通过确保您的代码使用下面列出的定义的 ODBC 类型，可以编译为 64 位和 32 位平台基于相同的源代码 **_WIN64**或**WIN32**宏。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 231d9ced5bf370b8ee7c507e930e6961cfbed5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924949"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>向基础数据提供程序发出命令
 不会开始形状与任何命令传递到的数据提供程序。 这相当于发出窗体"形状 {提供程序命令}"中的形状命令。 这些命令执行*不*需要生成**记录集**。 例如，"形状 {下拉表 MyTable} 是一个完全有效形状命令，假定数据提供程序支持删除表。  

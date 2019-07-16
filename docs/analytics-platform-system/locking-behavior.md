@@ -2,19 +2,18 @@
 title: 锁定行为的并行数据仓库 |Microsoft Docs
 description: 了解如何并行数据仓库使用锁定确保事务完整性和在多个用户同时访问数据时维护数据库的一致性。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d93743c83d6315e6ab9484445f344b06f80be845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960644"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>并行数据仓库中的锁定行为
 了解如何并行数据仓库使用锁定确保事务完整性和在多个用户同时访问数据时维护数据库的一致性。  
@@ -91,7 +90,7 @@ SQL Server 支持以下类型的锁。 并非所有的锁类型控制节点上�
   
 -   RangeX_S。 通过 RangeI_N 和 RangeS_S 锁的重叠创建的键范围转换锁 锁。  
   
--   RangeX_U. 通过 RangeI_N 和 RangeS_U 锁的重叠创建的键范围转换锁。  
+-   RangeX_U。 通过 RangeI_N 和 RangeS_U 锁的重叠创建的键范围转换锁。  
   
 -   RangeX_X （排他键范围和排他资源锁）。 这是在更新范围中的键时使用的转换锁。  
   

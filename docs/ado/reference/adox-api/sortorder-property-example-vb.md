@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f3506070a55b852292067ec89ee24ee11417d6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965191"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
 此示例演示[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)的属性[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到[列](../../../ado/reference/adox-api/columns-collection-adox.md)系列[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码中的国家/地区列中附加一个升序索引**员工**表，然后显示记录。 然后代码将追加到中的国家/地区列的降序索引**员工**表，然后再次显示的记录。 显示按升序和降序排列索引之间的差异。  

@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959389"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
@@ -33,7 +32,7 @@ ms.locfileid: "67826514"
 | SentryOne 计划资源管理器扩展的版本 | 将传送我们重要的 Microsoft 合作伙伴 SentryOne，其[SentryOne 计划资源管理器适用于 Azure Data Studio 的扩展](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)。 <br> 这是一个免费的扩展，提供了增强的计划的查询的关系图在 Azure Data Studio 中运行使用经过优化的布局算法和直观的颜色编码来帮助快速识别影响查询性能的成本最高的运算符。 若要了解有关扩展的详细信息，请参阅 SentryOne 的博客文章[此处](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)。 |
 | 架构比较的新功能 | &bull; &nbsp; 架构比较文件支持 (。SCMP) <br/>&bull; &nbsp; 取消架构比较支持 <br/>&bull; &nbsp; 可以找到完整更改[此处](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
 | Notebook 的改进 | &bull; &nbsp; Plotly Python 支持 <br/>&bull; &nbsp; 从浏览器打开 Notebook <br/> &bull; &nbsp; Python 包管理对话框 <br/> &bull; &nbsp; 性能和 Markdown 增强功能 <br/> &bull; &nbsp; 键盘快捷方式更新 <br/>  &bull; &nbsp; 可以找到 Bug 修复和次要功能[此处](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
-| SQL Server 2019 Support |  此版本包括对包括的其他 SQL Server 2019 大数据群集功能的支持： <br/> &bull; &nbsp; 在管理仪表板中，其中列出了在群集中的所有关键服务的服务终结点表。 <br/> &bull; &nbsp; 群集状态 Notebook 演示可如何查询和解决所有服务和 pod 中的群集状态。| 
+| SQL Server 2019 支持 |  此版本包括对包括的其他 SQL Server 2019 大数据群集功能的支持： <br/> &bull; &nbsp; 在管理仪表板中，其中列出了在群集中的所有关键服务的服务终结点表。 <br/> &bull; &nbsp; 群集状态 Notebook 演示可如何查询和解决所有服务和 pod 中的群集状态。| 
 | 可用的更新的语言包| 现在有 10 个语言包可在扩展管理器 marketplace 中。 简单来说，使用扩展应用商店的特定语言搜索并安装。 后安装所选的语言时，Azure Data Studio 将提示你使用新的语言来重新启动。 |
 | SQL Server Profiler 更新 | SQL Server 配置文件扩展已更新以包括新功能包括： <br/> &bull; &nbsp; 按数据库名称筛选 <br/> &bull; &nbsp; 复制和粘贴的支持 <br/> &bull; &nbsp; 保存/加载筛选器 <br/>找不到 SQL Server Profiler 扩展的改进的完整列表[此处](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+)。  |
 | Visual Studio 代码可能会发布合并 1.35 | 可以找到最新改进[此处](https://code.visualstudio.com/updates/v1_35)。 |

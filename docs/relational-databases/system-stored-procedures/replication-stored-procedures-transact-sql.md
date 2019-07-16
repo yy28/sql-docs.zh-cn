@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2f1b5f896c4a4884d4474c3c27c3435f7783292
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e689eea8a641e42633d179d14e3b59d88dd3dec4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941897"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>复制存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -76,14 +75,14 @@ ms.locfileid: "52823721"
 |[sp_change_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)|[sp_markpendingschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)|  
 |[sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)|[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)|  
 |[sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)|[sp_mergearticlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)|  
-|[sp_changearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)|[sp_mergecleanupmetadata &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergecleanupmetadata-transact-sql.md)|  
+|[sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)|[sp_mergecleanupmetadata &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergecleanupmetadata-transact-sql.md)|  
 |[sp_changearticlecolumndatatype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)|[sp_mergedummyupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql.md)|  
 |[sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)|[sp_mergemetadataretentioncleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql.md)|  
 |[sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)|[sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)|  
 |[sp_changedistributor_password &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)|[sp_MSchange_distribution_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-distribution-agent-properties-transact-sql.md)|  
 |[sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)|[sp_MSchange_logreader_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-logreader-agent-properties-transact-sql.md)|  
 |[sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)|[sp_MSchange_merge_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-merge-agent-properties-transact-sql.md)|  
-|[sp_changelogreader_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)|[sp_MSchange_snapshot_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-snapshot-agent-properties-transact-sql.md)|  
+|[sp_changelogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)|[sp_MSchange_snapshot_agent_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mschange-snapshot-agent-properties-transact-sql.md)|  
 |[sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)|[sp_posttracertoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)|  
 |[sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)|[sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)|  
 |[sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)|[sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)|  
@@ -141,11 +140,11 @@ ms.locfileid: "52823721"
 |[sp_getmergedeletetype &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getmergedeletetype-transact-sql.md)|[sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)|  
 |[sp_getqueuedrows &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getqueuedrows-transact-sql.md)|[sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)|  
 |[sp_getsubscriptiondtspackagename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getsubscriptiondtspackagename-transact-sql.md)|[sp_update_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-agent-profile-transact-sql.md)|  
-|[sp_gettopologyinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)|[sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)|  
-|[sp_grant_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)|[sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)|  
+|[sp_gettopologyinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)|[sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)|  
+|[sp_grant_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)|[sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)|  
 |[sp_help_agent_default &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-default-transact-sql.md)|[sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)|  
 |[sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)|[sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)|  
-|[sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)|[sp_vupgrade_mergeobjects &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-mergeobjects-transact-sql.md)|  
+|[sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)|[sp_vupgrade_mergeobjects &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-mergeobjects-transact-sql.md)|  
 |[sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)|[sp_vupgrade_replication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)|  
 |[sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   

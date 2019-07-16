@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 47edd434445d57c5ca25373b5dc15fa328f94019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 407a4c87101b2d422afbb982c7a07d92e84d26f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962512"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （独立版） 和 SQL Server 中的机器学习服务器 （独立版）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,14 +52,14 @@ R 和 Python 开发人员通常选择要移动的开源 R 和 Python 的内存�
 
 从安装开始，将二进制文件附加到您最喜欢的开发工具上，并编写第一个脚本。
 
-### <a name="step-1-install-the-software"></a>第 1 步：安装软件
+### <a name="step-1-install-the-software"></a>步骤 1：安装软件
 
 安装这些版本的之一：
 
 + [SQL Server 2017 机器学习服务器 （独立版）](../install/sql-machine-learning-standalone-windows-install.md)
 + [SQL Server 2016 R Server （独立版）-仅 R](../install/sql-r-standalone-windows-install.md)
 
-### <a name="step-2-configure-a-development-tool"></a>第 2 步：配置开发工具
+### <a name="step-2-configure-a-development-tool"></a>步骤 2：配置开发工具
 
 在独立服务器上，很常见，若要运行使用本地安装在同一台计算机上的开发。
 
@@ -89,7 +88,7 @@ SQL Server 版本定期的累积更新。 应用累积更新将安全性和功�
 
 有关如何将更新应用于现有实例的详细信息，请参阅[应用更新](../install/sql-machine-learning-standalone-windows-install.md#apply-cu)安装说明中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [安装 R Server （独立版） 或机器学习服务器 （独立版）](../install/sql-machine-learning-standalone-windows-install.md)
 

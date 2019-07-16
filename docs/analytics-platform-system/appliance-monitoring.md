@@ -2,19 +2,18 @@
 title: 监视设备的分析平台系统 |Microsoft Docs
 description: 此设备监视指南介绍的工具和监视 Analytics Platform System 设备的任务。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb25a5eccd1e77f08cedc74ad8042e0dc573605c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961501"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>设备监视 Analytics Platform system
 此设备监视指南介绍的工具和监视 Analytics Platform System 设备的任务。  
@@ -63,7 +62,7 @@ SQL Server PDW 具有与 Systems Center Operations Manager 的丰富集成。 �
    
 ## <a name="Tasks"></a>相关的监视任务  
   
-|监视任务|Description|  
+|监视任务|描述|  
 |-------------------|---------------|  
 |通过使用管理控制台监视设备。|[通过使用管理控制台监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |使用系统视图监视设备。|[使用系统视图监视设备&#40;分析平台系统&#41;](monitor-the-appliance-by-using-system-views.md)|  

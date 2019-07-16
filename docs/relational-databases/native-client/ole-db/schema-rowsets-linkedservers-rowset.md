@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee680d645c40a8471920ce8f8e259f45a9401306
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13d79325c37debce2a394734735c6e6cf6c430d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031940"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>架构行集 - LINKEDSERVERS 行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源  。  
   
- LINKEDSERVERS 行集包含以下列。  
+ LINKEDSERVERS 行集包含以下列  。  
   
-|列名|类型指示符|Description|  
+|列名|类型指示符|描述|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|链接服务器的名称。|  
 |SVR_PRODUCT|DBTYPE_WSTR|标识由链接服务器的名称所表示的数据存储的类型的制造商或其他名称。|  

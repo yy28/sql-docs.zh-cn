@@ -7,13 +7,12 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: e5f88beb2c429091fcea8ce66e4defa291e718d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961846"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>运行使用 Python 在存储过程中嵌入的预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -355,6 +354,6 @@ GO
 
 [训练和保存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [SQL Server 中的 Python 扩展](../concepts/extension-python.md)

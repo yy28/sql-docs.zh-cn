@@ -7,13 +7,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e0cded793f6017398641ffa055deec62010b2b3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3482a15392fa04f7f10d2acbb0843d124e27dc21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962749"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy （SQL Server 中的 Python 模块）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "62642459"
 
 SQL Server 和 Python 在某些情况下使用不同的数据类型。 有关 SQL 和 Python 的数据类型之间的映射的列表，请参阅[Python SQL 数据类型](python-libraries-and-data-types.md)。
 
-| 函数| Description|
+| 函数| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  创建将计算推送到远程实例的 SQL Server 计算上下文对象。 多个**revoscalepy**函数采用作为自变量的计算上下文。 有关上下文切换的示例，请参阅[使用 revoscalepy 创建模型](../tutorials/use-python-revoscalepy-to-create-model.md)。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | 创建基于 SQL Server 查询或表的数据对象。 |
@@ -64,7 +63,7 @@ SQL Server 和 Python 在某些情况下使用不同的数据类型。 有关 SQ
 
 ## <a name="2-data-manipulation-etl"></a>2 数据操作 (ETL)
 
-| 函数 | Description |
+| 函数 | 描述 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | 将数据导入.xdf 文件或数据帧。|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 将数据从输入数据集中到一个输出数据集转换。|
@@ -73,7 +72,7 @@ SQL Server 和 Python 在某些情况下使用不同的数据类型。 有关 SQ
 
 ## <a name="3-training-and-summarization"></a>3 培训和摘要
 
-| 函数| Description|
+| 函数| 描述|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 适合随机梯度提升的决策树|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 适合分类和回归的决策林|
@@ -88,7 +87,7 @@ SQL Server 和 Python 在某些情况下使用不同的数据类型。 有关 SQ
 
 ## <a name="4-scoring-functions"></a>4 评分函数
 
-| 函数| Description|
+| 函数| 描述|
 | ------- | ---------- |
 | [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 从训练的模型生成预测|) | 从训练的模型生成预测，并可用于进行实时评分。 |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | 计算预测的值，并使用 rx_lin_mod 和 rx_logit 对象的残差。 |
@@ -117,7 +116,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [Python 教程](../tutorials/sql-server-python-tutorials.md)
 + [教程：在 T-SQL 中嵌入 Python 代码](../tutorials/run-python-using-t-sql.md)
