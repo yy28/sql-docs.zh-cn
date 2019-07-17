@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4c2478cfa5753c094284f44c13cf0037bf927a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c57ba8b2a5639dc271eaa7cf1877ab3ccbba9ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131853"
 ---
 # <a name="lock-a-version-master-data-services"></a>锁定版本 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65488343"
 > [!NOTE]  
 >  在锁定某一版本后，超级用户和模型管理员可以继续添加、编辑和删除成员。 对模型具有权限的其他用户只能查看成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  

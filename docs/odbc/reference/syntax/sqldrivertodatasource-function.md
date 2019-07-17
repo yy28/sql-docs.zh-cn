@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 844e11e72bb46b69229a9a4747ac7e64f013f14e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d36996f49cb58fbb8812ae5fee8928fdc8bddf1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104637"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 函数
 **SQLDriverToDataSource**的 ODBC 驱动程序支持翻译。 不支持 ODBC 的应用程序; 通过调用此函数应用程序请求通过翻译**SQLSetConnectAttr**。 与关联的驱动程序*ConnectionHandle*中指定**SQLSetConnectAttr**调用指定的 DLL 执行从驱动程序流动到数据源的所有数据的转换。 可以在 ODBC 初始化文件中指定默认转换 DLL。  

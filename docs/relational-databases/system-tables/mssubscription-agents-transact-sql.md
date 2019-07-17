@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b1b8680343f233c35b704f3805b06ea9dc47c12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139787"
 ---
 # <a name="mssubscriptionagents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscription_agents**表由分发代理和可更新订阅的触发器来跟踪订阅属性。 此表存储在订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|行的 ID。|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**subscription_type**|**int**|订阅类型：<br /><br /> 0 = 推送。<br /><br /> 1 = 请求<br /><br /> 2 = 匿名请求。|  
 |**queue_id**|**sysname**|ID[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列在发布服务器。 *queue_id*设置为**SQL**的基于 SQL 的排队更新。|  
 |**update_mode**|**tinyint**|更新的类型：<br /><br /> **0** = 只读的。<br /><br /> **1** = 立即更新。<br /><br /> **2** = 使用消息队列的排队更新。<br /><br /> **3** = 立即更新，以排队更新作为故障转移使用消息队列。<br /><br /> **4** = 使用 SQL Server 队列的排队更新。<br /><br /> **5** = 立即更新排队的更新作为故障转移，使用 SQL Server 队列。|  

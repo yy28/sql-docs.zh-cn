@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084949"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +74,13 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` 新的等待时间，以秒为单位对警报的响应。 *delay_between_responses*是**int**，默认值为 NULL。  
   
-`[ @notification_message = ] 'notification_message'` 其他消息发送给操作员的电子邮件的一部分的修订后的文本**网络发送**，或寻呼通知。 *notification_message*是**nvarchar(512)**，默认值为 NULL。  
+`[ @notification_message = ] 'notification_message'` 其他消息发送给操作员的电子邮件的一部分的修订后的文本**网络发送**，或寻呼通知。 *notification_message*是**nvarchar(512)** ，默认值为 NULL。  
   
 `[ @include_event_description_in = ] include_event_description_in` 指定是否的说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来自 Windows 应用程序日志错误应包括在通知消息。 *include_event_description_in*是**tinyint**，默认值为 NULL，并且可以是一个或多个值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|无|  
 |**1**|电子邮件|  
 |**2**|寻呼程序|  
 |**4**|**net send**|  
@@ -89,7 +88,7 @@ sp_update_alert
   
 `[ @database_name = ] 'database'` 在其中出现错误时必须触发该警报的数据库的名称。 *数据库*是**sysname。** 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` 必须在错误消息日志中错误的描述中找到的字符序列。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword*是**nvarchar(100)**，默认值为 NULL。 此参数可用于筛选对象名称 (例如， **%customer_table%**)。  
+`[ @event_description_keyword = ] 'event_description_keyword'` 必须在错误消息日志中错误的描述中找到的字符序列。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword*是**nvarchar(100)** ，默认值为 NULL。 此参数可用于筛选对象名称 (例如， **%customer_table%** )。  
   
 `[ @job_id = ] job_id` 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。 如果*job_id*指定，则*job_name*必须省略。  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` 保留。  
   
-`[ @performance_condition = ] 'performance_condition'` 格式表示的值 **'***itemcomparatorvalue*****。 *performance_condition*是**nvarchar(512)**，默认值为 NULL，并包含这些元素。  
+`[ @performance_condition = ] 'performance_condition'` 格式表示的值 **'***itemcomparatorvalue***** 。 *performance_condition*是**nvarchar(512)** ，默认值为 NULL，并包含这些元素。  
   
-|格式元素|Description|  
+|格式元素|描述|  
 |--------------------|-----------------|  
 |*项*|性能对象、性能计数器或计数器的命名实例|  
-|*Comparator*|以下运算符之一： **>**， **<**， **=**|  
+|*Comparator*|以下运算符之一： **>** ， **<** ， **=**|  
 |*ReplTest1*|计数器的数值|  
   
 `[ @category_name = ] 'category'` 警报类别的名称。 *类别*是**sysname**默认值为 NULL。  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` 事件的查询的 WMI 命名空间。 *wmi_namespace*是**sysname**，默认值为 NULL。  
   
-`[ @wmi_query = ] 'wmi_query'` 指定警报的 WMI 事件查询。 *wmi_query*是**nvarchar(512)**，默认值为 NULL。  
+`[ @wmi_query = ] 'wmi_query'` 指定警报的 WMI 事件查询。 *wmi_query*是**nvarchar(512)** ，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

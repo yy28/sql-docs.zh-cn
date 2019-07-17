@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcfefffb167b97ace09bfa358296d886265a987f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b337d317092ad6ae20cc91236d69c1314de96bce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107286"
 ---
 # <a name="state-transition-checks"></a>状态转换检查
 驱动程序管理器检查的环境、 连接或语句的状态适用于所调用的函数。 例如，连接必须是在一个已分配状态时**SQLConnect**称为; 语句必须是中的已准备运行时**SQLExecute**调用。 驱动程序管理器的状态转换错误将返回 SQL_ERROR。

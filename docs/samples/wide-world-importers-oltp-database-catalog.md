@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091253"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 数据库目录
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ WideWorldImporters 使用多种用途，例如，存储数据、 定义用户可
 
 这些架构包含的数据。 多个表所需的所有其他架构，并且位于应用程序架构。
 
-|架构|Description|
+|架构|描述|
 |-----------------------------|---------------------|
 |应用程序|应用程序范围的用户、 联系人和参数。 其中还包含具有多个架构使用的数据的引用表|
 |Purchasing|库存项购买从供应商和供应商有关的详细信息。|  
@@ -40,7 +39,7 @@ WideWorldImporters 使用多种用途，例如，存储数据、 定义用户可
 
 不允许直接访问数据的表的外部应用程序使用这些架构。 它们包含视图和外部应用程序使用的存储的过程。
 
-|架构|Description|
+|架构|描述|
 |-----------------------------|---------------------|
 |网站|从公司网站到数据库的所有访问都都通过此架构。|
 |报表|从 Reporting Services 报表到数据库的所有访问都都通过此架构。|
@@ -52,7 +51,7 @@ WideWorldImporters 使用多种用途，例如，存储数据、 定义用户可
 
 特殊用途的架构
 
-|架构|Description|
+|架构|描述|
 |-----------------------------|---------------------|
 |集成|对象和数据仓库集成所需的过程 （即将数据迁移到 WideWorldImportersDW 数据库）。|
 |序列|存储由应用程序中的所有表的序列。|
@@ -65,7 +64,7 @@ WideWorldImporters 使用多种用途，例如，存储数据、 定义用户可
 
 参数和用户 （用户和联系人），以及公共 （常见到多个其他架构） 的引用表的详细信息。
 
-|表|Description|
+|表|描述|
 |-----------------------------|---------------------|
 |SystemParameters|包含系统范围内的可配置参数。|
 |人员|包含用户名的所有用户使用该应用程序和 Wide World Importers 处理的客户组织的人员的联系信息。 这包括员工、 客户、 供应商和其他联系人。 对于已被授予权限以使用系统或网站的人员，这些信息包括登录名的详细信息。|
@@ -80,7 +79,7 @@ WideWorldImporters 使用多种用途，例如，存储数据、 定义用户可
 
 供应商提供的和的库存项购买的详细信息。
 
-|表|Description|
+|表|描述|
 |-----------------------------|---------------------|
 |Suppliers|供应商 （组织） 的主实体表|
 |SupplierCategories|供应商 （例如，novelties、 玩具、 clothing，打包，等等） 的类别|
@@ -93,7 +92,7 @@ WideWorldImporters 使用多种用途，例如，存储数据、 定义用户可
 
 和库存物料销售额的客户，销售人员的详细信息。
 
-|表|Description|
+|表|描述|
 |-----------------------------|---------------------|
 |Customers|客户 （组织或个人） 的主实体表|
 |CustomerCategories|客户 （即新奇存储、 超市等） 的类别|
@@ -109,7 +108,7 @@ WideWorldImporters 使用多种用途，例如，存储数据、 定义用户可
 
 常用项、 其 holdings 和事务的详细信息。
 
-|表|Description|
+|表|描述|
 |-----------------------------|---------------------|
 |StockItems|主实体表以获取股票项目|
 |StockItemHoldings|常用项的非临时列。 这些是经常更新的列。|
@@ -161,7 +160,7 @@ WideWorldImporters 使用少量的架构，因此很容易地了解数据库系�
 
 这些是由客户端应用程序，如 Web 前端的过程。
 
-|过程|目标|
+|过程|用途|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|让用户 (从`Application.People`) 以有权访问该网站。|
 |ChangePassword|更改用户的密码 （适用于不使用外部身份验证机制的用户）。|
@@ -183,7 +182,7 @@ ETL 过程使用此架构中的存储的过程。 他们获得所需的时间范
 
 模拟插入销售和采购的工作负荷。 主存储的过程是`PopulateDataToCurrentDate`，用于插入截至当前日期的示例数据。
 
-|过程|目标|
+|过程|用途|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|重新创建过程的数据所需负载模拟。 这需要将数据添加至当前日期。|
 |Configuration_RemoveDataLoadSimulationProcedures|数据模拟完成后，这再次删除过程。|
@@ -196,7 +195,7 @@ ETL 过程使用此架构中的存储的过程。 他们获得所需的时间范
 
 使用这些过程来配置示例。 它们用于企业版功能适用于 standard edition 版本的示例，还可添加审核和全文索引。
 
-|过程|目标|
+|过程|用途|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|如果该成员不是角色中向角色添加成员|
 |Configuration_ApplyAuditing|Adds 审核。 服务器审核适用于标准版本的数据库。对于 enterprise edition 添加附加的数据库审核。|
@@ -215,7 +214,7 @@ ETL 过程使用此架构中的存储的过程。 他们获得所需的时间范
 
 若要配置数据库中的序列的过程。
 
-|过程|目标|
+|过程|用途|
 |-----------------------------|---------------------|
 |ReseedAllSequences|为所有序列调用过程 ReseedSequenceBeyondTableValue。|
 |ReseedSequenceBeyondTableValue|用于在任何表，它使用相同的序列中重新定位值之外的下一个序列值。 （如 DBCC CHECKIDENT 为标识列等效的序列，但可能多个表之间)。|

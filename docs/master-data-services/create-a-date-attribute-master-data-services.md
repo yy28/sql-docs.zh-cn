@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9179b2f016fe2d720da1b82078c03f0e7cb3e67a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65fd9442bc55c229ca20ca81151c84180de85094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079701"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487386"
 > [!NOTE]  
 >  该属性称为 DateTime，但不支持时间值。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  

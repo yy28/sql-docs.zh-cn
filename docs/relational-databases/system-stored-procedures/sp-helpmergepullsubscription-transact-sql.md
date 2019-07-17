@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137714"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +40,17 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 如果*出版物*是**%**，返回有关所有合并发布和订阅当前数据库中的信息。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 **%** 。 如果*出版物*是 **%** ，返回有关所有合并发布和订阅当前数据库中的信息。  
   
-`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为**%**。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 **%** 。  
   
-`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 **%** 。  
   
-`[ @subscription_type = ] 'subscription_type'` 表示是否显示请求订阅。 *subscription_type*是**nvarchar(10)**，默认值为 **'pull'**。 有效的值为 **'push'**， **'pull'**，或 **'both'**。  
+`[ @subscription_type = ] 'subscription_type'` 表示是否显示请求订阅。 *subscription_type*是**nvarchar(10)** ，默认值为 **'pull'** 。 有效的值为 **'push'** ， **'pull'** ，或 **'both'** 。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|订阅的名称。|  
 |**publication**|**sysname**|发布的名称。|  
@@ -71,7 +70,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher_login**|**sysname**|发布服务器登录名。|  
 |**publisher_password**|**sysname**|发布服务器的密码。|  
 |**publisher_security_mode**|**int**|指定发布服务器的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
-|**distributor**|**sysname**|分发服务器的名称。|  
+|**分发服务器**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|分发服务器登录名。|  
 |**distributor_password**|**sysname**|分发服务器密码。|  
 |**distributor_security_mode**|**int**|指定分发服务器的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
@@ -90,14 +89,14 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_sync_status**|**int**|同步状态：<br /><br /> **1** = 正在启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 正在重试上一次失败后<br /><br /> **6** = 失败<br /><br /> **7** = 验证失败<br /><br /> **8** = 已通过验证<br /><br /> **9** = 请求关闭|  
 |**last_sync_summary**|**sysname**|对上一次同步结果的说明。|  
 |**use_web_sync**|**bit**|指定订阅是否可以通过 HTTPS，当值为同步**1**表示启用此功能。|  
-|**internet_url**|nvarchar(260)|表示 Web 同步的复制侦听器的位置的 URL。|  
+|**internet_url**|nvarchar(260) |表示 Web 同步的复制侦听器的位置的 URL。|  
 |**internet_login**|**nvarchar(128)**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**|**nvarchar(524)**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
 |**internet_security_mode**|**int**|连接到承载 Web 同步的 Web 服务器时使用的身份验证模式。 值为**1**表示 Windows 身份验证，值为**0**意味着[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_timeout**|**int**|Web 同步请求过期之前的时间长度（秒）。|  
-|**hostname**|**nvarchar(128)**|指定的一个重载的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)参数化的行筛选器的 WHERE 子句中使用此函数时。|  
+|**主机名**|**nvarchar(128)**|指定的一个重载的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)参数化的行筛选器的 WHERE 子句中使用此函数时。|  
 |**job_login**|**nvarchar(512)**|是运行合并代理的 Windows 帐户的格式返回*域*\\*用户名*。|  
-|**job_password**|**sysname**|出于安全原因，值为"**\*\*\*\*\*\*\*\*\*\***"是始终返回。|  
+|**job_password**|**sysname**|出于安全原因，值为" **\*\*\*\*\*\*\*\*\*\*** "是始终返回。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -110,8 +109,8 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 ## <a name="see-also"></a>请参阅  
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ad944432b2a00acb923732863624a69dcbaf227f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209910"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264680"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>将 Oracle 数据迁移到 SQL Server (OracleToSQL)
 已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以将数据从 Oracle 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

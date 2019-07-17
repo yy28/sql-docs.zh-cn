@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cfa7196c0ad197a3eb7cb1a31fbdb58e74a78968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110817"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'` 是用于运行代理的帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 在 Azure SQL 数据库托管实例，使用 SQL Server 帐户。 *这是无法更改为非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
+`[ @job_login = ] 'job_login'` 是用于运行代理的帐户的登录名。 *job_login*是**nvarchar(257)** ，默认值为 NULL。 在 Azure SQL 数据库托管实例，使用 SQL Server 帐户。 *这是无法更改为非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
   
 `[ @job_password = ] 'job_password'` 是用于运行代理的帐户的密码。 *job_password*是**sysname**，默认值为 NULL。  
   

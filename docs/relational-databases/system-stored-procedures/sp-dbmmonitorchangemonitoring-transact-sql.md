@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4c8d9fe6a682a2f9d8847268c0d2a746b03ccf1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108115"
 ---
 # <a name="spdbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,12 +56,12 @@ sp_dbmmonitorchangemonitoring parameter
 |1|范围在 1 到 120 的整数，用于指定新的更新周期（分钟）。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

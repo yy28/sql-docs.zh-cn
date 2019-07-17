@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212130"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅。  
@@ -49,7 +49,7 @@ ms.locfileid: "52753739"
   
 2.  单击加号以展开 **“数据库”** 文件夹。  
   
-3.  右键单击要管理类别订阅的数据库，指向“策略”，然后选择“类别”  
+3.  右键单击要管理类别订阅的数据库，指向“策略”  ，然后选择“类别”   
   
      在 **“类别”** 对话框中提供了以下选项：  
   
@@ -74,9 +74,9 @@ ms.locfileid: "52753739"
      **历史记录**  
      单击“查看历史记录”超链接可打开日志文件查看器，从而可以查看策略历史记录。  
   
-4.  若要订阅某个基于策略的管理类别，请选中“已订阅”列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
+4.  若要订阅某个基于策略的管理类别，请选中“已订阅”  列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
   
-5.  完成后，单击 **“确定”**。  
+5.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -84,9 +84,9 @@ ms.locfileid: "52753739"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -101,9 +101,9 @@ ms.locfileid: "52753739"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

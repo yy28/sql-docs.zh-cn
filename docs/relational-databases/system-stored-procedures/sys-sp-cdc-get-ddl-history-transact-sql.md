@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 657d7b6cc21c573d2d9535d36392f9b7eb94200f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083727"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @capture_instance =] '*capture_instance*  
+ [ @capture_instance = ] '*capture_instance*'  
  与源表关联的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -52,7 +51,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|源表架构的名称。|  
 |source_table|**sysname**|源表的名称。|  
@@ -65,7 +64,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ## <a name="remarks"></a>备注  
  对源表的 DDL 修改的更改源表的列结构，例如添加或删除列，或更改某个现有列的数据类型都保留在[cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)表。 您可使用此存储过程报告以上更改。 当捕获进程读取日志中的 DDL 事务时，将向 cdc.ddl_history 中添加项。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求拥有 db_owner 固定数据库角色的成员身份以返回针对数据库中所有捕获实例的行。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  

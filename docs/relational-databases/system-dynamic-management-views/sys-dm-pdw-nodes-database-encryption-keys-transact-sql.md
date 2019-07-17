@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 34de2634c0aa1dd6a0b55ef281dba4c7d8579afd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7819be3ffe1f3d3efc5d39c3973d089e3ab7757c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089144"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 **sys.dm_pdw_nodes_database_encryption_keys**提供每个节点的此信息。 有关数据库加密的详细信息，请参阅[透明数据加密 (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|每个节点上的物理数据库的 ID。|  
 |encryption_state|**int**|指示此节点上的数据库是否是加密或未加密。<br /><br /> 0 = 不存在数据库加密密钥，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 正在进行加密<br /><br /> 3 = 已加密<br /><br /> 4 = 正在更改密钥<br /><br /> 5 = 正在进行解密<br /><br /> 6 = 正在进行 （正在加密数据库加密密钥的证书正在更改。） 中的保护更改|  

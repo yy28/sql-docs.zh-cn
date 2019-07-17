@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: aa9db789b6e0849225d67d15934daa2dcac27cff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7ea41844f5492174b67fedba6b9a2326af9a44eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089131"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue 方法（ClientSettingsGeneralFlag 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "51660006"
 object.SetValue(Value)  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示服务器设置的常规标志的 [ClientSettingsGeneralFlag 类](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |*ReplTest1*|一个指定标志的值的布尔值。|  
   

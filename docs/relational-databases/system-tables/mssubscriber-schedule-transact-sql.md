@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b11ff11d3d5ea8ea98bee18738a7c60450693ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139799"
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "53202016"
 > [!NOTE]
 >  此系统表已弃用，并维护以支持旧版[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  

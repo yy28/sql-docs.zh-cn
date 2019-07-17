@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide (Transact-SQL) | Microsoft Docs
+title: sp_create_plan_guide (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108634"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *statement_text*必须允许查询优化器以匹配使用提供的批处理中的相应语句或模块由标识的方式提供\@module_or_batch 和\@params。 有关详细信息，请参阅"备注"部分。 大小*statement_text*仅受可用内存的服务器。  
   
- [\@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [\@类型 =] N'{对象 |SQL |模板}  
  是实体在其中一种*statement_text*出现。 这将指定用于匹配的上下文*statement_text*到*plan_guide_name*。  
   
  OBJECT  
@@ -72,7 +71,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  指示计划指南应用于任何查询进行参数化到窗体中所示*statement_text*。 如果指定了 TEMPLATE，仅 PARAMETERIZATION {FORCED |简单} 查询提示可以指定\@提示参数。 有关 TEMPLATE 计划指南的详细信息，请参阅[通过使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。  
   
- [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
+ [\@module_or_batch =] {N'[ *schema_name*。 ] *object_name*' | N'*batch_text*' | NULL }  
  指定在其中的对象的名称*statement_text*出现，或在其中的批处理文本*statement_text*出现。 批处理文本不能包括 USE*数据库*语句。  
   
  用于计划指南以匹配应用程序中，通过提交的批处理*batch_tex*t 必须提供相同的格式字符的字符，提交到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不会执行内部转换来帮助完成该匹配。 有关详细信息，请参阅“备注”部分。  
@@ -89,10 +88,10 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  *\@parameter_name data_type*提交到完全相同的格式必须提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过使用 sp_executesql 或参数化语句之后内部提交。 有关详细信息，请参阅“备注”部分。 如果批处理不包含参数，则必须指定 NULL。 大小\@params 仅受可用的服务器内存。  
   
  [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
- N'OPTION (*query_hint* [ , *...n* ] )  
+ N'OPTION (*query_hint* [， *...n* ])  
  指定要附加到匹配的查询的 OPTION 子句\@stmt。\@提示必须是语法上相同 SELECT 语句中的 OPTION 子句，并且可以包含任何有效的查询提示序列。  
   
- N'*XML_showplan*'  
+ N'*XML_showplan*  
  要作为提示应用的、采用 XML 格式的查询计划。  
   
  建议将 XML 显示计划分配给变量；否则，必须通过在单引号前面再加上一个单引号来对显示计划中的任何单引号进行转义。 请参见示例 E。  

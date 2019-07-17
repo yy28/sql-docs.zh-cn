@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084551"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>项目设置 （转换） (DB2ToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 语法设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法。  
@@ -170,7 +169,7 @@ SSMA 可以将多个锁表语句转换为表提示。 SSMA 无法转换包含分
 |共享更新 = 行共享|ROWLOCK HOLDLOCK|  
 |共享|TABLOCK HOLDLOCK|  
 |排他共享行|TABLOCK、 XLOCK，HOLDLOCK|  
-|EXCLUSIVE|TABLOCKX HOLDLOCK|  
+|排他|TABLOCKX HOLDLOCK|  
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
@@ -260,7 +259,7 @@ SSMA 可以转换为 DB2 TO_CHAR(date, format) sysdb 数据库中的过程。
   
 -   如果选择**使用 TO_CHAR_DATE 函数**，SSMA 将 TO_CHAR_DATE 函数使用的英语语言的转换转换为 TO_CHAR （日期，格式）。  
   
--   如果选择**使用 TO_CHAR_DATE_LS 函数 （NLS 护理）**，SSMA 将转换 TO_CHAR_DATE_LS 函数使用的会话语言转换为 TO_CHAR （日期，格式）  
+-   如果选择**使用 TO_CHAR_DATE_LS 函数 （NLS 护理）** ，SSMA 将转换 TO_CHAR_DATE_LS 函数使用的会话语言转换为 TO_CHAR （日期，格式）  
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
@@ -322,7 +321,7 @@ SSMA 可以模拟 DB2 的 ORDER BY 行为，通过检查 NULL 值。 它然后�
   
 当选择中的转换模式**模式下**框，SSMA 适用以下设置：  
   
-**默认/乐观/Full 模式：** 错误  
+**默认/乐观/Full 模式：** Error  
   
 ### <a name="generate-rowid-column"></a>生成行 ID 列  
 在 SSMA 中创建表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，它可以创建行 ID 列。 当迁移数据时，每一行获取由 newid （） 函数生成一个新的唯一标识符值。  
@@ -372,7 +371,7 @@ DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]串联的字符�
 ### <a name="use-isnull-in-replace-function-calls"></a>在替换函数调用中使用 ISNULL  
 替换为函数调用中使用 ISNULL 语句来模拟 DB2 行为。 以下选项是存在此设置：  
   
--   YES  
+-   是  
   
 -   是  
   
@@ -385,7 +384,7 @@ DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]串联的字符�
 ### <a name="use-isnull-in-concat-function-calls"></a>CONCAT 函数调用中使用 ISNULL  
 CONCAT 函数调用中使用 ISNULL 语句来模拟 DB2 行为。 以下选项是存在此设置：  
   
--   YES  
+-   是  
   
 -   是  
   

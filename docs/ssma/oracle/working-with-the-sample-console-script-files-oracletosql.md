@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 152d8ba2964c8485a1f158b71717067fdea948a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: fbe3e8c07af283f657926776e906dca4a95f7a7e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743919"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259593"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>使用示例控制台脚本文件 (OracleToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -84,7 +84,7 @@ ms.locfileid: "62743919"
   
     -   `source-schema:` 指定转换所需的源数据库。  
   
-    -   `sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库  
+    -   `sql-server-schema`：指定是要迁移到目标数据库  
   
     **命令名**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62743919"
   
     **Attribute**  
   
-    `object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
+    `object-name`：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
     **命令名**  
   

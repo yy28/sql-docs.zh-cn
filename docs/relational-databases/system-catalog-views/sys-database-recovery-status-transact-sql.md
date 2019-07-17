@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 72a292724a08917b18baedd6a3adbb8dfd00f739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079523"
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47707345"
   
 -   中具有 CREATE DATABASE 权限**主**数据库。    
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|数据库 ID（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中唯一）。|  
 |**database_guid**|**uniqueidentifier**|用于将数据库的所有数据库文件关联在一起。 所有文件必须在其标题页中包含此 GUID，才能使数据库按预期方式启动。 仅有一个数据库拥有此 GUID，但可以通过复制和附加数据库来创建副本。 RESTORE 总是在您还原某个尚不存在的数据库时生成一个新的 GUID。<br /><br /> NULL 表示数据库脱机，或将不启动数据库。|  
@@ -50,7 +49,7 @@ ms.locfileid: "47707345"
 |**first_recovery_fork_guid**|**uniqueidentifier**|恢复分叉开始的标识符。<br /><br /> NULL 表示数据库脱机，或将不启动数据库。|  
 |**fork_point_lsn**|**numeric(25,0)**|如果**first_recovery_fork_guid**不等于 (！ =) 到**recovery_fork_guid**， **fork_point_lsn**是当前分叉点的日志序列号。 否则，该值为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

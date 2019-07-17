@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3604e9f3bd47a10ae1a6e5ec401b198675c2d3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab2efd47ca5b5492c67b88261795cf524c440bda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139011"
 ---
 # <a name="how-is-metadata-used"></a>如何使用元数据？
 应用程序需要大多数结果集操作的元数据。 例如，应用程序使用某列的数据类型来确定要将哪一种变量绑定到该列； 它使用字符列的字节的长度来确定它需要显示该列中的数据的空间量。 应用程序确定列的元数据的方式取决于应用程序的类型。  

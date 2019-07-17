@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288884"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266155"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>转换 Oracle 架构 (OracleToSQL)
 已连接到 Oracle 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并将项目设置和数据映射选项，可以将转换到的 Oracle 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象。  

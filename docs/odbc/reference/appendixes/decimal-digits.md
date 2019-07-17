@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130052"
 ---
 # <a name="decimal-digits"></a>十进制数字
 *十进制数字*的 decimal 和 numeric 数据类型指小数点右侧或数据的小数位数的最大位数。 近似的浮点数字列或参数，小数位数是未定义，因为小数点右侧的位数不固定。 对于 datetime 或间隔秒数部分包含的数据，十进制数字被指数据的秒数部分在小数点右侧的位数。  

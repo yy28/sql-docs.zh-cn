@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf3910b432d803ce74e0bf24d83a974072028f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099191"
 ---
 # <a name="sysdmbrokeractivatedtasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47704866"
   为 Service Broker 激活的每个存储过程返回一行。  
  
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**spid**|**int**|已激活存储过程的会话的 ID。 可以为 NULL。|  
 |**database_id**|**smallint**|定义队列所用数据库的 ID。 可以为 NULL。|  
@@ -40,7 +39,7 @@ ms.locfileid: "47704866"
 |**procedure_name**|**nvarchar(650)**|已激活的存储过程的名称。 可以为 NULL。|  
 |**execute_as**|**int**|运行存储过程的用户的 ID。 可以为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="physical-joins"></a>物理联接  
@@ -48,7 +47,7 @@ ms.locfileid: "47704866"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|一对一|  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27ed4223-89ff-4044-8bb9-19c8eafa8ad8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cb5d88243b604d7ca0fe40ee8b7f9a040380150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 911f7b71f3d0ae555853560a33744a3fc333512d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093736"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 和 ODBC 简介
 创建 ODBC 是为了提供对不同，或异类，数据库管理系统 (Dbms) 的访问权限的统一方法。 本简介讨论与 ODBC 的开发相关的概念。  

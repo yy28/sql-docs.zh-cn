@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ae16af1017d37afba6325d335ef24fd3b99a603
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124512"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @table = ] 'table'` 是为更改的存储格式的三个部分组成名称。 *表*是**nvarchar(776)**。  
+`[ @table = ] 'table'` 是为更改的存储格式的三个部分组成名称。 *表*是**nvarchar(776)** 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,7 +54,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="result-sets"></a>结果集  
  将返回如下结果集，以提供当前表大小和估计表大小的信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**avg_rowlen_fixed_format**|**十进制 （12、 2）**|以固定十进制存储格式表示行的长度。|  
 |**avg_rowlen_vardecimal_format**|**十进制 （12、 2）**|表示使用 vardecimal 存储格式时的平均行大小。|  

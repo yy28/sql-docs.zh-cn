@@ -10,12 +10,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138769"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259828"
 ---
 # <a name="creating-script-files-accesstosql"></a>创建脚本文件 (AccessToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建变量值文件和服务器连接文件。  
@@ -26,7 +26,7 @@ ms.locfileid: "63138769"
   
 2.  **服务器：** 使用户能够设置源/目标服务器定义。 这也可以是单独的服务器连接文件中。  
   
-3.  **script-commands:** 使用户能够执行 SSMA 工作流命令。  
+3.  **脚本命令：** 使用户能够执行 SSMA 工作流命令。  
   
 下面将详细介绍每个部分：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "63138769"
   
     即使用只有一个或另一个指定的属性：  
   
-    - source-use-last-used="true" (default) or source-server="source_servername"  
+    - 源-使用-上次使用 ="true"（默认值） 或源服务器 ="source_servername"  
   
     - target-use-last-used="true" (default) or target-server="target_servername"  
   
@@ -393,6 +393,6 @@ ms.locfileid: "63138769"
 ## <a name="next-step"></a>下一步
 在操作控制台中的下一步是[创建的变量值文件&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [创建变量值文件&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

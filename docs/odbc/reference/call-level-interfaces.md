@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6c37084ad91a931c4479ecf826c5cb554765412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135665"
 ---
 # <a name="call-level-interfaces"></a>调用级别接口
 将 SQL 语句发送到 DBMS 的最终方法是通过调用级别接口 (CLI)。 调用级别接口提供了可以在应用程序调用的 DBMS 函数库。 因此，而不是尝试与另一种编程语言混合 SQL，则调用级别接口是类似于大多数编程人员所习惯使用，如字符串、 I/O 或 c。 请注意该 Dbms 支持的嵌入式的 SQL 中的数学库的日常库已调用级别接口，通过使用预编译器生成的调用。 但是，这些调用是未记录以及可能会有所更改，恕不另行通知。  

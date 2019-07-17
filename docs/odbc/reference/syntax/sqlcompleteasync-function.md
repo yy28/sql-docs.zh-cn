@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 736867be33531a73c0ada66a3be0f1245f1c483a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118632"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函数
 **符合性**  
  版本引入了：ODBC 3.8  
   
- 标准符合性：None  
+ 标准符合性：无  
   
  **摘要**  
  **SQLCompleteAsync**可用于确定何时完成使用任一通知或基于轮询的处理异步函数。 有关异步操作的详细信息，请参阅[异步执行](../../../odbc/reference/develop-app/asynchronous-execution.md)。  

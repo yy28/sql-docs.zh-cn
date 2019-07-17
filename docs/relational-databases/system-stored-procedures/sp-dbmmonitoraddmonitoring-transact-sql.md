@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a4850b86366a74b0b65b6acddd334960ec12096
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108149"
 ---
 # <a name="spdbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  如果将更新持续时间设置得太低，客户端的响应时间可能会增加。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
  None  
@@ -61,7 +60,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 > [!NOTE]  
 >  如果在运行**sp_dbmmonitoraddmonitoring**设置数据库镜像之前，请监视作业将运行，但不是会更新状态表中的数据库镜像监视器历史记录存储。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

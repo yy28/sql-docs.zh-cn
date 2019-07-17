@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63179892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138852"
 ---
 # <a name="is-odbc-the-answer"></a>需要 ODBC？
 在深入探讨的互操作性问题之前, 请考虑以下问题：应用程序应在所有使用 ODBC？ 这看起来有点奇怪问题到 ODBC，指南中提出，但它实际上是，合法。 ODBC 不用于完全取代本机数据库 Api，也不旨在提供在所有情况下的数据库访问权限。 它旨在提供一个公共接口对数据库和要用于免费应用程序程序员无需了解和维护多个数据库的链接。  

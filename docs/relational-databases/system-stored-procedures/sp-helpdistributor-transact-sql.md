@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122559"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @distributor = ] 'distributor' OUTPUT` 是分发服务器的名称。 分发服务器是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @distributor = ] 'distributor' OUTPUT` 是分发服务器的名称。 分发服务器是**sysname**，默认值为 **%** ，这是唯一返回结果集的值。  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` 是分发数据库的名称。 *distribdb*是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @distribdb = ] 'distribdb' OUTPUT` 是分发数据库的名称。 *distribdb*是**sysname**，默认值为 **%** ，这是唯一返回结果集的值。  
   
-`[ @directory = ] 'directory' OUTPUT` 是工作目录。 *目录*是**nvarchar(255)**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @directory = ] 'directory' OUTPUT` 是工作目录。 *目录*是**nvarchar(255)** ，默认值为 **%** ，这是唯一返回结果集的值。  
   
-`[ @account = ] 'account' OUTPUT` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 用户帐户。 *帐户*是**nvarchar(255)**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @account = ] 'account' OUTPUT` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 用户帐户。 *帐户*是**nvarchar(255)** ，默认值为 **%** ，这是唯一返回结果集的值。  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` 是最小分发保持期，以小时为单位。 *min_distretention*是**int**，默认值为 **-1**。  
   
@@ -64,25 +63,25 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` 是的历史记录保持期，以小时为单位。 *history_retention*是**int**，默认值为 **-1**。  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 是历史记录清除代理的名称。 *history_cleanupagent*是**nvarchar(100)**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 是历史记录清除代理的名称。 *history_cleanupagent*是**nvarchar(100)** ，默认值为 **%** ，这是唯一返回结果集的值。  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` 是分发清除代理的名称。 *distrib_cleanupagent*是**nvarchar(100)**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` 是分发清除代理的名称。 *distrib_cleanupagent*是**nvarchar(100)** ，默认值为 **%** ，这是唯一返回结果集的值。  
   
 `[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
-`[ @local = ] 'local'` 是是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应获得本地服务器值。 *本地*是**nvarchar(5)**，默认值为 NULL。  
+`[ @local = ] 'local'` 是是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应获得本地服务器值。 *本地*是**nvarchar(5)** ，默认值为 NULL。  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` 是发出远程过程调用的名称。 *rpcsrvname*是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` 是发出远程过程调用的名称。 *rpcsrvname*是**sysname**，默认值为 **%** ，这是唯一返回结果集的值。  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` 是发布服务器的发布服务器类型。 *publisher_type*是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` 是发布服务器的发布服务器类型。 *publisher_type*是**sysname**，默认值为 **%** ，这是唯一返回结果集的值。  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**distributor**|**sysname**|分发服务器的名称。|  
+|**分发服务器**|**sysname**|分发服务器的名称。|  
 |**分发数据库**|**sysname**|分发数据库的名称。|  
-|**directory**|**nvarchar(255)**|工作目录的名称。|  
+|**目录**|**nvarchar(255)**|工作目录的名称。|  
 |**account**|**nvarchar(255)**|Windows 用户帐户的名称。|  
 |**最小分发保持期**|**int**|最小分发保持期。|  
 |**最大分发保持期**|**int**|最大分发保持期。|  
@@ -90,7 +89,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**历史记录清除代理**|**nvarchar(100)**|历史记录清除代理的名称。|  
 |**分发清除代理**|**nvarchar(100)**|分发清除代理的名称。|  
 |**rpc 服务器名称**|**sysname**|远程分发服务器或本地分发服务器的名称。|  
-|**rpc login name**|**sysname**|用于对远程分发服务器的远程过程调用的登录名。|  
+|**rpc 登录名**|**sysname**|用于对远程分发服务器的远程过程调用的登录名。|  
 |**发布服务器类型**|**sysname**|发布服务器的类型；可以为下列值之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE 网关**|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -112,7 +111,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |history retention|**@history_retention**|  
 |history cleanup agent|**@history_cleanupagent**|  
 |distribution cleanup agent|**@distrib_cleanupagent**|  
-|rpc login name|none|  
+|rpc login name|无|  
   
  以下结果集列返回给分发服务器上的某个发布的发布访问列表中的用户:  
   
@@ -129,7 +128,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9de1f394184c6dab26f691251af85bfe631ae6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2302b64253c824ea21ef23f96bd2fae2952972d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121206"
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47724925"
   
  若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要查看仅具有失败状态的消息，请使用[sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)。 若要查看已发送的消息，请使用[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。|  
 |**profile_id**|**int**|提交消息所用配置文件的标识符。|  
@@ -52,7 +51,7 @@ ms.locfileid: "47724925"
 |**subject**|**nvarchar(510)**|消息的主题行。|  
 |**正文**|**varchar(max)**|消息的正文。|  
 |**body_format**|**varchar(20)**|消息正文的格式。 可能的值为**文本**并**HTML**。|  
-|**重要性**|**varchar(6)**|**重要性**消息参数。|  
+|**importance**|**varchar(6)**|**重要性**消息参数。|  
 |**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
@@ -75,7 +74,7 @@ ms.locfileid: "47724925"
 ## <a name="remarks"></a>备注  
  排除数据库邮件故障时，该视图通过向您显示正在等待发送的消息数以及消息已等待的时间，可帮助您确定问题的本质。 如果没有发送任何消息，则数据库邮件外部程序可能未运行，或者可能存在网络问题阻止了数据库邮件与 SMTP 服务器的联系。 如果许多未发送的消息具有相同**profile_id**，可能会与 SMTP 服务器问题。 请考虑向配置文件中添加其他帐户。 如果正在发送消息，但消息在队列中等待的时间过长，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能需要更多的资源来处理您所需的消息量。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授予**sysadmin**固定的服务器角色和**DatabaseMailUserRole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有**未发送**或**重试**消息。 所有其他用户只能看到**unsent**或**重试**他们已提交的消息。  
   
   

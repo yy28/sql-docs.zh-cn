@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13fb698d9a5be2e8fc949ad793cf19ac2aae97b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01345e16602516fd290b268cf4eb9abfb65c0faf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129104"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>表值参数描述符字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "62738071"
   
 ## <a name="remarks"></a>备注  
   
-|“属性”|Location|类型|Description|  
+|名称|Location|type|描述|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|表值参数的服务器类型名称。<br /><br /> 当在 SQLBindParameter 调用指定表值参数类型名称时，它必须始终指定为 Unicode 值，即使在作为 ANSI 应用程序生成的应用程序。 用于参数的值*StrLen_or_IndPtr*应为 SQL_NTS 或乘以 sizeof （wchar） 的名称的字符串长度。<br /><br /> 表值参数类型名称指定时通过 SQLSetDescField，可以通过使用应用程序一致的方式的文字指定它是构建的。 ODBC 驱动程序管理器将执行任何所需的 Unicode 转换。|  
 |SQL_CA_SS_TYPE_CATALOG_NAME（只读）|IPD|SQLTCHAR*|定义该类型的目录。|  
@@ -39,9 +38,9 @@ ms.locfileid: "62738071"
   
  如果将参数焦点设置为表值参数，则以下语句属性和描述符标头字段将应用于表值参数：  
   
-|“属性”|Location|类型|Description|  
+|名称|Location|type|描述|  
 |----------|--------------|----------|-----------------|  
-|SQL_ATTR_PARAMSET_SIZE<br /><br /> （这等同于 APD 中的 SQL_DESC_ARRAY_SIZE。）|APD|SQLUINTEGER|用于表值参数的缓冲区数组的数组大小。 这是缓冲区将容纳的最大行数或缓冲区的行数大小；表值参数值本身所具有的行数可能大于或小于缓冲区可以容纳的行数。 默认值为 1。<br /><br /> 注意：如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为其默认值为 0，则 SQL_ATTR_PARAMSET_SIZE 将引用该语句并指定参数集的数量。 如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号，则它引用该表值参数，并为该表值参数指定每个参数集具有的行数。|  
+|SQL_ATTR_PARAMSET_SIZE<br /><br /> （这等同于 APD 中的 SQL_DESC_ARRAY_SIZE。）|APD|SQLUINTEGER|用于表值参数的缓冲区数组的数组大小。 这是缓冲区将容纳的最大行数或缓冲区的行数大小；表值参数值本身所具有的行数可能大于或小于缓冲区可以容纳的行数。 默认值为 1。<br /><br /> 注意:如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为其默认值为 0，则 SQL_ATTR_PARAMSET_SIZE 将引用该语句并指定参数集的数量。 如果将 SQL_SOPT_SS_PARAM_FOCUS 设置为表值参数的序号，则它引用该表值参数，并为该表值参数指定每个参数集具有的行数。|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|默认值是 SQL_PARAM_BIND_BY_COLUMN。<br /><br /> 若要选择按行绑定，则该字段将设置为将要绑定到一组表值参数行的结构或缓冲区实例的长度。 此长度必须包括所有绑定列的空间以及结构或缓冲区的任何填充大小。 这将确保当绑定列的地址按指定长度递增时，结果将指向下一行中相同列的开头。 使用时**sizeof** ANSI C 中的运算符，将保证该行为。|  
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|APD|SQLINTEGER*|默认为 Null 指针。<br /><br /> 如果该字段为非 Null，则驱动程序取消对该指针的引用，并将取消引用的值添加到描述符记录（SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR）中每个延迟的字段，然后使用新指针值访问数据值。|  
   

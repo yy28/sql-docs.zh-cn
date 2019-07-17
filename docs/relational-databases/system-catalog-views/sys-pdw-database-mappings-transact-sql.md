@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a07d8074c4d7de7ebe9fea214f4d00ea25d3a3e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 46474439474f8a38ba016b16e323b0cb92afe39e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139935"
 ---
-# <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact-SQL)
+# <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   地图**database_id**的数据库的物理名称到计算节点上使用，并提供了**主体 id**的系统上的数据库所有者。 加入**sys.pdw_database_mappings**到**sys.databases**并**sys.pdw_nodes_pdw_physical_databases**。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar(36)**|计算节点上数据库的物理名称。<br /><br /> **physical_name**并**database_id**构成此视图的键。||  
 |database_id|**int**|数据库的对象 ID。 请参阅[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name**并**database_id**构成此视图的键。||  

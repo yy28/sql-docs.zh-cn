@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c40fe8c823115c3131a1719185bce8f1506df81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138844"
 ---
 # <a name="keyset-driven-cursors"></a>由键集驱动的游标
 由键集驱动游标静态和动态游标之间在于它能够检测更改。 比如静态游标，它不会始终检测对结果集的成员身份和顺序的更改。 类似动态游标，它检测到的行值发生更改的结果集 （取决于该事务，如 SQL_ATTR_TXN_ISOLATION 连接属性所设置的隔离级别） 中。  

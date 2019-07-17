@@ -2,7 +2,7 @@
 title: 使用数据迁移助手的到 Azure SQL 数据库迁移的本地 SQL Server 或 Azure Vm 上的 SQL Server |Microsoft Docs
 description: 了解如何使用数据迁移助手将本地 SQL Server 迁移到 Azure SQL 数据库
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 49300b679ea650bf4dd6f032fb9c1443224e9f86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e0065ed711c3cf550fec4bafe9aa08be8398e6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054748"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262312"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>将本地 SQL Server 或 Azure Vm 上的 SQL Server 迁移到 Azure SQL 数据库使用数据迁移助手
 
 数据迁移助手的 Azure Vm 或 Azure SQL 数据库上提供 SQL Server 内部部署和更高版本的 SQL Server 的升级或迁移到 SQL Server 的无缝的评估。
 
-本文提供分步说明迁移 SQL Server 的本地到 Azure SQL 数据库通过使用数据迁移助手。   
+本文提供分步说明迁移 SQL Server 的本地到 Azure SQL 数据库通过使用数据迁移助手。
 
 ## <a name="create-a-new-migration-project"></a>创建新的迁移项目
 
@@ -44,7 +44,7 @@ ms.locfileid: "68054748"
 2. 选择**身份验证类型**受源 SQL Server 实例。
 
    > [!NOTE]
-   > 它是通过选择加密连接的 recommedned**对连接进行加密**下的复选框**连接 poperties**。
+   > 建议通过选择加密连接**对连接进行加密**下的复选框**连接 poperties**。
 
     ![选择源服务器](../dma/media/select-source-server.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "68054748"
 2. 选择**身份验证类型**支持的目标 Azure SQL 数据库实例。
 
    > [!NOTE]
-   > 它是通过选择加密连接的 recommedned**对连接进行加密**下的复选框**连接 poperties**。
+   > 建议通过选择加密连接**对连接进行加密**下的复选框**连接 poperties**。
 
      ![选择目标服务器](../dma/media/select-target-server.png)
 
@@ -83,17 +83,17 @@ ms.locfileid: "68054748"
 
 ## <a name="select-schema-objects"></a>选择架构对象
 
-1.  从你想要迁移到 Azure SQL 数据库的源数据库中选择架构对象。
+1. 从你想要迁移到 Azure SQL 数据库的源数据库中选择架构对象。
 
     ![选择架构对象](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
-       > 不能转换为与对象中的部分-是自动修复的机会随即出现。 单击左侧窗格中的这些对象在右窗格中显示的建议修补程序。 查看修补程序并选择应用或忽略所有更改，对象的对象。 请注意，应用或忽略的一个对象的所有更改不影响其他数据库对象发生更改。 不能转换或自动修复的语句将复制到目标数据库和注释。
+       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
 
     ![建议的修复方法](../dma/media/suggested-fix.png)
 
 2. 选择**常规 SQL 脚本**。
- 
+
 3. 查看生成的脚本。
 
     ![生成的脚本](../dma/media/generated-script.png)
@@ -103,23 +103,23 @@ ms.locfileid: "68054748"
 1. 选择**部署架构**。
 
 2. 查看架构部署的结果。
- 
+
     ![架构部署结果](../dma/media/schema-deployment-results.png)
 
 3. 选择**将数据迁移**来启动数据迁移过程。
- 
+
 4. 选择你想要迁移的数据的表。
 
     ![选择要迁移的表](../dma/media/select-tables-to-migrate.png) 
 
 5. 选择**开始数据迁移**。
- 
+
 最后一个屏幕显示总体状态。
 
    ![迁移状态](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>请参阅
 
-- [数据迁移助手 (DMA)](../dma/dma-overview.md)
-- [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)
-- [数据迁移助手：最佳做法](../dma/dma-bestpractices.md)
+* [数据迁移助手 (DMA)](../dma/dma-overview.md)
+* [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)
+* [数据迁移助手：最佳做法](../dma/dma-bestpractices.md)

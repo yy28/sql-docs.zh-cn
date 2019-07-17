@@ -16,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24fc4ce839e95baf062bb9961510cc802dee747d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379bd1ea6acffd1f91af860239c50995636c2a56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126719"
 ---
 # <a name="creating-smo-programs"></a>创建 SMO 程序
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 对象的常规编程包括了所有对象共享的共有领域，例如运行方法、设置属性和操作集合。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[连接到 SQL Server 实例](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的最简单 SMO 程序。 演示 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 此外还包括了一些示例，演示如何连接到本地和远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
 |[断开与 SQL Server 实例的连接](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|一个演示如何断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接的程序。|  

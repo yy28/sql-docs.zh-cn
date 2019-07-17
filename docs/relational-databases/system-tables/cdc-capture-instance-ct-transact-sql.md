@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4d6202e3ac68a1c1d36e307b9073ce23f1efb6e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: e4ad2d32c313919ed4446a5506f22e9048e09288
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119313"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对源表启用变更数据捕获时创建的更改表。 该表为对源表执行的每个插入和删除操作返回一行，为对源表执行的每个更新操作返回两行。 如果在启用源表时未指定更改表的名称，则会使用一个派生的名称。 名称的格式为 cdc。*capture_instance*_CT 其中*capture_instance*是源表的架构名称以及格式的源表名称*schema_table*。 例如，如果表**Person.Address**中**AdventureWorks**示例数据库启用了变更数据捕获，派生的更改表名称将为**cdc。Person_Address_CT**。  
@@ -34,7 +33,7 @@ ms.locfileid: "67586379"
   
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|与相应更改的提交事务关联的日志序列号 (LSN)。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的删除操作删除了两行，更改表将包含两行，每个都具有相同 **__ $start_lsn**值。|  
 |**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此列始终为 NULL。|  

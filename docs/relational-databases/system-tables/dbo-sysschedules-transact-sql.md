@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096996"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "62470709"
   包含有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划的信息。 此表存储中**msdb**数据库。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划 ID。|  
 |**schedule_uid**|**uniqueidentifier**|作业计划的唯一标识符。 此值用于标识分布式作业的计划。|  
 |**originating_server_id**|**int**|作为作业计划来源的主服务器 ID。|  
-|**名称**|**sysname (nvarchar(128))**|作业计划的用户定义名称。 该名称在作业中必须唯一。|  
+|**name**|**sysname (nvarchar(128))**|作业计划的用户定义名称。 该名称在作业中必须唯一。|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier*的用户或组拥有的作业计划。|  
 |**enabled**|**int**|作业计划的状态：<br /><br /> **0** = 未启用。<br /><br /> **1** = 启用。<br /><br /> 如果未启用计划，则不会运行该计划中的任何作业。|  
 |**freq_type**|**int**|此计划中作业运行的频率。<br /><br /> **1** = 仅一次<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于**freq_interval**<br /><br /> **64** = SQL Server 代理服务启动时运行<br /><br /> **128** = 在计算机处于空闲状态时运行|  
@@ -65,7 +64,7 @@ ms.locfileid: "62470709"
 |**64** （SQL Server 代理服务启动时启动）|**freq_interval**未使用 (**0**)|  
 |**128** （运行时计算机处于空闲状态）|**freq_interval**未使用 (**0**)|  
   
-## <a name="see-also"></a>另请参阅  
- [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [dbo.sysjobschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

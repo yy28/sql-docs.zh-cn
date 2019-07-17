@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d65d8686dcb5651e19a2e18fec4f0e82e51402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096256"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|要返回统计信息对象属性的对象（表或索引视图）的 ID。|  
 |stats_id |**int**|统计信息对象的 ID。 在表或索引视图中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
@@ -80,15 +79,15 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  对于每个直方图梯级：  
   
--   粗线表示上限值 (range_high_key) 和上限值的出现次数 (equal_rows)  
+-   粗线表示上限值 (range_high_key  ) 和上限值的出现次数 (equal_rows  )  
   
--   range_high_key 左侧的纯色区域表示列值范围和每个列值的平均出现次数 (average_range_rows)。 第一个直方图梯级的 average_range_rows 始终是 0。  
+-   range_high_key  左侧的纯色区域表示列值范围和每个列值的平均出现次数 (average_range_rows  )。 第一个直方图梯级的 average_range_rows  始终是 0。  
   
--   点线表示用于估计范围中的非重复值总数 (distinct_range_rows) 和范围中的总指数 (range_rows)。 查询优化器使用 range_rows 和 distinct_range_rows 计算 average_range_rows，且不存储抽样值。  
+-   点线表示用于估计范围中的非重复值总数 (distinct_range_rows  ) 和范围中的总指数 (range_rows  )。 查询优化器使用 range_rows  和 distinct_range_rows  计算 average_range_rows  ，且不存储抽样值。  
   
  查询优化器按照直方图梯级的统计重要性来定义直方图梯级。 它使用最大差异算法使直方图中的梯级减至最少，并同时最大化边界值之间的差异。 最大梯级数为 200。 直方图梯级数可以少于非重复值的数目，即使对于边界点少于 200 的列也是如此。 例如，具有 100 个非重复值的列所具有的直方图的边界点可以少于 100。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 要求用户对统计信息列拥有 select 权限，或用户拥有表，或用户是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。
 

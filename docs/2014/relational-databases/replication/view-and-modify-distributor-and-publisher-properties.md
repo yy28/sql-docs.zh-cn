@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212020"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改分发服务器和发布服务器属性。  
@@ -56,11 +56,11 @@ ms.locfileid: "54131137"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到分发服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”**。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”** 。  
   
-3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。  
+3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。   
   
-    -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 (**...**)。  
+    -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 ( **...** )。   
   
     -   若要查看和修改与分发服务器关联的发布服务器属性，请在该对话框的 **“发布服务器”** 页面上单击发布服务器的属性按钮 ( **...** )。  
   
@@ -68,19 +68,19 @@ ms.locfileid: "54131137"
   
     -   若要更改管理存储过程在发布服务器上执行以及在分发服务器上更新信息时所用帐户的密码，请在该对话框的 **“发布服务器”** 页面上的 **“密码”** 和 **“确认密码”** 框中输入新密码。 有关详细信息，请参阅[保护分发服务器的安全](security/secure-the-distributor.md)。  
   
-4.  根据需要修改属性，然后单击 **“确定”**。  
+4.  根据需要修改属性，然后单击 **“确定”** 。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>查看和修改发布服务器属性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”**。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”** 。  
   
 3.  查看和修改属性中的**发布服务器属性-\<发布服务器 >** 对话框。  
   
     -   **sysadmin** 固定服务器角色中的用户可以在 **“发布数据库”** 页上为复制启用数据库。 启用数据库并不会发布该数据库，而是允许该数据库的 **db_owner** 固定数据库角色中的任何用户在该数据库中创建一个或多个发布。  
   
-4.  根据需要修改属性，然后单击 **“确定”**。  
+4.  根据需要修改属性，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式查看发布服务器和分发服务器属性。  
@@ -204,6 +204,6 @@ ms.locfileid: "54131137"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [分发服务器和发布服务器信息脚本](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)  
+ [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078222"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  如果未通过上述任一检查，该过程将失败并返回一个错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**mdw_writer** （拥有 EXECUTE 权限） 固定的数据库角色。  
   
 ## <a name="examples"></a>示例  

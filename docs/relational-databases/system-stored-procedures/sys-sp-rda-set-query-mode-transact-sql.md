@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
+title: sys.sp_rda_set_query_mode (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aa168f3bbac37e34730d5ee0ab348f5fd7d1743d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1450dc8304c2e8d3db5a6fa8b2153f951e70bde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083604"
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
      在运行时[sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)若要重新连接到远程 Azure 数据库，此操作会自动重置查询模式 LOCAL_AND_REMOTE，这是默认行为为Stretch Database。 也就是说，查询返回结果从本地和远程数据。  
   
 ## <a name="see-also"></a>请参阅  
- [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

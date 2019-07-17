@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088595"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关在复制拓扑中作为项目发布的数据库对象的信息。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**artcache_db_address**|**varbinary(8)**|发布数据库的缓存数据库结构的内存中地址。|  
 |**artcache_table_address**|**varbinary(8)**|已发布表项目的缓存表结构的内存中地址。|  
@@ -53,7 +52,7 @@ ms.locfileid: "56031828"
 |**wszArtpartialupdcmd**|**nvarchar(510)**|用于部分更新的命令或存储过程。|  
 |**cmdTypePartialUpd**|**int**|用于部分更新存储过程的调用语法，可以为以下值之一。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|垂直筛选项目的分区中的列数。|  
-|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = DELETE<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 无<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分 UPDATE|  
+|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = 删除<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 无<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分 UPDATE|  
 |**artgeninscmd**|**nvarchar(510)**|基于项目中所包含列的 INSERT 命令模板。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE 命令模板，可以包括项目中包含的主键或列，具体取决于所使用的调用语法。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE 命令模板，可以包括主键、更新列或完整的列列表，具体取决于所使用的调用语法。|  

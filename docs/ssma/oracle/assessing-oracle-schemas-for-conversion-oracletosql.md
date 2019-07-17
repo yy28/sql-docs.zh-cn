@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288455"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264552"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>评估 Oracle 架构以进行转换 (OracleToSQL)
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，应确定迁移将复杂程度，并且多长时间的迁移。 SSMA 可以创建评估报告，显示将成功转换的对象的百分比。 SSMA 还可以查看特定问题，导致转换失败。  

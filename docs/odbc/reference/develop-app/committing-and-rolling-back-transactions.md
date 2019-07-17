@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 194a90482946814995ca1963f7c8fc4bce48d223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083312"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>提交和回滚事务
 若要提交或回滚事务，在手动提交模式下，应用程序调用**SQLEndTran**。 通常支持事务的 Dbms 的驱动程序实现此函数通过执行**提交**或**回滚**语句。 驱动程序管理器不会调用**SQLEndTran**时连接处于自动提交模式; 它只是会返回 SQL_SUCCESS，即使应用程序将尝试回滚事务。 因为不支持事务的 Dbms 的驱动程序始终处于自动提交模式下，它们可以实现**SQLEndTran**返回 SQL_SUCCESS，而不执行任何操作或未完全实现。  

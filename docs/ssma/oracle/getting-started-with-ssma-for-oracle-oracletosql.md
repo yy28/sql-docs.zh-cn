@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782065"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264447"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 入门 (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 的 Oracle 允许您快速转换到的 Oracle 数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构中，将为生成的架构上传[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并将数据迁移到的 Oracle 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -65,7 +65,7 @@ Oracle 元数据资源管理器显示有关 Oracle 架构的信息。 通过使�
 有关详细信息，请参阅[加载到 SQL Server 转换数据库对象&#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
 ### <a name="metadata"></a>元数据  
-每个元数据资源管理器右侧是描述所选的对象的选项卡。 例如，如果 Oracle 元数据资源管理器中选择一个表，将显示六个选项卡：**表**， **SQL**，**类型映射，并报告**，**属性**，并**数据**。 **报表**选项卡只创建报表后，将包含所选的对象包含的信息。 如果您选择的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中，将显示三个选项卡：**表**， **SQL**，并且**数据**。  
+每个元数据资源管理器右侧是描述所选的对象的选项卡。 例如，如果 Oracle 元数据资源管理器中选择一个表，将显示六个选项卡：**表**， **SQL**，**类型映射，报表**，**属性**，并且**数据**。 **报表**选项卡只创建报表后，将包含所选的对象包含的信息。 如果您选择的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中，将显示三个选项卡：**表**， **SQL**，和**数据**。  
   
 大多数元数据设置是只读的。 但是，可以更改以下元数据：  
   
@@ -94,11 +94,11 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
 ### <a name="menus"></a>菜单  
 下表显示了 SSMA 菜单。  
   
-|菜单|Description|  
+|菜单|描述|  
 |----|-----------|  
 |**File**|包含用于处理项目、 连接到 Oracle，以及连接到命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**编辑**|包含用于查找和使用中的详细信息页面，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL 的详细信息窗格中。 此外包含**管理书签**选项，其中你将能够看到的现有书签列表。 可以使用对话框右侧的按钮来管理书签。|  
-|**“视图”**|包含**同步元数据资源管理器**命令。 用于将同步 Oracle 元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。 此外包含命令以显示和隐藏**输出**并**错误列表**窗格和一个选项**布局**管理布局。|  
+|**视图**|包含**同步元数据资源管理器**命令。 用于将同步 Oracle 元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。 此外包含命令以显示和隐藏**输出**并**错误列表**窗格和一个选项**布局**管理布局。|  
 |**工具**|包含用于创建报表，并将对象和数据迁移命令。 此外提供访问权限**全局设置**并**项目设置**对话框。|  
 |**测试人员**|包含用于创建和测试用例、 存储库，与备份管理系统使用的命令。|  
 |**帮助**|提供访问到 SSMA 帮助和**有关**对话框。|  

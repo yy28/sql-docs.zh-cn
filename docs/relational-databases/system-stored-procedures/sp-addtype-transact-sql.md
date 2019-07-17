@@ -1,5 +1,5 @@
 ---
-title: sp_addtype (Transact-SQL) | Microsoft Docs
+title: sp_addtype (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4e52fb6700d0af133a687c8b93e28cd12f72221c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117944"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  非负整数，指示小数点后面的小数数字可保留的最大十进制位数，它必须小于或等于精度值。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
-`[ @nulltype = ] 'null_type'` 指示别名数据类型处理 null 值的方式。 *null_type*是**varchar (** 8 **)**，默认值为 NULL，并且必须括在单引号 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未显式定义**sp_addtype**，设置为当前的默认值为 null 性。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果**@phystype**是**位**，并且**@nulltype**未指定，默认值不为 NULL。  
+`[ @nulltype = ] 'null_type'` 指示别名数据类型处理 null 值的方式。 *null_type*是**varchar (** 8 **)** ，默认值为 NULL，并且必须括在单引号 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未显式定义**sp_addtype**，设置为当前的默认值为 null 性。 使用 GETANSINULL 系统函数可确定当前默认的为空性。 可以使用 SET 语句或 ALTER DATABASE 对该为空性进行调整。 应显式定义为空性。 如果 **@phystype** 是**位**，并且 **@nulltype** 未指定，默认值不为 NULL。  
   
 > [!NOTE]  
 >  *Null_type*参数仅定义此数据类型的默认值为 null 性。 如果在创建表的过程中使用别名数据类型时显式地定义了为空性，那么该为空性优先于已定义的为空性。 有关详细信息，请参阅[ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)和[CREATE TABLE &#40;-&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  别名数据类型名称在数据库中必须是唯一的，但是名称不同的别名数据类型可以有相同的定义。  
@@ -92,7 +91,7 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  出于向后兼容性目的**公共**数据库角色自动授予 REFERENCES 权限通过使用创建的别名数据类型**sp_addtype**。 请注意当通过使用 CREATE TYPE 语句而不是创建别名数据类型**sp_addtype**，会进行任何自动授权。  
   
- 不能使用定义别名数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**，**表**， **xml**， **varchar （max)**， **nvarchar （max)** 或**varbinary （max)** 数据类型。  
+ 不能使用定义别名数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**，**表**， **xml**， **varchar （max)** ， **nvarchar （max)** 或**varbinary （max)** 数据类型。  
   
 ## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**或**db_ddladmin**固定的数据库角色。  
@@ -141,7 +140,7 @@ GO
  [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindefault &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecb486f51caa97c715d54885c34575a60bfdfb83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6d2a865764a3d802a7e5a5341226d7d1aa855f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095684"
 ---
 # <a name="installer-dll-function-summary"></a>安装程序 DLL 函数摘要
 下表介绍在安装程序 DLL 的函数。 有关语法和语义为每个函数的详细信息，请参阅[安装程序 DLL API 参考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139000"
 ---
 # <a name="identifier-arguments"></a>标识符自变量
 如果带引号的标识符参数中的字符串，该驱动程序中删除前导和尾随空格，并将按原义引号引起来的字符串。 如果不带引号的字符串，则该驱动程序删除尾随空格和折叠为大写的字符串。 设置标识符的参数为 null 指针将返回 SQL_ERROR 和 SQLSTATE HY009 （使用无效的 null 指针），除非参数为目录名称，并且不支持目录。  

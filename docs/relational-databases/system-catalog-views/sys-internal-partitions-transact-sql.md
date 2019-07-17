@@ -12,21 +12,20 @@ dev_langs:
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ca65e1a4e7af69bc1259b856a76c729b5210cc4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122643"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   返回为每个跟踪基于磁盘的表的列存储索引的内部数据的行集的一行。 这些行集是列存储索引的内部并跟踪已删除行、 行组映射和增量存储行组。 它们为每个表分区; 每个跟踪数据每个表具有至少一个分区。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每次重新生成列存储索引将重新创建行集。   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|此分区的分区 ID。 在数据库中是唯一的。|  
 |object_id|**int**|包含分区的表的对象 ID。|  

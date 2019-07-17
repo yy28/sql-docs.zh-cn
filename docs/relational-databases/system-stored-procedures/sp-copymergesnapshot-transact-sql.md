@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b96ef181f0a584c51258a81a37b9f246af46f090
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108738"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  将指定的发布的快照文件夹复制到文件夹中列出**@destination_folde** _r_。 在发布服务器上对发布数据库执行此存储的过程。  
+  将指定的发布的快照文件夹复制到文件夹中列出 **@destination_folde** _r_。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +39,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'` 是要复制其快照内容的名称。 *发布*是**sysname**，无默认值。  
   
-`[ @destination_folder = ] 'destination_folder'` 是的发布快照内容将被复制的名称。 *destination_folder*是**nvarchar(255)**，无默认值。 *Destination_folder*可以如另一台服务器、 网络驱动器或可移动媒体 （如 Cd-rom 或可移动磁盘） 的备用位置。  
+`[ @destination_folder = ] 'destination_folder'` 是的发布快照内容将被复制的名称。 *destination_folder*是**nvarchar(255)** ，无默认值。 *Destination_folder*可以如另一台服务器、 网络驱动器或可移动媒体 （如 Cd-rom 或可移动磁盘） 的备用位置。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

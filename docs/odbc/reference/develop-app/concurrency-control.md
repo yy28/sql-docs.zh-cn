@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083265"
 ---
 # <a name="concurrency-control"></a>并发控制
 *并发*是两个事务能够一次使用相同的数据和与增加的交易隔离通常并发减少。 这是因为由锁定行，通常实现事务隔离，因为锁定了更多的行，可以不会被锁定的行至少暂时阻止的情况下完成较少的事务。 并发减少通常被认为有必要维护数据库的完整性更高事务隔离级别的权衡，尽管它可以与使用游标的高读/写活动成为交互式应用程序中的问题。  

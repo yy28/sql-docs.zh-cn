@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5e90fb00a74324cce6267e372199153707ca7ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102367"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>sys.masked_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   使用**sys.masked_columns**到查询的表的列具有动态数据掩码函数应用于它们的视图。 该视图继承自 **sys.columns** 视图。 该视图会返回 **sys.columns** 视图中的所有列，以及 **is_masked** 和 **masking_function** 列，表明该列是否被屏蔽，以及在该列被屏蔽的情况下定义了什么屏蔽函数。 该视图仅显示在其上应用了屏蔽函数的列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|此列所属对象的 ID。|  
-|NAME|**sysname**|列的名称。 在对象中是唯一的。|  
+|name|**sysname**|列的名称。 在对象中是唯一的。|  
 |column_id|**int**|列的 ID。 在对象中是唯一的。<br /><br /> 列 ID 可以不按顺序排列。|  
 |**sys.masked_columns**返回许多列继承自**sys.columns**。|各种|请参阅[sys.columns &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)的更多列定义。|  
 |is_masked|**bit**|指示是否该列被屏蔽。 1 指示掩码。|  
@@ -42,7 +41,7 @@ ms.locfileid: "47726105"
   
 ## <a name="remarks"></a>备注  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图返回有关表的信息，在用户对表具有某种形式的权限或用户是否具有 VIEW ANY DEFINITION 权限。  
   
 ## <a name="example"></a>示例  
@@ -57,7 +56,7 @@ WHERE is_masked = 1;
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [动态数据屏蔽](../../relational-databases/security/dynamic-data-masking.md)   
+ [动态数据掩码](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

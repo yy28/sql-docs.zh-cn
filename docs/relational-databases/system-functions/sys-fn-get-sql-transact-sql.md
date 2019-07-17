@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120264"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="tables-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|数据库 ID。 对于临时和预定义 SQL 语句，指编译这些语句时所在的数据库的 ID。|  
 |objectid|**int**|数据库对象的 ID。 对于特殊 SQL 语句为 NULL。|  
@@ -79,7 +78,7 @@ sys.fn_get_sql ( SqlHandle )
   
 -   当必须返回存储过程的当前最高嵌套级时。 例如，有两个存储过程，分别名为 sp_1 和 sp_2。 如果 sp_1 调用 sp_2 并且在 sp_2 运行时从 sys.dm_exec_requests 动态管理视图获得句柄，则 fn_get_sql 函数将返回 sp_2 的有关信息。 此外，fn_get_sql 函数还会返回处于当前最高嵌套级的存储过程的完整文本。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户需要对该服务器具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625881"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266582"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置（类型映射）(OracleToSQL)
 类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到的 Oracle 数据类型设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
@@ -60,9 +60,9 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
-|binary_integer|ssNoversion|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
+|binary_integer|INT|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -72,15 +72,15 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
-|Decimal|float[53]|  
-|double precision|float[53]|  
-|FLOAT|float[53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|Decimal|float [53]|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|varchar(max)|  
 |原始长时间|varbinary(max)|  
-|long raw[\*..8000]<sup>*</sup>|varbinary[*]|  
-|long raw[8001..\*]<sup>*</sup>|varbinary(max)|  
+|长时间原始 [\*...8000]<sup>*</sup>|varbinary[*]|  
+|长时间原始 [8001...\*]<sup>*</sup>|varbinary(max)|  
 |national char|nvarchar(max)|  
 |national char varying|nvarchar(max)|  
 |区域字符集|nvarchar(max)|  
@@ -88,12 +88,12 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |不同的国家/地区字符<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
-|NUMERIC|float[53]|  
+|number|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|ssNoversion|  
+|pls_integer|INT|  
 |raw|varbinary(max)|  
-|REAL|float[53]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
@@ -103,7 +103,7 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |带时区的时间戳|datetimeoffset|  
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
-|varchar2|varchar(max)|  
+|Varchar2|varchar(max)|  
 |xmltype|xml|  
   
 <sup>*</sup> 适用于返回值类型映射仅。  
@@ -116,15 +116,15 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
 |char varying [*...\*]|varchar[*]|  
-|char[*..\*]|char[*]|  
+|char [*...\*]|char[*]|  
 |character|char|  
 |不同的字符 [*...\*]|varchar[*]|  
-|character[*..\*]|char[*]|  
+|字符 [*...\*]|char[*]|  
 |clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
@@ -133,12 +133,12 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |Decimal|decimal[38][0]|  
 |decimal[*..\*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
-|double precision|float[53]|  
-|FLOAT|float[53]|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
 |float[*..53]|float[*]|  
-|float[54..*]|float[53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|float[54..*]|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|varchar(max)|  
 |原始长时间|varbinary(max)|  
 |长时间原始 [*...8000]|varbinary[*]|  
@@ -155,15 +155,15 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |NCHAR|NCHAR|  
 |nchar[*]|nchar[*]|  
 |nclob|nvarchar(max)|  
-|number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|number|float [53]|  
+|数字 [*...\*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |NUMERIC|NUMERIC|  
-|numeric[*..\*]|numeric[*]|  
+|数字 [*...\*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..\*]|nvarchar[*]|  
-|raw[*..\*]|varbinary[*]|  
-|REAL|float[53]|  
+|原始 [*...\*]|varbinary[*]|  
+|REAL|float [53]|  
 |rowid|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |TIMESTAMP|datetime2|  
@@ -174,7 +174,7 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |timestamp[*..\*]|datetime2[*]|  
 |urowid|UNIQUEIDENTIFIER|  
 |urowid[*..\*]|UNIQUEIDENTIFIER|  
-|varchar[*..\*]|varchar[*]|  
+|varchar [*...\*]|varchar[*]|  
 |varchar2[*..\*]|varchar[*]|  
 |Xmltype|xml|  
   
@@ -184,14 +184,14 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |Oracle 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
-|binary_interger|ssNoversion|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
+|binary_interger|INT|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
 |char varying [*...8000]|varchar[*]|  
-|char varying[8001..*]|varchar(max)|  
+|char varying [8001..*]|varchar(max)|  
 |char[*..8000]|char[*]|  
 |char[8001..*]|varchar(max)|  
 |字符|char|  
@@ -207,12 +207,12 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |Decimal|decimal[38][0]|  
 |decimal[*..\*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
-|double precision|float[53]|  
-|float|float[53]|  
+|double precision|float [53]|  
+|float|float [53]|  
 |float[*..53]|float[*]|  
-|float[54..*]|float[53]|  
-|smallint|ssNoversion|  
-|Integer|ssNoversion|  
+|float[54..*]|float [53]|  
+|smallint|INT|  
+|Integer|INT|  
 |integer[*..\*]|numeric[*][0]|  
 |Long|varchar(max)|  
 |原始长时间|varbinary(max)|  
@@ -233,19 +233,19 @@ SSMA for Oracle 中, 可以设置自变量、 列、 局部变量和返回值的
 |nchar[4001..*]|nvarchar(max)|  
 |不同的 nchar [*...4000]|nvarchar[*]|  
 |不同的 nchar [4001..*]|nvarchar(max)|  
-|Nclob|nvarchar(max)|  
-|Number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|nclob|nvarchar(max)|  
+|Number|float [53]|  
+|数字 [*...\*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |Numeric|numeric[38][0]|  
-|numeric[*..\*]|numeric[*]|  
+|数字 [*...\*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..4000]|nvarchar[*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
-|pls_integer|ssNoversion|  
-|raw[*..8000]|varbinary[*]|  
+|pls_integer|INT|  
+|原始 [*...8000]|varbinary[*]|  
 |raw[8001..*]|varbinary(max)|  
-|Real|float[53]|  
+|Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |Smallint|SMALLINT|  

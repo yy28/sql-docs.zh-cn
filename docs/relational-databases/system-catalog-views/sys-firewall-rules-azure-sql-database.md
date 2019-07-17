@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2be0d498da026f386c3a89002cca621b19a2a15d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133986"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,14 +32,14 @@ ms.locfileid: "62631601"
   
  `sys.firewall_rules` 视图包含以下各列：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|服务器级防火墙设置的标识符。|  
 |name|**NVARCHAR(128)**|您选择用来描述和区分服务器级防火墙设置的名称。|  
 |start_ip_address|**VARCHAR(45)**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
-|end_ip_address|**VARCHAR(45)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：Windows Azure 连接尝试时才允许此这两个字段和**start_ip_address**字段等于`0.0.0.0`。|  
-|create_date|**DATETIME**|创建服务器级防火墙设置时的 UTC 日期和时间。<br /><br /> 注意：UTC 为通用协调时间的首字母缩写。|  
-|modify_date|**DATETIME**|上次修改服务器级防火墙设置时的 UTC 日期和时间。|  
+|end_ip_address|**VARCHAR(45)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意:Windows Azure 连接尝试时才允许此这两个字段和**start_ip_address**字段等于`0.0.0.0`。|  
+|create_date|**日期时间**|创建服务器级防火墙设置时的 UTC 日期和时间。<br /><br /> 注意:UTC 为通用协调时间的首字母缩写。|  
+|modify_date|**日期时间**|上次修改服务器级防火墙设置时的 UTC 日期和时间。|  
   
 ## <a name="remarks"></a>备注
 

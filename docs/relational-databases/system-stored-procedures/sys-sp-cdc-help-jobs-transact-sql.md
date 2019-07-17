@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64d07d7c9853fcbdf5041b1a40123ce68cd46363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9820476ecdee25551d09c8206595b637421b9efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083723"
 ---
 # <a name="sysspcdchelpjobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sys.sp_cdc_help_jobs
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业 ID。|  
 |**job_type**|**nvarchar(20)**|作业类型。|  
@@ -54,10 +53,10 @@ sys.sp_cdc_help_jobs
 |**maxscans**|**int**|最大扫描循环要执行，以从日志提取所有行数。<br /><br /> **maxscans**仅对捕获作业有效。|  
 |**连续**|**bit**|指示捕获作业是连续运行 (1) 还是以一次性模式运行 (0) 的标志。 有关详细信息，请参阅[sys.sp_cdc_add_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> **连续**仅对捕获作业有效。|  
 |**pollinginterval**|**bigint**|日志扫描循环之间间隔的秒数。<br /><br /> **pollinginterval**仅对捕获作业有效。|  
-|**保留期**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留期**仅对清除作业有效。|  
+|**retention**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留期**仅对清除作业有效。|  
 |**threshold**|**bigint**|清除时可以使用一条语句删除的删除条目的最大数量。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -71,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

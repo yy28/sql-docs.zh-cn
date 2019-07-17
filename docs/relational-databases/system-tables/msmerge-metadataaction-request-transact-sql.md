@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a46570a30254341fede1fb96fd368e94a09e58ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62910289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106372"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_metadataaction_request**表存储每个补偿操作所需的一行。 如果发生错误，并且必须重试同步，请使用 Web 同步，到将一个条目**MSmerge_metadataaction_request**。 在后续合并的上载阶段，将从此表中检索对属于进行同步的发布的所有项目的请求，然后将其上载。 当同步成功完成后中的相应行**MSmerge_metadataaction_request**删除该表。 此表存储在发布服务器上的发布数据库中，并存储在订阅服务器上的订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|已发布表的别名。|  
 |**rowguid**|**uniqueidentifier**|给定行的行标识符。|  

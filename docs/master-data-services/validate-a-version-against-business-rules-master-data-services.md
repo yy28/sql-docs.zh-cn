@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bfa4d13e82bd82bd08d2d3338e51feb0382ca094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102554"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>针对业务规则验证版本 (Master Data Services)
 
@@ -34,7 +33,7 @@ ms.locfileid: "65484973"
 > [!NOTE]  
 >  所有成员必须通过验证后，才能提交版本。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  

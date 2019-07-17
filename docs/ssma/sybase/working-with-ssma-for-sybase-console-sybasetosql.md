@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 117438f012686ee7fb40070539aa0848ecc78661
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112875"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Sybase 控制台 (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA)，版本为 Sybase Adaptive Server Enterprise (ASE)，现可通过在命令行控制台应用程序访问。 脚本文件窗体应用程序以执行命令的输入。 作为控制台应用程序，SSMA 使脚本级别进行连接，可减少迁移周期，并可缩放的迁移工作。  

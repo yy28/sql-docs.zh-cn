@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141079"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>连接到 SQL Server (DB2ToSQL)
 使用**连接到 SQL Server**对话框以连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单中，单击**连接到 SQL Server**。  
@@ -24,7 +23,7 @@ ms.locfileid: "63298981"
 **服务器名称**  
 输入或选择要连接到的 SQL Server 实例。 默认情况下，显示最近连接到的实例。  
   
--   如果要连接到本地计算机上的默认实例，可以输入**localhost**或句点 (**。**)。  
+-   如果要连接到本地计算机上的默认实例，可以输入**localhost**或句点 ( **。** )。  
   
 -   如果要连接到另一台计算机上的默认实例，输入的计算机的名称。  
   

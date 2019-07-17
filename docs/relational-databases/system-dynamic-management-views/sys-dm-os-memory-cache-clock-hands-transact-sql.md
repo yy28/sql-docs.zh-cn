@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 47dbe34459bc3774a9588fb347eca019f9de3e1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 783f985810b44673c6a6566caa6e89ff655670e0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900068"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265793"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "67900068"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将信息存储在内存中一个称为内存缓存的结构中。 缓存中的信息可以是数据、索引条目、编译的过程计划以及其他各种类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。 若要避免重新创建信息，尽可能将信息保留在内存缓存中，通常当信息太旧而失去用处或新信息需要使用内存空间时，会将旧信息从缓存中删除。 删除旧信息的过程称为内存清扫。 内存清扫是经常执行的操作，但不是连续执行的操作。 时钟算法控制内存缓存的清扫。 每个时钟能够控制几个内存清扫，称为指针。 内存缓存时钟指针是指一个内存清扫指针的当前位置。  

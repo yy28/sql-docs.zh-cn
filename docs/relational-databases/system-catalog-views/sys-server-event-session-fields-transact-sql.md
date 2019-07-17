@@ -20,27 +20,26 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81714ece6c410682781f97978d5aa2be84c307d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81d66f177c230d406fac9dae9373cf85da1837e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133224"
 ---
 # <a name="sysservereventsessionfields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对在事件和目标上显式设置的每个可自定义列都返回一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |object_id|**int**|此字段所关联的对象的 ID。 不可为 null。|  
-|NAME|**sysname**|字段的名称。 不可为 null。|  
-|值|**sql_variant**|字段的值。 不可为 null。|  
+|name|**sysname**|字段的名称。 不可为 null。|  
+|value|**sql_variant**|字段的值。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="remarks"></a>备注  

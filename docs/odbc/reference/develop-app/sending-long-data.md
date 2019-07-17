@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094341"
 ---
 # <a name="sending-long-data"></a>发送 Long 数据
 定义 Dbms*长整型数据*为任何字符或二进制数据而非特定大小，如 254 个字符。 可能无法用于存储在内存中，如时项所表示的长文本文档或位图的长数据的整个项目。 由于此类数据不能存储在一个缓冲区，数据源将其发送到使用部件中的驱动程序**SQLPutData**时执行的语句。 在执行时为其发送数据的参数称为*执行时数据参数*。  

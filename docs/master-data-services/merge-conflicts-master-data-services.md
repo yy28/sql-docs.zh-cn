@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 993e46a9795aa8528f4e1a1744dbf9dd5b27f89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092570"
 ---
 # <a name="merge-conflicts-master-data-services"></a>合并冲突 (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488909"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果你尝试发布的数据已被另一个用户更改，则发布将失败并显示冲突错误。 若要解决此错误，可以执行合并冲突，然后重新发布更改。  
   
-## <a name="prerequisites"></a>系统必备  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  

@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e6069f4b80942ef6c7ebc4fa2be3326cf31e224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2851cab846e8f814e03e2b96ad10c69136c9a27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111496"
 ---
 # <a name="creating-altering-and-removing-views"></a>创建、更改和删除视图
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 视图由 <xref:Microsoft.SqlServer.Management.Smo.View> 对象表示。  
   
- <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.View> 属性可定义视图。 它相当于[!INCLUDE[tsql](../../../includes/tsql-md.md)]用于创建视图的 SELECT 语句。  
+ <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.View> 属性可定义视图。 它与创建视图的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 语句等效。  
   
 ## <a name="example"></a>示例  
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除视图  
- 此代码示例显示如何使用内部联接创建两个表的视图。 该视图创建的使用文本模式，因此<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>属性必须设置。  
+ 此代码示例显示如何使用内部联接创建两个表的视图。 该视图是使用文本模式创建的，因此必须设置 <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> 属性。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -53,7 +52,7 @@ myview.Drop()
 ```
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-c"></a>在 Visual C# 中创建、更改和删除视图  
- 此代码示例显示如何使用内部联接创建两个表的视图。 该视图创建的使用文本模式，因此<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>属性必须设置。  
+ 此代码示例显示如何使用内部联接创建两个表的视图。 该视图是使用文本模式创建的，因此必须设置 <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> 属性。  
   
 ```csharp  
 {  
@@ -77,7 +76,7 @@ myview.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-view-in-powershell"></a>在 PowerShell 中创建、更改和删除视图  
- 此代码示例显示如何使用内部联接创建两个表的视图。 该视图创建的使用文本模式，因此<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>属性必须设置。  
+ 此代码示例显示如何使用内部联接创建两个表的视图。 该视图是使用文本模式创建的，因此必须设置 <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> 属性。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2b42eacb645f27ba44b467c842df98e8ca6944a
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 4d8f796569eb8c4b524c0bc45b37ca8dc676ab45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090239"
 ---
 # <a name="sysdmxesessionevents-transact-sql"></a>sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回有关会话事件的信息。 事件是离散执行点。 如果事件不包含所需的信息，则可对事件应用谓词以阻止其激发。  
    
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 不可为 null。|  
 |event_name|**nvarchar(256)**|操作绑定到的事件的名称。 不可为 null。|  

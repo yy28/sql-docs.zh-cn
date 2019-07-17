@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b74d52f21b056caa14b2ade7fca85426f877128
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120208"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|Description|  
+|属性|值|描述|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
@@ -63,12 +62,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新目标表。|  
 |**destination_owner**||目标对象所有者的名称。|  
 |**filter**||要用于筛选表（水平筛选）的新存储过程。 默认值为 NULL。 对于对等复制中的发布，此值不能更改。|  
-|**fire_triggers_on_snapshot**|**true**|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意：要复制的触发器的位掩码值*schema_option*必须包含值**0x100**。|  
+|**fire_triggers_on_snapshot**|**true**|应用初始快照时会执行已复制的用户触发器。<br /><br /> 注意:要复制的触发器的位掩码值*schema_option*必须包含值**0x100**。|  
 ||**false**|应用初始快照时不会执行已复制的用户触发器。|  
 |**identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**ins_cmd**||要执行的 INSERT 语句，否则从日志构造。|  
 |**pre_creation_cmd**||可以在应用同步之前除去、删除或截断目标表的预创建命令。|  
-||**none**|不使用命令。|  
+||**无**|不使用命令。|  
 ||**drop**|删除目标表。|  
 ||**delete**|删除目标表。|  
 ||**truncate**|截断目标表。|  
@@ -90,7 +89,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|复制列级排序规则。|  
 ||**0x2000**|复制与已发布项目源对象关联的扩展属性。|  
 ||**0x4000**|如果在表项目上定义了唯一键，则复制唯一键。|  
-||**0x8000**|使用 ALTER TABLE 语句将表项目上的主键和唯一键作为约束复制。<br /><br /> 注意：此选项已弃用。 使用**0x80**并**0x4000**相反。|  
+||**0x8000**|使用 ALTER TABLE 语句将表项目上的主键和唯一键作为约束复制。<br /><br /> 注意:此选项已弃用。 使用**0x80**并**0x4000**相反。|  
 ||**0x10000**|以 NOT FOR REPLICATION 方式复制 CHECK 约束，以便在同步期间不强制执行约束。|  
 ||**0x20000**|以 NOT FOR REPLICATION 方式复制 FOREIGN KEY 约束，以便在同步期间不强制执行约束。|  
 ||**0x40000**|复制与已分区表或已分区索引相关联的文件组。|  
@@ -124,7 +123,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**包括列名称**|复制的 INSERT 语句中包括列名。|  
 ||**没有列名称**|复制的 INSERT 语句中不包括列名。|  
 ||**没有任何 dts 水平分区**|项目的水平分区不由可转换的订阅定义。|  
-||**none**|清除中的所有状态选项[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)表，并将标记为非活动状态的文章。|  
+||**无**|清除中的所有状态选项[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)表，并将标记为非活动状态的文章。|  
 ||**参数**|使用参数化命令将更改传播给订阅服务器。 这是新项目的默认设置。|  
 ||**字符串文本**|使用字符串文字值将更改传播给订阅服务器。|  
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  

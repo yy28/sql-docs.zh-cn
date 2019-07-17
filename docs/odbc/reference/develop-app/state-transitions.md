@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2512d277980b071523cfea6cbe132f2a3861b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107292"
 ---
 # <a name="state-transitions"></a>状态转换
 ODBC 定义离散*状态*为每个环境中，每个连接和每个语句。 例如，在环境有三个可能的状态：（在其中任何环境已分配） 的未分配，分配的 （在其中分配一个环境，但不分配任何连接） 和 （在其中一个环境和一个或多个连接都已分配） 的连接。 连接具有七个可能的状态;语句具有 13 可能的状态。  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625786"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266550"
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
 SSMA 测试人员运行时测试用例，它执行所选测试对象，并创建有关验证结果的报告。 如果结果为在这两个平台上完全相同，测试成功。 Oracle 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -43,29 +43,29 @@ SSMA 测试人员会检查测试的测试执行开始前是否满足所有先决
   
 ||||  
 |-|-|-|  
-|“属性”|类型|Description|  
+|名称|type|描述|  
 |USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
-|USER_TABLE$AUD|表|保存已删除和覆盖的行的表。|  
-|USER_TABLE$AUDID|表|保存新的和已更改行的表。|  
+|USER_TABLE$AUD|table|保存已删除和覆盖的行的表。|  
+|USER_TABLE$AUDID|table|保存新的和已更改行的表。|  
 |USER_TABLE|view|表修改简化表示形式。|  
-|USER_TABLE$NEW|view|简化表示形式插入和覆盖的行。|  
+|新 USER_TABLE $|view|简化表示形式插入和覆盖的行。|  
 |USER_TABLE$NEW_ID|view|插入和已更改的行的标识。|  
-|USER_TABLE$OLD|view|已删除和覆盖的行的简化表示形式。|  
+|USER_TABLE$ 旧|view|已删除和覆盖的行的简化表示形式。|  
   
 在已验证表的架构中创建以下对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ||||  
 |-|-|-|  
-|“属性”|类型|Description|  
+|名称|type|描述|  
 |USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
   
 在中创建以下对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb 数据库中。  
   
 ||||  
 |-|-|-|  
-|“属性”|类型|Description|  
-|USER_TABLE$Aud|表|保存已删除和覆盖的行的表。|  
-|USER_TABLE$AudID|表|保存新的和已更改行的表。|  
+|名称|type|描述|  
+|USER_TABLE$Aud|table|保存已删除和覆盖的行的表。|  
+|USER_TABLE$AudID|table|保存新的和已更改行的表。|  
 |USER_TABLE|view|表修改简化表示形式。|  
 |USER_TABLE$new|view|简化表示形式插入和覆盖的行。|  
 |USER_TABLE$new_id|view|插入和已更改的行的标识。|  

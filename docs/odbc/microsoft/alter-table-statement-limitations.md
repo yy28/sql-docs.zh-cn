@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138425"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE 语句限制
 DBASE 或 Paradox 驱动程序使用时，一旦创建索引并添加新记录，ALTER TABLE 语句不能更改表的结构，除非删除索引和表的内容被删除。  

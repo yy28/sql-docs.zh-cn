@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 115883fa460f370f618c9286b9529e3cf221d12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47701075fd3c650870f2ce81b021fe7c8910b26e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62671609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110906"
 ---
 # <a name="syspolicysystemhealthstate-transact-sql"></a>syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个基于策略的管理策略和目标查询表达式组合在表中各占一行。 使用 syspolicy_system_health_state 视图可通过编程方式检查服务器的策略运行状态。 下表介绍了 syspolicy_system_health_state 视图中的列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |health_state_id|**bigint**|策略运行状态记录的标识符。|  
 |policy_id|**int**|策略标识符。|  

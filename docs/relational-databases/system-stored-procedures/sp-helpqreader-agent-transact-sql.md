@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 229442fed0defba9ebe39822a6184ba3b5d35644
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137560"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理的 ID。|  
-|**名称**|**nvarchar(100)**|代理的名称。|  
+|**name**|**nvarchar(100)**|代理的名称。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|是运行分发代理的 Windows 帐户的格式返回*域*\\*用户名*。|  
 |**job_password**|**sysname**|出于安全原因，值为 **\*\*\*\*\*\*\*\*\*\*** 始终返回。|  
