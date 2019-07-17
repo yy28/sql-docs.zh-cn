@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e12c62d9cbbc1f856e862fc64331f6cbb280ee7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079186"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_originators**表每个可更新订阅服务器发起事务占一行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识正在更新的订阅服务器。|  
 |**publisher_database_id**|**int**|标识发布数据库。|  
 |**srvname**|**sysname**|正在更新的服务器的名称。|  
-|**数据库名称**|**sysname**|正在更新的数据库的名称。|  
+|**dbname**|**sysname**|正在更新的数据库的名称。|  
 |**publication_id**|**int**|标识发布。|  
 |**dbversion**|**int**|标识数据库的版本。|  
   

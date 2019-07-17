@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 493fd7d0ce579073228c467226cef7ea86b2dc26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62656580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109541"
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话的每一端由会话端点表示。 对于数据库中的每个会话端点，此目录视图相应地包含一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |conversation_handle|**uniqueidentifier**|此会话端点的标识符。 不可为 NULL。|  
 |conversation_id|**uniqueidentifier**|会话的标识符。 此标识符由会话的两个参与方共享。 它与 is_initiator 列在数据库中是唯一的。 不可为 NULL。|  

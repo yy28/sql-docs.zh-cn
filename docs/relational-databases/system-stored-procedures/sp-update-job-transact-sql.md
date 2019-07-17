@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (Transact-SQL) | Microsoft Docs
+title: sp_update_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084893"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,30 +58,30 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id` 要更新的作业标识号。 *job_id*是**uniqueidentifier**。  
   
-`[ @job_name = ] 'job_name'` 作业的名称。 *job_name* is **nvarchar(128)**.  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**nvarchar （128)** 。  
   
 > **注意**：任一*job_id*或*job_name*必须指定但不能同时指定两者。  
   
-`[ @new_name = ] 'new_name'` 作业的新名称。 *new_name*是**nvarchar （128)**。  
+`[ @new_name = ] 'new_name'` 作业的新名称。 *new_name*是**nvarchar （128)** 。  
   
 `[ @enabled = ] enabled` 指定是否启用作业 (**1**) 或未启用 (**0**)。 *已启用*是**tinyint**。  
   
-`[ @description = ] 'description'` 作业的说明。 *描述*是**nvarchar(512)**。  
+`[ @description = ] 'description'` 作业的说明。 *描述*是**nvarchar(512)** 。  
   
 `[ @start_step_id = ] step_id` 要执行的作业的第一个步骤的标识号。 *step_id*是**int**。  
   
-`[ @category_name = ] 'category'` 作业的类别。 *类别*是**nvarchar （128)**。  
+`[ @category_name = ] 'category'` 作业的类别。 *类别*是**nvarchar （128)** 。  
   
 `[ @owner_login_name = ] 'login'` 拥有作业的登录名的名称。 *登录名*是**nvarchar （128)** 只有的成员**sysadmin**固定的服务器角色可以更改作业所有权。  
   
 `[ @notify_level_eventlog = ] eventlog_level` 指定的项放入此作业在 Microsoft Windows 应用程序日志。 *eventlog_level*是**int**，可以是下列值之一。  
   
-|ReplTest1|说明（操作）|  
+|值|说明（操作）|  
 |-----------|----------------------------|  
 |**0**|从不|  
 |**1**|成功时|  
 |**2**|在失败|  
-|**3**|始终|  
+|**3**|Always|  
   
 `[ @notify_level_email = ] email_level` 指定何时发送一封电子邮件时完成该作业。 *email_level*是**int**。*email_level*使用相同的值作为*eventlog_level*。  
   
@@ -90,11 +89,11 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_page = ] page_level` 指定在完成该作业后发送页。 *page_level*是**int**。*page_level*使用相同的值作为*eventlog_level*。  
   
-`[ @notify_email_operator_name = ] 'operator_name'` 其电子邮件时要发送到操作员的名称*email_level*为止。 *email_name*是**nvarchar （128)**。  
+`[ @notify_email_operator_name = ] 'operator_name'` 其电子邮件时要发送到操作员的名称*email_level*为止。 *email_name*是**nvarchar （128)** 。  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` 向其发送网络消息的操作员的名称。 *netsend_operator* is **nvarchar(128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` 向其发送网络消息的操作员的名称。 *netsend_operator*是**nvarchar （128)** 。  
   
-`[ @notify_page_operator_name = ] 'page_operator'` 向其发送一个页面的操作员的名称。 *page_operator* is **nvarchar(128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` 向其发送一个页面的操作员的名称。 *page_operator*是**nvarchar （128)** 。  
   
 `[ @delete_level = ] delete_level` 指定何时删除作业。 *delete_value*是**int**。*delete_level*使用相同的值作为*eventlog_level*。  
   

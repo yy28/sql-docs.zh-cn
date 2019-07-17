@@ -20,23 +20,22 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93943109267db79b1c8475eb3e1875950f9970a
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135313"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
+# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   返回数据库中的每个安全策略的行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|安全策略的名称，在数据库中是唯一的。|  
+|name|**sysname**|安全策略的名称，在数据库中是唯一的。|  
 |object_id|**int**|安全策略的 ID。|  
 |principal_id|**int**|注册到数据库的安全策略所有者的 ID。 如果通过架构确定所有者，则为 NULL。|  
 |schema_id|**int**|对象所在架构的 ID。|  

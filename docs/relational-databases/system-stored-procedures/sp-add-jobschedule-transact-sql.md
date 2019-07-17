@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobschedule (Transact-SQL) | Microsoft Docs
+title: sp_add_jobschedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078193"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +53,18 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id` 向其中添加计划的作业的作业标识号。 *job_id*是**uniqueidentifier**，无默认值。  
   
-`[ @job_name = ] 'job_name'` 向其中添加计划的作业的名称。 *job_name*是**nvarchar （128)**，无默认值。  
+`[ @job_name = ] 'job_name'` 向其中添加计划的作业的名称。 *job_name*是**nvarchar （128)** ，无默认值。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
-`[ @name = ] 'name'` 计划的名称。 *名称*是**nvarchar （128)**，无默认值。  
+`[ @name = ] 'name'` 计划的名称。 *名称*是**nvarchar （128)** ，无默认值。  
   
 `[ @enabled = ] enabled_flag` 指示计划的当前状态。 *enabled_flag*是**tinyint**，默认值为**1** （启用）。 如果**0**，不启用计划。 禁用该计划时，将不运行作业。  
   
 `[ @freq_type = ] frequency_type` 值，该值指示当作业的执行。 *frequency_type*是**int**，默认值为**0**，可以是下列值之一：  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**4**|每天|  
@@ -89,7 +88,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type` 指定的单位*frequency_subday_interval*。 *frequency_subday_type*是**int**，无默认值，并且可以是以下值之一：  
   
-|ReplTest1|说明（单位）|  
+|值|说明（单位）|  
 |-----------|--------------------------|  
 |**0x1**|在指定的时间|  
 |**0x4**|Minutes|  
@@ -101,7 +100,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval*是**int**，无默认值，并且可以是以下值之一：  
   
-|ReplTest1|说明（单位）|  
+|值|说明（单位）|  
 |-----------|--------------------------|  
 |**1**|第一个|  
 |**2**|第二个|  
@@ -131,7 +130,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  作业计划现在可以独立于作业进行管理。 若要添加到作业的计划，请使用**sp_add_schedule**以创建的计划和**sp_attach_schedule**将计划附加到作业。  

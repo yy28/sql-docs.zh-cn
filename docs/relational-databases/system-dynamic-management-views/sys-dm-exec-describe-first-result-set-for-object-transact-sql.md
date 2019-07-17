@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_describe_first_result_set_for_object (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3d08f031394522b0d9c9ab5f09bb6a79c4d5a01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097827"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,15 +52,15 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>返回的表  
  此公共元数据作为结果集返回，结果元数据中的每列对应于一行。 每一行以下面一节所说明的格式描述列的类型和为 Null 性。 如果对于每个控制路径不存在第一个语句，则返回的结果集不包含任何行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定列是否是出于浏览信息的目的而额外添加的，并不会实际出现在结果集中。|  
 |**column_ordinal**|**int**|在结果集中包含列的序号位置。 第一列的位置将指定为 1。|  
-|**名称**|**sysname**|包含列的名称（如果可以确定名称）。 否则为 NULL。|  
+|**name**|**sysname**|包含列的名称（如果可以确定名称）。 否则为 NULL。|  
 |**is_nullable**|**bit**|如果列允许 null 值，如果列不允许 null 值，则为 0 和 1，如果无法确定列允许 null 值，则包含值 1。|  
 |**system_type_id**|**int**|包含在 sys.types 中指定列的数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含数据类型名称。 包含为列数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
-|**max_length**|**smallint**|列的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将是 16，或者设置的值**sp_tableoption 'text in row'**。|  
+|**max_length**|**smallint**|列的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将是 16，或者设置的值**sp_tableoption 'text in row'** 。|  
 |**精度**|**tinyint**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
 |**scale**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname**|如果列包含的是字符，则为该列的排序规则的名称。 否则，返回 NULL。|  
@@ -102,7 +101,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
  下表列出了错误类型及其说明。  
   
-|错误类型|错误类型|Description|  
+|错误类型|错误类型|描述|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未描述的所有错误。|  
 |2|SYNTAX|在批处理中发生语法错误。|  

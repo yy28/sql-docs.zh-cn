@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084677"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个警报在表中各占一行。 警报是为响应事件而发送的消息。 警报可向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境之外转发消息，警报可以是电子邮件或寻呼消息。 警报还可以生成任务。  此表存储中**msdb**数据库。
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|警报 ID。|  
-|**名称**|**sysname**|警报名称。|  
+|**name**|**sysname**|警报名称。|  
 |**event_source**|**nvarchar(100)**|事件源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**event_category_id**|**int**|保留供将来使用。|  
 |**event_id**|**int**|保留供将来使用。|  

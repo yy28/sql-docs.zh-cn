@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5020ae49c3b923c04ded1469915f2e5e5c1e412f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094834"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47844615"
   显示执行的条件表达式、表达式目标、每次执行的结果以及有关出现的任何错误的详细信息。 下表介绍了 syspolicy_execution_history_details 视图中的列。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|此记录的标识符。 每个记录表示尝试计算或强制执行策略中的一个条件表达式。 如果应用于多个目标，每个条件将具有每个目标的详细记录。|  
 |history_id|**bigint**|历史记录事件的标识符。 每个历史记录事件表示尝试执行一次策略。 由于条件可能具有几个条件表达式和几个目标，因此，history_id 可能会创建几条详细记录。 因此，history_id 列用于将此视图与[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)视图。|  
@@ -66,7 +65,7 @@ JOIN msdb.dbo.syspolicy_policy_execution_history_details AS PolHistDet
 WHERE PolHistDet.result = 0 ;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ## <a name="see-also"></a>请参阅  

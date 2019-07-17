@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole (Transact-SQL) | Microsoft Docs
+title: sp_setapprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104435"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -55,7 +54,7 @@ sp_setapprole [ @rolename = ] 'role',
 > [!IMPORTANT]  
 > ODBC**加密**函数不提供加密。 您不应当依赖该函数来保护通过网络传输的密码。 如果通过网络传输该信息，则使用 SSL 或者 IPSec。
   
- **@encrypt = 'none'**  
+ **@encrypt = none**  
  指定不使用任何模糊代码。 密码以明文形式传递到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这是默认设置。  
   
  **@encrypt= 'odbc'**  
@@ -63,10 +62,10 @@ sp_setapprole [ @rolename = ] 'role',
   
 `[ @fCreateCookie = ] true | false` 指定是否要创建 cookie。 **true**隐式转换为 1。 **false**隐式转换为 0。  
   
-`[ @cookie = ] @cookie OUTPUT` 指定输出参数包含的 cookie。 仅当生成 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` 指定输出参数包含的 cookie。 仅当生成 cookie 的值 **@fCreateCookie** 是**true**。 **varbinary(8000)**  
   
 > [!NOTE]  
-> **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 应用程序应继续保留**varbinary(8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增量时在将来的版本。
+> **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)** 。 应用程序应继续保留**varbinary(8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增量时在将来的版本。
   
 ## <a name="return-code-values"></a>返回代码值
 

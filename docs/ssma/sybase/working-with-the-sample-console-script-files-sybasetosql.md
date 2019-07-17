@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe9e05f0078f0d1a9d3ab5ea6e2763ac28207085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62902669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091793"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>使用示例控制台脚本文件 (SybaseToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -84,7 +83,7 @@ ms.locfileid: "62902669"
   
     -   `source-schema:` 指定转换所需的源数据库。  
   
-    -   `sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库  
+    -   `sql-server-schema`：指定是要迁移到目标数据库  
   
     **命令名**  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62902669"
   
     **Attribute**  
   
-    `object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
+    `object-name`：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`  
   
     **命令名**  
   

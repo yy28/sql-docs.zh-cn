@@ -19,24 +19,23 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e5c54d116f4d4d8a71ba3660a31b324d9952970
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097676"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 返回用来限制并发查询优化的资源信号量的当前状态。
 
-|“列”|类型|Description|  
+|“列”|type|描述|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|资源池 ID 在资源调控器|  
-|**名称**|**sysname**|编译入口名称 （小型网关，中型网关，大型网关）|
+|**name**|**sysname**|编译入口名称 （小型网关，中型网关，大型网关）|
 |**max_count**|**int**|并发编译的最大配置的计数|
 |**active_count**|**int**|在此入口中编译的当前处于活动状态计数|
 |**waiter_count**|**int**|此入口在等待者数|

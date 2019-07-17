@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107535"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>模拟定位更新和删除语句
 如果数据源不支持定位的 update 和 delete 语句，该驱动程序可以模拟它们。 例如，ODBC 游标库模拟定位的更新和删除语句。 用于模拟定位的更新和删除语句的常规策略是将定位的语句转换为搜索的样式。 这是通过替换**WHERE CURRENT OF**与搜索子句**其中**标识的当前行的子句。  

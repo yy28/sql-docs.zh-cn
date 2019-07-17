@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0e34ad32ed5fb2ae54c5a32b715ee6eb417023b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118082"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
   
 `[ @alternate_distributor = ] 'alternate_distributor'` 是备用同步伙伴的分发服务器的名称。 *alternate_distributor*是**sysname**，无默认值。  
   
-`[ @friendly_name = ] 'friendly_name'` 是可以按其标识的发布服务器、 发布和分发服务器构成备用同步伙伴之间的关联的显示名称。 *friendly_name*是**nvarchar(255)**，默认值为 NULL。  
+`[ @friendly_name = ] 'friendly_name'` 是可以按其标识的发布服务器、 发布和分发服务器构成备用同步伙伴之间的关联的显示名称。 *friendly_name*是**nvarchar(255)** ，默认值为 NULL。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -74,7 +73,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addmergealternatepublisher**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+ [sp_dropmergealternatepublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

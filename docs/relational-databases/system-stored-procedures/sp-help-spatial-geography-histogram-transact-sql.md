@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085194"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  返回表值。 下面的网格描述表的列内容。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|表示每个单元格，起始计数为 1 的唯一 ID。|  
 |**cell**|**地理**|是表示每个单元的矩形多边形。 该单元形状与用于空间索引的单元形状相同。|  

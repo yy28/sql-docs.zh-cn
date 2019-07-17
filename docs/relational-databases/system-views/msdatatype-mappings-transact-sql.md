@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5af1233e81c996e98287a637e01ad1d249671303
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee1a0cc83b55fc265ae2bb490fd9d5e11fd73f22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129615"
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdatatype_mappings**视图将 SQL Server 数据类型映射到非 SQL Server 数据库管理系统 (DBMS) 使用的数据类型。 此表存储中**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**dbms_name**|**nvarchar(128)**|是 DBMS 的名称。 以下是可能的值及其说明。<br /><br /> **MSSQLSERVER**:目标为 SQL Server 数据库。<br />**ORACLE**:目标为 Oracle 数据库。<br />**DB2**:目标为 IBM DB2 数据库。<br />**SYBASE**:目标为 Sybase 数据库。|  
 |**sql_type**|**nvarchar(128)**|是 SQL Server 数据类型。|  

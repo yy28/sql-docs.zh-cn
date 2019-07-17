@@ -1,5 +1,5 @@
 ---
-title: sp_helparticle (Transact-SQL) | Microsoft Docs
+title: sp_helparticle (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cffdecba62283e3fc404c3630866467bc3a2b1c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084991"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +56,11 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**article id**|**int**|项目的 ID。|  
+|**文章 id**|**int**|项目的 ID。|  
 |**项目名称**|**sysname**|项目的名称。|  
-|**base object**|**nvarchar(257)**|项目或存储过程所表示的基础表的名称。|  
+|**基对象**|**nvarchar(257)**|项目或存储过程所表示的基础表的名称。|  
 |**目标对象**|**sysname**|目标（订阅）表的名称。|  
 |**同步对象**|**nvarchar(257)**|用于定义已发布项目的视图的名称。|  
 |**type**|**smallint**|项目的类型：<br /><br /> **1** = 基于日志的。<br /><br /> **3** = 基于日志的具有手动筛选器。<br /><br /> **5** = 具有手动视图并且基于日志。<br /><br /> **7** = 具有手动筛选器和手动视图并且基于日志。<br /><br /> **8** = 存储过程执行。<br /><br /> **24** = 可序列化的存储的过程执行。<br /><br /> **32** = 存储过程 （仅限架构）。<br /><br /> **64** = 视图 （仅限架构）。<br /><br /> **96** = 聚合函数 （仅限架构）。<br /><br /> **128** = 函数 （仅限架构）。<br /><br /> **257** = 基于日志的索引的视图。<br /><br /> **259** = 具有手动筛选器基于日志的索引的视图。<br /><br /> **261** = 具有手动视图并且基于日志的索引的视图。<br /><br /> **263** = 具有手动筛选器基于日志的索引的视图和手动视图。<br /><br /> **320** = 索引视图 （仅限架构）。<br /><br />|  

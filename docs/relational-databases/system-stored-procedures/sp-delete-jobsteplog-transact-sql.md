@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
+title: sp_delete_jobsteplog (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5c1587b65df123400188ba062ef40e57f9a0a550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085315"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **注意**：任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
-`[ @step_id = ] step_id` 为要删除的作业步骤日志在作业中步骤的标识号。 如果不包括，将删除作业中的所有作业步骤日志，除非**@older_than**或**@larger_than**指定。 *step_id*是**int**，默认值为 NULL。  
+`[ @step_id = ] step_id` 为要删除的作业步骤日志在作业中步骤的标识号。 如果不包括，将删除作业中的所有作业步骤日志，除非 **@older_than** 或 **@larger_than** 指定。 *step_id*是**int**，默认值为 NULL。  
   
 `[ @step_name = ] 'step_name'` 为要删除的作业步骤日志在作业中步骤的名称。 *step_name*是**sysname**，默认值为 NULL。  
   
 > **注意**：任一*step_id*或*step_name*可以指定，但不能同时指定两者。  
   
-`[ @older_than = ] 'date'` 想要保留的日期和时间的最早的作业步骤日志。 将删除早于该日期和时间的所有作业步骤日志。 *日期*是**datetime**，默认值为 NULL。 这两**@older_than**并**@larger_than**可以指定。  
+`[ @older_than = ] 'date'` 想要保留的日期和时间的最早的作业步骤日志。 将删除早于该日期和时间的所有作业步骤日志。 *日期*是**datetime**，默认值为 NULL。 这两 **@older_than** 并 **@larger_than** 可以指定。  
   
-`[ @larger_than = ] 'size_in_bytes'` 想要保留的大小以字节为单位的最大作业步骤日志。 大于此大小的所有作业步骤日志都会被删除。 这两**@larger_than**并**@older_than**可以指定。  
+`[ @larger_than = ] 'size_in_bytes'` 想要保留的大小以字节为单位的最大作业步骤日志。 大于此大小的所有作业步骤日志都会被删除。 这两 **@larger_than** 并 **@older_than** 可以指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -69,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>备注  
  **sp_delete_jobsteplog**处于**msdb**数据库。  
   
- 如果没有自变量除外**@job_id**或**@job_name**指定，会删除指定的作业的所有作业步骤日志。  
+ 如果没有自变量除外 **@job_id** 或 **@job_name** 指定，会删除指定的作业的所有作业步骤日志。  
   
 ## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  

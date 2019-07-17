@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7845ef36347d9131ed6991674b4e09b23ee34155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120273"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sys.fn_db_backup_file_snapshots
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|数据库文件 ID。 不可为 null。|  
-|snapshot_time|nvarchar(260)|REST API 会返回作为它的快照的时间戳。 如果不存在任何快照，则返回 NULL。|  
+|snapshot_time|nvarchar(260) |REST API 会返回作为它的快照的时间戳。 如果不存在任何快照，则返回 NULL。|  
 |snapshot_url|**nvarchar(360)**|指向文件快照的完整 URL。 返回为 NULL，如果没有快照存在。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

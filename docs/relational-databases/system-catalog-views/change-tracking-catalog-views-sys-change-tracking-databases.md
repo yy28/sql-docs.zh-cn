@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 984f9f2796edf1012e852d014e94ed6f6a6f7d57
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136542"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>更改跟踪目录视图的 sys.change_tracking_databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   为每个启用更改跟踪的数据库返回一行。  
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|数据库 ID。 它在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
 |is_auto_cleanup_on|**bit**|指示在经过配置的保持期后是否自动清除更改跟踪数据：<br /><br /> 0 = Off<br /><br /> 1 = On|  
@@ -42,7 +41,7 @@ ms.locfileid: "51667267"
 |retention_period_units_desc|**nvarchar(60)**|指定保持期的说明：<br /><br /> Minutes<br /><br /> Hours<br /><br /> Days|  
 |retention_period_units|**tinyint**|保持期的时间单位：<br /><br /> 1 = Minutes<br /><br /> 2 = Hours<br /><br /> 3 = Days|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对 sys.change_tracking_databases 进行的权限检查与对 sys.databases 所做的权限检查相同。 如果 sys.change_tracking_databases 的调用方不是数据库的所有者，查看相应行所需的最低权限为 ALTER ANY DATABASE 或 VIEW ANY DATABASE 服务器级权限，或者是 master 数据库或当前数据库中的 CREATE DATABASE 权限。  
   
 ## <a name="see-also"></a>请参阅  

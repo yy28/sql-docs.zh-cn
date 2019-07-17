@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095942"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**0**|= （等于）|  
 |**1**|<> （不等于）|  
 |**2**|> （大于）|  
-|**3**|< （小于）|  
+|**3**|< (小于)|  
 |**4**|> = (大于或等于)|  
 |**5**|< = （小于或等于）|  
 |**6**|LIKE|  
@@ -79,7 +78,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|Description|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |0|没有错误。|  
 |1|未知错误。|  

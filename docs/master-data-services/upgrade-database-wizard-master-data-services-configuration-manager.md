@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e587d29d8e711fa3e61a7e80fa447566b2e1411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102571"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升级数据库向导（Master Data Services 配置管理器）
 
@@ -24,13 +23,13 @@ ms.locfileid: "65485042"
 
   使用 **“升级数据库向导”** 来升级 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
   
-## <a name="action"></a>操作  
+## <a name="action"></a>Action  
  这是向导的简介页。 单击 **“下一步”** 以开始升级数据库的过程。  
   
 ## <a name="upgrade-review"></a>升级检查  
  检查此页上指定的信息。 如果该信息正确，则单击 **“下一步”** 升级指定数据库。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**SQL Server 实例**|当前选择的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的名称。|  
 |**Master Data Services 数据库**|当前选择的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的名称。|  

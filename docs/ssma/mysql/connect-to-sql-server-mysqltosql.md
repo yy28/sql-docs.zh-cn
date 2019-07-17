@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3a6f3daadf8d26da15a5ef0d9a01cb7f491d974e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dc64c84a8d14ea86893d52044894e0af2b1a3bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103214"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 使用**连接到 SQL Server**对话框以连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单中，单击**连接到 SQL Server**。  

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135827"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212054"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中查看和修改发布属性。  
@@ -55,9 +55,9 @@ ms.locfileid: "54135827"
 -   创建发布之后，某些属性更改要求新的快照。 如果发布具有多个订阅，某些更改还会要求重新初始化所有订阅。 有关详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)和[向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在“发布属性 - \<发布>”对话框（在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器中可用）中查看和修改发布属性。 有关启动复制监视器的信息，请参阅[启动复制监视器](../monitor/start-the-replication-monitor.md)。  
+ 可在“发布属性 - \<发布>”对话框（在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和复制监视器中可用）中查看和修改发布属性。  有关启动复制监视器的信息，请参阅[启动复制监视器](../monitor/start-the-replication-monitor.md)。  
   
- “发布属性 - \<发布>”对话框中包括以下页：  
+ “发布属性 - \<发布>”对话框中包括以下页：   
   
 -   **“常规”** 页，包含发布名称和说明、数据库名称、发布类型以及订阅过期设置。  
   
@@ -85,17 +85,17 @@ ms.locfileid: "54135827"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击发布，然后单击 **“属性”**。  
+3.  右键单击发布，然后单击 **“属性”** 。  
   
-4.  根据需要修改属性，然后单击 **“确定”**。  
+4.  根据需要修改属性，然后单击 **“确定”** 。  
   
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>在复制监视器中查看和修改发布属性  
   
 1.  在复制监视器的左侧窗格中展开发布服务器组，然后展开一个发布服务器。  
   
-2.  右键单击发布，然后单击 **“属性”**。  
+2.  右键单击发布，然后单击 **“属性”** 。  
   
-3.  根据需要修改属性，然后单击 **“确定”**。  
+3.  根据需要修改属性，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改发布以及返回其属性。 您使用的存储过程取决于发布的类型。  
@@ -109,7 +109,7 @@ ms.locfileid: "54135827"
 1.  执行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，在 **@property** 参数中指定要更改的发布属性，并在 **@value** 参数指定该发布的名称。  
   
     > [!NOTE]  
-    >  如果该更改将要求生成新快照，则还必须将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot**，而如果该更改将要求重新初始化订阅服务器，则必须将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription**。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
+    >  如果该更改将要求生成新快照，则还必须将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** ，而如果该更改将要求重新初始化订阅服务器，则必须将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription** 。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>查看合并发布的属性  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54135827"
  [对发布数据库进行架构更改](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [从发布中添加和删除项目](add-articles-to-and-drop-articles-from-a-publication.md)   
- [查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [查看和修改项目属性](view-and-modify-article-properties.md)  
   
   

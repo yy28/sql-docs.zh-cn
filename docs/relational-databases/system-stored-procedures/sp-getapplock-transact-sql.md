@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: f87a62e744bcd6032c58cdb3b327b747e5343d2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124021"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>参数  
  [ @Resource=] '*resource_name*  
- 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*是**nvarchar(255)** ，无默认值。 如果资源字符串的长度超过**nvarchar(255)**，则将其截断成**nvarchar(255)**。  
+ 指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*是**nvarchar(255)** ，无默认值。 如果资源字符串的长度超过**nvarchar(255)** ，则将其截断成**nvarchar(255)** 。  
   
  *resource_name*二进制比较，并因此而不考虑当前数据库的排序规则设置区分大小写。  
   
@@ -56,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
  [ @LockMode=] '*lock_mode*  
- 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值。 该值可以是下列任意值：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**独占**。  
+ 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值   。 可以是任意以下值：**共享**，**更新**， **IntentShared**， **IntentExclusive**，或**独占**。  
   
  [ @LockOwner=] '*指定的 lock_owner*  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*指定的 lock_owner*值是**事务**，也可由默认设置还是显式指定，sp_getapplock 必须在从事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值  。 lock_owner 是 nvarchar(32)   。 该值可以是 Transaction（默认值）或 Session   。 当*指定的 lock_owner*值是**事务**，也可由默认设置还是显式指定，sp_getapplock 必须在从事务内执行。  
   
  [ @LockTimeout=] '*值*  
  锁超时值（毫秒）。 默认值是返回的值与相同@LOCK_TIMEOUT。 若要指示时不能立即授予的请求，锁请求应返回返回代码为-1 而不是等待锁，请指定 0。  
@@ -70,7 +69,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功） 或 < 0 （失败）  
   
-|ReplTest1|结果|  
+|值|结果|  
 |-----------|------------|  
 |0|锁已同时成功授予。|  
 |1|在等待释放其他不兼容锁后成功授予锁。|  
@@ -80,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-999|指示参数验证或其他调用错误。|  
   
 ## <a name="remarks"></a>备注  
- 对资源设置的锁与当前事务或当前会话相关联。 当事务提交或回滚时，将释放与当前事务相关联的锁。 当会话注销时，将释放与会话相关联的锁。当服务器因任何原因而关闭时，将释放所有锁。  
+ 对资源设置的锁与当前事务或当前会话相关联。 当事务提交或回滚时，将释放与当前事务相关联的锁。 当会话注销时，将释放与会话相关联的锁。当服务器因任何原因关闭时，将释放所有锁。  
   
  sp_getapplock 创建的锁资源在会话的当前数据库中创建。 每个锁资源都由下列值的组合值进行标识：  
   

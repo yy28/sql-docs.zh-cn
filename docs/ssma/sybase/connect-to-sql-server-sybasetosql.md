@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1d610ea44ff29056228d6bf788cba1f74a50db58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed3ab8f05b9f809df99508163d07cb3e1bededa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083404"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>连接到 SQL Server (SybaseToSQL)
 使用**连接到 SQL Server**对话框以连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单中，单击**连接到 SQL Server**。  

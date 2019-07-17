@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095886"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +43,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @objname = ] 'object_name'` 是的表和列或别名数据类型从其默认值将是未绑定的名称。 *object_name*是**nvarchar(776)**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。  
+`[ @objname = ] 'object_name'` 是的表和列或别名数据类型从其默认值将是未绑定的名称。 *object_name*是**nvarchar(776)** ，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。  
   
  解除别名数据类型的默认值绑定时，也同时解除数据类型相同且具有相同默认值的任何列的默认值绑定。 属于该数据类型并且直接绑定默认值的类将不受影响。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
-`[ @futureonly = ] 'futureonly_flag'` 仅在解除别名数据类型默认值绑定时使用。 *futureonly_flag*是**varchar(15)**，默认值为 NULL。 当*futureonly_flag*是**futureonly**，数据类型的现有列不会失去指定默认值。  
+`[ @futureonly = ] 'futureonly_flag'` 仅在解除别名数据类型默认值绑定时使用。 *futureonly_flag*是**varchar(15)** ，默认值为 NULL。 当*futureonly_flag*是**futureonly**，数据类型的现有列不会失去指定默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

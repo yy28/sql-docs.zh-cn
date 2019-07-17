@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc1f556873221faa3f86c5272120a786f6f25025
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086332"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>提取的行数和状态
 如果将 SQL_ATTR_ROWS_FETCHED_PTR 语句属性尚未设置，它指定返回通过调用提取的行数的缓冲区**SQLFetch**或**SQLFetchScroll**，和错误行。 （此数字是没有状态 SQL_ROW_NO_ROWS 的所有行的计数。）在调用**SQLBulkOperations**或**SQLSetPos**，该缓冲区包含受影响的函数中执行的大容量操作的行数。 如果已设置 SQL_ATTR_ROW_STATUS_PTR 语句属性， **SQLFetch**或**SQLFetchScroll**返回*行状态数组*提供每个状态返回的行。 这两个由这些字段指向的缓冲区分配应用程序和驱动程序填充。 应用程序必须确保这些指针保持有效，直到关闭游标。  

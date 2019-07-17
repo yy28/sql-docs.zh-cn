@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096204"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +47,14 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'` 指定维护计划的计划 ID。 *plan_id*是**UNIQUEIDENTIFIER**。 默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
  如果*plan_id*指定，则**sp_help_maintenance_plan**将返回三个表：计划、 数据库和作业。  
   
 ### <a name="plan-table"></a>Plan 表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|维护计划 ID。|  
 |**plan_name**|**sysname**|维护计划名称。|  
@@ -71,13 +70,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>Database 表  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**database_name**|所有与维护计划相关的数据库的名称。 database_name 的数据类型为 sysname   。|  
   
 ### <a name="job-table"></a>Job 表  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**job_id**|所有与维护计划相关的作业的 ID。 *job_id*是**uniqueidentifier**。|  
   

@@ -33,18 +33,17 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086841"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  当记录实例出现在时，updategram 指示插入操作**\<后 >** 块中但不是在相应**\<之前 >** 块。 在这种情况下，updategram 中的记录插入**\<后 >** 到数据库中的块。  
+  当记录实例出现在时，updategram 指示插入操作 **\<后 >** 块中但不是在相应 **\<之前 >** 块。 在这种情况下，updategram 中的记录插入 **\<后 >** 到数据库中的块。  
   
  以下是 updategram 的插入操作格式：  
   
@@ -67,13 +66,13 @@ ms.locfileid: "56019008"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<before> Block  
+## <a name="before-block"></a>\<之前 > 块  
  **\<之前 >** 块可省略了插入操作。 如果可选**映射架构**属性未指定，  **\<ElementName >** 中指定的 updategram 映射到数据库表和子元素或属性映射到表中的列。  
   
 ## <a name="after-block"></a>\<后 > 块  
- 您可以指定一个或多个记录中的**\<后 >** 块。  
+ 您可以指定一个或多个记录中的 **\<后 >** 块。  
   
- 如果**\<后 >** 块不提供特定列的值，updategram 将使用 （如果已指定一个架构） 中带批注的架构指定的默认值。 如果架构未指定列的默认值，则 updategram 不指定到此列的任何显式值，并，时，将分配[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此列的默认值 （如果指定）。 如果没有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值并且此列接受 NULL 值，则 updategram 将此列的值设置为 NULL。 如果此列既没有默认值也不接受 NULL 值，则命令将失败并且 updategram 将返回一个错误。 可选**updg: returnid**属性用于返回在包含一个 IDENTITY 类型的列的表中添加一条记录时，由系统生成的标识值。  
+ 如果 **\<后 >** 块不提供特定列的值，updategram 将使用 （如果已指定一个架构） 中带批注的架构指定的默认值。 如果架构未指定列的默认值，则 updategram 不指定到此列的任何显式值，并，时，将分配[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]到此列的默认值 （如果指定）。 如果没有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认值并且此列接受 NULL 值，则 updategram 将此列的值设置为 NULL。 如果此列既没有默认值也不接受 NULL 值，则命令将失败并且 updategram 将返回一个错误。 可选**updg: returnid**属性用于返回在包含一个 IDENTITY 类型的列的表中添加一条记录时，由系统生成的标识值。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
  如果 updategram 插入仅记录，则 updategram 不需要**updg: id**属性。 有关详细信息**updg: id**，请参阅[使用 XML Updategram 更新数据&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)。  
@@ -82,7 +81,7 @@ ms.locfileid: "56019008"
  Updategram 在 updategram 中包含一个 IDENTITY 类型的列的表中插入一条记录，可以使用可选的捕获系统分配的值**updg： 在标识**属性。 然后，updategram 可以在后续操作中使用此值。 可以在执行 updategram，返回由指定生成的标识值**updg: returnid**属性。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- **Updg: guid**属性是一个可选属性，生成全局唯一标识符。 此值保持在范围内的整个**\<同步 >** 块中指定它。 可以使用此值在任何地方**\<同步 >** 块。 该属性调用**newguid （)** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函数生成的唯一标识符。  
+ **Updg: guid**属性是一个可选属性，生成全局唯一标识符。 此值保持在范围内的整个 **\<同步 >** 块中指定它。 可以使用此值在任何地方 **\<同步 >** 块。 该属性调用**newguid （)** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函数生成的唯一标识符。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足中指定的要求[运行 SQLXML 示例的要求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
@@ -160,7 +159,7 @@ ms.locfileid: "56019008"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. 使用 updategram 插入多个记录  
- 此 updategram 向 HumanResources.Shift 表添加两个新的轮班记录。 Updategram 不指定可选**\<之前 >** 块。  
+ 此 updategram 向 HumanResources.Shift 表添加两个新的轮班记录。 Updategram 不指定可选 **\<之前 >** 块。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -238,7 +237,7 @@ ms.locfileid: "56019008"
   
  订单详细信息表中的 UnitPrice 列属于**资金**类型。 要应用适当的类型转换 (从**字符串**键入到**资金**类型)，必须将美元符号 （$） 添加为值的一部分。 如果 updategram 未指定映射架构中，第一个字符**字符串**计算的值。 如果第一个字符为美元符号 ($)，则会应用适当的转换。  
   
- 如果针对该列相应地标记为映射架构指定 updategram **dt:type="fixed.14.4"** 或**sql: datatype ="money"**，美元符号 （$） 不是必需的和映射就会处理转换。 建议采用这种方式以确保能够进行适当的类型转换。  
+ 如果针对该列相应地标记为映射架构指定 updategram **dt:type="fixed.14.4"** 或**sql: datatype ="money"** ，美元符号 （$） 不是必需的和映射就会处理转换。 建议采用这种方式以确保能够进行适当的类型转换。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>若要测试示例 XPath 查询根据架构  
   
@@ -504,7 +503,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Updategram 指定**xsi: nil**有关 **\<fname >** 中的元素**\<后 >** 块。 因此，在执行此 updategram 时，会为表中的 first_name 列插入 NULL 值。  
+ Updategram 指定**xsi: nil**有关 **\<fname >** 中的元素 **\<后 >** 块。 因此，在执行此 updategram 时，会为表中的 first_name 列插入 NULL 值。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   

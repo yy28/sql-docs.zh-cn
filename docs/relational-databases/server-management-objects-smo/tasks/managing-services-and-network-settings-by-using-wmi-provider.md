@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8aba2f18b40b86f7d285a9942053a6ea84de446d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 669741b53a61c8653d58cba1c8d72347f69998c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111380"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  WMI 提供程序是一个已发布的接口，可供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]管理控制台 (MMC) 管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务和网络协议。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象表示 WMI 提供程序。  
+  WMI 提供程序是可供 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 管理控制台 (MMC) 用来管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务和网络协议的已发布接口。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象表示 WMI 提供程序。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象的运行与建立的连接<xref:Microsoft.SqlServer.Management.Smo.Server>对象的实例与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并使用 Windows 凭据连接到 WMI 服务。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 对象的运行与通过 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象建立的与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接无关，而是使用 Windows 凭据连接到 WMI 服务。  
   
 ## <a name="example"></a>示例  
 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

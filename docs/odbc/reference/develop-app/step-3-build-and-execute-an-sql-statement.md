@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0e369b74ef629c5fd7136b9098f579b5ad2b1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114261"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>步骤 3：生成并执行 SQL 语句
 第三步是生成和执行 SQL 语句，如以下插图所示。 用于执行此步骤的方法很可能有很大差异。 应用程序可能会提示用户输入的 SQL 语句，生成基于用户输入的 SQL 语句或使用硬编码的 SQL 语句。 有关详细信息，请参阅[构造 SQL 语句](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  

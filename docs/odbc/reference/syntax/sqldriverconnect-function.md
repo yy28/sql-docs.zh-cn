@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104697"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函数
 **符合性**  
@@ -98,7 +97,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>诊断  
  当**SQLDriverConnect**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*fHandleType*设为 SQL_HANDLE_DBC 和一个*hHandle*的*ConnectionHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLDriverConnect** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|缓冲区\* *OutConnectionString*是否不足够大以返回整个连接字符串，以便连接字符串已被截断。 在返回未截断的连接字符串的长度 **StringLength2Ptr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -145,11 +144,11 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>注释  
  连接字符串具有以下语法：  
   
- *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
+ *连接字符串*:: =*空字符串*[;]&#124; *特性*[;]&#124; *特性*;*连接字符串*  
   
  *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
- *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
+ *零个以上*:: = DSN &#124; UID &#124; PWD &#124; *驱动程序的定义的属性的关键字*  
   
  *attribute-value* ::= *character-string*  
   

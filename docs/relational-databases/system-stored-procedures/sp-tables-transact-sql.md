@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c566ef9163cd7bc71ac6934f3db9782c87f06f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096054"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +48,15 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @table_name = ] 'name'` 用于返回目录信息的表。 *名称*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。  
+`[ @table_name = ] 'name'` 用于返回目录信息的表。 *名称*是**nvarchar(384)** ，默认值为 NULL。 支持通配符模式匹配。  
   
-`[ @table_owner = ] 'owner'` 是用来返回目录信息的表所有者。 *所有者*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
+`[ @table_owner = ] 'owner'` 是用来返回目录信息的表所有者。 *所有者*是**nvarchar(384)** ，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定所有者，且当前用户未拥有指定名称的表，则该过程查找由数据库所有者拥有的具有指定名称的表。 如果存在，则返回该表的列。  
   
-`[ @table_qualifier = ] 'qualifier'` 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+`[ @table_qualifier = ] 'qualifier'` 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_ **。** _所有者_ **。** _名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` 是一系列值，以逗号分隔，提供有关所有表的指定的表类型的信息。 其中包括**表**， **SYSTEMTABLE**，并**视图**。 *类型*是**varchar(100)**，默认值为 NULL。  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 是一系列值，以逗号分隔，提供有关所有表的指定的表类型的信息。 其中包括**表**， **SYSTEMTABLE**，并**视图**。 *类型*是**varchar(100)** ，默认值为 NULL。  
   
 > [!NOTE]  
 >  每个表类型都必须用单引号引起来，整个参数必须用双引号引起来。 表类型必须大写。 如果 SET QUOTED_IDENTIFIER 为 ON，则每个单引号必须换成双引号，整个参数必须用单引号引起来。  
@@ -65,17 +64,17 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'` 确定下划线 (_)、 百分号 （%） 和方括号 （[或]） 字符被解释为通配符字符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|表限定符名称。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 此字段可以为 NULL。|  
 |**TABLE_OWNER**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**TABLE_TYPE**|**varchar(32)**|表、系统表或视图。|  
-|**REMARKS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
+|**备注**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
   
 ## <a name="remarks"></a>备注  
  为达到最大互操作性，网关客户端应假定只有 SQL-92 标准的 SQL 模式匹配（% 和 _ 通配符字符）。  
@@ -130,7 +129,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [sys.synonyms &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

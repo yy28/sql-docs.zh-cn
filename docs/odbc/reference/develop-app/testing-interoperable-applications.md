@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59f6f5a37e65c802c8d51a1f56a40380f054e39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114088"
 ---
 # <a name="testing-interoperable-applications"></a>测试交互式应用程序
 测试交互式应用程序是最耗时的业务和最坏的情形是不可能因为在市场上不断出现新的驱动程序。 但是，可能会合理程度的测试。 具有有限的或较低的互操作性的应用程序只需要针对可确保支持这些驱动程序测试。 但是，它们必须进行完全测试针对这些驱动程序。  

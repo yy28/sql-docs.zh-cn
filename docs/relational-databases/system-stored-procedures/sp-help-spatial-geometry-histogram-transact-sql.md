@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
+title: sp_help_spatial_geometry_histogram (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085124"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  返回表值。 下面的网格描述表的列内容。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|表示每个单元的唯一 ID，从 1 开始计数。|  
 |**cell**|**geometry**|是表示每个单元的矩形多边形。 该单元形状与用于空间索引的单元形状相同。|  
