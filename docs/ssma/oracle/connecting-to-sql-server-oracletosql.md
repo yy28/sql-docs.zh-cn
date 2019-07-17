@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 40e591615850d16994c4023b63a354aa2061da59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: cd8f0e57554f32d3b02a6e0e98d3a3645d683bac
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287497"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266163"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>连接到 SQL Server (OracleToSQL)
 将 Oracle 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 R2 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 必须连接到其中的任何目标实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SSMA 连接时，获取有关的实例中的所有数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并显示数据库中的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。 SSMA 存储信息的哪些实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相连，但不存储密码。  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 3b52dd2347e4c7b22e273abde4d6687a520d5b19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d53620afbe1fffa51ae484beaa2f2520ccb0eecb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991242"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266457"
 ---
 # <a name="troubleshooting-oracletosql"></a>故障排除 (OracleToSQL)
 不常见遇到迁移问题正好执行控制台脚本或命令。  

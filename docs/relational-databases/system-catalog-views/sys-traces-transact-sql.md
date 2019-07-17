@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6894622cc31e3348164570e2b5d775ed955baf0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126678"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "47784718"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|跟踪 ID。|  
 |**status**|**int**|跟踪状态：<br /><br /> 0 = 停止<br /><br /> 1 = 正在运行|  
-|path|nvarchar(260)|跟踪文件的路径。 如果跟踪为行集跟踪，则此值为空值。|  
+|path |nvarchar(260) |跟踪文件的路径。 如果跟踪为行集跟踪，则此值为空值。|  
 |**max_size**|**bigint**|跟踪文件的最大大小限制，以兆字节 (MB) 表示。 如果跟踪为行集跟踪，则此值为空值。|  
 |**stop_time**|**datetime**|停止运行跟踪的时间。|  
 |**max_files**|**int**|滚动更新文件的最大数目。 如果未设置最大数目，则此值是零。|  
@@ -58,7 +57,7 @@ ms.locfileid: "47784718"
 |**event_count**|**bigint**|已发生事件的总数。|  
 |**dropped_event_count**|**int**|已除去事件的总数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: efed0e6e396e83ba13aa058639e47e37dd376dde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fce73abd82afe64c5ecc971e13ba161b880e6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088408"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多维表达式 (MDX) 参考
 
@@ -22,7 +21,7 @@ ms.locfileid: "63278018"
     
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|介绍 MDX 语言中适用于 MDX 表达式、语句和脚本的各种语法元素。|  
 |[MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)|介绍定义 MDX 语言的语句、运算符和函数。|  

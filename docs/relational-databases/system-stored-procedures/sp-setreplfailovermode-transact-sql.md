@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a32c5eb0a7dcd18558b3d1a931d9a8c83cfeca0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63028625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104367"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  [ **@failover_mode=** ] **'***failover_mode***’**  
  订阅的故障转移模式。 *failover_mode*是**nvarchar(10)** 可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**立即**或**同步**|订阅服务器上的数据修改将被大容量复制到发布服务器。|  
-|**queued**|数据修改存储在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]队列。|  
+|**排入队列**|数据修改存储在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]队列。|  
   
 > [!NOTE]  
 >  不再推荐使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列，也不再为其提供支持。  

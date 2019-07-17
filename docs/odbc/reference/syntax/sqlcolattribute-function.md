@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118704"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函数
 **符合性**  
@@ -95,7 +94,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>诊断  
  当**SQLColAttribute**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*HandleType*设置为 SQL_HANDLE_STMT，和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLColAttribute** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|缓冲区\* *CharacterAttributePtr*是否不足够大以返回整个字符串值中，因此字符串值被截断。 在返回未截断的字符串值的长度 **StringLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  下表列出了返回的描述符类型**SQLColAttribute**。 类型*NumericAttributePtr*的值是**SQLLEN \*** 。  
   
-|*FieldIdentifier*|信息<br /><br /> 在中返回|Description|  
+|*FieldIdentifier*|Information<br /><br /> 在中返回|描述|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 列是否自动递增列。<br /><br /> 如果列不是自动递增列，或不是数值，SQL_FALSE。<br /><br /> 此字段是有效的数值数据类型列。 应用程序可以将值插入到的行中包含自动递增的列，但通常不能更新列中的值。<br /><br /> 插入到 autoincrement 列时，唯一的值是在插入时，插入到列。 增量未定义，但源特定的数据。 应用程序不应假定 autoincrement 列按任何特定值开始在任何特定点或增量。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|基列名称的结果集列。 如果基列名称不存在 （如中所示的列的表达式的情况下），则此变量包含空字符串。<br /><br /> 将从 IRD 的只读字段的 SQL_DESC_BASE_COLUMN_NAME 记录字段返回此信息。|  
@@ -158,7 +157,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|若要显示列中的数据所需的字符的最大数目。 有关显示大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|如果列具有固定的精度和非零规模的数据源特定于，SQL_TRUE。<br /><br /> 如果列不具有固定的精度和非零规模的数据源特定于，SQL_FALSE。|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|列标签或标题。 例如，一个名为 EmpName 列可能被标记为雇员姓名或可能会带有一个别名。<br /><br /> 如果列不具有标签，则返回的列名称。 如果列是未标记的和未命名，则返回空字符串。|  
-|SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|可以是数字值的最大值或实际的字符长度的字符字符串或二进制数据类型。 这是固定长度的数据类型的最大字符长度或可变长度数据类型的实际字符长度。 其值始终不包括结束字符字符串的 null 终止字节。<br /><br /> 将从 IRD 的 SQL_DESC_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|可以是数字值的最大值或实际的字符长度的字符字符串或二进制数据类型。 这是固定长度的数据类型的最大字符长度或可变长度数据类型的实际字符长度。 其值始终不包括结束字符字符串的 null 终止字节。<br /><br /> 将从 IRD 的 SQL_DESC_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的字符或驱动程序会识别为此数据类型的文字的前缀的字符。 此字段包含空字符串数据类型为其文字前缀不适用。 有关详细信息，请参阅[文字前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的字符或驱动程序会识别为此数据类型的文字的后缀的字符。 此字段包含空字符串数据类型为其文本后缀不适用。 有关详细信息，请参阅[文字前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的数据类型可能不同于常规的数据类型名称的任何本地化 （本机语言） 名称。 如果没有本地化的名称，则返回空字符串。 此字段是仅出于显示目的。 字符串的字符集与区域设置相关并通常是服务器的默认字符集。|  

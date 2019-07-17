@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4e29ebcc2ecb1811a9465c63464219cb93f427a5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a3ce46249670f9c290a07418b78c7c3296d7855b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137623"
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_helppeerresponses [ @request_id = ] request_id
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|状态请求的 ID。|  
 |**peer**|**sysname**|生成响应的对等方的名称。|  
@@ -61,7 +60,7 @@ sp_helppeerresponses [ @request_id = ] request_id
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helppeerresponses**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

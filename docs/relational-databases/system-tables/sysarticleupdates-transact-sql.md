@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2e710bdbe8f026624ea71357afb6d204b333c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130499"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个支持即时更新订阅的项目在表中各占一行。 该表存储在复制的数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|为项目提供唯一的 ID 号标识列。|  
 |**pubid**|**int**|项目所属发布的 ID。|  

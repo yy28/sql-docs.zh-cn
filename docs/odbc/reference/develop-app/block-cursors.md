@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0ea6ff655140c979f400f67a59cd7259bac9e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118821"
 ---
 # <a name="block-cursors"></a>块游标
 许多应用程序花费大量的时间将跨网络的数据。 这次所用的部分实际上将数据传送跨网络，以及作为其中一部分所用的网络开销，如驱动程序请求数据的行所做的调用。 如果应用程序可以有效地使用后一种时间就会降低*块中，* 或*fat* *游标，* 这可以一次返回多个行。  

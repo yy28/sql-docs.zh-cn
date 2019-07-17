@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b899cd9f7512ec4be800fb4178b7a4f103dd3315
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 240046cc2883e91315437780eb41f5058ccb7657
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089116"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context 属性（SecurityCertificate 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51659977"
 object.Context [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示安全证书的 [SecurityCertificate 类](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

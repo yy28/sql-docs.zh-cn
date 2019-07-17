@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3a7c3ef7e6d0c01a33716aeb807141397cb13ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4dd1000f4a737f989a7f882e350096e3b46657
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094534"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>创建文本属性 (Master Data Services)
 
@@ -39,12 +38,12 @@ ms.locfileid: "65477012"
 ## <a name="attribute-information"></a>属性信息  
  对于创建的每个属性，系统都会在网格中添加一行（其中包含七列）。 下表对这些列进行了说明。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“登录属性”|属性状态。<br /><br /> 单击保存后，系统显示![更新状态图标](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")图像，表示属性正在更新。<br /><br /> 如果创建或编辑属性时出现错误，系统会显示![错误状态图标](../master-data-services/media/mds-statusicon-error.png "Icon for error status")图像。<br /><br /> 否则，状态为正常，系统显示![正常状态图标](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")图像。|  
-|“属性”|属性名称。|  
+|名称|属性名称。|  
 |显示名称|属性显示名称。|  
-|Description|属性说明。|  
+|描述|属性说明。|  
 |显示像素宽度|属性宽度。|  
 |类型和属性|属性的类型和数据类型信息。|  
 |启用更改跟踪|指定是否启用该属性以进行更改跟踪，并在括号中显示组号。|  

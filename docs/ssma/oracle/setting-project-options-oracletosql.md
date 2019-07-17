@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625911"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266529"
 ---
 # <a name="setting-project-options-oracletosql"></a>设置项目选项 (OracleToSQL)
 对于每个 SSMA 项目可以设置项目级别选项。 这些选项用于指定对象转换、 对象加载、 用户界面和数据迁移设置。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，验证配置选项是否适用于该项目。  
@@ -53,11 +53,11 @@ SSMA 具有五个集的项目设置：
   
 -   [项目设置&#40;转换&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
--   [Project Settings &#40;Migration&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
+-   [项目设置&#40;迁移&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
   
 -   [项目设置&#40;同步&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)  
   
--   [Project Settings &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
+-   [项目设置&#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
   
 -   [项目设置&#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
   

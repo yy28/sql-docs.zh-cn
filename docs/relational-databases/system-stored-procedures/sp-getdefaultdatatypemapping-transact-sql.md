@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123987"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>参数  
 `[ @source_dbms = ] 'source_dbms'` 是从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**ORACLE**|源为 Oracle 数据库。|  
   
  必须指定此参数。  
   
-`[ @source_version = ] 'source_version'` 是源 DBMS 的版本号。 *source_version*是**varchar(10)**，默认值为 NULL。  
+`[ @source_version = ] 'source_version'` 是源 DBMS 的版本号。 *source_version*是**varchar(10)** ，默认值为 NULL。  
   
 `[ @source_type = ] 'source_type'` 源 DBMS 中的数据类型。 *source_type*是**sysname**，无默认值。  
   
@@ -75,7 +74,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'` 是目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一：  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**ORACLE**|目标为 Oracle 数据库。|  
@@ -84,7 +83,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  必须指定此参数。  
   
-`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，默认值为 NULL。  
+`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version*是**varchar(10)** ，默认值为 NULL。  
   
 `[ @destination_type = ] 'destination_type' OUTPUT` 目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，默认值为 NULL。  
   
@@ -111,7 +110,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 ## <a name="see-also"></a>请参阅  
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Oracle 订阅服务器](../../relational-databases/replication/non-sql/oracle-subscribers.md)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f7264b17c13d6b66bf1be24da81e96a4ca3e8a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122832"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 语句的批处理
 一批 SQL 语句是一组两个或多个 SQL 语句或单个 SQL 语句具有相同的效果的一组两个或多个 SQL 语句。 在某些实现中，整个批处理语句之前，执行任何结果都可用。 这主要是通常比单个提交语句，因为通常可以减少网络流量和数据源有时可以优化执行一批 SQL 语句有效。 在其他实现中，调用**SQLMoreResults**触发批处理中的下一个语句执行。 ODBC 支持以下类型的批处理：  

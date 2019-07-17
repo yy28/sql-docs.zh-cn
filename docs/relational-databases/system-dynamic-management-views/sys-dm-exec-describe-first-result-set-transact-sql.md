@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_describe_first_result_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097817"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,11 +57,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>返回的表  
  此通用元数据是作为结果集返回的。 结果元数据的每一列中的行使用下表所示的格式描述列类型和为空性。 如果对于每个控制路径不存在第一个语句，则返回的结果集不包含任何行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定列是出于浏览和参考目的而额外添加的列，并不会实际出现在结果集中。|  
 |**column_ordinal**|**int**|在结果集中包含列的序号位置。 第一列的位置将指定为 1。|  
-|**名称**|**sysname**|包含列的名称（如果可以确定名称）。 否则，将包含 NULL。|  
+|**name**|**sysname**|包含列的名称（如果可以确定名称）。 否则，将包含 NULL。|  
 |**is_nullable**|**bit**|包含下列值：<br /><br /> 如果列允许使用 NULL，则值为 1。<br /><br /> 如果列不允许使用 NULL，则值为 0。<br /><br /> 如果无法确定列是否允许使用 NULL，则值为 1。|  
 |**system_type_id**|**int**|包含在 sys.types 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。<br /><br /> 如果数据类型是用户定义的别名类型，此处指定的基础系统类型。<br /><br /> 如果数据类型为 CLR 用户定义类型，则此列中返回 NULL。|  
@@ -107,7 +106,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
  下表列出了错误类型及其说明。  
   
-|错误类型|错误类型|Description|  
+|错误类型|错误类型|描述|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未描述的所有错误。|  
 |2|SYNTAX|在批处理中发生语法错误。|  

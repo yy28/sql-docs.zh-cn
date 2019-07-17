@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bef3e4902562edde0adb2a4f495c51e6a82b091
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111960"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @conflict_table = ] 'conflict_table'` 是的冲突表的名称。 *conflict_table*是**sysname**，默认值为**%**。 如果*conflict_table*指定为 NULL 或**%**，则认为冲突是删除冲突和相匹配的行*rowguid*和*origin_datasource 中*并*source_object*从删除[MSmerge_conflicts_info &#40;-&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表。  
+`[ @conflict_table = ] 'conflict_table'` 是的冲突表的名称。 *conflict_table*是**sysname**，默认值为 **%** 。 如果*conflict_table*指定为 NULL 或 **%** ，则认为冲突是删除冲突和相匹配的行*rowguid*和*origin_datasource 中*并*source_object*从删除[MSmerge_conflicts_info &#40;-&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)表。  
   
-`[ @source_object = ] 'source_object'` 是源表的名称。 *source_object*是**nvarchar(386)**，默认值为 NULL。  
+`[ @source_object = ] 'source_object'` 是源表的名称。 *source_object*是**nvarchar(386)** ，默认值为 NULL。  
   
 `[ @rowguid = ] 'rowguid'` 是删除冲突的行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
-`[ @origin_datasource = ] 'origin_datasource'` 为冲突的起源。 *origin_datasource 中*是**varchar(255)**，无默认值。  
+`[ @origin_datasource = ] 'origin_datasource'` 为冲突的起源。 *origin_datasource 中*是**varchar(255)** ，无默认值。  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'` 是一个标志，指示*conflict_table*是如果要删除为空。 *drop_table_if_empty*是**varchar(10)**，默认值为 FALSE。  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` 是一个标志，指示*conflict_table*是如果要删除为空。 *drop_table_if_empty*是**varchar(10)** ，默认值为 FALSE。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

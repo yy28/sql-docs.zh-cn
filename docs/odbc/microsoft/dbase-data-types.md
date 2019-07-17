@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096453"
 ---
 # <a name="dbase-data-types"></a>dBASE 数据类型
 下表显示了如何将 dBASE 数据类型映射到 ODBC SQL 数据类型。 请注意，并非所有 ODBC SQL 数据类型都支持。  
@@ -36,7 +35,7 @@ ms.locfileid: "63126310"
 |逻辑|SQL_BIT|  
 |备注|SQL_LONGVARCHAR|  
 |数字 (BCD)|SQL_DOUBLE|  
-|OLEOBJECT[1]|SQL_LONGBINARY|  
+|OLEOBJECT [1]|SQL_LONGBINARY|  
   
  仅为 dBASE 版本 5 的的 [1] 有效。*x*  
   
@@ -51,7 +50,7 @@ ms.locfileid: "63126310"
   
  下表显示限制上 dBASE 数据类型。  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |CHAR|创建零对 CHAR 列或未指定的长度实际上返回一个 254 字节的列。|  
 |加密数据|DBASE 驱动程序不支持加密的 dBASE 表。|  

@@ -10,12 +10,12 @@ ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: faa24a68b0f8a8e6eecdacae41afeecb529af3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fefccd8e57f3e6772da391421fbbba133200de05
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640136"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266490"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server 迁移助手用于 Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for Oracle 是一个工具，用于将 Oracle 数据库迁移到[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 年， [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012， [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 的 Windows 和 Linux （预览版） 和 Azure SQL DB。 适用于 Oracle 的 SSMA 将转换到的 Oracle 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象中，创建这些对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将数据从 Oracle 到迁移和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -24,7 +24,7 @@ ms.locfileid: "62640136"
   
 ## <a name="contents"></a>目录  
   
-|部分|Description|  
+|部分|描述|  
 |-----------|---------------|  
 |[什么是适用于 Oracle 的 SSMA 中的新增功能](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|什么是此版本的适用于 Oracle 的 SSMA 中的新增功能|  
 |[安装 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|包含为正在运行的计算机上安装 SSMA for Oracle 客户端和所需的组件提供的先决条件和说明的主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  

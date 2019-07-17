@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 24bcf44fe2e1e0d35610dba9fb40d64ac2c819bb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089148"
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   在查询中包含有关所有 SQL Server 查询分布作为 SQL 步骤的一部分的信息。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|此 SQL 查询分发所属的查询的唯一标识符。<br /><br /> request_id、 step_index 和 distribution_id 构成此视图的键。|请参阅中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|此分布是一部分的查询步骤的索引。<br /><br /> request_id、 step_index 和 distribution_id 构成此视图的键。|请参阅中的 step_index [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  

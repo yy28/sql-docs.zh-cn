@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: cb8173ed92dd50c640435b14f4b9096d46ee4471
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090202"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -40,7 +39,7 @@ ms.locfileid: "67388711"
  有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
 
-|列名|类型|Description|  
+|列名|type|描述|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|队列的唯一标识符。|  
 |total_enqueues|**bigint**|自启动服务器以来排入此队列的垃圾回收工作项的总数。|  

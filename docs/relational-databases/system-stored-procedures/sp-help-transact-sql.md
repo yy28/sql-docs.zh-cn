@@ -1,5 +1,5 @@
 ---
-title: sp_help (Transact-SQL) | Microsoft Docs
+title: sp_help (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fabfac2d228be78efb2fc728d1b405ec7edce035
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085037"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 1.  如果**sp_help**执行不带任何参数，返回的当前数据库中存在的所有类型的对象的摘要信息。  
   
-    |列名|数据类型|Description|  
+    |列名|数据类型|描述|  
     |-----------------|---------------|-----------------|  
     |**名称**|**nvarchar(** 128 **)**|对象名称|  
     |**“所有者”**|**nvarchar(** 128 **)**|对象所有者（拥有对象的数据库主体。 默认为包含对象的架构所有者。）|  
@@ -61,12 +60,12 @@ sp_help [ [ @objname = ] 'name' ]
   
 2.  如果*名称*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型或用户定义数据类型**sp_help**返回以下结果集。  
   
-    |列名|数据类型|Description|  
+    |列名|数据类型|描述|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar(** 128 **)**|数据类型名称。|  
     |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型名称。|  
     |**长度**|**smallint**|数据类型的物理长度（以字节为单位）。|  
-    |**Prec**|**int**|精度（数字总位数）。|  
+    |**prec**|**int**|精度（数字总位数）。|  
     |**小数位数**|**int**|在小数点右侧的数字的位数。|  
     |**可以为 Null**|**varchar(** 35 **)**|指示是否允许 NULL 值：是或否。|  
     |**Default_name**|**nvarchar(** 128 **)**|绑定到此类型的默认值的名称。<br /><br /> NULL = 未绑定默认值。|  
@@ -77,7 +76,7 @@ sp_help [ [ @objname = ] 'name' ]
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    |列名|数据类型|Description|  
+    |列名|数据类型|描述|  
     |-----------------|---------------|-----------------|  
     |**名称**|**nvarchar(** 128 **)**|表名|  
     |**“所有者”**|**nvarchar(** 128 **)**|表所有者|  
@@ -90,13 +89,13 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   返回的有关列对象的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|列名称。|  
         |**类型**|**nvarchar(** 128 **)**|列数据类型。|  
         |**计算**|**varchar(** 35 **)**|指示是否计算列中的值：是或否。|  
-        |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型 (**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**)，将的值显示为-1。|  
-        |**Prec**|**char(** 5 **)**|列精度。|  
+        |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意:如果列数据类型是大值类型 (**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**)，将的值显示为-1。|  
+        |**prec**|**char(** 5 **)**|列精度。|  
         |**小数位数**|**char(** 5 **)**|列小数位数。|  
         |**可以为 Null**|**varchar(** 35 **)**|指示列中是否允许 NULL 值：是或否。|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|剪裁尾随空格。 返回 Yes 或 No。|  
@@ -105,7 +104,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   针对标识列返回的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
         |**标识**|**nvarchar(** 128 **)**|其数据类型被声明为标识的列名。|  
         |**种子**|**numeric**|标识列的起始值。|  
@@ -114,19 +113,19 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   针对各列返回的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|全局唯一标识符列的名称。|  
   
     -   针对文件组返回的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|数据所在的文件组：主要副本，辅助数据库或事务日志。|  
   
     -   针对索引返回的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|索引名。|  
         |**Index_description**|**varchar(** 210 **)**|索引的说明。|  
@@ -134,7 +133,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   针对约束返回的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|约束的类型。|  
         |**constraint_name**|**nvarchar(** 128 **)**|约束的名称。|  
@@ -146,18 +145,18 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   针对执行引用的对象返回的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
         |**引用表**|**nvarchar(** 516 **)**|标识引用表的其他数据库对象。|  
   
     -   针对存储过程、函数或扩展存储过程返回的其他结果集：  
   
-        |列名|数据类型|Description|  
+        |列名|数据类型|描述|  
         |-----------------|---------------|-----------------|  
-        |**Parameter_name**|**nvarchar(** 128 **)**|存储过程参数名。|  
+        |**参数名称**|**nvarchar(** 128 **)**|存储过程参数名。|  
         |**类型**|**nvarchar(** 128 **)**|存储过程参数的数据类型。|  
         |**长度**|**smallint**|最大物理存储长度（以字节为单位）。|  
-        |**Prec**|**int**|精度，即数字总位数。|  
+        |**prec**|**int**|精度，即数字总位数。|  
         |**小数位数**|**int**|小数点右边的数字位数。|  
         |**Param_order**|**smallint**|参数的顺序。|  
   
@@ -195,11 +194,11 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   

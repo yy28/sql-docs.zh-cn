@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c271c7585d0ebe1a7af5c387414187b0072b3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 362ccc5c85523b3d37cb792a42e8be4cd87d7510
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109005"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   为每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录返回一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**|--|继承自**sys.server_principals**。|  
 |**is_policy_checked**|**bit**|检查密码策略。|  
@@ -47,7 +46,7 @@ ms.locfileid: "47662675"
   
  当包含启用的数据库用户时，可以不具有登录名建立连接。 若要标识这些帐户，请参阅[sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录都会显示各自的登录名称和 sa 登录信息。 要查看其他登录，需要获取 ALTER ANY LOGIN 或有关登录的权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

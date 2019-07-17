@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cace39108f3f99d5c165f42b4337e837e1fb7c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121029"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,14 +34,14 @@ ms.locfileid: "56023878"
 如果您使用的 SQL 数据库 V12 应使用[sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (因为*sys.dm_continuous_copy_status*仅适用于 V11)。
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|副本数据库的唯一 ID。|  
 |**partner_server**|**sysname**|链接 SQL Database 服务器的名称。|  
 |**partner_database**|**sysname**|链接 SQL Database 服务器上链接数据库的名称。|  
 |**last_replication**|**datetimeoffset**|上次应用的复制事务的时间戳。|  
 |**replication_lag_sec**|**int**|当前时间与上次成功提交到主数据库上但活动辅助数据库尚未确认的事务的时间戳之间的时间差（以秒计）。|  
-|**replication_state**|**tinyint**|为此数据库的连续复制复制的状态。 以下是可能的值和及其说明。<br /><br /> 1：正在设定种子。 复制目标正在设定种子，处于事务不一致的状态。 直到设定种子完毕后，才能连接到活动辅助数据库。 <br />2：正在保持同步。 活动辅助数据库当前正在与主数据库保持同步，处于事务一致的状态。<br />3：正在重新设定种子。 因无法恢复的复制故障，正在自动为活动辅助数据库重新设定种子。<br />4：挂起。 这不是活动的连续复制关系。 此状态通常指示可用的互连带宽不足，无法满足主数据库上事务活动的水平。 但是，连续复制关系仍保持不变。|  
+|**replication_state**|**tinyint**|为此数据库的连续复制复制的状态。 以下是可能的值和及其说明。<br /><br /> 1:种子设定。 复制目标正在设定种子，处于事务不一致的状态。 直到设定种子完毕后，才能连接到活动辅助数据库。 <br />2:正在保持同步。 活动辅助数据库当前正在与主数据库保持同步，处于事务一致的状态。<br />3：重新设定种子。 因无法恢复的复制故障，正在自动为活动辅助数据库重新设定种子。<br />4：挂起。 这不是活动的连续复制关系。 此状态通常指示可用的互连带宽不足，无法满足主数据库上事务活动的水平。 但是，连续复制关系仍保持不变。|  
 |**replication_state_desc**|**nvarchar(256)**|replication_state 的说明，它是以下某项：<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|这始终设置为 0|  
 |**is_target_role**|**bit**|0 = 复制关系源<br /><br /> 1 = 复制关系目标|  

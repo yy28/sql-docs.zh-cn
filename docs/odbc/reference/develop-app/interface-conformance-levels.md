@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138913"
 ---
 # <a name="interface-conformance-levels"></a>接口一致性级别
 调配的目的是通知应用程序提供的功能的内容从驱动程序。 基于函数的均衡方案无法充分实现此目标。 在 ODBC 3。*x*，驱动程序的分类基于它们所拥有的功能。 支持该功能可包括支持函数;它还包括由返回的信息类型的支持的描述符字段、 语句属性、"Y"值**SQLGetInfo**，依次类推。  

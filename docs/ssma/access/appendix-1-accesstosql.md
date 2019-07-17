@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 521c94fe15c8409377997edfc0b5821f92bed34d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca084ec1849ab22940bb1617476637c105e90609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115033"
 ---
 # <a name="appendix---1-accesstosql"></a>附录-1 (AccessToSQL)
 SSMA 控制台命令行选项的快速视图：  

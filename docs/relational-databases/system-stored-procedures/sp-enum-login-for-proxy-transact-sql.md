@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124680"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -54,11 +53,11 @@ sp_enum_login_for_proxy
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**proxy_name**|**sysname**|代理服务器的名称。|  
-|**名称**|**sysname**|关联的安全主体服务器的名称。|  
+|**name**|**sysname**|关联的安全主体服务器的名称。|  
 |**flag**|**int**|安全主体服务器的类型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名<br /><br /> **1** = 固定的系统角色<br /><br /> **2** = 中的数据库角色**msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 6131551a793257e201809dff469ee0980b8ece61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132327"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256653"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>使用 SSMA for Oracle 控制台 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 适用于 Oracle 的迁移助手 (SSMA) 版本现已可通过在命令行控制台应用程序访问。 脚本文件窗体应用程序以执行命令的输入。 作为控制台应用程序，SSMA 使脚本级别进行连接，可减少迁移周期，并可缩放的迁移工作。  
@@ -36,7 +36,7 @@ ms.locfileid: "63132327"
 |[使用示例控制台脚本文件&#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|介绍的方法轻松地自定义的乘积以及示例文件中提供的脚本|  
 |[管理密码&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|介绍密码加密和解密，并导入 / 导出密码信息。|  
 |[生成报告&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|列出的命令来生成报告。|  
-|[Troubleshooting &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供了关于解决迁移问题的信息摘要。|  
+|[故障排除&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供了关于解决迁移问题的信息摘要。|  
   
 ## <a name="see-also"></a>请参阅  
 [开始使用 SSMA for Oracle 控制台](getting-started-with-ssma-for-oracle-console-oracletosql.md)  

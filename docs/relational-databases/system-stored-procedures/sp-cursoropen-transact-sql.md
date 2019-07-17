@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108484"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  滚动选项。 *scrollopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -75,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，需要以下项之一**int**输入值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS（以前称为 LOCKCC）|  
@@ -207,12 +206,12 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>bound_param 参数  
  第五个参数之后的任何参数都将作为输入参数传递到语句计划。 第一个此类参数必须为以下格式的字符串：  
   
- *{ local variable name data type } [,...n]*  
+ *{局部变量名称数据类型}[,...n]*  
   
  后续参数用于传递的值的替换*局部变量名*语句中。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

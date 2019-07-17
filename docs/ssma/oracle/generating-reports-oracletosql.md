@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 971d7e8dde2ae56da02205b50b2f6576a875bd70
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192381"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264460"
 ---
 # <a name="generating-reports-oracletosql"></a>生成报告 (OracleToSQL)
 在对象树中级别的 SSMA 控制台中生成使用命令来执行某些活动的报告。  
@@ -37,7 +37,7 @@ ms.locfileid: "63192381"
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |5|同步目标|TargetSynchronizationReport&lt;n&gt;.XML|  
     |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
@@ -103,7 +103,7 @@ ms.locfileid: "63192381"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
@@ -111,7 +111,7 @@ ms.locfileid: "63192381"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
 该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中 **&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
@@ -131,7 +131,7 @@ ms.locfileid: "63192381"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
+**对象名称：** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
@@ -139,7 +139,7 @@ ms.locfileid: "63192381"
   
 -   report-each-as-warning  
   
--   fail-script  
+-   脚本失败  
   
 ## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  

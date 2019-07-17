@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 530db4d31d3db4773713816f1b68404990997512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081315"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,41 +42,41 @@ ms.locfileid: "52534124"
 |**bigint**|**SqlInt64**|**Int64，可以为 Null\<Int64 >**|  
 |**binary**|**SqlBytes SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**布尔值、 可以为 Null\<布尔 >**|  
-|**char**|None|None|  
-|**cursor**|None|None|  
+|**char**|无|无|  
+|**cursor**|无|None|  
 |**date**|**SqlDateTime**|**日期时间，可以为 Null\<日期时间 >**|  
 |**datetime**|**SqlDateTime**|**日期时间，可以为 Null\<日期时间 >**|  
 |**datetime2**|None|**日期时间，可以为 Null\<日期时间 >**|  
-|DATETIMEOFFSET|**无**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
+|DATETIMEOFFSET |**无**|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal、 可以为 Null\<十进制 >**|  
 |**float**|**SqlDouble**|**双精度，可以为 Null\<双精度 >**|  
-|**地理**|**SqlGeography**<br /><br /> **SqlGeography** Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|None|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|None|  
+|**地理**|**SqlGeography**<br /><br /> **SqlGeography** Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|无|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|无|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](https://www.microsoft.com/download/details.aspx?id=52676)。|None|  
-|**image**|None|None|  
+|**image**|无|None|  
 |**int**|**SqlInt32**|**Int32 类型，可以为 Null\<Int32 >**|  
 |**money**|**SqlMoney**|**Decimal、 可以为 Null\<十进制 >**|  
 |**nchar**|**SqlChars SqlString**|**String，Char]**|  
-|**ntext**|None|None|  
+|**ntext**|无|无|  
 |**numeric**|**SqlDecimal**|**Decimal、 可以为 Null\<十进制 >**|  
 |**nvarchar**|**SqlChars SqlString**<br /><br /> **SQLChars**更好的匹配的数据传输和访问权限，并**SQLString**是执行字符串操作的更好的匹配项。|**String，Char]**|  
 |**nvarchar(1)、 nchar(1)**|**SqlChars SqlString**|**Char、 字符串、 Char []，可以为 Null\<char >**|  
 |**real**|**SqlSingle** (的范围**SqlSingle**，但是，大于**实际**)|**单一的可以为 Null\<单一 >**|  
-|**rowversion**|None|**Byte[]**|  
+|**rowversion**|无|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16，可以为 Null\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Decimal、 可以为 Null\<十进制 >**|  
-|**sql_variant**|None|**Object**|  
-|**table**|None|None|  
-|**text**|None|None|  
-|**time**|None|**TimeSpan，可以为 Null\<TimeSpan >**|  
-|**timestamp**|None|None|  
+|**sql_variant**|无|**Object**|  
+|**table**|无|None|  
+|**text**|无|None|  
+|**time**|无|**TimeSpan，可以为 Null\<TimeSpan >**|  
+|**timestamp**|无|None|  
 |**tinyint**|**以**|**字节，可以为 Null\<字节 >**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid，可以为 Null\<Guid >**|  
-|**用户定义 type(UDT)**|None|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
+|**用户定义 type(UDT)**|无|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
 |**varbinary**|**SqlBytes SqlBinary**|**Byte[]**|  
 |**varbinary(1)、 binary(1)**|**SqlBytes SqlBinary**|**字节、 Byte []，可以为 Null\<字节 >**|  
-|**varchar**|None|None|  
-|**xml**|**SqlXml**|None|  
+|**varchar**|无|无|  
+|**xml**|**SqlXml**|无|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>使用 Out 参数的自动数据类型转换  
  CLR 方法可以通过将标记与输入的参数向调用代码或程序返回的信息**出**修饰符 (Microsoft Visual C#) 或 **\<out （) > ByRef** (Microsoft Visual Basic)如果输入的参数是中的 CLR 数据类型**System.Data.SqlTypes**命名空间，并且调用程序指定其等效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型作为输入参数，自动发生类型转换当 CLR 方法返回的数据类型。  

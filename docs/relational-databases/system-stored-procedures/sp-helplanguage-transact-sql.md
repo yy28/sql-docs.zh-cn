@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122513"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,17 +48,17 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|语言标识号。|  
 |**dateformat**|**nchar(3)**|日期的格式。|  
-|**datefirst**|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
+|**datefirst**|**tinyint**|一周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
 |**upgrade**|**int**|最后一次升级此语言的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
-|**名称**|**sysname**|语言名称。|  
+|**name**|**sysname**|语言名称。|  
 |**alias**|**sysname**|语言的替代名称。|  
 |**几个月**|**nvarchar(372)**|月份名称。|  
 |**shortmonths**|**nvarchar(132)**|月份简称。|  
-|**days**|**nvarchar(217)**|日期名称。|  
+|**天**|**nvarchar(217)**|日期名称。|  
 |**lcid**|**int**|语言的 Windows 区域设置 ID。|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
   

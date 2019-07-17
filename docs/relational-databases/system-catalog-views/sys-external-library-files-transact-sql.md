@@ -19,25 +19,25 @@ ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9666b58132feb79876c4e8074dc530440c05b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828055"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220338"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 列出了每个文件组成的外部库的行。
 
-|列名 |数据类型 |Description|
+|列名 |数据类型 |描述|
 |------|------|-----|
-|external_library_id | ssNoversion |外部库对象的 ID。 |
+|external_library_id | INT |外部库对象的 ID。 |
 |content |varbinary(max) |外部库文件项目的内容。 |
 |平台 |TINYINT |在其安装 SQL Server 的主机平台的 ID。 |
 |platform_desc | nvarchar(60) |主机平台的名称。 有效值为 WINDOWS、 LINUX。 |
 
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)  

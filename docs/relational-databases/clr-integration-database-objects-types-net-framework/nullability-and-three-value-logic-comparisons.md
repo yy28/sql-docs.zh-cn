@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e29b2ad4c4049890bef1ee319d37847a0e21cacd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5dbdf757038abbf2c98d3987ee14a9cb9184a61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081317"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>为 Null 性和三值逻辑比较
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

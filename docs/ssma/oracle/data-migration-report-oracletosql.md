@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 7a88d7225d574794b4dc50ae30a9205b1cac08e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287472"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264254"
 ---
 # <a name="data-migration-report--oracletosql"></a>数据迁移报表 (OracleToSQL)
 **数据迁移报表**迁移到的数据后，会出现对话框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -27,7 +27,7 @@ ms.locfileid: "63287472"
 **From**  
 源表。  
   
-**若要**  
+**To**  
 目标表中。  
   
 **总行数**  

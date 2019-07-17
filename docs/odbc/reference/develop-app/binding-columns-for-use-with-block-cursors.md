@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 827f6ddca12f15ce0bce1773b9cbe26fae5069dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106234"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>绑定列用于块游标
 因为块状游标返回多个行，使用它们的应用程序必须将变量的数组绑定到每个列而不是单个变量。 这些列阵统称为*行集缓冲区*。 以下是绑定的两种样式:  

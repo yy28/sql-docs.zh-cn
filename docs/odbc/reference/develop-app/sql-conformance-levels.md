@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7862b2e3a86c6d98a51c73ecb470d59bcfe29dc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107519"
 ---
 # <a name="sql-conformance-levels"></a>SQL 一致性级别
 通过调用返回的值指示驱动程序支持的 SQL-92 语法级别**SQLGetInfo** SQL_SQL_CONFORMANCE 信息类型。 这表示该驱动程序是否符合 SQL-92 中定义的项、 FIPS 过渡、 中间，或完全级别。  

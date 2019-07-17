@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103298"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   显示命名空间所有者 (NSO) 已知的文件句柄。 使用客户端获得的 Filestream 句柄**OpenSqlFilestream**此视图显示。  
   
-|“列”|类型|Description|  
+|“列”|type|描述|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|显示与客户端的句柄关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**creation_request_id**|**int**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 不可为 null。|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 73919295dbd53cbaaca3847d5be119e5fe2d0bb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be1530bdec1c1523a873dc93b1d70e6e72c880ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103026"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>创建变量值文件 (MySQLToSQL)
 变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **-v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  

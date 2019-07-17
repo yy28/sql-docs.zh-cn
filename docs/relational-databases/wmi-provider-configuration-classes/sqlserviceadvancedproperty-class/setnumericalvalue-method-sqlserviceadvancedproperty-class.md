@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7db43df883cb8b4158bccc40ec559ea820e4abb7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2479e1591764590289470d7ef4a326f6a9e9a758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091837"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue 方法（SqlServiceAdvancedProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "51668046"
 object.SetNumericalValue(NumValue)  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示高级属性的 [SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |*NumValue*|一个指定高级属性的值的 **uint32** 值。|  
   

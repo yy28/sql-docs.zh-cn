@@ -1,5 +1,5 @@
 ---
-title: sp_helppublication (Transact-SQL) | Microsoft Docs
+title: sp_helppublication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18fc2e1dfadff4e276cd40ff6d64a0aa2fc9a06e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137574"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是要查看的名称。 *发布*数据类型为 sysname，默认值为**%**，表示返回有关所有发布的信息。  
+`[ @publication = ] 'publication'` 是要查看的名称。 *发布*数据类型为 sysname，默认值为 **%** ，表示返回有关所有发布的信息。  
   
 `[ @found = ] 'found' OUTPUT` 是一个标志，指示返回行。 *找到*是**int**而且是 OUTPUT 参数，默认值为**23456**。 **1**指示已找到发布。 **0**指示找不到该发布。  
   
@@ -51,10 +50,10 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|发布的的 ID。|  
-|NAME|**sysname**|发布的名称。|  
+|name|**sysname**|发布的名称。|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|发布的当前状态。<br /><br /> **0** = 非活动状态。<br /><br /> **1** = 活动。|  
 |任务 (task)||用于保持向后兼容性。|  
@@ -88,7 +87,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 均存储的冲突记录的发布服务器和订阅服务器导致冲突。<br /><br /> **1** = 的冲突记录存储在发布服务器。|  
 |conflict_retention|**int**|指定冲突保持期（天）。|  
 |conflict_policy|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
-|queue_type||指定所使用的队列类型。 可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 注意：已经不再支持消息队列。|  
+|queue_type||指定所使用的队列类型。 可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 注意:已不支持消息队列。|  
 |backward_comp_level||数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|指定是否在发布该发布[!INCLUDE[msCoName](../../includes/msconame-md.md)]Active Directory 批处理。 值为**1**指示它已发布，并将值**0**指示未发布。|  
 |allow_initialize_from_backup|**bit**|指示订阅服务器是否能够从备份而不是从初始快照来初始化对此发布的订阅。 **1**意味着可以从备份初始化订阅并**0**表示不能。 有关详细信息，请参阅[初始化事务订阅不使用快照](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)不使用快照的事务订阅服务器。|  
@@ -120,9 +119,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

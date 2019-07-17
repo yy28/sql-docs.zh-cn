@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a30016240c6cfd34cd2e21d6987ea04a0bc27537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124402"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,11 +67,11 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  是表 （带外键） 限定符的名称。 *fktable_qualifier*是**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|表（带主键）限定符的名称。 此字段可以为 NULL。|  
 |PKTABLE_OWNER|**sysname**|表（带主键）所有者的名称。 此字段始终返回值。|  
@@ -101,7 +100,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 等效于 ODBC 中的 SQLForeignKeys sp_fkeys 存储过程。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要`SELECT`拥有架构的权限。  
   
 ## <a name="examples"></a>示例  

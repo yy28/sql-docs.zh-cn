@@ -1,5 +1,5 @@
 ---
-title: sp_add_proxy (Transact-SQL) | Microsoft Docs
+title: sp_add_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088476"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_proxy
   
 `[ @enabled = ] is_enabled` 指定是否启用代理。 *Is_enabled*标志**tinyint**，默认值为 1。 当*is_enabled*是**0**，代理未启用，并不能由作业步骤。  
   
-`[ @description = ] 'description'` 代理服务器的说明。 该说明仅**nvarchar(512)**，默认值为 NULL。 该说明便于您记录代理，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理不会在其他地方使用该说明。 因此，该参数是可选的。  
+`[ @description = ] 'description'` 代理服务器的说明。 该说明仅**nvarchar(512)** ，默认值为 NULL。 该说明便于您记录代理，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理不会在其他地方使用该说明。 因此，该参数是可选的。  
   
 `[ @credential_name = ] 'credential_name'` 代理的凭据的名称。 *Credential_name*是**sysname**，默认值为 NULL。 任一*credential_name*或*credential_id*必须指定。  
   

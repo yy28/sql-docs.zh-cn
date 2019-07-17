@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ee8d2e4c16987f5cc012f734cdf649cde7f4ebb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288575"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264232"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>编辑类型映射 (OracleToSQL)
 **编辑类型映射**对话框可以指定类型的源和目标数据库对象之间的映射方式。  
@@ -37,7 +37,7 @@ ms.locfileid: "63288575"
 **From**  
 指定此映射的最小长度。 例如，对于**nchar**数据类型，可以输入 10，以指定的开始处的范围为此映射**nchar(10)** 。  
   
-**若要**  
+**To**  
 指定此映射的最大长度。 例如，对于**nchar**数据类型，可以输入 20 来指定此映射的结束时间范围**nchar(20)** 。  
   
 **目标类型**  

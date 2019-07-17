@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108771"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,9 +74,9 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  在您使用通过 sp_control_dbmasterkey_password 添加的凭据打开数据库主密钥时，服务主密钥重新对数据库主密钥加密。 如果数据库为只读模式，则加密操作将会失败，数据库主密钥将会保留为未加密状态。 随后访问数据库主密钥时，必须使用 OPEN MASTER KEY 语句和密码。 为避免使用密码，请在将数据库迁移到只读模式前创建凭据。  
   
- **潜在的向后兼容性问题：** 目前，存储的过程不会检查是否存在主密钥。 这是为了向后兼容，但会显示警告。 不推荐使用此行为。 在将来的版本，主密钥必须存在和存储过程中使用的密码**sp_control_dbmasterkey_password**必须是为用于加密数据库主密钥的密码之一相同的密码。  
+ **潜在的向后兼容性问题：** 目前，存储的过程不检查是否存在主密钥。 这是为了向后兼容，但会显示警告。 不推荐使用此行为。 在将来的版本，主密钥必须存在和存储过程中使用的密码**sp_control_dbmasterkey_password**必须是为用于加密数据库主密钥的密码之一相同的密码。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 8bc452dff465ca872f094fa7aaaba98612beb135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287203"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264544"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高级对象选择 (OracleToSQL)
 **高级对象部分**对话框可以通过使用字符串和子字符串中的对象名称，来筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  

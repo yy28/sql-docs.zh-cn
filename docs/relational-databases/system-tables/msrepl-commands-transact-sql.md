@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4a55e595f925c8b542f14e34c8c88110472df89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127433"
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_commands**表包含复制的命令行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**xact_seqno**|**varbinary(16)**|事务序列号。|  
-|**类型**|**int**|命令类型。|  
+|**type**|**int**|命令类型。|  
 |**article_id**|**int**|项目的 ID。|  
 |**originator_id**|**int**|发起方的 ID。|  
 |**command_id**|**int**|命令的 ID。|  

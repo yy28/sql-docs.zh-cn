@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade1adbfeb8292e894ce18db305687c7092707cf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 68e91d6935549bc8dd421361c092c3ad1fb01905
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118174"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   为公共语言运行时 (CLR) 程序集所定义的每个函数、过程或触发器返回一行。 此目录视图将 CLR 存储过程、CLR 触发器或 CLR 函数映射到其基础实现。 类型为 TA、AF、PC、FS 和 FT 的对象具有相关联的程序集模块。 若要查找对象和程序集之间的关联，可以将此目录视图联接到其他目录视图。 例如，在创建 CLR 存储过程时，它表示通过中的一行**sys.objects**、 利用某个中的一行**sys.procedures** (派生自**sys.objects**)，和中的一行**sys.assembly_modules**。 中的元数据表示存储的过程本身**sys.objects**并**sys.procedures**。 对过程的基础 CLR 实现的引用中找到**sys.assembly_modules**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|SQL 对象的对象标识号。 是在数据库中唯一。|  
 |**assembly_id**|**int**|创建此模块所基于的程序集的 ID。|  

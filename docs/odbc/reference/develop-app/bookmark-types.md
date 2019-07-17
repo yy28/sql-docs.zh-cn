@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9aca006623d9ddb8292147d8a28c93f912fd25d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: fb8f5848ef9fdffab8592215fdcc5406b24319c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118781"
 ---
 # <a name="bookmark-types"></a>书签类型
 ODBC 中的所有书签*3.x*长度可变的书签。 这样，主键或唯一索引与表用作书签相关联。 书签还可以为一个 32 位值，因为已在 ODBC 中使用*2.x*。 若要指定与某个游标，ODBC 使用书签*3.x*应用程序设置为 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 语句属性。 自动使用长度可变的书签。  

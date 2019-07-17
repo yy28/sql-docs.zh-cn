@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109559"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   系统中每个服务器范围的配置选项值各占一行。  
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|配置值的唯一 ID。|  
-|**名称**|**nvarchar(35)**|配置选项的名称。|  
+|**name**|**nvarchar(35)**|配置选项的名称。|  
 |**value**|**sql_variant**|该选项的配置值。|  
 |**最小值**|**sql_variant**|配置选项的最小值。|  
 |**最大值**|**sql_variant**|配置选项的最大值。|  

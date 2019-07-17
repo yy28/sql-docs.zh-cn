@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddf90bb571be757645b1d20b45fc9d9dd879d22a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2e9d649077a5fe754840463a3902ef4a32080be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110346"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "51673227"
   
 5.  通过调用提取的行**irowset:: Getnextrows**。  
   
-6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据。  
+6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据  。  
   
 ## <a name="example"></a>示例  
  使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  

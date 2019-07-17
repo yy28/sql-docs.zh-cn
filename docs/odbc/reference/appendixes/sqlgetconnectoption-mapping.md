@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectOption Mapping | Microsoft Docs
+title: SQLGetConnectOption 映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ccfebb99d6f98f1c6c2e5eea4650e1433e536d97
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: d0533a0ee616d4097793eca46c7d45a269142737
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086397"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 映射
 当应用程序调用**SQLGetConnectOption**通过 ODBC *3.x*驱动程序，将会调用  

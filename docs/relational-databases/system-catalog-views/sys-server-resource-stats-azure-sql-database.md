@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133074"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66462772"
   
  下表介绍 v12 服务器中可用的列：  
   
-|“列”|数据类型|Description|  
+|“列”|数据类型|描述|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|指示 15 秒的报告间隔的起始的 UTC 时间|  
 |end_time|**datetime**|指示 15 秒的报告间隔结束的 UTC 时间|
@@ -45,7 +44,7 @@ ms.locfileid: "66462772"
 |resource_name|nvarchar(128)|资源的名称。|
 |sku|nvarchar(128)|托管实例的实例的服务层。 下面是可能的值： <br><ul><li>常规用途</li></ul><ul><li>业务关键型</li></ul>|
 |hardware_generation|nvarchar(128)|硬件生成标识符： 例如，第 4 代或第 5 代|
-|virtual_core_count|ssNoversion|表示每个实例 （8、 16 或 24 日在公共预览版） 的虚拟内核数|
+|virtual_core_count|INT|表示每个实例 （8、 16 或 24 日在公共预览版） 的虚拟内核数|
 |avg_cpu_percent|decimal(5,2)|使用过度的实例的托管实例服务层限制的百分比形式表示的平均计算使用率。 它是计算为该实例中的所有数据库的所有资源池的 CPU 时间的总和并除以该层在给定时间间隔内的可用 CPU 时间。|
 |reserved_storage_mb|BIGINT|保留每个实例存储 （该客户购买的托管实例的空间量存储）|
 |storage_space_used_mb|decimal(18,2)|存储使用的所有托管的实例数据库文件 （包括用户和系统数据库）|

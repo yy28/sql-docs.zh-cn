@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097841"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|持有此游标的会话 ID。|  
 |**cursor_id**|**int**|游标对象的 ID。|  
-|**名称**|**nvarchar(256)**|用户定义的游标名称。|  
+|**name**|**nvarchar(256)**|用户定义的游标名称。|  
 |**properties**|**nvarchar(256)**|指定游标的属性。 下列属性的值连在一起可构成此列的值：<br />声明接口<br />游标类型 <br />游标并发<br />游标范围<br />游标嵌套级别<br /><br /> 例如，在此列中返回的值可能是"TSQL&#124;动态&#124;乐观&#124;Global (0)"。|  
 |**sql_handle**|**varbinary(64)**|声明游标的批处理的文本句柄。|  
 |**statement_start_offset**|**int**|在当前正在执行的批处理或存储过程中，指示当前正在执行的语句开始位置的字符数。 可以使用连同**sql_handle**，则**statement_end_offset**，和[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)动态管理函数以检索当前执行请求的语句。|  
@@ -65,8 +64,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|对于 FAST_FORWARD 和 DYNAMIC 游标，如果游标未打开或被放在第一行之前，则该参数返回 0。 否则，返回 -1。<br /><br /> 对于 STATIC 和 KEYSET 游标，如果游标未打开，则该参数返回 0；如果游标放在最后一行之外，则该参数返回 -1。<br /><br /> 在其他情况下，该参数返回游标所在的行号。|  
 |**ansi_position**|**int**|游标在提取缓冲区中的位置。|  
 |**worker_time**|**bigint**|辅助线程执行此游标所用的时间（毫秒）。|  
-|**reads**|**bigint**|游标所执行的读取次数。|  
-|**writes**|**bigint**|游标所执行的写入次数。|  
+|**读取**|**bigint**|游标所执行的读取次数。|  
+|**写入操作**|**bigint**|游标所执行的写入次数。|  
 |**dormant_duration**|**bigint**|自上次对此游标启动查询（打开或提取）以来所经过的时间（毫秒）。|  
   
 ## <a name="permissions"></a>权限  
@@ -75,14 +74,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>备注  
  下表提供了有关游标声明接口的信息，并列出了这些属性列的可能值。  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |API|使用一个数据访问 API（ODBC、OLEDB）声明游标。|  
 |TSQL|使用 Transact-SQL DECLARE CURSOR 语法声明游标。|  
   
  下表提供了有关游标类型的信息，并列出了这些属性列的可能值。  
   
-|类型|Description|  
+|type|描述|  
 |----------|-----------------|  
 |Keyset|将游标声明为键集。|  
 |动态|将游标声明为动态。|  
@@ -91,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  下表提供了有关游标并发的信息，并列出了这些属性列的可能值。  
   
-|并发|Description|  
+|并发|描述|  
 |-----------------|-----------------|  
 |只读|将游标声明为只读。|  
 |Scroll Locks|游标使用滚动锁。|  
@@ -99,7 +98,7 @@ dm_exec_cursors (session_id | 0 )
   
  下表提供了有关游标范围的信息，并列出了这些属性列的可能值。  
   
-|范围|Description|  
+|范围|描述|  
 |-----------|-----------------|  
 |Local|指定该游标的范围对在其中创建它的批处理、存储过程或触发器是局部的。|  
 |Global|指定该游标范围对连接是全局的。|  

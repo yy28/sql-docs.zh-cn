@@ -1,5 +1,5 @@
 ---
-title: 示例： 使用 WMI 提供程序创建 SQL Server 代理警报 |Microsoft Docs
+title: 示例：使用 WMI 提供程序创建 SQL Server 代理警报 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 03802fba0b2a36716fdac5674053a56061f26c85
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 875751bd4b2dffd0039ffb40aa884bb9731a75d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139494"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>示例：使用 WMI 提供程序创建 SQL Server 代理警报
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   WMI 事件提供程序的一个常见用法是创建响应特定事件的 SQL Server 代理警报。 以下示例提供一个在表中保存 XML 死锁图形事件以供以后分析的简单警报。 SQL Server 代理提交 WQL 请求、接收 WMI 事件并运行作业以响应该事件。 请注意，尽管在处理通知消息中涉及几个 Service Broker 对象，WMI 事件提供程序将处理创建和管理这些对象的详细信息。  
   
 ## <a name="example"></a>示例  
- 首先，在 `AdventureWorks` 数据库中创建一个表来存放死锁图形事件。 该表包含两列：`AlertTime` 列存放警报运行的时间，`DeadlockGraph` 列则存放包含死锁图形的 XML 文档。  
+ 首先，在 `AdventureWorks` 数据库中创建一个表来存放死锁图形事件。 该表包含两个列：`AlertTime`列包含警报所运行的时间和`DeadlockGraph`列包含的 XML 文档中包含的死锁图形。  
   
  然后，创建警报。 脚本首先创建将运行警报的作业，将作业步骤添加到作业，然后指定作业目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例。 然后，脚本创建警报。  
   
@@ -104,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第二个查询选项卡中运行以下脚本。此脚本生成一个结果集，然后被阻塞，等待获取 `Production.Product` 的锁。  
+ 在第二个查询选项卡中运行以下脚本。此脚本生成一个结果集，然后被阻塞，等待上获取锁`Production.Product`。  
   
 ```  
 USE AdventureWorks ;  
@@ -120,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第一个查询选项卡中运行以下脚本。此脚本被阻塞，等待获取 `Production.Location` 的锁。 在很短的超时值过后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将选择此脚本或示例中的脚本作为死锁牺牲品，然后结束事务。  
+ 在第一个查询选项卡中运行以下脚本。此脚本被阻塞，等待上获取锁`Production.Location`。 在很短的超时值过后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将选择此脚本或示例中的脚本作为死锁牺牲品，然后结束事务。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

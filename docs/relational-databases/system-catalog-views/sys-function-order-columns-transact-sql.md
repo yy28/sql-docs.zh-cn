@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122750"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "63004734"
   每一部分的列返回一行**顺序**该列语言运行时 (CLR) 表值函数的表达式。  
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|要定义其顺序的对象（CLR 表值函数）的 ID。|  
 |**order_column_id**|**int**|排序列的 ID。 **order_column_id**仅中是唯一**object_id**。<br /><br /> **order_column_id**表示此列在排序中的位置。|  

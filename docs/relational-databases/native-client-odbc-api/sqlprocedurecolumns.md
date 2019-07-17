@@ -1,5 +1,5 @@
 ---
-title: SQLProcedureColumns | Microsoft Docs
+title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73a6ae0a7209eaef4438aee865f8e887af4ed176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 743423e3f38d30440c355c05aa084e2b54ea0908
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131236"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63014272"
   
  下表列出了结果集和如何它们进行扩展以处理返回的列**udt**并**xml**数据类型通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序：  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|返回包含 UDT（用户定义类型）的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|返回包含 UDT 的架构的名称。|  

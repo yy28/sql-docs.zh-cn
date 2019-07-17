@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 437b25af01544a1df6197a0d63e21ae2f7bee605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102337"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "47824235"
 > [!NOTE]  
 >  带编号的过程不支持 XML 和 CLR 参数。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此参数所属的对象的 ID。|  
 |**procedure_number**|**smallint**|对象中这种过程的数目（2 或更多）。|  
-|**名称**|**sysname**|参数的名称。 在中是唯一**procedure_number**。|  
+|**name**|**sysname**|参数的名称。 在中是唯一**procedure_number**。|  
 |**parameter_id**|**int**|参数的 ID。 在中是唯一**procedure_number**。|  
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。|  
 |**user_type_id**|**int**|为用户的参数定义的类型的 ID。|  
@@ -55,7 +54,7 @@ ms.locfileid: "47824235"
 > [!NOTE]  
 >  带编号的过程不支持 XML 和 CLR 参数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

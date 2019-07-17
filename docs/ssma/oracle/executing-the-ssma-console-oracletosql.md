@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 5cb3ff58156d35a348a432e6d7edb7f794e59e6f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287227"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266095"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>执行 SSMA 控制台 (OracleToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。 控制台应用程序在本部分中使用作为枚举的某些标准脚本文件命令。  
@@ -30,7 +30,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 **Command**  
   
 create-new-project  
-                  解码的字符：创建新的 SSMA 项目。  
+                  :创建新的 SSMA 项目。  
   
 **脚本**  
   
@@ -436,7 +436,7 @@ migrate-data
   
 **Command**  
   
-map-schema  
+映射架构  
   
 源数据库到目标架构的架构映射。  
   
@@ -463,7 +463,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步目标  
   
 -   将目标对象与目标数据库同步。  
   
@@ -483,7 +483,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 -   `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -548,7 +548,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 -   `report-errors-to:` 刷新操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**SourceDBRefreshReport.XML**创建。  
   

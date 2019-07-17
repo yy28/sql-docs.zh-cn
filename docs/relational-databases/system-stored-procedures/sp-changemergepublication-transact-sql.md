@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097686"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  下表说明的发布，可以更改，以及限制对这些属性值的属性。  
   
-|属性|ReplTest1|Description|  
+|属性|值|描述|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|允许匿名订阅。|  
 ||**false**|不允许匿名订阅。|  
@@ -102,7 +101,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|将发布信息从 Active Directory 上删除。|  
 |**replicate_ddl**|**1**|复制在发布服务器上执行的数据定义语言 (DDL) 语句。|  
 ||**0**|不复制 DDL 语句。|  
-|**retention**||这是**int**表示的数*retention_period_unit*单元要保存为给定发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意：对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。|  
+|**retention**||这是**int**表示的数*retention_period_unit*单元要保存为给定发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意:对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。|  
 |**retention_period_unit**|**day**|按天指定保持期。|  
 ||**week**|按周指定保持期。|  
 ||month |按月指定保持期。|  
@@ -115,7 +114,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inactive**|发布处于非活动状态。|  
 |**sync_mode**|**本机**或<br /><br /> **bcp 本机**|将所有表的本机模式大容量复制程序输出用于初始快照。|  
 ||**character**<br /><br /> 或**bcp 字符**|将所有表的字符模式大容量复制程序输出用于初始快照，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器必须执行此操作。|  
-|**use_partition_groups**<br /><br /> 注意：在使用 partition_groups 后，如果要恢复为使用**setupbelongs**，并设置**use_partition_groups = false**中**changemergearticle**，这可能不正确反映后拍摄快照。 快照生成的触发器符合分区组的要求。<br /><br /> 与此方案的解决方法是将状态设置为 Inactive，修改**use_partition_groups**，然后将状态设置为处于活动状态。|**true**|发布使用预计算分区。|  
+|**use_partition_groups**<br /><br /> 注意:在使用 partition_groups 后，如果要恢复为使用**setupbelongs**，并设置**use_partition_groups = false**中**changemergearticle**，这可能不正确反映后拍摄快照。 快照生成的触发器符合分区组的要求。<br /><br /> 与此方案的解决方法是将状态设置为 Inactive，修改**use_partition_groups**，然后将状态设置为处于活动状态。|**true**|发布使用预计算分区。|  
 ||**false**|发布不使用预计算分区。|  
 |**validate_subscriber_info**||列出用于检索订阅服务器信息的函数。 然后，验证要用于订阅服务器的动态筛选条件以验证是否对信息进行了一致的分区。|  
 |**web_synchronization_url**||用于 Web 同步的 Internet URL 的默认值。|  
@@ -191,7 +190,7 @@ sp_changemergepublication [ @publication= ] 'publication'
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

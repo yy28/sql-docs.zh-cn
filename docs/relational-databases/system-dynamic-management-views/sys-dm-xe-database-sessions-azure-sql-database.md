@@ -8,14 +8,13 @@ ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ba1a198e9550f72f3e6781659f1cba39bd3d5d1f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ab0d59026bd172cb1e3fd51a92c3e5bb8b83b2e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090375"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "56013508"
 |-|  
 |**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 不可为 null。|  
 |event_name|**nvarchar(60)**|操作绑定到的事件的名称。 不可为 null。|  
@@ -42,10 +41,10 @@ ms.locfileid: "56013508"
 |From|若要|关系|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|多对一|  
-|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
+|sys.dm_xe_database_session_events.event_package_guid、 sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
   
 ## <a name="see-also"></a>请参阅  
-[Azure SQL 数据库中扩展的事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+[Azure SQL 数据库中的扩展事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
  

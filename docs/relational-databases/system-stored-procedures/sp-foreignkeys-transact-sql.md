@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124379"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +60,12 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'` 是包含外键的名称。 *fktab_catalog*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
- 多种 DBMS 产品支持表的三部分命名 (_目录_**。**_架构_**。**_表_)，这将表现在结果集。  
+ 多种 DBMS 产品支持表的三部分命名 (_目录_ **。** _架构_ **。** _表_)，这将表现在结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|主键所在表的目录。|  
 |**PKTABLE_SCHEM**|**sysname**|主键所在表的架构。|  
@@ -81,7 +80,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**DELETE_RULE**|**smallint**|当 SQL 操作是删除操作时应用于外键的操作。 对于这些列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 0、1 或 2：<br /><br /> 0=对外键的 CASCADE 更改。<br /><br /> 1=NO ACTION 更改（如果有外键）。<br /><br /> 2=SET_NULL；将外键设置为 NULL。|  
 |**FK_NAME**|**sysname**|外键标识符。 如果不适用于数据源，则为 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 FOREIGN KEY 约束名称。|  
 |**PK_NAME**|**sysname**|主键标识符。 如果不适用于数据源，则为 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 PRIMARY KEY 约束名称。|  
-|**DEFERRABILITY**|**smallint**|指示是否可延迟约束检查。|  
+|**延迟**|**smallint**|指示是否可延迟约束检查。|  
   
  在结果集中，FK_NAME 和 PK_NAME 列总是返回 NULL。  
   
@@ -101,13 +100,13 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_primarykeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

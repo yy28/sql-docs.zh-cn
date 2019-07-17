@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135537"
 ---
 # <a name="using-block-cursors"></a>使用块游标
 块状游标的支持已内置到 ODBC 3。*x*。 **SQLFetch**可以仅用于在 ODBC 3 中调用时提取多行的操作。*x*; 如果 ODBC 2。*x*应用程序调用**SQLFetch**，它将打开仅的单行、 只进游标。 当 ODBC 3。*x*应用程序调用**SQLFetch** ODBC 2 中。*x*驱动程序，它可以返回单个行，除非该驱动程序支持**SQLExtendedFetch**。 有关详细信息，请参阅[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中附录 g:为了向后兼容的驱动程序指南。  

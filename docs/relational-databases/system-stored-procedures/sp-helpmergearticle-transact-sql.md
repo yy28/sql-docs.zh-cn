@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122347"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,29 +38,29 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 有关要检索其信息的发布的名称。 *发布*是**sysname**，默认值为**%**，表示返回有关当前数据库中的所有发布中包含的所有合并项目的信息。  
+`[ @publication = ] 'publication'` 有关要检索其信息的发布的名称。 *发布*是**sysname**，默认值为 **%** ，表示返回有关当前数据库中的所有发布中包含的所有合并项目的信息。  
   
-`[ @article = ] 'article'` 是要为其返回信息的名称。 *文章*是**sysname**，默认值为**%**，它返回给定发布中所有合并项目的相关信息。  
+`[ @article = ] 'article'` 是要为其返回信息的名称。 *文章*是**sysname**，默认值为 **%** ，它返回给定发布中所有合并项目的相关信息。  
   
 ## <a name="result-set"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|项目标识符。|  
-|**名称**|**sysname**|项目的名称。|  
+|**name**|**sysname**|项目的名称。|  
 |**source_owner**|**sysname**|源对象所有者的名称。|  
 |**source_object**|**sysname**|从其中添加项目的源对象的名称。|  
 |**sync_object_owner**|**sysname**|定义发布项目的视图所有者的名称。|  
 |**sync_object**|**sysname**|用于建立分区初始数据的自定义对象的名称。|  
 |**description**|**nvarchar(255)**|对项目的说明。|  
-|**status**|**tinyint**|项目的状态，可以为以下值之一：<br /><br /> **1** = 非活动状态<br /><br /> **2** = 活动<br /><br /> **5** = 数据定义语言 (DDL) 操作挂起<br /><br /> **6** = 使用新生成快照的 DDL 操作<br /><br /> 注意：当项目重新初始化订阅时，值的**5**并**6**更改为**2**。|  
+|**status**|**tinyint**|项目的状态，可以为以下值之一：<br /><br /> **1** = 非活动状态<br /><br /> **2** = 活动<br /><br /> **5** = 数据定义语言 (DDL) 操作挂起<br /><br /> **6** = 使用新生成快照的 DDL 操作<br /><br /> 注意:当项目重新初始化订阅时，值的**5**并**6**更改为**2**。|  
 |**creation_script**|**nvarchar(255)**|用于在订阅数据库中创建项目的可选项目架构脚本的路径和名称。|  
 |**conflict_table**|**nvarchar(270)**|存储插入或更新冲突的表的名称。|  
 |**article_resolver**|**nvarchar(255)**|项目的自定义冲突解决程序。|  
 |**subset_filterclause**|**nvarchar(1000)**|用于指定水平筛选的 WHERE 子句。|  
 |**pre_creation_command**|**tinyint**|预创建方法，可以为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = 放置<br /><br /> **2** = 删除<br /><br /> **3** = 截断|  
 |**schema_option**|**binary(8)**|项目的架构生成选项位图。 有关此位图选项的信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)或[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
-|**类型**|**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储的过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅同义词架构|  
+|**type**|**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储的过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅同义词架构|  
 |**column_tracking**|**int**|设置列级跟踪;其中**1**意味着列级跟踪，并**0**意味着列级跟踪处于关闭状态。|  
 |**resolver_info**|**nvarchar(255)**|项目冲突解决程序名。|  
 |**vertical_partition**|**bit**|如果项目垂直分区的;其中**1**表示垂直分区项目，并**0**意味着它不是。|  

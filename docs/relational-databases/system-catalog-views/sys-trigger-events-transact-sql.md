@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0071b7c0f955befba458a41ce813a8aff5aabe8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc2732797551317a392b0ab55d9ecbeb28d990a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091946"
 ---
 # <a name="systriggerevents-transact-sql"></a>sys.trigger_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,15 +35,15 @@ ms.locfileid: "47748935"
 > [!NOTE]  
 >  **sys.trigger_events**不适用于事件通知。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<从 sys.events 继承的列 >**|不适用|继承**object_id**，**类型**， **type_desc**中的列[sys.events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)。|  
 |**is_first**|**bit**|触发器标记为第一个为此事件激发的触发器。|  
 |**is_last**|**bit**|触发器标记为最后一个为此事件激发的触发器。|  
 |**event_group_type**|**int**|要对其创建触发器的事件组，如果未对事件组创建触发器，则为 Null。|  
-|**event_group_type**|**nvarchar(60)**|要对其创建触发器的事件组的说明，如果未对事件组创建触发器，则为 Null。|  
+|**event_group_type_desc**|**nvarchar(60)**|要对其创建触发器的事件组的说明，如果未对事件组创建触发器，则为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

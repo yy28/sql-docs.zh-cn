@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85ba57ba9e3559a790ae983025356510987c1eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133132"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有关中的文件审核类型的扩展的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]审核在服务器实例上。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|审核的 ID。|  
-|NAME|**sysname**|审核的名称。|  
+|name|**sysname**|审核的名称。|  
 |audit_guid|**uniqueidentifier**|审核的 GUID。|  
 |create_date|**datetime**|创建文件审核的 UTC 日期。|  
 |modify_date|**日期时间**|上次修改文件审核的 UTC 日期。|  
@@ -51,10 +50,10 @@ ms.locfileid: "47845125"
 |max_rollover_files|**int**|要用于滚动更新选项的文件的最大数目。|  
 |max_files|**int**|在没有滚动更新选项时要使用的文件的最大数目。|  
 |reserved_disk_space|**int**|按文件保留的磁盘空间量。|  
-|log_file_path|nvarchar(260)|审核所在的路径。 对于文件审核为文件路径，对于应用程序日志审核为应用程序日志路径。|  
-|log_file_name|nvarchar(260)|CREATE AUDIT DDL 中提供的日志文件的基名称。 创建日志文件名时向 base_log_name 文件中添加一个递增数字作为后缀。|  
+|log_file_path|nvarchar(260) |审核所在的路径。 对于文件审核为文件路径，对于应用程序日志审核为应用程序日志路径。|  
+|log_file_name|nvarchar(260) |CREATE AUDIT DDL 中提供的日志文件的基名称。 创建日志文件名时向 base_log_name 文件中添加一个递增数字作为后缀。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，不得被拒绝主体**VIEW ANY DEFINITION**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

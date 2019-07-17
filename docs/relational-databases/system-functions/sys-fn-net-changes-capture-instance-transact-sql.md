@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122572"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,14 +93,14 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|列类型|Description|  
+|列名|列类型|描述|  
 |-----------------|-----------------|-----------------|  
 |\<中的列@column_list>|**各不相同**|在标识的列**column_list** sp_cdc_generate_wrapper_function 以生成用于创建包装的脚本被调用时的参数。 如果*column_list*为 NULL，所有被跟踪的源列将显示在结果集中。|  
 |__CDC_OPERATION|**nvarchar(2)**|一个操作代码，它指示将行应用于目标环境所需的操作。 该操作的差异取决于参数的值*row_filter_option*以下调用中提供的：<br /><br /> *row_filter_option* = 'all'，'all with mask<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - 删除操作<br /><br /> 'M' - 插入操作或更新操作|  
 |\<中的列@update_flag_list>|**bit**|通过将 _uflag 追加到列名称末尾所命名的位标记。 该标志才有非 null 值时，才*row_filter_option* **= all with mask'** 并\__CDC_OPERATION **= 取消**。 如果在查询窗口中修改相应的列，则会将其设置为 1； 否则为 0。|  
   
 ## <a name="remarks"></a>备注  
- fn_net_changes_ < capture_instance > 函数充当 cdc.fn_cdc_get_net_changes_<capture_instance> 查询函数的包装。 sys.sp_cdc_generate_wrapper 存储过程用于创建包装的脚本。  
+ Fn_net_changes_ < capture_instance > 函数充当 cdc.fn_cdc_get_net_changes_ < capture_instance > 查询函数的包装。 sys.sp_cdc_generate_wrapper 存储过程用于创建包装的脚本。  
   
  不会自动创建包装函数。 必须做两件事，才能创建包装函数：  
   

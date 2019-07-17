@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087757"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函数自变量
 ODBC 3.5 （或更高版本） 驱动程序管理器支持所有函数接受字符串或 SQLPOINTER 中其自变量的指针的 ANSI 和 Unicode 的版本。 Unicode 函数作为函数实现 (为后缀*W*)，而不是宏。 ANSI 函数 (带有或不带后缀的可以调用*A*) 与当前的 ODBC API 函数完全相同。  

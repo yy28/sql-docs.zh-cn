@@ -18,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a110059cd635e2bc89a6e794082d706da1269179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099201"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   返回一个表，将审核日志中的 class_type 字段映射到 sys.dm_audit_actions 中的 class_desc 字段。 有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]审核，请参阅[SQL Server Audit&#40;数据库引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**class_type**|**char(2)**|审核的实体的类类型。 映射到写入审核日志，并返回的 class_type **get_audit_file （)** 函数。 不可为 null。|  
 |**class_type_desc**|**nvarchar(120)**|可审核实体的名称。 不可为 null。|  
 |**securable_class_desc**|**nvarchar(120)**|映射到要审核的 class_type 的安全对象。 如果 class_type 不映射到安全对象，则为 NULL。 可以与 sys.dm_audit_actions 中的 class_desc 相关。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  主体必须具有**选择**权限。 默认情况下，此权限授予 Public。  
   
 ## <a name="see-also"></a>请参阅  

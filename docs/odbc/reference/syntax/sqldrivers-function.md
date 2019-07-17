@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 181d3aea0b2c756abc0dc603348cc9cfd728ac4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f54be3d11f4870533513f464c1afdae13e04f367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104666"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 函数
 **符合性**  
@@ -84,7 +83,7 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>诊断  
  当**SQLDrivers**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以通过调用获取关联的 SQLSTATE 值**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_ENV 和一个*处理*的*EnvironmentHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLDrivers** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|(DM) 特定于驱动程序管理器的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|(DM) 缓冲区\* *DriverDescription*是否不足够大以返回完成驱动程序的描述。 因此，说明已被截断。 在返回完成驱动程序说明的长度\* *DescriptionLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> (DM) 缓冲区\* *DriverAttributes*是否不足够大以返回属性值对的完整列表。 因此，该列表已被截断。 在返回的属性值对的未截断的列表长度 **AttributesLengthPtr*。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e67a50287e0878a3dcc0779bb4a78dbcbbdd0260
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462546"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259257"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
+# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   返回聚合缓存的函数的性能统计信息。 视图将返回为每个缓存的函数计划，一个行和行的生存期只要函数保持缓存。 从缓存删除函数后，相应的行也将从此视图。 此时，Performance Statistics SQL 跟踪事件将引发类似于**sys.dm_exec_query_stats**。 返回有关标量函数，包括内存中的函数以及 CLR 标量函数的信息。 不返回有关表值函数的信息。  
@@ -37,7 +36,7 @@ ms.locfileid: "66462546"
 > 初始查询**sys.dm_exec_function_stats**可能会产生不准确的结果，如果没有在服务器上当前正在执行的工作负荷。 可以通过重新运行查询来确定更准确的结果。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|该函数所在的数据库 ID。|  
 |**object_id**|**int**|函数的对象标识号。|  
@@ -76,7 +75,7 @@ ms.locfileid: "66462546"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="examples"></a>示例  
  以下示例返回有关按平均占用时间衡量的前十个函数的信息。  
@@ -95,7 +94,7 @@ ORDER BY [total_worker_time] DESC;
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys.dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
  [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

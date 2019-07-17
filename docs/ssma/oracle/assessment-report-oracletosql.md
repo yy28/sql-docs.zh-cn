@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: dd578c40c71b8be4a0567cc2cc1a516f795e288d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 75fdb97b5b7d763694289d762edc65b4536a86c3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288062"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264516"
 ---
 # <a name="assessment-report-oracletosql"></a>评估报表 (OracleToSQL)
 评估报告窗口会显示到的数据库对象的转换的结果[!INCLUDE[tsql](../../includes/tsql-md.md)]语法，并且还可以帮助您评估的复杂性和成本在迁移项目。  
