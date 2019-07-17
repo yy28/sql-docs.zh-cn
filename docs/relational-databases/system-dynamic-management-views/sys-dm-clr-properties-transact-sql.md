@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f7ff1fd534876d177288dad396276e95d78d681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735705"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266056"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "47735705"
   
  **Sys.dm_clr_properties**视图包含**名称**并**值**列。 此视图中的每一行都提供了有关宿主 CLR 的某个属性的详细信息。 使用此视图搜集有关宿主 CLR 的信息，例如 CLR 安装目录、CLR 版本和宿主 CLR 的当前状态。 此视图可以帮助您确定 CLR 集成代码之所以无效是否是因为服务器上的 CLR 安装存在问题。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar(128)**|属性的名称。|  
+|**name**|**nvarchar(128)**|属性的名称。|  
 |**value**|**nvarchar(128)**|属性的值。|  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
  **Directory**属性指示在服务器安装.NET Framework 的目录。 在服务器上可能存在多个 .NET Framework 安装，该属性的值标识了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在使用的安装。  
   
  **版本**属性指示.NET Framework 的版本和服务器上托管 CLR。  
@@ -72,10 +71,10 @@ ms.locfileid: "47735705"
 ## <a name="remarks"></a>备注  
  属性和值的此视图中的未来版本可能会更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由于 CLR 集成功能的增强功能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
   
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="examples"></a>示例  
  以下示例检索有关宿主 CLR 的信息：  

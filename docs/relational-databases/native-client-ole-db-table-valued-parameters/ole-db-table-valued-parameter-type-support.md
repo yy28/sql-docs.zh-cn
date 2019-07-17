@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c1d58b4c8e3b1b3af47a49873f5d3da6d42811c
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 6aee071c26c8e6749c1f0efbb45f8ddb85230e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133386"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 表值参数类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "49084997"
   本主题介绍了表值参数的 OLE DB 类型支持。  
   
 ## <a name="table-valued-parameter-rowset-object"></a>表值参数行集对象  
- 您可以创建表值参数的专用行集对象。 使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 或 iopenrowset:: Openrowset 创建表值参数行集对象。 为此，请将 pTableID 参数的 eKind 成员设置为 DBKIND_GUID_NAME，并提供 CLSID_ROWSET_INMEMORY 作为 guid 成员。 必须在指定服务器类型名称为表值参数*pwszName*的成员*pTableID*使用 iopenrowset:: Openrowset 时。 表值参数行集对象行为与常规 SQL Server Native Client OLE DB Provider 对象类似。  
+ 您可以创建表值参数的专用行集对象。 使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 或 iopenrowset:: Openrowset 创建表值参数行集对象。 为此，请将 pTableID 参数的 eKind 成员设置为 DBKIND_GUID_NAME，并提供 CLSID_ROWSET_INMEMORY 作为 guid 成员    。 必须在指定服务器类型名称为表值参数*pwszName*的成员*pTableID*使用 iopenrowset:: Openrowset 时。 表值参数行集对象行为与常规 SQL Server Native Client OLE DB Provider 对象类似。  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -54,14 +53,14 @@ CoType RowsetTVP
 #define DBTYPE_TABLE (143)  
 ```  
   
- DBTYPE_TABLE 具有与 DBTYPE_IUNKNOWN 相同的格式。 它是指向数据缓冲区中某个对象的指针。 为完成绑定中的规范，使用者应填充 DBOBJECT 缓冲区，并将 iid 设置为某个行集对象接口 (IID_IRowset)。 如果绑定中未指定 DBOBJECT，则将假定为 IID_IRowset。  
+ DBTYPE_TABLE 具有与 DBTYPE_IUNKNOWN 相同的格式。 它是指向数据缓冲区中某个对象的指针。 为完成绑定中的规范，使用者应填充 DBOBJECT 缓冲区，并将 iid 设置为某个行集对象接口 (IID_IRowset)  。 如果绑定中未指定 DBOBJECT，则将假定为 IID_IRowset。  
   
  不支持任何其他类型转换为 DBTYPE_TABLE 或从 DBTYPE_TABLE 转换为任何其他类型。 针对 DBTYPE_TABLE 到 DBTYPE_TABLE 的转换以外的任何请求，IConvertType::CanConvert 将对不支持的转换返回 S_FALSE。 这将假定对 Command 对象进行 DBCONVERTFLAGS_PARAMETER 转换。  
   
 ## <a name="methods"></a>方法  
  有关支持表值参数的 OLE DB 方法的信息，请参阅[OLE DB Table-Valued 参数类型支持&#40;方法&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>properties  
  有关支持表值参数的 OLE DB 属性的信息，请参阅[OLE DB Table-Valued 参数类型支持&#40;属性&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  

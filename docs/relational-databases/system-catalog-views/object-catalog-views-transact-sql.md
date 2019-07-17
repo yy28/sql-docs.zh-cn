@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: daa9064feb59ab7052077d9d67701630ee7fcef5
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220357"
 ---
 # <a name="object-catalog-views-transact-sql"></a>对象目录视图 (Transact-SQL)
 

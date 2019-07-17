@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_distributed_sql_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f86941149741caee7849c579e32ad070d7a3dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63d8a331163283598dd50a418f0dd32f9ac5edd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097791"
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   在查询中包含有关所有 SQL 查询分布作为 SQL 步骤的一部分的信息。  此视图显示的最后 1000 条请求; 的数据活动请求始终具有此视图中的数据。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|execution_id 和 step_index 构成此视图的键。 与请求关联的唯一数字 id。|请参阅中的 ID [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|此分布是一部分的查询步骤的索引。|请参阅中的 step_index [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  

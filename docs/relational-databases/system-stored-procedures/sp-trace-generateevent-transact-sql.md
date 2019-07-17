@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096022"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +46,14 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>参数  
 `[ @eventid = ] event_id` 是要打开的事件的 ID。 *event_id*是**int**，无默认值。 ID 必须是一个从 82 到 91，表示为集的用户定义的事件的事件号[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
-`[ @userinfo = ] 'user_info'` 用户定义的可选字符串，标识事件的原因。 *user_info*是**nvarchar （128)**，默认值为 NULL。  
+`[ @userinfo = ] 'user_info'` 用户定义的可选字符串，标识事件的原因。 *user_info*是**nvarchar （128)** ，默认值为 NULL。  
   
-`[ @userdata = ] user_data` 是事件的可选用户定义数据。 *user_data*是**varbinary(8000)**，默认值为 NULL。  
+`[ @userdata = ] user_data` 是事件的可选用户定义数据。 *user_data*是**varbinary(8000)** ，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|Description|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |**0**|没有错误。|  
 |**1**|未知错误。|  
@@ -95,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  

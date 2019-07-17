@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079057"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>提示用户输入连接信息
 如果应用程序使用**SQLConnect**并需要提示用户输入的任何连接信息，如用户名和密码，它必须执行此操作本身。 尽管这样，应用程序来控制其"外观"，它可能会强制应用程序以包含特定于驱动程序的代码。 当应用程序需要提示用户提供特定于驱动程序的连接信息时，将发生这种情况。 这会带来的不可能的情况下，对于通用应用程序，用于处理所有驱动程序，包括编写的应用程序时不存在的驱动程序。  

@@ -20,30 +20,29 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 766d614db7d07c8db5305c32a5e84d71dac53dca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133232"
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对事件会话中的每个事件都返回一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |event_id|**int**|事件的 ID。 此 ID 是在事件会话对象中是唯一的。 不可为 null。|  
-|NAME|**sysname**|事件的名称。 不可为 null。|  
+|name|**sysname**|事件的名称。 不可为 null。|  
 |包|**sysname**|包含事件的事件包的名称。 不可为 null。|  
 |module|**sysname**|包含事件的模块的名称。 不可为 null。|  
 |predicate|**nvarchar(3000)**|应用于事件的谓词表达式。 可以为 Null。|  
 |predicate_xml|**nvarchar(3000)**|应用于事件的 XML 谓词表达式。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="remarks"></a>备注  

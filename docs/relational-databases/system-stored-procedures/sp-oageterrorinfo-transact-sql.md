@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
+title: sp_OAGetErrorInfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107916"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,12 +69,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>结果集  
  如果未指定输出参数，错误信息将作为结果集返回给客户端。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |------------------|---------------|-----------------|  
 |**错误**|**binary(4)**|错误号的二进制表示形式。|  
 |**数据源**|**nvarchar(nn)**|错误的源。|  
 |**说明**|**nvarchar(nn)**|错误的说明。|  
-|**Helpfile**|**nvarchar(nn)**|错误源的帮助文件。|  
+|**帮助文件**|**nvarchar(nn)**|错误源的帮助文件。|  
 |**HelpID**|**int**|错误源帮助文件中的帮助上下文 ID。|  
   
 ## <a name="remarks"></a>备注  

@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4811d27e00336f6e02d62d9dd6c346d26400f129
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f98d906c39b46b36fe68e0480b757a5ae854d27
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936935"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252267"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "67936935"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
    
 ## <a name="remarks"></a>备注  
  查询完成后，将更新该视图中的统计信息。  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_details (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_missing_index_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fc72e290bf1aa495493eb09d5e0db8cf305202e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62508236"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263791"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62508236"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 若要避免公开此类信息，包含不属于已连接租户的数据的每一行都筛选掉。  
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|标识特定的缺失索引。 该标识符在服务器中是唯一的。 **index_handle**是此表的键。|  
 |**database_id**|**smallint**|标识带有缺失索引的表所驻留的数据库。|  
@@ -66,7 +65,7 @@ ms.locfileid: "62508236"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="see-also"></a>请参阅  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

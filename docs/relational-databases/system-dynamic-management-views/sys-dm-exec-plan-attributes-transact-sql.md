@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013223"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255603"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |属性|**varchar(128)**|与此计划关联的属性的名称。 立即下此表列出了可能的属性、 其数据类型和及其说明。|  
 |value|**sql_variant**|与此计划关联的属性的值。|  
@@ -53,7 +52,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 从上表中，**特性**可以具有以下值：
 
-|特性|数据类型|Description|  
+|特性|数据类型|描述|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是 ID 中存储的对象[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)的数据库对象 （过程、 视图、 触发器等）。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
@@ -82,7 +81,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
   
@@ -122,7 +121,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Option|ReplTest1|  
 |------------|-----------|  
-|None|0|  
+|无|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

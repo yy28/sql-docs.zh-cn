@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 8f6eabe706197e8ab2bfb882510b6063bf4e884c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287689"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266113"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>创建服务器连接文件 (OracleToSQL)
 脚本文件的服务器部分中或在单独的服务器连接文件中，可以指定服务器信息。 服务器连接文件的命令行参数是， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  

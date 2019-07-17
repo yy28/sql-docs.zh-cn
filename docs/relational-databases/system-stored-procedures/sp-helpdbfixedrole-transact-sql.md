@@ -1,5 +1,5 @@
 ---
-title: sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs
+title: sp_helpdbfixedrole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123832"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定的数据库角色的名称。|  
 |**说明**|**nvarchar(70)**|说明**DbFixedRole。**|  
@@ -55,7 +54,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>备注  
  固定数据库角色（如下表所示）在数据库级上定义，具有执行特定数据库级的管理活动的权限。 无法添加或删除固定数据库角色。 无法更改授予固定数据库角色的权限。  
   
-|固定数据库角色|Description|  
+|固定数据库角色|描述|  
 |-------------------------|-----------------|  
 |**db_owner**|数据库所有者|  
 |**db_accessadmin**|数据库访问管理员|  
@@ -69,7 +68,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
  下表显示了用于修改数据库角色的存储过程。  
   
-|存储过程|操作|  
+|存储过程|Action|  
 |----------------------|------------|  
 |**sp_addrolemember**|将数据库用户添加到固定数据库角色中。|  
 |**sp_helprole**|显示固定数据库角色的成员列表。|  
@@ -91,10 +90,10 @@ GO
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_dbfixedrolepermission &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

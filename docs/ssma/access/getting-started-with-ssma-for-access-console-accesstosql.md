@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 44e89e7c6ab10df13927247222e1f8564500fb8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68222218"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>开始使用 SSMA for Access 控制台 (AccessToSQL)
 本部分介绍的过程启动并开始使用访问控制台应用程序。 此外列出，本文所述，将使用的约定在典型的 SSMA 控制台输出窗口中。  
@@ -53,7 +52,7 @@ ms.locfileid: "62759879"
   
 下表中的控制台输出的颜色解释：  
   
-|颜色|Description|  
+|颜色|描述|  
 |---------|---------------|  
 |Red|执行期间出错|  
 |灰色|日期和时间戳，向用户显示消息|  

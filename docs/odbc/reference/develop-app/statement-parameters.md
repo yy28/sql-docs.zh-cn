@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107246"
 ---
 # <a name="statement-parameters"></a>语句参数
 一个*参数*是可变的 SQL 语句。 例如，假设一个部件表具有名为 PartID、 描述和价格的列。 若要添加不带参数部件需要构造 SQL 语句，例如：  

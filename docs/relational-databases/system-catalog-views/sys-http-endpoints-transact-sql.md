@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122725"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对于在使用 HTTP 协议的服务器中创建的每个端点在表中均对应一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**< 继承的列 >**||继承中的列[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**site**|**nvarchar(128)**|站点的主机名，如 SITE = 选项中指定的那样。|  
+|**站点**|**nvarchar(128)**|站点的主机名，如 SITE = 选项中指定的那样。|  
 |**url_path**|**nvarchar(4000)**|此 HTTP 端点 URL 的仅路径部分，如 PATH= 选项中指定的那样。|  
 |**is_clear_port_enabled**|**bit**|1 = 使用 PORT = CLEAR 选项启用清除端口。|  
 |**clear_port**|**int**|在 CLEAR PORT = 选项中指定的端口号。<br /><br /> NULL = 未指定。|  

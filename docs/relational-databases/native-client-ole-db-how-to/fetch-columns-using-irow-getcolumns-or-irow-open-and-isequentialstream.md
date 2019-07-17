@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45d144b583c934ef6599a611255d68d51f9413ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110264"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  可使用 ISequentialStream 接口绑定或检索大型数据。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
+  可使用 ISequentialStream 接口绑定或检索大型数据  。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
@@ -36,13 +35,13 @@ ms.locfileid: "53205276"
   
 1.  建立与数据源的连接。  
   
-2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）。  
+2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）  。  
   
-3.  提取列数据使用**open （)** 或**IRow::GetColumns()**。  
+3.  提取列数据使用**open （)** 或**IRow::GetColumns()** 。  
   
-    -   **Open （)** 可用来打开**ISequentialStream**在该行上。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）。  
+    -   **Open （)** 可用来打开**ISequentialStream**在该行上。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）   。  
   
-    -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象。  
+    -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象   。  
   
 4.  使用**ISequentialStream::Read()** 重复，若要指定的字节数读入使用者缓冲区。  
   
@@ -51,11 +50,11 @@ ms.locfileid: "53205276"
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
- 第一个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建该示例使用的表。  
+ 第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建该示例要使用的表。  
   
  使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
- 第三个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除该示例使用的表。  
+ 第三个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表删除该示例使用的表。  
   
 ```  
 USE AdventureWorks  

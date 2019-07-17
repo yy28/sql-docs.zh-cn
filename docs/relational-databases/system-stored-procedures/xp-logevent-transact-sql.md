@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c8604413718e8b318b67cf63562531e869a79ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116641"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  最多 2048 个字符的字符串。  
   
  **'** *严重性*   
- 以下三个字符串之一：INFORMATIONAL、WARNING 或 ERROR。 *严重性*是可选的默认值为 INFORMATIONAL。  
+ 是以下三个字符串之一：信息、 警告或错误。 *严重性*是可选的默认值为 INFORMATIONAL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -60,7 +59,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ## <a name="remarks"></a>备注  
  当发送邮件[!INCLUDE[tsql](../../includes/tsql-md.md)]过程、 触发器、 批处理等，而不是 xp_logevent 使用 RAISERROR 语句。 xp_logevent 不调用客户端的消息处理程序也不设置@ERROR。 若要将消息写入 Windows 事件查看器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志文件中，请执行 RAISERROR 语句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 master 数据库中的 db_owner 固定数据库角色的成员身份，或者 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

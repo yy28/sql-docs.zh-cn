@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 349abe5ccc5fb36ee6c3568e97163e6eb665f633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108786"
 ---
 # <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为每个包含 SQL 语言定义模块的系统对象返回一行。 类型为 FN、IF、P、PC、TF 和 V 的系统对象具有关联的 SQL 模块。 若要标识包含对象，可以将此视图与[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|该包含对象的对象标识号，在数据库中是唯一的。|  
 |**定义**|**nvarchar(max)**|定义此模块的 SQL 文本。|  
@@ -45,7 +44,7 @@ ms.locfileid: "47594666"
 |**null_on_null_input**|**bit**|0 = 创建的模块不对任意 NULL 输入生成 NULL 输出。<br /><br /> 始终返回 0。|  
 |**execute_as_principal_id**|**int**|始终返回 NULL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

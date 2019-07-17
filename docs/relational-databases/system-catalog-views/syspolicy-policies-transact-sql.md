@@ -17,27 +17,26 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: aec3b91a52667e0ef0801bd2532689e39ebf9ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121162"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中每个基于策略的管理策略在表中各占一行。 syspolicy_policies 属于 msdb 数据库中的 dbo 架构。 下表介绍了 syspolicy_policies 视图中的列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|策略标识符。|  
-|NAME|**sysname**|策略的名称。|  
+|name|**sysname**|策略的名称。|  
 |condition_id|**int**|此策略强制设定或测试的条件的 ID。|  
 |root_condition_id|**int**|仅限内部使用。|  
 |date_created|**datetime**|策略的创建日期和时间。|  
-|execution_mode|**int**|策略的评估模式。 可能的值如下所示：<br /><br /> 0 = 按需<br /><br /> 当此模式由用户直接指定时，将对策略进行评估。<br /><br /> 1 = 更改时: 禁止<br /><br /> 这种自动模式使用 DDL 触发器来防止违反策略。<br /><br /> 2 = 更改时: 仅记录<br /><br /> 当发生相关更改时，这种自动模式使用事件通知对策略进行评估，并记录违反策略的情况。<br /><br /> 4 = 按计划<br /><br /> 这种自动模式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业定期对策略进行评估。 此模式记录违反策略的情况。<br /><br /> 注意： 值 3 不是可能的值。|  
+|execution_mode|**int**|策略的评估模式。 可能的值如下所示：<br /><br /> 0 = 按需<br /><br /> 当此模式由用户直接指定时，将对策略进行评估。<br /><br /> 1 = 更改时: 禁止<br /><br /> 这种自动模式使用 DDL 触发器来防止违反策略。<br /><br /> 2 = 更改时: 仅记录<br /><br /> 当发生相关更改时，这种自动模式使用事件通知对策略进行评估，并记录违反策略的情况。<br /><br /> 4 = 按计划<br /><br /> 这种自动模式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业定期对策略进行评估。 此模式记录违反策略的情况。<br /><br /> 注意:值 3 不是可能的值。|  
 |policy_category|**int**|此策略所属的基于策略的管理策略类别的 ID。 如果是默认策略组，则为 NULL。|  
 |schedule_uid|**uniqueidentifier**|如果 execution_mode 为“按计划”，则包含计划的 ID，否则为 NULL。|  
 |description|**nvarchar(max)**|策略说明。 说明列是可选的，可以为 NULL。|  
@@ -53,7 +52,7 @@ ms.locfileid: "47845145"
 ## <a name="remarks"></a>备注  
  当你进行故障排除基于策略的管理时，查询[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)视图以确定是否启用策略。 此视图还会显示创建或上次更改策略的用户。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ## <a name="see-also"></a>请参阅  

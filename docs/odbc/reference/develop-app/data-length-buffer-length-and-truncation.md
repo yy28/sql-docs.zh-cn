@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8586157237db1158587e3c39f1320b78d8251fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081471"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>数据长度、缓冲区长度和截断
 *数据长度*是数据的字节长度，因为它将存储在应用程序的数据缓冲区，不作为数据源中存储。 这一区别很重要，因为数据通常存储在比数据源中的数据缓冲区中的不同类型。 因此对于发送到数据源的数据，这是前转换为数据源的类型的数据的字节长度。 正在从数据源检索到的数据，这是数据的字节长度后转换到数据缓冲区的类型和之前完成的任何截断。  

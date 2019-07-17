@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626054"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266483"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>测试迁移的数据库对象 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 测试人员 （SSMA 测试程序） 的迁移助手自动测试的数据库对象转换和数据迁移所做的 SSMA。 在完成所有的 SSMA 迁移步骤后，使用 SSMA 测试人员验证已转换的对象相同的方式工作，所有数据已正确都传输。  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be861ae0e27bccb682bd4beb89db2c0dd791b04b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124241"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -49,7 +48,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *docid*  
  与键值相对应的内部文档标识符 (DocId)。 无效的 *docid* 值不会返回任何结果。  
   
- *key*  
+ *密钥*  
  指定表中的全文键值。 无效的 *key* 值不会返回任何结果。 有关全文索引键值的信息，请参阅[管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 > [!IMPORTANT]  
@@ -60,10 +59,10 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|与键值相对应的内部文档标识符 (DocId) 列。|  
-|Key|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
+|键|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
   
  <sup>*</sup> 键的数据类型与相同基表中的全文键列的数据类型。  
   

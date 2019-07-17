@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 9e746d1df201349011d24fc0de007c74ba0073b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e1021643d503e1ca77f120b81046b3773f8ff458
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209791"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259103"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>将 Oracle 数据库迁移到 SQL Server (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for Oracle 是一个全面的环境，可帮助你快速迁移到的 Oracle 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Azure SQL DB 或 Azure SQL 数据仓库。 通过使用 SSMA for Oracle，可以查看数据库对象和数据、 评估要迁移的数据库，迁移到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Azure SQL DB 或 Azure SQL 数据仓库，然后将数据迁移到和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Azure SQL DB 或 Azure SQL 数据仓库。 请注意，不能将 SYS 和系统 Oracle 架构迁移。

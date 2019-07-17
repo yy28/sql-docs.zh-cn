@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4e9e3aabd08566d65cd09242dbaf8a2041cc4ef1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d2d58b06c1a222a2ff6042bb5ca46338f752f7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083542"
 ---
 # <a name="appendix---1-sybasetosql"></a>附录 - 1 (SybaseToSQL)
 SSMA 控制台命令行选项的快速视图：  

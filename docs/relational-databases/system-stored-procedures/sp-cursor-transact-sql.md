@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108576"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  一个必需参数，它指定游标将执行的操作。 *optype*需要以下项之一**int**输入值。  
   
-|ReplTest1|“属性”|Description|  
+|值|名称|描述|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|用于更新提取缓冲区中的一行或多行。  中指定的行*rownum*重新访问和更新。|  
 |0x0002|DELETE|用于删除提取缓冲区中的一行或多个行。 中指定的行*rownum*重新访问并删除。|  
@@ -59,7 +58,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|用于从基础表中重新填充缓冲区，并且可用于刷新行（如果由于乐观并发控制导致更新或删除失败或在某个 UPDATE 之后）。|  
 |0X10|LOCK|会导致 SQL Server U 锁将会获取包含指定的行的页上。 此锁与 S 锁兼容，但不与 X 锁或其他 U 锁兼容。 可用于实现短期锁定。|  
 |0X20|SETPOSITION|仅当程序将要发布后续的 SQL Server 定位 DELETE 或 UPDATE 语句使用。|  
-|0X40|ABSOLUTE|仅能与 UPDATE 或 DELETE 结合使用。  ABSOLUTE 仅与 KEYSET 游标结合使用（对于 DYNAMIC 游标将忽略，并且无法更新 STATIC 游标）。<br /><br /> 注意：如果在尚未提取键集中的行上指定 ABSOLUTE，则该操作可能失败并发检查，并且无法保证返回的结果。|  
+|0X40|ABSOLUTE|仅能与 UPDATE 或 DELETE 结合使用。  ABSOLUTE 仅与 KEYSET 游标结合使用（对于 DYNAMIC 游标将忽略，并且无法更新 STATIC 游标）。<br /><br /> 注意:如果在尚未提取键集中的行上指定 ABSOLUTE，则该操作可能失败并发检查，并且无法保证返回的结果。|  
   
  *rownum*  
  指定提取缓冲区中游标将对其执行操作、更新或删除的行。  
@@ -175,8 +174,8 @@ sp_cursor  cursor, optype, rownum, table
 >  可以提交一个参数作为命名参数，也即“`@VALUES`”。 在此情况下，不能使用其他命名参数。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

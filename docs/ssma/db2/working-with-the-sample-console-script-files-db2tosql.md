@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086176"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>使用示例控制台脚本文件 (DB2ToSQL)
 几个示例文件与产品一起提供的用户参考和使用情况。 本部分介绍的方法轻松地自定义这些脚本以满足最终用户需求。  
@@ -70,10 +69,10 @@ ms.locfileid: "63259005"
   
 5.  **ConversionAndDataMigrationSample.xml:** 此示例使用户能够从转换到数据迁移执行端到端迁移。 下面列出了必需的属性值，它们将需要更改的列表：  
   
-    |命令名|Description|特性|  
+    |命令名|描述|特性|  
     |----------------|---------------|-------------|  
-    |`map-schema`|源数据库到目标架构的架构映射。|`source-schema:` 指定转换所需的源数据库。<br /><br />`sql-server-schema`设置用户帐户 ：指定是要迁移到目标数据库|  
-    |`convert-schema`|执行架构转换从源到目标架构。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。|`object-name`设置用户帐户 ：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
+    |`map-schema`|源数据库到目标架构的架构映射。|`source-schema:` 指定转换所需的源数据库。<br /><br />`sql-server-schema`：指定是要迁移到目标数据库|  
+    |`convert-schema`|执行架构转换从源到目标架构。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`convert-schema`命令的示例 4 的示例控制台脚本文件。|`object-name`：指定源数据库/对象要求要转换的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
     |`synchronize-target`|将目标对象与目标数据库同步。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`synchronize-target`示例控制台脚本文件的命令的示例 3。|`object-name:` 指定 sql server 数据库/对象创建所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
     |`migrate-data`|将源数据迁移到目标。<br /><br />如果用户具有以评估多个对象 / 数据库他可以指定多个`metabase-object`节点中所示`migrate-data`命令的示例 2 的示例控制台脚本文件。|`object-name:` 指定源数据库/表迁移所需的名称。 确保相应`object-type`根据中指定的对象的类型进行更改 `object-name`|  
   

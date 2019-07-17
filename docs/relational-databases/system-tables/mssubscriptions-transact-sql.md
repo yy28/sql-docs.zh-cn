@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51ab87c830d27a2749fdb332c5a13a5b5dd85542
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139713"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscriptions**表包含一行，每个已发布文章中的本地分发服务器提供服务的订阅。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
@@ -46,7 +45,7 @@ ms.locfileid: "52823591"
 |**snapshot_seqno_flag**|**bit**|当值为指示的源的快照事务序列号， **1**意味着**subscription_seqno**是快照序列号。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
 |**subscription_time**|**datetime**|仅限内部使用。|  
-|**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **1** = 不发回。<br /><br /> **0** = 发送回。<br /><br /> 注意：只有与 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中的双向复制功能的向后兼容性才支持此列。 对于更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，应改为使用对等复制。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
+|**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **1** = 不发回。<br /><br /> **0** = 发送回。<br /><br /> 注意:仅为与中的双向复制功能的向后兼容支持此列[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 对于更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，应改为使用对等复制。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
 |**agent_id**|**int**|代理的 ID。|  
 |**update_mode**|**tinyint**|更新的类型。|  
 |**publisher_seqno**|**varbinary(16)**|该订阅在发布服务器上的事务序列号。|  

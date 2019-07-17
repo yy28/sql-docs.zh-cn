@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bacf438180dd6fe2823660e8275e48a2316e9efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121442"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 函数
 **符合性**  
@@ -60,7 +59,7 @@ SQLRETURN SQLCopyDesc(
   
  因为**SQLCopyDesc**可通过调用来实现**SQLGetDescField**并**SQLSetDescField**， **SQLCopyDesc**可能会返回返回的 SQLSTATEs **SQLGetDescField**或**SQLSetDescField**。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  

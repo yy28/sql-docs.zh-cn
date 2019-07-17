@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: bc5693c71ac6061f12ee90386b3c135a45a14e09
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288531"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266066"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>完成测试用例准备 (OracleToSQL)
 向导的最后一页显示的测试用例说明和测试中涉及的对象的信息。 此外，在此页上，可以设置测试执行选项。  

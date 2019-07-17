@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2b17e400d71df77fb52d20c157c8394c61673b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91386e4464f02b3ce03f6c09c4cba01ade6260ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085661"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>服务器配置 (MDS Configuration Manager)
 
@@ -28,7 +27,7 @@ ms.locfileid: "65488196"
   
 ## <a name="server-configuration"></a>“服务器配置”  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |**Internet Information Services**|显示在本地计算机上安装的 Internet Information Services (IIS) 的版本。 IIS 7.0 版或更高版本是使用主数据服务配置管理器所必需的。|  
 |**MDS 产品版本。**|显示 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的产品版本。|  

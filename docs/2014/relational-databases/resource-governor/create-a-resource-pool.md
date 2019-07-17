@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211991"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建资源池。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要创建资源池，请使用：**[SQL Server Management Studio](#CreRPProp)， [Transact SQL](#CreRPTSQL)  
+-   **要创建资源池，请使用：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -40,17 +40,17 @@ ms.locfileid: "52753959"
 ##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建资源池  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
   
-2.  右键单击“Resource Governor”，再单击“属性”。  
+2.  右键单击“Resource Governor”  ，再单击“属性”  。  
   
 3.  在 **“资源池”** 网格中，单击空行中的第一列。 此列标记有星号 (*)。  
   
-4.  双击“名称”列中的空单元格。 键入要用于该资源池的名称。  
+4.  双击“名称”  列中的空单元格。 键入要用于该资源池的名称。  
   
 5.  在行中单击或双击要更改的任何其他单元，然后输入新值。  
   
-6.  若要保存更改，请单击 **“确定”**。  
+6.  若要保存更改，请单击 **“确定”** 。  
   
 ##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 创建资源池  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

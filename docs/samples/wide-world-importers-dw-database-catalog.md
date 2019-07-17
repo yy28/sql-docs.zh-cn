@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104288"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ WideWorldImportersDW 中的数据从而镜像 WideWorldImporters 中的数据，
 
 三个架构进行组织不同类型的表。
 
-|架构|Description|
+|架构|描述|
 |-----------------------------|---------------------|
 |维度|维度表。|
 |事实|事实数据表。|  
@@ -48,12 +47,12 @@ WideWorldImportersDW 具有以下维度表。 说明内容包括 WideWorldImport
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|date|包含有关日期，包括财务年度的信息的新表 (基于 11 月 1 日开始财政年)。|
-|Employee|`Application.People` 的用户。|
+|Date|包含有关日期，包括财务年度的信息的新表 (基于 11 月 1 日开始财政年)。|
+|Employee|`Application.People`。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供应商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods` 的用户。|
-|TransactionType|`Application.TransactionTypes` 的用户。|
+|PaymentMethod|`Application.PaymentMethods`。|
+|TransactionType|`Application.TransactionTypes`。|
 
 ### <a name="fact-tables"></a>事实数据表
 

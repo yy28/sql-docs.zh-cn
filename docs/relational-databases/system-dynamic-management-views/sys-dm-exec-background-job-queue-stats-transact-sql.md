@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_background_job_queue_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 27f62ab5-46c4-417e-814d-8d6437034d1c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa06da06ae057839a9d0e6433e57edb1f8a603d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4707c652b8d47505cceba0be76c53eff2824b728
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013515"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263951"
 ---
 # <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013515"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_background_job_queue_stats**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**queue_max_len**|**int**|最大队列长度。|  
 |**enqueued_count**|**int**|成功投递到队列的请求数。|  
@@ -57,7 +56,7 @@ ms.locfileid: "63013515"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="examples"></a>示例  
   

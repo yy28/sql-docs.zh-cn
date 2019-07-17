@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ab12b9a0c042b96803e44c479a68a110a3c560b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee20a77440fd769e813f8335148c2b67a34d7bf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806735"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263962"
 ---
 # <a name="sysdmdbtaskspaceusage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47806735"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_db_task_space_usage**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|会话 ID。|  
 |**request_id**|**int**|会话内的请求 ID。<br /><br /> 请求也称为批，可以包含一个或多个查询。 一个会话可以同时具有多个活动请求。 如果使用并行执行计划，则请求中的每个查询可以启动多个线程（任务）。|  
@@ -51,10 +50,10 @@ ms.locfileid: "47806735"
 |**internal_objects_dealloc_page_count**|**bigint**|此任务为内部对象释放并不再保留的页数。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
  此视图所报告的任何页计数均不包括 IAM 页。  
@@ -92,7 +91,7 @@ ms.locfileid: "47806735"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |dm_db_task_space_usage.request_id|dm_exec_requests.request_id|一对一|  
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|一对一|  

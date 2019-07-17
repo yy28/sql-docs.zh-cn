@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 9943e6f3d43ff1b543a86425b2644ee4c46a105c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081516"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>备注  
  **sp_dropdistributor**用于所有类型的复制。  
   
- 如果在服务器上，存在其他发布服务器或分发对象**sp_dropdistributor**会失败，除非**@no_checks**设置为**1**。  
+ 如果在服务器上，存在其他发布服务器或分发对象**sp_dropdistributor**会失败，除非 **@no_checks** 设置为**1**。  
   
  必须通过执行删除分发数据库之后执行此存储的过程**sp_dropdistributiondb**。  
   
@@ -69,8 +68,8 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="see-also"></a>请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

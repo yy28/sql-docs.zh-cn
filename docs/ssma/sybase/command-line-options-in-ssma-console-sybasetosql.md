@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083477"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 控制台中的命令行选项 (SybaseToSQL)
 Microsoft 为您提供了一套稳健的命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  

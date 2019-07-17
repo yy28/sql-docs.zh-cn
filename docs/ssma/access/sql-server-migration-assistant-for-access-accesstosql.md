@@ -10,12 +10,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9189087be52fbb23e8768dd64f0a63bb9d0fe480
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453512"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266990"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>Access (AccessToSQL) 的 SQL Server 迁移助手
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for Access 是一个工具，用于迁移数据库从[!INCLUDE[msCoName](../../includes/msconame_md.md)]访问到版本 97 到 2010年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 在 Windows 和 Linux （预览版） 上的 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL DB。 适用于 Access 的 SSMA 将转换到访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库对象，这些对象合并的负载[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL，然后再将数据迁移从 Access 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL。  
@@ -24,7 +24,7 @@ ms.locfileid: "63453512"
   
 ## <a name="contents"></a>目录  
   
-|部分|Description|  
+|部分|描述|  
 |-----------|---------------|  
 |[SSMA for Access 中的新增功能](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|列出了对 SSMA 版本的更改。|  
 |[安装用于访问 SQL Server 迁移助手](installing-sql-server-migration-assistant-for-access-accesstosql.md)|列出了安装 SSMA，用于安装和许可 SSMA，以及指向最新版本的过程的先决条件。|  

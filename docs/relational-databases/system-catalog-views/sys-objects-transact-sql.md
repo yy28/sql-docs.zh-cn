@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ca43c379e896072ecebf1c313c9ce9b210d73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47e332d8dfda76bbf2702335b72793c112c15d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102326"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62997863"
 > [!NOTE]  
 >  sys.objects 不显示 DDL 触发器，因为它们不是架构范围内的对象。 所有触发器，DML 和 DDL，都位于[sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)。 sys.triggers 支持对各种触发器应用混合名称范围规则。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|对象名。|  
 |object_id|**int**|对象标识号。 是在数据库中唯一。|  
@@ -163,11 +162,11 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.all_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
+ [sys.all_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
+ [sys.internal_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

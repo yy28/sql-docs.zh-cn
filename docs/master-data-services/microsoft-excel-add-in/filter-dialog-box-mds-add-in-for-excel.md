@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b24ed1096078529e4e46a094737c8b37bf7020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092259"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>“筛选器”对话框（用于 Excel 的 MDS 外接程序）
 
@@ -29,9 +28,9 @@ ms.locfileid: "65477170"
 ## <a name="columns"></a>“列”  
  使用“列”  部分可以确定要在 Excel 中显示的属性（列）。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
-|属性类型|属性类型描述您想要使用的成员的类型。 在大多数情况下，类型为 **“叶”**。 有关成员类型的详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。|  
+|属性类型|属性类型描述您想要使用的成员的类型。 在大多数情况下，类型为 **“叶”** 。 有关成员类型的详细信息，请参阅[成员 (Master Data Services)](../../master-data-services/members-master-data-services.md)。|  
 |显式层次结构|如果您选择 **“已合并”** 属性类型，请选择已合并成员所属的层次结构。 有关详细信息，请参阅[显式层次结构 (Master Data Services)](../../master-data-services/explicit-hierarchies-master-data-services.md)。|  
 |属性组|属性组是对属性子集进行分组的方式。 如果您想要显示可用属性的子集，请选择属性组。 有关属性组的详细信息，请参阅[属性组 (Master Data Services)](../../master-data-services/attribute-groups-master-data-services.md)。|  
 |全选|单击此选项可选择列表中显示的所有属性。|  
@@ -41,9 +40,9 @@ ms.locfileid: "65477170"
 ## <a name="rows"></a>“行”  
  使用“行”  部分可以确定要在 Excel 中显示的成员（行）。 通过定义要显示的行的筛选条件可以确定要显示的行。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
-|特性|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意：您可以通过不打算在工作表中显示的属性进行筛选。|  
+|特性|显示筛选所依据的属性。 如果未列出任何属性，这是因为尚未添加任何属性。<br /><br /> 注意:您可以通过不打算在工作表中显示的属性进行筛选。|  
 |运算符|显示对应于所选属性的类型的运算符。 有关详细信息，请参阅 [Filter 运算符 (Master Data Services)](../../master-data-services/filter-operators-master-data-services.md)。|  
 |条件|筛选要依据的条件。|  
 |更新摘要|处理大型数据集时，单击该选项可使用要加载的数据的详细信息来更新 **“摘要”** 部分。|  
@@ -54,10 +53,10 @@ ms.locfileid: "65477170"
 ## <a name="summary"></a>“摘要”  
  使用 **“摘要”** 部分可以在加载数据之前先查看有关要加载的数据的详细信息。  
   
-|控件名称|Description|  
+|控件名称|描述|  
 |------------------|-----------------|  
 |“模型”|模型的名称。|  
-|版本|版本的名称。|  
+|Version|版本的名称。|  
 |实体|实体的名称。|  
 |“行”|基于在 **“行”** 部分中应用的筛选器要加载到 Excel 中的行数。|  
 |“列”|基于在 **“列”** 部分中所选的属性要加载到 Excel 中的列数。|  

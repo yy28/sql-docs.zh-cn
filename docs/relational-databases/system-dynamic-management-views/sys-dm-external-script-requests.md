@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54c572acac645146e3db18195a0dbe5b794effdc
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 7cc6b6b42f7e9fa743724a414aa5b53435d7b0ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086836"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +34,14 @@ ms.locfileid: "50743185"
 >  
 > 仅当已安装并启用支持外部脚本执行的功能，此动态管理视图 (DMV) 是可用。 有关详细信息，请参阅[SQL Server 2016 中的 R Services](../../advanced-analytics/r/sql-server-r-services.md)并[中的机器学习服务 （R、 Python） SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 收到的这对应于的进程 ID [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|表示支持的脚本语言的关键字。 |  
 |degree_of_parallelism|**int**|数字，指示已创建的并行进程数。 此值可能与请求的并行进程数不同。|  
 |external_user_name|**nvarchar**|在其下执行脚本的 Windows 工作线程帐户。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要针对服务器的 VIEW SERVER STATE 权限。  
   
 > [!NOTE]
@@ -81,7 +80,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

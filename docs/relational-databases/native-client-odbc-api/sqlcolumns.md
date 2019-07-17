@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Microsoft Docs
+title: SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 717dbb55691529e22f333a639f2d835d60431b98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113550"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,10 +38,10 @@ ms.locfileid: "63014599"
   
  下表列出了结果集返回的列：  
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 有关**varchar （max)** 数据类型。|  
-|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，并**nvarchar （max)** 数据类型。|  
+|TYPE_NAME|返回"varchar"、"varbinary"或"nvarchar" **varchar （max)** ， **varbinary （max)** ，并**nvarchar （max)** 数据类型。|  
 |COLUMN_SIZE|返回为 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示列的大小没有限制。|  
 |BUFFER_LENGTH|返回为 SQL_SS_LENGTH_UNLIMITED **varchar （max)** 数据类型，该值指示缓冲区的大小没有限制。|  
 |SQL_DATA_TYPE|返回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 有关**varchar （max)** 数据类型。|  
@@ -81,10 +80,10 @@ ms.locfileid: "63014599"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns 对稀疏列的支持  
  两个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定列已添加到针对 SQLColumns 的结果集：  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
-|SS_IS_COLUMN_SET|**Smallint**|如果该列为**column_set**列，则为 SQL_TRUE; 否则为 SQL_FALSE。|  
+|SS_IS_SPARSE|**smallint**|如果该列为稀疏列，则为 SQL_TRUE；否则为 SQL_FALSE。|  
+|SS_IS_COLUMN_SET|**smallint**|如果该列为**column_set**列，则为 SQL_TRUE; 否则为 SQL_FALSE。|  
   
  为了符合 ODBC 规范，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 显示已添加到的所有驱动程序特定列之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，和通过 ODBC 自身委托的所有列之后。  
   

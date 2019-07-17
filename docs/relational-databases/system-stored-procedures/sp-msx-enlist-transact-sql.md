@@ -1,5 +1,5 @@
 ---
-title: sp_msx_enlist (Transact-SQL) | Microsoft Docs
+title: sp_msx_enlist (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ba29ca0d4522367e22273b4f07720f4e563ef6f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108033"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="arguments"></a>参数  
 `[ @msx_server_name = ] 'msx_server'` 多服务器管理 （主） 服务器的名称。 *msx_server*是**sysname**，无默认值。  
   
-`[ @location = ] 'location'` 要添加的目标服务器的位置。 *位置*是**nvarchar(100)**，默认值为 NULL。  
+`[ @location = ] 'location'` 要添加的目标服务器的位置。 *位置*是**nvarchar(100)** ，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="permissions"></a>权限  
  默认情况下授予 **sysadmin** 固定服务器角色的成员执行此过程的权限。  

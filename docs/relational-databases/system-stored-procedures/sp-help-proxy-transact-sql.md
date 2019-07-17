@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (Transact-SQL) | Microsoft Docs
+title: sp_help_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085280"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_help_proxy
   
  下表列出了每个子系统的值。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 脚本|  
 |CmdExec|操作系统 (CmdExec)|  
@@ -66,17 +65,17 @@ sp_help_proxy
 |Dts|SSIS 包执行|  
 |PowerShell|PowerShell 脚本|  
   
-`[ @name = ] 'name'` 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为其列出代理的登录名。 名称是**nvarchar(256)**，默认值为 NULL。 当*名称*指定，则*subsystem_name*还必须指定。  
+`[ @name = ] 'name'` 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为其列出代理的登录名。 名称是**nvarchar(256)** ，默认值为 NULL。 当*名称*指定，则*subsystem_name*还必须指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|代理服务器标识号。|  
-|**名称**|**sysname**|代理服务器的名称。|  
+|**name**|**sysname**|代理服务器的名称。|  
 |**credential_identity**|**sysname**|与代理关联的凭据的 Microsoft Windows 域名和用户名。|  
 |**enabled**|**tinyint**|是否启用了此代理。 { **0** = 未启用， **1** = 启用}|  
 |**description**|**nvarchar(1024)**|对此代理的说明。|  

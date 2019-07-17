@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d309a1d0bbdf21c94458771e38aa67fd3eb3fe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102994"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。  
@@ -106,7 +105,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 **Command**  
   
 关闭项目  
-                  解码的字符：关闭迁移项目。  
+                  :关闭迁移项目。  
   
 **脚本**  
   
@@ -118,7 +117,7 @@ Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命�
 **Command**  
   
 关闭项目  
-                  解码的字符：关闭迁移项目。  
+                  :关闭迁移项目。  
   
 **脚本**  
   
@@ -439,7 +438,7 @@ migrate-data
   
 **Command**  
   
-map-schema  
+映射架构  
   
 源数据库到目标架构的架构映射。  
   
@@ -467,7 +466,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+同步目标  
   
 1.  将目标对象与目标数据库同步。  
   
@@ -487,7 +486,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 4.  `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -550,7 +549,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   脚本失败  
   
 4.  `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**SourceDBRefreshReport.XML**创建。  
   

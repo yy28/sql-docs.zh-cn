@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4cd3b8f186f1ade85f4ed4533b0549bcd449a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134952"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 集成体系结构 - 性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ ms.locfileid: "51671986"
  当 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标必须遍历更容易表示为数组的数据时，使用托管代码可以显著提高性能。  
   
 ### <a name="string-data"></a>字符串数据  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符数据，例如**varchar**，可以是在托管函数中 SqlString 或 SqlChars 类型。 SqlString 变量将整个值的实例创建到内存中。 SqlChars 变量提供可用于获得更好性能和可扩展性的流式接口，而无需将整个值的实例创建到内存中。 这对于大型对象 (LOB) 数据尤为重要。 此外，返回的流式接口访问服务器 XML 数据**SqlXml.CreateReader()**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符数据，例如**varchar**，可以是在托管函数中 SqlString 或 SqlChars 类型。 SqlString 变量将整个值的实例创建到内存中。 SqlChars 变量提供可用于获得更好性能和可扩展性的流式接口，而无需将整个值的实例创建到内存中。 这对于大型对象 (LOB) 数据尤为重要。 此外，返回的流式接口访问服务器 XML 数据**SqlXml.CreateReader()** 。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 与扩展存储过程  
- 允许托管过程向客户端回发结果集的 Microsoft.SqlServer.Server 应用程序编程接口 (API) 的性能优于扩展存储过程使用的开放式数据服务 (ODS) API。 此外，System.Data.SqlServer Api 支持数据类型，如**xml**， **varchar （max)**， **nvarchar （max)**，和**varbinary （max)** 中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而不具有已 ODS Api 扩展为支持新的数据类型。  
+ 允许托管过程向客户端回发结果集的 Microsoft.SqlServer.Server 应用程序编程接口 (API) 的性能优于扩展存储过程使用的开放式数据服务 (ODS) API。 此外，System.Data.SqlServer Api 支持数据类型，如**xml**， **varchar （max)** ， **nvarchar （max)** ，和**varbinary （max)** 中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而不具有已 ODS Api 扩展为支持新的数据类型。  
   
  通过托管代码，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对内存、线程和同步等资源的使用。 这是因为公开这些资源的托管 API 是针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源管理器实现的。 相反，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法查看或控制扩展存储过程的资源使用情况。 例如，如果扩展存储过程占用过多 CPU 或内存资源，则无法通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测或控制此种情况。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用托管代码检测到给定线程已有很长一段时间未生成结果，并强制该任务生成以便安排其他工作。 因此，使用托管代码可以提高可扩展性，并改善系统资源使用情况。  
   

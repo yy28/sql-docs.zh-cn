@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111194"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程序员&#39;的参考
 *ODBC 程序员参考*包含以下各节。  
@@ -50,9 +49,9 @@ ms.locfileid: "63273042"
   
 |格式|用于|  
 |------------|--------------|  
-|SELECT * FROM|大写的字母指示 SQL 语句、 宏名称和操作系统命令级别使用的术语。|  
+|选择 * 从|大写的字母指示 SQL 语句、 宏名称和操作系统命令级别使用的术语。|  
 |`RETCODE SQLFetch(hdbc)`|Monospace 字体用于示例命令行和程序代码。|  
-|argument|斜体字表明以编程方式参数，用户或应用程序必须提供，或 word 强调的信息。|  
+|argument |斜体字表明以编程方式参数，用户或应用程序必须提供，或 word 强调的信息。|  
 |**SQLEndTran**|粗体表示必须按所示，其中包括函数名称的原样键入的语法。|  
 |&#124;|竖线用于分隔两个互斥选项的语法行中。|  
 |...|省略号表示自变量可以重复多次。|  

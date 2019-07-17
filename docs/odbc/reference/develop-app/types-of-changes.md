@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca1b0fc2f7a1a74e1b9ab9a85baba945e4edf491
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087808"
 ---
 # <a name="types-of-changes"></a>更改的类型
 ODBC 中所做的更改的三种类型*3.x* （和 ODBC 的任何版本）。 其中每项功能以不同的方式会影响后向兼容性，并且以不同方式处理。 这些更改以下表所述。  

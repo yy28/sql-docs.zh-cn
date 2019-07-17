@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55f5597af15a264d85cd31175d570cc33ee47f63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081304"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_id = ] job_id` 是推送订阅的分发代理的作业 ID。 *job_id*是**varbinary(16)**，无默认值。 若要查找的分发作业 ID，请运行**sp_helpsubscription**或**sp_helppullsubscription**。  
+`[ @job_id = ] job_id` 是推送订阅的分发代理的作业 ID。 *job_id*是**varbinary(16)** ，无默认值。 若要查找的分发作业 ID，请运行**sp_helpsubscription**或**sp_helppullsubscription**。  
   
 `[ @dts_package_name = ] 'dts_package_name'` 指定 DTS 包的名称。 *dts_package_name* 是 **sysname** ，默认值为 NULL。 例如，若要指定包名为**DTSPub_Package**，则会指定`@dts_package_name = N'DTSPub_Package'`。  
   
@@ -50,7 +49,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 > [!NOTE]  
 >  DTS 包必须具有密码。  
   
-`[ @dts_package_location = ] 'dts_package_location'` 指定包位置。 *dts_package_location*是**nvarchar(12)**，默认值为 NULL，这指定包位置保持不变。 包的位置可以更改为**分发服务器上**或**订阅服务器**。  
+`[ @dts_package_location = ] 'dts_package_location'` 指定包位置。 *dts_package_location*是**nvarchar(12)** ，默认值为 NULL，这指定包位置保持不变。 包的位置可以更改为**分发服务器上**或**订阅服务器**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

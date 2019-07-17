@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8528ecb2f34d3f0ef7120c7047865ab5f6c1a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 597d1022fa6946e0ae768cb9600a3f4534c67a25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080694"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>支持的并发模型（Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序支持*只读并发*。 你的应用程序可以调用[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY SQL_CONCURRENCY 选项。  

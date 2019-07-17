@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff8fb876ace87e26522cc19ffdc97359a9216844
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 0008599ad16db3c7200c824458f0bbae82580750
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103412"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每个表格对象（例如，表、视图或表值函数）的索引或堆都包含一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|该索引所属对象的 ID。|  
-|**名称**|**sysname**|索引的名称。 **名称**是只在对象中唯一的。<br /><br /> NULL = 堆|  
+|**name**|**sysname**|索引的名称。 **名称**是只在对象中唯一的。<br /><br /> NULL = 堆|  
 |**index_id**|**int**|索引的 ID。 **index_id**是只在对象中唯一的。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引|  
 |**type**|**tinyint**|索引的类型：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集<br /><br /> 2 = 非聚集<br /><br /> 3 = XML<br /><br /> 4 = 空间<br /><br /> 5 = 聚集列存储索引。 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 6 = 非聚集列存储索引。 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 7 = 非聚集哈希索引。 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**type_desc**|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 聚集列存储-**适用范围**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 非聚集列存储-**适用范围**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 非聚集哈希：仅在内存优化表支持非聚集哈希索引。 sys.hash_indexes 视图显示当前哈希索引和哈希属性。 有关详细信息，请参阅[sys.hash_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)。 **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
@@ -92,7 +91,7 @@ GO
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.xml_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys.key_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

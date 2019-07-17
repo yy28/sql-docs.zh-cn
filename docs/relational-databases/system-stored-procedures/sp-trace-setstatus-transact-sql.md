@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095935"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  下表列出了可以指定的状态。  
   
-|“登录属性”|Description|  
+|“登录属性”|描述|  
 |------------|-----------------|  
 |**0**|停止指定的跟踪。|  
 |**1**|启动指定的跟踪。|  
@@ -61,7 +60,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
   
-|返回代码|Description|  
+|返回代码|描述|  
 |-----------------|-----------------|  
 |**0**|没有错误。|  
 |**1**|未知错误。|  
@@ -82,7 +81,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="see-also"></a>请参阅  
  [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  

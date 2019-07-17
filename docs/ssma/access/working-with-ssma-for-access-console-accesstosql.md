@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299031"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259785"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access 控制台 (AccessToSQL)
 现可通过在命令行控制台应用程序访问 Microsoft SQL Server Migration Assistant (SSMA) 进行访问。 脚本文件窗体应用程序以执行命令的输入。 作为控制台应用程序，SSMA 使脚本级别进行连接，可减少迁移周期，并可缩放的迁移工作。  
@@ -38,6 +38,6 @@ ms.locfileid: "63299031"
 |[生成报告&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)|列出的命令来生成报告。|  
 |[故障排除&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|提供了关于解决迁移问题的信息摘要。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [开始使用 SSMA for Access 控制台](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd96e467ce9f85c3ff62bb42b483f20fbae56204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1f3892929e06cbca39b9d96936860cd9f100f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086047"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC 中的事务
 ODBC 中的事务按连接级别; 完成也就是说，在应用程序完成事务，它都将提交或回滚通过该连接上的所有语句句柄做的所有工作。  

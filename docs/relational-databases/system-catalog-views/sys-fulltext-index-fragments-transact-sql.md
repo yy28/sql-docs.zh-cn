@@ -22,14 +22,13 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 818457ae809b6dec653d6d546fc36b75a27fbf6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133821"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64945554"
   全文索引使用内部表称为*全文索引片段*来存储倒排的索引数据。 可以使用此视图来查询有关这些片断的元数据。 在此视图中，每个全文索引片断在每个包含全文索引的表中各占一行。  
  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |table_id|**int**|包含全文索引片断的表的对象 ID。|  
 |fragment_object_id|**int**|与片断关联的内部表的对象 ID。|  

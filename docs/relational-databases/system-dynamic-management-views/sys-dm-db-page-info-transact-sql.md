@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_page_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,12 +20,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833006"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263823"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -104,7 +104,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |prev_page_page_id |INT |前一页的页 ID |
 |next_page_file_id |SMALLINT |下一步的页文件 ID |
 |next_page_page_id |INT |接下来页上的页 ID |
-|min_len |SMALLINT |固定的大小的行的长度 |
+|管道 |SMALLINT |固定的大小的行的长度 |
 |lsn |nvarchar(64) |日志序列号 / 时间戳 |
 |header_version |INT |页标头版本 |
 

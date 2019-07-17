@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f84cd1cbb9a49f0c13a93fdff721f430983088ca
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 0a7f70f5cd56867add98150d471d61cbc70faad0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111924"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
@@ -47,13 +46,13 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 已插入跟踪令牌的发布的名称。 数据类型是**sysname**。 此参数是必需的。
 
 `[ @tracer_id= ] tracer_id`  
-要删除的跟踪令牌的 ID。 数据类型是**int**。默认值为 null。 如果*null*，会删除属于该发布的所有跟踪令牌。
+要删除的跟踪令牌的 ID。 数据类型是**int**。默认值为 null  。 如果*null*，会删除属于该发布的所有跟踪令牌。
 
 `[ @cutoff_date= ] cutoff_date`  
-删除此日期之前插入到发布的跟踪令牌。 数据类型是**datetime**。 默认值为 null。
+删除此日期之前插入到发布的跟踪令牌。 数据类型是**datetime**。 默认值为 null  。
 
 `[ @publisher= ] 'publisher'`  
-发布服务器的名称。 数据类型是**sysname**。 默认值为 null。
+发布服务器的名称。 数据类型是**sysname**。 默认值为 null  。
 
 > [!NOTE]
 > 应仅指定此参数为非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器或从分发服务器上执行存储的过程时。

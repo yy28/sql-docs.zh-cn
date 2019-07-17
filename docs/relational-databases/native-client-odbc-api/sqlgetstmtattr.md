@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1a6960eb368564c43556b59033ac24a878dd10c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61a82de1f7d412cbf78537a2c94546724b141102
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131422"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63014371"
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 属性指示 NOCOUNT 的当前设置选项，哪些控件是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]报告的语句所影响的行时[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)调用。 *ValuePtr*的值为类型为 SQLLEN。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT 为 OFF。 SQLRowCount 返回受影响行数。|  
 |SQL_NC_ON|NOCOUNT 为 ON。 SQLRowCount 将不返回受影响的行数和返回的值为 0。|  

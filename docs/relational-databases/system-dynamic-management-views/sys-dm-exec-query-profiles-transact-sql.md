@@ -20,12 +20,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5ada5c47d49b801a9dba1a70f22754096f4b27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 2d13e7b3e2cac16bed40752f4452ba558c982c41
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135172"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255431"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68135172"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
    
 ## <a name="examples"></a>示例  
  步骤 1：登录到你打算运行将使用分析的查询的会话`sys.dm_exec_query_profiles`。 若要配置查询以分析使用`SET STATISTICS PROFILE ON`。 在同一会话中运行你的查询。  

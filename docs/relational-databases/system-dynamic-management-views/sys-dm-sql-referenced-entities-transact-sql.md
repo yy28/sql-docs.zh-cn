@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090676"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -69,16 +68,16 @@ sys.dm_sql_referenced_entities (
  [ *schema_name*。 ] *referencing_entity_name*  
  是引用实体的名称。 *schema_name*引用类为 OBJECT 时是必需的。  
   
- *schema_name.referencing_entity_name* is **nvarchar(517)** .  
+ *schema_name.referencing_entity_name*是**nvarchar(517)** 。  
   
- *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
+ *< Referencing_class >* :: = {对象 |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER}  
  指定的引用实体的类。 每个语句只能指定一个类。  
   
- *<referencing_class>* is **nvarchar(60)** .  
+ *< referencing_class >* 是**nvarchar(60)** 。  
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|引用实体为列时的列 ID；否则为 0。 不可为 null。|  
 |referenced_server_name|**sysname**|被引用的实体的服务器的名称。<br /><br /> 此列是为通过指定由四个部分组成的有效名称所生成的跨服务器依赖关系填充的。 有关多部分名称的信息，请参阅[TRANSACT-SQL 语法约定&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 对于非绑定到架构的依赖关系，如果引用实体时没有指定由四个部分组成的名称，此列为 NULL。<br /><br /> 对于绑定到架构的实体为 NULL，因为它们必须在同一数据库中，因此可以仅使用定义两个部分 (*schema.object*) 名称。|  

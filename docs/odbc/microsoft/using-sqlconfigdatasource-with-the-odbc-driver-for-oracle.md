@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088036"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>配合使用 SQLConfigDatasource 和 Oracle ODBC 驱动程序
 > [!IMPORTANT]  
@@ -33,12 +32,12 @@ ms.locfileid: "63259339"
   
  下表中*A/N*意味着任何有效的字母数字字符串最多的最大长度。 *最大 Len* （最大长度） 是接受的设置，包括字符串终止符字符的最大允许字符串长度。  
   
-|设置|最大长度|默认值|有效值|Description|  
+|设置|最大长度|默认值|有效值|描述|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65535|1000|最小的提取缓冲区大小最多 65535 字节|  
 |CatalogCap|2|1|0 或 1|如果为 1，nonquoted 的标识符将转换为大写的目录中的函数。|  
 |ConnectString|128|""|A/N|连接字符串。 指定服务器名称使用 Msorcl10.dll 驱动程序的所需的方法。|  
-|Description|256|""|A/N|说明。|  
+|描述|256|""|A/N|说明。|  
 |DSN|33|""|A/N|数据源名称。|  
 |GuessTheColDef|4|0|A/N|返回没有 Oracle 定义的小数位的列的非零值。|  
 |NumberFloat|2|""|0 或 1|如果为 0，FLOAT 列被视为 SQL_FLOAT。 如果为 1，FLOAT 列被视为 SQL_DOUBLE。|  

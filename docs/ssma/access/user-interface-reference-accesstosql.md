@@ -13,19 +13,19 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299429"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266965"
 ---
 # <a name="user-interface-reference-accesstosql"></a>用户界面参考 (AccessToSQL)
 本部分包括帮助主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) 进行访问。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |---------|---------------|  
 |[高级对象选择&#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|使用**高级对象选择**对话框可以通过使用筛选器条件来查找数据库对象，然后选择或清除这些对象。|  
 |[评估报告&#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|使用**评估报告**对话框来分析访问数据库对象的转换以及估算迁移将需要多长时间。|  
@@ -50,7 +50,7 @@ ms.locfileid: "63299429"
 |[项目设置 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|使用的 SQL Azure 页面**项目设置**对话框中指定的数据库后缀和检测信号超时间隔。|  
 |[保存元数据&#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|**保存元数据**保存缺少元数据的项目会显示的对话框。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [开始使用用于访问 SQL Server 迁移助手&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

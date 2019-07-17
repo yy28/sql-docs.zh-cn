@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38ef611dd7dd181b164bd0eec459d68c49c6b5df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29974fc7a60f675dc9921f527fd8348beb4f2134
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120075"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="see-also"></a>请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [保护分发服务器](../../relational-databases/replication/security/secure-the-distributor.md)   
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

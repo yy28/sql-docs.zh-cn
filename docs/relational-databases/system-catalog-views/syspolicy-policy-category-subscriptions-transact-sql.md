@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 845b665c108c2d91ef5876667e71a5c883ec8e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 304e904ab95e4be58ba2a373bd6ed9c11131049f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094887"
 ---
 # <a name="syspolicypolicycategorysubscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中每个基于策略的管理订阅在表中各占一行。 每行描述目标和策略的类别对。 下表介绍了 syspolicy_policy_group_subscriptions 视图中的列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |policy_category_subscription_id|**int**|此记录的标识符。|  
 |target_type|**sysname**|作为此订阅目标的数据库对象的类型。|  
@@ -40,7 +39,7 @@ ms.locfileid: "47735001"
 ## <a name="remarks"></a>备注  
  此视图显示订阅了策略类别的目标。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ## <a name="see-also"></a>请参阅  

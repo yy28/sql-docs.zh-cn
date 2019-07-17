@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 935b76922ec40b8bdca28a0766e4c5b7c3d8754a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089242"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "47830025"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|列或过程参数的名称。|  
+|**name**|**sysname**|列或过程参数的名称。|  
 |**id**|**int**|此列所属表的对象 ID，或者与此参数关联的存储过程的 ID。|  
 |**xtype**|**tinyint**|物理存储类型**sys.types**。|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|用户定义的扩展的数据类型的 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
-|**长度**|**smallint**|从最大物理存储长度**sys**。**类型**。|  
+|**length**|**smallint**|从最大物理存储长度**sys**。**类型**。|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**列 id**|**smallint**|列 ID 或参数 ID。|  
@@ -60,7 +59,7 @@ ms.locfileid: "47830025"
 |**offset**|**smallint**|此列所在行的偏移量。|  
 |**collationid**|**int**|列的排序规则的 ID。 对于非字符列，此值为 NULL。|  
 |**status**|**tinyint**|用于说明列或参数的属性的位图：<br /><br /> 0x08 = 列允许空值。<br /><br /> 0x10 = ANSI 填充生效时**varchar**或**varbinary**已将列添加。 尾随空格会保留，以便**varchar**并保留尾部零**varbinary**列。<br /><br /> 0x40 = 参数为 OUTPUT 参数。<br /><br /> 0x80 = 列为标识列。|  
-|**类型**|**tinyint**|物理存储类型**sys**。**类型**。|  
+|**type**|**tinyint**|物理存储类型**sys**。**类型**。|  
 |**usertype**|**smallint**|从用户定义数据类型的 ID **sys.types**。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|此列的精度级别。<br /><br /> -1 = **xml**或大值类型。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab369b619bc0ad378292cf71573ab973dc056c2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101432"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "62628074"
  *is_full_path*  
  整数表达式，指定是返回相对路径还是绝对路径。 *is_full_path*可以具有以下值之一：  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**0**|返回数据库级目录内的相对路径。<br /><br /> 此为默认值。|  
 |**1**|返回以 `\\computer_name` 开头的完整 UNC 路径。|  
@@ -54,7 +53,7 @@ ms.locfileid: "62628074"
  *@option*  
  一个整数表达式，定义路径的服务器组件应如何进行格式化。 *@option* 可以具有以下值之一：  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**0**|返回转换为 NetBIOS 格式的服务器名称，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 这是默认值。|  
 |**1**|返回未经转换的服务器名称，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  

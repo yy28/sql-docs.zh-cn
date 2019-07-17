@@ -19,21 +19,20 @@ ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f7756d13f3a844d3cb8fb146a691698b69ba280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115053"
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为每个 XML 架构集合返回一行。 XML 架构集合是一组命名的 XSD 定义。 XML 架构集合自身包含在关系架构中，由架构范围内的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 名称标识。 下列元组是唯一的：xml_collection_id、以及 schema_id 和 name。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |xml_collection_id|**int**|XML 架构集合的 ID。 在数据库中是唯一的。|  
 |schema_id|**int**|包含此 XML 架构集合的关系架构的 ID。|  

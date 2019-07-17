@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef93c354333bd4a99fedc83cb950021367a6cc2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c27f2efcfc15cc1ff9d53f735c08fad922f9466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124280"
 ---
 # <a name="spfulltextdatabase-transact-sql"></a>sp_fulltext_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @action = ] 'action'` 是要执行的操作。 **操作**是**varchar （20)**，可以是下列值之一。  
+`[ @action = ] 'action'` 是要执行的操作。 **操作**是**varchar （20)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**enable**|支持它仅仅是为了保持向后兼容。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中对全文目录无效。|  
 |**disable**|支持它仅仅是为了保持向后兼容。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中对全文目录无效。|  
@@ -55,7 +54,7 @@ sp_fulltext_database [@action=] 'action'
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，无法禁用全文索引。 禁用全文索引不会删除中的行**sysfulltextcatalogs**并不表示已启用的全文的表不再标记为全文索引。 所有的全文元数据定义仍然在系统表中。  

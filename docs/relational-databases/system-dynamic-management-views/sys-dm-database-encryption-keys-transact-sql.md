@@ -20,12 +20,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04f40d4d788e391026bd981f8be7218062282c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c66fbc1cdf98d45a7440d2def9cb3fd1be5635a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005064"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255750"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68005064"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="see-also"></a>请参阅  
 

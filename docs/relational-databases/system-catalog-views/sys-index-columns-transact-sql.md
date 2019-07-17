@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122671"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每一部分的列中对应一行**sys.indexes**索引或未排序的表 （堆）。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|在定义索引的对象 ID。|  
 |**index_id**|**int**|定义了列的索引的 ID。|  
 |**index_column_id**|**int**|索引列的 ID。 **index_column_id**仅中是唯一**index_id**。|  
 |**column_id**|**int**|中列的 ID **object_id**。<br /><br /> 0 = 非聚集索引中的行标识符 (RID)。<br /><br /> **column_id**仅中是唯一**object_id**。|  
-|**key_ordinal**|**tinyint**|键列集内的序数（从 1 开始）。<br /><br /> 0 = 不是键列，或者是 XML 索引、列存储索引或空间索引。<br /><br /> 注意：XML 索引或空间索引不能为键的基础列不是可比较，因为这意味着它们的值不能进行排序。|  
+|**key_ordinal**|**tinyint**|键列集内的序数（从 1 开始）。<br /><br /> 0 = 不是键列，或者是 XML 索引、列存储索引或空间索引。<br /><br /> 注意:XML 索引或空间索引不能为键的基础列不是可比较，因为这意味着它们的值不能进行排序。|  
 |**partition_ordinal**|**tinyint**|分区列集内的序数（从 1 开始）。 聚集列存储索引可以具有最多 1 个分区列。<br /><br /> 0 = 非分区列。|  
 |**is_descending_key**|**bit**|1 = 索引键列采用降序排序。<br /><br /> 0 = 索引键列的排序方向为升序，或者列是列存储或哈希索引的一部分。|  
 |**is_included_column**|**bit**|1 = 列是使用 CREATE INDEX INCLUDE 子句添加到索引的非键列，或者列是列存储索引的一部分。<br /><br /> 0 = 列不是包含列。<br /><br /> 隐式添加，因为它们是聚集键的一部分的列不列在**sys.index_columns**。<br /><br /> 由于是分区列而隐式添加的列作为 0 返回。| 

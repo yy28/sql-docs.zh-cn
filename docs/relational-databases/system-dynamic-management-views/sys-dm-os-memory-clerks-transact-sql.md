@@ -20,12 +20,12 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d03c1f06133257543a20ba70edce801faba0ae92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89493294fe08f82b3a61bb8eab7a99e7a941ed28
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899934"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265779"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67899934"
 ## <a name="permissions"></a>权限 
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器由一个三层的层次结构组成。 该层次结构的底层为内存节点。 中间层由内存分配器、内存缓存和内存池组成。 顶层由内存对象组成。 这些对象通常用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中分配内存。  

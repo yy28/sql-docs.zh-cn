@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f5b813a2e411d1b8b4dcf1069f656ed844f4e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131215"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "63014258"
 ## <a name="diagnostics"></a>诊断  
  还有一个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData 的本机客户端特定 SQLSTATE:  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |22026|字符串数据，长度不匹配|如果以字节为单位发送数据的长度已指定应用程序，例如，使用 SQL_LEN_DATA_AT_EXEC (*n*) 其中*n*大于 0，由应用程序通过给定的字节总数SQLPutData 必须匹配指定的长度。|  
   

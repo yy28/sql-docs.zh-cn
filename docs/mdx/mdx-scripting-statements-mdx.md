@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a79b52295ede211dcf7ceb6e3f23ab9e742b31d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4799cf21da7acec0e909f302a68a95b0eb23e2d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116230"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 脚本编写语句 (MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "63267921"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[CALCULATE 语句 (MDX)](../mdx/mdx-scripting-calculate.md)|计算子多维数据集，还可以确定子多维数据集中所包含维度的求解次序。|  
 |[CASE 语句 (MDX)](../mdx/case-statement-mdx.md)|允许您有条件地从多次比较中返回特定值。|  

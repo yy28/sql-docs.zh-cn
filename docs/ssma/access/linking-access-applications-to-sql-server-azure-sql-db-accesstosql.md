@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 115aa0db8e8d6f2fdc35718ccb60f1d0ed06b5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760137"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259903"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>链接到 SQL Server-Azure SQL DB (AccessToSQL) 访问应用程序
 如果想要使用现有的 Access 应用程序，用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以将原始 Access 表链接到已迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表。 链接会修改你的 Access 数据库，以便你的查询、 窗体、 报表和数据访问页使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库而不是你的 Access 数据库中的数据。  
@@ -153,6 +153,6 @@ Recordset.LastModified
   
 **解决方法：** 可以定义只返回这些行与支持的数据类型的访问查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

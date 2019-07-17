@@ -17,21 +17,20 @@ helpviewer_keywords:
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079424"
 ---
-# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact-SQL)
+# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   为每个数据库返回一行作用域数据库中的凭据。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|数据库的名称范围的凭据。 是在数据库中唯一的。|  
 |credential_id|**int**|数据库范围凭据的 ID。 是在数据库中唯一的。|  

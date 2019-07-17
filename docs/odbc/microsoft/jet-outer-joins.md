@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f72e782a80ae92a9f0ca920c06e3576146bf597e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ab2c4f7e66338c792fb62f9192cf312c5d19e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63262297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085482"
 ---
 # <a name="jet-outer-joins"></a>Jet：外部联接
 SELECT 语句可以包含 OUTER JOIN 子句的列表。 支持嵌套外部联接。 有关外部联接的详细信息，请参阅*Microsoft Jet 数据库引擎程序员指南*。

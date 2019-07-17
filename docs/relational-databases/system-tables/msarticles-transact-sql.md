@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d04b79bb2d7cb70e2e36261547e462e1a7f2742
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132100"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSarticles**表包含个发布服务器复制每个项目占一行。 此表存储在分发数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  

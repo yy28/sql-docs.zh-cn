@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013498"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263798"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013498"
 > [!NOTE]
 > 若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sys.dm_pdw_exec_connections &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|标识与此连接关联的会话。 可以为 Null。|  
 |most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 （SOAP 连接可以重复使用由另一个会话。）可以为 Null。|  
@@ -65,7 +64,7 @@ ms.locfileid: "63013498"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="physical-joins"></a>物理联接  
  ![Sys.dm_exec_connections 的联接](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的联接")  

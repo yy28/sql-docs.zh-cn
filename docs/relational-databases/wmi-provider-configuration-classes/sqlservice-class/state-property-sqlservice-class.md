@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c93beed93b14639266f9b68e8c4515259d31e049
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 06193b774484afd6e6f7f47f286498c0698ab7c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094728"
 ---
 # <a name="state-property-sqlservice-class"></a>State 属性（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51669276"
 object.State [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

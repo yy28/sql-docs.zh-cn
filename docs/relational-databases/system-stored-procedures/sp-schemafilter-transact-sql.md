@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126395"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +39,24 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publisher** =] **'***发布服务器***’**  
+ [ **@publisher** =] **'***发布服务器***’**  
  是的名称的非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，无默认值。  
   
- [**@schema** =] **'***架构***’**  
+ [ **@schema** =] **'***架构***’**  
  是架构的名称。 *架构*是**sysname**，默认值为 NULL。  
   
- [**@operation** =] **'***操作***’**  
- 要对此架构采取的操作。 *操作*是**nvarchar(4)**，可以是下列值之一。  
+ [ **@operation** =] **'***操作***’**  
+ 要对此架构采取的操作。 *操作*是**nvarchar(4)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**add**|将指定架构添加到不适合发布的架构列表中。|  
-|**删除**|从不适合发布的架构列表中删除指定架构。|  
+|**drop**|从不适合发布的架构列表中删除指定架构。|  
 |**帮助**|返回不适合发布的架构列表。|  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**schemaname**|**sysname**|不适合发布的架构名称。|  
   

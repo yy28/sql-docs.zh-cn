@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759925"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259925"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>开始使用 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 进行访问，可快速将转换到访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 对象，将上传到生成的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，并将数据迁移从 Access 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 如果有必要，你还可以链接到访问表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 的表，以便可以继续使用现有访问前端应用程序与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
@@ -67,7 +67,7 @@ ms.locfileid: "62759925"
 ### <a name="metadata-explorers"></a>元数据资源管理器  
 SSMA 包含两个元数据资源管理器可用于浏览和执行操作的访问权限和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 数据库。  
   
-#### <a name="access-metadata-explorer"></a>Access Metadata Explorer  
+#### <a name="access-metadata-explorer"></a>访问元数据资源管理器  
 访问元数据资源管理器中显示已添加到项目的访问数据库的相关信息。 添加 Access 数据库，SSMA 检索有关该数据库，这是可访问元数据资源管理器中的元数据的元数据。  
   
 访问元数据资源管理器可用于执行以下任务：  
@@ -116,7 +116,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
 ### <a name="menus"></a>菜单  
 SSMA 包含以下菜单：  
   
-|菜单|Description|  
+|菜单|描述|  
 |--------|---------------|  
 |**File**|迁移向导，处理项目，添加和删除访问权限的数据库文件，以及连接到包含命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。|  
 |**编辑**|包含用于查找和使用中的详细信息页面，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL 的详细信息窗格中。 若要打开**管理书签**对话框中的，在编辑菜单上单击管理书签。 在对话框中，您将看到一个现有书签列表。 可以使用对话框右侧的按钮来管理书签。|  
@@ -131,6 +131,6 @@ SSMA 包含以下菜单：
   
 -   错误列表窗格可以进行排序的列表中显示错误、 警告和信息性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

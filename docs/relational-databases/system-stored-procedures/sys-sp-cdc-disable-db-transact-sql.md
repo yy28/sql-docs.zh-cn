@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9febaf5b21b840e2bc02a17ed3e38828801de3b1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f8d85103b48b04284966e77595d0cfa927cd6338
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083765"
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对当前数据库禁用变更数据捕获。 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ sys.sp_cdc_disable_db
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **sys.sp_cdc_disable_db**禁用变更数据捕获当前已启用的数据库中的所有表。 与变更数据捕获相关的所有系统对象（如更改表、作业、存储过程和函数）都将被删除。 **Is_cdc_enabled**列中的数据库条目[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图设置为 0。  

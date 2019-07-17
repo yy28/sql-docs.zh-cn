@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c968c1c7445b89d0291faf97056417952e417dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090682"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +31,12 @@ ms.locfileid: "62686221"
   返回有关当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 SQL Server、全文和 SQL Server 代理服务的信息。 使用此动态管理视图可以报告有关这些服务的状态信息。  
   
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|名称[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，全文索引或 SQL Server 代理服务。 不可为 null。|  
-|startup_type|**int**|指示服务的启动模式。 以下是可能的值和其相应的说明。<br /><br /> 0：其他<br />1：其他<br />2:自动<br />3:Manual<br />4:禁用<br /><br /> 可以为 Null。|  
+|startup_type|**int**|指示服务的启动模式。 以下是可能的值和其相应的说明。<br /><br /> 0：其他<br />1:其他<br />2:自动<br />3：Manual<br />4：禁用<br /><br /> 可以为 Null。|  
 |startup_desc|**nvarchar(256)**|描述服务的启动模式。 以下是可能的值和其相应的说明。<br /><br /> 其他：其他 （引导启动）<br />其他：其他 （系统启动）<br />自动：自动启动<br />手动：按需启动<br />已禁用：禁用<br /><br /> 不可为 null。|  
-|status|**int**|指示服务的当前状态。 以下是可能的值和其相应的说明。<br /><br /> 1：已停止<br />2:其他 （启动挂起）<br />3:其他 （停止挂起）<br />4:正在运行<br />5:其他 （继续挂起）<br />6:其他 （暂停挂起）<br />7:已暂停<br /><br /> 可以为 Null。|  
+|status|**int**|指示服务的当前状态。 以下是可能的值和其相应的说明。<br /><br /> 1:已停止<br />2:其他 （启动挂起）<br />3：其他 （停止挂起）<br />4：正在运行<br />5：其他 （继续挂起）<br />6:其他 （暂停挂起）<br />7:已暂停<br /><br /> 可以为 Null。|  
 |status_desc|**nvarchar(256)**|描述服务的当前状态。 以下是可能的值和其相应的说明。<br /><br /> 已停止：服务已停止。<br />其他 （启动操作挂起）：该服务正在启动。<br />其他 （停止操作挂起）：服务正在停止。<br />运行：服务正在运行。<br />其他 （继续挂起的操作）：此服务处于挂起状态。<br />其他 （暂停挂起）：服务正在暂停。<br />已暂停：服务已暂停。<br /><br /> 不可为 null。|  
 |process_id|**int**|服务的进程 ID。 不可为 null。|  
 |last_startup_time|**datetimeoffset(7)**|上次启动服务的日期和时间。 可以为 Null。|  

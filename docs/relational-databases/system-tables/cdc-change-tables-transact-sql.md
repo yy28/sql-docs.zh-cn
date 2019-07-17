@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47265c1a4e541481edfef8029faf32e5cee3798a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432d4c45bdecc6f5e1804427770d005adde0cd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081282"
 ---
 # <a name="cdcchangetables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为数据库中的每个更改表返回一行。 对源表启用变更数据捕获时，将创建一个更改表。 我们建议您不要直接查询系统表， 而应执行[sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)存储过程。  
-  |列名|数据类型|Description|  
+  |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|更改表的 ID。 是在数据库中唯一。|  
 |**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，此列始终返回 0。|  
@@ -40,7 +39,7 @@ ms.locfileid: "47750327"
 |**supports_net_changes**|**bit**|对更改表启用了查询净更改支持。|  
 |**has_drop_pending**|**bit**|捕获进程收到关于源表已被删除的通知。|  
 |**role_name**|**sysname**|用于访问更改数据的数据库角色的名称。<br /><br /> NULL = 未使用角色。|  
-|**index_name**|**sysname**|用于唯一标识源表中的行的索引名称。 **index_name**是源表的主键索引名称或唯一索引的名称指定当对源表启用变更数据捕获。<br /><br /> NULL = 在变更数据捕获启用时，源表无主键，且未指定唯一索引。<br /><br /> 注意： 如果存在主键的表上启用了变更数据捕获，则变更数据捕获功能使用而不考虑是否启用净更改的索引。 启用变更数据捕获之后，将不允许对主键进行修改。 如果该表没有主键，则仍可以启用变更数据捕获，但是只能将净更改设置为 False。 启用变更数据捕获之后，即可以创建主键。 由于变更数据捕获功能不使用主键，因此还可以修改主键。|  
+|**index_name**|**sysname**|用于唯一标识源表中的行的索引名称。 **index_name**是源表的主键索引名称或唯一索引的名称指定当对源表启用变更数据捕获。<br /><br /> NULL = 在变更数据捕获启用时，源表无主键，且未指定唯一索引。<br /><br /> 注意:如果存在主键的表启用变更数据捕获，变更数据捕获功能将使用而不考虑是否启用净更改的索引。 启用变更数据捕获之后，将不允许对主键进行修改。 如果该表没有主键，则仍可以启用变更数据捕获，但是只能将净更改设置为 False。 启用变更数据捕获之后，即可以创建主键。 由于变更数据捕获功能不使用主键，因此还可以修改主键。|  
 |**filegroup_name**|**sysname**|更改表所驻留的文件组的名称。<br /><br /> NULL = 更改表在数据库的默认文件组中。|  
 |**create_date**|**datetime**|启用源表的日期。|  
 |**partition_switch**|**bit**|指示是否**SWITCH PARTITION**命令**ALTER TABLE**可以对启用了变更数据捕获的表执行。 0 指示分区切换被阻止。 未分区表始终返回 1。|  

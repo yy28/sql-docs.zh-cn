@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f0dfadc3b2b990d999df1d66069c4b68df9e6cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104416"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @destination_dbms = ] 'destination_dbms'` 是目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**ORACLE**|目标为 Oracle 数据库。|  
@@ -120,7 +119,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 ## <a name="see-also"></a>请参阅  
  [指定 Oracle 发布服务器的数据类型映射](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_getdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

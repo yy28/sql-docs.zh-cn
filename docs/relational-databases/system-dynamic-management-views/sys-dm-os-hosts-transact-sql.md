@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 446153c734b5f014ce55a1a8607c94f37e9248a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 794c8834f429d84eea94ad331401e84253c28c93
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900154"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265830"
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "67900154"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件一部分的组件（如 OLE DB 访问接口）分配内存并加入非抢先计划。 这些组件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 承载，而且由这些组件分配的所有资源都被跟踪。 通过承载这些组件，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以更好地顾及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件外部的组件所用的资源。  

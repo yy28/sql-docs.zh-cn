@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097824"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保存有关组合给定的 PolyBase 请求或查询的所有步骤的信息。 它列出了每个查询步骤对应一行。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id 和 step_index 构成此视图的键。 与请求关联的唯一数字 id。|请参阅中的 ID [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |step_index|**int**|此步骤的一系列步骤组成该请求中的位置。|0 到 (n-1)，为包含 n 个步骤的请求。|  

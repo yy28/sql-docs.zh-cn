@@ -1,5 +1,5 @@
 ---
-title: 显示列和目录元数据对稀疏列 (OLE DB) |Microsoft Docs
+title: 显示稀疏列的列和目录元数据 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc904fc250262d686b4a2ba0bc1f1511b7970ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c5c2503a47ef0c28ad0e8762c8f876967ac1db3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110356"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

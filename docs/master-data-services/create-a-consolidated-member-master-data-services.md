@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5168e98297b28f7dce2e07e639cb64f9c62899c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45c7b5568028a74c806ff4fe39b6b8c48070d41c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079724"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
 
@@ -55,7 +54,7 @@ ms.locfileid: "65481084"
   
 9. 可选。  在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。  
   
-10. 单击“确定”  。  
+10. 单击 **“确定”** 。  
   
 ## <a name="see-also"></a>请参阅  
  [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

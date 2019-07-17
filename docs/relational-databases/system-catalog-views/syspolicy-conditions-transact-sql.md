@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c0f9efbedc1f380bca66c198accae17b70cb4da2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121173"
 ---
 # <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中每个基于策略的管理条件在表中各占一行。 syspolicy_conditions 属于 msdb 数据库中的 dbo 架构。 下表介绍了 syspolicy_conditions 视图中的列。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|此条件的标识符。 每个条件表示由一个或多个条件表达式组成的集合。|  
-|NAME|**sysname**|条件名称。|  
+|name|**sysname**|条件名称。|  
 |date_created|**datetime**|条件的创建日期和时间。|  
 |description|**nvarchar(max)**|条件说明。 说明列是可选的，可以为 NULL。|  
 |created_by|**sysname**|创建条件的登录名。|  
@@ -47,7 +46,7 @@ ms.locfileid: "47823105"
 ## <a name="remarks"></a>备注  
  在排除基于策略的管理的故障时，请查询 syspolicy_conditions 视图，以确定创建条件或上次更改条件的用户。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ## <a name="see-also"></a>请参阅  

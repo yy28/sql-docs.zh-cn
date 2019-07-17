@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73494ded33f5fc67c86bc5976f16c2e3b0e8b083
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7e6def32ab27560f68902470d0b7add715de665d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090011"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**pendingcmdcount**|**int**|等待订阅的命令数。|  
 |**estimatedprocesstime**|**int**|将所有等待的命令传递到订阅服务器所需的估计秒数。|  

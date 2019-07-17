@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59581d72f60e4138db7c19cc8f0487abaaeec381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085815"
 ---
 # <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **sp_delete_database_backuphistory**必须从运行**msdb**数据库。  
@@ -83,7 +82,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+ [sp_delete_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

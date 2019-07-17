@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108682"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @filename = ] 'file_name'` 是指定的完整路径，包括文件名称，数据文件 (.mdf) 的副本保存到的字符串。 *文件名*是**nvarchar(260)**，无默认值。  
+`[ @filename = ] 'file_name'` 是指定的完整路径，包括文件名称，数据文件 (.mdf) 的副本保存到的字符串。 *文件名*是**nvarchar(260)** ，无默认值。  
   
-`[ @temp_dir = ] 'temp_dir'` 是包含临时文件的名称。 *temp_dir*是**nvarchar(260)**，默认值为 NULL。 如果为 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用默认数据目录。 该目录应有足够的空间可容纳具有保持所有组合的订阅服务器数据库文件大小的文件。  
+`[ @temp_dir = ] 'temp_dir'` 是包含临时文件的名称。 *temp_dir*是**nvarchar(260)** ，默认值为 NULL。 如果为 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用默认数据目录。 该目录应有足够的空间可容纳具有保持所有组合的订阅服务器数据库文件大小的文件。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` 可选布尔标志，该标志指定是否覆盖现有文件中指定的同名**@filename**。 *overwrite_existing_file*是**位**，默认值为**0**。 如果**1**，它将覆盖指定的文件**@filename**，如果它存在。 如果**0**，如果该文件存在，并且不覆盖该文件存储的过程将失败。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` 可选布尔标志，该标志指定是否覆盖现有文件中指定的同名 **@filename** 。 *overwrite_existing_file*是**位**，默认值为**0**。 如果**1**，它将覆盖指定的文件 **@filename** ，如果它存在。 如果**0**，如果该文件存在，并且不覆盖该文件存储的过程将失败。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

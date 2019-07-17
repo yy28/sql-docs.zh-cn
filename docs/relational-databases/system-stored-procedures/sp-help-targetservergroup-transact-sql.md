@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetservergroup (Transact-SQL) | Microsoft Docs
+title: sp_help_targetservergroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcb699741435bace786241ac01a57ad66dd5631d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085079"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_help_targetservergroup
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|服务器组的标识号|  
-|**名称**|**sysname**|服务器组的名称|  
+|**name**|**sysname**|服务器组的名称|  
   
 ## <a name="permissions"></a>权限  
  若要执行此过程的权限默认授予**sysadmin**固定的服务器角色。  
@@ -84,7 +83,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

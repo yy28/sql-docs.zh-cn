@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca9b70ee6a96759e496b831f7c12dc3ee78419b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087873"
 ---
 # <a name="unicode-drivers"></a>Unicode 驱动程序
 驱动程序是否应为 Unicode 或 ANSI 驱动程序完全取决于数据源的特性。 如果数据源支持 Unicode 数据，该驱动程序应为 Unicode 驱动程序。 如果数据源仅支持 ANSI 数据，该驱动程序应保持 ANSI 驱动程序。  

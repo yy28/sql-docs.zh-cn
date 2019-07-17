@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1211a1d5f22758b5c3732aa1b9843fe11ef8b3db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103052"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>转换 MySQL 数据库 (MySQLToSQL)
 已连接到 MySQL 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，并将项目设置和数据映射选项，可以将转换为的 MySQL 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象。  

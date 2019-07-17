@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 899924b5c0847d5f42e383a9e04c33298bb368b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087747"
 ---
 # <a name="unicode-data"></a>Unicode 数据
 提供 SQL Unicode 数据类型来描述驻留在本机上 DBMS 为 Unicode 的数据。 提供一种 C Unicode 数据类型以使应用程序将数据绑定到 Unicode 缓冲区。 驱动程序管理器可以将数据从 Unicode C 类型 (SQL_C_WCHAR) 以使其转换函数使用 ANSI 驱动程序。  

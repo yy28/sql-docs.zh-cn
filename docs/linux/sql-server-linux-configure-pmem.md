@@ -4,18 +4,17 @@ description: 本文提供用于在 Linux 上配置 PMEM 演练。
 author: DBArgenis
 ms.author: argenisf
 ms.reviewer: vanto
-manager: jroth
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bda17b382420f57e25c40d4a7a2d29477bb507d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 4ed705b1b26193585a6278508ac98666d069418a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077566"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 配置永久性内存 (PMEM)
 

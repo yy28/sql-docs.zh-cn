@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096228"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_优化\_建议 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -39,12 +38,12 @@ ms.locfileid: "54226514"
 
 | **列名** | **Data type** | **说明** |
 | --- | --- | --- |
-| **名称** | **nvarchar(4000)** | 建议的唯一名称。 |
-| **类型** | **nvarchar(4000)** | 生成的建议，例如，自动优化选项的名称 `FORCE_LAST_GOOD_PLAN` |
+| **name** | **nvarchar(4000)** | 建议的唯一名称。 |
+| **type** | **nvarchar(4000)** | 生成的建议，例如，自动优化选项的名称 `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | 为什么要提供此建议的原因。 |
 | **valid\_since** | **datetime2** | 此建议生成的第一次。 |
 | **最后一个\_刷新** | **datetime2** | 此建议生成的最后一次。 |
-| State | **nvarchar(4000)** | JSON 文档，用于描述该建议的状态。 可以使用下列域：<br />-   `currentValue` -建议的当前状态。<br />-   `reason` -介绍建议处于当前状态的常量。|
+| **State** | **nvarchar(4000)** | JSON 文档，用于描述该建议的状态。 可以使用下列域：<br />-   `currentValue` -建议的当前状态。<br />-   `reason` -介绍建议处于当前状态的常量。|
 | **is\_executable\_action** | **bit** | 1 = 可以对通过数据库中执行建议[!INCLUDE[tsql_md](../../includes/tsql-md.md)]脚本。<br />0 = 不能对数据库执行该建议 (例如： 信息唯一或已还原建议) |
 | **是\_revertable\_操作** | **bit** | 1 = 可以自动监视和恢复数据库引擎的建议。<br />0 = 不能自动监视并还原建议。 大多数&quot;可执行文件&quot;操作将为&quot;revertable&quot;。 |
 | **execute\_action\_start\_time** | **datetime2** | 应用建议的日期。 |
@@ -63,7 +62,7 @@ ms.locfileid: "54226514"
 
  `currentValue` 字段中`state`列可能具有以下值：
  
- | “登录属性” | Description |
+ | “登录属性” | 描述 |
  |--------|-------------|
  | `Active` | 建议处于活动状态且未尚未应用。 用户可以采用建议脚本并手动执行。 |
  | `Verifying` | 通过应用建议[!INCLUDE[ssde_md](../../includes/ssde_md.md)]和内部验证过程使用回归计划强制计划的性能进行比较。 |
@@ -73,7 +72,7 @@ ms.locfileid: "54226514"
 
 中的 JSON 文档`state`列包含说明为什么是中的当前状态的建议的原因。 在原因字段中的值可能是： 
 
-| 原因 | Description |
+| Reason | 描述 |
 |--------|-------------|
 | `SchemaChanged` | 建议已过期，因为被引用表的架构更改。 |
 | `StatisticsChanged`| 由于被引用表上的统计信息更改过期的建议。 |

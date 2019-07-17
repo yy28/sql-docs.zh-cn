@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d6c97b167cb69eec72ad771504a1070ed59e4f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49684671c25ea83fa7554bec7f80d0b16c30d4eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122719"
 ---
 # <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "63004365"
   
  **Sys.identity_columns**视图所继承中的行**sys.columns**视图。 **Sys.identity_columns**视图返回中的列**sys.columns**视图，再加上**seed_value**， **increment_value**， **last_value**，并**is_not_for_replication**列。 有关详细信息，请参阅[目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<从 sys.columns 继承的列 >**||**Sys.identity_columns**视图返回中的所有列**sys.columns**视图。 它还返回如下所述的其他列。 有关列的说明的**sys.identity_columns**视图继承**sys.columns**，请参阅[sys.columns &#40;-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。|  
 |**seed_value**|**sql_variant**|该标识列的种子值。 种子值的数据类型与列本身的数据类型相同。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 88e3593276851b6ab38fde0472a70be31b7cbf34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a553672b83931091056dd489f7559c4269b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106207"
 ---
 # <a name="binding-columns"></a>绑定列
 从数据源提取数据返回到应用程序已为此目的分配的变量中的应用程序。 这可以完成之前，必须将关联应用程序，或*绑定*，这些变量和结果的列设置; 从概念上讲，此过程是相同应用程序变量绑定到语句参数。 当应用程序将变量绑定到结果集列时，它描述了驱动程序到该变量的地址、 数据类型等的。 该驱动程序结构，它维护适用于该语句，并使用的信息提取该行时返回值的列中存储此信息。  

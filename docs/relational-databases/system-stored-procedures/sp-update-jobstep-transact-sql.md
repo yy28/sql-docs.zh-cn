@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
+title: sp_update_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084878"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` 是步骤的新名称。 *step_name*是**sysname**，默认值为 NULL。  
   
-`[ @subsystem = ] 'subsystem'` 使用 Microsoft SQL Server 代理执行子系统*命令*。 *子系统*是**nvarchar(40)**，默认值为 NULL。  
+`[ @subsystem = ] 'subsystem'` 使用 Microsoft SQL Server 代理执行子系统*命令*。 *子系统*是**nvarchar(40)** ，默认值为 NULL。  
   
-`[ @command = ] 'command'` 通过执行命令*子系统*。 *命令*是**nvarchar （max)**，默认值为 NULL。  
+`[ @command = ] 'command'` 通过执行命令*子系统*。 *命令*是**nvarchar （max)** ，默认值为 NULL。  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` 在此步骤失败时执行的作业步骤的标识号并*fail_action*是**4**。 *fail_step_id*是**int**，默认值为 NULL。  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*是**nvarchar （128)**，默认值为 NULL。  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*是**nvarchar （128)** ，默认值为 NULL。  
   
 `[ @database_name = ] 'database'` 在其中执行的数据库的名称[!INCLUDE[tsql](../../includes/tsql-md.md)]步骤。 *数据库*是**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
@@ -112,7 +111,7 @@ sp_update_jobstep
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` 在其中保存该步骤的输出文件的名称。 *file_name*是**nvarchar(200)**，默认值为 NULL。 此参数只对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系统中运行的命令有效。  
+`[ @output_file_name = ] 'file_name'` 在其中保存该步骤的输出文件的名称。 *file_name*是**nvarchar(200)** ，默认值为 NULL。 此参数只对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系统中运行的命令有效。  
   
  若要将 output_file_name 重新设置回 NULL，必须设置*output_file_name*为空字符串 () 或字符串的空白字符，但您不能使用**CHAR(32)** 函数。 例如，按如下所示将此参数设置为空字符串：  
   
@@ -120,7 +119,7 @@ sp_update_jobstep
   
 `[ @flags = ] flags` 控制行为的选项。 *标志*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0** （默认值）|覆盖输出文件。|  
 |**2**|追加到输出文件|  

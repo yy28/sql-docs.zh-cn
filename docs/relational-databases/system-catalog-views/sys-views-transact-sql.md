@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1ce0082f409b303136f3523eb551bd2c24f5d94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5f7d4c9c6bb44d978007170abfff5a7730b028a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095532"
 ---
 # <a name="sysviews-transact-sql"></a>sys.views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   与每个视图对象，一行**sys.objects.type** = V。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_replicated**|**bit**|1 = 视图已复制。|  
@@ -43,7 +42,7 @@ ms.locfileid: "47731775"
 |**with_check_option**|**bit**|1 = 在视图定义中指定了 WITH CHECK OPTION。|  
 |**is_date_correlation_view**|**bit**|1 = 系统自动创建视图，以存储 datetime 列之间的依赖关系信息。 通过将 DATE_CORRELATION_OPTIMIZATION 设置为 ON，启用创建此视图。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

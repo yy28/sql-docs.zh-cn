@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112e45b056de0f1915a4ef5419e0e916f1f8d5a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130543"
 ---
 # <a name="suspectpages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47772615"
   
  下表，具有限制为 1,000 行，存储在**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|应用此页的数据库的 ID。|  
 |**file_id**|**int**|数据库中文件的 ID。|  
@@ -42,7 +41,7 @@ ms.locfileid: "47772615"
 |**error_count**|**int**|错误出现的次数。|  
 |**last_update_date**|**datetime**|上次更新的日期时间戳。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  任何拥有 **msdb** 访问权限的人员都可以读取 **suspect_pages** 表中的数据。 任何拥有 suspect_pages 表的 UPDATE 权限的人员都可以更新它的记录。 **msdb** 上的 **db_owner** 固定数据库角色或 **sysadmin** 固定服务器角色的成员都可以插入、更新和删除记录。  
   
 ## <a name="see-also"></a>请参阅  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 302d807b70e4cceb7cf25bffd0af637df7c4ad8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120159"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  下表说明了发布服务器的属性和这些属性的值。  
   
-|属性|值|Description|  
+|属性|值|描述|  
 |--------------|------------|-----------------|  
 |**active**|**true**|激活发布服务器。|  
 ||**false**|停用发布服务器|  
@@ -78,8 +77,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bab3571ba880658d9f1a2629b899484008428083
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118790"
 ---
 # <a name="bookmarks-odbc"></a>书签 (ODBC)
 书签是用于标识数据行的值。 只有驱动程序或数据源才知道书签值的含义。 例如，书签可能与行号一样简单，也可能与磁盘地址一样复杂。 在 ODBC 中的书签是有点不同于实际丛书中的书签。 在实际的书中，读取器放置于特定页面的书签，并将查找该书签以返回到页。 在 ODBC 中，应用程序为特定行请求书签，存储该书签，并将其传回到游标以返回到该行。 因此，在 ODBC 中的书签是类似于一个读取器写下页码，记住，，然后再次查看的页面。  

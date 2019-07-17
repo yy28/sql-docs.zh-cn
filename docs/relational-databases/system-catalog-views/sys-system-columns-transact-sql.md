@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bc916f827fb190142dd07b56485b8a9d6005d94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd94f90a823ba57910809a54aed470ddd0bb0010
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108862"
 ---
 # <a name="syssystemcolumns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   具有列的系统对象的每列都对应一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此列所属对象的 ID。|  
-|**名称**|**sysname**|列的名称。 在对象中是唯一的。|  
+|**name**|**sysname**|列的名称。 在对象中是唯一的。|  
 |**column_id**|**int**|列的 ID。 在对象中是唯一的。<br /><br /> 列 ID 可以不按顺序排列。|  
 |**system_type_id**|**tinyint**|列的系统类型的 ID。|  
 |**user_type_id**|**int**|用户定义的列类型的 ID。<br /><br /> 若要返回的类型名称，将联接到[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录对此列的视图。|  
-|**max_length**|**smallint**|列的最大长度（以字节为单位）。<br /><br /> -1 = 的列数据类型为**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将是 16，或者设置的值**sp_tableoption** 'text in row。|  
+|**max_length**|**smallint**|列的最大长度（以字节为单位）。<br /><br /> -1 = 的列数据类型为**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将是 16，或者设置的值**sp_tableoption** 'text in row。|  
 |**精度**|**tinyint**|如果基于数值; 列的精度否则为为 0。|  
 |**scale**|**tinyint**|如果列包含的是数值，则为列的小数位数；否则为 0。|  
 |**collation_name**|**sysname**|如果基于字符的; 的列的排序规则名称否则，为 NULL。|  
@@ -60,10 +59,10 @@ ms.locfileid: "47775255"
 |**rule_object_id**|**int**|独立规则绑定到的 ID 列使用**sys.sp_bindrule**。<br /><br /> 0 = 无独立规则。<br /><br /> 列级 CHECK 约束，请参阅[sys.check_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)。|  
 |is_sparse|**bit**|1 = 列为稀疏列。 有关详细信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|**bit**|1 = 列为列集。 有关详细信息，请参阅 [使用列集](../../relational-databases/tables/use-column-sets.md)。|  
-|将 generated_always_type|**tinyint**|表示列的类型的数值：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
+|generated_always_type|**tinyint**|表示列的类型的数值：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
 |generated_always_type_desc|**nvarchar(60)**|列的类型的文本说明：<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

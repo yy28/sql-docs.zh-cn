@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090261"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "53785918"
   列出向扩展的事件引擎注册的所有包。  
   
  
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|包的名称。 包自身便可显示说明。 不可为 null。|  
+|name|**nvarchar(256)**|包的名称。 包自身便可显示说明。 不可为 null。|  
 |guid|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
 |description|**nvarchar(3072)**|包说明。 descriptionis 由包的作者设置，不可为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
@@ -58,7 +57,7 @@ ms.locfileid: "53785918"
 |From|若要|关系|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多对一|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

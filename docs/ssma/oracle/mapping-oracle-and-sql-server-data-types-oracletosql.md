@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 06e538ebbdab9d6438182eaa0b61d44818286547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796018"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262960"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
 Oracle 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型。 转换到的 Oracle 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，您必须指定如何将数据类型从 oracle 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  

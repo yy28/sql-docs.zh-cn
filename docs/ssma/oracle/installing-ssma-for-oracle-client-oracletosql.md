@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223579"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259683"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安装 SSMA for Oracle 客户端 (OracleToSQL)
 SSMA 客户端包含的程序文件的执行以下任务：  

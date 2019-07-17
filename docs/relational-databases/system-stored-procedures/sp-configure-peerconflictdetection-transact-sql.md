@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0a3ac1096ff14577ba72157118dcef4e1b03e70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215944"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication=] '*发布*  
+ [ @publication=] '*publication*'  
  要配置冲突检测的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ @action=] '*操作*  
- 指定是否为发布启用或禁用冲突检测。 *操作*是**nvarchar(5)**，可以是下列值之一。  
+ [ @action= ] '*action*'  
+ 指定是否为发布启用或禁用冲突检测。 *操作*是**nvarchar(5)** ，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**enable**|为发布启用冲突检测。|  
 |**disable**|为发布禁用冲突检测。|  

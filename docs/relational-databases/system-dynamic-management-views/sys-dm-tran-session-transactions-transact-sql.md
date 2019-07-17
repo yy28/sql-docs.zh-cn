@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c7157491-58c2-49fe-87d7-0c9723113adf
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d67fd9c4acf2ed436b71121f0b96cdad646db8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148cab2122a907c138a2bd74c5f3403d231e2793
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659085"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262673"
 ---
 # <a name="sysdmtransessiontransactions-transact-sql"></a>sys.dm_tran_session_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47659085"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_tran_session_transactions**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|正在运行事务的会话的 ID。|  
 |transaction_id|**bigint**|事务的 ID。|  
@@ -49,10 +48,10 @@ ms.locfileid: "47659085"
 |open_transaction_count||每个会话的打开的事务数。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
  通过绑定会话和分布式事务，一个事务可以运行于多个会话中。 在这种情况下，sys.dm_tran_session_transactions 将对同一 transaction_id 显示多个行，当前运行事务的每个会话对应一行。  

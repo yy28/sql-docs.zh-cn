@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5150dfbccb6998c69151ca4cf02d9fe88a222830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a50bf492641da227f355f1e844a3e9d7156d93e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108964"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,10 +34,10 @@ ms.locfileid: "62856014"
   
  目录视图[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)提供数据库中每个列的统计信息。 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|这些统计信息所属对象的 ID。|  
-|**名称**|**sysname**|统计信息的名称。 在对象中是唯一的。|  
+|**name**|**sysname**|统计信息的名称。 在对象中是唯一的。|  
 |**stats_id**|**int**|统计信息 ID。 在对象中是唯一的。<br /><br />如果统计信息对应于索引， *stats_id*值等同于*index_id*中的值[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。|  
 |**auto_created**|**bit**|指示统计信息是否由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。<br /><br /> 0 = 统计信息不是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。<br /><br /> 1 = 统计信息由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动创建。|  
 |**user_created**|**bit**|指示统计信息是否由用户创建。<br /><br /> 0 = 统计信息不是用户创建的。<br /><br /> 1 = 统计信息是用户创建的。|  
@@ -74,7 +73,7 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [统计信息](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

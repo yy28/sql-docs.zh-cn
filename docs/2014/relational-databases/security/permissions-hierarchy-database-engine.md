@@ -20,14 +20,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 05cc0d47053d8ddef0962c4aceee75e61b8b4b64
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211957"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>权限层次结构（数据库引擎）
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 管理着可以通过权限进行保护的实体的分层集合。 这些实体称为“安全对象” 。 最主要的安全对象是服务器和数据库，但可以在更细化的级别设置各种权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过验证主体是否已被授予适当权限来控制主体对安全对象的操作。  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 管理着可以通过权限进行保护的实体的分层集合。 这些实体称为“安全对象”  。 最主要的安全对象是服务器和数据库，但可以在更细化的级别设置各种权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过验证主体是否已被授予适当权限来控制主体对安全对象的操作。  
   
  下图显示了 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 权限层次结构之间的关系。  
   

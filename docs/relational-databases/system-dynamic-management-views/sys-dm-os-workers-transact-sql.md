@@ -20,12 +20,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e42c00c1844139d8c7af3610a777e42ea859b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c37e8ca1ac255f4d6e5d29fa87f29a8136913c55
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899570"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262724"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "67899570"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="examples"></a>示例  
  您可以使用下面的查询找出工作线程已在 SUSPENDED 或 RUNNABLE 状态下运行的时间。  

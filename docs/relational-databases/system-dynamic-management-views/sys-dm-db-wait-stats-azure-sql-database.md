@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e5b81c48e017312048f15b600382af5f95aec821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090867"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63003511"
   
  执行查询期间的特定等待时间类型可以说明查询中存在瓶颈或失效点。 同样，如果服务器级的等待时间较长或等待计数较多，说明服务器实例内交互查询交互中存在瓶颈或热点。 例如，锁等待指示查询争用数据；页 IO 闩锁等待指示 IO 响应时间较慢；页闩锁更新指示表示文件布局不正确。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|等待类型的名称。 有关详细信息，请参阅[等待类型](#WaitTypes)，本主题中更高版本。|  
 |waiting_tasks_count|**bigint**|该等待类型的等待数。 该计数器在每开始一个等待时便会增加。|  
@@ -79,7 +78,7 @@ ms.locfileid: "63003511"
   
  下表列出各任务所遇到的等待类型。  
   
-|等待类型|Description|  
+|等待类型|描述|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|在以独占的方式访问程序集加载时出现。|  

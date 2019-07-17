@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013212"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255356"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013212"
 > [!NOTE]  
 >  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_exec_query_optimizer_info**。  
   
-|“属性”|数据类型|Description|  
+|名称|数据类型|描述|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
 |**occurrence**|**bigint**|此计数器的优化事件的发生次数。|  
@@ -46,7 +45,7 @@ ms.locfileid: "63013212"
 ## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
     
 ## <a name="remarks"></a>备注  
  **sys.dm_exec_query_optimizer_info**包含以下属性 （计数器）。 出现的所有值将累积并在系统重新启动时设置为 0。 系统重新启动时，值字段的所有值都设置为 NULL。 指定平均值的所有“值-列”的值使用同一行中的出现次数值作为计算平均值的分母。 所有查询优化时测量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]确定将变为**dm_exec_query_optimizer_info**，包括这两个用户和系统生成的查询。 已缓存的计划的执行不会更改中的值**dm_exec_query_optimizer_info**，只有优化会显著。  
@@ -77,7 +76,7 @@ ms.locfileid: "63013212"
 |更新语句|用于 UPDATE 语句的优化数。|不适用|  
 |包含子查询|包含至少一个子查询的查询的优化数。|不适用|  
 |取消嵌套失败|仅供内部使用|仅供内部使用|  
-|表|总优化次数。|每个优化查询引用的平均表数。|  
+|tables|总优化次数。|每个优化查询引用的平均表数。|  
 |提示|指定某些提示的次数。 计数的提示包括：加入、 组、 UNION 和 FORCE ORDER 查询提示、 FORCE PLAN 设置选项，以及联接提示。|不适用|  
 |排序提示|指定强制排序提示的次数。|不适用|  
 |联接提示|联接提示强制联接算法的次数。|不适用|  

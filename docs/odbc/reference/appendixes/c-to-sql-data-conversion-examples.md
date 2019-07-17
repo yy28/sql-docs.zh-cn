@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e475abb699c7fa7240ca6eb39b1b32f1730d33c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125739"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>从 C 到 SQL 的数据转换示例
 以下示例说明了该驱动程序如何将 C 数据转换为 SQL 数据：  

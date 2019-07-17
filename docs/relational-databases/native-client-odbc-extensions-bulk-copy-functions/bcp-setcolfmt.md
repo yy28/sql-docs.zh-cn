@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fd6ac6c5dccd9f33e2e8389f5847a5ac73b795d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3666c6951fcacea031c5d86dc9d17381a2f963
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099430"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,13 +51,13 @@ RETCODE bcp_setcolfmt (
  *hdbc*  
  是大容量复制启用 ODBC 连接句柄。  
   
- field  
+ field   
  要设置其属性的按一定顺序的列号。  
   
- property  
+ property   
  属性常量之一。 在下表中定义属性常量。  
   
-|“属性”|ReplTest1|Description|  
+|属性|值|描述|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|用户文件中此列的数据类型。 如果不同于数据库表中相应列的数据类型，则大容量复制将根据情况转换数据。<br /><br /> BCP_FMT_TYPE 参数由 sqlncli.h 中的 SQL Server 数据类型标记枚举，而非采用 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLCHARACTER 类型指定一个字符串：ODBC 类型 SQL_C_CHAR。<br /><br /> 若要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型指定默认的数据表示形式，则将此参数设置为 0。<br /><br /> 从 SQL Server 大容量复制到文件，在 BCP_FMT_TYPE 为 SQLDECIMAL 或 sqlnumeric 时，如果源列不是**十进制**或**数值**，使用默认精度和小数位数。 否则为如果源列是**十进制**或**数值**，使用的精度和源列的小数位数。|  
 |BCP_FMT_INDICATOR_LEN|INT|以字节表示的指示器（前缀）的长度。<br /><br /> 它是列数据中以字节表示的长度/空指示器的长度。 有效的指示器长度值是 0（在未使用指示器时）、1、2 或 4。<br /><br /> 若要指定默认的大容量复制指示器用法，请将此参数设置为 SQL_VARLEN_DATA。<br /><br /> 指示器在内存中出现在任何数据的紧前面，在数据文件中出现在它们适用于的数据的紧前面。<br /><br /> 如果使用多种方法来指定数据文件列长度（例如指示器和最大列长度，或者指示器和终止符序列），则大容量复制将选择导致数据复制量最少的方法。<br /><br /> 如果列数据可能在长度上发生变化或列可能接受 NULL 作为值，则在没有调整数据格式的用户干预时，大容量复制生成的数据文件将包含指示器。|  
@@ -99,7 +98,7 @@ RETCODE bcp_setcolfmt (
   
 -   可选终止字节序列的长度。  
   
- 每次调用**bcp_setcolfmt**指定一个用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**，然后调用**bcp_setcolfmt**五次，有三个调用设置您的自定义格式。 对于剩余的两个调用，将 BCP_FMT_TYPE 设置为 0，并设置 BCP_FMT_INDICATOR_LENGTH、 BCP_FMT_DATA_LEN 和*cbValue*为 0、sql_varlen_data 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 每次调用**bcp_setcolfmt**指定一个用户文件列的格式。 例如，若要更改五列用户数据文件中的三个列的默认设置，请先调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** ，然后调用**bcp_setcolfmt**五次，有三个调用设置您的自定义格式。 对于剩余的两个调用，将 BCP_FMT_TYPE 设置为 0，并设置 BCP_FMT_INDICATOR_LENGTH、 BCP_FMT_DATA_LEN 和*cbValue*为 0、sql_varlen_data 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
  **Bcp_columns**必须在调用之前调用函数**bcp_setcolfmt**。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103001"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>编辑类型映射 (MySQLToSQL)
 **编辑类型映射**对话框可以指定类型的源和目标数据库对象之间的映射方式。  

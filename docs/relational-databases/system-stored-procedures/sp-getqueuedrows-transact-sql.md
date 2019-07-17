@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62500424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123943"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="result-sets"></a>结果集  
  显示所有当前对订阅表至少有一个排队事务的行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**操作**|**nvarchar(10)**|同步发生时采取的操作类型。<br /><br /> INS= 插入<br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
 |**tranid**|**nvarchar(70)**|执行命令的事务 ID。|  
-|**table column1...n**||指定的表中每个列的值*tablename*。|  
+|**表 column1...n**||指定的表中每个列的值*tablename*。|  
 |**msrepl_tran_version**|**uniqueidentifier**|该列用于跟踪对已复制数据的更改以及在发布服务器上执行冲突检测。 该列自动添加到表中。|  
   
 ## <a name="remarks"></a>备注  

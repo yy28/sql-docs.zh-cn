@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca972eebfb39aa44248e17eecfc952fdf71f98ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8d2bb7be2c3da502065d9ee210c4c1ef8c2094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108814"
 ---
 # <a name="syssystemparameters-transact-sql"></a>sys.system_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每个具有参数的系统对象在表中对应一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此参数所属的对象的 ID。|  
-|**名称**|**sysname**|参数的名称。 在对象中是唯一的。<br /><br /> 如果对象是标量函数，则参数名称为表示返回值的行中的空字符串。|  
+|**name**|**sysname**|参数的名称。 在对象中是唯一的。<br /><br /> 如果对象是标量函数，则参数名称为表示返回值的行中的空字符串。|  
 |**parameter_id**|**int**|参数的 ID。 在对象中是唯一的。 如果对象是标量函数， **parameter_id** = 0 表示返回值。|  
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。|  
 |**user_type_id**|**int**|用户定义的参数类型的 ID。<br /><br /> 若要返回的类型名称，将联接到[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录对此列的视图。|  
-|**max_length**|**smallint**|参数，以字节为单位的最大长度。 值将为-1，表示当列数据类型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。|  
+|**max_length**|**smallint**|参数，以字节为单位的最大长度。 值将为-1，表示当列数据类型是**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
 |**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
 |**is_output**|**bit**|1 = 参数为输出值（或返回值）；否则为 0。|  
@@ -50,7 +49,7 @@ ms.locfileid: "47727365"
 |**default_value**|**sql_variant**|如果**has_default_value**为 1，此列的值是为该参数的默认值; 否则为 NULL。|  
 |**xml_collection_id**|**int**|非零参数的数据类型是否**xml**和类型化 XML。 该值是包含参数验证 XML 架构命名空间的集合的 ID。<br /><br /> 0 = 没有 XML 架构集合。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

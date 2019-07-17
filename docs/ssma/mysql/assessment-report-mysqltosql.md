@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 72b6171864c0ab801e89d3eba5a19ff61031a81e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb6d01bf9c02d0a7b96adf8e46eb354cd426db4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139193"
 ---
 # <a name="assessment-report-mysqltosql"></a>评估报表 (MySQLToSQL)
 评估报告窗口会显示到的数据库对象的转换的结果[!INCLUDE[tsql](../../includes/tsql-md.md)]语法，并且还可以帮助您评估的复杂性和成本在迁移项目。  

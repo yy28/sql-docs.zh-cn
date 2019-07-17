@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37b575f9e208b5a1b7fa03b170b74633da149c67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e59db823f8b84edfb5c92f2d142c8238449e3323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63237878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107582"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>设置事务隔离级别
 若要设置事务隔离级别，应用程序，请使用 SQL_ATTR_TXN_ISOLATION 连接属性。 如果数据源不支持所请求的隔离级别，则驱动程序或数据源可以设置更高的级别。 若要确定哪些事务隔离级别的数据源支持和默认隔离级别是，应用程序调用**SQLGetInfo** SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 选项分别。  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 41642dc8bcaed03faaffdf9a16d8fc465aa2d360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69144341bd9cff344d4514f076517afac52e2a4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097293"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 
@@ -52,7 +51,7 @@ Member_Expression.UniqueName
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **UniqueName**函数返回的对象，不返回的名称的唯一名称[名称](../mdx/name-mdx.md)函数。 返回的名称不包括多维数据集的名称。 返回的结果取决于服务器端设置或 MDX Unique Name Style 连接字符串属性。   
+ **UniqueName**函数返回的对象，不返回的名称的唯一名称[名称](../mdx/name-mdx.md)函数。 返回的名称不包括多维数据集的名称。 返回的结果取决于服务器端设置或 MDX Unique Name Style 连接字符串属性。  
   
 ## <a name="example"></a>示例  
  下例将返回 Adventure Works 多维数据集中的 Product 维度、Product Categories 层次结构、Subcategory 级别和 Bike Racks 成员的唯一名称值。  

@@ -21,12 +21,12 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299480"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260221"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>准备迁移 (AccessToSQL) 访问数据库
 在迁移到 Access 数据库之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须确定哪些数据库迁移，并确保这些数据库已准备好进行迁移。  
@@ -75,6 +75,6 @@ SSMA 无法迁移使用工作组保护的数据库。 若要从 Access 数据库
 ### <a name="documenting-databases"></a>记录数据库  
 您可能想要记录的属性，例如的数据库对象、 文件大小和权限，您的 Access 数据库的列表。 若要在生成在 Access 中，此文档**工具**菜单，依次指向**分析**，然后单击**文档化**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [链接到 SQL Server 访问应用程序](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

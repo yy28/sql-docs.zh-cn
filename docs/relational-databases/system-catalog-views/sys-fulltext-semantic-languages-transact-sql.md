@@ -19,13 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: f1acc995223ba9785055839beb5e12b11ea7494f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133780"
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64945664"
 ||||  
 |-|-|-|  
 |**列名**|**类型**|**说明**|  
-|lcid|ssNoversion|语言的 Microsoft Windows 区域设置标识符 (LCID)。|  
+|lcid|INT|语言的 Microsoft Windows 区域设置标识符 (LCID)。|  
 |name|sysname|是中的别名值[sys.syslanguages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的值对应**lcid**，或是数值 LCID 的字符串表示形式。|  
   
 ## <a name="general-remarks"></a>一般备注  

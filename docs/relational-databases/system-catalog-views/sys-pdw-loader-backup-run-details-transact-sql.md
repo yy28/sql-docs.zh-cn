@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328d949afc548b179f26ba83f06348ccb72cbe1f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127649"
 ---
 # <a name="syspdwloaderbackuprundetails-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含更多详细的信息中的信息之外[sys.pdw_loader_backup_runs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)和正在进行和已完成的备份和还原操作中的关于[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和有关正在进行完成备份、 还原和加载操作中的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 信息在两次系统重启之间仍会保留。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|为特定的备份或还原运行的唯一标识符。<br /><br /> run_id 和 pdw_node_id 形成此视图的键。||  
 |pdw_node_id|**int**|此记录保存详细信息的设备节点的唯一标识符。<br /><br /> run_id 和 pdw_node_id 形成此视图的键。|请参阅中的 node_id [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  

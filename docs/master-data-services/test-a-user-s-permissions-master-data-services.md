@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 38d4b1e7f9bd3e76c00bb4228e53e09416ed8557
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 332a212af082b082379f4b1483c3c869cb8c542e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085591"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>测试用户权限 (Master Data Services)
 
@@ -26,11 +25,11 @@ ms.locfileid: "65488094"
   
 ### <a name="to-test-a-users-security"></a>测试用户的安全设置  
   
-1.  在 Internet Explorer 7 和更高版本中，依次单击 **“工具”**、 **“Internet 选项”** 和 **“安全”** 选项卡。  
+1.  在 Internet Explorer 7 和更高版本中，依次单击 **“工具”** 、 **“Internet 选项”** 和 **“安全”** 选项卡。  
   
 2.  单击 **“本地 Intranet”** ，然后单击 **“自定义级别”** 按钮。  
   
-3.  在 **“用户验证”** 部分，选择 **“用户名和密码提示”**。  
+3.  在 **“用户验证”** 部分，选择 **“用户名和密码提示”** 。  
   
 4.  下次您打开浏览器窗口时，将提示您输入用户名和密码。  
   

@@ -20,12 +20,12 @@ ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0722716466caf2c38007890c10df519b1246dfa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 09e760bac8e31ba9c78b9809a12f8d595b7ebd05
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097924"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263933"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68097924"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="remarks"></a>备注  
  该视图只返回有关异步更新统计作业的信息。 有关异步更新统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  

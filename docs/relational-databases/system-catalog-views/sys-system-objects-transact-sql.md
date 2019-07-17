@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 069e9045-97f2-4463-8e8f-c73855f3ea0a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e660654e1260e61b3ed2c3815860be719fa83ce6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0583e5f6447753cc783e9b3047928d77765688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108847"
 ---
 # <a name="syssystemobjects-transact-sql"></a>sys.system_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   包含附带的所有架构范围内的系统对象的一个行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 所有系统对象都包含在名为 sys 或 INFORMATION_SCHEMA 的架构中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|对象名。|  
+|name|**sysname**|对象名。|  
 |object_id|**int**|对象标识号。 是在数据库中唯一。|  
 |principal_id|**int**|如果不是架构所有者，则为特定所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定其他所有者。<br /><br /> 如果没有其他单个所有者，则为 NULL。<br /><br /> 如果对象类型为下列类型之一，则为 NULL：<br /><br /> C = CHECK 约束<br /><br /> D = DEFAULT（约束或独立）<br /><br /> F = FOREIGN KEY 约束<br /><br /> PK = PRIMARY KEY 约束<br /><br /> R = 规则（旧式，独立）<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器<br /><br /> UQ = UNIQUE 约束|  
 |schema_id|**int**|包含该对象的架构的 ID。<br /><br /> 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 附带的所有架构范围内的系统对象，该值将始终在 (schema_id('sys'), schema_id('INFORMATION_SCHEMA')) 中。|  
@@ -48,7 +47,7 @@ ms.locfileid: "47841965"
 |is_published|**bit**|对象为发布对象。|  
 |is_schema_published|**bit**|仅发布对象的架构。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

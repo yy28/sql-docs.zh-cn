@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bbb2fc8aa232175ab3dd37f580b25c1bfb77129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 661a37b4136202b9a83b863535670a88a3f100dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102180"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   数据库中的所有表和大部分类型的索引的每个分区各对应一行。 在此视图中不包含全文索引、 空间和 XML 等特殊索引类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有表和索引都至少包含一个分区，无论它们是否已进行显式分区均为如此。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|指示分区 ID。 是在数据库中唯一。|  
 |object_id|**int**|指示此分区所属的对象的 ID。 每个表或视图都至少包含一个分区。|  
@@ -42,10 +41,10 @@ ms.locfileid: "47823125"
 |hobt_id|**bigint**|指示包含此分区的行的数据堆或 B 树的 ID。|  
 |rows|**bigint**|指示此分区中的大约行数。|  
 |filestream_filegroup_id|**smallint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示在此分区上存储的 FILESTREAM 文件组的 ID。|  
-|data_compression|**tinyint**|指示每个分区的压缩状态：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE:**适用范围**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**适用范围**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]通过 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **注意：** 全文索引将压缩的任何版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|data_compression|**tinyint**|指示每个分区的压缩状态：<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 列存储：适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br />4 = COLUMNSTORE_ARCHIVE:适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /><br /> **注意：** 全文索引将压缩的任何版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |data_compression_desc|**nvarchar(60)**|指示每个分区的压缩状态。 行存储表的可能值为 NONE、ROW 和 PAGE。 列存储表的可能值为 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

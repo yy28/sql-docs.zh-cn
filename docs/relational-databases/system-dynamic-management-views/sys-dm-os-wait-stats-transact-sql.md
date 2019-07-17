@@ -20,12 +20,12 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc1c8cff535d44cedeb5f42301f010278b87c96d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69e23838ed8b237c25bf7ec066e76ee685f25551
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899741"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262736"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "67899741"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
+上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层，需要`VIEW DATABASE STATE`数据库中的权限。 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准版和基本层，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ##  <a name="WaitTypes"></a> 等待的类型  
  **资源等待**工作线程请求访问资源，因为资源正由其他某个工作线程或尚不可用不可用时，便会发生资源等待。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象  

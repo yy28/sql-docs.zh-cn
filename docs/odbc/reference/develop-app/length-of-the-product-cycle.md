@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203ad92dd6abfc71b0fdeddc466752612e666cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100456"
 ---
 # <a name="length-of-the-product-cycle"></a>产品周期长度
 有关互操作性的最后一个问题是时间。 开发可互操作应用程序通常比开发一个 noninteroperable 长。 原因是应用程序必须检查 DBMS 功能、 执行相同的任务以不同的方式的不同 Dbms、 解决支持的某些 Dbms 而不是其他，功能和其他操作。  

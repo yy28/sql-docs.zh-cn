@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4ead7cf96ada6d6055bc676ecf4610f2cf4c8f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed366acde11778342387d3bcb152a6619a6a3778
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138870"
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL 语句的互操作性
 应用程序的其余部分，如 SQL 语句可以是可互操作或特定于 DBMS 的。 和需要的应用程序的其余部分，如是如何可互操作的 SQL 语句的选择取决于应用程序的类型。 自定义应用程序不太可能使用可互操作的 SQL 语句，因为它们通常设计为利用一个或可能是两个 Dbms 的功能。 通用应用程序使用可互操作的 SQL 语句，因为它们用于处理各种 Dbms。 和垂直应用程序通常在某个位置之间，要求苛刻的特定级别的功能，但以其他方式使用可互操作的 SQL 语句。  

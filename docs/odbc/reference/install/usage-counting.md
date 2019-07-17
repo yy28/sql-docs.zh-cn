@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edf9976dd3e5d890b46919808e896a8e81a0cd93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093795"
 ---
 # <a name="usage-counting"></a>使用情况计数
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.locfileid: "63273390"
   
  下表中显示文件使用情况计数值的格式。  
   
-|“属性”|数据类型|数据|  
+|名称|数据类型|Data|  
 |----------|---------------|----------|  
 |*full-path*|REG_DWORD|*计数*|  
   

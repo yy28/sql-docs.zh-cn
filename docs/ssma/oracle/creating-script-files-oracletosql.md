@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fe8dd1ebcc6604b8cff514cff3628abc23275517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287251"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264245"
 ---
 # <a name="creating-script-files-oracletosql"></a>创建脚本文件 (OracleToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建变量值文件和服务器连接文件。  
@@ -30,7 +30,7 @@ ms.locfileid: "63287251"
   
 2.  **服务器：** 使用户能够设置源/目标服务器定义。 这也可以是单独的服务器连接文件中。  
   
-3.  **script-commands:** 使用户能够执行 SSMA 工作流命令。  
+3.  **脚本命令：** 使用户能够执行 SSMA 工作流命令。  
   
 下面将详细介绍每个部分：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63287251"
   
     即使用只有一个或另一个指定的属性：  
   
-    -   source-use-last-used="true" (default) or source-server="source_servername"  
+    -   源-使用-上次使用 ="true"（默认值） 或源服务器 ="source_servername"  
   
     -   target-use-last-used="true" (default) or target-server="target_servername"  
   

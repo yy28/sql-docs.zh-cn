@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (Transact-SQL) | Microsoft Docs
+title: sp_delete_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085332"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>备注  
- **@originating_server**参数保留供内部使用。  
+ **@originating_server** 参数保留供内部使用。  
   
- **@delete_unused_schedule**参数通过自动删除未附加到任何作业的计划来提供与早期版本的 SQL Server 的向后兼容性。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，必须提供值**0**作为**@delete_unused_schedule**参数。  
+ **@delete_unused_schedule** 参数通过自动删除未附加到任何作业的计划来提供与早期版本的 SQL Server 的向后兼容性。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，必须提供值**0**作为 **@delete_unused_schedule** 参数。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   

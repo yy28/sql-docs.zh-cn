@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 800ec59fb837b167b1bcbffc61ddf7e8ce695849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216414"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>上下文连接和常规连接 - 限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47641785"
 ## <a name="restrictions-on-regular-connections"></a>对常规连接的限制  
  开发应用程序时，请考虑应用于常规连接的以下限制：  
   
--   不支持对内部服务器异步执行命令。 包括"async = true"在连接字符串的命令，然后再执行该命令中，会导致**System.NotSupportedException**所引发。 将出现此消息：“在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程内运行时，不支持异步处理。”  
+-   不支持对内部服务器异步执行命令。 包括"async = true"在连接字符串的命令，然后再执行该命令中，会导致**System.NotSupportedException**所引发。 将显示此消息："内运行时不支持异步处理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程。"  
   
 -   **SqlDependency**不支持对象。  
   

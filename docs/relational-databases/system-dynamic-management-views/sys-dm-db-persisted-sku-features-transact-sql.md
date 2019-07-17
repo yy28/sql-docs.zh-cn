@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9d8001765a06ce432ea8f5f7e3081e4a54e7efa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f59d96f9a1aa6598c5acb4fe9a88ea57965ede5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096273"
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   某些功能[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]更改的方式，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将信息存储在数据库文件。 这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 不能将包含这些功能的数据库移到不支持这些功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 sys.dm_db_persisted_sku_features 动态管理视图可列出当前数据库中启用的特定于版本的功能。
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|在数据库中启用但并非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都支持的功能的外部名称。 必须先删除此功能，然后才能将数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有可用版本。|  
-|feature_id|**int**|与功能关联的功能 ID。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 的用户。|  
+|feature_id|**int**|与功能关联的功能 ID。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
   
 ## <a name="permissions"></a>权限  
  需要对数据库拥有 VIEW DATABASE STATE 权限。  
@@ -53,7 +52,7 @@ ms.locfileid: "53202066"
   
     **适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
--   **压缩**:指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库能够移动到的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持此功能，请使用[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+-   **压缩**:指示在至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库能够移动到的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持此功能，请使用[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
 -   **MultipleFSContainers**:指示数据库使用多个 FILESTREAM 容器。 数据库包含具有多个容器 （文件） 的 FILESTREAM 文件组。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   

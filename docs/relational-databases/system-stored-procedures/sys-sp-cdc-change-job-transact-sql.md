@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106534"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  当*连续*= 0， **sp_cdc_scan**最多执行作业*max_scans*扫描日志，最多处理*max_trans*事务在每个扫描以及然后退出。  
   
- 如果**@continuous**从 1 更改为 0， **@pollinginterval**自动设置为 0。 为指定的值**@pollinginterval**而不将忽略 0。  
+ 如果 **@continuous** 从 1 更改为 0， **@pollinginterval** 自动设置为 0。 为指定的值 **@pollinginterval** 而不将忽略 0。  
   
- 如果**@continuous**忽略或显式设置为 NULL 并且**@pollinginterval**显式设置为值大于 0， **@continuous**自动设置为 1。  
+ 如果 **@continuous** 忽略或显式设置为 NULL 并且 **@pollinginterval** 显式设置为值大于 0， **@continuous** 自动设置为 1。  
   
  *连续*仅对捕获作业有效。  
   
@@ -84,7 +83,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  如果省略一个参数，则在关联的值[dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)表不会更新。 如果将参数显式设置为 NULL，则视作省略此参数。  
@@ -112,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. 更改清除作业  
- 下例更新 `AdventureWorks2012` 数据库中的一个清除作业。 所有有效参数为此作业类型时，除**@threshold**，指定。 值**@threshold**则不会修改。  
+ 下例更新 `AdventureWorks2012` 数据库中的一个清除作业。 所有有效参数为此作业类型时，除 **@threshold** ，指定。 值 **@threshold** 则不会修改。  
   
 ```  
 USE AdventureWorks2012;  

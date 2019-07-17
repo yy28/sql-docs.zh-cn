@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41bc227d238534a7fc1c0bee0070e3b6c973b2d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231866"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>使用 SQL Server Data Tools 创建多维模型 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579227"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含以下商业智能项目。  
   
-|项目|Description|  
+|项目|描述|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目|包含单个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的对象定义。 有关如何创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的详细信息，请参阅 [创建 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。|  
 |导入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2008 数据库|提供一个向导，您可以使用该向导，通过从现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库导入对象定义，来创建一个新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。|  
@@ -40,7 +40,7 @@ ms.locfileid: "57579227"
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 还包含多个侧重于各种查询或脚本的项目类型，如下表所示。  
   
-|项目|Description|  
+|项目|描述|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本|包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的 DMX、MDX 和 XMLA 脚本，以及与可执行这些脚本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间的连接。 有关详细信息，请参阅 [SQL Server Management Studio 中的 Analysis Services 脚本项目](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)。|  
 |SQL Server Compact 脚本|包含 SQL Server Compact 的 SQL 脚本，以及与对其执行这些脚本的 SQL Server Compact 实例之间的连接。|  

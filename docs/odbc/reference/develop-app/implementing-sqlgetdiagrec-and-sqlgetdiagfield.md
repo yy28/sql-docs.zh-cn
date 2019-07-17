@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216375"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>实现 SQLGetDiagRec 和 SQLGetDiagField
 **SQLGetDiagRec**并**SQLGetDiagField**由驱动程序管理器和每个驱动程序实现。 驱动程序管理器和每个驱动程序维护的每个环境、 连接、 语句和描述符句柄的诊断记录，仅当另一个函数调用与释放句柄或句柄的释放这些记录。  

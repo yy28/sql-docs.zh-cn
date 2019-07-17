@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a53a32f01dcf4646ee0bc12843c188b9b0e8e4c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097748"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "63013182"
   
  查询 sys.dm_exec_external_work 来标识为与外部数据源 （例如 Hadoop 或外部 SQL Server） 进行通信的工作。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|关联的 PolyBase 查询的唯一标识符。|请参阅*request_ID*中[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |step_index|**int**|此工作线程正在执行请求。|请参阅*step_index*中[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096074"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +54,9 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'` 是要返回的类型。 *table_type*是**sysname**，默认值为 NULL，并且可以具有下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**ALIAS**|别名。|  
+|**别名**|别名。|  
 |**全局临时**|系统范围内可用的临时表的名称。|  
 |**本地临时磁盘**|只限当前任务可用的临时表的名称。|  
 |**SYNONYM**|同义词的名称。|  
@@ -66,20 +65,20 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|用户表的名称。|  
 |**VIEW**|视图的名称。|  
   
-`[ @fUsePattern = ] 'fUsePattern'` 确定是否字符 **_**， **%**， **[**，并且 **]** 解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
+`[ @fUsePattern = ] 'fUsePattern'` 确定是否字符 **_** ， **%** ， **[** ，并且 **]** 解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表限定符名称。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些其他产品中，该列表示表的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表限定符名称。 多种 DBMS 产品支持表的三部分命名 (_限定符_ **。** _所有者_ **。** _名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些其他产品中，该列表示表的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**TABLE_TYPE**|**varchar(32)**|表、系统表或视图。|  
-|**REMARKS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
+|**备注**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
   
 ## <a name="remarks"></a>备注  
  **sp_tables_ex**执行的查询的表行集**IDBSchemaRowset**对应的 OLE DB 访问接口*table_server*。 *Table_name*， *table_schema*， *table_catalog*，以及*列*参数传递给此接口的行进行限制返回。  
@@ -101,13 +100,13 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
   
 ## <a name="see-also"></a>请参阅  
  [分布式查询存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_columns_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73f8b43a39f30720c6e9c8e4a4969ba350ebd8a0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e24659cc7880a5df34aa451c5051e77b8a4c59d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117946"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @job_login = ] 'job_login'` 是用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此 Windows 帐户始终用于到分发服务器的代理连接，以及在使用 Windows 集成身份验证时用于到订阅服务器和发布服务器的连接。  
+`[ @job_login = ] 'job_login'` 是用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)** ，默认值为 NULL。 此 Windows 帐户始终用于到分发服务器的代理连接，以及在使用 Windows 集成身份验证时用于到订阅服务器和发布服务器的连接。  
   
 `[ @job_password = ] 'job_password'` 是用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
   
@@ -144,7 +143,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_subday = ] frequency_subday` 是如何通常定义的周期内重新计划。 *frequency_subday*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二个|  
@@ -162,7 +161,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @active_end_date = ] active_end_date` 为合并代理停止的日期安排，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以同步订阅通过 Windows 同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定是否可以同步订阅通过 Windows 同步管理器。 *enabled_for_syncmgr* 是 **nvarchar(5)** ，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -179,9 +178,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="see-also"></a>请参阅  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

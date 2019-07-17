@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080776"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>支持规则、触发器、默认值和存储过程（Visual FoxPro ODBC 驱动程序）
 无法创建 Visual FoxPro 规则、 触发器、 默认值或使用 Visual FoxPro ODBC 驱动程序的存储的过程。 但是，你的应用程序可能交互与现有规则、 触发器、 默认值或存储的过程中，因为它将插入、 更新或删除存储在数据库中的 Visual FoxPro 数据。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62818560"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262990"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>将转换数据库对象加载到 SQL Server (OracleToSQL)
 Oracle 架构转换为 SQL Server 后，可以加载到 SQL Server 生成的数据库对象。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 此外，SSMA 可以使用 SQL Server 数据库的实际内容更新目标元数据。  

@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211921"
 ---
 # <a name="programming-languages"></a>编程语言
-  本部分介绍如何进行编程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic.NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.NET 和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual c + +。  
+  本部分介绍如何进行编程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic.NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .NET，和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C++。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[Visual Basic.NET 入门](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|提供有关如何开始在 Visual Basic.NET 编写 SMO 程序的信息|  
 |[开始在 Visual C&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|有关如何开始编写 SMO 程序的 Visual C#.NET 提供的信息|  

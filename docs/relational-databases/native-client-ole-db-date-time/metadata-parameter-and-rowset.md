@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64690a297e70ac9d8d07a7ade58b03bee01df3da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d661072ae999721c258b2fd85b53665e2104b2f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106924"
 ---
 # <a name="metadata---parameter-and-rowset"></a>元数据 - 参数和行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "51662436"
 -   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- 通过 prgParamInfo 在 DBPARAMINFO 结构中返回以下信息：  
+ 通过 prgParamInfo 在 DBPARAMINFO 结构中返回以下信息  ：  
   
-|参数类型|wType|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|wType |*ulParamSize*|*bPrecision*|*bScale*|dwFlags <br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -56,10 +55,10 @@ ms.locfileid: "51662436"
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo 和隐含的参数类型  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
   
-|*pwszDataSourceType*<br /><br /> （特定于访问接口）|*pwszDataSourceType*<br /><br /> （一般 OLE DB）|*ulParamSize*|*bScale*|  
+|pwszDataSourceType <br /><br /> （特定于访问接口）|pwszDataSourceType <br /><br /> （一般 OLE DB）|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|忽略|  
-|日期|DBTYPE_DBDATE|6|忽略|  
+|date|DBTYPE_DBDATE|6|忽略|  
 ||DBTYPE_DBTIME|10|忽略|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|忽略|  
@@ -69,14 +68,14 @@ ms.locfileid: "51662436"
   
  *BPrecision*参数将被忽略。  
   
- 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型。 当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换。 *bScale*如果提供程序特定于类型名称，则忽略"**datetime**"**smalldatetime**"使用。 否则，应用程序必须确保*bScale*已正确设置。 从 MDAC 升级的应用程序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用"DBTYPE_DBTIMESTAMP"，如果它们没有设置将失败*bScale*正确。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL。  
+ 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型   。 当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换   。 *bScale*如果提供程序特定于类型名称，则忽略"**datetime**"**smalldatetime**"使用。 否则，应用程序必须确保*bScale*已正确设置。 从 MDAC 升级的应用程序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用"DBTYPE_DBTIMESTAMP"，如果它们没有设置将失败*bScale*正确。 当连接到早于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL  。  
   
  不调用 icommandwithparameters:: Setparameterinfo 时，提供程序表示服务器类型 iaccessor:: Createaccessor 中指定的绑定类型，如下所示：  
   
-|绑定类型|*pwszDataSourceType*<br /><br /> （特定于访问接口）|  
+|绑定类型|pwszDataSourceType <br /><br /> （特定于访问接口）|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|日期|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -87,7 +86,7 @@ ms.locfileid: "51662436"
   
 |列类型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -119,16 +118,16 @@ ms.locfileid: "51662436"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 结构返回以下信息：  
   
-|参数类型|wType|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|参数类型|wType |*ulColumnSize*|*bPrecision*|*bScale*|dwFlags <br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|将|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|将|  
   
- 在 dwFlags 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，而下列标志则始终为 False：  
+ 在 dwFlags 中，对于日期/时间类型，DBCOLUMNFLAGS_ISFIXEDLENGTH 始终为 True，而下列标志则始终为 False  ：  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -144,9 +143,9 @@ ms.locfileid: "51662436"
   
  可以设置其余标志（DBCOLUMNFLAGS_ISNULLABLE、DBCOLUMNFLAGS_MAYBENULL、DBCOLUMNFLAGS_WRITE 和 DBCOLUMNFLAGS_WRITEUNKNOWN）。  
   
- dwFlags 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 wType 为 DBTYPE_DBTIMESTAMP。 还必须使用 bScale 来标识服务器类型。  
+ dwFlags 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 wType 为 DBTYPE_DBTIMESTAMP   。 还必须使用 bScale 来标识服务器类型  。  
   
 ## <a name="see-also"></a>请参阅  
- [元数据&#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [元数据 &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   
