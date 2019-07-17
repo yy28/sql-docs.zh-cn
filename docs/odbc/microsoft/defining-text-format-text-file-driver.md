@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 500a81146397fa5c50bd8b74c600d04887ecc99c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096355"
 ---
 # <a name="defining-text-format-text-file-driver"></a>定义文本格式（文本文件驱动程序）
 使用文本驱动程序时，可以使用**定义文本格式**对话框可以在所选文件中定义的列的格式。 此对话框中，您可以指定每个数据表的架构。 此信息写入到中的数据源目录的 Schema.ini 文件。 为每个文本数据源目录创建单独的 Schema.ini 文件。  
@@ -29,7 +28,7 @@ ms.locfileid: "63240382"
   
  中提供了以下选项**定义文本格式**对话框：  
   
-|Option|信息|  
+|Option|Information|  
 |------------|-----------------|  
 |**“添加”**|添加使用中的值的列**数据类型**，**名称**，并**宽度**从对话框中，并且如果适用，日期分隔符值从 Schema.ini。|  
 |**字符**|**ANSI**或**OEM**。 OEM 可指定非 ANSI 字符集。 如果在选择的项的格式，则默认为 OEM**表**列表不以前定义的此对话框。|  

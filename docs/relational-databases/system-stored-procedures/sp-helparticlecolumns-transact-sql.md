@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fd7a493a3126aecbf816d364e5b7497f2bf494d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084966"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,11 +53,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**列 id**|**int**|列的标识符。|  
 |**column**|**sysname**|列的名称。|  
-|**published**|**bit**|指示是否发布列：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
+|**已发布**|**bit**|指示是否发布列：<br /><br /> 0 = 否 <br /><br /> 1 = 是 |  
 |**发布服务器类型**|**sysname**|发布服务器上列的数据类型。|  
 |**订阅服务器类型**|**sysname**|订阅服务器上列的数据类型。|  
   
@@ -76,7 +75,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (Transact-SQL) | Microsoft Docs
+title: sp_dsninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124710"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'` 是要返回类型。 如果*info_type*未指定或指定为 NULL，则返回所有信息类型。 *info_type*是**varchar （128)** ，默认值为 NULL，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**DBMS_NAME**|指定数据源供应商名称。|  
 |**DBMS_VERSION**|指定数据源版本。|  
@@ -59,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type` 是数据源类型。 *dso_type*是**int**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**1** （默认值）|ODBC 数据源|  
 |**3**|OLE DB 数据源|  
@@ -69,7 +68,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**信息类型**|**nvarchar(64)**|信息类型，如 DBMS_NAME、DBMS_VERSION、DATABASE_NAME 和 SQL_SUBSCRIBER。|  
 |**ReplTest1**|**nvarchar(512)**|关联的信息类型的值。|  
@@ -83,7 +82,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_dsninfo**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [sp_enumdsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

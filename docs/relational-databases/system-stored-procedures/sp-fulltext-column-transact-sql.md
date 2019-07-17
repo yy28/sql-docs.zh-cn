@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124340"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'` 是要执行的操作。 *操作*是**varchar （20)** ，无默认值可以是以下值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**add**|将添加*column_name*的*qualified_table_name*到表的非活动的全文索引。 此操作可启用列以进行全文索引。|  
 |**drop**|移除*column_name*的*qualified_table_name*从表的非活动的全文索引。|  
@@ -73,7 +72,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  如果全文索引处于活动状态，则将停止所有正在进行的填充。 而且，如果一个具有活动全文索引的表启用了更改跟踪，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会确保索引是当前索引。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止对表的所有当前填充，删除现有索引，并启动新填充。  

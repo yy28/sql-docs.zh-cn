@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6ce5decd2744c0ce9d753e355321a40d00fd620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 521a2ffbf0f8eb5e2590ae6e42d50dc71d536683
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086045"
 ---
 # <a name="transactions-odbc"></a>事务 ODBC
 一个*事务*是工作单元，都将作为一个原子操作; 也就是说，操作是成功还是失败作为一个整体。 例如，考虑将资金从一个银行帐户转移到另一个。 这涉及到两个步骤： 从第一个帐户存款资金并存储在第二个。 非常重要，这两个步骤都成功;不可以接受的一个步骤成功，另一个失败。 支持事务的数据库可为确保这一点。  

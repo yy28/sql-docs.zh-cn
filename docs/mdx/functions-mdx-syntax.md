@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 126cfdf6ef690a48d0b9ff17a6963ba37d3ade82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084136"
 ---
 # <a name="functions-mdx-syntax"></a>函数（MDX 语法）
 
@@ -24,7 +23,7 @@ ms.locfileid: "62690169"
 > [!NOTE]  
 >  有关各个函数的详细信息，请参阅[MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)。  
   
-|函数类别|Description|  
+|函数类别|描述|  
 |-----------------------|-----------------|  
 |数组函数|提供存储过程中使用的数组。<br /><br /> 有关详细信息，请参阅[使用存储过程&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)。|  
 |维度函数|从层次结构、级别或成员返回对维度的引用。<br /><br /> 有关详细信息，请参阅[使用维度、 层次结构和级别函数](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  

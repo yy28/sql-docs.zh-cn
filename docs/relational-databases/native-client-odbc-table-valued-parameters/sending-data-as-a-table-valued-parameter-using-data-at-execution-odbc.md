@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e208fbfe1205c09b51796628610f2def8798fea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3989c7543361be8dfc6807d11ccdc3e97b78e46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129186"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +187,7 @@ from @Items
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  此示例演示您可以使用行流式处理，每次调用 SQLPutData 对 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的一个行。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
@@ -376,7 +375,7 @@ EXIT:
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  此示例演示您可以使用行流式处理，每次调用 SQLPutData 对 ODBC TVP，类似于如何使用 BCP.exe 将数据加载到数据库的多个行。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  

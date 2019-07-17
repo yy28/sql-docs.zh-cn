@@ -18,28 +18,27 @@ helpviewer_keywords:
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23935ef020763bffe80957f054637a96e6785db
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078357"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为当前数据库中的当前用户可访问的视图返回一行。  
   
- 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。**_view_name_。  
+ 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。** _view_name_。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|视图限定符。|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该视图的架构名称。<br /><br /> **&#42;&#42;重要&#42; &#42;** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|视图名。|  
-|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|如果定义的长度大于**nvarchar (** 4000 **)**，此列为 NULL。 否则，该列是视图定义文本。|  
+|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|如果定义的长度大于**nvarchar (** 4000 **)** ，此列为 NULL。 否则，该列是视图定义文本。|  
 |**CHECK_OPTION**|**varchar(** 7 **)**|WITH CHECK OPTION 的类型。 如果最初的视图是使用 WITH CHECK OPTION 创建的，那么就为 CASCADE。 否则，返回 NONE。|  
 |**IS_UPDATABLE**|**varchar(** 2 **)**|指定视图是否可更新。 始终返回 NO。|  
   

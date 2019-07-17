@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119334"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  每个备份集在表中占一行。 备份集包含来自单个成功备份操作的备份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 语句对指定的一个或多个备份设备上的介质集中的单个备份集进行操作。  
+  每个备份集在表中占一行。 备份集  包含来自单个成功备份操作的备份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 语句对指定的一个或多个备份设备上的介质集中的单个备份集进行操作。  
   
  此表存储中**msdb**数据库。  
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|标识备份集的唯一备份集标识号。 标识，主键。|  
 |**backup_set_uuid**|**uniqueidentifier**|标识备份集的唯一备份集标识号。|  
-|**media_set_id**|**int**|标识备份集所在介质集的唯一介质集标识号。 引用**backupmediaset （media_set_id)**。|  
+|**media_set_id**|**int**|标识备份集所在介质集的唯一介质集标识号。 引用**backupmediaset （media_set_id)** 。|  
 |**first_family_number**|**tinyint**|备份集中第一个介质簇的编号。 可以为 NULL。|  
 |**first_media_number**|**smallint**|备份集从此处开始的介质的编号。 可以为 NULL。|  
 |**last_family_number**|**tinyint**|备份从此处结束的介质的编号。 可以为 NULL。|  
@@ -50,7 +49,7 @@ ms.locfileid: "52402843"
 |**position**|**int**|还原操作中用来定位相应的备份集和文件的备份集位置。 可以为 NULL。 有关详细信息，请参阅中的文件[备份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**expiration_date**|**datetime**|备份集过期的日期和时间。 可以为 NULL。|  
 |**software_vendor_id**|**int**|写入备份介质标头的软件供应商标识号。 可以为 NULL。|  
-|**名称**|**nvarchar(128)**|备份集的名称。 可以为 NULL。|  
+|**name**|**nvarchar(128)**|备份集的名称。 可以为 NULL。|  
 |**description**|**nvarchar(255)**|备份集的说明。 可以为 NULL。|  
 |**user_name**|**nvarchar(128)**|执行备份操作的用户的名称。 可以为 NULL。|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主版本号。 可以为 NULL。|  
@@ -65,7 +64,7 @@ ms.locfileid: "52402843"
 |**database_creation_date**|**datetime**|数据库最初创建的日期和时间。 可以为 NULL。|  
 |**backup_start_date**|**datetime**|备份操作的开始日期和时间。 可以为 NULL。|  
 |**backup_finish_date**|**datetime**|备份操作的结束日期和时间。 可以为 NULL。|  
-|**类型**|**char(1)**|备份类型。 可以是：<br /><br /> D = 数据库<br /><br /> I = 差异数据库<br /><br /> L = 日志<br /><br /> F = 文件或文件组<br /><br /> G = 差异文件<br /><br /> P = 部分<br /><br /> Q = 差异部分<br /><br /> 可以为 NULL。|  
+|**type**|**char(1)**|备份类型。 可以是：<br /><br /> D = 数据库<br /><br /> I = 差异数据库<br /><br /> L = 日志<br /><br /> F = 文件或文件组<br /><br /> G = 差异文件<br /><br /> P = 部分<br /><br /> Q = 差异部分<br /><br /> 可以为 NULL。|  
 |**sort_order**|**smallint**|执行备份操作的服务器的排序顺序。 可以为 NULL。 有关排序顺序和排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**code_page**|**smallint**|执行备份操作的服务器的代码页。 可以为 NULL。 有关代码页的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**compatibility_level**|**tinyint**|数据库的兼容级别设置。 可以是：<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 可以为 NULL。<br /><br /> 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  

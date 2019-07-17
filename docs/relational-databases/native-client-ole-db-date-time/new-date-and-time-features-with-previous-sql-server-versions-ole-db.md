@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188a2322dd60a84b62a509d5622e827bdbae8e38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106914"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52534716"
   
 |OLE DB 客户端类型|SQL Server 2005 类型|SQL Server 2008 （或更高版本） 类型|结果转换（服务器到客户端）|参数转换（客户端到服务器）|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DATETIME|date|“确定”|“确定”|  
+|DBTYPE_DBDATE|Datetime|Date|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零值，则由于字符串截断将失败 IRowsetChange。|  
 |DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零值，则由于字符串截断将失败 IRowsetChange。<br /><br /> 忽略日期。|  
@@ -42,7 +41,7 @@ ms.locfileid: "52534716"
 |DBTYPE_DBTIMESTAMP|||失败的无效的时间文字。|“确定”|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|“确定”|“确定”|  
-|DBTYPE_DBDATE|Smalldatetime|date|“确定”|“确定”|  
+|DBTYPE_DBDATE|Smalldatetime|Date|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零值，则由于字符串截断将失败 IRowsetChange。|  
 |DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零值，则由于字符串截断将失败 IRowsetChange。<br /><br /> 忽略日期。|  
@@ -58,7 +57,7 @@ ms.locfileid: "52534716"
   
 -   切换到**datetime2**由于这是首选的数据类型的日期和时间。  
   
- 使用通过 icommandwithparameters:: Getparameterinfo 或架构行集获取的服务器元数据来设置通过 icommandwithparameters:: Setparameterinfo 参数类型信息的应用程序将在客户端转换期间失败的字符串源类型的表示形式大于目标类型的字符串表示形式。 例如，如果客户端绑定使用 DBTYPE_DBTIMESTAMP，且服务器列为日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 将值转换为"yyyy dd mm hh:mm:ss.fff"，但服务器元数据将作为返回**nvarchar(10)**。 生成的溢出会导致 DBSTATUS_E_CATCONVERTVALUE。 因为从结果集元数据设置行集元数据时，由 IRowsetChange 中的数据转换出现类似问题。  
+ 使用通过 icommandwithparameters:: Getparameterinfo 或架构行集获取的服务器元数据来设置通过 icommandwithparameters:: Setparameterinfo 参数类型信息的应用程序将在客户端转换期间失败的字符串源类型的表示形式大于目标类型的字符串表示形式。 例如，如果客户端绑定使用 DBTYPE_DBTIMESTAMP，且服务器列为日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 将值转换为"yyyy dd mm hh:mm:ss.fff"，但服务器元数据将作为返回**nvarchar(10)** 。 生成的溢出会导致 DBSTATUS_E_CATCONVERTVALUE。 因为从结果集元数据设置行集元数据时，由 IRowsetChange 中的数据转换出现类似问题。  
   
 ### <a name="parameter-and-rowset-metadata"></a>参数和行集元数据  
  本部分介绍对使用的版本编译的客户端的参数、 结果列和架构行集元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
@@ -68,7 +67,7 @@ ms.locfileid: "52534716"
   
 |参数类型|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|日期|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -82,7 +81,7 @@ ms.locfileid: "52534716"
   
 |列类型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|日期|DBTYPE_WSTR|10|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -94,7 +93,7 @@ ms.locfileid: "52534716"
   
 |参数类型|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|日期|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -109,7 +108,7 @@ ms.locfileid: "52534716"
   
 |列类型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|日期|DBTYPE_WSTR|10|20|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -121,7 +120,7 @@ ms.locfileid: "52534716"
   
 |列类型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|日期|DBTYPE_WSTR|10|20|日期|  
+|date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
@@ -131,9 +130,9 @@ ms.locfileid: "52534716"
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES 行集  
  对于日期/时间类型将返回以下行：  
   
-|类型 -><br /><br /> “列”|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|类型 -><br /><br /> “列”|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
@@ -145,7 +144,7 @@ ms.locfileid: "52534716"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

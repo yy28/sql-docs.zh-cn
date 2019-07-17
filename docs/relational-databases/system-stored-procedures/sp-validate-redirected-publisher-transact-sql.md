@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56e490fa3a860b3fc4e18e72d674c70d29130f5b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc600aeabd1c988c0f9a6768da7fd0f0d280552b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119420"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "58527299"
  无。  
   
 ## <a name="remarks"></a>备注  
- 如果未输入任何发布服务器和发布数据库中， **sp_validate_redirected_publisher**在输出参数返回 null *@redirected_publisher*。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
+ 如果未输入任何发布服务器和发布数据库中， **sp_validate_redirected_publisher**在输出参数返回 null *@redirected_publisher* 。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
   
  如果验证成功， **sp_validate_redirected_publisher**返回一个成功指示。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ecdbff5b071ae82fe8bd8322c1ef9d46f153b0cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092483"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>更改属性类型（用于 Excel 的 MDS 外接程序）
 
@@ -29,7 +28,7 @@ ms.locfileid: "65488908"
 > [!NOTE]  
 >  不能更新“名称”  或“代码”  列的类型或长度。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
@@ -48,7 +47,7 @@ ms.locfileid: "65488908"
   
 4.  在 **“特性属性”** 对话框中，根据需要更新设置。  
   
-5.  单击“确定”  。  
+5.  单击 **“确定”** 。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>在更改属性类型时会发生什么情况？  
  如果属性没有任何依赖项，例如属性被 MDS 业务规则或派生层次结构引用，则无法更改属性的数据类型。 获取一个错误，指出无法修改属性类型，因为它被对象引用。  

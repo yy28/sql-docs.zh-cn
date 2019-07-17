@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096335"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL 命令
 将标记为删除的记录。  
@@ -34,10 +33,10 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>参数  
- FROM [ *DatabaseName!* ] *TableName*  
+ 从 [ *DatabaseName ！* ]*TableName*  
  指定在其中记录标记为删除的表。  
   
- *DatabaseName!* 指定如果包含数据库不是与数据源指定的数据库包含的表的数据库的名称。 必须包含的数据库，如果数据库不是与数据源指定的数据库包含的表的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  
+ *DatabaseName ！* 指定如果包含数据库不是与数据源指定的数据库包含的表的数据库的名称。 必须包含的数据库，如果数据库不是与数据源指定的数据库包含的表的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  
   
  其中*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
  指定 Visual FoxPro 将标记为删除的特定记录。  

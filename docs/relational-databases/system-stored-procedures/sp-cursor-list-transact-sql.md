@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108580"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +41,27 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @cursor_return= ] *cursor_variable_name*OUTPUT  
+ [ @cursor_return=] *cursor_variable_name*输出  
  已声明的游标变量的名称。 *cursor_variable_name*是**光标**，无默认值。 游标是可滚动、 动态、 只读游标。  
   
  [ @cursor_scope= ] *cursor_scope*  
  指定要报告的游标级别。 *cursor_scope*是**int**，无默认值，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |1|报告所有本地游标。|  
 |2|报告所有全局游标。|  
 |3|报告本地游标和全局游标。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="cursors-returned"></a>返回的游标  
  sp_cursor_list 返回的报告是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标输出参数，而不是结果集。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器便可以按一次一行的方式处理输出。 这还意味着无法直接从数据库 API 函数调用该过程。 游标输出参数必须绑定到程序变量，但是数据库 API 不支持绑定游标参数或变量。  
   
  以下是 sp_cursor_list 返回的游标格式。 游标格式与 sp_describe_cursor 返回的格式相同。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|用于引用游标的名称。 如果通过 DECLARE CURSOR 语句中给定的名称引用游标，则引用名称与游标名称相同。 如果通过变量引用游标，则引用名称为游标变量的名称。|  
 |cursor_name|**sysname**|来自 DECLARE CURSOR 语句的游标名称。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果创建的游标变量设置为游标，游标**cursor_name**返回游标变量的名称。  在早期版本中，此输出列将返回系统生成的名称。|  

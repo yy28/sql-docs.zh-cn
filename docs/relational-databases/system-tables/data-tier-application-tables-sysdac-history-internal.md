@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084762"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>数据层应用程序表 - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含为管理数据层应用程序 (DAC) 而执行的操作的相关信息。 此表存储中**dbo**的架构**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|操作的标识符|  
 |**sequence_id**|**int**|标识某一操作内的步骤。|  
@@ -40,12 +39,12 @@ ms.locfileid: "62471136"
 |**dac_object_type**|**tinyint**|受操作影响的对象类型的标识符：<br /><br /> **0** = dacpac<br /><br /> **1** = 登录名<br /><br /> **2** = 数据库|  
 |**dac_object_type_name**|**varchar(8)**|受操作影响的对象类型的名称：<br /><br /> **dacpac** = DAC 实例<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|标识当前操作状态的代码：<br /><br /> **0** = 挂起<br /><br /> **1** = 成功<br /><br /> **2** = 失败|  
-|**action_status_name**|**varchar(11)**|操作的当前状态：<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
+|**action_status_name**|**varchar(11)**|操作的当前状态：<br /><br /> **pending**<br /><br /> **success**<br /><br /> **失败**|  
 |**必需**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]在回滚 DAC 操作时使用。|  
 |**dac_object_name_pretran**|**sysname**|在提交包含操作的事务前对象的名称。 仅用于数据库和登录名。|  
 |**dac_object_name_posttran**|**sysname**|在提交包含操作的事务后对象的名称。 仅用于数据库和登录名。|  
 |**sqlscript**|**nvarchar(max)**|对数据库或登录名实现操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|  
-|**payload**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
+|**有效负载**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
 |**注释**|**varchar(max)**|记录接受了 DAC 升级中的潜在数据损失的用户的登录名。|  
 |**error_string**|**nvarchar(max)**|在操作遇到错误时生成的错误消息。|  
 |**created_by**|**sysname**|启动了创建此条目的操作的登录名。|  
@@ -83,6 +82,6 @@ WHERE instance_id NOT IN
 ## <a name="see-also"></a>请参阅  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [sysdac_instances_internal &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

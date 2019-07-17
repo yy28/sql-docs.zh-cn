@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122915"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +33,10 @@ ms.locfileid: "62645187"
 > [!NOTE]  
 >  **Backupfilegroup**表显示了文件组配置的数据库，而不是备份集。 若要确定是否将文件包括在备份集中，使用**is_present**的列[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)表。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|包含该文件组的备份集。|  
-|**名称**|**sysname**|文件组的名称。|  
+|**name**|**sysname**|文件组的名称。|  
 |**filegroup_id**|**int**|文件组的 ID；在数据库中唯一。 对应于**data_space_id**中**sys.filegroups**。|  
 |**filegroup_guid**|**uniqueidentifier**|文件组的全局唯一标识符。 可以为 NULL。|  
 |**type**|**char(2)**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  

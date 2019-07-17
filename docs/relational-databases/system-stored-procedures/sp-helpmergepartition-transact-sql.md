@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137662"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**partition**|**int**|标识订阅服务器分区。|  
 |**host_name**|**sysname**|创建订阅的分区筛选的值时使用值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数。|  

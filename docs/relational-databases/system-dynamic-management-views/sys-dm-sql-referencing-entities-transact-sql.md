@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090664"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "53204536"
   
 -   服务器级 DDL 触发器  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +65,7 @@ sys.dm_sql_referencing_entities (
   
  *schema_name*必需的当引用的类是 PARTITION_FUNCTION 时。  
   
- *schema_name.referenced_entity_name*是**nvarchar(517)**。  
+ *schema_name.referenced_entity_name*是**nvarchar(517)** 。  
   
  *< Referenced_class >* :: = {对象 |类型 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
  被引用的实体的类。 每个语句只能指定一个类。  
@@ -75,7 +74,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|引用实体所属的架构。 可以为 Null。<br /><br /> 对于数据库级和服务器级 DDL 触发器，为 NULL。|  
 |referencing_entity_name|**sysname**|引用实体的名称。 不可为 null。|  
@@ -102,22 +101,22 @@ sys.dm_sql_referencing_entities (
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
-|表|是*|用户帐户控制|  
-|“查看”|用户帐户控制|用户帐户控制|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|用户帐户控制|用户帐户控制|  
-|CLR 存储过程|否|用户帐户控制|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|用户帐户控制|用户帐户控制|  
-|CLR 用户定义函数|否|用户帐户控制|  
+|表|是*|是|  
+|“查看”|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
+|CLR 存储过程|否|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
+|CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|用户帐户控制|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|用户帐户控制|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|用户帐户控制|否|  
-|扩展存储过程|否|用户帐户控制|  
-|队列|否|用户帐户控制|  
-|同义词|否|用户帐户控制|  
-|类型（别名和 CLR 用户定义类型）|否|用户帐户控制|  
-|XML 架构集合|否|用户帐户控制|  
-|分区函数|否|用户帐户控制|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|扩展存储过程|否|是|  
+|队列|否|是|  
+|同义词|否|是|  
+|类型（别名和 CLR 用户定义类型）|否|是|  
+|XML 架构集合|否|是|  
+|分区函数|否|是|  
   
  \* 仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型或 XML 架构集合定义中的计算的列、 CHECK 约束或 DEFAULT 约束。  
   

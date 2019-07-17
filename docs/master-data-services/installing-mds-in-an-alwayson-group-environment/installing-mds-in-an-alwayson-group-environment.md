@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81a8e4ae45f8652b5928bb768e506dc1acc682d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135842"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -94,7 +93,7 @@ ms.locfileid: "66015101"
 
 WSFC 是一种用于提升应用程序服务高可用性的功能。 它由一组独立的 Windows Server 实例以及在这些实例上运行的 Microsoft 故障转移群集服务组成。 这些 Windows Server 实例（或有时被称为节点）彼此连接，以实现相互通信，这样就可以进行故障检测。 WSFC 提供故障检测和故障转移功能。 如果群集中的某个节点或服务出现故障，则会检测到该故障，并且另一个节点将自动或手动开始提供托管在故障节点上的服务。 因此，用户仅遇到最小程度的服务中断，服务可用性得以提升。  
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>系统必备
 
 所有实例都已安装 Windows Server 操作系统，并且所有更新都已修补。
 
@@ -213,7 +212,7 @@ AG 可增强数据库级别的高可用性。 AG（一组用户数据库）及�
 FCI 可增强实例级别的高可用性。 SQL Server 服务及相关服务均在 WSFC 中注册为资源。 此外，FCI 解决方案需要对称的共享磁盘存储（例如 SAN 或 SMB 文件共享），这些存储必须适用于 WFC 群集中的所有节点。
 
 
-### <a name="prerequisites"></a>先决条件
+### <a name="prerequisites"></a>系统必备
 
 -   在所有节点上安装 SQL Server。 有关详细信息，请参阅[安装 SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)。
 

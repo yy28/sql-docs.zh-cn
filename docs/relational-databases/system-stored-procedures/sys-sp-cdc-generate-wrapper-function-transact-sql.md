@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0ea44e7c2d9ca4f56d401688aa496aa851e563fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083754"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|列类型|Description|  
+|列名|列类型|描述|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar(145)**|生成的函数的名称。|  
 |**create_script**|**nvarchar(max)**|创建捕获实例包装函数的脚本。|  

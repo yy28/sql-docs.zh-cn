@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66fc728440808314dbdaa30065c68232f4a89fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100615"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>重写数字数据类型的默认精度和小数位数
 如果 ARD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用**SQLBindCol**或**SQLSetDescField**中 ARD, SQL_DESC_SCALE 字段设置为 0 并且 SQL_DESC_PRECISION 字段设置为驱动程序定义的默认精度。 这也是如此 APD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用时**SQLBindParameter**或**SQLSetDescField**。 这适用于输入、 输入/输出或输出参数。  

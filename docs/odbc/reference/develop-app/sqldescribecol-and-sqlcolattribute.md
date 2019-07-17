@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e569e51540cbaa5612b158abdacac5faae77f940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d602368475c6f1326cc615453116e898b1c1892f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107445"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 和 SQLColAttribute
 **SQLDescribeCol**并**SQLColAttribute**用于检索结果集元数据。 这两个函数之间的差异在于**SQLDescribeCol**始终返回相同的五项信息 （列的名称、 数据类型、 精度、 小数位数和为 null 性），同时**SQLColAttribute**返回单个应用程序请求的信息片段。 但是， **SQLColAttribute**可以返回元数据，包括列的区分大小写一个丰富得多选择、 显示大小、 可更新性，以及可搜索性。  

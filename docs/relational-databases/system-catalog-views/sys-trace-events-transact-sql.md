@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 302a0ea8c058eb3e69d89c2fc1e742af1965c4ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106662"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,16 +36,16 @@ ms.locfileid: "47628295"
  有关这些跟踪事件的详细信息，请参阅[SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|事件的唯一 ID。 此列也是在**sys.trace_event_bindings**并**sys.trace_subclass_values**目录视图。|  
 |**category_id**|**smallint**|事件的类别 ID。 此列也是在**sys.trace_categories**目录视图。|  
-|**名称**|**nvarchar(128)**|此事件的唯一名称。 此参数未本地化。|  
+|**name**|**nvarchar(128)**|此事件的唯一名称。 此参数未本地化。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.traces &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys.trace_categories &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   

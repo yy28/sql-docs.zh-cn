@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 20cda553190074236f8cf50bb719a5c1e019e416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de3a1619a1ff5f7e6b44b40e07d73892d2742949
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139332"
 ---
 # <a name="appendix---1-mysqltosql"></a>附录 - 1 (MySQLToSQL)
 SSMA 控制台命令行选项的快速视图：  

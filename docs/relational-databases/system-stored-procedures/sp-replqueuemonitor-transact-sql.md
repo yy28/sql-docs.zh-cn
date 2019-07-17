@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d8c931f4ec38fe6099afa6b098445dcdbc52b0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090002"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 `[ @publisherdb = ] 'publisher_db' ]` 是发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 NULL 表示所有发布数据库。  
   
-`[ @publication = ] 'publication' ]` 是发布的名称。 *发布*是**sysname**，默认值为 NULL。 NULL 表示所有发布。   
+`[ @publication = ] 'publication' ]` 是发布的名称。 *发布*是**sysname**，默认值为 NULL。 NULL 表示所有发布。  
   
 `[ @tranid = ] 'tranid' ]` 事务 id。 *tranid*是**sysname**，默认值为 NULL。 NULL 表示所有事务。  
   
- [**@queuetype=** ] **'***queuetype***’** ]  
+ [ **@queuetype=** ] **'***queuetype***’** ]  
  存储事务的队列类型。 *queuetype*是**tinyint**默认值为**0**，可以是下列值之一。  
   
 |ReplTest1|Description|  

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5dcea48b96087770ff90202a9e0758c35203316
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9de8b347aa0df4dc79570cae737525f0b1ca7eaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099443"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
- property  
+ property   
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
@@ -68,9 +67,9 @@ RETCODE bcp_setbulkmode (
   
  bcp_setbulkmode 是使用的替代方法[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)并[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)，其仅可让你可以指定每个函数调用某一列的格式。  
   
- 下表列出了 property 参数的常量。  
+ 下表列出了 property 参数的常量  。  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。Exe 文件，以及与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为**SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为**SQLNCHAR**。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dafa6325901e289b54915bde19189b5bac69aeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080706"
 ---
 # <a name="supported-odbc-api-functions"></a>支持的 ODBC API 函数
 调配的目的是通知应用程序提供的功能的内容从驱动程序。 Microsoft ODBC 桌面数据库驱动程序支持所有核心和 1 级函数。  
@@ -58,7 +57,7 @@ ms.locfileid: "62633397"
   
 -   [SQLGetData（桌面数据库驱动程序）](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
--   [SQLGetStmtOption(Desktop Database Drivers)](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
+-   [SQLGetStmtOption （桌面数据库驱动程序）](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
 -   [SQLMoreResults（桌面数据库驱动程序）](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   

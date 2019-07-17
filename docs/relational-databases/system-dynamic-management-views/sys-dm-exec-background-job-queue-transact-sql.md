@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142329f80b55a18eb6724449f3e1ad68dfb72acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 0722716466caf2c38007890c10df519b1246dfa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097924"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "63013584"
   
 > **注意！！** 若要调用此项从 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 或 **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** ，使用的名称**sys.dm_pdw_nodes_exec_background_job_queue**。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**time_queued**|**datetime**|作业添加到队列中的时间。|  
 |**job_id**|**int**|作业标识符。|  
@@ -54,7 +53,7 @@ ms.locfileid: "63013584"
 ## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
-上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
   
 ## <a name="remarks"></a>备注  
  该视图只返回有关异步更新统计作业的信息。 有关异步更新统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  
@@ -80,7 +79,7 @@ GO
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [统计信息](../../relational-databases/statistics/statistics.md)   
- [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
+ [KILL STATS JOB &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   
 

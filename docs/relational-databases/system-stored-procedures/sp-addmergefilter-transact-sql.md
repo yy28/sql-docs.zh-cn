@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118060"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` 是到子项目中，指定的父项目*一文*，必须使用指定的联接子句联接*join_filterclause*，从而确定满足子项目中的行合并筛选器的筛选器条件。 *join_articlename*是**sysname**，无默认值。 该项目必须位于由给定的发布中*发布*。  
   
-`[ @join_filterclause = ] join_filterclause` 必须用于联接指定的子项目的联接子句*一文*和指定的父项目*join_article*，从而确定符合条件的合并筛选器的行。 *join_filterclause*是**nvarchar(1000)**。  
+`[ @join_filterclause = ] join_filterclause` 必须用于联接指定的子项目的联接子句*一文*和指定的父项目*join_article*，从而确定符合条件的合并筛选器的行。 *join_filterclause*是**nvarchar(1000)** 。  
   
 `[ @join_unique_key = ] join_unique_key` 指定如果子项目之间的联接*一文*父项目*join_article*是-一对多、 一对一、 多对一或多对多。 *join_unique_key*是**int**，默认值为 0。 **0**表示多对一或多对多联接。 **1**表示一对一或一对多联接。 此值是**1**当联接的列形成中的唯一键*join_article*，或者，如果*join_filterclause*之间的外键*文章*和中的主键*join_article*。  
   
@@ -75,7 +74,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type` 指定要添加的筛选类型。 *filter_type*是**tinyint**，可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**1**|仅为联接筛选器。 需要它来支持 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器。|  
 |**2**|仅为逻辑记录关系。|  
@@ -113,7 +112,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124995"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   服务器实例中每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核都各占一行。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|审核的 ID。|  
-|**名称**|**sysname**|审核的名称。|  
+|**name**|**sysname**|审核的名称。|  
 |**audit_guid**|**uniqueidentifier**|用于枚举与成员服务器审核的审核 GUID&#124;数据库审核规范在服务器启动和数据库附加操作。|  
 |**create_date**|**datetime**|创建审核的 UTC 日期。|  
 |**modify_date**|**datetime**|上次修改审核的 UTC 日期。|  
 |**principal_id**|**int**|审核，如注册到服务器的所有者的 ID。|  
-|**类型**|**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 佛罗里达州的文件系统上的文件|  
+|**type**|**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 佛罗里达州的文件系统上的文件|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
 |**on_failure**|**tinyint**|失败时要写入的操作项：<br /><br /> 0-继续<br /><br /> 1-关闭服务器实例<br /><br /> 2-操作失败|  
 |**on_failure_desc**|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-禁用<br /><br /> 1 - 启用|  
 |**queue_delay**|**int**|写入磁盘前等待的最长时间（以毫秒为单位）。 如果为 0，则审核将确保写入的事件才能继续。|  
-|**谓词**|**nvarchar(3000)**|应用于事件的谓词表达式。|  
+|**predicate**|**nvarchar(3000)**|应用于事件的谓词表达式。|  
   
 ## <a name="permissions"></a>权限  
  具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，不得被拒绝主体**VIEW ANY DEFINITION**权限。  

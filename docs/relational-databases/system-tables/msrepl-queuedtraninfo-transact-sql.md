@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: debe88da4effd02ac15af965656232d4ec1f3395
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079167"
 ---
 # <a name="msreplqueuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_queuedtraninfo**复制过程使用表来存储有关排队命令颁发的所有排队更新订阅使用的基于 SQL 的排队更新的信息。 该表存储在订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**tranid**|**sysname**|执行排队命令时所使用的事务 ID。|  
 |**maxorderkey**|**bigint**|仅供内部使用。|  
 |**commandcount**|**bigint**|仅供内部使用。|  

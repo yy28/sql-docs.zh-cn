@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3fb69943-f0c9-4ed2-aa42-20440e37e49d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4147e560d953b97ecba2e707d354bb6bf2ead59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 808cddbd805db09d1b5c356d5b5af5734a5dcc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086318"
 ---
 # <a name="not-null-in-create-table-statements"></a>CREATE TABLE 语句中的 NOT NULL
 某些数据库和尤其是桌面数据库不支持**NOT NULL**中的列约束**CREATE TABLE**语句。 有关详细信息，请参阅中的 SQL_NON_NULLABLE_COLUMNS 选项[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。

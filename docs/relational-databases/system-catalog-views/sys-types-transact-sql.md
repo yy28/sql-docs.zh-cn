@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a07c599c484f2efb85905be07e29a0ac89175fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095573"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   每个系统类型和用户定义类型都在表中对应一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**名称**|**sysname**|类型的名称。 在架构内是唯一的。|  
+|**name**|**sysname**|类型的名称。 在架构内是唯一的。|  
 |**system_type_id**|**tinyint**|类型的内部系统类型的 ID。|  
 |**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id** = **system_type_id**。|  
-|schema_id|**int**|类型所属架构的 ID。|  
+|schema_id |**int**|类型所属架构的 ID。|  
 |**principal_id**|**int**|如果个体所有者与架构所有者不同，则表示该所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定备用所有者。<br /><br /> 如果没有另外的个体所有者，则值为 NULL。|  
-|**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16。|  
+|**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 的列数据类型为**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**。<br /><br /> 有关**文本**列， **max_length**值将为 16。|  
 |**精度**|**tinyint**|如果类型基于数值，则表示类型的最大精度；否则，该值为 0。|  
 |**scale**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数；否则，该值为 0。|  
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称；否则，该值为 NULL。|  
@@ -52,7 +51,7 @@ ms.locfileid: "47733115"
 |**rule_object_id**|**int**|通过使用绑定到类型的独立规则的 ID [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)。<br /><br /> 0 = 不存在规则。|  
 |**is_table_type**|**bit**|指示该类型为表。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

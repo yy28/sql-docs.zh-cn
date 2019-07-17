@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138413"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51657456"
   
  有关详细信息，请参阅[应用程序域](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|地址**AppDomain**。 所有托管的数据库的用户拥有的对象始终加载在同一个**AppDomain**。 可以使用此列以查找在此当前加载的所有程序集**AppDomain**中**sys.dm_clr_loaded_assemblies**。|  
 |**appdomain_id**|**int**|ID **AppDomain**。 每个**AppDomain**都有唯一的 id。|  
@@ -43,7 +42,7 @@ ms.locfileid: "51657456"
 |**creation_time**|**datetime**|时间**AppDomain**已创建。 因为**Appdomain**缓存并重复使用以更好性能**creation_time**不一定执行代码时的时间。|  
 |**db_id**|**int**|此数据库的 ID **AppDomain**已创建。 在两个不同数据库中存储的代码无法共享同一个**AppDomain**。|  
 |**user_id**|**int**|在此可以执行其对象的用户 ID **AppDomain**。|  
-|State|**nvarchar(128)**|当前状态的描述符**AppDomain**。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
+|**State**|**nvarchar(128)**|当前状态的描述符**AppDomain**。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
 |**strong_refcount**|**int**|此强引用的数目**AppDomain**。 这反映了当前正在执行的使用此批处理的数目**AppDomain**。 请注意，将创建此视图执行**强引用计数**; 即使当前正在执行，没有代码**strong_refcount**将具有值为 1。|  
 |**weak_refcount**|**int**|此弱引用的数目**AppDomain**。 这表示对象数目**AppDomain**缓存。 当执行托管的数据库对象，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将其缓存在**AppDomain**供将来重复使用。 这可以提高性能。|  
 |**cost**|**int**|成本**AppDomain**。 开销越大，更有可能这**AppDomain**内存压力下卸载。 成本通常取决于重新创建此所需的内存量**AppDomain**。|  
@@ -59,13 +58,13 @@ ms.locfileid: "51657456"
   
 ## <a name="appdomain-initialization"></a>AppDomain 初始化  
   
-|State|Description|  
+|状态|描述|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain**正在创建。|  
   
 ## <a name="appdomain-usage"></a>AppDomain 使用情况  
   
-|State|Description|  
+|状态|描述|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|在运行时**AppDomain**随时可供多个用户使用。|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain**供 DDL 操作中使用。 此行为不同于 E_APPDOMAIN_SHARED，在后者中，共享的 AppDomain 用于 CLR 集成执行，而非 DDL 操作。 此类 AppDomain 独立于其他并发操作。|  
@@ -73,7 +72,7 @@ ms.locfileid: "51657456"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 的清除  
   
-|State|Description|  
+|状态|描述|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已请求 CLR 卸载**AppDomain**，通常是因为包含托管的数据库对象的程序集已更改或删除。|  
 |E_APPDOMAIN_UNLOADED|CLR 已卸载**AppDomain**。 这通常是由于升级过程的结果**ThreadAbort**， **OutOfMemory**，或在用户代码中未经处理的异常。|  
@@ -81,7 +80,7 @@ ms.locfileid: "51657456"
 |E_APPDOMAIN_DESTROY|**AppDomain**通过处于销毁过程中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |E_APPDOMAIN_ZOMBIE|**AppDomain**已由销毁[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 但是，并非所有对引用**AppDomain**已清除。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33c87d4b784e46defac98823a5cf9d4dc9420aaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125347"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   接受参数的对象的每个参数在表中对应一行。 如果对象是标量函数，则另有一行说明返回值。 该行将有**parameter_id**值为 0。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此参数所属的对象的 ID。|  
-|**名称**|**sysname**|参数的名称。 在对象中是唯一的。<br /><br /> 如果对象是标量函数，则参数名称为表示返回值的行中的空字符串。|  
+|**name**|**sysname**|参数的名称。 在对象中是唯一的。<br /><br /> 如果对象是标量函数，则参数名称为表示返回值的行中的空字符串。|  
 |**parameter_id**|**int**|参数的 ID。 在对象中是唯一的。<br /><br /> 如果对象是标量函数， **parameter_id** = 0 表示返回值。|  
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。|  
 |**user_type_id**|**int**|用户定义的参数类型的 ID。<br /><br /> 若要返回的类型名称，将联接到[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录对此列的视图。|  
-|**max_length**|**smallint**|参数，以字节为单位的最大长度。<br /><br /> 值 =-1，当列数据类型为**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**。|  
+|**max_length**|**smallint**|参数，以字节为单位的最大长度。<br /><br /> 值 =-1，当列数据类型为**varchar （max)** ， **nvarchar （max)** ， **varbinary （max)** ，或者**xml**。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
 |**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
 |**is_output**|**bit**|1 = 参数为 OUTPUT 或 RETURN；否则为 0。|  
@@ -53,7 +52,7 @@ ms.locfileid: "47752305"
 |**is_readonly**|**bit**|1 = 参数为 READONLY；否则为 0。|  
 |**is_nullable**|**bit**|1 = 参数不可为 Null。 （默认值）。<br /><br /> 0 = 参数不可为 Null，这样可更高效地执行本机编译存储过程。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

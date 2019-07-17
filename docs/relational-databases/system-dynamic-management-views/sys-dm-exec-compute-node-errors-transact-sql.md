@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097878"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   返回错误 PolyBase 中发生的计算节点。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|与错误关联的唯一数字 id。|唯一跨系统中的所有查询错误|  
 |源 (source)|**nvarchar(255)**|源线程或进程说明||  
@@ -45,7 +44,7 @@ ms.locfileid: "63013392"
 |rexecution_id|**nvarchar(36)**|如果任何 PolyBase 查询的标识符。||  
 |spid|**int**|SQL Server 会话的标识符||  
 |thread_id|**int**|发生错误的线程的数字标识符。||  
-|详细信息|nvarchar(4000)|错误的详细信息的完整说明。||  
+|details|nvarchar(4000)|错误的详细信息的完整说明。||  
   
 ## <a name="see-also"></a>请参阅  
  [PolyBase 使用动态管理视图进行故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

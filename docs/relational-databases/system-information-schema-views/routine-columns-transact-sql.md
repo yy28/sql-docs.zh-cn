@@ -18,31 +18,30 @@ helpviewer_keywords:
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ecfff92b5865ebe9bf255f4bcc1b02150cffb31
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5b0ed500b1217ae70dca72ab6eab64ab661c22ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078528"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为当前数据库中当前用户可访问的表值函数所返回的每一列返回一行。  
   
- 若要从此视图中检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。**_view_name_。  
+ 若要从此视图中检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。** _view_name_。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|表值函数的目录或数据库名称。|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含表值函数的架构的名称。<br /><br /> <strong>\*\* 重要\* \*</strong> 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|表值函数的名称。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|列名称。|  
 |**ORDINAL_POSITION**|**int**|列标识号。|  
-|**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|列的默认值。|  
-|**IS_NULLABLE**|**varchar (** 3 **)**|如果此列允许 NULL，则返回 YES。 否则，返回不可以。|  
+|**COLUMN_DEFAULT**|**nvarchar(** 4000 **)**|列的默认值。|  
+|**IS_NULLABLE**|**varchar(** 3 **)**|如果此列允许 NULL，则返回 YES。 否则，返回不可以。|  
 |**DATA_TYPE**|**nvarchar(** 128 **)**|系统提供的数据类型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字符）。<br /><br /> -1，表示**xml**和大值类型数据。 否则，返回 NULL。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字节）。<br /><br /> -1，表示**xml**和大值类型数据。 否则，返回 NULL。|  
@@ -51,10 +50,10 @@ ms.locfileid: "53588376"
 |**NUMERIC_SCALE**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|  
 |**DATETIME_PRECISION**|**smallint**|子类型代码**datetime**和 ISO**整数**数据类型。 对于其他数据类型，返回 NULL。|  
 |**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|返回**主**。 这指示字符集所在如果列为字符数据的数据库或**文本**数据类型。 否则，返回 NULL。|  
-|**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|始终返回 NULL。|  
+|**CHARACTER_SET_SCHEMA**|**varchar(** 3 **)**|始终返回 NULL。|  
 |**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|返回将如果此列为字符数据的字符集的唯一名称或**文本**数据类型。 否则，返回 NULL。|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|始终返回 NULL。|  
-|**COLLATION_SCHEMA**|**varchar (** 3 **)**|始终返回 NULL。|  
+|**COLLATION_SCHEMA**|**varchar(** 3 **)**|始终返回 NULL。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|如果列为字符数据，则返回的排序顺序的唯一名称或**文本**数据类型。 否则，返回 NULL。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|如果此列是别名数据类型，则此列是在其中创建用户定义数据类型的数据库的名称。 否则，返回 NULL。|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果列是架构的用户定义数据类型，此列是架构的包含用户定义数据类型的名称。 否则，返回 NULL。<br /><br /> <strong>\*\* 重要\* \*</strong> 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  

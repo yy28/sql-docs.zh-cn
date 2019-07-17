@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 15e4a750e2568598fc5db2bab175643b50310db2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138610"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 集成入门
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ End Class
   
 ```  
   
- 这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类**[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 并 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**，用于创建托管数据库对象以输出简单的文本消息。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程，然后采用与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程相同的方式运行。  
+ 这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类 **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 并 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** ，用于创建托管数据库对象以输出简单的文本消息。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的存储过程，然后采用与 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程相同的方式运行。  
   
  此程序编译为一个库，将其加载到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，并将其作为存储过程运行。  
   
@@ -143,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 执行以下命令：  
+ 一旦创建该存储过程后，就可以像用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编写的普通存储过程一样运行该存储过程。 请执行以下命令：  
   
 ```  
 DECLARE @J nchar(25)  

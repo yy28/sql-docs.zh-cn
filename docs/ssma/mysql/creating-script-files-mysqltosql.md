@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: da5b708c4dbf80a1faa7fa74f237b1cc750ea975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103064"
 ---
 # <a name="creating-script-files-mysqltosql"></a>创建脚本文件 (MySQLToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建变量值文件和服务器连接文件。  
@@ -31,7 +30,7 @@ ms.locfileid: "63132321"
   
 2.  **服务器：** 使用户能够设置源/目标服务器定义。 这也可以是单独的服务器连接文件中。  
   
-3.  **script-commands:** 使用户能够执行 SSMA 工作流命令。  
+3.  **脚本命令：** 使用户能够执行 SSMA 工作流命令。  
   
 下面将详细介绍每个部分：  
   
@@ -89,7 +88,7 @@ ms.locfileid: "63132321"
   
     即使用只有一个或另一个指定的属性：  
   
-    - source-use-last-used="true" (default) or source-server="source_servername"  
+    - 源-使用-上次使用 ="true"（默认值） 或源服务器 ="source_servername"  
   
     - target-use-last-used="true" (default) or target-server="target_servername"  
   

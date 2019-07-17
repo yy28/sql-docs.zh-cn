@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140012"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   在各个段的基础上提供聚集列存储索引信息，以便帮助管理员作出系统管理决定。 **sys.column_store_row_groups**包含列 （包括那些已标记为已删除） 以物理方式存储的行的总数和标记为已删除的行数的列。 使用**sys.column_store_row_groups**来确定哪些行组具有较高百分比的已删除的行和应重新生成。  
    
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|对其定义此索引的表的 ID。|  
 |**index_id**|**int**|具有此列存储索引的表的索引 ID。|  
 |**partition_number**|**int**|保留行组 row_group_id 的表分区的 ID。 您可以使用 partition_number 将此 DMV 联接到 sys.partitions。|  
 |**row_group_id**|**int**|与此行组关联的行组编号。 这在分区中是唯一的。<br /><br /> -1 = 内存中表的结尾。|  
 |**delta_store_hobt_id**|**bigint**|增量存储区中打开的行组的 hobt_id。<br /><br /> 如果在增量存储行组不为 NULL。<br /><br /> 对于内存中表的结尾为 NULL。|  
-|State|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 逻辑删除|  
+|**State**|**tinyint**|与 state_description 关联的 ID 号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 逻辑删除|  
 |**state_description**|**nvarchar(60)**|行组的持久状态的说明：<br /><br /> 从增量存储中的数据进行生成过程中不可见的隐藏压缩的段。 读操作将使用增量存储区，直至完成不可见的压缩段。 然后，新段变为可见，并删除源增量存储区。<br /><br /> 打开-正在接受新记录的读/写行组。 开放的行组仍采用行存储格式，并且尚未压缩成列存储格式。<br /><br /> 已关闭-已填充，但尚未由元组搬运者进程压缩的行组。<br /><br /> 压缩的已填充和压缩的行组。|  
 |**total_rows**|**bigint**|行组中物理存储的总行数。 一些行可能已删除，但它们仍被存储。 一个行组中的最大行数为 1,048,576（十六进制 FFFFF）。|  
 |**deleted_rows**|**bigint**|行组中标记为已删除的总行数。 对于 DELTA 行组，此值始终为 0。|  

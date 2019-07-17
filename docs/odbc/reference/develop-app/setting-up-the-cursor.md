@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59ade343f282933e05619996b119bc08e2dfb2ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c47e534f069f810948189f2668d4ecdfbfa4ad79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107544"
 ---
 # <a name="setting-up-the-cursor"></a>设置游标
 执行语句创建一个结果集之前，应用程序可以指定游标类型。 做到这一点与 SQL_ATTR_CURSOR_TYPE 语句属性。 如果应用程序未显式指定类型，将使用只进游标。 若要获取混合的游标，应用程序指定的由键集驱动游标，但不会早于结果集大小声明由键集大小。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081448"
 ---
 # <a name="writing-odbc-3x-applications"></a>编写 ODBC 3.x 应用程序
 当 ODBC *2.x*应用程序升级到 ODBC *3.x*，它应该这样编写的它适用于这两个 ODBC *2.x*并*3.x*驱动程序. 应用程序应结合条件代码，充分利用 ODBC *3.x*功能。  

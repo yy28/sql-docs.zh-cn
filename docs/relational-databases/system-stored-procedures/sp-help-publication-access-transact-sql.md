@@ -1,5 +1,5 @@
 ---
-title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
+title: sp_help_publication_access (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085264"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'` 登录 id。 *return_granted*是**位**，默认值为 1。 如果**0**指定和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用身份验证，返回出现在发布服务器而不是在分发服务器上的可用登录。 如果**0**指定和使用 Windows 身份验证、 登录名没有被明确拒绝访问在发布服务器或分发服务器返回。  
   
-`[ @login = ] 'login'` 标准安全登录 id。 *登录名*是**sysname**，默认值为**%**。  
+`[ @login = ] 'login'` 标准安全登录 id。 *登录名*是**sysname**，默认值为 **%** 。  
   
 `[ @initial_list = ] initial_list` 指定是否返回具有发布访问权限或只是那些新成员已添加到列表之前具有访问权的所有成员。 *initial_list*为 bit，默认值为**0**。  
   
@@ -55,11 +54,11 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**Loginname**|**nvarchar(256)**|实际登录名。|  
 |**isntname**|**int**|**0** = 登录名不是 Windows 用户。<br /><br /> **1** = 登录名是 Windows 用户。|  
-|**Isntgroup**|**int**|**0** = 登录名不是 Windows 组。<br /><br /> **1** = 登录名是 Windows 组。|  
+|**isntgroup**|**int**|**0** = 登录名不是 Windows 组。<br /><br /> **1** = 登录名是 Windows 组。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -74,7 +73,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

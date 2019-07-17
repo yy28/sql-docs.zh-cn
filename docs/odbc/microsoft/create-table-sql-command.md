@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096604"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 创建某个表具有指定的字段。  
@@ -73,10 +72,10 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  如果省略 NULL 和 NOT NULL，NULL 设置的当前设置确定字段中是否允许 null 值。 但是，如果你省略 NULL 和 NOT NULL 并且包括在主键或唯一的子句，忽略 SET NULL 的当前设置，该字段的默认值为 NOT NULL。  
   
- CHECK *lExpression1*  
+ 检查*lExpression1*  
  指定字段的验证规则。 *lExpression1*可以是用户定义函数。 只要附加一个空记录，检查验证规则。 如果验证规则不允许空字段值在追加的记录中，将生成错误。  
   
- ERROR *cMessageText1*  
+ 错误*cMessageText1*  
  指定当字段规则将生成错误时，Visual FoxPro 显示的错误消息。 在浏览窗口或编辑窗口中更改数据时才会显示消息。  
   
  默认*eExpression1*  
@@ -93,7 +92,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  在主键或候选索引使用的字段中不允许 null 值和重复的记录。 但是，Visual FoxPro 将不生成错误，如果创建主键或候选索引支持 null 值的字段。 Visual FoxPro 将生成错误，如果你尝试使用主键或候选索引的字段中输入空值或重复值。  
   
- REFERENCES *TableName2*[TAG *TagName1*]  
+ 引用*TableName2*[标记*TagName1*]  
  指定与之建立持久关系的父表。 如果省略标记*TagName1*，使用父表的主索引键建立关系。 如果父表不具有主索引，Visual FoxPro 将生成错误。  
   
  包含标记*TagName1*建立基于现有索引标记为父表的关系。 索引的标记名称可包含最多 10 个字符。  
@@ -115,23 +114,23 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  因为一个表可以包含一个主索引，不能包含此子句，如果你已创建主索引的字段。 Visual FoxPro 生成错误，如果在 CREATE TABLE 中包括多个 PRIMARY KEY 子句。  
   
- UNIQUE *eExpression3*TAG *TagName3*  
+ 唯一*eExpression3*标记*TagName3*  
  创建一个候选项的索引。 *eExpression3*指定表中的任何字段的组合。 但是，如果您使用 PRIMARY KEY 选项之一创建了主索引，不能包含指定的主索引的字段。 标记*TagName3*指定创建的候选索引标记的标记名称。 索引的标记名称可包含最多 10 个字符。  
   
  一个表可以有多个候选项索引。  
   
- FOREIGN KEY *eExpression4*TAG *TagName4*[NODUP]  
+ 外键*eExpression4*标记*TagName4*[NODUP]  
  创建外 （非主键） 索引并建立与父表的关系。 *eExpression4*指定外索引键表达式，并*TagName4*指定创建的索引外键标记的名称。 索引的标记名称可包含最多 10 个字符。 包括 NODUP 创建候选外索引。  
   
  您可以创建多个外的索引对于表，但外索引表达式必须指定表中的不同字段。  
   
- REFERENCES *TableName3*[TAG *TagName5*]  
+ 引用*TableName3*[标记*TagName5*]  
  指定与之建立持久关系的父表。 包含标记*TagName5*建立基于父表的索引标记的关系。 索引的标记名称可包含最多 10 个字符。 默认情况下，如果省略标记*TagName5，* 使用父表的主索引键建立关系。  
   
- CHECK *eExpression2*[ERROR *cMessageText2*]  
+ 检查*eExpression2*[错误*cMessageText2*]  
  指定表验证规则。 错误*cMessageText2*指定 Visual FoxPro 表验证规则执行时将显示错误消息。 仅当数据在一个浏览窗口内已更改，或编辑窗口时，会显示消息。  
   
- FROM ARRAY *ArrayName*  
+ 从数组*ArrayName*  
  指定一个现有数组，其内容是名称、 类型、 精度和小数位数为表中每个字段的名称。 可以使用定义数组的内容**AFIELDS**（） 函数。  
   
 ## <a name="remarks"></a>备注  
@@ -151,7 +150,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC 语法|Visual FoxPro 语法|  
 |-----------------|--------------------------|  
-|CREATE TABLE*基础表名称*<br /><br /> (*列标识符的数据类型*<br /><br /> [不为 NULL]<br /><br /> [，*列标识符的数据类型*<br /><br /> [NOT NULL]...)|CREATE TABLE *TableName1* [NAME *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [不为 NULL])|  
+|CREATE TABLE*基础表名称*<br /><br /> (*列标识符的数据类型*<br /><br /> [不为 NULL]<br /><br /> [，*列标识符的数据类型*<br /><br /> [NOT NULL]...)|创建表*TableName1* [名称*LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [不为 NULL])|  
   
  创建时使用的驱动程序的表，该驱动程序以允许访问由其他用户表的创建后立即关闭表。 这不同于 Visual FoxPro，让表保留在创建时以独占方式打开。 但是，如果数据源包含 CREATE TABLE 语句上的存储的过程执行，表处于打开状态。  
   

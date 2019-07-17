@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7734c520d0e97246fe6a87aa6b1d4585b6507c54
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e3d2ed3b506b6df25ed0559944230822f8886a24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109916"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "53204406"
   
  将第一个 （C#） 代码列表编译为 DLL。  然后，将该 DLL 复制到 C 驱动器的根目录。  
   
- 执行第二个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以将该程序集添加到 master 数据库。  
+ 执行第二个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以将该程序集添加到 master 数据库。  
   
  使用 ole32.lib 和 oleaut32.lib 编译并执行第三个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
- 执行第四个 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以删除对 master 数据库的程序集。  
+ 执行第四个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表，以从 master 数据库删除该程序集。  
   
 ```  
 // compile with: /target: library  

@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a1335b430346cf64d143ce3e07887d78f65a451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed3c5f1a4f2168196a651aea64c9c88311a197b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104255"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安装和配置
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ WideWorldImportersDW 数据库的安装和配置说明。
 
 [wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>安装
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -47,9 +46,9 @@ WideWorldImportersDW 数据库的安装和配置说明。
 1. 打开 SQL Server Management Studio 并连接到目标 SQL Server 实例。
 2. 右键单击**数据库**节点，然后选择**Restore Database**。
 3. 选择**设备**，然后单击按钮 **...**
-4. 在对话框**选择备份设备**，单击**添加**，导航到的服务器的文件系统中的数据库备份，并选择的备份。 单击“确定” 。
+4. 在对话框**选择备份设备**，单击**添加**，导航到的服务器的文件系统中的数据库备份，并选择的备份。 单击 **“确定”** 。
 5. 如果需要更改数据的目标位置，并在日志文件，**文件**窗格。 请注意，它将数据和日志文件的不同驱动器上的最佳做法。
-6. 单击“确定” 。 这将启动数据库还原。 完成后，您将拥有数据库安装在您的 SQL Server 实例上的 WideWorldImporters。
+6. 单击 **“确定”** 。 这将启动数据库还原。 完成后，您将拥有数据库安装在您的 SQL Server 实例上的 WideWorldImporters。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 

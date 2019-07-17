@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3ef89cbfccaa936b00654210e21b87d7edce172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bf9b02afe0312a2be1a057ee19a594c9c488675
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095856"
 ---
 # <a name="logshippingprimarysecondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47733675"
   将每个主数据库映射到其辅助数据库。 此表存储中**msdb**数据库。  
 
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|日志传送配置的主数据库 ID。|  
 |**secondary_server**|**sysname**|辅助实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。|  

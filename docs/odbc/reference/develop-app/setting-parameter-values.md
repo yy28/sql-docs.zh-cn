@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb1115290f53c19fae1aacb0a976cfcef63e086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094233"
 ---
 # <a name="setting-parameter-values"></a>设置参数值
 若要设置参数的值，该应用程序只需设置变量绑定到该参数的值。 它并不重要时设置此值，只要设置之前执行的语句。 应用程序可以设置的值之前或之后绑定变量，并且它可以更改许多次，它想要的值。 执行该语句，该驱动程序只需检索变量的当前值。 不止一次; 执行已准备的语句时，这一点特别有用应用程序的某些或全部变量每次执行该语句将设置新值。 此示例，请参阅[准备好执行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)前面在本部分中。  
@@ -35,13 +34,13 @@ ms.locfileid: "62445949"
   
  下表显示了绑定的变量和应用程序设置的各种参数值的长度/指示器缓冲区的值。  
   
-|参数<br /><br /> value|参数<br /><br /> (SQL)<br /><br /> 数据类型|Variable (C)<br /><br /> 数据类型|中的值<br /><br /> 绑定<br /><br /> 变量|中的值<br /><br /> 长度/指示器<br /><br /> buffer[d]|  
+|参数<br /><br /> value|参数<br /><br /> (SQL)<br /><br /> 数据类型|Variable (C)<br /><br /> 数据类型|中的值<br /><br /> 绑定<br /><br /> 变量|中的值<br /><br /> 长度/指示器<br /><br /> 缓冲区 [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS 或 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
 |10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS 或 2|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS 或 14|  
+|下午 1 点|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
+|下午 1 点|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a]、 [c]|SQL_NTS 或 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a]"\0"表示 null 终止字符。 仅当长度/指示器缓冲区中的值为 SQL_NTS null 终止字符需要。  

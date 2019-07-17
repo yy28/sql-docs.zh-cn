@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: de589bbe1fe5f590ef3d75c884aae70b5276804a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140531"
 ---
-# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包装**的所有更改**查询函数。 创建这些函数所必需的脚本由 sys.sp_cdc_generate_wrapper_function 存储过程生成。  
@@ -71,7 +70,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  如果为此参数提供 NULL 值，则查询范围的高端点对应于捕获实例的有效范围的高端点。  
   
- <row_filter_option> ::= { all | all update old }  
+ < 已 row_filter_option >:: = {所有 | 所有更新旧}  
  控制结果集中返回的元数据列和行的内容的选项。  
   
  可以是下列选项之一：  
@@ -84,11 +83,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|列类型|Description|  
+|列名|列类型|描述|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|与更改关联的事务的提交 LSN。 在同一事务中提交的所有更改将都共享同一个提交 LSN。|  
 |__CDC_SEQVAL|**binary(10)**|用于对事务中的行更改进行排序的序列值。|  
-|\<中的列@column_list>|**varies**|在标识的列*column_list* sp_cdc_generate_wrapper_function 以生成创建包装函数的脚本被调用时的参数。|  
+|\<中的列@column_list>|**各不相同**|在标识的列*column_list* sp_cdc_generate_wrapper_function 以生成创建包装函数的脚本被调用时的参数。|  
 |__CDC_OPERATION|**nvarchar(2)**|操作代码，用于指示将行应用到目标环境时所必需的操作。 它的差异取决于参数的值*row_filter_option*调用中提供：<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> *row_filter_option* = all update old<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> 'UO' - 更新操作的旧值|  
 |\<中的列@update_flag_list>|**bit**|通过将 _uflag 追加到列名称的末尾所命名的位标记。 该标志始终设置为 NULL 时\__CDC_OPERATION 有 '，'I'，'或 'uo'。 当\__CDC_OPERATION 是 ' UN '，如果更新更改为相应的列设置为 1。 否则为 0。|  
   
@@ -114,7 +113,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
  变更数据捕获配置模板实例化 CDC 架构包装 Tvf 显示了如何使用 sp_cdc_generate_wrapper_function 存储过程来获取所有架构的已定义的查询函数的包装器函数的 CREATE 脚本。 然后，此模板创建这些脚本。 有关模板的详细信息，请参阅[模板资源管理器](../../ssms/template/template-explorer.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

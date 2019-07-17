@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122657"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 
@@ -33,18 +32,18 @@ ms.locfileid: "63004381"
 **sys.index_resumable_operations**是系统的视图，用于监视并检查可恢复索引重新生成的当前执行状态。  
 **适用对象**：SQL Server 2017 和 Azure SQL 数据库
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此索引属于 (不可为 null) 的对象 ID。|  
 |**index_id**|**int**|(不可为 null) 的索引 ID。 **index_id**是只在对象中唯一的。|
-|**名称**|**sysname**|索引的名称。 **名称**是只在对象中唯一的。|  
+|**name**|**sysname**|索引的名称。 **名称**是只在对象中唯一的。|  
 |**sql_text**|**nvarchar(max)**|DDL T-SQL 的语句文本|
 |**last_max_dop**|**smallint**|上次使用的 MAX_DOP (默认值 = 0)|
 |**partition_number**|**int**|所属索引或堆中的分区号。 对于非分区表和索引或示例中的所有分区都正在重新生成值此列的为 NULL。|
-|State |**tinyint**|可恢复索引操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
+|**State**|**tinyint**|可恢复索引操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
 |**state_desc**|**nvarchar(60)**|（运行或暂停） 的可恢复索引操作状态的说明|  
 |**start_time**|**datetime**|索引操作开始时间 (不可为 null)|
-|**last_pause_time**|**datatime**| 索引操作 (可以为 null) 的最后一个暂停时间。 如果操作已运行，而绝不会暂停，则为 NULL。|
+|**last_pause_time**|**日期时间**| 索引操作 (可以为 null) 的最后一个暂停时间。 如果操作已运行，而绝不会暂停，则为 NULL。|
 |**total_execution_time**|**int**|从开始时间以分钟为单位 (不可为 null) 的总执行时间|
 |**percent_complete**|**real**|索引操作正在进行中自动补全 %(不可以为 null)。|
 |**page_count**|**bigint**|由新的索引生成操作和映射索引 (不可以为 null) 分配的索引页的总数。

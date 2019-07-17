@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083385"
 ---
 # <a name="column-wise-binding"></a>按列绑定
 使用按列绑定时，应用程序会将一个或两个，或在某些情况下的三个，数组绑定到数据将返回每个列。 第一个数组保留了数据值，并第二个数组长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，第三个数组绑定。 每个数组包含任意多个元素的行集中的行一样。  

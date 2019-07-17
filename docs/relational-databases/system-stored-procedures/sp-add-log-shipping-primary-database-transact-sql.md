@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140449"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +57,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="arguments"></a>参数  
 `[ @database = ] 'database'` 是日志传送主数据库的名称。 *数据库*是**sysname**，无默认值，且不能为 NULL。  
   
-`[ @backup_directory = ] 'backup_directory'` 是主服务器上备份文件夹的路径。 *backup_directory*是**nvarchar(500)**，无默认值，且不能为 NULL。  
+`[ @backup_directory = ] 'backup_directory'` 是主服务器上备份文件夹的路径。 *backup_directory*是**nvarchar(500)** ，无默认值，且不能为 NULL。  
   
-`[ @backup_share = ] 'backup_share'` 是主服务器上的备份目录的网络路径。 *backup_share*是**nvarchar(500)**，无默认值，且不能为 NULL。  
+`[ @backup_share = ] 'backup_share'` 是主服务器上的备份目录的网络路径。 *backup_share*是**nvarchar(500)** ，无默认值，且不能为 NULL。  
   
 `[ @backup_job_name = ] 'backup_job_name'` 是将备份复制到备份文件夹的主服务器上的 SQL Server 代理作业的名称。 *backup_job_name*是**sysname**且不能为 NULL。  
   
@@ -102,7 +101,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **sp_add_log_shipping_primary_database**必须从运行**主**主服务器上的数据库。 此存储过程可执行以下功能：  

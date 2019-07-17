@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cb35847a4eb24bc7e7fd49d00703577abeec6d16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 651ddeeebe7cb6896c50486aed673e02bf47b0e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086471"
 ---
 # <a name="edit-a-model-deployment-package"></a>编辑模型部署包
 

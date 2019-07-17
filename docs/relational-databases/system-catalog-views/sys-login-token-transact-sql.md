@@ -21,25 +21,24 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2016818bb5403e3f75243a0c4bc437cb7cbc73d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102428"
 ---
 # <a name="syslogintoken-transact-sql"></a>sys.login_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为登录名标记中包含的每个服务器主体返回一行。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|主体的 ID。 此值在服务器中是唯一的。|  
 |**sid**|**varbinary(85)**|服务器主体的安全标识符。 如果这是 Windows 主体**sid** = Windows SID。 如果该登录名映射到证书，请**sid** = 从证书的 GUID。|  
-|**名称**|**nvarchar(128)**|主体的名称。 此值在服务器中是唯一的。|  
-|**类型**|**nvarchar(128)**|主体类型的说明。 所有类型都映射到**sid**。 该值可以是下列值之一：<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**name**|**nvarchar(128)**|主体的名称。 此值在服务器中是唯一的。|  
+|**type**|**nvarchar(128)**|主体类型的说明。 所有类型都映射到**sid**。 该值可以是下列值之一：<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**使用情况**|**nvarchar(128)**|指示服务器主体参与 GRANT 或 DENY 权限的鉴定，或用作验证器。<br /><br /> 此值可以为下列值之一：<br /><br /> GRANT 或 DENY<br /><br /> 仅 DENY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>请参阅  

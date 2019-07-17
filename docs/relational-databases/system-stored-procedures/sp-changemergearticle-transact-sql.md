@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104514"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 是要更改的名称。 *文章*是**sysname**，无默认值。  
   
-`[ @property = ] 'property'` 是要更改的给定的项目和发布的属性。 *属性*是**nvarchar(30)**，并可以将值中的一个表中列出。  
+`[ @property = ] 'property'` 是要更改的给定的项目和发布的属性。 *属性*是**nvarchar(30)** ，并可以将值中的一个表中列出。  
   
-`[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(1000)**，并可以将值中的一个表中列出。  
+`[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(1000)** ，并可以将值中的一个表中列出。  
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|Description|  
+|属性|值|描述|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|允许对项目使用交互式冲突解决程序。|  
 ||**false**|不允许对项目使用交互式冲突解决程序。|  
@@ -62,7 +61,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|将订阅服务器上的 INSERT 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
 ||**0x20**|将订阅服务器上的 UPDATE 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
 ||**0x40**|将订阅服务器上的 DELETE 语句应用于发布服务器之前，要在发布服务器上检查表级权限。|  
-|**column_tracking**|**true**|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意：当发布超过 246 列的表时，列级跟踪无法使用。|  
+|**column_tracking**|**true**|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意:当发布超过 246 列的表时，不能使用列级跟踪。|  
 ||**false**|关闭列级跟踪，保留行级冲突检测。 仅适用于表项目。|  
 |**compensate_for_errors**|**true**|同步过程中发生错误时执行补救措施。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 ||**false**|不执行补救措施，这是默认行为。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> **\*\* 重要\* \*** 尽管受影响的行中的数据看起来有点不收敛，就立即解决的任何错误，可以应用更改和数据也会收敛。 如果在另一个发布，再选择的值已发布项目的源表*compensate_for_errors*必须是两个项目相同的。|  
@@ -72,8 +71,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||项目的说明项。|  
 |**destination_owner**||如果不订阅数据库中对象的所有者的名称**dbo**。|  
 |**identity_range**||**bigint**指定如果将项目的分配新标识值时要使用的范围大小**identityrangemanagementoption**设置为**自动**或**auto_identity_范围**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-|**identityrangemanagementoption**|**manual**|禁用自动标识范围管理。 使用 NOT FOR REPLICATION 标记标识列，启用手动标识范围处理。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-||**none**|禁用所有标识范围管理。|  
+|**identityrangemanagementoption**|**手动**|禁用自动标识范围管理。 使用 NOT FOR REPLICATION 标记标识列，启用手动标识范围处理。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+||**无**|禁用所有标识范围管理。|  
 |**logical_record_level_conflict_detection**|**true**|如果逻辑记录中发生了更改，则将检测到冲突。 要求**logical_record_level_conflict_resolution**设置为**true**。|  
 ||**false**|使用默认冲突检测所指定的**column_tracking**。|  
 |**logical_record_level_conflict_resolution**|**true**|整个入选逻辑记录覆盖落选逻辑记录。|  
@@ -81,8 +80,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**partition_options**|**0**|项目的筛选是静态的，或者不会为每个分区生成唯一数据子集（即“重叠”分区）。|  
 ||**1**|分区是重叠的，订阅服务器上执行的 DML 更新无法更改行所属的分区。|  
 ||**2**|对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收到相同的分区。|  
-||**3**|对项目的筛选将为每个订阅生成唯一的不重叠分区。<br /><br /> 注意：如果指定的值**3**有关**partition_options**，可以仅单个订阅的每个分区的这篇文章中的数据。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。|  
-|**pre_creation_command**|**none**|如果订阅服务器上已存在该表，则不执行任何操作。|  
+||**3**|对项目的筛选将为每个订阅生成唯一的不重叠分区。<br /><br /> 注意:如果指定的值**3**有关**partition_options**，可以仅单个订阅的每个分区的这篇文章中的数据。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。|  
+|**pre_creation_command**|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 ||**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 ||**drop**|删除该表，然后重新创建一个表。|  
 ||**truncate**|截断目标表。|  
@@ -90,8 +89,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**pub_identity_range**||**bigint** ，指定分配给具有服务器订阅的订阅服务器，如果将项目的范围大小**identityrangemanagementoption**设置为**自动**或**auto_identity_range**设置为**true**。 此标识范围是为重新发布订阅服务器保留的，用于分配给其自身的订阅服务器。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 |**published_in_tran_pub**|**true**|项目也在事务发布中发布。|  
 ||**false**|项目不在事务发布中发布。|  
-|**resolver_info**||用于指定自定义冲突解决程序所需的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 **resolver_info**是**nvarchar(255)**，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
-|**schema_option** (bitmap)||有关详细信息，请参阅本主题后面备注部分。|  
+|**resolver_info**||用于指定自定义冲突解决程序所需的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 **resolver_info**是**nvarchar(255)** ，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
+|**schema_option** （位图）||有关详细信息，请参阅本主题后面备注部分。|  
 ||**0x00**|禁用快照代理编写脚本，并使用中提供的脚本**creation_script**。|  
 ||**0x01**|生成对象创建脚本（CREATE TABLE、CREATE PROCEDURE 等）。|  
 ||**0x10**|生成对应的聚集索引。|  
@@ -119,7 +118,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|在复制的索引**xml**列。|  
 ||**0x8000000**|创建订阅服务器中尚不存在的任何架构。|  
 ||**0x10000000**|将转换**xml**的列**ntext**在订阅服务器上。|  
-||**0x20000000**|将大型对象数据类型 (**nvarchar （max)**， **varchar （max)**，并**varbinary （max)**) 中引入的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]到支持的数据类型在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
+||**0x20000000**|将大型对象数据类型 (**nvarchar （max)** ， **varchar （max)** ，并**varbinary （max)** ) 中引入的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]到支持的数据类型在[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。|  
 ||**0x40000000**|复制的权限。|  
 ||**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
 ||**0x100000000**|使用此选项用于复制 FILESTREAM 属性，如果在指定**varbinary （max)** 列。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 包含 FILESTREAM 列的表复制[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支持订阅服务器，而不考虑如何设置此架构选项。 请参阅相关的选项**0x800000000**。|  

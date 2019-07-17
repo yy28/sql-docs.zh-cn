@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118735"
 ---
 # <a name="buffers"></a>缓冲区
 一个缓冲区就是用于应用程序和驱动程序之间传递数据的应用程序任何的内存部分。 例如，应用程序缓冲区可以关联，或*绑定到*结果集列与**SQLBindCol**。 提取每个行，则将返回这些缓冲区中的每列的数据。 *输入缓冲区*用于将数据传递给驱动程序; 应用程序中*输出缓冲区*用于从驱动程序的数据返回到应用程序。  

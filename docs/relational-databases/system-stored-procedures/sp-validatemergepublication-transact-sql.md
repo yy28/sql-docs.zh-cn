@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5706ea4c1fab79735afe9f9ec4873f112c9114cd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f14b74786b70a280f4b3576537ab89041e0eb6a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119373"
 ---
 # <a name="spvalidatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +38,12 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] **'***发布***’**  
+ [ **@publication=** ] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
 `[ @level = ] level` 是要执行类型。 *级别*是**tinyint**，无默认值。 级别可以为下列值之一：  
   
-|级别值|Description|  
+|级别值|描述|  
 |-----------------|-----------------|  
 |**1**|只验证行计数。|  
 |**2**|验证行计数和校验和。 有关[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]订阅服务器，这将自动设置为**3**。|  

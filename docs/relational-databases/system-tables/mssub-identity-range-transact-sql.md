@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a300f4be77bf6e63722f41553f0cb998cb48827
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4ec1f915e7cc70cb2d8ed0f09a9b0394dc7e09aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68221964"
 ---
 # <a name="mssubidentityrange-transact-sql"></a>MSsub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsub_identity_range**表为订阅提供标识范围管理支持。 此表存储在订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|包含由复制管理的标识列的表的 ID。|  
 |**范围**|**bigint**|控制将在调整时在订阅服务器中指派的连续标识值的范围大小。|  

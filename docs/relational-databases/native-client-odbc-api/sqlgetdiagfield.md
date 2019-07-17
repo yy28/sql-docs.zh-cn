@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131454"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "63014418"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序指定的以下额外的诊断字段**SQLGetDiagField**。 这些字段支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的大量错误报告功能，并且可以在连接的 ODBC 连接句柄和 ODBC 语句句柄上生成的所有诊断记录中使用。 这些字段在 sqlncli.h 中定义。  
   
-|诊断记录字段|Description|  
+|诊断记录字段|描述|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|报告生成错误的存储过程的行号。 只有 SQL_DIAG_SS_PROCNAME 返回值时，SQL_DIAG_SS_LINE 的值才有意义。 该值作为无符号 16 位整数返回。|  
 |SQL_DIAG_SS_MSGSTATE|错误消息的状态。 有关错误消息状态的信息，请参阅[RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)。 该值作为有符号 32 位整数返回。|  

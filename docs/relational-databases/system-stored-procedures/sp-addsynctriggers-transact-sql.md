@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096212"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` 是的名称**时间戳**发布服务器上的列。 *timestamp_col*是**sysname**，默认值为 NULL。  
   
-`[ @filter_clause = ] 'filter_clause'` 是的限制 (WHERE) 子句，用于定义水平筛选器。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。  
+`[ @filter_clause = ] 'filter_clause'` 是的限制 (WHERE) 子句，用于定义水平筛选器。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*是**nvarchar(4000)** ，默认值为 NULL。  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 是表中的主键列的位图。 *primary_key_bitmap*是**varbinary(4000)**，无默认值。  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 是表中的主键列的位图。 *primary_key_bitmap*是**varbinary(4000)** ，无默认值。  
   
 `[ @identity_support = ] identity_support` 启用和禁用自动标识范围处理时使用排队更新。 *identity_support*是**位**，默认值为**0**。 **0**表示没有标识范围支持， **1**启用自动标识范围处理。  
   

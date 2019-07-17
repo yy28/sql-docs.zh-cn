@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086354"
 ---
 # <a name="multithreading"></a>多线程处理
 多线程在操作系统上，驱动程序必须是线程安全的。 也就是说，它必须是应用程序可以在多个线程上使用相同的句柄。 这如何实现是特定于驱动程序，并可能驱动程序会将序列化任何尝试同时在两个不同的线程上使用相同的句柄。  

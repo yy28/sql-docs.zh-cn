@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98256d8c38daf33ada116e1f19578bed2c35ba3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125021"
 ---
 # <a name="sysserverauditspecificationdetails-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含服务器实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。 有关列表的所有 audit_action_id 和它们的名称查询[sys.dm_audit_actions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|审核服务器规范的 ID|  
 |audit_action_id|**int**|审核操作的 ID|  
@@ -45,7 +44,7 @@ ms.locfileid: "47708935"
 |audited_result|**nvarchar(60)**|审核结果：<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|审核对象是否为组：<br /><br /> 0 - 不是组<br /><br /> 1 - 组|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，不得被拒绝主体**VIEW ANY DEFINITION**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

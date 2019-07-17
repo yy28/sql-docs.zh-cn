@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e532d76f70f6a2d4fa623d80fa02e6c756348a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096144"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
  如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*table_name*归数据库所有者。 如果存在，则返回该表的列。  
   
- [ @table_qualifier= ] '*table_qualifier*'  
+ [ @table_qualifier=] '*table_qualifier*  
  表限定符的名称。 *table_qualifier*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
  [ @fUsePattern= ] '*fUsePattern*'  
  确定下划线 (_)、百分号 (%) 和方括号（[ 或 ]）是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
- None  
+ 无  
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|表限定符名称。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 此字段可以为 NULL。|  
 |TABLE_OWNER|**sysname**|表所有者名称。 此字段始终返回值。|  

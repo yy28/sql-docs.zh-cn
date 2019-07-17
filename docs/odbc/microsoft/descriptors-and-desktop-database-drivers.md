@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112052"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>描述符和桌面数据库驱动程序
 描述符是一个包含有关列数据或动态参数的信息的数据结构。 **SQLGetDescField**可用于检索下面列出的受支持的描述符。 不能因为自动填充实现参数描述符 (IPD) **SQLDescribeParam**不受支持。 不能通过 Jet （如 SQL_DESC_BASE_TABLE_NAME) 的描述符字段也不支持。  

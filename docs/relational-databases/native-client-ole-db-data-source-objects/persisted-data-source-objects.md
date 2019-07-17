@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f9afa1b416b451689f4fd0c47957e6b28cb6e66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59985a7ca5ed382682777c84e971c86c95570c53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128560"
 ---
 # <a name="persisted-data-source-objects"></a>持久化数据源对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47656107"
 ## <a name="examples"></a>示例  
  **A.使数据源初始化持久化：**  
   
- 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在函数的 pLocation 和 pDatasource 参数中接收服务器名称和数据库名称。  
+ 此示例显示使数据源初始化属性持久化的一个函数，它为连接定义服务器、数据库并使用 Windows 身份验证模式。 在函数的 pLocation 和 pDatasource 参数中接收服务器名称和数据库名称   。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -230,7 +229,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- 可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化。  
+ 可在调用 IDBInitialize::Initialize 前后调用 IPersistFile::Save 方法   。 如果在从 IDBInitialize::Initialize 成功返回后调用该方法，可确保使有效的数据源指定持久化  。  
   
 ## <a name="see-also"></a>请参阅  
  [数据源对象&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

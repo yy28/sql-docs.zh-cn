@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 046bebc200c25ee41bd056fae6d478fe0542cca6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e793b9b5dfa78909bc74112580476c7d3074536
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079676"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>创建派生层次结构 (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487460"
 > [!NOTE]  
 >  如果对于某一成员不存在基于域的属性值，则在派生层次结构中将不包括该成员。 若要获取针对所有成员的基于域的属性值，请参阅[要求属性值 (Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  

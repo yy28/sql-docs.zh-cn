@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (Transact-SQL) | Microsoft Docs
+title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dea1ce298f9c032b785ced601a0d50d52fbb6f96
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104583"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_name = ] 'plan_name'` 指定要添加的维护计划的名称。 *plan_name*是**varchar （128)**。  
+`[ @plan_name = ] 'plan_name'` 指定要添加的维护计划的名称。 *plan_name*是**varchar （128)** 。  
   
  **@plan_id = '** *plan_id* **'**  
  指定维护计划的 ID。 *plan_id*是**uniqueidentifier**。  

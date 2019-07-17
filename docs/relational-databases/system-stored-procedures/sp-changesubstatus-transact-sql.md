@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113810"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 如果*发布*未指定，则将影响所有发布。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 **%** 。 如果*发布*未指定，则将影响所有发布。  
   
-`[ @article = ] 'article'` 是的名称。 该名称对发布必须是唯一的。 *文章*是**sysname**，默认值为**%**。 如果*一文*未指定，则将影响所有项目。  
+`[ @article = ] 'article'` 是的名称。 该名称对发布必须是唯一的。 *文章*是**sysname**，默认值为 **%** 。 如果*一文*未指定，则将影响所有项目。  
   
-`[ @subscriber = ] 'subscriber'` 是要更改的状态的订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**。 如果*订阅服务器*未指定，则状态将用于所有订阅服务器更改为指定的项目。  
+`[ @subscriber = ] 'subscriber'` 是要更改的状态的订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 **%** 。 如果*订阅服务器*未指定，则状态将用于所有订阅服务器更改为指定的项目。  
   
 `[ @status = ] 'status'` 中的订阅状态**syssubscriptions**表。 *状态*是**sysname**，无默认值，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**active**|订阅服务器已被同步并且正在接收数据。|  
 |**inactive**|存在订阅服务器项，但没有订阅。|  
-|**subscribed**|订阅服务器正在请求数据，但尚未同步。|  
+|**订阅**|订阅服务器正在请求数据，但尚未同步。|  
   
 `[ @previous_status = ] 'previous_status'` 是订阅的以前的状态。 *previous_status*是**sysname**，默认值为 NULL。 此参数，可更改当前具有该状态，从而允许一组特定的订阅上的组函数的任何订阅 (例如，设置所有活动订阅回**订阅**)。  
   
-`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，默认值为**%**。  
+`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，默认值为 **%** 。  
   
 `[ @frequency_type = ] frequency_type` 安排分发任务的频率。 *frequency_type*是**int**，默认值为 NULL。  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` 是正在计划分发任务停止的日期格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 是可选的命令提示符。 *optional_command_line*是**nvarchar(4000)**，默认值为 NULL。  
+`[ @optional_command_line = ] 'optional_command_line'` 是可选的命令提示符。 *optional_command_line*是**nvarchar(4000)** ，默认值为 NULL。  
   
-`[ @distribution_jobid = ] distribution_jobid` 从非活动状态的订阅状态更改为活动时，是针对订阅的分发服务器上的分发代理的作业 ID。 在其他情况下，不定义该参数。 如果对此存储过程的单个调用中涉及多个分发代理，则不定义结果。 *distribution_jobid*是**binary(16)**，默认值为 NULL。  
+`[ @distribution_jobid = ] distribution_jobid` 从非活动状态的订阅状态更改为活动时，是针对订阅的分发服务器上的分发代理的作业 ID。 在其他情况下，不定义该参数。 如果对此存储过程的单个调用中涉及多个分发代理，则不定义结果。 *distribution_jobid*是**binary(16)** ，默认值为 NULL。  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -166,10 +165,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  只有的成员**sysadmin**固定服务器角色**db_owner**固定的数据库角色或订阅创建者才能执行**sp_changesubstatus**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

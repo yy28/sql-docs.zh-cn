@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d988099cad357254f04a79a8a6cccbbe4eb2768c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c78162bcf0421fee609abe5fcacf9613e0f8020b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138942"
 ---
 # <a name="initialization-of-descriptor-fields"></a>描述符字段的初始化
 如下所示，其字段分配应用程序行描述符后，接收初始值[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 SQL_DESC_TYPE 字段的初始值是 SQL_DEFAULT。 这提供了有关标准处理以便为应用程序的数据库数据。 应用程序可以通过设置描述符记录的字段中指定数据处理的方式不同。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106295"
 ---
 # <a name="arguments-in-catalog-functions"></a>目录函数中的自变量
 所有目录函数都接受自变量与该应用程序可以将限制返回的数据的作用域。 例如，第一个和第二个调用到**SQLTables**下面的代码中返回的结果集包含所有表有关的信息，而第三个调用返回订单表有关的信息：  
@@ -45,7 +44,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
 |**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID 为 ID ID|  
 |**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID 为 ID ID|  
 |**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID 为 ID ID|  
-|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV VL|ID ID ID 批量许可|  
+|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV 批量许可|ID ID ID 批量许可|  
   
  本部分包含以下主题。  
   

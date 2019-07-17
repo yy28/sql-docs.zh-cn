@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58cab4235a0b0199540179250fc5358ff6a525b6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084917"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @class = ] 'class'` 要更新的类别的类。 *类*是**varchar(8)**，无默认值，并且可以是下列值之一。  
+`[ @class = ] 'class'` 要更新的类别的类。 *类*是**varchar(8)** ，无默认值，并且可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|**ALERT**|更新警报类别。|  
+|**发出警报**|更新警报类别。|  
 |**JOB**|更新作业类别。|  
 |**运算符**|更新操作员类别。|  
   

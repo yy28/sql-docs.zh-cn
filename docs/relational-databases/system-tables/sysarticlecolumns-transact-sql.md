@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61e1329fe35ae032b5d35f94dd2e1ce5e8d08d38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130520"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysarticlecolumns**表包含每个表列的快照发布或事务发布中发布并将每个列映射到其项目的一个行。 该表存储在发布数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|标识项目。|  
-|**colid**|**smallint**|标识项目中的列。|  
+|**列 id**|**smallint**|标识项目中的列。|  
 |**is_udt**|**bit**|表示列是否为用户定义数据类型 (UDT) 列。 值为**1**指示 UDT 列。|  
 |**is_xml**|**bit**|指示列是否**xml**列。 值为**1** ，则指示 xml 列。|  
 |**is_max**|**bit**|指示列是否为大值数据类型列**varchar （max)** ， **nvarchar （max)** ，并**varbinary （max)** 。 值为**1**指示大型值列。|  

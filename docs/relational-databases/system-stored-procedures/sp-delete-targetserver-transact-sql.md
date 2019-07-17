@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetserver (Transact-SQL) | Microsoft Docs
+title: sp_delete_targetserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111995"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server_name = ] 'server'` 要删除作为可用目标服务器的服务器的名称。 *服务器*是**nvarchar(30)**，无默认值。  
+`[ @server_name = ] 'server'` 要删除作为可用目标服务器的服务器的名称。 *服务器*是**nvarchar(30)** ，无默认值。  
   
 `[ @clear_downloadlist = ] clear_downloadlist` 指定是否清除目标服务器的下载列表。 *clear_downloadlist*是类型**位**，默认值为**1**。 当*clear_downloadlist*是**1**，过程将删除服务器之前清除该服务器的下载列表。 当*clear_downloadlist*是**0**，不清除下载列表。  
   
@@ -52,7 +51,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  若要删除目标服务器的常规方法是调用**sp_msx_defect**目标服务器上。 使用**sp_delete_targetserver**手动脱离时才需要。  
@@ -72,7 +71,7 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

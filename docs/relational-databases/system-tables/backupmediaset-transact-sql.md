@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 831571621256a34611672ae6444379c375370f1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119345"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +31,12 @@ ms.locfileid: "47679267"
   每个备份介质集在表中占一行。 此表存储中**msdb**数据库。  
  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|唯一介质集标识号。 标识，主键。|  
 |**media_uuid**|**uniqueidentifier**|介质集的 UUID。 所有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]介质集都有一个 UUID。<br /><br /> 对于早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但是，如果介质集包含只有一个介质簇**media_uuid**列可能为 NULL (**media_family_count**为 1)。|  
 |**media_family_count**|**tinyint**|媒体集中的媒体簇数。 可以为 NULL。|  
-|**名称**|**nvarchar(128)**|介质集的名称。 可以为 NULL。<br /><br /> 有关详细信息，请参阅的 MEDIANAME 和 MEDIADESCRIPTION 中的[备份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
+|**name**|**nvarchar(128)**|介质集的名称。 可以为 NULL。<br /><br /> 有关详细信息，请参阅的 MEDIANAME 和 MEDIADESCRIPTION 中的[备份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**description**|**nvarchar(255)**|介质集的文本化说明。 可以为 NULL。<br /><br /> 有关详细信息，请参阅的 MEDIANAME 和 MEDIADESCRIPTION 中的[备份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**software_name**|**nvarchar(128)**|写入介质标签的备份软件名称。 可以为 NULL。|  
 |**software_vendor_id**|**int**|写入备份介质标签的软件供应商标识号。 可以为 NULL。<br /><br /> 值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为十六进制值 0x1200。|  

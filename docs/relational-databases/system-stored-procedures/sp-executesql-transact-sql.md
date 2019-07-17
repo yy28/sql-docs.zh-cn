@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef37233326597dc2a83f3089590e07f7b6efe51f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: df7af5de2fa18875168c5528d27481dac016fea9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124441"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,15 +49,15 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>参数  
- [ \@stmt= ] *statement*  
- 是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理。 \@语句必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定 Unicode 常量，则它必须带有前缀**N**。例如，Unicode 常量**N 'sp_who'** 有效，但是字符常量 **'sp_who'** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在 64 位服务器上的字符串的大小被限制为 2 GB 的最大大小**nvarchar （max)**。  
+ [ \@stmt =]*语句*  
+ 是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理。 \@语句必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定 Unicode 常量，则它必须带有前缀**N**。例如，Unicode 常量**N 'sp_who'** 有效，但是字符常量 **'sp_who'** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在 64 位服务器上的字符串的大小被限制为 2 GB 的最大大小**nvarchar （max)** 。  
   
 > [!NOTE]  
 >  \@语句可以包含的参数将同一个窗体作为变量名称，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  包含在每个参数\@stmt 必须具有一个对应的条目，在这种\@params 参数定义列表和参数值列表。  
   
- [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
+ [ \@params =] N'\@*parameter_name* *data_type* [，...*n* ]  
  是一个字符串，它包含的定义中嵌入的所有参数\@stmt。字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 每个参数中指定\@必须在定义 stmt \@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理在\@stmt 不包含参数，\@参数不是必需的。 该参数的默认值为 NULL。  
   
  [ \@param1= ] '*value1*'  

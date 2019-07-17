@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090276"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ ms.locfileid: "52543825"
   
 -   类型。 类型封装了字节集合的长度和特征，在解释数据时需要用到这些内容。  
 
- |列名|数据类型|Description|  
+ |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|对象的名称。 名称是唯一的特定对象类型的包中。 不可为 null。|  
+|name|**nvarchar(60)**|对象的名称。 名称是唯一的特定对象类型的包中。 不可为 null。|  
 |object_type|**nvarchar(60)**|对象的类型。 object_type 为以下值之一：<br /><br /> 事件<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> 不可为 null。|  
 |package_guid|**uniqueidentifier**|公开此操作的包的 GUID。 与 sys.dm_xe_packages.package_id 存在多对一关系。 不可为 null。|  
 |description|**nvarchar(256)**|操作的说明。 由包的作者设置说明。 不可为 null。|  

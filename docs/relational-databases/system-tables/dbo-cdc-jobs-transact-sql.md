@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 321e6b1809f6dc8f30710c98665316c50a6ab50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c9668c234728dc34952a7095889fe6ba5cfd06a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084706"
 ---
 # <a name="dbocdcjobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +31,14 @@ ms.locfileid: "62470931"
   
  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|特定数据库的 ID，作业在此数据库中运行。|  
 |**job_type**|**nvarchar(20)**|作业的类型，为“capture”或“cleanup”。|  
 |**job_id**|**uniqueidentifier**|与作业关联的唯一 ID。|  
 |**maxtrans**|**int**|在每个扫描循环中要处理的最大事务数。<br /><br /> **maxtrans**仅对捕获作业有效。|  
 |**maxscans**|**int**|最大扫描循环要执行，以从日志提取所有行数。<br /><br /> **maxscans**仅对捕获作业有效。|  
-|**continuous**|**bit**|指示捕获作业是连续运行 (1) 还是以一次性模式运行 (0) 的标志。 有关详细信息，请参阅[sys.sp_cdc_add_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> **连续**仅对捕获作业有效。|  
+|**连续**|**bit**|指示捕获作业是连续运行 (1) 还是以一次性模式运行 (0) 的标志。 有关详细信息，请参阅[sys.sp_cdc_add_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> **连续**仅对捕获作业有效。|  
 |**pollinginterval**|**bigint**|日志扫描循环之间间隔的秒数。<br /><br /> **pollinginterval**仅对捕获作业有效。|  
 |**retention**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留期**仅对清除作业有效。|  
 |**threshold**|**bigint**|清除时可以使用一条语句删除的删除条目的最大数量。|  

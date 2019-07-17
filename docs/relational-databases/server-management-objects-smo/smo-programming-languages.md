@@ -17,21 +17,20 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93c72834a7299129109074c2cbaf14760fd34ae8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b667b1f2b30afc958f2916a1dd7fa0b4da0ff085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092833"
 ---
 # <a name="smo-programming-languages"></a>SMO 编程语言
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   本部分介绍如何进行编程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C#.NET。
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[开始在 Visual C&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|有关如何开始编写 SMO 程序的 Visual C#.NET 提供的信息|  
   

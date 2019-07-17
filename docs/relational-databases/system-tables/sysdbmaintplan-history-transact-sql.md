@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a51e2ea16ab7cc34ade122284a7162707c4d8f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130452"
 ---
 # <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47732665"
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**sequence_id**|**int**|数据库维护计划执行的历史记录序列。|  
 |**plan_id**|**uniqueidentifier**|数据库维护计划 ID。|  
@@ -46,6 +45,6 @@ ms.locfileid: "47732665"
 |**duration**|**int**|完成数据库维护计划操作所需的时间。|  
 |**start_time**|**datetime**|操作开始的时间。|  
 |**error_number**|**int**|失败时报告的错误号。|  
-|message|**nvarchar(512)**|生成的消息**sqlmaint**。|  
+|message |**nvarchar(512)**|生成的消息**sqlmaint**。|  
   
   
