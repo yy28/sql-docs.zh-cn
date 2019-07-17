@@ -7,13 +7,12 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26358fea3b7d08d986a5078cf6484e7c4e0d3dd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962116"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>鸢尾花演示数据的 SQL Server 中的 Python 和 R 教程 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "62641067"
     > [!TIP] 
     > 如果您不熟悉 T-SQL，应该先记住`DROP...IF`语句。 当你尝试创建一个表并已存在时，SQL Server 将返回错误："没有已名为 iris_data' 在数据库中的对象。" 若要避免此类错误的一种方法是代码的作为你的一部分删除任何现有表或其他对象。
 
-4. 运行以下代码以创建用于存储已训练的模型的表。 若要保存在 SQL Server 中的 Python （或 R） 模型，它们必须序列化和存储的列中的类型**varbinary （max)**。 
+4. 运行以下代码以创建用于存储已训练的模型的表。 若要保存在 SQL Server 中的 Python （或 R） 模型，它们必须序列化和存储的列中的类型**varbinary （max)** 。 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;

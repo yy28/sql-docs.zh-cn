@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a2b49dcb94210e7abb3d73d6d1d827cb9c8f8497
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.openlocfilehash: 76136d5f896e72cef7600562c83d104883713637
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220443"
 ---
-**适用于：** ![是](media/yes.png)SQL Server （从 2014 SP2 开始）![是](media/yes.png)Azure SQL 数据库![没有](media/no.png)Azure SQL 数据仓库![没有](media/no.png)并行数据仓库 
+ 适用对象：![是](media/yes.png)SQL Server ![是](media/yes.png)Azure SQL 数据库 ![否](media/no.png)Azure SQL 数据仓库 ![否](media/no.png)并行数据仓库 
 

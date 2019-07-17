@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 98dcaeedf8f8c6a1ab6fbea58ede3aca0ccf203b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68161784"
+---
 ## <a name="edit-contentmediaedit-topic-pencilpng-contribute-sql-documentation"></a>![编辑内容](../media/edit-topic-pencil.png) 参与编辑 SQL 文档
-您是否知道，您可以编辑内容自己？ 如果这样做，不仅将得到改善我们的文档，而且你将还贷记作为参与者到页。
+你是否知道你可以自己编辑内容？ 这样做不仅可以改进我们的文档，还可以获得页面贡献者的殊荣。
 - [如何参与编辑 SQL Server 文档](https://docs.microsoft.com/sql/sql-server/sql-server-docs-contribute)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: beb791ab4ad6fd7efbc6ae5931bbae4158332eb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63767863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68214799"
 ---
-<Token>**适用于：** ![是](media/yes.png)SQL Server (仅限 Linux)![没有](media/no.png)Azure SQL 数据库![没有](media/no.png)Azure SQL 数据仓库![没有](media/no.png)并行数据仓库 </Token>
+<Token>  适用对象：![是](media/yes.png)SQL Server（仅限 Linux）![否](media/no.png)Azure SQL 数据库 ![否](media/no.png)Azure SQL 数据仓库 ![否](media/no.png)并行数据仓库 </Token>

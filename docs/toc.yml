@@ -5693,6 +5693,8 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: 迁移 SQL Server 登录
           href: dma/dma-migrateserverlogins.md
+        - name: 评估 SQL Server 数据地产的的 Azure SQL 数据库就绪情况
+          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: 最佳做法
           href: dma/dma-bestpractices.md
         - name: 合并评估报表
