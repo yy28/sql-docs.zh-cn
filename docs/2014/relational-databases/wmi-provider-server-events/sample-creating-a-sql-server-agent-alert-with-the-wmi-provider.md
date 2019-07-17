@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823441"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195835"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>示例：通过使用 WMI Provider for Server Events 创建 SQL Server 代理警报
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>示例：使用服务器事件 WMI 提供程序创建 SQL Server 代理警报
   WMI 事件提供程序的一个常见用法是创建响应特定事件的 SQL Server 代理警报。 以下示例提供一个在表中保存 XML 死锁图形事件以供以后分析的简单警报。 SQL Server 代理提交 WQL 请求、接收 WMI 事件并运行作业以响应该事件。 请注意，尽管在处理通知消息中涉及几个 Service Broker 对象，WMI 事件提供程序将处理创建和管理这些对象的详细信息。  
   
 ## <a name="example"></a>示例  
@@ -102,7 +102,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第二个查询选项卡中运行以下脚本。此脚本生成一个结果集，然后被阻塞，等待获取 `Production.Product` 的锁。  
+ 在第二个查询选项卡中运行以下脚本。此脚本生成一个结果集，然后被阻塞，等待上获取锁`Production.Product`。  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +118,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第一个查询选项卡中运行以下脚本。此脚本被阻塞，等待获取 `Production.Location` 的锁。 在很短的超时值过后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将选择此脚本或示例中的脚本作为死锁牺牲品，然后结束事务。  
+ 在第一个查询选项卡中运行以下脚本。此脚本被阻塞，等待上获取锁`Production.Location`。 在很短的超时值过后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将选择此脚本或示例中的脚本作为死锁牺牲品，然后结束事务。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

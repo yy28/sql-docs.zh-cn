@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_dictionaries (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_column_store_dictionaries (TRANSACT-SQL) |Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 53637fb3ae70cd73e1bbf1cb95a8a4ca3775b812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a588d23d5e3e7f9cb314342a739ceb8e051ca2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059382"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含使用列存储索引中每个字典的行。 字典用于对某些而非全部数据类型进行编码，因此并非列存储索引中的所有列都有字典。 字典可以作为主字典存在（对于所有段），也可能作为用于部分列段的其他辅助字典存在。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|指示分区 ID。 是在数据库中唯一。|  
 |**hobt_id**|**bigint**|具有此 columnstore 索引的表的堆或 B 树 (hobt) 的 ID。|  

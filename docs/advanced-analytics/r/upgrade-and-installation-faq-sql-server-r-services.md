@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-manager: cgronlun
-ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: bb9eb4d706b37501a1919ea3b2178525a6026af3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962418"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +70,7 @@ SQL Server 2016 的早期发行版本无法在没有 internet 连接的脱机安
 
 以下版本随 SQL Server 2016 的预发布版本一起安装。
 
-| 版本 | Build         |
+| Version | Build         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -162,7 +161,7 @@ SQL Server 2016 的早期发行版本无法在没有 internet 连接的脱机安
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A（针对 7.5.0）
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [SQL Server 机器学习服务 （数据库内）](../r/sql-server-r-services.md)
 

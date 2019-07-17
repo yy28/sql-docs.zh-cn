@@ -1,7 +1,7 @@
 ---
 title: 数据库级别的角色 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 65330658d47ad371d992eaf15d648e7abfd4d5b6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516493"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832954"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 
@@ -54,7 +54,7 @@ ms.locfileid: "59516493"
 
 若要向数据库角色添加和删除成员，请使用 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 语句的 [和](../../../t-sql/statements/alter-role-transact-sql.md) 选项。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 不支持 `ALTER ROLE`的这种用法。 改为使用较早版本的 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 和 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 过程。
   
- 存在两种类型的数据库级角色：数据库中预定义的“固定数据库角色”和可以创建的“用户定义的数据库角色”。  
+ 存在两种类型的数据库级角色：数据库中预定义的“固定数据库角色”  和可以创建的“用户定义的数据库角色”  。  
   
  固定数据库角色是在数据库级别定义的，并且存在于每个数据库中。 **db_owner** 数据库角色的成员可以管理固定数据库角色成员身份。 msdb 数据库中还有一些特殊用途的数据库角色。  
   
@@ -69,12 +69,12 @@ ms.locfileid: "59516493"
 
 ## <a name="fixed-database-roles"></a>固定数据库角色
   
- 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 无法更改分配给固定数据库角色的权限，“公共”数据库角色除外。   
+ 下表显示了固定数据库角色及其能够执行的操作。 所有数据库中都有这些角色。 无法更改分配给固定数据库角色的权限，“公共”数据库角色除外  。   
   
 |固定数据库角色名|描述|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定数据库角色的成员可以执行数据库的所有配置和维护活动，还可以删除 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的数据库。 （在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中，某些维护活动需要服务器级别权限，并且不能由 **db_owners**执行。）|  
-|**db_securityadmin**|db_securityadmin 固定数据库角色的成员可以仅修改自定义角色的角色成员资格、创建无登录名的用户和管理权限。 向此角色中添加主体可能会导致意外的权限升级。|  
+|**db_securityadmin**|db_securityadmin  固定数据库角色的成员可以仅修改自定义角色的角色成员资格、创建无登录名的用户和管理权限。 向此角色中添加主体可能会导致意外的权限升级。|  
 |**db_accessadmin**|**db_accessadmin** 固定数据库角色的成员可以为 Windows 登录名、Windows 组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名添加或删除数据库访问权限。|  
 |**db_backupoperator**|**db_backupoperator** 固定数据库角色的成员可以备份数据库。|  
 |**db_ddladmin**|**db_ddladmin** 固定数据库角色的成员可以在数据库中运行任何数据定义语言 (DDL) 命令。|  
@@ -89,7 +89,7 @@ ms.locfileid: "59516493"
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
-这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。
+这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。 不过，如果向 master 中的 dbmanager  角色添加包含的数据库用户，这些用户无法用于新建数据库。
 
 |角色名称|描述|  
 |--------------------|-----------------|

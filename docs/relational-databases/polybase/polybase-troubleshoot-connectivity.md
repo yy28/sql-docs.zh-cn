@@ -2,22 +2,21 @@
 title: PolyBase Kerberos 连接疑难解答 | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 ms.technology: polybase
-ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 58725a5f0ebf3038bd95be410ae6b1db8de01845
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581219"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860556"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -106,7 +105,7 @@ PolyBase 具有以下包含 Hadoop 群集属性的配置 XML 文件：
 | *Name Node Port* | 名称节点的端口。 指的是 CREATE EXTERNAL DATA SOURCE T-SQL 中的“LOCATION”参数。 例如，8020。 |
 | *Service Principal* | KDC 的管理服务主体。 匹配 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中的“IDENTITY”参数。|
 | *Service Password* | 将密码存储在文件中并在此处传递该文件路径，而非在控制台上键入密码。 该文件的内容应与 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中用作“SECRET”参数的内容一致。 |
-| *Remote HDFS file path (optional) * | 要访问的现有文件的路径。 如果未指定，将使用根路径“/”。 |
+| 远程 HDFS 文件路径（可选）  | 要访问的现有文件的路径。 如果未指定，将使用根路径“/”。 |
 
 ## <a name="example"></a>示例
 

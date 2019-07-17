@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6cf64c8300e1bf60c0384bfc8283008d38c666ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 753a3ddfe1e7d808380464ef5010bbe5a18ac18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040890"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 属性（ClientNetworkProtocol 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62936772"
 object.ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
+## <a name="parts"></a>部件  
  *object*  
  一个[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象，表示使用的网络协议[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
   

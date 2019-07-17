@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d03fde715ba1f7edcfa89d6f5b6955e0543c121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88bb389da837501b2ab724a505b43a57e339e90
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765807"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732305"
 ---
 # <a name="view-collation-information"></a>查看排序规则信息
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,28 +37,28 @@ ms.locfileid: "47765807"
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  右键单击该实例，然后选择“属性”。  
+2.  右键单击该实例，然后选择“属性”  。  
   
  **使用对象资源管理器查看数据库的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开“数据库”，右键单击数据库，然后选择“属性”。  
+2.  展开“数据库”  ，右键单击数据库，然后选择“属性”  。  
   
  **使用对象资源管理器查看列的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  依次展开 **“数据库”**、数据库和 **“表”**。  
+2.  依次展开 **“数据库”** 、数据库和 **“表”** 。  
   
-3.  展开包含该列的表，然后展开 **“列”**。  
+3.  展开包含该列的表，然后展开 **“列”** 。  
   
-4.  右键单击该列并选择“属性”。 如果排序规则属性为空，则该列不是字符数据类型。  
+4.  右键单击该列并选择“属性”  。 如果排序规则属性为空，则该列不是字符数据类型。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看服务器的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 SERVERPROPERTY 系统函数的语句。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47765807"
   
  **查看 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 SERVERPROPERTY 系统函数的语句。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47765807"
   
  **查看数据库的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 sys.databases 系统目录视图的语句。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47765807"
   
  **查看列的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
   
 2.  在查询窗口中，输入以下使用 sys.columns 系统目录视图的语句。  
   
@@ -108,13 +108,27 @@ ms.locfileid: "47765807"
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
+ **查看表和列的排序规则设置的具体步骤**  
+
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
+  
+2.  在查询窗口中，输入以下使用 sys.columns 系统目录视图的语句。  
+  
+    ```sql  
+    SELECT t.name TableName, c.name ColumnName, collation_name  
+    FROM sys.columns c  
+    inner join sys.tables t on c.object_id = t.object_id;  
+    ```  
+
+
+
 ## <a name="see-also"></a>另请参阅  
  [SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [排序规则优先级 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
+ [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

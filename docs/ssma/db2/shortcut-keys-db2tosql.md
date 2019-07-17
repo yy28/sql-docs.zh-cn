@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7861d38222658edba2c174d0e6a71aa740d08403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d6ed457fe00e7ec78094b44db174e2c0150511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059987"
 ---
 # <a name="shortcut-keys-db2tosql"></a>键盘快捷方式 (DB2ToSQL)
 可以使用键盘快捷方式来浏览 SSMA 应用程序。 有关详细信息，请参阅以下主题。  

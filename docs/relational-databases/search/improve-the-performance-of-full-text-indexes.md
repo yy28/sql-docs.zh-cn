@@ -18,12 +18,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973576"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652814"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "57973576"
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 爬网日志文件名的可变部分如下。
--   \<**DatabaseID**> - 数据库的 ID。 <dbid> 是一个带有前导零的五位数。  
--   <**FullTextCatalogID**> - 全文目录 ID。 \<catid>是一个带有前导零的五位数。  
+-   \<**DatabaseID**> - 数据库的 ID。 <dbid  > 是一个带有前导零的五位数。  
+-   <**FullTextCatalogID**> - 全文目录 ID。 \<catid  >是一个带有前导零的五位数。  
 -   <**n**> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
   
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  
@@ -131,23 +131,23 @@ ms.locfileid: "57973576"
   
 有关以下公式的基本信息，请参阅表后面的说明。  
   
-|平台|估计 fdhost.exe 的内存需求量 (MB) -F^1|用于计算最大服务器内存的公式 -M^2|  
+|平台|估计 fdhost.exe 的内存需求量 (MB) -F^1 |用于计算最大服务器内存的公式 -M^2 |  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *爬网范围数* * 50|M =minimum(T, 2000) - F - 500|  
-|x64|*F* = *爬网范围数* * 10 * 8|M = T - F - 500|  
+|x86|F   = 爬网范围数  \* 50|M =minimum(T, 2000) - F - 500  |  
+|x64|F   = 爬网范围数  \* 10 \* 8|M = T - F - 500   |  
 
 **有关公式的说明**
-1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T- sigma(_F_i)。  
+1.  如果正在进行多个完全填充，则分别计算每个完全填充的 fdhost.exe 内存需求量，如 *F1*、*F2*等。 然后计算 M 为 T- sigma(_F_i)      。  
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>例如：估计 fdhost.exe 的内存需求量  
   
- 此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F。 爬网范围数是 `8`。  
+ 此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F  。 爬网范围数是 `8`。  
   
  `F = 8*10*8=640`  
   
- 然后，计算出最大服务器内存的最佳值 -M。 该系统的可用物理内存总量（以 MB 为单位）-T- 为 `8192`。  
+ 然后，计算出最大服务器内存的最佳值 -M   。 该系统的可用物理内存总量（以 MB 为单位）-T- 为 `8192`  。  
   
  `M = 8192-640-500=7052`  
   

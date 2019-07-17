@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea988ca1274ad8487270483f7a449f77651beb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917815"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 属性示例 (VB)
 此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象的动态**优化**属性。 ***Zip***字段***作者***表中***Pubs***数据库未编制索引。 设置[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性设置为**True**上***zip***字段授权 ADO 建立索引，可改进性能的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法。  

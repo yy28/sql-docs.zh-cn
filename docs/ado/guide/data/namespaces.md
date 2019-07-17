@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e04ffd13183462b0d2a5e68ebc177b8b342b570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924819"
 ---
 # <a name="namespaces"></a>命名空间
 XML 暂留格式在 ADO 中使用以下四个命名空间。  
@@ -26,7 +25,7 @@ XML 暂留格式在 ADO 中使用以下四个命名空间。
 ## <a name="remarks"></a>备注  
  XML 暂留格式在 ADO 中使用以下四个命名空间。  
   
-|Prefix|Description|  
+|前缀|描述|  
 |------------|-----------------|  
 |s|引用包含的元素和属性定义当前记录集的架构的"XML 数据"命名空间。|  
 |dt|引用的数据类型定义规范。|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 15b8f9aa0a2395d353fad3cde36ec1ee596d0202
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c38d850cb7f20f61f709f7e27161d84fa9b84dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988124"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>创建基于域的属性（用于 Excel 的 MDS 外接程序）
 
@@ -29,7 +28,7 @@ ms.locfileid: "65486121"
 > [!NOTE]  
 >  如果用户在该约束列键入某个值，而不是从列表中进行选择，则在用户发布时将在 **$InputStatus$** 列中显示错误。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
@@ -58,7 +57,7 @@ ms.locfileid: "65486121"
   
 6.  如果您在前一步骤中选择 **“所选列”** ，则在 **“新实体名称”** 框中键入新实体的名称。 该名称可与列（属性）名称相同。  
   
-7.  单击“确定”  。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
+7.  单击 **“确定”** 。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
   
 ## <a name="next-steps"></a>后续步骤  
   

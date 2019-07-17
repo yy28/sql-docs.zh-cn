@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 15d11b8882e8e39a03ffb7509526a4f66b6553b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925309"
 ---
 # <a name="forward-only-cursors"></a>只进游标
 典型的默认游标类型，称为只进 （或非可滚动） 游标中，可以仅向前移动的结果集。 只进游标不支持滚动 （向前和向后移动结果集中的功能）;它仅支持从一开始的行提取到结果集的末尾。 与某些只进游标 (如与 SQL Server 游标库)，则所有 insert、 update 和 delete 语句所做的当前用户 （或由其他用户提交） 在结果集中的影响行是可见的因为在提取行。 由于游标无法向后滚动，但是，在提取行后对数据库中的行进行的更改通过游标均不可见。  

@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c6f93be8caa4b571693092ed93f5747f8506aa9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e0936e74b3c48a2fe3298215107ae48d0c3b63cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950789"
 ---
 # <a name="constraintcolumnusage-transact-sql"></a>CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   为当前数据库中定义了约束的每一列返回一行。 该信息架构视图返回当前用户对其拥有权限的对象的相关信息。  
   
- 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。**_view_name_。  
+ 若要从这些视图检索信息，请指定完全限定的名称**INFORMATION_SCHEMA。** _view_name_。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含表所有者的架构名。<br /><br /> **&#42;&#42;重要&#42; &#42;** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  

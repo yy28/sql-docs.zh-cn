@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc6b574702f71a70de842c3a3b51110e8eed9814
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207622"
 ---
 # <a name="perspectives-in-tabular-models"></a>表格模型中的透视
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52983888"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[创建和管理透视](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|描述如何使用模型设计器中的“透视”对话框创建和管理透视。|  
   

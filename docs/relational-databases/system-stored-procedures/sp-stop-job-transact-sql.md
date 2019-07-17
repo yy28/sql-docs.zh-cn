@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (Transact-SQL) | Microsoft Docs
+title: sp_stop_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032723"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_stop_job
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- None  
+ 无  
   
 ## <a name="remarks"></a>备注  
  **sp_stop_job**将停止信号发送到数据库。 可以立即停止某些进程和一些必须达到稳定的时间点 （或代码路径的入口点） 可以停止之前。 某些长时间运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（例如 BACKUP、RESTORE）和某些 DBCC 命令可能要花较长的时间才能完成。 这些运行时，可能需要一段时间之前取消了作业。 停止作业导致在作业历史记录中记录“作业已取消”项。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060191"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>项目设置 （加载系统对象） (DB2ToSQL)
 正在加载系统对象页**项目设置**对话框可以指定的 DB2 系统对象 SSMA 将转换并将加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

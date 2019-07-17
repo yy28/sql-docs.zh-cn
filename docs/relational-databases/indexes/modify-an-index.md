@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ee26ba8891c2854bf772c0af021f48b8420d3356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2aba0c1526473d48fe1171bbd41f4e006ca1690
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680235"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732413"
 ---
 # <a name="modify-an-index"></a>修改索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "47680235"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，展开该表所属的数据库，再展开 **“表”**。  
+2.  展开 **“数据库”** ，展开该表所属的数据库，再展开 **“表”** 。  
   
-3.  展开该索引所属的表，再展开 **“索引”**。  
+3.  展开该索引所属的表，再展开 **“索引”** 。  
   
-4.  右键单击要修改的索引，然后单击“属性”。  
+4.  右键单击要修改的索引，然后单击“属性”  。  
   
 5.  在 **“索引属性”** 对话框中进行所需的更改。 例如，您可以从索引键中添加或删除列，或更改索引选项的设置。  
   
@@ -61,15 +61,11 @@ ms.locfileid: "47680235"
   
 #### <a name="to-modify-an-index"></a>修改索引  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
-  
-2.  在标准菜单栏上，单击 **“新建查询”**。  
-  
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 `ProductID` 选项在 `Production.WorkOrder` 表的 `DROP_EXISTING` 列上删除并重新创建现有索引。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
+下面的示例使用 `DROP_EXISTING` 选项，删除 AdventureWorks 数据库中 `Production.WorkOrder` 表的 `ProductID` 列上的现有索引并重新创建。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
   
      [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   
-     下面的示例使用 ALTER INDEX 为索引 `AK_SalesOrderHeader_SalesOrderNumber`设置了几个选项。  
+     The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   

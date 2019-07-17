@@ -1,5 +1,5 @@
 ---
-title: sp_help_alert (Transact-SQL) | Microsoft Docs
+title: sp_help_alert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39d0c2f6e17f51928de561820f33bc0c34d89a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055242"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @alert_name = ] 'alert_name'` 警报的名称。 *alert_name* is **nvarchar(128)** . 如果*alert_name*是未指定，则返回有关所有警报的信息。  
+`[ @alert_name = ] 'alert_name'` 警报的名称。 *alert_name*是**nvarchar （128)** 。 如果*alert_name*是未指定，则返回有关所有警报的信息。  
   
 `[ @order_by = ] 'order_by'` 要用于生成的结果排序顺序。 *order_by*是**sysname**，默认值为 N '*名称*。  
   
@@ -60,7 +59,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="result-sets"></a>结果集  
  当 **@legacy_format** 是**0**， **sp_help_alert**生成以下结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系统分配的唯一整数标识符。|  
 |**名称**|**sysname**|警报名称 (例如，Demo:完整**msdb**日志)。|  
@@ -94,7 +93,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  当 **@legacy_format** 是**1**， **sp_help_alert**生成以下结果集。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系统分配的唯一整数标识符。|  
 |**名称**|**sysname**|警报名称 (例如，Demo:完整**msdb**日志)。|  
@@ -119,7 +118,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|作业标识号。|  
 |**job_name**|**sysname**|为了响应警报而执行的按需作业。|  
 |**has_notification**|**int**|如果将这个警报通知给一个或多个操作员，则为非零。 该值是下列值中的一个或多个（用 OR 连起来）：<br /><br /> **1**= 有电子邮件通知<br /><br /> **2**= 有寻呼通知<br /><br /> **4**= 已**网络发送**通知。|  
-|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 的用户。|  
+|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
 |**performance_condition**|**nvarchar(512)**|如果**类型**是**2**，此列显示性能条件的定义。 如果**类型**是**3**，此列显示 WMI 事件查询。 否则，该列为 NULL。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 将始终为 **[未分类]** 为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
 |**type**|**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  

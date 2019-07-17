@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 731189838918a04ec211ec0bcac3f66843658177
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922988"
 ---
 # <a name="address-book-command-buttons"></a>通讯簿命令按钮
 通讯簿应用程序包括以下的命令按钮：  

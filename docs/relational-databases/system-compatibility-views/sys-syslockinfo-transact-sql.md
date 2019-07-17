@@ -1,5 +1,5 @@
 ---
-title: sys.syslockinfo (Transact-SQL) | Microsoft Docs
+title: sys.syslockinfo (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053340"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "63033012"
 > [!IMPORTANT]  
 >  此功能与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有所不同。 有关详细信息，请参阅[SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|锁资源的文本化描述。 包含资源名称的一部分。|  
 |**rsc_bin**|**binary(16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 此列是包含的工具了解的有关锁资源格式来生成其自己的格式化锁资源并执行自联接上**syslockinfo**。|  

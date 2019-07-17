@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 634cded452697c91dfd2ff60635faa7fe1163958
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899216"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   显示等待中的所有资源类型的信息[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
-|列名|数据类型|Description|范围|  
+|列名|数据类型|描述|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|请求的等待列表中的位置。|基于 0 的序号。 这不是唯一所有等待条目。|  
 |session_id|**nvarchar(32)**|在其中发生等待状态的会话 ID。|请参阅中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
@@ -37,7 +36,7 @@ ms.locfileid: "56027498"
 |acquire_time|**datetime**|获取的锁或资源的时间。||  
 |state|**nvarchar(50)**|等待状态的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|等待项的优先级。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|保留此请求的并发槽数 (最大值 32) 数。|1-对于 SmallRC<br /><br /> 3-对于 MediumRC<br /><br /> LargeRC 的 7<br /><br /> 22 - for XLargeRC|  
+|concurrency_slots_used|**int**|保留此请求的并发槽数 (最大值 32) 数。|1-对于 SmallRC<br /><br /> 3-对于 MediumRC<br /><br /> LargeRC 的 7<br /><br /> 22-对于 XLargeRC|  
 |resource_class|**nvarchar(20)**|用于此请求的资源类。|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>请参阅  

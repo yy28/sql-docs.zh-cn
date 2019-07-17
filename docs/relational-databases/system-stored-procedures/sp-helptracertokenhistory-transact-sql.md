@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 268f94665641e29156c20ea55debf26db63e1142
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a73c8e45803bc10d47ef042acebf0650ea183f61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048280"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|在发布服务器提交跟踪令牌记录和在分发服务器上提交的记录之间的秒数。|  
 |**订阅服务器**|**sysname**|收到跟踪令牌的订阅服务器的名称。|  

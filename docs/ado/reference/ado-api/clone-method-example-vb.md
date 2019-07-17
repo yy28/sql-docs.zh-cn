@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e3c46addb9ca2ce28f88f220da2ef211d6f998b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05bd5c203b252909ad4707681aff49181bfde162
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920004"
 ---
 # <a name="clone-method-example-vb"></a>Clone 方法示例 (VB)
 此示例使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法创建的副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后允许用户独立地定位记录每个副本的指针。  

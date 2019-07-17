@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 727ede7a057491eea2ea230d7057aa3228b5fc82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af728d438f01203308258d8f074f145494780a3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944577"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>什么是适用于 SAP ASE (SybaseToSQL) 的 SSMA 中的新增功能
 本文列出了每个版本中的 SAP ASE (以前称为 SSMA for Sybase) 更改 SQL Server Migration Assistant (SSMA)。
@@ -271,6 +270,6 @@ SSMA for Sybase 的 2006 年 11 月版本包含以下更改：
 
 2006 年 7 月发布的用于 Sybase 的 SSMA 是初次发布。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [开始使用 SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

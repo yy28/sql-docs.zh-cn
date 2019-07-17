@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067783"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-   返回 0 个、1 个或多个带有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置的行。 返回指定数据库的 1 行，或返回实例上配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的所有数据库的信息。  
+  返回 0 个、1 个或多个带有 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置的行。 返回指定数据库的 1 行，或返回实例上配置了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的所有数据库的信息。  
   
  使用此存储过程可查看或确定 SQL Server 实例上一个数据库或所有数据库的当前 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置设置。  
   
@@ -49,7 +48,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|数据库名称。|  
 |db_guid|UNIQUEIDENTIFIER|唯一标识数据库的标识符。|  

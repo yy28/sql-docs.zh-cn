@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036199"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函数
 **符合性**  
@@ -75,7 +74,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>诊断  
  当**SQLBrowseConnect**返回 SQL_ERROR，SQL_SUCCESS_WITH_INFO 或 SQL_NEED_DATA，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*设置为 SQL_HANDLE_STMT，和一个*ConnectionHandle 的句柄*。 下表列出了通常返回的 SQLSTATE 值**SQLBrowseConnect** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|缓冲区\* *OutConnectionString*是否不足够大以返回整个浏览结果连接字符串，因此已截断。 缓冲区 **StringLength2Ptr*包含未截断的浏览结果连接字符串的长度。 （函数返回 SQL_NEED_DATA。）|  

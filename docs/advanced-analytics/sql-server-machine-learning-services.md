@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cbe617ea7732468732555bf6f0bba8ebaec2c17a
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962307"
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "67141376"
 
 ## <a name="reference"></a>参考
 
-| package | 语言 | Description |
+| package | 语言 | 描述 |
 |:--------|:---------|:------------|
 | [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | R | R 任务的分布式和并行处理：数据转换、浏览、可视化效果、统计和预测分析。 |
 | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | 函数基于 Microsoft 的 AI 算法，适用于 R。 |

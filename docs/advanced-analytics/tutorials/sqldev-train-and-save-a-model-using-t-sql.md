@@ -7,13 +7,12 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a76a3a77f3c258372e6ff3a7e472b472fcc2f073
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1953e2a5cfa1671a81630a66a4e6c3589929d1bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961837"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>第 3 课：训练和保存使用 T-SQL 的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "58510004"
   
     - R 脚本会调用**rxLogit**函数，这是增强型 R 函数之一附带[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，以创建逻辑回归模型。
   
-        二进制变量 _tipped_ 用作标签或结果列，模型使用以下这些特征列进行调整：_passenger_count_、_trip_distance_、_trip_time_in_secs_ 和 _direct_distance_。
+        二进制变量 _tipped_ 用作标签  或结果列，模型使用以下这些特征列进行调整：_passenger_count_、_trip_distance_、_trip_time_in_secs_ 和 _direct_distance_。
   
     - 在 R 变量中保存的定型的模型`logitObj`、 序列化并作为输出参数返回。
 

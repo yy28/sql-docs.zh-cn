@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206849"
 ---
 # <a name="maintenance-plans"></a>维护计划
   维护计划可创建所需的任务工作流，以确保优化数据库、定期进行备份并确保数据库一致。 维护计划向导还可创建核心维护计划，但手动创建计划具有更大的灵活性。  
@@ -56,7 +56,7 @@ ms.locfileid: "52803069"
   
 -   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 这可以用来创建可执行各种操作的作业以及运行这些作业的维护计划。  
   
- 维护任务生成的结果可以作为报表写入文本文件，或写入 `sysmaintplan_log` 中的维护计划表（`sysmaintplan_logdetail` 和 `msdb`）。 若要在日志文件查看器中查看结果，请右键单击“维护计划”，再单击“查看历史记录”。  
+ 维护任务生成的结果可以作为报表写入文本文件，或写入 `sysmaintplan_log` 中的维护计划表（`sysmaintplan_logdetail` 和 `msdb`）。 若要在日志文件查看器中查看结果，请右键单击“维护计划”  ，再单击“查看历史记录”  。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  参考以下主题以开始使用维护计划。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5db9106e249a0d6a5a59a68b7f3a31b5821b8c38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931598"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 属性示例 (VB)
 此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象-一个准备好，另一个未准备好。  

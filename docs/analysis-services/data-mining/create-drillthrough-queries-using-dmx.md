@@ -1,5 +1,5 @@
 ---
-title: 创建钻取查询使用 DMX |Microsoft 文档
+title: 创建钻取查询使用 DMX |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6616f90f475da91f3f5c38c0f5922d16d72a5408
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210141"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 来创建钻取查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34014494"
 SELECT <model column list>, StructureColumn('<structure column name') FROM <modelname>.CASES  
 ```  
   
- 有关使用 DMX 查询返回事例数据的其它信息，请参阅 [SELECT FROM &#60;模型&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md) 和 [SELECT FROM &#60;结构&#62;.CASES](../../dmx/select-from-structure-cases.md)。  
+ 有关使用 DMX 查询返回事例数据的其它信息，请参阅 [SELECT FROM <模型>.CASES (DMX)](../../dmx/select-from-model-cases-dmx.md) 和 [SELECT FROM <结构>.CASES](../../dmx/select-from-structure-cases.md)。  
   
 ## <a name="examples"></a>示例  
  下面的 DMX 查询从时序模型返回特定产品系列的事例数据。 该查询还返回 **Amount**列，该列在挖掘结构中可用，但却未在挖掘模型中使用。  
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  请注意，在此示例中，已使用别名对该结构列进行了重命名。 如果您没有为该结构列分配别名，则该列将以“Expression”名称返回。 这是所有未命名列的默认行为。  
   
-## <a name="see-also"></a>另请参阅  
- [钻取查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [对挖掘结构的钻取](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+## <a name="see-also"></a>请参阅  
+ [钻取查询（数据挖掘）](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [对挖掘结构的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 562c6de437c37052b65b9d31571fa4c9b2c3a749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004924"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>返回的表  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要返回统计信息对象属性的对象（表）的 ID。|  
 |stats_id|**int**|统计信息对象的 ID。 在表中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|

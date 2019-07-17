@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070865"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>数据挖掘扩展插件 (DMX) 语句
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,9 +58,9 @@ ms.locfileid: "38042115"
   
  上述任务可以分为两类：数据定义语句和数据操作语句，下表对这两类语句进行了说明。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
-|[数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)|数据定义语言 (DDL) 的一部分。 用于定义新挖掘模型（包括定型）或从数据库中删除现有挖掘模型。|  
+|[数据挖掘扩展插件 (DMX) 数据定义语句](../dmx/dmx-statements-data-definition.md)|数据定义语言 (DDL) 的一部分。 用于定义新挖掘模型（包括定型）或从数据库中删除现有挖掘模型。|  
 |[数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)|数据操作语言 (DML) 的一部分。 用于处理现有挖掘模型，包括浏览模型或创建预测。|  
   
 ## <a name="see-also"></a>请参阅  

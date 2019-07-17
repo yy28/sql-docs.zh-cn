@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbf05e0b177cc61ed9de757db46f8950aaa7dccd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964954"
 ---
 # <a name="users-collection-adox"></a>用户集合 (ADOX)
 包含所有存储[用户](../../../ado/reference/adox-api/user-object-adox.md)的对象[目录](../../../ado/reference/adox-api/catalog-object-adox.md)或[组](../../../ado/reference/adox-api/group-object-adox.md)。  
@@ -31,11 +30,11 @@ ms.locfileid: "66705624"
 ## <a name="remarks"></a>备注  
  **用户**系列[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示目录的所有用户。 **用户**集合[组](../../../ado/reference/adox-api/group-object-adox.md)表示仅拥有特定的组成员身份的用户。  
   
- [追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法**用户**是唯一的 ADOX 集合。 您可以：  
+ [追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法**用户**是唯一的 ADOX 集合。 你可以：  
   
 -   使用将一个新用户添加到集合**追加**方法。  
   
- 剩余的属性和方法是标准到 ADO 集合。 您可以：  
+ 剩余的属性和方法是标准到 ADO 集合。 你可以：  
   
 -   访问集合中具有用户[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
   

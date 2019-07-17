@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f3345e2b27a14285f3b9a3bfffd1ec95549ef124
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d09fa38377910c2960b43eb6534dba4546538b4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942118"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ EXEC managed_backup.sp_backup_config_basic
  用于验证 Windows Azure 存储帐户身份的 SQL 凭据的名称。 @credentail_name 是**SYSNAME**。 指定时，备份存储到页 blob。 如果此参数为 NULL，则备份将存储为块 blob。 备份到页 blob 已弃用，因此应首选使用新的块 blob 备份功能。 当用于更改[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]配置时，此参数是可选参数。 如果未指定，会保留现有的配置值。  
   
 > [!WARNING]
->  **@credential_name**目前不支持参数。 支持仅备份到块 blob，这需要此参数为 NULL。  
+>  **@credential_name** 目前不支持参数。 支持仅备份到块 blob，这需要此参数为 NULL。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  

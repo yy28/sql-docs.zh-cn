@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1dac4496a47b9b6b2beeef07e256805bc66b1e87
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67566639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059387"
 ---
 # <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (TRANSACT-SQL) （预览版）
 
@@ -28,7 +27,7 @@ ms.locfileid: "67566639"
 
 列 physical_name 和 object_id 构成此目录视图的键。
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |physical_name |**nvarchar(36)**|具体化视图的物理名称。|  
 |object_id  |**int**|具体化视图对象 ID。 请参阅[sys.objects (Transact SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
@@ -37,7 +36,7 @@ ms.locfileid: "67566639"
 
 要求拥有 VIEW DATABASE STATE 权限。
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
@@ -46,5 +45,5 @@ ms.locfileid: "67566639"
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
 [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[支持的 Azure SQL 数据仓库系统视图](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[在 Azure SQL 数据仓库中受支持的 T-SQL 语句](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements) 
+[Azure SQL 数据仓库支持的系统视图](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Azure SQL 数据仓库支持的 T-SQL 语句](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements) 

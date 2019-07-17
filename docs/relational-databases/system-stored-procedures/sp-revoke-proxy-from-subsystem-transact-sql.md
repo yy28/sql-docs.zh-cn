@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022268"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id` 若要撤消访问权限的子系统的 id 号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**2**|ActiveX 脚本<br /><br /> **\*\* 重要\* \*** 将删除 ActiveX 脚本编写子系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中的代理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |**3**|操作系统 (CmdExec)|  
@@ -66,7 +65,7 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'` 若要撤消访问权限的子系统的名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
-|ReplTest1|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 脚本|  
 |CmdExec|操作系统 (CmdExec)|  
@@ -104,6 +103,6 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

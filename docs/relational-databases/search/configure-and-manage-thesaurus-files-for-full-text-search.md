@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586181"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860522"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "67586181"
 
 -   标注字符设置  
   
-     对于给定的同义词库，所有搜索模式或者区分标注字符或者不区分标注字符，例如波形符 (~  )、锐音符 (´  ) 或元音变音符 (¨  )（即，区分重音  或不区分重音  ）。 例如，假定你在全文查询中指定 使用其他模式替换模式“café”。 如果同义词库不区分重音，全文搜索将替换模式“café” 和“cafe”。 如果同义词库区分重音，全文搜索仅替换“café”模式。 默认情况下，同义词库不区分重音。  
+     对于给定同义词库，所有搜索模式要么区分标注字符，要么不区分标注字符，如波形符 (~  )、锐音符 (&acute;  ) 或元音变音符 (&uml;  )（即要么区分重音  ，要么不区分重音  ）。 例如，假设你在全文查询中指定要将“caf&eacute;”模式替换为其他模式。 如果同义词库不区分重音，全文搜索会替换“caf&eacute;”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“caf&eacute;”模式。 默认情况下，同义词库不区分重音。  
   
 ##  <a name="initial_thesaurus_files"></a>默认同义词库文件
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组 XML 同义词库文件，分别对应于每种支持的语言。 这些文件实际上是空的。 它们仅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同义词库通用的顶级 XML 结构以及注释掉的示例同义词库。  

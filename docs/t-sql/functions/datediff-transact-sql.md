@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa470b663a28a69014a7884b30fb384fe62276a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943642"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793643"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ enddate
   
 如果为 startdate 和 enddate 都只指定了时间值，并且 datepart 不是时间 datepart，则 `DATEDIFF` 返回 0     。
   
-`DATEDIFF` 不使用 startdate 或 enddate 的时区偏移量部分来计算返回值   。
+`DATEDIFF` 使用 startdate  或 enddate  的时区偏移部分来计算返回值。
   
 由于 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 仅精确到分钟，因此在 startdate 或 enddate 具有 smalldatetime 值时，返回值中的秒和毫秒将始终设置为 0    。
   

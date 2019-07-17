@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6daf0e74ff8c7a7c65441bc98afc9c47964ef0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029174"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>编辑类型映射 (SybaseToSQL)
 **编辑类型映射**对话框可以指定类型的源和目标数据库对象之间的映射方式。  
@@ -35,10 +34,10 @@ ms.locfileid: "62633022"
 如果数据类型的可变长度，以下字段将显示下**源类型**:  
   
 **From**  
-指定此映射的最小长度。 例如，对于**nchar**数据类型，可以输入 10，以指定的开始处的范围为此映射**nchar(10)**。  
+指定此映射的最小长度。 例如，对于**nchar**数据类型，可以输入 10，以指定的开始处的范围为此映射**nchar(10)** 。  
   
-**若要**  
-指定此映射的最大长度。 例如，对于**nchar**数据类型，可以输入 20 来指定此映射的结束时间范围**nchar(20)**。  
+**To**  
+指定此映射的最大长度。 例如，对于**nchar**数据类型，可以输入 20 来指定此映射的结束时间范围**nchar(20)** 。  
   
 **目标类型**  
 选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]源数据类型映射到的数据类型。 SSMA 时创建的表或存储的过程中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，源数据类型将更改为此数据类型。  
@@ -46,5 +45,5 @@ ms.locfileid: "62633022"
 如果数据类型的可变长度，以下字段将显示下**目标类型**:  
   
 **Replace with**  
-指定此映射的目标长度。 例如，对于**nvarchar**数据类型，可以输入 20 来指定应将指定的源数据类型映射到**nvarchar(20)**。  
+指定此映射的目标长度。 例如，对于**nvarchar**数据类型，可以输入 20 来指定应将指定的源数据类型映射到**nvarchar(20)** 。  
   

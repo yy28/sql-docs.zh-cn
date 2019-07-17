@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584490"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860553"
 ---
 # <a name="compare-execution-plans"></a>比较执行计划
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "67584490"
      > [!TIP]
      > 可用于执行计划的所有缩放和导航选项均在计划比较模式下工作。 有关详细信息，请参阅[显示实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。
 
-5.  在默认选择范围内，右侧还会显示一个双属性窗口。 两个被比较的运算符中同时存在的但具有差异的属性前面会带有不等号 (≠)，这样更易识别  。
+5.  在默认选择范围内，右侧还会显示一个双属性窗口。 如果属性同时存在于两个被比较的运算符中但有差异，属性前面会带有不等  号 (&ne;)，这样更易识别。
 
     ![双属性窗口](../../relational-databases/performance/media/plancomparison-properties.png "Dual properties window")  
 

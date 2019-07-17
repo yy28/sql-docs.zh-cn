@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: d53725e708a5aaf6fb8476ce2d7408ffcfa7f102
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962404"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 R 包管理器在 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "67140777"
 
     如果任何所需的包不存在实例库中，无法在压缩文件中找到，目标包的安装将失败。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [安装新 R 包](install-additional-r-packages-on-sql-server.md)
 + [安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)

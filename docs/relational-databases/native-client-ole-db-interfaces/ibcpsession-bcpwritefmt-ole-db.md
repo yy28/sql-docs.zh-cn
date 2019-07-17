@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7831531187f4e60ac521f074538733fd1a94c2e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efbe1a19decf969917fe2622311a76c84674a9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059554"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ HRESULT BCPWriteFmt(
  若要加载已保存的格式化文件，请使用 [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 方法。  
   
 ## <a name="arguments"></a>参数  
- *pwszFormatFile*[in]  
+ pwszFormatFile  [in]  
  包含数据文件格式值的文件的路径和文件名。  
   
 ## <a name="return-code-values"></a>返回代码值  

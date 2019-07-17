@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aa4089925e5a51f5e4fa4578094634e724b8a615
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966703"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>连接的 Close 方法、表 Type 属性示例 (VB)
 设置[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性设置为**Nothing**应关闭连接到目录。 关联的集合将为空。 从目录中的架构对象创建的任何对象都被孤立。 对已缓存这些对象的任何属性仍将可用，但尝试读取属性需要调用提供程序将失败。  

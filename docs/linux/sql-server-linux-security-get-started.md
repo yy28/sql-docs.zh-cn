@@ -3,18 +3,17 @@ title: 开始使用 Linux 上的 SQL Server 安全性
 description: 本指南介绍了典型的安全操作。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019498"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
 
@@ -171,7 +170,7 @@ WITH (STATE = OFF);
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+使用 AdventureWorks2014;转 ALTER 表 Person.EmailAddress     ALTER 列电子邮件地址    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
@@ -229,7 +228,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 前往  
 
-USE AdventureWorks2014;   GO
+使用 AdventureWorks2014; 转
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  

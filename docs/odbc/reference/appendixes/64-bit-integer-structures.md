@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac80c798-d9b2-4430-85ed-bd2461db0ac7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac1a80e94d225b26cf879b27bdb0e138e0b0d1d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93d9e6fd01d6b9ef98ebb10f6728ec4ba205fbb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996254"
 ---
 # <a name="64-bit-integer-structures"></a>64 位整数结构
 在 Microsoft C 编译器 SQL_C_SBIGINT 和 SQL_C_UBIGINT 的数据类型标识符的 C 类型是 _int64。 使用 Microsoft® C 编译器其他编译器时，C 类型可能不同。 如果编译器支持本机 64 位整数，该驱动程序或应用程序应定义 ODBCINT64 是本机 64 位整数类型。 编译器不本机支持 64 位整数，如果应用程序或驱动程序可以定义以下的结构，以确保其有权访问此数据：  

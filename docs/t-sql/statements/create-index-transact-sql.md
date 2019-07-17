@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500233"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652795"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -734,11 +734,11 @@ INSERT INTO t1 VALUES (1, 0);
 - 联机索引创建可使用 `RESUMABLE = ON` 选项指定为可恢复。
 - RESUMABLE 选项对于给定索引在元数据不持久，并且仅适用于当前 DDL 语句的持续时间。 因此，必须显式指定 `RESUMABLE = ON` 子句才能启用可恢复性。
 - 仅 `RESUMABLE = ON` 选项支持 MAX_DURATION 选项。
-- 用于 RESUMABLE 选项的 MAX_DURATION 为生成的索引指定时间间隔。 使用此时间之后，索引生成会暂停或完成其执行。 由用户确定何时可以恢复暂停的索引的生成。 MAX_DURATION 的**时间**（以分钟为单位）必须大于 0 分钟并且小于或等于一周（7 * 24 * 60 = 10080 分钟）。 让索引操作长时间暂停可能会影响特定表的 DML 性能以及数据库磁盘容量，因为原始索引和新创建的索引需要磁盘空间并且需要在 DML 操作期间更新。 如果省略 MAX_DURATION 选项，则索引操作会继续，直到其完成或发生失败。
+- 用于 RESUMABLE 选项的 MAX_DURATION 为生成的索引指定时间间隔。 使用此时间之后，索引生成会暂停或完成其执行。 由用户确定何时可以恢复暂停的索引的生成。 MAX_DURATION 时间  （以分钟为单位）必须大于 0 分钟，且小于等于一周（7 \* 24 \* 60 = 10080 分钟）。 让索引操作长时间暂停可能会影响特定表的 DML 性能以及数据库磁盘容量，因为原始索引和新创建的索引需要磁盘空间并且需要在 DML 操作期间更新。 如果省略 MAX_DURATION 选项，则索引操作会继续，直到其完成或发生失败。
 - 若要立即暂停索引操作，则可以停止 (Ctrl-C) 正在进行的命令，执行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令或执行 `KILL <session_id>` 命令。 暂停命令之后，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令恢复它。
 - 重新执行原始 CREATE INDEX 语句的可恢复索引，会自动恢复暂停的索引创建操作。
 - 可恢复索引不支持 `SORT_IN_TEMPDB = ON` 选项。
-- 具有 `RESUMABLE = ON` 的 DDL 命令无法在显式事务（不能属于 begin TRAN …COMMIT 块）中执行。
+- 具有 `RESUMABLE = ON` 的 DDL 命令无法在显式事务（不能属于 begin TRAN …COMMIT 块）中执行具有“RESUMEABLE = ON”的 DDL 命令。
 - 若要恢复/中止索引创建/重新生成，请使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 语法
 
 > [!NOTE]

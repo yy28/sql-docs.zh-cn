@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 21a18dc77a8ab1b714676cc299d26797ba0d41bd
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139428"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 访问用于配置管理的 WMI 提供程序
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "51215482"
   
 1.  从**启动**菜单上，单击**运行**，然后输入**WBEMtest**。  
   
-2.  将出现 WBEMtest.exe 对话框。 单击 **“连接”**。  
+2.  将出现 WBEMtest.exe 对话框。 单击 **“连接”** 。  
   
-3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击 **“连接”**。  
+3.  在第一个文本字段中，键入计算机管理命名空间的 WMI 提供程序：root\Microsoft\SqlServer\ComputerManagement11。 单击 **“连接”** 。  
   
-4.  单击**查询**。 键入用于返回在本地计算机上运行的当前服务的查询：**选择\*从 SqlService。** 单击 **“应用”**。  
+4.  单击**查询**。 键入的查询来返回本地计算机上运行的当前服务：**选择\*SQLSERVICE。** 单击 **“应用”** 。  
   
-5.  通过添加进一步细化查询**其中 ServiceName ="MSSQLSERVER"**。  
+5.  通过添加进一步细化查询**其中 ServiceName ="MSSQLSERVER"** 。  
   
   

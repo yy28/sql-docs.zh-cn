@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211707"
 ---
 # <a name="rename-user-defined-functions"></a>重命名用户定义函数
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的用户定义函数。  
@@ -65,7 +65,7 @@ ms.locfileid: "52399180"
   
     -   Aggregate 函数  
   
-4.  右键单击要重命名的函数，然后选择“重命名”。  
+4.  右键单击要重命名的函数，然后选择“重命名”  。  
   
 5.  输入函数的新名称。  
   

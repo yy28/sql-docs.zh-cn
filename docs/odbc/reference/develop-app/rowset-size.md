@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943761"
 ---
 # <a name="rowset-size"></a>行集大小
 若要使用的行集大小取决于应用程序。 基于屏幕的应用程序通常遵循以下两个策略之一。 第一种是将行集大小设置为在屏幕上显示的行数如果在用户调整屏幕，该应用程序做相应更改的行集大小。 第二个是行集大小设置为一个更大数字，如 100，从而减少了对数据源的调用数。 应用程序内的行集时可能本地滚动，并仅当外部行集将滚动时提取新行。  

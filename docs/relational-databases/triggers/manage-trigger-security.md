@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690785"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866281"
 ---
 # <a name="manage-trigger-security"></a>管理触发器安全性
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,31 @@ ms.locfileid: "47690785"
 ## <a name="trigger-security-best-practices"></a>保证触发器安全的最佳方法  
  可以采取下列措施阻止触发器代码在升级特权下执行：  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   注意数据库和服务器实例中存在的 DML 和 DDL 触发器，方法是查询 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 和 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) 目录视图。 下面的查询将返回当前数据库中的所有 DML 触发器和数据库级别的 DDL 触发器，以及服务器实例中所有服务器级别的 DDL 触发器：  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > 仅 sys.triggers  适用于 Azure SQL 数据库，除非你使用的是托管实例。
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   请注意数据库中是否存在 DML 和 DDL 触发器，具体方法是查询 [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 目录视图。 下面的查询返回当前数据库中的所有 DML 和数据库级别 DDL 触发器：  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 禁用在升级特权下执行时可能会损害数据库或服务器完整性的触发器。 下面的语句可以禁用当前数据库中所有数据库级别的 DDL 触发器：  
   
     ```  

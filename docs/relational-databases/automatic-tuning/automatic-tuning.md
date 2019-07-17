@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934558"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,8 +31,8 @@ ms.locfileid: "54226614"
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]监视器上，对数据库和自动执行的查询可以提高工作负荷的性能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有内置智能机制，可以自动优化和提高查询性能的动态适应工作负荷的数据库。 有可用的两个自动优化功能：
 
- -  **自动计划更正**标识有问题的查询执行计划并修复查询执行计划性能问题。 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (从开始[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
- -  **自动索引管理**标识应在数据库中，添加的索引以及应删除的索引。 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **自动计划更正**标识有问题的查询执行计划并修复查询执行计划性能问题。 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **自动索引管理**标识应在数据库中，添加的索引以及应删除的索引。 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>为什么自动优化？
 
@@ -96,7 +95,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，可以找到计划选择回归使用查询存储系统视图。 在中[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，则[!INCLUDE[ssde_md](../../includes/ssde_md.md)]检测并显示潜在的计划选择回归并建议应在应用的操作[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)视图。 该视图显示有关问题、 问题和详细信息，例如确定查询回归计划的 ID，用作比较基准进行比较，计划的 ID 的重要性和[!INCLUDE[tsql_md](../../includes/tsql-md.md)]语句可以执行以修复出现问题。
 
-| type | description | DATETIME | score | 详细信息 | ... |
+| type | description | DATETIME | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | 从 4 毫秒更改为 14 毫秒的 CPU 时间 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 从 37 ms 更改为 84 毫秒的 CPU 时间 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -181,7 +180,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

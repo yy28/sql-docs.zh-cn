@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d41cd744d39113c556c4ee8bc17411b7992e596
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002139"
 ---
 # <a name="copying-descriptors"></a>复制描述符
 **SQLCopyDesc**函数调用以将一个描述符字段复制到另一个描述符。 可以复制字段，仅对应用程序描述符或 IPD，而不是属于 IRD。 可以从任何类型的描述符复制字段。 复制源和目标描述符定义这些字段。 **SQLCopyDesc**不会复制 SQL_DESC_ALLOC_TYPE 字段，因为无法更改描述符的分配类型。 复制的字段会覆盖现有字段。  

@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c5af94179548923fa29344e3861f91dd0e201b79
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582523"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860511"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "67582523"
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 每个批次中代的数量是使用合并代理的 -DownloadGenerationsPerBatch 和 -UploadGenerationsPerBatch 参数指定的   。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 每批中的代数是使用合并代理的 -DownloadGenerationsPerBatch  和 -UploadGenerationsPerBatch  参数指定的。 有关详细信息，请参阅 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

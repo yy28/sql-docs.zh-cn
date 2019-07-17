@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920897"
 ---
 # <a name="ado-properties"></a>ADO 属性
 
@@ -32,7 +31,7 @@ ms.locfileid: "66696622"
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|指示字段的值的实际长度。|  
 |[属性](../../../ado/reference/ado-api/attributes-property-ado.md)|指示对象的一个或多个特征。|  
 |[BOF 和 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**指示当前记录的位置为之前记录集对象中的第一个记录。<br /><br /> **EOF**指示当前记录位置后记录集对象中的最后一个记录。|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|指示一个书签，用于唯一标识中的当前记录**记录集**对象或设置当前记录中**记录集**标识的有效书签记录的对象。|  
+|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|指示一个书签，用于唯一标识中的当前记录**记录集**对象或设置当前记录中**记录集**标识的有效书签记录的对象。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|指示返回的记录数**记录集**本地缓存在内存中的对象。|  
 |[一章](../../../ado/reference/ado-api/chapter-property-ado.md)|获取或设置 OLE DB**章**对象从/上**ADORecordsetConstruction**对象。|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|指示设置到其中的字符的文本内容**Stream**应翻译。|  
@@ -79,7 +78,7 @@ ms.locfileid: "66696622"
 |[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)|指示提供程序的名称**连接**对象。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|指示中的记录数**记录集**对象。|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|指示的类型**记录**对象。|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|获取或设置 OLE DB**行**对象从/上**ADORecordConstruction**对象。|  
+|[行](../../../ado/reference/ado-api/row-property-ado.md)|获取或设置 OLE DB**行**对象从/上**ADORecordConstruction**对象。|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|获取或设置 OLE DB **RowPosition**对象从/上**ADORecordsetConstruction**对象。|  
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。|  
 |[源 （ADO 错误）](../../../ado/reference/ado-api/source-property-ado-error.md)|指示最初生成错误的应用程序的对象的名称。|  

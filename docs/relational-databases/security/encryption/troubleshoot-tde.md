@@ -1,6 +1,6 @@
 ---
-title: 使用 Azure 密钥保管库 (AKV) 中客户托管的密钥进行透明数据加密 (TDE) 的常见错误和解决方法 | Microsoft Docs
-description: 使用 Azure 密钥保管库配置对透明数据加密 (TDE) 进行问题排查。
+title: 使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误 | Microsoft Docs
+description: 使用 Azure Key Vault 配置来排除透明数据加密 (TDE) 故障。
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
@@ -14,114 +14,159 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1366d0a20ed39b466d1a2f6cb3e84f0f30e17f9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f963e15d674115029fce78b98ba280fe75da2cd1
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718084"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716665"
 ---
-# <a name="common-errors-and-resolutions-with-transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv"></a>使用 Azure 密钥保管库 (AKV) 中客户托管的密钥进行透明数据加密 (TDE) 的常见错误和解决方法
+# <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-本主题提供有关以下问题的信息：  
-  
-- 要求  
-- 如何确定和解决最常见的错误
+本文介绍了使用 Azure Key Vault 中的客户托管密钥进行透明数据加密 (TDE) 的要求，以及如何发现和解决常见错误。
 
 ## <a name="requirements"></a>要求
-若要[使用 AKV 配置中客户托管的 TDE 保护程序对 TDE 进行问题排查](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault)，请首先确认以下要求：
-- 逻辑 SQL Server 和密钥保管库需要位于同一区域。
-- Azure Active Directory 提供的逻辑 SQL Server 标识（Azure 密钥保管库中的 APPID）被限制为原始订阅中的租户。  如果服务器被移动到另一个订阅，则必须重新创建服务器标识 (APPID)。
-- 需要启动并运行密钥保管库，了解 [Azure 资源运行状况](https://docs.microsoft.com/azure/service-health/resource-health-overview)以检查密钥保管库状态，并了解[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)以注册通知。
-- 在 Geo-DR 方案中，两个密钥保管库必须包含相同的密钥材料，然后才能进行故障转移。
-- 逻辑服务器需要具有 Azure Active Directory (AAD) 标识 (APPID)，以便对密钥保管库进行身份验证。
-- APPID 需要能够访问密钥保管库以及包装和解包，并且需要获取被选为 TDE 保护程序的密钥的权限。
 
-通过 AKV 使用 TDE 时遇到的大多数问题均由以下某种错误配置引起：
+若要使用 Key Vault 中的客户托管 TDE 保护程序来排除 TDE 故障，必须满足以下要求：
 
-### <a name="key-vault-unavailable-or-doesnt-exist"></a>密钥保管库不可用或不存在？
-- 密钥保管库被意外删除
-- 为 Azure 密钥保管库配置的防火墙不允许访问 Microsoft 服务
+- 逻辑 SQL Server 实例和密钥保管库必须位于同一区域内。
+- Azure Active Directory (Azure AD) 提供的逻辑 SQL Server 实例标识（即 Azure Key Vault 中的 AppId）必须是原始订阅中的租户。 如果服务器移到与创建位置不同的订阅中，必须重新创建服务器标识 (AppId)。
+- 必须启动并运行密钥保管库。 若要了解如何检查密钥保管库状态，请参阅 [Azure 资源运行状况](https://docs.microsoft.com/azure/service-health/resource-health-overview)。 若要注册接收通知，请阅读有关[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)的内容。
+- 在异地灾难恢复方案中，两个密钥保管库必须包含相同的密钥材料，这样故障转移才能生效。
+- 逻辑服务器必须有用于对密钥保管库进行身份验证的 Azure AD 标识 (AppId)。
+- AppId 必须有权访问密钥保管库，并且必须对已选为 TDE 保护程序的密钥拥有“获取、包装和取消包装”权限。
 
-### <a name="no-permissions-to-access-the-key-vault-or-key-doesnt-exist"></a>不存在任何访问密钥保管库或密钥的权限？
-- 密钥被意外删除
-- SQL APPID 被意外删除
-- SQL 被移动到其他订阅，需要新的 APPID
-- 为 APPID 授予的密钥权限不足（包装、解包、获取）
-- SQL APPID 权限被撤销
+有关详细信息，请参阅[使用 Azure Key Vault 配置 TDE 的指南](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault)。
 
+## <a name="common-misconfigurations"></a>常见错误配置
 
-在下一部分中，我们将列出最常见错误的排查步骤。
+使用 Key Vault 进行 TDE 时，发生的大多数问题都是由下列错误配置之一引起的：
 
+### <a name="the-key-vault-is-unavailable-or-doesnt-exist"></a>密钥保管库不可用或不存在
 
-## <a name="how-to-identify-and-resolve-the-most-common-errors"></a>如何确定和解决最常见的错误
+- 密钥保管库遭意外删除。
+- 为 Azure Key Vault 配置的防火墙禁止访问 Microsoft 服务。
 
-## <a name="missing-server-identity"></a>缺少服务器标识
-错误消息：“401 AzureKeyVaultNoServerIdentity - 在服务器上配置的服务器标识不正确。 请联系支持人员。”
+### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>无权访问密钥保管库或密钥不存在
 
-检测：使用以下命令确保已向逻辑 SQL Server 分配标识：
+- 密钥遭意外删除。
+- 逻辑 SQL Server 实例 AppId 遭意外删除。
+- 逻辑 SQL Server 实例移到其他订阅中。 如果逻辑服务器移到其他订阅中，必须新建 AppId。
+- 向 AppId 授予的密钥权限不足（即不包括“获取、包装和取消包装”权限）。
+- 逻辑 SQL Server 实例 AppId 的权限遭撤销。
 
-- [Azure PowerShell Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
-- [Azure CLI az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+## <a name="identify-and-resolve-common-errors"></a>发现和解决常见错误
 
-缓解：为逻辑 SQL Server 配置 Azure Active Directory (Azure AD) 标识 (APPID)
+此部分列出了最常见错误的疑难解答步骤。
 
-对于 PowerShell：使用带有选项 [-AssignIdentity](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) 的 Set-AzureRmSqlServer 命令 
+### <a name="missing-server-identity"></a>缺少服务器标识
 
-对于 CLI：使用带有选项 [--assign_identity](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) 的 az sql server update 命令 
+**错误消息**
 
-在 Azure 门户中，浏览到密钥保管库并转到访问策略：  
- - 使用“新增”按钮，为上一步中创建的服务器添加 APPID。 
- - 分配以下密钥权限：获取、包装、解包 
+401 AzureKeyVaultNoServerIdentity - 在服务器上配置的服务器标识不正确。  请联系支持人员。
 
-[了解更多信息](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)
+**检测**
+
+使用下面的 cmdlet 或命令，以确保已向逻辑 SQL Server 实例分配标识：
+
+- Azure PowerShell：[Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+
+- Azure CLI：[az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+
+**缓解**
+
+使用下面的 cmdlet 或命令，以配置逻辑 SQL Server 实例的 Azure AD 标识 (AppId)：
+
+- Azure PowerShell：[Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0)（含 `-AssignIdentity` 选项）。
+
+- Azure CLI：[az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update)（含 `--assign_identity` 选项）。
+
+在 Azure 门户中，依次转到密钥保管库和“访问策略”  。 完成以下步骤： 
+
+ 1. 使用“新增”  按钮，为上一步中创建的服务器添加 AppId。 
+ 1. 分配以下密钥权限：获取、包装、解包 
+
+若要了解详细信息，请参阅[将 Azure AD 标识分配给服务器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)。
 
 > [!IMPORTANT]
-> 如果在使用 AKV 对 TDE 进行初始配置后，逻辑 SQL Server 被移动到新的订阅，则必须重复进行配置 AAD 标识的步骤才能创建新的 APPID。  然后需要将新 APPID 添加到密钥保管库，并且需要重新分配正确的权限。 
+> 如果在使用 Key Vault 对 TDE 进行初始配置后，逻辑 SQL Server 实例移到新订阅中，请重复 Azure AD 标识配置步骤，以新建 AppId。 然后，将 AppId 添加到密钥保管库，并向它分配正确的密钥权限。 
 >
 
-## <a name="missing-key-vault"></a>缺少密钥保管库
-错误消息：“503 AzureKeyVaultConnectionFailed - 无法在服务器上完成操作，因为尝试连接到 Azure Key Vault 失败”
+### <a name="missing-key-vault"></a>缺少密钥保管库
 
-检测：如何识别密钥 URI 和密钥保管库 
+**错误消息**
 
-第 1 步：使用以下命令获取给定逻辑 SQL Server 的密钥 URI：
+503 AzureKeyVaultConnectionFailed - 无法在服务器上完成操作，因为尝试连接到 Azure Key Vault 失败。 
 
--[Azure PowerShell get-azurermsqlserverkeyvaultkey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+**检测**
 
--[Azure CLI az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+若要标识密钥 URI 和密钥保管库，请执行以下操作：
 
-第 2 步：使用密钥 URI 标识密钥保管库
+1. 使用下面的 cmdlet 或命令，以获取具体逻辑 SQL Server 实例的密钥 URI：
 
-PowerShell：可检查 $MyServerKeyVaultKey 的属性，获取有关密钥保管库的详细信息
+    - Azure PowerShell：[Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-CLI：检查返回的服务器加密保护程序，获取有关密钥保管库的详细信息
+    - Azure CLI：[az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
-缓解：确认密钥保管库可用
-- 确保密钥保管库可用且逻辑 SQL Server 具有访问权限
-- 如果密钥保管库位于防火墙后，请确保勾选“允许 Microsoft 服务访问密钥保管库”的复选框
-- 如果密钥保管库被意外删除，则必须从头开始完成配置
+1. 使用密钥 URI 来标识密钥保管库：
+
+    - Azure PowerShell：可检查 $MyServerKeyVaultKey 变量的属性，以获取密钥保管库的详细信息。
+
+    - Azure CLI：检查返回的服务器加密保护程序，以获取密钥保管库的详细信息。
+
+**缓解**
+
+确认密钥保管库是否可用：
+
+- 确保密钥保管库可用，且逻辑 SQL Server 实例拥有访问权限。
+- 如果密钥保管库位于防火墙后，请务必选中允许 Microsoft 服务访问密钥保管库的复选框。
+- 如果密钥保管库已遭意外删除，必须从头开始完成配置。
 
 
-## <a name="missing-key"></a>缺少密钥 
-错误消息：“404 ServerKeyNotFound - 未在当前订阅上找到请求的服务器密钥。”
-“409 ServerKeyDoesNotExists - 服务器密钥不存在。”
+### <a name="missing-key"></a>缺少密钥
 
-检测：如何识别密钥 URI 和密钥保管库
-- 使用上一节“缺少密钥保管库”中的 cmdlet 标识添加到逻辑 SQL Server 的密钥 URI，以返回密钥列表。
+**错误消息**
 
-缓解：确认 AKV 中存在 TDE 保护程序
-- 标识密钥保管库，并在 Azure 门户中浏览到它
-- 确保存在密钥 URI 标识的密钥
+404 ServerKeyNotFound - 在当前订阅上找不到请求的服务器密钥。  
 
-## <a name="missing-permissions"></a>缺少权限 
-错误消息：“401 AzureKeyVaultMissingPermissions - 服务器缺少 Azure Key Vault 的必需权限。”
+409 ServerKeyDoesNotExists - 服务器密钥不存在。 
 
-检测：如何识别密钥 URI 和密钥保管库
-- 使用“缺少密钥保管库”一节中的 cmdlet 标识逻辑 SQL Server 使用的密钥保管库。
+**检测**
 
-缓解：确认逻辑 SQL Server 具有密钥保管库权限以及访问密钥的正确权限
-- 在 Azure 门户中，浏览到密钥保管库，转到访问策略，找到 SQL Server APPID：  
-  - 如果 APPID 不存在，请使用“新增”按钮进行添加。 
-  - 如果 APPID 存在，请确保它具有以下密钥权限：获取、包装和解包。
+若要标识密钥 URI 和密钥保管库，请执行以下操作：
+
+- 使用[缺少密钥保管库](#missing-key-vault)中的 cmdlet 或命令，以标识添加到逻辑 SQL Server 实例的密钥 URI。 运行这些命令会返回密钥列表。
+
+**缓解**
+
+确认密钥保管库中是否有 TDE 保护程序：
+
+1. 标识密钥保管库，然后在 Azure 门户中转到密钥保管库。
+1. 确保密钥 URI 标识的密钥存在。
+
+### <a name="missing-permissions"></a>缺少权限
+
+**错误消息**
+
+401 AzureKeyVaultMissingPermissions - 服务器缺少对 Azure Key Vault 的必需权限。 
+
+**检测**
+
+若要标识密钥 URI 和密钥保管库，请执行以下操作： 
+
+- 使用[缺少密钥保管库](#missing-key-vault)中的 cmdlet 或命令，以标识逻辑 SQL Server 实例使用的密钥保管库。
+
+**缓解**
+
+确认逻辑 SQL Server 实例是否有权访问密钥保管库，以及是否拥有正确的密钥访问权限：
+
+- 在 Azure 门户中，依次转到密钥保管库和“访问策略”  。 查找逻辑 SQL Server 实例 AppId。  
+- 如果 AppId 存在，请确保 AppID 拥有以下密钥权限：获取、包装和解包。
+- 如果 AppID 不存在，请使用“新增”  按钮进行添加。 
+
+## <a name="next-steps"></a>后续步骤
+
+- 请参阅[使用 Azure Key Vault 配置 TDE 的指南](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault)。
+- 了解 [Azure 资源运行状况](https://docs.microsoft.com/azure/service-health/resource-health-overview)。
+- 回顾如何[将 Azure AD 标识分配给服务器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)。

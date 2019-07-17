@@ -1,6 +1,6 @@
 ---
-title: 使用 SQL Server Management Studio 的其他提示和技巧
-description: 介绍使用 SSMS 的一些其他提示和技巧的教程。
+title: 使用 SQL Server Management Studio (SSMS) 的提示和技巧
+description: 了解如何使用 SQL Server Management Studio 注释和取消注释代码、缩进文本、筛选对象资源管理器中的对象、访问 SQL Server 错误日志和查找 SQL Server 实例名称。
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499422"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860649"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教程：使用 SSMS 的其他提示和技巧
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的提示和技巧
 
-本教程将提供一些使用 SQL Server Management Studio (SSMS) 的其他技巧。 本文介绍如何： 
+本文介绍了一些使用 SQL Server Management Studio (SSMS) 的提示和技巧。 本文介绍如何： 
 
 > [!div class="checklist"]
 > * 注释/取消注释 Transact-SQL (T-SQL) 文本
@@ -40,7 +40,7 @@ ms.locfileid: "66499422"
 
 ## <a name="prerequisites"></a>必备条件
 
-若要完成本教程，需要 SQL Server Management Studio、针对 SQL Server 的访问权限以及 AdventureWorks 数据库。 
+若要测试本文提供的步骤，必须有 SQL Server Management Studio、对 SQL Server 的访问权限，以及 AdventureWorks 数据库。 
 
 * 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 * 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
@@ -267,7 +267,7 @@ ms.locfileid: "66499422"
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>如果连接到别名或可用性组侦听程序
 
-如果连接到别名或可用性组侦听程序，则将在“对象资源管理器”和“属性”中显示该信息。 在这种情况下，SQL Server 名称可能不是显而易见的，并且必须进行查询： 
+如果连接到别名或可用性组侦听程序，则将在“对象资源管理器”和“属性”中显示该信息。 在这种情况下，SQL Server 名称可能不是显而易见的，并且必须进行查询：
 
 1. 连接到 SQL Server。
 
@@ -282,3 +282,12 @@ ms.locfileid: "66499422"
 4. 查看查询结果，确定连接到的 SQL Server 实例的名称： 
 
     ![查询 SQL Server 名称](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>后续步骤
+
+熟悉 SSMS 的最好方式是进行实践演练。 这些教程  和操作说明  文章可帮助你使用 SSMS 的各种功能。  这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
+
+* [连接到实例和查询实例](connect-query-sql-server.md)
+* [脚本](scripting-ssms.md)
+* [在 SSMS 中使用模板](../template/templates-ssms.md)
+* [SSMS 配置](ssms-configuration.md)

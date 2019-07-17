@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002239"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>构造交互 SQL 语句
 如前面各节中所述，可互操作应用程序应使用 ODBC SQL 语法。 除了使用此语法，但是，许多其他问题所面临的可互操作应用程序。 例如，有什么作用应用程序？ 想要使用的所有数据源不都支持的功能，如外部联接  

@@ -21,19 +21,19 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399653"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680384"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 SQL Server Management Studio (SSMS) 是一种集成环境，用于管理从 SQL Server 到 Azure SQL 数据库的任何 SQL 基础结构。 SSMS 提供用于配置、监视和管理 SQL Server 和数据库实例的工具。 使用 SSMS 部署、监视和升级应用程序使用的数据层组件，以及生成查询和脚本。
 
@@ -45,7 +45,7 @@ SSMS 是免费的！
 
 SSMS 18.1 通用版本 (GA) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio  ！
 
-**[![下载](../ssdt/media/download.png)下载 SQL Server Management Studio 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)**
+**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
 SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果安装了 SSMS 18.0 (GA)，请安装 SSMS 18.1 将其升级到 18.1。 如果安装了较早的 SSMS 18.0 预览版，请在安装 SSMS 18.1 之前将其卸载。 
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c898cb5cd8c9998d9126ec468a2b43587e2e279a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52015cb202f46c50c16dcab408bed7761f0925db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951806"
 ---
 # <a name="using-data-sources"></a>使用数据源
 创建数据源通常是由最终用户或技术人员与程序调用*ODBC 管理器*。 ODBC 管理器会提示使用驱动程序的用户，然后调用该驱动程序。 该驱动程序显示一个对话框，请求连接到数据源所需的信息。 用户输入信息后，该驱动程序会将其存储在系统上。  

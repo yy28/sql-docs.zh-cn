@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913839"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>参数  
- *结构*  
+ *structure*  
  要向其中添加挖掘模型的挖掘结构的名称。  
   
  *model*  
@@ -177,7 +176,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>示例 3：将筛选后的模型添加到具有嵌套表的结构  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>示例 3:将筛选后的模型添加到具有嵌套表的结构  
  下面的示例将一个挖掘模型添加到市场篮挖掘结构的修改后的版本中。 在示例中使用的挖掘结构进行了修改，以添加**区域**列中，其中包含客户区域属性，和一个**Income Group**列，通过对客户收入进行分类值**高**，**中等**，或**低**。  
   
  挖掘结构还包括一个嵌套表，其中列出客户已购买的商品。  

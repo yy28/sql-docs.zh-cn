@@ -11,18 +11,20 @@ ms.author: maghan
 manager: jroth
 ms.custom: ''
 ms.date: 07/01/2019
-ms.openlocfilehash: 424b0863da9d0d2cfb56676bed5c368efc4d9349
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 41f140a00669e1b5809b83b369f86ba8b277a37e
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67501184"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716768"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>在 SQL Server Management Studio (SSMS) 崩溃后，获取诊断数据
 
 [!INCLUDE[适用范围](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)
 
-## <a name="get-full-memory-dump-of-sql-server-management-studio-ssms-when-it-hangs-or-crashes"></a>在 SQL Server Management Studio (SSMS) 挂起或崩溃后，获取它的完整内存转储
+## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>挂起或故障后获取完整内存转储
+
+在 SQL Server Management Studio (SSMS) 挂起或故障后，获取它的完整内存转储。
 
 若要捕获诊断信息来排除 SSMS 崩溃或挂起故障，请按照以下步骤操作。
 
@@ -53,7 +55,9 @@ ms.locfileid: "67501184"
 
 9. Zip up the folder
 
-## Get full memory dump of SSMS when it throws an OutOfMemoryException
+## Get full memory dump for an OutOfMemoryException
+
+Get a full memory dump of SSMS when it throws an OutOfMemoryException.
 
 You can get a full memory dump with any managed exception.
 

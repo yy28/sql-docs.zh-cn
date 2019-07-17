@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a60ae0e3cd8fb4a07ac9a947a8e4a7ea692d9b26
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032598"
 ---
 # <a name="mspubidentityrange-transact-sql"></a>MSpub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSpub_identity_range**表提供了标识范围管理支持。 该表存储在发布数据库和订阅数据库中。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|包含由复制管理的标识列的表的 ID。|  
 |**范围**|**bigint**|控制将在调整的订阅中分配的连续标识值的范围大小。|  

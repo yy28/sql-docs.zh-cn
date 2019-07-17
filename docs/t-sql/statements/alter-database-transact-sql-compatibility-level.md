@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 151e6573ebeb5497f2de001d57272af647f5e737
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469195"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860684"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -91,7 +91,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 
 有关如何评估 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]上两个兼容级别之间最重要查询的性能差异的详细信息，请参阅 [Improved Query Performance with Compatibility Level 130 in Azure SQL Database（在 Azure SQL 数据库中使用兼容级别 130 提高了查询性能）](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)。 请注意，虽然本文中介绍的是兼容性级别 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但同样的方法也适用于为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 迁移到 140。
 
-若要确定连接到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]版本，请执行以下查询。
+若要确定连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本，请执行以下查询。
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
@@ -165,7 +165,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - 系统对象中更改了列名。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，sys.dm_os_sys_info 中的列 single_pages_kb  已重命名为 pages_kb  。 无论兼容级别如何，查询 `SELECT single_pages_kb FROM sys.dm_os_sys_info` 都会生成错误 207（列名无效）。
 > - 删除了系统对象。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，`sp_dboption` 已删除。 无论兼容级别如何，语句 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 都会生成错误 2812（找不到存储过程“sp_dboption”）。
 >
-> 有关重大更改的详细信息，请参阅 [SQL Server 2017 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中数据库引擎功能的重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)[SQL Server 2014 中数据库引擎功能的重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)、[SQL Server 2012 中数据库引擎功能的重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)和 [SQL Server 2008 中数据库引擎功能的重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai)。
+> 若要详细了解重大更改，请参阅 [SQL Server 2017 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中的数据库引擎功能重大更改](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2014 中的数据库引擎功能重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)和 [SQL Server 2012 中的数据库引擎功能重大更改](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)。
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>升级数据库兼容性级别的最佳做法
 
@@ -197,10 +197,10 @@ SELECT name, compatibility_level FROM sys.databases;
 
 |兼容级别设置为 130 或更低|兼容级别设置为 140|
 |--------------------------------------------------|-----------------------------------------|
-|引用多语句表值函数的语句的基数估计使用固定行猜测。|引用多语句表值函数的符合条件语句的基数估计会使用函数输出的实际基数。 这通过多语句表值函数的**交错执行**来实现。|
+|引用多语句表值函数的语句的基数估计使用固定行猜测。|引用多语句表值函数的符合条件语句的基数估计会使用函数输出的实际基数。 这通过多语句表值函数的交错执行  来实现。|
 |请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会继续对连续执行产生问题。|请求会导致溢出到磁盘的不充足内存授予大小的批处理模式查询可能会提高连续执行的性能。 这通过在对批处理模式运算符发生溢出时，会更新缓存计划内存授予大小的**批处理模式内存授予反馈**来实现。 |
 |请求会导致并发问题的过多内存授予大小的批处理模式查询可能会继续对连续执行产生问题。|请求会导致并发问题的过多内存授予大小的批处理模式查询可能会改进连续执行的并发性。 这通过在最初请求了过多量时，会更新缓存计划内存授予大小的**批处理模式内存授予反馈**来实现。|
-|包含联接运算符的批处理模式查询有资格使用三种物理联接算法，包括嵌套循环、哈希联接和合并联接。 如果基数估计对于联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，则性能会降低，并且不适当的联接算法会保持使用，直到缓存计划进行重新编译。|有一个名为**自适应联接**的其他联接运算符。 如果基数估计对于外部生成联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，并且语句有资格进行自适应联接，则会将嵌套循环用于较小联接输入，将哈希联接动态用于较大联接输入，而无需重新编译。 |
+|包含联接运算符的批处理模式查询有资格使用三种物理联接算法，包括嵌套循环、哈希联接和合并联接。 如果基数估计对于联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，性能会降低，并继续使用不适当的联接算法，直到缓存计划进行重新编译。|有一个名为**自适应联接**的其他联接运算符。 如果基数估计对于外部生成联接输入不正确，则可能会选择不适当的联接算法。 如果发生这种情况，并且语句有资格进行自适应联接，则会将嵌套循环用于较小联接输入，将哈希联接动态用于较大联接输入，而无需重新编译。 |
 |引用列存储索引的普通计划没有资格进行批处理模式执行。 |引用列存储索引的普通计划会被放弃，以便支持有条件进行批处理模式执行的计划。|
 |`sp_execute_external_script` UDX 运算符只能在行模式下运行。|`sp_execute_external_script` UDX 运算符有资格进行批处理模式执行。|
 |多语句表值函数 (TVF) 没有交错执行 |用于改进计划质量的多语句 TVF 交错执行。|
@@ -236,11 +236,11 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |使用旧版查询优化器。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 包括对创建和优化查询计划的组件的显著改进。 这个新的查询优化器功能依赖于使用数据库兼容性级别 120。 若要利用这些改进，应使用数据库兼容性级别 120 开发新的数据库应用程序。 应对从较早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中迁移的应用程序进行仔细测试，以便确认保持或改进了好的性能。 如果性能下降，可以将数据库兼容性级别设置为 110 或更低，以便使用较早的查询优化器方法。<br /><br /> 数据库兼容级别 120 使用针对现代数据仓库和 OLTP 工作负荷进行优化的新基数估计器。 在因为性能问题将数据库兼容级别设置为 110 前，请参阅 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [数据库引擎中的新增功能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)主题的“查询计划”一节中的建议。|
 |如果兼容级别低于 120，则在将 **date** 值转换为字符串值时语言设置将被忽略。 请注意，此行为仅特定于 **date** 类型。 请参阅下面“示例”部分中的“示例 B”。|将 **date** 值转换为字符串值时，不忽略语言设置。|
 |`EXCEPT` 子句右侧的递归引用产生无限循环。 下面“示例”部分中的示例 C 演示此行为。|`EXCEPT` 子句中的递归引用产生遵从 ANSI SQL 标准的错误。|
-|递归公用表表达式 (CTE) 允许重复的列名。|递归 CTE 不允许列名重复。|
+|递归公用表表达式 (CTE) 允许重复的列名。|递归 CTE 禁止列名重复。|
 |如果更改触发器，则启用禁用的触发器。|更改触发器不更改触发器的状态（已启用或已禁用）。|
 |OUTPUT INTO 表子句忽略 `IDENTITY_INSERT SETTING = OFF`，并允许插入显式值。|将 `IDENTITY_INSERT` 设置为 OFF 后，不能为表中的标识列插入显式值。|
 |将数据库包含设置为部分包含后，验证 `MERGE` 语句的 `OUTPUT` 子句中的 `$action` 字段可能会返回排序规则错误。|`MERGE` 语句的 `$action` 子句返回的值的排序规则是数据库排序规则而非服务器排序规则，因此不会返回排序规则冲突错误。|
-|`SELECT INTO` 语句始终创建单线程插入操作。|`SELECT INTO` 语句可创建并行插入操作。 插入大量行时，并行操作可提高性能。|
+|`SELECT INTO` 语句始终创建单线程插入操作。|`SELECT INTO` 语句可创建并行插入操作。 插入大量行时，并行操作可能会提升性能。|
 
 ## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>低兼容性级别与级别 100 和 110 的区别
 
@@ -254,7 +254,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 |RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|不能使用 RC4 或 RC4_128 加密新材料。 而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，可以通过任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|
 |对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式为 121，当在计算列表达式中使用这些类型时除外。 对于计算列，默认样式为 0。 当创建用于涉及自动参数化的查询中或约束定义中的计算列时，此行为会影响计算列。<br /><br /> 下面“示例”部分中的示例 D 显示样式 0 与 121 之间的差异。 它并不演示上面所述的行为。 有关日期和时间样式的详细信息，请参阅 [CAST 和 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。|兼容级别为 110 时，对 **time** 和 **datetime2** 数据类型的 `CAST` 和 `CONVERT` 操作的默认样式始终为 121。 如果您的查询依赖旧行为，请使用低于 110 的兼容性级别或在受影响的查询中显式指定 0 样式。<br /><br /> 将数据库升级到兼容性级别 110 将不更改已存储到磁盘的用户数据。 您必须相应手动更正此数据。 例如，如果使用了 `SELECT INTO` 来从包含上述计算列表达式的源创建表，将存储数据（使用样式 0）而非存储计算列定义本身。 您需要手动更新此数据，以匹配样式 121。|
 |在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **datetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **datetime** 类型。|在分区视图中引用的远程表的所有 **smalldatetime** 类型的列都将映射为 **smalldatetime**。 本地表中相应的列（在选择列表中的相同序号位置中）必须为 **smalldatetime** 类型。<br /><br /> 在升级到 110 后，分布式分区视图将由于数据类型不匹配而失败。 可以通过将针对远程表的数据类型更改为 **datetime** 或者将本地数据库的兼容级别设置为 100 或更低，解决上述问题。|
-|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 当分隔两个具有相同 `SOUNDEX` 代码的辅音时，将忽略大写 H 或大写 W。<br /><br /> 2) 如果 *character_expression* 的前 2 个字符具有相同的 `SOUNDEX` 代码，则将包含这两个字符。 如果一组并行辅音具有相同的 `SOUNDEX` 代码，则将不包含它们，第一个辅音除外。|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 如果大写 H 或大写 W 分隔具有相同 `SOUNDEX` 代码的两个辅音，则将忽略右侧的辅音<br /><br /> 2) 如果一组并行辅音具有相同的 `SOUNDEX` 代码，则将不包含它们，第一个辅音除外。<br /><br /> <br /><br /> 其他规则可能导致由 `SOUNDEX` 函数计算的值不同于在更低数据库兼容级别时计算的值。 在升级到兼容级别 110 后，可能需要重新生成使用 `SOUNDEX` 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX](../../t-sql/functions/soundex-transact-sql.md)。|
+|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 当分隔两个具有相同 `SOUNDEX` 代码的辅音时，将忽略大写 H 或大写 W。<br /><br /> 2) 如果 *character_expression* 的前 2 个字符具有相同的 `SOUNDEX` 代码，则将包含这两个字符。 否则，如果一组并行辅音在 `SOUNDEX` 代码中有相同的数字，所有这些辅音都会被排除在外，第一个辅音除外。|`SOUNDEX` 函数实现以下规则：<br /><br /> 1) 如果大写 H 或大写 W 分隔具有相同 `SOUNDEX` 代码的两个辅音，则将忽略右侧的辅音<br /><br /> 2) 如果一组并行辅音在 `SOUNDEX` 代码中有相同的数字，所有这些辅音都会被排除在外，第一个辅音除外。<br /><br /> <br /><br /> 其他规则可能导致由 `SOUNDEX` 函数计算的值不同于在更低数据库兼容级别时计算的值。 在升级到兼容级别 110 后，可能需要重新生成使用 `SOUNDEX` 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX](../../t-sql/functions/soundex-transact-sql.md)。|
 
 ## <a name="differences-between-compatibility-level-90-and-level-100"></a>兼容性级别 90 和兼容性级别 100 之间的差异
 

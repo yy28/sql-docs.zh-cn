@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211694"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
   与编程语言中的函数类似，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的例程。 返回值可以是单个标量值或结果集。  
@@ -61,10 +61,10 @@ ms.locfileid: "48084687"
   
 ##  <a name="FunctionTypes"></a> 类型的函数  
  标量函数  
- 用户定义标量函数返回在 RETURNS 子句中定义的类型的单个数据值。 对于内联标量函数，没有函数体；标量值是单个语句的结果。 对于多语句标量函数，定义在 BEGIN...END 块中的函数体包含一系列返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 返回类型可以是任何数据类型除外`text`， `ntext`， `image`， `cursor`，和`timestamp`。  
+ 用户定义标量函数返回在 RETURNS 子句中定义的类型的单个数据值。 对于内联标量函数，没有函数体；标量值是单个语句的结果。 对于多语句标量函数，定义在 BEGIN...END 块中的函数体包含一系列返回单个值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 返回类型可以是除 `text`、`ntext`、`image`、`cursor` 和 `timestamp` 外的任何数据类型。  
   
  表值函数  
- 用户定义表值函数返回`table`数据类型。 对于内联表值函数，没有函数主体；表是单个 SELECT 语句的结果集。  
+ 用户定义表值函数返回 `table` 数据类型。 对于内联表值函数，没有函数主体；表是单个 SELECT 语句的结果集。  
   
  系统函数  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了许多系统函数，可用于执行各种操作。 这些函数不能修改。 有关详细信息，请参阅[内置函数 (Transact-SQL)](/sql/t-sql/functions/functions)、[系统存储函数 (Transact-SQL)](/sql/relational-databases/system-functions/system-functions-for-transact-sql) 和[动态管理视图和函数 (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)。  

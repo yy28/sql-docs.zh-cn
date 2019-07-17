@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccf26cf30c53e3a336e842cbbffc1ff517075fef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807839"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198002"
 ---
 # <a name="creating-smo-programs"></a>创建 SMO 程序
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 对象的常规编程包括了所有对象共享的共有领域，例如运行方法、设置属性和操作集合。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[连接到 SQL Server 实例](connecting-to-an-instance-of-sql-server.md)|与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例建立连接的最简单 SMO 程序。 演示 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。 此外还包括了一些示例，演示如何连接到本地和远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
 |[断开与 SQL Server 实例的连接](disconnecting-from-an-instance-of-sql-server.md)|一个演示如何断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接的程序。|  

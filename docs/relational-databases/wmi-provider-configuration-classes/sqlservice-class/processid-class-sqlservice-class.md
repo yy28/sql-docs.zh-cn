@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ea0a27de0d4f3c2fed2909091b570695ff04a54f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d6e523c7f0037c027cafc27651cd131614c314c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120003"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 类（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "51675856"
 object.ProcessId [= value]  
 ```  
   
-## <a name="parts"></a>组成部分  
- 对象  
+## <a name="parts"></a>部件  
+ *object*  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

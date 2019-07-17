@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822939"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866258"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用模板
 
@@ -35,8 +35,9 @@ ms.locfileid: "66822939"
 
 要完成本教程，需要 SQL Server Management Studio 并访问 SQL Server。
 
-- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
-- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+* 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+
+* 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
 
 ## <a name="use-template-browser"></a>使用模板浏览器
 
@@ -108,15 +109,17 @@ ms.locfileid: "66822939"
 
 5. 右键单击创建的模板，然后选择“编辑”  。 “新建查询”窗口随即打开。
 
-6. 输入要保存的 T-SQL 文本。 
+6. 输入要保存的 T-SQL 文本。
 
 7. 在“文件”菜单上，选择“保存”   。
 
-8. 关闭现有“查询窗口”然后打开新的自定义模板。 
+8. 关闭现有“查询窗口”然后打开新的自定义模板。
 
 ## <a name="next-steps"></a>后续步骤
 
-下一篇文章提供使用 SQL Server Management Studio 的其他提示和技巧。 
+熟悉 SSMS 的最好方式是进行实践演练。 这些教程  和操作说明  文章可帮助你使用 SSMS 的各种功能。  这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
 
-> [!div class="nextstepaction"]
-> [使用 SSMS 的其他提示和技巧](../tutorials/ssms-tricks.md)
+* [连接到实例和查询实例](../tutorials/connect-query-sql-server.md)
+* [脚本](../tutorials/scripting-ssms.md)
+* [SSMS 配置](../tutorials/ssms-configuration.md)
+* [使用 SSMS 的其他提示和技巧](../tutorials/ssms-tricks.md)

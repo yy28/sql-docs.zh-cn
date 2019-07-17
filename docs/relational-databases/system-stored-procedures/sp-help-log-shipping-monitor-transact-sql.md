@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor (Transact-SQL) | Microsoft Docs
+title: sp_help_log_shipping_monitor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000929"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +46,11 @@ sp_help_log_shipping_monitor
   
 ## <a name="result-sets"></a>结果集  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|日志传送数据库代理的共同状态。<br /><br /> **0** = 正常运行，无代理失败。<br /><br /> **1** = 其他。|  
 |**is_primary**|**bit**|指示该行是否用于主数据库：<br /><br /> **1** = 行是主数据库。<br /><br /> **0** = 行是针对辅助数据库。|  
-|服务器|**sysname**|此数据库所在的主服务器或辅助服务器的名称。|  
+|服务器 |**sysname**|此数据库所在的主服务器或辅助服务器的名称。|  
 |**database_name**|**sysname**|数据库名称。|  
 |**time_since_last_backup**|**int**|最后一次备份日志以来的时间，以分钟为单位。<br /><br /> NULL = 信息不可用或者不相关。|  
 |**last_backup_file**|**nvarchar(500)**|上一个成功的备份日志文件的名称。<br /><br /> NULL = 信息不可用或者不相关。|  

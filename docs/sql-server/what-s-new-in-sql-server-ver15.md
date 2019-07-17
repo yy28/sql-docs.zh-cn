@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9c833144fb94a06d4c8941dd7b39b762fc17ba3c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469101"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687759"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -76,7 +76,7 @@ ms.locfileid: "67469101"
 | mssqlctl 更新  | 多个 mssqlctl [命令和参数更新](../big-data-cluster/reference-mssqlctl.md)  。 这包括对“mssqlctl login”命令的更新，该命令现在以控制器用户名和终结点为目标  。 |
 | 存储增强功能 | 支持日志和数据的不同存储配置。 此外，减少了大数据群集的持久卷声明数。 |
 | 多个计算池实例 | 支持多个计算池实例。 |
-| 新池行为和功能 | 现在，默认情况下，计算池仅用于“ROUND_ROBIN”分发中的存储池和数据池操作  。 数据池现在可以使用新的新“REPLICATED”分发类型，这意味着同一数据在所有数据池实例上都有  。 |
+| 新池行为和功能 | 现在，默认情况下，计算池仅用于“ROUND_ROBIN”分发中的存储池和数据池操作  。 数据池现在可以使用新的REPLICATED  分发类型，即同一数据位于所有数据池实例中。 |
 | 外部表的改进 | HADOOP 数据源类型的外部表现在支持读取最大 1 MB 的行。 外部表（ODBC、存储池、数据池）现在支持与 SQL Server 表一样宽的行。 |
 | &nbsp; | &nbsp; |
 

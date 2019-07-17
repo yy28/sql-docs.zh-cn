@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: af5142fe96cc26bd18f71f8a67a7856950b966b4
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388845"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652704"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -728,7 +728,7 @@ ALTER INDEX 不能用于对索引重新分区或将索引移到其他文件组�
 Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。 
 -  RESUMABLE 选项对于给定索引在元数据不持久，并且仅适用于当前 DDL 语句的持续时间。 因此，必须显式指定 RESUMABLE = ON 子句才能启用可恢复性。
 -  RESUMABLE = ON 选项或 low_priority_lock_wait 参数选项支持 MAX_DURATION 选项  。 
-   -  用于 RESUMABLE 选项的 MAX_DURATION 为重新生成的索引指定时间间隔。 使用此时间之后，索引重新生成会暂停或完成其执行。 由用户确定何时可以恢复暂停的索引的重新生成。 MAX_DURATION 的**时间**（以分钟为单位）必须大于 0 分钟并且小于或等于一周（7 * 24 * 60 = 10080 分钟）。 让索引操作长时间暂停可能会影响特定表的 DML 性能以及数据库磁盘容量，因为原始索引和新创建的索引需要磁盘空间并且需要在 DML 操作期间更新。 如果省略 MAX_DURATION 选项，则索引操作会继续，直到其完成或发生失败。 
+   -  用于 RESUMABLE 选项的 MAX_DURATION 为重新生成的索引指定时间间隔。 使用此时间之后，索引重新生成会暂停或完成其执行。 由用户确定何时可以恢复暂停的索引的重新生成。 MAX_DURATION 时间  （以分钟为单位）必须大于 0 分钟，且小于等于一周（7 \* 24 \* 60 = 10080 分钟）。 让索引操作长时间暂停可能会影响特定表的 DML 性能以及数据库磁盘容量，因为原始索引和新创建的索引需要磁盘空间并且需要在 DML 操作期间更新。 如果省略 MAX_DURATION 选项，则索引操作会继续，直到其完成或发生失败。 
    -  通过 \<low_priority_lock_wait> 参数选项可以确定在 SCH-M 锁上阻塞时，索引操作如何才能继续。
  
 -  使用相同参数重新执行原始 ALTER INDEX REBUILD 语句会恢复暂停的索引重新生成操作。 还可以通过执行 ALTER INDEX RESUME 语句来恢复暂停的索引重新生成操作。

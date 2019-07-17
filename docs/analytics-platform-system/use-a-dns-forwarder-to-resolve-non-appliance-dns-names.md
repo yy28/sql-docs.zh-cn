@@ -2,19 +2,18 @@
 title: 在分析平台系统中使用 DNS 转发器 |Microsoft Docs"
 description: 使用 DNS 转发器解析非设备 DNS 名称分析平台系统中。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841d2da521bada840c1298d3fb9cea28c2835b4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959829"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 转发器分析平台系统中解析非设备 DNS 名称
 可以在 Active Directory 域服务节点上配置 DNS 转发器 ( **_装置\_域_-AD01**并 **_设备\_域_-AD02**) 的分析平台系统的设备，可允许脚本和访问外部服务器的软件应用程序。  

@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 217ed3b61b3e4da943103f992340210ef8295bb0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210526"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832935"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,9 +137,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>元数据  
 下面的系统视图包含有关聚集索引的数据压缩的信息：  
 -   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 和 **type_desc** 列包括 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
--   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - data_compression 和 data_compression_desc 列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+-   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - data_compression 和 data_compression_desc 列包括 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE   。  
   
-[sp_estimate_data_compression_savings (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 过程不会应用在列存储索引中。  
+过程 [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 也可应用于列存储索引。  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>压缩对已分区表和已分区索引的影响  
  如果对已分区表和已分区索引使用数据压缩，则应注意以下事项：  

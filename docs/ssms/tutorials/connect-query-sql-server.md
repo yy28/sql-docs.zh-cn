@@ -1,10 +1,10 @@
 ---
 title: 使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例
-description: 有关使用 SQL Server Management Studio 连接到 SQL Server 实例和运行基本 T-SQL 查询的快速入门教程。
+description: 有关使用 SQL Server Management Studio 连接到 SQL Server 实例和运行基本 T-SQL 查询的教程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469218"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834966"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教程：使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>教程：使用 SQL Server Management Studio (SSMS) 连接和查询 SQL Server 实例
 
-本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文演示如何执行以下操作：
+本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文展示了如何按照以下步骤操作：
 
 > [!div class="checklist"]
 > * 连接到 SQL Server 实例
@@ -54,9 +54,9 @@ ms.locfileid: "67469218"
     * 对于“服务器类型”  ，选择“数据库引擎”  （通常的默认选项）。
     * 对于“服务器名称”，输入 SQL Server 实例的名称  。 （本文使用主机名 NODE5 [NODE5\SQL2016ST] 上的实例名称 SQL2016ST。）如果不知道如何确定 SQL Server 实例的名称，请参阅[使用 SSMS 的其他提示和技巧](ssms-tricks.md#determine-sql-server-name)。
 
-    ![“服务器名称”字段与使用 SQL Server 实例的选项](media/connect-query-sql-server/connection2.png)
+    * 对于“身份验证”，选择“Windows 身份验证”   。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”  ，便会看到输入用户名和密码的提示。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
 
-    * 对于“身份验证”，选择“Windows 身份验证”   。 本文使用 Windows 身份验证，但也支持 SQL Server 登录。 如果选择“SQL 登录”，系统将提示你输入用户名和密码  。 有关身份验证类型的详细信息，请参阅[连接到服务器（数据库引擎）](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
+    ![“服务器名称”字段与使用 SQL Server 实例的选项](media/connect-query-sql-server/connection2.png)
 
     也可以通过选择“选项”来修改其他连接选项  。 连接选项的示例包括你要连接到的数据库、连接超时值和网络协议。 本文对所有选项使用默认值。
 
@@ -129,7 +129,7 @@ ms.locfileid: "67469218"
    GO
    ```
 
-查询完成后，新的“客户”表会显示在对象资源管理器内的表列表中。 如果未显示该表，请右键单击“对象资源管理器”中的“TutorialDB”   > “表”  节点并选择“刷新”  。
+查询完成后，新的“客户”表会显示在对象资源管理器内的表列表中。 如果表未显示，请右键单击“对象资源管理器”中的“TutorialDB”   > “表”  节点，并选择“刷新”  。
 
 ## <a name="insert-rows-into-the-new-table"></a>将行插入新表
 
@@ -188,7 +188,7 @@ ms.locfileid: "67469218"
 
 1. 右键单击查询窗口，然后选择  “连接” >   “更改连接”。 “连接到服务器”  窗口将再次打开。
 
-2. 更改查询使用的服务器。 
+2. 更改查询使用的服务器。
 
    ![“更改连接”命令](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ ms.locfileid: "67469218"
 
 ## <a name="next-steps"></a>后续步骤
 
-下一篇文章将介绍如何在 SQL Server Managment Studio 中编写各种对象的脚本。
+熟悉 SSMS 的最好方式是进行实践演练。 这些文章可帮助你使用 SSMS 的各种功能。  这些文章教你如何管理 SSMS 组件，以及如何查找常用功能。
 
-转到下一篇文章，了解详细信息：
-> [!div class="nextstepaction"]
-> [后续步骤](scripting-ssms.md)
+* [脚本](scripting-ssms.md)
+* [在 SSMS 中使用模板](../template/templates-ssms.md)
+* [SSMS 配置](ssms-configuration.md)
+* [使用 SSMS 的其他提示和技巧](ssms-tricks.md)

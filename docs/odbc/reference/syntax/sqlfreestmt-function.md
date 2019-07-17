@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ff8cb5bd0ff257d42cd658da54415697e99ae0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83e62430e55a82c904e6cae996538225ac8282b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006227"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 函数
 **符合性**  
@@ -64,7 +63,7 @@ SQLRETURN SQLFreeStmt(
 ## <a name="diagnostics"></a>诊断  
  当**SQLFreeStmt**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLFreeStmt** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  

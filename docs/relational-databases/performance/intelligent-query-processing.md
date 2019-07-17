@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580752"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860707"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -44,7 +44,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [交错执行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|请使用在首次编译时遇到的多语句表值函数的实际基数，而不是一个固定猜测值。|
 | [内存授予反馈（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
 | [内存授予反馈（行模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
-| [标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 将转换为“内联”在调用查询中的等效关系表达式，这通常会使性能显著提升。|
+| [标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 转换为“内联”在调用查询中的等效关系表达式，这通常会大幅提升性能。|
 | [表变量延迟编译](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|请使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接

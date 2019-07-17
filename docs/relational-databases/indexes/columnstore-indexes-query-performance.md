@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583223"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860722"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 
@@ -92,7 +92,7 @@ ms.locfileid: "67583223"
     
  并非所有查询执行运算符都可以在批处理模式下执行。 例如，DML 操作（如 Insert、Delete 或 Update）一次执行一行。 批处理模式运算符面向可提高查询性能的运算符（如 Scan、Join、Aggregate、sort 等）。 由于列存储索引是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的，因此需要持续扩展可以在批处理模式下执行的运算符。 下表按照产品版本显示了以批处理模式运行的运算符。    
     
-|批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]？|注释|    
+|批处理模式运算符|何时使用此项？|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|注释|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 操作（insert、delete、update、merge）||否|否|否|DML 不是批处理模式操作，因为它不是并行的。 即使我们启用串行模式批处理操作，允许 DML 以批处理模式处理，我们也看不到明显的收益。|    
 |columnstore index scan|扫描|不适用|是|是|对于列存储索引，我们可以将谓词推送到 SCAN 节点。|    
@@ -111,7 +111,7 @@ ms.locfileid: "67583223"
 |top sort||否|否|是||    
 |window aggregates||不适用|不适用|是|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的新运算符。|    
     
- ?适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup>适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 高级层、标准层（S3 及更高）和所有 vCore 层，以及 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>聚合下推    
  聚合计算的常规执行路径是从 SCAN 节点提取符合条件的行，然后以批处理模式聚合值。 尽管这提供了良好的性能，但使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，可以将聚合运算推送到 SCAN 节点，以便在批处理模式执行的基础上将聚合计算的性能提高好几个数量级，前提是要满足以下条件： 
@@ -146,7 +146,7 @@ FROM FactResellerSalesXL_CCI
     
 例如，事实可以是一条表示某一特定区域中某一特定产品的销售额的记录，而维度则表示一组区域、产品等。 事实数据表和维度表通过主键/外键关系进行连接。 最常用的分析查询将一个或多个维度表与事实数据表进行联接。    
     
-让我们设想一个维度表 `Products`。 典型的主键是通常用字符串数据类型表示的 `ProductCode`。 为提高查询性能，最佳做法是创建代理键（通常为整数列），从事实数据表引用维度表中的行。 ? ?
+让我们设想一个维度表 `Products`。 典型的主键是通常用字符串数据类型表示的 `ProductCode`。 为提高查询性能，最佳做法是创建代理键（通常为整数列），从事实数据表引用维度表中的行。 
     
 列存储索引非常高效地运行具有联接/涉及数值的谓词或基于整数的键的分析查询。 但是，在很多客户工作负荷中，我们发现使用基于字符串的列链接事实/维度表，结果是使用列存储索引的查询性能并不如预期。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通过将包含字符串列的谓词下推到 SCAN 节点，使用基于字符串的列显著提高了分析的性能。    
     

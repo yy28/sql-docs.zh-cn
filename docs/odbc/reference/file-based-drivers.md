@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915385"
 ---
 # <a name="file-based-drivers"></a>基于文件的驱动程序
 DBASE 等的数据源不提供驱动程序使用一个独立的数据库引擎使用基于文件的驱动程序。 这些驱动程序直接访问物理数据和必须实现到过程的 SQL 语句的数据库引擎。 标准做法是，数据库引擎中基于文件的驱动程序实现最小 SQL 一致性级别; 定义的 ODBC SQL 的子集有关此符合性级别中的 SQL 语句的列表，请参阅[附录 c:SQL 语法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ac8b97e36338a280b6f78a0e6bb73eeab882655d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a322f7769db5b1f2ee0de4e4e35839d63ed43b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948565"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>连接到 Azure SQL DB (SybaseToSQL)
 将 Sybase 数据库迁移到 Azure SQL DB，必须连接到 Azure SQL DB 的目标实例。 连接时，SSMA 获取有关 Azure SQL 数据库实例中的所有数据库的元数据，并在 Azure SQL DB 元数据资源管理器中显示数据库元数据。 SSMA 存储的 Azure SQL DB 连接到，但不存储密码的实例的信息。  

@@ -2,19 +2,18 @@
 title: 备份和还原-并行数据仓库 |Microsoft Docs
 description: 描述数据如何备份和还原为并行数据仓库 (PDW) 的工作原理。 备份和还原操作用于灾难恢复。 备份和还原还可用来将数据库从一个设备复制到另一个设备。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961405"
 ---
 # <a name="backup-and-restore"></a>备份和还原
 
@@ -130,7 +129,7 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|备份和还原任务|Description|  
+|备份和还原任务|描述|  
 |---------------------------|---------------|  
 |为备份服务器准备服务器。|[获取和配置备份服务器](acquire-and-configure-backup-server.md)|  
 |备份数据库。|[备份数据库](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  

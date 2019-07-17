@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1278552f1bfe1ccfb7ab250f843e86c62e63440b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910684"
 ---
 # <a name="assessment-report-accesstosql"></a>评估报表 (AccessToSQL)
 评估报告窗口会显示到的数据库对象的转换的结果[!INCLUDE[tsql](../../includes/tsql-md.md)]语法，并且还可以帮助您评估的复杂性和成本在迁移项目。  

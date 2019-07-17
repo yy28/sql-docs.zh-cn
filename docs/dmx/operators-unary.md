@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d44e4a7269c8fb11533b7fb287684c9a6b7b5d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 311a71926aa2eacae9aa7754b778c037b69d35e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008121"
 ---
 # <a name="operators---unary"></a>运算符 - 一元
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,10 +22,10 @@ ms.locfileid: "62501868"
   
  下表列出了 DMX 支持的一元运算符。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
-|[- &#40;Negative&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|返回数值表达式的负值。|  
-|[+ &#40;Positive&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|返回数值表达式的正值。|  
+|[-&#40;负&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|返回数值表达式的负值。|  
+|[+&#40;正&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|返回数值表达式的正值。|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -37,7 +36,7 @@ ms.locfileid: "62501868"
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [表达式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

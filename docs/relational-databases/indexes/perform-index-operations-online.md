@@ -16,12 +16,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca3269ffefc69584aea56ad47f125e8c11fa75d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ac49348a7cfacf441977051727c0d062f9586d8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732396"
 ---
 # <a name="perform-index-operations-online"></a>联机执行索引操作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,26 +94,19 @@ ms.locfileid: "62686753"
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-create-rebuild-or-drop-an-index-online"></a>联机创建、重新生成或删除索引  
+### <a name="to-create-rebuild-or-drop-an-index-online"></a>联机创建、重新生成或删除索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+下面的示例在 AdventureWorks 数据库中重新生成现有联机索引。
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+ ```sql  
+ ALTER INDEX AK_Employee_NationalIDNumber
+   ON HumanResources.Employee  
+   REBUILD WITH (ONLINE = ON)
+;
+```  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将联机重新生成现有的索引  
+以下示例使用 `NewGroup` 子句联机删除一个聚集索引并将生成表（堆）移动到文件组 `MOVE TO` 。 在移动之前和之后，将查询 `sys.indexes`、 `sys.tables`和 `sys.filegroups` 目录视图，以验证索引和表在文件组中的位置。  
   
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    ALTER INDEX AK_Employee_NationalIDNumber ON HumanResources.Employee  
-    REBUILD WITH (ONLINE = ON);  
-    GO  
-    ```  
+[!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
   
-     以下示例使用 `NewGroup` 子句联机删除一个聚集索引并将生成表（堆）移动到文件组 `MOVE TO` 。 在移动之前和之后，将查询 `sys.indexes`、 `sys.tables`和 `sys.filegroups` 目录视图，以验证索引和表在文件组中的位置。  
-  
-     [!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
-  
- 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
-  
-  
+有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  

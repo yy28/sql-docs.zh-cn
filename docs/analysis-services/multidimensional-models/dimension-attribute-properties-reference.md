@@ -1,5 +1,5 @@
 ---
-title: 维度特性属性参考 |Microsoft 文档
+title: 维度特性属性参考 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26975562f3617742cbcc3bfb3a47e41af09ba8b3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208925"
 ---
 # <a name="dimension-attribute-properties-reference"></a>维度特性属性参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，提供了许多可确定维度和维度特性工作方式的属性。 下表列出了这些特性属性并逐一对其进行说明。  
   
-|属性|Description|  
+|属性|描述|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|标识向最终用户显示关联的特性层次结构的文件夹。|  
 |**AttributeHierarchyEnabled**|确定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是否为特性生成特性层次结构。 如果未启用特性层次结构，则不能在用户定义的层次结构中使用该特性，也不能在多维表达式 (MDX) 语句中引用该特性层次结构。|  
@@ -30,13 +30,13 @@ ms.locfileid: "34026664"
 |**CustomRollupColumn**|指定定义自定义汇总公式的列。|  
 |**CustomRollupPropertiesColumn**|指定包含自定义汇总公式的属性的列。|  
 |**DefaultMember**|指定用于定义该特性默认度量值的多维表达式 (MDX)。|  
-|**Description**|包含对特性的说明。|  
+|**说明**|包含对特性的说明。|  
 |**DiscretizationBucketCount**|包含以其进行离散化的存储桶数。|  
 |**DiscretizationMethod**|定义用于离散化的方法。|  
 |**EstimatedCount**|指定该特性的估计成员数。 在运行聚合设计向导之前，该值默认为零。 您可以允许向导对记录数目进行计数，也可以输入一个估计值。 如果您知道成员数目并且希望减少在数据库中查询计数所需的时间，则可以手动输入值。 如果正在使用生产数据的测试子集，则可以使用生产数据的计数，从而针对生产数据而不是测试数据来优化聚合设计。|  
 |**GroupingBehavior**|一个用户定义的值，可为客户端应用程序提供如何对特性进行分组的提示。|  
 |**ID**|包含维度的唯一标识符 (ID)。|  
-|**InstanceSelection**|向客户端应用程序提供提示，建议应该如何根据列表中预期的项数来显示项列表。 可用选项如下所示：<br /><br /> **None** 对客户端应用程序不提供提示。 这是默认值。<br /><br /> **DropDown** 项数很少，足以在下拉列表中显示。<br /><br /> **List** 项数太多，无法在下拉中显示，但不需要进行筛选。<br /><br /> **FilteredList** 项数太多，需要用户进行筛选，然后才能显示。<br /><br /> **MandatoryFilter** 项数太多，必须一直使用筛选才能显示。|  
+|**InstanceSelection**|向客户端应用程序提供提示，建议应该如何根据列表中预期的项数来显示项列表。 可用选项如下所示：<br /><br /> **None** 对客户端应用程序不提供提示。 这是默认值。<br /><br /> **DropDown** 项数很少，足以在下拉列表中显示。<br /><br /> **List** 项数太多，无法在下拉  中显示，但不需要进行筛选。<br /><br /> **FilteredList** 项数太多，需要用户进行筛选，然后才能显示。<br /><br /> **MandatoryFilter** 项数太多，必须一直使用筛选才能显示。|  
 |**IsAggregatable**|指定是否可以聚合特性成员的值。 默认值为 **True**，表示特性层次结构将包含“(全部)”级别。 如果该属性的值为 **False**，则此特性层次结构不包含“(全部)”级别。|  
 |**KeyColumns**|包含表示特性键的一个或多个列，这些列是数据源视图的基础关系表中与该特性绑定在一起的列。 除非为 **NameColumn** 属性指定一个值，否则，将为用户显示每个成员该列的值。|  
 |**MemberNamesUnique**|确定特性层次结构中的成员名称是否必须唯一。|  
@@ -59,7 +59,7 @@ ms.locfileid: "34026664"
 > [!NOTE]  
 >  当查询中不显式包含层次结构中的成员时，将使用特性的默认成员来计算表达式。 特性的默认成员由特性的 **DefaultMember** 属性来指定。 当查询中包括维度的层次结构时，将忽略与该层次结构中的级别相对应的特性中的所有默认成员。 如果查询中不包括维度的层次结构，则默认成员将用于维度中的所有特性。 有关默认成员的详细信息，请参阅 [定义默认成员](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

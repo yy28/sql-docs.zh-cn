@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31f90836b26d9551cc3e5a1200208cc51e3ef30a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910140"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysdatatypemappings**视图用于显示 SQL Server 数据类型和数据类型的非 SQL Server 数据库管理系统 (DBMS) 之间的映射。 此视图存储在**msdb**数据库。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|数据类型映射的 ID。|  
 |**source_dbms**|**sysname**|指示从中映射数据类型的 DBMS 的名称，可以是下列值之一：<br /><br /> **MSSQLSERVER** = 源是 SQL Server 数据库。<br /><br /> **ORACLE** = 源数据库为 Oracle 数据库。|  

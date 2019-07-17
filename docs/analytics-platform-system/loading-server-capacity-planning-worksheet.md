@@ -2,19 +2,18 @@
 title: 正在加载服务器容量规划的分析平台系统 |Microsoft Docs
 description: 此容量规划工作表可帮助您确定用于将数据加载到分析平台系统并行数据仓库的加载服务器的要求。"
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb15fdd3b20c538237b3e012df4217ad5568bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960667"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>为分析平台系统加载服务器容量规划工作表
 此容量规划工作表可帮助您确定数据加载到 SQL Server PDW 加载服务器的要求。 用于创建您的计划购买或预配现有的加载服务器。  

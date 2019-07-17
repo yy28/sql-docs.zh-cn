@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342895"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866232"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ NOTRUNCATE
   
 文件末尾的可用空间不会返回给操作系统，并且文件的物理大小也不会更改。 因此，指定 NOTRUNCATE 时，数据库似乎不会收缩。  
   
-NOTRUNCATE 只适用于数据文件。 NONTRUNCATE 不会影响日志文件。  
+NOTRUNCATE 只适用于数据文件。 NOTRUNCATE 不影响日志文件。  
   
 TRUNCATEONLY  
 将文件末尾的所有可用空间释放给操作系统。 不移动文件内的任何页面。 数据文件仅收缩到最后指定的盘区。 如果使用 TRUNCATEONLY 指定，则会忽略 _target\_percent_。 Azure SQL 数据仓库不支持此选项。
@@ -119,7 +119,7 @@ DBCC SHRINKDATABASE 以每个文件为单位对数据文件进行收缩。然而
 
 例如，如果为收缩 **mydb** 将 _target\_percent_ 指定为 25，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算得出此文件的目标大小为 8 MB（6 MB 数据加上 2 MB 可用空间）。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据文件后 2 MB 中的所有数据移动到数据文件前 8 MB 的任何可用空间中，然后对该文件进行收缩。
   
-假设 mydb 的数据文件包含 7 MB 的数据。 将 _target\_percent_ 指定为 30，以允许将此数据文件收缩到可用空间的 30%。 但是，将 _target\_percent_ 指定为 40 不会收缩数据文件，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将文件收缩到的大小不能小于数据当前占用的空间大小。 
+假设 mydb 的数据文件包含 7 MB 的数据  。 将 _target\_percent_ 指定为 30，以允许将此数据文件收缩到可用空间的 30%。 但是，将 _target\_percent_ 指定为 40 不会收缩数据文件，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将文件收缩到的大小不能小于数据当前占用的空间大小。 
 
 还可以用另一种方法来思考此问题：40% 的所要求可用空间加上 70% 的整个数据文件大小（10 MB 中的 7 MB）超过了 100%。 任何大于 30 的 _target\_size_ 都不会收缩数据文件。 它不会收缩是因为所需的可用百分比加上数据文件当前占用的百分比大于 100%。
   

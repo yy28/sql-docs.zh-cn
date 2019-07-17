@@ -16,21 +16,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206964"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 对象提供一个计数器来监视指定为不推荐使用的功能。 在每个事例中计数器都提供一个使用计数，列出自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动以来遇到不推荐使用的功能的次数。  
   
  下表描述了 SQL Server Deprecated Features 计数器实例。  
   
-|SQL Server Deprecated Features 计数器实例|Description|  
+|SQL Server Deprecated Features 计数器实例|描述|  
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
-|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 将替换为`SELECT column_list FROM`  *\< function_name >*`()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
+|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 将替换为`SELECT column_list FROM`  *\< function_name >* `()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
 |“\@”和以“\@\@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 \@ 或 \@\@ 开头的标识符。 请勿使用 \@ 或 \@\@ 或以 \@\@ 开头的名称作为标识符。 每次编译时发生。|  
 |ADDING TAPE DEVICE|已弃用的功能 sp_addumpdevice'`tape`遇到了。 Sp_addumpdevice '`disk`相反。 每次使用时发生。|  
 |ALL 权限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 语法的总次数。 请修改语法以拒绝特定权限。 每次查询时发生。|  
@@ -91,7 +91,7 @@ ms.locfileid: "52763939"
 |FULLTEXTSERVICEPROPERTY('DataTimeout')|遇到 FULLTEXTSERVICEPROPERTY 函数的 DataTimeout 属性。 请避免使用此属性。|  
 |FULLTEXTSERVICEPROPERTY('ResourceUsage')|遇到 FULLTEXTSERVICEPROPERTY 函数的 ResourceUsage 属性。 请避免使用此属性。|  
 |GROUP BY ALL|遇到 GROUP BY ALL 语法的总次数。 请修改语法以按特定表分组。|  
-|Hindi|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。 请改用 Indic_General_90。|  
+|印地语|每次数据库启动时和每次排序规则使用时发生事件。 计划修改使用该排序规则的应用程序。 请改用 Indic_General_90。|  
 |不带括号的 HOLDLOCK 表提示||  
 |IDENTITYCOL|遇到 INDENTITYCOL 语法。 请重写语句以使用 $identity 语法。 每次编译时发生。|  
 |不包含 COUNT_BIG(\*) 的索引视图选择列表|聚集索引视图的选择列表必须包含 COUNT_BIG (\*)。|  
@@ -112,7 +112,7 @@ ms.locfileid: "52763939"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|遇到对不推荐使用的 sys.numbered_procedure_parameters 的引用。 请勿使用。 每次编译时发生。|  
 |numbered_procedures|遇到对不推荐使用的 sys.numbered_procedure 的引用。 请勿使用。 每次编译时发生。|  
-|旧式 RAISEERROR|遇到不推荐使用的 RAISERROR（格式：RAISERROR 整数字符串）语法。 请使用当前的 RAISERROR 语法重写语句。 每次编译时发生。|  
+|旧式 RAISEERROR|不推荐使用的 RAISERROR (格式：RAISERROR 整数字符串） 语法。 请使用当前的 RAISERROR 语法重写语句。 每次编译时发生。|  
 |OLEDB 用于即席连接|SQLOLEDB 不是受支持的访问接口。 请将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用于即席连接。|  
 |PERMISSIONS|遇到对 PERMISSIONS 内部函数的引用。 请改为查询 sys.fn_my_permissions。 每次查询时发生。|  
 |ProcNums|遇到不推荐使用的 ProcNums 语法。 请重写语句以删除引用。 每次编译时发生。|  
@@ -162,7 +162,7 @@ ms.locfileid: "52763939"
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 存储过程不检查是否存在主密钥。 这是为了向后兼容，但会显示警告。 不推荐使用此行为。 在将来版本中，主密钥必须存在，并且在存储过程 sp_control_dbmasterkey_password 中使用的密码必须与用来对数据库主密钥进行加密的密码之一相同。|  
 |sp_create_removable|遇到 sp_create_removable 过程。 请改用 CREATE DATABASE。 每次查询时发生。|  
 |sp_db_vardecimal_storage_format|遇到 `vardecimal` 存储格式的使用。 请改用数据压缩。|  
-|sp_dbcmptlevel|遇到 sp_dbcmptlevel 过程。 使用 ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 每次查询时发生。|  
+|sp_dbcmptlevel|遇到 sp_dbcmptlevel 过程。 使用 ALTER DATABASE...SET COMPATIBILITY_LEVEL。 每次查询时发生。|  
 |sp_dbfixedrolepermission|遇到 sp_dbfixedrolepermission 过程。 请勿使用。 每次查询时发生。|  
 |sp_dboption|遇到 sp_dboption 过程。 请改用 ALTER DATABASE 和 DATABASEPROPERTYEX。 每次编译时发生。|  
 |sp_dbremove|遇到 sp_dbremove 过程。 请改用 DROP DATABASE。 每次查询时发生。|  

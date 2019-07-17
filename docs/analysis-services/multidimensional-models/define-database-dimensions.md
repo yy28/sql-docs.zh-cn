@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178742"
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52534713"
   
  维度设计器中有三个不同的选项卡，下表对这些选项卡进行了说明。  
   
-|Tab|Description|  
+|Tab|描述|  
 |---------|-----------------|  
 |**维度结构**|使用此选项卡上，若要使用的维度到结构检查或创建数据源视图架构对于维度，以处理特性，以及组织中用户定义的层次结构的属性。|  
 |**属性关系**|使用此选项卡可以创建、修改或删除维度的属性关系。|  
