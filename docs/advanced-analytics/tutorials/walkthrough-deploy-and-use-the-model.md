@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961696"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>将 R 模型部署和使用 SQL Server （演练） 中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "58510594"
 
     + 使用 SELECT 语句调用从 SQL 表存储的模型。 从作为表中检索模型**varbinary （max)** SQL 变量中存储的数据 _\@lmodel2_，并作为参数传递*mod*到系统存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 评分是定义为 SQL 查询，以在 SQL 变量字符串存储在用作输入的数据_\@输入_。 从数据库检索数据，因为它存储在名为的数据帧*InputDataSet*，这就是默认名称的输入数据[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)过程; 可以定义如果需要通过使用参数的另一个变量名称  *_\@input_data_1_name_*。
+    + 评分是定义为 SQL 查询，以在 SQL 变量字符串存储在用作输入的数据 _\@输入_。 从数据库检索数据，因为它存储在名为的数据帧*InputDataSet*，这就是默认名称的输入数据[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)过程; 可以定义如果需要通过使用参数的另一个变量名称 * _\@input_data_1_name_* 。
 
     + 为了生成分数，存储的过程调用中的 rxPredict 函数**RevoScaleR**库。
 
