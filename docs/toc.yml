@@ -7396,6 +7396,8 @@
       items:
         - name: 创建链接服务器
           href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+        - name: 创建链接服务器提供程序
+          href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
     - name: 全文搜索
       href: relational-databases/search/full-text-search.md
       items:
