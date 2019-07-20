@@ -1,7 +1,7 @@
 ---
 title: SQLGetFunctions 函数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLGetFunctions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLGetFunctions
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edb58ebff212e494b84aed12397def2876d3728d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897718"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345612"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：ISO 92  
+**度**  
+ 引入的版本:ODBC 1.0 标准符合性:ISO 92  
   
  **摘要**  
- **SQLGetFunctions**返回有关驱动程序是否支持特定的 ODBC 函数的信息。 执行此函数在驱动程序管理器中;它还可以实现在驱动程序中。 如果驱动程序实现**SQLGetFunctions**，驱动程序管理器驱动程序中调用函数。 否则，它将执行该函数本身。  
+ **SQLGetFunctions**返回有关驱动程序是否支持特定 ODBC 函数的信息。 此函数在驱动程序管理器中实现;它还可以在驱动程序中实现。 如果驱动程序实现**SQLGetFunctions**, 则驱动程序管理器将调用驱动程序中的函数。 否则, 它将执行函数本身。  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,41 +49,41 @@ SQLRETURN SQLGetFunctions(
  [输入] 连接句柄。  
   
  *FunctionId*  
- [输入]一个 **#define**值，该值标识感兴趣; 的 ODBC 函数**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 **SQL_API_ODBC3_ALL_FUNCTIONS**由 ODBC 3 *.x*应用程序以确定是否支持 ODBC 3 *.x*和早期的函数。 **SQL_API_ALL_FUNCTIONS**由 ODBC 2 *.x*应用程序以确定是否支持 ODBC 2 *.x*和早期的函数。  
+ 送标识相关 ODBC 函数的 **#define**值;**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**。 ODBC*3.x 应用程序*使用**SQL_API_ODBC3_ALL_FUNCTIONS**来确定 odbc*2.x 和更*早的函数的支持。 ODBC*2.x 应用程序*使用**SQL_API_ALL_FUNCTIONS**来确定 odbc*2.x 和更*早的函数的支持。  
   
- 有关一系列 **#define**标识 ODBC 函数的值，请参阅"注释。"中的表  
+ 有关标识 ODBC 函数的 **#define**值的列表, 请参阅 "备注" 中的表。  
   
  *SupportedPtr*  
- [输出] 如果*FunctionId*标识一个单个的 ODBC 函数*SupportedPtr*指向单个 SQLUSMALLINT 值，该值是 SQL_TRUE 指定的函数是否支持驱动程序和 SQL_FALSE 如果不是受支持。  
+ 输出 如果*FunctionId*标识单个 ODBC 函数, 则*SUPPORTEDPTR*指向单个 SQLUSMALLINT 值 SQL_TRUE 如果驱动程序支持指定函数, 则此值为, 如果不支持, 则为 SQL_FALSE。  
   
- 如果*FunctionId*是 SQL_API_ODBC3_ALL_FUNCTIONS， *SupportedPtr*指向具有大量的元素等于 SQL_API_ODBC3_ALL_FUNCTIONS_SIZE SQLSMALLINT 数组。 此数组由驱动程序管理器视为可用于确定是否 ODBC 3 4000 位位图 *.x*或支持早期的函数。 SQL_FUNC_EXISTS 宏调用以确定函数的支持。 （请参阅"注释"。）ODBC 3 *.x*应用程序可以调用**SQLGetFunctions**与针对任一 ODBC 3 SQL_API_ODBC3_ALL_FUNCTIONS *.x*或 ODBC 2 *.x*驱动程序。  
+ 如果*FunctionId*为 SQL_API_ODBC3_ALL_FUNCTIONS, 则*SupportedPtr*指向 SQLSMALLINT 数组, 其元素数等于 SQL_API_ODBC3_ALL_FUNCTIONS_SIZE。 驱动程序管理器将此数组视为4000位位图, 该位图可用于确定是否支持 ODBC*1.x 或更*早的函数。 调用 SQL_FUNC_EXISTS 宏来确定函数支持。 (请参阅 "备注"。)ODBC*3.x 应用程序*可以针对 odbc*1.x 或 odbc* *2.x 驱动程序*调用**SQLGetFunctions**与 SQL_API_ODBC3_ALL_FUNCTIONS。  
   
- 如果*FunctionId*是 SQL_API_ALL_FUNCTIONS， *SupportedPtr*指向 SQLUSMALLINT 100 个元素数组。 按索引数组 **#define**使用的值*FunctionId*来标识每个 ODBC 函数; 数组的某些元素是未使用和保留供将来使用。 如果标识 ODBC 2，元素为 SQL_TRUE *.x*或早期驱动程序支持的函数。 如果它标识驱动程序不支持 ODBC 函数或不会识别了 ODBC 函数，则 SQL_FALSE。  
+ 如果*FunctionId*为 SQL_API_ALL_FUNCTIONS, 则*SupportedPtr*指向100元素的 SQLUSMALLINT 数组。 数组由*FunctionId*用来标识每个 ODBC 函数的 **#define**值编制索引;数组的某些元素是未使用的, 并保留以供将来使用。 如果元素标识驱动程序支持的 ODBC*2.x 或更*早版本的函数, 则该元素是 SQL_TRUE 的。 如果它标识驱动程序不支持的 ODBC 函数或不标识 ODBC 函数, 则为 SQL_FALSE。  
   
- 在返回的数组 **SupportedPtr*使用从零开始的索引。  
+ **SupportedPtr*中返回的数组使用从零开始的索引。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetFunctions**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的SQL_HANDLE_DBC 和一个*处理*的*ConnectionHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLGetFunctions** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLGetFunctions**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过使用*SQLGetDiagRec 的 HandleType*和*SQL_HANDLE_DBC*的*句柄*调用**ConnectionHandle**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLGetFunctions**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
   
 |SQLSTATE|Error|描述|  
 |--------|-----|-----------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY010|函数序列错误|（数据挖掘） **SQLGetFunctions**之前已调用**SQLConnect**， **SQLBrowseConnect**，或者**SQLDriverConnect**。<br /><br /> （数据挖掘） **SQLBrowseConnect**曾为*ConnectionHandle*和返回 SQL_NEED_DATA。 此函数调用之前**SQLBrowseConnect**返回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*ConnectionHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY095|函数类型超出了范围|(DM) 无效*FunctionId*指定的值。|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|01000|一般警告|驱动程序特定的信息性消息。 (函数返回 SQL_SUCCESS_WITH_INFO。)|  
+|08S01|通信链接失败|在函数完成处理之前, 驱动程序与连接到的数据源之间的通信链接失败。|  
+|HY000|一般错误|发生了一个错误, 该错误没有特定的 SQLSTATE, 没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中**的 SQLGetDiagRec**返回的错误消息描述了错误及其原因。  *\**|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY010|函数序列错误|(DM) **SQLGetFunctions**在**SQLConnect**、 **SQLBrowseConnect**或**SQLDriverConnect**之前被调用。<br /><br /> 为*ConnectionHandle*调用了 (DM) **SQLBrowseConnect** , 并返回 SQL_NEED_DATA。 在**SQLBrowseConnect**返回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS 之前调用了此函数。<br /><br /> (DM) 为*ConnectionHandle*调用了**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** , 并返回了 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。|  
+|HY013|内存管理错误|未能处理函数调用, 原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY095|函数类型超出范围|(DM) 指定了无效的*FunctionId*值。|  
+|HY117|由于未知的事务状态, 连接被挂起。 仅允许断开连接和只读函数。|(DM) 有关挂起状态的详细信息, 请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT 设置。|  
   
 ## <a name="comments"></a>注释  
- **SQLGetFunctions**始终返回该**SQLGetFunctions**， **SQLDataSources**，并且**SQLDrivers**支持。 这是因为这些函数的实现是驱动程序管理器中。 驱动程序管理器将映射到相应的 Unicode 函数的 ANSI 函数，如果 Unicode 函数存在，并且如果 ANSI 函数存在，则将映射到相应的 ANSI 函数的 Unicode 函数。 有关如何使用应用程序信息**SQLGetFunctions**，请参阅[接口一致性级别](../../../odbc/reference/develop-app/interface-conformance-levels.md)。  
+ **SQLGetFunctions**始终返回, 支持**SQLGetFunctions**、 **SQLDataSources**和**SQLDrivers** 。 这是因为这些函数是在驱动程序管理器中实现的。 如果 Unicode 函数存在, 驱动程序管理器会将 ANSI 函数映射到相应的 Unicode 函数, 如果 ANSI 函数存在, 则将 Unicode 函数映射到相应的 ANSI 函数。 有关应用程序如何使用**SQLGetFunctions**的信息, 请参阅[接口一致性级别](../../../odbc/reference/develop-app/interface-conformance-levels.md)。  
   
- 以下是一系列的有效值*FunctionId*符合 ISO 92 标准符合性级别的函数：  
+ 以下列表列出了符合 ISO 92 标准符合性级别的函数的*FunctionId*的有效值:  
   
 |FunctionId 值|FunctionId 值|  
 |----------|----------|  
@@ -108,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- 以下是一系列的有效值*FunctionId*符合 Open Group 标准符合性级别的函数：  
+ 以下列表列出了符合开放组标准符合性级别的函数的*FunctionId*的有效值:  
   
 |FunctionId 值|FunctionId 值|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- 以下是一系列的有效值*FunctionId*符合 ODBC 标准符合性级别的函数。  
+ 下面是符合 ODBC 标准符合性级别的函数的*FunctionId*有效值列表。  
   
 |FunctionId 值|FunctionId 值|  
 |-|-|  
@@ -128,24 +129,24 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] 时使用的 ODBC 2 *.x*驱动程序， **SQLBulkOperations**将被返回，因为仅支持如果下列两个条件成立： ODBC 2 *.x*驱动程序支持**SQLSetPos**，和的信息类型 SQL_POS_OPERATIONS 返回作为集的 SQL_POS_ADD 位。  
+ [1] 使用 ODBC*2.x 驱动程序*时, 只有在满足以下两个条件时, 才会返回**SQLBulkOperations** : ODBC 2.X*驱动程序支持* **SQLSetPos**, 而信息类型 SQL_POS_OPERATIONS 返回设置的 SQL_POS_ADD 位。  
   
- 以下是一系列的有效值*FunctionId*引入 ODBC 3.8 或更高版本的函数：  
+ 下面列出了 ODBC 3.8 或更高版本中引入的函数的*FunctionId*有效值:  
   
 |FunctionId 值|  
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle**将返回为仅在受支持的驱动程序支持同时**SQLCancel**并**SQLCancelHandle**。 如果**SQLCancel**支持，但**SQLCancelHandle**不是，应用程序仍然可以调用**SQLCancelHandle**上语句句柄，因为它将映射到**SQLCancel**。  
+ [2] 仅当驱动程序支持**SQLCancel**和**SQLCancelHandle**时, **SQLCancelHandle**才会返回。 如果支持**SQLCancel** , 但**SQLCancelHandle**不为, 则应用程序仍可对语句句柄调用**SQLCancelHandle** , 因为它将映射到**SQLCancel**。  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 宏  
- SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 宏用于确定是否支持 ODBC 3 *.x*早期函数后的或**SQLGetFunctions**已使用调用*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 参数。 在应用程序调用与 SQL_FUNC_EXISTS *SupportedPtr*参数设置为*SupportedPtr*传入*SQLGetFunctions*，并使用*FunctionID*参数设置为 **#define**函数。 SQL_FUNC_EXISTS 否则返回支持的函数，如果 SQL_TRUE 和 SQL_FALSE。  
+ SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) 宏用于在使用*FunctionID 参数 SQL_API_ODBC3_ALL_* 调用**SQLGetFunctions**后确定 ODBC*1.x 或早期*函数的支持函数. 应用程序调用 SQL_FUNC_EXISTS, 并将*SupportedPtr*参数设置为*SQLGetFunctions*中传递的*SupportedPtr* , 并将*FunctionID*参数设置为该函数的 **#define** 。 如果支持该函数, 则 SQL_FUNC_EXISTS 返回 SQL_TRUE, 否则返回 SQL_FALSE。  
   
 > [!NOTE]
->  使用 ODBC 2 时 *.x*驱动程序，ODBC 3 *.x*驱动程序管理器将返回为 SQL_TRUE **SQLAllocHandle**和**SQLFreeHandle**因为**SQLAllocHandle**映射到**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**，和因为**SQLFreeHandle**映射到**SQLFreeEnv**， **SQLFreeConnect**，或者**SQLFreeStmt**。 **SQLAllocHandle**或**SQLFreeHandle**与*HandleType* SQL_HANDLE_DESC 参数不支持，但是，即使对于函数，返回 SQL_TRUE，因为没有任何ODBC 2 *.x*用于这种情况下将映射函数。  
+>  当使用 ODBC 2.x*驱动程序时*, odbc 3.X*驱动程序管理*器将返回**SQLAllocHandle**和**SQLFreeHandle**的 SQL_TRUE, 因为**SQLAllocHandle**映射到**SQLAllocEnv**、 **SQLAllocConnect**、或**SQLAllocStmt**, 因为**SQLFreeHandle**映射到**SQLFreeEnv**、 **SQLFreeConnect**或**SQLFreeStmt**。 但不支持带有*HandleType*参数 SQL_HANDLE_DESC 的**SQLAllocHandle**或**SQLFreeHandle** , 即使为函数返回了 SQL_TRUE, 因为在这种情况下, 不存在要映射到的 ODBC*2.x 函数。*  
   
 ## <a name="code-example"></a>代码示例  
- 以下三个示例演示如何使用应用程序**SQLGetFunctions**若要确定驱动程序是否支持**SQLTables**， **SQLColumns**，和**SQLStatistics**。 如果该驱动程序不支持这些函数，该驱动程序从断开连接应用程序。 第一个示例调用**SQLGetFunctions**一次针对每个函数。  
+ 以下三个示例演示应用程序如何使用**SQLGetFunctions**来确定驱动程序是否支持**SQLTables**、 **SQLColumns**和**SQLStatistics**。 如果驱动程序不支持这些功能, 应用程序将从驱动程序断开连接。 第一个示例对每个函数调用**SQLGetFunctions**一次。  
   
 ```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
@@ -168,7 +169,7 @@ retcodeStatistics == SQL_SUCCESS && StatisticsExists == SQL_TRUE)
 SQLDisconnect(hdbc);  
 ```  
   
- ODBC 3.x 应用程序在第二个示例中，调用**SQLGetFunctions**并在其中将其传递一个数组**SQLGetFunctions**返回信息所有 ODBC 3.x 和更早的函数。  
+ 在第二个示例中, ODBC 3.x 应用程序调用**SQLGetFunctions** , 并向其传递一个数组, 其中**SQLGetFunctions**返回有关所有 ODBC 1.x 和更早函数的信息。  
   
 ```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
@@ -190,7 +191,7 @@ SQL_FUNC_EXISTS(fExists, SQL_API_SQLTABLES) == SQL_TRUE &&
 SQLDisconnect(hdbc);  
 ```  
   
- 第三个示例是 ODBC 2.x 应用程序调用**SQLGetFunctions**并将其传递在其中的 100 个元素的数组**SQLGetFunctions**返回信息所有 ODBC 2.x 和早期的函数。  
+ 第三个示例是 ODBC 2.x 应用程序调用**SQLGetFunctions** , 并向其传递一个100元素数组, 其中**SQLGetFunctions**返回有关所有 ODBC 2.x 和更早函数的信息。  
   
 ```cpp  
 #define FUNCTIONS 100  
@@ -220,7 +221,7 @@ SQLDisconnect(hdbc);
 |---------------------------|---------|  
 |返回连接属性的设置|[SQLGetConnectAttr 函数](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |返回有关驱动程序或数据源的信息|[SQLGetInfo 函数](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
-|返回语句属性的设置|[SQLGetStmtAttr 函数](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|返回语句特性的设置|[SQLGetStmtAttr 函数](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

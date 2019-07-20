@@ -1,132 +1,132 @@
 ---
-title: microsoftml Python 包的 SQL Server 机器学习服务
-description: 引入了 Microsoft 机器学习算法和 python，模型与 SQL Server 机器学习工作负荷相关。
+title: microsoftml Python 包
+description: 介绍了适用于 Python 的 Microsoft 机器学习算法和模型, 与 SQL Server 机器学习工作负载相关。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8f4c0eb20b0e0cd64065c7db0687b1dc36b2dbe7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 298328db563cac8183b14b47e5c75c850c782d58
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962758"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345460"
 ---
-# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml （SQL Server 中的 Python 模块）
+# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server 中的 Python 模块)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**microsoftml**是 Microsoft 提供高性能的计算机学习算法提供 Python35 兼容的模块。 它包括用于培训和转换、 评分、 文本和图像分析和特征提取用于从现有数据派生值的函数。
+**microsoftml**是 Microsoft 提供的 Python35 兼容模块, 提供高性能机器学习算法。 它包括用于定型和转换、计分、文本和图像分析的函数以及用于从现有数据派生值的功能提取。
 
-机器学习 Api 由 Microsoft 内部的机器学习应用程序的开发和了而优化多年来支持高性能大数据，使用多核处理和快速数据流。 此包的 R 版本，一种 Python 等效于源自[MicrosoftML](../r/ref-r-microsoftml.md)，具有相似的功能。 
+机器学习 Api 是由 Microsoft 为内部机器学习应用程序开发的, 多年来, 使用多核处理和快速数据流来支持大数据的高性能。 此包是作为具有类似功能的 R 版本[MicrosoftML](../r/ref-r-microsoftml.md)的 Python 等效的。 
 
-## <a name="full-reference-documentation"></a>完整的参考文档
+## <a name="full-reference-documentation"></a>完整参考文档
 
-**Microsoftml**库分布在多个 Microsoft 产品，但使用情况都是相同是否获取 SQL Server 或另一个产品中的库。 函数是相同的因为[单个 microsoftml 函数的文档](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)发布到下一个位置[Python 参考](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)的 Microsoft Machine Learning Server。 应任何特定于产品的行为存在，请将函数的帮助页中所示的差异。
+**Microsoftml**库分布在多个 Microsoft 产品中, 但不管你是在 SQL Server 还是在其他产品中获取库, 使用情况都是相同的。 由于函数是相同的, 因此[每个 microsoftml 函数的文档](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)仅发布到 Microsoft Machine Learning Server 的[Python 参考](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)中的一个位置。 如果存在任何特定于产品的行为, 则函数帮助页中将注明差异。
 
 ## <a name="versions-and-platforms"></a>版本和平台
 
-**Microsoftml**模块是基于 Python 3.5 和可用，仅在安装以下 Microsoft 产品或下载之一：
+**Microsoftml**模块基于 Python 3.5, 仅在安装以下 Microsoft 产品或下载之一时可用:
 
 + [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更高版本](https://docs.microsoft.com/machine-learning-server/)
-+ [数据科学客户端的 Python 客户端库](setup-python-client-tools-sql.md)
++ [用于数据科学客户端的 Python 客户端库](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> 完整的产品发布版本是 Windows 限、 从 SQL Server 2017 开始。 针对 Linux 支持**microsoftml**中的新[SQL Server 2019 预览版](../../linux/sql-server-linux-setup-machine-learning.md)。
+> 完整产品发布版本仅限 Windows, 从 SQL Server 2017 开始。 [SQL Server 2019 预览版](../../linux/sql-server-linux-setup-machine-learning.md)中新增了对**microsoftml**的 Linux 支持。
 
-## <a name="package-dependencies"></a>包的依赖项
+## <a name="package-dependencies"></a>包依赖关系
 
-中的算法**microsoftml**依赖于[revoscalepy](ref-py-revoscalepy.md)为：
+**Microsoftml**中的算法依赖于[revoscalepy](ref-py-revoscalepy.md) :
 
-+ 数据源对象。 通过使用数据**microsoftml**函数使用创建**revoscalepy**函数。
-+ 远程计算 （不断变化函数执行到远程 SQL Server 实例）。 **Revoscalepy**库提供了函数，创建并激活远程计算上下文的 SQL server。
++ 数据源对象。 **Microsoftml**函数使用的数据是使用**revoscalepy**函数创建的。
++ 远程计算 (将函数执行转移到远程 SQL Server 实例)。 **Revoscalepy**库提供了用于为 SQL server 创建和激活远程计算上下文的函数。
 
-在大多数情况下，您将加载的包一起每当你使用**microsoftml**。
+在大多数情况下, 只要使用**microsoftml**, 就会将包加载到一起。
 
 ## <a name="functions-by-category"></a>按类别列出的函数
 
-本节按类别，以便您了解如何使用每个列出的函数。 此外可以使用[目录](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)来按字母顺序查找函数。
+本部分列出了按类别列出的功能, 以帮助您了解每个函数的使用方式。 你还可以使用[目录](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)按字母顺序查找函数。
 
-## <a name="1-training-functions"></a>1-训练函数
+## <a name="1-training-functions"></a>1-定型函数
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | 训练模型的系综。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | 随机林。 |
-|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | 线性模型。 与随机双坐标上升。 |
-|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | 提升的树。 |
+|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | 线性模型。 with 随机双坐标升高。 |
+|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | 提升树。 |
 |[microsoftml.rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression) | 逻辑回归。 |
 |[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network) | 神经网络。 |
-|[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | 异常情况检测。 |
+|[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | 异常检测。 |
 
 <a name="ml-transforms"></a>
 
-## <a name="2-transform-functions"></a>2-转换函数
+## <a name="2-transform-functions"></a>2转换函数
 
-### <a name="categorical-variable-handling"></a>分类变量的处理
+### <a name="categorical-variable-handling"></a>分类变量处理
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | 将文本列转换为类别。 |
-|[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 哈希处理并将文本列转换为类别。 |
+|[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | 将文本列哈希和转换为类别。 |
 
 ### <a name="schema-manipulation"></a>架构操作
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
-|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 将多个列连接成单个向量。 |
+|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 将多个列串联为一个向量。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | 从数据集中删除列。 |
-|[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns) | 将保留数据集的列。 |
+|[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns) | 保留数据集的列。 |
 
 
 ### <a name="variable-selection"></a>变量选择
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
-|[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |基于计数的特征选择。 |
-|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 功能选择基于互信息。 |
+|[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |基于计数的功能选择。 |
+|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 基于相互信息的功能选择。 |
 
 
 ### <a name="text-analytics"></a>文本分析
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
-|[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 将文本列转换成数字特征。 |
+|[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 将文本列转换为数字特征。 |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 情绪分析。 |
 
 
-### <a name="image-analytics"></a>图像分析 
+### <a name="image-analytics"></a>映像分析 
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 加载图像。 |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 调整图像大小。 |
-|[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels) | 从图像中提取像素为单位。 |
-|[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 将图像转换为功能。 |
+|[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels) | 从图像中提取像素。 |
+|[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 将图像转换为特征。 |
 
 ### <a name="featurization-functions"></a>特征化函数
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | 数据源的数据转换 |
 
 <a name="ml-scoring"></a>
 
-## <a name="3-scoring-functions"></a>3 评分函数
+## <a name="3-scoring-functions"></a>3-计分函数
 
-| 函数 | 描述 |
+| Functions | 描述 |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | 使用 Microsoft 机器学习模型评分 |
 
 ## <a name="how-to-call-microsoftml"></a>如何调用 microsoftml
 
-中的函数**microsoftml**是可封装在存储过程的 Python 代码中调用。 大多数开发人员构建**microsoftml**解决方案本地，然后将完成的 Python 代码作为部署练习迁移到存储过程。
+**Microsoftml**中的函数可在存储过程中封装的 Python 代码中调用。 大多数开发人员在本地生成**microsoftml**解决方案, 然后将完成的 Python 代码迁移到存储过程以进行部署。
 
-**Microsoftml**默认情况下，但不同于安装 Python 包**revoscalepy**，它时不会加载默认情况下启动 Python 会话使用随 SQL Server 安装的 Python 可执行文件。
+默认情况下, 将安装 Python 的**microsoftml**包, 但与**revoscalepy**不同的是, 当你使用随 SQL Server 安装的 python 可执行文件启动 python 会话时, 默认情况下不会加载它。
 
-第一步中，导入**microsoftml**包，并导入**revoscalepy**您是否需要使用远程计算上下文或相关的连接或数据源对象。 然后，引用所需的各个函数。
+第一步是导入**microsoftml**包, 并导入**revoscalepy** (如果需要使用远程计算上下文或相关连接或数据源对象)。 然后, 引用所需的各个函数。
 
 ```python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
@@ -137,6 +137,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## <a name="see-also"></a>请参阅
 
 + [Python 教程](../tutorials/sql-server-python-tutorials.md)
-+ [教程：在 T-SQL 中嵌入 Python 代码](../tutorials/run-python-using-t-sql.md)
++ [教程：在 T-sql 中嵌入 Python 代码](../tutorials/run-python-using-t-sql.md)
 + [Python 参考 (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
 

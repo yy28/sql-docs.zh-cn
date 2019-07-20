@@ -1,7 +1,7 @@
 ---
 title: SQLSetDescRec 函数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetDescRec
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetDescRec
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a733c2b88954c9937e8a170b949535ffa118bad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b9940d55ca10292d6c90a241f47479a2178eff3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039732"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343056"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函数
-**符合性**  
- 版本引入了：ODBC 3.0 标准符合性：ISO 92  
+**度**  
+ 引入的版本:ODBC 3.0 标准符合性:ISO 92  
   
  **摘要**  
- **SQLSetDescRec**函数设置会影响的数据类型的多个描述符字段和缓冲区绑定到列或参数的数据。  
+ **SQLSetDescRec**函数将设置多个描述符字段, 这些字段会影响绑定到列或参数数据的数据类型和缓冲区。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,65 +53,65 @@ SQLRETURN SQLSetDescRec(
   
 ## <a name="arguments"></a>参数  
  *DescriptorHandle*  
- [输入]描述符句柄。 这不能 IRD 句柄。  
+ 送描述符句柄。 这不能是 IRD 句柄。  
   
  *RecNumber*  
- [输入]指示包含要设置的字段的描述符记录。 描述符记录编号介于 0，使用 0 表示的书签记录的记录号。 此参数必须等于或大于 0。 如果*RecNumber* SQL_DESC_COUNT，SQL_DESC_COUNTis 更改为的值的值大于*RecNumber*。  
+ 送指示包含要设置的字段的描述符记录。 描述符记录从0开始编号, 记录号0为书签记录。 此参数必须等于或大于0。 如果*RecNumber*大于 SQL_DESC_COUNT 的值, 则 SQL_DESC_COUNTis 将更改为*RecNumber*的值。  
   
  *类型*  
- [输入]要设置的 SQL_DESC_TYPE 字段为描述符记录值。  
+ 送要为描述符记录设置 SQL_DESC_TYPE 字段的值。  
   
  *SubType*  
- [输入]对于其类型为 SQL_DATETIME 或 SQL_INTERVAL 的记录，这是为其设置 SQL_DESC_DATETIME_INTERVAL_CODE 字段的值。  
+ 送对于类型为 "SQL_DATETIME" 或 "SQL_INTERVAL" 的记录, 这是要将 SQL_DESC_DATETIME_INTERVAL_CODE 字段设置为的值。  
   
  *长度*  
- [输入]要设置的描述符记录的 SQL_DESC_OCTET_LENGTH 字段值。  
+ 送要为描述符记录设置 SQL_DESC_OCTET_LENGTH 字段的值。  
   
  *精度*  
- [输入]要设置的描述符记录的 SQL_DESC_PRECISION 字段值。  
+ 送要为描述符记录设置 SQL_DESC_PRECISION 字段的值。  
   
  *小数位数*  
- [输入]要设置的描述符记录 SQL_DESC_SCALE 字段值。  
+ 送要为描述符记录设置 SQL_DESC_SCALE 字段的值。  
   
  *DataPtr*  
- [延迟的输入或输出]要设置的描述符记录的 SQL_DESC_DATA_PTR 字段值。 *DataPtr*可以设置为 null 指针。  
+ [延迟输入或输出]要为描述符记录设置 SQL_DESC_DATA_PTR 字段的值。 *DataPtr*可以设置为 null 指针。  
   
- *DataPtr*参数可以设置为 null 指针，以设置 SQL_DESC_DATA_PTR 字段为 null 指针。 如果在句柄*DescriptorHandle*参数与 ARD 相关联，这将解除绑定列。  
+ 可以将*DataPtr*参数设置为 null 指针, 以将 SQL_DESC_DATA_PTR 字段设置为 null 指针。 如果*DescriptorHandle*参数中的句柄与 ARD 相关联, 则会解除对列的绑定。  
   
  *StringLengthPtr*  
- [延迟的输入或输出]要设置的描述符记录的 SQL_DESC_OCTET_LENGTH_PTR 字段值。 *StringLengthPtr*可以设置为 null 指针，以将 SQL_DESC_OCTET_LENGTH_PTR 字段设置为 null 指针。  
+ [延迟输入或输出]要为描述符记录设置 SQL_DESC_OCTET_LENGTH_PTR 字段的值。 *StringLengthPtr*可以设置为 null 指针, 以将 SQL_DESC_OCTET_LENGTH_PTR 字段设置为 null 指针。  
   
  *IndicatorPtr*  
- [延迟的输入或输出]要设置的描述符记录 SQL_DESC_INDICATOR_PTR 字段值。 *IndicatorPtr*可以设置为 null 指针，以将 SQL_DESC_INDICATOR_PTR 字段设置为 null 指针。  
+ [延迟输入或输出]要为描述符记录设置 SQL_DESC_INDICATOR_PTR 字段的值。 *IndicatorPtr*可以设置为 null 指针, 以将 SQL_DESC_INDICATOR_PTR 字段设置为 null 指针。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLSetDescRec**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_DESC 和一个*处理*的*DescriptorHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLSetDescRec** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLSetDescRec**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过使用*SQLGetDiagRec 的 HandleType*和*SQL_HANDLE_DESC*的*句柄*调用**DescriptorHandle**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLSetDescRec**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
   
 |SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07009|描述符索引无效|*RecNumber*参数设置为 0，并且*DescriptorHandle*称为 IPD 句柄。<br /><br /> *RecNumber*参数为小于 0。<br /><br /> *RecNumber*参数为大于最大号的列或参数的数据源可以支持，并*DescriptorHandle*参数是 APD、 IPD，还是 ARD。<br /><br /> *RecNumber*参数为等于 0，并且*DescriptorHandle*隐式分配 APD 引用参数。 （此不会出现错误与显式分配应用程序描述符因为不知道是否已显式分配应用程序描述符是 APD 或直到 ARD 执行时间。）|  
-|08S01|通讯链接失败|该驱动程序和驱动程序已连接到数据源之间的通信链接失败之前函数已完成处理。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY010|函数序列错误|（数据挖掘） *DescriptorHandle*与关联*StatementHandle*其中 （而不此是） 的异步执行函数调用和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*与其*DescriptorHandle*已关联，并返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> (DM) 为与之关联的连接句柄调用以异步方式执行的函数*DescriptorHandle*。 此 aynchronous 函数仍在执行时**SQLSetDescRec**调用函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**一个与相关联的语句句柄调用*DescriptorHandle* ，并返回 SQL_PARAM_DATA_AVAILABLE。 数据已检索到的所有经过流处理参数之前调用此函数。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY016|无法修改实现行描述符|*DescriptorHandle*参数为与 IRD 相关联。|  
-|HY021|描述符信息不一致|*类型*字段中或与描述符中的 SQL_DESC_TYPE 字段相关联的任何其他字段不是有效或一致。<br /><br /> 一致性检查期间检查的描述符信息不是一致的。 （请参阅"一致性检查，"更高版本在本部分中）。|  
-|HY090|字符串或缓冲区长度无效|(DM) 驱动程序是一个 ODBC *2.x*驱动程序，该描述符是 ARD *ColumnNumber*参数设置为 0，并为该参数指定的值*BufferLength*是不等于 4。|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*DescriptorHandle*不支持该函数。|  
+|01000|一般警告|驱动程序特定的信息性消息。 (函数返回 SQL_SUCCESS_WITH_INFO。)|  
+|07009|描述符索引无效|*RecNumber*参数设置为 0, *DescriptorHandle*引用 IPD 句柄。<br /><br /> *RecNumber*参数小于0。<br /><br /> *RecNumber*参数大于数据源可以支持的列或参数的最大数目, 而*DESCRIPTORHANDLE*参数是 APD、IPD 或 ARD。<br /><br /> *RecNumber*参数等于 0, *DescriptorHandle*参数称为隐式分配的 APD。 (此错误不会在显式分配的应用程序描述符中出现, 因为它不知道显式分配的应用程序描述符是否是 APD 或 ARD 直到执行时间。)|  
+|08S01|通信链接失败|在函数完成处理之前, 驱动程序与连接到的数据源之间的通信链接失败。|  
+|HY000|一般错误|发生了一个错误, 该错误没有特定的 SQLSTATE, 没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中**的 SQLGetDiagRec**返回的错误消息描述了错误及其原因。  *\**|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY010|函数序列错误|(DM) *DescriptorHandle*与一个 StatementHandle 相关联, 该  的异步执行函数 (而不是此函数) 已被调用, 并在调用此函数时仍在执行。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**已与*StatementHandle*关联并返回 DescriptorHandle 的*SQL_NEED_DATA*调用。 在为所有执行时数据参数或列发送数据之前, 将调用此函数。<br /><br /> (DM) 为与*DescriptorHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLSetDescRec**函数时, 此 aynchronous 函数仍在执行。<br /><br /> 为与*DescriptorHandle*关联的其中一个语句句柄调用了 (DM) **SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** , 并返回 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。|  
+|HY013|内存管理错误|未能处理函数调用, 原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY016|无法修改实现行描述符|*DescriptorHandle*参数与 IRD 关联。|  
+|HY021|描述符信息不一致|*类型*字段或与说明符中的 SQL_DESC_TYPE 字段关联的任何其他字段无效或不一致。<br /><br /> 一致性检查过程中检查的描述符信息不一致。 (请参阅本部分后面的 "一致性检查"。)|  
+|HY090|字符串或缓冲区长度无效|(DM) 驱动程序是*一个 ODBC 2.x*驱动程序, 描述符为 ARD, *ColumnNumber*参数设置为 0, 为参数*BufferLength*指定的值不等于4。|  
+|HY117|由于未知的事务状态, 连接被挂起。 仅允许断开连接和只读函数。|(DM) 有关挂起状态的详细信息, 请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT 设置。|  
+|IM001|驱动程序不支持此功能|(DM) 与*DescriptorHandle*关联的驱动程序不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- 应用程序可以调用**SQLSetDescRec**设置单个列或参数的以下字段：  
+ 应用程序可以调用**SQLSetDescRec**来设置单个列或参数的以下字段:  
   
 -   SQL_DESC_TYPE  
   
--   SQL_DESC_DATETIME_INTERVAL_CODE （对于其类型为 SQL_DATETIME 或 SQL_INTERVAL 记录）  
+-   SQL_DESC_DATETIME_INTERVAL_CODE (适用于其类型为 SQL_DATETIME 或 SQL_INTERVAL 的记录)  
   
 -   SQL_DESC_OCTET_LENGTH  
   
@@ -125,39 +126,39 @@ SQLRETURN SQLSetDescRec(
 -   SQL_DESC_INDICATOR_PTR  
   
 > [!NOTE]  
->  如果调用**SQLSetDescRec**失败，标识的描述符记录的内容*RecNumber*自变量是不确定。  
+>  如果对**SQLSetDescRec**的调用失败, 则由*RecNumber*参数标识的说明符记录的内容是不确定的。  
   
- 绑定列或参数时**SQLSetDescRec**允许您更改会影响而无需调用绑定的多个字段**SQLBindCol**或**SQLBindParameter**或多个调用**SQLSetDescField**。 **SQLSetDescRec**可将字段设置上当前未与语句相关联的描述符。 请注意， **SQLBindParameter**设置字段数多于**SQLSetDescRec**，可将字段设置 APD 和 IPD 中一次调用，并且不需要描述符句柄。  
+ 绑定列或参数时, **SQLSetDescRec**允许更改影响绑定的多个字段, 而无需调用**SQLBindCol**或**SQLBindParameter** , 也无需多次调用**SQLSetDescField**。 **SQLSetDescRec**可以对当前不与语句关联的说明符设置字段。 请注意, **SQLBindParameter**设置了比**SQLSetDescRec**更多的字段, 可以在一个调用中设置 APD 和 IPD 上的字段, 并且不需要描述符句柄。  
   
 > [!NOTE]  
->  语句属性 SQL_ATTR_USE_BOOKMARKS 应始终设置，然后再调**SQLSetDescRec**与*RecNumber*自变量为 0，若要设置书签字段。 尽管这不是必需的强烈建议。  
+>  在调用**SQLSetDescRec**时, 应始终设置语句属性 SQL_ATTR_USE_BOOKMARKS, 并将*RecNumber*参数设置为 0, 以设置书签字段。 虽然这不是必需的, 但强烈建议这样做。  
   
 ## <a name="consistency-checks"></a>一致性检查  
- 一致性检查时，将执行由驱动程序会自动应用程序设置 SQL_DESC_DATA_PTR APD、 ARD 或 IPD 的字段。 如果任何字段是与其他字段不一致**SQLSetDescRec**将返回 SQLSTATE HY021 （描述符信息不一致）。  
+ 每当应用程序设置 APD、ARD 或 IPD 的 SQL_DESC_DATA_PTR 字段时, 驱动程序就会自动执行一致性检查。 如果任何字段与其他字段不一致, 则**SQLSetDescRec**将返回 SQLSTATE HY021 (描述符信息不一致)。  
   
- 只要应用程序设置 SQL_DESC_DATA_PTR APD、 ARD 或 IPD 的字段，该驱动程序检查 SQL_DESC_TYPE 字段的值与适用于该 SQL_DESC_TYPE 字段的值有效且一致。 此检查是始终执行时**SQLBindParameter**或**SQLBindCol**调用时，或者当**SQLSetDescRec** APD、 ARD，或 IPD 调用。 该一致性检查包括描述符字段上的以下检查：  
+ 每当应用程序设置 APD、ARD 或 IPD 的 SQL_DESC_DATA_PTR 字段时, 驱动程序都会检查 SQL_DESC_TYPE 字段的值以及适用于该 SQL_DESC_TYPE 字段的值是否有效且一致。 调用**SQLBindParameter**或**SQLBindCol**时, 或在为 APD、ARD 或 IPD 调用**SQLSetDescRec**时, 始终会执行此检查。 此一致性检查包括对描述符字段的以下检查:  
   
--   SQL_DESC_TYPE 字段必须是有效的 ODBC C SQL 类型或特定于驱动程序的 SQL 类型之一。 SQL_DESC_CONCISE_TYPE 字段必须是有效的 ODBC C 或 SQL 类型或特定于驱动程序 C 或 SQL 类型，包括简洁的日期时间和间隔类型之一。  
+-   SQL_DESC_TYPE 字段必须是有效的 ODBC C 或 SQL 类型之一或特定于驱动程序的 SQL 类型。 SQL_DESC_CONCISE_TYPE 字段必须是有效的 ODBC C 或 SQL 类型之一, 或者是特定于驱动程序的 C 或 SQL 类型, 包括简洁日期时间和间隔类型。  
   
--   如果 SQL_DESC_TYPE 记录字段为 SQL_DATETIME 或 SQL_INTERVAL，SQL_DESC_DATETIME_INTERVAL_CODE 字段必须是有效的日期时间或间隔代码之一。 (请参阅中的 SQL_DESC_DATETIME_INTERVAL_CODE 字段的说明[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
+-   如果 SQL_DESC_TYPE 记录字段为 SQL_DATETIME 或 SQL_INTERVAL, 则 SQL_DESC_DATETIME_INTERVAL_CODE 字段必须是有效的日期时间或间隔代码之一。 (请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)中的 SQL_DESC_DATETIME_INTERVAL_CODE 字段的说明。)  
   
--   如果 SQL_DESC_TYPE 字段指示数值类型，请验证 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段有效。  
+-   如果 SQL_DESC_TYPE 字段指示数值类型, 则会验证 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段是否有效。  
   
--   SQL_DESC_CONCISE_TYPE 字段是否是时间戳数据类型，间隔类型秒组成部分，或从一台使用针对时间部分的时间间隔数据类型验证 SQL_DESC_PRECISION 字段用作有效的秒精度。  
+-   如果 "SQL_DESC_CONCISE_TYPE" 字段是时间或时间戳数据类型、带有秒部分的间隔类型或带有时间部分的间隔数据类型之一, 则将验证 SQL_DESC_PRECISION 字段是否为有效的秒精度。  
   
--   如果 SQL_DESC_CONCISE_TYPE 为时间间隔数据类型，SQL_DESC_DATETIME_INTERVAL_PRECISION 字段被验证为有效的间隔前导精度值。  
+-   如果 SQL_DESC_CONCISE_TYPE 是 interval 数据类型, 则验证 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段是否为有效的间隔前导精度值。  
   
- 通常情况下未设置 SQL_DESC_DATA_PTR 字段 IPD 的;但是，应用程序可以这样做是为了强制执行一致性检查的 IPD 字段。 不能在 IRD 上执行一致性检查。 IPD 的 SQL_DESC_DATA_PTR 字段设置为的值实际上并不存储，无法通过调用检索**SQLGetDescField**或**SQLGetDescRec**; 进行设置仅用于强制一致性检查。  
+ 通常不会设置 IPD 的 SQL_DESC_DATA_PTR 字段;但是, 应用程序可以执行此操作来强制执行 IPD 字段的一致性检查。 不能对 IRD 执行一致性检查。 将 IPD 的 SQL_DESC_DATA_PTR 字段设置为的值实际上并不存储, 无法通过调用**SQLGetDescField**或**SQLGetDescRec**进行检索;设置仅用于强制执行一致性检查。  
   
 ## <a name="related-functions"></a>相关函数  
   
 |有关信息|请参阅|  
 |---------------------------|---------|  
-|列绑定|[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|一个参数绑定|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|绑定列|[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|绑定参数|[SQLBindParameter 函数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |获取单个描述符字段|[SQLGetDescField 函数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |获取多个描述符字段|[SQLGetDescRec 函数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|设置单一的描述符字段|[SQLSetDescField 函数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|设置单个描述符字段|[SQLSetDescField 函数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

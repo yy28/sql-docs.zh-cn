@@ -1,36 +1,36 @@
 ---
-title: SQL Server 机器学习服务 (R、 Python)-SQL Server 机器学习服务的概述
-description: SQL Server，可以与用于数据科学和统计的关系数据集成 Python 和 R 中的机器学习服务功能的概述建模、 机器学习模型，预测分析和数据可视化和的详细信息。
+title: SQL Server 机器学习服务 (R、Python) 概述
+description: SQL Server 中的机器学习服务功能的概述, 你可以在其中将 Python 和 R 与关系数据集成, 以便进行数据科学和统计建模、机器学习模型、预测分析、数据可视化等。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2d05c48f1492509fe05272560dd3cf332b424cb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2bea677d6b87d7baa78fed28be82252c52a74c9
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961678"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345815"
 ---
-# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server 机器学习服务 （R、 Python）
+# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server 机器学习服务 (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-机器学习服务是用于执行数据库内 R 和 Python 脚本的 SQL Server 的一项功能。 功能包括[Microsoft R 和 Python 包](#components)用于高性能预测分析和机器学习。 可以在通过存储过程，其中包含 R 和 Python 语句的 T-SQL 脚本的 R 和 Python 脚本中使用关系数据或 R 和 Python 代码包含的 T-SQL。
+机器学习服务是 SQL Server 的一项功能, 用于执行数据库中 R 和 Python 脚本。 此功能包括用于高性能预测分析和机器学习的[Microsoft R 和 Python 包](#components)。 关系数据可以在 R 和 Python 脚本中通过包含 R 和 Python 语句的存储过程、T-sql 脚本或包含 T-sql 的 R 和 Python 代码来使用。
 
-如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)，机器学习服务中 SQL Server 2017 及更高版本是 R 支持下, 一代的基本 R、 RevoScaleR、 MicrosoftML，更新版本中引入的其他库2016。
+如果以前使用[SQL Server 2016 R 服务](r/sql-server-r-services.md), SQL Server 2017 和更高版本中的机器学习服务是下一代 r 支持, 其中包含以2016提供的基本 r、RevoScaleR、MicrosoftML 和其他库的更新版本。
 
 在 Azure SQL 数据库中，[机器学习服务（使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前处于公共预览状态。
 
-## <a name="bring-compute-power-to-the-data"></a>引入数据的计算能力
+## <a name="bring-compute-power-to-the-data"></a>将计算能力引入数据
 
-机器学习服务的关键价值主张是其企业R和Python软件包的强大功能，可以大规模提供高级分析，并能够将计算和处理带到数据所在的位置，从而消除了在网络上提取数据的需求。 这提供了多个优点：
+机器学习服务的关键价值主张是其企业R和Python软件包的强大功能，可以大规模提供高级分析，并能够将计算和处理带到数据所在的位置，从而消除了在网络上提取数据的需求。 这有多个优点:
 
-+ 数据安全性。 将 R 和 Python 与数据源执行更接近避免了浪费性的或不安全的数据移动。
-+ 速度。 数据库针对基于集的操作进行了优化。 如内存中表的数据库的最新创新请摘要和聚合既，和是对数据科学的完美补充。
-+ 易于部署和集成。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是用于许多其他数据管理任务和应用程序的操作的中心点。 通过使用驻留在数据库或报告仓库中的数据，可以确保使用机器学习解决方案的数据是一致且最新。 
-+ 跨云和本地的效率。 而不是处理 R 或 Python 的会话中的数据，您可以依赖于企业数据管道，其中包括[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]和 Azure 数据工厂。 可以通过 Power BI 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 轻松执行结果报告或分析。
++ 数据安全性。 使 R 和 Python 的执行更接近数据源可避免浪费或不安全的数据移动。
++ 速度。 数据库针对基于集的操作进行了优化。 数据库中的最新创新 (如内存中表) 使汇总和聚合成为闪电, 是数据科学的完美补充。
++ 易于部署和集成。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]是对许多其他数据管理任务和应用程序执行的中心操作。 通过使用数据库或报表仓库中的数据, 您可以确保机器学习解决方案使用的数据是一致的, 并且是最新的。 
++ 跨云和本地的效率。 可以依靠企业数据管道 (包括[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]和 Azure 数据工厂), 而不是在 R 或 Python 会话中处理数据。 可以通过 Power BI 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 轻松执行结果报告或分析。
 
 通过恰当地组合 SQL 和 R 来执行不同的数据处理和分析任务，数据科学家和开发人员变得更加高效。
 
@@ -43,7 +43,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 | 组件 | Description |
 |-----------|-------------|
 | SQL Server Launchpad服务 | 管理外部R和Python运行时与数据库引擎实例之间通信的服务。 |
-| R 包 | [**RevoScaleR**](r/ref-r-revoscaler.md)是主库的此库中的可缩放。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。 此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md)添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。 <br/>[**sqlRUtils**](r/ref-r-sqlrutils.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR** ](r/ref-r-olapr.md)是用于构建还是在 R 脚本中执行 MDX 查询。|
+| R 包 | [**RevoScaleR**](r/ref-r-revoscaler.md)是主库的此库中的可缩放。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。 此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md)添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。 <br/>[**sqlRUtils**](r/ref-r-sqlrutils.md)提供了帮助函数，用于将R脚本放入T-SQL存储过程，向数据库注册存储过程，以及从R开发环境运行存储过程。<br/>[**olapR**](r/ref-r-olapr.md)用于在 R 脚本中生成或执行 MDX 查询。|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版。其中包括包和解释器。 请始终使用安装程序安装的 MRO 版本。 |
 | R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。  |
 | R 示例和脚本 |  开源 R 和 RevoScaleR 包中包含内置数据集，以便你可以使用预安装的数据创建和运行脚本。 |
@@ -51,7 +51,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 | Python 工具 | 内置的 Python 命令行工具，可用于临时测试和多种任务。  |
 | Anaconda | Anaconda 是 Python 和必备包的开源分发版。 |
 | Python 示例和脚本 | 与  R一样，Python 包含内置的数据集和脚本。  |
-| R 和 Python 中预先训练的模型 | 预先训练的模型针对特定用例创建，并由 Microsoft 的数据科学工程团队维护。 可以按原样使用预先训练的模型对文本中的积极/消极情绪进行评分，或者使用你提供的新数据输入检测图像中的特征。 这些模型在机器学习服务中运行，但不能通过 SQL Server 安装程序安装。 有关详细信息，请参阅[在 SQL Server 上安装预先训练的机器学习模型](install/sql-pretrained-models-install.md)。 |
+| R 和 Python 中的预先训练的模型 | 预先训练的模型针对特定用例创建，并由 Microsoft 的数据科学工程团队维护。 可以按原样使用预先训练的模型对文本中的积极/消极情绪进行评分，或者使用你提供的新数据输入检测图像中的特征。 这些模型在机器学习服务中运行，但不能通过 SQL Server 安装程序安装。 有关详细信息，请参阅[在 SQL Server 上安装预先训练的机器学习模型](install/sql-pretrained-models-install.md)。 |
 
 ## <a name="using-sql-mls"></a>使用 SQL MLS
 
@@ -61,7 +61,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 数据库内分析最常用的方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，将R或Python脚本作为输入参数传递。
 
-经典的客户端-服务器交互是另一种方法。 从任何客户端工作站上具有一个 IDE，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写将推送执行的代码 (称为*远程计算上下文*) 对数据和到远程 SQL Server 的操作。 
+经典的客户端-服务器交互是另一种方法。 在具有 IDE 的任何客户端工作站上, 你可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), 然后编写将执行 (称为*远程计算上下文*) 的代码推送到远程 SQL Server 的数据和操作。 
 
 最后，如果您使用的是[独立服务器](r/r-server-standalone.md)和Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在SQL Server机器学习服务（数据库中）上部署生产代码。 
 
@@ -69,7 +69,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ### <a name="step-1-install-the-software"></a>步骤 1：安装软件
 
-+ [SQL Server 机器学习服务 （数据库内）](install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 机器学习服务 (数据库内)](install/sql-machine-learning-services-windows-install.md)
  
 ### <a name="step-2-configure-a-development-tool"></a>步骤 2：配置开发工具
 
@@ -77,24 +77,24 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
-+ **使用喜欢的 IDE**。 你可以链接到所选的开发工具的 R 和 Python 库。 有关详细信息，请参阅[设置的 R 工具](r/set-up-a-data-science-client.md)并[设置 Python 工具](python/setup-python-client-tools-sql.md)。  
++ **使用你喜欢的 IDE**。 可以将 R 和 Python 库链接到所选的开发工具。 有关详细信息, 请参阅[设置 R 工具](r/set-up-a-data-science-client.md)和[设置 Python 工具](python/setup-python-client-tools-sql.md)。  
 
-+ **处理远程或本地**。 数据科研人员可以像平时一样连接到 SQL Server，然后将数据取回到客户端进行本地分析。 但是，更好的解决方案是使用**RevoScaleR**或**revoscalepy** Api 将计算推送到 SQL Server 计算机，避免成本高昂且不安全的数据移动。
++ **远程或本地工作**。 数据科研人员可以像平时一样连接到 SQL Server，然后将数据取回到客户端进行本地分析。 但是, 更好的解决方案是使用**RevoScaleR**或**revoscalepy** api 将计算推送到 SQL Server 计算机, 以避免成本高昂且不安全的数据移动。
 
-+ **在 SQL Server 存储过程中嵌入 R 或 Python 脚本**。 代码充分优化后，将其封装在一个存储过程中，以避免不必要的数据移动和优化数据处理任务。
++ **SQL Server 存储过程中嵌入 R 或 Python 脚本**。 代码充分优化后，将其封装在一个存储过程中，以避免不必要的数据移动和优化数据处理任务。
 
-### <a name="step-3-write-your-first-script"></a>步骤 3：编写第一个脚本
+### <a name="step-3-write-your-first-script"></a>步骤 3：编写您的第一个脚本
 
 从 T-SQL 脚本中调用 R 或 Python 函数：
 
-+ [:了解使用 R 的数据库内分析](tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [:使用 R 的端到端演练](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-+ [Python:使用 T-SQL 运行的 Python](tutorials/run-python-using-t-sql.md)
-+ [Python:了解数据库内分析使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [迅驰使用 R 了解数据库内分析](tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [迅驰带有 R 的端到端演练](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [Python使用 T-sql 运行 Python](tutorials/run-python-using-t-sql.md)
++ [Python使用 Python 了解数据库内分析](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 选择最适合任务的语言。 R 最适合使用 SQL 难以实现的统计计算。 对于基于集合的数据操作，可以利用 SQL Server 的强大功能来实现性能最大化。 对列进行快速计算时，可使用内存数据库引擎。
 
-### <a name="step-4-optimize-your-solution"></a>步骤 4：优化你的解决方案
+### <a name="step-4-optimize-your-solution"></a>步骤 4：优化解决方案
 
 当模型可基于企业数据进行扩展时，数据科学家往往会与 DBA 或 SQL 开发人员合作以优化以下流程：
 
@@ -104,11 +104,11 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 传统上，使用 R 的数据科学家会遇到性能和规模方面的问题，使用大型数据集时尤其如此。 这是因为公共运行时实现是单线程的，并且只能容纳适合本地计算机上可用内存的那些数据集。 与 SQL Server 机器学习服务集成可提供多种功能，有助于提升性能，同时还可提供更多数据：
 
-+ **RevoScaleR**:此 R 包包含部分最常用 R 函数，可提供并行度与伸缩性重新设计的实现实现。 此包还包括一些功能，可通过将计算推送到 SQL Server 计算机来进一步提高性能和扩展性，这些计算机通常具有更大内存和更强的计算能力。
++ **RevoScaleR**:此 R 包包含一些最常用 R 函数的实现, 经过重新设计后可提供并行度和缩放。 此包还包括一些功能，可通过将计算推送到 SQL Server 计算机来进一步提高性能和扩展性，这些计算机通常具有更大内存和更强的计算能力。
 
 + **revoscalepy**。 该 Python 库实现了 RevoScaleR 中最常用的函数（例如远程计算上下文）以及许多支持分布式处理的算法。
 
-有关性能的详细信息，请参阅此[性能案例研究](r/performance-case-study-r-services.md)并[R 和数据优化](r/r-and-data-optimization-r-services.md)。
+有关性能的详细信息, 请参阅此[性能案例研究](r/performance-case-study-r-services.md)和[R 和数据优化](r/r-and-data-optimization-r-services.md)。
 
 ### <a name="step-5-deploy-and-consume"></a>步骤 5：部署和使用
 
@@ -126,7 +126,7 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 + 设置安全性并锁定特定任务使用的包
 + 启用资源管理（需要企业版）
 
-有关详细信息，请参阅[R 的资源调控](r/resource-governance-for-r-services.md)并[SQL Server 的 R 包管理](r/install-additional-r-packages-on-sql-server.md)。
+有关详细信息, 请参阅适用于 R 和[r 包管理的](r/install-additional-r-packages-on-sql-server.md)[资源调控](r/resource-governance-for-r-services.md)SQL Server。
 
 ## <a name="version-history"></a>版本历史记录
 
@@ -134,10 +134,10 @@ SQL Server 2017 机器学习服务是 SQL Server 2016 R 服务的下一代，增
 
 | 产品名称 | 引擎版本 | 发布日期 |
 |--------------|---------|--------------|
-| SQL Server 2017 机器学习服务 （数据库内） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2017 机器学习服务器 （独立版） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2016 R Services （数据库内） | R Server 9.1  | 2017 年 7 月  |
-| SQL Server 2016 R Server （独立版）  |  R Server 9.1 | 2017 年 7 月 |
+| SQL Server 2017 机器学习服务 (数据库内) | R Server 9.2。1 <br/> Python Server 9.2 | 2017 年 10 月 |
+| SQL Server 2017 Machine Learning Server (独立版) | R Server 9.2。1 <br/> Python Server 9.2 | 2017 年 10 月 |
+| SQL Server 2016 R Services (数据库内) | R Server 9。1  | 2017年7月  |
+| SQL Server 2016 R Server (独立版)  |  R Server 9。1 | 2017年7月 |
 
 有关按发布排列的包版本，请参阅[升级 R 和 Python 组件](install/upgrade-r-and-python.md#version-map)中的版本地图。
 

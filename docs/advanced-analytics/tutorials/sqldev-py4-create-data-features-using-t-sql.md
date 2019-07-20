@@ -1,25 +1,25 @@
 ---
-title: 使用 T-SQL 函数和 Python-SQL Server 机器学习创建数据功能
-description: 本教程演示如何将计算添加到在 Python 机器学习模型中使用的存储过程。
+title: 使用 T-sql 函数和 Python 创建数据功能
+description: 本教程介绍如何将计算添加到存储过程中, 以便在 Python 机器学习模型中使用。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7c17af9ab7302e2856130be58759b56430e1341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961871"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345916"
 ---
-# <a name="create-data-features-using-t-sql"></a>使用 T-SQL 创建数据功能
+# <a name="create-data-features-using-t-sql"></a>使用 T-sql 创建数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-数据探索后已收集的数据中，一些见解，现在即可转到*特征工程*。 从原始数据创建功能的此过程可能是高级分析建模中的一个关键步骤。
+数据浏览后, 您从数据收集了一些见解, 并已准备好继续研究*功能工程*。 从原始数据创建功能的这一过程可能是高级分析建模中的一个关键步骤。
 
-本文是教程的一部分[SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
+本文是[针对 SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)教程的一部分。 
 
 本步骤中将学习如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数通过原始数据创建功能。 然后从存储过程调用该函数，创建包含该功能值的表。
 
@@ -29,7 +29,7 @@ ms.locfileid: "67961871"
 
 使用一个自定义 T-SQL 函数 _fnCalculateDistance_通过半正矢公式计算距离，并使用另一个自定义 T-SQL 函数 _fnEngineerFeatures_创建包含所有功能的表。
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>计算行程距离使用 fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>使用 fnCalculateDistance 计算行程距离
 
 1.  应已下载 _fnCalculateDistance_ 函数，并作为本演练准备工作的一部分向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册。 花点时间查看代码。
   
@@ -66,7 +66,7 @@ ms.locfileid: "67961871"
 
 要将计算所得值添加到可用于定型模型的表，需使用另一个函数 _fnEngineerFeatures_。
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>保存使用的功能_fnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>使用_fnEngineerFeatures_保存功能
 
 1.  花时间检查自定义 T-SQL 函数 _fnEngineerFeatures_的代码，该函数应已作为本演练准备工作的一部分进行了创建。
   
@@ -106,13 +106,13 @@ ms.locfileid: "67961871"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    可见，仪表报告的距离并不始终对应于地理距离。 这就是原因特征工程很重要。
+    可见，仪表报告的距离并不始终对应于地理距离。 这就是功能工程至关重要的原因。
 
-在下一步中，您将了解如何使用这些数据功能来创建并定型机器学习模型，使用 Python。
+在下一步中, 你将了解如何使用这些数据功能通过 Python 创建和训练机器学习模型。
 
 ## <a name="next-step"></a>下一步
 
-[训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[使用 T-sql 定型和保存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>上一步
 

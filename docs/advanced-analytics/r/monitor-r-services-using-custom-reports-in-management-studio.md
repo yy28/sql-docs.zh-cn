@@ -1,32 +1,32 @@
 ---
-title: 在 Management Studio 的 SQL Server 机器学习服务中使用自定义报表监视 R Services
+title: 使用 Management Studio 中的自定义报表监视 R Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 71a8e0adf814128e78651b43ad14a43fc231f87c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8768532e3891183d82cbb2273ded8dcc378b1fc
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962589"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345304"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>使用 Management Studio 中的自定义报表监视机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-若要使其更轻松地管理用于机器学习的实例，产品团队已提供大量示例自定义报表，您可以将其添加到 SQL Server Management Studio。 在这些报表中，您可以如查看详细信息：
+为了更轻松地管理用于机器学习的实例, 产品团队提供了许多可添加到 SQL Server Management Studio 的示例自定义报表。 在这些报表中, 可以查看详细信息, 例如:
 
-- 活动的 R 或 Python 的会话
+- 活动 R 或 Python 会话
 - 实例的配置设置
 - 机器学习作业的执行统计信息
-- R Services 的扩展的事件
+- R Services 的扩展事件
 - 当前实例上安装的 R 或 Python 包
 
-本文介绍如何安装和使用专门为机 leaerning 提供的自定义报表。 
+本文介绍如何安装和使用专门为计算机 leaerning 提供的自定义报表。 
 
-Management Studio 中报表的常规介绍，请参阅[Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)。
+有关 Management Studio 中的报表的常规介绍, 请参阅[Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)。
 
 ## <a name="how-to-install-the-reports"></a>如何安装报表
 
@@ -41,12 +41,12 @@ Management Studio 中报表的常规介绍，请参阅[Management Studio 中的�
 
 ### <a name="step-1-download-the-reports"></a>步骤 1. 下载报表
 
-1. 打开包含的 GitHub 存储库[SQL Server 产品示例](https://github.com/Microsoft/sql-server-samples)，并下载示例报表。 
+1. 打开包含[SQL Server 产品示例](https://github.com/Microsoft/sql-server-samples)的 GitHub 存储库, 并下载示例报表。 
 
-    + [SSMS 自定义报表](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
+    + [SSMS 自定义报告](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
 
     > [!NOTE]
-    > 这些报告可用于与 SQL Server 2017 Machiine 学习服务或 SQL Server 2016 R Services。
+    > 报表可与 SQL Server 2017 Machiine Learning Services 一起使用, 也可与 SQL Server 2016 R Services 一起使用。
 
 2. 若要下载示例，还可登录到 GitHub 并设置示例的本地分叉。 
 
@@ -73,39 +73,39 @@ Management Studio 中报表的常规介绍，请参阅[Management Studio 中的�
 
 ## <a name="report-list"></a>报表列表
 
-在 GitHub 中的产品示例存储库目前包括以下报表：
+GitHub 中的产品示例存储库当前包含以下报表:
 
 + **R Services - 活动会话**
 
-  使用此报表以查看当前连接到 SQL Server 实例和正在运行的机器学习作业的用户。 
+  使用此报表来查看当前连接到 SQL Server 实例并运行机器学习作业的用户。 
   
 + **R Services - 配置**
 
-  使用此报表以查看外部脚本运行时和相关的服务的配置。 报表将指示是否需要重启，并检查所需的网络协议。 
+  使用此报表查看外部脚本运行时和相关服务的配置。 报表将指示是否需要重启，并检查所需的网络协议。 
   
-  在 SQL Server 作为计算上下文中运行的机器学习任务需要隐式身份验证。 若要验证该隐式身份验证配置，报表将验证数据库登录名是否存在面向组 SQLRUserGroup。
+  在 SQL Server 中运行的机器学习任务需要使用默示身份验证作为计算上下文。 若要验证是否已配置隐含身份验证, 该报告将验证是否存在组 SQLRUserGroup 的数据库登录名。
 
  + **R Services - 配置实例** 
 
-   此报表旨在帮助你配置机器学习。 此外可以运行此报表以修复上述报表中找到的配置错误。
+   此报告旨在帮助你配置机器学习。 您还可以运行此报表来修复前面报表中发现的配置错误。
  
 + **R Services - 执行统计信息**
 
-  使用此报表以查看机器学习作业的执行统计信息。 例如，可获取执行的 R 脚本总数、并行执行数，以及最常用的 RevoScaleR 函数。 单击**查看 SQL 脚本**若要获取完整的 T-SQL 代码隐藏此报表。
+  使用此报表查看机器学习作业的执行统计信息。 例如，可获取执行的 R 脚本总数、并行执行数，以及最常用的 RevoScaleR 函数。 单击 "**查看 SQL 脚本**" 以获取此报表后面的完整 t-sql 代码。
 
   目前，报表仅监视 RevoScaleR 包函数的统计信息。
 
 + **R Services - 扩展事件**
 
-  使用此报表以查看可用于监视与外部脚本运行时相关的任务的扩展事件列表。 单击**查看 SQL 脚本**若要获取完整的 T-SQL 代码隐藏此报表。
+  使用此报表可以查看可用于监视与外部脚本运行时相关的任务的扩展事件的列表。 单击 "**查看 SQL 脚本**" 以获取此报表后面的完整 t-sql 代码。
 
 + **R Services - 包**
 
-  此报告用于查看 SQL Server 实例上安装的 R 或 Python 包的列表。
+  使用此报表查看 SQL Server 实例上安装的 R 或 Python 包的列表。
 
 + **R Services - 资源使用情况**
 
-  使用此报表来查看外部脚本执行的 CPU、 内存和 I/O 资源消耗。 还可查看外部资源池的内存设置。
+  使用此报告可以通过外部脚本执行来查看 CPU、内存和 i/o 资源的消耗情况。 还可查看外部资源池的内存设置。
 
 ## <a name="see-also"></a>请参阅
 

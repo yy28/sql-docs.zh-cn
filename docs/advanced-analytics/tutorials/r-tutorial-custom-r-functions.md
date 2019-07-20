@@ -1,43 +1,43 @@
 ---
-title: 使用 RevoScaleR rxExec 的 SQL Server 机器学习的 SQL Server 上运行自定义 R 函数
-description: 有关如何使用 RevoScaleR 函数的 SQL Server 上运行自定义 R 脚本的教程演练。
+title: 使用 RevoScaleR rxExec 在 SQL Server 上运行自定义 R 函数
+description: 有关如何使用 RevoScaleR 函数在 SQL Server 上运行自定义 R 脚本的教程演练。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961957"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345984"
 ---
-# <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 的 SQL Server 上运行自定义 R 函数
+# <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 在 SQL Server 上运行自定义 R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-可以通过传递通过函数的 SQL Server 的上下文中运行自定义 R 函数[rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)，假设您的脚本需要的所有库还会在服务器上都安装和这些库与基兼容分发的。 
+你可以通过[rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)传递函数在 SQL Server 上下文中运行自定义 R 函数, 假设你的脚本所需的所有库也安装在服务器上, 而这些库与 R 的基本分发兼容。 
 
-**RxExec**函数，在**RevoScaleR**提供了用于运行所需的任何 R 脚本的机制。 此外， **rxExec**能够工作显式分布在一台服务器，将缩放添加到否则仅限于本机 R 引擎的资源约束的脚本中的多个内核。
+**RevoScaleR**中的**rxExec**函数提供了一种机制, 用于运行所需的任何 R 脚本。 此外, **rxExec**可以在单个服务器中的多个内核之间显式分发工作, 将 "扩展" 添加到仅限于本机 R 引擎的资源约束的脚本。
 
-在本教程中，您将使用模拟的数据来演示在远程服务器运行的自定义 R 函数的执行。
+在本教程中, 你将使用模拟数据来演示在远程服务器上运行的自定义 R 函数的执行。
 
 ## <a name="prerequisites"></a>先决条件
 
-+ [（使用 R) SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)
++ [SQL Server 2017 机器学习服务 (带 R)](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services (数据库内)](../install/sql-r-services-windows-install.md)
   
-+ [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录名
++ [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录
 
-+ [通过 RevoScaleR 库的开发工作站](../r/set-up-a-data-science-client.md)
++ [具有 RevoScaleR 库的开发工作站](../r/set-up-a-data-science-client.md)
 
-客户端工作站上的 R 分布提供了内置**Rgui**工具，可以使用在本教程中运行 R 脚本。 用于 Visual Studio 中，还可以使用 RStudio 或 R 工具等 IDE。
+客户端工作站上的 R 分发版提供内置的**rgui.exe**工具, 可用于在本教程中运行 R 脚本。 还可以使用 IDE, 例如 RStudio 或针对 Visual Studio 的 R 工具。
 
 ## <a name="create-the-remote-compute-context"></a>创建远程计算上下文
 
-客户端工作站上运行下面的 R 命令。 例如，使用**Rgui**，从此位置开始：C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
+在客户端工作站上运行以下 R 命令。 例如, 你使用的是**rgui.exe**, 请从以下位置启动它:C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
 
-1. 指定在其中执行计算的 SQL Server 实例的连接字符串。 服务器必须配置为 R 集成。 在此练习中，不使用的数据库名称，但连接字符串需要一个。 如果有测试或示例数据库，可以使用的。
+1. 为执行计算的 SQL Server 实例指定连接字符串。 服务器必须配置为 R 集成。 此练习中不使用数据库名称, 但连接字符串需要一个名称。 如果有测试或示例数据库, 则可以使用该数据库。
 
     **使用 SQL 登录名**
 
@@ -51,13 +51,13 @@ ms.locfileid: "67961957"
     sqlConnString <- "Driver=SQL Server;Server=<SQL-Server-instance-name>;Database=<database-name>;Trusted_Connection=True"
     ```
 
-2. 创建到 SQL Server 实例的连接字符串中引用的远程计算上下文。
+2. 为连接字符串中引用的 SQL Server 实例创建远程计算上下文。
 
     ```R
     sqlCompute <- RxInSqlServer(connectionString = sqlConnString)
     ```
 
-3. 激活计算上下文，并返回一个确认步骤形式的对象定义。 应看到计算上下文对象的属性。
+3. 激活计算上下文, 然后将对象定义返回为确认步骤。 应会看到计算上下文对象的属性。
 
     ```R
     rxSetComputeContext(sqlCompute)
@@ -66,11 +66,11 @@ ms.locfileid: "67961957"
 
 ## <a name="create-the-custom-function"></a>创建自定义函数
 
-在此练习中，将创建一个模拟常见的赌场组成枚骰子的自定义 R 函数。 游戏的规则确定了 win 或丢失的结果：
+在此练习中, 您将创建一个自定义 R 函数, 该函数模拟包含一对骰子的常见 casino。 游戏规则确定赢或丢失结果:
 
-+ 次掷 7 或 11，您就赢。
-+ 回滚 2，3，或 12，则会丢失。
-+ 4、 5、 6、 8、 9、 或 10，则该点数成为你的点，并且继续掷，直至你可以部署点再次 (win 这种情况下) 或播广告 7，在这种情况下您会丢失。
++ 在初始滚动时滚动7或11。
++ 滚动2、3或12将丢失。
++ 滚动4、5、6、8、9或 10, 则该数字将成为你的点, 并继续滚动, 直到再次滚动你的点 (在这种情况下, 你会获胜) 或滚动 7 (在这种情况下, 你会丢失)。
 
 通过创建自定义函数，然后多次运行该函数便可轻松在 R 中模拟此游戏。
 
@@ -102,7 +102,7 @@ ms.locfileid: "67961957"
     }
     ```
   
-2.  通过运行该函数可模拟单个掷骰子游戏。
+2.  通过运行函数模拟单条骰子游戏。
   
     ```R
     rollDice()
@@ -110,13 +110,13 @@ ms.locfileid: "67961957"
   
     你是胜了还是败了？
   
-现在，已有的操作的脚本，让我们了解如何使用**rxExec**运行函数多次创建有助于确定获胜概率的模拟。
+现在, 你已创建了一个操作脚本, 接下来让我们了解如何使用**rxExec**多次运行该函数, 以创建可帮助确定赢率的模拟。
 
-## <a name="pass-rolldice-in-rxexec"></a>传入 rxExec rollDice()
+## <a name="pass-rolldice-in-rxexec"></a>在 rxExec 中传递 rollDice ()
 
-若要在远程 SQL 服务器的上下文中运行任意函数，调用**rxExec**函数。
+若要在远程 SQL Server 的上下文中运行任意函数, 请调用**rxExec**函数。
 
-1. 自定义函数作为参数调用**rxExec**一起修改模拟其他参数。
+1. 调用自定义函数作为**rxExec**的参数, 以及修改模拟的其他参数。
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -127,7 +127,7 @@ ms.locfileid: "67961957"
   
     + 可使用 RNGseed  和 RNGkind  参数控制随机数的生成。 将 RNGseed  设置为“自动”  时，会在每个辅助角色上初始化并行随机数流。
   
-2. rxExec  函数会创建一个列表，其中一次运行一个元素；但是，在列表完成前，不会看到太多操作执行。 当所有迭代都都完成时，使用开头的行**长度**将返回一个值。
+2. rxExec  函数会创建一个列表，其中一次运行一个元素；但是，在列表完成前，不会看到太多操作执行。 所有迭代完成后, 以**length**开头的行将返回一个值。
   
     然后可以转到下一步，获得输赢记录的汇总。
   
@@ -139,18 +139,18 @@ ms.locfileid: "67961957"
   
     结果应如下所示：
   
-     *败胜* *12 8*
+     *成功丢失* *12 8*
 
 ## <a name="conclusion"></a>结束语
 
-尽管此练习是过于简单，但它演示了一种重要机制集成在 SQL Server 上运行的 R 脚本中的任意 R 函数。 若要汇总的关键点，以便此方法：
+虽然这种做法很简单, 但它演示了在 SQL Server 上运行的 R 脚本中集成任意 R 函数的重要机制。 总结实现此方法的关键点:
 
-+ 必须针对机器学习和 R 集成配置 SQL Server:[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)与 R 功能或[SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)。
++ 必须为机器学习和 R 集成配置 SQL Server:[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)r 功能, 或[SQL Server 2016 R Services (数据库内)](../install/sql-r-services-windows-install.md)。
 
-+ SQL Server 上必须安装在函数中，包括任何依赖项，使用的开放源代码或第三方库。 有关更多信息，请参阅[安装新 R 包](../r/install-additional-r-packages-on-sql-server.md)。
++ 函数中使用的开源或第三方库 (包括任何依赖项) 必须安装在 SQL Server 上。 有关更多信息，请参阅[安装新 R 包](../r/install-additional-r-packages-on-sql-server.md)。
 
-+ 将脚本从开发环境移到强化的生产环境可能会引入防火墙和网络限制。 仔细测试以确保您的脚本是能够按预期方式执行。
++ 将脚本从开发环境转移到强化的生产环境可能会导致防火墙和网络限制。 请仔细测试, 确保脚本能够按预期执行。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关使用的更复杂示例**rxExec**，请参阅以下文章：[使用 foreach 和 rxExec 粗粒度并行度](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+有关使用**rxExec**的更复杂示例, 请参阅以下文章:[通过 foreach 和 rxExec 进行粗粒度并行](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)

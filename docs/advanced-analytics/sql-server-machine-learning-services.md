@@ -1,5 +1,5 @@
 ---
-title: R 和 Python 机器学习文档-SQL Server 机器学习服务
+title: R 和 Python 机器学习文档
 description: R 和 Python 位于 SQL Server 中，使用内置的数据科学建模和机器学习算法进行大规模的企业数据分析。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8eb391ac4b64c93de255214d748c77f44dccb1b3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962307"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344737"
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server 机器学习服务 （R 和 Python） 文档
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server 机器学习服务 (R 和 Python) 文档
 
-了解如何通过我们的快速入门、教程和操作方法文章，在常驻的关系数据上使用 R 和 Python 外部库和语言。 中的 R 和 Python 库[SQL Server 机器学习服务](what-is-sql-server-machine-learning.md)包括基本分布、 数据科学模型、 机器学习算法和函数且不会执行大规模的高性能分析在网络上传输数据。
+了解如何通过我们的快速入门、教程和操作方法文章，在常驻的关系数据上使用 R 和 Python 外部库和语言。 SQL Server 中的 R 和 Python 库[机器学习服务](what-is-sql-server-machine-learning.md)包括基本分发、数据科学模型、机器学习算法, 以及用于大规模执行高性能分析的功能, 而无需跨网桥.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> 有关 Java 的文档，请参阅[SQL Server 语言扩展文档](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
+> 有关 Java 的文档, 请参阅[SQL Server 语言扩展文档](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 ::: moniker-end
 
 |   |   |
@@ -41,7 +41,7 @@ ms.locfileid: "67962307"
 
 ## <a name="step-by-step-tutorials"></a>分步教程
 
-- [如何安装到 SQL Server 机器学习服务](install/sql-machine-learning-services-windows-install.md)
+- [如何将机器学习服务安装到 SQL Server](install/sql-machine-learning-services-windows-install.md)
 
 - [如何从 T-SQL 和存储过程执行 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
 

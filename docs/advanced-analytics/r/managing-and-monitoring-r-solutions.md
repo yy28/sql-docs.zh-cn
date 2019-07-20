@@ -1,70 +1,70 @@
 ---
-title: 管理和集成机器学习工作负荷的 SQL Server 机器学习服务
-description: 为 SQL Server DBA，查看用于部署机器学习 R 和 Python 的子系统，数据库引擎实例上的管理任务。
+title: 管理和集成机器学习工作负荷
+description: 作为 SQL Server DBA, 请查看用于在数据库引擎实例上部署机器学习 R 和 Python 子系统的管理任务。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 02b74aa3fcb8a6526a59821c615ec421220e8608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fab91e142fad3bcb1ce23816d6705f7a7d208851
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962600"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345316"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理和集成 SQL Server 上的机器学习工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文适用于 SQL Server 数据库管理员负责部署高效的数据科学基础结构上支持多个工作负荷的服务器资产。 帧与 R 的管理相关的管理问题空间和 Python 代码在 SQL Server 上的执行。 
+本文适用于负责在支持多个工作负荷的服务器资产上部署高效数据科学基础结构的 SQL Server 数据库管理员。 它使管理问题空间与在 SQL Server 上管理 R 和 Python 代码执行的相关。 
 
 ## <a name="what-is-feature-integration"></a>什么是功能集成
 
-提供 R 和 Python 机器学习[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)作为数据库引擎实例的扩展。 集成是主要通过安全层和数据定义语言，总结如下：
+R 和 Python 机器学习通过[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)作为数据库引擎实例的扩展提供。 集成主要通过安全层和数据定义语言, 总结如下:
 
-+ 存储的过程都配备了能够接受 R 和 Python 代码作为输入的参数。 可以使用开发人员和数据科学家[系统存储过程](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017)或创建包装其代码的自定义过程。
-+ T-SQL 函数 (即[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql))，可使用先前定型的数据模型。 此功能是可通过 T-SQL。 在这种情况下，它可以调用不专门具有机器学习安装扩展的系统上。
-+ 现有的数据库登录名和基于角色的权限包括利用相同的数据的用户调用脚本。 作为一般规则，如果用户无法访问数据，通过一个查询，但不能访问通过脚本或者。
++ 存储过程具备接受 R 和 Python 代码作为输入参数的功能。 开发人员和数据科学家可以使用[系统存储过程](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017)或创建包装其代码的自定义过程。
++ T-sql 函数 (即[预测](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)), 可以使用以前训练的数据模型。 此功能通过 T-sql 提供。 因此, 它可以在未安装机器学习扩展的系统上调用。
++ 现有数据库登录名和基于角色的权限覆盖了使用相同数据的用户调用的脚本。 一般规则是, 如果用户无法通过查询访问数据, 则他们不能通过脚本访问数据。
 
 ## <a name="feature-availability"></a>功能可用性
 
-R 和 Python 集成变得可通过一系列步骤。 第一个参数是安装程序，当您[包括或添加**机器学习服务**](../install/sql-machine-learning-services-windows-install.md)到数据库引擎实例的功能。 作为后续步骤中，必须启用外部脚本 （其默认处于关闭状态） 在数据库引擎实例上。
+通过连续的步骤, 可以使用 R 和 Python 集成。 第一种设置是在将[**机器学习服务**功能添加](../install/sql-machine-learning-services-windows-install.md)到数据库引擎实例时进行设置。 在后续步骤中, 必须在数据库引擎实例上启用外部脚本 (默认情况下处于关闭状态)。
 
-在此情况下，只有数据库管理员具有完全权限创建和运行外部脚本、 添加或删除包，并创建存储的过程和其他对象。
+此时, 只有数据库管理员具有创建和运行外部脚本的完全权限、添加或删除包以及创建存储过程和其他对象。
 
-必须为所有其他用户授予 EXECUTE ANY EXTERNAL SCRIPT 权限。 其他[标准数据库权限](../security/user-permission.md)确定用户是否可以创建对象、 运行脚本，使用序列化和训练模型和等等。 
+所有其他用户必须被授予 "执行任何外部脚本" 权限。 其他[标准数据库权限](../security/user-permission.md)确定用户是否可以创建对象, 运行脚本, 使用序列化和定型模型等。 
 
 ## <a name="resource-allocation"></a>资源分配
 
-存储的过程和调用外部处理的 T-SQL 查询到默认资源池使用可用的资源。 作为默认配置的一部分，外部的进程，如 R 和 Python 会话允许最多 20%的总内存的主机系统上。 
+调用外部处理的存储过程和 T-sql 查询使用可用于默认资源池的资源。 作为默认配置的一部分, 在使用外部进程 (如 R 和 Python 会话) 时, 最多允许主机系统上的总内存的 20%。 
 
-如果你想要重新调整资源，可以修改默认池，使用相应运行该系统上的机器学习工作负荷的影响。
+如果要重新调整资源的状态, 可以修改默认池, 并对在该系统上运行的机器学习工作负荷产生相应影响。
 
-另一种方法是创建一个自定义的外部资源池来捕获源自特定程序、 主机或发生在特定时间间隔期间活动的会话。 有关详细信息，请参阅[若要修改的 R 和 Python 执行资源级别的资源调控](../administration/resource-governance.md)并[如何创建资源池](../administration/how-to-create-a-resource-pool.md)有关分步说明。
+另一种方法是创建自定义外部资源池, 以便捕获特定时间间隔内发生的特定程序、主机或活动的会话。 有关详细信息, 请参阅[资源调控: 修改 R 和 Python 执行的资源级别](../administration/resource-governance.md)和[如何创建资源池](../administration/how-to-create-a-resource-pool.md)以获取分步说明。
 
-## <a name="isolation-and-containment"></a>隔离和包容
+## <a name="isolation-and-containment"></a>隔离和包含
 
-处理体系结构设计，以隔离来自核心引擎处理的外部脚本。 R 和 Python 脚本作为单独的进程，在本地的辅助角色帐户下运行。 在任务管理器中，你可以监视 R 和 Python 进程执行低特权本地用户帐户，不同于 SQL Server 服务帐户。 
+处理体系结构旨在隔离核心引擎处理中的外部脚本。 R 和 Python 脚本在本地辅助角色帐户下作为单独的进程运行。 在任务管理器中, 可以监视 R 和 Python 进程, 该进程在低特权本地用户帐户下执行, 这与 SQL Server 服务帐户不同。 
 
-在单个低特权帐户中运行 R 和 Python 进程具有以下优势：
+在单独的低特权帐户中运行 R 和 Python 进程具有以下优势:
 
-+ 将 R 和 Python 会话而不会影响核心数据库操作，可以终止 R 或 Python 进程中的核心引擎进程中隔离出来。 
++ 从 R 和 Python 会话中隔离核心引擎进程可以终止 R 或 Python 进程, 而不会影响核心数据库操作。 
 
-+ 减少了在主计算机上的外部脚本运行时进程的权限。
++ 减少主计算机上的外部脚本运行时进程的特权。
 
-最小特权帐户将在安装期间创建并在 Windows 中放置*用户帐户池*称为**SQLRUserGroup**。 默认情况下，此组具有可执行文件、 库和内置的数据集使用对 R 和 Python 在 SQL Server 中的程序文件夹的权限。 
+最小特权帐户是在安装过程中创建的, 并放置在名为**SQLRUserGroup**的 Windows*用户帐户池中*。 默认情况下, 此组有权在 SQL Server 的 R 和 Python 的 program 文件夹中使用可执行文件、库和内置数据集。 
 
-作为数据库管理员，可以使用 SQL Server 数据安全性来指定哪些人拥有权限来执行脚本，并在作业中使用的数据进行管理下的相同的安全角色来控制访问通过 T-SQL 查询。 作为系统管理员，你可以显式拒绝**SQLRUserGroup**对通过创建 Acl 在本地服务器上的敏感数据的访问。
+作为 DBA, 你可以使用 SQL Server data security 来指定有权执行脚本的人员, 并使用通过 T-sql 查询控制访问权限的同一安全角色来管理作业中使用的数据。 作为系统管理员, 你可以通过创建 Acl 来显式拒绝**SQLRUserGroup**对本地服务器上敏感数据的访问。
 
 >[!NOTE]
-> 默认情况下**SQLRUserGroup**中 SQL Server 本身不具有登录名或权限。 如果数据访问辅助角色帐户需要一个登录名，您必须自行创建它。 专门调用创建一个登录名的方案是在执行中，数据或对数据库引擎实例中的操作支持来自脚本的请求时的用户标识是 Windows 用户和连接字符串指定受信任的用户。 有关详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
+> 默认情况下, **SQLRUserGroup**没有 SQL Server 本身中的登录名或权限。 如果工作人员帐户需要登录才能进行数据访问, 则必须自行创建。 在用户标识是 Windows 用户并且连接字符串指定了可信用户的情况下, 专门调用用于创建登录名的方案是为了支持对数据库引擎实例上的数据或操作执行请求。 有关详细信息, 请参阅[Add SQLRUserGroup as a database user](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)。
 
 ## <a name="disable-script-execution"></a>禁用脚本执行
 
-出现失控脚本时可以禁用所有脚本执行，撤消以前执行第一个位置中启用外部脚本执行的步骤。
+如果脚本失控, 你可以禁用所有脚本执行, 并反转之前执行的步骤, 以首先启用外部脚本执行。
 
-1. 在 SQL Server Management Studio 或其他查询工具中，运行以下命令来设置`external scripts enabled`为 0 或 FALSE。
+1. 在 SQL Server Management Studio 或其他查询工具中, 运行此命令以`external scripts enabled`将设置为0或 FALSE。
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 0
@@ -72,37 +72,37 @@ R 和 Python 集成变得可通过一系列步骤。 第一个参数是安装程
     ```
 2. 重新启动数据库引擎服务。
 
-一旦解决此问题，请记住重新启用脚本执行的实例上，如果你想要恢复 R 和 Python 脚本支持数据库引擎实例上。 有关详细信息，请参阅[启用脚本执行](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)
+解决问题后, 如果想要恢复数据库引擎实例上的 R 和 Python 脚本支持, 请记得在实例上重新启用脚本执行。 有关详细信息, 请参阅[启用脚本执行](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)
 
 ## <a name="extend-functionality"></a>扩展功能
 
-数据科学通常引入了新的包部署和管理的要求。 对于数据科学家，它是利用开源和第三方包的自定义解决方案中常见的做法。 一些这些包将其他包上具有依赖项，这种情况下，可能需要评估和安装多个包来访问您的目标。
+数据科学通常为包部署和管理提供了新的要求。 对于数据科学家而言, 一般的做法是在自定义解决方案中利用开源和第三方包。 其中一些包将依赖于其他包, 在这种情况下, 可能需要评估和安装多个包才能达到目标。
 
-负责服务器资产 DBA，作为部署到生产服务器上的任意 R 和 Python 包表示一个不熟悉的挑战。 然后再添加包，您应评估外部包提供的功能是否真正需要，使用内置中没有等效项[R 语言](r-libraries-and-data-types.md)并[Python 库](../python/python-libraries-and-data-types.md)安装SQL Server 安装程序。 
+作为负责服务器资产的 DBA, 将任意 R 和 Python 包部署到生产服务器上都表示不熟悉的挑战。 在添加包之前, 你应该评估外部包提供的功能是否确实是必需的, 并且在 SQL Server 安装程序安装的内置[R 语言](r-libraries-and-data-types.md)和[Python 库](../python/python-libraries-and-data-types.md)中没有等效项。 
 
-Server 包安装的替代方法，为数据科学家可能能够[生成并运行解决方案外部的工作站上](../r/set-up-a-data-science-client.md)，从 SQL Server 中检索数据，但使用所有分析执行本地工作站上而不是服务器本身上。 
+作为服务器包安装的替代方法, 数据科学家可以[在外部工作站上构建和运行解决方案](../r/set-up-a-data-science-client.md), 从 SQL Server 检索数据, 但在工作站上 (而不是在服务器上) 执行所有分析自动. 
 
-如果您随后确定外部库函数有必要，不会造成服务器操作或作为一个整体的数据风险，您可以选择从多个方法添加包。 在大多数情况下，都需要将包添加到 SQL Server 管理员权限。 若要了解详细信息，请参阅[SQL Server 中的安装 Python 包](../python/install-additional-python-packages-on-sql-server.md)并[SQL Server 中的安装 R 包](install-additional-r-packages-on-sql-server.md)。
+如果你随后确定外部库函数是必需的, 并且不会对服务器操作或数据整体造成风险, 则可以从多种方法中选择添加包。 在大多数情况下, 需要管理员权限才能将包添加到 SQL Server。 若要了解详细信息, 请参阅[在 SQL Server 中安装 Python 包](../python/install-additional-python-packages-on-sql-server.md)并[在 SQL Server 中安装 R 包](install-additional-r-packages-on-sql-server.md)。
 
 > [!NOTE]
-> 获取 R 包，服务器管理员权限不专门需要针对包安装如果您使用替代方法。 请参阅[SQL Server 中的安装 R 包](install-additional-r-packages-on-sql-server.md)有关详细信息。
+> 对于 R 包, 如果使用其他方法, 则不会特别要求服务器管理员权限。 有关详细信息, 请参阅[在 SQL Server 中安装 R 包](install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="monitoring-script-execution"></a>监视脚本执行
 
-在中运行的 R 和 Python 脚本[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]由启动[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]接口。 但是，快速启动板不受约束或分别监视，因为它是安全的服务提供的 Microsoft 适当管理资源的资源。
+中[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]运行的 R 和 Python 脚本[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]由接口启动。 但是, 快速启动板不是资源管理或单独监视, 因为它是 Microsoft 提供的一种安全服务, 它可相应地管理资源。
 
-使用管理 Launchpad 服务下运行的外部脚本[Windows 作业对象](/windows/desktop/ProcThread/job-objects)。 使用作业对象可将进程组作为一个单元进行管理。 每个作业对象都是分层的，可控制与其关联的所有进程的属性。 针对某个作业对象执行的操作会影响与该作业对象关联的所有进程。
+在快速启动板服务下运行的外部脚本使用[Windows 作业对象](/windows/desktop/ProcThread/job-objects)进行管理。 使用作业对象可将进程组作为一个单元进行管理。 每个作业对象都是分层的，可控制与其关联的所有进程的属性。 针对某个作业对象执行的操作会影响与该作业对象关联的所有进程。
 
 因此，如果需要终止与某个对象关联的一个作业，请注意所有相关的进程也会终止。 如果运行一个已分配到 Windows 作业对象的 R 脚本，并且该脚本运行一个必须终止的相关 ODBC 作业，则父 R 脚本进程也会终止。
 
-如果您启动使用并行处理的外部脚本时，单个 Windows 作业对象将管理所有并行子进程。
+如果启动使用并行处理的外部脚本, 则单个 Windows 作业对象会管理所有并行子进程。
 
 若要确定进程是否在作业中运行，请使用 `IsProcessInJob` 函数。
 
 ## <a name="next-steps"></a>后续步骤
 
-+ 查看相关概念和组件[可扩展性体系结构](../concepts/extensibility-framework.md)并[安全](../concepts/security.md)的更多背景。
++ 查看[扩展性体系结构](../concepts/extensibility-framework.md)和[安全性](../concepts/security.md)的概念和组件, 了解更多背景知识。
 
-+ 作为功能安装的一部分，您可能已经很熟悉与最终用户数据的访问控制，但如果没有，请参阅[授予对 SQL Server 机器学习的用户权限](../security/user-permission.md)有关详细信息。 
++ 作为功能安装的一部分, 你可能已经熟悉最终用户数据访问控制, 但如果没有, 请参阅[向用户授予 SQL Server 机器学习的权限](../security/user-permission.md)。 
 
-+ 了解如何调整需要进行大量计算的机器学习工作负荷的系统资源。 有关详细信息，请参阅[如何创建资源池](../administration/how-to-create-a-resource-pool.md)。
++ 了解如何调整计算密集型机器学习工作负荷的系统资源。 有关详细信息, 请参阅[如何创建资源池](../administration/how-to-create-a-resource-pool.md)。

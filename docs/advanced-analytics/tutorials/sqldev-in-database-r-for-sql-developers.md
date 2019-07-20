@@ -1,58 +1,58 @@
 ---
-title: 数据库内分析中使用 R 的 SQL Server 机器学习的教程
-description: 了解如何将嵌入 R 编程语言在 SQL Server 存储过程和 T-SQL 函数中的代码。
+title: 使用 R 进行数据库内分析的教程
+description: 了解如何在 SQL Server 存储过程和 T-sql 函数中嵌入 R 编程语言代码。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8bf0485b63e341dbeff24a1974df840b0a28dfef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64995cc5de7bb3609f1923b7755be9b33b55e764
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961891"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345902"
 ---
-# <a name="tutorial-r-data-analytics-for-sql-developers"></a>教程：SQL 开发人员的 R 数据分析
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>教程：适用于 SQL 开发人员的 R 数据分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在为 SQL 程序员提供本教程中，了解有关 R 集成的生成和部署的基于 R 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 您将使用 T-SQL、 SQL Server Management Studio，并使用 [机器学习服务] 的数据库引擎实例 ([机器学习服务](../install/sql-machine-learning-services-windows-install.md)和 R 语言支持
+在本教程中, 针对 SQL 程序员, 通过使用 SQL Server 上的[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)数据库生成和部署基于 r 的机器学习解决方案来了解 r 集成。 你将使用 T-sql、SQL Server Management Studio 和数据库引擎实例, 其中包含 [机器学习服务] ([机器学习服务](../install/sql-machine-learning-services-windows-install.md)和 R 语言支持
 
-本教程向您介绍一种数据建模工作流中使用的 R 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将生成该模型预测某个行程是否可能会导致基于时间、 行程，距离和上车位置的提示。 
+本教程介绍数据建模工作流中使用的 R 函数。 步骤包括数据浏览、构建和培训二元分类模型和模型部署。 要生成的模型将预测行程是否可能会根据一天中的时间、距离和取货位置导致提示。 
 
-在本教程中使用的 R 代码的所有包装在存储过程创建并在 Management Studio 中运行。
+本教程中使用的所有 R 代码包装在 Management Studio 中创建和运行的存储过程中。
 
 ## <a name="background-for-sql-developers"></a>面向 SQL 开发人员的背景
 
-构建机器学习解决方案的过程很复杂，可以跨多个阶段中涉及多个工具和协调的主题事项专家：
+构建机器学习解决方案的过程是一项复杂的工作, 它可以涉及多个工具, 并跨多个阶段协调主题专家:
 
-+ 获取并清洗数据
-+ 浏览数据和构建适用于建模的功能，
-+ 定型集和优化模型
-+ 部署到生产环境
++ 获取和清理数据
++ 探索用于建模的数据和生成功能
++ 训练和优化模型
++ 部署到生产
 
-是最好使用专用的 R 开发环境执行的实际代码的开发和测试。 但是，在全面测试该脚本后，你可以轻松地将其部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]的熟悉的环境中的存储过程[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+最佳做法是使用专用的 R 开发环境来执行实际代码的开发和测试。 但是, 在对脚本进行完全测试后, 你可以轻松地将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]其[!INCLUDE[tsql](../../includes/tsql-md.md)]部署到[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]在熟悉的环境中使用存储过程。
 
-此多部分教程的目的是迁移"完成 R 的代码"到 SQL Server 的典型工作流简介。 
+此多部分教程的目的是介绍将 "已完成的 R 代码" 迁移到 SQL Server 的典型工作流。 
 
-- [第 1 课：浏览和可视化数据形状和分发通过存储过程中调用 R 函数](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [第 1 课：通过在存储过程中调用 R 函数来浏览和可视化数据形状和分布](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [第 2 课：在 T-SQL 函数中使用 R 创建数据功能](sqldev-create-data-features-using-t-sql.md)
+- [第 2 课：在 T-sql 函数中使用 R 创建数据功能](sqldev-create-data-features-using-t-sql.md)
   
-- [第 3 课：训练和保存使用函数和存储的过程的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)
+- [第 3 课：使用函数和存储过程定型并保存 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [第 4 课：预测潜在的存储过程中使用 R 模型的结果](../tutorials/sqldev-operationalize-the-model.md)
+- [第 4 课：在存储过程中使用 R 模型预测潜在结果](../tutorials/sqldev-operationalize-the-model.md)
 
-该模型保存到数据库后，调用该模型用于预测[!INCLUDE[tsql](../../includes/tsql-md.md)]通过使用存储的过程。
+在将模型保存到数据库后, [!INCLUDE[tsql](../../includes/tsql-md.md)]通过使用存储过程调用模型以获取预测。
 
 ## <a name="prerequisites"></a>先决条件
 
-可以完成所有任务使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中的存储过程[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+所有任务都可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]存储过程完成。
 
-本教程假定你熟悉基本数据库操作，例如创建数据库和表、 导入数据，以及编写 SQL 查询。 它不会假定您知道。在这种情况下，提供所有 R 代码。 
+本教程假定你熟悉基本数据库操作, 例如创建数据库和表、导入数据以及编写 SQL 查询。 它不会假设你知道 R。因此, 提供了所有 R 代码。 
 
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)或[使用启用了 R 的 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation)或[SQL Server 2017 机器学习服务启用 r](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [R 库](../package-management/installed-package-information.md)
 
@@ -64,4 +64,4 @@ ms.locfileid: "67961891"
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [浏览和可视化数据的存储过程中使用 R 函数](../tutorials/sqldev-explore-and-visualize-the-data.md)
+> [使用存储过程中的 R 函数浏览和可视化数据](../tutorials/sqldev-explore-and-visualize-the-data.md)

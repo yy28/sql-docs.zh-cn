@@ -1,31 +1,31 @@
 ---
-title: 将数据加载到内存使用 RevoScaleR rxImport-SQL Server 机器学习
-description: 有关如何在 SQL Server 上使用 R 语言加载数据的教程演练。
+title: 使用 RevoScaleR rxImport 将数据加载到内存中
+description: 有关如何使用 R 语言在 SQL Server 上加载数据的教程演练。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 53d13c0771fd06ae8e91f4ad69fe4646a01fc770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb98887d9cfd3f1997ce82620eeff5df98ba6b1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962223"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344669"
 ---
-# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>数据加载到内存使用 rxImport （SQL Server 和 RevoScaleR 教程）
+# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>使用 rxImport 将数据加载到内存中 (SQL Server 和 RevoScaleR 教程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本课程中属于[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
-[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)函数可用于将数据从数据源移到会话内存中的数据框或 XDF 文件在磁盘上。 如果未指定某个文件作为目标，数据会作为数据框放入内存中。
+[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)函数可用于将数据从数据源移到会话内存中的数据帧或磁盘上的 XDF 文件中。 如果未指定某个文件作为目标，数据会作为数据框放入内存中。
 
-在此步骤中，了解如何将数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后使用**rxImport**函数以将所需的数据放入本地文件。 这样一来，就可以在本地计算上下文中重复对数据进行分析，而无需重新查询数据库。
+在此步骤中, 你将了解如何从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]获取数据, 然后使用**rxImport**函数将感兴趣的数据放入本地文件中。 这样一来，就可以在本地计算上下文中重复对数据进行分析，而无需重新查询数据库。
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>从 SQL Server 中的数据子集提取到本地内存
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>将数据的子集从 SQL Server 提取到本地内存中
 
-您已决定你想要检查的高风险个体将更多详细信息中。 表中的源表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]很大，因此你想要获取只是高风险客户有关的信息。 然后将该数据加载到本地工作站的内存中的数据帧。
+你已经决定要更详细地检查高风险个人。 源表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的源表很大, 只需获取有关高风险客户的信息。 然后, 将该数据加载到本地工作站的内存中的数据帧中。
 
 1. 将计算上下文重置为本地工作站。
 
@@ -42,15 +42,15 @@ ms.locfileid: "67962223"
         connectionString = sqlConnString)
     ```
 
-3. 调用函数[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)若要在本地 R 会话中将数据读取到数据帧。
+3. 调用函数[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)将数据读入本地 R 会话中的数据帧。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    如果操作成功，你应看到类似如下的状态消息："读取的行数：35，处理的总行数：35，区块总时间：0.036 秒"
+    如果操作成功, 你应该会看到如下所示的状态消息:"读取的行:35, 处理的总行数:35, 总区块时间:0.036 秒 "
 
-4. 现在，高风险观察均在内存中数据帧中，可以使用各种 R 函数来操纵该数据框。 例如，可以根据风险评分，订单的客户，并打印存在最高风险的客户的列表。
+4. 由于高风险观测值已在内存中数据帧中, 因此可以使用各种 R 函数来操作数据帧。 例如, 你可以按风险评分对客户排序, 并打印出风险最高的客户的列表。
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -74,7 +74,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 不仅可以使用 rxImport  来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
 
-**RxImport**函数在导入过程中，将变量名称分配到的列，但可以通过使用指示新变量名称*colInfo*参数或更改数据类型使用*colClasses*参数。
+在导入过程中, **rxImport**函数将变量名称赋给列, 但可以使用*colInfo*参数指示新变量名称, 或使用*colClasses*参数更改数据类型。
 
 通过在 *transforms* 参数中指定其他操作，可以对读取的每个数据区块执行基本处理。
 

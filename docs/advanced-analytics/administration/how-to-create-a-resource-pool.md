@@ -1,31 +1,31 @@
 ---
-title: 如何创建适用于 R 和 Python-SQL Server 机器学习服务的资源池
-description: SQL Server 2016 或 SQL Server 2017 数据库引擎实例上定义 SQL Server 资源池的 R 或 Python 进程。
+title: 如何创建 R 和 Python 的资源池
+description: 为 SQL Server 2016 或 SQL Server 2017 数据库引擎实例上的 R 或 Python 进程定义 SQL Server 资源池。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3f032a9e2a60a0428a2aac76ae8c3ee6baa62775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963154"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344067"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中创建用于机器学习的资源池
+# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中创建机器学习的资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何创建和使用专门用于管理 R 和 Python 机器学习工作负荷在 SQL Server 中的资源池。 它假定已安装并启用机器学习功能，并且想要重新配置以支持更细致地管理 R 或 Python 等外部进程使用的资源的实例。
+本文介绍如何创建和使用专门用于管理 SQL Server 中的 R 和 Python 机器学习工作负荷的资源池。 它假定您已经安装并启用了机器学习功能, 并且想要重新配置实例, 以支持由 R 或 Python 等外部进程使用的资源的更精细管理。
 
-过程包括多个步骤：
+此过程包括多个步骤:
 
-1.  查看任何现有的资源池的状态。 它是必须了解哪些服务正在使用现有资源。
+1.  查看任何现有资源池的状态。 了解使用现有资源的服务非常重要。
 2.  修改服务器资源池。
-3.  创建新的资源池外部进程。
-4.  创建分类函数来标识外部脚本请求。
-5.  验证新的外部资源池捕获 R 或 Python 中的指定客户端或帐户的作业。
+3.  为外部进程创建新的资源池。
+4.  创建用于标识外部脚本请求的分类函数。
+5.  验证新的外部资源池是否正在从指定的客户端或帐户捕获 R 或 Python 作业。
 
 ##  <a name="bkmk_ReviewStatus"></a> 查看现有资源池的状态
   
@@ -53,11 +53,11 @@ ms.locfileid: "67963154"
     |-|-|-|-|-|-|
     |2|默认值|100|20|0|2|
  
-3.  在这些服务器默认设置，外部运行时将很可能资源不足，无法完成大多数任务。 若要改变这种局面，必须按如下所述修改服务器资源用量：
+3.  在这些服务器默认设置下, 外部运行时可能资源不足, 无法完成大多数任务。 若要改变这种局面，必须按如下所述修改服务器资源用量：
   
-    -   减少可由数据库引擎的最大计算机内存。
+    -   减少数据库引擎可使用的最大计算机内存。
   
-    -   增加外部进程可以使用的最大计算机内存。
+    -   增加外部进程可使用的最大计算机内存。
 
 ## <a name="modify-server-resource-usage"></a>修改服务器资源用量
 
@@ -80,13 +80,13 @@ ms.locfileid: "67963154"
     ```
   
     > [!NOTE]
-    >  这些是只是建议的设置开始;应该评估您的机器学习任务根据其他服务器进程，以确定如何适当平衡环境和工作负荷。
+    >  这些只是建议的设置, 以开始:你应在其他服务器进程中评估你的机器学习任务, 以确定你的环境和工作负荷的正确平衡点。
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>创建用户定义的外部资源池
   
 1.  对资源调控器配置所做的任何更改将在整个服务器上实施，会影响使用服务器默认池的工作负荷，以及使用外部池的工作负荷。
   
-     因此，若要更细致地控制哪些工作负荷优先获得资源，可以新建用户定义的外部资源池。 此外，应定义一个分类函数并将其分配给外部资源池。 **外部**关键字新增功能。
+     因此，若要更细致地控制哪些工作负荷优先获得资源，可以新建用户定义的外部资源池。 此外，应定义一个分类函数并将其分配给外部资源池。 **EXTERNAL**关键字是新的。
   
      首先，新建*用户定义的外部资源池*。 在以下示例中，池命名为 **ds_ep**。
   
@@ -104,11 +104,11 @@ ms.locfileid: "67963154"
   
      有关详细信息，请参阅[资源调控器工作负荷组](../../relational-databases/resource-governor/resource-governor-workload-group.md)和 [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)。
   
-## <a name="create-a-classification-function-for-machine-learning"></a>创建机器学习的分类函数
+## <a name="create-a-classification-function-for-machine-learning"></a>为机器学习创建分类函数
   
 分类函数检查传入的任务，并确定任务是否可以使用当前资源池来运行。 不符合分类函数条件的任务将分配回到服务器的默认资源池。
   
-1. 首先，它指定分类器函数应使用资源调控器来确定资源池。 可以将分配**null**的占位符来分类器函数。
+1. 首先指定 Resource Governor 应使用分类器函数来确定资源池。 可以将**null**指定为分类器函数的占位符。
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);
@@ -117,7 +117,7 @@ ms.locfileid: "67963154"
   
      有关详细信息，请参阅 [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)。
   
-2.  在每个资源池的分类器函数中，定义的语句或应分配给资源池的传入请求的类型。
+2.  在每个资源池的分类器函数中, 定义应分配给资源池的语句或传入请求的类型。
   
      例如，如果发送请求的应用程序是“Microsoft R Host”或“RStudio”，则以下函数将返回分配到用户定义的外部资源池的架构的名称；否则，将返回默认资源池。
   
@@ -145,13 +145,13 @@ ms.locfileid: "67963154"
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>验证新资源池和相关性
 
-若要验证已进行了更改，应检查为每个与这些实例资源池相关联的工作负荷组的服务器内存和 CPU 配置：
+若要验证是否进行了更改, 应检查与这些实例资源池关联的每个工作负荷组的服务器内存和 CPU 配置:
 
-+ 默认池[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器
-+ 外部进程默认资源池
-+ 外部进程用户定义的池
++ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器的默认池
++ 外部进程的默认资源池
++ 外部进程的用户定义池
 
-1. 运行以下语句以查看所有工作负荷组：
+1. 运行以下语句以查看所有工作负荷组:
 
     ```sql
     SELECT * FROM sys.resource_governor_workload_groups;
@@ -165,7 +165,7 @@ ms.locfileid: "67963154"
     |2|默认值|Medium|25|0|0|0|0|2|2|
     |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
-2.  使用新的目录视图[sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)，以查看所有外部资源池。
+2.  使用新的目录视图[resource_governor_external_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)来查看所有外部资源池。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -180,7 +180,7 @@ ms.locfileid: "67963154"
   
      有关详细信息，请参阅[资源调控器目录视图 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)。
   
-3.  运行以下语句以返回到外部资源池关联的计算机资源有关的信息，如果适用：
+3.  运行以下语句, 返回有关关联到外部资源池的计算机资源的信息 (如果适用):
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
@@ -190,11 +190,11 @@ ms.locfileid: "67963154"
 
 ## <a name="see-also"></a>请参阅
 
-有关管理服务器资源的详细信息，请参阅：
+有关管理服务器资源的详细信息, 请参阅:
 
 +  [资源调控器](../../relational-databases/resource-governor/resource-governor.md) 
-+ [与资源调控器相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Resource Governor 相关的动态管理&#40;视图 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
-有关机器学习的资源调控的概述，请参阅：
+有关机器学习的资源调控概述, 请参阅:
 
 +  [机器学习服务的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)

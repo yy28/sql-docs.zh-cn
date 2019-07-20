@@ -1,45 +1,45 @@
 ---
-title: 让数据科学家使用 R 语言的 SQL Server 机器学习教程
-description: 本教程演示如何创建数据库内分析的端到端 R 解决方案。
+title: 使用 R 语言的数据科学家教程
+description: 介绍如何为数据库内分析创建端到端 R 解决方案的教程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 45d587b4d62c33e944b15c6b951fa1323620c50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45a1352b60574304a124af88226cc2a9d7f1a804
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961705"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345798"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教程：适用于 R 数据科学家的 SQL 开发
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本教程中让数据科学家，了解如何生成基于 SQL Server 2016 或 SQL Server 2017 中 R 功能支持的预测性建模的端到端解决方案。 本教程使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 
+在本教程中, 对于数据科学家, 请了解如何基于 SQL Server 2016 或 SQL Server 2017 中的 R 功能支持生成用于预测建模的端到端解决方案。 本教程使用 SQL Server 上的[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)数据库。 
 
-使用 R 代码的组合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据和自定义 SQL 函数，来生成分类模型，该值指示该驱动程序可能会在特定出租车行程小费的概率。 您还部署 R 模型到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并使用服务器数据来生成基于模型的分数。
+使用 R 代码、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据和自定义 SQL 函数的组合来构建一个分类模型, 该模型指示驱动程序可能在特定出租车行程上出现提示的概率。 你还可以将 R 模型部署[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到, 并使用服务器数据基于该模型生成分数。
 
-此示例中可以扩展到所有类型的现实问题，例如预测客户对销售市场活动的响应或预测支出或在活动的出席情况。 因为可以从存储过程调用模型，可以轻松地将其嵌入应用程序中。
+可以将此示例扩展到各种真实的问题, 例如预测客户对销售活动的响应, 或预测发生事件的支出或出席情况。 由于可以从存储过程调用模型, 因此可以轻松地将其嵌入到应用程序中。
 
-因为本演练旨在向 R 开发人员介绍[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，只要有可能使用 R。 但是，这并不意味着 R 一定是每个任务的最佳工具。 在许多情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会提供更好的性能，特别是对于诸如数据聚合和特征工程这类任务。  这类任务可以特别受益于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的新功能，如内存优化的列存储索引。 我们尝试指出的是在此过程可能的优化。
+由于本演练旨在向 r 开发人员[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]介绍, 因此尽可能使用 r。 但是, 这并不意味着 R 一定是每个任务的最佳工具。 在许多情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会提供更好的性能，特别是对于诸如数据聚合和特征工程这类任务。  这类任务可以特别受益于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的新功能，如内存优化的列存储索引。 我们尝试在此过程中指出可能的优化。
 
 ## <a name="prerequisites"></a>先决条件
 
-+ [与 R 集成的 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)或[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [SQL Server 2017 机器学习服务与 R 集成](../install/sql-machine-learning-services-windows-install.md#verify-installation)或[SQL Server 2016 r 服务](../install/sql-r-services-windows-install.md)
 
-+ [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录名
++ [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
 + [NYC 出租车演示数据库](demo-data-nyctaxi-in-sql.md)
 
-+ R IDE，例如 RStudio 或包含 R 的内置 RGUI 工具
++ R IDE (如 RStudio) 或 R 附带的内置 RGUI.EXE 工具
 
-我们建议本演练中，客户端工作站上。 您必须能够连接，在同一网络上为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 SQL Server 和 R 语言已启用的计算机。 有关工作站配置的说明，请参阅[设置 R 开发数据科学客户端](../r/set-up-a-data-science-client.md)。
+建议你在客户端工作站上执行此操作。 您必须能够在同一网络上连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 且启用了 R 语言的计算机。 有关工作站配置的说明, 请参阅[设置用于 R 开发的数据科学客户端](../r/set-up-a-data-science-client.md)。
 
-或者，可以同时具有的计算机上运行演练[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 R 开发环境，但我们不建议此配置适用于生产环境。 如果你需要将客户端和服务器放在同一计算机上，请务必安装另一组用于从"远程"客户端发送 R 脚本的 Microsoft R 库。 不要使用 SQL Server 实例的程序文件中安装的 R 库。 具体而言，如果使用一台计算机，则需要在这种以支持客户端和服务器操作这些位置的 RevoScaleR 库。
+或者, 您可以在同时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有 R 开发环境的计算机上运行该演练, 但对于生产环境不建议使用此配置。 如果需要将客户端和服务器放在同一台计算机上, 请确保安装另一组 Microsoft R 库, 以便从 "远程" 客户端发送 R 脚本。 不要使用在 SQL Server 实例的 program 文件中安装的 R 库。 具体而言, 如果你使用一台计算机, 则需要在这两个位置都使用 RevoScaleR 库来支持客户端和服务器操作。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
@@ -48,11 +48,11 @@ ms.locfileid: "67961705"
 
 ## <a name="additional-r-packages"></a>其他 R 包
 
-本演练需要未安装默认情况下作为的一部分的多个 R 库[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。 您必须在客户端上安装这两个包，在开发解决方案，以及在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将解决方案部署的计算机。
+本演练需要多个默认情况下不作为的[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]一部分安装的 R 库。 你必须在开发解决方案的客户端和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]部署解决方案的计算机上安装这些包。
 
-### <a name="on-a-client-workstation"></a>客户端工作站上
+### <a name="on-a-client-workstation"></a>在客户端工作站上
 
-在 R 环境中，将以下行复制并在控制台窗口 （Rgui 或 IDE） 中执行代码。 某些包还会安装所需的包。 在所有，安装大约 32 个包。 必须具有 internet 连接才能完成此步骤。
+在 R 环境中, 复制以下行, 并在控制台窗口中执行代码 (Rgui.exe 或 IDE)。 某些包还会安装所需的包。 毕竟, 安装了大约32个包。 你必须具有 internet 连接才能完成此步骤。
     
   ```R
   # Install required R libraries, if they are not already installed.
@@ -64,12 +64,12 @@ ms.locfileid: "67961705"
 
 ### <a name="on-the-server"></a>在服务器上
 
-必须为 SQL Server 上安装包的多个选项。 例如，SQL Server 提供了[R 包管理](../r/install-additional-r-packages-on-sql-server.md)，数据库管理员可以创建包存储库以及分配权限以安装其自己的包的用户的功能。 但是，如果您是计算机上的管理员，你可以安装使用 R，新的包，只要您将安装到正确的库。
+在 SQL Server 上安装包有多个选项。 例如, SQL Server 提供[R 包管理](../r/install-additional-r-packages-on-sql-server.md)功能, 使数据库管理员可以创建包存储库, 并为用户分配安装其自己的包的权限。 但是, 如果您是计算机上的管理员, 则只要您将安装到正确的库中, 就可以使用 R 安装新的包。
 
 > [!NOTE]
-> 在服务器上**不这样做**即使系统提示您安装到用户库。 如果在安装到用户库，SQL Server 实例无法找到或运行包。 有关详细信息，请参阅[SQL Server 上安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)。
+> 在服务器**上, 即使**出现提示, 也不要安装到用户库。 如果安装到用户库, SQL Server 实例无法找到或运行包。 有关详细信息, 请参阅[SQL Server 上的 "安装新的 R 包"](../r/install-additional-r-packages-on-sql-server.md)。
 
-1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上，**以管理员身份**打开 RGui.exe。  如果已安装 SQL Server R Services 使用的默认设置，可以在 C:\Program Files\Microsoft SQL Server\MSSQL13 中找到 Rgui.exe。MSSQLSERVER\R_SERVICES\bin\x64)。
+1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上，**以管理员身份**打开 RGui.exe。  如果已使用默认值安装 SQL Server R Services, 则可在 C:\Program Files\Microsoft SQL Server\MSSQL13. 中找到 Rgui.exe。MSSQLSERVER\R_SERVICES\bin\x64).
 
 2. 在 R 提示符处，运行下面的 R 命令：
   
@@ -79,11 +79,11 @@ ms.locfileid: "67961705"
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  此示例使用 R grep 函数搜索可用路径的向量，并查找包括"Program Files"的路径。 有关详细信息，请参阅[ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep)。
+  此示例使用 R grep 函数搜索可用路径的向量, 并查找包含 "Program Files" 的路径。 有关详细信息, 请[https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)参阅。
 
-  如果您认为已安装的软件包，通过运行检查已安装的包列表`installed.packages()`。
+  如果你认为包已安装, 请通过运行`installed.packages()`来检查已安装包的列表。
 
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [浏览和汇总数据](walkthrough-view-and-summarize-data-using-r.md)
+> [浏览并汇总数据](walkthrough-view-and-summarize-data-using-r.md)

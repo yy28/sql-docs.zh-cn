@@ -1,66 +1,66 @@
 ---
-title: 启用或禁用远程 R 包管理的 SQL Server 机器学习服务
-description: 启用 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内） 上的远程 R 包管理
+title: 启用或禁用远程 R 包管理
+description: 在 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务上启用远程 R 包管理 (数据库内)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ea567d8fbe3f6bbd9b51133ec015768cd4c6e893
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 245358dcdc6bb166e49f963f67754f864e1a96b6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962529"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344915"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>启用或禁用 SQL Server 的远程包管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何启用远程管理的客户端工作站或不同的机器学习服务器中的 R 包。 SQL Server 上启用包管理功能后，可以使用客户端上 RevoScaleR 命令在 SQL Server 上安装包。
+本文介绍如何从客户端工作站或不同 Machine Learning Server 启用 R 包的远程管理。 在 SQL Server 上启用包管理功能后, 可以在客户端上使用 RevoScaleR 命令在 SQL Server 上安装包。
 
 > [!NOTE]
-> 当前支持的 R 库的管理;对 Python 已列入计划的支持。
+> 目前支持对 R 库进行管理;针对 Python 的支持在路线图上。
 
-默认情况下，SQL Server 的外部包管理功能已禁用。 必须运行一个单独的脚本以启用该功能在下一节中所述。
+默认情况下, 禁用 SQL Server 的外部包管理功能。 若要启用此功能, 必须运行一个单独的脚本, 如下一节所述。
 
-## <a name="overview-of-process-and-tools"></a>过程和工具的概述
+## <a name="overview-of-process-and-tools"></a>过程和工具概述
 
-若要启用或禁用包管理 SQL Server 上的，使用命令行实用工具**RegisterRExt.exe**，这是附带**RevoScaleR**包。
+若要启用或禁用 SQL Server 上的包管理, 请使用**RevoScaleR**包附带的命令行实用程序**registerrext.exe。**
 
-[启用](#bkmk_enable)此功能是一个两步过程，要求数据库管理员： 你的 SQL Server 实例 （一次每个 SQL Server 实例） 上启用包管理，然后启用 （一次每个 SQL Server 的 SQL 数据库上的包管理数据库）。
+[启用](#bkmk_enable)此功能的过程分为两个步骤: 在 SQL Server 实例上启用包管理 (每个 SQL Server 实例一次), 然后在 SQL 数据库上启用包管理 (每个 SQL Server 数据库一次)).
 
-[禁用](#bkmk_disable)包管理功能也需要 multipel 步骤： 删除数据库级的包和权限 （一次每个数据库），然后 （一次每个实例） 服务器中删除角色。
+[禁用](#bkmk_disable)包管理功能还需要 multipel 步骤: 删除数据库级包和权限 (每个数据库一次), 然后从服务器中删除角色 (每个实例一次)。
 
-## <a name="bkmk_enable"></a> 启用包管理
+## <a name="bkmk_enable"></a>启用包管理
 
-1. SQL Server 上打开提升的命令提示符并导航到包含该实用工具，RegisterRExt.exe 的文件夹。 默认位置是`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`。
+1. 在 SQL Server 上, 打开提升的命令提示符, 然后导航到包含实用工具 Registerrext.exe 的文件夹。 默认位置为`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`。
 
-2. 运行以下命令，提供你的环境的相应参数：
+2. 运行以下命令, 为你的环境提供适当的参数:
 
     `RegisterRExt.exe /install pkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    此命令所需的包管理的 SQL Server 计算机上创建实例级对象。 它也会重启实例快速启动板。
+    此命令在 SQL Server 计算机上创建包管理所需的实例级对象。 它还会重新启动实例的快速启动板。
 
-    如果不指定实例，使用默认实例。 如果未指定用户，使用当前安全上下文。 例如，以下命令启用 RegisterRExt.exe，使用的凭据打开命令提示符下的用户路径中的实例上的包管理：
+    如果未指定实例, 将使用默认实例。 如果未指定用户, 则使用当前安全上下文。 例如, 以下命令在 Registerrext.exe 路径中的实例上启用包管理, 使用打开命令提示符的用户的凭据:
 
     `REgisterRExt.exe /install pkgmgmt`
 
-3. 若要添加到特定数据库的包管理，请从提升的命令提示符运行以下命令：
+3. 若要将包管理添加到特定数据库, 请从提升的命令提示符运行以下命令:
 
     `RegisterRExt.exe /install pkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
-    此命令将创建一些数据库项目，包括用于控制用户权限的以下数据库角色： `rpkgs-users`， `rpkgs-private`，和`rpkgs-shared`。
+    此命令创建一些数据库项目, 其中包括用于控制用户权限的下列数据库角色: `rpkgs-users`、 `rpkgs-private`和`rpkgs-shared`。
 
-    例如，以下命令启用的数据库，运行 RegisterRExt 的实例上的包管理。 如果未指定用户，使用当前安全上下文。
+    例如, 以下命令对运行 Registerrext.exe 的实例上的数据库启用包管理。 如果未指定用户, 则使用当前安全上下文。
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 
-4. 对于必须在其中安装包的每个数据库重复该命令。
+4. 对必须安装包的每个数据库重复此命令。
 
-5. 若要验证是否已成功创建新角色，请在 SQL Server Management Studio 中，单击数据库，展开**安全**，然后展开**数据库角色**。
+5. 若要验证是否已成功创建新角色, 请在 SQL Server Management Studio 中单击数据库, 展开 "**安全性**", 然后展开 "**数据库角色**"。
 
-    此外可以在如下所示的 sys.database_principals 上运行的查询：
+    你还可以在 database_principals 上运行查询, 如下所示:
 
     ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -75,23 +75,23 @@ ms.locfileid: "67962529"
         ON o.schema_id = s.schema_id;
     ```
 
-启用此功能后，可以使用 RevoScaleR 函数来安装或从远程 R 客户端卸载包。
+启用此功能后, 可以使用 RevoScaleR 函数从远程 R 客户端安装或卸载包。
 
-## <a name="bkmk_disable"></a> 禁用包管理
+## <a name="bkmk_disable"></a>禁用包管理
 
-1. 从提升的命令提示符，RegisterRExt 实用程序再次运行，并禁用数据库级别的包管理：
+1. 从提升权限的命令提示符中, 再次运行 Registerrext.exe 实用程序, 并在数据库级别禁用包管理:
 
     `RegisterRExt.exe /uninstall pkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
-    此命令将删除数据库对象中指定的数据库相关的包管理。 它还会删除已从 SQL Server 计算机上的受保护的文件系统位置安装的所有包。
+    此命令从指定数据库中删除与包管理相关的数据库对象。 它还会从 SQL Server 计算机上的安全文件系统位置中删除已安装的所有包。
 
-2. 重复此命令使用包管理的每个数据库上。
+2. 对使用包管理的每个数据库重复此命令。
 
-3.  （可选）所有数据库均已都清除的包使用前面的步骤后，请从提升的命令提示符运行以下命令：
+3.  可有可无使用上述步骤清除了所有数据库的包后, 请从提升的命令提示符运行以下命令:
 
     `RegisterRExt.exe /uninstall pkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    此命令从实例中删除包管理功能。 您可能需要手动重新启动 Launchpad 服务一次，以查看更改。
+    此命令从实例中删除包管理功能。 你可能需要再次手动重新启动快速启动板服务以查看更改。
 
 ## <a name="next-steps"></a>后续步骤
 

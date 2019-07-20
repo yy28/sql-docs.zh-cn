@@ -1,7 +1,7 @@
 ---
 title: SQLSetPos 函数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetPos
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetPos
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eb60350be75a6b4fae5e0c5c7c237d125ee3d3a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f14b99d2c7dac91116186fdcf53ff77ee6c2c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039691"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343072"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：ODBC  
+**度**  
+ 引入的版本:ODBC 1.0 标准符合性:ODBC  
   
  **摘要**  
- **SQLSetPos**设置在行集中的游标位置，并允许应用程序刷新行集中的数据或将更新或删除结果集中的数据。  
+ **SQLSetPos**设置行集中的光标位置, 并允许应用程序刷新行集中的数据, 或更新或删除结果集中的数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,273 +47,273 @@ SQLRETURN SQLSetPos(
   
 ## <a name="arguments"></a>参数  
  *StatementHandle*  
- [输入]语句句柄。  
+ 送语句句柄。  
   
  *RowNumber*  
- [输入]要对其执行该操作使用指定的行集中的行的位置*操作*参数。 如果*RowNumber*为 0，则该操作适用于每个行集中的行。  
+ 送要对其执行操作的行集中的行的位置。  如果*RowNumber*为 0, 则操作将应用于行集中的每一行。  
   
- 有关其他信息，请参阅"注释"。  
+ 有关其他信息, 请参阅 "注释"。  
   
  *运算*  
- [输入]要执行的操作：  
+ 送要执行的操作:  
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  SQL_ADD 值*操作*自变量已弃用用于 ODBC *3.x*。 ODBC *3.x*驱动程序将需要向后兼容性支持 SQL_ADD。 此功能已由调用**SQLBulkOperations**与*操作*SQL_ADD。 当 ODBC *3.x*应用程序适用于 ODBC *2.x*驱动程序，驱动程序管理器将映射到调用**SQLBulkOperations**与*操作*的到 SQL_ADD **SQLSetPos**与*操作*SQL_ADD。  
+>  *ODBC 2.x*的*操作*参数的 SQL_ADD 值已弃用。 为了向后兼容 *, ODBC 2.x*驱动程序将需要支持 SQL_ADD。 此功能已由对**SQLBulkOperations**的调用替换,*操作*为 SQL_ADD。 当 ODBC 1.x*应用程序*与 odbc *2.x 驱动程序*一起使用时, 驱动程序管理器使用 SQL_ADD 的*操作*将对**SQLBulkOperations**的调用映射到**SQLSetPos** ,*操作*为 SQL_ADD。  
   
- 有关详细信息，请参阅"注释"。  
+ 有关详细信息, 请参阅 "注释"。  
   
  *LockType*  
- [输入]指定如何执行中指定的操作后将其锁定该行*操作*参数。  
+ 送指定在执行*操作*参数中指定的操作后如何锁定行。  
   
  SQL_LOCK_NO_CHANGE SQL_LOCK_EXCLUSIVE SQL_LOCK_UNLOCK  
   
- 有关详细信息，请参阅"注释"。  
+ 有关详细信息, 请参阅 "注释"。  
   
  **返回**  
   
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_NEED_DATA、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLSetPos**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可能会通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLSetPos** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLSetPos**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过使用*SQLGetDiagRec 的 HandleType*和*SQL_HANDLE_STMT*的*句柄*调用**StatementHandle**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLSetPos**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
   
- 对于所有这些 SQLSTATEs 可以返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除 01xxx SQLSTATEs)，将返回 SQL_SUCCESS_WITH_INFO，如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果发生错误，则返回 SQL_ERROR单行操作。  
+ 对于可以返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 的所有 SQLSTATEs (除了 01xxx SQLSTATEs), 如果在一个或多个 (但不是全部) 行上发生错误, 则将返回 SQL_SUCCESS_WITH_INFO; 如果发生错误, 则返回多行单行操作。  
   
 |SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01001|游标操作冲突|*操作*参数为 SQL_DELETE 或 SQL_UPDATE，和任何行或多个行已删除或更新。 (有关对多个行的更新的详细信息，请参阅说明 SQL_ATTR_SIMULATE_CURSOR*特性*中**SQLSetStmtAttr**。)（函数返回 SQL_SUCCESS_WITH_INFO。）<br /><br /> *操作*参数为 SQL_DELETE 或 SQL_UPDATE，并且操作失败，因为乐观并发。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01004|字符串数据右截断|*操作*参数为 SQL_REFRESH，并导致截断了非空白字符或二进制数据的非空字符串或二进制数据返回为一列或列数据类型为 SQL_C_CHAR 或 SQL_C_BINARY。|  
-|01S01|行中的错误|*RowNumber*参数为 0，并执行与指定的操作时一个或多个行中出现错误*操作*参数。<br /><br /> （SQL_SUCCESS_WITH_INFO 返回如果上一个或多个，但并非所有行的多行操作，出现错误，并且如果在单行操作出错，则返回 SQL_ERROR。）<br /><br /> (此 SQLSTATE 返回时，才**SQLSetPos**后，会调用**SQLExtendedFetch**，则该驱动程序是一个 ODBC *2.x*不使用驱动程序和游标库。)|  
-|01S07|截断小数部分|*操作*参数为 SQL_REFRESH、 应用程序缓冲区的数据类型不为 SQL_C_CHAR 或 SQL_C_BINARY，返回到应用程序的一个或多个列缓冲区的数据已被截断。 对于数值数据类型，数字的小数部分被截断。 对于时间、 时间戳和 interval 数据类型包含时间部分，时间的小数部分被截断。<br /><br /> （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07006|受限制的数据类型属性冲突|无法为指定的数据类型转换的结果集中的列的数据值*TargetType*调用中**SQLBindCol**。|  
-|07009|描述符索引无效|自变量*操作*SQL_REFRESH 或 SQL_UPDATE，并将其列已绑定使用一个大于结果集中的列数的列数。|  
-|21S02|派生表等级与列列表不匹配|自变量*操作*已 SQL_UPDATE，和任何列都可更新，因为所有列都是要么未绑定、 只读的或者绑定的长度/指示器缓冲区中的值是 SQL_COLUMN_IGNORE。|  
-|22001|字符串数据，右截断|*操作*参数为 SQL_UPDATE，并赋值的字符或二进制值的列生成了非空 （适用于字符为单位） 或 （对于二进制文件） 的非 null 字符或字节数的截断。|  
-|22003|数值超出范围|自变量*操作*已 SQL_UPDATE，并为结果集中的列的数值分配导致数字被截断的整个 （而不是小数） 部分。<br /><br /> 自变量*操作*已 SQL_REFRESH，并返回一个或多个绑定列的数值可能导致重要数字丢失。|  
-|22007|日期时间格式无效|自变量*操作*已 SQL_UPDATE，并分配到结果集中的列的日期或时间戳值导致年、 月或天字段超出范围。<br /><br /> 自变量*操作*已 SQL_REFRESH，并返回一个或多个绑定列的日期或时间戳值可能会造成年、 月或天字段超出范围。|  
-|22008|日期/时间字段溢出|*操作*参数为 SQL_UPDATE，和 datetime 算术数据发送到结果集中的列上的性能产生的结果的日期时间字段 （年、 月、 日、 小时、 分钟、 或第二个字段）外部字段，或无效的值的允许范围基于公历日历的日期时间的自然规则。<br /><br /> *操作*参数为 SQL_REFRESH，和算术运算的结果集中检索数据的日期时间的性能产生的结果的日期时间字段 （年、 月、 日、 小时、 分钟、 或第二个字段）外部字段，或无效的值的允许范围基于公历日历的日期时间的自然规则。|  
-|22015|间隔字段溢出|*操作*参数为 SQL_UPDATE，并分配的精确数字或到 SQL 数据类型的时间间隔的间隔 C 类型导致重要数字丢失。<br /><br /> *操作*参数为 SQL_UPDATE; 分配到 SQL 类型的时间间隔时，没有间隔 SQL 类型中的 C 类型的值没有表示形式。<br /><br /> *操作*参数为 SQL_REFRESH，并将分配从精确数字或时间间隔 SQL 类型到 C 间隔类型导致重要数字丢失前导字段中。<br /><br /> *操作*参数为 SQL_ 刷新; 分配到 C 间隔类型时，没有间隔 C 类型中的 SQL 类型的值的表示形式，则为。|  
-|22018|转换指定的字符值无效|*操作*参数为 SQL_REFRESH; C 类型为准确或近似数值、 日期时间或间隔数据类型; 该列的 SQL 类型是字符数据类型; 和列中的值不是有效的文本绑定 C 类型。<br /><br /> 自变量*操作*已 SQL_UPDATE; 的 SQL 类型是准确或近似数值、 日期时间或间隔数据类型; C 类型为 SQL_C_CHAR; 和列中的值不是有效的绑定的 SQL 类型的文本。|  
-|23000|完整性约束冲突|自变量*操作*SQL_DELETE 或 SQL_UPDATE，并且违反了完整性约束。|  
-|24000|游标状态无效|*StatementHandle*处于执行状态，但无结果集与关联*StatementHandle*。<br /><br /> (DM) 上打开了游标*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**尚未调用。<br /><br /> 在打开游标的*StatementHandle*，并**SQLFetch**或**SQLFetchScroll**已调用一样，但该游标所处的结果集或之后在开始之前结果集的末尾。<br /><br /> 自变量*操作*为 SQL_DELETE、 SQL_REFRESH 或 SQL_UPDATE，和游标早于开始日期的结果集或结果集的末尾之后位置。|  
-|40001|序列化失败|事务已回滚，由于其他事务与资源死锁。|  
-|40003|语句完成情况未知|此函数中，在执行期间失败关联的连接，无法确定事务的状态。|  
-|42000|语法错误或访问冲突|该驱动程序不能根据需要来执行请求的参数中的操作将该行锁定*操作*。<br /><br /> 该驱动程序不能在参数中的请求将该行锁定*LockType*。|  
-|44000|WITH CHECK OPTION 冲突|*操作*参数为 SQL_UPDATE，和查看的表上执行更新或创建通过指定的查看表中派生表**WITH CHECK OPTION**，这样，一个或多个行受影响的更新将不再存在中查看的表。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY008|操作已取消|异步处理的已启用*StatementHandle*。 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数是在上再次*StatementHandle*。<br /><br /> 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自不同线程中多线程应用程序。|  
-|HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行调用 SQLSetPos 函数时。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 调用函数时没有首先调用**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> (DM) 驱动程序是一个 ODBC *2.x*驱动程序，并**SQLSetPos**曾为*StatementHandle*后**SQLFetch**调用。|  
-|HY011|现在无法设置属性|(DM) 驱动程序是一个 ODBC *2.x*驱动程序; SQL_ATTR_ROW_STATUS_PTR 设置语句属性; 然后**SQLSetPos**之前调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**调用。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|*操作*参数为 SQL_UPDATE、 数据值为 null 指针，和的列长度值不是 0，SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORE，SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *操作*参数为 SQL_UPDATE; 数据值不是空指针; C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR; 和列长度值是小于 0 但不是等于 SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORESQL_NTS 或 SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 长度/指示器缓冲区中的值为 SQL_DATA_AT_EXEC;SQL 类型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源特定的数据类型;和中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**是"Y"。|  
-|HY092|无效的属性标识符|(DM) 为指定的值*操作*参数无效。<br /><br /> (DM) 为指定的值*LockType*参数无效。<br /><br /> *操作*参数 SQL_UPDATE 或 SQL_DELETE，而 sql_attr_concurrency 设置语句属性是 SQL_ATTR_CONCUR_READ_ONLY。|  
-|HY107|行数值超出范围|为参数指定的值*RowNumber*大于行集中的行数。|  
-|HY109|无效的游标位置|与关联的光标*StatementHandle*已定义为只进，因此未无法在行集内定位游标。 请参阅中的 SQL_ATTR_CURSOR_TYPE 属性的说明**SQLSetStmtAttr**。<br /><br /> *操作*自变量是 SQL_UPDATE、 SQL_DELETE，还是 SQL_REFRESH，并由标识该行*RowNumber*参数已删除或尚未提取。<br /><br /> （数据挖掘） *RowNumber*参数为 0，并且*操作*参数为 SQL_POSITION。<br /><br /> **SQLSetPos**后调用**SQLBulkOperations**调用之前**SQLFetchScroll**或**SQLFetch**调用。|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持请求中的操作*操作*自变量或*LockType*参数。|  
-|HYT00|超时时间已到|查询超时期限过期之前的数据源返回的结果集。 通过设置超时期限**SQLSetStmtAttr**与*属性*的 SQL_ATTR_QUERY_TIMEOUT。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
-|IM017|轮询异步通知模式中禁用|只要使用通知模型，将禁用轮询。|  
-|IM018|**SQLCompleteAsync**尚未调用以完成此句柄上以前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING，如果启用通知模式，则**SQLCompleteAsync**必须要对其进行后期处理并完成该操作的句柄上调用。|  
+|01000|一般警告|驱动程序特定的信息性消息。 (函数返回 SQL_SUCCESS_WITH_INFO。)|  
+|01001|游标操作冲突|*操作*参数为 SQL_DELETE 或 SQL_UPDATE, 但未删除或更新任何行或多行。 (有关多行更新的详细信息, 请参阅**SQLSetStmtAttr**中 SQL_ATTR_SIMULATE_CURSOR*属性*的说明。)(函数返回 SQL_SUCCESS_WITH_INFO。)<br /><br /> *操作*参数为 SQL_DELETE 或 SQL_UPDATE, 而操作由于乐观并发而失败。 (函数返回 SQL_SUCCESS_WITH_INFO。)|  
+|01004|字符串数据右截断|*操作*参数为 SQL_REFRESH, 返回的数据类型为 SQL_C_CHAR 或 SQL_C_BINARY 的列的字符串或二进制数据导致截断非空白字符或非 NULL 二进制数据。|  
+|01S01|行中的错误|*RowNumber*参数为 0, 并在执行使用*操作*参数指定的操作时出现一个或多个行中的错误。<br /><br /> (如果在一个或多个 (但不是全部) 多行操作行上发生错误, 则返回 SQL_SUCCESS_WITH_INFO, 如果单行操作出现错误, 则返回 SQL_ERROR。)<br /><br /> (仅当在**SQLExtendedFetch**后调用**SQLSetPos**时, 才会返回此 SQLSTATE, 如果该驱动程序是*一个 ODBC 2.x*驱动程序, 并且未使用该游标库。)|  
+|01S07|小数截断|*操作*参数为 SQL_REFRESH, 应用程序缓冲区的数据类型不是 SQL_C_CHAR 或 SQL_C_BINARY, 而且返回到一列或多列的应用程序缓冲区的数据被截断。 对于数值数据类型, 数值的小数部分被截断。 对于包含时间部分的时间、时间戳和间隔数据类型, 时间的小数部分将被截断。<br /><br /> (函数返回 SQL_SUCCESS_WITH_INFO。)|  
+|07006|受限制的数据类型属性冲突|在对**SQLBindCol**的调用中, 结果集中的列的数据值无法转换为*TargetType*指定的数据类型。|  
+|07009|描述符索引无效|参数*操作*是 SQL_REFRESH 或 SQL_UPDATE, 列的列号大于结果集中的列数。|  
+|21S02|派生表的等级与列列表不匹配|参数*操作*是 SQL_UPDATE 的, 并且没有可更新的列, 因为所有列均未绑定、为只读, 或者绑定长度/指示器缓冲区中的值为 SQL_COLUMN_IGNORE。|  
+|22001|字符串数据, 右截断|*操作*参数为 SQL_UPDATE, 将字符或二进制值分配给列会导致截断非空白字符 (对于字符) 或非 null (对于二进制) 字符或字节。|  
+|22003|数值超出范围|参数*操作*是 SQL_UPDATE 的, 并且对结果集中的某一列的数值赋值导致了整个 (而非分数) 要截断的数字部分。<br /><br /> 参数*操作*已 SQL_REFRESH, 返回一个或多个绑定列的数值将导致有效位丢失。|  
+|22007|Datetime 格式无效|参数*操作*已 SQL_UPDATE, 并且对结果集中的某列的日期或时间戳值赋值导致年、月或日字段超出范围。<br /><br /> 参数*操作*已 SQL_REFRESH, 返回一个或多个绑定列的日期或时间戳值将导致年、月或日字段超出范围。|  
+|22008|日期/时间字段溢出|*操作*参数是 SQL_UPDATE 的, 并且对要发送到结果集中的列的数据进行 datetime 算法的性能导致了日期时间字段 (年份、月份、天、小时、分钟或秒字段), 结果超出了允许的范围字段的值范围, 或基于公历的 datetime 自然规则无效。<br /><br /> *操作*参数为 SQL_REFRESH, 而从结果集检索的数据的 datetime 算法的性能导致了日期时间字段 (结果的年、月、日、小时、分钟或秒) 超出了允许的范围字段的值范围, 或基于公历的 datetime 自然规则无效。|  
+|22015|间隔字段溢出|*操作*参数为 SQL_UPDATE, 并将精确数值或间隔 C 类型分配给时间间隔 SQL 数据类型导致了有效位丢失。<br /><br /> *操作*参数为 SQL_UPDATE;当分配给某个间隔 SQL 类型时, interval SQL 类型中不存在 C 类型的值的表示形式。<br /><br /> *操作*参数为 SQL_REFRESH, 并从精确数值或间隔 SQL 类型赋值到 interval C 类型, 导致前导字段的有效位丢失。<br /><br /> *操作*参数为 SQL_ 刷新;当分配到某个时间间隔 C 类型时, 在 "C #" 类型的 "SQL 类型" 值中没有表示形式。|  
+|22018|转换规范的字符值无效|*操作*参数为 SQL_REFRESH;C 类型是精确或近似数字、日期时间或间隔数据类型;列的 SQL 类型是字符数据类型;列中的值不是绑定 C 类型的有效文本。<br /><br /> 参数*操作*为 SQL_UPDATE;SQL 类型是精确或近似的数字、日期时间或时间间隔数据类型;C 类型为 SQL_C_CHAR;列中的值不是绑定的 SQL 类型的有效文本。|  
+|23000|完整性约束冲突|参数*操作*是 SQL_DELETE 或 SQL_UPDATE, 违反了完整性约束。|  
+|24000|无效的游标状态|*StatementHandle*处于已执行状态, 但没有与*StatementHandle*关联的结果集。<br /><br /> (DM) 已在*StatementHandle*上打开游标, 但尚未调用**SQLFetch**或**SQLFetchScroll** 。<br /><br /> 在*StatementHandle*上打开了游标, 并且调用了**SQLFetch**或**SQLFetchScroll** , 但游标位于结果集的开头之前或结果集的末尾。<br /><br /> 参数*操作*为 SQL_DELETE、SQL_REFRESH 或 SQL_UPDATE, 游标位于结果集的开头之前或结果集结束之后。|  
+|40001|序列化失败|由于另一个事务发生了资源死锁, 事务已回滚。|  
+|40003|语句完成情况未知|在执行此函数的过程中关联的连接失败, 无法确定事务的状态。|  
+|42000|语法错误或访问冲突|驱动程序无法根据需要锁定行以执行在参数*操作*中请求的操作。<br /><br /> 驱动程序无法按参数*LockType*中的要求锁定该行。|  
+|44000|WITH CHECK OPTION 冲突|*操作*参数为 SQL_UPDATE, 已对查看的表或从已查看表 (通过指定**WITH CHECK OPTION**创建) 中派生的表执行了更新, 因此, 受更新影响的一个或多个行将不再是出现在查看的表中。|  
+|HY000|一般错误|发生了一个错误, 该错误没有特定的 SQLSTATE, 没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中**的 SQLGetDiagRec**返回的错误消息描述了错误及其原因。  *\**|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY008|操作已取消|已为*StatementHandle*启用异步处理。 函数被调用, 在完成执行之前, 在*StatementHandle*上调用了**SQLCancel**或**SQLCancelHandle** , 然后在*StatementHandle*上再次调用了该函数。<br /><br /> 函数被调用, 在完成执行之前, 从多线程应用程序中的另一个线程调用*StatementHandle*上的**SQLCancel**或**SQLCancelHandle** 。|  
+|HY010|函数序列错误|(DM) 为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用 SQLSetPos 函数时, 此异步函数仍在执行。<br /><br /> (DM) 指定的*StatementHandle*未处于执行状态。 调用函数时, 无需先调用**SQLExecDirect**、 **SQLExecute**或 catalog 函数。<br /><br /> (DM) 为*StatementHandle*调用了异步执行的函数 (而不是此函数), 并且在调用此函数时仍在执行。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSETPOS**调用了*StatementHandle*并返回了 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前, 将调用此函数。<br /><br /> (DM) 驱动程序是*一个 ODBC 2.x*驱动程序, 调用**SQLFetch**后, 为*StatementHandle*调用了**SQLSetPos** 。|  
+|HY011|现在无法设置属性|(DM) 驱动程序是*一个 ODBC 2.x*驱动程序;已设置 SQL_ATTR_ROW_STATUS_PTR 语句特性;然后调用**SQLSetPos** , 然后调用**SQLFetch**、 **SQLFetchScroll**或**SQLExtendedFetch** 。|  
+|HY013|内存管理错误|未能处理函数调用, 原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY090|字符串或缓冲区长度无效|*操作*参数为 SQL_UPDATE, 数据值为 null 指针, 列长度值不为 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, 或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *操作*参数为 SQL_UPDATE;数据值不是 null 指针;C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR;列长度值小于 0, 但不等于 SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS 或 SQL_NULL_DATA, 或者小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 长度/指示器缓冲区中的值为 SQL_DATA_AT_EXEC;SQL 类型为 SQL_LONGVARCHAR、SQL_LONGVARBINARY 或 long 特定于数据源的数据类型;**SQLGetInfo**中的 SQL_NEED_LONG_DATA_LEN 信息类型为 "Y"。|  
+|HY092|无效的属性标识符|(DM) 为*操作*参数指定的值无效。<br /><br /> (DM) 为*LockType*参数指定的值无效。<br /><br /> *操作*参数为 SQL_UPDATE 或 SQL_DELETE, SQL_ATTR_CONCURRENCY 语句特性为 SQL_ATTR_CONCUR_READ_ONLY。|  
+|HY107|行值超出范围|为参数*RowNumber*指定的值大于行集中的行数。|  
+|HY109|游标位置无效|与*StatementHandle*关联的游标被定义为只进, 因此无法将游标定位到行集中。 请参阅**SQLSetStmtAttr**中 SQL_ATTR_CURSOR_TYPE 属性的说明。<br /><br /> *操作*参数为 SQL_UPDATE、SQL_DELETE 或 SQL_REFRESH, 而由*RowNumber*参数标识的行已被删除或尚未提取。<br /><br /> (DM) *RowNumber*参数为 0,*操作*参数为 SQL_POSITION。<br /><br /> 调用**SQLBulkOperations**后, 调用**SQLFetchScroll**或**SQLFetch**之前调用了**SQLSetPos** 。|  
+|HY117|由于未知的事务状态, 连接被挂起。 仅允许断开连接和只读函数。|(DM) 有关挂起状态的详细信息, 请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持*操作*参数或*LockType*参数中请求的操作。|  
+|HYT00|超时时间已到|在数据源返回结果集之前, 查询超时期限已过期。 超时期限通过**SQLSetStmtAttr**设置为 SQL_ATTR_QUERY_TIMEOUT*属性*。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT 设置。|  
+|IM001|驱动程序不支持此功能|(DM) 与*StatementHandle*关联的驱动程序不支持该函数。|  
+|IM017|在异步通知模式下禁用轮询|无论何时使用通知模型, 都将禁用轮询。|  
+|IM018|尚未调用**SQLCompleteAsync**来完成此句柄上先前的异步操作。|如果句柄上的上一个函数调用返回 SQL_STILL_EXECUTING, 并且如果启用了通知模式, 则必须在句柄上调用**SQLCompleteAsync** , 才能执行后处理并完成操作。|  
   
 ## <a name="comments"></a>注释  
   
 > [!CAUTION]
->  有关语句的信息表明**SQLSetPos**可在中调用，它需要为与 ODBC 兼容性*2.x*应用程序，请参阅[块游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
+>  有关语句的详细信息, 请参阅**SQLSetPos**可以在中调用, 以及在*与 ODBC 2.x*应用程序兼容时需要执行的操作, 请参阅[块游标、可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
   
 ## <a name="rownumber-argument"></a>RowNumber 参数  
- *RowNumber*参数指定要对其执行由指定的操作在行集中的行数*操作*参数。 如果*RowNumber*为 0，则该操作适用于每个行集中的行。 *RowNumber*必须是介于 0 到行集中的行数。  
+ *RowNumber*参数指定行集中要对其执行*操作参数指定*的操作的行号。 如果*RowNumber*为 0, 则操作将应用于行集中的每一行。 *RowNumber*的值必须介于0和行集中的行数之间。  
   
 > [!NOTE]  
->  在 C 语言中，数组是从 0 开始， *RowNumber*自变量是从 1 开始。 例如，若要更新的行集的第五个行，应用程序修改的行集缓冲区的数组索引 4 处，但指定*RowNumber*为 5。  
+>  在 C 语言中, 数组基于 0, 并且*RowNumber*参数是从1开始的。 例如, 若要更新行集的第五行, 应用程序会修改数组索引4处的行集缓冲区, 但指定*RowNumber*为5。  
   
- 所有操作将游标都定位指定的行上*RowNumber*。 以下操作需要游标位置：  
+ 所有操作都将光标置于由*RowNumber*指定的行上。 以下操作需要游标位置:  
   
--   定位 update 和 delete 语句。  
+-   定位的 update 和 delete 语句。  
   
--   调用**SQLGetData**。  
+-   对**SQLGetData**的调用。  
   
--   调用**SQLSetPos** SQL_DELETE、 SQL_REFRESH 和 SQL_UPDATE 选项。  
+-   通过 SQL_DELETE、SQL_REFRESH 和 SQL_UPDATE 选项调用**SQLSetPos** 。  
   
- 例如，如果*RowNumber*为 2 个调用**SQLSetPos**与*操作*的 SQL_DELETE，将光标定位在第二行的行集，该行将被删除。 在实现行状态数组 （由 SQL_ATTR_ROW_STATUS_PTR 语句属性指向） 的第二行条目更改为 SQL_ROW_DELETED。  
+ 例如, 如果使用 SQL_DELETE 的*操作*对**SQLSetPos**的调用使用*RowNumber* , 则游标将定位到行集的第二行, 该行将被删除。 第二行的实现行状态数组中的项 (由 SQL_ATTR_ROW_STATUS_PTR 语句特性指向) 更改为 SQL_ROW_DELETED。  
   
- 调用时，应用程序可以指定游标位置**SQLSetPos**。 通常情况下，它将调用**SQLSetPos**与 SQL_POSITION 或 SQL_REFRESH 操作将游标定位之前执行定位更新或删除语句或者调用**SQLGetData**。  
+ 当应用程序调用**SQLSetPos**时, 可以指定游标位置。 通常情况下, 它通过 SQL_POSITION 或 SQL_REFRESH 操作调用**SQLSetPos** , 以便在执行定位的 update 或 delete 语句或调用**SQLGetData**之前定位光标。  
   
 ## <a name="operation-argument"></a>操作参数  
- *操作*参数支持以下操作。 若要确定哪些选项支持的数据源，应用程序调用**SQLGetInfo**与 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （具体取决于游标的类型） 的信息类型。  
+ *操作*参数支持以下操作。 若要确定数据源支持的选项, 应用程序将调用**SQLGetInfo**和 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1信息类型 (取决于游标的类型)。  
   
 |*运算*<br /><br /> 参数|操作|  
 |------------------------------|---------------|  
-|SQL_POSITION|该驱动程序将光标置于由指定的行上*RowNumber*。<br /><br /> 指向 SQL_ATTR_ROW_OPERATION_PTR 语句属性的行状态数组的内容会忽略 SQL_POSITION*操作*。|  
-|SQL_REFRESH|该驱动程序将光标置于由指定的行上*RowNumber*并刷新数据，为该行的行集缓冲区中。 有关如何驱动程序返回的行集缓冲区中数据的详细信息，请参阅按行和按列绑定中的说明**SQLBindCol**。<br /><br /> **SQLSetPos**与*操作*SQL_REFRESH 的更新的状态和当前提取行集内的行的内容。 这包括刷新书签。 因为缓冲区中的数据刷新，但不是 refetched，被固定的行集中的成员身份。 这是不同于通过调用执行刷新**SQLFetchScroll**与*FetchOrientation* SQL_FETCH_RELATIVE 的和一个*RowNumber*等于 0，refetches如果该驱动程序和游标都支持这些操作，从结果集，以便它可以显示添加的数据和删除的行集删除数据。<br /><br /> 使用成功刷新**SQLSetPos**不会更改的行状态为 SQL_ROW_DELETED。 已删除的行，该行集内仍将被标记为已删除，直到下一次提取。 游标支持装箱会消失在下一次提取行 (在其中的后续**SQLFetch**或**SQLFetchScroll**不会返回已删除的行)。<br /><br /> 添加行时使用刷新不会出现**SQLSetPos**执行。 此行为是不同于**SQLFetchScroll**与*FetchType* SQL_FETCH_RELATIVE 的和一个*RowNumber*等于 0，这还刷新但将当前行集如果游标支持这些操作，则包已删除的记录或显示添加的记录。<br /><br /> 使用成功刷新**SQLSetPos** （如果存在行状态数组） 将变为 SQL_ROW_SUCCESS SQL_ROW_ADDED 行状态。<br /><br /> 使用成功刷新**SQLSetPos**将更改的行状态为 SQL_ROW_UPDATED 为行的新状态 （如果存在行状态数组）。<br /><br /> 如果在出现错误**SQLSetPos**对某行的操作，将行状态设置为 SQL_ROW_ERROR （如果存在行状态数组）。<br /><br /> 游标为打开的 SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES，使用刷新 sql_attr_concurrency 设置语句属性与**SQLSetPos**可能会更新数据源用于检测的乐观并发值行已更改。 如果发生这种情况，只要行集缓冲区刷新从服务器会更新的行版本或使用，以确保游标并发的值。 刷新每个行发生这种情况。<br /><br /> 指向 SQL_ATTR_ROW_OPERATION_PTR 语句属性的行状态数组的内容会忽略 SQL_REFRESH*操作*。|  
-|SQL_UPDATE|该驱动程序将光标置于由指定的行上*RowNumber* ，并使用行集缓冲区中的值更新数据的基础行 ( *TargetValuePtr*中的参数**SQLBindCol**)。 它从长度/指示器缓冲区中检索的数据的长度 ( *StrLen_or_IndPtr*中的参数**SQLBindCol**)。 如果任何列的长度为 SQL_COLUMN_IGNORE，该列不会更新。 在更新后的行，该驱动程序更改行状态数组的对应元素为 SQL_ROW_UPDATED 或 SQL_ROW_SUCCESS_WITH_INFO （如果存在行状态数组）。<br /><br /> 它是驱动程序定义的行为是如果**SQLSetPos**与*操作*SQL_UPDATE 参数调用上包含重复的列的游标。 该驱动程序可以返回驱动程序定义的 SQLSTATE、 可以更新显示在结果集中的第一列或执行其他驱动程序定义的行为。<br /><br /> 行操作数组指向 SQL_ATTR_ROW_OPERATION_PTR 语句属性可以用于指示应在大容量更新期间忽略当前行集中的行。 有关详细信息，请参阅更高版本中此函数引用的"状态和操作数组"。|  
-|SQL_DELETE|该驱动程序将光标置于由指定的行上*RowNumber*和删除数据的基础行。 它将更改为 SQL_ROW_DELETED 行状态数组的相应元素。 删除行后，下面不是有效的行： 定位 update 和 delete 语句，对**SQLGetData**，并调用**SQLSetPos**与*操作*设置为 SQL_POSITION 以外。 支持封装的驱动程序，请从数据源中检索新数据时行从游标中删除。<br /><br /> 行是否保持可见取决于游标类型。 例如，已删除的行是静态的和由键集驱动游标可见，但对动态游标不可见。<br /><br /> 行操作数组指向 SQL_ATTR_ROW_OPERATION_PTR 语句属性可以用于指示应在大容量删除期间忽略当前行集中的行。 有关详细信息，请参阅更高版本中此函数引用的"状态和操作数组"。|  
+|SQL_POSITION|驱动程序将游标定位于*RowNumber*指定的行。<br /><br /> 对于 SQL_POSITION*操作*, 将忽略 SQL_ATTR_ROW_OPERATION_PTR 语句属性所指向的行状态数组的内容。|  
+|SQL_REFRESH|驱动程序将游标定位在*RowNumber*指定的行上, 并刷新该行的行集缓冲区中的数据。 有关驱动程序如何返回行集缓冲区中的数据的详细信息, 请参阅**SQLBindCol**中的行和列绑定的描述。<br /><br /> 具有 SQL_REFRESH*操作*的**SQLSetPos**将更新当前提取的行集中的行的状态和内容。 这包括刷新书签。 由于缓冲区中的数据已刷新但不制约, 因此行集中的成员身份是固定的。 这不同于使用 SQL_FETCH_RELATIVE 的*FetchOrientation*调用**SQLFetchScroll**执行的刷新和等于0的*RowNumber* , 这会从结果集中 refetches 行集, 使其能够显示添加的数据并将其删除如果驱动程序和游标支持这些操作, 则删除数据。<br /><br /> 使用**SQLSetPos**成功刷新将不会更改 SQL_ROW_DELETED 的行状态。 在下一次提取之前, 行集中已删除的行将继续标记为已删除。 如果游标支持打包 (其中后面的**SQLFetch**或**SQLFetchScroll**不返回已删除的行), 则将在下一次提取时消失行。<br /><br /> 执行刷新 with **SQLSetPos**时不会显示已添加的行。 此行为不同于**SQLFetchScroll** , 其中*FetchType*为 SQL_FETCH_RELATIVE, *RowNumber*等于 0, 这也会刷新当前行集, 但如果这些操作游标支持。<br /><br /> 使用**SQLSetPos**成功刷新会将行状态从 SQL_ROW_ADDED 更改为 SQL_ROW_SUCCESS (如果行状态数组存在)。<br /><br /> 使用**SQLSetPos**成功刷新会将行状态更改为行的新状态 (如果行状态数组存在)。<br /><br /> 如果对某行执行**SQLSetPos**操作时出错, 则该行状态将设置为 SQL_ROW_ERROR (如果行状态数组存在)。<br /><br /> 对于使用 SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES 的 SQL_ATTR_CONCURRENCY 语句属性打开的游标, 使用**SQLSetPos**的刷新可能会更新数据源使用的开放式并发值, 以检测行是否已更改。 如果出现这种情况, 则在从服务器刷新行集缓冲区时, 将更新用于确保游标并发的行版本。 这会对每个刷新的行发生。<br /><br /> 对于 SQL_REFRESH*操作*, 将忽略 SQL_ATTR_ROW_OPERATION_PTR 语句属性所指向的行状态数组的内容。|  
+|SQL_UPDATE|驱动程序将游标定位于*RowNumber*指定的行, 并使用行集缓冲区中的值 ( **SQLBindCol**中的*TargetValuePtr*参数) 更新基础数据行。 它从长度/指示器缓冲区 ( **SQLBindCol**中的*StrLen_or_IndPtr*参数) 检索数据的长度。 如果任意列的长度为 SQL_COLUMN_IGNORE, 则不会更新该列。 更新行后, 驱动程序将行状态数组的相应元素更改为 SQL_ROW_UPDATED 或 SQL_ROW_SUCCESS_WITH_INFO (如果行状态数组存在)。<br /><br /> 它是驱动程序定义的行为, 如果对包含重复列的游标调用了**SQLSetPos**操作参数为 SQL_UPDATE 的*操作*。 驱动程序可以返回驱动程序定义的 SQLSTATE, 可以更新结果集中出现的第一列, 或者执行其他驱动程序定义的行为。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 语句特性指向的行操作数组可用于指示在大容量更新期间应忽略当前行集中的行。 有关详细信息, 请参阅此函数引用后面的 "状态和操作数组"。|  
+|SQL_DELETE|驱动程序将光标置于由*RowNumber*指定的行上, 并删除基础数据行。 它将行状态数组的相应元素更改为 SQL_ROW_DELETED。 删除行后, 以下行对行无效: 已定位的 update 和 delete 语句、对**SQLGetData**的调用, 以及对除 SQL_POSITION 以外的任何内容的*操作*调用**SQLSetPos** 。 对于支持打包的驱动程序, 当从数据源中检索新数据时, 将从游标中删除该行。<br /><br /> 行是否保持可见取决于游标类型。 例如, 已删除的行对静态游标和由键集驱动的游标可见, 但不会对动态游标可见。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 语句特性指向的行操作数组可用于指示在大容量删除期间应忽略当前行集中的行。 有关详细信息, 请参阅此函数引用后面的 "状态和操作数组"。|  
   
 ## <a name="locktype-argument"></a>LockType 参数  
- *LockType*参数提供的应用程序来控制并发的方法。 在大多数情况下，支持的并发级别和事务的数据源将支持的 SQL_LOCK_NO_CHANGE 值仅*LockType*参数。 *LockType*参数通常仅用于基于文件的支持。  
+ *LockType*参数为应用程序提供了一种控制并发的方式。 在大多数情况下, 支持并发级别和事务的数据源将仅支持*LockType*参数的 SQL_LOCK_NO_CHANGE 值。 *LockType*参数通常仅用于基于文件的支持。  
   
- *LockType*参数指定的行后的锁定状态**SQLSetPos**已执行。 如果驱动程序无法执行请求的操作，或者为了满足将该行锁定*LockType*参数，它将返回 SQL_ERROR 和 SQLSTATE 42000 （语法错误或访问冲突）。  
+ *LockType*参数指定**SQLSetPos**执行后行的锁定状态。 如果驱动程序无法将行锁定为执行请求的操作或满足*LockType*参数, 则它将返回 SQL_ERROR 和 SQLSTATE 42000 (语法错误或访问冲突)。  
   
- 尽管*LockType*为单个语句指定了参数，该锁 accords 的连接上的所有语句相同的权限。 具体而言，通过在连接上的一条语句获取的锁可以由同一个连接上的不同语句解除锁定。  
+ 尽管为单个语句指定了*LockType*参数, 但该锁 accords 对该连接上的所有语句都具有相同的特权。 具体而言, 连接上的一个语句所获得的锁可以通过同一连接上的不同语句来解除锁定。  
   
- 通过锁定行**SQLSetPos**应用程序调用之前保持锁定状态**SQLSetPos**的行的*LockType*设置为 SQL_LOCK_UNLOCK，或直到应用程序调用**SQLFreeHandle**语句或**SQLFreeStmt** SQL_CLOSE 选项。 为支持事务的驱动程序，通过将锁定行**SQLSetPos**应用程序调用时，会解锁**SQLEndTran**提交或回滚事务，在连接上 （如果关闭游标当提交或回滚后，由 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 信息类型返回的事务**SQLGetInfo**)。  
+ 通过**SQLSetPos**锁定的行保持锁定状态, 直到应用程序对*LOCKTYPE*设置为 SQL_LOCK_UNLOCK 的行调用**SQLSetPos** , 或直到应用程序对语句或 SQLFreeHandle 调用**SQLFreeStmt** 。  WITH SQL_CLOSE 选项。 对于支持事务的驱动程序, 当应用程序调用**SQLEndTran**在连接上提交或回滚事务时, 将取消锁定通过**SQLSetPos**锁定的行 (如果在提交或回滚事务时关闭游标,由**SQLGetInfo**返回的 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR 信息类型表示)。  
   
- *LockType*参数支持以下类型的锁。 若要确定哪些锁支持的数据源，应用程序调用**SQLGetInfo**与 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （具体取决于游标的类型） 的信息类型。  
+ *LockType*参数支持以下类型的锁。 若要确定数据源支持哪些锁, 应用程序将调用**SQLGetInfo**和 SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1信息类型 (取决于游标的类型)。  
   
 |*LockType*参数|锁类型|  
 |-------------------------|---------------|  
-|SQL_LOCK_NO_CHANGE|驱动程序或数据源可确保之前的一行是相同的锁定或解锁状态**SQLSetPos**调用。 此值的*LockType*允许不支持显式行级锁定要当前的并发性和事务隔离级别使用任何锁定所需的数据源。|  
-|SQL_LOCK_EXCLUSIVE|驱动程序或数据源以独占方式锁定行。 在不同连接上或在不同的应用程序中的语句不能用于获取在该行上的任何锁。|  
-|SQL_LOCK_UNLOCK|驱动程序或数据源对行进行解锁。|  
+|SQL_LOCK_NO_CHANGE|驱动程序或数据源确保行处于调用**SQLSetPos**之前的锁定或解锁状态。 此值*LockType*允许不支持显式行级锁定的数据源使用当前并发和事务隔离级别所需的任何锁定。|  
+|SQL_LOCK_EXCLUSIVE|驱动程序或数据源只锁定行。 不同连接或不同应用程序中的语句不能用于获取行的任何锁。|  
+|SQL_LOCK_UNLOCK|驱动程序或数据源将锁定该行。|  
   
- 如果驱动程序支持 SQL_LOCK_EXCLUSIVE，但不支持 SQL_LOCK_UNLOCK，已锁定的行将保持锁定状态，直到上一个段中所述的函数调用之一发生。  
+ 如果驱动程序支持 SQL_LOCK_EXCLUSIVE, 但不支持 SQL_LOCK_UNLOCK, 则锁定的行将保持锁定状态, 直到上一段中所述的函数调用发生。  
   
- 如果驱动程序支持 SQL_LOCK_EXCLUSIVE，但不支持 SQL_LOCK_UNLOCK，已锁定的行将保持锁定状态直到应用程序调用**SQLFreeHandle**语句或**SQLFreeStmt**与SQL_CLOSE 选项中。 如果该驱动程序支持事务，并且关闭在提交或回滚事务，应用程序调用时游标**SQLEndTran**。  
+ 如果驱动程序支持 SQL_LOCK_EXCLUSIVE, 但不支持 SQL_LOCK_UNLOCK, 则锁定的行将保持锁定状态, 直到应用程序使用 SQL_CLOSE 选项调用语句或**SQLFreeStmt**的**SQLFreeHandle** 。 如果驱动程序支持事务并在提交或回滚事务时关闭游标, 则该应用程序将调用**SQLEndTran**。  
   
- 有关中的 update 和 delete 操作**SQLSetPos**，应用程序使用*LockType*参数，如下所示：  
+ 对于**SQLSetPos**中的更新和删除操作, 应用程序将使用*LockType*参数, 如下所示:  
   
--   若要保证行不会更改在检索之后，应用程序调用**SQLSetPos**与*操作*设置为 SQL_REFRESH 并*LockType*设置为 SQL_LOCK_排他。  
+-   为了保证行在检索后不会更改, 应用程序将调用**SQLSetPos** , 并将*操作*设置为 SQL_REFRESH, 将*LockType*设置为 SQL_LOCK_EXCLUSIVE。  
   
--   如果应用程序设置*LockType*到 SQL_LOCK_NO_CHANGE，驱动程序可确保仅当应用程序指定 SQL_CONCUR_LOCK sql_attr_concurrency 设置语句属性的更新或删除操作将会成功。  
+-   如果应用程序将*LockType*设置为 SQL_LOCK_NO_CHANGE, 则只有当应用程序为 SQL_ATTR_CONCURRENCY 语句特性指定了 SQL_CONCUR_LOCK 时, 驱动程序才保证更新或删除操作将成功。  
   
--   如果应用程序指定的语句属性 SQL_ATTR_CONCURRENCY SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES，驱动程序将行版本或值进行比较，如果应用程序提取行更改行，则拒绝该操作。  
+-   如果应用程序为 SQL_ATTR_CONCURRENCY 语句特性指定了 SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES, 则驱动程序会比较行版本或值, 如果自应用程序提取行后行发生了更改, 则会拒绝该操作。  
   
--   如果应用程序指定 SQL_CONCUR_READ_ONLY sql_attr_concurrency 设置语句属性，该驱动程序将拒绝任何更新或删除操作。  
+-   如果应用程序为 SQL_ATTR_CONCURRENCY 语句特性指定 SQL_CONCUR_READ_ONLY, 则驱动程序将拒绝任何更新或删除操作。  
   
- 有关 sql_attr_concurrency 设置语句属性的详细信息，请参阅[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
+ 有关 SQL_ATTR_CONCURRENCY 语句特性的详细信息, 请参阅[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。  
   
-## <a name="status-and-operation-arrays"></a>状态和操作数组  
- 调用时使用以下的状态和操作数组**SQLSetPos**:  
+## <a name="status-and-operation-arrays"></a>状态和操作阵列  
+ 调用**SQLSetPos**时, 将使用以下状态和操作数组:  
   
--   行状态数组 （如指向 IRD 和 SQL_ATTR_ROW_STATUS_ARRAY 语句属性中的 SQL_DESC_ARRAY_STATUS_PTR 字段） 包含行集中的数据的每一行的状态值。 驱动程序后调用此数组中设置状态值**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，或者**SQLSetPos**. 此数组所指向的 SQL_ATTR_ROW_STATUS_PTR 语句属性。  
+-   行状态数组 (由 IRD 和 SQL_ATTR_ROW_STATUS_ARRAY 语句属性中的 SQL_DESC_ARRAY_STATUS_PTR 字段指向) 包含行集中每个数据行的状态值。 在调用**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**之后, 驱动程序将设置此数组中的状态值。 此数组由 SQL_ATTR_ROW_STATUS_PTR 语句特性指向。  
   
--   行操作数组 （如指向 ARD 和 SQL_ATTR_ROW_OPERATION_ARRAY 语句属性中的 SQL_DESC_ARRAY_STATUS_PTR 字段） 包含每个行集中的一行，该值指示值是否调用**SQLSetPos**忽略或执行大容量操作。 数组中的每个元素设置为 SQL_ROW_PROCEED （默认值） 或 SQL_ROW_IGNORE。 此数组所指向的 SQL_ATTR_ROW_OPERATION_PTR 语句属性。  
+-   行操作数组 (由 ARD 和 SQL_ATTR_ROW_OPERATION_ARRAY 语句属性中的 SQL_DESC_ARRAY_STATUS_PTR 字段指向) 包含行集中每一行的值, 该值指示是否对大容量操作调用**SQLSetPos**被忽略或执行。 数组中的每个元素都设置为 SQL_ROW_PROCEED (默认值) 或 SQL_ROW_IGNORE。 此数组由 SQL_ATTR_ROW_OPERATION_PTR 语句特性指向。  
   
- 状态和操作数组中的元素数必须等于行集 （如 SQL_ATTR_ROW_ARRAY_SIZE 语句属性所定义） 中的行数。  
+ 状态和操作数组中的元素数必须等于行集中的行数 (由 SQL_ATTR_ROW_ARRAY_SIZE 语句特性定义)。  
   
- 有关行状态数组的信息，请参阅[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)。 有关行操作数组的信息，请参阅"忽略行中大容量操作，"更高版本在本部分中。  
+ 有关行状态数组的信息, 请参阅[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)。 有关行操作数组的信息, 请参阅本部分后面的 "在批量操作中忽略行"。  
   
 ## <a name="using-sqlsetpos"></a>使用 SQLSetPos  
- 应用程序调用之前**SQLSetPos**，它必须执行以下步骤序列：  
+ 在应用程序调用**SQLSetPos**之前, 必须执行以下步骤序列:  
   
-1.  如果应用程序将调用**SQLSetPos**与*操作*设置为 SQL_UPDATE，调用**SQLBindCol** (或**SQLSetDescRec**) 为每个若要指定其数据类型和绑定的列的数据和长度的缓冲区的列。  
+1.  如果应用程序将调用**SQLSetPos** , 并将*操作*设置为 SQL_UPDATE, 则为每一列调用**SQLBindCol** (或**SQLSetDescRec**) 以指定其数据类型, 并绑定列的数据和长度的缓冲区。  
   
-2.  如果应用程序将调用**SQLSetPos**与*操作*设置为 SQL_DELETE 或 SQL_UPDATE，调用**SQLColAttribute** ，确保要删除或更新的列是可更新。  
+2.  如果应用程序将调用**SQLSetPos** , 并将*操作*设置为 SQL_DELETE 或 SQL_UPDATE, 请调用**SQLColAttribute**以确保要删除或更新的列可更新。  
   
-3.  调用**SQLExecDirect**， **SQLExecute**，或创建结果集的目录函数。  
+3.  调用**SQLExecDirect**、 **SQLExecute**或 catalog 函数以创建结果集。  
   
-4.  调用**SQLFetch**或**SQLFetchScroll**来检索数据。  
+4.  调用**SQLFetch**或**SQLFetchScroll**以检索数据。  
   
- 有关使用详细信息**SQLSetPos**，请参阅[使用 SQLSetPos 更新数据](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)。  
+ 有关使用**SQLSetPos**的详细信息, 请参阅[使用 SQLSetPos 更新数据](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)。  
   
 ## <a name="deleting-data-using-sqlsetpos"></a>使用 SQLSetPos 删除数据  
- 若要删除数据**SQLSetPos**，应用程序调用**SQLSetPos**与*RowNumber*设置为的行数，以删除和*操作*设置为 SQL_DELETE。  
+ 若要删除**SQLSetPos**中的数据, 应用程序将调用**SQLSetPos** , 并将*RowNumber*设置为要删除的行的行号, 并将*操作*设置为 SQL_DELETE。  
   
- 删除数据后，驱动程序将更改为 SQL_ROW_DELETED （或 SQL_ROW_ERROR） 中的相应行实现行状态数组的值。  
+ 删除数据后, 驱动程序会将相应行的实现行状态数组中的值更改为 SQL_ROW_DELETED (或 SQL_ROW_ERROR)。  
   
 ## <a name="updating-data-using-sqlsetpos"></a>使用 SQLSetPos 更新数据  
- 应用程序可以绑定的数据缓冲区中或通过一个或多个调用将传递列的值**SQLPutData**。 其数据传递使用的列**SQLPutData**称为*执行时数据* *列*。 这些通常用于发送 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 列的数据，可以与其他列组合。  
+ 应用程序可以在绑定的数据缓冲区中或者通过一个或多个对**SQLPutData**的调用传递列的值。 其数据与**SQLPutData**一起传递的列称为 "*执行时数据*"*列*。 这些数据通常用于发送 SQL_LONGVARBINARY 和 SQL_LONGVARCHAR 列的数据, 并且可以与其他列混合使用。  
   
-#### <a name="to-update-data-with-sqlsetpos-an-application"></a>使用 SQLSetPos，应用程序中更新数据：  
+#### <a name="to-update-data-with-sqlsetpos-an-application"></a>若要使用 SQLSetPos 更新数据, 请执行以下操作:  
   
-1.  通过绑定数据和长度/指示器缓冲区中的位置值**SQLBindCol**:  
+1.  将数据和长度/指示器缓冲区中的值置于**SQLBindCol**:  
   
-    -   对于正常的列，应用程序将放置中的新列值 *\*TargetValuePtr*缓冲区和中该值的长度 *\*StrLen_or_IndPtr*缓冲区。 如果不应更新行，应用程序会将 SQL_ROW_IGNORE 置于该行的行操作数组的元素。  
+    -   对于普通列, 应用程序会将新列值置于 *\*TargetValuePtr*缓冲区中, 并将该值的长度置于 *\*StrLen_or_IndPtr*缓冲区中。 如果不应更新该行, 应用程序会将 SQL_ROW_IGNORE 置于行操作数组的该行的元素中。  
   
-    -   对于执行时数据列，应用程序中放入应用程序定义值，如列数 *\*TargetValuePtr*缓冲区。 可以稍后使用值标识的列。  
+    -   对于执行时数据列, 应用程序会将应用程序定义的值 (如列号) 放入 *\*TargetValuePtr*缓冲区。 稍后可使用该值来识别列。  
   
-         SQL_LEN_DATA_AT_EXEC 将结果放置于该应用程序 (*长度*) 中的宏 **StrLen_or_IndPtr*缓冲区。 如果 SQL 数据类型的列是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 数据源特定的数据类型和驱动程序将返回"Y"SQL_NEED_LONG_DATA_LEN 信息类型中的**SQLGetInfo**，*长度*是数个字节的数据要发送的参数; 否则为必须为非负值，并且将被忽略。  
+         应用程序将 SQL_LEN_DATA_AT_EXEC (*length*) 宏的结果放入 **StrLen_or_IndPtr*缓冲区。 如果列的 SQL 数据类型为 SQL_LONGVARBINARY、SQL_LONGVARCHAR 或 long 特定于数据源的数据类型, 并且驱动程序为**SQLGetInfo**中的 SQL_NEED_LONG_DATA_LEN 信息类型返回 "Y", 则*length*是数据的字节数。为参数发送;否则, 该值必须为非负值, 并且将被忽略。  
   
-2.  调用**SQLSetPos**与*操作*参数设置为 SQL_UPDATE 来更新数据的行。  
+2.  调用**SQLSetPos** , 并将*操作*参数设置为 SQL_UPDATE 以更新数据行。  
   
-    -   如果不有任何执行时数据列，该过程已完成。  
+    -   如果没有执行时数据列, 则该过程已完成。  
   
-    -   如果有任何执行时数据列，该函数将返回 SQL_NEED_DATA，并转到步骤 3。  
+    -   如果有任何执行时数据列, 该函数将返回 SQL_NEED_DATA, 并继续执行到步骤3。  
   
-3.  调用**SQLParamData**若要检索的地址 *\*TargetValuePtr*要处理的第一个执行时数据列的缓冲区。 **SQLParamData**返回 SQL_NEED_DATA。 应用程序中检索应用程序定义的值从 *\*TargetValuePtr*缓冲区。  
-  
-    > [!NOTE]  
-    >  尽管执行时数据参数类似于执行时数据列，但返回的值**SQLParamData**是为每个不同。  
+3.  对于要处理的第一个执行时数据列, 调用**SQLParamData**来检索 *\*TargetValuePtr*缓冲区的地址。 **SQLParamData**返回 SQL_NEED_DATA。 应用程序从 *\*TargetValuePtr*缓冲区检索应用程序定义的值。  
   
     > [!NOTE]  
-    >  执行时数据参数是数据将发送与 SQL 语句中的参数**SQLPutData**时执行语句**SQLExecDirect**或**SQLExecute**. 它们被绑定与**SQLBindParameter**或通过设置与描述符**SQLSetDescRec**。 返回的值**SQLParamData**是一个 32 位值传递给**SQLBindParameter**中*ParameterValuePtr*参数。  
+    >  尽管执行时数据参数与执行时数据列相似, 但每个**SQLParamData**返回的值都是不同的。  
   
     > [!NOTE]  
-    >  执行时数据列是包含在行集数据将发送具有**SQLPutData**更新某一行时**SQLSetPos**。 它们被绑定与**SQLBindCol**。 返回的值**SQLParamData**是中的行的地址 **TargetValuePtr*正在处理的缓冲区。  
+    >  执行时数据参数是 SQL 语句中的参数, 当使用**SQLExecDirect**或**SQLExecute**执行语句时, 该语句中的数据将与**SQLPutData**一起发送。 它们通过**SQLBindParameter**或通过使用**SQLSetDescRec**设置描述符进行绑定。 **SQLParamData**返回的值是在*ParameterValuePtr*参数中传递给**SQLBindParameter**的32位值。  
   
-4.  调用**SQLPutData**一个或多个次多次以发送列数据。 如果所有这些数据值不能返回的则需要多次调用 *\*TargetValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**只有在将字符 C 数据发送到包含的字符、 二进制或数据源特定的数据类型的列或二进制 C 数据发送到具有二进制文件，一个字符的列时允许同一列或数据源特定的数据类型。  
+    > [!NOTE]  
+    >  执行时数据列是行集中的列, 当使用**SQLSetPos**更新行时, 数据将随**SQLPutData**一起发送。 它们与**SQLBindCol**绑定在一起。 **SQLParamData**返回的值是正在处理的 **TargetValuePtr*缓冲区中的行的地址。  
   
-5.  调用**SQLParamData**再次以指示已将列的所有数据。  
+4.  调用**SQLPutData**一次或多次以发送列的数据。 如果在**SQLPutData**中指定的 *\*TargetValuePtr*缓冲区中无法返回所有数据值, 则需要多个调用; 只有在发送字符 C 数据时才允许对同一列的**SQLPutData**进行多次调用到具有字符、二进制或数据源特定数据类型的列, 或将二进制 C 数据发送到具有字符、二进制或数据源特定数据类型的列时。  
   
-    -   如果有多个执行时数据列， **SQLParamData**将返回 SQL_NEED_DATA 和的地址*TargetValuePtr*要处理的下一步执行时数据列的缓冲区。 应用程序重复步骤 4 和 5。  
+5.  再次调用**SQLParamData** , 以指示已发送列的所有数据。  
   
-    -   如果没有更多的执行时数据列，该过程已完成。 如果成功，已执行语句**SQLParamData**返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO; 如果执行失败，它将返回 SQL_ERROR。 在此情况下， **SQLParamData**可以返回任何可由返回的 SQLSTATE **SQLSetPos**。  
+    -   如果有多个执行时数据列, **SQLParamData**将返回 SQL_NEED_DATA, 并为要处理的下一个执行时数据列返回*TargetValuePtr*缓冲区的地址。 应用程序重复步骤4和5。  
   
- 如果数据已更新，该驱动程序将更改为 SQL_ROW_UPDATED 在实现行状态数组的相应行的值。  
+    -   如果没有其他执行时数据列, 则该过程已完成。 如果语句已成功执行, 则**SQLParamData**将返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO;如果执行失败, 则返回 SQL_ERROR。 此时, **SQLParamData**可以返回**SQLSetPos**可以返回的任何 SQLSTATE。  
   
- 如果将取消该操作，或者在出错**SQLParamData**或**SQLPutData**后**SQLSetPos**返回 SQL_NEED_DATA 和之前的所有发送数据执行时数据列，该应用程序可以调用仅**SQLCancel**， **SQLGetDiagField**， **SQLGetDiagRec**， **SQLGetFunctions**， **SQLParamData**，或**SQLPutData**语句或用语句相关联的连接。 如果它调用任何其他函数的语句或用语句相关联的连接，则函数返回 SQL_ERROR 并且 SQLSTATE HY010 （函数序列错误）。  
+ 如果数据已更新, 驱动程序会将相应行的实现行状态数组中的值更改为 SQL_ROW_UPDATED。  
   
- 如果应用程序调用**SQLCancel**驱动程序时驱动程序仍需要执行时数据列的数据，取消操作。 然后，应用程序可以调用**SQLSetPos**再次取消不会影响游标状态或当前光标位置。  
+ 如果操作已取消, 或在**SQLParamData**或**SQLPutData**中发生错误, 则在**SQLSetPos**返回 SQL_NEED_DATA 后, 在为所有执行时数据列发送数据之前, 应用程序只能调用**SQLCancel**, **SQLGetDiagField**、 **SQLGetDiagRec**、 **SQLGetFunctions**、 **SQLParamData**或**SQLPutData**用于语句或与该语句关联的连接。 如果它调用语句的任何其他函数或与该语句关联的连接, 则该函数将返回 SQL_ERROR 和 SQLSTATE HY010 (函数序列错误)。  
   
- 当查询规范与游标相关联的选择列表包含多个引用同一列，是否会生成错误或驱动程序忽略重复的引用，并执行所请求的操作是驱动程序定义的。  
+ 如果应用程序调用**SQLCancel** , 但驱动程序仍需要数据执行时数据列, 则驱动程序将取消该操作。 然后, 应用程序可以再次调用**SQLSetPos** ;取消不会影响游标状态或当前游标位置。  
   
-## <a name="performing-bulk-operations"></a>执行大容量操作  
- 如果*RowNumber*参数为 0，则该驱动程序执行中指定的操作*操作*参数中的值为 SQL_ROW_PROCEED 行操作中与其字段中的行集的每一行指向数组由 SQL_ATTR_ROW_OPERATION_PTR 语句属性。 这是一个有效的值*RowNumber*参数*操作*SQL_DELETE，SQL_REFRESH，或 SQL_UPDATE，但不是 SQL_POSITION 的参数。 **SQLSetPos**与*操作*SQL_POSITION 的和一个*RowNumber*等于 0 将返回 SQLSTATE HY109 （无效的游标位置）。  
+ 当与游标关联的查询规范的选择列表包含对同一列的多个引用时, 无论是否生成错误, 或者驱动程序是否忽略重复的引用并执行所请求的操作, 都是由驱动程序定义的。  
   
- 如果发生错误适用于整个行集，如 SQLSTATE HYT00 （超时过期），驱动程序将返回 SQL_ERROR 并且相应的 SQLSTATE。 行集缓冲区的内容是不确定，并且光标位置保持不变。  
+## <a name="performing-bulk-operations"></a>执行批量操作  
+ 如果*RowNumber*参数为 0, 则驱动程序将在*操作*参数中为行集中的每行指定一个操作, 该操作在行操作数组的字段中具有值 SQL_ROW_PROCEED, 并由 SQL_ATTR_ROW_OPERATION_PTR 指向。语句属性。 这是 SQL_DELETE、SQL_REFRESH 或 SQL_UPDATE 的*操作*参数的*RowNumber*参数的有效值, 而不是 SQL_POSITION 的值。 如果**SQLSetPos**的*操作*为 SQL_POSITION, 并且*RowNumber*等于 0, 则将返回 SQLSTATE HY109 (cursor 位置无效)。  
   
- 如果发生错误适用于单个行，该驱动程序：  
+ 如果发生了与整个行集相关的错误, 如 SQLSTATE HYT00 (超时时间已过期), 驱动程序将返回 SQL_ERROR 和相应的 SQLSTATE。 行集缓冲区的内容是未定义的, 并且游标位置保持不变。  
   
--   行状态数组指向 SQL_ROW_ERROR 将 SQL_ATTR_ROW_STATUS_PTR 语句属性中设置行的元素。  
+ 如果发生了与单个行相关的错误, 则驱动程序:  
   
--   发布错误队列中的错误的一个或多个其他 SQLSTATEs 和设置 SQL_DIAG_ROW_NUMBER 字段中的诊断数据结构。  
+-   将 SQL_ATTR_ROW_STATUS_PTR 语句特性指向的行状态数组中的行的元素设置为 SQL_ROW_ERROR。  
   
- 它已处理的错误或警告，如果该驱动程序完成的剩余行集中的行的操作后，它将返回 SQL_SUCCESS_WITH_INFO。 因此，对于每个返回了错误的行，错误队列中包含零个或多个其他 SQLSTATEs。 如果它已处理的错误或警告后，该驱动程序将停止操作，则返回 SQL_ERROR。  
+-   在错误队列中为错误发送一个或多个附加 SQLSTATEs, 并在诊断数据结构中设置 "SQL_DIAG_ROW_NUMBER" 字段。  
   
- 如果该驱动程序返回任何警告，如 SQLSTATE 01004 （数据被截断），它返回应用于整个行集或未知行集中的行才会返回应用到特定行的错误信息的警告。 它将返回特定的行，以及有关这些行的任何其他错误信息的警告。  
+ 在处理完错误或警告后, 如果驱动程序为行集中的其余行完成操作, 它将返回 SQL_SUCCESS_WITH_INFO。 因此, 对于返回了错误的每一行, 错误队列包含零个或多个其他 SQLSTATEs。 如果驱动程序在处理错误或警告后停止了该操作, 它将返回 SQL_ERROR。  
   
- 如果*RowNumber*等于 0 并且*操作*SQL_UPDATE、 SQL_REFRESH，或 SQL_DELETE，行的数目**SQLSetPos**运行 SQL_ATTR_ROWS 上指向_FETCHED_PTR 语句属性。  
+ 如果驱动程序返回任何警告 (如 SQLSTATE 01004 (数据已截断)), 则它将在返回适用于特定行的错误信息之前, 返回应用于整个行集或行集中未知行的警告。 它将返回特定行的警告以及关于这些行的任何其他错误信息。  
   
- 如果*RowNumber*等于 0 并且*操作*是 SQL_DELETE、 SQL_REFRESH，还是 SQL_UPDATE，该操作后执行操作前的当前行相同的当前行。  
+ 如果*RowNumber*等于 0, 并且*Operation*为 SQL_UPDATE、SQL_REFRESH 或 SQL_DELETE, 则**SQLSetPos**操作的行数由 SQL_ATTR_ROWS_FETCHED_PTR 语句特性指向。  
   
-## <a name="ignoring-a-row-in-a-bulk-operation"></a>忽略大容量操作中的行  
- 行操作数组可用于指示应在过程中大容量操作使用忽略当前行集中的行**SQLSetPos**。 若要指示要在大容量操作过程中忽略一个或多个行的驱动程序，应用程序应执行以下步骤：  
+ 如果*RowNumber*等于 0, 并且*operation*为 SQL_DELETE、SQL_REFRESH 或 SQL_UPDATE, 则操作后的当前行与该操作之前的当前行相同。  
   
-1.  调用**SQLSetStmtAttr**设置为指向数组 SQLUSMALLINTs SQL_ATTR_ROW_OPERATION_PTR 语句属性。 此外可以通过调用设置此字段**SQLSetDescField**设置 ARD，这要求应用程序获取描述符句柄的 SQL_DESC_ARRAY_STATUS_PTR 标头字段。  
+## <a name="ignoring-a-row-in-a-bulk-operation"></a>在大容量操作中忽略行  
+ 使用**SQLSetPos**时, 可以使用行操作数组指示当前行集中的行应在大容量操作中被忽略。 若要在执行大容量操作时指示驱动程序忽略一个或多个行, 应用程序应执行以下步骤:  
   
-2.  将行操作数组的每个元素设置为两个值之一：  
+1.  调用**SQLSetStmtAttr** , 将 SQL_ATTR_ROW_OPERATION_PTR 语句特性设置为指向 SQLUSMALLINTs 的数组。 还可以通过调用**SQLSetDescField**来设置此字段, 以设置 ARD 的 SQL_DESC_ARRAY_STATUS_PTR 标头字段, 这需要应用程序获取描述符句柄。  
   
-    -   SQL_ROW_IGNORE，以指示该行大容量操作中排除。  
+2.  将 row 运算数组的每个元素设置为以下两个值之一:  
   
-    -   SQL_ROW_PROCEED，以指示在大容量操作中包括的行。 （这是默认值。）  
+    -   SQL_ROW_IGNORE, 指示为大容量操作排除该行。  
   
-3.  调用**SQLSetPos**执行大容量操作。  
+    -   SQL_ROW_PROCEED, 用于指示在大容量操作中包含行。 （这是默认值。）  
   
- 以下规则适用于行操作数组：  
+3.  调用**SQLSetPos**以执行批量操作。  
   
--   SQL_ROW_IGNORE 和 SQL_ROW_PROCEED 影响仅使用大容量操作**SQLSetPos**与*操作*SQL_DELETE 或 SQL_UPDATE。 它们不会影响对调用**SQLSetPos**与*操作*SQL_REFRESH 或 SQL_POSITION。  
+ 以下规则适用于行操作数组:  
   
--   将指针设置为默认情况下为 null。  
+-   SQL_ROW_IGNORE 和 SQL_ROW_PROCEED 仅影响使用**SQLSetPos** 、SQL_DELETE 或 SQL_UPDATE*操作*的批量操作。 它们不影响对使用 SQL_REFRESH 或 SQL_POSITION*操作*的**SQLSetPos**的调用。  
   
--   如果指针为 null，如同所有元素都设置为 SQL_ROW_PROCEED 更新所有行。  
+-   默认情况下, 指针设置为 null。  
   
--   将元素设置为 SQL_ROW_PROCEED 不保证该操作会在该特定行上发生。 例如，如果某一行的行集中有状态 SQL_ROW_ERROR，驱动程序可能无法更新无论是否在应用程序指定 SQL_ROW_PROCEED 该行。 应用程序必须始终检查行状态数组，以查看操作是否成功。  
+-   如果指针为 null, 则将更新所有行, 就好像所有元素都设置为 SQL_ROW_PROCEED。  
   
--   SQL_ROW_PROCEED 被定义为标头文件中为 0。 应用程序可以初始化为 0 的行操作数组以便处理所有行。  
+-   将元素设置为 SQL_ROW_PROCEED 并不能保证该特定行上会发生该操作。 例如, 如果行集中某一行的状态为 "SQL_ROW_ERROR", 则无论应用程序是否指定了 SQL_ROW_PROCEED, 驱动程序可能都无法更新该行。 应用程序必须始终检查行状态数组, 才能确定操作是否成功。  
   
--   如果行操作数组中的元素数量"n"设置为 SQL_ROW_IGNORE 并**SQLSetPos**调用以执行大容量更新或删除操作，在调用后保持不变的行集保留了中的第 n 行**SQLSetPos**.  
+-   在头文件中, SQL_ROW_PROCEED 定义为0。 应用程序可将行操作数组初始化为 0, 以便处理所有行。  
   
--   应用程序应自动设置为 SQL_ROW_IGNORE 的只读列。  
+-   如果行操作数组中的元素编号 "n" 设置为 SQL_ROW_IGNORE, 并且调用**SQLSetPos**来执行大容量更新或删除操作, 则行集中的第 n 行在调用**SQLSetPos**后将保持不变。  
   
-## <a name="ignoring-a-column-in-a-bulk-operation"></a>忽略在大容量操作中的列  
- 若要避免不必要的处理由一个或多个只读列的尝试更新生成的诊断，应用程序可以设置到 SQL_COLUMN_IGNORE 绑定的长度/指示器缓冲区中的值。 有关详细信息，请参阅[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
+-   应用程序应将只读列自动设置为 SQL_ROW_IGNORE。  
+  
+## <a name="ignoring-a-column-in-a-bulk-operation"></a>在大容量操作中忽略列  
+ 若要避免尝试更新到一个或多个只读列时产生不必要的处理诊断, 应用程序可以将绑定的长度/指示器缓冲区中的值设置为 SQL_COLUMN_IGNORE。 有关详细信息, 请参阅[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)。  
   
 ## <a name="code-example"></a>代码示例  
- 在以下示例中，应用程序允许用户浏览订单表和更新订单状态。 游标是由键集驱动的行集大小为 20，并使用比较行版本的乐观并发控制。 提取每个行集后，应用程序进行打印，允许用户选择和更新订单的状态。 应用程序使用**SQLSetPos**将游标定位在所选行上，并执行定位的更新的行。 （省略了错误处理为清楚起见。）  
+ 在下面的示例中, 应用程序允许用户浏览 ORDERS 表并更新订单状态。 游标由行集大小为20的键集驱动, 并使用与行版本比较的开放式并发控制。 提取每个行集后, 应用程序会将其打印出来, 并允许用户选择和更新订单的状态。 应用程序使用**SQLSetPos**将游标定位在选定行上, 并执行行的定位更新。 (为清楚起见, 省略了错误处理。)  
   
 ```cpp  
 #define ROWS 20  
@@ -362,21 +363,21 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 }  
 ```  
   
- 有关更多示例，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)并[更新行集中的行使用 SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)。  
+ 有关更多示例, 请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), 并[通过 SQLSetPos 更新行集中的行](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)。  
   
 ## <a name="related-functions"></a>相关函数  
   
 |有关信息|请参阅|  
 |---------------------------|---------|  
 |将缓冲区绑定到结果集中的列|[SQLBindCol 函数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|执行块的光标位置不相关的大容量操作|[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|提取的数据块或滚动浏览结果集|[SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|执行不与块光标位置相关的大容量操作|[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
+|正在取消语句处理|[SQLCancel 函数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|提取数据块或滚动结果集|[SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |获取描述符的单个字段|[SQLGetDescField 函数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |获取描述符的多个字段|[SQLGetDescRec 函数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|设置单个字段的描述符|[SQLSetDescField 函数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|设置多个字段的描述符|[SQLSetDescRec 函数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
-|设置语句属性|[SQLSetStmtAttr 函数](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|设置描述符的单个字段|[SQLSetDescField 函数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|设置描述符的多个字段|[SQLSetDescRec 函数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|设置语句特性|[SQLSetStmtAttr 函数](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -1,93 +1,93 @@
 ---
-title: 安装新的 R 语言包-SQL Server 机器学习服务
-description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 （数据库内）
+title: 安装新的 R 语言包
+description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 (数据库内)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962629"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345544"
 ---
-# <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安装新的 R 包
+# <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何将新的 R 包安装到其中启用机器学习的 SQL Server 实例。 有多种方法来安装新的 R 包，具体取决于你拥有的 SQL Server 的版本，以及服务器是否具有 internet 连接。 可使用以下方法来安装新包。
+本文介绍如何将新的 R 包安装到启用机器学习的 SQL Server 实例中。 有多种方法可用于安装新的 R 包, 具体取决于 SQL Server 的版本以及服务器是否具有 internet 连接。 可以通过以下方法来安装新的包。
 
 | 方法                           | 权限               | 远程/本地 |
 |------------------------------------|---------------------------|--------------|
 | [使用传统的 R 包管理器](use-r-package-managers-on-sql-server.md)  | 管理员 | Local |
-| [使用 RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  之后管理员启用数据库角色 | both|
-| [使用 T-SQL （创建外部库）](install-r-packages-tsql.md) | 之后管理员启用数据库角色 | both 
+| [使用 RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  此后启用了管理员的数据库角色 | both|
+| [使用 T-sql (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | 此后启用了管理员的数据库角色 | both 
 
-## <a name="who-installs-permissions"></a>用户安装 （权限）
+## <a name="who-installs-permissions"></a>谁安装 (权限)
 
-R 包库物理上位于您的 SQL Server 实例，在具有受限访问权限的安全文件夹中的 Program Files 文件夹。 写入到此位置需要管理员权限。
+R 包库以物理方式位于 SQL Server 实例的 Program Files 文件夹中, 位于具有受限访问权限的安全文件夹中。 写入此位置需要管理员权限。
 
-非管理员可以安装包，但执行此操作需要其他配置和功能在初始安装中不可用。 有两种方法对于非管理员包安装：RevoScaleR 使用 9.0.1 版和更高版本，或使用 CREATE EXTERNAL LIBRARY (仅 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或具有 CREATE EXTERNAL LIBRARY 权限的另一个用户可以将 R 包安装到当前数据库。
+非管理员可以安装包, 但这样做需要在初始安装时不提供额外的配置和功能。 非管理包安装有两种方法:使用9.0.1 和更高版本的 RevoScaleR, 或使用 CREATE EXTERNAL LIBRARY (仅 SQL Server 2017)。 在 SQL Server 2017 中, **dbo_owner**或具有 CREATE EXTERNAL LIBRARY 权限的其他用户可以将 R 包安装到当前数据库。
 
-R 开发人员习惯于创建所需位于中心位置的库是否仍受限的包的用户库。 这种做法是为 SQL Server 数据库引擎实例中执行 R 代码有问题。 SQL Server 无法从外部库加载包，即使该库是同一台计算机上。 SQL Server 中运行 R 代码中，可以使用仅实例库中的包。
+如果集中定位的库是不受限制的, 则 R 开发人员习惯于为所需的包创建用户库。 此做法在 SQL Server 数据库引擎实例中执行 R 代码时出现问题。 SQL Server 无法从外部库加载包, 即使该库位于同一台计算机上也是如此。 只有实例库中的包可用于在 SQL Server 中运行的 R 代码。
 
-通常在服务器上限制文件系统访问，即使到服务器上的用户文档文件夹具有管理员权限和访问，在 SQL Server 中执行的外部脚本运行时无法访问安装默认实例之外的任何包库。 
+文件系统访问通常在服务器上受到限制, 即使您对服务器上的用户文档文件夹具有管理员权限和访问权限, 在 SQL Server 中执行的外部脚本运行时仍无法访问在默认实例之外安装的任何包类库. 
 
 ## <a name="considerations-for-package-installation"></a>包安装注意事项
 
-然后再安装新的包，请考虑是否适合在 SQL Server 环境中由给定包启用的功能。 在强化的 SQL Server 环境中，你可能想要避免以下：
+在安装新包之前, 请考虑给定包启用的功能是否适用于 SQL Server 环境。 在强化的 SQL Server 环境中, 你可能需要避免以下情况:
 
-+ 需要网络访问权限的包
-+ 需要提升权限的文件系统访问权限的包
-+ 包用于 web 开发或通过在 SQL Server 内运行并不受益的其他任务
++ 需要网络访问的包
++ 需要提升文件系统访问权限的包
++ 包用于 web 开发或其他无法通过在中运行的任务 SQL Server
 
-## <a name="offline-installation-no-internet-access"></a>脱机安装 （无 internet 访问权限）
+## <a name="offline-installation-no-internet-access"></a>脱机安装 (无 internet 访问)
 
-一般情况下，承载生产数据库的服务器阻止 internet 连接。 在此类环境中安装新的 R 或 Python 包将要求您提前准备包和依赖项并将文件复制到用于脱机安装的服务器上的文件夹。
+通常, 托管生产数据库的服务器会阻止 internet 连接。 在此类环境中安装新的 R 或 Python 包需要提前准备包和依赖项, 并将文件复制到服务器上的某个文件夹以进行脱机安装。
 
-识别所有依赖项变得复杂。 对于 R，我们建议你使用[miniCRAN 创建本地存储库](create-a-local-package-repository-using-minicran.md)然后将完全定义的存储库传输到独立的 SQL Server 实例。
+标识所有依赖项都非常复杂。 对于 R, 建议使用[miniCRAN 创建本地存储库](create-a-local-package-repository-using-minicran.md), 然后将完全定义的存储库传输到隔离的 SQL Server 实例。
 
-或者，可以手动执行以下步骤：
+或者, 你可以手动执行以下步骤:
 
-1. 识别所有包依赖项。 
-2. 检查是否在服务器上已安装任何所需的包。 如果安装此包，请验证版本是否正确。
-3. 将包和所有依赖项下载到单独的计算机。
-4. 服务器将文件移动到可以访问的文件夹。
-5. 运行受支持的安装命令或 DDL 语句以将包安装到实例库。
+1. 标识所有包依赖关系。 
+2. 检查服务器上是否已安装了任何所需的包。 如果安装了包, 请验证版本是否正确。
+3. 将包和所有依赖项下载到不同的计算机。
+4. 将文件移动到服务器可以访问的文件夹。
+5. 运行受支持的安装命令或 DDL 语句, 将包安装到实例库。
 
-### <a name="download-the-package-as-a-zipped-file"></a>压缩文件以下载包
+### <a name="download-the-package-as-a-zipped-file"></a>将包下载为压缩文件
 
-对于无法访问 internet 的服务器上安装，必须下载脱机安装一个压缩文件的格式中的包的副本。 **请不要解压缩包。**
+若要在没有 internet 访问权限的情况下在服务器上安装, 必须以压缩文件格式下载包的副本, 以便进行脱机安装。 **不要将包解压缩。**
 
-例如，下面的过程描述现在，若要获取的正确版本[FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html)请假设该计算机有权访问 internet 的包。
+例如, 下面的过程介绍了如何从 Bioconductor 获取[FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html)包的正确版本, 前提是计算机有权访问 internet。
 
 1.  在“包存档”列表中，查找“Windows 二进制文件”版本。  
 
-2.  右键单击的链接。ZIP 文件，然后选择**目标另存为**。
+2.  右键单击指向的链接。ZIP 文件, 然后选择 "**将目标另存为**"。
 
-3.  导航到本地文件夹 zip 的包存储中，然后单击**保存**。
+3.  导航到存储 zip 包的本地文件夹, 然后单击 "**保存**"。
 
     此过程将创建包的本地副本。 
 
-4. 如果遇到下载错误，请尝试不同的镜像站点。
+4. 如果收到下载错误, 请尝试其他镜像站点。
 
-5. 下载包存档后，可以安装包，或将压缩的包复制到不具有 internet 访问的服务器。
+5. 下载包存档后, 可以安装包, 或将压缩的包复制到无法访问 internet 的服务器。
 
 > [!TIP]
-> 如果错误地安装而无需下载二进制文件的包，下载压缩文件的副本也会保存到您的计算机。 观看安装此包以确定文件位置的状态消息。 可以将该压缩的文件复制到不具有 internet 访问的服务器。
+> 如果在安装包时出错, 而不是下载二进制文件, 则会将下载的压缩文件的副本保存到计算机。 查看状态消息, 因为安装了包来确定文件位置。 可以将该压缩文件复制到无法访问 internet 的服务器。
 > 
-> 但是，当您获得使用此方法的包时，将不包括依赖项。 
+> 但是, 在使用此方法获取包时, 不会包含依赖项。 
 
 
-## <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>通过并行安装与独立 R 或 Python 服务器
+## <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>与独立 R 或 Python 服务器并行安装
 
-R 和 Python 功能包括在多个 Microsoft 产品，所有这些无法同时存在同一台计算机。
+R 和 Python 功能包含在多个 Microsoft 产品中, 它们都可以共存于同一台计算机上。
 
-如果除了数据库内分析 （SQL Server 2017 机器学习服务和 SQL Server 2016 R Services） 中安装 SQL Server 2017 Microsoft Machine Learning Server （独立版） 或 SQL Server 2016 R Server （独立版），您的计算机具有单独每个重复项的所有 R 的工具和库使用 R 的的安装。
+如果安装了 SQL Server 2017 Microsoft Machine Learning Server (独立版) 或 SQL Server 2016 R Server (独立版), 则除了数据库内分析 (SQL Server 2017 机器学习服务和 SQL Server 2016 R Services) 以外, 计算机的为每个安装 R, 其中包含所有 R 工具和库的重复项。
 
-安装到 r_server LIBRARY 库的包仅由独立服务器和 SQL Server （数据库内） 实例无法访问。 始终使用`R_SERVICES`库安装你想要使用 SQL Server 上数据库中的包时。 有关路径的详细信息，请参阅[包库位置](../package-management/default-packages.md)。
+安装到 R_SERVER 库的包仅供独立服务器使用, 不能由 SQL Server (数据库内) 实例访问。 安装要在`R_SERVICES` SQL Server 中使用的数据库的包时, 请始终使用库。 有关路径的详细信息, 请参阅[包库位置](../package-management/default-packages.md)。
 
 ## <a name="see-also"></a>请参阅
 

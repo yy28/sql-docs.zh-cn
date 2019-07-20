@@ -1,34 +1,34 @@
 ---
-title: 使用 R 代码分析函数-SQL Server 机器学习服务
-description: 提高性能并获取有关 SQL Server 上的 R 计算更快的结果，通过使用 R 分析函数来返回有关内部函数调用的信息。
+title: 使用 R 代码分析函数
+description: 使用 R 分析函数返回有关内部函数调用的信息, 从而提高性能并更快地获得对 SQL Server 上 R 计算的结果。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d58125cc8e6ffe4378759d4ceb4bdd0354e2e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4a68c19813b31164947f6d04a8c54c2a54eec34
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962361"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345688"
 ---
-# <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 代码分析函数来提高性能
+# <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 代码分析功能提高性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 除了使用 SQL Server 资源和工具来监视 R 脚本执行外，还可以使用由其他 R 包提供的性能工具来获取有关内部函数调用的详细信息。 
 
 > [!TIP]
-> 本文提供了基本的资源来帮助你入门。 专家指导，我们建议*性能*主题中[由 Hadley wickham 编写的"Advanced R"](http://adv-r.had.co.nz)。
+> 本文提供了入门的基本资源。 对于专家指南, 我们建议[通过 Hadley Wickham 的 "高级 R"](http://adv-r.had.co.nz)中的*性能*部分。
 
 ## <a name="using-rprof"></a>使用 RPROF
 
-[*rprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof)取决于基础包中包含[ **utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1)，默认情况下它将被加载。 
+[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof)是基本包[**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1)中包含的一个函数, 默认情况下会加载该函数。 
 
-通常，*rprof* 函数会以指定的间隔将调用堆栈写入到一个文件中。 然后，可以使用[ *summaryRprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof)函数来处理输出文件。 *rprof* 的一个优点是它会执行采样，从而降低监视对性能造成的影响。
+通常，*rprof* 函数会以指定的间隔将调用堆栈写入到一个文件中。 然后, 可以使用[*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof)函数处理输出文件。 *rprof* 的一个优点是它会执行采样，从而降低监视对性能造成的影响。
 
-要在代码中使用 R 分析，请调用此函数并指定其参数，包括将写入的日志文件的位置名称。 可以在你的代码中打开或关闭分析。 下面的语法演示了基本用法： 
+要在代码中使用 R 分析，请调用此函数并指定其参数，包括将写入的日志文件的位置名称。 可以在你的代码中打开或关闭分析。 以下语法说明了基本用法: 
 
 ```R
 # Specify profiling output file.
@@ -58,9 +58,9 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>在 R 中进行调试和分析
 
-Microsoft R Open，默认情况下安装的文档包括开发的讨论了 R 语言扩展的手册[分析和调试](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)在详细信息。 您可以在 C:\Program Files\Microsoft SQL Server\MSSQL13 向计算机上发现相同的文档。MSSQLSERVER\R_SERVICES\doc\manual。
+默认情况下, 安装的 Microsoft R Open 文档包含一项手册, 其中包含详细介绍[分析和调试](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)的 R 语言扩展。 可以在计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL13. 中找到相同的文档。MSSQLSERVER\R_SERVICES\doc\manual.
 
 ## <a name="see-also"></a>请参阅
 
 + [utils R 包](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ ["高级的 R"由 Hadley wickham 编写](http://adv-r.had.co.nz)
++ [Hadley Wickham 的 "高级 R"](http://adv-r.had.co.nz)

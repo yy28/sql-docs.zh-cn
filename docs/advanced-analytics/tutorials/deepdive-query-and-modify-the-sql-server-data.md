@@ -1,37 +1,37 @@
 ---
-title: 查询和修改使用 RevoScaleR 的 SQL Server 机器学习的 SQL Server 数据
-description: 有关如何查询和修改数据的 SQL Server 上使用 R 语言的教程演练。
+title: 使用 RevoScaleR 查询和修改 SQL Server 数据
+description: 本教程演示如何使用 R 语言在 SQL Server 上查询和修改数据。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 35583815be7c89707efcf9bb31488cd80e3836e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0784f10bfc4405ce17e365b6afcb596fa534202d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962180"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344655"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查询和修改 SQL Server 数据 （SQL Server 和 RevoScaleR 教程）
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查询和修改 SQL Server 数据 (SQL Server 和 RevoScaleR 教程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本课程中属于[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
-在上一课中，您将数据加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在此步骤中，您可以浏览和修改数据，使用**RevoScaleR**:
+在上一课中, 您将数据加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到中。 在此步骤中, 可以使用**RevoScaleR**浏览和修改数据:
 
 > [!div class="checklist"]
 > * 返回有关变量的基本信息
 > * 从原始数据创建分类数据
 
-分类数据，或*因子变量*，可用于探索数据可视化效果。 您可以使用它们作为输入的直方图若要了解什么是变量的数据。
+分类数据或*系数变量*对于探索数据可视化效果非常有用。 可以将它们用作直方图的输入, 以了解可变数据的外观。
 
-## <a name="query-for-columns-and-types"></a>查询的列和类型
+## <a name="query-for-columns-and-types"></a>查询列和类型
 
-使用 R IDE 或 RGui.exe 运行 R 脚本。 
+使用 R IDE 或 Rgui.exe 运行 R 脚本。 
 
-首先，获取列及其数据类型的列表。 可以使用函数[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) ，指定你想要分析的数据源。 具体取决于你的版本**RevoScaleR**，也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
+首先，获取列及其数据类型的列表。 您可以使用函数[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)并指定要分析的数据源。 你还可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames), 具体取决于你的**RevoScaleR**版本。 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)
@@ -53,13 +53,13 @@ Var 9: fraudRisk, Type: integer
 
 ## <a name="create-categorical-data"></a>创建分类数据
 
-所有变量都作为整数都存储，但某些变量表示分类数据，调用*因子变量*中。例如，列*状态*包含用作 50 个州以及哥伦比亚特区的标识符的数字。 为了更加轻松地理解数据，可将数字替换为州名的缩写列表。
+所有变量都作为整数存储, 但某些变量表示分类数据 (在 R 中称为*因子变量*)。例如, 列*状态*包含用作50状态以及哥伦比亚特区的标识符的数字。 为了更加轻松地理解数据，可将数字替换为州名的缩写列表。
 
-在此步骤中，将创建一个包含缩写的字符串向量，然后将这些分类值映射到原始整数标识符。 然后，使用中的新变量*colInfo*参数，以指定此列将作为因子处理。 每次分析的数据或将其移动，使用缩写和作为因子处理列。
+在此步骤中, 你将创建一个包含缩写的字符串向量, 然后将这些分类值映射到原始整数标识符。 然后, 在*colInfo*参数中使用新变量, 以指定将此列作为因子处理。 分析数据或移动数据时, 将使用缩写并将该列作为一个因素进行处理。
 
-将列作为用作因子前将其映射到缩写也可真正提高性能。 有关详细信息，请参阅[R 和数据优化](../r/r-and-data-optimization-r-services.md)。
+将列作为用作因子前将其映射到缩写也可真正提高性能。 有关详细信息, 请参阅[R 和数据优化](../r/r-and-data-optimization-r-services.md)。
 
-1. 首先，创建一个 R 变量*stateAbb*，并定义要向其添加，如下所示的字符串的矢量。
+1. 首先创建 R 变量*stateAbb*, 并定义要添加到其中的字符串向量, 如下所示。
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -94,7 +94,7 @@ Var 9: fraudRisk, Type: integer
     )
     ```
   
-3. 若要创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用更新后的数据，调用的数据源**RxSqlServerData**函数与前面一样，但添加*colInfo*参数。
+3. 若要创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用更新数据的数据源, 请像以前一样调用**RxSqlServerData**函数, 但添加*colInfo*参数。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

@@ -1,41 +1,41 @@
 ---
-title: 快速入门： 使用 Python-SQL Server 机器学习中的数据结构
-description: 在本快速入门中的 Python 脚本在 SQL Server 中，了解如何使用数据结构使用 sp_execute_external_script 的系统存储过程。
+title: 使用 Python 中的数据结构的快速入门
+description: 在 SQL Server 中的 Python 脚本的此快速入门教程中, 了解如何将数据结构与 sp_execute_external_script 系统存储过程一起使用。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d841314bd2bf167c4c40f5786a116b7bc8f73c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962081"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344562"
 ---
 # <a name="quickstart-python-data-structures-in-sql-server"></a>快速入门：SQL Server 中的 Python 数据结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本快速入门介绍如何在 SQL Server 机器学习服务中使用 Python 时使用的数据结构。
+本快速入门演示了在 SQL Server 机器学习服务中使用 Python 时如何使用数据结构。
 
-SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据。 但是，不能将标量 Python 从传递到 SQL Server，并且希望它"正常工作"。 在本快速入门，我们将回顾一些基本数据类型定义，以你为 Python 和 SQL Server 之间传递的表格数据时可能遇到的其他问题做好准备。
+SQL Server 依赖于 Python **pandas**包, 后者非常适合使用表格数据。 但是, 不能将标量从 Python 传递到 SQL Server, 并希望其 "只工作"。 在本快速入门中, 我们将查看一些基本的数据类型定义, 以便为你准备在 Python 和 SQL Server 之间传递表格数据时可能会遇到的其他问题。
 
-+ 数据帧是包含的表_多个_列。
-+ 包含一列的数据帧，是调用一系列类似于列表的对象。
-+ 单个值是一个单元格的数据帧，并已调用的索引。
++ 数据帧是包含_多个_列的表。
++ 数据帧的单个列是一个类似列表的对象, 称为 "序列"。
++ 单个值是数据帧的单元格, 必须由 index 调用。
 
-您如何将公开单个计算结果的作为数据帧时，如果 data.frame 需要表格结构？ 一个答案是为一系列，轻松地转换为数据帧中表示单个标量值。 
+如果数据帧需要表格结构, 如何将计算的单个结果公开为数据帧？ 一种答案是将单个标量值表示为序列, 这可以轻松地转换为数据帧。 
 
 ## <a name="prerequisites"></a>先决条件
 
-上一个快速入门中， [SQL Server 中存在验证 Python](quickstart-python-verify.md)、 提供的信息和链接设置为本快速入门所需的 Python 环境。
+之前的快速入门,[请验证 SQL Server 中是否存在 python](quickstart-python-verify.md), 并提供设置此快速入门所需的 Python 环境所需的信息和链接。
 
-## <a name="scalar-value-as-a-series"></a>为一系列的标量值
+## <a name="scalar-value-as-a-series"></a>作为序列的标量值
 
-此示例 does 一些简单的数学运算并转换为一系列的标量。
+此示例执行一些简单的数学运算, 并将标量转换为一个序列。
 
-1. 一系列需要索引，可以如下所示，手动或以编程方式分配。
+1. 序列需要索引, 可以手动分配, 如此处所示, 或以编程方式分配。
 
     ```sql
     execute sp_execute_external_script 
@@ -50,7 +50,7 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     '
     ```
 
-2. 由于尚未被序列转换为 data.frame，在消息窗口中，返回的值，但可以看到结果是一个更表格中。
+2. 由于该系列尚未转换为数据。帧, 因此在 "消息" 窗口中返回值, 但您可以看到这些结果的表格格式更多。
 
     **结果**
 
@@ -61,7 +61,7 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     dtype: float64
     ```
 
-3. 若要增加序列的长度，可以添加新值，使用一个数组。 
+3. 若要增加序列的长度, 可以使用数组添加新的值。 
 
     ```sql
     execute sp_execute_external_script 
@@ -76,7 +76,7 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     '
     ```
 
-    如果未指定索引，索引生成具有值从 0 开始和结尾的数组的长度。
+    如果不指定索引, 则会生成一个索引, 该索引的值从0开始, 并以数组的长度结尾。
 
     **结果**
 
@@ -87,7 +87,7 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     dtype: float64
     ```
 
-4. 如果增加的数量**索引**值，但不添加新**数据**值，重复数据值填充序列。
+4. 如果增加**索引**值的数目, 但不添加新的**数据**值, 则会重复数据值来填充序列。
 
     ```sql
     execute sp_execute_external_script 
@@ -111,11 +111,11 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     dtype: float64
     ```
 
-## <a name="convert-series-to-data-frame"></a>将序列转换成数据帧
+## <a name="convert-series-to-data-frame"></a>将序列转换为数据帧
 
-让我们标量数学函数的结果转换为表格结构时，我们仍需要将它们转换为 SQL Server 可以处理的格式。 
+将标量数学结果转换为表格结构后, 我们仍然需要将它们转换为 SQL Server 可以处理的格式。 
 
-1. 若要将序列转换为 data.frame，调用 pandas[数据帧](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
+1. 若要将序列转换为数据框架, 请调用 pandas[数据帧](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
 
     ```sql
     execute sp_execute_external_script 
@@ -134,7 +134,7 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. 结果如下所示。 即使使用索引来从 data.frame 中获取特定值，索引值不是输出的一部分。
+2. 结果如下所示。 即使使用索引从数据中获取特定值, 索引值也不是输出的一部分。
 
     **结果**
 
@@ -143,11 +143,11 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     |0.5|
     |2|
 
-## <a name="output-values-into-dataframe"></a>到 data.frame 的输出值
+## <a name="output-values-into-dataframe"></a>将值输出到数据帧中
 
-让我们了解我们包含结果的简单数学运算的两个序列时，转换为 data.frame 的工作原理。 第一个具有由 Python 生成的顺序值的索引。 第二个使用任意字符串值的索引。
+让我们看看如何转换为数据。 frame 适用于包含简单数学运算结果的两个系列。 第一个具有 Python 生成的顺序值的索引。 第二个使用字符串值的任意索引。
 
-1. 此示例中使用整数索引序列中获取一个值。
+1. 此示例从使用整数索引的序列获取值。
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -166,9 +166,9 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-    请记住，自动生成索引从 0 开始。 尝试使用范围索引值，看会发生什么情况。
+    请记住, 自动生成的索引从0开始。 尝试使用超出范围的索引值并查看发生的情况。
 
-2. 现在让我们从其他具有字符串索引的数据帧中获取单个值。 
+2. 现在, 让我们从具有字符串索引的其他数据帧获取单个值。 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -192,11 +192,11 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
     |------|
     |0.5|
 
-    如果你尝试使用数字索引获取此序列中的值，可能会出错。
+    如果尝试使用数字索引获取此序列中的值, 则会出现错误。
 
 ## <a name="next-steps"></a>后续步骤
 
-接下来，你将构建一个在 SQL Server 中使用 Python 的预测模型。
+接下来, 您将在 SQL Server 中使用 Python 构建预测模型。
 
 > [!div class="nextstepaction"]
-> [创建、 定型和 SQL Server 中使用存储过程中使用 Python 模型](quickstart-python-train-score-in-tsql.md)
+> [使用中的存储过程创建、定型和使用 Python 模型 SQL Server](quickstart-python-train-score-in-tsql.md)

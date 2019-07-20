@@ -1,38 +1,38 @@
 ---
-title: 课程 1 浏览和可视化使用 Python 和 T-SQL 的 SQL Server 机器学习的数据
-description: 教程演示如何嵌入 Python 在 SQL Server 存储过程和 T-SQL 函数
+title: 第1课使用 Python 和 T-sql 浏览和可视化数据
+description: 介绍如何在 SQL Server 存储过程和 T-sql 函数中嵌入 Python 的教程
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 879b3e3d4a213c4b6f1ae1fd2c8e6f8f302a4eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7faf5ae632ffd94828ce331cd634fda9d4e34058
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961886"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345890"
 ---
 # <a name="explore-and-visualize-the-data"></a>浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是教程的一部分[SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
+本文是[针对 SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)教程的一部分。 
 
-在此步骤中，将浏览示例数据并生成一些图形。 更高版本，您将了解如何在 Python 中，图形对象序列化为然后反序列化这些对象，并进行绘图。
+在此步骤中, 将浏览示例数据并生成一些绘图。 稍后, 您将了解如何在 Python 中序列化图形对象, 然后对这些对象进行反序列化并制作绘图。
 
 ## <a name="review-the-data"></a>查看数据
 
-首先，花点时间来浏览数据架构，如我们所做一些更改以使其更易于使用的 NYC 出租车数据
+首先, 请花点时间浏览数据架构, 因为我们做了一些更改, 以便更轻松地使用 NYC 出租车数据
 
-+ 原始数据集用于出租车标识符和行程记录单独的文件。 我们已列上联接两个原始数据集_medallion_， _hack_license_，并_pickup_datetime_。  
-+ 原始数据集跨越多个文件，并且非常大。 我们还进行了 downsampled 以仅获取 1%的原始记录数。 当前数据表格有 1,703,957 行和 23 列。
++ 原始数据集对出租车标识符和行程记录使用了单独的文件。 我们已将两个原始数据集加入列_medallion_、 _hack_license_和_pickup_datetime_。  
++ 原始数据集跨多个文件, 并且非常大。 我们 downsampled 只获取原始记录数的 1%。 当前数据表包含1703957行和23列。
 
 **出租车标识符**
 
 _Medallion_列表示出租车的唯一 ID 号。
 
-_Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
+_Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
 
 **行程和费用记录**
 
@@ -42,39 +42,39 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
 
 最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。  tipped 列只有是/否值，用于二元分类。  Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。 
 
-使用标签列的值都基于`tip_amount`列中，使用以下业务规则：
+标签列使用的值都基于`tip_amount`列, 使用以下业务规则:
 
-+ 标签列`tipped`有可能的值 0 和 1
++ 标签列`tipped`的值可能为0和1
 
-    如果`tip_amount`> 0， `tipped` = 1; 否则为`tipped`= 0
+    如果`tip_amount` > 0, `tipped` = 1, 则`tipped`为; 否则为0
 
-+ 标签列`tip_class`具有可能的类值 0 到 4
++ 标签列`tip_class`具有可能的类值0-4
 
     类 0: `tip_amount` = $0
 
-    类 1: `tip_amount` > 0 美元和`tip_amount`< = $5
+    类 1: `tip_amount` > $0 和`tip_amount` < = $5
     
-    类 2: `tip_amount` > 5 美元和`tip_amount`< = $10
+    类 2: `tip_amount` > $5 和`tip_amount` < = $10
     
-    类 3: `tip_amount` > 10 美元和`tip_amount`< = $20
+    类 3: `tip_amount` > $10 和`tip_amount` < = $20
     
-    类 4: `tip_amount` > 20 美元
+    类 4: `tip_amount` > $20
 
-## <a name="create-plots-using-python-in-t-sql"></a>创建在 T-SQL 中使用 Python 的绘图
+## <a name="create-plots-using-python-in-t-sql"></a>在 T-sql 中使用 Python 创建绘图
 
-开发数据科学解决方案通常包括深入的数据探索和数据可视化。 由于可视化是理解数据和离群值的分布用于此类的强大工具，Python 提供许多包用于可视化数据。 **Matplotlib**模块是一个用于可视化效果，更受欢迎的库，包括用于创建直方图、 散点图、 框绘图和其他数据探索图的许多函数。
+开发数据科学解决方案通常包括深入的数据探索和数据可视化。 因为可视化效果是用于了解数据和离群值分布的强大工具, 所以 Python 提供了许多用于可视化数据的包。 **Matplotlib**模块是更常用的可视化库, 其中包含许多用于创建直方图、散点图、框图和其他数据浏览图的函数。
 
-在本部分中，您了解如何使用存储的过程的图形处理。 而是不是打开服务器上的映像，存储的 Python 对象`plot`作为**varbinary**数据，然后写入，到文件，可以共享，或查看其他位置。
+本部分介绍如何使用存储过程来处理图形。 不要在服务器上打开该映像, 而是将 Python 对象`plot`存储为**varbinary**数据, 然后将其写入到可在其他位置共享或查看的文件。
 
-### <a name="create-a-plot-as-varbinary-data"></a>创建绘图的形式为 varbinary 数据
+### <a name="create-a-plot-as-varbinary-data"></a>创建绘图作为 varbinary 数据
 
-存储的过程返回的序列化的 Python`figure`对象作为一串**varbinary**数据。 不能直接查看二进制数据，但可以在客户端上使用 Python 代码来反序列化并查看图形，然后保存客户端计算机上的图像文件。
+存储过程将序列化的 Python `figure`对象作为**varbinary**数据的流返回。 您无法直接查看二进制数据, 但您可以在客户端上使用 Python 代码来反序列化和查看这些图形, 然后在客户端计算机上保存该图像文件。
 
-1. 创建存储的过程**PyPlotMatplotlib**，如果 PowerShell 脚本未执行此操作。
+1. 如果 PowerShell 脚本尚未这样做, 请创建存储过程**PyPlotMatplotlib**。
 
-    - 在变量`@query`定义的查询文本`SELECT tipped FROM nyctaxi_sample`，作为脚本输入变量的自变量传递到 Python 代码块`@input_data_1`。
-    - Python 脚本是相当简单： **matplotlib** `figure`对象用于使直方图和散点图，这些对象随后会使用序列`pickle`库。
-    - Python 图形对象序列化为**pandas**为输出数据帧。
+    - 变量`@query`定义查询文本, 该`SELECT tipped FROM nyctaxi_sample`文本作为脚本输入变量`@input_data_1`的参数传递到 Python 代码块。
+    - Python 脚本非常简单: **matplotlib** `figure`对象用于生成直方图和散点图, `pickle`然后使用库序列化这些对象。
+    - Python 图形对象被序列化到**pandas**数据帧以进行输出。
   
     ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
@@ -132,7 +132,7 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
     GO
     ```
 
-2. 现在运行存储的过程不带任何参数，若要从硬编码为输入查询的数据生成绘图。
+2. 现在, 请运行不带参数的存储过程, 以生成从硬编码为输入查询的数据的绘图。
 
     ```sql
     EXEC [dbo].[PyPlotMatplotlib]
@@ -149,11 +149,11 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
     ```
 
   
-4. 从[Python 客户端](../python/setup-python-client-tools-sql.md)，现在可以连接到生成的二进制绘图对象的 SQL Server 实例，并查看绘图。 
+4. 你现在可以从[Python 客户端](../python/setup-python-client-tools-sql.md)连接到生成了二进制绘图对象的 SQL Server 实例, 并查看图形。 
 
-    若要执行此操作，运行以下 Python 代码中，替换服务器名称、 数据库名称和相应的凭据。 请确保 Python 版本是客户端和服务器上相同。 此外请确保在客户端 （如 matplotlib) 上的 Python 库都相对于在服务器上安装的库的相同或更高版本。
+    为此, 请运行以下 Python 代码, 并根据需要替换服务器名称、数据库名称和凭据。 请确保在客户端和服务器上的 Python 版本相同。 此外, 请确保客户端上的 Python 库 (如 matplotlib) 与服务器上安装的库的版本相同或更高。
   
-    **使用 SQL Server 身份验证：**
+    **使用 SQL Server 身份验证:**
     
     ```python
     %matplotlib notebook
@@ -170,7 +170,7 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-    **使用 Windows 身份验证：**
+    **使用 Windows 身份验证:**
 
     ```python
     %matplotlib notebook
@@ -187,13 +187,13 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-5.  如果连接成功，应看到如下所示的消息：
+5.  如果连接成功, 应会看到如下所示的消息:
   
-    *绘图保存在目录中： xxxx*
+    *绘图将保存在目录中: xxxx*
   
-6.  Python 工作目录中创建输出文件。 若要查看该绘图，找到 Python 工作目录，并打开该文件。 下图显示了绘图保存在客户端计算机上。
+6.  在 Python 工作目录中创建输出文件。 若要查看绘图, 请找到 Python 工作目录, 并打开文件。 下图显示了在客户端计算机上保存的绘图。
   
-    ![小费金额 vs 费用金额](media/sqldev-python-sample-plot.png "小费金额 vs 费用金额") 
+    ![Tip 金额与费用金额](media/sqldev-python-sample-plot.png "Tip 金额与费用金额") 
 
 ## <a name="next-step"></a>下一步
 

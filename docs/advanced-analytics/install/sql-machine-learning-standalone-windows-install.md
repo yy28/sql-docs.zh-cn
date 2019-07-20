@@ -1,6 +1,6 @@
 ---
-title: 安装 R Server 或 Machine Learning Server （独立版） 使用 SQL Server 安装程序-SQL Server 机器学习
-description: 设置使用 RevoScaleR 和 revoscalepy、 MicrosoftML 和其他包的 R 和 Python 开发不识别实例的独立机器学习服务器。
+title: 使用 SQL Server 安装程序安装 R Server 或 Machine Learning Server (独立版)
+description: 使用 RevoScaleR、revoscalepy、MicrosoftML 和其他包为 R 和 Python 开发设置不能识别实例的独立机器学习服务器。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/28/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f721a840b6fba4a840484fccb1cafb334b1ba438
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0abf14fa61d9408f8403a493b7559148f0f5a775
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962859"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344981"
 ---
-# <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>安装 Machine Learning Server （独立版） 或使用 SQL Server 安装的 R Server （独立版）
+# <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安装程序安装 Machine Learning Server (独立版) 或 R Server (独立版)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。 在 SQL Server 2016 中，此功能称为“R Server（独立版）”  。 在 SQL Server 2017 中，它称为“Machine Learning Server（独立版）”  ，包括 R 和 Python。 
@@ -25,7 +25,7 @@ SQL Server 安装程序安装的独立服务器在功能上等同于非 SQL 品�
 + 远程执行，在同一控制台中切换本地和远程会话
 + Web 节点和计算节点的操作
 + Web 服务部署：将 R 和 Python 脚本打包到 Web 服务中的能力
-+ R 和 Python 函数库的完整集合
++ 完整的 R 和 Python 函数库集合
 
 R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立服务器（而非 SQL Server）中提供的基础操作系统和工具对其进行配置、保护和访问。
 
@@ -39,14 +39,14 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 通常，我们建议你将独立服务器和数据库引擎实例识别安装视为互斥安装以避免资源争用，但如果你有足够的资源，则不禁止在同一台物理计算机上进行这两种安装。
 
-只能在计算机上安装一台独立服务器：SQL Server 2017 Machine Learning Server 或  SQL Server 2016 R Server（独立版）。 请务必卸载然后再添加一个新的一个版本。
+只能在计算机上安装一台独立服务器：SQL Server 2017 Machine Learning Server 或  SQL Server 2016 R Server（独立版）。 请确保在添加新版本之前卸载一个版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
 
  ###  <a name="install-patch-requirement"></a>安装修补程序要求 
 
-对于 SQL Server 2016 仅：Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件存在问题，这些二进制文件是作为 SQL Server 系统必备进行安装的。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 可能会遇到稳定性问题。 在安装 SQL Server 之前，请按照 [SQL Server 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)中的说明来确定你的电脑是否需要 VC 运行时二进制文件的修补程序。  
+仅适用于 2016 SQL Server:Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件存在问题，这些二进制文件是作为 SQL Server 系统必备进行安装的。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 可能会遇到稳定性问题。 在安装 SQL Server 之前，请按照 [SQL Server 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)中的说明来确定你的电脑是否需要 VC 运行时二进制文件的修补程序。  
 ::: moniker-end
 
 ## <a name="get-the-installation-media"></a>获取安装介质
@@ -60,19 +60,19 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 1. 启动安装向导。
 
-2. 单击**安装**选项卡，然后选择**新机器学习服务器 （独立版） 安装**。
+2. 单击 "**安装**" 选项卡, 然后选择 "**新建 Machine Learning Server (独立) 安装**"。
     
-     ![安装 Machine Learning Server 独立版](media/2017setup-installation-page-mlsvr.png "启动 Machine Learning Server 独立安装")
+     ![独立安装 Machine Learning Server](media/2017setup-installation-page-mlsvr.png "开始 Machine Learning Server 独立安装")
 
-3. 规则检查完成后，接受 SQL Server 许可条款，然后选择新的安装。
+3. 完成规则检查后, 接受 SQL Server 许可条款, 并选择新的安装。
 
-4. 上**功能选择**页上，以下选项，应已选择：
+4. 在 "**功能选择**" 页上, 应已选择以下选项:
 
-    - Microsoft Machine Learning Server （独立版）
+    - Microsoft Machine Learning Server (独立)
 
     - 默认情况下，R 和 Python 均已选定。 你可以取消选择任一语言，但我们建议你至少安装一种支持的语言。
 
-     ![选择 R 或 Python 功能](media/2017setup-features-page-mlsvr-rpy.png "启动 Machine Learning Server 独立安装")
+     ![选择 R 或 Python 功能](media/2017setup-features-page-mlsvr-rpy.png "开始 Machine Learning Server 独立安装")
     
     应忽略所有其他选项。 
     
@@ -83,13 +83,13 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
     > 
     > 出于这些原因，我们通常建议你在独立于 SQL Server 机器学习服务的计算机上安装 Machine Learning Server（独立版）。
 
-5.  接受下载和安装基本语言发行版的许可条款。 当“接受”  按钮变为不可用时，可以单击“下一步”  。 
+5.  接受下载和安装基本语言分发的许可条款。 当“接受”  按钮变为不可用时，可以单击“下一步”  。 
 
      ![Python 许可协议](media/2017setup-python-license.png "Python 许可协议")
 
 6.  在“准备安装”  页上，验证选择，并单击“安装”  。
 
-完成安装后，请参阅[自定义 SQL Server R Services 的报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)出现任何错误或警告的帮助，请参阅[升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
+安装完成后, 请参阅[SQL Server R Services 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)以获取有关任何错误或警告的帮助, 请参阅[升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
@@ -101,42 +101,42 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 2. 在“安装”  选项卡上，单击“新的 R Server（独立版）安装”  。
     
-     ![启动的 R Server 独立版的安装程序](media/2016-setup-installation-rsvr.png "启动的 R Server 独立版的安装程序")
+     ![启动 R Server 独立版的安装](media/2016-setup-installation-rsvr.png "启动 R Server 独立版的安装")
 
-3. 规则检查完成后，接受 SQL Server 许可条款，然后选择新的安装。
+3. 完成规则检查后, 接受 SQL Server 许可条款, 并选择新的安装。
 
 4.  在“功能选择”  页上，应已选择以下选项：
     
     **R Server（独立版）**  
     
-    ![功能选择 R Server 独立版](media/2016setup-rserver-features.png "功能选择 R Server 独立版")
+    ![R Server 独立版的功能选择](media/2016setup-rserver-features.png "R Server 独立版的功能选择")
     
     应忽略所有其他选项。 
     
     > [!NOTE]
-    > 避免安装**共享功能**如果您运行安装程序的计算机上的 R Services 已安装的 SQL Server 数据库内分析。 这会创建重复的库。
+    > 如果运行安装程序的计算机上已安装了 R Services 进行 SQL Server 数据库内分析, 则应避免安装**共享功能**。 这会创建重复的库。
     > 
-    > SQL Server 中运行 R 脚本由 SQL Server，以免与其他数据库引擎服务使用的内存发生冲突，而独立 R Server 没有此类约束，并可能会干扰其他数据库操作。
+    > 在 SQL Server 中运行的 R 脚本是由 SQL Server 管理的, 因此不会与其他数据库引擎服务使用的内存发生冲突, 而独立的 R 服务器没有此类约束, 并且可能会干扰其他数据库操作。
     > 
-    > 我们通常建议安装 R Server （独立版） 的单独计算机上从 SQL Server R Services （数据库内）。
+    > 我们通常建议在 SQL Server R Services (数据库内) 的不同计算机上安装 R Server (独立版)。
 
-5.  接受下载和安装基本语言发行版的许可条款。 当“接受”  按钮变为不可用时，可以单击“下一步”  。 
+5.  接受下载和安装基本语言分发的许可条款。 当“接受”  按钮变为不可用时，可以单击“下一步”  。 
 
 6.  在“准备安装”  页上，验证选择，并单击“安装”  。
 
-完成安装后，请参阅[自定义 SQL Server R Services 的报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)出现任何错误或警告的帮助，请参阅[升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
+安装完成后, 请参阅[SQL Server R Services 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)以获取有关任何错误或警告的帮助, 请参阅[升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 ::: moniker-end
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
-对于仅 R 功能集成，应设置**MKL_CBWR**环境变量[确保一致的输出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel Math Kernel Library (MKL) 的计算。
+仅适用于 R 功能集成, 应设置**MKL_CBWR**环境变量, 以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库 (MKL) 计算中进行一致的输出。
 
-1. 在控制面板中，单击**系统和安全** > **系统** > **高级系统设置** >  **环境变量**。
+1. 在控制面板中, 单击 "**系统和安全** > **系统** > " "**高级系统设置** > " "**环境变量**"。
 
-2. 创建一个新的用户或系统变量。 
+2. 创建新的用户或系统变量。 
 
-  + 到组变量名称 `MKL_CBWR`
-  + 将变量的值设置为 `AUTO`
+  + 将变量名称设置为`MKL_CBWR`
+  + 将变量值设置为`AUTO`
 
 3. 重新启动服务器。
 
@@ -150,49 +150,49 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 |版本| 安装方法 | 默认文件夹|
 |----|----|----|
-|SQL Server 2017 机器学习服务器 （独立版） |  SQL Server 2017 安装程序向导 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
-|Microsoft Machine Learning Server （独立版） |  Windows 独立安装程序 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|SQL Server 2017 机器学习服务 （数据库内） |SQL Server 2017 安装程序向导中，使用 R 语言选项|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
-|SQL Server 2016 R Server （独立版） |  SQL Server 2016 安装向导 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2016 R Services （数据库内） |SQL Server 2016 安装向导|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+|SQL Server 2017 Machine Learning Server (独立版) |  SQL Server 2017 安装向导 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
+|Microsoft Machine Learning Server (独立) |  Windows 独立安装程序 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
+|SQL Server 2017 机器学习服务 (数据库内) |SQL Server 2017 安装向导, with R language 选项|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|SQL Server 2016 R Server (独立版) |  SQL Server 2016 安装向导 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
+|SQL Server 2016 R Services (数据库内) |SQL Server 2016 安装向导|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
 <a name="apply-cu"></a>
 
 ## <a name="apply-updates"></a>应用更新
 
-我们建议将最新的累积更新应用到数据库引擎和机器学习组件。 通过安装程序安装累积更新。 
+建议将最新的累积更新应用于数据库引擎和机器学习组件。 累积更新是通过安装程序安装的。 
 
-在连接 internet 的设备上可以下载自解压缩可执行文件。 自动应用于数据库引擎更新拉入现有的 R 和 Python 功能的累积更新。 
+在连接 internet 的设备上, 你可以下载一个自解压缩的可执行文件。 为数据库引擎应用更新会自动拉取现有 R 和 Python 功能的累积更新。 
 
-在连接已断开的服务器上，需执行额外的步骤。 必须获取数据库引擎的累积更新以及机器学习功能的 CAB 文件。 必须为所有文件传输到独立服务器，手动应用。
+在连接已断开的服务器上，需执行额外的步骤。 必须获取数据库引擎的累积更新以及机器学习功能的 CAB 文件。 所有文件都必须传输到隔离服务器并手动应用。
 
-1. 使用基线实例启动。 只能应用于现有的安装累积更新：
+1. 开始使用基线实例。 只能对现有安装应用累积更新:
 
-  + 从 SQL Server 2017 初始版本的机器学习服务器 （独立版）
-  + 从 SQL Server 2016 初始版本、 SQL Server 2016 SP 1 或 SQL Server 2016 SP 2 的 R Server （独立版）
+  + 从 SQL Server 2017 初始版本 Machine Learning Server (独立)
+  + R Server (独立版) SQL Server 2016 初始版本 SQL Server 2016 SP 1, 或 SQL Server 2016 SP 2
 
-2. 关闭任何打开的 R 或 Python 会话并停止任何进程仍在系统上运行。
+2. 关闭所有打开的 R 或 Python 会话, 并停止系统上仍在运行的任何进程。
 
-3. 如果您启用了操作化，以运行 web 节点和计算节点进行 web 服务部署，备份**AppSettings.json**文件作为一项预防措施。 正在应用 SQL Server 2017 CU13 或更高版本 revises 此文件，因此你可能想要保留的原始版本的备份副本。
+3. 如果已启用操作化作为 web 节点和计算节点用于 web 服务部署, 请备份**AppSettings**文件作为预防措施。 应用 SQL Server 2017 CU13 或更高版本将修改此文件, 因此你可能需要备份副本来保留原始版本。
 
-4. Internet 连接在设备上，单击你的 SQL Server 版本的累积更新链接。
+4. 在连接 internet 的设备上, 单击你的 SQL Server 版本的累积更新链接。
 
   + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 5. 下载最新的累积更新。 它是一个可执行文件。
 
-6. 在连接 internet 的设备上，双击.exe 以运行安装程序并逐行执行向导以接受许可条款，查看受影响的功能，并监视进度，直至完成为止。
+6. 在连接 internet 的设备上, 双击 .exe 以运行安装程序, 并逐步完成向导以接受许可条款, 查看受影响的功能, 并监视进度直到完成。
 
-7. 在未连接到 internet 的服务器：
+7. 在无 internet 连接的服务器上:
 
-   + 对 R 和 Python 中获取相应的 CAB 文件。 有关下载链接，请参阅[实例上 SQL Server 数据库内分析的累积更新的下载 CAB](sql-ml-cab-downloads.md)。
+   + 获取 R 和 Python 对应的 CAB 文件。 有关下载链接, 请参阅[CAB 下载以了解 SQL Server 数据库内分析实例中的累积更新](sql-ml-cab-downloads.md)。
 
-   + 传输的所有文件、 主可执行文件和 CAB 文件，到脱机计算机上的文件夹。
+   + 将主可执行文件和 CAB 文件的所有文件传输到脱机计算机上的文件夹。
 
-   + 双击以运行安装程序的.exe。 时未连接到 internet 的服务器上安装的累计更新，系统会提示选择 R 和 Python 的.cab 文件的位置。
+   + 双击 .exe 以运行安装程序。 在没有 internet 连接的服务器上安装累计更新时, 系统将提示你选择 R 和 Python 的 .cab 文件的位置。
 
-8. 安装后，已启用包含 web 节点和计算节点的操作化的服务器上编辑**AppSettings.json**，添加一个"MMLResourcePath"项，直接位于"MMLNativePath"下面：
+8. 安装后, 在已启用 web 节点和计算节点操作化的服务器上, 编辑**AppSettings**, 在 "MMLNativePath" 下直接添加 "MMLResourcePath" 项:
 
     ```json
     "ScorerParameters": {
@@ -201,24 +201,24 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
     }
     ```
 
-9. [运行管理 CLI 实用程序](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)重新启动 web 和计算节点。 有关步骤和语法，请参阅[监视器、 启动和停止 web 和计算节点](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)。
+9. [运行管理 CLI 实用程序](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)以重新启动 web 和计算节点。 有关步骤和语法, 请参阅[监视、启动和停止 web 和计算节点](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)。
 
 ## <a name="development-tools"></a>开发工具
 
-开发 IDE 未安装的一部分安装。 有关配置开发环境的详细信息，请参阅[设置的 R 工具](../r/set-up-a-data-science-client.md)并[设置 Python 工具](../python/setup-python-client-tools-sql.md)。
+不会在安装过程中安装开发 IDE。 有关配置开发环境的详细信息, 请参阅[设置 R 工具](../r/set-up-a-data-science-client.md)和[设置 Python 工具](../python/setup-python-client-tools-sql.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
-R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 配合工作的基础知识。 下一步，请参阅以下链接：
+R 开发人员可以开始使用一些简单的示例, 并了解 R 如何与 SQL Server 相关的基础知识。 下一步, 请参阅以下链接:
 
-+ [教程：在 T-SQL 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [教程：R 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教程：在 T-sql 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教程：适用于 R 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Python 开发人员可以了解如何将 Python 与 SQL Server 使用按照这些教程：
+Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 配合使用:
 
-+ [教程：在 T-SQL 中运行 Python](../tutorials/run-python-using-t-sql.md)
-+ [教程：面向 Python 开发人员的数据库内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [教程：在 T-sql 中运行 Python](../tutorials/run-python-using-t-sql.md)
++ [教程：适用于 Python 开发人员的数据库内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
 若要查看基于实际场景的机器学习示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。

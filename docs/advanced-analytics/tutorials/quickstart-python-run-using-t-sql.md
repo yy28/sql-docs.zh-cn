@@ -1,39 +1,39 @@
 ---
-title: 快速入门:"Hello World"基本 Python 代码执行 T-SQL 的 SQL Server 机器学习中
-description: SQL Server 中的 Python 脚本的快速入门。 了解调用 Python 脚本在你好 world 练习使用 sp_execute_external_script 系统存储过程的基础知识。
+title: 用于 T-sql 中的 "Hello World" 基本 Python 代码执行的快速入门
+description: SQL Server 中的 Python 脚本快速入门。 了解使用 sp_execute_external_script 系统存储过程在系统中调用 Python 脚本的基础知识。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a2d0987441f8f26304590f5ccbde15a2e15cf3c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: caa462fa6449d4d130ace629f99c8061c7b8a35f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962067"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345496"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入门：SQL Server 中的"hello world"Python 脚本 
+# <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入门：SQL Server 中的 "Hello world" Python 脚本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本快速入门教程，了解关键概念，通过运行"Hello World"Python 脚本 inT SQL，简介**sp_execute_external_script**系统存储过程。 
+在本快速入门中, 通过运行 "Hello World" Python script inT-SQL 了解关键概念, 并介绍**sp_execute_external_script**系统存储过程。 
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-上一个快速入门中， [SQL Server 中存在验证 Python](quickstart-python-verify.md)、 提供的信息和链接设置为本快速入门所需的 Python 环境。
+之前的快速入门,[请验证 SQL Server 中是否存在 python](quickstart-python-verify.md), 并提供设置此快速入门所需的 Python 环境所需的信息和链接。
 
-## <a name="basic-python-interaction"></a>Python 的基本交互
+## <a name="basic-python-interaction"></a>基本 Python 交互
 
-有两种方法在 SQL Server 中运行 Python 代码：
+可以通过两种方式在 SQL Server 中运行 Python 代码:
 
-+ 系统存储过程的参数添加的 Python 脚本[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
++ 添加 Python 脚本作为系统存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)的参数。
 
-+ 从[远程 Python 客户端](../python/setup-python-client-tools-sql.md)，连接到 SQL Server，并使用 SQL Server 作为计算上下文执行代码。 这需要[revoscalepy](../python/ref-py-revoscalepy.md)。
++ 从[远程 Python 客户端](../python/setup-python-client-tools-sql.md), 连接到 SQL Server, 并使用 SQL Server 作为计算上下文来执行代码。 这需要[revoscalepy](../python/ref-py-revoscalepy.md)。
 
-以下练习的重点是第一个交互模型： 如何将 Python 代码传递给存储过程。
+以下练习重点介绍第一种交互模型: 如何将 Python 代码传递到存储过程。
 
-1. 运行一些简单代码，请参阅如何数据 SQL 服务器和 Python 之间来回传递。
+1. 运行一些简单的代码, 以了解如何在 SQL Server 和 Python 之间来回传递数据。
 
     ```sql
     execute sp_execute_external_script 
@@ -47,7 +47,7 @@ ms.locfileid: "67962067"
     '
     ```
 
-2. 假设你有所有内容设置正确无误，并且 Python 和 SQL Server 是否在与彼此通信，计算正确的结果，和 Python`print`函数将返回到结果**消息**windows。
+2. 假设你已正确设置了所有内容, 并且 python 和 SQL Server 互相通信, 则会计算正确的结果, Python `print`函数会将结果返回给**消息**窗口。
 
     **结果**
 
@@ -56,19 +56,19 @@ ms.locfileid: "67962067"
     0.5 2
     ```
 
-    获取时**stdout**测试你的代码时，消息是非常方便，更频繁地需要以表格格式返回结果，以便可以在应用程序中使用它或将其写入到一个表。
+    虽然在测试代码时获取**stdout**消息很方便, 但更多情况下, 需要以表格格式返回结果, 以便在应用程序中使用它或将其写入表。
 
-现在，请记住以下规则：
+现在, 请记住以下规则:
 
-+ 内的所有内容`@script`参数必须是有效的 Python 代码。 
-+ 代码必须遵从所有关于缩进、 变量名称等的 Python 规则。 时遇到错误，检查您的空白区域和大小写。
-+ 在编程语言之间 Python 是最灵活的一个方面单引号和双引号引起来;它们几乎可以互换。 但是，T-SQL 用于仅某些操作，单引号和`@script`参数使用单引号括起来的 Python 代码作为 Unicode 字符串。 因此，您可能需要查看您的 Python 代码，并将一些单引号更改为双引号引起来。
-+ 如果使用的默认情况下不加载任何库，必须在脚本开头使用导入语句加载它们。 SQL Server 将添加几个特定于产品的库。 有关详细信息，请参阅[Python 库](../python/python-libraries-and-data-types.md)。
-+ 如果库尚未安装，停止并安装 SQL Server 外部 Python 包，如下所述：[在 SQL Server 上安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)
++ 参数内的`@script`所有内容都必须是有效的 Python 代码。 
++ 代码必须遵循有关缩进、变量名称等的所有 Python 规则。 出现错误时, 请检查您的空白和大小写。
++ 在编程语言中, Python 是最灵活的单引号与双引号之间的比较;它们非常可互换。 但是, t-sql 仅对某些东西使用单引号, 而`@script`参数使用单引号将 Python 代码作为 Unicode 字符串。 因此, 你可能需要查看 Python 代码, 并将一些单引号更改为双引号。
++ 如果你使用的是默认情况下未加载的任何库, 则必须在脚本开头使用 import 语句来加载这些库。 SQL Server 添加几个特定于产品的库。 有关详细信息, 请参阅[Python 库](../python/python-libraries-and-data-types.md)。
++ 如果尚未安装库, 请在 SQL Server 之外停止并安装 Python 包, 如下所述:[在 SQL Server 上安装新 Python 包](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="run-a-hello-world-script"></a>运行 Hello World 脚本
 
-以下练习中运行另一个简单的 Python 脚本。
+以下练习将运行另一个简单的 Python 脚本。
 
 ```sql
 EXEC sp_execute_external_script
@@ -79,12 +79,12 @@ WITH RESULT SETS (([Hello World] int));
 GO
 ```
 
-此存储过程的输入包括：
+此存储过程的输入包括:
 
-+ *@language* 参数定义的语言扩展。 若要调用，在这种情况下，Python。
-+ *@script* 参数定义传递给 Python 运行时的命令。 为 Unicode 文本，整个 Python 脚本必须括在此参数。 还可将文本添加到 **nvarchar** 类型的变量并调用该变量。
-+ *@input_data_1* 该查询中，传递给 Python 运行时，将数据返回到 SQL Server 作为数据帧返回数据。
-+ 使用结果集子句返回的数据的表的架构定义的 SQL Server，将"Hello World"添加列名称，为**int**的数据类型。
++ *@language* 参数定义要调用的语言扩展, 在本例中为 Python。
++ *@script* 参数定义传递到 Python 运行时的命令。 整个 Python 脚本必须以 Unicode 文本的形式包含在此参数中。 还可将文本添加到 **nvarchar** 类型的变量并调用该变量。
++ *@input_data_1* 查询返回的数据, 传递到 Python 运行时, 它将数据作为数据帧返回 SQL Server。
++ WITH RESULT SETS 子句为 SQL Server 定义返回的数据表的架构, 并将 "Hello World" 添加为列名称, 为数据类型输入**int** 。
 
 **结果**
 
@@ -94,7 +94,7 @@ GO
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，已运行两个简单的 Python 脚本，需要深入研究构建输入和输出。
+现在, 你已运行了几个简单的 Python 脚本, 接下来详细介绍了如何构建输入和输出。
 
 > [!div class="nextstepaction"]
-> [快速入门：处理输入和输出](quickstart-python-inputs-and-outputs.md)
+> [起步处理输入和输出](quickstart-python-inputs-and-outputs.md)

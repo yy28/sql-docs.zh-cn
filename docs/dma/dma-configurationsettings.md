@@ -1,6 +1,6 @@
 ---
-title: 配置设置的数据迁移助手 (SQL Server) |Microsoft Docs
-description: 了解如何配置用于数据迁移助手的更新配置文件中的值设置
+title: 为数据迁移助手配置设置 (SQL Server) |Microsoft Docs
+description: 了解如何通过更新配置文件中的值来配置数据迁移助手的设置
 ms.custom: ''
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058876"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345237"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>为数据迁移助手配置设置
 
-可以通过 dma.exe.config 文件中设置配置值来微调特定的数据迁移助手的行为。 本指南介绍了关键的配置值。
+您可以通过在 cmd.exe .config 文件中设置配置值来微调数据迁移助手的某些行为。 本文介绍关键配置值。
 
-您可以找到 dma.exe.config 文件数据迁移助手的桌面应用程序和命令行实用程序，在计算机上的以下文件夹中。
+你可以在计算机上的以下文件夹中找到数据迁移助手桌面应用程序和命令行实用工具的 cmd.exe .config 文件。
 
 - 桌面应用程序
 
-  %Programfiles%\\Microsoft 数据迁移助手\\dma.exe.config
+  % ProgramFiles%\\Microsoft 数据迁移助手\\
 
-- 命令行实用程序
+- 命令行实用工具
 
-  %Programfiles%\\Microsoft 数据迁移助手\\dmacmd.exe.config 
+  % ProgramFiles%\\Microsoft 数据迁移助手\\dmacmd 
 
-请务必进行任何修改之前保存一份原始配置文件。 进行更改后，重新启动数据迁移助手的新的配置值才会生效。
+请确保在进行任何修改之前保存原始配置文件的副本。 进行更改后, 重新启动数据迁移助手, 以使新的配置值生效。
 
-## <a name="number-of-databases-to-assess-in-parallel"></a>评估并行中的数据库数量
+## <a name="number-of-databases-to-assess-in-parallel"></a>要并行评估的数据库数
 
-数据迁移助手来评估并行的多个数据库。 在评估期间数据迁移助手中提取数据层应用程序 (dacpac) 以了解数据库架构。 如果在同一服务器上的多个数据库评估并行，则此操作可能超时。 
+数据迁移助手并行评估多个数据库。 在评估期间数据迁移助手提取数据层应用程序 (dacpac) 以了解数据库架构。 如果在同一台服务器上并行评估了多个数据库, 则此操作可能会超时。 
 
-从数据迁移助手的 2.0 版开始，你可以控制这通过设置 parallelDatabases 配置值。 默认值为 8。
+从数据迁移助手 v2.0 开始, 可以通过设置 parallelDatabases 配置值进行控制。 默认值为8。
 
 ```
 <advisorGroup>
@@ -58,11 +58,11 @@ ms.locfileid: "68058876"
 
 
 
-## <a name="number-of-databases-to-migrate-in-parallel"></a>要并行迁移的数据库的数目
+## <a name="number-of-databases-to-migrate-in-parallel"></a>要并行迁移的数据库数
 
-数据迁移助手迁移并行情况下，多个数据库之前迁移登录名。 在迁移期间，数据迁移助手将进行源数据库的备份，可以选择复制备份，然后将其还原到目标服务器。 选择用于迁移的多个数据库时，可能会遇到超时故障。 
+数据迁移助手在迁移登录名之前并行迁移多个数据库。 在迁移过程中, 数据迁移助手将备份源数据库, 还可以选择复制备份, 然后在目标服务器上还原备份。 选择多个数据库进行迁移时, 可能会遇到超时故障。 
 
-从数据迁移助手版本 2.0 开始，如果遇到此问题可以减少 parallelDatabases 配置值。 可以增大该值以减少整体迁移时间。
+从数据迁移助手 v2.0 开始, 如果你遇到此问题, 则可以减少 parallelDatabases 配置值。 可以增大此值, 以减少总体迁移时间。
 
 ```
 <advisorGroup>
@@ -79,22 +79,22 @@ ms.locfileid: "68058876"
 
 ## <a name="dacfx-settings"></a>DacFX 设置
 
-在评估期间数据迁移助手中提取数据层应用程序 (dacpac) 以了解数据库架构。 此操作可能会失败，具有超时值对于极大型数据库，或如果服务器负载。 从数据迁移 1.0 版开始，可以修改以下的配置值，以避免错误。 
+在评估期间, 数据迁移助手提取数据层应用程序 (dacpac) 以了解数据库架构。 对于极大型数据库, 或如果服务器负载过大, 此操作可能会失败并出现超时。 从数据迁移 v1.0 开始, 可以修改以下配置值以避免错误。 
 
 > [!NOTE]
-> 整个&lt;dacfx&gt;默认情况下注释条目。 删除注释，并根据需要修改值。
+> 默认情况&lt;下&gt; , 将对整个 dacfx 条目进行注释。 删除注释, 然后根据需要修改值。
 
 - commandTimeout
 
-   此参数设置 IDbCommand.CommandTimeout 属性中*秒*。 (默认值 = 60)
+   此参数设置 IDbCommand 属性, 以*秒为单位*。 (默认值 = 60)
 
 - databaseLockTimeout
 
-   此参数等效于[设置锁\_超时超时\_段](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (默认值 = 5000)
+   此参数等效于[设置锁定\_超时\_超时期限](../t-sql/statements/set-lock-timeout-transact-sql.md)(以*毫秒为单位)* 。 (默认值 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  此参数设置使用 SQL 连接池连接的数量。 (默认值 = 8)
+  此参数设置要使用的 SQL 连接池连接的数量。 (默认值 = 8)
 
 ```
 <advisorGroup>
@@ -109,11 +109,11 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:建议的阈值
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:建议阈值
 
-与[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)，可以动态拉伸冷暖事务数据从 Microsoft SQL Server 2016 到 Azure。 Stretch Database 针对包含大量冷数据的事务数据库。 Stretch Database 建议，在存储功能建议，首先标识的表，它认为将受益于此功能，和它然后确定不需要进行若要启用此功能的表的更改。
+利用[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), 你可以将热和冷事务数据从 Microsoft SQL Server 2016 动态拉伸到 Azure。 Stretch Database 以包含大量冷数据的事务数据库为目标。 Stretch Database 建议: 在存储功能建议下, 首先识别它认为将从此功能中受益的表, 然后标识为启用此功能所需进行的更改。
 
-从数据迁移助手的 2.0 版开始，可以控制此阈值，才能有资格获得使用 recommendedNumberOfRows 配置值的 Stretch Database 功能的表。 默认值为 10 万行。 如果你想要分析甚至较小的表的延伸功能，然后相应地减小的值。
+从数据迁移助手 v2.0 开始, 你可以使用 recommendedNumberOfRows 配置值控制表的此阈值, 以便符合 Stretch Database 功能。 默认值为100000行。 如果要分析更小的表的拉伸功能, 请相应地减小值。
 
 ```
 <advisorGroup>
@@ -130,7 +130,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="sql-connection-timeout"></a>SQL 连接超时
 
-您可以控制[SQL 连接超时](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx)源和目标实例时运行的评估或迁移，通过将连接超时值设置为指定的秒数。 默认值为 15 秒。
+可以通过将连接超时值设置为指定的秒数, 在运行评估或迁移时控制源和目标实例的[SQL 连接](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx)超时。 默认值为 15 秒。
 
 ```
 <appSettings>
@@ -140,6 +140,17 @@ maxDataReaderDegreeOfParallelism="8"/>
 </appSettings>
 ```
 
+## <a name="ignore-error-codes"></a>忽略错误代码
+
+每个规则的标题中都有错误代码。 如果不需要规则并想要忽略它们, 请使用 ignoreErrorCodes 属性。 可以指定忽略单个错误或多个错误。 若要忽略多个错误, 请使用分号, 例如, ignoreErrorCodes = "46010; 71501"。 默认值为 71501, 此值与对象引用系统对象 (如过程、视图等) 时标识的未解析引用关联。
+
+```
+<workflowSettings>
+
+<assessment parallelDatabases="8" ignoreErrorCodes="71501" />
+
+</workflowSettings>
+```
 
 ## <a name="see-also"></a>请参阅
 

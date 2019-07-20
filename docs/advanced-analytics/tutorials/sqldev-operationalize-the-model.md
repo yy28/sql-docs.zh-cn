@@ -1,35 +1,35 @@
 ---
-title: 使用 R 模型的 SQL Server 机器学习第 4 课预测潜在结果
-description: 本教程显示如何将 SQL Server 中嵌入的 R 脚本进行操作的存储过程带有 T-SQL 函数
+title: 第4课使用 R 模型预测潜在结果
+description: 介绍如何在 SQL Server 带有 T-sql 函数的存储过程中操作嵌入式 R 脚本的教程
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ca5d09b052d80083589189f53a8dc9c059e5cf99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 159fb29bf560e755fdc605330d7d20369f55ba08
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961865"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345897"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>第 4 课：运行使用存储过程中嵌入的 R 的预测
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>第 4 课：使用存储过程中嵌入的 R 运行预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
 
-在此步骤中，您了解如何使用针对新观测值的模型来预测潜在的结果。 模型包装在可由其他应用程序直接调用的存储过程。 本演练演示了几种方法进行评分：
+在此步骤中, 您将了解如何针对新的观测值使用该模型来预测潜在的结果。 模型包装在存储过程中, 该存储过程可由其他应用程序直接调用。 本演练演示了执行评分的几种方法:
 
 - **批处理计分模式**:使用 SELECT 查询作为存储过程的输入。 存储过程将返回与输入事例对应的观测表。
 
-- **单个评分模式**:将一组单独的参数值传递作为输入。  存储过程将返回单个行或值。
+- **单个计分模式**:作为输入传递一组单独的参数值。  存储过程将返回单个行或值。
 
 首先，让我们看看一般情况下评分的工作原理。
 
 ## <a name="basic-scoring"></a>基本评分
 
-存储的过程**RxPredict**说明了在存储过程中包装的 RevoScaleR rxPredict 调用的基本语法。
+存储过程**RxPredict**说明了在存储过程中包装 RevoScaleR RxPredict 调用的基本语法。
 
 ```sql
 CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
@@ -53,21 +53,21 @@ END
 GO
 ```
 
-+ SELECT 语句从数据库中获取序列化的模型并将模型存储在 R 变量`mod`进行进一步的处理使用。
++ SELECT 语句从数据库获取序列化模型, 并将该模型存储在 r 变量`mod`中, 以供使用 r 进行进一步处理。
 
-+ 从获取新的用例进行评分[!INCLUDE[tsql](../../includes/tsql-md.md)]中指定查询`@inquery`，存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧传递给[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)函数，在[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)，其生成评分。
++ 评分的新用例是从[!INCLUDE[tsql](../../includes/tsql-md.md)]中`@inquery`指定的查询获得的, 该存储过程的第一个参数。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。 此数据帧传递到[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)中的[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)函数, 这将生成分数。
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     由于数据帧可以包含单个行，你可以使用相同的代码来进行批量或单个评分。
   
-+ 返回的值`rxPredict`技术支持部门**float** ，表示该驱动程序获取任何金额的小费的概率。
++ `rxPredict`函数返回的值是一个**浮点**值, 它表示驱动程序获取任何量提示的概率。
 
-## <a name="batch-scoring-a-list-of-predictions"></a>批处理评分 （预测列表）
+## <a name="batch-scoring-a-list-of-predictions"></a>批处理评分 (预测列表)
 
-一种更常见方案是在批处理模式下生成多个观察值的预测。 在此步骤中，让我们了解批处理评分的工作原理。
+更常见的情况是在批处理模式下为多个观察生成预测。 在此步骤中, 我们来看一下批处理评分的工作原理。
 
-1.  先获取较小的要使用的输入数据集。 此查询创建了“排名前 10”的行程列表，其中需要预测乘客计数和其他功能。
+1.  首先, 获取一组较小的要使用的输入数据。 此查询创建了“排名前 10”的行程列表，其中需要预测乘客计数和其他功能。
   
     ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -92,7 +92,7 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-2. 创建名为存储的过程**RxPredictBatchOutput**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+2. 在中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建名为**RxPredictBatchOutput**的存储过程。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
@@ -115,7 +115,7 @@ GO
     END
     ```
 
-3.  提供的变量中的查询文本并将其作为参数传递给存储过程：
+3.  提供变量中的查询文本, 并将其作为参数传递给存储过程:
 
     ```sql
     -- Define the input data
@@ -126,22 +126,22 @@ GO
     EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
-存储的过程返回一的系列表示前 10 个行程的每个预测的值。 但是，顶部行程也是使用相对较短的行程距离，为其驱动程序不太可能中获得小费的单乘客行程。
+该存储过程将返回一系列值, 这些值表示前10次行程的预测。 但是, 最大行程的行程也是相对较短的乘客行程, 驱动程序不太可能获得提示。
   
 
 > [!TIP]
 > 
-> 而不是返回的"是提示"和"无小费"的结果，可能也会返回该预测的概率分数，然后将应用到的 WHERE 子句_分数_列的值以将评分分类为"可能小费"或"不可能给小费"，使用如 0.5 或 0.7 阈值。 此步骤不包含在存储过程中，但很容易执行。
+> 你还可以返回预测的概率分数, 然后将 WHERE 子句应用于_分数_列值, 以将分数归类为 "有可能提示" 或 "不太可能", 而不是仅返回 "yes-tip" 和 "no 刀尖" 结果, 并使用阈值, 例如0.5 或0.7。 此步骤不包含在存储过程中，但很容易执行。
 
-## <a name="single-row-scoring-of-multiple-inputs"></a>单行计分的多个输入
+## <a name="single-row-scoring-of-multiple-inputs"></a>多个输入的单行评分
 
-有时你想要传递多个输入值并获取单个预测基于这些值。 例如，您可以设置 Excel 工作表、 web 应用程序或 Reporting Services 报表，以调用存储的过程，并提供输入键入或选择的用户从这些应用程序。
+有时, 您想要传入多个输入值并基于这些值获取单个预测。 例如, 您可以设置一个 Excel 工作表、web 应用程序或 Reporting Services 报表来调用存储过程, 并提供这些应用程序中用户键入或选择的输入。
 
-在本部分中，您将了解如何创建单个预测使用的存储的过程采用多个输入，例如乘客计数、 行程距离等。 存储的过程创建基于以前存储的 R 模型的分数。
+在本部分中, 将了解如何使用存储过程创建单个预测, 该存储过程采用多个输入, 例如乘客计数、行程距离等。 该存储过程基于之前存储的 R 模型创建分数。
   
-如果从外部应用程序调用存储的过程，请确保数据满足 R 模型的要求。 这可能包括确保输入的数据可以被转换为 R 数据类型或验证数据类型和数据长度。 
+如果从外部应用程序调用存储过程, 请确保数据符合 R 模型的要求。 这可能包括确保输入的数据可以被转换为 R 数据类型或验证数据类型和数据长度。 
 
-1. 创建一个存储的过程**RxPredictSingleRow**。
+1. 创建存储过程**RxPredictSingleRow**。
   
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -166,7 +166,7 @@ GO
 
 2. 通过手动提供值来进行试用。
   
-    打开一个新**查询**窗口中，并调用存储过程，为每个参数提供值。 参数表示模型使用的特征列，并且需要。
+    打开一个新的**查询**窗口, 然后调用存储过程, 并为每个参数提供值。 参数表示模型所使用的功能列, 并且是必需的。
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
@@ -179,18 +179,18 @@ GO
     @dropoff_longitude = -73.977303
     ```
 
-    或者，使用支持此短格式[存储过程的参数](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+    或者, 为[存储过程的参数](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)使用此更短的格式:
   
     ```sql
     EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. 结果表明获得小费的可能性较低 （零） 在前 10 个不得不来回往返，因为所有通过相对较短的距离都是单乘客行程。
+3. 结果表明, 在这前10次行程中获得笔尖的概率很低 (零), 因为所有这些都是相对较短的距离。
 
 ## <a name="conclusions"></a>结论
 
-本步骤将结束教程。 现在，您学习了如何在存储过程中嵌入 R 代码，您可以扩展这些做法，以便生成你自己的模型。 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成使其更易于部署 R 模型以进行预测，将模型再定型合并为企业数据工作流的一部分也变得更加容易。
+本步骤将结束教程。 现在, 你已了解如何将 R 代码嵌入到存储过程中, 你可以扩展这些方法来生成自己的模型。 与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的集成使其更易于部署 R 模型以进行预测，将模型再定型合并为企业数据工作流的一部分也变得更加容易。
 
 ## <a name="previous-lesson"></a>上一课
 
-[第 3 课：训练和保存使用 T-SQL 的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)
+[第 3 课：使用 T-sql 定型和保存 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)

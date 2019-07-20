@@ -1,37 +1,37 @@
 ---
-title: 快速入门： 使用输入和 R 的 SQL Server 机器学习中的输出
-description: 在 SQL Server 中的 R 脚本的本快速入门，了解如何构建输入和输出到 sp_execute_external_script 系统存储过程。
+title: 使用 R 中的输入和输出的快速入门
+description: 在 SQL Server 中的 R 脚本入门教程中, 了解如何构建 sp_execute_external_script 系统存储过程的输入和输出。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ccdf5206f2564ead2ca66f40143aee1b4ab1fad
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962003"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344622"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>快速入门：处理输入和输出在 SQL Server 中使用 R
+# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>快速入门：在 SQL Server 中使用 R 处理输入和输出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本快速入门演示如何处理输入和输出时使用 SQL Server 机器学习服务中的 R 或 R Services。
+本快速入门演示如何在 SQL Server 机器学习服务或 R Services 中使用 R 时处理输入和输出。
 
-当你想要在 SQL Server 中运行 R 代码时，必须在存储过程中包装 R 脚本。 可以编写一个，也可以传递到 R 脚本[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 此系统存储的过程用于在 SQL Server，将数据传递到 R，上下文中启动 R 运行时，安全地管理 R 用户会话，并向客户端返回任何结果。
+如果要在 SQL Server 中运行 R 代码, 则必须在存储过程中包装 R 脚本。 可以编写一个脚本, 也可以将 R 脚本传递给[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 此系统存储过程用于在 SQL Server 的上下文中启动 R 运行时, 将数据传递给 R, 并安全地管理 R 用户会话, 并将所有结果返回给客户端。
 
-默认情况下[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)接受单个输入数据集，这通常中有效的 SQL 查询的形式提供。 作为 SQL 变量，可以传递其他类型的输入。
+默认情况下, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)接受一个输入数据集, 该数据集通常以有效的 SQL 查询的形式提供。 其他类型的输入可以作为 SQL 变量传递。
 
-存储的过程返回单个 R 数据框架作为输出，但您也可以输出标量和作为变量的模型。 例如，可以输出为二进制变量已训练的模型，并将其传递给 T-SQL INSERT 语句，该模型写入表。 您还可以生成绘图 （以二进制格式） 或标量 （单个值，如日期和时间，经过的时间来训练该模型，等等）。
+该存储过程返回单个 R 数据帧作为输出, 但您也可以将标量和模型输出为变量。 例如, 可以将定型模型输出为二进制变量并将其传递给 T-sql INSERT 语句, 以便将该模型写入表。 您还可以生成图形 (二进制格式) 或标量 (单个值, 例如日期和时间、训练模型所用的时间, 等等)。
 
 ## <a name="prerequisites"></a>先决条件
 
-上一个快速入门中， [SQL Server 中存在验证 R](quickstart-r-verify.md)、 提供的信息和链接设置为本快速入门所需的 R 环境。
+以前的快速入门,[验证 SQL Server 中是否存在 r](quickstart-r-verify.md), 提供了设置本快速入门所需的 R 环境的信息和链接。
 
 ## <a name="create-the-source-data"></a>创建源数据
 
-通过运行以下 T-SQL 语句来创建小型测试数据的表：
+通过运行以下 T-sql 语句来创建一个较小的测试数据表:
 
 ```sql
 CREATE TABLE RTestData (col1 INT NOT NULL)
@@ -53,11 +53,11 @@ SELECT * FROM RTestData
 
 ## <a name="inputs-and-outputs"></a>“脚本转换编辑器”
 
-让我们看一下默认的 sp_execute_external_script 的输入和输出变量：`InputDataSet`和`OutputDataSet`。
+让我们看看 sp_execute_external_script 的默认输入和输出变量: `InputDataSet`和。 `OutputDataSet`
 
-1. 作为 R 脚本的输入，可以从表获取数据。 运行下面的语句。 它从表中获取数据，使 R 运行时，通过一次往返过程并返回具有列名称的值*NewColName*。
+1. 可以从表中获取数据作为 R 脚本的输入。 运行以下语句。 它从表中获取数据, 通过 R 运行时进行一次往返, 并返回列名称为*NewColName*的值。
 
-    由查询返回的数据传递给 R 运行时，将数据返回到 SQL 数据库作为数据帧。 WITH RESULT SETS 子句定义为 SQL 数据库返回的数据的表的架构。
+    查询返回的数据将传递给 R 运行时, 这会将数据作为数据帧返回到 SQL 数据库。 WITH RESULT SETS 子句定义了 SQL 数据库返回的数据表的架构。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -69,11 +69,11 @@ SELECT * FROM RTestData
 
     **结果**
 
-    ![返回表中的数据的 R 脚本输出](./media/r-output-rtestdata.png)
+    ![从表返回数据的 R 脚本的输出](./media/r-output-rtestdata.png)
 
-2. 让我们来更改输入或输出变量的名称。 上述脚本使用了默认的输入和输出变量名称， _InputDataSet_并_OutputDataSet_。 若要定义与关联的输入的数据_InputDatSet_，则使用 *@input_data_1* 变量。
+2. 让我们更改输入或输出变量的名称。 上面的脚本使用了默认输入和输出变量名称_InputDataSet_和_OutputDataSet_。 若要定义与_InputDatSet_关联的输入数据, 请使用 *@input_data_1* 变量。
 
-    在此脚本中，存储过程的输出和输入的变量名称已更改为*SQL_out*并*SQL_in*:
+    在此脚本中, 存储过程的输出和输入变量的名称已更改为*SQL_out*和*SQL_in*:
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -85,13 +85,13 @@ SELECT * FROM RTestData
       WITH RESULT SETS (([NewColName] INT NOT NULL));
     ```
 
-    请注意，R 是区分大小写，因此输入和输出变量中的事例`@input_data_1_name`并`@output_data_1_name`必须匹配与中的 R 代码中的`@script`。 
+    请注意, R 区分大小写, 因此`@input_data_1_name`和`@output_data_1_name`中的输入和输出变量的大小写必须与中`@script`r 代码中的变量匹配。 
 
     仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，可以从 R 代码内调用其他数据集，并且除数据集以外，还可以返回其他类型的输出。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。 
 
-    `WITH RESULT SETS`语句在 SQL Server 中定义的数据使用的架构。 您需要为你从 R.返回每个列提供 SQL 兼容的数据类型可以使用的架构定义来提供新的列名称也不需要使用 R 数据帧中的列名称。
+    `WITH RESULT SETS`语句定义 SQL Server 中使用的数据的架构。 需要为从 R 返回的每个列提供 SQL 兼容的数据类型。你可以使用架构定义来提供新的列名, 因为你不需要使用 R 数据帧中的列名称。
 
-3. 此外可以生成使用 R 脚本的值，并保留中的输入的查询字符串 _@input_data_1_ 保留为空。
+3. 你还可以使用 R 脚本生成值, 并将输入查询字符串 _@input_data_1_ 留空。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -104,11 +104,11 @@ SELECT * FROM RTestData
 
     **结果**
 
-    ![使用查询结果@script作为输入](./media/r-data-generated-output.png)
+    ![使用@script作为输入的查询结果](./media/r-data-generated-output.png)
 
 ## <a name="next-steps"></a>后续步骤
 
-检查某些 R 和 SQL Server 之间传递数据，例如隐式转换和表格数据的 R 和 SQL 之间的差异时可能遇到的问题。
+检查在 R 和 SQL Server 之间传递数据时可能会遇到的一些问题, 例如, 在 R 和 SQL 之间的表格数据中的隐式转换和差异。
 
 > [!div class="nextstepaction"]
-> [快速入门：处理数据类型和对象](quickstart-r-data-types-and-objects.md)
+> [起步处理数据类型和对象](quickstart-r-data-types-and-objects.md)
