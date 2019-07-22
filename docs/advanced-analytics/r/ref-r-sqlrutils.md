@@ -1,20 +1,20 @@
 ---
-title: sqlrutils 帮助程序函数-SQL Server 机器学习服务
-description: 使用 R 使用 sqlrutils 函数库在 SQL Server 2016 R Services 和 SQL Server 2017 机器学习服务中的生成包含 R 脚本的存储的过程。
+title: sqlrutils helper 函数
+description: 使用 SQL Server 2016 R Services 中的 sqlrutils 函数库和 SQL Server 2017 机器学习服务 with R 生成包含 R 脚本的存储过程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6a66d79d376806383f1376510bb6de79493cb7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 361093be372e77a869996e6ffb67a6bd6e701c44
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962476"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345094"
 ---
-# <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils （SQL Server 中的 R 库）
+# <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server 中的 R 库)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **sqlrutils** 包为 R 用户提供一种机制，将他们的 R 脚本置于 T-SQL 存储过程中、向数据库注册该存储过程并从 R 开发环境运行存储过程。 
@@ -32,43 +32,43 @@ ms.locfileid: "67962476"
   > [!NOTE]
   > 若打算通过调用 *executeStoredProcedure* 函数从 R 环境运行存储过程，必须使用 ODBC 3.8 提供程序，例如适用于 SQL Server 的 ODBC Driver 13。  
   
-## <a name="full-reference-documentation"></a>完整的参考文档
+## <a name="full-reference-documentation"></a>完整参考文档
 
-**Sqlrutils**库分布在多个 Microsoft 产品，但使用情况都是相同是否获取 SQL Server 或另一个产品中的库。 函数是相同的因为[单个 sqlrutils 函数的文档](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)发布到下一个位置[R 引用](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)的 Microsoft Machine Learning Server。 应任何特定于产品的行为存在，请将函数的帮助页中所示的差异。
+**Sqlrutils**库分布在多个 Microsoft 产品中, 但不管你是在 SQL Server 还是在其他产品中获取库, 使用情况都是相同的。 由于函数相同, 因此,[每个 sqlrutils 函数的文档](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)仅发布到 Microsoft Machine Learning Server [R 引用](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)下的一个位置。 如果存在任何特定于产品的行为, 则函数帮助页中将注明差异。
 
 ## <a name="functions-list"></a>函数列表
 
-以下部分概述可以从调用的函数**sqlrutils**包开发一个存储的过程，其中包含嵌入的 R 代码。 为每个方法或函数的参数的详细信息，请参阅包的 R 帮助： `help(package="sqlrutils")`
+以下部分概述了可从**sqlrutils**包调用的函数, 以开发包含嵌入的 R 代码的存储过程。 有关每个方法或函数的参数的详细信息, 请参阅包的 R 帮助:`help(package="sqlrutils")`
 
-|函数 | 描述 |
+|Functions | 描述 |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 执行 SQL 存储过程。|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 获取对存储过程的输入参数的列表。| 
+|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 获取存储过程的输入参数列表。| 
 |[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| 在 SQL Server 中定义将用于 R 数据帧的数据源。 指定 data.frame（在其中存储输入数据）的名称和获取数据的查询或默认值。 仅支持简单的 SELECT 查询。 | 
 |[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| 定义将嵌入 T-SQL 脚本的单个输入参数。 必须提供参数名称及其 R 数据类型。| 
 |[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| 如果 R 函数返回包含 data.frame 的列表，则会生成所需的中间数据对象。 *OutputData* 对象用于存储从列表获取的单个 data.frame 的名称。| 
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | 如果 R 函数返回列表，则会生成所需的中间数据对象。 *OutputParameter* 对象存储列表中单个成员的名称和数据类型，假定此成员 **不是** 数据帧。 |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | 向数据库注册存储的过程。|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| 将查询分配给存储过程的输入的数据参数。| 
+|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | 向数据库注册存储过程。|
+|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| 将查询分配给存储过程的输入数据参数。| 
 |[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| 将值分配给存储过程的输入参数。| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 存储的过程对象。|
+|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 存储过程对象。|
 
 
 ## <a name="how-to-use-sqlrutils"></a>如何使用 sqlrutils
 
-**Sqlrutils**库函数必须在具有 SQL Server 机器学习的计算机上运行如果您正在客户端工作站上，设置为 shift 执行转移到 SQL Server 的远程计算上下文。 使用此包的工作流包括以下步骤：
+**Sqlrutils**库函数必须在具有 R 机器学习 SQL Server 的计算机上运行。如果使用的是客户端工作站, 请将远程计算上下文设置为将执行转移到 SQL Server。 使用此包的工作流包括以下步骤:
 
-+ 定义存储的过程参数 （输入、 输出，或两者） 
-+ 生成并注册存储的过程    
++ 定义存储过程参数 (输入、输出或两者) 
++ 生成并注册存储过程    
 + 执行该存储过程  
 
-在 R 会话中，加载**sqlrutils**从命令行键入`library(sqlrutils)`。
+在 R 会话中, 通过  键入`library(sqlrutils)`从命令行加载 sqlrutils。
 
 > [!Note]
-> 您可以加载此库不具有 SQL Server （例如，在 R 客户端实例） 如果将计算上下文更改为 SQL Server 并在该计算上下文中执行代码的计算机上。
+> 如果将计算上下文更改为 SQL Server 并在该计算上下文中执行代码, 则可以在没有 SQL Server 的计算机上 (例如, 在 R 客户端实例上) 加载此库。
 
 
-### <a name="define-stored-procedure-parameters-and-inputs"></a>定义存储的过程参数和输入
+### <a name="define-stored-procedure-parameters-and-inputs"></a>定义存储过程参数和输入
 
 `StoredProcedure` 是用于构建存储过程的主构造函数。 此构造函数生成 *SQL Server 存储过程* 对象，并选择性地创建包含查询的文本文件，其中此查询可使用 T-SQL 命令生成存储过程。 
 
@@ -105,5 +105,5 @@ ms.locfileid: "67962476"
 
 ## <a name="see-also"></a>请参阅
 
-[如何创建使用 sqlrutils 对存储的过程](how-to-create-a-stored-procedure-using-sqlrutils.md)
+[如何使用 sqlrutils 创建存储过程](how-to-create-a-stored-procedure-using-sqlrutils.md)
 
