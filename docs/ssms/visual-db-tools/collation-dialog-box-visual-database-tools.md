@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 94409316db28a3e122457e81037a9a4eadb60509
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: ef284f2f09493ce0bd201efbd691c8ee1ba07c29
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686319"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262595"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,9 +26,9 @@ ms.locfileid: "67686319"
   
 在以下情况下将显示此对话框：  
   
--   在“列属性”  选项卡的“排序规则”  字段中输入无效的排序规则名称。  
+-   在“列属性”选项卡的“排序规则”字段中输入无效的排序规则名称。  
   
--   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)    。  
+-   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 (…)。  
   
 ## <a name="options"></a>选项  
 **SQL 排序规则**  
@@ -39,10 +38,10 @@ ms.locfileid: "67686319"
 在下拉列表中由 Windows 定义的排序规则顺序之间进行选择。  
   
 **二进制排序**  
-使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”  后才适用。  
+使用字符值的二进制代码进行比较。 如果选择此选项，某些字母比较选项将不可用。 例如，不区分大小写的比较选项将不可用，因为大写字母和小写字母具有不同的二进制编码。 只有在选择了“Windows 排序规则”后才适用。  
   
 **字典排序**  
-使用字母比较选项。 只有在选择了“Windows 排序规则”  后才适用。 字母比较选项包括：  
+使用字母比较选项。 只有在选择了“Windows 排序规则”后才适用。 字母比较选项包括：  
   
 -   **区分大小写** 如果希望在比较中将大写字母和小写字母视为不相同，请选择此选项。  
   

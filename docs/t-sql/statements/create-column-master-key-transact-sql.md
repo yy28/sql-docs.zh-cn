@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061058"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -119,7 +118,7 @@ key_path
   
 -   **提供程序名称：** MSSQL_CSP_PROVIDER  
   
-    **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
+    **密钥路径格式：***ProviderName*/*KeyIdentifier*  
   
     其中：  
   
@@ -137,7 +136,7 @@ key_path
   
 -   **提供程序名称：** MSSQL_CNG_STORE  
   
-    **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
+    **密钥路径格式：***ProviderName*/*KeyIdentifier*  
   
     其中：  
   
@@ -175,7 +174,7 @@ signature
 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要 ALTER ANY COLUMN MASTER KEY 权限。  
   
 ## <a name="examples"></a>示例  

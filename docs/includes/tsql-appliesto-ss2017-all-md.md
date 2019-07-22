@@ -1,1 +1,9 @@
-<Token>适用对象：![是](media/yes.png)SQL Server（从 2017 开始）![是](media/yes.png)Azure SQL 数据库![是](media/yes.png)Azure SQL 数据仓库![是](media/yes.png)并行数据仓库</Token>
+---
+ms.openlocfilehash: 6474670bc0ffab9e0eae33117f8cf9d19bb90452
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68221291"
+---
+<Token>**适用对象：**![yes](media/yes.png)SQL Server![yes](media/yes.png)Azure SQL 数据库![yes](media/yes.png)Azure SQL 数据仓库![yes](media/yes.png)并行数据仓库</Token>

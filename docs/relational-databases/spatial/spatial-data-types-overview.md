@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d0a1467495dc20c0508adbba6f44a6164193da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048522"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "65939219"
 另外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 **geography** 数据类型，该数据类型可存储诸如 GPS 纬度和经度坐标之类的椭圆体（圆球）数据。
 
 ##  <a name="objects"></a> 空间数据对象  
-**geometry** 和 **geography** 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种  “可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例的某些属性从其父级数据类型派生而来，使其在 **Points**中区分为 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、 **geometry** 或多个 **geography** 或 **GeometryCollection**实例。 **Geography** 类型具有附加实例类型 **FullGlobe**。  
+**geometry** 和 **geography** 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例的某些属性从其父级数据类型派生而来，使其在 **Points**中区分为 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、 **geometry** 或多个 **geography** 或 **GeometryCollection**实例。 **Geography** 类型具有附加实例类型 **FullGlobe**。  
 
 下图描述了 **geometry** 和 **geometry** 数据类型所基于的 **geography** 层次结构。 **geometry** 和 **geography** 的可实例化类型以蓝色表示。  
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-如图所示， **geometry** 和 **geography** 数据类型的十种可实例化类型为 **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**和 **GeometryCollection**。 geography 数据类型有一个附加可实例化类型：FullGlobe  。 只要特定实例的格式正确，即使未显式定义该实例， **geometry** 和 **geography** 类型也可识别该实例。 例如，如果你使用 STPointFromText() 方法显式定义了一个 **Point** 实例，只要方法输入的格式正确， **geometry** 和 **geography** 便将该实例识别为 **Point**。 如果你使用 `STGeomFromText()` 方法定义了相同的实例，则 **geometry** 和 **geography** 数据类型都将该实例识别为 **Point**。  
+如图所示， **geometry** 和 **geography** 数据类型的十种可实例化类型为 **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**和 **GeometryCollection**。 geography 数据类型有一个附加可实例化类型：FullGlobe。 只要特定实例的格式正确，即使未显式定义该实例， **geometry** 和 **geography** 类型也可识别该实例。 例如，如果你使用 STPointFromText() 方法显式定义了一个 **Point** 实例，只要方法输入的格式正确， **geometry** 和 **geography** 便将该实例识别为 **Point**。 如果你使用 `STGeomFromText()` 方法定义了相同的实例，则 **geometry** 和 **geography** 数据类型都将该实例识别为 **Point**。  
 
 geometry 和 geography 类型的子类型分为简单类型和集合类型。  类似 `STNumCurves()` 的一些方法仅适用于简单类型。  
 
@@ -88,7 +87,7 @@ OGC 的 SQL 简单特征规范讨论了外环和内环，但此差别对 [!INCLU
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> 圆弧线段  
-三种可实例化类型可以采用圆弧线段：CircularString、CompoundCurve 和 CurvePolygon    。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。  
+三种可实例化类型可以采用圆弧线段：CircularString、CompoundCurve 和 CurvePolygon。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。  
 
 图 A 和 B 显示典型的圆弧线段。 请注意这三个点如何落在圆周上。  
 
@@ -99,7 +98,7 @@ OGC 的 SQL 简单特征规范讨论了外环和内环，但此差别对 [!INCLU
 > 如果为圆弧线段指定 Z 值，则这些值对于圆弧线段中的所有点必须相同，才接受输入。 例如，接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但是不接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString 和 CircularString 的比较  
-此示例显示如何使用 LineString 实例和 CircularString 实例存储完全相同的等腰三角形   ：  
+此示例显示如何使用 LineString 实例和 CircularString 实例存储完全相同的等腰三角形：  
 
 ```sql
 DECLARE @g1 geometry;
@@ -130,7 +129,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
-与 LineString 实例相比，CircularString 实例使用更少的点来存储曲线边界，而且更精确   。 **CircularString** 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 **LineString** 实例则适合存储线性边界（如方形城市街区）。  
+与 LineString 实例相比，CircularString 实例使用更少的点来存储曲线边界，而且更精确。 **CircularString** 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 **LineString** 实例则适合存储线性边界（如方形城市街区）。  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比较  
 以下代码示例显示如何使用 **LineString** 和 **CompoundCurve** 实例存储相同的图形：
@@ -172,7 +171,7 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon 和 CurvePolygon 的比较  
-在定义外部环和内部环时，**CurvePolygon** 实例可以使用 **CircularString** 和 **CompoundCurve** instances when defining their exterior 和 interior rings.  Polygon 实例不能使用圆弧线段类型：  CircularString 和 CompoundCurve   。  
+在定义外部环和内部环时，**CurvePolygon** 实例可以使用 **CircularString** 和 **CompoundCurve** instances when defining their exterior 和 interior rings.  Polygon 实例不能使用圆弧线段类型：CircularString 和 CompoundCurve。  
 
 ## <a name="see-also"></a>另请参阅  
 - [空间数据 (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 

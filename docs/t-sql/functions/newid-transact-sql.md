@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d411af5fe27f012884f44e18fd065091237b394f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bf3ef8a31946379631dfb0ddc706235aa11bce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914921"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  创建 uniqueidentifier 类型的唯一值  。  
+  创建 uniqueidentifier 类型的唯一值。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +49,7 @@ NEWID ( )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. 对变量使用 NEWID 函数  
- 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值  。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值  。  
+ 以下示例使用 `NEWID()` 对声明为 uniqueidentifier 数据类型的变量赋值。 在测试 uniqueidentifier 数据类型变量的值之前，先打印该值。  
   
 ```  
 -- Creating a local variable with DECLARE/SET syntax.  
@@ -70,9 +69,9 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. 在 CREATE TABLE 语句中使用 NEWID  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表  。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
+ 以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  
@@ -110,7 +109,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. 使用 uniqueidentifier 和变量赋值  
- 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量  。 然后使用 `SET` 语句为该变量赋值。  
+ 以下示例将名为 `@myid` 的局部变量声明为 uniqueidentifier 数据类型的变量。 然后使用 `SET` 语句为该变量赋值。  
   
 ```  
 DECLARE @myid uniqueidentifier ;  

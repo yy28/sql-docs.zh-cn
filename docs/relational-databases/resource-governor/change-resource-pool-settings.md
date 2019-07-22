@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 2780556c86203cd89e6804cf9a108bdf37ecd019
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 328d61171c28f89083712c7f46c7b97394a7de84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136997"
 ---
 # <a name="change-resource-pool-settings"></a>更改资源池设置
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]更改资源池设置。  
   
--   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要更改资源池的设置，请使用：  [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
+-   若要更改资源池的设置，请使用：[SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -42,15 +41,15 @@ ms.locfileid: "67582429"
 ##  <a name="ChgRPProp"></a> 使用 SQL Server Management Studio 更改资源池设置  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，然后依次逐步展开“管理”  节点直至其中包含“资源池”  。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，然后依次逐步展开“管理”  节点直至其中包含“资源池” 。  
   
-2.  右键单击要修改的资源池，然后单击“属性”  。  
+2.  右键单击要修改的资源池，然后单击“属性”。  
   
 3.  在 **“资源调控器属性”** 页中，如果资源池所在的行未自动选中，则在 **“资源池”** 网格内将其选中。  
   
 4.  在行中单击或双击要更改的单元，然后输入新值。  
   
-5.  若要保存更改，请单击 **“确定”** 。  
+5.  若要保存更改，请单击 **“确定”**。  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de404b8650c78671380a2515848a16a2ebf1b9f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 746c1e1d7cea1282892dd8859f7aa838fc089b72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945394"
 ---
 # <a name="variables-window"></a>“变量”窗口
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。   
+  可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。  
   
- 默认情况下， **“变量”** 窗口位于 **中 SSIS 设计器的** “连接管理器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]区域之下。 如果看不到“变量”窗口，请单击 SSIS 菜单上的“变量”以显示该窗口    。  
+ 默认情况下， **“变量”** 窗口位于 **中 SSIS 设计器的** “连接管理器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]区域之下。 如果看不到“变量”窗口，请单击 SSIS 菜单上的“变量”以显示该窗口。  
   
  您可以通过将 View.Variables 命令映射到在 **“选项”** 对话框的 **“键盘”** 页上选择的组合键来显示 **“变量”** 窗口。  
   
@@ -42,15 +41,15 @@ ms.locfileid: "65713607"
  添加用户定义变量。  
   
  **移动变量**  
- 单击列表中的变量，然后单击“移动变量”更改变量作用域。  在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
+ 单击列表中的变量，然后单击“移动变量”更改变量作用域。 在 **“选择新作用域”** 对话框中，选择包或包中的容器、任务或事件处理程序，以更改变量作用域。  
   
  有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)区域之下。  
   
  **删除变量**  
- 从列表中选择变量，然后单击“删除变量”。   
+ 从列表中选择变量，然后单击“删除变量”。  
   
  **网格选项**  
- 单击此项可打开“变量网格选项”对话框，从中可以更改列选择并对“变量”窗口应用筛选器。   有关详细信息，请参阅 [变量网格选项](../integration-services/variable-grid-options.md)。  
+ 单击此项可打开“变量网格选项”对话框，从中可以更改列选择并对“变量”窗口应用筛选器。 有关详细信息，请参阅 [变量网格选项](../integration-services/variable-grid-options.md)。  
   
  **Name**  
  查看变量名称。 您可以更新用户定义变量的名称。  
@@ -70,13 +69,13 @@ ms.locfileid: "65713607"
  查看变量值。 您可以更新用户定义变量的值。 此值可以是文字或表达式，还可以是多线串。 若要为变量指定表达式，请单击 **“变量”** 窗口中的 **“表达式”** 列旁边的省略号按钮。  
   
  **Namespace**  
- 查看命名空间名称。 用户定义变量最初在 **User** 命名空间中创建，不过你可以在“命名空间”字段中更改命名空间名称。  若要显示此列，请单击 **“网格选项”** 。  
+ 查看命名空间名称。 用户定义变量最初在 **User** 命名空间中创建，不过你可以在“命名空间”字段中更改命名空间名称。 若要显示此列，请单击 **“网格选项”**。  
   
  **引发更改事件**  
- 指示在值发生更改时是否引发 **OnVariableValueChanged** 事件。 您可以更新用户定义变量和系统变量的值。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”** 。  
+ 指示在值发生更改时是否引发 **OnVariableValueChanged** 事件。 您可以更新用户定义变量和系统变量的值。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”**。  
   
  **Description**  
- 查看变量说明。 您可以更改用户定义变量的说明。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”** 。  
+ 查看变量说明。 您可以更改用户定义变量的说明。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”**。  
   
  **“变量”**  
  查看为变量指定的表达式。 若要指定表达式，请单击省略号按钮。  
@@ -88,7 +87,7 @@ ms.locfileid: "65713607"
   
 ### <a name="options-for-filter"></a>筛选器选项  
  **显示系统变量**  
- 选择此项可在“变量”  窗口中列出系统变量。 系统变量是预定义的。 您无法添加或删除系统变量。 可以修改 **“RaiseChangedEvent”** 属性设置。  
+ 选择此项可在“变量”窗口中列出系统变量。 系统变量是预定义的。 您无法添加或删除系统变量。 可以修改 **“RaiseChangedEvent”** 属性设置。  
   
  此列表使用颜色进行标记。 系统变量呈灰色，而用户定义变量则呈黑色。  
   

@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2725731d216b651d310b204f4cdf6b19612ae435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055812"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>第 4-5 课：测试第 4 课包
 
@@ -24,12 +23,12 @@ ms.locfileid: "65721507"
 
 
 
-在运行时，损坏的文件“Currency_BAD.txt”无法在 Currency Key 查找转换中生成匹配项  。 由于将 Currency Key 查找的错误输出配置为将失败的行重定向到新的失败的行目标，因此该组件不会失败，并且包会成功地运行。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将所有失败的行写入“ErrorOutput.txt”  。  
+在运行时，损坏的文件“Currency_BAD.txt”无法在 Currency Key 查找转换中生成匹配项。 由于将 Currency Key 查找的错误输出配置为将失败的行重定向到新的失败的行目标，因此该组件不会失败，并且包会成功地运行。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将所有失败的行写入“ErrorOutput.txt”。  
   
-在此任务中，通过运行该包对已修改的错误输出配置进行测试。 包成功执行后，可查看“ErrorOutput.txt”文件的内容  。  
+在此任务中，通过运行该包对已修改的错误输出配置进行测试。 包成功执行后，可查看“ErrorOutput.txt”文件的内容。  
   
 > [!NOTE]  
-> 如果不需要在“ErrorOutput.txt”文件中积累错误行，请在包的运行间隔手动删除文件内容  。  
+> 如果不需要在“ErrorOutput.txt”文件中积累错误行，请在包的运行间隔手动删除文件内容。  
   
 ## <a name="check-the-package-layout"></a>检查包布局  
 在测试包之前，请验证第 4 课包中的控制流和数据流是否与下图类似： 
@@ -44,13 +43,13 @@ ms.locfileid: "65721507"
   
 ## <a name="run-the-lesson-4-tutorial-package"></a>运行第 4 课教程包  
   
-1.  在“调试”菜单中，选择“启动调试”   。  
+1.  在“调试”菜单中，选择“启动调试”。  
   
-2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”   。  
+2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”。  
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>查看 ErrorOutput.txt 文件的内容  
   
-在记事本或其他文本编辑器中，打开“ErrorOutput.txt”文件  。 默认的列顺序为：AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription。  
+在记事本或其他文本编辑器中，打开“ErrorOutput.txt”文件。 默认的列顺序为：AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription。  
  
 文件中的所有行都包含不匹配的 CurrencyID 值“BAD”、ErrorCode 值 - 1071607778、ErrorColumn 值 0 以及 ErrorDescription 值“在查找期间行没有生成任何匹配项”。 ErrorColumn 的值为 0，因为错误不是特定于列的，而是查找操作失败。
   

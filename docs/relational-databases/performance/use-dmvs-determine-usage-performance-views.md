@@ -1,7 +1,6 @@
 ---
 title: 使用 DMV 来确定视图的使用情况统计信息和性能
 description: 使用 DMV 来确定视图的使用情况统计信息和性能
-manager: craigg
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -9,15 +8,15 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986670"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 来确定视图的使用情况统计信息和性能
-本文介绍了一些方法和脚本，用于获取使用视图的查询的性能相关信息  。 这些脚本的目的是提供在数据库中发现的各种视图的使用指标和性能指标。 
+本文介绍了一些方法和脚本，用于获取使用视图的查询的性能相关信息。 这些脚本的目的是提供在数据库中发现的各种视图的使用指标和性能指标。 
 
 ## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
 DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) 公开有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器所执行的优化的统计信息。 这些值是累积的，并且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时开始记录。 有关查询优化器的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)。   

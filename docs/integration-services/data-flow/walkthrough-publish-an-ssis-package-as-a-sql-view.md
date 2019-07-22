@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 401422fcd3c2e32dcd83bebc3ef51351ca83555f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079822"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
 
@@ -37,13 +36,13 @@ ms.locfileid: "65725763"
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>第 1 步：生成 SSIS 项目并将其部署到 SSIS 目录  
  在此步骤中，创建一个从 SSIS 支持的数据源（在本示例中，我们使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）中提取数据并使用数据流目标组件输出数据的 SSIS 包。 然后，将生成 SSIS 项目并将其部署到 SSIS 目录。  
   
-1.  启动 **SQL Server Data Tools**。 在 **“开始”** 菜单上，依次指向 **“所有程序”** 、 **Microsoft SQL Server**，再单击 **SQL Server Data Tools**。  
+1.  启动 **SQL Server Data Tools**。 在 **“开始”** 菜单上，依次指向 **“所有程序”**、 **Microsoft SQL Server**，再单击 **SQL Server Data Tools**。  
   
 2.  创建一个新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-    1.  在菜单栏上单击“文件”  ，指向“新建”  ，然后单击“项目”  。  
+    1.  在菜单栏上单击“文件”，指向“新建”，然后单击“项目”。  
   
-    2.  在左窗格中展开“商业智能”  ，然后在树视图中单击“Integration Services”  。  
+    2.  在左窗格中展开“商业智能”，然后在树视图中单击“Integration Services”。  
   
     3.  选择“Integration Services 项目”（如果尚未选中）。   
   
@@ -53,13 +52,13 @@ ms.locfileid: "65725763"
   
     6.  单击“确定”  关闭“新建项目”  对话框。  
   
-3.  将“数据流”  组件从“SSIS 工具箱”  拖到“控制流”  选项卡的设计图面。  
+3.  将“数据流”组件从“SSIS 工具箱”拖到“控制流”选项卡的设计图面。  
   
-4.  在“控制流”  中双击“数据流”  组件打开“数据流设计器”  。  
+4.  在“控制流”中双击“数据流”组件打开“数据流设计器”。  
   
 5.  将 **源组件** 从工具箱拖到“数据流设计器”，然后并将它配置为从数据源提取数据。   
   
-    1.  为了进行演练，请创建一个包含表 Employee的测试数据库 TestDB   。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
+    1.  为了进行演练，请创建一个包含表 Employee的测试数据库 TestDB。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
   
     2.  将 **ID** 设为主键。  
   
@@ -70,19 +69,19 @@ ms.locfileid: "65725763"
         |1|John|Doe|  
         |2|Jane|Doe|  
   
-    4.  将“OLE DB 源”  组件从“SSIS 工具箱”  拖到“数据流设计器”  。  
+    4.  将“OLE DB 源”组件从“SSIS 工具箱”拖到“数据流设计器”。  
   
-    5.  将组件配置为从 **TestDB** 数据库中的 **Employee** 表提取数据。 为“OLE DB 连接管理器”  选择“(local).TestDB”  ，为“数据访问模式”  选择“表或视图”  ，为“表或视图的名称”  选择“[dbo].[Employee]”  。  
+    5.  将组件配置为从 **TestDB** 数据库中的 **Employee** 表提取数据。 为“OLE DB 连接管理器”选择“(local).TestDB”，为“数据访问模式”选择“表或视图”，为“表或视图的名称”选择“[dbo].[Employee]”。  
   
          ![数据流目标 - OLE DB 连接](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Data Streaming Destination - OLE DB Connection")  
   
 6.  现在，将“数据流目标”从工具箱拖到数据流。  应该可以在工具箱的“常用”部分中找到此组件。  
   
-7.  将数据流中的“OLE DB 源”  组件连接到“数据流目标”  组件。  
+7.  将数据流中的“OLE DB 源”组件连接到“数据流目标”组件。  
   
 8.  生成 SSIS 项目并将其部署到 SSIS 目录。  
   
-    1.  在菜单栏上单击“项目”  ，然后单击“部署”  。  
+    1.  在菜单栏上单击“项目”，然后单击“部署”。  
   
     2.  按照向导中的说明将项目部署到本地数据库服务器中的 SSIS 目录。 以下示例使用 **Power BI** 作为文件夹名称，使用 **SSISPackagePublishing** 作为 SSIS 目录中的项目名称。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "65725763"
   
 1.  通过运行 C:\Program Files\Microsoft SQL Server\130\DTS\Binn 中的 ISDataFeedPublishingWizard.exe，或者单击“开始\所有程序”下的 Microsoft SQL Server 2016\SQL Server 2016 Data Feed Publishing Wizard，来启动 **SSIS 数据馈送发布向导**。  
   
-2.  在“简介”  页上，单击“下一步”  。  
+2.  在“简介”页上，单击“下一步”。  
   
      ![数据馈送发布向导 -“简介”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Data Feed Publishing Wizard - Introduction Page")  
   
@@ -105,7 +104,7 @@ ms.locfileid: "65725763"
   
          ![数据馈送发布向导 -“包设置”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Data Feed Publishing Wizard - Package Settings Pag")  
   
-    2.  单击“路径”字段旁边的“浏览”  ，浏览 SSIS 目录，选择要发布的 SSIS 包（例如：SSISDB  ->SSISPackagePublishing  ->Package.dtsx  ），然后单击“确定”  。  
+    2.  单击“路径”字段旁边的“浏览”，浏览 SSIS 目录，选择要发布的 SSIS 包（例如：SSISDB->SSISPackagePublishing->Package.dtsx），然后单击“确定”。  
   
          ![数据馈送发布向导 - 浏览包](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Data Feed Publishing Wizard - Browse for Package")  
   
@@ -113,7 +112,7 @@ ms.locfileid: "65725763"
   
          我们建议你将敏感参数绑定到环境变量。 这是为了确保不会以纯文本格式将敏感参数的值存储在向导创建的 SQL 视图中。  
   
-    4.  单击“下一步”  切换“发布设置”页  。  
+    4.  单击“下一步”切换“发布设置”页。  
   
 4.  在“发布设置”页上执行以下任务：   
   
@@ -137,17 +136,17 @@ ms.locfileid: "65725763"
   
         4.  单击“确定”  关闭“高级设置”  对话框。  
   
-    6.  单击“下一步”  切换到“验证”页  。  
+    6.  单击“下一步”切换到“验证”页。  
   
-5.  在“验证”页上，检查验证所有设置的值后返回的结果。  在以下示例中，你将看到针对链接服务器存在状态的 **警告** ，因为选定的 SQL Server 实例上不存在链接服务器。 如果你看到“结果”  中包含“错误”  ，请将鼠标悬停在“错误”  ，这样便可以查看有关该错误的详细信息。 例如，如果你尚未启用“允许对 SSISOLEDB 提供程序使用 inprocess 选项”，则在执行链接服务器配置操作时会收到错误。  
+5.  在“验证”页上，检查验证所有设置的值后返回的结果。  在以下示例中，你将看到针对链接服务器存在状态的 **警告** ，因为选定的 SQL Server 实例上不存在链接服务器。 如果你看到“结果”中包含“错误”，请将鼠标悬停在“错误”，这样便可以查看有关该错误的详细信息。 例如，如果你尚未启用“允许对 SSISOLEDB 提供程序使用 inprocess 选项”，则在执行链接服务器配置操作时会收到错误。  
   
      ![数据馈送发布向导 -“验证”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Data Feed Publishing Wizard - Validation Page")  
   
 6.  若要将此报告保存为 XML 文件，请单击“保存报告”。  
   
-7.  在“验证”  页上单击“下一步”  切换到“摘要”  页。  
+7.  在“验证”页上单击“下一步”切换到“摘要”页。  
   
-8.  在“摘要”  页中检查所做的选择，然后单击“发布”  启动发布过程。这将会创建链接服务器（如果服务器上没有链接服务器），然后使用链接服务器创建视图。  
+8.  在“摘要”页中检查所做的选择，然后单击“发布”启动发布过程。这将会创建链接服务器（如果服务器上没有链接服务器），然后使用链接服务器创建视图。  
   
      ![数据馈送发布向导 -“摘要”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Data Feed Publishing Wizard - Summary Page")  
   
@@ -165,18 +164,18 @@ ms.locfileid: "65725763"
   
 1.  启动 SQL Server Management Studio。  
   
-2.  展开“\<计算机名称>”、“数据库”、“\<你在向导中选择的数据库>”和“视图”     。  
+2.  展开“\<计算机名称>”、“数据库”、“\<你在向导中选择的数据库>”和“视图”。  
   
-3.  右键单击向导创建的“\<向导创建的视图>”，然后单击“选择前 1000 行”   。  
+3.  右键单击向导创建的“\<向导创建的视图>”，然后单击“选择前 1000 行”。  
   
 4.  确认能够看到 SSIS 包的结果。  
   
 ## <a name="step-4-verify-the-ssis-package-execution"></a>步骤 4：验证 SSIS 包执行  
  在此步骤中，你将验证是否已执行 SSIS 包。  
   
-1.  在 SQL Server Management Studio 中，依次展开“Integration Services 目录”  、“SSISDB”  、包含 SSIS 项目的**文件夹**、“项目”  、项目节点、“包”  。  
+1.  在 SQL Server Management Studio 中，依次展开“Integration Services 目录”、“SSISDB”、包含 SSIS 项目的**文件夹**、“项目”、项目节点、“包”。  
   
-2.  右键单击 SSIS 包，指向“报告”  ，指向“标准报告”  ，然后单击“所有执行”  。  
+2.  右键单击 SSIS 包，指向“报告”，指向“标准报告”，然后单击“所有执行”。  
   
 3.  你应会报告中看到 SSIS 包的执行状态。  
   
@@ -222,7 +221,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  如果需要，请更新文件夹名称、项目名称和包名称。 如果 OPENQUERY 函数失败，请在 **SQL Server Management Studio** 中依次展开“服务器对象”  、“链接服务器”  、“提供程序”  ，然后双击 **SSISOLEDB** 提供程序，并确保“允许 inprocess”  选项处于启用状态。  
+    >  如果需要，请更新文件夹名称、项目名称和包名称。 如果 OPENQUERY 函数失败，请在 **SQL Server Management Studio** 中依次展开“服务器对象”、“链接服务器”、“提供程序”，然后双击 **SSISOLEDB** 提供程序，并确保“允许 inprocess”选项处于启用状态。  
   
 2.  通过运行以下查询，在数据库 **TestDB** 中为本演练创建一个视图。  
   

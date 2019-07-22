@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2982aa2f7955c5196ec445064c691a5f070259
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9656fd32711740d8427f80561fa8715716de8740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072124"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +73,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
  Windows Azure SQL Database 支持由三部分组成的格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，database_name 为 tempdb，object_name 以 # 开头。 Windows Azure SQL Database 不支持由四部分组成的名称。  
   
- IF EXISTS   
+ IF EXISTS  
  **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  有条件地删除表（仅当其已存在时）。  
@@ -92,7 +91,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
  删除表时，表的规则或默认值将被解除绑定，与该表关联的任何约束或触发器将被自动删除。 如果要重新创建表，则必须重新绑定相应的规则和默认值，重新创建某些触发器，并添加所有必需的约束。  
   
- 如果使用 DELETE tablename 删除表中的所有行或使用 TRUNCATE TABLE 语句，则在表被删除之前，表将一直存在  。  
+ 如果使用 DELETE tablename 删除表中的所有行或使用 TRUNCATE TABLE 语句，则在表被删除之前，表将一直存在。  
   
  删除使用了超过 128 个区的大型表和索引时，需要分两个单独的阶段：逻辑和物理阶段。 在逻辑阶段中，对表使用的现有分配单元进行标记以便释放，并对其进行锁定，直到事务提交为止。 在物理阶段，标记为要释放的 IAM 页被成批地物理删除。  
   
@@ -121,7 +120,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 删除临时表  
- 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本  。  
+ 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本。  
   
 ```  
 CREATE TABLE #temptable (col1 int);  

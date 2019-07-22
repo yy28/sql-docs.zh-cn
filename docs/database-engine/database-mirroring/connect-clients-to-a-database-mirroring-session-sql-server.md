@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 510fa333b4dff71fc38bc60f91509d3daa67adb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951991"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +28,9 @@ ms.locfileid: "66775022"
   
   
 ##  <a name="InitialConnection"></a> 建立到数据库镜像会话的初始连接  
- 对于到镜像数据库的初始连接，客户端必须提供一个至少提供服务器实例名称的连接字符串。 这个必需的服务器名称应标识当前主体服务器实例，并称为“初始伙伴名称”  。  
+ 对于到镜像数据库的初始连接，客户端必须提供一个至少提供服务器实例名称的连接字符串。 这个必需的服务器名称应标识当前主体服务器实例，并称为“初始伙伴名称” 。  
   
- 另外，连接字符串还可以提供另一个服务器实例的名称，此名称应标识当前镜像服务器实例，以便在首次连接尝试期间初始伙伴不可用的情况下使用。 第二个名称称为“故障转移伙伴名称”  。  
+ 另外，连接字符串还可以提供另一个服务器实例的名称，此名称应标识当前镜像服务器实例，以便在首次连接尝试期间初始伙伴不可用的情况下使用。 第二个名称称为“故障转移伙伴名称” 。  
   
  连接字符串还必须提供数据库名称。 这是数据访问接口启用故障转移尝试所必需的。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66775022"
   
  连接字符串中提供故障转移伙伴名称时，数据访问接口的行为取决于网络协议和客户端的操作系统，如下所示：  
   
--   对于 TCP/IP，使用与数据库镜像相关的连接重试算法调整连接尝试。 连接重试算法  确定在给定连接尝试中为打开连接所分配的最长时间（重试时间  ）。  
+-   对于 TCP/IP，使用与数据库镜像相关的连接重试算法调整连接尝试。 连接重试算法确定在给定连接尝试中为打开连接所分配的最长时间（重试时间）。  
   
 -   对于其他网络协议  
   
@@ -88,7 +87,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 属性  
  连接字符串必须包含 **Server** 属性以提供初始伙伴名称，该名称应标识当前主体服务器实例。  
   
- 标识服务器实例的最简单方法是指定其名称 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]。 例如：  
+ 标识服务器实例的最简单方法是指定其名称 *<server_name>*[**\\**_<SQL_Server_instance_name>_]。 例如：  
   
  `Server=Partner_A;`  
   
@@ -101,7 +100,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  如果连接字符串指定命名实例的名称而不是端口，则 SQL Server Browser 查询是必需的。  
   
- 若要指定 IP 地址和端口，**Server** 属性采用以下格式：`Server=`<ip_address>  `,`\<port>  ，例如：  
+ 若要指定 IP 地址和端口，**Server** 属性采用以下格式：`Server=`<ip_address>`,`\<port>，例如：  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +120,7 @@ Server=123.34.45.56,4724;
 >  此字符串未包含身份验证信息。  
   
 > [!IMPORTANT]  
->  如果将协议前缀和 **Server** 属性 (`Server=tcp:`\<servername>  ) 绑定在一起，则会导致与 **Network** 属性不兼容；如果在这两个位置都指定了协议，则可能会导致错误。 因此，建议连接字符串使用 **Network** 属性指定协议，并且仅在 **Server** 属性 (`"Network=dbmssocn; Server=`\<servername>  `"`) 中指定服务器名称。  
+>  如果将协议前缀和 **Server** 属性 (`Server=tcp:`\<servername>) 绑定在一起，则会导致与 **Network** 属性不兼容；如果在这两个位置都指定了协议，则可能会导致错误。 因此，建议连接字符串使用 **Network** 属性指定协议，并且仅在 **Server** 属性 (`"Network=dbmssocn; Server=`\<servername>`"`) 中指定服务器名称。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  除了初始伙伴名称以外，客户端还可以指定应标识当前镜像服务器实例的故障转移伙伴名称。 故障转移伙伴是由 failover partner 属性的某个关键字指定的。 具体由该属性的哪个关键字指定取决于您所使用的 API。 下表列出了这些关键字：  
@@ -132,7 +131,7 @@ Server=123.34.45.56,4724;
 |ODBC 驱动程序|**Failover_Partner**|  
 |ActiveX 数据对象 (ADO)|**Failover Partner**|  
   
- 标识服务器实例的最简单方法是指定其名称 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]。  
+ 标识服务器实例的最简单方法是指定其名称 *<server_name>*[**\\**_<SQL_Server_instance_name>_]。  
   
  另外，也可以在 **Failover Partner** 属性中提供 IP 地址和端口号。 如果首次连接到数据库时初始连接尝试失败，则到故障转移伙伴的连接尝试将不会依赖于 DNS 和 SQL Server Browser。 建立连接后，便会使用故障转移伙伴名称覆盖故障转移伙伴名称，因此，如果发生故障转移，则重定向的连接将需要 DNS 和 SQL Server Browser。  
   
@@ -169,7 +168,7 @@ Server=123.34.45.56,4724;
   
  重试时间使用以下公式进行计算：  
   
- RetryTime = PreviousRetryTime +( 0.08 &#42; LoginTimeout)         
+ RetryTime = PreviousRetryTime +( 0.08 &#42; LoginTimeout)  
   
  其中， *PreviousRetryTime* 初始值为 0。  
   
@@ -177,10 +176,10 @@ Server=123.34.45.56,4724;
   
 |舍入|*RetryTime* 计算|每次尝试的重试时间|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 +(0.08 &#42; 15)   |1.2 秒|  
-|2|1.2 +(0.08 &#42; 15)   |2.4 秒|  
-|3|2.4 +(0.08 &#42; 15)   |3.6 秒|  
-|4|3.6 +(0.08 &#42; 15)   |4.8 秒|  
+|1|0 +(0.08 &#42; 15)|1.2 秒|  
+|2|1.2 +(0.08 &#42; 15)|2.4 秒|  
+|3|2.4 +(0.08 &#42; 15)|3.6 秒|  
+|4|3.6 +(0.08 &#42; 15)|4.8 秒|  
   
  下图说明了这些后续连接尝试的重试时间，每个重试时间均超时。  
   
@@ -226,7 +225,7 @@ Server=123.34.45.56,4724;
 ##  <a name="Benefits"></a>   
   
 ##  <a name="StalePartnerName"></a> 已过时故障转移伙伴名称的影响  
- 数据库管理员可以随时更改故障转移伙伴。 因此，客户端提供的故障转移伙伴名称可能已过时  。 例如，假设名为 Partner_B 的故障转移伙伴已由另一个服务器实例 Partner_C 替换。 现在，如果客户端提供 Partner_B 作为故障转移伙伴名称，则该名称已过时。 如果客户端提供的故障转移伙伴名称已过时，数据访问接口的行为与客户端未提供故障转移伙伴名称时的行为相同。  
+ 数据库管理员可以随时更改故障转移伙伴。 因此，客户端提供的故障转移伙伴名称可能已过时。 例如，假设名为 Partner_B 的故障转移伙伴已由另一个服务器实例 Partner_C 替换。 现在，如果客户端提供 Partner_B 作为故障转移伙伴名称，则该名称已过时。 如果客户端提供的故障转移伙伴名称已过时，数据访问接口的行为与客户端未提供故障转移伙伴名称时的行为相同。  
   
  例如，假设客户端使用一个连接字符串连续进行四次连接尝试。 在此连接字符串中，初始伙伴名称为 Partner_A，故障转移伙伴名称为 Partner_B：  
   

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccecc230e3c911168419bc02ad5b7920f6ebc0ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d05c8390ff43293c27207a2e0dd19b62248519ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058650"
 ---
 # <a name="delete-check-constraints"></a>删除 CHECK 约束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ ms.locfileid: "62515901"
   
 1.  在 **“对象资源管理器”** 中，展开具有 CHECK 约束的表。  
   
-2.  展开  **“约束”** 。  
+2.  展开  **“约束”**。  
   
-3.  右键单击该约束，然后单击“删除”  。  
+3.  右键单击该约束，然后单击“删除”。  
   
-4.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
+4.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -67,9 +66,9 @@ ms.locfileid: "62515901"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     ALTER TABLE dbo.DocExc   

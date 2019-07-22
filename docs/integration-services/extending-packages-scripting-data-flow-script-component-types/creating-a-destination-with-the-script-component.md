@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a357eea4f29dc65365db7d5ca7274cf8c385aaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65801354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112408"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
 
@@ -36,60 +35,60 @@ ms.locfileid: "65801354"
  脚本组件及其生成的基础结构代码可以大大简化自定义数据流组件的开发过程。 但是，若要了解脚本组件的工作方式，通读[开发自定义数据流组件](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)部分，特别是[开发自定义目标组件](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)部分中的自定义数据流组件开发步骤很有帮助。  
   
 ## <a name="getting-started-with-a-destination-component"></a>开始一个目标组件  
- 向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“数据流”选项卡添加脚本组件时，“选择脚本组件类型”  对话框将打开并提示用户选择“源”  、“目标”  或“转换”  脚本。 在此对话框中选择“目标”  。  
+ 向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“数据流”选项卡添加脚本组件时，“选择脚本组件类型”对话框将打开并提示用户选择“源”、“目标”或“转换”脚本。 在此对话框中选择“目标”。  
   
  然后，将转换的输出连接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中的目标组件。 出于测试目的，可以将源直接连接到目标，而不经任何转换。  
   
 ## <a name="configuring-a-destination-component-in-metadata-design-mode"></a>在元数据设计模式下配置目标组件  
- 选择创建目标组件的选项后，可使用“脚本转换编辑器”  配置该组件。 有关详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
+ 选择创建目标组件的选项后，可使用“脚本转换编辑器”配置该组件。 有关详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  
   
- 若要选择脚本目标使用的脚本语言，请在“脚本转换编辑器”  对话框的“脚本”  页上设置 **ScriptLanguage** 属性。  
+ 若要选择脚本目标使用的脚本语言，请在“脚本转换编辑器”对话框的“脚本”页上设置 **ScriptLanguage** 属性。  
   
 > [!NOTE]  
->  若要设置脚本组件的默认脚本语言，请使用“选项”  对话框的“常规”  页上的“脚本语言”  选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
+>  若要设置脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
- 数据流目标组件有一个输入，没有输出。 在编写自定义脚本之前，必须在元数据设计模式下完成的一个步骤是使用“脚本转换编辑器”  配置组件的输入。  
+ 数据流目标组件有一个输入，没有输出。 在编写自定义脚本之前，必须在元数据设计模式下完成的一个步骤是使用“脚本转换编辑器”配置组件的输入。  
   
 ### <a name="adding-connection-managers"></a>添加连接管理器  
- 目标组件通常使用现有连接管理器连接将数据流中的数据保存到的数据源。 在“脚本转换编辑器”  的“连接管理器”  页中，单击“添加”  以添加适当的连接管理器。  
+ 目标组件通常使用现有连接管理器连接将数据流中的数据保存到的数据源。 在“脚本转换编辑器”的“连接管理器”页中，单击“添加”以添加适当的连接管理器。  
   
  但是，连接管理器只是一个封装和存储连接特定类型数据源所需信息的便利单元。 您必须编写自己的自定义代码才能加载或保存数据，并且才有可能打开和关闭与数据源的连接。  
   
  有关如何在脚本组件中使用连接管理器的常规信息，请参阅[在脚本组件中连接数据源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”  的“连接管理器”  页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
+ 有关“脚本转换编辑器”的“连接管理器”页的详细信息，请参阅[脚本转换编辑器（“连接管理器”页）](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)。  
   
 ### <a name="configuring-inputs-and-input-columns"></a>配置输入和输入列  
  目标组件有一个输入，没有输出。  
   
- 在“脚本转换编辑器”  的“输入列”  页中，列列表显示数据流上游组件的输出中可用的列。 选择要保存的列。  
+ 在“脚本转换编辑器”的“输入列”页中，列列表显示数据流上游组件的输出中可用的列。 选择要保存的列。  
   
- 有关“脚本转换编辑器”  的“输入列”  页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
+ 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)。  
   
- “脚本转换编辑器”  的“输入和输出”  页显示单一输入，可以将其重命名。 通过使用在自动生成的代码中创建的取值函数属性，在脚本中将通过输入的名称来引用输入。  
+ “脚本转换编辑器”的“输入和输出”页显示单一输入，可以将其重命名。 通过使用在自动生成的代码中创建的取值函数属性，在脚本中将通过输入的名称来引用输入。  
   
- 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
+ 有关“脚本转换编辑器”的“输入和输出”页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>添加变量  
- 如果要在脚本中使用现有的变量，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量     。  
+ 如果要在脚本中使用现有的变量，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。  
   
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 还可以选择多个变量，方法是单击 ReadOnlyVariables 和 ReadWriteVariables 属性字段旁的省略号 (...) 按钮，然后在“选择变量”对话框中选择变量     。  
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 还可以选择多个变量，方法是单击 ReadOnlyVariables 和 ReadWriteVariables 属性字段旁的省略号 (...) 按钮，然后在“选择变量”对话框中选择变量。  
   
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)   。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>在代码设计模式下编写目标组件脚本  
- 为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”  的“脚本”  页中，单击“编辑脚本”  打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
+ 为组件配置完元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本。 编写脚本所使用的语言取决于为“脚本”页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。  
   
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码  
  创建并配置目标组件后打开 VSTA IDE 时，可编辑的 **ScriptMain** 类会显示在代码编辑器中，其中有 **ProcessInputRow** 方法的存根。 在 **ScriptMain** 类中可编写自定义代码，**ProcessInputRow** 是目标组件中最重要的方法。  
   
- 如果在 VSTA 中打开“项目资源管理器”  窗口，可以看到脚本组件还生成了只读的 **BufferWrapper** 和 **ComponentWrapper** 项目项。 **ScriptMain** 类继承自 **ComponentWrapper** 项目项中的 **UserComponent** 类。  
+ 如果在 VSTA 中打开“项目资源管理器”窗口，可以看到脚本组件还生成了只读的 **BufferWrapper** 和 **ComponentWrapper** 项目项。 **ScriptMain** 类继承自 **ComponentWrapper** 项目项中的 **UserComponent** 类。  
   
- 在运行时，数据流引擎调用 **UserComponent** 类中的 **ProcessInput** 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 ProcessInput  方法遍历输入缓冲区中的所有行并为每一行调用一次 ProcessInputRow  方法。  
+ 在运行时，数据流引擎调用 **UserComponent** 类中的 **ProcessInput** 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 ProcessInput 方法遍历输入缓冲区中的所有行并为每一行调用一次 ProcessInputRow 方法。  
   
 ### <a name="writing-your-custom-code"></a>编写自定义代码  
  若要完成自定义目标组件的创建，可能需要在 **ScriptMain** 类的以下方法中编写脚本。  
@@ -106,7 +105,7 @@ ms.locfileid: "65801354"
  下面的示例演示在 **ScriptMain** 类中创建目标组件所需的代码。  
   
 > [!NOTE]
->  这些示例使用 AdventureWorks  示例数据库中的 Person.Address  表并在数据流中传递它的第一列和第四列，即int*AddressID  *和 nvarchar(30)City  列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
+>  这些示例使用 AdventureWorks 示例数据库中的 Person.Address 表并在数据流中传递它的第一列和第四列，即int*AddressID*和 nvarchar(30)City 列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目标示例  
  本示例演示了使用现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器将数据流中的数据保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的目标组件。  
@@ -124,17 +123,17 @@ ms.locfileid: "65801354"
   
 3.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （无需任何转换，即可将源直接连接到目标。）此输出应提供 AdventureWorks  示例数据库的 Person.Address  表中的数据，其中至少包含 AddressID  和 City  列。  
+4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （无需任何转换，即可将源直接连接到目标。）此输出应提供 AdventureWorks 示例数据库的 Person.Address 表中的数据，其中至少包含 AddressID 和 City 列。  
   
-5.  打开“脚本转换编辑器”  。 在“输入列”  页中，选择 **AddressID** 和 **City** 输入列。  
+5.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 输入列。  
   
-6.  在“输入和输出”  页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
+6.  在“输入和输出”页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
   
-7.  在“连接管理器”  页中，添加或创建 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器，并以诸如 **MyADONETConnectionManager** 之类的名称命名。  
+7.  在“连接管理器”页中，添加或创建 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器，并以诸如 **MyADONETConnectionManager** 之类的名称命名。  
   
-8.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境。  
+8.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境。  
   
-9. 关闭“脚本转换编辑器”  并运行该示例。  
+9. 关闭“脚本转换编辑器”并运行该示例。  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -243,15 +242,15 @@ public class ScriptMain:
   
 3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （无需任何转换，即可将源直接连接到目标。）此输出应提供 **AdventureWorks** 示例数据库的 **Person.Address** 表中的数据，而且至少应包含 **AddressID** 和 **City** 列。  
   
-4.  打开“脚本转换编辑器”  。 在“输入列”  页中，选择 **AddressID** 和 **City** 列。  
+4.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 列。  
   
-5.  在“输入和输出”  页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
+5.  在“输入和输出”页中，用更具说明性的名称（如 **MyAddressInput**）重命名输入。  
   
-6.  在“连接管理器”  页中，添加或创建平面文件连接管理器，并以说明性的名称命名，如 **MyFlatFileDestConnectionManager**。  
+6.  在“连接管理器”页中，添加或创建平面文件连接管理器，并以说明性的名称命名，如 **MyFlatFileDestConnectionManager**。  
   
-7.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境。  
+7.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境。  
   
-8.  关闭“脚本转换编辑器”  并运行该示例。  
+8.  关闭“脚本转换编辑器”并运行该示例。  
   
 ```vb  
 Imports System.IO  

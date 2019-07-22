@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4bb0fb9bc3403ca35c6b4fef986e68f8aff14dac
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 969012ebc2cb804fe67cfb04810d653eb8041f52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073493"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>为事务项目的数据更改设置传播方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,33 +45,33 @@ ms.locfileid: "67582875"
 -   在编辑复制生成的任何快照文件时，都必须谨慎。 必须测试和支持自定义存储过程中的自定义逻辑。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 不支持自定义逻辑。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定传播方法，该对话框可以在新建发布向导和“发布属性 - \<发布>”对话框中找到。    有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性 - \<项目>”对话框的“属性”选项卡上指定传播方法，该对话框可以在新建发布向导和“发布属性 - \<发布>”对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-the-propagation-method"></a>指定传播方法  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。     
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。  
   
-2.  单击 **“设置突出显示的表项目的属性”** 。  
+2.  单击 **“设置突出显示的表项目的属性”**。  
   
-3.  在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，使用“INSERT 传递格式”、“UPDATE 传递格式”和“DELETE 传递格式”菜单为每个操作指定传播方法。        
+3.  在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，使用“INSERT 传递格式”、“UPDATE 传递格式”和“DELETE 传递格式”菜单为每个操作指定传播方法。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
+5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-generate-and-use-custom-stored-procedures"></a>生成和使用自定义存储过程  
   
-1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。     
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。  
   
-2.  单击 **“设置突出显示的表项目的属性”** 。  
+2.  单击 **“设置突出显示的表项目的属性”**。  
   
-     在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，从适当的传递格式菜单（“INSERT 传递格式”、“UPDATE 传递格式”或“DELETE 传递格式”）中选择 CALL 语法，然后键入要在“INSERT 存储过程”、“DELETE 存储过程”或“UPDATE 存储过程”中使用的过程名称。          若要详细了解如何使用存储过程，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的“存储过程的调用语法”。  
+     在“项目属性 - \<项目>”对话框的“属性”选项卡上，在“语句传递”部分中，从适当的传递格式菜单（“INSERT 传递格式”、“UPDATE 传递格式”或“DELETE 传递格式”）中选择 CALL 语法，然后键入要在“INSERT 存储过程”、“DELETE 存储过程”或“UPDATE 存储过程”中使用的过程名称。 若要详细了解如何使用存储过程，请参阅[指定如何传播事务项目的更改](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)中的“存储过程的调用语法”。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
+4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 5.  发布的快照生成后，将包含上一步骤中指定的过程。 这些过程将使用指定的 CALL 语法，但将包含复制使用的默认逻辑。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "67582875"
   
 #### <a name="to-create-an-article-that-uses-transact-sql-commands-to-propagate-data-changes"></a>创建使用 Transact-SQL 命令传播数据更改的项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication** 指定项目所属的发布的名称，为 **@article** 指定项目的名称，为 **@source_object** 指定要发布的数据库对象，并为下列至少一个参数指定 **SQL** 值：  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为下列至少一个参数指定 **SQL** 值：  
   
     -   **@ins_cmd** - 控制 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 命令的复制。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "67582875"
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>创建不传播数据更改的项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication** 指定项目所属的发布的名称，为 **@article** 指定项目的名称，为 **@source_object** 指定要发布的数据库对象，并为下列至少一个参数指定 **NONE** 值：  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为下列至少一个参数指定 **NONE** 值：  
   
     -   **@ins_cmd** - 控制 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 命令的复制。  
   
@@ -118,13 +117,13 @@ ms.locfileid: "67582875"
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>通过用户修改的自定义存储过程创建项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication** 指定项目所属的发布的名称，为 **@article** 指定项目的名称，为 **@source_object** 指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
   
-    -   @ins_cmd  - 指定 CALL sp_MSins_article_name  的值，其中，article_name 是为 @article  指定的值。  
+    -   @ins_cmd - 指定 CALL sp_MSins_article_name 的值，其中，article_name 是为 @article 指定的值。  
   
-    -   @del_cmd  - 指定 CALL sp_MSdel_article_name  或 XCALL sp_MSdel_article_name  的值，其中 article_name 是为 @article  指定的值。  
+    -   @del_cmd - 指定 CALL sp_MSdel_article_name 或 XCALL sp_MSdel_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
-    -   @upd_cmd  - 指定 SCALL sp_MSupd_article_name  、 CALL sp_MSupd_article_name  、XCALL sp_MSupd_article_name  或 MCALL sp_MSupd_article_name  的值，其中 article_name 是为 @article  指定的值。  
+    -   @upd_cmd - 指定 SCALL sp_MSupd_article_name、 CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  
@@ -138,13 +137,13 @@ ms.locfileid: "67582875"
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>用自定义存储过程中的自定义脚本创建项目以传播数据更改  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication** 指定项目所属的发布的名称，为 **@article** 指定项目的名称，为 **@source_object** 指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**指定要发布的数据库对象，并为包含值 **@schema_option** （可自动生成自定义存储过程）的 **@schema_option** 位掩码以及下列至少一个参数指定值：  
   
-    -   @ins_cmd  - 指定 CALL sp_MSins_article_name  的值，其中，article_name 是为 @article  指定的值。  
+    -   @ins_cmd - 指定 CALL sp_MSins_article_name 的值，其中，article_name 是为 @article 指定的值。  
   
-    -   @del_cmd  - 指定 CALL sp_MSdel_article_name  或 XCALL sp_MSdel_article_name  的值，其中 article_name 是为 @article  指定的值。  
+    -   @del_cmd - 指定 CALL sp_MSdel_article_name 或 XCALL sp_MSdel_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
-    -   @upd_cmd  - 指定 SCALL sp_MSupd_article_name  、 CALL sp_MSupd_article_name  、XCALL sp_MSupd_article_name  或 MCALL sp_MSupd_article_name  的值，其中 article_name 是为 @article  指定的值。  
+    -   @upd_cmd - 指定 SCALL sp_MSupd_article_name、 CALL sp_MSupd_article_name、XCALL sp_MSupd_article_name 或 MCALL sp_MSupd_article_name 的值，其中 article_name 是为 @article 指定的值。  
   
     > [!NOTE]  
     >  对于以上每个命令参数，您都可以为复制生成的存储过程指定您自己的名称。  
@@ -158,7 +157,7 @@ ms.locfileid: "67582875"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>更改为现有项目传播更改的方法  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 指定 **@publication** 、“UPDATE 传递格式” **@article** ，为 **@property**、“UPDATE 传递格式” **ins_cmd**或“DELETE 传递格式” **upd_cmd** 或 **@property** 值，并为 **@value** 中为事务项目的数据更改设置传播方法。  
+1.  在发布服务器上，对发布数据库执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 指定 **@publication**、“UPDATE 传递格式” **@article**，为 **@property**、“UPDATE 传递格式” **ins_cmd**或“DELETE 传递格式” **upd_cmd** 或 **@property**值，并为 **@value**中为事务项目的数据更改设置传播方法。  
   
 2.  为每个要更改的传播方法重复步骤 1。  
   

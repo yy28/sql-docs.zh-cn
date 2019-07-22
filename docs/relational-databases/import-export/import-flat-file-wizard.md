@@ -11,14 +11,13 @@ f1_keywords:
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 962ed44bad714125f78cac5adff5af42b0c76685
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138438"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>将平面文件导入 SQL 向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 ## <a id="started"></a>入门
 要访问导入平面文件向导，请执行以下步骤：
 
-1. 打开 SQL Server Management Studio  。
+1. 打开 SQL Server Management Studio。
 2. 连接 SQL Server 数据库引擎实例或 localhost。
-3. 展开“数据库”，右键单击数据库（下方示例的测试），指向“任务”，然后单击导入数据上方的“导入平面文件”    。
+3. 展开“数据库”，右键单击数据库（下方示例的测试），指向“任务”，然后单击导入数据上方的“导入平面文件”。
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -52,14 +51,14 @@ PROSE 分析输入文件的数据模式，以推断列名称、类型、分隔�
 要了解有关向导不同功能的详细信息，请参考以下教程：
 
 ## <a name="tutorial"></a>教程
-为了实现本教程的目的，请随意使用自己的平面文件。 另外，本教程会使用 Excel 生成的以下 CSV，你可以随意复制。 如果使用此 CSV，则将其标题命名为“example.csv”，确保在容易找到的位置（如桌面）将其另存为 csv  。
+为了实现本教程的目的，请随意使用自己的平面文件。 另外，本教程会使用 Excel 生成的以下 CSV，你可以随意复制。 如果使用此 CSV，则将其标题命名为“example.csv”，确保在容易找到的位置（如桌面）将其另存为 csv。
 
 ![向导 Excel](media/import-flat-file-wizard/importffexample.png)
 
 ### <a name="step-1-access-wizard-and-intro-page"></a>第 1 步：访问向导和简介页
 访问如[此处](#started)所述的向导。
 
-向导第一页是欢迎页。 如果不想再次看到此页面，请随意单击“不再显示此起始页”  。
+向导第一页是欢迎页。 如果不想再次看到此页面，请随意单击“不再显示此起始页”。
 
 ![向导简介](media/import-flat-file-wizard/importffintro.png)
 

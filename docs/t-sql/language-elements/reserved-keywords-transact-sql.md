@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e957b45415f42f469166831cf68058d276c9cd33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091776"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留关键字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,11 +97,11 @@ ms.locfileid: "65980417"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-下表列出了 Azure SQL 数据仓库  专用的保留关键字。
+下表列出了 Azure SQL 数据仓库专用的保留关键字。
 
 |||
 |-|-|
-|LABEL ||
+|LABEL||
   
  此外，ISO 标准定义了保留关键字列表。 不要使用 ISO 保留关键字作为对象名和标识符。 ODBC 保留关键字列表（如下表所示）与 ISO 保留关键字列表相同。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "65980417"
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
 |**ACTION**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
-|**ADD**|EXTERNAL |**PASCAL**|  
+|**ADD**|EXTERNAL|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
 |**ALLOCATE**|**FALSE**|**PRECISION**|  
 |**ALTER**|**FETCH**|**PREPARE**|  
@@ -140,7 +139,7 @@ ms.locfileid: "65980417"
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**BOTH**|**GROUP**|**ROLLBACK**|  
 |**BY**|**HAVING**|**ROWS**|  
-|**CASCADE**|HOUR |**SCHEMA**|  
+|**CASCADE**|HOUR|**SCHEMA**|  
 |**CASCADED**|**IDENTITY**|**SCROLL**|  
 |**CASE**|**IMMEDIATE**|**SECOND**|  
 |**CAST**|**IN**|**SECTION**|  
@@ -166,18 +165,18 @@ ms.locfileid: "65980417"
 |**COUNT**|**LEADING**|**THEN**|  
 |**CREATE**|**LEFT**|**TIME**|  
 |**CROSS**|**LEVEL**|**TIMESTAMP**|  
-|**CURRENT**|**LIKE**|TIMEZONE_HOUR |  
-|**CURRENT_DATE**|**LOCAL**|TIMEZONE_MINUTE |  
-|**CURRENT_TIME**|**LOWER**|TO |  
+|**CURRENT**|**LIKE**|TIMEZONE_HOUR|  
+|**CURRENT_DATE**|**LOCAL**|TIMEZONE_MINUTE|  
+|**CURRENT_TIME**|**LOWER**|TO|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**TRAILING**|  
 |**CURRENT_USER**|**MAX**|**TRANSACTION**|  
 |**CURSOR**|**MIN**|**TRANSLATE**|  
-|**DATE**|MINUTE |**TRANSLATION**|  
+|**DATE**|MINUTE|**TRANSLATION**|  
 |**DAY**|**MODULE**|**TRIM**|  
 |**DEALLOCATE**|**MONTH**|**TRUE**|  
 |**DEC**|**NAMES**|**UNION**|  
 |**DECIMAL**|**NATIONAL**|**UNIQUE**|  
-|**DECLARE**|**NATURAL**|UNKNOWN |  
+|**DECLARE**|**NATURAL**|UNKNOWN|  
 |**DEFAULT**|**NCHAR**|**UPDATE**|  
 |**DEFERRABLE**|**NEXT**|**UPPER**|  
 |**DEFERRED**|**NO**|**USAGE**|  

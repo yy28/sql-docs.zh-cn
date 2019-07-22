@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 78b372942de6ec62823dddecd08fdb7221cbe7a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68219681"
+---
 
 
 ### <a name="index-stats-options"></a>索引统计信息选项
@@ -33,7 +41,7 @@ Initially used in:
  UI 提供了以下可调筛选器，可用于避免刷新不是非常需要刷新的索引：
 
 
-- 碎片 &gt; (%)
+- 碎片 &gt; (%) 
 - 页计数 &gt;
-- 用于过去（天）
+- 用于过去（天） 
 

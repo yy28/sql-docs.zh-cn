@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ff2de68a43fff15b452579c6ecf681ea586772c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a66c170d45fbdcd56e974318ba690f9ea93df51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112652"
 ---
 # <a name="copy-column-transformation"></a>复制列转换
 
@@ -61,7 +60,7 @@ ms.locfileid: "65726200"
  从可用的输入列列表中选择要复制的列。 通过选中 **“可用输入列”** 表中的复选框来选择列。  
   
  **输出别名**  
- 为每个新的输出列键入一个别名。 默认值为输入列名称后面跟着 **“的副本”** ；不过，您也可以任选一个唯一的描述性名称。  
+ 为每个新的输出列键入一个别名。 默认值为输入列名称后面跟着 **“的副本”**；不过，您也可以任选一个唯一的描述性名称。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流](../../../integration-services/data-flow/data-flow.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c61134ff7824d4cbcca72bb6fbac0dfb2be85e34
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110962"
 ---
 # <a name="oracle-subscribers"></a>Oracle 订阅服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +61,9 @@ ms.locfileid: "67860608"
   
  成功连接到 Oracle 订阅服务器后，尝试使用为订阅的分发代理配置的同一帐户和密码登录到该数据库：  
   
-1.  单击 **“启动”** ，再单击 **“运行”** 。  
+1.  单击 **“启动”**，再单击 **“运行”**。  
   
-2.  键入 `cmd` ，然后单击 **“确定”** 。  
+2.  键入 `cmd` ，然后单击 **“确定”**。  
   
 3.  在命令提示符下，键入：  
   
@@ -89,7 +88,7 @@ ms.locfileid: "67860608"
   
     -   确保不要将空字符串作为列值插入到已发布表中。  
   
-    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数  。 指定 Oracle 错误代码 1400 ( **-SkipErrors1400**)。  
+    -   如果可以接受分发代理历史记录日志中的失败通知并继续处理，则可以对分发代理使用 -SkipErrors 参数。 指定 Oracle 错误代码 1400 (**-SkipErrors1400**)。  
   
     -   修改生成的创建表脚本，从任何可能包含关联空字符串的字符列中删除 NOT NULL 属性，并使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)参数将修改后的脚本作为项目的自定义创建脚本提供。  
   

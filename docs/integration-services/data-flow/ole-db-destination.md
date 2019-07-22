@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc2b3a1f77c7d0f2f00c1a08f27c27887cc4b73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e406e5966b9b865d7e25d8156880f333d5cba26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65802347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897165"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
 
@@ -56,7 +55,7 @@ ms.locfileid: "65802347"
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)。  
   
- 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任一快速加载访问模式：“表或视图 - 快速加载”  或“表名称或视图名称变量 - 快速加载”  。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象模型时，应将 AccessMode 属性设置为 **OpenRowset Using FastLoad**或 **OpenRowset Using FastLoad From Variable**。  
+ 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任一快速加载访问模式：“表或视图 - 快速加载”或“表名称或视图名称变量 - 快速加载”。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象模型时，应将 AccessMode 属性设置为 **OpenRowset Using FastLoad**或 **OpenRowset Using FastLoad From Variable**。  
   
 > [!NOTE]  
 >  如果用 **设计器中的** “OLE DB 目标编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对话框创建 OLE DB 目标要向其插入数据的目标表，可能需要手动选择新创建的表。 当 OLE DB 访问接口（如 OLE DB Provider for DB2）自动将架构标识符添加到表名称时，需要进行手动选择。  
@@ -75,7 +74,7 @@ ms.locfileid: "65802347"
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="fast-load-options"></a>快速加载选项  
- 如果 OLE DB 目标使用快速加载数据访问模式，则可以在用户界面“OLE DB 目标编辑器”  中为目标指定以下快速加载选项：  
+ 如果 OLE DB 目标使用快速加载数据访问模式，则可以在用户界面“OLE DB 目标编辑器”中为目标指定以下快速加载选项：  
   
 -   保持导入数据文件的标识值或使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分配的唯一值。  
   
@@ -87,16 +86,16 @@ ms.locfileid: "65802347"
   
 -   指定批中的行数和提交大小。  
   
- 某些快速加载选项存储在 OLE DB 目标的特定属性中。 例如，FastLoadKeepIdentity 指定是否保持标识值，FastLoadKeepNulls 指定是否保持 Null 值，而 FastLoadMaxInsertCommitSize 则指定作为批提交的行数。 其他快速加载选项则存储在 FastLoadOptions 属性内的以逗号分隔的列表中。 如果 OLE DB 目标使用存储于 FastLoadOptions 中和“OLE DB 目标编辑器”  对话框中列出的所有快速加载选项，则该属性的值将设置为 **TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000**。 值 1000 指示已将目标配置为使用 1000 行组成的批。  
+ 某些快速加载选项存储在 OLE DB 目标的特定属性中。 例如，FastLoadKeepIdentity 指定是否保持标识值，FastLoadKeepNulls 指定是否保持 Null 值，而 FastLoadMaxInsertCommitSize 则指定作为批提交的行数。 其他快速加载选项则存储在 FastLoadOptions 属性内的以逗号分隔的列表中。 如果 OLE DB 目标使用存储于 FastLoadOptions 中和“OLE DB 目标编辑器”对话框中列出的所有快速加载选项，则该属性的值将设置为 **TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000**。 值 1000 指示已将目标配置为使用 1000 行组成的批。  
   
 > [!NOTE]  
 >  目标中任何约束失败都将导致 FastLoadMaxInsertCommitSize 所定义的整批行失败。  
   
- 除了在“OLE DB 目标编辑器”  对话框中公开的快速加载选项以外，还可以通过在“高级编辑器”  对话框的 FastLoadOptions 属性中键入选项，将 OLE DB 目标配置为使用以下大容量加载选项。  
+ 除了在“OLE DB 目标编辑器”对话框中公开的快速加载选项以外，还可以通过在“高级编辑器”对话框的 FastLoadOptions 属性中键入选项，将 OLE DB 目标配置为使用以下大容量加载选项。  
   
 |快速加载选项|描述|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项的格式为 KILOBYTES_PER_BATCH  = \<正整数值>   。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项的格式为 KILOBYTES_PER_BATCH  = \<正整数值>。|  
 |FIRE_TRIGGERS|指定是否在插入表上激发触发器。 选项的格式为 **FIRE_TRIGGERS**。 出现该选项说明要激发触发器。|  
 |ORDER|指定输入数据如何排序。 选项格式为 ORDER \<列名称> ASC&#124;DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表中的聚集索引对输入数据进行排序，可以提升性能。|  
   
@@ -133,10 +132,10 @@ ms.locfileid: "65802347"
   
 ### <a name="static-options"></a>静态选项  
  **“无缓存”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”  对话框创建一个新连接管理器。  
+ 通过使用“配置 OLE DB 连接管理器”对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定向目标中加载数据的方法。 加载双字节字符集 (DBCS) 数据需要使用一个快速加载选项。 有关针对大容量插入进行了优化的快速加载数据访问模式的详细信息，请参阅 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
@@ -150,7 +149,7 @@ ms.locfileid: "65802347"
 |SQL 命令|使用 SQL 查询将数据加载到 OLE DB 目标中。|  
   
  **预览**  
- 使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
+ 使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
  每个 **“数据访问模式”** 设置都显示一组特定于该设置的动态选项。 下面几节介绍对于每个 **“数据访问模式”** 设置均可用的所有动态选项。  
@@ -160,17 +159,17 @@ ms.locfileid: "65802347"
  从数据源的可用表列表或视图列表中选择表或视图的名称。  
   
  **新建**  
- 通过使用“创建表”  对话框创建一个新表。  
+ 通过使用“创建表”对话框创建一个新表。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
 #### <a name="data-access-mode--table-or-view---fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
  **表或视图的名称**  
- 使用此列表从数据库中选择表或视图，或单击“新建”  创建新表。  
+ 使用此列表从数据库中选择表或视图，或单击“新建”创建新表。  
   
  **新建**  
- 通过使用“创建表”  对话框创建一个新表。  
+ 通过使用“创建表”对话框创建一个新表。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
@@ -191,7 +190,7 @@ ms.locfileid: "65802347"
  指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在“OLE DB 目标编辑器”  中清空此文本框，则表示不希望为此属性分配自定义值。  
+>  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  
   
  **最大插入提交大小**  
  指定 OLE DB 目标在快速加载操作期间尝试提交的批大小。 值为 **0** 表示在处理完所有行之后以单批方式提交所有数据。  
@@ -199,10 +198,10 @@ ms.locfileid: "65802347"
 > [!NOTE]  
 >  如果该 OLE DB 目标和其他数据流组件正在更新同一源表，则 **0** 值可能导致正在运行的包停止响应。 若要防止包停止，请将 **“最大插入提交大小”** 选项设置为 **2147483647**。  
   
- 如果为此属性提供一个值，目标将分批提交行，提交的行数是 (a) “最大插入提交大小”  与 (b) 当前正在处理的缓冲区中的剩余行数中的较小者。  
+ 如果为此属性提供一个值，目标将分批提交行，提交的行数是 (a) “最大插入提交大小”与 (b) 当前正在处理的缓冲区中的剩余行数中的较小者。  
   
 > [!NOTE]  
->  目标中任何约束失败都将导致“最大插入提交大小”  所定义的整批行失败。  
+>  目标中任何约束失败都将导致“最大插入提交大小”所定义的整批行失败。  
   
 #### <a name="data-access-mode--table-name-or-view-name-variable"></a>数据访问模式 = 表名变量或视图名变量  
  **变量名称**  
@@ -213,7 +212,7 @@ ms.locfileid: "65802347"
  选择包含表或视图名称的变量。  
   
  **新建**  
- 通过使用“创建表”  对话框创建一个新表。  
+ 通过使用“创建表”对话框创建一个新表。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
@@ -234,7 +233,7 @@ ms.locfileid: "65802347"
  指定每批中的行数。 此属性的默认值为 **-1**，表示尚未分配值。  
   
 > [!NOTE]  
->  如果在“OLE DB 目标编辑器”  中清空此文本框，则表示不希望为此属性分配自定义值。  
+>  如果在“OLE DB 目标编辑器”中清空此文本框，则表示不希望为此属性分配自定义值。  
   
  **最大插入提交大小**  
  指定 OLE DB 目标在快速加载操作期间尝试提交的批大小。 默认值为 **2147483647** ，表示在处理完所有行之后以单批方式提交所有数据。  
@@ -244,16 +243,16 @@ ms.locfileid: "65802347"
   
 #### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”  来生成查询，或通过单击“浏览”  定位到包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”定位到包含查询文本的文件。  
   
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)。  
   
  **生成查询**  
- 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  
@@ -269,7 +268,7 @@ ms.locfileid: "65802347"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  
@@ -287,7 +286,7 @@ ms.locfileid: "65802347"
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  未使用。  

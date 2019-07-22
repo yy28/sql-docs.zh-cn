@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997915"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -46,10 +45,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@configname=** ] **'** _option\_name_ **'**  
- 配置选项的名称。 *option_name* 的数据类型为 **varchar(35)** ，默认值为 NULL。 如果未指定该参数，则返回选项的完整列表。  
+ [ **@configname=** ] **'**_option\_name_**'**  
+ 配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 如果未指定该参数，则返回选项的完整列表。  
   
- [ **@configvalue=** ] **'** _value_ **'**  
+ [ **@configvalue=** ] **'**_value_**'**  
  新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
  **“hadoop 连接”**  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902850"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ constant_expression
   
  若要重命名默认值，请使用 sp_rename。 若要获得默认值的报告，请使用 sp_help。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要使用 CREATE DEFAULT，用户至少必须在当前数据库中拥有 CREATE DEFAULT 权限，并对在其中创建 default 的架构拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2106d2683a47e31c2f9c76535ee059a7f151883
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082402"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ EXECUTE dbo.usp_myproc;
   
  此机制在使用连接池的环境中是有用的。 连接池是一组供跨越多个最终用户的应用程序重用的数据库连接的维护机制。 由于只有 EXECUTE AS 语句的调用方（在这里，是应用程序）才知道传递到 @varbinary_variable 的值，因此调用方可以保证它们所建立的执行上下文无法被调用该应用程序的最终用户更改。 恢复执行上下文之后，应用程序可以将上下文切换到另一个主体。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  不需要任何权限。  
   
 ## <a name="examples"></a>示例  

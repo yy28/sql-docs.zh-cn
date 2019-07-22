@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: janinezhang
 ms.author: janinez
-manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a7e68b6f2ad46eb4f18bd46e0f4728bdec35d366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dc8e4283a8443c41be994745310114587712e3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110556"
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker（SSISDB 数据库）
 
@@ -35,11 +34,11 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 ```
 
 ## <a name="arguments"></a>参数
-[ @execution_id = ] execution_id   
- 执行实例的唯一标识符。 execution_id 为 bigint   。  
+[ @execution_id = ] execution_id  
+ 执行实例的唯一标识符。 execution_id 为 bigint。  
  
-[@workeragent_id = ] workeragent_id   
-Scale Out Worker 的辅助角色代理 ID。 workeragent_id  为 uniqueIdentifier  。
+[@workeragent_id = ] workeragent_id  
+Scale Out Worker 的辅助角色代理 ID。 workeragent_id 为 uniqueIdentifier。
 
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

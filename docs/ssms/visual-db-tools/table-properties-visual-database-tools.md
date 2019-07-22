@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 72a91250b5b39c4e7c15c5264ba66c68327e714d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689594"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261567"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "67689594"
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 **标识类别**  
-展开此项可显示“名称”  、“说明”  和“架构”  的属性。  
+展开此项可显示“名称”、“说明”和“架构”的属性。  
   
 **名称**  
 显示表的名称。 若要编辑名称，请在文本框中键入相应的内容。  
@@ -46,7 +45,7 @@ ms.locfileid: "67689594"
 显示所选表的数据源的名称。  
   
 **Description**  
-显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)  。  
+显示所选表的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 (…)。  
   
 **架构**  
 显示此表所属的架构的名称。 （仅适用于 Microsoft SQL Server。）  
@@ -55,7 +54,7 @@ ms.locfileid: "67689594"
 显示用于数据源的服务器的名称。  
   
 **表设计器类别**  
-展开此项可显示“标识列”  、“可编制索引”  和“是复制的”  的属性。  
+展开此项可显示“标识列”、“可编制索引”和“是复制的”的属性。  
   
 **标识列**  
 显示用作表的标识列的列。 若要更改标识列，请从下拉列表中进行选择。 该列表中只显示数值数据类型的列。  
@@ -67,7 +66,7 @@ ms.locfileid: "67689594"
 显示是否在另一个位置复制了该表。  
   
 **常规数据空间规范类别**  
-展开此项可显示“（数据空间类型）”  、“文件组或分区方案名称”  和“分区列列表”  的属性。  
+展开此项可显示“（数据空间类型）”、“文件组或分区方案名称”和“分区列列表”的属性。  
   
 **(数据空间类型)**  
 显示是使用文件组还是使用分区方案存储此表。  
@@ -76,7 +75,7 @@ ms.locfileid: "67689594"
 显示文件组或分区方案的名称。  
   
 **分区列列表**  
-通过此项可访问“分区列列表”  对话框。  
+通过此项可访问“分区列列表”对话框。  
   
 **行 GUID 列**  
 显示由 Microsoft SQL Server 用作表的 ROWGUID 列的列。 若要更改 ROWGUID 列，请从下拉列表中进行选择。 （仅适用于 SQL Server 7.0 或更高版本。）  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a065225cdabe601d0e56323e06bf12fa3abc8847
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947927"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server User Settable 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ GO
 > [!IMPORTANT]  
 >  应使用户计数器存储过程中定义的查询尽可能简单。 执行排序或哈希操作等会占用大量内存的查询，或执行大量 I/O 操作的查询，开销会很大，并且会影响性能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  **sp_user_counter** 可供所有用户使用，但仅限于针对查询计数器。  
   
 ## <a name="see-also"></a>另请参阅  

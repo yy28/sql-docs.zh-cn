@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 563f031d16e725fb58535c03c0ea77a81dbef2eb
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071288"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -111,7 +110,7 @@ PASSWORD ='*password*' 指定用于加密或解密数据库主密钥的密码。
 
 使用 ADD ENCRYPTION BY SERVICE MASTER KEY，可以通过服务主密钥对主密钥的副本进行加密，然后将副本存储在当前数据库和 master 中。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 要求对数据库具有 CONTROL 权限。 如果已使用密码对数据库主密钥进行了加密，则还需要了解该密码的相关信息。
 

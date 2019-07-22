@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: e8b31f79f4b5e6218d27d2f8562204223c2f21d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f6d8f947dc0ad5e25ddf53ac63e5f40b332c2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013208"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "66786843"
   
  如果指定的关联掩码试图映射到不存在的 CPU，RECONFIGURE 命令会向客户端会话和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志报告一条错误消息。 在这种情况下，RECONFIGURE WITH OVERRIDE 选项将不起作用，并将再次报告相同的配置错误。  
   
- 您也可以不在由 Windows 2000 或 Windows Server 2003 操作系统分配了特定工作负荷的处理器上执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动。 如果将代表某个处理器的位设置为 1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎将会选择该处理器来进行线程分配。 如果你将“关联掩码”  设置为 0（默认值），则 Microsoft Windows 2000 或 Windows Server 2003 计划算法会设置线程的关联。 如果你将 **关联掩码** 设置为任一非零值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联会将该值解释为指定可供选择的处理器的位掩码。  
+ 您也可以不在由 Windows 2000 或 Windows Server 2003 操作系统分配了特定工作负荷的处理器上执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活动。 如果将代表某个处理器的位设置为 1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎将会选择该处理器来进行线程分配。 如果你将“关联掩码”设置为 0（默认值），则 Microsoft Windows 2000 或 Windows Server 2003 计划算法会设置线程的关联。 如果你将 **关联掩码** 设置为任一非零值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联会将该值解释为指定可供选择的处理器的位掩码。  
   
  通过防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 线程在某个特定的处理器上运行，Microsoft Windows 2000 或 Windows Server 2003 可以更好地评估 Windows 专用的系统进程处理。 例如，在运行两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（实例 A 和实例 B）的具有 8 个 CPU 的服务器上，系统管理员可以使用关联掩码选项将第一组的 4 个 CPU 分配给实例 A，将第二组的 4 个 CPU 分配给实例 B。若要配置 32 个以上的处理器，应同时设置关联掩码和 affinity64 掩码。 **关联掩码** 值如下所示：  
   
@@ -117,7 +116,7 @@ GO
 |127|01111111|0、1、2、3、4、5 和 6|  
 |255|11111111|0、1、2、3、4、5、6 和 7|  
   
- affinity mask 选项是一个高级选项。 如果使用 sp_configure 系统存储过程来更改该设置，则仅当“显示高级选项”  设置为 1 时，才可以更改 **affinity mask**。 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令后，新的设置将立即生效，且不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ affinity mask 选项是一个高级选项。 如果使用 sp_configure 系统存储过程来更改该设置，则仅当“显示高级选项”设置为 1 时，才可以更改 **affinity mask**。 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令后，新的设置将立即生效，且不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 ## <a name="non-uniform-memory-access-numa"></a>非一致性内存访问 (NUMA)  
  当使用基于硬件的非一致性内存访问 (NUMA) 并设置了关联掩码时，节点中的每个计划程序都将关联到它自己的 CPU。 未设置关联掩码时，每个计划程序都关联到 NUMA 节点内的 CPU 组，映射到 NUMA 节点 N1 的计划程序可对节点中的任何 CPU 计划工作，但是不能对与其他节点关联的 CPU 计划工作。  

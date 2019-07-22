@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 5fa611bc85af05351c010694b4c81364f5f4cf72
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 09ffe5aa93aa5273d50dba17df367853daf59511
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679463"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255984"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重命名查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,9 +26,9 @@ ms.locfileid: "67679463"
   
 ### <a name="to-rename-a-query"></a>重命名查询  
   
-1.  在“视图”  菜单中，选择“解决方案资源管理器”  。  
+1.  在“视图”菜单中，选择“解决方案资源管理器”。  
   
-2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”  。  
+2.  在解决方案资源管理器中，右键单击要重命名的查询，然后在显示的快捷菜单中单击“重命名”。  
   
 3.  为该查询键入一个新名称，再按 Enter。  
   

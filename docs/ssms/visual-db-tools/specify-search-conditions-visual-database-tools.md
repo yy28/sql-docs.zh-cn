@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 409e8c9a7639c3de4febdc6aadf2fac635c20089
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 1cdf4fc43478a8c1a6e4eca052abbec5c788263f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682832"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263552"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>指定搜索条件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "67682832"
   
 1.  如果尚未指定搜索条件，请将要在搜索条件内使用的列或表达式添加到“条件”窗格中。  
   
-    如果创建选择查询，并且不希望在查询输出中显示搜索列或表达式，请清除每个搜索列或表达式的“输出”  列，以将其从输出列中删除。  
+    如果创建选择查询，并且不希望在查询输出中显示搜索列或表达式，请清除每个搜索列或表达式的“输出”列，以将其从输出列中删除。  
   
-2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”  列中输入搜索条件。  
+2.  找到包含要搜索的数据列或表达式的行，然后在“筛选器”列中输入搜索条件。  
   
     > [!NOTE]  
     > 如果不输入运算符，则查询和视图设计器将自动插入相等运算符“=”。  

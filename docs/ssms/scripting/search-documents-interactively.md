@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac751f8adb3163e10086314ab5690639d1f00ba1
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 67e8e90d8ca45afd827ca44a4fa87ced24184505
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690114"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264191"
 ---
 # <a name="search-documents-interactively"></a>交互式搜索文档
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "67690114"
   
 1.  打开想要搜索的项。  
   
-2.  在“编辑”  菜单上，指向“查找和替换”  ，再单击“快速查找”  。  
+2.  在“编辑”菜单上，指向“查找和替换”，再单击“快速查找”。  
   
 3.  在 **“查找和替换”** 文本框中，输入要搜索的文本。  
   
-4.  在 **“查找范围”** 列表中，选择 **“所有打开的文档”** 。  
+4.  在 **“查找范围”** 列表中，选择 **“所有打开的文档”**。  
   
     > [!NOTE]  
     >  如果选择 **“所有打开的文档”** ，则可能不搜索某些打开的文件。 只有当前在文本视图（如代码视图）中打开的文件才会包括在搜索中。 设计器视图中的文件不包括在搜索中。  
@@ -47,21 +46,21 @@ ms.locfileid: "67690114"
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>在所有活动文件中交互式替换  
   
-1.  在“编辑”  菜单上，指向“查找和替换”  ，再单击“快速替换”  。  
+1.  在“编辑”菜单上，指向“查找和替换”，再单击“快速替换”。  
   
 2.  在 **“查找内容”** 框中，输入要搜索的文本。  
   
 3.  在 **“替换为”** 框中，输入用来替换搜索文本的文本。  
   
-4.  在 **“查找范围”** 列表中，选择 **“所有打开的文档”** 。  
+4.  在 **“查找范围”** 列表中，选择 **“所有打开的文档”**。  
   
-5.  单击 **“替换”** ，并连续单击 **“替换”** ，直到替换了最后一个文件中的最后一个匹配项。 单击 **“查找下一个”** 可以跳过不想替换的匹配项。  
+5.  单击 **“替换”**，并连续单击 **“替换”** ，直到替换了最后一个文件中的最后一个匹配项。 单击 **“查找下一个”** 可以跳过不想替换的匹配项。  
   
      -或 -  
   
      选择 **“全部替换”** 以替换所有匹配项。 然后将出现消息框，列出替换的总数。  
   
- **“全部替换”** 命令将替换所有搜索匹配项，包括那些已经用 **“查找下一个”** 按钮跳过的匹配项。 若要取消 **“全部替换”** ，请在关闭任何文件之前从 **“编辑”** 菜单中单击 **“撤消”** 。  
+ **“全部替换”** 命令将替换所有搜索匹配项，包括那些已经用 **“查找下一个”** 按钮跳过的匹配项。 若要取消 **“全部替换”**，请在关闭任何文件之前从 **“编辑”** 菜单中单击 **“撤消”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [增量搜索活动文档](../../relational-databases/scripting/search-an-active-document-incrementally.md)   

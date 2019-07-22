@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126858"
 ---
 # <a name="sql-injection"></a>SQL 注入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|查询分隔符。|  
 |**”启用**|字符数据字符串分隔符。|  
-|**--**|字符数据字符串分隔符。<br />实例时都提供 SQL Server 登录名。|  
+|**--**|字符数据字符串分隔符。<br />。|  
 |**/\*** ... **\*/**|注释分隔符。 服务器不计位于 **/\*** 和 **\*/** 之间的文本。|  
 |**xp_**|用于目录扩展存储过程的名称的开头，如 `xp_cmdshell`。|  
   

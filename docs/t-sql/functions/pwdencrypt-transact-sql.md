@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 024d7c4a043dbc4801d5eb39fe7b05d27ef7c2b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c058f81e016cf3678289fdb48e77c71cb87d0cf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914288"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +41,8 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>参数  
- password   
- 要加密的密码。 password 的数据类型为 sysname   。  
+ password  
+ 要加密的密码。 password 的数据类型为 sysname。  
   
 ## <a name="return-types"></a>返回类型  
  **varbinary(128)**  

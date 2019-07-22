@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 95e4e18317ebcad2ad25ef5e17db20fe91f75bff
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2a3354661aa51978bce2381553c978cac9a8fec9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680985"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263269"
 ---
 # <a name="page-setup-dialog-box"></a>“页面设置”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-可通过选择“页面设置”  对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  
+可通过选择“页面设置”对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  
   
 ## <a name="paper"></a>纸张  
 **大小**  
