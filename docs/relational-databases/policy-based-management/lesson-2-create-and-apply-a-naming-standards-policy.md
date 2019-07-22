@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087167"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 课：创建并应用命名标准策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,57 +37,57 @@ ms.locfileid: "67584895"
     GO  
     ```  
   
-2.  在对象资源管理器中，单击“数据库”  ，然后按 F5 键刷新数据库列表。  
+2.  在对象资源管理器中，单击“数据库”，然后按 F5 键刷新数据库列表。  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>创建 Finance 表条件 
 
-1.  在对象资源管理器中，依次展开“管理”  和“策略管理”  ，右键单击“条件”  ，然后单击“新建条件”  。 
+1.  在对象资源管理器中，依次展开“管理”和“策略管理”，右键单击“条件”，然后单击“新建条件”。 
 
    ![新建条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/new-condition.png)
   
-2.  在“创建新条件”  对话框的“名称”  框中，键入 **Finance Tables**。  
-    1. 在“Facet”  列表中，选择“多部分名称”  。 
-    1. 在“表达式”  区域中，在“字段”  框中选择 **@Name** ，在“运算符”  框中选择“Like”  ，然后在“值”  框中键入 ```'fintbl%'``` 以强制要求所有表名称以字母 fintbl  开头。
-    1. 在“说明”  页中，键入 **Finance table names must begin with fintbl**，然后单击“确定”  以创建条件。  
+2.  在“创建新条件”对话框的“名称”框中，键入 **Finance Tables**。  
+    1. 在“Facet”列表中，选择“多部分名称”。 
+    1. 在“表达式”区域中，在“字段”框中选择 **@Name**，在“运算符”框中选择“Like”，然后在“值”框中键入 ```'fintbl%'``` 以强制要求所有表名称以字母 fintbl 开头。
+    1. 在“说明”页中，键入 **Finance table names must begin with fintbl**，然后单击“确定”以创建条件。  
 
     ![Finance 表条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
  
 ## <a name="create-the-finance-name-policy"></a>创建 Finance Name 策略  
   
-1.  在对象资源管理器中，右键单击“策略”  ，然后单击“新建策略”  。  
+1.  在对象资源管理器中，右键单击“策略”，然后单击“新建策略”。  
 
    ![新建策略](Media/lesson-2-create-and-apply-a-naming-standards-policy/new-policy.png)
   
-2.  在“新建新策略”  对话框的“名称”  框中，键入 **Finance Name**。
-    1. 在“检查条件”  列表中，选择“Finance Tables”  。 它位于“多部分名称”  区域中。 
-    1. 在“针对”  区域中，将会看到可能应用了此策略的数据库对象的列表。 选中“每个表”  复选框。
-    1. 选择“已启用”  列表。 （“已启用”  框不适用于“按需”  策略。）
-    1. 在“评估模式”  列表中，选择“更改时: 禁止”  。 这会对 Finance 数据库创建数据库触发器以强制实施策略。 
-    1. 在“服务器限制”  列表中，选择“无”  。 
-    1. 在“说明”  页上，添加“Finance 数据库中的表名必须包含 'fintbl%'”说明。 
-    1. 返回到“常规”  页，在“每个数据库”  区域中，展开“每个”  ，然后单击“新建条件”  。
+2.  在“新建新策略”对话框的“名称”框中，键入 **Finance Name**。
+    1. 在“检查条件”列表中，选择“Finance Tables”。 它位于“多部分名称”区域中。 
+    1. 在“针对”区域中，将会看到可能应用了此策略的数据库对象的列表。 选中“每个表”复选框。
+    1. 选择“已启用”列表。 （“已启用”框不适用于“按需”策略。）
+    1. 在“评估模式”列表中，选择“更改时: 禁止”。 这会对 Finance 数据库创建数据库触发器以强制实施策略。 
+    1. 在“服务器限制”列表中，选择“无”。 
+    1. 在“说明”页上，添加“Finance 数据库中的表名必须包含 'fintbl%'”说明。 
+    1. 返回到“常规”页，在“每个数据库”区域中，展开“每个”，然后单击“新建条件”。
 
     ![创建新的 Finance Name 策略](Media/lesson-2-create-and-apply-a-naming-standards-policy/create-new-policy-finance-name.png)
   
-6.  在“创建新条件”  对话框的“名称”  框中，键入 **Finance Database**。
-    1. 在“表达式”  框中，完成表达式以包含 @Name = 'Finance'，然后单击“确定”  关闭条件页。 
+6.  在“创建新条件”对话框的“名称”框中，键入 **Finance Database**。
+    1. 在“表达式”框中，完成表达式以包含 @Name = 'Finance'，然后单击“确定”关闭条件页。 
   
     ![创建新的“finance database”条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/create-new-condition.png)
 
     > [!NOTE]  
-    > 可能需要按 Tab 键移出“值”  框才能启用“确定”  按钮。  
+    > 可能需要按 Tab 键移出“值”框才能启用“确定”按钮。  
   
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="create-the-finance-policy-category"></a>创建 Finance 策略类别  
   
-1.  在对象资源管理器中，展开“管理”  ，右键单击“策略管理”  ，然后单击“管理类别”  。  
+1.  在对象资源管理器中，展开“管理”，右键单击“策略管理”，然后单击“管理类别”。  
 
    ![管理类别](Media/lesson-2-create-and-apply-a-naming-standards-policy/manage-categories.png)
   
-2.  在“管理策略类别”  对话框的“名称”  下的空白框中，键入 **Finance**，然后清除“托管数据库订阅”  。 “托管数据库订阅”  将强制实例中的每个数据库订阅属于该策略类别的策略。 在本课中，只有 Finance 数据库应订阅 Finance Name 策略。  
+2.  在“管理策略类别”对话框的“名称”下的空白框中，键入 **Finance**，然后清除“托管数据库订阅”。 “托管数据库订阅”将强制实例中的每个数据库订阅属于该策略类别的策略。 在本课中，只有 Finance 数据库应订阅 Finance Name 策略。  
 
     ![管理策略类别](Media/lesson-2-create-and-apply-a-naming-standards-policy/manage-policy-categories.png)
   
@@ -96,11 +95,11 @@ ms.locfileid: "67584895"
 
 ## <a name="subscribe-to-the-finance-policy-category"></a>订阅 Finance 策略类别  
   
-1.  在对象资源管理器中，展开“数据库”  ，右键单击“Finance”  ，指向“策略”  ，然后单击“类别”  。 
+1.  在对象资源管理器中，展开“数据库”，右键单击“Finance”，指向“策略”，然后单击“类别”。 
 
    ![Finance 策略类别](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-categories.png)
   
-2.  选中“Finance”  类别的“已订阅”  复选框。  
+2.  选中“Finance”类别的“已订阅”复选框。  
 
    ![订阅 finance 策略](Media/lesson-2-create-and-apply-a-naming-standards-policy/subscribe-to-finance.png)
   
@@ -147,9 +146,9 @@ ms.locfileid: "67584895"
   
 ## <a name="apply-the-policy-to-the-whole-server"></a>将策略应用于整个服务器  
   
-1.  当前，仅 Finance 数据库订阅了 Finance 策略类别。 在很多情况下，将策略类别应用于整个服务器会更容易一些。 在对象资源管理器中，展开“管理”  ，右键单击“策略管理”  ，然后单击“管理类别”  。  
+1.  当前，仅 Finance 数据库订阅了 Finance 策略类别。 在很多情况下，将策略类别应用于整个服务器会更容易一些。 在对象资源管理器中，展开“管理”，右键单击“策略管理”，然后单击“管理类别”。  
   
-2.  在“管理策略类别”  对话框中，找到 Finance 类别，然后选中 Finance 类别的“托管数据库订阅”  复选框。  
+2.  在“管理策略类别”对话框中，找到 Finance 类别，然后选中 Finance 类别的“托管数据库订阅”复选框。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 现在，Finance 类别会应用于所有数据库，但创建的条件会将 Finance Name 策略限定为 Finance 数据库。 这说明了如何使用复杂的条件组合限定策略目标，以便按适当的方式在多个服务器上正确应用策略。  
   

@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c2b84cb9f75987995e9e0cdbf92165fa28f61a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006032"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>使用 Transact-SQL 编辑器编辑和执行脚本
-在使用脚本时，Transact\-SQL 编辑器为你提供了丰富的编辑和调试体验。 在使用“查看代码”  上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用该编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”  上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。  
+在使用脚本时，Transact\-SQL 编辑器为你提供了丰富的编辑和调试体验。 在使用“查看代码”上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用该编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。  
   
-如果没有连接到某一数据库，但想要对其执行查询，则也可以使用“SQL”   -> “Transact\-SQL 编辑器”  菜单选项中的“新建查询连接”  对话框以连接到某一数据库，然后启动 Transact\-SQL 编辑器。  
+如果没有连接到某一数据库，但想要对其执行查询，则也可以使用“SQL” -> “Transact\-SQL 编辑器”菜单选项中的“新建查询连接”对话框以连接到某一数据库，然后启动 Transact\-SQL 编辑器。  
   
-Transact\-SQL 编辑器包含一个主 T-SQL  窗格，在其中可以编写和编辑 Transact\-SQL 脚本。 该编辑器支持 IntelliSense 以及语法的颜色编码，以便提高复杂语句的可读性。 它还支持查找和替换、大量标注、自定义字体和颜色以及行编号。 您还可以更改编辑器中的脚本将对其执行的数据库。 有关详细信息，请参阅[如何：克隆现有数据库](../ssdt/how-to-clone-an-existing-database.md)。 “结果”  窗格将在网格或文本中显示查询结果。 您还可以将查询结果重定向到某一文件。 “消息”  窗格显示在运行脚本时返回的错误、警告和信息性消息。 在启用客户端统计信息时，“统计信息”  窗格将显示与查询执行有关的信息并且这些信息按类别进行分组。 “执行计划”  窗格显示 SQL Server 选择的数据检索方法，并且显示特定语句和查询的执行系统开销。  
+Transact\-SQL 编辑器包含一个主 T-SQL 窗格，在其中可以编写和编辑 Transact\-SQL 脚本。 该编辑器支持 IntelliSense 以及语法的颜色编码，以便提高复杂语句的可读性。 它还支持查找和替换、大量标注、自定义字体和颜色以及行编号。 您还可以更改编辑器中的脚本将对其执行的数据库。 有关详细信息，请参阅[如何：克隆现有数据库](../ssdt/how-to-clone-an-existing-database.md)。 “结果”窗格将在网格或文本中显示查询结果。 您还可以将查询结果重定向到某一文件。 “消息”窗格显示在运行脚本时返回的错误、警告和信息性消息。 在启用客户端统计信息时，“统计信息”窗格将显示与查询执行有关的信息并且这些信息按类别进行分组。 “执行计划”窗格显示 SQL Server 选择的数据检索方法，并且显示特定语句和查询的执行系统开销。  
   
 ## <a name="in-this-section"></a>本节内容  
   

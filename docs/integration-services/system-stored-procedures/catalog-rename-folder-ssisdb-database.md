@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5f048ff41461e719a06c20ddd08bb62ca58ca974
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c03793ad98e2d4e71b34b095d158b9470cdbdae1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007216"
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder（SSISDB 数据库）
 
@@ -34,11 +33,11 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @old_name = ] old_name   
- 文件夹的原始名称。 old_name 为 nvarchar(128)   。  
+ [ @old_name = ] old_name  
+ 文件夹的原始名称。 old_name 为 nvarchar(128)。  
   
- [ @new_name = ] new_name   
- 文件夹的新名称。 new_name 为 nvarchar(128)   。  
+ [ @new_name = ] new_name  
+ 文件夹的新名称。 new_name 为 nvarchar(128)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  None  

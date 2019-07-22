@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013891"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "66803499"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：** [避免出现已满事务日志](#FollowUp)  
+-   **跟进：**[避免出现已满事务日志](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -83,13 +82,13 @@ ms.locfileid: "66803499"
   
 1.  在对象资源管理器中，连接到承载要挂起的数据库所在的可用性副本的服务器实例，然后展开服务器树。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
   
-2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“挂起数据移动”  。  
+4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“挂起数据移动”。  
   
-5.  在 **“挂起数据移动”** 对话框中，单击 **“确定”** 。  
+5.  在 **“挂起数据移动”** 对话框中，单击 **“确定”**。  
   
      对象资源管理器通过更改数据库图标以显示一个暂停指示符，来指示已挂起该数据库。  
   

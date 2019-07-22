@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 321c30632369500ce8e7a65cd12dba4f1e657860
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9664605fc2008549fdd8da9a66172e4d1ebc61f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013821"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>事务 - AlwaysOn 可用性组和数据库镜像
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
   
 -   可用性组必须在 Windows Server 2012 R2 或更高版本上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)。  
   
--   必须使用 CREATE AVAILABILITY GROUP  命令和 WITH DTC\_SUPPORT = PER_DB  子句创建可用性组。 当前不可更改现有可用性组。  
+-   必须使用 CREATE AVAILABILITY GROUP 命令和 WITH DTC\_SUPPORT = PER_DB 子句创建可用性组。 当前不可更改现有可用性组。  
 
 - 将加入可用性组的所有 SQL Server 实例都必须为 SQL Server 2016 或更高版本。
  

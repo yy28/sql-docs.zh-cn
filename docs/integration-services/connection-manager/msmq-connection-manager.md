@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a057c6678e27f51aba438b6dd57129777867e759
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abe5321f4f8f8cedfb9442e1137b7c2be68a2b12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104169"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 连接管理器
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  MSMQ 连接管理器使包能够连接到使用“消息队列”（也称为 MSMQ）的消息队列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的消息队列任务使用 MSMQ 连接管理器。  
+  MSMQ 连接管理器使包能够连接到使用“消息队列”（也称为 MSMQ）的消息队列。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的消息队列任务使用 MSMQ 连接管理器。  
   
- 将 MSMQ 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析 MSMQ 连接的连接管理器，同时还会设置该连接管理器的属性，并将该连接管理器添加到包的“连接”  集合。 该连接管理器的 **ConnectionManagerType** 属性设置为 **MSMQ**。  
+ 将 MSMQ 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析 MSMQ 连接的连接管理器，同时还会设置该连接管理器的属性，并将该连接管理器添加到包的“连接”集合。 该连接管理器的 **ConnectionManagerType** 属性设置为 **MSMQ**。  
   
  可以按下列方式来配置 MSMQ 连接管理器：  
   
@@ -57,7 +56,7 @@ ms.locfileid: "65728210"
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
 ## <a name="msmq-connection-manager-editor"></a>MSMQ 连接管理器编辑器
-  可以使用“MSMQ 连接管理器”对话框指定“消息队列”（也称为 MSMQ）消息队列的路径。   
+  可以使用“MSMQ 连接管理器”对话框指定“消息队列”（也称为 MSMQ）消息队列的路径。  
   
  若要了解有关 MSMQ 连接管理器的详细信息，请参阅 [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "65728210"
  可以用“.”代表本地计算机。  
   
  **测试**  
- 在配置 MSMQ 连接管理器之后，单击“测试”确定该连接是否可用。   
+ 在配置 MSMQ 连接管理器之后，单击“测试”确定该连接是否可用。  
   
 ## <a name="see-also"></a>另请参阅  
  [消息队列任务](../../integration-services/control-flow/message-queue-task.md)   

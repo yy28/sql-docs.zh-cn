@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 912a8e010ce84b421f5ba12b8a98384b0fb91cf1
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 3eda893debd455b00a433657d57c5dc2a0e11a08
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690431"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263864"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>删除数据库对象图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,13 +28,13 @@ ms.locfileid: "67690431"
   
 ### <a name="to-delete-a-database-diagram"></a>删除数据库关系图  
   
-1.  在对象资源管理器中，展开“数据库关系图”  文件夹。  
+1.  在对象资源管理器中，展开“数据库关系图”文件夹。  
   
 2.  右键单击要删除的数据库关系图。  
   
-3.  从快捷菜单中选择“删除”  。  
+3.  从快捷菜单中选择“删除”。  
   
-4.  此时，将显示一条消息，提示您确认删除。 选择 **“是”** 。  
+4.  此时，将显示一条消息，提示您确认删除。 选择 **“是”**。  
   
 该数据库关系图随即从数据库中删除。 在删除数据库关系图时，不会删除关系图中的表。  
   

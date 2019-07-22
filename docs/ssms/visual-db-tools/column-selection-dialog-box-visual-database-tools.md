@@ -13,29 +13,28 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: fca72b4086032b9e3fe829b5da0fe966b11344d1
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4522bc61c35927c4fdfe524205578f0a06cf6d95
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686256"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262520"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>“列选择”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可以在数据库关系图中更改表的“自定义”视图。 “自定义”视图仅显示由用户标识的列属性。  
   
-右键单击一个表并从快捷菜单中选择“修改自定义视图”  后，将显示此对话框。  
+右键单击一个表并从快捷菜单中选择“修改自定义视图”后，将显示此对话框。  
   
 ## <a name="options"></a>选项  
 **可用列**  
-列出所选数据库表中的全部现有列。 在此列出的列取决于数据库表的属性和数据库的类型。 突出显示所需的列，再使用箭头按钮，可以将这些列移入“选定的列”  框。  
+列出所选数据库表中的全部现有列。 在此列出的列取决于数据库表的属性和数据库的类型。 突出显示所需的列，再使用箭头按钮，可以将这些列移入“选定的列”框。  
   
 **选定的列**  
 显示当前为“自定义”视图定义的列属性。 使用箭头按钮可以将列属性添加到“选定的列”列表中或从该列表中移除列属性。  
   
 **箭头控件**  
-使用向上和向下箭头按钮可以在“选定的列”  列表中上下移动突出显示的列。  
+使用向上和向下箭头按钮可以在“选定的列”列表中上下移动突出显示的列。  
   
 使用 > 箭头和 >> 箭头可以向自定义视图中添加一个或所有属性。  
   

@@ -13,24 +13,23 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ae8839a91f83fa9e84661976643e40dc61d05a88
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: e3df7105bf2cd01736a16b77ab1b367dce80a598
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682672"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257324"
 ---
 # <a name="options-environment---keyboard-page"></a>选项（“环境”-“键盘”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用该“选项”  对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”  菜单上的“选项”  ，选择“环境”  文件夹，再单击“键盘”  。  
+使用该“选项”对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  
   
-“键盘方案”  下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”  对话框时，单击“确定”  。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
+“键盘方案”下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”对话框时，单击“确定”。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
   
 **Standard**  
 “标准”方案是 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的默认设置，与 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 快捷键非常相似。  
   
-使用“查询快捷方式”  网格可以将存储过程与键盘快捷方式相关联。  
+使用“查询快捷方式”网格可以将存储过程与键盘快捷方式相关联。  
   
 **快捷方式**  
 用于执行存储过程的键盘组合键。  

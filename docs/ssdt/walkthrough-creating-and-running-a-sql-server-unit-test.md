@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141209"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
 在本演练中，将创建一个 SQL Server 单元测试，该测试验证多个存储过程的行为。 创建 SQL Server 单元测试可帮助确定可能会引发不正确的应用程序行为的代码缺陷。 可以将 SQL Server 单元测试和应用程序测试作为一组自动执行的测试的一部分来运行。  
@@ -46,13 +45,13 @@ ms.locfileid: "65101939"
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>创建可从中导入架构的脚本  
   
-1.  在 **“文件”** 菜单上，指向 **“新建”** ，然后单击 **“文件”** 。  
+1.  在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“文件”**。  
   
     此时将显示 **“新建文件”** 对话框。  
   
 2.  在 **“类别”** 列表中，单击 **“常规”** （如果它尚未突出显示）。  
   
-3.  在 **“模板”** 列表中，单击 **“Sql 文件”** ，然后单击 **“打开”** 。  
+3.  在 **“模板”** 列表中，单击 **“Sql 文件”**，然后单击 **“打开”**。  
   
     将打开 Transact\-SQL 编辑器。  
   
@@ -218,7 +217,7 @@ ms.locfileid: "65101939"
   
 5.  保存该文件。 记下该位置，因为在下一个过程中必须使用此脚本。  
   
-6.  在 **“文件”** 菜单上，单击 **“关闭解决方案”** 。  
+6.  在 **“文件”** 菜单上，单击 **“关闭解决方案”**。  
   
     接下来，创建一个数据库项目并从已创建的脚本导入架构。  
   
@@ -226,29 +225,29 @@ ms.locfileid: "65101939"
   
 #### <a name="to-create-a-database-project"></a>创建数据库项目  
   
-1.  在 **“文件”** 菜单中，指向 **“新建”** ，然后单击 **“项目”** 。  
+1.  在 **“文件”** 菜单中，指向 **“新建”**，然后单击 **“项目”**。  
   
     此时将显示“新建项目”  对话框。  
   
-2.  在“已安装的模板”  下，选择“SQL Server”  节点，然后选择“SQL Server 数据库项目”  。  
+2.  在“已安装的模板”下，选择“SQL Server”节点，然后选择“SQL Server 数据库项目”。  
   
 3.  在 **“名称”** 中，键入 **SimpleUnitTestDB**。  
   
 4.  如果尚未选中 **“创建解决方案的目录”** 复选框，请选中此复选框。  
   
-5.  如果尚未清除 **“添加到源代码管理”** 复选框，请清除此复选框，然后单击 **“确定”** 。  
+5.  如果尚未清除 **“添加到源代码管理”** 复选框，请清除此复选框，然后单击 **“确定”**。  
   
     将创建数据库项目，并且它将显示在 **“解决方案资源管理器”** 中。 接下来，从脚本导入数据库架构。  
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>从脚本导入数据库架构  
   
-1.  在“项目”  菜单上，单击“导入”  ，然后单击“脚本(\*.sql)”  。  
+1.  在“项目”菜单上，单击“导入”，然后单击“脚本(\*.sql)”。  
   
 2.  在阅读“欢迎使用”页后，单击 **“下一步”** 。  
   
-3.  单击 **“浏览”** ，转到您保存 .sql 文件的目录。  
+3.  单击 **“浏览”**，转到您保存 .sql 文件的目录。  
   
-4.  双击 .sql 文件，然后单击“完成”  。  
+4.  双击 .sql 文件，然后单击“完成”。  
   
     将导入脚本，并且该脚本中定义的对象将添加到您的数据库项目中。  
   
@@ -261,7 +260,7 @@ ms.locfileid: "65101939"
   
 1.  在 **“解决方案资源管理器”** 中，检查已导入到项目中的脚本文件。  
   
-2.  在“SQL Server 对象资源管理器”  中，在“项目”节点中查看该数据库。  
+2.  在“SQL Server 对象资源管理器”中，在“项目”节点中查看该数据库。  
   
 ## <a name="DeployDBProj"></a>部署到 LocalDB  
 默认情况下，在您按 F5 时，会将数据库部署（或发布）到 LocalDB 数据库。 您可以通过转到项目属性页的“调试”选项卡并更改连接字符串，更改数据库位置。  
@@ -270,17 +269,17 @@ ms.locfileid: "65101939"
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>创建针对存储过程的 SQL Server 单元测试  
   
-1.  在“SQL Server 对象资源管理器”  中，展开“SimpleUnitTestDB”  的项目节点，然后展开“可编程性”  和“存储过程”  节点。  
+1.  在“SQL Server 对象资源管理器”中，展开“SimpleUnitTestDB”的项目节点，然后展开“可编程性”和“存储过程”节点。  
   
-2.  右键单击存储过程之一，然后单击“创建单元测试”  以便显示“创建单元测试”  对话框。  
+2.  右键单击存储过程之一，然后单击“创建单元测试”以便显示“创建单元测试”对话框。  
   
-3.  选中所有五个存储过程对应的复选框：“Sales.uspCancelOrder”、“Sales.uspFillOrder”、“Sales.uspNewCustomer”、“Sales.uspPlaceNewOrder”和“Sales.uspShowOrderDetails”      。  
+3.  选中所有五个存储过程对应的复选框：“Sales.uspCancelOrder”、“Sales.uspFillOrder”、“Sales.uspNewCustomer”、“Sales.uspPlaceNewOrder”和“Sales.uspShowOrderDetails”。  
   
-4.  在“项目”  下拉列表中，选择“创建新的 Visual C# 测试项目”  。  
+4.  在“项目”下拉列表中，选择“创建新的 Visual C# 测试项目”。  
   
-5.  接受项目名称和类名称的默认名称，然后单击 **“确定”** 。  
+5.  接受项目名称和类名称的默认名称，然后单击 **“确定”**。  
   
-6.  在测试配置对话框的 **“使用以下数据连接执行单元测试”** 中，指定与您在本演练前面部署的数据库的连接。 例如，如果使用了默认部署位置（即 LocalDB），应单击“新建连接”  来指定 (LocalDB)\Projects  。 然后，选择该数据库的名称。 再单击“确定”以关闭 **“连接属性”** 对话框。  
+6.  在测试配置对话框的 **“使用以下数据连接执行单元测试”** 中，指定与您在本演练前面部署的数据库的连接。 例如，如果使用了默认部署位置（即 LocalDB），应单击“新建连接”来指定 (LocalDB)\Projects。 然后，选择该数据库的名称。 再单击“确定”以关闭 **“连接属性”** 对话框。  
   
     > [!NOTE]  
     > 如果必须测试具有有限权限的视图或存储过程，则通常会在此步骤中指定该连接。 然后，指定具有更广泛权限的辅助连接来验证测试。 如果您具有辅助连接，则应该将该用户添加到数据库项目中，并在预先部署脚本中为该用户创建登录名。  
@@ -289,11 +288,11 @@ ms.locfileid: "65101939"
   
 8.  在 **“数据库项目”** 中，单击 **SimpleUnitTestDB.sqlproj**。  
   
-9. 在 **“部署配置”** 中，单击 **“调试”** 。  
+9. 在 **“部署配置”** 中，单击 **“调试”**。  
   
     在 SQL Server 单元测试过程中，可能还需要生成测试数据。 对于本演练，您将跳过该步骤，因为测试将创建自己的数据。  
   
-10. 单击“确定”  。  
+10. 单击“确定” 。  
   
     将生成测试项目，并且将显示 SQL Server 单元测试设计器。 接下来，需要在单元测试的 Transact\-SQL 脚本中更新测试逻辑。  
   
@@ -328,7 +327,7 @@ ms.locfileid: "65101939"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspnewcustomer"></a>为 uspNewCustomer 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspNewCustomerTest  ，并确保在相邻列表中突出显示“测试”  。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspNewCustomerTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行上一步后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -346,19 +345,19 @@ ms.locfileid: "65101939"
     SELECT * FROM [Sales].[Customer];  
     ```  
   
-3.  在“测试条件”  窗格中，单击“无结论”测试条件，然后单击“删除测试条件”  图标（红色的 X）。  
+3.  在“测试条件”窗格中，单击“无结论”测试条件，然后单击“删除测试条件”图标（红色的 X）。  
   
-4.  在“测试条件”  窗格中，单击列表中的“行计数”  ，然后单击“添加测试条件”  图标（绿色的 +）。  
+4.  在“测试条件”窗格中，单击列表中的“行计数”，然后单击“添加测试条件”图标（绿色的 +）。  
   
-5.  打开“属性”  窗口（选择测试条件并且按下 F4），然后将“行计数”  属性设置为 1。  
+5.  打开“属性”窗口（选择测试条件并且按下 F4），然后将“行计数”属性设置为 1。  
   
-6.  在“文件”  菜单上，单击“全部保存”  。  
+6.  在“文件”  菜单上，单击“全部保存” 。  
   
     接下来，为 uspPlaceNewOrder 定义单元测试逻辑。  
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspplaceneworder"></a>为 uspPlaceNewOrder 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest  ，并确保在相邻列表中突出显示“测试”  。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -388,17 +387,17 @@ ms.locfileid: "65101939"
     SELECT @RC AS RC  
     ```  
   
-3.  在 **“测试条件”** 窗格中，单击“无结论”测试条件，然后单击 **“删除测试条件”** 。  
+3.  在 **“测试条件”** 窗格中，单击“无结论”测试条件，然后单击 **“删除测试条件”**。  
   
-4.  在 **“测试条件”** 窗格中，单击列表中的 **“标量值”** ，然后单击 **“添加测试条件”** 。  
+4.  在 **“测试条件”** 窗格中，单击列表中的 **“标量值”** ，然后单击 **“添加测试条件”**。  
   
 5.  在 **“属性”** 窗口中，将 **“所需的值”** 属性设置为 100。  
   
-6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest  ，并确保在相邻列表中突出显示“预先测试”  。  
+6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspPlaceNewOrderTest，并确保在相邻列表中突出显示“预先测试”。  
   
     在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
-7.  单击“单击此处以创建”  以创建预先测试脚本。  
+7.  单击“单击此处以创建”以创建预先测试脚本。  
   
 8.  在 Transact\-SQL 编辑器中更新 Transact\-SQL 语句，使其与以下语句相匹配：  
   
@@ -428,13 +427,13 @@ ms.locfileid: "65101939"
     UPDATE [Sales].[Customer] SET YTDOrders = 0, YTDSales = 0 WHERE [CustomerID] = @CustomerID;  
     ```  
   
-9. 在“文件”  菜单上，单击“全部保存”  。  
+9. 在“文件”  菜单上，单击“全部保存” 。  
   
     接下来，为 uspFillOrder 创建单元测试。  
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspfillorder"></a>为 uspFillOrder 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest  ，并确保在相邻列表中突出显示“测试”  。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -467,15 +466,15 @@ ms.locfileid: "65101939"
     SELECT @RC AS RC;  
     ```  
   
-3.  在 **“测试条件”** 窗格中，单击“无结论”测试条件，然后单击 **“删除测试条件”** 。  
+3.  在 **“测试条件”** 窗格中，单击“无结论”测试条件，然后单击 **“删除测试条件”**。  
   
-4.  在 **“测试条件”** 窗格中，单击列表中的 **“标量值”** ，然后单击 **“添加测试条件”** 。  
+4.  在 **“测试条件”** 窗格中，单击列表中的 **“标量值”** ，然后单击 **“添加测试条件”**。  
   
 5.  在 **“属性”** 窗口中，将 **“所需的值”** 属性设置为 100。  
   
-6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest  ，并确保在相邻列表中突出显示“预先测试”  。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
+6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspFillOrderTest，并确保在相邻列表中突出显示“预先测试”。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
-7.  单击“单击此处以创建”  以创建预先测试脚本。  
+7.  单击“单击此处以创建”以创建预先测试脚本。  
   
 8.  在 Transact\-SQL 编辑器中更新 Transact\-SQL 语句，使其与以下语句相匹配：  
   
@@ -520,11 +519,11 @@ ms.locfileid: "65101939"
     COMMIT TRANSACTION  
     ```  
   
-9. 在“文件”  菜单上，单击“全部保存”  。  
+9. 在“文件”  菜单上，单击“全部保存” 。  
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspshoworderdetails"></a>为 uspShowOrderDetails 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest  ，并确保在相邻列表中突出显示“测试”  。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -552,25 +551,25 @@ ms.locfileid: "65101939"
     SELECT @RC AS RC;  
     ```  
   
-3.  在 **“测试条件”** 窗格中，单击“无结论”测试条件，然后单击 **“删除测试条件”** 。  
+3.  在 **“测试条件”** 窗格中，单击“无结论”测试条件，然后单击 **“删除测试条件”**。  
   
-4.  在 **“测试条件”** 窗格中，单击列表中的 **“所需的架构”** ，然后单击 **“添加测试条件”** 。  
+4.  在 **“测试条件”** 窗格中，单击列表中的 **“所需的架构”** ，然后单击 **“添加测试条件”**。  
   
-5.  在“属性”窗口中的“配置”属性中，单击浏览按钮（“…”）    。  
+5.  在“属性”窗口中的“配置”属性中，单击浏览按钮（“…”）。  
   
-6.  在 **“expectedSchemaCondition1 的配置”** 对话框中，指定与您的数据库的连接。 例如，如果使用了默认部署位置（即 LocalDB），应单击“新建连接”  来指定 (LocalDB)\Projects  。 然后，选择该数据库的名称。  
+6.  在 **“expectedSchemaCondition1 的配置”** 对话框中，指定与您的数据库的连接。 例如，如果使用了默认部署位置（即 LocalDB），应单击“新建连接”来指定 (LocalDB)\Projects。 然后，选择该数据库的名称。  
   
-7.  单击“检索”  。 （如有必要，单击“检索”  直到看到数据。）  
+7.  单击“检索” 。 （如有必要，单击“检索”直到看到数据。）  
   
     将执行单元测试的 Transact\-SQL 主体，并且生成的架构将显示在对话框中。 因为没有执行预先测试代码，所有不返回任何数据。 因为您只验证架构，不验证数据，因此不返回数据是允许的。  
   
-8.  单击“确定”  。  
+8.  单击“确定” 。  
   
     所需的架构与测试条件存储在一起。  
   
-9. 在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest  ，并确保在相邻列表中突出显示“预先测试”  。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
+9. 在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest，并确保在相邻列表中突出显示“预先测试”。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
-10. 单击“单击此处以创建”  以创建预先测试脚本。  
+10. 单击“单击此处以创建”以创建预先测试脚本。  
   
 11. 在 Transact\-SQL 编辑器中更新 Transact\-SQL 语句，使其与以下语句相匹配：  
   
@@ -615,17 +614,17 @@ ms.locfileid: "65101939"
     COMMIT TRANSACTION  
     ```  
   
-12. 在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest  ，然后单击相邻列表中的“测试”  。  
+12. 在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspShowOrderDetailsTest，然后单击相邻列表中的“测试”。  
   
     您必须执行此操作，因为您要将校验和条件应用于测试，而不是预先测试。  
   
-13. 在 **“测试条件”** 窗格中，单击列表中的 **“数据校验和”** ，然后单击 **“添加测试条件”** 。  
+13. 在 **“测试条件”** 窗格中，单击列表中的 **“数据校验和”** ，然后单击 **“添加测试条件”**。  
   
-14. 在“属性”窗口中的“配置”属性中，单击浏览按钮（“…”）    。  
+14. 在“属性”窗口中的“配置”属性中，单击浏览按钮（“…”）。  
   
 15. 在 **“checksumCondition1 的配置”** 对话框中，指定与您的数据库的连接。  
   
-16. 使用以下代码替换对话框（在“编辑连接”  按钮下）中的 Transact\-SQL：  
+16. 使用以下代码替换对话框（在“编辑连接”按钮下）中的 Transact\-SQL：  
   
     ```  
     BEGIN TRANSACTION  
@@ -687,15 +686,15 @@ ms.locfileid: "65101939"
   
     此代码将预先测试中的 Transact\-SQL 代码与测试本身中的 Transact\-SQL 结合在一起。 您同时需要这两种代码，以便返回与运行测试时返回结果相同的结果。  
   
-17. 单击“检索”  。 （如有必要，单击“检索”  直到看到数据。）  
+17. 单击“检索” 。 （如有必要，单击“检索”直到看到数据。）  
   
     将执行指定的 Transact\-SQL ，并且将针对返回的数据计算校验和。  
   
-18. 单击“确定”  。  
+18. 单击“确定” 。  
   
     计算出的校验和与测试条件存储在一起。 所需的校验和将显示在“数据校验和”测试条件的“值”列中。  
   
-19. 在“文件”  菜单上，单击“全部保存”  。  
+19. 在“文件”  菜单上，单击“全部保存” 。  
   
     此时，您已准备好运行测试。  
   
@@ -703,15 +702,15 @@ ms.locfileid: "65101939"
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>运行 SQL Server 单元测试  
   
-1.  在“测试”  菜单上，指向“窗口”  ，然后单击“测试视图”  （在 Visual Studio 2010 中）或“测试资源管理器”  （在 Visual Studio 2012 中）。  
+1.  在“测试”菜单上，指向“窗口”，然后单击“测试视图”（在 Visual Studio 2010 中）或“测试资源管理器”（在 Visual Studio 2012 中）。  
   
-2.  在“测试视图”  窗口 (Visual Studio 2010) 中，单击工具栏上的“刷新”  以更新测试列表。 若要在“测试资源管理器”  (Visual Studio 2012) 中查看测试列表，请生成解决方案。  
+2.  在“测试视图”窗口 (Visual Studio 2010) 中，单击工具栏上的“刷新”以更新测试列表。 若要在“测试资源管理器”(Visual Studio 2012) 中查看测试列表，请生成解决方案。  
   
-    “测试视图”  或“测试资源管理器”  窗口中列出了在本演练前面创建的、并在其中添加了 Transact\-SQL 语句和测试条件的测试。 名为 TestMethod1 的测试是空的，在本演练中将不使用它。  
+    “测试视图”或“测试资源管理器”窗口中列出了在本演练前面创建的、并在其中添加了 Transact\-SQL 语句和测试条件的测试。 名为 TestMethod1 的测试是空的，在本演练中将不使用它。  
   
-3.  右键单击“Sales_uspNewCustomerTest”  ，然后单击“运行选定内容”  。  
+3.  右键单击“Sales_uspNewCustomerTest”，然后单击“运行选定内容”。  
   
-    Visual Studio 使用指定的特权上下文连接到数据库并应用数据生成计划。 Visual Studio 先切换到执行上下文，再在测试中运行 Transact\-SQL 脚本。 最后，Visual Studio 将针对在测试条件中指定的内容评估 Transact\-SQL 脚本的结果，并在“测试结果”  窗口中显示结果（通过或失败）。  
+    Visual Studio 使用指定的特权上下文连接到数据库并应用数据生成计划。 Visual Studio 先切换到执行上下文，再在测试中运行 Transact\-SQL 脚本。 最后，Visual Studio 将针对在测试条件中指定的内容评估 Transact\-SQL 脚本的结果，并在“测试结果”窗口中显示结果（通过或失败）。  
   
 4.  在 **“测试结果”** 窗口中查看结果。  
   
@@ -729,7 +728,7 @@ ms.locfileid: "65101939"
   
 #### <a name="to-correct-the-error-in-salesuspfillorder"></a>更正 Sales.uspFillOrder 中的错误  
   
-1.  在数据库的“SQL Server 对象资源管理器”  项目节点中，双击 uspFillOrder  存储过程以在 Transact\-SQL 编辑器中打开其定义。  
+1.  在数据库的“SQL Server 对象资源管理器”项目节点中，双击 uspFillOrder 存储过程以在 Transact\-SQL 编辑器中打开其定义。  
   
 2.  在定义中，找到以下 Transact\-SQL 语句：  
   
@@ -749,9 +748,9 @@ ms.locfileid: "65101939"
         WHERE [CustomerID] = @CustomerID  
     ```  
   
-4.  在 **“文件”** 菜单上，单击 **“保存 uspFillOrder.sql”** 。  
+4.  在 **“文件”** 菜单上，单击 **“保存 uspFillOrder.sql”**。  
   
-5.  在“测试视图”  中，右键单击“Sales_uspFillOrderTest”  ，然后单击“运行选定内容”  。  
+5.  在“测试视图”中，右键单击“Sales_uspFillOrderTest”，然后单击“运行选定内容”。  
   
     测试通过。  
   
@@ -770,7 +769,7 @@ ms.locfileid: "65101939"
   
 #### <a name="to-update-the-stored-procedure"></a>更新存储过程  
   
-1.  在 SimpleUnitTestDB 数据库的“SQL Server 对象资源管理器”  项目节点中，展开“可编程性”节点，再展开“存储过程”节点，然后双击 uspCancelOrder。  
+1.  在 SimpleUnitTestDB 数据库的“SQL Server 对象资源管理器”项目节点中，展开“可编程性”节点，再展开“存储过程”节点，然后双击 uspCancelOrder。  
   
 2.  在 Transact\-SQL 编辑器中，更新过程定义，使其与以下代码相匹配：  
   
@@ -841,7 +840,7 @@ ms.locfileid: "65101939"
     END  
     ```  
   
-3.  在 **“文件”** 菜单上，单击 **“保存 uspCancelOrder.sql”** 。  
+3.  在 **“文件”** 菜单上，单击 **“保存 uspCancelOrder.sql”**。  
   
 4.  按 F5 部署 **SimpleUnitTestDB**。  
   
@@ -851,7 +850,7 @@ ms.locfileid: "65101939"
   
 #### <a name="to-write-the-sql-server-unit-test-for-uspcancelorder"></a>为 uspCancelOrder 编写 SQL Server 单元测试  
   
-1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest  ，并确保在相邻列表中突出显示“测试”  。  
+1.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest，并确保在相邻列表中突出显示“测试”。  
   
     在执行此步骤后，可以为单元测试中的测试操作创建测试脚本。  
   
@@ -887,9 +886,9 @@ ms.locfileid: "65101939"
   
 5.  在“属性”  窗口中，将“预期值”  属性设为 0。  
   
-6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest  ，并确保在相邻列表中突出显示“预先测试”  。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
+6.  在 SQL Server 单元测试设计器的导航栏中，单击 Sales_uspCancelOrderTest，并确保在相邻列表中突出显示“预先测试”。 在执行此步骤后，可以指定一些语句，以便将数据置于执行测试所需的状态。 对于此示例，您必须先创建 Customer 记录，然后才能下订单。  
   
-7.  单击“单击此处以创建”  以创建预先测试脚本。  
+7.  单击“单击此处以创建”以创建预先测试脚本。  
   
 8.  在 Transact\-SQL 编辑器中更新 Transact\-SQL 语句，使其与以下语句相匹配：  
   
@@ -938,13 +937,13 @@ ms.locfileid: "65101939"
     COMMIT TRANSACTION  
     ```  
   
-9. 在“文件”  菜单上，单击“全部保存”  。  
+9. 在“文件”  菜单上，单击“全部保存” 。  
   
     此时，您已准备好运行测试。  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>运行 SQL Server 单元测试  
   
-1.  在“测试视图”  中，右键单击“Sales_uspCancelOrderTest”  ，然后单击“运行选定内容”  。  
+1.  在“测试视图”中，右键单击“Sales_uspCancelOrderTest”，然后单击“运行选定内容”。  
   
 2.  在 **“测试结果”** 窗口中查看结果。  
   
@@ -956,7 +955,7 @@ ms.locfileid: "65101939"
   
 #### <a name="to-modify-the-code-for-the-unit-test"></a>修改单元测试的代码  
   
-1.  在“解决方案资源管理器”  中，展开 TestProject1  ，右键单击 SqlServerUnitTests1.cs  ，然后单击“查看代码”  。  
+1.  在“解决方案资源管理器”中，展开 TestProject1，右键单击 SqlServerUnitTests1.cs，然后单击“查看代码”。  
   
 2.  在代码编辑器中，导航至 Sales_uspCancelOrderTest 方法。 修改此方法的属性，使其与以下代码相匹配：  
   
@@ -976,7 +975,7 @@ ms.locfileid: "65101939"
   
 #### <a name="to-re-run-the-sql-server-unit-tests"></a>重新运行 SQL Server 单元测试  
   
-1.  在“测试视图”  中，右键单击“Sales_uspCancelOrderTest”  ，然后单击“运行选定内容”  。  
+1.  在“测试视图”中，右键单击“Sales_uspCancelOrderTest”，然后单击“运行选定内容”。  
   
 2.  在 **“测试结果”** 窗口中查看结果。  
   

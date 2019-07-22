@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2ff22b3a5dfde43e4202062cb40737fb7d4c02e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f7c22a7c8120e67034e8a22a42948e607bec177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104861"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions（SSISDB 数据库）
 
@@ -35,7 +34,7 @@ ms.locfileid: "65714850"
 |execution_id|**bigint**|执行实例的唯一标识符 (ID)。|  
 |folder_name|**sysname(nvarchar(128))**|包含项目的文件夹的名称。|  
 |project_name|**sysname(nvarchar(128))**|项目的名称。|  
-|package_name|nvarchar(260) |在执行过程中启动的第一个包的名称。|  
+|package_name|nvarchar(260)|在执行过程中启动的第一个包的名称。|  
 |reference_id|**bigint**|执行实例引用的环境。|  
 |reference_type|**char(1)**|指示环境是可以位于与项目相同的文件夹中（相对引用），还是位于其他文件夹中（绝对引用）中。 如果值为 `R`，则通过使用相对引用定位环境。 如果值为 `A`，则通过使用绝对引用定位环境。|  
 |environment_folder_name|**nvarchar(128)**|包含环境的文件夹的名称。|  

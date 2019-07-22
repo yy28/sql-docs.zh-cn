@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d3941108c9cd8969f4082a4c6aed765f39bb013
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50de6cd55b2dcd916967e241ae9b62a2a960df06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101696"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
 
@@ -29,7 +28,7 @@ ms.locfileid: "65728681"
   
  **选择要使用的 CDC 服务**  
   
-1.  从 CDC 服务配置控制台的左侧窗格中，展开 **“本地 CDC 服务”** 。  
+1.  从 CDC 服务配置控制台的左侧窗格中，展开 **“本地 CDC 服务”**。  
   
 2.  选择要使用的 CDC 服务。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65728681"
 ### <a name="delete-the-service"></a>删除服务  
  从 CDC 服务配置控制台右侧的 **“操作”** 窗格，单击 **“删除”** 以便删除服务。  
   
- 也可以右键单击要删除的 CDC 服务，然后选择“删除”  。  
+ 也可以右键单击要删除的 CDC 服务，然后选择“删除”。  
   
  **注意**：如果在删除服务时该服务正在运行，则该服务将在被删除前停止。  
   
@@ -58,9 +57,9 @@ ms.locfileid: "65728681"
  有关必须在“连接到 SQL Server”对话框中输入的数据的信息，请参阅 [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)。  
   
 ### <a name="edit-the-cdc-service-properties"></a>编辑 CDC 服务属性  
- 从 CDC 服务配置控制台右侧的 **“操作”** 窗格中，单击 **“属性”** 。  
+ 从 CDC 服务配置控制台右侧的 **“操作”** 窗格中，单击 **“属性”**。  
   
- 也可以右键单击要编辑其属性的 CDC 服务，然后选择“属性”  。  
+ 也可以右键单击要编辑其属性的 CDC 服务，然后选择“属性”。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何管理本地 CDC 服务](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  

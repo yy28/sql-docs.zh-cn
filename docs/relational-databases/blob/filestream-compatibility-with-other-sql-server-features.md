@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e2b2f9e434e1e88d893478c558078c8139e1bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085357"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 与其他 SQL Server 功能的兼容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "65094254"
  您可以使用“导入列”转换将文件从文件系统加载到 FILESTREAM 列， 还可以使用“导出列”转换将文件从 FILESTREAM 列提取到文件系统中的另一个位置。  
   
 ##  <a name="distqueries"></a> 分布式查询和链接服务器  
- 你可以通过将 FILESTREAM 数据作为 **varbinary(max)** 数据处理，使用分布式查询和链接服务器来处理 FILESTREAM 数据。 不能在使用由四部分构成的名称的分布式查询中使用 FILESTREAM **PathName()** 函数，甚至在该名称表示本地服务器时也不能使用。 但是，你可以在使用 **OPENQUERY()** 的传递查询的内部查询中使用 **PathName()** 。  
+ 你可以通过将 FILESTREAM 数据作为 **varbinary(max)** 数据处理，使用分布式查询和链接服务器来处理 FILESTREAM 数据。 不能在使用由四部分构成的名称的分布式查询中使用 FILESTREAM **PathName()** 函数，甚至在该名称表示本地服务器时也不能使用。 但是，你可以在使用 **OPENQUERY()** 的传递查询的内部查询中使用 **PathName()**。  
   
 ##  <a name="encryption"></a> 加密  
  即使启用了透明数据加密，也不会加密 FILESTREAM 数据。  
@@ -68,7 +67,7 @@ ms.locfileid: "65094254"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> 复制  
- 可以将发布服务器上启用了 FILESTREAM 属性的 **varbinary(max)** 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”  对话框，或使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 **varbinary(max)** 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议，如果您不是将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请复制 FILESTREAM 属性。 不论指定的架构选项为何，均不支持将包含 FILESTREAM 列的表复制到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 订阅服务器。  
+ 可以将发布服务器上启用了 FILESTREAM 属性的 **varbinary(max)** 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”对话框，或使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 **varbinary(max)** 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议，如果您不是将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请复制 FILESTREAM 属性。 不论指定的架构选项为何，均不支持将包含 FILESTREAM 列的表复制到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 订阅服务器。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](https://go.microsoft.com/fwlink/?LinkId=103810)。  

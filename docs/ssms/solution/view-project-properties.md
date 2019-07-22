@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9a0a223e90bc750a4b4372b8b7e205465dcdc5b7
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9942a670c50967f408da1002356393323b9796e6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680774"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264713"
 ---
 # <a name="view-project-properties"></a>视图项目属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "67680774"
   
 1.  在解决方案资源管理器中，选择一个项目。  
   
-2.  如果未打开“属性”窗口，请单击“视图”  菜单上的“属性窗口”  。  
+2.  如果未打开“属性”窗口，请单击“视图”菜单上的“属性窗口”。  
   
 3.  在“属性”窗口中查看项目的属性。  
   

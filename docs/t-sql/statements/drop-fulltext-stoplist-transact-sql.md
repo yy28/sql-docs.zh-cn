@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9ed184138e4bec2f973cfe6df8ea758b90b4a6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4396fe9586dfffe5e88bf7949216206d95e2a96b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044221"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  如果有任何全文索引引用了已删除的全文本非索引字表，则 DROP FULLTEXT STOPLIST 会失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要删除非索引字表，则必须对该非索引字表具有 DROP 权限，或者必须是 **db_owner** 或 **db_ddladmin** 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  

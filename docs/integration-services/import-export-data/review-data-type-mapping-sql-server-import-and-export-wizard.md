@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8af55ff084a0f6202bf830a006b01460748d8b4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91f45e228c2dd1142c8bc08387ba2309eac318fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901757"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
 
@@ -30,17 +29,17 @@ ms.locfileid: "65723774"
 > 无法在“查看数据类型映射”  页上更改数据类型映射。 但是，可以单击“后退”  返回到“选择源表和源视图”  页，然后单击“编辑映射”  再次打开“列映射”  对话框。 在“列映射”  对话框中，可以指定更有可能成功的数据类型映射。 若要再次查看“列映射”  对话框，请参阅 [列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。  
   
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>“查看数据类型映射”页的屏幕截图
- 以下屏幕截图显示了向导的“查看数据类型映射”页的一个示例  。
+ 以下屏幕截图显示了向导的“查看数据类型映射”页的一个示例。
  
  在此示例中:
- -   用户在“列映射”对话框中指定了可能不成功的映射  。
+ -   用户在“列映射”对话框中指定了可能不成功的映射。
  -   “表”  列表中行上的警告图标指示，在将查询结果中的至少一列数据转换为目标表中的兼容数据类型时出现问题。
- -   “数据类型映射”列表中第一行的警告图标指示，从源列的 int 数据类型映射到目标列的 smalldatetime 数据类型可能会导致数据丢失    。
+ -   “数据类型映射”列表中第一行的警告图标指示，从源列的 int 数据类型映射到目标列的 smalldatetime 数据类型可能会导致数据丢失。
  
  ![导入和导出向导的“查看数据类型映射”页](../../integration-services/import-export-data/media/review-mapping.png "Review Data Type Mapping page of the Import and Export Wizard") 
  
 ## <a name="review-the-source-and-destination-tables"></a>查看源表和目标表  
- “查看数据类型映射”  页的上半部分是“表”  列表，其中列出了要从源复制到目标的表。 若要查看单个表的转换信息，请在“表”  列表中选择表。 所选表的各列的转换信息显示在“数据类型映射”网格中的下半部分页面  。
+ “查看数据类型映射”  页的上半部分是“表”  列表，其中列出了要从源复制到目标的表。 若要查看单个表的转换信息，请在“表”  列表中选择表。 所选表的各列的转换信息显示在“数据类型映射”网格中的下半部分页面。
 
 在本示例中，用户提供的查询的结果将复制到目标的 Sales.CustomerNew2 表中。 警告图标指示，在将查询结果中的至少一列数据转换为目标表中的兼容数据类型时出现问题。
 
@@ -56,9 +55,9 @@ ms.locfileid: "65723774"
 |**目标**|目标表的名称。|  
   
 ## <a name="review-the-data-type-mappings"></a>查看数据类型映射  
- “查看数据类型映射”  页的中间部分是“数据类型映射”  列表。 此网格提供有关在上半部分页面的“表”列表中选择的源表中的列的详细转换信息  。
+ “查看数据类型映射”  页的中间部分是“数据类型映射”  列表。 此网格提供有关在上半部分页面的“表”列表中选择的源表中的列的详细转换信息。
 
-在本示例中，源位置的每列都将复制到目标位置名称和数据类型相同的列中。 “数据类型映射”列表中第一行的警告图标指示，从源列的 int 数据类型映射到目标列的 smalldatetime 数据类型可能会导致数据丢失    。
+在本示例中，源位置的每列都将复制到目标位置名称和数据类型相同的列中。 “数据类型映射”列表中第一行的警告图标指示，从源列的 int 数据类型映射到目标列的 smalldatetime 数据类型可能会导致数据丢失。
  
 ![查看映射 — 映射](../../integration-services/import-export-data/media/review-mapping-mappings.png)  
 

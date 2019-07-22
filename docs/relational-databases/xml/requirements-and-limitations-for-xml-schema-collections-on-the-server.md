@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30b163359523771630c697acaa82e1171085db71
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093187"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "58513316"
 |**minOccurs** 和 **maxOccurs**|**minOccurs** 和 **maxOccurs** 属性的值必须符合 4 字节整数。 服务器拒绝不符合的架构。|  
 |**\<xsd:choice>**|如果架构中包含无子级的 **\<xsd:choice>** 粒子，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝该架构，除非该粒子的 **minOccurs** 属性值定义为零。|  
 |**\<xsd:include>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含此元素的 XML 架构。<br /><br /> 一种解决方法是，可以预处理包括 **\<xsd:include>** 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 有关详细信息，请参阅 [预处理架构以便合并包括的架构](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
-|**\<xsd:key>**、**\<xsd:keyref>** 和 **\<xsd:unique>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持这些用于强制唯一性或建立键和键引用的基于 XSD 的约束。 无法注册包含这些元素的 XML 架构。|  
+|**\<xsd:key>** 、 **\<xsd:keyref>** 和 **\<xsd:unique>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持这些用于强制唯一性或建立键和键引用的基于 XSD 的约束。 无法注册包含这些元素的 XML 架构。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 有关更新架构的其他方法的信息，请参阅 [&lt;xsd: redefine&gt; 元素](../../relational-databases/xml/the-xsd-redefine-element.md)一起使用。|  
 |**\<xsd:simpleType>** 值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带有除 **xs:time** 和 **xs:dateTime**以外的秒部分的简单类型仅支持毫秒精度，对 **xs:time** 和 **xs:dateTime**则支持 100 纳秒精度。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对所有已识别的 XSD 简单类型枚举具有限制。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 **\<xsd:simpleType>** 声明中使用“NaN”值。<br /><br /> 有关详细信息，请参阅[&lt;xsd:simpleType&gt; 声明的值](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)一起使用。|  
 |**xsi:schemaLocation** 和 **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果在插入到 **xml** 数据类型的列或变量的 XML 实例数据中存在这些属性，则将忽略这些属性。|  

@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6682080b6514aad2aa0a742326729941552f6e08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edf788eacc9099d4e16c45b719acfd70d720d9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040200"
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-一种函数，该函数返回以弧度表示的角，其正切为指定的 float 表达式  。 它也称为反正切函数。
+一种函数，该函数返回以弧度表示的角，其正切为指定的 float 表达式。 它也称为反正切函数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,13 +42,13 @@ ATAN ( float_expression )
   
 ## <a name="arguments"></a>参数  
 *float_expression*  
-float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。
+float 类型或能隐式转换为 float 类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float**
   
 ## <a name="examples"></a>示例  
-本示例采用 float 表达式并返回指定角的 ATAN 值  。
+本示例采用 float 表达式并返回指定角的 ATAN 值。
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -91,7 +90,7 @@ The ATAN of 197.1099392 is: 1.56572
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-本示例采用 float 表达式并返回指定角的反正切值  。
+本示例采用 float 表达式并返回指定角的反正切值。
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  

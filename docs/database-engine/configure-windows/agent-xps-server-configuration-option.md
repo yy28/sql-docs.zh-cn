@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 85af1eb285a8739fb6c9e092609909be660223bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7e2e655be19ac8f84378930e1dfada525007504
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013159"
 ---
 # <a name="agent-xps-server-configuration-option"></a>“代理 XP”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ ms.locfileid: "66786798"
 
 1. 在 Microsoft SQL Server Management Studio 中连接到数据库引擎。
 
-2.  在标准工具栏上，单击“新建查询”。 
+2.  在标准工具栏上，单击“新建查询”。
 
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 
   
 ```sql 
 sp_configure 'show advanced options', 1;  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7dfb6976d5a08dabe3341a5b9c8644b57e4a3797
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dd344f9d62e3bc10d26c66a87c8e4bf8395787
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944326"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊分组转换标识相似数据行
 
@@ -56,7 +55,7 @@ ms.locfileid: "65726075"
   
 9. 还可以更新 **“输出别名”** 列中的输出列名称。  
   
-10. 还可以更新“组输出别名”  列中清除的列的名称。  
+10. 还可以更新“组输出别名”列中清除的列的名称。  
   
     > [!NOTE]  
     >  列的默认名称为输入列名称加“_clean”后缀。  
@@ -74,13 +73,13 @@ ms.locfileid: "65726075"
   
 15. 若要指定转换如何比较列中的字符串数据，请修改 **“比较标志”** 列中比较选项的默认选择。  
   
-16. 单击“高级”  选项卡，修改该转换为唯一行标识符 (_key_in)、重复行标识符 (_key_out) 和相似性值 (_score) 添加到输出的列的名称。  
+16. 单击“高级”选项卡，修改该转换为唯一行标识符 (_key_in)、重复行标识符 (_key_out) 和相似性值 (_score) 添加到输出的列的名称。  
   
 17. 还可以通过移动滑块来调节相似性阈值。  
   
 18. 还可以清除标记分隔符复选框以忽略数据中的分隔符。  
   
-19. 单击“确定”  。  
+19. 单击“确定” 。  
   
 20. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

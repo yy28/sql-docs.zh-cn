@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96c8f204f1be7775dbf77490e3fd3749c40e6a3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ffea82cc9abdd016ec63771510109046e7da5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092232"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>通过使用内存优化获得更快的临时表和表变量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-首先，创建以下表值函数来筛选 **@@spid** 。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
+首先，创建以下表值函数来筛选 **@@spid**。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
   
   
   
@@ -183,7 +182,7 @@ go
 再次，在常规的 T-SQL 代码中：  
   
 1. 将 Transact-SQL 语句中对临时表的所有引用替换为新的内存优化表：
-    - _旧表名：_ &#x23;tempSessionC  
+    - _旧表名：_&#x23;tempSessionC  
     - _新表名：_ dbo.soSessionC  
 2. 将代码中的 `CREATE TABLE #tempSessionC` 语句替换为 `DELETE FROM dbo.soSessionC`，以确保会话不会公开到由具有同一 session_id 的以前会话插入的表内容。 请务必在部署时（而不是在运行时）创建内存优化表，以避免创建表时附带的编译开销。
 3. 从代码中删除 `DROP TABLE #tempSessionC` 语句 - 如果内存大小是一个潜在的忧患，则还可以插入一个 `DELETE FROM dbo.soSessionC` 语句
@@ -212,7 +211,7 @@ DECLARE @tvTableD TABLE
   
 前面的语法是要以 *内联*方式创建表变量。 内联语法不支持内存优化。 因此，让我们针对 TYPE 将内联语法转换为显式语法。  
   
-作用域：  在由 go 关键字分隔的批处理语句中第一组语句创建的 TYPE 定义即使在服务器关闭并重新启动之后仍然有效。 但是在第一个 go 分隔符之后，声明的表 @tvTableC 仅会保留到到达下一个 go 分隔符，并且批处理将结束。  
+作用域：在由 go 关键字分隔的批处理语句中第一组语句创建的 TYPE 定义即使在服务器关闭并重新启动之后仍然有效。 但是在第一个 go 分隔符之后，声明的表 @tvTableC 仅会保留到到达下一个 go 分隔符，并且批处理将结束。  
   
   
   
@@ -270,7 +269,7 @@ CREATE TYPE dbo.typeTableD
 - Azure SQL 数据库不需要创建此 FILEGROUP。  
   
   
-先决条件：  下面的针对 FILEGROUP 的 Transact-SQL 代码是本文后面小节中较长的 T-SQL 代码示例的先决条件。  
+先决条件：下面的针对 FILEGROUP 的 Transact-SQL 代码是本文后面小节中较长的 T-SQL 代码示例的先决条件。  
   
 1. 必须使用可提交 T-SQL 的 SSMS.exe 或另一种工具。  
 2. 将示例 FILEGROUP T-SQL 代码粘贴到 SSMS。  
@@ -314,7 +313,7 @@ go
   
 比较测试的持续时间大约为 7 秒。 若要运行该示例：  
   
-1. 先决条件：  必须在上一节中已运行 FILEGROUP T-SQL。  
+1. 先决条件：必须在上一节中已运行 FILEGROUP T-SQL。  
 2. 运行以下 T-SQL INSERT-DELETE 脚本。  
   - 请注意“GO 5001”语句，该语句将重新提交 T-SQL 5001 次。 你可以调整该数字，然后重新运行。  
   
@@ -423,7 +422,7 @@ Batch execution completed 5001 times.
 - [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [内存优化表中的表和行大小：示例计算](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-对于较大的表变量，非聚集索引所使用的内存大于它们对内存优化表所使用的内存。  行数和索引键越大，这种差别就越大。  
+对于较大的表变量，非聚集索引所使用的内存大于它们对内存优化表所使用的内存。 行数和索引键越大，这种差别就越大。  
   
 如果每次访问内存优化表变量时只使用一个准确的键值，那么哈希索引是比非聚集索引更好的选择。 但是，如果不能估计出合适的 BUCKET_COUNT，非聚集索引是一个不错的第二选择。  
   

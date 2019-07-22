@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940210"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 _catalog\_name_  
 包含全文目录名称的表达式。  
   
-property   
+property  
 包含全文目录属性名称的表达式。 下表列出了这些属性，并提供对返回的信息的说明。  
   
 |属性|描述|  

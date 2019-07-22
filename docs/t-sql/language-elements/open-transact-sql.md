@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd4e459c6f6c8ebe487ed180c363aa8523ad307a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121925"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,12 +44,12 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>参数  
  GLOBAL  
- 指定 cursor_name 是指全局游标  。  
+ 指定 cursor_name 是指全局游标。  
   
- cursor_name   
- 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标    。  
+ cursor_name  
+ 已声明的游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 GLOBAL，则 cursor_name 是指全局游标；否则，cursor_name 是指局部游标。  
   
- cursor_variable_name   
+ cursor_variable_name  
  游标变量的名称，该变量引用一个游标。  
   
 ## <a name="remarks"></a>Remarks  

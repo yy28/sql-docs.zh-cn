@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 5abf4fb0713e96dde95d8ac0a1be390e6bcc9b3c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 7f85f9bf8dec248430c261d369f566616db6f1a2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686524"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263735"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>向关系图中添加表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,19 +28,19 @@ ms.locfileid: "67686524"
   
 1.  确保已连接到要在其中创建表的数据库。  
   
-    若要在当前关系图中创建表，请单击工具栏上的“新建表”  按钮。  
+    若要在当前关系图中创建表，请单击工具栏上的“新建表”按钮。  
   
     -或 -  
   
-    在关系图中右键单击，然后选择“新建表”  。  
+    在关系图中右键单击，然后选择“新建表”。  
   
-2.  在“选择名称”  对话框中修改或接受系统分配的表名，然后选择“确定”  。  
+2.  在“选择名称”对话框中修改或接受系统分配的表名，然后选择“确定”。  
   
     此时，将在关系图中以标准视图显示一个新表。  
   
 3.  在新表的第一个单元格中，键入列名。 然后按 Tab 键移动到下一个单元格。  
   
-4.  在“数据类型”  下，选择列的数据类型。 每个列都必须具有名称和数据类型。  
+4.  在“数据类型”下，选择列的数据类型。 每个列都必须具有名称和数据类型。  
   
     您可以在表设计器中设置列的其他属性。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "67686524"
   
 1.  确保已连接到要编辑其表的数据库。  
   
-2.  在“表”  文件夹中选择表。  
+2.  在“表”文件夹中选择表。  
   
 3.  将该表拖动到数据库关系图中。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "67686524"
   
 1.  在数据库关系图中，选择一个或多个具有外键约束的表。  
   
-2.  右键单击任何选定的表，再选择“添加相关表”  。  
+2.  右键单击任何选定的表，再选择“添加相关表”。  
   
 > [!NOTE]  
 > 选定表的外键约束所引用的表以及引用具有外键约束的选定表的表都将添加到关系图中。  

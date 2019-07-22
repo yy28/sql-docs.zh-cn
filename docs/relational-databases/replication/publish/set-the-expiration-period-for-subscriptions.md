@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7edca09192abc207ef4879c8d8275777451d51a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82b2d76905d232c78bb5b4e055e21b4d66777879
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073539"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>设置订阅的过期期限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "62649190"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   订阅过期期限也称为“发布保持期”  。 合并复制元数据的清除依赖于此设置：  
+-   订阅过期期限也称为“发布保持期” 。 合并复制元数据的清除依赖于此设置：  
   
     -   在到达保持期之前，复制无法清除发布数据库和订阅数据库中的元数据。 在为保持期指定较大值时务必谨慎，因为这可能对复制性能产生负面影响。 如果能很有把握地预测出所有订阅服务器都将在该时间段内定期同步，则建议使用较低的设置。  
   
@@ -52,11 +51,11 @@ ms.locfileid: "62649190"
     -   可以指定订阅永不过期，但是强烈建议您不要使用此值，因为这样将无法清除元数据。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在“发布属性 - \<发布>”  对话框的“常规”  页上设置订阅的过期期限。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可在“发布属性 - \<发布>”对话框的“常规”页上设置订阅的过期期限。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>设置订阅的过期期限  
   
-1.  在“发布属性 - \<发布>”  对话框的“常规”  页上的“订阅过期”  部分中，指定订阅是否应过期。  
+1.  在“发布属性 - \<发布>”对话框的“常规”页上的“订阅过期”部分中，指定订阅是否应过期。  
   
 2.  如果它们应该过期，请指定一个过期时间段。  
   
@@ -65,11 +64,11 @@ ms.locfileid: "62649190"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>为快照或事务发布设置订阅过期时间  
   
-1.  在发布服务器上，执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 以小时为单位为 **@retention** 中设置订阅的过期期限。 默认的过期时间为 336 个小时。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
+1.  在发布服务器上，执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 以小时为单位为 **@retention**中设置订阅的过期期限。 默认的过期时间为 336 个小时。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>为合并发布设置订阅过期时间  
   
-1.  在发布服务器上，执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 为 **@retention** 中设置订阅的过期期限。 为 **@retention_period_unit** 指定此过期时间的表示单位，此单位可以是以下单位之一：  
+1.  在发布服务器上，执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 为 **@retention**中设置订阅的过期期限。 为 **@retention_period_unit**指定此过期时间的表示单位，此单位可以是以下单位之一：  
   
     -   **1** = 周  
   
@@ -81,11 +80,11 @@ ms.locfileid: "62649190"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>更改快照或事务发布的订阅过期时间  
   
-1.  在发布服务器上，执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 为 **@property** 指定 **@property** ，并以小时为单位为 **@value** 中设置订阅的过期期限。  
+1.  在发布服务器上，执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 为 **@property** 指定 **@property** ，并以小时为单位为 **@value**中设置订阅的过期期限。  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>更改合并发布的订阅过期时间  
   
-1.  在发布服务器上，执行 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，并指定 **@publication** 和 **@publisher** 中设置订阅的过期期限。 记下结果集中的 **retention_period_unit** 值，此值可能为以下值之一：  
+1.  在发布服务器上，执行 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，并指定 **@publication** 和 **@publisher**中设置订阅的过期期限。 记下结果集中的 **retention_period_unit** 值，此值可能为以下值之一：  
   
     -   **0** = 天  
   
@@ -95,9 +94,9 @@ ms.locfileid: "62649190"
   
     -   **3** = 年  
   
-2.  在发布服务器上，执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 为 **@property** 指定 **@property** ，并以步骤 1 中的保持期单位为 **@value** 中设置订阅的过期期限。  
+2.  在发布服务器上，执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 为 **@property** 指定 **@property** ，并以步骤 1 中的保持期单位为 **@value**中设置订阅的过期期限。  
   
-3.  （可选）在发布服务器上，执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 为 **retention_period_unit** 指定 **@property** ，并为 **@value** 中设置订阅的过期期限。  
+3.  （可选）在发布服务器上，执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 为 **retention_period_unit** 指定 **@property** ，并为 **@value**中设置订阅的过期期限。  
   
 ## <a name="see-also"></a>另请参阅  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

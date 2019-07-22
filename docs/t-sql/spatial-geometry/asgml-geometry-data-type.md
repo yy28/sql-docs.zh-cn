@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: fcf83925a7093edd44ddf46c31bee4297631bf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017567"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回 geometry 实例的地理标记语言 (GML) 表示形式  。
+返回 geometry 实例的地理标记语言 (GML) 表示形式。
   
 有关地理标记语言的详细信息，请参阅下面的开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)。
   
@@ -42,7 +41,7 @@ ms.locfileid: "65939176"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：xml  
   
  CLR 返回类型：**SqlXml**  
   

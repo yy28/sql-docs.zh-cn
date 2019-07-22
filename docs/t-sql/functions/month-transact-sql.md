@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9636e4c00e56545445c33f8108fac5ac0e8876c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9fc2c8718fd643e5838172831858c51aea6fd47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130229"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回表示指定日期的月份的整数  。  
+  返回表示指定日期的月份的整数。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -50,15 +49,15 @@ MONTH ( date )
   
 ## <a name="arguments"></a>参数  
  *date*  
- 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值       。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字  。  
+ 一个表达式，它可以解析为 time、date、smalldatetime、datetime、datetime2 或 datetimeoffset 值。 date 参数可以是表达式、列表达式、用户定义变量或字符串文字。  
   
 ## <a name="return-type"></a>返回类型  
  **int**  
   
 ## <a name="return-value"></a>返回值  
- MONTH 返回的值与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (month, date) 所返回的值相同   。  
+ MONTH 返回的值与 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (month, date) 所返回的值相同。  
   
- 如果 date 只包含时间部分，则返回值为 1，即基准月  。  
+ 如果 date 只包含时间部分，则返回值为 1，即基准月。  
   
 ## <a name="examples"></a>示例  
  下面的语句将返回 `4`。 这是月份的数字。  
@@ -67,7 +66,7 @@ MONTH ( date )
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
 ```  
   
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
@@ -83,7 +82,7 @@ SELECT TOP 1 MONTH('2007-04-30T01:01:01.1234')
 FROM dbo.DimCustomer;  
 ```  
   
- 下面的示例将返回 `1900, 1, 1`。 date 的参数为数字 `0`  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的示例将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```  
 -- Uses AdventureWorks  

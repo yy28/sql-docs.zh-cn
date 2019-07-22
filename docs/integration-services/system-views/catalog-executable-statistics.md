@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 34c282905f5314772a11318bf7c3eb60650e96fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96ea5b857bb95477e34464cb84b870b21d993e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017452"
 ---
 # <a name="catalogexecutablestatistics"></a>catalog.executable_statistics 
 
@@ -37,7 +36,7 @@ ms.locfileid: "65714962"
 |Execution_path|nvarchar(max)|包组件的完整执行路径，包括组件的每次循环迭代。|  
 |Start_time|datetimeoffset(7)|可执行文件进入执行前阶段时的时间。|  
 |End_time|datetimeoffset(7)|可执行文件进入执行后阶段时的时间。|  
-|Execution_duration|ssNoversion|可执行文件用于执行的时间长度。 该值以毫秒计。|  
+|Execution_duration|INT|可执行文件用于执行的时间长度。 该值以毫秒计。|  
 |Execution_result|SMALLINT|下面是可能的值：<br /><br /> 0（成功）<br /><br /> 1（失败）<br /><br /> 2（完成）<br /><br /> 3（已取消）|  
 |Execution_value|sql_variant|由执行返回的值。 这是用户定义的值。|  
   

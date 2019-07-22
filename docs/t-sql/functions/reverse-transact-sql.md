@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 154e7a7136abe882ddd9ea8d036ab5a8906916e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092621"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +41,14 @@ REVERSE ( string_expression )
 ```  
   
 ## <a name="arguments"></a>参数  
- string_expression   
- string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
+ string_expression  
+ string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列。  
   
 ## <a name="return-types"></a>返回类型  
- varchar 或 nvarchar    
+ varchar 或 nvarchar  
   
 ## <a name="remarks"></a>Remarks  
- string_expression 的数据类型必须可隐式转换为 varchar   。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression  。  
+ string_expression 的数据类型必须可隐式转换为 varchar。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 显式转换 string_expression。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
  使用 SC 排序规则时，REVERSE 函数将不反转代理项对的两部分的顺序。  
@@ -87,7 +86,7 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果   。  
+ 以下示例从 int 数据类型隐式转换为 varchar 数据类型，然后反转结果。  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  

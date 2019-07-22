@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: da6141a1e023110dc3ae0a8252a77bc2352895c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ec56a8e4961985a6c809983f671edf0234491d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012894"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,35 +65,35 @@ ms.locfileid: "66799487"
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access"></a>打开 Windows 防火墙的端口以进行 TCP 访问  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”** ，键入 **WF.msc**，然后单击 **“确定”** 。  
+1.  在 **“开始”** 菜单上，单击 **“运行”**，键入 **WF.msc**，然后单击 **“确定”**。  
   
-2.  在“高级安全 Windows 防火墙”  的左窗格中，右键单击“入站规则”  ，然后在操作窗格中单击“新建规则”  。  
+2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中单击“新建规则”。  
   
-3.  在 **“规则类型”** 对话框中，选择 **“端口”** ，然后单击 **“下一步”** 。  
+3.  在 **“规则类型”** 对话框中，选择 **“端口”**，然后单击 **“下一步”**。  
   
-4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”  ，然后键入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的端口号，例如默认实例的端口号 **1433**。 单击“下一步”  。  
+4.  在 **“协议和端口”** 对话框中，选择 **TCP**。 选择“特定本地端口”，然后键入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的端口号，例如默认实例的端口号 **1433**。 单击“下一步” 。  
   
-5.  在 **“操作”** 对话框中，选择 **“允许连接”** ，然后单击 **“下一步”** 。  
+5.  在 **“操作”** 对话框中，选择 **“允许连接”**，然后单击 **“下一步”**。  
   
-6.  在 **“配置文件”** 对话框中，选择在您想要连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]时描述计算机连接环境的任何配置文件，然后单击 **“下一步”** 。  
+6.  在 **“配置文件”** 对话框中，选择在您想要连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]时描述计算机连接环境的任何配置文件，然后单击 **“下一步”**。  
   
-7.  在 **“名称”** 对话框中，输入此规则的名称和说明，再单击 **“完成”** 。  
+7.  在 **“名称”** 对话框中，输入此规则的名称和说明，再单击 **“完成”**。  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>在使用动态端口时打开对 SQL Server 的访问  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”** ，键入 **WF.msc**，然后单击 **“确定”** 。  
+1.  在 **“开始”** 菜单上，单击 **“运行”**，键入 **WF.msc**，然后单击 **“确定”**。  
   
-2.  在“高级安全 Windows 防火墙”  的左窗格中，右键单击“入站规则”  ，然后在操作窗格中单击“新建规则”  。  
+2.  在“高级安全 Windows 防火墙”的左窗格中，右键单击“入站规则”，然后在操作窗格中单击“新建规则”。  
   
-3.  在 **“规则类型”** 对话框中，选择 **“程序”** ，然后单击 **“下一步”** 。  
+3.  在 **“规则类型”** 对话框中，选择 **“程序”**，然后单击 **“下一步”**。  
   
-4.  在 **“程序”** 对话框中，选择 **“此程序路径”** 。 单击 **“浏览”** ，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”** 。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位于 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击“下一步”  。  
+4.  在 **“程序”** 对话框中，选择 **“此程序路径”**。 单击 **“浏览”**，导航到要通过防火墙访问的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，再单击 **“打开”**。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位于 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**。 单击“下一步” 。  
   
-5.  在 **“操作”** 对话框中，选择 **“允许连接”** ，然后单击 **“下一步”** 。  
+5.  在 **“操作”** 对话框中，选择 **“允许连接”**，然后单击 **“下一步”**。  
   
-6.  在 **“配置文件”** 对话框中，选择在您想要连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]时描述计算机连接环境的任何配置文件，然后单击 **“下一步”** 。  
+6.  在 **“配置文件”** 对话框中，选择在您想要连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]时描述计算机连接环境的任何配置文件，然后单击 **“下一步”**。  
   
-7.  在 **“名称”** 对话框中，输入此规则的名称和说明，再单击 **“完成”** 。  
+7.  在 **“名称”** 对话框中，输入此规则的名称和说明，再单击 **“完成”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [如何：配置防火墙设置（Azure SQL 数据库）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  

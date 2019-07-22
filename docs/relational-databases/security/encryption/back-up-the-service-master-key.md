@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 6e0d1da7b4910e4d3d6268be23c36fb69b16dc62
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 4a5b28fda96be3fce311abc159bbe8e94fc061ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024417"
 ---
 # <a name="back-up-the-service-master-key"></a>备份服务主密钥
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ ms.locfileid: "67583666"
   
 5. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-6. 在标准菜单栏上，单击 **“新建查询”** 。  
+6. 在标准菜单栏上，单击 **“新建查询”**。  
   
-7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+7. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```sql
     -- Creates a backup of the service master key.

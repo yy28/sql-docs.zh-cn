@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 249ff2d99b5d682f863e4d698b35b9e951da13b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ac59b4fb2923aacd377bb974e49dd8edebf5587
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012503"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>配置 nested triggers 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66802496"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [在配置嵌套触发器选项之后](#FollowUp)  
+-   **跟进：**[在配置嵌套触发器选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -50,9 +49,9 @@ ms.locfileid: "66802496"
   
 #### <a name="to-configure-the-nested-triggers-option"></a>配置 nested triggers 选项  
   
-1.  在“对象资源管理器”  中，右键单击服务器，然后选择“属性”  。  
+1.  在“对象资源管理器”中，右键单击服务器，然后选择“属性”。  
   
-2.  在“高级”  页上，将“允许触发器激发其他触发器”  选项设置为“True”  （默认值）或“False”  。  
+2.  在“高级”页上，将“允许触发器激发其他触发器”选项设置为“True”（默认值）或“False”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -60,9 +59,9 @@ ms.locfileid: "66802496"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `nested triggers` 选项的值设置为 `0`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `nested triggers` 选项的值设置为 `0`。  
   
 ```wmimof  
 USE AdventureWorks2012 ;  

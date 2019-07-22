@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 67909db180af056add12324622cfd6094d8729fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e853a1d54c91b43d166555162f77030e07b9e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072033"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -44,7 +43,7 @@ DROP WORKLOAD CLASSIFIER classifier_name;
 
 ## <a name="arguments"></a>参数
 
-classifier_name   
+classifier_name  
 指定用于标识工作负荷分类器的名称。  classifier_name 为 sysname。  最长可为 128 个字符，并且在实例中必须是唯一的。
   
 ## <a name="remarks"></a>Remarks

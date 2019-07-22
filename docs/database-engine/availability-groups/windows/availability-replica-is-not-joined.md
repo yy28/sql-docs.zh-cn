@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 93855743e4dd076d26c1b68a0137012c6fdf9f3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991375"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>可用性副本未联接到 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dccf6bd22d6e68271f83d686cf8ddffe9e190ead
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904673"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
 
@@ -126,12 +125,12 @@ ms.locfileid: "65728253"
   
  若要在创建新包时自动创建和配置连接管理器，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导。 该向导还有助于创建和配置使用连接管理器的源和目标。 有关详细信息，请参阅 [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md)。  
   
- 若要手动创建新的连接管理器并将其添加到现有包，可以使用在 **设计器的** “控制流” **、** “数据流” **和**“事件处理程序” **选项卡上出现的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。 从 **“连接管理器”** 区域，选择要创建的连接管理器的类型，并使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框设置连接管理器的属性。 有关详细信息，请参阅本主题后面的“使用连接管理器区域”部分。  
+ 若要手动创建新的连接管理器并将其添加到现有包，可以使用在 **设计器的** “控制流” **、**“数据流” **和**“事件处理程序” **选项卡上出现的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。 从 **“连接管理器”** 区域，选择要创建的连接管理器的类型，并使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器提供的对话框设置连接管理器的属性。 有关详细信息，请参阅本主题后面的“使用连接管理器区域”部分。  
   
  将连接管理器添加到包之后，可以在任务、Foreach 循环容器、源、转换和目标中使用它。 有关详细信息，请参阅 [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)、[Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)和[数据流](../../integration-services/data-flow/data-flow.md)。  
   
 ### <a name="using-the-connection-managers-area"></a>使用连接管理器区域  
- 可以在 **设计器的**“控制流” **、** “数据流” **或** “事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡活动时创建连接管理器。  
+ 可以在 **设计器的**“控制流” **、**“数据流” **或** “事件处理程序” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡活动时创建连接管理器。  
   
  以下关系图显示 **设计器的** “控制流” **选项卡上的** “连接管理器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 区域。  
   
@@ -159,13 +158,13 @@ ms.locfileid: "65728253"
   
 3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 选项卡、 **“数据流”** 选项卡或 **“事件处理程序”** 选项卡，以使 **“连接管理器”** 区域可用。  
   
-4.  右键单击“连接管理器”  区域中的任意位置，然后执行下列操作之一：  
+4.  右键单击“连接管理器”区域中的任意位置，然后执行下列操作之一：  
   
     -   单击要添加到包中的连接管理器类型。  
   
          -或 -  
   
-    -   如果没有列出您要添加的类型，请单击 **“新建连接”** 打开 **“添加 SSIS 连接管理器”** 对话框，选择某种连接管理器类型，然后单击 **“确定”** 。  
+    -   如果没有列出您要添加的类型，请单击 **“新建连接”** 打开 **“添加 SSIS 连接管理器”** 对话框，选择某种连接管理器类型，然后单击 **“确定”**。  
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
@@ -191,7 +190,7 @@ ms.locfileid: "65728253"
   
      **“连接管理器”** 区域列出已添加的连接管理器。  
   
-5.  还可以右键单击连接管理器，单击“重命名”  ，然后修改连接管理器的默认名称。  
+5.  还可以右键单击连接管理器，单击“重命名”，然后修改连接管理器的默认名称。  
   
 6.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -199,9 +198,9 @@ ms.locfileid: "65728253"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”  中，右键单击“连接管理器”  单击“新建连接管理器”  。  
+2.  在“解决方案资源管理器”中，右键单击“连接管理器”单击“新建连接管理器”。  
   
-3.  在 **“添加 SSIS 连接管理器”** 对话框中，选择连接管理器的类型，然后单击 **“添加”** 。  
+3.  在 **“添加 SSIS 连接管理器”** 对话框中，选择连接管理器的类型，然后单击 **“添加”**。  
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
@@ -227,10 +226,10 @@ ms.locfileid: "65728253"
   
      您添加的连接管理器将显示在 **“解决方案资源管理器”** 中的 **“连接管理器”** 节点下。 它还将显示在项目中所有包的 **“SSIS 设计器”** 窗口的 **“连接管理器”** 选项卡中。 此选项卡中的连接管理器名称具有 **(project)** 前缀，以便将此项目级别的连接管理器与包级别的连接管理器区别开来。  
   
-4.  或者，在“解决方案资源管理器”  窗口中的“连接管理器”  节点下或在“SSIS 设计器”  窗口的“连接管理器”  选项卡中，右键单击连接管理器，再单击“重命名”  ，然后修改连接管理器的默认名称。  
+4.  或者，在“解决方案资源管理器”窗口中的“连接管理器”节点下或在“SSIS 设计器”窗口的“连接管理器”选项卡中，右键单击连接管理器，再单击“重命名”，然后修改连接管理器的默认名称。  
   
     > [!NOTE]  
-    >  在“SSIS 设计器”窗口的“连接管理器”选项卡中，不能覆盖连接管理器名称中的 (project) 前缀    。 这是设计的结果。  
+    >  在“SSIS 设计器”窗口的“连接管理器”选项卡中，不能覆盖连接管理器名称中的 (project) 前缀。 这是设计的结果。  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>添加 SSIS 连接管理器对话框
 使用 **“添加 SSIS 连接管理器”** 对话框可以选择要为包添加的连接类型。  
@@ -239,14 +238,14 @@ ms.locfileid: "65728253"
   
 #### <a name="options"></a>选项  
  **连接管理器类型**  
- 选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。   
+ 选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。  
   
  **“添加”**  
  使用与各连接类型相应的编辑器指定连接属性。  
    
 ##  <a name="parameter"></a> 创建连接管理器属性的参数  
   
-1.  在“连接管理器”  区域中，右键单击要为其创建参数的连接管理器，然后单击“参数化”  。  
+1.  在“连接管理器”区域中，右键单击要为其创建参数的连接管理器，然后单击“参数化”。  
   
 2.  在 **“参数化”** 对话框中配置参数设置。 有关详细信息，请参阅 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
 
@@ -259,7 +258,7 @@ ms.locfileid: "65728253"
   
 3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 选项卡、 **“数据流”** 选项卡或 **“事件处理程序”** 选项卡，以使 **“连接管理器”** 区域可用。  
   
-4.  右键单击要删除的连接管理器，然后单击“删除”  。  
+4.  右键单击要删除的连接管理器，然后单击“删除”。  
   
      如果删除包元素（例如执行 SQL 任务或 OLE DB 源）使用的连接管理器，您会得到以下结果：  
   
@@ -273,7 +272,7 @@ ms.locfileid: "65728253"
   
 ###  <a name="DeleteProjectLevel"></a> 删除共享连接管理器（项目级别连接管理器）  
   
-1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”  窗口的“连接管理器”  节点下，右键单击连接管理器，然后单击“删除”  。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 显示下面的警告消息：  
+1.  若要删除项目级别的连接管理器，请在“解决方案资源管理器”窗口的“连接管理器”节点下，右键单击连接管理器，然后单击“删除”。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 显示下面的警告消息：  
   
     > [!WARNING]  
     >  在您删除某一项目连接管理器后，使用该连接管理器的包可能会不运行。 不能撤消此操作。 是否要删除该连接管理器?  
@@ -281,7 +280,7 @@ ms.locfileid: "65728253"
 2.  单击“确定”将删除该连接管理器，单击“取消”将保留它。  
   
     > [!NOTE]  
-    >  您也可以从为项目中任何包打开的 **“SSIS 设计器”** 窗口的 **“连接管理器”** 选项卡中删除项目级别的连接管理器。 为此，右键单击此选项卡中的连接管理器，然后单击“删除”  。 
+    >  您也可以从为项目中任何包打开的 **“SSIS 设计器”** 窗口的 **“连接管理器”** 选项卡中删除项目级别的连接管理器。 为此，右键单击此选项卡中的连接管理器，然后单击“删除”。 
     
 ## <a name="set-the-properties-of-a-connection-manager"></a>设置连接管理器的属性
 所有连接管理器都可以使用 **“属性”** 窗口进行配置。  
@@ -296,11 +295,11 @@ ms.locfileid: "65728253"
   
 3.  在 SSIS 设计器中，单击 **“控制流”** 选项卡、 **“数据流”** 选项卡或 **“事件处理程序”** 选项卡，以使 **“连接管理器”** 区域可用。  
   
-4.  右键单击该连接管理器，再单击“属性”  。  
+4.  右键单击该连接管理器，再单击“属性”。  
   
 5.  在 **“属性”** 窗口中，编辑属性值。 **“属性”** 窗口提供对在连接管理器的标准编辑器中无法配置的一些属性的访问。  
   
-6.  单击“确定”  。  
+6.  单击“确定” 。  
   
 7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
@@ -312,7 +311,7 @@ ms.locfileid: "65728253"
   
 3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 选项卡、 **“数据流”** 选项卡或 **“事件处理程序”** 选项卡，以使 **“连接管理器”** 区域可用。  
   
-4.  在“连接管理器”区域中，双击连接管理器以打开“连接管理器”对话框   。 有关特定连接管理器类型以及每种类型可用的选项的信息，请参阅下表。  
+4.  在“连接管理器”区域中，双击连接管理器以打开“连接管理器”对话框。 有关特定连接管理器类型以及每种类型可用的选项的信息，请参阅下表。  
   
     |“连接管理器”|选项|  
     |------------------------|-------------|  
@@ -340,7 +339,7 @@ ms.locfileid: "65728253"
   
 -   technet.microsoft.com 上的视频 [利用 Microsoft Attunity Connector for Oracle 来增强包性能](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 连接](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
+-   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 连接](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
   
 -   blogs.msdn.com 上的博客文章 [从 SSIS 连接到 MySQL](https://go.microsoft.com/fwlink/?LinkId=217669)。  
   

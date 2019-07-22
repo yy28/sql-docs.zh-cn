@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: e0133866fbc4dd258c7eb79b01d5f6a6fce9552d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912127"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>列存储索引 - 碎片整理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "67388137"
   对列存储索引进行碎片整理的任务。  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>使用 ALTER INDEX REORGANIZE 对列存储索引进行在线碎片整理  
- **适用对象：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **适用对象：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 加载任何类型的数据之后，增量存储中会有多个较小的行组。 可以使用 `ALTER INDEX REORGANIZE` 将所有行组强制载入列存储，然后将行组合并成具有更多行的较少行组。  重新组织操作还将删除已从列存储中删除的行。  
   
@@ -130,7 +129,7 @@ ms.locfileid: "67388137"
     GO  
     ```  
   
-4.  通过使用 sys.dm_db_column_store_row_group_physical_stats 动态管理视图 (DMV) 来查看行组  。  
+4.  通过使用 sys.dm_db_column_store_row_group_physical_stats 动态管理视图 (DMV) 来查看行组。  
   
     ```sql  
     -- Run this dynamic management view (DMV) to see the OPEN rowgroups.   
@@ -144,7 +143,7 @@ ms.locfileid: "67388137"
     ORDER BY row_group_id;  
     ```  
   
-     在此示例中，结果显示 8 个 OPEN 行组，每个包含 37,500 行。 OPEN 行组的数目取决于 max_degree_of_parallelism 设置  。  
+     在此示例中，结果显示 8 个 OPEN 行组，每个包含 37,500 行。 OPEN 行组的数目取决于 max_degree_of_parallelism 设置。  
   
      ![OPEN 行组](../../relational-databases/indexes/media/cci-openrowgroups.png "OPEN 行组")  
   

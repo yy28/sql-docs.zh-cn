@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a856bc8e5ea9a3c125e3d353963d5fcdf5b8492a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101056"
 ---
 # <a name="parse-geometry-data-type"></a>Parse（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ Parse ( 'geometry_tagged_text' )
  希望返回的 **geometry** 实例的 WKT 表示形式。 *geometry_tagged_text* 是一个 **nvarchar** 表达式。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
  CLR 返回类型：**SqlGeometry**  
   
@@ -48,7 +47,7 @@ Parse ( 'geometry_tagged_text' )
   
  字符串“Null”将被解释为 Null **geometry** 实例。  
   
- 如果输入的格式不正确，此方法将引发 FormatException  。  
+ 如果输入的格式不正确，此方法将引发 FormatException。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `Parse()` 创建 `geometry` 实例。  

@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06fb23f63b65d06be6e05569ecd31387830522ae
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a3703082dedc3d6c5933904e07e8e8724a04d20d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033719"
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
   
- 数据库联机时还原数据的过程称为“联机还原”  。 只要主文件组处于联机状态，就将数据库视为联机，即使有一个或多个辅助文件组处于脱机状态。 在任何恢复模式下，您都可以在数据库联机时还原处于脱机状态的文件。 在完整恢复模式下，您还可以在数据库联机时还原页。  
+ 数据库联机时还原数据的过程称为“联机还原” 。 只要主文件组处于联机状态，就将数据库视为联机，即使有一个或多个辅助文件组处于脱机状态。 在任何恢复模式下，您都可以在数据库联机时还原处于脱机状态的文件。 在完整恢复模式下，您还可以在数据库联机时还原页。  
   
 > [!NOTE]  
 >  联机还原自动在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 上执行，不需要用户执行任何操作。 如果不想使用联机还原，则可以在开始还原之前使数据库脱机。 有关详细信息，请参阅本主题后面的 [使数据库或文件脱机](#taking_db_or_file_offline)。  

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5079a0fbfd3a870875043b40be3c406c72730fbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff402435688d2471b7e6bd871a2e9a3f1cbd98c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008002"
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
 
@@ -48,12 +47,12 @@ ms.locfileid: "65729335"
   
 4.  展开包含您要查看其属性的包的文件夹。  
   
-5.  右键单击该包，然后选择“属性”  。  
+5.  右键单击该包，然后选择“属性”。  
   
 ##  <a name="options"></a> 配置选项  
  使用 **“常规”** 页可以查看所选包的属性。  
   
- “常规”  页上的所有属性都是只读的。  
+ “常规”页上的所有属性都是只读的。  
   
  **名称**  
  显示包的名称。  
@@ -64,7 +63,7 @@ ms.locfileid: "65729335"
  **入口点**  
  **True** 的值表示将直接启动包。 值 **False** 表示该包由另一个包通过执行包任务启动。 默认值是 **True**秒。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中为父包和子包设置此属性，方法是在解决方案资源管理器中右键单击包，然后单击“入口点包”  。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中为父包和子包设置此属性，方法是在解决方案资源管理器中右键单击包，然后单击“入口点包”。  
   
  **Description**  
  显示包的可选说明。  

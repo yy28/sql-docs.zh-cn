@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d8727159ca62f96b7f34d0a8d89b2d2c052a850
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0c3212e441a532d4b1b5532c1795fdbf86980b02
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687169"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262474"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,13 +61,13 @@ ms.locfileid: "67687169"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要禁用或重新激活的警报的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“警报”** 文件夹。  
   
-4.  右键单击要启用的警报，然后选择“启用”  。若要禁用某一警报，请右键单击要禁用的警报，然后选择“禁用”  。  
+4.  右键单击要启用的警报，然后选择“启用”。若要禁用某一警报，请右键单击要禁用的警报，然后选择“禁用”。  
   
-5.  **“禁用警报”** 或 **“启用警报”** 对话框将显示该进程的状态。 完成后，单击 **“关闭”** 。  
+5.  **“禁用警报”** 或 **“启用警报”** 对话框将显示该进程的状态。 完成后，单击 **“关闭”**。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -76,9 +75,9 @@ ms.locfileid: "67687169"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- changes the enabled setting of Test Alert to 0  

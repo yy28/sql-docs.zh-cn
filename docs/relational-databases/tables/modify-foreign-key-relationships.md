@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139602"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52517080"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **修改外键，使用：**  
   
@@ -55,18 +54,18 @@ ms.locfileid: "52517080"
   
 -   别名数据类型可以与其基类型相关。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>修改外键  
   
-1.  在 **“对象资源管理器”** 中，展开具有外键的表，再展开 **“键”**。  
+1.  在 **“对象资源管理器”** 中，展开具有外键的表，再展开 **“键”** 。  
   
-2.  右键单击要修改的外键，然后选择“修改”。  
+2.  右键单击要修改的外键，然后选择“修改”  。  
   
 3.  在 **“外键关系”** 对话框中，可以进行以下修改。  
   
@@ -77,16 +76,16 @@ ms.locfileid: "52517080"
      创建新关系。 必须先设置 **“表和列规范”** ，之后该关系才会生效。  
   
      **删除**  
-     在“选定的关系”列表中删除所选的关系。 若要取消添加关系，请使用此按钮来移除关系。  
+     在“选定的关系”  列表中删除所选的关系。 若要取消添加关系，请使用此按钮来移除关系。  
   
      **常规类别**  
-     展开此项可显示“在创建或重新启用时检查现有数据”以及“表和列规范”。  
+     展开此项可显示“在创建或重新启用时检查现有数据”  以及“表和列规范”  。  
   
      **在创建或重新启用时检查现有数据**  
      根据约束对创建或重新启用约束前表中的全部已有数据进行验证。  
   
      **表和列规范类别**  
-     展开此项可显示哪些表中的哪些列用作关系中的外键和主键（或唯一键）。 若要编辑或定义这些值，请单击属性字段右侧的省略号按钮 (…)。  
+     展开此项可显示哪些表中的哪些列用作关系中的外键和主键（或唯一键）。 若要编辑或定义这些值，请单击属性字段右侧的省略号按钮 (…)  。  
   
      **外键基表**  
      显示哪个表包含用作所选关系中外键的列。  
@@ -101,16 +100,16 @@ ms.locfileid: "52517080"
      显示哪个列用作所选关系的主键（或唯一键）。  
   
      **标识类别**  
-     展开此项可显示“名称”和“说明”的属性字段。  
+     展开此项可显示“名称”  和“说明”  的属性字段。  
   
      **名称**  
      显示关系的名称。 在创建新关系时，将基于 **表设计器**的活动窗口中的表为其指定默认名称。 您可以随时更改该名称。  
   
      **Description**  
-     描述该关系。 若要编写更详细的说明，请单击“说明”，再单击属性字段右侧显示的省略号 **(...)**。 这可以提供一个更大的文本编写区域。  
+     描述该关系。 若要编写更详细的说明，请单击“说明”  ，再单击属性字段右侧显示的省略号 **(...)** 。 这可以提供一个更大的文本编写区域。  
   
      **表设计器类别**  
-     展开此项可显示“在创建或重新启用时检查现有数据”和“强制用于复制”的信息。  
+     展开此项可显示“在创建或重新启用时检查现有数据”  和“强制用于复制”  的信息。  
   
      **强制用于复制**  
      指示当复制代理对此表执行插入、更新或删除操作时是否强制约束。  
@@ -119,7 +118,7 @@ ms.locfileid: "52517080"
      指示如果对关系中列数据的更改会使外键关系的完整性失效，是否允许进行这样的更改。 如果不允许这样的更改，则选择 **“是”** ；如果允许这样的更改，则选择 **“否”** 。  
   
      **INSERT 和 UPDATE 规范类别**  
-     展开此项可显示关系的“删除规则”和“更新规则”的信息。  
+     展开此项可显示关系的“删除规则”  和“更新规则”  的信息。  
   
      **删除规则**  
      指定当用户尝试删除某一行而该行包含外键关系涉及的数据时将发生的情况。  
@@ -143,7 +142,7 @@ ms.locfileid: "52517080"
   
     -   **设置默认值** 如果表的所有外键列均已定义默认值，则将值设置成为该列定义的默认值。  
   
-4.  在“文件”菜单上，单击“保存”以保存表名。  
+4.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改外键**  

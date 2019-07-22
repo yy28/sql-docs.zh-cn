@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 8e704a75a25849009e51a3e7f2c03fee535b7bbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012512"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>配置每次查询占用的最小内存服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题说明了如何使用 **或** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “每次查询占用的最小内存” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “每次查询占用的最小内存”  选项指定将分配给查询执行时所需要的最小内存量 (KB)。 这也称为最小内存授予。 例如，如果将 **min memory per query** 设置为 2048 KB，则查询保证将至少获取那么多的总内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
+  本主题说明了如何使用 **或** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “每次查询占用的最小内存” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 “每次查询占用的最小内存”选项指定将分配给查询执行时所需要的最小内存量 (KB)。 这也称为最小内存授予。 例如，如果将 **min memory per query** 设置为 2048 KB，则查询保证将至少获取那么多的总内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
   
  **本主题内容**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66780734"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：** [在配置每次查询占用的最小内存选项之后](#FollowUp)  
+-   **跟进：**[在配置每次查询占用的最小内存选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -72,11 +71,11 @@ ms.locfileid: "66780734"
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>配置每次查询占用的最小内存选项  
   
-1.  在对象资源管理器中，右键单击“服务器”并选择“属性”  。  
+1.  在对象资源管理器中，右键单击“服务器”并选择“属性”。  
   
 2.  单击 **“内存”** 节点。  
   
-3.  在“每次查询占用的最小内存”  框中，输入将分配给查询执行时所需要的最小内存量 (KB)。  
+3.  在“每次查询占用的最小内存”框中，输入将分配给查询执行时所需要的最小内存量 (KB)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -84,9 +83,9 @@ ms.locfileid: "66780734"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 本示例演示如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `min memory per query` 选项的值设置为 `3500` KB。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 本示例演示如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 将 `min memory per query` 选项的值设置为 `3500` KB。  
   
 ```sql  
 USE AdventureWorks2012 ;  

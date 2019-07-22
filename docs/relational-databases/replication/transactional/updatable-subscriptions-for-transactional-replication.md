@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dca69a0378f8e5cf1aa6006ec0ef7a905639507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121218"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>事务复制的可更新订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ ms.locfileid: "62669662"
   
 -   订阅服务器不能更新或插入 **text**、 **ntext** 或 **image** 值，因为不能在复制更改跟踪触发器中从插入或删除的表中读取数据。 同样，订阅服务器不能使用 **WRITETEXT** 或 **UPDATETEXT** 更新或插入 **text** 或 **image** 值，因为这些数据会被发布服务器覆盖。 但可以将 **text** 和 **image** 列分区到单独的表中，并在一个事务中修改这两个表。  
   
-     若要更新订阅服务器上的大型对象，请分别使用数据类型 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** ，而不要使用 **text**、 **ntext**和 **image** 数据类型。  
+     若要更新订阅服务器上的大型对象，请分别使用数据类型 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** ，而不要使用 **text**、 **ntext**和 **image** 数据类型。  
   
 -   不允许对唯一键（包括主键）进行生成重复项的更新（例如，格式为 `UPDATE <column> SET <column> =<column>+1` 的更新），这些更新将因为违反唯一性而被拒绝。 这是因为复制会将订阅服务器中所做的设置更新作为单独的 **UPDATE** 语句为每个受影响的行进行传播。  
   

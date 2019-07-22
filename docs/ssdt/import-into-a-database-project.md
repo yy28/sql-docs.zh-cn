@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119836"
 ---
 # <a name="import-into-a-database-project"></a>导入到数据库项目
 可以通过“导入”从活动的数据库或 .dacpac 使用新项目填充项目，或使用脚本中的新定义更新您项目中的现有对象。 请注意这三种途径存在一些行为差异，下面将进行说明。  
@@ -42,14 +41,14 @@ ms.locfileid: "65099576"
   
 导入时，将使用 SSDT 用于新对象的组织默认值通过脚本将对象定义写入项目文件，这些默认值是：顶层对象的新文件、与父级相同的文件中定义的层次结构子级、适用的内联对象中定义的表/列约束。 如果获得每个对象的更具针对性的可见性和控制，请使用“架构比较”而非“导入”。  
   
-如果导入源包含预先部署和后期部署脚本、RefactorLog 或 SQLCMD 变量定义，它们将导入项目。 如果该项目已包含这些项目中的任何一个，则导入的文件将添加到项目中的“导入时忽略”  文件夹中。  
+如果导入源包含预先部署和后期部署脚本、RefactorLog 或 SQLCMD 变量定义，它们将导入项目。 如果该项目已包含这些项目中的任何一个，则导入的文件将添加到项目中的“导入时忽略”文件夹中。  
   
 **“导入时忽略”文件夹**  
   
 ![SSDT“导入时忽略”文件夹](../ssdt/media/ssdt-ignoredonimport.gif "SSDT“导入时忽略”文件夹")  
   
 ## <a name="bkmk_import_source_script"></a>导入源：脚本 (*.sql)  
-将添加项目中不  存在的导入源的所有对象，而对于导入源中项目已有  的所有对象将覆盖项目中的对象定义。  
+将添加项目中不存在的导入源的所有对象，而对于导入源中项目已有的所有对象将覆盖项目中的对象定义。  
   
 > [!NOTE]  
 > 此途径中有两个已知 bug 将在将来的版本中修复：  
@@ -57,7 +56,7 @@ ms.locfileid: "65099576"
 > -   如果表/列约束是在项目的表定义中 CREATE TABLE 语句之外定义，则导入操作将覆盖表定义以便约束内联。 但是，它将离开行约束之外，从而导致项目中的约束重复。  
 > -   项目中已有的源脚本中的任意主密钥或数据库加密密钥将在导入时复制。 删除重复项以便生成项目。  
   
-“从脚本导入”过程将不包含预先部署/后期部署脚本、SQLCMD 变量或 RefactorLog 文件。 这些项以及在导入时检测到的任何其他不支持的构造将放入你项目中“脚本”  文件夹的 ScriptsIgnoredOnImport.sql  文件。  
+“从脚本导入”过程将不包含预先部署/后期部署脚本、SQLCMD 变量或 RefactorLog 文件。 这些项以及在导入时检测到的任何其他不支持的构造将放入你项目中“脚本”文件夹的 ScriptsIgnoredOnImport.sql 文件。  
   
  
 ## <a name="bkmk_import_encrypted"></a>导入加密的对象  

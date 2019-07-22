@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 1655124738d88ecfd154d934bceef9c1b0236dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049764"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66795123"
 |[网络访问](#NetworkAccess)|记录了允许每个服务器实例通过 TCP 访问其他一个或多个服务器实例的端口的要求。|  
 |[镜像数据库准备](#MirrorDbPrep)|概述了准备镜像数据库以开始镜像的要求。|  
 |[失败的创建文件操作](#FailedCreateFileOp)|说明如何响应失败的创建文件操作。|  
-|[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 语句所需的顺序。|  
+|[使用 Transact-SQL 开始镜像](#StartDbm)|说明 ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 语句所需的顺序。|  
 |[跨数据库事务](#CrossDbTxns)|自动故障转移可能导致自动不正确地解决有疑问的事务。 因此，数据库镜像不支持跨数据库事务。|  
   
 ##  <a name="Accounts"></a> 帐户  
@@ -144,7 +143,7 @@ ms.locfileid: "66795123"
  有关详细信息，请参阅[删除数据库镜像 (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)、[为镜像准备镜像数据库 (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)、[使用数据库镜像端点证书 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)，或[使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ##  <a name="StartDbm"></a> 使用 Transact-SQL 开始镜像  
- 发出 ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 语句的顺序非常关键。  
+ 发出 ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 语句的顺序非常关键。  
   
 1.  第一个语句必须在镜像服务器上运行。 发出此语句时，镜像服务器不会尝试联系任何其他服务器实例。 相反，镜像服务器指示其数据库先进行等待，直到主体服务器与镜像服务器建立联系。  
   

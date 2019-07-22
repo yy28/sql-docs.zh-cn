@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9ff79d145f11d64c7ac97a9d068ea99ec7886d2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee848e7ceab362fb71189312104e32e2b5957fae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099805"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
 
@@ -52,26 +51,26 @@ ms.locfileid: "65729004"
   
      若要计算这些值，请使用执行 SQL 任务或包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datetime **函数的** 表达式。 然后将这些端点存储在包变量中以供以后在包中使用。  
   
-     **详细信息：** [指定变更数据的间隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
+     **详细信息：**[指定变更数据的间隔](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
 -   确定所选间隔内的变更数据是否已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未到达所选端点。  
   
      若要确定数据是否已准备就绪，可启动 For 循环容器来延迟执行，直到所选间隔内的更改数据准备就绪（如果需要）。 在循环容器内，使用执行 SQL 任务来查询由变更数据捕获维护的时间映射表。 然后，使用调用 **Thread.Sleep** 方法的脚本任务或通过 **WAITFOR** 语句使用其他执行 SQL 任务来临时延迟对包的执行（如果需要）。 也可以使用其他脚本任务来记录错误情况或超时。  
   
-     **详细信息：** [确定变更数据是否已准备就绪](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+     **详细信息：**[确定变更数据是否已准备就绪](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 -   准备将用于查询变更数据的查询字符串。  
   
      使用脚本任务或执行 SQL 任务汇集将用于查询变更的 SQL 语句。  
   
-     **详细信息：** [准备查询变更数据](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+     **详细信息：**[准备查询变更数据](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
  **步骤 2：设置对变更数据的查询**  
  创建将查询数据的表值函数。  
   
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 开发并保存查询。  
   
- **详细信息：** [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **详细信息：**[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
  **步骤 3：设计数据流**  
  在包的数据流中，需要定义下列任务：  
@@ -80,19 +79,19 @@ ms.locfileid: "65729004"
   
      若要检索数据，请使用源组件来查询变更表中在所选间隔内发生的变更。 该源组件调用以前创建的 Transact-SQL 表值函数。  
   
-     **详细信息：** [检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+     **详细信息：**[检索和了解变更数据](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
 -   将更改拆分为插入、更新和删除进行处理。  
   
      若要拆分更改，可使用有条件拆分转换将插入、更新和删除定向到不同的输出，以便于进行适当的处理。  
   
-     **详细信息：** [处理插入、更新和删除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+     **详细信息：**[处理插入、更新和删除](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
 -   将插入、删除和更新应用到目标。  
   
      若要将更改应用到目标，可使用目标组件将插入应用到目标。 还可通过参数化的 UPDATE 和 DELETE 语句使用 OLE DB 命令转换，以将更新和删除应用到目标。 也可使用目标组件应用更新和删除，以便将行保存到临时表中。 然后，使用执行 SQL 任务对临时表中的目标执行大容量更新和大容量删除操作。  
   
-     **详细信息：** [将变更应用到目标](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+     **详细信息：**[将变更应用到目标](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ### <a name="change-data-from-multiple-tables"></a>来自多个表的变更数据  
  前面的关系图和步骤中介绍的过程涉及从单表进行增量加载。 当必须从多表执行增量加载时，整个过程是相同的。 但是，包的设计需要更改为满足多表处理。 有关如何创建从多个表执行增量加载的包的详细信息，请参阅 [执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)。  

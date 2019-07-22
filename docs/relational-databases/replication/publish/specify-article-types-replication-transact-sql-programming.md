@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a5a33cc382fabf5a77c97b0b4d68a34f83cb907
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 818b3265e72a1e7a311ea031b0583f68d30f4f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113924"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定项目类型（复制 Transact-SQL 编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "67582648"
   
     -   **logbased** - 基于日志的表项目，是事务复制和快照复制的默认值。 复制会自动生成用于水平筛选的存储过程和定义垂直筛选项目的视图。  
   
-    -   **logbased manualfilter** - 基于日志的水平筛选项目，其中用于水平筛选的存储过程由用户手动创建和定义，并会指定给 **@filter** 。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+    -   **logbased manualfilter** - 基于日志的水平筛选项目，其中用于水平筛选的存储过程由用户手动创建和定义，并会指定给 **@filter**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
-    -   **logbased manualview** - 基于日志的垂直筛选项目，其中定义垂直筛选项目的视图由用户创建和定义，并会指定给 **@sync_object** 。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **logbased manualview** - 基于日志的垂直筛选项目，其中定义垂直筛选项目的视图由用户创建和定义，并会指定给 **@sync_object**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
-    -   **logbased manualboth** - 基于日志的水平和垂直筛选项目，其中用于水平筛选的存储过程和定义垂直筛选项目的视图均由用户创建和定义，并将分别指定给 **@filter** 和 **@sync_object** 。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **logbased manualboth** - 基于日志的水平和垂直筛选项目，其中用于水平筛选的存储过程和定义垂直筛选项目的视图均由用户创建和定义，并将分别指定给 **@filter** 和 **@sync_object**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
      这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
@@ -62,11 +61,11 @@ ms.locfileid: "67582648"
   
     -   **indexed view schema only** - 仅限架构的索引视图项目。 还必须复制基表。  
   
-    -   **indexed view logbased manualfilter** - 基于日志的水平筛选索引视图项目，其中用于水平筛选的存储过程由用户手动创建和定义，并会指定给 **@filter** 。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
+    -   **indexed view logbased manualfilter** - 基于日志的水平筛选索引视图项目，其中用于水平筛选的存储过程由用户手动创建和定义，并会指定给 **@filter**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)。  
   
-    -   **indexed view logbased manualview** - 基于日志的筛选索引视图项目，其中定义垂直筛选项目的视图由用户创建和定义，并会指定给 **@sync_object** 。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **indexed view logbased manualview** - 基于日志的筛选索引视图项目，其中定义垂直筛选项目的视图由用户创建和定义，并会指定给 **@sync_object**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
-    -   **indexed view logbased manualboth** - 基于日志的筛选索引视图项目，其中用于水平筛选的存储过程和定义垂直筛选项目的视图均由用户创建和定义，并会分别指定给 **@filter** 和 **@sync_object** 。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
+    -   **indexed view logbased manualboth** - 基于日志的筛选索引视图项目，其中用于水平筛选的存储过程和定义垂直筛选项目的视图均由用户创建和定义，并会分别指定给 **@filter** 和 **@sync_object**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) 和 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
      这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   

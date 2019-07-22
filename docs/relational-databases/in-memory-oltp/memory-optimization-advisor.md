@@ -13,14 +13,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff483bc665f974c9cea0379291a4feb9a3fe55d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050189"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,14 +35,14 @@ ms.locfileid: "63025555"
  有关迁移方法的信息，请参阅 [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用内存优化顾问进行演练  
- 在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”** 。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  
+ 在 **对象资源管理器**中，右键单击要转换的表，然后选择 **“内存优化顾问”**。 这将显示 **“表内存优化顾问”** 的欢迎使用页。  
   
 ### <a name="memory-optimization-checklist"></a>内存优化核对清单  
  当您在 **“表内存优化顾问”** 的欢迎使用页中单击 **“下一步”** 时，将会看到内存优化核对清单。 内存优化表并不支持基于磁盘的表中的所有功能。 内存优化核对清单将报告基于磁盘的表是否使用了与内存优化表不兼容的任何功能。 **“表内存优化顾问”** 不会修改基于磁盘的表，以便它可以迁移到使用内存中 OLTP。 您必须首先进行这些更改，然后才能继续迁移。 对于找到的每个不兼容之处， **“表内存优化顾问”** 都会显示一个链接，指向可帮助您修改基于磁盘的表的信息。  
   
  如果您想要保留这些不兼容之处的列表以便计划您的迁移，则单击 **“生成报表”** 以便生成一个 HTML 列表。  
   
- 如果您的表没有不兼容之处并且连接到了具有内存中 OLTP 的某一 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例，则单击 **“下一步”** 。  
+ 如果您的表没有不兼容之处并且连接到了具有内存中 OLTP 的某一 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例，则单击 **“下一步”**。  
   
 ### <a name="memory-optimization-warnings"></a>内存优化警告  
  下一页“内存优化警告”包含问题的列表，这些问题不会阻止表迁移到使用内存中 OLTP，但这些问题可能导致其他对象（例如存储过程或 CLR 函数）的行为失败或者导致意外行为。  
@@ -95,7 +94,7 @@ ms.locfileid: "63025555"
  单击 **“下一步”** 继续。  
   
 ### <a name="review-primary-key-conversion"></a>检查主键转换  
- 下一个屏幕是 **“检查主键转换”** 。 内存优化顾问将检测到表中是否有一个或多个主键，并且基于主键元数据填充列的列表。 否则，如果您想要迁移到持久的内存优化表，则必须创建主键。  
+ 下一个屏幕是 **“检查主键转换”**。 内存优化顾问将检测到表中是否有一个或多个主键，并且基于主键元数据填充列的列表。 否则，如果您想要迁移到持久的内存优化表，则必须创建主键。  
   
  如果主键不存在并且该表正迁移到非持久表，则该屏幕将不会出现。  
   
@@ -118,14 +117,14 @@ ms.locfileid: "63025555"
  在选择了您的主键后单击 **“下一步”** 。  
   
 ### <a name="review-index-conversion"></a>检查索引转换  
- 下一页是 **“检查索引转换”** 。 内存优化顾问将检测到表中是否有一个或多个索引，并且填充列的列表和数据类型。 您在 **“检查索引转换”** 页中可以配置的参数类似于前一页 **“检查主键转换”** 。  
+ 下一页是 **“检查索引转换”**。 内存优化顾问将检测到表中是否有一个或多个索引，并且填充列的列表和数据类型。 您在 **“检查索引转换”** 页中可以配置的参数类似于前一页 **“检查主键转换”** 。  
   
  如果该表仅具有主键并且正迁移到持久表，则该屏幕将不会出现。  
   
- 在确定了表中的每个索引后，单击 **“下一步”** 。  
+ 在确定了表中的每个索引后，单击 **“下一步”**。  
   
 ### <a name="verify-migration-actions"></a>验证迁移操作  
- 下一页是 **“验证迁移操作”** 。 若要编写迁移操作的脚本，请单击 **“脚本”** 以便生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 然后，您可以修改并且执行该脚本。 单击 **“迁移”** 可开始表迁移。  
+ 下一页是 **“验证迁移操作”**。 若要编写迁移操作的脚本，请单击 **“脚本”** 以便生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 然后，您可以修改并且执行该脚本。 单击 **“迁移”** 可开始表迁移。  
   
  在完成该过程后，刷新 **对象资源管理器** 可查看新的内存优化表和旧的基于磁盘的表。 您可以保留旧表或者在方便时删除它。  
   
