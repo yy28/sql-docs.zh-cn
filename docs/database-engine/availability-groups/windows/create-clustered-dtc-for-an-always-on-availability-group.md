@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 92a75d72a280d3d9e329f38a661a65f9c491cb3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc5b7c3d5c8fd1ad1c050ea2f50c55d4a0d1120f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991130"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>为 AlwaysOn 可用性组创建群集 DTC 资源
 
@@ -116,8 +115,8 @@ foreach ($node in $nodes) {
     New-NetFirewallRule -CimSession $node -DisplayName 'SQL Server Mirroring' -Description 'Port 5022 for SQL Server Mirroring' -Action Allow -Direction Inbound -Protocol TCP -LocalPort 5022 -RemotePort Any -LocalAddress Any -RemoteAddress Any;
     };
 ```  
-## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析”  
-此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”  。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
+## <a name="3--configure-in-doubt-xact-resolution"></a>3.配置“未决事务解析” 
+此脚本针对未决事务将“未决事务解析”服务器配置选项配置为“假设提交”。  在 SQL Server Management Studio (SSMS) 中以 **SQLCMD 模式**对 `SQLNODE1` 运行以下 T-SQL 脚本。
 
 ```sql  
 /*******************************************************************

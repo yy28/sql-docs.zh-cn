@@ -9,29 +9,28 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: jroth
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1031bdfa3aa6c728d3e33b500fe942d5e52c5fdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec0b088d7ed1f32661a9ca171eb5f889c09ae5d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012806"
 ---
 # <a name="column-encryption-enclave-type-server-configuration-option"></a>列加密 enclave 类型服务器配置选项
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  使用“列加密 enclave 类型”  选项来启用或禁用 Always Encrypted 的安全 enclave。  有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+  使用“列加密 enclave 类型”选项来启用或禁用 Always Encrypted 的安全 enclave。  有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
- 下表列出了可能的列加密 enclave 类型  值：  
+ 下表列出了可能的列加密 enclave 类型值：  
   
 |ReplTest1|描述|  
 |-------------------|-----------------|  
-|0|没有安全 enclave  。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会为 Always Encrypted 初始化安全 enclave。 因此，具有安全 enclave 的 Always Encrypted 功能将不可用。|  
-|1|基于虚拟化的安全性 (VBS)  。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将为 Always Encrypted 初始化安全 enclave（VBS 安全内存 enclave）。|    
+|0|没有安全 enclave。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不会为 Always Encrypted 初始化安全 enclave。 因此，具有安全 enclave 的 Always Encrypted 功能将不可用。|  
+|1|基于虚拟化的安全性 (VBS)。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将为 Always Encrypted 初始化安全 enclave（VBS 安全内存 enclave）。|    
 
 > [!IMPORTANT]
-> 对列加密 enclave 类型  的更改直到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例才会生效。
+> 对列加密 enclave 类型的更改直到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例才会生效。
   
    
 ## <a name="examples"></a>示例  

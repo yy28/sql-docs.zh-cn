@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0677b75397522602a7cd6d42942f0b8610d6d9b6
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 54ea1c6f261a8ca6d7b68f4b9751338e6baf10db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121239"
 ---
 # <a name="transactional-replication"></a>事务复制
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "54395379"
 |发布类型|描述|  
 |----------------------|-----------------|  
 |标准事务发布|适合于订阅服务器上的所有数据均为只读的拓扑（事务复制在订阅服务器上并不强制如此）。<br /><br /> 默认情况下，在使用 Transact-SQL 或复制管理对象 (RMO) 时创建标准事务发布。 使用新建发布向导时，将通过选择 **“发布类型”** 页上的 **“事务发布”** 来创建标准事务发布。<br /><br /> 有关创建发布的详细信息，请参阅 [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
-|具有可更新订阅的事务发布|此发布类型的特征如下：<br /><br /> - 每个位置都具有相同的数据，使用一个发布服务器和一个订阅服务器。 <br /> - 可以更新订阅服务器上的行<br /> - 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅[可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
+|具有可更新订阅的事务发布|此发布类型的特征如下：<br /><br /> \- 每个位置都具有相同的数据，使用一个发布服务器和一个订阅服务器。 <br /> \- 可以更新订阅服务器上的行<br /> \- 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅[可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
 |对等拓扑|此发布类型的特征如下：<br /> - 每个位置都具有相同的数据，兼作发布服务器和订阅服务器。<br /> - 同一行每次只能在一个位置进行更改。<br /> - 支持[冲突检测](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
 |双向事务复制|此发布类型的特征如下：<br />双向复制类似于对等复制，但是它不提供冲突解决方案。 此外，双向复制仅限于 2 台服务器。 <br /><br /> 有关详细信息，请参阅[双向事务复制](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   

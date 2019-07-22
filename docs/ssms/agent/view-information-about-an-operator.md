@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3aaee1f92cacd3d529e8b739ad52edd371a37c56
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: dda9b247fa137f16a4153444a2e7ef6025affeed
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680644"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260809"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,13 +66,13 @@ ms.locfileid: "67680644"
   
 1.  在 **“对象资源管理器”** 中，单击加号以展开包含要查看的操作员的服务器。  
   
-2.  单击加号以展开 **“SQL Server 代理”** 。  
+2.  单击加号以展开 **“SQL Server 代理”**。  
   
 3.  单击加号以展开 **“操作员”** 文件夹。  
   
-4.  右键单击要查看的操作员，然后选择“属性”  。  
+4.  右键单击要查看的操作员，然后选择“属性”。  
   
-    有关“operator_name 属性”   对话框包含的可用选项的详细信息，请参阅：  
+    有关“operator_name 属性”对话框包含的可用选项的详细信息，请参阅：  
   
     -   [操作员属性 - 新建操作员（“常规”页）](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "67680644"
   
     -   [操作员属性（“历史记录”页）](../../ssms/agent/operator-properties-history-page.md)  
   
-5.  完成后，单击 **“确定”** 。  
+5.  完成后，单击 **“确定”**。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  
   
@@ -89,9 +88,9 @@ ms.locfileid: "67680644"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- reports information about operator François Ajenstat   

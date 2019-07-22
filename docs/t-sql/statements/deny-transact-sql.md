@@ -26,20 +26,19 @@ helpviewer_keywords:
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d14ee4d8bef4e9b7ada7ee558ca2524538775148
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984398"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   拒绝为主体授予权限。 防止该主体通过组或角色成员身份继承权限。 DENY 优先于所有权限，但 DENY 不适用于 sysadmin 固定服务器角色的对象所有者或成员。
-  安全性注意事项：sysadmin 固定服务器角色的成员和对象所有者不能拒绝权限  。
+  安全性注意事项：sysadmin 固定服务器角色的成员和对象所有者不能拒绝权限。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -109,25 +108,25 @@ DENY
  PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
- permission   
+ permission  
  权限的名称。 下面列出的子主题介绍了不同权限与安全对象之间的有效映射。  
   
  *column*  
  指定表中拒绝授予其权限的列名。 需要使用圆括号 ()。  
   
- class   
- 指定拒绝授予其权限的安全对象的类。 需要使用作用域限定符 ::  。  
+ class  
+ 指定拒绝授予其权限的安全对象的类。 需要使用作用域限定符 ::。  
   
- securable   
+ securable  
  指定拒绝授予其权限的安全对象。  
   
- TO principal   
+ TO principal  
  主体的名称。 可以对其拒绝安全对象权限的主体随安全对象而异。 有关有效的组合，请参阅下面列出的特定于安全对象的主题。  
   
  CASCADE  
  指示拒绝授予指定主体该权限，同时，对该主体授予了该权限的所有其他主体，也拒绝授予该权限。 当主体具有带 GRANT OPTION 的权限时，为必选项。  
   
- AS principal   
+ AS principal  
  指定执行此查询的主体要从哪个主体派生其拒绝该权限的权利。
 使用 AS principal 子句指示：记录为权限的拒绝者的主体应为执行该语句的用户以外的主体。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是主体 15。 Mary 执行 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` 现在，即使语句的实际执行者是用户 13 (Mary)，sys.database_permissions 表仍将指示 deny 语句的 grantor_prinicpal_id 为 15 (Raul)。
   

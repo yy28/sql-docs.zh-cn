@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79756562767943d89efd199007941cf9bf29b702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6eaef69d6984494543dc730e19a8436a3a9b658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007828"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project（SSISDB 数据库）
 
@@ -34,24 +33,24 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @folder_name = ] folder_name   
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)   。  
+ [ @folder_name = ] folder_name  
+ 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
   
- [ @project_name = ] project_name   
- 项目的名称。 project_name 为 nvarchar(128)   。  
+ [ @project_name = ] project_name  
+ 项目的名称。 project_name 为 nvarchar(128)。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 该项目的二进制流作为 varbinary(MAX) 返回  。 如果找不到文件夹或项目，则不返回任何结果。  
+ 该项目的二进制流作为 varbinary(MAX) 返回。 如果找不到文件夹或项目，则不返回任何结果。  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格   
+-   ssis_admin 数据库角色的成员资格  
   
 -   **sysadmin** 服务器角色的成员资格  
   

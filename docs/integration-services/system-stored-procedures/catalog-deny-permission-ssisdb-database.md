@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a216685a58032534e3f79fb77d895f2664981a51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84bd5a432886cfa3fe209688a6a6cde563eed970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007896"
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission（SSISDB 数据库）
 
@@ -38,7 +37,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>参数  
  [ @object_type = ] *object_type*  
- 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint** _。_  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint**_。_  
   
  [ @object_id = ] *object_id*  
  安全对象的唯一标识符 (ID) 或主键。 *object_id* 为 **bigint**。  

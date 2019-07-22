@@ -10,13 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 12f67e7a17ba253ab49b1e61fe3de33a45e0cb55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896956"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的证书
 
@@ -30,13 +29,13 @@ ms.locfileid: "65718726"
 
 大多数情况下，Scale Out Master 证书在安装 Scale Out Master 的过程中配置。
 
-在 SQL Server 安装向导的“Integration Services Scale Out 配置 - 主节点”页中，可以选择创建新的自签名 SSL 证书或使用现有 SSL 证书  。
+在 SQL Server 安装向导的“Integration Services Scale Out 配置 - 主节点”页中，可以选择创建新的自签名 SSL 证书或使用现有 SSL 证书。
 
 ![主节点配置](media/master-config.PNG)
 
 **新证书**。 如果对证书没有特殊要求，可选择创建新的自签名 SSL 证书。 可在证书中进一步指定 CN。 请确保 CN 中包含 Scale Out Worker 稍后使用的主终结点的主机名。 默认情况下，计算机名和主节点的 IP 地址也包含在内。 
 
-**现有证书**。 如果选择使用现有证书，请单击“浏览”，从本地计算机的根证书存储中选择 SSL 证书   。
+**现有证书**。 如果选择使用现有证书，请单击“浏览”，从本地计算机的根证书存储中选择 SSL 证书。
 
 ### <a name="change-the-scale-out-master-certificate"></a>更改 Scale Out Master 证书
 

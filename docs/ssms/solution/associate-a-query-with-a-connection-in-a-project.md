@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 4b455fee7632f243493a85baf81950b48135f889
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 247258298acbe8af4a68c0cd0b981cd04deb26ba
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683121"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258147"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>将查询与项目中的连接关联
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +28,9 @@ ms.locfileid: "67683121"
   
 ### <a name="to-associate-a-query-with-a-connection-in-a-project"></a>将查询与项目中的连接关联  
   
-1.  如果查询在查询编辑器中处于打开状态，请右键单击查询编辑器的空白区域，指向“连接”  ，再单击“连接”  。 如果查询未打开，请在解决方案资源管理器中双击查询，以连接该查询。  
+1.  如果查询在查询编辑器中处于打开状态，请右键单击查询编辑器的空白区域，指向“连接”，再单击“连接”。 如果查询未打开，请在解决方案资源管理器中双击查询，以连接该查询。  
   
-2.  在“连接到数据库引擎”  对话框中，提供连接信息。 如果连接信息与现有连接匹配，该查询将与此连接关联。  
+2.  在“连接到数据库引擎”对话框中，提供连接信息。 如果连接信息与现有连接匹配，该查询将与此连接关联。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

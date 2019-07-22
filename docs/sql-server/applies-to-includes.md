@@ -7,19 +7,18 @@ ms.reviewer: ''
 ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3c947da650b7ba5d5e968464cc022839ca908ef0
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067582"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server include 文件，用于版本控制和 applies-to
 
-通过使用 Markdown 中的 Include 文件，可以轻松修改文档中的引用，而无需更改各个文章的实际文本。 在 SQL 内容世界中，include 文件有三种类型：SQL 版本、applies-to 和引用文本。 SQL Server 版本 include 文件用于指示讨论的 SQL 版本，例如 SQL Server 2016 或 2017。 applies-to include 文件指示文档适用于什么 SQL 产品和服务，例如 Linux 上的 SQL Server 或 Azure SQL 数据库。 引用文本 include 文件不属于其他两个类别，例如“Get Help” include - 客户可用于获得 SQL Server 相关帮助的链接列表。
+通过使用 Markdown 中的 Include 文件，可以轻松修改文档中的引用，而无需更改各个文章的实际文本。 在 SQL 内容世界中，include 文件有三种类型：SQL 版本、applies-to 和引用文本。 SQL Server 版本 include 文件用于指示讨论的 SQL 版本，例如 SQL Server 2016 或 2017  。 applies-to include 文件指示文档适用于什么 SQL 产品和服务，例如 Linux 上的 SQL Server 或 Azure SQL 数据库  。 引用文本 include 文件不属于其他两个类别，例如“Get Help” include - 客户可用于获得 SQL Server 相关帮助的链接列表  。
 
 本文仅用作前两种类型的 include 文件的参考点。 可通过 [sql-docs 存储库](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)浏览 include 文件的完整列表。
 

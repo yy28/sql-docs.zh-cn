@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f3d8f362fd74f5676901b7980fa2f872a8e1a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43520ecf8645da17f874c993430d757ab88d6c3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007804"
 ---
 # <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent（SSISDB 数据库）
 
@@ -33,7 +32,7 @@ ms.locfileid: "65716280"
 catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>参数
-[@WorkerAgentId =] WorkerAgentId  Scale Out Worker 的辅助角色代理 ID。 WorkerAgentId 为 uniqueidentifier   。
+[@WorkerAgentId =] WorkerAgentId Scale Out Worker 的辅助角色代理 ID。 WorkerAgentId 为 uniqueidentifier。
 
 ## <a name="example"></a>示例
 此示例在 MachineA 上禁用 Scale Out Worker。

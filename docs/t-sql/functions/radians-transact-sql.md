@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 105b1aea27bd37efd1394f9d158e7050ea71dfcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05093c47ea7e05845f237e0e7c9c3df2c7d59fd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914242"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,10 +40,10 @@ RADIANS ( numeric_expression )
   
 ## <a name="arguments"></a>参数  
  *numeric_expression*  
- 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。  
+ 是精确或近似数值数据类型类别（bit 数据类型除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  
- 返回与 numeric_expression  相同的类型。  
+ 返回与 numeric_expression 相同的类型。  
   
 ## <a name="examples"></a>示例  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: f1626c21649d276e6e6cb3e51207aaede006b566
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014851"
 ---
 # <a name="administration-of-an-availability-group"></a>管理可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "67681078"
 -   添加或删除辅助副本。    
 -   添加或删除数据库。    
 -   暂停或恢复数据库。   
--   执行计划的手动故障转移（手动故障转移  ）或强制手动故障转移（强制故障转移  ）。    
+-   执行计划的手动故障转移（手动故障转移）或强制手动故障转移（强制故障转移）。    
 -   创建和配置可用性组侦听器。    
 -   为某一给定可用性组管理 [可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 。 这涉及在以辅助角色运行时将一个或多个副本配置为只读访问以及配置只读路由。    
 -   为某一给定可用性组管理 [次要副本上的备份](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 。 这涉及配置您希望运行备份作业的位置，然后编写备份作业脚本，以便实现您的备份首选项。 在承载可用性副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上，对于可用性组中的每个数据库，您都需要为备份作业编写脚本。    

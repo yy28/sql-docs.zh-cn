@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dab606451fc99c70b28999f2d2d8be93d1513a20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb465d2a6f0d1cd69483789e39c47fda904e1800
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007788"
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
 
@@ -34,8 +33,8 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @data_tap_id = ] data_tap_id   
- 使用 catalog.add_data_tap 存储过程创建的数据分流点的唯一标识符。 data_tap_id 为 bigint   。  
+ [ @data_tap_id = ] data_tap_id  
+ 使用 catalog.add_data_tap 存储过程创建的数据分流点的唯一标识符。 data_tap_id 为 bigint。  
   
 ## <a name="remarks"></a>Remarks  
  如果包中包含名称相同的多个数据流任务，则将数据分流点添加到具有给定名称的第一个数据流任务。  
@@ -49,7 +48,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  None  
   
 ## <a name="remarks"></a>Remarks  
- 要删除数据分流点，执行实例必须处于已创建状态（在 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图的 status 列中值为 1）  。  
+ 要删除数据分流点，执行实例必须处于已创建状态（在 [catalog.operations（SSISDB 数据库）](../../integration-services/system-views/catalog-operations-ssisdb-database.md)视图的 status 列中值为 1）。  
   
 ## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  

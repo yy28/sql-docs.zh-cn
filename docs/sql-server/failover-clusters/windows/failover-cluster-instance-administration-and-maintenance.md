@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3001446fbb71e0aab0d765d58fb938d8e3af5e62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002475"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47738805"
 > [!IMPORTANT]  
 >  请勿对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户和 WSFC 服务帐户使用同一帐户。 否则，如果更改了 WSFC 服务帐户的密码， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装将失败。  
   
- 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]中，服务 SID 可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]中，服务 SID 可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
 ## <a name="administering-a-failover-cluster-instance"></a>管理故障转移群集实例  
   

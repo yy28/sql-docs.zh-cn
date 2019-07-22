@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f88bb389da837501b2ab724a505b43a57e339e90
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e4cd1164b5845f6237a1381fa706fc067cf311a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140834"
 ---
 # <a name="view-collation-information"></a>查看排序规则信息
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,28 +36,28 @@ ms.locfileid: "67732305"
   
 1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  右键单击该实例，然后选择“属性”  。  
+2.  右键单击该实例，然后选择“属性”。  
   
  **使用对象资源管理器查看数据库的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开“数据库”  ，右键单击数据库，然后选择“属性”  。  
+2.  展开“数据库”，右键单击数据库，然后选择“属性”。  
   
  **使用对象资源管理器查看列的排序规则设置**  
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  依次展开 **“数据库”** 、数据库和 **“表”** 。  
+2.  依次展开 **“数据库”**、数据库和 **“表”**。  
   
-3.  展开包含该列的表，然后展开 **“列”** 。  
+3.  展开包含该列的表，然后展开 **“列”**。  
   
-4.  右键单击该列并选择“属性”  。 如果排序规则属性为空，则该列不是字符数据类型。  
+4.  右键单击该列并选择“属性”。 如果排序规则属性为空，则该列不是字符数据类型。  
   
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **查看服务器的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
   
 2.  在查询窗口中，输入以下使用 SERVERPROPERTY 系统函数的语句。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "67732305"
   
  **查看 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
   
 2.  在查询窗口中，输入以下使用 SERVERPROPERTY 系统函数的语句。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "67732305"
   
  **查看数据库的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
   
 2.  在查询窗口中，输入以下使用 sys.databases 系统目录视图的语句。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "67732305"
   
  **查看列的排序规则设置**  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
   
 2.  在查询窗口中，输入以下使用 sys.columns 系统目录视图的语句。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "67732305"
   
  **查看表和列的排序规则设置的具体步骤**  
 
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”** 。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并在工具栏中单击 **“新建查询”**。  
   
 2.  在查询窗口中，输入以下使用 sys.columns 系统目录视图的语句。  
   

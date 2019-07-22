@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 94bd2f66ee3406bab6d1d69281d83f2de5f68e65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39403bec40e76b66a57d8c2276001aa15e558b65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023580"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>欢迎使用 SQL Server 导入和导出向导
 
@@ -43,7 +42,7 @@ ms.locfileid: "65723788"
  下次运行向导时跳过欢迎页。  
   
 ## <a name="whats-next"></a>下一步是什么？  
- 欢迎页之后，下一页是“选择数据源”  。 在此页上，需提供有关数据源以及如何连接到它的信息。 有关详细信息，请参阅 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
+ 欢迎页之后，下一页是“选择数据源” 。 在此页上，需提供有关数据源以及如何连接到它的信息。 有关详细信息，请参阅 [选择数据源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="related"></a>相关任务和内容  
  以下是一些其他的基本任务。

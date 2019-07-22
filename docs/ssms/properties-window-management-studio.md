@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9c9c93a3f81af7303d97527d514d8c3ce320cfeb
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 51aff80cb84f5ff066917f5ba35d966c0f49d08d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683311"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262024"
 ---
 # <a name="properties-window-management-studio"></a>属性窗口 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此窗口可查看选定元素的属性。 还可以使用“属性”窗口查看文件、项目和解决方案的属性。 在“视图”  菜单上单击“属性窗口”  ，即可显示“属性”窗口。  
+使用此窗口可查看选定元素的属性。 还可以使用“属性”窗口查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  
   
 根据属性需求的不同，“属性”窗口将显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "67683311"
 |**按分类顺序**|按类别列出所选对象的所有属性和属性值。 可以将类别折叠起来以减少可见属性的数量。 折叠或展开类别时，在类别名称的左侧将显示一个加号 (+) 或减号 (-)。 类别按字母顺序列出。|  
 |**字母顺序**|所选对象的所有设计时属性和事件按字母顺序排列。|  
 |**属性**|显示对象的属性。|  
-|**说明窗格**|说明窗格出现在“属性”窗口的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”  命令打开或关闭属性的说明。|  
+|**说明窗格**|说明窗格出现在“属性”窗口的底部，可以显示属性的类型和简短说明。 可以使用快捷菜单上的“说明”命令打开或关闭属性的说明。|  
   
 ## <a name="see-also"></a>另请参阅  
 [常规用户界面元素](../ssms/general-user-interface-elements.md)  

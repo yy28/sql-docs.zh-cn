@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a7986803518b9227d873a303b87358829cde3cd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 9ec9cd60ff4197b94a91e280ad17cc349b906dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138502"
 ---
 # <a name="delete-user-defined-functions"></a>删除用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,9 +65,9 @@ ms.locfileid: "67581459"
   
     -   Aggregate 函数  
   
-4.  右键单击要删除的函数，然后选择“删除”  。  
+4.  右键单击要删除的函数，然后选择“删除”。  
   
-5.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
+5.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -81,9 +80,9 @@ ms.locfileid: "67581459"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     -- creates function called "Sales.ufn_SalesByStore"  

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef2848efb4a66ccf2d8d1b2271bd70c455b27fd9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031628"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理版本由系统控制的临时表中历史数据的保留期
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -64,26 +63,26 @@ ms.locfileid: "67582635"
   
 > **注意**：Stretch Database 会将数据迁移到 Azure。 因此，你必须拥有 Azure 帐户，以及计费的订阅。 若要获取免费试用的 Azure 帐户，请单击[免费试用一个月](https://azure.microsoft.com/pricing/free-trial/)。  
   
- 你可以使用延伸向导或 Transact-SQL 来为延伸配置临时历史记录表，并且可以在版本由系统控制设置为“打开”  时，为临时历史记录表启用延伸。 不允许延伸当前表，因为延伸当前表没有意义。  
+ 你可以使用延伸向导或 Transact-SQL 来为延伸配置临时历史记录表，并且可以在版本由系统控制设置为“打开”时，为临时历史记录表启用延伸。 不允许延伸当前表，因为延伸当前表没有意义。  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>使用延伸向导延伸整个历史记录表  
  适用于初学者的最简单方法是使用延伸向导为整个数据库启用延伸，然后在延伸向导中选择临时历史记录表（本示例假设你已将 Department 表配置为其他空数据库中的版本由系统控制的临时表）。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，你无法右键单击临时历史记录表本身和单击“延伸”。  
   
-1.  右键单击数据库，指向“任务”  ，指向“延伸”  ，然后单击“启用”  以启动向导。  
+1.  右键单击数据库，指向“任务”，指向“延伸”，然后单击“启用”以启动向导。  
   
-2.  在“选择表”  窗口中，选择临时历史记录表的复选框，然后单击“下一步”。  
+2.  在“选择表”窗口中，选择临时历史记录表的复选框，然后单击“下一步”。  
   
      ![在“选择表”页上选择历史记录表](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "在“选择表”页上选择历史记录表")  
   
-3.  在“配置 Azure”  窗口中提供你的登录凭据。 登录到 Microsoft Azure 或注册一个帐户。 选择要使用的订阅并选择 Azure 区域。 然后创建一个新的服务器或选择现有的服务器。 单击“下一步”  。  
+3.  在“配置 Azure” 窗口中提供你的登录凭据。 登录到 Microsoft Azure 或注册一个帐户。 选择要使用的订阅并选择 Azure 区域。 然后创建一个新的服务器或选择现有的服务器。 单击“下一步” 。  
   
      ![新建 Azure 服务器 - Stretch Database 向导](../../relational-databases/tables/media/stretch-wizard-4.png "新建 Azure 服务器 - Stretch Database 向导")  
   
-4.  在“安全凭据”  窗口中，提供数据库主密钥密码来保护源 SQL Server 数据库凭据，然后单击“下一步”。  
+4.  在“安全凭据”窗口中，提供数据库主密钥密码来保护源 SQL Server 数据库凭据，然后单击“下一步”。  
   
      ![Stretch Database 向导的“安全凭据”页](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 向导的“安全凭据”页")  
   
-5.  在“选择 IP 地址”  窗口中，提供 SQL Server 的 IP 地址范围，以便 Azure 服务器能够与 SQL Server 通信（如果你选择已存在防火墙规则的现有服务器，则只需单击“下一步”即可使用现有的防火墙规则）。 单击“下一步”  ，然后单击“完成”  以启用 Stretch Database 和延伸临时历史记录表。  
+5.  在“选择 IP 地址”窗口中，提供 SQL Server 的 IP 地址范围，以便 Azure 服务器能够与 SQL Server 通信（如果你选择已存在防火墙规则的现有服务器，则只需单击“下一步”即可使用现有的防火墙规则）。 单击“下一步”，然后单击“完成”以启用 Stretch Database 和延伸临时历史记录表。  
   
      ![Stretch Database 向导的“选择 IP 地址”页](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 向导的“选择 IP 地址”页")  
   
@@ -450,7 +449,7 @@ ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-数据库标志 is_temporal_history_retention_enabled 默认设置为 ON，但用户可以使用 ALTER DATABASE 语句对其进行更改  。 此标志还会在时间点还原操作后自动设置为 OFF。 若要为数据库启用时态历史记录保留清理，请执行以下语句：
+数据库标志 is_temporal_history_retention_enabled 默认设置为 ON，但用户可以使用 ALTER DATABASE 语句对其进行更改。 此标志还会在时间点还原操作后自动设置为 OFF。 若要为数据库启用时态历史记录保留清理，请执行以下语句：
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
@@ -495,7 +494,7 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
 ### <a name="how-sql-database-deletes-aged-rows"></a>SQL 数据库如何删除过期的行？
-清理过程具体取决于历史记录表的索引布局。 请务必注意，仅具有聚集索引（B 树或列存储）的历史记录表可配置有限保留策略  。 对于具有有限保留期的所有时态表，系统将创建后台任务对其执行过期数据清理。 行存储（B 树）聚集索引的清理逻辑会删除较小区块（最多 10K）的过期行，以减轻数据库日志和 I/O 子系统的压力。 虽然清理逻辑使用要求的 B 树索引，但无法完全保证删除超过保留期的行的顺序。 因此，请不要对应用程序中的清理顺序有任何期待  。
+清理过程具体取决于历史记录表的索引布局。 请务必注意，仅具有聚集索引（B 树或列存储）的历史记录表可配置有限保留策略。 对于具有有限保留期的所有时态表，系统将创建后台任务对其执行过期数据清理。 行存储（B 树）聚集索引的清理逻辑会删除较小区块（最多 10K）的过期行，以减轻数据库日志和 I/O 子系统的压力。 虽然清理逻辑使用要求的 B 树索引，但无法完全保证删除超过保留期的行的顺序。 因此，请不要对应用程序中的清理顺序有任何期待。
 
 聚集列存储的清理任务可同时移除整个行组（每组通常包含 100 万行），效率非常高，高速生成历史数据时尤其如此。
 

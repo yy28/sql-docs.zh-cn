@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f78f779585f18b3ab3b787424ace83f86dcf987c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 987ce3d90159a83d141a241579e5cbfc727277c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045472"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
 
@@ -68,28 +67,28 @@ ms.locfileid: "65727276"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ADO NET 目标。  
+2.  在“数据流”选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“连接管理器”** 。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“连接管理器”**。  
   
 ### <a name="static-options"></a>静态选项  
  **“ODBC 目标编辑器”**  
- 从列表中选择一个现有连接管理器，或通过单击“新建”  创建一个新连接。  
+ 从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
  **新建**  
- 使用“配置 ADO.NET 连接管理器”  对话框创建新的连接管理器。  
+ 使用“配置 ADO.NET 连接管理器”对话框创建新的连接管理器。  
   
  **使用表或视图**  
- 从列表中选择现有表或视图，或单击  “新建”创建新表。  
+ 从列表中选择现有表或视图，或单击“新建”创建新表。  
   
  **新建**  
- 使用  “创建表”对话框创建新表或视图。  
+ 使用“创建表”对话框创建新表或视图。  
   
 > [!NOTE]  
 >  单击 **“新建”** 时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将基于所连接的数据源生成一条默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **预览**  
- 使用“预览查询结果”  对话框预览结果。 预览最多可以显示 200 行。  
+ 使用“预览查询结果”对话框预览结果。 预览最多可以显示 200 行。  
   
  **可用时使用大容量插入**  
  指定是否使用 <xref:System.Data.SqlClient.SqlBulkCopy> 接口来提高大容量插入操作的性能。  
@@ -98,15 +97,15 @@ ms.locfileid: "65727276"
   
  可使用 SQL Server 的 .NET 数据提供程序 (SqlClient) 连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。    有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关  “错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
+ 如果选择“可用时使用大容量插入”并将“错误”选项设置为“重定向该行”，则目标重定向到错误输出的数据批次可能包含正确的行。有关以大容量操作方式处理错误的详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。 有关“错误”选项的详细信息，请参阅 [ADO NET 目标编辑器（“错误输出”页）](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   
 > [!NOTE]
 >  如果 SQL Server 或 Sybase 源表包含一个标识列，则必须在 ADO NET 目标之前使用“执行 SQL 任务”来启用 IDENTITY_INSERT，并在之后再次禁用它。 （标识列属性为列指定一个增量值。 使用 SET IDENTITY_INSERT 语句，可将源表中的显式值插入目标表中的标识列。）  
 > 
 >   若要成功运行 SET IDENTITY_INSERT 语句和加载数据，须执行以下操作。  
 >       1.对“执行 SQL 任务”和 ADO NET 目标使用相同的 ADO.NET 连接管理器。  
->       2.在连接管理器上，将“RetainSameConnection”属性和“MultipleActiveResultSets”属性设置为“True”   。  
->       3.在 ADO.NET 目标上，将“UseBulkInsertWhenPossible”属性设置为“False”  。   
+>       2.在连接管理器上，将“RetainSameConnection”属性和“MultipleActiveResultSets”属性设置为“True”。  
+>       3.在 ADO.NET 目标上，将“UseBulkInsertWhenPossible”属性设置为“False”。   
 > 
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY（属性）(Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
@@ -120,9 +119,9 @@ ms.locfileid: "65727276"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ADO NET 目标。  
+2.  在“数据流”选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”** 。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”**。  
   
 ### <a name="options"></a>选项  
  **可用输入列**  
@@ -132,7 +131,7 @@ ms.locfileid: "65727276"
  查看可用目标列的列表。 使用拖放操作可以将表中的可用目标列映射到输入列。  
   
  **输入列**  
- 查看选定的输入列。 可以通过选择“\<忽略>”  以从输出中排除列来移除映射。  
+ 查看选定的输入列。 可以通过选择“\<忽略>”以从输出中排除列来移除映射。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对其进行映射。  
@@ -144,9 +143,9 @@ ms.locfileid: "65727276"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有 ADO NET 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”  选项卡上，双击 ADO NET 目标。  
+2.  在“数据流”选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”** 。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”**。  
   
 ### <a name="options"></a>选项  
  **输入或输出**  
@@ -158,7 +157,7 @@ ms.locfileid: "65727276"
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  未使用。  

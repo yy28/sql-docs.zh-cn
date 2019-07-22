@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 999844d4dcc915d008ecc92f8f3bf82927d2614c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: eb337c62726bb74e2955e20ef940c044d82a8624
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681326"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263637"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>对查询中的多个列进行排序 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-通过使用[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中的“排序顺序”  列，可以指定使用各列对数据进行排序时所依据的顺序。  
+通过使用[“条件”窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)中的“排序顺序”列，可以指定使用各列对数据进行排序时所依据的顺序。  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>依据多个列对查询结果进行排序  
   
-1.  在“条件”  窗格中，单击排序要依据的列的“排序顺序”  字段。  
+1.  在“条件”窗格中，单击排序要依据的列的“排序顺序”字段。  
   
 2.  键入一个整数或从下拉列表中选择一个整数，以指示此列在排序列中的位置。  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1e9c989630296c8417bb6d72f82ef67fcaf28033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76bb0b64f0a3405a20b9b05c8cb1e18d6ab242a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118943"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,23 +43,23 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>参数  
-ciphertext   
-varbinary 类型的变量，包含使用密钥加密的数据  。  
+ciphertext  
+varbinary 类型的变量，包含使用密钥加密的数据。  
   
 **@ciphertext**  
-varbinary 类型的变量，包含使用密钥加密的数据  。  
+varbinary 类型的变量，包含使用密钥加密的数据。  
   
- add_authenticator   
-指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 add_authenticator 具有 int 数据类型   。  
+ add_authenticator  
+指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 必须与数据加密过程中传递给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 add_authenticator 具有 int 数据类型。  
   
- authenticator   
-用作验证器生成基础的数据。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 authenticator 具有 sysname 数据类型   。  
+ authenticator  
+用作验证器生成基础的数据。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 authenticator 具有 sysname 数据类型。  
 
 **@authenticator**  
-包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型   。  
+包含验证器生成所源自的数据的变量。 必须与提供给 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值相匹配。 @authenticator 具有 sysname 数据类型。  
 
 ## <a name="return-types"></a>返回类型  
-varbinary（最大大小为 8,000 个字节）  。 如果用于数据加密的对称密钥未打开，或者如果 ciphertext 为 NULL，则 `DECRYPTBYKEY` 返回 NULL  。  
+varbinary（最大大小为 8,000 个字节）。 如果用于数据加密的对称密钥未打开，或者如果 ciphertext 为 NULL，则 `DECRYPTBYKEY` 返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEY` 使用对称密钥。 该数据库必须已打开此对称密钥。 `DECRYPTBYKEY` 将允许同时打开多个密钥。 在密文解密之前，不必立即打开密钥。  

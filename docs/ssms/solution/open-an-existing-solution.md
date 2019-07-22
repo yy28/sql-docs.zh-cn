@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 6b2292b7eba7129388cff731496191ebe106b897
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: adfb794b14b1ae5d16420a15e5d7c3f1710d1f6a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688297"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264734"
 ---
 # <a name="open-an-existing-solution"></a>打开现有解决方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,9 +26,9 @@ ms.locfileid: "67688297"
   
 ### <a name="to-open-an-existing-solution"></a>打开现有的解决方案  
   
-1.  在“文件”  菜单中，指向“打开”  ，然后单击“项目”/“解决方案”  。  
+1.  在“文件”菜单中，指向“打开”，然后单击“项目”/“解决方案”。  
   
-2.  在“打开项目”  对话框中，定位到所需的解决方案，单击该解决方案，再单击“打开”  。  
+2.  在“打开项目”对话框中，定位到所需的解决方案，单击该解决方案，再单击“打开”。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

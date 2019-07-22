@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028628"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,11 +116,11 @@ ms.locfileid: "66775436"
 ### <a name="default-account"></a>默认帐户  
  安装程序将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器配置为使用安装期间为服务选定的帐户。 其他可能的帐户包括：  
   
--   所有“域\本地”  帐户  
+-   所有“域\本地”帐户  
   
 -   **“本地服务”** 帐户  
   
--   “本地系统”  帐户（不推荐使用，因为其具有不必要的权限）  
+-   “本地系统”帐户（不推荐使用，因为其具有不必要的权限）  
   
 ### <a name="hiding-sql-server"></a>隐藏 SQL Server  
  隐藏的实例是仅支持共享内存连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，设置 `HideInstance` 标记来指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不应对此服务器实例的相关信息做出响应。  

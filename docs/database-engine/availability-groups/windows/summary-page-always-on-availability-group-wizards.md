@@ -14,20 +14,19 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2893160cf40ee338cc9445e1ea1167f53fa049f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3504de2e73d3320768e5db67995285f442dfdf22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013900"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>“摘要”页（Always On 可用性组向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 <a name="Top"></a>  
   
-  本帮助主题介绍 **“摘要”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页上的网格可以查看您为新的可用性组进行的选择。 若要进行一项或多项更改，请单击 **“上一步”** 返回到相关的一个或多个页面。 更改完成后，单击 **“下一步”** 返回到 **“摘要”** 页。 如果您对所做选择满意，则单击 **“完成”** 。  
+  本帮助主题介绍 **“摘要”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页上的网格可以查看您为新的可用性组进行的选择。 若要进行一项或多项更改，请单击 **“上一步”** 返回到相关的一个或多个页面。 更改完成后，单击 **“下一步”** 返回到 **“摘要”** 页。 如果您对所做选择满意，则单击 **“完成”**。  
   
 ##  <a name="PageOptions"></a> “摘要”页选项  
  **脚本**  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f658b9d9780253faf05860912b02687461b9e25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095384"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +49,10 @@ ROW_NUMBER ( )
 ```  
   
 ## <a name="arguments"></a>参数  
- PARTITION BY value_expression   
- 将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为应用 ROW_NUMBER 函数的分区。 value_expression 指定对结果集进行分区所依据的列  。 如果未指定 `PARTITION BY`，则此函数将查询结果集的所有行视为单个组。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ PARTITION BY value_expression  
+ 将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分为应用 ROW_NUMBER 函数的分区。 value_expression 指定对结果集进行分区所依据的列。 如果未指定 `PARTITION BY`，则此函数将查询结果集的所有行视为单个组。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
- order_by_clause   
+ order_by_clause  
  `ORDER BY` 子句可确定在特定分区中为行分配唯一 `ROW_NUMBER` 的顺序。 它是必需的。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>返回类型  

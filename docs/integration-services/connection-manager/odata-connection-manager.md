@@ -13,13 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2382495a0d30e6daae07a9a6865403249981e484
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104106"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
 
@@ -31,11 +30,11 @@ ms.locfileid: "65728112"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>向 SSIS 包添加 OData 连接管理器  
  可以通过三种方式向 SSIS 包添加新 OData 连接管理器：  
   
--   单击“OData 源编辑器”中的“新建…”按钮    
+-   单击“OData 源编辑器”中的“新建…”按钮  
   
--   在“解决方案资源管理器”  中，右键单击“连接管理器”  文件夹，然后单击“新建连接管理器”  。 为 **“连接管理器类型”** 选择 **“ODATA”** 。  
+-   在“解决方案资源管理器”  中，右键单击“连接管理器” 文件夹，然后单击“新建连接管理器” 。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
--   右键单击包设计器底部的“连接管理器”窗格，然后选择“新建连接”   。 为 **“连接管理器类型”** 选择 **“ODATA”** 。  
+-   右键单击包设计器底部的“连接管理器”窗格，然后选择“新建连接”。 为 **“连接管理器类型”** 选择 **“ODATA”**。  
   
 ## <a name="connection-manager-authentication"></a>连接管理器身份验证  
  OData 连接管理器支持五种身份验证模式。  
@@ -52,7 +51,7 @@ ms.locfileid: "65728112"
   
 对于匿名访问，请选择“Windows 身份验证”选项。  
 
-要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项  。 也不可使用任何为多重身份验证配置的选项。
+要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项。 也不可使用任何为多重身份验证配置的选项。
   
 ### <a name="specifying-and-securing-credentials"></a>指定和保护凭据  
  如果 OData 服务需要基本身份验证，则可以在 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)中指定用户名和密码。 在编辑器中输入的值保留在包中。 密码值根据包保护级别进行加密。  
@@ -71,14 +70,14 @@ ms.locfileid: "65728112"
 |ConnectionString|包括连接管理器的其他属性。|  
   
 ## <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”
-  使用“OData 连接管理器编辑器”对话框可以添加与 OData 数据源的连接或者编辑现有连接  。  
+  使用“OData 连接管理器编辑器”对话框可以添加与 OData 数据源的连接或者编辑现有连接。  
   
 ### <a name="options"></a>选项  
  **连接管理器名称**  
  连接管理器的名称。  
   
  **服务文档位置**  
- OData 服务的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/ 。  
+ OData 服务的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/。  
   
  **身份验证**  
 选择以下选项之一：
@@ -88,9 +87,9 @@ ms.locfileid: "65728112"
 -   **Microsoft Dynamics CRM Online**，适用于 Dynamics CRM Online
 -   **Microsoft Online Services**，适用于 Microsoft Online Services
 
-如果选择 Windows 身份验证之外的选项，请输入用户名和密码   。 
+如果选择 Windows 身份验证之外的选项，请输入用户名和密码。 
 
-要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项  。 也不可使用任何为多重身份验证配置的选项。
+要连接到 Microsoft Dynamics AX Online 或 Microsoft Dynamics CRM Online，不可使用 Microsoft Online Services 身份验证选项。 也不可使用任何为多重身份验证配置的选项。
 
  **测试连接**  
  单击此按钮可测试与 OData 源的连接。  

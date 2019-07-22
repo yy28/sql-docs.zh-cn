@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: b79da9d55f40f20608bf2de48b6df70e12a83911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 365ac27f40f50a551d45be36dd87c03920f1a602
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024686"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服务 - 配置 SQL Server 错误日志
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66771962"
   
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>打开“配置 SQL Server 错误日志”对话框  
   
-1.  在对象资源管理器中，展开 SQL Server 的实例，展开  “管理”，右键单击  “SQL Server 日志”，再单击  “配置”。  
+1.  在对象资源管理器中，展开 SQL Server 的实例，展开“管理”，右键单击“SQL Server 日志”，再单击“配置”。  
   
 2.  在 **“配置 SQL Server 错误日志”** 对话框中，从以下选项中进行选择。  
   

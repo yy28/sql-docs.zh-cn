@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67aad831c3e5a98817af9ecd34b17501089a1609
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127120"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "53030641"
   
 
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  您必须是源服务器和目标服务器上 **sysadmin** 固定服务器角色的成员。  
   
 ##  <a name="Overview"></a> 复制数据库向导页 

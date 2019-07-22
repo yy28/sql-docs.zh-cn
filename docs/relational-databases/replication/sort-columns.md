@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a5fb78f4d7ab510f9b7dde3eb8f9d4d43ca157aa
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: dd17c07b9154761f5f9c665e10941d04093c1dd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907603"
 ---
 # <a name="sort-columns"></a>列排序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "67586441"
  要作为排序依据的列的名称。 可以按一个或多个列进行排序。 出于列值计算方式方面的原因，不能按 **“发布”** 选项卡上的 **“当前平均性能”** 或 **“当前最差的性能”** 列进行排序。  
   
  **“排序顺序”**  
- 指定值为 **“升序”** 或 **“降序”** 。  
+ 指定值为 **“升序”** 或 **“降序”**。  
   
  **全部清除**  
  清除排序网格中的所有行。 若要移除某个行，请选择该行，然后按 Delete 键。  

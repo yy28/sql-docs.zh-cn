@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2599cd81950f20b8f1771e5508318955fd8eb80
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114852"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 端点权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对端点的 CONTROL 权限或对服务器的 ALTER ANY ENDPOINT 权限。  
   
 ## <a name="examples"></a>示例  

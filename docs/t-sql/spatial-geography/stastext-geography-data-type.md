@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 08a71fb36be4754a09e9d092dfa3120688bb499e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9050e529cd851d5b6785e3e167c1c081a2079dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042497"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式  。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。  
+  返回 geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。  
   
- 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例   。  
+ 这种 geography 数据类型方法支持大于半球的 FullGlobe 实例或空间实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,14 +39,14 @@ ms.locfileid: "65936195"
 ```  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：nvarchar(max)  
   
  CLR 返回类型：**SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
- geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定  。  
+ geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定。  
   
- 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例  。  
+ 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STAsText()` 根据文本创建一个从 (-122.360, 47.656) 到 (-122.343, 47.656) 的 `LineString``geography` 实例。 然后，它以文本的形式返回结果。  

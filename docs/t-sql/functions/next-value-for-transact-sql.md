@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a8478a619aa6a85e8d398b4c79399faa3b9f56b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da73c06c49f54caf5e750f6816738738e7a03681
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914937"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  *schema_name*  
  包含序列对象的架构的名称。  
   
- sequence_name   
+ sequence_name  
  生成该编号的序列对象的名称。  
   
  *over_order_by_clause*  
@@ -72,7 +71,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** - 对于每个引用的序列对象，将为语句结果中的每一行生成一次新值。  
   
--   INSERT ...  **VALUES** - 对于每个引用的序列对象，将为语句中的每一个插入行生成一个新值。  
+-   INSERT ...**VALUES** - 对于每个引用的序列对象，将为语句中的每一个插入行生成一个新值。  
   
 -   **UPDATE** - 对于每个引用的序列对象，将为语句所更新的每一行生成一个新值。  
   
@@ -91,13 +90,13 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在视图、用户定义的函数或计算列中。  
   
--   在使用 **DISTINCT** **UNION** **UNION ALL** **EXCEPT** 或 **INTERSECT** 运算符的语句中。  
+-   在使用 **DISTINCT****UNION****UNION ALL****EXCEPT** 或 **INTERSECT** 运算符的语句中。  
   
--   在使用 ORDER BY 子句的语句中，除非使用了 NEXT VALUE FOR …   OVER (ORDER BY …)   。  
+-   在使用 ORDER BY 子句的语句中，除非使用了 NEXT VALUE FOR …OVER (ORDER BY …)。  
   
--   在以下子句中：FETCH、OVER、OUTPUT、ON、PIVOT、UNPIVOT、GROUP BY、HAVING、COMPUTE、COMPUTE BY 或 FOR XML            。  
+-   在以下子句中：FETCH、OVER、OUTPUT、ON、PIVOT、UNPIVOT、GROUP BY、HAVING、COMPUTE、COMPUTE BY 或 FOR XML。  
   
--   在使用 **CASE** **CHOOSE** **COALESCE** **IIF** **ISNULL** 或 **NULLIF** 的条件表达式中。  
+-   在使用 **CASE****CHOOSE****COALESCE****IIF****ISNULL** 或 **NULLIF** 的条件表达式中。  
   
 -   在不属于 **INSERT** 语句的 **VALUES** 子句中。  
   
@@ -168,7 +167,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  若要审核 **NEXT VALUE FOR** 函数，请监视 SCHEMA_OBJECT_ACCESS_GROUP。  
   
 ## <a name="examples"></a>示例  
- 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
+ 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  以下示例在名为 `CountBy1` 的架构中使用名为 `Test` 的序列。 将执行以下语句以创建 `Test.CountBy1` 序列。 示例 C 和 E 使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库，因此，将在该数据库中创建 `CountBy1` 序列。  
   

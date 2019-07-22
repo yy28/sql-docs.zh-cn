@@ -1,45 +1,45 @@
 ---
-title: 课程 1 浏览和可视化数据使用 R 和 T-SQL 的 SQL Server 机器学习
-description: 本教程演示如何浏览和可视化 SQL Server 数据使用 R 函数。
+title: 第1课使用 R 和 T-sql 浏览和可视化数据
+description: 演示如何使用 R 函数浏览和可视化 SQL Server 数据的教程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 07a0ce0688e56f0d7b2edac5cdbc87116c75d5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bd91aa464dd4a9e6a58dda5d802a3b81716cf11
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961913"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344524"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
 
-在此步骤中，将查看示例数据，然后生成使用某些图形[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)从[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和泛型[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基础函数中已包含这些 R 函数[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。
+在此步骤中, 你将查看示例数据, 然后使用 RevoScaleR 中的[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)和[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)中的泛型[他](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)函数生成一些图形。这些 R 函数已包含在中[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。
 
-本课程中的主要目标演示如何调用 R 函数从[!INCLUDE[tsql](../../includes/tsql-md.md)]的存储过程中并保存应用程序文件格式中的结果：
+本课的一个重要目标是演示如何从[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程中调用 R 函数, 并以应用程序文件格式保存结果:
 
-+ 创建存储的过程使用**RxHistogram**生成 R 绘图作为 varbinary 数据。 使用**bcp**将导出到图像文件的二进制流。
-+ 创建存储的过程使用**Hist**生成绘图，并将结果另存为 JPG 和 PDF 输出。
++ 使用**RxHistogram**创建存储过程, 以将 R 绘图生成为 varbinary 数据。 使用**bcp**将二进制流导出到映像文件。
++ 使用**他**创建存储过程以生成绘图, 将结果保存为 JPG 和 PDF 输出。
 
 > [!NOTE]
-> 由于可视化是用于了解数据形状和分发此类的强大工具，R 来生成直方图、 散点图、 框绘图和其他数据探索图提供一系列函数和包。 R 通常创建 R 设备使用的图形输出，它可以捕获并存储为图像**varbinary**呈现应用程序中的数据类型。 此外可以将图像保存到任何支持文件格式 (。JPG、。PDF 等）。
+> 由于可视化效果是用于了解数据形状和分布的强大工具, 因此 R 提供了一系列函数和包, 用于生成直方图、散点图、绘图框和其他数据浏览图。 R 通常使用 R 设备创建图像以实现图形输出, 可以捕获并存储为**varbinary**数据类型, 以便在应用程序中呈现。 您还可以将图像保存到任何支持文件格式 (。JPG、。PDF 等)。
 
 ## <a name="review-the-data"></a>查看数据
 
-开发数据科学解决方案通常包括深入的数据探索和数据可视化。 如果你尚未准备好，首先花点时间查看示例数据。
+开发数据科学解决方案通常包括深入的数据探索和数据可视化。 首先, 请花一分钟时间查看示例数据 (如果尚未这样做)。
 
-在原始的公共数据集中，出租车标识符和行程记录提供在单独的文件。 但是，若要使示例数据易于使用，两个原始数据集上进行了联接的列_medallion_， _hack\_许可证_，并且_pickup\_datetime_。  仅获取 1% 的原始记录作为采样记录。 所形成的低采样率数据集有 1,703,957 行和 23 列。
+在原始公共数据集中, 在单独的文件中提供出租车标识符和行程记录。 不过, 为了使示例数据更易于使用, 已将两个原始数据集加入列_medallion_、_黑客\_许可证_和 _\_分拣日期时间_。  仅获取 1% 的原始记录作为采样记录。 所形成的低采样率数据集有 1,703,957 行和 23 列。
 
 **出租车标识符**
   
 -   _Medallion_列表示出租车的唯一 id 号。
   
--   _Hack\_许可证_列包含出租车司机的驾驶证编号 （匿名）。
+-   "_黑客\_许可证_" 列包含出租车驱动程序的许可证编号 (匿名)。
   
 **行程和费用记录**
   
@@ -47,24 +47,24 @@ ms.locfileid: "67961913"
   
 -   每条费用记录都包括付费信息，如付款类型、总付款和小费金额。
   
--   最后三列可用于各种机器学习任务。 _提示\_量_列包含连续数值，并可用作**标签**回归分析。 tipped 列只有是/否值，用于二元分类。  _提示\_类_列中有多个**类标签**并因此可以在该标签用于多类分类任务。
+-   最后三列可用于各种机器学习任务。 " _Tip\_数量_" 列包含连续数值, 可用作回归分析的**标签**列。 tipped 列只有是/否值，用于二元分类。  _Tip\_class_列包含多个**类标签**, 因此可用作多类分类任务的标签。
   
     本演练只演示了二元分类任务；欢迎尝试构建其他两个机器学习任务、回归和多级分类的模型。
   
--   使用标签列的值都基于_提示\_量_列中，使用以下业务规则：
+-   标签列使用的值都基于 " _tip\_数量_" 列, 使用以下业务规则:
   
     |派生列名称|规则|
     |-|-|
      |tipped|如果 tip_amount > 0，则 tipped = 1；否则 tipped = 0|
     |tip_class|级别 0：tip_amount = $0<br /><br />级别 1：tip_amount > $0 且 tip_amount <= $5<br /><br />级别 2：tip_amount > $5 且 tip_amount <= $10<br /><br />级别 3：tip_amount > $10 且 tip_amount <= $20<br /><br />级别 4：tip_amount > $20|
 
-## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>创建使用 rxHistogram 绘制数据的存储的过程
+## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>使用 rxHistogram 创建存储过程以绘制数据
 
-若要创建该绘图，请使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，在提供的增强型 R 函数之一[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。 此步骤中绘制基于数据的直方图[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 可以将此函数包装在存储过程**PlotRxHistogram**。
+若要创建绘图, 请使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)中提供的一个增强的 R 函数。 此步骤根据[!INCLUDE[tsql](../../includes/tsql-md.md)]查询中的数据绘制直方图。 可以将此函数包装在存储过程**PlotRxHistogram**中。
 
-1. 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，右键单击**NYCTaxi_Sample**数据库并选择**新查询**。
+1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中, 右键单击**NYCTaxi_Sample**数据库, 然后选择 "**新建查询**"。
 
-2. 粘贴以下脚本来创建一个存储的过程，绘制直方图。 此示例中名为 **RPlotRxHistogram*。
+2. 粘贴下面的脚本, 以创建绘制直方图的存储过程。 此示例命名为 **RPlotRxHistogram*。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
@@ -89,19 +89,19 @@ ms.locfileid: "67961913"
     GO
     ```
 
-若要了解在此脚本中的关键点包括： 
+在此脚本中要理解的要点包括: 
   
-+ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。 对于作为外部进程运行的 R 脚本，应具有对你的脚本的输入和输入之间的一对一映射[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储过程 SQL Server 启动 R 会话。
++ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。 对于作为外部进程运行的 R 脚本, 你应在脚本的输入之间具有一对一的映射, 并输入[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储过程, 用于在 SQL Server 上启动 R 会话。
   
-+ R 脚本，一个变量中 (`image_file`) 定义用于存储映像。 
++ 在 R 脚本中, 定义了一个`image_file`变量 () 来存储图像。 
 
-+ **RxHistogram** RevoScaleR 库中的函数调用以生成绘图。
++ 调用 RevoScaleR 库中的**rxHistogram**函数来生成绘图。
   
-+ R 设备设置为**关闭**因为正在为 SQL Server 中的外部脚本运行此命令。 通常在 R 中，当发出高级绘图命令时，R 将打开一个图形窗口，调用*设备*。 如果要对文件进行写入或处理输出某种其他方式，您可以关闭该设备。
++ R 设备被设置为**off** , 因为你要在 SQL Server 中以外部脚本的形式运行此命令。 通常在 R 中, 当你发出高级绘图命令时, R 会打开一个名为 "*设备*" 的图形窗口。 如果写入文件或以其他方式处理输出, 可以关闭设备。
   
 + R 图形序列化为 R 数据帧进行输出。
 
-### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>执行存储的过程，并使用 bcp 将二进制数据导出到图像文件
+### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>执行存储过程并使用 bcp 将二进制数据导出到映像文件
 
 该存储过程返回的图像是一个 varbinary 数据流，显然无法直接查看该图像。 但是，可以使用 **bcp** 实用工具获取此 varbinary 数据，并将其保存为客户端计算机上的图像文件。
   
@@ -115,14 +115,14 @@ ms.locfileid: "67961913"
     
     *plot* *0xFFD8FFE000104A4649...*
   
-2. 打开 PowerShell 命令提示符并运行以下命令，提供相应的实例名称、 数据库名称、 用户名和凭据作为参数。 对于使用 Windows 标识，您可以替换 **-U**并 **-P**与 **-T**。
+2. 打开 PowerShell 命令提示符并运行以下命令, 并将适当的实例名称、数据库名称、用户名和凭据提供为参数。 对于使用 Windows 标识的用户, 可以将 **-U**和 **-P**替换为 **-T**。
   
     ```powershell
     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
     ```
 
     > [!NOTE]
-    > 对于 bcp 命令开关区分大小写。
+    > Bcp 的命令开关区分大小写。
   
 3. 如果连接成功，则将提示你输入有关图形文件格式的详细信息。 
 
@@ -158,15 +158,15 @@ ms.locfileid: "67961913"
   
     ![带提示和不带提示的出租车行程](media/rsql-devtut-tippedornot.jpg "带提示和不带提示的出租车行程")  
   
-## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>创建存储的过程，请使用 Hist 和多个输出格式
+## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>使用他和多个输出格式创建存储过程
 
-通常情况下，数据科学家生成多个数据可视化来了解将数据从不同的角度。 在此示例中，您将创建调用的存储的过程**RPlotHist**用于编写直方图、 散和到其他 R 图形。JPG 和。PDF 格式。
+通常, 数据科学家会生成多个数据可视化, 以便从不同的角度深入分析数据。 在此示例中, 将创建一个名为**RPlotHist**的存储过程, 以将直方图、scatterplots 和其他 R 图形写入。JPG 和。PDF 格式。
 
-此存储过程使用**Hist**函数来创建直方图，例如为常用格式导出的二进制数据。JPG、。PDF、 和。PNG。 
+此存储过程使用**他**函数创建直方图, 并将二进制数据导出为常用格式, 如。JPG、。PDF 和。PNG. 
 
-1. 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，右键单击**NYCTaxi_Sample**数据库并选择**新查询**。
+1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中, 右键单击**NYCTaxi_Sample**数据库, 然后选择 "**新建查询**"。
 
-2. 粘贴以下脚本来创建一个存储的过程，绘制直方图。 此示例中名为**RPlotHist** 。
+2. 粘贴下面的脚本, 以创建绘制直方图的存储过程。 此示例名为**RPlotHist** 。
   
     ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
@@ -234,13 +234,13 @@ ms.locfileid: "67961913"
   
 + 此存储过程内的 SELECT 查询的输出存储在默认的 R 数据帧 `InputDataSet`中。 然后，可以调用各种 R 绘图函数来生成实际的图形文件。 大部分嵌入的 R 脚本表示这些图形函数的选项，如 `plot` 或 `hist`。
   
-+ 所有文件将都保存到本地文件夹 C:\temp\Plots。 此目标文件夹由作为存储过程一部分提供给 R 脚本的参数定义。  可以通过更改变量 `mainDir`的值更改此目标文件夹。
++ 所有文件都保存在本地文件夹 C:\temp\Plots. 中。 此目标文件夹由作为存储过程一部分提供给 R 脚本的参数定义。  可以通过更改变量 `mainDir`的值更改此目标文件夹。
 
 + 若要将文件输出到另一个文件夹，请更改存储过程中嵌入的 R 脚本中 `mainDir` 变量的值。 还可以修改脚本以输出不同格式、更多文件，等等。
 
 ### <a name="execute-the-stored-procedure"></a>执行该存储过程
 
-运行以下语句将二进制绘图数据导出到 JPEG 和 PDF 文件格式。
+运行以下语句, 将二进制绘图数据导出为 JPEG 和 PDF 文件格式。
 
 ```sql
 EXEC RPlotHist
@@ -257,28 +257,28 @@ C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
 C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 ```
 
-文件名称中的数字是随机生成，以确保，在尝试写入到现有文件时，不会发生错误。
+文件名称中的数字是随机生成的, 以确保在尝试写入现有文件时不会出现错误。
 
 ### <a name="view-output"></a>查看输出 
 
-若要查看该绘图，请打开目标文件夹并查看创建的存储过程中的 R 代码的文件。
+若要查看绘图, 请打开目标文件夹, 并查看存储过程中由 R 代码创建的文件。
 
-1. 转到标准输出消息中指示的文件夹 （在示例中，这是 C:\temp\plots\)
+1. 前往 STDOUT 消息中所指示的文件夹 (在此示例中, 此为 C:\temp\plots\)
 
-2. 打开`rHistogram_Tipped.jpg`显示得到小费的行程与小费的行程数。 （此直方图是与你在上一步中生成的一个非常类似。）
+2. 打开`rHistogram_Tipped.jpg`此值可显示一条提示与没有提示的行程之间的行程数。 (此直方图非常类似于在上一步中生成的直方图。)
 
-3. 打开`rHistograms_Tip_and_Fare_Amount.pdf`查看绘制根据费用金额的小费金额的分布。
+3. 打开`rHistograms_Tip_and_Fare_Amount.pdf`可查看按费用量绘制的 tip 金额的分布情况。
     
-  ![直方图显示 tip_amount 和 fare_amount](media/rsql-devtut-tipamtfareamt.PNG "直方图显示 tip_amount 和 fare_amount")
+  ![显示 tip_amount 和 fare_amount 的直方图](media/rsql-devtut-tipamtfareamt.PNG "显示 tip_amount 和 fare_amount 的直方图")
 
-4. 打开`rXYPlots_Tip_vs_Fare_Amount.pdf`若要查看费用金额一个散点图 x 轴和 y 轴为小费金额。
+4. 打开`rXYPlots_Tip_vs_Fare_Amount.pdf`此项可在 x 轴上查看具有费用量的散点图以及 y 轴上的笔尖量。
 
-   ![小费金额期所绘制的费用金额](media/rsql-devtut-tipamtbyfareamt.PNG "小费金额期所绘制的费用金额")
+   ![费用金额绘制的 tip 量](media/rsql-devtut-tipamtbyfareamt.PNG "费用金额绘制的 tip 量")
 
 ## <a name="next-lesson"></a>下一课
 
-[第 2 课：使用 T-SQL 创建数据功能](sqldev-create-data-features-using-t-sql.md)
+[第 2 课：使用 T-sql 创建数据功能](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一课
 
-[设置演示 NYC 出租车数据](demo-data-nyctaxi-in-sql.md)
+[设置 NYC 出租车演示数据](demo-data-nyctaxi-in-sql.md)

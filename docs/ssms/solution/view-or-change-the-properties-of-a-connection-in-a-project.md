@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: a9059b4ed02b50c266f8e7d7f4b74d6e78fdc004
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: ffc8e914e0e6939ccb619cad91752b0a05ddd5d1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688363"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265340"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>查看或更改项目中的连接属性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +29,9 @@ ms.locfileid: "67688363"
   
 ### <a name="to-change-the-properties-of-a-connection-in-a-project"></a>更改项目中的连接属性  
   
-1.  在解决方案资源管理器中，右键单击某个连接，再单击“属性窗口”  。  
+1.  在解决方案资源管理器中，右键单击某个连接，再单击“属性窗口”。  
   
-2.  在“属性”窗口中查看连接属性。 可以更改“执行超时值”  、“数据库”  和“登录超时值”  属性。  
+2.  在“属性”窗口中查看连接属性。 可以更改“执行超时值”、“数据库”和“登录超时值”属性。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

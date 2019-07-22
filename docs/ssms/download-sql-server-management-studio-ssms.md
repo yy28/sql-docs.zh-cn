@@ -21,15 +21,14 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0841379b0b64ebe81e4a23f76b21f6cf6abe0ec3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680384"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265162"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -43,11 +42,11 @@ SSMS 是免费的！
 
 ## <a name="download-ssms-181"></a>下载 SSMS 18.1
 
-SSMS 18.1 通用版本 (GA) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio  ！
+SSMS 18.1 通用版本 (GA) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio！
 
 **[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
-SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果安装了 SSMS 18.0 (GA)，请安装 SSMS 18.1 将其升级到 18.1。 如果安装了较早的 SSMS 18.0 预览版，请在安装 SSMS 18.1 之前将其卸载。 
+SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果安装了 SSMS 18.0 (GA)，请安装 SSMS 18.1 将其升级到 18.1。 如果安装了较早的 SSMS 18.0 预览版，请在安装 SSMS 18.1 之前将其卸载。
 
 **版本信息**
 
@@ -59,7 +58,7 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果安装了 SSMS 18.
 
 SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。
 
-如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18 
+如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18
 
 ## <a name="available-languages-ssms-181"></a>可用语言 (SSMS 18.1)
 
@@ -75,7 +74,7 @@ SQL Server Management Studio 18.1：<br>
 
 - **数据库关系图** - SSMS 中添加回了数据库关系图。 有关详细信息，请参阅[数据库关系图](https://feedback.azure.com/forums/908035/suggestions/37507828)。
 - **SSBDIAGNOSE.EXE** - SQL Server 诊断命令行工具已被添加回 SSMS 包。
-- **Integration Services (SSIS)** - 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划...  右键单击 Azure 中 SSIS 目录中的 SSIS 包时显示的菜单项，“在 Azure 中安排执行 SSIS 包”菜单项，位于“工具”菜单项下的“迁移到 Migrate”菜单项，以及右键单击 Azure SQL 数据库托管实例中的 SQL Server 代理下的作业文件夹时显示的“在 Azure 中安排执行 SSIS”    。
+- **Integration Services (SSIS)** - 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划... 右键单击 Azure 中 SSIS 目录中的 SSIS 包时显示的菜单项，“在 Azure 中安排执行 SSIS 包”菜单项，位于“工具”菜单项下的“迁移到 Migrate”菜单项，以及右键单击 Azure SQL 数据库托管实例中的 SQL Server 代理下的作业文件夹时显示的“在 Azure 中安排执行 SSIS”。
 
 有关此版本中新增功能的详细信息，请参阅 [SSMS 发行说明](release-notes-ssms.md)。
 

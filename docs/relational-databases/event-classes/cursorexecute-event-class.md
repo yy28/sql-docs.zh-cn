@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ea3e70f4dddbb711bbb1f66f43bba6d724ecec0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001822"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **CursorExecute** 事件类描述发生在应用程序编程接口 (API) 游标中的游标执行事件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在由游标准备事件创建的执行计划中创建并填充游标时，发生游标执行事件。  
+  **CursorExecute** 事件类描述发生在应用程序编程接口 (API) 游标中的游标执行事件。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在由游标准备事件创建的执行计划中创建并填充游标时，发生游标执行事件。  
   
  将 **CursorExecute** 事件类包括在记录游标性能的跟踪中。 如果 **CursorExecute** 事件类包含在跟踪中，它引起的开销量取决于跟踪期间对数据库使用游标的频率。 如果广泛使用游标，则跟踪可能会显著地降低性能。  
   

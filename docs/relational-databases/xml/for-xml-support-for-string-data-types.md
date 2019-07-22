@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e56377044abe7377f110e534ea7c1e08144b76c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e0ad8310f5938d757c30732cf6b1a78a9770254e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943327"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>字符串数据类型的 FOR XML 支持
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

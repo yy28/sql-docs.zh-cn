@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4d472077fd80a9637cdf72ba29d5a95b345ba0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 295dbd375b099227fb29333a3af925649b1fb88e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098921"
 ---
 # <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "65946648"
  **integer**  
   
 ## <a name="remarks"></a>Remarks  
- 要显示包含多项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括读写活动）的报表，请运行 sp_monitor  。  
+ 要显示包含多项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息（包括读写活动）的报表，请运行 sp_monitor。  
   
 ## <a name="examples"></a>示例  
  以下示例显示了如何返回到当前日期和时间为止总的磁盘读写操作的次数。  

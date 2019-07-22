@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 128dbeaf9ae2e46c8b0376a981ab0d2c9c3dafdc
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907798"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定义和修改合并项目间的联接筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,19 +53,19 @@ ms.locfileid: "67580062"
 -   可以为一组表手动创建联接筛选器，或者复制可以基于表上定义的外键和主键之间的关系自动生成筛选器。 有关自动生成一组联接筛选器的详细信息，请参阅[在合并项目之间自动生成一组联接筛选器 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上定义、修改和删除联接筛选器。    有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”对话框的“筛选行”页上定义、修改和删除联接筛选器。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-join-filter"></a>定义联接筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择现有行筛选器或联接筛选器。      
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择现有行筛选器或联接筛选器。  
   
-2.  单击 **“添加”** ，再单击 **“添加联接以扩展所选筛选器”** 。  
+2.  单击 **“添加”**，再单击 **“添加联接以扩展所选筛选器”**。  
   
-3.  创建联接语句：选择 **“使用生成器创建语句”** 或 **“手动编写联接语句”** 。  
+3.  创建联接语句：选择 **“使用生成器创建语句”** 或 **“手动编写联接语句”**。  
   
-    -   如果选择使用生成器，请使用网格中的列（ **“连接”** 、 **“筛选的表列”** 、 **“运算符”** 、和 **“联接的表列”** ）生成联接语句。  
+    -   如果选择使用生成器，请使用网格中的列（**“连接”**、 **“筛选的表列”**、 **“运算符”**、和 **“联接的表列”**）生成联接语句。  
   
-         网格中的每列都包含一个下拉组合框，使你可以选择两个列和一个运算符（ **=** 、 **<>** 、 **<=** 、 **\<** 、 **>=** 、 **>** 、和 **like**）。 结果显示在 **“预览”** 文本区域中。 如果联接中涉及多个列对，则从 **“连接词”** 列中选择一个连接词（AND 或 OR），然后再输入两列和一个运算符。  
+         网格中的每列都包含一个下拉组合框，使你可以选择两个列和一个运算符（**=**、 **<>**、 **<=**、 **\<**、 **>=**、 **>**、和 **like**）。 结果显示在 **“预览”** 文本区域中。 如果联接中涉及多个列对，则从 **“连接词”** 列中选择一个连接词（AND 或 OR），然后再输入两列和一个运算符。  
   
     -   如果选择手动编写语句，那么请在 **“联接语句”** 文本区域编写联接语句。 使用 **“筛选的表列”** 列表框和 **“联接的表列”** 列表框将列拖放到 **“联接语句”** 文本区域。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "67580062"
   
 4.  指定联接选项：  
   
-    -   如果在筛选的表（父表）中联接的列是唯一的，则选择 **“唯一键”** 。  
+    -   如果在筛选的表（父表）中联接的列是唯一的，则选择 **“唯一键”**。  
   
         > [!CAUTION]  
         >  选择此选项表示联接筛选器中子表和父表是一对一还是一对多的关系。 仅当子表的联接列上具有保证唯一性的约束时才选择此选项。 如果未能正确设置此选项，可能无法收敛数据。  
@@ -89,13 +88,13 @@ ms.locfileid: "67580062"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
+6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-modify-a-join-filter"></a>修改联接筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。       
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“编辑”。  
   
 2.  在 **“编辑联接”** 对话框中，修改筛选器。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "67580062"
   
 #### <a name="to-delete-a-join-filter"></a>删除联接筛选器  
   
-1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。      如果删除的联接筛选器自身是由其他联接扩展而成的，则也将删除那些联接。  
+1.  在新建发布向导的“筛选表行”页或“发布属性 - \<发布>”的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。 如果删除的联接筛选器自身是由其他联接扩展而成的，则也将删除那些联接。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  这些过程显示了父项目上的参数化筛选器以及该项目和相关子项目间的联接筛选器。 可以使用复制存储过程，以编程方式定义和修改联接筛选器。  
@@ -118,7 +117,7 @@ ms.locfileid: "67580062"
   
 2.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 来为发布定义一个或多个相关项目（又称为子项目）。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **@publication** ，为 **@filtername** 指定此筛选器的唯一名称，为 **@article** 指定在步骤 2 中创建的子项目的名称，为 **@join_articlename** 指定要联接到的父项目的名称，并为 **@join_unique_key** 指定以下值之一：  
+3.  在发布服务器上，对发布数据库执行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **@publication**，为 **@filtername**指定此筛选器的唯一名称，为 **@article**指定在步骤 2 中创建的子项目的名称，为 **@join_articlename**指定要联接到的父项目的名称，并为 **@join_unique_key**指定以下值之一：  
   
     -   **0** - 表示父项目与子项目间的多对一或多对多联接。  
   

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ebfc24eef8919ffa43824447ae32773d106158f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68f3d3c7d49d5951296e3c3cee42a7cb3299b4e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912531"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>选择目标（SQL Server 导入和导出向导）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
- 在提供有关数据源以及如何连接到它的信息后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“选择目标”  。 在此页上，需提供有关数据目标以及如何连接到它的信息。
+ 在提供有关数据源以及如何连接到它的信息后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“选择目标” 。 在此页上，需提供有关数据目标以及如何连接到它的信息。
   
 若要了解可使用的数据目标，请参阅 [可使用哪些数据源和目标？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)。 
 
@@ -44,7 +43,7 @@ ms.locfileid: "65723966"
 -   **可用于目标的访问接口可能不止一个。** 通常可以选择任何可用于目标的访问接口。 例如，若要连接到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以使用用于 SQL Server 的 .NET Framework 数据提供程序或 SQL Server ODBC 驱动程序。 （其他提供程序也仍在列表中，但不再受支持。） 
 
 ## <a name="my-destination-isnt-in-the-list"></a>我的目标不在列表中
--   **可能需要从 Microsoft 或第三方下载数据提供程序**。 “目标”  列表中的可用数据提供程序列表仅包含计算机上安装的提供程序。 有关可使用的目标的信息，请参阅[可使用哪些数据源和目标？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
+-   **可能需要从 Microsoft 或第三方下载数据提供程序**。 “目标”列表中的可用数据提供程序列表仅包含计算机上安装的提供程序。 有关可使用的目标的信息，请参阅[可使用哪些数据源和目标？](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 -   **是否有用于目标的 ODBC 驱动程序？** 目标下拉列表中不会列出 ODBC 驱动程序。 如果有用于目标的 ODBC 驱动程序，则选择用于 ODBC 的 .Net Framework 数据提供程序。 然后输入特定于驱动程序的信息。 用于 ODBC 的 .Net Framework 数据提供程序充当 ODBC 驱动程序的包装器。 有关详细信息，请参阅[连接到 ODBC 数据源](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)。
 
@@ -54,7 +53,7 @@ ms.locfileid: "65723966"
 > 若要使用 64 位版本的 SQL Server 导入和导出向导，必须安装 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位应用程序且仅安装 32 位文件，包括 32 位版本的向导。
 
 ## <a name="after-you-choose-a-destination"></a>选择目标之后
-在选择目标之后，“选择目标”  页的其余部分具有数量不定的选项，具体取决于所选的数据提供程序。
+在选择目标之后，“选择目标”页的其余部分具有数量不定的选项，具体取决于所选的数据提供程序。
 
 若要连接到常用目标，请参阅以下页面之一。
 -   [连接到 SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
@@ -70,7 +69,7 @@ ms.locfileid: "65723966"
 有关如何连接到此处未列出的目标的信息，请参阅 [The Connection Strings Reference](https://www.connectionstrings.com/)（连接字符串参考）。 该第三方站点包含示例连接字符串、关于数据提供程序的详细信息以及它们需要的连接信息。
 
 ## <a name="whats-next"></a>下一步是什么？  
- 提供有关数据目标以及有关如何连接到它的信息之后，下一页是“指定表复制或查询”  。 在此页上，可指定要复制整个表还是仅复制特定行。 有关详细信息，请参阅 [指定表复制或查询](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)。  
+ 提供有关数据目标以及有关如何连接到它的信息之后，下一页是“指定表复制或查询” 。 在此页上，可指定要复制整个表还是仅复制特定行。 有关详细信息，请参阅 [指定表复制或查询](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

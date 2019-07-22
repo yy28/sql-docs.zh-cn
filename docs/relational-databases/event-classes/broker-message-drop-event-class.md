@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3a4c026dc32da21fd3cd8310b15bd72ddd1b1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad62ae2b8e9b62e209900df47dfbba9d30557cb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999633"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable 事件类
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-当 Service Broker 无法保留收到的消息，而这个消息本应该送达到此实例中的服务时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 Broker:Message Undeliverable  事件。 对于应转发的消息，请参阅 [Broker:Forwarded Message Dropped 事件类](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md)。  
+当 Service Broker 无法保留收到的消息，而这个消息本应该送达到此实例中的服务时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 Broker:Message Undeliverable 事件。 对于应转发的消息，请参阅 [Broker:Forwarded Message Dropped 事件类](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md)。  
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Broker:Message Undeliverable 事件类数据列  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66265490"
 |**ClientProcessID**|**int**|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|9|是|  
 |**DatabaseID**|**int**|由 USE *database* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database* 语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|3|是|  
 |**错误**|**int**|事件中文本的 **sys.messages** 的消息 ID 号。|31|否|  
-|**EventClass**|**int**|捕获的事件类的类型。 对于 Broker:MessageUndeliverable  ，始终为 160  。|27|否|  
+|**EventClass**|**int**|捕获的事件类的类型。 对于 Broker:MessageUndeliverable，始终为 160。|27|否|  
 |**EventSequence**|**int**|此事件的序列号。|51|否|  
 |**EventSubClass**|**nvarchar**|指明无法送达消息是否为排序的消息。 两个值之一：<br /><br /> **已编序的消息**。 无法送达消息是排序的消息。<br /><br /> **未编序的消息**。 无法送达消息不是排序的消息。|21|是|  
 |**GUID**|**uniqueidentifier**|无法送达消息所属会话的会话 ID。 此标识符将作为消息的一部分进行传输，并在会话双方之间共享。|54|否|  

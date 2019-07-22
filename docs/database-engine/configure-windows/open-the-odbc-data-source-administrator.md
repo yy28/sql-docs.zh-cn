@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: f8e46d571c5379255b138f0555f1e907f98aca73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebb0be56f5d4401ba296733d6430bb82d602d3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997938"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>打开 ODBC 数据源管理器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,21 +29,21 @@ ms.locfileid: "66772199"
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>在 Windows 10 中打开 ODBC 数据源管理器   
 
-1.  在“开始”  页上，键入“ODBC 数据源”  。 “ODBC 数据源桌面应用”  应显示为一个选项。 
+1.  在“开始”页上，键入“ODBC 数据源”。 “ODBC 数据源桌面应用”应显示为一个选项。 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>在 Windows 7 中打开 ODBC 数据源管理器  
   
-1.  在 **“开始”** 菜单上，单击 **“控制面板”** 。  
+1.  在 **“开始”** 菜单上，单击 **“控制面板”**。  
   
-2.  在 **“控制面板”** 中，单击 **“管理工具”** 。  
+2.  在 **“控制面板”** 中，单击 **“管理工具”**。  
   
-3.  在“管理工具”  中，单击“数据源(ODBC)”  。  
+3.  在“管理工具”中，单击“数据源(ODBC)”。  
 
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>在 Windows Server 2008 中打开 ODBC 数据源管理器  
   
-1.  在“开始”  菜单上，指向“管理工具”  ，然后单击“数据源 (ODBC)”  。  
+1.  在“开始”菜单上，指向“管理工具”，然后单击“数据源 (ODBC)”。  
 
 
 > [!NOTE]  

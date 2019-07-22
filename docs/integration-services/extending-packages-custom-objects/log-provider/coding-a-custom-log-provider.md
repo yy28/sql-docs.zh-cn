@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c291eecac9972bea6d2fbde5d6e8ccc1c0356178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3be8fb2d2a918aafdbec48e5eba1c23885585294
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951897"
 ---
 # <a name="coding-a-custom-log-provider"></a>编写自定义日志提供程序代码
 
@@ -35,7 +34,7 @@ ms.locfileid: "65724541"
  重写 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> 方法以缓存对连接集合和事件接口的引用。 可以稍后在日志提供程序的其他方法中使用这些缓存的引用。  
   
 ### <a name="using-the-configstring-property"></a>使用 ConfigString 属性  
- 在设计时。日志提供程序从“配置”  列接收配置信息。 此配置信息与日志提供程序的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性对应。 默认情况下，此列包含一个文本框，您可以从该文本框中检索任何字符串信息。 随 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的大部分日志提供程序都使用此属性存储连接管理器的名称，以供提供程序连接外部数据源时使用。 如果日志提供程序使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性，可使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法验证此属性，并确保此属性已正确设置。  
+ 在设计时。日志提供程序从“配置”列接收配置信息。 此配置信息与日志提供程序的 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性对应。 默认情况下，此列包含一个文本框，您可以从该文本框中检索任何字符串信息。 随 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的大部分日志提供程序都使用此属性存储连接管理器的名称，以供提供程序连接外部数据源时使用。 如果日志提供程序使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 属性，可使用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法验证此属性，并确保此属性已正确设置。  
   
 ### <a name="validating-the-log-provider"></a>验证日志提供程序  
  重写 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 方法以确保提供程序已正确配置并且可以执行。 通常，最低级别的验证应确保 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> 已正确设置。 在日志提供程序从 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> 方法返回 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> 之前，执行不能继续。  

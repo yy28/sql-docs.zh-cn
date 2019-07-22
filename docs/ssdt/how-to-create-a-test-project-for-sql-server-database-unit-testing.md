@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cff6d8342ea1fe4d40616bf07e1189e0ffba030e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897148"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>如何：为 SQL Server 数据库单元测试创建测试项目
 在开始编写评估数据库对象的单元测试之前，您必须首先创建测试项目。 该项目包含 SQL Server 单元测试，但它可以包含其他类型的测试。  
@@ -35,7 +34,7 @@ ms.locfileid: "65098064"
   
 -   将测试项目添加到解决方案中。 测试项目包含标准单元测试，您可以删除该测试。 此项目不包含 SQL Server 单元测试类，你必须添加该类。  
   
--   从“测试”  菜单添加新的 SQL Server 单元测试。 在添加单元测试时，SQL Server Data Tools 还会创建测试项目（如果需要的话）。 此项目包含 SQL Server 单元测试类。 SQL Server 单元测试类包含一个或多个单元测试。  
+-   从“测试”菜单添加新的 SQL Server 单元测试。 在添加单元测试时，SQL Server Data Tools 还会创建测试项目（如果需要的话）。 此项目包含 SQL Server 单元测试类。 SQL Server 单元测试类包含一个或多个单元测试。  
   
 -   在 SQL Server 对象资源管理器中，从一个打开的项目的存储过程、函数或触发器中创建单元测试。 在创建单元测试时，SQL Server Data Tools 还会创建测试项目（如果需要的话）。 此项目包含 SQL Server 单元测试类。 SQL Server 测试类包含一个或多个单元测试。  
   
@@ -43,13 +42,13 @@ ms.locfileid: "65098064"
   
 ### <a name="to-add-a-test-project-to-an-existing-solution"></a>将测试项目添加到现有解决方案中  
   
-1.  在 **“文件”** 菜单中，指向 **“新建”** ，然后单击 **“项目”** 。  
+1.  在 **“文件”** 菜单中，指向 **“新建”**，然后单击 **“项目”**。  
   
     此时将显示“新建项目”  对话框。  
   
-2.  在“已安装的模板”  下，扩展“SQL Server”  节点，然后选择“SQL Server 数据库项目”  。  
+2.  在“已安装的模板”下，扩展“SQL Server”节点，然后选择“SQL Server 数据库项目”。  
   
-3.  在“名称”  中，键入项目名称。  
+3.  在“名称”中，键入项目名称。  
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>创建包含 SQL Server 单元测试类的测试项目  
   

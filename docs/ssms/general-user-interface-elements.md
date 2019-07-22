@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ccc290062027334e8d75f73f28680d351c94c20f
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f8832355b2ef5ae1969d3bd98e84f654ba9cde16
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681893"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265064"
 ---
 # <a name="general-user-interface-elements"></a>常规用户界面元素
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-“编辑器”  、“属性”  窗口以及“工具箱”  是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
+“编辑器”、“属性”窗口以及“工具箱”是 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的一些基本元素。  
   
 ## <a name="in-this-section"></a>本节内容  
 [“关于”对话框](../ssms/about-dialog-box.md)  
@@ -33,7 +32,7 @@ ms.locfileid: "67681893"
 介绍 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何在文档窗口中承载 Web 浏览器。  
   
 [外部工具对话框](../ssms/external-tools-dialog-box.md)  
-允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的工具添加到“工具”  菜单中。  
+允许用户将不属于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的工具添加到“工具”菜单中。  
   
 [属性窗口 (Management Studio)](../ssms/properties-window-management-studio.md)  
 允许用户查看编辑器和设计器中所选对象的属性和事件。 还允许用户编辑和查看文件、项目和解决方案的属性。 在“属性”窗口中可以对某些属性进行编辑。  

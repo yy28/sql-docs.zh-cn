@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 5304bd107c5aa41a2c0be30d7576f4f782d19820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2a266c6cedcec3e11a57fcb08f152789a74097a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014261"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>恢复可用性数据库 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +52,13 @@ ms.locfileid: "66777775"
   
 1.  在对象资源管理器中，连接到承载要恢复的数据库所在的可用性副本的服务器实例，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
 3.  展开该可用性组。  
   
-4.  展开“可用性数据库”  节点，右键单击该数据库，然后单击“恢复数据移动”  。  
+4.  展开“可用性数据库”节点，右键单击该数据库，然后单击“恢复数据移动”。  
   
-5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”** 。  
+5.  在 **“恢复数据移动”** 对话框中，单击 **“确定”**。  
   
 > [!NOTE]  
 >  若要恢复此副本位置上的其他数据库，请对每个数据库重复执行步骤 4 和 5。  

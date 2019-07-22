@@ -14,29 +14,28 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: f3527637613917f8c824a7e7f230d8cd778e9860
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 3be181b428645226cf6e3d675fbab06b9bf4ca11
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686498"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263713"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>向查询中添加表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-创建查询时，实际是在从表或其他表结构对象（视图和某些用户定义的函数）中检索数据。 若要在查询中使用这些对象中的任何对象，可将其添加到“关系图”  窗格中。  
+创建查询时，实际是在从表或其他表结构对象（视图和某些用户定义的函数）中检索数据。 若要在查询中使用这些对象中的任何对象，可将其添加到“关系图”窗格中。  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>向查询中添加表或表值对象  
   
-1.  在查询和视图设计器的“关系图”  窗格中，右键单击背景，然后从快捷菜单中选择“添加表”  。  
+1.  在查询和视图设计器的“关系图”窗格中，右键单击背景，然后从快捷菜单中选择“添加表”。  
   
-2.  在“添加表”  对话框中，选择与要添加到查询中的对象类型相应的选项卡。  
+2.  在“添加表”对话框中，选择与要添加到查询中的对象类型相应的选项卡。  
   
 3.  在项的列表中，双击要添加的每一项。  
   
-4.  完成添加项后，单击“关闭”  。  
+4.  完成添加项后，单击“关闭”。  
   
-    查询和视图设计器会相应地更新“关系图窗格”  、“条件窗格”  和“SQL 窗格”  。  
+    查询和视图设计器会相应地更新“关系图窗格”、“条件窗格”和“SQL 窗格”。  
   
 在 SQL 窗格内的语句中引用表和视图时，所引用的表和视图将自动添加到查询中。  
   
@@ -44,19 +43,19 @@ ms.locfileid: "67686498"
   
 ### <a name="to-add-an-existing-query-to-a-new-query"></a>将现有查询添加到新查询中  
   
-1.  确保在创建的新查询中显示“SQL 窗格”  。  
+1.  确保在创建的新查询中显示“SQL 窗格”。  
   
-2.  在“SQL 窗格”  中，在单词 FROM 后键入左括号和右括号 ()。  
+2.  在“SQL 窗格”中，在单词 FROM 后键入左括号和右括号 ()。  
   
 3.  为现有的查询打开查询设计器。 （现在当您打开了两个查询设计器。）  
   
-4.  显示内部查询的“SQL 窗格”，内部查询是指要包括在新的外部查询中的现有查询  。  
+4.  显示内部查询的“SQL 窗格”，内部查询是指要包括在新的外部查询中的现有查询。  
   
-5.  选中“SQL 窗格”  中的所有文本，然后将其复制到剪贴板中。  
+5.  选中“SQL 窗格”中的所有文本，然后将其复制到剪贴板中。  
   
-6.  单击新查询的“SQL 窗格”  ，将光标置于添加的括号之间，然后粘贴剪贴板中的内容。  
+6.  单击新查询的“SQL 窗格”，将光标置于添加的括号之间，然后粘贴剪贴板中的内容。  
   
-7.  仍然是在“SQL 窗格”  中，在右括号的后面添加别名。  
+7.  仍然是在“SQL 窗格”中，在右括号的后面添加别名。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建表别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  

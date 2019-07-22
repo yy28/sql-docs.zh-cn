@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42896ae8b5c10685c14e73c07ab2dcc2441d80b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9de11f0fcb73eda1b00d7b956e55995d13cd40f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104617"
 ---
 # <a name="scripting-replication"></a>编写复制脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,28 +81,28 @@ ms.locfileid: "63027038"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹或 **“本地订阅”** 文件夹。  
   
-3.  右键单击某个发布或订阅，然后单击 **“生成脚本”** 。  
+3.  右键单击某个发布或订阅，然后单击 **“生成脚本”**。  
   
-4.  在“生成 SQL 脚本 - \<复制对象>”  对话框中指定选项。  
+4.  在“生成 SQL 脚本 - \<复制对象>”对话框中指定选项。  
   
-5.  单击 **“将脚本保存到文件”** 。  
+5.  单击 **“将脚本保存到文件”**。  
   
-6.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”** 。 将显示状态消息。  
+6.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”**。 将显示状态消息。  
   
-7.  单击 **“确定”** ，再单击 **“关闭”** 。  
+7.  单击 **“确定”**，再单击 **“关闭”**。  
   
 #### <a name="to-script-multiple-objects-from-management-studio"></a>从 Management Studio 编写多个对象的脚本  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，连接到分发服务器、发布服务器或订阅服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“生成脚本”** 。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“生成脚本”**。  
   
 3.  在 **“生成 SQL 脚本”** 对话框中指定选项。  
   
-4.  单击 **“将脚本保存到文件”** 。  
+4.  单击 **“将脚本保存到文件”**。  
   
-5.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”** 。 将显示状态消息。  
+5.  在 **“脚本文件位置”** 对话框中输入文件名，然后单击 **“保存”**。 将显示状态消息。  
   
-6.  单击 **“确定”** ，再单击 **“关闭”** 。  
+6.  单击 **“确定”** ，再单击 **“关闭”**。  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 19765373e48ea01c780cc9771c6e55b70333b3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e57a3551660467254a9c291ed78ed41aae30b7c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950137"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65938848"
  将与调用 `STIntersection()` 的实例进行比较的另一个 **geometry** 实例，进行比较的目的是确定这两个实例是否相交。  
   
 ## <a name="return-types"></a>返回类型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry  
   
  CLR 返回类型：**SqlGeometry**  
   

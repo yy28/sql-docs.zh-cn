@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a915eeb07757476929310ada65f99b3408ba373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0146d58a1495ad5c17625edbb9b9c6f2d295cfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985302"
 ---
 # <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value 
 
@@ -36,22 +35,22 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @level_name = ] level_name   
+ [ @level_name = ] level_name  
  现有自定义日志记录级别的名称。  
   
- level_name 为 nvarchar(128)   。  
+ level_name 为 nvarchar(128)。  
   
- [ @property_name = ] property_name   
- 要更改的属性的名称。 有效值为 PROFILE 和 EVENTS   。  
+ [ @property_name = ] property_name  
+ 要更改的属性的名称。 有效值为 PROFILE 和 EVENTS。  
   
- property_name 为 nvarchar(128)   。  
+ property_name 为 nvarchar(128)。  
   
- [ @property_value = ] property_value   
+ [ @property_value = ] property_value  
  指定自定义日志记录级别的指定属性的新值。  
   
  有关配置文件和事件的有效值列表，请参阅 [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)。  
   
- property_value 为 bigint   。  
+ property_value 为 bigint。  
   
 ## <a name="remarks"></a>Remarks  
   

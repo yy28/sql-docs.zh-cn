@@ -8,13 +8,12 @@ ms.date: 09/17/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: 327f59adb36b4a08f2d50b7845694fc2f3b7cf7c
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 10b44f803da7b02ba95f8d6739a5bab9b85eba50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132831"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和灾难恢复合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "67826311"
 |![IDERA][3]|**IDERA**<br>SQL 安全备份是一种适用于 SQL Server 的高性能备份和恢复解决方案，它可以缩短数据库备份时间，减小备份文件大小，在备份文件内提供对数据库的实时读取操作，从而节省资金。<br><br>Microsoft SQL Server：2005 SP1 或更高版本、2008、2008 R2、2012、2014、2016；所有版本 |[网站][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster 是面向所有主要故障的全面和完全自动化的高可用性灾难恢复解决方案，这些故障包括 SQL Server 的硬件、软件、网络和站点故障，以及在本地或云环境中的物理计算机或虚拟机上运行的相关应用程序的故障。<br><br>Microsoft SQL Server：2005 或更高版本；所有版本 |[网站][necec_website]<br>[Datasheet][necec_datasheet]<br>[视频][necec_youtube]<br>[下载][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx 是适用于在生产中运行的有状态容器的解决方案。 借助 Portworx，用户可以使用任何容器计划程序（包括 Kubernetes、Mesosphere DC/OS 和 Docker Swarm）在任何基础结构上管理任何数据库或有状态服务。 Portworx 解决了 DevOps 团队在生产中运行容器化数据库及其他有状态服务时遇到的五个最常见问题：持久性、高可用性、数据自动化、支持多个数据存储区和基础结构，以及安全性。<br><br>SQL Server 2017 on Docker |[网站][portworx_website]<br>[Documentation][portworx_docs]<br>[视频][portworx_youtube]|
-|![SIOS][8] |SIOS <br>SIOS 技术为 Windows 或 Linux 上的 SQL Server 交付经济高效的高可用性和灾难恢复解决方案。 SIOS SANless 群集消除了使用共享存储 SAN 的必要性，使你能够完全灵活地保护你在单个和多站点环境中的物理、虚拟、云和混合云配置中最为重要的应用程序。<br><br>将 SIOS DataKeeper 添加到你的 Windows Server 故障转移群集环境，以创建替换传统共享存储的 SANless 卷资源，从而便于在 Azure 中运行 WSFC。<br><br>SIOS 保护套件是完全灵活的群集解决方案，它保护关键 Linux 应用程序（例如，SQL Server、SAP、HANA、Oracle 和许多其他应用程序）。|[网站][sios_website]<br>[Datasheet][sios_datasheet]<br>[Twitter][sios_twitter]<br>[市场][sios_marketplace]<br>[Video][sios_youtube]|
+|![SIOS][8] |SIOS<br>SIOS 技术为 Windows 或 Linux 上的 SQL Server 交付经济高效的高可用性和灾难恢复解决方案。 SIOS SANless 群集消除了使用共享存储 SAN 的必要性，使你能够完全灵活地保护你在单个和多站点环境中的物理、虚拟、云和混合云配置中最为重要的应用程序。<br><br>将 SIOS DataKeeper 添加到你的 Windows Server 故障转移群集环境，以创建替换传统共享存储的 SANless 卷资源，从而便于在 Azure 中运行 WSFC。<br><br>SIOS 保护套件是完全灵活的群集解决方案，它保护关键 Linux 应用程序（例如，SQL Server、SAP、HANA、Oracle 和许多其他应用程序）。|[网站][sios_website]<br>[Datasheet][sios_datasheet]<br>[Twitter][sios_twitter]<br>[市场][sios_marketplace]<br>[Video][sios_youtube]|
 |![Veeam][1] |**Veeam**<br>Veeam 备份和复制是一种功能强大、简单易用、经济实惠的备份和可用性解决方案。 它可以快速、灵活、可靠地恢复虚拟化应用程序和数据，将 VM（虚拟机）备份和复制整合为一种软件解决方案。 Veeam 备份和复制为 VMware vSphere 和 Microsoft Hyper-V 虚拟环境提供一流的支持。<br><br>SQL Server 2005 SP4 - SQL Server 2016 on Windows |[网站][veeam_website]<br>[Datasheet][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[视频][veeam_youtube]|
 
 ## <a name="next-steps"></a>后续步骤

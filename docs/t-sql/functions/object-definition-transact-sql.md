@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a681af6603cdb7c69f91222e03b8a5c326ea2ffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914895"
 ---
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>参数  
  *object_id*  
- 要使用的对象的 ID。 object_id 的数据类型为 int，并假定表示当前数据库上下文中的对象   。  
+ 要使用的对象的 ID。 object_id 的数据类型为 int，并假定表示当前数据库上下文中的对象。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(max)**  
@@ -55,7 +54,7 @@ OBJECT_DEFINITION ( object_id )
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 这意味着，如果用户对对象没有任何权限，则元数据生成的内置函数（如 OBJECT_DEFINITION）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 位于当前数据库上下文中  。 对象定义的排序规则始终与调用数据库上下文的排序规则匹配。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 位于当前数据库上下文中。 对象定义的排序规则始终与调用数据库上下文的排序规则匹配。  
   
  OBJECT_DEFINITION 适用于以下对象类型：  
   

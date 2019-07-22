@@ -9,14 +9,13 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 52655a320b7f31f012c0820d7d3875b5c4866fe7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9538ad04a6e9e1e95a1fafc1080d132e218a196d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062202"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -68,13 +67,13 @@ ms.locfileid: "67730292"
    
 1. 运行 SQL Server setup.exe。   
    
-2. 选择“安装”，然后选择“全新独立 SQL Server 安装或添加功能”   。  
+2. 选择“安装”，然后选择“全新独立 SQL Server 安装或添加功能”。  
    
-3. 在“功能选择”页上，选择“针对外部数据的 PolyBase 查询服务”  。  
+3. 在“功能选择”页上，选择“针对外部数据的 PolyBase 查询服务”。  
 
    ![PolyBase 服务](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服务")  
    
-4. 在服务器配置页上，将“SQL Server PolyBase 引擎服务”和“SQL Server PolyBase 数据移动服务”配置为在同一域帐户下运行   。  
+4. 在服务器配置页上，将“SQL Server PolyBase 引擎服务”和“SQL Server PolyBase 数据移动服务”配置为在同一域帐户下运行。  
 
    >[!IMPORTANT]
    >在 PolyBase 横向扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。 请参阅 [PolyBase 横向扩展组](#enable)。
@@ -191,13 +190,13 @@ SQL Server PolyBase 安装程序将在计算机上创建以下防火墙规则：
    
 #### <a name="to-enable-the-firewall-rules"></a>启用防火墙规则的步骤  
 
-1. 打开“控制面板”  。  
+1. 打开“控制面板”。  
 
-2. 选择“系统和安全”，然后选择“Windows 防火墙”   。  
+2. 选择“系统和安全”，然后选择“Windows 防火墙”。  
    
-3. 选择“高级设置”，然后选择“入站规则”   。  
+3. 选择“高级设置”，然后选择“入站规则”。  
    
-4. 右键单击已禁用的规则，然后选择“启用规则”  。  
+4. 右键单击已禁用的规则，然后选择“启用规则”。  
    
 ### <a name="polybase-service-accounts"></a>PolyBase 服务帐户
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9c087ed280233cadc67abc8cf0160b1c36664bc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57854937595ba57dee8c36bd4877fd05362f2e40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035203"
 ---
 # <a name="how-to-debug-database-objects"></a>如何：调试数据库对象
 SQL Server 单元测试由以下内容组成：  
@@ -39,21 +38,21 @@ SQL Server 单元测试由以下内容组成：
   
 ### <a name="to-enable-sql-debugging-on-your-test-project"></a>在测试项目上启用 SQL 调试  
   
-1.  打开“解决方案资源管理器”  。  
+1.  打开“解决方案资源管理器”。  
   
-2.  在“解决方案资源管理器”  中，右键单击测试项目，然后单击“属性”  。  
+2.  在“解决方案资源管理器”中，右键单击测试项目，然后单击“属性”。  
   
     将打开与测试项目具有相同名称的属性页。  
   
-3.  在属性页上单击“调试”  。  
+3.  在属性页上单击“调试”。  
   
-4.  在“启用调试器”  下，单击“启用 SQL Server 调试”  。  
+4.  在“启用调试器”下，单击“启用 SQL Server 调试”。  
   
 5.  保存更改。  
   
 ### <a name="to-set-an-increased-execution-context-timeout-to-enable-debugging-for-your-test-project"></a>设置增加的执行上下文超时以便为测试项目启用调试  
   
-1.  在“文件”  菜单上指向“打开”  ，再单击“文件”  。  
+1.  在“文件”菜单上指向“打开”，再单击“文件”。  
   
 2.  浏览至包含测试项目的文件夹，然后双击 app.config 文件。  
   
@@ -74,13 +73,13 @@ SQL Server 单元测试由以下内容组成：
   
 ### <a name="to-add-breakpoints-to-your-transact-sql-script"></a>在你的 Transact\-SQL 脚本中添加断点  
   
-1.  在“视图”  菜单上，打开“SQL Server 对象资源管理器”  。  
+1.  在“视图”菜单上，打开“SQL Server 对象资源管理器”。  
   
-2.  在“数据连接”  下，展开你想要测试的数据库节点。  
+2.  在“数据连接”下，展开你想要测试的数据库节点。  
   
-3.  如果数据库图标旁出现一个小的红色“x”，则与该数据库的连接已关闭。 在这种情况下，右键单击数据库，然后单击“刷新”  。 您可能必须提供凭据才能打开与该数据库的连接。  
+3.  如果数据库图标旁出现一个小的红色“x”，则与该数据库的连接已关闭。 在这种情况下，右键单击数据库，然后单击“刷新”。 您可能必须提供凭据才能打开与该数据库的连接。  
   
-4.  展开“视图”  、“存储过程”  或“函数”  节点以找到你想要调试的对象。  
+4.  展开“视图”、“存储过程”或“函数”节点以找到你想要调试的对象。  
   
 5.  双击要调试的对象。  
   
@@ -88,13 +87,13 @@ SQL Server 单元测试由以下内容组成：
   
 ### <a name="to-debug-your-sql-server-unit-test"></a>调试你的 SQL Server 单元测试  
   
-1.  在 Visual Studio 2010 中，打开（测试 -> Windows）“测试视图”  窗口。 在 Visual Studio 2012 中，打开“测试资源管理器”  窗口。  
+1.  在 Visual Studio 2010 中，打开（测试 -> Windows）“测试视图”窗口。 在 Visual Studio 2012 中，打开“测试资源管理器”窗口。  
   
-2.  右键单击对其中设置了断点的数据库对象执行 Transact\-SQL 脚本的测试并且选择“调试选择”  。  
+2.  右键单击对其中设置了断点的数据库对象执行 Transact\-SQL 脚本的测试并且选择“调试选择”。  
   
     测试将在调试模式中运行，直至遇到数据库对象中的断点。  
   
-3.  （可选）若要打开另一个调试窗口，请打开“调试”  菜单，指向“窗口”  ，然后单击“断点”  、“输出”  或“即时”  。  
+3.  （可选）若要打开另一个调试窗口，请打开“调试”菜单，指向“窗口”，然后单击“断点”、“输出”或“即时”。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  

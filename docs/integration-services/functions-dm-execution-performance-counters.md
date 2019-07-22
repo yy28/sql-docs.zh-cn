@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 543a4502199287432ca8a13220fa95223797340a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 820d4b3dae7643db7f03f4e761b63208f20263e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102794"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函数 - dm_execution_performance_counters
 
@@ -35,7 +34,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @execution_id = ] execution_id   
+ [ @execution_id = ] execution_id  
  包含一个或多个包的执行的唯一标识符。 通过“执行包”任务执行的包在同一个执行中作为父包运行。  
   
  如果未指定执行 ID，则返回多个执行的性能统计信息。 如果你是 **ssis_admin** 数据库角色的成员，将返回所有正在运行的执行的性能统计信息。  如果你不是 **ssis_admin** 数据库角色的成员，则返回你对其具有读权限的正在运行的执行的性能统计信息。 *execution_id* 为 **BigInt**。  

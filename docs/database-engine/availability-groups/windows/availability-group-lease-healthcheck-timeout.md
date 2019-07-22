@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: 51a683d7566fb9a4e7d25da4c89e7ef3ceb1b007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991457"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -30,7 +29,7 @@ ms.locfileid: "67166399"
 
 对于 SQL Server，AG 资源 DLL 基于 AG 租用机制和 Always On 运行状况检测来确定 AG 的运行状况。 AG 资源 DLL 通过 `IsAlive` 操作公开资源运行状况。 资源监视器按照由 `CrossSubnetDelay` 和 `SameSubnetDelay` 群集范围内的值设置的群集检测信号间隔轮询 `IsAlive`。 在主节点上，只要资源 DLL 的 `IsAlive` 调用返回的 AG 运行不正常，群集服务就会启动故障转移。 
 
-群集服务将检测信号发送到群集中的其他节点，并确认从它们接收到的检测信号。 当一个节点检测到来自一系列未确认检测信号的通信故障时，它会广播一条消息，导致所有可访问的节点协调其群集节点运行状况的视图。 这个称为  “重组事件”的事件会保持所有节点的群集状态的一致性。 在重组事件之后，如果仲裁丢失，则包括此分区中的 AG 在内的所有群集资源都将脱机。 该分区中的所有节点都转换为解析状态。 如果存在一个保留仲裁的分区，则 AG 将分配给该分区中的一个节点并成为主副本，而所有其他节点将成为辅助副本。 
+群集服务将检测信号发送到群集中的其他节点，并确认从它们接收到的检测信号。 当一个节点检测到来自一系列未确认检测信号的通信故障时，它会广播一条消息，导致所有可访问的节点协调其群集节点运行状况的视图。 这个称为“重组事件”的事件会保持所有节点的群集状态的一致性。 在重组事件之后，如果仲裁丢失，则包括此分区中的 AG 在内的所有群集资源都将脱机。 该分区中的所有节点都转换为解析状态。 如果存在一个保留仲裁的分区，则 AG 将分配给该分区中的一个节点并成为主副本，而所有其他节点将成为辅助副本。 
 
 ## <a name="always-on-health-detection"></a>Always On 运行状况检测 
 
@@ -115,7 +114,7 @@ WSFC 配置中有四个值负责确定群集超时值
 租用机制由 WSFC 群集中特定于每个 AG 的单个值来控制。 在故障转移群集管理器中导航到此值：
 
 1. 在“角色”选项卡中，找到目标 AG 角色。 单击目标 AG 角色。 
-2. 右键单击窗口底部的 AG 资源，然后选择“属性”  。 
+2. 右键单击窗口底部的 AG 资源，然后选择“属性”。 
 
    ![故障转移群集管理器](media/availability-group-lease-healthcheck-timeout/image2.png) 
 

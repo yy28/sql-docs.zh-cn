@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 815eedc74e64a8c9e6ef38ba8cb9c8b0048aecbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f4d2fbf448dc34d687359724e3ec19d3023262a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967874"
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
 
@@ -43,7 +42,7 @@ ms.locfileid: "65725081"
  单击省略号可以打开 **“表达式生成器”** 对话框。 有关详细信息，请参阅 [Expression Builder](../../integration-services/expressions/expression-builder.md)。  
   
  **删除**  
- 选择一个属性，再单击“删除”  。  
+ 选择一个属性，再单击“删除”。  
   
 ## <a name="see-also"></a>另请参阅  
  [“表达式”页](../../integration-services/expressions/expressions-page.md)   

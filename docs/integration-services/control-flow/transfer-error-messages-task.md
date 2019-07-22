@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cc7a5b230120f7f392d33793a18994932ce8f05c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f226fb77fa0b690427da8121992ce15a44c6ce2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011179"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
 
@@ -97,14 +96,14 @@ ms.locfileid: "65727401"
  键入传输错误消息任务的说明。  
   
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>传输错误消息任务编辑器（“消息”页）
-  可以使用“传输错误消息任务编辑器”  对话框的“消息”  页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例复制到另一个实例。 
+  可以使用“传输错误消息任务编辑器”对话框的“消息”页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例复制到另一个实例。 
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接  。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **IfObjectExists**  
  选择在目标服务器上已存在同名的错误消息时，该任务是应该覆盖现有的用户定义错误消息还是跳过现有消息，或是失败。  
@@ -120,13 +119,13 @@ ms.locfileid: "65727401"
 |**False**|仅复制指定的用户定义消息。|  
   
  **ErrorMessagesList**  
- 单击浏览按钮 (...) 以选择要复制的错误消息  。  
+ 单击浏览按钮 (...) 以选择要复制的错误消息。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  
   
  **ErrorMessageLanguagesList**  
- 单击浏览按钮 (...) 以选择将用户定义的错误消息发送到目标服务器所使用的语言  。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
+ 单击浏览按钮 (...) 以选择将用户定义的错误消息发送到目标服务器所使用的语言。 在目标服务器上必须存在 us_english（代码页 1033）版本的消息，才能将其他语言版本的消息传输到目标服务器。  
   
 > [!NOTE]  
 >  必须先指定 **SourceConnection** ，然后才能选择要复制的错误消息。  

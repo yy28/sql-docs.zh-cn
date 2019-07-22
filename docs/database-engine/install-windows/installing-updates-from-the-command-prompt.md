@@ -10,13 +10,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990912"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
 
@@ -87,7 +86,7 @@ ms.locfileid: "66794848"
 |**/UpdateEnabled**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和加入产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。| 
 |**/IAcceptSQLServerLicenseTerms**|仅在为无人参与安装指定了 /Q 或 /QS 参数时是必需的。| 
  
- \* 不能通过指定此参数来将更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备实例。 必须指定 /instanceID 参数。 
+ * 不能通过指定此参数来将更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备实例。 必须指定 /instanceID 参数。 
  
 ## <a name="see-also"></a>另请参阅 
  [SQL Server 服务安装概述](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 

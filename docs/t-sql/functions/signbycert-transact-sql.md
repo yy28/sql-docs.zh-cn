@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 42c1e1f86a52ddc441048d25a5ef5d3b8071b96a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56d4af001c84fd4f175c0c2504bef39a12015e7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139141"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,17 +45,17 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ```  
   
 ## <a name="arguments"></a>参数  
- certificate_ID   
- 当前数据库中证书的 ID。 certificate_ID 是 int   。  
+ certificate_ID  
+ 当前数据库中证书的 ID。 certificate_ID 是 int。  
   
  *@cleartext*  
- 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据     。  
+ 类型为 nvarchar、char、varchar 或 nchar 的变量，其中包含要签名的数据。  
   
- ' password '     
- 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)   。  
+ ' password '  
+ 用来对证书私钥进行加密的密码。 password 的数据类型为 nvarchar(128)。  
   
 ## <a name="return-types"></a>返回类型  
- varbinary（最大大小为 8000 个字节）  。  
+ varbinary（最大大小为 8000 个字节）。  
   
 ## <a name="remarks"></a>Remarks  
  需要对证书具有 CONTROL 权限。  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9191be9659f2cbdb42d0b92adef23972292070ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894887"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,65 +83,65 @@ DECLARE
 ```  
   
 ## <a name="arguments"></a>参数  
-@local_variable   
+@local_variable  
  变量的名称。 变量名必须以 at 符 (@) 开头。 局部变量名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
-data_type   
- 任何系统提供的公共语言运行时 (CLR) 用户定义表类型或别名数据类型。 变量的数据类型不能为 text、ntext 或 image    。  
+data_type  
+ 任何系统提供的公共语言运行时 (CLR) 用户定义表类型或别名数据类型。 变量的数据类型不能为 text、ntext 或 image。  
   
  有关系统数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 有关 CLR 用户定义类型或别名数据类型的详细信息，请参阅 [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)。  
   
- =value   
+ =value  
  以内联方式为变量赋值。 值可以是常量或表达式，但它必须与变量声明类型匹配，或者可隐式转换为该类型。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
-@cursor_variable_name   
+@cursor_variable_name  
  cursor 变量的名称。 游标变量名称必须以 at 符 (@) 开头，并符合有关标识符的规则。  
   
 CURSOR  
  指定变量是局部游标变量。  
   
-@table_variable_name   
- 表类型的变量的名称  。 变量名称必须以 at 符 (@) 开头，并符合有关标识符的规则。  
+@table_variable_name  
+ 表类型的变量的名称。 变量名称必须以 at 符 (@) 开头，并符合有关标识符的规则。  
   
 <table_type_definition>  
-定义表数据类型  。 表声明包括列定义、名称、数据类型和约束。 允许的约束类型只包括 PRIMARY KEY、UNIQUE、NULL 和 CHECK。 如果类型绑定了规则或默认定义，则不能将别名数据类型用作列标量数据类型。
+定义表数据类型。 表声明包括列定义、名称、数据类型和约束。 允许的约束类型只包括 PRIMARY KEY、UNIQUE、NULL 和 CHECK。 如果类型绑定了规则或默认定义，则不能将别名数据类型用作列标量数据类型。
   
 \<table_type_definiton> 是在 CREATE TABLE 中用于定义表的信息子集。 其中包含了元素和主要定义。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。  
   
  *n*  
- 指示可以指定多个变量并对变量赋值的占位符。 声明表变量时，表变量必须是 DECLARE 语句中声明的唯一变量   。  
+ 指示可以指定多个变量并对变量赋值的占位符。 声明表变量时，表变量必须是 DECLARE 语句中声明的唯一变量。  
   
- column_name   
+ column_name  
  表中的列的名称。  
   
- scalar_data_type   
+ scalar_data_type  
  指定列是标量数据类型。  
   
- computed_column_expression   
- 定义计算列值的表达式。 计算列由同一表中的其他列通过表达式计算而得。 例如，计算列可以定义为 cost、AS、price \* qty   。表达式可以是非计算列名称、常量、内置函数、变量，也可以是用一个或多个运算符连接的上述元素的任意组合。 表达式不能为子查询或用户定义函数。 表达式不能引用 CLR 用户定义类型。  
+ computed_column_expression  
+ 定义计算列值的表达式。 计算列由同一表中的其他列通过表达式计算而得。 例如，计算列可以定义为 cost、AS、price \* qty。表达式可以是非计算列名称、常量、内置函数、变量，也可以是用一个或多个运算符连接的上述元素的任意组合。 表达式不能为子查询或用户定义函数。 表达式不能引用 CLR 用户定义类型。  
   
- [ COLLATE collation_name  ]  
- 指定列的排序规则。 collation_name 可以是 Windows 排序规则名称或 SQL 排序规则名称。只适用于 char、varchar、text、nchar、nvarchar 和 ntext 等数据类型列        。 如果未指定，则该列的排序规则是用户定义数据类型的排序规则（如果列为用户定义数据类型）或当前数据库的排序规则。  
+ [ COLLATE collation_name]  
+ 指定列的排序规则。 collation_name 可以是 Windows 排序规则名称或 SQL 排序规则名称。只适用于 char、varchar、text、nchar、nvarchar 和 ntext 等数据类型列。 如果未指定，则该列的排序规则是用户定义数据类型的排序规则（如果列为用户定义数据类型）或当前数据库的排序规则。  
   
  有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)。  
   
  DEFAULT  
- 如果在插入过程中未显式提供值，则指定为列提供的值。 DEFAULT 定义可适用于除定义为 timestamp 或带 IDENTITY 属性的列以外的任何列  。 删除表时，将删除 DEFAULT 定义。 只有常量值（如字符串）、系统函数（如 SYSTEM_USER()）或 NULL 可用作默认参数。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。  
+ 如果在插入过程中未显式提供值，则指定为列提供的值。 DEFAULT 定义可适用于除定义为 timestamp 或带 IDENTITY 属性的列以外的任何列。 删除表时，将删除 DEFAULT 定义。 只有常量值（如字符串）、系统函数（如 SYSTEM_USER()）或 NULL 可用作默认参数。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。  
   
- constant_expression   
+ constant_expression  
  用作列的默认值的常量、NULL 或系统函数。  
   
  IDENTITY  
- 指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、decimal(p,0) 或 numeric(p,0) 列      。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
+ 指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将为列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起使用，作为表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、decimal(p,0) 或 numeric(p,0) 列。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
   
- seed   
+ seed  
  是装入表的第一行所使用的值。  
   
- increment   
+ increment  
  添加到以前装载的列标识值的增量值。  
   
  ROWGUIDCOL  
- 指示新列是行的全局唯一标识符列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列  。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列  。  
+ 指示新列是行的全局唯一标识符列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列。  
   
  NULL | NOT NULL  
  指示变量中是否允许使用 Null。 默认值为 NULL。  
@@ -156,7 +155,7 @@ CURSOR
  CHECK  
  一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。  
   
- logical_expression   
+ logical_expression  
  返回 TRUE 或 FALSE 的逻辑表达式。  
   
 ## <a name="remarks"></a>Remarks  
