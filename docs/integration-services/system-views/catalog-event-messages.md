@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4367b4e4ae9c315bd8462b72cbac020294fecdcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03245a13f270990ff8a1307a10bad797fc155289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017482"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages 
 
@@ -43,8 +42,8 @@ ms.locfileid: "65715198"
 |Subcomponent_name|nvarchar(4000)|作为消息源的数据流组件。<br /><br /> 当 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 引擎返回消息时，SSIS.Pipeline 将出现在该列中。|  
 |Package_path|nvarchar(max)|包内组件的唯一路径。|  
 |Execution_path|nvarchar(max)|从父包到执行该组件的点的完整路径。<br /><br /> 此路径还捕获组件的迭代。|  
-|threadID|ssNoversion|将消息记入日志时正在执行的线程的 ID。|  
-|Message_code|ssNoversion|与此消息关联的代码。|  
+|threadID|INT|将消息记入日志时正在执行的线程的 ID。|  
+|Message_code|INT|与此消息关联的代码。|  
   
 ## <a name="remarks"></a>Remarks  
  此视图显示下列消息源类型。  
