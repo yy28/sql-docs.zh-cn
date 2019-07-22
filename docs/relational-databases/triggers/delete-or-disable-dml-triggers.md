@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5001d5e4df6a8f1cecfea387da4184ba6e417529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8640da8c6363b25342b210043763433a74835691
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056140"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>删除或禁用 DML 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47679105"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除或禁用 DML 触发器，请使用：**  
   
@@ -53,9 +52,9 @@ ms.locfileid: "47679105"
   
 -   禁用触发器不会删除该触发器。 该触发器仍然作为对象存在于当前数据库中。 但是，当执行任意 INSERT、UPDATE 或 DELETE 语句（在其上对触发器进行了编程）时，触发器将不会激发。 已禁用的触发器可以被重新启用。 启用触发器并不是要重新创建它。 触发器将以最初创建它时的方式激发。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要删除 DML 触发器，要求对要定义触发器的表或视图具有 ALTER 权限。  
   
  若要禁用或启用 DML 触发器，用户必须至少对为其创建触发器的表或视图具有 ALTER 权限。  
@@ -66,29 +65,29 @@ ms.locfileid: "47679105"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要删除的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要删除的触发器的表。  
   
-3.  展开 **“触发器”**，右键单击要删除的触发器，再单击 **“删除”**。  
+3.  展开 **“触发器”** ，右键单击要删除的触发器，再单击 **“删除”** 。  
   
-4.  在 **“删除对象”** 对话框中，确认要删除的触发器，然后单击 **“确定”**。  
+4.  在 **“删除对象”** 对话框中，确认要删除的触发器，然后单击 **“确定”** 。  
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要禁用的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要禁用的触发器的表。  
   
-3.  展开 **“触发器”**，右键单击要禁用的触发器，再单击 **“禁用”**。  
+3.  展开 **“触发器”** ，右键单击要禁用的触发器，再单击 **“禁用”** 。  
   
-4.  若要启用触发器，请单击 **“启用”**。  
+4.  若要启用触发器，请单击 **“启用”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>删除 DML 触发器  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 执行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 语句以创建 `Sales.bonus_reminder` 触发器。 若要删除该触发器，请执行 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 语句。  
   
@@ -120,9 +119,9 @@ GO
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>禁用和启用 DML 触发器  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 执行 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) 语句以创建 `Sales.bonus_reminder` 触发器。 若要禁用和启用该触发器，请分别执行 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 语句和 [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) 语句。  
   

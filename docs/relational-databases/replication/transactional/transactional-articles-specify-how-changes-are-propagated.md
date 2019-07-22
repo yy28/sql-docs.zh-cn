@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121260"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>事务项目 - 指定如何传播更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "47683045"
 ## <a name="default-and-custom-stored-procedures"></a>默认和自定义存储过程  
  默认情况下，复制为每个表项目创建的三个过程为：  
   
--   **sp_MSins_\<** *tablename* **>**，用于处理插入。  
+-   **sp_MSins_\<** *tablename* **>** ，用于处理插入。  
   
--   **sp_MSupd_\<** *tablename* **>**，用于处理更新。  
+-   **sp_MSupd_\<** *tablename* **>** ，用于处理更新。  
   
--   **sp_MSdel_\<** *tablename* **>**，用于处理删除。  
+-   **sp_MSdel_\<** *tablename* **>** ，用于处理删除。  
   
- 过程中使用的 **\<**_tablename_**>** 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
+ 过程中使用的 **\<** _tablename_ **>** 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
   
  所有这些过程都可以替换为在将项目添加到发布中时指定的自定义过程。 自定义过程用于应用程序需要自定义逻辑的情况，例如在订阅服务器上更新行时将数据插入审核表。 有关指定自定义存储过程的详细信息，请参阅上面列出的“如何”主题。  
   
@@ -118,7 +117,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>SCALL 语法  
  UPDATE 存储过程  
- 处理 UPDATE 语句的存储过程将只传递已更改的那些列的更新值，后面依次是主键列的原始值和一个指明已更改列的位掩码 (**binary(n)**) 参数。 在下面的示例中，列 2 (c2) 未更改：  
+ 处理 UPDATE 语句的存储过程将只传递已更改的那些列的更新值，后面依次是主键列的原始值和一个指明已更改列的位掩码 (**binary(n)** ) 参数。 在下面的示例中，列 2 (c2) 未更改：  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +125,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>MCALL 语法  
  UPDATE 存储过程  
- 处理 UPDATE 语句的存储过程将传递在项目中定义的所有列的更新值，后面依次跟主键列的原始值和一个指示已更改列的位掩码 (**binary(n)**) 参数：  
+ 处理 UPDATE 语句的存储过程将传递在项目中定义的所有列的更新值，后面依次跟主键列的原始值和一个指示已更改列的位掩码 (**binary(n)** ) 参数：  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  

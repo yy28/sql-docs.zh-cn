@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3739277da5fa62a1fdafb596e44c85d8e9258fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bffe0040c4108fdadc2ac163b5a48a53abc7173
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907735"
 ---
 # <a name="delete-a-publication"></a>删除发布
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47625165"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击要删除的发布，然后单击 **“删除”**。  
+3.  右键单击要删除的发布，然后单击 **“删除”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式删除发布。 使用的存储过程取决于要删除的发布的类型。  
@@ -60,7 +59,7 @@ ms.locfileid: "47625165"
   
     -   若要删除单个发布，请在发布服务器上，对发布数据库执行 [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) 。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 **@type** @type **@type**文件夹中删除发布。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force**文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 **@type** @type **@type** 文件夹中删除发布。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force** 文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定数据库的名称。  
   
         > [!NOTE]  
         >  将 **@force** @type **@force** 可能会使与复制相关的发布对象保留在数据库中。  
@@ -75,7 +74,7 @@ ms.locfileid: "47625165"
   
     -   若要删除单个发布，请在发布服务器上对发布数据库执行 [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 **@type** @type **@type**文件夹中删除发布。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force**文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 **@type** @type **@type** 文件夹中删除发布。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force** 文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定数据库的名称。  
   
         > [!NOTE]  
         >  将 **@force** @type **@force** 可能会使与复制相关的发布对象保留在数据库中。  

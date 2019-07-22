@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a3bbb45c7ef3d9d30cee90de66b7db4b47b11873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d667b80d2ad7d5b58351ff25d3b1d5b60176b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121273"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>事务项目 - 重新生成以反映架构更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47842235"
   
     1.  执行 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 时，请将 **@schema_option** 0x02 位设置为 **false**，以便复制不会自动在订阅服务器上生成自定义过程。  
   
-    2.  每次更改架构前，请执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 来创建新脚本文件并注册具有复制的脚本。 将参数 **@type** 指定为“custom_script”值，并将参数 **@value**。  
+    2.  每次更改架构前，请执行 [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 来创建新脚本文件并注册具有复制的脚本。 将参数 **@type** 指定为“custom_script”值，并将参数 **@value** 。  
   
      下次进行相关的架构更改时，此脚本会在每个订阅服务器上、在 DDL 命令所在的事务内执行。 更改架构后，此脚本将撤消注册。 在后续架构更改后必须重新注册此脚本，使其执行。  
   

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0211b346906daaa6d32e9dd3824d0f40dd2f008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 899bd7aada6364449fa71e9f87839447de73dedd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909673"
 ---
 # <a name="indexes"></a>索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47770355"
 |----------------|-----------------|----------------------------|  
 |哈希|借助于哈希索引，可通过内存中的哈希表来访问数据。 哈希索引的内存用量固定不变，是存储桶数量的函数。|[在内存优化表上使用索引的准则](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [哈希索引设计指南](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |内存优化非聚集索引|对于内存优化的非聚集索引，内存使用量依赖于行计数以及索引键列的大小|[在内存优化表上使用索引的准则](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [内存优化非聚集索引设计指南](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
-|群集|聚集索引基于聚集索引键按顺序排序和存储表或视图中的数据行。 聚集索引按 B 树索引结构实现，B 树索引结构支持基于聚集索引键值对行进行快速检索。|[描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md)<br /><br /> [聚集索引设计指南](../../relational-databases/sql-server-index-design-guide.md#Clustered)|  
+|聚集|聚集索引基于聚集索引键按顺序排序和存储表或视图中的数据行。 聚集索引按 B 树索引结构实现，B 树索引结构支持基于聚集索引键值对行进行快速检索。|[描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md)<br /><br /> [聚集索引设计指南](../../relational-databases/sql-server-index-design-guide.md#Clustered)|  
 |非聚集|既可以使用聚集索引来为表或视图定义非聚集索引，也可以根据堆来定义非聚集索引。 非聚集索引中的每个索引行都包含非聚集键值和行定位符。 此定位符指向聚集索引或堆中包含该键值的数据行。 索引中的行按索引键值的顺序存储，但是不保证数据行按任何特定顺序存储，除非对表创建聚集索引。|[描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [创建非聚集索引](../../relational-databases/indexes/create-nonclustered-indexes.md)<br /><br /> [非聚集索引设计指南](../../relational-databases/sql-server-index-design-guide.md#Nonclustered)|  
 |唯一|唯一索引确保索引键不包含重复的值，因此，表或视图中的每一行在某种程度上是唯一的。<br /><br /> 唯一性可以是聚集索引和非聚集索引的属性。|[创建唯一索引](../../relational-databases/indexes/create-unique-indexes.md)<br /><br /> [唯一索引设计指南](../../relational-databases/sql-server-index-design-guide.md#Unique)|  
 |columnstore|内存中列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。<br /><br /> 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。|[列存储索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)<br /><br /> [列存储索引设计指南](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)|  

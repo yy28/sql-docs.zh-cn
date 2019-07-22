@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7d71a8622496d89c18ddb8ab68fdc5272ae4d61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907955"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>配置快照属性（复制 Transact-SQL 编程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

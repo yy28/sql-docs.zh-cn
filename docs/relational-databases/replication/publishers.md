@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8370c989cb442de305c57e239beaff827bef37f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1813cb8f1790fc7383b4eb2fac747cb3efdcb290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021278"
 ---
 # <a name="publishers"></a>“分发服务器属性”
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47701165"
   
 ## <a name="options"></a>选项  
  **发布服务器**  
- 选择允许使用此分发服务器的服务器。 请单击发布服务器旁边的属性按钮 (**...**) 以查看和设置其他属性。  
+ 选择允许使用此分发服务器的服务器。 请单击发布服务器旁边的属性按钮 ( **...** ) 以查看和设置其他属性。  
   
  **“添加”**  
  如果希望允许的服务器没有列出，请单击 **“添加”** 向可用发布服务器列表中添加一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器。  
