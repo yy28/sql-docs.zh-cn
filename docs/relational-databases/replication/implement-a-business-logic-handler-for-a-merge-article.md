@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8aed6c45ec44e6373db0d018a1190f7295e9775f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128075"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,10 +100,10 @@ ms.locfileid: "47658075"
   
 1.  在发布服务器中，执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) 以验证该程序集是否尚未注册为业务逻辑处理程序。  
   
-2.  在分发服务器上，执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)，为 @article_resolver 指定业务逻辑处理程序的友好名称，为 @is_dotnet_assembly 指定值 true，为 @dotnet_assembly_name 指定程序集的名称，并为 @dotnet_class_name 指定替换 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的完全限定名称。  
+2.  在分发服务器上，执行 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)，为 @article_resolver  指定业务逻辑处理程序的友好名称，为 @is_dotnet_assembly  指定值 true  ，为 @dotnet_assembly_name  指定程序集的名称，并为 @dotnet_class_name  指定替换 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的完全限定名称。  
   
     > [!NOTE]  
-    >  如果未将该程序集部署在与合并代理可执行文件相同的目录下、与同步启动合并代理的应用程序相同的目录下，或者全局程序集缓存 (GAC) 中，则您需要为 **@dotnet_assembly_name**。 使用 Web 同步时，必须指定程序集在 Web 服务器中的位置。  
+    >  如果未将该程序集部署在与合并代理可执行文件相同的目录下、与同步启动合并代理的应用程序相同的目录下，或者全局程序集缓存 (GAC) 中，则您需要为 **@dotnet_assembly_name** 。 使用 Web 同步时，必须指定程序集在 Web 服务器中的位置。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>将业务逻辑处理程序与新的表项目一起使用  
   
@@ -112,7 +111,7 @@ ms.locfileid: "47658075"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>将业务逻辑处理程序用于现有的表项目  
   
-1.  执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 来定义项目，指定 **@publication**、**@article**，为 **@property** 指定值 **article_resolver**，为 **@value** 指定业务逻辑处理程序的友好名称。  
+1.  执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 来定义项目，指定 **@publication** 、 **@article** ，为 **@property** 指定值 **article_resolver**，为 **@value** 指定业务逻辑处理程序的友好名称。  
   
 ###  <a name="TsqlExample"></a> 示例（复制编程方式）  
  该示例演示了可创建审核日志的业务逻辑处理程序。  

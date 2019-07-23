@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11bf0c61a676b697254571785f1e581480464728
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009326"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
 
@@ -31,16 +30,16 @@ ms.locfileid: "58478082"
   
 -   在命令提示符处，键入 **sqlps**，然后按 Enter。 键入 **cd xevent**，然后按 Enter。 然后，可以使用 **cd** 和 **dir** 命令（或 **Set-Location** 和 **Get-Childitem** cmdlet）导航到服务器名称和实例名称。  
   
--   在对象资源管理器中，展开实例名称，展开“管理”，右键单击“扩展事件”，然后单击“启动 PowerShell”。 这将在以下路径中启动 PowerShell：  
+-   在对象资源管理器中，展开实例名称，展开“管理”  ，右键单击“扩展事件”  ，然后单击“启动 PowerShell”  。 这将在以下路径中启动 PowerShell：  
   
      PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
-    >  您可以从 **“扩展事件”** 下的任意节点启动 PowerShell。 例如，你可以右键单击“会话”，然后单击“启动 PowerShell”。 这将在下一级别（即“会话”文件夹）启动 PowerShell。  
+    >  您可以从 **“扩展事件”** 下的任意节点启动 PowerShell。 例如，你可以右键单击“会话”  ，然后单击“启动 PowerShell”  。 这将在下一级别（即“会话”文件夹）启动 PowerShell。  
   
  您可以浏览 XEvent 文件夹树以查看现有的扩展事件会话及其关联的事件、目标和谓词。 例如，在 PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*> 路径下，如果你键入 **cd sessions**，按“Enter”，键入 **dir**，然后按“Enter”，则会看到该实例上存储的会话列表。 您还可以查看会话是否正在运行（如果正在运行，那么可以查看运行了多长时间），以及会话是否配置为在实例启动时启动。  
   
- 若要查看与会话关联的事件、它们的谓词以及目标，您可以将目录更改为该会话的名称，然后查看事件或目标文件夹。 例如，若要查看与默认系统运行状况会话关联的事件以及它们的谓词，请在 PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*\Sessions> 路径下，键入 **cd system_health\events,**，按“Enter”，键入 **dir**，然后按“Enter”。  
+ 若要查看与会话关联的事件、它们的谓词以及目标，您可以将目录更改为该会话的名称，然后查看事件或目标文件夹。 例如，若要查看与默认系统运行状况会话关联的事件以及它们的谓词，请在 PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*\Sessions> 路径下，键入 **cd system_health\events,** ，按“Enter”，键入 **dir**，然后按“Enter”。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序是一种非常强大的工具，您可以用其创建、更改和管理扩展事件会话。 下面一节提供将 PowerShell 脚本与扩展事件结合使用的一些基本示例。  
   

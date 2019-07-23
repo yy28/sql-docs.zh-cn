@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 803c1fccf0369497da75554842d34c72d4c5b95f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117129"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ```  
   
 ## <a name="arguments"></a>参数  
- role_name  
+ role_name   
  待创建的服务器角色的名称。  
   
- AUTHORIZATION server_principal  
+ AUTHORIZATION server_principal   
  将拥有新服务器角色的登录名。 如果未指定登录名，则执行 CREATE SERVER ROLE 的登录名将拥有该服务器角色。  
   
 ## <a name="remarks"></a>Remarks  
@@ -61,7 +60,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CREATE SERVER ROLE 权限，或者 sysadmin 固定服务器角色中的成员身份。  
   
  还需要针对登录名的 *server_principal* 的 IMPERSONATE 权限、针对用作 *server_principal*的服务器角色的 ALTER 权限或用作 server_principal 的 Windows 组的成员身份。  

@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3bda26c21dcb38475373635ff4ead6d92f1b634
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115584"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用“重新生成索引任务”对话框可用利用新的填充因子对数据库中的表重新创建索引。 填充因子确定索引中每页上的空白空间量，以容纳将来的扩展内容。 随着向表中添加数据，由于没有维持填充因子，可用空间将逐渐填满。 重新组织数据页和索引页可以重新建立可用空间。  
+  使用“重新生成索引任务”  对话框可用利用新的填充因子对数据库中的表重新创建索引。 填充因子确定索引中每页上的空白空间量，以容纳将来的扩展内容。 随着向表中添加数据，由于没有维持填充因子，可用空间将逐渐填满。 重新组织数据页和索引页可以重新建立可用空间。  
   
  **“‘重新生成索引’任务”** 使用 ALTER INDEX 语句。 有关此页所述选项的详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "53205586"
     >  只能对兼容级别被设置为 80 或更高的数据库运行维护计划。 不显示兼容级别设置为 70 或更低的数据库。  
   
  **对象**  
- 将“选择”网格限制为显示表、显示视图或同时显示两者。  
+ 将“选择”  网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
  指定受此任务影响的表或索引。 在“对象”框中选择 **“表和视图”** 时不可用。  

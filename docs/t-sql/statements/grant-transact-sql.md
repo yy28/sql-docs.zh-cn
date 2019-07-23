@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78b83b521da0c7a045fee803b51f143c94b08bf8
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050649"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,28 +94,28 @@ GRANT
 PRIVILEGES  
  包含此参数是为了符合 ISO 标准。 请不要更改 ALL 的行为。  
   
-permission  
+permission   
  权限的名称。 下面列出的子主题介绍了不同权限与安全对象之间的有效映射。  
   
 *column*  
  指定表中将授予权限的列的名称。 需要使用圆括号 ()。  
   
-class  
- 指定将授予权限的安全对象的类。 需要使用作用域限定符 ::。  
+class   
+ 指定将授予权限的安全对象的类。 需要使用作用域限定符 ::  。  
   
-securable  
+securable   
  指定将授予权限的安全对象。  
   
-TO principal  
+TO principal   
  主体的名称。 可为其授予安全对象权限的主体随安全对象而异。 有关有效的组合，请参阅下面列出的子主题。  
   
 GRANT OPTION  
  指示被授权者在获得指定权限的同时还可以将指定权限授予其他主体。  
   
-AS principal  
+AS principal   
  使用 AS principal 子句指示：记录为权限授予者的主体应为执行该语句的用户以外的主体。 例如，假设用户 Mary 是 principal_id 12，用户 Raul 是主体 15。 Mary 执行 `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` 现在，即使语句的实际执行者是用户 13 (Mary)，sys.database_permissions 表仍将指示 grantor_prinicpal_id 为 15 (Raul)。
 
-通常不建议使用 AS 子句，除非需要显式定义权限链。 有关详细信息，请参阅[权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)中的“权限检查算法摘要”部分。
+通常不建议使用 AS 子句，除非需要显式定义权限链。 有关详细信息，请参阅[权限（数据库引擎）](../../relational-databases/security/permissions-database-engine.md)中的“权限检查算法摘要”部分  。
 
 在此语句中使用 AS 并不意味着能够模拟其他用户。 
   
@@ -135,7 +134,7 @@ AS principal
  sp_helprotect 系统存储过程可报告对数据库级安全对象的权限。  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- **GRANT** ...WITH GRANT OPTION 指定向接收权限的安全主体提供向其他安全帐户授予指定权限的能力。 当接收权限的主体是某一角色或某一 Windows 组时，如果需要进一步将对象权限授予不是该组成员或该角色的用户，则必须使用 AS 子句。 因为只有用户（而非某个组或角色）才能执行 GRANT 语句，所以，在授予权限时，该组或角色的特定成员必须使用 AS 子句显式调用该角色或组成员身份。 下面的示例说明如何在授予角色或 Windows 组时使用 WITH GRANT OPTION。  
+ **GRANT** ...WITH GRANT OPTION 指定向接收权限的安全主体提供向其他安全帐户授予指定权限的能力  。 当接收权限的主体是某一角色或某一 Windows 组时，如果需要进一步将对象权限授予不是该组成员或该角色的用户，则必须使用 AS 子句  。 因为只有用户（而非某个组或角色）才能执行 GRANT 语句，所以，在授予权限时，该组或角色的特定成员必须使用 AS 子句显式调用该角色或组成员身份   。 下面的示例说明如何在授予角色或 Windows 组时使用 WITH GRANT OPTION  。  
   
 ```  
 -- Execute the following as a database owner  
@@ -151,7 +150,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
  若要获取 pdf 格式的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 权限的海报大小的图表，请参阅 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。 如果使用 AS 选项，则还应满足其他要求。 有关详细信息，请参阅特定于安全对象的文章。  
   
  对象所有者可以授予对其所拥有的对象的权限。 对某安全对象具有 CONTROL 权限的主体可以授予对该安全对象的权限。  

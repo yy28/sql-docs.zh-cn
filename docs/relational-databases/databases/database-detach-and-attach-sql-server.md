@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 42370a6b088cb9f9fbb605790f701e2efa6dbdec
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037581"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ ms.locfileid: "52402952"
 附加时，数据库会启动。 通常，附加数据库时会将数据库重置为它分离或复制时的状态。 但是，附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 
 
  > [!IMPORTANT]
- > 为安全起见，，默认情况下，每当附加数据库时，is_broker_enabled、is_honoor_broker_priority_on 和 is_trustworthy_on 的选项均设置为 OFF。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  有关元数据的详细信息，请参阅[使数据库在其他服务器上可用时管理元数据](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
+ > 为安全起见，，默认情况下，每当附加数据库时，is_broker_enabled、is_honoor_broker_priority_on 和 is_trustworthy_on 的选项均设置为 OFF    。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  有关元数据的详细信息，请参阅[使数据库在其他服务器上可用时管理元数据](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
   
 ### <a name="backup-and-restore-and-attach"></a>备份、还原及附加  
 与任何完全或部分脱机的数据库一样，不能附加正在还原文件的数据库。 如果停止了还原顺序，则可以附加数据库。 然后，可以重新启动还原顺序。  

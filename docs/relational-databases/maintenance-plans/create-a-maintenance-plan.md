@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fb094e4b31cdb70f7f9950ae7a82cc884e5fce9a
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 1a9b34362f95f6450afaec77370f8876f76d4f07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083847"
 ---
 # <a name="create-a-maintenance-plan"></a>创建维护计划
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51217955"
      
      [先决条件](#Prerequisite)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建维护计划，请使用：**  
   
@@ -48,9 +47,9 @@ ms.locfileid: "51217955"
 ###  <a name="Prerequisite"></a> 先决条件  
 必须启用 [“代理 XP”服务器配置选项](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) 。
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要创建或管理维护计划，您必须是 **sysadmin** 固定服务器角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,7 +60,7 @@ ms.locfileid: "51217955"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”文件夹，然后选择“维护计划向导”。  
+3.  右键单击“维护计划”  文件夹，然后选择“维护计划向导”  。  
   
 4.  按照向导中显示的步骤创建维护计划。 有关详细信息，请参阅 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "51217955"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“维护计划”文件夹，然后选择“新建维护计划”。  
+3.  右键单击“维护计划”  文件夹，然后选择“新建维护计划”  。  
   
 4.  按照[创建维护计划（维护计划设计图面）](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)中的步骤创建维护计划。  
   
@@ -81,9 +80,9 @@ ms.locfileid: "51217955"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb;  

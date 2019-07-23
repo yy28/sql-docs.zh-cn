@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 3c0d04b0a7b54c6e6754152223c7423b3ebb723a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6d77d5db4f53d7dc29a1bc2959feb4770e6899d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101842"
 ---
 # <a name="dbcc-freesessioncache-transact-sql"></a>DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  取消显示所有信息性消息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

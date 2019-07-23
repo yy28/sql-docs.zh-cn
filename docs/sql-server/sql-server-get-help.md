@@ -7,14 +7,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3187c312683713253ec60431f8892fdf0185c933
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 12758c3d340590cedecc2d9f4f149ad82d6987e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136434"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 帮助和反馈
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ Azure Data Studio 团队密切监视 [Azure Data Studio Github](https://github.c
 ## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>我想脱机访问 SQL Server 技术文档
 如果要在脱机系统上查看 SQL Server 文档，有两个选项可实现此操作。 可以在 SQL Server 技术文档中的任何位置创建 PDF，也可以使用 [SQL Server 脱机帮助查看器](sql-server-help-installation.md)下载脱机内容。 
 
-如果要创建 PDF，请单击每个目录底部的“下载 PDF”链接。
+如果要创建 PDF，请单击每个目录底部的“下载 PDF”链接  。
 ![下载 PDF](media/sql-server-get-help/download-pdf.png)
 
 ## <a name="i-want-to-contact-microsoft-support"></a>我想与 Microsoft 支持部门联系

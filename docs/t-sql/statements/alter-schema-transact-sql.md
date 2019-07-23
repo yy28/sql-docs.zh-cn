@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad0ac154636885ab54f8873ff118e59330350380
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044311"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ ALTER SCHEMA schema_name
  \<entity_type>  
  更改其所有者的实体的类。 Object 是默认值。  
   
- securable_name  
+ securable_name   
  要移入架构中的架构范围内的安全对象的一部分或两部分名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -75,7 +74,7 @@ ALTER SCHEMA schema_name
   
  ALTER SCHEMA 仅可用于在同一数据库中的架构之间移动安全对象。 若要更改或删除架构中的安全对象，请使用特定于该安全对象的 ALTER 或 DROP 语句。  
   
- 如果对 securable_name 使用了由一部分组成的名称，则将使用当前生效的名称解析规则查找该安全对象。  
+ 如果对 securable_name 使用了由一部分组成的名称，则将使用当前生效的名称解析规则查找该安全对象  。  
   
  将安全对象移入新架构时，将删除与该安全对象关联的全部权限。 如果已显式设置安全对象的所有者，则该所有者保持不变。 如果安全对象的所有者已设置为 SCHEMA OWNER，则该所有者将保持为 SCHEMA OWNER；但移动之后，SCHEMA OWNER 将解析为新架构的所有者。 新所有者的 principal_id 将为 NULL。  
   
@@ -83,12 +82,12 @@ ALTER SCHEMA schema_name
   
  移动表或同义词不会自动更新对该对象的引用。 必须手动修改引用已移动对象的任何对象。 例如，如果移动了某个表，并且触发器中引用了该表，则必须修改触发器以反映新的架构名称。 请使用 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 列出该对象上的依赖关系，然后再进行移动。  
 
- 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改表的架构，请在对象资源管理器中右键单击该表，然后单击“设计”。 按 F4 以打开“属性”窗口。 在“架构”框中，选择新架构。  
+ 若要通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 更改表的架构，请在对象资源管理器中右键单击该表，然后单击“设计”  。 按 F4 以打开“属性”窗口  。 在“架构”框中，选择新架构  。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要从另一个架构中传输安全对象，当前用户必须拥有对该安全对象（非架构）的 CONTROL 权限，并拥有对目标架构的 ALTER 权限。  
   
  如果已为安全对象指定 EXECUTE AS OWNER，且所有者已设置为 SCHEMA OWNER，则用户还必须拥有对目标架构所有者的 IMPERSONATE 权限。  

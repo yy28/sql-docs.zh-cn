@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583659"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307588"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
 
@@ -151,7 +150,7 @@ Windows 主机保护者服务 (HGS) 需要在单独的 HGS 计算机上安装，
 
 当前，以下限制适用于预配已启用 enclave 的密钥：
 
-- 已启用 enclave 的列主密钥必须存储在 [Windows 证书存储](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/)或 [Azure Key Vault](/azure/key-vault/key-vault-whatis/) 中。 暂不支持将已启用 enclave 的列主密钥存储在其他类型的密钥存储（例如，硬件安全模块或自定义密钥存储）中。
+- 已启用 enclave 的列主密钥必须存储在 [Windows 证书存储](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores)或 [Azure Key Vault](/azure/key-vault/key-vault-whatis/) 中。 暂不支持将已启用 enclave 的列主密钥存储在其他类型的密钥存储（例如，硬件安全模块或自定义密钥存储）中。
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 预配已启用 enclave 的密钥
 

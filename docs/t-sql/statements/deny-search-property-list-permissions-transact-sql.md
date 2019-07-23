@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61961ff888b5de3ffa55ffb47c4986a60583b79e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114805"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>拒绝搜索属性列表权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,13 +43,13 @@ DENY permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
-ON SEARCH PROPERTY LIST ::search_property_list_name  
+ON SEARCH PROPERTY LIST ::search_property_list_name    
  指定要拒绝权限的搜索属性列表。 需要使用作用域限定符 ::。  
   
-database_principal  
+database_principal   
  指定要对其拒绝权限的主体。 可以是下列主体之一：  
   
 -   数据库用户  
@@ -65,7 +64,7 @@ database_principal
 CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
-denying_principal  
+denying_principal   
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是下列主体之一：  
   
 -   数据库用户  
@@ -90,7 +89,7 @@ denying_principal
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对全文目录的 CONTROL 权限。 如果使用 AS 选项，则指定的主体必须拥有全文目录。  
   
 ## <a name="see-also"></a>另请参阅  

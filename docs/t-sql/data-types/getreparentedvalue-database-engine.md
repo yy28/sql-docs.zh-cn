@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077963"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,19 +42,19 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 ```  
   
 ## <a name="arguments"></a>参数  
-oldRoot  
-hierarchyid，它是表示将要修改的层次结构级别的节点。
+oldRoot   
+hierarchyid，它是表示将要修改的层次结构级别的节点  。
   
-newRoot  
+newRoot   
 表示节点的 **hierarchyid**。 替换当前节点的 _oldRoot_ 部分以移动该节点。
   
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：hierarchyid
+SQL Server 返回类型：hierarchyid 
   
-CLR 返回类型：SqlHierarchyId
+CLR 返回类型：SqlHierarchyId 
   
 ## <a name="remarks"></a>Remarks  
-用于通过将节点从 _oldRoot_ 移动到 _newRoot_ 来修改树。 GetReparentedValue 用于将层次结构节点移动到层次结构中的新位置。 **hierarchyid** 数据类型表示层次结构，但并不强制实现层次结构。 用户必须确保 hierarchyid 针对新的位置适当地结构化。 hierarchyid 数据类型的唯一索引有助于避免重复条目。 有关移动整个子树的示例，请参阅[分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)。
+用于通过将节点从 _oldRoot_ 移动到 _newRoot_ 来修改树。 GetReparentedValue 用于将层次结构节点移动到层次结构中的新位置。 **hierarchyid** 数据类型表示层次结构，但并不强制实现层次结构。 用户必须确保 hierarchyid 针对新的位置适当地结构化。 hierarchyid 数据类型的唯一索引有助于避免重复条目  。 有关移动整个子树的示例，请参阅[分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)。
   
 ## <a name="examples"></a>示例  
   

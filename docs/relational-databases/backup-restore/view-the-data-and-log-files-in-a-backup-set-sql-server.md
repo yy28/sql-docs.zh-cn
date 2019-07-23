@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d1543794a616a26949abe3eef939de97e6f7b00
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 69c88ccf053037e67312374cdeec615b31c8cb02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041266"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>查看备份集中的数据文件和日志文件 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

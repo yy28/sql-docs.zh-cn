@@ -1,5 +1,5 @@
 ---
-title: 数据源向导屏幕 3 （适用于 SQL Server ODBC 驱动程序） |Microsoft Docs
+title: 数据源向导屏幕 3 (SQL Server 的 ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936549"
 ---
 # <a name="data-source-wizard-screen-3"></a>数据源向导屏幕 3
 
@@ -68,27 +67,27 @@ WHERE "LastName" = 'O''Brien'
 
 ### <a name="multi-subnet-failover"></a>多子网故障转移。
 
-如果你的应用程序连接到在高可用性、 灾难恢复 （AlwaysOn 可用性组） 可用性组 (AG) 在不同子网上，启用**多子网故障转移。** 将配置适用于 SQL Server 的 ODBC 驱动程序，以便更快地检测和连接到（当前）活动服务器。
+如果你的应用程序连接到不同子网上的高可用性、灾难恢复 (AlwaysOn 可用性组) 可用性组 (AG), 则启用**多子网故障转移。** 将配置适用于 SQL Server 的 ODBC 驱动程序，以便更快地检测和连接到（当前）活动服务器。
 
 ### <a name="transparent-network-ip-resolution"></a>透明网络 IP 解析。
 
-行为更改**多子网故障转移**以便在故障转移期间更快地重新连接。 有关详细信息，请参阅[使用透明网络 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)。
+改变**多子网故障转移**的行为, 以便在故障转移期间更快地进行重新连接。 有关详细信息，请参阅[使用透明网络 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)。
 
 ### <a name="column-encryption"></a>列加密。
 
-启用自动解密和加密的数据传输到和从使用加密的列[Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)功能可在 SQL Server 2016 及更高版本。
+允许使用 SQL Server 2016 及更高版本中提供的[Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)功能对传输到和传出的数据进行自动解密和加密。
 
-### <a name="use-fmtonly-metadata-discovery"></a>使用 FMTONLY 元数据发现：
+### <a name="use-fmtonly-metadata-discovery"></a>使用 FMTONLY 元数据发现:
 
-当连接到 SQL Server 2012 或更高版本时，请使用旧的 SET FMTONLY 元数据发现方法。 启用此功能仅在使用不支持的查询时[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)，例如那些包含临时表。 
+连接到 SQL Server 2012 或更高版本时, 请使用旧集 FMTONLY 元数据发现方法。 仅当使用[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)不支持的查询 (例如, 包含临时表的查询) 时才启用此方法。 
 
 ### <a name="next"></a>Next
 
-继续到向导的下一个屏幕。
+继续进入向导的下一屏幕。
 
 ### <a name="back"></a>返回
 
-返回到向导的上一屏幕。
+返回到向导的上一个屏幕。
 
 ## <a name="next-steps"></a>后续步骤
 

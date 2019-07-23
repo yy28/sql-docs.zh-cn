@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 175f3e33f77d5f4d082ae8b98780b9f7bcafaa43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998755"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>updateNCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,9 +48,9 @@ public void updateNCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateNCharacterStream 方法由 java.sql.ResultSet 接口中的 updateNCharacterStream 方法指定。  
+ 此 updateNCharacterStream 方法由 updateNCharacterStream 方法在方法中指定。  
   
- 此方法将来自要选择的读取器对象中传递 Unicode 字符**nchar**， **nvarchar （max)** ， **ntext**，以及**xml**列。 在其他数据类型列上使用此方法会引发异常。  
+ 此方法将 Unicode 字符从读取器对象传递到选定的**nchar**、 **nvarchar (max)** 、 **ntext**和**xml**列。 在其他数据类型列上使用此方法会引发异常。  
   
  如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   

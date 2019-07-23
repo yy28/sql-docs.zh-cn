@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a48024f13777992469ff0b7ace86bf2defc5437
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086017"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>删除数据库快照 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51558354"
   
 ## <a name="security"></a>Security  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  具有 DROP DATABASE 权限的任何用户都可以删除数据库快照。  
   
 ##  <a name="TsqlProcedure"></a> 如何删除数据库快照（使用 Transact-SQL）  
@@ -38,7 +37,7 @@ ms.locfileid: "51558354"
   
 2.  执行 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) 语句，并指定要删除的数据库快照的名称。 语法如下：  
   
-     DROP DATABASE *database_snapshot_name* [ **,**...*n* ]  
+     DROP DATABASE *database_snapshot_name* [ **,** ...*n* ]  
   
      其中， *database_snapshot_name* 是要删除的数据库快照的名称。  
   

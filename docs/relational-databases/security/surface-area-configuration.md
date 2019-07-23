@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8c1741bd9365b0080541c60407ebaabba4a8630b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d366634dcfc81fc62dded3205320fca53b193b52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127066"
 ---
 # <a name="surface-area-configuration"></a>外围应用配置器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "47756365"
   
 #### <a name="to-start-sql-server-configuration-manager"></a>启动 SQL Server 配置管理器  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
     -   使用 **“SQL Server 服务”** 区域可以启动组件并配置自动启动选项。  
   
-    -   使用“SQL Server 网络配置”区域可以启用连接协议和连接选项（如，TCP/IP 固定端口或强制加密）。  
+    -   使用“SQL Server 网络配置”  区域可以启用连接协议和连接选项（如，TCP/IP 固定端口或强制加密）。  
   
  有关详细信息，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。 此外，远程连接还取决于是否对防火墙进行了正确配置。 有关详细信息，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "47756365"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的组件。  
   
-2.  在对象资源管理器中，右键单击服务器，然后单击“方面”。  
+2.  在对象资源管理器中，右键单击服务器，然后单击“方面”  。  
   
-3.  在“查看方面”对话框中，展开“方面”列表，然后选择相应的“外围应用配置器”方面（“外围应用配置器”、“Analysis Services 的外围应用配置器”或“Reporting Services 的外围应用配置器”）。  
+3.  在“查看方面”  对话框中，展开“方面”  列表，然后选择相应的“外围应用配置器”  方面（“外围应用配置器”  、“Analysis Services 的外围应用配置器”  或“Reporting Services 的外围应用配置器”  ）。  
   
 4.  在 **“方面属性”** 区域，选择要用于每个属性的值。  
   

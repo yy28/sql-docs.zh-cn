@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078032"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>将 FOR XML 查询结果赋给 xml 类型变量  
- 在下面的示例中，一个 FOR XML 结果被赋给一个 **xml** 类型变量 `@x`。 该查询从 `BusinessEntityID`xml `FirstName`的 `LastName`列检索联系信息（如 `AdditionalContactInfo` 、 **、**`TYPE`和其他电话号码）。 由于 `FOR XML` 子句指定了 `TYPE` 指令，因此 XML 返回为 **xml** 类型并赋给某个变量。  
+ 在下面的示例中，一个 FOR XML 结果被赋给一个 **xml** 类型变量 `@x`。 该查询从 `BusinessEntityID`xml `FirstName`的 `LastName`列检索联系信息（如 `AdditionalContactInfo` 、 **、** `TYPE`和其他电话号码）。 由于 `FOR XML` 子句指定了 `TYPE` 指令，因此 XML 返回为 **xml** 类型并赋给某个变量。  
   
 ```  
 USE AdventureWorks2012;  
@@ -73,7 +72,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>查询 FOR XML 查询的结果  
- FOR XML 查询返回 XML。 因此，可以将 **xml** 类型方法（如 **query()** 和 **value()**）应用于 FOR XML 查询返回的 XML 结果。  
+ FOR XML 查询返回 XML。 因此，可以将 **xml** 类型方法（如 **query()** 和 **value()** ）应用于 FOR XML 查询返回的 XML 结果。  
   
  在下面的查询中，**xml** 数据类型的 `query()` 方法用于查询 `FOR XML` 查询的结果。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)。  
   
@@ -128,7 +127,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  `value()` 方法中的 XQuery 路径表达式检索 `BusinessEntityID` 为 `1` 的客户联系人的第一个电话号码。  
   
 > [!NOTE]  
->  如果未指定 TYPE 指令，则返回的 FOR XML 查询结果的类型为 **nvarchar(max)**。  
+>  如果未指定 TYPE 指令，则返回的 FOR XML 查询结果的类型为 **nvarchar(max)** 。  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>在 INSERT、UPDATE 和 DELETE 中使用 FOR XML 查询结果 (Transact-SQL DML)  
  下面的示例说明了如何在数据操作语言 (DML) 语句中使用 FOR XML 查询。 在此示例中， `FOR XML` 返回 **xml** 类型的实例。 `INSERT` 语句将此 XML 插入表中。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58913302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063873"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "58913302"
   
 1.  若要安装、配置和维护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，请使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。  
   
-    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 详细信息：    
+    -   确定创建故障转移群集实例（如群集磁盘资源、IP 地址和网络名称）和可用于故障转移的节点所需的信息。 详细信息：  
   
         -   [安装故障转移群集前的准备工作](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "58913302"
   
 3.  为每个故障转移群集实例指定多个 IP 地址。 您可以为每个子网指定多个 IP 地址。 如果多个 IP 地址在同一子网上， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序会将依赖关系设置为 AND。 如果您正在创建跨多个子网的群集节点，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将依赖关系设置为 OR。  
 
-4.  SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持使用以下配置：
+4.  SQL Server 故障转移群集实例 (FCI) 要求群集节点加入域。 不支持  使用以下配置：
     - 工作组群集上的 SQL FCI。 
     - 多域群集上的 SQL FCI。   
     - 域和工作组群集上的 SQL FCI。 

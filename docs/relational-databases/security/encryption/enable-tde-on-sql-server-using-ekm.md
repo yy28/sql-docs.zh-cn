@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d910ed7b43d0334c8bf15c49c47d2214e81b85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74aab68265e094946cde81bb11b2a09b655fe8fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049918"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上启用 TDE
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.locfileid: "47627455"
   
 -   您的 EKM 提供程序所需的选项和参数可能与下面的代码示例中所提供的选项和参数不同。 有关详细信息，请参阅 EKM 提供程序。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  本文使用了以下权限：  
   
 -   若要更改配置选项以及运行 RECONFIGURE 语句，您必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
@@ -71,9 +70,9 @@ ms.locfileid: "47627455"
   
 3.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-4.  在标准菜单栏上，单击 **“新建查询”**。  
+4.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-5.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+5.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Enable advanced options.  

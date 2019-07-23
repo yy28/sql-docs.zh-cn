@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071174"
 ---
 # <a name="insert-sql-graph"></a>INSERT（SQL 图形）
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -107,13 +106,13 @@ INSERT
 INTO  
 一个可选的关键字，可将它用在 `INSERT` 和目标表之间。  
   
-search_condition_with_match   
+search_condition_with_match     
 插入节点或边缘表时，可在子查询中使用 `MATCH` 子句。 有关 `MATCH` 语句的语法，请参阅 [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
-graph_search_pattern   
+graph_search_pattern     
 提供给 `MATCH` 子句作为图形谓词的一部分的搜索模式。
 
-edge_table_column_list   
+edge_table_column_list     
 插入边时，用户必须提供 `$from_id` 和 `$to_id` 的值。 如果未提供值或这些列中插入了 NULL，则会返回错误。 
   
 
@@ -127,12 +126,12 @@ edge_table_column_list
 批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$node_id` 列中提取 `$from_id` 和 `$to_id` 的值，并将其作为边插入。 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
 需要对目标表具有 INSERT 权限。  
   
-默认情况下，将 INSERT 权限授予 sysadmin 固定服务器角色成员、db_owner 和 db_datawriter 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  
+默认情况下，将 INSERT 权限授予 sysadmin 固定服务器角色成员、db_owner 和 db_datawriter 固定数据库角色成员以及表所有者    。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户    。  
   
-若要使用 OPENROWSET 函数 BULK 选项执行 INSERT，必须是 sysadmin 固定服务器角色成员或 bulkadmin 固定服务器角色成员。  
+若要使用 OPENROWSET 函数 BULK 选项执行 INSERT，必须是 sysadmin 固定服务器角色成员或 bulkadmin 固定服务器角色成员   。  
   
 
 ## <a name="examples"></a>示例  

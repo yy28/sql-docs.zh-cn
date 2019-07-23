@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048137"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,11 +61,11 @@ DEFAULT <xml_namespace_uri>
 ```  
   
 ## <a name="arguments"></a>参数  
- xml_namespace_uri  
- 统一资源标识符 (URI)，用于标识正在声明的 XML 命名空间。 xml_namespace_uri 是 SQL 字符串。  
+  xml_namespace_uri  
+ 统一资源标识符 (URI)，用于标识正在声明的 XML 命名空间。  xml_namespace_uri 是 SQL 字符串。  
   
- xml_namespace_prefix  
- 指定一个要映射并与在 xml_namespace_uri 中指定的命名空间 URI 值关联的前缀。 xml_namespace_prefix 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
+  xml_namespace_prefix  
+ 指定一个要映射并与在 xml_namespace_uri  中指定的命名空间 URI 值关联的前缀。  xml_namespace_prefix 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符。  
   
 ## <a name="remarks"></a>Remarks  
  在还包括公用表表达式的语句中使用 WITH XMLNAMESPACES 子句时，WITH XMLNAMESPACES 子句必须位于语句中的公用表表达式的前面。  
@@ -91,7 +90,7 @@ DEFAULT <xml_namespace_uri>
 
 -   URI 字符串值按照当前数据库排序规则代码页进行编码，并且将内部转换为 Unicode。  
   
--   XML 命名空间 URI 将按照用于 xs:anyURI 的 XSD 空格折叠规则进行空格折叠。 另外，不会对 XML 命名空间 URI 值执行实体化和反实体化。  
+-   XML 命名空间 URI 将按照用于 xs:anyURI  的 XSD 空格折叠规则进行空格折叠。 另外，不会对 XML 命名空间 URI 值执行实体化和反实体化。  
 
 -   系统将检查 XML 命名空间 URI 中是否有无效的 XML 1.0 字符，如果发现这样的字符（例如，U+0007），将引发错误。  
   

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3b278f5147cad9fbd86a5f1d241ea77b9b15017a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000431"
 ---
 # <a name="tostring-database-engine"></a>ToString（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回具有 this 逻辑表示形式的字符串。 进行从 hierarchyid 到字符串类型的转换时将隐式调用 ToString。 作用与 [Parse（数据库引擎）](../../t-sql/data-types/parse-database-engine.md)相反。
+返回具有 this 逻辑表示形式的字符串  。 进行从 hierarchyid 到字符串类型的转换时将隐式调用 ToString  。 作用与 [Parse（数据库引擎）](../../t-sql/data-types/parse-database-engine.md)相反。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,9 +45,9 @@ string ToString  ( )
 ```  
   
 ## <a name="return-types"></a>返回类型
-SQL Server 返回类型：nvarchar(4000)
+SQL Server 返回类型：nvarchar(4000) 
   
-CLR 返回类型：String
+CLR 返回类型：String 
   
 ## <a name="remarks"></a>Remarks  
 返回层次结构中的逻辑位置。 例如，`/2/1/` 表示以下文件系统层次结构的第四行 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])：
@@ -65,7 +64,7 @@ CLR 返回类型：String
 ## <a name="examples"></a>示例  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. 表中的 Transact-SQL 示例  
-下面的示例以 hierarchyid 数据类型和可读性更强的字符串格式返回 `OrgNode` 列：
+下面的示例以 hierarchyid 数据类型和可读性更强的字符串格式返回 `OrgNode` 列  ：
   
 ```sql
 SELECT OrgNode,  
@@ -89,7 +88,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. 不使用表转换 Transact-SQL 值  
-下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid。
+下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid   。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  

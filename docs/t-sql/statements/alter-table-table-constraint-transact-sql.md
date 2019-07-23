@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 51fd9271fc84f23c331c671aca3b88ee981b19af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070212"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "57227149"
  CONSTRAINT  
  指定 PRIMARY KEY、UNIQUE、FOREIGN KEY 或 CHECK 约束的开始，或者指定 DEFAULT 定义的开始。  
   
- constraint_name  
+ constraint_name   
  约束的名称。 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 如果未提供 constraint_name，则将系统生成的名称分配给约束。  
   
  PRIMARY KEY  
@@ -78,37 +77,37 @@ ms.locfileid: "57227149"
   
  如果表中已存在聚集约束或聚集索引，则不能指定 CLUSTERED。 如果表中已存在聚集约束或索引，则 PRIMARY KEY 约束默认为 NONCLUSTERED。  
   
- 无法将 ntext、text、varchar(max)、nvarchar(max)、varbinary(max)、xml 或 image 数据类型的列指定为索引的列。  
+ 无法将 ntext、text、varchar(max)、nvarchar(max)、varbinary(max)、xml 或 image 数据类型的列指定为索引的列        。  
   
  *column*  
  新约束中使用的一个列或一组列，使用括号指定。  
   
- [ ASC | DESC ]  
+ [ ASC | DESC ]   
  指定加入到表约束中的一列或多列的排序顺序。 默认值为 ASC。  
   
- WITH FILLFACTOR =fillfactor  
- 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]在存储索引数据时使用的每个索引页的填充程度。 用户指定的 fillfactor 值的范围可以为 1 到 100。 如果未指定值，则默认值为 0。  
+ WITH FILLFACTOR =fillfactor    
+ 指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]在存储索引数据时使用的每个索引页的填充程度。 用户指定的 fillfactor 值的范围可以为 1 到 100  。 如果未指定值，则默认值为 0。  
   
 > [!IMPORTANT]  
->  将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录。 可在 ALTER TABLE 的 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中指定其他索引选项。  
+>  将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录  。 可在 ALTER TABLE 的 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中指定其他索引选项。  
   
- ON { _partition\_scheme\_name_**(**_partition\_column\_name_**)** | _filegroup_| **"** default **"** }  
+ ON { _partition\_scheme\_name_ **(** _partition\_column\_name_ **)**  | _filegroup_|  **"** default **"** }  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定为约束创建的索引的存储位置。 如果指定了 partition_scheme_name，则将对该索引进行分区，并将分区映射到由 partition_scheme_name 指定的文件组。 如果指定了 filegroup，则将在命名文件组内创建索引。 如果指定了 "default" 或者根本没有指定 ON，将在创建表的同一个文件组中创建索引。 当为 PRIMARY KEY 约束或 UNIQUE 约束添加聚集索引时，如果指定了 ON，则创建聚集索引时将把整个表移动到指定的文件组中。  
+ 指定为约束创建的索引的存储位置。 如果指定了 partition_scheme_name，则将对该索引进行分区，并将分区映射到由 partition_scheme_name 指定的文件组   。 如果指定了 filegroup，则将在命名文件组内创建索引  。 如果指定了 "default" 或者根本没有指定 ON，将在创建表的同一个文件组中创建索引   。 当为 PRIMARY KEY 约束或 UNIQUE 约束添加聚集索引时，如果指定了 ON，则创建聚集索引时将把整个表移动到指定的文件组中。  
   
- 在此上下文中，default 不是关键字；它是默认文件组的标识符，且必须被隔开，如 ON "default" 或 ON [default]。 如果指定了“default”，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。  
+ 在此上下文中，default 不是关键字；它是默认文件组的标识符，且必须被隔开，如 ON "default" 或 ON [default]     。 如果指定了“default”，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON   。 这是默认设置。  
   
  FOREIGN KEY REFERENCES  
  为列中数据提供引用完整性的约束。 FOREIGN KEY 约束要求列中的每个值在引用的表中对应的被引用列中都存在。  
   
- referenced_table_name  
+ referenced_table_name   
  FOREIGN KEY 约束引用的表。  
   
- ref_column  
+ ref_column   
  新 FOREIGN KEY 约束引用的一个列或一组列（置于括号中）。  
   
- ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }   
  指定如果已更改的表中的行具有引用关系，并且被引用行已从父表中删除，则对这些行所采取的操作。 默认值为 NO ACTION。  
   
  NO ACTION  
@@ -127,13 +126,13 @@ ms.locfileid: "57227149"
   
  如果被更改的表已有 INSTEAD OF 触发器 ON DELETE，则不能定义 ON DELETE CASCADE。  
   
- 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键。  
+ 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键   。  
   
- 如果对 Vendor 表的某行执行 DELETE 语句，并且为 ProductVendor.VendorID 指定 ON DELETE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行。 如果存在依赖行，则除了删除 Vendor 表中被引用的行外，还将删除 ProductVendor 表中的依赖行。  
+ 如果对 Vendor 表的某行执行 DELETE 语句，并且为 ProductVendor.VendorID 指定 ON DELETE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中的一个或多个依赖行    。 如果存在依赖行，则除了删除 Vendor 表中被引用的行外，还将删除 ProductVendor 表中的依赖行   。  
   
- 相反，如果指定了 NO ACTION，并且 ProductVendor 表中至少有一行引用 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误并回滚对 Vendor 行执行的删除操作。  
+ 相反，如果指定了 NO ACTION，并且 ProductVendor 表中至少有一行引用 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误并回滚对 Vendor 行执行的删除操作   。  
   
- ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT }   
  指定在发生更改的表中，如果行有引用关系且引用的行在父表中被更新，则对这些行采取什么操作。 默认值为 NO ACTION。  
   
  NO ACTION  
@@ -152,11 +151,11 @@ ms.locfileid: "57227149"
   
  如果要更改的表已存在 INSTEAD OF 触发器 ON UPDATE，则不能定义 ON UPDATE CASCADE、SET NULL 或 SET DEFAULT 操作。  
   
- 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键。  
+ 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键   。  
   
- 如果对 Vendor 表中的某行执行了 UPDATE 语句，并且为 ProductVendor.VendorID 指定了 ON UPDATE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中是否有一个或多个依赖行。 如果存在依赖行，那么 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新。  
+ 如果对 Vendor 表中的某行执行了 UPDATE 语句，并且为 ProductVendor.VendorID 指定了 ON UPDATE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中是否有一个或多个依赖行    。 如果存在依赖行，那么 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新   。  
   
- 相反，如果指定了 NO ACTION，则当 ProductVendor 表中至少有一行引用了 Vendor 行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，并回滚对 Vendor 行的更新操作。  
+ 相反，如果指定了 NO ACTION，则当 ProductVendor 表中至少有一行引用了 Vendor 行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，并回滚对 Vendor 行的更新操作   。  
   
  NOT FOR REPLICATION  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -166,23 +165,23 @@ ms.locfileid: "57227149"
  CONNECTION 指定允许连接给定边缘约束的节点表对。 ON DELETE 指定删除通过此边缘表中的边缘连接的节点时，边缘表中的行会发生什么情况。 
  
  DEFAULT  
- 指定列的默认值。 DEFAULT 定义可用于为表中现有数据行的新列提供值。 DEFAULT 定义无法添加到具有 timestamp 数据类型、IDENTITY 属性、现有 DEFAULT 定义或绑定默认值的列。 如果列已有默认值，则必须删除旧默认值后才能添加新默认值。 如果为用户定义类型列指定了默认值，则该类型应当支持从 constant_expression 到用户定义类型的隐式转换。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。  
+ 指定列的默认值。 DEFAULT 定义可用于为表中现有数据行的新列提供值。 DEFAULT 定义无法添加到具有 timestamp 数据类型、IDENTITY 属性、现有 DEFAULT 定义或绑定默认值的列  。 如果列已有默认值，则必须删除旧默认值后才能添加新默认值。 如果为用户定义类型列指定了默认值，则该类型应当支持从 constant_expression 到用户定义类型的隐式转换  。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。  
   
- constant_expression  
- 用作默认列值的文字值、NULL 或系统函数。 如果 constant_expression 与定义为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用户定义类型的列结合使用，则该类型的实现必须支持从 constant_expression 到用户定义类型的隐式转换。  
+ constant_expression   
+ 用作默认列值的文字值、NULL 或系统函数。 如果 constant_expression 与定义为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用户定义类型的列结合使用，则该类型的实现必须支持从 constant_expression 到用户定义类型的隐式转换   。  
   
- FOR column  
+ FOR column   
  指定与表级 DEFAULT 定义相关联的列。  
   
  WITH VALUES  
- 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression 中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression 中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+ 添加列和 DEFAULT 约束时，如果列允许为空，那么对于现有行，使用 WITH VALUES 会将新列的值设置为 DEFAULT constant_expression  中给定的值。 如果要添加的列不允许为空，那么对于现有行，列值始终设置为 DEFAULT constant_expression  中给定的值。 自 SQL Server 2012 起，这可能是元数据操作 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
 如果在没有同时添加相关列的情况下使用它，它将不起作用。 
   
  CHECK  
  一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。  
   
- logical_expression  
- 用于 CHECK 约束的逻辑表达式，返回 TRUE 或 FALSE。 与 CHECK 约束一起使用的 logical_expression 无法引用其他表，但可以引用同一表中同一行的其他列。 该表达式不能引用别名数据类型。  
+ logical_expression   
+ 用于 CHECK 约束的逻辑表达式，返回 TRUE 或 FALSE。 与 CHECK 约束一起使用的 logical_expression 无法引用其他表，但可以引用同一表中同一行的其他列  。 该表达式不能引用别名数据类型。  
   
 ## <a name="remarks"></a>Remarks  
  当添加 FOREIGN KEY 或 CHECK 约束时，所有现有数据都要进行约束违反验证，除非指定了 WITH NOCHECK 选项。 如果违反了约束，ALTER TABLE 将失败并返回一个错误。 当在现有列上添加新 PRIMARY KEY 或 UNIQUE 约束时，该列中的数据必须唯一。 如果存在重复值，ALTER TABLE 语句将失败。 当添加 PRIMARY KEY 或 UNIQUE 约束时，WITH NOCHECK 选项不起作用。  

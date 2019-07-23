@@ -14,33 +14,32 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6be64ffc819157b95729f855bb81a5e12c78a7f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134478"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 **数据库邮件配置向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。 有关邮件配置文件的详细信息，请参阅 [数据库邮件配置文件](database-mail-configuration-objects.md)。
   
--   **开始之前：**[先决条件](#Prerequisites)、[安全性](#Security)  
+-   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **若要创建数据库邮件专用配置文件，请使用：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
+-   **若要创建数据库邮件专用配置文件，请使用：** [数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
   
--   **若要创建数据库邮件公共配置文件，请使用：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
+-   **若要创建数据库邮件公共配置文件，请使用：** [数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Prerequisites"></a> 先决条件  
  为配置文件创建一个或多个数据库邮件帐户。 有关创建数据库邮件帐户的详细信息，请参阅 [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  公共配置文件允许有权访问 **msdb** 数据库的任意用户使用该配置文件发送电子邮件。 专用配置文件可由用户或角色来使用。 授予角色访问配置文件的权限可创建更易维护的体系结构。 若要发送邮件，您必须是 **msdb** 数据库中的 **DatabaseMailUserRole** 的成员，并且至少有权访问一个数据库邮件配置文件。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  创建配置文件帐户和执行存储过程的用户应是 sysadmin 固定服务器角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用数据库邮件配置向导  
@@ -52,11 +51,11 @@ ms.locfileid: "53980443"
   
 -   双击数据库邮件以打开数据库邮件配置向导。  
   
--   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”** 选项，然后单击 **“下一步”**。  
+-   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”** 选项，然后单击 **“下一步”** 。  
   
--   在 **“管理配置文件和帐户”** 页上，选择 **“创建新配置文件”** 选项，然后单击 **“下一步”**。  
+-   在 **“管理配置文件和帐户”** 页上，选择 **“创建新配置文件”** 选项，然后单击 **“下一步”** 。  
   
--   在“新建配置文件”页上，指定配置文件的名称、说明并添加要包括在配置文件中的帐户，然后单击“下一步”。  
+-   在“新建配置文件”页上，指定配置文件的名称、说明并添加要包括在配置文件中的帐户，然后单击“下一步”   。  
   
 -   在 **“完成该向导”** 页上，检查要执行的操作，然后单击 **“完成”** 以完成创建新配置文件。  
   
@@ -64,11 +63,11 @@ ms.locfileid: "53980443"
   
     -   打开数据库邮件配置向导。  
   
-    -   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”** 选项，然后单击 **“下一步”**。  
+    -   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”** 选项，然后单击 **“下一步”** 。  
   
-    -   在 **“管理配置文件和帐户”** 页上，选择 **“管理配置文件安全性”** 选项，然后单击 **“下一步”**。  
+    -   在 **“管理配置文件和帐户”** 页上，选择 **“管理配置文件安全性”** 选项，然后单击 **“下一步”** 。  
   
-    -   在 **“专用配置文件”** 选项卡中，选中您要配置的配置文件所对应的复选框，然后单击 **“下一步”**。  
+    -   在 **“专用配置文件”** 选项卡中，选中您要配置的配置文件所对应的复选框，然后单击 **“下一步”** 。  
   
     -   在 **“完成该向导”** 页上，检查要执行的操作，然后单击 **“完成”** 以完成配置该配置文件。  
   
@@ -76,11 +75,11 @@ ms.locfileid: "53980443"
   
     -   打开数据库邮件配置向导。  
   
-    -   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”** 选项，然后单击 **“下一步”**。  
+    -   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”** 选项，然后单击 **“下一步”** 。  
   
-    -   在 **“管理配置文件和帐户”** 页上，选择 **“管理配置文件安全性”** 选项，然后单击 **“下一步”**。  
+    -   在 **“管理配置文件和帐户”** 页上，选择 **“管理配置文件安全性”** 选项，然后单击 **“下一步”** 。  
   
-    -   在 **“公共配置文件”** 选项卡中，选中您要配置的配置文件所对应的复选框，然后单击 **“下一步”**。  
+    -   在 **“公共配置文件”** 选项卡中，选中您要配置的配置文件所对应的复选框，然后单击 **“下一步”** 。  
   
     -   在 **“完成该向导”** 页上，检查要执行的操作，然后单击 **“完成”** 以完成配置该配置文件。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "53980443"
   
      *@profile_name* = '*配置文件的名称*'  
   
-     *@ principal_name* = '数据库用户或角色的名称'  
+     *@ principal_name* = '数据库用户或角色的名称  '  
   
      *@is_default* = '*默认配置文件状态*'  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*默认配置文件状态*'  
   
-     其中，@profile_name 是配置文件的名称，@principal_name 指示其为公共配置文件，@is_default 确定此配置文件是数据库用户还是角色的默认值。  
+     其中，@profile_name 是配置文件的名称，@principal_name 指示其为公共配置文件，@is_default 确定此配置文件是数据库用户还是角色的默认值    。  
   
  以下示例创建了一个数据库邮件帐户和一个数据库邮件专用配置文件，然后将帐户添加到该配置文件中并授予对该配置文件的公共访问权限。  
   

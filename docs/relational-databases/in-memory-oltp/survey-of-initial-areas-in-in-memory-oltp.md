@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0988c2cf4d133305676241763aa90f1db68b86c
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5c28ca4d58a717d34f6036376f8facc395e30cd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063154"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
   
 有两种主要方案：  
   
-- “批操作分析” 是指在工作时间后运行或在具有事务数据副本的辅助硬件上运行的聚合进程。  
+- “批操作分析”  是指在工作时间后运行或在具有事务数据副本的辅助硬件上运行的聚合进程。  
   - [Azure SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) 也与批操作分析相关。  
-- “实时操作分析” 是指工作时间内在用于事务工作负荷的主硬件上运行的聚合进程。  
+- “实时操作分析”  是指工作时间内在用于事务工作负荷的主硬件上运行的聚合进程。  
   
   
 本文重点介绍 OLTP，而不是介绍相关分析。 有关列存储索引如何将分析引入 SQL 的信息，请参阅：  
@@ -364,7 +363,7 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 **双重特性：** 内存优化表具有双重特性：在活动内存中是一种表示形式，在硬盘上是另一种表示形式。 每个事务将提交到该表的这两种表示形式。 事务针对更快的活动内存表示形式运行。 内存优化表从活动内存比磁盘速度更快受益。 此外，活动内存的更大灵活性使得实现针对速度进行优化的更高级表结构切实可行。 高级结构也是无页的，因此它可以避免闩锁和自旋锁的开销和争用。  
   
   
-**无锁：** 内存优化表依赖于乐观方法来实现数据完整性与并发性和高吞吐量这两个对立的目标。 在事务处理期间，该表不在任何版本的已更新数据行上放置锁。 在某些大容量系统中，这可以大大减少争用。  
+**无锁：** 内存优化表依赖于乐观方法来实现数据完整性与并发性和高吞吐量这两个对立的目标  。 在事务处理期间，该表不在任何版本的已更新数据行上放置锁。 在某些大容量系统中，这可以大大减少争用。  
   
   
 **行版本：** 内存优化表不使用锁，而是在表本身中（不是在 tempdb 中）添加新版本的已更新行。 原始行将一直保留，直到提交事务之后。 在事务处理期间，其他进程可以读取行的原始版本。  
@@ -405,7 +404,7 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 - [内存优化表中的表和行大小](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**对大型表进行分区：** 满足大量活动内存需求的一种方法是将大型表划分为几部分，内存中的部分存储热度高的最近数据行，磁盘上的其他部分存储冷旧数据行（如已完全发货和已完成的销售订单）。 此分区是一个需要设计和实现的手动过程。 请参阅：  
+**对大型表进行分区：** 满足大量活动内存需求的一种方法是将大型表划分为几部分，内存中的部分存储热度高的最近数据行，磁盘上的其他部分存储冷旧数据行（如已完全发货和已完成的销售订单）   。 此分区是一个需要设计和实现的手动过程。 请参阅：  
   
 - [应用程序级分区](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [用于对内存优化表进行分区的应用程序模式](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
