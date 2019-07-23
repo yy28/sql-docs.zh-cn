@@ -1,5 +1,5 @@
 ---
-title: 生成多个行集结果的命令 |Microsoft Docs
+title: 生成多行集结果的命令 |Microsoft Docs
 description: 生成多个行集结果的命令
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016064"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>生成多个行集结果的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序可以返回多个行集从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]语句。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
+  SQL Server 的 OLE DB 驱动程序可以从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]语句返回多个行集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
   
 -   以单个命令的形式提交成批的 SQL 语句。  
   
 -   存储过程实现一批 SQL 语句。  
   
 ## <a name="batches"></a>批处理  
- SQL Server 的 OLE DB 驱动程序将分号字符识别为 SQL 语句的批处理分隔符：  
+ SQL Server 的 OLE DB 驱动程序将分号字符识别为 SQL 语句的批处理分隔符:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

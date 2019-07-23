@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9480d280-5e3d-46ae-80e6-1bba3ac5a641
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89d7321d4137f6d4d8ddc4cd3ce880358204ee9b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73eab48ff558a5a93eb64b3a9a908914003b579e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969262"
 ---
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsMultipleOpenResults()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsMultipleOpenResults 方法由 java.sql.DatabaseMetaData 接口中的 supportsMultipleOpenResults 方法指定。  
+ 此 supportsMultipleOpenResults 方法由 supportsMultipleOpenResults 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
