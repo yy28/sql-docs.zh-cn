@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88745cf6d143436dcce84d20a4253266843d6c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117719"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *character_expression*  
  字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
   
- start   
+ *start*  
  一个整数值，指定删除和插入的开始位置。 如果 start 为负或为零，则返回空字符串  。 如果 start 的长度大于第一个 character_expression，则返回空字符串   。 start 的类型可以是 bigint   。  
   
  *length*  

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897175"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用表设计器创建数据库对象
 SQL Server 对象资源管理器  中的新的“SQL Server”  节点不但在外观上与 SSMS 十分相似，而且可以使用在功能上与其 SSMS 对应项类似的上下文菜单创建新对象。  
@@ -63,18 +62,18 @@ SQL Server 对象资源管理器  中的新的“SQL Server”  节点不但在�
   
     |“属性”|数据类型|**允许 Null 值**|  
     |--------|-------------|-------------------|  
-    |ID|ssNoversion|unchecked|  
+    |ID|INT|unchecked|  
     |“属性”|nvarchar (128)|unchecked|  
   
 7.  再创建一个名为“Products”  的表。 使用列网格向该 Products 表添加以下列。 并且记住要更改脚本，以便该表的名称为 `[dbo].[Products]`。  
   
     |“属性”|数据类型|**允许 Null 值**|  
     |--------|-------------|-------------------|  
-    |ID|ssNoversion|unchecked|  
+    |ID|INT|unchecked|  
     |“属性”|nvarchar (128)|unchecked|  
-    |ShelfLife|ssNoversion|已选中|  
-    |SupplierId|ssNoversion|已选中|  
-    |CustomerId|ssNoversion|已选中|  
+    |ShelfLife|INT|已选中|  
+    |SupplierId|INT|已选中|  
+    |CustomerId|INT|已选中|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>使用表设计器创建新的 CHECK 约束  
   

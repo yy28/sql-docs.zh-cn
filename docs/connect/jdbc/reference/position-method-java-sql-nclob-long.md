@@ -1,5 +1,5 @@
 ---
-title: position 方法 (java.sql.NClob，long) |Microsoft Docs
+title: position 方法 (NClob, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35d8a3903cc18ce371b2d6c333747710ac6efc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976360"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 方法 (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索的字符位置指定**NClob**对象*searchstr*将显示在此**NClob**对象。  
+  检索指定的**NClob**对象*searchstr*出现在此**NClob**对象中的字符位置。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +35,7 @@ long position(java.sql.NClob searchstr,
   
  要搜索的 NClob 对象。  
   
- start   
+ *start*  
   
  开始搜索的位置；第一个位置为 1。  
   
@@ -47,7 +46,7 @@ long position(java.sql.NClob searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此位置方法由 java.sql.NClob 接口中的位置方法指定。  
+ 此位置方法由 NClob 接口中的 position 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [position 方法&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   

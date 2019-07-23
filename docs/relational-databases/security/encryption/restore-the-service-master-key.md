@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: cf93c5a2918089bffd8bfe724f165d20722af086
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: c16742fe161f947e6256537ce04f36f9a07a89a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111624"
 ---
 # <a name="restore-the-service-master-key"></a>还原服务主密钥
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "53997529"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
 需要对服务器的 CONTROL SERVER 权限。  
   
 ## <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -53,9 +52,9 @@ ms.locfileid: "53997529"
   
 2. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-3. 在标准菜单栏上，单击 **“新建查询”**。  
+3. 在标准菜单栏上，单击 **“新建查询”** 。  
   
-4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```sql
     -- Restores the service master key from a backup file.  

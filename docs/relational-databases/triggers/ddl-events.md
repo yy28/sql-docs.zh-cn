@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d72081cb6787e291bd0809d01acf66e951ce185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f166963f1325379d4545f9d8a334e7b77590a14f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075480"
 ---
 # <a name="ddl-events"></a>DDL 事件
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,8 +48,8 @@ ms.locfileid: "47751595"
 |BIND_DEFAULT（适用于 **sp_bindefault**。）|UNBIND_DEFAULT（适用于 **sp_unbindefault**。）||  
 |CREATE_EVENT_NOTIFICATION|DROP_EVENT_NOTIFICATION||  
 |CREATE_EXTENDED_PROPERTY（适用于 **sp_addextendedproperty**。）|ALTER_EXTENDED_PROPERTY（适用于 **sp_updateextendedproperty**。）|DROP_EXTENDED_PROPERTY（适用于 **sp_dropextendedproperty**。）|  
-|CREATE_FULLTEXT_CATALOG（当指定 create 时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|ALTER_FULLTEXT_CATALOG（当指定 start_incremental、start_full、Stop 或 Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句 **sp_fulltextcatalog**，当指定 enable 时，适用于 **sp_fulltext_database**。）|DROP_FULLTEXT_CATALOG（当指定 drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|  
-|CREATE_FULLTEXT_INDEX（当指定 create 时，适用于 CREATE FULLTEXT INDEX 语句和 **sp_fulltexttable**。）|ALTER_FULLTEXT_INDEX（当指定 start_full、start_incremental 或stop 时，适用于 ALTER FULLTEXT INDEX 语句和 **sp_fulltextcatalog**，当指定除了 create 或 drop 操作之外时，适用于 **sp_fulltext_column** 和 **sp_fulltext_table**。）|DROP_FULLTEXT_INDEX（当指定 drop 时，适用于 DROP FULLTEXT INDEX 语句和 **sp_fulltexttable**。）|  
+|CREATE_FULLTEXT_CATALOG（当指定 create  时适用于 CREATE FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|ALTER_FULLTEXT_CATALOG（当指定  start_incremental、  start_full、  Stop 或  Rebuild 时，适用于 ALTER FULLTEXT CATALOG 语句 **sp_fulltextcatalog**，当指定  enable 时，适用于 **sp_fulltext_database**。）|DROP_FULLTEXT_CATALOG（当指定  drop 时，适用于 DROP FULLTEXT CATALOG 语句和 **sp_fulltextcatalog**。）|  
+|CREATE_FULLTEXT_INDEX（当指定  create 时，适用于 CREATE FULLTEXT INDEX 语句和 **sp_fulltexttable**。）|ALTER_FULLTEXT_INDEX（当指定 start_full   、start_incremental 或  stop 时，适用于 ALTER FULLTEXT INDEX 语句和 **sp_fulltextcatalog**，当指定除了 create  或  drop 操作之外时，适用于 **sp_fulltext_column** 和 **sp_fulltext_table**。）|DROP_FULLTEXT_INDEX（当指定  drop 时，适用于 DROP FULLTEXT INDEX 语句和 **sp_fulltexttable**。）|  
 |CREATE_FULLTEXT_STOPLIST|ALTER_FULLTEXT_STOPLIST|DROP_FULLTEXT_STOPLIST|  
 |CREATE_FUNCTION|ALTER_FUNCTION|DROP_FUNCTION|  
 |CREATE_INDEX|ALTER_INDEX（适用于ALTER INDEX 语句和 **sp_indexoption**。）|DROP_INDEX|  
@@ -69,7 +68,7 @@ ms.locfileid: "47751595"
 |CREATE_ROUTE|ALTER_ROUTE|DROP_ROUTE|  
 |CREATE_RULE|DROP_RULE||  
 |BIND_RULE（适用于 **sp_bindrule**。）|UNBIND_RULE（适用于 **sp_unbindrule**。）||  
-|CREATE_SCHEMA（适用于 CREATE SCHEMA 语句、**sp_addrole****sp_adduser**、**sp_addgroup** 和 **sp_grantdbaccess**。）|ALTER_SCHEMA（适用于 ALTER SCHEMA 语句和 **sp_changeobjectowner**）。|DROP_SCHEMA|  
+|CREATE_SCHEMA（适用于 CREATE SCHEMA 语句、**sp_addrole** **sp_adduser**、**sp_addgroup** 和 **sp_grantdbaccess**。）|ALTER_SCHEMA（适用于 ALTER SCHEMA 语句和 **sp_changeobjectowner**）。|DROP_SCHEMA|  
 |CREATE_SEARCH_PROPERTY_LIST|ALTER_SEARCH_PROPERTY_LIST|DROP_SEARCH_PROPERTY_LIST|  
 |CREATE_SEQUENCE_EVENTS|CREATE_SEQUENCE_EVENTS|CREATE_SEQUENCE_EVENTS|  
 |CREATE_SERVER_ROLE|ALTER_SERVER_ROLE|DROP_SERVER_ROLE|  
@@ -104,7 +103,7 @@ ms.locfileid: "47751595"
 |CREATE_EXTENDED_PROCEDURE（适用于 **sp_addextendedproc**。）|DROP_EXTENDED_PROCEDURE（适用于 **sp_dropextendedproc**。）||  
 |CREATE_LINKED_SERVER（适用于 **sp_addlinkedserver**。）|ALTER_LINKED_SERVER（适用于 **sp_serveroption**。）|DROP_LINKED_SERVER（当指定了链接服务器时，适用于 **sp_dropserver** 。）|  
 |CREATE_LINKED_SERVER_LOGIN（适用于 **sp_addlinkedsrvlogin**。）|DROP_LINKED_SERVER_LOGIN（适用于 **sp_droplinkedsrvlogin**。）||  
-|CREATE_LOGIN（当使用必须隐式创建的不存在登录名时，适用于 CREATE LOGIN 语句、**sp_addlogin****sp_grantlogin****xp_grantlogin** 和 **sp_denylogin**。）|ALTER_LOGIN（当指定 Auto_Fix 时，适用于**sp_defaultdb**、**sp_defaultlanguage**、**sp_password** 和 **sp_change_users_login**。）|DROP_LOGIN（适用于 DROP LOGIN 语句、**sp_droplogin**、**sp_revokelogin** 和 **xp_revokelogin**）|  
+|CREATE_LOGIN（当使用必须隐式创建的不存在登录名时，适用于 CREATE LOGIN 语句、**sp_addlogin** **sp_grantlogin** **xp_grantlogin** 和 **sp_denylogin**。）|ALTER_LOGIN（当指定  Auto_Fix 时，适用于**sp_defaultdb**、**sp_defaultlanguage**、**sp_password** 和 **sp_change_users_login**。）|DROP_LOGIN（适用于 DROP LOGIN 语句、**sp_droplogin**、**sp_revokelogin** 和 **xp_revokelogin**）|  
 |CREATE_MESSAGE（适用于 **sp_addmessage**。）|ALTER_MESSAGE（适用于 **sp_altermessage**。）|DROP_MESSAGE（适用于 **sp_dropmessage**。）|  
 |CREATE_REMOTE_SERVER（适用于 **sp_addserver**。）|ALTER_REMOTE_SERVER（适用于 **sp_setnetname**。）|DROP_REMOTE_SERVER（当指定了远程服务器时，适用于 **sp_dropserver** 。）|  
 |CREATE_RESOURCE_POOL|ALTER_RESOURCE_POOL|DROP_RESOURCE_POOL|  

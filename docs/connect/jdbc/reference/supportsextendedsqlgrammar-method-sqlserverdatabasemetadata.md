@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8deb1987-c4e3-4599-8e37-0a04ec20b480
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f29d603f8275cd2bcc5585e38ab63277d8ece433
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0f006c4343c1a89fcb6387bc437a3415607ca094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969417"
 ---
 # <a name="supportsextendedsqlgrammar-method-sqlserverdatabasemetadata"></a>supportsExtendedSQLGrammar 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsExtendedSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsExtendedSQLGrammer 方法由 java.sql.DatabaseMetaData 接口中的 supportsExtendedSQLGrammer 方法指定。  
+ 此 supportsExtendedSQLGrammer 方法由 supportsExtendedSQLGrammer 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

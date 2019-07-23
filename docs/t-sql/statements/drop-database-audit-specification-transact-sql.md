@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e1b3affaf97a04ddbe16b114d340fa989dab7f5b
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898176"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +41,14 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ```  
   
 ## <a name="arguments"></a>参数  
- audit_specification_name  
+ audit_specification_name   
  现有审核规范对象的名称。  
   
 ## <a name="remarks"></a>Remarks  
  DROP DATABASE AUDIT SPECIFICATION 删除审核规范的元数据，但在发出 DROP 命令之前不会删除所收集的审核数据。 必须先使用 `ALTER DATABASE AUDIT SPECIFICATION` 将数据库审核规范状态设置为 OFF，然后才可以删除该规范。  
   
-## <a name="permissions"></a>Permissions  
- 具有 ALTER ANY DATABASE AUDIT 权限的用户可以删除数据库审核规范。  
+## <a name="permissions"></a>权限  
+ 具有 ALTER ANY DATABASE AUDIT 权限的用户可以删除数据库审核规范  。  
   
 ## <a name="examples"></a>示例  
   

@@ -8,13 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 48055b6713eeab212859afe974df71e51c223010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 406355b1209d707c7ccf624a739e1297632ccb88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100837"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>使用 .NET 应用中的 C# 代码 部署 SSIS 项目
 

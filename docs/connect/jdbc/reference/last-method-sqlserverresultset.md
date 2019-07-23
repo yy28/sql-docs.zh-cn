@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f97a3d27deeb4a51663cb108ab3adc77b75e29e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976891"
 ---
 # <a name="last-method-sqlserverresultset"></a>last 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean last()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**新的当前行是否有效。 **false**如果没有要处理的多个行。  
+ 如果新的当前行有效,**则为 true** 。 如果没有更多的行要处理, 则**为 false** 。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

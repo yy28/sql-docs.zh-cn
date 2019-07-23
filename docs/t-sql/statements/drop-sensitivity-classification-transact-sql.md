@@ -26,11 +26,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493089"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223588"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -51,12 +51,12 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## <a name="arguments"></a>参数  
 
-object_name ([schema_name.]table_name.column_name)
+object_name  ([schema_name.]table_name.column_name)
 
 是从中删除分类的数据库列的名称。 目前仅支持列分类。
-    - schema_name（可选）- 是已分类的列所属架构的名称。
-    - table_name（可选）- 是已分类的列所属表的名称。
-    - column_name - 是从中删除分类的列的名称。
+    - schema_name  （可选）- 是已分类的列所属架构的名称。
+    - table_name  （可选）- 是已分类的列所属表的名称。
+    - column_name  - 是从中删除分类的列的名称。
 
 ## <a name="remarks"></a>Remarks  
 

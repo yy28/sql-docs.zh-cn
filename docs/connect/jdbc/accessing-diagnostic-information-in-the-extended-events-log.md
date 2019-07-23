@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957487"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66770515"
 ## <a name="details"></a>详细信息  
  对于连接操作，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将发送一个客户端连接 ID。 如果连接失败，可以访问连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)），查找 ClientConnectionID 字段并获取有关连接失败的诊断信息  。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是 16 字节的 GUID。 如果将 client_connection_id 操作添加到扩展事件会话中的事件，则还可以在扩展事件目标输出中找到客户端连接 ID  。 如果需要进一步的客户端驱动程序诊断帮助，可以启用跟踪并重新运行连接命令，查看跟踪中的 ClientConnectionID 字段  。  
   
- 可以获取客户端连接 ID 以编程方式通过使用[ISQLServerConnection 接口](../../connect/jdbc/reference/isqlserverconnection-interface.md)。 该连接 ID 还存在于任何与连接相关的异常中。  
+ 可以使用[ISQLServerConnection 接口](../../connect/jdbc/reference/isqlserverconnection-interface.md)以编程方式获取客户端连接 ID。 该连接 ID 还存在于任何与连接相关的异常中。  
   
  存在连接错误时，服务器的 Built In Diagnostics (BID) 跟踪信息和连接环形缓冲区中的客户端连接 ID 可以帮助将客户端连接与服务器上的连接关联。 有关服务器上的 BID 跟踪的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 请注意，该数据访问跟踪文章还包含有关执行数据访问跟踪的信息，这些信息并不适用于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]；有关使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 执行数据访问跟踪的信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。  
   

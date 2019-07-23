@@ -10,25 +10,24 @@ helpviewer_keywords:
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 390407a35d52067c41d1e2a56c1ab62806ffb4cc
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: bbc583ce5a5bc16d2a7dc30b827a4c5a0f9600e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136185"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”，以打开“为 Stretch 启用表”向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
+  若要为 Stretch Database 配置表，请在 SQL Server Management Studio 中为表选择“Stretch | 启用”  ，以打开“为 Stretch 启用表”  向导。 还可以使用 Transact-SQL 在现有表上启用 Stretch Database，或创建已启用 Stretch Database 的新表。  
   
 -   如果在单独的表中存储冷数据，则可以迁移整个表。  
   
 -   如果表中同时包含热数据和冷数据，则可以指定筛选器函数以选择要迁移的行。    
  
- **先决条件**。 如果你为表选择“Stretch | 启用”且尚未为数据库启用 Stretch Database，则向导将首先为 Stretch Database 配置数据库。 请执行[通过运行“启用数据库延伸向导”开始](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)中的步骤，而非本文中的步骤。  
+ **先决条件**。 如果你为表选择“Stretch | 启用”  且尚未为数据库启用 Stretch Database，则向导将首先为 Stretch Database 配置数据库。 请执行[通过运行“启用数据库延伸向导”开始](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)中的步骤，而非本文中的步骤。  
   
  **权限**。 在数据库或表上启用 Stretch Database 需要 db_owner 权限。 在表上启用 Stretch Database 还需具有表的 ALTER 权限。  
 
@@ -39,7 +38,7 @@ ms.locfileid: "56240861"
  **启动向导**  
  1.  在 SQL Server Management Studio 的对象资源管理器中，选择要在其上启用 Stretch 的表。  
   
-2.  右键单击并选择“Stretch”，然后选择“启用”，以启动向导。  
+2.  右键单击并选择“Stretch”  ，然后选择“启用”  ，以启动向导。  
   
  **简介**  
  查看向导和必备组件的用途。  

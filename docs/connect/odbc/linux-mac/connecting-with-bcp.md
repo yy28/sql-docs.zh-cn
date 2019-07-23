@@ -1,5 +1,5 @@
 ---
-title: 使用 bcp 连接 |Microsoft Docs
+title: 与 bcp 连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996617"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此页介绍从 Windows 版本的差异`bcp`。
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此页介绍与的 Windows 版本`bcp`之间的差异。
   
 - 字段终止符是制表符 ("\t")。  
   
@@ -79,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。  
   
 - -l  
-指定登录超时。 -l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值为 0 指定无限超时。
+指定登录超时。 -l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的超时时间（以秒为单位）。 默认的登录超时时间为15秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值0指定无限超时。
   
 - -L *last_row*  
 指定要从表中导出或从数据文件中导入的最后一行的编号。  
@@ -103,7 +102,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 - -S *server*  
-指定的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例进行连接，或如果-D 是使用，DSN。  
+指定要连接到的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的名称, 或者, 如果使用的是 DSN, 则为。  
   
 - -t *field_terminator*  
 指定字段终止符。  

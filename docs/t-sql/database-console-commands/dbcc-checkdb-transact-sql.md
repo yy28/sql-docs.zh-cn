@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102112"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "59429363"
 -   对数据库中的每个表和视图运行 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。    
 -   对数据库运行 [DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)。    
 -   验证数据库中每个索引视图的内容。    
--   使用 FILESTREAM 在文件系统中存储 varbinary(max) 数据时，验证表元数据和文件系统目录和文件之间的链接级一致性。    
+-   使用 FILESTREAM 在文件系统中存储 varbinary(max) 数据时，验证表元数据和文件系统目录和文件之间的链接级一致性  。    
 -   验证数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 数据。    
     
 这意味着不必从 DBCC CHECKDB 单独运行 DBCC CHECKALLOC、DBCC CHECKTABLE 或 DBCC CHECKCATALOG 命令。 有关这些命令执行的检查的详细信息，请参阅这些命令的说明。    
@@ -86,7 +85,7 @@ DBCC CHECKDB
 ```    
     
 ## <a name="arguments"></a>参数    
- database_name | database_id | 0  
+  database_name | database_id  | 0  
  要为其运行完整性检查的数据库的名称或 ID。 如果未指定，或者指定为 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
     
 NOINDEX  
@@ -126,7 +125,7 @@ ALL_ERRORMSGS
 
 EXTENDED_LOGICAL_CHECKS  
  如果兼容性级别为 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，则对索引视图、XML 索引和空间索引（如果存在）执行逻辑一致性检查。  
- 有关详细信息，请参阅本主题后面[备注](#remarks)部分中的“对索引执行逻辑一致性检查”。  
+ 有关详细信息，请参阅本主题后面[备注](#remarks)部分中的“对索引执行逻辑一致性检查”  。  
     
 NO_INFOMSGS  
  取消显示所有信息性消息。  
@@ -153,7 +152,7 @@ PHYSICAL_ONLY
 > 指定 PHYSICAL_ONLY 会使 DBCC CHECKDB 跳过对 FILESTREAM 数据的所有检查。
     
 DATA_PURITY  
- 使 DBCC CHECKDB 检查数据库中是否存在无效或越界的列值。 例如，DBCC CHECKDB 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列。  
+ 使 DBCC CHECKDB 检查数据库中是否存在无效或越界的列值。 例如，DBCC CHECKDB 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列   。  
  默认情况下将启用列值完整性检查，并且不需要使用 DATA_PURITY 选项。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的数据库，默认情况下不启用列值检查，直到 DBCC CHECKDB WITH DATA_PURITY 已在数据库中正确运行为止。 然后，DBCC CHECKDB 将默认检查列值完整性。 有关从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级数据库会对 CHECKDB 有何影响的详细信息，请参阅本主题的“备注”部分。  
     
 > [!WARNING]
@@ -164,7 +163,7 @@ DATA_PURITY
  MAXDOP  
  **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
     
- 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 会使用资源调控器 MAXDOP 值（如 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项   。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 会使用资源调控器 MAXDOP 值（如 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  
 > [!WARNING] 
 > 如果 MAXDOP 设置为零，则 SQL Server 需选择要使用的最大并行度。    
@@ -176,7 +175,7 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 
 由于只能以单用户模式修改[资源数据库](../../relational-databases/databases/resource-database.md)，因此不能直接对其运行 DBCC CHECKDB 命令。 但是，当对 [master 数据库](../../relational-databases/databases/master-database.md)执行 DBCC CHECKDB 时，也在内部对资源数据库运行另一个 CHECKDB。 这意味着 DBCC CHECKDB 可能会返回额外的结果。 如果未设置任何选项，或设置的是 `PHYSICAL_ONLY` 或 `ESTIMATEONLY` 选项，此命令返回额外结果集。    
 
-从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 开始，执行 DBCC CHECKDB 不再清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 以前，执行 DBCC CHECKDB 会清除计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能会导致查询性能暂时性地突然降低。 
+从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 开始，执行 DBCC CHECKDB 不再清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存  。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 以前，执行 DBCC CHECKDB 会清除计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能会导致查询性能暂时性地突然降低。 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>对索引执行逻辑一致性检查    
 对索引进行的逻辑一致性检查因数据库兼容级别而异，如下所示：
@@ -199,8 +198,8 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 在 Microsoft SQL Server 2012 或更早版本中，针对有文件位于 ReFS 格式化卷上的数据库运行 DBCC CHECKDB 命令时，可能会遇到错误消息。 有关详细信息，请参阅知识库文章 2974455：[SQL Server 数据库位于 ReFS 卷上时的 DBCC CHECKDB 行为](https://support.microsoft.com/kb/2974455)    
     
 ## <a name="checking-and-repairing-filestream-data"></a>检查和修复 FILESTREAM 数据    
-对数据库和表启用 FILESTREAM 后，便可选择将 varbinary(max) 二进制大型对象 (BLOB) 存储在文件系统中。 对在文件系统中存储 BLOB 的数据库使用 DBCC CHECKDB 时，DBCC 将检查文件系统和数据库之间的链接级一致性。
-例如，如果表包含使用 FILESTREAM 属性的 varbinary(max) 列，则 DBCC CHECKDB 会检查文件系统目录和文件与表行、表列和列值之间是否存在一对一映射。 如果指定 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKDB 便可修复损坏。 为修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行。
+对数据库和表启用 FILESTREAM 后，便可选择将 varbinary(max) 二进制大型对象 (BLOB) 存储在文件系统中  。 对在文件系统中存储 BLOB 的数据库使用 DBCC CHECKDB 时，DBCC 将检查文件系统和数据库之间的链接级一致性。
+例如，如果表包含使用 FILESTREAM 属性的 varbinary(max) 列，则 DBCC CHECKDB 会检查文件系统目录和文件与表行、表列和列值之间是否存在一对一映射  。 如果指定 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKDB 便可修复损坏。 为修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行。
     
 ## <a name="best-practices"></a>最佳实践    
 建议对生产系统频繁使用 `PHYSICAL_ONLY` 选项。 使用 PHYSICAL_ONLY 可以极大地缩短对大型数据库运行 DBCC CHECKDB 的运行时间。 同时建议您定期运行没有选项的 DBCC CHECKDB。 应当以什么频率执行这些运行任务将取决于各个企业及其生产环境。
@@ -224,7 +223,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 |5|出现终止了 DBCC 命令的未知错误。|    
     
 ## <a name="error-reporting"></a>错误报告    
-一旦 DBCC CHECKDB 检测到损坏错误，便会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建转储文件 (`SQLDUMP*nnnn*.txt`)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
+一旦 DBCC CHECKDB 检测到损坏错误，便会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建转储文件 (`SQLDUMP*nnnn*.txt`)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]   。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
 转储文件包含 DBCC CHECKDB 命令的结果以及其他诊断输出数据。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员有权进行访问。 默认情况下，sysadmin 角色包含 Windows `BUILTIN\Administrators` 组和本地管理员组的所有成员。 如果数据收集进程失败，DBCC 命令不会失败。
     
 ## <a name="resolving-errors"></a>纠正错误    
@@ -246,7 +245,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 -   如果由于事务日志损坏而导致数据库恢复失败，则将重新生成事务日志。 重新生成事务日志可能导致事务一致性丢失。    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的功能。 但是，其可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户将从上次已知成功备份还原作为从由 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
+> REPAIR_ALLOW_DATA_LOSS 选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的功能。 但是，其可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户将从上次已知成功备份还原作为从由 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法  。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
 >     
 >  重新生成日志后，没有完全的 ACID 保证。    
 >     

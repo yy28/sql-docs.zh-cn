@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102128"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ DBCC CHECKALLOC
 ```  
   
 ## <a name="arguments"></a>参数  
- database_name | database_id | 0   
+  database_name | database_id  | 0   
  要检查分配和页使用情况的数据库的名称或 ID。
 如果未指定，或者指定为 0，则使用当前数据库。
 数据库名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。
@@ -71,7 +70,7 @@ DBCC CHECKALLOC
  指定不检查用户表的非聚集索引。<br>维护 NOINDEX 只是为了实现向后兼容性，并不会影响 DBCC CHECKALLOC。
 
  REPAIR_ALLOW_DATA_LOSS \| REPAIR_FAST \| REPAIR_REBUILD  
- 指定 DBCC CHECKALLOC 修复找到的错误。 database_name 必须处于单用户模式。
+ 指定 DBCC CHECKALLOC 修复找到的错误。 database_name 必须处于单用户模式  。
 
  REPAIR_ALLOW_DATA_LOSS  
  试图修复找到的任何错误。 这些修复可能会导致一些数据丢失。 REPAIR_ALLOW_DATA_LOSS 是允许修复分配错误的唯一选项。
@@ -120,11 +119,11 @@ DBCC CHECKALLOC 命令完成后，会将一条消息写入 [!INCLUDE[ssNoVersion
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|  
 |2|在紧急模式数据库修复过程中出错。|  
 |3|这指示导致 DBCC 命令终止的元数据损坏。|  
-|4|检测到断定或访问违规。|  
+|4|检测到断言或访问违规。|  
 |5|出现终止了 DBCC 命令的未知错误。|  
   
 ## <a name="error-reporting"></a>错误报告  
-只要 DBCC CHECKALLOC 检测到损坏错误，就将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
+只要 DBCC CHECKALLOC 检测到损坏错误，就将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)  。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
 转储文件包含 DBCC CHECKALLOC 命令的结果以及其他诊断输出数据。 该文件拥有任意访问控制列表 (DACL)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员有权进行访问。 默认情况下，sysadmin 角色包含 Windows BUILTIN\Administrators 组和本地管理员组的所有成员。 如果数据收集进程失败，DBCC 命令不会失败。
   
 ## <a name="resolving-errors"></a>纠正错误  
@@ -151,7 +150,7 @@ DBCC CHECKALLOC 还会报告每条索引和每个文件中分区的分配摘要�
 |Partition ID|仅限内部使用。|  
 |Alloc unit ID|仅限内部使用。|  
 |行内数据|页包含索引或堆数据。|  
-|LOB 数据|页包含 varchar(max)、nvarchar(max)、text、ntext，xml 和 image 数据。|  
+|LOB 数据|页包含 varchar(max)、nvarchar(max)、text、ntext，xml 和 image 数据        。|  
 |行溢出数据|页包含已推送到行外的可变长度列数据。|  
   
 DBCC CHECKALLOC 将返回以下结果集（值可能有所不同），指定了 ESTIMATEONLY 或 NO_INFOMSGS 时除外。
@@ -228,7 +227,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  

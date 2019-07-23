@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9b113a9ef0ca0905fa90833a5c9568a9318834a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c4f9dc408f5b0cab4d568e8b63dfa3f61acdcd59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126052"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -82,13 +81,13 @@ ms.locfileid: "56802691"
   
 ### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  若要开始卸载过程，请转到 **“控制面板”** ，然后选择 **“程序和功能”**。  
+1.  若要开始卸载过程，请转到 **“控制面板”** ，然后选择 **“程序和功能”** 。  
   
-2.  右键单击“SQL Server 2016”，然后选择“卸载”。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
+2.  右键单击“SQL Server 2016”  ，然后选择“卸载”  。 然后单击 **“删除”** 。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
   
-     将运行安装程序支持规则以验证您的计算机配置。 若要继续，请单击 **“下一步”**。  
+     将运行安装程序支持规则以验证您的计算机配置。 若要继续，请单击 **“下一步”** 。  
   
-3.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续，请单击 **“下一步”**。  
+3.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续，请单击 **“下一步”** 。  
   
 4.  在“选择功能”页上指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中删除的功能。  
   
@@ -96,7 +95,7 @@ ms.locfileid: "56802691"
   
 5.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
   
-6.  在卸载最后一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联的其他程序仍显示在 **“程序和功能”** 的程序列表中。 但是，如果关闭 **“程序和功能”**，则下次打开 **“程序和功能”** 时，将会刷新程序列表以仅显示仍实际安装的程序。  
+6.  在卸载最后一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关联的其他程序仍显示在 **“程序和功能”** 的程序列表中。 但是，如果关闭 **“程序和功能”** ，则下次打开 **“程序和功能”** 时，将会刷新程序列表以仅显示仍实际安装的程序。  
   
 ### <a name="if-the-uninstallation-fails"></a>如果卸载失败  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b716ed6c-6ec3-47a7-8e6d-16cbf2469d6d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 044b2da04ac55b16507a7ab8ca8f08f0e25a56b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ecfbc637db90531378d589043b637596c4ec2ee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968664"
 ---
 # <a name="supportstransactionisolationlevel-method-sqlserverdatabasemetadata"></a>supportsTransactionIsolationLevel 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean supportsTransactionIsolationLevel(int level)
  指示事务隔离级别的 int  。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsTransactionIsolationLevel 方法由 java.sql.DatabaseMetaData 接口中的 supportsTransactionIsolationLevel 方法指定。  
+ 此 supportsTransactionIsolationLevel 方法由 supportsTransactionIsolationLevel 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

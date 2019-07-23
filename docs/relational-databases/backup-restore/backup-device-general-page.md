@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ba0a8ac8f1e008c4adc2e8206b900e53689ea9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940828"
 ---
 # <a name="backup-device-general-page"></a>备份设备（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47618925"
  查看现有逻辑备份设备的名称，或指定新逻辑备份设备的名称。  
   
  **磁带**  
- 在“磁带”列表中查看或选择目标磁带设备。 仅在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的计算机附连有磁带机时，此选项才可用。  
+ 在“磁带”  列表中查看或选择目标磁带设备。 仅在运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的计算机附连有磁带机时，此选项才可用。  
   
 > [!NOTE]  
 >  远程计算机中的磁带备份设备不是有效的备份目标。  

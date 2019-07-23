@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082936"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "58657912"
 -   [DROP FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/drop-fulltext-index-transact-sql.md)
 
 ## <a name="populate-a-full-text-index"></a>填充全文索引
-创建和维护全文索引的过程称为“填充”（也称为“爬网”）。 有三种类型的全文索引填充：
+创建和维护全文索引的过程称为“填充”  （也称为“爬网”  ）。 有三种类型的全文索引填充：
 -   完全填充
 -   基于更改跟踪的填充
 -   基于时间戳的增量填充。
@@ -65,11 +64,11 @@ ms.locfileid: "58657912"
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>使用 Management Studio 查看全文索引的属性 
 1.  在 Management Studio 中，在对象资源管理器中展开服务器。  
   
-2.  展开“数据库”，然后展开包含全文索引的数据库。  
+2.  展开“数据库”  ，然后展开包含全文索引的数据库。  
   
-3.  展开 **“表”**。  
+3.  展开 **“表”** 。  
   
-4.  右键单击对其定义了全文索引的表，选择“全文索引”，然后在“全文索引”上下文菜单中单击“属性”。 此时将打开“全文索引属性”对话框。  
+4.  右键单击对其定义了全文索引的表，选择  “全文索引”，然后在  “全文索引”上下文菜单中单击  “属性”。 此时将打开“全文索引属性”  对话框。  
   
 5.  在 **“选择页”** 窗格中，您可以选择下列页中的任一页：  
   
@@ -77,9 +76,9 @@ ms.locfileid: "58657912"
     |----------|-----------------|  
     |**常规**|显示全文索引的基本属性。 这些基本属性包括若干个可修改属性和多个不可更改属性，后者如数据库名称、表名和全文键列的名称。 可修改属性包括：<br /><br /> **全文索引非索引字表**<br /><br /> **全文索引已启用**<br /><br /> **更改跟踪**<br /><br /> **搜索属性列表**|  
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[填充全文索引](populate-full-text-indexes.md)。|
-    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文检索属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 database_name.table_name 启动表增量填充）相关联。|  
+    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文检索属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 database_name.table_name 启动表增量填充）相关联    。|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。   
   
 ##  <a name="props"></a> 查看索引表和列的属性  
  一些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数（例如 OBJECTPROPERTYEX）可用来获取各种全文索引属性的值。 此信息可用于全文搜索的管理和故障排除。  
@@ -130,7 +129,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>查找全文键列的标识符  
   
-每个启用全文的表都有一个列，该列用于强制实现表中行的唯一性（“唯一键列”）。 从 OBJECTPROPERTYEX 函数获取的 **TableFulltextKeyColumn** 属性包含唯一键列的列 ID。  
+每个启用全文的表都有一个列，该列用于强制实现表中行的唯一性（“唯一键列”）  。 从 OBJECTPROPERTYEX 函数获取的 **TableFulltextKeyColumn** 属性包含唯一键列的列 ID。  
  
 若要获取此标识符，可以使用 SELECT 语句调用 OBJECTPROPERTYEX 函数。 使用 OBJECT_ID 函数将表名 (*table_name*) 转换为表 ID，并指定 **TableFulltextKeyColumn** 属性，如下所示：  
   
@@ -166,7 +165,7 @@ GO
  此示例返回一个名为 `Unique Key Column`的结果集列，该结果集列显示单个行，该行包含 Document 表的唯一键列 DocumentID 的名称。 请注意，如果此查询包含无效的索引名称，索引名称与表不对应或表不存在等，它将返回 NULL。  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>索引 varbinary(max) 和 xml 列  
- 如果 **varbinary(max)**、 **varbinary**或 **xml** 列是全文索引列，则与任何其他全文索引列一样，可以使用全文谓词（CONTAINS 和 FREETEXT）以及函数（CONTAINSTABLE 和 FREETEXTTABLE）来查询该列。
+ 如果 **varbinary(max)** 、 **varbinary**或 **xml** 列是全文索引列，则与任何其他全文索引列一样，可以使用全文谓词（CONTAINS 和 FREETEXT）以及函数（CONTAINSTABLE 和 FREETEXTTABLE）来查询该列。
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>索引 varbinary(max) 或 varbinary 数据  
  单个 **varbinary(max)** 或 **varbinary** 列可存储多种类型的文档。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持安装了相应筛选器并且在操作系统中可用的任何文档类型。 每个文档的文档类型由该文档的文件扩展名标识。 例如，对于 .doc 文件扩展名，全文搜索将使用支持 Microsoft Word 文档的筛选器。 有关可用文档类型的列表，请查询 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 目录视图。  
@@ -189,18 +188,18 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  对于具有全文索引的表，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]手动为表禁用或重新启用全文索引。  
 
-1.  展开服务器组，展开“数据库”，再展开包含要为其启用全文索引的表的数据库。  
+1.  展开服务器组，展开  “数据库”，再展开包含要为其启用全文索引的表的数据库。  
   
-2.  展开“表”，然后右键单击要为其禁用或重新启用全文索引的表。  
+2.  展开“表”  ，然后右键单击要为其禁用或重新启用全文索引的表。  
   
-3.  选择“全文索引”，然后单击“禁用全文索引”或“启用全文索引”。  
+3.  选择  “全文索引”，然后单击  “禁用全文索引”或  “启用全文索引”。  
   
 ##  <a name="remove"></a> 从表中删除全文索引  
   
 1.  在对象资源管理器中，右键单击要删除的全文索引所在的表。  
   
-2.  选择“删除全文索引”。  
+2.  选择  “删除全文索引”。  
   
-3.  在出现提示时，单击“确定”，确认是否要删除该全文索引。  
+3.  在出现提示时，单击  “确定”，确认是否要删除该全文索引。  
   
   

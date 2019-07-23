@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16d971d8a8512d10ee20d02d29f3c27b981693eb
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126989"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51571496"
   
  有关同时使用 **CREATE SEQUENCE** 和 **NEXT VALUE FOR** 函数的信息，请参阅 [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
- 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”，再单击“新建序列”，或者右键单击现有序列，再单击“属性”。 如果右键单击现有序列，再单击“属性”，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) 语句，或删除并重新创建序列对象。  
+ 访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”  ，再单击“新建序列”  ，或者右键单击现有序列，再单击“属性”  。 如果右键单击现有序列，再单击“属性”  ，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md) 语句，或删除并重新创建序列对象。  
   
 ## <a name="options"></a>选项  
  **序列名称**  
@@ -53,7 +52,7 @@ ms.locfileid: "51571496"
 -   基于这些类型之一的任何用户定义数据类型（别名类型）。  
   
  **精度**  
- 对于“十进制”**decimal**或“数值”数据类型，请指定精度。 （小数位数始终为 0。）  
+ 对于“十进制”**decimal**或“数值”  数据类型，请指定精度。 （小数位数始终为 0。）  
   
  **起始值**  
  将由序列对象返回的第一个值。 **START** 值必须是小于或等于序列对象的最大值并大于或等于其最小值的值。 新序列对象的默认起始值是升序序列对象的最小值和降序序列对象的最大值。  
@@ -86,7 +85,7 @@ ms.locfileid: "51571496"
   
  有关创建序列选项的其他信息，请参阅 [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对 SCHEMA 拥有 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 权限。  
   
 ## <a name="see-also"></a>另请参阅  

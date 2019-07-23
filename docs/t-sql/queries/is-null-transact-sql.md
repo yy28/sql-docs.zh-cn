@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 294a5db85ba0cee826341e0ddd86f572040d78c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901934"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,9 +63,9 @@ expression IS [ NOT ] NULL
  **Boolean**  
   
 ## <a name="return-code-values"></a>返回代码值  
- 如果 expression 的值为 NULL，则 IS NULL 返回 TRUE；否则，返回 FALSE。  
+ 如果 expression 的值为 NULL，则 IS NULL 返回 TRUE；否则，返回 FALSE  。  
   
- 如果 expression 的值为 NULL，则 IS NOT NULL 返回 FALSE；否则，返回 TRUE。  
+ 如果 expression 的值为 NULL，则 IS NOT NULL 返回 FALSE；否则，返回 TRUE  。  
   
 ## <a name="remarks"></a>Remarks  
  若要确定表达式是否为 NULL，请使用 IS NULL 或 IS NOT NULL，而不要使用比较运算符（如 = 或 !=）。 如果有一个参数为 NULL 或两个参数都为 NULL，比较运算符将返回 UNKNOWN。  

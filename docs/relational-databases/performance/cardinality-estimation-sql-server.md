@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946999"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
 
@@ -69,8 +68,8 @@ ms.locfileid: "59516453"
 
 后续更新从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，意味着兼容性级别为 120 及以上。 级别 120 及以上的 CE 更新中引入了已更新的假设和算法，非常适用于现代数据仓库和 OLTP 工作负荷。 从 CE 70 假设开始，以下模型假设已自 CE 120 起更改：
 
--  独立性转变为相关性：不同列值的组合不一定独立。 这可能类似于更真实的数据查询。
--  简单包含转变为基本包含：用户可能查询不存在的数据。 例如，对于两个表之间的等值联接，我们使用基本表直方图来评估联接选择性，然后考虑谓词选择性因素。
+-  独立性转变为相关性   ：不同列值的组合不一定独立。 这可能类似于更真实的数据查询。
+-  简单包含转变为基本包含   ：用户可能查询不存在的数据。 例如，对于两个表之间的等值联接，我们使用基本表直方图来评估联接选择性，然后考虑谓词选择性因素。
   
 **兼容性级别：** 通过使用以下 [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，可以确保数据库位于特定级别。  
 
@@ -112,7 +111,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**查询存储：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点。  
+**查询存储：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，查询存储是用于检查查询性能的一种方便的工具。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中的数据库节点下的对象资源管理器中，当查询存储启用时，显示“查询存储”节点   。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -132,7 +131,7 @@ SET QUERY_STORE CLEAR;
 > [!TIP] 
 > 建议安装最新版本的 [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) 并且经常更新。  
   
-跟踪基数估计过程的另一种方法是使用名为 query_optimizer_estimate_cardinality 的扩展事件。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行。 它将 .xel 文件写入 `C:\Temp\`（尽管可以更改路径）。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
+跟踪基数估计过程的另一种方法是使用名为 query_optimizer_estimate_cardinality 的扩展事件  。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行。 它将 .xel 文件写入 `C:\Temp\`（尽管可以更改路径）。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中打开此 .xel 文件时，其详细信息将以用户友好的方式显示。  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -185,11 +184,11 @@ GO
   
 4.  运行重要的查询。  
   
-5.  在结果窗格的“消息”选项卡上，记下实际受影响的行数。  
+5.  在结果窗格的“消息”  选项卡上，记下实际受影响的行数。  
   
-6.  在结果窗格的“结果”选项卡上，双击包含 XML 格式的统计信息的单元格。 将显示图形查询计划。  
+6.  在结果窗格的“结果”  选项卡上，双击包含 XML 格式的统计信息的单元格。 将显示图形查询计划。  
   
-7.  在图形查询计划的第一个框中右键单击，然后单击“属性”。  
+7.  在图形查询计划的第一个框中右键单击，然后单击“属性”  。  
   
 8.  针对后面的与不同配置的比较，请记下以下属性的值：  
   
@@ -197,11 +196,11 @@ GO
   
     -   **估计的行数**。  
   
-    -   **估计的 I/O 成本**，以及一些涉及实际性能而不是行数预测的类似的估计属性。  
+    -   **估计的 I/O 成本**，以及一些涉及实际性能而不是行数预测的类似的估计  属性。  
   
-    -   **逻辑操作**和**物理操作**。 “并行”是一个不错的选择。  
+    -   **逻辑操作**和**物理操作**。  “并行”是一个不错的选择。  
   
-    -   **实际执行模式**。 “批处理”是一个不错的选择，优于“行”。  
+    -   **实际执行模式**。  “批处理”是一个不错的选择，优于“行”  。  
   
 9. 将估计的行数与实际行数进行比较。 CE 的不准确率偏高或偏低 1% 还是 10%？  
   
@@ -239,7 +238,7 @@ GO
 
 3. 可以使用 `LEGACY_CARDINALITY_ESTIMATION` 查询提示，让单个查询使用较旧 CE，同时保留查询优化器中的其他改进。  
   
-为了实现更好的控制，可以强制系统在测试期间使用通过 CE 70 生成的计划。 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。 该方法将在后面详细说明。  
+为了实现更好的控制，可以强制系统在测试期间使用通过 CE 70 生成的计划  。 固定首选计划后，可以将整个数据库设置为使用最新兼容性级别和 CE。  该方法将在后面详细说明。  
   
 ### <a name="how-to-force-a-particular-query-plan"></a>如何强制使用特定的查询计划  
   
@@ -247,7 +246,7 @@ GO
   
 - 执行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。  
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展开“查询存储”节点，右键单击“资源使用排名靠前的节点”，然后单击“查看资源使用排名靠前的节点”    。 此时将显示“强制使用计划”和“取消强制使用计划”按钮。    
   
 有关查询存储的详细信息，请参阅 [《Monitoring Performance By Using the Query Store》](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)（使用查询存储监控性能）。  
   
@@ -257,7 +256,7 @@ GO
   
 ### <a name="example-a-ce-understands-maximum-value-might-be-higher-than-when-statistics-were-last-gathered"></a>示例 A. CE 认为最大值可能大于最近收集统计信息时的值  
   
-当 `OrderAddedDate` 的最大值为 `2016-04-30` 时，假定上次在 `2016-04-30` 收集 `OrderTable` 的统计信息。 CE 120（和更高版本）认为数据按升序排序的 `OrderTable` 中的列的值可能大于由统计信息记录的最大值。 这种假设改进了 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的查询计划，如下所示。  
+当 `OrderAddedDate` 的最大值为 `2016-04-30` 时，假定上次在 `2016-04-30` 收集 `OrderTable` 的统计信息。 CE 120（和更高版本）认为数据按升序排序的 `OrderTable` 中的列的值可能大于由统计信息记录的最大值  。 这种假设改进了 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的查询计划，如下所示。  
   
 ```sql  
 SELECT CustomerId, OrderAddedDate  

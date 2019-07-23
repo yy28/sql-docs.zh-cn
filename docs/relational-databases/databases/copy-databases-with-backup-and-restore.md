@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137322"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "51558554"
   
  一般步骤如下：  
   
-1.  备份可能位于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的实例上的源数据库。 运行此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机为“源计算机”。  
+1.  备份可能位于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的实例上的源数据库。 运行此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机为“源计算机”  。  
   
-2.  在要存放复制的数据库的计算机（“目标计算机”）上，连接到计划为其还原数据库的 SQL Server 实例。 如果需要，在“目标”服务器实例上创建与“源”数据库备份设备相同的设备。  
+2.  在要存放复制的数据库的计算机（“目标计算机”  ）上，连接到计划为其还原数据库的 SQL Server 实例。 如果需要，在“目标”  服务器实例上创建与“源”  数据库备份设备相同的设备。  
   
-3.  在“目标”计算机上还原“源”数据库的备份。 还原数据库操作将自动创建所有数据库文件。  
+3.  在“目标”  计算机上还原“源”  数据库的备份。 还原数据库操作将自动创建所有数据库文件。  
   
 一些可能影响此过程的其他注意事项：
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52195cc99c61fb8dbf074f2362e0d7e13eb0b68d
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140814"
 ---
 # <a name="cursors"></a>游标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "52586270"
   
 > [!TIP]
 > 在某些情况下，如果表上有一个主键，可以使用 `WHILE` 循环代替游标，而不会产生游标的开销。
-> 然而，在某些情况下，游标不仅是不可避免的，而且实际上是不可或缺的。 在这种情况下，如果不需要基于游标来更新表，则使用“firehose”游标，即[快进和只读](#forward-only)游标。
+> 然而，在某些情况下，游标不仅是不可避免的，而且实际上是不可或缺的。 在这种情况下，如果不需要基于游标来更新表，则使用“firehose”游标，即[快进和只读](#forward-only)游标  。
   
 ## <a name="cursor-implementations"></a>游标实现  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持三种游标实现。  
@@ -66,7 +65,7 @@ API 游标支持 OLE DB 和 ODBC 中的 API 游标函数。 API 服务器游标�
 > 游标可以利用 tempdb 工作表。 就像溢出的聚合或排序操作一样，这些操作在 I/O 中产生，是潜在的性能瓶颈。 `STATIC` 游标从一开始就使用工作表。 有关详细信息，请参阅[查询处理体系结构指南中的工作表](../relational-databases/query-processing-architecture-guide.md#worktables)。
 
 ### <a name="forward-only"></a>只进  
-只进游标指定为 `FORWARD_ONLY` 和 `READ_ONLY`，不支持滚动。 这些游标也称为“firehose”游标，并且只支持从游标的开始到结束连续提取行。 行只在从数据库中提取出来后才能检索。 对所有由当前用户发出或由其他用户提交、并影响结果集中的行的 `INSERT`、`UPDATE` 和 `DELETE` 语句，其效果在这些行从游标中提取时是可见的。  
+只进游标指定为 `FORWARD_ONLY` 和 `READ_ONLY`，不支持滚动。 这些游标也称为“firehose”游标，并且只支持从游标的开始到结束连续提取行  。 行只在从数据库中提取出来后才能检索。 对所有由当前用户发出或由其他用户提交、并影响结果集中的行的 `INSERT`、`UPDATE` 和 `DELETE` 语句，其效果在这些行从游标中提取时是可见的。  
   
  由于游标无法向后滚动，则在提取行后对数据库中的行进行的大多数更改通过游标均不可见。 当值用于确定所修改的结果集（例如更新聚集索引涵盖的列）中行的位置时，修改后的值通过游标可见。  
   
@@ -81,7 +80,7 @@ API 游标支持 OLE DB 和 ODBC 中的 API 游标函数。 API 服务器游标�
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 静态游标始终是只读的。  
   
 > [!NOTE]
-> 由于静态游标的结果集存储在“tempdb”中的一个工作表中，因此结果集中的行大小不能超过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表的最大行大小。  
+> 由于静态游标的结果集存储在“tempdb”中的一个工作表中，因此结果集中的行大小不能超过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表的最大行大小  。  
 > 有关详细信息，请参阅[查询处理体系结构指南中的工作表](../relational-databases/query-processing-architecture-guide.md#worktables)。 有关最大行大小的详细信息，请参阅 [SQL Server 最大容量规范](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine)。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 称静态游标为不敏感游标。 一些数据库 API 将这类游标识别为快照游标。  
@@ -90,7 +89,7 @@ API 游标支持 OLE DB 和 ODBC 中的 API 游标函数。 API 服务器游标�
 打开由键集驱动的游标时，该游标中各行的成员身份和顺序是固定的。 由键集驱动的游标由一组唯一标识符（键）控制，这组键称为键集。 键是根据以唯一方式标识结果集中各行的一组列生成的。 键集是打开游标时来自符合 `SELECT` 语句要求的所有行中的一组键值。 由键集驱动的游标对应的键集是打开该游标时在 **tempdb** 中生成的。  
   
 ### <a name="dynamic"></a>Dynamic  
-动态游标与静态游标相对。 当滚动游标时，动态游标反映结果集中所做的所有更改。 结果集中的行数据值、顺序和成员在每次提取时都会改变。 所有用户做的全部 `UPDATE`、`INSERT` 和 `DELETE` 语句均通过游标可见。 如果使用 API 函数（如“SQLSetPos”）或 [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF` 子句通过游标进行更新，它们将立即可见。 在游标外部所做的更新直到提交时才可见，除非将游标的事务隔离级别设为未提交读。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 
+动态游标与静态游标相对。 当滚动游标时，动态游标反映结果集中所做的所有更改。 结果集中的行数据值、顺序和成员在每次提取时都会改变。 所有用户做的全部 `UPDATE`、`INSERT` 和 `DELETE` 语句均通过游标可见。 如果使用 API 函数（如“SQLSetPos”）或 [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF` 子句通过游标进行更新，它们将立即可见  。 在游标外部所做的更新直到提交时才可见，除非将游标的事务隔离级别设为未提交读。 有关隔离级别的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。 
  
 > [!NOTE]
 > 动态游标计划从不使用空间索引。  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f1a93bf22d1f96745aed7c71dd1f3ee231a7d22
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929256"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -43,7 +42,7 @@ DROP SERVER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>参数  
- role_name  
+ role_name   
  指定要从服务器中删除的用户定义的服务器角色。  
   
 ## <a name="remarks"></a>Remarks  
@@ -55,7 +54,7 @@ DROP SERVER ROLE role_name
   
  通过查询 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 目录视图可查看有关角色成员身份的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器角色的 CONTROL 权限或 ALTER ANY SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -69,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 查看角色成员身份  
- 若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“服务器角色(成员)”页或执行以下查询：  
+ 若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“服务器角色(成员)”  页或执行以下查询：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

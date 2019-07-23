@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897168"
 ---
 # <a name="how-to-create-a-new-database-project"></a>如何：创建新的数据库项目
 您可以创建一个新的数据库项目，并从现有数据库、.sql 脚本文件或数据层应用程序 (.dacpac) 中导入数据库架构。 然后可以调用可用于所连接的数据库开发的相同可视化设计器工具（Transact\-SQL 编辑器、表设计器），对脱机数据库项目进行更改，然后将更改发布回生产数据库。 这些更改也可以另存为脚本以便在以后发布。 使用“项目属性”  窗格，可以将目标平台更改为不同的 SQL Server 版本（包括 SQL Azure）。  

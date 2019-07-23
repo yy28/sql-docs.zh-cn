@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 812915337b03927af5b23a66a0452d0d6a875112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be4616aa2ea73d2f4c78d7fe06bb3674486ff022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114691"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用脚本组件创建 ODBC 目标
 
@@ -42,7 +41,7 @@ ms.locfileid: "65724481"
   
 -   **OdbcCommand** 需要位置参数。 在命令的文本中，参数的位置由问号 (?) 指示。 （相反，**SqlCommand** 需要命名参数。）  
   
- 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 此示例通过数据流传递此表的第一列和第四列：int AddressID 和 nvarchar(30) City 列    。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
+ 本示例使用 **AdventureWorks** 示例数据库中的 **Person.Address** 表。 此示例通过数据流传递此表的第一列和第四列：int AddressID 和 nvarchar(30) City 列   。 [开发特定类型的脚本组件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主题中的源、转换和目标示例使用了相同的数据。  
   
 #### <a name="to-configure-this-script-component-example"></a>配置此脚本组件示例  
   

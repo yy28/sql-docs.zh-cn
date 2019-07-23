@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 63ee219cc956942c5bd814c03e10ac94b10a5de9
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6f0600f663e00e0318a933e7824f3e0b78166f55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087202"
 ---
 # <a name="manage-policy-categories"></a>管理策略类别
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51512912"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **将类别策略应用到 SQL Server 实例，使用：**  
   
@@ -46,9 +45,9 @@ ms.locfileid: "51512912"
   
 -   如果您指定的策略类别不存在，将创建新的策略类别，并且在您执行存储过程时对于所有数据库都将托管订阅。 如果你为新的类别清除托管的订阅，则该订阅将只适用于你指定为 *target_object* 的数据库。 有关如何更改托管的订阅设置的详细信息，请参阅 [sp_syspolicy_update_policy_category (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  此存储过程在其当前所有者的上下文中运行。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -59,7 +58,7 @@ ms.locfileid: "51512912"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  右键单击“策略管理”，然后选择“管理类别”。  
+3.  右键单击“策略管理”  ，然后选择“管理类别”  。  
   
      在 **“管理策略类别”** 对话框中提供以下信息：  
   
@@ -71,7 +70,7 @@ ms.locfileid: "51512912"
   
 4.  选中或清除 **“托管数据库订阅”** 下的任意或所有复选框，以将该策略类别应用到 SQL Server 实例。  
   
-5.  完成后，单击 **“确定”**。  
+5.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -79,9 +78,9 @@ ms.locfileid: "51512912"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE msdb;  

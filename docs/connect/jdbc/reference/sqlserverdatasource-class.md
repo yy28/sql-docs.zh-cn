@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 916a3c318cf96fa5114b7e0e6bc1a3caae815d4b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971522"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public class SQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 此类支持取消对 SQLServerDataSource 类、 ISQLServerDataSource 接口和数据源接口。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 此类支持解包到 SQLServerDataSource 类、ISQLServerDataSource 接口和 DataSource 接口。 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

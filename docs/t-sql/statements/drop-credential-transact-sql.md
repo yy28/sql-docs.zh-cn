@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ba22628773ece8251c61858b1f2a24d19b4531fb
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: e365b03b5a6a475f98a940f5b6f243bc7fa31789
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898227"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ DROP CREDENTIAL credential_name
 ```  
   
 ## <a name="arguments"></a>参数  
- credential_name  
+ credential_name   
  要从服务器中删除的凭据的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -56,7 +55,7 @@ DROP CREDENTIAL credential_name
 > [!WARNING]  
 >  代理与凭据关联。 删除代理使用的凭据会让关联的代理处于不可用状态。 删除代理使用的凭据时，请使用 [sp_delete_proxy (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) 删除代理并使用 [sp_add_proxy (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) 重新创建关联的代理。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY CREDENTIAL 权限。 如果要删除系统凭据，则要求具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

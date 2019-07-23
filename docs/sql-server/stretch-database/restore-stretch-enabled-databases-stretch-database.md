@@ -7,13 +7,12 @@ ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 479d632b8d5413de9517f92f604c44383012acab
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 169d1d2dfe2ab36d5ae7541ee33912ea162f372f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136097"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>还原已启用延伸的数据库 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,11 +38,11 @@ ms.locfileid: "56240791"
 若要通过使用 Azure 门户将实时 Azure 数据库还原到较早时间点，请执行以下操作。
 
 1. 登录到 [Azure 门户][]。
-2. 在屏幕左侧选择“浏览”，然后选择“ SQL 数据库”。
+2. 在屏幕左侧选择“浏览”  ，然后选择“ SQL 数据库”  。
 3. 导航到数据库，然后选择它。
-4. 在数据库边栏选项卡的顶部，单击“还原”。
-5. 指定新的“数据库名称”，选择某个“还原点”，然后单击“创建”。
-6. 数据库还原过程将开始，可以使用“通知”来监视过程。
+4. 在数据库边栏选项卡的顶部，单击“还原”  。
+5. 指定新的“数据库名称”  ，选择某个“还原点”  ，然后单击“创建”  。
+6. 数据库还原过程将开始，可以使用“通知”  来监视过程。
 
 ### <a name="recover-a-deleted-azure-database"></a>恢复已删除的 Azure 数据库
 在被删除之前，Azure 上的 SQL Server Stretch Database 服务将获取数据库快照并保留 7 天。 之后，它不再保留实时数据库的快照。 这使你能够将已删除的数据库还原到被删除的时间点。
@@ -51,12 +50,12 @@ ms.locfileid: "56240791"
 若要通过使用 Azure 门户将已删除的数据库还原到被删除的时间点，请执行以下操作。
 
 1. 登录到 [Azure 门户][]。
-2. 在屏幕左侧选择“浏览”，然后选择 “SQL Servers”。
+2. 在屏幕左侧选择“浏览”  ，然后选择 “SQL Servers”  。
 3. 导航到服务器，然后选择它。
-4. 向下滚动到服务器边栏选项卡上的“操作”，单击“已删除的数据库”磁贴。
+4. 向下滚动到服务器边栏选项卡上的“操作”，单击“已删除的数据库”  磁贴。
 5. 选择要使用的数据库。
-5. 指定新的**数据库名称**，然后单击“创建”。
-6. 数据库还原过程将开始，可以使用“通知”来监视过程。
+5. 指定新的**数据库名称**，然后单击“创建”  。
+6. 数据库还原过程将开始，可以使用“通知”  来监视过程。
 
 ## <a name="reconnect"></a>还原 SQL Server 数据库和远程 Azure 数据库之间的连接
 

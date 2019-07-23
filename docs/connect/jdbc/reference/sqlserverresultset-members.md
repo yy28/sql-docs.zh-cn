@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57e1859d4729860e7d8a5d11be4a4c3299bccced
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970560"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -117,7 +116,7 @@ ms.locfileid: "66801497"
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|为 JDBC 驱动程序提供提示，以指明在此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象需要更多行时应从数据库中提取的行数。|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|使用 Array 对象更新指定列。|  
 |[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)|使用 ASCII 流值更新指定列。|  
-|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|使用 BigDecimal 对象更新指定的列。|  
+|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|使用 Java.math.bigdecimal 对象更新指定的列。|  
 |[updateBinaryStream](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)|使用二进制流值更新指定列。|  
 |[updateBlob](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)|使用 java.sql.Blob 值更新指定列。|  
 |[updateBoolean](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)|使用布尔值更新指定列  。|  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0a4ea1f4977440ee53835f3c96ab5e60b3083ba
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082273"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE 数据库作用域凭据 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission  
+ permission   
  指定可对数据库作用域凭据撤消的权限。 如下所列。  
   
- ON CERTIFICATE ::credential_name  
+ ON CERTIFICATE ::credential_name    
  指定要对其撤消权限的数据库作用域凭据。 需要使用作用域限定符“::”。  
   
- database_principal  
+ database_principal   
  指定要从中撤消权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -83,7 +82,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal  
+ AS revoking_principal   
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -113,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库作用域凭据具有 CONTROL 权限。  
   
 ## <a name="see-also"></a>另请参阅  

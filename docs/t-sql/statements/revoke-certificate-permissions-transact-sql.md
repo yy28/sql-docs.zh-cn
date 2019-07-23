@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4cd2c67c8dd24a7e6a39a98285235090017adb1e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140909"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 证书权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission  
+ permission   
  指定可以对证书撤消的权限。 如下所列。  
   
- ON CERTIFICATE ::certificate_name  
+ ON CERTIFICATE ::certificate_name    
  指定要撤消的权限所针对的证书。 需要使用作用域限定符“::”。  
   
- database_principal  
+ database_principal   
  指定要从中撤消权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -80,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal  
+ AS revoking_principal   
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -110,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="see-also"></a>另请参阅  

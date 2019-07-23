@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093599"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "57973426"
 |**Log Flush Write Time (ms)**|执行在最后一秒完成的写入日志刷新信息的时间（毫秒）。|  
 |**Log Flushes/sec**|每秒日志刷新数目。|  
 |**Log Growths**|数据库事务日志增长的总次数。|  
-|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
+|**Log Pool Cache Misses/sec**|日志块在日志池中不可用的请求数。 “日志池”  是事务日志的内存中缓存。 这种缓存用于优化对恢复、事务复制、回滚和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]日志的读取操作。|  
 |**Log Pool Disk Reads/sec**|日志池发出的提取日志块的磁盘读取数。|  
 |**Log Pool Hash Deletes/sec**|从日志池删除原始哈希条目的速率。|
 |**Log Pool Hash Inserts/sec**|原始哈希条目插入日志池的速率。|

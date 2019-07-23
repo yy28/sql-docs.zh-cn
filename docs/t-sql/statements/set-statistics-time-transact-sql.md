@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2be43a9ed439d3f4fb72c26683973ca4c18b263f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898001"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ SET STATISTICS TIME { ON | OFF }
   
  SET STATISTICS TIME 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在纤程模式下提供准确的统计信息，而纤程模式在启用“轻型池”配置选项时激活。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能在纤程模式下提供准确的统计信息，而纤程模式在启用“轻型池”配置选项时激活  。  
   
- 只有当使用 SET STATISTICS TIME ON 执行查询时才更新 sysprocesses 表中的 cpu 列。 当 SET STATISTICS TIME 为 OFF 时，将返回 0。  
+ 只有当使用 SET STATISTICS TIME ON 执行查询时才更新 sysprocesses 表中的 cpu 列   。 当 SET STATISTICS TIME 为 OFF 时，将返回 0  。  
   
  ON 和 OFF 设置还影响 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内的“当前活动的进程信息视图”中的 CPU 列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS TIME，用户必须具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。 但不需要 SHOWPLAN 权限。  
   
 ## <a name="examples"></a>示例  

@@ -16,11 +16,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439909"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68219595"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>分析实际执行计划
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "52439909"
   
 ## <a name="to-analyze-an-execution-plan-for-a-query"></a>分析查询的执行计划  
   
-1.  使用“文件”菜单并单击“打开文件”，打开以前保存的查询执行计划文件 (.sqlplan)，或将计划文件拖到 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 窗口。 或者，如果刚执行查询并选择显示其执行计划，请移动到结果窗格中的“执行计划”选项卡中。 
+1.  使用“文件”菜单并单击“打开文件”，打开以前保存的查询执行计划文件 (.sqlplan)，或将计划文件拖到 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 窗口   。 或者，如果刚执行查询并选择显示其执行计划，请移动到结果窗格中的“执行计划”选项卡中  。 
 
-2.  右键单击执行计划的空白区域，然后单击“分析实际执行计划”。 
+2.  右键单击执行计划的空白区域，然后单击“分析实际执行计划”  。 
 
     ![右键单击“分析实际执行计划”](../../relational-databases/performance/media/plananalysismenuoption.png "Right-click Analyze Actual Execution Plan")   
 
-3.  “显示计划分析”窗口在底部打开。 通过分析正确的语句，使用多语句分析计划时“多语句”选项卡非常有用。
+3.  “显示计划分析”  窗口在底部打开。 通过分析正确的语句，使用多语句分析计划时“多语句”选项卡非常有用  。
 
 4.  选择“方案”选项卡，查看针对实际执行计划发现的问题详细信息。 对于在左窗格中列出的每个运算符，右侧窗格会在*单击此处了解有关此方案的更多信息*链接中显示该方案的详细信息，以及解释列出方案的可能原因。
 

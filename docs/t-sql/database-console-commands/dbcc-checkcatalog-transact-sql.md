@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: cf9e1aec04b5a91b097c8bc533290473c4197b3d
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d75739e2a8594bbd049a7d9b1c2a6908b1c0e29c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102204"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ DBCC CHECKCATALOG
 ```  
   
 ## <a name="arguments"></a>参数  
- database_name | database_id | 0  
+  database_name | database_id  | 0  
  要检查其目录一致性的数据库的名称和 ID。 如果未指定，或者指定为 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
  WITH NO_INFOMSGS  
@@ -66,14 +65,14 @@ DBCC CATALOG 命令完成后，会将一条消息写入 [!INCLUDE[ssNoVersion](.
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|  
 |2|在紧急模式数据库修复过程中出错。|  
 |3|这指示导致 DBCC 命令终止的元数据损坏。|  
-|4|检测到断定或访问违规。|  
+|4|检测到断言或访问违规。|  
 |5|出现终止了 DBCC 命令的未知错误。|  
   
 DBCC CHECKCATALOG 在系统元数据表之间执行各种一致性检查。 DBCC CHECKCATALOG 使用内部数据库快照来提供需要执行这些检查的事务一致性。 有关详细信息，请参阅[查看数据库快照的稀疏文件大小 (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 以及 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md) 中的“DBCC 内部数据库快照使用情况”部分。
 如果无法创建快照，则 DBCC CHECKCATALOG 将获取一个排他数据库锁以获得要求的一致性。 如果检测到任何不一致，则无法修复这些不一致问题，必须使用备份来还原数据库。
   
 > [!NOTE]  
-> 对 tempdb 运行 DBCC CHECKCATALOG 不会执行任何检查。 这是因为，为了提高性能，不允许对 tempdb 使用数据库快照。 这意味着，无法获得所需的事务一致性。 回收服务器以解析任何 tempdb 元数据问题。  
+> 对 tempdb 运行 DBCC CHECKCATALOG 不会执行任何检查  。 这是因为，为了提高性能，不允许对 tempdb 使用数据库快照  。 这意味着，无法获得所需的事务一致性。 回收服务器以解析任何 tempdb 元数据问题  。  
   
 > [!NOTE]  
 > DBCC CHECKCATALOG 不会检查 FILESTREAM 数据。 FILESTREAM 在文件系统中存储二进制大型对象 (BLOB)。  
@@ -93,8 +92,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
- 要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。  
+## <a name="permissions"></a>权限  
+ 要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份   。  
   
 ## <a name="examples"></a>示例  
 以下示例将检查当前数据库和 `AdventureWorks` 数据库中的目录完整性。

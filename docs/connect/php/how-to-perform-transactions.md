@@ -1,5 +1,5 @@
 ---
-title: 如何： 执行事务 |Microsoft Docs
+title: '如何: 执行事务 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee3e77677a3ae52fb112ae8a280e91086a483875
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936439"
 ---
 # <a name="how-to-perform-transactions"></a>如何：执行事务
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -151,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>注释  
-为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序，我们建议检查任何对**sqlsrv**函数的错误，并相应地处理它们。
+为了重点介绍事务行为，上面的示例中未包含一些建议的错误处理。 对于生产应用程序, 我们建议检查对**sqlsrv**函数的任何调用是否存在错误并相应地对其进行处理。
   
 ## <a name="see-also"></a>另请参阅  
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

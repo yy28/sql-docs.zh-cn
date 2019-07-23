@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94a6520e5d7dcc21bdf4ad0c816b26597d24f587
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099621"
 ---
 # <a name="database-properties-filegroups-page"></a>数据库属性（“文件组”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  
+  使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行  文件组、FILESTREAM 数据和内存优化文件组。  
   
  行文件组包含常规数据和日志文件。 FILESTREAM 数据文件组包含 FILESTREAM 数据文件。 这些数据文件存储有关在使用 FILESTREAM 存储时二进制大型对象 (BLOB) 数据在文件系统中的存储方式的信息。 两种类型的文件组具有相同的选项。  
   

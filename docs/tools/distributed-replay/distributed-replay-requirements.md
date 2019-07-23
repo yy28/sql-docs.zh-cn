@@ -1,5 +1,5 @@
 ---
-title: 分布式重播要求 |Microsoft Docs
+title: Distributed Replay 要求 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075034"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52527650"
 ### <a name="input-trace-versions"></a>输入跟踪版本  
  Distributed Replay 支持在以下版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所收集的输入跟踪数据：  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  累积更新 1 及更高版本。 请参阅[SQL Server 2017 累积更新](https://aka.ms/sql2017cu)。
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]累积更新1和更高版本。 请参阅- [SQL Server 2017 累积更新](https://aka.ms/sql2017cu)。
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

@@ -10,14 +10,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b80b96436b8cc7346a69a8b2448ade60dd009b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116498"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,19 +38,19 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
  要显示的表格的名称（具有一、二、三个部分）。  对于具有二或三个部分的名称，名称必须使用双引号 ("") 括起来。 可选择是否使用引号将具有一个部分的表格名称括起来。  
   
 ## <a name="permissions"></a>权限
-需要 VIEW SERVER STATE 权限。
+需要 VIEW SERVER STATE 权限  。
   
 ## <a name="result-sets"></a>结果集  
 此集是 DBCC PDW_SHOWPARTITIONSTATS 命令的结果。
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|partition_number|ssNoversion|分区号。|  
+|partition_number|INT|分区号。|  
 |used_page_count|BIGINT|用于数据的页数。|  
 |reserved_page_count|BIGINT|为分区保留的页数。|  
 |row_count|BIGINT|分区中的行数。|  
-|pdw_node_id|ssNoversion|数据的计算节点。|  
-|distribution_id|ssNoversion|数据的分发标识符。|  
+|pdw_node_id|INT|数据的计算节点。|  
+|distribution_id|INT|数据的分发标识符。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本语法示例  

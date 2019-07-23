@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b32bbcb94aa1f52c951c0bce341828e7df202b4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927226"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +43,20 @@ ALTER REMOTE SERVICE BINDING binding_name
 ```  
   
 ## <a name="arguments"></a>参数  
- binding_name  
+ binding_name   
  要更改的远程服务绑定的名称。 不能指定服务器、数据库和架构名称。  
   
- WITH USER = \<user_name>  
+ WITH USER = \<user_name>   
  指定数据库用户，该用户持有与此绑定的远程服务相关联的证书。 此证书的公钥用于对与远程服务交换的消息进行加密和身份验证。  
   
  ANONYMOUS  
  指定在与远程服务进行通信时是否使用匿名身份验证。 如果 ANONYMOUS = ON，则使用匿名身份验证，且不会将本地用户的凭据传输给远程服务。 如果 ANONYMOUS = OFF，则传输用户凭据。 如果没有指定该子句，则默认为 OFF。  
   
 ## <a name="remarks"></a>Remarks  
- 与 user_name 关联的证书中的公钥用于对发送到远程服务的消息进行身份验证，并对会话密钥进行加密，然后使用加密的会话密钥对会话进行加密。 user_name 的证书必须与承载远程服务的数据库登录证书相对应。  
+ 与 user_name 关联的证书中的公钥用于对发送到远程服务的消息进行身份验证，并对会话密钥进行加密，然后使用加密的会话密钥对会话进行加密  。 user_name 的证书必须与承载远程服务的数据库登录证书相对应  。  
   
-## <a name="permissions"></a>Permissions  
- 默认情况下，远程服务绑定所有者、db_owner 固定数据库角色成员以及 sysadmin 固定服务器角色成员具有更改远程服务绑定的权限。  
+## <a name="permissions"></a>权限  
+ 默认情况下，远程服务绑定所有者、db_owner 固定数据库角色成员以及 sysadmin 固定服务器角色成员具有更改远程服务绑定的权限   。  
   
  执行 ALTER REMOTE SERVICE BINDING 语句的用户必须具有该语句中所指定用户的模拟权限。  
   

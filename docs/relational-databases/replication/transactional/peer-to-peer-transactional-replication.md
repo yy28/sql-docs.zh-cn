@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121325"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>对等事务复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  对等复制通过在多个服务器实例（又称为“节点” ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
+  对等复制通过在多个服务器实例（又称为“节点”  ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
   
  请考虑 Web 应用程序的情况。 它可以通过以下方式从对等复制中获益：  
   
@@ -140,7 +139,7 @@ ms.locfileid: "54129307"
   
 -   分发代理参数 **-SubscriptionStreams** 和日志读取器代理参数 **-MaxCmdsInTran**。  
   
--   项目属性 **@destination_owner** 和 **@destination_table**）上维护数据副本，提供了一种扩展的高可用性解决方案。
+-   项目属性 **@destination_owner** 和 **@destination_table** ）上维护数据副本，提供了一种扩展的高可用性解决方案。
 
 -   对等事务复制不支持创建针对对等发布的单向事务订阅   
   
@@ -150,7 +149,7 @@ ms.locfileid: "54129307"
   
 -   项目属性 **@replicate_ddl** 的值需要为 **true**； **@identityrangemanagementoption** 的值需要为 **manual**；而 **@status** 需要设置选项 **24** 。  
   
--   项目属性 **@ins_cmd**、 **@del_cmd**和 **@upd_cmd** 的值不能设置为 **SQL**）上维护数据副本，提供了一种扩展的高可用性解决方案。  
+-   项目属性 **@ins_cmd** 、 **@del_cmd** 和 **@upd_cmd** 的值不能设置为 **SQL**）上维护数据副本，提供了一种扩展的高可用性解决方案。  
   
 -   订阅属性 **@sync_type** 的值需要为 **none** 或 **automatic**）上维护数据副本，提供了一种扩展的高可用性解决方案。  
   

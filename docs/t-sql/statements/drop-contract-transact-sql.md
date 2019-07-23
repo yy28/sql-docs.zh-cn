@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2d43c52920c3b868c06d2369f718a0b0fa5fd4e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898267"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ DROP CONTRACT contract_name
 ```  
   
 ## <a name="arguments"></a>参数  
- contract_name  
+ contract_name   
  要删除的约定的名称。 不能指定服务器、数据库和架构名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -53,7 +52,7 @@ DROP CONTRACT contract_name
   
  删除约定时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 会结束使用该约定的所有现有会话并返回错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  删除约定的权限默认授予该约定的所有者、db_ddladmin 或 db_owner 固定数据库角色的成员和 sysadmin 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  

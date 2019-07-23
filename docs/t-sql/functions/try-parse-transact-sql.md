@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098727"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |类别|类型|.NET 类型|使用的样式|  
 |--------------|----------|---------------|-----------------|  
 |数字|BIGINT|Int64|NumberStyles.Number|  
-|数字|ssNoversion|Int32|NumberStyles.Number|  
+|数字|INT|Int32|NumberStyles.Number|  
 |数字|SMALLINT|Int16|NumberStyles.Number|  
 |数字|TINYINT|Byte|NumberStyles.Number|  
 |数字|Decimal|Decimal|NumberStyles.Number|  
