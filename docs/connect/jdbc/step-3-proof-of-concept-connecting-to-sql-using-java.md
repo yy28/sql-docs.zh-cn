@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004285"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3：使用 Java 连接到 SQL 的概念证明
   
-此示例中，应考虑仅概念证明。 示例代码简化为清楚起见，而并不一定代表 Microsoft 推荐的最佳做法。  
+此示例只应视为概念证明。 为清楚起见, 示例代码已简化, 不一定表示 Microsoft 推荐的最佳做法。  
   
-## <a name="step-1--connect"></a>步骤 1： 连接  
+## <a name="step-1--connect"></a>步骤 1: 连接  
   
-使用连接类连接到 SQL 数据库。   
+使用 connection 类连接到 SQL 数据库。   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>步骤 2：执行查询  
-在此示例中，连接到 Azure SQL 数据库、 执行 SELECT 语句，并返回所选的行。   
+在此示例中, 连接到 Azure SQL 数据库, 执行 SELECT 语句, 并返回所选的行。   
   
 ```java  
 import java.sql.Connection;
@@ -100,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>步骤 3： 插入行  
-在此示例中，执行 INSERT 语句、 传递参数，并检索自动生成 Primary Key 值。   
+## <a name="step-3-insert-a-row"></a>步骤 3: 插入行  
+在此示例中, 执行 INSERT 语句, 传递参数, 并检索自动生成的主键值。   
   
 ```java  
 import java.sql.Connection;

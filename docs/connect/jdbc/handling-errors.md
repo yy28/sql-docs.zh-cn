@@ -1,5 +1,5 @@
 ---
-title: 错误处理 |Microsoft Docs
+title: 处理错误 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a69bf1d98d666b0b4b76be604abc31e28958adb4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5bc0e483c70033c8a8132a27879c5616e550ec26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956536"
 ---
 # <a name="handling-errors"></a>处理错误
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,23 +30,23 @@ ms.locfileid: "66781700"
   
 -   `getNextException()` 将返回下一个 `SQLServerException` 对象，如果没有可以返回的异常对象，则返回 null。
 
--   `getSQLServerError()` 返回`SQLServerError`对象，其中包含有关异常的详细的信息，如从 SQL Server 收到。 此方法返回 null，如果没有服务器错误。
+-   `getSQLServerError()`返回对象`SQLServerError` , 该对象包含与 SQL Server 收到的异常有关的详细信息。 如果未发生服务器错误, 则此方法返回 null。
 
-以下方法`SQLServerError`类可用于获取有关从服务器所生成错误的其他详细信息。
+`SQLServerError`类的以下方法可用于获取有关服务器生成的错误的更多详细信息。
 
--   `SQLServerError.getErrorMessage()` 返回从服务器收到的错误消息。
+-   `SQLServerError.getErrorMessage()`返回从服务器接收的错误消息。
 
--   `SQLServerError.getErrorNumber()` 返回一个数字，标识错误的类型。
+-   `SQLServerError.getErrorNumber()`返回标识错误类型的数字。
 
--   `SQLServerError.getErrorState()` 从表示错误、 警告或"找不到数据"消息的 SQL Server 返回一个数字错误代码。
+-   `SQLServerError.getErrorState()`从 SQL Server 返回表示错误、警告或 "找不到数据" 消息的数字错误代码。
 
--   `SQLServerError.getErrorSeverity()` 返回收到的错误的严重性级别。
+-   `SQLServerError.getErrorSeverity()`返回收到的错误的严重级别。
 
--   `SQLServerError.getServerName()` 返回正在运行的 SQL Server 实例的计算机的名称生成错误。
+-   `SQLServerError.getServerName()`返回运行生成错误的 SQL Server 实例的计算机的名称。
 
--   `SQLServerError.getProcedureName()` 返回生成错误的远程过程调用 (RPC) 的存储的过程的名称。
+-   `SQLServerError.getProcedureName()`返回生成错误的存储过程或远程过程调用 (RPC) 的名称。
 
--   `SQLServerError.getLineNumber()` 返回的 TRANSACT-SQL 批命令或生成错误的存储的过程内的行号。
+-   `SQLServerError.getLineNumber()`返回生成错误的 Transact-sql 命令批处理或存储过程中的行号。
   
  在下面的示例中，将向函数中传递 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的一个打开连接，并构造一条没有 FROM 子句、格式错误的 SQL 语句。 然后运行该语句并处理 SQL 异常。  
   

@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 96a17c186c5eb39765d94d88310b1c77d73633b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994599"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用表值参数 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "66791048"
   
 -   使用采用 ISSCommandWithParameters 的自定义参数属性。  
   
--   显示错误 MSOLEDBSQL 错误处理。  
+-   显示 MSOLEDBSQL 错误的错误处理。  
   
- 有关表值参数的详细信息，请参阅[表值参数&#40;OLE DB 驱动程序适用于 SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
+ 有关表值参数的详细信息, 请参阅[&#41;SQL Server OLE DB 驱动程序&#40;的表值参数](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>示例  
  第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建该示例使用的数据库。  
