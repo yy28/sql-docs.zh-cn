@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpcontrol (OLE DB) |Microsoft Docs'
+title: 'IBCPSession:: BCPControl (OLE DB) |Microsoft Docs'
 description: IBCPSession::BCPControl (OLE DB)
 ms.custom: ''
 ms.date: 07/03/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPControl method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 49c26fdaf7912fe0cf67d35ac8fa6f581319cbe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69944fc78ecfe45869ec59c37db20fdb09b2896e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015519"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,18 +43,18 @@ HRESULT BCPControl(
   
  从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制数据时，此方法还可用于指定要使用的 SELECT 语句。 可将 eOption 参数设置为 BCP_OPTION_HINTS，并将 iValue 参数设置为具有一个指针，该指针指向包含该 SELECT 语句的宽字符串   。  
   
- 可能的值*eOption*是：  
+ *EOption*的可能值为:  
   
 |选项|描述|  
 |------------|-----------------|  
-|BCP_OPTION_ABORT|停止正在进行的大容量复制操作。 可以从其他线程调用 eOption 参数为 BCP_OPTION_ABORT 的 BCPControl 方法，以停止正在运行的大容量复制操作   。 *IValue*忽略参数。|  
+|BCP_OPTION_ABORT|停止正在进行的大容量复制操作。 可以从其他线程调用 eOption 参数为 BCP_OPTION_ABORT 的 BCPControl 方法，以停止正在运行的大容量复制操作   。 *IValue*参数将被忽略。|  
 |BCP_OPTION_BATCH|每批的行数。 默认值为 0，在提取数据时，该默认值表示表中的所有行；在将数据复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，该默认值表示用户数据文件中的所有行。 值小于 1 则将 BCP_OPTION_BATCH 重置为默认值。|  
-|BCP_OPTION_DELAYREADFMT|一个布尔值，如果设置为 true，将导致 [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 在执行时读取该值。 如果为 false （默认值），ibcpsession:: Bcpreadfmt 将立即读取格式化文件。 如果将发生序列错误**BCP_OPTION_DELAYREADFMT**是 true，并且您调用 ibcpsession:: Bcpcolumns 或 ibcpsession:: Bcpcolfmt。<br /><br /> 如果您调用也会发生序列错误`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`后调用`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`和 ibcpsession:: Bcpwritefmt。<br /><br /> 有关详细信息，请参阅[元数据发现](../../oledb/features/metadata-discovery.md)。|  
+|BCP_OPTION_DELAYREADFMT|一个布尔值，如果设置为 true，将导致 [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 在执行时读取该值。 如果为 false (默认值), IBCPSession:: BCPReadFmt 将立即读取格式化文件。 如果**BCP_OPTION_DELAYREADFMT**为 true, 并且调用 IBCPSession:: BCPColumns 或 IBCPSession:: BCPColFmt, 则会发生序列错误。<br /><br /> 如果调用`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`和 IBCPSession:: BCPWriteFmt, 则`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`也会发生序列错误。<br /><br /> 有关详细信息, 请参阅[元数据发现](../../oledb/features/metadata-discovery.md)。|  
 |BCP_OPTION_FILECP|iValue 参数包含数据文件的代码页的编号  。 可以指定代码页的编号，例如 1252 或 850，或者采用以下值之一：<br /><br /> BCP_FILECP_ACP：文件中的数据位于客户端的 Microsoft Windows® 代码页中。<br /><br /> BCP_FILECP_OEMCP：文件中的数据位于客户端的 OEM 代码页中（默认值）。<br /><br /> BCP_FILECP_RAW：文件中的数据位于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的代码页中。|  
 |BCP_OPTION_FILEFMT|数据文件格式的版本号。 该版本号可以是 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)])、100（[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]），或 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)])。 默认值为 110。 对于采用服务器早期版本所支持的格式的数据，该选项对导出和导入这样的数据非常有用。  例如，若要将从 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 服务器中的文本列获取的数据导入到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本服务器中的 varchar(max) 列，则应该指定为 80  。 同样，如果从 varchar(max) 列导出数据时指定为 80，数据的保存方式就与按照 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 格式保存的文本列类似，并且可以将这些数据导入到 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 服务器的文本列中  。|  
 |BCP_OPTION_FIRST|要复制的文件或表的第一行数据。 默认值为 1；值小于 1 则将此选项重置为其默认值。|  
 |BCP_OPTION_FIRSTEX|对于 BCP out 操作，指定要复制到数据文件的数据库表的第一行。<br /><br /> 对于 BCP in 操作，指定要复制到数据库表的数据文件的第一行。<br /><br /> iValue 参数应为包含值的带符号的 64 位整数的地址  。 可以传递到 BCPFIRSTEX 的最大值为 2^63-1。|  
-|BCP_OPTION_FMTXML|用于指定生成的格式化文件应采用 XML 格式。 默认情况下关闭此选项，此时将格式化文件作为文本文件保存。 XML 格式化文件提供更大的灵活性，但具有某些额外约束。 例如，不能同时为字段指定前缀和终止符，而在较早的格式化文件中则可以执行此操作。<br /><br /> 注意： XML 格式化文件是仅支持时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]适用于 SQL Server 以及 OLE DB 驱动程序安装工具。|  
+|BCP_OPTION_FMTXML|用于指定生成的格式化文件应采用 XML 格式。 默认情况下关闭此选项，此时将格式化文件作为文本文件保存。 XML 格式化文件提供更大的灵活性，但具有某些额外约束。 例如，不能同时为字段指定前缀和终止符，而在较早的格式化文件中则可以执行此操作。<br /><br /> 注意: 仅当安装工具和 SQL Server OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驱动程序时, 才支持 XML 格式化文件。|  
 |BCP_OPTION_HINTS|iValue 参数包含宽字符串指针  。 寻址的字符串指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制处理提示或返回结果集的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 如果指定返回多个结果集的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，则忽略第一个结果集之后的所有结果集。|  
 |BCP_OPTION_KEEPIDENTITY|将 iValue 参数设置为 TRUE 时，此选项指定大容量复制方法插入为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列（使用标识约束定义）提供的数据值  。 输入文件必须提供标识列的值。 如果未进行设置，则为插入的行生成新标识值。 忽略文件的标识列中所存在的任何数据。|  
 |BCP_OPTION_KEEPNULLS|指定是否会将文件中的空数据值转换为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中的 NULL 值。 将 iValue 参数设置为 TRUE 时，会将空值转换为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中的 NULL  。 默认情况下会将空值转换为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中的列的默认值（如果存在默认值）。|  

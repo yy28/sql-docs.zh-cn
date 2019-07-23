@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993923"
 ---
 # <a name="schema-rowset-support-ole-db"></a>架构行集支持 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66795946"
   此外，处理 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 分布式查询时，适用于 SQL Server 的 OLE DB 驱动程序支持从链接的服务器返回架构信息。  
   
 > [!NOTE]  
->  尽管[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不返回同义词由 OLE DB 驱动程序适用于 SQL Server 支持的同义词，元数据。  
+>  尽管[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支持同义词, 但对于 SQL Server OLE DB 驱动程序不会返回同义词的元数据。  
   
  以下各表列出了适用于 SQL Server 的 OLE DB 驱动程序支持的架构行集和限制列。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66795946"
 ## <a name="in-this-section"></a>本节内容  
  [架构行集中的分布式查询支持](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS 行集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS 行&#40;集 OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序编程](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   

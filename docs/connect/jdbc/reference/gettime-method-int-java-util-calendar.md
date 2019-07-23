@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4444e4988df4a922d42742c58f4bc9e439eb603f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979107"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime 方法 (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public java.sql.Time getTime(int index,
   
  cal   
   
- 一个日历对象。  
+ Calendar 对象。  
   
 ## <a name="return-value"></a>返回值  
  Time 对象。  
@@ -54,7 +53,7 @@ public java.sql.Time getTime(int index,
 ## <a name="remarks"></a>Remarks  
  此 getTime 方法是由 java.sql.CallableStatement 接口中的 getTime 方法指定的。  
   
- 在查看标题为"Getter 方法转换"的图表[了解数据类型转换](../../../connect/jdbc/understanding-data-type-conversions.md)以查看哪个[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可通过此方法检索的数据类型。  
+ 请参阅[了解数据类型转换](../../../connect/jdbc/understanding-data-type-conversions.md)中标题为 "Getter 方法转换" 的图表, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查看可以通过此方法检索哪些数据类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTime 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

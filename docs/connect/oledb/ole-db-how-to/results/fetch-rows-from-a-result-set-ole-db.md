@@ -1,6 +1,6 @@
 ---
-title: 从结果集 (OLE DB) 提取行 |Microsoft Docs
-description: 从结果集使用的 SQL Server OLE DB 驱动程序提取的行
+title: 从结果集中提取行 (OLE DB) |Microsoft Docs
+description: 使用 SQL Server OLE DB 驱动程序从结果集中提取行
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cd3369e685b495fa775a350a9b5fc7dcae2a5f57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015553"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>从结果集中提取行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

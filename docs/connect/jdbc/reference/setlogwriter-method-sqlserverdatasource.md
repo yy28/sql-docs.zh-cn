@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8c2d2ca8edbb3bf0b218a7e5f9b49925c2f52c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974079"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>setLogWriter 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此方法仅供内部使用。 有关日志记录的详细信息，请参阅[Tracing Driver Operation](../../../connect/jdbc/tracing-driver-operation.md)。  
+  此方法仅供内部使用。 有关日志记录的详细信息, 请参阅[跟踪驱动程序操作](../../../connect/jdbc/tracing-driver-operation.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +40,7 @@ public void setLogWriter(java.io.PrintWriter out)
  一个 PrintWriter 对象。  
   
 ## <a name="remarks"></a>Remarks  
- 此 setLogWriter 方法由 javax.sql.DataSource 接口中的 setLogWriter 方法指定。  
+ 此 setLogWriter 方法由 setLogWriter 方法在 javax.mail.session 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

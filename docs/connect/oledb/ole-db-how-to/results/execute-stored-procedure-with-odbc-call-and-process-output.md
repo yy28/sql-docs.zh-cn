@@ -1,6 +1,6 @@
 ---
 title: 使用 ODBC CALL 执行存储过程并处理输出 | Microsoft Docs
-description: 处理返回代码和输出参数使用的 SQL Server OLE DB 驱动程序
+description: 使用 SQL Server 的 OLE DB 驱动程序处理返回代码和输出参数
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - ODBC CALL syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2985c343d7e7b330197ed5c0e3b7aeff1284d279
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015634"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 执行存储过程并处理输出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "66791261"
   
 2.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数标记一个）。  
   
-3.  通过创建定义的参数的取值函数**iaccessor:: Createaccessor**方法。 CreateAccessor 从一组绑定创建取值函数  。  
+3.  使用**IAccessor:: CreateAccessor**方法为定义的参数创建访问器。 CreateAccessor 从一组绑定创建取值函数  。  
   
 4.  填写 DBPARAMS 结构。  
   
 5.  调用 Execute 命令（在这种情况下是调用存储过程）  。  
   
-6.  处理行集，并使用释放**irowset:: Release**方法。  
+6.  使用**IRowset:: release**方法处理行集并将其释放。  
   
 7.  处理从存储过程接收的返回代码和输出参数值。  
   

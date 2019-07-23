@@ -1,6 +1,6 @@
 ---
 title: 设置大型数据 |Microsoft Docs
-description: 设置使用 SQL Server 的 OLE DB 驱动程序的大型数据
+description: 使用 SQL Server 的 OLE DB 驱动程序设置大型数据
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5d050a978efcfc1067f8adc5a346382f5b598ff7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936520"
 ---
 # <a name="setting-large-data"></a>设置大型数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  使用 OLE DB 驱动程序适用于 SQL Server，你可以通过将指针传递给使用者存储对象设置 BLOB 数据。  
+  使用 SQL Server 的 OLE DB 驱动程序, 可以通过将指针传递到使用者存储对象来设置 BLOB 数据。  
   
  使用者创建包含数据的存储对象，并将指向此存储对象的指针传递给访问接口。 然后，访问接口从使用者存储对象读取数据，并将其写入 BLOB 列中。  
   

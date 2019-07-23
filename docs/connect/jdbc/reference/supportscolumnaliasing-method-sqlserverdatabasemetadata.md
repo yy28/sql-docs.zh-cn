@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0d5a60f450978f94cb9d58f381da75be6ca0c3c9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b652b5c333e51f8c8b961a44cfe2be658535f57a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969650"
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>supportsColumnAliasing 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsColumnAliasing()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsColumnAliasing 方法由 java.sql.DatabaseMetaData 接口中的 supportsColumnAliasing 方法指定。  
+ 此 supportsColumnAliasing 方法由 supportsColumnAliasing 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

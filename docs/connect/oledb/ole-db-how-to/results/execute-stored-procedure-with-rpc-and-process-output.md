@@ -13,13 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994723"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 执行存储过程并处理输出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "66791265"
   
 3.  通过使用 DBBINDING 结构数组创建一组绑定（每个参数创建者一个）。  
   
-4.  通过创建定义的参数的取值函数**iaccessor:: Createaccessor**方法。 CreateAccessor 从一组绑定创建取值函数  。  
+4.  使用**IAccessor:: CreateAccessor**方法为定义的参数创建访问器。 CreateAccessor 从一组绑定创建取值函数  。  
   
 5.  填写 DBPARAMS 结构。  
   
 6.  调用 Execute 命令（在这种情况下是调用存储过程）  。  
   
-7.  处理行集，并使用释放**irowset:: Release**方法。  
+7.  使用**IRowset:: release**方法处理行集并将其释放。  
   
 8.  处理从存储过程接收的返回代码和输出参数值。  
   

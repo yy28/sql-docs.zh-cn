@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 78e6c28cf69b118b31d457569019710ed665c94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbd009f2052c911c469b842e2cd5353276d5d2c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954044"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean getAutoCommit()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getAutoCommit 方法由 java.sql.Connection 接口中的 getAutoCommit 方法指定。  
+ 此 getAutoCommit 方法由 getAutoCommit 方法在 sql 连接接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

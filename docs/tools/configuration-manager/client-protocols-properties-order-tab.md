@@ -1,5 +1,5 @@
 ---
-title: 客户端协议属性 （顺序选项卡） |Microsoft Docs
+title: 客户端协议属性 ("顺序" 选项卡) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 97f01ac26519b6334495530e5a454b0f423acf5c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: bbf7795da30f2a274201ce51e9774390b7611b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010239"
 ---
 # <a name="client-protocols-properties-order-tab"></a>客户端协议属性（“顺序”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "67732792"
  列出已安装但当前未使用的协议。  
   
  **“禁用的协议”**  
- 列出了可用于的协议[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此计算机上的客户端。  
+ 列出此计算机上的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端可以使用的协议。  
   
  **>**  
  启用“禁用的协议”  框中当前突出显示的协议，会将其移到“启用的协议”  框中。  

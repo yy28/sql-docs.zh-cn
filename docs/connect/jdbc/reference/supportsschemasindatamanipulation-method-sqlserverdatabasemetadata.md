@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 812dc551-c718-494e-80d9-75732464c8ba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57f27741fa0584645921b4b21df0b95558f9340b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 109d2963b8dcf928eb9b40f093aa2ceb10278654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968913"
 ---
 # <a name="supportsschemasindatamanipulation-method-sqlserverdatabasemetadata"></a>supportsSchemasInDataManipulation 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSchemasInDataManipulation()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsSchemasInDataManipulation 方法由 java.sql.DatabaseMetaData 接口中的 supportsSchemasInDataManipulation 方法指定。  
+ 此 supportsSchemasInDataManipulation 方法由 supportsSchemasInDataManipulation 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

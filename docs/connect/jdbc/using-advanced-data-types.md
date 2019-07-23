@@ -1,5 +1,5 @@
 ---
-title: 使用高级的数据类型 |Microsoft Docs
+title: 使用高级数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004062"
 ---
 # <a name="using-advanced-data-types"></a>使用高级数据类型
 
@@ -48,7 +47,7 @@ ms.locfileid: "66790357"
 JDBC 驱动程序实现了 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 接口的所有方法。  
   
 > [!NOTE]  
-> CLOB 值可与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]（或更高版本）大值数据类型一同使用。 具体来说，CLOB 类型可以与使用**varchar （max)** 并**nvarchar （max)** 数据类型，BLOB 类型可以与使用**varbinary （max)** 和**图像**数据类型和 NCLOB 类型可以使用与**ntext**并**nvarchar （max)** 。  
+> CLOB 值可与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]（或更高版本）大值数据类型一同使用。 具体来说, CLOB 类型可以与**varchar (max)** 和**nvarchar (max)** 数据类型一起使用, BLOB 类型可以与**varbinary (max)** 和**image**数据类型一起使用, NCLOB 类型可用于**ntext**和**nvarchar (max)** .  
 
 ## <a name="large-value-data-types"></a>大值数据类型
 
@@ -67,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> 这种方法还可用于**文本**， **ntext**，并**nvarchar （max)** 数据类型。  
+> 同样的方法也可用于**text**、 **ntext**和**nvarchar (max)** 数据类型。  
 
 从数据库中检索二进制大值数据类型（例如 varbinary(max)）时，可采用多种方法进行操作  。 最有效的方法是将数据作为二进制流进行读取，如下所示：  
 
@@ -102,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> 此方法还可以用于存储中的值**文本**， **ntext**，并**nvarchar （max)** 列。  
+> 此方法还可用于存储在**text**、 **ntext**和**nvarchar (max)** 列中的值。  
 
 如果在服务器上具有图像库并且必须将整个二进制图像文件上传到 varbinary(max) 列，则适用于 JDBC 驱动程序的最有效方法是直接使用流，如下所示  ：  
 
@@ -149,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了 xml 数据类型，该数据类型允许将 XML 文档和片段存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中  。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）    。 对于其他内置类型，在作为变量类型、参数类型、函数返回类型或在 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 和 CONVERT 函数中创建表时，可以使用 xml 数据类型作为列类型  。  
   
-在 JDBC 驱动程序中，xml 数据类型可以映射为字符串、字节数组、流、CLOB、BLOB 或 SQLXML 对象  。 默认值为字符串。 从 JDBC Driver 2.0 开始，JDBC 驱动程序为 JDBC 4.0 API 提供支持，后者引入了 SQLXML 接口。 SQLXML 接口定义与 XML 数据交互以及操作 XML 数据的方法。 **SQLXML**数据类型映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**数据类型。 有关如何使用 SQLXML Java 数据类型从/向关系数据库读取和写入 XML 数据的详细信息，请参阅[支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)  。  
+在 JDBC 驱动程序中，xml 数据类型可以映射为字符串、字节数组、流、CLOB、BLOB 或 SQLXML 对象  。 String 为默认值。 从 JDBC Driver 2.0 开始，JDBC 驱动程序为 JDBC 4.0 API 提供支持，后者引入了 SQLXML 接口。 SQLXML 接口定义与 XML 数据交互以及操作 XML 数据的方法。 **SQLXML**数据类型映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**数据类型。 有关如何使用 SQLXML Java 数据类型从/向关系数据库读取和写入 XML 数据的详细信息，请参阅[支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)  。  
   
 在 JDBC 驱动程序中实现 xml 数据类型为以下各项提供了支持  ：  
   
@@ -173,11 +172,11 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 ## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
 
-Sql_variant 数据类型有关的信息，请参阅[使用 Sql_variant 数据类型](../../connect/jdbc/using-sql-variant-datatype.md)。  
+有关 sql_variant 数据类型的信息, 请参阅[使用 Sql_variant 数据类型](../../connect/jdbc/using-sql-variant-datatype.md)。  
 
 ## <a name="spatial-data-types"></a>空间数据类型
 
-有关空间数据类型的信息，请参阅[使用空间数据类型](../../connect/jdbc/use-spatial-datatypes.md)。  
+有关空间数据类型的信息, 请参阅[使用空间](../../connect/jdbc/use-spatial-datatypes.md)数据类型。  
 
 ## <a name="see-also"></a>另请参阅
 

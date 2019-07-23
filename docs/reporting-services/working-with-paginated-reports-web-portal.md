@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222601"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分页报表（Web 门户）
 
@@ -27,32 +27,32 @@ ms.locfileid: "52537351"
   
 1.  从菜单栏中选择“新建”。  
   
-2.  选择“分页报表”。  
+2.  选择“分页报表”  。  
   
     ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  这将启动报表生成器，或者提示你下载它。  
   
-4.  生成报表，然后选择左上方的“保存”图标，将分页报表保存回报表服务器。  
+4.  生成报表，然后选择左上方的“保存”图标，将分页报表保存回报表服务器  。  
   
 ## <a name="manage-an-existing-paginated-report"></a>管理现有分页报表  
   
 若要管理现有分页报表，可以执行以下操作。  
   
 > [!NOTE]
-> 如果在文件夹中看不到分页报表，请确保你看的是分页报表。 你可以从 Web 门户右上方的菜单栏中选择“查看”  。 请确保已选中“分页报表”。  
+> 如果在文件夹中看不到分页报表，请确保你看的是分页报表。 你可以从 Web 门户右上方的菜单栏中选择“查看”  。 请确保已选中“分页报表”  。  
   
-1.  选择要管理的数据集旁边的省略号 (…)。  
+1.  选择要管理的数据集旁边的省略号 (…)  。  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
-2.  选择“管理”会将你转到编辑屏幕。  
+2.  选择“管理”  会将你转到编辑屏幕。  
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>属性  
   
-在属性屏幕中，可以更改分页报表的“名称”和“描述”。 也可以“删除”、“移动”、“创建链接报表”、“在报表生成器中编辑”、“下载”或“替换”。  
+在属性屏幕中，可以更改分页报表的“名称”和“描述”   。 也可以“删除”、“移动”、“创建链接报表”、“在报表生成器中编辑”、“下载”或“替换”       。  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
@@ -79,7 +79,7 @@ ms.locfileid: "52537351"
   
     data source=(a SQL Server instance);initial catalog=MyData  
   
-可以将连接字符串配置为表达式，以便可以在运行时指定数据源。 数据源表达式是在报表设计器中的报表中定义的。 不能在 Web 门户中定义、查看或修改数据源表达式。 但可以通过单击 **“覆盖默认值”** ，键入静态连接字符串来替换数据源表达式。 如果要切换回原来的表达式，请单击“恢复到默认值”。 报表服务器将存储原始连接字符串，以便在需要时还原。 若要使用数据源表达式，必须使用最初在报表中发布的数据源连接信息。 共享数据源不支持在连接字符串中使用表达式。  
+可以将连接字符串配置为表达式，以便可以在运行时指定数据源。 数据源表达式是在报表设计器中的报表中定义的。 不能在 Web 门户中定义、查看或修改数据源表达式。 但可以通过单击 **“覆盖默认值”** ，键入静态连接字符串来替换数据源表达式。 如果要切换回原来的表达式，请单击“恢复到默认值”  。 报表服务器将存储原始连接字符串，以便在需要时还原。 若要使用数据源表达式，必须使用最初在报表中发布的数据源连接信息。 共享数据源不支持在连接字符串中使用表达式。  
   
 **凭据**  
   
@@ -104,7 +104,7 @@ ms.locfileid: "52537351"
   
 如果帐户为 Windows 凭据，指定的帐户对用来托管报表所用数据源的计算机必须具有本地登录权限。  
   
-选择“使用这些凭据登录，然后尝试模拟用户查看报表”可允许委托凭据，但前提是数据源支持模拟。 对于 SQL Server 数据库，此选项设置“SETUSER”功能 对于 Analysis Services，此选项使用 EffectiveUserName。  
+选择“使用这些凭据登录，然后尝试模拟用户查看报表”可允许委托凭据，但前提是数据源支持模拟  。 对于 SQL Server 数据库，此选项设置“SETUSER”功能 对于 Analysis Services，此选项使用 EffectiveUserName。  
   
 **通过提示用户查看报表以获取凭据**  
   
@@ -124,7 +124,7 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>依赖项  
-使用“依赖项”页可以查看引用此报表的项的列表。 每个项类型的图标都指示了它是什么。 然后，可以选择每个项对应的省略号 (…) 进一步管理这些项。  
+使用“依赖项”页可以查看引用此报表的项的列表。 每个项类型的图标都指示了它是什么。 然后，可以选择每个项对应的省略号 (…) 进一步管理这些项  。  
   
 ## <a name="caching"></a>Caching  
 缓存分页报表的数据时，你有多个选项。 只需进行简单选择即可开始操作。  
@@ -137,7 +137,7 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
   
 ![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
-选择“缓存此报表的副本并在可用时使用副本”时将显示更多选项。  
+选择“缓存此报表的副本并在可用时使用副本”  时将显示更多选项。  
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
@@ -156,18 +156,18 @@ Reporting Services 订阅是一种配置，它在特定时间或为响应某个�
    
 通过“内容管理员”、“我的报表”和“发布者”这些默认角色分配，你可以添加、删除和更改缓存刷新计划的分页报表。  
   
-应用上面的缓存选项后，可以定义缓存刷新计划。 为此，请选择应用缓存设置后出现的“管理刷新计划”链接。 这会将你转到缓存刷新计划页。   
+应用上面的缓存选项后，可以定义缓存刷新计划。 为此，请选择应用缓存设置后出现的“管理刷新计划”  链接。 这会将你转到缓存刷新计划页。   
   
-若要创建新的缓存刷新计划，请选择“新建缓存刷新计划”。 然后，可以为该计划输入名称并指定一个计划。 如果数据集定义了参数，这些参数将列出，你可以提供值，除非它们标记为只读。  
+若要创建新的缓存刷新计划，请选择“新建缓存刷新计划”  。 然后，可以为该计划输入名称并指定一个计划。 如果数据集定义了参数，这些参数将列出，你可以提供值，除非它们标记为只读。  
   
-完成后，你便可以选择“创建缓存刷新计划”。  
+完成后，你便可以选择“创建缓存刷新计划”  。  
   
 ![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > SQL Server 代理必须处于运行状态才能创建缓存刷新计划。  
   
-之后，你可以“编辑”  或“删除”  列出的计划。 仅当选择一个缓存刷新计划时才启用“从现有项新建”选项。 此选项将创建一个新的刷新计划，该计划是从原始计划复制而来。 将打开缓存刷新计划页，其中预先填充了所选计划的详细信息。 然后，您可以修改刷新计划选项并用新说明保存该计划。  
+之后，你可以“编辑”  或“删除”  列出的计划。 仅当选择一个缓存刷新计划时才启用“从现有项新建”选项。  此选项将创建一个新的刷新计划，该计划是从原始计划复制而来。 将打开缓存刷新计划页，其中预先填充了所选计划的详细信息。 然后，您可以修改刷新计划选项并用新说明保存该计划。  
   
 ## <a name="history-snapshots"></a>历史记录快照  
   

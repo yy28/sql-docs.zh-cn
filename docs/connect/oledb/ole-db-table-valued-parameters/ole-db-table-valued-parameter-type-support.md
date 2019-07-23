@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fd7b37d6f23aeecc9c9405cd2e31f23173db7809
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015291"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB 表值参数类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66801124"
   本文介绍了 OLE DB 表值参数类型支持。  
   
 ## <a name="table-valued-parameter-rowset-object"></a>表值参数行集对象  
- 您可以创建表值参数的专用行集对象。 使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 或 iopenrowset:: Openrowset 创建表值参数行集对象。 为此，请将 pTableID 参数的 eKind 成员设置为 DBKIND_GUID_NAME，并提供 CLSID_ROWSET_INMEMORY 作为 guid 成员    。 必须在指定服务器类型名称为表值参数*pwszName*的成员*pTableID*使用 iopenrowset:: Openrowset 时。 表值参数行集对象的行为类似于正则 OLE DB 驱动程序为 SQL Server 对象。  
+ 您可以创建表值参数的专用行集对象。 使用 ITableDefinitionWithConstraints:: CreateTableWithConstraints 或 IOpenRowset:: OpenRowset 创建表值参数行集对象。 为此，请将 pTableID 参数的 eKind 成员设置为 DBKIND_GUID_NAME，并提供 CLSID_ROWSET_INMEMORY 作为 guid 成员    。 使用 IOpenRowset:: OpenRowset 时, 必须在*pTableID*的*pwszName*成员中指定表值参数的服务器类型名称。 表值参数行集对象的行为类似于 SQL Server 对象的常规 OLE DB 驱动程序。  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -59,10 +58,10 @@ CoType RowsetTVP
  不支持将任何其他类型转换为 DBTYPE_TABLE，反之亦然。 针对 DBTYPE_TABLE 到 DBTYPE_TABLE 的转换以外的任何请求，IConvertType::CanConvert 将对不支持的转换返回 S_FALSE。 这将假定对 Command 对象进行 DBCONVERTFLAGS_PARAMETER 转换。  
   
 ## <a name="methods"></a>方法  
- 有关支持表值参数的 OLE DB 方法的信息，请参阅[OLE DB Table-Valued 参数类型支持&#40;方法&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)。  
+ 有关支持表值参数的 OLE DB 方法的信息, 请参阅[OLE DB 表值参数类型支持&#40;方法&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)。  
   
 ## <a name="properties"></a>属性  
- 有关支持表值参数的 OLE DB 属性的信息，请参阅[OLE DB Table-Valued 参数类型支持&#40;属性&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)。  
+ 有关支持表值参数的 OLE DB 属性的信息, 请参阅[OLE DB 表值参数类型支持&#40;属性&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [表值参数 (OLE DB)](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

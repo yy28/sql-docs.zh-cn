@@ -1,6 +1,6 @@
 ---
 title: 大型 CLR 用户定义类型 |Microsoft Docs
-description: 大型 CLR 用户定义类型的 OLE DB 驱动程序适用于 SQL Server
+description: OLE DB Driver for SQL Server 中的大型 CLR 用户定义类型
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: dedc82c4f1b2189e3752562e461f270cc0f5c4bf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: acbdd170808ed9f6d7f67265a4e0d18f3b9e8eb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989068"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 用户定义类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,13 +26,13 @@ ms.locfileid: "66766060"
 
   在 SQL Server 2005 中，公共语言运行时 (CLR) 中的用户定义类型 (UDT) 已限制为最大 8,000 字节。 这一限制在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更高版本中已取消。 CLR UDT 现在以针对大型对象 (LOB) 类型的类似方式处置。 也就是说，小于或等于 8,000 字节的 UDT 在行为上与 SQL Server 2005 中相同，但支持更大的 UDT 并且将其大小报告为“无限制”。  
   
- 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)。  
+ 有关详细信息, 请参阅[OLE DB &#40;&#41;的大型 CLR 用户定义类型](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)。  
   
 ## <a name="use-cases"></a>用例   
   
  对于 OLE DB，对大型 UDT 的支持包括能够通过使用 ISequentialStream 绑定在服务器之间传送 UDT 值。  
   
- 小于或等于 8,000 字节的 UDT 在行为上与 SQL Server 2005 中相同。 用于 OLE DB，仍可以通过使用 ISequentialStream 绑定流小型 Udt。  
+ 小于或等于 8,000 字节的 UDT 在行为上与 SQL Server 2005 中相同。 对于 OLE DB, 仍可以使用 ISequentialStream 绑定流式传输小型 Udt。  
   
  有时候，本机代码将必须理解 CLR UDT 的内容，但将不必实例化托管对象。 在此情况下，您可以使用自定义序列化将服务器上的 UDT 值转换为客户端的已知格式。  
   

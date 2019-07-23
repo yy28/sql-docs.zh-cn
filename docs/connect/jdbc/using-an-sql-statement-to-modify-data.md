@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da0381f06e5092a7bcdb056d88df1160486ce0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cbcdf01eed0114e1788f23cec3a24cf4a69329e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004021"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>使用 SQL 语句修改数据
 
@@ -35,7 +34,7 @@ ms.locfileid: "66790239"
 >
 > 如果试图向其中插入数据的列包含特殊字符（例如空格），则必须提供要插入的值，即使它们是默认值也必须提供。 如果不执行此操作，插入操作就会失败。
 >
-> 如果要让 JDBC 驱动程序返回所有更新计数，包括任何可能已不再使用的触发器所返回的更新计数，请将 lastUpdateCount 连接字符串属性设置为“false”。 有关 lastUpdateCount 属性的详细信息，请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)。
+> 如果要让 JDBC 驱动程序返回所有更新计数，包括任何可能已不再使用的触发器所返回的更新计数，请将 lastUpdateCount 连接字符串属性设置为“false”。 有关 lastUpdateCount 属性的详细信息, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 ## <a name="see-also"></a>另请参阅
 

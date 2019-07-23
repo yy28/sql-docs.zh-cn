@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4fd42fccc0e6e3e15feb3d866ccb8d40531a1d4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c91b965498c0b617a02c7707e369a2ba61c0065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976152"
 ---
 # <a name="preparestatement-method-javalangstring"></a>prepareStatement 方法 (java.lang.String)
 
@@ -39,13 +38,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 包含 SQL 语句的 String  。
 
 ## <a name="return-value"></a>返回值
-一个 PreparedStatement 对象。
+一个 Java.sql.preparedstatement 对象。
 
 ## <a name="exceptions"></a>异常  
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-此 prepareStatement 方法由 java.sql.Connection 接口中的 prepareStatement 方法指定。
+此 prepareStatement 方法由 prepareStatement 方法在 sql 连接接口中指定。
 
 ## <a name="see-also"></a>另请参阅
 

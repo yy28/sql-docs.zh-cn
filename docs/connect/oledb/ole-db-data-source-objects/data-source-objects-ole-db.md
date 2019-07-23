@@ -18,28 +18,27 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015926"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序将数据源一词用于 OLE DB 接口集，这些接口用于建立指向某一数据存储的链接，例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是用于 SQL Server 使用者的 OLE DB 驱动程序的第一个任务。  
+  适用于 SQL Server 的 OLE DB 驱动程序将数据源一词用于 OLE DB 接口集，这些接口用于建立指向某一数据存储的链接，例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是 SQL Server 使用者的 OLE DB 驱动程序的第一个任务。  
   
- 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 SQL Server 的 OLE DB 驱动程序的 CLSID 是 C /C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 将解析为正确的符号引用 msoledbsql.h 文件中 progid)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例  。  
+ 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 SQL Server 的 OLE DB 驱动程序的 CLSID 是 C/C++ GUID CLSID_MSOLEDBSQL (符号 MSOLEDBSQL_CLSID 将解析为所引用的 MSOLEDBSQL 文件中的正确 progid)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例  。  
   
- OLE DB 驱动程序适用于 SQL Server 是一个进程内服务器。 适用于 SQL Server 的 OLE DB 驱动程序对象的实例使用 CLSCTX_INPROC_SERVER 宏创建，以便指示可执行上下文。  
+ SQL Server 的 OLE DB 驱动程序是进程内服务器。 适用于 SQL Server 的 OLE DB 驱动程序对象的实例使用 CLSCTX_INPROC_SERVER 宏创建，以便指示可执行上下文。  
   
  适用于 SQL Server 的 OLE DB 驱动程序数据源对象公开 OLE DB 初始化接口，使用者可使用这些接口连接到现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库。  
   
- 每个连接都通过 OLE DB 驱动程序适用于 SQL Server 自动设置以下选项：  
+ 通过 SQL Server 的 OLE DB 驱动程序建立的每个连接都会自动设置这些选项:  
   
 -   SET ANSI_WARNINGS ON  
   

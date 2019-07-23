@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 385a5d46129aac81125e29b182cb5a9fdde13897
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945839"
 ---
 # <a name="sample-jdbc-driver-applications"></a>示例 JDBC 驱动程序应用程序
 
@@ -40,7 +39,7 @@ ms.locfileid: "66797845"
 | [使用数据类型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | 这些示例应用程序展示了如何使用 JDBC 驱动程序数据类型方法来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。                                                                                           |
 | [使用结果集](../../connect/jdbc/working-with-result-sets.md)                                   | 这些示例应用程序展示了如何使用结果集来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。                                                                                                         |
 | [处理大型数据](../../connect/jdbc/working-with-large-data.md)                                     | 这些示例应用程序展示了如何使用自适应缓冲从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索大值数据，同时免去服务器游标开销。                                                      |
-| [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md) | 此示例应用程序演示了如何检索的数据发现和分类的信息包含在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从 ResultSet 对象使用 JDBC 驱动程序的数据库。                                      |
+| [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md) | 此示例应用程序演示如何使用 JDBC Driver 从结果集对象检索[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中包含的数据发现和分类信息。                                      |
   
 ## <a name="see-also"></a>另请参阅
 

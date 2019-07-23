@@ -21,13 +21,12 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 74c80e0db7a6059e9a871553f2e11c6a16360ec3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 25d3dbaf09e5cdd6dc6726402275376766cf0591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988696"
 ---
 # <a name="working-with-snapshot-isolation"></a>使用快照隔离
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "66796020"
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了旨在增强联机事务处理 (OLTP) 应用程序的并发处理能力的新“快照”隔离级别。 在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，并发仅基于锁定，对于某些应用程序，这可能导致阻塞和死锁问题。 快照隔离依赖于行版本控制的增强功能，旨在通过避免读取器-编写器阻塞情况来提高性能。  
   
- 在快照隔离下启动的事务读取该事务启动时的数据库快照。 在快照事务上下文中打开的键集、动态和静态服务器游标的行为与在可序列化事务中打开的静态游标的行为非常相似。 但是，当在打开游标时不会取得的快照隔离级别的锁。 这一事实可以减少服务器的阻塞。  
+ 在快照隔离下启动的事务读取该事务启动时的数据库快照。 在快照事务上下文中打开的键集、动态和静态服务器游标的行为与在可序列化事务中打开的静态游标的行为非常相似。 但是, 如果在快照隔离级别下打开游标, 则不会执行此操作。 这种情况可以减少服务器上的阻塞。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序  
- SQL Server 的 OLE DB 驱动程序已利用的快照隔离中引入的增强功能[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 这些增强功能包括对 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 属性集的更改。  
+ SQL Server 的 OLE DB 驱动程序具有充分利用中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]引入的快照隔离的增强功能。 这些增强功能包括对 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 属性集的更改。  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
- 已更改 DBPROPSET_DATASOURCEINFO 属性集，以便指示通过添加在 DBPROP_SUPPORTEDTXNISOLEVELS 中使用的 DBPROPVAL_TI_SNAPSHOT 值来支持快照隔离级别。 此新值指示支持快照隔离级别，而不管是否对数据库启用了版本控制。 下表列出了 DBPROP_SUPPORTEDTXNISOLEVELS 值：  
+ 已更改 DBPROPSET_DATASOURCEINFO 属性集，以便指示通过添加在 DBPROP_SUPPORTEDTXNISOLEVELS 中使用的 DBPROPVAL_TI_SNAPSHOT 值来支持快照隔离级别。 此新值指示支持快照隔离级别，而不管是否对数据库启用了版本控制。 下表列出了 DBPROP_SUPPORTEDTXNISOLEVELS 值:  
   
 |属性 ID|描述|  
 |-----------------|-----------------|  
@@ -58,7 +57,7 @@ ms.locfileid: "66796020"
 > [!NOTE]  
 >  如果在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本时设置 DBPROPVAL_TI_SNAPSHOT，将发生 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED 错误。  
   
- 有关如何在事务中支持快照隔离的信息，请参阅[支持本地事务](../../oledb/ole-db-transactions/supporting-local-transactions.md)。  
+ 有关如何在事务中支持快照隔离的信息, 请参阅[支持本地事务](../../oledb/ole-db-transactions/supporting-local-transactions.md)。  
 
   
 ## <a name="see-also"></a>另请参阅  

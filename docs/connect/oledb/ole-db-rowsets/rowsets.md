@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 214e1b82f0ba25c34f28bf22d69d83cf45fe0c38
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015368"
 ---
 # <a name="rowsets"></a>行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

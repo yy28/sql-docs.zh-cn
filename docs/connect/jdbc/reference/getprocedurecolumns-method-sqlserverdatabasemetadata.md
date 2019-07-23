@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980750"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getProcedureColumns 方法由 java.sql.DatabaseMetaData 接口中的 getProcedureColumns 方法指定。  
+ 此 getProcedureColumns 方法由 getProcedureColumns 方法在 Java.sql.databasemetadata 接口中指定。  
   
  由 getProcedureColumns 方法返回的结果集将包含以下信息：  
   
@@ -76,14 +75,14 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |DATA_TYPE|**smallint**|来自 java.sql.Types 的 SQL 数据类型。|  
 |TYPE_NAME|**String**|数据类型的名称。|  
 |PRECISION|**int**|有效数字总个数。|  
-|LENGTH|**int**|以字节为单位的数据的长度。|  
+|LENGTH|**int**|数据的长度 (以字节为单位)。|  
 |SCALE|**short**|小数点右边的数字位数。|  
 |RADIX|**short**|数值类型的基数。|  
 |NULLABLE|**short**|指示列能否包含 Null 值。 可以为下列值之一：<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
 |REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
 |COLUMN_DEF|**String**|列的默认值。|  
 |SQL_DATA_TYPE|**smallint**|此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外    。|  
-|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码      。 对于数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。|  
+|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码      。 对于**datetime**和 ISO **interval**以外的数据类型, 此列为 NULL。|  
 |CHAR_OCTET_LENGTH|**int**|列中的最大字节数。|  
 |ORDINAL_POSITION|**int**|列在表中的索引。|  
 |IS_NULLABLE|**String**|指示列是否允许 Null 值。|  

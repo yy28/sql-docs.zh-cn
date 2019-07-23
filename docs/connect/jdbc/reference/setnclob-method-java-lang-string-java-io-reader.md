@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a595679a-89b7-4b18-9ad2-d9cb13af2a28
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a40fe037074a446610a93ea1851e3f10403f6391
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 252d16871a3aa161eacab99a62eaf4f8a2f03ae8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973736"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader"></a>setNClob 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setNClob(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此方法应用于**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**参数数据类型。  
+ 应将此方法用于**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**参数数据类型。  
   
  此 setNClob 方法是由 java.sql.CallableStatement 接口中的 setNClob 方法指定的。  
   

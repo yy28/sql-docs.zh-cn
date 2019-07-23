@@ -1,6 +1,6 @@
 ---
-title: 将数据插入到表值参数 |Microsoft Docs
-description: 使用 OLE DB 驱动程序适用于 SQL Server 将数据插入到表值参数
+title: 向表值参数中插入数据 |Microsoft Docs
+description: 使用 SQL Server 的 OLE DB 驱动程序将数据插入到表值参数中
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 064dcfa74cd6471c8c279ef4b08e874097d98d64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994126"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "66801154"
   
  使用者应在执行命令之前向访问接口提供所有表值参数数据。 为提供数据，使用者为每个表值参数填充一个表值参数行集对象。 表值参数行集对象显示行集 Insert、Set 和 Delete 操作，使用者将使用这些操作来操作表值参数数据。 访问接口在执行时将从该表值参数行集对象中提取数据。  
   
- 当向使用者提供表值参数行集对象时，使用者可以将其作为行集对象处理。 使用者可以使用 icolumnsinfo:: Getcolumninfo 或 icolumnsrowset:: Getcolumnsrowset 接口方法获取每个列 （类型、 最大长度、 精度和小数位数） 的类型信息。 然后，使用者创建取值函数，以便为数据指定绑定。 下一步是将数据行插入表值参数行集。 这可以通过使用 irowsetchange:: Insertrow。 Irowsetchange:: Setdata 或 IRowsetChange::DeleteRows 还可对表值参数行集对象如果您必须操作数据。 表值参数行集对象将进行引用计数，这与流对象类似。  
+ 当向使用者提供表值参数行集对象时，使用者可以将其作为行集对象处理。 使用者可以使用 IColumnsInfo:: GetColumnInfo 或 IColumnsRowset:: GetColumnsRowset 接口方法获取每个列的类型信息 (类型、最大长度、精度和小数位数)。 然后，使用者创建取值函数，以便为数据指定绑定。 下一步是将数据行插入表值参数行集。 这可以通过使用 IRowsetChange:: InsertRow 来完成。 IRowsetChange:: SetData 或 IRowsetChange:D: 如果你必须操作数据, 则也可以对表值参数行集对象使用 eleteRows。 表值参数行集对象将进行引用计数，这与流对象类似。  
   
- 如果使用 icolumnsrowset:: Getcolumnsrowset，则将对结果列对行集对象的 irowset:: Getnextrows、 irowset:: Getdata 和 irowset:: Releaserows 方法的后续调用。  
+ 如果使用 IColumnsRowset:: GetColumnsRowset, 则将在生成的列的行集对象上对 IRowset:: GetNextRows、IRowset:: IRowset 和 ReleaseRows:: 方法进行后续调用。  
   
  在适用于 SQL Server 的 OLE DB 驱动程序始执行命令之后，将从该表值参数行集对象中提取表值参数值，并将其发送到服务器。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66801154"
   
  在请求模型中，使用者按需为访问接口提供数据。 如果应用程序具有许多数据插入操作，并且内存中的表值参数行集数据将导致过量的内存访问，则使用此方法。 如果使用多个 OLE DB 访问接口，则借助于使用者请求模型，使用者可以将任何行集对象作为表值参数值提供。  
   
- 为了使用请求模型，使用者必须提供其自己的对于行集对象的实现。 使用表值参数行集 (CLSID_ROWSET_TVP) 拉取模型，使用者则需要聚合表值参数行集公开的对象，该提供程序通过 ITableDefinitionWithConstraints::CreateTableWithConstraints 方法或 iopenrowset:: Openrowset 方法。 使用者对象应只覆盖 IRowset 接口实现。 您必须覆盖以下函数：  
+ 为了使用请求模型，使用者必须提供其自己的对于行集对象的实现。 将请求模型用于表值参数行集 (CLSID_ROWSET_TVP) 时, 需要使用者聚合提供程序通过 ITableDefinitionWithConstraints 公开的表值参数行集对象::CreateTableWithConstraints 方法或 IOpenRowset:: OpenRowset 方法。 使用者对象应只覆盖 IRowset 接口实现。 您必须覆盖以下函数：  
   
 -   IRowset::GetNextRows  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66801154"
   
  适用于 SQL Server 的 OLE DB 驱动程序将一次从使用者行集对象中读取一行或多行，以便在表值参数中支持流行为。 例如，用户可能在磁盘上（而非内存中）具有表值参数行集数据，当适用于 SQL Server 的 OLE DB 驱动程序要求时，可能实现从磁盘读取数据的功能。  
   
- 使用者将其数据格式传送到 OLE DB 驱动程序适用于 SQL Server 表值参数行集对象使用 iaccessor:: Createaccessor。 当从使用者缓冲区读取数据时，访问接口将验证所有可写入和非默认列是否至少可用于一个取值函数句柄，并使用相应的句柄来读取列数据。 为了避免混乱，在表值参数行集列与绑定之间应具有一对一的对应关系。 与同一列的重复绑定将导致错误。 此外，每个访问器都必须具有*iOrdinal* DBBindings 的序列中的成员。 对于 IRowset::GetData 的调用数将与每行的取值函数数量相同，调用的顺序将基于 iOrdinal 值的顺序（从低值到高值）  。  
+ 使用者将使用表值参数行集对象上的 IAccessor:: CreateAccessor 将其数据格式与 SQL Server OLE DB 驱动程序通信。 当从使用者缓冲区读取数据时，访问接口将验证所有可写入和非默认列是否至少可用于一个取值函数句柄，并使用相应的句柄来读取列数据。 为了避免混乱，在表值参数行集列与绑定之间应具有一对一的对应关系。 与同一列的重复绑定将导致错误。 此外, 每个访问器都应按顺序包含 DBBindings 的*iOrdinal*成员。 对于 IRowset::GetData 的调用数将与每行的取值函数数量相同，调用的顺序将基于 iOrdinal 值的顺序（从低值到高值）  。  
   
  访问接口应实现由表值参数行集对象显示的大多数接口。 使用者将使用最少的接口实现行集对象 (IRowset)。 由于盲聚合 (blind aggregation)，因此，表值参数行集对象将实现剩下的所必需的行集对象接口。  
   

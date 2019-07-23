@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 1e8cb175-5f4c-4208-b4f5-3646990a30e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7b9c92ec5c89d59e680fcbd2cfc1068a536d87b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 33d0ffe12cce457e744395fd946c5bfd009621e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981699"
 ---
 # <a name="getmultisubnetfailover-method-sqlserverdatasource"></a>getMultiSubnetFailover 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回的值**multiSubnetFailover**连接属性。  
+  返回**multiSubnetFailover**连接属性的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -33,7 +32,7 @@ public boolean getMultiSubnetFailover();
  返回 true 还是 false，具体取决于该连接属性的当前设置。  
   
 ## <a name="remarks"></a>Remarks  
- 有关详细信息**multiSubnetFailover**连接属性，请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+ 有关**multiSubnetFailover**连接属性的详细信息, 请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource.setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)   

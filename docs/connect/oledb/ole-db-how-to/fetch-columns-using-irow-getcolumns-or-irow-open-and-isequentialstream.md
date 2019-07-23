@@ -14,13 +14,12 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 61a913586bbba7dc9fc1d7d997ba33a9eddc8e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994794"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,13 +37,13 @@ ms.locfileid: "66785945"
   
 2.  执行命令（本例中通过 IID_IRow 调用 ICommandExecute::Execute()）  。  
   
-3.  提取列数据使用**open （)** 或**IRow::GetColumns()** 。  
+3.  使用**IRow:: Open ()** 或**IRow:: GetColumns ()** 提取列数据。  
   
-    -   **Open （)** 可用来打开**ISequentialStream**在该行上。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）   。  
+    -   **IRow:: open ()** 可用于打开行上的**ISequentialStream** 。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 IStream 或 ISequentialStream 读取列数据）   。  
   
     -   如果使用 IRow::GetColumns()，则 DBCOLUMNACCESS 结构的 pData 元素设置为指向流对象   。  
   
-4.  使用**ISequentialStream::Read()** 重复，若要指定的字节数读入使用者缓冲区。  
+4.  重复使用**ISequentialStream:: read ()** 将指定数量的字节读入使用者缓冲区。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用 IRow 提取单行。 在此示例中，将一次从该行中检索一列。 此示例演示了 IRow::Open() 和 IRow::GetColumns() 的用法。 为读取列数据，示例中使用了 ISequentialStream::Read。  

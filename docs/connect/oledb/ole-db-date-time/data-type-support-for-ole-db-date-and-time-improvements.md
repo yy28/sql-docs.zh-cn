@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995119"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本文提供了有关 OLE DB （OLE DB 驱动程序适用于 SQL Server） 的信息类型的支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期/时间数据类型。  
+  本文提供了有关支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期/时间数据类型 OLE DB OLE DB (SQL Server) 类型的信息。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射  
  OLE DB 提供两种新数据类型来支持新服务器类型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表显示全部服务器类型映射：  
@@ -76,7 +75,7 @@ ms.locfileid: "66769398"
   
  已对以下现有 OLE DB 结构的实现进行了修改，以支持新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 日期和时间数据类型。 不过未更改定义。  
   
--   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double  。 完整的部件是自 1899 年 12 月 30 日以来的天数和小数部分是一天的小部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
+-   DBTYPE_DATE（这是自动化 DATE 类型。 它在内部表示为 double  。 整个部分是自1899年12月30日以来的天数, 而小数部分是一天的小数部分。 此类型的精确度为 1 秒，因此具有有效的 0 刻度。）  
   
 -   DBTYPE_DBDATE  
   
@@ -161,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 适用于 SQL Server 迁移到 OLE DB 驱动程序使用的应用程序**sql_variant**并且依赖于受限制精度的**datetime**将必须进行更新，如果基础架构更新为使用**datetime2**而非**datetime**。  
+ 如果将基础架构更新为使用**datetime2**而不是**datetime**, 则迁移 SQL Server OLE DB 到使用**sql_variant**并且依赖于**datetime**的有限精度的应用程序将需要进行更新。  
   
  还通过添加以下内容，对 SSVARIANT 的访问宏进行了扩展：  
   
@@ -173,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
- 以下类型映射用于 itabledefinition:: Createtable 所使用的 DBCOLUMNDESC 结构：  
+ 以下类型映射与 ITableDefinition:: CreateTable 使用的 DBCOLUMNDESC 结构一起使用:  
   
 |OLE DB 数据类型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型|说明|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|日期||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
-|DBTYPE_DBTIME2| time(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
-|DBTYPE_DBTIMESTAMPOFFSET| datetimeoffset(p)|SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC *bScale*成员以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMDESC *bScale*成员, 以确定秒的小数部分精度。|  
+|DBTYPE_DBTIME2| time(p)|SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMDESC *bScale*成员, 以确定秒的小数部分精度。|  
+|DBTYPE_DBTIMESTAMPOFFSET| datetimeoffset(p)|SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMDESC *bScale*成员, 以确定秒的小数部分精度。|  
   
- 当应用程序指定了在 DBTYPE_DBTIMESTAMP *wType*，它会重写到映射**datetime2**通过提供中的类型名称*pwszTypeName*。 如果**datetime**指定，则*bScale*必须为 3。 如果**smalldatetime**指定，则*bScale*必须为 0。 如果*bScale*与不一致*wType*并*pwszTypeName*，则返回 DB_E_BADSCALE。  
+ 当应用程序在*wType*中指定 DBTYPE_DBTIMESTAMP 时, 它可以通过在*pwszTypeName*中提供类型名称来覆盖指向**datetime2**的映射。 如果指定**datetime** , 则*bScale*必须为3。 如果指定**smalldatetime** , 则*bScale*必须为0。 如果*bScale*与*wType*和*pwszTypeName*不一致, 将返回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另请参阅  
  [日期和时间改进 (OLE DB)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

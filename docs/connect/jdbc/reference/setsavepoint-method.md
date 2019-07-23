@@ -1,5 +1,5 @@
 ---
-title: setSavepoint 方法 （) |Microsoft Docs
+title: setSavepoint 方法 () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 11013055-4fd3-45a9-b2da-28b2908dad52
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf2c9920545d4d17bb8df6979410d849c125e20c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f6f26909a0ad7c5f33bdf997c48f88c6e7b300a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973013"
 ---
 # <a name="setsavepoint-method-"></a>setSavepoint 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.sql.Savepoint setSavepoint()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个保存点的对象。  
+ 保存点对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setSavePoint 方法由 java.sql.Connection 接口中的 setSavePoint 方法指定。  
+ 此 setSavePoint 方法由 setSavePoint 方法在 sql 连接接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [setSavepoint 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

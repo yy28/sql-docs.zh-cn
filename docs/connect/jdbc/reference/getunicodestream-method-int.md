@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe3352ef2bffaed6151e163d5054b03a05c53418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3ee382716201c5e24b9ff7b23ae4f923ae18b77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978437"
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- InputStream 对象。  
+ 一个 InputStream 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

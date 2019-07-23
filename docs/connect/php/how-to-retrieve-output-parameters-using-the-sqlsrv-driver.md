@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2dac9b1561fbe5b05c96ce8a9ba5f5dd74594ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993398"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输出参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -121,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 输出参数绑定到 bigint 类型，如果值的最终可能会超出范围时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，将需要为 SQLSRV_SQLTYPE_BIGINT 指定其 SQL 字段类型。 否则，它可能会导致"超出范围的值"异常。
+> 将输出参数绑定到 bigint 类型时, 如果值可能在[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围之外结束, 则需要将其 SQL 字段类型指定为 SQLSRV_SQLTYPE_BIGINT。 否则, 可能会导致 "值超出范围" 异常。
 
 ## <a name="example-2"></a>示例 2
-此代码示例演示如何将大型 bigint 值作为输出参数绑定。  
+此代码示例演示如何将大型 bigint 值绑定为输出参数。  
 
 ```
 <?php

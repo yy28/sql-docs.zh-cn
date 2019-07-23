@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3c8cf05f56d4102ec020a99337e3107c4b767a52
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6a5d87ab4f78a5f006e87c34fa774fd9f430aaae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979532"
 ---
 # <a name="getstatementhandlecacheentrycount-method-sqlserverconnection"></a>getStatementHandleCacheEntryCount 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 返回当前的共用预定义的语句句柄数。
+ 返回当前汇集的已准备语句句柄的数目。
 
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +35,13 @@ public int getStatementHandleCacheEntryCount()
 ```  
 
 ## <a name="return-value"></a>返回值
- **Int** ，其中包含当前的共用预定义的语句句柄数。
+ 一个**int** , 其中包含当前汇集的已准备好的语句句柄数。
 
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 此方法是可从 JDBC driver 6.4 及前向。
+ 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

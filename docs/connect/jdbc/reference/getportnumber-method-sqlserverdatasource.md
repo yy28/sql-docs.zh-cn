@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b731bf5ce8272fe72167d77b96e523cd3ede1139
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 20850d10352a583abd7e0a8bd9747b6346ec3aaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980832"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>getPortNumber 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getPortNumber()
  此端口号是打开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的套接字连接时使用的 TCP/IP 端口号。 如果未设置 portNumber 属性，getPortNumber 方法将返回默认值 1433。  
   
 > [!NOTE]  
->  [SetPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)方法不执行任何范围检查传入的端口值。 可以传递无效的如 99999，而不引发错误号。  
+>  [SetPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)方法不对传入的端口值进行任何范围检查。 可以传递无效的侵权号, 例如 99999, 而不触发错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -14,20 +14,19 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 210a15d827cb8f0a828c11c1c8fe87586cd79028
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015185"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>何时使用适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB 驱动程序适用于 SQL Server 是可用于访问中的数据的一种技术[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  有关不同数据访问技术的讨论，请参阅[数据访问技术路线图](https://go.microsoft.com/fwlink/?LinkID=179186)  
+  SQL Server OLE DB 驱动程序是一种可以用来访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中的数据的技术。  有关不同数据访问技术的讨论，请参阅[数据访问技术路线图](https://go.microsoft.com/fwlink/?LinkID=179186)  
   
  在决定是否使用适用于 SQL Server 的 OLE DB 驱动程序作为应用程序的数据访问技术时，应当考虑多种因素。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "66795876"
   
  对于现有的 OLE DB 应用程序，主要问题在于是否需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能。 如果已有不需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新功能的成熟应用程序，那么可以继续使用 WDAC。 但如果确实需要这些新功能（如 [xml 数据类型](../../t-sql/xml/xml-transact-sql.md)），则应当使用适用于 SQL Server 的 OLE DB 驱动程序。  
   
- 用于 SQL Server 和 MDAC 都支持这两个 OLE DB 驱动程序读取已提交的事务隔离对 SQL Server 支持快照事务隔离使用行版本控制，但仅 OLE DB 驱动程序。 （从编程的角度而言，具有行版本控制的已提交读事务隔离等同于已提交读事务。）  
+ SQL Server 和 MDAC OLE DB 驱动程序均支持使用行版本控制的已提交读事务隔离, 但仅 SQL Server 的 OLE DB 驱动程序支持快照事务隔离。 （从编程的角度而言，具有行版本控制的已提交读事务隔离等同于已提交读事务。）  
   
- 有关 OLE DB 驱动程序适用于 SQL Server 和 MDAC 之间的差异的信息，请参阅[更新到 OLE DB 驱动程序的应用程序适用于 SQL Server 从 MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
+ 有关 SQL Server 和 MDAC OLE DB 驱动程序之间的差异的信息, 请参阅[将应用程序更新为从 MDAC SQL Server OLE DB 驱动程序](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server.md)     

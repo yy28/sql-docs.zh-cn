@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7112a20f7811a0796396045c50b1b243ed0c3802
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970768"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public class SQLServerPreparedStatement
   
  SQLServerPreparedStatement 支持通过批处理（即在单个数据库往返通信中运行一组预定义语句）来改善运行时性能。  
   
- 此类支持取消对 SQLServerPreparedStatement 类、 ISQLServerPreparedStatement 接口、 java.sql.PreparedStatement 接口的类和接口支持的 SQLServerStatement 解包。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 此类支持解包到 SQLServerPreparedStatement 类、ISQLServerPreparedStatement 接口、Java.sql.preparedstatement 接口, 以及 SQLServerStatement 支持的类和接口以进行解包。 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d93c9b70-18c2-44bb-a6de-70a7e940d806
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 74da1d6791756c9bd212b9f202a130d50a0c8b55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac7f8ba3b20ba8678891aeb3b14555a1123f06d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980944"
 ---
 # <a name="getparametermode-method-sqlserverparametermetadata"></a>getParameterMode 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +54,7 @@ public int getParameterMode(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getParameterMode 方法指定 java.sql.ParameterMetaData 接口中的 getParameterMode 方法。  
+ 此 getParameterMode 方法由 getParameterMode 方法在 Java.sql.parametermetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerParameterMetaData 方法](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

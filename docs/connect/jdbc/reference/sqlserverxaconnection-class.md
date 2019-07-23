@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 177b10c9657c4cb8d6b37f7dec9d3b860308dcb7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970318"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public class SQLServerXAConnection
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SQLServerXAConnection 对象可以通过 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 对象登记到分布式事务中。 事务管理器，通常是中间层服务器的一部分管理通过 SQLServerXAResource 对象的 SQLServerXAConnection 对象。  
+ SQLServerXAConnection 对象可以通过 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 对象登记到分布式事务中。 事务管理器通常是中间层服务器的一部分, 通过 SQLServerXAResource 对象管理 SQLServerXAConnection 对象。  
   
 > [!NOTE]  
 >  应用程序编程人员一般不直接使用此接口。 它主要由在中间层服务器中工作的事务管理器使用。  

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a65be16b8558603dfa90611ad0057f0a0689a10
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a90d00957310c64f908816198a47e4c3ba7293b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979509"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>getStatementPoolingCacheSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回的值**statementPoolingCacheSize**连接属性。 返回此连接的已准备的语句缓存的大小。 "0"意味着缓存未启用。
+  返回**statementPoolingCacheSize**连接属性的值。 返回此连接的预定义语句缓存大小。 "0" 表示未启用缓存。
   
 ## <a name="syntax"></a>语法  
   
@@ -30,13 +29,13 @@ public boolean getStatementPoolingCacheSize();
 ```  
   
 ## <a name="return-value"></a>返回值  
- **Int**的值**statementPoolingCacheSize**连接属性。  
+ **StatementPoolingCacheSize**连接属性的**int**值。  
 
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 此方法是可从 JDBC driver 6.4 及前向。
+ 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

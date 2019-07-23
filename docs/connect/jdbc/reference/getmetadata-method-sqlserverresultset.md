@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1b73f9a0d1c95978dc92d3139ba637bfa707b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91cc095971d4cf4b613d1a9447ee10b6c8a65d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981864"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>getMetaData 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.ResultSetMetaData getMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getMetaData 方法由 java.sql.ResultSet 接口中的 getMetaData 方法指定。  
+ 此 getMetaData 方法由 getMetaData 方法在方法中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

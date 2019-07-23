@@ -1,5 +1,5 @@
 ---
-title: getClientInfo 方法 (java.lang.String) |Microsoft Docs
+title: getClientInfo 方法 (.java) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b9fd6139a7fc36033c33fa4fc5301f5f7d0a4f14
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7d3005e2b5ae8628ab31ceeb6314159afd796e83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953138"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>getClientInfo 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getClientInfo (java.lang.String name)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getClientInfo 方法由 java.sql.Connection 接口中的 getClientInfo 方法指定。  
+ 此 getClientInfo 方法由 getClientInfo 方法在 sql 连接接口中指定。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支持任何客户端信息属性。 因此，此方法将返回 null  。  
   

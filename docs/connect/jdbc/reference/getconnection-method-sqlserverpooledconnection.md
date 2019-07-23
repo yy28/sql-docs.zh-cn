@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f1f42623344ddd4659df3d6163a9e8b89d6ae7b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 352d867e444158cb2b8754a9cce1752bc4c2ee4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952692"
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>getConnection 方法 (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.Connection getConnection()
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 此 getConnection 方法由 javax.sql.PooledConnection 接口中的 getConnection 方法指定。  
+ 此 getConnection 方法由 getConnection 方法在 javax.mail.session。 Pooledconnection.execute 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPooledConnection 方法](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

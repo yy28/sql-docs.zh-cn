@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e85e7ef0410e90f6f2a750b6380230dccc172fa9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4886ba812a18ea6571e10c8b1fe2060fa8fc5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015611"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66786069"
 
   此示例将创建具有三个列的表，包括一个稀疏列、一个非稀疏列和一个列集列。 随后示例将显示 OLE DB 标志，指示非稀疏列和列集列的列及目录元数据。  
   
- 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。 有关稀疏列的详细信息，请参阅[OLE DB 驱动程序适用于 SQL Server 中的稀疏列支持](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。  
+ 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。 有关稀疏列的详细信息, 请参阅[SQL Server OLE DB 驱动程序中的稀疏列支持](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>示例  
  请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  

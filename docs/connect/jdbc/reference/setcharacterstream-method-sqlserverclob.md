@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8650ffe29710670bae8d3a934cd4caceaf74f723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974650"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.Writer setCharacterStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 此 setCharacterStream 方法由 java.sql.Clob 接口中的 setCharacterStream 方法指定。  
+ 此 setCharacterStream 方法由 setCharacterStream 方法在 Clob 接口中指定。  
   
  编写器从指定位置开始覆盖 CLOB 中的字符数据，并可以超过 CLOB 的初始长度。 指定“位置+1”值将追加字符。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
   

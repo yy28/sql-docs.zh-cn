@@ -1,5 +1,5 @@
 ---
-title: SQL 命令提示实用工具 （数据库引擎） |Microsoft Docs
+title: SQL 命令提示实用工具 (数据库引擎) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8fdcb3b307f525ff9eda14006e6fd4f6378f418c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010418"
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示实用工具 （数据库引擎）
+# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示实用工具 (数据库引擎)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   使用命令提示实用工具，可以编写 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 操作的脚本。 下表包含了随 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供的多个命令提示实用工具列表。  
 
-有关的信息*主要*SQL gui 和命令行工具，请参阅[SQL 工具概述](overview-sql-tools.md)。
+有关*主要*的 SQL gui 和命令行工具的信息, 请参阅[sql 工具概述](overview-sql-tools.md)。
 
   
 |**实用工具**|**Description**|**安装位置**|  

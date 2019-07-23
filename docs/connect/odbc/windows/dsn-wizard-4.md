@@ -1,5 +1,5 @@
 ---
-title: 数据源向导屏幕 4 （SQL Server ODBC 驱动程序） |Microsoft Docs
+title: 数据源向导屏幕 4 (SQL Server 的 ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989463"
 ---
 # <a name="data-source-wizard-screen-4"></a>数据源向导屏幕 4
 
@@ -34,7 +33,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="trust-server-certificate"></a>信任服务器证书
 
-此选项才适用时，才**对数据使用强加密**已启用。 选中时，不将验证服务器的证书具有正确的主机名的服务器和受信任的证书颁发机构颁发。 
+此选项仅在启用 "**对数据使用强加密**" 时适用。 如果选择此选项, 将不会验证服务器的证书是否具有服务器的正确主机名, 并由受信任的证书颁发机构颁发。 
 
 ### <a name="perform-translation-for-character-data"></a>执行字符数据翻译
 
@@ -62,11 +61,11 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="connect-retry-count"></a>连接重试计数
 
-指定重试连接尝试失败次数。
+指定重试连接尝试失败的次数。
 
 ### <a name="connect-retry-interval-seconds"></a>连接重试时间间隔(秒)
 
-指定每次连接重试尝试之间相隔的秒数。 有关此操作的详细信息和**连接重试计数**选项，请参阅[Windows ODBC 驱动程序中的连接弹性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
+指定每次连接重试尝试之间的秒数。 有关此操作和**连接重试计数**选项的详细信息, 请参阅[Windows ODBC 驱动程序中的连接复原](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
 
 ### <a name="back"></a>返回
 
@@ -74,7 +73,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="finish"></a>“完成”
 
-如果在此屏幕上指定的信息已完成，可以单击**完成**。 使用此向导中，其他屏幕上指定的所有属性创建 DSN，并提供机会来测试新创建的 DSN。
+如果此屏幕上指定的信息已完成, 则可以单击 "**完成**"。 该 DSN 是使用在向导的此和其他屏幕上指定的所有属性创建的, 并且您有机会测试新创建的 DSN。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8f03bc0fdff52678a79bebb217dd0731515e47be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ccdaa6df027edd9dac3243dffc420898543f9632
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955155"
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "66780414"
   
 |“属性”|描述|  
 |----------|-----------------|  
-|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|比较此**DateTimeOffset**对象和另一个**DateTimeOffset**对象基于其采用 GMT 的时间。|  
-|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|比较此**DateTimeOffset**对象和另一个**对象**。|  
-|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|返回的偏移量，以分钟为单位的距 GMT 的这**DateTimeOffset**对象。|  
-|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|这表示时间中返回的点**DateTimeOffset**作为 java.sql.Timestamp 对象。|  
+|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|根据其 GMT 时间将此**datetimeoffset**对象与另一个**datetimeoffset**对象进行比较。|  
+|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|将此**DateTimeOffset**对象与另一个**对象**进行比较。|  
+|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|返回此**DateTimeOffset**对象的偏移量 (以分钟为单位)。|  
+|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|返回此**DateTimeOffset**对象表示的时间点, 其形式为 .java。|  
 |[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|返回对象的哈希代码值。|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|返回的字符串表示形式**DateTimeOffset**对象。|  
+|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|返回**DateTimeOffset**对象的字符串表示形式。|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|创建一个 DateTimeOffset 对象，该对象表示按照距 GMT 的特定偏移量的时间点  。|  
   
 ## <a name="inherited-methods"></a>继承的方法  

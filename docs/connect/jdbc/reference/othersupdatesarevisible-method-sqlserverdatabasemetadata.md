@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a6465b3af971cababf5e20adc17d7e74a56e6e5e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 56380d1b81f5b5e4968217ce0bf4bbe5207eca01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976574"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>othersUpdatesAreVisible 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean othersUpdatesAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 othersUpdatesAreVisible 方法由 java.sql.DatabaseMetaData 接口中的 othersUpdatesAreVisible 方法指定。  
+ 此 othersUpdatesAreVisible 方法由 othersUpdatesAreVisible 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

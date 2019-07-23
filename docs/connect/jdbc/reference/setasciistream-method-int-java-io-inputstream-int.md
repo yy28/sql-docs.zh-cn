@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9436c39f-f1a1-484a-a75b-776a72ca70f4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4d5a20ab3c17af141008939f473ef45552860267
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 978805a1bd275771bdcfbae1616bd49535e2499a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975512"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-int"></a>setAsciiStream 方法 (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setAsciiStream(int n,
   
  *x*  
   
- InputStream 对象。  
+ 一个 InputStream 对象。  
   
  *length*  
   
@@ -54,7 +53,7 @@ public final void setAsciiStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setAsciiStream 方法由 java.sql.PreparedStatement 接口中的 setAsciiStream 方法指定。  
+ 此 setAsciiStream 方法由 setAsciiStream 方法在 Java.sql.preparedstatement 接口中指定。  
   
  如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   

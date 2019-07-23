@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 63477b2799eb9173e17c8c33a1aacf496abc59db
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b0c4a376970658df1bdce94e45694edae18149c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969994"
 ---
 # <a name="storeslowercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesLowerCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 storesLowerCaseIdentifiers 方法由 java.sql.DatabaseMetaData 接口中的 storesLowerCaseIdentifiers 方法指定。  
+ 此 storesLowerCaseIdentifiers 方法由 storesLowerCaseIdentifiers 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

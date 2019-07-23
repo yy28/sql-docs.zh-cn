@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2910453562cf78c4b88140de15885d4ddca5fe3a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983621"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 返回当前未处理的已准备语句撤消操作。
+ 返回当前未完成的已准备语句 unprepare 操作的数目。
 
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +35,13 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>返回值
- **Int** ，其中包含当前未完成已准备的语句数撤消操作。
+ 一个**int** , 其中包含当前未完成的已准备语句 unprepare 操作的数量。
 
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 此方法是可从 JDBC driver 6.4 及前向。
+ 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

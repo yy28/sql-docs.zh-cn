@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f0bd6283-83ab-4a0a-b825-ec4cdccf03e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 407cfc34313605eb0bfa553d439a18329c22fc5a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6fbf7a0cf66db8bbcc2f2f69d603bc5d32fb74d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980376"
 ---
 # <a name="getresultsetholdability-method-sqlserverdatabasemetadata"></a>getResultSetHoldability 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getResultSetHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getResultSetHoldability 方法由 java.sql.DatabaseMetaData 接口中的 getResultSetHoldability 方法指定。  
+ 此 getResultSetHoldability 方法由 getResultSetHoldability 方法在 Java.sql.databasemetadata 接口中指定。  
   
  将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库一起使用时，此方法会返回 1，这等同于 ResultSet.HOLD_CURSORS_OVER_COMMIT 常量。  
   

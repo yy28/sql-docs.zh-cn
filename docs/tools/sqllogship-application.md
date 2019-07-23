@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065456"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
   
- ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")语法约定，请参阅[命令提示实用工具参考&#40;数据库引擎&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
+ ![主题链接图标](../database-engine/configure-windows/media/topic-link.gif "主题链接图标")有关语法约定, 请参阅[命令提示实用工具参考&#40;数据库引擎&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
   
 ## <a name="syntax"></a>语法  
   

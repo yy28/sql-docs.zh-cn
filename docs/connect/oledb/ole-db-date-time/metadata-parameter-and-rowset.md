@@ -12,13 +12,12 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995096"
 ---
 # <a name="metadata---parameter-and-rowset"></a>元数据 - 参数和行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,11 +66,11 @@ ms.locfileid: "66769253"
 |datetime2 或 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- *BPrecision*参数将被忽略。  
+ 忽略*bPrecision*参数。  
   
- 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型   。 当连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换   。 *bScale*如果提供程序特定于类型名称，则忽略"**datetime**"**smalldatetime**"使用。 否则，应用程序必须确保*bScale*已正确设置。 应用程序从 MDAC 和 OLE DB 驱动程序从 SQL Server 的升级[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]使用"DBTYPE_DBTIMESTAMP"，如果它们没有设置将失败*bScale*正确。 当连接到早于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL  。  
+ 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型   。 当连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换   。 如果使用提供程序特定类型名称 "**datetime**" 或 "**smalldatetime**", 则将忽略*bScale* 。 否则, 应用程序必须确保*bScale*设置正确。 如果从使用 "DBTYPE_DBTIMESTAMP" [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]的 MDAC 升级到 SQL Server 的应用程序 OLE DB 并不正确设置*bScale* , 则这些应用程序将会失败。 当连接到早于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL  。  
   
- 不调用 icommandwithparameters:: Setparameterinfo 时，该提供程序，如下所示意味着 iaccessor:: Createaccessor 中指定的绑定类型的服务器类型：  
+ 如果未调用 ICommandWithParameters:: SetParameterInfo, 则提供程序将根据 IAccessor:: CreateAccessor 中指定的绑定类型来表示服务器类型, 如下所示:  
   
 |绑定类型|pwszDataSourceType <br /><br /> （特定于访问接口）|  
 |------------------|----------------------------------------------------|  
@@ -83,7 +82,7 @@ ms.locfileid: "66769253"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **Icolumnsrowset:: Getcolumnsrowset**返回以下列：  
+ **IColumnsRowset:: GetColumnsRowset**返回以下列:  
   
 |列类型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  

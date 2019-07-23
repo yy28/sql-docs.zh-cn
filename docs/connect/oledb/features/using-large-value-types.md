@@ -1,6 +1,6 @@
 ---
 title: 使用大值类型 |Microsoft Docs
-description: SQL Server 的 OLE DB 驱动程序使用大值类型
+description: 对 SQL Server 使用 OLE DB 驱动程序的大值类型
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a8dafb5c74322c1232f71a7fe2f00b38005a536c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988866"
 ---
 # <a name="using-large-value-types"></a>使用大值类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66802875"
 > [!NOTE]  
 >  大值数据类型的最大大小可以介于 1 KB 到 8 KB 之间，也可以指定为不限制其大小。  
   
- 以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度    。 varchar、nvarchar 和 varbinary 的 max 说明符使这些数据类型也可以达到这样的长度     。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 数据访问组件的接口将保持不变。 与先前版本的向后兼容，SQL Server 的 OLE DB 驱动程序中的 DBCOLUMNFLAGS_ISLONG 标志将保留在使用。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
+ 以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度    。 varchar、nvarchar 和 varbinary 的 max 说明符使这些数据类型也可以达到这样的长度     。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 数据访问组件的接口将保持不变。 为了向后兼容早期版本, SQL Server 的 OLE DB 驱动程序中的 DBCOLUMNFLAGS_ISLONG 标志仍在使用中。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
   
 > [!NOTE]  
 >  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函数中    。  
@@ -63,7 +62,7 @@ ms.locfileid: "66802875"
   
 -   绑定为 DBTYPE_IUNKNOWN 并使用流处理。  
   
- 在报告列的最大大小，将报告 SQL Server 的 OLE DB 驱动程序：  
+ 在报告列的最大大小时, SQL Server 的 OLE DB 驱动程序将报告:  
   
 -   定义的最大大小，例如，对于 varchar(2000) 列将会报告 2000，或者    
   
@@ -691,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- 有关 SQL Server 的 OLE DB 驱动程序如何公开大值数据类型的详细信息，请参阅[Blob 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
+ 有关 SQL Server 的 OLE DB 驱动程序如何公开大值数据类型的详细信息, 请参阅[blob 和 OLE 对象](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)。  
 
   
 ## <a name="see-also"></a>另请参阅  

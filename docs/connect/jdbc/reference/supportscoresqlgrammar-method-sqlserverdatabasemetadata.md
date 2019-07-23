@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 95a9dd888224720874e57bc74d39bec441190e6b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73cbbaf8d1a3b3e6bc5e5ba7cd4b43df01c0f7f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969593"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>supportsCoreSQLGrammar 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCoreSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsCoreSQLGrammer 方法由 java.sql.DatabaseMetaData 接口中的 supportsCoreSQLGrammer 方法指定。  
+ 此 supportsCoreSQLGrammer 方法由 supportsCoreSQLGrammer 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

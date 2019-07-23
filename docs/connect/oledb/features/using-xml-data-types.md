@@ -1,6 +1,6 @@
 ---
 title: 使用 XML 数据类型 |Microsoft Docs
-description: 将 XML 数据类型用于 OLE DB 驱动程序适用于 SQL Server
+description: 对 SQL Server 使用带有 OLE DB 驱动程序的 XML 数据类型
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -30,13 +30,12 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988787"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "66796069"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序 
- DBTYPE_XML 是特定于 SQL Server 的 OLE DB 驱动程序中的 XML 的新数据类型。 此外，可以通过现有的 OLE DB 类型（DBTYPE_BYTES、DBTYPE_WSTR、DBTYPE_BSTR、DBTYPE_XML、DBTYPE_STR、DBTYPE_VARIANT 和 DBTYPE_IUNKNOWN）访问 XML 数据。 可按如下格式在适用于 SQL Server 的 OLE DB 驱动程序行集的列中检索 XML 类型的列中存储的数据：  
+ DBTYPE_XML 是特定于 SQL Server OLE DB 驱动程序中的 XML 的新数据类型。 此外，可以通过现有的 OLE DB 类型（DBTYPE_BYTES、DBTYPE_WSTR、DBTYPE_BSTR、DBTYPE_XML、DBTYPE_STR、DBTYPE_VARIANT 和 DBTYPE_IUNKNOWN）访问 XML 数据。 可按如下格式在适用于 SQL Server 的 OLE DB 驱动程序行集的列中检索 XML 类型的列中存储的数据：  
   
 -   文本字符串  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66796069"
 > [!NOTE]  
 >  适用于 SQL Server 的 OLE DB 驱动程序不包含 SAX 读取器，但 ISequentialStream 可在 MSXML 中轻松传递到 SAX 和 DOM 对象  。  
   
- ISequentialStream 须用于检索大型 XML 文档  。 用于其他大值类型的相同技术也适用于 XML。 有关详细信息，请参阅[使用大值类型](../../oledb/features/using-large-value-types.md)。  
+ ISequentialStream 须用于检索大型 XML 文档  。 用于其他大值类型的相同技术也适用于 XML。 有关详细信息, 请参阅[使用大值类型](../../oledb/features/using-large-value-types.md)。  
   
  还可以通过常见接口（如 IRow::GetColumns、IRowChange::SetColumns 和 ICommand::Execute）检索、插入或更新行集中类型为 XML 的列中存储的数据    。 与检索情况类似，应用程序可将文本字符串或 ISequentialStream 传递给适用于 SQL Server 的 OLE DB 驱动程序  。  
   
@@ -86,8 +85,8 @@ ms.locfileid: "66796069"
   
 |数据类型|到服务器<br /><br /> **XML**|到服务器<br /><br /> **Non-XML**|从服务器<br /><br /> **XML**|从服务器<br /><br /> **Non-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|传递<sup>6，7</sup>|错误<sup>1</sup>|确定<sup>11，6</sup>|错误<sup>8</sup>|  
-|DBTYPE_BYTES|传递<sup>6，7</sup>|N/A<sup>2</sup>|成功 <sup>11，6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_XML|传递<sup>6，7</sup>|错误<sup>1</sup>|正常<sup>11、6</sup>|错误<sup>8</sup>|  
+|DBTYPE_BYTES|传递<sup>6，7</sup>|不适用<sup>2</sup>|成功 <sup>11，6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>4，6，12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_BSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|成功<sup>6，9，10</sup>|N/A <sup>2</sup>|成功<sup>5，6，12</sup>|N/A <sup>2</sup>|  
@@ -126,7 +125,7 @@ ms.locfileid: "66796069"
   
  OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_XML  。  
   
- 当向服务器发送数据时将执行验证。 应由应用程序处理客户端验证和编码更改。 建议不直接处理 XML 数据，而应使用 DOM 或 SAX 读取器以对其进行处理。  
+ 当向服务器发送数据时将执行验证。 客户端验证和编码更改应由您的应用程序处理。 建议您不要直接处理 XML 数据, 而应改用 DOM 或 SAX 读取器来处理 XML 数据。  
   
  可绑定 DBTYPE_NULL 和 DBTYPE_EMPTY 用于输入参数，但不能用于输出参数或结果。 当将它们绑定用于输入参数时，状态必须设置为 DBSTATUS_S_ISNULL 或 DBSTATUS_S_DEFAULT。  
   
@@ -135,7 +134,7 @@ ms.locfileid: "66796069"
  DBTYPE_IUNKNOWN 是支持的绑定（如上表中所示），但在 DBTYPE_XML 与 DBTYPE_IUNKNOWN 之间不存在转换。 DBTYPE_IUNKNOWN 不能与 DBTYPE_BYREF 一起使用。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行集的添加和更改内容  
- OLE DB 驱动程序适用于 SQL Server 添加了新值，或将更改为许多核心 OLE DB 架构行集。  
+ SQL Server 的 OLE DB 驱动程序将新值或更改添加到许多核心 OLE DB 架构行集。  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 架构行集  
  在 COLUMNS 和 PROCEDURE_PARAMETERS 架构行集添加了以下列：  
@@ -167,7 +166,7 @@ ms.locfileid: "66796069"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 属性集的添加和更改内容  
- OLE DB 驱动程序适用于 SQL Server 添加了新值或更改许多核心 OLE DB 属性集。  
+ OLE DB 的 SQL Server 驱动程序将添加新值或对许多核心 OLE DB 属性集的更改。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了新的 DBPROPSET_SQLSERVERPARAMETER 属性集，它包含下列值  。  
@@ -190,7 +189,7 @@ ms.locfileid: "66796069"
  与 SSPROP_PARAM 值类似，所有这些属性都是可选的且默认值为空。 仅当指定 SSPROP_COL_XML_SCHEMACOLLECTIONNAME 时，才能指定 SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME 和 SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME。 在将 XML 传递到服务器时，如果包含这些值，则将针对当前数据库检查它们是否存在（有效性），并且针对架构检查实例数据。 在所有情况下，要使这些值有效，它们必须全部为空或全部添入这些值。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 接口的添加和更改内容  
- OLE DB 驱动程序适用于 SQL Server 添加了新值，或将更改为许多核心 OLE DB 接口。  
+ OLE DB 的 SQL Server 驱动程序将新值或更改添加到许多核心 OLE DB 接口。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
  为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了大量更改，包括添加 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口  。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo），ISSCommandWithParameters 还提供 [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法，它们用于处理服务器特定的数据类型      。  

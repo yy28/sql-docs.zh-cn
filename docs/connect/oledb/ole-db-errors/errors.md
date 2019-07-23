@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a9f937e130af664570b92b006a54d329b33b9e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bf1985706cefc3007da56a9bf782a070e3b8edf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994958"
 ---
 # <a name="errors"></a>错误
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66798134"
   
  适用于 SQL Server 的 OLE DB 驱动程序公开 OLE DB 记录增强型 IErrorInfo、自定义 ISQLErrorInfo 和特定于访问接口的 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 错误对象接口   。  
   
- 有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关添加中的错误跟踪的增强功能的信息[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，请参阅[访问扩展事件日志中的诊断信息](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]添加的错误跟踪的增强功能的信息, 请参阅[访问扩展事件日志中的诊断信息](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

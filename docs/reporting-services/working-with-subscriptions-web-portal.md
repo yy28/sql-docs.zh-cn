@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221207"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>使用订阅（Web 门户）
 
@@ -28,11 +28,11 @@ ms.locfileid: "52542013"
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-可以通过依次选择报表的省略号 (…)、“管理”和“订阅”来访问“订阅”页。  
+可以通过依次选择报表的省略号 (…)、“管理”和“订阅”来访问“订阅”页    。  
   
-从“订阅”页中，可以通过选择“+ 新订阅”来创建新订阅。 还可以编辑现有订阅，或删除选择的订阅。  
+从“订阅”页中，可以通过选择“+ 新订阅”  来创建新订阅。 还可以编辑现有订阅，或删除选择的订阅。  
   
-此页还在“结果”列中提供订阅运行的结果状态。 如果订阅出错，则需要首先检查结果列以查看消息内容。  
+此页还在“结果”列中提供订阅运行的结果状态  。 如果订阅出错，则需要首先检查结果列以查看消息内容。  
   
 ## <a name="creating-or-editing-a-subscription"></a>创建（或编辑）订阅  
 使用“新建订阅”或“编辑订阅”页，可为报表创建新订阅或修改报表的现有订阅。 此页包含的选项取决于您的角色分配。 具有高级权限的用户可以使用附加选项。  
@@ -40,7 +40,7 @@ ms.locfileid: "52542013"
 以无人参与的方式运行的报表支持订阅。 报表必须最起码使用已存储的凭据或不使用凭据。 如果报表使用参数，则必须指定默认值。 如果更改报表执行设置或删除参数属性使用的默认值，订阅可能进入非活动状态。 有关详细信息，请参阅 [创建和管理本机模式报表服务器的订阅]。  
   
 ### <a name="type-of-subscription"></a>订阅的类型  
-可以在“标准订阅”与“数据驱动订阅”之间进行选择。  
+可以在“标准订阅”与“数据驱动订阅”之间进行选择   。  
   
 ![ssRSWebPortal subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
    
@@ -64,7 +64,7 @@ ms.locfileid: "52542013"
 -   文件共享订阅提供了允许您指定目标位置的字段。 您可以将任何报表传递到文件共享位置。 但是，支持交互式功能的报表（包括支持深化以及支持行和列的矩阵报表）将以静态文件的形式呈现。 无法查看静态文件中的深化行和深化列。 必须以通用命名约定 (UNC) 格式指定文件共享名（例如，\mycomputer\public\myreportfiles）。 不能在路径名的末尾包含反斜杠。 报表文件将以基于呈现格式的文件格式进行传递（例如，如果选择 Excel，则报表以 .xlsx 文件格式进行传递）。  
   
 ### <a name="data-driven-subscription-dataset"></a>数据驱动订阅数据集  
-对于数据驱动订阅，需要定义用于订阅的数据集。 选择“编辑数据集”以提供该信息。  
+对于数据驱动订阅，需要定义用于订阅的数据集。 选择“编辑数据集”以提供该信息  。  
   
 ![ssRSWebPortal subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
   

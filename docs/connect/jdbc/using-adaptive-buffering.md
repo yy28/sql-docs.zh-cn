@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916463"
 ---
 # <a name="using-adaptive-buffering"></a>使用自适应缓冲
 
@@ -30,7 +29,7 @@ ms.locfileid: "66790318"
 
 - 查询生成非常大的结果集：应用程序可能执行一个 SELECT 语句，此语句生成的行数超过了应用程序可在内存中存储的行数  。 在先前的版本中，应用程序必须使用服务器游标才能避免 OutOfMemoryError。 借助于自适应缓冲，可以对任意大的结果集执行只进只读传递，而不需要服务器游标。
 
-- 查询生成非常大的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 列或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) OUT 参数值：应用程序可能检索单个值（列或 OUT 参数），而该值太大，无法全部放入应用程序内存中    。 自适应缓冲允许客户端应用程序使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索此类值作为流。 当应用程序从流中读取数据时，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索值。
+- 查询生成非常大的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 列或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) OUT 参数值：应用程序可能检索单个值（列或 OUT 参数），而该值太大，无法全部放入应用程序内存中    。 通过自适应缓冲, 客户端应用程序可以通过使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法, 以流的形式检索此类值。 当应用程序从流中读取数据时，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索值。
 
 > [!NOTE]  
 > 使用自适应缓冲时，JDBC Driver 只会缓冲它必须缓冲的那些数据。 该驱动程序未提供任何公共方法来控制或限制缓冲区的大小。
@@ -41,15 +40,15 @@ ms.locfileid: "66790318"
 
 应用程序可以通过三种方法请求语句执行应使用自适应缓冲：
 
-- 应用程序可以设置连接属性**responseBuffering**为"adaptive"。 有关设置连接属性的详细信息，请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)。
+- 应用程序可以将连接属性**responseBuffering**设置为 "自适应"。 有关设置连接属性的详细信息, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 - 应用程序可以使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) 方法为通过该 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 对象创建的所有连接设置响应缓冲模式。
 
 - 应用程序可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法为特定的语句对象设置响应缓冲模式。
 
-使用 JDBC Driver 1.2 时，应用程序需要将语句对象强制转换为 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类才能使用 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 中的代码示例[读取大型数据样本](../../connect/jdbc/reading-large-data-sample.md)并[读取大数据与存储过程示例](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)说明了这种旧的用法。
+使用 JDBC Driver 1.2 时，应用程序需要将语句对象强制转换为 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类才能使用 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法。 有关使用存储过程读取大型数据的[示例](../../connect/jdbc/reading-large-data-sample.md)和[使用存储过程读取大型数据](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)的代码示例演示了这种旧用法。
 
-但是，使用 JDBC Driver 2.0 时，应用程序无需关于实现类层次结构的任何假设，即可使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法来访问供应商特定的功能。 有关示例代码，请参阅[更新大型数据样本](../../connect/jdbc/updating-large-data-sample.md)主题。
+但是，使用 JDBC Driver 2.0 时，应用程序无需关于实现类层次结构的任何假设，即可使用 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法和 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法来访问供应商特定的功能。 有关代码示例, 请参阅[更新大数据示例](../../connect/jdbc/updating-large-data-sample.md)主题。
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>使用自适应缓冲检索大型数据
 
@@ -62,7 +61,7 @@ ms.locfileid: "66790318"
 当应用程序使用自定义缓冲时，由 get\<Type>Stream 方法检索的值仅供检索一次。 如果在调用同一列或同一参数的 get\<Type>Stream 方法后，试图对同一对象调用任何 get\<Type> 方法，则将引发异常并显示消息“数据已访问，不可用于此列或此参数”。
 
 > [!NOTE]
-> 对 ResultSet.close() 了结果集处理过程的调用需要 Microsoft JDBC Driver for SQL Server 读取并丢弃其余的所有数据包。 如果查询返回了大型数据集，尤其是如果网络连接速度较慢，这可能需要大量的时间。
+> 在处理结果集的过程中, 对 ResultSet. close () 的调用需要使用 Microsoft JDBC Driver for SQL Server 来读取和丢弃所有剩余的数据包。 如果查询返回的数据集较大, 尤其是当网络连接较慢时, 这可能需要花费大量时间。
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>自适应缓冲使用准则
 
@@ -70,7 +69,7 @@ ms.locfileid: "66790318"
 
 - 应避免使用连接字符串属性 selectMethod=cursor 来允许应用程序处理非常大的结果集  。 自适应缓冲功能允许应用程序在不使用服务器游标的情况下处理非常大的只进、只读结果集。 请注意，设置 selectMethod=cursor 时，该连接生成的所有只进只读结果集都会受到影响  。 换言之，如果应用程序例行处理只有几行的短结果集，则与没有将 selectMethod 设置为 cursor 的情况相比，针对每个结果集创建、读取和关闭服务器游标在客户端和服务器端都会使用更多的资源   。
 
-- 通过使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法而不 getBlob 或 getClob 方法，流的形式读取大文本或二进制值。 从版本 1.2 开始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类提供了新的 get\<Type>Stream 方法来实现此目的。
+- 使用 getAsciiStream、getBinaryStream 或 getCharacterStream 方法 (而不是 getBlob 或 getClob 方法), 将大文本或二进制值作为流进行读取。 从版本 1.2 开始，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类提供了新的 get\<Type>Stream 方法来实现此目的。
 
 - 确保在 SELECT 语句中将可能具有大值的列放在列列表的最后，并且使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 的 get\<Type>Stream 方法按选择列时的顺序来访问这些列。
 
@@ -78,9 +77,9 @@ ms.locfileid: "66790318"
 
 - 避免同时对同一连接执行一条以上的语句。 如果在处理上一条语句的结果之前执行另一条语句，可能导致将未处理的结果缓冲到应用程序内存中。
 
-- 某些情况下使用**selectMethod = cursor**而不是**responseBuffering = adaptive**可能更有利，例如：
+- 在某些情况下, 使用**selectMethod = cursor**而不是**responseBuffering = 自适应**会更有利, 例如:
 
-  - 如果应用程序处理只进、 只读结果集速度慢，例如，使用某些用户输入后, 再读取每一行**selectMethod = cursor**而不是**responseBuffering = adaptive**可能帮助减少使用的资源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+  - 如果你的应用程序对只进只读结果集的处理速度很慢 (例如, 在某些用户输入后再读取每一行), 则使用**selectMethod = cursor**而不是**responseBuffering = 自适应**可能有助于降低[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]资源使用.
 
   - 如果应用程序在同一连接上同时处理两个或更多的只进只读结果集，则处理这些结果集时，使用 selectMethod=cursor（而不是 responseBuffering=adaptive）可能有助于减少驱动程序需要的内存   。
 

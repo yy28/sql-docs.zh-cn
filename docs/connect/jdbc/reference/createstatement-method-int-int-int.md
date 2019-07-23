@@ -1,5 +1,5 @@
 ---
-title: createStatement 方法 （int，int，int） |Microsoft Docs
+title: createStatement 方法 (int, int, int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99d01841ca24cc1a7e34864b42018dac51fa1861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74cc1b97c121b5e1a6e7d55127ec18cd2caec4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955342"
 ---
 # <a name="createstatement-method-int-int-int"></a>createStatement 方法 (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public java.sql.Statement createStatement(int nType,
 #### <a name="parameters"></a>Parameters  
  resultSetType   
   
- **Int**值，该值表示结果集类型。  
+ 表示结果集类型的**int**值。  
   
  nConcur   
   
@@ -51,13 +50,13 @@ public java.sql.Statement createStatement(int nType,
  表示可保持性的 int  值。  
   
 ## <a name="return-value"></a>返回值  
- 将语句对象。  
+ 语句对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 createStatement 方法由 java.sql.Connection 接口中的 createStatement 方法指定。  
+ 此 createStatement 方法由 createStatement 方法在 sql 连接接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [createStatement 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

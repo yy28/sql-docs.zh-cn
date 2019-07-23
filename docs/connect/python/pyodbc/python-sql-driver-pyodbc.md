@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb45d4df3ab054c320bb110c009e8fc4ea6edb59
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ca5946eb5c6450d55168f64dddbd0ca82d986be9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935748"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 驱动程序 - pyodbc
 
-![下载向下箭头线圈出](../../../ssdt/media/download.png)[安装用于 Python SQL 驱动程序](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![向下键-带圆圈的](../../../ssdt/media/download.png)[用于安装适用于 Python 的 SQL 驱动程序](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="getting-started"></a>入门
 

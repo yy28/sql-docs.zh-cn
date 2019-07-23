@@ -15,13 +15,12 @@ helpviewer_keywords:
 - ISSAsynchStatus interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2ad9f5ad8912d6e820c237d51c02ff10066a302a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 099af3161e020700f172b316657885cad72c7c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015410"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

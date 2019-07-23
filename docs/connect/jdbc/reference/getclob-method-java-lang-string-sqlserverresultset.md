@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05007c8145cc9c5b01b5513a34a5dcbcdfc9fe80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e0eee2cafe95e04ffd5c697667cac2701ee0b80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953034"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>getClob 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Clob getClob(java.lang.String colName)
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- Clob 对象。  
+ 一个 Clob 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

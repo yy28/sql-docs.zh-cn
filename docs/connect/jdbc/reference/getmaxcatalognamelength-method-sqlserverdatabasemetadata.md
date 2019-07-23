@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0df5adcaa4fc08afacd2c5714d2207d12100c5f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ff0e29e95b321d912f19cece28fd1579aeff50a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982351"
 ---
 # <a name="getmaxcatalognamelength-method-sqlserverdatabasemetadata"></a>getMaxCatalogNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxCatalogNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getMaxCatalogNameLength 方法由 java.sql.DatabaseMetaData 接口中的 getMaxCatalogNameLength 方法指定。  
+ 此 getMaxCatalogNameLength 方法由 getMaxCatalogNameLength 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

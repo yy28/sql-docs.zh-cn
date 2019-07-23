@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8e6a69ed6300ba6eaaedadbc0b0e7c586738647
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953176"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 有关访问扩展的事件日志中的诊断信息的详细信息，请参阅[访问扩展的事件日志中的诊断信息](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 有关访问扩展事件日志中的诊断信息的详细信息, 请参阅[访问扩展事件日志中的诊断信息](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
  以下示例显示如何获取连接 ID：  
   

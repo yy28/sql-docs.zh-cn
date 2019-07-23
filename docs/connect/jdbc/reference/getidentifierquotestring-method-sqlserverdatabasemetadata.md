@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99044bb6a9536f7ad2d2fe69284e4699786e6593
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982849"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getIdentifierQuoteString()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getIdentifierQuoteString 方法由 java.sql.DatabaseMetaData 接口中的 getIdentifierQuoteString 方法指定。  
+ 此 getIdentifierQuoteString 方法由 getIdentifierQuoteString 方法在 Java.sql.databasemetadata 接口中指定。  
   
  将 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC 驱动程序用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库时，此方法返回双引号 ("")  。  
   

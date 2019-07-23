@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9be246a7-85fa-49fc-ad79-aabe97f5b280
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a03a2ff79af2472af5d0bed31be3ad6d35f525bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9774d16d09ee29723a66bf538fbb7d6a52d4e816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985345"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-int"></a>updateBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  *x*  
   
- InputStream 对象。  
+ 一个 InputStream 对象。  
   
  *length*  
   
@@ -54,7 +53,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateBinaryStream 方法由 java.sql.ResultSet 接口中的 updateBinaryStream 方法指定。  
+ 此 updateBinaryStream 方法由 updateBinaryStream 方法在方法中指定。  
   
  此方法将来自 InputStream 对象的字节传递给所选的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二进制列，例如 binary、varbinary、varbinary(max)、image、xml 和 udt。 此方法不支持更新字符列。 若要使用 InputStream 更新字符列，请使用 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 方法。  
   

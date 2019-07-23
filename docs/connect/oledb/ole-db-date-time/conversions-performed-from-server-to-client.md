@@ -1,5 +1,5 @@
 ---
-title: 转换执行从服务器到客户端 |Microsoft Docs
+title: 从服务器到客户端的转换 |Microsoft Docs
 description: 在服务器和客户端之间执行的转换
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015815"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66769369"
   本文说明在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）与使用适用于 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="conversions"></a>转换  
- 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在调用 icommandwithparameters:: Setparameterinfo 和中指定的类型*pwszDataSourceType*不的匹配将由服务器执行在服务器上，隐式转换的实际类型并返回到客户端的类型将匹配 icommandwithparameters:: Setparameterinfo 通过指定的类型。 如果服务器的转换规则与本文描述的不同，这可能会导致意外转换结果出现。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
+ 下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数, 如果已调用 ICommandWithParameters:: SetParameterInfo, 且*pwszDataSourceType*中指定的类型与服务器上的实际类型不匹配, 则服务器将执行隐式转换, 并返回类型到客户端将与通过 ICommandWithParameters:: SetParameterInfo 指定的类型匹配。 如果服务器的转换规则与本文描述的不同，这可能会导致意外转换结果出现。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  
   
 |转换后 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -51,7 +50,7 @@ ms.locfileid: "66769369"
 |符号|含义|  
 |------------|-------------|  
 |“确定”|不需要任何转换。|  
-|-|不支持任何转换。 如果调用 iaccessor:: Createaccessor 时验证绑定，在中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
+|-|不支持任何转换。 如果调用 IAccessor:: CreateAccessor 时验证绑定, 则会在*rgStatus*中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
 |1|时间字段设置为零。|  
 |2|设置 DBSTATUS_E_CANTCONVERTVALUE。|  
 |3|时区设置为零。|  

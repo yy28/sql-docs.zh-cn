@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ad963176194300054b97db8b6faa360bce17e558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190544"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252152"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 事务
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "63190544"
 
 ## <a name="overview"></a>概述
 
-Microsoft ODBC Driver for SQL Server 从版本 17.3 开始为 XA 事务与分布式事务处理协调器 (DTC) Windows、 Linux 和 mac 上提供支持 驱动程序端上的 XA 实现允许客户端应用程序发送到 Transaction Manager (TM) 串行操作 （如开始、 提交、 回滚的事务分支等）。 并且然后 TM 将通信与资源管理器 (RM) 根据这些操作。 有关 XA 规范的详细信息和 DTC (MS DTC) 的 Microsoft 实现，请参阅[工作方式： SQL Server DTC(MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
+从版本17.3 开始的 Microsoft ODBC Driver for SQL Server 提供对 Windows、Linux 和 Mac 上的分布式事务处理协调器 (DTC) 的 XA 事务的支持。 驱动程序端的 XA 实现使客户端应用程序能够将串行操作 (如启动、提交、回滚事务分支等) 发送到事务管理器 (TM)。 然后, TM 会根据这些操作与资源管理器 (RM) 进行通信。 有关 XA 规范和适用于 DTC (MS DTC) 的 Microsoft 实现的详细信息, 请参阅[它的工作原理: SQL SERVER DTC (MSDTC 和 XA 事务)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
 
 
 
 ## <a name="the-xacallparam-structure"></a>XACALLPARAM 结构
 
-`XACALLPARAM`结构定义的 XA 事务管理器请求所需的信息。 它定义，如下所示：
+`XACALLPARAM`结构定义 XA 事务管理器请求所需的信息。 定义方式如下:
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-大小`XACALLPARAM`结构。 这不包括以下数据的大小`XACALLPARAM`。
+`XACALLPARAM`结构的大小。 这不包括以下`XACALLPARAM`数据的大小。
 
 *operation*  
-要传递给 TM 的 XA 操作。 可能的操作中定义[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)。
+要传递给 TM 的 XA 操作。 可能的操作是在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中定义的。
 
 *xid*  
 事务分支标识符。
 
 *flag*  
-TM 请求与关联的标志。 可能的值中定义[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)。
+与 TM 请求关联的标志。 可能的值在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)中定义。
 
 *status*  
-返回 TM 的状态。 请参阅[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)标头可能返回的状态。
+从 TM 返回状态。 有关可能的返回状态, 请参阅[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)标头。
 
 *sizeData*  
-以下数据缓冲区的大小`XACALLPARAM`。 
+数据缓冲区`XACALLPARAM`的大小。 
 
 *sizeReturned*  
 返回的数据的大小。
 
-为了使 TM 请求[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)函数需要使用属性来调用_SQL_COPT_SS_ENLIST_IN_XA_和一个指向`XACALLPARAM`对象。  
+为了发出 TM 请求, 需要使用属性_SQL_COPT_SS_ENLIST_IN_XA_和指向`XACALLPARAM`对象的指针来调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)函数。  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>代码示例 
 
-下面的示例演示如何与 XA 事务 TM 通信，并从客户端应用程序执行不同操作。 如果对 Microsoft SQL Server 进行测试，MS DTC 将需要正确配置，以启用 XA 事务。 XA 定义可在[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)标头文件。 
+下面的示例演示如何与 TM 事务通信, 并从客户端应用程序执行不同的操作。 如果针对 Microsoft SQL Server 运行测试, 则需要将 MS DTC 正确配置为启用 XA 事务。 可以在[xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)头文件中找到 XA 定义。 
 
 ```
 
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-`XATestRunner`类实现的可能的 XA 调用与服务器通信时。
+`XATestRunner`类在与服务器通信时实现可能的 XA 调用。
 
 ```
 

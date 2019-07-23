@@ -1,5 +1,5 @@
 ---
-title: 处理大型数据 |Microsoft Docs
+title: 使用大型数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e81fbaeaae269cb43825ad270d45c2f319c662d7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b685160f7d6a2c5c413425fe8d150214d3dd9897
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003836"
 ---
 # <a name="working-with-large-data"></a>处理大型数据
 
@@ -26,7 +25,7 @@ JDBC 驱动程序提供自适应缓冲支持，使您可以在无需服务器游
 
 在 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] JDBC Driver 1.2 版中，缓冲模式默认为“full”  。 如果应用程序没有将“responseBuffering”连接属性设置为“adaptive”  （在连接属性中或使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法），驱动程序支持一次性从服务器中读取全部结果。 应用程序必须将“responseBuffering”连接属性显式设置为“adaptive”  ，才能获取自适应缓冲行为。  
   
-adaptive  值是默认缓冲模式，JDBC Driver 在必要时缓冲尽可能少的数据。 有关使用自适应缓冲的详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)。  
+adaptive  值是默认缓冲模式，JDBC Driver 在必要时缓冲尽可能少的数据。 有关使用自适应缓冲的详细信息, 请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)。  
   
  此部分中的主题介绍了各种用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索大值数据的方法。  
   

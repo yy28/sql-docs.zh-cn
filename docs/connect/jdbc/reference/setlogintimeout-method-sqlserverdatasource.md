@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a242499204215f0d8ecdb16698bcc0fe07377db3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a64bc643e8d5a9d820b2bcd9cd307f033a869d7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974085"
 ---
 # <a name="setlogintimeout-method-sqlserverdatasource"></a>setLoginTimeout 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public void setLoginTimeout(int loginTimeout)
  一个表示要等待的秒数的 int  值。 零表示该超时为默认系统超时，默认情况下指定为 15 秒。  
   
 ## <a name="remarks"></a>Remarks  
- 此 setLoginTimeout 方法由 javax.sql.DataSource 接口中的 setLoginTimeout 方法指定。  
+ 此 setLoginTimeout 方法由 setLoginTimeout 方法在 javax.mail.session 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

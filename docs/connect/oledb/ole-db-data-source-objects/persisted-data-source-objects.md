@@ -15,20 +15,19 @@ helpviewer_keywords:
 - persisted data source objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9369c4a533778fa460a1aa55cf6e7172ae78c340
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015939"
 ---
 # <a name="persisted-data-source-objects"></a>持久化数据源对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序支持持久化的数据源对象与**IPersistFile**接口。  
+  SQL Server 的 OLE DB 驱动程序支持具有**IPersistFile**接口的持久化数据源对象。  
   
 ## <a name="examples"></a>示例  
  **A.使数据源初始化持久化：**  

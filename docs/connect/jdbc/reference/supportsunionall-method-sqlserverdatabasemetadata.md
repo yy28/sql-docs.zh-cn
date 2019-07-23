@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fad6422ea4c8b8b6cf9f9b3eeab7c2e483e537e6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b232fa2d89844d94b04878e9db99fdd04e819646
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968523"
 ---
 # <a name="supportsunionall-method-sqlserverdatabasemetadata"></a>supportsUnionAll 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsUnionAll()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsUnionAll 方法由 java.sql.DatabaseMetaData 接口中的 supportsUnionAll 方法指定。  
+ 此 supportsUnionAll 方法由 supportsUnionAll 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

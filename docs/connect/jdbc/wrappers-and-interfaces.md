@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 398a8f072fd264307c1da08af5a187490813e8ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916067"
 ---
 # <a name="wrappers-and-interfaces"></a>包装和接口
 
@@ -28,9 +27,9 @@ ms.locfileid: "66780826"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持 java.sql.Wrapper 接口。 该接口提供一种机制，通过代理接口访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。
 
-Java.sql.Wrapper 接口定义两个方法： **isWrapperFor**并**unwrap**。 isWrapperFor 方法检查指定的输入对象是否实现此接口  。 unwrap 方法返回一个实现此接口的对象，从而允许访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的方法  。
+Java .sql 接口定义两种方法: **isWrapperFor**和**解包**。 isWrapperFor 方法检查指定的输入对象是否实现此接口  。 unwrap 方法返回一个实现此接口的对象，从而允许访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的方法  。
 
-**isWrapperFor**并**unwrap**方法公开，如下所示：
+**isWrapperFor**和**解包**方法的公开方式如下:
 
 - [isWrapperFor 方法 (SQLServerCallableStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -42,7 +41,7 @@ Java.sql.Wrapper 接口定义两个方法： **isWrapperFor**并**unwrap**。 is
 
 - [isWrapperFor 方法 (SQLServerDataSource)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [unwrap 方法&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [解包&#40;方法 SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [isWrapperFor 方法 (SQLServerPreparedStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -50,11 +49,11 @@ Java.sql.Wrapper 接口定义两个方法： **isWrapperFor**并**unwrap**。 is
 
 - [isWrapperFor 方法 (SQLServerStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [unwrap 方法&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [解包&#40;方法 SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [isWrapperFor 方法 (SQLServerXADataSource)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [unwrap 方法&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [解包&#40;方法 SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>界面
 

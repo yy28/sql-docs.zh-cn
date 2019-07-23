@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fefe21763edc51eacc40506ef35ce6b71b766806
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1dca1a7240f5e0612713ba7f87a47f938e7e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935657"
 ---
 # <a name="ruby-driver-for-sql-server"></a>适用于 SQL Server 的 Ruby 驱动程序
 
-![下载向下箭头线圈出](../../ssdt/media/download.png)[下载适用于 SQL 的 Ruby 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![向下键-带圆圈的](../../ssdt/media/download.png)[下载适用于 SQL 的 Ruby 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-可以连接到 SQL 数据库使用 Ruby 在 Windows、 Linux 或 mac。   
+可以在 Windows、Linux 或 Mac 上使用 Ruby 连接到 SQL 数据库。   
   
 ## <a name="getting-started"></a>入门  
 * [步骤 1：配置用于 Ruby 开发的开发环境](step-1-configure-development-environment-for-ruby-development.md)  
@@ -30,12 +29,12 @@ ms.locfileid: "66800843"
 * [步骤 3：使用 Ruby 连接到 SQL 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-ruby.md)  
   
 ## <a name="documentation"></a>文档  
-[Ruby lang.org 文档](https://www.ruby-lang.org/en/documentation/)  
+[Ruby-lang.org 上的文档](https://www.ruby-lang.org/en/documentation/)  
   
 ## <a name="community"></a>社区  
 [Azure Ruby 开发人员中心](https://azure.microsoft.com/develop/ruby/)  
   
 ## <a name="samples"></a>示例
-* [MacOS 上开始使用 Ruby](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
-* [开始使用 Ubuntu 上的 Ruby](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
-* [开始使用 Red Hat Enterprise Linux (RHEL) 上的 Ruby](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
+* [MacOS 上的 Ruby 入门](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
+* [Ubuntu 上的 Ruby 入门](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
+* [Red Hat Enterprise Linux 上的 Ruby 入门 (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)

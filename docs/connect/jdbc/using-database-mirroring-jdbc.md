@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916254"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用数据库镜像 (JDBC)
 
@@ -41,7 +40,7 @@ ms.locfileid: "66798663"
 连接刚刚建立时，主服务器将向出现故障转移时要使用的客户端发送其故障转移伙伴的标识。 当应用程序尝试与失败的主服务器建立初始连接时，客户端并不知道故障转移伙伴的标识。 为了使客户端能够应对这种情况，failoverPartner 连接字符串属性以及可选的 [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 数据源方法都允许客户端在本机指定故障转移伙伴的标识。 该客户端属性仅可在此种情况下使用，如果主服务器可用，则不使用该属性。
 
 > [!NOTE]  
-> 当在连接字符串中或使用数据源对象指定 failoverPartner 时，还必须设置 databaseName 属性，否则将引发异常。 如果未显式指定 failoverPartner 和 databaseName，则当主体数据库服务器出现故障时，应用程序将不会尝试进行故障转移。 换句话说，透明重定向只对显式指定了 failoverPartner 和 databaseName 的连接有效。 有关 failoverPartner 和其他连接字符串属性的详细信息，请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)。
+> 当在连接字符串中或使用数据源对象指定 failoverPartner 时，还必须设置 databaseName 属性，否则将引发异常。 如果未显式指定 failoverPartner 和 databaseName，则当主体数据库服务器出现故障时，应用程序将不会尝试进行故障转移。 换句话说，透明重定向只对显式指定了 failoverPartner 和 databaseName 的连接有效。 有关 failoverPartner 和其他连接字符串属性的详细信息, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。
 
 如果客户端所提供的故障转移伙伴服务器并非引用充当指定数据库故障转移伙伴的服务器，并且所引用的服务器/数据库位于镜像排列中，则服务器将拒绝该连接。 尽管 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类提供了 [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md) 方法，但此方法仅返回在此连接字符串或 setFailoverPartner 方法中指定的故障转移伙伴的名称。 若要检索当前使用的实际故障转移伙伴的名称，请使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 131910bfaa6e119588f708305bb1008c7b36d6e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 86d230cee4c38b996ee41240a61e6ede53478bac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004417"
 ---
 # <a name="sparse-columns"></a>稀疏列
 
@@ -40,7 +39,7 @@ ms.locfileid: "66798360"
 
 此示例说明如何检测列集。 它还显示如何分析列集的 XML 输出，以便从稀疏列获取数据。
 
-所列的代码是 Java 源代码。 编译应用程序之前，请更改连接字符串。
+所列的代码是 Java 源代码。 在编译应用程序之前, 请更改连接字符串。
 
 ### <a name="code"></a>代码
 

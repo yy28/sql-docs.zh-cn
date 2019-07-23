@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75f7d30dba13538fdbd735fff34021cbc3497aa0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b2f526510f69a91e3228431953f73717790246f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034744"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 课：使用数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "67727611"
 此处提供在 SSMS 中还原数据库的说明：[还原数据库。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > 本教程适用于用户熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务。 
+  > 本教程适用于熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
   
 ## <a name="tuning-a-workload"></a>优化工作负载
 可以使用数据库引擎优化顾问，针对您选择进行优化的数据库和表来找到查询性能最佳的物理数据库设计。  
 
-1.  将示例复制[选择](../../t-sql/queries/select-examples-transact-sql.md)语句，并将语句粘贴到查询编辑器中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 将该文件保存为 MyScript.sql  ，并存储在可以轻松找到的目录中。 下面提供了针对 AdventureWorks2017 数据库工作原理的示例。  
+1.  复制示例[SELECT](../../t-sql/queries/select-examples-transact-sql.md)语句, 并将语句粘贴到的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询编辑器中。 将该文件保存为 MyScript.sql  ，并存储在可以轻松找到的目录中。 下面提供了一个适用于 AdventureWorks2017 数据库的示例。  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -61,19 +60,19 @@ ms.locfileid: "67727611"
  GO
  ```
 
-  ![保存的 SQL 查询](media/dta-tutorials/dta-save-query.png)
+  ![保存 SQL 查询](media/dta-tutorials/dta-save-query.png)
   
-2.  启动数据库引擎优化顾问。 选择**数据库优化顾问**从**工具**菜单在 SQL Server Management Studio (SSMS)。  有关详细信息，请参阅[启动数据库引擎优化顾问](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)。 连接到 SQL Server 中**连接到服务器**对话框。  
+2.  启动数据库引擎优化顾问。 从 SQL Server Management Studio (SSMS) 中的 "**工具**" 菜单中选择 "**数据库优化顾问**"。  有关详细信息，请参阅[启动数据库引擎优化顾问](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)。 在 "**连接到服务器**" 对话框中连接到 SQL Server。  
   
 3.  在数据库引擎优化顾问 GUI 右窗格的“常规”  选项卡的“会话名称”  中，键入 MySession  。 
   
-4.  选择**文件**为你**工作负荷**，并选择的双筒望远镜图标**浏览工作负荷文件**。 找到**MyScript.sql**在步骤 1 中保存的文件。  
+4.  为**工作负荷**选择 "**文件**", 并选择 "望远镜" 图标以**浏览工作负荷文件**。 找到你在步骤1中保存的**MyScript**文件。  
 
    ![查找以前保存的脚本](media/dta-tutorials/dta-script.png)
   
 5.  在“用于工作负载分析的数据库”  列表中选择 AdventureWorks2017，在“选择要优化的数据库和表”  网格中选择 AdventureWorks2017，并选择“保存优化日志”  。 “用于工作负荷分析的数据库”  指定数据库引擎优化顾问在优化工作负荷时连接到的第一个数据库。 优化开始之后，数据库引擎优化顾问连接到由工作负荷中包含的 `USE DATABASE` 语句所指定的数据库。  
 
-  ![DTA db 选项](media/dta-tutorials/dta-select-db.png)
+  ![Db 的 DTA 选项](media/dta-tutorials/dta-select-db.png)
   
 6.  单击“优化选项”  选项卡。不必为本练习设置任何优化选项，但请花些时间来查看默认的优化选项。 按 F1 键可查看该选项卡式页面的帮助。 单击“高级选项”  可查看其他的优化选项。 请在“高级优化选项”  对话框中单击“帮助”  ，以了解有关此处所显示的优化选项的信息。 单击“取消”  关闭“高级优化选项”  对话框，并保留选中默认选项。  
 
@@ -83,7 +82,7 @@ ms.locfileid: "67727611"
   
     如果收到有关优化结束日期和时间的错误，请检查主“优化选项”  选项卡上的“结束时间”  。请确保“结束时间”  的日期和时间晚于当前的日期和时间，必要时可进行更改。  
 
-  ![启动 DTA 分析](media/dta-tutorials/dta-start-analysis.png)
+  ![开始 DTA 分析](media/dta-tutorials/dta-start-analysis.png)
 
   
 8.  分析完成之后，在“操作”  菜单中，单击“保存建议”  ，将建议保存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 在“另存为”  对话框中，导航到要保存建议脚本的目录，然后键入文件名 **MyRecommendations**。  
@@ -100,7 +99,7 @@ ms.locfileid: "67727611"
   
 2.  在“索引建议”  窗格中右键单击网格。 在右键单击后出现的菜单中，您可以选择或取消选择建议。 您还可以使用此菜单更改网格文本的字体。  
  
-   ![选择菜单中的索引建议](media/dta-tutorials/dta-index-recommendation-options.png)
+   ![索引建议的选择菜单](media/dta-tutorials/dta-index-recommendation-options.png)
   
 3.  单击“操作”  菜单中的“保存建议”  ，将所有建议保存到一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中。 将脚本命名为 **MySessionRecommendations.sql**。  
   
@@ -123,14 +122,14 @@ ms.locfileid: "67727611"
 尽管查看可用于实现优化结果的脚本很有用，但数据库引擎优化顾问仍提供了许多可供查看的有用报告。 这些报告提供了有关正在优化的数据库中现有物理设计结构的信息，以及有关建议的结构的信息。 通过单击“报告”  选项卡可以查看优化报告，如以下练习中所述。
 
 
-1. 选择**报表**数据库优化顾问中的选项卡。 
+1. 选择数据库优化顾问中的 "**报表**" 选项卡。 
 2. 在“优化摘要”  窗格中，可以查看有关此优化会话的信息。 使用滚动条可以查看所有窗格内容。 请注意查看“预期的提高百分比”  和“建议使用的空间”  信息。 设置优化选项时，可以限制建议使用的空间。 在“优化选项”  选项卡上，选择“高级选项”  。 选中“定义建议所用的最大空间”  ，并以 MB 为单位指定建议配置可以使用的最大空间。 使用帮助浏览器中的“后退”  按钮可返回到本教程。 
 
     ![DTA 优化摘要](media/dta-tutorials/dta-tuning-summary.png)
   
 3.  在“优化报告”  窗格中，单击“选择报告”  列表中的“语句开销报告”  。 如果需要更多空间以查看报表，则将“会话监视器”  窗格边框拖动到左侧。 对数据库中的表执行的每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句都会有相关的性能开销。 通过对表中经常访问的列创建有效的索引，可以降低此性能开销。 此报告显示了在工作负荷中执行语句的原有开销与实现优化建议后的开销相比，估计的提高百分比。 请注意，报告中包含的信息量取决于工作负荷的长度和复杂性。  
 
-    ![DTA 报表-语句开销](media/dta-tutorials/dta-statement-cost.png)
+    ![DTA 报表-语句成本](media/dta-tutorials/dta-statement-cost.png)
   
 4.  右键单击网格区域中的“语句开销报告”  窗格，再单击“导出到文件”  按钮。 将报告另存为 **MyReport**。 文件名后会自动附加 .xml 扩展名。 可以在常用的 XML 编辑器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 MyReport.xml 以查看报告内容。  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpcolfmt (OLE DB) |Microsoft Docs'
+title: 'IBCPSession:: BCPColFmt (OLE DB) |Microsoft Docs'
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994576"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ HRESULT BCPColFmt(
   
 -   可选终止字节序列的长度。  
   
- 对 BCPColFmt 的每次调用将指定一个用户文件字段的格式  。 例如，要在具有 5 个字段的用户数据文件中更改 3 个字段的默认设置，请先调用 `BCPColumns(5)`，再调用 BCPColFmt 五次，其中三次调用设置自定义格式  。 对于剩余的两个调用，设置*eUserDataType*为 BCP_TYPE_DEFAULT，并将*cbIndicator*， *cbUserData*，和*cbUserDataTerm*为 0、bcp_variable_length 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 对 BCPColFmt 的每次调用将指定一个用户文件字段的格式  。 例如，要在具有 5 个字段的用户数据文件中更改 3 个字段的默认设置，请先调用 `BCPColumns(5)`，再调用 BCPColFmt 五次，其中三次调用设置自定义格式  。 对于剩余的两次调用, 将*eUserDataType*设置为 BCP_TYPE_DEFAULT, 并将*cbIndicator*、 *cbUserData*和*cbUserDataTerm*分别设置为0、BCP_VARIABLE_LENGTH 和0。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
 > [!NOTE]  
 >  在对 BCPColFmt 进行任何调用之前，必须先调用 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 方法  。 必须对用户文件中的每个列调用一次 BCPColFmt  。 对任何用户文件列多次调用 BCPColFmt 将导致错误  。  
@@ -79,7 +78,7 @@ HRESULT BCPColFmt(
  用户的数据文件中字段的索引。  
   
  eUserDataType[in]   
- 用户的数据文件中字段的数据类型。 可用的数据类型所示为 BCP_TYPE_XXX 格式，例如，BCP_TYPE_SQLINT4 的 SQL Server 标头文件 (msoledbsql.h)，OLE DB 驱动程序。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作  ：  
+ 用户的数据文件中字段的数据类型。 可用的数据类型在 SQL Server 标头文件 (msoledbsql) 的 OLE DB 驱动程序中列出, 其格式为 BCP_TYPE_XXX, 例如 BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作  ：  
   
 -   如果源列的数据类型不是 decimal 或 numeric，则使用默认的精度和小数位数。  
   

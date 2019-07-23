@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: add9cb59748ce4de615ec4ac73117984bb2c8642
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 417a5048d809cb4498c543c589324e151a843a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955401"
 ---
 # <a name="createclob-method-sqlserverconnection"></a>createClob 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,15 +30,15 @@ public java.sql.Clob createClob()
 ```  
   
 ## <a name="return-value"></a>返回值  
- Clob 对象。  
+ 一个 Clob 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 createClob 方法由 java.sql.Connection 接口中的 createClob 方法指定。  
+ 此 createClob 方法由 createClob 方法在 sql 连接接口中指定。  
   
- 此方法无需[SQLServerClob 构造函数&#40;SQLServerConnection，java.lang.String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)。  
+ 此方法取代了[SQLServerClob 构造函数&#40;&#41;SQLServerConnection, .java](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)的需求。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

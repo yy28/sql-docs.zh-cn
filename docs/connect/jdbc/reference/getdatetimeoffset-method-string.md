@@ -1,5 +1,5 @@
 ---
-title: getDateTimeOffset 方法 (String) |Microsoft Docs
+title: getDateTimeOffset 方法 (字符串) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e8ebcc7a803a0b13c85e6cefaeea9fa60d0355b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d831ff519f72fb5b68cec3c7dc359f1d54106c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983788"
 ---
 # <a name="getdatetimeoffset-method-string"></a>getDateTimeOffset 方法 (String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
  参数的名称。  
   
 ## <a name="return-value"></a>返回值  
- 一个[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
+ [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 可以设置[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)参数值，该值具有[SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)。  
+ 可以使用[SQLServerCallableStatement. setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)设置[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)参数值。  
   
 ## <a name="see-also"></a>另请参阅  
  [getDateTimeOffset 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

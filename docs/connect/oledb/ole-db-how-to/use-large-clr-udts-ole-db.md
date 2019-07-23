@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6518f898589ee7b2dabea97fde0765f62fd9e5a5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 07a3023f61f26bbc4850eaa495f134d87c6a61c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994607"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。  
+  此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息, 请参阅[OLE DB &#40;&#41;的大型 CLR 用户定义类型](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更高版本。  
   
 ## <a name="example"></a>示例  
  此示例包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 该表中的一个列将属于该程序集中定义的一个类型。默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  

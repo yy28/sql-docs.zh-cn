@@ -1,5 +1,5 @@
 ---
-title: unwrap 方法 (SQLServerStatement) |Microsoft Docs
+title: 解包方法 (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cadd692cb6fe3cdedcad04f462dc46e6a8070b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985603"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,9 +47,9 @@ public <T> T unwrap(Class<T> iface)
   
  调用此方法时，对象会取消对 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的包装。  
   
- 有关示例代码，请参阅[更新大型数据样本](../../../connect/jdbc/updating-large-data-sample.md)，或[unwrap 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)。  
+ 有关代码示例, 请参阅[更新大数据示例](../../../connect/jdbc/updating-large-data-sample.md)或[解包&#40;方法&#41;SQLServerCallableStatement](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)。  
   
- 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [isWrapperFor 方法 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

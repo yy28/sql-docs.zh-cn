@@ -1,6 +1,6 @@
 ---
 title: 执行异步操作 |Microsoft Docs
-description: 适用于 SQL Server 执行与 OLE DB 驱动程序的异步操作
+description: 对 SQL Server 的 OLE DB 驱动程序执行异步操作
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, asynchronous operations
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9893e66debd7c147a0d288d56dad5f6190789898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989026"
 ---
 # <a name="performing-asynchronous-operations"></a>执行异步操作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66802942"
 ## <a name="execution-and-rowset-initialization"></a>执行和行集初始化  
  被设计成以异步方式打开由执行命令所生成的结果的应用程序可以设置 DBPROP_ROWSET_ASYNCH 属性中的 DBPROPVAL_ASYNCH_INITIALIZE 位。 在调用 IDBInitialize::Initialize、ICommand::Execute、IOpenRowset::OpenRowset 或 IMultipleResults::GetResult 之前设置该位时，必须将 riid 参数设置为 IID_IDBAsynchStatus、IID_ISSAsynchStatus 或 IID_IUnknown      。  
   
- 该方法立即返回值，且 ppRowset 设置为行集上的请求接口。如果行集初始化立即完成，则返回 S_OK；如果行集继续异步初始化，则返回 DB_S_ASYNCHRONOUS  。 此接口的 OLE DB Driver for SQL Server，只能是**IDBAsynchStatus**或**ISSAsynchStatus**。 在行集完全初始化之前，该接口的行为如同处于挂起状态一样，而且对 IID_IDBAsynchStatus 或 IID_ISSAsynchStatus 以外的接口调用 QueryInterface 可能返回 E_NOINTERFACE    。 除非使用者显式请求异步处理，否则行集将以同步方式执行初始化。 如果 IDBAsynchStaus::GetStatus 或 ISSAsynchStatus::WaitForAsynchCompletion 返回的内容指示异步操作已完成，则请求的所有接口均可用   。 这不一定意味着行集已完全填充，但它是完整的，且功能齐全。  
+ 该方法立即返回值，且 ppRowset 设置为行集上的请求接口。如果行集初始化立即完成，则返回 S_OK；如果行集继续异步初始化，则返回 DB_S_ASYNCHRONOUS  。 对于 SQL Server 的 OLE DB 驱动程序, 此接口只能是**IDBAsynchStatus**或**ISSAsynchStatus**。 在行集完全初始化之前，该接口的行为如同处于挂起状态一样，而且对 IID_IDBAsynchStatus 或 IID_ISSAsynchStatus 以外的接口调用 QueryInterface 可能返回 E_NOINTERFACE    。 除非使用者显式请求异步处理，否则行集将以同步方式执行初始化。 如果 IDBAsynchStaus::GetStatus 或 ISSAsynchStatus::WaitForAsynchCompletion 返回的内容指示异步操作已完成，则请求的所有接口均可用   。 这不一定意味着行集已完全填充，但它是完整的，且功能齐全。  
   
  即使执行的命令未返回行集，它仍会立即返回支持 IDBAsynchStatus 的对象  。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005934"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 转义序列
 
@@ -112,7 +111,7 @@ JDBC 驱动程序对于存储过程调用支持 `{? = call proc_name(?,...)}` �
 
 其中，`procedure-name` 指定存储过程的名称，`parameter` 指定存储过程参数。  
   
-有关使用详细信息`call`转义序列用于存储过程，请参阅[Using 语句的存储过程](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+有关将`call`转义序列用于存储过程的详细信息, 请参阅[对存储过程使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
 
 ## <a name="outer-joins"></a>外部联接
 

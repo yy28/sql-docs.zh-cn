@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c0d96ded45fe1b6cb68eda222039e01901ebc65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980400"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>getResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public final java.lang.String getResponseBuffering()
   
  adaptive  是 JDBC 驱动程序版本 2.0 和 3.0 中的默认值。 full  是版本低于 2.0 的 JDBC 驱动程序中的默认值。  
   
- 有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ 有关使用响应缓冲模式的详细信息, 请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setResponseBuffering 方法 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

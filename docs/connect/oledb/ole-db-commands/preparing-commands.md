@@ -1,6 +1,6 @@
 ---
-title: 准备命令 |Microsoft Docs
-description: 准备使用 SQL Server 的 OLE DB 驱动程序的命令
+title: 正在准备命令 |Microsoft Docs
+description: 使用 SQL Server 的 OLE DB 驱动程序准备命令
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - command preparation [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 139af9e2710ffabd3eda40553779f76979683841
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d4242f987820b384ab5bfed1bd74066a54fc09ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016047"
 ---
 # <a name="preparing-commands"></a>准备命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 317c0b44-fe3f-4142-9cab-e40e4c4fe070
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7aa2b4f740795169824cb4962f17c2dfecdc7974
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9a792f33d598eafa706241329873338998c61865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980264"
 ---
 # <a name="getrowidlifetime-method-sqlserverdatabasemetadata"></a>getRowIdLifetime 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +33,13 @@ public java.sql.RowIdLifetime getRowIdLifetime()
  一个 RowIdLifetime 对象。  
   
 > [!NOTE]  
->  在 JDBC Driver 2.0 发行版中，此方法返回 java.sql.RowIdLifetime.ROWID_UNSUPPORTED 值。  
+>  在 JDBC Driver 2.0 版中, 此方法将返回 ROWID_UNSUPPORTED 值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getRowIdLifetime 方法由 java.sql.DatabaseMetaData 接口中的 getRowIdLifetime 方法指定。  
+ 此 getRowIdLifetime 方法由 getRowIdLifetime 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

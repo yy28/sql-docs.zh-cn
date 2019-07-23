@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d5cecb8-b29b-49c0-a4b1-9472b8709ddf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58afb186f4477633c916e46892109584eec3f5ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8e208f64f0f981b5d2fd6838d0a5d492b8679241
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955431"
 ---
 # <a name="concurssoptimisticcc-field-sqlserverresultset"></a>CONCUR_SS_OPTIMISTIC_CC 字段 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public static final int CONCUR_SS_OPTIMISTIC_CC
 ```  
   
 ## <a name="field-value"></a>字段值  
- **Int** 1008年的值。  
+ **整数**值1008。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

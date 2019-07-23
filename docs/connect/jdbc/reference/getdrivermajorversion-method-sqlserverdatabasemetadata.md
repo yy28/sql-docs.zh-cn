@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3f3f717f-ef07-4300-8286-1cfe73619a5e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3bd9fe65cd1632c2f631ea7a2573162ca7da0d43
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 147a54a1f8b3b647e64e95b22c60095c67f8ac35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983462"
 ---
 # <a name="getdrivermajorversion-method-sqlserverdatabasemetadata"></a>getDriverMajorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDriverMajorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getDriverMajorVersion 方法由 java.sql.DatabaseMetaData 接口中的 getDriverMajorVersion 方法指定。  
+ 此 getDriverMajorVersion 方法由 getDriverMajorVersion 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955120"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
 
@@ -59,7 +58,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- **true**如果间隔取代已删除的行。 **false**如果删除已删除的行。  
+ 如果空白替换已删除的行,**则为 true** 。 如果删除删除的行, 则**为 false** 。  
   
  将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库一起使用时，此方法将为 TYPE_SS_SCROLL_KEYSET 游标返回“true”，并且将为所有其他结果集类型返回“false”   。  
   
@@ -67,7 +66,7 @@ public boolean deletesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 deletesAreDetected 方法由 java.sql.DatabaseMetaData 接口中的 deletesAreDetected 方法指定。  
+ 此 deletesAreDetected 方法由 deletesAreDetected 方法在 Java.sql.databasemetadata 接口中指定。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将针对所有可更新的游标类型检测已删除的行，尽管此检测对于前进和动态游标是暂时的。  

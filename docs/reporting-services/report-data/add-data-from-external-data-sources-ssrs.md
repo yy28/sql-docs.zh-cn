@@ -6,16 +6,15 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 60387cff118b0e809bba1e659be496c4ca2c00cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ec3fe9ba7641a7c60b3035ff6dc5e11cdfe3691
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500558"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68251255"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>从外部数据源中添加数据 (SSRS)
   若要从外部数据源中检索数据，您需要使用数据连接。 数据连接信息通常由外部数据源的所有者提供，该所有者负责授予权限并指定要使用的凭据类型。 数据连接信息另存为报表数据源。 数据源类型指定要用于检索数据的数据扩展插件。  

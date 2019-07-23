@@ -3,19 +3,18 @@ title: SQL Azure 连接类型 (SSRS) | Microsoft Docs
 description: SQL Azure 连接数据扩展插件支持多值参数、服务器聚合，以及与连接字符串分开管理的凭据。
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 02c3f95e00243a78fe2db70c587625e5a14d570d
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: ca8aed91a76e29fec7075b04210b798d41caaf44
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500181"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264363"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
 
@@ -58,7 +57,7 @@ Windows 身份验证（集成安全性）不受支持。 如果试图使用 Wind
   
 - 不需要提供任何凭据。 若要使用此选项，您必须具有为报表服务器配置的无人参与的执行帐户。 有关详细信息，请参阅 msdn.microsoft.com 上 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的[配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
-有关详细信息，请参阅[数据连接、 数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[指定凭据和连接信息的报表数据源](specify-credential-and-connection-information-for-report-data-sources.md).  
+有关详细信息, 请参阅[数据连接、数据源和连接字符串&#40;报表生成器和 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[为报表数据源指定凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。  
   
 ## <a name="Query"></a> 查询
 

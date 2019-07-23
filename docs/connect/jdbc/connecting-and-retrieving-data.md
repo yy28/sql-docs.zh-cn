@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f76b740c9ba64439719a12d016cadaa7db2a7cc3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956886"
 ---
 # <a name="connecting-and-retrieving-data"></a>连接和检索数据
 
@@ -25,7 +24,7 @@ ms.locfileid: "66778246"
 使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库建立连接的方法主要有两种。 一种方法是在连接 URL 中设置连接属性，然后调用 DriverManager 类的 getConnection 方法来返回 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。  
   
 > [!NOTE]  
-> 有关 JDBC 驱动程序支持的连接属性的列表，请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)。  
+> 有关 JDBC 驱动程序支持的连接属性的列表, 请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 第二种方法涉及到使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类的 setter 方法设置连接属性，然后调用 [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 方法来返回 SQLServerConnection 对象。  
   

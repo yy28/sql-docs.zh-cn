@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936156"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ $datatype：可选（整数）PDO::PARAM_* 常量  。 默认值为 PDO::PARAM_S
   
 $length：数据类型的可选（整数）长度  。 当在 $data_type 中使用 PDO::PARAM_INT 或 PDO::PARAM_BOOL 时，可以指定 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE 来指示默认大小  。  
   
-$*driver_options*： 可选 （混合） 特定于驱动程序的选项。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
+$*driver_options*: 可选 (混合) 驱动程序特定的选项。 例如，你可以指定 PDO::SQLSRV_ENCODING_UTF8 来将列作为使用 UTF-8 编码的字符串绑定到变量。  
   
 ## <a name="return-value"></a>返回值  
 如果成功，则为 TRUE；否则为 FALSE。  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 输出参数绑定到 bigint 类型，如果值的最终可能会超出范围时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，pdo:: PARAM_INT 使用 pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE 可能会导致"超出范围的值"异常。 因此，改为使用默认 pdo:: PARAM_STR 并提供生成的字符串，最多为 21 的大小。 它是最大位数，包括任何 bigint 值的负号。 
+> 将输出参数绑定到 bigint 类型时, 如果值可能在[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围之外结束, 则使用 pdo::P ARAM_INT 和 PDO:: SQLSRV_PARAM_OUT_DEFAULT_SIZE 可能会导致 "值超出范围" 异常。 因此, 请改用默认的 PDO::P ARAM_STR, 并提供结果字符串的大小, 最大值为21。 它是任意 bigint 值的最大位数, 包括负号。 
 
 ## <a name="example"></a>示例  
 此代码示例演示如何使用输入/输出参数。  

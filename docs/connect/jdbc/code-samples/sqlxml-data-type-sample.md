@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2060defebee30d7f31d33fa8ada069095780c39
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8775c93afaa84570c5f4da51672bbec6379a927f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957053"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 数据类型示例
 
@@ -39,7 +38,7 @@ ms.locfileid: "66769824"
 
 ## <a name="requirements"></a>要求
 
-若要运行此示例应用程序，必须将 classpath 设置为包含 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc4.jar 项，示例应用程序将引发“找不到类”异常。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。
+若要运行此示例应用程序，必须将 classpath 设置为包含 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc4.jar 项，示例应用程序将引发“找不到类”异常。 有关如何设置类路径的详细信息, 请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。
 
 此外，还需要访问 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库才能运行此示例应用程序。
 

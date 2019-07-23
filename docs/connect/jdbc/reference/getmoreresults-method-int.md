@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad7363db0cb1de986273e59d698e2f1b00d50deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981775"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final boolean getMoreResults(int mode)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getMoreResults 方法由 java.sql.Statement 接口中的 getMoreResults 方法指定。  
+ 此 getMoreResults 方法由 getMoreResults 方法在 .sql 接口中指定。  
   
  如果在检索结果前调用 getMoreResults 方法，则该方法就会采用 mode  参数指定的行为方式并移动到下一个结果。  
   

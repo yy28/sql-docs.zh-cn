@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3772fcb5f386b1866e57ed4db767d1d7fcbba07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98069f3b907d923a7eeca295b1c2a0d983c2edc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974553"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>setClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

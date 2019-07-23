@@ -1,5 +1,5 @@
 ---
-title: 使用书签 (OLE DB) 检索行 |Microsoft Docs
+title: 使用书签检索行 (OLE DB) |Microsoft Docs
 description: 使用书签检索行 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1ae3556f4e78b71b714ced11ea9e7ee64dda619c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2ab2e7be75e10ff97fcf254f885bfaa9dd25ec9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994703"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66791186"
   
 4.  对于将用作书签的列，请将绑定结构的 dwFlag 字段设置为 DBCOLUMNSINFO_ISBOOKMARK 标记  。  
   
-5.  使用**irowsetlocate:: Getrowsat**提取行，从指定的偏移量从书签的行开始。  
+5.  使用**IRowsetLocate:: GetRowsAt**从书签的偏移量指定的行开始提取行。  
   
 ## <a name="example"></a>示例  
  此示例显示如何使用书签提取行。 IA64 平台不支持此示例。  

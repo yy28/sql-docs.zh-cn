@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e6d06f40f87464e032563158ed7331bfd85b08b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 843cb16fab8b05ae72c502fecd171f9af2886779
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213653"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>updateAsciiStream 方法 (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void updateAsciiStream(int index,
   
  *x*  
   
- InputStream 对象。  
+ 一个 InputStream 对象。  
   
  *length*  
   
@@ -54,7 +53,7 @@ public void updateAsciiStream(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateAsciiStream 方法由 java.sql.ResultSet 接口中的 updateAsciiStream 方法指定。  
+ 此 updateAsciiStream 方法由 updateAsciiStream 方法在方法中指定。  
   
  此方法将 InputStream 对象中的 ASCII 字符（字节）传递给可转换的字符列，即 Unicode 的 ASCII 范围 [0x00 - 0x7F] 以及 874、932、936、949、950 和 1250-1258 代码页。 此方法执行到目标排序规则页的转换。 尝试更新不可转换的目标列将引发异常。 对于二进制列，会传递原始字节。  
   

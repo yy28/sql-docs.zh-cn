@@ -11,17 +11,16 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: af634dbcd988725119068a660cbdca96013b3b33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04c73d47f8289e5faf1ae5f5074d5e85b1516a50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023959"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 属性（“AlwaysOn 高可用性”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager “SQL Server 属性”对话框中的“AlwaysOn 高可用性”选项卡启用或禁用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的“AlwaysOn 可用性组”功能。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  
+  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager “SQL Server 属性”对话框中的“AlwaysOn 高可用性”选项卡启用或禁用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的“AlwaysOn 可用性组”功能   。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  
   
 ##  <a name="Prerequisites"></a> 先决条件  
  若要启用 AlwaysOn 可用性组，服务器实例必须满足以下先决条件：  
@@ -44,9 +43,9 @@ ms.locfileid: "47803165"
  **启用 AlwaysOn 可用性组**  
  使用此复选框可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的这一实例上启用或禁用 AlwaysOn 可用性组，如下所示：  
   
--   如果此复选框为空，则当前禁用了 AlwaysOn 可用性组。 若要启用 AlwaysOn 可用性组，请选中此复选框，单击“确定”，然后手动重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
+-   如果此复选框为空，则当前禁用了 AlwaysOn 可用性组。 若要启用 AlwaysOn 可用性组，请选中此复选框，单击  “确定”，然后手动重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
--   如果已选中此复选框，则当前启用了 AlwaysOn 可用性组。 若要禁用 AlwaysOn 可用性组，请取消选中此复选框，然后单击“确定”。 这会导致服务器实例重新启动。  
+-   如果已选中此复选框，则当前启用了 AlwaysOn 可用性组。 若要禁用 AlwaysOn 可用性组，请取消选中此复选框，然后单击“确定”  。 这会导致服务器实例重新启动。  
   
     > [!TIP]  
     >  禁用 AlwaysOn 可用性组之后，应从服务器实例中删除任何本地可用性副本。 如果您删除了给定可用性组的最后一个副本，则还应删除此组。  

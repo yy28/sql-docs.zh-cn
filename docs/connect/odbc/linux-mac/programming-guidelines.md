@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798748"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264155"
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -130,6 +129,8 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
     > DAC 连接必须使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。  
     
 2.  当所有语句属性均通过 SQLSetConnectAttr 传递时，UnixODBC 驱动程序管理器会为其返回“属性/选项标识符无效”。 在 Windows 上，当 SQLSetConnectAttr 接收某个语句属性值时，它会使驱动程序在属于连接句柄子级的所有活动语句上设置该值。  
+
+3.  将驱动程序用于高度多线程应用程序时, unixODBC 的句柄验证可能会成为性能瓶颈。 在这种情况下, 可以通过使用`--enable-fastvalidate`选项编译 unixODBC 来获得更高的性能。 但请注意, 这可能会导致将无效句柄传递到 ODBC api 的应用程序崩溃`SQL_INVALID_HANDLE` , 而不是返回错误。
 
 ## <a name="see-also"></a>另请参阅  
 [常见问题解答](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

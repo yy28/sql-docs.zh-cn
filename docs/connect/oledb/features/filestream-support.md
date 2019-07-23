@@ -13,22 +13,21 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: ebaaf0da2a051106b690f80d4524e675358450c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4f8b047a18d2bfc3aea33c72a29efcde1869c3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989077"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-从[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]，OLE DB Driver for SQL Server 支持增强的 FILESTREAM 功能。 有关示例，请参阅[Filestream 和 OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)。  
+从开始[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], SQL Server OLE DB 驱动程序支持增强的 FILESTREAM 功能。 有关示例, 请参阅[Filestream 和 OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)。  
 
-FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息，请参阅[FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)。  
+FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息,[请&#40;参阅&#41;filestream SQL Server](../../../relational-databases/blob/filestream-sql-server.md)。  
   
 默认情况下，在打开数据库连接时，@@TEXTSIZE 将设置为 -1（“无限制”）  。  
   
@@ -55,16 +54,16 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
-如果您的客户端在编译时使用 SQL Server 的 OLE DB 驱动程序和应用程序连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])，然后**varbinary （max)** 行为将与该行为兼容通过引入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的本机客户端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
+如果客户端是使用 SQL Server 的 OLE DB 驱动程序编译的, 并且应用程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](到), 则**varbinary (max)** 行为将与引入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的行为兼容。中的[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Native Client。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
   
 如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   
 如果客户端使用 SQLOLEDB，或使用在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前发布的其他访问接口，则 varbinary(max) 将映射到映像  。  
   
 ## <a name="comments"></a>注释
-- 若要发送和接收**varbinary （max)** 大于 2 GB 的值，应用程序使用**DBTYPE_IUNKNOWN**参数和结果绑定中。 为参数提供程序必须调用 iunknown:: Queryinterface ISequentialStream 和 ISequentialStream 返回的结果。  
+- 若要发送和接收大于 2 GB 的**varbinary (max)** 值, 应用程序将在参数和结果绑定中使用**DBTYPE_IUNKNOWN** 。 对于参数, 提供程序必须为 ISequentialStream 调用 IUnknown:: QueryInterface, 并为返回 ISequentialStream 的结果调用。  
 
--  对于 OLE DB，检查与 ISequentialStream 值相关的发布将放宽。 当*wType*是**DBTYPE_IUNKNOWN**中**DBBINDING**结构，检查长度可以是禁用通过省略**DBPART_LENGTH**从*dwPart*或通过设置数据的长度 (偏移量位置处*obLength*数据缓冲区中) 为 ~ 0。 在此情况下，提供程序将不检查值的长度，并且将请求和返回可通过流提供的所有数据。 这一更改将适用于所有大型对象 (LOB) 类型和 XML，但只在连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]（或更高版本）服务器时才适用。 这将为开发人员提供更高的灵活性，同时为现有应用程序和下级服务器维护一致性和向下兼容性。  此更改会影响所有传输的数据，主要 irowset:: Getdata、 icommand:: Execute 和 irowsetfastload:: Insertrow 的接口。
+-  对于 OLE DB, 与 ISequentialStream 值相关的检查将被宽松。 **DBBINDING**结构中的*wType*为**DBTYPE_IUNKNOWN**时, 可以通过省略*dwPart*中的**DBPART_LENGTH**或设置数据的长度 (在数据中的偏移*obLength*处) 来禁用长度检查。buffer) 到 ~ 0。 在此情况下，提供程序将不检查值的长度，并且将请求和返回可通过流提供的所有数据。 这一更改将适用于所有大型对象 (LOB) 类型和 XML，但只在连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]（或更高版本）服务器时才适用。 这将为开发人员提供更高的灵活性，同时为现有应用程序和下级服务器维护一致性和向下兼容性。  此更改会影响传输数据的所有接口, 主要 IRowset::, ICommand:: Execute 和 IRowsetFastLoad:: InsertRow。
  
 
 ## <a name="see-also"></a>另请参阅  

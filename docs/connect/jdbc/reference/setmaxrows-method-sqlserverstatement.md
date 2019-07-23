@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 693214651211a74ccefa49429b7aa81dd65e48cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973978"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setMaxRows(int max)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setMaxRows 方法由 java.sql.Statement 接口中的 setMaxRows 方法指定。  
+ 此 setMaxRows 方法由 setMaxRows 方法在 .sql 接口中指定。  
   
  此 setMaxRows 方法对动态可滚动的游标并无影响。 应用程序应使用 SELECT TOP N SQL 语法来限制从可能较大的结果集中返回的行数。  
   

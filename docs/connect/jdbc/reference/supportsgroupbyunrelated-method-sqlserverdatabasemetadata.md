@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e8cf15dc9151de38d37ce22e4794b9fb8e14300
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0c9ae064a25dc8386b38b11f79ab9ffb5b78a9ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969330"
 ---
 # <a name="supportsgroupbyunrelated-method-sqlserverdatabasemetadata"></a>supportsGroupByUnrelated 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsGroupByUnrelated()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsGroupByUnrelated 方法由 java.sql.DatabaseMetaData 接口中的 supportsGroupByUnrelated 方法指定。  
+ 此 supportsGroupByUnrelated 方法由 supportsGroupByUnrelated 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3326b1b0-53e2-42ae-9ff7-98e8c7017ffa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 630afabc453ef5ff12a0939d8f5b17d151a994a4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5803fe31d5e46682ed31f483addff7593c399211
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968870"
 ---
 # <a name="supportsschemasintabledefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInTableDefinitions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSchemasInTableDefinitions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsSchemasInTableDefinitions 方法由 java.sql.DatabaseMetaData 接口中的 supportsSchemasInTableDefinitions 方法指定。  
+ 此 supportsSchemasInTableDefinitions 方法由 supportsSchemasInTableDefinitions 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

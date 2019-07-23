@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream 方法来输入流的长时间 |Microsoft Docs
+title: setBinaryStream 方法到输入流-长 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7bc5c323cb87ab0b5033baf4616a96276c0de2c3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2020b147b67557417b7c64cc05a053f9650d828
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975171"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setBinaryStream(java.lang.String parameterName,
   
  *value*  
   
- InputStream 对象。  
+ 一个 InputStream 对象。  
   
  *length*  
   
@@ -54,7 +53,7 @@ public void setBinaryStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setBinaryStream 方法由 java.sql.CallableStatement 接口中的 setBinaryStream 方法指定。  
+ 此 setBinaryStream 方法由 setBinaryStream 方法在 CallableStatement 接口中指定。  
   
  如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   

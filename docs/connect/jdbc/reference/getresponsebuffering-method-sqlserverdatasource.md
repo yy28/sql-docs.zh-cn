@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ea9552ff9a9bf8d0a591f35670ca7147c67e18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b3e53579b8c95cce0585e9614152053f39cafa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980432"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public java.lang.String getResponseBuffering()
   
  adaptive  值指定在必要时缓冲尽可能少的数据。 adaptive  值为默认缓冲模式。  
   
- 有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ 有关使用响应缓冲模式的详细信息, 请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setResponseBuffering 方法 &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   

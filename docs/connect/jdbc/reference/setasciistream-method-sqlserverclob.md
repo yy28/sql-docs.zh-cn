@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76d58f43e1caded32ac03e2c8f96ee5b9365bb72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975432"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 此 setAsciiStream 方法由 java.sql.Clob 接口中的 setAsciiStream 方法指定。  
+ 此 setAsciiStream 方法由 setAsciiStream 方法在 Clob 接口中指定。  
   
  输出流从指定位置开始覆盖 CLOB 中的字符数据，并可以超过 CLOB 的初始长度。 指定“位置+1”值将追加 ASCII 字符。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
   

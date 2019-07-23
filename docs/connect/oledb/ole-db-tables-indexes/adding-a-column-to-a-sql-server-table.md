@@ -1,6 +1,6 @@
 ---
-title: 向 SQL Server 表添加列 |Microsoft Docs
-description: 将列添加到使用 SQL Server 的 OLE DB 驱动程序的 SQL Server 表
+title: 向 SQL Server 表中添加列 |Microsoft Docs
+description: 使用 SQL Server 的 OLE DB 驱动程序将列添加到 SQL Server 表
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 282166444597245ad70be565ce6db9f01533a227
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994100"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>向 SQL Server 表添加列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序公开**itabledefinition:: Addcolumn**函数。 利用此函数，使用者便可向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中添加列。  
+  SQL Server 的 OLE DB 驱动程序公开**ITableDefinition:: AddColumn**函数。 利用此函数，使用者便可向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中添加列。  
   
- 当您添加到列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表，OLE DB 驱动程序的 SQL Server 使用者约束，如下所示：  
+ 向[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表中添加列时, SQL Server 使用者的 OLE DB 驱动程序被约束如下:  
   
 -   如果 DBPROP_COL_AUTOINCREMENT 为 VARIANT_TRUE，则 DBPROP_COL_NULLABLE 必须为 VARIANT_FALSE。  
   

@@ -1,6 +1,6 @@
 ---
 title: 元数据发现 |Microsoft Docs
-description: OLE DB 驱动程序适用于 SQL Server 中的元数据发现
+description: OLE DB Driver for SQL Server 中的元数据发现
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989059"
 ---
 # <a name="metadata-discovery"></a>元数据发现
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "66765967"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   Icommandwithparameters:: Getparameterinfo (请参阅[ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md)有关详细信息)  
+-   ICommandWithParameters:: GetParameterInfo (有关详细信息, 请参阅[ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) )  
   
  使用 IBCPSession::BCPSetBulkMode 指定元数据格式时，也会看到性能改进  
   
- OLE DB 驱动程序适用于 SQL Server 中的改进的元数据发现可能是因为存在两个存储过程中添加[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ 由于在中[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]添加了两个存储过程, 因此可以在 SQL Server 的 OLE DB 驱动程序中改进的元数据发现:  
   
 -   sp_describe_first_result_set  
   

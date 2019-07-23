@@ -1,6 +1,6 @@
 ---
 title: 获取大型数据 |Microsoft Docs
-description: 获取适用于 SQL Server 使用 OLE DB 驱动程序的大型数据
+description: 使用 SQL Server 的 OLE DB 驱动程序获取大数据
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 968ab9c3d586a9a1b49d356a6e55ff35336c28cd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936538"
 ---
 # <a name="getting-large-data"></a>获取大型数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "66803926"
   
 -   ICommand::Execute  
   
- DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 时，使用者在对 GetNextRows 方法的调用中应只提取单行数据  。 这是因为不缓冲 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据  。  
+ DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 时，使用者在对 GetNextRows 方法的调用中应只提取单行数据  。 这是因为 BLOB 数据未缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据  。  
   
- SQL Server 的 OLE DB 驱动程序不会检索大型数据从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]请求之前要执行此操作由使用者。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
+ SQL Server 的 OLE DB 驱动程序不会从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]检索到使用者请求的大数据。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   
 ## <a name="example"></a>示例  
  本示例从单一列中检索大型数据值：  
