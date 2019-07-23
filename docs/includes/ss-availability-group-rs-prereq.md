@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213319"
+---
 ## <a name="prerequisites"></a>必备条件
 
 创建可用性组前，需要：
@@ -71,15 +79,15 @@ BACKUP CERTIFICATE dbm_certificate
 
 #### <a name="create-the-certificate-on-secondary-servers"></a>在辅助服务器上创建证书
 
-以下 Transact-SQL 脚本根据在主 SQL Server 副本上创建的备份创建主密钥和证书。 该命令还会授权用户访问证书。 使用强密码更新脚本。 解密密码与此前步骤中用于创建 .pvk 文件的密码相同。 要创建证书，在所有次要副本上运行以下脚本：
+以下 Transact-SQL 脚本根据在主 SQL Server 副本上创建的备份创建主密钥和证书。 该命令还会授权用户访问证书。 使用强密码更新脚本。 解密密码与此前步骤中用于创建 .pvk 文件的密码相同  。 要创建证书，在所有次要副本上运行以下脚本：
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate
     AUTHORIZATION dbm_user
-    FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
+    FROM FILE = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
+    FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
     DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
             );
 ```

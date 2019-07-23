@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c75caf73aed97e2f7d0774de3da0dacc7a8708cc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 274c79dabe90098094423b2994edb93603e649e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123574"
 ---
 # <a name="rename-user-defined-functions"></a>重命名用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52417838"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要重命名用户定义函数，请使用：**  
   
@@ -47,9 +46,9 @@ ms.locfileid: "52417838"
   
 -   在未将对象更新为反映已对用户定义函数所做的更改时，更改用户定义函数的名称或定义可能导致依赖对象失败。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要删除函数，要求对函数所属架构具有 ALTER 权限，或对函数具有 CONTROL 权限。 若要重新创建函数，要求在数据库中具有 CREATE FUNCTION 权限，并对创建函数时所在的架构具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -68,7 +67,7 @@ ms.locfileid: "52417838"
   
     -   Aggregate 函数  
   
-4.  右键单击要重命名的函数，然后选择“重命名”。  
+4.  右键单击要重命名的函数，然后选择“重命名”  。  
   
 5.  输入函数的新名称。  
   

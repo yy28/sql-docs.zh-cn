@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10a5ac6202e635d69756fa57430109c7459e353
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082386"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE 程序集权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission  
+ permission   
  指定可对程序集撤消的权限。 如下所列。  
   
- ON ASSEMBLY ::assembly_name  
- 指定对其撤消权限的程序集。 需要使用作用域限定符 ::。  
+ ON ASSEMBLY ::assembly_name    
+ 指定对其撤消权限的程序集。 需要使用作用域限定符 ::  。  
   
- database_principal  
+ database_principal   
  指定要从中撤消权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -79,7 +78,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal  
+ AS revoking_principal   
  指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -109,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对程序集的 CONTROL 权限。  
   
 ## <a name="see-also"></a>另请参阅  

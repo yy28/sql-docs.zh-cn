@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 4fa512ba301aa1fc0c1783b96717545eca2790db
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136890"
 ---
 # <a name="create-a-resource-pool"></a>创建资源池
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建资源池。 若要了解资源池的主体，请参阅 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **要创建资源池，请使用：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **要创建资源池，请使用：** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -36,23 +35,23 @@ ms.locfileid: "55689760"
   
  所有资源池的最小 CPU 百分比和最小内存百分比的总和不得超过 100。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  创建资源池需要 CONTROL SERVER 权限。  
   
 ##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 创建资源池  
  **使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至其中并包含 **“资源调控器”** 。  
   
-2.  右键单击“Resource Governor”，再单击“属性”。  
+2.  右键单击“Resource Governor”  ，再单击“属性”  。  
   
 3.  在 **“资源池”** 网格中，单击空行中的第一列。 此列标记有星号 (*)。  
   
-4.  双击“名称”列中的空单元格。 键入要用于该资源池的名称。  
+4.  双击“名称”  列中的空单元格。 键入要用于该资源池的名称。  
   
 5.  在行中单击或双击要更改的任何其他单元，然后输入新值。  
   
-6.  若要保存更改，请单击 **“确定”**。  
+6.  若要保存更改，请单击 **“确定”** 。  
   
 ##  <a name="CreRPTSQL"></a> 使用 Transact-SQL 创建资源池  
  **使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

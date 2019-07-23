@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 01b525c7e858ed76a6526f8a109ba0bb8bef1a6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e18d77d6c10f448dfe36587450eb7198ea241245
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041247"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>查看逻辑备份设备的属性和内容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47648855"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看逻辑备份设备的属性和内容，请使用：**  
   
@@ -47,10 +46,10 @@ ms.locfileid: "47648855"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  有关安全性的信息，请参阅 [RESTORE LABELONLY (Transact SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，获取有关备份集或备份设备的信息要求具有 CREATE DATABASE 权限。 有关详细信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -59,13 +58,13 @@ ms.locfileid: "47648855"
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“服务器对象”**，然后展开 **“备份设备”**。  
+2.  展开 **“服务器对象”** ，然后展开 **“备份设备”** 。  
   
-3.  单击设备并右键单击“属性”，将打开“备份设备”对话框。  
+3.  单击设备并右键单击“属性”  ，将打开“备份设备”  对话框。  
   
 4.  **“常规”** 页将显示设备名称和目标，目标为磁带设备或者文件路径。  
   
-5.  在 **“选择页”** 窗格中，单击 **“介质内容”**。  
+5.  在 **“选择页”** 窗格中，单击 **“介质内容”** 。  
   
 6.  以下属性面板中将显示右侧窗格：  
   
@@ -86,9 +85,9 @@ ms.locfileid: "47648855"
   
 #### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>查看逻辑备份设备的属性和内容  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  使用 [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 语句。 此示例返回有关 `AdvWrks2008R2Backup` 逻辑备份设备的信息。  
   

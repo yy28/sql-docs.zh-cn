@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52412e1e6cc12c45399168062d397eb070887843
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 748a7f24d8e15974138f4fbaa5e9df6bd56cca75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115568"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>“重新组织索引”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用“‘重新组织索引’任务”对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
+  使用“‘重新组织索引’任务”  对话框可以移动索引页，以提高搜索效率。 此任务将使用 `ALTER INDEX REORGANIZE` 语句和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
   
 ## <a name="options"></a>选项  
  **“连接”**  
@@ -53,7 +52,7 @@ ms.locfileid: "51217961"
      生成的维护计划将只对所选数据库运行维护任务。 如果选择此选项，则必须至少在列表中选择一个数据库。  
   
  **对象**  
- 将“选择”网格限制为显示表、显示视图或同时显示两者。  
+ 将“选择”  网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
  指定受此任务影响的表或索引。 在 **“对象”** 框中选择 **“表和视图”** 时不可用。  

@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8f0c7e434fc4b47e332b9340cead5c24581b9ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92ce5a70e6266434cd82cf933b33ba96cee55f19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111164"
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,47 +59,47 @@ ms.locfileid: "47841277"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>从分发服务器监视发布服务器、发布和订阅  
   
-1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)。 这将返回使用此分发服务器的所有发布服务器的监视信息。 若要将结果集限制在单个发布服务器范围之内，请指定 **@publisher**。  
+1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)。 这将返回使用此分发服务器的所有发布服务器的监视信息。 若要将结果集限制在单个发布服务器范围之内，请指定 **@publisher** 。  
   
-2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md). 这将返回使用此分发服务器的所有发布的监视信息。 若要将结果集限制在单个发布服务器、发布或已发布数据库的范围之内，请分别指定 **@publisher**、 **@publication**或 **@publisher_db**。  
+2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md). 这将返回使用此分发服务器的所有发布的监视信息。 若要将结果集限制在单个发布服务器、发布或已发布数据库的范围之内，请分别指定 **@publisher** 、 **@publication** 或 **@publisher_db** 。  
   
-3.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)。 这将返回使用此分发服务器的所有订阅的监视信息。 若要将结果集限制在属于单个发布服务器、发布或已发布数据库的订阅范围之内，请分别指定 **@publisher**、 **@publication**或 **@publisher_db**。  
+3.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)。 这将返回使用此分发服务器的所有订阅的监视信息。 若要将结果集限制在属于单个发布服务器、发布或已发布数据库的订阅范围之内，请分别指定 **@publisher** 、 **@publication** 或 **@publisher_db** 。  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>监视等待在订阅服务器上应用的事务处理命令  
   
-1.  在分发服务器上，对分发数据库执行 [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md)。 这将返回为使用此分发服务器的所有订阅挂起的所有命令的监视信息。 若要将结果集限制在为属于单个发布服务器、订阅服务器、发布或已发布数据库的订阅挂起的命令范围之内，请分别指定 **@publisher**、 **@subscriber**、 **@publication**或 **@publisher_db**。  
+1.  在分发服务器上，对分发数据库执行 [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md)。 这将返回为使用此分发服务器的所有订阅挂起的所有命令的监视信息。 若要将结果集限制在为属于单个发布服务器、订阅服务器、发布或已发布数据库的订阅挂起的命令范围之内，请分别指定 **@publisher** 、 **@subscriber** 、 **@publication** 或 **@publisher_db** 。  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>监视等待上载或下载的合并更改  
   
-1.  在发布服务器上，对发布数据库执行 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)。 这将返回一个结果集，其中显示了有关等待复制到订阅服务器的更改的信息。 若要将结果集限制在属于单个发布或项目的更改范围之内，请分别指定 **@publication** 或 **@article**。  
+1.  在发布服务器上，对发布数据库执行 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)。 这将返回一个结果集，其中显示了有关等待复制到订阅服务器的更改的信息。 若要将结果集限制在属于单个发布或项目的更改范围之内，请分别指定 **@publication** 或 **@article** 。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)。 这将返回一个结果集，其中显示了有关等待复制到发布服务器的更改的信息。 若要将结果集限制在属于单个发布或项目的更改范围之内，请分别指定 **@publication** 或 **@article**。  
+2.  在订阅服务器上，对订阅数据库执行 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)。 这将返回一个结果集，其中显示了有关等待复制到发布服务器的更改的信息。 若要将结果集限制在属于单个发布或项目的更改范围之内，请分别指定 **@publication** 或 **@article** 。  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>监视合并代理会话  
   
 1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 这将为所有使用此分发服务器的订阅返回有关所有合并代理会话的监视信息（包括 **Session_id**）。 还可以提供查询 **MSmerge_sessions** 系统表来获得 [Session_id](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) 。  
   
-2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 为 **Session_id** 指定步骤 1 中的 **@session_id**。 这将显示有关该会话的详细监视信息。  
+2.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 为 **Session_id** 指定步骤 1 中的 **@session_id** 。 这将显示有关该会话的详细监视信息。  
   
 3.  为每个相关会话重复步骤 2。  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>从订阅服务器监视请求订阅的合并代理会话  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 针对给定订阅指定 **@publisher**、 **@publication**，并为 **@publisher_db**。 这将为此订阅的最后五个合并代理会话返回监视信息。 请记下结果集中相关会话的 **Session_id** 值。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)。 针对给定订阅指定 **@publisher** 、 **@publication** ，并为 **@publisher_db** 。 这将为此订阅的最后五个合并代理会话返回监视信息。 请记下结果集中相关会话的 **Session_id** 值。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 为 **Session_id** 指定步骤 1 中的 **@session_id**。 这将显示有关该会话的详细监视信息。  
+2.  在订阅服务器上，对订阅数据库执行 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)。 为 **Session_id** 指定步骤 1 中的 **@session_id** 。 这将显示有关该会话的详细监视信息。  
   
 3.  为每个相关会话重复步骤 2。  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>查看和修改发布的监视阈值标准  
   
-1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)。 这将返回为使用此分发服务器的所有发布设置的监视阈值。 若要将结果集限制在属于单个发布服务器或已发布数据库的发布或者单个发布的监视阈值范围之内，请分别指定 **@publisher**、 **@publisher_db**或 **@publication**。 请记下任何必须更改的阈值的 **Metric_id** 值。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
+1.  在分发服务器上，对分发数据库执行 [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)。 这将返回为使用此分发服务器的所有发布设置的监视阈值。 若要将结果集限制在属于单个发布服务器或已发布数据库的发布或者单个发布的监视阈值范围之内，请分别指定 **@publisher** 、 **@publisher_db** 或 **@publication** 。 请记下任何必须更改的阈值的 **Metric_id** 值。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
 2.  在分发服务器上，对分发数据库执行 [sp_replmonitorchangepublicationthreshold](../../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md)。 根据需要指定下列参数：  
   
-    -   为 **Metric_id** 指定在步骤 1 中获得 **@metric_id**。  
+    -   为 **Metric_id** 指定在步骤 1 中获得 **@metric_id** 。  
   
-    -   为 **@value**。  
+    -   为 **@value** 。  
   
     -   将 **@shouldalert** 的值指定为 **@shouldalert** 以在达到此阈值时记录警报；如果不需要警报，则指定为 **0** 。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d0f3855e-d095-4a81-a5bd-9d7ad51f2c77
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a25abaee561ea74bd29dff369a8c4ec5ac516fee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0a365147976a2c765aaf3af39ba9631bf43f12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990506"
 ---
 # <a name="mssqleng014160"></a>MSSQL_ENG014160
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47746255"
 |消息正文|已设置发布 [%s] 的阈值 [%s:%s]。 此发布的一个或多个订阅已过期。|  
   
 ## <a name="explanation"></a>解释  
- 使用复制可以对一些情况启用警告。 例如，订阅即将过期时，即可以发出此警告。 如果在指定的“保持期” 内未同步订阅，则订阅会过期。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
+ 使用复制可以对一些情况启用警告。 例如，订阅即将过期时，即可以发出此警告。 如果在指定的“保持期”  内未同步订阅，则订阅会过期。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
  使用复制监视器或 [sp_replmonitorchangepublicationthreshold](../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md)启用警告时，请指定阈值以确定何时触发警告。 达到或超过该阈值时，复制监视器中将显示警告，并且将一个事件写入 Windows 事件日志。 达到阈值还会触发 SQL Server 代理警报。 有关详细信息，请参阅[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)。  
   

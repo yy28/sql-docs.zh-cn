@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47876b387c06c1ba65e6a1a04fcbcee616097166
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041337"
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题仅与备份和还原使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
- “结尾日志备份”捕获尚未备份的任何日志记录（“结尾日志”），以防丢失所做的工作并确保日志链完好无损。 在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库恢复到其最近一个时间点之前，必须先备份数据库的事务日志。 结尾日志备份将是数据库还原计划中相关的最后一个备份。  
+ “结尾日志备份”  捕获尚未备份的任何日志记录（“结尾日志”  ），以防丢失所做的工作并确保日志链完好无损。 在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库恢复到其最近一个时间点之前，必须先备份数据库的事务日志。 结尾日志备份将是数据库还原计划中相关的最后一个备份。  
   
 > **注意：** 并非所有还原方案都要求执行结尾日志备份。 如果恢复点包含在较早的日志备份中，则无需结尾日志备份。 此外，如果您准备移动或替换（覆盖）数据库，并且在最新备份后不需要将该数据库还原到某一时间点，则不需要结尾日志备份。  
   

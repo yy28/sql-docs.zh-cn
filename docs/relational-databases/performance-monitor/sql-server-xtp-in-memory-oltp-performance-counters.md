@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 62f5c67db29c95b9d3e5ff15739b4c7a5286023e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 2ed90197774cb7be9d8229aa6b5e79ae811fbd88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915257"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP（内存中 OLTP）性能计数器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，性能监视器可以使用它们来监视内存中 OLTP 活动。 这些对象和计数器在计算机上给定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的所有实例之间共享，从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]启动。  
   
- 对象和计数器的名称在过去以 *XTP* 开头，如“XTP 游标”中所示。 现在，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，其名称将遵循以下模式：  
+ 对象和计数器的名称在过去以 *XTP* 开头，如“XTP 游标”  中所示。 现在，自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，其名称将遵循以下模式：  
   
 -   **SQL Server** *\<version>* **XTP 游标**  
   

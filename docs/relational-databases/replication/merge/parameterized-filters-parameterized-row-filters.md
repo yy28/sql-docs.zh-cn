@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140127"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>参数化筛选器 - 参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54127707"
  若要定义或修改参数化行筛选器，请参阅 [定义和修改合并项目的参数化行筛选器](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 ## <a name="how-parameterized-filters-work"></a>参数化筛选器的工作机制  
- 参数化行筛选器使用 WHERE 子句来选择要发布的适当数据。 不要在该子句中指定文字值（像在静态行筛选器中那样），而是指定以下一个或两个系统函数：SUSER_SNAME() 和 HOST_NAME()。 也可以使用用户定义函数，但是函数主体中必须包含 SUSER_SNAME() 或 HOST_NAME()，或者计算这些系统函数之一（如 `MyUDF(SUSER_SNAME()`）。 如果用户定义函数的主体中包含 SUSER_SNAME() 或 HOST_NAME()，则无法向该函数传递参数。  
+ 参数化行筛选器使用 WHERE 子句来选择要发布的适当数据。 请勿在子句中指定文本值（像用静态行筛选器处理那样），而是指定以下一个或两个系统函数：SUSER_SNAME() 和 HOST_NAME()。 也可以使用用户定义函数，但是函数主体中必须包含 SUSER_SNAME() 或 HOST_NAME()，或者计算这些系统函数之一（如 `MyUDF(SUSER_SNAME()`）。 如果用户定义函数的主体中包含 SUSER_SNAME() 或 HOST_NAME()，则无法向该函数传递参数。  
   
  系统函数 SUSER_SNAME() 和 HOST_NAME() 不是合并复制特有的，但合并复制使用它们来进行参数化筛选：  
   
@@ -102,7 +101,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  使用下列方法之一覆盖 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST\_NAME\(\) 值”页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST\_NAME\(\) 值”  页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
 -   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：为 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)（对于推送订阅）或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)（对于请求订阅）的 **@hostname** 参数指定一个值。  
   
@@ -133,7 +132,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |分区中的数据不重叠，并且数据由所有订阅共享。 订阅服务器无法更新参数化筛选器中引用的列。|N/A*|**不重叠，由所有订阅共享**|**2**|  
 |分区中的数据不重叠，每个分区只有一个订阅。 订阅服务器无法更新参数化筛选器中引用的列。**|**此表中的行将仅转到一个订阅**|**不重叠，一个订阅**|**3**|  
   
- \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。  
+ \*如果基础筛选选项设置为 **0**、**1** 或 **2**，则“添加筛选器”和“编辑筛选器”对话框中会显示“此表中的行将转到多个订阅”。     
   
  **如果你指定此选项，则相应项目中的每个数据分区只能有一个订阅。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ea7b59b50d2c1f8a312330879580d6f7ecba28e3
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2c36c06ad91cb9082f06d57f622db4209ac94212
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001973"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "58657861"
   
 ## <a name="user-action"></a>用户操作  
   
-1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 对于临时和预定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，database_name 和 object_name 列将为 NULL。  
+1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 对于临时和预定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，database_name  和 object_name  列将为 NULL。  
   
     ```sql   
     SELECT DB_NAME(st.dbid) AS database_name,  

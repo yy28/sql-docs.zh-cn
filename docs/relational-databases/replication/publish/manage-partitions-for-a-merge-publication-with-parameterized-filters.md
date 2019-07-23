@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be78157b91a1eebfc207be5f5ec5c28cb7346891
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002682"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8aec17fc676ef975a1655be1b7af0e70eb5ee599
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984416"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY 对称密钥权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,13 +53,13 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对对称密钥拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON SYMMETRIC KEY ::asymmetric_key_name  
+ ON SYMMETRIC KEY ::asymmetric_key_name   
  指定要对其拒绝权限的对称密钥。 需要作用域限定符 ::。  
   
- TO \<database_principal>  
+ TO \<database_principal>   
  指定要从中撤消权限的主体。  
   
  CASCADE  
@@ -69,28 +68,28 @@ DENY permission [ ,...n ]
  AS \<database_principal>  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。  
   
- Database_user  
+ Database_user   
  指定数据库用户。  
   
- Database_role  
+ Database_role   
  指定数据库角色。  
   
- Application_role  
+ Application_role   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User  
+ Database_user_mapped_to_Windows_User   
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group  
+ Database_user_mapped_to_Windows_Group   
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate  
+ Database_user_mapped_to_certificate   
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key  
+ Database_user_mapped_to_asymmetric_key   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login  
+ Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  
@@ -106,7 +105,7 @@ DENY permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对称密钥的 CONTROL 权限或对数据库的 ALTER ANY SYMMETRIC KEY 权限。 若要使用 AS 选项，则指定的主体必须拥有对称密钥。  
   
 ## <a name="examples"></a>示例  

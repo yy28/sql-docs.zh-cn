@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 07b16209f335dae6f2439b790898ebe4aa609c65
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a02bda17b1da0be95c0aea68720f8747ad6e672f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117169"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +46,22 @@ FOR SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>参数  
- audit_specification_name  
+ audit_specification_name   
  服务器审核规范的名称。  
   
- audit_name  
+ audit_name   
  应用此规范的审核的名称。  
   
- audit_action_group_name  
+ audit_action_group_name   
  服务器级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- WITH ( STATE = { ON | OFF } )  
+ WITH ( STATE = { ON | OFF } )     
  允许或禁止审核收集此审核规范的记录。  
   
 ## <a name="remarks"></a>Remarks  
  审核必须已存在，才能为它创建服务器审核规范。 服务器审核规范在创建之后处于禁用状态。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有 ALTER ANY SERVER AUDIT 权限的用户可以创建服务器审核规范并将其绑定到任何审核。  
   
  创建服务器审核规范后，具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 权限的主体、sysadmin 帐户或具有对审核的明确访问权的主体即可查看该规范。  

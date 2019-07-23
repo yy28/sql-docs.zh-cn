@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9af978588bddb51668acc8757eed9a6bd99e0bd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5dbd2c35b360d3b3e1e9f6dabe7d011c20795bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071196"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT XML 架构集合权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ GRANT permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对 XML 架构集合授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON XML SCHEMA COLLECTION :: [ schema_name. ] XML_schema_collection_name  
- 指定要授予对其的权限的 XML 架构集合。 需要作用域限定符 ::。 如果未指定 schema_name，则使用默认架构。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)。  
+ ON XML SCHEMA COLLECTION :: [ schema_name  . ] XML_schema_collection_name   
+ 指定要授予对其的权限的 XML 架构集合。 需要作用域限定符 ::。 如果未指定 schema_name，则使用默认架构  。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)  。  
   
  \<database_principal> 指定要向其授予权限的主体。  
   
@@ -68,28 +67,28 @@ GRANT permission  [ ,...n ] ON
   
  AS \<database_principal> 指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。  
   
- Database_user  
+ Database_user   
  指定数据库用户。  
   
- Database_role  
+ Database_role   
  指定数据库角色。  
   
- Application_role  
+ Application_role   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User  
+ Database_user_mapped_to_Windows_User   
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group  
+ Database_user_mapped_to_Windows_Group   
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate  
+ Database_user_mapped_to_certificate   
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key  
+ Database_user_mapped_to_asymmetric_key   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login  
+ Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  
@@ -106,7 +105,7 @@ GRANT permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  若要使用 AS 选项，还必须满足以下附加要求：  

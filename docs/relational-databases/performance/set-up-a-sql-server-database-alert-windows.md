@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bb05731ef999e3e3ef6a15681cf36a610924b708
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f76c6f4f4d65273c35dffb1cb17e664fceac0328
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113335"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>设置 SQL Server 数据库警报 (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,23 +26,23 @@ ms.locfileid: "53366949"
   
 ## <a name="set-up-a-sql-server-database-alert"></a>设置 SQL Server 数据库警报  
   
-1. 在“性能”窗口的导航树中，展开“性能日志和警报”。  
+1. 在“性能”窗口的导航树中，展开“性能日志和警报”   。  
   
-2. 右键单击“警报”，再选择“新建警报设置”。
+2. 右键单击“警报”，再选择“新建警报设置”   。
   
-3. 在“新建警报设置”对话框中，键入新警报的名称，再选择“确定”。  
+3. 在“新建警报设置”对话框中，键入新警报的名称，再选择“确定”   。  
   
-4. 在新建警报对话框的“常规”选项卡上，添加一个“注释”。 选择“添加”，向警报添加计数器。  
+4. 在新建警报对话框的“常规”选项卡上，添加一个“注释”   。 选择“添加”，向警报添加计数器  。  
   
      所有警报必须至少有一个计数器。  
   
-5. 在“添加计数器”对话框中，选择“性能对象”列表中的 SQL Server 对象。 从“从列表中选择计数器”选择一个计数器。  
+5. 在“添加计数器”对话框中，选择“性能对象”列表中的 SQL Server 对象   。 从“从列表中选择计数器”选择一个计数器  。  
   
-6. 要为警报添加计数器，请选择“添加”。 可以继续添加计数器，也可以选择“关闭”返回到新建警报对话框。  
+6. 要为警报添加计数器，请选择“添加”  。 可以继续添加计数器，也可以选择“关闭”返回到新建警报对话框  。  
   
-7. 在新建警报对话框的“将触发警报，如果值是”列表中，选择“超过”或者“低于”。 然后在“限制”中输入一个阈值。  
+7. 在新建警报对话框的“将触发警报，如果值是”列表中，选择“超过”或者“低于”    。 然后在“限制”中输入一个阈值  。  
   
-     当计数器的值大于或小于阈值时（取决于选择的是“超过”还是“低于”），可生成警报。  
+     当计数器的值大于或小于阈值时（取决于选择的是“超过”  还是“低于”  ），可生成警报。  
   
 8. 在 **“数据采样间隔”** 框中，设置采样频率。  
   

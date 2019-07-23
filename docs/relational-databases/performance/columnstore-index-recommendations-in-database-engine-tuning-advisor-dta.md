@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ed6d36c68fad62155261181d4134e097f59dd163
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 2899945661ca2f0502b9553cc8e78b751570a092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985010"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>数据引擎优化顾问 (DTA) 中的列存储索引建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,17 +32,17 @@ ms.locfileid: "53328767"
   
   1. 启动数据库引擎优化顾问并打开新的优化会话。
   
-  2. 在“常规”窗格中选择要优化的数据库和工作负荷。
+  2. 在“常规”窗格中选择要优化的数据库和工作负荷。 
   
-  3. 在“优化选项”窗格中选中“建议列存储索引”复选框（见下图）。
+  3. 在“优化选项”窗格中选中“建议列存储索引”复选框（见下图）。 
   ![DTA 列存储索引优化选项](../../relational-databases/performance/media/dta-columnstore-indexes-tuning-option.gif)
  
-  4. 选择其他优化选项，然后单击“开始分析”按钮。
+  4. 选择其他优化选项，然后单击“开始分析”  按钮。
   
-  5. 优化完成后，查看“建议”窗格中包括列存储索引在内的所有建议（见下图）。      
+  5. 优化完成后，查看“建议”窗格中包括列存储索引在内的所有建议（见下图）。       
   ![DTA 列存储索引建议](../../relational-databases/performance/media/dta-columnstore-index-recommendation.gif)
   
-  6. 单击“定义”超链接，查看可创建建议的索引的 SQL 数据定义语言 (DDL) 语句。 默认情况下，DTA 在列存储索引名称中使用后缀 **col**，以便更轻松地标识列存储索引（见下图）。
+  6. 单击“定义”超链接，查看可创建建议的索引的 SQL 数据定义语言 (DDL) 语句。  默认情况下，DTA 在列存储索引名称中使用后缀 **col**，以便更轻松地标识列存储索引（见下图）。
   ![DTA 列存储索引定义](../../relational-databases/performance/media/dta-columnstore-index-definition.gif) 
   
   

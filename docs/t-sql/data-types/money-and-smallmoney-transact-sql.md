@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b02876a6962d3536200d543e2b64e7210c59f00
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077808"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 和 smallmoney (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "56034498"
 |**money**|-922,337,203,685,477.5808 到 922,337,203,685,477.5807（对于 Informatica，为 -922,337,203,685,477.58<br />到 922,337,203,685,477.58。  Informatica 仅支持两位小数，而不是四位。）|8 字节|  
 |**smallmoney**|-214,748.3648 到 214,748.3647|4 个字节|  
   
-money 和 smallmoney 数据类型精确到它们所代表的货币单位的万分之一。 对于 Informatica，money 和 smallmoney 数据类型精确到它们所代表的货币单位的百分之一。
+money 和 smallmoney 数据类型精确到它们所代表的货币单位的万分之一   。 对于 Informatica，money 和 smallmoney 数据类型精确到它们所代表的货币单位的百分之一   。
   
 用句点分隔局部货币单位（如美分）和总体货币单位。 例如，2.15 表示 2 美元 15 美分。
   
@@ -57,7 +56,7 @@ money 和 smallmoney 数据类型精确到它们所代表的货币单位的万�
 ## <a name="converting-money-data"></a>转换 money 数据
 如果将整型数据类型转换为 **money**，则假设采用货币单位。 例如，整数值 4 被转换为相当于 4 个货币单位的 **money** 值。
   
-下面的示例分别将 smallmoney 和 money 值转换为 varchar 和 decimal 数据类型。
+下面的示例分别将 smallmoney 和 money 值转换为 varchar 和 decimal 数据类型     。
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  
