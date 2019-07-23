@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c06fdb1d2fc49cea50a3758ea900e291f8fa8796
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8229c20a500680c1b83304bc2e443c20838b5a02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015593"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream 和 OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  本部分包含四个示例演示了如何通过 filestream 功能使用用于 SQL Server 的 OLE DB 驱动程序：  
+  本部分包含四个示例, 这些示例演示如何使用 filestream 功能 OLE DB 驱动程序 SQL Server:  
   
 -   [使用 IBCPSession 将 FILESTREAM 列读入文件 (OLE DB)](../../../oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   

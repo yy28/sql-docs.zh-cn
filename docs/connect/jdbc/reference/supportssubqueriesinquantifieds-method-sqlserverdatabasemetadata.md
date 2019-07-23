@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 471d8bec6d1491ed8e2ddabbf819abdfa68db16d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c57ff4c4f293112cb84706b559f8c1ec2a18cf69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968727"
 ---
 # <a name="supportssubqueriesinquantifieds-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInQuantifieds 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSubqueriesInQuantifieds()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsSubqueriesInQuantifieds 方法由 java.sql.DatabaseMetaData 接口中的 supportsSubqueriesInQuantifieds 方法指定。  
+ 此 supportsSubqueriesInQuantifieds 方法由 supportsSubqueriesInQuantifieds 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

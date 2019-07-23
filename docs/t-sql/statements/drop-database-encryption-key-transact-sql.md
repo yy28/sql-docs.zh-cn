@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70d624af12c1a97e6e76881b3c2f481179d47c70
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bbdde51fe1015f224f1868842a80bee72dded4ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898140"
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ DROP DATABASE ENCRYPTION KEY
 ## <a name="remarks"></a>Remarks  
  如果数据库已加密，则必须先使用 ALTER DATABASE 语句对数据库进行解密。 请先等待解密完成，再删除数据库加密密钥。 有关 ALTER DATABASE 语句的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 若要查看数据库的状态，请使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 动态管理视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

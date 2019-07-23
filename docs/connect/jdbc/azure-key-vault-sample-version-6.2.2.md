@@ -1,5 +1,5 @@
 ---
-title: Azure 密钥保管库示例版本 6.2.2 |Microsoft Docs
+title: Azure Key Vault 示例版本 6.2.2 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 457dd90b386cf606462e61229aa14ad4a6f7dfbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a61d24ed5f2c36a84560cbcd04cd409fd6a59a44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957450"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Azure Key Vault 示例版本 6.2.2
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure 密钥保管库功能的示例应用程序
+## <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure Key Vault 功能的示例应用程序
 
-此应用程序是使用 JDBC 驱动程序 6.2.2 和 6.4.0 可运行和 Azure key Vault （版本 1.0.0），Adal4j （版本 1.4.0），以及其依赖项。  可通过将这些库添加到项目的 pom 文件中，如所述解决基本依赖关系[此处](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+此应用程序可使用 JDBC Driver 6.2.2 和 v6.4.0 和 Azure Keyvault (1.0.0 版)、Adal4j (版本 1.4.0) 及其依赖项运行。  可以通过将这些库添加到项目的 pom 文件来解决基本依赖项, 如下所[述:](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
 
 ```java
 import java.net.URISyntaxException;

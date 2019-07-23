@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4828be81914eddbbb5c26b5a6f65cd8b81d85df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014799"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步骤 3：使用 PHP 连接到 SQL 的概念验证
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>步骤 1： 连接  
+## <a name="step-1--connect"></a>步骤 1: 连接  
   
   
-这**OpenConnection**中所有函数的顶部附近调用函数。  
+此**OpenConnection**函数在后面的所有函数的顶部附近调用。  
   
   
 ```php 
@@ -46,9 +45,9 @@ ms.locfileid: "66801436"
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>步骤 2： 执行查询  
+## <a name="step-2--execute-query"></a>步骤 2: 执行查询  
   
-[Sqlsrv_query （)](https://php.net/manual/en/function.sqlsrv-query.php)函数可用于检索针对 SQL 数据库的查询集的结果。 此函数实际上可接受任何查询和连接对象并返回一个结果集，可以循环访问与使用[sqlsrv_fetch_array （)](https://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
+[Sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php)函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询和连接对象, 并返回可使用[sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)循环访问的结果集。  
   
 ```php  
     function ReadData()  
@@ -78,7 +77,7 @@ ms.locfileid: "66801436"
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>步骤 3： 插入行  
+## <a name="step-3--insert-a-row"></a>步骤 3: 插入行  
   
 此示例展示了如何安全执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
@@ -110,16 +109,16 @@ ms.locfileid: "66801436"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>步骤 4： 回滚事务  
+## <a name="step-4--rollback-a-transaction"></a>步骤 4: 回滚事务  
   
   
-此代码示例演示如何使用事务在其中你：  
+此代码示例演示如何使用事务, 其中:  
   
--开始一个事务  
+-开始事务  
   
--插入一行数据，更新另一行数据  
+-插入一行数据, 更新另一行数据  
   
--提交事务，如果插入和更新已成功和回滚事务如果其中一个不是  
+-如果插入和更新成功, 则提交事务, 如果其中一个不是, 则回滚事务  
   
   
 ```php 

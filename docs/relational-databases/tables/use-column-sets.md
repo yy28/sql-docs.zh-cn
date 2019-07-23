@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8cd068e23315edcef7df3a677a52530a767c685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140369"
 ---
 # <a name="use-column-sets"></a>使用列集
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -111,7 +110,7 @@ GO
  在本示例中，没有为 `i`列指定值，但插入了 `0` 值。  
   
 ## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 数据类型  
- **sql_variant** 日期类型可以存储多种不同的数据类型，如 **int****char** 和 **date**。 列集会输出数据类型信息（例如与 **sql_variant** 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
+ **sql_variant** 日期类型可以存储多种不同的数据类型，如 **int** **char** 和 **date**。 列集会输出数据类型信息（例如与 **sql_variant** 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
   
 |数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|精度|小数位数|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

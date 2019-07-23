@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a7d2f4fa27623a75bd49a32a7ce800801f63e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929591"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>如何：安装和管理功能扩展
 你可以添加用于分析数据库代码的规则、用于数据库单元测试和生成/部署参与者的条件，以增强 Visual Studio 版本（包括 SQL Server Data Tools）提供的功能。 但是，无论你是创建了扩展还是安装了其他人创建的扩展，必须首先安装功能扩展，之后才能使用它。  

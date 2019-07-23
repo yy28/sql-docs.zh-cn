@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5d2db7479e3a8cdce00dca62f04bf2c64989b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cd5f00d551c189f583af4232fe31716b51594df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003927"
 ---
 # <a name="using-table-valued-parameters"></a>使用表值参数
 
@@ -24,54 +23,54 @@ ms.locfileid: "66798501"
 
 表值参数提供了一将多行数据从客户端应用程序封送到 SQL Server 的种简单方法，而无需进行多次往返或特殊的服务器端逻辑来处理数据。 可使用表值参数来封装客户端应用程序中的数据行，并以单个参数化命令将数据发送到服务器。 传入数据行存储在随后可使用 Transact-SQL 进行操作的表变量中。  
   
-可使用标准 TRANSACT-SQL SELECT 语句访问表值参数中的列值。 表值参数为强类型，其结构会自动验证。 表值参数的大小仅受服务器内存。  
+可以使用标准 Transact-sql SELECT 语句来访问表值参数中的列值。 表值参数为强类型, 其结构会自动进行验证。 表值参数的大小仅受服务器内存限制。  
   
 > [!NOTE]  
-> 可从 Microsoft JDBC Driver 6.0 for SQL Server 开始对表值参数的支持。
+> 从 Microsoft JDBC Driver 6.0 开始, 为 SQL Server 提供表值参数支持。
 >
-> 您无法在表值参数中返回数据。 表值参数是只;不支持 OUTPUT 关键字。  
+> 不能返回表值参数中的数据。 表值参数是只可输入的;不支持 OUTPUT 关键字。  
   
- 有关表值参数的详细信息，请参阅以下资源。  
+ 有关表值参数的详细信息, 请参阅以下资源。  
   
 | 资源                                                                                                             | 描述                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [表值参数 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 联机丛书中 | 介绍如何创建和使用表值参数                             |
-| [用户定义表类型](https://go.microsoft.com/fwlink/?LinkId=98364)SQL Server 联机丛书中                  | 说明用于声明表值参数的用户定义表类型 |
-| [Microsoft SQL Server 数据库引擎](https://go.microsoft.com/fwlink/?LinkId=120507)CodePlex 部分        | 包含演示如何使用 SQL Server 特征和功能的示例  |
+| SQL Server 联机丛书中的[表值参数 (数据库引擎)](https://go.microsoft.com/fwlink/?LinkId=98363) | 介绍如何创建和使用表值参数                             |
+| SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkId=98364)                  | 描述用于声明表值参数的用户定义表类型 |
+| CodePlex 的[Microsoft SQL Server 数据库引擎](https://go.microsoft.com/fwlink/?LinkId=120507)部分        | 包含演示如何使用 SQL Server 特性和功能的示例  |
   
-## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>将多个行传递给在以前版本的 SQL Server 中  
+## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在早期版本的 SQL Server 中传递多个行  
 
-到 SQL Server 2008 引入了表值参数之前，用于将多行数据传递到存储的过程或参数化的 SQL 命令的选项受到限制。 开发人员可以选择从以下选项用于将多个行传递到服务器：  
+在将表值参数引入 SQL Server 2008 之前, 将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以从以下选项中进行选择, 以便将多个行传递到服务器:  
   
-- 使用一系列的每个参数来表示多个列和行数据中的值。 可以通过使用此方法传递的数据量受允许的参数的数目。 最多，SQL Server 过程可以有 2100年参数。 服务器端逻辑时需要这些单个值组合为一个表变量或临时表以进行处理。  
+- 使用一系列单独参数来表示多个数据列和行中的值。 使用此方法可以传递的数据量受允许的参数数目的限制。 SQL Server 过程最多可以有2100个参数。 需要服务器端逻辑将这些各个值组合到一个表变量或临时表中进行处理。  
   
-- 多个数据值捆绑到分隔的字符串或 XML 文档，然后将这些文本值传递给过程或语句。 这要求过程或语句以包括用于验证的数据结构和取消捆绑所需的逻辑值。  
+- 将多个数据值捆绑为分隔字符串或 XML 文档, 然后将这些文本值传递到过程或语句。 这要求过程或语句包括验证数据结构和 unbundling 值所需的逻辑。  
   
-- 创建一系列的单个 SQL 语句影响多个行的数据修改。 可以单独提交到服务器或组进行批处理的更改。 但是，即使在包含多个语句的批处理中提交，每个语句是单独在服务器上执行。  
+- 为影响多行的数据修改创建一系列单独的 SQL 语句。 可以将更改单独提交给服务器或将其成批提交到组。 但是, 即使在包含多个语句的批处理中提交, 也会在服务器上单独执行每条语句。  
   
-- 使用 bcp 实用程序或[SQLServerBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx)对象加载到表中的很多行数据。 尽管这项技术非常有效，但它不支持服务器端处理，除非将数据加载到临时表或表变量。  
+- 使用 bcp 实用工具或[SQLServerBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx)对象将多行数据加载到表中。 尽管此方法非常有效, 但它不支持服务器端处理, 除非将数据加载到临时表或表变量中。  
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
 
-使用 TRANSACT-SQL 定义的强类型表结构为基础表值参数`CREATE TYPE`语句。 您必须创建一个表类型和 SQL Server 中定义的结构，然后才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 联机丛书中。  
+表值参数基于使用 transact-sql `CREATE TYPE`语句定义的强类型表结构。 在客户端应用程序中使用表值参数之前, 必须创建表类型并定义 SQL Server 中的结构。 有关创建表类型的详细信息, 请参阅 SQL Server 联机丛书中的[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```
 
-在创建后的表类型，可以声明该类型所基于的表值参数。 下面的 TRANSACT-SQL 片段演示如何声明中的存储的过程定义的表值参数。 请注意，`READONLY`关键字是所必需的声明表值参数。  
+创建表类型后, 可以基于该类型声明表值参数。 下面的 Transact-sql 代码段演示如何在存储过程定义中声明表值参数。 请注意, `READONLY`声明表值参数需要使用关键字。  
 
 ```sql
 CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```
 
-## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用表值参数 (Transact SQL) 修改数据  
+## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>修改包含表值参数的数据 (Transact-sql)  
 
-可以通过执行一条语句影响多个行的基于集的数据修改中使用表值参数。 例如，可以选择的表值参数中的所有行并将它们插入到数据库表，或者可以通过将表值参数联接到想要更新的表创建的 update 语句。  
+通过执行单个语句, 可以在影响多行的基于集的数据修改中使用表值参数。 例如, 您可以选择表值参数中的所有行并将其插入到数据库表中, 也可以通过将表值参数联接到您要更新的表来创建 update 语句。  
   
-下面的 TRANSACT-SQL UPDATE 语句演示如何通过将其联接到 Categories 表使用表值参数。 与 FROM 子句中的联接使用表值参数时，您必须还别名，如下所示，其中表值参数的别名为"ec":  
+下面的 Transact-sql UPDATE 语句演示如何通过将表值参数联接到 "类别" 表来使用它们。 在 FROM 子句中将表值参数与 JOIN 一起使用时, 还必须对其进行别名, 如下所示, 表值参数的别名为 "ec":  
 
 ```sql
 UPDATE dbo.Categories  
@@ -80,7 +79,7 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```
 
-此 TRANSACT-SQL 示例演示如何从表值参数以在单个基于集的操作中执行 INSERT 中选择行。
+此 Transact-sql 示例演示如何从表值参数中选择行以在单个基于集的操作中执行插入操作。
 
 ```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
@@ -89,23 +88,23 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 
 ## <a name="limitations-of-table-valued-parameters"></a>表值参数的限制
 
-有表值参数的几个限制：  
+表值参数有几个限制:  
   
 - 不能将表值参数传递给用户定义的函数。  
   
-- 表值参数仅可编制索引以支持 UNIQUE 或 PRIMARY KEY 约束。 SQL Server 不维护表值参数的统计信息。  
+- 表值参数只能索引为支持 UNIQUE 或 PRIMARY KEY 约束。 SQL Server 不维护表值参数的统计信息。  
   
-- 表值参数是在 TRANSACT-SQL 代码中以只读的。 无法更新中的表值参数行的列值并不能插入或删除行。 若要修改传递给存储过程或参数化语句表值参数中的数据，您必须将数据插入到临时表或表变量。  
+- 在 Transact-sql 代码中, 表值参数是只读的。 不能在表值参数的行中更新列值, 也不能插入或删除行。 若要在表值参数中修改传递到存储过程或参数化语句的数据, 必须将数据插入临时表或表变量中。  
   
 - 不能使用 ALTER TABLE 语句来修改表值参数的设计。
 
-- 您可以流式表值参数中的大型对象。  
+- 可以在表值参数中流式传输大型对象。  
   
 ## <a name="configuring-a-table-valued-parameter"></a>配置表值参数
 
-从 Microsoft JDBC Driver 6.0 for SQL Server，使用参数化的语句或参数化存储的过程支持表值参数。 表值参数可以是从 SQLServerDataTable，从结果集填充或从用户提供 ISQLServerDataRecord 接口的实现。 设置已准备的查询的表值参数，必须指定类型名称必须匹配先前创建的服务器上的兼容类型的名称。  
+从用于 SQL Server 的 Microsoft JDBC Driver 6.0 开始, 参数化的语句或参数化的存储过程支持表值参数。 可以从 SQLServerDataTable、从结果集中或从用户提供的 ISQLServerDataRecord 接口实现中填充表值参数。 为已准备好的查询设置表值参数时, 必须指定类型名称, 该名称必须与先前在服务器上创建的兼容类型的名称相匹配。  
   
-以下两个代码片段演示了如何配置使用 SQLServerPreparedStatement 和 SQLServerCallableStatement 以插入数据的表值参数。 此处 sourceTVPObject 可以 SQLServerDataTable 或结果集或 ISQLServerDataRecord 对象。 这些示例假定连接是活动的连接对象。  
+下面两个代码片段演示了如何使用 SQLServerPreparedStatement 和 SQLServerCallableStatement 将表值参数配置为插入数据。 此处的 sourceTVPObject 可以是 SQLServerDataTable、ResultSet 或 ISQLServerDataRecord 对象。 这些示例假定连接是活动的连接对象。  
 
 ```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
@@ -124,11 +123,11 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 请参阅部分**JDBC 驱动程序的表值参数 API**下面有关 Api 可用于设置表值参数的完整列表。  
+> 有关可用于设置表值参数的 Api 的完整列表, 请参阅下面**的 JDBC 驱动程序的表值参数 API**部分。  
   
-## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>将表值参数传递作为 SQLServerDataTable 对象  
+## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>以 SQLServerDataTable 对象的形式传递表值参数  
 
-从 Microsoft JDBC Driver 6.0 for SQL Server，SQLServerDataTable 类表示一个内存中表的关系数据。 此示例演示如何构造使用 SQLServerDataTable 对象的内存中数据的表值参数。 代码首先创建一个 SQLServerDataTable 对象、 定义其架构和使用数据填充表。 然后，代码配置 SQLServerPreparedStatement 将该表的数据作为表值参数传递到 SQL Server。  
+从用于 SQL Server 的 Microsoft JDBC Driver 6.0 开始, SQLServerDataTable 类表示关系数据的内存中表。 此示例演示如何使用 SQLServerDataTable 对象从内存中数据构造表值参数。 代码首先创建一个 SQLServerDataTable 对象, 定义其架构并使用数据填充该表。 然后, 该代码将配置一个将此数据表作为表值参数传递到 SQL Server 的 SQLServerPreparedStatement。  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -153,11 +152,11 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 请参阅部分**JDBC 驱动程序的表值参数 API**下面有关 Api 可用于设置表值参数的完整列表。  
+> 有关可用于设置表值参数的 Api 的完整列表, 请参阅下面**的 JDBC 驱动程序的表值参数 API**部分。  
   
-## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>将表值参数传递作为结果集对象  
+## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>将表值参数作为结果集对象传递  
 
-此示例演示如何将流式传输的数据从一个结果集复制到表值参数行。 代码首先从源表中检索数据创建 SQLServerDataTable 对象，将定义其架构以及使用数据填充表。 然后，代码配置 SQLServerPreparedStatement 将该表的数据作为表值参数传递到 SQL Server。  
+此示例演示如何将数据集的数据行流处理到表值参数。 代码首先从源表中检索数据, 并创建 SQLServerDataTable 对象, 定义其架构并使用数据填充该表。 然后, 该代码将配置一个将此数据表作为表值参数传递到 SQL Server 的 SQLServerPreparedStatement。  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -174,11 +173,11 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 请参阅部分**JDBC 驱动程序的表值参数 API**下面有关 Api 可用于设置表值参数的完整列表。  
+> 有关可用于设置表值参数的 Api 的完整列表, 请参阅下面**的 JDBC 驱动程序的表值参数 API**部分。  
 
-## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>将表值参数传递作为 ISQLServerDataRecord 对象  
+## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>以 ISQLServerDataRecord 对象的形式传递表值参数  
 
-从 Microsoft JDBC Driver 6.0 for SQL Server，新界面 ISQLServerDataRecord 是可用于流式处理数据 （具体取决于如何用户提供它的实现） 使用表值参数。 下面的示例演示如何实现 ISQLServerDataRecord 接口以及如何将其作为表值参数传递。 为简单起见，下面的示例将只是一个具有硬编码值的行传递给表值参数。 理想情况下，用户可以实现此接口行流处理从任何源，例如从文本文件。  
+从用于 SQL Server 的 Microsoft JDBC Driver 6.0 开始, 使用表值参数, 可以使用新的接口 ISQLServerDataRecord 来处理数据 (取决于用户为其提供实现的方式)。 下面的示例演示如何实现 ISQLServerDataRecord 接口, 以及如何将其作为表值参数进行传递。 为简单起见, 下面的示例只向表值参数传递一个包含硬编码值的行。 理想情况下, 用户将实现此接口, 以便从任何源 (例如, 文本文件) 对行进行流式处理。  
 
 ```java
 class MyRecords implements ISQLServerDataRecord  
@@ -230,25 +229,25 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> 请参阅部分**JDBC 驱动程序的表值参数 API**下面有关 Api 可用于设置表值参数的完整列表。
+> 有关可用于设置表值参数的 Api 的完整列表, 请参阅下面**的 JDBC 驱动程序的表值参数 API**部分。
 
 ## <a name="table-valued-parameter-api-for-the-jdbc-driver"></a>JDBC 驱动程序的表值参数 API
 
 ### <a name="sqlservermetadata"></a>SQLServerMetaData
 
-此类表示列的元数据。 它使用 ISQLServerDataRecord 界面中将传递给表值参数列元数据。 此类中的方法是：  
+此类表示列的元数据。 它在 ISQLServerDataRecord 接口中用于将列元数据传递给表值参数。 此类中的方法是:  
 
 | “属性”                                                                                                                                                                             | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 公共 SQLServerMetaData （字符串 columnName、 int sqlType、 int 精度、 int 规模、 布尔 useServerDefault、 布尔 isUniqueKey、 SQLServerSortOrder sortOrder、 int sortOrdinal） | 初始化使用指定的列名称、 sql 类型、 精度、 小数位数和服务器默认 SQLServerMetaData 的新实例。 这种形式的构造函数通过允许您指定的列是否在表值参数、 列和排序列的序号的排序顺序中是唯一支持表值参数。 <br/><br/>useServerDefault-指定此列是否应使用默认服务器值;默认值为 false。<br>isUniqueKey-指示表值参数中的列是唯一的;默认值为 false。<br>sortOrder-指示排序顺序的列;默认值为 SQLServerSortOrder.Unspecified。<br>sortOrdinal-指定序号的列排序;从 0; sortOrdinal 开始默认值为-1。 |
-| 公共 SQLServerMetaData （字符串 columnName，int sqlType）                                                                                                                        | 初始化 SQLServerMetaData 使用列名称和 sql 类型的新实例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| 公共 SQLServerMetaData （字符串 columnName，int sqlType，int 长度）                                                                                                                        | 初始化 SQLServerMetaData （适用于字符串数据） 使用的列名称、 sql 类型和长度的新实例。 使用的长度以区分的大型字符串和字符串长度小于 4000 个字符。 JDBC 驱动程序版本 7.2 中引入。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| 公共 SQLServerMetaData （字符串 columnName，int sqlType、 int 精度，int 规模）                                                                                              | 初始化 SQLServerMetaData 使用列名称、 sql 类型、 精度和小数位数的新实例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Public SQLServerMetaData(SQLServerMetaData sqlServerMetaData)                                                                                                                    | 初始化 SQLServerMetaData 从另一个 SQLServerMetaData 对象的新实例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| public String getColumName()                                                                                                                                                     | 检索的列名称。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| public SQLServerMetaData (String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | 使用指定的列名称、sql 类型、精度、小数位数和服务器默认值初始化 SQLServerMetaData 的新实例。 这种形式的构造函数通过允许您指定列在表值参数中是唯一的、列的排序顺序以及排序列的序号, 来支持表值参数。 <br/><br/>useServerDefault-指定此列是否应使用默认服务器值;默认值为 false。<br>isUniqueKey-指示表值参数中的列是否唯一;默认值为 false。<br>sortOrder-指示列的排序顺序;默认值为 SQLServerSortOrder。<br>sortOrdinal-指定排序列的序号;sortOrdinal 从0开始;默认值为-1。 |
+| public SQLServerMetaData (String columnName, int sqlType)                                                                                                                        | 使用列名称和 sql 类型初始化 SQLServerMetaData 的新实例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| public SQLServerMetaData (String columnName, int sqlType, int length)                                                                                                                        | 使用列名称、sql 类型和长度 (对于字符串数据) 初始化 SQLServerMetaData 的新实例。 长度用于区分字符串长度小于4000个字符的字符串。 在 JDBC 驱动程序的7.2 版中引入。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| public SQLServerMetaData (String columnName, int sqlType, int precision, int scale)                                                                                              | 使用列名称、sql 类型、精度和小数位数初始化 SQLServerMetaData 的新实例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Public SQLServerMetaData(SQLServerMetaData sqlServerMetaData)                                                                                                                    | 从另一个 SQLServerMetaData 对象初始化 SQLServerMetaData 的新实例。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| public String getColumName()                                                                                                                                                     | 检索列名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | public int getSqlType()                                                                                                                                                          | 检索 java sql 类型。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| 公共 int getPrecision()                                                                                                                                                        | 检索传递给列的类型的精度。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| public int getScale()                                                                                                                                                            | 检索传递给列的类型的小数位数。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| public int getPrecision ()                                                                                                                                                        | 检索传递到列的类型的精度。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| public int getScale()                                                                                                                                                            | 检索传递到列的类型的小数位数。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | public SQLServerSortOrder getSortOrder()                                                                                                                                         | 检索排序顺序。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | public int getSortOrdinal()                                                                                                                                                      | 检索排序序号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | public boolean isUniqueKey()                                                                                                                                                     | 返回列是否唯一。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -256,62 +255,62 @@ pStmt.execute();
   
 ### <a name="sqlserversortorder"></a>SQLServerSortOrder
 
-一个枚举值，定义排序顺序。 可能的值为升序、 降序和未指定。
+定义排序顺序的枚举。 可能的值包括升序、降序和未指定。
   
 ### <a name="sqlserverdatatable"></a>SQLServerDataTable
 
-此类表示一个内存中数据表与表值参数一起使用。 此类中的方法是：  
+此类表示要用于表值参数的内存中数据表。 此类中的方法是:  
 
 | “属性”                                                          | 描述                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | 初始化 SQLServerDataTable 的新实例。    |
-| public Iterator<Entry\<Integer, Object[]>> getIterator()      | 检索数据的表的行上的迭代器。 |
-| public void addColumnMetadata(String columnName, int sqlType) | 添加指定的列的元数据。              |
-| public void addColumnMetadata(SQLServerDataColumn column)     | 添加指定的列的元数据。              |
-| public void addRow （对象...值）                          | 将一个数据行添加到数据表。              |
-| public Map\<Integer, SQLServerDataColumn> getColumnMetadata() | 检索此数据的表的列元数据。       |
+| public Iterator<Entry\<Integer, Object[]>> getIterator()      | 检索数据表中的行的迭代器。 |
+| public void addColumnMetadata(String columnName, int sqlType) | 为指定列添加元数据。              |
+| public void addColumnMetadata(SQLServerDataColumn column)     | 为指定列添加元数据。              |
+| public void addRow (对象 .。。分隔                          | 将一行数据添加到数据表。              |
+| public Map\<Integer, SQLServerDataColumn> getColumnMetadata() | 检索此数据表的列元数据。       |
 | public void clear()                                           | 清除此数据表。                              |
 
 ### <a name="sqlserverdatacolumn"></a>SQLServerDataColumn
 
-此类表示 SQLServerDataTable 所代表的内存中数据表格的列。 此类中的方法是：  
+此类表示 SQLServerDataTable 所表示的内存中数据表的列。 此类中的方法是:  
 
 | “属性”                                                       | 描述                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| 公共 SQLServerDataColumn （字符串 columnName，int sqlType） | 初始化 SQLServerDataColumn 具有列名称和类型的新实例。 |
-| public String getColumnName()                              | 检索的列名称。                                                       |
-| public int getColumnType()                                 | 检索的列类型。                                                       |
+| public SQLServerDataColumn (String columnName, int sqlType) | 使用列名称和类型初始化 SQLServerDataColumn 的新实例。 |
+| public String getColumnName()                              | 检索列名。                                                       |
+| public int getColumnType()                                 | 检索列类型。                                                       |
 
 ### <a name="isqlserverdatarecord"></a>ISQLServerDataRecord
 
-此类表示用户可将流数据到表值参数来实现的接口。 在此接口的方法是：  
+此类表示一个接口, 用户可以实现该接口以将数据流式传输到表值参数。 此接口中的方法为:  
   
 | “属性”                                                    | 描述                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| public SQLServerMetaData getColumnMetaData(int column); | 检索给定的列索引的列元数据。                                               |
-| public int getColumnCount();                            | 检索的总列数。                                                                  |
+| public SQLServerMetaData getColumnMetaData(int column); | 检索给定列索引的列元数据。                                               |
+| public int getColumnCount();                            | 检索总列数。                                                                  |
 | public Object[] getRowData();                           | 获取作为对象数组的当前行的数据。                                          |
-| public boolean next();                                  | 移动到下一行。 如果移动成功且否则没有下一个行，false，则返回 True。 |
+| public boolean next();                                  | 移到下一行。 如果移动成功并且有下一行, 则返回 True, 否则返回 false。 |
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
-将以下方法已添加到此类，以支持表值参数传递。  
+已将以下方法添加到此类, 以支持传递表值参数。  
 
 | “属性”                                                                                                    | 描述                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 公共最终 void setStructured （int parameterIndex，字符串 tvpName，SQLServerDataTable tvpDataTable）    | 填充数据表的表值参数。 parameterIndex 是参数索引、 tvpName 是表值参数的名称和 tvpDataTable 是源数据的表对象。                                                                                                          |
-| 公共最终 void setStructured （int parameterIndex，字符串 tvpName，结果集 tvpResultSet）             | 使用表值参数填充从另一个表中检索到的结果集。 parameterIndex 是参数索引、 tvpName 是表值参数的名称和 tvpResultSet 是源结果集对象。                                                                               |
-| 公共最终 void setStructured （int parameterIndex，字符串 tvpName，ISQLServerDataRecord tvpDataRecord） | 填充表值参数与 ISQLServerDataRecord 对象。 ISQLServerDataRecord 用于流式处理数据，并且用户决定如何使用它。 parameterIndex 是参数索引、 tvpName 是表值参数的名称和 tvpDataRecord 是 ISQLServerDataRecord 对象。 |
+| public final void setStructured (int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | 使用数据表填充表值参数。 parameterIndex 是参数索引, tvpName 是表值参数的名称, 而 tvpDataTable 是源数据表对象。                                                                                                          |
+| public final void setStructured (int parameterIndex, String tvpName, ResultSet tvpResultSet)             | 使用从另一个表检索到的结果集填充表值参数。 parameterIndex 是参数索引, tvpName 是表值参数的名称, tvpResultSet 为源结果集对象。                                                                               |
+| public final void setStructured (int parameterIndex, String tvpName, ISQLServerDataRecord tvpDataRecord) | 使用 ISQLServerDataRecord 对象填充表值参数。 ISQLServerDataRecord 用于流式传输数据, 用户决定如何使用它。 parameterIndex 是参数索引, tvpName 是表值参数的名称, 而 tvpDataRecord 是 ISQLServerDataRecord 对象。 |
   
 ### <a name="sqlservercallablestatement"></a>SQLServerCallableStatement
 
-将以下方法已添加到此类，以支持表值参数传递。  
+已将以下方法添加到此类, 以支持传递表值参数。  
   
 | “属性”                                                                                                        | 描述                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 公共最终 void setStructured （字符串 paratemeterName，字符串 tvpName，SQLServerDataTable tvpDataTable）    | 填充表值参数传递给带数据的表的存储过程。 paratemeterName 是参数的名称、 tvpName 是 TVP，该类型的名称和 tvpDataTable 是数据的表对象。                                                                                                                 |
-| 公共最终 void setStructured （字符串 paratemeterName，字符串 tvpName，结果集 tvpResultSet）             | 填充表值参数传递给存储过程与从另一个表中检索到的结果集。 paratemeterName 是参数的名称、 tvpName 是 TVP，该类型的名称和 tvpResultSet 是源结果集对象。                                                                              |
-| 公共最终 void setStructured （字符串 paratemeterName，字符串 tvpName，ISQLServerDataRecord tvpDataRecord） | 填充表值参数传递给存储过程与 ISQLServerDataRecord 对象。 ISQLServerDataRecord 用于流式处理数据，并且用户决定如何使用它。 paratemeterName 是参数的名称、 tvpName 是 TVP，该类型的名称和 tvpDataRecord 是 ISQLServerDataRecord 对象。 |
+| public final void setStructured (String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | 使用数据表填充传递到存储过程的表值参数。 paratemeterName 是参数的名称, tvpName 是 TVP 类型的名称, tvpDataTable 是数据表对象。                                                                                                                 |
+| public final void setStructured (String paratemeterName, String tvpName, ResultSet tvpResultSet)             | 使用从另一个表检索到的结果集来填充传递到存储过程的表值参数。 paratemeterName 是参数的名称, tvpName 是 TVP 类型的名称, tvpResultSet 是源结果集对象。                                                                              |
+| public final void setStructured (String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | 使用 ISQLServerDataRecord 对象填充传递到存储过程的表值参数。 ISQLServerDataRecord 用于流式传输数据, 用户决定如何使用它。 paratemeterName 是参数的名称, tvpName 是 TVP 类型的名称, tvpDataRecord 是 ISQLServerDataRecord 对象。 |
 
 ## <a name="see-also"></a>另请参阅
 

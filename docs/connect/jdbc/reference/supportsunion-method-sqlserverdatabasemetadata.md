@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cfa6c097e57ee9ca8a2eeda26e7fa2857558d428
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b7dd44915a066753e367beb82d88258c3a0d3abf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968560"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>supportsUnion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsUnion()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsUnion 方法由 java.sql.DatabaseMetaData 接口中的 supportsUnion 方法指定。  
+ 此 supportsUnion 方法由 supportsUnion 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

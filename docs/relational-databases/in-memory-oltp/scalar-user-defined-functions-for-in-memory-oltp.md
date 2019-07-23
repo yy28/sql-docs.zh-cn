@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00861c25c03e73f3c5ac2b1f2fe2b94bc0d552d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111757"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>针对内存中 OLTP 的标量用户定义函数
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ END
   
  本机编译标量用户定义函数不支持 STATISTICS XML。 当在启用 STATISTICS XML 的情况下运行引用用户定义函数的查询时，会返回 XML 内容，而不返回用户定义函数部分。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  与本机编译存储过程一样，创建函数时，将检查从本机编译标量用户定义函数引用的对象的权限。 如果模拟的用户没有正确的权限，CREATE FUNCTION 将失败。 如果权限更改导致模拟的用户不再具有正确的权限，用户定义函数的后续执行将失败。  
   
  当在本机编译存储过程中使用本机编译标量用户定义函数时，如果创建外部过程，则将检查执行用户定义函数的权限。 如果外部过程模拟的用户对用户定义函数没有 EXEC 权限，该存储过程的创建将失败。 如果权限更改导致用户不再具有 EXEC 权限，外部过程的执行将失败。  

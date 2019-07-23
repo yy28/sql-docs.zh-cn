@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3319e045a2503767d9227c3064c18583be7d6e82
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5a94926a2876c5cac52560872dc9fc59e50ba6ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072878"
 ---
 # <a name="improve-access-to-trace-data"></a>改进对跟踪数据的访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "51570987"
   
 ### <a name="to-change-the-temp-environment-variable-in-windows-operating-systems"></a>在 Windows 操作系统中更改 TEMP 环境变量  
   
-1.  在 **“开始”** 菜单上，选择 **“控制面板”**，再单击 **“系统”**。  
+1.  在 **“开始”** 菜单上，选择 **“控制面板”** ，再单击 **“系统”** 。  
   
-2.  在 **“系统属性”** 对话框中，单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
+2.  在 **“系统属性”** 对话框中，单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
-3.  向下滚动 **“系统变量”** 列表，选择对应于 **TEMP** 变量的行，并单击 **“编辑”**。  
+3.  向下滚动 **“系统变量”** 列表，选择对应于 **TEMP** 变量的行，并单击 **“编辑”** 。  
   
 4.  在 **“编辑系统变量”** 对话框中，输入要作为 **temp** 目录的驱动器及目录的路径和名称。  
   

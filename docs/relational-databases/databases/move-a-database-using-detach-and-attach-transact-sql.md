@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95d7af5f6b5c0d1b6a0f162d09cb64b954ce5d09
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 54e2ce24f4fd0b0d94344029cd2f56e378e579dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067348"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "53591501"
     > [!IMPORTANT]  
     >  对于生产数据库，请将数据库和事务日志存放在不同的磁盘上。  
   
-     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式： **\\\\**_服务器名称_**\\**_共享名_**\\**_路径_**\\**_文件名_。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
+     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用以下格式： **\\\\** _服务器名称_ **\\** _共享名_ **\\** _路径_ **\\** _文件名_。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
   
 3.  通过执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来附加移动的数据库及其日志（可选）：  
   
@@ -78,7 +77,7 @@ ms.locfileid: "53591501"
     GO  
     ```  
   
-     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”**。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
+     在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的数据库在对象资源管理器中不是立即可见的。 若要查看数据库，请在对象资源管理器中，单击 **“查看”** ，再单击 **“刷新”** 。 在对象资源管理器中展开 **“数据库”** 节点后，新附加的数据库即显示在数据库列表中。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  

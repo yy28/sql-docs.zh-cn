@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d985e2b2638d8b0047f5b4d010d87c8f631af65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1320cf0f6a0b27c1571d63c0432040294e8c68b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897183"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>如何：为函数、触发器和存储过程创建 SQL Server 单元测试
 您可以编写单元测试来评估对任何数据库对象进行的更改。 但是，SQL Server Data Tools 包括从 SQL Server 对象资源管理器中的数据库项目节点为数据库函数、触发器和存储过程创建测试的附加支持。 Transact\-SQL 代码存根可自动为你生成以便进行自定义。  

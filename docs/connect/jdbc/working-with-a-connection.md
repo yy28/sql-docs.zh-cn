@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916087"
 ---
 # <a name="working-with-a-connection"></a>使用连接
 
@@ -94,7 +93,7 @@ String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSe
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-有关更多连接 URL 示例，请参阅[创建连接 URL](../../connect/jdbc/building-the-connection-url.md)。
+有关更多连接 URL 示例, 请参阅[生成连接 url](../../connect/jdbc/building-the-connection-url.md)。
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>创建具有自定义登录超时的连接
 

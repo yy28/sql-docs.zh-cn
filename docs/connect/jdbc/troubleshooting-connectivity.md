@@ -1,5 +1,5 @@
 ---
-title: 连接性疑难解答 |Microsoft Docs
+title: 排查连接问题 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004241"
 ---
 # <a name="troubleshooting-connectivity"></a>连接性疑难解答
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798249"
   
     -   已安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但并没有通过以下方法针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 TCP/IP 作为网络协议进行安装：使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络实用工具，或者使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
-    -   已作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 协议安装了 TCP/IP，但是它并没有在 JDBC 连接 URL 中指定的端口上进行侦听。 默认端口为 1433，但是可以在安装产品时将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为在任意端口上进行侦听。 确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在端口 1433 上进行侦听。 或者，如果端口已更改，则应确保 JDBC 连接 URL 中指定的端口与更改的端口相匹配。 有关 JDBC 连接 Url 的详细信息，请参阅[创建连接 URL](../../connect/jdbc/building-the-connection-url.md)。  
+    -   已作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 协议安装了 TCP/IP，但是它并没有在 JDBC 连接 URL 中指定的端口上进行侦听。 默认端口为 1433，但是可以在安装产品时将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为在任意端口上进行侦听。 确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在端口 1433 上进行侦听。 或者，如果端口已更改，则应确保 JDBC 连接 URL 中指定的端口与更改的端口相匹配。 有关 JDBC 连接 Url 的详细信息, 请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。  
   
     -   JDBC 连接 URL 中指定的计算机地址没有引用在其中安装并启动了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器。  
   

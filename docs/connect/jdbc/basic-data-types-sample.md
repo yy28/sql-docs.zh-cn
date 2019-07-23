@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1fc817ba5964ab1278a329520fc895ec06815baf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d995dc6fb4b58249abd4fc2d3fc879adc66b5b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957390"
 ---
 # <a name="basic-data-types-sample"></a>基本数据类型示例
 
@@ -32,9 +31,9 @@ ms.locfileid: "66770329"
 
 ## <a name="requirements"></a>要求
 
-若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 还将需要访问 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。
+若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 还将需要访问 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库。 有关如何设置类路径的详细信息, 请参阅[使用 JDBC 驱动程序](../../connect/jdbc/using-the-jdbc-driver.md)。
 
-该示例将创建所需的表并插入示例数据中的[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库：
+该示例将创建所需的表, 并在[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库中插入示例数据:
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供要使用的 mssql-jdbc 类库文件，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。

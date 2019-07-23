@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e5f58118458d0591d068cedf8a99f389fe00b8f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 242ad42751fac88a08046346915f298378a66b39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978088"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>getWarnings 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +38,13 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>返回值  
- SQLWarning 对象。  
+ 一个 SQLWarning 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getWarnings 方法由 java.sql.ResultSet 接口中的 getWarnings 方法指定。  
+ 此 getWarnings 方法由 getWarnings 方法在方法中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
