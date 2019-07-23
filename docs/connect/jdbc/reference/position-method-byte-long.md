@@ -1,5 +1,5 @@
 ---
-title: position 方法 (byte，long) |Microsoft Docs
+title: position 方法 (byte, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e6056412f6ab2726112d5286f2f52c83ff6691cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf8cfa3bb6aed74c7689639698715dc24803d46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976472"
 ---
 # <a name="position-method-byte-long"></a>position 方法 (byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long position(byte[] bPattern,
   
  要搜索的模式。  
   
- start   
+ *start*  
   
  要搜索的起始索引。  
   
@@ -52,7 +51,7 @@ public long position(byte[] bPattern,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此位置方法由 java.sql.Blob 接口中的位置方法指定。  
+ 此位置方法由 java .sql 接口中的 position 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [position 方法&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   

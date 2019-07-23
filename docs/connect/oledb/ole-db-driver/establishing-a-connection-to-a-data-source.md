@@ -1,6 +1,6 @@
 ---
 title: 建立与数据源的连接 |Microsoft Docs
-description: 与使用 SQL Server 的 OLE DB 驱动程序的数据源建立连接
+description: 使用 SQL Server 的 OLE DB 驱动程序建立与数据源的连接
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994996"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立与数据源的连接
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  要访问适用于 SQL Server 的 OLE DB 驱动程序，使用者必须先调用 CoCreateInstance 方法来创建数据源对象的实例  。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 OLE DB 驱动程序适用于 SQL Server 的类标识符是 CLSID_MSOLEDBSQL。 此外可以使用符号将解析为 OLE DB 驱动程序用于引用 msoledbsql.h 中使用的 SQL Server 的 MSOLEDBSQL_CLSID。  
+  要访问适用于 SQL Server 的 OLE DB 驱动程序，使用者必须先调用 CoCreateInstance 方法来创建数据源对象的实例  。 每个 OLE DB 访问接口都具有一个唯一的类标识符 (CLSID)。 对于 SQL Server 的 OLE DB 驱动程序, 类标识符为 CLSID_MSOLEDBSQL。 你还可以使用符号 MSOLEDBSQL_CLSID, 该符号将解析为你引用的 MSOLEDBSQL 中使用的 SQL Server 的 OLE DB 驱动程序。  
   
  数据源对象公开了 IDBProperties 接口，使用者使用该接口提供基本的身份验证信息，如服务器名、数据库名、用户 ID 和密码  。 可调用 IDBProperties::SetProperties 方法设置这些属性  。  
   

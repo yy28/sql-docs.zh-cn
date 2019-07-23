@@ -1,5 +1,5 @@
 ---
-title: 获取驱动程序版本 |Microsoft Docs
+title: 正在获取驱动程序版本 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cfe90d0a38cf5e599d82a6208a145daa3a3d1c7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c75f14ca3f24a97240d7430210ab79c70e0bac85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956554"
 ---
 # <a name="getting-the-driver-version"></a>获取驱动程序版本
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66781820"
   
  此外，可以通过在 SQLServerDatabaseMetaData 类上调用 [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) 方法来返回 JDBC 驱动程序名称。 例如，将返回“Microsoft JDBC Driver 6.4 for SQL Server”。  
   
- 下面是输出的从对 SQLServerDatabaseMetaData 类方法的调用示例：  
+ 下面是对 SQLServerDatabaseMetaData 类的方法的调用的输出示例:  
   
  `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   

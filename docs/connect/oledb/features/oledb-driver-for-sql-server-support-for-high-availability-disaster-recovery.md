@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 70d55272e7c72a51c6a76e22238f2669b899ab0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b5172339873ba90b12f65b5334a9014563cd3f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989040"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>适用于 SQL Server 的 OLE DB 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本文讨论*OLE DB 驱动程序适用于 SQL Server*支持[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  本文讨论*OLE DB 驱动程序 SQL Server*支持[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果某一 OLE DB Driver for SQL Server 应用程序连接到进行故障转移的可用性组中的某个数据库，原始连接则将被断开，并且应用程序必须打开一个新的连接才能在故障转移后继续工作。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66780704"
 > 增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于可用性组进行故障转移而可能使连接失败，您应实现连接重试逻辑，重试失败的连接，直至重新连接。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
- 在连接到 SQL Server AlwaysOn 可用性组侦听程序或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes  。 MultiSubnetFailover 可加快 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中所有 AlwaysOn 可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，OLE DB 驱动程序适用于 SQL Server 将重试 TCP 连接。  
+ 在连接到 SQL Server AlwaysOn 可用性组侦听程序或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes  。 MultiSubnetFailover 可加快 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中所有 AlwaysOn 可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移期间, OLE DB 的 SQL Server 驱动程序将重试 TCP 连接。  
   
  MultiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且该 OLE DB Driver for SQL Server 将通过试图连接到所有的 IP 地址来尝试连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库  。 如果为连接指定的是 MultiSubnetFailover=Yes  ，客户端重试 TCP 连接的时间短于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
   
@@ -75,9 +74,9 @@ ms.locfileid: "66780704"
 
 
 ## <a name="ole-db"></a>OLE DB  
-SQL Server 的 OLE DB 驱动程序同时支持**ApplicationIntent**并**MultiSubnetFailover**关键字。   
+SQL Server 的 OLE DB 驱动程序同时支持**ApplicationIntent**和**MultiSubnetFailover**关键字。   
   
-添加了两个 OLE DB 连接字符串关键字以支持[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的 OLE DB 驱动程序适用于 SQL Server:  
+添加了两个 OLE DB 连接字符串关键字, 以[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支持 SQL Server 的 OLE DB 驱动程序中:  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
@@ -92,7 +91,7 @@ SQL Server 的 OLE DB 驱动程序同时支持**ApplicationIntent**并**MultiSub
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-SQL Server 应用程序的 OLE DB 驱动程序可以使用一种方法来指定应用程序意向：  
+SQL Server 应用程序的 OLE DB 驱动程序可以使用其中一种方法来指定应用程序意向:  
   
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** 使用以前配置的属性集来初始化数据源并创建数据源对象。 将应用程序意向指定为访问接口属性或作为扩展属性字符串的一部分。  
@@ -115,7 +114,7 @@ SQL Server 应用程序的 OLE DB 驱动程序可以使用一种方法来指定�
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-SQL Server 应用程序的 OLE DB 驱动程序可以使用以下方法之一设置 MultiSubnetFailover 选项：  
+SQL Server 应用程序的 OLE DB 驱动程序可以使用以下方法之一来设置 MultiSubnetFailover 选项:  
 
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** 使用以前配置的属性集来初始化数据源并创建数据源对象。 将应用程序意向指定为访问接口属性或作为扩展属性字符串的一部分。  
@@ -124,7 +123,7 @@ SQL Server 应用程序的 OLE DB 驱动程序可以使用以下方法之一设�
  IDataInitialize::GetDataSource 使用可包含 MultiSubnetFailover 关键字的输入连接字符串   。  
 
 -   **IDBProperties::SetProperties**  
-若要设置**MultiSubnetFailover**属性值，请调用**idbproperties:: Setproperties**传入**SSPROP_INIT_MULTISUBNETFAILOVER**属性与值**VARIANT_TRUE**或**VARIANT_FALSE**或**DBPROP_INIT_PROVIDERSTRING**具有值，该值包含属性"**MultiSubnetFailover = Yes**"**MultiSubnetFailover = No**"。
+若要设置**MultiSubnetFailover**属性值, 请**调用 IDBProperties:: SetProperties** , 并将**SSPROP_INIT_MULTISUBNETFAILOVER**属性传入值**VARIANT_TRUE**或**VARIANT_FALSE**或**DBPROP_INIT_** 值包含 "**MultiSubnetFailover = Yes**" 或 "**MultiSubnetFailover = No**" 的 PROVIDERSTRING 属性。
 
 #### <a name="example"></a>示例
 

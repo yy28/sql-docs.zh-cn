@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c2addb0ed4dea6114b1abaa5e7474d6de6912f75
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136931"
 ---
 # <a name="change-workload-group-settings"></a>更改工作负荷组设置
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]更改工作负荷组设置。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要更改工作负荷组的设置，请使用：**[SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
+-   **若要更改工作负荷组的设置，请使用：** [SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
   
 ## <a name="before-you-begin"></a>开始之前  
   
@@ -39,7 +38,7 @@ ms.locfileid: "55689810"
   
  允许索引创建操作使用比最初授予的工作区内存多的工作区内存，以便提高性能。 这个特别处理由资源调控器支持，然而，最初授予及任何其他内存授予都受工作负荷组和资源池设置的限制。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  更改工作负荷组设置需要 CONTROL SERVER 权限。  
   
 ##  <a name="ChgWGProp"></a> 使用 SQL Server Management Studio 更改工作负荷组设置  
@@ -47,13 +46,13 @@ ms.locfileid: "55689810"
   
 1.  在对象资源管理器中，依次逐步展开 **“管理”** 节点直至其中包含要修改的工作负荷组的 **“工作负荷组”** 文件夹。  
   
-2.  右键单击要修改的工作负荷组，然后单击“属性”。  
+2.  右键单击要修改的工作负荷组，然后单击“属性”  。  
   
 3.  在 **“资源调控器属性”** 页中，如果工作负荷组所在的行未自动选中，则在 **“资源池的工作负荷组”** 网格内将其选中。  
   
 4.  在行中单击或双击要更改的单元，然后输入新值。  
   
-5.  若要保存更改，请单击 **“确定”**。  
+5.  若要保存更改，请单击 **“确定”** 。  
   
 ##  <a name="ChgWGTSQL"></a> 使用 Transact-SQL 更改工作负荷组设置  
  **使用 Transact-SQL 更改工作负荷组设置**  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982825"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getImportedKeys 方法由 java.sql.DatabaseMetaData 接口中的 getImportedKeys 方法指定。  
+ 此 getImportedKeys 方法由 getImportedKeys 方法在 Java.sql.databasemetadata 接口中指定。  
   
  由 getImportedKeys 方法返回的结果集将包含以下信息：  
   

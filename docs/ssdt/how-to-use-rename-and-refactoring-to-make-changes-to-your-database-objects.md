@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097478"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>如何：使用重命名和重构更改数据库对象
 通过 Transact\-SQL 编辑器中的“重构”上下文菜单，可以重命名对象或将对象移到不同架构，并且在提交更改前预览所有受影响的区域。 也可以使用“重构”菜单完全限定对数据库对象的所有引用，或者扩展你的数据库项目的 `SELECT` 语句中的任何通配符。  

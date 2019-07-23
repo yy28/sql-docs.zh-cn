@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8458961cbd73f712b158d82c31c84372c00cde6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 187a195a831955b65f4af113fb80e5f99308e1a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974444"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>setEnablePrepareOnFirstPreparedStatementCall 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 指定特定的连接实例的行为。 如果值为 false，第一次执行将调用 sp_executesql 并不准备语句，它将调用 sp_prepexec 并实际设置已准备的语句句柄，会发生第二次执行后。 按照执行将调用 sp_execute。 如果该语句仅执行一次，这关闭使 sp_unprepare 已准备的语句上的需要。
+ 指定特定连接实例的行为。 如果值为 false, 则第一次执行将调用 sp_executesql 而不准备语句, 在第二次执行执行后, 它将调用 sp_prepexec 并实际设置预定义的语句句柄。 以下执行将调用 sp_execute。 如果语句只执行一次, 则这就不再需要 sp_unprepare 的预定义语句。
 
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +37,13 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 #### <a name="parameters"></a>Parameters  
  *enablePrepareOnFirstPreparedStatementCall*  
   
- 新值**enablePrepareOnFirstPreparedStatementCall**连接属性。  
+ **EnablePrepareOnFirstPreparedStatementCall**连接属性的新值。  
  
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 此方法是可从 JDBC driver 6.4 及前向。
+ 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: 第 3 课： 使用 dta 命令提示实用工具 |Microsoft Docs
+title: '第3课: 使用 dta 命令提示实用工具 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5a207ebd14880519a20ea504a45e541e6d360175
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 04179ee339f41dde1b9e90d7abc30a00e492f3cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034724"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +50,9 @@ ms.locfileid: "67727593"
 此处提供在 SSMS 中还原数据库的说明：[还原数据库。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > 本教程适用于用户熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务。 
+  > 本教程适用于熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
 
-## <a name="access-dta-command-prompt-utility-help-menu"></a>访问 DTA 命令提示实用工具帮助菜单
+## <a name="access-dta-command-prompt-utility-help-menu"></a>访问 DTA 命令提示实用工具的 "帮助" 菜单
   
   
 1.  在“开始”  菜单中，依次指向“所有程序”  、“附件”  ，再单击“命令提示符”  。  
@@ -66,9 +65,9 @@ ms.locfileid: "67727593"
   
     该命令的 `| more` 部分是可选的。 但是，使用该选项可以逐页查看实用工具的语法帮助。 按 Enter 键可以按行翻阅帮助文本，按空格键可按页翻阅。  
 
-  ![通过 DTA cmd 实用工具使用的帮助](media/dta-tutorials/dta-cmd-help.png)
+  ![结合使用 help with DTA cmd 实用工具](media/dta-tutorials/dta-cmd-help.png)
 
-## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>优化使用 DTA 命令提示实用工具的简单工作负荷  
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>使用 DTA 命令提示实用工具优化简单的工作负荷  
 
 
   
@@ -82,7 +81,7 @@ ms.locfileid: "67727593"
   
     其中 `-S` 指定安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的服务器和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 实例的名称。 `-E` 设置指定要使用可信连接来连接实例。使用 Windows 域帐户连接时可使用该设置。 `-D` 设置指定要优化的数据库， `-if` 指定工作负荷文件， `-s` 指定会话名称， `-of` 指定该工具要将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建议脚本写入其中的文件， `-ox` 指定该工具要将 XML 格式的建议脚本写入其中的文件。 最后三个开关指定如下优化选项： `-fa IDX_IV` 指定数据库引擎优化顾问应该只考虑添加索引（包括聚集和非聚集索引）和索引视图； `-fp NONE` 指定分析时不考虑分区策略； `-fk NONE` 指定数据库引擎优化顾问进行建议时不必保留数据库中的现有物理设计结构。  
 
-  ![使用 DTA 的 CMD](media/dta-tutorials/dta-cmd.png)
+  ![将 CMD 与 DTA 结合使用](media/dta-tutorials/dta-cmd.png)
   
 3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 和 [查看优化报告](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)中执行的方式相同。  
   

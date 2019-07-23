@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f8d0b6013631cf4b6d888f8e96c24dd9cb83146f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046586"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "54130967"
 > [!NOTE]  
 >  某些 Windows 操作系统中的用户帐户控制 (UAC) 可防止对快照共享的管理访问。 因此，必须对快照代理、分发代理和合并代理使用的 Windows 帐户显式授予快照共享权限。 即使 Windows 帐户是管理员组的成员，也必须执行此操作。 有关详细信息，请参阅[保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-|代理|Permissions|  
+|代理|权限|  
 |-----------|-----------------|  
 |快照代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -对快照共享具有读取、写入和修改权限。<br /><br /> <br /><br /> 注意：用于 *连接* 到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。|  
 |日志读取器代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 选择 **sync_type** 选项 *replication support only*、 *initialize with backup*或 *initialize from lsn*时，日志读取器代理必须在执行 **sp_addsubscription**后运行，以便将设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 将 **sync_type** 选项设置为 *Automatic*时，不需要执行任何特殊日志读取器代理操作。|  
@@ -75,15 +74,15 @@ ms.locfileid: "54130967"
 |请求订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<订阅数据库>-\<整数>**|  
 |推送订阅的合并代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
-|请求订阅的分发代理|\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>|  
+|请求订阅的分发代理|\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID> |  
 |非 SQL Server 订阅服务器的推送订阅的分发代理|**\<发布服务器>-\<发布数据库>-\<发布>-\<订阅服务器>-\<整数>**|  
 |队列读取器代理|**[\<分发服务器>].\<整数>**|  
   
- \*对于 Oracle 发布的推送订阅，作业名称为“\<发布服务器>-\<发布服务器>”而不是“\<发布服务器>-\<发布数据库>”。  
+ \*对于 Oracle 发布的推送订阅，作业名称为“\<发布服务器>-\<发布服务器>”  而不是“\<发布服务器>-\<发布数据库>”  。  
   
- \*\*对于 Oracle 发布的请求订阅，作业名称为“\<发布服务器>-\<分发数据库>”而不是“\<发布服务器>-\<发布数据库>”。  
+ \*\*对于 Oracle 发布的请求订阅，作业名称为“\<发布服务器>-\<分发数据库>”  而不是“\<发布服务器>-\<发布数据库>”  。  
   
- 配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理 ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
+ 配置复制时，指定运行代理应使用的帐户。 但是，所有作业步骤都使用“代理  ”的安全上下文运行；因此，复制会为指定的代理帐户在内部执行下列映射：  
   
 -   首先使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](../../../t-sql/statements/create-credential-transact-sql.md) 语句将帐户映射到凭据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据存储 Windows 用户帐户的相关信息。  
   

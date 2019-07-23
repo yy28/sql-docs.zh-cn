@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 3ad87f41f583a7a3c83b30fef39acf53713897c5
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 653d1ee9a9b7f7be922fda223bcd3c000d2d1b0c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683023"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263716"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>向关系图中添加文本批注 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

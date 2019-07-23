@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992514"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>步骤 3：使用 pyodbc 连接到 SQL 的概念验证
 
-此示例中，应考虑仅概念证明。  示例代码简化为清楚起见，而不一定表示 Microsoft 推荐的最佳做法。  
+此示例只应视为概念证明。  为清楚起见, 示例代码已简化, 不一定表示 Microsoft 推荐的最佳做法。  
 
-**运行下面的示例脚本**创建一个名为 test.py，文件并将每个代码段添加意愿。 
+**运行下面的示例脚本** 创建一个名为 test.py 的文件, 并根据需要添加每个代码片段。 
 
 ```
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>步骤 1： 连接  
+## <a name="step-1--connect"></a>步骤 1: 连接  
   
 ```python
 
@@ -46,9 +45,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>步骤 2： 执行查询  
+## <a name="step-2--execute-query"></a>步骤 2: 执行查询  
   
-Cursor.executefunction 可以用于检索针对 SQL 数据库的查询集的结果。 此函数实际上可接受任何查询并返回一个结果集，可以循环访问与使用 cursor.fetchone （）
+Executefunction 可用于从针对 SQL 数据库的查询中检索结果集。 此函数实际上可接受任何查询, 并返回可使用 cursor.fetchone () 循环访问的结果集。
   
   
 ```python
@@ -61,7 +60,7 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>步骤 3： 插入行  
+## <a name="step-3--insert-a-row"></a>步骤 3: 插入行  
   
 此示例展示了如何安全执行 [INSERT](../../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   
@@ -79,4 +78,4 @@ while row:
   `      
   ## <a name="next-steps"></a>后续步骤  
   
-有关详细信息，请参阅[Python 开发人员中心](https://azure.microsoft.com/develop/python/)。
+有关详细信息, 请参阅[Python 开发人员中心](https://azure.microsoft.com/develop/python/)。

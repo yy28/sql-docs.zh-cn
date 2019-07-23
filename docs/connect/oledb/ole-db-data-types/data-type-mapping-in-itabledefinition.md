@@ -18,13 +18,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5dcd4b33121d5459120572b2b31de413106aeeda
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: abe874a50e8534291a67393dfaf3485c96405b02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66775600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015849"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66775600"
 |OLE DB 数据类型|SQL Server<br /><br /> 数据类型|其他信息|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|binary、varbinary、image 或 varbinary(max)    |SQL Server 的 OLE DB 驱动程序会检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于值和版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，OLE DB 驱动程序的 SQL Server 将映射到类型**映像**。<br /><br /> 如果 ulColumnSize 的值小于 binary 数据类型列的最大长度，则适用于 SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 的 rgPropertySets 成员    。 如果 DBPROP_COL_FIXEDLENGTH 为 VARIANT_TRUE 时，SQL Server 的 OLE DB 驱动程序将为该类型映射**二进制**。 如果属性的值为 VARIANT_FALSE，SQL Server 的 OLE DB 驱动程序将为该类型映射**varbinary**。 在这两种情况下，DBCOLUMNDESC 的 ulColumnSize 成员将确定创建的 SQL Server 列的宽度  。|  
+|DBTYPE_BYTES|binary、varbinary、image 或 varbinary(max)    |SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 结构的*ulColumnSize*成员。 根据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的值和版本, SQL Server 的 OLE DB 驱动程序将类型映射到**映像**。<br /><br /> 如果 ulColumnSize 的值小于 binary 数据类型列的最大长度，则适用于 SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 的 rgPropertySets 成员    。 如果 DBPROP_COL_FIXEDLENGTH 为 VARIANT_TRUE, 则 SQL Server 的 OLE DB 驱动程序将该类型映射为**binary**。 如果该属性的值为 VARIANT_FALSE, 则 SQL Server 的 OLE DB 驱动程序将该类型映射为**varbinary**。 在这两种情况下，DBCOLUMNDESC 的 ulColumnSize 成员将确定创建的 SQL Server 列的宽度  。|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
@@ -48,11 +47,11 @@ ms.locfileid: "66775600"
 |DBTYPE_NUMERIC|**numeric**|适用于 SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC 的 bPrecision 和 bScale 成员以确定 numeric 列的精度和小数位数    。|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|char、varchar、text 或 varchar(max)    |SQL Server 的 OLE DB 驱动程序会检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于值和版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例，OLE DB 驱动程序的 SQL Server 将映射到类型**文本**。<br /><br /> 如果 ulColumnSize 的值小于 multibyte 数据类型列的最大长度，则适用于 SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 的 rgPropertySets 成员   。 如果 DBPROP_COL_FIXEDLENGTH 为 VARIANT_TRUE 时，SQL Server 的 OLE DB 驱动程序将为该类型映射**char**。 如果属性的值为 VARIANT_FALSE，SQL Server 的 OLE DB 驱动程序将为该类型映射**varchar**。 在这两种情况下，DBCOLUMNDESC ulColumnSize 成员将确定创建的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列的宽度  。|  
-|DBTYPE_UDT|**UDT**|需要 UDT 列时，ITableDefinition::CreateTable 将在 DBCOLUMNDESC 结构中用到以下信息   ：<br /><br /> *pwSzTypeName*将被忽略。<br /><br /> *rgPropertySets*必须包含**DBPROPSET_SQLSERVERCOLUMN**属性设置在上一部分中所述**DBPROPSET_SQLSERVERCOLUMN**中[使用用户定义类型](../../oledb/features/using-user-defined-types.md).|  
+|DBTYPE_STR|char、varchar、text 或 varchar(max)    |SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 结构的*ulColumnSize*成员。 根据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的值和版本, SQL Server 的 OLE DB 驱动程序将该类型映射到**文本**。<br /><br /> 如果 ulColumnSize 的值小于 multibyte 数据类型列的最大长度，则适用于 SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 的 rgPropertySets 成员   。 如果 DBPROP_COL_FIXEDLENGTH 为 VARIANT_TRUE, 则 SQL Server 的 OLE DB 驱动程序将该类型映射为**char**。 如果该属性的值为 VARIANT_FALSE, 则 SQL Server 的 OLE DB 驱动程序将该类型映射为**varchar**。 在这两种情况下，DBCOLUMNDESC ulColumnSize 成员将确定创建的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列的宽度  。|  
+|DBTYPE_UDT|**UDT**|需要 UDT 列时，ITableDefinition::CreateTable 将在 DBCOLUMNDESC 结构中用到以下信息   ：<br /><br /> 将忽略*pwSzTypeName* 。<br /><br /> *rgPropertySets*必须包括**DBPROPSET_SQLSERVERCOLUMN**属性集, 如[使用用户定义的类型](../../oledb/features/using-user-defined-types.md)中的**DBPROPSET_SQLSERVERCOLUMN**部分所述。|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
-|DBTYPE_WSTR|nchar、nvarchar、ntext 或 nvarchar(max)    |SQL Server 的 OLE DB 驱动程序会检查*ulColumnSize* DBCOLUMNDESC 结构的成员。 基于值，用于 SQL Server 的 OLE DB 驱动程序将该类型映射到**ntext**。<br /><br /> 如果 ulColumnSize 的值小于 Unicode 数据类型列的最大长度，则适用于 SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 的 rgPropertySets 成员   。 如果 DBPROP_COL_FIXEDLENGTH 为 VARIANT_TRUE 时，SQL Server 的 OLE DB 驱动程序将为该类型映射**nchar**。 如果属性的值为 VARIANT_FALSE，SQL Server 的 OLE DB 驱动程序将为该类型映射**nvarchar**。 在这两种情况下，DBCOLUMNDESC ulColumnSize 成员将确定创建的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列的宽度  。|  
+|DBTYPE_WSTR|nchar、nvarchar、ntext 或 nvarchar(max)    |SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 结构的*ulColumnSize*成员。 根据值, SQL Server 的 OLE DB 驱动程序将类型映射为**ntext**。<br /><br /> 如果 ulColumnSize 的值小于 Unicode 数据类型列的最大长度，则适用于 SQL Server 的 OLE DB 驱动程序将检查 DBCOLUMNDESC 的 rgPropertySets 成员   。 如果 DBPROP_COL_FIXEDLENGTH 为 VARIANT_TRUE, 则 SQL Server 的 OLE DB 驱动程序将该类型映射为**nchar**。 如果属性的值为 VARIANT_FALSE, 则 SQL Server 的 OLE DB 驱动程序将该类型映射到**nvarchar**。 在这两种情况下，DBCOLUMNDESC ulColumnSize 成员将确定创建的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列的宽度  。|  
 |DBTYPE_XML|**XML**||  
 
 > [!NOTE]  

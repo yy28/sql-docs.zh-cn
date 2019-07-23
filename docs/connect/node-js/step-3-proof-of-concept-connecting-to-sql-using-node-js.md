@@ -10,23 +10,22 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a462fcb1e8fe91cc2a140716968bd6b6f188ac1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003753"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3：使用 Node.js 连接到 SQL 的概念证明
 
-![下载向下箭头线圈出](../../ssdt/media/download.png)[下载 Node.js SQL 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![向下键-带圆圈的](../../ssdt/media/download.png)[下载 NODE.JS SQL 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-此示例中，应考虑仅概念证明。  示例代码简化为清楚起见，而不一定表示 Microsoft 推荐的最佳做法。 其他示例使用相同的关键功能是可在 Github 上：
+此示例只应视为概念证明。  为清楚起见, 示例代码已简化, 不一定表示 Microsoft 推荐的最佳做法。 Github 上提供了使用相同的重要函数的其他示例:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>步骤 1： 连接  
+## <a name="step-1-connect"></a>步骤 1: 连接  
   
 **新的连接**函数用于连接到 SQL 数据库。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66800495"
 ## <a name="step-2--execute-a-query"></a>步骤 2：执行查询  
   
   
-使用执行所有 SQL 语句**new request （)** 函数。 如果该语句将返回行，如 select 语句可以检索这些使用**request.on （)** 函数。 如果没有任何行，request.on （） 函数将返回空列表。  
+使用**新的 Request ()** 函数执行所有 SQL 语句。 如果语句返回行 (如 select 语句), 则可以使用**请求. on ()** 函数来检索它们。 如果没有任何行, 则 request. on () 函数返回空列表。  
   
   
 ```javascript  
@@ -96,7 +95,7 @@ ms.locfileid: "66800495"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>步骤 3： 插入行  
+## <a name="step-3-insert-a-row"></a>步骤 3: 插入行  
   
 此示例展示了如何安全执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句，并传递用于保护应用程序免遭 [SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值影响的参数。    
   

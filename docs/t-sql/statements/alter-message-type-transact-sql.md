@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 42e41f16ba720b8641d8fdf8f8ce40a386de11d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4f54cc7e37c6def3b0fad29851012ef6e1a2829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071284"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ALTER MESSAGE TYPE message_type_name
 ```  
   
 ## <a name="arguments"></a>参数  
- message_type_name  
+ message_type_name   
  要更改的消息类型的名称。 不能指定服务器、数据库和架构名称。  
   
  VALIDATION  
@@ -71,7 +70,7 @@ ALTER MESSAGE TYPE message_type_name
   
  若要更改消息类型的 AUTHORIZATION，请使用 ALTER AUTHORIZATION 语句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，消息类型的所有者、**db_ddladmin** 或 **db_owner** 固定数据库角色以及 **sysadmin** 固定服务器角色的成员拥有更改消息类型的权限。  
   
  如果 ALTER MESSAGE TYPE 语句指定了一个架构集合，则执行该语句的用户必须对指定的架构集合具有 REFERENCES 权限。  

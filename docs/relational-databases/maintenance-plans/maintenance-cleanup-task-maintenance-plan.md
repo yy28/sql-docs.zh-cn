@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46249b24fcc46980023a8a7b65890af1374ca4b4
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115752"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>“清除维护”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 **“‘清除维护’任务”** 可以删除与维护计划相关的旧文件，包括由维护计划文件和数据库备份文件创建的文本报告。  
   
 > [!NOTE]  
->  “清除维护”任务不会自动删除指定目录的子文件夹中的文件。 此功能减少了使用清除维护任务删除文件的恶意攻击的可能性。 如果要删除一级子文件夹中的文件，必须选择“包括一级子文件夹”。  
+>  “清除维护”任务不会自动删除指定目录的子文件夹中的文件。 此功能减少了使用清除维护任务删除文件的恶意攻击的可能性。 如果要删除一级子文件夹中的文件，必须选择“包括一级子文件夹”  。  
   
 ## <a name="options"></a>选项  
  **连接**  
@@ -43,7 +42,7 @@ ms.locfileid: "57736757"
  删除以前运行的维护计划的文本报告。  
   
  **删除特定文件**  
- 删除在“文件名”框中提供的特定文件。  
+ 删除在“文件名”  框中提供的特定文件。  
   
  **文件名**  
  要删除的文件的路径和名称。  
@@ -58,10 +57,10 @@ ms.locfileid: "57736757"
  提供要删除的文件的文件扩展名。 请勿在扩展名前后添加其他任何字符（例如，使用 BAK 或 TRN）。 
   
  **包括一级子文件夹**  
- 从“文件夹”下的一级子文件夹中删除具有为“文件扩展名”指定的扩展名的文件。  
+ 从“文件夹”  下的一级子文件夹中删除具有为“文件扩展名”  指定的扩展名的文件。  
   
  **在任务运行时根据文件保留时间删除文件**  
- 通过在“删除文件，如果其保留时间超过”框中提供数字和时间单位，指定将要删除的文件所要保留的最短时间。  
+ 通过在“删除文件，如果其保留时间超过”  框中提供数字和时间单位，指定将要删除的文件所要保留的最短时间。  
   
  **删除文件，如果其保留时间超过**  
  通过提供数字和时间单位（天、周、月或年），指定将要删除的文件所要保留的最短时间。 保留时间长于指定时间长度的文件将被删除。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5b60d4190ad25dd57098ef4cd107f1838886a767
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051879"
 ---
 # <a name="live-query-statistics"></a>实时查询统计信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ ms.locfileid: "53368409"
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>查看某查询的实时查询统计信息 
   
-1.  若要查看实时查询执行计划，请在工具菜单上单击“添加实时查询统计信息”图标。  
+1.  若要查看实时查询执行计划，请在工具菜单上单击“添加实时查询统计信息”图标  。  
   
      ![工具栏上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatstoolbar.png "工具栏上的“实时查询统计信息”按钮")  
   
-     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息”。  
+     还可以查看实时查询执行计划，方法是在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中右键单击所选查询，然后单击“包含实时查询统计信息”  。  
   
      ![弹出菜单上的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsmenu.png "弹出菜单上的“实时查询统计信息”按钮")  
   
@@ -55,15 +54,15 @@ ms.locfileid: "53368409"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>查看任何查询的实时查询统计信息 
 
-此外，可以通过右键单击“进程”表或“活动的耗费大量资源的查询”表中的任何查询，从[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)中访问实时执行计划。  
+此外，可以通过右键单击“进程”表或“活动的耗费大量资源的查询”表中的任何查询，从[活动监视器](../../relational-databases/performance-monitor/activity-monitor.md)中访问实时执行计划    。  
   
  ![活动监视器中的“实时查询统计信息”按钮](../../relational-databases/performance/media/livequerystatsactmon.png "活动监视器中的“实时查询统计信息”按钮")  
   
 ## <a name="remarks"></a>Remarks  
  必须启用统计信息配置文件基础结构，实时查询统计信息才能捕获查询进度的相关信息。 开销有可能较大，具体取决于使用的版本。 有关此开销的详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
   
-## <a name="permissions"></a>Permissions  
- 需要数据库级别 `SHOWPLAN` 权限来填充“实时查询统计信息”结果页，需要服务器级别 `VIEW SERVER STATE` 权限来查看实时统计信息，还需要执行查询所需的所有权限。  
+## <a name="permissions"></a>权限  
+ 需要数据库级别 `SHOWPLAN` 权限来填充“实时查询统计信息”结果页，需要服务器级别 `VIEW SERVER STATE` 权限来查看实时统计信息，还需要执行查询所需的所有权限  。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

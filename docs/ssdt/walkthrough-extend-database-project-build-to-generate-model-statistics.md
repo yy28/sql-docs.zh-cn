@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069011"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
 可以创建生成参与者以便在生成数据库项目时执行自定义操作。 在本演练中，您将创建一个名为 ModelStatistics 的生成参与者，该参与者可在生成数据库项目时从 SQL 数据库模型中输出统计信息。 由于此生成参与者在您生成时会使用一些参数，因此需要执行一些额外步骤。  

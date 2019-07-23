@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e981f46deab0973f9a6d8459b4b8578e414c70b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61cd0ce3e23cec94cc1d8fe0dcf0dfd1505437b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977420"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource 接口
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 此接口由实现[SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)。  
+ 此接口由[SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)实现。  
   
  此接口公开以下 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的方法：  
   

@@ -1,6 +1,6 @@
 ---
 title: 以编程方式更改密码 |Microsoft Docs
-description: 使用 SQL Server 的 OLE DB 驱动程序以编程方式更改密码
+description: 使用 SQL Server OLE DB 驱动程序以编程方式更改密码
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989129"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，如果用户的密码过期，则只有管理员能对其进行重置。 开头[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，OLE DB 驱动程序的 SQL Server 支持处理通过 OLE DB 驱动程序，以编程方式和通过更改密码过期**SQL Server 登录名**对话框。  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，如果用户的密码过期，则只有管理员能对其进行重置。 从开始, SQL Server OLE DB 驱动程序支持通过 OLE DB 驱动程序以编程方式处理密码过期, 并通过对**SQL Server 登录**对话框的更改进行。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
   
 > [!NOTE]  
 >  如果可能，请在运行时提示用户输入他们的凭据，并避免用持久化格式存储他们的凭据。 如果必须保留其凭据，应使用 [Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532) 来加密这些凭据。 有关密码使用的详细信息，请参阅[强密码](../../../relational-databases/security/strong-passwords.md)。  
@@ -54,7 +53,7 @@ ms.locfileid: "66777885"
 |18488|用户 "%.*ls" 登录失败。 原因: 该帐户的密码必须更改。|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序  
- SQL Server 的 OLE DB 驱动程序支持密码过期，但用户界面和以编程方式。  
+ SQL Server 的 OLE DB 驱动程序通过用户界面和以编程方式支持密码过期。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 用户界面密码过期  
  适用于 SQL Server 的 OLE DB 驱动程序支持通过更改“SQL Server 登录”对话框来处理密码过期的情况  。 如果将 DBPROP_INIT_PROMPT 的值设置为 DBPROMPT_NOPROMPT，则在密码已过期的情况下初始连接尝试将失败。  
@@ -90,7 +89,7 @@ ms.locfileid: "66777885"
   
  如果更改密码的尝试意外失败，则服务器将返回错误代码 18468。 将从连接尝试返回标准的 OLEDB 错误。  
   
- 有关 DBPROPSET_SQLSERVERDBINIT 属性集的详细信息，请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 有关 DBPROPSET_SQLSERVERDBINIT 属性集的详细信息, 请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
 
   
 ## <a name="see-also"></a>另请参阅  

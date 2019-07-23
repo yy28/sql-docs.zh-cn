@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024988"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52539025"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建表的聚集索引，请使用：**  
   
@@ -73,9 +72,9 @@ ms.locfileid: "52539025"
   
 -   聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。 若要获得有关可能包含行溢出数据的表的信息，请使用 [sys.dm_db_index_physical_stats (Transact-SQL) ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理函数。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对表或视图具有 ALTER 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -84,39 +83,39 @@ ms.locfileid: "52539025"
   
 1.  在“对象资源管理器”中，展开要创建聚集索引的表。  
   
-2.  右键单击“索引”文件夹，指向“新建索引”，然后选择“聚集索引…”。  
+2.  右键单击“索引”文件夹，指向“新建索引”，然后选择“聚集索引…”    。  
   
 3.  在 **“新建索引”** 对话框的 **“常规”** 页中，在 **“索引名称”** 框中输入新索引的名称。  
   
-4.  在“索引键列”下，单击“添加…”。  
+4.  在“索引键列”下，单击“添加…”   。  
   
-5.  在“从表名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框_\__。  
+5.  在“从表名称中选择列”对话框中，选中要添加到聚集索引的表列的复选框  _\__ 。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
-7.  在 **“新建索引”** 对话框中，单击 **“确定”**。  
+7.  在 **“新建索引”** 对话框中，单击 **“确定”** 。  
   
 #### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>使用表设计器创建聚集索引  
   
 1.  在“对象资源管理器”中，展开要使用聚集索引创建表的数据库。  
   
-2.  右键单击“表”文件夹，然后单击“新建表…”。  
+2.  右键单击“表”文件夹，然后单击“新建表…”   。  
   
 3.  按常规方式创建新表。 有关详细信息，请参阅[创建表（数据库引擎）](../../relational-databases/tables/create-tables-database-engine.md)。  
   
-4.  右键单击上面创建的新表，然后单击“设计”。  
+4.  右键单击上面创建的新表，然后单击“设计”  。  
   
-5.  在“表设计器”菜单上，单击“索引/键”。  
+5.  在“表设计器”  菜单上，单击“索引/键”  。  
   
-6.  在“索引/键”对话框中，单击“添加”。  
+6.  在“索引/键”  对话框中，单击“添加”  。  
   
-7.  从“选定的主/唯一键或索引”文本框中选择新索引。  
+7.  从“选定的主/唯一键或索引”  文本框中选择新索引。  
   
-8.  在网格中，选择“创建为聚集”，然后从该属性右侧的下拉列表中选择“是”。  
+8.  在网格中，选择“创建为聚集”  ，然后从该属性右侧的下拉列表中选择“是”  。  
   
-9. 单击 **“关闭”**。  
+9. 单击 **“关闭”** 。  
   
-10. 在“文件”菜单上，单击“保存 _table\_name_”。  
+10. 在“文件”  菜单上，单击“保存 _table\_name_”  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -124,9 +123,9 @@ ms.locfileid: "52539025"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

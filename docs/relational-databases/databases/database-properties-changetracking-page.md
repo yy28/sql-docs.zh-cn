@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd6dc5a98da7bf06f4bd24bd045fcc76d880e93d
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099634"
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,19 +35,19 @@ ms.locfileid: "51350006"
  还可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)来配置更改跟踪。  
   
  **保持期**  
- 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”的值为 True 时，才会删除数据。  
+ 指定在数据库中保留更改跟踪信息的最短期限。 只有当“自动清除”  的值为 True  时，才会删除数据。  
   
  默认值为 2。  
   
  **保持期单位**  
- 指定“保持期”值的单位。 可以选择 **“天”**、 **“小时”** 或 **“分钟”**。 默认值为 **“天”**。  
+ 指定“保持期”值的单位。 可以选择 **“天”** 、 **“小时”** 或 **“分钟”** 。 默认值为 **“天”** 。  
   
  最短保持期为 1 分钟。 不存在最长保持期。  
   
  **自动清除**  
  指示是否在经过指定的保持期后自动删除更改跟踪信息。  
   
- 启用“自动清除”会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
+ 启用“自动清除”  会将任何先前自定义的保持期重置为默认保持期（即 2 天）。  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   

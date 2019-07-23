@@ -1,5 +1,5 @@
 ---
-title: supportsConvert 方法 （int，int） |Microsoft Docs
+title: supportsConvert 方法 (int, int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd517154b1390ae7c4ba7e4c13ce030df926958c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae22b0f4149536977dd3ee7c9cc21758e7dcc980
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969600"
 ---
 # <a name="supportsconvert-method-int-int"></a>supportsConvert 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +45,13 @@ public boolean supportsConvert(int fromType,
  要转换到的 JDBC 类型。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsConvert 方法由 java.sql.DatabaseMetaData 接口中的 supportsConvert 方法指定。  
+ 此 supportsConvert 方法由 supportsConvert 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [supportsConvert 方法 (SQLServerDatabaseMetaData)](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

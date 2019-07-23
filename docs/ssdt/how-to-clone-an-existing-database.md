@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017625"
 ---
 # <a name="how-to-clone-an-existing-database"></a>如何：克隆现有数据库
 此任务将使用您在以前的过程中学习的某些步骤来创建新数据库并将现有数据移植到其中。 此外，它还使用[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中讨论的步骤来同步源和项目数据库的架构。  

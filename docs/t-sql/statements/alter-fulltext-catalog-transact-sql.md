@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b79d00b02f06395a083ee93a2916a7d3aa5f0233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065592"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ALTER FULLTEXT CATALOG catalog_name
 ```  
   
 ## <a name="arguments"></a>参数  
- catalog_name  
+ catalog_name   
  指定要修改的目录的名称。 如果不存在具有指定名称的目录，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误，并且不执行 ALTER 操作。  
   
  REBUILD  
@@ -58,12 +57,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  指定要更改的全文索引和查询的目录是区分重音的，还是不区分重音的。  
   
- 若要确定全文目录当前的区分重音属性的设置，请对 catalog_name 使用具有 accentsensitivity 属性值的 FULLTEXTCATALOGPROPERTY 函数。 如果函数返回“1”，则全文目录是区分重音的；如果函数返回“0”，则目录是不区分重音的。  
+ 若要确定全文目录当前的区分重音属性的设置，请对 catalog_name 使用具有 accentsensitivity 属性值的 FULLTEXTCATALOGPROPERTY 函数   。 如果函数返回“1”，则全文目录是区分重音的；如果函数返回“0”，则目录是不区分重音的。  
   
  目录和数据库的默认重音区分设置是相同的。  
   
  REORGANIZE  
- 告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行“主合并”，以将在索引进程中创建的各个较小的索引合并成一个大型索引。 合并全文索引碎片可以提高性能，并释放磁盘和内存资源。 如果全文目录频繁发生更改，则请定期使用该命令重新组织全文目录。  
+ 告知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行“主合并”，以将在索引进程中创建的各个较小的索引合并成一个大型索引  。 合并全文索引碎片可以提高性能，并释放磁盘和内存资源。 如果全文目录频繁发生更改，则请定期使用该命令重新组织全文目录。  
   
  REORGANIZE 还可以优化内部索引和目录结构。  
   
@@ -72,8 +71,8 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  指定此目录为默认目录。 如果创建全文索引时没有指定目录，则将使用默认目录。 如果存在默认全文目录，则以 AS DEFAULT 设置该目录将覆盖现有默认设置。  
   
-## <a name="permissions"></a>Permissions  
- 用户必须对全文目录具有 ALTER 权限，或者是 db_owner、db_ddladmin 固定数据库角色或 sysadmin 固定服务器角色的成员。  
+## <a name="permissions"></a>权限  
+ 用户必须对全文目录具有 ALTER 权限，或者是 db_owner、db_ddladmin 固定数据库角色或 sysadmin 固定服务器角色的成员   。  
   
 > [!NOTE]  
 >  若要使用 ALTER FULLTEXT CATALOG AS DEFAULT，用户必须对全文目录具有 ALTER 权限，对数据库具有 CREATE FULLTEXT CATALOG 权限。  

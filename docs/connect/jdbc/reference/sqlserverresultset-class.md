@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71513f5e8006adffdb46b249f6358030d11b95a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e0a2185037f54aa7ed975667c0bdd5fb921c845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970611"
 ---
 # <a name="sqlserverresultset-class"></a>SQLServerResultSet 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final class SQLServerResultSet
   
  SQLServerResultSet 类提供了很多方法，便于用户使用任何本机 Java 数据类型和很多 Java 对象类型来更新结果集。  
   
- 此类支持取消包装 SQLServerResultSet 类、ISQLServerResultSet 接口和 java.sql.ResultSet 接口。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 此类支持取消包装 SQLServerResultSet 类、ISQLServerResultSet 接口和 java.sql.ResultSet 接口。 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

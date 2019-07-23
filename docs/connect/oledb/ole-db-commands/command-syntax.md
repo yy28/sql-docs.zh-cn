@@ -15,20 +15,19 @@ helpviewer_keywords:
 - stored procedures [OLE DB], command syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: ac3ea02fbdf4a94f7f524022a1808410ca1dfd61
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016120"
 ---
 # <a name="command-syntax"></a>命令语法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序可以识别由 DBGUID_SQL 宏指定的命令语法。 对于 OLE DB 驱动程序适用于 SQL Server，说明符指示 ODBC SQL、 ISO、 组合和[!INCLUDE[tsql](../../../includes/tsql-md.md)]是有效的语法。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：  
+  SQL Server 的 OLE DB 驱动程序识别 DBGUID_SQL 宏指定的命令语法。 对于 SQL Server 的 OLE DB 驱动程序, 说明符指示 ODBC SQL、ISO 和[!INCLUDE[tsql](../../../includes/tsql-md.md)]的综合是有效的语法。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

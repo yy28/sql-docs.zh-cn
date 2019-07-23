@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d923201600adcf0e1bb4026e3feee28dea7e97
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050807"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 架构权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,13 +42,13 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可授予架构的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON SCHEMA :: schema_name  
- 指定将对其授予权限的架构。 需要使用作用域限定符 ::。  
+ ON SCHEMA :: schema_name    
+ 指定将对其授予权限的架构。 需要使用作用域限定符 ::  。  
   
- database_principal  
+ database_principal   
  指定要向其授予权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -64,7 +63,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
-AS granting_principal  
+AS granting_principal   
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -111,12 +110,12 @@ AS granting_principal
   
  有关详细信息，请参阅 Microsoft 知识库中编号为 914847 的文章。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  如果使用 AS 选项，还必须满足以下附加要求：  
   
-|AS granting_principal|所需的其他权限|  
+|AS granting_principal |所需的其他权限|  
 |------------------------------|------------------------------------|  
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84815176ca9b32614e851800a59ea2951010ce4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897313"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>如何：将 Visual Studio 2010 数据库项目转换为 SQL Server 数据库项目并重新以不同平台为目标
 在 SQL Server Data Tools (SSDT) 中，可以将在 Visual Studio 2010 中创建的现有 SQL Server 数据库、CLR 和数据层应用程序项目转换为新的 SQL Server 数据库项目。 通过这样做，你可以利用 SSDT 提供的新的数据库开发体验（例如更新的 Transact\-SQL 编辑体验），并且能够通过代码验证将项目重新针对 Microsoft SQL Server 2012 和 SQL Azure 进行设计。 该转换过程转换在 SSDT 中具有等效类型的对象（表、视图、存储过程、属性文件或脚本），包括其权限和 DAC 策略文件。 无法转换的项目在转换日志报告中突出显示。  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e103a29dacea48c42f7d6602f8e8fcb924774ddf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974829"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +43,9 @@ public void setCatalog(java.lang.String catalog)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setCatalog 方法由 java.sql.Connection 接口中的 setCatalog 方法指定。  
+ 此 setCatalog 方法由 setCatalog 方法在 sql 连接接口中指定。  
   
- *目录*转义参数[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]自动。 使用此方法可为 Connection 对象设置目录属性。 无法通过任何其他方法隐式设置该属性。  
+ *目录*参数由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]自动转义。 使用此方法可为 Connection 对象设置目录属性。 无法通过任何其他方法隐式设置该属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

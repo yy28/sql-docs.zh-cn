@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b627fb357fba635d6aaa74ac4d1cd1c8a2d2295
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000447"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,16 +33,16 @@ ms.locfileid: "56042709"
 16 字节 GUID。
   
 ## <a name="remarks"></a>Remarks  
-uniqueidentifier 数据类型的列或局部变量可通过以下方式初始化为一个值：
+uniqueidentifier 数据类型的列或局部变量可通过以下方式初始化为一个值  ：
 -   通过使用 [NEWID](../../t-sql/functions/newid-transact-sql.md) 或 [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 函数。    
--   通过从 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 形式的字符串常量进行转换，其中，每个 x 都是 0-9 或 a-f 范围内的十六进制数字。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 为有效的 uniqueidentifier 值。  
+-   通过从 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 形式的字符串常量进行转换，其中，每个 x 都是 0-9 或 a-f 范围内的十六进制数字       。 例如，6F9619FF-8B86-D011-B42D-00C04FC964FF 为有效的 uniqueidentifier 值  。  
   
-比较运算符可与 uniqueidentifier 值一起使用。 不过，排序不是通过比较两个值的位模式来实现的。 可针对 uniqueidentifier 值执行的运算只有比较运算（=、<>、\<、>、\<=、>=）以及检查是否为 NULL（IS NULL 和 IS NOT NULL）。 不能使用其他算术运算符。 除 IDENTITY 之外的所有列约束和属性均可对 uniqueidentifier 数据类型使用。
+比较运算符可与 uniqueidentifier 值一起使用  。 不过，排序不是通过比较两个值的位模式来实现的。 可针对 uniqueidentifier 值执行的运算只有比较运算（=、<>、\<、>、\<=、>=）以及检查是否为 NULL（IS NULL 和 IS NOT NULL）  。 不能使用其他算术运算符。 除 IDENTITY 之外的所有列约束和属性均可对 uniqueidentifier 数据类型使用  。
   
-具有更新订阅的合并复制和事务复制使用 uniqueidentifier 列来确保在表的多个副本中唯一地标识行。
+具有更新订阅的合并复制和事务复制使用 uniqueidentifier 列来确保在表的多个副本中唯一地标识行  。
   
 ## <a name="converting-uniqueidentifier-data"></a>转换 uniqueidentifier 数据  
-出于从字符表达式转换的目的将 uniqueidentifier 类型视为字符类型，因此在转换到字符类型时要遵循截断规则。 也即，如果将字符表达式转换为不同大小的字符数据类型，则对于新数据类型而言过长的值将被截断。 请参阅“示例”部分。
+出于从字符表达式转换的目的将 uniqueidentifier 类型视为字符类型，因此在转换到字符类型时要遵循截断规则  。 也即，如果将字符表达式转换为不同大小的字符数据类型，则对于新数据类型而言过长的值将被截断。 请参阅“示例”部分。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限
 
@@ -59,7 +58,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-以下示例演示在值过长而无法转换数据类型时如何截断数据。 因为 uniqueidentifier 类型限制为 36 个字符，所以，将截断超过该长度的字符。
+以下示例演示在值过长而无法转换数据类型时如何截断数据。 因为 uniqueidentifier 类型限制为 36 个字符，所以，将截断超过该长度的字符  。
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  

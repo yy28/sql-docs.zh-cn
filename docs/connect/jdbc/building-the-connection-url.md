@@ -1,5 +1,5 @@
 ---
-title: 创建连接 URL |Microsoft Docs
+title: 生成连接 URL |Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957375"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66770270"
 -   property（可选）是一个或多个选项连接属性  。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。 可指定该列表中的任何属性。 属性只能用分号（“;”）分隔，且不允许重复。  
   
 > [!CAUTION]  
->  出于安全考虑，应避免根据用户输入的内容创建连接 URL。 只应在 URL 中指定服务器名称和驱动程序。 对于用户名和密码值，请使用连接属性集。 有关 JDBC 应用程序中安全性的详细信息，请参阅[保护 JDBC 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
+>  出于安全考虑，应避免根据用户输入的内容创建连接 URL。 只应在 URL 中指定服务器名称和驱动程序。 对于用户名和密码值，请使用连接属性集。 有关 JDBC 应用程序中安全性的详细信息, 请参阅[保护 Jdbc 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)。  
   
 ## <a name="connection-examples"></a>连接实例  
  使用用户名和密码连接到本地计算机上的默认数据库：  
@@ -99,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<安装目录  >\sqljdbc_\<版本  >\\<语言  >\auth\  
   
- 有关受支持的任何操作系统[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)中新增功能的说明[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]的允许连接到应用程序使用和类型 4 Kerberos 集成身份验证的数据库。  
+ 对于支持[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]的任何操作系统, 请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) , 以获取中[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]添加的功能的说明, 该功能允许应用程序使用集成的连接到数据库类型 4 Kerberos 的身份验证。  
   
 > [!NOTE]  
 >  如果您运行 32 位的 Java 虚拟机 (JVM)，则使用 x86 文件夹中的 sqljdbc_auth.dll 文件，即使操作系统是 x64 版本也不例外。 如果您在 x64 处理器上运行 64 位 JVM，则使用 x64 文件夹中的 sqljdbc_auth.dll 文件。  

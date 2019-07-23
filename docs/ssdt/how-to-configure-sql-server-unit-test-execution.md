@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911839"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>如何：配置 SQL Server 单元测试执行
 通过配置测试项目，可指定若干控制 SQL Server 单元测试的运行方式方面的设置。 这些配置设置存储在测试项目的 app.config 文件中。 如果您直接编辑此文件，则新值将出现在“测试配置”对话框中。  

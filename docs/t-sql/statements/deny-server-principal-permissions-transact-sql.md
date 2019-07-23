@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984496"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>拒绝服务器主体权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,40 +56,40 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- LOGIN ::SQL_Server_login  
- 指定要对其拒绝权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 需要使用作用域限定符 (::)。  
+ LOGIN ::  SQL_Server_login   
+ 指定要对其拒绝权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 需要使用作用域限定符 (::)  。  
   
- SERVER ROLE :: server_role  
- 指定要拒绝权限的服务器角色。 需要使用作用域限定符 (::)。  
+ SERVER ROLE :: server_role    
+ 指定要拒绝权限的服务器角色。 需要使用作用域限定符 (::)  。  
   
  TO \<server_principal>  
  指定要授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或服务器角色。  
   
- TO SQL_Server_login  
+ TO SQL_Server_login   
  指定要拒绝权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login  
+ SQL_Server_login   
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_Windows_login  
+ SQL_Server_login_from_Windows_login   
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_certificate  
+ SQL_Server_login_from_certificate   
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_AsymKey  
+ SQL_Server_login_from_AsymKey   
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- server_role  
+ server_role   
  指定服务器角色的名称。  
   
  CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
- AS SQL_Server_login  
+ AS SQL_Server_login   
  指定执行此查询的主体要从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其拒绝该权限的权限。  
   
 ## <a name="remarks"></a>Remarks  
@@ -109,7 +108,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  对于登录名，要求具有登录名的 CONTROL 权限或服务器上的 ALTER ANY LOGIN 权限。  
   
  对于服务器角色，要求具有服务器角色的 CONTROL 权限或服务器上的 ALTER ANY SERVER ROLE 权限。  

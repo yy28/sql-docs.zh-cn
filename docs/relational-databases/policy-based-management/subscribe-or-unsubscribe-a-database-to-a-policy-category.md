@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10691cf1bfe8802612324a11927c661f7ffce81
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021548"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51512443"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **建立数据库对某个策略类别的订阅或取消数据库对该类别的订阅，使用：**  
   
@@ -38,9 +37,9 @@ ms.locfileid: "51512443"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -51,7 +50,7 @@ ms.locfileid: "51512443"
   
 2.  单击加号以展开 **“数据库”** 文件夹。  
   
-3.  右键单击要管理类别订阅的数据库，指向“策略”，然后选择“类别”  
+3.  右键单击要管理类别订阅的数据库，指向“策略”  ，然后选择“类别”   
   
      在 **“类别”** 对话框中提供了以下选项：  
   
@@ -76,9 +75,9 @@ ms.locfileid: "51512443"
      **历史记录**  
      单击“查看历史记录”超链接可打开日志文件查看器，从而可以查看策略历史记录。  
   
-4.  若要订阅某个基于策略的管理类别，请选中“已订阅”列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
+4.  若要订阅某个基于策略的管理类别，请选中“已订阅”  列下该类别的复选框。 若要从类别中取消订阅，请清除该复选框。  
   
-5.  完成后，单击 **“确定”**。  
+5.  完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -86,9 +85,9 @@ ms.locfileid: "51512443"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -103,9 +102,9 @@ ms.locfileid: "51512443"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

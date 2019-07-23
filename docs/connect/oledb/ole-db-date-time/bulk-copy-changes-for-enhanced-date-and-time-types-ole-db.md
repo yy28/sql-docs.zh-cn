@@ -12,20 +12,19 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 417bf44993ffc850da03d090e36c29cae472c104
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015831"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>增强的日期和时间类型的大容量复制更改（OLE DB）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本指南介绍了日期/时间增强功能，以支持适用于 SQL Server 的 OLE DB 驱动程序中的大容量复制功能。  
+  本文介绍了在 SQL Server OLE DB 驱动程序中支持大容量复制功能的日期/时间增强功能。  
   
 ## <a name="format-files"></a>格式化文件  
  在以交互方式生成格式化文件时，下表描述用于指定日期/时间类型和相应的宿主文件数据类型名称的输入。  
@@ -65,7 +64,7 @@ ms.locfileid: "66769544"
 ```  
   
 ## <a name="character-data-files"></a>字符数据文件  
- 在字符数据文件中，日期和时间值表示的"数据格式： 字符串和文字"部分中所述[OLE DB 日期和时间改进的数据类型支持](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)用于 OLE DB。  
+ 在字符数据文件中, 日期和时间值按数据类型支持的 "数据格式: 字符串和文字" 一节中所述的方式表示 OLE DB 的[OLE DB 日期和时间改进](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
  在本机数据文件中，四个新类型的日期和时间值表示为其 TDS 表示形式且小数位数为 7 位（因为这是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的最大小数位数并且 bcp 数据文件不存储这些列的小数位数）。 对于现有 datetime 和 smalldatetime 类型或其表格格式数据流 (TDS) 表示形式的存储没有变化   。  
   
@@ -81,10 +80,10 @@ ms.locfileid: "66769544"
 |datetimeoffset|11|  
  
   
-## <a name="bcp-types-in-msoledbsqlh"></a>Msoledbsql.h 中的 BCP 类型  
- Msoledbsql.h 中定义以下类型。 这些类型通过了*eUserDataType* ibcpsession:: Bcpcolfmt OLE DB 中的参数。  
+## <a name="bcp-types-in-msoledbsqlh"></a>Msoledbsql 中的 BCP 类型  
+ 以下类型是在 msoledbsql 中定义的。 这些类型在 OLE DB 中通过 IBCPSession:: BCPColFmt 的*eUserDataType*参数进行传递。  
   
-|文件存储类型|宿主文件数据类型|键入用于 ibcpsession:: Bcpcolfmt msoledbsql.h|ReplTest1|  
+|文件存储类型|宿主文件数据类型|键入 msoledbsql 以用于 IBCPSession:: BCPColFmt|ReplTest1|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
@@ -96,7 +95,7 @@ ms.locfileid: "66769544"
 ## <a name="bcp-data-type-conversions"></a>BCP 数据类型转换  
  下表提供转换信息。  
   
- **OLE DB 说明** 以下转换由 IBCPSession 执行。 IRowsetFastLoad 使用 OLE DB 转换中定义[转换到服务器从客户端执行](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)。 请注意，日期时间值将舍入为 1 秒的 1/300，smalldatetime 值在执行下述客户端转换后将秒设置为零。 日期时间舍入将传播至小时和分钟，而非日期。  
+ **OLE DB 说明** 以下转换由 IBCPSession 执行。 IRowsetFastLoad 使用[从客户端到服务器执行的转换](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)中定义的 OLE DB 转换。 请注意，日期时间值将舍入为 1 秒的 1/300，smalldatetime 值在执行下述客户端转换后将秒设置为零。 日期时间舍入将传播至小时和分钟，而非日期。  
   
 |转换后 -><br /><br /> From|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
@@ -116,17 +115,17 @@ ms.locfileid: "66769544"
 |符号|含义|  
 |------------|-------------|  
 |-|不支持任何转换。<br />|  
-|1|如果提供的数据不是有效的则发出错误。 对于 datetimeoffset 值，在转换为 UTC 后时间部分必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间。 因此，在转换为 UTC 后，客户端必须检查时间部分是否处于支持的范围内。|  
+|1|如果提供的数据无效, 则会发送错误。 对于 datetimeoffset 值，在转换为 UTC 后时间部分必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间。 因此，在转换为 UTC 后，客户端必须检查时间部分是否处于支持的范围内。|  
 |2|忽略时间部分。|  
-|3|如果发生具有数据丢失的截断，则会发出错误。 对于 datetime2，秒的小数部分位数（小数位数）是由目标列的大小确定（以下表为依据）。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **暗指的小数位数 0** 8<br /><br /> **暗指的小数位数 1..9** 1..9<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **暗指的小数位数 0：** 19<br /><br /> **暗指的小数位数 1..9：** 21..29<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **暗指的小数位数 0：** 26<br /><br /> **暗指的小数位数 1..9：** 28..36|  
+|3|如果发生具有数据丢失的截断，则会发出错误。 对于 datetime2，秒的小数部分位数（小数位数）是由目标列的大小确定（以下表为依据）。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> **键入:** DBTIME2<br /><br /> **暗指的小数位数 0** 8<br /><br /> **暗指的小数位数 1..9** 1..9<br /><br /> <br /><br /> **键入:** DBTIMESTAMP<br /><br /> **暗指的小数位数 0：** 19<br /><br /> **暗指的小数位数 1..9：** 21..29<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **暗指的小数位数 0：** 26<br /><br /> **暗指的小数位数 1..9：** 28..36|  
 |4|忽略日期部分。|  
 |5|时区设置为 UTC（例如 00:00）。|  
 |6|时间设置为零。|  
 |7|日期设置为 1900-01-01。|  
 |8|忽略时区偏移量。|  
-|9|根据遇到的第一个标点符号以及出现的剩余部分，该字符串将被分析和转换为 date、datetime、datetimeoffset 或 time 值。 然后，根据本文末尾的表中针对此过程发现的源类型的规则，此字符串将转换为目标类型。 如果没有错误，无法分析提供的数据，或如果任何组成部分超出允许的范围，或不存在从文字类型转换为目标类型，则发出错误。 对于 datetime 和 smalldatetime 参数，如果年份超出这些类型支持，则发出错误。<br /><br /> 对于 datetimeoffset，在转换为 UTC 后该值必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间，因此在转换为 UTC 后，客户端必须确认时间部分处于支持的范围内。 如果值不受支持的 UTC 范围内，则发出错误。|  
-|10|对于客户端与服务器的转换，如果发生截断且丢失数据则发出错误。 如果值处于服务器使用的 UTC 范围可表示的范围外，也会发生此错误。 如果在服务器到客户端转换时发生秒或秒的小数部分截断，则只会显示警告。|  
-|11|对于客户端与服务器的转换，如果发生截断且丢失数据则发出错误。|
+|9|根据遇到的第一个标点符号以及出现的剩余部分，该字符串将被分析和转换为 date、datetime、datetimeoffset 或 time 值。 然后，根据本文末尾的表中针对此过程发现的源类型的规则，此字符串将转换为目标类型。 如果无法分析所提供的数据, 或者任何组件部分超出了允许的范围, 或者没有从文本类型到目标类型的转换, 则会发出错误。 对于 datetime 和 smalldatetime 参数, 如果年份在这些类型支持的范围之外, 则会发送错误。<br /><br /> 对于 datetimeoffset，在转换为 UTC 后该值必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间，因此在转换为 UTC 后，客户端必须确认时间部分处于支持的范围内。 如果值不在支持的 UTC 范围内, 则会发送错误。|  
+|10|对于客户端到服务器的转换, 如果在发生数据丢失的情况下截断, 则会发出错误。 如果值处于服务器使用的 UTC 范围可表示的范围外，也会发生此错误。 如果在服务器到客户端转换时发生秒或秒的小数部分截断，则只会显示警告。|  
+|11|对于客户端到服务器的转换, 如果在发生数据丢失的情况下截断, 则会发出错误。|
 |12|秒设置为零，秒的小数部分被放弃。 可能没有截断错误。|  
 |N/A|现有 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更早版本的行为将保持。|  
   

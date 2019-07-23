@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051297"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 数据类型方法的使用准则
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-本主题介绍 xml 数据类型方法的使用指南。
+本主题介绍 xml 数据类型方法的使用指南  。
 
 ## <a name="the-print-statement"></a>PRINT 语句
 
-xml 数据类型方法不能用于 PRINT 语句，如下面的示例所示。 xml 数据类型方法视为子查询来处理，而 PRINT 语句中不允许使用子查询。 因此，下面的示例将返回一个错误：
+xml 数据类型方法不能用于 PRINT 语句，如下面的示例所示  。 xml 数据类型方法视为子查询来处理，而 PRINT 语句中不允许使用子查询  。 因此，下面的示例将返回一个错误：
 
 ```sql
 DECLARE @x xml
@@ -38,7 +37,7 @@ SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
 
-一种解决方案是先将 value() 方法的结果分配给一个 xml 类型的变量，然后在查询中指定该变量。
+一种解决方案是先将 value()  方法的结果分配给一个 xml  类型的变量，然后在查询中指定该变量。
 
 ```sql
 DECLARE @x xml
@@ -50,11 +49,11 @@ PRINT @c
 
 ## <a name="the-group-by-clause"></a>GROUP BY 子句
 
-xml 数据类型方法在内部视为子查询来处理。 因为 GROUP BY 需要一个标量并且不允许使用聚合和子查询，所以在 GROUP BY 子句中不能指定 xml 数据类型方法。 另一种解决方案是调用用户定义函数，然后在其内部使用 XML 方法。
+xml  数据类型方法在内部视为子查询来处理。 因为 GROUP BY 需要一个标量并且不允许使用聚合和子查询，所以在 GROUP BY 子句中不能指定 xml  数据类型方法。 另一种解决方案是调用用户定义函数，然后在其内部使用 XML 方法。
 
 ## <a name="reporting-errors"></a>报告错误
 
-报告错误时，xml 数据类型方法会引发一个如下格式的错误：
+报告错误时，xml  数据类型方法会引发一个如下格式的错误：
 
 ```
 Msg errorNumber, Level levelNumber, State stateNumber:
@@ -70,11 +69,11 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>单一性检查
 
-如果编译器无法确定在运行时能否确保单一性，则具有单一性要求的位置步骤、函数参数和运算符将返回错误。 此问题经常出现在非类型化数据上。 例如，查找属性时就需要使用单一的父元素。 通过一个用来选择单个父节点的序号即可满足此要求。 而在计算 node()-value() 组合以提取属性值时可能不需要指定序号规范。 如下例所示。
+如果编译器无法确定在运行时能否确保单一性，则具有单一性要求的位置步骤、函数参数和运算符将返回错误。 此问题经常出现在非类型化数据上。 例如，查找属性时就需要使用单一的父元素。 通过一个用来选择单个父节点的序号即可满足此要求。 而在计算 node()  -value()  组合以提取属性值时可能不需要指定序号规范。 如下例所示。
 
 ### <a name="example-known-singleton"></a>例如：已知单一实例
 
-在此示例中，nodes() 方法为每个 `<book>` 元素生成一个单独的行。 对 `<book>` 节点进行计算的 value() 方法提取 `@genre` 值，并且是单一属性。
+在此示例中，nodes()  方法为每个 `<book>` 元素生成一个单独的行。 对 `<book>` 节点进行计算的 value()  方法提取 `@genre` 值，并且是单一属性。
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName
@@ -87,7 +86,7 @@ XML 架构用于对类型化的 XML 进行类型检查。 如果将某个节点�
 
 ### <a name="example-using-value"></a>例如：使用 value()
 
-下面对非类型化 XML 列的查询导致发生静态的编译错误。这是因为 value() 希望将一个单一节点作为第一个参数，而编译器无法确定在运行时是否将仅有一个 `<last-name>` 节点：
+下面对非类型化 XML 列的查询导致发生静态的编译错误。这是因为 value()  希望将一个单一节点作为第一个参数，而编译器无法确定在运行时是否将仅有一个 `<last-name>` 节点：
 
 ```sql
 SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName

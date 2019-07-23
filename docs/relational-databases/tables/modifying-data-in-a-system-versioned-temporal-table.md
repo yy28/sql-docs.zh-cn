@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92b1b2098d1486c8dbc6958c9668387c815047d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e87059968c99374ae7a583a24f371a0c6b587f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999487"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制的临时表中修改数据
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -147,7 +146,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 ```  
   
 ### <a name="updating-the-current-table-from-the-history-table"></a>从历史记录表更新当前表  
- 可以对当前表使用 UPDATE 以便在过去的特定时间点将实际行状态恢复为有效状态（恢复为“上次已知完好的行版本”）。 下面的示例显示了恢复为截至 2015-04-25 的历史记录表中的值，其中的 DeptID = 10。  
+ 可以对当前表使用 UPDATE 以便在过去的特定时间点将实际行状态恢复为有效状态（恢复为“上次已知完好的行版本”）  。 下面的示例显示了恢复为截至 2015-04-25 的历史记录表中的值，其中的 DeptID = 10。  
   
 ```  
 UPDATE Department   

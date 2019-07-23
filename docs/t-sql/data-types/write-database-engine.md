@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3ba1be72858cea8813b500020b7a429f63570da0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000366"
 ---
 # <a name="write-database-engine"></a>Write（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Write 将 SqlHierarchyId 的二进制表示形式写出到传入的 BinaryWriter 中。 无法通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来调用 Write。 请改为使用 CAST 或 CONVERT。
+Write 将 SqlHierarchyId 的二进制表示形式写出到传入的 BinaryWriter 中   。 无法通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来调用 Write。 请改为使用 CAST 或 CONVERT。
   
 ## <a name="syntax"></a>语法  
   
@@ -38,13 +37,13 @@ void Write( BinaryWriter w )
   
 ## <a name="arguments"></a>参数  
 *w*  
-一个 BinaryWriter 对象，此 hierarchyid 节点的二进制表示形式将写在该对象中。
+一个 BinaryWriter 对象，此 hierarchyid 节点的二进制表示形式将写在该对象中   。
   
 ## <a name="return-types"></a>返回类型  
-CLR 返回类型：void
+CLR 返回类型：void 
   
 ## <a name="remarks"></a>Remarks  
-必要时（例如，从 hierarchyid 列加载数据时），[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在内部使用 Write。 在 hierarchyid 和 varbinary 之间进行转换时，也将在内部调用 Write。
+必要时（例如，从 hierarchyid 列加载数据时），[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在内部使用 Write  。 在 hierarchyid 和 varbinary 之间进行转换时，也将在内部调用 Write   。
   
 ## <a name="examples"></a>示例  
   

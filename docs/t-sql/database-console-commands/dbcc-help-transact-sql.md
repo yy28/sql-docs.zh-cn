@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 81523c69052a89b5a94c170c65be077ba17e56c6
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: da8c23819a2f47caf087ab44cd654b795a9a044d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039111"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>参数  
- dbcc_statement | @dbcc_statement_var  
+ dbcc_statement | @dbcc_statement_var    
  接收语法信息的 DBCC 命令的名称。 仅提供 DBCC 命令后面的一部分，例如 CHECKDB，而不是 DBCC CHECKDB。  
   
  ?  
@@ -53,7 +52,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ## <a name="result-sets"></a>结果集  
 DBCC HELP 返回显示指定 DBCC 命令语法的结果集。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色的成员身份。
   
 ## <a name="examples"></a>示例  

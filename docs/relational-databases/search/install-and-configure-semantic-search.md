@@ -12,13 +12,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 097683ae2e5fc90f8a7ae27adb50d53c3ea53b57
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021141"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ GO
 ```  
   
 ###  <a name="BasicsSemanticSearch"></a> 安装语义搜索  
- 若要安装语义搜索，在 SQL Server 安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。  
+ 若要安装语义搜索，在 SQL Server 安装过程中，请在“要安装的功能”页上选择“全文和语义提取搜索”。    
   
  统计语义搜索依赖于全文搜索。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这两个可选功能是一起安装的。  
   

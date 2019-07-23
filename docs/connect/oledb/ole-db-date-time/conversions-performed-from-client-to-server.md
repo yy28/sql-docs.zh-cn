@@ -1,5 +1,5 @@
 ---
-title: 执行从客户端转换到服务器 |Microsoft Docs
+title: 从客户端到服务器执行的转换 |Microsoft Docs
 description: 在客户端和服务器之间执行的转换
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995134"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66769311"
 ## <a name="conversions"></a>转换  
  本文介绍在客户端上执行的转换。 如果客户端指定的参数的秒的小数部分精度不同于服务器上定义的精度，那么，客户端转换将在该服务器允许成功执行该操作时导致失败。 特别是，客户端将将秒的小数部分的任何截断视为错误，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将时间值舍入为最接近的整数秒数。  
   
- 如果未调用 icommandwithparameters:: Setparameterinfo，将转换 DBTYPE_DBTIMESTAMP 绑定，就好像**datetime2**。  
+ 如果未调用 ICommandWithParameters:: SetParameterInfo, 则将 DBTYPE_DBTIMESTAMP 绑定视为**datetime2**。  
   
 |转换后 -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -52,7 +51,7 @@ ms.locfileid: "66769311"
   
 |符号|含义|  
 |------------|-------------|  
-|-|不支持任何转换。 如果调用 iaccessor:: Createaccessor 时验证绑定，在中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
+|-|不支持任何转换。 如果调用 IAccessor:: CreateAccessor 时验证绑定, 则会在*rgStatus*中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
 |N/A|不适用。|  
 |1|如果提供的数据无效，则设置 DBSTATUS_E_CANTCONVERTVALUE。 在应用转换前验证输入数据，因此即使后续转换忽略某一部分，该部分仍然有效，以使转换成功完成。|  
 |2|忽略时间字段。|  

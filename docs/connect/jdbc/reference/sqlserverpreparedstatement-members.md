@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89b4d7bedb2572c0396c3de80f000fdccdd1a2cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970750"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "66803004"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）检索可为由此 Statement 对象生成的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象中的字符和二进制列值返回的最大字节数。|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）检索由此 Statement 对象生成的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象可包含的最大行数。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|检索 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 对象，该对象包含有关执行此 Statement 对象时将返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的列信息。|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）移动到此语句对象的下一个结果。|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）转到此语句对象的下一个结果。|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|检索此 Statement 对象的参数个数、类型和属性。|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）检索此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的响应缓冲模式。|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）检索 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 等待此 Statement 对象运行的秒数。|  
@@ -81,7 +80,7 @@ ms.locfileid: "66803004"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|将指定参数设置为给定 Clob 对象。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将 SQL 游标名称设置为指定字符串，以供后续执行方法使用。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的日期值。|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|设置到指定的列的值[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|将指定的列的值设置为[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Double  值。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）设置转义处理模式。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）为 JDBC 驱动程序提供提示以指明处理结果集行时应采用的方向。|  
@@ -96,7 +95,7 @@ ms.locfileid: "66803004"
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|根据要设置的参数的类型，将指定参数设置为 Null 值。|  
 |[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|将指定参数设置为指定的 String  对象。|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)|使用给定对象设置指定参数的值。|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）请求语句入池或不入池。 默认情况下，SQLServerPreparedStatement 对象是在创建时，可入池。|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）请求语句入池或不入池。 默认情况下, SQLServerPreparedStatement 对象在创建时是可入池。|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将驱动程序等待 Statement 对象运行的秒数设置为指定的秒数。|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|将指定参数设置为指定的 Ref 对象。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|（继承自 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。）将此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的响应缓冲模式设置为不区分大小写的“String full”  或“adaptive”  。|  

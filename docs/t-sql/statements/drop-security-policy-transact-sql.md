@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6529f86c0388bae5cbea64c855a84173d43f3a0d
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 33b04fb6e1db0afa87ecde24e28dd28772d6c3a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070282"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,20 +41,20 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ IF EXISTS   
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  仅当安全策略已存在时对其进行有条件地删除。  
   
  *schema_name*  
  是安全策略所属架构的名称。  
   
- security_policy_name  
+ security_policy_name   
  安全策略的名称。 安全策略名称必须符合有关标识符的规则，并且在数据库中以及对其架构来说必须是唯一的。  
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对架构具有 ALTER ANY SECURITY POLICY 权限和 ALTER 权限。  
   
 ## <a name="example"></a>示例  

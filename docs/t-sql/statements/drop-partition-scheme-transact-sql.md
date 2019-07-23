@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cd96a77a90086c894024a2d46f3497f2ae7f14ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044026"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>参数  
- partition_scheme_name  
+ partition_scheme_name   
  要删除的分区方案的名称。  
   
 ## <a name="remarks"></a>Remarks  
  仅当不存在当前使用分区方案的表或索引时，才能删除分区方案。 如果存在使用分区方案的表或索引，DROP PARTITION SCHEME 将返回错误。 DROP PARTITION SCHEME 不删除文件组本身。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  可以使用以下权限执行 DROP PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  

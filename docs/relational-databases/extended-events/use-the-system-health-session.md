@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1671b59c2b7b9ecaa376e1d5ef46a6743c0b558e
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009347"
 ---
 # <a name="use-the-systemhealth-session"></a>使用 system_health 会话
 
@@ -35,33 +34,33 @@ system_health 会话是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 该会话收集的信息包括：  
   
--   发生严重性 >=20 的错误的任何会话的 sql_text 和 session_id 。  
+-   发生严重性 >=20 的错误的任何会话的 sql_text 和 session_id   。  
   
--   发生内存相关错误的任何会话的 sql_text 和 session_id。 这些错误包括 17803、701、802、8645、8651、8657 和 8902。  
+-   发生内存相关错误的任何会话的 sql_text 和 session_id   。 这些错误包括 17803、701、802、8645、8651、8657 和 8902。  
   
 -   任何无法完成的计划程序问题的记录。 这些问题在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中显示为错误 17883。  
   
 -   检测到的任何死锁，包括死锁图形。  
   
--   等待闩锁（或其他相关资源）时间 > 15 秒的任何会话的 callstack、sql_text 和 session_id。  
+-   等待闩锁（或其他相关资源）时间 > 15 秒的任何会话的 callstack、sql_text 和 session_id    。  
   
--   等待锁（或其他相关资源）时间 > 30 秒的任何会话的 callstack、sql_text 和 session_id。  
+-   等待锁（或其他相关资源）时间 > 30 秒的任何会话的 callstack、sql_text 和 session_id    。  
   
--   为获得“抢先等待”（或其他相关资源）而等待时间很长的任何会话的 callstack、sql_text 和 session_id。 持续时间因等待类型而异。 在抢先等待中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待的是外部 API 调用。  
+-   为获得“抢先等待”（或其他相关资源）而等待时间很长的任何会话的 callstack、sql_text 和 session_id    。 持续时间因等待类型而异。 在抢先等待中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待的是外部 API 调用。  
   
--   CLR 分配失败和虚拟分配失败的调用堆栈和 session_id。  
+-   CLR 分配失败和虚拟分配失败的调用堆栈和 session_id   。  
   
 -   有关内存代理、计划程序监视、内存节点 OOM、安全性和连接的环形缓冲区事件。  
   
 -   来自 `sp_server_diagnostics` 的系统组件结果。  
   
--   scheduler_monitor_system_health_ring_buffer_recorded 收集的实例运行状况。  
+-   scheduler_monitor_system_health_ring_buffer_recorded 收集的实例运行状况  。  
   
 -   CLR 分配失败。  
   
--   使用 connectivity_ring_buffer_recorded 时的连接错误。  
+-   使用 connectivity_ring_buffer_recorded 时的连接错误  。  
   
--   使用 security_error_ring_buffer_recorded 时的安全错误。  
+-   使用 security_error_ring_buffer_recorded 时的安全错误  。  
 
 > [!NOTE]
 > 有关死锁的详细信息，请参阅[事务锁定和行版本控制指南中的死锁](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)。   
@@ -84,11 +83,11 @@ WHERE xe.name = 'system_health'
 若要查看事件文件中的会话数据，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中提供的扩展事件用户界面。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标数据的高级查看功能](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
   
 ## <a name="restoring-the-systemhealth-session"></a>还原 system_health 会话  
-如果删除 system_health 会话，则可以通过在查询编辑器中执行 **u_tables.sql** 文件来还原该会话。 该文件位于下面的文件夹中，其中 C: 表示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序文件的驱动器，MSSQL1x 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的主要版本：  
+如果删除 system_health 会话，则可以通过在查询编辑器中执行 **u_tables.sql** 文件来还原该会话。 该文件位于下面的文件夹中，其中 C: 表示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序文件的驱动器，MSSQL1x 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的主要版本   ：  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  
   
-请注意，在还原该会话后，必须使用 `ALTER EVENT SESSION` 语句或使用对象资源管理器中的“扩展事件”节点启动会话。 否则，该会话会在您下次重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时自动启动。  
+请注意，在还原该会话后，必须使用 `ALTER EVENT SESSION` 语句或使用对象资源管理器中的“扩展事件”节点启动会话  。 否则，该会话会在您下次重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时自动启动。  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)    

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0493cd68d60234cb6263588f7d1ad46acd3d0c79
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5b70b18a7b331ac448d5135d57e95741f76b85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968863"
 ---
 # <a name="supportsselectforupdate-method-sqlserverdatabasemetadata"></a>supportsSelectForUpdate 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSelectForUpdate()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsSelectForUpdate 方法由 java.sql.DatabaseMetaData 接口中的 supportsSelectForUpdate 方法指定。  
+ 此 supportsSelectForUpdate 方法由 supportsSelectForUpdate 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

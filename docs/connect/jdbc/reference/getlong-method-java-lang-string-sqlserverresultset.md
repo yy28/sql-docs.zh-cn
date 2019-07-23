@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd81d272041b492f4bcb6cbace3d92e518cfacc7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2cd126601c0861786ba568d9f1bc4814235b61e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982452"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>getLong 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long getLong(java.lang.String columnName)
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个**长**值。  
+ 一个**长整型**值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

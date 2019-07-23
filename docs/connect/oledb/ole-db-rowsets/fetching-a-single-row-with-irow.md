@@ -1,6 +1,6 @@
 ---
-title: 提取使用 IRow 单行 |Microsoft Docs
-description: 正在提取适用于 SQL Server 使用 IRow 接口的 OLE DB 驱动程序的单个行
+title: 使用 IRow 获取单个行 |Microsoft Docs
+description: 使用 SQL Server 的 OLE DB 驱动程序的 IRow 接口提取单个行
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6e9f48ba7f2472fa215b267c915900d7c616dba0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994291"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>使用 IRow 提取单行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow**接口实现 OLE DB 驱动程序中的，为 SQL Server 经过简化，可提高性能。 IRow 允许直接访问单行对象的列  。 如果预先知道命令执行的结果确实是生成单行，则 IRow 将检索该行的列  。 如果结果集包括多行，则 IRow 将只显示第一行  。  
+  简化了 SQL Server OLE DB 驱动程序中的**IRow**接口实现以提高性能。 IRow 允许直接访问单行对象的列  。 如果预先知道命令执行的结果确实是生成单行，则 IRow 将检索该行的列  。 如果结果集包括多行，则 IRow 将只显示第一行  。  
   
  IRow 实现不允许行的任何导航  。 行中的每一列只能访问一次，以下情况例外：可以访问一次列以查找列大小，再次访问以提取数据。  
   

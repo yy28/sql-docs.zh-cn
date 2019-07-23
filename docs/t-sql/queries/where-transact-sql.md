@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d43fc27fc3536f296f49f40bb6233e961c4b9f12
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948217"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "57334414"
 ```  
   
 ## <a name="arguments"></a>参数  
-\< search_condition > 定义要返回的行应满足的条件。 对搜索条件中可以包含的谓词数量没有限制。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
+\< search_condition > 定义要返回的行应满足的条件  。 对搜索条件中可以包含的谓词数量没有限制。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何在 `WHERE` 子句中使用某些常见的搜索条件。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 56703c5c0a2b3bb833b0e600c8dbfbca929ae75a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914275"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 服务器权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对服务器授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  { TO | FROM } \<grantee_principal> 指定要从中撤消权限的主体。  
@@ -75,22 +74,22 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- SQL_Server_login  
+ SQL_Server_login   
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_Windows_login  
+ SQL_Server_login_mapped_to_Windows_login   
  指定映射到 Windows 登录名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_Windows_group  
+ SQL_Server_login_mapped_to_Windows_group   
  指定映射到 Windows 组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_certificate  
+ SQL_Server_login_mapped_to_certificate   
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login_mapped_to_asymmetric_key  
+ SQL_Server_login_mapped_to_asymmetric_key   
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- server_role  
+ server_role   
  指定用户定义的服务器角色。  
   
 ## <a name="remarks"></a>Remarks  
@@ -141,7 +140,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 CONTROL SERVER 权限，或者具有 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a8988926cb92f1f152e38efbadaa2466f9bd4b13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6231368cd83ffdbff9732c8b7886a7dc4af571e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985404"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>updateBigDecimal 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 BigDecimal 对象更新指定的列。  
+  使用 Java.math.bigdecimal 对象更新指定的列。  
   
 ## <a name="overload-list"></a>重载列表  
   

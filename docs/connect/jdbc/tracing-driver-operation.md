@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916688"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66798263"
 > [!NOTE]  
 >  对于 JDBC 驱动程序中包含的本地组件 (sqljdbc_xa.dll)，可通过内置诊断 (BID) 框架启用跟踪。 有关 BID 的信息，请参阅 [SQL Server 中的数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=70042)。  
   
- 开发应用程序时，可对 Logger 对象进行调用，它会转而创建 LogRecord 对象（这些对象随后会传递给 Handler 对象进行处理）。 记录器和处理程序对象所日志记录级别，这两个使用和处理日志记录筛选器，来规定哪些 LogRecords 可以 （可选）。 完成日志记录操作后，Handler 对象可选择使用 Formatter 对象发布日志信息。  
+ 开发应用程序时，可对 Logger 对象进行调用，它会转而创建 LogRecord 对象（这些对象随后会传递给 Handler 对象进行处理）。 记录器和处理程序对象均使用日志记录级别和记录筛选器 (可选) 来规定处理哪些 LogRecords。 完成日志记录操作后，Handler 对象可选择使用 Formatter 对象发布日志信息。  
   
  默认情况下，java.util.logging 框架会将其输出写入到文件中。 该输出日志文件必须对 JDBC 驱动程序运行时所在的上下文具有写入权限。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66798263"
   
 |“属性”|描述|  
 |----------|-----------------|  
-|AuthenticationJNI|有关 Windows 的日志消息集成身份验证问题 (当**authenticationScheme**连接属性隐式或显式设置为**NativeAuthentication**)。<br /><br /> 应用程序可将日志记录级别设置为 FINEST 和 FINE。|  
+|AuthenticationJNI|记录有关 Windows 集成身份验证问题的消息 ( **authenticationScheme**连接属性隐式或显式设置为**NativeAuthentication**)。<br /><br /> 应用程序可将日志记录级别设置为 FINEST 和 FINE。|  
 |的|在 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE 和 FINER。|  
 |SQLServerDataSource|在 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 和 [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 类中记录消息。<br /><br /> 应用程序可将日志记录级别设置为 FINER。|  
 |InputStream|记录有关下列数据类型的消息：java.io.InputStream、java.io.Reader 以及具有 max 说明符的数据类型（如 varchar、nvarchar 和 varbinary 数据类型）。<br /><br /> 应用程序可将日志记录级别设置为 FINER。|  
@@ -88,7 +87,7 @@ ms.locfileid: "66798263"
 |SQLServerResultSet|在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE、FINER 和 FINEST。|  
 |SQLServerStatement|在 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE、FINER 和 FINEST。|  
 |XA|在 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类中记录所有 XA 事务的日志消息。 应用程序可将日志记录级别设置为 FINE 和 FINER。|  
-|KerbAuthentication|记录有关类型 4 Kerberos 身份验证的消息 (当**authenticationScheme**连接属性设置为**JavaKerberos**)。 应用程序可将日志记录级别设置为 FINE 或 FINER。|  
+|KerbAuthentication|记录有关类型 4 Kerberos 身份验证的消息 ( **authenticationScheme**连接属性设置为**JavaKerberos**)。 应用程序可将日志记录级别设置为 FINE 或 FINER。|  
 |TDS.DATA|记录包含驱动程序和 SQL Server 之间的 TDS 协议级别对话的消息。 发送和接收的每个 TDS 数据包的详细内容都以 ASCII 和十六进制格式记录。 不记录登录凭据（用户名和密码）。 但记录所有其他数据。<br /><br /> 该类别会创建非常冗长而详细的消息，并且只有通过将日志记录级别设置为 FINEST 才能启用它。|  
 |TDS.Channel|该类别跟踪 SQL Server 对 TCP 通信通道的操作。 记录的消息包括套接字的打开和关闭以及读取和写入。 还跟踪与 SQL Server 建立安全套接字层 (SSL) 连接的相关消息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINE、FINER 或 FINEST 才能启用。|  
 |TDS.Writer|该类别跟踪对 TDS 信道的写入。 请注意，只跟踪写入的长度，不跟踪内容。 该类别还跟踪将关注信号发送给服务器以取消语句的执行时出现的问题。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
@@ -100,7 +99,7 @@ ms.locfileid: "66798263"
 |SQLServerParameterMetaData|在 [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
 |SQLServerBlob|在 [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
 |SQLServerClob|在 [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
-|SQLServerSQLXML|内部 SQLServerSQLXML 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
+|SQLServerSQLXML|在内部 SQLServerSQLXML 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
 |SQLServerDriver|在 [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
 |SQLServerNClob|在 [SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
   

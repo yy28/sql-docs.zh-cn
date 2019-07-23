@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04aa3cb75b5b77ad096860bf1c2a232617cb930f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044027"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +54,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
+ IF EXISTS   
  **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  有条件地删除过程（仅当其已存在时）。  
@@ -63,19 +62,19 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  *schema_name*  
  过程所属架构的名称。 不能指定服务器名称或数据库名称。  
   
- procedure  
+ procedure   
  要删除的存储过程或存储过程组的名称。 不能删除编号过程组内的单个过程；但可删除整个过程组。  
   
 ## <a name="best-practices"></a>最佳实践  
  在删除任何存储过程之前，请检查依赖对象，并且相应地修改这些对象。 如果没有更新这些对象，则删除存储过程可能会导致依赖对象和脚本失败。 有关详细信息，请参阅[查看存储过程的依赖关系](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
 ## <a name="metadata"></a>元数据  
- 若要显示现有过程的列表，请查询 sys.objects 目录视图。 若要显示过程定义，请查询 sys.sql_modules 目录视图。  
+ 若要显示现有过程的列表，请查询 sys.objects 目录视图  。 若要显示过程定义，请查询 sys.sql_modules 目录视图  。  
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- 需要拥有该过程的 CONTROL 权限，或该过程所属架构的 ALTER 权限，或 db_ddladmin 固定服务器角色的成员身份。  
+### <a name="permissions"></a>权限  
+ 需要拥有该过程的 CONTROL 权限，或该过程所属架构的 ALTER 权限，或 db_ddladmin 固定服务器角色的成员身份    。  
   
 ## <a name="examples"></a>示例  
  下面的示例将删除当前数据库中的 `dbo.uspMyProc` 存储过程。  

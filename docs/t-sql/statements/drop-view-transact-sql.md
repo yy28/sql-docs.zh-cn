@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c211fa83d1b2e0d8a1b6c499f20705b2459e2431
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072102"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
+ IF EXISTS   
  **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)[!INCLUDE[sssds](../../includes/sssds-md.md)]）。|  
   
  只有在视图已存在时才对其进行有条件地删除。  
@@ -61,7 +60,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *schema_name*  
  视图所属架构的名称。  
   
- view_name  
+ view_name   
  要删除的视图的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -77,7 +76,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
   
  有关查看视图文本的详细信息，请参阅 [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对视图拥有 **CONTROL** 权限，对包含视图的架构拥有 **ALTER** 权限，或者拥有 **db_ddladmin** 固定服务器角色中的成员身份。  
   
 ## <a name="examples"></a>示例  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0329f097e51ce3e2e725a6d652265349ffc7c1b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2e2349dbe193834385869f86f87fe4284a967284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983687"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>getDefaultTransactionIsolation 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDefaultTransactionIsolation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getDefaultTransactionIsolation 方法由 java.sql.DatabaseMetaData 接口中的 getDefaultTransactionIsolation 方法指定。  
+ 此 getDefaultTransactionIsolation 方法由 getDefaultTransactionIsolation 方法在 Java.sql.databasemetadata 接口中指定。  
   
  将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库一起使用时，此方法将返回 TRANSACTION_READ_COMMITTED 的值或 int 值 2  。  
   

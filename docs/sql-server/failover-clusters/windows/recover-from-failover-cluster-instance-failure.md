@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee494429768619f4cdf622be569dbad81182b976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f962688b69155c6daddc98e6d505a5275741cf86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044715"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>从故障转移群集实例故障中恢复
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47676835"
   
 1.  节点 1 失败后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 故障转移到节点 2。  
   
-2.  从 FCI 中逐出节点 1。 为此，从节点 2 打开“故障转移群集管理”器管理单元，右键单击节点 1，单击“移动操作”，然后单击“逐出节点”。  
+2.  从 FCI 中逐出节点 1。 为此，从节点 2 打开“故障转移群集管理”器管理单元，右键单击节点 1，单击“移动操作”  ，然后单击“逐出节点”  。  
   
 3.  验证节点 1 是否已从群集定义中逐出。  
   

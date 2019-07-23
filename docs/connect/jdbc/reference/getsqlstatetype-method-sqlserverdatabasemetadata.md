@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979730"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>返回值  
  指示 SQLSTATE 类型的 int  ，可以为以下值之一：  
   
--   对于 5.0 版的 Java 运行时环境： 如果**xopenStates**连接属性设置为**true**，此方法返回 DatabaseMetaData.sqlStateXOpen。 否则，返回的是 DatabaseMetaData.sqlStateSQL99。  
+-   对于 Java Runtime Environment 版本 5.0: 如果将**xopenStates**连接属性设置为**true**, 则此方法将返回 java.sql.databasemetadata。 否则，返回的是 DatabaseMetaData.sqlStateSQL99。  
   
--   对于 6.0 版的 Java 运行时环境： 如果**xopenStates**连接属性设置为**true**，此方法返回 DatabaseMetaData.sqlStateXOpen。 否则为 DatabaseMetaData.sqlStateSQL。  
+-   对于 Java Runtime Environment 版本 6.0: 如果将**xopenStates**连接属性设置为**true**, 则此方法将返回 java.sql.databasemetadata。 否则为 Java.sql.databasemetadata. sqlStateSQL。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getSQLStateType 方法由 java.sql.DatabaseMetaData 接口中的 getSQLStateType 方法指定。  
+ 此 getSQLStateType 方法由 getSQLStateType 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

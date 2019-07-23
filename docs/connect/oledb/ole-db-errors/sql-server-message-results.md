@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB error handling, SQL Server message results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9098994ac5349fa9747c952e66eb902231956a5c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 05d731f418bad21f9e8ec32c620b352c5663994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994917"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 消息结果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "66802851"
   
 -   SET STATISTICS  
   
- 这些语句会返回一个或多个信息性消息，或者使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回信息性消息以替代行集或计数结果。 在成功执行时，SQL Server 的 OLE DB 驱动程序返回 S_OK，并且消息可供 SQL Server 使用者，OLE DB 驱动程序。  
+ 这些语句会返回一个或多个信息性消息，或者使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回信息性消息以替代行集或计数结果。 成功执行时, SQL Server 的 OLE DB 驱动程序返回 S_OK, 消息可用于 SQL Server 使用者的 OLE DB 驱动程序。  
   
- SQL Server 的 OLE DB 驱动程序返回 S_OK，并具有一个或多个信息性消息之后执行多个[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句或使用者执行的 SQL Server 成员函数用于 OLE DB 驱动程序。  
+ SQL Server 的 OLE DB 驱动程序返回 S_OK, 并在执行多[!INCLUDE[tsql](../../../includes/tsql-md.md)]个语句或使用者执行 SQL Server 成员函数的 OLE DB 驱动程序时提供一个或多个信息性消息。  
   
  在每次执行成员函数之后，不论返回代码的值如何、是否存在返回的 IRowset 或 IMultipleResults 接口引用或受影响的行数是多少，允许动态指定查询文本的适用于 SQL Server 的 OLE DB 驱动程序使用者都应检查错误接口   。  
   

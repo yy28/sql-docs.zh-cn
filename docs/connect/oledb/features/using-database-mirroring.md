@@ -1,6 +1,6 @@
 ---
 title: 使用数据库镜像 |Microsoft Docs
-description: 使用数据库镜像与 OLE DB 驱动程序适用于 SQL Server
+description: 对 SQL Server 使用带有 OLE DB 驱动程序的数据库镜像
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: eba70e8a4ee641b4bccb54f67f37015a0edbd434
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988875"
 ---
 # <a name="using-database-mirroring"></a>使用数据库镜像
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66802896"
  指定镜像数据库名称时可以使用别名。  
   
 > [!NOTE]  
->  有关初始连接尝试和重新连接到镜像数据库的尝试次数的信息，请参阅[将客户端连接到数据库镜像会话&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
+>  有关对镜像数据库的初始连接尝试和重新连接尝试的详细信息, 请参阅[将客户端连接&#40;到&#41;数据库镜像会话 SQL Server](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ## <a name="programming-considerations"></a>编程时的注意事项  
  当主体数据库服务器失败时，客户端应用程序则接收错误以响应 API 调用，这指示与数据库之间的连接已丢失。 发生此种情况时，对数据库执行的任何未提交的更改将丢失，并回滚当前事务。 如果发生这种情况，应用程序应关闭连接（或释放数据源对象），然后再重新打开它。 连接将以透明方式重新定向到镜像数据库，该数据库现在充当主体服务器。  
@@ -55,18 +54,18 @@ ms.locfileid: "66802896"
  建立连接时，主体服务器将其故障转移伙伴的标识发送到客户端，以便在发生故障转移时使用。 当应用程序在主体服务器失败后尝试建立连接时，客户端不知道故障转移伙伴的标识。 为使客户端能够处理这种情况，初始化属性和关联的连接字符串关键字允许客户端自己指定故障转移伙伴的标识。 客户端属性仅在此种情况下使用；如果主体服务器可用，则不使用此属性。 如果客户端提供的故障转移伙伴服务器未引用充当故障转移伙伴的服务器，该服务器将拒绝连接。 若要使应用程序适应配置更改，可以通过在建立连接后检测该属性来确定实际故障转移伙伴的标识。 如果首次尝试建立连接失败，则应考虑缓存伙伴信息，以更新连接字符串或设计重试策略。  
   
 > [!NOTE]  
->  如果希望在 DSN、连接字符串或连接属性/特性中使用此功能，必须显式指定连接要使用的数据库。 如果不执行此操作，OLE DB 驱动程序适用于 SQL Server 不会尝试故障转移到合作伙伴数据库。  
+>  如果希望在 DSN、连接字符串或连接属性/特性中使用此功能，必须显式指定连接要使用的数据库。 如果未执行此操作, 则 SQL Server OLE DB 驱动程序将不会尝试故障转移到合作伙伴数据库。  
 >   
 >  镜像是面向数据库的功能。 使用多个数据库的应用程序可能无法利用此功能。  
 >   
 >  此外，服务器名称不区分大小写，而数据库名称区分大小写。 因此，应确保在 DSN 和连接字符串中使用相同的大小写。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序  
- 适用于 SQL Server 的 OLE DB 驱动程序通过连接和连接字符串属性支持数据库镜像。 已向 DBPROPSET_SQLSERVERDBINIT 属性集添加 SSPROP_INIT_FAILOVERPARTNER 属性，FailoverPartner 关键字是 DBPROP_INIT_PROVIDERSTRING 的新连接字符串属性  。 有关详细信息，请参阅[OLE DB 驱动程序适用于 SQL Server 连接字符串关键字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 适用于 SQL Server 的 OLE DB 驱动程序通过连接和连接字符串属性支持数据库镜像。 已向 DBPROPSET_SQLSERVERDBINIT 属性集添加 SSPROP_INIT_FAILOVERPARTNER 属性，FailoverPartner 关键字是 DBPROP_INIT_PROVIDERSTRING 的新连接字符串属性  。 有关详细信息, 请参阅将[连接字符串关键字与 SQL Server 的 OLE DB 驱动程序配合使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
   
  只要加载访问接口，故障转移缓存就会一直保留，直到调用 CoUninitialize 或应用程序引用由适用于 SQL Server 的 OLE DB 驱动程序管理的某一对象（如数据源对象）为止  。  
   
- 有关 OLE DB 驱动程序用于数据库镜像的 SQL Server 支持的详细信息，请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 有关数据库镜像的 SQL Server 支持 OLE DB 驱动程序的详细信息, 请参阅[初始化和授权属性](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
  
   
 ## <a name="see-also"></a>另请参阅  

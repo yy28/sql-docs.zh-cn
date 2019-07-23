@@ -1,5 +1,5 @@
 ---
-title: setClientInfo 方法 (java.util.Properties) |Microsoft Docs
+title: setClientInfo 方法 (util) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e09d4cba23c87bdcaaa0503dffe73e65dfaf82b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974738"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>setClientInfo 方法 (java.util.Properties)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void setClientInfo (java.util.Properties properties)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setClientInfo 方法由 java.sql.Connection 接口中的 setClientInfo 方法指定。  
+ 此 setClientInfo 方法由 setClientInfo 方法在 sql 连接接口中指定。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支持任何客户端信息属性。 如果 properties  输入参数没有引用空属性集，则此方法会生成警告。 也就是说，此方法针对应用程序要设置的属性生成警告。 应用程序应使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 方法来检索每个警告。  
   

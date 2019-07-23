@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003785"
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用语句和结果集
 
@@ -28,9 +27,9 @@ ms.locfileid: "66780800"
 
 使用 JDBC 驱动程序 Statement 对象时（如 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象），请确保所使用的对象适用于你的作业。
 
-- 如果您没有 OUT 参数，您不需要使用 SQLServerCallableStatement 对象。 相反，使用 SQLServerStatement 或 SQLServerPreparedStatement 对象。
+- 如果没有 OUT 参数, 则无需使用 SQLServerCallableStatement 对象。 改为使用 SQLServerStatement 或 SQLServerPreparedStatement 对象。
 
-- 如果您不想多次执行语句或不带 IN 或 OUT 参数，您不需要使用 SQLServerCallableStatement 或 SQLServerPreparedStatement 对象。 相反，使用 SQLServerStatement 对象。
+- 如果你不想多次执行该语句, 或者不具有 IN 或 OUT 参数, 则无需使用 SQLServerCallableStatement 或 SQLServerPreparedStatement 对象。 相反, 请使用 SQLServerStatement 对象。
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>为 ResultSet 对象使用适当的并发
 
@@ -38,7 +37,7 @@ ms.locfileid: "66780800"
 
 ## <a name="limit-the-size-of-your-result-sets"></a>限制结果集的大小
 
-考虑使用 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法（或 SET ROWCOUNT 或 SELECT TOP N SQL 语法）来限制从可能较大的结果集中返回的行数。 如果必须处理大型结果集，请考虑通过设置连接字符串属性 responseBuffering=adaptive（默认模式）来使用自适应响应缓冲。 此方法使应用程序无需服务器端游标即可处理大型结果集，并最大限度地减少应用程序使用的内存。 有关详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)。
+考虑使用 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法（或 SET ROWCOUNT 或 SELECT TOP N SQL 语法）来限制从可能较大的结果集中返回的行数。 如果必须处理大型结果集，请考虑通过设置连接字符串属性 responseBuffering=adaptive（默认模式）来使用自适应响应缓冲。 此方法使应用程序无需服务器端游标即可处理大型结果集，并最大限度地减少应用程序使用的内存。 有关详细信息, 请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)。
 
 ## <a name="use-the-appropriate-fetch-size"></a>使用适当的提取大小
 

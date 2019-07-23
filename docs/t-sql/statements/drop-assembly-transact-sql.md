@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 356fd02aad93f523aa621927997fb50182730a05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984291"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +45,27 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+ IF EXISTS   
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
   
  仅当程序集已存在时对其进行有条件地删除。  
   
- assembly_name  
+ assembly_name   
  希望删除的程序集的名称。  
   
  WITH NO DEPENDENTS  
- 如果指定它，则只删除 assembly_name，而不删除该程序集引用的相关程序集。 如果不指定它，则 DROP ASSEMBLY 会删除 assembly_name 和所有相关程序集。  
+ 如果指定它，则只删除 assembly_name，而不删除该程序集引用的相关程序集  。 如果不指定它，则 DROP ASSEMBLY 会删除 assembly_name 和所有相关程序集  。  
   
 ## <a name="remarks"></a>Remarks  
  删除程序集时，将从数据库中删除程序集和它的所有关联文件，例如，源代码和调试文件。  
   
- 如果不指定 WITH NO DEPENDENTS，则 DROP ASSEMBLY 删除 assembly_name 和所有相关程序集。 如果删除任何相关程序集的尝试失败，则 DROP ASSEMBLY 返回错误。  
+ 如果不指定 WITH NO DEPENDENTS，则 DROP ASSEMBLY 删除 assembly_name 和所有相关程序集  。 如果删除任何相关程序集的尝试失败，则 DROP ASSEMBLY 返回错误。  
   
  如果程序集被存在于该数据库中的另一个程序集引用，或者它被当前数据库中的公共语言运行时 (CLR) 函数、过程、触发器、用户定义类型或聚合使用，则 DROP ASSEMBLY 返回错误。  
   
  DROP ASSEMBLY 不会干扰引用当前正在运行的程序集的任何代码。 但是，执行 DROP ASSEMBLY 之后，任何调用程序集代码的尝试将失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要程序集的所有权，或对它的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

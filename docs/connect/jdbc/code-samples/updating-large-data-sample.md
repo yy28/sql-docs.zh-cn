@@ -1,5 +1,5 @@
 ---
-title: 更新大型数据的示例 |Microsoft Docs
+title: 更新大型数据示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d178f847ae9de2ca8ec9af07433c88b950fddc2f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: efde9e7254d73fcc84caeb2fce3df96bc3c88972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957028"
 ---
 # <a name="updating-large-data-sample"></a>更新大型数据的示例
 
@@ -32,7 +31,7 @@ ms.locfileid: "66769801"
 
 ## <a name="requirements"></a>要求
 
-要运行此示例应用程序，将需要访问 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库。 还需将 classpath 设置为包含 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc4.jar 项，示例应用程序将引发“找不到类”的常见异常。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。
+要运行此示例应用程序，将需要访问 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库。 还需将 classpath 设置为包含 sqljdbc4.jar 文件。 如果 classpath 缺少 sqljdbc4.jar 项，示例应用程序将引发“找不到类”的常见异常。 有关如何设置类路径的详细信息, 请参阅[使用 JDBC 驱动程序](../../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供四个类库文件：sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar，具体使用哪个文件取决于首选的 Java Runtime Environment (JRE) 设置。 此示例使用 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法，这两个方法是在 JDBC 4.0 API 中引入的，用于访问特定于驱动程序的响应缓冲方法。 为了编译和运行此示例，您需要对 JDBC 4.0 提供支持的 sqljdbc4.jar 类库。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。

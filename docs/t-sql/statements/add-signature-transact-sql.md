@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066101"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,22 +48,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 ```  
   
 ## <a name="arguments"></a>参数  
- module_class  
+ module_class   
  向其中添加签名的模块的类。 架构范围内的模块的默认类为 OBJECT。  
   
- module_name  
+ module_name   
  要签名或副署的存储过程、函数、程序集或触发器的名称。  
   
- CERTIFICATE cert_name  
+ CERTIFICATE cert_name   
  对存储过程、函数、程序集或触发器进行签名或副署时所用证书的名称。  
   
- WITH PASSWORD ='password'  
+ WITH PASSWORD ='password'   
  是对证书私钥或非对称密钥进行解密时所需的密码。 仅当数据库主密钥不保护私钥时才需要该子句。  
   
- SIGNATURE =signed_blob  
- 指定模块的已签名二进制大型对象 (BLOB)。 如果不提供私钥，而只提供模块时，则该子句非常有用。 当使用该子句时，只需要模块、签名和公钥便可将已签名的二进制大型对象添加到数据库。 signed_blob 是以十六进制格式表示的 Blob 自身。  
+ SIGNATURE =signed_blob   
+ 指定模块的已签名二进制大型对象 (BLOB)。 如果不提供私钥，而只提供模块时，则该子句非常有用。 当使用该子句时，只需要模块、签名和公钥便可将已签名的二进制大型对象添加到数据库。 signed_blob 是以十六进制格式表示的 Blob 自身  。  
   
- ASYMMETRIC KEY Asym_Key_Name  
+ ASYMMETRIC KEY Asym_Key_Name   
  对存储过程、函数、程序集或触发器进行签名或副署时所用非对称密钥的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -99,7 +98,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 然而，通过使用用于对 ProcSelectT1ForAlice 进行签名的相同证书来副署 procSelectT1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在整个调用链中保留此签名，并允许访问 T1。 如果 Alice 试图直接调用 procSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对象拥有 ALTER 权限，并且对证书或非对称密钥拥有 CONTROL 权限。 如果关联的私钥受密码保护，则用户还必须具有相应的密码。  
   
 ## <a name="examples"></a>示例  
@@ -115,7 +114,7 @@ GO
 ```  
   
 ### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 通过使用已签名的 BLOB 对存储过程进行签名  
- 下面的示例创建一个新数据库，并创建要在示例中使用的证书。 该示例创建一个简单的存储过程并对其进行签名，然后从 `sys.crypt_properties` 检索该签名 BLOB。 最后，将删除并再次添加该签名。 该示例通过使用 WITH SIGNATURE 语法对该工程进行签名。  
+ 下面的示例创建一个新数据库，并创建要在示例中使用的证书。 该示例创建一个简单的存储过程并且对该存储过程进行签名，并且从 `sys.crypt_properties` 检索该签名 BLOB。 最后，将删除并再次添加该签名。 该示例通过使用 WITH SIGNATURE 语法对该工程进行签名。  
   
 ```  
 CREATE DATABASE TestSignature ;  

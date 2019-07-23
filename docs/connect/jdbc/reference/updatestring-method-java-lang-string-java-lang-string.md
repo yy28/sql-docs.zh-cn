@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09bb0a355a643f38b8ba9a2c1bb0cdbc0736b17e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19a54fbfe280a4a5a16b57befee87a8f46de6a6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998233"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>updateString 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateString(java.lang.String columnName,
   
  *x*  
   
- 一个**字符串**对象。  
+ **String**对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

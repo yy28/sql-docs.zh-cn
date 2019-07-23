@@ -9,14 +9,13 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a618f039e4a882318f8be00ebd0a05aef9d80efb
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: e0b08e445cf22760f41da3e21e086c20fc927f8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021164"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "57973416"
   
 -   如果只需要全文键或排名的信息，请使用 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) ，而不要使用分别与之对应的 CONTAINS 或 FREETEXT。  
   
--   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用 *top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”）时，才应使用此参数。  
+-   若要限制结果数并提高性能，请使用 FREETEXTTABLE 和 CONTAINSTABLE 函数的 *top_n_by_rank* 参数。 使用 *top_n_by_rank* 可以只返回最密切相关的匹配项。 仅当商业应用场景不需要返回所有可能的匹配项（即不需要“返回全部项”  ）时，才应使用此参数。  
   
     > [!NOTE]  
     >  法律应用场景通常需要返回全部项，不过对于诸如电子商务等商业应用场景，性能可能更为重要。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ac360e8-a1ee-4577-93b4-bb2018f1087a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4b5c2836846616ff7d27c0bdd4802dfcaee601f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89f3262eab50e539d2a37b9152d5af20f0a541b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981331"
 ---
 # <a name="getnstring-method-sqlservercallablestatement"></a>getNString 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

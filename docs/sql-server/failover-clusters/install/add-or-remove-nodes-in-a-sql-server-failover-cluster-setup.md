@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a845104de324dfc4bee50e6feba035d1592f98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95d92e72baa3d1f36eb76649a46bb1dcdf35cd4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035237"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 故障转移群集中添加或删除节点（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +49,17 @@ ms.locfileid: "52510894"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”。 然后，选择“向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点”。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”  。 然后，选择“向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点”  。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
 4.  如果您在已本地化的操作系统上进行安装，并且安装介质包括针对英语以及与操作系统相对应的语言的语言包，则您可以在“语言选择”页上为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例指定语言。 有关跨语言支持和安装注意事项的详细信息，请参阅 [SQL Server 中的本地语言版本](../../../sql-server/install/local-language-versions-in-sql-server.md)。  
   
-     若要继续，请单击 **“下一步”**。  
+     若要继续，请单击 **“下一步”** 。  
   
 5.  在“产品密钥”页上指定产品的生产版本的 PID 密钥。 请注意，您必须针对活动节点上安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本为此安装输入产品密钥。  
   
-6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 若要继续，请单击 **“下一步”**。 若要结束安装程序，请单击 **“取消”**。  
+6.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 若要继续，请单击 **“下一步”** 。 若要结束安装程序，请单击 **“取消”** 。  
   
 7.  系统配置检查器将在安装继续之前检验计算机的系统状态。 检查完成后，请单击 **“下一步”** 继续。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "52510894"
   
      **安全说明** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
-     为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”**。  
+     为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”** 。  
   
 10. 在“报告”页上，指定要发送到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 以改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的信息。 默认情况下，将启用用于错误报告的选项。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "52510894"
   
 13. “添加节点进度”页会提供相应的状态，因此您可以在安装过程中监视安装进度。  
   
-14. 安装完成后，“完成”页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。  
+14. 安装完成后，“完成”页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”** 。  
   
 15. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "52510894"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要从现有的故障转移群集实例中删除节点，请单击左窗格中的“维护”，然后选择“从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点”。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要从现有的故障转移群集实例中删除节点，请单击左窗格中的“维护”  ，然后选择“从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点”  。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
@@ -98,11 +97,11 @@ ms.locfileid: "52510894"
   
 5.  在“群集节点配置”页上，使用下拉框指定要在此安装操作期间修改的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的名称。 **“此节点的名称”** 字段中将列出要删除的节点。  
   
-6.  “准备删除节点”页显示您在安装期间指定的选项的树视图。 若要继续，请单击 **“删除”**。  
+6.  “准备删除节点”页显示您在安装期间指定的选项的树视图。 若要继续，请单击 **“删除”** 。  
   
 7.  在删除操作期间，“删除节点进度”页会提供删除状态。  
   
-8.  “完成”页会提供指向删除节点操作摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 删除节点操作，请单击 **“关闭”**。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+8.  “完成”页会提供指向删除节点操作摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 删除节点操作，请单击 **“关闭”** 。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

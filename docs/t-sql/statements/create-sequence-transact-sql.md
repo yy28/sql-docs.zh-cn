@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117181"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ INCREMENT BY \<constant>
 当使用 CACHE 选项创建时，意外关机（如电源故障）可能导致缓存中保留的序列号丢失  。  
   
 ## <a name="general-remarks"></a>一般备注  
- 序列号在当前事务的作用域之外生成。 无论提交还是回滚使用序列号的事务，都会占用序列号。 只有在完全填充记录后才会发生重复验证。 这可能导致在某些情况下，即在创建过程中将相同数字用于多个记录，但随后将其识别为副本。 如果发生这种情况并且其他自动编号值已应用于后续记录，则可能会导致自动编号值与预期行为之间存在差距。
+ 序列号在当前事务的作用域之外生成。 无论提交还是回滚使用序列号的事务，都会占用序列号。 只有在记录被完全填充后，才会发生重复验证。 这可能导致在某些情况下，即在创建过程中将相同数字用于多个记录，但随后将其识别为副本。 如果发生这种情况并且其他自动编号值已应用于后续记录，则可能会导致自动编号值与预期行为之间存在差距。
   
 ### <a name="cache-management"></a>缓存管理  
  为了提高性能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会预分配 CACHE 参数所指定数量的序列号  。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB, processing results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 82fc2fa7c026c62999131513d9ec44dd98940168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3cda281e8ce5bc276ff8baab6887754ba56e43a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015550"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

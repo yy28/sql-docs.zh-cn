@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7effa50d8e280cbb310b7aeadd9100e82a62a77f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: da59f10213eab84f52b764f41625d6f9361f0a40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060994"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -80,7 +79,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 指定用于加密数据库加密密钥的非对称密钥的名称。 要使用非对称密钥对数据库加密密钥进行加密，非对称密钥必须驻留在可扩展密钥管理提供程序上。  
   
 ## <a name="remarks"></a>Remarks  
-在可使用“透明数据库加密”(TDE) 加密数据库之前，需要设置一个数据库加密密钥。 以透明方式加密数据库时，将在文件级别上加密整个数据库，而无需对代码进行特殊修改。 用于加密数据库加密密钥的证书或非对称密钥必须位于 master 系统数据库中。  
+在可使用“透明数据库加密”(TDE) 加密数据库之前，需要设置一个数据库加密密钥  。 以透明方式加密数据库时，将在文件级别上加密整个数据库，而无需对代码进行特殊修改。 用于加密数据库加密密钥的证书或非对称密钥必须位于 master 系统数据库中。  
   
 只允许对用户数据库使用数据库加密语句。  
   
@@ -90,7 +89,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
   
 系统会为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据库自动创建一个数据库加密密钥。 用户无需使用 CREATE DATABASE ENCRYPTION KEY 语句创建密钥。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要数据库的 CONTROL 权限和用于加密数据库加密密钥的证书或非对称密钥的 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

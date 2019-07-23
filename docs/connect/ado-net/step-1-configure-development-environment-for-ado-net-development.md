@@ -10,33 +10,32 @@ ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3aebe9cd16901581d5fdba8cd3d8302c5af30ae
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 945d36208fc4c8858b789f7037d256902aeb92f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957630"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>步骤 1：配置用于 ADO.NET 开发的开发环境
 
 - 下一篇文章：&nbsp;&nbsp;&nbsp;[步骤 2：创建用于 ADO.NET 开发的 SQL 数据库](step-2-create-a-sql-database-for-ado-net-development.md)  
 
-## <a name="download-a-net-sql-driver"></a>下载.NET SQL 驱动程序
+## <a name="download-a-net-sql-driver"></a>下载 .NET SQL 驱动程序
 
-我们当前的代码示例使用 ADO.NET 的.NET Framework 中，为 Windows。 .NET Core 是适用于 Linux 和 MacOS （除了 Windows)。
+当前的代码示例使用 Windows .NET Framework 的 ADO.NET。 .NET Core 适用于 Linux 和 MacOS (Windows 以外)。
 
-### <a name="adonet-for-windows"></a>用于 Windows 的 ADO.NET
+### <a name="adonet-for-windows"></a>ADO.NET, 适用于 Windows
 
-1. ![下载向下箭头线圈出](../../ssdt/media/download.png)[下载并安装.NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+1. ![向下键下载](../../ssdt/media/download.png)[并安装 .NET Framework, 包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. 安装 Visual Studio Community，或类似集成开发环境 (IDE) 进行编写和编译 C# 源代码。 Microsoft 现在提供 Visual Studio Community*免费*。  
+2. 安装 Visual Studio 社区或类似的集成开发环境 (IDE) 来编写和编译C#源代码。 Microsoft 现在*免费*提供 Visual Studio 社区。  
     - [下载 Visual Studio 社区](https://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [免费 Visual Studio 的更多选项](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [用于免费 Visual Studio 的更多选项](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>用于 Linux Ubuntu 和 MacOS 的.NET core
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core, 适用于 Linux-Ubuntu 和 MacOS
 
-链接以下载.NET Core，各种操作系统，位于：
+可从以下位置获取下载适用于各种操作系统的 .NET Core 的链接:
 
-- ![下载向下箭头线圈出](../../ssdt/media/download.png)[下载并安装.NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![向下键-带圆圈的](../../ssdt/media/download.png)[下载并安装 .Net Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

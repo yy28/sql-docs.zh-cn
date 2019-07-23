@@ -1,6 +1,6 @@
 ---
 title: 表和索引 |Microsoft Docs
-description: 创建、 更改和摔表和索引使用的 SQL Server OLE DB 驱动程序
+description: 使用 SQL Server OLE DB 驱动程序创建、更改和 droping 表和索引
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8fd98f67a35985474d73225db7991aeeafb9119e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015237"
 ---
 # <a name="tables-and-indexes"></a>表和索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66801584"
   
  创建或删除表和索引的功能取决于使用者应用程序用户的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 访问权限。 删除表的功能还可以通过是否存在声明性引用完整性约束或其他因素进行进一步限制。  
   
- 大多数应用程序面向[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 SQL Server 接口而不是这些 OLE DB 驱动程序使用的 SQL-DMO。 SQL-DMO 是支持所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理功能的 OLE 自动化对象的集合。 面向多个 OLE DB 访问接口的应用程序使用多种 OLE DB 访问接口支持的通用 OLE DB 接口。  
+ 面向[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的大多数应用程序使用 sql-dmo 而不是这些 OLE DB 驱动程序来 SQL Server 接口。 SQL-DMO 是支持所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理功能的 OLE 自动化对象的集合。 面向多个 OLE DB 访问接口的应用程序使用多种 OLE DB 访问接口支持的通用 OLE DB 接口。  
   
  在特定于访问接口的 DBPROPSET_SQLSERVERCOLUMN 属性集中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定义了以下属性。  
   

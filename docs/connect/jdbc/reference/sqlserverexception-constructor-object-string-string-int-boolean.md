@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 868e14c72fbb7c32d394df2fbbdf5cd3a7c36738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971149"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 构造函数 (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  初始化的新实例[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)类在给定**对象**即**字符串**对象，**字符串**对象、 **int**，和一个**布尔**。
+  给定**对象**、**字符串**对象、**字符串**对象、 **Int**和**布尔值**时, 初始化[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)类的新实例。
 
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +41,7 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>Parameters  
  obj   
   
- IO 缓冲区生成了异常。
+ 生成异常的 IO 缓冲区。
 
  *errText*  
   
@@ -54,11 +53,11 @@ public SQLServerException(java.lang.Object obj,
  
  errNum   
   
- 一个整数，它包含异常的错误代码。
+ 一个包含异常的错误代码的 int。
  
  bStack   
   
- 一个布尔值，该值指示是否应生成堆栈跟踪。
+ 指示是否应生成堆栈跟踪的布尔值。
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerException 构造函数](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

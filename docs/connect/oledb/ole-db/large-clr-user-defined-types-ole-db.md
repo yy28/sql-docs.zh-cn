@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015219"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66795981"
 
   本主题讨论适用于 SQL Server 的 OLE DB 驱动程序中的 OLE DB 更改，它现支持大型公共语言运行时 (CLR) 用户定义类型 (UDT)。  
   
- 有关 SQL Server 的 OLE DB 驱动程序中的大型 CLR Udt 的支持的详细信息，请参阅[Large CLR User-Defined 类型](../../oledb/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR Udt &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 有关 SQL Server 的 OLE DB 驱动程序中支持大型 CLR Udt 的详细信息, 请参阅[大型 Clr 用户定义类型](../../oledb/features/large-clr-user-defined-types.md)。 有关示例, 请参阅[使用大型 CLR udt &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>数据格式  
  在适用于 SQL Server 的 OLE DB 驱动程序中，~0 表示对大型对象 (LOB) 类型而言大小不受限的值长度。 ~0 还表示大于 8,000 个字节的 CLR UDT 的大小。  
@@ -80,7 +79,7 @@ ms.locfileid: "66795981"
 |DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~0|NULL|NULL|将|DB_ALL_EXCEPT_LIKE|0|  
   
- 为 Udt 还定义以下各列：  
+ 对于 Udt, 还定义了以下列:  
   
 |列标识符|类型|描述|  
 |-----------------------|----------|-----------------|  
@@ -140,7 +139,7 @@ ms.locfileid: "66795981"
 |3|数据从二进制数据转换为十六进制字符串。|  
 |4|在使用 CreateAccessor 或 GetNextRows 时进行验证   。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
 |5|可能会使用 BY_REF。|  
-|6|UDT 参数可以绑定为 DBBINDING 中的 DBTYPE_IUNKNOWN。 如果绑定到 DBTYPE_IUNKNOWN，则表示应用程序要使用 ISequentialStream 接口将数据作为流进行处理。 当使用者指定了*wType*绑定为 DBTYPE_IUNKNOWN，类型和对应的列或输出中的存储过程的参数为 UDT 时，OLE DB 驱动程序适用于 SQL Server 将返回 ISequentialStream。 查询 OLE DB 驱动程序适用于 SQL Server 将为输入参数的 ISequentialStream 接口。<br /><br /> 如果是大型 UDT，可以选择不绑定 UDT 数据的长度，而是使用 DBTYPE_IUNKNOWN 绑定。 但是，对于小型 UDT，必须绑定长度。 如果满足以下一个或多个条件，可以将 DBTYPE_UDT 参数指定为大型 UDT：<br />*ulParamParamSize*为 ~ 0。<br />在 DBPARAMBINDINFO 结构中设置了 DBPARAMFLAGS_ISLONG。<br /><br /> 对于行数据，仅允许对大型 UDT 进行 DBTYPE_IUNKNOWN 绑定。 您可以确定列的一个行集合上使用 icolumnsinfo:: Getcolumninfo 方法是为大型 UDT 类型或命令对象的 IColumnsInfo 接口。 如果满足以下一个或多个条件，DBTYPE_UDT 列即为大型 UDT 列：<br />DBCOLUMNFLAGS_ISLONG 标记是在 DBCOLUMNINFO 结构的 dwFlags 成员上设置的  。 <br />*ulColumnSize* DBCOLUMNINFO 的成员为 ~ 0。|  
+|6|UDT 参数可以绑定为 DBBINDING 中的 DBTYPE_IUNKNOWN。 如果绑定到 DBTYPE_IUNKNOWN，则表示应用程序要使用 ISequentialStream 接口将数据作为流进行处理。 当使用者在绑定中将*wType*指定为类型 DBTYPE_IUNKNOWN, 并且存储过程的相应列或输出参数为 UDT 时, SQL Server 的 OLE DB 驱动程序将返回 ISequentialStream。 对于输入参数, SQL Server 的 OLE DB 驱动程序将查询 ISequentialStream 接口的。<br /><br /> 如果是大型 UDT，可以选择不绑定 UDT 数据的长度，而是使用 DBTYPE_IUNKNOWN 绑定。 但是，对于小型 UDT，必须绑定长度。 如果满足以下一个或多个条件，可以将 DBTYPE_UDT 参数指定为大型 UDT：<br />*ulParamParamSize*为 ~ 0。<br />在 DBPARAMBINDINFO 结构中设置了 DBPARAMFLAGS_ISLONG。<br /><br /> 对于行数据，仅允许对大型 UDT 进行 DBTYPE_IUNKNOWN 绑定。 可以通过对行集或命令对象的 IColumnsInfo 接口使用 IColumnsInfo:: GetColumnInfo 方法来了解列是否为大型 UDT 类型。 如果满足以下一个或多个条件，DBTYPE_UDT 列即为大型 UDT 列：<br />DBCOLUMNFLAGS_ISLONG 标记是在 DBCOLUMNINFO 结构的 dwFlags 成员上设置的  。 <br />DBCOLUMNINFO 的*ulColumnSize*成员为 ~ 0。|  
   
  可以绑定 DBTYPE_NULL 和 DBTYPE_EMPTY 用于输入参数，但不能用于输出参数或结果。 当绑定用于输入参数时，对于 DBTYPE_NULL，状态必须设置为 DBSTATUS_S_ISNULL，对于 DBTYPE_EMPTY 则必须设置为 DBSTATUS_S_DEFAULT。 DBTYPE_BYREF 不能与 DBTYPE_NULL 或 DBTYPE_EMPTY 一起使用。  
   

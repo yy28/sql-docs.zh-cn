@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4d4cea9888f8f661160a45eeec9c002013efa0ec
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3f821e16baa3853926da1323457385365ea64807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141256"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- FILE ='path_to_file'  
- 指定存储数据库主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径。  
+ FILE ='path_to_file'   
+ 指定存储数据库主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径  。  
   
  DECRYPTION BY PASSWORD ='*password*'  
  指定对从文件中导入的数据库主密钥进行解密时所需的密码。  
   
- ENCRYPTION BY PASSWORD ='password'  
+ ENCRYPTION BY PASSWORD ='password'   
  指定用于在将数据库主密钥加载到数据库之后对该密钥进行加密的密码。  
   
  FORCE  
@@ -72,7 +71,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
  如果当前数据库中没有主密钥，则 RESTORE MASTER KEY 将创建一个主密钥。 新的主密钥不会自动使用服务主密钥进行加密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

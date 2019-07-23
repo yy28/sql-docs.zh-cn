@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994185"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行集和 SQL Server 游标
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "66803785"
   
  通过设置某些行集属性，使用者可以请求行集中的其他游标行为。 如果使用者未设置其中任一行集属性，或将其全部设置为其默认值，则适用于 SQL Server 的 OLE DB 驱动程序使用默认的结果集实现相应行集。 如果其中任一属性设置为非默认值，则适用于 SQL Server 的 OLE DB 驱动程序使用服务器游标实现相应行集。  
   
- 下面的行集属性指示用于 SQL Server 使用 OLE DB 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标。 某些属性可以安全地与其他属性组合。 例如，展示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 属性的行集将是展示立即更新行为的书签行集。 其他属性相互排斥。 例如，展示 DBPROP_OTHERINSERT 的行集不能包含书签。  
+ 以下行集属性指示 SQL Server 的 OLE DB 驱动程序使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标。 某些属性可以安全地与其他属性组合。 例如，展示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 属性的行集将是展示立即更新行为的书签行集。 其他属性相互排斥。 例如，展示 DBPROP_OTHERINSERT 的行集不能包含书签。  
   
 |属性 ID|ReplTest1|行集行为|  
 |-----------------|-----------|---------------------|  

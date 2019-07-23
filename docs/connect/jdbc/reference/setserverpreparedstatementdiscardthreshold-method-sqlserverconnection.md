@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eddf7b58456a4730ff783ab4f53a9911da06d8db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f66746b15e96f49d96b428e8cf8844eeea12a12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972917"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 指定特定的连接实例的行为。 此设置控制多少未完成准备语句丢弃之前执行调用以清理服务器上未完成的句柄，则可以每个连接未完成操作 (sp_unprepare)。 当设置为 < = 1 取消-准备关闭已准备的语句上立即执行操作。 如果值设置为 > 1 这些调用会一起批处理，以避免过于频繁调用 sp_unprepare 的开销。
+ 指定特定连接实例的行为。 此设置控制在执行在服务器上清除未完成的句柄之前, 每个连接可以完成多少个未完成的已准备语句放弃操作 (sp_unprepare)。 如果设置为 < = 1 在预定义的语句关闭时立即执行 "取消准备" 操作。 如果将该值设置为 > 1, 则这些调用将一起分批, 以避免调用 sp_unprepare 的开销过于频繁。
 
 
 ## <a name="syntax"></a>语法  
@@ -39,13 +38,13 @@ public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)
 #### <a name="parameters"></a>Parameters  
  thresholdValue   
  
- 新值**serverPreparedStatementDiscardThreshold**连接属性。  
+ **ServerPreparedStatementDiscardThreshold**连接属性的新值。  
  
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 此方法是可从 JDBC driver 6.4 及前向。
+ 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

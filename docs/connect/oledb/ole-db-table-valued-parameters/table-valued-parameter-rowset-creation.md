@@ -1,6 +1,6 @@
 ---
-title: 创建表值参数行集 |Microsoft Docs
-description: 创建静态和动态表值参数行集
+title: 表值参数行集创建 |Microsoft Docs
+description: 静态和动态表值参数行集创建
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4f894ae19a421b759870ceb597291b33fc1d2dec
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994114"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "66801101"
  表值参数行集对象由使用者通过多个会话级接口为输入参数显式创建。 每个表值参数对应一个表值参数行集对象实例。 使用者可以通过以下两种方法之一创建表值参数行集对象：提供已知的元数据信息（静态方案）；或者通过访问接口发现元数据信息（动态方案）。 以下各节介绍这两种方案。  
   
 ## <a name="static-scenario"></a>静态方案  
- 当已知的类型信息时，使用者使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 来实例化表值参数对应的表值参数行集对象。  
+ 已知类型信息时, 使用者使用 ITableDefinitionWithConstraints:: CreateTableWithConstraints 来实例化对应于表值参数的表值参数行集对象。  
   
- *Guid*字段 (*pTableID*参数) 包含特殊 GUID (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称  。 eKind 字段将设置为 DBKIND_GUID_NAME  。 使用特殊 SQL 语句时此名称是必需时，使用过程调用时可选。  
+ *Guid*字段 (*pTableID*参数) 包含特殊 guid (CLSID_ROWSET_TVP)。 pwszName 成员包含使用者要实例化的表值参数类型的名称  。 eKind 字段将设置为 DBKIND_GUID_NAME  。 使用特殊 SQL 语句时此名称是必需时，使用过程调用时可选。  
   
- 对于聚合，使用者传递*pUnkOuter*参数控制的 IUnknown。  
+ 对于聚合, 使用者将*pUnkOuter*参数传递给控制 IUnknown。  
   
  表值参数行集对象属性只读，因此使用者无需在 rgPropertySets 中设置任何属性  。  
   
@@ -42,16 +41,16 @@ ms.locfileid: "66801101"
   
  要从表值参数行集对象中检索相应的信息，使用者应使用 IRowsetInfo::GetProperties。  
   
- 若要检索信息为 null，唯一的计算，并更新每个列的状态，使用者可以使用 icolumnsrowset:: Getcolumnsrowset 或 icolumnsinfo:: Getcolumninfo。 以下方法提供有关每个表值参数行集列的详细信息。  
+ 若要检索有关每个列的 null、唯一、计算和更新状态的信息, 使用者可以使用 IColumnsRowset:: GetColumnsRowset 或 IColumnsInfo:: GetColumnInfo。 以下方法提供有关每个表值参数行集列的详细信息。  
   
- 使用者指定表值参数每一列的类型。 这类似于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建表时指定列的方式。 使用者为 SQL Server 通过从 OLE DB 驱动程序获取表值参数行集对象*ppRowset*输出参数。  
+ 使用者指定表值参数每一列的类型。 这类似于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建表时指定列的方式。 使用者通过*ppRowset* output 参数从 SQL Server 的 OLE DB 驱动程序获取表值参数行集对象。  
   
 ## <a name="dynamic-scenario"></a>动态方案  
- 当使用者不具有类型信息时，则应使用 iopenrowset:: Openrowset 来实例化表值参数行集对象。 使用者只需向访问接口提供类型名称。  
+ 当使用者不具有类型信息时, 它应使用 IOpenRowset:: OpenRowset 来实例化表值参数行集对象。 使用者只需向访问接口提供类型名称。  
   
  在此方案中，访问接口代表使用者从服务器获取有关表值参数行集对象的类型信息。  
   
- *PTableID*并*pUnkOuter*应按照静态方案设置参数。 然后，适用于 SQL Server 的 OLE DB 驱动程序从服务器中获取类型信息（列信息和约束），并通过 ppRowset 参数返回表值参数行集对象  。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
+ *PTableID*和*pUnkOuter*参数应在静态方案中设置为。 然后，适用于 SQL Server 的 OLE DB 驱动程序从服务器中获取类型信息（列信息和约束），并通过 ppRowset 参数返回表值参数行集对象  。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
   
 ## <a name="see-also"></a>另请参阅  
  [表值参数 (OLE DB)](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

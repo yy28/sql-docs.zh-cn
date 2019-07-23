@@ -1,5 +1,5 @@
 ---
-title: 使用语句与存储过程 |Microsoft Docs
+title: 使用带有存储过程的语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003938"
 ---
 # <a name="using-statements-with-stored-procedures"></a>使用带有存储过程的语句
 
@@ -33,17 +32,17 @@ ms.locfileid: "66798545"
 > [!NOTE]  
 > 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“了解存储过程”。  
   
-为了使用存储过程来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类。 要使用那个类取决于存储过程是否需要 IN（输入）或 OUT（输出）参数。 如果存储过程不需要 IN 和 OUT 参数，则可以使用 SQLServerStatement 类；如果要多次调用存储过程或仅需要 IN 参数，则可以使用 SQLServerPreparedStatement 类。 如果存储的过程同时需要 IN 和 OUT 参数，则应使用 SQLServerCallableStatement 类。 只有在存储过程仅需要 OUT 参数时，才应使用 SQLServerCallableStatement 类。  
+为了使用存储过程来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类。 要使用那个类取决于存储过程是否需要 IN（输入）或 OUT（输出）参数。 如果存储过程不需要 IN 和 OUT 参数，则可以使用 SQLServerStatement 类；如果要多次调用存储过程或仅需要 IN 参数，则可以使用 SQLServerPreparedStatement 类。 如果存储过程同时需要 IN 和 OUT 参数, 则应使用 SQLServerCallableStatement 类。 只有在存储过程仅需要 OUT 参数时，才应使用 SQLServerCallableStatement 类。  
   
 > [!NOTE]  
-> 存储过程还可以返回更新计数和多个结果集。 有关详细信息，请参阅[使用带有更新计数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)并[使用多个结果集](../../connect/jdbc/using-multiple-result-sets.md)。  
+> 存储过程还可以返回更新计数和多个结果集。 有关详细信息, 请参阅[使用带有更新计数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)和[使用多个结果集](../../connect/jdbc/using-multiple-result-sets.md)。  
   
 使用 JDBC 驱动程序调用带参数的存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 `call` 转义序列的完整语法如下：  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
-> 有关详细信息`call`和其他 SQL 转义序列，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
+> 有关`call`和其他 sql 转义序列的详细信息, 请参阅[使用 sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
   
 本部分中的主题说明使用 JDBC 驱动程序和 `call` SQL 转义序列调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程的可用方法。  
   

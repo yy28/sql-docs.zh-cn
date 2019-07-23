@@ -10,19 +10,18 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a40717a472970a0e2d463e958330e2d46473ab1
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930319"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-减少当前 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库在设备中的事务日志大小。 已对数据进行碎片整理，以便收缩事务日志。 随着时间推移，数据库事务日志可能会变得零碎且效率低下。 使用 DBCC SHRINKLOG 减少碎片并减小日志大小。
+减少当前 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库在设备中的事务日志大小  。 已对数据进行碎片整理，以便收缩事务日志。 随着时间推移，数据库事务日志可能会变得零碎且效率低下。 使用 DBCC SHRINKLOG 减少碎片并减小日志大小。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -36,15 +35,15 @@ DBCC SHRINKLOG
 ```  
   
 ## <a name="arguments"></a>参数  
-SIZE = { target_size [MB |GB |TB]} |DEFAULT。  
-target_size 是 DBCC SHRINKLOG 完成后所有计算节点上所需的事务日志大小。 它必须是大于 0 的整数。  
+SIZE = { target_size [MB |GB |TB]} |DEFAULT    。  
+target_size 是 DBCC SHRINKLOG 完成后所有计算节点上所需的事务日志大小  。 它必须是大于 0 的整数。  
 日志大小的单位为兆字节 (MB)、千兆字节 (GB) 或兆兆字节 (TB)。 它是所有计算节点上事务日志的组合大小。  
 默认情况下，DBCC SHRINKLOG 可将事务日志减小到数据库的元数据中存储的日志大小。 元数据中的日志大小是由 [CREATE DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)或 [ALTER DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)中的 LOG_SIZE 参数确定的。 已指定 `SIZE=DEFAULT` 或省略 `SIZE` 子句时，DBCC SHRINKLOG 可将事务日志大小减小到默认大小。
   
 WITH NO_INFOMSGS  
 DBCC SHRINKLOG 结果中不显示信息性消息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要 ALTER SERVER STATE 权限。
   
 ## <a name="general-remarks"></a>一般备注  

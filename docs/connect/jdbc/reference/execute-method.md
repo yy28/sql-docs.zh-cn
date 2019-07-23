@@ -1,5 +1,5 @@
 ---
-title: execute 方法 （) |Microsoft Docs
+title: execute 方法 () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7050a26a8fe98d5069cd52a58afe501bee738499
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954927"
 ---
 # <a name="execute-method-"></a>execute 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean execute()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果语句返回结果集。 **false**如果返回更新计数或无结果。  
+ 如果该语句返回一个结果集,**则为 true** 。 如果它返回更新计数或没有结果, 则**为 false** 。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0e655ac992946cfe08a8ef63c7b6b8de3f8fef45
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050837"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端点权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,35 +48,35 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对端点授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON ENDPOINT ::endpoint_name  
- 指定要授予对其的权限的端点。 需要使用作用域限定符 (::)。  
+ ON ENDPOINT ::endpoint_name    
+ 指定要授予对其的权限的端点。 需要使用作用域限定符 (::)  。  
   
  TO \<server_principal>  
  指定要对其授予权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
- SQL_Server_login  
+ SQL_Server_login   
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_Windows_login  
+ SQL_Server_login_from_Windows_login   
  指定通过 Windows 登录帐户创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_certificate  
+ SQL_Server_login_from_certificate   
  指定映射到证书的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
- SQL_Server_login_from_AsymKey  
+ SQL_Server_login_from_AsymKey   
  指定映射到非对称密钥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户的名称。  
   
  WITH GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS SQL_Server_login  
+ AS SQL_Server_login   
  指定执行此查询的主体要从哪个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名派生其授予该权限的权限。  
   
 ## <a name="remarks"></a>Remarks  
- 只有在当前数据库为 master 时，才可授予其服务器作用域内的权限。  
+ 只有在当前数据库为 master 时，才可授予其服务器作用域内的权限  。  
   
  可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目录视图中查看终结点的相关信息。 可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目录视图中查看服务器权限的相关信息，在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目录视图中查看服务器主体的相关信息。  
   
@@ -91,7 +90,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对端点的 CONTROL 权限或对服务器的 ALTER ANY ENDPOINT 权限。  
   
 ## <a name="examples"></a>示例  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939205"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "54136067"
   
 -   考虑过度规范包括大型对象 (LOB) 数据类型的表。  
   
-     发生同步时，合并代理可能需要从分发服务器或订阅服务器读取和传输整个数据行。 如果该行包含使用 LOB 的列，即使这些列可能尚未更新，此过程也会要求增加内存分配并可能对性能产生负面影响。 为减少对性能产生负面影响的可能性，可考虑将 LOB 列放在一个单独的表中并对其余的行数据采用一对一关系。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)**。  
+     发生同步时，合并代理可能需要从分发服务器或订阅服务器读取和传输整个数据行。 如果该行包含使用 LOB 的列，即使这些列可能尚未更新，此过程也会要求增加内存分配并可能对性能产生负面影响。 为减少对性能产生负面影响的可能性，可考虑将 LOB 列放在一个单独的表中并对其余的行数据采用一对一关系。 不推荐使用数据类型 **text**、 **ntext**和 **image** 。 如果确实要包括 LOB，建议分别使用数据类型 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 。  
   
 ## <a name="publication-design"></a>发布设计  
   
@@ -142,7 +141,7 @@ ms.locfileid: "54136067"
   
 -   不定期地重新对合并复制系统表建立索引。  
   
-     在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+     在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings      。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用复制监视器中的 **“同步历史记录”** 选项卡监视同步性能。  
   

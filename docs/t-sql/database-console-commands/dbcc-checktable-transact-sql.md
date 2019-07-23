@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c3c8e4e2617e3bf1cd7f5f3627aab0c9a4cf0be4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102016"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,14 +63,14 @@ DBCC CHECKTABLE
 ```    
     
 ## <a name="arguments"></a>参数    
- table_nameview_name |   
+ table_nameview_name   |    
  要进行完整性检查的表或索引视图。 表名或视图名必须符合有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
     
 NOINDEX  
  指定不应对用户表的非聚集索引执行会占用很大系统开销的检查。 这将减少总执行时间。 NOINDEX 不会影响系统表，因为完整性检查的执行对象始终是所有系统表索引。  
     
- index_id  
- 要进行完整性检查的索引标识 (ID) 号。 如果指定了 index_id，则 DBCC CHECKTABLE 只对该索引以及堆或聚集索引执行完整性检查。  
+ index_id   
+ 要进行完整性检查的索引标识 (ID) 号。 如果指定了 index_id，则 DBCC CHECKTABLE 只对该索引以及堆或聚集索引执行完整性检查  。  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  指定 DBCC CHECKTABLE 修复发现的错误。 若要使用修复选项，数据库必须处于单用户模式。  
@@ -95,7 +94,7 @@ ALL_ERRORMSGS
     
 EXTENDED_LOGICAL_CHECKS  
  如果兼容性级别为 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，则对索引视图、XML 索引和空间索引（如果存在）执行逻辑一致性检查。  
- 有关详细信息，请参阅本主题后面[备注](#remarks)部分中的“对索引执行逻辑一致性检查”。  
+ 有关详细信息，请参阅本主题后面[备注](#remarks)部分中的“对索引执行逻辑一致性检查”  。  
     
 NO_INFOMSGS  
  取消显示所有信息性消息。  
@@ -118,15 +117,15 @@ PHYSICAL_ONLY
  > 指定 PHYSICAL_ONLY 会导致 DBCC CHECKTABLE 跳过对 FILESTREAM 数据的所有检查。  
     
 DATA_PURITY  
- 使 DBCC CHECKTABLE 检查表中是否存在无效或越界的列值。 例如， DBCC CHECKTABLE 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列。  
+ 使 DBCC CHECKTABLE 检查表中是否存在无效或越界的列值。 例如， DBCC CHECKTABLE 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列   。  
  默认情况下将启用列值完整性检查，并且不需要使用 DATA_PURITY 选项。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的数据库，您可以使用 DBCC CHECKTABLE WITH DATA_PURITY 查找和更正特定表中的错误；但是，默认情况下不会对该表启用列值检查，直到 DBCC CHECKDB WITH DATA_PURITY 在数据库中正确运行时为止。 然后，DBCC CHECKDB 和 DBCC CHECKTABLE 将默认检查列值完整性。  
- 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 及更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
+ 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 若要了解如何手动更正这些错误，请参阅知识库文章 923247：[解决 SQL Server 2005 及更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
  如果指定了 PHYSICAL_ONLY，则不执行列完整性检查。  
     
 MAXDOP  
  **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
  
- 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则数据库引擎会使用资源调控器 MAXDOP 值（如 ALTER WORKLOAD GROUP (Transact-SQL) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
+ 对于语句，替代 sp_configure 的“max degree of parallelism”配置选项   。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则数据库引擎会使用资源调控器 MAXDOP 值（如 ALTER WORKLOAD GROUP (Transact-SQL) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
     
  > [!NOTE]  
  > 如果 MAXDOP 设置为零，服务器将选择最大并行度。  
@@ -144,7 +143,7 @@ MAXDOP
 -   页面偏移量是否合理。    
 -   基表的每一行是否在每个非聚集索引中具有匹配的行，以及非聚集索引的每一行是否在基表中具有匹配的行。    
 -   已分区表或索引的每一行是否都位于正确的分区中。    
--   使用 FILESTREAM 将 varbinary(max) 数据存储在文件系统中时，文件系统与表之间是否保持链接级一致性。    
+-   使用 FILESTREAM 将 varbinary(max) 数据存储在文件系统中时，文件系统与表之间是否保持链接级一致性  。    
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>对索引执行逻辑一致性检查    
 对索引进行的逻辑一致性检查因数据库兼容级别而异，如下所示：
@@ -168,8 +167,8 @@ DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的�
 > 如果对 tempdb 运行 DBCC CHECKTABLE，则必须获取一个共享表锁。 这是因为，为了提高性能，不允许对 tempdb 使用数据库快照。 这意味着，无法获得所需的事务一致性。    
     
 ## <a name="checking-and-repairing-filestream-data"></a>检查和修复 FILESTREAM 数据    
-对数据库和表启用 FILESTREAM 后，便可选择将 varbinary(max) 二进制大型对象 (BLOB) 存储在文件系统中。 对在文件系统中存储 BLOB 的表使用 DBCC CHECKTABLE 时，DBCC 会检查文件系统与数据库之间的链接级一致性。
-例如，如果表包含使用 FILESTREAM 属性的 varbinary(max) 列，则 DBCC CHECKTABLE 会检查文件系统目录和文件与表行、表列和列值之间是否存在一对一映射。 如果指定了 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKTABLE 便可修复损坏。 为了修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行，并将删除未映射到表行、表列或列值的任何目录和文件。
+对数据库和表启用 FILESTREAM 后，便可选择将 varbinary(max) 二进制大型对象 (BLOB) 存储在文件系统中  。 对在文件系统中存储 BLOB 的表使用 DBCC CHECKTABLE 时，DBCC 会检查文件系统与数据库之间的链接级一致性。
+例如，如果表包含使用 FILESTREAM 属性的 varbinary(max) 列，则 DBCC CHECKTABLE 会检查文件系统目录和文件与表行、表列和列值之间是否存在一对一映射  。 如果指定了 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKTABLE 便可修复损坏。 为了修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行，并将删除未映射到表行、表列或列值的任何目录和文件。
     
 ## <a name="checking-objects-in-parallel"></a>并行检查对象    
 默认情况下，DBCC CHECKTABLE 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置方式与并行查询相同。 若要限制 DBCC 检查可使用的处理器的最大数目，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
@@ -187,11 +186,11 @@ DBCC CHECKTABLE 命令完成后，将向 [!INCLUDE[ssNoVersion](../../includes/s
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|    
 |2|在紧急模式数据库修复过程中出错。|    
 |3|这指示导致 DBCC 命令终止的元数据损坏。|    
-|4|检测到断定或访问违规。|    
+|4|检测到断言或访问违规。|    
 |5|出现终止了 DBCC 命令的未知错误。|    
     
 ## <a name="error-reporting"></a>错误报告    
-只要 DBCC CHECKTABLE 检测到损坏错误，就会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建一个微型转储文件 (`SQLDUMP*nnnn*.txt`)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
+只要 DBCC CHECKTABLE 检测到损坏错误，就会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建一个微型转储文件 (`SQLDUMP*nnnn*.txt`)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]   。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
 转储文件包含 DBCC CHECKTABLE 命令的结果以及其他诊断输出数据。 该文件拥有任意访问控制列表 (DACL)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员有权进行访问。 默认情况下，sysadmin 角色包含 Windows BUILTIN\Administrators 组和本地管理员组的所有成员。 如果数据收集进程失败，DBCC 命令不会失败。
     
 ## <a name="resolving-errors"></a>纠正错误    
@@ -217,7 +216,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
 ```    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>权限    
 用户必须是表所有者，或者是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员。    
     
 ## <a name="examples"></a>示例    

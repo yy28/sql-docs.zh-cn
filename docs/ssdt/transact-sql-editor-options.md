@@ -27,13 +27,12 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110636"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 编辑器选项
 本主题包含有关 Transact-SQL 编辑器的一些选项的信息。 要设置这些选项，请通过“工具\选项”  菜单导航到“选项”  对话框。  

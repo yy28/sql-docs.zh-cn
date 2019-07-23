@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 078cf2cefbf57e07d50329767b2a3bc1f55b8aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978669"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public int getTransactionIsolation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getTransactionIsolation 方法由 java.sql.Connection 接口中的 getTransactionIsolation 方法指定。  
+ 此 getTransactionIsolation 方法由 getTransactionIsolation 方法在 sql 连接接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

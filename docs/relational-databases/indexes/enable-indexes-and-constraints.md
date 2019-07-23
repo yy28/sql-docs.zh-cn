@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b1666c57bf13b8eba0f76c717ae585ddc0ae110
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107111"
 ---
 # <a name="enable-indexes-and-constraints"></a>启用索引和约束
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,10 +73,10 @@ ms.locfileid: "53979623"
 
 -   重新生成禁用的压缩非聚集索引时，data_compression 默认为“none”，表示该索引要解压缩。 这是因为禁用非聚集索引后，压缩设置元数据会丢失。 要解决此问题，必须在重新生成语句中指定显式数据压缩。
 
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- 要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表；或者是 sysadmin 固定服务器角色的成员；或者是 db_ddladmin 和 db_owner 固定数据库角色的成员。  
+####  <a name="Permissions"></a> 权限  
+ 要求对表或视图具有 ALTER 权限。 如果使用 DBCC DBREINDEX，用户必须拥有该表；或者是 sysadmin  固定服务器角色的成员；或者是 db_ddladmin  和 db_owner  固定数据库角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -91,9 +90,9 @@ ms.locfileid: "53979623"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要启用的索引，然后选择“重新生成”。  
+5.  右键单击要启用的索引，然后选择  “重新生成”。  
   
-6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。  
+6.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。  
   
 #### <a name="to-enable-all-indexes-on-a-table"></a>为表启用所有索引  
   
@@ -103,9 +102,9 @@ ms.locfileid: "53979623"
   
 3.  单击加号以便展开您要启用索引的表。  
   
-4.  右键单击“索引”文件夹，然后选择“全部重新生成”。  
+4.  右键单击  “索引”文件夹，然后选择  “全部重新生成”。  
   
-5.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要重新生成的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
+5.  在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。 若要从 **“要重新生成的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
  在 **“重新生成索引”** 对话框中将提供以下信息：  
   
@@ -115,9 +114,9 @@ ms.locfileid: "53979623"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -134,9 +133,9 @@ ms.locfileid: "53979623"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -155,9 +154,9 @@ ms.locfileid: "53979623"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   
@@ -172,9 +171,9 @@ ms.locfileid: "53979623"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -190,9 +189,9 @@ ms.locfileid: "53979623"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   

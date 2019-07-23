@@ -1,5 +1,5 @@
 ---
-title: Shared Memory 属性 |Microsoft Docs
+title: 共享内存属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: ebcf13f70fd783af3ed49a4f40e29fd0beb8d809
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 17a251e25eaf02ee0733f6d00a077bd4706db29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058336"
 ---
 # <a name="shared-memory-properties"></a>shared memory 属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
