@@ -15,20 +15,19 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 64654f5ba2f4356a4bb6efad5455ca4610689f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015214"
 ---
 # <a name="stored-procedures"></a>存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  存储的过程 ([存储过程&#40;数据库引擎&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持：  
+  存储过程 ([存储过程&#40;数据库引擎&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持：  
   
 -   存储过程  
   

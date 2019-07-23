@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85bb1bcc-31ae-4f6b-a103-699724bbb0aa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f722d457bd56184df4d8dea3e0616e7a4370c94d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e860068224d879d8c8e56773c7a61bd7addbe445
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969530"
 ---
 # <a name="supportscorrelatedsubqueries-method-sqlserverdatabasemetadata"></a>supportsCorrelatedSubqueries 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCorrelatedSubqueries()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsCorelatedSubqueries 方法由 java.sql.DatabaseMetaData 接口中的 supportsCorelatedSubqueries 方法指定。  
+ 此 supportsCorelatedSubqueries 方法由 supportsCorelatedSubqueries 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

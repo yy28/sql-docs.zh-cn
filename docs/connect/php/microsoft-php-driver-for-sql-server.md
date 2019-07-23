@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936347"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Microsoft Drivers for PHP for SQL Server 启用与 SQL Server 的 PHP 应用程序的集成。 驱动程序是允许读取和写入从 PHP 脚本内的 SQL Server 数据的 PHP 扩展插件。 驱动程序提供在 Azure SQL 数据库中以及所有版本的 SQL Server 2005 和更高版本 （包括 Express Edition) 的数据访问接口。 使用 PHP 功能，包括 PHP 流读取和写入大型对象，请将驱动程序。  
+适用于 PHP for SQL Server 的 Microsoft 驱动程序支持与 PHP 应用程序 SQL Server 集成。 驱动程序是 PHP 扩展, 允许从 PHP 脚本内读取和写入 SQL Server 数据。 驱动程序提供用于访问 Azure SQL 数据库和所有版本的 SQL Server 2005 及更高版本 (包括 Express Edition) 中的数据的接口。 驱动程序利用 PHP 功能 (包括 PHP 流) 来读取和写入大型对象。  
   
 ## <a name="getting-started"></a>入门  
 * [步骤 1：配置用于 PHP 开发的开发环境](step-1-configure-development-environment-for-php-development.md)  
@@ -40,12 +39,12 @@ Microsoft Drivers for PHP for SQL Server 启用与 SQL Server 的 PHP 应用程�
 * [Microsoft Drivers for PHP for SQL Server 的支持资源](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>下载  
-* ![下载向下箭头线圈出](../../ssdt/media/download.png)[若要下载驱动程序 for PHP for SQL](download-drivers-php-sql-server.md)
+* ![向下键-带圆圈的](../../ssdt/media/download.png)[下载用于 PHP FOR SQL 的驱动程序](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>示例  
 * [Microsoft Driver for PHP for SQL Server 代码示例](code-samples-for-php-sql-driver.md)
-* [开始使用 Windows 上的 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [MacOS 上开始使用 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [在 Ubuntu 上与 PHP 入门](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [开始使用 Red Hat Enterprise Linux (RHEL) 上的 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [开始使用 SUSE Linux Enterprise Server (SLES) 上的 PHP](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [Windows 上的 PHP 入门](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [MacOS 上的 PHP 入门](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [Ubuntu 上的 PHP 入门](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) 上具有 PHP 的入门](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
+* [在 SUSE Linux Enterprise Server 上入门 PHP (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

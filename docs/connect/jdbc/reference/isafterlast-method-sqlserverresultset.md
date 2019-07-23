@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 505b96129c6d37bbadc464cf45a9ebec8d48f1f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977847"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>isAfterLast 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isAfterLast()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果游标在最后一行之后。 **false**如果游标在任何其他位置或结果集不包含任何行。  
+ 如果光标位于最后一行之后,**则为 true** 。 如果游标位于任何其他位置, 或者如果结果集不包含任何行, 则**为 false** 。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 isAfterLast 方法由 java.sql.ResultSet 接口中的 isAfterLast 方法指定。  
+ 此 isAfterLast 方法由 isAfterLast 方法在方法中指定。  
   
  如果将此方法用于动态游标（包括只进只读游标）且将 selectMethod 连接属性设置为“cursor”，会引发异常。  
   

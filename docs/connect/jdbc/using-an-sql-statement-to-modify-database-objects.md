@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 257dba1d93b2a22838cf7c3c631f65a29d517157
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 28c71784f8e51600aef111649b12f81b5878b324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916387"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>使用 SQL 语句修改数据库对象
 
@@ -27,7 +26,7 @@ ms.locfileid: "66790250"
 若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法创建一个 SQLServerStatement 对象。
 
 > [!NOTE]  
-> 修改数据库中对象的 SQL 语句称为“数据定义语言 (Data Definition Language, DDL)”语句。 这些包括语句如下所述`CREATE TABLE`， `DROP TABLE`， `CREATE INDEX`，和`DROP INDEX`。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 DDL 语句类型的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。
+> 修改数据库中对象的 SQL 语句称为“数据定义语言 (Data Definition Language, DDL)”语句。 `CREATE TABLE`其中包括`DROP TABLE` 、、和`DROP INDEX`之类的语句。 `CREATE INDEX` 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 DDL 语句类型的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。
 
 在下面的实例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，并构造一条用于在数据库中创建简单的 TestTable 的 SQL 语句，然后运行该语句并显示返回值。
 

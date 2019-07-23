@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bf755ccfe5a1a6816129173dcb6ad5050ea5e114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213328"
+---
 
 ## <a name="add-a-database-to-the-availability-group"></a>将数据库添加到可用性组
 
@@ -7,7 +15,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1]
-   TO DISK = N'/var/opt/mssql/data/db1.bak';
+   TO DISK = N'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\db1.bak';
 ```
 
 若要将名为 `db1` 的数据库添加到名为 `ag1` 的可用性组中，请在主 SQL Server 副本上运行以下 Transact-SQL 脚本：

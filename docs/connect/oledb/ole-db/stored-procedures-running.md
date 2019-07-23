@@ -1,5 +1,5 @@
 ---
-title: 运行存储的过程 (OLE DB) |Microsoft Docs
+title: 运行存储过程 (OLE DB) |Microsoft Docs
 description: 运行存储过程 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993805"
 ---
 # <a name="stored-procedures---running"></a>存储过程 - 运行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66795897"
   
 -   增加功能。  
   
- 适用于 SQL Server 的 OLE DB 驱动程序支持三种机制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]存储的过程用于返回数据：  
+ SQL Server 的 OLE DB 驱动程序支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]存储过程用于返回数据的三个机制:  
   
 -   过程中的每一条 SELECT 语句都生成一个结果集。  
   
