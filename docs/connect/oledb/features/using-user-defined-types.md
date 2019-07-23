@@ -1,6 +1,6 @@
 ---
 title: 使用用户定义类型 |Microsoft Docs
-description: SQL Server 的 OLE DB 驱动程序与使用用户定义类型
+description: 将用户定义类型与 SQL Server 的 OLE DB 驱动程序一起使用
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988805"
 ---
 # <a name="using-user-defined-types"></a>使用用户定义类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,18 +44,18 @@ ms.locfileid: "66802858"
 >  IRowsetFind::FindNextRow 方法不适用于 UDT 数据类型  。 如果将 UDT 用作搜索列类型，则返回 DB_E_BADCOMPAREOP。  
   
 ### <a name="data-bindings-and-coercions"></a>数据绑定和强制  
- 下表说明将所列数据类型与某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 一同使用时出现的绑定和强制。 UDT 列是通过 OLE DB 驱动程序中适用于 SQL Server 公开为 DBTYPE_UDT。 可以通过适当的架构行集获取元数据，这样即可将您自行定义的类型作为对象来管理。  
+ 下表说明将所列数据类型与某一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 一同使用时出现的绑定和强制。 使用 SQL Server 的 OLE DB 驱动程序公开 UDT 列作为 DBTYPE_UDT。 可以通过适当的架构行集获取元数据，这样即可将您自行定义的类型作为对象来管理。  
   
 |数据类型|到服务器<br /><br /> **UDT**|到服务器<br /><br /> **non-UDT**|从服务器<br /><br /> **UDT**|从服务器<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|支持<sup>6</sup>|错误<sup>1</sup>|支持<sup>6</sup>|错误<sup>5</sup>|  
-|DBTYPE_BYTES|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|不支持|N/A<sup>2</sup>|不支持|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|支持<sup>6</sup>|不适用<sup>2</sup>|支持<sup>6</sup>|不适用<sup>2</sup>|  
+|DBTYPE_WSTR|支持<sup>3、6</sup>|不适用<sup>2</sup>|支持<sup>4、6</sup>|不适用<sup>2</sup>|  
+|DBTYPE_BSTR|支持<sup>3、6</sup>|不适用<sup>2</sup>|支持<sup>4</sup>|不适用<sup>2</sup>|  
+|DBTYPE_STR|支持<sup>3、6</sup>|不适用<sup>2</sup>|支持<sup>4、6</sup>|不适用<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|不支持|不适用<sup>2</sup>|不支持|不适用<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|不适用<sup>2</sup>|支持<sup>4</sup>|不适用<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3、6</sup>|不适用<sup>2</sup>|N/A|不适用<sup>2</sup>|  
   
  <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定 DBTYPE_UDT 之外的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错（DB_E_ERRORSOCCURRED；参数状态为 DBSTATUS_E_BADACCESSOR）  。 否则，数据发送到服务器，但服务器会返回错误，指明不存在将 UDT 转换为参数的数据类型的隐式转换。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66802858"
  OLE DB 核心服务 (IDataConvert) 提供的数据转换不适用于 DBTYPE_UDT  。 不支持其他绑定。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行集的添加和更改内容  
- OLE DB 驱动程序适用于 SQL Server 添加了新值，或将更改为许多核心 OLE DB 架构行集。  
+ SQL Server 的 OLE DB 驱动程序将新值或更改添加到许多核心 OLE DB 架构行集。  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS 架构行集  
  在 PROCEDURE_PARAMETERS 架构行集中添加了以下内容。  
@@ -137,7 +136,7 @@ ms.locfileid: "66802858"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|完整类型名称 (AQN) 包括带有命名空间前缀（如果适用）的类型名称。|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 属性集的添加和更改内容  
- OLE DB 驱动程序适用于 SQL Server 添加了新值或更改许多核心 OLE DB 属性集。  
+ OLE DB 的 SQL Server 驱动程序将添加新值或对许多核心 OLE DB 属性集的更改。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为通过 OLE DB 支持 UDT，适用于 SQL Server 的 OLE DB 驱动程序实现新的 DBPROPSET_SQLSERVERPARAMETER 属性集，该属性集包含以下值：  
@@ -173,7 +172,7 @@ ms.locfileid: "66802858"
  如果 UDT 定义位于不同的数据库中，则必须指定 SSPROP_COL_UDT_CATALOGNAME 和 SSPROP_COL_UDT_SCHEMANAME。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 接口的添加和更改内容  
- OLE DB 驱动程序适用于 SQL Server 添加了新值，或将更改为许多核心 OLE DB 接口。  
+ OLE DB 的 SQL Server 驱动程序将新值或更改添加到许多核心 OLE DB 接口。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
  为通过 OLE DB 支持 UDT，适用于 SQL Server 的 OLE DB 驱动程序字符串实现了大量更改，包括添加 ISSCommandWithParameters 接口  。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供 GetParameterProperties 和 SetParameterProperties 方法，它们用于处理服务器特定的数据类型        。  

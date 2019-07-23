@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064795"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>连接字符串和权限概述
 若要运行 SQL Server 单元测试，必须通过使用一个或两个特定连接字符串来连接数据库服务器。 每个连接字符串均表示一个具有特定权限的帐户，您必须具有相关权限才能在特定脚本中执行作为测试的一部分的某个任务/某一组任务。 可以在“SQL Server 测试配置”  对话框中指定这些字符串，或者通过手动编辑测试项目的 app.config 文件来指定这些字符串。  

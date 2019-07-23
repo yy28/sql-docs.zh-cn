@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993528"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-使用 SQLSRV 驱动程序时[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，可以检索日期和时间类型 (**smalldatetime**， **datetime**，**日期**，**时间**， **datetime2**，和**datetimeoffset**) 为通过指定以下选项在连接字符串中或在语句级别的字符串：
+使用的 SQLSRV 驱动程序[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]时, 可以通过指定以下各项, 以字符串形式检索日期和时间类型 (**smalldatetime**、 **datetime**、 **date**、 **time**、 **datetime2**和**datetimeoffset**)选项在连接字符串中或在语句级别:
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-默认值是 false  ，这意味着 smalldatetime  、datetime  、date  、time  、datetime2  和 datetimeoffset  类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别上设置此选项，它将覆盖连接级别设置。
+默认值是 false  ，这意味着 smalldatetime  、datetime  、date  、time  、datetime2  和 datetimeoffset  类型将返回为 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 对象。 如果在语句级别设置了此选项, 则它将替代连接级别设置。
 
-PDO_SQLSRV 驱动程序默认情况下返回以字符串形式的日期和时间类型。 若要检索这些作为 PHP DateTime 对象，请参阅[如何： 检索日期和时间类型作为 PHP Datetime 对象使用 PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+默认情况下, PDO_SQLSRV 驱动程序以字符串的形式返回日期和时间类型。 若要将它们作为 PHP DateTime 对象进行检索, 请参阅[如何: 使用 PDO_SQLSRV 将日期和时间类型作为 Php Datetime 对象进行检索](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
 ## <a name="example"></a>示例
 以下示例演示的语法可用于指定要以字符串的形式检索日期和时间类型。
@@ -162,7 +161,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>示例
-在语句级别 ReturnDatesAsStrings 选项可重写相应的连接选项。
+语句级别的 ReturnDatesAsStrings 选项将重写相应的连接选项。
 
 ```php
 <?php

@@ -1,5 +1,5 @@
 ---
-title: 'Isqlservererrorinfo:: Geterrorinfo (OLE DB) |Microsoft Docs'
+title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) |Microsoft Docs'
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015440"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  返回一个指向用于 SQL Server SSERRORINFO 结构包含一个 OLE DB 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]错误详细信息。  
+  返回一个指向包含[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]错误详细信息 SQL Server SSERRORINFO 结构的 OLE DB 驱动程序的指针。  
   
  SQL Server 的 OLE DB 驱动程序定义**ISQLServerErrorInfo**错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
 
@@ -54,10 +53,10 @@ HRESULT GetErrorInfo(
  方法成功。  
   
  E_INVALIDARG  
- 任一*ppSSErrorInfo*或*ppErrorStrings*参数为 NULL。  
+ *PpSSErrorInfo*或*ppErrorStrings*参数均为 NULL。  
   
  E_OUTOFMEMORY  
- SQL Server 的 OLE DB 驱动程序无法分配足够的内存来完成该请求。  
+ SQL Server 的 OLE DB 驱动程序无法分配足够的内存来完成请求。  
   
 ## <a name="remarks"></a>Remarks  
  适用于 SQL Server 的 OLE DB 驱动程序为通过使用者传递的指针返回的 SSERRORINFO 和 OLECHAR 字符串分配内存。 当使用者不再需要访问错误数据时，使用者必须使用 IMalloc::Free 方法释放该内存  。  

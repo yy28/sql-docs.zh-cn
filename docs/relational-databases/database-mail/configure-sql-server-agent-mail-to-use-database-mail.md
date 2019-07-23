@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4c762c16a15b4e6cee20598f87c5a9ca9955eac
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134566"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51559894"
   
 -   [先决条件](#Prerequisites)  
   
--   [Security](#Security)  
+-   [安全性](#Security)  
   
 -   [使用 SQL Server Management Studio 配置 SQL Server 代理以使用数据库邮件](#SSMSProcedure)  
   
@@ -47,9 +46,9 @@ ms.locfileid: "51559894"
   
 -   将该配置文件设置为 **msdb** 数据库的默认配置文件。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  创建配置文件帐户和执行存储过程的用户应是 sysadmin 固定服务器角色的成员。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -57,13 +56,13 @@ ms.locfileid: "51559894"
   
 -   在对象资源管理器中，展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
--   右键单击“SQL Server 代理”，然后单击“属性”。  
+-   右键单击“SQL Server 代理”  ，然后单击“属性”  。  
   
--   单击 **“警报系统”**。  
+-   单击 **“警报系统”** 。  
   
--   选择 **“启用邮件配置文件”**。  
+-   选择 **“启用邮件配置文件”** 。  
   
--   在 **“邮件系统”** 列表中，选择 **“数据库邮件”**。  
+-   在 **“邮件系统”** 列表中，选择 **“数据库邮件”** 。  
   
 -   在 **“邮件配置文件列表”** 中，为数据库邮件选择一个邮件配置文件。  
   

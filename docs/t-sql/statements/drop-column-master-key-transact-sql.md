@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 89ff78ad0c8cd82b4235adaa247a34a4a6442db5
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 6d3be4cb1c92f964d914c782abfa6a46caf47a48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073155"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,14 +41,14 @@ DROP COLUMN MASTER KEY key_name;
 ```  
   
 ## <a name="arguments"></a>参数  
- key_name  
+ key_name   
  列主密钥名称。  
   
 ## <a name="remarks"></a>Remarks  
  只有在没有任何使用列主密钥加密的列加密密钥值的情况下，才能删除列主密钥。 若要删除列加密密钥值，请使用 [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 语句。  
   
-## <a name="permissions"></a>Permissions  
- 需要对数据库具有 ALTER ANY COLUMN MASTER KEY 权限。  
+## <a name="permissions"></a>权限  
+ 需要对数据库具有 ALTER ANY COLUMN MASTER KEY 权限  。  
   
 ## <a name="examples"></a>示例  
   

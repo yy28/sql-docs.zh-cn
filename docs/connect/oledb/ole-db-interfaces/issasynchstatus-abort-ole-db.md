@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) |Microsoft Docs'
+title: 'ISSAsynchStatus:: Abort (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 36a8f97580176b4999d8429fb18c9b20da9285d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015435"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ HRESULT Abort(
  要中止其操作的章节的句柄。 如果所调用的对象不是行集对象或者操作不应用于章节，则调用方必须将 hChapter 设置为 DB_NULL_HCHAPTER  。  
   
  eOperation[in]   
- 要中止的操作。 应使用以下值：  
+ 要中止的操作。 应使用以下值:  
   
  DBASYNCHOP_OPEN - 要取消的请求应用于行集的异步打开或填充，或应用于数据源对象的异步初始化。  
   
@@ -62,7 +61,7 @@ HRESULT Abort(
  发生了特定于访问接口的错误。  
   
  E_INVALIDARG  
- *HChapter*参数不是 DB_NULL_HCHAPTER 或者*eOperation*并不是 DBASYNCH_OPEN。  
+ *HChapter*参数不是 DB_NULL_HCHAPTER 或*eOperation* DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
  已对尚未调用或尚未完成 IDBInitialize::Initialize 的数据源对象调用 ISSAsynchStatus::Abort   。  

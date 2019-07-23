@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008894"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -59,7 +58,7 @@ SET QUOTED_IDENTIFIER ON
 
 当 SET QUOTED_IDENTIFIER 为 ON 时，标识符可以由双引号分隔，而文字必须由单引号分隔。 当 SET QUOTED_IDENTIFIER 为 OFF 时，标识符不可加引号，且必须符合所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符规则。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。 文字可以由单引号或双引号分隔。
 
-当 SET QUOTED_IDENTIFIER 为 ON（默认值）时，由双引号分隔的所有字符串都被解释为对象标识符。 因此，加引号的标识符不必符合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符规则。 它们可以是保留关键字，并且可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符中通常不允许的字符。 不能使用双引号分隔文字字符串表达式，而必须用单引号括住文字字符串。 如果单引号 (') 是文本字符串的一部分，则可用两个单引号 ('') 表示。 当对数据库中的对象名使用保留关键字时，SET QUOTED_IDENTIFIER 必须为 ON。
+当 SET QUOTED_IDENTIFIER 为 ON（默认值）时，由双引号分隔的所有字符串都被解释为对象标识符。 因此，加引号的标识符不必符合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符规则。 它们可以是保留关键字，并且可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符中通常不允许的字符。 不能使用双引号分隔文字字符串表达式，而必须用单引号括住文字字符串。 如果单引号 (') 是文本字符串的一部分，则可用两个单引号 ('') 表示。   当对数据库中的对象名使用保留关键字时，SET QUOTED_IDENTIFIER 必须为 ON。
 
 当 SET QUOTED_IDENTIFIER 为 OFF 时，表达式中的文字字符串可以由单引号或双引号分隔。 如果文字字符串由双引号分隔，则可以在字符串中包含嵌入式单引号，如省略号。
 
@@ -89,7 +88,7 @@ SET QUOTED_IDENTIFIER 在分析时生效，只会影响分析，不影响查询�
 
 对于使用 sp_executesql 或 exec() 的嵌套批处理，使用会话的 QUOTED_IDENTIFIER 设置开始进行分析。 如果嵌套批处理在存储过程内，则使用存储过程的 QUOTED_IDENTIFIER 设置开始进行分析。 分析嵌套批处理时，只要出现 SET QUOTED_IDENTIFIER，就会改变之后的分析行为，但不会更新会话的 QUOTED_IDENTIFIER 设置。
 
-QUOTED_IDENTIFIER 设置不影响使用括号 [ 和 ] 分隔标识符。
+QUOTED_IDENTIFIER 设置不影响使用括号 [ 和 ] 分隔标识符。  
 
 要查看此设置的当前设置，请运行以下查询。
 

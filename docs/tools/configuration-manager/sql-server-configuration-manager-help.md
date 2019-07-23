@@ -13,20 +13,19 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2610106e0ab691af885bb8eb3c1d62555db7f56f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024094"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 配置管理器帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器可以配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务和网络连接。 若要创建或管理数据库对象、配置安全性以及编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
 
  > [!TIP]
- > 如果你需要配置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Linux 上，使用**mssql conf**工具。 有关详细信息，请参阅[使用 mssql-con 工具配置 Linux 上的 SQL Server](../../linux/sql-server-linux-configure-mssql-conf.md)。
+ > 如果需要在 Linux 上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进行配置, 请使用**mssql 会议**工具。 有关详细信息，请参阅[使用 mssql-con 工具配置 Linux 上的 SQL Server](../../linux/sql-server-linux-configure-mssql-conf.md)。
 
  本节包含了按 F1 后看到的有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中各对话框的帮助主题。  
   
