@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061031"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,22 +52,22 @@ WITH IDENTITY = 'identity_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- credential_name  
- 指定要创建的凭据的名称。 credential_name 不能以数字符号 (#) 开头。 系统凭据以 ## 开头。  使用共享访问签名 (SAS) 时，该名称必须与容器路径匹配，以 https 开头并且不能包含正斜杠。 请参见下面的示例 D。  
+ credential_name   
+ 指定要创建的凭据的名称。 credential_name 不能以数字符号 (#) 开头  。 系统凭据以 ## 开头。  使用共享访问签名 (SAS) 时，该名称必须与容器路径匹配，以 https 开头并且不能包含正斜杠。 请参见下面的示例 D。  
   
- IDENTITY **='**_identity\_name_**'**  
- 指定从服务器外部进行连接时要使用的帐户名称。 当凭据用于访问 Azure Key Vault 时，IDENTITY 是该密钥保管库的名称。 请参阅以下示例 C。 凭据使用共享访问签名 (SAS) 时，IDENTITY 是 SHARED ACCESS SIGNATURE。 请参见下面的示例 D。  
+ IDENTITY **='** _identity\_name_ **'**  
+ 指定从服务器外部进行连接时要使用的帐户名称。 当凭据用于访问 Azure Key Vault 时，IDENTITY 是该密钥保管库的名称  。 请参阅以下示例 C。 凭据使用共享访问签名 (SAS) 时，IDENTITY 是 SHARED ACCESS SIGNATURE   。 请参见下面的示例 D。  
  
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持 Azure Key Vault 和共享访问签名标识。 不支持 Windows 用户标识。
  
- SECRET = 'secret'  
+ SECRET = 'secret'     
  指定发送身份验证所需的机密内容。  
   
- 当该凭据用于访问 Azure Key Vault 时，CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 Azure Active Directory 中服务主体的 \<Secret> 一起传递，且二者之间不留空格。 请参阅以下示例 C。 凭据使用共享访问签名时，SECRET 是共享访问签名令牌。 请参见下面的示例 D。  有关如何在 Azure 容器上创建存储访问策略和共享访问签名的信息，请参阅[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
+ 当该凭据用于访问 Azure Key Vault 时，CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 Azure Active Directory 中服务主体的 \<Secret> 一起传递，且二者之间不留空格      。 请参阅以下示例 C。 凭据使用共享访问签名时，SECRET 是共享访问签名令牌  。 请参见下面的示例 D。  有关如何在 Azure 容器上创建存储访问策略和共享访问签名的信息，请参阅[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
   
- FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name  
- 指定企业密钥管理提供程序 (EKM) 的名称。 有关密钥管理的详细信息，请参阅[可扩展密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
+ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name   
+ 指定企业密钥管理提供程序 (EKM) 的名称  。 有关密钥管理的详细信息，请参阅[可扩展密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -82,8 +81,8 @@ WITH IDENTITY = 'identity_name'
   
  一个登录名可以有多个映射的凭据，只要它们用于不同的提供程序即可。 每个登录名的每个提供程序只能有一个映射的凭据。 相同的凭据可以映射到其他登录名。  
   
-## <a name="permissions"></a>Permissions  
- 需要 ALTER ANY CREDENTIAL 权限。  
+## <a name="permissions"></a>权限  
+ 需要 ALTER ANY CREDENTIAL 权限  。  
   
 ## <a name="examples"></a>示例  
   
@@ -97,7 +96,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-credential-for-ekm"></a>B. 创建用于 EKM 的凭据  
- 下面的示例使用一个名为 `User1OnEKM` 的帐户，它是以前通过 EKM 的管理工具在 EKM 模块中创建的，并带有一个基本帐户类型和密码。 服务器上的 sysadmin 帐户创建用于连接到 EKM 帐户的凭据，并将其分配给 `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户：  
+ 下面的示例使用一个名为 `User1OnEKM` 的帐户，它是以前通过 EKM 的管理工具在 EKM 模块中创建的，并带有一个基本帐户类型和密码。 服务器上的 sysadmin 帐户创建用于连接到 EKM 帐户的凭据，并将其分配给 `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户  ：  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  
@@ -116,10 +115,10 @@ GO
 ```  
   
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. 使用 Azure 密钥保管库创建用于 EKM 的凭据  
- 下面的示例使用了用于 Microsoft Azure Key Vault 的 SQL Server 连接器，创建了供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 访问 Azure Key Vault 时使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接器的完整示例，请参阅[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
+ 下面的示例使用了用于 Microsoft Azure Key Vault 的 SQL Server 连接器，创建了供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 访问 Azure Key Vault 时使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据  。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接器的完整示例，请参阅[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
 > [!IMPORTANT]  
->  **CREATE CREDENTIAL** 的 **IDENTITY** 参数需要 key vault 名称。 CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 \<Secret> 一起传递，且二者之间不留空格。  
+>  **CREATE CREDENTIAL** 的 **IDENTITY** 参数需要 key vault 名称。 CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 \<Secret> 一起传递，且二者之间不留空格     。  
   
  在下例中， **客户端 ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) 去掉了连字符，并输入为字符串 `EF5C8E094D2A4A769998D93440D8115D` ，而 **Secret** 则表示为字符串 *SECRET_DBEngine*。  
   
@@ -131,7 +130,7 @@ CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;  
 ```  
   
- 下面的示例使用客户端 ID 和 Secret 字符串的变量创建相同的凭据，然后将其连接在一起形成 SECRET 参数。 REPLACE 函数用于从客户端 ID 中删除连字符。  
+ 下面的示例使用客户端 ID 和 Secret 字符串的变量创建相同的凭据，然后将其连接在一起形成 SECRET 参数    。 REPLACE 函数用于从客户端 ID 中删除连字符  。  
   
 ```  
 DECLARE @AuthClientId uniqueidentifier = 'EF5C8E09-4D2A-4A76-9998-D93440D8115D';  
@@ -144,14 +143,14 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ```  
   
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 令牌创建凭据  
- 适用于：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ 适用于：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)  。  
   
  下面的示例使用 SAS 令牌创建共享访问签名凭据。  若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及使用共享访问签名创建凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
->  CREDENTIAL NAME 参数需要名称与容器路径匹配，以 https 开头并且末尾不包含正斜杠。 IDENTITY 参数需要名称 SHARED ACCESS SIGNATURE。 SECRET 参数需要共享访问签名令牌。  
+>  CREDENTIAL NAME 参数需要名称与容器路径匹配，以 https 开头并且末尾不包含正斜杠  。 IDENTITY 参数需要名称 SHARED ACCESS SIGNATURE   。 SECRET 参数需要共享访问签名令牌  。  
 >
->  共享访问签名密钥不应具有前导值？。
+>  共享访问签名密钥  不应具有前导值？  。
   
 ```  
 USE master  

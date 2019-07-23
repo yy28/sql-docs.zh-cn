@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c61ba41037065c49e4a6e49a5cd0adc3b760a10
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016440"
 ---
 # <a name="delete-unique-constraints"></a>删除唯一约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,32 +43,32 @@ ms.locfileid: "53589591"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>使用对象资源管理器删除唯一约束  
   
-1.  在对象资源管理器中，展开包含唯一约束的表，再展开 **“约束”**。  
+1.  在对象资源管理器中，展开包含唯一约束的表，再展开 **“约束”** 。  
   
-2.  右键单击该键，然后选择“删除”。  
+2.  右键单击该键，然后选择“删除”  。  
   
-3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，确认指定了正确的键，然后单击 **“确定”** 。  
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>使用表设计器删除唯一约束  
   
-1.  在“对象资源管理器”中，右键单击具有唯一约束的表，然后单击“设计”。  
+1.  在“对象资源管理器”  中，右键单击具有唯一约束的表，然后单击“设计”  。  
   
-2.  在“表设计器”菜单上，单击“索引/键”。  
+2.  在“表设计器”  菜单上，单击“索引/键”  。  
   
-3.  在“索引/键”对话框中，从“选定的主键/唯一键和索引”列表中选择唯一键。  
+3.  在“索引/键”  对话框中，从“选定的主键/唯一键和索引”  列表中选择唯一键。  
   
-4.  单击 **“删除”**。  
+4.  单击 **“删除”** 。  
   
-5.  在“文件”菜单上，单击“保存”表格名称。  
+5.  在“文件”  菜单上，单击“保存”  表格名称  。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -77,9 +76,9 @@ ms.locfileid: "53589591"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     -- Return the name of unique constraint.  

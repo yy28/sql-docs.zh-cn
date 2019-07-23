@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 1bc364890a2bb678b8ad9ef5dad5238656443acf
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040604"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>参数  
-trace#  
+trace#   
 要打开的跟踪标记的编号。  
   
 *n*  
@@ -56,8 +55,8 @@ WITH NO_INFOMSGS
   
 ## <a name="remarks"></a>Remarks  
 在生产服务器上，为了避免意外行为，建议您使用下列方法之一，仅在服务器范围内启用跟踪标记。
--   使用 Sqlservr.exe 的 -T 命令行启动选项。 这是推荐的最佳实践，因为这样可确保在所有语句运行时使用已启用的跟踪标志。 这些语句包括启动脚本中的命令。 有关详细信息，请参阅 [sqlservr Application](../../tools/sqlservr-application.md)。  
--   仅在用户或应用程序未对系统以并行方式运行语句时，才使用 DBCC TRACEON (trace# [, ....n],-1)。  
+-   使用 Sqlservr.exe 的 -T 命令行启动选项  。 这是推荐的最佳实践，因为这样可确保在所有语句运行时使用已启用的跟踪标志。 这些语句包括启动脚本中的命令。 有关详细信息，请参阅 [sqlservr Application](../../tools/sqlservr-application.md)。  
+-   仅在用户或应用程序未对系统以并行方式运行语句时，才使用 DBCC TRACEON (trace# [, ....n],-1)      。  
 
 跟踪标记用于通过控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的运行方式来自定义某些特征。 启用的跟踪标记将在服务器中一直保持启用状态，直到执行 DBCC TRACEOFF 语句将其禁用为止。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有两种跟踪标志：会话和全局。 会话跟踪标志对某个连接是有效的，只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 若要确定跟踪标记的状态，请使用 DBCC TRACESTATUS。 若要禁用跟踪标记，请使用 DBCC TRACEOFF。
   
@@ -70,7 +69,7 @@ WITH NO_INFOMSGS
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色的成员身份。
   
 ## <a name="examples"></a>示例  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7846814b1158313bfc663b405cd7e0506235e1e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0b11b2d6fa897b99276f75fb74e2c41e25db904
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123474"
 ---
 # <a name="delete-views"></a>删除视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47689255"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **从数据库中删除视图，使用：**  
   
@@ -50,9 +49,9 @@ ms.locfileid: "47689255"
   
 -   使用 `DROP TABLE` 删除的表上的任何视图都必须使用 `DROP VIEW`显式删除。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要对 SCHEMA 的 ALTER 权限或对 OBJECT 的 CONTROL 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,22 +60,22 @@ ms.locfileid: "47689255"
   
 1.  在 **“对象资源管理器”** 中，展开包含要删除的视图的数据库，然后展开 **“视图”** 文件夹。  
   
-2.  右键单击要删除的视图，然后单击“删除”。  
+2.  右键单击要删除的视图，然后单击“删除”  。  
   
-3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
+3.  在 **“删除对象”** 对话框中，单击 **“确定”** 。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”对话框中的“显示依赖关系”，打开“_view\_name_**依赖关系**”对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
+    >  单击“删除对象”  对话框中的“显示依赖关系”  ，打开“_view\_name_**依赖关系**”对话框。 这将显示依赖于该视图的所有对象和该视图依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-view-from-a-database"></a>从数据库中删除视图  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 仅在视图存在时，该示例才删除指定的视图。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 仅在视图存在时，该示例才删除指定的视图。  
   
     ```  
     USE AdventureWorks2012 ;  

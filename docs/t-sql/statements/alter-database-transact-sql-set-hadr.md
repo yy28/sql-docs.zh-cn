@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065733"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ ALTER DATABASE database_name
  SET HADR  
  在指定的数据库上执行指定的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 命令。  
   
- { AVAILABILITY GROUP =group_name | OFF }  
+ { AVAILABILITY GROUP =group_name | OFF }    
  在指定的可用性组中加入或删除可用性数据库，如下所示：  
   
- group_name  
+ group_name   
  在您针对由 group_name 指定的可用性组执行命令的服务器实例所承载的辅助副本上，加入指定的数据库。  
   
  此操作的前提条件如下所示：  
@@ -75,7 +74,7 @@ ALTER DATABASE database_name
 -   必须已使用 WITH NORECOVERY 从主数据库的最新数据库和日志备份中还原了辅助数据库，并以足够新的日志备份结尾，以便允许辅助数据库赶上主数据库。  
   
     > [!NOTE]  
-    >  若要将数据库添加到可用性组，请连接到承载主副本的服务器实例，并使用 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)group_name ADD DATABASE database_name 语句。  
+    >  若要将数据库添加到可用性组，请连接到承载主副本的服务器实例，并使用 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)group_name ADD DATABASE database_name 语句   。  
   
  有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
@@ -85,7 +84,7 @@ ALTER DATABASE database_name
  如果辅助数据库已远远落后于主数据库，并且您不想等待辅助数据库赶上主数据库，则删除辅助数据库可能有用。 在删除辅助数据库之后，可以通过用最新的日志备份（使用 RESTORE …）还原备份序列来更新此数据库WITH NORECOVERY).  
   
 > [!IMPORTANT]  
->  若要从可用性组中完全删除可用性数据库，请连接到承载主副本的服务器实例，并使用 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)group_name REMOVE DATABASE availability_database_name语句。 有关详细信息，请参阅[从可用性组中删除主数据库 (SQL Server)](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
+>  若要从可用性组中完全删除可用性数据库，请连接到承载主副本的服务器实例，并使用 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)group_name REMOVE DATABASE availability_database_name语句   。 有关详细信息，请参阅[从可用性组中删除主数据库 (SQL Server)](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
   
  SUSPEND  
  挂起辅助数据库的数据移动。 SUSPEND 命令只要被承载目标数据库的副本接受后就返回，但是实际上挂起数据库以异步方式发生。  
@@ -129,8 +128,8 @@ ALTER DATABASE database_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- 需要对数据库拥有 ALTER 权限。 将数据库联接到可用性组要求具有 db_owner 固定服务器角色的成员身份。  
+### <a name="permissions"></a>权限  
+ 需要对数据库拥有 ALTER 权限。 将数据库联接到可用性组要求具有 db_owner  固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  下面的示例将辅助数据库 `AccountsDb1` 联接到 `AccountsAG` 可用性组的本地辅助副本。  

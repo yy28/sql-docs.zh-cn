@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 9bc65e7f29f75d4aaf2f1e6366f29d45f04cafd0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101988"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "57685504"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,15 +53,15 @@ DBCC DBREINDEX
   
 ## <a name="arguments"></a>参数  
  *table_name*  
- 包含要重新生成的指定索引的表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
+ 包含要重新生成的指定索引的表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则  。  
   
- index_name  
- 要重新生成的索引名。 索引名称必须符合标识符规则。 如果已指定 index_name，则必须指定 table_name。 如果未指定 index_name 或者该值为“ ”，则重新生成表的所有索引。  
+ index_name   
+ 要重新生成的索引名。 索引名称必须符合标识符规则。 如果已指定 index_name，则必须指定 table_name   。 如果未指定 index_name 或者该值为“ ”，则重新生成表的所有索引  。  
   
- fillfactor  
- 在创建或重新生成索引时，每个索引页上用于存储数据的空间的百分比。 创建索引后，fillfactor 将替换填充因子，从而成为该索引以及重新生成的任何其他非聚集索引（因为重新生成了聚集索引）的新默认值。  
- 当 fillfactor 为 0 时，DBCC DBREINDEX 将使用上次为索引指定的填充因子值。 该值存储在 sys.indexes 目录视图中。   
- 如果已指定 fillfactor，则必须指定 index_name。 如果未指定 fillfactor，则使用默认填充因子 100。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
+ fillfactor   
+ 在创建或重新生成索引时，每个索引页上用于存储数据的空间的百分比。 创建索引后，fillfactor 将替换填充因子，从而成为该索引以及重新生成的任何其他非聚集索引（因为重新生成了聚集索引）的新默认值  。  
+ 当 fillfactor 为 0 时，DBCC DBREINDEX 将使用上次为索引指定的填充因子值  。 该值存储在 sys.indexes 目录视图中  。   
+ 如果已指定 fillfactor，则必须指定 index_name    。 如果未指定 fillfactor，则使用默认填充因子 100  。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
  WITH NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
@@ -89,8 +88,8 @@ DBCC DBREINDEX 可以在一条语句中重新生成表的所有索引。 这要�
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
-调用方必须拥有此表，或是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员。
+## <a name="permissions"></a>权限  
+调用方必须拥有此表，或是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员    。
   
 ## <a name="examples"></a>示例  
 ### <a name="a-rebuilding-an-index"></a>A. 重新生成索引  

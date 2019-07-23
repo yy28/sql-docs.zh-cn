@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3af8f92e90e00417cbd17ffe0ae197cc9e729a1
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: ebccd45c54a3f5abb745f7c3028e0438c9ed5d2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056014"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重命名 DML 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "49085373"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要修改或重命名 DML 触发器，请使用：**  
   
@@ -64,9 +63,9 @@ ms.locfileid: "49085373"
   
     -   [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要更改 DML 触发器，需要对于定义该触发器所在的表或视图拥有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -75,11 +74,11 @@ ms.locfileid: "49085373"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  展开您所需的数据库，再展开 **“表”**，然后展开包含要修改的触发器的表。  
+2.  展开您所需的数据库，再展开 **“表”** ，然后展开包含要修改的触发器的表。  
   
-3.  展开 **“触发器”**，右键单击要修改的触发器，然后单击 **“修改”**。  
+3.  展开 **“触发器”** ，右键单击要修改的触发器，然后单击 **“修改”** 。  
   
-4.  修改该触发器，然后单击 **“执行”**。  
+4.  修改该触发器，然后单击 **“执行”** 。  
   
 #### <a name="to-rename-a-dml-trigger"></a>重命名 DML 触发器  
   
@@ -91,9 +90,9 @@ ms.locfileid: "49085373"
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>使用 ALTER TRIGGER 修改触发器  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制并将以下示例粘贴到查询中。 执行第一个示例以创建 DML 触发器，在用户尝试添加或更改 `SalesPersonQuotaHistory` 表中的数据时，该触发器将用户定义的信息打印到客户端。 执行 [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 语句修改该触发器以便仅对 `INSERT` 活动激发。 此触发器十分有用，因为它可提醒向此表中插入行或更新行的用户也要通知 `Compensation` 部门。  
   
@@ -125,11 +124,11 @@ GO
   
 #### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>若要重命名触发器，请使用 DROP TRIGGER 和 ALTER TRIGGER  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例使用 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 和 [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 语句将 `Sales.bonus_reminder` 触发器重命名为 `Sales.bonus_reminder_2`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例使用 [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) 和 [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) 语句将 `Sales.bonus_reminder` 触发器重命名为 `Sales.bonus_reminder_2`。  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541bdcde5841394c3a28428a9e21ae4797e75fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042038"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,15 +59,15 @@ ON ALL SERVER
 
   
 ## <a name="arguments"></a>参数  
- IF EXISTS  
+ IF EXISTS   
  **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)、[!INCLUDE[sssds](../../includes/sssds-md.md)]）。  
   
  有条件地删除触发器（仅当其已存在时）。  
   
  *schema_name*  
- DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 不能为 DDL 或登录触发器指定 schema_name。  
+ DML 触发器所属架构的名称。 DML 触发器的作用域是为其创建该触发器的表或视图的架构。 不能为 DDL 或登录触发器指定 schema_name  。  
   
- trigger_name  
+ trigger_name   
  要删除的触发器的名称。 要查看当前已创建触发器的列表，请使用 [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 或 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)。  
   
  DATABASE  
@@ -85,7 +84,7 @@ ON ALL SERVER
 ## <a name="remarks"></a>Remarks  
  可以通过删除 DML 触发器或删除触发器表来删除 DML 触发器。 删除表时，将同时删除与表关联的所有触发器。  
   
- 删除触发器时，会从 sys.objects、sys.triggers 和 sys.sql_modules 目录视图中删除有关该触发器的信息。  
+ 删除触发器时，会从 sys.objects、sys.triggers 和 sys.sql_modules 目录视图中删除有关该触发器的信息。     
   
  仅当所有触发器均使用相同的 ON 子句创建时，才能使用一个 DROP TRIGGER 语句删除多个 DDL 触发器。  
   
@@ -116,7 +115,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  以下示例将删除 DDL 触发器 `safety`。  
   
 > [!IMPORTANT]  
->  因为 DDL 触发器不在架构范围内，所以不会在 sys.objects 目录视图中出现，无法使用 OBJECT_ID 函数来查询数据库中是否存在 DDL 触发器。 必须使用相应的目录视图来查询架构范围以外的对象。 对于 DDL 触发器，可使用 sys.triggers。  
+>  因为 DDL 触发器不在架构范围内，所以不会在 sys.objects 目录视图中出现，无法使用 OBJECT_ID 函数来查询数据库中是否存在 DDL 触发器。  必须使用相应的目录视图来查询架构范围以外的对象。 对于 DDL 触发器，可使用 sys.triggers。   
   
 ```  
 DROP TRIGGER safety  

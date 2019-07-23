@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba48569633363dc7a1714bb036f40abcc0249160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b920803c317920c6336dbdde0990b4ad511cccb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984587"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>创建和定义 SQL Server 单元测试
 可运行 SQL Server 单元测试，以验证对架构中的一个或多个数据库对象进行的更改是否已对数据库应用程序中的现有功能产生了影响。 这些测试是对软件开发人员创建的单元测试的补充。 您必须运行这两种测试来验证应用程序的行为。  

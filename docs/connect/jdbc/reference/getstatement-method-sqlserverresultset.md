@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3284704376609da6b17c6f0769fec62dde275d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7fca859273c5eff58cde02b98f98699307ff1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979579"
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.sql.Statement getStatement()
 ```  
   
 ## <a name="return-value"></a>返回值  
- SQLServerStatement 对象。  
+ 一个 SQLServerStatement 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getStatement 方法由 java.sql.ResultSet 接口中的 getStatement 方法指定。  
+ 此 getStatement 方法由 getStatement 方法在方法中指定。  
   
  如果通过其他方式生成结果集，例如使用 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 方法，此方法将返回 Null。  
   

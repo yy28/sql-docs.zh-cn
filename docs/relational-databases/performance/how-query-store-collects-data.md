@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 83fbc6c183216cedcbb664a0c3a2e3a9337e1513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946771"
 ---
 # <a name="how-query-store-collects-data"></a>查询存储的数据收集方法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "59542197"
 |**sys.query_store_runtime_stats_interval**|查询存储将时间划分为自动生成的时间窗口（间隔），并根据每个执行计划的间隔存储聚合的统计信息。 间隔大小由配置选项“统计信息收集间隔”（位于 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中）或 `INTERVAL_LENGTH_MINUTES` 使用 [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) 进行控制。|  
 |**sys.query_store_runtime_stats**|执行计划的聚合运行时统计信息。 所有捕获的指标都以 4 种统计函数的形式表示：平均值、最小值、最大值、标准偏差。|  
   
- 有关查询存储视图的其他详细信息，请参阅[使用查询存储来监视性能](monitoring-performance-by-using-the-query-store.md)中的“相关视图、函数和过程”部分。  
+ 有关查询存储视图的其他详细信息，请参阅[使用查询存储来监视性能](monitoring-performance-by-using-the-query-store.md)中的“相关视图、函数和过程”部分  。  
   
 ## <a name="query-processing"></a>查询处理  
  查询存储在以下关键点与查询处理管道进行交互：  
@@ -58,7 +57,7 @@ ms.locfileid: "59542197"
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- 若要最大程度减少 I/O 开销，新的数据是在内存中捕获的。 写入操作排队，并稍后将其刷新到磁盘。 以最低的延迟刷新查询和计划信息（下图中的计划存储）。 运行时统计信息 (Runtime Stats) 会在内存中保留一段时间，该时间用 `SET QUERY_STORE` 语句的 `DATA_FLUSH_INTERVAL_SECONDS` 选项定义。 “SSMS 查询存储”对话框允许输入“数据刷新间隔(分钟)”，它将转换为秒。  
+ 若要最大程度减少 I/O 开销，新的数据是在内存中捕获的。 写入操作排队，并稍后将其刷新到磁盘。 以最低的延迟刷新查询和计划信息（下图中的计划存储）。 运行时统计信息 (Runtime Stats) 会在内存中保留一段时间，该时间用 `SET QUERY_STORE` 语句的 `DATA_FLUSH_INTERVAL_SECONDS` 选项定义。 “SSMS 查询存储”对话框允许输入“数据刷新间隔(分钟)”  ，它将转换为秒。  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

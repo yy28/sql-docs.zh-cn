@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aff8fbc234efdb76af1a66fd14367865f918f1ea
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b6f9962be0fa138786af425ab24bf9608bf3264f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957236"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-这[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]示例应用程序演示了如何使用结果集的 getter 方法来检索[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL 数据发现和分类表中的信息保存此类信息。
+此[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]示例应用程序演示如何使用结果集 getter 方法从包含[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]此类信息的表中检索 "SQL 数据发现和分类信息"。
   
-此示例的代码文件为 DataDiscoveryAndClassification.java，并且它可以在以下位置中找到：  
+此示例的代码文件命名为 DataDiscoveryAndClassification, 它可以在以下位置找到:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
@@ -31,7 +30,7 @@ ms.locfileid: "66770080"
 
 ## <a name="requirements"></a>要求  
 
-若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 有关如何设置 classpath 的详细信息，请参阅[使用 JDBC 驱动程序](../../jdbc/using-the-jdbc-driver.md)。
+若要运行此示例应用程序，必须设置 classpath 以包含 mssql-jdbc jar 文件。 有关如何设置类路径的详细信息, 请参阅[使用 JDBC 驱动程序](../../jdbc/using-the-jdbc-driver.md)。
 
 ```java
 import java.sql.Connection;

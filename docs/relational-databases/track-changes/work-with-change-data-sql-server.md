@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c55ff97602a2c56a54523c68b5ef76a832888676
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 2d08ef02a81832ad532e184d6cae79d7fd03119a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006055"
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "53991890"
  有关如何截获这些已知的 TVF 错误并返回有关失败的更有意义的信息的说明，请参阅“使用 TRY CATCH 枚举净更改”模板。  
   
 > [!NOTE]  
->  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”菜单上单击“模板资源管理器”，展开 **“SQL Server 模板”**，然后展开 **“变更数据捕获”** 文件夹。  
+>  若要在 SQL Server Management Studio 中查找变更数据捕获模板，请在“视图”  菜单上单击“模板资源管理器”  ，展开 **“SQL Server 模板”** ，然后展开 **“变更数据捕获”** 文件夹。  
   
 ##  <a name="Functions"></a> 查询函数  
  根据所跟踪的源表的特性以及配置其捕获实例的方式，将生成一个或两个查询更改数据的 TVF。  

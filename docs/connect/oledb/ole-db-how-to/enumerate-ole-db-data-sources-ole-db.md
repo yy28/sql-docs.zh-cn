@@ -1,6 +1,6 @@
 ---
 title: 枚举 OLE DB 数据源 (OLE DB) |Microsoft Docs
-description: 枚举 OLE DB 数据源使用 MSOLEDBSQL 枚举器
+description: 使用 MSOLEDBSQL 枚举器枚举 OLE DB 数据源
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 248a3a681bb7d52d54e7e052539aa9257f6bca03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994828"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,15 +39,15 @@ ms.locfileid: "66785927"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>枚举 OLE DB 数据源  
   
-1.  通过调用检索的源行集**ISourceRowset::GetSourcesRowset**。  
+1.  通过调用**ISourceRowset:: GetSourcesRowset**检索源行集。  
   
-2.  通过调用查找枚举器行集的说明**GetColumnInfo::IColumnInfo**。  
+2.  通过调用**GetColumnInfo:: IColumnInfo**查找枚举器行集的说明。  
   
 3.  根据列信息创建绑定结构。  
   
-4.  通过调用创建行集访问器**iaccessor:: Createaccessor**。  
+4.  通过调用**IAccessor:: CreateAccessor**创建行集访问器。  
   
-5.  通过调用提取的行**irowset:: Getnextrows**。  
+5.  调用**IRowset:: GetNextRows**提取行。  
   
 6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据  。  
   

@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130132"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,21 +167,21 @@ OR ALTER
 只有在触发器已存在时才对其进行有条件地更改。 
   
 *schema_name*  
-DML 触发器所属架构的名称。 DML 触发器的范围限定为，对其创建此类触发器的表或视图的架构。 不能为 DDL 或登录触发器指定 schema_name。  
+DML 触发器所属架构的名称。 DML 触发器的范围限定为，对其创建此类触发器的表或视图的架构。 不能为 DDL 或登录触发器指定 schema_name  。  
   
-trigger_name  
-触发器的名称。 trigger_name 必须遵循[标识符](../../relational-databases/databases/database-identifiers.md)规则，但 trigger_name 不得以 # 或 ## 开头。  
+trigger_name   
+触发器的名称。 trigger_name  必须遵循[标识符](../../relational-databases/databases/database-identifiers.md)规则，但 trigger_name  不得以 # 或 ## 开头。  
   
-table | view  
+table | view    
 对其运行 DML 触发器的表或视图。 此表或视图有时称为“触发器表”或“触发器视图”。 可以根据需要指定表或视图的完全限定名称。 只有 INSTEAD OF 触发器才能引用视图。 无法对本地或全局临时表定义 DML 触发器。  
   
 DATABASE  
-将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器。  
+将 DDL 触发器的作用域应用于当前数据库。 如果指定了此参数，则只要当前数据库中出现 event_type 或 event_group，就会激发该触发器   。  
   
 ALL SERVER  
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器。  
+将 DDL 或登录触发器的作用域应用于当前服务器。 如果指定了此参数，则只要当前服务器中的任何位置出现 event_type 或 event_group，就会激发该触发器   。  
   
 WITH ENCRYPTION  
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -214,7 +213,7 @@ AFTER 指定仅当触发 SQL 语句中指定的所有操作都已成功启动时
 无法对视图定义 AFTER 触发器。  
   
 INSTEAD OF  
-指定 DML 触发器（而不是触发 SQL 语句）启动，因此替代触发语句的操作。 无法为 DDL 触发器或登录触发器指定 INSTEAD OF。  
+指定 DML 触发器（而不是  触发 SQL 语句）启动，因此替代触发语句的操作。 无法为 DDL 触发器或登录触发器指定 INSTEAD OF。  
   
 最多可以对表或视图定义，每 INSERT、UPDATE 或 DELETE 语句一个 INSTEAD OF 触发器。 还可以对每个都有自己的 INSTEAD OF 触发器的视图定义视图。  
   
@@ -230,11 +229,11 @@ WITH APPEND
   
 指定应该再添加一个现有类型的触发器。 WITH APPEND 无法与 INSTEAD OF 触发器一起使用，或在显式声明 AFTER 触发器后也无法使用。 为了实现后向兼容性，仅在指定了 FOR（但没有指定 INSTEAD OF 或 AFTER）时，才使用 WITH APPEND。 如果使用的是 EXTERNAL NAME（即触发器是 CLR 触发器），无法指定 WITH APPEND。  
   
-event_type  
+event_type   
 启动后触发 DDL 触发器的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件的名称。 [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出了 DDL 触发器的有效事件。  
   
-event_group  
-预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 DDL 触发器在任何属于 event_group 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件启动后触发。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。  
+event_group   
+预定义的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件分组的名称。 DDL 触发器在任何属于 event_group  的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语言事件启动后触发。 [DDL 事件组](../../relational-databases/triggers/ddl-event-groups.md)中列出了 DDL 触发器的有效事件组。  
   
 CREATE TRIGGER 运行完成后，*event_group* 还将充当宏，将它涉及的事件类型添加到 sys.trigger_events 目录视图中。  
   
@@ -243,7 +242,7 @@ NOT FOR REPLICATION
   
 指明触发器不得在复制代理修改触发器涉及的表时运行。  
   
-sql_statement  
+sql_statement   
 触发条件和操作。 触发器条件指定其他用于确定尝试的 DML、DDL 或 LOGON 事件是否导致触发器操作运行的条件。  
   
 尝试上述操作时，将执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中指定的触发器操作。  
@@ -260,16 +259,16 @@ SELECT * FROM deleted;
   
 DDL 和登录触发器使用 [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md) 函数来捕获有关触发事件的信息。 有关详细信息，请参阅[使用 EVENTDATA 函数](../../relational-databases/triggers/use-the-eventdata-function.md)。  
   
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以通过表或视图上的 INSTEAD OF 触发器来更新 text、ntext 或 image 列。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以通过表或视图上的 INSTEAD OF 触发器来更新 text  、ntext  或 image  列。  
   
 > [!IMPORTANT]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(MAX)**、**nvarchar(MAX)** 和 **varbinary(MAX)** 数据。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 **ntext**、**text** 和 **image** 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(MAX)** 、**nvarchar(MAX)** 和 **varbinary(MAX)** 数据。  
   
-对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
+对于内存优化表中的触发器，顶层允许的唯一 sql_statement 是 ATOMIC 块  。 ATOMIC 块内允许的 T-SQL 由本地进程内允许的 T-SQL 决定。  
   
 \< method_specifier > **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-对于 CLR 触发器，指定程序集与触发器绑定的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中。 如果该类有一个使用“.”来分隔命名空间部分的命名空间限定名称，则类名必须用 [] 或“ ”分隔符分隔。 此类不得为嵌套类。  
+对于 CLR 触发器，指定程序集与触发器绑定的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中  。 如果该类有一个使用“.”来分隔命名空间部分的命名空间限定名称，则类名必须用 [] 或“ ”分隔符分隔。 此类不得为嵌套类。  
   
 > [!NOTE]  
 >  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法运行 CLR 代码。 可以创建、修改和删除引用托管代码模块的数据库对象，但除非使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 启用了 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)，否则这些引用不会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中运行。  
@@ -355,7 +354,7 @@ DDL 触发器不会为了响应影响本地或全局临时表和存储过程的�
 与 DML 触发器不同，DDL 触发器的范围不限定为架构。 因此，无法使用 OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY 和 OBJECTPROPERTYEX 等函数来查询 DDL 触发器的元数据。 请改用目录视图。 有关详细信息，请参阅[获取有关 DDL 触发器的信息](../../relational-databases/triggers/get-information-about-ddl-triggers.md)。  
   
 > [!NOTE]  
->  服务器范围内的 DDL 触发器显示在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器的“触发器”文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围内的 DDL 触发器显示在“数据库触发器”文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
+>  服务器范围内的 DDL 触发器显示在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器的“触发器”  文件夹中。 此文件夹位于 **“服务器对象”** 文件夹下。 数据库范围内的 DDL 触发器显示在“数据库触发器”  文件夹中。 此文件夹位于相应数据库的 **“可编程性”** 文件夹下。  
   
 ## <a name="logon-triggers"></a>登录触发器  
 登录触发器是为了响应 LOGON 事件而执行存储过程。 此事件在用户会话通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例建立时发生。 登录触发器在登录的身份验证阶段完成后且用户会话建立前触发。 因此，所有源自触发器内部且通常会传递给用户的消息（如错误消息和来自 PRINT 语句的消息）会转移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志。 有关详细信息，请参阅[登录触发器](../../relational-databases/triggers/logon-triggers.md)。  
@@ -404,12 +403,12 @@ SQL Server 的未来版本中将删除从触发器返回结果的功能。 返�
   
 若要禁用嵌套触发器，请用 sp_configure 将 nested triggers 选项设置为 0（关闭）。 默认配置支持嵌套触发器。 如果禁用嵌套触发器，递归触发器也遭禁用，不管使用 ALTER DATABASE 设置的 RECURSIVE_TRIGGERS 设置如何。  
   
-即使“嵌套触发器”服务器配置选项为 0，嵌套在 INSTEAD OF 触发器内的第一个 AFTER 触发器也会触发。 不过，在此设置下，后面的 AFTER 触发器不会触发。 当“嵌套触发器”服务器配置选项设置为 0 时，检查应用程序中是否有嵌套触发器，以确定应用程序是否遵循业务规则。 如果不遵循，请进行适当修改。  
+即使“嵌套触发器”  服务器配置选项为 0，嵌套在 INSTEAD OF 触发器内的第一个 AFTER 触发器也会触发。 不过，在此设置下，后面的 AFTER 触发器不会触发。 当“嵌套触发器”  服务器配置选项设置为 0 时，检查应用程序中是否有嵌套触发器，以确定应用程序是否遵循业务规则。 如果不遵循，请进行适当修改。  
   
 ### <a name="deferred-name-resolution"></a>延迟名称解析  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程、触发器和批处理可以引用在编译时不存在的表。 这种功能称为延迟名称解析。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 必须对要为其创建触发器的表或视图拥有 ALTER 权限，才能创建 DML 触发器。  
   
 必须对服务器拥有 CONTROL SERVER 权限，才能创建具有服务器范围 (ON ALL SERVER) 的 DDL 触发器或登录触发器。 必须在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限，才能创建具有数据库范围 (ON DATABASE) 的 DDL 触发器。  

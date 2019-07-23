@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f1cc7e8213f9282680f652512fe78c7bc5e8b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929628"
 ---
 # <a name="how-to-debug-stored-procedures"></a>如何：调试存储过程
 使用 Transact\-SQL 调试器，你可以通过为 SQL 存储过程显示 SQL 调用堆栈、局部变量和参数，以交互方式调试存储过程。 与其他编程语言中的调试一样，你可以在调试 Transact\-SQL 脚本的同时查看和修改局部变量和参数、查看全局变量以及控制和管理断点。  

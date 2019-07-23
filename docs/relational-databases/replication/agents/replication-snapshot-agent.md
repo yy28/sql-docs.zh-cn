@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96e9da6c6bf1c394032abff79b7b869e08f4d3e9
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 1e0c9d8d91bce3cc632e6cfd8a5f50353a55793a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085934"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +79,8 @@ snapshot [ -?]
  **-?**  
  输出所有可用的参数。  
   
- -Publisher  server_name[\\instance\_name]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 为该服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 命名实例指定 server\_name\\instance\_name。  
+ -Publisher  server_name[\\instance\_name]      
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 为该服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 命名实例指定 server\_name\\instance\_name    。  
   
  **-Publication** _发布_  
  发布的名称。 只有将发布设置为总是使快照可用于新订阅或重新初始化的订阅时，此参数才有效。  
@@ -89,16 +88,16 @@ snapshot [ -?]
  **-70Subscribers**  
  如果有任何订阅服务器在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 版，则必须使用此参数。  
   
- -BcpBatchSize bcp\_ batch\_ size  
+ -BcpBatchSize bcp\_ batch\_ size      
  在一次大容量复制操作中发送的行数。 执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 **bcp** 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 1000。 值为 0 表示不记录任何消息。  
   
  **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含该代理的命令行参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- -Distributor server_name[\\instance\_name]  
- 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 命名实例指定 server\_name\\instance\_name。  
+ -Distributor server_name[\\instance\_name]      
+ 分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 命名实例指定 server\_name\\instance\_name    。  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  死锁发生时快照代理连接到分发服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  
   
 |DistributorDeadlockPriority 值|描述|  
@@ -111,7 +110,7 @@ snapshot [ -?]
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器时所用的登录名。  
   
  **-DistributorPassword** _distributor_password_  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器时使用的密码。 实例时都提供 SQL Server 登录名。  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器时使用的密码。 。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  指定分发服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认设置），值 **1** 指示 Windows 身份验证模式。  
@@ -158,7 +157,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  此参数用于通过 Oracle 发布服务器优化 **bcp** 的性能。  
   
- -HRBcpBlockSizeblock\_size  
+ -HRBcpBlockSizeblock\_size    
  每个 **bcp** 数据块的大小（以 KB 为单位）。 默认值为 64 KB。 **HRBcpBlocks** 仅用于 Oracle 发布。  
   
 > [!NOTE]  
@@ -174,7 +173,7 @@ snapshot [ -?]
  快照代理在向 [MSsnapshot_history](../../../relational-databases/system-tables/mssnapshot-history-transact-sql.md) 表中记录“waiting for backend message”之前等待的时间（以秒为单位）。 默认值为 300 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 登录超时前等待的秒数。 默认值为 15 秒。  
+ 登录超时前等待的秒数。  默认值为 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值是处理器数量的两倍。  
@@ -215,9 +214,9 @@ snapshot [ -?]
  指定用于代理参数的代理配置文件。 如果 **ProfileName** 为 NULL，则将禁用代理配置文件。 如果未指定 **ProfileName** ，则使用该代理类型的默认配置文件。 有关信息，请参阅[复制代理配置文件](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  **-PublisherDB** _publisher_database_  
- 发布数据库的名称。 Oracle 发布服务器不支持该参数。  
+ 发布数据库的名称。 Oracle 发布服务器不支持该参数。   
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  死锁发生时快照代理连接到发布服务器的优先级。 指定此参数是为了解决快照生成期间在快照代理和用户应用程序之间发生的死锁问题。  
   
 |PublisherDeadlockPriority 值|描述|  
@@ -226,14 +225,14 @@ snapshot [ -?]
 |**0** （默认值）|未分配优先级。|  
 |**1**|在发布服务器上发生死锁时，快照代理优先。|  
   
- -PublisherFailoverPartner server_name[\\instance\_name]  
+ -PublisherFailoverPartner server_name[\\instance\_name]      
  指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-PublisherLogin** _publisher_login_  
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时所用的登录名。  
   
  **-PublisherPassword**  _publisher_password_  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时使用的密码。 实例时都提供 SQL Server 登录名。  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时使用的密码。 。  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01548f5d9a2e54607ff0b260a39724591de4380e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a188d5d98aca0418a2452f29912f62604f3ffa90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972169"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>setTypeMap 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setTypeMap(java.util.Map map)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTypeMap 方法由 java.sql.Connection 接口中的 setTypeMap 方法指定。  
+ 此 setTypeMap 方法由 setTypeMap 方法在 sql 连接接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

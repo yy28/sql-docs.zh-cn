@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070313"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,26 +81,26 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > 在 Azure SQL 数据库托管实例中，SQL 审核在服务器一级运行，并在 Azure Blob 存储中存储 `.xel` 文件。
   
- FILEPATH **= '** os\_file\_path **'**  
+ FILEPATH **= '** os\_file\_path  **'**  
  审核记录的路径。 文件名是基于审核名称和审核 GUID 生成的。  
   
- MAXSIZE **=** max\_size  
- 指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
+ MAXSIZE **=** max\_size   
+ 指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数      。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB    。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止  。 指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED  。  
   
- MAX_ROLLOVER_FILES =integer | UNLIMITED  
+ MAX_ROLLOVER_FILES =integer | UNLIMITED     
  指定要保留在文件系统中的最大文件数。 设置为 MAX_ROLLOVER_FILES=0 时，可创建的滚动更新文件的数量不受任何限制。 默认值为 0。 可以指定的最大文件数为 2,147,483,647。  
   
- MAX_FILES = integer  
+ MAX_FILES = integer   
  指定可创建的审核文件的最大数目。 当达到此限制时，不滚动更新到第一个文件。 在达到 MAX_FILES 限制时，导致生成附加审核事件的任何操作都会失败并报告错误。  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- RESERVE_DISK_SPACE = { ON | OFF }  
+ RESERVE_DISK_SPACE = { ON | OFF }   
  此选项会按 MAXSIZE 值为磁盘上的文件预先分配大小。 仅在 MAXSIZE 不等于 UNLIMITED 时适用。 默认值为 OFF。  
   
- QUEUE_DELAY = integer  
+ QUEUE_DELAY = integer    
  确定在强制处理审核操作之前可能经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定无效数字将引发 MSG_INVALID_QUEUE_DELAY 错误。  
   
- ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
+ ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION}   
  指示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法写入审核日志时写入目标的实例是应失败、继续还是停止。  
   
  CONTINUE  
@@ -114,10 +113,10 @@ SHUTDOWN
  如果数据库操作会导致审核的事件，则数据库操作将失败。 不会导致审核事件的操作可以继续，但也不会发生审核的事件。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 在维护完整审核比对[!INCLUDE[ssDE](../../includes/ssde-md.md)]的完全访问权限更重要时，使用此选项。  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。   
   
- STATE = { ON | OFF }  
+ STATE = { ON | OFF }   
  启用或禁用审核收集记录。 更改运行的审核的状态（从 ON 到 OFF）将创建审核停止时的审核项、停止审核的主体以及停止审核的时间。  
   
- MODIFY NAME = new_audit_name  
+ MODIFY NAME = new_audit_name   
  更改审核的名称。 不能与任何其他选项一起使用。  
   
  predicate_expression  
@@ -129,7 +128,7 @@ SHUTDOWN
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  number  
- 任何数值类型，包括 decimal。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
+ 任何数值类型，包括 decimal  。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  ' string '  
@@ -145,7 +144,7 @@ SHUTDOWN
   
  创建审核后无法更改审核的 GUID。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建、更改或删除服务器审核主体，必须具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

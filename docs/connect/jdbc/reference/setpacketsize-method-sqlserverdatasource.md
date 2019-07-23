@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d102885fc235a66f5d42b7ae5100bc8905d895d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8e3affcbb2181cf8979196c65a0bcd81e58c541e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973280"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setPacketSize(int packetSize)
   
  此外，应用程序可能还希望在不要求 SSL 加密的情况下设置 packetSize 属性。 在此情况下，如果服务器要求客户端支持 SSL 加密，则驱动程序将查看 JVM 的默认安全提供程序的 SSL 记录大小。 如果 packetSize 属性大于 JVM 的默认安全提供程序的 SSL 记录大小，则驱动程序将报告错误并终止连接。  
   
- 有关使用 SSL 的详细信息，请参阅[Using SSL Encryption](../../../connect/jdbc/using-ssl-encryption.md)。  
+ 有关使用 SSL 的详细信息, 请参阅[使用 Ssl 加密](../../../connect/jdbc/using-ssl-encryption.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be8f60de9e25476f81c42019ba25cdf803ee4ad0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0f6edc9ffcc723f2900b06ca658cb1633bfa9fbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927248"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,19 +82,19 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  *schema_name*  
  过程所属架构的名称。  
   
- procedure_name  
+ procedure_name   
  要更改的过程的名称。 过程名称必须符合 [标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
- ; number  
+ ; number    
  现有的可选整数，该整数用来对具有同一名称的过程进行分组，以便可以用一个 DROP PROCEDURE 语句全部删除它们。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- @ parameter  
+ @ parameter    
  过程中的参数。 最多可以指定 2,100 个参数。  
   
- [ _type\_schema\_name_**.** ] _data\_type_  
+ [ _type\_schema\_name_ **.** ] _data\_type_  
  参数及其所属架构的数据类型。  
   
  有关数据类型限制的信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)。  
@@ -103,7 +102,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  VARYING  
  指定作为输出参数支持的结果集。 此参数由存储过程动态构造，并且其内容可以不同。 仅适用于游标参数。 该选项对于 CLR 过程无效。  
   
- default  
+ default   
  参数的默认值。  
   
  OUT | OUTPUT  
@@ -113,7 +112,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  指示不能在过程的主体中更新或修改参数。 如果参数类型为表值类型，则必须指定 READONLY。  
   
  RECOMPILE  
- 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]不会缓存该过程的计划，该过程在运行时重新编译。   
+ 指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]不会缓存该过程的计划，该过程在运行时重新编译。  
   
  ENCRYPTION  
  **适用对象**：SQL Server（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
@@ -125,7 +124,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  不能为公共语言运行时 (CLR) 存储过程指定此选项。  
   
 > [!NOTE]  
->  在升级过程中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用存储在 sys.sql_modules 中的模糊注释来重新创建过程。  
+>  在升级过程中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用存储在 sys.sql_modules 中的模糊注释来重新创建过程  。  
   
  EXECUTE AS  
  指定访问存储过程后执行该存储过程所用的安全上下文。  
@@ -140,13 +139,13 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }  
+ { [ BEGIN ] sql_statement  [;] [ ...n  ] [ END ] }  
  构成过程主体的一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 您可以使用可选的 BEGIN 和 END 关键字将这些语句括起来。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md) 中的“最佳做法”、“一般备注”以及“限制和局限”部分。  
   
- EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集的方法，以便 CLR 存储过程引用。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中。 如果类具有使用句点 (.) 分隔命名空间部分的命名空间限定名称，则必须使用方括号 ([]) 或引号 ("") 来分隔类名。 指定的方法必须为该类的静态方法。  
+ 指定 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集的方法，以便 CLR 存储过程引用。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中  。 如果类具有使用句点 (.) 分隔命名空间部分的命名空间限定名称，则必须使用方括号 ([]) 或引号 ("") 来分隔类名    。 指定的方法必须为该类的静态方法。  
   
  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用该选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
@@ -164,8 +163,8 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- 要求对过程具有 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份。  
+### <a name="permissions"></a>权限  
+ 要求对过程具有 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份   。  
   
 ## <a name="examples"></a>示例  
  以下示例将创建 `uspVendorAllInfo` 存储过程。 此过程返回提供 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 的所有供应商的名称、所提供的产品、信用等级以及可用性。 创建过程之后，便可修改过程以返回不同的结果集。  

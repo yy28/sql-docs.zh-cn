@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 656672ad8ae1c852da2e1242f85cc6c0d5f90df3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37221f0f9c7cf87576f0014b855ed28740e4818e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975714"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>rowDeleted 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean rowDeleted()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 rowDeleted 方法由 java.sql.ResultSet 接口中的 rowDeleted 方法指定。  
+ 此 rowDeleted 方法由 rowDeleted 方法在方法中指定。  
   
  已删除的行可能在结果集中留有可见孔。 此方法可用于检测结果集中的孔。 返回的值取决于此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象能否可以检测到删除。  
   

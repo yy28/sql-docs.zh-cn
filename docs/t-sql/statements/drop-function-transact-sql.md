@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9aea2cb62ad12745a8ad03fd9998a47ee77173e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044222"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +62,7 @@ DROP FUNCTION [ schema_name. ] function_name
  *schema_name*  
  用户定义函数所属的架构的名称。  
   
- function_name  
+ function_name   
  要删除的用户定义函数的名称。 可以选择是否指定架构名称。 不能指定服务器名称和数据库名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -71,7 +70,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
  如果存在引用此函数并且已生成索引的计算列，则 DROP FUNCTION 将失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行 DROP FUNCTION，用户至少应对函数所属架构具有 ALTER 权限，或对函数具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

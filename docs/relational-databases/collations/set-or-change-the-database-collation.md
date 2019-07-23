@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62ac97c76f3b08a7dc13258fe2d45e88c9f5500a
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 3411477bbb183c7b9585f0cb93afde0b2bfebc6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140850"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "51571326"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要设置或更改数据库排序规则，请使用：**  
   
@@ -68,9 +67,9 @@ ms.locfileid: "51571326"
   
 -   可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 COLLATE 子句来更改在用户数据库中创建的任何新对象的排序规则。 使用此语句不能更改任何现有用户定义的表中列的排序规则。 使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)的 COLLATE 子句可以更改这些列的排序规则。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  CREATE DATABASE  
  需要对 **master** 数据库的 CREATE DATABASE 权限，或者需要 CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
   
@@ -81,23 +80,23 @@ ms.locfileid: "51571326"
   
 #### <a name="to-set-or-change-the-database-collation"></a>设置或更改数据库排序规则  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”**。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，再依次展开该实例、 **“数据库”** 。  
   
-2.  如果您正在创建一个新数据库，则右键单击 **“数据库”** ，然后单击 **“新建数据库”**。 如果您不希望使用默认排序规则，则单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
+2.  如果您正在创建一个新数据库，则右键单击 **“数据库”** ，然后单击 **“新建数据库”** 。 如果您不希望使用默认排序规则，则单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
   
-     或者，如果数据库已经存在，则右键单击所需数据库，然后单击 **“属性”**。 单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
+     或者，如果数据库已经存在，则右键单击所需数据库，然后单击 **“属性”** 。 单击 **“选项”** 页，然后从 **“排序规则”** 下拉列表中选择某一排序规则。  
   
-3.  在完成后，单击 **“确定”**。  
+3.  在完成后，单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>设置数据库排序规则  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [COLLATE](~/t-sql/statements/collations.md) 子句来指定排序规则名称。 此示例创建使用 `MyOptionsTest` 排序规则的数据库 `Latin1_General_100_CS_AS_SC` 。 在创建数据库后，执行 `SELECT` 语句以验证设置。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例演示如何使用 [COLLATE](~/t-sql/statements/collations.md) 子句来指定排序规则名称。 此示例创建使用 `MyOptionsTest` 排序规则的数据库 `Latin1_General_100_CS_AS_SC` 。 在创建数据库后，执行 `SELECT` 语句以验证设置。  
   
 ```sql  
 USE master;  
@@ -119,11 +118,11 @@ GO
   
 #### <a name="to-change-the-database-collation"></a>更改数据库排序规则  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何在 [ALTER DATABASE](~/t-sql/statements/collations.md) 语句中使用 [COLLATE](../../t-sql/statements/alter-database-transact-sql.md) 子句来更改排序规则名称。 执行 `SELECT` 语句以验证更改。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何在 [ALTER DATABASE](~/t-sql/statements/collations.md) 语句中使用 [COLLATE](../../t-sql/statements/alter-database-transact-sql.md) 子句来更改排序规则名称。 执行 `SELECT` 语句以验证更改。  
   
 ```sql  
 USE master;  

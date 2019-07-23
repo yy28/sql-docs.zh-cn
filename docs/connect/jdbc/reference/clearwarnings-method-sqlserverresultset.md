@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f55af4b6-ae5c-41c9-8aa3-8313773f5443
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5bbf82fea8c226b081df64dce7f2fc9815240764
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60194ee2eaae5d209df2579b4351c58e4c3c3fd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955720"
 ---
 # <a name="clearwarnings-method-sqlserverresultset"></a>clearWarnings 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66803603"
   清除此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象上所报告的所有警告。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前未实现此方法。 如果调用，它将始终返回 null。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前未实现此方法。 如果调用, 它将始终返回 null。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +41,7 @@ public void clearWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 clearWarnings 方法由 java.sql.ResultSet 接口中的 clearWarnings 方法指定。  
+ 此 clearWarnings 方法由 clearWarnings 方法在方法中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

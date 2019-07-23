@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f691bd99036ea6b27f9f20cd53e8d6bc72312224
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061006"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,28 +55,28 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ```  
   
 ## <a name="arguments"></a>参数  
- audit_specification_name  
+ audit_specification_name   
  是审核规范的名称。  
   
- audit_name  
+ audit_name   
  是应用此规范的审核的名称。  
   
- audit_action_specification  
+ audit_action_specification   
  是主体对安全对象执行的应记录到审核中的操作的规范。  
   
- action  
+ action   
  是一个或多个数据库级别可审核操作的名称。 要获取审核操作列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- audit_action_group_name  
+ audit_action_group_name   
  是一个或多个数据库级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- class  
+ class   
  是安全对象上的类名（如果适用）。  
   
- securable  
+ securable   
  是应用审核操作或审核操作组的数据库中的表、视图或其他安全对象。 有关详细信息，请参阅 [Securables](../../relational-databases/security/securables.md)。  
   
- principal  
+ principal   
  应用审核操作或审核操作组的数据库主体的名称。 使用数据库主体 `public` 审核所有数据库主体。 有关详细信息，请参阅[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
  WITH ( STATE = { ON | OFF } )  
@@ -86,7 +85,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  数据库审核规范是驻留在给定数据库中的非安全对象。 数据库审核规范在创建之后处于禁用状态。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  拥有 `ALTER ANY DATABASE AUDIT` 权限的用户可以创建数据库审核规范并将其绑定到任何审核。  
   
  在创建数据库审核规范之后，拥有 `CONTROL SERVER`、`ALTER ANY DATABASE AUDIT` 权限的主体或 `sysadmin` 帐户可查看该规范。  
@@ -120,7 +119,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 审核特定数据库角色“sales”架构中所有对象上的任何 DML（INSERT、UPDATE 或 DELETE）  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 审核特定数据库角色“sales”架构中所有对象上的任何 DML（INSERT、UPDATE 或 DELETE）    
  下面的示例针对 `AdventureWorks2012` 数据库中 `Sales` 架构的所有对象，创建名为 `DataModification_Security_Audit` 的服务器审核，然后创建可由新数据库角色 `SalesUK` 中的用户审核 `INSERT`、`UPDATE` 和 `DELETE` 语句的数据库审核规范，其名称为 `Audit_Data_Modification_On_All_Sales_Tables`。  
   
 ```  

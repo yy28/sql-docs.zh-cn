@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43830b86ef02a0d9d3edf2db3ee8ebde129963c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115234"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "54133387"
   
 -   对于运行低于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本的发布服务器， **sysadmin** 固定服务器角色中的用户可以在 **“订阅服务器”** 页上注册订阅服务器。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开始，不再需要为复制显式注册订阅服务器。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -58,11 +57,11 @@ ms.locfileid: "54133387"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到分发服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”**。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”** 。  
   
-3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。  
+3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。   
   
-    -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 (**...**)。  
+    -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 ( **...** )。   
   
     -   若要查看和修改与分发服务器关联的发布服务器属性，请在该对话框的 **“发布服务器”** 页面上单击发布服务器的属性按钮 ( **...** )。  
   
@@ -70,19 +69,19 @@ ms.locfileid: "54133387"
   
     -   若要更改管理存储过程在发布服务器上执行以及在分发服务器上更新信息时所用帐户的密码，请在该对话框的 **“发布服务器”** 页面上的 **“密码”** 和 **“确认密码”** 框中输入新密码。 有关详细信息，请参阅[保护分发服务器的安全](../../relational-databases/replication/security/secure-the-distributor.md)。  
   
-4.  根据需要修改属性，然后单击 **“确定”**。  
+4.  根据需要修改属性，然后单击 **“确定”** 。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>查看和修改发布服务器属性  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”**。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”** 。  
   
-3.  在“发布服务器属性 - <发布服务器>”对话框中查看和修改属性。  
+3.  在“发布服务器属性 - <发布服务器>”对话框中查看和修改属性。   
   
     -   **sysadmin** 固定服务器角色中的用户可以在 **“发布数据库”** 页上为复制启用数据库。 启用数据库并不会发布该数据库，而是允许该数据库的 **db_owner** 固定数据库角色中的任何用户在该数据库中创建一个或多个发布。  
   
-4.  根据需要修改属性，然后单击 **“确定”**。  
+4.  根据需要修改属性，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式查看发布服务器和分发服务器属性。  

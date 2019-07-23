@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b1b6726985643a16eef3bd5bda84a3220ba9442
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dffa6629dafe832b86faf303f5ef9e1d59b05f88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927920"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步请求订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +46,11 @@ ms.locfileid: "54134140"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
+3.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
   
-4.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
+4.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
   
-5.  单击 **“关闭”**。  
+5.  单击 **“关闭”** 。  
   
 ##  <a name="ReplProg"></a> Replication Agents  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步请求订阅。 被调用的复制代理可执行文件将取决于请求订阅所属的发布的类型。 有关详细信息，请参阅 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)。  
@@ -85,7 +84,7 @@ ms.locfileid: "54134140"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
@@ -129,7 +128,7 @@ ms.locfileid: "54134140"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   

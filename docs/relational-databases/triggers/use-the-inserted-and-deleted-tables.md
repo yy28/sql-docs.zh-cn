@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c0c75d1bbeb25dade2bb8e333067fb244d8248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075502"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47830995"
 > [!NOTE]  
 >  如果触发器操作取决于数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext**或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext**或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)** 、**nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
  **在触发器中使用插入的表以强制实施业务规则的示例**  
   

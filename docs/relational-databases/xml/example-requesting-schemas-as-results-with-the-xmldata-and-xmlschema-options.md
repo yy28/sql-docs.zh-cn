@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9532f3fc6cb3d21a5cff19b542f1f877827e6553
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 231458e7c49fbffebb5568a9dcb1c3663b8f0c3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006795"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例如：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由 Schema_**n**_ 组成，其中 _**n**_ 是一个整数。  
+>  <`Schema`> 被声明为命名空间。 在不同的 FOR XML 查询中请求多个 XML-Data 架构时，为了避免命名空间冲突，该示例中的命名空间标识符 `Schema1` 将在每次执行查询时进行更改。 命名空间标识符由 Schema  _**n**_ 组成，其中 _**n**_ 是一个整数。  
   
  通过指定 `XMLSCHEMA` 选项，您可以针对结果请求 XSD 架构。  
   

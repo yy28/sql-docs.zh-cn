@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2ec636ee6d5aa92fa6dca7454f100d2fd7ef0134
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065876"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -67,7 +66,7 @@ ALTER DATABASE ENCRYPTION KEY
  REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
  指定用于加密密钥的加密算法。  
   
- ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
+ ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
  指定用于加密数据库加密密钥的证书的名称。  
   
  ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
@@ -80,7 +79,7 @@ ALTER DATABASE ENCRYPTION KEY
   
  在数据库加密密钥修改过两次后，必须执行日志备份才能再次对数据库加密密钥进行修改。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要数据库的 CONTROL 权限和用于加密数据库加密密钥的证书或非对称密钥的 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

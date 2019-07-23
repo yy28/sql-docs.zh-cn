@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b97c44ae954886058f771ad0ae6571ebe611927d
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984432"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +54,25 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可拒绝授予 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全对象的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- CONTRACT ::contract_name  
- 指定拒绝将其权限授权他人的约定。 需要使用作用域限定符 ::。  
+ CONTRACT ::contract_name    
+ 指定拒绝将其权限授权他人的约定。 需要使用作用域限定符 ::  。  
   
- MESSAGE TYPE ::message_type_name  
- 指定拒绝将其权限授予他人的消息类型。 需要使用作用域限定符 ::。  
+ MESSAGE TYPE ::message_type_name    
+ 指定拒绝将其权限授予他人的消息类型。 需要使用作用域限定符 ::  。  
   
- REMOTE SERVICE BINDING ::remote_binding_name  
- 指定拒绝将其权限授予他人的远程服务绑定。 需要使用作用域限定符 ::。  
+ REMOTE SERVICE BINDING ::remote_binding_name    
+ 指定拒绝将其权限授予他人的远程服务绑定。 需要使用作用域限定符 ::  。  
   
- ROUTE ::route_name  
- 指定拒绝将其权限授予他人的路由。 需要使用作用域限定符 ::。  
+ ROUTE ::route_name    
+ 指定拒绝将其权限授予他人的路由。 需要使用作用域限定符 ::  。  
   
- SERVICE ::message_type_name  
- 指定拒绝将其权限授予他人的服务。 需要使用作用域限定符 ::。  
+ SERVICE ::message_type_name    
+ 指定拒绝将其权限授予他人的服务。 需要使用作用域限定符 ::  。  
   
- database_principal  
+ database_principal   
  指定要对其拒绝权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -88,7 +87,7 @@ DENY permission  [ ,...n ] ON
 CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
-denying_principal  
+denying_principal   
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -155,7 +154,7 @@ denying_principal
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定、消息类型、远程服务绑定、路由或服务具有 CONTROL 权限。 如果使用 AS 子句，那么指定主体必须拥有其权限被拒绝授予的安全对象。  
   
 ## <a name="see-also"></a>另请参阅  

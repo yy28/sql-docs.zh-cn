@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990493"
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "52539127"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要向登录名和数据库用户分配角色，请使用：**  
   
@@ -62,9 +61,9 @@ ms.locfileid: "52539127"
   
 -   在 sys.database_role_members 和 sys.database_principals 目录视图中可以查看数据库角色。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对数据库具有 **ALTER ANY ROLE** 权限、对角色具有 **ALTER** 权限或具有 **db_securityadmin**中的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -77,11 +76,11 @@ ms.locfileid: "52539127"
   
 3.  展开 **“服务器角色”** 文件夹。  
   
-4.  右键单击要编辑的角色，然后选择“属性”。  
+4.  右键单击要编辑的角色，然后选择“属性”  。  
   
-5.  在“服务器角色属性 - _server\_role\_name_”对话框的“成员”页中，单击“添加”。  
+5.  在“服务器角色属性 - _server\_role\_name_”对话框的“成员”页中，单击“添加”    。  
   
-6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - _server\_role\_name_”对话框。  
+6.  在“选择服务器登录名或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击“确定”以返回“服务器角色属性 - _server\_role\_name_”对话框   。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -99,11 +98,11 @@ ms.locfileid: "52539127"
   
 6.  展开 **“服务器角色”** 文件夹。  
   
-7.  右键单击要编辑的角色，然后选择“属性”。  
+7.  右键单击要编辑的角色，然后选择“属性”  。  
   
-8.  在“数据库角色属性 - _database\_role\_name_”对话框的“常规”页中，单击“添加”。  
+8.  在“数据库角色属性 - _database\_role\_name_”对话框的“常规”页中，单击“添加”    。  
   
-9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - _database\_role\_name_”对话框。  
+9. 在“选择数据库用户或角色”  对话框的“输入要选择的对象名称(示例)”  下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击“浏览...”，然后在“浏览对象”对话框中选择任意对象或所有可用对象   。 单击“确定”以返回“数据库角色属性 - _database\_role\_name_”对话框   。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -113,9 +112,9 @@ ms.locfileid: "52539127"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     ALTER SERVER ROLE diskadmin ADD MEMBER [Domain\Juan] ;  
@@ -128,9 +127,9 @@ ms.locfileid: "52539127"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     ALTER ROLE Marketing ADD MEMBER [Domain\Juan] ;  

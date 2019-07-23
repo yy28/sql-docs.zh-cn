@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1c68ace0ccbd49b63404aaf52419a06dda297f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcaea309d3399d7986ab793ecaf2085180a4c0a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119832"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>解释 SQL Server 单元测试结果
 运行 SQL Server 单元测试时，将会自动生成测试结果，将其保存到磁盘并在“测试结果”  窗口中显示摘要信息。 启动测试运行后，“测试结果”  窗口将出现并显示测试运行的进度。 此显示内容包括正在运行的测试和已完成的测试。  

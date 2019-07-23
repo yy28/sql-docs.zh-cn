@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6314bf3fe9f0d5773ed1084858ea1691418528af
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cf4c90644282ff420e064e7a7b5b99a93c257194
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971377"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>SQLServerDataSourceObjectFactory 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public class SQLServerDataSourceObjectFactory
 ## <a name="remarks"></a>Remarks  
  所有的数据源类都继承此方法。 作为对可引用接口的支持的一部分，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 公开了实现 ObjectFactory 的此类。 Java 应用程序服务器将在数据源类上调用 getReference，这将创建一个在内部将类名用作类工厂的 Reference 对象。  
   
- 当 Java 应用程序服务器必须取消引用引用对象时，它创建 SQLServerDataSourceObjectFactory 对象和调用的实例[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)方法，为传入引用对象，检索的数据源实例。  
+ 当 Java 应用程序服务器必须取消对引用对象的引用时, 它将创建 SQLServerDataSourceObjectFactory 对象的实例, 并调用[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)方法, 并传入 Reference 对象以检索数据源实例.  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSourceObjectFactory 成员](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   

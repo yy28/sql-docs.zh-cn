@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5fe3a72c49f04d2e9a6a6ac8300ae3732adf06d0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112862"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,25 +61,25 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  指示应当重新生成服务主密钥。  
   
- OLD_ACCOUNT ='account_name'  
+ OLD_ACCOUNT ='account_name'   
  指定旧的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- OLD_PASSWORD ='password'  
+ OLD_PASSWORD ='password'   
  指定旧的 Windows 服务帐户的密码。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_ACCOUNT ='account_name'  
+ NEW_ACCOUNT ='account_name'   
  指定新的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_PASSWORD ='password'  
+ NEW_PASSWORD ='password'   
  指定新的 Windows 服务帐户的密码。  
   
 > [!WARNING]  
@@ -103,7 +102,7 @@ ALTER SERVICE MASTER KEY
   
  如果将 SQL 移到另一计算机，则必须使用相同的服务帐户来解密 SMK - SQL Server 将自动修复计算机帐户加密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对服务器的 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

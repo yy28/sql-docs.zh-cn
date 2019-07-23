@@ -12,20 +12,19 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9685110e183e25a39df5d5247ded85ee9bb8bb6c
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082814"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题讨论在将属性添加到搜索属性列表且使其可由全文搜索进行搜索之前，如何获取所需的值。 这些值包括文档属性的属性集 GUID 和属性整数标识符。  
   
- 可对由 IFilter 从二进制数据 - 即从存储在 varbinary、varbinary(max)（包括 FILESTREAM）或 image 数据类型列中的数据中 - 提取的文档属性进行全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 可对由 IFilter 从二进制数据 - 即从存储在 varbinary、varbinary(max)（包括 FILESTREAM）或 image 数据类型列中的数据中 - 提取的文档属性进行全文搜索     。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
  在向属性列表添加可用属性之前，必须找到有关该属性的 2 段信息：  
   

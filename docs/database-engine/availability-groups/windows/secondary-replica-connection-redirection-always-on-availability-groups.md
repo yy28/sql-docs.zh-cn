@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014201"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要副本到主要副本读/写连接重定向（Always On 可用性组）
 
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 引入了 Always On 可用性组的次要副本到主要副本读/写连接重定向。 读/写连接重定向适用于任何操作系统平台。 它允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 引入了 Always On 可用性组的  次要副本到主要副本读/写连接重定向。 读/写连接重定向适用于任何操作系统平台。 它允许客户端应用程序连接定向到主要副本，而不考虑在连接字符串中指定的目标服务器。 
 
 例如，连接字符串可以针对次要副本。 根据可用性组 (AG) 副本的配置和连接字符串中的设置，连接可以自动重定向到主要副本。 
 

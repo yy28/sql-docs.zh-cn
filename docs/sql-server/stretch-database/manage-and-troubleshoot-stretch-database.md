@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6e24af8c3117c85e2dbeb90f2482ca55db9eac6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 282d712f1ebb870c236917d49beb50423957b2a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136110"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>对 Stretch Database 进行管理和故障排除
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +44,7 @@ GO
  打开目录视图 **sys.remote_data_archive_tables** ，并检查 **filter_predicate** 列的值，以标识 Stretch Database 用于选择要迁移的行的函数。 如果值为 null，则整个表都可迁移。 有关详细信息，请参阅 [sys.remote_data_archive_tables (Transact SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) 和 [通过使用筛选器函数选择要迁移的行](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。  
   
 ###  <a name="Migration"></a> 检查数据迁移的状态  
- 在 SQL Server Management Studio 中选择数据库的“任务 | 延伸 | 监视”以便在 Stretch Database 监视器中监视数据迁移。 有关详细信息，请参阅[数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
+ 在 SQL Server Management Studio 中选择数据库的“任务 | 延伸 | 监视”  以便在 Stretch Database 监视器中监视数据迁移。 有关详细信息，请参阅[数据迁移的监视与故障排除 (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)。  
   
  或者，打开动态管理视图 **sys.dm_db_rda_migration_status** 以查看有多少批数据和数据行已迁移。  
   
