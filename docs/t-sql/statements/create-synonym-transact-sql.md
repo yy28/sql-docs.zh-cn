@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 434948bebe433c8325fc93e0a79a749e34a886d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c28b53a15f1123acd8c22480743b64741229b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117075"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,22 +62,22 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 ```  
   
 ## <a name="arguments"></a>参数  
- schema_name_1  
+ schema_name_1   
  指定创建同义词所使用的架构。 如果未指定 *schema*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会使用当前用户的默认架构。  
   
  *synonym_name*  
  新同义词的名称。  
   
- server_name  
+ server_name   
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  基对象所在服务器的名称。  
   
  *database_name*  
- 基对象所在数据库的名称。 如果未指定 database_name，则使用当前数据库的名称。  
+ 基对象所在数据库的名称。 如果未指定 database_name，则使用当前数据库的名称  。  
   
- schema_name_2  
- 基对象的架构的名称。 如果未指定 schema_name，则使用当前用户的默认架构。  
+ schema_name_2   
+ 基对象的架构的名称。 如果未指定 schema_name，则使用当前用户的默认架构  。  
   
  *object_name*  
  同义词被引用基对象的名称。  
@@ -105,7 +104,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  在动态 SQL 中可以创建、删除和引用同义词。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要在给定架构中创建同义词，则用户必须具有 CREATE SYNONYM 权限，并拥有架构或具有 ALTER SCHEMA 权限。  
   
  CREATE SYNONYM 权限是可授予的权限。  

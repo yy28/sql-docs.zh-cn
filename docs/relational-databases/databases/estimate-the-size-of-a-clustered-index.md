@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b94f389814ff0d0fc9a4adcb26b33431286d1119
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051107"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估计聚集索引的大小
 
@@ -216,7 +215,7 @@ ms.locfileid: "51559354"
   
 -   大型对象 (LOB) 值  
   
-     精确确定存储 LOB 数据类型 **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**和 **image** 值所用的空间量的算法非常复杂。 只需加上所期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后再加上群集索引的总大小就可以了。  
+     精确确定存储 LOB 数据类型 **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntext**、 **xml**和 **image** 值所用的空间量的算法非常复杂。 只需加上所期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后再加上群集索引的总大小就可以了。  
   
 -   压缩  
   

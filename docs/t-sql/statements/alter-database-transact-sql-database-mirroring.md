@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cdded8444f4778ec7ad46c8b677e6ebb496847b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065820"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 数据库镜像
 
@@ -71,7 +70,7 @@ SET { <partner_option> | <witness_option> }
 > [!NOTE]
 > ALTER DATABASE 数据库镜像选项对于包含数据库不可用。
 
-database_name 要修改的数据库的名称。
+database_name  要修改的数据库的名称。
 
 PARTNER \<partner_option> 控制用于定义数据库镜像会话的故障转移伙伴及其行为的数据库属性。 有些 SET PARTNER 选项可对任一伙伴进行设置；而其他选项则仅限于对主体服务器或镜像服务器进行设置。 有关详细信息，请参阅下文所述的各个 PARTNER 选项。 无论在哪个伙伴上指定 SET PARTNER 子句，该子句都会影响数据库的两个副本。
 
@@ -81,27 +80,27 @@ PARTNER \<partner_option> 控制用于定义数据库镜像会话的故障转移
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 ```
 
-\<partner_option> ::=
+\<partner_option> ::= 
 
 > [!NOTE]
 > 每个 SET PARTNER 子句只允许使用一个 \<partner_option>。
 
-' partner_server ' 指定在新数据库镜像会话中用作故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器网络地址。 每个会话需要两个伙伴：一个作为主体服务器启动，另一个作为镜像服务器启动。 建议这两个伙伴驻留在不同的计算机上。
+' partner_server '    指定在新数据库镜像会话中用作故障转移伙伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器网络地址。 每个会话需要两个伙伴：一个作为主体服务器启动，另一个作为镜像服务器启动。 建议这两个伙伴驻留在不同的计算机上。
 
-在每个伙伴上，为每个会话指定一次此选项。 启动数据库镜像会话需要两个 ALTER DATABASE database SET PARTNER ='partner_server' 语句。 这两个语句的顺序非常重要。 首先，连接到镜像服务器，并将主体服务器实例指定为 partner_server (SET PARTNER ='principal_server')。 然后，连接到主体服务器，并将镜像服务器实例指定为 partner_server (SET PARTNER ='mirror_server')；此操作会在这两个伙伴之间启动数据库镜像会话。 有关详细信息，请参阅本主题后面的[设置数据库镜像](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。
+在每个伙伴上，为每个会话指定一次此选项。 启动数据库镜像会话需要两个 ALTER DATABASE database SET PARTNER ='partner_server' 语句     。 这两个语句的顺序非常重要。 首先，连接到镜像服务器，并将主体服务器实例指定为 partner_server (SET PARTNER ='principal_server')     。 然后，连接到主体服务器，并将镜像服务器实例指定为 partner_server (SET PARTNER ='mirror_server')；此操作会在这两个伙伴之间启动数据库镜像会话     。 有关详细信息，请参阅本主题后面的[设置数据库镜像](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。
 
-partner_server 的值为服务器网络地址。 其语法如下所示：
+partner_server 的值为服务器网络地址  。 其语法如下所示：
 
-TCP **://**_\<system-address>_**:**_\<port>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
 其中
 
-- \<system-address> 为一个字符串，例如系统名称、完全限定的域名或 IP 地址，它们明确标识了目标计算机系统。
-- \<port> 是与伙伴服务器实例的镜像终结点关联的端口号。
+- \<system-address> 为一个字符串，例如系统名称、完全限定的域名或 IP 地址，它们明确标识了目标计算机系统  。
+- \<port> 是与伙伴服务器实例的镜像终结点关联的端口号  。
 
 有关详细信息，请参阅[指定服务器网络地址](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。
 
-以下示例阐释了 SET PARTNER ='partner_server' 子句：
+以下示例阐释了 SET PARTNER ='partner_server' 子句    ：
 
 ```
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'
@@ -112,7 +111,7 @@ TCP **://**_\<system-address>_**:**_\<port>_
 
 FAILOVER 手动将故障从主体服务器转移到镜像服务器。 只能在主体服务器上指定 FAILOVER。 此选项仅在 SAFETY 设置为 FULL（默认设置）时有效。
 
-FAILOVER 选项需要以 master 作为数据库上下文。
+FAILOVER 选项需要以 master 作为数据库上下文  。
 
 FORCE_SERVICE_ALLOW_DATA_LOSS 未发生自动故障转移时，在数据库处于不同步状态或处于同步状态的情况下当主体服务器失败后，强制数据库服务转向镜像数据库。
 
@@ -132,7 +131,7 @@ RESUME 恢复挂起的数据库镜像会话。 只能在主体服务器上指定
 
 SAFETY { FULL | OFF } 设置事务安全的级别。 只能在主体服务器上指定 SAFETY。
 
-默认值为 FULL。 使用 Full 安全性的情况下，数据库镜像会话将同步运行（在“高安全模式”下）。 如果将 SAFETY 设置为 OFF，则数据库镜像会话将异步运行（在“高性能模式”下）。
+默认值为 FULL。 使用 Full 安全性的情况下，数据库镜像会话将同步运行（在“高安全模式”下）  。 如果将 SAFETY 设置为 OFF，则数据库镜像会话将异步运行（在“高性能模式”下）  。
 
 高安全模式的行为部分取决于见证服务器，如下所示：
 
@@ -151,7 +150,7 @@ SUSPEND 暂停数据库镜像会话。
 
 可以在任一伙伴上指定 SUSPEND。
 
-TIMEOUT integer 以秒为单位指定超时期限。 超时期限是指镜像会话中一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。
+TIMEOUT integer  以秒为单位指定超时期限。 超时期限是指镜像会话中一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。
 
 只能在主体服务器上指定 TIMEOUT 选项。 如果不指定此选项，则在默认情况下，超时期限为 10 秒。 如果指定 5 或更高，则超时期限将设置为指定的秒数。 如果将超时值指定为 0 到 4 秒之间，则超时期限将自动设置为 5 秒。
 
@@ -175,14 +174,14 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > 不能在见证服务器上设置数据库属性。
 
- \<witness_option> ::=
+ \<witness_option> ::= 
 
 > [!NOTE]
 > 每个 SET WITNESS 子句只允许使用一个 \<witness_option>。
 
- ' witness_server ' 指定一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，作为数据库镜像会话的见证服务器。 只能在主体服务器上指定 SET WITNESS 语句。
+ ' witness_server '    指定一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，作为数据库镜像会话的见证服务器。 只能在主体服务器上指定 SET WITNESS 语句。
 
-在 SET WITNESS ='witness_server' 语句中，witness_server 的语法与 partner_server 的语法相同。
+在 SET WITNESS ='witness_server' 语句中，witness_server 的语法与 partner_server 的语法相同      。
 
 OFF 从数据库镜像会话中删除见证服务器。 将见证服务器设置为 OFF 会禁用自动故障转移。 如果数据库设置为 FULL SAFETY 并且见证服务器设置为 OFF，则镜像服务器上的故障会导致主体服务器使该数据库不可用。
 

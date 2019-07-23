@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c6dd8a715e9f6f009335fe54bc591262c6479fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 548f6a6a75be51df2ea0de87f4eca91bebf8358b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055500"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>查看收集组报表 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "47606525"
   
 ### <a name="to-view-a-collection-set-report"></a>查看收集组报表  
   
-1.  首次上载收集的数据时会为报表创建表。 如果尝试在首次上载之前查看报表，则将出现错误并且不会显示报表。 若要上传磁盘使用情况收集组的数据，请在对象资源管理器中依次展开“管理”文件夹、“数据收集”和“系统数据收集组”，右键单击“磁盘使用情况”收集组，然后单击“立即收集并上传”。  
+1.  首次上载收集的数据时会为报表创建表。 如果尝试在首次上载之前查看报表，则将出现错误并且不会显示报表。 若要上传磁盘使用情况收集组的数据，请在对象资源管理器中依次展开“管理”  文件夹、“数据收集”  和“系统数据收集组”  ，右键单击“磁盘使用情况”  收集组，然后单击“立即收集并上传”  。  
   
-2.  若要查看报表，请在对象资源管理器中依次“管理”文件夹，右键单击“数据收集”，依次指向“报表”“管理数据仓库”，然后单击“磁盘使用情况摘要”。  
+2.  若要查看报表，请在对象资源管理器中依次“管理”  文件夹，右键单击“数据收集”  ，依次指向“报表”  “管理数据仓库”  ，然后单击“磁盘使用情况摘要”  。  
   
     > [!NOTE]  
-    >  有些报告可能会在数据收集时间线下显示日历按钮。 单击此按钮可访问 **“数据收集报告日历”**。  
+    >  有些报告可能会在数据收集时间线下显示日历按钮。 单击此按钮可访问 **“数据收集报告日历”** 。  
   
 #### <a name="data-collection-report-calendar"></a>“数据收集报告日历”  
  使用该对话框可指定要报告的数据的开始日期、开始时间和持续时间。 例如，可能要报告上星期三某特定 12 小时内服务器的磁盘使用活动。  

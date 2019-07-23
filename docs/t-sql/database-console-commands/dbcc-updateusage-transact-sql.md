@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c880ac0db330ce03f45d469cffd717970d0b2d5e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040461"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ DBCC UPDATEUSAGE
 ```  
   
 ## <a name="arguments"></a>参数  
-database_name | database_id | 0  
+ database_name | database_id  | 0  
 要对其空间使用统计信息进行报告和更正的数据库的名称或 ID。 如果指定 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
@@ -92,7 +91,7 @@ DBCC UPDATEUSAGE 返回（值可能有所不同）：
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  

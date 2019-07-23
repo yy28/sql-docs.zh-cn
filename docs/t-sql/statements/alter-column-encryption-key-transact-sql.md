@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065940"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,14 +46,14 @@ ALTER COLUMN ENCRYPTION KEY key_name
 ```  
   
 ## <a name="arguments"></a>参数  
- key_name  
+ key_name   
  要更改的列加密密钥。  
   
  *column_master_key_name*  
  指定用于对列加密密钥 (CEK) 进行加密的列主密钥 (CMK) 的名称。  
   
  *algorithm_name*  
- 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP。 删除列加密密钥值时，此参数无效。  
+ 用于对值进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP  。 删除列加密密钥值时，此参数无效。  
   
  *varbinary_literal*  
  使用指定的主加密密钥加密的 CEK BLOB。 删除列加密密钥值时，此参数无效。  
@@ -73,8 +72,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
 
 可使用 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看有关列加密密钥的相关信息。  
   
-## <a name="permissions"></a>Permissions  
- 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
+## <a name="permissions"></a>权限  
+ 需要对数据库具有 ALTER ANY COLUMN ENCRYPTION KEY 权限  。  
   
 ## <a name="examples"></a>示例  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cafbae856962fe7fda7ffb43fe1bc530bca204b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021398"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>发布服务器信息，订阅监视列表（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

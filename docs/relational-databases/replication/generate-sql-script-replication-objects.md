@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35531770618cd0430e456b8a1c5c7880edb6c253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecfda7e29dc749733f950e111f6b650ee61ac38f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128068"
 ---
 # <a name="generate-sql-script-replication-objects"></a>生成 SQL 脚本（复制对象）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47718455"
   
 -   **“生成 SQL 脚本”** 对话框，可以在 **msCoName** 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]文件夹和所有子文件夹的上下文菜单中找到。 使用此对话框，可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上编写所有复制对象的脚本。  
   
--   **生成 SQL 脚本 \<对象名称>**，可以在发布和订阅的上下文菜单中找到。 使用此对话框，可以编写单个对象的脚本。  
+-   **生成 SQL 脚本 \<对象名称>** ，可以在发布和订阅的上下文菜单中找到。 使用此对话框，可以编写单个对象的脚本。  
   
  这些对话框在单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上编写对象脚本；并不连接到其他实例编写相关对象的脚本。  
   

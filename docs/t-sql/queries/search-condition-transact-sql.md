@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d95d03a9060c367c398327a1b771a730f341fa53
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027652"
 ---
 # <a name="search-condition-transact-sql"></a>搜索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +133,7 @@ ms.locfileid: "57334614"
  列名、常量、函数、变量、标量子查询，或者是通过运算符或子查询连接的列名、常量和函数的任意组合。 表达式还可以包含 CASE 表达式。  
   
 > [!NOTE]  
->  非 Unicode 字符串常量和变量使用与数据库的默认排序规则相对应的代码页。 仅使用非 Unicode 字符数据并引用 char、varchar 和 text 类型的非 Unicode 字符数据时，可能发生代码页转换。 如果该代码页与数据库的默认排序规则对应的代码页不同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将把非 Unicode 字符串常量和变量转换为与引用列的排序规则或使用 COLLATE 指定的排序规则相对应的代码页。 如果可以找到[最佳匹配映射](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)，则无法在新代码页中找到的任何字符都将转换为相似字符，否则将转换为默认替换字符“?”。  
+>  非 Unicode 字符串常量和变量使用与数据库的默认排序规则相对应的代码页。 仅使用非 Unicode 字符数据并引用 char、varchar 和 text 类型的非 Unicode 字符数据时，可能发生代码页转换    。 如果该代码页与数据库的默认排序规则对应的代码页不同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将把非 Unicode 字符串常量和变量转换为与引用列的排序规则或使用 COLLATE 指定的排序规则相对应的代码页。 如果可以找到[最佳匹配映射](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)，则无法在新代码页中找到的任何字符都将转换为相似字符，否则将转换为默认替换字符“?”。  
 >  
 > 使用多个代码页时，字符常量可能以大写字母“N”为前缀；为避免发生代码页转换，还可能使用 Unicode 变量。  
   
@@ -165,14 +164,14 @@ ms.locfileid: "57334614"
  !<  
  用于测试一个表达式是否不小于另一个表达式的运算符。  
   
- string_expression  
+ string_expression   
  字符串和通配符。  
   
  [ NOT ] LIKE  
  指示后续字符串使用时要进行模式匹配。 有关详细信息，请参阅 [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)。  
   
  ESCAPE **'***escape_ character***'**  
- 允许在字符串中搜索通配符，而不是将其作为通配符使用。 escape_character 是放在通配符前表示此特殊用法的字符。  
+ 允许在字符串中搜索通配符，而不是将其作为通配符使用。 escape_character 是放在通配符前表示此特殊用法的字符  。  
   
  [ NOT ] BETWEEN  
  指定值的包含范围。 使用 AND 分隔开始值和结束值。 有关详细信息，请参阅 [BETWEEN (Transact-SQL)](../../t-sql/language-elements/between-transact-sql.md)。  
@@ -181,7 +180,7 @@ ms.locfileid: "57334614"
  根据使用的关键字，指定是否搜索空值或非空值。 如果有任何一个操作数为 NULL，则包含位运算符或算术运算符的表达式的计算结果为 NULL。  
   
  CONTAINS  
- 在包含基于字符的数据的列中，搜索单个词和短语的精确或不精确（“模糊”）匹配项、在一定范围内相同的近似词以及加权匹配项。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅 [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)。  
+ 在包含基于字符的数据的列中，搜索单个词和短语的精确或不精确（“模糊”）匹配项、在一定范围内相同的近似词以及加权匹配项  。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅 [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)。  
   
  FREETEXT  
  在包含基于字符的数据的列中，搜索与谓词中的词的含义相符而非精确匹配的值，从而提供一种形式简单的自然语言查询。 此选项只能与 SELECT 语句一起使用。 有关详细信息，请参阅 [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)。  
@@ -189,7 +188,7 @@ ms.locfileid: "57334614"
  [ NOT ] IN  
  根据是在列表中包含还是排除某表达式，指定对该表达式的搜索。 搜索表达式可以是常量或列名，而列表可以是一组常量，更常用的是子查询。 将一组值用圆括号括起来。 有关详细信息，请参阅 [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)。  
   
- subquery  
+ subquery   
  可以视为受限的 SELECT 语句，与 SELECT 语句中的 \<query_expression> 相似。 不允许使用 ORDER BY 子句和 INTO 关键字。 有关详细信息，请参阅 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)。  
   
  ALL  

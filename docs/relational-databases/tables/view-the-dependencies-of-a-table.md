@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1b47a38cd1fc5cc4d95b611dbafbf8d30b22878
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140304"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "52407465"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   使用以下工具查看表的依赖关系：  
+-   使用以下工具查看表的依赖关系：   
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,22 +42,22 @@ ms.locfileid: "52407465"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 sys.sql_expression_dependencies 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 db_owner 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>查看表的依赖关系  
   
-1.  在 **“对象资源管理器”** 中，展开 **“数据库”**，再展开其中的某个数据库，然后展开 **“表”**。  
+1.  在 **“对象资源管理器”** 中，展开 **“数据库”** ，再展开其中的某个数据库，然后展开 **“表”** 。  
   
-2.  右键单击某个表，然后单击“查看依赖关系”。  
+2.  右键单击某个表，然后单击“查看依赖关系”  。  
   
-3.  在“对象依赖关系_\<对象名称\>_”对话框中，选择“依赖于 _\<对象名称\>_ 的对象”或“_\<对象名称\>_ 依赖的对象”。  
+3.  在“对象依赖关系  _\<对象名称\>_ ”对话框中，选择“依赖于 _\<对象名称\>_ 的对象”  或“ _\<对象名称\>_ 依赖的对象”   。  
   
-4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”框中。  
+4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”  框中。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -66,9 +65,9 @@ ms.locfileid: "52407465"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -83,9 +82,9 @@ ms.locfileid: "52407465"
   
 1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  下面的示例返回依赖于表 `Production.Product`的对象。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  下面的示例返回依赖于表 `Production.Product`的对象。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;   

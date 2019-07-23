@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f0a85482a663b9be77ea455bdbabe87acf3b1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050831"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,16 +50,16 @@ GRANT permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON FULLTEXT CATALOG ::full-text_catalog_name  
- 指定对其授予权限的全文目录。 需要使用作用域限定符 ::。  
+ ON FULLTEXT CATALOG ::full-text_catalog_name    
+ 指定对其授予权限的全文目录。 需要使用作用域限定符 ::  。  
   
- ON FULLTEXT STOPLIST ::_full-text_stoplist_name_  
- 指定要对其授予权限的全文非索引字表。 需要使用作用域限定符 ::。  
+ ON FULLTEXT STOPLIST ::_full-text_stoplist_name_   
+ 指定要对其授予权限的全文非索引字表。 需要使用作用域限定符 ::  。  
   
- database_principal  
+ database_principal   
  指定要向其授予权限的主体。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -75,7 +74,7 @@ GRANT permission [ ,...n ] ON
 GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
-AS granting_principal  
+AS granting_principal   
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是以下类型之一：  
   
 -   数据库用户  
@@ -111,12 +110,12 @@ AS granting_principal
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  如果使用 AS 选项，还必须满足以下附加要求：  
   
-|AS granting_principal|所需的其他权限|  
+|AS granting_principal |所需的其他权限|  
 |------------------------------|------------------------------------|  
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  

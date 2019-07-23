@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d0c25e433fd9e311908d1759bbe75a1e1a1f045
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 5dd4aa4c3beb769509884c6ebb75fd8c82c1c8ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058127"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 ### <a name="setting-max-degree-of-parallelism-for-index-operations"></a>设置索引操作的最大并行度
 可以通过暂时将数据库的恢复模式设置为大容量日志恢复模式或简单恢复模式，以在具有许多 CPU 的计算机上改进索引操作（如创建或重新创建索引）的性能。 这些索引操作可以导致重大的日志活动和日志争用，从而影响 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所做的最佳并行度 (DOP) 选择。
 
-此外，请考虑调整这些操作的最大并行度 (MAXDOP) 服务器配置选项。 以下准则基于内部测试，可以作为一般性建议。 您应尝试几个不同的 MAXDOP 设置来确定自己环境的最佳设置：
+此外，请考虑调整这些操作的最大并行度 (MAXDOP) 服务器配置选项  。 以下准则基于内部测试，可以作为一般性建议。 您应尝试几个不同的 MAXDOP 设置来确定自己环境的最佳设置：
 
 * 对于完整恢复模式，将最大并行度选项的值设置为 8 或更小。   
 * 对于大容量日志恢复模式或简单恢复模式，应考虑将最大并行度选项的值设置为大于 8。   
@@ -113,7 +112,7 @@ Microsoft Windows 使用从 1 到 31 的数值优先级系统计划线程的执�
 
 |进程名称   |可执行程序 |是否可使用超过 64 个 CPU |  
 |----------|----------|----------|  
-|SQL Server 数据库引擎 |Sqlserver.exe  |用户帐户控制 |  
+|SQL Server 数据库引擎 |Sqlserver.exe  |是 |  
 |Reporting Services |Rs.exe |否 |  
 |Analysis Services  |As.exe |否 |  
 |Integration Services   |Is.exe |否 |  

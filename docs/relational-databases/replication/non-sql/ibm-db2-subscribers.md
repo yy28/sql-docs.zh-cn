@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 091bc3b0ab56006e12064f6b873d419b4e0c5a7d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133270"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.locfileid: "51672376"
   
 2.  为订阅服务器创建连接字符串。 可以在任何文本编辑器中创建连接字符串，但是建议您使用数据访问工具来创建。 在数据访问工具中创建字符串：  
   
-    1.  依次单击 **“开始”**、 **“程序”**、 **“Microsoft OLE DB Provider for DB2”**、 **“数据访问工具”**。  
+    1.  依次单击 **“开始”** 、 **“程序”** 、 **“Microsoft OLE DB Provider for DB2”** 、 **“数据访问工具”** 。  
   
     2.  在 **“数据访问工具”** 中，按照步骤提供 DB2 服务器的相关信息。 当使用此工具完成操作后，就创建了一个包含相关连接字符串的通用数据链接 (UDL)（复制实际使用的不是 UDL，而是连接字符串）。  
   
-    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”**。  
+    3.  访问连接字符串：右键单击数据访问工具中的 UDL 并选择 **“显示连接字符串”** 。  
   
      连接字符串类似于（使用换行符是为了方便阅读）：  
   
@@ -155,7 +154,7 @@ ms.locfileid: "51672376"
   
      这样，只要 DB2 页大小约束足够大，能容纳最大行大小，就可以在订阅服务器上成功创建已生成的表。 请确保用于访问 DB2 数据库的登录帐户具有访问表空间的权限，这些表空间具有足够大小可以存放向 DB2 复制的表。  
   
--   DB2 可以支持 32 KB 大的 VARCHAR 列，因此可以将某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象列适当映射到 DB2 VARCHAR 列。 但是，复制用于 DB2 的 OLE DB 访问接口不支持将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到 DB2 大型对象。 因此，在生成的创建脚本中，将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**、 **varchar(max)**、 **ntext**和 **nvarchar(max)** 列映射到 VARCHAR(0)。 在将脚本应用于订阅服务器之前，必须将长度值 0 更改为一个适当的值。 如果不更改数据类型长度，则当试图在 DB2 订阅服务器上创建表时，DB2 会产生错误 604（错误 604 表示数据类型的精度或长度属性无效）。  
+-   DB2 可以支持 32 KB 大的 VARCHAR 列，因此可以将某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象列适当映射到 DB2 VARCHAR 列。 但是，复制用于 DB2 的 OLE DB 访问接口不支持将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到 DB2 大型对象。 因此，在生成的创建脚本中，将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**、 **varchar(max)** 、 **ntext**和 **nvarchar(max)** 列映射到 VARCHAR(0)。 在将脚本应用于订阅服务器之前，必须将长度值 0 更改为一个适当的值。 如果不更改数据类型长度，则当试图在 DB2 订阅服务器上创建表时，DB2 会产生错误 604（错误 604 表示数据类型的精度或长度属性无效）。  
   
      请根据您对要复制的源表的了解来确定是否适于将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型对象映射到可变长度的 DB2 项，并在自定义创建脚本中指定适当的最大长度。 有关指定自定义创建脚本的信息，请参阅本主题中“配置 IBM DB2 订阅服务器”部分的步骤 5。  
   

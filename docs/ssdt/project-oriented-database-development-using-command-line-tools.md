@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7cf13ec0608dd3340e37307f5040172311ed7463
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4df947eec003f171fd962299ad116972bd798151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110813"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>使用命令行工具开发面向项目的数据库
 SQL Server Data Tools 经证明是支持多种面向项目的数据库开发方案的命令行工具。  

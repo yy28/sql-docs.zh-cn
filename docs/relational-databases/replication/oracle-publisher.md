@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a2d84adf2c077793a53f24ac37c14b77e2e0a9a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d56e6191276d97cd1286089db6a934d122a60e76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100032"
 ---
 # <a name="oracle-publisher"></a>Oracle 发布服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +30,10 @@ ms.locfileid: "54124137"
   
 ## <a name="options"></a>选项  
  **Oracle 发布服务器**  
- 从列表中选择 Oracle 发布服务器。 此列表包含一些特定的 Oracle 发布服务器，这些服务器以前已被配置为使用运行向导的服务器作为其分发服务器。 如果列表为空，或您希望使用的 Oracle 发布服务器不在列表中，那么请单击 **“添加 Oracle 发布服务器”**。  
+ 从列表中选择 Oracle 发布服务器。 此列表包含一些特定的 Oracle 发布服务器，这些服务器以前已被配置为使用运行向导的服务器作为其分发服务器。 如果列表为空，或您希望使用的 Oracle 发布服务器不在列表中，那么请单击 **“添加 Oracle 发布服务器”** 。  
   
  **“添加 Oracle 发布服务器”**  
- 单击此项可启动 **“分发服务器属性”** 对话框。 在此对话框中，单击 **“添加”**，再单击 **“添加 Oracle 发布服务器”**。 在 **“连接到服务器”** 对话框中，指定 Oracle 服务器名称，以及复制管理用户架构的登录名和密码。 有关详细信息，请参阅[连接到服务器 (Oracle) - 登录名](../../relational-databases/replication/connect-to-server-oracle-login.md)。  
+ 单击此项可启动 **“分发服务器属性”** 对话框。 在此对话框中，单击 **“添加”** ，再单击 **“添加 Oracle 发布服务器”** 。 在 **“连接到服务器”** 对话框中，指定 Oracle 服务器名称，以及复制管理用户架构的登录名和密码。 有关详细信息，请参阅[连接到服务器 (Oracle) - 登录名](../../relational-databases/replication/connect-to-server-oracle-login.md)。  
   
 > [!NOTE]  
 >  如果运行向导的服务器尚未被配置为分发服务器，那么将会提示您立即进行配置。  

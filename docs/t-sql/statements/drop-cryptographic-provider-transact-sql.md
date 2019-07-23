@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 403cef4e8c1e3336be9a2d7df8ae8c14a06f045b
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 578026f567fc844cf2d0fdd13ce53d83e23f24ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898200"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 ## <a name="arguments"></a>参数  
- provider_name  
+ provider_name   
  可扩展密钥管理提供程序的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -50,7 +49,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
   
  如果在删除 EKM 提供程序时存在映射到该提供程序的密钥，则这些密钥的 GUID 将仍存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如果稍后使用相同的密钥 GUID 创建了一个提供程序，则会重新使用这些密钥。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对对称密钥具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

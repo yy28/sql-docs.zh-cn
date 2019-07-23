@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2ddd236ee002015390336c25039158bba70a998
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001684"
 ---
 # <a name="data-type-conversion-database-engine"></a>数据类型转换（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "56590354"
 ## <a name="implicit-and-explicit-conversion"></a>隐式和显式转换
 可以隐式或显式转换数据类型。
   
-隐式转换对用户不可见。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动将数据从一种数据类型转换为另一种数据类型。 例如，将 smallint 与 int 进行比较时，在比较之前，smallint 会被隐式转换为 int。
+隐式转换对用户不可见。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会自动将数据从一种数据类型转换为另一种数据类型。 例如，将 smallint 与 int 进行比较时，在比较之前，smallint 会被隐式转换为 int     。
   
-GETDATE() 隐式转换为日期样式 0。 SYSDATETIME() 隐式转换为日期样式 21。
+GETDATE() 隐式转换为日期样式 0  。 SYSDATETIME() 隐式转换为日期样式 21  。
   
 显式转换使用 CAST 或 CONVERT 函数。
   
@@ -55,12 +54,12 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 如果希望 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序代码符合 ISO 标准，请使用 CAST 而不要使用 CONVERT。 如果要利用 CONVERT 中的样式功能，请使用 CONVERT 而不要使用 CAST。
   
-以下图例显示了可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统提供的数据类型执行的所有显式和隐式数据类型转换。 这些包括 xml、bigint 和sql_variant。 不存在对 sql_variant 数据类型的赋值进行的隐式转换，但是存在转换为 sql_variant 的隐式转换。
+以下图例显示了可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统提供的数据类型执行的所有显式和隐式数据类型转换。 这些包括 xml、bigint 和sql_variant    。 不存在对 sql_variant 数据类型的赋值进行的隐式转换，但是存在转换为 sql_variant 的隐式转换   。
   
 ![数据类型转换表](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
   
 ## <a name="data-type-conversion-behaviors"></a>数据类型转换行为
-将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的数据类型转换为另一种数据类型时，不支持某些隐式和显式数据类型转换。 例如，nchar 值无法被转换为 image 值。 nchar 只能显式转换为 binary，而不支持隐式转换为 binary。 但是，nchar 既可以显式也可以隐式转换为 nvarchar。
+将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的数据类型转换为另一种数据类型时，不支持某些隐式和显式数据类型转换。 例如，nchar 值无法被转换为 image 值   。 nchar 只能显式转换为 binary，而不支持隐式转换为 binary    。 但是，nchar 既可以显式也可以隐式转换为 nvarchar   。
   
 以下各主题说明各对应数据类型展示的转换行为：
   
@@ -90,7 +89,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**char**、**varchar**、**text**、**nvarchar**、**ntext**|**String**|  
 |**decimal**、**numeric**|**String**|  
 |**bit**|**Boolean**|  
-|**binary**、**varbinary**、**image**|一维 Byte() 数组|  
+|**binary**、**varbinary**、**image**|一维 Byte() 数组 |  
 |**int**|**Long**|  
 |**smallint**|**Integer**|  
 |**tinyint**|**Byte**|  
@@ -98,9 +97,9 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**real**|**Single**|  
 |**money**、 **smallmoney**|**货币**|  
 |**datetime**、**smalldatetime**|**Date**|  
-|设置为 NULL 的任何类型|Variant 设置为 Null|  
+|设置为 NULL 的任何类型|Variant 设置为 Null |  
   
-除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值。 这些值将被转换为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中的一维 Byte() 数组。 此数组的范围为 **Byte(** 0 to _length_ 1 **)**，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的字节数。
+除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值    。 这些值将被转换为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中的一维 Byte() 数组  。 此数组的范围为 **Byte(** 0 to _length_ 1 **)** ，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**、**varbinary** 或 **image** 值中的字节数。
   
 以下是从 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的转换。
   
@@ -110,10 +109,10 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**Double**、**Single**|**float**|  
 |**货币**|**money**|  
 |**Date**|**datetime**|  
-|小于或等于 4000 个字符的 String|**varchar**/**nvarchar**|  
-|大于 4000 个字符的 String|**text**/**ntext**|  
-|小于或等于 8000 字节的一维 Byte() 数组|**varbinary**|  
-|大于 8000 字节的一维 Byte() 数组|**图像**|  
+|小于或等于 4000 个字符的 String |**varchar**/**nvarchar**|  
+|大于 4000 个字符的 String |**text**/**ntext**|  
+|小于或等于 8000 字节的一维 Byte() 数组 |**varbinary**|  
+|大于 8000 字节的一维 Byte() 数组 |**图像**|  
   
 ## <a name="see-also"></a>另请参阅
 [OLE 自动存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  

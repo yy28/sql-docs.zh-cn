@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9a7fe17ad9857d066f7db2219d33d5ab209a91bb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 276ce1b24afc58be960f7c9f580204f7b329fe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091737"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- FILE ='path_to_file'  
+ FILE ='path_to_file'   
  指定主密钥将导入的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。  
   
- PASSWORD ='password'  
+ PASSWORD ='password'   
  用于加密文件中主密钥的密码。 此密码应通过复杂性检查。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
 ## <a name="remarks"></a>Remarks  
@@ -59,7 +58,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
   
  我们建议您在创建主密钥之后立即对其进行备份，并存储于另外一个安全的位置中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: d25a38a0c7bd274e07d0932d6b8ef451a22dda06
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306075"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316647"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +234,7 @@ SQL Server 版本  |可再发行组件安装链接
                  keys/ContosoRSAKey0/<guid>  
     ```  
  > [!IMPORTANT]  
-    >  虽然密钥保管库支持具有多个版本的相同命名的密钥，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器使用的密钥不应受版本控制或对其进行滚动更新。 如果管理员想要滚动用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的密钥，则应在保管库中创建一个具有不同名称的新密钥并用它来加密 DEK。  
+ > 虽然密钥保管库支持具有多个版本的相同命名的密钥，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器使用的密钥不应受版本控制或对其进行滚动更新。 如果管理员想要滚动用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的密钥，则应在保管库中创建一个具有不同名称的新密钥并用它来加密 DEK。  
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>第三部分：安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
@@ -245,7 +244,7 @@ SQL Server 版本  |可再发行组件安装链接
 >  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。
 
 > [!NOTE]  
-> 1.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 版后，可能会遭遇数据库还原失败。 请参阅 KB 文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
+> 1\.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 版后，可能会遭遇数据库还原失败。 请参阅 KB 文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   
@@ -315,7 +314,7 @@ SQL Server 版本  |可再发行组件安装链接
      采用以下方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本：  
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
-        - 如果使用“全局 Azure”，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure Key Vault 的名称。
+        - 如果使用“全局 Azure”，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure Key Vault 的名称  。
         - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   

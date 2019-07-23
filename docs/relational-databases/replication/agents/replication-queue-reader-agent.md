@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81cdc720a23c402a493776c9fba7c0da6c119e60
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085944"
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ qrdrsvc [-?]
  **-DefinitionFile** _def_path_and_file_name_  
  代理定义文件的路径。 代理定义文件中包含代理的命令提示符参数。 文件的内容被当作可执行文件进行分析。 使用双引号 (") 指定包含任意字符的参数值。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
  分发服务器名称。 为该服务器上的 *默认实例指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 为该服务器上的 *server_name*\\*instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果未指定，则名称默认为本地计算机上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的默认实例的名称。  
   
  **-DistributionDB** _distribution_database_  
@@ -110,12 +109,12 @@ qrdrsvc [-?]
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。  如果详细级别为 0，则只输出错误消息。  如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-PollingInterval** _polling_interval_  
  仅与使用基于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的队列的更新订阅有关。 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 队列接受对挂起的排队事务的轮询的频率（以秒为单位）。 该值可介于 0 和 240 秒之间。 默认值为 5 秒。  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  指定参加与发布数据库进行的数据库镜像会话的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移伙伴实例。 有关详细信息，请参阅[数据库镜像和复制 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
  **-ProfileName** _agent_profile_name_  

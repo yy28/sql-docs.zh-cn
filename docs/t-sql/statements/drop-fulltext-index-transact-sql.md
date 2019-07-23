@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b1a3c7aa59a3b7c69c0f0483f51227e34a550a9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09fe23c827b1d3d4561a4333180ad3eb508a3adc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044241"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,8 +49,8 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="remarks"></a>Remarks  
  使用 DROP FULLTEXT INDEX 命令前，无需从全文索引中删除所有列。  
   
-## <a name="permissions"></a>Permissions  
- 用户必须对表或索引视图具有 ALTER 权限，或者是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员。  
+## <a name="permissions"></a>权限  
+ 用户必须对表或索引视图具有 ALTER 权限，或者是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员    。  
   
 ## <a name="examples"></a>示例  
  以下示例删除 `JobCandidate` 表的全文索引。  
