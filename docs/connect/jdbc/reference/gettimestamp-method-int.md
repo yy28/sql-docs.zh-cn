@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2d9789e3c7fd8828fef3369ce08a8af7329e8c16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b9a349122b907ff535de8ba3f90e0746465d244
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978822"
 ---
 # <a name="gettimestamp-method-int"></a>getTimestamp 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Timestamp getTimestamp(int index)
  指示参数索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个时间戳的对象。  
+ Timestamp 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

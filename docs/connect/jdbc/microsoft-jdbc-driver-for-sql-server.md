@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956324"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 
@@ -41,7 +40,7 @@ ms.locfileid: "66801838"
 * [性能和可靠性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [故障排除](diagnosing-problems-with-the-jdbc-driver.md)
 * [示例代码](sample-jdbc-driver-applications.md)
-* [符合性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [合规性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>社区
 
@@ -49,13 +48,13 @@ ms.locfileid: "66801838"
   
 ## <a name="download"></a>下载
 
-[下载 Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -有关 Maven 项目等的其他信息。
+[下载 MICROSOFT JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -包含有关 Maven 项目和其他内容的其他信息。
   
 ## <a name="samples"></a>示例  
 
 * [示例 JDBC 驱动程序应用程序](sample-jdbc-driver-applications.md)  
-* [Windows 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [MacOS 上开始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [在 Ubuntu 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL) 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise Server (SLES) 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [在 Windows 上通过 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [MacOS 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Ubuntu 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) 上入门 Java](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [SUSE Linux Enterprise Server (SLES) 上入门 Java](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b52d434f3add9cfe2590519e90267bbfb93e160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 336192ffefd750ba3e817ba1b961fd3726d9a6e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981410"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>getNString 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.lang.String getNString(int columnIndex)
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个字符串对象。  
+ String 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  此 getNString 方法是由 java.sql.SQLServerResultSet 接口中的 getNString 方法指定的。  
   
- 此方法可以用于检索的值**nvarchar**， **nchar**， **nvarchar （max)** ， **ntext**，或**xml**的当前行中的列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
+ 此方法可用于检索此[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象的当前行中的**nvarchar**、 **nchar**、 **nvarchar (max)** 、 **ntext**或**xml**列的值。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getNString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

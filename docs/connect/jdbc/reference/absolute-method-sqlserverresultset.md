@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0572ed756bd8b347c01e05168873ac543a0ea7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956067"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public boolean absolute(int row)
  指示要移到的行号的 int  值。 它可以为正数、负数或 0。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果将光标移到给定位置。 **false**如果它是第一行之前或最后一行之后。  
+ 如果光标移到给定位置,**则为 true** 。 如果它位于第一行之前或最后一行之后, 则**为 false** 。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

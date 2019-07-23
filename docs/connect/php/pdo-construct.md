@@ -1,5 +1,5 @@
 ---
-title: ':: __Construct |Microsoft Docs'
+title: 'PDO:: __construct |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936258"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ $dsn：包含前缀名（始终是 `sqlsrv`）、冒号和 Server 关键字的�
   
 *$password*：可选。 包含用户密码的字符串。 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定密码。 若要使用 Windows 身份验证进行连接，请指定 `""`。  
   
-*$driver_options*： 可选。 你可以指定 PDO 驱动程序管理器属性和 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 特定驱动程序属性 -- PDO::SQLSRV_ATTR_ENCODING、PDO::SQLSRV_ATTR_DIRECT_QUERY。 无效属性不会生成异常。 当使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)指定时，无效属性会生成异常。  
+*$driver _options*: 可选。 你可以指定 PDO 驱动程序管理器属性和 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 特定驱动程序属性 -- PDO::SQLSRV_ATTR_ENCODING、PDO::SQLSRV_ATTR_DIRECT_QUERY。 无效属性不会生成异常。 当使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)指定时，无效属性会生成异常。  
   
 ## <a name="return-value"></a>返回值  
 返回 PDO 对象。 如果失败，则返回 PDOException 对象。  
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 你可以通过将实例设置为 NULL 来关闭连接对象。  
   
-连接后，pdo:: errorcode 将显示 01000 而非 00000。  
+连接后, PDO:: errorCode 显示 01000, 而不是 part-r-00000。  
   
 如果 PDO::__construct 出于任何原因而失败，将引发异常，即使将 PDO::ATTR_ERRMODE 设置为 PDO::ERRMODE_SILENT 也是如此。  
   

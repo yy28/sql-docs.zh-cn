@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916362"
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本数据类型将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型转换为 Java 编程语言能够理解的格式，反之亦然。 JDBC driver 提供对 JDBC 4.0 API，其中包括支持**SQLXML**数据类型和 National (Unicode) 数据类型，如**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，并**NCLOB**。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本数据类型将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型转换为 Java 编程语言能够理解的格式，反之亦然。 JDBC 驱动程序提供对 JDBC 4.0 API 的支持, 其中包括**SQLXML**数据类型和国家 (Unicode) 数据类型 (如**NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**和**NCLOB**)。  
   
 ## <a name="data-type-mappings"></a>数据类型映射
 
@@ -41,7 +40,7 @@ ms.locfileid: "66790089"
 | Decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | 图像              | LONGVARBINARY                                      | byte[]                       |
-| ssNoversion                | 整数                                            | ssNoversion                          |
+| INT                | 整数                                            | INT                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
@@ -69,7 +68,7 @@ ms.locfileid: "66790089"
   
 (1) 若要将 java.sql.Time 与时间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型一起使用，必须将 sendTimeAsDatetime 连接属性设置为 false  。  
   
-（2） 您可以以编程方式访问的值**datetimeoffset**与[DateTimeOffset 类](../../connect/jdbc/reference/datetimeoffset-class.md)。  
+(2) 可以使用[Datetimeoffset 类](../../connect/jdbc/reference/datetimeoffset-class.md)以编程方式访问**datetimeoffset**值。  
   
 以下几部分提供了如何使用 JDBC 驱动程序和基本数据类型的示例。 有关如何在 Java 应用程序中使用基本数据类型的更多详细示例，请参阅[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)。  
   
@@ -86,11 +85,11 @@ ms.locfileid: "66790089"
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> GetUnicodeStream 和使用规模方法 getBigDecimal 不推荐使用和不支持 JDBC 驱动程序。
+> 使用扩展方法的 getUnicodeStream 和 getBigDecimal 已被弃用, JDBC 驱动程序不支持这些方法。
 
 ## <a name="updating-data-by-data-type"></a>按数据类型更新数据
 
-如果您必须更新数据源中的字段的值，使用一个更新\<类型 > SQLServerResultSet 类的方法。 在下面的示例中，[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 方法与 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法结合使用，用于更新数据源中的数据：  
+如果必须更新数据源中字段的值, 请使用 SQLServerResultSet 类的一个更新\<类型 > 方法。 在下面的示例中，[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 方法与 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法结合使用，用于更新数据源中的数据：  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66790089"
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-有关参数化查询的详细信息，请参阅[使用带参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
+有关参数化查询的详细信息, 请参阅[使用带参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>向存储过程传递参数
 
@@ -114,7 +113,7 @@ ms.locfileid: "66790089"
 > [!NOTE]  
 > 在此实例中，将返回一个结果集，包含此存储过程的运行结果。
 
-有关使用 JDBC 驱动程序和存储的过程和输入的参数的详细信息，请参阅[带有输入参数使用存储过程](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
+有关将 JDBC 驱动程序与存储过程和输入参数一起使用的详细信息, 请参阅[使用具有输入参数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>从存储过程检索参数
 
@@ -125,7 +124,7 @@ ms.locfileid: "66790089"
 > [!NOTE]  
 > 除返回的输出参数外，还可能返回一个结果集，包含此存储过程的运行结果。  
   
-有关如何使用 JDBC 驱动程序使用存储的过程和输出参数的详细信息，请参阅[带有输出参数使用存储过程](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)。  
+有关如何将 JDBC 驱动程序用于存储过程和输出参数的详细信息, 请参阅将[存储过程与 Output 参数一起使用](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)。  
 
 ## <a name="see-also"></a>另请参阅
 

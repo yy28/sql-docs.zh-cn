@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 351351dd287da5b7efeb59bd9d1df97e52b30f57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956956"
 ---
 # <a name="working-with-result-sets"></a>使用结果集
 
@@ -27,7 +26,7 @@ ms.locfileid: "66798508"
 此外，SQLServerResultSet 对象还提供了多种方法，可用于在其数据行中进行导航、获取或设置其中包含的数据，以及建立针对基础数据库中更改的各种敏感度级别。  
   
 > [!NOTE]  
-> 有关管理结果集，包括其更改敏感度的详细信息请参阅[JDBC 驱动程序管理结果集](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
+> 有关管理结果集的详细信息 (包括其更改敏感度), 请参阅[通过 JDBC 驱动程序管理结果集](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
   
 此部分的主题说明了使用结果集来处理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中所包含数据的各种方法。  
   
