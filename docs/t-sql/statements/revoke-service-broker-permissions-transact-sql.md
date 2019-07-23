@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3b67961b62e3d6629aaa23b485a96d855fe72a9c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914218"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,26 +59,26 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  如果主体具有不带 GRANT 选项的指定权限，则将撤消该权限本身。  
   
- permission  
+ permission   
  指定可对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全对象撤消的权限。 有关这些权限的列表，请参阅本主题后面的“备注”部分。  
   
- CONTRACT ::contract_name  
- 指定对其撤消权限的约定。 需要使用作用域限定符 ::。  
+ CONTRACT ::contract_name    
+ 指定对其撤消权限的约定。 需要使用作用域限定符 ::  。  
   
- MESSAGE TYPE ::message_type_name  
- 指定对其撤消权限的消息类型。 需要使用作用域限定符 ::。  
+ MESSAGE TYPE ::message_type_name    
+ 指定对其撤消权限的消息类型。 需要使用作用域限定符 ::  。  
   
- REMOTE SERVICE BINDING ::remote_binding_name  
- 指定对其撤消权限的远程服务绑定。 需要使用作用域限定符 ::。  
+ REMOTE SERVICE BINDING ::remote_binding_name    
+ 指定对其撤消权限的远程服务绑定。 需要使用作用域限定符 ::  。  
   
- ROUTE ::route_name  
- 指定对其撤消权限的路由。 需要使用作用域限定符 ::。  
+ ROUTE ::route_name    
+ 指定对其撤消权限的路由。 需要使用作用域限定符 ::  。  
   
- SERVICE ::message_type_name  
- 指定对其撤消权限的服务。 需要使用作用域限定符 ::。  
+ SERVICE ::message_type_name    
+ 指定对其撤消权限的服务。 需要使用作用域限定符 ::  。  
   
- database_principal  
- 指定要从中撤消权限的主体。 database_principal 可以为以下各项之一：  
+ database_principal   
+ 指定要从中撤消权限的主体。 database_principal 可以为以下各项之一  ：  
   
 -   数据库用户  
   
@@ -103,8 +102,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- AS revoking_principal  
- 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 revoking_principal 可以为以下各项之一：  
+ AS revoking_principal   
+ 指定一个主体，执行该查询的主体从该主体获得撤消该权限的权利。 revoking_principal 可以为以下各项之一  ：  
   
 -   数据库用户  
   
@@ -177,7 +176,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 约定、消息类型、远程服务绑定、路由或服务具有 CONTROL 权限  
   
 ## <a name="see-also"></a>另请参阅  

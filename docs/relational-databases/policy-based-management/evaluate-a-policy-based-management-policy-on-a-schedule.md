@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc78ec53189ff3f9deae1a95895c12ac33cd25d7
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ad7d22492411538a1f397f1a7d02436d1a02bde7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901156"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>定期评估基于策略的管理策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "53588612"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -49,16 +48,16 @@ ms.locfileid: "53588612"
   
 2.  单击加号以便展开 **“管理”** 文件夹。  
   
-3.  单击加号以便展开 **“策略管理”**。  
+3.  单击加号以便展开 **“策略管理”** 。  
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要评估其计划的策略，然后选择“属性”。  
+5.  右键单击要评估其计划的策略，然后选择“属性”  。  
   
-6.  在“打开策略 - policy_name”对话框的“评估模式”列表中，选择“按计划”。  
+6.  在“打开策略 - policy_name”对话框的“评估模式”列表中，选择“按计划”     。  
   
 7.  在 **“计划”** 中，单击 **“选取”** 指定现有的计划，或 **“新建”** 创建新的计划。  
   
-8.  完成后，单击 **“确定”**。  
+8.  完成后，单击 **“确定”** 。  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7e4137d61fcb223f4fa4fc943314ecaa50965c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7311828e42ffbd73e53e82ab3f87fb6e7b0925d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086680"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>参数  
- pool_name  
+ pool_name   
  要删除的外部资源池的名称。  
   
 ## <a name="remarks"></a>Remarks  
@@ -51,7 +50,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
   
  建议您在熟悉资源调控器状态之后再执行 DDL 语句。 有关详细信息，请参阅 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 `CONTROL SERVER` 权限。  
   
 ## <a name="examples"></a>示例  

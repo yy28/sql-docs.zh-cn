@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e17b738d116fa1a82733484fb9aa32a99ec1fa
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b7cba43ad87b39122f6cd3d3ae7328b963e6fb1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948439"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "57334434"
 ## <a name="arguments"></a>参数  
 \<search_condition> 指定需要组和/或聚合需要满足的一个或更多谓词。 有关搜索条件和谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
   
- 不能在 HAVING 子句中使用 text、image 和 ntext 数据类型。  
+ 不能在 HAVING 子句中使用 text、image 和 ntext 数据类型    。  
   
 ## <a name="examples"></a>示例  
  以下示例使用简单 `HAVING` 子句从 `SalesOrderID` 表中检索超过 `SalesOrderDetail` 的每个 `$100000.00` 的总计。  

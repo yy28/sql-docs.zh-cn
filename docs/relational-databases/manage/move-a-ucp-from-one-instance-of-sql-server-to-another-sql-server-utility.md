@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f01327cd6984330c96d49a6c10a87963407e8e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: bffc65e8586e8a158c58f7afb5cfb244835e8c86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115393"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "51029974"
   
 8.  等待大约 1 小时，以便数据收集和聚合操作完成。  
   
-9. 若要刷新数据，请在“实用工具资源管理器”中右键单击“托管实例”节点，然后选择“刷新”。 列表视图数据将显示在 **“实用工具资源管理器”** 内容窗格中。 有关详细信息，请参阅[查看资源运行状况策略结果（SQL Server 实用工具）](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)。  
+9. 若要刷新数据，请在“实用工具资源管理器”  中右键单击“托管实例”  节点，然后选择“刷新”  。 列表视图数据将显示在 **“实用工具资源管理器”** 内容窗格中。 有关详细信息，请参阅[查看资源运行状况策略结果（SQL Server 实用工具）](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

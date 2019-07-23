@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5def2cd5b24046fe41524ed26b149c335b1c1f0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137240"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,17 +53,17 @@ ms.locfileid: "53590496"
   
 **更改服务器计算机上的 MaxTokenSize**  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  键入 **regedit**，然后单击“确定”。 （如果此时出现“用户帐户控制”对话框，请单击“继续”。）  
+2.  键入 **regedit**，然后单击“确定”。  （如果此时出现“用户帐户控制”对话框，请单击“继续”。）    
   
 3.  导航到 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   
-4.  如果 **MaxTokenSize** 参数不存在，请右键单击“参数”，指向“新建”，然后单击“DWORD (32 位)”值。 将注册表项命名为 **MaxTokenSize**。  
+4.  如果 **MaxTokenSize** 参数不存在，请右键单击“参数”，指向“新建”，然后单击“DWORD (32 位)”值。    将注册表项命名为 **MaxTokenSize**。  
   
-5.  右键单击 **MaxTokenSize**，然后单击“修改”。  
+5.  右键单击 **MaxTokenSize**，然后单击“修改”。   
   
-6.  在“数值数据”框中键入所需的 **MaxTokenSize** 值。  
+6.  在“数值数据”框中键入所需的 **MaxTokenSize** 值。   
   
     > [!NOTE]  
     > 建议使用的最大标记长度为十六进制值 ffff（十进制值 65535）。 提供此值后很可能会解决问题，但可能会对计算机的性能产生负面影响。 建议您建立可包含单位中任一用户最长标记的最小 **MaxTokenSize** 值并输入该值。  

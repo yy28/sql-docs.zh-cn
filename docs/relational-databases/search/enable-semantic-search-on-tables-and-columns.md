@@ -12,13 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: f9ac78de3ea95d7cace9a32001db1fddda9bab50
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082900"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建新的语义索引  
- 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列”  页为每个要创建语义索引的列启用“统计语义”  。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="HowToEnableAlter"></a> 在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -145,7 +144,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 添加语义索引  
- 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
 ## <a name="alter-a-semantic-index"></a>更改语义索引
   
@@ -159,7 +158,7 @@ GO
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
-要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句     。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
 ```sql  
 USE database_name  
@@ -171,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句。  
+要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句     。  
   
 ```sql  
 USE database_name  
@@ -184,7 +183,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除语义索引  
- 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 ###  <a name="dropreq"></a> 删除语义索引的要求和限制  
   
@@ -237,7 +236,7 @@ GO
     GO  
     ```  
   
--   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
+-   在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中，右键单击一个列，然后选择“属性”  。 在 **“列属性”** 对话框的 **“常规”** 页上，查看 **“统计语义”** 属性的值。  
   
      值 True 表示除了启用全文索引外，还为指定的列启用了语义索引。  
   

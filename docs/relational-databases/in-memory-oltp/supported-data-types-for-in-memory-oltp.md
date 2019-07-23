@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ea1371abfc033c6a19f27d005c3b97f97e6d504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075891"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>内存中 OLTP 支持的数据类型
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47657565"
 |-|-|-|  
 |[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography (Transact-SQL)](../../t-sql/spatial-geography/spatial-types-geography.md)|[geometry (Transact-SQL)](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)|  
 |[hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)|[xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)|  
-|[sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)|用户定义类型|实例时都提供 SQL Server 登录名。|  
+|[sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)|用户定义类型|。|  
   
 ## <a name="notable-supported-data-types"></a>值得注意的受支持数据类型  
  内存中 OLTP 的功能支持大多数数据类型。 以下几个数据类型值得注意：  

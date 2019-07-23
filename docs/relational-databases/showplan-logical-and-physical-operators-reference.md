@@ -136,14 +136,13 @@ helpviewer_keywords:
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fb9b4f90b40b70c67e27233f84ee7b2a99635cf
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 46578b4795bc02b0d426564b357dea580665ceeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048842"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -159,11 +158,11 @@ ms.locfileid: "54069087"
   
  物理运算符初始化、收集数据，然后关闭。 具体来讲，物理运算符可以响应下列三种方法调用：  
   
--   **Init()**：Init() 方法使物理运算符初始化自身并设置所有需要的数据结构。 尽管一个物理运算符通常只接收一次 **Init()** 调用，但也可以接收许多次调用。  
+-   **Init()** ：Init() 方法使物理运算符初始化自身并设置所有需要的数据结构  。 尽管一个物理运算符通常只接收一次 **Init()** 调用，但也可以接收许多次调用。  
   
--   **GetNext()**：GetNext() 方法使物理运算符获得数据的第一行或后续行。 物理运算符可以不接收 **GetNext()** 调用，也可以接收许多次调用。  
+-   **GetNext()** ：GetNext() 方法使物理运算符获得数据的第一行或后续行  。 物理运算符可以不接收 **GetNext()** 调用，也可以接收许多次调用。  
   
--   **Close()**：Close() 方法使物理运算符执行某些清除操作，然后关闭。 一个物理运算符只接收一个 **Close()** 调用。  
+-   **Close()** ：Close() 方法使物理运算符执行某些清除操作，然后关闭  。 一个物理运算符只接收一个 **Close()** 调用。  
   
 **GetNext()** 方法返回一个数据行，它的调用次数作为 **ActualRows** 显示在使用 SET STATISTICS PROFILE ON 或 SET STATISTICS XML ON 生成的显示计划输出中。 有关这些 SET 选项的详细信息，请参阅 [SET STATISTICS PROFILE (Transact-SQL)](../t-sql/statements/set-statistics-profile-transact-sql.md) 和 [SET STATISTICS XML (Transact-SQL)](../t-sql/statements/set-statistics-xml-transact-sql.md)。  
   
@@ -185,15 +184,15 @@ ms.locfileid: "54069087"
   
 |图形执行计划图标|Showplan 运算符|描述|  
 |-----------------------------------|-----------------------|-----------------|  
-|![自适应联接运算符图标](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join operator icon")|**自适应联接**|通过自适应联接运算符，在扫描第一个输入后可延迟选择哈希联接或嵌套循环联接方法。 | 
+|![自适应联接运算符图标](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join operator icon")|**自适应联接**|通过自适应联接运算符，在扫描第一个输入后可延迟选择哈希联接或嵌套循环联接方法  。 | 
 |None|**Aggregate**|**Aggregate** 运算符计算包含 MIN、MAX、SUM、COUNT 或 AVG 的表达式。 **Aggregate** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Arithmetic Expression 运算符图标](../relational-databases/media/arithmetic-expression-32x-2.gif "Arithmetic Expression 运算符图标")|**Arithmetic Expression**|**Arithmetic Expression** 运算符根据行中的现有值计算新值。 **中未使用** 算术表达式 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]| 
-|None|**Async Concat**|Async Concat 运算符仅用于远程查询中（分布式查询）。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 Asnyc Concat 同时向所有子节点发出 `open()` 调用，然后将位图应用于每个子节点。 对于为 1 的每个位， **Async Concat** 按需向父节点发送输出行。| 
+|None|**Async Concat**|Async Concat 运算符仅用于远程查询中（分布式查询）  。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 Asnyc Concat 同时向所有子节点发出 `open()` 调用，然后将位图应用于每个子节点  。 对于为 1 的每个位， **Async Concat** 按需向父节点发送输出行。| 
 |![Assert 运算符图标](../relational-databases/media/assert-32x.gif "Assert 运算符图标")|**ActualRebinds**|**Assert** 运算符用于验证条件。 例如，验证引用完整性或确保标量子查询返回一行。 对于每个输入行， **Assert** 运算符都要计算执行计划的 **Argument** 列中的表达式。 如果此表达式的值为 NULL，则通过 **Assert** 运算符传递该行，并且查询执行将继续。 如果此表达式的值非 Null，则将产生相应的错误。 **Assert** 运算符是一个物理运算符。| 
 |![Assign 语言元素图标](../relational-databases/media/assign-32.gif "Assign 语言元素图标")|**Assign**|**Assign** 运算符将表达式的值或常量分配给变量。 **Assign** 是一个语言元素。| 
 |![Bitmap 运算符图标](../relational-databases/media/bitmap-32x.gif "Bitmap 运算符图标")|**Bitmap Create**|**Bitmap Create** 运算符出现在创建位图的显示计划输出中。 **Bitmap Create** 是一个逻辑运算符。| 
 |![Bitmap 运算符图标](../relational-databases/media/bitmap-32x.gif "Bitmap 运算符图标")|**Bitmap**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 **Bitmap** 运算符来实现并行查询计划中的位图筛选。 在将行传递给另一个运算符（如 **Parallelism** 运算符）之前，通过消除无法生成任何联接记录的键值的行，位图筛选可提高查询的执行速度。 位图筛选器使用运算符树某部分的表中一组值的简洁表示形式来筛选位于该树另一部分的第二张表中的行。 通过在查询中预先删除不必要的行，后续运算符将处理较少的行，从而提高查询的整体性能。 优化器将确定位图的选择性何时可满足使用条件以及在哪些运算符上应用筛选器。 **Bitmap** 是一个物理运算符。| 
-|![Bookmark Lookup 运算符图标](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 运算符图标")|**Bookmark Lookup**|**Bookmark Lookup** 运算符使用书签（行 ID 或聚集键）在表或聚集索引中查找相应的行。 **Argument** 列包含书签标签，用于在表或聚集索引内查找行。 **Argument** 列还包含要查找的行所在的表或聚集索引的名称。 如果 **Argument** 列中出现 WITH PREFETCH 子句，则表示查询处理器已决定在表或聚集索引中查找书签时将使用异步预提取（预读）作为最佳选择。<br /><br /> 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，便不再使用 Bookmark Lookup。 而由 Key Lookup 和 RID Lookup 提供书签查找功能。| 
+|![Bookmark Lookup 运算符图标](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 运算符图标")|**Bookmark Lookup**|**Bookmark Lookup** 运算符使用书签（行 ID 或聚集键）在表或聚集索引中查找相应的行。 **Argument** 列包含书签标签，用于在表或聚集索引内查找行。 **Argument** 列还包含要查找的行所在的表或聚集索引的名称。 如果 **Argument** 列中出现 WITH PREFETCH 子句，则表示查询处理器已决定在表或聚集索引中查找书签时将使用异步预提取（预读）作为最佳选择。<br /><br /> 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，便不再使用 Bookmark Lookup  。 而由 Key Lookup 和 RID Lookup 提供书签查找功能   。| 
 |None|**Branch Repartition**|在并行查询计划中，有时存在迭代器的概念性区域。 此类区域中的所有迭代器都可通过并行线程执行。 这些区域本身必须串行执行。 单个区域内的某些 **Parallelism** 迭代器称为 **Branch Repartition**。 两个这样的区域边界上的 **Parallelism** 迭代器称为 **Segment Repartition**。 **Branch Repartition** 和 **Segment Repartition** 是逻辑运算符。| 
 |None|**Broadcast**|**Broadcast** 有一个子节点和 *n* 个父节点。 **Broadcast** 根据使用者的请求将其输入行发送给多个使用者。 每个使用者都将获得所有行。 例如，如果所有使用者都是哈希联接的生成端，则将生成 *n* 份哈希表。| 
 |![Build Hash 运算符图标](../relational-databases/media/build-hash.gif "Build Hash 运算符图标")|**Build Hash**|指示为 xVelocity 内存优化的列存储索引生成批处理哈希表。| 
@@ -206,14 +205,14 @@ ms.locfileid: "54069087"
 |![Clustered Index Update 运算符图标](../relational-databases/media/clustered-index-update-32x.gif "Clustered Index Update 运算符图标")|**Clustered Index Update**|**Clustered Index Update** 运算符更新 **Argument** 列中指定的聚集索引中的输入行。如果存在 WHERE:() 谓词，则只更新那些满足此谓词的行。 如果存在 SET:() 谓词，则将每个更新的列设置为该值。 如果存在 DEFINE:() 谓词，则列出此运算符定义的值。 可以在 SET 子句中、该运算符内的其他位置和该查询内的其他位置引用这些值。 **Clustered Index Update** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Collapse 运算符图标](../relational-databases/media/collapse-32x.gif "Collapse 运算符图标")|**折叠**|**Collapse** 运算符用于优化更新处理。 执行更新时，可以将该更新操作拆分（使用 **Split** 运算符）成为删除和插入操作。 **Argument** 列包含一个指定键列列表的 GROUP BY:() 子句。 如果查询处理器遇到删除和插入相同键值的相邻行，则会用一个更有效的更新操作替换这些单独的操作。 **Collapse** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Columnstore Index Scan](../relational-databases/media/columnstoreindexscan.gif "Columnstore Index Scan")|**Columnstore Index Scan**|**Columnstore Index Scan** 运算符会扫描查询执行计划的 **Argument** 列中指定的列存储索引。| 
-|![Compute Scalar 运算符图标](../relational-databases/media/compute-scalar-32x.gif "Compute Scalar 运算符图标")|**Compute Scalar**|**Compute Scalar** 运算符通过对表达式求值来生成计算标量值。 该值可以返回给用户、在查询中的其他位置引用或二者皆可。 例如，在筛选谓词或联接谓词中就会出现二者皆可的情况。 **Compute Scalar** 既是一个逻辑运算符，也是一个物理运算符。<br /><br /> 在 SET STATISTICS XML 生成的显示计划中出现的**Compute Scalar** 运算符可能不包含 **RunTimeInformation** 元素。 在图形显示计划中，当已在 **中选中**“包括实际的执行计划” **选项时，**“实际行” **、** “实际重新绑定次数” **和** “实际重绕次数” **可能不会出现在** “属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]窗口中。 当出现这种情况时，意味着虽然编译过的查询计划中使用了这些运算符，但在运行时查询计划中，它们的作用是由其他运算符实现的。 另外，请注意，SET STATISTICS PROFILE 生成的显示计划输出中的执行数等于 SET STATISTICS XML 生成的显示计划中的重新绑定次数和重绕次数的总和。| 
+|![Compute Scalar 运算符图标](../relational-databases/media/compute-scalar-32x.gif "Compute Scalar 运算符图标")|**Compute Scalar**|**Compute Scalar** 运算符通过对表达式求值来生成计算标量值。 该值可以返回给用户、在查询中的其他位置引用或二者皆可。 例如，在筛选谓词或联接谓词中就会出现二者皆可的情况。 **Compute Scalar** 既是一个逻辑运算符，也是一个物理运算符。<br /><br /> 在 SET STATISTICS XML 生成的显示计划中出现的**Compute Scalar** 运算符可能不包含 **RunTimeInformation** 元素。 在图形显示计划中，当已在 **中选中**“包括实际的执行计划” **选项时，** “实际行” **、** “实际重新绑定次数” **和** “实际重绕次数” **可能不会出现在** “属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]窗口中。 当出现这种情况时，意味着虽然编译过的查询计划中使用了这些运算符，但在运行时查询计划中，它们的作用是由其他运算符实现的。 另外，请注意，SET STATISTICS PROFILE 生成的显示计划输出中的执行数等于 SET STATISTICS XML 生成的显示计划中的重新绑定次数和重绕次数的总和。| 
 |![Concatenation 运算符图标](../relational-databases/media/concatenation-32x.gif "Concatenation 运算符图标")|**Concatenation**|**Concatenation** 运算符扫描多个输入，并返回每个扫描的行。 **Concatenation** 通常用于实现 [!INCLUDE[tsql](../includes/tsql-md.md)] UNION ALL 结构。 **Concatenation** 物理运算符有两个或多个输入，有一个输出。 Concatenation 将行从第一个输入流复制到输出流，然后对其他输入流重复进行此操作。 **Concatenation** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Constant Scan 运算符图标](../relational-databases/media/constant-scan-32x.gif "Constant Scan 运算符图标")|**Constant Scan**|**Constant Scan** 运算符可将一个或多个常量行引入到查询中。 **Compute Scalar** 运算符通常在 **Constant Scan** 之后使用，以将列添加到 **Constant Scan** 运算符生成的行中。| 
 |![Convert（数据库引擎）语言元素图标](../relational-databases/media/convert-32x.gif "Convert（数据库引擎）语言元素图标")|**转换**|**Convert** 运算符将标量数据类型转换为另一种类型。 **Convert** 是一个语言元素。| 
 |None|**Cross Join**|**Cross Join** 运算符将第一个（顶端）输入中的每一行与第二个（底端）输入中的每一行联接在一起。 **Cross Join** 是一个逻辑运算符。| 
 |None|**游标**|**Cursor** 逻辑运算符和物理运算符用于描述涉及游标操作的查询或更新的执行方式。 其中物理运算符描述用于处理游标（如使用键集驱动游标）的物理实现算法。 游标执行过程的每一步都涉及物理运算符。 而逻辑运算符描述游标的属性，如游标是只读。<br /><br /> 逻辑运算符包括 Asynchronous、Optimistic、Primary、Read Only、Scroll Locks、Secondary 和 Synchronous。<br /><br /> 物理运算符包括 Dynamic、Fetch Query、Keyset、Population Query、Refresh Query 和 Snapshot。| 
 |![Cursor 通用游标运算符图标](../relational-databases/media/cursor-catch-all.gif "Cursor 通用游标运算符图标")|**catchall**|生成图形显示计划的逻辑找不到迭代器的合适图标时，将显示通用图标。 通用图标不一定指示存在错误。 有三种通用图标：蓝色（用于迭代器）、橙色（用于游标）和绿色（用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言元素）。| 
-|![Declare 语言元素图标](../relational-databases/media/declare-32x.gif "Declare 语言元素图标")|**Declare**|Declare 运算符用于分配查询计划中的局部变量。 **Declare** 是一个语言元素。| 
+|![Declare 语言元素图标](../relational-databases/media/declare-32x.gif "Declare 语言元素图标")|**Declare**|Declare 运算符用于分配查询计划中的局部变量  。 **Declare** 是一个语言元素。| 
 |![Delete（数据库引擎）运算符图标](../relational-databases/media/delete-32x.gif "Delete（数据库引擎）运算符图标")|**删除**|**Delete** 运算符将从对象中删除满足 **Argument** 列内的可选谓词的行。| 
 |![Delete Scan 运算符图标](../relational-databases/media/delete-scan-32x.gif "Delete Scan 运算符图标")|**Deleted Scan**|**Deleted Scan** 运算符在触发器中扫描删除的表。| 
 |None|**Distinct Sort**|**Distinct Sort** 逻辑运算符将对输入进行扫描，删除重复项并按 **Argument** 列的 DISTINCT ORDER BY:() 谓词中指定的列进行排序。 **Distinct Sort** 是一个逻辑运算符。| 
@@ -223,10 +222,10 @@ ms.locfileid: "54069087"
 |![Fetch Query 游标运算符图标](../relational-databases/media/fetch-query-32x.gif "Fetch Query 游标运算符图标")|**Fetch Query**|当对游标发出提取命令时， **Fetch Query** 运算符将检索行。| 
 |![Filter（数据库引擎）运算符图标](../relational-databases/media/filter-32x.gif "Filter（数据库引擎）运算符图标")|**Filter**|**Filter** 运算符扫描输入，仅返回那些符合 **Argument** 列中的筛选表达式（谓词）的行。| 
 |None|**Flow Distinct**|**Flow Distinct** 逻辑运算符用于通过扫描输入来删除重复项。 虽然 **Distinct** 运算符在生成任何输出前使用所有的输入，但 **FlowDistinct** 运算符在从输入获得行时会返回每行（除非该行是一个重复项，若是这样则删除该行）。| 
-|![Foreign Key References Check 运算符图标](../relational-databases/media/fk-references-32x.gif "Foreign key references check operator icon")|**Foreign Key References Check**|Foreign Key References Check 运算符通过将修改行与引用表中的行进行比较，就地执行引用完整性检查，以便验证修改不会中断引用完整性。 当相同主键或唯一键上存在超过 253 个外键引用时，将使用 Foreign Key References Check 运算符。 Foreign Key References Check 是逻辑和物理运算符。| 
-|None|**Full Outer Join**|**Full Outer Join** 逻辑运算符从第一个（顶端）输入与第二个（底端）输入相联接的行中返回每个满足联接谓词的行。 它还可以从下列输入返回行：<br /><br /> - 在第二个输入中没有匹配项的第一个输入。<br /><br /> - 在第一个输入中没有匹配项的第二个输入。<br /><br /> 不包含匹配值的输入将作为空值返回。 **Full Outer Join** 是一个逻辑运算符。| 
+|![Foreign Key References Check 运算符图标](../relational-databases/media/fk-references-32x.gif "Foreign key references check operator icon")|**Foreign Key References Check**|Foreign Key References Check  运算符通过将修改行与引用表中的行进行比较，就地执行引用完整性检查，以便验证修改不会中断引用完整性。 当相同主键或唯一键上存在超过 253 个外键引用时，将使用 Foreign Key References Check  运算符。 Foreign Key References Check  是逻辑和物理运算符。| 
+|None|**Full Outer Join**|**Full Outer Join** 逻辑运算符从第一个（顶端）输入与第二个（底端）输入相联接的行中返回每个满足联接谓词的行。 它还可以从下列输入返回行：<br /><br /> \- 在第二个输入中没有匹配项的第一个输入。<br /><br /> \- 在第一个输入中没有匹配项的第二个输入。<br /><br /> 不包含匹配值的输入将作为空值返回。 **Full Outer Join** 是一个逻辑运算符。| 
 |![Gather Streams 并行度运算符图标](../relational-databases/media/parallelism-32x.gif "Gather Streams 并行度运算符图标")|**Gather Streams**|**Gather Streams** 运算符仅用在并行查询计划中。 **Gather Streams** 运算符处理几个输入流并通过组合这几个输入流生成单个记录输出流。 记录的内容和格式不会改变。 如果此运算符保留顺序，则所有的输入流都必须有序。 如果输出已排序，则 **Argument** 列会包含一个 ORDER BY:() 谓词和正在排序的列名称。 **Gather Streams** 是一个逻辑运算符。| 
-|![Hash Match 运算符图标](../relational-databases/media/hash-match-32x.gif "Hash Match 运算符图标")|**Hash Match**|**Hash Match** 运算符通过计算其生成输入中每行的哈希值生成哈希表。 HASH:() 谓词以及一个用于创建哈希值的列的列表会出现在 **Argument** 列中。 然后，该谓词为每个探测行（如果适用）计算哈希值（使用相同的哈希函数）并在哈希表内查找匹配项。 如果存在残留谓词（由 **Argument** 列中的 RESIDUAL:() 标识），则还须满足此残留谓词，只有这样行才能被视为是匹配项。 行为取决于所执行的逻辑操作：<br /><br /> - 对于联接，使用第一个（顶端）输入生成哈希表，使用第二个（底端）输入探测哈希表。 按联接类型规定的模式输出匹配项（或不匹配项）。 如果多个联接使用相同的联接列，这些操作将分组为一个哈希组。<br /><br /> - 对于非重复或聚合运算符，使用输入生成哈希表（删除重复项并计算聚合表达式）。 生成哈希表时，扫描该表并输出所有项。<br /><br /> - 对于 union 运算符，使用第一个输入生成哈希表（删除重复项）。 使用第二个输入（它必须没有重复项）探测哈希表，返回所有没有匹配项的行，然后扫描该哈希表并返回所有项。<br /><br /> **Hash Match** 是一个物理运算符。| 
+|![Hash Match 运算符图标](../relational-databases/media/hash-match-32x.gif "Hash Match 运算符图标")|**Hash Match**|**Hash Match** 运算符通过计算其生成输入中每行的哈希值生成哈希表。 HASH:() 谓词以及一个用于创建哈希值的列的列表会出现在 **Argument** 列中。 然后，该谓词为每个探测行（如果适用）计算哈希值（使用相同的哈希函数）并在哈希表内查找匹配项。 如果存在残留谓词（由 **Argument** 列中的 RESIDUAL:() 标识），则还须满足此残留谓词，只有这样行才能被视为是匹配项。 行为取决于所执行的逻辑操作：<br /><br /> \- 对于联接，使用第一个（顶端）输入生成哈希表，使用第二个（底端）输入探测哈希表。 按联接类型规定的模式输出匹配项（或不匹配项）。 如果多个联接使用相同的联接列，这些操作将分组为一个哈希组。<br /><br /> \- 对于非重复或聚合运算符，使用输入生成哈希表（删除重复项并计算聚合表达式）。 生成哈希表时，扫描该表并输出所有项。<br /><br /> \- 对于 union 运算符，使用第一个输入生成哈希表（删除重复项）。 使用第二个输入（它必须没有重复项）探测哈希表，返回所有没有匹配项的行，然后扫描该哈希表并返回所有项。<br /><br /> **Hash Match** 是一个物理运算符。| 
 |![If 语言元素图标](../relational-databases/media/if-32x.gif "If 语言元素图标")|**如果**|**If** 运算符执行基于表达式的有条件处理。 **If** 是一个语言元素。| 
 |None|**Inner Join**|**Inner Join** 逻辑运算符返回满足联接第一个（顶端）输入与第二个（底端）输入的每一行。| 
 |![Insert（数据库引擎）运算符图标](../relational-databases/media/insert-32x.gif "Insert（数据库引擎）运算符图标")|**Insert**|**Insert** 逻辑运算符将每行从其输入插入 **Argument** 列内指定的对象中。 相应的物理运算符为 **Table Insert**、 **Index Insert**或 **Clustered Index Insert** 运算符。| 
@@ -250,7 +249,7 @@ ms.locfileid: "54069087"
 |![Nonclustered Index Spool 运算符图标](../relational-databases/media/index-spool-32x.gif "Nonclustered Index Spool 运算符图标")|**Index Spool**|**Index Spool** 物理运算符在 **Argument** 列中包含 SEEK:() 谓词。 **Index Spool** 运算符扫描其输入行，将每行的副本放置在隐藏的假脱机文件（存储在 **tempdb** 数据库中且只在查询的生存期内存在）中，并在这些行上生成非聚集索引。 这样可以使用索引的查找功能来仅输出那些满足 SEEK:() 谓词的行。 如果重绕该运算符（例如通过 **Nested Loops** 运算符重绕），但不需要任何重新绑定，则将使用假脱机数据，而不用重新扫描输入。| 
 |![Nonclustered Index Update 运算符图标](../relational-databases/media/nonclust-index-update-32x.gif "Nonclustered Index Update 运算符图标")|**Nonclustered Index Update**|**Nonclustered Index Update** 物理运算符用于更新 **Argument** 列内指定的非聚集索引中的输入行。 如果存在 SET:() 谓词，则将每个更新的列设置为该值。 **Nonclustered Index Update** 是一个物理运算符。| 
 |![Online Index Insert 运算符图标](../relational-databases/media/online-index-32x.gif "Online Index Insert 运算符图标")|**Online Index Insert**|**Online Index Insert** 物理运算符指示索引创建、更改或删除操作是在线执行的。 也就是说，基础表数据在索引操作期间仍然对用户可用。| 
-|None|**Parallelism**|<a name="exchange"></a> Parallelism 运算符（或交换迭代器）执行分发流、收集流和对流重新分区逻辑操作。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。 有关 Parallelism 运算符的详细信息，请参阅 [Craig Freedman 的博客系列](https://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)。<br /><br />**注意：** 如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 Parallelism 运算符的 RunTimeInformation 元素。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。| 
+|None|**Parallelism**|<a name="exchange"></a> Parallelism 运算符（或交换迭代器）执行分发流、收集流和对流重新分区逻辑操作  。 **Argument** 列可以包含一个 PARTITION COLUMNS:() 谓词和一个以逗号分隔的分区列的列表。 **Argument** 列还可以包含一个 ORDER BY:() 谓词，以列出分区过程中要保留排序顺序的列。 **Parallelism** 是物理运算符。 有关 Parallelism 运算符的详细信息，请参阅 [Craig Freedman 的博客系列](https://blogs.msdn.microsoft.com/craigfr/tag/parallelism/)。<br /><br />**注意：** 如果查询已编译为并行查询，但在运行时作为串行查询运行，则通过 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包括实际执行计划”选项生成的显示计划输出将不会包含 Parallelism 运算符的 RunTimeInformation 元素    。 在 SET STATISTICS PROFILE 输出中，为 **Parallelism** 运算符显示的实际行计数和实际执行数将为零。 出现任何一种情况时，都意味着 **Parallelism** 运算符只在查询编译时使用，未在运行时查询计划中使用。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。| 
 |![Parameter Table Scan 运算符图标](../relational-databases/media/parameter-table-scan-32x.gif "Parameter Table Scan 运算符图标")|**Parameter Table Scan**|**Parameter Table Scan** 运算符扫描在当前查询中用作参数的表。 该运算符一般用于存储过程内的 INSERT 查询。 **Parameter Table Scan** 既是一个逻辑运算符，也是一个物理运算符。| 
 |None|**Partial Aggregate**|**Partial Aggregate** 用于并行计划中。 它将聚合功能应用到尽可能多的输入行中，以便不必执行向磁盘写入数据的操作（称为“溢出”）。 **Hash Match** 是实现分区聚合的唯一一个物理运算符（迭代器）。 **Partial Aggregate** 是一个逻辑运算符。| 
 |![Population Query 游标运算符图标](../relational-databases/media/poulation-query-32x.gif "Population Query 游标运算符图标")|**Population Query**|**Population Query** 运算符在打开游标时填充游标的工作表。| 
@@ -262,7 +261,7 @@ ms.locfileid: "54069087"
 |![Remote Query 运算符图标](../relational-databases/media/remote-query-32x.gif "Remote Query 运算符图标")|**Remote Query**|**Remote Query** 运算符将查询提交给远程源。 发送给远程服务器的查询文本显示在 **Argument** 列中。 **Remote Query** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Remote Scan 运算符图标](../relational-databases/media/remote-scan-32x.gif "Remote Scan 运算符图标")|**Remote Scan**|**Remote Scan** 运算符扫描远程对象。 远程对象的名称显示在 **Argument** 列中。 **Remote Scan** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Remote Update 运算符图标](../relational-databases/media/remote-update-32x.gif "Remote Update 运算符图标")|**Remote Update**|**Remote Update** 运算符将更新远程对象中的输入行。 **Remote Update** 既是一个逻辑运算符，也是一个物理运算符。| 
-|![Repartition Streams 并行度运算符图标](../relational-databases/media/parallelism-repartition-stream.gif "Repartition Streams 并行度运算符图标")|**Repartition Streams**|Repartition Streams 运算符（或交换迭代器）使用多个流并生成多个记录流。 记录的内容和格式不会改变。 如果查询优化器使用位图筛选器，则输出流中行的数量将减少。 输入流中的每个记录都放入一个输出流中。 如果该运算符保留次序，则必须对所有输入流排序并将它们合并到几个有序的输出流中。 如果将输出分区，那么 **Argument** 列会包含 PARTITION COLUMNS:() 谓词和分区依据列。如果输出已经排序，则 **Argument** 列包含一个 ORDER BY:() 谓词和已经排序的列。 **Repartition Streams** 是一个逻辑运算符。 该运算符只用于并行查询计划中。| 
+|![Repartition Streams 并行度运算符图标](../relational-databases/media/parallelism-repartition-stream.gif "Repartition Streams 并行度运算符图标")|**Repartition Streams**|Repartition Streams  运算符（或交换迭代器）使用多个流并生成多个记录流。 记录的内容和格式不会改变。 如果查询优化器使用位图筛选器，则输出流中行的数量将减少。 输入流中的每个记录都放入一个输出流中。 如果该运算符保留次序，则必须对所有输入流排序并将它们合并到几个有序的输出流中。 如果将输出分区，那么 **Argument** 列会包含 PARTITION COLUMNS:() 谓词和分区依据列。如果输出已经排序，则 **Argument** 列包含一个 ORDER BY:() 谓词和已经排序的列。 **Repartition Streams** 是一个逻辑运算符。 该运算符只用于并行查询计划中。| 
 |![Result 语言元素图标](../relational-databases/media/result-32x.gif "Result 语言元素图标")|**结果**|**Result** 运算符是查询计划结束时返回的数据。 它通常是显示计划的根元素。 **Result** 是一个语言元素。| 
 |![RID Lookup 运算符图标](../relational-databases/media/rid-nonclust-locate-32x.gif "RID Lookup 运算符图标")|**RID Lookup**|**RID Lookup** 是使用提供的行标识符 (RID) 在堆上进行的书签查找。 **Argument** 列包含用于查找表中的行的书签标签和从中查找行的表的名称。 **RID Lookup** 通常带有 NESTED LOOP JOIN。 **RID Lookup** 是一个物理运算符。 有关书签查找的详细信息，请参阅 MSDN SQL Server 博客中的[Bookmark Lookup](https://go.microsoft.com/fwlink/?LinkId=132568)（书签查找）。| 
 |![Row Count Spool 运算符图标](../relational-databases/media/remote-count-spool-32x.gif "Row Count Spool 运算符图标")|**Row Count Spool**|**Row Count Spool** 运算符扫描输入，计算现有的行数并返回相同数目的不包含任何数据的行。 必须检查现有行数（而非行中包含的数据）时，使用此运算符。 例如，如果 **Nested Loops** 运算符执行左半联接操作且联接谓词应用于内部输入，则可以在 **Nested Loops** 运算符内部输入的顶部放置行计数假脱机。 这样， **Nested Loops** 运算符就可以确定行计数假脱机输出的行数（因为不需要内侧的实际数据）以决定是否返回外部行。 **Row Count Spool** 是一个物理运算符。| 

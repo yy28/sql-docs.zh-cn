@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 282316013dad44d73e165984167f9cff224c41a6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099253"
 ---
 # <a name="enable-resource-governor"></a>启用资源调控器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   默认情况下，资源调控器处于关闭状态。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 启用资源调控器。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
+-   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   若要启用 Resource Governor，请使用：[对象资源管理器](#RGOnObjEx)、[Resource Governor 属性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
+-   若要启用 Resource Governor，请使用：  [对象资源管理器](#RGOnObjEx)、[Resource Governor 属性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  启用资源调控器会产生下列结果：  
@@ -39,24 +38,24 @@ ms.locfileid: "55689820"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  在用户事务中时，您不能使用 **ALTER RESOURCE GOVERNOR** 语句启用资源调控器。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 权限  
  启用资源调控器需要 CONTROL SERVER 权限。  
   
 ##  <a name="RGOnObjEx"></a> 使用对象资源管理器启用资源调控器  
  **使用对象资源管理器启用资源调控器**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器” ，再单击“启用” 。  
+2.  右键单击“资源调控器”  ，再单击“启用”  。  
   
 ##  <a name="RGOnProp"></a> 使用资源调控器属性启用资源调控器  
  **使用“资源调控器属性”页启用资源调控器**  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中打开对象资源管理器，并依次逐步展开 **“管理”** 节点直至 **“资源调控器”** 。  
   
-2.  右键单击“资源调控器”  ，然后单击“属性” ，这将打开“资源调控器属性”页  。  
+2.  右键单击“资源调控器”  ，然后单击“属性”  ，这将打开“资源调控器属性”页  。  
   
-3.  单击 **“启用资源调控器”** 复选框，再单击 **“确定”**。  
+3.  单击 **“启用资源调控器”** 复选框，再单击 **“确定”** 。  
   
 ##  <a name="RGOnTSQL"></a> 使用 Transact-SQL 启用资源调控器  
  **使用 Transact-SQL 启用资源调控器**  

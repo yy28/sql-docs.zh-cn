@@ -30,20 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 4f842829fd3d00e6e2cc238107024fa5f284eff2
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 468d9aabd58c8fcdca8403b1177eea92ced9212d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044828"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 例如， **SQL Server Locks** 对象包含名为 **Number of Deadlocks/sec** 和 **Lock Timeouts/sec**的计数器。  
   
- 如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以 **SQLServer:**_\<对象名称>_ 格式显示。 命名实例计数器以 **MSSQL$**_\<实例名称>_**:**_\<计数器名称>_ 或 **SQLAgent$**_\<实例名称>_**:**_\<计数器名称>_ 格式显示。  
+ 如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以 **SQLServer:** _\<对象名称>_ 格式显示。 命名实例计数器以 **MSSQL$** _\<实例名称>_ **:** _\<计数器名称>_ 或 **SQLAgent$** _\<实例名称>_ **:** _\<计数器名称>_ 格式显示。  
   
  通过在图表中添加或删除计数器并保存图表设置，可以指定系统监视器启动后监视的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象和计数器。  
   

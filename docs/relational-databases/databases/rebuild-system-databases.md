@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8b28e23bd9f795b9c8530b0c267589bd2525fe5
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127295"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,15 +146,15 @@ ms.locfileid: "56590412"
   
 1.  从分发介质中启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序 (setup.exe)。  
   
-2.  在左侧导航区域中单击 **“维护”**，然后单击 **“修复”**。  
+2.  在左侧导航区域中单击 **“维护”** ，然后单击 **“修复”** 。  
   
 3.  安装程序支持规则和文件例程将运行，以确保您的系统上安装了必备组件，并且计算机能够通过安装程序验证规则。 单击 **“确定”** 或 **“安装”** 以继续操作。  
   
-4.  在“选择实例”页上，选择要修复的实例，然后单击 **“下一步”**。  
+4.  在“选择实例”页上，选择要修复的实例，然后单击 **“下一步”** 。  
   
-5.  将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”**。  
+5.  将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”** 。  
   
-6.  在 **“准备修复”** 页上，单击 **“修复”**。 “完成”页指示修复操作已完成。  
+6.  在 **“准备修复”** 页上，单击 **“修复”** 。 “完成”页指示修复操作已完成。  
   
 ##  <a name="CreateMSDB"></a> 创建新的 msdb 数据库  
  如果 **msdb** 数据库损坏并且您没有 **msdb** 数据库的备份，则可以通过使用 **instmsdb** 脚本创建新的 **msdb** 。  
@@ -169,7 +168,7 @@ ms.locfileid: "56590412"
   
      有关详细信息，请参阅 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一个命令行窗口中，通过执行以下命令（并且用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例替换 *\<servername>*）来分离 **msdb** 数据库：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在另一个命令行窗口中，通过执行以下命令（并且用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例替换 *\<servername>* ）来分离 **msdb** 数据库：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  使用 Windows 资源管理器，重命名 **msdb** 数据库文件。 默认情况下，这些文件位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 DATA 子文件夹中。  
   
@@ -177,7 +176,7 @@ ms.locfileid: "56590412"
   
 6.  在命令行窗口中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并执行以下命令： `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例替换 *\<servername>*。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
+     使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例替换 *\<servername>* 。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
   
 7.  使用 Windows 记事本，打开 **instmsdb.out** 文件，然后检查输出中是否存在任何错误。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 437cab6e91e7fe607eea88370c654ad9848824b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942757"
 ---
 # <a name="manage-oracle-tablespaces"></a>管理 Oracle 表空间
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +32,15 @@ ms.locfileid: "47777995"
   
 -   使用 [sp_changearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 若要使用 **sp_changearticle**，请指定下列内容：  
   
-    -   为参数 **@publisher**中的文件组。  
+    -   为参数 **@publisher** 中的文件组。  
   
-    -   为参数 **@publication**中的文件组。  
+    -   为参数 **@publication** 中的文件组。  
   
-    -   为参数 **@article**中的文件组。  
+    -   为参数 **@article** 中的文件组。  
   
-    -   为参数 **@property**中的文件组。  
+    -   为参数 **@property** 中的文件组。  
   
-    -   为参数 **@value**中的文件组。  
+    -   为参数 **@value** 中的文件组。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

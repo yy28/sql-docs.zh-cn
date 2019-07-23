@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 10bc2dd1-0505-4527-8ec7-d3b4e5d6352b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6d21ff203090ac101be1f52ad85bf6a2beba0b9
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 822ce1ba69c1fafb4e09281f4c436e3d1cc760ea
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67685326"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266805"
 ---
 # <a name="recycle-sql-server-agent-error-logs"></a>回收 SQL Server 代理错误日志
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

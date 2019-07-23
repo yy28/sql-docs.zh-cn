@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e064ab7ae8ef7776e03cb8d80bb4038a362e7689
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898094"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -55,15 +54,15 @@ DROP DATABASE database_name [;]
 
 ## <a name="arguments"></a>参数
 
-IF EXISTS
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
+IF EXISTS  
+  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
 
 只有在数据库已存在时才对其进行有条件地删除。
 
-database_name 指定要删除的数据库的名称。 若要显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。
+database_name  指定要删除的数据库的名称。 若要显示数据库列表，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。
 
-database_snapshot_name
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+database_snapshot_name  
+适用范围  ：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 指定要删除的数据库快照的名称。
 
@@ -78,7 +77,7 @@ database_snapshot_name
 执行数据库删除操作会从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除数据库，并删除该数据库使用的物理磁盘文件。 执行删除操作时，如果数据库或它的任意一个文件处于脱机状态，则不会删除磁盘文件。 可使用 Windows 资源管理器手动删除这些文件。 若要从当前服务器删除数据库，但不从文件系统删除文件，请使用 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)。
 
 > [!WARNING]
-> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。
+> 删除具有与其关联的 FILE_SNAPSHOT 备份的数据库将成功，但不会删除具有关联快照的数据库文件，以免使引用这些数据库文件的备份失效。 将截断该文件，但不会以物理方式将其删除，以保持 FILE_SNAPSHOT 备份不受影响。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)  。
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -121,19 +120,19 @@ DROP DATABASE 语句必须在自动提交模式下运行，并且不允许在显
 
 DROP DATABASE 语句必须是 SQL 批处理中的唯一语句，您一次只能删除一个数据库。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份。
+要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份    。
 
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-只有服务器级别主体登录名（由预配过程创建）或 dbmanager 数据库角色的成员可以删除数据库。
+只有服务器级别主体登录名（由预配过程创建）或 dbmanager 数据库角色的成员可以删除数据库  。
 
 ### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份。
+要求对数据库具有 CONTROL 权限或者 ALTER ANY DATABASE 权限，或者在 db_owner 固定数据库角色中具有成员身份    。
 
 ## <a name="examples"></a>示例
 

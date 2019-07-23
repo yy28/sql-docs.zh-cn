@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc5fb9ba2354c8ceb77066b5730a99949edc5ca6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 86f2d59e142458e68fe3946f7d6f56956b6562e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120412"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>发布信息，所有订阅（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +26,11 @@ ms.locfileid: "54136147"
 ## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   
@@ -61,14 +60,14 @@ ms.locfileid: "54136147"
   
 -   未同步  
   
- 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期，“状态”  列将显示“错误” 。  
+ 如果给定的订阅处于多种状态，该排序顺序还决定将要显示哪个值。 例如，如果某个订阅包含错误并且即将过期，“状态”  列将显示“错误”  。  
   
- 状态值 **“‘严重’状态下的性能”**、 **“长时间运行的合并”**、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在同步代理。 例如，状态可能为 **“同步，‘严重’状态下的性能”**。  
+ 状态值 **“‘严重’状态下的性能”** 、 **“长时间运行的合并”** 、 **“即将过期/已过期”** 和 **“未初始化的订阅”** 都是警告。 当显示警告时， **“状态”** 列还可显示是否正在同步代理。 例如，状态可能为 **“同步，‘严重’状态下的性能”** 。  
   
  只有在设置了阈值时，才会显示状态值 **“即将过期/已过期”** 和 **“长时间运行的合并”** 。 只有在使用相同的连接类型（拨号或 LAN）对订阅进行五次同步后，才会显示状态值 **“‘严重’状态下的性能”** 。 有关性能度量和设置阈值的信息，请参阅[使用复制监视器监视性能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在复制监视器中设置阈值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **订阅**  
- 每个订阅的名称，格式为：SubscriberName:SubscriptionDatabaseName。  
+ 每个订阅的名称，格式为：SubscriberName:  SubscriptionDatabaseName。  
   
  **友好名称**  
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 每个订阅的说明。 此说明是在 **“订阅属性”** 对话框中输入的，或是用 **@description** 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 的 [@description](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 用户通常将说明用作订阅的“友好名称”或别名。  
