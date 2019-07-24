@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d45536588b4870f688fc0f8256233f6037c3987
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980450"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>getReference 方法 (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 引用对象。  
+ 一个引用对象。  
   
 ## <a name="remarks"></a>Remarks  
- 此 getReference 方法由 javax.naming.Referenceable 接口中的 getReference 方法指定。  
+ 此 getReference 方法由 getReference 方法在 javax.mail.session 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerXADataSource 方法](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

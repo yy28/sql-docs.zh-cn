@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8603ea1-27b7-4379-a451-744787daea66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 887536bb343183f1535b3b29dfcec07df02b0e8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 759e0cdbaee04f3b6c6398ea3c8acc95506f08ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101479"
 ---
 # <a name="mssqlserver8601"></a>MSSQLSERVER_8601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47855835"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|INVALID_INTERFACE_ERR|  
-|消息正文|内部查询处理器错误: 查询处理器未能获得对所需接口的访问权限。|  
+|消息正文|内部查询处理器错误:查询处理器未能获得对所需接口的访问权限。|  
   
 ## <a name="explanation"></a>解释  
 内部处理错误；无法获得对所需接口的访问权限。  

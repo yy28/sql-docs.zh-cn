@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38d267db0fe3656d860ec3cfe7063da88a069bc9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ba0a80db010c3f0b575cbfbf4cead6d5bc4a7943
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100014"
 ---
 # <a name="publication-information-agents-merge-publication"></a>发布信息，代理（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +26,11 @@ ms.locfileid: "54127757"
 ## <a name="options"></a>选项  
  有关快照代理的详细信息及相关任务，请右键单击该代理的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序  。  
   
--   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序  。  
   
--   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行  。  
   
 -   **清除筛选器**：清除网格的任何筛选设置。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 592bae8e9c26420fe54944f9834ff19186aace25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 34c45da3cabeb049b821ca2dd1de376d40fe36c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957605"
 ---
 # <a name="step-2-create-a-sql-database-for-adonet-development"></a>步骤 2：创建用于 ADO.NET 开发的 SQL 数据库
 

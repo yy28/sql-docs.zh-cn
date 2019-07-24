@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3438f7a17e919e905ea12e064a4d145ba16e728
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5966367c786cc8e591103166bbe8dadb47c664f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968937"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>supportsResultSetType 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean supportsResultSetType(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsResultSetType 方法由 java.sql.DatabaseMetaData 接口中的 supportsResultSetType 方法指定。  
+ 此 supportsResultSetType 方法由 supportsResultSetType 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

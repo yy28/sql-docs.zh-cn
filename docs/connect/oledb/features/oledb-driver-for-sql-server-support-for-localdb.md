@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 099ffb2203397bd02b91af68651ccb42a23e2b5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 64f39be7193fdbfc72b009f58b4fe0047eceef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989030"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66802957"
   
  总之，通过 LocalDB，您可以：  
   
--   使用**sqllocaldb.exe 我**发现的默认实例的名称。  
+-   使用**sqllocaldb**来发现默认实例的名称。  
   
 -   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件  。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除   。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66802957"
 SERVER=(localdb)\v11.0  
 ```  
   
- 如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， **sqlcmd-S (localdb) \v11.0**。  
+ 如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如, **sqlcmd-S (localdb) \v11.0**。  
   
 ## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md)  

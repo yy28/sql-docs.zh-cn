@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014864"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的支持资源
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +46,12 @@ ms.locfileid: "66803952"
 ## <a name="php-support-resources"></a>PHP 支持资源  
 [Windows PHP 文档](https://windows.php.net/)  
   
-有关 PHP 的最新信息，请访问[ http://www.php.net/ ](http://www.php.net)。  
+有关 PHP 的最新信息, 请[http://www.php.net/](http://www.php.net)访问。  
   
-有关 PHP 文档，请访问[ http://www.php.net/docs.php ](http://www.php.net/docs.php)。  
+有关 PHP 文档, 请[http://www.php.net/docs.php](http://www.php.net/docs.php)访问。  
   
 ## <a name="microsoft-customer-support"></a>Microsoft 客户支持  
-支持问题相关的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，可以联系[Microsoft 支持部门](https://support.microsoft.com/contactus/)，或询问有关[Github 项目页](https://github.com/Microsoft/msphpsql/issues)。  
+有关与相关的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持问题, 你可以与[Microsoft 支持部门](https://support.microsoft.com/contactus/)联系, 或询问[Github 项目页](https://github.com/Microsoft/msphpsql/issues)。  
   
 ## <a name="see-also"></a>另请参阅  
 [Microsoft Drivers for PHP for SQL Server 概述](../../connect/php/overview-of-the-php-sql-driver.md)

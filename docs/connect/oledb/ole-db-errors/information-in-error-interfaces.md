@@ -17,13 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 7b87011fc8d95d617562bb72ce6a3a6ee49ae0c5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994940"
 ---
 # <a name="information-in-error-interfaces"></a>错误接口中的信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66798129"
 
   适用于 SQL Server 的 OLE DB 驱动程序在 OLE DB 定义的错误接口 IErrorInfo、IErrorRecords 和 ISQLErrorInfo 中报告某些错误和状态信息    。  
   
- 适用于 SQL Server 的 OLE DB 驱动程序支持**IErrorInfo**成员函数，如下所示。  
+ SQL Server 的 OLE DB 驱动程序支持**IErrorInfo**成员函数, 如下所示。  
   
 |成员函数|描述|  
 |---------------------|-----------------|  
@@ -42,22 +41,22 @@ ms.locfileid: "66798129"
 |**GetHelpFile**|不提供支持。 始终返回 NULL。|  
 |**GetSource**|字符串“适用于 SQL Server 的 Microsoft OLE DB 驱动程序”。|  
   
- 适用于 SQL Server 的 OLE DB 驱动程序支持使用者可用**IErrorRecords**成员函数，如下所示。  
+ SQL Server 的 OLE DB 驱动程序支持使用者可用的**IErrorRecords**成员函数, 如下所示。  
   
 |成员函数|描述|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|使用有关错误的基本信息填充 ERRORINFO 结构。 ERRORINFO 结构包含标识错误的 HRESULT 返回值的成员、访问接口和该错误适用的接口。|  
 |**GetCustomErrorObject**|返回对 ISQLErrorInfo 和 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口的引用  。|  
 |**GetErrorInfo**|返回对 IErrorInfo 接口的引用  。|  
-|**GetErrorParameters**|SQL Server 的 OLE DB 驱动程序不返回给使用者通过参数**GetErrorParameters**。|  
+|**GetErrorParameters**|SQL Server 的 OLE DB 驱动程序不会通过**GetErrorParameters**将参数返回给使用者。|  
 |**GetRecordCount**|可用错误记录的计数。|  
   
- 适用于 SQL Server 的 OLE DB 驱动程序支持**isqlerrorinfo:: Getsqlinfo**参数，如下所示。  
+ SQL Server 的 OLE DB 驱动程序支持**ISQLErrorInfo:: GetSQLInfo**参数, 如下所示。  
   
 |参数|描述|  
 |---------------|-----------------|  
-|pbstrSQLState |返回错误的 SQLSTATE 值。 SQLSTATE 值在 SQL-92、ODBC 和 ISO SQL 以及 API 规范中定义。 既不[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]也适用于 SQL Server，OLE DB 驱动程序定义特定于实现的 SQLSTATE 值。|  
-|plNativeError |返回 master.dbo.sysmessages 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误编号（如果存在）  。 在成功尝试初始化用于 SQL Server 数据源的 OLE DB 驱动程序后，本机错误将可用。 在之前尝试，SQL Server 的 OLE DB 驱动程序始终返回零。|  
+|pbstrSQLState |返回错误的 SQLSTATE 值。 SQLSTATE 值在 SQL-92、ODBC 和 ISO SQL 以及 API 规范中定义。 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 驱动程序都不是 SQL Server 定义的特定于实现的 SQLSTATE 值。|  
+|plNativeError |返回 master.dbo.sysmessages 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误编号（如果存在）  。 尝试初始化 SQL Server 数据源的 OLE DB 驱动程序后, 就可以使用本机错误。 尝试之前, SQL Server 的 OLE DB 驱动程序始终返回零。|  
   
 ## <a name="see-also"></a>另请参阅  
  [错误](../../oledb/ole-db-errors/errors.md)  

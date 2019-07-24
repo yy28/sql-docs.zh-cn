@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 常规属性 |Microsoft Docs
-ms.date: 04/04/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d2a1fd8a83c4b181dfc182f5fb5630e29c9efb
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714684"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419518"
 ---
 # <a name="general-properties"></a>常规属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **适用范围：** 多维和表格服务器模式下，除非另有说明  
+ 除非另有说明, 否则这些属性适用于多维和表格服务器模式。  
   
 ## <a name="non-specific-category"></a>非特定类别  
  **AdminTimeout**  
@@ -33,11 +33,11 @@ ms.locfileid: "62714684"
  一个字符串属性，它在分隔的列表中指定在 Analysis Services 对话框中保存、打开和查找文件时可浏览的文件夹。 Analysis Services 服务帐户必须对您添加到该列表的所有文件夹都具有读写权限。  
   
  **BackupDir**  
- 一个字符串属性，事件作为 Backup 命令的一部分未指定路径中标识的默认情况下，存储备份文件的目录名称。  
+ 一个字符串属性, 用于标识默认情况下存储备份文件的目录的名称, 如果未将路径指定为 Backup 命令的一部分。  
  
-**ClientCacheRefreshPolicy**适用于仅 Azure Analysis Services。 重写**计划的缓存刷新**设置所有 Power BI 数据集。 Live Connect 的所有报表将都遵循服务器级别设置而不考虑数据集级设置，或在其所在的工作区。
+**ClientCacheRefreshPolicy**对于 SSAS 和 Azure Analysis Services 中的表格模型, 此属性将覆盖所有 Power BI 数据集的**计划缓存刷新**设置。 所有实时连接报表都将观察服务器级别设置, 而不考虑数据集级别设置或它们所在的工作区。
 
-此属性的默认值为-1，允许所有后台缓存都刷新计划的缓存刷新的数据集设置中指定。 若要禁止所有后台缓存刷新中，指定零 (0)。
+此属性的默认值为-1, 这允许在数据集的 "计划的缓存刷新" 设置中指定所有后台缓存刷新。 若要防止所有后台缓存刷新, 请指定零 (0)。
 
   
  **CollationName**  
@@ -52,7 +52,7 @@ ms.locfileid: "62714684"
  有符号 32 位整数属性，用于定义为生成分区索引分配的最大线程数。 如果增加此值，则可加快分区索引速度，同时增加内存使用的开销。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  **CoordinatorCancelCount**  
- 有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。 在表格服务器模式下将忽略此属性。  
+ 有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。 此属性在表格服务器模式下将被忽略。  
   
  **CoordinatorExecutionMode**  
  有符号 32 位整数属性，用于定义服务器将尝试的最大并行操作（包括处理操作和查询操作）数。 零 (0) 指示服务器将基于内部算法来决定。 正数指示最大操作总数。 如果是符号相反的负数，则指示每个处理器的最大操作数。  
@@ -69,7 +69,7 @@ ms.locfileid: "62714684"
  字符串属性，用于标识存储数据的目录的名称。  
   
  **DeploymentMode**  
- 确定 Analysis Services 服务器实例的操作上下文。 此属性称为服务器模式对话框、 消息和文档中。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
+ 确定 Analysis Services 服务器实例的操作上下文。 此属性在对话框、消息和文档中称为 "服务器模式"。 此属性由 SQL Server 安装程序根据安装 Analysis Services 时所选择的服务器模式进行相应配置。 只应考虑在内部使用此属性，并且始终使用安装程序指定的值。  
   
  此属性的有效值包括以下项：  
   

@@ -1,5 +1,5 @@
 ---
-title: setBytes 方法 (long，byte，int，int) |Microsoft Docs
+title: setBytes 方法 (long, byte, int, int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 271669134e18d3c6040f1e2e10163b5d5e21daab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4ab641ede4d4ec614a306f9c0e08c9f16aa5ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974940"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes 方法 (long, byte, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

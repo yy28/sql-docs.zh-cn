@@ -1,6 +1,6 @@
 ---
-title: 大容量复制数据使用 IRowsetFastLoad (OLE DB) |Microsoft Docs
-description: 大容量复制数据到 OLE DB Driver for SQL Server 的 SQL Server 表使用 IRowsetFastLoad 接口
+title: 使用 IRowsetFastLoad (OLE DB) 进行批量复制数据 |Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 的 IRowsetFastLoad 接口将数据大容量复制到 SQL Server 表中
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1e4581d06d04727133f5a48f5b663a4b689755f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015642"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66786002"
 
   此示例说明如何使用 IRowsetFastLoad 将记录大容量复制到表中。  
   
- 使用者通知其对大容量复制的 OLE DB 驱动程序为 SQL Server 驱动程序特定属性 SSPROP_ENABLEFASTLOAD 设置为 variant_true，则需要的 SQL Server 的 OLE DB 驱动程序。 通过对数据源设置该属性，使用者为 SQL Server 会话创建一个 OLE DB 驱动程序。 新会话允许的使用者访问权限**IRowsetFastLoad**。  
+ 使用者通过将 SQL Server 驱动程序特定属性 SSPROP_ENABLEFASTLOAD 的 OLE DB 驱动程序设置为 VARIANT_TRUE, 通知 OLE DB 驱动程序 SQL Server 是否需要大容量复制。 对数据源设置了属性后, 使用者将为 SQL Server 会话创建 OLE DB 驱动程序。 新会话允许使用者访问**IRowsetFastLoad**。  
   
  可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程  。 在此示例中，将 10 条记录添加到表 IRFLTable 中  。 需要在数据库中创建表 IRFLTable  。  
   
@@ -43,17 +42,17 @@ ms.locfileid: "66786002"
   
 1.  建立与数据源的连接。  
   
-2.  将 SQL Server 驱动程序特定的数据源属性 ssprop_enablefastload 设置为，OLE DB 驱动程序设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad  。  
+2.  将 SQL Server 驱动程序特定的数据源属性 SSPROP_ENABLEFASTLOAD 的 OLE DB 驱动程序设置为 VARIANT_TRUE。 通过将该属性设置为 VARIANT_TRUE，新创建的会话将允许使用者访问 IRowsetFastLoad  。  
   
-3.  创建会话请求**IOpenRowset**接口。  
+3.  创建请求**IOpenRowset**接口的会话。  
   
 4.  调用 IOpenRowset::OpenRowset 以打开包括表（将使用大容量复制操作复制其中数据）中所有行的行集  。  
   
-5.  执行需要的绑定和创建取值函数使用**iaccessor:: Createaccessor**。  
+5.  执行必要的绑定, 并使用**IAccessor:: CreateAccessor**创建访问器。  
   
 6.  设置内存缓冲区，用于将数据从其复制到表中。  
   
-7.  调用**irowsetfastload:: Insertrow**到大容量复制到表中的数据。  
+7.  调用**IRowsetFastLoad:: InsertRow**将数据大容量复制到表中。  
   
 ## <a name="example"></a>示例  
  在此示例中，将 10 条记录添加到表 IRFLTable 中。 您需要在数据库中创建表 IRFLTable。 IA64 平台不支持此示例。  

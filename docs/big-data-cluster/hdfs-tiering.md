@@ -1,75 +1,79 @@
 ---
 title: 配置 HDFS 分层
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何配置 HDFS 的分层，从而在 SQL Server 2019 大数据群集 （预览版） 上装载到 HDFS 的外部的 Azure Data Lake 存储文件系统。
+description: 本文介绍如何配置 HDFS 分层, 以将外部 Azure Data Lake Storage 文件系统装载到 SQL Server 2019 大数据群集 (预览版) 上的 HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958315"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419374"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>配置 SQL Server 大数据群集上分层的 HDFS
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>在 SQL Server 大数据群集上配置 HDFS 分层
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS 分层提供的功能来装载外部的在 HDFS 中的 HDFS 兼容文件系统。 本文介绍如何配置 SQL Server 2019 大数据群集 （预览版） 为分层的 HDFS。 在此期间，我们支持连接到 Azure 数据湖存储第 2 代和 Amazon S3。 
+HDFS 分层可以在 HDFS 中装载与 HDFS 兼容的外部文件系统。 本文介绍如何为 SQL Server 2019 大数据群集 (预览版) 配置 HDFS 分层。 目前, 我们支持连接到 Azure Data Lake Storage Gen2 和 Amazon S3。 
 
 ## <a name="hdfs-tiering-overview"></a>HDFS 分层概述
 
-使用分层，应用程序可以无缝访问很多外部存储区中的数据，就像数据驻留在本地 HDFS。 装载是元数据操作，其中介绍在外部文件系统的命名空间的元数据复制到本地 HDFS。 此元数据包括有关外部目录和文件以及其权限和 Acl 的信息。 通过例如的查询访问数据本身时，相应的数据是仅复制的按需。 现在可以从 SQL Server 大数据群集访问的外部文件系统数据。 可以运行 Spark 作业和 SQL 查询对此数据将存储在 HDFS 群集上的任何本地数据上运行它们一样。
+使用分层, 应用程序可以无缝访问各种外部存储区中的数据, 就像数据驻留在本地 HDFS 中一样。 装载是一种元数据操作, 其中描述外部文件系统上的命名空间的元数据将复制到本地 HDFS。 此元数据包括有关外部目录和文件及其权限和 Acl 的信息。 当通过 (例如查询) 访问数据本身时, 只按需复制相应的数据。 现在可以从 SQL Server 大数据群集访问外部文件系统数据。 你可以对此数据运行 Spark 作业和 SQL 查询, 其方式与在群集上的 HDFS 中存储的任何本地数据相同。
 
 ### <a name="caching"></a>Caching
-现在，默认情况下，将为已装载的数据的缓存保留的总存储，HDFS 的 1%。 缓存是一种全局设置跨装载。
+默认情况下, 默认情况下, 将保留总共 1% 的 HDFS 存储空间来缓存装载的数据。 缓存是跨装载的全局设置。
 
 > [!NOTE]
-> HDFS 分层是 Microsoft 开发的功能，已作为 Apache Hadoop 3.1 分发的一部分发布的早期版本。 有关详细信息，请参阅[ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806)有关详细信息。
+> HDFS 分层是由 Microsoft 开发的一项功能, 其早期版本已作为 Apache Hadoop 3.1 分发的一部分发布。 有关详细信息, 请[https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806)参阅获取详细信息。
 
-以下部分提供如何配置 HDFS 分层与 Azure 数据湖存储第 2 代数据源的示例。
+以下各节提供了有关如何使用 Azure Data Lake Storage Gen2 数据源配置 HDFS 分层的示例。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="refresh"></a>刷新
 
-- [已部署的大数据群集](deployment-guidance.md)
+HDFS 分层支持刷新。 刷新现有装载以获取远程数据的最新快照。
+
+## <a name="prerequisites"></a>先决条件
+
+- [已部署大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
-  - **mssqlctl**
+  - **azdata**
   - **kubectl**
 
-## <a name="mounting-instructions"></a>装载说明
+## <a name="mounting-instructions"></a>安装说明
 
-我们支持连接到 Azure 数据湖存储第 2 代和 Amazon S3。 如何将安装对这些存储类型的说明可在以下文章：
+支持连接到 Azure Data Lake Storage Gen2 和 Amazon S3。 有关如何针对这些存储类型进行装载的说明, 请参阅以下文章:
 
-- [如何装载 ADLS hdfs 分层大数据群集中的第 2 代](hdfs-tiering-mount-adlsgen2.md)
-- [如何装载 S3 分层大数据群集中的 hdfs](hdfs-tiering-mount-s3.md)
+- [如何在大数据群集中装载 HDFS 分层 ADLS Gen2](hdfs-tiering-mount-adlsgen2.md)
+- [如何在大数据群集中为 HDFS 分层装载 S3](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> 已知的问题和限制
+## <a id="issues"></a>已知问题和限制
 
-使用分层在 SQL Server 大数据群集中的 HDFS 时，以下列表提供了已知的问题和当前限制：
+以下列表提供了在 SQL Server 大数据群集中使用 HDFS 分层时的已知问题和当前限制:
 
-- 如果装载陷入`CREATING`状态的时间长，它很可能已失败。 在此情况下，取消该命令并删除装入，如有必要。 验证您的参数和凭据正确重试之前。
+- 如果装载处于`CREATING`长时间状态, 则很可能已失败。 在这种情况下, 请取消命令, 并在必要时删除装入。 请在重试之前验证你的参数和凭据是否正确。
 
-- 不能在现有目录上创建装载。
+- 无法在现有目录上创建装载。
 
-- 不能在现有装载创建装载。
+- 无法在现有装载内创建装载。
 
-- 如果不存在任何装入点的祖先，则将创建的权限默认为 r-xr-xr-x (555)。
+- 如果装入点的任何祖先节点不存在, 则将创建其权限默认为 r-xr-xr (555) 的。
 
-- 装入创建可能需要一些时间，具体取决于的数量和装载的文件的大小。 在此过程中下装载, 的文件不会对用户可见。 虽然创建装载，但所有文件将都添加到临时路径，默认为`/_temporary/_mounts/<mount-location>`。
+- 装载创建可能需要一些时间, 具体取决于要装入的文件的数量和大小。 在此过程中, 用户无法看到装载下的文件。 创建装载时, 会将所有文件添加到临时路径, 默认值为`/_temporary/_mounts/<mount-location>`。
 
-- 装入创建命令是异步的。 运行该命令后，可以检查装入状态，以了解装入状态。
+- 装载创建命令是异步的。 运行该命令后, 可以检查装载状态以了解装载状态。
 
-- 在创建时装载，参数用于 **-安装路径**是实质上是装载的唯一标识符。 在后续命令中，必须使用相同的字符串 （包括"/"最后，如果存在）。
+- 创建装载时, 用于 **--装载路径**的参数实质上是装载的唯一标识符。 必须在后续命令中使用相同的字符串 (包含结尾的 "/" (如果存在)。
 
-- 装载是只读的。 无法创建任何目录或下装载的文件。
+- 装载为只读。 不能在装入时创建任何目录或文件。
 
-- 我们不建议装载目录和文件，可以更改。 创建装载后，任何更改或更新到远程位置将不会反映在 HDFS 中装入。 如果在远程位置中发生更改，可以选择删除并重新创建装入以反映已更新的状态。
+- 不建议装载可以更改的目录和文件。 创建装载后, 对远程位置所做的任何更改或更新都不会反映在 HDFS 中的装载。 如果在远程位置发生更改, 则可以选择删除并重新创建装载, 以反映已更新的状态。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 SQL Server 2019 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关 SQL Server 2019 大数据群集的详细信息, 请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。

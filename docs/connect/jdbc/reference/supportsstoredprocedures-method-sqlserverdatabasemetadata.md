@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1fec9c817e8671dd5d48f8c9d9fe13d611f864b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dd3c71aa058534342ddd70fdf1ae5256fb75e708
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968760"
 ---
 # <a name="supportsstoredprocedures-method-sqlserverdatabasemetadata"></a>supportsStoredProcedures 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsStoredProcedures()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsStoredProcedures 方法由 java.sql.DatabaseMetaData 接口中的 supportsStoredProcedures 方法指定。  
+ 此 supportsStoredProcedures 方法由 supportsStoredProcedures 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

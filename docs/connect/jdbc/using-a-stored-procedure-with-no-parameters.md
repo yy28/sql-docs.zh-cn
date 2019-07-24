@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d766423b4ee2c1db4b7515c87edfa96b4b84b416
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916499"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用不带参数的存储过程
 
@@ -29,7 +28,7 @@ ms.locfileid: "66790389"
 `{call procedure-name}`
 
 > [!NOTE]  
-> 有关 SQL 转义序列的详细信息，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 有关 SQL 转义序列的详细信息, 请参阅[使用 Sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下存储过程：
 

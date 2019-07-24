@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3404d7e31cdc5ed82a4a2c57af1a05354104d4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979332"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public java.lang.String getSubString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getSubString 方法由 java.sql.Clob 接口中的 getSubString 方法指定。  
+ 此 getSubString 方法由 getSubString 方法在 Clob 接口中指定。  
   
  尝试从 Null 或长度为零的 CLOB 获取零个字符将返回空字符串。 尝试在长度为零的 CLOB 中从除了位置 1 之外的其他位置获取任意长度的字符将引发位置异常。  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a626e79a33c134a3bdde5880b68f2545c6dea78e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6d9ceca85c8f0f09137d0ed82730a4f409114369
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128120"
 ---
 # <a name="filter-settings"></a>筛选器设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "54129637"
  选择要对其进行筛选的列的名称。 您可以使筛选器基于一个或多个列。  
   
  **“等于”**  
- 为筛选器选择一个运算符，例如 **“小于或等于”**。  
+ 为筛选器选择一个运算符，例如 **“小于或等于”** 。  
   
  **“值1”** 和 **“值2”**  
  为筛选器输入或选择一个值。 大多数运算符只要求在 **“值1”** 列中提供值，但 **“介于”** 和 **“不介于”** 运算符还要求在 **“值2”** 列中提供值。  

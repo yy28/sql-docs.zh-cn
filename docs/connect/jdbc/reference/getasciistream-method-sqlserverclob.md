@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 134abe5e-5add-4d27-b333-b4b0f4d94c31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4dfd2c53ab5fb883edbaabbc33c8ac8255b284ed
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dfa7ed5314d75ba0bec0d2a000575e8d9ed4d3fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954137"
 ---
 # <a name="getasciistream-method-sqlserverclob"></a>getAsciiStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.InputStream getAsciiStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getAsciiStream 方法由 java.sql.Clob 接口中的 getAsciiStream 方法指定。  
+ 此 getAsciiStream 方法由 getAsciiStream 方法在 Clob 接口中指定。  
   
  始终返回字节流并假定 CLOB 中的数据采用 ASCII 格式，因为系统无法知道它是 Unicode 还是任何其他多字节代码页。  
   

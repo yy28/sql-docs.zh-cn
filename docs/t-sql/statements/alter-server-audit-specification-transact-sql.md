@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 63b42ffb940e4e456cb1b000477914abd73930fb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ab14188a10dfe96eea63b88a1ffa0b379a9523af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070319"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +47,22 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ```  
   
 ## <a name="arguments"></a>参数  
- audit_specification_name  
+ audit_specification_name   
  审核规范的名称。  
   
- audit_name  
+ audit_name   
  应用此规范的审核的名称。  
   
- audit_action_group_name  
+ audit_action_group_name   
  服务器级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- WITH ( STATE = { ON | OFF } )  
+ WITH ( STATE = { ON | OFF } )     
  允许或禁止审核收集此审核规范的记录。  
   
 ## <a name="remarks"></a>Remarks  
  必须将审核规范的状态设置为 OFF 选项，以便更改审核规范。 使用 STATE=OFF 以外的任何选项启用审核规范时，如果执行 ALTER SERVER AUDIT SPECIFICATION，您将接收到一条错误消息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有 ALTER ANY SERVER AUDIT 权限的用户可以更改服务器审核规范并将其绑定到任何审核。  
   
  创建服务器审核规范后，具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 权限的主体、sysadmin 帐户或具有对审核的明确访问权的主体即可查看该规范。  

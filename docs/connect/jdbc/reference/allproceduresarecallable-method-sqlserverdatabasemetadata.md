@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f9ea85b706ac852d4dd5438d31267f90f20e8f8c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 559c025a5fcb7d27f4520cea0868761b449107a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955929"
 ---
 # <a name="allproceduresarecallable-method-sqlserverdatabasemetadata"></a>allProceduresAreCallable 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean allProceduresAreCallable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 allProceduresAreCallable 方法由 java.sql.DatabaseMetaData 接口中的 allProceduresAreCallable 方法指定。  
+ 此 allProceduresAreCallable 方法由 allProceduresAreCallable 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a24d9a25409290288afa8a0b23b49c5f55fba217
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111063"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +71,9 @@ ms.locfileid: "54127727"
 |“确定”|none|  
   
 ## <a name="subscription-status-values"></a>订阅状态值  
- 下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期”  和“正在重试失败的命令” ；将显示最高优先级状态。  
+ 下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期”  和“正在重试失败的命令”  ；将显示最高优先级状态。  
   
- 状态值“‘严重’状态下的性能” 、“即将过期/已过期” 和“未初始化”  都是警告。 显示警告时，复制监视器还显示是否有代理在运行。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”**。  
+ 状态值“‘严重’状态下的性能”  、“即将过期/已过期”  和“未初始化”  都是警告。 显示警告时，复制监视器还显示是否有代理在运行。 例如，状态可能为 **“正在运行，‘严重’状态下的性能”** 。  
   
 ### <a name="transactional-subscriptions"></a>事务订阅  
   

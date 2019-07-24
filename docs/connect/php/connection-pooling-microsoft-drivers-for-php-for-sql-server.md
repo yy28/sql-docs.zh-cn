@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: de58a006717a64d400e40ba2126eebcdb138aa3f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015119"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>连接池 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66796233"
   
 -   [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 使用 ODBC 连接池。  
   
--   默认情况下，连接池在 Windows 中处于启用状态。 在 Linux 和 macOS 中，连接建立池连接仅当启用连接池用于 ODBC (请参阅[启用/禁用连接池](#enablingdisabling-connection-pooling))。 如果启用连接池，连接到服务器的驱动程序将尝试使用已入池的连接，然后它会创建一个新。 如果在池中未找到等效连接，将创建新的连接，并将其添加到该池中。 该驱动程序将基于连接字符串的比较结果确定连接是否等效。  
+-   默认情况下，连接池在 Windows 中处于启用状态。 在 Linux 和 macOS 中, 仅在为 ODBC 启用了连接池的情况下才会建立连接 (请参阅[启用/禁用连接池](#enablingdisabling-connection-pooling))。 启用连接池并连接到服务器时, 驱动程序会在创建新的连接之前尝试使用已入池的连接。 如果在池中未找到等效连接，将创建新的连接，并将其添加到该池中。 该驱动程序将基于连接字符串的比较结果确定连接是否等效。  
   
 -   当使用池中的某个连接时，会重置该连接状态。  
   
@@ -43,11 +42,11 @@ ms.locfileid: "66796233"
   
 有关其他连接属性的信息，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
 ### <a name="linux-and-macos"></a>Linux 和 macOS
-*ConnectionPooling*属性不能用于启用/禁用连接池。 
+*ConnectionPooling*特性不能用于启用/禁用连接池。 
 
-连接池可以启用/禁用通过编辑 odbcinst.ini 配置文件。 以使更改生效，应重新加载该驱动程序。
+可以通过编辑 odbcinst.ini 配置文件来启用/禁用连接池。 应重新加载驱动程序, 以使更改生效。
 
-设置`Pooling`到`Yes`和一个正`CPTimeout`odbcinst.ini 文件中的值，将启用连接池。 
+如果`Pooling`将`Yes`设置为, `CPTimeout`并且 odbcinst.ini 文件中的正值启用连接池。 
 ```
 [ODBC]
 Pooling=Yes
@@ -56,7 +55,7 @@ Pooling=Yes
 CPTimeout=<int value>
 ```
   
-至少，odbcinst.ini 文件应类似于此示例中：
+至少, odbcinst.ini 文件应类似于以下示例:
 
 ```
 [ODBC]
@@ -69,16 +68,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-设置`Pooling`到`No`odbcinst.ini 文件会强制驱动程序来创建新的连接。
+如果`Pooling`在`No` odbcinst.ini 文件中将设置为, 则会强制驱动程序创建一个新连接。
 ```
 [ODBC]
 Pooling=No
 ```
 
 ## <a name="remarks"></a>Remarks
-- 在 Linux 或 macOS 中，所有连接将建立都池连接如果 odbcinst.ini 文件中启用了池。 这意味着 ConnectionPooling 连接选项不起作用。 若要禁用了连接池，将设置池 = No odbcinst.ini 文件中的并重新加载驱动程序。
-  - unixODBC < = 2.3.4 （Linux 和 macOS） 可能不会返回正确的诊断信息，例如错误消息、 警告和信息性消息
-  - 出于此原因，SQLSRV 和 PDO_SQLSRV 驱动程序可能无法正确地提取以字符串形式的长数据 （如 xml、 二进制)。 可以作为一种解决方法的流的形式提取的长整型数据。 SQLSRV，请参阅下面的示例。
+- 在 Linux 或 macOS 中, 如果在 odbcinst.ini 文件中启用了 "池", 则所有连接都将建立池连接。 这意味着 ConnectionPooling 连接选项不起作用。 若要禁用池, 请在 odbcinst.ini 文件中设置 Pooling = No, 并重新加载驱动程序。
+  - unixODBC < = 2.3.4 (Linux 和 macOS) 可能不会返回正确的诊断信息, 例如错误消息、警告和信息性消息
+  - 出于此原因, SQLSRV 和 PDO_SQLSRV 驱动程序可能无法正确地将长数据 (如 xml、二进制) 作为字符串来提取。 长数据可以作为一种解决方法来提取。 请参阅下面的用于 SQLSRV 的示例。
 
 ```
 <?php

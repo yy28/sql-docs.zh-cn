@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 04cf56ad-11a8-4ae5-a612-39f3f8680501
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6dcec37b342b226f3a01369c934d6f4b476b53be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 42120a2f69e554b722d25336ebc8d0aaae8a38a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970923"
 ---
 # <a name="sqlservernclob-methods"></a>SQLServerNClob 方法
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  有关信息的成员[SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)，请参阅[SQLServerNClob 成员](../../../connect/jdbc/reference/sqlservernclob-members.md)。  
+  有关[SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)成员的信息, 请参阅[SQLServerNClob 成员](../../../connect/jdbc/reference/sqlservernclob-members.md)。  
   
   

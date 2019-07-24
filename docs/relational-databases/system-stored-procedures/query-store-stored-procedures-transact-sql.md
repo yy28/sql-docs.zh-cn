@@ -1,5 +1,5 @@
 ---
-title: 查询存储存储过程 (TRANSACT-SQL) |Microsoft Docs
+title: 查询存储存储过程 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da56a46b684762fa9f82d40fba8603285877e525
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aa7758a6e292aaa69f848c9e2c844e855d507bd
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941909"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418898"
 ---
-# <a name="query-store-stored-procedures-transact-sql"></a>查询存储存储过程 (TRANSACT-SQL)
+# <a name="query-store-stored-procedures-transact-sql"></a>查询存储存储过程 (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  本部分包含以下存储的过程用于配置查询存储。  
+  本部分包含以下用于配置查询存储的存储过程。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67941909"
   
 -   [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
   
--   [sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
+-   [sp_query_store_remove_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
   
 -   [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
   

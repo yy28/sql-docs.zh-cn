@@ -1,5 +1,5 @@
 ---
-title: 数据源向导屏幕 1 （适用于 SQL Server ODBC 驱动程序） |Microsoft Docs
+title: 数据源向导屏幕 1 (SQL Server 的 ODBC 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936605"
 ---
 # <a name="data-source-wizard-screen-1"></a>数据源向导屏幕 1
 
@@ -34,7 +33,7 @@ ODBC 应用程序请求与数据源连接时使用的数据源名称。 例如�
 
 ### <a name="select-or-enter-a-server-name"></a>选择或输入服务器名称
 
-在网络上的 SQL Server 实例的名称。 您需要在下一个编辑框中指定一个服务器。
+网络上 SQL Server 的实例名称。 您需要在下一个编辑框中指定一个服务器。
 
 大多数情况下，ODBC 驱动程序可通过使用此框中提供的默认协议顺序和服务器名称进行连接。 如果要创建服务器别名或配置客户端网络库，请使用 SQL Server 配置管理器。
 
@@ -48,7 +47,7 @@ ODBC 应用程序请求与数据源连接时使用的数据源名称。 例如�
 
 ### <a name="next"></a>Next
 
-若要转到向导的下一个屏幕，请单击**下一步**。
+若要进入向导的下一个屏幕, 请单击 "**下一步**"。
 
 ## <a name="next-steps"></a>后续步骤
 

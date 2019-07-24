@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 946bcde93c9f024d921322b0d84b0ad162aec66d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980670"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo 方法 (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getPropertyInfo 方法由 java.sql.Driver 接口中的 getPropertyInfo 方法指定。  
+ 此 getPropertyInfo 方法由 getPropertyInfo 方法在 java .sql 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDriver 方法](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

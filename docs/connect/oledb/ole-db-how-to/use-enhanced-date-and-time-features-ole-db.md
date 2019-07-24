@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cb62604971ab0e16b0fe252534317b586d39ed0c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015535"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用日期和时间增强功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此示例显示如何使用 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入的日期/时间功能。 此示例使用四个新日期和时间类型 (**日期**，**时间**， **datetime2**，以及**datetimeoffset**) 以执行命令参数和检索行集结果。  
+  此示例显示如何使用 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入的日期/时间功能。 该示例使用四个新日期和时间类型 (**date**、 **time**、 **datetime2**和**datetimeoffset**) 来执行带参数的命令并检索行集结果。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b13711007627872af8076f40ccbe94c521c68583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 570a9185a83ecf1af0e47ee25cce5445dca1b958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975986"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>refreshRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void refreshRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 refreshRow 方法由 java.sql.ResultSet 接口中的 refreshRow 方法指定。  
+ 此 refreshRow 方法由 refreshRow 方法在方法中指定。  
   
  游标位于插入行时，无法调用此方法。  
   

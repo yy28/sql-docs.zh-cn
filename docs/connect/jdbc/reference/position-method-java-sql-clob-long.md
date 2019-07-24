@@ -1,5 +1,5 @@
 ---
-title: position 方法 (java.sql.Clob，long) |Microsoft Docs
+title: position 方法 (Clob, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ced4d6df2e557a844a7d4dd69627a2c7f39c480
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b9af31e7701633e7cd73e8aaf0eb498b26c02c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976416"
 ---
 # <a name="position-method-javasqlclob-long"></a>position 方法 (java.sql.Clob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long position(java.sql.Clob searchstr,
   
  要搜索的子字符串。  
   
- start   
+ *start*  
   
  开始搜索的位置。 第一个位置为 1。  
   
@@ -52,7 +51,7 @@ public long position(java.sql.Clob searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此位置方法由 java.sql.Clob 接口中的位置方法指定。  
+ 此位置方法由 Clob 接口中的 position 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [position 方法&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   

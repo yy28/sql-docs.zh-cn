@@ -1,5 +1,5 @@
 ---
-title: unwrap 方法 (SQLServerCallableStatement) |Microsoft Docs
+title: 解包方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 034fb09dec2504a2cb722e227fa5db437f6053f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995193"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 实现自 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 扩展而来的 [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。 当此方法获调用时，对象会取消对下列类的包装：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
   
- 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
  下面的代码示例展示了如何通过使用 isWrapperFor 和 unwrap 方法，检查驱动程序扩展并调用供应商专用方法（如 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 和 [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)）。  
   

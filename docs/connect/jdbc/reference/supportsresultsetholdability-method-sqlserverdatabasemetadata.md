@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 361ac4fb0da38c88b78746749f0888b14dac4b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 766c09aca5256d369ebad98cb1c002f4498dda7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968941"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>supportsResultSetHoldability 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,13 +44,13 @@ public boolean supportsResultSetHoldability(int holdability)
  ResultSet.CLOSE_CURSORS_AT_COMMIT  
   
 ## <a name="return-value"></a>返回值  
- **true**如果受支持。 否则为 **false**。  
+ 如果支持,**则为 true** 。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 supportsResultSetHoldability 方法由 java.sql.DatabaseMetaData 接口中的 supportsResultSetHoldability 方法指定。  
+ 此 supportsResultSetHoldability 方法由 supportsResultSetHoldability 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

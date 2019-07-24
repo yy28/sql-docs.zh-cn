@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5d0b665c-e1a7-43f7-88c3-db432773de7d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad8136c9f973781f8142912c89b41b0ff676a54e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc5d6924976dfcddfcc502ac0550cb1e1ff5e1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978358"
 ---
 # <a name="geturl-method-int-sqlserverresultset"></a>getURL 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.net.URL getURL(int columnIndex)
  指示列索引的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 URL 的对象。  
+ 一个 URL 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

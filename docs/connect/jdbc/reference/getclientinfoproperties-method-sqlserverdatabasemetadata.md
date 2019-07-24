@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf9c0696c2169ee9b0dd1af198fcb50333c5d9ca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08b919ec6b626cd61b757b380d24efffcada0d55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953107"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>getClientInfoProperties 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,16 +30,16 @@ public java.sql.ResultSet getClientInfoProperties()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个结果集的对象。  
+ 结果集对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getClientInfoProperties 方法由 java.sql.DatabaseMetaData 接口中的 getClientInfoProperties 方法指定。  
+ 此 getClientInfoProperties 方法由 getClientInfoProperties 方法在 Java.sql.databasemetadata 接口中指定。  
   
 > [!NOTE]  
->  此方法返回空结果集。 该驱动程序支持设置仅**applicationName** ，并设置**applicationName**仅在连接时。 SQL Server 不支持在建立连接后更新客户端应用程序信息。  
+>  此方法返回空结果集。 驱动程序仅支持设置**applicationname** , 并仅在连接时设置**applicationname** 。 SQL Server 不支持在建立连接后更新客户端应用程序信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 成员](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

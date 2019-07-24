@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表格模型中的计算组 |Microsoft Docs
-ms.date: 06/17/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,25 +10,26 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: af63f41555a021fc720c7d1e15778265fe7de500
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263436"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419524"
 ---
-# <a name="calculation-groups-preview"></a>计算组 （预览）
+# <a name="calculation-groups-preview"></a>计算组 (预览)
  
 [!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-计算组可以显著减少冗余的度量值数由分组为常见的度量值表达式*计算项*。 Azure Analysis Services 中支持计算组和 SQL Server Analysis Services 2019 表格模型在 1470年及更高版本[兼容性级别](compatibility-level-for-tabular-models-in-analysis-services.md)。 1470 兼容性级别模型正处于**预览版**。  
+计算组可以通过将常见度量值表达式分组为*计算项*来大幅减少冗余度量值的数量。 在1470和更高的[兼容级别](compatibility-level-for-tabular-models-in-analysis-services.md)Azure Analysis Services 和 SQL Server Analysis Services 2019 表格模型支持计算组。 1470兼容级别的模型目前处于**预览**状态。  
 
 本文介绍以下内容： 
 
 > [!div class="checklist"]
 > * 优势 
-> * 计算组的工作原理
+> * 计算组的工作方式
 > * 动态格式字符串
+> * 排序
 > * 优先级
 > * 工具
 > * 限制
@@ -37,40 +38,40 @@ ms.locfileid: "67263436"
 
 ## <a name="benefits"></a>优势
 
-计算组解决其中可能有的复杂模型中的问题为大量增生冗余使用相同的计算的使用时间智能计算最常见的度量值。 例如，销售分析人员想要查看总销售额，并按月至今的 (MTD)，每个季度结束日期 (QTD) 排序年度截止到现在 (YTD) 进行排序年度截止到现在为上一年 (PY) 等。 数据建模人员必须创建单独为每个计算，这可能会导致数十个度量值的度量值。 对于用户，这可以意味着无需通过许多度量值进行排序，并单独应用于其报表。 
+计算组解决了复杂模型中的问题, 在这种模型中, 可以使用相同的计算 (最常见的时间智能计算) 来增加冗余度量值。 例如, 销售分析人员想要按月份截止日期 (MTD)、季度截止到现在 (QTD)、年初至今 (YTD)、本年迄今订单 (PY) 等来查看销售总额和订单, 等等。 数据建模器必须为每个计算创建单独的度量值, 这可能会导致多个度量值。 对于用户而言, 这可能意味着必须按多个度量值进行排序, 并将它们分别应用到报表中。 
 
-让我们首先看一下计算组到 Power BI 等工具中的用户的显示方式。 然后，我们将看什么构成一个计算组中，并且它们如何创建在模型中。
+首先, 让我们看一下如何在 Power BI 的报表工具中向用户显示计算组。 接下来, 我们将介绍如何组成计算组, 以及如何在模型中创建计算组。
 
-计算组在报告客户端中作为具有单个列的表显示。 列不是像典型的列或维度，它表示一个或多个可重复使用计算，而是或*计算项*，可以应用于任何已添加到可视化效果的值筛选器的度量值。
+计算组在报告客户端中作为具有单个列的表显示。 列不像典型的列或维度, 而是表示一个或多个可重复使用的计算, 或可应用于已添加到可视化效果的值筛选器的任何度量值的*计算项*。
 
-在下面的动画中，用户正在分析 2012年和 2013 年销售数据。 应用计算组中，常见的基础度量值之前**销售**计算每个月的总销售额的总和。 然后，用户想要将应用时间智能计算，以获取销售总额的本月截止到现在，当季度至今本年截止到现在，依次类推。 不包括计算组中，用户将必须选择各个时间智能度量值。
+在下面的动画中, 用户正在分析销售数据2012年和2013年。 在应用计算组之前, 通用基础度量值**销售额**计算每月总销售额的总和。 然后, 用户需要应用时间智能计算, 以获取本月至今、季度截止到目前、本年迄今等的销售总额。 如果没有计算组, 则用户必须选择单个时间智能度量值。
 
-与计算组，在此示例中名为**时间智能**，当用户拖动**时间计算**项**列**筛选区域中，每个计算项将显示为一个单独的列。 从基础度量值，计算每个行的值**销售**。  
+对于计算组, 在此示例中, 在名为**Time 情报**的情况下, 当用户将**时间计算**项拖到 "**列**" 筛选区域时, 每个计算项都显示为一个单独的列。 每行的值都是从基本度量值**Sales**计算得出的。  
 
-![在 Power BI 中应用的计算组](media/calculation-groups/calc-groups-pbi.gif)
+![正在应用 Power BI 的计算组](media/calculation-groups/calc-groups-pbi.gif)
 
 
-计算组使用**显式**DAX 度量值。 在此示例中，**销售**是已在模型中创建的显式度量值。 计算组不适用于隐式的 DAX 度量值。 例如，在 Power BI 中隐式度量值时创建用户将列拖到视觉对象来查看聚合的值，而无需创建显式度量值上。 在此期间，Power BI 生成为内联编写 DAX 计算-这意味着隐式度量值不能使用计算组的隐式度量值的 DAX。 引入了新的模型属性显示在表格对象模型 (TOM)， **DiscourageImplicitMeasures**。 目前，若要创建此属性的计算组必须设置为 **，则返回 true**。 如果设置为 true，Power BI Desktop 在 Live Connect 模式会禁用隐式度量值的创建。
+计算组使用**显式**DAX 度量值。 在此示例中, **Sales**是已在模型中创建的显式度量值。 计算组不能与隐式 DAX 度量值一起使用。 例如, 在 Power BI 隐式度量值是在用户将列拖动到视觉对象上以查看聚合值时创建的, 而无需创建显式度量值。 目前, Power BI 为作为内联 DAX 计算编写的隐式度量值生成 DAX-这意味着隐式度量值不能与计算组一起使用。 已在表格对象模型 (TOM) 中看到一个新的模型属性, **DiscourageImplicitMeasures**。 目前, 若要创建计算组, 必须将此属性设置为**true**。 如果设置为 true, 则在 "实时连接" 模式下 Power BI Desktop 将禁用隐式度量值的创建。
 
-## <a name="how-they-work"></a>它们的工作原理
+## <a name="how-they-work"></a>工作原理
 
-现在，已了解如何计算组中受益的用户，让我们看一看如何创建显示的时间智能计算组示例。
+现在, 你已了解计算组如何使用户受益, 接下来让我们看看如何创建显示的 "时间智能计算组" 示例。
 
-了解详细信息之前，让我们引入了一些新的 DAX 函数专用于计算组： 
+在深入了解详细信息之前, 让我们先介绍一些用于计算组的新 DAX 函数: 
 
-[SELECTEDMEASURE](https://docs.microsoft.com/dax/selectedmeasure-function-dax) -由表达式计算要引用的度量值的当前上下文中的项。 在此示例中，该 Sales 度量值。
+[SELECTEDMEASURE](https://docs.microsoft.com/dax/selectedmeasure-function-dax) -用于计算项以引用当前上下文中的度量值的表达式。 在此示例中, 为 "销售额" 度量值。
 
-[SELECTEDMEASURENAME](https://docs.microsoft.com/dax/selectedmeasurename-function-dax) -由计算项以确定是按名称的上下文中的度量值的表达式。
+[SELECTEDMEASURENAME](https://docs.microsoft.com/dax/selectedmeasurename-function-dax) -用于计算项的表达式, 用来确定上下文中按名称的度量值。
 
-[ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) -由计算项以确定在度量值的列表中指定的度量值的上下文中的表达式。
+[ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) -用于计算项的表达式, 用来确定在度量值列表中指定的度量值。
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) -由要检索的度量值的上下文中的格式字符串的计算项的表达式。
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) -用于计算项的表达式, 用来检索位于上下文中的度量值的格式字符串。
 
-### <a name="time-intelligence-example"></a>时间智能的示例
+### <a name="time-intelligence-example"></a>时间智能示例
 
-表名称-**时间智能**   
-列名称-**时间计算**   
-优先顺序- **20**   
+表名-**时间智能**   
+列名-**时间计算**   
+优先级- **20**   
 
 #### <a name="time-intelligence-calculation-items"></a>时间智能计算项
 
@@ -114,7 +115,7 @@ CALCULATE(
 )
 ```
 
-**上一年度 QTD**
+**PY QTD**
 
 ```dax
 CALCULATE(
@@ -134,7 +135,7 @@ CALCULATE(
 )
 ```
 
-**一年同期相比**
+**同比变化率**
 
 ```dax
 SELECTEDMEASURE() –
@@ -159,7 +160,7 @@ DIVIDE(
 )
 ```
 
-若要测试此计算组，可以执行 DAX 查询中 SSMS 或开放源代码[DAX Studio](http://daxstudio.org/)。 此查询示例中省略同比和增长率。
+若要测试此计算组, 可以在 SSMS 或开源[DAX Studio](http://daxstudio.org/)中执行 DAX 查询。 此查询示例中省略了同比变化率和同比变化率%。
 
 #### <a name="time-intelligence-query"></a>时间智能查询
 
@@ -182,54 +183,54 @@ CALCULATETABLE (
 
 #### <a name="time-intelligence-query-return"></a>时间智能查询返回
 
-返回下表显示为项应用每个计算的计算。 例如，可以看到 QTD 2012 年 3 月是年 1 月、 年 2 月和 2012 年 3 月的总和。
+返回表显示应用的每个计算项的计算。 例如, 你可以看到三月2012的 QTD 是2月到2月到 2012 3 月的总和。
 
-![返回的查询](media/calculation-groups/calc-groups-query-return.png)
+![查询返回](media/calculation-groups/calc-groups-query-return.png)
 
 
 ## <a name="dynamic-format-strings"></a>动态格式字符串
 
-*动态格式字符串*与计算组允许的度量值的格式字符串的条件性应用程序而无需强制他们返回的字符串。
+带有计算组的*动态格式字符串*允许将格式字符串的条件应用应用于度量值, 而无需强制它们返回字符串。
 
-表格模型支持通过使用 DAX 的动态格式度量值[格式](https://docs.microsoft.com/dax/format-function-dax)函数。 但是，格式函数有返回一个字符串，强制应数值也要返回以字符串形式的度量值的缺点。 这可能产生一些限制，如大多数 Power BI 视觉对象，具体取决于数字值，如图表中无法使用。
+表格模型通过使用 DAX 的[FORMAT](https://docs.microsoft.com/dax/format-function-dax)函数支持度量值的动态格式设置。 但是, FORMAT 函数的缺点是返回一个字符串, 并强制执行其他为数字的度量值, 并将其作为字符串返回。 这可能会有一些限制, 例如不能使用大多数 Power BI 视觉对象, 具体取决于数值, 如图表。
 
-### <a name="dynamic-format-strings-for-time-intelligence"></a>时间智能的动态格式字符串
+### <a name="dynamic-format-strings-for-time-intelligence"></a>用于时间智能的动态格式字符串
 
-如果我们看一下时间智能示例如上所示，所有计算都项除外**增长率**应在上下文中使用当前度量值的格式。 例如， **YTD**计算的销售额基础度量值应为货币。 如果这是类似于订单基础度量值的计算组，格式应为数字。 **YOY %** ，但是，应该是基础度量值的百分比而不考虑格式。
+如果我们看一下上面所示的时间智能示例, 则除**同比变化率%** 之外的所有计算项应在上下文中使用当前度量值的格式。 例如, 在销售基准度量值上计算的**YTD**应为货币。 如果这是一个计算组, 而这种计算组类似于 Orders 基本度量值, 则格式将为数值。 不过,**同比变化率%** 应为百分比, 而不考虑基础度量值的格式。
 
-有关**增长率**，我们可以通过格式字符串表达式属性设置为覆盖格式字符串**0.00%;-0.00%; 0.00%** 。 若要了解有关格式字符串表达式的属性的详细信息，请参阅[MDX 单元属性的格式字符串内容](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values)。
+对于**同比变化率%** , 我们可以通过将格式字符串表达式属性设置为**0.00%;-0.00%; 0.00%** , 来覆盖格式字符串。 若要详细了解格式字符串表达式属性, 请参阅[MDX 单元属性-格式字符串内容](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values)。
 
-在 Power BI 中可视化此矩阵中，您将看到**销售当前/同比**并**订单当前/同比**保留它们各自的基础度量值的格式字符串。 **销售增长率**并**订单增长率**，但是，将覆盖要使用的格式字符串*百分比*格式。
+在 Power BI 中的此矩阵视觉对象中, 你会看到**Sales current/同比变化率**和**ORDERS 当前/同比变化率**保留各自的基本度量值格式字符串。 不过, **SALES 同比变化率%** 和**Orders 同比变化率%** 将覆盖格式字符串以使用*百分比*格式。
 
 ![矩阵视觉对象中的时间智能](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
 
-### <a name="dynamic-format-strings-for-currency-conversion"></a>货币换算的动态格式字符串
+### <a name="dynamic-format-strings-for-currency-conversion"></a>用于货币换算的动态格式字符串
 
-动态格式字符串提供了简单的货币换算。 请考虑以下 Adventure Works 数据模型。 对于建模*一个多*货币换算定义的[换算类型](../currency-conversions-analysis-services.md#conversion-types)。
+动态格式字符串提供了简单的货币换算。 请考虑以下艾德作品数据模型。 它*针对*[转换类型](../currency-conversions-analysis-services.md#conversion-types)定义的一对多货币换算建模。
 
-![表格模型中的货币速率](media/calculation-groups/calc-groups-currency-conversion.png)
+![表格模型中的货币费率](media/calculation-groups/calc-groups-currency-conversion.png)
 
-一个**FormatString**列添加到**DimCurrency**表并填充其各自的货币的格式字符串。
+"格式字符串 **" 列将**添加到**DimCurrency**表中, 并使用各自货币的格式字符串填充。
 
 ![格式字符串列](media/calculation-groups/calc-groups-formatstringcolumn.png)
 
-对于此示例中，以下的计算组然后定义为：
+在此示例中, 将以下计算组定义为:
 
-### <a name="currency-conversion-example"></a>货币转换示例
+### <a name="currency-conversion-example"></a>货币换算示例
 
 表名称-**货币换算**   
 列名称-**转换计算**   
-优先顺序- **5**   
+优先级- **5**   
 
-#### <a name="calculation-items-for-currency-conversion"></a>为货币换算计算项
+#### <a name="calculation-items-for-currency-conversion"></a>用于货币换算的计算项
 
-**不进行转换**
+**无转换**
 
 ```dax
 SELECTEDMEASURE()
 ```
 
-**转换后的货币**
+**转换货币**
 
 ```dax
 IF(
@@ -251,31 +252,31 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-格式字符串表达式必须返回标量的字符串。 使用新[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax)若要还原到的基础度量值的格式字符串，如果在筛选器上下文中有多种货币的函数。
+格式字符串表达式必须返回标量字符串。 如果筛选器上下文中有多个货币, 则使用新的[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax)函数恢复为基本度量值格式字符串。
 
-下面的动画显示的动态格式货币换算**销售**在报表中的度量值。
+以下动画显示了报表中**销售**度量值的动态格式货币转换。
 
-![应用货币转换动态格式字符串](media/calculation-groups/calc-groups-dynamic-format-string.gif)
+![应用的货币换算动态格式字符串](media/calculation-groups/calc-groups-dynamic-format-string.gif)
 
 ## <a name="precedence"></a>优先级
 
-优先级是为计算组定义的属性。 多个计算组时，它指定计算的顺序。 较大的数字指示较高优先级，这意味着它将被计算之前计算组优先级较低。
+优先级是为计算组定义的属性。 它指定了多个计算组时的计算顺序。 数字越大, 表示优先级越高, 这意味着在优先级较低的计算组之前计算。
 
-对于此示例中，我们将为时间智能上述示例中，使用相同的模型，但还将添加**平均值**计算组。 平均值计算组包含是独立于传统的时间智能的它们不会发生的日期筛选器上下文-它们只是应用在其中平均计算的平均计算。
+在此示例中, 我们将使用与上述时间智能示例相同的模型, 同时添加**平均**计算组。 平均计算组包含与传统时间智能无关的平均计算, 因为它们不会更改日期筛选器上下文, 它们只会在其中应用平均计算。
 
-在此示例中，定义每日平均计算。 计算，例如平均每日的石油桶共有石油和天然气行业应用程序中。 其他常见的业务示例包括在零售中存储的平均销售额。
+在此示例中, 将定义每日平均计算。 对于石油和天然气应用程序而言, 一般的计算 (例如每日的 barrels) 都很常见。 其他常见业务示例包含零售的商店销售平均值。
 
-而此类计算计算独立于时间智能计算，很可能需要将它们合并。 例如，用户可能想要查看每日 YTD 若要查看从一年的某一开始为当前日期的每日石油率石油桶。 在此方案中，应计算项设置优先级。
+虽然这种计算是独立于时间智能计算计算的, 但也有可能需要将它们组合在一起。 例如, 用户可能想要查看 YTD 的 barrels, 以查看从该年开始到当前日期的每日燃油费率。 在此方案中, 应为计算项设置优先级。
 
-### <a name="averages-example"></a>平均值示例
+### <a name="averages-example"></a>平均示例
 
-表名是**平均值**。   
-列名称是**平均计算**。   
-优先级**10**。   
+表名称为**平均值**。   
+列名为**平均计算**。   
+优先级为**10**。   
 
 #### <a name="calculation-items-for-averages"></a>计算平均值的项
 
-**没有平均值**
+**无平均值**
 
 ```dax
 SELECTEDMEASURE()
@@ -287,9 +288,9 @@ SELECTEDMEASURE()
 DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate))
 ```
 
-下面是 DAX 查询和返回表的示例：
+下面是 DAX 查询和返回表的示例:
 
-#### <a name="averages-query"></a>平均值查询
+#### <a name="averages-query"></a>平均查询
 
 ```dax
 EVALUATE
@@ -322,48 +323,48 @@ EVALUATE
 )
 ```
 
-#### <a name="averages-query-return"></a>返回平均值查询
+#### <a name="averages-query-return"></a>平均查询返回
 
-![返回的查询](media/calculation-groups/calc-groups-ytd-daily-avg.png)
+![查询返回](media/calculation-groups/calc-groups-ytd-daily-avg.png)
 
-下表显示了 2012 年 3 月值的计算方式。
+下表显示了如何计算三月2012的值。
 
 
 |列名  |计算 |
 |---------|---------|
-|YTD     |    Feb、 Mar 2012 年 1 月的销售额的总和<br />= 495,364 + 506,994 + 373,483     |
-|每日平均    |     2012 年 3 月的销售额除以 3 月天数<br />= 373,483 / 31       |
-|YTD 每日平均     | 适用于 2012 年 3 月 YTD 除以 # 年 1 月、 年 2 月，日中的天数<br />=  1,375,841 / (31 + 29 + 31)       |
+|YTD     |    Jan, 二月, 三月2012的销售总额<br />= 495364 + 506994 + 373483     |
+|每日平均    |     三月2012的销售额除以3月份的天数<br />= 373483/31       |
+|每日 YTD 平均值     | 三月2012的 YTD 除以一月、二月和三月的天数<br />= 1375841/(31 + 29 + 31)       |
 
-下面是应用的优先级的 YTD 计算项定义**20**。
+下面是已应用优先级为**20**的 YTD 计算项的定义。
 
 ```dax
 CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date]))
 ```
 
-下面是每日平均，应用具有的优先级**10**。
+下面是应用优先级为**10**的每日平均值。
 
 ```dax
 DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate))
 ```
 
-由于时间智能计算组的优先级高于平均值计算组，它是作为尽可能广泛应用。 YTD 每日平均计算适用于分子和分母 （数天） 的每日平均计算 YTD。
+由于时间智能计算组的优先级高于平均计算组的优先级, 因此它会尽可能广泛地应用。 YTD 每日平均计算同时应用于每日平均计算的分子和分母 (天数的计数)。
 
-这相当于以下表达式：
+这等效于以下表达式:
 
 ```dax
 CALCULATE(DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate)), DATESYTD(DimDate[Date]))
 ```
 
-此表达式：
+不是此表达式:
 
 ```dax
 DIVIDE(CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date])), COUNTROWS(DimDate)))
 ```
 
-## <a name="sideways-recursion"></a>横向递归
+## <a name="sideways-recursion"></a>侧向递归
 
-在上述时间智能示例中，计算项目中的某些引用其他相同的计算组中。 这称为*横向递归*。 例如，**增长率**将同时引用**同比**并**PY**。
+在上述时间智能示例中, 某些计算项引用相同计算组中的其他项。 这称为 "*侧向递归*"。 例如,**同比变化率%** 引用**同比变化率**和**PY**。
 
 ```dax
 DIVIDE(
@@ -378,11 +379,11 @@ DIVIDE(
 )
 ```
 
-在这种情况下，单独计算这两个表达式因使用不同计算语句。 不支持其他类型的递归。
+在这种情况下, 这两个表达式是单独计算的, 因为它们使用的是不同的计算语句。 不支持其他类型的递归。
 
-## <a name="single-calculation-item-in-filter-context"></a>筛选器上下文中的单个计算项
+## <a name="single-calculation-item-in-filter-context"></a>筛选上下文中的单个计算项
 
-在我们时间智能的示例中， **PY YTD**计算项都有一个计算表达式：
+在我们的时间智能示例中, **PY YTD**计算项具有一个计算表达式:
 
 ```dax
 CALCULATE(
@@ -392,23 +393,23 @@ CALCULATE(
 )
 ```
 
-CALCULATE() 函数的 YTD 参数重写要重复使用已在 YTD 计算项中定义的逻辑的筛选器上下文。 不能将上一年度和 YTD 应用中的单个评估。 计算组是*仅应用*计算组中的单个计算项目是否在筛选器上下文。
+计算 () 函数的 YTD 参数重写筛选器上下文, 以重用已在 YTD 计算项中定义的逻辑。 不能将 PY 和 YTD 应用于单个评估中。 仅当计算组中的单个计算项在筛选器上下文中时,*才应用*计算组。
 
 ## <a name="mdx-support"></a>MDX 支持
 
-计算组支持多维表达式 (MDX) 查询。 这意味着，Microsoft Excel 用户，通过使用 MDX 的查询表格数据模型可以充分利用的工作表数据透视表中的计算组和图表。
+计算组支持多维数据表达式 (MDX) 查询。 这意味着, 通过使用 MDX 查询表格数据模型的 Microsoft Excel 用户可充分利用工作表数据透视表和图表中的计算组。
 
 ## <a name="tools"></a>工具
 
-计算组尚不支持在 SQL Server Data Tools，Visual Studio 中使用 Analysis Services 扩展插件。 但是，可以通过使用表格模型脚本语言 (TMSL) 或开放源代码创建计算组[表格编辑器](https://github.com/otykier/TabularEditor)。
+在 SQL Server Data Tools 中, 不支持计算组 Analysis Services 扩展。 但是, 可以通过使用表格模型脚本语言 (TMSL) 或开源[表格编辑器](https://github.com/otykier/TabularEditor)来创建计算组。
 
 ## <a name="limitations"></a>限制
 
-[对象级别安全](object-level-security.md)(OLS) 定义计算上不支持组的表。 但是，可以在相同的模型中的其他表上定义 OLS。 如果计算项引用 OLS 受保护的对象，则返回一般错误。
+[对象级别安全性](object-level-security.md)不支持在计算组表中定义 (OLS)。 但是, 可以在同一模型中的其他表上定义 OLS。 如果计算项指的是 OLS 保护的对象, 则会返回一般错误。
 
-[行级别安全性](roles-ssas-tabular.md#bkmk_rowfliters)(RLS) 不受支持。 （直接或间接），可以对表中相同的模型，但不是在计算组本身定义 RLS。
+[行级别安全性](roles-ssas-tabular.md#bkmk_rowfliters)(RLS) 不受支持。 您可以在同一模型中的表上定义 RLS, 但不能对计算组本身 (直接或间接) 定义 RLS。
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 [表格模型中的 DAX](understanding-dax-in-tabular-models-ssas-tabular.md)   
 [DAX 参考](https://docs.microsoft.com/dax/data-analysis-expressions-dax-reference)  

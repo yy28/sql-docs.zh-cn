@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: 本文介绍了如何通过品牌包根据业务设置 Web 门户品牌，从而改变 Web 门户的外观。 品牌包已经设计好，所以无需深入了解级联样式表即可进行创建。
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221721"
 ---
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
 
@@ -119,17 +119,17 @@ Reporting Services 的 colors.json 文件有两种主要类别，项按这两种
   
 1.  选择右上角的“齿轮”  。  
   
-2.  选择“站点设置” 。  
+2.  选择“站点设置”  。  
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  选择“品牌” 。  
+3.  选择“品牌”  。  
   
     ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
   
-“当前已安装的品牌包” 会显示已上传的包的名称，或者显示“无”。  
+“当前已安装的品牌包”  会显示已上传的包的名称，或者显示“无”。  
   
-“上传品牌包” 会将包应用到 Web 门户。 你将看到操作立即生效。  
+“上传品牌包”  会将包应用到 Web 门户。 你将看到操作立即生效。  
   
 你还可以 **下载** 或 **删除** 包。 删除包后，Web 门户会立即重置为默认品牌。  
   

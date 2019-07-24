@@ -16,18 +16,17 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f97e848e1a55d05f1528d17a21a08b2fa00e20e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076624"
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  使用 **“权限”** 或 **“安全对象”** 页可以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”**。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。若要查看聚合权限，请使用 **“有效”** 选项卡。  
+  使用 **“权限”** 或 **“安全对象”** 页可以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”** 。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。若要查看聚合权限，请使用 **“有效”** 选项卡。  
   
  若要了解安全对象和主体的可能组合，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md) 主题中特定于安全对象的语法链接。 有关详细信息，请参阅 [Securables](../../relational-databases/security/securables.md)。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "47668485"
  描述每个项目的类型。  
   
 ## <a name="explicit-tab"></a>“显式”选项卡  
- **“显式”** 选项卡列出了上部网格中所选安全对象的可能权限。 若要配置权限，请选中或清除“授予”（或“允许”）、“具有授予权限”和“拒绝”复选框。 对于所有显式权限，全部选项均不可用。  
+ **“显式”** 选项卡列出了上部网格中所选安全对象的可能权限。 若要配置权限，请选中或清除“授予”（或“允许”）、“具有授予权限”和“拒绝”复选框     。 对于所有显式权限，全部选项均不可用。  
   
  **“权限”**  
  权限的名称。  
@@ -62,7 +61,7 @@ ms.locfileid: "47668485"
  选中该选项可以拒绝该登录名具有该权限。 清除该选项将撤消此权限。  
   
  **列权限**  
- 对于包含列的对象（如表、视图或表值函数），单击“列权限”按钮将打开“列权限”对话框。 在该对话框中，可以针对表或视图中的各列设置 **“授予”**、 **“允许”** 或 **“拒绝”** 权限。 此选项无法用于所有的对象类型或权限。  
+ 对于包含列的对象（如表、视图或表值函数），单击“列权限”按钮将打开“列权限”对话框   。 在该对话框中，可以针对表或视图中的各列设置 **“授予”** 、 **“允许”** 或 **“拒绝”** 权限。 此选项无法用于所有的对象类型或权限。  
   
 ## <a name="effective-tab"></a>“有效”选项卡  
  主体所拥有的与安全对象相关的权限可能来自为多个不同的主体设置的权限。 例如，对于某个登录名，可以为其单独授予权限，也可以将其作为组的成员授予权限。 **“有效”** 选项卡中显示从组或角色成员身份接收的权限与显式权限的组合结果。 将对授予权限进行聚合， 拒绝权限会覆盖所有的授予权限。  

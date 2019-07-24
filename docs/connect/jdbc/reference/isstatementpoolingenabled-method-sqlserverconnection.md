@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6265aaf5121e50684e205b5d80199222b510f5d6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d2f5178c8a2ce5b527ce70e6a3d8fc139ccc9c72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977201"
 ---
 # <a name="isstatementpoolingenabled-method-sqlserverconnection"></a>isStatementPoolingEnabled 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 返回是否启用语句池或不适用于此连接。
+ 返回是否为此连接启用了语句池。
 
 ## <a name="syntax"></a>语法  
   
@@ -36,13 +35,13 @@ public boolean isStatementPoolingEnabled()
 ```  
 
 ## <a name="return-value"></a>返回值
- 一个**布尔**，其中包含指示是否语句池启用的标志。
+ 一个包含指示是否启用了语句池的标记的**布尔值**。
 
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 此方法是可从 JDBC driver 6.4 及前向。
+ 此方法可从 JDBC 驱动程序版本6.4 和更前版本获得。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
