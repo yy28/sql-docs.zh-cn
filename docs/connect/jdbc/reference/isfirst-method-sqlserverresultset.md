@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c27320c78db2bd04ec9747079beb4b306446bab4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b847361621ad8d44840aa4bab02e4877128e8f48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977621"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>isFirst 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isFirst()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果光标位于第一行上。 **false**如果游标在任何其他位置或结果集不包含任何行。  
+ 如果游标位于第一行,**则为 true** 。 如果游标位于任何其他位置, 或者如果结果集不包含任何行, 则**为 false** 。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

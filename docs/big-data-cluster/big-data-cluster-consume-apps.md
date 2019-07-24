@@ -1,57 +1,57 @@
 ---
 title: 使用大数据群集上的应用程序
 titleSuffix: SQL Server big data clusters
-description: 使用 SQL Server 2019 大数据群集使用 RESTful web 服务 （预览版） 上部署的应用程序。
+description: 使用 RESTful web service (预览版) 在 SQL Server 2019 大数据群集上部署的应用程序。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/18/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2135ef64fb17eba62eab75b81739eda047167ab
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958880"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419508"
 ---
-# <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服务的大数据群集上部署的应用
+# <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 RESTful web 服务, 使用部署在 SQL Server 大数据群集上的应用
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何使用 SQL Server 2019 大数据群集使用 RESTful web 服务 （预览版） 上部署的应用。
+本文介绍如何使用 RESTful web 服务 (预览版) 来使用在 SQL Server 2019 大数据群集上部署的应用。
 
 ## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2019 大数据群集](deployment-guidance.md)
-- [mssqlctl 命令行实用程序](deploy-install-mssqlctl.md)
-- 部署使用的应用[ `mssqlctl` ](big-data-cluster-create-apps.md)或[应用将部署扩展](app-deployment-extension.md)
+- [mssqlctl 命令行实用工具](deploy-install-azdata.md)
+- 使用[azdata](big-data-cluster-create-apps.md)或[应用部署扩展](app-deployment-extension.md)部署的应用
 
 ## <a name="capabilities"></a>功能
 
-部署到 SQL Server 2019 大数据群集 （预览版） 的应用程序后，可以访问和使用该应用程序使用 RESTful web 服务。 这使该应用从其他应用程序或服务 （例如，移动应用或网站） 的集成。 下表描述了可用于应用程序部署命令**mssqlctl**以获取有关你的应用的 RESTful web 服务的信息。
+将应用程序部署到 SQL Server 2019 大数据群集 (预览版) 后, 可以使用 RESTful web 服务访问和使用该应用程序。 这样就可以将该应用程序与其他应用程序或服务 (例如, 移动应用或网站) 集成。 下表介绍了可用于**azdata**的应用程序部署命令, 以获取有关应用程序的 RESTful web 服务的信息。
 
 |Command |描述 |
 |:---|:---|
-|`mssqlctl app describe` | 介绍应用程序。 |
+|`azdata app describe` | 描述应用程序。 |
 
-可以获取帮助`--help`参数，如以下示例所示：
+可以获取有关`--help`参数的帮助, 如以下示例中所示:
 
 ```bash
-mssqlctl app describe --help
+azdata app describe --help
 ```
 
-以下部分介绍如何检索应用程序的终结点以及如何使用 RESTful web 服务的应用程序集成。
+以下各节介绍如何检索应用程序的终结点, 以及如何使用 RESTful web 服务进行应用程序集成。
 
-## <a name="retrieve-the-endpoint"></a>检索的终结点
+## <a name="retrieve-the-endpoint"></a>检索终结点
 
-**Mssqlctl 应用描述**命令提供了有关应用程序包括在群集中的终结点的详细的信息。 这通常用于由应用开发人员生成的应用程序使用 swagger 客户端和使用 web 服务与应用交互以 RESTful 方式。
+**Azdata 应用描述**命令提供了有关应用的详细信息, 包括群集中的终结点。 应用开发人员通常使用此方法来生成使用 swagger 客户端的应用, 并使用 webservice 以 RESTful 的方式与应用进行交互。
 
-通过运行类似以下的命令描述您的应用程序：
+通过运行类似于下面的命令来描述你的应用程序:
 
 ```bash
-mssqlctl app describe --name addpy --version v1
+azdata app describe --name addpy --version v1
 ```
 
 ```json
@@ -82,43 +82,43 @@ mssqlctl app describe --name addpy --version v1
 }
 ```
 
-记下 IP 地址 (`10.1.1.3`在此示例中) 和端口号 (`30777`) 在输出中。
+请注意输出中的`10.1.1.3` IP 地址 (此示例中为) 和`30777`端口号 ()。
 
-## <a name="generate-a-jwt-access-token"></a>生成一个 JWT 访问令牌
+## <a name="generate-a-jwt-access-token"></a>生成 JWT 访问令牌
 
-若要访问已部署的应用的 RESTful web 服务首先需要生成一个 JWT 访问令牌。 在你的浏览器中打开以下 URL:`https://[IP]:[PORT]/api/docs/swagger.json`使用的 IP 地址和端口运行检索`describe`上述命令。 必须能够使用所用的同一凭据进行登录`mssqlctl login`。
+为了访问已部署的应用的 RESTful web 服务, 必须首先生成 JWT 访问令牌。 在浏览器中打开以下 URL: `https://[IP]:[PORT]/api/docs/swagger.json`使用在上面的`describe`命令中运行的 IP 地址和端口。 你将必须使用你用来`azdata login`登录的同一凭据登录。
 
-粘贴的内容`swagger.json`成[Swagger 编辑器](https://editor.swagger.io)可了解哪些方法：
+将`swagger.json`的内容粘贴到[Swagger 编辑器](https://editor.swagger.io)中, 以了解可用的方法:
 
 ![API Swagger](media/big-data-cluster-consume-apps/api_swagger.png)
 
-请注意`app`GET 方法并将`token`POST 方法。 由于应用的身份验证使用 JWT 令牌将需要获取令牌，我使用你喜欢的工具进行 POST 调用以`token`方法。 下面是如何做到这一点的示例[Postman](https://www.getpostman.com/):
+`token`请注意`app` GET 方法和 POST 方法。 由于应用程序的身份验证使用 JWT 令牌, 因此你将需要使用你喜欢的工具获取令牌, 以便对`token`方法进行 POST 调用。 下面是如何在[Postman](https://www.getpostman.com/)中执行此操作的示例:
 
-![Postman 令牌](media/big-data-cluster-consume-apps/postman_token.png)
+![Postman 标记](media/big-data-cluster-consume-apps/postman_token.png)
 
-此请求的结果将为您提供 JWT `access_token`，这将需要调用要运行该应用程序的 URL。
+此请求的结果将向你发出 JWT `access_token`, 你将需要调用该 URL 才能运行该应用程序。
 
-## <a name="execute-the-app-using-the-restful-web-service"></a>执行应用程序使用 RESTful web 服务
+## <a name="execute-the-app-using-the-restful-web-service"></a>使用 RESTful web 服务执行应用
 
 > [!NOTE]
-> 如果你想，您可以打开的 URL`swagger`在运行时返回`mssqlctl app describe --name [appname] --version [version]`在浏览器中，这应类似于`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`。 必须能够使用所用的同一凭据进行登录`mssqlctl login`。 内容`swagger.json`您可以将其粘贴到[Swagger 编辑器](https://editor.swagger.io)。 你将看到该 web 服务公开了`run`方法。 另请注意在顶部显示的基 URL。
+> 如果需要, 你可以打开在浏览器中运行`swagger` `azdata app describe --name [appname] --version [version]`时返回的的 URL, 该 URL 应类似于`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`。 你将必须使用你用来`azdata login`登录的同一凭据登录。 的`swagger.json`内容可以粘贴到[Swagger 编辑器](https://editor.swagger.io)。 你会看到 web 服务公开了`run`方法。 另请注意顶部显示的基 URL。
 
-可以使用你喜欢的工具来调用`run`方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`)，并传入 POST 请求以 json 形式的正文中的参数。 在此示例中我们将使用[Postman](https://www.getpostman.com/)。 在调用前，你将需要设置`Authorization`到`Bearer Token`并粘贴在前面检索到的令牌。 这会将设置你的请求标头。 请参阅下面的屏幕截图。
+你可以使用你喜欢的`run`工具调用方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`), 并传入 POST 请求正文中的参数作为 json。 在此示例中, 我们将使用[Postman](https://www.getpostman.com/)。 在进行调用之前, 需要将设置`Authorization`为`Bearer Token` , 并将其粘贴到前面检索到的标记中。 这会在你的请求上设置标头。 请参阅下面的屏幕截图。
 
 ![Postman 运行标头](media/big-data-cluster-consume-apps/postman_run_1.png)
 
-接下来，在请求正文中，将参数传递给正在调用和设置的应用`content-type`到`application/json`:
+接下来, 在请求正文中, 将参数传递给你要调用的应用, 并将`content-type`设置`application/json`为:
 
 ![Postman 运行正文](media/big-data-cluster-consume-apps/postman_run_2.png)
 
-如果发送请求，将会收到与相同的输出时运行应用程序一样`mssqlctl app run`:
+当你发送请求时, 你将获得与运行应用程序`azdata app run`时所做的相同的输出:
 
 ![Postman 运行结果](media/big-data-cluster-consume-apps/postman_result.png)
 
-已成功现在调用通过 web 服务应用程序。 可以遵循类似的步骤来将此应用程序中的 web 服务集成。
+现已通过 web 服务成功调用应用。 你可以按照类似的步骤在你的应用程序中集成此 web 服务。
 
 ## <a name="next-steps"></a>后续步骤
 
-您还可以查看其他示例位于[应用程序部署示例](https://aka.ms/sql-app-deploy)。
+还可以在[应用部署示例](https://aka.ms/sql-app-deploy)中查看其他示例。
 
-有关 SQL Server 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关 SQL Server 大数据群集的详细信息, 请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。

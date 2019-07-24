@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcd33cbb39286c03b5b809b847a8d8a2b8b609f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36543107ba8acd635f0e71fde903cab2576a7b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954071"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>getAttributes 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getAttributes 方法由 java.sql.DatabaseMetaData 接口中的 getAttributes 方法指定。  
+ 此 getAttributes 方法由 getAttributes 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

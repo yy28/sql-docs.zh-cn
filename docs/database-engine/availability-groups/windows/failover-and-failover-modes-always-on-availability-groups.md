@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 88ead09e44eec80ae387ad65b721b2fa62227c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949106"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

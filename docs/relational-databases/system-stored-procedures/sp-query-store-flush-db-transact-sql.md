@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_flush_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_query_store_flush_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2027e284e40a28ed8636b9c4043c8ce4d49ca93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96c4e7a366c1235fa1062e5d66c2d6be160a6d22
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896453"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418890"
 ---
-# <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (TRANSACT-SQL)
+# <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  将 Query Store 数据的内存中部分刷新到磁盘。  
+  将查询存储数据的内存中部分刷新到磁盘。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_query_store_flush_db [;]
 ## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 需要**EXECUTE**上，对数据库的权限和**删除**查询存储目录视图的权限。  
+ 要求对数据库具有**ALTER**权限。
   
 ## <a name="examples"></a>示例  
  下面的示例将查询存储数据的内存中部分刷新到磁盘。  

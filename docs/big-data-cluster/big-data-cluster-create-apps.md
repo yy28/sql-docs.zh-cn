@@ -1,80 +1,80 @@
 ---
-title: 使用 mssqlctl 部署应用程序
+title: 使用 azdata 部署应用程序
 titleSuffix: SQL Server big data clusters
-description: 将 Python 或 R 脚本部署为 SQL Server 2019 大数据群集 （预览版） 上的应用程序。
+description: 在 SQL Server 2019 大数据群集 (预览版) 上将 Python 或 R 脚本部署为应用程序。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e3768ff5bfc01f2068b10ebd8afc18d12fa808c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958867"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419492"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 大数据群集 （预览版） 上的应用程序
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何在 SQL Server 大数据群集 (预览版) 上部署应用
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何部署和管理 R 和 Python 脚本为 SQL Server 2019 大数据群集 （预览版） 内的应用程序。
+本文介绍如何将 R 和 Python 脚本作为应用程序部署和管理 SQL Server 2019 大数据群集 (预览版) 中的应用程序。
 
-## <a name="whats-new-and-improved"></a>新增功能和改进
+## <a name="whats-new-and-improved"></a>新增功能和改进功能
 
-- 用于管理群集和应用程序的单个命令行实用工具。
-- 简化应用程序部署，同时通过规范文件提供精细的控制。
-- 支持托管其他应用程序类型的 SSIS 和 MLeap （中的新增功能 CTP 2.3)
-- [VS Code 扩展](app-deployment-extension.md)来管理应用程序部署
+- 用于管理群集和应用的单个命令行实用程序。
+- 简化应用程序部署, 同时通过规范文件提供精细的控制。
+- 支持托管附加的应用程序类型-SSIS 和 MLeap (CTP 2.3 中的新增项)
+- 用于管理应用程序部署的[VS Code 扩展](app-deployment-extension.md)
 
-应用程序部署和管理使用`mssqlctl`命令行实用程序。 本文提供有关如何从命令行部署应用程序的示例。 若要了解如何使用 Visual Studio Code 中这指[VS Code 扩展](app-deployment-extension.md)。
+使用`azdata`命令行实用程序部署和管理应用程序。 本文提供了有关如何从命令行部署应用的示例。 若要了解如何在中使用此方法 Visual Studio Code 参阅[VS Code 扩展](app-deployment-extension.md)。
 
-支持以下类型的应用：
-- R 和 Python 应用 （函数、 模型和应用）
+支持以下类型的应用:
+- R 和 Python 应用 (函数、模型和应用)
 - MLeap 服务
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2019 大数据群集](deployment-guidance.md)
-- [mssqlctl 命令行实用程序](deploy-install-mssqlctl.md)
+- [azdata 命令行实用工具](deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 
-在 SQL Server 2019 （预览版） 可以创建、 删除、 描述、 初始化，列表运行，并更新你的应用程序。 下表描述了可用于应用程序部署命令**mssqlctl**。
+在 SQL Server 2019 (预览版) 中, 可以创建、删除、描述、初始化、列出运行和更新应用程序。 下表介绍了可用于**azdata**的应用程序部署命令。
 
 |Command |描述 |
 |:---|:---|
-|`mssqlctl login` | 登录到 SQL Server 大数据群集 |
-|`mssqlctl app create` | 创建应用程序。 |
-|`mssqlctl app delete` | 删除应用程序。 |
-|`mssqlctl app describe` | 介绍应用程序。 |
-|`mssqlctl app init` | 启动新应用程序框架。 |
-|`mssqlctl app list` | 列出应用程序。 |
-|`mssqlctl app run` | 运行应用程序。 |
-|`mssqlctl app update`| 更新应用程序。 |
+|`azdata login` | 登录到 SQL Server 大数据群集 |
+|`azdata app create` | 创建应用程序。 |
+|`azdata app delete` | 删除应用程序。 |
+|`azdata app describe` | 描述应用程序。 |
+|`azdata app init` | Kickstart 新的应用程序主干。 |
+|`azdata app list` | 列出应用程序。 |
+|`azdata app run` | 运行应用程序。 |
+|`azdata app update`| 更新应用程序。 |
 
-可以获取帮助`--help`参数，如以下示例所示：
+可以获取有关`--help`参数的帮助, 如以下示例中所示:
 
 ```bash
-mssqlctl app create --help
+azdata app create --help
 ```
 
-以下部分介绍这些命令的更多详细信息。
+以下部分更详细地介绍了这些命令。
 
 ## <a name="sign-in"></a>登录
 
-在部署或与应用程序进行交互之前，先登录到 SQL Server 使用的大数据群集`mssqlctl login`命令。 指定的外部 IP 地址`controller-svc-external`服务 (例如： `https://ip-address:30080`) 以及用户名和密码向群集。
+在部署应用程序或与应用程序交互之前, 请先通过`azdata login`命令登录到 SQL Server 大数据群集。 指定`controller-svc-external`服务的外部 IP 地址 (例如: `https://ip-address:30080`) 以及群集的用户名和密码。
 
 ```bash
-mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS
 
-如果使用 AKS 时，需要运行以下命令以获取的 IP 地址`mgmtproxy-svc-external`服务通过在 bash 或 cmd 窗口中运行以下命令：
+如果使用的是 AKS, 则需要运行以下命令以获取`mgmtproxy-svc-external`服务的 IP 地址, 方法是在 bash 或 cmd 窗口中运行以下命令:
 
 
 ```bash
@@ -83,7 +83,7 @@ kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 或 Minikube
 
-如果使用 Kubeadm 或 Minikube 运行以下命令以获取到群集中的登录名的 IP 地址
+如果你使用的是 Kubeadm 或 Minikube, 请运行以下命令, 以获取登录到群集的 IP 地址
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -91,25 +91,25 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 
 ## <a name="create-an-app"></a>创建应用
 
-若要创建的应用程序，请使用`mssqlctl`与`app create`命令。 这些文件创建从应用的计算机上驻留在本地。
+若要创建应用程序, 请`azdata`将`app create`与命令一起使用。 这些文件位于从其创建应用的计算机本地。
 
-使用以下语法在大数据群集中创建新的应用程序：
-
-```bash
-mssqlctl app create --spec <directory containing spec file>
-```
-
-以下命令显示了此命令可能如下所示的示例：
+使用以下语法在大数据群集中创建新应用:
 
 ```bash
-mssqlctl app create --spec ./addpy
+azdata app create --spec <directory containing spec file>
 ```
 
-这假定你已存储在应用程序`addpy`文件夹。 此文件夹还应包含名为应用程序的规范文件`spec.yaml`。 请参阅[应用程序部署页](concept-application-deployment.md)有关详细信息`spec.yaml`文件。
+以下命令显示了此命令的外观示例:
 
-若要部署此应用程序示例应用，可在一个名为目录中创建以下文件`addpy`:
+```bash
+azdata app create --spec ./addpy
+```
 
-- `add.py`。 将以下 Python 代码复制到此文件：
+这假设你的应用程序存储在该`addpy`文件夹中。 此文件夹还应包含应用程序的规范文件, 名`spec.yaml`为。 有关`spec.yaml`文件的详细信息, 请参阅["应用程序部署" 页](concept-application-deployment.md)。
+
+若要部署此应用示例应用, 请在名`addpy`为的目录中创建以下文件:
+
+- `add.py`。 将以下 Python 代码复制到此文件中:
    ```py
    #add.py
    def add(x,y):
@@ -117,7 +117,7 @@ mssqlctl app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml`。 将以下代码复制到此文件：
+- `spec.yaml`。 将以下代码复制到此文件中:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -134,19 +134,19 @@ mssqlctl app create --spec ./addpy
      result: int
    ```
 
-然后，运行以下命令：
+然后, 运行以下命令:
 
 ```bash
-mssqlctl app create --spec ./addpy
+azdata app create --spec ./addpy
 ```
 
-你可以检查是否使用列表命令部署应用：
+可以使用 list 命令检查是否部署了该应用:
 
 ```bash
-mssqlctl app list
+azdata app list
 ```
 
-如果部署未完成您应看到`state`显示`WaitingforCreate`如下面的示例：
+如果部署未完成, 应会看到如下所`state`示`WaitingforCreate`的 show:
 
 ```json
 [
@@ -158,7 +158,7 @@ mssqlctl app list
 ]
 ```
 
-部署成功后，你应看到`state`更改为`Ready`状态：
+部署成功后, 应会看到`state` `Ready`状态更改:
 
 ```json
 [
@@ -172,27 +172,27 @@ mssqlctl app list
 
 ## <a name="list-an-app"></a>列出应用
 
-可以列出已成功创建了与任何应用`app list`命令。
+可以列出通过`app list`命令成功创建的任何应用。
 
-以下命令列出了大数据群集中所有可用的应用程序：
-
-```bash
-mssqlctl app list
-```
-
-如果指定的名称和版本，它列出了该特定应用程序和其状态 （创建或就绪）：
+以下命令列出了大数据群集中所有可用的应用程序:
 
 ```bash
-mssqlctl app list --name <app_name> --version <app_version>
+azdata app list
 ```
 
-下面的示例演示了此命令：
+如果指定 "名称" 和 "版本", 则会列出该特定应用及其状态 ("正在创建" 或 "就绪"):
 
 ```bash
-mssqlctl app list --name add-app --version v1
+azdata app list --name <app_name> --version <app_version>
 ```
 
-应看到类似于下面的示例输出：
+下面的示例演示了此命令:
+
+```bash
+azdata app list --name add-app --version v1
+```
+
+应会看到类似于以下示例的输出:
 
 ```json
 [
@@ -206,19 +206,19 @@ mssqlctl app list --name add-app --version v1
 
 ## <a name="run-an-app"></a>运行应用
 
-如果该应用位于`Ready`状态，则可以通过运行具有指定的输入参数使用它。 使用以下语法来运行应用：
+如果应用`Ready`处于状态, 可以使用指定的输入参数运行它。 使用以下语法运行应用:
 
 ```bash
-mssqlctl app run --name <app_name> --version <app_version> --inputs <inputs_params>
+azdata app run --name <app_name> --version <app_version> --inputs <inputs_params>
 ```
 
-以下示例命令演示如何运行的命令：
+下面的示例命令演示了 run 命令:
 
 ```bash
-mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
+azdata app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-如果成功运行，您应看到在输出与创建该应用程序时指定。 下面是一个示例。
+如果运行成功, 你应该会看到你在创建应用时所指定的输出。 下面是一个示例。
 
 ```json
 {
@@ -233,17 +233,17 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 }
 ```
 
-## <a name="create-an-app-skeleton"></a>创建应用框架
+## <a name="create-an-app-skeleton"></a>创建应用主干
 
-Init 命令提供了部署应用程序需要使用相关的项目基架。 下面的示例创建你好，你可以通过运行以下命令来执行此操作。
+Init 命令向基架提供部署应用程序所需的相关项目。 下面的示例创建了 hello, 你可以通过运行以下命令来执行此操作。
 
 ```bash
-mssqlctl app init --name hello --version v1 --template python
+azdata app init --name hello --version v1 --template python
 ```
 
-这将创建一个名为你好文件夹。  你可以`cd`到目录并检查生成的文件的文件夹中。 spec.yaml 定义应用程序中，如名称、 版本和源的代码。 您可以编辑规范来更改名称、 版本、 输入和输出。
+这会创建一个名为 "hello" 的文件夹。  可以`cd`在目录中检查文件夹中生成的文件。 yaml 定义应用, 如名称、版本和源代码。 你可以编辑该规范, 以更改名称、版本、输入和输出。
 
-下面是您将看到文件夹中的 init 命令的示例输出
+下面是您将在文件夹中看到的 init 命令的示例输出
 
 ```
 hello.py
@@ -255,7 +255,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>描述应用程序
 
-描述命令提供有关应用程序包括在群集中的终结点的详细的信息。 这通常用于由应用开发人员生成的应用程序使用 swagger 客户端和使用 web 服务与应用交互以 RESTful 方式。 请参阅[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。
+描述命令提供有关应用程序的详细信息, 包括群集中的终结点。 应用开发人员通常使用此方法来生成使用 swagger 客户端的应用, 并使用 webservice 以 RESTful 的方式与应用进行交互。 有关详细信息, 请参阅对[大数据群集使用应用程序](big-data-cluster-consume-apps.md)。
 
 ```json
 {
@@ -287,14 +287,14 @@ spec.yaml
 
 ## <a name="delete-an-app"></a>删除应用
 
-若要从大数据群集中删除应用，使用以下语法：
+若要从大数据群集中删除应用, 请使用以下语法:
 
 ```bash
-mssqlctl app delete --name add-app --version v1
+azdata app delete --name add-app --version v1
 ```
 
 ## <a name="next-steps"></a>后续步骤
 
-了解如何将大数据群集在您的应用程序的 SQL Server 上部署的应用程序进行集成[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。 您还可以查看其他示例位于[应用程序部署示例](https://aka.ms/sql-app-deploy)。
+了解有关详细信息, 请参阅如何将部署在你自己的应用程序中 SQL Server 大数据群集上的应用集成到[大数据群集上的应用程序](big-data-cluster-consume-apps.md)。 还可以在[应用部署示例](https://aka.ms/sql-app-deploy)中查看其他示例。
 
-有关 SQL Server 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关 SQL Server 大数据群集的详细信息, 请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。

@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_force_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_query_store_force_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9a23f839fcb828d9c90198d8aadffb6a8cfe0ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07d2e8032bb596faaac577194273760c59006645
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896443"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418863"
 ---
-# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (TRANSACT-SQL)
+# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  启用强制特定查询的特定计划。  
+  为特定查询启用强制特定计划。  
   
- 当强制执行计划，对于特定查询，每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到查询，它会尝试强制优化器中的计划。 如果计划强制失败，触发 XEvent 和指示优化器优化以正常方式。  
+ 当对特定查询强制执行某个计划时, 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到该查询时, 它都会尝试在优化器中强制执行该计划。 如果计划强制失败, 则会激发 XEvent, 并指示优化器以正常方式进行优化。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @query_id = ] query_id` 是查询的 id。 *query_id*是**bigint**，无默认值。  
+`[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**, 无默认值。  
   
-`[ @plan_id = ] plan_id` 是要强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+`[ @plan_id = ] plan_id`要强制执行的查询计划的 id。 *plan_id*是**bigint**, 无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,10 +55,10 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 需要**EXECUTE**上，对数据库的权限和**插入**，**更新**，以及**删除**查询存储目录的权限视图。  
+ 要求对数据库具有**ALTER**权限。
   
 ## <a name="examples"></a>示例  
- 下面的示例返回在查询存储中查询的信息。  
+ 下面的示例返回有关查询存储中的查询的信息。  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -69,7 +69,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 在确定 query_id 以及你想要强制 plan_id 后，使用下面的示例强制查询使用的计划。  
+ 确定要强制执行的 query_id 和 plan_id 后, 请使用以下示例强制查询使用计划。  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  

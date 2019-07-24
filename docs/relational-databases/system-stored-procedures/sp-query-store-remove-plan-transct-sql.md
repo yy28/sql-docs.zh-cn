@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_plan (这 SQL) |Microsoft Docs
+title: sp_query_store_remove_plan (Transct) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 027dbe78c663f2aa218ac46b3ad6e54b681a9369
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef04dee7a7384141aab820c2c65343a18b605ad0
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896430"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418935"
 ---
 # <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @plan_id = ] plan_id` 是要删除的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
+`[ @plan_id = ] plan_id`要删除的查询计划的 id。 *plan_id*是**bigint**, 无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,10 +51,10 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>备注  
   
 ## <a name="permissions"></a>权限  
- 需要**EXECUTE**上，对数据库的权限和**删除**查询存储目录视图的权限。  
+ 要求对数据库具有**ALTER**权限。
   
 ## <a name="examples"></a>示例  
- 下面的示例返回在查询存储中查询的信息。  
+ 下面的示例返回有关查询存储中的查询的信息。  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 确定要删除 plan_id 后，使用下面的示例删除查询计划。  
+ 确定要删除的 plan_id 后, 使用以下示例删除查询计划。  
   
 ```  
 EXEC sp_query_store_remove_plan 3;  
@@ -76,7 +76,7 @@ EXEC sp_query_store_remove_plan 3;
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

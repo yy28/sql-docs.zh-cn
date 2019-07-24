@@ -1,123 +1,123 @@
 ---
 title: 查看群集状态
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何查看使用 Azure Data Studio、 笔记本电脑和 mssqlctl 命令的大数据群集的状态。
+description: 本文介绍如何使用 Azure Data Studio、笔记本和 azdata 命令查看大数据群集的状态。
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a8d04ab43adac77a534a82626cc4a018c24b68f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957671"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419287"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何查看的大数据群集状态
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>如何查看大数据群集的状态
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何访问服务终结点和查看 SQL Server 大数据群集 （预览版） 的状态。 可以使用这两个 Azure Data Studio 和**mssqlctl**，和这篇文章介绍这两种技术。
+本文介绍如何访问服务终结点, 以及如何查看 SQL Server 大数据群集 (预览版) 的状态。 可以同时使用 Azure Data Studio 和**azdata**, 本文将介绍这两种方法。
 
-## <a id="datastudio"></a> 使用 Azure 数据 Studio
+## <a id="datastudio"></a>使用 Azure Data Studio
 
-下载最新版本后**预览体验成员版本**的[Azure Data Studio](https://aka.ms/azdata-insiders)，可以查看服务终结点和状态的大数据群集与 SQL Server 大数据群集仪表板。 请注意，以下功能的一些仅首次在 Azure Data Studio 的预览体验成员版本中可用。
+下载[Azure Data Studio](https://aka.ms/azdata-insiders)的最新内部**版本**后, 可以使用 SQL Server 大数据群集仪表板查看服务终结点以及大数据群集的状态。 请注意, 下面的某些功能仅在 Azure Data Studio 的预览体验内部版本中可用。
 
-1. 首先，在 Azure Data Studio 中创建与大数据群集的连接。 有关详细信息，请参阅[连接到 SQL Server 大数据群集使用 Azure Data Studio](connect-to-big-data-cluster.md)。
+1. 首先, 在 Azure Data Studio 中创建到大数据群集的连接。 有关详细信息, 请参阅[使用 Azure Data Studio 连接到 SQL Server 大数据群集](connect-to-big-data-cluster.md)。
 
-1. 大数据群集终结点，右键单击，然后单击**管理**。
+1. 右键单击大数据群集终结点, 然后单击 "**管理**"。
 
-   ![右键单击管理](media/view-cluster-status/right-click-manage.png)
+   ![右键单击 "管理"](media/view-cluster-status/right-click-manage.png)
 
-1. 选择**SQL Server 大数据群集**选项卡可访问大数据群集仪表板。
+1. 选择 " **SQL Server 大数据分类**" 选项卡以访问大数据群集仪表板。
 
    ![大数据群集仪表板](media/view-cluster-status/bdc-dashboard.png)
 
 ### <a name="service-endpoints"></a>服务终结点
 
-务必要能够轻松地访问大数据群集内的各种服务。 大数据群集仪表板提供，可查看和复制服务终结点的服务终结点表。
+很重要的一点是, 能够轻松访问大数据群集中的各种服务。 大数据群集仪表板提供了一个服务终结点表, 可用于查看和复制服务终结点。
 
 ![服务终结点](media/view-cluster-status/service-endpoints.png)
 
-前几个行公开以下服务：
+前几行公开了以下服务:
 
 - 应用程序代理
 - 群集管理服务
 - HDFS 和 Spark
 - 管理代理
 
-这些服务列出了可以进行复制和粘贴时用于连接到这些服务需要终结点的终结点。 例如，您可以单击复制图标右侧的终结点，然后将其粘贴在文本窗口中请求该终结点。 群集管理服务终结点是运行所需[群集状态 notebook](#notebook)。
+当你需要用于连接到这些服务的终结点时, 这些服务会列出可以复制和粘贴的终结点。 例如, 可以单击终结点右侧的 "复制" 图标, 然后将其粘贴到请求该终结点的文本窗口中。 群集管理服务终结点对于运行[群集状态笔记本](#notebook)是必需的。
 
 ### <a name="dashboards"></a>仪表板
 
-服务终结点表还公开多个仪表板进行监视：
+"服务终结点" 表还公开了多个仪表板用于监视:
 
 - 度量值 (Grafana)
 - 日志 (Kibana)
 - Spark 作业监视
 - Spark 资源管理
 
-您可以直接单击下面的链接。 需要两次连接到服务之前提供用户名和密码。
+可以直接单击这些链接。 在连接到服务前, 系统会提示你提供用户名和密码两次。
 
-### <a id="notebook"></a> 群集状态 notebook
+### <a id="notebook"></a>群集状态笔记本
 
-1. 此外可以通过启动群集状态笔记本来查看群集状态的大数据群集。 若要启动笔记本，请单击**群集状态**任务。
+1. 你还可以通过启动群集状态笔记本来查看大数据群集的群集状态。 若要启动笔记本, 请单击 "**群集状态**" 任务。
 
-    ![启动](media/view-cluster-status/cluster-status-launch.png)
+    ![开始](media/view-cluster-status/cluster-status-launch.png)
 
-2. 在开始之前，你将需要以下项：
+2. 在开始之前, 你将需要以下项:
 
     - 大数据群集名称
     - 控制器用户名
     - 控制器密码
     - 控制器终结点
 
-    默认的大数据群集名称是**mssql 群集**除非自它定义在部署期间。 服务终结点表中，可以找到在大数据群集仪表板的控制器终结点。 终结点被列为**群集管理服务**。 如果不知道凭据，要求部署群集的管理员。
+    除非在部署过程中对其进行了自定义, 否则默认大数据群集名称为**mssql 群集**名称。 可以在 "服务终结点" 表的 "大数据群集" 仪表板中找到控制器终结点。 此终结点作为**群集管理服务**列出。 如果你不知道凭据, 请要求管理员部署群集。
 
-3. 单击**运行的单元格**在顶部工具栏中。
+3. 单击顶部工具栏中的 "**运行单元**"。
 
-4. 按照你的凭据的提示。 按按 ENTER 键后的键入每个大数据群集名称、 控制器用户名和控制器的密码的凭据。
+4. 按照提示输入凭据。 为大数据群集名称、控制器用户名和控制器密码键入每个凭据后, 按 enter。
 
     > [!Note]
-    > 如果您没有与你的大数据配置文件设置，您将要求为控制器终结点。 键入或粘贴，，然后按 ENTER 以继续。
+    > 如果你没有使用大数据的配置文件设置, 将要求你提供控制器终结点。 键入或粘贴它, 然后按 ENTER 继续。
 
-5. 如果连接成功以后，该 notebook 的其余部分将显示大数据群集的每个组件的输出。 当你想要重新运行代码单元时，将鼠标悬停在代码单元格，然后单击**运行**图标。
+5. 如果成功连接, 则笔记本的其余部分将显示大数据分类的每个组件的输出。 如果要重新运行某个代码单元格, 请将鼠标悬停在代码单元上, 并单击 "**运行**" 图标。
 
-## <a name="use-mssqlctl"></a>使用 mssqlctl
+## <a name="use-azdata"></a>使用 azdata
 
-此外可以使用[mssqlctl](deploy-install-mssqlctl.md)命令以查看终结点和群集状态。
+你还可以使用[azdata](deploy-install-azdata.md)命令来查看终结点和群集状态。
 
 ### <a name="service-endpoints"></a>服务终结点
 
-你可以获取使用以下步骤在大数据群集的外部终结点的 IP 地址。
+可以使用以下步骤获取大数据群集的外部终结点的 IP 地址。
 
-1. 通过查看以下的外部 IP 输出中查找控制器终结点的 IP 地址**kubectl**命令：
+1. 查看以下**kubectl**命令的外部 IP 输出, 查找控制器终结点的 IP 地址:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > 如果在部署期间未更改默认名称，使用`-n mssql-cluster`在前一命令中。 **mssql 群集**是大数据群集的默认名称。
+   > 如果在部署过程中没有更改默认名称, 请在`-n mssql-cluster`上一个命令中使用。 **mssql-群集**是大数据群集的默认名称。
 
-1. 登录到大数据群集[mssqlctl 登录](reference-mssqlctl.md)。 设置 **-控制器终结点**控制器终结点的外部 IP 地址的参数。
-
-   ```bash
-   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
-   ```
-
-   在部署过程中指定的用户名和密码配置为控制器 （CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD）。
-
-1. 运行[mssqlctl bdc 终结点列表](reference-mssqlctl-bdc-endpoint.md)以获取每个终结点和其对应的 IP 地址和端口值的说明的列表。 
+1. 通过[azdata 登录名](reference-azdata.md)登录到大数据群集。 将 **--controller-endpoint**参数设置为控制器终结点的外部 IP 地址。
 
    ```bash
-   mssqlctl bdc endpoint list -o table
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   以下列表显示了此命令的示例输出：
+   指定在部署过程中为控制器配置的用户名和密码 (CONTROLLER_USERNAME 和 CONTROLLER_PASSWORD)。
+
+1. 运行[azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) , 以获取一个列表, 其中列出了每个终结点及其对应的 IP 地址和端口值。 
+
+   ```bash
+   azdata bdc endpoint list -o table
+   ```
+
+   以下列表显示了此命令的示例输出:
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -137,16 +137,16 @@ ms.locfileid: "67957671"
 
 ### <a name="view-cluster-status"></a>查看群集状态
 
-您可以查看与群集的状态[mssqlctl bdc 状态显示](reference-mssqlctl-bdc-status.md)命令。
+可以通过[azdata bdc status show](reference-azdata-bdc-status.md)命令查看群集的状态。
 
 ```bash
-mssqlctl bdc status show -o table
+azdata bdc status show -o table
 ```
 
 > [!TIP]
-> 若要运行的状态命令，你必须首先登录**mssqlctl 登录**命令，在上一终结点节中所示。
+> 若要运行状态命令, 你必须先用 "前面的终结点" 部分中显示的**azdata login**命令登录。
 
-以下显示了此命令的示例输出：
+下面显示了此命令的示例输出:
 
 ```output
 Kind     Name           State
@@ -161,21 +161,21 @@ Storage  default        Ready
 
 ### <a name="view-pool-status"></a>查看池状态
 
-您可以查看与群集中的池的状态[mssqlctl bdc 池状态显示](reference-mssqlctl-bdc-pool-status.md)命令。 若要使用此命令，指定包含池类型`--kind`参数。 池类型包括：
+可以在群集中通过 " [azdata bdc 池状态显示](reference-azdata-bdc-pool-status.md)" 命令查看池的状态。 若要使用此命令, 请使用`--kind`参数指定池的类型。 池类型为:
 
 - 计算
 - data
 - master
-- Spark
-- 存储
+- 激发
+- 储存
 
-例如，下面的命令显示存储池的池状态：
+例如, 以下命令显示存储池的池状态:
 
 ```bash
-mssqlctl bdc pool status show --kind storage
+azdata bdc pool status show --kind storage
 ```
 
-应看到类似于以下输出的文本：
+应会看到类似于以下输出的文本:
 
 ```output
 [
@@ -198,11 +198,11 @@ mssqlctl bdc pool status show --kind storage
 ]
 ```
 
-`logsUrl`值 kibana 仪表板的日志信息的链接：
+`logsUrl`值链接到具有日志信息的 kibana 仪表板:
 
-![kibana 仪表板](./media/view-cluster-status/kibana-dashboard.png)
+![Kibana 仪表板](./media/view-cluster-status/kibana-dashboard.png)
 
-`nodeMetricsUrl`和`sqlMetricsUrl`值链接到 grafana 仪表板用于监视节点运行状况和 SQL 指标：
+`nodeMetricsUrl` 和`sqlMetricsUrl`值链接到用于监视节点运行状况和 SQL 指标的 grafana 仪表板:
 
 ![Grafana 仪表板](./media/view-cluster-status/grafana-dashboard.png)
 
@@ -210,8 +210,8 @@ mssqlctl bdc pool status show --kind storage
 
 ### <a name="view-controller-status"></a>查看控制器状态
 
-您可以查看与控制器状态[mssqlctl bdc 控件状态显示](reference-mssqlctl-bdc-control-status.md)命令。 它提供了类似的大数据群集的控制器节点与相关的监视仪表板的链接。
+可以查看控制器状态并[显示 "azdata bdc control status show](reference-azdata-bdc-control-status.md) " 命令。 它提供与大数据群集的控制器节点相关的监视仪表板的链接。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息，请参阅[什么是 SQL Server 大数据群集](big-data-cluster-overview.md)。
+有关大数据群集的详细信息, 请参阅[什么是 SQL Server 大数据群集](big-data-cluster-overview.md)。

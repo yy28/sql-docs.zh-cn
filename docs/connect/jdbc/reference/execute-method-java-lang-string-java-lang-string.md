@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20b8c20feb8c71e192edfedb7d7dda5b549e8469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e93875cfc18ed3992fd1680a0c948e38a31f998e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954978"
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>execute 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +54,7 @@ public final boolean execute(java.lang.String sql,
  此执行方法是由 java.sql.Statement 接口中的执行方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行方法&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [execute 方法&#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 类](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

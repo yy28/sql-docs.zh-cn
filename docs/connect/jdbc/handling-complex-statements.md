@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2b6dd6bb5fb3a0d7b2e9b78dee87f90f05147df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7adee47147a8aad153bc323470f1711426d92350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956549"
 ---
 # <a name="handling-complex-statements"></a>处理复杂语句
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，可能必须处理复杂语句，包括运行时动态生成的语句。 复杂语句通常执行多种任务，包括更新、插入和删除。 这类语句可能还会返回多个结果集和输出参数。 在这些情况下，运行该语句的 Java 代码预先可能不知道返回的对象和数据的类型和数目。  
   
- 为了有效地处理复杂语句，JDBC 驱动程序提供多种方法查询返回的对象和数据，以便您的应用程序可正确处理这些内容。 处理复杂语句的关键在于 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法。 此方法返回**布尔**值。 当该值为 true 时，从该语句返回的第一个结果为结果集。 当该值为 false 时，返回的第一个结果为更新计数。  
+ 为了有效地处理复杂语句，JDBC 驱动程序提供多种方法查询返回的对象和数据，以便您的应用程序可正确处理这些内容。 处理复杂语句的关键在于 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法。 此方法返回一个**布尔**值。 当该值为 true 时，从该语句返回的第一个结果为结果集。 当该值为 false 时，返回的第一个结果为更新计数。  
   
  知道返回的对象或数据的类型后，可以使用 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 或 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法处理这些数据。 要继续处理从复杂语句返回的下一个对象或数据，可以调用 [getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md) 方法。  
   
