@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ea99b2118c915e03270475e607678ca6f9e92678
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7bf65224506e820ad6c486f3bb0e78d002cc793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127912"
 ---
 # <a name="initialize-subscriptions"></a>初始化订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47744938"
   
 ## <a name="see-also"></a>另请参阅  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [初始化订阅](../../relational-databases/replication/initialize-a-subscription.md)   
  [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)  
   

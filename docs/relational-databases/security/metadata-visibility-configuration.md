@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1e6878b4b6e1e0f77bba31b3bce57c79e531b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea010277a05a3c4442089d89a87c2983a99b2ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010886"
 ---
 # <a name="metadata-visibility-configuration"></a>元数据可见性配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +104,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>元数据可见性配置的优点和限制  
  元数据可见性配置在整个安全计划中发挥着重要作用。 但在有些情况下，有经验的用户和已确定的用户可以强制公开某些元数据。 建议将元数据权限部署为多种深层防御中的一种。  
   
- 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
+ 理论上可以通过控制查询中的谓词评估顺序，强制在错误消息中显示元数据。 此类“试错攻击”  的威胁并非是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专有的。 它由关系代数中允许的关联转换和交换转换表示。 可以通过限制错误消息中返回的信息来降低此风险。 为了以此方式进一步限制元数据的可见性，可以使用跟踪标志 3625 启动服务器。 此跟踪标志限制错误消息中显示的信息量。 进一步有助于防止强制泄漏。 需要在错误消息的简洁性和用于调试的难易程度之间进行权衡。 有关详细信息，请参阅[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)和[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
  下列元数据无法强制公开：  
   

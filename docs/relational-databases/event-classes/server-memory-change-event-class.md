@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50ce60ace7d5d1ceaaf0d02dc0bed84d541278ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b039f0cb4ff6aa944adf981ad5fa26e1cc4cbeea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911175"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,20 +25,20 @@ ms.locfileid: "47635075"
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 事件类的数据列  
   
-|数据列名称|数据类型|描述|列 ID|用户帐户控制|  
+|数据列名称|数据类型|描述|列 ID|是|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|事件类型 = 81。|27|否|  
 |**EventSequence**|**int**|给定事件在请求中的顺序。|51|否|  
-|**EventSubClass**|**int**|事件子类的类型。<br /><br /> 1= 内存增加<br /><br /> 2= 内存减少|21|用户帐户控制|  
-|**IntegerData**|**int**|新内存大小 (MB)。|25|用户帐户控制|  
-|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|用户帐户控制|  
-|**RequestID**|**int**|包含该语句的请求的 ID。|49|用户帐户控制|  
+|**EventSubClass**|**int**|事件子类的类型。<br /><br /> 1= 内存增加<br /><br /> 2= 内存减少|21|是|  
+|**IntegerData**|**int**|新内存大小 (MB)。|25|是|  
+|**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
+|**RequestID**|**int**|包含该语句的请求的 ID。|49|是|  
 |**ServerName**|**nvarchar**|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
-|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
-|**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
-|**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
-|**XactSequence**|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
+|**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
+|**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
+|**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
+|**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
+|**XactSequence**|**bigint**|用于说明当前事务的标记。|50|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   
