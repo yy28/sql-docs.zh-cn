@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680084"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231858"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 
-一旦在连接上启用始终加密，可以使用标准 ODBC Api。 ODBC Api 可以检索或修改加密的数据库列中的数据。 以下文档项可能对此有帮助：
+启用连接 Always Encrypted 后, 可以使用标准 ODBC Api。 ODBC Api 可以检索或修改加密数据库列中的数据。 以下文档项可帮助解决此操作:
 
 - [ODBC 示例代码](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)
 
-你的应用程序必须具有所需的数据库权限，并且必须能够访问列主密钥。 然后，该驱动程序加密面向加密的列的任何查询参数。 该驱动程序还解密从加密列检索到的数据。 该驱动程序执行所有此加密和解密而无需任何帮助从你的源代码。 到你的程序，就像未加密的列。
+应用程序必须具有所需的数据库权限, 并且必须能够访问列主密钥。 然后, 该驱动程序对所有面向加密列的查询参数进行加密。 驱动程序还会对从加密列中检索到的数据进行解密。 驱动程序将执行所有加密和解密, 而无需你的源代码的任何帮助。 对于您的程序, 这就像列未加密一样。
 
 如果未启用 Always Encrypted，具有面向加密列的参数的查询将失败。 只要查询没有面向加密列的参数，就仍然可以从加密列中检索数据。 但是，驱动程序不会尝试进行任何解密，并且应用程序将收到二进制加密数据（字节数组形式）。
 
@@ -363,9 +362,10 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ### <a name="using-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供程序
 
-Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（尤其是当应用程序在 Azure 中托管时）。 适用于 Linux、macOS 和 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Azure 密钥保管库的内置列主密钥存储提供程序。 有关为 Azure 密钥保管库设置 Always Encrypted 的详细信息，请参阅 [Azure 密钥保管库 - 分步说明](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)以及[在 Azure 密钥保管库中创建列主密钥](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)。
+Azure Key Vault (AKV) 便于存储和管理用于 Always Encrypted 的列主密钥（尤其是当应用程序在 Azure 中托管时）。 适用于 Linux、macOS 和 Windows 上的 SQL Server 的 ODBC 驱动程序包含用于 Azure 密钥保管库的内置列主密钥存储提供程序。 有关为 Azure 密钥保管库设置 Always Encrypted 的详细信息，请参阅 [Azure 密钥保管库 - 分步说明](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)以及[在 Azure 密钥保管库中创建列主密钥](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)。
 
 > [!NOTE]
+> ODBC 驱动程序不支持 AKV authentication Active Directory 联合身份验证服务。 如果使用 Azure Active Directory authentication 进行 AKV, 而 Active Directory 配置包括联合服务, 则身份验证可能会失败。
 > 对于 Linux 和 macOS 上的驱动程序版本 17.2 以及更高版本，需要提供 `libcurl` 才能使用此提供程序，但这不是显式依赖项，因为对驱动程序执行的其他操作不需要它。 如果遇到有关 `libcurl` 的错误，请确保它已安装。
 
 驱动程序支持使用下列凭据类型对 Azure 密钥保管库进行身份验证：

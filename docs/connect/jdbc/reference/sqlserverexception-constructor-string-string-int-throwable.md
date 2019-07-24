@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 构造函数 （java.lang.String，java.lang.String，int，java.lang.Throwable） |Microsoft Docs
+title: SQLServerException 构造函数 (java.lang.String, java.lang.String, int, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbd40c6edb2e4b623f0e2fbf7e00ad91dc683a04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971087"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 构造函数 （java.lang.String，java.lang.String，int，java.lang.Throwable）
+# <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 构造函数 (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  初始化的新实例[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)类在给定**字符串**对象，**字符串**对象， **int**，和**可引发**对象。
+  给定**string**对象、 **string**对象、 **int**和**java.lang.throwable**对象时, 初始化[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)类的新实例。
 
 ## <a name="syntax"></a>语法  
   
@@ -43,15 +42,15 @@ public SQLServerException(java.lang.String errText,
   
  errState   
   
- 包含错误的状态的字符串。
+ 包含错误状态的字符串。
  
  errNum   
   
- 一个整数，它包含异常的错误代码。
+ 一个包含异常的错误代码的 int。
  
  *cause*  
   
- 一个包含异常的原因可引发对象。
+ 一个 java.lang.throwable 对象, 该对象包含引发异常的原因。
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerException 构造函数](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

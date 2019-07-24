@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6329fbae355b6d6a232aed87c5d786475e08ee19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979325"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getSubString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getSubString 方法由 java.sql.NClob 接口中的 getSubString 方法指定。  
+ 此 getSubString 方法是由 java.sql.NClob 接口中的 getSubString 方法指定的。  
   
  尝试从 Null 或长度为零的 NCLOB 获取零个字符将返回空字符串。 尝试在长度为零的 NCLOB 中从除了位置 1 之外的其他位置获取任意长度的字符将引发位置异常。  
   

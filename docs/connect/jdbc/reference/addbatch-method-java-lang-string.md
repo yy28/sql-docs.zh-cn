@@ -1,5 +1,5 @@
 ---
-title: addBatch 方法 (java.lang.String) |Microsoft Docs
+title: addBatch 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4cbd38eddb3fb5dcdb3f614b53c7d8d6399fa79f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956017"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void addBatch(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 addBatch 方法由 java.sql.Statement 接口中的 addBatch 方法指定。  
+ 此 addBatch 方法由 addBatch 方法在 .sql 接口中指定。  
   
  调用此方法将导致异常，因为在创建 SQLServerPreparedStatement 对象时指定了该对象的 SQL 语句。  
   

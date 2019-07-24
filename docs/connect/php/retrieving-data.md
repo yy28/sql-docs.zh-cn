@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dd99b2195cb4f44725ff813bc79c70ec5ffc44b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935894"
 ---
 # <a name="retrieving-data"></a>检索数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,17 +73,17 @@ ms.locfileid: "66797064"
 |---------|---------------|  
 |[以流的形式检索数据](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概述了如何从服务器中流式传输数据，并提供指向特定用例的链接。|  
 |[使用方向参数](../../connect/php/using-directional-parameters.md)|介绍如何在调用存储过程时使用方向参数。|  
-|[指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|演示如何创建一个结果集，可以按任意顺序访问的行。|  
+|[指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|演示如何使用可按任何顺序访问的行创建结果集。|  
 |[如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|介绍如何使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型。|  
 |[如何：使用 PDO_SQLSRV 驱动程序以 PHP Datetime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|介绍了如何使用 PDO_SQLSRV 驱动程序将日期和时间类型作为对象进行检索。|  
-|[使用 SQLSRV 驱动程序的格式设置十进制字符串](../../connect/php/formatting-decimals-sqlsrv-driver.md)|演示如何设置使用 SQLSRV 驱动程序的十进制或货币值的格式。|  
-|[使用 PDO_SQLSRV 驱动程序的格式设置十进制字符串](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|演示如何设置使用 PDO_SQLSRV 驱动程序的十进制或货币值的格式。|  
+|[用 SQLSRV 驱动程序设置十进制字符串的格式](../../connect/php/formatting-decimals-sqlsrv-driver.md)|演示如何使用 SQLSRV 驱动程序设置十进制或 money 值的格式。|  
+|[用 PDO_SQLSRV 驱动程序设置十进制字符串的格式](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|演示如何使用 PDO_SQLSRV 驱动程序设置 decimal 或 money 值的格式。|  
   
 ## <a name="related-sections"></a>相关章节  
 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [检索数据](../../connect/php/retrieving-data.md)  
   

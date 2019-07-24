@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015098"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>下载 Microsoft Drivers for PHP for SQL Server
 
@@ -23,7 +22,7 @@ ms.locfileid: "66796208"
 
 ## <a name="windows"></a>Windows
 
-以下版本的 Windows 上的 PHP 驱动程序是可供下载：
+Windows 上的 PHP 驱动程序的以下版本可供下载:
 
 - [Microsoft Drivers 5.6 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
@@ -33,7 +32,7 @@ ms.locfileid: "66796208"
 
 ## <a name="linux-and-macos"></a>Linux 和 macOS
 
-用于 PHP 的驱动程序轻松下载和安装 Linux 和 macOS 上使用 PECL。 请参阅[Linux 和 macOS 安装教程](installation-tutorial-linux-mac.md)有关详细信息。 如果需要手动安装的驱动程序在 Linux 和 macOS 上的 PHP，是可供下载的以下版本：
+使用 Linux 和 macOS 上的 PECL, 可以轻松下载和安装 PHP 驱动程序。 有关详细信息, 请参阅[Linux 和 macOS 安装教程](installation-tutorial-linux-mac.md)。 如果需要手动安装适用于 Linux 和 macOS 的 PHP 驱动程序, 可下载以下版本:
 
 - [Microsoft Drivers 5.6 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
@@ -46,7 +45,7 @@ ms.locfileid: "66796208"
 
 [Microsoft Drivers for PHP for SQL Server 系统要求](system-requirements-for-the-php-sql-driver.md)
 
-[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 编程指南](programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驱动程序 API 参考](sqlsrv-driver-api-reference.md)
 

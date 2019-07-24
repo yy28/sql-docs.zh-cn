@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952879"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getColumnPrivileges 方法由 java.sql.DatabaseMetaData 接口中的 getColumnPrivileges 方法指定。  
+ 此 getColumnPrivileges 方法是由 java.sql.DatabaseMetaData 接口中的 getColumnPrivileges 方法指定的。  
   
  由 getColumnPrivileges 方法返回的结果集将包含以下信息：  
   

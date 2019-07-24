@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream 方法 (SQLServerClob) |Microsoft Docs
+title: getCharacterStream 方法 (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2baeb3fcebeac4f95a1c3d63ca8752275b2ac0e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7c521ac453cc0f82577c1d87a78e68d8ddf9cb78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66775683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953227"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream 方法 (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索**Clob**由 java.sql.Clob 对象作为 java.io.Reader 对象指定的值。  
+  检索 Clob 对象指定为 Clob 对象的 "  " 值。  
   
 ## <a name="overload-list"></a>重载列表  
   

@@ -1,5 +1,5 @@
 ---
-title: getTime 方法 (java.lang.String) |Microsoft Docs
+title: getTime 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6fe0152d23bcf71e371ad778a961dedb9c6ee739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba716696627f29127d64c07843e6d9dcf2b3ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978972"
 ---
 # <a name="gettime-method-javalangstring"></a>getTime 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public java.sql.Time getTime(java.lang.String sCol)
 ## <a name="remarks"></a>Remarks  
  此 getTime 方法是由 java.sql.CallableStatement 接口中的 getTime 方法指定的。  
   
- 在查看标题为"Getter 方法转换"的图表[了解数据类型转换](../../../connect/jdbc/understanding-data-type-conversions.md)以查看哪个[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可通过此方法检索的数据类型。  
+ 请参阅[了解数据类型转换](../../../connect/jdbc/understanding-data-type-conversions.md)中标题为 "Getter 方法转换" 的图表, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查看可以通过此方法检索哪些数据类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTime 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

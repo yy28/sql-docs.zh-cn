@@ -1,5 +1,5 @@
 ---
-title: execute 方法 (java.lang.String) |Microsoft Docs
+title: execute 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3ffb7c175c21d56467899bba9de7c110e324d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954957"
 ---
 # <a name="execute-method-javalangstring"></a>execute 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final boolean execute(java.lang.String sql)
  包含 SQL 语句的 String  。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果语句返回结果集。 **false**如果返回更新计数或无结果。  
+ 如果该语句返回一个结果集,**则为 true** 。 如果它返回更新计数或没有结果, 则**为 false** 。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

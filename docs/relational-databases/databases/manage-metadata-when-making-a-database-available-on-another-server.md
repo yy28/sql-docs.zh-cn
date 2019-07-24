@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940729"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ ms.locfileid: "54405837"
   
  若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master**中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
   
- 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD ='password'. 建议通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD ='  password  '  . 建议通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
  有关如何启用镜像数据库主秘钥自动加密的详细信息，请参阅[设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
@@ -266,7 +265,7 @@ ms.locfileid: "54405837"
 > **注意**：有关如何为镜像数据库设置登录名的信息，请参阅[设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
-##  <a name="permissions"></a> Permissions  
+##  <a name="permissions"></a> 权限  
  当数据库在其他服务器实例上可用时，下列类型的权限可能受到影响。  
   
 -   对系统对象的 GRANT、REVOKE 或 DENY 权限  
@@ -289,7 +288,7 @@ ms.locfileid: "54405837"
  有关更多详细信息，请参阅 [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)、[REVOKE 服务器权限 (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 和 [DENY 服务器权限 (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)。  
   
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>证书或非对称密钥的服务器级权限  
- 不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名  ”或“非对称密钥映射登录名 ”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
+ 不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名  ”或“非对称密钥映射登录名  ”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
   
 > **注意**：映射登录名仅用于对使用相应证书或非对称密钥签名的代码进行授权。 映射登录名不能用于身份验证。  
   
@@ -322,7 +321,7 @@ TRUSTWORTHY 数据库属性用于指明此 SQL Server 实例是否信任该数�
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序的许多相关内容都将随数据库一起移动。 但是，应用程序的某些相关内容必须在新位置重新创建或重新配置。  为安全起见，默认情况下，从其他服务器附加数据库后，is_broker_enabled 和 is_honoor_broker_priority_on 的选项设置为 OFF。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序的许多相关内容都将随数据库一起移动。 但是，应用程序的某些相关内容必须在新位置重新创建或重新配置。  为安全起见，默认情况下，从其他服务器附加数据库后，is_broker_enabled 和 is_honoor_broker_priority_on 的选项设置为 OFF   。 有关如何将这些选项设置为 ON 的详细信息，请参阅 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

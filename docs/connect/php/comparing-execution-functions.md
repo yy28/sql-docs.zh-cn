@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82a5b96d25ed608ad9e44dec6a937527055c65e3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993739"
 ---
 # <a name="comparing-execution-functions"></a>比较执行函数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,5 +41,5 @@ ms.locfileid: "66795832"
 
 [PDO_SQLSRV 驱动程序参考](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

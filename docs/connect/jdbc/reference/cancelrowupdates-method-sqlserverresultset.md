@@ -1,5 +1,5 @@
 ---
-title: cancelRowUpdates 方法 (SQLServerResultSet) |Microsoft Docs
+title: cancelRowUpdates 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cdd669db96a3019915e7380aa6a450b2333de36e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d1598bca994ae41ccee56ca68e12e74e8d18fd0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955792"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>cancelRowUpdates 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void cancelRowUpdates()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 cancelRowUpdates 方法由 java.sql.ResultSet 接口中的 cancelRowUpdates 方法指定。  
+ 此 cancelRowUpdates 方法由 cancelRowUpdates 方法在方法中指定。  
   
  可以在调用 updater 方法后且在调用 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法前调用此方法，以回滚对行所做的更新。 如果未进行更新或已调用 updateRow，则此方法不起作用。  
   

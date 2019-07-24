@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 363d1008-1396-4fc0-8e27-c9ba2499e7f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf6b427cfaaf736fb7ea3862554bde172f2a0247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f2e6148572d6ec6c7e9b52a704d79e8a9124ccf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977881"
 ---
 # <a name="insertrow-method-sqlserverresultset"></a>insertRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void insertRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 insertRow 方法由 java.sql.ResultSet 接口中的 insertRow 方法指定。  
+ 此 insertRow 方法是由 java.sql.ResultSet 接口中的 insertRow 方法指定的。  
   
  调用此方法时，游标必须位于插入行上。 调用此方法后，游标将保持在插入行并且结果集保持在插入模式下。  
   

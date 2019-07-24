@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e29fd659e2119682325b3df6725aefc37953b452
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015105"
 ---
 # <a name="converting-data-types"></a>转换数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "66796248"
 |[如何：指定 SQL Server 数据类型](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|演示如何在向服务器发送数据时指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。|  
 |[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)|演示如何在从服务器检索数据时指定 PHP 数据类型。|  
 |[如何：使用内置 UTF-8 支持发送和检索 UTF-8 数据](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|演示如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 对 UTF-8 数据的内置支持。<br /><br />已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的版本 1.1 中添加了对 UTF-8 字符的支持。|  
-|[如何：在 Linux 和 macOS 中发送和检索 ASCII 数据](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|演示如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的支持在 Linux 或 macOS 中的 ASCII 数据。<br /><br />5\.2 版中添加了对 ASCII 字符在非 Windows 环境中支持[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。|
+|[如何：在 Linux 和 macOS 中发送和检索 ASCII 数据](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|演示如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]对 Linux 或 macOS 中的 ASCII 数据的支持。<br /><br />在的版本 5.2 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]中添加了对非 Windows 环境中的 ASCII 字符的支持。|
   
 ## <a name="see-also"></a>另请参阅  
-[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 配置 Distributed 的 Replay |Microsoft Docs
+title: 配置 Distributed Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023767"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,20 +164,20 @@ ms.locfileid: "67732103"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>使用同步序列化模式运行时可能出现的问题
- 您可能会遇到一种症状的重播功能出现的"停止"或重播事件速度非常缓慢。 如果在重播的跟踪依赖于数据和/或事件还原的目标数据库中不存在，则会发生这种现象。 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>在同步顺序模式下运行时可能出现的问题
+ 你可能会遇到重播功能看似 "停止" 或重播事件的症状。 如果正在重播的跟踪依赖于还原的目标数据库中不存在的数据和/或事件, 则可能会出现这种现象。 
  
- 例如，在 Service Broker 接收 WAITFOR 语句中使用 waitfor 子句，如捕获工作负荷。 使用同步序列化模式时，批处理是按顺序重播。 如果数据库备份之后发生对源数据库插入，但重播捕获跟踪已启动，在重播过程中发出 WAITFOR 接收可能需要等待 WAITFOR 的整个持续时间。 设置后将停止 WAITFOR 接收要重播的事件。 WAITFOR 完成之前，这可能导致重播数据库目标删除为零的 Batch Requests/sec 性能监视器计数器。 
+ 例如, 使用 WAITFOR 的捕获工作负荷 (如 Service Broker 的 WAITFOR RECEIVE 语句中)。 使用同步序列模式时, 批处理按顺序重播。 如果在数据库备份后对源数据库进行插入, 但在启动重播捕获跟踪之前, 在重播过程中发出的 WAITFOR 接收可能需要等待 WAITFOR 的整个持续时间。 在 WAITFOR 接收停止后要重播的事件集。 这可能导致在 WAITFOR 完成之前, 重播数据库目标的 "批请求数/秒" 性能监视器计数器拖放到零。 
  
- 如果您需要使用同步模式并且想要避免此行为，必须执行以下操作：
+ 如果需要使用同步模式并希望避免此行为, 必须执行以下操作:
  
-1.  停止你将使用为重播目标的数据库。
+1.  暂停将用作重播目标的数据库。
 
-2.  允许所有挂起的活动完成。
+2.  允许完成所有挂起的活动。
 
-3.  备份数据库，并允许备份完成。
+3.  备份数据库并允许备份完成。
 
-4.  启动分布式的重播跟踪捕获和恢复正常工作负荷。 
+4.  启动分布式重播跟踪捕获并恢复正常工作负荷。 
  
  
 ## <a name="see-also"></a>另请参阅  

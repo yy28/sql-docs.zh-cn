@@ -1,5 +1,5 @@
 ---
-title: getBytes 方法 (java.lang.String) |Microsoft Docs
+title: getBytes 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eb7ef24869bb07374426b50f5a99f8220f104564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35476869b1e083e66c349439563b4fed5fd8be2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953370"
 ---
 # <a name="getbytes-method-javalangstring"></a>getBytes 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public byte[] getBytes(java.lang.String sCol)
  包含参数名称的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- 一个数组**字节**值。  
+ **字节**值的数组。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

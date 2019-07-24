@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb76c3498be69a9a29525bbe96a26b94ba954af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015033"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -188,5 +187,5 @@ sqlsrv_fetch_array 函数将始终根据[默认 PHP 数据类型](../../connect/
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Driver for PHP for SQL Server 编程指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

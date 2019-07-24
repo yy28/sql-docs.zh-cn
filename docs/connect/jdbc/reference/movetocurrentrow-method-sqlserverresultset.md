@@ -1,5 +1,5 @@
 ---
-title: moveToCurrentRow 方法 (SQLServerResultSet) |Microsoft Docs
+title: moveToCurrentRow 方法 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9a7c754c-2d72-4207-b3bd-2afc6047fb3d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f0b3e779dd7d3164b8c9277a3d3437137827da6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 11a92c879995d198658853ef9b5cec9d00449230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976835"
 ---
 # <a name="movetocurrentrow-method-sqlserverresultset"></a>moveToCurrentRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void moveToCurrentRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 moveToCurrentRow 方法由 java.sql.ResultSet 接口中的 moveToCurrentRow 方法指定。  
+ 此 moveToCurrentRow 方法由 moveToCurrentRow 方法在方法中指定。  
   
  如果游标未处在插入行中，此方法没有作用。  
   

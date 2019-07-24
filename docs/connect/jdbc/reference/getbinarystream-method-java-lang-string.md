@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream 方法 (java.lang.String) |Microsoft Docs
+title: getBinaryStream 方法 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90527a6bfe0b943441f723fd22862832f136c6ca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953695"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>getBinaryStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  一个包含列名的字符串  。  
   
 ## <a name="return-value"></a>返回值  
- InputStream 对象。  
+ 一个 InputStream 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getBinaryStream 方法由 java.sql.ResultSet 接口中的 getBinaryStream 方法指定。  
+ 此 getBinaryStream 方法由 getBinaryStream 方法在方法中指定。  
   
  此方法只能用于 binary、varbinary、varbinary(max) 和 image 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。 尝试将它用于其他数据类型会引发异常。  
   
