@@ -13,25 +13,24 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0c146939a0bc980b61e3871b57fb13bd8891f519
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f942130244aaf08d533ac4a1abdc1752971209d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015268"
 ---
 # <a name="table-valued-parameters-ole-db"></a>表值参数 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本部分介绍 SQL Server 的 OLE DB 驱动程序中的表值参数的支持。 有关其他概述信息，请参阅[表值参数&#40;OLE DB 驱动程序适用于 SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。 有关示例，请参阅[使用表值参数&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)。  
+  本部分介绍 SQL Server OLE DB 驱动程序中的表值参数支持。 有关其他概述信息, 请参阅[表值参数&#40;OLE DB 驱动程序 SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。 有关示例, 请参阅[使用表值参数&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)。  
   
 ## <a name="remarks"></a>Remarks  
  现在，可向服务器发送多行数据作为带参数集的过程的参数（如 ICommand::Execute 中的 DBPARAMS 参数）  。 使用参数集时，该参数集中的每个元素都必须通过单独的远程过程调用 (RPC) 请求发送到服务器。 表值参数提供类似的功能，但可以与服务器更好地集成。 它减少了 RPC 请求数，并在服务器上启用基于集的操作。  
   
- 作为 OLE DB 的 SQL Server 的 OLE DB 驱动程序中支持表值参数**行集**对象。 使用者（即使用适用于 SQL Server 的 OLE DB 驱动程序的客户端应用程序）可将任意 Rowset 对象提供用作表值参数的占位符  。 表值参数的处理方式与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数类型相似。 SQL Server 的 OLE DB 驱动程序提供了创建、 发现、 规范、 绑定和架构接口。  
+ SQL Server OLE DB**行集**对象的 OLE DB 驱动程序中支持表值参数。 使用者（即使用适用于 SQL Server 的 OLE DB 驱动程序的客户端应用程序）可将任意 Rowset 对象提供用作表值参数的占位符  。 表值参数的处理方式与其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 参数类型相似。 SQL Server 的 OLE DB 驱动程序提供了创建、发现、规范、绑定和架构接口。  
   
 ## <a name="in-this-section"></a>本节内容  
   

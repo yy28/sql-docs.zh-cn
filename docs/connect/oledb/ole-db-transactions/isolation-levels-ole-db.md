@@ -15,24 +15,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0a7e06fe0888767d653f40148efb324f89456460
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993971"
 ---
 # <a name="isolation-levels-ole-db"></a>隔离级别 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 若要控制事务隔离级别，为 SQL Server 使用者，OLE DB 驱动程序使用：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 为控制事务隔离级别, SQL Server 使用者的 OLE DB 驱动程序使用:  
   
 -   将 DBPROPSET_SESSION 属性 DBPROP_SESS_AUTOCOMMITISOLEVELS 用于适用于 SQL Server 的 OLE DB 驱动程序默认自动提交模式。  
   
-     OLE DB 驱动程序的 SQL Server 默认级别是 DBPROPVAL_TI_READCOMMITTED。  
+     级别 SQL Server 默认值为 DBPROPVAL_TI_READCOMMITTED 的 OLE DB 驱动程序。  
   
 -   将 ITransactionLocal::StartTransaction 方法的 isoLevel 参数用于本地手动提交事务   。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993675"
 ---
 # <a name="default-php-data-types"></a>默认 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66801483"
 |地理|Stream|Binary<sup>3</sup>|  
 |geometry|Stream|Binary<sup>3</sup>|  
 |image<sup>5</sup>|Stream<sup>2</sup>|Binary<sup>3</sup>|  
-|ssNoversion|Integer|8 位字符<sup>1</sup>|  
+|INT|Integer|8 位字符<sup>1</sup>|  
 |money|String|8 位字符<sup>1</sup>|  
 |NCHAR|String|8 位字符<sup>1</sup>|  
 |NUMERIC|String|8 位字符<sup>1</sup>|  
@@ -84,7 +83,7 @@ ms.locfileid: "66801483"
 
 6. 这是映射到 nvarchar(max) 类型的旧类型。
 
-7.  双向或输出参数中不支持 sql_variant。
+7.  在双向参数或输出参数中不支持 sql_variant。
 
 8.  这是映射到 varchar(max) 类型的旧类型。  
   

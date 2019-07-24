@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aaf2b256329c66b6169593f71f4e85439aff21ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4ab210a30080472a777d151695a04ec49ff1041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973379"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject 方法 (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,15 +56,15 @@ public final void setObject(int index,
   
 -   SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的 setNull 方法。  
   
--   [RegisterOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) SQLServerCallableStatement 类的方法  
+-   SQLServerCallableStatement 类的[registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)方法  
   
  在这种情况下，将自动设置参数的类型。 如果应用程序使用 obj 值 NULL 调用此 setObject 方法，驱动程序则会假定参数的类型为以前调用的方法所设置的一个参数类型。  
   
  如果 obj 值为 NULL 且无法确定该参数的类型信息，此 setObject 方法则会将指定的参数转换为 CHAR 后再将其发送到数据库。  
   
- 开头[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 中，此方法的行为由修改**sendTimeAsDatetime**连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ 从 JDBC Driver 3.0 开始, 此方法的行为由 sendTimeAsDatetime 连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)修改。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
- 有关详细信息，请参阅[如何配置 java.sql.Time 值发送到服务器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
+ 有关详细信息, 请参阅[配置如何将 .Java 值发送到服务器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [setObject 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   

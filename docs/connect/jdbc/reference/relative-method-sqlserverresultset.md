@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8907a5e2eb2ead5202e8aec9fd5320a6047a5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975780"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean relative(int nRows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此相对的方法由 java.sql.ResultSet 接口中的相对方法指定。  
+ 此相对方法是通过使用 .sql 接口中的相对方法指定的。  
   
  如果尝试移到结果集中的第一行之前或最后一行之后，将使游标移到第一行之前或最后一行之后。 调用 `relative(0)` 有效，但是不会更改游标位置。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b0e591b1-73e2-4f90-967f-5555eadfc3f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 53ee00067de656065884f6b7a1da900fc59afeed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ca21e48e1cd4d28337339a1aecc17b92bb259c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977053"
 ---
 # <a name="iswrapperfor-method-sqlserverpreparedstatement"></a>isWrapperFor 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parameters  
  iface   
   
- 一个**类**定义的接口。  
+ 定义接口的**类**。  
   
 ## <a name="return-value"></a>返回值  
  如果此对象实现了接口或包装了实现接口的对象，则为 true  。 否则为 **false**。  
@@ -46,7 +45,7 @@ public boolean isWrapperFor(Class iface)
   
  如果此方法返回 true，则将使用同一参数成功调用 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)。  
   
- 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [unwrap 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)   

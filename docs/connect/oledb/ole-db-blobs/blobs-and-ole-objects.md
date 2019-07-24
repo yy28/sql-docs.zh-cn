@@ -16,13 +16,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988668"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66800698"
 
   适用于 SQL Server 的 OLE DB 驱动程序公开 ISequentialStream 接口，以便支持使用者访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ntext、text、image、varchar(max)、nvarchar(max)、varbinary(max) 和作为二进制大型对象 (BLOB) 的 xml 数据类型        。 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据   。  
   
- 有关演示此功能的示例，请参阅[大型数据集&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
+ 有关演示此功能的示例, 请参阅[Set 大型&#40;Data&#41;OLE DB](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  当使用者在数据修改绑定的取值函数中提供接口指针时，适用于 SQL Server 的 OLE DB 驱动程序可以使用由使用者实现的 IStorage 接口  。  
   
@@ -47,11 +46,11 @@ ms.locfileid: "66800698"
   
 -   绑定为 DBTYPE_IUNKNOWN 并使用流处理。  
   
- 如果绑定为 DBTYPE_IUNKNOWN，则使用 ISequentialStream 流功能。 SQL Server 的 OLE DB 驱动程序支持输出参数绑定为 DBTYPE_IUNKNOWN 对于大值数据类型。 这是为了支持其中的存储的过程返回这些数据类型作为返回值，将返回作为 DBTYPE_IUNKNOWN 向客户端的方案。  
+ 如果绑定为 DBTYPE_IUNKNOWN，则使用 ISequentialStream 流功能。 SQL Server 的 OLE DB 驱动程序支持将输出参数绑定为大值数据类型的 DBTYPE_IUNKNOWN。 这是为了支持存储过程以返回值的形式返回这些数据类型的情况, 返回值将以 DBTYPE_IUNKNOWN 的形式返回到客户端。  
   
 ## <a name="storage-object-limitations"></a>存储对象限制  
   
--   SQL Server 的 OLE DB 驱动程序可以支持只有一个打开的存储对象。 尝试打开多个存储对象（以获取对多个 ISequentialStream 接口指针的引用）返回 DBSTATUS_E_CANTCREATE  。  
+-   SQL Server 的 OLE DB 驱动程序只能支持一个打开的存储对象。 尝试打开多个存储对象（以获取对多个 ISequentialStream 接口指针的引用）返回 DBSTATUS_E_CANTCREATE  。  
   
 -   在适用于 SQL Server 的 OLE DB 驱动程序中，DBPROP_BLOCKINGSTORAGEOBJECTS 只读属性的默认值为 VARIANT_TRUE。 因此，如果存储对象处于活动状态，某些方法（存储对象上的方法除外）将失败，并返回 E_UNEXPECTED。  
   

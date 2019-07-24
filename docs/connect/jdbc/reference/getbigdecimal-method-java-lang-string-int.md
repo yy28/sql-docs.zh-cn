@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33adfc684528ddfcdab7373f251d743ac75dd593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd2d46569386637b5082288b83268a80dac013e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953897"
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>getBigDecimal 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
  指示小数点右边的位数的 int  。  
   
 ## <a name="return-value"></a>返回值  
- 一个 BigDecimal 对象。  
+ 一个 Java.math.bigdecimal 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getBigDecimal 方法由 java.sql.CallableStatement 接口中的 getBigDecimal 方法指定。  
+ 此 getBigDecimal 方法由 getBigDecimal 方法在 CallableStatement 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [getBigDecimal 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

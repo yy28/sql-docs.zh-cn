@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: Setparameterproperties (OLE DB) |Microsoft Docs'
+title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) |Microsoft Docs'
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015381"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 从数据库引擎中的改进[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允许 isscommandwithparameters:: Setparameterproperties 若要获取的预期的结果更准确描述。 这些更准确的结果可能不同于 isscommandwithparameters:: Setparameterproperties 的早期版本中返回的值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[元数据发现](../../oledb/features/metadata-discovery.md)。  
+ 数据库引擎中的改进, 从[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允许 ISSCommandWithParameters:: SetParameterProperties 获取有关预期结果的更准确说明。 这些更准确的结果可能与以前版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 ISSCommandWithParameters:: SetParameterProperties 返回的值不同。 有关详细信息, 请参阅[元数据发现](../../oledb/features/metadata-discovery.md)。  
   
 |成员|描述|  
 |------------|-----------------|  

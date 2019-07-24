@@ -6,16 +6,15 @@ ms.technology: troubleshooting
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 55246173a23d8bae7fa9aab82a527800eb8bb23a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285065"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258545"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>错误和事件参考 (Reporting Services)
 
@@ -47,7 +46,7 @@ ms.locfileid: "67285065"
 |119|错误|激活|报表服务器<br /><br /> 计划和传递处理器|\<Source> 未获取访问报表服务器数据库内容的权限  。|  
 |120|错误|激活|报表服务器|无法解密对称密钥。 最有可能的是，服务运行所使用的帐户发生了更改。 有关详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |121|错误|启动/关闭|报表服务器|远程过程调用 (RPC) 服务无法启动。|  
-|122|警告|传递|计划和传递处理器|计划和传递处理器无法连接到用于电子邮件传递的 SMTP 服务器。 有关 SMTP 服务器连接的详细信息，请参阅[电子邮件设置-Reporting Services 本机模式 （配置管理器）](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
+|122|警告|传递|计划和传递处理器|计划和传递处理器无法连接到用于电子邮件传递的 SMTP 服务器。 有关 SMTP 服务器连接的详细信息, 请参阅[电子邮件设置-Reporting Services 纯模式 (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)。|  
 |123|警告|日志记录|报表服务器<br /><br /> Web 门户|报表服务器无法对跟踪日志进行写入操作。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
 |124|信息|激活|报表服务器|报表服务器服务已初始化。 有关详细信息，请参阅[初始化报表服务器（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。|  
 |125|信息|激活|报表服务器|用于加密数据的密钥已成功提取。 有关密钥的详细信息，请参阅[配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  

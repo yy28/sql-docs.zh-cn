@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826904"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255175"
 ---
 # <a name="configure-report-builder-access"></a>配置报表生成器访问权限
 报表生成器是一个特别报告生成工具，该工具随为本机模式或 SharePoint 集成模式配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器一起安装。  
@@ -30,15 +29,15 @@ ms.locfileid: "66826904"
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均不提供报表生成器。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
 
-客户端计算机必须具有[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 或 4.6.1 分别安装适用于 SSRS 2016 和 2017年。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供运行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 应用程序的基础结构。  
+客户端计算机必须[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]分别为 SSRS 2016 和2017安装4.6 或4.6.1。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供运行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 应用程序的基础结构。  
 
-必须使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Internet Explorer 11 或更高版本或其他现代浏览器。  
+必须使用 Internet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Explorer 11 或更高版本, 或使用其他新式浏览器。  
 
 报表生成器始终在完全信任模式下运行；不能将其配置为在部分信任模式下运行。 在以前的版本中，可以在部分信任模式下运行报表生成器，但是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中不支持该选项。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>启用和禁用报表生成器  
 
-默认情况下，将启用报表生成器。 报表服务器管理员可以视需要将报表服务器系统属性 ShowDownloadMenu  设置为 false  ，以禁用报表生成器功能。 设置此属性将会禁用报表生成器中，移动报表发布服务器，并为该报表服务器下载 Power BI 移动。  
+默认情况下，将启用报表生成器。 报表服务器管理员可以视需要将报表服务器系统属性 ShowDownloadMenu  设置为 false  ，以禁用报表生成器功能。 设置此属性将禁用该 Report Server 报表生成器、移动报表发布服务器和 Power BI 移动版下载。  
 
  若要设置报表服务器系统属性，可以使用 Management Studio 或脚本：   
 
@@ -110,8 +109,8 @@ ms.locfileid: "66826904"
 
 1. 启动 Web 门户。  
 
-2. 单击顶部的齿轮图标的 web 门户主页并选择**站点设置**从下拉列表菜单。  
-![web 门户的齿轮图标和菜单](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. 单击 web 门户主页右上方的齿轮图标, 并从下拉菜单中选择 "**站点设置**"。  
+![web 门户齿轮图标和菜单](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. 单击 **“安全性”** 。  
 

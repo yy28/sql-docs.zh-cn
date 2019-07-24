@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936200"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +51,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 还会影响 PDO::exec 的行为；有关详细�
 |---------|---------------|  
 |PDO::FETCH_COLUMN, num |在指定列中查询数据。 表中的第一列为列 0.|  
 |PDO::FETCH_CLASS, 'classname', array( arglist )  |创建一个类的实例并给类中的属性分配列名称。 如果类构造函数采用一个或多个参数，你还可以传递 *arglist*。|  
-|Pdo:: FETCH_CLASS，*classname*|给现有类中的属性分配列名称。|  
+|PDO:: FETCH_CLASS, "*classname*"|给现有类中的属性分配列名称。|  
   
 在再次调用 PDO::query 之前，请调用 PDOStatement::closeCursor 以释放与 PDOStatement 对象相关联的数据库资源。  
   

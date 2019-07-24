@@ -1,5 +1,5 @@
 ---
-title: unwrap 方法 (SQLServerPreparedStatement) |Microsoft Docs
+title: 解包方法 (SQLServerPreparedStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 213b3007a968d148cd3e51aa1c10476389683196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81e533e32504df219155259e9639c83c3be4c647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985600"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>unwrap 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,9 +47,9 @@ public <T> T unwrap(Class<T> iface)
   
  调用此方法时，对象会取消对下列类的包装：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 和 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。  
   
- 有关示例代码，请参阅[unwrap 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)。  
+ 有关代码示例, 请参阅[解&#40;包&#41;方法 SQLServerCallableStatement](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)。  
   
- 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 有关详细信息, 请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [isWrapperFor 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)   

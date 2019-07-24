@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 方法对读取器对象的长 |Microsoft Docs
+title: setNCharacterStream 方法到读取器对象-长 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 770717283a7a24d91218a2da0eebc0382072548e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73bd7fe7d3da0745f66e0a6d883d7024a318c95f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973889"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>setNCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,9 +48,9 @@ public final void setNCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setNCharacterStream 方法由 java.sql.CallableStatement 接口中的 setNCharacterStream 方法指定。  
+ 此 setNCharacterStream 方法由 setNCharacterStream 方法在 CallableStatement 接口中指定。  
   
- 此方法应用于**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**数据类型。  
+ 应将此方法用于**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**数据类型。  
   
  如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   

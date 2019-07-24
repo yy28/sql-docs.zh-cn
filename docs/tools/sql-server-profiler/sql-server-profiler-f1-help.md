@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059700"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从服务器捕获 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。 以下是命令和可用的对话框中设置[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从服务器捕获 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。 下面是的对话框[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中提供的命令和设置。  
 ## <a name="trace-properties"></a>跟踪属性
 ### <a name="general-tab"></a>“常规”选项卡
 使用 **“跟踪属性”** 对话框中的 **“常规”** 选项卡可以查看或指定跟踪属性。  
@@ -87,7 +86,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |**组织列**|更改跟踪中列的顺序，并按一列或多列对结果分组。  
 
 ## <a name="trace-template-properties"></a>跟踪模板属性 
-### <a name="new-general-tab"></a>新的 （常规选项卡）
+### <a name="new-general-tab"></a>新建 ("常规" 选项卡)
 通过使用下列选项，使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡可以创建新的跟踪模板。 要访问此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“新建”    。
 
 |项|描述
@@ -97,7 +96,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |**使新模板基于现有模板**|将该列表中的模板用作此模板的基础。 所有选定的事件、数据列和筛选器最初都与现有模板中的事件、数据列和筛选器相匹配，您随后可以根据需要修改它们。  
 |**用作所选服务器类型的默认模板**|默认情况下，将此模板用于为此服务器类型创建的跟踪。  
 
-### <a name="edit-general-tab"></a>编辑 （常规选项卡）
+### <a name="edit-general-tab"></a>编辑 ("常规" 选项卡)
  通过使用下列选项，使用 **“跟踪模板属性”** 的 **“常规”** 选项卡可以查看或编辑现有跟踪模板。 要访问此对话框，请在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“文件”菜单上，指向“模板”，再单击“编辑模板”    。  
 
 |项|描述
@@ -171,7 +170,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 2.  选中要与 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件关联的计数器。  
 
 如果希望选择某个性能对象的所有计数器，请选中与该性能对象相邻的框。 如果选中指示计算机的最顶层节点，则会选择性能日志文件中包含的所有性能对象和计数器。 
-## <a name="toolsoptions-general-options-page"></a>工具/选项 （常规选项页）
+## <a name="toolsoptions-general-options-page"></a>工具/选项 ("常规选项" 页)
 使用 **“常规选项”** 对话框可以查看或指定以下选项：  
 ### <a name="display-options"></a>显示选项  
 

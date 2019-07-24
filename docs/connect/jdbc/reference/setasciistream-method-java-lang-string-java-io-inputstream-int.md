@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream 方法的输入流字节-int |Microsoft Docs
+title: setAsciiStream 方法到输入流字节数-int |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6ea23386-201f-41af-8232-225de3476765
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da554800f8700cf6b35e43db215f2bfa32149c0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f4ebed9ebad158ea445e726e8d0dbe0b60f57930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975499"
 ---
 # <a name="setasciistream-method--javalangstring-javaioinputstream-int"></a>setAsciiStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setAsciiStream(java.lang.String parameterName,
   
  *value*  
   
- InputStream 对象。  
+ 一个 InputStream 对象。  
   
  *length*  
   
@@ -54,7 +53,7 @@ public void setAsciiStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setAsciiStream 方法由 java.sql.CallableStatement 接口中的 setAsciiStream 方法指定。  
+ 此 setAsciiStream 方法由 setAsciiStream 方法在 CallableStatement 接口中指定。  
   
  如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   

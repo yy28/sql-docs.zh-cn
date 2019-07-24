@@ -21,13 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 20860d018e8971089ee1eb80ec0303bdc63ef211
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988728"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
 
@@ -35,7 +34,7 @@ ms.locfileid: "67208343"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-中引入了查询通知[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]和 OLE DB 驱动程序适用于 SQL Server。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。
+查询通知在中引入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , 并 OLE DB SQL Server 的驱动程序中。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。
 
 查询通知使您可以在查询的基础数据发生更改时请求在指定的超时期限内发送通知。 通知请求指定通知选项，其中包括服务名称、消息正文和服务器的超时值。 通知是通过 Service Broker 队列传递的，应用程序可以轮询该队列以获取可用通知。
 
@@ -71,7 +70,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 
 ## <a name="ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序
 
-SQL Server 的 OLE DB 驱动程序支持基于行集修改的使用者通知。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。
+SQL Server 的 OLE DB 驱动程序在行集修改时支持使用者通知。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。
 
 > [!NOTE]
 > 使用 ICommand::Execute 向服务器传递通知查询是向适用于 SQL Server 的 OLE DB 驱动程序订阅查询通知的唯一有效方式  。
@@ -110,7 +109,7 @@ RECEIVE * FROM MyQueue
 > [!NOTE]
 > 准备语句永远不会启动订阅；只有执行语句才能实现此目的，并且 OLE DB 核心服务的使用不会影响查询通知。
 
-有关 DBPROPSET_SQLSERVERROWSET 属性集的详细信息，请参阅[行集属性和行为](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)。
+有关 DBPROPSET_SQLSERVERROWSET 属性集的详细信息, 请参阅[行集属性和行为](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)。
 
 ## <a name="see-also"></a>另请参阅
 

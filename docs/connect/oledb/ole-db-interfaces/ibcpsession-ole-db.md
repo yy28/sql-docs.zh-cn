@@ -13,29 +13,28 @@ helpviewer_keywords:
 - IBCPSession interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6fc35b0e8d964d07987263fa05e2647da6fefdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73f8fd440903c525856475200921f97a25d9b27b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015509"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  IBCPSession 接口公开了对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于文件的大容量复制操作的支持  。 **IBCPSession**接口公开 OLE DB 驱动程序中的 SQL Server 下与会话相同的级别。 在适用于 SQL Server 的 OLE DB 驱动程序中，数据源对象是会话对象的工厂，且大容量复制操作在连接属性 SSPROP_ENABLEBULKCOPY 中指定。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
+  IBCPSession 接口公开了对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于文件的大容量复制操作的支持  。 **IBCPSession**接口在与会话相同的级别下的 SQL Server OLE DB 驱动程序中公开。 在适用于 SQL Server 的 OLE DB 驱动程序中，数据源对象是会话对象的工厂，且大容量复制操作在连接属性 SSPROP_ENABLEBULKCOPY 中指定。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
   
  调用 IDBCreateSession::CreateSession 方法随后将创建 BulkCopySession 对象   。 然后，可针对此 IBCPSession 对象的 IBCPSession 接口，采用极为相似的签名来调用通过 IBCPSession 对象公开的所有基于文件的大容量复制方法    。  
   
 > [!NOTE]  
 >  适用于 SQL Server 的 OLE DB 驱动程序支持通过 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 接口进行基于内存的大容量复制操作。  
   
- 有关使用用于 SQL Server 的 OLE DB 驱动程序，大容量复制操作的详细信息，请参阅[执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)。  
+ 有关使用 OLE DB 驱动程序 SQL Server 进行大容量复制操作的详细信息, 请参阅[执行大容量复制操作](../../oledb/features/performing-bulk-copy-operations.md)。  
   
- 有关演示如何使用的示例**IBCPSession**接口，请参阅[IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)。  
+ 有关演示如何使用**IBCPSession**接口的示例, 请参阅[IBCPSession: &#40;: BCPDone OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

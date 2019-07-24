@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb6ac7f5-81ae-4cb7-87c8-cbee40d278c5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b28857940387b6feb7b2ce2bb2e7fed0eceff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486fd2b419e96e2a66a3aeca0c792632a462f4bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974752"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-long"></a>setCharacterStream 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public final void setCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setCharacterStream 方法由 java.sql.PreparedStatement 接口中的 setCharacterStream 方法指定。  
+ 此 setCharacterStream 方法由 setCharacterStream 方法在 Java.sql.preparedstatement 接口中指定。  
   
  如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常  。  
   

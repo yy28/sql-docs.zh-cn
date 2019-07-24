@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e501bbe9ae68b35c4e9b8373b0dfe1f55d9f6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973908"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +43,9 @@ public final void setNCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setNCharacterStream 方法由 java.sql.PreparedStatement 接口中的 setNCharacterStream 方法指定。  
+ 此 setNCharacterStream 方法由 setNCharacterStream 方法在 Java.sql.preparedstatement 接口中指定。  
   
- 此方法应用于**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**数据类型。  
+ 应将此方法用于**NCHAR**、 **NVARCHAR**、 **NTEXT**和**XML**数据类型。  
   
 ## <a name="see-also"></a>另请参阅  
  [setNCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b4490ac15558a0f6268a3d400d197367d028b9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973110"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>setResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +49,7 @@ public final void setResponseBuffering(java.lang.String value)
   
  adaptive 是 JDBC 驱动程序版本 2.0 和 3.0 中的默认值。 full 是版本低于 2.0 的 JDBC 驱动程序中的默认值。  
   
- [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法允许覆盖当前 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 responseBuffering  连接 String  属性。 有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法允许覆盖当前 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 responseBuffering  连接 String  属性。 有关使用响应缓冲模式的详细信息, 请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
  如果应用程序为 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法指定无效的参数值，则会引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   

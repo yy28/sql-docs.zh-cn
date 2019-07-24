@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Getstatus (OLE DB) |Microsoft Docs'
+title: 'ISSAsynchStatus:: GetStatus (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994373"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>参数  
  hChapter[in]   
- 章节句柄。 如果轮询的对象不是行集对象或操作不会应用于章节，它应设置为 DB_NULL_HCHAPTER，访问接口忽略。  
+ 章节句柄。 如果轮询的对象不是行集对象或操作不适用于某一章节, 则应将其设置为 DB_NULL_HCHAPTER, 该提供程序将忽略该对象。  
   
  eOperation[in]   
- 请求其异步状态的操作。 应使用以下值：  
+ 请求其异步状态的操作。 应使用以下值:  
   
  DBASYNCHOP_OPEN - 使用者请求获取有关行集的异步打开或填充的信息，或有关数据源对象的异步初始化的信息。 如果访问接口是支持直接 URL 绑定且与 OLE DB 2.5 兼容的访问接口，使用者则请求有关异步初始化或填充数据源、行集、行或流对象的信息。  
   

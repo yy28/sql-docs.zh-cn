@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ebe7ff0f-3cc0-408e-9503-4ca754c9c37f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 17fc9ccf4b2483d00b2e6576d7e33441f6b90fb2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a7aa69ba016f7b50179becd73c7474c7dec91686
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980902"
 ---
 # <a name="getparametertypename-method-sqlserverparametermetadata"></a>getParameterTypeName 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getParameterTypeName(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getParameterTypeName 方法指定 java.sql.ParameterMetaData 接口中的 getParameterTypeName 方法。  
+ 此 getParameterTypeName 方法由 getParameterTypeName 方法在 Java.sql.parametermetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerParameterMetaData 方法](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

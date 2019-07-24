@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb06138639be09378baa8dfe94d110c0ded41223
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955519"
 ---
 # <a name="compareto-method-datetimeoffset"></a>compareTo 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  比较此**DateTimeOffset**对象和另一个**DateTimeOffset**对象基于采用 GMT 的时间。  
+  根据 GMT 的时间将此**datetimeoffset**对象与另一个**datetimeoffset**对象进行比较。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,9 +37,9 @@ public int compareTo(DateTimeOffset other)
   
 |返回值|描述|  
 |------------------|-----------------|  
-|0|这两**DateTimeOffset**对象表示相同的点的时间。|  
-|负数|这**DateTimeOffset**对象表示之前的时间点*其他*。|  
-|正数|这**DateTimeOffset**对象表示一个点之后的时间*其他*。|  
+|0|这两个**DateTimeOffset**对象表示相同的时间点。|  
+|负数|此**DateTimeOffset**对象*表示之前的*某个时间点。|  
+|正数|此**DateTimeOffset**对象表示一个在*其他*时间点。|  
   
 ## <a name="remarks"></a>Remarks  
  当两个 DateTimeOffset  对象具有相同的 GMT 时间时，没有基于偏移量的对象的附加排序。  

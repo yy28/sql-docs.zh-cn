@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca125846062a77b19c324a50f9ed13c528f1e051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971589"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>SQLServerConnectionPoolDataSource 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66800586"
 |[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）返回 multiSubnetFailover 连接属性的值  。|  
 |[getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)|尝试建立可用作池连接的物理数据库连接。|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）返回用于与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通信的当前端口号。|  
-|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|返回对此数据源对象的引用。|  
+|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|返回对此 DataSource 对象的引用。|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）返回用于通过使用此 DataSource 对象创建的所有结果集的默认游标类型。|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）返回一个布尔值，此值指示是否启用了以 UNICODE 格式将字符串参数发送到服务器  。|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）返回正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机的名称。|  

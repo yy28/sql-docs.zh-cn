@@ -1,5 +1,5 @@
 ---
-title: 安装 Distributed 的 Replay |Microsoft Docs
+title: 安装 Distributed Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 10762f3d10aa8e90d8bf2d86663a19a9222db42c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950039"
 ---
 # <a name="install-distributed-replay"></a>安装 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,15 +85,15 @@ ms.locfileid: "52516011"
   
 5.  在 **“安装程序支持文件”** 页，单击 **“安装”** 以便安装或更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的安装程序支持文件。  
   
-6.  在 **“设置角色”** 页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”**，然后单击 **“下一步”** 以继续进入 **“功能选择”** 页。  
+6.  在 **“设置角色”** 页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”** ，然后单击 **“下一步”** 以继续进入 **“功能选择”** 页。  
   
 7.  在 **“功能选择”** 页上，配置要安装的功能。  
   
-    -   若要安装管理工具，请选择“管理工具 - 基本”。  
+    -   若要安装管理工具，请选择“管理工具 - 基本”  。  
   
-    -   若要安装控制器服务，请选择 **“Distributed Replay 控制器”**。  
+    -   若要安装控制器服务，请选择 **“Distributed Replay 控制器”** 。  
   
-    -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”**。  
+    -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”** 。  
   
      **重要**：在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：  
   
@@ -114,11 +113,11 @@ ms.locfileid: "52516011"
   
     1.  在 32 位计算机上，默认安装路径为 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\  
+    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\   
   
-9. 在完成后，单击 **“下一步”**。  
+9. 在完成后，单击 **“下一步”** 。  
   
-10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”**。  
+10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”** 。  
   
 11. **“磁盘空间要求”** 页计算指定的功能所需的磁盘空间， 然后将所需空间与可用磁盘空间进行比较。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "52516011"
   
 13. 在 **“安装配置规则”** 页上，系统配置检查器将运行多组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能对您的计算机配置进行验证。  
   
-14. 在 **“准备安装程序”** 页上，单击 **“安装”**。  
+14. 在 **“准备安装程序”** 页上，单击 **“安装”** 。  
   
     > [!IMPORTANT]  
     >  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
@@ -138,14 +137,14 @@ ms.locfileid: "52516011"
  通过从命令提示符安装 Distributed Replay 的新实例，您可以指定要安装的功能以及如何配置这些功能。 在命令提示符下安装支持对 Distributed Replay 组件进行安装、修复、升级和卸载。 通过命令提示符安装时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）。  
   
 > [!NOTE]  
->  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须使用对远程共享具有读取和执行权限的域帐户。  
+>  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。  
   
 ### <a name="installation-parameters"></a>安装参数  
  顶级功能列表包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和工具。 工具功能将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]和其他共享组件。 若要安装 Distributed Replay 组件，请指定以下参数：  
   
 |组件|参数|  
 |---------------|---------------|  
-|Distributed Replay 控制器|**DREPLAY_CTLR**|  
+|“Distributed Replay 控制器”|**DREPLAY_CTLR**|  
 |Distributed Replay 客户端|**DREPLAY_CLT**|  
 |管理工具|**工具**|  
   
@@ -154,7 +153,7 @@ ms.locfileid: "52516011"
   
  使用下表中的参数可开发用于安装的命令行脚本。  
   
-|参数|说明|支持的值|  
+|参数|描述|支持的值|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **可选**|Distributed Replay 控制器服务的服务帐户。|检查帐户和密码|  
 |/CTLRSVCPASSWORD<br /><br /> **可选**|Distributed Replay 控制器服务帐户的密码。|检查帐户和密码|  

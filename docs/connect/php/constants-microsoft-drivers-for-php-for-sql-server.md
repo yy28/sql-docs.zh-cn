@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993705"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常量 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,14 +64,14 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性是任一非负整数，表示超时时间�
 ### <a name="direct-or-prepared-execution"></a>直接执行或已准备的执行  
 可以使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性来选择直接查询执行或已准备的语句执行。 可以使用 [PDO::prepare](../../connect/php/pdo-prepare.md) 或 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 来设置 PDO::SQLSRV_ATTR_DIRECT_QUERY。 有关 PDO::SQLSRV_ATTR_DIRECT_QUERY 的详细信息，请参阅 [PDO_SQLSRV 驱动程序中的直接语句执行和已准备的语句执行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
 
-### <a name="handling-numeric-fetches"></a>处理数值提取操作
-PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可以用于处理数值 SQL 类型 （位、 整数、 smallint、 tinyint、 float 和 real） 列中数值的提取操作。 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 设置为 true，整数列的结果时表示为整数，而 SQL 浮动和实数表示为浮点数。 可以设置此属性与[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
+### <a name="handling-numeric-fetches"></a>处理数值提取
+可以使用 PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性处理包含数字 SQL 类型 (bit、integer、smallint、tinyint、float 和 real) 的列中的数字提取。 如果将 PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 设置为 true, 则整数列的结果表示为 int, 而 SQL 浮点值和 reals 表示为浮点型。 可通过[PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)设置此属性。 
 
-您可以修改默认十进制格式设置行为具有 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性。 这些属性的行为等同于 SQLSRV 端上的相应选项 (**FormatDecimals**并**DecimalPlaces**)，不同的是输出参数不支持的格式设置。 这些属性可能会在连接或语句级别设置与[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但任何语句属性重写相应的连接属性。 如需了解更多详情，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
+可以通过 PDO:: SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO:: SQLSRV_ATTR_DECIMAL_PLACES 特性修改默认的十进制格式设置行为。 这些属性的行为与 SQLSRV 端 (**FormatDecimals**和**小数位数**) 上的相应选项相同, 只是输出参数不支持格式设置。 可以通过[PDO:: setAttribute](../../connect/php/pdo-setattribute.md)或[PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)在连接或语句级别设置这些属性, 但任何语句属性都将重写相应的连接属性。 如需了解更多详情，请参阅[设置十进制字符串和 Money 值格式（PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
 
 ### <a name="handling-date-and-time-fetches"></a>处理日期和时间提取
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否形式检索日期和时间类型[PHP DateTime](http://php.net/manual/en/class.datetime.php)对象。 如果保留 false，默认行为是将它们作为字符串返回。 此属性可能设置在连接或语句级别与[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但语句属性重写相应的连接属性。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
+PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否将日期和时间类型作为[PHP DATETIME](http://php.net/manual/en/class.datetime.php)对象进行检索。 如果保留 false，默认行为是将它们作为字符串返回。 此属性可在连接或语句级别设置为[PDO:: setAttribute](../../connect/php/pdo-setattribute.md)或[PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), 但语句特性将重写相应的连接属性。 有关详细信息，请参阅[如何：使用 PDO_SQLSRV 驱动程序以 PHP DateTime 对象形式检索日期和时间类型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驱动程序常量  
 以下部分将列出由 SQLSRV 驱动程序使用的常量。  
@@ -145,7 +144,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否形式检索日期和时间�
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($编码<sup>1</sup>)|String|  
+|SQLSRV_PHPTYPE_STRING ($encoding<sup>1</sup>)|String|  
   
 1. SQLSRV_PHPTYPE_STREAM 和 SQLSRV_PHPTYPE_STRING 接受用于指定流编码的参数   。 下表包含作为可接受参数的 SQLSRV 常量以及对相应编码的说明。  
   
@@ -161,7 +160,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否形式检索日期和时间�
 有关这些常量的详细信息，请参阅 [如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)， [如何：使用 SQLSRV 驱动程序以流的形式检索字符数据](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 常量  
-下表列出了用于描述 SQL Server 数据类型的常量。 某些常量是类似于函数的可能需要对应的参数精度、 小数位数和/或长度。  在绑定参数时，应使用的类似函数的常量。 类型的比较标准 （非类似函数的） 常量是必需的。 有关 SQL Server 数据类型的信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 有关精度、小数位数和长度的信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
+下表列出了用于描述 SQL Server 数据类型的常量。 某些常量是类似于函数的, 可能采用对应于精度、小数位数和/或长度的参数。  绑定参数时, 应使用类似函数的常量。 对于类型比较, 需要标准 (不类似于函数的) 常量。 有关 SQL Server 数据类型的信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。 有关精度、小数位数和长度的信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 |SQLSRV 常量|SQL Server 数据类型|  
 |-------------------|------------------------|  
@@ -178,7 +177,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否形式检索日期和时间�
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|ssNoversion|  
+|SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
@@ -214,7 +213,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否形式检索日期和时间�
   
 4.  已在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的版本 1.1 中添加了对此类型的支持。  
 
-5.  应在类型的比较操作中使用这些常量并将不替换类似的语法类似于函数的常量。 对于绑定参数，应使用的类似函数的常量。
+5.  应在类型比较操作中使用这些常量, 并且不要将类似于函数的常量替换为类似的语法。 对于绑定参数, 应使用类似函数的常量。
 
   
 下表列出了接受参数的 SQLTYPE 常量以及参数允许的值范围。  

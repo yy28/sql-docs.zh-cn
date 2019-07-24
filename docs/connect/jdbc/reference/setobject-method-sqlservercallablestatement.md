@@ -15,22 +15,21 @@ apitype: Assembly
 ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6ee0bca5c0b92c21aabffe0253a00a0cdb17ae1e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bdd1912a04c503b59064a0e39859a5845c4c6b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973303"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>setObject 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   使用给定对象设置指定参数的值。  
   
- 开头[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 中，此方法的行为由修改**sendTimeAsDatetime**连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ 从 JDBC Driver 3.0 开始, 此方法的行为由 sendTimeAsDatetime 连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)修改。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
- 有关详细信息，请参阅[如何配置 java.sql.Time 值发送到服务器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
+ 有关详细信息, 请参阅[配置如何将 .Java 值发送到服务器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
 ## <a name="overload-list"></a>重载列表  
   

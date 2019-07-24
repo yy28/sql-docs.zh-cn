@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb83b567-4ce5-447a-93cc-895d4eaf3a05
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22dd6c5c559dc58b5c381cabc23210e3eade266f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dd0a5c40cf12ddae0c6a7aae00c6a83bfe6549f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976218"
 ---
 # <a name="preparecall-method-javalangstring"></a>prepareCall 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 prepareCall 方法由 java.sql.Connection 接口中的 prepareCall 方法指定。  
+ 此 prepareCall 方法由 prepareCall 方法在 sql 连接接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [prepareCall 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

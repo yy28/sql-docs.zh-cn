@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f45fcf45-b9e7-4d14-a90a-ebc542ac7755
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b007954bacff570760e46b1563e59a5323dfd670
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 205b939a870ede1a5a4a02fec81d73ea8dba073d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981983"
 ---
 # <a name="getmaxstatementlength-method-sqlserverdatabasemetadata"></a>getMaxStatementLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxStatementLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getMaxStatementLength 方法由 java.sql.DatabaseMetaData 接口中的 getMaxStatementLength 方法指定。  
+ 此 getMaxStatementLength 方法由 getMaxStatementLength 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

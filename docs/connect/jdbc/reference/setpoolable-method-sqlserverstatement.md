@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c63c526aed7bfae6027f3a9aa028bc2a2e20fbef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973205"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setPoolable(boolean poolable) throws SQLException
   
  语句的池值既应用于由驱动程序实现的内部语句缓存，也应用于由应用程序服务器和其他应用程序实现的外部语句缓存。  
   
- 默认情况下，SQLServerStatement 对象不是创建时，可入池。 SQLServerPreparedStatement 和 SQLServerCallableStatement 对象是在创建时，可入池。  
+ 默认情况下, SQLServerStatement 对象在创建时不可入池。 SQLServerPreparedStatement 和 SQLServerCallableStatement 对象在创建时是可入池。  
   
  如果对已关闭的语句调用此方法，将引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   

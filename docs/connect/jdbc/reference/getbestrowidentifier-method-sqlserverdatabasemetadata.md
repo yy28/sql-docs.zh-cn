@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b08c8ffed61f90260617395f3c4df89b64dd6e0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954026"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -73,7 +72,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getBestRowIdentifier 方法由 java.sql.DatabaseMetaData 接口中的 getBestRowIdentifier 方法指定。  
+ 此 getBestRowIdentifier 方法由 getBestRowIdentifier 方法在 Java.sql.databasemetadata 接口中指定。  
   
  由 getBestRowIdentifier 方法返回的结果集将包含以下信息：  
   
@@ -83,8 +82,8 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 |COLUMN_NAME|String|列的名称。|  
 |DATA_TYPE|short|来自 java.sql.Types 的 SQL 数据类型。|  
 |TYPE_NAME|String|数据类型的名称。|  
-|COLUMN_SIZE|ssNoversion|列的精度。|  
-|BUFFER_LENGTH|ssNoversion|缓冲区长度。|  
+|COLUMN_SIZE|INT|列的精度。|  
+|BUFFER_LENGTH|INT|缓冲区长度。|  
 |DECIMAL_DIGITS|short|列的小数位数。|  
 |PSEUDO_COLUMN|short|指示列是否为伪列。 可以为下列值之一：<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   

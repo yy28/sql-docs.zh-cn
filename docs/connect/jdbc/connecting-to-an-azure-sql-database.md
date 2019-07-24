@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956857"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 
@@ -32,8 +31,8 @@ ms.locfileid: "66789324"
   
 ## <a name="details"></a>详细信息
 
-当连接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，则应连接到 master 数据库以调用**SQLServerDatabaseMetaData.getCatalogs**。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支持从用户数据库中返回整个目录集。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 视图获取目录。 中的权限的讨论，请参阅[sys.databases (Transact SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)若要了解**SQLServerDatabaseMetaData.getCatalogs**上的行为[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
+连接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]时, 应连接到 master 数据库以调用**SQLServerDatabaseMetaData. getCatalogs**。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支持从用户数据库中返回整个目录集。 **SQLServerDatabaseMetaData。 getCatalogs**使用 sys.databases 视图获取目录。 请参阅[sys.databases (transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)中有关权限的讨论, 了解上的**SQLServerDatabaseMetaData getCatalogs** [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]行为。  
   
 ## <a name="connections-dropped"></a>删除的连接
 
@@ -81,7 +80,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密要求设置 hostNameInCertificate
 
-之前的版本 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，连接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，则应指定**hostNameInCertificate**如果你指定**加密 = true** （如果在连接中的服务器名称字符串是*短名称*。*domainName*，将**hostNameInCertificate**属性设置为\*。*domainName*。)。 此属性是可选自版本 7.2 的驱动程序。
+在[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7.2 版之前, 当连接[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]到时, 如果指定了**encrypt = true** (如果连接字符串中的服务器名称为*短名称*, 则应指定**hostNameInCertificate** )。*domainName*, 请将**hostNameInCertificate**属性设置\*为。*domainName*。)。 此属性是驱动程序版本7.2 的可选属性。
 
 例如：
 

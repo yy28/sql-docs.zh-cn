@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034771"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 课：数据库引擎优化顾问中的基本导航
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ ms.locfileid: "67727617"
 此处提供在 SSMS 中还原数据库的说明：[还原数据库。](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
-  > 本教程适用于用户熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务。 
+  > 本教程适用于熟悉如何使用 SQL Server Management Studio 和基本数据库管理任务的用户。 
   
 
 ## <a name="launch-database-tuning-advisor"></a>启动数据库优化顾问 
 开始前，请先打开数据库引擎优化顾问 (DTA) 图形用户界面 (GUI)。 第一次使用时，必须由 **sysadmin** 固定服务器角色的成员来启动数据库引擎优化顾问，以初始化应用程序。 初始化后， **db_owner** 固定数据库角色的成员便可使用数据库引擎优化顾问来优化他们拥有的数据库。 有关初始化数据库引擎优化顾问的详细信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)。  
   
-1. 启动 SQL Server Management Studio (SSMS)。 在 Windows 上**开始菜单**，依次指向**所有程序**并找到**SQL Server Management Studio**。 
-2. 打开 SSMS 后，选择**工具**菜单，然后选择**数据库优化顾问**。 
+1. 启动 SQL Server Management Studio (SSMS)。 在 Windows "**开始" 菜单**上, 指向 "**所有程序**", 并找到**SQL Server Management Studio**。 
+2. 打开 SSMS 后, 选择 "**工具**" 菜单并选择 "**数据库优化顾问**"。 
 
-  ![启动 DTA 从 SSMS](media/dta-tutorials/launch-dta.png)
+  ![从 SSMS 启动 DTA](media/dta-tutorials/launch-dta.png)
 
-3. 数据库优化顾问会启动，并打开**连接到服务器**对话框。 验证默认设置，并选择**Connect**以连接到 SQL Server。  
+3. 数据库优化顾问将启动, 并打开 "**连接到服务器**" 对话框。 验证默认设置, 然后选择 "**连接**" 以连接到 SQL Server。  
   
 默认情况下，数据库引擎优化顾问将打开下图所示的配置：  
   
 ![数据库引擎优化顾问默认窗口](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> **会话监视器**选项卡显示会话名称，这是连接的用户和当前数据的名称。 
+> "**会话监视器**" 选项卡显示会话名称, 它是已连接用户的名称和当前数据。 
   
 第一次打开时，数据库引擎优化顾问 GUI 中将显示两个主窗格。  
   

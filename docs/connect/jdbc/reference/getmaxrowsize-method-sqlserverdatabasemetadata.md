@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52a8c0cb991a30ad7327edea8823b9307e56fc81
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b261a0f02075ffea736899dfa941a4e9f5acfb86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982042"
 ---
 # <a name="getmaxrowsize-method-sqlserverdatabasemetadata"></a>getMaxRowSize 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxRowSize()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getMaxRowSize 方法由 java.sql.DatabaseMetaData 接口中的 getMaxRowSize 方法指定。  
+ 此 getMaxRowSize 方法由 getMaxRowSize 方法在 Java.sql.databasemetadata 接口中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

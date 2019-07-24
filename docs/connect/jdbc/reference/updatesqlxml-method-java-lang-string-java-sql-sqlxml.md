@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 60021881-ef83-499b-9977-e20ff23c1312
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f974ec5ac49a22858231526a28dbfb1ab2aa07e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e2772b43c084e1780b8e65cd6425b67d01092f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998283"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>updateSQLXML 方法 (java.lang.String, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void updateSQLXML(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 updateSQLXML 方法由 java.sql.ResultSet 接口中的 updateSQLXML 方法指定。  
+ 此 updateSQLXML 方法由 updateSQLXML 方法在方法中指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateSQLXML Method (SQLServerResultSet)](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

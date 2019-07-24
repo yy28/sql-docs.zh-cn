@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132772"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  指定将在新建议中考虑筛选的索引。 有关详细信息，请参阅 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
 **-fc**  
- 指定将在新建议中考虑的列存储索引。 DTA 将考虑这两个聚集和非聚集列存储索引。 有关详细信息，请参阅    
+ 指定将在新建议中考虑的列存储索引。 DTA 将同时考虑聚集列存储索引和非聚集列存储索引。 有关详细信息，请参阅    
 [数据引擎优化顾问 (DTA) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  指定计划高速缓存可用作工作负荷。 分析显式选择的数据库的前 1000 个计划缓存事件。 可使用 -n  选项更改此值。  
  
 **-iq**  
- 指定查询存储用作工作负荷。 分析显式选择的数据库查询存储中的前 1000 个事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
+ 指定将查询存储用作工作负荷。 分析显式选择的数据库的查询存储中的 top 1000 事件。 可使用 -n  选项更改此值。  有关详细信息，请参阅[查询存储](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查询存储中的工作负荷优化数据库](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
 |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  在此示例中，必须指定不受限制的优化时间 (`-A 0`)。 否则，数据库引擎优化顾问将采用默认的 8 小时优化时间。
  
  **-I** _time_window_in_hours_   
-   指定的时间长度 （以小时为单位） 时执行的查询必须具有为其视为 dta 优化时使用 **-iq**选项 （查询存储中的工作负荷）。 
+   指定在使用 **-iq**选项 (工作负荷来自查询存储) 时, 必须执行查询的时间窗口 (以小时为单位), 以供 DTA 用于优化。 
 ```  
 dta -iq -I 48  
 ```  
-在这种情况下，DTA 将用作工作负荷的源的查询存储并只考虑与过去 48 小时内已执行的查询。  
+在这种情况下, DTA 将使用查询存储作为工作负荷源, 仅考虑在过去48小时内执行的查询。  
   ||  
 |-|  
 |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
