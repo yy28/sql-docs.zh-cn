@@ -89,7 +89,7 @@ ms.locfileid: "66060169"
   
 3.  在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中，单击 **“控制流”** 、 **“数据流”** 、 **“事件处理程序”** 或 **“包资源管理器”** 选项卡。  
   
-4.  在 **SSIS** 菜单上，单击“包配置”  。  
+4.  在 **SSIS** 菜单上，单击“包配置” 。  
   
 5.  在 **“包配置组织程序”** 对话框中，选择 **“启用包配置”** ，再单击 **“添加”** 。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66060169"
   
 -   msdn.microsoft.com 上的技术文章 [理解 Integration Services 包配置](https://go.microsoft.com/fwlink/?LinkId=165643)  
   
--   博客文章[代码的包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上的。  
+-   博客文章[代码的包配置中创建包](https://go.microsoft.com/fwlink/?LinkId=217663)， www.sqlis.com 上的。  
   
 -   博客文章[API 示例-以编程方式将配置文件添加到包](https://go.microsoft.com/fwlink/?LinkId=217664)，blogs.msdn.com 上的。  
   

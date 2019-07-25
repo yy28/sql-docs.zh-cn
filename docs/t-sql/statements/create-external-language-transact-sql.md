@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5a3d66d95907c8ddbc4efd33fe58ee4ddbbb9423
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399963"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476004"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "67399963"
 从指定的文件路径或字节流中注册数据库中的外部语言扩展。 此语句充当一种通用机制，数据库管理员使用它可在 SQL Server 支持的任何 OS 平台上注册新外部语言扩展。 有关详细信息，请参阅[语言扩展](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)。
 
 > [!NOTE]
-> 目前仅支持将 Java  用作外部语言。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。 若要详细了解如何使用 R  和 Python  ，请参阅 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services)。
+> 目前仅支持将 Java  用作外部语言。 “R”和“Python”是保留名称，不能使用这些特定名称创建外部语言   。 若要详细了解如何使用 R  和 Python  ，请参阅 [SQL Server 机器学习服务](https://docs.microsoft.com/sql/advanced-analytics/)。
 
 ## <a name="syntax"></a>语法
 

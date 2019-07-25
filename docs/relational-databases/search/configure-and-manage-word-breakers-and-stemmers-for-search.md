@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d071c934e5ebf6cb08b649bc33735cf39f4f0cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048948"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388344"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ GO
 若要查看特定列的断字符语言，请运行以下语句。
    
 ```sql 
-SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
+SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ```  
 
 如需其他选项和详细信息，请参阅 [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)。
@@ -133,11 +133,9 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
  每个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常都包括新的断字符，这些断字符与早期断字符相比具有更好的语言规则并且更加准确。 新断字符的行为可能与从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入的全文索引中的断字符行为稍有不同。
  
 如果全文目录是在数据库升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本时导入的，这一点将非常重要。 该全文目录中全文索引使用的一种或多种语言现在可能与新断字符关联。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
-  
-
+ 
 ## <a name="see-also"></a>另请参阅  
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [为全文搜索配置和管理非索引字和非索引字表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- 
-  
+
