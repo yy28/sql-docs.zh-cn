@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|通信链接失败|在函数完成处理之前, 驱动程序与连接到的数据源之间的通信链接失败。|  
 |22001|字符串数据, 右截断|为列返回的可变长度书签已截断。|  
 |22002|需要指示器变量, 但未提供|NULL 数据提取到*StrLen_or_IndPtr*设置的列中, **SQLBINDCOL** (或 SQL_DESC_INDICATOR_PTR 通过**SQLSetDescField**或**SQLSetDescRec**设置) 为 null 指针。|  
-|22003|数值超出范围|返回一个或多个绑定列的数值 (作为数字或字符串) 将导致截断数字的整个部分 (而不是小数部分)。<br /><br /> 有关详细信息, [请[参阅附录](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)D:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22003|数值超出范围|返回一个或多个绑定列的数值 (作为数字或字符串) 将导致截断数字的整个部分 (而不是小数部分)。<br /><br /> 有关详细信息, 请[参阅附录](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) [D:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
 |22007|Datetime 格式无效|结果集中的字符列已绑定到日期、时间或时间戳 C 结构, 列中的值分别为无效的日期、时间或时间戳。|  
 |22012|被零除|返回了算术表达式中的值, 从而导致被零除。|  
 |22015|间隔字段溢出|从精确数值或间隔 SQL 类型赋值到 interval C 类型会导致前导字段的有效位丢失。<br /><br /> 将数据提取到 interval C 类型时, interval C 类型中没有 SQL 类型的值的表示形式。|  
