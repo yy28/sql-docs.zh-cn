@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: 90efdf00d205cc5dedd7c6645d3c818ed324f147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63b66f13f6a0143368ee5c9df6b598aa74b2287d
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68161569"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419307"
 ---
 > [!NOTE]
-> SQL Server 大数据群集将为通过 SQL Server 2019 早期采用计划的有限公共预览版发布。 若要请求访问权限，注册[此处](https://aka.ms/eapsignup)，并指定你感兴趣，若要试用 SQL Server 大数据群集。 Microsoft 将会审的所有请求，并尽可能快地做出响应。
+> 自 SQL Server 2019 CTP 3.2 起，SQL Server 大数据群集提供公共预览。
+> 在 SQL Server 2019 CTP 3.2 之前，SQL Server 大数据群集通过 SQL Server 2019 抢先采用计划提供有限的公共预览。
