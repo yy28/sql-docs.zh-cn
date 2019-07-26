@@ -8,15 +8,15 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8996d47c58841f668813c8ff344683150e456fb3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 218ae9bd0685370f38942592fd32da75272fbcac
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345003"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470310"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 中 SQL Server 机器学习服务安装之间的差异  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 Windows 上, SQL Server 2019 安装程序将更改外部进程的隔离机制。 此更改会将本地辅助角色帐户替换为[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), 这是 Windows 上运行的客户端应用程序的隔离技术。 
 

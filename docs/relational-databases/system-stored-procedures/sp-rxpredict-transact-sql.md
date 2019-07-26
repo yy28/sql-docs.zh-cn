@@ -1,10 +1,10 @@
 ---
 title: sp_rxPredict | Microsoft Docs
-ms.date: 08/20/2018
+ms.date: 07/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -13,23 +13,24 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_rxPredict procedure
-author: HeidiSteen
-ms.author: heidist
-ms.openlocfilehash: dadaa5f51f359d9a6803d504d6b3a0da64f39852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 9cd9bb481ec54f9d99c80aba54241827c2a118cf
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126422"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471072"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-生成的机器学习模型存储在 SQL Server 数据库中的二进制格式包含给定输入的预测的值。
+为给定输入生成预测值, 该输入包含以二进制格式存储在 SQL Server 数据库中的机器学习模型。
 
-提供了 R 和 Python 机器学习模型中近实时地评分。 `sp_rxPredict` 为提供包装的存储的过程`rxPredict`中的 R 函数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)并[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)，和[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函数中[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)并[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 它编写的C++专门针对计分操作进行了优化。
+以近乎实时的速度对 R 和 Python 机器学习模型进行评分。 `sp_rxPredict``rxPredict`是作为[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)中 R 函数的包装提供的存储过程, 以及[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)中的[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函数。 它是用编写C++的, 专门针对计分操作进行了优化。
 
-虽然必须序列化并存储在目标数据库引擎实例上的二进制格式后使用 R 或 Python，创建模型，但可以使用它从该数据库引擎实例，即使未安装 R 或 Python 集成。 有关详细信息，请参阅[实时评分 sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
+尽管必须使用 R 或 Python 来创建模型, 但在目标数据库引擎实例上以二进制格式对其进行序列化并存储后, 即使未安装 R 或 Python 集成, 也可以从该数据库引擎实例中使用该模型。 有关详细信息, 请参阅[sp_rxPredict 的实时评分](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
 
 ## <a name="syntax"></a>语法
 
@@ -41,7 +42,7 @@ sp_rxPredict  ( @model, @input )
 
 **model**
 
-预先训练的模型中受支持的格式。 
+支持格式的预先训练模型。 
 
 **input**
 
@@ -49,23 +50,23 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="return-values"></a>返回值
 
-返回评分列，以及输入的数据源中的任何传递列。
-其他评分列，如置信区间，则可以算法是否支持生成这样的值返回。
+返回分数列以及输入数据源中的任何传递列。
+如果算法支持生成此类值, 则可以返回其他分数列, 如置信区间。
 
 ## <a name="remarks"></a>备注
 
-若要启用的存储过程的使用，必须在实例上启用 SQLCLR。
+若要启用存储过程, 必须在实例上启用 SQLCLR。
 
 > [!NOTE]
-> 会存在安全隐患 enabing 到此选项。 使用备用实现，如下所示[TRANSACT-SQL 预测](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)函数，如果不能在服务器上启用 SQLCLR。
+> Enabing 此选项有安全隐患。 如果无法在服务器上启用 SQLCLR, 请使用其他实现, 如[TRANSACT-SQL 预测](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)函数。
 
-用户需求`EXECUTE`针对数据库的权限。
+用户需要`EXECUTE`对数据库的权限。
 
 ### <a name="supported-algorithms"></a>支持的算法
 
-若要创建和训练模型，使用适用于 R 或 Python，受支持的算法之一提供的[SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)， [SQL Server 2016 R Server （独立版）](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)， [SQL Server 2017 机器学习服务 （R 或 Python）](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017)，或[SQL Server 2017 服务器 （独立版） （R 或 Python）](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)。
+若要创建和训练模型, 请使用[SQL Server 2016 r Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)提供的 r 或 Python 支持的算法之一, [SQL Server 2016 r Server (独立)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)、 [SQL Server 2017 机器学习服务 (R 或 Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017)或[SQL Server 2017服务器 (独立) (R 或 Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)。
 
-#### <a name="r-revoscaler-models"></a>:RevoScaleR 模型
+#### <a name="r-revoscaler-models"></a>迅驰RevoScaleR 模型
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
@@ -73,7 +74,7 @@ sp_rxPredict  ( @model, @input )
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
-#### <a name="r-microsoftml-models"></a>:MicrosoftML 模型
+#### <a name="r-microsoftml-models"></a>迅驰MicrosoftML 模型
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
@@ -82,7 +83,7 @@ sp_rxPredict  ( @model, @input )
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>:转换提供的 MicrosoftML
+#### <a name="r-transformations-supplied-by-microsoftml"></a>迅驰MicrosoftML 提供的转换
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
@@ -108,19 +109,19 @@ sp_rxPredict  ( @model, @input )
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Python:转换提供的 microsoftml
+#### <a name="python-transformations-supplied-by-microsoftml"></a>PythonMicrosoftml 提供的转换
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
-### <a name="unsupported-model-types"></a>不受支持的模型类型
+### <a name="unsupported-model-types"></a>不支持的模型类型
 
-不支持以下模型类型：
+以下模型类型不受支持:
 
-+ 使用情况建模`rxGlm`或`rxNaiveBayes`RevoScaleR 中的算法
-+ 在 R 中的 PMML 模型
++ 在 RevoScaleR 中`rxGlm`使用`rxNaiveBayes`或算法的模型
++ R 中的 PMML 模型
 + 使用其他第三方库创建的模型 
 
 ## <a name="examples"></a>示例
@@ -134,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-除了成为有效的 SQL 查询中的输入数据 *@inputData* 必须包括在存储模型中的列与列兼容。
+除了是有效的 SQL 查询外, 中 *@inputData* 的输入数据也必须包括与存储模型中的列相匹配的列。
 
-`sp_rxPredict` 仅支持以下.NET 列类型： 双精度型、 float、 short、 ushort、 long、 ulong 和字符串。 您可能需要筛选出输入数据中不支持的类型，然后再使用它进行实时评分。 
+`sp_rxPredict`仅支持以下 .NET 列类型: double、float、short、ushort、long、ulong 和 string。 你可能需要在输入数据中筛选掉不受支持的类型, 然后将其用于实时计分。 
 
-  有关相应 SQL 类型的信息，请参阅[SQL-CLR 类型映射](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
+  有关相应的 SQL 类型的信息, 请参阅[sql-Clr 类型映射](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
 

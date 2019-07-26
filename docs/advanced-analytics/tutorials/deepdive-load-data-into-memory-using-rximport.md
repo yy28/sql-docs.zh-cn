@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fb98887d9cfd3f1997ce82620eeff5df98ba6b1e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 6e7e986b3d0ebd21527d730cb5b4bd5fa60d1c4f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469734"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>使用 rxImport 将数据加载到内存中 (SQL Server 和 RevoScaleR 教程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
@@ -33,7 +33,7 @@ ms.locfileid: "68344669"
     rxSetComputeContext("local")
     ```
 
-2. 如果 sqlQuery  参数中存在效的 SQL 语句，则创建新的 SQL Server 数据源对象。 此示例获取具有最高风险评分的观测值的子集。 这样一来，只有真正需要的数据才会放入本地内存。
+2. 如果 sqlQuery 参数中存在效的 SQL 语句，则创建新的 SQL Server 数据源对象。 此示例获取具有最高风险评分的观测值的子集。 这样一来，只有真正需要的数据才会放入本地内存。
 
     ```R
     sqlServerProbDS \<- RxSqlServerData(
@@ -72,7 +72,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 ## <a name="more-about-rximport"></a>详细了解 rxImport
 
-不仅可以使用 rxImport  来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
+不仅可以使用 rxImport 来移动数据，还可在读取它的过程中转换数据。 例如，可以为固定宽度的列指定字符数，提供变量的说明，设置因子列的级别，甚至还能创建可在导入后使用的新级别。
 
 在导入过程中, **rxImport**函数将变量名称赋给列, 但可以使用*colInfo*参数指示新变量名称, 或使用*colClasses*参数更改数据类型。
 

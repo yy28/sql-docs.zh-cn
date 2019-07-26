@@ -7,15 +7,15 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5050fc0d0fcbb6c70b7aabea1b67d75cc686b96b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 9e5fb470e9045060e6cf2423470c2e4e1ee14f30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345234"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469651"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server 中的 Python 和 R 教程的 Iris 演示数据 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在此练习中, 将创建一个 SQL Server 数据库, 用于存储来自[Iris 花数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)的数据和基于相同数据的模型。 Iris 数据同时包含在 SQL Server 安装的 R 和 Python 分发版中, 用于 SQL Server 的机器学习教程。 
 

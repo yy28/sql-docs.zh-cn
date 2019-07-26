@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7df044c641da5d8605e5bb25fafed9ea02af77f4
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 65d5d999df39909a5419883736686c5bc22e0062
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344689"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469809"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>创建 R 模型 (SQL Server 和 RevoScaleR 教程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
@@ -43,7 +43,7 @@ ms.locfileid: "68344689"
      summary(linModObj)
      ```
 
-你可能会很奇怪一个普通的 R 函数（如 summary  ）会在此起作用，因为在上一步中，你将计算上下文设置为服务器。 但是，即使 **rxLinMod** 函数使用远程计算上下文创建模型，它也会返回包含本地工作站模型的对象并将其存储在共享目录中。
+你可能会很奇怪一个普通的 R 函数（如 summary）会在此起作用，因为在上一步中，你将计算上下文设置为服务器。 但是，即使 **rxLinMod** 函数使用远程计算上下文创建模型，它也会返回包含本地工作站模型的对象并将其存储在共享目录中。
 
 因此，你可以假定该模型是使用“本地”上下文创建的，然后对其运行标准 R 命令。
 
@@ -77,7 +77,7 @@ Condition number: 1.0184
 
 将计算上下文保持为原样。 还会继续使用相同的数据源。
 
-1. 调用 rxLogit  函数并传递需用于定义模型的公式。
+1. 调用 rxLogit 函数并传递需用于定义模型的公式。
 
     ```R
     logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
@@ -87,7 +87,7 @@ Condition number: 1.0184
     
     模型如此大的原因在于，在 R 中（以及在 **RevoScaleR** 包中），分类系数变量的每个级别都自动被视为单独的虚拟变量。
   
-2. 若要查看返回模型的摘要，请调用 summary  函数。
+2. 若要查看返回模型的摘要，请调用 summary 函数。
   
     ```R
     summary(logitObj)

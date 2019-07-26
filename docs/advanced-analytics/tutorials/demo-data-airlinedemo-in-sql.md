@@ -7,15 +7,15 @@ ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 82afddf861ecda2d25260f69e532c63a1203030b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 38e61bcbf3a5ff5ed44f85d5ad28406550e5a726
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344628"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469673"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教程的航班到货演示数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在此练习中, 将创建一个 SQL Server 数据库, 用于存储 R 或 Python 内置航空公司演示数据集的导入数据。 R 和 Python 分发版提供了等效的数据, 您可以使用 Management Studio 将其导入到 SQL Server 数据库中。
 

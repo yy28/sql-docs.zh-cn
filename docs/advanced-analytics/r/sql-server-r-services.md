@@ -8,15 +8,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e849140125ba39c7c1d8601c5ef32880a9d633ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344843"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469910"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R Services 是 SQL Server 2016 数据库引擎实例的附加组件，用于在 SQL Server 上执行 R 代码和函数。 代码在可扩展性框架中运行（与核心引擎进程隔离），但可作为存储过程、包含 R 语句的 T-SQL 脚本或包含 T-SQL 的 R 代码，此时完全适用于关系数据。 
 
@@ -46,7 +46,7 @@ SQL Server 2016 仅适用于 R。 下表介绍了 SQL Server 2016 中的功能�
 
 数据库内分析的最常见方法是使用[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，将 R 脚本作为输入参数传递。
 
-经典的客户端-服务器交互是另一种方法。 在具有 IDE 的任何客户端工作站中，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，然后编写代码，将执行（称为“远程计算上下文”）推送到数据，以及将操作推送到远程 SQL 服务器。  
+经典的客户端-服务器交互是另一种方法。 在具有 IDE 的任何客户端工作站中，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，然后编写代码，将执行（称为“远程计算上下文”）推送到数据，以及将操作推送到远程 SQL 服务器。 
 
 最后，如果使用的是[独立服务器](r-server-standalone.md)和 Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在 SQL Server 机器学习服务（数据库中）上部署生产代码。 
 

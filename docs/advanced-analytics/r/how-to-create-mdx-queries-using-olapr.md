@@ -7,15 +7,15 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2d3b9df3e99abe3a443dd0fa9b66921a0e9a4506
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 09f2f1dcca3fd8d0828a87e8c781d05c4ad8e5f5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345568"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470124"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中创建 MDX 查询
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)包支持针对 SQL Server Analysis Services 中承载的多维数据集的 MDX 查询。 您可以基于现有多维数据集生成查询, 浏览维度和其他多维数据集对象, 并粘贴现有 MDX 查询以检索数据。
 
@@ -79,7 +79,7 @@ ms.locfileid: "68345568"
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.带切片器的基本 MDX
 
-此 MDX 查询将选择度量值  ，用于 Internet 销售计数和销量的计数和数量，并将它们放置到“列”轴。 它将 SalesTerritory 维度的成员添加为切片器  来筛选查询，使计算中仅使用澳大利亚的销售额。
+此 MDX 查询将选择度量值，用于 Internet 销售计数和销量的计数和数量，并将它们放置到“列”轴。 它将 SalesTerritory 维度的成员添加为切片器来筛选查询，使计算中仅使用澳大利亚的销售额。
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -156,11 +156,11 @@ explore(ocs)
 
 | 结果  |
 | ----|
-| Analysis Services 教程 |
-|Internet 销售额 |
-|分销商销售额 |
-|销售汇总 |
-|[1] TRUE |
+| Analysis Services 教程|
+|Internet 销售额|
+|分销商销售额|
+|销售汇总|
+|[1] TRUE|
 
 #### <a name="to-get-a-list-of-cube-dimensions"></a>获取多维数据集维度列表
 
@@ -174,9 +174,9 @@ explore(ocs, "Sales")
 
 | 结果  |
 | ----|
-| 客户 |
-|日期 |
-|地区 |
+| 客户|
+|日期|
+|地区|
 
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>返回指定维度和层次结构的所有成员
@@ -191,9 +191,9 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 
 | 结果  |
 | ----|
-| 附件 |
-|自行车 |
-|服装 |
+| 附件|
+|自行车|
+|服装|
 |_组件_|
 |-> 程序集组件|
 |-> 程序集组件|

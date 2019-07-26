@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4e95fa47911b3942b44624a141a5c1c4c574b25a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f85392f8bfbb7ee89b8387b0f7d27038b9a8303b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343375"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470468"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 语言扩展
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Python 扩展是关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 它添加了一个 Python 执行环境、Anaconda 分发和 Python 3.5 运行时和解释器、标准库和工具, 以及适用于 Python 的 Microsoft 产品库: 用于进行大规模分析的[revoscalepy](../python/ref-py-revoscalepy.md)和[microsoftml](../python/ref-py-microsoftml.md)机器学习算法。 
 

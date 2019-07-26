@@ -7,15 +7,16 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f2bea677d6b87d7baa78fed28be82252c52a74c9
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345815"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495401"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server 机器学习服务 (R、Python)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 机器学习服务是 SQL Server 的一项功能, 用于执行数据库中 R 和 Python 脚本。 此功能包括用于高性能预测分析和机器学习的[Microsoft R 和 Python 包](#components)。 关系数据可以在 R 和 Python 脚本中通过包含 R 和 Python 语句的存储过程、T-sql 脚本或包含 T-sql 的 R 和 Python 代码来使用。
 

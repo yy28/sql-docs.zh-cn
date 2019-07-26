@@ -8,15 +8,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dec0fe7147eab6a4b6545decf99e1731d773957c
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343416"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470290"
 ---
 #  <a name="get-r-and-python-package-information"></a>获取 R 和 Python 包信息
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 有时, 当使用多个环境或 R 或 Python 的安装时, 需要验证正在运行的代码是使用适用于 Python 的预期环境还是适用于 R 的正确工作区。例如, 如果已[升级 r 或 Python](../install/upgrade-r-and-python.md), 则 r 库的路径可能位于不同于默认的文件夹中。 此外, 如果您安装了 R 客户端或独立服务器的实例, 则您的计算机上可能有多个 R 库。
 

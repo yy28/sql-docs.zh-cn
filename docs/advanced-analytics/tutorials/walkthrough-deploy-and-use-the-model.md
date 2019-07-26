@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2cb6bf28fa849e2015d111c564bb0af84f103d19
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 96744b15bef03b7d8badc803b1fa5f5de382e64f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345856"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470549"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型并在 SQL Server 中使用它 (演练)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本课程中, 将了解如何通过从存储过程调用训练的模型在生产环境中部署 R 模型。 可以从 R 或支持[!INCLUDE[tsql](../../includes/tsql-md.md)]的任何应用程序编程语言 (如C#、Java、Python 等) 调用存储过程, 并使用该模型对新观测值进行预测。
 

@@ -7,15 +7,15 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 298328db563cac8183b14b47e5c75c850c782d58
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c2d27b295df6b29d69ce90a7c70c135a197b68b0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345460"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470227"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server 中的 Python 模块)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **microsoftml**是 Microsoft 提供的 Python35 兼容模块, 提供高性能机器学习算法。 它包括用于定型和转换、计分、文本和图像分析的函数以及用于从现有数据派生值的功能提取。
 

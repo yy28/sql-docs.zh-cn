@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dbe5bcb39ddbcc2b4968beccb9363a92cf6e8817
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 41403018f6b3a2740328ad1576f8c357e7896b12
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345871"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470565"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>使用 T-sql 定型和保存 Python 模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文是[针对 SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)教程的一部分。 
 
@@ -182,7 +182,7 @@ ms.locfileid: "68345871"
     *来自外部脚本的 STDOUT 消息:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. 打开表 nyc_taxi_models  。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
+3. 打开表 nyc_taxi_models。 可以看到已添加了一个新行，在列 _model_中包含序列化模型。
 
     *revoscalepy_model* *0x8003637265766F7363616c....*
 

@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c7d88137994cf5d920462cc4942eb5b632ae3d6e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 752202a50222b67af659408c259ce29d9c65d703
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344677"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469766"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R 转换数据 (SQL Server 和 RevoScaleR 教程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
@@ -36,7 +36,7 @@ ms.locfileid: "68344677"
 从**启动**包中, 使用**logit**, 该函数可计算 logit 的反函数。 也就是说，**inv.logit** 函数将 logit 转换为范围在 [0，1] 之间的概率。
 
 > [!TIP] 
-> 获取此范围的预测值的另一种方法是在对 rxPredict  的最初调用中将 type  参数设为 **response**。
+> 获取此范围的预测值的另一种方法是在对 rxPredict 的最初调用中将 type 参数设为 **response**。
 
 1. 首先, `ccScoreOutput`创建一个数据源来保存表的目标数据。
   

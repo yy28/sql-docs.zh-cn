@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9146020fb35d729575c8441e71b711e287399a75
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d01004fb54c0410acc372c5c66930f33bbd8856
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345525"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469999"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服务配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]是一项服务, 可管理和执行外部脚本, 这与全文索引和查询服务启动单独的主机用于处理全文查询的方式类似。
 
@@ -74,7 +74,7 @@ ms.locfileid: "68345525"
 
 如果组织中的某个策略要求定期更改密码，你可能需要强制 Launchpad 服务重新生成 Launchpad 为其辅助角色帐户维护的已加密密码。
 
-若要启用此设置并强制密码刷新，请在 SQL Server 配置管理器中打开 Launchpad 服务的“属性”窗格，单击“高级”，然后将“重置外部用户密码”更改为“是”。     应用此更改后，将立即为所有用户帐户重新生成密码。 若要在此更改后运行外部脚本, 必须重新启动启动板服务, 此时将读取新生成的密码。
+若要启用此设置并强制密码刷新，请在 SQL Server 配置管理器中打开 Launchpad 服务的“属性”窗格，单击“高级”，然后将“重置外部用户密码”更改为“是”。 应用此更改后，将立即为所有用户帐户重新生成密码。 若要在此更改后运行外部脚本, 必须重新启动启动板服务, 此时将读取新生成的密码。
 
 若要定期重置密码，可以手动设置此标志或使用脚本。
 

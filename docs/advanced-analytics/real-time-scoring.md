@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345678"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469971"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>SQL Server 机器学习中的 sp_rxPredict 的实时评分
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 实时评分使用[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)系统存储过程和 CLR 扩展功能 SQL Server 来实现预测工作负荷的高性能预测或分数。 实时评分是语言不可知的, 在 R 或 Python 运行时间上无依赖项执行。 假设已使用 Microsoft 函数创建和训练了一个模型, 然后将其序列化为 SQL Server 中的二进制格式, 则可以使用实时评分在没有 R 或 Python 加载项的 SQL Server 实例上生成新数据输入的预测结果随.
 

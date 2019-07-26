@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7cc6b6b42f7e9fa743724a414aa5b53435d7b0ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086836"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476279"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68086836"
   
 > [!NOTE] 
 >  
-> 仅当已安装并启用支持外部脚本执行的功能，此动态管理视图 (DMV) 是可用。 有关详细信息，请参阅[SQL Server 2016 中的 R Services](../../advanced-analytics/r/sql-server-r-services.md)并[中的机器学习服务 （R、 Python） SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md)。  
+> 此动态管理视图 (DMV) 仅在已安装并启用支持外部脚本执行的功能时可用。 有关详细信息, 请参阅[SQL Server 2017 及更高版本中 SQL Server 2016 和机器学习服务 (r、Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md)[中的 R Services](../../advanced-analytics/r/sql-server-r-services.md) 。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 收到的这对应于的进程 ID [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**唯一标识符**|发送外部脚本请求的进程的 ID。 这对应于接收的进程 ID[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|表示支持的脚本语言的关键字。 |  
 |degree_of_parallelism|**int**|数字，指示已创建的并行进程数。 此值可能与请求的并行进程数不同。|  
 |external_user_name|**nvarchar**|在其下执行脚本的 Windows 工作线程帐户。|  
@@ -52,7 +52,7 @@ ms.locfileid: "68086836"
 
 此视图可以使用脚本语言标识符进行筛选。
 
-此视图还返回在其下运行脚本的工作线程帐户。 有关辅助角色帐户使用的外部脚本的信息，请参阅在处理 (SQLRUserGroup) 部分中的使用的标识[SQL Server 机器学习服务中的可扩展性框架的安全性概述](../../advanced-analytics/concepts/security.md#sqlrusergroup)。
+此视图还返回在其下运行脚本的工作线程帐户。 有关外部脚本所使用的辅助角色帐户的信息, 请参阅[SQL Server 机器学习服务中扩展性框架的 "安全概述](../../advanced-analytics/concepts/security.md#sqlrusergroup)" 部分中的 "用于处理 (SQLRUserGroup) 的标识" 部分。
 
 在 **external_script_request_id** 字段中返回的 GUID 还表示用于存储临时文件的受保护目录的文件名。 每个工作线程帐户（如 MSSQLSERVER01）都表示单个 SQL 登录名或 Windows 用户，可以用于运行多个脚本请求。 默认情况下，这些临时文件会在请求脚本完成之后进行清理。
  

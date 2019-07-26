@@ -1,33 +1,33 @@
 ---
-title: 介绍 R 函数的 SQL Server 机器学习的快速入门
-description: 在本快速入门，了解如何编写高级统计计算的 R 函数。
+title: 显示 R 函数的快速入门-SQL Server 机器学习
+description: 本快速入门介绍如何为高级统计计算编写 R 函数。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fa2d47729641e8efd13e9e30be7a61186a892b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f43709f563d1dc5838cdd6636bcac4dc5664a6da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962014"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469273"
 ---
 # <a name="quickstart-using-r-functions"></a>快速入门：使用 R 函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-如果你在完成上一快速入门教程，您熟悉基本的操作并可供更复杂，例如统计函数。 复杂而无法在 T-SQL 中实现的高级统计函数可以在 R 中使用只有一行代码。
+如果你已完成前面的快速入门, 就会熟悉基本操作并为更复杂的内容 (如统计函数) 做好准备。 在 T-sql 中实现复杂的高级统计函数可在 R 中完成, 只需要一行代码。
 
-在此快速入门中，将嵌入 R 数学和 SQL Server 中的实用工具函数存储过程。
+在本快速入门中, 你将在 SQL Server 存储过程中嵌入 R 数学和实用函数。
 
 ## <a name="prerequisites"></a>先决条件
 
-上一个快速入门中， [SQL Server 中存在验证 R](quickstart-r-verify.md)、 提供的信息和链接设置为本快速入门所需的 R 环境。
+以前的快速入门,[验证 SQL Server 中是否存在 r](quickstart-r-verify.md), 提供了设置本快速入门所需的 R 环境的信息和链接。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>创建一个存储过程来生成随机数字
 
-为简单起见，让我们使用 R`stats`包，其中安装并加载默认情况下，当在 SQL Server 中安装 R 功能支持。 此包中包含数百个用于执行常用统计任务的函数，其中，`rnorm` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
+为简单起见, 让我们使用 r `stats`包, 默认情况下, 当你在 SQL Server 中安装 R 功能支持时, 将默认安装和加载此包。 此包中包含数百个用于执行常用统计任务的函数，其中，`rnorm` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
 
 例如，以下 R 代码在给定了标准差 3 的情况下返回平均数为 50 的 100 个数字。
 
@@ -48,7 +48,7 @@ EXEC sp_execute_external_script
 
 如果你希望更轻松地生成不同的一组随机数字，那该怎么办？
 
-与 SQL Server 结合使用时轻松达成所愿： 定义从用户获取的参数的存储的过程。 然后，将那些参数作为变量传递给 R 脚本。
+与 SQL Server 结合使用时, 这很简单: 定义从用户获取参数的存储过程。 然后，将那些参数作为变量传递给 R 脚本。
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -79,7 +79,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>使用 R 实用工具函数进行故障排除
 
-默认情况下，R 的安装包括`utils`包，可用于调查当前 R 环境中提供的各种实用工具函数。 如果你发现你的 R 代码在 SQL Server 中执行时和在环境外执行时执行方式存在差异，则上述函数会比较有用。
+默认情况下, R 的安装包括`utils`包, 其中提供了用于调查当前 R 环境的各种实用工具函数。 如果你发现你的 R 代码在 SQL Server 中执行时和在环境外执行时执行方式存在差异，则上述函数会比较有用。
 
 例如，你可以使用 R `memory.limit()` 函数获取当前 R 环境的内存。 因为 `utils` 包默认情况下已安装但未加载，因此你必须首先使用 `library()` 函数加载该包。
 
@@ -94,13 +94,13 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-许多用户喜欢使用的系统计时函数在 R 中，如`system.time`和`proc.time`，以捕获 R 进程使用的时间和分析性能问题。
+许多用户喜欢使用 r 中的系统计时函数 (如`system.time`和`proc.time`) 来捕获 r 进程使用的时间, 并分析性能问题。
 
-有关示例，请参阅本教程中：[创建数据功能](../tutorials/walkthrough-create-data-features.md)。 在本演练中，要比较的两种方法从数据创建特征的性能的解决方案中嵌入 R 计时函数：R 函数 vs。T-SQL 函数。
+有关示例, 请参阅本教程:[创建数据功能](../tutorials/walkthrough-create-data-features.md)。 在本演练中, R 计时函数嵌入在解决方案中, 用于比较两种方法的性能, 以便从数据创建特征:R 函数与T-SQL 函数。
 
 ## <a name="next-steps"></a>后续步骤
 
 接下来，你将在 SQL Server 中使用 R 创建一个预测模型。
 
 > [!div class="nextstepaction"]
-> [快速入门：创建预测模型](quickstart-r-create-predictive-model.md)
+> [起步创建预测模型](quickstart-r-create-predictive-model.md)

@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 88a8bb4ab81f3e7c18bcafce70488583fa0421fa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f8ed06135c7e97d0ba66a36615e7379e41c65e8b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344640"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469686"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>创建数据库和权限 (SQL Server 和 RevoScaleR 教程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
@@ -38,9 +38,9 @@ ms.locfileid: "68344640"
 
 ## <a name="create-a-login"></a>创建登录名
   
-1. 单击“新建查询”  ，然后将数据库上下文更改为 master 数据库。
+1. 单击“新建查询”，然后将数据库上下文更改为 master 数据库。
   
-2. 在新的“查询”  窗口中，运行以下命令以创建用户帐户并将其分配到本教程中使用的数据库。 如有需要，请务必更改数据库名称。
+2. 在新的“查询”窗口中，运行以下命令以创建用户帐户并将其分配到本教程中使用的数据库。 如有需要，请务必更改数据库名称。
 
 3. 若要验证登录名, 请选择新数据库, 展开 "**安全性**", 然后展开 "**用户**"。
   

@@ -7,15 +7,15 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7aee673eb548531798f98a5a49266a2cd7211b63
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345556"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470116"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何使用中的机器学习模型生成预测和预测 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 使用现有模型预测或预测新数据输入的结果是机器学习中的核心任务。 本文枚举 SQL Server 中生成预测的方法。 在这些方法中, 这种方法是高速预测的内部处理方法, 其中速度基于运行时依赖项的增量缩减。 依赖关系越少, 预测越快。
 

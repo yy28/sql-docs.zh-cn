@@ -10,22 +10,22 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513013"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475975"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
 
   索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 SQL Server 索引设计指南包含帮助您设计高效索引以满足应用程序需要的信息和最佳实践。  
   
-**适用于**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]通过[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有说明。  
+**适用**于: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] (除非另有说明)。  
   
  本指南假定读者对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引类型有一般了解。 有关索引类型的一般说明，请参阅 [索引类型](../relational-databases/indexes/indexes.md)。  
   
-##  <a name="Top"></a> 本指南中  
+##  <a name="Top"></a>本指南中  
 
  [索引设计基础知识](#Basics)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62513013"
   
  为数据库及其工作负荷选择正确的索引是一项需要在查询速度与更新所需开销之间取得平衡的复杂任务。 如果索引较窄，或者说索引关键字中只有很少的几列，则需要的磁盘空间和维护开销都较少。 而另一方面，宽索引可覆盖更多的查询。 您可能需要试验若干不同的设计，才能找到最有效的索引。 可以添加、修改和删除索引而不影响数据库架构或应用程序设计。 因此，应试验多个不同的索引而无需犹豫。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”  菜单上选择“包括实际的执行计划”  。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”菜单上选择“包括实际的执行计划”。  
   
  不要总是将索引的使用等同于良好的性能，或者将良好的性能等同于索引的高效使用。 如果只要使用索引就能获得最佳性能，那查询优化器的工作就简单了。 但事实上，不正确的索引选择并不能获得最佳性能。 因此，查询优化器的任务是只在索引或索引组合能提高性能时才选择它，而在索引检索有碍性能时则避免使用它。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62513013"
 
  建议的索引设计策略包括以下任务：  
   
-1.  了解数据库本身的特征。 例如，它是频繁修改数据的联机事务处理 (OLTP) 数据库，还是主要包含只读数据且必须快速处理大型数据集的决策支持系统 (DSS) 或数据仓库 (OLAP) 数据库？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 内存优化的列存储* 索引尤其适用于典型的数据仓库数据集。 列存储索引可以通过为常见数据仓库查询（如筛选、聚合、分组和星型联接查询）提供更快的性能，以转变用户的数据仓库体验。 有关详细信息，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)。  
+1.  了解数据库本身的特征。 例如，它是频繁修改数据的联机事务处理 (OLTP) 数据库，还是主要包含只读数据且必须快速处理大型数据集的决策支持系统 (DSS) 或数据仓库 (OLAP) 数据库？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 内存优化的列存储* 索引尤其适用于典型的数据仓库数据集。 列存储索引可以通过为常见数据仓库查询（如筛选、聚合、分组和星型联接查询）提供更快的性能，以转变用户的数据仓库体验。 有关详细信息, 请参阅[描述的列存储索引](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
 2.  了解最常用的查询的特征。 例如，了解到最常用的查询联接两个或多个表将有助于决定要使用的最佳索引类型。  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  此查询的下列执行计划显示了查询优化器使用 SORT 运算符按 ORDER BY 子句指定的顺序返回结果集。  
   
- ![执行计划显示了一种使用运算符。](media/indexsort1.gif "执行计划显示了一种使用运算符。")  
+ ![执行计划显示使用排序运算符。](media/indexsort1.gif "执行计划显示使用排序运算符。")  
   
  如果使用与查询的 ORDER BY 子句中的键列匹配的键列创建索引，则无需在查询计划中使用 SORT 运算符，从而使查询计划更有效。  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  再次执行查询后，下列执行计划显示未使用 SORT 运算符，而使用了新创建的非聚集索引。  
   
- ![执行计划显示了一种不使用运算符](media/insertsort2.gif "执行计划显示了一种不使用运算符")  
+ ![执行计划显示未使用排序运算符](media/insertsort2.gif "执行计划显示未使用排序运算符")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以在两个方向上同样有效地移动。 对于一个在 ORDER BY 子句中列的排序方向倒排的查询，仍然可以使用定义为 `(RejectedQty DESC, ProductID ASC)` 的索引。 例如，包含 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查询可以使用该索引。  
   
  只可以为键列指定排序顺序。 [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 目录视图和 INDEXKEY_PROPERTY 函数报告索引列是按升序还是降序存储。  
   
- ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
+ ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
   
 ##  <a name="Clustered"></a> 聚集索引设计指南  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   可用于范围查询。  
   
- 如果未使用 UNIQUE 属性创建聚集索引， [!INCLUDE[ssDE](../includes/ssde-md.md)] 将向表自动添加一个 4 字节的唯一标识符列。 必要时， [!INCLUDE[ssDE](../includes/ssde-md.md)] 将向行自动添加一个唯一标识符值以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
+ 如果未使用 UNIQUE 属性创建聚集索引, 将[!INCLUDE[ssDE](../includes/ssde-md.md)]向表自动添加一个4字节的 uniquifier> 列。 需要时, [!INCLUDE[ssDE](../includes/ssde-md.md)]会自动将 uniquifier> 值添加到行中, 以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
   
 ### <a name="clustered-index-architecture"></a>聚集索引体系结构  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      宽键是若干列或若干大型列的组合。 所有非聚集索引将聚集索引中的键值用作查找键。 为同一表定义的任何非聚集索引都将增大许多，这是因为非聚集索引项包含聚集键，同时也包含为此非聚集索引定义的键列。  
   
- ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
+ ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
   
 ##  <a name="Nonclustered"></a> 非聚集索引设计指南  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您应该确定修改数据时在查询性能上的提升是否超过了对性能的影响，以及是否需要额外的磁盘空间要求。  
   
- ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
+ ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
   
 ##  <a name="Unique"></a> 唯一索引设计指南  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   唯一非聚集索引可以包括包含性非键列。 有关详细信息，请参阅 [具有包含列的索引](#Included_Columns)。  
   
- ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
+ ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
   
 ##  <a name="Filtered"></a> 筛选索引设计指南  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  将数据转换从比较运算符的左边移动到右边可能会改变转换的含义。 在上例中，将 CONVERT 运算符添加到右边时，相应的比较从整数比较更改为 `varbinary` 比较。  
   
- ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
+ ![用于 "返回页首" 链接的箭头图标](media/uparrow16x16.gif "用于 \"返回页首\" 链接的箭头图标")[本指南中](#Top)  
   
 ##  <a name="Additional_Reading"></a> 其他阅读主题  
 

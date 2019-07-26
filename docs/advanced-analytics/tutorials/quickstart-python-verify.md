@@ -1,44 +1,44 @@
 ---
-title: SQL Server 中存在验证 Python 快速入门
-description: 验证 SQL Server 中存在 Python 和机器学习服务的快速入门。
+title: SQL Server 中存在用于验证 Python 的快速入门
+description: 用于验证 Python 和机器学习服务是否存在于 SQL Server 中的快速入门。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0a2c525c89a70f4a36749d7b9c6fb769362d517b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962044"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469697"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入门：验证 SQL Server 中是否存在 Python 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 包括对数据驻留 SQL Server 数据科学分析 Python 语言支持。 脚本执行是通过存储过程，使用以下方法之一：
+SQL Server 包括对常驻 SQL Server 数据进行数据科学分析的 Python 语言支持。 使用以下两种方法之一通过存储过程执行脚本:
 
-+ 内置[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)存储过程，传递作为输入参数中的 Python 脚本。
-+ Python 脚本中的包装[自定义存储过程](sqldev-in-database-r-for-sql-developers.md)你创建的。
++ 内置的[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)存储过程, 将 Python 脚本作为输入参数传递。
++ 在您创建的[自定义存储过程](sqldev-in-database-r-for-sql-developers.md)中包装 Python 脚本。
 
-在此快速入门中，您将验证[SQL Server 2017 机器学习服务](../what-is-sql-server-machine-learning.md)安装和配置。
+在本快速入门中, 你将验证是否已安装并配置[SQL Server 2017 机器学习服务](../what-is-sql-server-machine-learning.md)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
-本演练需要访问 SQL Server 的实例[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)安装。
+此练习需要访问安装了[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)SQL Server 的实例。
 
-SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚本编写功能默认处于禁用状态，因此可能需要[启用外部脚本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并确认**SQL Server Launchpad 服务**在开始之前运行。
+SQL Server 实例可位于 Azure 虚拟机或本地。 请注意, 默认情况下禁用外部脚本功能, 因此在开始之前, 您可能需要[启用外部脚本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证**SQL Server Launchpad 服务**是否正在运行。
 
-您还需要用于运行 SQL 查询的工具。 可以运行使用任何数据库管理的 Python 脚本或查询工具，前提是它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储的过程。 本快速入门使用[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+还需要一个用于运行 SQL 查询的工具。 您可以使用任何数据库管理或查询工具运行 Python 脚本, 只要它可以连接到 SQL Server 实例, 然后运行 T-sql 查询或存储过程。 本快速入门使用[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
 
-## <a name="verify-python-exists"></a>验证存在 Python
+## <a name="verify-python-exists"></a>验证 Python 是否存在
 
-你可以确认该机器学习服务 （已启用 SQL Server 实例和安装的 Python 版本。 按照以下步骤。
+你可以确认机器学习服务 (为 SQL Server 实例启用了, 并安装了哪个版本的 Python。 请按照以下步骤操作。
 
-1. 打开 SQL Server Management Studio 并连接到 SQL Server 实例。
+1. 打开 SQL Server Management Studio, 然后连接到 SQL Server 实例。
 
-2. 运行下面的代码。 
+2. 运行以下代码。 
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -48,7 +48,7 @@ SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚�
     GO
     ```
 
-3. Python`print`函数将返回到新版本**消息**窗口。 在下面的示例输出中，您可以看到 SQL Server 在这种情况下具有 Python 版本 3.5.2 安装。
+3. Python `print`函数将该版本返回到 "**消息**" 窗口。 在下面的示例输出中, 可以看到在此示例中 SQL Server 安装了 Python 版本3.5.2。
 
     **结果**
 
@@ -57,19 +57,19 @@ SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚�
     3.5.2 |Continuum Analytics, Inc.| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
     ```
 
-如果收到错误，有很多可以执行以确保可以进行通信的实例和 Python 的事情。
+如果遇到错误, 可以执行的各种操作, 以确保实例和 Python 可以进行通信。
 
-首先，排除任何安装问题。 安装后则需要配置才能启用对外部代码库的使用。 请参阅[安装 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。 同样，请确保快速启动板服务正在运行。
+首先, 排除任何安装问题。 若要启用外部代码库, 必须安装安装后配置。 请参阅[安装 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。 同样, 请确保启动板服务正在运行。
 
-您还必须添加 Windows 用户组`SQLRUserGroup`上的实例，以确保快速启动板可以提供 Python 和 SQL Server 之间的通信的登录名。 （同一个组用于这两个 R 和 Python 代码执行）。有关详细信息，请参阅[创建一个登录名为 SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)。
+还必须将 Windows 用户组`SQLRUserGroup`作为登录名添加到实例上, 以确保快速启动板可以提供 Python 和 SQL Server 之间的通信。 (相同的组用于 R 和 Python 代码执行。)有关详细信息, 请参阅[创建 SQLRUserGroup 的登录名](../security/create-a-login-for-sqlrusergroup.md)。
 
-此外，您可能需要启用已禁用的网络协议或打开防火墙，以便 SQL Server 可以与外部客户端进行通信。 有关详细信息，请参阅[安装程序疑难解答](../common-issues-external-script-execution.md)。
+此外, 你可能还需要启用已禁用的网络协议, 或打开防火墙, 以便 SQL Server 能够与外部客户端进行通信。 有关详细信息, 请参阅[安装疑难解答](../common-issues-external-script-execution.md)。
 
 ## <a name="call-revoscalepy-functions"></a>调用 revoscalepy 函数
 
-若要确认**revoscalepy**不可用，运行示例脚本，以包括[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) ，所生成的统计摘要数据。 以下脚本演示如何从内置 revoscalepy 中包含的示例检索示例.xdf 数据文件。 RxOptions 函数提供**sampleDataDir**参数，它返回的示例文件的位置。
+若要验证**revoscalepy**是否可用, 请运行包含生成统计摘要数据的[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)的示例脚本。 下面的脚本演示了如何从 revoscalepy 中包含的内置示例检索 xdf 数据文件。 RxOptions 函数提供了**sampleDataDir**参数, 该参数返回示例文件的位置。
 
-因为 rx_summary 返回类型的对象`class revoscalepy.functions.RxSummary.RxSummaryResults`，其中包含多个元素，可以使用 pandas 来提取只是一个表格中的数据帧。
+由于 rx_summary 返回一个类型`class revoscalepy.functions.RxSummary.RxSummaryResults`为的对象, 该对象包含多个元素, 因此可以使用 pandas 只提取表格格式的数据帧。
 
 ```sql
 EXEC sp_execute_external_script @language = N'Python', 
@@ -92,11 +92,11 @@ OutputDataSet = dfsummary
 WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
 ```
 
-## <a name="list-python-packages"></a>列出的 Python 包
+## <a name="list-python-packages"></a>列出 Python 包
 
-Microsoft 提供大量预装了机器学习服务的 SQL Server 实例中的 Python 包。 若要查看列表中的哪些 Python 包安装，包括版本，请按照以下步骤。
+Microsoft 提供了许多在 SQL Server 实例中预安装了机器学习服务的 Python 包。 若要查看安装了哪些 Python 包 (包括版本) 的列表, 请执行以下步骤。
 
-1. SQL Server 实例上运行以下脚本。
+1. 在 SQL Server 实例上运行以下脚本。
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -107,7 +107,7 @@ Microsoft 提供大量预装了机器学习服务的 SQL Server 实例中的 Pyt
     GO
     ```
 
-2. 输出是从`pip.get_installed_distributions()`在 Python 和作为返回`STDOUT`消息。
+2. 输出来自`pip.get_installed_distributions()` Python 中, 并作为`STDOUT`消息返回。
 
     **结果**
 
@@ -142,7 +142,7 @@ Microsoft 提供大量预装了机器学习服务的 SQL Server 实例中的 Pyt
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，已确认你的实例已准备好与 Python 配合使用，需要进一步了解基本的 Python 交互。
+现在, 你已确认你的实例可以使用 Python, 接下来请详细了解基本 Python 交互。
 
 > [!div class="nextstepaction"]
-> [快速入门：SQL Server 中的"hello world"Python 脚本](quickstart-python-run-using-t-sql.md)
+> [起步SQL Server 中的 "Hello world" Python 脚本](quickstart-python-run-using-t-sql.md)

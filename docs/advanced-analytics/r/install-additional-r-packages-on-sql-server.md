@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345544"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470104"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安装新的 R 包
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文介绍如何将新的 R 包安装到启用机器学习的 SQL Server 实例中。 有多种方法可用于安装新的 R 包, 具体取决于 SQL Server 的版本以及服务器是否具有 internet 连接。 可以通过以下方法来安装新的包。
 
@@ -63,7 +63,7 @@ R 包库以物理方式位于 SQL Server 实例的 Program Files 文件夹中, �
 
 例如, 下面的过程介绍了如何从 Bioconductor 获取[FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html)包的正确版本, 前提是计算机有权访问 internet。
 
-1.  在“包存档”列表中，查找“Windows 二进制文件”版本。  
+1.  在“包存档”列表中，查找“Windows 二进制文件”版本。
 
 2.  右键单击指向的链接。ZIP 文件, 然后选择 "**将目标另存为**"。
 

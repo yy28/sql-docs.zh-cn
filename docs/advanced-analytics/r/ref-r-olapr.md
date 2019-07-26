@@ -7,15 +7,15 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2363b9ba69f914f828d7445a88d6ee1c784bb096
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 674e4ed4d1967452093e81e7bb4f5518d9237cf6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344878"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469975"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server 中的 R 库)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **olapR**是一个用于针对 SQL Server Analysis Services OLAP 多维数据集的 MDX 查询的 R 函数的 Microsoft 库。 函数不支持所有 MDX 操作, 但可以生成对维度进行切片、切块、深化、汇总和透视的查询。 
 

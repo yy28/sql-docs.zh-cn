@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6e4d1eace0be8d00d536d1ab3782685da9512ab5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344169"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470448"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务
 
@@ -30,11 +30,11 @@ ms.locfileid: "68344169"
 
 + 对于业务连续性, 机器学习服务支持[Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 必须在每个节点上安装机器学习服务和配置包。
 
-+ SQL Server 2017 中的故障转移群集不支持  安装机器学习服务。 但是，SQL Server 2019 支持  此操作。 
++ SQL Server 2017 中的故障转移群集不支持安装机器学习服务。 但是，SQL Server 2019 支持此操作。 
  
 + 不要在域控制器上安装机器学习服务。 安装程序的机器学习服务部分将失败。
 
-+ 请勿在运行数据库内实例的同一台计算机上安装“共享功能”   > “Machine Learning Server”（独立版）  。 独立服务器将争夺相同的资源，从而损害两种安装的性能。
++ 请勿在运行数据库内实例的同一台计算机上安装“共享功能” > “Machine Learning Server”（独立版）。 独立服务器将争夺相同的资源，从而损害两种安装的性能。
 
 + 支持与其他版本的 R 和 Python 并行安装，但不建议这样做。 之所以支持并行安装，是因为 SQL Server 实例使用自己的开源 R 和 Anaconda 发行版副本。 但是不建议这样做，因为在 SQL Server外部的 SQL Server 计算机上运行使用 R 和 Python 的代码会导致各种问题：
     
@@ -54,7 +54,7 @@ ms.locfileid: "68344169"
 
 1. 为 SQL Server 2017 启动安装向导。 
   
-2. 在“安装”选项卡上，选择“新的 SQL Server 独立安装或向现有安装添加功能”。  
+2. 在“安装”选项卡上，选择“新的 SQL Server 独立安装或向现有安装添加功能”。
 
    ![新 SQL Server 独立安装](media/2017setup-installation-page-mlsvcs.PNG)
    
@@ -127,7 +127,7 @@ ms.locfileid: "68344169"
     > 
     > 你还可以使用[Azure Data Studio](../../azure-data-studio/what-is.md), 它支持管理任务和针对 SQL Server 的查询。
   
-2. 连接到安装了机器学习服务的实例，单击“新建查询”以打开查询窗口，然后运行以下命令： 
+2. 连接到安装了机器学习服务的实例，单击“新建查询”以打开查询窗口，然后运行以下命令：
 
     ```sql
     sp_configure
@@ -150,7 +150,7 @@ ms.locfileid: "68344169"
 
 重新启动服务也会自动重启[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]相关的服务。
 
-要想重启该服务，可以在 SSMS 中右键单击实例的“重启”命令、使用“控制面板”中的“服务”面板，或使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)。  
+要想重启该服务，可以在 SSMS 中右键单击实例的“重启”命令、使用“控制面板”中的“服务”面板，或使用 [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)。
 
 ## <a name="verify-installation"></a>验证安装
 
@@ -166,11 +166,11 @@ ms.locfileid: "68344169"
 
     **run_value** 现在应已设置为 1。
     
-2. 打开“服务”面板或 SQL Server 配置管理器，验证“SQL Server Launchpad 服务”是否正在运行。   应具备针对安装了 R 或 Python 的每个数据库引擎实例的一项服务。 有关该服务的更多信息，请参阅[可扩展性框架](../concepts/extensibility-framework.md)。 
+2. 打开“服务”面板或 SQL Server 配置管理器，验证“SQL Server Launchpad 服务”是否正在运行。 应具备针对安装了 R 或 Python 的每个数据库引擎实例的一项服务。 有关该服务的更多信息，请参阅[可扩展性框架](../concepts/extensibility-framework.md)。 
    
 3. 如果启动板正在运行, 你应该能够运行简单的 R 和 Python 脚本, 以验证外部脚本运行时是否可以与 SQL Server 通信。
 
-   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开一个新的“查询”窗口，然后运行如下脚本： 
+   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开一个新的“查询”窗口，然后运行如下脚本：
     
     + 对于 R
     
@@ -196,21 +196,13 @@ ms.locfileid: "68344169"
     GO
     ```
 
- **结果**
+    **结果**
 
     对于第一次加载外部脚本运行时，脚本可能需要一段时间才能运行。 结果应如下所示：
 
     | Hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > 在 Python 脚本中使用的列或标题不是按设计返回的。 若要为输出添加列名称, 必须指定返回数据集的架构。 为此, 请使用存储过程的 WITH RESULTS 参数, 命名列并指定 SQL 数据类型。

@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e14b01df14c6a7f08b1b25f3db6d55fb7beb130b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 8d38f2183078ee87fdb53e6333ecd13e85f3c65e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345249"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469664"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>对新数据进行评分 (SQL Server 和 RevoScaleR 教程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
@@ -78,17 +78,17 @@ ms.locfileid: "68345249"
         overwrite = TRUE)
     ```
   
-    rxPredict  函数是另一种函数，支持在远程计算上下文中运行。 您可以使用**rxPredict**函数基于[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、 [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)或[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)从模型创建分数。
+    rxPredict 函数是另一种函数，支持在远程计算上下文中运行。 您可以使用**rxPredict**函数基于[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、 [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)或[rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)从模型创建分数。
   
     - 参数 *writeModelVars* 在此处设置为 **TRUE** 。 这意味着新表中将包含用于估计的变量。
   
     - 参数 *predVarNames* 指定将在其中存储结果的变量。 在此, `ccFraudLogitScore`你要传递一个新变量。
   
-    - rxPredict  的 type  参数定义计算预测的方式。 指定关键字**响应**以根据响应变量的小数位数生成分数。 或者使用关键字**链接**基于基础链接函数生成分数, 在这种情况下, 将使用逻辑刻度创建预测。
+    - rxPredict 的 type 参数定义计算预测的方式。 指定关键字**响应**以根据响应变量的小数位数生成分数。 或者使用关键字**链接**基于基础链接函数生成分数, 在这种情况下, 将使用逻辑刻度创建预测。
 
 6. 不久，可以在 Management Studio 中刷新表的列表，以查看新的表及其数据。
 
-7. 若要将其他变量添加到输出预测中，请使用 *extraVarsToWrite* 参数。  例如，在以下代码中，会将来自评分数据表的变量 custID  添加到预测的输出表中。
+7. 若要将其他变量添加到输出预测中，请使用 *extraVarsToWrite* 参数。  例如，在以下代码中，会将来自评分数据表的变量 custID 添加到预测的输出表中。
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -114,7 +114,7 @@ ms.locfileid: "68345249"
         connectionString = sqlConnString)
     ```
 
-     从本示例中，可以看到使用 RxSqlServerData  数据源对象根据 SQL 查询、函数或存储过程定义任意数据集，然后将其用于 R 代码中非常容易。 变量不会存储实际值，只存储数据源定义；仅当在函数（如 rxImport  ）中使用此查询时，才会执行此查询以生成该值。
+     从本示例中，可以看到使用 RxSqlServerData 数据源对象根据 SQL 查询、函数或存储过程定义任意数据集，然后将其用于 R 代码中非常容易。 变量不会存储实际值，只存储数据源定义；仅当在函数（如 rxImport）中使用此查询时，才会执行此查询以生成该值。
       
 2. 调用[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)函数以将值放置在可跨计算上下文共享的数据帧中。
   

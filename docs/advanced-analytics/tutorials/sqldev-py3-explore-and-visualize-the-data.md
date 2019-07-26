@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7faf5ae632ffd94828ce331cd634fda9d4e34058
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0442fd942f0dd509f24b98b5ca1c6d6c31a197f0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345890"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470559"
 ---
 # <a name="explore-and-visualize-the-data"></a>浏览和可视化数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文是[针对 SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)教程的一部分。 
 
@@ -40,7 +40,7 @@ _Hack_license_列包含出租车驱动程序的许可证编号 (匿名)。
 
 每条费用记录都包括付费信息，如付款类型、总付款和小费金额。
 
-最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。  tipped 列只有是/否值，用于二元分类。  Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。 
+最后三列可用于各种机器学习任务。  Tip_amount 列包含连续数值，并且可用作回归分析的 **label** 列。 tipped 列只有是/否值，用于二元分类。 Tip_class 列有多个**级别标签**，因此可以用作多级分类任务的标签。
 
 标签列使用的值都基于`tip_amount`列, 使用以下业务规则:
 

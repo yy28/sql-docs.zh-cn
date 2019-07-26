@@ -7,15 +7,15 @@ ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 043a27cc53c2dca955eb0bea1ed07433bc9183b8
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 8aea7e67f6560aa750e67601b5b6a41f7d68b47d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345505"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470338"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python 与 SQL Server 之间的数据类型映射
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 对于在 SQL Server 机器学习服务中的 Python 集成功能上运行的 Python 解决方案, 请查看不支持的数据类型的列表, 以及在 Python 和 SQL Server 之间传递数据时可能隐式执行的数据类型转换。
 

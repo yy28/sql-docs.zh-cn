@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 08d1fd367572561aaa7235fd037371e30f5b270e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 8d7f046e961efb6129f807a7626e498062c415b6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345291"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470161"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能: 结果和资源
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文是一系列介绍 R Services 的性能优化的第四项和最后一篇文章。 本文总结了测试各种优化方法的两种案例研究的方法、结果和结论。
 
@@ -57,7 +57,7 @@ SQL Server R Services 开发团队分析了各种优化的影响。 已创建单
 6. 控制台输出也定向到输出目录中的文件。
 7. 测试脚本处理这些文件中的时间来计算运行的平均时间。
 
-例如, 下面的结果是来自单个测试的时间。 主要关注的时间是“总读取时间”（IO 时间）和“转换时间”（设置计算进程所产生的开销）。  
+例如, 下面的结果是来自单个测试的时间。 主要关注的时间是“总读取时间”（IO 时间）和“转换时间”（设置计算进程所产生的开销）。
 
 **采样计时**
 
@@ -144,7 +144,7 @@ metric time pct
 |           | 6      | 3.47 秒 |              |
 |           |        |              | 3.5075       |
 
-“平衡”电源选项： 
+“平衡”电源选项：
 
 | 测试名称 | 运行 \# | 占用时间 | 平均时间 |
 |-----------|--------|--------------|--------------|

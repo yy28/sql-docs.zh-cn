@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 71a6149f1d89a4a1df114f376c250c203a8721cf
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344908"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469893"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本主题提供有关在 SQL Server 中安装机器学习功能的一些常见问题的解答。 还介绍了有关升级的常见问题。
 
@@ -94,11 +94,11 @@ ms.locfileid: "68344908"
 
 如果安装了 Microsoft R Server 的预发布版本，必须先卸载它，才能升级到较新版本。
 
-1.  在“控制面板”  中，单击“添加或删除程序”  ，然后选择 `Microsoft SQL Server 2016 <version number>`。
+1.  在“控制面板” 中，单击“添加或删除程序” ，然后选择 `Microsoft SQL Server 2016 <version number>`。
 
-2.  在具有“添加”  、“修复”  或“删除”  组件选项的对话框中，选择“删除”  。
+2.  在具有“添加” 、“修复” 或“删除”  组件选项的对话框中，选择“删除” 。
   
-3.  在“选择功能”  页面上的“共享功能”  下，选择“R Server（独立版）”  。 单击“下一步”  ，然后单击“完成”  ，卸载所选组件。
+3.  在“选择功能”  页面上的“共享功能” 下，选择“R Server（独立版）” 。 单击“下一步” ，然后单击“完成”  ，卸载所选组件。
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services 和 R Server (独立) 并行错误 
 

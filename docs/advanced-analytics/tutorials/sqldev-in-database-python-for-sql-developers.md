@@ -7,15 +7,15 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ed8008bbda76bfc8a194897e9389c9d5dc6bb031
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 6147c4670dace104c2c33c19e1fd29cbf2d4f2ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345935"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468854"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>教程：适用于 SQL 开发人员的 Python 数据分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本教程中, 针对 SQL 程序员, 通过使用 SQL Server 上的[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)数据库生成和部署基于 python 的机器学习解决方案来了解 python 集成。 你将使用 T-sql、SQL Server Management Studio 和数据库引擎实例, 其中包含[机器学习服务](../install/sql-machine-learning-services-windows-install.md)和 Python 语言支持。
 

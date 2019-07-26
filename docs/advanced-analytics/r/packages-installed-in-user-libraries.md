@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a03d78e5d3100105f74e2efe361391a6bcfaf7ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 07993b982b5c79e3814aa29730fb1849075f5667
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345277"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470074"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>在 SQL Server 中使用 R 包的技巧
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文为 Dba 提供了单独的部分, 这些读者不熟悉 R 和经验丰富的 R 开发人员, 这些开发人员不熟悉 SQL Server 实例中的包访问。
 

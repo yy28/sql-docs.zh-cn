@@ -1,9 +1,9 @@
 ---
-title: sys.external_library_files (TRANSACT-SQL) |Microsoft Docs
+title: sys. external_library_files (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2017
+ms.date: 07/24/2019
 ms.prod: sql
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - external_library_files
@@ -14,31 +14,31 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.external_library_files catalog view
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9666b58132feb79876c4e8074dc530440c05b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68220338"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471098"
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (Transact SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="sysexternallibraryfiles-transact-sql"></a>sys. external_library_files (Transact-sql)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-列出了每个文件组成的外部库的行。
+列出组成外部库的每个文件对应一行。
 
 |列名 |数据类型 |描述|
 |------|------|-----|
 |external_library_id | INT |外部库对象的 ID。 |
 |content |varbinary(max) |外部库文件项目的内容。 |
-|平台 |TINYINT |在其安装 SQL Server 的主机平台的 ID。 |
-|platform_desc | nvarchar(60) |主机平台的名称。 有效值为 WINDOWS、 LINUX。 |
+|平台 |TINYINT |安装 SQL Server 的主机平台的 ID。 |
+|platform_desc | nvarchar(60) |主机平台的名称。 有效值为 "WINDOWS"、"LINUX"。 |
 
 ### <a name="see-also"></a>请参阅  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [创建外部库](../../t-sql/statements/create-external-library-transact-sql.md)  
-[为 SQL Server 机器学习服务的包管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[SQL Server 机器学习服务的包管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

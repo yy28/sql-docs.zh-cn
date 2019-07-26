@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9f7d4911257d583126986cd4079ebe763aae2024
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 053fc48c4117372eb3e3bebb715b4176ec1dd828
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344777"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469730"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定义并使用计算上下文 (SQL Server 和 RevoScaleR 教程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
@@ -59,7 +59,7 @@ ms.locfileid: "68344777"
     sqlConsoleOutput <- FALSE
     ```
   
-    到 RxInSqlServer  的 wait  参数支持以下选项：
+    到 RxInSqlServer 的 wait 参数支持以下选项：
   
     -   **TRUE**。 作业配置为 "阻止", 并且在完成或失败之前不会返回。  有关详细信息, 请参阅[Machine Learning Server 中的分布式计算和并行计算](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
   

@@ -7,15 +7,15 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b106607a535adc074a241ecee0b2db66e137c687
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345327"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470136"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 中使用存储过程的操作 R 代码机器学习服务
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 使用 SQL Server 机器学习服务中的 R 和 Python 功能时, 将解决方案移动到生产环境的最常见方法是在存储过程中嵌入代码。 本文总结了在使用 SQL Server 实现 R 代码时, SQL 开发人员需要考虑的要点。
 

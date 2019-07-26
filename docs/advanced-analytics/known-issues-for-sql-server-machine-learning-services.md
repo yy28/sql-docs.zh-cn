@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 547a567b00474f0c1538d907d70d8a808bebf851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: be55e779f335277a1c0f03fe871b8dcb952e088f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344939"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470407"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知问题
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文介绍了机器学习组件的已知问题或限制, 作为[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)中提供的选项, 以及[R 和 Python SQL Server 2017 机器学习服务](install/sql-machine-learning-services-windows-install.md)中提供。
 
@@ -349,7 +349,7 @@ data <- RxSqlServerData(
 
 ### <a name="15-variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>15.使用 transformFunc 参数时出现变量范围错误
 
-若要在建模时转换数据, 可以在函数 (  如`rxLinmod`或`rxLogit`) 中传递 transformFunc 参数。 但是, 嵌套的函数调用可能会导致 SQL Server 计算上下文中出现范围错误, 即使调用在本地计算上下文中正常工作也是如此。
+若要在建模时转换数据, 可以在函数 ( 如`rxLinmod`或`rxLogit`) 中传递 transformFunc 参数。 但是, 嵌套的函数调用可能会导致 SQL Server 计算上下文中出现范围错误, 即使调用在本地计算上下文中正常工作也是如此。
 
 > *用于分析的示例数据集没有变量*
 

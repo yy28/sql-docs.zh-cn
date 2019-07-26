@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345762"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469502"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>快速入门：使用中的存储过程创建、定型和使用 Python 模型 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在此快速入门中, 你将创建并执行两个存储过程。 第一种模式使用经典 Iris 花卉数据集, 并生成一个简单的 Bayes 模型, 用于根据花朵特征预测 Iris 物种。 第二个过程用于评分。 它调用在第一个过程中生成的模型以输出一组预测。 通过在存储过程中放置代码, 其他存储过程和客户端应用程序可以对操作进行包含、重复使用和调用。 
 
@@ -82,7 +82,7 @@ SQL Server 开发中的常见模式是将可编程操作组织成不同的存储
 
 1. 复制以下代码以执行该过程。 用于执行存储过程`EXEC`的特定语句位于第五行。
 
-   此特定脚本删除同一名称 ("Naive Bayes") 的现有模型, 为通过重新运行同一过程创建的新模型腾出空间。 如果不删除模型, 则会出现一个错误, 指出该对象已存在。 模型存储在名为**iris_models**的表中。 
+   此特定脚本删除同一名称 ("Naive Bayes") 的现有模型, 为通过重新运行同一过程创建的新模型腾出空间。 如果不删除模型, 则会出现一个错误, 指出该对象已存在。 模型存储在名为**iris_models**的表中。
 
     ```sql
     DECLARE @model varbinary(max);

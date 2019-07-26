@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7d62004745f8b77bbc26b4d924e2e3948cf2f9e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345835"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468470"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server 创建数据功能 (演练)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 数据工程是机器学习的一个重要组成部分。 数据通常需要转换, 然后才能将其用于预测建模。 如果数据不具有所需的功能，可根据现有值进行创建。
 
@@ -29,7 +29,7 @@ ms.locfileid: "68345835"
 
 目标是创建一组新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的数据, 其中包括原始列和新的数字功能*direct_distance*。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 此步骤假设正在进行的 R 会话基于本演练中前面的步骤。 它使用在这些步骤中创建的连接字符串和数据源对象。 以下工具和包用于运行脚本。
 
@@ -190,7 +190,7 @@ ms.locfileid: "68345835"
     > [!TIP]
     > 已将此查询修改为获取较小的数据示例, 以便更快地完成此演练。 如果要获取所有数据, 则可以删除 TABLESAMPLE 子句;但是, 根据您的环境, 可能无法将完整的数据集加载到 R 中, 导致错误。
   
-5. 使用下面的代码行来从 R 环境中调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，并将其应用于 featureEngineeringQuery  中定义的数据。
+5. 使用下面的代码行来从 R 环境中调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，并将其应用于 featureEngineeringQuery 中定义的数据。
   
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,

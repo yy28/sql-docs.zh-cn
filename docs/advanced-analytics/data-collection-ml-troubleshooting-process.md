@@ -6,16 +6,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f7d5e39d0ca0a89312a6fefd261eff950859d0a2
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 3dbca20d974570d04d65fba30110049efad4e90d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343388"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470436"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>机器学习的数据收集疑难解答
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文介绍了尝试自行解决问题时应使用的数据收集方法, 或与 Microsoft 客户支持部门的帮助。
 

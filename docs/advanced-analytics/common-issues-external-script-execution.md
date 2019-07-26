@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3786ab3ee17bbbc0b54e439e3466236af098ffd3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345167"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470485"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server 中的快速启动板服务和外部脚本执行的常见问题
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  SQL Server 受信任的快速启动板服务支持 R 和 Python 的外部脚本执行。 在 SQL Server 2016 R Services 中, SP1 提供服务。 SQL Server 2017 在初始安装过程中包括启动板服务。
 
@@ -54,7 +54,7 @@ ms.locfileid: "68345167"
 
 但是, 在实施了更严格的安全策略的组织中, 此组所需的权限可能已被手动删除, 或者策略会自动吊销。 如果已删除权限, 则启动板将无法再连接到 SQL Server, SQL Server 无法调用外部运行时。
 
-若要解决此问题，请确保组 **SQLRUserGroup** 拥有系统权限“允许本地登录”。 
+若要解决此问题，请确保组 **SQLRUserGroup** 拥有系统权限“允许本地登录”。
 
 有关详细信息，请参阅[配置 Windows 服务帐户和权限](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。
 
@@ -88,9 +88,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 - [!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md)]服务生成的错误:
 
-    * 无法初始化启动器 RLauncher.dll 
+    * 无法初始化启动器 RLauncher.dll
 
-    * 未注册任何启动器 dll！ 
+    * 未注册任何启动器 dll！
 
     * *安全日志指示帐户 NT 服务无法登录*
 

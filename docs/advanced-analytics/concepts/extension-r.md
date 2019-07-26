@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3bf8e77cec92cde0e5a8adf4d3e1e36f1689b917
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343410"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470500"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 语言扩展
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 扩展是关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 它添加 R 执行环境、具有标准库和工具的基本 R 分发版, 以及 Microsoft R 库:用于大规模分析的[RevoScaleR](../r/ref-r-revoscaler.md) 、用于机器学习算法的[MicrosoftML](../r/ref-r-microsoftml.md) , 以及用于访问 SQL Server 中的数据或 R 代码的其他库。
 

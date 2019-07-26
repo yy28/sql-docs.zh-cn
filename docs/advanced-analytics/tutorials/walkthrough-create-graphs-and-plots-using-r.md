@@ -1,37 +1,37 @@
 ---
-title: 使用 SQL 和 R 函数的 SQL Server 机器学习创建图形和绘图
-description: 本教程演示如何在 SQL Server 上使用 R 语言函数创建图形和绘图。
+title: 使用 SQL 和 R 函数创建图形和绘图-SQL Server 机器学习
+description: 介绍如何在 SQL Server 上使用 R 语言函数创建图形和绘图的教程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 542e36e01565ab454cce8beae9a4fa65279d8fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f14005b8ba9d6f05d2b69deba29d83af5695f657
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961785"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470502"
 ---
-# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R （演练） 创建图形和绘图
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R 创建图形和绘图 (演练)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本演练的此部分中，了解用于生成绘图和映射具有 SQL Server 数据使用 R 的技术。 创建简单的直方图，然后开发更复杂的地图绘图。
+在本演练的此部分中, 你将学习使用 R 和 SQL Server 数据生成图形和地图的方法。 创建一个简单的直方图, 然后开发更复杂的地图绘图。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-此步骤假定正在进行 R 会话基于本演练中之前的步骤。 它使用这些步骤中创建的连接字符串和数据源对象。 使用以下工具和包来运行脚本。
+此步骤假设正在进行的 R 会话基于本演练中前面的步骤。 它使用在这些步骤中创建的连接字符串和数据源对象。 以下工具和包用于运行脚本。
 
-+ 若要运行 R 命令的 Rgui.exe
-+ Management Studio 来运行 T-SQL
++ Rgui.exe 运行 R 命令
++ Management Studio 运行 T-sql
 + googMap
 + ggmap 包
 + mapproj 包
 
 ## <a name="create-a-histogram"></a>创建直方图
 
-1. 使用 [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 函数生成第一个绘图。  RxHistogram 函数提供的功能类似于在开放源代码 R 包，但可以在远程执行上下文中运行。
+1. 使用 [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 函数生成第一个绘图。  RxHistogram 函数提供的功能类似于开放源代码 R 包中的功能, 但可在远程执行上下文中运行。
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -46,16 +46,16 @@ ms.locfileid: "67961785"
     ![使用 rxHistogram 绘制费用金额](media/rsql-e2e-rxhistogramresult.png "使用 rxHistogram 绘制费用金额")
 
     > [!NOTE]
-    > 图形看上去不同？
+    > 图形外观是否不同？
     >  
-    > 这是因为_inDataSource_使用只显示前 1000年行。 使用 TOP 的行排序是在没有 ORDER BY 子句，非确定性的因此预期的数据和生成的关系图可能会有所不同。
+    > 这是因为, _inDataSource_只使用前1000行。 如果没有 ORDER BY 子句, 则使用 TOP 的行的顺序是不确定的, 因此, 数据和生成的关系图可能会有所不同。
     > 这一特定图像使用大约 10,000 行数据生成。 建议试验不同数量的行，获取不同的图形，并记下它在环境中返回结果所需的时间。
 
 ## <a name="create-a-map-plot"></a>创建地图绘图
 
-通常情况下，数据库服务器会阻止 Internet 访问权限。 使用 R 包，需要下载映射或其他图像以生成图形时，这可能很不方便。 但是，没有解决方法是，开发自己的应用程序时您可能会有帮助。 基本上，您生成在客户端上的地图表示形式，然后在地图上覆盖作为属性在 SQL Server 表中存储的点。
+通常, 数据库服务器阻止 Internet 访问。 使用需要下载地图或其他图像以生成图形的 R 包时, 这会很不方便。 但是, 在开发自己的应用程序时可能会发现很有用的一种解决方法。 基本上, 你将在客户端上生成地图表示形式, 然后在地图上叠加存储为 SQL Server 表中的属性的点。
 
-1. 定义创建 R 绘图对象的函数。 自定义函数*mapPlot*创建散点图使用出租车接客位置，并绘制从每个位置开始的搭乘数。 它使用**ggplot2**并**ggmap**包，应[安装并加载](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)。
+1. 定义用于创建 R 绘图对象的函数。 自定义函数*mapPlot*创建一个使用出租车拾取位置的散点图, 并绘制从每个位置开始的搭乘数量。 它使用应已[安装并加载](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)的**ggplot2**和**ggmap**包。
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -69,11 +69,11 @@ ms.locfileid: "67961785"
     }
     ```
 
-    + *MapPlot*函数采用两个参数： 一个现有的数据对象，它定义之前使用 RxSqlServerData，并从客户端传递的地图表示形式。
-    + 在开头的行*ds*变量，rxImport 用于将加载到内存数据从先前创建的数据源*inDataSource*。 （该数据源包含仅 1000年行; 如果你想要使用更多数据点创建地图，您可以替换不同的数据源。）
-    + 只要使用开放源代码 R 函数，则必须将数据加载到本地内存中的数据帧。 但是，通过调用[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)函数，您可以运行在远程计算上下文的内存中。
+    + *MapPlot*函数采用两个参数: 之前使用 RxSqlServerData 定义的现有数据对象, 以及从客户端传递的地图表示形式。
+    + 在以*ds*变量开头的行中, 使用 rxImport 从以前创建的数据源*inDataSource*加载到内存数据。 (该数据源仅包含1000行; 如果要创建具有更多数据点的地图, 则可以使用不同的数据源。)
+    + 无论何时使用开源 R 函数, 都必须将数据加载到本地内存中的数据帧。 但是, 通过调用[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)函数, 你可以在远程计算上下文的内存中运行。
 
-2. 将计算上下文更改为本地，并加载用于创建地图所需的库。
+2. 将计算上下文更改为 "本地", 并加载创建映射所需的库。
 
     ```R
     rxSetComputeContext("local")
@@ -87,7 +87,7 @@ ms.locfileid: "67961785"
 
     + 以 `googmap` 开头的行生成中心具有指定坐标的地图。
 
-3. 切换到 SQL Server 计算上下文，并通过包装中的绘图函数来呈现结果[rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec)如下所示。 RxExec 函数属于**RevoScaleR**包，并支持执行任意 R 函数，在远程计算上下文中。
+3. 切换到 SQL Server 计算上下文, 并通过将绘图函数包装在[rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec)中 (如下所示) 来呈现结果。 RxExec 函数是**RevoScaleR**包的一部分, 它支持在远程计算上下文中执行任意 R 函数。
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -95,14 +95,14 @@ ms.locfileid: "67961785"
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + 中的地图数据`googMap`作为参数传递给远程执行的函数*mapPlot*。 由于映射在本地环境中生成的它们必须以 SQL Server 的上下文中创建绘图传递给函数。
+    + 中`googMap`的映射数据作为参数传递到远程执行的函数*mapPlot*。 因为映射是在本地环境中生成的, 所以必须将其传递到函数, 以便在 SQL Server 的上下文中创建绘图。
 
-    + 当开头的行`plot`运行时，呈现的数据序列化回复到本地 R 环境，以便您可以在 R 客户端中查看它。
+    + 当行以`plot`开头运行时, 呈现的数据将被序列化为本地 R 环境, 以便可以在 R 客户端中查看它。
 
     > [!NOTE]
-    > 如果 Azure 虚拟机中使用 SQL Server，可能在此时会遇到错误。 在 Azure 中的默认防火墙规则阻止网络访问权限由 R 代码时，就会出错。 有关如何修复此错误的详细信息，请参阅[Azure VM 上安装机器学习 （R) Services](../install/sql-machine-learning-azure-virtual-machine.md)。
+    > 如果在 Azure 虚拟机中使用 SQL Server, 则此时可能会出现错误。 如果 Azure 中的默认防火墙规则阻止 R 代码进行网络访问, 则会发生错误。 有关如何解决此错误的详细信息, 请参阅[在 AZURE VM 上安装机器学习 (R) 服务](../install/sql-machine-learning-azure-virtual-machine.md)。
 
-4. 下图显示了输出绘图。 出租车打车位置已作为红色的点添加到地图中。 您的图像看起来会有所不同，具体取决于多少个位置在您使用的数据源中。
+4. 下图显示了输出绘图。 出租车打车位置已作为红色的点添加到地图中。 根据你使用的数据源中有多少个位置, 你的映像可能会有所不同。
 
     ![使用自定义 R 函数绘制出租车乘坐情况](media/rsql-e2e-mapplot.png "使用自定义 R 函数绘制出租车乘坐情况")
 

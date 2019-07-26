@@ -7,15 +7,15 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1b0eea71105cb22cce81ac482c8ad6df50e63fa0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d5d74090713666a2da6058d9eccee1e33e4d7cb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343431"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469747"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 和 R 教程的 NYC 出租车演示数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文介绍如何设置一个示例数据库, 其中包含来自[纽约出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)的公共数据。 此数据在多个 R 和 Python 教程中用于 SQL Server 上的数据库内分析。 为了使示例代码运行速度更快, 我们创建了一个代表性 1% 的数据采样。 在您的系统上, 数据库备份文件略微超过 90 MB, 在主数据表中提供1700000行。
 

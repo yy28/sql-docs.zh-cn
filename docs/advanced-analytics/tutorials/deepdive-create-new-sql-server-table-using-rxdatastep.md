@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5f5d65bf3b57f40ca881aa9e6f0285fab0432a1e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b88de049cb73cf8539067e708963bd82ee7086ae
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344790"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469829"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>使用 rxDataStep 创建新 SQL Server 表 (SQL Server 和 RevoScaleR 教程)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
@@ -40,7 +40,7 @@ XDF 格式是为三维数据开发的 XML 标准, 是[Machine Learning Server](h
     rxSetComputeContext("local")
     ```
   
-2. 使用 RxXdfData  函数定义新数据源对象。 若要定义 XDF 数据源, 请指定数据文件的路径。  
+2. 使用 RxXdfData 函数定义新数据源对象。 若要定义 XDF 数据源, 请指定数据文件的路径。  
 
     您可以使用文本变量指定文件的路径。 但在这种情况下, 有一个便捷的快捷方式, 就是使用**rxGetOption**函数, 并从示例数据目录中获取文件 (airlinedemosmall.xdf. xdf)。
   
@@ -64,7 +64,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
 
 > [!NOTE]
 > 
-> 你是否注意将数据加载到 XDF 文件时不需要调用任何其他函数，并可立即对该数据调用 rxGetVarInfo  ？ 这是因为, XDF 是**RevoScaleR**的默认临时存储方法。 除了 XDF 文件, **rxGetVarInfo**函数现在还支持多个源类型。
+> 你是否注意将数据加载到 XDF 文件时不需要调用任何其他函数，并可立即对该数据调用 rxGetVarInfo？ 这是因为, XDF 是**RevoScaleR**的默认临时存储方法。 除了 XDF 文件, **rxGetVarInfo**函数现在还支持多个源类型。
 
 ## <a name="move-contents-to-sql-server"></a>将内容移动到 SQL Server
 

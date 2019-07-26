@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e50344bc94f25e6efd8303f93506401448f94fd1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cb144eb5c766b417884f6f1adb67dc0ac48504a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344731"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469780"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 模板是演示最佳做法和提供构建基块，以帮助快速实现解决方案的示例解决方案。 每个模板设计用于解决特定的纵向或行业的特定问题。 每个模板中的任务从数据准备和特征工程扩展到模型定型和计分。 使用这些模板了解[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]工作原理。 然后, 可以根据自己的方案随意自定义模板, 并构建自定义解决方案。 
 
@@ -86,7 +86,7 @@ ms.locfileid: "68344731"
 
 ## <a name="bkmk_HowTo"></a>如何使用模板
 
-要下载每个模板中包含的文件，可以使用 GitHub 命令，或者可以打开链接，然后单击“下载 Zip 文件”  将所有文件都保存到计算机。  下载后，解决方案通常会包含这些文件夹：
+要下载每个模板中包含的文件，可以使用 GitHub 命令，或者可以打开链接，然后单击“下载 Zip 文件”将所有文件都保存到计算机。  下载后，解决方案通常会包含这些文件夹：
   
 -   **数据**:包含每个应用程序的示例数据。
   

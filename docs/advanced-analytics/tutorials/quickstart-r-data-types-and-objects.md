@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e8c8ccd60417d4c1d492d53041280ab0c8e318af
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 686ba69425dc9bc6554b369be3d5fadd24b5a234
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345424"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469398"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入门：在 SQL Server 中使用 R 处理数据类型和对象
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入门中, 获取在 R 与 SQL Server 之间移动数据时发生的常见问题的简介。 在此练习中, 您可以在自己的脚本中使用数据时提供基本的背景知识。
 
@@ -26,7 +26,7 @@ ms.locfileid: "68345424"
 + 有时需要执行强制转换和转换操作
 + R 和 SQL 使用不同的数据对象
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 以前的快速入门,[验证 SQL Server 中是否存在 r](quickstart-r-verify.md), 提供了设置本快速入门所需的 R 环境的信息和链接。
 
@@ -61,7 +61,7 @@ EXECUTE sp_execute_external_script
 
 结果为何有这么大的差别？ 
 
-使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。  
+使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。
 
 若要找出示例 1 和示例 2 的结果为何有这么大的差别，请在每个语句的 _@script_ 变量定义末尾插入 `str(OutputDataSet)` 行，如下所示：
 
@@ -87,7 +87,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-现在，查看“消息”中的文本，了解输出为何不相同的原因。 
+现在，查看“消息”中的文本，了解输出为何不相同的原因。
 
 **结果 - 示例 1**
 

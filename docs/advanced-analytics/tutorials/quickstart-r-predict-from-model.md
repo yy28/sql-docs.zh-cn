@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345407"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469339"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>快速入门：在 SQL Server 中使用 R 预测模型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在本快速入门中, 请使用在前面的快速入门中创建的模型来对新数据进行评分。 若要使用新数据执行_评分_, 请从表中获取一个定型模型, 然后调用一组要对其进行预测的新数据。 评分是一种术语, 这种术语有时在数据科学中使用, 以根据送入定型模型的新数据来生成预测、概率或其他值。
 

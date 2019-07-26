@@ -7,15 +7,15 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bd91aa464dd4a9e6a58dda5d802a3b81716cf11
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 362e7866636f83b9c75bf75ce30a0f012b3751fa
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344524"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470639"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览和可视化数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
 
@@ -47,7 +47,7 @@ ms.locfileid: "68344524"
   
 -   每条费用记录都包括付费信息，如付款类型、总付款和小费金额。
   
--   最后三列可用于各种机器学习任务。 " _Tip\_数量_" 列包含连续数值, 可用作回归分析的**标签**列。 tipped 列只有是/否值，用于二元分类。  _Tip\_class_列包含多个**类标签**, 因此可用作多类分类任务的标签。
+-   最后三列可用于各种机器学习任务。 " _Tip\_数量_" 列包含连续数值, 可用作回归分析的**标签**列。 tipped 列只有是/否值，用于二元分类。 _Tip\_class_列包含多个**类标签**, 因此可用作多类分类任务的标签。
   
     本演练只演示了二元分类任务；欢迎尝试构建其他两个机器学习任务、回归和多级分类的模型。
   

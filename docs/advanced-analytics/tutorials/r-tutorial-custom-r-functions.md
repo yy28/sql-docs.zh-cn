@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345984"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470601"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 在 SQL Server 上运行自定义 R 函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 你可以通过[rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)传递函数在 SQL Server 上下文中运行自定义 R 函数, 假设你的脚本所需的所有库也安装在服务器上, 而这些库与 R 的基本分发兼容。 
 
@@ -123,15 +123,15 @@ ms.locfileid: "68345984"
     length(sqlServerExec)
     ```
   
-    + 使用 timesToRun  参数，指示执行函数的次数。  在这种情况下，将掷 20 次骰子。
+    + 使用 timesToRun 参数，指示执行函数的次数。  在这种情况下，将掷 20 次骰子。
   
-    + 可使用 RNGseed  和 RNGkind  参数控制随机数的生成。 将 RNGseed  设置为“自动”  时，会在每个辅助角色上初始化并行随机数流。
+    + 可使用 RNGseed 和 RNGkind 参数控制随机数的生成。 将 RNGseed 设置为“自动”时，会在每个辅助角色上初始化并行随机数流。
   
-2. rxExec  函数会创建一个列表，其中一次运行一个元素；但是，在列表完成前，不会看到太多操作执行。 所有迭代完成后, 以**length**开头的行将返回一个值。
+2. rxExec 函数会创建一个列表，其中一次运行一个元素；但是，在列表完成前，不会看到太多操作执行。 所有迭代完成后, 以**length**开头的行将返回一个值。
   
     然后可以转到下一步，获得输赢记录的汇总。
   
-3. 使用 R 的 unlist  函数将返回的列表转换为向量，并使用 table  函数汇总结果。
+3. 使用 R 的 unlist 函数将返回的列表转换为向量，并使用 table 函数汇总结果。
   
     ```R
     table(unlist(sqlServerExec))

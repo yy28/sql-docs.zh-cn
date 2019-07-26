@@ -7,15 +7,15 @@ ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 74330d37a037b0951c4964cafbd6e0c26b4fdea1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f86bedc3cfd92272b500d5d3edd701b6ca51d38b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345639"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469991"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 如果脚本中的[环回连接](../../advanced-analytics/concepts/security.md#implied-authentication)指定了*可信连接*, 并且用于执行对象的标识是 Windows 用户帐户, 则在 SQL Server for [SQLRUserGroup](../concepts/security.md#sqlrusergroup)中创建一个[登录名](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)。
 
@@ -28,7 +28,7 @@ ms.locfileid: "68345639"
 
 ## <a name="create-a-login"></a>创建登录名
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“对象资源管理器”中，展开“安全性”  ，右键单击“登录名”  ，然后选择“新建登录名”  。
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“对象资源管理器”中，展开“安全性” ，右键单击“登录名” ，然后选择“新建登录名” 。
 
 2. 在 "**登录名-新建**" 对话框中, 选择 "**搜索**"。 (请不要在该框中键入任何内容。)
     

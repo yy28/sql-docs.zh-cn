@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3063758e1186dc81e5ce9e70891403e7afd3a89f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345109"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469867"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP 多维数据集中的数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **OlapR**包是由 Microsoft 提供的、用于 Machine Learning Server 和 SQL Server 的 R 包, 可让你运行 MDX 查询从 OLAP 多维数据集获取数据。 对于此包, 无需创建链接服务器或清理平展行集;您可以直接从 R 获取 OLAP 数据。
 
@@ -37,15 +37,15 @@ Microsoft 提供[Analysis Services](https://docs.microsoft.com/sql/analysis-serv
 
 + *切片*使用单个维度中的值获取多维数据集的子集。
 
-+ 通过指定多个维度上值的范围，“切块”  创建子多维数据集。
++ 通过指定多个维度上值的范围，“切块”创建子多维数据集。
 
-+ “向下钻取”  从摘要导航到详细信息。
++ “向下钻取”从摘要导航到详细信息。
 
-+ “向上钻取”  从详细信息移动到较高级别的聚合。
++ “向上钻取”从详细信息移动到较高级别的聚合。
 
-+ “汇总”  总结某个维度上的数据。
++ “汇总”总结某个维度上的数据。
 
-+ “透视”  旋转多维数据集或数据选择。
++ “透视”旋转多维数据集或数据选择。
 
 ## <a name="how-to-use-olapr-to-create-mdx-queries"></a>如何使用 olapR 创建 MDX 查询
 
