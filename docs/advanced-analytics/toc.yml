@@ -1,5 +1,5 @@
-- name: SQL Server 机器学习服务
-  href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: SQL Server 机器学习服务文档
+  href: ../advanced-analytics/index.yml
 - name: 欢迎使用 SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概述
