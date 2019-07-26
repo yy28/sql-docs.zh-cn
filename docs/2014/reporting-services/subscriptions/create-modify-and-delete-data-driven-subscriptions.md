@@ -27,7 +27,7 @@ ms.locfileid: "66100941"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 | SharePoint 模式|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; SharePoint 模式|  
   
  **本主题内容：**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66100941"
   
 1.  在报表管理器中，导航到包含该报表的文件夹，将鼠标悬停在该报表上，打开选项菜单并单击 **“管理”** 。  
   
-2.  单击 **“订阅”** 选项卡。也可以单击报表管理器顶部的“我的订阅”  链接  
+2.  单击 **“订阅”** 选项卡。也可以单击报表管理器顶部的“我的订阅”链接  
   
 3.  选择要修改的订阅。 以下图标表示数据驱动订阅：![数据驱动订阅图标](../media/hlp-16subscriptiondd.gif "数据驱动订阅图标")  
   
