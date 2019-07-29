@@ -110,7 +110,7 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` 保留。  
   
-`[ @performance_condition = ] 'performance_condition'` 格式表示的值 **'***itemcomparatorvalue***** 。 *performance_condition*是**nvarchar(512)** ，默认值为 NULL，并包含这些元素。  
+`[ @performance_condition = ] 'performance_condition'` 格式表示的值 **'***itemcomparatorvalue***’** 。 *performance_condition*是**nvarchar(512)** ，默认值为 NULL，并包含这些元素。  
   
 |格式元素|描述|  
 |--------------------|-----------------|  
