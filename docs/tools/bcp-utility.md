@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 612132eec023e3497344c01bd34947bb49195385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 504e0978e37e5c550985e40b7f68e0323a9dc187
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010430"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476320"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 
@@ -88,6 +88,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
     [<a href="#K">-K application_intent</a>]
+    [<a href="#l">-l login_timeout</a>]
     [<a href="#L">-L last_row</a>]
     [<a href="#m">-m max_errors</a>]
     [<a href="#n">-n</a>]
@@ -313,6 +314,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-K** _**application\_intent**_ <a name="K"></a>   
 连接到服务器时声明应用程序工作负荷类型。 唯一可能的值是 **ReadOnly**。 如果未指定 **-K**，bcp 实用工具将不支持连接到 Always On 可用性组中的辅助副本。 有关详细信息，请参阅 [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)概念。  
+  
+**-l** _**login\_timeout**_ <a name="l"></a>  
+指定登录超时。 -l 选项指定在尝试连接到服务器时登录 SQL Server 的超时时间（以秒为单位）。 默认的登录超时时间为15秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，bcp 将生成错误消息。 值0指定无限超时。
   
 **-L** _**last\_row**_ <a name="L"></a>  
 指定要从表中导出或从数据文件中导入的最后一行的编号。 此参数的值应大于 (>) 0，小于 (<) 或等于 (=) 最后一行的编号。 如果未指定此参数，则默认为文件的最后一行。  

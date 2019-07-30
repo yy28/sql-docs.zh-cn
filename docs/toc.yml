@@ -51,7 +51,7 @@
           href: big-data-cluster/release-notes-big-data-cluster.md
     - name: 安装
       items:
-        - name: 开始操作
+        - name: 入门
           items:
             - name: 部署大数据群集
               href: big-data-cluster/deploy-get-started.md
@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 脱机部署
               href: big-data-cluster/deploy-offline.md
-            - name: 部署目标
+            - name: Kubernetes 群集
               items:
                 - name: Azure Kubernetes 服务
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: 部署脚本
               items:
-                - name: Azure Kubernetes 服务
+                - name: AKS Python 脚本
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: 使用 Azure Data Studio 笔记本进行部署
+                - name: 单节点 kubeadm 脚本
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: 用笔记本部署
                   href: big-data-cluster/deploy-notebooks.md
     - name: 概念
       items:
@@ -1024,7 +1026,7 @@
                   href: database-engine/database-mirroring/removing-database-mirroring-sql-server.md
             - name: Security
               items:
-                - name: 终结点
+                - name: 端点
                   href: database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
                 - name: 传输安全性
                   href: database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md
@@ -3372,7 +3374,7 @@
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-views.md
             - name: 权限
               href: relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md
-            - name: 终结点
+            - name: 端点
               href: relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md
             - name: 全文搜索
               href: relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md
@@ -4296,7 +4298,7 @@
               href: database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md
             - name: EKM provider enabled
               href: database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md
-            - name: external scripts enabled
+            - name: 已启用外部脚本
               href: database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md
             - name: 文件流访问级别
               href: database-engine/configure-windows/filestream-access-level-server-configuration-option.md
@@ -5629,7 +5631,7 @@
           items:
             - name: 限制和阻止问题
               href: sql-server/stretch-database/limitations-for-stretch-database.md
-            - name: 开始操作
+            - name: 入门
               items:
                 - name: 标识数据库和表
                   href: sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server 实用工具
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: SQL 评估 API
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: 在 SQL Server 的同一实例中运行实用工具和非实用工具收集组的注意事项
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7415,7 +7419,7 @@
       items:
         - name: 概述
           items:
-            - name: 开始操作
+            - name: 入门
               href: relational-databases/search/get-started-with-full-text-search.md
             - name: SQL Server 2016 中已弃用的功能
               href: relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md
@@ -7500,7 +7504,7 @@
 - name: 报告和分析
   items:
     - name: 高级分析和机器学习 >>
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: 分析平台系统 >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -11718,7 +11722,7 @@
               href: relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
             - name: sys.master_files
               href: relational-databases/system-catalog-views/sys-master-files-transact-sql.md
-        - name: 终结点
+        - name: 端点
           href: relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md
           items:
             - name: sys.database_mirroring_endpoints
@@ -16318,7 +16322,7 @@
                   href: t-sql/language-elements/use-transact-sql.md
                 - name: 反斜杠（行继续符）
                   href: t-sql/language-elements/sql-server-utilities-statements-backslash.md
-                - name: GO
+                - name: 转到
                   href: t-sql/language-elements/sql-server-utilities-statements-go.md
             - name: 控制流
               href: t-sql/language-elements/control-of-flow.md
