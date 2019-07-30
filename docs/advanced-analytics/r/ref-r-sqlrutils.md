@@ -7,15 +7,15 @@ ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 361093be372e77a869996e6ffb67a6bd6e701c44
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345094"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469948"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server 中的 R 库)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **sqlrutils** 包为 R 用户提供一种机制，将他们的 R 脚本置于 T-SQL 存储过程中、向数据库注册该存储过程并从 R 开发环境运行存储过程。 
 
@@ -62,7 +62,7 @@ ms.locfileid: "68345094"
 + 生成并注册存储过程    
 + 执行该存储过程  
 
-在 R 会话中, 通过  键入`library(sqlrutils)`从命令行加载 sqlrutils。
+在 R 会话中, 通过键入`library(sqlrutils)`从命令行加载 sqlrutils。
 
 > [!Note]
 > 如果将计算上下文更改为 SQL Server 并在该计算上下文中执行代码, 则可以在没有 SQL Server 的计算机上 (例如, 在 R 客户端实例上) 加载此库。
