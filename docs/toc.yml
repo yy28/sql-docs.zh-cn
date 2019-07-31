@@ -6672,8 +6672,6 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server 实用工具
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-        - name: SQL 评估 API
-          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: 在 SQL Server 的同一实例中运行实用工具和非实用工具收集组的注意事项
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -6709,6 +6707,8 @@
               href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
             - name: 实用工具资源管理器的 F1 帮助
               href: relational-databases/manage/utility-explorer-f1-help.md
+        - name: SQL 评估 API
+          href: sql-assessment-api/sql-assessment-api-overview.md
     - name: 监视器
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -7532,6 +7532,8 @@
               href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
             - name: Master Data Services 开发人员文档
               href: master-data-services/develop/master-data-services-developer-documentation.md
+            - name: 托管在托管实例上的数据库
+              href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
         - name: Excel 外接程序
           href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
           items:
@@ -7972,8 +7974,6 @@
               href: relational-databases/security/sql-vulnerability-assessment.md
             - name: 数据发现和分类
               href: relational-databases/security/sql-data-discovery-and-classification.md
-            - name: SQL Server 连接器故障排除
-              href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
         - name: 身份验证访问
           items:
             - name: 确定有效权限
@@ -8021,8 +8021,16 @@
                   href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: 移动受 TDE 保护的数据库
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-            - name: 使用 EKM 启用 TDE
-              href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: 可扩展的密钥管理
+              items:
+                - name: 使用 EKM 启用 TDE
+                  href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+                - name: 经加密的 SQL Server 连接器
+                  href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+                - name: 使用 Azure Key Vault 的 EKM
+                  href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+                - name: SQL Server 连接器故障排除
+                  href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
             - name: 备份服务主密钥
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: 还原服务主密钥
@@ -8039,16 +8047,12 @@
               href: relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: 保护 Azure SQL 数据库
           items:
-            - name: 经加密的 SQL Server 连接器
-              href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
             - name: 自带密钥 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
             - name: 轮替 TDE BYOK 密钥 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
             - name: 删除 TDE 保护程序 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-            - name: 使用 Azure Key Vault 的 EKM
-              href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: 审核
           items:
             - name: 创建服务器审核规范
