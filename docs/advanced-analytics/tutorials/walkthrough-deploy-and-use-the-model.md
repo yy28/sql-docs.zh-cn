@@ -7,12 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 96744b15bef03b7d8badc803b1fa5f5de382e64f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: b79d0bdc57ed49790874b571ccde875f45e35714
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470549"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661297"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>部署 R 模型并在 SQL Server 中使用它 (演练)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "68470549"
 
     ```R
     input <- "N'SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a LEFT OUTER JOIN ( SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND  a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'";
-    q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
+    q <- paste("EXEC PredictTipBatchMode @input = ", input, sep="");
     ```
 
 4. 若要从 R 运行存储过程, 请调用**RODBC**包的**sqlQuery**方法, 并使用之前定义的`conn` SQL 连接:
@@ -196,7 +196,7 @@ ms.locfileid: "68470549"
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    此处传递的值分别用于变量 _\_乘客 count_、  _\_\_trip_distance、行程时间\_(秒_)、 _\_分拣纬度_、_pickup\_经度_、 _下车\_纬度_和_下车\_经度_。
+    此处传递的值分别用于变量 _\_乘客 count_、 _\_\_trip_distance、行程时间\_(秒_)、 _\_分拣纬度_、_pickup\_经度_、 _下车\_纬度_和_下车\_经度_。
 
 3. 若要从 R 代码运行相同的调用, 只需定义一个包含整个存储过程调用的 R 变量, 如下所示:
 

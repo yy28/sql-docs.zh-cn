@@ -1,5 +1,5 @@
 ---
-title: 备份、 还原和移动 SSIS 目录 |Microsoft Docs
+title: 备份、还原和移动 SSIS 目录 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061267"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670500"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>备份、还原和移动 SSIS 目录
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
@@ -48,7 +48,7 @@ ms.locfileid: "66061267"
   
 5.  如果要将 SSISDB 数据库还原到从未创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，请执行以下操作生成 sp_ssis_startup 的 CREATE PROCEDURE 脚本。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
-    1.  在对象资源管理器中，展开“数据库”节点，然后展开“主” > “可编程性” > “存储过程”节点。      
+    1.  在对象资源管理器中, 展开 "**数据库**" 节点, 然后展开 "**系统数据库** > " "**主** > **可编程性** > " "**存储过程**" 节点。  
   
     2.  右键单击 **dbo.sp_ssis_startup**，然后依次单击“编写存储过程脚本为” > “CREATE 到” > “新查询编辑器窗口”。     
   

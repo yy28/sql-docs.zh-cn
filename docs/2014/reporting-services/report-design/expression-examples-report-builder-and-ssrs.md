@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413005"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661285"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
 
-表达式通常在报表中使用，以控制报表的内容和外观。 表达式用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]，并且可以使用内置函数的自定义代码、 报表和组变量和用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](add-an-expression-report-builder-and-ssrs.md)。  
+表达式通常在报表中使用，以控制报表的内容和外观。 表达式是用编写[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]的, 可以使用内置函数自定义代码、报表和组变量以及用户定义变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](add-an-expression-report-builder-and-ssrs.md)。  
 
 > [!IMPORTANT]  
 >  启用 RDL 沙盒处理后，在报表发布时，只能在表达式文本中使用某些类型与成员。 有关详细信息，请参阅 [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md)。  
@@ -51,9 +51,9 @@ ms.locfileid: "67413005"
 
 若要了解如何编写表达式，以使用本主题中的表达式示例所用的许多函数和运算符，请参阅[教程：表达式简介](../tutorial-introducing-expressions.md)。  
 
-表达式编辑器包含内置函数的层次结构视图。 选择函数时，“值”窗格中会显示代码示例。 有关详细信息，请参阅[表达式对话框](../expression-dialog-box.md)或[表达式对话框&#40;报表生成器&#41;](../expression-dialog-box-report-builder.md)。  
+表达式编辑器包含内置函数的层次结构视图。 选择函数时，“值”窗格中会显示代码示例。 有关详细信息, 请参阅 "[表达式" 对话框](../expression-dialog-box.md)或 "表达式"[对话框&#40;报表生成器&#41;](../expression-dialog-box-report-builder.md)。  
 
-## <a name="functions"></a>函数  
+## <a name="functions"></a>Functions  
 
 报表中的许多表达式都包含函数。 您可以使用这些函数来设置数据格式、应用逻辑和访问报表元数据。 可以编写使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库、 <xref:System.Convert> 和 <xref:System.Math> 命名空间中的函数的表达式。 您可以从其他程序集或自定义代码中向函数添加引用。 还可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中的类，其中包括 <xref:System.Text.RegularExpressions>。  
 
@@ -176,9 +176,9 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-如果在文本框中包含日期或数字，应使用文本框的 Format 属性来应用格式设置，而不`Format`内文本框中的函数。  
+如果文本框仅包含日期或数字, 则应使用文本框的 "格式" 属性来应用格式设置, 而不是`Format`在文本框中应用函数。  
 
--   `Right`， `Len`，并`InStr`函数可用于返回子字符串，例如，修整*域*\\*用户名*到不仅仅是用户名。 下面的表达式从名为 User  的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
+-   \\、和函数对于返回子字符串十分有用, 例如, 仅将域用户名修整为用户名即可。  `Right` `Len` `InStr` 下面的表达式从名为 User  的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   显示多值参数的所选值。 下面的示例使用`Join`函数的参数的所选的值串联*MySelection*可以为报表项中的文本框的表达式的值设置为一个字符串：  
+-   显示多值参数的所选值。 下面的示例使用`Join`函数将参数*MySelection*的所选值串联到单个字符串中, 该字符串可设置为报表项中文本框值的表达式:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 ```  
 
--   `Regex`函数从[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]<xref:System.Text.RegularExpressions>对更改现有字符串的格式，例如，设置电话号码格式很有用。 下面的表达式使用`Replace`函数可更改的十位电话号码中的字段的格式"*nnn*-*nnn*-*nnnn*"到"(*nnn*) *nnn*-*nnnn*":  
+-   中的函数对更改现有字符串的格式很有用, 例如, 格式化电话号码。 `Regex` [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 以下表达式使用`Replace`函数将字段中的十位电话号码格式从 "*nnn*-*nnn*-*nnnn*" 更改为 "(*nnn*) *nnn* - "*nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 -   通过指定键字段，您可以使用 `Lookup` 函数为一对一关系（例如键值对）从数据集检索值。 下面的表达式通过提供用于匹配的产品标识符，显示来自数据集（“Product”）的产品名称：  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   下面的表达式中设置`Hidden`属性的列，才显示该列从数据源检索数据之后，该字段是否存在于报表数据集：  
+-   如果在列的`Hidden`属性中设置了下面的表达式, 则只有在从数据源中检索到数据后, 该字段存在于报表数据集中时才显示该列:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  
