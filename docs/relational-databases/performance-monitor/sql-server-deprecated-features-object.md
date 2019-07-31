@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093593"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Server Deprecated Features 计数器实例|描述|  
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
-|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *< function_name>*`()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
+|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *< function_name>* `()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
 |“\@”和以“\@\@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 \@ 或 \@\@ 开头的标识符。 请勿使用 \@ 或 \@v@ 或以 \@\@ 开头的名称作为标识符。 每次编译时发生。|  
 |ADDING TAPE DEVICE|遇到不推荐使用的功能 sp_addumpdevice'**tape**'。 请改用 sp_addumpdevice'**disk**'。 每次使用时发生。|  
 |ALL 权限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 语法的总次数。 请修改语法以拒绝特定权限。 每次查询时发生。|  
@@ -129,7 +128,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|遇到对不推荐使用的 sys.numbered_procedure_parameters 的引用。 请勿使用。 每次编译时发生。|  
 |numbered_procedures|遇到对不推荐使用的 sys.numbered_procedure 的引用。 请勿使用。 每次编译时发生。|  
-|旧式 RAISEERROR|遇到不推荐使用的 RAISERROR（格式：RAISERROR 整数字符串）语法。 请使用当前的 RAISERROR 语法重写语句。 每次编译时发生。|  
+|旧式 RAISEERROR|遇到了已弃用的 RAISERROR（格式：RAISERROR 整数字符串）语法。 请使用当前的 RAISERROR 语法重写语句。 每次编译时发生。|  
 |OLEDB 用于即席连接|SQLOLEDB 不是受支持的访问接口。 请将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用于即席连接。|  
 |PERMISSIONS|遇到对 PERMISSIONS 内部函数的引用。 请改为查询 sys.fn_my_permissions。 每次查询时发生。|  
 |ProcNums|遇到不推荐使用的 ProcNums 语法。 请重写语句以删除引用。 每次编译时发生。|  
@@ -179,7 +178,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 存储过程不检查是否存在主密钥。 这是为了向后兼容，但会显示警告。 不推荐使用此行为。 在将来版本中，主密钥必须存在，并且在存储过程 sp_control_dbmasterkey_password 中使用的密码必须与用来对数据库主密钥进行加密的密码之一相同。|  
 |sp_create_removable|遇到 sp_create_removable 过程。 请改用 CREATE DATABASE。 每次查询时发生。|  
 |sp_db_vardecimal_storage_format|遇到 **vardecimal** 存储格式的使用。 请改用数据压缩。|  
-|sp_dbcmptlevel|遇到 sp_dbcmptlevel 过程。 使用 ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 每次查询时发生。|  
+|sp_dbcmptlevel|遇到 sp_dbcmptlevel 过程。 使用 ALTER DATABASE...SET COMPATIBILITY_LEVEL。 每次查询时发生。|  
 |sp_dbfixedrolepermission|遇到 sp_dbfixedrolepermission 过程。 请勿使用。 每次查询时发生。|  
 |sp_dboption|遇到 sp_dboption 过程。 请改用 ALTER DATABASE 和 DATABASEPROPERTYEX。 每次编译时发生。|  
 |sp_dbremove|遇到 sp_dbremove 过程。 请改用 DROP DATABASE。 每次查询时发生。|  

@@ -14,21 +14,20 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9bc785f03f6e7630cca5c2e66e0334e9f1688cc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063818"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>向 SQL Server 资源添加依赖项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题介绍了如何使用故障转移群集管理器管理单元向 AlwaysOn 故障转移群集实例 (FCI) 资源添加依赖项。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
   
--   **准备工作：**[限制和局限](#Restrictions)、[先决条件](#Prerequisites)  
+-   **开始之前：** [限制和局限](#Restrictions)、[先决条件](#Prerequisites)  
   
--   **向 SQL Server 资源添加依赖项，使用：** [Windows 故障转移群集管理器](#WinClusManager)  
+-   **若要为 SQL Server 资源添加依赖关系，请使用：** [Windows 故障转移群集管理器](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -47,9 +46,9 @@ ms.locfileid: "47746405"
   
 -   使用 FTP 进行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制：如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例使用 FTP 进行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制，则 FTP 服务必须与设置为使用 FTP 服务的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装位于同一个物理磁盘。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源依赖关系：如果将某个资源添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中，并且您具有与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系来确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议您添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源的依赖关系。 不要添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系。 若要确保运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机保持高可用性，请对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源进行合理配置以使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源的失败不会对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组带来影响。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源依赖关系：如果将某个资源添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中，并且你具有与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系来确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议你添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源的依赖关系。 不要添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系。 若要确保运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机保持高可用性，请对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源进行合理配置以使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源的失败不会对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组带来影响。  
   
--   文件共享和打印机资源：安装文件共享资源或打印机群集资源时，不应将它们置于运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的计算机的同一物理磁盘资源上。 如果将它们放在相同的物理磁盘资源上，可能导致运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的计算机的性能降低或该计算机上的服务丢失。  
+-   文件共享和打印机资源：安装文件共享资源或打印机群集资源时，不应将它们置于运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机的同一物理磁盘资源上。 如果将它们放在相同的物理磁盘资源上，可能导致运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的计算机的性能降低或该计算机上的服务丢失。  
   
 -   MS DTC 注意事项：安装操作系统和配置 FCI 后，必须使用故障转移群集管理器管理单元将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 配置为在群集中使用。 群集 MS DTC 失败不会导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序停止运行，但如果未能正确配置 MS DTC，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序功能可能会受影响。  
   

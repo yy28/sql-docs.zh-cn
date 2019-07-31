@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf111cdb7490d1a7e5c57f82526d689ed3b4c7bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082982"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系统监视器监视复制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,18 +29,18 @@ ms.locfileid: "47730565"
   
 |代理|性能对象|计数器|描述|  
 |-----------|------------------------|-------------|-----------------|  
-|所有代理|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Agents|正在运行|当前正在运行的复制代理数。|  
-|快照代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Snapshot|Snapshot: Delivered Cmds/sec|每秒传递到分发服务器的命令数。|  
-|快照代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Snapshot|Snapshot: Delivered Trans/sec|每秒传递到分发服务器的事务数。|  
-|日志读取器代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Logreader|Logreader: Delivered Cmds/sec|每秒传递到分发服务器的命令数。|  
-|日志读取器代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Logreader|Logreader: Delivered Trans/sec|每秒传递到分发服务器的事务数。|  
-|日志读取器代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Logreader|Logreader: Delivery Latency|从事务应用于发布服务器起，到传递给分发服务器为止所经过的时间（以毫秒为单位）。|  
-|分发代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivered Cmds/sec|每秒传递到订阅服务器的命令数。|  
-|分发代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivered Trans/sec|每秒传递到订阅服务器的事务数。|  
-|分发代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivery Latency|从事务传递给分发服务器起，到应用于订阅服务器为止所经过的时间（以毫秒为单位）。|  
-|合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Conflicts/sec|在合并过程中每秒出现的冲突数。|  
-|合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Downloaded Changes/sec|每秒从发布服务器复制到订阅服务器的行数。|  
-|合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Uploaded Changes/sec|每秒从订阅服务器复制到发布服务器的行数。|  
+|所有代理|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：复制代理|正在运行|当前正在运行的复制代理数。|  
+|快照代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：复制快照|Snapshot:Delivered Cmds/sec|每秒传递到分发服务器的命令数。|  
+|快照代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：复制快照|Snapshot:Delivered Trans/sec|每秒传递到分发服务器的事务数。|  
+|日志读取器代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：Replication Logreader|Logreader:Delivered Cmds/sec|每秒传递到分发服务器的命令数。|  
+|日志读取器代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：Replication Logreader|Logreader:Delivered Trans/sec|每秒传递到分发服务器的事务数。|  
+|日志读取器代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：Replication Logreader|Logreader:Delivery Latency|从事务应用于发布服务器起，到传递给分发服务器为止所经过的时间（以毫秒为单位）。|  
+|分发代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：Replication Dist.|Dist:Delivered Cmds/sec|每秒传递到订阅服务器的命令数。|  
+|分发代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：Replication Dist.|Dist:Delivered Trans/sec|每秒传递到订阅服务器的事务数。|  
+|分发代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：Replication Dist.|Dist:Delivery Latency|从事务传递给分发服务器起，到应用于订阅服务器为止所经过的时间（以毫秒为单位）。|  
+|合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：复制合并|Conflicts/sec|在合并过程中每秒出现的冲突数。|  
+|合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：复制合并|Downloaded Changes/sec|每秒从发布服务器复制到订阅服务器的行数。|  
+|合并代理|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置用户帐户 ：复制合并|Uploaded Changes/sec|每秒从订阅服务器复制到发布服务器的行数。|  
   
 ## <a name="see-also"></a>另请参阅  
  [监视（复制）](../../../relational-databases/replication/monitor/monitoring-replication.md)  

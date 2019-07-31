@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02d5c28e975346ff048ef656fecc2e35f7c82692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951224"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>本机过程中的 ATOMIC 块
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ ORDER BY c1
 GO  
 ```  
   
- 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332、41333 和 41839。  
+ 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在 ATOMIC 块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332、41333 和 41839。  
   
 ## <a name="session-settings"></a>会话设置  
  在编译存储过程时原子块中的会话设置是固定的。 某些设置可使用 **BEGIN ATOMIC** 指定，而其他设置则始终固定为相同值。  

@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2f78e8fbff4a5fdc896810067ad2552b59336a8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037591"
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ ms.locfileid: "51558934"
 ### <a name="logical-and-physical-file-names"></a>逻辑和物理文件名称
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件具有两种文件名类型： 
 
-**logical_file_name:**  logical_file_name 是在所有 Transact-SQL 语句中引用物理文件时所使用的名称。 逻辑文件名必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则，而且在数据库中的逻辑文件名中必须是唯一的。 这是由 `ALTER DATABASE` 的 `NAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**logical_file_name：** logical_file_name 是在所有 Transact-SQL 语句中引用物理文件时所使用的名称。 逻辑文件名必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则，而且在数据库中的逻辑文件名中必须是唯一的。 这是由 `ALTER DATABASE` 的 `NAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-**os_file_name:** os_file_name 是包括目录路径的物理文件的名称。 它必须符合操作系统文件命名规则。 这是由 `ALTER DATABASE` 的 `FILENAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**os_file_name：** os_file_name 是包括目录路径的物理文件的名称。 它必须符合操作系统文件命名规则。 这是由 `ALTER DATABASE` 的 `FILENAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据和日志文件可以保存在 FAT 或 NTFS 文件系统中。 由于 NTFS 在安全方面具有优势，因此，建议在 Windows 系统上使用 NTFS 文件系统。 
@@ -106,7 +105,7 @@ ms.locfileid: "51558934"
 |---------------|-----------------|  
 |主|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
 |内存优化数据|内存优化文件组基于 Filestream 文件组|  
-|Filestream||    
+|文件流||    
 |用户定义|用户首次创建数据库或以后修改数据库时明确创建的任何文件组。|  
   
 ### <a name="default-primary-filegroup"></a>默认 (Primary) 文件组  

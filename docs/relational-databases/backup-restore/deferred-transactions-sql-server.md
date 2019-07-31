@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5db753c673c38a0f14340d06b21abebd59887c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075978"
 ---
 # <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "47666125"
   
          有关紧急模式的信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
   
-    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库： [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
+    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库：[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) 或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
          在遇到错误的页时，DBCC 将释放该页并修复所有相关错误。 此方法可以使数据库重新联机并处于物理上一致的状态。 但是，还可能会丢失其他数据；因此，应在不得已的情况下才使用此方法。  
   

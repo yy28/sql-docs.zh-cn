@@ -12,30 +12,29 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044736"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动 WSFC 群集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何在无仲裁情况下强制启动 Windows Server 故障转移群集 (WSFC) 群集节点。  在灾难恢复和多子网方案中，可能需要它来为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例恢复数据和完全重建高可用性。  
   
--   **准备工作：**[建议](#Recommendations)、[安全性](#Security)  
+-   **开始之前：** [建议](#Recommendations)、[安全性](#Security)  
   
--   **若要在无仲裁情况下强制启动群集，请使用：**[使用故障转移群集管理器](#FailoverClusterManagerProcedure)、[使用 Powershell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
+-   **若要在无仲裁情况下强制启动群集，请使用：** [使用故障转移群集管理器](#FailoverClusterManagerProcedure)、[使用 Powershell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
   
--   **跟进：**[跟进：在无仲裁情况下强制启动群集后](#FollowUp)  
+-   **跟进：** [跟进：在无仲裁情况下强制启动群集后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Recommendations"></a> 建议  
  除了明确指出的情况外，从 WSFC 群集中的任意节点执行时，本主题中的步骤都应适用。  但是，通过从要在无仲裁情况下强制启动的节点执行这些步骤，可能获得更好的效果并避免网络问题。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
 ##  <a name="FailoverClusterManagerProcedure"></a> 使用故障转移群集管理器  
@@ -44,11 +43,11 @@ ms.locfileid: "52520211"
   
 1.  打开故障转移群集管理器并连接到所需的群集节点，以强制联机。  
   
-2.  在“操作”窗格中，单击“强制启动群集”，然后单击“是 - 强制启动我的群集”。  
+2.  在“操作”窗格中，单击“强制启动群集”，然后单击“是 - 强制启动我的群集”    。  
   
 3.  在左窗格中，在 **“故障转移群集管理器”** 树中单击该群集名称。  
   
-4.  在摘要窗格中，确认当前 **“仲裁配置”** 值为  **“警告: 群集正在 ForceQuorum 状态下运行”**。  
+4.  在“摘要”窗格中，确认当前“仲裁配置”的值是否为  ：**警告：群集正在 ForceQuorum 状态下运行**。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   

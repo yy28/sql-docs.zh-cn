@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901965"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>参数  
-WITH ( \<table_hint> ) [ [, ]...n ]  
+WITH ( \<table_hint> ) [ [, ]...n ]      
 存在一些例外情况：只有在使用 WITH 关键字指定表提示时，才支持在 FROM 子句中使用这些提示。 指定表提示时必须使用括号。  
   
 > [!IMPORTANT]  
@@ -148,7 +147,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 指定查询优化器处理查询时，不扩展任何索引视图来访问基础表。 查询优化器将视图当成包含聚集索引的表处理。 NOEXPAND 仅适用于索引视图。 有关详细信息，请参阅[使用 NOEXPAND](#using-noexpand)。  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 INDEX() 语法指定供查询优化器在处理该语句时使用的一个或多个索引的名称或 ID。 另一供选择的 INDEX = 语法指定单个索引值。 只能为每个表指定一个索引提示。  
   
 如果存在聚集索引，则 INDEX(0) 强制执行聚集索引扫描，INDEX(1) 强制执行聚集索引扫描或查找。 如果不存在聚集索引，则 INDEX(0) 强制执行表扫描，INDEX(1) 被解释为错误。  
@@ -179,7 +178,7 @@ KEEPDEFAULTS
   
 有关在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句中使用此提示的示例，请参阅[在批量导入期间保留 Null 或使用默认值 (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 指定查询优化器仅使用索引查找操作作为表或视图中的数据的访问途径。 
 
 > [!NOTE]
@@ -222,7 +221,7 @@ FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))*
 > [!CAUTION]  
 > 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致更多情况下发生 `Plan cannot be generated` 错误。 在未来的版本中，对查询优化器进行内部修改后可允许考虑更多计划。  
   
-FORCESCAN 适用范围：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+FORCESCAN 适用范围：  [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 指定查询优化器仅使用索引扫描操作作为引用的表或视图的访问途经。 对于优化器低估受影响的行数并选择一个查找操作而非扫描操作的查询，FORCESCAN 提示很有用。 出现这样的情况时，授予该操作的内存量太小，查询性能将受影响。  
   
 指定 FORCESCAN 时有无 INDEX 提示均可。 与索引提示组合使用 (`INDEX = index_name, FORCESCAN`) 时，查询优化器在访问引用的表时仅考虑通过指定的索引扫描访问路径。 可以带索引提示 INDEX(0) 指定 FORCESCAN，以强制对基表执行表扫描操作。  
@@ -412,7 +411,7 @@ NOEXPAND 仅适用于*索引视图*。 索引视图是包含为其创建的唯�
 ## <a name="using-a-table-hint-as-a-query-hint"></a>将表提示用作查询提示  
  也可以使用 OPTION (TABLE HINT) 子句将*表提示*指定为查询提示。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。 对于即席查询，请将这些提示仅指定为表提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要具有对表的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904955"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   仲裁故障通常由涉及 WSFC 群集中的多个节点的系统性灾难、持久性通信故障或配置错误引起的。  从仲裁故障恢复需要手动干预。  
   
--   **准备工作：**[先决条件](#Prerequisites)、[安全性](#Security)  
+-   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  
   
 -   **通过强制仲裁过程进行 WSFC 灾难恢复** [通过强制仲裁过程进行 WSFC 灾难恢复](#Main)  
   
@@ -41,9 +40,9 @@ ms.locfileid: "51699725"
 > [!WARNING]  
 >  用户应熟悉 Windows Server 故障转移群集、WSFC 仲裁模型、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的概念和交互方式，以及环境特定的部署配置。  
 >   
->  有关详细信息，请参阅：  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)和 [WSFC 仲裁模式和投票配置 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  有关详细信息，请参阅：[Windows Server 故障转移群集 (WSFC) 与 SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx) 和 [WSFC 仲裁模式和投票配置 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  用户必须是一个域帐户，该帐户是每个 WSFC 群集节点上本地 Administrators 组的成员。  
   
 ##  <a name="Main"></a> 通过强制仲裁过程进行 WSFC 灾难恢复  
@@ -66,7 +65,7 @@ ms.locfileid: "51699725"
   
      在此节点上，使用强制仲裁过程来手动强制群集联机。  为了最大程度地减少可能丢失的数据，应选择一个最后承载可用性组主副本的节点。  
   
-     有关详细信息，请参阅：  [在无仲裁情况下强制启动 WSFC 群集](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     有关详细信息，请参阅：[在无仲裁情况下强制启动 WSFC 群集](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  在逻辑 WSFC 群集获得大多数投票并自动转换到操作的常规仲裁模式之前，强制仲裁设置会在群集范围内阻止仲裁检查。  

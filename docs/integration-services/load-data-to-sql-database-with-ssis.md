@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57c9f725ec8f7c2a26a110a6d317bd5ec1de118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054507"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 SQL Server 或 Azure SQL 数据库中
 

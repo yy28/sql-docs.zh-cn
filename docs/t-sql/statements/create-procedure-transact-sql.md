@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006523"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "56801892"
   
 -   向调用过程或批处理返回状态值，以指明成功或失败（以及失败的原因）。  
   
- 使用此语句可以在当前数据库中创建永久过程，或者在 tempdb 数据库中创建临时程序。  
+ 使用此语句可以在当前数据库中创建永久过程，或者在 tempdb 数据库中创建临时程序  。  
   
 > [!NOTE]  
 >  本主题讨论 .NET Framework CLR 与 SQL Server 的集成。 CLR 集成不适用于 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
@@ -152,61 +151,61 @@ OR ALTER
  *schema_name*  
  过程所属架构的名称。 过程是绑定到架构的。 如果在创建过程时未指定架构名称，则自动分配正在创建过程的用户的默认架构。  
   
- procedure_name  
+ procedure_name   
  过程的名称。 过程名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则，并且在架构中必须唯一。  
   
- 在命名过程时避免使用 sp_ 前缀。 此前缀由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用来指定系统过程。 如果存在同名的系统过程，则使用前缀可能导致应用程序代码中断。  
+ 在命名过程时避免使用 sp_ 前缀  。 此前缀由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用来指定系统过程。 如果存在同名的系统过程，则使用前缀可能导致应用程序代码中断。  
   
- 可在 procedure_name 前面使用一个数字符号 (#procedure_name) 来创建局部临时程序，使用两个数字符号 (##procedure_name) 来创建全局临时程序。 局部临时程序仅对创建了它的连接可见，并且在关闭该连接后将被删除。 全局临时程序可用于所有连接，并且在使用该过程的最后一个会话结束时将被删除。 对于 CLR 过程，不能指定临时名称。  
+ 可在 procedure_name 前面使用一个数字符号 (#procedure_name) 来创建局部临时程序，使用两个数字符号 (##procedure_name) 来创建全局临时程序    。 局部临时程序仅对创建了它的连接可见，并且在关闭该连接后将被删除。 全局临时程序可用于所有连接，并且在使用该过程的最后一个会话结束时将被删除。 对于 CLR 过程，不能指定临时名称。  
   
  过程或全局临时程序的完整名称（包括 ##）不能超过 128 个字符。 局部临时程序的完整名称（包括 #）不能超过 116 个字符。  
   
- ; number  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ ; number    
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  用于对同名的过程分组的可选整数。 使用一个 DROP PROCEDURE 语句可将这些分组过程一起删除。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 带编号的过程不能使用 xml 或 CLR 用户定义类型，并且不能用于计划指南中。  
+ 带编号的过程不能使用 xml 或 CLR 用户定义类型，并且不能用于计划指南中  。  
   
- @ parameter  
- 在过程中声明的参数。 通过将 at 符号 (@) 用作第一个字符来指定参数名称。 参数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 每个过程的参数仅用于该过程本身；其他过程中可以使用相同的参数名称。  
+ @ parameter    
+ 在过程中声明的参数。 通过将 at 符号 (@) 用作第一个字符来指定参数名称  。 参数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 每个过程的参数仅用于该过程本身；其他过程中可以使用相同的参数名称。  
   
  可声明一个或多个参数；最大值是 2,100。 除非定义了参数的默认值或者将参数设置为等于另一个参数，否则用户必须在调用过程时为每个声明的参数提供值。 如果过程包含[表值参数](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)，并且该参数在调用中缺失，则传入空表。 参数只能代替常量表达式，而不能用于代替表名、列名或其他数据库对象的名称。 有关详细信息，请参阅 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)。  
   
  如果指定了 FOR REPLICATION，则无法声明参数。  
   
- [ _type\_schema\_name_**.** [ =] data_type  
+ [ _type\_schema\_name_ **.** [ =] data_type   
  参数的数据类型以及该数据类型所属的架构。  
   
-针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程的准则：  
+针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程的准则  ：  
   
 -   所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据类型都可以用作参数。  
   
 -   您可以使用用户定义的表类型创建表值参数。 表值参数只能是 INPUT 参数，并且这些参数必须带有 READONLY 关键字。 有关详细信息，请参阅[使用表值参数（数据引擎）](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
   
--   游标数据类型只能是 OUTPUT 参数，并且必须带有 VARYING 关键字。  
+-   游标数据类型只能是 OUTPUT 参数，并且必须带有 VARYING 关键字  。  
   
-针对 CLR 过程的准则：  
+针对 CLR 过程的准则  ：  
   
 -   在托管代码中具有等效值的所有本机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型都可以用作参数。 有关 CLR 类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型之间关系的详细信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型及其语法的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   表值或游标数据类型不能用作参数。  
+-   表值或游标数据类型不能用作参数  。  
   
 -   如果参数的数据类型为 CLR 用户定义类型，则必须对此类型有 EXECUTE 权限。  
   
 VARYING  
- 指定作为输出参数支持的结果集。 该参数由过程动态构造，其内容可能发生改变。 仅适用于游标参数。 该选项对于 CLR 过程无效。  
+ 指定作为输出参数支持的结果集。 该参数由过程动态构造，其内容可能发生改变。 仅适用于游标参数  。 该选项对于 CLR 过程无效。  
   
-default  
+default   
  参数的默认值。 如果为参数定义了默认值，则无需指定此参数的值即可执行过程。 默认值必须是常量或 NULL。 该常量值可以采用通配符的形式，这使其可以在将该参数传递到过程时使用 LIKE 关键字。   
   
- 只有 CLR 过程的默认值记录在 sys.parameters.default 列中。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程参数，该列将为 NULL。  
+ 只有 CLR 过程的默认值记录在 sys.parameters.default 列中  。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程参数，该列将为 NULL。  
   
 OUT | OUTPUT  
- 指示参数是输出参数。 使用 OUTPUT 参数将值返回给过程的调用方。 除非是 CLR 过程，否则 text、ntext 和 image 参数不能用作 OUTPUT 参数。 OUTPUT 参数可以为游标占位符，CLR 过程除外。 不能将表值数据类型指定为过程的 OUTPUT 参数。  
+ 指示参数是输出参数。 使用 OUTPUT 参数将值返回给过程的调用方。 除非是 CLR 过程，否则 text、ntext 和 image 参数不能用作 OUTPUT 参数    。 OUTPUT 参数可以为游标占位符，CLR 过程除外。 不能将表值数据类型指定为过程的 OUTPUT 参数。  
   
 READONLY  
  指示不能在过程的主体中更新或修改参数。 如果参数类型为表值类型，则必须指定 READONLY。  
@@ -225,10 +224,10 @@ ENCRYPTION
   
  使用此选项创建的过程不能作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的一部分发布。  
   
-EXECUTE AS 子句  
+EXECUTE AS 子句   
  指定在其中执行过程的安全上下文。  
   
- 对于本机编译存储过程（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中），EXECUTE AS 子句没有任何限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，对于本机编译的存储过程，支持 SELF、OWNER 和“user_name”子句。  
+ 对于本机编译存储过程（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始和在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中），EXECUTE AS 子句没有任何限制。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，对于本机编译的存储过程，支持 SELF、OWNER 和“user_name”子句  。  
   
  有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
@@ -237,15 +236,15 @@ FOR REPLICATION
   
  指定为复制创建该过程。 因此，它不能在订阅服务器上执行。 使用 FOR REPLICATION 选项创建的过程可用作过程筛选器，且仅在复制过程中执行。 如果指定了 FOR REPLICATION，则无法声明参数。 对于 CLR 过程，不能指定 FOR REPLICATION。 对于使用 FOR REPLICATION 创建的过程，忽略 RECOMPILE 选项。  
   
- `FOR REPLICATION` 过程在 sys.objects 和 sys.procedures 中包含 RF 对象类型。  
+ `FOR REPLICATION` 过程在 sys.objects 和 sys.procedures 中包含 RF 对象类型    。  
   
- { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }  
+ { [ BEGIN ] sql_statement  [;] [ ...n  ] [ END ] }  
  构成过程主体的一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 您可以使用可选的 BEGIN 和 END 关键字将这些语句括起来。 有关信息，请参阅后面的“最佳实践”、“一般备注”以及“限制和局限”部分。  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
+ 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  。  
   
- 指定 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集的方法，以便 CLR 过程引用。 class_name 必须为有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中。 如果类包含一个使用句点 (.) 分隔命名空间各部分的限定命名空间的名称，则必须使用方括号 ([]) 或引号 ("") 将类名称分隔开。 指定的方法必须为该类的静态方法。  
+ 指定 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集的方法，以便 CLR 过程引用。 class_name 必须为有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中  。 如果类包含一个使用句点 (.) 分隔命名空间各部分的限定命名空间的名称，则必须使用方括号 ([]) 或引号 ("") 将类名称分隔开    。 指定的方法必须为该类的静态方法。  
   
  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用该选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
@@ -253,7 +252,7 @@ EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_
 >  包含数据库中不支持 CLR 过程。  
   
 ATOMIC WITH  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  指示执行原子存储过程。 更改提交或所有更改通过引发异常回滚。 ATOMIC WITH 块对于本机编译存储过程是必需的。  
   
@@ -274,26 +273,26 @@ BEGIN、ROLLBACK 和 COMMIT 操作无法在原子块内使用。
   
  每个本机编译存储过程的外层作用域都有一个 ATOMIC 块。 这些块不能嵌套。 有关 ATOMIC 块的详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
-NULL | NOT NULL  
+NULL | NOT NULL   
  确定参数中是否允许 Null 值。 NULL 是默认值。  
   
 NATIVE_COMPILATION  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  指示过程已本机编译。 NATIVE_COMPILATION、SCHEMABINDING 和 EXECUTE AS 可以按任意顺序指定。 有关详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
 SCHEMABINDING  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  确保过程引用的表不能删除或修改。 SCHEMABINDING 在本机编译存储过程中是必需的。 （有关详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。）SCHEMABINDING 限制与其对用户定义的函数的限制是相同的。 有关详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的 SCHEMABINDING 部分。  
   
 LANGUAGE = [N] 'language'  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  等效于 [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) 会话选项。 LANGUAGE = [N] 'language' 是必须的。  
   
 TRANSACTION ISOLATION LEVEL  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  对于本机编译存储过程是必需的。 指定存储过程的事务隔离级别。 选项如下所示：  
   
@@ -312,21 +311,21 @@ SNAPSHOT
  指定由事务中的任何语句读取的数据与事务开始时存在的数据版本一致。  
   
 DATEFIRST = *number*  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  将一周的第一天指定为 1 到 7 中的一个数字。 DATEFIRST 是可选的。 如果未指定，该设置从指定语言进行推断。  
   
  有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).  
   
-DATEFORMAT = format  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+DATEFORMAT = format   
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  指定用于解释 date、smalldatetime、datetime、datetime2 和 datetimeoffset 字符串的月、日和年日期部分的顺序。 DATEFORMAT 是可选的。 如果未指定，该设置从指定语言进行推断。  
   
  有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
 DELAYED_DURABILITY = { OFF | ON }  
- 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。  
   
@@ -388,7 +387,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
  第一次执行某个过程时，将编译该过程以确定检索数据的最优访问计划。 如果已经生成的计划仍保留在[!INCLUDE[ssDE](../../includes/ssde-md.md)]计划缓存中，则该过程随后执行的操作可能重新使用该计划。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时可以自动执行一个或多个过程。 这些过程必须由系统管理员在 master 数据库中创建，并以 sysadmin 固定服务器角色作为后台进程执行。 这些过程不能有任何输入或输出参数。 有关详细信息，请参阅[执行存储过程](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时可以自动执行一个或多个过程。 这些过程必须由系统管理员在 master 数据库中创建，并以 sysadmin 固定服务器角色作为后台进程执行   。 这些过程不能有任何输入或输出参数。 有关详细信息，请参阅[执行存储过程](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)。  
   
  当一个过程通过引用 CLR 例程、类型或聚合来调用另一个过程或执行托管代码时，过程将被嵌套。 过程和托管代码引用的嵌套最高可达 32 级。 每当调用的过程或托管代码引用开始执行，嵌套级别就增加一级；执行完成后，嵌套级别就减少一级。 从托管代码内部调用的方法不根据嵌套级别限制进行计数。 但是，当一个 CLR 存储过程通过 SQL Server 托管访问接口执行数据访问操作时，在从托管代码到 SQL 的转换中将添加一级嵌套。  
   
@@ -402,7 +401,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
  可以在过程中指定除了 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL 以外的任何 SET 语句。 这些语句在批处理中必须唯一。 选择的 SET 选项在过程执行过程中有效，之后恢复为原来的设置。  
   
 > [!NOTE]  
->  在过程和用户定义函数中传递参数，或者在批处理语句中声明和设置变量时，不执行 SET ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据将被截断为定义的大小，INSERT 或 UPDATE 语句可以成功执行。  
+>  在过程和用户定义函数中传递参数，或者在批处理语句中声明和设置变量时，不执行 SET ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据将被截断为定义的大小，INSERT 或 UPDATE 语句可以成功执行  。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  在单个批处理中，CREATE PROCEDURE 语句不能与其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组合使用。  
@@ -413,7 +412,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 |-|-|-|  
 |CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|  
 |CREATE DEFAULT|CREATE 或 ALTER TRIGGER|SET SHOWPLAN_XML|  
-|CREATE 或 ALTER FUNCTION|CREATE 或 ALTER VIEW|USE database_name|  
+|CREATE 或 ALTER FUNCTION|CREATE 或 ALTER VIEW|USE database_name |  
 |CREATE 或 ALTER PROCEDURE|SET PARSEONLY||  
 |CREATE RULE|SET SHOWPLAN_ALL||  
   
@@ -443,7 +442,7 @@ GO
   
 |“查看”|描述|  
 |----------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|返回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程的定义。 使用 ENCRYPTION 选项创建的过程的文本不能使用 sys.sql_modules 目录视图查看。|  
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|返回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程的定义。 使用 ENCRYPTION 选项创建的过程的文本不能使用 sys.sql_modules 目录视图查看  。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|返回有关 CLR 过程的信息。|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|返回有关在过程中定义的参数的信息。|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|返回过程引用的对象。|  
@@ -452,7 +451,7 @@ GO
   
 |性能监视器对象名|性能监视器计数器名称|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer:Plan Cache Object|Cache Hit Ratio|  
+|SQLServer：Plan Cache 对象|Cache Hit Ratio|  
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
@@ -460,10 +459,10 @@ GO
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- 要求数据库中的 CREATE PROCEDURE 权限以及对要在其中创建过程的架构的 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份。  
+### <a name="permissions"></a>权限  
+ 要求数据库中的 CREATE PROCEDURE 权限以及对要在其中创建过程的架构的 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份    。  
   
- 对于 CLR 存储过程，需要 EXTERNAL NAME 子句中引用的程序集的所有权，或者该程序集的 REFERENCES 权限。  
+ 对于 CLR 存储过程，需要 EXTERNAL NAME 子句中引用的程序集的所有权，或者该程序集的 REFERENCES 权限  。  
   
 ##  <a name="mot"></a> CREATE PROCEDURE 和内存优化表  
  可以通过传统和本机编译存储过程访问内存优化表。 大多数情况下，本机过程是更高效的方式。
@@ -543,7 +542,7 @@ GO
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. 创建 CLR 存储过程  
  以下示例将创建 `GetPhotoFromDB` 过程，此过程引用 `HandlingLOBUsingCLR` 程序集中的 `LargeObjectBinary` 类的 `GetPhotoFromDB` 方法。 在创建过程之前，已在本地数据库中注册 `HandlingLOBUsingCLR` 程序集。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（如果使用从 assembly_bits 创建的程序集）  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（如果使用从 assembly_bits 创建的程序集）    
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -659,10 +658,10 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- 执行 `uspGetList`，返回价格低于 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 `OUTPUT` 参数 `@Cost` 和 `@ComparePrices` 用于控制流语言，用于在“消息”窗口中返回消息。  
+ 执行 `uspGetList`，返回价格低于 `$700` 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 `OUTPUT` 参数 `@Cost` 和 `@ComparePrices` 用于控制流语言，用于在“消息”窗口中返回消息  。  
   
 > [!NOTE]  
->  OUTPUT 变量必须在创建过程时或使用变量时定义。 参数名称和变量名称不一定要匹配，但是，除非使用 `@ListPrice` = variable，否则数据类型和参数定位必须匹配。  
+>  OUTPUT 变量必须在创建过程时或使用变量时定义。 参数名称和变量名称不一定要匹配，但是，除非使用 `@ListPrice` = variable，否则数据类型和参数定位必须匹配  。  
   
 ```sql  
 DECLARE @ComparePrice money, @Cost money ;  
@@ -872,7 +871,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 #### <a name="k-using-the-with-encryption-option"></a>K. 使用 WITH ENCRYPTION 选项  
  以下示例将创建 `HumanResources.uspEncryptThis` 过程。  
   
-适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，SQL 数据库。  
+适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，SQL 数据库  。  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  

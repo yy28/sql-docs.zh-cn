@@ -1,10 +1,25 @@
+---
+ms.openlocfilehash: 69aef06a7a4c8a8cfbf15a541a98cf8979de2296
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212785"
+---
 
+我们通过多组存档网页来留存较早版本的 Microsoft SQL Server 的相关文档。 搜索引擎（例如 Bing.com 和 Google.com）不会处理存档网页。 但是，可在 Docs previous-versions/sql/ 地址中看到这些存档  ：
 
-我们通过一组存档网页来留存较早版本的 SQL Server 的相关文档。 可在 [SQL Server 以前版本文档](https://docs.microsoft.com/previous-versions/sql/)中看到这些存档。
+- [https://docs.microsoft.com/previous-versions/sql/](https://docs.microsoft.com/previous-versions/sql/)
 
-截至 2018 年 11 月，这些存档至少包括以下内容的相关文档：
+这些存档至少包括以下较早版本的相关文档：
+
 - SQL Server 2012
 - SQL Server 2008 R2
 - SQL Server 2008
 - SQL Server 2005
 
+[SQL Server 2014 文档](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)仍在主要的 Docs 地址中提供。
+
+[SQL Server 2019 文档](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?toc=/sql/toc/toc.json&view=sql-server-ver15)在主要的 Docs 地址中提供。 然后使用页面顶部附近的“版本控制”下拉列表来选择其他感兴趣的版本。
+
+有关 SQL Server 早期版本的文档的详细信息，请参阅[以前版本的 SQL Server 文档](/sql/toc/previous-versions-sql-server?view=sql-server-previousversions)。

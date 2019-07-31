@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de761d6ffe58f757b933c8235a8c82d13bda1cc0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948080"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,15 +54,15 @@ ms.locfileid: "58161814"
   
 ## <a name="arguments"></a>参数  
  *expression_name*  
-是公用表表达式的有效标识符。 expression_name 须不同于在同一 WITH \<common_table_expression> 子句中定义的任何其他公用表表达式的名称，但可以与基表或基视图的名称相同。 在查询中对 expression_name 的任何引用都会使用公用表表达式，而不使用基对象。
+是公用表表达式的有效标识符。 expression_name 须不同于在同一 WITH \<common_table_expression> 子句中定义的任何其他公用表表达式的名称，但可以与基表或基视图的名称相同。   在查询中对 expression_name 的任何引用都会使用公用表表达式，而不使用基对象。 
   
- column_name  
- 在公用表表达式中指定列名。 在一个 CTE 定义中不允许出现重复的名称。 指定的列名数必须与 CTE_query_definition 结果集中列数相匹配。 只有在查询定义中为所有结果列都提供了不同的名称时，列名列表才是可选的。  
+ column_name   
+ 在公用表表达式中指定列名。 在一个 CTE 定义中不允许出现重复的名称。 指定的列名数必须与 CTE_query_definition 结果集中列数相匹配。  只有在查询定义中为所有结果列都提供了不同的名称时，列名列表才是可选的。  
   
  *CTE_query_definition*  
- 指定一个其结果集填充公用表表达式的 SELECT 语句。 除了 CTE 不能定义另一个 CTE 以外，CTE_query_definition 的 SELECT 语句必须满足与创建视图相同的要求。 有关详细信息，请参阅“注释”部分和 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
+ 指定一个其结果集填充公用表表达式的 SELECT 语句。 除了 CTE 不能定义另一个 CTE 以外，CTE_query_definition 的 SELECT 语句必须满足与创建视图相同的要求。  有关详细信息，请参阅“注释”部分和 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- 如果定义了多个 CTE_query_definition，则这些查询定义必须用下列一个集合运算符联接起来：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
+ 如果定义了多个 CTE_query_definition，则这些查询定义必须用下列一个集合运算符联接起来  ：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -76,9 +75,9 @@ ms.locfileid: "58161814"
   
 -   CTE 可以引用自身，也可以引用在同一 `WITH` 子句中预先定义的 CTE。 不允许前向引用。  
   
--   不允许在一个 CTE 中指定多个 WITH 子句。 例如，如果 CTE_query_definition 包含一个子查询，则该子查询不能包括定义另一个 CTE 的嵌套 WITH 子句。  
+-   不允许在一个 CTE 中指定多个 WITH 子句。 例如，如果 CTE_query_definition 包含一个子查询，则该子查询不能包括定义另一个 CTE 的嵌套 WITH 子句。   
   
--   不能在 CTE_query_definition 中使用以下子句：  
+-   不能在 CTE_query_definition 中使用以下子句：   
   
     -   `ORDER BY`（除非指定了 `TOP` 子句）  
   
@@ -107,9 +106,9 @@ ms.locfileid: "58161814"
   
 -   递归成员中列的数据类型必须与定位点成员中相应列的数据类型一致。  
   
--   递归成员的 FROM 子句只能引用一次 CTE expression_name。  
+-   递归成员的 FROM 子句只能引用一次 CTE expression_name。   
   
--   在递归成员的 CTE_query_definition 中不能出现下列项：  
+-   在递归成员的 CTE_query_definition 中不能出现下列项：   
   
     -   `SELECT DISTINCT`  
   
@@ -127,7 +126,7 @@ ms.locfileid: "58161814"
   
     -   子查询  
   
-    -   应用于 CTE_query_definition 中 CTE 的递归引用的提示。  
+    -   应用于 CTE_query_definition 中 CTE 的递归引用的提示。   
   
  下面的准则适用于使用递归公用表表达式：  
   
@@ -137,7 +136,7 @@ ms.locfileid: "58161814"
   
 -   不能使用包含递归公用表表达式的视图来更新数据。  
   
--   可以使用 CTE 在查询上定义游标。 CTE 是定义游标结果集的 select_statement 参数。 递归 CTE 只允许使用快速只进游标和静态（快照）游标。 如果在递归 CTE 中指定了其他游标类型，则该类型将转换为静态游标类型。  
+-   可以使用 CTE 在查询上定义游标。 CTE 是定义游标结果集的 select_statement 参数。  递归 CTE 只允许使用快速只进游标和静态（快照）游标。 如果在递归 CTE 中指定了其他游标类型，则该类型将转换为静态游标类型。  
   
 -   可以在 CTE 中引用远程服务器中的表。 如果在 CTE 的递归成员中引用了远程服务器，那么将为每个远程表创建一个假脱机，这样就可以在本地反复访问这些表。 如果为 CTE 查询，Index Spool/Lazy Spool 则显示在查询计划中，并具有额外的 `WITH STACK` 谓词。 这是一种确认正确递归的方法。  
   

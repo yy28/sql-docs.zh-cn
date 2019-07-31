@@ -16,25 +16,24 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87ed4e0440f31f63d0f0ecf8456acffea4502fae
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d0998a357a115622a0c8703bd4b200cc06f86685
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941023"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系统数据库的备份和还原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护一组系统级数据库（称为“系统数据库”），这些数据库对于服务器实例的运行至关重要。 每次进行大量更新后，都必须备份多个系统数据库。 必须备份的系统数据库包括 **msdb**、 **master**和 **model**。 如果有任何数据库在服务器实例上使用了复制，则还必须备份 **distribution** 系统数据库。 备份这些系统数据库，就可以在发生系统故障（例如硬盘丢失）时还原和恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 维护一组系统级数据库（称为“系统数据库”  ），这些数据库对于服务器实例的运行至关重要。 每次进行大量更新后，都必须备份多个系统数据库。 必须备份的系统数据库包括 **msdb**、 **master**和 **model**。 如果有任何数据库在服务器实例上使用了复制，则还必须备份 **distribution** 系统数据库。 备份这些系统数据库，就可以在发生系统故障（例如硬盘丢失）时还原和恢复 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统。  
   
  下表概述了所有的系统数据库。  
   
 |系统数据库|描述|是否需要备份？|恢复模式|注释|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[master](../../relational-databases/databases/master-database.md)|记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息的数据库。|是|Simple|必须经常备份 **master** ，以便根据业务需要充分保护数据。 建议使用定期备份计划，这样在大量更新之后可以补充更多的备份。|  
-|[model](../../relational-databases/databases/model-database.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上为所有数据库创建的模板。|是|允许用户配置*|仅在业务需要时备份 **model** ，例如自定义其数据库选项后立即备份。<br /><br /> **最佳做法：** 建议根据需要仅创建“model”的完整数据库备份。 由于 **model** 较小而且很少更改，因此无需备份日志。|  
+|[model](../../relational-databases/databases/model-database.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上为所有数据库创建的模板。|是|允许用户配置*|仅在业务需要时备份 **model** ，例如自定义其数据库选项后立即备份。<br /><br /> **最佳做法：** 建议根据需要仅创建“model”的完整数据库备份  。 由于 **model** 较小而且很少更改，因此无需备份日志。|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来安排警报和作业以及记录操作员信息的数据库。 **msdb** 还包含历史记录表，例如备份和还原历史记录表。|是|简单（默认值）|更新时备份 **msdb** 。|  
 |[Resource](../../relational-databases/databases/resource-database.md) (RDB)|包含附带的所有系统对象副本的只读数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|否|-|**Resource** 数据库位于 mssqlsystemresource.mdf 文件中，该文件仅包含代码。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能备份 **Resource** 数据库。<br /><br /> 注意：通过将 mssqlsystemresource.mdf 文件作为二进制 (.exe) 文件而不是作为数据库文件处理，可以对该文件执行基于文件的备份或基于磁盘的备份。 但是不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还原这些备份。 只能手动还原 mssqlsystemresource.mdf 的备份副本，并且必须谨慎，不要使用过时版本或可能不安全的版本覆盖当前的 **Resource** 数据库。|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|用于保存临时或中间结果集的工作空间。 每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时都会重新创建此数据库。 服务器实例关闭时，将永久删除 **tempdb** 中的所有数据。|否|Simple|无法备份 **tempdb** 系统数据库。|  

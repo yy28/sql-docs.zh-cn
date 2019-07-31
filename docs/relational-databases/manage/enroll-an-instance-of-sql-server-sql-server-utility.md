@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115421"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,14 +88,14 @@ ms.locfileid: "52509795"
 -   [注册 SQL Server 的实例](#Enrolling)  
   
 ##  <a name="Welcome"></a> 注册实例向导简介  
- 若要启动该向导，请展开实用工具控制点上的实用工具资源管理器树，右键单击“托管实例”，然后选择“添加托管实例…”。  
+ 若要启动该向导，请展开实用工具控制点上的实用工具资源管理器树，右键单击“托管实例”，然后选择“添加托管实例…”   。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的实例  
- 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“连接…”  。以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Connection_dialog"></a> 连接对话框  
  在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
@@ -104,7 +103,7 @@ ms.locfileid: "52509795"
 > [!NOTE]  
 >  如果连接是加密的，则使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
   
- 若要继续，请单击“连接…”。  
+ 若要继续，请单击“连接…”  。  
   
 ##  <a name="Proxy_configuration"></a> 实用工具收集组帐户  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 Windows 域帐户。 此帐户用作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 此外，也可以使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。 若要满足验证要求，请使用以下准则来指定帐户。  
@@ -113,7 +112,7 @@ ms.locfileid: "52509795"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户必须是 Windows 域帐户，且不是 LocalSystem、NetworkService 或 LocalService 之类的内置帐户。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Validation_rules"></a> SQL Server 实例验证  
  在此版本中，在要注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，必须满足以下条件：  
@@ -126,7 +125,7 @@ ms.locfileid: "52509795"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例已不能向任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 注册。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已作为现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的一部分进行管理，则您无法向其他 UCP 注册它。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不能已经是 UCP。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已经是与您连接到的 UCP 不同的其他 UCP，则不能在此 UCP 中注册它。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例必须安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具收集组。|重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的收集组必须停止运行。|停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例上预先存在的收集组。 如果数据收集器被禁用，则启用它，停止正在运行的所有收集组，然后为创建 UCP 操作重新运行验证规则。<br /><br /> 启用数据收集器：<br /><br /> 在对象资源管理器中，展开 **“管理”** 节点。<br /><br /> 右键单击 **“数据收集”**，然后单击 **“启用数据收集”**。<br /><br /> 停止收集组：<br /><br /> 在对象资源管理器中，依次展开“管理”节点、 **“数据收集”**、 **“系统数据收集组”**。<br /><br /> 右键单击要停止的收集组，然后单击 **“停止数据收集组”**。<br /><br /> 出现一个显示此操作结果的消息框，收集组图标上的红色圆圈指示收集组已停止运行。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的收集组必须停止运行。|停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例上预先存在的收集组。 如果数据收集器被禁用，则启用它，停止正在运行的所有收集组，然后为创建 UCP 操作重新运行验证规则。<br /><br /> 启用数据收集器：<br /><br /> 在对象资源管理器中，展开 **“管理”** 节点。<br /><br /> 右键单击 **“数据收集”** ，然后单击 **“启用数据收集”** 。<br /><br /> 停止收集组：<br /><br /> 在对象资源管理器中，依次展开“管理”节点、 **“数据收集”** 、 **“系统数据收集组”** 。<br /><br /> 右键单击要停止的收集组，然后单击 **“停止数据收集组”** 。<br /><br /> 出现一个显示此操作结果的消息框，收集组图标上的红色圆圈指示收集组已停止运行。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须启动。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为手动启动。 否则，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动。|  
 |必须在 UCP 上启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。|在 UCP 上启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为手动启动。 否则，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动。|  
 |WMI 必须正确配置。|若要排查 WMI 配置问题，请参阅 [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
@@ -140,18 +139,18 @@ ms.locfileid: "52509795"
   
  若要保存验证报表，请单击 **“保存报表”** ，然后指定文件的位置。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Summary"></a> 实例注册摘要  
  摘要页列出与要添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例有关的信息。  
   
  托管实例设置：  
   
--   SQL Server 实例名称：ComputerName\InstanceName  
+-   SQL Server 实例名：ComputerName\InstanceName  
   
 -   实用工具收集组帐户：DomainName\UserName  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Enrolling"></a> 注册 SQL Server 的实例  
  “注册”页提供操作的状态：  
@@ -164,14 +163,14 @@ ms.locfileid: "52509795"
   
  若要保存与注册操作有关的报表，请单击 **“保存报表”** ，然后指定文件的位置。  
   
- 若要完成向导，请单击 **“完成”**。  
+ 若要完成向导，请单击 **“完成”** 。  
   
 > [!NOTE]  
 >  如果您使用 SQL Server 身份验证来连接到要注册的 SQL Server 实例，并且指定属于与 UCP 所在的域不同的其他 Active Directory 域的代理帐户，则实例验证将成功，但注册操作将失败并且具有以下错误消息：  
 >   
 >  执行 Transact-SQL 语句或批处理时发生了异常。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  其他信息: 无法获取有关 Windows NT 组/用户 '\<DomainName\AccountName>' 的信息，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
+>  其他信息：无法获取有关 Windows NT 组/用户“\<DomainName\AccountName>”的信息，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
 >   
 >  有关排除此故障的详细信息，请参阅 [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。  
   
@@ -180,9 +179,9 @@ ms.locfileid: "52509795"
   
  在完成注册实例向导后，在 SSMS 的 **“实用工具资源管理器导航”** 窗格中单击 **“托管实例”** 节点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已注册实例将显示在 **“实用工具资源管理器内容”** 窗格的列表视图中。  
   
- 数据收集过程将立即开始，但可能需要最长 30 分钟的时间，数据才会首次出现在实用工具资源管理器内容窗格的面板和视点中。 数据收集将以每 15 分钟一次的频率继续执行。 若要刷新数据，请右键单击“实用工具资源管理器导航”窗格的“托管实例”节点，然后选择“刷新”，或者在列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“刷新”。  
+ 数据收集过程将立即开始，但可能需要最长 30 分钟的时间，数据才会首次出现在实用工具资源管理器内容窗格的面板和视点中。 数据收集将以每 15 分钟一次的频率继续执行。 若要刷新数据，请右键单击“实用工具资源管理器导航”窗格的“托管实例”节点，然后选择“刷新”，或者在列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“刷新”。      
   
- 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除托管实例，请在“实用工具资源管理器导航”窗格中选择“托管实例”以便填充托管实例的列表视图，在“实用工具资源管理器内容”列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“取消实例托管”。  
+ 若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中删除托管实例，请在“实用工具资源管理器导航”  窗格中选择“托管实例”  以便填充托管实例的列表视图，在“实用工具资源管理器内容”  列表视图中右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称，然后选择“取消实例托管”  。  
   
 ##  <a name="PowerShell_enroll"></a> 使用 PowerShell 注册 SQL Server 的实例  
  使用下面的示例将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例注册到现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中：  

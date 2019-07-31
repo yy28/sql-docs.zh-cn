@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eea554acc0276821c31296c91a77ed1987ef72c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69358e8163fffb0cc09e7e910a24ebc47d92a3de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027857"
 ---
 # <a name="agent-profiles-single-agent"></a>代理配置文件（单个代理）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,13 +27,13 @@ ms.locfileid: "47598507"
   
 ## <a name="options"></a>选项  
  **作为新项的默认值**  
- 选择在为给定类型的代理创建作业时将使用的配置文件。 例如，如果创建指向合并发布的多个订阅，则每个订阅的合并代理作业都将使用选定的配置文件。 如果希望更改现有作业的配置文件，请选择一个配置文件，再单击 **“更改现有代理”**。  
+ 选择在为给定类型的代理创建作业时将使用的配置文件。 例如，如果创建指向合并发布的多个订阅，则每个订阅的合并代理作业都将使用选定的配置文件。 如果希望更改现有作业的配置文件，请选择一个配置文件，再单击 **“更改现有代理”** 。  
   
  **名称**  
  配置文件的名称。  
   
  **类型**  
- 配置文件类型： **“用户”** （用户定义）或 **“系统”** （预定义）。  
+ 配置文件的类型：用户（用户定义）或系统（预定义）   。  
   
  **属性(...)**  
  单击此项可查看用于代理配置文件中每个参数的值。  
@@ -46,7 +45,7 @@ ms.locfileid: "47598507"
  选择一个用户定义的配置文件，再单击 **“删除”** 可以删除该配置文件。 不能删除预定义的配置文件。  
   
  **“更改现有代理”**  
- 选择一个配置文件，再单击 **“更改现有代理”** 以指定给定类型的代理的所有现有作业都应使用选定的配置文件。 例如，如果创建了指向合并发布的多个订阅，并且希望更改配置文件以指定其中每个订阅的合并代理作业都应使用 **“慢速链接代理配置文件”**，请选择该配置文件，再单击 **“更改现有代理”**。  
+ 选择一个配置文件，再单击 **“更改现有代理”** 以指定给定类型的代理的所有现有作业都应使用选定的配置文件。 例如，如果创建了指向合并发布的多个订阅，并且希望更改配置文件以指定其中每个订阅的合并代理作业都应使用 **“慢速链接代理配置文件”** ，请选择该配置文件，再单击 **“更改现有代理”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

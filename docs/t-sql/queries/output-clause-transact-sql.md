@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901874"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,19 +76,19 @@ ms.locfileid: "57334734"
 ```  
   
 ## <a name="arguments"></a>参数  
- \@table_variable  
- 指定 table 变量，返回的行将插入此变量，而不是返回给调用方。 \@table_variable 必须在 INSERT、UPDATE、DELETE 或 MERGE 语句前声明。  
+ \@table_variable   
+ 指定 table 变量，返回的行将插入此变量，而不是返回给调用方  。 \@table_variable 必须在 INSERT、UPDATE、DELETE 或 MERGE 语句前声明  。  
   
- 如果未指定 column_list，则 table 变量必须与 OUTPUT 结果集具有相同的列数。 标识列和计算列除外，这两种列必须跳过。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值。  
+ 如果未指定 column_list，则 table 变量必须与 OUTPUT 结果集具有相同的列数   。 标识列和计算列除外，这两种列必须跳过。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值  。  
   
- 有关 table 变量的详细信息，请参阅 [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)。  
+ 有关 table 变量的详细信息，请参阅 [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)  。  
   
- output_table  
- 指定一个表，返回的行将插入该表中而不是返回到调用方。 output_table 可以为临时表。  
+ output_table   
+ 指定一个表，返回的行将插入该表中而不是返回到调用方。 output_table 可以为临时表  。  
   
- 如果未指定 column_list，则 table 必须与 OUTPUT 结果集具有相同的列数。 标识列和计算列例外， 必须跳过这两种列。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值。  
+ 如果未指定 column_list，则 table 必须与 OUTPUT 结果集具有相同的列数  。 标识列和计算列例外， 必须跳过这两种列。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值  。  
   
- output_table 无法：  
+ output_table 无法  ：  
   
 -   具有启用的对其定义的触发器。  
   
@@ -97,15 +96,15 @@ ms.locfileid: "57334734"
   
 -   具有 CHECK 约束或启用的规则。  
   
-column_list  
+column_list   
  INTO 子句目标表上列名的可选列表。 它类似于 [INSERT](../../t-sql/statements/insert-transact-sql.md) 语句中允许使用的列列表。  
   
  *scalar_expression*  
- 可取计算结果为单个值的任何符号和运算符的组合。 scalar_expression 中不允许使用聚合函数。  
+ 可取计算结果为单个值的任何符号和运算符的组合。 scalar_expression 中不允许使用聚合函数  。  
   
  对修改的表中的列的任何引用都必须使用 INSERTED 或 DELETED 前缀限定。  
   
- column_alias_identifier  
+ column_alias_identifier   
  用于引用列名的代替名称。  
   
  DELETED  
@@ -118,7 +117,7 @@ column_list
   
  INSERTED 语句不能与 DELETE 语句的 OUTPUT 子句同时使用。  
   
- from_table_name  
+ from_table_name   
  是一个列前缀，指定 DELETE、UPDATE 或 MERGE 语句（用于指定要更新或删除的行）的 FROM 子句中包含的表。  
   
  如果还在 FROM 子句中指定了要修改的表，则对该表中的列的任何引用都必须使用 INSERTED 或 DELETED 前缀限定。  
@@ -133,14 +132,14 @@ DELETE Sales.ShoppingCartItem
     OUTPUT DELETED.*;  
 ```  
   
- column_name  
- 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED **.**_column\_name_。  
+ column_name   
+ 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED **.** _column\_name_。  
   
  $action  
- 仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 **nvarchar(10)** 类型的列，该子句为每行返回以下三个值之一：'INSERT'、'UPDATE' 或 'DELETE'，返回哪个值取决于对该行执行的操作。  
+ 仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 **nvarchar(10)** 类型的列，该子句为每行返回以下三个值之一：“INSERT”、“UPDATE”或“DELETE”（具体视对相应行执行的操作而定）。  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@table\_variable | output\_table }子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
+ OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@  table\_variable   | output\_table  }子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
   
 > [!NOTE]  
 >  除非另行指定，否则，对 OUTPUT 子句的引用将同时引用 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -227,7 +226,7 @@ DELETE Sales.ShoppingCartItem
  如果设置了 sp_configure 选项 disallow results from triggers，则从触发器内调用语句时，不带 INTO 子句的 OUTPUT 子句将导致该语句失败。  
   
 ## <a name="data-types"></a>数据类型  
- OUTPUT 子句支持大型对象数据类型：nvarchar(max)、varchar(max)、varbinary(max)、text、ntext、image 和 xml。 当在 UPDATE 语句中使用 .WRITE 子句修改 nvarchar(max)、varchar(max) 或 varbinary(max) 列时，如果引用了值的全部前像和后像，则将其返回。 在 OUTPUT 子句中，TEXTPTR( ) 函数不能作为 text、ntext 或 image 列的表达式的一部分出现。  
+ OUTPUT 子句支持大型对象数据类型：nvarchar(max)、varchar(max)、varbinary(max)、text、ntext、image 和 xml        。 当在 UPDATE 语句中使用 .WRITE 子句修改 nvarchar(max)、varchar(max) 或 varbinary(max) 列时，如果引用了值的全部前像和后像，则将其返回    。 在 OUTPUT 子句中，TEXTPTR( ) 函数不能作为 text、ntext 或 image 列的表达式的一部分出现    。  
   
 ## <a name="queues"></a>队列  
  可以在将表用作队列或将表用于保持中间结果集的应用程序中使用 OUTPUT。 换句话说，应用程序不断地在表中添加或删除行。 以下示例在 DELETE 语句中使用 OUTPUT 子句将已删除的行返回到执行调用的应用程序。  
@@ -307,7 +306,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  如果您的方案允许多个应用程序从一个表中执行析构性读取，请在 UPDATE 和 DELETE 语句中使用 READPAST 表提示。 这可防止在其他应用程序已经读取表中第一个限定记录的情况下出现锁定问题。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对通过 \<dml_select_list> 检索的任何列或者在 \<scalar_expression> 中使用的任何列具有 SELECT 权限。  
   
  要求对 \<output_table> 中指定的任何表具有 INSERT 权限。  

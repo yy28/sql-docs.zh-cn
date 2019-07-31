@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136492"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +167,7 @@ SQL Server 2014 Standard 具有以下更改：
 4.  执行迁移脚本。  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>信息性消息“文件访问被拒绝”在 SQL Server 2014 错误日志中不正确地报告为错误  
-**问题：** 重新启动具有包含内存优化表的数据库的服务器时，可在 SQL Server 2014 错误日志中看到以下类型的错误消息：  
+**问题：** 重启具有包含内存优化表的数据库的服务器时，可在 SQL Server 2014 错误日志中看到以下类型的错误消息：  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -180,7 +179,7 @@ memory-optimized table DLLs.
 **解决方法：** 无。 这是一条信息性消息。  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>缺少索引详细信息不正确地报告内存优化表的包含列  
-**问题：** 如果 SQL Server 2014 检测到对内存优化表的查询缺失索引，则会在 SHOWPLAN_XML 中和缺失索引 DMV 中（如 sys.dm_db_missing_index_details）中报告缺失索引。 在某些情况下，缺少索引详细信息将包含有包含列。 因为所有列都是使用内存优化表的所有索引隐式包含的，所以不允许使用内存优化索引显式指定包含列。  
+**问题：** 如果 SQL Server 2014 检测到对内存优化表的查询缺失索引，则会在 SHOWPLAN_XML 中和缺失索引 DMV（如 sys.dm_db_missing_index_details）中报告缺失索引。 在某些情况下，缺少索引详细信息将包含有包含列。 因为所有列都是使用内存优化表的所有索引隐式包含的，所以不允许使用内存优化索引显式指定包含列。  
   
 **解决方法：** 不使用内存优化表上的索引指定 INCLUDE 子句。  
   
@@ -224,7 +223,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**解决方法：** 两个建议的解决方法：  
+**解决方法：** 有两个建议的解决方法：  
   
 1.  为表达式添加括号，类似以下示例：  
   
@@ -338,7 +337,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="AzureVM"></a>Microsoft Azure 虚拟机上的 SQL Server 2014 RTM  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>在 Microsoft Azure 中配置可用性组侦听器时添加 Azure 副本向导返回错误  
-**问题：** 如果可用性组具有侦听器，在您尝试在 Windows Azure 中配置可用性组侦听器时添加 Azure 副本向导将返回错误。  
+**问题：** 如果可用性组具有侦听器，当你尝试在 Microsoft Azure 中配置可用性组侦听器时，添加 Azure 副本向导将返回错误。  
   
 此问题是因为可用性组侦听器需要在每个托管可用性组副本的子网中分配一个 IP 地址，包括 Azure 子网。  
   

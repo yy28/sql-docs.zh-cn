@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a682f0d3c8373ea7fc96dd82796108d5d71f26ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a31f23d4de02bd4554d997364a3a5aa26b3d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134488"
 ---
 # <a name="create-a-database-mail-account"></a>创建数据库邮件帐户
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 **“数据库邮件配置向导”** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以创建数据库邮件帐户。  
   
--   **Before you begin:**  [Prerequisites](#Prerequisites)  
+-   **开始之前：** [先决条件](#Prerequisites)  
   
--   **使用以下方法创建数据库邮件帐户：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   使用以下内容创建数据库邮件帐户：  [数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
+-   **跟进：** [用于配置数据库邮件的后续步骤](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -48,9 +47,9 @@ ms.locfileid: "51558284"
   
 -   双击数据库邮件以打开数据库邮件配置向导。  
   
--   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”**，然后单击 **“下一步”**。  
+-   在 **“选择配置任务”** 页上，选择 **“管理数据库邮件帐户和配置文件”** ，然后单击 **“下一步”** 。  
   
--   在 **“管理配置文件和帐户”** 页上，选择 **“创建新帐户”** ，然后单击 **“下一步”**。  
+-   在 **“管理配置文件和帐户”** 页上，选择 **“创建新帐户”** ，然后单击 **“下一步”** 。  
   
 -   在 **“新建帐户”** 页上，指定帐户名称、说明、邮件服务器信息和身份验证类型。 单击 **“下一步”**  
   

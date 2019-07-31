@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077975"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,16 +42,16 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 ```  
   
 ## <a name="arguments"></a>参数  
-child1  
-NULL 或当前节点的子节点的 hierarchyid。
+child1   
+NULL 或当前节点的子节点的 hierarchyid  。
   
-child2  
-NULL 或当前节点的子节点的 hierarchyid。
+child2   
+NULL 或当前节点的子节点的 hierarchyid  。
   
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：hierarchyid
+SQL Server 返回类型：hierarchyid 
   
-CLR 返回类型：SqlHierarchyId
+CLR 返回类型：SqlHierarchyId 
   
 ## <a name="remarks"></a>Remarks  
 返回作为父节点的后代的一个子节点。
@@ -114,7 +113,7 @@ VALUES
   
 ```  
   
-完成示例 A、B 和 C 后，添加到表中的节点将成为具有下列 hierarchyid 值的对等方：
+完成示例 A、B 和 C 后，添加到表中的节点将成为具有下列 hierarchyid 值的对等方  ：
   
 `/3/1/1/`
   
@@ -125,7 +124,7 @@ VALUES
 节点 `/3/1/1.1/` 高于节点 `/3/1/1/`，但是在层次结构中处于同一级别。
   
 ### <a name="d-scalar-examples"></a>D. 标量示例  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持随意插入和删除任何 hierarchyid 节点。 使用 GetDescendant()，始终可以在任何两个 hierarchyid 节点之间生成一个节点。 执行以下代码，使用 `GetDescendant` 生成示例节点：
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持随意插入和删除任何 hierarchyid 节点  。 使用 GetDescendant()，始终可以在任何两个 hierarchyid 节点之间生成一个节点  。 执行以下代码，使用 `GetDescendant` 生成示例节点：
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

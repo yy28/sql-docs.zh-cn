@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8979e3457250cbce7fe3dbe5992c84e786d3f7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904995"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>查看和读取故障转移群集实例诊断日志
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   将 SQL Server 资源 DLL 的所有严重错误和警告事件写入 Windows 事件日志。 正在运行的特定于 SQL Server 的诊断信息日志由 [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程捕获，并会写入 SQL Server 故障转移群集诊断日志文件（也称为 *SQLDIAG* 日志）中。  
   
--   **开始之前：**  [建议](#Recommendations)、 [安全性](#Security)  
+-   **开始之前：** [建议](#Recommendations)、[安全性](#Security)  
   
--   **若要查看诊断日志，请使用：**  [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
+-   **若要查看诊断日志，请使用：** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 -   **若要配置诊断日志设置，请使用：** [Transact-SQL](#TsqlConfigure)  
   
@@ -34,9 +33,9 @@ ms.locfileid: "47709695"
   
  这些日志使用扩展事件文件格式。 **sys.fn_xe_file_target_read_file** 系统函数可用于读取由扩展事件创建的文件。 每行返回一个 XML 格式的事件。 查询系统视图以将 XML 数据作为结果集分析。 有关详细信息，请参阅 [sys.fn_xe_file_target_read_file (Transact SQL)](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  运行 **fn_xe_file_target_read_file**需要 VIEW SERVER STATE 权限。  
   
  以管理员身份打开 SQL Server Management Studio  
@@ -44,13 +43,13 @@ ms.locfileid: "47709695"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **查看诊断日志文件：**  
   
-1.  从“文件”菜单，选择“打开文件”，然后选择要查看的诊断日志文件。  
+1.  从“文件”  菜单，选择“打开文件”   ，然后选择要查看的诊断日志文件。  
   
 2.  事件在右窗格中显示为行，默认情况下，仅显示出 **name**和 **timestamp** 这两列。  
   
      这还会激活 **“扩展事件”** 菜单。  
   
-3.  若要查看更多列，转到 **“扩展事件”** 菜单，然后选择 **“选择列”**。  
+3.  若要查看更多列，转到 **“扩展事件”** 菜单，然后选择 **“选择列”** 。  
   
      将打开一个显示出可用列的对话框，您可在其中选择要显示的列。  
   

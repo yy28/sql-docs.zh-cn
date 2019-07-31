@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946576"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307639"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946576"
   
 -   当前没有复制表。  
   
--   指定了表锁定（使用 TABLOCK）。 对于具有聚集列存储索引的表，不需要使用 TABLOCK 进行最小日志记录。  此外，只会按最小方式记录 dataload into 压缩行组，这要求批大小为 102400 或更大。  
+-   指定了表锁定（使用 TABLOCK）。 对于具有聚集列存储索引的表，不需要使用 TABLOCK 进行最小日志记录。  此外，只会按最小方式记录加载到压缩行组的数据，这要求批大小为 102400 或更大。  
   
     > [!NOTE]  
     >  尽管在最小日志记录的大容量导入操作过程中，数据插入操作没有记录在事务日志中，但每当为表分配新区时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍会记录区分配信息。  
@@ -50,17 +49,15 @@ ms.locfileid: "64946576"
   
 -   如果表没有聚集索引但是有一个或多个非聚集索引，则始终按最小方式记录数据页。 但是，记录索引页的方式取决于该表是否为空：  
   
-    -   如果该表为空，则按最小方式记录索引页。  
+    -   如果该表为空，则按最小方式记录索引页。  如果您以空表开始并分多批大容量导入数据，则对于第一批，将按最小方式记录索引页和数据页，但从第二批开始，将只按最小方式记录数据页。 
   
-    -   如果该表不为空，则按完整方式记录索引页。  
+    -   如果该表不为空，则按完整方式记录索引页。    
+
+-   如果表有聚集索引且为空，则按最小方式记录数据页和索引页。 相反，如果表有基于 btree 的聚集索引且不为空，则无论采用何种恢复模式，均按完整方式记录数据页和索引页。 如果以空表和行存储表开始并批量导入数据，对于第一批，将按最小方式记录索引页和数据页，但从第二批开始，将只按批量方式记录数据页。
+
+- 有关记录群集列存储索引 (CCI) 的信息，请参阅[列存储索引数据加载指南](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups)。
   
-        > [!NOTE]  
-        >  如果您以空表开始并分多批大容量导入数据，则对于第一批，将按最小方式记录索引页和数据页，但从第二批开始，将只按最小方式记录数据页。  
-  
--   如果表有聚集索引且为空，则按最小方式记录数据页和索引页。 相反，如果表有基于 btree 的聚集索引且不为空，则无论采用何种恢复模式，均按完整方式记录数据页和索引页。 对于具有聚集列存储索引的表，dataload into 压缩行组始终是最小日志记录，无论表在批大小 > = 102400 时是否为空。  
-  
-    > [!NOTE]  
-    >  如果以空表和行存储表开始并批量导入数据，对于第一批，将按最小方式记录索引页和数据页，但从第二批开始，将只按批量方式记录数据页。  
+
   
 > [!NOTE]  
 >  启用事务复制时，将完全记录 BULK INSERT 操作，即使处于大容量日志恢复模式下。  

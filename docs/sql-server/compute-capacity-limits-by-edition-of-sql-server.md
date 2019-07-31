@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067567"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>按 SQL Server 版本划分的计算能力限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100264"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,10 +36,10 @@ ms.locfileid: "52533399"
 
 若要在数据库中使用内存中 OLTP，应使用以下一个或多个对象类型：
 
-- 内存优化表 用于存储用户数据。 在创建时声明一个要进行内存优化的表。
-- 非持久表 用于瞬态数据，即用于缓存，或用于中间结果集（替代传统的临时表）。 非持久表是一种使用 DURABILITY=SCHEMA_ONLY 声明的内存优化表，也就是说，对这些表所做的更改不会引发任何 IO。 在不需要考虑耐久性的情况下，这可避免使用日志 IO 资源。
-- 内存优化表类型 用于表值参数 (TVP) 和存储过程中的中间结果集。 这些可用于替代传统表类型。 使用内存优化表类型声明的表变量和 TVP 会继承非持久内存优化表的优点：数据访问效率高，且不会引发 IO。
-- 本机编译的 T-SQL 模块 可用于通过减少处理操作所需的 CPU 周期，进一步减少单个事务所需的时间。 在创建时声明一个要本机编译的 Transact-SQL 模块。 此时，可本机编译以下 T-SQL 模块：存储过程、触发器和标量用户定义的函数。
+- 内存优化表  用于存储用户数据。 在创建时声明一个要进行内存优化的表。
+- 非持久表  用于瞬态数据，即用于缓存，或用于中间结果集（替代传统的临时表）。 非持久表是一种使用 DURABILITY=SCHEMA_ONLY 声明的内存优化表，也就是说，对这些表所做的更改不会引发任何 IO。 在不需要考虑耐久性的情况下，这可避免使用日志 IO 资源。
+- 内存优化表类型  用于表值参数 (TVP) 和存储过程中的中间结果集。 这些可用于替代传统表类型。 使用内存优化表类型声明的表变量和 TVP 会继承非持久内存优化表的优点：数据访问效率高，且不会引发 IO。
+- 本机编译的 T-SQL 模块  可用于通过减少处理操作所需的 CPU 周期，进一步减少单个事务所需的时间。 在创建时声明一个要本机编译的 Transact-SQL 模块。 此时，可本机编译以下 T-SQL 模块：存储过程、触发器和标量用户定义的函数。
 
 内存中 OLTP 内置于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中。 由于这些对象与其传统对象行为相似，因此仅对数据库和应用程序作出最小的更改，通常便可增益性能优势。 此外，还可将内存优化表和基于磁盘的传统表同时置于同一数据库，然后在二者间运行查询。 本文靠近末尾部分给出的 Transact-SQL 脚本中就每个对象类型各提供一个示例。
 
@@ -66,8 +65,8 @@ ms.locfileid: "52533399"
 
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 实现了一直都很低的延迟：[Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)（一秒钟的等待时间都太长，现在这家金融服务公司要更新其贸易软件）。
-- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 支持更大的吞吐量和处理剧增的工作负荷：[When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)（在线游戏公司不希望拿将来冒险时，都会选择 SQL Server 2016）。
+- CMC 市场利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 来实现一致的低延迟：[由于第二次等待时间过长，因此该金融服务公司目前正在更新其交易软件。](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 来支持增加的吞吐量并处理剧增的工作负荷：[当联机游戏公司不希望在未来冒险时，就会在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 上下赌注。](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>数据引入，包括 IoT（物联网）
@@ -93,14 +92,14 @@ ms.locfileid: "52533399"
 #### <a name="customer-case-studies"></a>客户案例研究
 
 - [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)（Quorum 利用 Azure SQL 数据库中的内存中 OLTP，将主要数据库的工作负荷翻倍，同时降低了 70% 的资源使用率）
-- EdgeNet 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，提高了批量数据加载的性能，同时不再需要维持中层缓存：[Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)（数据服务公司通过内存中技术实现了实时访问产品数据）
-- 贝斯以色列女执事医疗中心利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，大幅提高了从域控制器引入数据的速率，同时可以处理剧增的工作负荷：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
+- EdgeNet 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP 改进了批量数据加载性能，并且不再需要维护中间层缓存：[数据服务公司使用内存中技术获得实时访问产品数据的权限](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- 贝斯以色列女执事医疗中心利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，大幅提高了从域控制器引入数据的速率，同时可以处理剧增的工作负荷：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
 
 ### <a name="caching-and-session-state"></a>缓存和会话状态
 
 内存中 OLTP 技术使得 SQL 在维持会话状态（例如，用于 ASP.NET 应用程序）和缓存方面非常出色。
 
-内存中 OLTP 的一个成功用例便是 ASP.NET 会话状态。 通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，客户可实现每秒 120 万次的请求。 同时，客户已开始将内存中 OLTP 用于企业中所有中间层应用程序的缓存需求。 详细信息：[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)（bwin 如何使用 SQL Server 2016 内存中 OLTP 达到前所未有的性能和规模）
+内存中 OLTP 的一个成功用例便是 ASP.NET 会话状态。 通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，客户可实现每秒 120 万次的请求。 同时，客户已开始将内存中 OLTP 用于企业中所有中间层应用程序的缓存需求。 详细信息：[bwin 如何使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 内存中 OLTP 达到前所未有的性能和规模](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 #### <a name="implementation-considerations"></a>实现注意事项
 
@@ -112,8 +111,8 @@ ms.locfileid: "52533399"
 
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- bwin 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，成功大幅提高吞吐量，并减少了 ASP.NET 会话状态对硬件的占用：[Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)（游戏网站每秒可处理 250,000 次请求，改善了玩家体验）
-- bwin 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 技术，通过 ASP.NET 会话状态进一步提高吞吐量，并实现了企业级中间层缓存系统：[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)（bwin 如何使用 SQL Server 2016 内存中 OLTP 达到前所未有的性能和规模）
+- bwin 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，成功大幅提高了吞吐量，并减少了 ASP.NET 会话状态对硬件的占用：[游戏网站每秒可处理 250,000 次请求，改善了玩家体验](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- bwin 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 技术，通过 ASP.NET 会话状态进一步提高了吞吐量，并实现了企业级中间层缓存系统：[bwin 如何使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 内存中 OLTP 达到前所未有的性能和规模](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Tempdb 对象替换
 
@@ -123,11 +122,11 @@ ms.locfileid: "52533399"
 
 #### <a name="implementation-considerations"></a>实现注意事项
 
-若要开始使用，请参阅： [使用内存优化改进临时表和表变量性能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+若要开始操作，请参阅：[使用内存优化改进临时表和表变量性能。](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- 一位客户仅通过使用内存优化 TVP 替换传统 TVP，便将性能成功提升了 40%： [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)（在 Azure 中使用内存中 OLTP 来实现高速 IoT 数据引入）
+- 一位客户仅通过使用内存优化 TVP 替换传统 TVP，便将性能成功提升了 40%：[在 Azure 中使用内存中 OLTP 来实现高速 IoT 数据引入](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
 - 作为企业可扩展性改进的一部分，SentryOne 通过将 tempdb 中的表交换到内存中 OLTP 表，显著提高了数据引入能力，且监视解决方案的延迟几乎为零：[解决方案提供商通过数据监视创新突破性能上限。](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL（提取、转换、加载）

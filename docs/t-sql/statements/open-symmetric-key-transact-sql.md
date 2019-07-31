@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129386"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +49,22 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ```  
   
 ## <a name="arguments"></a>参数  
- Key_name  
+ Key_name   
  要打开的对称密钥的名称。  
   
- CERTIFICATE certificate_name  
+ CERTIFICATE certificate_name   
  证书的名称，该证书的私钥将用于解密对称密钥。  
   
- ASYMMETRIC KEY asym_key_name  
+ ASYMMETRIC KEY asym_key_name   
  非对称密钥的名称，该密钥的私钥将用于解密对称密钥。  
   
- WITH PASSWORD ='password'  
+ WITH PASSWORD ='password'   
  用于解密证书或非对称密钥的私钥的密码。  
   
  SYMMETRIC KEY *decrypting_key_name*  
  对称密钥的名称，该密钥将用于解密正在打开的对称密钥。  
   
- PASSWORD ='password'  
+ PASSWORD ='password'   
  用于保护对称密钥的密码。  
   
 ## <a name="remarks"></a>Remarks  
@@ -79,12 +78,12 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
  无法打开使用加密提供程序创建的对称密钥。 没有 **OPEN** 语句，使用此类对称密钥的加密和解密操作也会成功，因为加密提供程序会打开和关闭密钥。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  调用方必须具有对密钥的某些权限，并且必须未被拒绝授予对密钥的 VIEW DEFINITION 权限。 其他权限要求因解密机制的而异：  
   
 -   DECRYPTION BY CERTIFICATE：具有对证书的 CONTROL 权限并且知道加密其私钥的密码。  
   
--   DECRYPTION BY ASYMMETRIC KEY：具有对非对称密钥的 CONTROL 权限并且知道加密其私钥的密码。  
+-   DECRYPTION BY ASYMMETRIC KEY：具有对非对称密钥的 CONTROL 权限并知道加密其私钥的密码。  
   
 -   DECRYPTION BY PASSWORD：知道用于加密对称密钥的密码之一。  
   

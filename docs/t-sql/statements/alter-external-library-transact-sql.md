@@ -1,10 +1,10 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
@@ -16,22 +16,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 461a9c27b456f3f3955d5bcb7229e0c4448a0996
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583170"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471148"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 修改现有外部包库的内容。
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 2.4 中支持 Windows 和 Linux 平台上的 R、Python 和 Java。 
+> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 2.4 及更高版本支持 Windows 和 Linux 平台上的 R、Python 和外部语言。
+::: moniker-end
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> 在 Azure SQL 数据库中，可以通过先删除某个库，然后再使用 sqlmlutils 安装更改的版本来更改此库  。 有关 sqlmlutils 的详细信息，请参阅[使用 sqlmlutils 添加包](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)  。
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 语法
@@ -72,7 +79,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 ```
 ::: moniker-end
@@ -107,6 +114,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Azure SQL 数据库的语法
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>参数
 
 **library_name**
@@ -119,6 +149,7 @@ WITH ( LANGUAGE = 'R' )
 
 指定拥有外部库的用户或角色的名称。
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 指定特定平台的包的内容。 每个平台仅支持一个文件项目。
@@ -127,9 +158,11 @@ WITH ( LANGUAGE = 'R' )
 
 还可以为文件指定一个 OS 平台。 针对特定语言或运行时，每个 OS 平台只允许一个文件项目或内容。
 
+::: moniker-end
+
 **library_bits**
 
-将包的内容指定为十六进制文本，类似于程序集。 
+将包的内容指定为十六进制文本，类似于程序集。
 
 如果具有更改库所需的权限，但在服务器上访问文件受到限制，并且无法将内容保存到服务器可以访问的路径，则此选项非常有用。
 
@@ -138,17 +171,33 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 在 SQL Server 2017 中，Windows 是唯一受支持的平台。
-
+为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。
+在 SQL Server 2017 中，Windows 是唯一受支持的平台。
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
-为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
+为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 
+在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+指定包的语言。 SQL Server 2017 中支持 R。
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+指定包的语言。 Azure SQL 数据库中支持 R。
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-指定包的语言。 值可以是 **R**、**Python** 或 **Java**。
+指定包的语言。 该值可以是 R、Python 或外部语言的名称（请参阅[创建外部语言](create-external-language-transact-sql.md)）   。
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
@@ -167,13 +216,14 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="permissions"></a>权限
 
-默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权运行 ALTER EXTERNAL LIBRARY。 此外，创建了外部库的用户还可以更改相应外部库。
+默认情况下，dbo  用户或担任 db_owner  角色的任何成员都有权运行 ALTER EXTERNAL LIBRARY。 此外，创建了外部库的用户还可以更改相应外部库。
 
 ## <a name="examples"></a>示例
 
 下面的示例更改 `customPackage` 外部库。
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. 使用文件替换库的内容
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="replace-the-contents-of-a-library-using-a-file"></a>使用文件替换库的内容
 
 下面的示例使用包含更新位的压缩文件修改名为 `customPackage` 的外部库。
 
@@ -192,17 +242,19 @@ EXEC sp_execute_external_script
 @script=N'library(customPackage)'
 ;
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 SQL Server 2019 中的 Python 语言，可通过将 `'R'` 替换为 `'Python'` 使用示例。
 ::: moniker-end
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. 使用字节流更改现有库
+
+### <a name="alter-an-existing-library-using-a-byte-stream"></a>使用字节流更改现有库
 
 下面的示例通过将新位传递为十六进制文本来更改现有库。
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary 
-SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -214,7 +266,7 @@ SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 
 ## <a name="see-also"></a>另请参阅
 
-[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

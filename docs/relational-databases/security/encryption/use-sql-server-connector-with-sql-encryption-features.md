@@ -1,7 +1,7 @@
 ---
 title: 使用具有 SQL 加密功能的 SQL Server 连接器 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401080"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329262"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用由 Azure 密钥保管库保护的非对称密钥的常见 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活动包括以下三个方面。  
   
 -   使用 Azure 密钥保管库的非对称密钥实现透明数据加密  
@@ -49,8 +47,8 @@ ms.locfileid: "52401080"
      采用以下方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本：  
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
-        - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
+        - 如果使用“全局 Azure”，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure Key Vault 的名称  。
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、中国区 Azure 世纪互联或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
@@ -62,9 +60,9 @@ ms.locfileid: "52401080"
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -113,11 +111,11 @@ ms.locfileid: "52401080"
     GO  
     ```  
   
-     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，通过对象资源管理器连接到数据库来确认是否已启用 TDE。 右键单击数据库，指向“任务”，然后单击“管理数据库加密”。  
+     使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]，通过对象资源管理器连接到数据库来确认是否已启用 TDE。 右键单击数据库，指向  “任务”，然后单击  “管理数据库加密”。  
   
      ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
-     在“管理数据库加密”对话框中，确认 TDE 处于打开状态，以及使用哪个非对称密钥对 DEK 进行加密。  
+     在“管理数据库加密”  对话框中，确认 TDE 处于打开状态，以及使用哪个非对称密钥对 DEK 进行加密。  
   
      ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
@@ -146,8 +144,8 @@ ms.locfileid: "52401080"
      采用以下方式修改下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本：  
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
-        - 如果使用 **公共 Azure**，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure 密钥保管库的名称。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。    
+        - 如果使用“全局 Azure”，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure Key Vault 的名称  。
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、中国区 Azure 世纪互联或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。    
   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
@@ -160,9 +158,9 @@ ms.locfileid: "52401080"
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
@@ -214,7 +212,7 @@ ms.locfileid: "52401080"
     
     若要还原使用 TDE 加密的数据库备份，目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须先对用于加密的非对称 Key Vault 密钥进行复制。 为此，可执行如下操作：  
     
-    - 如果用于 TDE 的原始非对称密钥不再位于 Key Vault 中，请还原 Key Vault 密钥备份，或者从本地 HSM 重新导入该密钥。 **重要提示：** 为了让密钥的指纹与数据库备份中记录的指纹匹配，密钥的名称与以前的原始名称必须为同一 Key Vault 密钥名称。
+    - 如果用于 TDE 的原始非对称密钥不再位于 Key Vault 中，请还原 Key Vault 密钥备份，或者从本地 HSM 重新导入该密钥。 **重要提示：** 为了让密钥的指纹与数据库备份中记录的指纹匹配，密钥的名称与以前的原始名称必须为同一 Key Vault 密钥名称  。
     
     - 对目标 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例应用步骤 1 和 2 的操作。
     

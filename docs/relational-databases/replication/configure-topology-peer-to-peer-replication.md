@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903115"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47793251"
 |设计图面|显示其他界面元素。 若要添加元素，请右键单击设计图面。|  
 |![拓扑中的第一个节点](../../relational-databases/replication/media/p2pwizard-firstnode.gif "拓扑中的第一个节点")|拓扑中的原始节点。 可使用来自原始节点的发布数据库副本初始化新节点。|  
 |![我们具有其完整信息的节点](../../relational-databases/replication/media/p2pwizard-complete.gif "我们具有其完整信息的节点")|运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本的实例的节点，复制具有其完整信息。 若要指定配置选项，请右键单击此节点。|  
-|![我们具有其不完整信息的节点](../../relational-databases/replication/media/p2pwizard-incomplete.gif "我们具有其不完整信息的节点")|复制具有其不完整信息的节点。 若要指定配置选项，请右键单击此节点。<br /><br /> 复制具有的信息不完整，原因为以下之一：<br /><br /> - 节点运行的是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]实例，该实例没有存储向导所需的所有元数据。<br /><br /> - 节点运行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更高版本，但是复制无法从此节点检索订阅信息。 针对此情况进行故障排除：<br /><br /> 确保此节点上的数据库为联机状态，并可使用连接到此节点的分发代理使用的同一凭据连接到此数据库。<br /><br /> 确保连接到此节点的日志读取器代理和所有分发代理当前都在运行。<br /><br /> 确保设置的刷新超时足够长以收集所有拓扑信息。 若要设置超时，请右键单击设计图面，然后单击 **“设置刷新超时”**。|  
+|![我们具有其不完整信息的节点](../../relational-databases/replication/media/p2pwizard-incomplete.gif "我们具有其不完整信息的节点")|复制具有其不完整信息的节点。 若要指定配置选项，请右键单击此节点。<br /><br /> 复制具有的信息不完整，原因为以下之一：<br /><br /> \- 节点运行的是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]实例，该实例没有存储向导所需的所有元数据。<br /><br /> \- 节点运行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更高版本，但是复制无法从此节点检索订阅信息。 针对此情况进行故障排除：<br /><br /> 确保此节点上的数据库为联机状态，并可使用连接到此节点的分发代理使用的同一凭据连接到此数据库。<br /><br /> 确保连接到此节点的日志读取器代理和所有分发代理当前都在运行。<br /><br /> 确保设置的刷新超时足够长以收集所有拓扑信息。 若要设置超时，请右键单击设计图面，然后单击 **“设置刷新超时”** 。|  
 |灰色箭头线|两个节点之间的连接。 若要添加连接，请右键单击要连接的节点之一。 若要删除某连接，请右键单击该连接。<br /><br /> 如果箭头线上只有一个箭头，则表明复制拥有的其中一个节点的信息不完整。|  
   
 ### <a name="options-for-the-design-surface"></a>设计图面选项  
@@ -64,7 +63,7 @@ ms.locfileid: "47793251"
   
 ### <a name="options-for-each-node"></a>每个节点的选项  
  **添加新的对等连接**  
- 在两个节点之间添加连接。 例如，如果要在节点 A 和节点 B 之间添加连接，则复制会添加两个订阅：第一个订阅使节点 A 可以接收来自节点 B 上的发布的更改，第二个订阅使节点 B 可以接收来自节点 A 上的发布的更改。  
+ 在两个节点之间添加连接。 例如，如果要在 Node A 与 Node B 之间添加连接，则复制会添加两个订阅：第一个订阅使 Node A 可以接收来自 Node B 上的发布的更改，第二个订阅使 Node B 可以接收来自 Node A 上的发布的更改。  
   
  **删除对等节点**  
  从拓扑中删除节点。 例如，如果删除了节点 C，则该节点上的发布也会删除。 节点 A 和节点 C 以及节点 B 和节点 C 之间的订阅也会删除。 而节点 C 上的数据库不会删除，发布和分发也不会禁用。  

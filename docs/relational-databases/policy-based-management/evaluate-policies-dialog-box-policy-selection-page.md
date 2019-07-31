@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a4972e42798e1cfeb46b77fb414fa77cd4b6b86a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901143"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>“评估策略”对话框，“策略选择”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,21 +25,21 @@ ms.locfileid: "51512402"
   
 ## <a name="options"></a>选项  
  **数据源**  
- 指定策略的来源。 若要更改来源，请单击“浏览”按钮 (**...**) 以打开“选择源”对话框。  
+ 指定策略的来源。 若要更改来源，请单击“浏览”按钮 ( **...** ) 以打开“选择源”  对话框。  
   
  **“文件”**  
- 键入包含基于策略的管理策略的文件的路径，或者使用“浏览”按钮 (**...**) 选择文件。  
+ 键入包含基于策略的管理策略的文件的路径，或者使用“浏览”按钮 ( **...** ) 选择文件。  
   
  **Server**  
  选择此选项可连接到包含所需策略的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。  
   
- **策略: 策略**  
+ **策略：策略**  
  单击可打开指定策略的“策略”对话框。  
   
- **策略: 类别**  
+ **策略：类别**  
  策略的类别。 此框是只读的。  
   
- **策略: 方面**  
+ **策略：方面**  
  策略所实现的方面。 此框是只读的。  
   
  **评估**  

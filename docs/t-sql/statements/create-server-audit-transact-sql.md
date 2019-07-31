@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117135"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,16 +79,16 @@ CREATE SERVER AUDIT audit_name
 > [!IMPORTANT]
 > 在 Azure SQL 数据库托管实例中，SQL 审核在服务器一级运行。 位置只能为 `URL` 或 `EXTERNAL_MONITOR`。
   
- FILEPATH ='os_file_path'  
+ FILEPATH ='os_file_path'   
  审核日志的路径。 文件名是基于审核名称和审核 GUID 生成的。  
   
- MAXSIZE = { max_size }  
- 指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 （0 也指示 UNLIMITED。）指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
+ MAXSIZE = { max_size }   
+ 指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数  。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB  。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 （0 也指示 UNLIMITED。）指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
   
- MAX_ROLLOVER_FILES ={ integer | UNLIMITED }  
- 指定要保留在文件系统中外加当前文件的最大文件数。 MAX_ROLLOVER_FILES 值必须是整数或 UNLIMITED。 默认值为 UNLIMITED。 在审核重新启动（在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例重新启动或者在审核关闭后又打开时，可能会发生审核重新启动）或由于已达到 MAXSIZE 而需要新文件时，对此参数进行求值。 在对 MAX_ROLLOVER_FILES 进行求值时，如果文件的数目超出了 MAX_ROLLOVER_FILES 设置，则会删除最旧的文件。 因此，如果 MAX_ROLLOVER_FILES 的设置为 0，则每次对 MAX_ROLLOVER_FILES 设置求值时都会创建新的文件。 在对 MAX_ROLLOVER_FILES 设置求值时只会自动删除一个文件；因此，在降低 MAX_ROLLOVER_FILES 的值时，文件数目不会缩减，除非手动删除旧文件。 可以指定的最大文件数为 2,147,483,647。  
+ MAX_ROLLOVER_FILES ={ integer | UNLIMITED }   
+ 指定要保留在文件系统中外加当前文件的最大文件数。 MAX_ROLLOVER_FILES 值必须是整数或 UNLIMITED  。 默认值为 UNLIMITED。 在审核重新启动（在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例重新启动或者在审核关闭后又打开时，可能会发生审核重新启动）或由于已达到 MAXSIZE 而需要新文件时，对此参数进行求值。 在对 MAX_ROLLOVER_FILES 进行求值时，如果文件的数目超出了 MAX_ROLLOVER_FILES 设置，则会删除最旧的文件   。 因此，如果 MAX_ROLLOVER_FILES 的设置为 0，则每次对 MAX_ROLLOVER_FILES 设置求值时都会创建新的文件   。 在对 MAX_ROLLOVER_FILES 设置求值时只会自动删除一个文件；因此，在降低 MAX_ROLLOVER_FILES 的值时，文件数目不会缩减，除非手动删除旧文件   。 可以指定的最大文件数为 2,147,483,647。  
   
- MAX_FILES = integer  
+ MAX_FILES = integer   
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定可创建的审核文件的最大数目。 当达到此限制时，不滚动更新到第一个文件。 在达到 MAX_FILES 限制时，导致生成附加审核事件的任何操作都会失败并报告错误。  
@@ -97,7 +96,7 @@ CREATE SERVER AUDIT audit_name
  RESERVE_DISK_SPACE = { ON | OFF }  
  此选项会按 MAXSIZE 值为磁盘上的文件预先分配大小。 仅在 MAXSIZE 不等于 UNLIMITED 时适用。 默认值为 OFF。  
   
- QUEUE_DELAY = integer  
+ QUEUE_DELAY = integer   
  确定在强制处理审核操作之前可以经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定无效数字将引发 MSG_INVALID_QUEUE_DELAY 错误。  
   
  ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION }  
@@ -113,7 +112,7 @@ SHUTDOWN
  如果数据库操作会导致审核的事件，则数据库操作将失败。 不会导致审核事件的操作可以继续，但也不会发生审核的事件。 审核将继续尝试将事件记入日志，并且在故障条件得到解决后恢复。 在维护完整审核比对[!INCLUDE[ssDE](../../includes/ssde-md.md)]的完全访问权限更重要时，使用此选项。  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
- AUDIT_GUID = uniqueidentifier  
+ AUDIT_GUID = uniqueidentifier   
  为了支持数据库镜像之类的方案，审核功能需要一个与在镜像数据库中所找到的 GUID 相匹配的特定 GUID。 创建审核之后，即不能修改该 GUID。  
   
  predicate_expression  
@@ -127,7 +126,7 @@ SHUTDOWN
  表示标识谓词源的事件字段的名称。 [ sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) 中描述审核字段。 除 `file_name`、`audit_file_offset` 和 `event_time` 之外的所有字段都可以进行筛选。  
 
 > [!NOTE]  
->  尽管 `action_id` 和 `class_type` 字段在 sys.fn_get_audit_file 中的类型为 varchar，但只有在它们是用于筛选的谓词源时，才可以与数字一起使用。 若要获取与 `class_type` 一起使用的值列表，请执行以下查询：  
+>  尽管 `action_id` 和 `class_type` 字段在 sys.fn_get_audit_file 中的类型为 varchar，但只有在它们是用于筛选的谓词源时，才可以与数字一起使用  。 若要获取与 `class_type` 一起使用的值列表，请执行以下查询：  
 > ```sql
 > SELECT spt.[name], spt.[number]
 > FROM   [master].[dbo].[spt_values] spt
@@ -139,7 +138,7 @@ SHUTDOWN
  number  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 任何数值类型，包括 decimal。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
+ 任何数值类型，包括 decimal  。 局限性在于缺少可用物理内存，或数值过大而无法用 64 位整数表示。  
   
  ' string '  
  **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -151,7 +150,7 @@ SHUTDOWN
   
  CREATE SERVER AUDIT 语句位于事务范围内。 如果对事务进行回滚，也将对该语句进行回滚。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要创建、更改或删除服务器审核，主体需要拥有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
  在您将审核信息保存到某一文件时，为了避免被篡改，应限制对文件位置的访问。  

@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909715"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47846361"
  显示索引的名称。 对于现有索引，此字段是只读的。 在创建新的索引时，请键入索引的名称。  
   
  **索引类型**  
- 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是： **“聚集”**、 **“非聚集”**、 **“主 XML”**、 **“辅助 XML”**、 **“空间”** \ **“聚集列存储索引”** 或 **“非聚集列存储”**。  
+ 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是：“聚集”、“非聚集”、“主 XML”、“辅助 XML”、“空间”、“聚集列存储”或“非聚集列存储”。  
   
  **注意** 每个表只允许创建一个聚集索引。 每个表只允许创建一个 xVelocity 内存优化的列存储索引。  
   

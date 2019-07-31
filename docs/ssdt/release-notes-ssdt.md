@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400083"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290360"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -44,6 +43,37 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，&nbsp; SSDT for VS 2017
+
+发布时间：  &nbsp; 2019 年 7 月 17 日  
+生成号：  &nbsp; 14.0.16194.0  
+SSDT for Visual Studio 2017。 
+
+### <a name="whats-new"></a>新增功能
+
+#### <a name="ssis"></a>SSIS
+
+| 新项 | 详细信息 |
+| :------- | :------ |
+| 添加 AzureEnabled 功能。 启用要在 Azure 数据工厂中的 SSIS 平台即服务 (PaaS) 上运行的项目的包 | &nbsp; |
+| 解决无法通过变量表达式设置 Oracle 连接器属性的问题 | &nbsp; |
+| 解决在调试以 SQL Server 2019 之前版本为目标的包时 Oracle 连接器具有 VS_NEEDSNEWMETATDATA 错误的问题 | &nbsp; |
+| 解决在包/项目使用连接管理器属性的表达式时 Oracle 连接器未能升级/降级包/项目的问题 | &nbsp; |
+| 解决 Web 服务任务编辑器的“下载 WSDL”按钮不支持 TLS 1.1 和 1.2 协议（针对 SQL Server 2019）的问题 | &nbsp; |
+| 解决保存后无法再次加载包含 DQS 连接管理器的包的问题 | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+
+| 已知问题 | 详细信息 |
+| :---------- | :------ |
+| 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 | 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。 |
+| 版本高于 15.8 的 SSDT for Visual Studio 2017 不支持设计包含 Teradata 源/目标的包。 | 使用 SSDT for Visual Studio 2017 (15.8)。 |
+| 无法在包部署模型中创建或编辑数据源。 | 无法打开数据源向导。 |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持 OData v4。 | &nbsp; |
+| 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持使用 ODBC 连接到 Oracle。 | &nbsp; |
+| 未本地化 Power Query 源 | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1，SSDT for VS 2017
 
 发布时间：  &nbsp; 2019 年 4 月 27 日  

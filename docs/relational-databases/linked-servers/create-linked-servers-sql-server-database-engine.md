@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073670"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "52391241"
   
  链接服务器的功能和必需的参数可能会有很大差异。 本主题中的示例是典型示例，但并未描述所有选项。 有关详细信息，请参阅 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)的数据。  
   
-##  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，需要具有 **ALTER ANY LINKED SERVER** 权限，或需要具有 **setupadmin** 固定服务器角色中的成员资格。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时，要求具有 **CONTROL SERVER** 权限，或者具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ##  <a name="Procedures"></a> 如何创建链接服务器  
@@ -51,7 +50,7 @@ ms.locfileid: "52391241"
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建与其他 SQL Server 实例的链接服务器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，展开 **“服务器对象”**，右键单击 **“链接服务器”**，然后单击 **“新建链接服务器”**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开对象资源管理器，展开 **“服务器对象”** ，右键单击 **“链接服务器”** ，然后单击 **“新建链接服务器”** 。  
   
 2.  在 **“常规”** 页上的 **“链接服务器”** 框中，键入您链接到的 **SQL Server** 实例的名称。  
   
@@ -79,14 +78,14 @@ ms.locfileid: "52391241"
      **目录**  
      键入在连接 OLE DB 访问接口时要使用的目录的名称。  
   
-     若要测试能否连接到链接服务器，请在对象资源管理器中，右键单击链接服务器，然后单击 **“测试连接”**。  
+     若要测试能否连接到链接服务器，请在对象资源管理器中，右键单击链接服务器，然后单击 **“测试连接”** 。  
   
     > [!NOTE]  
     >  如果该 **SQL Server** 实例是默认实例，则输入承载 **SQL Server**实例的计算机的名称。 如果该 **SQL Server** 是命名实例，则输入计算机名称和实例名称，例如 **Accounting\SQLExpress**。  
   
-3.  在“服务器类型”区域中，选择 SQL Server 以便指示该链接服务器是 SQL Server的另一个实例。  
+3.  在“服务器类型”区域中，选择 SQL Server 以便指示该链接服务器是 SQL Server的另一个实例    。  
   
-4.  在 **“安全性”** 页上，指定在原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到链接服务器时将使用的安全上下文。 在通过使用其域登录名连接用户的域环境中，选择“使用登录名的当前安全上下文建立连接”通常是最佳选择。 在用户通过使用 **SQL Server** 登录名连接到原始 **SQL Server** 时，最佳选择通常是选择 **“通过使用此安全上下文”**，然后提供在链接服务器上进行身份验证时所必需的凭据。  
+4.  在 **“安全性”** 页上，指定在原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到链接服务器时将使用的安全上下文。 在通过使用其域登录名连接用户的域环境中，选择“使用登录名的当前安全上下文建立连接”通常是最佳选择  。 在用户通过使用 **SQL Server** 登录名连接到原始 **SQL Server** 时，最佳选择通常是选择 **“通过使用此安全上下文”** ，然后提供在链接服务器上进行身份验证时所必需的凭据。  
   
      **本地登录**  
      指定可连接到链接服务器的本地登录。 本地登录可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录，也可以是使用 Windows 身份验证的登录。 使用此列表可以将连接限定为特定的登录，也可以允许某些登录使用其他登录名进行连接。  
@@ -163,7 +162,7 @@ ms.locfileid: "52391241"
      **启用分布式事务处理的升级**  
      使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果该选项是 TRUE，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的数据。  
   
-6.  单击“确定” 。  
+6.  单击“确定”  。  
   
 ##### <a name="to-view-the-provider-options"></a>查看提供程序选项  
   

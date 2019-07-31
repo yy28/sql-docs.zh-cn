@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57da60f74ed24de6b1ef48eaa12053112a91a39f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055987"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  如果 ALTER TRIGGER 语句更改了第一个或最后一个触发器，则会删除 **First** 或 **Last** 属性并将顺序值设置为 **None**。 必须使用 **sp_settriggerorder**来重置顺序。  
   
- OBJECTPROPERTY 函数使用以下属性，报告某一触发器是第一个还是最后一个触发器：ExecIsFirstInsertTrigger、ExecIsFirstUpdateTrigger、ExecIsFirstDeleteTrigger、ExecIsLastInsertTrigger、ExecIsLastUpdateTrigger 和 ExecIsLastDeleteTrigger。  
+ OBJECTPROPERTY 函数使用以下属性来报告某个触发器是第一个还是最后一个触发器：ExecIsFirstInsertTrigger、ExecIsFirstUpdateTrigger、ExecIsFirstDeleteTrigger、ExecIsLastInsertTrigger、ExecIsLastUpdateTrigger 和 ExecIsLastDeleteTrigger       。  
   
  复制将为包含在立即更新订阅或排队更新订阅中的任意表自动生成第一个触发器。 复制要求其触发器为第一个触发器。 在尝试将带有第一个触发器的表包含在立即更新订阅或排队更新订阅中时，复制将引发错误。 如果在表已经包含在订阅中之后尝试使某个触发器成为第一个触发器， **sp_settriggerorder** 将返回错误。 如果在复制触发器上使用 ALTER，或使用 **sp_settriggerorder** 将复制触发器更改为最后一个触发器或无触发器，订阅将无法正常工作。  
   

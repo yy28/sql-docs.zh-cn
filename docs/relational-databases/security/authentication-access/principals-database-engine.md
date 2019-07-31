@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632688"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344597"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  “主体” 是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。 本主题适用于所有版本的 SQL Server，但在 SQL 数据库或 SQL 数据仓库的服务器级别主体上有一些限制。 
+  “主体”  是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体的定义范围：Windows、服务器、数据库；以及主体是不可分割还是集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。 本主题适用于所有版本的 SQL Server，但在 SQL 数据库或 SQL 数据仓库的服务器级别主体上有一些限制。 
   
 ## <a name="sql-server-level-principals"></a>SQL Server 级的主体  
   
@@ -53,12 +52,12 @@ ms.locfileid: "47632688"
   
 ## <a name="database-level-principals"></a>数据库级的主体
   
-- 数据库用户（有 11 个类型的用户。 有关详细信息，请参阅 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)。）
+- 数据库用户（有 12 个类型的用户。 有关详细信息，请参阅 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)。）
 - 数据库角色
 - 应用程序角色
   
 ## <a name="sa-login"></a>sa 登录名  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 登录名是服务器级别主体。 默认情况下，该登录名是在安装实例时创建的。 从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，sa 的默认数据库为“master”。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的行为的更改。 `sa` 登录名是 `sysadmin` 固定数据库角色的成员。 `sa` 登录名具有服务器上的所有权限，并且不能受到限制。 `sa` 登录名无法删除，但可以禁用，以便任何人都无法使用它。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 登录名是服务器级别主体。 默认情况下，该登录名是在安装实例时创建的。 从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]开始，sa 的默认数据库为“master”。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的行为的更改。 `sa` 登录名是 `sysadmin` 固定服务器级别角色的成员。 `sa` 登录名具有服务器上的所有权限，并且不能受到限制。 `sa` 登录名无法删除，但可以禁用，以便任何人都无法使用它。
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo 用户和 dbo 架构
 

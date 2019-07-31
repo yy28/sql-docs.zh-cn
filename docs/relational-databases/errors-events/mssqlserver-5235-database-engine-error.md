@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b8d03674431eaadc1c0d753c334e65315d6ed91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 676d7845afebb9385419b7d2eed2fcdca69ed85e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122928"
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47840515"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_ERRORLOG_SUMMARY_PREMATURE_TERMINATION|  
-|消息正文|[EMERGENCY] 由于错误状态 ERROR_STATE，由 USER_NAME 执行的 DBCC DBCC_COMMAND_DETAILS 已异常终止。 占用时间: HOURS 小时 MINUTES 分钟 SECONDS 秒。|  
+|消息正文|[EMERGENCY] 由于错误状态 ERROR_STATE，由 USER_NAME 执行的 DBCC DBCC_COMMAND_DETAILS 已异常终止。 运行时间：HOURS 小时 MINUTES 分钟 SECONDS 秒。|  
   
 ## <a name="explanation"></a>解释  
 这是命令运行时出现意外终止的情况下 DBCC 输出到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志的摘要消息。 消息中报告的错误状态定义了意外终止的类型。  

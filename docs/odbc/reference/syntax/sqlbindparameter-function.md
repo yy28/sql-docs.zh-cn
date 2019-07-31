@@ -153,7 +153,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_INPUT_OUTPUT_STREAM. 指示应进行流处理输入/输出参数。 **SQLGetData**可以读取部件中的参数值。 *BufferLength*被忽略，因为缓冲区长度取决于调用**SQLGetData**。 值*StrLen_or_IndPtr*缓冲区必须包含 SQL_NULL_DATA、 SQL_DEFAULT_PARAM、 SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的结果。 如果它将输出在流式传输，必须在输入的数据在执行 (DAE) 参数作为绑定参数。 *ParameterValuePtr*可以是任何非 null 指针值，将返回该值**SQLParamData**如用户定义令牌，其值与传递*ParameterValuePtr*为这两个输入和输出。 有关详细信息，请参阅[使用 SQLGetData 检索输出参数](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
--   SQL_PARAM_OUTPUT_STREAM。 SQL_PARAM_INPUT_OUTPUT_STREAM，为输出参数相同。 **StrLen_or_IndPtr*在输入上被忽略。  
+-   SQL_PARAM_OUTPUT_STREAM。 SQL_PARAM_INPUT_OUTPUT_STREAM，为输出参数相同。 * *StrLen_or_IndPtr*在输入上被忽略。  
   
  下表列出了不同的组合*InputOutputType*和 **StrLen_or_IndPtr*:  
   
@@ -292,7 +292,7 @@ SQLRETURN SQLBindParameter(
 4.  调用**SQLParamData**检索中指定的应用程序定义的值*ParameterValuePtr*自变量**SQLBindParameter**第一个问题执行时数据参数，以进行处理。 **SQLParamData**返回 SQL_NEED_DATA。  
   
     > [!NOTE]  
-    >  返回的值执行时数据参数类似于执行时数据列，尽管**SQLParamData**是为每个不同。 执行时数据参数是数据将发送与 SQL 语句中的参数**SQLPutData**时执行语句**SQLExecDirect**或**SQLExecute**. 它们被绑定与**SQLBindParameter**。 返回的值**SQLParamData**一个指针值传递给**SQLBindParameter**中*ParameterValuePtr*参数。 执行时数据列是包含在行集数据将发送具有**SQLPutData**更新或添加的行时**SQLBulkOperations**的或更新与**SQLSetPos**. 它们被绑定与**SQLBindCol**。 返回的值**SQLParamData**是中的行的地址 **TargetValuePtr*缓冲区 (通过调用设置**SQLBindCol**) 正在处理。  
+    >  返回的值执行时数据参数类似于执行时数据列，尽管**SQLParamData**是为每个不同。 执行时数据参数是数据将发送与 SQL 语句中的参数**SQLPutData**时执行语句**SQLExecDirect**或**SQLExecute**. 它们被绑定与**SQLBindParameter**。 返回的值**SQLParamData**一个指针值传递给**SQLBindParameter**中*ParameterValuePtr*参数。 执行时数据列是包含在行集数据将发送具有**SQLPutData**更新或添加的行时**SQLBulkOperations**的或更新与**SQLSetPos**. 它们被绑定与**SQLBindCol**。 返回的值**SQLParamData**是中的行的地址 **TargetValuePtr*缓冲区 (通过调用设置 **SQLBindCol** ) 正在处理。  
   
 5.  调用**SQLPutData**一个或多个次多次以发送参数数据。 如果数据值大于，则需要多次调用\* *ParameterValuePtr*中指定的缓冲区**SQLPutData**; 多次调用**SQLPutData**只有在将字符 C 数据发送到包含的字符、 二进制或数据源特定的数据类型的列或二进制 C 数据发送到具有二进制文件，一个字符的列时允许相同的参数或数据源特定的数据类型。  
   

@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4507a56146b6324e065d6d24a19855292ebf5276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861213"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300437"
 ---
 # <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  数据库快照是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（源数据库  ）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 当源数据库更新时，数据库快照也将更新。 因此，数据库快照存在的时间越长，就越有可能用完其可用磁盘空间。  
+
+数据库快照是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（源数据库  ）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 虽然数据库快照提供与创建快照时处于相同状态的数据的只读视图，但快照文件的大小随着对源数据库的更改而增大。 有关详细信息，请参阅下面的[功能概述](#FeatureOverview)部分。
   
  给定源数据库中可以存在多个快照。 在数据库所有者显式删除每个数据库快照之前，该快照将一直保留。  
   

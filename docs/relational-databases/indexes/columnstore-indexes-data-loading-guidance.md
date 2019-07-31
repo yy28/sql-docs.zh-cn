@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506494"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307626"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
 
@@ -44,11 +43,15 @@ ms.locfileid: "59506494"
 > 在包含非聚集列存储索引数据的行存储表上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终将数据插入到基表。 数据永远不会直接插入到列存储索引。  
 
 大容量加载有以下这些内置的性能优化：
--   **并行加载：** 你可以有多个并发大容量加载（使用 bcp 或批量插入），每个都加载一个单独的数据文件。 与行存储大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同，不需要指定 `TABLOCK`，因为每个批量导入线程以独占方式将数据载入具有排他锁的独立行组（压缩或增量行组）。 使用 `TABLOCK` 会在表中强制使用排他锁，并且会无法并行导入数据。  
--   **最小日志记录：** 大容量加载对直接进入压缩行组的数据使用最小日志记录。 进入增量行组的任何数据都将被完全记录。 这包括任何少于 102400 行的批大小。 但是，使用大容量加载的目标是让大部分数据绕过增量行组。  
--   **锁定优化：** 加载到压缩行组时将获取行组上的 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
+-   **并行加载：** 你可以有多个并发大容量加载（使用 bcp 或批量插入），每个都加载一个单独的数据文件。 与行存储大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同，不需要指定 `TABLOCK`，因为每个批量导入线程都以独占方式将数据载入具有排他锁的独立行组（压缩或增量行组）。 
+
+-   **日志记录减小：** 直接加载到压缩行组中的数据会导致显著减小日志大小。 例如，如果 10 倍压缩数据，则相应事务日志将减小大约 10 倍，无需使用 TABLOCK 或批量记录的/简单恢复模式。 进入增量行组的任何数据都将被完全记录。 这包括任何少于 102400 行的批大小。  最佳做法是使用 batchsize >= 102400。 由于无需 TABLOCK，因此可以并行加载数据。 
+
+-   **最小日志记录：** 如果遵循[最小日志记录](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)的先决条件，则可以进一步减小日志记录。 但是，与将数据加载到行存储中不同，TABLOCK 会导致表具有 X 锁而不是 BU（批量更新）锁，因此无法完成并行数据加载。 有关锁定的详细信息，请参阅 [锁定和行版本控制](../sql-server-transaction-locking-and-row-versioning-guide.md)。
+
+-   **锁定优化：** 在将数据加载到压缩行组时，将自动获取行组的 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT，因为 X 行组锁不是锁定层次结构的一部分。  
   
-如果列存储索引上有非聚集 B 树索引，则该索引本身没有锁定优化或日志记录优化，但对聚集列存储索引的上述优化仍然存在。  
+如果列存储索引上有非聚集 B 树索引，则该索引本身没有锁定优化或日志记录优化，但对聚集列存储索引的上述优化可用。  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>计划大容量加载大小，以便最大程度地减少增量行组
 当大多数的行压缩到列存储中而不位于增量行组中时，列存储索引的性能最佳。 最好调整加载大小，以便行直接进入列存储并尽量绕过增量存储。
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- 此命令以类似于 BCP 或批量插入的方式将数据加载到列存储索引，但操作是以单个批完成的。 如果临时表中的行数 < 102400，行将加载到增量行组；否则，行将直接加载到压缩行组。 一个重要限制是此 `INSERT` 操作是单线程操作。 要并行加载数据，可以创建多个临时表，或者针对临时表中不重叠的行范围发出 `INSERT`/`SELECT`。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中解除了这种限制。 以下命令从临时表并行加载数据，但需要指定 `TABLOCK`。  
+ 此命令以类似于 BCP 或批量插入的方式将数据加载到列存储索引，但操作是以单个批完成的。 如果临时表中的行数 < 102400，行将加载到增量行组；否则，行将直接加载到压缩行组。 一个重要限制是此 `INSERT` 操作是单线程操作。 要并行加载数据，可以创建多个临时表，或者针对临时表中不重叠的行范围发出 `INSERT`/`SELECT`。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中解除了这种限制。 以下命令从临时表并行加载数据，但需要指定 `TABLOCK`。 你可能会发现这与前面提到的有关 bulkload 的内容矛盾，但主要区别在于，在相同事务下执行临时表中的并行数据加载。
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,7 +94,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  从临时表加载到聚集列存储索引时，可以使用以下优化：
--   **日志优化：** 将数据载入压缩行组时，最大限度地减少记录的信息。 将数据载入增量行组时，不会进行少量的日志记录。  
+-   **日志优化：** 将数据加载到压缩行组时，日志记录减小。   
 -   **锁定优化：** 加载到压缩行组时将获取行组上的 X 锁。 但是，对于增量行组，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
   
  如果你有一个或多个非聚集索引，则索引本身不会经过锁定或日志记录优化，但是，针对聚集列存储索引的上述优化仍然存在  
@@ -124,4 +127,4 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
   
 ## <a name="next-steps"></a>后续步骤
 
-博客文章现托管在 techcommunity 上，撰写日期为 2015 年 3 月 11 日：[有关聚集列存储索引的数据加载性能注意事项](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)。
+博客文章现托管在 techcommunity  上，撰写日期为 2015 年 3 月 11 日：[有关聚集列存储索引的数据加载性能注意事项](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)。

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 54863db300d7a63404161e438bede2ecc2ec8928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 681e944da0a49c6a1b485606e5ed1ed0bd8ffd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904987"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>升级 SQL Server 故障转移群集实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47783725"
   
 -   [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，不能直接从 SQL Server 2005 故障转移群集实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或不能升级在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上运行的故障转移群集。  
   
--   [选择数据库引擎升级方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)： 选择合适的升级方法和步骤检查还根据升级中的组件在环境中安装其他组件和受支持版本和版本升级正确的顺序。  
+-   [选择数据库引擎升级方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤，按正确顺序升级组件。  
   
 -   [计划并测试数据库引擎升级计划](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：查看发行说明和已知升级问题、预升级清单，并制定和测试升级计划。  
   

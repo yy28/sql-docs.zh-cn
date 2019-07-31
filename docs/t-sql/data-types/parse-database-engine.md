@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 55ac77cc4332ce7fe71f1dc2f1fc57d29a05a1e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119819"
 ---
 # <a name="parse-database-engine"></a>Parse（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Parse 将 hierarchyid 的规范字符串表示形式转换为 hierarchyid 值。 当发生从字符串类型到 hierarchyid 的转换时，将隐式调用 Parse。 作用与 [ToString](../../t-sql/data-types/tostring-database-engine.md) 相反。 Parse() 是静态方法。
+Parse 将 hierarchyid 的规范字符串表示形式转换为 hierarchyid 值   。 当发生从字符串类型到 hierarchyid 的转换时，将隐式调用 Parse  。 作用与 [ToString](../../t-sql/data-types/tostring-database-engine.md) 相反。 Parse() 是静态方法。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,23 +45,23 @@ static SqlHierarchyId Parse ( SqlString input )
 ```  
   
 ## <a name="arguments"></a>参数  
-input  
+input   
 [!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：要转换的字符数据类型值。
   
-CLR:要计算的字符串值。
+CLR：要计算的字符串值。
   
 ## <a name="return-types"></a>返回类型  
-SQL Server 返回类型：hierarchyid
+SQL Server 返回类型：hierarchyid 
   
-CLR 返回类型：SqlHierarchyId
+CLR 返回类型：SqlHierarchyId 
   
 ## <a name="remarks"></a>Remarks  
-如果 Parse 收到的值不是 hierarchyid 的有效字符串表示形式，则会引发异常。 例如，如果 char 数据类型包含尾随空格，则会引发异常。
+如果 Parse 收到的值不是 hierarchyid 的有效字符串表示形式，则会引发异常  。 例如，如果 char 数据类型包含尾随空格，则会引发异常  。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. 不使用表转换 Transact-SQL 值  
-下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid。
+下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid   。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  

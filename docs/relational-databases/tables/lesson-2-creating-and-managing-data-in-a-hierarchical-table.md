@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a3323e550ba3534fdc491e42c70c43ba686dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031641"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>第 2 课：创建和管理层次结构表中的数据
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -293,7 +292,7 @@ AdventureWorks2017 有 8 名在市场营销部门工作的雇员。 雇员的层
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 重新组织层次结构是一项常见的维护任务。 在此任务中，使用包含 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 方法的 UPDATE 语句首先将一行移到层次结构的新位置。 然后，我们会将整个子树移到一个新位置。  
   
-`GetReparentedValue` 方法使用两个参数。 第一个参数用于描述要修改的层次结构部分。 例如，如果层次结构为 **/1/4/2/3/** ，希望更改 **/1/4/** 部分，将层次结构变为 **/2/1/2/3/**，后两个节点 (**2/3/**) 保持不变，则必须提供要更改的节点 (**/1/4/**) 作为第一个参数。 第二个参数提供新的层次结构级别，在示例中为 **/2/1/**。 这两个参数无须包含相同的级别数。  
+`GetReparentedValue` 方法使用两个参数。 第一个参数用于描述要修改的层次结构部分。 例如，如果层次结构为 **/1/4/2/3/** ，希望更改 **/1/4/** 部分，将层次结构变为 **/2/1/2/3/** ，后两个节点 (**2/3/** ) 保持不变，则必须提供要更改的节点 ( **/1/4/** ) 作为第一个参数。 第二个参数提供新的层次结构级别，在示例中为 **/2/1/** 。 这两个参数无须包含相同的级别数。  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>将一行移到层次结构中的新位置上  
   
@@ -323,7 +322,7 @@ AdventureWorks2017 有 8 名在市场营销部门工作的雇员。 雇员的层
     GO  
     ```  
   
-    现在，Wanida 位于节点 **/3/1/**。  
+    现在，Wanida 位于节点 **/3/1/** 。  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>重新组织层次结构中的某一部分  
   
@@ -334,7 +333,7 @@ AdventureWorks2017 有 8 名在市场营销部门工作的雇员。 雇员的层
     GO  
     ```  
   
-2.  现在，Kevin 向 Wanida 报告，Wanida 向 Jill 报告，而 Jill 向 David 报告。 也就是说，Kevin 位于级别 **/3/1/1/**。 若要将 Jill 的所有下属都移到一位新经理之下，需要将 **OrgNode** 为 **/3/** 的所有节点更新为新值。 执行下列代码以便将 Wanida 更新为向 Sariya 负责，但 Kevin 仍向 Wanida 负责：  
+2.  现在，Kevin 向 Wanida 报告，Wanida 向 Jill 报告，而 Jill 向 David 报告。 也就是说，Kevin 位于级别 **/3/1/1/** 。 若要将 Jill 的所有下属都移到一位新经理之下，需要将 **OrgNode** 为 **/3/** 的所有节点更新为新值。 执行下列代码以便将 Wanida 更新为向 Sariya 负责，但 Kevin 仍向 Wanida 负责：  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

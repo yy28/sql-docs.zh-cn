@@ -1,5 +1,5 @@
 ---
-title: 示例：只读文件的联机还原（简单恢复模式）| Microsoft Docs
+title: 例如：只读文件的联机还原（简单恢复模式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4ee8bc7c94494645d0c5e72afb84542e2fb7c605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4756dca201870e501645865518115ce6b48267d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140176"
 ---
-# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>示例：联机还原只读文件（简单恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>例如：只读文件的联机还原（简单恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题针对采用简单恢复模式并包含只读文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 在简单恢复模式下，如果某个文件在最后一次变为只读时进行了备份，则可以联机还原该只读文件。  

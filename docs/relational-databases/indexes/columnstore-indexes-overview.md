@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf4644c17f9fdbb02c89edec72abd39bdd9c42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912095"
 ---
 # <a name="columnstore-indexes-overview"></a>列存储索引：概述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-列存储索引是存储和查询大型数据仓库事实数据表的标准。 此索引使用基于列的数据存储和查询处理，与面向行的传统存储相比，最多可实现 10 倍的数据仓库查询性能提升。 与未压缩数据大小相比，还可最多实现 10 倍数据压缩。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，列存储索引支持操作分析，即能够对事务工作负载运行高性能实时分析。  
+列存储索引是存储和查询大型数据仓库事实数据表的标准。 此索引使用基于列的数据存储和查询处理，与面向行的传统存储相比，最多可实现 10 倍的数据仓库查询性能提升  。 与未压缩数据大小相比，还可最多实现 10 倍数据压缩  。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，列存储索引支持操作分析，即能够对事务工作负载运行高性能实时分析。  
   
 了解相关方案：  
   
@@ -37,7 +36,7 @@ ms.locfileid: "47739175"
 -   [开始使用列存储进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## <a name="what-is-a-columnstore-index"></a>什么是列存储索引？  
-列存储索引是一种使用列式数据格式（称为“列存储”）存储、检索和管理数据的技术。  
+列存储索引是一种使用列式数据格式（称为“列存储”  ）存储、检索和管理数据的技术。  
   
 ### <a name="key-terms-and-concepts"></a>重要术语和概念  
 以下关键概念和术语与列存储索引相关联。  
@@ -69,7 +68,7 @@ ms.locfileid: "47739175"
   
 ![聚集列存储索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "聚集列存储索引")  
   
-为了减少列段碎片和提升性能，列存储索引可能会将一些数据暂时存储到称为“增量存储”的聚集索引中，同时还存储已删除行的 ID 的 btree 列表。 增量存储操作在后台处理。 若要返回正确的查询结果，聚集列存储索引将合并来自列存储和增量存储的查询结果。  
+为了减少列段碎片和提升性能，列存储索引可能会将一些数据暂时存储到称为“增量存储”  的聚集索引中，同时还存储已删除行的 ID 的 btree 列表。 增量存储操作在后台处理。 若要返回正确的查询结果，聚集列存储索引将合并来自列存储和增量存储的查询结果。  
   
 #### <a name="delta-rowgroup"></a>增量行组
 增量行组是仅用于列存储索引的聚集索引。 它提升了列存储压缩率和性能，具体是通过存储行，并在行数达到阈值后将行移入列存储。  
@@ -89,7 +88,7 @@ ms.locfileid: "47739175"
 非聚集列存储索引支持实时运营分析，其中 OLTP 工作负载使用基础聚集索引，同时对列存储索引并发运行分析。 有关详细信息，请参阅[开始使用列存储进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
 #### <a name="batch-mode-execution"></a>批模式执行
-批处理模式执行是一种查询处理方法，用于同时处理多个行。 批模式执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批处理模式执行有时亦称为基于矢量或矢量化执行。 对列存储索引执行的查询使用批处理模式执行，这通常可将查询性能提升 2 到 4 倍。 有关详细信息，请参阅[查询处理体系结构指南](../query-processing-architecture-guide.md#execution-modes)。 
+批处理模式执行是一种查询处理方法，用于同时处理多个行。 批模式执行与列存储存储格式紧密集成，并且围绕列存储存储格式进行了优化。 批处理模式执行有时亦称为基于矢量  或矢量化  执行。 对列存储索引执行的查询使用批处理模式执行，这通常可将查询性能提升 2 到 4 倍。 有关详细信息，请参阅[查询处理体系结构指南](../query-processing-architecture-guide.md#execution-modes)。 
   
 ##  <a name="benefits"></a> 为何要使用列存储索引？  
 列存储索引可实现极高的数据压缩级别（通常是传统方法的 10 倍），从而明显降低数据仓库存储成本。 对于分析，列存储索引实现的性能比 btree 索引高出一个量级。 列存储索引是数据仓库和分析工作负载的首选数据存储格式。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，可以使用列存储索引对操作工作负荷执行实时分析。  

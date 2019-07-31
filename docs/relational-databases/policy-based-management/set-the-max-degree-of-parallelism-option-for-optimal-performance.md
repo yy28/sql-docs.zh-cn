@@ -1,7 +1,7 @@
 ---
 title: 设置最大并行度选项以获取最佳性能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 10187162bec9286867c56def5c8bc2b4c1ed5382
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00123da615c420fa3d58daae9a287ce3c13b8329
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655616"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316667"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>设置最大并行度选项以获取最佳性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51655616"
  通过使用 sp_configure 将最大并行度选项设置为 8 或更小。  
   
 ## <a name="for-more-information"></a>有关详细信息  
- [Microsoft 知识库文章 329204](https://go.microsoft.com/fwlink/?linkid=117786)  
+ [SQL Server 中“最大并行度”配置选项的建议和指南](https://go.microsoft.com/fwlink/?linkid=117786)  
   
  [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   

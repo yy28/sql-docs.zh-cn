@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793737"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354600"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>配置分布式 Always On 可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->上述示例使用直接的种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组   。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
+>上述示例使用自动种子设定，其中 SEEDING_MODE 设置为 AUTOMATIC，用于副本和分布式可用性组   。 此配置将设置次要副本和次要可用性组自动填充，而无需手动备份和还原主要数据库。  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>将次要副本联接到主要可用性组  
-任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 因为在此示例中使用了直接的种子设定，因此也必须调用具有  **GRANT CREATE ANY DATABASE** 选项的 **ALTER AVAILABILITY GROUP** 。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
+任何次要副本都必须使用 **JOIN** 选项联接到具有 **ALTER AVAILABILITY GROUP** 的可用性组。 由于在此示例中使用了自动种子设定，因此也必须调用具有 GRANT CREATE ANY DATABASE 选项的 ALTER AVAILABILITY GROUP   。 此设置允许可用性组创建数据库并开始从主要副本自动进行种子设定。  
   
 在此示例中，在次要副本 `server2`上运行以下命令，以联接 `ag1` 可用性组。 允许可用性组在次要副本上创建数据库。  
   
@@ -136,7 +135,7 @@ GO
 > 该次要可用性组必须使用相同的数据库镜像终结点（此示例中为端口 5022）。 否则，在本地故障转移后，副本会停止。  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>将次要副本联接到次要可用性组  
- 在此示例中，在次要副本 `server4`上运行以下命令，以联接 `ag2` 可用性组。 允许可用性组在次要副本上创建数据库以支持直接的种子设定。  
+ 在此示例中，在次要副本 `server4`上运行以下命令，以联接 `ag2` 可用性组。 允许可用性组在次要副本上创建数据库以支持自动种子设定。  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   

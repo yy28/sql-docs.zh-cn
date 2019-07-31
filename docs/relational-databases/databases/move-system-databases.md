@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100464"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -145,19 +144,19 @@ ms.locfileid: "54136117"
 ##  <a name="master"></a> 移动 master 数据库  
  若要移动 master 数据库，请按下列步骤进行操作。  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”**、 **“Microsoft SQL Server”** 和 **“配置工具”**，然后单击 **“SQL Server 配置管理器”**。  
+1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 **“Microsoft SQL Server”** 和 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在“SQL Server 服务”节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)**），并选择“属性”。  
+2.  在“SQL Server 服务”  节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)** ），并选择“属性”  。  
   
-3.  在“SQL Server (_instance_name_) 属性”对话框中，单击“启动参数”选项卡。  
+3.  在“SQL Server (_instance_name_) 属性”   对话框中，单击“启动参数”  选项卡。  
   
-4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件。 单击 **“更新”** 以保存更改。  
+4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件  。 单击 **“更新”** 以保存更改。  
   
-     在“指定启动参数”框中，将该参数更改为 master 数据库的新路径。  
+     在“指定启动参数”  框中，将该参数更改为 master 数据库的新路径。  
   
-5.  在“现有参数”框中，选择 –l 参数以移动 master 日志文件。 单击 **“更新”** 以保存更改。  
+5.  在“现有参数”框中，选择 –l 参数以移动 master 日志文件  。 单击 **“更新”** 以保存更改。  
   
-     在“指定启动参数”框中，将该参数更改为 master 数据库的新路径。  
+     在“指定启动参数”  框中，将该参数更改为 master 数据库的新路径。  
   
      数据文件的参数值必须跟在 `-d` 参数的后面，日志文件的参数值必须跟在 `-l` 参数的后面。 下面的示例显示用于 master 数据文件默认位置的参数值。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "54136117"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  通过右键单击实例名称并选择“停止”来停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+6.  通过右键单击实例名称并选择“停止”  来停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 7.  将 master.mdf 和 mastlog.ldf 文件移动到新位置。  
   
@@ -186,7 +185,7 @@ ms.locfileid: "54136117"
     GO  
     ```  
 
-10. 此时 SQL Server 应正常运行。 但是 Microsoft 建议还调整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup` 处的注册表项，其中 instance_ID 类似于 `MSSQL13.MSSQLSERVER`。 在该配置单元中，将 `SQLDataRoot` 值更改为新路径。 未能更新注册表可能会导致修补和升级失败。
+10. 此时 SQL Server 应正常运行。 但是 Microsoft 建议还调整 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup` 处的注册表项，其中 instance_ID  类似于 `MSSQL13.MSSQLSERVER`。 在该配置单元中，将 `SQLDataRoot` 值更改为新路径。 未能更新注册表可能会导致修补和升级失败。
 
   
 ##  <a name="Resource"></a> 移动 Resource 数据库  
@@ -201,17 +200,17 @@ ms.locfileid: "54136117"
   
 #### <a name="change-the-sql-server-agent-log-path"></a>更改 SQL Server 代理日志路径  
   
-1.  从 SQL Server Management Studio 的对象资源管理器中，展开 **“SQL Server 代理”**。  
+1.  从 SQL Server Management Studio 的对象资源管理器中，展开 **“SQL Server 代理”** 。  
   
-2.  右键单击 **“错误日志”** ，然后单击 **“配置”**。  
+2.  右键单击 **“错误日志”** ，然后单击 **“配置”** 。  
   
 3.  在 **“配置 SQL Server 代理错误日志”** 对话框中，指定 SQLAGENT.OUT 文件的新位置。 默认位置为：C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\。  
   
 #### <a name="change-the-database-default-location"></a>更改数据库默认位置  
   
-1.  从 SQL Server Management Studio 的对象资源管理器中，右键单击 SQL Server 所在服务器，然后单击 **“属性”**。  
+1.  从 SQL Server Management Studio 的对象资源管理器中，右键单击 SQL Server 所在服务器，然后单击 **“属性”** 。  
   
-2.  在 **“服务器属性”** 对话框中，选择 **“数据库设置”**。  
+2.  在 **“服务器属性”** 对话框中，选择 **“数据库设置”** 。  
   
 3.  在 **“数据库默认位置”** 下，找到数据文件和日志文件的新位置。  
   

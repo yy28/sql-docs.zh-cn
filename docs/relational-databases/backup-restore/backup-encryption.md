@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2420e494a312f64ba84edbd9a77b26be2a53e33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 862f97bbe21d47c830dad59e69f2c508e7eebc15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103760"
 ---
 # <a name="backup-encryption"></a>备份加密
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47659325"
   
  若要在备份期间加密，必须指定加密算法以及用于保护加密密钥的加密程序。 支持以下加密选项：  
   
--   **加密算法：** 支持的加密算法包括 AES 128、AES 192、AES 256 和 Triple DES  
+-   **加密算法：** 支持的加密算法包括：AES 128、AES 192、AES 256 和 Triple DES  
   
 -   **加密程序：** 证书或非对称密钥  
   
@@ -39,9 +38,9 @@ ms.locfileid: "47659325"
   
  如果从经过 TDE 加密的数据库还原备份，则要还原到的实例上应有 TDE 证书。  
   
-##  <a name="Benefits"></a> 优点  
+##  <a name="Benefits"></a> 优势  
   
-1.  加密数据库备份有助于保护数据：SQL Server 提供在创建备份的同时加密备份数据的选项。  
+1.  加密数据库备份有助于保证数据安全：SQL Server 提供用于在创建备份时加密备份数据的选项。  
   
 2.  加密还可用于使用 TDE 加密的数据库。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "47659325"
 ##  <a name="Prerequisites"></a> 先决条件  
  以下是有关加密备份的先决条件：  
   
-1.  **创建 master 数据库的数据库主密钥：** 数据库主密钥是一个对称密钥，用于保护数据库中证书和非对称密钥的私钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
+1.  **创建 master 数据库的数据库主密钥：** 数据库主密钥是一种用于保护数据库中存在的证书私钥和非对称密钥的对称密钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
   
 2.  创建用于备份加密的证书或非对称密钥。 有关创建证书的详细信息，请参阅 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)。 有关创建非对称密钥的详细信息，请参阅[创建非对称密钥 (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "47659325"
 -   加密的备份不支持追加到现有的备份集选项。  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  **若要加密备份或从加密的备份还原：**  
   
  需要对用于加密数据库备份的证书或非对称密钥具有**VIEW DEFINITION** 权限。  
@@ -88,9 +87,9 @@ ms.locfileid: "47659325"
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
  在以下任何对话框中，可在创建数据库的备份时加密备份。  
   
-1.  [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)在“备份选项”页上，可以选择“加密”，并指定加密算法和证书或非对称密钥以用于加密。  
+1.  [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)在  “备份选项”页上，可以选择  “加密”，并指定加密算法和证书或非对称密钥以用于加密。  
   
-2.  [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在“定义备份()任务”页的“选项”选项卡上，选择“备份加密”，并指定加密算法和证书或密钥以用于加密。  
+2.  [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)选择某个备份任务后，可以在  “定义备份()任务”页的  “选项”选项卡上，选择  “备份加密”，并指定加密算法和证书或密钥以用于加密。  
   
 ### <a name="using-transact-sql"></a>使用 Transact SQL  
  以下是示例 Transact-SQL 语句以加密备份文件：  

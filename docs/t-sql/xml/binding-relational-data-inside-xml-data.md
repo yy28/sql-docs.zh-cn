@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44eba48983d2dd9e3610b5534997ca6a4a3849b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051329"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>在 XML 数据内部绑定关系数据
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  你可以针对 xml 数据类型变量或列指定 [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)。 例如，[（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)会针对 XML 实例执行指定的 XQuery。 以这种方式构造 XML 时，您可能想要从一个非 XML 类型列或 Transact-SQL 变量引入一个值。 此过程称为在 XML 内部绑定关系数据。  
+  你可以针对 xml 数据类型变量或列指定 [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)  。 例如，[（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)会针对 XML 实例执行指定的 XQuery。 以这种方式构造 XML 时，您可能想要从一个非 XML 类型列或 Transact-SQL 变量引入一个值。 此过程称为在 XML 内部绑定关系数据。  
   
  若要在 XML 内部绑定非 XML 关系数据，SQL Server 数据库引擎提供了下列伪函数：  
   
@@ -37,14 +36,14 @@ ms.locfileid: "56019068"
   
 -   [sql:variable() Function (XQuery)](../../xquery/xquery-extension-functions-sql-variable.md)。 允许您在 XQuery 或 XML DML 表达式中使用 SQL 变量的值。  
   
- 无论何时希望显示 XML 内的关系值，都可将这些函数与 xml 数据类型方法一起使用。  
+ 无论何时希望显示 XML 内的关系值，都可将这些函数与 xml 数据类型方法一起使用  。  
   
- 不能使用这些函数引用 xml、CLR 用户定义类型、datetime、smalldatetime、text、ntext、sql_variant 和 image 类型的列或变量中的数据。  
+ 不能使用这些函数引用 xml、CLR 用户定义类型、datetime、smalldatetime、text、ntext、sql_variant 和 image 类型的列或变量中的数据      。  
   
- 而且，此绑定用于只读目的。 也就是说，不能在使用这些函数的列中写入数据。 例如，sql:variable("\@x")="某一表达式" 是不允许的。  
+ 而且，此绑定用于只读目的。 也就是说，不能在使用这些函数的列中写入数据。 例如，sql:variable("\@x")="某一表达式" 是不允许的  。  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>例如：使用 sql:variable() 的跨域查询  
- 本示例显示 sql:variable() 如何使应用程序能够将某个查询进行参数化。 使用 SQL 变量 @isbn 来传入 ISBN。 通过将常量替换为 sql:variable()，可以使用该查询来搜索任何 ISBN，而不仅仅是 ISBN 为 0-7356-1588-2 的图书。  
+ 本示例显示 sql:variable() 如何使应用程序能够将某个查询进行参数化  。 使用 SQL 变量 @isbn 来传入 ISBN。 通过将常量替换为 sql:variable()，可以使用该查询来搜索任何 ISBN，而不仅仅是 ISBN 为 0-7356-1588-2 的图书  。  
   
 ```  
 DECLARE @isbn varchar(20)  
@@ -54,7 +53,7 @@ FROM    T
 WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1  
 ```  
   
- 可以用类似的方式使用 sql:column()，它会提供其他好处。 可以使用列的索引来提高效率，这由基于开销的查询优化器决定。 另外，计算列可以存储提升的属性。  
+ 可以用类似的方式使用 sql:column()，它会提供其他好处  。 可以使用列的索引来提高效率，这由基于开销的查询优化器决定。 另外，计算列可以存储提升的属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [xml 数据类型方法](../../t-sql/xml/xml-data-type-methods.md)  

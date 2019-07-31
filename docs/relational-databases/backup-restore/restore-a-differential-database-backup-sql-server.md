@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8be03ad23efa30d5c521535d6d2db610d998fdda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e12715c3722fe3278bf535b50bc749539d57ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937509"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>还原差异数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47787006"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要还原差异数据库备份，请使用：**  
   
@@ -61,9 +60,9 @@ ms.locfileid: "47787006"
   
 -   在完整恢复模式或大容量日志恢复模式下，必须先备份活动事务日志（称为日志尾部），然后才能还原数据库。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及数据库的所有者 (**dbo**)（对于 FROM DATABASE_SNAPSHOT 选项，数据库始终存在）。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
@@ -74,9 +73,9 @@ ms.locfileid: "47787006"
   
 1.  连接到相应的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**。 根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
+2.  展开 **“数据库”** 。  根据具体的数据库，选择一个用户数据库，或展开“系统数据库”并选择一个系统数据库。  
   
-3.  右键单击数据库，指向“任务”，再指向“还原”，然后单击“数据库”。  
+3.  右键单击数据库，指向“任务”  ，再指向“还原”  ，然后单击“数据库”  。  
   
 4.  在 **“常规”** 页上，使用 **“源”** 部分指定要还原的备份集的源和位置。 选择以下选项之一：  
   
@@ -89,11 +88,11 @@ ms.locfileid: "47787006"
   
     -   **“设备”**  
   
-         单击“浏览”按钮 (**...**) 以打开“选择备份设备”对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”**。  
+         单击“浏览”按钮 ( **...** ) 以打开“选择备份设备”  对话框。 在 **“备份介质类型”** 框中，从列出的设备类型中选择一种。 若要为 **“备份介质”** 框选择一个或多个设备，请单击 **“添加”** 。  
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称  。  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "47787006"
   
 6.  在 **“要还原的备份集”** 网格中，选择要通过差异备份还原的备份。  
   
-     有关“用于还原的备份集”网格中的列的信息，请参阅[还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)。  
+     有关“用于还原的备份集”  网格中的列的信息，请参阅[还原数据库（“常规”页）](../../relational-databases/backup-restore/restore-database-general-page.md)。  
   
 7.  在 **“选项”** 页的 **“还原选项”** 面板中，可以根据您的实际情况选择下列任意选项：  
   
@@ -140,7 +139,7 @@ ms.locfileid: "47787006"
   
 #### <a name="to-restore-a-differential-database-backup"></a>还原差异数据库备份  
   
-1.  执行 RESTORE DATABASE 语句并指定 NORECOVERY 子句，以还原在差异数据库备份之前执行的完整数据库备份。 有关详细信息，请参阅 [如何还原完整备份](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
+1.  执行 RESTORE DATABASE 语句并指定 NORECOVERY 子句，以还原在差异数据库备份之前执行的完整数据库备份。 有关详细信息，请参阅[操作说明：还原完整备份](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
   
 2.  执行 RESTORE DATABASE 语句以还原差异数据库备份，同时指定：  
   

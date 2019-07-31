@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2acd0d75b28f3a0d6a155f681a5b8011473f91a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943673"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329288"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,19 +38,20 @@ ms.locfileid: "65943673"
   
 ## <a name="syntax"></a>语法  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>参数  
 *datepart*  
-指定所跨边界类型的 startdate 和 enddate 的一部分   。 `DATEDIFF_BIG` 不接受用户定义的变量等效项。 此表列出了所有有效的 datepart 参数  。
+指定所跨边界类型的 startdate 和 enddate 的一部分   。
 
 > [!NOTE]
-> 对于 datepart 参数，`DATEDIFF_BIG` 不接受用户定义的变量等效项  。
+> `DATEDIFF_BIG` 不会接受来自用户定义的变量或作为带引号的字符串的 datepart 值  。
+
+此表列出了所有有效的 datepart 参数名称和缩写  。
   
-|*datepart*|缩写形式|  
+|datepart 名称 | datepart 缩写 |  
 |---|---|
 |year |**yy, yyyy**|  
 |quarter |**qq, q**|  
@@ -65,7 +65,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |millisecond |ms |  
 |microsecond |mcs |  
 |nanosecond |ns |  
-  
+
+> [!NOTE]
+> 每个特定的 datepart 名称及其相应名称的缩写将返回相同的值   。
+
 *startdate*  
 可解析为下列值之一的表达式：
 
@@ -82,12 +85,10 @@ enddate
 请参阅 startdate  。
   
 ## <a name="return-type"></a>返回类型  
-
 签名的 bigint   
   
 ## <a name="return-value"></a>返回值  
-返回指定的 startdate 和 enddate 之间所跨的指定 datepart 边界的计数（作为带符号整数值）。
--   每个特定的 datepart 及其相应缩写将返回相同的值   。  
+返回 startdate 与 enddate 之间的 bigint 差异，以 datepart 设置的 coundary 表示     。
   
 若 bigint 的返回值超出范围（-9223372036854775808 到 9223372036854775807），`DATEDIFF_BIG` 返回错误  。 与返回 int 且因此可能以分钟或更高精度溢出的 `DATEDIFF` 不同，`DATEDIFF_BIG` 仅在使用纳秒精度（其中 enddate 和 startdate 之间的差异超过 292 年 3 个月 10 天 23 小时 47 分钟 16.8547758 秒）时才会溢出      。
   

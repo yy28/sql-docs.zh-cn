@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08185a514dbba480aaef760532430ff7c1f53bf9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115324"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用实用工具资源管理器管理 SQL Server 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +25,12 @@ ms.locfileid: "51663003"
  您必须首先创建实用工具控制点，然后才能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)或[创建 SQL Server 实用工具控制点（SQL Server 实用工具）](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)。  
   
 ## <a name="enroll-an-instance-of-sql-server-or-a-data-tier-application-from-utility-explorer"></a>从实用工具资源管理器注册 SQL Server 的实例或数据层应用程序  
- 您可以轻松地将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中。 在实用工具资源管理器中，右键单击 **“托管实例”** 节点，然后单击 **“添加托管实例”**。 按照向导的步骤完成操作。 有关详细信息，请参阅[注册 SQL Server 的实例（SQL Server 实用工具）](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
+ 您可以轻松地将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中。 在实用工具资源管理器中，右键单击 **“托管实例”** 节点，然后单击 **“添加托管实例”** 。 按照向导的步骤完成操作。 有关详细信息，请参阅[注册 SQL Server 的实例（SQL Server 实用工具）](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
- 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中将数据层应用程序部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例上，请单击“对象资源管理器”选项卡，展开“管理”节点，然后右键单击“数据层应用程序”。 从右键菜单中，选择“部署数据层应用程序”。 有关详细信息，请参阅[部署数据层应用程序](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)。  
+ 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中将数据层应用程序部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例上，请单击“对象资源管理器”  选项卡，展开“管理”  节点，然后右键单击“数据层应用程序”  。 从右键菜单中，选择“部署数据层应用程序”  。 有关详细信息，请参阅[部署数据层应用程序](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)。  
   
 ## <a name="viewing-utility-explorer"></a>查看实用工具资源管理器  
- 默认情况下，实用工具资源管理器在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中不可见。 如果您在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面中看不到实用工具资源管理器，请在 **“视图”** 菜单上，单击 **“实用工具资源管理器”**。 若要查看实用工具资源管理器内容窗格，请在 **“视图”** 菜单上，单击 **“实用工具资源管理器内容”**。  
+ 默认情况下，实用工具资源管理器在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中不可见。 如果您在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面中看不到实用工具资源管理器，请在 **“视图”** 菜单上，单击 **“实用工具资源管理器”** 。 若要查看实用工具资源管理器内容窗格，请在 **“视图”** 菜单上，单击 **“实用工具资源管理器内容”** 。  
   
 ## <a name="viewing-objects-in-utility-explorer"></a>在实用工具资源管理器中查看对象  
  实用工具资源管理器导航窗格和实用工具资源管理器内容窗格显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的数据、对象和策略。 使用导航窗格可以指定要在面板和视点中显示的信息，然后使用内容窗格和详细信息选项卡访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的对象的数据和策略信息。  
@@ -39,21 +38,21 @@ ms.locfileid: "51663003"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server 实用工具导航窗格  
  实用工具资源管理器导航窗格在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中提供对象的树视图，这些对象按实用工具控制点进行分组。 若要展开文件夹，请单击加号 (+) 或在实用工具资源管理器导航窗格中双击 UCP 名称。 右键单击文件夹或对象，以执行常见任务。 树视图中的节点如下所示：  
   
--   树视图中的顶端节点是实用工具控制点 (UCP)。 该节点名称的结构为："Utility_Name" (ComputerName\UCP_instance_name)。 如果您没有 UCP，则必须创建一个。 如果您没有连接到某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，则必须连接到一个实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 在树视图中单击该 UCP 名称可以使用面板视图中的数据填充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源管理器内容窗格。 有关详细信息，请参阅[实用工具仪表板（SQL Server 实用工具）](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。  
+-   树视图中的顶端节点是实用工具控制点 (UCP)。 该节点名的结构为："Utility_Name" (ComputerName\UCP_instance_name)。 如果您没有 UCP，则必须创建一个。 如果您没有连接到某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，则必须连接到一个实用工具。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 在树视图中单击该 UCP 名称可以使用面板视图中的数据填充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源管理器内容窗格。 有关详细信息，请参阅[实用工具仪表板（SQL Server 实用工具）](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。  
   
      右键单击 UCP 节点可以刷新面板中的数据。  
   
 -   在树视图中单击 **“已部署的数据层应用程序”** 节点可以访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具内容窗格中的列表视图数据。 该内容窗格底部的详细信息选项卡提供 CPU 和存储使用率数据，并且可以访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中单独数据层应用程序的策略定义和属性详细信息。 有关详细信息，请参阅[已部署数据层应用程序详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
-     在树视图中右键单击“已部署的数据层应用程序”节点可以访问筛选设置或刷新列表视图中的数据。  
+     在树视图中右键单击“已部署的数据层应用程序”  节点可以访问筛选设置或刷新列表视图中的数据。  
   
 -   在树视图中单击 **“托管实例”** 节点可以访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具内容窗格中的列表视图数据。 该内容窗格底部的详细信息选项卡提供 CPU 和存储卷使用率数据，并且可用于访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单独托管实例的策略定义和属性详细信息。 有关详细信息，请参阅[托管实例详细信息（SQL Server 实用工具）](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
   
-     右键单击树视图中的“托管实例”节点，可将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，访问筛选器设置，或刷新列表视图中的数据。  
+     右键单击树视图中的“托管实例”  节点，可将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，访问筛选器设置，或刷新列表视图中的数据。  
   
--   单击树视图中的“实用工具管理”节点可访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中已部署数据层应用程序的全局策略定义，查看 UCP 管理员信息以及访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理数据仓库的配置设置。 有关详细信息，请参阅[实用工具管理（SQL Server 实用工具）](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 您还可以使用 **“策略”** 选项卡上的控件更改用于报告违反策略的敏感度。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   单击树视图中的“实用工具管理”  节点可访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中已部署数据层应用程序的全局策略定义，查看 UCP 管理员信息以及访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理数据仓库的配置设置。 有关详细信息，请参阅[实用工具管理（SQL Server 实用工具）](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 您还可以使用 **“策略”** 选项卡上的控件更改用于报告违反策略的敏感度。 有关详细信息，请参阅[减少 CPU 使用策略中的干扰（SQL Server 实用工具）](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
-     右键单击树视图中的“实用工具管理”节点，以便刷新内容窗格中的数据。  
+     右键单击树视图中的“实用工具管理”  节点，以便刷新内容窗格中的数据。  
   
 ### <a name="sql-server-utility-dashboard"></a>SQL Server 实用工具面板  
  在实用工具资源管理器树视图中选择 UCP 节点将在实用工具资源管理器内容窗格中填充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具面板。 该面板在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有托管实例和数据层应用程序提供一目了然的状态摘要，并且提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具托管的对象的整体存储使用率。 有关详细信息，请参阅[实用工具仪表板（SQL Server 实用工具）](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。 若要注册或删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，请参阅[注册 SQL Server 的实例（SQL Server 实用工具）](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)、[部署数据层应用程序](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)或[从 SQL Server 实用工具中删除 SQL Server 的实例](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  

@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc25fcdd81c647dcff73c047924f3fbec13b6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107137"
 ---
 # <a name="disable-indexes-and-constraints"></a>禁用索引和约束
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47740087"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **禁用索引，使用：**  
   
@@ -89,9 +88,9 @@ ms.locfileid: "47740087"
   
 -   创建一个新的聚集索引将启用以前禁用的非聚集索引。 有关详细信息，请参阅 [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要执行 ALTER INDEX，至少需要对表或视图具有 ALTER 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -106,9 +105,9 @@ ms.locfileid: "47740087"
   
 4.  单击加号以便展开 **“索引”** 文件夹。  
   
-5.  右键单击要禁用的索引，然后选择“禁用”。  
+5.  右键单击要禁用的索引，然后选择  “禁用”。  
   
-6.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。  
+6.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”** 。  
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>禁用表的所有索引  
   
@@ -118,9 +117,9 @@ ms.locfileid: "47740087"
   
 3.  单击加号以便展开您要禁用索引的表。  
   
-4.  右键单击“索引”文件夹，然后选择“全部禁用”。  
+4.  右键单击  “索引”文件夹，然后选择  “全部禁用”。  
   
-5.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”**。 若要从 **“要禁用的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
+5.  在 **“禁用索引”** 对话框中，确认正确的索引位于 **“要禁用的索引”** 网格中，然后单击 **“确定”** 。 若要从 **“要禁用的索引”** 网格中删除索引，请选择该索引，再按 Delete 键。  
   
  在 **“禁用索引”** 对话框中将提供以下信息：  
   
@@ -131,7 +130,7 @@ ms.locfileid: "47740087"
  显示创建索引的表或视图的名称。  
   
  **索引类型**  
- 显示索引的类型：“聚集”、“非聚集”、“空间”或 ”XML”。  
+ 显示索引的类型：聚集、非聚集、空间或 XML     。  
   
  **“状态”**  
  显示禁用操作的状态。 执行之后可能的值包括：  
@@ -167,11 +166,11 @@ ms.locfileid: "47740087"
   
 #### <a name="to-disable-an-index"></a>禁用索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  
@@ -184,11 +183,11 @@ ms.locfileid: "47740087"
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>禁用表的所有索引  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     USE AdventureWorks2012;  

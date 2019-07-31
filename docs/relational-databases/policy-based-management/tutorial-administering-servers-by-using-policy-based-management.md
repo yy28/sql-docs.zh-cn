@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8447a2e6b6364c702e9f800810fd6295d5641fe7
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021488"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教程：使用基于策略的管理来管理服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

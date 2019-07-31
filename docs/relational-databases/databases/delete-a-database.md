@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4756b7746e0d139384766aaa492af9064fd8ad1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 87ca7ef24d34a6f39255a92fcabaa2dab53cfa26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006204"
 ---
 # <a name="delete-a-database"></a>删除数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "51558584"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **删除数据库，使用：**  
   
@@ -48,7 +47,7 @@ ms.locfileid: "51558584"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**  [在删除数据库之后](#FollowUp)  
+-   **跟进：** [在删除数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -68,9 +67,9 @@ ms.locfileid: "51558584"
   
 -   考虑对数据库进行完整备份。 只有通过还原备份才能重新创建已删除的数据库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  若要执行 DROP DATABASE 操作，用户必须至少对数据库具有 CONTROL 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -79,19 +78,19 @@ ms.locfileid: "51558584"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开 **“数据库”**，右键单击要删除的数据库，再单击 **“删除”**。  
+2.  展开 **“数据库”** ，右键单击要删除的数据库，再单击 **“删除”** 。  
   
-3.  确认选择了正确数据库，然后单击 **“确定”**。  
+3.  确认选择了正确数据库，然后单击 **“确定”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-delete-a-database"></a>删除数据库  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例删除 `Sales` 和 `NewSales` 数据库。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例删除 `Sales` 和 `NewSales` 数据库。  
   
 ```sql  
 USE master ;  

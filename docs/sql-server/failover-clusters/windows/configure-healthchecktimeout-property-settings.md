@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdb182e2861675cd42d295bd9004cd62198f7687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002468"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   HealthCheckTimeout 设置用于指定以毫秒表示的一段时间，在这段时间内 SQL Server 资源 DLL 应等待 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 存储过程返回的信息，之后才能将 Always On 故障转移群集实例 (FCI) 报告为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
--   **准备工作：**[限制和局限](#Limits)、[安全性](#Security)  
+-   **开始之前：** [限制和局限](#Limits)、[安全性](#Security)  
   
--   **要配置 HeathCheckTimeout 设置，请使用：**[PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **若要配置 HeathCheckTimeout 设置，请使用：** [PowerShell](#PowerShellProcedure)、[故障转移群集管理器](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
 ###  <a name="Limits"></a> 限制和局限  
  此属性的默认值为 30,000 毫秒（30 秒）。 最小值为 15,000 毫秒（15 秒）。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  需要 ALTER SETTINGS 和 VIEW SERVER STATE 权限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
@@ -74,7 +73,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 2.  展开 **“服务和应用程序”** ，然后选择 FCI。  
   
-3.  右键单击“其他资源”下的“SQL Server 资源”，然后从右键菜单中选择“属性”。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
+3.  右键单击“其他资源”  下的“SQL Server 资源”  ，然后从右键菜单中选择“属性”  。 此时将打开 SQL Server 资源 **“属性”** 对话框。  
   
 4.  选择 **“属性”** 选项卡，为 **HealthCheckTimeout** 属性输入所需的值，然后单击 **“确定”** 以应用更改。  
   

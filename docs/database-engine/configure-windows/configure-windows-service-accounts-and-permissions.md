@@ -50,13 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: deac964cb20d64d7a1dc2d1cc1e76f5004d80033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c91c4e9a432992475daef8a987dea2dc9adf913
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803290"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290377"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ ms.locfileid: "66803290"
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端** - 与 Distributed Replay 控制器一起来模拟针对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例的并发工作负荷的一台或多台 Distributed Replay 客户端计算机。  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - 用于托管 Microsoft 提供的外部可执行文件的可信服务，例如作为 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]的一部分安装的 R 运行时。 附属进程可由启动板进程启动，但将根据单个实例的配置进行资源调控。 启动板服务在其自己的用户帐户下运行，特定注册运行时的各个附属进程将继承启动板的用户帐户。 附属进程将在执行过程中按需创建和销毁。
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - 用于托管 Microsoft 提供的外部可执行文件的可信服务，例如作为 R Services 或机器学习服务的一部分安装的 R 或 Python 运行时。 附属进程可由启动板进程启动，但将根据单个实例的配置进行资源调控。 启动板服务在其自己的用户帐户下运行，特定注册运行时的各个附属进程将继承启动板的用户帐户。 附属进程将在执行过程中按需创建和销毁。
 
     如果安装 SQL Server 的计算机同时用作域控制器，则启动板无法创建其自己使用的帐户。 因此无法在作用域控制器上安装 R Services（数据库内）或机器学习服务（数据库内）。
 
@@ -232,7 +231,7 @@ ms.locfileid: "66803290"
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT、ISSVCPASSWORD、ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器|DRU_CTLR、CTLRSVCACCOUNT、CTLRSVCPASSWORD、CTLRSTARTUPTYPE、CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端|DRU_CLT、CLTSVCACCOUNT、CLTSVCPASSWORD、CLTSTARTUPTYPE、CLTCTLRNAME、CLTWORKINGDIR、CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS\*\*\*|
+|R Services 或机器学习服务|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS\*\*\*|
 |PolyBase 引擎| PBENGSVCACCOUNT、PBENGSVCPASSWORD、PBENGSVCSTARTUPTYPE、PBDMSSVCACCOUNT、PBDMSSVCPASSWORD、PBDMSSVCSTARTUPTYPE、PBSCALEOUT、PBPORTRANGE
   
  \*有关无人参与安装的详细信息和示例语法，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
@@ -301,8 +300,8 @@ ms.locfileid: "66803290"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端：**|**以服务身份登录** (SeServiceLogonRight)|  
 |**PolyBase 引擎和 DMS**| **以服务身份登录** (SeServiceLogonRight)  |   
 |**启动板：**|**以服务身份登录** (SeServiceLogonRight) <br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br />**跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br />**调整进程的内存配额** (SeIncreaseQuotaPrivilege)|     
-|**R Services：** **SQLRUserGroup**（SQL 2016 和 2017）  |**允许在本地登录** |   
-|机器学习  “所有应用程序包”的 [AppContainer]  (SQL 2019)  |SQL Server“Binn”、R_Services 和 PYTHON_Services 目录的读取和执行权限  |   
+|**R Services/机器学习服务：** **SQLRUserGroup**（SQL 2016 和 2017）  |默认情况下，没有“允许在本地登录”权限  |   
+|机器学习服务“所有应用程序包”的 [AppContainer] (SQL 2019)    |SQL Server“Binn”、R_Services 和 PYTHON_Services 目录的读取和执行权限  |   
 
  \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的实例上处于禁用状态。  
   

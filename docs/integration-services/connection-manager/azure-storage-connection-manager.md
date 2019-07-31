@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a115dafb386323bc1f4738720e7576657d22543
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403063"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316689"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
 
@@ -38,6 +37,6 @@ ms.locfileid: "66403063"
 - **身份验证：** 指定要使用的身份验证方法。 支持 AccessKey 和 ServicePrincipal 身份验证   。
     - **AccessKey：** 指定此身份验证方法的帐户密钥  。
     - **ServicePrincipal：** 对于此身份验证方法，请指定服务主体的应用程序 ID、应用程序密钥和租户 ID    。
-      应为服务主体分配存储帐户的“存储 Blob 数据参与者”角色  。
+      要使“测试连接”起作用，应向服务主体分配至少存储帐户的“存储 Blob 数据读取器”角色   。
       请参阅[此](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)页获取详细信息。
 - **环境：** 指定托管存储帐户的云环境。

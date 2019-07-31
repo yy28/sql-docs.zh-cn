@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039064"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "57685784"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -96,8 +95,8 @@ DBCC SHOWCONTIG
 |**扫描区数**|表或索引中的区数。|  
 |**区切换次数**|遍历表或索引的页时，DBCC 语句从一个区移动到另一个区的次数。|  
 |**页的每个区的平均页数**|页链中每个区的页数。|  
-|**扫描密度 [最佳计数:实际计数]**|百分比。 这是“最佳计数”与“实际计数”的比率。 如果所有内容都是连续的，则该值为 100；如果该值小于 100，则存在一些碎片。<br /><br /> “最佳计数”是指所有内容连续链接时理想的盘区更改次数。 “实际计数”是指实际的盘区更改次数。|  
-|**逻辑扫描碎片**|扫描索引的叶级页时返回的出错页的百分比。 此数与堆无关。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页指针所指向的页。|  
+|**扫描密度 [最佳计数:实际计数]**|百分比。 这是“最佳计数”  与“实际计数”  的比率。 如果所有内容都是连续的，则该值为 100；如果该值小于 100，则存在一些碎片。<br /><br /> “最佳计数”  是指所有内容连续链接时理想的盘区更改次数。 “实际计数”  是指实际的盘区更改次数。|  
+|**逻辑扫描碎片**|扫描索引的叶级页时返回的出错页的百分比。 此数与堆无关。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页  指针所指向的页。|  
 |**区扫描碎片**|扫描索引的叶级页时出错区所占的百分比。 此数与堆无关。 对于出错区，包含当前索引页的区在物理上不是包含上一个索引页的区的下一个区。<br /><br /> 注意：如果索引跨越多个文件，则此数字无意义。|  
 |**页的每页的平均可用字节数**|扫描的页上平均可用字节数。 此数字越大，则页的填充程度越低。 如果索引不会有很多随机插入，则数字越小越好。 此数字还受行大小影响：行越大，此数字就越大。|  
 |**页的平均页密度(满)**|页的平均密度，以百分比表示。 该值会考虑行大小。 因此，该值可以更准确地指示页的填充程度。 百分比越大越好。|  
@@ -128,10 +127,10 @@ DBCC SHOWCONTIG
 |**ExtentSwitches**|遍历表或索引的页时，DBCC 语句从一个区移动到另一个区的次数。|  
 |**AverageFreeBytes**|扫描的页上平均可用字节数。 此数字越大，则页的填充程度越低。 如果索引不会有很多随机插入，则数字越小越好。 此数字还受行大小影响：行越大，此数字就越大。|  
 |**AveragePageDensity**|页的平均密度，以百分比表示。 该值会考虑行大小。 因此，该值可以更准确地指示页的填充程度。 百分比越大越好。|  
-|**ScanDensity**|百分比。 这是“BestCount”与“ActualCount”的比率。 如果所有内容都是连续的，则该值为 100；如果该值小于 100，则存在一些碎片。|  
+|**ScanDensity**|百分比。 这是“BestCount”  与“ActualCount”  的比率。 如果所有内容都是连续的，则该值为 100；如果该值小于 100，则存在一些碎片。|  
 |**BestCount**|所有内容连续链接时的区更改理想数量。|  
 |**ActualCount**|区更改实际数量。|  
-|**LogicalFragmentation**|扫描索引的叶级页时返回的出错页的百分比。 此数与堆无关。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页指针所指向的页。|  
+|**LogicalFragmentation**|扫描索引的叶级页时返回的出错页的百分比。 此数与堆无关。 对于出错页，分配给索引的下一个物理页不是当前叶级页中的下一页  指针所指向的页。|  
 |**ExtentFragmentation**|扫描索引的叶级页时出错区所占的百分比。 此数与堆无关。 对于出错区，包含当前索引页的区在物理上不是包含上一个索引页的区的下一个区。<br /><br /> 注意：如果索引跨越多个文件，则此数字无意义。|  
   
 如果指定了 WITH TABLERESULTS 和 FAST，则结果集将与指定 WITH TABLERESULTS 时一样，但以下列的值将为 null：
@@ -151,7 +150,7 @@ DBCC SHOWCONTIG 不显示数据类型为 **ntext**、**text** 和 **image** 的�
   
 此外，DBCC SHOWCONTIG 也不支持某些新功能。 例如：
 -   如果指定的表或索引已分区，则 DBCC SHOWCONTIG 只显示指定表或索引的第一个分区。  
--   DBCC SHOWCONTIG 不显示行溢出存储信息和其他新的行外数据类型，如 **nvarchar(max)**、**varchar(max)**、**varbinary(max)** 和 **xml**。  
+-   DBCC SHOWCONTIG 不显示行溢出存储信息和其他新的行外数据类型，如 **nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 和 **xml**。  
 -   DBCC SHOWCONTIG 不支持空间索引。  
   
 [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理视图完全支持所有新功能。
@@ -167,25 +166,25 @@ DBCC SHOWCONTIG 可确定表是否高度碎片化。 在对表进行数据修改
 -   重新生成索引。  
      使用 REBUILD 和 ALTER INDEX 重新生成索引。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-“页中结果集中的“每页的平均可用字节数”和“平均页密度(满)”统计信息指示了索引页的填满程度。 “页中**对于没有许多随机插入的索引，**“每页的平均可用字节数”应该较小，“平均页密度(满)”数应该较大。 使用指定的 FILLFACTOR 选项删除并重建索引可改善统计信息。 另外，REORGANIZE 和 ALTER INDEX 可根据其 FILLFACTOR 选项压缩索引，从而改善统计信息。
+ 结果集中的“每页的平均可用字节数”和“平均  页密度(满)”统计信息指示了索引页的填满程度。 **对于没有许多随机插入的索引，** “每页的平均可用字节数”应该较小，“平均  页密度(满)”数应该较大。 使用指定的 FILLFACTOR 选项删除并重建索引可改善统计信息。 另外，REORGANIZE 和 ALTER INDEX 可根据其 FILLFACTOR 选项压缩索引，从而改善统计信息。
   
 > [!NOTE]  
 >  如果索引有很多随机插入和很满的页，则其页拆分数将增加。 这将导致更多的碎片。  
   
 索引的碎片级别可通过以下方式确定：
--   比较“区切换次数”和“扫描区数”的值。  
-     “区切换次数”的值应尽可能接近“扫描区数”的值。 此比率将作为“扫描密度”值计算。 此值应尽可能的大，可通过减少索引碎片得到改善。  
+-   比较“区切换次数”  和“扫描区数”  的值。  
+     “区切换次数”  的值应尽可能接近“扫描区数”  的值。 此比率将作为“扫描密度”  值计算。 此值应尽可能的大，可通过减少索引碎片得到改善。  
   
     > [!NOTE]  
     >  如果索引涉及多个文件，则此方法无效。  
   
--   了解“逻辑扫描碎片”和“区扫描碎片”的值。  
-     “逻辑扫描碎片”和“区扫描碎片”（对于较小的盘区）的值是表的碎片级别的最好指标。 这两个值应尽可能接近零，但 0% 到 10% 之间的值都是可接受的。  
+-   了解“逻辑扫描碎片”  和“区扫描碎片”  的值。  
+     “逻辑扫描碎片”  和“区扫描碎片”  （对于较小的盘区）的值是表的碎片级别的最好指标。 这两个值应尽可能接近零，但 0% 到 10% 之间的值都是可接受的。  
   
     > [!NOTE]  
-    >  如果索引涉及多个文件，则“区扫描碎片”的值较高。 若要减小这些值，必须减少索引碎片。  
+    >  如果索引涉及多个文件，则“区扫描碎片”  的值较高。 若要减小这些值，必须减少索引碎片。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 用户必须是表所有者，或者是 **sysadmin** 固定服务器角色、**db_owner** 固定数据库角色或 **db_ddladmin** 固定数据库角色的成员。
   
 ## <a name="examples"></a>示例  

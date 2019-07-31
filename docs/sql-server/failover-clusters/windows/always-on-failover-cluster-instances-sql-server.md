@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 034a46affb198c89baab3c4741ae84569c96951b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063805"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 故障转移群集实例 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 产品/服务的一部分，AlwaysOn 故障转移群集实例利用 Windows Server 故障转移群集 (WSFC) 功能通过冗余在实例级别（“故障转移群集实例” (FCI)）提供了本地高可用性。 FCI 是在 Windows Server 故障转移群集 (WSFC) 节点上和（可能）多个子网中安装的单个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在网络中，FCI 显示为在单台计算机上运行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，不过它提供了从一个 WSFC 节点到另一个 WSFC 节点的故障转移（如果当前节点不可用）。  
+  作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 产品/服务的一部分，Always On 故障转移群集实例利用 Windows Server 故障转移群集 (WSFC) 功能通过冗余在实例级别（故障转移群集实例 (FCI)）提供了本地高可用性  。 FCI 是在 Windows Server 故障转移群集 (WSFC) 节点上和（可能）多个子网中安装的单个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在网络中，FCI 显示为在单台计算机上运行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，不过它提供了从一个 WSFC 节点到另一个 WSFC 节点的故障转移（如果当前节点不可用）。  
   
  FCI 可利用[可用性组](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)提供数据库级别的远程灾难恢复。 有关详细信息，请参阅[故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
  
@@ -157,7 +156,7 @@ ms.locfileid: "52509919"
 |----------------------------|---------------|  
 |介绍如何安装新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |介绍如何升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 故障转移群集。|[升级 SQL Server 故障转移群集实例](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|介绍 Windows 故障转移群集的概念并提供指向 Windows 故障转移群集相关任务的链接|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|介绍 Windows 故障转移群集的概念并提供指向 Windows 故障转移群集相关任务的链接|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]设置用户帐户 ：[故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2：[故障转移群集的概述](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |介绍 FCI 中的节点和可用性组中的副本的概念区别以及有关使用 FCI 承载可用性组的副本的注意事项。|[故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

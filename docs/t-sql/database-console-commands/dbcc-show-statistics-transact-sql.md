@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bf37beac7838f3dcb1e111e3632952864b8d7bd
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116484"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +73,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ```  
   
 ## <a name="arguments"></a>参数  
- table_or_indexed_view_name  
+ table_or_indexed_view_name   
  要显示其统计信息的表或索引视图的名称。  
   
  *table_name*  
@@ -87,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  取消严重级别从 0 到 10 的所有信息性消息。  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ ,n ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ ,n ]    
  如果指定以上一个或多个选项，将根据指定的选项限制该语句返回的结果集。 如果没有指定任何选项，则返回所有统计信息。  
   
  STATS_STREAM 为 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -102,18 +101,18 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |“行”|上次更新统计信息时表或索引视图中的总行数。 如果筛选统计信息或者统计信息与筛选索引对应，该行数可能小于表中的行数。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Rows Sampled|用于统计信息计算的抽样总行数。 如果 Rows Sampled < Rows，显示的直方图和密度结果则是根据抽样行估计的。|  
 |步骤|直方图中的梯级数。 每个梯级都跨越一个列值范围，后跟上限列值。 直方图梯级是根据统计信息中的第一个键列定义的。 最大梯级数为 200。|  
-|Density|计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值。 查询优化器不使用此 Density 值，显示此值的目的是为了与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本实现向后兼容。|  
+|Density|计算公式为 1/统计信息对象第一个键列中的所有值（不包括直方图边界值）的非重复值  。 查询优化器不使用此 Density 值，显示此值的目的是为了与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本实现向后兼容。|  
 |Average Key Length|统计信息对象中所有键列的每个值的平均字节数。|  
-|String Index|Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text** 或 **ntext** 类型，则基于其第一个键列创建字符串摘要统计信息。|  
+|String Index|Yes 指示统计信息对象包含字符串摘要统计信息，以改进对使用 LIKE 运算符的查询谓词的基数估计；例如 `WHERE ProductName LIKE '%Bike'`。 字符串摘要统计信息与直方图分开存储，如果统计信息对象为 **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text** 或 **ntext** 类型，则基于其第一个键列创建字符串摘要统计信息。|  
 |筛选表达式|包含在统计信息对象中的表行子集的谓词。 NULL = 未筛选的统计信息。 有关筛选谓词的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。 有关筛选统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。|  
 |Unfiltered Rows|应用筛选表达式前表中的总行数。 如果筛选表达式为 NULL，则 Unfiltered Rows 等于 Rows。|  
-|持久样本百分比|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用范围：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|持久样本百分比|持久样本百分比用于未显式指定采样百分比的统计信息更新。 如果值为零，则不为此统计信息设置持久样本百分比。<br /><br /> **适用范围：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 下表对指定 DENSITY_VECTOR 时结果集中所返回的列进行了说明。
   
 |列名|描述|  
 |-----------------|-----------------|  
-|All Density|密度为 1/非重复值。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 以及 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
+|All Density|密度为 1/非重复值  。 结果显示统计信息对象中各列的每个前缀的密度，每个密度显示一行。 非重复值是每个行前缀和列前缀的列值的非重复列表。 例如，如果统计信息对象包含键列 (A, B, C)，结果将报告以下每个列前缀中非重复值列表的密度：(A)、(A,B) 和 (A, B, C)。 使用前缀 (A, B, C)，以下每个列表都是一个非重复值列表：(3, 5, 6)、(4, 4, 6)、(4, 5, 6) 和 (4, 5, 7)。 使用前缀 (A, B)，相同列值具有以下非重复值列表：(3, 5)、(4, 4) 和 (4, 5)|  
 |Average Length|存储列前缀的列值列表的平均长度（以字节为单位）。 例如，如果列表 (3, 5, 6) 中的每个值都需要 4 个字节，则长度为 12 个字节。|  
 |“列”|为其显示 All density 和 Average length 的前缀中的列的名称。|  
   

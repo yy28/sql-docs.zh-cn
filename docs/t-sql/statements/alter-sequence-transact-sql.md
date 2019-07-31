@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070333"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  修改现有序列对象的参数。 如果该序列是使用 CACHE 选项创建的，则改变序列将重新创建缓存。  
+  修改现有序列对象的参数。 如果该序列是使用 CACHE 选项创建的，则改变序列将重新创建缓存  。  
   
  序列对象是通过使用 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) 语句创建的。 序列是整数值，可以是返回整数的任何数据类型。 使用 ALTER SEQUENCE 语句无法更改数据类型。 若要更改数据类型，请删除或创建序列对象。  
   
- 序列对象是用户定义的绑定到架构的对象，用于可根据规范生成数值序列。 通过调用 NEXT VALUE FOR 函数，从序列中生成新值。 使用 **sp_sequence_get_range** 同时获取多个序列号。 有关同时使用 CREATE SEQUENCE、sp_sequence_get_range 和 NEXT VALUE FOR 函数的信息和方案，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 序列对象是用户定义的绑定到架构的对象，用于可根据规范生成数值序列。 通过调用 NEXT VALUE FOR 函数，从序列中生成新值。 使用 **sp_sequence_get_range** 同时获取多个序列号。 有关同时使用 CREATE SEQUENCE、sp_sequence_get_range 和 NEXT VALUE FOR 函数的信息和方案，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,8 +51,8 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ```  
   
 ## <a name="arguments"></a>参数  
- sequence_name  
- 指定数据库中标识序列的唯一名称。 类型为 sysname。  
+ sequence_name   
+ 指定数据库中标识序列的唯一名称。 类型为 sysname  。  
   
  RESTART [ WITH \<constant> ]  
  将由序列对象返回的下一个值。 如果提供，则 RESTART WITH 值必须是小于或等于序列对象的最大值并大于或等于其最小值的整数。 如果忽略 WITH 值，则序列编号将根据原始 CREATE SEQUENCE 选项重新开始。  
@@ -88,23 +87,23 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- 要求对序列拥有 ALTER 权限或对架构拥有 ALTER 权限。 若要授予针对序列的 ALTER 权限，请按以下格式使用 ALTER ON OBJECT 对象：  
+### <a name="permissions"></a>权限  
+ 要求对序列拥有 ALTER 权限或对架构拥有 ALTER 权限   。 若要授予针对序列的 ALTER 权限，请按以下格式使用 ALTER ON OBJECT 对象   ：  
   
 ```  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
- 可以通过使用 ALTER AUTHORIZATION 语句转让序列对象的所有权。  
+ 可以通过使用 ALTER AUTHORIZATION 语句转让序列对象的所有权  。  
   
 ### <a name="audit"></a>审核  
- 若要审核 ALTER SEQUENCE，请监视 SCHEMA_OBJECT_CHANGE_GROUP。  
+ 若要审核 ALTER SEQUENCE，请监视 SCHEMA_OBJECT_CHANGE_GROUP   。  
   
 ## <a name="examples"></a>示例  
- 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
   
 ### <a name="a-altering-a-sequence"></a>A. 更改序列  
- 下面的示例使用 int 数据类型（范围为 0 到 255 之间）创建一个名为 Test 的架构和一个名为 TestSeq 的序列。 序列以 125 开始，每次生成数字时递增 25。 因为该序列配置为可循环，所以，当值超过最大值 200 时，序列将从最小值 100 重新开始。  
+ 下面的示例使用 int 数据类型（范围为 100 到 200 之间）创建一个名为 Test 的架构和一个名为 TestSeq 的序列  。 序列以 125 开始，每次生成数字时递增 25。 因为该序列配置为可循环，所以，当值超过最大值 200 时，序列将从最小值 100 重新开始。  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- 下面的示例更改 TestSeq 序列，使范围介于 0 到 255 之间。 序列以 100 重新开始编号系列，每次生成数字时递增 50。  
+ 下面的示例更改 TestSeq 序列，使范围介于 50 到 200 之间。 序列以 100 重新开始编号系列，每次生成数字时递增 50。  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  
@@ -136,7 +135,7 @@ ALTER SEQUENCE Test. TestSeq
 GO  
 ```  
   
- 因为此序列不循环，所以，当序列超过 200 时，NEXT VALUE FOR 函数将导致错误。  
+ 因为此序列不循环，所以，当序列超过 200 时，NEXT VALUE FOR 函数将导致错误  。  
   
 ### <a name="b-restarting-a-sequence"></a>B. 重新开始序列  
  以下示例将创建一个名为 CountBy1 的序列。 该序列使用默认值。  
@@ -151,7 +150,7 @@ CREATE SEQUENCE Test.CountBy1 ;
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
- 返回的值 -9,223,372,036,854,775,808 是 bigint 数据类型的最小值。 所有者认识到他原来希望序列从 1 开始，但创建序列时没有指定 START WITH 子句。 若要更正此错误，所有者应执行下面的语句。  
+ 返回的值 -9,223,372,036,854,775,808 是 bigint 数据类型的最小值  。 所有者认识到他原来希望序列从 1 开始，但创建序列时没有指定 START WITH 子句  。 若要更正此错误，所有者应执行下面的语句。  
   
 ```  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
@@ -176,7 +175,7 @@ ALTER SEQUENCE Test.CountBy1
   
  现在，当序列对象达到 9,223,372,036,854,775,807 时，它将循环，循环后的下一个编号将为此数据类型的最小值，即 -9,223,372,036,854,775,808。  
   
- 所有者意识到每次使用 bigint 数据类型时都将占用 8 个字节。 使用 4 个字节的 int 数据类型就足够了。 但是，不能更改序列对象的数据类型。 若要更改为 int 数据类型，所有者必须删除序列对象，并使用正确的数据类型重新创建对象。  
+ 所有者意识到每次使用 bigint 数据类型时都将占用 8 个字节  。 使用 4 个字节的 int 数据类型就足够了  。 但是，不能更改序列对象的数据类型。 若要更改为 int 数据类型，所有者必须删除序列对象，并使用正确的数据类型重新创建对象  。  
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)   

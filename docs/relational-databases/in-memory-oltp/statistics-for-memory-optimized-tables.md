@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23f442dcf798a1d4f1961698958673dac007a37e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b42356331d91683811472b420e656560a77d79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086262"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47857235"
 
 3. 手动重新编译本机编译的存储过程以从更新的统计信息中受益。
 
-*统计信息的一次性脚本：* 对于在较低兼容级别下创建的内存优化表，可以运行以下 Transact-SQL 脚本一次，以更新所有内存优化表的统计信息，并实现在以后自动更新统计信息（假定对数据库启用了 AUTO_UPDATE_STATISTICS）：
+统计信息的一次性脚本  ：对于在较低兼容级别下创建的内存优化表，可以运行以下 Transact-SQL 脚本一次，以更新所有内存优化表的统计信息，并实现在以后自动更新统计信息（假定对数据库启用了 AUTO_UPDATE_STATISTICS）：
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -75,7 +74,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*验证是否已启用自动更新：* 以下脚本将验证在内存优化表中的统计信息是否启用了自动更新。 在运行前面的脚本后，它将在所有统计信息对象的 `1` 列中返回 `auto-update enabled` 。
+验证是否已启用自动更新  ：以下脚本将验证在内存优化表中的统计信息是否启用了自动更新。 在运行前面的脚本后，它将在所有统计信息对象的 `1` 列中返回 `auto-update enabled` 。
 
 ```
 SELECT 

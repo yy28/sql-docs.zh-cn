@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2018
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793643"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329284"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,16 +49,21 @@ ms.locfileid: "67793643"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>参数  
 *datepart*  
-指定所跨边界类型的 startdate 和 enddate 的一部分   。 `DATEDIFF` 不接受用户定义的变量等效项。 此表列出了所有有效的 datepart 参数  。
-  
-|*datepart*|缩写形式|  
-|---|---|
+指定所跨边界类型的 startdate 和 enddate 的一部分   。
+
+> [!NOTE]
+> `DATEDIFF` 不会接受来自用户定义的变量或作为带引号的字符串的 datepart 值  。 
+
+此表列出了所有有效的 datepart 参数名称和缩写  。
+
+|datepart 名称 |datepart 缩写 |  
+|-----------|------------|
 |year |**yy, yyyy**|  
 |quarter |**qq, q**|  
 |month |**mm, m**|  
@@ -72,7 +76,10 @@ DATEDIFF ( datepart , startdate , enddate )
 |millisecond |ms |  
 |microsecond |mcs |  
 |nanosecond |ns |  
-  
+
+> [!NOTE]
+> 每个特定的 datepart 名称及其相应名称的缩写将返回相同的值   。
+
 *startdate*  
 可解析为下列值之一的表达式：
 
@@ -92,8 +99,7 @@ enddate
  **int**  
   
 ## <a name="return-value"></a>返回值  
-  
-每个特定的 datepart 及其相应缩写将返回相同的值   。  
+startdate 与 enddate 之间的 int 差异，以 datepart 设置的 coundary 表示     。
   
 若 bigint 的返回值超出范围（-2,147,483,648 到 +2,147,483,647），`DATEDIFF` 返回错误  。  对于 millisecond，startdate 和 enddate 之间的最大差值为 24 天 20 小时 31 分钟 23.647 秒    。 对于 second，最大差值为 68 年 19 天 3 小时 14 分 7 秒  。
   
@@ -108,7 +114,7 @@ enddate
 如果 startdate 和 enddate 具有不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高，`DATEDIFF` 会将另一个的所缺部分设置为 0   。
   
 ## <a name="datepart-boundaries"></a>datepart 边界  
-以下语句具有相同的 startdate 和 enddate 值   。 这些日期是相邻的，它们在时间上相差一百纳秒（0.0000001 秒）。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界    。 每个语句都返回 1。 如果 startdate 和 enddate 的年份值不同，但它们的日历周值相同，`DATEDIFF` 将对 datepart week 返回 0     。
+以下语句具有相同的 startdate 和 enddate 值   。 这些日期是相邻的，它们在时间上相差一百纳秒（0.0000001 秒）。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界    。 每个语句都返回 1。 
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -123,7 +129,9 @@ SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
+
+如果 startdate 和 enddate 的年份值不同，但它们的日历周值相同，`DATEDIFF` 将对 datepart week 返回 0     。
+
 ## <a name="remarks"></a>Remarks  
 在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
   
@@ -241,6 +249,7 @@ GO
 ### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>I. 查找作为日期部分字符串的 startdate 和 enddate 之间的差异
 
 ```sql
+-- DOES NOT ACCOUNT FOR LEAP YEARS
 DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
 DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
 

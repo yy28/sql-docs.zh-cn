@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999367"
 ---
 # <a name="temporal-table-usage-scenarios"></a>临时表使用方案
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ FROM Employee
 > 如果将 AT TIME ZONE 应用到时间段列，SQL Server 会执行开销可能很大的表/索引扫描。 在查询中要避免这种类型的条件：  
 > \<period column>  AT TIME ZONE '\<your time zone>'  >  {< | > | =, ...} date_condition。  
   
- 另请参见： [在系统版本控制的临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
+ 请参阅：[在系统版本控制时态表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
   
 ## <a name="point-in-time-analysis-time-travel"></a>时间点分析（时程）  
  在时程方案中，用户需要了解整个数据集在一定时段内的变化情况，这与关注点通常在单个记录的更改的数据审核不一样。 有时候，时程包括多个相关的临时表，每个表的变化模式都是独立的，而这也是你需要进行针对性分析的：  

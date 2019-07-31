@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84b1656e15f37dd0c1491d9eb8e385813f579fca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085902"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,21 +36,21 @@ ms.locfileid: "51659397"
   
 |消息 ID|预定义的警报|激发警报的条件|在 msdb..sysreplicationalerts 中输入其他信息|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**复制: 代理成功**|代理成功关闭。|用户帐户控制|  
-|14151|**复制: 代理失败**|代理关闭时出现错误。|用户帐户控制|  
-|14152|**复制：代理重试**|代理在重试某项操作失败后关闭（代理遇到服务器不可用、死锁、连接失败或超时故障之类的错误）。|用户帐户控制|  
+|14150|**复制: 代理成功**|代理成功关闭。|是|  
+|14151|**复制: 代理失败**|代理关闭时出现错误。|是|  
+|14152|**复制：代理重试**|代理在重试某项操作失败后关闭（代理遇到服务器不可用、死锁、连接失败或超时故障之类的错误）。|是|  
 |14157|**复制：已删除过期的订阅**|已删除过期的订阅。|否|  
 |20572|**复制：验证失败后重新初始化了订阅**|响应作业“数据验证失败时重新初始化订阅”成功重新初始化订阅。|否|  
-|20574|**复制：订阅服务器未通过数据验证**|分发代理或合并代理未通过数据验证。|用户帐户控制|  
-|20575|**复制：订阅服务器已通过数据验证**|分发代理或合并代理通过数据验证。|用户帐户控制|  
+|20574|**复制：订阅服务器未通过数据验证**|分发代理或合并代理未通过数据验证。|是|  
+|20575|**复制：订阅服务器已通过数据验证**|分发代理或合并代理通过数据验证。|是|  
 |20578|**复制：代理自定义关闭**|||  
-|22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|用户帐户控制|  
+|22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|是|  
   
  除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅[创建用户定义事件](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
  **配置预定义的复制警报**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[配置预定义的复制警报 (SQL Server Management Studio)](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[配置预定义的复制警报 (SQL Server Management Studio)](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>直接查看应用程序日志  
  若要查看 Windows 应用程序日志，请使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件查看器。 应用程序日志包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息以及计算机上其他许多活动的消息。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误日志不同，新的应用程序日志不是在每次启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时创建（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会话都会在现有应用程序日志中写入新事件）；但是，您可以指定已记录事件的保留时间。 查看 Windows 应用程序日志时，可以筛选特定事件的日志。 有关详细信息，请参阅 Windows 文档。  
@@ -62,7 +61,7 @@ ms.locfileid: "51659397"
 ### <a name="framework-for-automating-responses"></a>用于自动生成响应的框架  
  通常，当发生警报时，能够帮助您理解引起警报的原因以及应采取的适当措施的唯一信息就包含在警报消息中。 分析此信息的过程是一个易出错且费时的过程。 复制在 **sysreplicationalerts** 系统表中提供了有关警报的其他信息，从而使自动生成响应变得更容易，因为系统表中提供的信息已按自定义程序易于使用的格式进行了分析。  
   
- 例如，如果订阅服务器 A 上的 **Sales.SalesOrderHeader** 表中的数据未通过验证， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以激发消息 20574，通知您未通过验证。 您收到的消息是：“订阅服务器‘A’上对发布‘MyPublication’中项目‘SalesOrderHeader’的订阅未通过数据验证”。  
+ 例如，如果订阅服务器 A 上的 **Sales.SalesOrderHeader** 表中的数据未通过验证， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以激发消息 20574，通知您未通过验证。 你收到的消息将是：“订阅服务器 A 上对发布 MyPublication 中项目 SalesOrderHeader 的订阅未通过数据验证”。  
   
  如果基于该消息创建响应，必须手动分析该消息中的订阅服务器名称、项目名称、发布名称和错误。 但是，因为分发代理和合并代理将相同的信息写入了 **sysreplicationalerts** （同时写入的还有代理类型、警报时间、发布数据库、订阅服务器数据库和发布类型等详细信息），所以响应作业可以直接从该表中查询相关的信息。 虽然无法将确切的行与警报的特定实例相关联，但是该表中有一个 **status** 列，可用于跟踪所服务的条目。 此表中的条目会一直保留到历史记录保持期结束。  
   

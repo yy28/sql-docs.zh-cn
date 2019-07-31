@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88a7eb6303509766cbd7ae703135d6a33a4e54fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025081"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>本机编译的 T-SQL 模块支持的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -206,7 +205,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
     - **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，还支持下列内置函数：TRIM、TRANSLATE 和 CONCAT_WS。  
 
--   恒等函数：SCOPE_IDENTITY  
+-   标识函数：SCOPE_IDENTITY  
 
 -   NULL 函数：ISNULL  
 
@@ -220,7 +219,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   系统函数：@@rowcount。 本机编译存储过程中的语句会更新 @@rowcount，因此，可使用本机编译存储过程中的 @@rowcount 来确定受在该本机编译存储过程中执行的上条语句影响的行数。 但是，@@rowcount 在本机编译存储过程执行开始和结束时会重置为 0。  
 
--   安全函数 ︰IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
+-   安全性函数：IS_MEMBER({'group' | 'role'})、IS_ROLEMEMBER ('role' [, 'database_principal'])、IS_SRVROLEMEMBER ('role' [, 'login'])、ORIGINAL_LOGIN()、SESSION_USER、CURRENT_USER、SUSER_ID(['login'])、SUSER_SID(['login'] [, Param2])、SUSER_SNAME([server_user_sid])、SYSTEM_USER、SUSER_NAME、USER、USER_ID(['user'])、USER_NAME([id])、CONTEXT_INFO()。
 
 -   可以嵌套本机模块的执行。
 
@@ -245,7 +244,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
 
- 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：**消息 41398、级别 16、状态 1、程序 *\<procedureName>*、行 *\<lineNumber>*，TOP 运算符最多可返回 8192 行；已请求 *\<number>*。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) 运算符和 [ORDER BY 子句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，则将收到错误消息：消息 41398、级别 16、状态 1、程序 \<procedureName>、行 \<lineNumber>，TOP 运算符最多可返回 8192 行；已请求 \<number>。     
 
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
 
@@ -293,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **对返回行数的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
+ **对返回的行数的限制：** 有两种情形可减少可由 TOP 运算符返回的行数：  
 
 -   在查询中使用 JOIN。  JOIN 对该限制的影响依赖于查询计划。  
 

@@ -14,14 +14,13 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1642706727d27d581e756def11361a7e48587aa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 1ea901179d5011744f1b44609ccb9c19c27c514e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082916"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的全文搜索功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,12 +50,12 @@ ms.locfileid: "57974246"
   
 |不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> &#124 <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124 ~ }    {<simple_term> &#124 <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> “应用程序适配器” 区域）<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> &#124 <prefix_term>}<br /><br /> {<br /><br /> { { NEAR | ~ }    {<simple_term> | <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> “应用程序适配器” 区域）<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG 选项：<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|无。|CREATE FULLTEXT CATLOG IN PATH<br /><br /> 无。<sup>*</sup>|237<br /><br /> 无。*|  
 |DATABASEPROPERTYEX 属性：IsFullTextEnabled|无。|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db 选项：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|无。|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service 操作值：resource_usage 没有函数。|None|sp_fulltext_service @action=resource_usage|200|  
   
- &#42;“SQL Server:Deprecated Features”对象不监视 CREATE FULLTEXT CATLOG ON FILEGROUP 文件组的出现情况。  
+ &#42;“SQL Server:Deprecated Features”对象不监视 CREATE FULLTEXT CATLOG ON FILEGROUP 文件组的出现情况   。  
   
   

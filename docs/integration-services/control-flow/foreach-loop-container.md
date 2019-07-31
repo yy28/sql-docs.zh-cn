@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403051"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316659"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
 
@@ -508,7 +507,19 @@ FolderPath
 指定要枚举其所含文件的文件夹的路径。
 
 **SearchRecursively**  
-指定是否在指定文件夹中以递归方式搜索。  
+指定是否在指定文件夹中以递归方式搜索。
+
+有关服务主体权限配置的说明
+
+Data Lake Storage Gen2 由 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 和 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) 共同决定权限。
+请注意，ACL 使用用于注册应用的服务主体对象 ID (OID) 进行配置，如[此处](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)所述。
+这与用于 RBAC 配置的应用程序（客户端）ID 有所不同。
+通过内置角色或自定义角色向安全主体授予 RBAC 数据权限时，将首先根据请求的授权来评估这些权限。
+如果请求的操作已获得安全主体的 RBAC 分配的授权，则授权会立即得到解决，且不会执行任何其他 ACL 检查。
+或者，如果安全主体没有 RBAC 分配，或请求的操作与分配的权限不匹配，则会执行 ACL 检查来确定是否已授权安全主体执行请求的操作。
+要使枚举器有效，请从根文件系统开始授予至少“执行”权限，并授予目标文件夹的“读取”权限   。
+或者，通过 RBAC 授予至少“存储 Blob 数据读取器”角色  。
+有关详细信息，请参阅[此](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>“变量映射”页 - Foreach 循环编辑器
  可以使用 **“Foreach 循环编辑器”** 对话框的 **“变量映射”** 页，将变量映射到集合值。 循环每次迭代时，都会用集合值更新变量的值。  

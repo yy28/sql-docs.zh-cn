@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118492"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -271,10 +270,14 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000 和 10F
 
 <sup>2</sup>[附属字符](#Supplementary_Characters)的码位范围。
 
-如上所示，选择适当的 Unicode 编码和数据类型可以节省大量存储，具体视使用的字符集而定。 例如，如果使用已启用 UTF-8 的排序规则将包含 ASCII 字符的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着减少 50% 的存储需求。 之所以会有这种减少是因为，`NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 则需要 10 个字节用于相同的 Unicode 字符串表示形式。
+> [!TIP]   
+> 通常认为，在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 或在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符数      。 这是因为在示例 CHAR(10) 列中，可以使用排序规则（如 Latin1_General_100_CI_AI）存储在 0-127 范围内的 10 ASCII 字符，因为此范围内的每个字符仅使用 1 个字节。    
+> 但是，在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，n 以字节数 (0-8,000) 定义的字符串长度，而在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 以字节对 (0-4,000) 定义字符串长度         。 n 不会定义可存储的字符数  。
+
+如上所示，选择适当的 Unicode 编码和数据类型可以节省大量存储或增加当前存储占用，具体视使用的字符集而定。 例如，如果使用启用了 UTF-8 的拉丁语排序规则（如 Latin1_General_100_CI_AI_SC_UTF8），则 `CHAR(10)` 列可存储 10 个字节，并且可保留 0-127 范围内的 10 ASCII 字符，但只有 5 个在 128-2047 范围内的字符和 3 个在 2048-65535 范围内的字符。 相比之下，由于 `NCHAR(10)` 列存储 10 个字节对（20 个字节），因此该列可保留 10 个在 0-65535 范围内的字符。  
 
 选择是要将 UTF-8 编码还是 UTF-16 编码用于数据库或列前，请先考虑要存储的字符串数据的分布情况：
--  如果它主要在 ASCII 范围内（如英语），使用 UTF-8 和 UTF-16 时每个字符分别需要 1 和 2 个字节。 UTF-8 具有存储优势。 
+-  如果它主要在 ASCII 范围 0-127 内（如英语），使用 UTF-8 和 UTF-16 时每个字符分别需要 1 和 2 个字节。 UTF-8 具有存储优势。 如果使用已启用 UTF-8 的排序规则将包含在 0-127 范围内的 ASCII 字符的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着减少 50% 的存储需求。 之所以会有这种减少是因为，`NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 则需要 10 个字节用于相同的 Unicode 字符串表示形式。    
 -  如果超出 ASCII 范围（几乎所有拉丁字母语言以及希腊语、西里尔文、科普特语、亚美尼亚语、希伯来语、阿拉伯语、叙利亚语、它拿语和西非书面文），使用 UTF-8 和 UTF-16 时每个字符都需要 2 个字节。 在这种情况下，可比较的数据类型（例如，char  与 nchar  之间）没有显著的存储差异。
 -  如果它主要是东亚语言（如韩语、中文和日语），使用 UTF-8 和 UTF-16 时每个字符分别需要 3 和 2 个字节。 UTF-16 具有存储优势。 
 -  使用 UTF-8 和 UTF-16 时，介于 010000 和 10FFFF 范围内的字符都需要 4 个字节。 在这种情况下，可比较的数据类型（例如，char  与 nchar  之间）没有存储差异。

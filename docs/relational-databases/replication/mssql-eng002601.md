@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd3e274f1a8616c0d0aa9d54bcdd84a35d6936ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d24cc29fd35694ab69ad006498d3456d3ade68e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111012"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47777865"
   
 -   使用了具有标识列的表，但是没有对该列进行适当的管理。  
   
--   在合并复制过程中，插入系统表 **MSmerge_contents**时也可发生该错误；所引起的错误类似于：不能在具有唯一索引“ucl1SycContents”的对象“MSmerge_contents”中插入重复键的行。  
+-   在合并复制中，在插入系统表 MSmerge_contents 时也可能发生此错误；引发的错误如以下所示  ：不能在具有唯一索引“ucl1SycContents”的对象“MSmerge_contents”中插入重复键的行。  
   
 ## <a name="user-action"></a>用户操作  
  所需操作取决于引发错误的原因：  

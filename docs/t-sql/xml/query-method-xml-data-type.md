@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051257"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-对 xml 数据类型的实例指定 XQuery。 结果为 xml 类型。 该方法返回非类型化的 XML 实例。  
+对 xml 数据类型的实例指定 XQuery  。 结果为 xml 类型  。 该方法返回非类型化的 XML 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +38,10 @@ XQuery
 字符串，在 XML 实例中查询 XML 节点（如元素和属性）的 XQuery 表达式。  
   
 ## <a name="examples"></a>示例  
-本节提供使用 xml 数据类型的 query() 方法的示例。  
+本节提供使用 xml 数据类型的 query() 方法的示例  。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 对 xml 类型的变量使用 query() 方法  
-以下示例声明 xml 类型的变量 @myDoc 并将 XML 实例分配给它。 然后使用 query() 方法对文档指定 XQuery。  
+以下示例声明 xml 类型的变量 @myDoc 并将 XML 实例分配给它   。 然后使用 query() 方法对文档指定 XQuery  。  
   
 该查询检索 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
@@ -69,7 +68,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. 对 XML 类型列使用 query() 方法  
-在以下示例中，使用 query() 方法对 AdventureWorks 数据库中 xml 类型的 CatalogDescription 列指定 XQuery：  
+在以下示例中，使用 query() 方法对 AdventureWorks 数据库中 xml 类型的 CatalogDescription 列指定 XQuery     ：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -85,11 +84,11 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 请注意上述查询中的以下项：  
   
--   CatalogDescription 列是类型化 xml 列，这意味着它有关联的架构集合。 在 [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) 中，namespace 关键字定义稍后用于查询主体的前缀。  
+-   CatalogDescription 列是类型化 xml  列，这意味着它有关联的架构集合。 在 [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) 中，namespace  关键字定义稍后用于查询主体的前缀。  
   
--   query() 方法构造 XML，即包含 ProductModelID 属性的 <`Product`> 元素，其中 ProductModelID 属性值是从数据库中检索的。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
+-   query() 方法构造 XML，即包含 ProductModelID 属性的 <`Product`> 元素，其中 ProductModelID 属性值是从数据库中检索的    。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
   
--   WHERE 子句中的 [exist() 方法（XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)仅查找在 XML 中包含 <`Warranty`> 元素的行。 同样，namespace 关键字定义两个命名空间前缀。  
+-   WHERE 子句中的 [exist() 方法（XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)仅查找在 XML 中包含 <`Warranty`> 元素的行。 同样，namespace  关键字定义两个命名空间前缀。  
   
 以下输出显示了部分结果：  
   

@@ -22,13 +22,13 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.custom: ''
-ms.date: 06/12/2019
-ms.openlocfilehash: 0841379b0b64ebe81e4a23f76b21f6cf6abe0ec3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 07/26/2019
+ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265162"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495430"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -40,51 +40,61 @@ SQL Server Management Studio (SSMS) 是一种集成环境，用于管理从 SQL 
 
 SSMS 是免费的！
 
-## <a name="download-ssms-181"></a>下载 SSMS 18.1
+## <a name="download-ssms-182"></a>下载 SSMS 18.2
 
-SSMS 18.1 通用版本 (GA) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio！
+SSMS 18.2 正式发布 (GA) 版本现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio  ！
 
-**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)**
+**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果安装了 SSMS 18.0 (GA)，请安装 SSMS 18.1 将其升级到 18.1。 如果安装了较早的 SSMS 18.0 预览版，请在安装 SSMS 18.1 之前将其卸载。
+SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果安装了 SSMS 18.2 (GA)，请安装 SSMS 18.2 将其升级到 18.2。 如果安装了较早的 SSMS 18.x 预览版，请在安装 SSMS 18.2 之前将其卸载  。
 
 **版本信息**
 
-- 版本号：18.1<br>
-- 生成号：15.0.18131.0<br>
-- 发布日期：2019 年 6 月 11 日
+- 版本号：18.2  
+- 生成号：15.0.18142.0  
+- 发布日期：2019 年 7 月 25 日  
 
-如果你有意见或建议，或想报告问题，最好是通过 [UserVoice](https://aka.ms/sqlfeedback) 与 SSMS 团队取得联系。
+如果你有任何意见或建议，或想报告问题，最好是通过 [UserVoice](https://aka.ms/sqlfeedback) 与 SSMS 团队联系。
 
 SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与以前的版本并行安装，因此，这两个版本均可供使用。
 
-如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18
+如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18 
 
-## <a name="available-languages-ssms-181"></a>可用语言 (SSMS 18.1)
+## <a name="available-languages-ssms-182"></a>可用语言 (SSMS 18.2)
 
 此版本的 SSMS 可以安装在以下语言中：
 
-SQL Server Management Studio 18.1：<br>
-[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
+SQL Server Management Studio 18.2：  
+[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
 
-## <a name="new-in-this-release-ssms-181"></a>此版本 (SSMS 18.1) 中的新增功能
+## <a name="new-in-this-release-ssms-182"></a>此版本 (SSMS 18.2) 中的新增功能
 
-- **数据库关系图** - SSMS 中添加回了数据库关系图。 有关详细信息，请参阅[数据库关系图](https://feedback.azure.com/forums/908035/suggestions/37507828)。
-- **SSBDIAGNOSE.EXE** - SQL Server 诊断命令行工具已被添加回 SSMS 包。
-- **Integration Services (SSIS)** - 支持 Azure 中的计划 SSIS 包，该包位于 Azure 中的 SSIS 目录或系统文件中。 启动新建计划对话框中有三个项，新计划... 右键单击 Azure 中 SSIS 目录中的 SSIS 包时显示的菜单项，“在 Azure 中安排执行 SSIS 包”菜单项，位于“工具”菜单项下的“迁移到 Migrate”菜单项，以及右键单击 Azure SQL 数据库托管实例中的 SQL Server 代理下的作业文件夹时显示的“在 Azure 中安排执行 SSIS”。
+|  新项  |  详细信息  |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 始终加密 | 更新了 Enclave Provider 以支持 Azure 证明。 |
+| Intellisense/编辑器 | 添加了对数据分类的支持  |
+| OPTIMIZE_FOR_SEQUENTIAL_KEY | SSMS 索引对话框 - 添加了新索引选项 OPTIMIZE_FOR_SEQUENTIAL_KEY |
+| OPTIMIZE_FOR_SEQUENTIAL_KEY | 添加了 IntelliSense 支持 |
+| 查询执行或结果 | 在消息中添加了一个“完成时间”，以跟踪给定查询执行完毕的时间。 |
+| 查询执行或结果  | 允许显示更多数据（结果转换为文本）以及将其存储在单元中（结果转换为网格）。 对于这两种情况，SSMS 当前最多支持 2 百万个字符（之前分别为 25.6 万和 6.4 万）。 这还解决了用户无法从网格单元中获取超过 43680 个字符的问题。 |
+| 显示计划 | 在启用了内联标量 UDF 特性 (ContainsInlineScalarTsqlUdfs) 的情况下，在 QueryPlan 中添加了新的属性。 |
+| SMO | 添加了对“功能限制”*的支持。 有关功能本身的详细信息，请参阅[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 |
+| SMO  | 评估扩展。 请参阅<we need a link to something> |
+| Integration Services (SSIS) | Azure 中 SSIS 包计划程序的性能优化 |
+|  |  |
 
 有关此版本中新增功能的详细信息，请参阅 [SSMS 发行说明](release-notes-ssms.md)。
 
-## <a name="supported-sql-offerings-ssms-181"></a>受支持的 SQL 产品/服务 (SSMS 18.1)
+## <a name="supported-sql-offerings-ssms-182"></a>受支持的 SQL 产品/服务 (SSMS 18.2)
 
 * 此版本的 SSMS 适用于所有[受支持 SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，并且在最大程度上支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。
 * 此外，SSMS 18.x 可与 SSMS 17.x、SSMS 16.x 或 SQL Server 2014 SSMS 及早期版本并行安装。
 * SQL Server Integration Services (SSIS) - SSMS 版本 17.x 或更高版本不支持连接到旧版 SQL Server Integration Services 服务。 要连接到早期版本的 Integration Services，请使用与 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 连接到旧版 SQL Server 2016 Integration Services 服务。 可以在同一台计算机上并行安装 SSMS 17.x 和 SSMS 16.x。 由于 SQL Server 2012 的发布，建议使用 SSIS 目录数据库 (SSISDB) 来存储、管理、运行和监视 Integration Services 包。 有关详细信息，请参阅 [SSIS 目录](../integration-services/catalog/ssis-catalog.md)。
 
-## <a name="supported-operating-systems-ssms-181"></a>受支持的操作系统 (SSMS 18.1)
+## <a name="supported-operating-systems-ssms-182"></a>受支持的操作系统 (SSMS 18.2)
 
 与最新可用的服务包一起使用时，此版本的 SSMS 支持以下 64 位平台：
 
@@ -101,7 +111,7 @@ SQL Server Management Studio 18.1：<br>
 > [!NOTE]
 > SSMS 仅在 Windows 上运行。 如果需要在 Windows 以外的平台上运行的工具，请查看 Azure Data Studio。 Azure Data Studio 是一个全新的跨平台工具，可在 macOS、Linux 以及 Windows 上运行。 有关详细信息，请参阅 [Azure Data Studio](../azure-data-studio/what-is.md)。
 
-## <a name="release-notes-ssms-181"></a>发行说明 (SSMS 18.1)
+## <a name="release-notes-ssms-182"></a>发行说明 (SSMS 18.2)
 
 此版本存在一些[已知问题](release-notes-ssms.md#known-issues-181)。
 

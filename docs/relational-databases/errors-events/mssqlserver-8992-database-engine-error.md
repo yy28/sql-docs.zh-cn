@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118474"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51674006"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC3_CHECK_CATALOG|  
-|消息正文|请检查目录消息 ERROR，级别 LEVEL，状态 STATE: MESSAGE。|  
+|消息正文|请检查目录消息 ERROR，级别 LEVEL，状态 STATE:MESSAGE。|  
   
 ## <a name="explanation"></a>解释  
 DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定对象的系统元数据表中发现了不一致。 这就是说，已记录的对象 ID 与错误消息中指定的对象之间存在不一致。  

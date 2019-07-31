@@ -1,5 +1,5 @@
 ---
-title: 示例脱机还原：主文件组和 1 个文件组（完整恢复模式）| Microsoft Docs
+title: 脱机还原示例：主文件组和 1 个文件组（完整恢复模式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 29fb82d5be1cd97d18cc9cbb76da6b0839e5023d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 390db80fc88e3d115bad292e5bf0bf1a4a921639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089794"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>示例：主文件组和一个其他文件组的脱机还原（完整恢复模式）
+# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>例如：主文件组和一个其他文件组的脱机还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题仅与完整恢复模式下包含多个文件组的数据库有关。  

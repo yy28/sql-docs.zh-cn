@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 发行说明 | Microsoft Docs
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7394fcf4d3a6fcc282e7ea0c09af01aada643954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8e06fd47a8922e1b0ed494ce8ae47fc334ff8e6
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136322"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495487"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 预览版发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "68136322"
 本文介绍 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 社区技术预览 (CTP) 版本的限制和已知问题。 若要了解相关信息，请参阅：
 - [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name="ctp-31"></a>CTP 3.1
+## <a name="ctp-32"></a>CTP 3.2
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公开版本。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公开版本。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 仅以评估版形式提供。 不提供任何其他版本。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 仅以评估版形式提供。 不提供任何其他版本。
 
 有关 CTP 版本的支持和许可的完整详情可在安装介质的 `license_Eval.rtf` 中查看。
 
@@ -55,23 +55,22 @@ ms.locfileid: "68136322"
 ## <a name = "release-notes"></a>已排除的支持功能
 
 - **问题及其对客户的影响**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 不包括对以下组件、功能和方案的支持：
-  - SQL Sever Analysis Services
+  - SQL Server Analysis Services
   - SQL Server Reporting Services
   - Kubernetes 上的 AlwaysOn 可用性组
   - 加速数据库恢复
-  - 内存优化 tempdb 元数据
 
 - **解决方法**：无。 排除适用于所有客户，包括 SQL 早期采用者计划的参与者。
 
-- **适用对象**：CTP 3.0
+- **适用对象**：所有 CTP 版本
 
 ## <a name="updated-compiler"></a>更新后的编译器
 
-- **问题及其对客户的影响**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是通过更新后的编译器构建的。 CTP 2.1 具有一项已知问题，即浮点和其他转换方案的结果可能因更新后的编译器而返回与先前版本不同的值。 CTP 2.2 内附可确保受影响的方案与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 先前版本返回相同结果的任务。 自 CTP 3.1 版本起，已解决所有历史问题。 请将与 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] 比较得出的所有结果异常立即报告给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](http://aka.ms/sqlfeedback)。
+- **问题及其对客户的影响**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是通过更新后的编译器构建的。 CTP 2.1 具有一项已知问题，即浮点和其他转换方案的结果可能因更新后的编译器而返回与先前版本不同的值。 CTP 2.2 内附可确保受影响的方案与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 先前版本返回相同结果的任务。 自 CTP 3.2 版本起，已解决所有历史问题。 请将与 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] 比较得出的所有结果异常立即报告给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](http://aka.ms/sqlfeedback)。
 
 - **解决方法**：N/A
 
-- **适用对象**：SQL Server 2019 CTP 3.1、CTP 3.0, CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1
+- **适用对象**：所有 CTP 版本
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>安装向导可能会在 EULA 页面之间等待
 
@@ -94,7 +93,7 @@ ms.locfileid: "68136322"
  
 - **解决方法**：没有针对 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 的解决方法。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2、CTP 3.1、CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
@@ -102,7 +101,7 @@ ms.locfileid: "68136322"
 
 - **解决方法**：若要启用富计算，请运行 `DBCC traceon(127,-1)`。 有关详细信息，请参阅[启用富计算](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2、CTP 3.1
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>SQL Server 配置管理器可能无法启动
 

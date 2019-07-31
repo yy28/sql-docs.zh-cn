@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -18,22 +18,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6939836ca547027f605049f7a26e8d0901f23d51
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140802"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329298"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 从指定的字节流或文件路径上传 R、Python 或 Java 包文件至数据库。 此语句充当一种通用机制，可供数据库管理员上传任何新的外部语言运行时和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目。 
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 3.0 中支持 Windows 和 Linux 平台上的 R、Python 和外部语言。
+> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 2.4 及更高版本支持 Windows 和 Linux 平台上的 R、Python 和外部语言。
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+> [!NOTE]
+> 在 Azure SQL 数据库中，可以使用 sqlmlutils 来安装库  。 有关详细信息，请参阅[使用 sqlmlutils 添加包](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)。
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 语法
@@ -106,6 +113,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Azure SQL 数据库的语法
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>参数
 
 **library_name**
@@ -122,6 +152,7 @@ WITH ( LANGUAGE = 'R' )
 
 当用户 **RUser1** 执行外部脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径  。
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 指定特定平台的包的内容。 每个平台仅支持一个文件项目。
@@ -131,6 +162,7 @@ WITH ( LANGUAGE = 'R' )
 尝试访问 <client_assembly_specifier> 中指定的程序集时，SQL Server 会模拟当前 Windows 登录的安全上下文  。 如果 <client_assembly_specifier> 指定了网络位置（UNC 路径），则由于委托限制，当前登录名的模拟将不应用于网络位置  。 在这种情况下，将使用 SQL Server 服务帐户的安全上下文进行访问。 有关详细信息，请参阅[凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
 
 还可以为文件指定一个 OS 平台。 针对特定语言或运行时，每个 OS 平台只允许一个文件项目或内容。
+::: moniker-end
 
 **library_bits**
 
@@ -141,26 +173,42 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。 
-
+为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。
 在 SQL Server 2017 中，Windows 是唯一受支持的平台。
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
 为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。
-
 在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+指定包的语言。
+SQL Server 2017 中支持 R。
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+指定包的语言。
+Azure SQL 数据库中支持 R。
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-指定包的语言。 值可以是 `R`、`Python` 或[创建的外部语言](create-external-language-transact-sql.md)的名称。
+指定包的语言。 该值可以是 `R`、`Python` 或外部语言的名称（请参阅[创建外部语言](create-external-language-transact-sql.md)）。
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 在 SQL Server 2017 中，仅支持 Windows 平台。
+对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 
+在 SQL Server 2017 中，仅支持 Windows 平台。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -193,7 +241,8 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 ## <a name="examples"></a>示例
 
-### <a name="a-add-an-external-library-to-a-database"></a>A. 将外部库添加到数据库  
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="add-an-external-library-to-a-database"></a>将外部库添加到数据库  
 
 下面的示例将一个名为 `customPackage` 的外部库添加到数据库。
 
@@ -209,12 +258,13 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 SQL Server 2019 中的 Python 语言，可通过将 `'R'` 替换为 `'Python'` 使用示例。
 ::: moniker-end
 
-### <a name="b-installing-packages-with-dependencies"></a>B. 安装具有依赖项的包
+### <a name="installing-packages-with-dependencies"></a>安装具有依赖项的包
 
 如果想要安装的包有任何依赖项，务必要分析第一级和第二级依赖项，并在尝试安装目标包之前，确保所需的所有包都可用  。
 
@@ -228,6 +278,8 @@ EXEC sp_execute_external_script
 在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2  可能需要超过 30 个包，而这些包可能还需要服务器上没有的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
 
 由于仅通过查看程序包清单可能很难确定所有依赖项，因此建议使用 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 等包，以标识成功完成安装可能需要的所有包。
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 + 上传目标包及其依赖项。 所有文件都必须位于服务器可访问的文件夹中。
 
@@ -262,17 +314,18 @@ EXEC sp_execute_external_script
     library(packageA)
     '
     ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 对于 SQL Server 2019 中的 Python 语言，可通过将 `'R'` 替换为 `'Python'` 使用示例。
 ::: moniker-end
 
-### <a name="c-create-a-library-from-a-byte-stream"></a>C. 从字节流创建库
+### <a name="create-a-library-from-a-byte-stream"></a>从字节流创建库
 
 如果无法将包文件保存到服务器上的某个位置，可以在变量中传递包内容。 下面的示例通过将位传递为十六进制文本来创建库。
 
 ```SQL
-CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -282,14 +335,14 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 > [!NOTE]
 > 此代码示例只用于展示语法；为了提高可读性，`CONTENT =` 中的二进制值已遭截断，无法创建能够正常运行的库。 二进制变量的实际内容要长得多。
 
-### <a name="d-change-an-existing-package-library"></a>D. 更改现有包库
+### <a name="change-an-existing-package-library"></a>更改现有包库
 
 `ALTER EXTERNAL LIBRARY` DDL 语句可用于向新库添加内容或更改现有库的内容。 修改现有库需要 `ALTER ANY EXTERNAL LIBRARY` 权限。
 
 有关详细信息，请参阅 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-### <a name="e-add-a-java-jar-file-to-a-database"></a>E. 向数据库添加 Java .jar 文件  
+### <a name="add-a-java-jar-file-to-a-database"></a>向数据库添加 Java .jar 文件  
 
 下面的示例将一个名为 `customJar` 的外部 jar 文件添加到数据库。
 
@@ -309,7 +362,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((column1 int))
 ```
 
-### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>F. 为 Windows 和 Linux 添加外部包
+### <a name="add-an-external-package-for-both-windows-and-linux"></a>为 Windows 和 Linux 添加外部包
 
 最多可以指定两个 `<file_spec>`，一个用于 Windows，另一个用于 Linux。
 

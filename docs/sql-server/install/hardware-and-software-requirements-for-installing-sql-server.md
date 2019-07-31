@@ -1,7 +1,7 @@
 ---
-title: 安装 SQL Server 2016 的硬件和软件要求 | Microsoft Docs
+title: 安装 SQL Server 的硬件和软件要求 | Microsoft Docs
 ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,27 +44,26 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c578a0b022e484c24c1ea035ce5e8561dce79d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54f2bdb3d844a8e5aab947f19f7905173b2cb04f
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019873"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419568"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文列出了在 Windows 操作系统上安装和运行 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 至少需要满足的硬件和软件要求。 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 现已开始支持 Linux 上的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)]。 有关信息，请参阅 [Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的硬件和软件要求](../../linux/sql-server-linux-setup.md#system)。 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 引入了对于 Linux 版 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 的支持。 有关信息，请参阅 [Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的硬件和软件要求](../../linux/sql-server-linux-setup.md#system)。 
 
-> 本文适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 
   
 **进行试用：**  
   
 -   从 [**评估中心**下载 SQL Server。](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
   
--   加速已安装有 [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虚拟机。  
+-   加速已安装有 [SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虚拟机  。  
   
 **以下注意事项适用于所有版本：**  
   
@@ -89,7 +88,7 @@ ms.locfileid: "68019873"
   
 |组件|要求|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序） [中手动安装](https://support.microsoft.com/kb/3045560)。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] 需要安装 .NET Framework 4.6.2。 可从[下载中心](https://www.microsoft.com/download/details.aspx?id=53344)获取<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]4.6 之前， [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 和 [需要](https://support.microsoft.com/kb/2919355) KB2919355 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更高版本需要 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 才能运行数据库引擎、Master Data Services 或复制。 SQL Server 安装程序自动安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 还可以从 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 适用于 Windows 的 Microsoft .NET Framework 4.6（Web 安装程序） [中手动安装](https://support.microsoft.com/kb/3045560)。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] 需要安装 .NET Framework 4.6.2。 可从[下载中心](https://www.microsoft.com/download/details.aspx?id=53344)获取<br/><br/> 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的详细信息、建议和指南，请参阅 [面向开发人员的 .NET Framework 部署指南](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>在安装[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]4.6 之前， [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 和 [需要](https://support.microsoft.com/kb/2919355) KB2919355 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。|  
 |网络软件|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支持的操作系统具有内置网络软件。 独立安装项的命名实例和默认实例支持以下网络协议：共享内存、命名管道、TCP/IP 和 VIA。<br/><br/> **注意：** 故障转移群集不支持 VIA 协议。 与 SQL Server 实例在同一故障转移群集节点上运行的客户端或应用程序可以使用 Shared Memory 协议，通过其本地管道地址连接到 SQL Server。 不过，这种连接无法感知群集，因此会在实例故障转移后无法连接。 因此，不建议使用这种连接，只能用于极个别的方案。<br/><br/> **重要提示：** 不推荐使用 VIA 协议。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 有关网络协议和网络库的详细信息，请参阅 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)。|  
 |硬盘|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 要求最少 6 GB 的可用硬盘空间。<br/><br/> 磁盘空间要求将随所安装的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 组件不同而发生变化。 有关详细信息，请参阅本文后面部分的[硬盘空间要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 。 有关支持的数据文件存储类型的信息，请参阅 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
 |驱动器|从磁盘进行安装时需要相应的 DVD 驱动器。|  
@@ -120,13 +119,24 @@ ms.locfileid: "68019873"
   
  WOW64（Windows 64 位上的 Windows 32 位）是 Windows 64 位版本中的一项功能，使用该功能可以在 32 位模式下本机运行 32 位应用程序。 尽管基础操作系统是 64 位操作系统，但应用程序以 32 位模式工作。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 安装不支持 WOW64。 但是，WOW64 支持管理工具。  
 
- 
 
 **Server Core 支持：**
 
- Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016 和 Windows Server 2019 的 Server Core 中现在支持安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 
-以下 Windows Server 版本支持在 Server Core 模式上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ：
+以下 Windows Server 版本支持在 Server Core 模式上安装 SQL Server 2019：
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+   | &nbsp; | &nbsp; |
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+以下 Windows Server 版本支持在 Server Core 模式上安装 SQL Server 2016 和 2017：
 
 |                              |                                |
 | :------------------------    | :------------------------------|
@@ -137,40 +147,48 @@ ms.locfileid: "68019873"
 | Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
 | Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
    | &nbsp; | &nbsp; |
+::: moniker-end
 
-有关在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的详细信息，请参阅 [在 Server Core 上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
 
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>32 位客户端操作系统支持的功能  
  Windows 客户端操作系统，例如 Windows 10 和 Windows 8.1 可作为 32 位或 64 位体系结构。   64 位客户端操作系统支持所有 SQL Server 功能。 在支持的 32 位客户端操作系统上，Microsoft 支持以下功能︰  
   
--   数据质量客户端  
-  
--   客户端工具连接  
-  
--   Integration Services  
-  
--   客户端工具向后兼容性  
-  
--   客户端工具 SDK  
-  
--   文档组件  
-  
--   Distributed Replay 组件  
-  
--   Distributed Replay 控制器  
-  
--   Distributed Replay 客户端  
-  
--   SQL 客户端连接 SDK  
+-   数据质量客户端
+-   客户端工具连接
+-   Integration Services
+-   客户端工具向后兼容性
+-   客户端工具 SDK
+-   文档组件
+-   Distributed Replay 组件
+-   Distributed Replay 控制器
+-   Distributed Replay 客户端
+-   SQL 客户端连接 SDK
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 和更高版本的服务器操作系统不可用作 32 位体系结构。 所有支持的服务器操作系统只可用作 64 位体系结构。 64 位服务器操作系统支持所有功能。  
   
 ###  <a name="TOP_Principal"></a> OS 兼容性   
 
- 下表显示了哪些版本的 SQL Server 与哪些版本的 Windows 兼容：  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+下表显示了与各版本的 Windows 兼容的 SQL Server 2019 版本：  
   
 
+| SQL Server 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
+| Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
+| Windows Server 2019 Essentials    |    是     |    是    |    是   | 是 |   是   |
+| Windows Server 2016 Datacenter    |    是     |    是    |    是   | 是 |   是   |
+| Windows Server 2016 Standard      |    是     |    是    |    是   | 是 |   是   |
+| Windows Server 2016 Essentials    |    是     |    是    |    是   | 是 |   是   |
+| &nbsp; | &nbsp; |
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+下表显示了与各版本的 Windows 兼容的 SQL Server 2016 和 2017 版本：  
+  
 | SQL Server 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
@@ -188,22 +206,22 @@ ms.locfileid: "68019873"
 | Windows Server 2012 Essentials    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2012 Foundation    |    是     |    是    |    是   | 是 |   是   |
 | Windows 10 IoT 企业版         |    否      |    是    |    是   | 否  |   是   |
-| Windows 10 企业版             |    否      |    是    |    是   | 否  |   是   |
+| Windows 10 Enterprise             |    否      |    是    |    是   | 否  |   是   |
 | Windows 10 专业版           |    否      |    是    |    是   | 否  |   是   |
 | Windows 10 家庭版                   |    否      |    是    |    是   | 否  |   是   |
-| Windows 8.1 企业版            |    否      |    是    |    是   | 否  |   是   |
-| Windows 8.1 专业版                   |    否      |    是    |    是   | 否  |   是   |
-| Windows 8.1 企业版            |    否      |    是    |    是   | 否  |   是   |
+| Windows 8.1 Enterprise            |    否      |    是    |    是   | 否  |   是   |
+| Windows 8.1 Pro                   |    否      |    是    |    是   | 否  |   是   |
+| Windows 8.1 Enterprise            |    否      |    是    |    是   | 否  |   是   |
 | Windows 8 专业版                     |    否      |    是    |    是   | 否  |   是   |
 | Windows 8                         |    否      |    是    |    是   | 否  |   是   | 
-| &nbsp; | &nbsp; |
-
 
 > [!NOTE]  
 > 此部分中所述操作系统支持的例外情况是，以下适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更低版本的商业智能功能，可以在 Windows Server 2008 R2 SP1 或更高版本上安装它们：  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   用于 SharePoint 产品的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序  
+::: moniker-end
+
 
   
 ##  <a name="CrossLanguageSupport"></a> 跨语言支持  

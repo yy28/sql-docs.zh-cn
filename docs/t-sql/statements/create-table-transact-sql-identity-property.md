@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938931"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY（属性）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -47,10 +46,10 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>参数  
- seed  
+ seed   
  加载到表中的第一个行所使用的值。  
   
- increment  
+ increment   
  与前一个加载的行的标识值相加的增量值。  
   
  必须同时指定种子和增量，或者二者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
@@ -64,7 +63,7 @@ IDENTITY [ (seed , increment) ]
   
  列上的标识属性不确保：  
   
--   **值的唯一性** - 唯一性必须通过“PRIMARY KEY”或“UNIQUE”约束或者通过“UNIQUE”索引来实现。  
+-   **值的唯一性** - 唯一性必须通过“PRIMARY KEY”或“UNIQUE”约束或者通过“UNIQUE”索引来实现    。  
   
 -   **事务内的连续值** - 不保证插入多个行的事务能够为这些行获得连续的值，因为表上可能发生其他并发插入操作。 如果值必须是连续的，事务应针对表使用排他锁或使用 **SERIALIZABLE** 隔离级别。  
   
@@ -114,7 +113,7 @@ VALUES
  以下示例显示了删除了数据时，用于在标识值中查找间隔的常规语法。  
   
 > [!NOTE]  
->  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本的第一部分仅供阐释之用。 [!INCLUDE[tsql](../../includes/tsql-md.md)]您可以运行以下面的注释开头的 `-- Create the img table` 脚本：  
+>  以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本的第一部分仅供阐释之用。 您可以运行以下面的注释开头的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本：`-- Create the img table`  
   
 ```  
 -- Here is the generic syntax for finding identity value gaps in data.  

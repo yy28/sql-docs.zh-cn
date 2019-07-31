@@ -12,14 +12,13 @@ keywords:
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65368343"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290348"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,18 +65,18 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017（独立安装程序）
 
-[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.1)](https://go.microsoft.com/fwlink/?linkid=2086373) 
+[![download](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.2)](https://go.microsoft.com/fwlink/?linkid=2095463) 
 
 > [!IMPORTANT]
-> - 安装 SSDT for Visual Studio 2017 (15.9.1) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例   。
-> - 请将 SSDT for Visual Studio 2017 (15.8.0) 或先前版本用于设计包含 Teradata 源/目标的 SSIS 包。 15\.8.0 版之后的 SSDT for Visual Studio 2017 版本无法设计包含 Attunity Teradata 源/目标的 SSIS 包。
+> - 安装 SSDT for Visual Studio 2017 (15.9.2) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例   。
+> - 请将 SSDT for Visual Studio 2017 (15.8.0) 或先前版本用于设计包含 Teradata 源/目标的 SSIS 包。 15.8.0 版之后的 SSDT for Visual Studio 2017 版本无法设计包含 Attunity Teradata 源/目标的 SSIS 包。
 
 
 **版本信息**  
   
-版本号：15.9.1  
-生成号：14.0.16191.0  
-发布日期：2019 年 4 月 27 日  
+版本号：15.9.2  
+生成号：14.0.16194.0  
+发布日期：2019 年 7 月 17 日  
 
 有关更改的完整列表，请参阅 [SQL Server Data Tools (SSDT) 发行说明](release-notes-ssdt.md)。
 
@@ -87,17 +86,17 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 此版本的 SSDT for VS 2017 可安装以下语言  ：
 
-- [简体中文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
-- [繁体中文]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)
-- [英语（美国）]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x409)
-- [法语]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40c)
-- [德语]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x407)
-- [意大利语]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x410)
-- [日语]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x411)
-- [朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x412)
-- [葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x416)
-- [俄语]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x419)
-- [西班牙语]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40a)
+- [简体中文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
+- [繁体中文]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
+- [英语（美国）]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
+- [法语]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
+- [德语]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
+- [意大利语]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
+- [日语]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
+- [朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
+- [葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
+- [俄语]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
+- [西班牙语]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
 
 ## <a name="offline-install"></a>脱机安装
 

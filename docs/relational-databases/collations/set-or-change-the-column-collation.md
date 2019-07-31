@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf856f9ae013dd2f19cb72b04c0c2296d0185511
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d49dbce19b0d2c7ce1fa1337eb6cbdc58da08f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140864"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- 由于 **tempdb** 使用默认的服务器排序规则，而 `TestPermTab.Col1` 使用其他排序规则，因此 SQL Server 会返回如下错误：“无法解决等于运算中 'Latin1_General_CI_AS_KS_WS' 与 'Estonian_CS_AS' 之间的排序规则冲突。”  
+ 由于 tempdb 使用默认服务器排序规则，而 `TestPermTab.Col1` 使用其他排序规则，因此 SQL Server 返回此错误  ：“在等于操作时，无法解决 Latin1_General_CI_AS_KS_WS 和 Estonian_CS_AS 之间的排序规则冲突。”  
   
  为防止出现此错误，可以使用下列方法之一：  
   

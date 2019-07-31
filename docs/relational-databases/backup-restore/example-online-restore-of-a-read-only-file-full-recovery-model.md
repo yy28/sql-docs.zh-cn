@@ -1,5 +1,5 @@
 ---
-title: 示例：联机还原只读文件（完整恢复模式）| Microsoft Docs
+title: 例如：只读文件的联机还原（完整恢复模式）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf021190413a8963a7e6ef885a82322745e32fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a446bcd7c90c35176bd9853bec3780386e98310f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089789"
 ---
-# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>示例：联机还原只读文件（完整恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>例如：只读文件的联机还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  

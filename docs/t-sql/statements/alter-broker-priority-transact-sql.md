@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065997"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,59 +51,59 @@ FOR CONVERSATION
 ```  
   
 ## <a name="arguments"></a>参数  
- ConversationPriorityName  
+ ConversationPriorityName   
  指定要更改的会话优先级的名称。 名称必须引用当前数据库中的一个会话优先级。  
   
  SET  
- 指定用于确定会话优先级是否应用于会话的条件。 SET 是必需的并且必须至少包含一个条件：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。  
+ 指定用于确定会话优先级是否应用于会话的条件。 SET 是必需的，且必须包含至少一个条件：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。  
   
- CONTRACT_NAME = {ContractName | ANY}  
- 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称。  
+ CONTRACT_NAME = {ContractName | ANY}    
+ 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称  。  
   
- ContractName  
- 指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话。  
+ ContractName   
+ 指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话  。  
   
  ANY  
  指定此会话优先级可应用于任何会话，而不考虑它使用的约定如何。  
   
  如果未指定 CONTRACT_NAME，则会话优先级的约定属性不会更改。  
   
- LOCAL_SERVICE_NAME = {LocalServiceName | ANY}  
+ LOCAL_SERVICE_NAME = {LocalServiceName | ANY}    
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- LocalServiceName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的服务的名称。  
+ LocalServiceName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的服务的名称  。  
   
- LocalServiceName  
+ LocalServiceName   
  指定此会话优先级可以应用于以下各项：  
   
--   其发起方服务名称与 LocalServiceName 匹配的任何发起方会话端点。  
+-   其发起方服务名称与 LocalServiceName 匹配的任何发起方会话端点  。  
   
--   其目标服务名称与 LocalServiceName 匹配的任何目标会话端点。  
+-   其目标服务名称与 LocalServiceName 匹配的任何目标会话端点  。  
   
  ANY  
  -   指定此会话优先级可应用于任何会话端点，而不管端点使用的本地服务的名称如何。  
   
  如果未指定 LOCAL_SERVICE_NAME，则会话优先级的本地服务属性不会更改。  
   
- REMOTE_SERVICE_NAME = {'RemoteServiceName' | ANY}  
+ REMOTE_SERVICE_NAME = {'RemoteServiceName' | ANY}    
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- RemoteServiceName 是 nvarchar(256) 类型的文本。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 RemoteServiceName 字符串匹配。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
+ RemoteServiceName 是 nvarchar(256) 类型的文本   。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 RemoteServiceName 字符串匹配  。 这种比较区分大小写，并且不考虑当前的排序规则。 目标服务可以位于当前[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中，也可以位于远程[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  
   
- 'RemoteServiceName'  
+ 'RemoteServiceName  '  
  指定将会话优先级分配给以下各项：  
   
--   其关联目标服务名称与 RemoteServiceName 匹配的任何发起方会话端点。  
+-   其关联目标服务名称与 RemoteServiceName 匹配的任何发起方会话端点  。  
   
--   其关联发起方服务名称与 RemoteServiceName 匹配的任何目标会话端点。  
+-   其关联发起方服务名称与 RemoteServiceName 匹配的任何目标会话端点  。  
   
  ANY  
  指定会话优先级应用于任何会话端点，而不管与端点关联的远程服务的名称如何。  
   
  如果未指定 REMOTE_SERVICE_NAME，则会话优先级的远程服务属性不会更改。  
   
- PRIORITY_LEVEL = { PriorityValue | DEFAULT }  
- 指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本。  
+ PRIORITY_LEVEL = { PriorityValue | DEFAULT }    
+ 指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本  。  
   
  如果未指定 PRIORITY_LEVEL，则会话优先级的优先级属性不会更改。  
   
@@ -113,8 +112,8 @@ FOR CONVERSATION
   
  有关详细信息，请参阅 [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
- 创建会话优先级的权限默认授予 db_ddladmin 或 db_owner 固定数据库角色以及 sysadmin 固定服务器角色的成员。 需要对数据库拥有 ALTER 权限。  
+## <a name="permissions"></a>权限  
+ 创建会话优先级的权限默认授予 db_ddladmin 或 db_owner 固定数据库角色以及 sysadmin 固定服务器角色的成员    。 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
   

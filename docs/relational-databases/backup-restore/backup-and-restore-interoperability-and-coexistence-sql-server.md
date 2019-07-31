@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940866"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
+  本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
   
  **本主题内容：**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47723785"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句：  
   
- ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)  
+ ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)     
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   
@@ -135,6 +134,6 @@ ms.locfileid: "47723785"
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[活动次要副本：次要副本备份 \(AlwaysOn 可用性组\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[活动次要副本：备份次要副本 \(Always On 可用性组\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

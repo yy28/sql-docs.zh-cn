@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068494"
 ---
 # <a name="device-contents-sql-server"></a>设备内容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +57,8 @@ ms.locfileid: "47686525"
 |标题|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|**类型**|执行的备份类型：完整备份、差异备份或事务日志备份。|  
-|**组件**|已备份的组件：数据库、文件或 *\<blank>*（用于事务日志）。|  
+|**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
+|**组件**|备份组件：数据库、文件或 \<空白>（对于事务日志）  。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
 |**“数据库”**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  

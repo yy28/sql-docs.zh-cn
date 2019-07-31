@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948684"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -215,7 +214,7 @@ ms.locfileid: "54125267"
   
 9. 还原后，在数据库 **A** 中为每个表分配的标识范围也将在数据库 **B** 中使用。确保还原的数据库 **B** 已收到发生故障的数据库 **B** 中传播到数据库 **A** 和数据库 **C** 的所有更改；然后重设每个表的标识范围种子。  
   
-    1.  在数据库 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 上还原数据库 **B** ，并检索输出参数 **@request_id**。 转到步骤 b。  
+    1.  在数据库 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 上还原数据库 **B** ，并检索输出参数 **@request_id** 。 转到步骤 b。  
   
     2.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 有关详细信息，请参阅[复制代理可执行文件概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)或[启动和停止复制代理 (SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 转到步骤 c。  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125267"
   
     1.  停止对等拓扑中已发布表上的所有活动。 转到步骤 b。  
   
-    2.  在数据库 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 上还原数据库 **B** ，并检索输出参数 **@request_id**。 转到步骤 c。  
+    2.  在数据库 [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 上还原数据库 **B** ，并检索输出参数 **@request_id** 。 转到步骤 c。  
   
     3.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 转到步骤 d。  
   

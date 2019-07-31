@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948420"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +123,7 @@ SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;
 列表达式不能包含：
 
 - SELECT 列表中定义的列别名。 它可以使用 FROM 子句中定义的派生表的列别名。
-- text、ntext 或 image 类型的列。 但是，可以使用 text、ntext 或 image 列作为返回有效数据类型值的函数的参数。 例如，表达式可以使用 SUBSTRING() 和 CAST()。 这也适用于 HAVING 子句中的表达式。
+- text、ntext 或 image 类型的列    。 但是，可以使用 text、ntext 或 image 列作为返回有效数据类型值的函数的参数。 例如，表达式可以使用 SUBSTRING() 和 CAST()。 这也适用于 HAVING 子句中的表达式。
 - xml 数据类型方法。 它可以包含使用 xml 数据类型方法的用户定义函数。 它可以包含使用 xml 数据类型方法的计算列。 
 - 子查询。 返回错误 144。 
 - 来自索引视图中的列。 
@@ -287,7 +286,7 @@ DISTRIBUTED_AGG 查询提示强制大规模并行处理 (MPP) 系统以在执行
 ### <a name="how-group-by-interacts-with-the-select-statement"></a>GROUP BY 如何与 SELECT 语句进行交互
 SELECT 列表：
 - 矢量聚合。 如果 SELECT 列表中包含聚合函数，则 GROUP BY 将计算每组的汇总值。 这些函数称为矢量聚合。 
-- Distinct 聚合。 ROLLUP、CUBE 和 GROUPING SETS 支持聚合 AVG (DISTINCT column_name)、COUNT (DISTINCT column_name) 和 SUM (DISTINCT column_name)。
+- Distinct 聚合。 ROLLUP、CUBE 和 GROUPING SETS 支持聚合 AVG (DISTINCT column_name)、COUNT (DISTINCT column_name) 和 SUM (DISTINCT column_name)    。
   
 WHERE 子句：
 - 执行任何分组操作之前，SQL 会删除不满足 WHERE 子句中条件的行。  
@@ -345,7 +344,7 @@ NULL 值：
 |功能|SQL Server Integration Services|SQL Server 兼容级别 100 或更高|SQL Server 2008 或兼容级别为 90 的更高版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 聚合|WITH CUBE 或 WITH ROLLUP 不支持。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP 支持。|与兼容级别 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回以下错误消息：“Incorrect syntax near the keyword 'cube'&#124;'rollup'.”（关键字 'cube'|'rollup' 附近有语法错误。）<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)           。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)         。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回以下错误消息：“Incorrect syntax near the keyword 'cube'&#124;'rollup'.”（关键字 'cube'|'rollup' 附近有语法错误。）<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)         <br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|不支持|是否支持|是否支持|  
 |CUBE|不支持|是否支持|不支持|  
 |ROLLUP|不支持|是否支持|不支持|  

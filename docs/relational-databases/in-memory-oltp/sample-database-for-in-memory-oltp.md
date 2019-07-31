@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111798"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -146,13 +145,13 @@ ms.locfileid: "54226694"
   
 -   *索引键中可以为 Null 的列* - 在原始表中，列 SalesPersonID 可以为 Null，而在新表中，该列不可为 Null，并且默认约束值为 -1。 这是因为内存优化表中的索引不能在索引键中具有可以为 Null 的列；-1 是这种情况下 NULL 的代理项。  
   
--   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
+-   计算列  - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
 
-    - **适用范围：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。  
+    - **适用范围：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1。  
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，内存优化表和索引中支持计算列。
 
   
--   *中的内存优化表支持“外键约束”*[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，前提是引用的表也是经过内存优化的。 引用也已迁移到内存优化的表的外键将保留在已迁移的表中，而其他外键则被忽略。  此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用可确保 Sales.SalesOrderHeader_inmem 表的引用完整性，从而在插入行时不验证引用完整性。  
+-   *中的内存优化表支持“外键约束”* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，前提是引用的表也是经过内存优化的。 引用也已迁移到内存优化的表的外键将保留在已迁移的表中，而其他外键则被忽略。  此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用可确保 Sales.SalesOrderHeader_inmem 表的引用完整性，从而在插入行时不验证引用完整性。  
   
 -   *Rowguid* - 省略了 rowguid 列。 虽然内存优化表支持 uniqueidentifier，但是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中不支持选项 ROWGUIDCOL。 这种列通常用于合并复制或具有文件流列的表。 此示例不包括其中任何一种。  
   

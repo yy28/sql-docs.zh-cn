@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114804"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 对象权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,13 +54,13 @@ DENY <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>参数  
- permission  
+ permission   
  指定可对架构包含的对象拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
  ALL  
  拒绝 ALL 不会拒绝所有可能的权限。 拒绝 ALL 等同于拒绝适用于指定对象的所有 ANSI-92 权限。 对于不同权限，ALL 的含义有所不同：  
   
- - 标量函数权限：EXECUTE、REFERENCES。  
+ - 标量值函数权限：EXECUTE、REFERENCES。  
  - 表值函数权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
  - 存储过程权限：EXECUTE。  
  - 表权限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
@@ -71,13 +70,13 @@ PRIVILEGES
  包含此参数以符合 ANSI-92 标准。 请不要更改 ALL 的行为。  
   
 *column*  
- 指定表、视图或表值函数中要对其拒绝权限的列的名称。 需要使用括号 **( )**。 仅可以拒绝对列的 SELECT、REFERENCES 和 UPDATE 权限。 可以在权限子句中或在安全对象名之后指定 column。  
+ 指定表、视图或表值函数中要对其拒绝权限的列的名称。 需要使用括号 **( )** 。 仅可以拒绝对列的 SELECT、REFERENCES 和 UPDATE 权限。 可以在权限子句中或在安全对象名之后指定 column  。  
   
 > [!CAUTION]  
 >  表级 DENY 并不优先于列级 GRANT。 保留了权限层次结构中的这种不一致性以保持向后兼容。  
   
- ON [ OBJECT :: ] [ schema_name ] . *object_name*  
- 指定要对其拒绝权限的对象。 如果指定了 schema_name，则 OBJECT 短语是可选的。 如果使用了 OBJECT 短语，则需要使用作用域限定符 (**::**)。 如果未指定 schema_name，则使用默认架构。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)。  
+ ON [ OBJECT :: ] [ schema_name ] .    *object_name*  
+ 指定要对其拒绝权限的对象。 如果指定了 schema_name，则 OBJECT 短语是可选的  。 如果使用了 OBJECT 短语，则需要使用作用域限定符 ( **::** )。 如果未指定 schema_name，则使用默认架构  。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)   。  
   
  TO \<database_principal>  
  指定要对其拒绝权限的主体。  
@@ -88,28 +87,28 @@ PRIVILEGES
  AS \<database_principal>  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。  
   
- Database_user  
+ Database_user   
  指定数据库用户。  
   
- Database_role  
+ Database_role   
  指定数据库角色。  
   
- Application_role  
+ Application_role   
  指定应用程序角色。  
   
- Database_user_mapped_to_Windows_User  
+ Database_user_mapped_to_Windows_User   
  指定映射到 Windows 用户的数据库用户。  
   
- Database_user_mapped_to_Windows_Group  
+ Database_user_mapped_to_Windows_Group   
  指定映射到 Windows 组的数据库用户。  
   
- Database_user_mapped_to_certificate  
+ Database_user_mapped_to_certificate   
  指定映射到证书的数据库用户。  
   
- Database_user_mapped_to_asymmetric_key  
+ Database_user_mapped_to_asymmetric_key   
  指定映射到非对称密钥的数据库用户。  
   
- Database_user_with_no_login  
+ Database_user_with_no_login   
  指定无相应服务器级主体的数据库用户。  
   
 ## <a name="remarks"></a>Remarks  
@@ -132,7 +131,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对对象的 CONTROL 权限。  
   
  如果使用 AS 子句，则指定的主体必须拥有要对其拒绝权限的对象。  

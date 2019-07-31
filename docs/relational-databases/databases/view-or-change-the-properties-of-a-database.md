@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd5438c72028e46578b699584a5affcd1bfba7c7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127060"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51560024"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **查看或更改数据库的属性，使用：**  
   
@@ -49,9 +48,9 @@ ms.locfileid: "51560024"
   
 -   当 AUTO_CLOSE 为 ON 时，由于该数据库不可用于检索数据，因此 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图中的某些列和 DATABASEPROPERTYEX 函数将返回 NULL。 若要解决此问题，请打开数据库。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  必须具有对数据库的 ALTER 权限，才能更改数据库的属性。 至少必须有公共数据库角色成员资格，才能查看数据库的属性。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,20 +59,20 @@ ms.locfileid: "51560024"
   
 1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
   
-2.  展开“数据库”，右键单击要查看的数据库，再单击“属性”。  
+2.  展开“数据库”  ，右键单击要查看的数据库，再单击“属性”  。  
   
 3.  在 **“数据库属性”** 对话框中，选择一个页以查看相应的信息。 例如，选择 **“文件”** 页可以查看数据和日志文件信息。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- Transact-SQL 提供了许多用于查看和更改数据库属性的不同方法。 若要查看数据库属性，可以使用 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数和 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。 若要更改数据库属性，可以使用适用于你环境的 ALTER DATABASE 语句版本：[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要查看数据库范围属性，使用 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图；若要更改数据库范围属性，则使用 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 语句。  
+ Transact-SQL 提供了许多用于查看和更改数据库属性的不同方法。 若要查看数据库属性，可以使用 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 函数和 [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。 要更改数据库属性，可以使用适用于你环境的 ALTER DATABASE 语句版本：[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 或 [ALTER DATABASE（Azure SQL 数据库）](../../t-sql/statements/alter-database-azure-sql-database.md)。 若要查看数据库范围属性，使用 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图；若要更改数据库范围属性，则使用 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 语句。  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>使用 DATABASEPROPERTYEX 函数查看数据库属性  
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然后连接到要查看其属性的数据库。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 系统函数返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 AUTO_SHRINK 数据库选项的状态。 返回值 1 表示将该选项设置为 ON，返回值 0 表示将该选项设置为 OFF。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 系统函数返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 AUTO_SHRINK 数据库选项的状态。 返回值 1 表示将该选项设置为 ON，返回值 0 表示将该选项设置为 OFF。  
   
     ```sql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
@@ -83,9 +82,9 @@ ms.locfileid: "51560024"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然后连接到要查看其属性的数据库。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图来查看 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的几个属性。 此实例返回数据库 ID 号 (`database_id`)、数据库是只读还是读写的 (`is_read_only`)、数据库的排序规则 (`collation_name`) 和数据库兼容级别 (`compatibility_level`)。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图来查看 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的几个属性。 此实例返回数据库 ID 号 (`database_id`)、数据库是只读还是读写的 (`is_read_only`)、数据库的排序规则 (`collation_name`) 和数据库兼容级别 (`compatibility_level`)。  
   
     ```sql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  
@@ -96,9 +95,9 @@ ms.locfileid: "51560024"
   
 1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，然后连接到要查看其属性的数据库。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图来查看当前数据库的多个属性。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例查询 [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 目录视图来查看当前数据库的多个属性。  
   
     ```sql  
     SELECT configuration_id, name, value, value_for_secondary  
@@ -109,17 +108,17 @@ ms.locfileid: "51560024"
   
 #### <a name="to-change-the-properties-of-a-sql-server-2016-database-using-alter-database"></a>使用 ALTER DATABASE 更改 SQL Server 2016 数据库的属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 此示例确定 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库上的快照隔离状态，更改属性的状态，然后验证更改。  
   
-     若要确定快照隔离的状态，请选择第一个 `SELECT` 语句，然后单击 **“执行”**。  
+     若要确定快照隔离的状态，请选择第一个 `SELECT` 语句，然后单击 **“执行”** 。  
   
-     若要更改快照隔离的状态，请选择 `ALTER DATABASE` 语句，然后单击 **“执行”**。  
+     若要更改快照隔离的状态，请选择 `ALTER DATABASE` 语句，然后单击 **“执行”** 。  
   
-     若要验证更改，请选择第二个 `SELECT` 语句，然后单击 **“执行”**。  
+     若要验证更改，请选择第二个 `SELECT` 语句，然后单击 **“执行”** 。  
   
      [!code-sql[DatabaseDDL#AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
   
@@ -127,7 +126,7 @@ ms.locfileid: "51560024"
   
 1.  连接到 SQL Server 实例中的数据库。  
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
 3.  复制以下示例并将其粘贴到查询窗口中。 下面的示例将辅助数据库的 MAXDOP 设置为主数据库的值。  
   

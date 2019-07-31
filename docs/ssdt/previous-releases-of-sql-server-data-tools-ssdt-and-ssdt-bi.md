@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 46426f8bebc3078e4b76712294da8765de24dc4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e51d931d46fe490303df20c1590e721e25f5ab92
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101825"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290338"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +25,7 @@ SQL Server Data Tools (SSDT) 为生成 SQL Server 内容类型（关系数据库
 SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](download-sql-server-data-tools-ssdt.md) 来设计和部署在较早版本 SQL Server 上运行的数据库、模型、报表和包。  
   
 > [!NOTE]  
-> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools” 、“SQL Server Data Tools-Business Intelligence” 和“Business Intelligence Development Studio” 。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](download-sql-server-data-tools-ssdt.md)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只会添加缺少的模板。  
+> 以前，用于创建 SQL Server 内容类型的 Visual Studio shell 在各种不同的名称下发布，包括“SQL Server Data Tools”  、“SQL Server Data Tools-Business Intelligence”  和“Business Intelligence Development Studio”  。 以前的版本附带多组不同的项目模板。 若要在一个 SSDT 中同时获取全部项目模板，你需要 [最新版本](download-sql-server-data-tools-ssdt.md)。 否则，你可能需要安装多个以前的版本才可获取 SQL Server 中使用的全部模板。  每个 Visual Studio 版本只会安装一个 shell；安装另一个 SSDT 只会添加缺少的模板。  
 
 ## <a name="recent-downloads"></a>最近下载
 
@@ -34,6 +33,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 
 |SSDT 版本| Visual Studio 2017|
 |:---|:---|
+|15.9.1|[SSDT for VS2017 15.9.1](https://go.microsoft.com/fwlink/?linkid=2086373)|
 |15.9.0|[SSDT for VS2017 15.9.0](https://go.microsoft.com/fwlink/?linkid=2052454)|
 |15.8.2|[SSDT for VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
 |15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
@@ -58,7 +58,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 <br>
 
 
-\* SSDT支持两个最新版本的 Visual Studio。 随着 Visual Studio 2017 的发布，将不再更新 SSDT for VS2013。 有关其他信息，请参阅[此 SSDT 团队博客文章](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)的“常见问题解答”部分。
+\* SSDT支持两个最新版本的 Visual Studio。 随着 Visual Studio 2017 的发布，将不再更新 SSDT for VS2013。 有关其他信息，请参阅[此 SSDT 团队博客文章](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)的“常见问题解答”部分  。
 
   
 ## <a name="links-to-download-pages"></a>下载页面的链接 

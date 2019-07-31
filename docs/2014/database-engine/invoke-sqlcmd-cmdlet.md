@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Invoke-Sqlcmd 和 sqlcmd 实用工具的比较  
  **Invoke-Sqlcmd** 可用来运行许多可借助于 **sqlcmd** 实用工具运行的脚本。 但是，用来运行 **Invoke-Sqlcmd** 的 Windows PowerShell 环境不同于用来运行 **sqlcmd** 的命令提示环境。 为了使 **Invoke-Sqlcmd** 在 Windows PowerShell 环境中有效，已对其行为进行了修改。  
   
- 并非所有的 **sqlcmd** 命令都已在 **Invoke-Sqlcmd** 中实现。 未实现的命令包括：**:!!**、**:connect**、**:error****:out**、**:ed**、**:list**、**:listvar**、**:reset**、**:perftrace** 和 **:serverlist**。  
+ 并非所有的 **sqlcmd** 命令都已在 **Invoke-Sqlcmd** 中实现。 未实现的命令包括： **:!!** 、 **:connect**、 **:error** **:out**、 **:ed**、 **:list**、 **:listvar**、 **:reset**、 **:perftrace** 和 **:serverlist**。  
   
  **Invoke-Sqlcmd** 无法初始化 **sqlcmd** 环境变量或脚本变量，如 SQLCMDDBNAME 或 SQLCMDWORKSTATION。  
   

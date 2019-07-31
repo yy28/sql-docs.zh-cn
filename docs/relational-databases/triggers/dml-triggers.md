@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979866917514cb10689f60bf5114d02dbe889fd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056136"
 ---
 # <a name="dml-triggers"></a>DML 触发器
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "47826705"
 |适用范围|表|表和视图|  
 |每个表或视图包含触发器的数量|每个触发操作（UPDATE、DELETE 和 INSERT）包含多个触发器|每个触发操作（UPDATE、DELETE 和 INSERT）包含一个触发器|  
 |级联引用|无任何限制条件|不允许在作为级联引用完整性约束目标的表上使用 INSTEAD OF UPDATE 和 DELETE 触发器。|  
-|执行|晚于：<br /><br /> 约束处理<br /><br /> 声明性引用操作<br /><br /> 创建**插入的** 和 **删除的** 表<br /><br /> 触发操作|之前：约束处理<br /><br /> 代替：触发操作<br /><br /> 之后：创建  **插入的** 和 **删除的** 表|  
+|执行|晚于：<br /><br /> 约束处理<br /><br /> 声明性引用操作<br /><br /> 创建**插入的** 和 **删除的** 表<br /><br /> 触发操作|早于:约束处理<br /><br /> 替换：触发操作<br /><br /> 之后：创建  **插入的** 和 **删除的** 表|  
 |执行顺序|可指定第一个和最后一个执行|不适用|  
 |**插入的**和 **删除的**表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 列引用|Allowed|Allowed|  
 |**插入的**和 **删除的**表中的 **text** 、 **ntext** 和 **image** 列引用。|不允许|Allowed|  
