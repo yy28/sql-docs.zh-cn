@@ -13,19 +13,19 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199296"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661307"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合并复制属性
 本主题说明如何为合并复制指定各种属性。 
 
 
-## <a name="download-only"></a>仅下载
-  本部分介绍如何指定合并表项目为仅下载中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 仅用于下载的项目是为具有不在订阅服务器上更新的数据的应用程序设计的。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+## <a name="download-only"></a>仅限下载
+  本部分介绍如何使用[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]在中指定合并表项目仅用于下载。 仅用于下载的项目是为具有不在订阅服务器上更新的数据的应用程序设计的。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
  
   
 ###  <a name="limitations-and-restrictions"></a>限制和局限  
@@ -52,19 +52,19 @@ ms.locfileid: "68199296"
 ###  <a name="using-transact-sql"></a>使用 Transact-SQL  
   
 #### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>指定新合并表项目仅用于下载    
-1.  执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，为参数 **@subscriber_upload_options** 在 **1** 或 **@subscriber_upload_options** 指定合并表项目仅用于下载。 这些数字分别与以下行为相对应：  
+1.  执行[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), 为参数 **\@subscriber_upload_options**指定值**1**或**2** 。 这些数字分别与以下行为相对应：  
   
     -   **0** - 无限制（默认值）。 将订阅服务器上所做的更改上载到发布服务器。    
     -   **1** - 允许在订阅服务器上进行更改，但不会将它们上载到发布服务器。    
     -   **2** - 不允许在订阅服务器上进行更改。  
   
         > [!NOTE]  
-        >  如果某个项目的源表已经在另一个发布中发布，则两个项目的 **@subscriber_upload_options** 值必须相同。  
+        >  如果某个项目的源表已经在另一个发布中发布, 则这两个项目的 **\@subscriber_upload_options**值必须相同。  
   
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>修改现有合并表项目以使其仅用于下载  
   
 1.  若要确定项目是否仅用于下载，请执行 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)。 记下结果集中该项目的 **upload_options** 值。    
-2.  如果在步骤 1 中返回的值为 **0**，则执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，为参数 **@property** 指定值 **@property** ，为 **@subscriber_upload_options** 指定值 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 并为 **@subscriber_upload_options** 在 **1** 指定值 **@value** ，这里的数字分别对应于以下行为：  
+2.  如果步骤1中返回的值为**0**, 则执行[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), 将**subscriber_upload_options**的值指定为 **\@属性**, 将值**1**指定为 **\@force_invalidate_snapshot**  **\@** **和\@force_reinit_subscription**, 值为**1**或**2** , 对应于以下行为:  
   
     -   **1** - 允许在订阅服务器上进行更改，但不会将它们上载到发布服务器。    
     -   **2** - 不允许在订阅服务器上进行更改。  
@@ -72,7 +72,7 @@ ms.locfileid: "68199296"
         > [!NOTE]  
         >  如果某个项目的源表已经在另一个发布中发布，则两个项目的仅用于下载行为必须相同。  
  
-## <a name="interactive-conflict-resolution">交互式冲突解决方法</a>
+## <a name="interactive-conflict-resolution">交互式冲突解决</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制提供交互式冲突解决程序，可用于在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器中进行按需同步过程中手动解决冲突。 启用交互式冲突解决方法后，在同步过程中即可使用交互式冲突解决程序来交互式解决冲突。 交互式冲突解决程序可以通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器获取。 有关详细信息，请参阅[使用 Windows 同步管理器同步订阅（Windows 同步管理器）](../synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
     
@@ -101,21 +101,21 @@ ms.locfileid: "68199296"
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>创建使用交互式冲突解决程序的合并请求订阅  
   
-1.  在发布服务器的发布数据库中，执行 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)，同时指定 **@publication** 中指定合并项目的交互式冲突解决方法。 注意结果集中其交互式冲突解决程序将被使用的每个项目的 **allow_interactive_resolver** 值。    
+1.  在发布服务器上, 对发布数据库执行[sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), 并指定 **\@发布**。 注意结果集中其交互式冲突解决程序将被使用的每个项目的 **allow_interactive_resolver** 值。    
     -   如果该值为 **1**，将使用交互式冲突解决程序。    
-    -   如果该值为 **0**，则您必须首先启用每个项目的交互式冲突解决程序。 为此，请执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，同时指定 **@publication** 和 **@article** ，为 **allow_interactive_resolver** 指定 **@property** 值，并将 **@value** 指定 **@value** 中指定合并项目的交互式冲突解决方法。    
+    -   如果该值为 **0**，则您必须首先启用每个项目的交互式冲突解决程序。 为此, 请执行[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), 并指定 **\@发布**、  **\@项目**、  **\@属性**的值**allow_interactive_resolver**和值**true** **作为\@值**。    
 2.  在订阅服务器上，对订阅数据库执行 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 有关详细信息，请参阅 [创建请求订阅](../create-a-pull-subscription.md)。    
 3.  在订阅服务器的订阅数据库中，执行 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)，同时指定下列参数：  
   
-    -   **@publisher** 和 **@publisher_db** （已发布的数据库）和 **@publication** 中指定合并项目的交互式冲突解决方法。    
-    -   将 **@value** 指定 **@enabled_for_syncmgr** 中指定合并项目的交互式冲突解决方法。    
-    -   将 **@value** 指定 **@use_interactive_resolver** 中指定合并项目的交互式冲突解决方法。    
+    -   **\@发布服务器**、  **publisher_db\@** (已发布的数据库) 和发布。  **\@**    
+    -   Enabled_for_syncmgr 的值为**true** 。  **\@**    
+    -   Use_interactive_resolver 的值为**true** 。  **\@**    
     -   合并代理所需的安全帐户信息。 有关详细信息，请参阅 [Create a Pull Subscription](../create-a-pull-subscription.md)。    
 4.  在发布服务器的发布数据库中，执行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>定义支持交互式冲突解决程序的项目  
   
-在发布服务器上，对发布数据库执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 为 **@publication** 指定项目所属的发布的名称，为 **@article** 指定项目的名称，为 **@source_object** 值，并将 **@value** 指定 **@allow_interactive_resolver** 中指定合并项目的交互式冲突解决方法。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
+在发布服务器上，对发布数据库执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定项目所属的 **\@**  **\@** 发布的名称、项目的 **\@名称、要**为 source_object 发布的数据库对象, 以及值对于 **\@allow_interactive_resolver**为**true** 。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
 
 ## <a name="specify-the-conflict-tracking-and-resolution-level"></a>指定冲突跟踪和解决方法级别 
 在同步对合并发布的订阅时，复制检查是否存在因对发布服务器和订阅服务器上的相同数据进行更改而导致的冲突。 可以指定是在行级别检测冲突（即对行的任何更改都视为冲突），还是在列级别检测冲突（即只有更改了相同的行和列时才视作冲突）。 项目的冲突解决在行级别执行。 有关在使用逻辑记录时检测和解决冲突的详细信息，请参阅 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
@@ -139,9 +139,9 @@ ms.locfileid: "68199296"
   
 ###  <a name="using-transact-sql"></a>使用 Transact-SQL  
   
-#### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>指定冲突跟踪新的合并项目的选项  
+#### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>为新的合并项目指定冲突跟踪选项  
   
-1.  在发布服务器上的发布数据库中，执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 并为 **@column_tracking** 指定以下值之一：  
+1.  在发布服务器上, 对发布数据库执行[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) , 并为 **\@column_tracking**指定以下值之一:  
   
     -   **true** - 为项目使用列级别跟踪。    
     -   **false** - 使用行级别跟踪，这是默认值。  
@@ -149,11 +149,11 @@ ms.locfileid: "68199296"
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>更改合并项目的冲突跟踪选项  
   
 1.  若要确定某个合并项目的冲突跟踪选项，请执行 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)。 请注意项目的结果集中 **column_tracking** 选项的值。 值为 **1** 表明使用的是列级别的跟踪，值为 **0** 表明使用的是行级别的跟踪。    
-2.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 将 **column_tracking** 的值指定为 **@property** ，并且将 **@value** 指定以下值之一：
+2.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 为 "  **\@属性**" 指定**column_tracking**值, 并为 **\@"值**" 指定以下值之一:
     -   **true** - 为项目使用列级别跟踪。
     -   **false** - 使用行级别跟踪，这是默认值。  
   
-     将 **1** 和 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 中指定合并项目的冲突跟踪和解决方法级别。  
+     将 **\@force_invalidate_snapshot**和**force_reinit_subscription的值都指定为1。\@**  
 
 ## <a name="tracking-deletes"></a>跟踪删除
 
@@ -167,7 +167,7 @@ ms.locfileid: "68199296"
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>指定对新合并项目忽略删除  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定的值`false`有关 **@delete_tracking** 。 有关详细信息，请参阅 [定义项目](../publish/define-an-article.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 将的值`false`指定为 **\@delete_tracking**。 有关详细信息，请参阅 [定义项目](../publish/define-an-article.md)。  
   
     > [!NOTE]  
     >  如果某个项目的源表已在另一个发布中发布，则两个项目的 **delete_tracking** 值必须相同。  
@@ -175,7 +175,7 @@ ms.locfileid: "68199296"
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>指定对现有合并项目忽略删除  
   
 1.  若要确定是否对项目启用了错误补偿，请执行 [sp_helpmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) 并注意结果集中的 **delete_tracking** 值。 如果该值为 **0**，则删除已被忽略。    
-2.  如果步骤 1 的值为 **1**，则在发布服务器上对发布数据库执行 [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值**delete_tracking**有关 **@property** ，并将值`false`为 **@value** 。  
+2.  如果步骤 1 的值为 **1**，则在发布服务器上对发布数据库执行 [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 **为\@属性**指定**delete_tracking**值, 并将`false`值指定 **\@为。**  
   
     > [!NOTE]  
     >  如果某个项目的源表已在另一个发布中发布，则两个项目的 **delete_tracking** 值必须相同。  
@@ -196,16 +196,16 @@ ms.locfileid: "68199296"
 
 ### <a name="new-article"></a>新文章
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 为 **@processing_order** 。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定一个整数值, 该值表示针对 **\@processing_order**的项目的处理顺序。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
   
     > [!NOTE]  
-    >  创建指定了顺序的项目时，应在项目顺序值之间留有间隔。 这样便于以后设置新值。 例如，如果有三个项目需要您为它们指定固定处理顺序，则应将 **@processing_order** 的值分别设置为 10、20 和 30，而不是 1、2 和 3。  
+    >  创建指定了顺序的项目时，应在项目顺序值之间留有间隔。 这样便于以后设置新值。 例如, 如果有三个项目需要指定固定处理顺序, 请将 **\@processing_order**的值分别设置为10、20和 30, 而不是分别设置为1、2和3。  
   
 ### <a name="existing-article"></a>现有项目
   
 1.  若要确定项目的处理顺序，请执行 [sp_helpmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)，并记下结果集中的 **processing_order** 值。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 为 **processing_order** 指定值 **@property** ，然后为 **@value** 。  
+2.  在发布服务器上，对发布数据库执行 [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 为 **\@** **属性\@** 指定值 processing_order, 并将一个整数值指定为值的处理顺序。  
 
 
 
@@ -213,7 +213,7 @@ ms.locfileid: "68199296"
  [使用条件性删除跟踪优化合并复制性能](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
  [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [定义合并表项目间的逻辑记录关系](define-a-logical-record-relationship-between-merge-table-articles.md)   
- [检测和解决合并复制冲突](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [检测并解决合并复制冲突](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [使用仅下载项目优化合并复制性能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
  [Define an Article](define-an-article.md)   
  [查看和修改项目属性](view-and-modify-article-properties.md)  
