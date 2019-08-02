@@ -3,24 +3,22 @@ title: SQL Server 机器学习服务 (R、Python) 概述
 description: SQL Server 中的机器学习服务功能的概述, 你可以在其中将 Python 和 R 与关系数据集成, 以便进行数据科学和统计建模、机器学习模型、预测分析、数据可视化等。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/24/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4ab4cd7c93cfd1a98a819a849e643d590450cd28
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495401"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714672"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server 机器学习服务 (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 机器学习服务是 SQL Server 的一项功能, 用于执行数据库中 R 和 Python 脚本。 此功能包括用于高性能预测分析和机器学习的[Microsoft R 和 Python 包](#components)。 关系数据可以在 R 和 Python 脚本中通过包含 R 和 Python 语句的存储过程、T-sql 脚本或包含 T-sql 的 R 和 Python 代码来使用。
-
-如果以前使用[SQL Server 2016 R 服务](r/sql-server-r-services.md), SQL Server 2017 和更高版本中的机器学习服务是下一代 r 支持, 其中包含以2016提供的基本 r、RevoScaleR、MicrosoftML 和其他库的更新版本。
 
 在 Azure SQL 数据库中，[机器学习服务（使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前处于公共预览状态。
 
@@ -39,7 +37,7 @@ ms.locfileid: "68495401"
 
 ## <a name="components"></a>组件
 
-SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
+SQL Server 支持 R 和 Python。 下表描述了这些组件。
 
 | 组件 | Description |
 |-----------|-------------|
@@ -128,19 +126,6 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 + 启用资源管理（需要企业版）
 
 有关详细信息, 请参阅适用于 R 和[r 包管理的](r/install-additional-r-packages-on-sql-server.md)[资源调控](r/resource-governance-for-r-services.md)SQL Server。
-
-## <a name="version-history"></a>版本历史记录
-
-SQL Server 2017 机器学习服务是 SQL Server 2016 R 服务的下一代，增强后包含 Python。 下表是所有产品版本的完整列表 - 从初始发布到当前发布。 
-
-| 产品名称 | 引擎版本 | 发布日期 |
-|--------------|---------|--------------|
-| SQL Server 2017 机器学习服务 (数据库内) | R Server 9.2。1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2017 Machine Learning Server (独立版) | R Server 9.2。1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2016 R Services (数据库内) | R Server 9。1  | 2017年7月  |
-| SQL Server 2016 R Server (独立版)  |  R Server 9。1 | 2017年7月 |
-
-有关按发布排列的包版本，请参阅[升级 R 和 Python 组件](install/upgrade-r-and-python.md#version-map)中的版本地图。
 
 ## <a name="portability-and-related-products"></a>可移植性和相关产品
 

@@ -19,12 +19,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909715"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476303"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67909715"
  显示索引的名称。 对于现有索引，此字段是只读的。 在创建新的索引时，请键入索引的名称。  
   
  **索引类型**  
- 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是：“聚集”、“非聚集”、“主 XML”、“辅助 XML”、“空间”、“聚集列存储”或“非聚集列存储”。  
+ 指示索引的类型。 对于新索引，指示在打开该对话框时所选索引的类型。 索引可以是：“聚集”、“非聚集”、“主 XML”、“辅助 XML”、“空间”、“聚集列存储”或“非聚集列存储”        。  
   
  **注意** 每个表只允许创建一个聚集索引。 每个表只允许创建一个 xVelocity 内存优化的列存储索引。  
   
@@ -75,10 +75,10 @@ ms.locfileid: "67909715"
  显示组成索引键的列的名称。  
   
  **排序顺序**  
- 指定所选索引列的排序方向， **“升序”** 或 **“降序”**。  
+ 指定所选索引列的排序方向， **“升序”** 或 **“降序”** 。  
   
 > [!NOTE]  
->  如果索引类型为 **“主 XML”** 或 **“空间”**，则表中将不显示此列。  
+>  如果索引类型为 **“主 XML”** 或 **“空间”** ，则表中将不显示此列。  
   
  **数据类型**  
  显示数据类型信息。  
@@ -96,7 +96,7 @@ ms.locfileid: "67909715"
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
  **“添加”**  
- 向索引键添加列。 从单击“添加”时出现的“从 \<table name> 选择列”对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
+ 向索引键添加列。 从单击“添加”  时出现的“从 \<table name> 选择列”   对话框中选择表列。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
  从组成索引键的列中删除所选列。  
@@ -108,7 +108,7 @@ ms.locfileid: "67909715"
  在索引键网格中向下移动所选列。  
   
  **列存储列**  
- 单击“添加”可为列存储索引选择列。 有关列存储索引的限制，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
+ 单击“添加”  可为列存储索引选择列。 有关列存储索引的限制，请参阅 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。  
   
  **包含列**  
  在非聚集索引中包含非键列。 使用此选项，您可以将列作为非键列添加到非聚集索引的叶级别中，从而跳过当前对索引键总大小的索引限制以及对构成索引键的最大列数的索引限制。 有关详细信息，请参阅 [创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
@@ -133,7 +133,76 @@ ms.locfileid: "67909715"
   
  **允许 Null 值**  
  如果表定义允许该列包含空值，则显示 **“是”** 。 如果表定义不允许该列包含 Null 值，则显示 **“否”** 。  
+
+##  <a name="Options"></a> 选项页选项
+ 使用此页可以查看或修改各种索引选项。
+
+### <a name="general-options"></a>常规选项
+**自动重新计算统计信息**<br>
+指定是否自动重新计算分布统计信息。 默认值为 True  ，这等效于将 STATISTICS_NORECOMPUTE 设置为 OFF。 如果将此项设置为 False  ，则将 STATISTICS_NORECOMPUTE 设置为 ON。
+
+**忽略重复的值** <br>
+指定在插入操作尝试向唯一索引插入重复键值时的错误响应。
+
+True<br>
+向唯一索引插入重复键值时将出现警告消息。 只有违反唯一性约束的行才会失败。
+
+False<br>
+向唯一索引插入重复键值时将出现错误消息。 整个 INSERT 操作将被回滚。
+
+### <a name="locks-options"></a>锁选项
+
+**允许行锁**<br>
+指定是否允许行锁。
+
+**允许页锁**<br>
+指定是否允许使用页锁。
+
+### <a name="operation-options"></a>操作选项
+
+ **允许联机 DML 处理**  
+ 在 CREATE 或 ALTER 等索引操作过程中，允许用户访问基础表或聚集索引数据以及任何相关联的非聚集索引。 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
+> [!NOTE]  
+>  此选项对 XML 索引不可用，或者如果索引为禁用的聚集索引，此选项也不可用。  
+  
+ **最大并行度**  
+ 限制执行并行计划时所使用的处理器数。 默认值为 0，表示使用实际可用的 CPU 数。 若将此值设置为 1，则取消生成并行计划；若将此值设置为大于 1 的数，则会限制单个查询执行使用的最多处理器数。 该选项仅在此对话框处于 **“重新生成”** 或 **“重新创建”** 状态时才可用。 有关详细信息，请参阅 [设置最大并行度选项以获取最佳性能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
+  
+> [!NOTE]  
+>  如果指定的值比可用 CPU 数大，则将使用实际的可用 CPU 数。  
+
+
+**优化顺序键**<br>
+指定是否针对最后一页插入争用进行优化。 有关详细信息，请参阅[顺序键](../../t-sql/statements/create-index-transact-sql.md#sequential-keys)。
+
+### <a name="storage-options"></a>存储选项
+
+**在 tempdb 中排序**<br>
+指定是否在 tempdb 中存储临时排序结果。
+
+True<br>
+在 tempdb 中存储用于生成索引的中间排序结果。 如果 tempdb 与用户数据库不在同一组磁盘上，就可缩短创建索引所需的时间。 但是，这会增加索引生成期间所使用的磁盘空间量。
+
+False<br>
+中间排序结果与索引存储在同一数据库中。 有关详细信息，请参阅[用于索引的 SORT_IN_TEMPDB 选项](./sort-in-tempdb-option-for-indexes.md)。
+
+**填充因子**<br>
+指定一个百分比，此百分比指示在索引创建或重新生成过程中，数据库引擎应建立每个索引页的叶级别的完整程度。 填充因子必须是 1 到 100 之间的整数。 如果填充因子为 100，数据库引擎会创建完全填充叶级页的索引。
+FILLFACTOR 设置仅在创建或重新生成索引时应用。 数据库引擎并不会在页中动态保持指定的可用空间百分比。
+
+有关详细信息，请参阅 [为索引指定填充因子](./specify-fill-factor-for-an-index.md)。
+
+**填充索引 (Pad index)**<br>
+指定索引填充。
+
+True<br>
+填充因子指定的可用空间百分比应用于索引的中间级页。
+
+False 或未指定填充因子<br>
+考虑到中间级页上的键集，将中间级页填充到接近其容量的程度，以留出足够的空间，使之至少能够容纳索引的最大的一行。
+
+
 ##  <a name="Storage"></a> 存储页选项  
  使用此页可查看或修改所选索引的文件组或分区方案属性。 仅显示与索引类型相关的选项。  
   
@@ -165,25 +234,13 @@ ms.locfileid: "67909715"
 > [!NOTE]  
 >  如果表列是计算列，则 **“列数据类型”** 显示为“计算列”。  
   
- **允许在移动索引时在线处理 DML 语句**  
- 在索引操作过程中，允许用户访问基础表或聚集索引数据以及任何相关联的非聚集索引。 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
-  
-> [!NOTE]  
->  此选项对 XML 索引不可用，或者如果索引为禁用的聚集索引，此选项也不可用。  
-  
- **设置最大并行度**  
- 限制执行并行计划时所使用的处理器数。 默认值为 0，表示使用实际可用的 CPU 数。 若将此值设置为 1，则取消生成并行计划；若将此值设置为大于 1 的数，则会限制单个查询执行使用的最多处理器数。 该选项仅在此对话框处于 **“重新生成”** 或 **“重新创建”** 状态时才可用。 有关详细信息，请参阅 [设置最大并行度选项以获取最佳性能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
-  
-> [!NOTE]  
->  如果指定的值比可用 CPU 数大，则将使用实际的可用 CPU 数。  
-  
 ##  <a name="Spatial"></a> 空间页索引选项  
  使用 **“空间”** 页，可以查看或指定空间属性的值。 有关详细信息，请参阅[空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ### <a name="bounding-box"></a>边界框  
- “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
+ “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”** ，这些参数将不可用。  
   
- 面板将显示边界框的 **（**_X-min_**、**_Y-min_**）** 和 **（**_X-max_**、**_Y-max_**）** 坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
+ 面板将显示边界框的 **（** _X-min_ **、** _Y-min_ **）** 和 **（** _X-max_ **、** _Y-max_ **）** 坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
   
  **X-min**  
  边界框左下角的 X 坐标。  
@@ -221,7 +278,7 @@ ms.locfileid: "67909715"
  在顶级，如果对象包含的单元格多于 *n*指定的单元格，则索引操作将根据需要使用尽可能多的单元格来提供完整的顶级分割。 在这种情况下，对象收到的单元格数可能会大于指定的单元格数。 这种情况下，最大数量即为顶级网格创建的单元格数，这取决于 **“级别 1”** 的密度。  
   
 ### <a name="grids"></a>网格  
- 此面板显示分割方案的每个级别上网格的密度。 密度可指定为 **“低”**、 **“中”** 或 **“高”** 三个级别。 默认值为 **“中”**。 **“低”** 表示 4x4 网格（16 个单元格）、 **“中”** 表示 8x8 网格（64 个单元格）而 **“高”** 表示 16x16 网格（256 个单元格）。 在选择 **“几何自动网格”** 或 **“地理自动网格”** 分割选项时，这些选项将不可用。  
+ 此面板显示分割方案的每个级别上网格的密度。 密度可指定为 **“低”** 、 **“中”** 或 **“高”** 三个级别。 默认值为 **“中”** 。 **“低”** 表示 4x4 网格（16 个单元格）、 **“中”** 表示 8x8 网格（64 个单元格）而 **“高”** 表示 16x16 网格（256 个单元格）。 在选择 **“几何自动网格”** 或 **“地理自动网格”** 分割选项时，这些选项将不可用。  
   
  **级别 1**  
  第一级（顶级）网格的密度。  

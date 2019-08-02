@@ -1,7 +1,7 @@
 ---
 title: 联接 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/18/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,31 +10,33 @@ helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
 - MERGE join
+- ADAPTIVE join
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051956"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419586"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用内存中的排序和哈希联接技术执行排序、交集、并集、差分等操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这种类型的查询计划支持垂直表分区（有时称为分列存储）。   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用三种类型的联接操作：    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用四种类型的联接操作：    
 -   嵌套循环联接     
 -   合并联接   
 -   哈希联接   
+-   自适应联接（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）
 
 ## <a name="fundamentals"></a> 联接基础知识
-通过联接，可以从两个或多个表中根据各个表之间的逻辑关系来检索数据。 联接指明了 Microsoft SQL Server 应如何使用一个表中的数据来选择另一个表中的行。    
+通过联接，可以从两个或多个表中根据各个表之间的逻辑关系来检索数据。 联接指明了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应如何使用一个表中的数据来选择另一个表中的行。    
 
 联接条件可通过以下方式定义两个表在查询中的关联方式：    
 -   指定每个表中要用于联接的列。 典型的联接条件在一个表中指定一个外键，而在另一个表中指定与其关联的键。    
@@ -48,7 +50,7 @@ ms.locfileid: "68051956"
 FROM first_table join_type second_table [ON (join_condition)]
 ```
 
-join_type 指定执行的联接类型：内部、外部或交叉联接。 join_condition 定义用于对每一对联接行进行求值的谓词。 下面是 FROM 子句联接规范示例：
+join_type  指定执行的联接类型：内部、外部或交叉联接。 join_condition  定义用于对每一对联接行进行求值的谓词。 下面是 FROM 子句联接规范示例：
 
 ```sql
 FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
@@ -109,18 +111,20 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 ## <a name="nested_loops"></a> 了解嵌套循环联接
 如果一个联接输入很小（不到 10 行），而另一个联接输入很大而且已在其联接列上创建了索引，则索引 Nested Loops 连接是最快的联接操作，因为它们需要的 I/O 和比较都最少。 
 
-嵌套循环联接也称为嵌套迭代，它将一个联接输入用作外部输入表（显示为图形执行计划中的顶端输入），将另一个联接输入用作内部（底端）输入表。 外部循环逐行处理外部输入表。 内部循环会针对每个外部行执行，在内部输入表中搜索匹配行。   
+嵌套循环联接也称为嵌套迭代  ，它将一个联接输入用作外部输入表（显示为图形执行计划中的顶端输入），将另一个联接输入用作内部（底端）输入表。 外部循环逐行处理外部输入表。 内部循环会针对每个外部行执行，在内部输入表中搜索匹配行。   
 
-最简单的情况是，搜索时扫描整个表或索引；这称为单纯嵌套循环联接。 如果搜索时使用索引，则称为索引嵌套循环联接。 如果将索引生成为查询计划的一部分（并在查询完成后立即将索引破坏），则称为临时索引嵌套循环联接。 查询优化器考虑了所有这些不同情况。   
+最简单的情况是，搜索时扫描整个表或索引；这称为单纯嵌套循环联接  。 如果搜索时使用索引，则称为索引嵌套循环联接  。 如果将索引生成为查询计划的一部分（并在查询完成后立即将索引破坏），则称为临时索引嵌套循环联接  。 查询优化器考虑了所有这些不同情况。   
 
 如果外部输入较小而内部输入较大且预先创建了索引，则嵌套循环联接尤其有效。 在许多小事务中（如那些只影响较小的一组行的事务），索引嵌套循环联接优于合并联接和哈希联接。 但在大型查询中，嵌套循环联接通常不是最佳选择。    
+
+嵌套循环联接运算符的 OPTIMIZED 属性设置为 True  时，这意味着当内侧表很大时，使用优化的嵌套循环（或批处理排序）来最大程度地减少 I/O，而不管是否对其进行并行化。 鉴于排序本身是隐藏操作，在分析执行计划时，给定计划中的这种优化可能不是非常明显。 但是通过在计划 XML 中查找属性 OPTIMIZED，这表明嵌套循环联接可能会尝试重新排序输入行以提高 I/O 性能。
 
 ## <a name="merge"></a> 了解合并联接
 如果两个联接输入并不小但已在二者联接列上排序（例如，如果它们是通过扫描已排序的索引获得的），则合并联接是最快的联接操作。 如果两个联接输入都很大，而且这两个输入的大小差不多，则预先排序的合并联接提供的性能与哈希联接相近。 但是，如果这两个输入的大小相差很大，则哈希联接操作通常快得多。       
 
 合并联接要求两个输入都在合并列上排序，而合并列由联接谓词的等效 (ON) 子句定义。 通常，查询优化器扫描索引（如果在适当的一组列上存在索引），或在合并联接的下面放一个排序运算符。 在极少数情况下，虽然可能有多个等效子句，但只用其中一些可用的等效子句获得合并列。    
 
-由于每个输入都已排序，因此 Merge Join 运算符将从每个输入获取一行并将其进行比较。 例如，对于内联接操作，如果行相等则返回。 如果行不相等，则废弃值较小的行并从该输入获得另一行。 这一过程将重复进行，直到处理完所有的行为止。    
+由于每个输入都已排序，因此 Merge Join  运算符将从每个输入获取一行并将其进行比较。 例如，对于内联接操作，如果行相等则返回。 如果行不相等，则废弃值较小的行并从该输入获得另一行。 这一过程将重复进行，直到处理完所有的行为止。    
 
 合并联接操作可以是常规操作，也可以是多对多操作。 多对多合并联接使用临时表存储行。 如果每个输入中有重复值，则在处理其中一个输入中的每个重复项时，另一个输入必须重绕到重复项的开始位置。    
 
@@ -142,15 +146,12 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 以下几节介绍了不同类型的哈希联接：内存中的哈希联接、Grace 哈希联接和递归哈希联接。    
 
 ### <a name="inmem_hash"></a> 内存中的哈希联接
-
 哈希联接先扫描或计算整个生成输入，然后在内存中生成哈希表。 根据计算得出的哈希键的哈希值，将每行插入哈希存储桶。 如果整个生成输入小于可用内存，则可以将所有行都插入哈希表中。 生成阶段之后是探测阶段。 一次一行地对整个探测输入进行扫描或计算，并为每个探测行计算哈希键的值，扫描相应的哈希存储桶并生成匹配项。    
 
 ### <a name="grace_hash"></a> Grace 哈希联接
-
 如果生成输入大于内存，哈希联接将分为几步进行。 这称为“Grace 哈希联接”。 每一步都分为生成阶段和探测阶段。 首先，消耗整个生成和探测输入并将其分区（使用哈希键上的哈希函数）为多个文件。 对哈希键使用哈希函数可以保证任意两个联接记录一定位于相同的文件对中。 因此，联接两个大输入的任务简化为相同任务的多个较小的实例。 然后将哈希联接应用于每对分区文件。    
 
 ### <a name="recursive_hash"></a> 递归哈希联接
-
 如果生成输入非常大，以至于标准外部合并的输入需要多个合并级别，则需要多个分区步骤和多个分区级别。 如果只有某些分区较大，则只需对那些分区使用附加的分区步骤。 为了使所有分区步骤尽可能快，将使用大的异步 I/O 操作以便单个线程就能使多个磁盘驱动器繁忙工作。    
 
 > [!NOTE]
@@ -164,14 +165,132 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > 角色反转的发生独立于任何查询提示或结构。 角色反转不会显示在查询计划中；角色反转对于用户是透明的。
 
 ### <a name="hash_bailout"></a> 哈希援助
-
 术语“哈希援助”有时用于描述 Grace 哈希联接或递归哈希联接。    
 
 > [!NOTE]
 > 递归哈希联接或哈希援助会导致服务器性能降低。 如果跟踪中显示许多哈希警告事件，请更新正在联接的列上的统计信息。    
 
 有关哈希援助的详细信息，请参阅 [Hash Warning 事件类](../../relational-databases/event-classes/hash-warning-event-class.md)。    
-  
+
+## <a name="adaptive"></a> 了解自适应联接
+借助[批处理模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)自适应联接功能，可延迟选择[哈希联接](#hash)或[嵌套循环](#nested_loops)联接方法，直到扫描第一个输入后  。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，查询计划可在执行期间动态切换到较好的联接策略，而无需进行重新编译。 
+
+> [!TIP]
+> 小型和大型联接输入扫描之间频繁振荡的工作负荷将从此功能获益最大。
+
+运行时决策基于以下步骤：
+-  如果生成联接输入的行计数足够小，以致于嵌套循环联接优于哈希联接，则计划将切换到嵌套循环算法。
+-  如果生成联接输入超过特定行计数阈值，则不会进行切换并且计划将通过哈希联接继续。
+
+以下查询用于说明自适应联接示例：
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+查询将返回 336 行。 启用[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)会显示以下计划：
+
+![查询生成 336 行](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+在计划中，请注意以下事项：
+1. 用于为哈希联接生成阶段提供行的列存储索引扫描。
+2. 新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。 对于此示例，阈值为 78 行。 包含 &gt;= 78 行的任何示例均将使用哈希联接。 如果小于阈值，将使用嵌套循环联接。
+3. 由于查询返回 336 行，超过了阈值，因此，第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
+4. 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
+
+现将计划与同一查询进行对比，但当表中的 Quantity 值只有一行时  ：
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+查询将返回一行。 启用“实时查询统计信息”会显示以下计划：
+
+![查询生成一行](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+在计划中，请注意以下事项：
+- 返回一行后，聚集索引搜索现已有行流经它。
+- 并且，由于哈希联接生成阶段未继续进行，因此没有行流经第二个分支。
+
+### <a name="adaptive-join-remarks"></a>自适应联接注解
+自适应联接引入了比索引嵌套循环联接等效计划更高的内存要求。 它会请求额外的内存，就像嵌套循环属于哈希联接一样。 此外还有作为断断续续操作而不是嵌套循环流式处理等效联接的生成阶段的开销。 这笔额外成本产生的同时也实现了行计数可在生成输入中波动的方案灵活性。
+
+批处理模式自适应联接适用于语句的初始执行，编译后，根据编译的自适应联结阈值和流经外部输入生成阶段的运行时行，连续执行将保持自适应状态。
+
+如果自适应联接切换到嵌套循环操作，它将使用哈希联接生成已经读取的行。 运算符不会  再次重新读取外部引用行。
+
+### <a name="tracking-adaptive-join-activity"></a>跟踪自适应联接活动
+自适应联接运算符具有以下计划运算符属性：
+
+|计划属性|描述|
+|---|---|
+|AdaptiveThresholdRows|显示用于从哈希联接切换到嵌套循环联接的阈值。|
+|EstimatedJoinType|可能的联接类型。|
+|ActualJoinType|在实际计划中，显示根据阈值最终选择的联接算法。|
+
+估计的计划显示自适应联接计划形状，以及定义的自适应联接阈值和估计的联接类型。
+
+> [!TIP]
+> 查询存储可捕获并强制执行批处理模式自适应联接计划。
+
+### <a name="adaptive-join-eligible-statements"></a>符合自适应联接条件的语句
+以下多个条件可使逻辑联接符合批处理模式自适应联接的条件：
+- 数据库兼容性级别为 140 或更高级别。
+- 查询是 `SELECT` 语句（数据修改语句当前不符合条件）。
+- 联接符合同时由索引嵌套循环联接或哈希联接物理算法执行的条件。
+- 哈希联接将通过整体查询中的列存储索引状态或联接直接引用的列存储索引表使用[批处理模式](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)。
+- 嵌套循环联接和哈希联接生成的替代解决方案的第一个子级（外部引用）应相同。
+
+### <a name="adaptive-threshold-rows"></a>自适应阈值行
+下图显示了哈希联接的成本与嵌套循环联接替代的成本之间的示例交集。 在这个交点处，确定了阈值，该阈值将反过来确定将实际用于联接操作的算法。
+
+![联接阈值](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用自适应联接
+可在数据库或语句范围内禁用自适应联接，同时将数据库兼容性级别维持在 140 或更高。  
+若要对源自数据库的所有查询执行禁用自适应联接，请在对应数据库的上下文中执行以下命令：
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+启用后，此设置在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 将显示为已启用。
+若要对源自数据库的所有查询执行重新启用自适应联接，请在对应数据库的上下文中执行以下命令：
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+此外，将 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可为特定查询禁用自适应联接。 例如：
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。 
+
 ## <a name="nulls_joins"></a> NULL 值和联接
 联接表的列中的 null 值（如果有）互相不匹配。 如果其中一个联接表的列中出现空值，只能通过外部联接返回这些空值（除非 `WHERE` 子句不包括空值）。     
 
@@ -236,7 +355,3 @@ NULL        three  NULL        NULL
 [数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [子查询](../../relational-databases/performance/subqueries.md)      
 [自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

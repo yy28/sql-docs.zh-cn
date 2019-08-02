@@ -9987,22 +9987,8 @@
           items:
             - name: SSMS 的支持策略
               href: ssms/support-policy.md
-            - name: 企业用户支持选项
-              href: 'https://support.microsoft.com/gp/support-options-for-business'
-            - name: 联系 Microsoft
-              href: 'https://support.microsoft.com/gp/contactus81?Audience=Commercial'
-            - name: 获取帮助的所有方式
+            - name: 反馈和帮助
               href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
-            - name: UserVoice - 改进 SQL Server 的建议？
-              href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: 安装和升级 - MSDN 论坛
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc'
-            - name: Transact-SQL - MSDN 论坛
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql'
-            - name: Stack Overflow
-              href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Microsoft SQL Server 许可条款和许可证信息
-              href: 'https://www.microsoft.com/download/details.aspx?id=39299'
             - name: SSMS 中的用户协助
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名使用情况数据
@@ -10444,28 +10430,12 @@
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: 第 9 频道上的 SQL >
           href: 'https://channel9.msdn.com/Search'
-    - name: 博客
-      items:
-        - name: SQL Server >
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server 数据库引擎 >
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 安全性 >
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools >
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: 反馈和帮助
+    - name: 帮助
       items:
         - name: 获取帮助
           href: sql-server/sql-server-get-help.md
-        - name: 有关 SQL 文档内容的反馈 >
-          href: 'https://aka.ms/sqldocsfeedback'
-        - name: 有关 SQL Server (UserVoice) 的反馈 >
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL 文档调查 >
-          href: 'https://aka.ms/sqldocsurvey'
-        - name: 参与编辑 SQL 文档！
-          href: sql-server/sql-server-docs-contribute.md
+        - name: SQL Docs 导航提示
+          href: sql-server/sql-docs-navigation-guide.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >
@@ -10474,6 +10444,24 @@
           href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
+    - name: 博客
+      items:
+        - name: SQL Server >
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: 数据库引擎 >
+          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
+        - name: 安全性 >
+          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
+        - name: Data Tools >
+          href: 'https://blogs.msdn.microsoft.com/ssdt/'
+    - name: 反馈
+      items:
+        - name: SQL Docs >
+          href: 'https://aka.ms/sqldocsfeedback'
+        - name: SQL Server >
+          href: 'https://feedback.azure.com/forums/908035-sql-server'
+        - name: 编辑 SQL 文档！
+          href: sql-server/sql-server-docs-contribute.md
     - name: 伙伴
       items:
         - name: 监视
@@ -10488,8 +10476,6 @@
       href: sql-server/sql-server-help-installation.md
 - name: 参考
   items:
-    - name: SQL 文档包括文件
-      href: sql-server/applies-to-includes.md
     - name: 已存档内容 (SQL 2005-2012) >
       displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'

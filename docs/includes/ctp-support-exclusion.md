@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: 522e06e85343a19f80490f07290a1435cebd2d77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220718"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419544"
 ---
-### <a name="enabled-deployment-scenarios"></a>启用的部署方案
+## <a name="enabled-deployment-scenarios"></a>启用的部署方案
 
-CTP 3.1 启用以下方案：
+CTP 3.2 启用以下方案：
 
-- 并行安装。 使用 SQL Server 2012 到 SQL Server 2017 的实例或 SQL Server 2019 CTP 3.0 或更高版本的其他实例，安装 SQL Server 2019 CTP 3.1 的实例。
+- 并行安装。 使用 SQL Server 2012 到 SQL Server 2017 的实例或 SQL Server 2019 CTP 3.0 或更高版本的其他实例，安装 SQL Server 2019 CTP 3.2 的实例。
    >[!NOTE]
    >虽然 SQL Server 2008 和 2008 R2 不会阻止并行安装，但它们与 SQL Server 2019 之间并没有共同支持的 Windows 操作系统版本。
-- 就地升级。 从 SQL Server 2012 到 SQL Server 2017 和 SQL Server CTP 3.0 的实例升级 SQL Server 2019 CTP 3.1 的实例。 不支持从低于 3.0 的 SQL Server 2019 CTP 进行升级，必须执行新的安装。
+- 就地升级。 从 SQL Server 2012 到 SQL Server 2017 和 SQL Server CTP 3.0 的实例升级 SQL Server 2019 CTP 3.2 的实例。 不支持从低于 3.0 的 SQL Server 2019 CTP 进行升级，必须执行新的安装。
    >[!NOTE]
    >虽然不会阻止从 SQL Server 2008 和 2008 R2 进行就地升级，但它们与 SQL Server 2019 之间并没有共同支持的 Windows 操作系统版本。
 
-### <a name="support"></a>支持
+## <a name="support"></a>支持
 
-SQL Server 2019 CTP 3.1 是预览版软件。 它未公开支持操作。 使用 [SQL 早期采用者计划](http://aka.ms/sqleap)的客户可能经与 Microsoft 磋商后，可按特殊协议运行 SQL Server 2019 CTP 3.1。
+SQL Server 2019 CTP 3.2 是预览版软件。 它未公开支持操作。 使用 [SQL 早期采用者计划](http://aka.ms/sqleap)的客户可能经与 Microsoft 磋商后，可按特殊协议运行 SQL Server 2019 CTP 3.2。
 
 对于未使用早期采用计划的客户，可在以下位置之一找到有限支持：
 
