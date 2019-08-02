@@ -8,12 +8,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff4d0839cfdf24b1b43fe9d5a371092713bc63cf
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470290"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715797"
 ---
 #  <a name="get-r-and-python-package-information"></a>获取 R 和 Python 包信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-(可选) 可以在较新版本的 RevoScaleR 中使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) , SQL Server 2017 机器学习服务或[r Services 至少升级 r 到 RevoScaleR 9.0.1](../install/upgrade-r-and-python.md)。 此存储过程返回 SQL Server 使用的实例库路径和 RevoScaleR 的版本:
+(可选) 可以在较新版本的 RevoScaleR 中使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) , SQL Server 机器学习服务或[r Services 至少升级 r 到 RevoScaleR 9.0.1](../install/upgrade-r-and-python.md)。 此存储过程返回 SQL Server 使用的实例库路径和 RevoScaleR 的版本:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>获取 Python 库位置
 
-对于 SQL Server 2017 中的**Python** , 请运行以下语句来验证当前实例的默认库。 此示例返回 Python `sys.path`变量中包含的文件夹的列表。 此列表包括当前目录和标准库路径。
+对于**Python**, 请运行以下语句来验证当前实例的默认库。 此示例返回 Python `sys.path`变量中包含的文件夹的列表。 此列表包括当前目录和标准库路径。
 
 ```sql
 EXECUTE sp_execute_external_script

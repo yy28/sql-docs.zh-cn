@@ -7,12 +7,13 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470136"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715678"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 中使用存储过程的操作 R 代码机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "68470136"
 
 评分是一项重要的任务, 可以轻松地自动执行, 也可以从外部应用程序启动。 您可以事先使用 R、Python 或存储过程来训练模型, 并将[模型以二进制格式保存](../tutorials/walkthrough-build-and-save-the-model.md)到表中。 然后, 可以使用以下选项之一, 将该模型作为存储过程调用的一部分加载到变量中:
 
-+ [实时](../real-time-scoring.md)评分, 针对小型批处理进行了优化
++ [针对小型批处理优化的实时评分
 + 单行评分, 用于从应用程序调用
 + [本机评分](../sql-native-scoring.md), 适用于不调用 R 的 SQL Server 中的快速批预测
 

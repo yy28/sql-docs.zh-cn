@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 072d2c2e8843b17b3a4ccfeed16bd0916ce501e7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d494329a52f73d489350792b6f43e138f3618a8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468637"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714665"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教程：适用于 R 数据科学家的 SQL 开发
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68468637"
 
 ## <a name="prerequisites"></a>先决条件
 
-+ [SQL Server 2017 机器学习服务与 R 集成](../install/sql-machine-learning-services-windows-install.md#verify-installation)或[SQL Server 2016 r 服务](../install/sql-r-services-windows-install.md)
++ [SQL Server 机器学习服务与 r 集成](../install/sql-machine-learning-services-windows-install.md#verify-installation)或[SQL Server 2016 R 服务](../install/sql-r-services-windows-install.md)
 
 + [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录
 
@@ -67,7 +68,7 @@ ms.locfileid: "68468637"
 在 SQL Server 上安装包有多个选项。 例如, SQL Server 提供[R 包管理](../r/install-additional-r-packages-on-sql-server.md)功能, 使数据库管理员可以创建包存储库, 并为用户分配安装其自己的包的权限。 但是, 如果您是计算机上的管理员, 则只要您将安装到正确的库中, 就可以使用 R 安装新的包。
 
 > [!NOTE]
-> 在服务器**上, 即使**出现提示, 也不要安装到用户库。 如果安装到用户库, SQL Server 实例无法找到或运行包。 有关详细信息, 请参阅[SQL Server 上的 "安装新的 R 包"](../r/install-additional-r-packages-on-sql-server.md)。
+> 在服务器上,即使出现提示, 也不要安装到用户库。 如果安装到用户库, SQL Server 实例无法找到或运行包。 有关详细信息, 请参阅[SQL Server 上的 "安装新的 R 包"](../r/install-additional-r-packages-on-sql-server.md)。
 
 1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上，**以管理员身份**打开 RGui.exe。  如果已使用默认值安装 SQL Server R Services, 则可在 C:\Program Files\Microsoft SQL Server\MSSQL13. 中找到 Rgui.exe。MSSQLSERVER\R_SERVICES\bin\x64).
 

@@ -1,18 +1,19 @@
 ---
 title: revoscalepy Python 包
-description: 通过 Python SQL Server 2017 机器学习服务中的 revoscalepy 模块简介。
+description: 有关 Python SQL Server 机器学习服务中的 revoscalepy 模块简介。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 76c68d0753c4ba29387b3378c1086ce9bce4f53b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470329"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715768"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server 中的 Python 模块)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68470329"
 
 **Revoscalepy**模块基于 Python 3.5, 仅在安装以下 Microsoft 产品或下载之一时可用:
 
-+ [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更高版本](https://docs.microsoft.com/machine-learning-server/)
 + [用于数据科学客户端的 Python 客户端库](setup-python-client-tools-sql.md)
 
@@ -89,7 +90,7 @@ ms.locfileid: "68470329"
 
 | Functions| 描述|
 | ------- | ---------- |
-| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 从定型模型生成预测|) | 从定型模型生成预测, 并可用于实时计分。 |
+| [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 从定型模型生成预测|“应用程序适配器” 区域） | 从定型模型生成预测, 并可用于实时评分。 |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | 使用 rx_lin_mod 和 rx_logit 对象计算预测值和残差。 |
 |[rx_predict_rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dforest) | 为 rx_dforest 或 rx_btrees 对象中的数据集计算预测值或拟合值。 |
 |[rx_predict_rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-rx-dtree) | 为 rx_dtree 对象中的数据集计算预测值或拟合值。 |

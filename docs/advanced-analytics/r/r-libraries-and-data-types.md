@@ -1,18 +1,19 @@
 ---
 title: R 到 SQL 数据类型转换
-description: 查看数据科学和机器学习解决方案中 R 与 SQL Server 之间的隐式和显式数据类型 converstions。
+description: 查看数据科学和机器学习解决方案中 R 与 SQL Server 之间的隐式和显式数据类型转换。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470060"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715093"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 与 SQL Server 之间的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ ms.locfileid: "68470060"
 
 ## <a name="base-r-version"></a>基本 R 版本
 
-SQL Server 2016 R Services 和 SQL Server 2017 机器学习服务 with R, 与 Microsoft R Open 的特定版本保持一致。 例如, 最新版本 SQL Server 2017 机器学习服务在 Microsoft R Open 3.3.3 上构建。
+SQL Server 2016 R Services 和 SQL Server 机器学习服务 R, 与 Microsoft R Open 的特定版本保持一致。 例如, 最新版本 SQL Server 机器学习服务是在 Microsoft R Open 3.3.3 上构建的。
 
 若要查看与 SQL Server 的特定实例关联的 R 版本, 请打开**rgui.exe**。 对于默认实例, 路径将如下所示:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 

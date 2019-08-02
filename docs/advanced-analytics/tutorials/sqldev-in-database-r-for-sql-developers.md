@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470573"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715378"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教程：适用于 SQL 开发人员的 R 数据分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68470573"
 
 本教程假定你熟悉基本数据库操作, 例如创建数据库和表、导入数据以及编写 SQL 查询。 它不会假设你知道 R。因此, 提供了所有 R 代码。 
 
-+ [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation)或[SQL Server 2017 机器学习服务启用 r](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [启用 r 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation) [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation)或 SQL Server
 
 + [R 库](../package-management/installed-package-information.md)
 

@@ -8,13 +8,13 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 024ddc72ae2b0a2c443546148a66d0fa85060cb6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469200"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714741"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中的 R 中创建基于分区的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68469200"
 > * 在每个分区上创建和训练模型, 并将对象存储在数据库中。
 > * 预测每个分区模型上的 tip 结果的概率, 使用为此目的而保留的示例数据。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
  
 若要完成本教程, 您必须具备以下各项:
 

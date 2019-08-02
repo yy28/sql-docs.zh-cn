@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4109399386f119123591bb917f81290eebe7476e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7eb32a6ba915328a7f6a6baccdc948f534da1a09
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469712"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715551"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>在 SQL Server 文件和 XDF 文件之间移动数据 (SQL Server 和 RevoScaleR 教程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "68469712"
         overwrite = TRUE)
     ```
   
-    **RxImport 函数**返回的`ccFraud.xdf`  对象是一个轻型RxXdfData数据源对象,该对象表示存储在本地`localDs`磁盘上的数据文件。
+    **RxImport 函数**返回的`ccFraud.xdf` 对象是一个轻型RxXdfData数据源对象,该对象表示存储在本地`localDs`磁盘上的数据文件。
   
 7. 对 XDF 文件调用 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 以验证数据架构是否相同。
   

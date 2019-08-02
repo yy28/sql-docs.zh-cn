@@ -1,29 +1,30 @@
 ---
 title: 安装新的 Python 语言包
-description: 将新的 Python 包添加到 SQL Server 2017 机器学习服务 (数据库内) 和 Machine Learning Server (独立)。
+description: 将新的 Python 包添加到 SQL Server 机器学习服务 (数据库内) 和 Machine Learning Server (独立)。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470255"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715806"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>在 SQL Server 上安装新的 Python 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍如何在 SQL Server 2017 机器学习服务的实例上安装新的 Python 包。 通常, 安装新包的过程与标准 Python 环境中的过程类似。 但是, 如果服务器没有 internet 连接, 则需要执行一些其他步骤。
+本文介绍如何在 SQL Server 机器学习服务的实例上安装新的 Python 包。 通常, 安装新包的过程与标准 Python 环境中的过程类似。 但是, 如果服务器没有 internet 连接, 则需要执行一些其他步骤。
 
 有关包位置和安装路径的详细信息, 请参阅[获取 R 或 Python 包信息](../package-management/installed-package-information.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-+ 通过 Python language 选项[SQL Server 2017 机器学习服务 (数据库内)](../install/sql-machine-learning-services-windows-install.md) 。 
++ 通过 Python language 选项[SQL Server 机器学习服务 (数据库内)](../install/sql-machine-learning-services-windows-install.md) 。 
 
 + 包必须符合 Python 3.5 标准并在 Windows 上运行。 
 

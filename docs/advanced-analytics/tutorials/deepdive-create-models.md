@@ -7,19 +7,20 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 65d5d999df39909a5419883736686c5bc22e0062
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469809"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714877"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>创建 R 模型 (SQL Server 和 RevoScaleR 教程)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本课程是有关如何在 SQL Server 中使用[RevoScaleR 函数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)的[RevoScaleR 教程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)的一部分。
 
-既然您已丰富了定型数据, 就可以使用回归建模来分析数据了。 线性模型是预测分析领域的一项重要工具, **RevoScaleR**包包含可细分工作负荷并并行运行该工作负荷的回归算法。
+您已经丰富了定型数据。 现在可以使用回归建模来分析数据。 线性模型是预测分析领域的一项重要工具。 **RevoScaleR**包包含可细分工作负荷并并行运行的回归算法。
 
 > [!div class="checklist"]
 > * 创建线性回归模型

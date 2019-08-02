@@ -1,20 +1,21 @@
 ---
 title: 如何创建 R 和 Python 的资源池
-description: 为 SQL Server 2016 或 SQL Server 2017 数据库引擎实例上的 R 或 Python 进程定义 SQL Server 资源池。
+description: 为 SQL Server 数据库引擎实例上的 R 或 Python 进程定义 SQL Server 资源池。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344067"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715907"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中创建机器学习的资源池
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>如何为 SQL Server 机器学习服务创建资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何创建和使用专门用于管理 SQL Server 中的 R 和 Python 机器学习工作负荷的资源池。 它假定您已经安装并启用了机器学习功能, 并且想要重新配置实例, 以支持由 R 或 Python 等外部进程使用的资源的更精细管理。
@@ -188,7 +189,7 @@ ms.locfileid: "68344067"
   
      在本例中，由于池是使用 AUTO 相关性创建的，因此未显示任何信息。 有关详细信息，请参阅 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="next-steps"></a>后续步骤
 
 有关管理服务器资源的详细信息, 请参阅:
 

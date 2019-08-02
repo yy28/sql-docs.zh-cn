@@ -3,16 +3,17 @@ title: R 语言和 Python 脚本的扩展性体系结构
 description: 对 SQL Server 数据库引擎的外部代码支持, 其中包含用于在关系数据上运行 R 和 Python 脚本的双体系结构。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470459"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715257"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 中的扩展性体系结构机器学习服务 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server 具有可扩展性框架, 可用于在服务器上运行外部脚本,
 
 ## <a name="background"></a>背景
 
-扩展性框架是 SQL Server 2016 中引入的, 用于支持 R 运行时。 SQL Server 2017 添加对 Python 的支持
+扩展性框架是 SQL Server 2016 中引入的, 用于支持 R 运行时。 SQL Server 2017 和更高版本支持 Python。
 
 扩展性框架的用途是在 SQL Server 和数据科学语言 (例如 R 和 Python) 之间提供一个接口, 以便在将数据科学解决方案移动到生产环境中时减少摩擦, 并保护开发期间公开的数据正在. 通过在 SQL Server 管理的安全框架中执行受信任的脚本语言, 数据库管理员可以保持安全性, 同时允许数据科学家访问企业数据。
 
@@ -55,8 +56,8 @@ SQL Server 具有可扩展性框架, 可用于在服务器上运行外部脚本,
 
 | 受信任启动器 | 扩展名 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
-| R 语言的 RLauncher | [R 扩展](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| 用于 Python 3.5 的 Pythonlauncher | [Python 扩展](extension-python.md) | SQL Server 2017 |
+| R 语言的 RLauncher | [R 扩展](extension-r.md) | SQL Server 2016 及更高版本 |
+| 用于 Python 3.5 的 Pythonlauncher | [Python 扩展](extension-python.md) | SQL Server 2017 及更高版本 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在其自身的用户帐户下运行。 如果更改运行快速启动板的帐户, 请务必使用 SQL Server 配置管理器执行此操作, 以确保将更改写入相关文件。
 
@@ -70,7 +71,7 @@ SQL Server 具有可扩展性框架, 可用于在服务器上运行外部脚本,
 
 实际上, BxlServer 是与用于传输数据和管理任务的 SQL Server 语言运行时环境的配套。 BXL 代表二进制交换语言, 是指用于在 SQL Server 和外部进程之间有效移动数据的数据格式。 BxlServer 也是相关产品 (如 Microsoft R Client 和 Microsoft R Server) 的重要组成部分。
 
-**SQL 附属**项是一个可扩展 API, 它包含在从 SQL Server 2016 开始的数据库引擎中, 支持使用 C 或C++实现的外部代码或外部运行时。
+**SQL 附属**项是一个包含在数据库引擎中的扩展性 API, 它支持使用 C 或C++实现的外部代码或外部运行时。
 
 BxlServer 使用 SQL Satellite 执行以下任务：
 

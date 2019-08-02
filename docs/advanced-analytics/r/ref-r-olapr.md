@@ -1,18 +1,19 @@
 ---
 title: olapR R 函数库
-description: SQL Server 2016 R Services 中的 olapR 函数库简介和 SQL Server 2017 机器学习服务 with R。
+description: SQL Server 2016 R Services 中的 olapR 函数库简介, 以及 R SQL Server 机器学习服务。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 674e4ed4d1967452093e81e7bb4f5518d9237cf6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469975"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714999"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server 中的 R 库)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ library(olapR)
 
 产品 | Location |
 --------|----------|
-SQL Server 2017 机器学习服务 (带 R 集成) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
+SQL Server 机器学习服务 (包含 R 集成) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |

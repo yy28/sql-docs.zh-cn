@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2a149b4a98ec6c3a1d35cb499dcd391d87216752
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e49b843b0b32969bd440177cf445916487ad2670
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470263"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715204"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server 中的默认 R 和 Python 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ ms.locfileid: "68470263"
 
 ## <a name="r-package-list-for-sql-server"></a>SQL Server 的 R 包列表
 
-如果在安装过程中选择 R 功能, 则 r 包与[SQL Server 2016 r 服务](../install/sql-r-services-windows-install.md)和[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)一起安装。 
+如果在安装过程中选择 R 功能, 则 r 包与[SQL Server 2016 r 服务](../install/sql-r-services-windows-install.md)和[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)一起安装。 
 
 |包         | 2016 | 2017 | 描述 |
 |----------------|--------------|--------------|-------------|
@@ -30,11 +31,11 @@ ms.locfileid: "68470263"
 | [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | 在 R 中添加机器学习算法。 | 
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | 用于在 R 中编写 MDX 语句。 |
 
-默认情况下, MicrosoftML 和 olapR 在 SQL Server 2017 机器学习服务中可用。 在 SQL Server 2016 R Services 实例上, 可以通过[组件升级](../install/upgrade-r-and-python.md)添加这些包。 组件升级还会获取较新版本的包 (例如, 较新版本的 RevoScaleR 包含 SQL Server 上的包管理功能)。
+默认情况下, MicrosoftML 和 olapR 在 SQL Server 机器学习服务中可用。 在 SQL Server 2016 R Services 实例上, 可以通过[组件升级](../install/upgrade-r-and-python.md)添加这些包。 组件升级还会获取较新版本的包 (例如, 较新版本的 RevoScaleR 包含 SQL Server 上的包管理功能)。
 
 ## <a name="python-package-list-for-sql-server"></a>SQL Server 的 Python 包列表
 
-当你安装[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)并选择 python 功能时, python 包仅在 SQL Server 2017 中提供。
+当你安装[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)并选择 python 功能时, python 包仅在 SQL Server 2017 中提供。
 
 | 包         | 2017    |  描述 |
 | -----------------|-------------|------------|
@@ -52,7 +53,7 @@ R 支持包括开源, 因此你可以调用基本 R 函数并安装其他开源�
 |发行版本             | R 版本       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 切勿手动覆盖通过 web 上的更新版本 SQL Server 安装程序安装的 R 版本。 Microsoft R 包基于特定版本的 R。修改安装可能会使其不稳定。
 
@@ -64,7 +65,7 @@ SQL Server 2017 机器学习是支持 R 和 Python 的第一版。
 
 |发行版本             | Anaconda 版本| Microsoft 包    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2017 机器学习服务  | 4.2 over Python 3。5 | revoscalepy、microsoftml |
+| SQL Server 机器学习服务  | 4.2 over Python 3。5 | revoscalepy、microsoftml |
 
 切勿手动覆盖 SQL Server 安装程序安装了 web 上的更新版本。 Microsoft Python 包基于 Anaconda 的特定版本。 修改安装会使其不稳定。
 

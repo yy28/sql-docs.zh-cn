@@ -1,30 +1,29 @@
 ---
 title: 在 Windows 上安装 SQL Server 机器学习服务 (数据库内)
-description: 有关 Windows 上 SQL Server 2017 机器学习服务 SQL Server 安装步骤的 SQL Server 或 Python 中的 R。
+description: 有关 Windows 上 SQL Server 机器学习服务的 SQL Server 安装步骤中的 R SQL Server 或 Python。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470448"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715219"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-从 SQL Server 2017 开始, 对数据库内分析的 R 和 Python 支持在**SQL Server 机器学习服务**中提供, SQL Server 2016 中引入[SQL Server R Services](../r/sql-server-r-services.md)的后续版本。 函数库在 R 和 Python 中可用，并作为外部脚本在数据库引擎实例上运行。 
-
 本文介绍如何通过运行 SQL Server 安装向导并按照屏幕上的提示来安装机器学习组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
 ## <a name="bkmk_prereqs"></a>预安装清单
 
-+ 如果要安装 R 或 Python 语言支持机器学习服务, 则需要安装 SQL Server 2017 (或更高版本)。 而如果你拥有 SQL Server 2016 安装介质，则可以安装 [SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)以获得 R 语言支持。
++ 如果要安装 R 或 Python 语言支持机器学习服务, 则需要安装 SQL Server 2017 (或更高版本)。 如果你已 SQL Server 2016 安装介质, 则可以安装[SQL Server R Services (数据库内)](sql-r-services-windows-install.md)以获取 R 语言支持。
 
 + 数据库引擎实例为必需项。 不能只安装 R 或 Python 功能，但可以将它们逐步添加到现有实例中。
 
@@ -58,7 +57,7 @@ ms.locfileid: "68470448"
 
    ![新 SQL Server 独立安装](media/2017setup-installation-page-mlsvcs.PNG)
    
-3. 在“功能选择”  页上，选择以下选项：
+3. 在“功能选择” 页上，选择以下选项：
   
     -   **数据库引擎服务**
   
@@ -283,8 +282,7 @@ ms.locfileid: "68470448"
 
 要通过 SQL Server 使用的包必须安装在实例使用的默认库中。 如果在计算机上单独安装 R，或者将软件包安装到用户库，则无法使用 T-SQL 中的这些包。
 
-在 SQL Server 2016 和 SQL Server 2017 中，安装和管理 R 包的过程是不同的。 在 SQL Server 2016 中，数据库管理员必须安装用户需要的 R 包。 在 SQL Server 2017 中，可以设置用户组以在每个数据库级别上共享包，或者配置数据库角色以使用户能够安装自己的包。 有关详细信息, 请参阅[在 SQL Server 中安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)。
-
+若要安装和管理 R 包, 你可以将用户组设置为在每个数据库级别共享包, 或者配置数据库角色以使用户能够安装自己的包。 有关详细信息, 请参阅[在 SQL Server 中安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

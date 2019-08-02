@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470623"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714884"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程：将 RevoScaleR R 函数与 SQL Server 数据结合使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "68470623"
 
 ## <a name="prerequisites"></a>系统必备
 
-+ [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)r 功能, 或[SQL Server 2016 r Services (数据库内)](../install/sql-r-services-windows-install.md)
++ [SQL Server](../install/sql-machine-learning-services-windows-install.md)具有 R 功能的机器学习服务或[SQL Server R Services (数据库内)](../install/sql-r-services-windows-install.md)
   
 + [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录
 
@@ -31,7 +32,7 @@ ms.locfileid: "68470623"
 
 + IDE (如 RStudio) 或 R 附带的内置 RGUI.EXE 工具
 
-若要在本地和远程计算上下文之间来回切换, 需要两个系统。 本地通常是一种开发工作站, 充分强大的数据科学工作负荷。 在这种情况下, 远程在启用 R 功能 SQL Server 2017 或 SQL Server 2016。 
+若要在本地和远程计算上下文之间来回切换, 需要两个系统。 本地通常是一种开发工作站, 充分强大的数据科学工作负荷。 在这种情况下, 远程在启用 R 功能 SQL Server。 
 
 切换计算上下文的依据是在本地和远程系统上都具有相同版本的**RevoScaleR** 。 在本地工作站上, 你可以通过安装 Microsoft R Client 来获取**RevoScaleR**包和相关的提供程序。
 

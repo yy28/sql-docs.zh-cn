@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 439b21bce4e081025db1db53ab44498415ca44af
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470601"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715417"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 在 SQL Server 上运行自定义 R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,9 +24,9 @@ ms.locfileid: "68470601"
 
 在本教程中, 你将使用模拟数据来演示在远程服务器上运行的自定义 R 函数的执行。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
-+ [SQL Server 2017 机器学习服务 (带 R)](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services (数据库内)](../install/sql-r-services-windows-install.md)
++ [SQL Server 机器学习服务 (带 R)](../install/sql-machine-learning-services-windows-install.md)或[SQL Server 2016 R Services (数据库内)](../install/sql-r-services-windows-install.md)
   
 + [数据库权限](../security/user-permission.md)和 SQL Server 数据库用户登录
 
@@ -145,7 +146,7 @@ ms.locfileid: "68470601"
 
 虽然这种做法很简单, 但它演示了在 SQL Server 上运行的 R 脚本中集成任意 R 函数的重要机制。 总结实现此方法的关键点:
 
-+ 必须为机器学习和 R 集成配置 SQL Server:[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)r 功能, 或[SQL Server 2016 R Services (数据库内)](../install/sql-r-services-windows-install.md)。
++ 必须为机器学习和 R 集成配置 SQL Server:[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)r 功能, 或[SQL Server 2016 R Services (数据库内)](../install/sql-r-services-windows-install.md)。
 
 + 函数中使用的开源或第三方库 (包括任何依赖项) 必须安装在 SQL Server 上。 有关更多信息，请参阅[安装新 R 包](../r/install-additional-r-packages-on-sql-server.md)。
 

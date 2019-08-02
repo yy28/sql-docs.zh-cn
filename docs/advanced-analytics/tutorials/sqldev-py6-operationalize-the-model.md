@@ -7,12 +7,13 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b04e57c45c6113d4a0404a3a338e6beba4cda813
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468599"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715354"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>使用存储过程中嵌入的 Python 运行预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68468599"
 - 要使用的确切模型的名称作为输入参数提供给存储过程。 该存储过程从数据库表`nyc_taxi_models`中加载序列化模型。表中, 使用存储过程中的 SELECT 语句。
 - 序列化模型存储在 python 变量`mod`中以供使用 Python 进一步处理。
 - 需要评分的新案例是从中[!INCLUDE[tsql](../../includes/tsql-md.md)] `@input_data_1`指定的查询获取的。 读取查询数据时，行保存在默认数据帧 `InputDataSet`中。
-- 这两个存储过程都`sklearn`使用中的函数来计算准确性指标 AUC (曲线下的区域)。 仅当还提供目标标签 (带标签_的列)_ 时, 才能生成 AUC 等准确性指标。 预测不需要目标标签 (变量`y`), 但准确性指标计算。
+- 这两个存储过程都`sklearn`使用中的函数来计算准确性指标 AUC (曲线下的区域)。 仅当还提供目标标签 (带标签的列) 时, 才能生成 AUC 等准确性指标。 预测不需要目标标签 (变量`y`), 但准确性指标计算。
 
     因此, 如果没有要评分的数据的目标标签, 则可以修改该存储过程以删除 AUC 计算, 并仅返回功能 (存储过程中的变量`X` ) 中的提示概率。
 
@@ -45,7 +46,7 @@ ms.locfileid: "68468599"
 
 Rrun 以下 T-sql 语句来创建存储过程。 此存储过程需要基于 scikit-learn 包的模型, 因为它使用特定于该包的函数:
 
-+ 包含输入的数据帧传递到逻辑回归`predict_proba` `mod`模型的函数。 函数 (`probArray = mod.predict_proba(X)`) 返回一个 float, 该对象表示给定 tip (任意数量) 的概率。  `predict_proba`
++ 包含输入的数据帧传递到逻辑回归`predict_proba` `mod`模型的函数。 函数 (`probArray = mod.predict_proba(X)`) 返回一个 float, 该对象表示给定 tip (任意数量) 的概率。 `predict_proba`
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;

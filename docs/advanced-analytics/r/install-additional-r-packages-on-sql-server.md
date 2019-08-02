@@ -1,18 +1,19 @@
 ---
 title: 安装新的 R 语言包
-description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务 (数据库内)
+description: 将新的 R 包添加到 SQL Server 2016 R Services 或 SQL Server 机器学习服务 (数据库内)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1048dc6ef0a43c5fa41dd5398a5b3dced4a5ebe8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470104"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715107"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>在 SQL Server 上安装新的 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ R 包库以物理方式位于 SQL Server 实例的 Program Files 文件夹中, �
 
 R 和 Python 功能包含在多个 Microsoft 产品中, 它们都可以共存于同一台计算机上。
 
-如果安装了 SQL Server 2017 Microsoft Machine Learning Server (独立版) 或 SQL Server 2016 R Server (独立版), 则除了数据库内分析 (SQL Server 2017 机器学习服务和 SQL Server 2016 R Services) 以外, 计算机的为每个安装 R, 其中包含所有 R 工具和库的重复项。
+如果安装了 SQL Server 2017 Microsoft Machine Learning Server (独立版) 或 SQL Server 2016 R Server (独立版), 则除了数据库内分析 (SQL Server 机器学习服务和 SQL Server 2016 R Services) 以外, 计算机的为每个安装 R, 其中包含所有 R 工具和库的重复项。
 
 安装到 R_SERVER 库的包仅供独立服务器使用, 不能由 SQL Server (数据库内) 实例访问。 安装要在`R_SERVICES` SQL Server 中使用的数据库的包时, 请始终使用库。 有关路径的详细信息, 请参阅[包库位置](../package-management/default-packages.md)。
 

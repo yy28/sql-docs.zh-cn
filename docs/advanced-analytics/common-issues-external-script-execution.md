@@ -2,21 +2,22 @@
 title: 启动板服务和外部脚本执行的常见问题
 ms.prod: sql
 ms.technology: ''
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c90c59f3b59850bb0e2d1cf4cf40eb569e965eba
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470485"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715283"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server 中的快速启动板服务和外部脚本执行的常见问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- SQL Server 受信任的快速启动板服务支持 R 和 Python 的外部脚本执行。 在 SQL Server 2016 R Services 中, SP1 提供服务。 SQL Server 2017 在初始安装过程中包括启动板服务。
+SQL Server 受信任的快速启动板服务支持 R 和 Python 的外部脚本执行。 
 
 多个问题可能会阻止启动板启动, 包括配置问题或更改或缺少网络协议。 本文提供了许多问题的疑难解答指南。 对于缺少的任何内容, 你可以将问题发布到[Machine Learning Server 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)。
 
@@ -76,6 +77,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 此部分列出了快速启动板返回的最常见错误消息。
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>"无法启动 R 脚本的运行时"
 
 如果 R 用户的 Windows 组 (也用于 Python) 无法登录到运行 R Services 的实例, 你可能会看到以下错误:
@@ -94,10 +96,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *安全日志指示帐户 NT 服务无法登录*
 
-有关如何授予此用户组所需权限的信息, 请参阅[Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md)。
+有关如何授予此用户组所需权限的信息, 请参阅[Install SQL Server R Services](install/sql-r-services-windows-install.md)。
 
 > [!NOTE]
 > 如果使用 SQL 登录名从远程工作站运行 R 脚本，则没有此限制。
+::: moniker-end
 
 ## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"登录失败: 未向用户授予请求的登录类型"
 
@@ -183,9 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 若要解决此问题, 必须将包重新安装到 SQL Server 实例库。
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
 >如果已将 SQL Server 2016 的实例升级为使用最新版本的 Microsoft R, 则默认库位置不同。 有关详细信息, 请参阅[使用 SqlBindR 升级 R Services 的实例](install/upgrade-r-and-python.md)。
+::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>由于 Dll 不匹配, 快速启动板关闭
 
 如果使用其他功能安装数据库引擎, 修补服务器, 然后使用原始媒体添加机器学习功能, 可能会安装错误的机器学习组件版本。 当启动板检测到版本不匹配时, 它将关闭并创建转储文件。
@@ -224,7 +230,7 @@ EXEC sp_execute_external_script @language = N'R',
 3. 使用带有*file*参数的 fsutil 实用工具为在 WORKING_DIRECTORY 中指定的文件夹指定短文件路径。
 
 4. 编辑配置文件以指定在 WORKING_DIRECTORY 属性中输入的相同工作目录。 或者, 您可以指定一个不同的工作目录, 并选择与8dot3 表示法已兼容的现有路径。
-
+::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -7,17 +7,18 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469959"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715604"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上为 R 开发设置数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-如果在[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 2017 机器学习服务(数据库内)](../install/sql-machine-learning-services-windows-install.md)安装中含入了R语言选项，可以在SQL Server 2016或更高版本中使用R集成。 
+如果在[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 机器学习服务 (数据库内)](../install/sql-machine-learning-services-windows-install.md)安装中包括 r language 选项, 则 r 集成在 SQL Server 2016 或更高版本中可用。 
 
 若要为 SQL Server 开发和部署 R 解决方案, 请在开发工作站上安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) , 以获取[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他 R 库。 RevoScaleR 库在远程 SQL Server 实例上也是必需的, 用于协调两个系统之间的计算请求。 
 

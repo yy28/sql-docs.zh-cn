@@ -2,16 +2,17 @@
 title: 机器学习的数据收集疑难解答
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3dbca20d974570d04d65fba30110049efad4e90d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c7566d9b25b15a334e48380daca6cb81e92f6a2b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470436"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715231"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>机器学习的数据收集疑难解答
 
@@ -19,13 +20,11 @@ ms.locfileid: "68470436"
 
 本文介绍了尝试自行解决问题时应使用的数据收集方法, 或与 Microsoft 客户支持部门的帮助。
 
-**适用范围：** SQL Server 2016 R Services SQL Server 2017 机器学习服务 (R 和 Python)
-
 ## <a name="sql-server-version-and-edition"></a>SQL Server 版本和版本
 
-SQL Server 2016 R Services 是 SQL Server 的第一版, 包括集成的 R 支持。 SQL Server 2016 Service Pack 1 (SP1) 包含多项重大改进, 包括运行外部脚本的能力。 如果你是 SQL Server 2016 客户, 则应考虑安装 SP1 或更高版本。
+SQL Server 2016 R Services 是 SQL Server 的第一版, 包括集成的 R 支持。 SQL Server 2016 Service Pack 1 (SP1) 包含多项重大改进, 包括运行外部脚本的能力。 如果你使用的是 SQL Server 2016, 你应考虑安装 SP1 或更高版本。
 
-SQL Server 2017 添加了 Python 语言集成。 无法在早期版本中获取 Python 功能集成。
+SQL Server 2017 及更高版本具有 Python 语言集成。 无法在早期版本中获取 Python 功能集成。
 
 若要获取版本和版本的帮助, 请参阅此文, 其中列出了每个[SQL Server 版本](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)的生成号。
 

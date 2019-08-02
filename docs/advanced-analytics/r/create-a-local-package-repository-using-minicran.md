@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 34b7fee6b5eef1503f56dd72c6d8ff10911bbdc1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a2324ad662cad2c91bc6e002fd652fed73d8ab3d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470213"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715764"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>使用 miniCRAN 创建本地 R 包存储库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ local_repo <- "C:/mylocalrepo"
 
 安装并加载**miniCRAN**后, 请创建一个列表, 指定要下载的其他包。
 
-不要向此初始**列表添加依赖**项。 **MiniCRAN**使用的**igraph**包为你生成依赖项列表。 有关如何使用生成的依赖项关系图的详细信息, 请参阅[使用 miniCRAN 识别包依赖关系](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)。
+不要向此初始列表添加依赖项。 **MiniCRAN**使用的**igraph**包为你生成依赖项列表。 有关如何使用生成的依赖项关系图的详细信息, 请参阅[使用 miniCRAN 识别包依赖关系](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html)。
 
 1. 将目标包 "zoo" 和 "预测" 添加到变量。
 

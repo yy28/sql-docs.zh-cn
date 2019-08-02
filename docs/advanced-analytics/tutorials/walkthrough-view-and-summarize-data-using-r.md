@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e209b707c3d04cef7709945dc2a32b171f90771e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 47850bebcc20fdd357b2336a9597da067cd479ca
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468836"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715365"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>使用 R 查看和汇总 SQL Server 数据 (演练)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "68468836"
     sqlConsoleOutput <- FALSE
     ```
 
-    - 在工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机之间来回序列化 R 对象时，R 会使用临时目录。 可指定用作 sqlShareDir 的本地目录，或者接受默认目录。
+    - 在工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机之间来回序列化 R 对象时，R 会使用临时目录。 可指定用作 sqlShareDir的本地目录，或者接受默认目录。
   
     - 使用*sqlWait*指示您是否希望 R 等待来自服务器的结果。  有关等待作业与非等待作业的讨论, 请参阅[使用 Microsoft R 中的 RevoScaleR 进行分布式和并行计算](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)。
   
@@ -114,7 +115,7 @@ ms.locfileid: "68468836"
       )
     ```
     
-    + colClasses   参数指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 R 间移动数据时要使用的列类型。这一点非常主要，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的数据类型不同于 R，且使用的数据类型更多。 有关详细信息, 请参阅[R 库和数据类型](../r/r-libraries-and-data-types.md)。
+    + colClasses 参数指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 R 间移动数据时要使用的列类型。这一点非常主要，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的数据类型不同于 R，且使用的数据类型更多。 有关详细信息, 请参阅[R 库和数据类型](../r/r-libraries-and-data-types.md)。
   
     + 参数*rowsPerRead*对于管理内存使用情况和高效计算非常重要。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中大多数增强的分析函数都可以处理区块中的数据并累积中间结果，并在读取所有的数据后返回最终的计算。  通过添加*rowsPerRead*参数, 您可以控制将多少行数据读入每个块区以便进行处理。  如果此参数的值太大, 数据访问速度可能会很慢, 因为没有足够的内存来有效处理此类大型数据块。  在某些系统中, 将*rowsPerRead*设置为过小的值还可以提供较慢的性能。
 

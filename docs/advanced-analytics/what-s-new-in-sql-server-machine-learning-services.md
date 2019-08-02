@@ -1,20 +1,20 @@
 ---
-title: 新增功能 |Microsoft Docs
-description: 适用于每个版本的 SQL Server 2016 R Services、R Server SQL Server 2017 机器学习服务的每个版本的新功能公告。
-ms.date: 05/22/2019
+title: 新增功能
+description: SQL Server 2016 R Services、R Server SQL Server 机器学习服务的每个版本的新功能公告。
+ms.date: 07/31/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c466c7e039e515be4ef65b4f5680ece2e1d861a8
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468977"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715306"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 中的新增功能机器学习服务
 
@@ -22,7 +22,7 @@ ms.locfileid: "68468977"
 
 将机器学习功能添加到每个版本的 SQL Server, 因为我们将继续扩展、扩展和加深数据平台、高级分析和数据科学之间的集成。 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019-preview"></a>2019 SQL Server 中的新增预览版
 
 此版本在 SQL Server 中添加 R 和 Python 机器学习操作的顶级请求功能。 有关此版本中所有功能的详细信息, 请参阅 SQL Server 2019 [SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)和[发行说明](../sql-server/sql-server-ver15-release-notes.md)中的新增功能。
@@ -32,13 +32,15 @@ ms.locfileid: "68468977"
 
 | 发行版本 | 功能更新 |
 |---------|----------------|
+| CTP 3.2 | 无更改。 |
+| CTP 3.1 | 无更改。 |
 | CTP 3.0 | 无更改。 |
 | CTP 2.5 | 无更改。 |
 | CTP 2.4 | Linux 支持创建适用于 R 和 Python 的[外部库 (transact-sql)](../t-sql/statements/create-external-library-transact-sql.md) 。 |
 | CTP 2.3 | 仅在 Windows 上, 可使用[CREATE EXTERNAL library (transact-sql)](../t-sql/statements/create-external-library-transact-sql.md)语句在外部库中访问 Python 代码。 |
 | CTP 2.2 | 无更改。 |
-| CTP 2.1 | 无更改。 |
-| CTP 2.0 | 适用于 R 和 Python 机器学习的 Linux 平台支持。 开始[在 Linux 上安装 SQL Server 机器学习服务](../linux/sql-server-linux-setup-machine-learning.md)。 |
+| CTP 2。1 | 无更改。 |
+| CTP 2。0 | 适用于 R 和 Python 机器学习的 Linux 平台支持。 开始[在 Linux 上安装 SQL Server 机器学习服务](../linux/sql-server-linux-setup-machine-learning.md)。 |
 |  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)引入了两个新参数, 可让你轻松地从分区数据生成多个模型。 有关详细信息, 请参阅本教程中的在[R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
 |   | Windows 和 Linux 现在支持故障转移群集支持, 前提是在所有节点上启动 SQL Server Launchpad 服务。 有关详细信息, 请参阅[SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
 
@@ -53,7 +55,7 @@ ms.locfileid: "68468977"
 
 ### <a name="r-enhancements"></a>R 增强功能
 
-SQL Server 2017 机器学习服务的 R 组件是下一代 SQL Server 2016 R 服务, 其中包含基本 R、RevoScaler 和其他包的更新版本。
+SQL Server 机器学习服务 R 组件是下一代 SQL Server 2016 R 服务, 其中包含基本 R、RevoScaler 和其他包的更新版本。
 
 适用于 R 的新功能包括[**包管理**](r/install-additional-r-packages-on-sql-server.md), 其中突出显示了以下内容: 
 
@@ -69,7 +71,7 @@ SQL Server 2017 机器学习服务的 R 组件是下一代 SQL Server 2016 R 服
 
 ### <a name="python-integration-for-in-database-analytics"></a>用于数据库内分析的 Python 集成
 
-Python 是一种语言, 可为各种机器学习任务提供极大的灵活性和强大功能。 用于 Python 的开源库包括可自定义的神经网络的多个平台以及用于自然语言处理的常用库。 现在, SQL Server 2017 机器学习支持这种广泛使用的语言。
+Python 是一种语言, 可为各种机器学习任务提供极大的灵活性和强大功能。 用于 Python 的开源库包括可自定义的神经网络的多个平台以及用于自然语言处理的常用库。 
 
 由于 Python 与数据库引擎集成, 你可以保持与数据接近的分析, 消除与数据移动相关的成本和安全风险。 你可以使用 Visual Studio 之类的工具基于 Python 部署机器学习解决方案。 使用 SQL Server 数据访问方法, 生产应用程序可以从 Python 3.5 运行时获取预测、模型或视觉对象。
 
@@ -93,6 +95,7 @@ Python 是一种语言, 可为各种机器学习任务提供极大的灵活性�
 此版本还添加了[SQL Server Machine Learning Server (独立)](r/r-server-standalone.md), 这是一个完全独立的数据科学服务器, 支持 R 和 Python 中的统计分析和预测分析。 对于 R 服务, 此服务器是 SQL Server 2016 R Server (独立版) 的下一版本。 对于独立服务器, 你可以分发和缩放 R 或 Python 解决方案, 但不依赖于 SQL Server。
 ::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016 中的新增项
 
 此版本引入了机器学习功能 SQL Server 通过**SQL Server 2016 R 服务**, 这是一个数据库内分析引擎, 用于处理数据库引擎实例中驻留数据的 R 脚本。
@@ -106,19 +109,23 @@ Python 是一种语言, 可为各种机器学习任务提供极大的灵活性�
 | CU 添加 | [**实时评分**](real-time-scoring.md)依赖于本机C++库来读取以优化二进制格式存储的模型, 然后生成预测, 而不必调用 R 运行时。 这使得评分操作的速度更快。 使用实时评分, 你可以运行存储过程或执行 R 代码的实时评分。 如果实例升级到的[!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]最新版本, 则还可用于 SQL Server 2016 的实时评分。 |
 | 初始版本 | [**用于数据库内分析的 R 集成**](r/sql-server-r-services.md)。 <br/><br/> 用于在 T-sql 中调用 R 函数的 r 包, 反之亦然。 RevoScaleR 函数通过将数据分块到组件部分、协调和管理分布式处理以及聚合结果, 大规模提供 R analytics。 在 SQL Server 2016 R Services (数据库内) 中, RevoScaleR 引擎与数据库引擎实例集成在一起, 并在相同的处理上下文中 brining 数据和分析。 <br/><br/>T-sql 和 R 与[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)的集成。 您可以使用此存储过程调用任何 R 代码。 利用此安全基础结构, 可以使用简单的存储过程通过应用程序调用 Rn 模型和脚本的企业级部署。 通过从 SQL 到 R 进程和 MPI 环形并行处理数据, 实现更高的性能提升。 <br/><br/>您可以使用 T-sql [PREDICT](../t-sql/queries/predict-transact-sql.md)函数对之前以所需二进制格式保存的预先训练的模型执行[本机评分](sql-native-scoring.md)。|
 
-## <a name="linux-support-roadmap"></a>Linux 支持路线图
+::: moniker-end
 
-SQL Server 2019 CTP 2.3 在使用数据库引擎实例安装机器学习包时添加了适用于 R 和 Python 的 Linux 支持。 有关详细信息, 请参阅[在 Linux 上安装 SQL Server 机器学习服务](../linux/sql-server-linux-setup-machine-learning.md)。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="linux-support"></a>Linux 支持
+
+SQL Server 2019 在使用数据库引擎实例安装机器学习包时, 会为 R 和 Python 添加 Linux 支持。 有关详细信息, 请参阅[在 Linux 上安装 SQL Server 机器学习服务](../linux/sql-server-linux-setup-machine-learning.md)。
 
 在 Linux 上, SQL Server 2017 没有 R 或 Python 集成, 但你可以使用 Linux 上的[本机计分](sql-native-scoring.md), 因为该功能可通过 t-sql[预测](../t-sql/queries/predict-transact-sql.md)(在 linux 上运行) 提供。 本机计分实现预先训练模型的高性能计分, 无需调用, 甚至无需调用 R 运行时。
+::: moniker-end
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>在 Azure SQL 数据库中机器学习服务
 
-Azure SQL 数据库中的机器学习服务 (R) 是公共预览。 有关详细信息, 请参阅[AZURE SQL Database 机器学习服务 With R (预览版)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)。
+Azure SQL 数据库中的机器学习服务是公开预览版。 有关详细信息, 请参阅[AZURE SQL 数据库机器学习服务 (预览版)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)。
 
 ## <a name="next-steps"></a>后续步骤
 
-+ [安装 SQL Server 2017 机器学习服务 (数据库内)](install/sql-machine-learning-services-windows-install.md)
++ [安装 SQL Server 机器学习服务 (数据库内)](install/sql-machine-learning-services-windows-install.md)
 + [机器学习教程和示例](tutorials/machine-learning-services-tutorials.md)

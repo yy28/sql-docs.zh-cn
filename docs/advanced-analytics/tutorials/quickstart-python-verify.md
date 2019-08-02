@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 98e89cf61e5c53793108a455873382da00a8ea35
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469697"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715454"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入门：验证 SQL Server 中是否存在 Python 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,11 +23,11 @@ SQL Server 包括对常驻 SQL Server 数据进行数据科学分析的 Python �
 + 内置的[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)存储过程, 将 Python 脚本作为输入参数传递。
 + 在您创建的[自定义存储过程](sqldev-in-database-r-for-sql-developers.md)中包装 Python 脚本。
 
-在本快速入门中, 你将验证是否已安装并配置[SQL Server 2017 机器学习服务](../what-is-sql-server-machine-learning.md)。
+在本快速入门中, 你将验证是否安装并配置了[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-此练习需要访问安装了[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)SQL Server 的实例。
+此练习需要访问安装了[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)的 SQL Server 实例。
 
 SQL Server 实例可位于 Azure 虚拟机或本地。 请注意, 默认情况下禁用外部脚本功能, 因此在开始之前, 您可能需要[启用外部脚本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证**SQL Server Launchpad 服务**是否正在运行。
 
@@ -59,7 +60,7 @@ SQL Server 实例可位于 Azure 虚拟机或本地。 请注意, 默认情况�
 
 如果遇到错误, 可以执行的各种操作, 以确保实例和 Python 可以进行通信。
 
-首先, 排除任何安装问题。 若要启用外部代码库, 必须安装安装后配置。 请参阅[安装 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。 同样, 请确保启动板服务正在运行。
+首先, 排除任何安装问题。 若要启用外部代码库, 必须安装安装后配置。 请参阅[Install SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。 同样, 请确保启动板服务正在运行。
 
 还必须将 Windows 用户组`SQLRUserGroup`作为登录名添加到实例上, 以确保快速启动板可以提供 Python 和 SQL Server 之间的通信。 (相同的组用于 R 和 Python 代码执行。)有关详细信息, 请参阅[创建 SQLRUserGroup 的登录名](../security/create-a-login-for-sqlrusergroup.md)。
 

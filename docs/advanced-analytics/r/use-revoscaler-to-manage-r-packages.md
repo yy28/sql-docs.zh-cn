@@ -6,19 +6,20 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8db20295c2e21b6499d4d935f9c99161983b588f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469889"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715585"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函数在 SQL Server 上查找或安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR 9.0.1 和更高版本包含 R 包管理的函数 SQL Server 计算上下文。 远程、非管理员可以使用这些函数在 SQL Server 上安装包, 而无需直接访问服务器。
 
-SQL Server 2017 机器学习服务已包含 RevoScaleR 的较新版本。 SQL Server 2016 R Services 客户必须执行[组件升级](../install/upgrade-r-and-python.md)才能获取 RevoScaleR 包管理功能。 有关如何检索包版本和内容的说明, 请参阅[获取包信息](../package-management/installed-package-information.md)。
+SQL Server 机器学习服务已包含 RevoScaleR 的较新版本。 SQL Server 2016 R Services 客户必须执行[组件升级](../install/upgrade-r-and-python.md)才能获取 RevoScaleR 包管理功能。 有关如何检索包版本和内容的说明, 请参阅[获取包信息](../package-management/installed-package-information.md)。
 
 ## <a name="revoscaler-functions-for-package-management"></a>用于包管理的 RevoScaleR 函数
 
@@ -33,7 +34,7 @@ SQL Server 2017 机器学习服务已包含 RevoScaleR 的较新版本。 SQL Se
 | [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 对于指定的计算上下文, 在文件系统和数据库之间复制有关包库的信息。 |
 | [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 从指定的计算上下文中删除包。 它还会计算依赖关系, 并确保删除 SQL Server 上其他包不再使用的包, 以释放资源。 |
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 + [在 SQL Server 上启用远程 R 包管理](r-package-how-to-enable-or-disable.md)
 

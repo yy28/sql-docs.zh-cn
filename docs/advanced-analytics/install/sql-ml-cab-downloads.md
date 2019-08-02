@@ -1,18 +1,19 @@
 ---
 title: SQL Server 累积更新的 CAB 下载
-description: 适用于 SQL Server 2017 机器学习服务和 SQL Server 2016 R Services 的 r 和 Python CAB 和包下载。
+description: 适用于 SQL Server 机器学习服务和 SQL Server 2016 R 服务的 r 和 Python CAB 和包下载。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470318"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715835"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server 数据库内分析实例的累积更新的 CAB 下载
 
@@ -20,16 +21,18 @@ ms.locfileid: "68470318"
 
 为数据库内分析配置的 SQL Server 实例包括 R 和 Python 功能。 这些功能随附在 CAB 文件中, 并通过 SQL Server 安装程序进行安装和提供服务。 在连接 internet 的设备上, CAB 更新通常通过 Windows 更新应用。 在断开连接的服务器上, 必须手动下载和应用 CAB 文件。 
 
-本文提供每个累积更新的 CAB 文件的下载链接。 同时为 SQL Server 2017 机器学习服务 (R 和 Python) 以及 SQL Server 2016 R 服务提供了链接。 有关脱机安装的详细信息, 请参阅[安装 SQL Server 机器学习组件, 无需访问 internet](sql-ml-component-install-without-internet-access.md#apply-cu)。
+本文提供每个累积更新的 CAB 文件的下载链接。 有关脱机安装的详细信息, 请参阅[安装 SQL Server 机器学习组件, 无需访问 internet](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
 ## <a name="prerequisites"></a>先决条件
 
 开始使用基线安装。
 
-+ 在 SQL Server 2017 机器学习服务上, 初始版本为基线安装。 
++ 在 SQL Server 机器学习服务上, 初始版本为基线安装。 
 + 在 SQL Server 2016 R 服务上, 可以从初始版本、SP1 或 SP2 开始。 
 
 你还可以对独立服务器应用累积更新。
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 Cab
 
@@ -88,6 +91,9 @@ CAB 文件按时间顺序反向列出。 下载 CAB 文件并将其传输到目�
 | | Microsoft Python 开放式     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 | | Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+::: moniker-end
+
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -134,7 +140,9 @@ CAB 文件按时间顺序反向列出。 下载 CAB 文件并将其传输到目�
 
 如果你想要查看 Microsoft R 的源代码, 则可以下载为 tar 格式的存档:[下载 R Server 安装程序](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>请参阅
+::: moniker-end
+
+## <a name="next-steps"></a>后续步骤
 
 [在无 internet 访问权限的计算机上应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)
 

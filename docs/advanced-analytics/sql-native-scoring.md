@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344756"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714953"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用预测 T-sql 函数的本机计分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,9 +33,9 @@ ms.locfileid: "68344756"
 
 函数将返回输入数据的预测, 以及要传递的源数据的任何列。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
-预测在所有版本的 SQL Server 2017 数据库引擎上都可用, 并在默认情况下启用, 包括 Windows SQL Server 2017 机器学习服务、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL 数据库。 不需要安装 R、Python 或启用其他功能。
+预测在所有版本的 SQL Server 2017 数据库引擎上都可用, 并在默认情况下启用, 包括 SQL Server 在 Windows 上机器学习服务、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) 或 Azure SQL 数据库。 不需要安装 R、Python 或启用其他功能。
 
 + 必须使用下面列出的某个受支持的**rx**算法预先训练该模型。
 
@@ -115,7 +116,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-下面的代码创建基于**iris**数据集的模型, 并将其保存**到名为**model 的表中。
+下面的代码创建基于**iris**数据集的模型, 并将其保存到名为model 的表中。
 
 ```sql
 DECLARE @model varbinary(max);

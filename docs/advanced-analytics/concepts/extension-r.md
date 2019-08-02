@@ -1,25 +1,26 @@
 ---
 title: R 编程语言扩展
-description: 在 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务中了解 R 代码执行和内置 R 库。
+description: 了解 SQL Server R Services 或 SQL Server 机器学习服务中的 R 代码执行和内置 R 库。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fa39240da51d0b7a9269777f751944104d703d59
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470500"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715245"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 语言扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 扩展是关系数据库引擎的 SQL Server 机器学习服务外接程序的一部分。 它添加 R 执行环境、具有标准库和工具的基本 R 分发版, 以及 Microsoft R 库:用于大规模分析的[RevoScaleR](../r/ref-r-revoscaler.md) 、用于机器学习算法的[MicrosoftML](../r/ref-r-microsoftml.md) , 以及用于访问 SQL Server 中的数据或 R 代码的其他库。
 
-从 SQL Server 2016、 [r Services](../r/sql-server-r-services.md)开始 SQL Server 开始, 并在[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)中继续进行 r 集成。
+[SQL Server R Services](../r/sql-server-r-services.md)和[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md)中提供 R 集成。
 
 ## <a name="r-components"></a>R 组件
 
@@ -27,7 +28,7 @@ SQL Server 包括开源和专用包。 基本 R 库通过 Microsoft 的开源版
 
 SQL Server 不会修改基本 R 可执行文件, 但必须使用安装程序安装的 R 版本, 因为该版本是专用包的生成和测试版本。 若要详细了解 MRO 如何不同于可能从 CRAN 获取的 R 的基本分发, 请参阅[与 r 语言和 Microsoft R 产品和功能的互操作性](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)。
 
-可以在与实例关联的文件夹中找到安装程序安装的 R 基包分发。 例如, 如果在 SQL Server 2016 默认实例上安装 R Services, 则默认情况下 R 库位于此文件夹中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。 同样, 默认情况下, 与默认实例关联的 R 工具将位于此文件夹中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`。
+可以在与实例关联的文件夹中找到安装程序安装的 R 基包分发。 例如, 如果在 SQL Server 默认实例上安装 R Services, 则默认情况下 R 库位于此文件夹中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`。 同样, 默认情况下, 与默认实例关联的 R 工具将位于此文件夹中: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`。
 
 Microsoft 为并行和分布式工作负荷添加的 R 包包含以下库。
 

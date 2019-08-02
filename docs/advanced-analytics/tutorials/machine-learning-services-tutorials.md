@@ -7,17 +7,18 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d901d11b11019a19d5e26e12956e9ba520e33e8f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 5e05a62be604b9d1a3feeaea1ed4f05dc3538493
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469630"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715475"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R 和 Python 中的 SQL Server 机器学习教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文提供了教程和代码示例的完整列表, 演示[SQL Server 2016 R 服务](../install/sql-r-services-windows-install.md)或[SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)的机器学习功能。 
+本文提供教程和代码示例的完整列表, 其中演示了[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)的机器学习功能。 
 
 + 快速入门使用内置数据或不使用任何数据进行快速探索。
 + 教程更深入地介绍了更多任务、更大的数据集和更多的解释。

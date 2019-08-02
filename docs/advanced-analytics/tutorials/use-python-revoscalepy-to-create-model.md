@@ -7,12 +7,13 @@ ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 11a155a9c679a18fefc7b3c91434a0ca241c23f7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 596e5f6b5145dc258c781ca7b88a69fc962d7021
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468506"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714714"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>将 Python 与 revoscalepy 配合使用, 创建在 SQL Server 上远程运行的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ Microsoft 的[revoscalepy](https://docs.microsoft.com/machine-learning-server/py
 > * 使用**revoscalepy**创建线性模型
 > * 从本地到远程计算上下文的移位操作
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 此练习中使用的示例数据是[**flightdata**](demo-data-airlinedemo-in-sql.md)数据库。
 

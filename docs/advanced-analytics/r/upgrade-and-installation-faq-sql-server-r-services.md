@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fe196a82badcab9ebe05004ee05cd67131942dd1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469893"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715616"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "68469893"
 + 某些问题仅适用于从预发布版本进行升级。 因此, 建议你在阅读这些说明之前先确定版本和版本。 若要获取版本信息, `@@VERSION`请在 SQL Server Management Studio 中的查询中运行。
 + 尽快升级到最新版本或服务版本, 以解决在最新版本中修复的任何问题。
 
-**适用范围：** SQL Server 2016 R Services SQL Server 2017 机器学习服务 (数据库内)
+**适用范围：** SQL Server 2016 R Services SQL Server 机器学习服务 (数据库内)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>SQL Server 2016 的旧版本的要求和限制 
 
@@ -94,11 +95,11 @@ ms.locfileid: "68469893"
 
 如果安装了 Microsoft R Server 的预发布版本，必须先卸载它，才能升级到较新版本。
 
-1.  在“控制面板” 中，单击“添加或删除程序” ，然后选择 `Microsoft SQL Server 2016 <version number>`。
+1.  在“控制面板”中，单击“添加或删除程序”，然后选择 `Microsoft SQL Server 2016 <version number>`。
 
-2.  在具有“添加” 、“修复” 或“删除”  组件选项的对话框中，选择“删除” 。
+2.  在具有“添加”、“修复”或“删除” 组件选项的对话框中，选择“删除”。
   
-3.  在“选择功能”  页面上的“共享功能” 下，选择“R Server（独立版）” 。 单击“下一步” ，然后单击“完成”  ，卸载所选组件。
+3.  在“选择功能” 页面上的“共享功能”下，选择“R Server（独立版）”。 单击“下一步”，然后单击“完成” ，卸载所选组件。
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services 和 R Server (独立) 并行错误 
 

@@ -7,12 +7,13 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6147c4670dace104c2c33c19e1fd29cbf2d4f2ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d3905ef9434bf4d3f887130c6f67ad68c6a6e36
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468854"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714762"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>教程：适用于 SQL 开发人员的 Python 数据分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68468854"
 
 ## <a name="prerequisites"></a>先决条件
 
-+ [SQL Server 2017 机器学习服务与 Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [通过 Python SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [权限](../security/user-permission.md)
 

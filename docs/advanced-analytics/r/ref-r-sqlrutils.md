@@ -1,18 +1,19 @@
 ---
 title: sqlrutils helper 函数
-description: 使用 SQL Server 2016 R Services 中的 sqlrutils 函数库和 SQL Server 2017 机器学习服务 with R 生成包含 R 脚本的存储过程。
+description: 使用 SQL Server 2016 R Services 中的 sqlrutils 函数库, 并 SQL Server 机器学习服务 with R 来生成包含 R 脚本的存储过程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469948"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715033"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server 中的 R 库)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

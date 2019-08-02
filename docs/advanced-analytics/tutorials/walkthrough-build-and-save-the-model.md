@@ -7,19 +7,20 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af2b1bf8f619800737863ff955011b011f4819d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470527"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715390"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>生成 R 模型并保存到 SQL Server (演练)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在此步骤中, 将了解如何生成机器学习模型并将模型保存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 通过保存模型, 可以使用系统存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)或[!INCLUDE[tsql](../../includes/tsql-md.md)] [PREDICT (t-sql) 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)直接从代码调用它。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 此步骤假设正在进行的 R 会话基于本演练中前面的步骤。 它使用在这些步骤中创建的连接字符串和数据源对象。 以下工具和包用于运行脚本。
 
@@ -153,7 +154,7 @@ GO
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    此调用返回计算 ROC 图表时使用的值。 标签列是带标签的, 它具有您尝试预测的实际结果, 而_评分_列具有_预测值。_
+    此调用返回计算 ROC 图表时使用的值。 标签列是带标签的, 它具有您尝试预测的实际结果, 而_评分_列具有预测值。
 
 2. 若要实际绘制图表, 可以保存该 ROC 对象, 然后用绘图函数进行绘制。 在远程计算上下文上创建图形, 并返回到 R 环境。
 

@@ -7,18 +7,23 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0abf14fa61d9408f8403a493b7559148f0f5a775
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344981"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715838"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安装程序安装 Machine Learning Server (独立版) 或 R Server (独立版)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 安装程序包含一个“共享功能”  选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。 在 SQL Server 2016 中，此功能称为“R Server（独立版）”  。 在 SQL Server 2017 中，它称为“Machine Learning Server（独立版）”  ，包括 R 和 Python。 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。 它被称为**Machine Learning Server (独立)** , 包括 R 和 Python。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。 在 SQL Server 2016 中，此功能称为“R Server（独立版）”。  
+::: moniker-end
 
 SQL Server 安装程序安装的独立服务器在功能上等同于非 SQL 品牌版本的 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支持相同的用例和方案，包括：
 
@@ -39,7 +44,7 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 通常，我们建议你将独立服务器和数据库引擎实例识别安装视为互斥安装以避免资源争用，但如果你有足够的资源，则不禁止在同一台物理计算机上进行这两种安装。
 
-只能在计算机上安装一台独立服务器：SQL Server 2017 Machine Learning Server 或  SQL Server 2016 R Server（独立版）。 请确保在添加新版本之前卸载一个版本。
+计算机上只能有一台独立服务器: SQL Server Machine Learning Server (独立) 或 SQL Server R Server (独立版)。 请确保在添加新版本之前卸载一个版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -77,17 +82,17 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
     应忽略所有其他选项。 
     
     > [!NOTE]
-    > 如果计算机已安装用于 SQL Server 数据库内分析的计算机学习服务，请避免安装“共享功能  。 这会创建重复的库。
+    > 如果计算机已安装用于 SQL Server 数据库内分析的计算机学习服务，请避免安装“共享功能。 这会创建重复的库。
     > 
     > 此外，尽管在 SQL Server 中运行的 R 或 Python 脚本由 SQL Server 管理，以免与其他数据库引擎服务使用的内存冲突，但是独立机器学习服务器没有此类限制，并且可介入其他数据库操作。 最后，数据库管理员通常会阻止通过 RDP 会话进行的远程访问，RDP 会话通常用于操作化。
     > 
     > 出于这些原因，我们通常建议你在独立于 SQL Server 机器学习服务的计算机上安装 Machine Learning Server（独立版）。
 
-5.  接受下载和安装基本语言分发的许可条款。 当“接受”  按钮变为不可用时，可以单击“下一步”  。 
+5.  接受下载和安装基本语言分发的许可条款。 当“接受” 按钮变为不可用时，可以单击“下一步”。 
 
      ![Python 许可协议](media/2017setup-python-license.png "Python 许可协议")
 
-6.  在“准备安装”  页上，验证选择，并单击“安装”  。
+6.  在“准备安装” 页上，验证选择，并单击“安装”。
 
 安装完成后, 请参阅[SQL Server R Services 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)以获取有关任何错误或警告的帮助, 请参阅[升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 ::: moniker-end
@@ -99,13 +104,13 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 1. 启动安装向导。
 
-2. 在“安装”  选项卡上，单击“新的 R Server（独立版）安装”  。
+2. 在“安装”选项卡上，单击“新的 R Server（独立版）安装”。
     
      ![启动 R Server 独立版的安装](media/2016-setup-installation-rsvr.png "启动 R Server 独立版的安装")
 
 3. 完成规则检查后, 接受 SQL Server 许可条款, 并选择新的安装。
 
-4.  在“功能选择”  页上，应已选择以下选项：
+4.  在“功能选择” 页上，应已选择以下选项：
     
     **R Server（独立版）**  
     
@@ -120,9 +125,9 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
     > 
     > 我们通常建议在 SQL Server R Services (数据库内) 的不同计算机上安装 R Server (独立版)。
 
-5.  接受下载和安装基本语言分发的许可条款。 当“接受”  按钮变为不可用时，可以单击“下一步”  。 
+5.  接受下载和安装基本语言分发的许可条款。 当“接受” 按钮变为不可用时，可以单击“下一步”。 
 
-6.  在“准备安装”  页上，验证选择，并单击“安装”  。
+6.  在“准备安装” 页上，验证选择，并单击“安装”。
 
 安装完成后, 请参阅[SQL Server R Services 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)以获取有关任何错误或警告的帮助, 请参阅[升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)。
 ::: moniker-end
@@ -152,7 +157,7 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (独立版) |  SQL Server 2017 安装向导 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (独立) |  Windows 独立安装程序 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|SQL Server 2017 机器学习服务 (数据库内) |SQL Server 2017 安装向导, with R language 选项|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|SQL Server 机器学习服务 (数据库内) |SQL Server 2017 安装向导, with R language 选项|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R Server (独立版) |  SQL Server 2016 安装向导 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (数据库内) |SQL Server 2016 安装向导|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 

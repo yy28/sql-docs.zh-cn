@@ -6,19 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 86c698420a64832e49cd6cbff5e6727896ec45f4
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1573c260c3d34ba3f733316fbae2672b2f9adfb1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470272"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715148"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server 中的机器学习疑难解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 使用此页作为了解已知问题的起点。
-
-**适用范围：** SQL Server 2016 R Services SQL Server 2017 机器学习服务 (R 和 Python)
 
 ## <a name="known-issues"></a>已知问题
 
@@ -38,10 +37,8 @@ ms.locfileid: "68470272"
 
 如果尚未使用 SQL Server 设置机器学习, 或者要添加此功能, 请从此处开始:
 
-+ [安装 SQL Server 2017 机器学习服务 (数据库内)](install/sql-machine-learning-services-windows-install.md)
-+ [安装 SQL Server 2017 Machine Learning Server (独立版)](install/sql-machine-learning-standalone-windows-install.md)
-+ [安装 SQL Server 2016 R Services （数据库内）](install/sql-r-services-windows-install.md)
-+ [安装 SQL Server 2016 R Server (独立版)](install/sql-r-standalone-windows-install.md)
++ [安装 SQL Server 机器学习服务 (数据库内)](install/sql-machine-learning-services-windows-install.md)
++ [安装 SQL Server Machine Learning Server (独立版)](install/sql-machine-learning-standalone-windows-install.md)
 + [命令提示符设置](install/sql-ml-component-commandline-install.md)
 + [脱机设置（无 Internet）](install/sql-ml-component-install-without-internet-access.md)
 

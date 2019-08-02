@@ -7,12 +7,13 @@ ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6f034f3a766e4f82bd1bcfd182f4eee285f7f829
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: b7aa37c3ec72390d76ecf9e939916f9641187956
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345041"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715887"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上安装 R 和 Python SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68345041"
 若要从远程数据科学客户端启用访问:
 
 1. 在虚拟机上打开“高级安全 Windows 防火墙”。
-2. 选择“出站规则”。 
+2. 选择“出站规则”。
 3. 禁用以下规则：
   
      `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`

@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b5f406ec4b6cfbd65db7a4ecd3a1ad14dff6d8e1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470233"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715186"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server 上设置用于 Python 开发的数据科学客户端机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +50,9 @@ SSMS 是一个单独的下载, 适用于在 SQL Server 上创建和运行存储�
 
 1. 下载安装脚本。
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py)安装 Microsoft Python 包的版本9.2.1。 此版本对应于默认 SQL Server 2017 实例。 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py)安装 Microsoft Python 包的版本9.2.1。 此版本对应于默认 SQL Server 实例。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)安装 Microsoft Python 包版本9.3。 如果远程 SQL Server 2017 实例[绑定到 Machine Learning Server 9.3](../install/upgrade-r-and-python.md), 则此版本是更好的选择。
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)安装 Microsoft Python 包版本9.3。 如果远程 SQL Server 实例[绑定到 Machine Learning Server 9.3](../install/upgrade-r-and-python.md), 则此版本是更好的选择。
 
 2. 使用提升的管理员权限打开 PowerShell 窗口 (右键单击 "以**管理员身份运行**")。
 

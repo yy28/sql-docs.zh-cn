@@ -6,17 +6,18 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: be55e779f335277a1c0f03fe871b8dcb952e088f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470407"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715194"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍了机器学习组件的已知问题或限制, 作为[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)中提供的选项, 以及[R 和 Python SQL Server 2017 机器学习服务](install/sql-machine-learning-services-windows-install.md)中提供。
+本文介绍了机器学习组件的已知问题或限制, 这些组件作为[SQL Server 2016 R Services](r/sql-server-r-services.md)中的一个选项提供, 并[SQL Server 机器学习服务 r 和 Python](what-is-sql-server-machine-learning.md)。
 
 ## <a name="setup-and-configuration-issues"></a>安装和配置问题
 
@@ -76,7 +77,7 @@ R_SERVER 使用 Intel 数学内核库 (MKL)。 对于涉及到 MKL 的计算, �
 
 ### <a name="3-unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>3.无法在域控制器上安装 SQL Server 机器学习功能
 
-如果尝试在域控制器上安装 SQL Server 2016 R Services 或 SQL Server 2017 机器学习服务, 则安装程序将失败, 并出现以下错误:
+如果尝试在域控制器上安装 SQL Server 2016 R Services 或 SQL Server 机器学习服务, 则安装程序将失败, 并出现以下错误:
 
 > *此功能的安装过程中出现错误*
 > 
@@ -167,7 +168,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 如果已在 microsoft [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Azure 虚拟机上安装, 则可能无法使用要求使用虚拟机工作区的计算上下文。 这是因为, 默认情况下, Azure 虚拟机上的防火墙包含一个规则, 该规则阻止本地 R 用户帐户的网络访问。
 
-解决方法: 在 Azure VM 上打开 "**高级安全 Windows 防火墙**", 选择 "**出站规则**", 并禁用以下规则:**阻止对 SQL Server 实例 MSSQLSERVER 中的 R 本地用户帐户进行网络访问**。 还可以启用规则, 但将安全属性**更改为 "** 安全"。
+解决方法: 在 Azure VM 上打开 "**高级安全 Windows 防火墙**", 选择 "**出站规则**", 并禁用以下规则:**阻止对 SQL Server 实例 MSSQLSERVER 中的 R 本地用户帐户进行网络访问**。 还可以启用规则, 但将安全属性更改为 "安全"。
 
 ### <a name="10-implied-authentication-in-sqlexpress"></a>10.SQLEXPRESS 中的隐式身份验证
 
@@ -349,7 +350,7 @@ data <- RxSqlServerData(
 
 ### <a name="15-variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>15.使用 transformFunc 参数时出现变量范围错误
 
-若要在建模时转换数据, 可以在函数 ( 如`rxLinmod`或`rxLogit`) 中传递 transformFunc 参数。 但是, 嵌套的函数调用可能会导致 SQL Server 计算上下文中出现范围错误, 即使调用在本地计算上下文中正常工作也是如此。
+若要在建模时转换数据, 可以在函数 (如`rxLinmod`或`rxLogit`) 中传递 transformFunc 参数。 但是, 嵌套的函数调用可能会导致 SQL Server 计算上下文中出现范围错误, 即使调用在本地计算上下文中正常工作也是如此。
 
 > *用于分析的示例数据集没有变量*
 
