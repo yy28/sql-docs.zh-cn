@@ -1,5 +1,5 @@
 ---
-title: sp_attachsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_attachsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d9f144d9d896fb75af5f59850c249b9044d1b781
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046149"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768970"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   将现有的订阅数据库附加到任何订阅服务器。 此存储过程在新订阅服务器的主数据库中执行。  
   
@@ -53,65 +53,65 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbname'` 是按名称指定目标订阅数据库的字符串。 *dbname*是**sysname**，无默认值。  
+`[ @dbname = ] 'dbname'`按名称指定目标订阅数据库的字符串。 *dbname*的值为**sysname**, 无默认值。  
   
-`[ @filename = ] 'filename'` 是的名称和物理位置的主 MDF (**主**数据文件)。 *文件名*是**nvarchar(260)** ，无默认值。  
+`[ @filename = ] 'filename'`主 MDF (**master**数据文件) 的名称和物理位置。 *filename*为**nvarchar (260)** , 无默认值。  
   
-`[ @subscriber_security_mode = ] 'subscriber_security_mode'` 是订阅服务器同步时连接到订阅服务器时要使用的安全模式。 *subscriber_security_mode*是**int**，默认值为 NULL。  
-  
-> [!NOTE]  
->  必须使用 Windows 身份验证。 如果*subscriber_security_mode*不是**1** （Windows 身份验证），则返回错误。  
-  
-`[ @subscriber_login = ] 'subscriber_login'` 是同步时连接到订阅服务器时要使用的订阅服务器登录名。 *subscriber_login*是**sysname**，默认值为 NULL。  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'`同步时连接到订阅服务器时要使用的订阅服务器的安全模式。 *subscriber_security_mode*的值为**int**, 默认值为 NULL。  
   
 > [!NOTE]  
->  已不推荐使用此参数，保留它只是为了让脚本能够向后兼容。 如果*subscriber_security_mode*不是**1**并*subscriber_login*是指定，则返回错误。  
+>  必须使用 Windows 身份验证。 如果*subscriber_security_mode*不是**1** (Windows 身份验证), 则会返回错误。  
   
-`[ @subscriber_password = ] 'subscriber_password'` 为订阅服务器密码。 *subscriber_password*是**sysname**，默认值为 NULL。  
+`[ @subscriber_login = ] 'subscriber_login'`同步时连接到订阅服务器时使用的订阅服务器登录名。 *subscriber_login*的值为**sysname**, 默认值为 NULL。  
   
 > [!NOTE]  
->  已不推荐使用此参数，保留它只是为了让脚本能够向后兼容。 如果*subscriber_security_mode*不是**1**并*subscriber_password*是指定，则返回错误。  
+>  已不推荐使用此参数，保留它只是为了让脚本能够向后兼容。 如果*subscriber_security_mode*不为**1**并且指定了*subscriber_login* , 则返回错误。  
   
-`[ @distributor_security_mode = ] distributor_security_mode` 是同步时连接到分发服务器时要使用的安全模式。 *distributor_security_mode*是**int**，默认值为**0**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @subscriber_password = ] 'subscriber_password'`订阅服务器密码。 *subscriber_password*的值为**sysname**, 默认值为 NULL。  
   
-`[ @distributor_login = ] 'distributor_login'` 是使用同步时连接到分发服务器的分发服务器登录名。 *distributor_login*如果，则需要*distributor_security_mode*设置为**0**。 *distributor_login*是**sysname**，默认值为 NULL。  
+> [!NOTE]  
+>  已不推荐使用此参数，保留它只是为了让脚本能够向后兼容。 如果*subscriber_security_mode*不为**1**并且指定了*subscriber_password* , 则返回错误。  
   
-`[ @distributor_password = ] 'distributor_password'` 是分发服务器密码。 *distributor_password*如果，则需要*distributor_security_mode*设置为**0**。 *distributor_password*是**sysname**，默认值为 NULL。 值*distributor_password*必须是少于 120 个 Unicode 字符。  
+`[ @distributor_security_mode = ] distributor_security_mode`同步时连接到分发服务器时使用的安全模式。 *distributor_security_mode*的值为**int**, 默认值为**0**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+  
+`[ @distributor_login = ] 'distributor_login'`同步时连接到分发服务器时使用的分发服务器登录名。 如果*distributor_security_mode*设置为**0**, 则*distributor_login*是必需的。 *distributor_login*的值为**sysname**, 默认值为 NULL。  
+  
+`[ @distributor_password = ] 'distributor_password'`分发服务器密码。 如果*distributor_security_mode*设置为**0**, 则*distributor_password*是必需的。 *distributor_password*的值为**sysname**, 默认值为 NULL。 *Distributor_password*的值必须小于 120 Unicode 字符。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @publisher_security_mode = ] publisher_security_mode` 是同步时连接到发布服务器时要使用的安全模式。 *publisher_security_mode*是**int**，默认值为**1**。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果**1**，指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**, 默认值为**1**。 如果为**0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**, 则指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` 是要进行同步时连接到发布服务器时使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。  
+`[ @publisher_login = ] 'publisher_login'`同步时连接到发布服务器时使用的登录名。 *publisher_login*的值为**sysname**, 默认值为 NULL。  
   
-`[ @publisher_password = ] 'publisher_password'` 连接到发布服务器时使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。 值*publisher_password*必须是少于 120 个 Unicode 字符。  
+`[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的值为**sysname**, 默认值为 NULL。 *Publisher_password*的值必须小于 120 Unicode 字符。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @job_login = ] 'job_login'` 是用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)** ，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
+`[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*的值为**nvarchar (257)** , 无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
-`[ @job_password = ] 'job_password'` 是用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。 值*job_password*必须是少于 120 个 Unicode 字符。  
+`[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的值为**sysname**, 无默认值。 *Job_password*的值必须小于 120 Unicode 字符。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` 是的用户定义数据库主密钥的密码。 *db_master_key_password*是**nvarchar(524)** ，默认值为 NULL。 如果*db_master_key_password*未指定，则将删除并重新创建现有数据库主密钥。  
+`[ @db_master_key_password = ] 'db_master_key_password'`用户定义数据库主密钥的密码。 *db_master_key_password*的值为**nvarchar (524)** , 默认值为 NULL。 如果未指定*db_master_key_password* , 则会删除并重新创建现有的数据库主密钥。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
- **sp_attachsubscription**快照复制、 事务复制和合并复制中使用。  
+ **sp_attachsubscription**用于快照复制、事务复制和合并复制。  
   
- 如果发布保持期已满，则不能将订阅附加到发布中。 如果指定一个保持期已满的订阅，则附加该订阅或先对其进行同步时将发生错误。 发布的发布保持期**0** （永不过期） 将被忽略。  
+ 如果发布保持期已满，则不能将订阅附加到发布中。 如果指定一个保持期已满的订阅，则附加该订阅或先对其进行同步时将发生错误。 将忽略发布保持期为**0** (永不过期) 的发布。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_attachsubscription**。  
+ 只有**sysadmin**固定服务器角色的成员才能执行**sp_attachsubscription**。  
   
 ## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

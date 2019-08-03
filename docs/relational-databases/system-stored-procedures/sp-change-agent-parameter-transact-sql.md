@@ -1,5 +1,5 @@
 ---
-title: sp_change_agent_parameter (TRANSACT-SQL) |Microsoft Docs
+title: sp_change_agent_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 610d63df2bf3496abaed8682ac83a72883e184b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045902"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768945"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  参数的复制代理配置文件中存储的更改[MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)系统表。 此存储过程可在运行代理的分发服务器的任意数据库中执行。  
+  更改存储在[MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)系统表中的复制代理配置文件的参数。 此存储过程可在运行代理的分发服务器的任意数据库中执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,14 +37,14 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id,` 是配置文件的 ID。 *profile_id*是**int**，无默认值。  
+`[ @profile_id = ] profile_id,`配置文件的 ID。 *profile_id*的值为**int**, 无默认值。  
   
-`[ @parameter_name = ] 'parameter_name'` 为参数的名称。 *parameter_name*是**sysname**，无默认值。 对于系统配置文件，可以更改的参数取决于代理的类型。 若要了解哪种类型的代理这*profile_id*表示时，找到*profile_id*中的列**Msagent_profiles**表，并记下*agent_type*值。  
+`[ @parameter_name = ] 'parameter_name'`参数的名称。 *parameter_name*的值为**sysname**, 无默认值。 对于系统配置文件，可以更改的参数取决于代理的类型。 若要确定此*profile_id*表示的代理类型, 请在**Msagent_profiles**表中找到*profile_id*列, 并记下*agent_type*值。  
   
 > [!NOTE]  
->  如果参数支持的给定*agent_type*，但尚未定义中的代理配置文件中，将返回错误。 若要将参数添加到代理配置文件必须执行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
+>  如果给定的*agent_type*支持某个参数, 但未在代理配置文件中定义该参数, 则会返回错误。 若要将参数添加到代理配置文件中, 必须执行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
- 对于快照代理 (*agent_type*=**1**)，如果在配置文件中定义，可以更改以下属性：  
+ 对于快照代理 (*agent_type*=**1**), 如果在配置文件中定义, 可以更改以下属性:  
   
 -   **70Subscribers**  
   
@@ -70,7 +70,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- 日志读取器代理 (*agent_type*=**2**)，如果在配置文件中定义，可以更改以下属性：  
+ 对于日志读取器代理 (*agent_type*=**2**), 如果在配置文件中定义, 可以更改以下属性:  
   
 -   **HistoryVerboseLevel**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- 对于分发代理 (*agent_type*=**3**)，如果在配置文件中定义，可以更改以下属性：  
+ 对于分发代理 (*agent_type*=**3**), 如果在配置文件中定义, 可以更改以下属性:  
   
 -   **BcpBatchSize**  
   
@@ -130,7 +130,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- 合并代理 (*agent_type*=**4**)，如果在配置文件中定义，可以更改以下属性：  
+ 对于合并代理 (*agent_type*=**4**), 如果在配置文件中定义, 可以更改以下属性:  
   
 -   **AltSnapshotFolder**  
   
@@ -220,7 +220,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ValidateInterval**  
   
- 队列读取器代理 (*agent_type*=**9**)，如果在配置文件中定义，可以更改以下属性：  
+ 对于队列读取器代理 (*agent_type*=**9**), 如果在配置文件中定义, 可以更改以下属性:  
   
 -   **HistoryVerboseLevel**  
   
@@ -238,18 +238,18 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- 若要查看为给定配置文件中定义了哪些参数，请运行**sp_help_agent_profile**并记下*profile_name*与关联*profile_id*。 具有相应*profile_id*，接下来运行**sp_help_agent_parameters**使用的*profile_id*若要查看与该配置文件关联的参数。 参数可以通过执行添加到配置文件[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
+ 若要查看为给定配置文件定义了哪些参数, 请运行**sp_help_agent_profile** , 并注意与*profile_id*关联的*profile_name* 。 使用适当的*profile_id*时, 接下来使用该*profile_id*运行**sp_help_agent_parameters**以查看与该配置文件关联的参数。 可以通过执行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)将参数添加到配置文件。  
   
-`[ @parameter_value = ] 'parameter_value'` 是该参数的新值。 *parameter_value*是**nvarchar(255)** ，无默认值。  
+`[ @parameter_value = ] 'parameter_value'`参数的新值。 *parameter_value*的值为**nvarchar (255)** , 无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
  **sp_change_agent_parameter**用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_change_agent_parameter**。  
+ 只有**sysadmin**固定服务器角色的成员才能执行**sp_change_agent_parameter**。  
   
 ## <a name="see-also"></a>请参阅  
  [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)   

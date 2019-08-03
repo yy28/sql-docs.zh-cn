@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1215ee5b90729237117599edc747dc68b04f0575
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661487"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769127"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   创建推送合并订阅或请求合并订阅。 此存储过程在发布服务器上对发布数据库执行。  
   
@@ -74,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`订阅服务器的类型。 *subscriber_type* 是 **nvarchar(15)** ，可以是下列值之一。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**本地**缺省值|订阅服务器仅对发布服务器是已知的。|  
 |**global**|订阅服务器对所有服务器都是已知的。|  
@@ -102,7 +102,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`合并代理运行的日期。 *frequency_interval*的数据值为**int**, 可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  

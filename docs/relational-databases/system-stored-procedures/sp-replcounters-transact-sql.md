@@ -1,5 +1,5 @@
 ---
-title: sp_replcounters (TRANSACT-SQL) |Microsoft Docs
+title: sp_replcounters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 62f4cf0f471a17c927d1eb8ad2801a378657b0cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006907"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771003"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   为每个发布数据库返回有关滞后时间、吞吐量和事务计数的复制统计信息。 此存储过程在发布服务器的任何数据库中执行。  
   
@@ -43,16 +43,16 @@ sp_replcounters
 |-----------------|---------------|-----------------|  
 |**“数据库”**|**sysname**|数据库的名称。|  
 |**复制的事务**|**int**|日志中等待传送到分发数据库的事务数。|  
-|**复制速率事务数/秒**|**float**|平均每秒传送到分发数据库的事务数。|  
+|**每秒复制速率事务数**|**float**|平均每秒传送到分发数据库的事务数。|  
 |**复制延迟**|**float**|事务在分发前位于日志中的平均时间（秒）。|  
-|**出现在 Replbeginlsn**|**binary(10)**|日志中当前截断点的日志序列号 (LSN)。|  
+|**Replbeginlsn**|**binary(10)**|日志中当前截断点的日志序列号 (LSN)。|  
 |**Replnextlsn**|**binary(10)**|等待传送到分发数据库的下一个提交记录的 LSN。|  
   
 ## <a name="remarks"></a>备注  
- **sp_replcounters**事务复制中使用。  
+ **sp_replcounters**用于事务复制。  
   
 ## <a name="permissions"></a>权限  
- 要求的成员身份**db_owner**固定的数据库角色或**sysadmin**固定的服务器角色。  
+ 要求具有**db_owner**固定数据库角色或**sysadmin**固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>请参阅  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

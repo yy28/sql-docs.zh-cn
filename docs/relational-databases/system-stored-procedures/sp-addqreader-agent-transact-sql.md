@@ -1,5 +1,5 @@
 ---
-title: sp_addqreader_agent (TRANSACT-SQL) |Microsoft Docs
+title: sp_addqreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a1e37004d15d8758160edb3558b2a69d30dae54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a02082715dfc77384ebfde58d4c29f94cd3dd44c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031019"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769075"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   为给定分发服务器添加队列读取器代理。 此存储过程在分发服务器上针对分发数据库执行，或在发布服务器上针对发布数据库执行。  
   
@@ -40,29 +40,29 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'` 登录名[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帐户下运行的代理。 *job_login*是**nvarchar(257)** ，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
+`[ @job_login = ] 'job_login'`用于运行代理的[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。 *job_login*的值为**nvarchar (257)** , 无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
-`[ @job_password = ] 'job_password'` 是用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
+`[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的值为**sysname**, 无默认值。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为保证安全性，应当在运行时再提供登录名和密码。  
   
-`[ @job_name = ] 'job_name'` 是现有的代理作业的名称。 *job_name*是**sysname**，默认值为 NULL。 只有在使用现有作业而不是新创建作业（默认值）创建代理时，才需要指定此参数。  
+`[ @job_name = ] 'job_name'`现有代理作业的名称。 *job_name*的值为**sysname**, 默认值为 NULL。 只有在使用现有作业而不是新创建作业（默认值）创建代理时，才需要指定此参数。  
   
-`[ @frompublisher = ] frompublisher` 指定在发布服务器是否正在执行该过程。 *frompublisher*为 bit，默认值为**0**。 值为**1**意味着正在从发布服务器上，对发布数据库执行该过程。  
+`[ @frompublisher = ] frompublisher`指定是否在发布服务器上执行该过程。 *frompublisher*的值为 bit, 默认值为**0**。 值为**1**表示在发布服务器上对发布数据库执行此过程。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_addqreader_agent**事务复制中使用。  
+ **sp_addqreader_agent**用于事务复制。  
   
- **sp_addqreader_agent**必须在支持排队更新后的分发服务器上的至少一次执行[sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)之前[sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。  
+ 在[sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)之后但在[sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)之前, 必须在支持排队更新的分发服务器上至少执行一次**sp_addqreader_agent** 。  
   
- 在执行时，会取消该队列读取器代理作业[sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)。  
+ 执行[sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)时, 将删除该队列读取器代理作业。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_addqreader_agent**。  
+ 只有**sysadmin**固定服务器角色的成员才能执行**sp_addqreader_agent**。  
   
 ## <a name="see-also"></a>请参阅  
  [允许更新事务发布的订阅](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   

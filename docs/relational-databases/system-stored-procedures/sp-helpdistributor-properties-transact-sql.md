@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor_properties (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdistributor_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 61d11dd443e68d743b30cee890d33e4852c99b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902911"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770923"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   返回分发服务器属性。 此存储过程在分发服务器上对分发数据库执行。  
   
@@ -43,15 +43,15 @@ sp_helpdistributor_properties
 |**heartbeat_interval**|**int**|在不记录进度消息的情况下，代理可以运行的最大分钟数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
  **sp_helpdistributor_properties**用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色的成员**db_owner**或**replmonitor**固定的数据库角色上的分发数据库中的用户使用此分发服务器的发布的发布访问列表 (PAL) 可以执行**sp_helpdistributor_properties**。  
+ 只有**sysadmin**固定服务器角色的成员、分发数据库上的**db_owner**或**replmonitor**固定数据库角色的成员, 以及使用此分发服务器的发布的发布访问列表 (PAL) 中的用户可以执行**sp_helpdistributor_properties**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+ [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

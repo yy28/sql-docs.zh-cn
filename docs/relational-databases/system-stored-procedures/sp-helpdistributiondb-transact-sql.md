@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdistributiondb (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902920"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770932"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   返回指定分发数据库的属性。 此存储过程在分发服务器上对分发数据库执行。  
   
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @database = ] 'database_name'` 是为其返回属性的数据库名称。 *database_name*是**sysname**，默认值为 **%** 对于与分发服务器，并且在其上关联的所有数据库用户拥有的权限。  
+`[ @database = ] 'database_name'`要为其返回属性的数据库的名称。 *database_name*的值为**sysname**, **%** 对于与分发服务器关联的所有数据库, 其默认值为, 用户具有权限。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -46,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**name**|**sysname**|分发数据库的名称。|  
 |**min_distretention**|**int**|事务被删除前的最小保持期（以小时为单位）。|  
 |**max_distretention**|**int**|事务被删除前的最大保持期（以小时为单位）。|  
-|**历史记录保持期**|**int**|要保留历史记录的小时数。|  
+|**历史记录保持期**|**int**|保留历史记录的小时数。|  
 |**history_cleanup_agent**|**sysname**|历史记录清除代理的名称。|  
 |**distribution_cleanup_agent**|**sysname**|分发清除代理的名称。|  
 |**status**|**int**|仅限内部使用。|  
@@ -58,18 +58,18 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**log_file_size**|**int**|以 MB 为单位的日志文件初始大小。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
  **sp_helpdistributiondb**用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 成员**db_owner**固定的数据库角色或**replmonitor**分发数据库中的角色和使用分发数据库的发布的发布访问列表中的用户可以执行**sp_helpdistributiondb**以返回与文件相关的信息。 成员**公共**角色可以执行**sp_helpdistributiondb**返回非文件相关的有权访问的分发数据库的信息。  
+ 分发数据库中的**db_owner**固定数据库角色成员或**replmonitor**角色的成员, 以及使用分发数据库的发布的发布访问列表中的用户可以执行**sp_helpdistributiondb**以返回文件相关信息。 **Public**角色的成员可以执行**sp_helpdistributiondb** , 以返回其具有访问权限的分发数据库的非文件相关信息。  
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

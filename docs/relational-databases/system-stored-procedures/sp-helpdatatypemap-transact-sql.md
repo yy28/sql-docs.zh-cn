@@ -1,5 +1,5 @@
 ---
-title: sp_helpdatatypemap (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdatatypemap (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101398"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771063"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  返回有关之间的定义的数据类型映射信息[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库管理系统 (DBMS)。 此存储过程在分发服务器上的任何数据库中执行。  
+  返回有关和非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库管理系统 (DBMS) 之间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的定义的数据类型映射的信息。 此存储过程在分发服务器上的任何数据库中执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,31 +43,31 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @source_dbms = ] 'source_dbms'` 是从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一。  
+`[ @source_dbms = ] 'source_dbms'`要从中映射数据类型的 DBMS 的名称。 *source_dbms*为**sysname**, 可以为以下值之一。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
-|**ORACLE**|源为 Oracle 数据库。|  
+|**联手**|源为 Oracle 数据库。|  
   
-`[ @source_version = ] 'source_version'` 源 DBMS 的产品版本。 *source_version*是**varchar(10)** ，并且如果未指定的数据类型将返回的源 DBMS 的所有版本的映射。 启用结果集按 DBMS 源版本进行筛选。  
+`[ @source_version = ] 'source_version'`源 DBMS 的产品版本。 *source_version*的数据类型为**varchar (10)** , 如果未指定, 则返回源 DBMS 的所有版本的数据类型映射。 启用结果集按 DBMS 源版本进行筛选。  
   
-`[ @source_type = ] 'source_type'` 源 DBMS 中列出的数据类型。 *source_type*是**sysname**，如果未指定，将返回源 DBMS 中的所有数据类型映射。 启用结果集按源 DBMS 中的数据类型进行筛选。  
+`[ @source_type = ] 'source_type'`源 DBMS 中列出的数据类型。 *source_type*为**sysname**, 如果未指定, 则返回源 DBMS 中所有数据类型的映射。 启用结果集按源 DBMS 中的数据类型进行筛选。  
   
-`[ @destination_dbms = ] 'destination_dbms'` 是目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一。  
+`[ @destination_dbms = ] 'destination_dbms'`目标 DBMS 的名称。 *destination_dbms*为**sysname**, 可以为以下值之一。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
-|**ORACLE**|目标为 Oracle 数据库。|  
+|**联手**|目标为 Oracle 数据库。|  
 |**DB2**|目标为 IBM DB2 数据库。|  
 |**SYBASE**|目标为 Sybase 数据库。|  
   
-`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version*是**varchar(10)** ，如果未指定，将返回目标 DBMS 的所有版本的映射。 启用结果集按 DBMS 的目标版本进行筛选。  
+`[ @destination_version = ] 'destination_version'`目标 DBMS 的产品版本。 *destination_version*为**varchar (10)** , 如果未指定, 则返回目标 DBMS 的所有版本的映射。 启用结果集按 DBMS 的目标版本进行筛选。  
   
-`[ @destination_type = ] 'destination_type'` 目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，如果未指定，将返回目标 DBMS 中的所有数据类型映射。 启用结果集按目标 DBMS 中的数据类型进行筛选。  
+`[ @destination_type = ] 'destination_type'`目标 DBMS 中列出的数据类型。 *destination_type*为**sysname**, 如果未指定, 则返回目标 DBMS 中所有数据类型的映射。 启用结果集按目标 DBMS 中的数据类型进行筛选。  
   
-`[ @defaults_only = ] defaults_only` 指示是否仅返回默认数据类型映射。 *defaults_only*是**位**，默认值为**0**。 **1**表示仅默认数据类型映射返回。 **0**表示默认值和用户定义的任何数据类型映射返回。  
+`[ @defaults_only = ] defaults_only`如果只返回默认数据类型映射, 则为。 *defaults_only*的值为**bit**, 默认值为**0**。 **1**表示只返回默认数据类型映射。 **0**表示返回默认值和任何用户定义的数据类型映射。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -78,21 +78,21 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**source_type**|源 DBMS 中的数据类型。|  
 |**destination_dbms**|目标 DBMS 的名称。|  
 |**destination_type**|目标 DBMS 中的数据类型。|  
-|**is_default**|指示映射是默认映射还是替代映射。 值为**0**指示此映射是用户定义的。|  
+|**is_default**|指示映射是默认映射还是替代映射。 值**0**表示此映射是用户定义的。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
- **sp_helpdatatypemap**定义从非 SQL Server 发布服务器和从数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器到非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。  
+ **sp_helpdatatypemap**定义了从非 SQL Server 发布服务器和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器到非订阅服务器的数据类型映射。  
   
- 不支持指定的源和目标 DBMS 组合，则当**sp_helpdatatypemap**返回空结果集。  
+ 如果不支持指定的源 DBMS 和目标 DBMS 组合, 则**sp_helpdatatypemap**将返回一个空结果集。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色的成员的分发服务器**db_owner**上的分发数据库的固定的数据库角色可以执行**sp_helpdatatypemap**.  
+ 只有分发服务器上**sysadmin**固定服务器角色的成员或分发数据库上的**db_owner**固定数据库角色的成员才能执行**sp_helpdatatypemap**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_getdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_getdefaultdatatypemapping &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   
