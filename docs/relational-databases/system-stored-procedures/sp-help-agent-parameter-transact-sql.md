@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_parameter (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_agent_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 616e5547c4acf59f88dc67c5aabc507eb30fe251
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055298"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771513"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  返回从配置文件的所有参数[MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)系统表。 此存储过程可在运行代理的分发服务器的任意数据库中执行。  
+  返回[MSagent_parameters &#40;transact-sql&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)系统表中配置文件的所有参数。 此存储过程可在运行代理的分发服务器的任意数据库中执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @profile_id = ] profile_id` 是从配置文件的 ID [MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)表。 *profile_id*是**int**，默认值为 **-1**，表示返回所有参数。  
+`[ @profile_id = ] profile_id`[MSagent_parameters &#40;transact-sql&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)表中的配置文件的 ID。 *profile_id*的值为**int**, 默认值为 **-1**, 表示返回所有参数。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -48,13 +48,13 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 |**value**|**nvarchar(255)**|参数的值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
  **sp_help_agent_parameter**用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**replmonitor**固定的数据库角色可以执行**sp_help_agent_parameter**。  
+ 只有**sysadmin**固定服务器角色的成员或**replmonitor**固定数据库角色的成员才能执行**sp_help_agent_parameter**。  
   
 ## <a name="see-also"></a>请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

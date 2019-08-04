@@ -1,5 +1,5 @@
 ---
-title: sp_replflush (TRANSACT-SQL) |Microsoft Docs
+title: sp_replflush (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: eaf42b746fca4999e7a67e0aff220ff2d09772cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6745589616dec5b129992cc555e1238cd62b545
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950721"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771587"
 ---
 # <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  刷新项目缓存。 在发布服务器上对发布数据库执行此存储的过程。  
+  刷新项目缓存。 此存储过程在发布服务器上对发布数据库执行。  
   
 > [!IMPORTANT]  
->  用户不应手动执行此过程。 **sp_replflush**仅应该用于排除复制故障的有经验的复制支持专业人员的指导。  
+>  用户不应手动执行此过程。 **sp_replflush**应仅用于排查由经验丰富的复制支持专业人员指示的复制问题。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,17 +40,17 @@ sp_replflush
 ```  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
- **sp_replflush**事务复制中使用。  
+ **sp_replflush**用于事务复制。  
   
- 为提高效率，项目定义存储在缓存中。 **sp_replflush**修改或删除项目定义时由其他复制存储过程。  
+ 为提高效率，项目定义存储在缓存中。 当修改或删除项目定义时, 其他复制存储过程将使用**sp_replflush** 。  
   
- 只有一个客户端连接有权访问给定数据库的日志读取器。 如果客户端具有对数据库的日志读取器访问，则执行**sp_replflush**会导致客户端释放其访问权。 其他客户端然后可以扫描事务日志使用**sp_replcmds**或**sp_replshowcmds**。  
+ 只有一个客户端连接有权访问给定数据库的日志读取器。 如果客户端有权访问数据库的日志读取器, 则执行**sp_replflush**将导致客户端释放其访问权限。 然后, 其他客户端可以使用**sp_replcmds**或**sp_replshowcmds**扫描事务日志。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_replflush**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_replflush**。  
   
 ## <a name="see-also"></a>请参阅  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

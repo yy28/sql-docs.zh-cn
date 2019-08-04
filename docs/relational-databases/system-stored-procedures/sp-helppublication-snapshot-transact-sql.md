@@ -1,5 +1,5 @@
 ---
-title: sp_helppublication_snapshot (TRANSACT-SQL) |Microsoft Docs
+title: sp_helppublication_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fa2697548212e3d5c27604533e69bbc07f480864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137601"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771505"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  返回给定发布的快照代理的相关信息。 在发布服务器上对发布数据库执行此存储的过程。  
+  返回给定发布的快照代理的相关信息。 此存储过程在发布服务器上对发布数据库执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,12 +38,12 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**, 无默认值。  
   
-`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**, 默认值为 NULL。  
   
 > [!NOTE]  
->  *发布服务器*添加到项目时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
+>  在将项目添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器时, 不应使用 publisher。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -51,18 +51,18 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|快照代理的 ID。|  
 |**name**|**nvarchar(100)**|快照代理的名称。|  
-|**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证。|  
+|**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> 0 =  身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
 |**publisher_password**|**nvarchar(524)**|出于安全原因，值为 **\*\*\*\*\*\*\*\*\*\*** 始终返回。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
-|**job_login**|**nvarchar(512)**|为运行快照代理的 Windows 帐户的格式返回*域*\\*用户名*。|  
+|**job_login**|**nvarchar(512)**|是运行快照代理时所用的 Windows 帐户, 它以 "*域*\\*用户名*" 的格式返回。|  
 |**job_password**|**sysname**|出于安全原因，值为 **\*\*\*\*\*\*\*\*\*\*** 始终返回。|  
 |**schedule_name**|**sysname**|用于该代理作业的计划的名称。|  
-|**frequency_type**|**int**|代理计划运行的频率，可以为下列值之一：<br /><br /> **1** = 一次<br /><br /> **2** = 按需<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月相对<br /><br /> **64** = 自动启动<br /><br /> **128** = 重复执行|  
-|**frequency_interval**|**int**|代理运行的日期，可以为下列值之一：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 天<br /><br /> **9** = 工作日<br /><br /> **10** = 周末日期|  
-|**frequency_subday_type**|**int**|是定义何种频率运行代理时的类型*frequency_type*是**4** （每日），可以是下列值之一。<br /><br /> **1** = 在指定的时间<br /><br /> **2** = 秒<br /><br /> **4** = 分钟<br /><br /> **8** = 小时|  
-|**frequency_subday_interval**|**int**|间隔数*frequency_subday_type*计划代理执行之间出现的。|  
-|**frequency_relative_interval**|**int**|是在给定月份运行代理的周时*frequency_type*是**32** （每月相对），可以是下列值之一。<br /><br /> **1** = 第一次<br /><br /> **2** = 第二个<br /><br /> **4** = 第三次<br /><br /> **8** = 第四次<br /><br /> **16** = 最后一次|  
+|**frequency_type**|**int**|代理计划运行的频率，可以为下列值之一：<br /><br /> **1** = 一次<br /><br /> **2** = 按需<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月相对<br /><br /> **64** = 自动启动<br /><br /> **128** = 定期|  
+|**frequency_interval**|**int**|代理运行的日期，可以为下列值之一：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 周末|  
+|**frequency_subday_type**|**int**|定义代理在*frequency_type*为**4** (每天) 时运行的频率的类型, 可以是下列值之一。<br /><br /> **1** = 在指定时间<br /><br /> **2** = 秒<br /><br /> **4** = 分钟<br /><br /> **8** = 小时|  
+|**frequency_subday_interval**|**int**|在计划的代理执行之间出现的*frequency_subday_type*的间隔数。|  
+|**frequency_relative_interval**|**int**|当*frequency_type*为**32** (每月相对), 并且可以是下列值之一时, 代理在指定月份内运行的周。<br /><br /> **1** = 第一<br /><br /> **2** = 秒<br /><br /> **4** = 第三<br /><br /> **8** = 第四<br /><br /> **16** = 最后|  
 |**frequency_recurrence_factor**|**int**|在计划的代理执行之间间隔的周数或月数。|  
 |**active_start_date**|**int**|计划第一次运行代理的日期，格式为 YYYYMMDD。|  
 |**active_end_date**|**int**|计划最后一次运行代理的日期，格式为 YYYYMMDD。|  
@@ -70,19 +70,19 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**active_end_time**|**int**|计划最后一次运行代理的时间，格式为 HHMMSS。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
  **sp_help_publication_snapshot**用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色的发布服务器或成员**db_owner**上对发布数据库的固定的数据库角色可以执行**sp_help_publication_snapshot**.  
+ 只有发布服务器上的**sysadmin**固定服务器角色的成员或发布数据库上的**db_owner**固定数据库角色的成员才能执行**sp_help_publication_snapshot**。  
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_addpublication_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_dropmergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)  
   
   

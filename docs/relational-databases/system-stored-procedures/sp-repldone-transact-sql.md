@@ -1,5 +1,5 @@
 ---
-title: sp_repldone (TRANSACT-SQL) |Microsoft Docs
+title: sp_repldone (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5ed4502b7f3e737b8e3adbfae852c2a513e2ccd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35cd38269fabba59d257e41141141764b6d4919d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006891"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771107"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  更新用于标识服务器的最后一个已分发事务的记录。 在发布服务器上对发布数据库执行此存储的过程。  
+  更新用于标识服务器的最后一个已分发事务的记录。 此存储过程在发布服务器上对发布数据库执行。  
   
 > [!CAUTION]  
->  如果您执行**sp_repldone**手动，您可能会导致无效的顺序和传递的事务一致性。 **sp_repldone**仅应该用于排除复制故障的有经验的复制支持专业人员的指导。  
+>  如果手动执行**sp_repldone** , 则可以使已传递事务的顺序和一致性无效。 **sp_repldone**应仅用于排查由经验丰富的复制支持专业人员指示的复制问题。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,33 +44,33 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @xactid = ] xactid` 是服务器的最后一个分布式事务的第一个记录的日志序列号 (LSN)。 *xactid*是**binary(10)** ，无默认值。  
+`[ @xactid = ] xactid`服务器最后一次分布式事务的第一条记录的日志序列号 (LSN)。 *xactid*为**binary (10)** , 无默认值。  
   
-`[ @xact_seqno = ] xact_seqno` 是服务器的最后一个分布式事务的最后一个记录的 LSN。 *xact_seqno*是**binary(10)** ，无默认值。  
+`[ @xact_seqno = ] xact_seqno`服务器最后一次分布式事务的最后一条记录的 LSN。 *xact_seqno*为**binary (10)** , 无默认值。  
   
-`[ @numtrans = ] numtrans` 是分布的事务数。 *对于 numtrans*是**int**，无默认值。  
+`[ @numtrans = ] numtrans`分布式事务的数目。 *numtrans*的值为**int**, 无默认值。  
   
-`[ @time = ] time` 毫秒数，如果提供，将所需的事务在上一批处理。 *时间*是**int**，无默认值。  
+`[ @time = ] time`分发最后一批事务所需的毫秒数 (如果提供)。 *time*为**int**, 没有默认值。  
   
-`[ @reset = ] reset` 重置状态。 *重置*是**int**，无默认值。 如果**1**、 所有已复制事务日志中的标记为已分发。 如果**0**、 事务日志将重置为第一个复制的事务和没有复制的事务标记为已分发。 *重置*仅当同时*xactid*并*xact_seqno*均为 NULL。  
+`[ @reset = ] reset`重置状态。 *reset*是**int**, 没有默认值。 如果为**1**, 则日志中的所有复制的事务都被标记为已分发。 如果为**0**, 则事务日志将重置为第一个复制的事务, 并且不会将复制的事务标记为已分发。 仅当*xactid*和*XACT_SEQNO*都为 NULL 时, *reset*才有效。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
- **sp_repldone**事务复制中使用。  
+ **sp_repldone**用于事务复制。  
   
- **sp_repldone**由日志读取器进程用来跟踪哪些事务已分发。  
+ 日志读取器进程使用**sp_repldone**来跟踪已分发的事务。  
   
- 与**sp_repldone**，您可以手动通知服务器已 （发送到分发服务器），复制事务。 它还允许您更改被标记为下一个等待复制的事务。 您可以在已复制事务的列表中前后移动。 （所有小于或等于该事务的事务都将标记为已分发。）  
+ 使用**sp_repldone**, 可以手动通知服务器事务已复制 (发送到分发服务器)。 它还允许您更改被标记为下一个等待复制的事务。 您可以在已复制事务的列表中前后移动。 （所有小于或等于该事务的事务都将标记为已分发。）  
   
- 所需的参数*xactid*并*xact_seqno*可以通过使用获取**sp_repltrans**或者**sp_replcmds**。  
+ 可以使用**sp_repltrans**或**sp_replcmds**获取所需的参数*xactid*和*xact_seqno* 。  
   
 ## <a name="permissions"></a>权限  
- 成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_repldone**。  
+ **Sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员可以执行**sp_repldone**。  
   
 ## <a name="examples"></a>示例  
- 时*xactid*为 NULL， *xact_seqno*为 NULL，并*重置*是**1**、 所有已复制事务日志中的标记为已分发。 当事务日志中存在不再有效的复制事务并且想截断该日志时，此过程很有用，例如：  
+ 如果*xactid*为 null, 则*xact_seqno*为 null, 而*reset*为**1**, 则日志中的所有复制的事务都被标记为已分发。 当事务日志中存在不再有效的复制事务并且想截断该日志时，此过程很有用，例如：  
   
 ```  
 EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 0, @reset = 1  

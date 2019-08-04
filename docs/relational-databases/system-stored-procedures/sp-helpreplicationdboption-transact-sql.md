@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpreplicationdboption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997570"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771532"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  显示是否为发布服务器上的数据库启用复制。 此存储过程在发布服务器的任何数据库中执行。 *不支持 Oracle 发布服务器。*  
+  显示是否为发布服务器上的数据库启用复制。 此存储过程在发布服务器的任何数据库中执行。 *对于 Oracle 发布服务器不支持。*  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,17 +39,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbname'` 是数据库的名称。 *dbname*是**sysname**，默认值为 **%** 。 如果 **%** ，则结果集包含发布服务器上的所有数据库，否则指定的数据库上的唯一信息返回。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
+`[ @dbname = ] 'dbname'`数据库的名称。 *dbname*的值为**sysname**, 默认值 **%** 为。 如果 **%** 为, 则结果集包含发布服务器上的所有数据库, 否则仅返回有关指定数据库的信息。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
   
-`[ @type = ] 'type'` 结果集要包含仅在其上的数据库限制为指定的复制选项*类型*值已启用。 *类型*是**sysname**，可以是下列值之一。  
+`[ @type = ] 'type'`将结果集限制为仅包含已启用指定复制选项*类型*值的数据库。 *类型*为**sysname**, 可以为以下值之一。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |**publish**|允许事务复制。|  
 |**合并发布**|允许合并复制。|  
-|**复制允许**（默认值）|允许事务复制或合并复制。|  
+|**允许复制**缺省值|允许事务复制或合并复制。|  
   
-`[ @reserved = ] reserved` 指定是否返回有关现有发布和订阅信息。 *保留*是**位**，默认值为 0。 如果**1**，则结果集包含有关指定的数据库具有任何现有发布或订阅的信息。  
+`[ @reserved = ] reserved`指定是否返回有关现有发布和订阅的信息。 *reserved*为**bit**, 默认值为0。 如果为**1**, 则结果集包含有关指定数据库是否具有任何现有发布或订阅的信息。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -57,24 +57,24 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|数据库的名称。|  
 |**id**|**int**|数据库标识符。|  
-|**transpublish**|**bit**|如果该数据库启用快照或事务发布;其中的值**1**表示启用快照或事务发布。|  
-|**mergepublish**|**bit**|如果已启用数据库进行合并发布;其中的值**1**启用合并发布的方式。|  
-|**dbowner**|**bit**|如果用户是属于**db_owner**固定数据库角色; 当值为**1**指出该用户是此角色的成员。|  
-|**dbreadonly**|**bit**|是如果将数据库标记为只读的;其中的值**1**意味着数据库是只读的。|  
-|**haspublications**|**bit**|是该数据库是否有任何现有发布;其中的值**1**意味着现有发布。|  
-|**haspullsubscriptions**|**bit**|是该数据库是否有任何现有的请求订阅;其中的值**1**意味着存在现有请求订阅。|  
+|**transpublish**|**bit**|如果已为快照或事务发布启用了数据库, 则为;如果值为**1** , 则表示启用了快照或事务发布。|  
+|**mergepublish**|**bit**|如果数据库已启用合并发布, 则为; 否则为。如果值为**1** , 则表示启用了合并发布。|  
+|**dbowner**|**bit**|如果用户是**db_owner**固定数据库角色的成员, 则为;如果值为**1** , 则表示该用户是此角色的成员。|  
+|**dbreadonly**|**bit**|如果数据库标记为只读, 则为。如果值为**1** , 则表示该数据库是只读的。|  
+|**haspublications**|**bit**|如果数据库具有任何现有发布, 则为; 否则为。其中, 值为**1**表示存在现有发布。|  
+|**haspullsubscriptions**|**bit**|如果数据库具有任何现有的请求订阅, 则为;如果值为**1** , 则表示存在现有请求订阅。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
- **sp_helpreplicationdboption**快照、 事务和合并复制中使用。  
+ **sp_helpreplicationdboption**用于快照复制、事务复制和合并复制。  
   
 ## <a name="permissions"></a>权限  
- 成员**sysadmin**固定的服务器角色可以执行**sp_helpreplicationdboption**的任何数据库。 成员**db_owner**固定的数据库角色可以执行**sp_helpreplicationdboption**该数据库。  
+ **Sysadmin**固定服务器角色的成员可以对任何数据库执行**sp_helpreplicationdboption** 。 **Db_owner**固定数据库角色的成员可以对该数据库执行**sp_helpreplicationdboption** 。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

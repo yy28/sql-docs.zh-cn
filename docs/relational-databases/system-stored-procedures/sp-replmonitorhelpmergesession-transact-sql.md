@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesession (TRANSACT-SQL) |Microsoft Docs
+title: sp_replmonitorhelpmergesession (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 95d45e34c5e32e2ace95c2f0e86684aa0e5b575c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950621"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771240"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   返回给定复制合并代理的以前会话的信息，并为每个符合筛选条件的会话返回一行。 此用于监视合并复制的存储过程在分发服务器的分发数据库上执行，或在订阅服务器的订阅数据库上执行。  
   
@@ -42,37 +42,37 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @agent_name = ] 'agent_name'` 为代理的名称。 *agent_name*是**nvarchar(100)** ，无默认值。  
+`[ @agent_name = ] 'agent_name'`代理的名称。 *agent_name*的值为**nvarchar (100)** , 无默认值。  
   
-`[ @hours = ] hours` 是，以小时为单位为其返回历史代理会话信息的范围。 *小时*是**int**，可以是下列范围之一。  
+`[ @hours = ] hours`返回历史代理会话信息的时间范围 (以小时为单位)。 *小时数*为**int**, 可以是下列范围之一。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |< **0**|返回代理过去运行的信息，最多返回 100 条运行信息。|  
 |**0** （默认值）|返回代理过去运行的所有信息。|  
-|> **0**|返回在代理上发生的运行中信息上次*小时*数小时。|  
+|> **0**|返回在过去几*小时*内发生的代理运行的信息。|  
   
-`[ @session_type = ] session_type` 筛选结果集基于会话最终结果。 *session_type*是**int**，可以是下列值之一。  
+`[ @session_type = ] session_type`根据会话最终结果筛选结果集。 *session_type*的数据值为**int**, 可以是下列值之一。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1** （默认值）|具有重试或成功结果的代理会话。|  
 |**0**|具有失败结果的代理会话。|  
   
-`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
+`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**, 默认值为 NULL。 在订阅服务器上执行**sp_replmonitorhelpmergesession**时使用此参数。  
   
-`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
+`[ @publisher_db = ] 'publisher_db'`发布数据库的名称。 *publisher_db*的值为**sysname**, 默认值为 NULL。 在订阅服务器上执行**sp_replmonitorhelpmergesession**时使用此参数。  
   
-`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**, 默认值为 NULL。 在订阅服务器上执行**sp_replmonitorhelpmergesession**时使用此参数。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|代理作业会话的 ID。|  
-|**“状态”**|**int**|代理运行状态：<br /><br /> **1** = 开始<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
-|**StartTime**|**datetime**|开始时间在代理作业会话。|  
-|**EndTime**|**datetime**|时间在代理作业会话已完成。|  
+|**“状态”**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
+|**StartTime**|**datetime**|时间代理作业会话开始。|  
+|**EndTime**|**datetime**|时间代理作业会话已完成。|  
 |**Duration**|**int**|此作业会话的累计时间（以秒为单位）。|  
 |**UploadedCommands**|**int**|在代理会话过程中上载的命令的数目。|  
 |**DownloadedCommands**|**int**|在代理会话过程中下载的命令的数目。|  
@@ -84,15 +84,15 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**LastMessage**|**nvarchar(500)**|合并代理在会话过程中记录的最后一个消息。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
  **sp_replmonitorhelpmergesession**用于监视合并复制。  
   
- 在订阅服务器上执行时**sp_replmonitorhelpmergesession**只返回最后五个合并代理会话的信息。  
+ 在订阅服务器上执行时, **sp_replmonitorhelpmergesession**仅返回最近5个合并代理会话的信息。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**db_owner**或**replmonitor**分发服务器上的分发数据库或订阅服务器上的订阅数据库上的固定的数据库角色可以执行**sp_replmonitorhelpmergesession**。  
+ 只有分发服务器上的分发数据库或订阅服务器上的订阅数据库中的**db_owner**或**replmonitor**固定数据库角色的成员才能执行**sp_replmonitorhelpmergesession**。  
   
 ## <a name="see-also"></a>请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

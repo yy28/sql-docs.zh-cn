@@ -1,5 +1,5 @@
 ---
-title: sp_refreshsubscriptions (TRANSACT-SQL) |Microsoft Docs
+title: sp_refreshsubscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9de03f10d16e81f97bd155212c8e2dafbd81216b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075761"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771177"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  将订阅添加到新文章中，为立即更新的发布的所有现有订阅者。 在发布服务器上对发布数据库执行此存储的过程。  
+  向立即更新发布中的所有现有订阅服务器添加新项目的订阅。 此存储过程在发布服务器上对发布数据库执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,21 +37,21 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'` 是要为其刷新订阅的发布。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'`要为其刷新订阅的发布。 *发布*为**sysname**, 无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- **sp_refreshsubscriptions**快照、 事务和合并复制中使用。  
+ **sp_refreshsubscriptions**用于快照复制、事务复制和合并复制。  
   
- **sp_refreshsubscriptions**由调用**sp_addarticle**对于立即更新发布。  
+ 对于即时更新发布, **sp_refreshsubscriptions**由**sp_addarticle**调用。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_refreshsubscriptions**。  
+ 只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_refreshsubscriptions**。  
   
 ## <a name="see-also"></a>请参阅  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

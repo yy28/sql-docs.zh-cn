@@ -1,5 +1,5 @@
 ---
-title: sp_droppullsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_droppullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 706f76f0b12ad6ce9077a36115bba4634cd94642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933847"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771452"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   在订阅服务器的当前数据库中删除订阅。 此存储过程在订阅服务器上对请求订阅数据库执行。  
   
@@ -40,32 +40,32 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'` 是的远程服务器名称。 *发布服务器*是**sysname**，无默认值。 如果**所有**，删除的订阅是在所有服务器的发布服务器。  
+`[ @publisher = ] 'publisher'`远程服务器名称。 *发布服务器*的**sysname**, 无默认值。 如果为**all**, 则删除所有发布服务器上的订阅。  
   
-`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 **所有**表示所有发布服务器数据库。  
+`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的值为**sysname**, 无默认值。 **all**表示所有发布服务器数据库。  
   
-`[ @publication = ] 'publication'` 为发布名称。 *发布*是**sysname**，无默认值。 如果**所有**，针对所有发布删除的订阅。  
+`[ @publication = ] 'publication'`发布名称。 *发布*为**sysname**, 无默认值。 如果为**all**, 则将订阅删除到所有发布。  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
- **sp_droppullsubscription**快照复制和事务复制中使用。  
+ **sp_droppullsubscription**用于快照复制和事务复制。  
   
- **sp_droppullsubscription**删除中的相应行[MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)表和订阅服务器上相应的分发服务器代理。 如果没有行也会保留在[MSreplication_subscriptions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)，则将删除该表。  
+ **sp_droppullsubscription**删除[MSreplication_subscriptions &#40;transact-sql&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)表中的相应行和订阅服务器上相应的分发服务器代理。 如果[MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)中没有剩余的行, 它会删除该表。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或创建请求订阅的用户才能执行**sp_droppullsubscription**。 **Db_owner**固定的数据库角色才可以执行**sp_droppullsubscription**如果创建请求订阅的用户属于此角色。  
+ 只有**sysadmin**固定服务器角色的成员或创建请求订阅的用户才能执行**sp_droppullsubscription**。 如果创建请求订阅的用户属于此角色, 则**db_owner**固定数据库角色仅可执行**sp_droppullsubscription** 。  
   
 ## <a name="see-also"></a>请参阅  
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_addpullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   

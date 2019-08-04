@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_agent_profile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055207"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771459"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   显示指定代理的配置文件。 此存储过程在分发服务器上的任何数据库中执行。  
   
@@ -38,9 +38,9 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @agent_type = ] agent_type` 是代理的类型。 *agent_type*是**int**，默认值为**0**，可以是下列值之一。  
+`[ @agent_type = ] agent_type`代理的类型。 *agent_type*的数据值为**int**, 默认值为**0**, 可以是下列值之一。  
   
-|ReplTest1|Description|  
+|值|Description|  
 |-----------|-----------------|  
 |**1**|快照代理|  
 |**2**|日志读取器代理|  
@@ -48,7 +48,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|合并代理|  
 |**9**|队列读取器代理|  
   
-`[ @profile_id = ] profile_id` 是要显示的配置文件的 ID。 *profile_id*是**int**，默认值为 **-1**，这会返回中的所有配置文件**MSagent_profiles**表。  
+`[ @profile_id = ] profile_id`要显示的配置文件的 ID。 *profile_id*的值为**int**, 默认值为 **-1**, 这将返回**MSagent_profiles**表中的所有配置文件。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -62,13 +62,13 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**def_profile**|**bit**|指定该配置文件是否是该代理类型的默认值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="remarks"></a>备注  
  **sp_help_agent_profile**用于所有类型的复制。  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或**replmonitor**固定的数据库角色可以执行**sp_help_agent_profile**。  
+ 只有**sysadmin**固定服务器角色的成员或**replmonitor**固定数据库角色的成员才能执行**sp_help_agent_profile**。  
   
 ## <a name="see-also"></a>请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

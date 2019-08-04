@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributor (TRANSACT-SQL) |Microsoft Docs
+title: sp_adddistributor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072762"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771322"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  创建一个条目[sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)表 （如果没有一个），将标记为分发服务器，该服务器条目，并将存储属性信息。 此存储过程在分发服务器上对主数据库执行以注册服务器，并将其标记为分发服务器。 如果是远程分发服务器，此存储过程还在发布服务器上对主数据库执行以注册远程分发服务器。  
+  在[sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)表中创建一个项 (如果不存在), 将服务器项标记为分发服务器, 并存储属性信息。 此存储过程在分发服务器上对主数据库执行以注册服务器，并将其标记为分发服务器。 如果是远程分发服务器，此存储过程还在发布服务器上对主数据库执行以注册远程分发服务器。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @distributor = ] 'distributor'` 是分发服务器名称。 *分发服务器*是**sysname**，无默认值。 只有在设置远程分发服务器时才使用此参数。 它将在分发服务器属性的条目添加**msdb...MSdistributor**表。  
+`[ @distributor = ] 'distributor'`分发服务器名称。 *分发服务器*的**sysname**, 无默认值。 只有在设置远程分发服务器时才使用此参数。 它在 msdb 中添加分发服务器属性的条目。 **MSdistributor**表。  
   
-`[ @heartbeat_interval = ] heartbeat_interval` 是的最大代理可以运行而无需记录进度消息的分钟数。 *heartbeat_interval*是**int**，默认值为 10 分钟。 创建按此间隔运行的 SQL Server 代理作业，以检查正在运行的复制代理的状态。  
+`[ @heartbeat_interval = ] heartbeat_interval`代理在不记录进度消息的情况下可以执行的最大分钟数。 *heartbeat_interval*的值为**int**, 默认值为10分钟。 创建按此间隔运行的 SQL Server 代理作业，以检查正在运行的复制代理的状态。  
   
-`[ @password = ] 'password']` 是的密码**distributor_admin**登录名。 *密码*是**sysname**，默认值为 NULL。 如果为 NULL 或空字符串，则密码重置为随机值。 必须在添加第一个远程分发服务器时配置密码。 **distributor_admin**登录名和*密码*为用于链接的服务器条目存储*分发服务器*RPC 连接，包括本地连接。 如果*分发服务器上*是本地的对于密码**distributor_admin**设置为新值。 对于具有远程分发服务器的发布服务器，值相同的值为*密码*执行时必须指定**sp_adddistributor**发布服务器和分发服务器上。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)可用于更改分发服务器密码。  
+`[ @password = ] 'password']`**Distributor_admin**登录名的密码。 *password*的值为**sysname**, 默认值为 NULL。 如果为 NULL 或空字符串，则密码重置为随机值。 必须在添加第一个远程分发服务器时配置密码。 为*分发*服务器 RPC 连接 (包括本地连接) 的链接服务器条目存储**distributor_admin**登录名和*密码*。 如果*分发服务器*是本地的, 则**distributor_admin**的密码设置为新值。 对于具有远程分发服务器的发布服务器, 在发布服务器和分发服务器上执行**sp_adddistributor**时, 必须指定相同的*密码*值。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)可用于更改分发服务器密码。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
@@ -57,18 +57,18 @@ sp_adddistributor [ @distributor= ] 'distributor'
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_adddistributor**快照复制、 事务复制和合并复制中使用。  
+ **sp_adddistributor**用于快照复制、事务复制和合并复制。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
 ## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以执行**sp_adddistributor**。  
+ 只有**sysadmin**固定服务器角色的成员才能执行**sp_adddistributor**。  
   
 ## <a name="see-also"></a>请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_dropdistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_dropdistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  
