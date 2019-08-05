@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948684"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768733"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在设计快照和事务复制的备份和还原策略时，需要考虑三个方面：  
   
--   要备份哪些数据库。  
-  
--   事务复制的备份设置。  
-  
+-   要备份哪些数据库。
+-   事务复制的备份设置。
 -   还原数据库需要的步骤。 这些步骤取决于所选的复制类型和选项。  
   
  本主题在下面三部分中分别介绍了这三个方面。 有关备份和还原 Oracle 发布的信息，请参阅 [Oracle 发布服务器的备份和还原](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>备份数据库  
  对于快照和事务复制，应定期对以下数据库进行备份：  

@@ -22,15 +22,16 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5bbb131ef95949d2739c859ecd24b32c4ef25397
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990565"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768216"
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   复制代理执行许多与复制有关的任务，其中包括创建架构和数据副本、检测发布服务器或订阅服务器上的更新以及在服务器之间传播更改。 默认情况下，复制代理在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业步骤下运行。 由于这些代理完全是可执行文件，因此可以从命令行和批处理脚本直接调用它们。 每个复制代理支持一组运行时参数，用于控制代理的运行方式；这些参数在代理配置文件或命令行中指定。  
   
 > [!IMPORTANT]  

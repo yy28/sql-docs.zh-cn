@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e5d686d0028b871fa163b3e1e4a1c71647ede60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129802"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768303"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
   
 1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框**中启用“使用 Windows 同步管理器对请求订阅进行同步”： 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  

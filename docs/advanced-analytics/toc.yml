@@ -35,16 +35,28 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: 命令提示符设置
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
-    - name: 升级 R 和 Python
+    - name: 升级 Python 和 R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
-    - name: 设置 R 客户端
-      href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: 设置 Python 客户端
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
+    - name: 设置 R 客户端
+      href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: 在 Azure VM 上安装
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
 - name: 快速入门
   items:
+    - name: Python
+      items:
+        - name: 验证 SQL Server 中是否存在 Python
+          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
+        - name: Python 和 SQL 中的 Hello World
+          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
+        - name: 处理输入和输出
+          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
+        - name: Python 数据结构和 SQL
+          href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+        - name: 定型并使用第一个模型
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
     - name: R
       items:
         - name: 验证 SQL Server 中是否存在 R
@@ -61,18 +73,6 @@
           href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
         - name: 基于模型进行预测
           href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
-    - name: Python
-      items:
-        - name: 验证 SQL Server 中是否存在 Python
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Python 和 SQL 中的 Hello World
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: 处理输入和输出
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Python 数据结构和 SQL
-          href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: 定型并使用第一个模型
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
 - name: 教程
   items:
     - name: 教程概述
@@ -85,6 +85,24 @@
           href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
         - name: 纽约市出租车数据集
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
+    - name: Python
+      items:
+        - name: Python 教程
+          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
+        - name: 使用 revoscalepy 创建 Python 模型
+          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
+        - name: 面向 SQL 开发人员的 Python
+          items:
+            - name: 1 - 简介
+              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
+            - name: 2 - 数据研究
+              href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+            - name: 3 - 功能设计
+              href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+            - name: 4 - 训练和部署
+              href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+            - name: 5 - 预测
+              href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
     - name: R
       items:
         - name: R 教程
@@ -149,24 +167,6 @@
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
             - name: 15. 使用 rxExec 发送自定义 R
               href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
-    - name: Python
-      items:
-        - name: Python 教程
-          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
-        - name: 使用 revoscalepy 创建 Python 模型
-          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: 面向 SQL 开发人员的 Python
-          items:
-            - name: 1 - 简介
-              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
-            - name: 2 - 数据研究
-              href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: 3 - 功能设计
-              href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: 4 - 训练和部署
-              href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: 5 - 预测
-              href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
 - name: 示例 >
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: 解决方案
@@ -175,10 +175,10 @@
   items:
     - name: 可扩展性框架
       href: ../advanced-analytics/concepts/extensibility-framework.md
-    - name: R 扩展
-      href: ../advanced-analytics/concepts/extension-r.md
     - name: Python 扩展
       href: ../advanced-analytics/concepts/extension-python.md
+    - name: R 扩展
+      href: ../advanced-analytics/concepts/extension-r.md
     - name: Security
       href: ../advanced-analytics/concepts/security.md
 - name: 操作指南
@@ -203,10 +203,10 @@
               href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
     - name: 数据类型转换
       items:
-        - name: R 到 SQL
-          href: ../advanced-analytics/r/r-libraries-and-data-types.md
         - name: Python 到 SQL
           href: ../advanced-analytics/python/python-libraries-and-data-types.md
+        - name: R 到 SQL
+          href: ../advanced-analytics/r/r-libraries-and-data-types.md
     - name: 部署
       items:
         - name: 通过存储过程操作
@@ -305,6 +305,12 @@
               href: ../advanced-analytics/r/using-r-code-profiling-functions.md
 - name: 参考
   items:
+    - name: Python 包
+      items:
+        - name: revoscalepy
+          href: ../advanced-analytics/python/ref-py-revoscalepy.md
+        - name: microsoftml
+          href: ../advanced-analytics/python/ref-py-microsoftml.md
     - name: R 包
       items:
         - name: RevoScaleR
@@ -315,12 +321,6 @@
           href: ../advanced-analytics/r/ref-r-olapr.md
         - name: sqlrutils
           href: ../advanced-analytics/r/ref-r-sqlrutils.md
-    - name: Python 包
-      items:
-        - name: revoscalepy
-          href: ../advanced-analytics/python/ref-py-revoscalepy.md
-        - name: microsoftml
-          href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: Resources
   items:
     - name: 发行说明 >>
