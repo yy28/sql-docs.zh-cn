@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cd7983be16e77bb4273e0380c026f8b07c3f7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7143f28436de8aed4f6b0298d04a57237d88c03e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046720"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769704"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   重新初始化订阅包括对一个或多个订阅服务器应用一个或多个项目的新快照：事务复制和快照复制允许对各个项目单独重新初始化；而合并复制需要对所有项目重新初始化。 无法重新初始化对等事务复制拓扑中的节点。 如果需要确保节点有新的数据副本，请在该节点上还原备份。 对于下列一种或两种情况，将进行重新初始化：  
   
 -   将订阅显式标记为重新初始化。  

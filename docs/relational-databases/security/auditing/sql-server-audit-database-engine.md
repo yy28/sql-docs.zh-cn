@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3d3981e4f9357330a5e3bcc13196255e54c48f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095141"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742877"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "68095141"
   
 |目录视图|描述|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
+|[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|包含所有数据库的服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的数据库审核规范的相关信息。|  
 |[sys.server_audits](../../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)|服务器实例中每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核都各占一行。|  
 |[sys.server_audit_specifications](../../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)|包含有关服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的服务器审核规范的信息。|  

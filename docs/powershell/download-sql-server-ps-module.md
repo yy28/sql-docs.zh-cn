@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7c49c25e1594657c3855aca1d50aac0fc47316f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951715"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697278"
 ---
 # <a name="install-sql-server-powershell-module"></a>安装 SQL Server PowerShell 模块
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "67951715"
 > * **SqlServer**：此模块包括新的 cmdlet，用于支持最新的 SQL 功能。 该模块还包含 SQLPS 中 cmdlet 的更新版本  。 
 
 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS   。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 [PowerShell 库](https://www.powershellgallery.com/packages/Sqlserver)安装 SqlServer 模块  。
-“SqlServer”模块的当前版本为 21.1.18080  。 这基于 Microsoft.SQLServer.SMO 的 v150 版本，并支持下一版本的 SQL Server。 基于 Microsoft.SQLServer.SMO 版本 v140 模块的最新版本是 21.0.17279。
 
 模块的预发布版本可能会被更频繁地使用：请参阅本页底部部分，了解如何获得此类模块的版本。
 

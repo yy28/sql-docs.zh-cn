@@ -17,15 +17,15 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08c252c6b78c31a8221dbd969ddb49ba0abc647f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cfc7873669eb49d3fc3e160ff33f56371517e6c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128170"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768112"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>在同步期间执行脚本（复制 Transact-SQL 编程）
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   复制支持事务发布和合并发布的订阅服务器的按需脚本执行。 此功能可将脚本复制到复制工作目录，然后使用 **sqlcmd** 将脚本应用到订阅服务器。 默认情况下，如果在对事务发布的订阅应用脚本时发生故障，分发代理将停止。 您可以使用复制存储过程以编程的方式指定要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
   
 ### <a name="to-specify-a-script-to-run-for-all-subscribers-to-a-snapshot-transactional-or-merge-publication"></a>为快照发布、事务发布或合并发布的所有订阅服务器指定要运行的脚本  
@@ -34,7 +34,7 @@ ms.locfileid: "68128170"
   
 2.  将此脚本文件保存到此发布的快照代理能访问的位置。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 指定 **@publication**，为 **@scriptfile**指定步骤 2 中创建的具有完整 UNC 路径的脚本文件名称，并为 **@skiperror**指定下列值之一：  
+3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md)。 指定 **@publication** ，为 **@scriptfile** 指定步骤 2 中创建的具有完整 UNC 路径的脚本文件名称，并为 **@skiperror** 指定下列值之一：  
   
     -   **0** - 如果遇到错误，代理将停止执行脚本。  
   

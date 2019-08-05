@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8b343055ca8c307299ba375b276036c0b1954c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037429"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768642"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   快照由快照代理在创建发布后生成。 按以下方式生成：  
   
@@ -49,13 +50,13 @@ ms.locfileid: "68037429"
 
  可以在配置分发向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果在未配置为分发服务器的服务器上创建发布，请在新建发布向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[创建发布](../../relational-databases/replication/publish/create-a-publication.md)。  
   
- 在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，修改默认快照位置。 有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<发布>”对话框中设置每个发布的快照文件夹。 有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，修改默认快照位置。   有关详细信息，请参阅[查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在“发布属性 - \<发布>”对话框中设置每个发布的快照文件夹。  有关详细信息，请参阅 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 ### <a name="modify-the-default-snapshot-location"></a>修改默认快照位置  
   
-1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (…)。  
+1.  在“分发服务器属性 - \<分发服务器>”对话框的“发布服务器”页上，单击要更改其默认快照位置的发布服务器的属性按钮 (…)。     
   
-2.  在“分发服务器属性 - \<分发服务器>”对话框中，为“默认快照文件夹”属性输入一个值。  
+2.  在“分发服务器属性 - \<分发服务器>”对话框中，为“默认快照文件夹”属性输入一个值。    
   
     > [!NOTE]  
     >  快照代理必须对指定的目录具有写权限，而分发代理或合并代理必须具有读权限。 如果使用的是请求订阅，则必须指定一个共享目录作为通用命名约定 (UNC) 路径，如 \\\computername\snapshot。 有关详细信息，请参阅[保护快照文件夹](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
@@ -71,15 +72,15 @@ ms.locfileid: "68037429"
 
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到发布服务器，然后展开服务器节点。    
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。    
-3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”**。    
-4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。    
+3.  右键单击要为其创建快照的发布，然后单击 **“查看快照代理状态”** 。    
+4.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。      
  快照代理生成快照后，将显示一条消息，例如“[100%] 已生成 17 个项目的快照”。  
   
 ### <a name="in-replication-monitor"></a>在复制监视器中  
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。    
-2.  右键单击要为其生成快照的发布，再单击 **“生成快照”**。    
-3.  若要查看快照代理的状态，请单击 **“代理”** 选项卡。有关更多详细信息，请右键单击网格中的快照代理，再单击 **“查看详细信息”**。  
+2.  右键单击要为其生成快照的发布，再单击 **“生成快照”** 。    
+3.  若要查看快照代理的状态，请单击 **“代理”** 选项卡。有关更多详细信息，请右键单击网格中的快照代理，再单击 **“查看详细信息”** 。  
 
 ## <a name="using-transact-sql"></a>使用 Transact-SQL
 可通过创建并运行快照代理作业或通过批处理文件运行快照代理可执行文件，以编程方式创建初始快照。 初始快照生成后，该快照将在订阅首次同步时传输并应用到订阅服务器。 如果您在命令提示符处或通过批处理文件运行快照代理，则只要现有快照变为无效，您就需要重新运行此代理。  
@@ -93,9 +94,9 @@ ms.locfileid: "68037429"
   
     -   **@job_login，用于指定**快照代理在分发服务器上运行时所用的 Windows 身份验证凭据。  
   
-    -   **@job_password**，为提供的 Windows 凭据的密码。  
+    -   **@job_password** ，为提供的 Windows 凭据的密码。  
   
-    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，则将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 。 在这种情况下，您还必须为 **@publisher_login** 和 **@publisher_password**。  
+    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，则将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 。 在这种情况下，您还必须为 **@publisher_login** 和 **@publisher_password** 。  
   
     -   （可选）快照代理作业的同步计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -135,10 +136,10 @@ ms.locfileid: "68037429"
   
     -   **-DistributorLogin**    
     -   **-DistributorPassword**   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**    
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
-    -   **-PublisherSecurityMode** = **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例演示如何创建事务发布，并为新的发布添加快照代理作业（使用 **sqlcmd** 脚本变量）。 此示例还启动该作业。  

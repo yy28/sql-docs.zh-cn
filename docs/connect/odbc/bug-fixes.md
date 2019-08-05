@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264010"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702812"
 ---
 # <a name="list-of-bugs-fixed"></a>已修复 bug 的列表
 
 此页包含每个版本中已修复的 bug 列表, 从[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 驱动程序17.4 中的 Bug 修复[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- 当启用多个活动的结果集 (MARS) 时修复间歇性挂起
+- 启用异步通知时修复连接复原挂起
+- 在检索多线程连接尝试的诊断记录时修复崩溃
+- 在通过 SQL_USER_NAME 和 SQL_DATA_SOURCE_READ_ONLY 调用 SQLGetInfo () 后, 在重新连接后修复 "不支持加密"
+- 解决 Azure Active Directory 交互式身份验证期间的 COM 初始化错误
+- 修复多字节 UTF8 数据的 SQLGetData ()
+- 使用 SQLGetData () 修复 sql_variant 列的检索长度
+- 使用 bcp 修复包含7992个以上字节的 sql_variant 列的导入
+- 为窄字符数据修复向服务器发送正确编码的问题
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 驱动程序17.3 中的 Bug 修复[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

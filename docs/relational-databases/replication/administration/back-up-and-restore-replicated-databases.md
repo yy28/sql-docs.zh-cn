@@ -25,15 +25,16 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53691231f08e9ac9fe97807d062c7fed39746a7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939428"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768824"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>备份和还原复制的数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   对于复制的数据库，需要特别注意与备份和还原数据有关的信息。 本主题介绍了适用于各种复制类型的备份和还原策略，并提供了其详细信息的链接。  
   

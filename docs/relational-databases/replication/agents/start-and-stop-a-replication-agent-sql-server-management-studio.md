@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67261d22212a2c3c865e44b0160830e2d11cf5f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085917"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770705"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>启动和停止复制代理 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   可以从  中的 **“作业”** 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from “作业” Monitor. 可启动和停止以下代理和作业：  
   
 -   快照代理，用于所有发布。  
@@ -46,9 +47,9 @@ ms.locfileid: "68085917"
   
 2.  展开 **“本地发布”** 文件夹，然后右键单击发布。  
   
-3.  单击 **“查看快照代理状态”** 或 **“查看日志读取器代理状态”**。  
+3.  单击 **“查看快照代理状态”** 或 **“查看日志读取器代理状态”** 。  
   
-4.  单击 **“启动”** 或 **“停止”**。  
+4.  单击 **“启动”** 或 **“停止”** 。  
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>从 Management Studio 启动和停止队列读取器代理  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68085917"
   
 2.  展开 **“SQL Server 代理”** 文件夹，再展开 **“作业”** 文件夹。  
   
-3.  右键单击代理的作业，再单击 **“启动作业”** 或 **“停止作业”**。 队列读取器代理的作业名称的格式为 **[\<分发服务器>].\<整数>**。  
+3.  右键单击代理的作业，再单击 **“启动作业”** 或 **“停止作业”** 。 队列读取器代理的作业名称的格式为 **[\<分发服务器>].\<整数>** 。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>从复制监视器启动和停止快照代理、日志读取器代理或队列读取器代理  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68085917"
   
 2.  单击 **“代理”** 选项卡。  
   
-3.  右键单击代理，再单击 **“启动代理”** 或 **“停止代理”**。  
+3.  右键单击代理，再单击 **“启动代理”** 或 **“停止代理”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视复制](../../../relational-databases/replication/monitor/monitoring-replication.md)   

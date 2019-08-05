@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b21412bfb6555dbe9c45d411f0b1e7292e79e2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046698"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769740"
 ---
 # <a name="replication-backward-compatibility"></a>复制的向后兼容性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 如果要升级或者在复制拓扑中有 SQL Server 的多个版本，则了解向后兼容性是非常重要的。 
 

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078d965fbf3963039bb54b70fd63f54aadb9eb95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005370"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768441"
 ---
 # <a name="replication-tutorials"></a>复制教程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 复制是一种功能强大的解决方案，可用于在服务器之间移动数据或数据子集。 可以使用事务复制在完全连接的服务器之间复制数据。 此外，还可以使用合并复制在间歇连接的服务器和客户端之间复制数据。 在本文中，你将发现可帮助准备服务器复制的教程，以及介绍如何配置事务复制和合并复制的教程。 
   
 在复制教程中，“发布服务器”是指包含将要复制的源数据的服务器。 “订阅服务器”是指目标服务器。 发布服务器和订阅服务器可以共享同一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，但这不是必需的。 有关详细信息，请参阅[复制发布模型概述](../../relational-databases/replication/publish/replication-publishing-model-overview.md)。  

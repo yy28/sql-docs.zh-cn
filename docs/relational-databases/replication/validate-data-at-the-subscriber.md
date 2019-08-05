@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e750743eb98307433d8ad6878cec12ea4e43ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895228"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769290"
 ---
 # <a name="validate-replicated-data"></a>验证已复制的数据
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中验证订阅服务器上的数据。  
   
 通过事务复制和合并复制，您可以验证订阅服务器中的数据与发布服务器中的数据是否匹配。 可以对特定订阅或某一发布的所有订阅执行验证。 指定下列验证类型之一，分发代理或合并代理便会在下次运行时验证数据：  
@@ -34,6 +34,8 @@ ms.locfileid: "67895228"
 -   **行计数和二进制校验和**。 除了可在发布服务器和订阅服务器上对行进行计数之外，还可使用校验和算法来计算所有数据的校验和。 如果行计数失败，则不计算校验和。  
   
  除了验证订阅服务器和发布服务器上的数据是否匹配之外，合并复制还提供验证每个订阅服务器上的数据是否正确分区的功能。 有关详细信息，请参阅[验证合并订阅服务器的分区信息](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>数据验证的工作机制  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过计算发布服务器上的行计数或校验和，并将这些值与订阅服务器上计算所得的行计数或校验和值比较来验证数据。 为整个发布表和整个订阅表各计算一个值，但计算中不包括 **text**、 **ntext**或 **image** 列中的数据。  

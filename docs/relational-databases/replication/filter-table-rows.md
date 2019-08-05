@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6974e8c3d07bd1da5fd48a4bbbc8e49c86e2d314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 321859ffa20f9c576635a2c082b5f0d2458e848d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128089"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770634"
 ---
 # <a name="filter-table-rows"></a>筛选表行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   在 **“筛选表行”** 页中，您可以执行以下操作：  
   
 -   将静态行筛选器应用于快照发布、事务发布和合并发布中的表项目。  

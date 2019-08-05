@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 923841cc1dd7e0f2be7366b4dbc5a41cf874ac48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7cc6c6ec614acb33938433f081dfcafc2cc5fb25
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005457"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769666"
 ---
 # <a name="replication-monitor-main-page"></a>复制监视器，主页
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   使用复制监视器，可以跨复制拓扑跟踪发布和订阅的状态及性能。 有关详细信息，请参阅以下主题：  
   
 -   有关复制监视器的概述，请参阅[监视复制](../../relational-databases/replication/monitor/monitoring-replication.md)。  
