@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24bb3bc28929921c7a6aae5c19b990a8d931fc5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b70f8c24ed54a6f36a2c224a0fb3ea5182bf3c30
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085865"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770657"
 ---
 # <a name="articles"></a>项目
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   在 **“项目”** 页中，可以指定要作为项目包含在发布中的数据库对象。 如果发布的数据库对象依赖于一个或多个其他数据库对象，则必须发布所有被引用对象。 例如，如果要发布的视图依赖于一个表，则也必须发布该表。  
   
  无法发布的对象旁边有一个红色图标，并在向导页底部的信息面板中附有说明。 无法发布下列对象：  

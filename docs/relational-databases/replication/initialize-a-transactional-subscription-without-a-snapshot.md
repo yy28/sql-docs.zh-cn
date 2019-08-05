@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127892"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767769"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   默认情况下，使用快照初始化对事务发布的订阅，此快照由快照代理生成并由分发代理应用。 在某些方案中，例如涉及大型初始数据集的方案中，最好用其他方法初始化订阅。 初始化订阅服务器的其他方法包括：  
   
 -   指定备份。 还原订阅服务器上的备份，然后分发代理将复制任何所需的复制元数据和系统过程。 使用备份进行初始化是向订阅服务器传递数据最快的方法，而且也很方便，因为如果在启用发布以使用备份进行初始化之后取得备份，则可以使用任何最近的备份。  

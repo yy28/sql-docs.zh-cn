@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0da7b4425a5ca5c27e6f4ec745880bbcdfb6d09c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939144"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770824"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   下列问题和解答就复制数据库管理员所面临的多种任务提供指导。  
   
 ## <a name="configuring-replication"></a>配置复制  

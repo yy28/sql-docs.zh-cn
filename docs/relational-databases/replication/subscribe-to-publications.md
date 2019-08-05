@@ -24,17 +24,19 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a15256be44ace579c6dcc9aa74bf55fdc319e7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129934"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768361"
 ---
 # <a name="subscribe-to-publications"></a>订阅发布
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   订阅是对发布中的数据和数据库对象的副本的请求。 订阅定义将接收哪个发布以及接收的时间和位置。 在计划订阅时，请考虑代理处理发生的位置。 所选择的订阅类型将控制代理运行的位置。 对于推送订阅，合并代理或分发代理在分发服务器上运行；对于请求订阅，代理在订阅服务器上运行。 创建订阅后，将无法更改其类型。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
 |订阅|特征|使用时间|  
 |------------------|---------------------|--------------|  

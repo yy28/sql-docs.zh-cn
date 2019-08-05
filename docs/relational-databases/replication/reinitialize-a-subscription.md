@@ -14,26 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f94d21a4fcc773c30d2a43d2502eb1f4c5225b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e38cd74e9f916484c804890686e2a3b03d9ec64c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021220"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768574"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新初始化订阅。 可以将各个订阅标记为重新初始化，以便在下次同步期间应用新快照。  
   
- **本主题内容**  
-  
--   **重新初始化订阅，使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [复制管理对象 (RMO)](#RMOProcedure)  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
+
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  重新初始化订阅的过程由两个部分组成：  
@@ -61,9 +56,9 @@ ms.locfileid: "68021220"
   
 3.  展开包含要重新初始化的订阅的发布。  
   
-4.  右键单击订阅，再单击 **“重新初始化”**。  
+4.  右键单击订阅，再单击 **“重新初始化”** 。  
   
-5.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”**。  
+5.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”** 。  
   
 #### <a name="to-mark-a-single-pull-subscription-for-reinitialization-in-management-studio-at-the-subscriber"></a>在 Management Studio 中将单个请求订阅（位于订阅服务器）标记为要重新初始化  
   
@@ -71,9 +66,9 @@ ms.locfileid: "68021220"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击订阅，再单击 **“重新初始化”**。  
+3.  右键单击订阅，再单击 **“重新初始化”** 。  
   
-4.  在显示的确认对话框中，单击 **“是”**。  
+4.  在显示的确认对话框中，单击 **“是”** 。  
   
 #### <a name="to-mark-all-subscriptions-for-reinitialization-in-management-studio"></a>在 Management Studio 中将所有订阅标记为要重新初始化  
   
@@ -81,9 +76,9 @@ ms.locfileid: "68021220"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击具有要重新初始化的订阅的发布，再单击 **“重新初始化所有订阅”**。  
+3.  右键单击具有要重新初始化的订阅的发布，再单击 **“重新初始化所有订阅”** 。  
   
-4.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”**。  
+4.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”** 。  
   
 #### <a name="to-mark-a-single-push-or-pull-subscription-for-reinitialization-in-replication-monitor"></a>在复制监视器中将单个推送订阅或单个请求订阅标记为要重新初始化  
   
@@ -91,36 +86,36 @@ ms.locfileid: "68021220"
   
 2.  单击 **“所有订阅”** 选项卡。  
   
-3.  右键单击要重新初始化的订阅，然后单击 **“重新初始化订阅”**。  
+3.  右键单击要重新初始化的订阅，然后单击 **“重新初始化订阅”** 。  
   
-4.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”**。  
+4.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”** 。  
   
 #### <a name="to-mark-all-subscriptions-for-reinitialization-in-replication-monitor"></a>在复制监视器中将所有订阅标记为要重新初始化  
   
 1.  在复制监视器的左窗格中依次展开发布服务器组、发布服务器。  
   
-2.  右键单击具有要重新初始化的订阅的发布，再单击 **“重新初始化所有订阅”**。  
+2.  右键单击具有要重新初始化的订阅的发布，再单击 **“重新初始化所有订阅”** 。  
   
-3.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”**。  
+3.  在 **“重新初始化订阅”** 对话框中，选择选项，然后单击 **“标记为要重新初始化”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式重新初始化订阅。 使用的存储过程取决于订阅的类型（推送或请求）以及订阅所属的发布的类型。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>重新初始化对事务发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**和 **@publication**文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
   
 2.  （可选）在订阅服务器上启动分发代理，以使订阅同步。 有关详细信息，请参阅 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>重新初始化对事务发布的推送订阅  
   
-1.  在发布服务器上，执行 [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber**和 **@destination_db**文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
+1.  在发布服务器上，执行 [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 和 **@destination_db** 文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
   
 2.  （可选）在分发服务器上启动分发代理，以使订阅同步。 有关详细信息，请参阅 [同步推送订阅](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化对合并发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 **@publisher**或复制管理对象 (RMO) 在 **@publisher_db**和 **@publication**文件夹中打开。 若要在进行重新初始化之前从订阅服务器上载更改，请将 **@upload_first** @upload_first **@upload_first**文件夹中打开。 这会将订阅标记为在下一次运行合并代理时将要重新初始化。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 文件夹中打开。 若要在进行重新初始化之前从订阅服务器上载更改，请将 **@upload_first** @upload_first **@upload_first** 文件夹中打开。 这会将订阅标记为在下一次运行合并代理时将要重新初始化。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -129,7 +124,7 @@ ms.locfileid: "68021220"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>重新初始化对合并发布的推送订阅  
   
-1.  在发布服务器上，执行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)。 指定 **@publication**或复制管理对象 (RMO) 在 **@subscriber**和 **@subscriber_db**文件夹中打开。 若要在进行重新初始化之前从订阅服务器上载更改，请将 **@upload_first** @upload_first **@upload_first**文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
+1.  在发布服务器上，执行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 和 **@subscriber_db** 文件夹中打开。 若要在进行重新初始化之前从订阅服务器上载更改，请将 **@upload_first** @upload_first **@upload_first** 文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -138,7 +133,7 @@ ms.locfileid: "68021220"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>创建新的合并发布时设置重新初始化策略  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，同时为 **@automatic_reinitialization_policy**指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，同时为 **@automatic_reinitialization_policy** 指定下列值之一：  
   
     -   **1** - 在对订阅执行更改所要求的自动重新初始化操作之前，从订阅服务器上载更改。  
   
@@ -151,7 +146,7 @@ ms.locfileid: "68021220"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>更改现有合并发布的重新初始化策略  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，同时将 **@property** @upload_first **@property** 并为 **@value**指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，同时将 **@property** @upload_first **@property** 并为 **@value** 指定下列值之一：  
   
     -   **1** - 在对订阅执行更改所要求的自动重新初始化操作之前，从订阅服务器上载更改。  
   

@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dbdb879f51c564dcfeb156a8b56b77bbe8d5d10e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 9c550e12b671f7063b8659de8d7b998f86917ff2
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021350"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763945"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>发布服务器信息，订阅监视列表（事务）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **“订阅监视列表”** 选项卡可用于运行 SQL Server 2005 及更高版本的分发服务器；用来显示所选发布服务器上所有可用发布中的订阅的有关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡为管理员提供了监视发布服务器上所有复制活动的单一位置：复制监视器根据所选复制类型以及“显示”下拉列表框中选择的选项，显示需要注意的所有订阅  。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
   
 ## <a name="options"></a>选项  

@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129842"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768346"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>订阅过期和停用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  如果在指定的“保持期” 内未同步订阅，订阅可能会停用或过期。 发生什么操作取决于复制的类型和所超过的保持期。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  如果在指定的“保持期”  内未同步订阅，订阅可能会停用或过期。 发生什么操作取决于复制的类型和所超过的保持期。  
   
  若要设置保持期，请参阅[设置订阅的过期期限](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)、[设置事务发布的分发保持期 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) 以及[配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68129842"
   
     -   在到达保持期之前，复制无法清除发布数据库和订阅数据库中的元数据。 在为保持期指定较大值时务必谨慎，因为这可能对复制性能产生负面影响。 如果能很有把握地预测出所有订阅服务器都将在该时间段内定期同步，则建议使用较低的设置。  
   
-    -   可以指定订阅永不过期（ **@retention**的值为 0），但是极力建议您不要使用此值，因为这将无法清除元数据。  
+    -   可以指定订阅永不过期（ **@retention** 的值为 0），但是极力建议您不要使用此值，因为这将无法清除元数据。  
   
 -   任何重新发布服务器的保持期都必须设置为等于或小于在原始发布服务器上设置的保持期。 对于所有发布服务器和它们的备用同步伙伴，应该使用相同的发布保持期。 使用不同的值可能会导致无法收敛。 如果需要更改发布保持期的值，请重新初始化订阅服务器，以免数据无法收敛。  
   

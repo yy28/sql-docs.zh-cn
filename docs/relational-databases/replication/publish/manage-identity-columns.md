@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ffc0c7c54ea8cdcd83f78334d3748892cef07fe4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905292"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769850"
 ---
 # <a name="manage-identity-columns"></a>管理标识列
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理标识列。 在将订阅服务器插入操作复制回发布服务器时，必须对标识列进行管理，以免在订阅服务器和发布服务器上分配相同的标识值。 复制可自动管理标识范围，或者您可以选择手动处理标识范围管理。  有关由复制提供的标识范围管理选项的信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
  **本主题内容**  

@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a6b8521564d6b085a4cab0102a5138682077b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b226bb096a532aaeec77cc38bcecd0ef805c9d2f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939091"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768744"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>静止复制拓扑（复制 Transact-SQL 编程）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
    为了“停止”系统，需要停止所有节点上已发布表的操作，并确保每个节点都已收到来自所有其他节点的所有更改。 本主题说明了如何停止复制拓扑（这是许多管理任务所必需的操作），以及如何确保节点收到来自其他节点的全部更改。  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>停止包含只读订阅的事务复制拓扑  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 4ab035890dad4e51b6bc3a8d3f1c463e64143ac1
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307588"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670607"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
 
@@ -866,13 +866,13 @@ GO;
 4. 通过转到“工具”  （主菜单）>“NuGet 包管理器”   > “包管理器控制台”  安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
 
    ```powershell
-   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease
+   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders -IncludePrerelease
    ```
 
 5. 如果使用 Azure Key Vault 来存储列主密钥，通过转到“工具”  （主菜单）>“NuGet 包管理器”   > “包管理器控制台”  安装以下 NuGet 包。 在“包管理器控制台”中运行以下代码。
 
    ```powershell
-   Install-Package  Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider  --IncludePrerelease -Version 2.2.0
+   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -IncludePrerelease -Version 2.2.0
    Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
    ```
 
@@ -881,16 +881,17 @@ GO;
 8. 找到\<配置\>部分。 在\<配置\>部分中，找到 \<configSections\> 部分。 将以下部分添加到 \<configSections\>：
 
    ```xml
-   <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient. SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
+   <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
 9. 在配置部分的 \<configSections\> 下，添加以下部分，它指定一个 enclave 提供程序，用来证明并与 Intel SGX enclave 进行交互：
 
    ```xml
-   \<SqlColumnEncryptionEnclaveProviders\>
-       \<providers\>
-       \<add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders. VirtualizationBasedSecurityEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
-       \</SqlColumnEncryptionEnclaveProviders\>
+   <SqlColumnEncryptionEnclaveProviders>
+       <providers>
+           <add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualizationBasedSecurityEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
+       </providers>
+   </SqlColumnEncryptionEnclaveProviders>
    ```
 
 ### <a name="develop-and-test-your-app"></a>开发和测试应用程序

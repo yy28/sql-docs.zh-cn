@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19e37ca43e7fcac57e9cac2ae5c953d608e1e172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2bb56fedd47434f865bc8121cd906a73528f5c1c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046692"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769622"
 ---
 # <a name="identity-and-access-control-replication"></a>标识和访问控制（复制）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  身份验证是指一个实体（在此上下文中通常是计算机）验证另一实体（也称“主体” ，通常是另一计算机或用户）是否与其自称的身份相符的过程。 授权是给予通过身份验证的主体对资源（例如，文件系统中的文件或数据库中的表）的访问权限的过程。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  身份验证是指一个实体（在此上下文中通常是计算机）验证另一实体（也称“主体”  ，通常是另一计算机或用户）是否与其自称的身份相符的过程。 授权是给予通过身份验证的主体对资源（例如，文件系统中的文件或数据库中的表）的访问权限的过程。  
   
  复制安全性使用身份验证和授权，来控制对复制数据库对象和涉及复制处理的计算机及代理的访问。 这是通过三种机制实现的：  
   

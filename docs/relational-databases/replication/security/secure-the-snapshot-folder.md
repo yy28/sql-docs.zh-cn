@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30e0f800477af8305f64b617aa3af543e789bdc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 68f87d4707f17eab8a37332b6db2baff5ed5a42f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051893"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768456"
 ---
 # <a name="secure-the-snapshot-folder"></a>保护快照文件夹的安全
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   快照文件夹是存储快照文件的目录；建议将该目录专门用于存储快照。 请授予快照代理对该文件夹的写入权限，并确保仅为合并代理或分发代理访问文件夹时所用的 Windows 帐户授予读取权限。 与该代理相关联的 Windows 帐户必须是访问远程计算机上快照文件夹的域帐户。  
   
 > [!NOTE]  

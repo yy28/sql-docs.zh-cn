@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17561f22d85a7bd6564d898d84da22364c0c92a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e158860b786a7612a31acd629a7b5d5deff203f3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129945"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769477"
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   复制是一组技术，它将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以保持一致性。 使用复制，可以通过局域网和广域网、拨号连接、无线连接和 Internet 将数据分配到不同位置以及分配给远程或移动用户。  
   
  事务复制通常用于需要高吞吐量的服务器到服务器方案（包括：提高可伸缩性和可用性、数据仓库和报告、集成多个站点的数据、集成异类数据以及减轻批处理的负荷）。 合并复制主要是为可能存在数据冲突的移动应用程序或分步式服务器应用程序设计的。 常见应用场景包括：与移动用户交换数据、POS（消费者销售点）应用程序以及集成来自多个站点的数据。 快照复制用于为事务复制和合并复制提供初始数据集；在适合数据完全刷新时也可以使用快照复制。 利用这三种复制， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供功能强大且灵活的系统，以便使企业范围的数据同步。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 和 [!INCLUDE[win8](../../includes/win8-md.md)]都支持复制到 SQLCE 3.5 和 SQLCE 4.0。  

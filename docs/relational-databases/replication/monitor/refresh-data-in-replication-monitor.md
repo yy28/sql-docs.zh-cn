@@ -12,20 +12,21 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bad7e43d5bbd7f3a263de52f8bb4bda7c64bfd29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: be4dde11a67c0391f753c29b411baf9ccb25d804
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111137"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770524"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>刷新复制监视器中的数据
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   在复制监视器中，可以自动或手动刷新主窗口和详细信息窗口（从主窗口启动的那些窗口）。 若要手动刷新窗口，请按 F5 键。 默认情况下，主窗口每五分钟自动刷新一次。每个发布服务器的刷新速率均可以自定义。  
   
  从缓存查询复制监视器中显示的数据。有关缓存和刷新复制监视器之间的关系的信息，请参阅[缓存、刷新和复制监视器性能](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
-### <a name="to-set-refresh-options-for-replication-monitor"></a>设置复制监视器的刷新选项  
+### <a name="to-set-refresh-options-for-replication-monitor"></a>设置复制监视器的刷新选项
   
 1.  右键单击复制监视器左窗格中的发布服务器，然后单击 **“发布服务器设置”** 。  
   

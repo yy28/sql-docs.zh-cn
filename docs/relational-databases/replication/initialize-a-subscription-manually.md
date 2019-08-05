@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f803cffb48e556e0f95be92155b0ca3dcbcc6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: eff19816330eb512c48cc6a37237ecf6030d7e4f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127845"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768544"
 ---
 # <a name="initialize-a-subscription-manually"></a>手动初始化订阅
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中手动初始化订阅。 虽然初始快照通常用于初始化订阅，但如果架构和初始数据已经在订阅服务器上存在，则可以在不使用快照的情况下初始化对发布的订阅。  
   
 
@@ -53,7 +53,7 @@ ms.locfileid: "68127845"
   
 1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 \@publication 和 \@subscriber，为 \@destination_db 指定订阅服务器上包含已发布数据的数据库的名称，并将 \@subscription_type 的值指定为 pull，将 \@sync_type 的值指定为 replication support only。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 \@publication 和 \@subscriber，为 \@destination_db 指定订阅服务器上包含已发布数据的数据库的名称，并将 \@subscription_type 的值指定为 pull，将 \@sync_type 的值指定为 replication support only        。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 3.  在订阅服务器上，执行 [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 有关更新订阅的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68127845"
   
 1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 为 \@destination_db 指定订阅服务器上包含已发布数据的数据库的名称，并将 \@subscription_type 的值指定为 push，将 \@sync_type 的值指定为 replication support only。 有关更新订阅的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)。  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 为 \@destination_db 指定订阅服务器上包含已发布数据的数据库的名称，并将 \@subscription_type 的值指定为 push，将 \@sync_type 的值指定为 replication support only      。 有关更新订阅的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "68127845"
   
 1.  确保订阅数据库中存在架构和数据。 通过在订阅服务器上还原发布数据库的备份，即可完成此操作。  
   
-2.  在发布服务器中，执行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db，并将 \@subscription_type 的值指定为 pull。 这样便可注册请求订阅。  
+2.  在发布服务器中，执行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db，并将 \@subscription_type 的值指定为 pull      。 这样便可注册请求订阅。  
   
-3.  在订阅服务器上，对包含已发布数据的数据库执行 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 将 \@sync_type 的值指定为 none。  
+3.  在订阅服务器上，对包含已发布数据的数据库执行 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 将 \@sync_type 的值指定为 none   。  
   
 4.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68127845"
   
 1.  确保订阅数据库中存在架构和数据。 通过在订阅服务器上还原发布数据库的备份，即可完成此操作。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 为 \@subscriber_db 指定订阅服务器上包含已发布数据的数据库的名称，并将 \@subscription_type 的值指定为 push，将 \@sync_type 的值指定为 none。  
+2.  在发布服务器的发布数据库中，执行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 为 \@subscriber_db 指定订阅服务器上包含已发布数据的数据库的名称，并将 \@subscription_type 的值指定为 push，将 \@sync_type 的值指定为 none      。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
