@@ -26,7 +26,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68119692"
 ---
-# <a name="srvrpcowner-extended-stored-procedure-api"></a>srv_rpcowner（扩展存储过程 API）
+# <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -61,6 +61,6 @@ len
  此函数只返回远程存储过程的所有者组件。 不包括名称、远程存储过程名称和远程存储过程编号的可选说明符。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

@@ -26,7 +26,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68005572"
 ---
-# <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus（扩展存储过程 API）
+# <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

@@ -27,7 +27,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126952"
 ---
-# <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex（扩展存储过程 API）
+# <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex（扩展存储过程 API）
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -49,22 +49,22 @@ len
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc   
+ srvproc  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- field   
- 指定要返回的 srvproc 字段  。  
+ field  
+ 指定要返回的 srvproc 字段。  
   
 |字段|Description|返回类型|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|当前会话消息 LCID。|ULONG*|  
 |SRV_INSTANCENAME|实例名称（如果已命名）；否则返回 NULL。|WCHAR*|  
   
- len   
- 指向一个 int 变量的指针，该变量包含所返回的 field 值的长度（以字节为单位）   。 如果 len 为 NULL，则不返回长度  。 返回 NULL 时，*len 设置为 0  。  
+ len  
+ 指向一个 int 变量的指针，该变量包含所返回的 field 值的长度（以字节为单位）。 如果 len 为 NULL，则不返回长度。 返回 NULL 时，*len 设置为 0。  
   
 ## <a name="returns"></a>返回  
- 一个指针，指向其类型取决于 field 的数据  。 len 为 NULL 或 srvproc 为 NULL 时，则返回 NULL   。 如果 field 未知，则返回 NULL  。 返回 NULL 时，*len 设置为 0  。  
+ 一个指针，指向其类型取决于 field 的数据。 len 为 NULL 或 srvproc 为 NULL 时，则返回 NULL。 如果 field 未知，则返回 NULL。 返回 NULL 时，*len 设置为 0。  
   
 > [!IMPORTANT]  
 >  从服务器返回的缓冲区应为只读的。 否则，可能损坏服务器状态。  

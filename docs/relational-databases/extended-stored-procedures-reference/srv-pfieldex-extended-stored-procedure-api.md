@@ -26,7 +26,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68005552"
 ---
-# <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex（扩展存储过程 API）
+# <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -69,6 +69,6 @@ len
 >  从服务器返回的缓冲区应为只读的。 否则，可能损坏服务器状态。  
   
 ## <a name="remarks"></a>Remarks  
- **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+ **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

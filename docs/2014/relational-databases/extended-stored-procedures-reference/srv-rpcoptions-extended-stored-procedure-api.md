@@ -27,7 +27,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745816"
 ---
-# <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions（扩展存储过程 API）
+# <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions（扩展存储过程 API）
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -45,7 +45,7 @@ srvproc
 ```  
   
 ## <a name="arguments"></a>参数  
- srvproc   
+ srvproc  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
 ## <a name="returns"></a>返回  
@@ -60,6 +60,6 @@ srvproc
 |SRV_RECOMPILE|客户端已请求在执行远程存储过程前重新编译它。 此标志可能不适用于扩展存储过程 API 应用程序。|  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   
