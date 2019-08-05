@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264155"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742790"
 ---
 # <a name="programming-guidelines"></a>编程指南
 
@@ -64,7 +64,7 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   SQLBrowseConnect (版本17.2 之前)
 -   诸如 SQL_C_INTERVAL_YEAR_TO_MONTH（记录在[数据类型标识符和描述符](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)中）的 C 间隔类型
 -   SQLSetConnectAttr 函数的 SQL_ATTR_ODBC_CURSORS 属性的 SQL_CUR_USE_ODBC 值。
 
@@ -116,6 +116,12 @@ SQLWCHAR 数据必须是 UTF-16LE (Little Endian)。
 Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编码转换差异。 代码页 1255（希伯来语）中的文本数据有一个码位 (0xCA) 在转换为 Unicode 时具有不同的行为。 在 Windows 中，此字符转换为 0x05BA 的 UTF-16 码位。 在具有 1.15 版本以前的 libiconv 的 macOS 和 Linux 上，它转换为 0x00CA。 在 iconv 库不支持 Big5/CP950 的 2003 修订（名为 `BIG5-2003`）的 Linux 上，使用该修订添加的字符将无法正确转换。 在代码页 932（日语(Shift-JIS)）中，最初未在编码标准中定义的字符的解码结果也存在差异。 例如，字节 0x80 在 Windows 上转换为 U+0080，但在 Linux 和 macOS 上可能会变为 U+30FB，具体取决于 iconv 版本。
 
 在 ODBC 驱动程序 13 和 13.1 中，当在 SQLPutData 缓冲区上拆分 UTF-8 多字节字符或 UTF-16 代理项时，这会导致数据损坏。 使用用于流式传输不会在部分字符编码中结束的 SQLPutData 的缓冲区。 ODBC Driver 17 消除了这一限制。
+
+## <a name="bkmk-openssl"></a>OpenSSL
+从版本17.4 开始, 驱动程序会动态加载 OpenSSL, 这允许在版本1.0 或1.1 的系统上运行, 而无需单独的驱动程序文件。 当存在多个版本的 OpenSSL 时, 驱动程序将尝试加载最新版本。 驱动程序当前支持 OpenSSL 1.0. x 和 1.1. x
+
+> [!NOTE]  
+> 如果使用驱动程序 (或其组件之一) 的应用程序链接或动态加载不同版本的 OpenSSL, 则可能会发生冲突。 如果系统中存在多个版本的 OpenSSL, 并且应用程序使用该版本, 则强烈建议在确保应用程序和驱动程序加载的版本不匹配时特别小心, 因为错误可能会损坏内存, 因此不一定会以明显或一致的方式进行清单。
 
 ## <a name="additional-notes"></a>其他说明  
 

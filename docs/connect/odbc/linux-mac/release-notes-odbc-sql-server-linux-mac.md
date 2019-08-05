@@ -7,15 +7,15 @@ ms.prod_service: connectivity
 ms.reviewer: MightyPen
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
+author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190583"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742815"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -35,10 +35,19 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="174-august-2019"></a>17.4 年8月2019
+
+| 新增功能 | 详细信息 |
+| :------------ | :------ |
+| 具有安全 Enclave 的 Always Encrypted。 | 请参阅[对 ODBC 驱动程序使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
+| 动态加载 OpenSSL | 请参阅[编程指南](programming-guidelines.md#bkmk-openssl)。 |
+| 可配置的 TCP 保持活动状态设置。 | 请参阅[连接到 SQL Server](connection-string-keywords-and-data-source-names-dsns.md)。 |
+| bug 修复。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3 版，2019 年 2 月
 
-| 新项 | 详细信息 |
+| 新建项 | 详细信息 |
 | :------- | :------ |
 | 支持新分发。 | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory 托管服务标识（系统和用户分配）身份验证模式。 | 请参阅[结合使用 Azure Active Directory 和 ODBC Driver](../using-azure-active-directory.md)。 |
@@ -48,7 +57,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="172-july-2018"></a>17.2 版，2018 年 7 月
 
-| 新项 | 详细信息 |
+| 新建项 | 详细信息 |
 | :------- | :------ |
 | 支持新分发。 | &bull; &nbsp; &nbsp; Ubuntu 18.04 |
 | 对 Azure SQL 数据库和 SQL Server 进行数据分类。 | 请参阅[数据分类](../data-classification.md)。 |
@@ -61,7 +70,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="171-march-2018"></a>17.1 版，2018 年 3 月
 
-| 新项 | 详细信息 |
+| 新建项 | 详细信息 |
 | :------- | :------ |
 | 支持 `SQL_COPT_SS_CEKCACHETTL` 和 `SQL_COPT_SS_TRUSTEDCMKPATHS` 连接属性。 | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` 允许控制列加密密钥的本地缓存的保留时间以及刷新该时间。<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` 允许应用程序将 Always Encrypted 操作限制为仅使用指定的列主密钥列表。<br/><br/>请参阅[结合使用 Always Encrypted 和 ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md)。 |
 | 支持从默认位置加载 `.rll`。 | 请参阅[安装文档中的“资源文件加载”部分](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading)。 |

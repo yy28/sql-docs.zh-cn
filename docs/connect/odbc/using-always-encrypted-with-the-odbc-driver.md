@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
-ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
+ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68231858"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702707"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,9 +25,11 @@ ms.locfileid: "68231858"
 
 ### <a name="introduction"></a>简介
 
-本文介绍如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和 [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 来开发 ODBC 应用程序。
+本文介绍如何使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)或[具有安全 Enclaves 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 和[适用于 SQL Server 的 ODBC 驱动程序](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。
 
-始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如适用于 SQL Server 的 ODBC 驱动程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。
+始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（例如适用于 SQL Server 的 ODBC 驱动程序）通过在客户端应用程序中以透明方式对敏感数据进行加密和解密来实现此目标。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 具有安全 enclave 的 Always Encrypted  扩展此功能，以便对敏感数据启动更丰富的功能，同时保持数据的机密性。
+
+有关详细信息, 请参阅[Always Encrypted (数据库引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)和[安全 Enclaves Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 ### <a name="prerequisites"></a>必备条件
 
@@ -54,6 +56,17 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 - 应用程序具有 *查看任意列主密钥定义* 和 *查看任意列加密密钥定义* 数据库权限，这是访问数据库中始终加密密钥的相关元数据所必需的权限。 有关详细信息，请参阅[数据库权限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
 
 - 应用程序可以访问保护查询的加密列的 CEK 的 CMK。 它以存储 CMK 的密钥存储提供程序为基础。 有关详细信息，请参阅[使用列主密钥存储](#working-with-column-master-key-stores)。
+
+### <a name="enabling-always-encrypted-with-secure-enclaves"></a>启用“具有安全 Enclaves 的 Always Encrypted”
+
+从17.4 版开始, 驱动程序支持 Always Encrypted 安全的 Enclaves。 若要在连接到 SQL Server 2019 或更高版本时启用 enclave, 请`ColumnEncryption`将 DSN、连接字符串或连接属性设置为 enclave 类型和证明协议的名称, 并将关联的证明数据 (用逗号分隔)。 在版本17.4 中, 仅支持[基于虚拟化的安全](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)enclave 类型和[主机保护者服务](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)证明`VBS-HGS`协议 (表示为); 若要使用它, 请指定证明服务器的 URL, 例如:
+
+```
+Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
+```
+
+如果为所需列正确配置了服务器和证明服务以及启用了 enclave 的 Cmk 和 Cek, 则现在应该能够执行使用 enclave 的查询 (如就地加密和丰富的计算), 除了Always Encrypted 提供的现有功能。 有关详细信息, 请参阅[Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 。
+
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>检索和修改加密列中的数据
 
@@ -148,7 +161,7 @@ CREATE TABLE [dbo].[Patients](
 - 程序打印的所有值均为纯文本形式，因为驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
 
 > [!NOTE]
-> 只有在加密是确定性加密的情况下，查询才可以对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
+> 仅当加密是确定性的或启用了 secure enclave 时, 查询才能对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
 ```
 SQLCHAR SSN[12];
@@ -579,7 +592,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |“属性”|描述|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值为 `Enabled`/`Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。 <br><br>默认值为 `Disabled`。|  
+|`ColumnEncryption`|接受的值为 `Enabled`/`Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。<br>*type*,*data* -(版本17.4 及更高版本) 启用具有 secure enclave 和证明协议*类型*的 Always Encrypted, 并启用关联的证明数据*数据*。 <br><br>默认值为 `Disabled`。|
 |`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为有效的 Azure Active Directory 用户主体名称。 <br>为 `KeyStoreAuthetication` = `KeyVaultClientSecret` 时，将此值设置为有效的 Azure Active Directory 应用程序客户端 ID |
 |`KeyStoreSecret` | 为 `KeyStoreAuthentication` = `KeyVaultPassword` 时，将此值设置为相应用户名的密码。 <br>为 `KeyStoreAuthentication` = `KeyVaultClientSecret` 时，将此值设置为 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密 |
@@ -589,7 +602,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |“属性”|类型|描述|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 禁用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 启用 Always Encrypted|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- 禁用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- 启用 Always Encrypted<br> 指向*类型*、*数据*字符串的指针 (版本17.4 及更高版本) 通过安全 enclave 启用|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|后连接|[Set] 尝试加载 CEKeystoreProvider<br>[Get] 返回 CEKeystoreProvider 名称|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|后连接|[Set] 将数据写入 CEKeystoreProvider<br>[Get] 从 CEKeystoreProvider 读取数据|
 |`SQL_COPT_SS_CEKCACHETTL`|后连接|[Set] 设置 CEK 缓存 TTL<br>[Get] 获取当前 CEK 缓存 TTL|
@@ -616,5 +629,6 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ## <a name="see-also"></a>另请参阅
 
 - [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [始终加密博客](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
