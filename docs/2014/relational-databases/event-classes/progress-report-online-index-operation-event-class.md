@@ -1,5 +1,5 @@
 ---
-title: Progress Report:Online Index Operation 事件类 |Microsoft Docs
+title: Progress Report:Online Index Operation 事件类 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520405"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811261"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Progress Report:Online Index Operation 事件类
-  Progress Report:Online Index Operation 事件类指示在生成过程运行时联机索引生成操作的进度。  
+  Progress Report:Online Index Operation 事件类指示在联机索引生成进程运行时联机索引生成操作的进度。  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report:联机索引操作事件类的数据列  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report:Online Index Operation 事件类的数据列  
   
-|数据列名称|数据类型|Description|列 ID|可筛选|  
+|数据列名称|数据类型|描述|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|10|是|  
 |BigintData1|`bigint`|插入的行数。|52|是|  
@@ -38,7 +38,7 @@ ms.locfileid: "62520405"
 |EndTime|`datetime`|联机索引操作完成的时间。|15|是|  
 |EventClass|`int`|事件类型 = 190。|27|否|  
 |EventSequence|`int`|给定事件在请求中的顺序。|51|否|  
-|EventSubClass|`int`|事件子类的类型。<br /><br /> 1 = 启动<br /><br /> 2 = 阶段 1 执行开始<br /><br /> 3 = 阶段 1 执行结束<br /><br /> 4 = 阶段 2 执行开始<br /><br /> 5 = 阶段 2 执行结束<br /><br /> 6 = 已插入行计数<br /><br /> 7 = 完成<br /><br /> 阶段 1 表示基对象（聚集索引或堆）或者索引操作是否仅涉及一个非聚集索引。 在索引生成操作同时涉及原始重新生成以及附加的非聚集索引时，使用阶段 2。  例如，如果某一对象具有聚集索引和若干非聚集索引，则“全部重新生成”将生成所有索引。 基对象（聚集索引）在阶段 1 重新生成，然后，所有非聚集索引在阶段 2 重新生成。|21|是|  
+|EventSubClass|`int`|事件子类的类型。<br /><br /> 1 = 启动<br /><br /> 2 = 阶段 1 执行开始<br /><br /> 3 = 阶段 1 执行结束<br /><br /> 4 = 阶段 2 执行开始<br /><br /> 5 = 阶段 2 执行结束<br /><br /> 6 = 已插入行计数<br /><br /> 7 = 完成<br /><br /> 阶段1表示基对象 (聚集索引或堆), 或者索引操作仅涉及一个非聚集索引。 在索引生成操作同时涉及原始重新生成以及附加的非聚集索引时, 使用阶段2。  例如, 如果对象具有聚集索引和若干非聚集索引, 则 "全部重新生成" 将重新生成所有索引。 基对象 (聚集索引) 在阶段1重新生成, 然后在第2阶段重新生成所有非聚集索引。|21|是|  
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IndexID|`int`|受事件影响的对象的索引的 ID。|24|是|  

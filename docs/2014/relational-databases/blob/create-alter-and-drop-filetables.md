@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26658ebc9cc2828bc127be2881bdf24d80922b67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 494eabcd54e7a8c28b3a68e99efca72ef80eb9e1
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010293"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811237"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
   说明如何创建新的 FileTable 或者更改或删除现有的 FileTable。  
@@ -31,7 +31,7 @@ ms.locfileid: "66010293"
   
 -   目录名称。 在 FileTable 文件夹层次结构中，此表级目录将成为在数据库级别指定的数据库目录的子级以及在表中存储的文件或目录的父级。  
   
--   要用于 FileTable 的“名称”  列中文件名的排序规则名称。  
+-   要用于 FileTable 的“名称” 列中文件名的排序规则名称。  
   
 -   要用于 3 个主键的名称和自动创建的唯一约束。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66010293"
   
     -   如果您创建 FileTable 时没有提供目录名称，则 FileTable 自身的名称将用作目录名称。  
   
-2.  **FILETABLE_COLLATE_FILENAME**。 指定要应用于 FileTable 的“名称”  列的排序规则名称。  
+2.  **FILETABLE_COLLATE_FILENAME**。 指定要应用于 FileTable 的“名称” 列的排序规则名称。  
   
     1.  指定的排序规则必须**不区分大小写**，以符合 Windows 文件命名语义。  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 创建 FileTable**  
- 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”  文件夹，选择“新建 FileTable”  。  
+ 在对象资源管理器中，展开所选数据库下的对象，然后右键单击“Tables”文件夹，选择“新建 FileTable”。  
   
  此选项将打开一个新的脚本窗口，其中包含一个 Transact-SQL 脚本模板，您可以自定义和运行此模板以创建 FileTable。 使用 **“查询”** 菜单上的 **“指定模板参数的值”** 选择可轻松指定脚本。  
   
@@ -96,7 +96,7 @@ GO
   
 -   由于一个 FileTable 包含一个 FILESTREAM 列，因此，FileTable 需要有效的 FILESTREAM 文件组。 可以指定有效的 FILESTREAM 文件组作为 **CREATE TABLE** 命令的一部分以创建 FileTable（可选）。 如果未指定文件组，则 FileTable 使用数据库的默认 FILESTREAM 文件组。 如果数据库没有 FILESTREAM 文件组，将引发错误。  
   
--   不能将表约束作为 CREATE TABLE…AS FILETABLE 语句的一部分创建  。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
+-   不能将表约束作为 CREATE TABLE…AS FILETABLE 语句的一部分创建。 但是，您以后可以使用 **ALTER TABLE** 语句添加该约束。  
   
 -   不能在 **tempdb** 数据库或任何其他系统数据库中创建 FileTable。  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 更改 FileTable 的目录**  
- 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。   在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
+ 在对象资源管理器中，右键单击 FileTable，然后选择“属性”以打开“表属性”对话框。 在 **FileTable** 页上，为 **“FileTable 目录名称”** 输入新值。  
   
 ###  <a name="ReqAlter"></a> 更改 FileTable 的要求和限制  
   
@@ -162,9 +162,9 @@ GO
 |||  
 |-|-|  
 |**列**|**索引类型**|  
-|[path_locator] ASC|主键，非聚集|  
-|[parent_path_locator] ASC，<br /><br /> [name] ASC|唯一，非聚集|  
-|[stream_id] ASC|唯一，非聚集|  
+|[path_locator] ASC|主键, 非聚集|  
+|[parent_path_locator] ASC，<br /><br /> [name] ASC|唯一, 非聚集|  
+|[stream_id] ASC|唯一, 非聚集|  
   
  **创建新的 FileTable 时创建的约束**  
  创建新的 FileTable 时，还会创建以下系统定义的约束：  

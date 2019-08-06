@@ -17,12 +17,12 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072710"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811054"
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
   架构生成向导为基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的维度和度量值组的主题区域数据库生成一个非规范化的关系架构。 该向导为每个维度生成一个用于存储维度数据的关系表（该表称为维度表）；为每个度量值组生成一个用于存储事实数据的关系表（该表称为事实数据表）。 该向导在生成这些关系表时，会忽略链接维度、链接度量值组以及服务器时间维度。  
@@ -71,7 +71,7 @@ ms.locfileid: "66072710"
  关系  
  向导会为每个从事实数据表到维度表的粒度属性的常规维度关系生成一种关系。 如果粒度基于维度表的键属性，则在数据库和数据源视图中创建关系。 如果粒度基于其他属性，则仅在数据源视图中创建关系。  
   
- 如果您选择在向导中生成索引，则会为上述每个关系列生成一个非聚集索引。  
+ 如果选择在向导中生成索引, 则会为这些关系列中的每个关系列生成非聚集索引。  
   
  约束  
  主键不会在事实数据表中生成。  
@@ -82,7 +82,7 @@ ms.locfileid: "66072710"
  向导会生成一个单独的表以保存度量值组中需要翻译列的任意属性的翻译值。 向导还会为每种所需的语言创建一个单独的列。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>数据类型转换和默认长度  
- 架构生成向导会忽略在所有情况下使用的列以外的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`数据类型。 `wchar` 数据大小直接翻译为 `nvarchar` 数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
+ 架构生成向导会在所有情况下忽略数据类型, 但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`数据类型的列除外。 `wchar` 数据大小直接翻译为 `nvarchar` 数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
   
  如果数据项（如属性的绑定）没有指定的长度，则针对该列使用下表中列出的默认长度。  
   

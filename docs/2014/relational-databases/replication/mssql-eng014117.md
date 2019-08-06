@@ -12,14 +12,14 @@ ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b29b1df0ed0d86cff33461bdd298c0634505af00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191567"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811250"
 ---
-# <a name="mssqleng014117"></a>MSSQL_ENG014117
+# <a name="mssql_eng014117"></a>MSSQL_ENG014117
     
 ## <a name="message-details"></a>消息详细信息  
   
@@ -35,9 +35,9 @@ ms.locfileid: "63191567"
 ## <a name="explanation"></a>解释  
  如果下列之一或两者均为 True，则会出现此错误：  
   
--   msdb..MSdistributiondbs  中缺少指定分发数据库的条目。  
+-   msdb..MSdistributiondbs中缺少指定分发数据库的条目。  
   
--   在 master  数据库中没有本地服务器入口，或者存在的入口不正确。  
+-   在 master 数据库中没有本地服务器入口，或者存在的入口不正确。  
   
      复制要求一个拓扑中的所有服务器都使用具有可选实例名称的计算机名称（如果为群集实例，则为具有可选实例名称的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虚拟服务器名称）来注册。 `SELECT @@SERVERNAME` 为拓扑中每个服务器返回的值必须与具有可选实例名称的计算机名称或虚拟服务器名称相匹配，复制才能正常运行。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63191567"
   
      10.193.17.129 inst1  
   
--   禁用分发，注册实例，然后重新建立分发。 如果 @@SERVERNAME 的值对于某个非群集实例是不正确的，请执行下列步骤：  
+-   禁用分发，注册实例，然后重新建立分发。 如果 @@SERVERNAME的值对于非群集实例是不正确的, 请执行以下步骤:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -65,7 +65,7 @@ ms.locfileid: "63191567"
   
      如果 @@SERVERNAME 的值对于某个群集实例是不正确的，则必须使用群集管理器更改该名称。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs  中列出。 如果未列出：  
+ 验证已正确注册分发服务器实例后，请验证分发数据库是否已在 msdb..MSdistributiondbs中列出。 如果未列出：  
   
 1.  请编写分发配置的脚本。 有关详细信息，请参阅 [Scripting Replication](scripting-replication.md)。  
   

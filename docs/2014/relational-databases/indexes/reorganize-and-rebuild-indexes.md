@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475959"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811031"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新组织或重新生成碎片索引。 无论何时对基础数据执行插入、更新或删除操作， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都会自动维护索引。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。 碎片非常多的索引可能会降低查询性能，导致应用程序响应缓慢。  
@@ -87,7 +87,7 @@ ms.locfileid: "68475959"
 <sup>1</sup> 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。  
   
 > [!TIP]
-> 这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。 例如, 如果给定索引主要用于扫描操作, 则删除碎片可以提高这些操作的性能。 对于主要用于查找操作的索引, 性能优势不太明显。 同样, 删除堆中的碎片 (不包含聚集索引的表) 对于非聚集索引扫描操作特别有用, 但在查找操作中不起作用。
+> 这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。 例如, 如果给定索引主要用于扫描操作, 则删除碎片可以提高这些操作的性能。 对于主要用于查找操作的索引, 性能优势不太明显。 同样, 删除堆中的碎片 (没有聚集索引的表) 对于非聚集索引扫描操作特别有用, 但在查找操作中不起作用。
 
 通常情况下，非常低的碎片级别（小于 5%）不应通过这些命令来解决，因为删除如此少量的碎片所获得的收益始终远低于重新组织或重新生成索引的开销。 
 
@@ -189,7 +189,7 @@ ms.locfileid: "68475959"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
   
     ```  
     USE AdventureWorks2012;  
@@ -281,7 +281,7 @@ ms.locfileid: "68475959"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
   
     ```  
     USE AdventureWorks2012;   
@@ -299,7 +299,7 @@ ms.locfileid: "68475959"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
   
     ```  
     USE AdventureWorks2012;   
@@ -316,7 +316,7 @@ ms.locfileid: "68475959"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例在 `Employee` 表中重新生成单个索引。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”。 该示例在 `Employee` 表中重新生成单个索引。  
   
      [!code-sql[IndexDDL#AlterIndex1](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex1)]  
   

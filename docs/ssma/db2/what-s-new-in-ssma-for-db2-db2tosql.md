@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 6c456334d9d77424c1955f392e8c8a5d16261234
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e41cd9e244a39f5ec2e84d6f3512a709319acb24
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632040"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811464"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新增功能 (DB2ToSQL)
 
@@ -43,7 +43,7 @@ SSMA for DB2 的 v 8.3 版本通过旨在改进质量和转换指标的目标修
 
 的 SSMA for DB2 的7.4 版已通过 SSMA 控制台工具解决了与 Azure SQL 数据库连接有关的问题, 并且在转换过程中在视图声明中缺少 COUNT_BIG 列。 此外, 此版本还包括一组旨在提高质量和转换指标的目标修补程序, 以及对的修复:
 
-* 数据迁移后禁用的非聚集索引的问题。
+* 数据迁移后已禁用的非聚集索引的问题。
 * 在无提示安装期间检测 .NET Framework。
 * 下载新版本时出现间歇性崩溃。
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802702"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811308"
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802702"
  添加新对象，如维度、多维数据集或属性。  
  架构生成向导会添加新对象映射到的基础对象。  
   
- 如果架构生成向导因主题区域数据库中存在用户对象而无法进行所需的更改（因为数据库引擎返回错误），则架构生成向导会失败并显示由数据库引擎返回的错误。 例如，如果您在向导生成表后对该表创建主键约束或非聚集索引，则架构生成向导不会删除该表，因为向导并未创建约束或索引。  
+ 如果架构生成向导因主题区域数据库中存在用户对象而无法进行所需的更改（因为数据库引擎返回错误），则架构生成向导会失败并显示由数据库引擎返回的错误。 例如, 如果您在向导生成表后对表创建 primary key 约束或非聚集索引, 则架构生成向导不会删除该表, 因为它未创建约束或索引。  
   
 ## <a name="supporting-schema-changes"></a>支持架构更改  
  当您更改主题区域数据库或相关数据源视图中表或列的属性时，架构生成向导将按照下表所述处理更改。  

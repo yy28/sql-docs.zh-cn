@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918432"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811267"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
   数据层应用程序 (DAC) 支持最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对象。  
@@ -40,7 +40,7 @@ ms.locfileid: "62918432"
 |-|-|  
 |DATABASE ROLE|函数：内联表值|  
 |函数：多语句表值|函数：Scalar|  
-|索引：聚集|索引：非群集|  
+|索引：聚集|索引：非聚集|  
 |索引：特殊|索引：唯一|  
 |Login|权限|  
 |角色成员资格|SCHEMA|  
@@ -107,7 +107,7 @@ ms.locfileid: "62918432"
 ##  <a name="Considerations"></a> 有关部署操作的其他注意事项  
  请注意以下有关 DAC Framework 数据部署操作的注意事项：  
   
--   **提取/导出** - 对于使用 DAC Framework 从数据库创建包的操作（例如，提取 .dacpac 文件，导出 .bacpac 文件），这些限制不适用。 该包中的数据是源数据库中数据的完全保真表示形式。 如果该包中存在其中任意条件，则提取/导出日志将包含通过上述消息所提供问题的摘要。 这将向用户警告他们所创建的包存在潜在数据部署问题。 用户还将在日志中看到以下摘要消息：**这些限制不影响 DAC Framework 创建的 DAC 包中存储的数据类型和值的保真度；它们只适用于因将 DAC 包部署到数据库而产生的数据类型和值。有关受影响的数据以及如何解决此限制的详细信息，请参阅**[此主题](https://go.microsoft.com/fwlink/?LinkId=267086)。  
+-   **提取/导出** - 对于使用 DAC Framework 从数据库创建包的操作（例如，提取 .dacpac 文件，导出 .bacpac 文件），这些限制不适用。 该包中的数据是源数据库中数据的完全保真表示形式。 如果该包中存在其中任意条件，则提取/导出日志将包含通过上述消息所提供问题的摘要。 这将向用户警告他们所创建的包存在潜在数据部署问题。 用户还将在日志中看到以下摘要消息：**这些限制不影响 DAC Framework 创建的 DAC 包中存储的数据类型和值的保真度；它们只适用于因将 DAC 包部署到数据库而产生的数据类型和值。有关受影响的数据以及如何解决此限制的详细信息, 请参阅** [此主题](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
 -   **部署/发布/导入** - 对于使用 DAC Framework 将包部署到数据库的操作（例如，部署或发布 .dacpac 文件，以及导入 .bacpac 文件），这些限制适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 - 请参阅上述类别 3 - 但将继续显示其他警告。  
   

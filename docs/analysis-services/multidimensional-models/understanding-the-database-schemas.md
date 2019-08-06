@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164964"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811300"
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164964"
  关系  
  向导会为每个从事实数据表到维度表的粒度属性的常规维度关系生成一种关系。 如果粒度基于维度表的键属性，则在数据库和数据源视图中创建关系。 如果粒度基于其他属性，则仅在数据源视图中创建关系。  
   
- 如果您选择在向导中生成索引，则会为上述每个关系列生成一个非聚集索引。  
+ 如果选择在向导中生成索引, 则会为这些关系列中的每个关系列生成非聚集索引。  
   
  约束  
  主键不会在事实数据表中生成。  

@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666794"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811080"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
   服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务选择一个帐户，可选帐户如下：  
@@ -74,22 +74,22 @@ ms.locfileid: "62666794"
 ## <a name="supported-service-account-types"></a>支持的服务帐户类型  
  下表列出了可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的 Windows 帐户类型。  
   
-|服务帐户类型|非群集服务器|群集服务器|域控制器（非群集）|  
+|服务帐户类型|非群集服务器|群集服务器|域控制器 (非群集)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 域帐户（Windows 管理员组的成员）|支持|支持|支持|  
 |Windows 域帐户（非管理）|支持<sup>1</sup>|支持<sup>1</sup>|支持<sup>1</sup>|  
-|网络服务帐户 (NT AUTHORITY\NetworkService)|支持<sup>1、 3、 4</sup>|不支持|不支持|  
+|网络服务帐户 (NT AUTHORITY\NetworkService)|支持<sup>1、3、4</sup>|不支持|不支持|  
 |本地用户帐户（非管理）|支持<sup>1</sup>|不支持|不适用|  
 |本地系统帐户 (NT AUTHORITY\System)|支持<sup>2</sup>|不支持|支持<sup>2</sup>|  
 |本地服务帐户 (NT AUTHORITY\LocalService)|不支持|不支持|不支持|  
   
- <sup>1</sup>请参阅下面的限制 1。  
+ <sup>1</sup>请参阅下面的限制1。  
   
- <sup>2</sup>请参阅下面的限制 2。  
+ <sup>2</sup>请参阅下面的限制2。  
   
- <sup>3</sup>请参阅下面的 3 的限制。  
+ <sup>3</sup>参阅下面的限制3。  
   
- <sup>4</sup>请参阅下面的限制 4。  
+ <sup>4</sup>请参阅下面的限制4。  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：针对多服务器管理使用非管理帐户  
  目标服务器可能无法登记到主服务器，并出现以下错误信息：“登记操作失败”。  

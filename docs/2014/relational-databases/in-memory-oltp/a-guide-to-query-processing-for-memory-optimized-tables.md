@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468052"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811067"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
@@ -77,7 +77,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   来自 Customer 表的行从聚集索引检索，聚集索引是主数据结构并且有完整的表数据。  
   
--   Order 表的数据是使用 CustomerID 列的非聚集索引检索的。 此索引包含 CustomerID 列（用于联接）和主键列 OrderID（返回给用户）。 返回 Order 表的其他列需要查找 Order 表的聚集索引。  
+-   使用 CustomerID 列的非聚集索引检索 Order 表中的数据。 此索引包含 CustomerID 列（用于联接）和主键列 OrderID（返回给用户）。 返回 Order 表的其他列需要查找 Order 表的聚集索引。  
   
 -   逻辑运算符 `Inner Join` 是通过物理运算符 `Merge Join` 实现的。 其他物理联接类型为 `Nested Loops` 和 `Hash Join`。 `Merge Join` 运算符利用两个索引都按联接列 CustomerID 排序这一事实。  
   
@@ -114,7 +114,7 @@ SQL Server 查询处理管道。
   
 6.  Access Methods 根据需要从缓冲池中的索引和数据页检索行并将页面从磁盘加载到缓冲池。  
   
- 对于第一个示例查询，执行引擎从 Access Methods 请求 Customer 聚集索引中的行和 Order 非聚集索引中的行。 Access Methods 遍历 B 树索引结构以检索请求的行。 在本例中检索所有行，因为计划需要全部索引扫描。  
+ 对于第一个示例查询, 执行引擎从 Access 方法请求客户的聚集索引和非聚集索引的行。 Access Methods 遍历 B 树索引结构以检索请求的行。 在本例中检索所有行，因为计划需要全部索引扫描。  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>使用解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问内存优化表  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 即席批处理和存储过程也称为解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 解释型是指这样一个事实，即对于查询计划中的每个运算符，查询计划都由查询执行引擎进行解释。 执行引擎读取运算符及其参数并执行运算。  
@@ -222,7 +222,7 @@ END
   
  本机编译存储过程的调用如下所述：  
   
-1.  用户发出`EXEC` *usp_myproc*语句。  
+1.  用户发出一个`EXEC` *usp_myproc*语句。  
   
 2.  分析器提取名称和存储过程参数。  
   
@@ -255,7 +255,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>本机编译存储过程中的查询运算符  
  下表对本机编译存储过程中支持的查询运算符进行了总结：  
   
-|运算符|示例查询|  
+|Operator|示例查询|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`|  

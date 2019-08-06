@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 4da3fa07c4cdcdf2f3666c3bf85ba3669eb7e5bf
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632057"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811437"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 中的新增功能 (SybaseToSQL)
 本文列出了每个版本中的 SAP ASE SQL Server 迁移助手 (以前称为 SSMA) 的更改。
@@ -33,7 +33,7 @@ SSMA for SAP ASE 的 v 8.3 版本已通过旨在提高质量和转换指标的�
 
 SSMA for SAP ASE 的7.4 版已通过一组旨在提高质量和转换指标的目标修补程序进行了增强, 并为以下方面提供了修复:
 
-* 数据迁移后禁用的非聚集索引的问题。
+* 数据迁移后已禁用的非聚集索引的问题。
 * 在无提示安装期间检测 .NET Framework。
 * 下载新版本时出现间歇性崩溃。
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 54edb2b971cbc83d56498065efa72a4e84257147
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632051"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811490"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 
@@ -34,7 +34,7 @@ SSMA for MySQL 的 v 8.3 版本利用旨在提高质量和转换指标的目标�
 
 SSMA for MySQL 的7.4 版是使用一组目标修补程序进行增强, 旨在改进质量和转换度量, 并为以下方面提供修复:
 
-* 数据迁移后禁用的非聚集索引的问题。
+* 数据迁移后已禁用的非聚集索引的问题。
 * 在无提示安装期间检测 .NET Framework。
 * 下载新版本时出现间歇性崩溃。
 

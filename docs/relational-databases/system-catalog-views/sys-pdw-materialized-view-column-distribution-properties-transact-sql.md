@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _materialized_view_column_distribution_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059451"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811434"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) （预览版）
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys.databases _materialized_view_column_distribution_properties (Transact-sql) (预览版)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-具体化视图中显示列的分发的信息。  
+显示具体化视图中列的分布信息。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|该列所属的对象 ID。 |  
+|object_id|**int**|列所属对象的 ID。 |  
 |column_id|**int**|列的 ID。|  
-|distribution_ordinal|**tinyint**|0 = 不是分布列。</br> 1 = SQL 数据仓库使用此列将具体化的视图。|
+|distribution_ordinal|**tinyint**|0 = 不是分布列。</br> 1 = SQL 数据仓库使用此列来分配具体化视图。|
  
 ## <a name="permissions"></a>权限 
 

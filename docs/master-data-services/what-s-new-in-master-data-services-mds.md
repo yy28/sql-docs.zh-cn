@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017225"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810500"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
@@ -177,7 +177,7 @@ ms.locfileid: "68017225"
     
  **自定义索引**  
   
- 可以针对实体中的某一个属性（单个索引）或一系列属性（组合索引）创建非聚集索引，以帮助提高查询性能。 有关详细信息，请参阅[自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
+ 您可以对实体中的一个属性 (单个索引) 或一系列属性 (组合索引) 创建非聚集索引, 以帮助提高查询性能。 有关详细信息，请参阅[自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)。  
  
   **属性筛选器**  
   
@@ -197,7 +197,7 @@ ms.locfileid: "68017225"
   
  **成员修订历史记录**  
   
- 当成员发生变化时，系统都会记录成员修订历史记录。 你可以回滚修订历史记录，以及查看和批注修订。 使用“日志保留天数”属性可以指定历史数据的保留期限。  有关详细信息，请参阅[成员修订历史记录 (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md)。  
+ 当成员发生变化时，系统都会记录成员修订历史记录。 你可以回滚修订历史记录，以及查看和批注修订。 使用“日志保留天数”属性可以指定历史数据的保留期限。 有关详细信息，请参阅[成员修订历史记录 (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md)。  
   
  **合并冲突**  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68017225"
   
  **在 Excel 的 MDS 外接程序中保存或打开查询文件**  
   
- 在“实体资源管理器”页中，你可以单击“Excel”来保存快捷查询文件。  或者，你可以在 Excel 的 MDS 外接程序中打开存储在计算机上的查询文件。 可以使用 QueryOpener 应用程序打开保存的文件。 有关详细信息，请参阅[快捷查询文件（Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
+ 在“实体资源管理器”页中，你可以单击“Excel”来保存快捷查询文件。 或者，你可以在 Excel 的 MDS 外接程序中打开存储在计算机上的查询文件。 可以使用 QueryOpener 应用程序打开保存的文件。 有关详细信息，请参阅[快捷查询文件（Excel 的 MDS 外接程序）](../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
   
  查询文件包含资源管理器页中的筛选器和层次结构信息。  
    

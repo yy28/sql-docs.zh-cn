@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_mappings (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _materialized_view_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,28 +9,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059387"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811500"
 ---
-# <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (TRANSACT-SQL) （预览版）
+# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys.databases _materialized_view_mappings (Transact-sql) (预览版)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-将内部的对象名称的具体化的视图联系的 object_id。
+通过 object_id 将具体化视图与内部对象名称进行绑定。
 
 列 physical_name 和 object_id 构成此目录视图的键。
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |physical_name |**nvarchar(36)**|具体化视图的物理名称。|  
-|object_id  |**int**|具体化视图对象 ID。 请参阅[sys.objects (Transact SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
+|object_id  |**int**|具体化视图的对象 ID。 请参阅[sys.databases (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)。| 
 
 ## <a name="permissions"></a>权限
 
