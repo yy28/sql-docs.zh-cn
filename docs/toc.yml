@@ -201,7 +201,7 @@
                   href: big-data-cluster/reference-azdata-app.md
                 - name: 应用模板
                   href: big-data-cluster/reference-azdata-app-template.md
-            - name: 分类
+            - name: 群集
               items:
                 - name: bdc
                   href: big-data-cluster/reference-azdata-bdc.md
@@ -233,14 +233,6 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc 状态
                   href: big-data-cluster/reference-azdata-bdc-status.md
-            - name: 笔记本
-              items:
-                - name: 笔记本
-                  href: big-data-cluster/reference-azdata-notebook.md
-            - name: SQL
-              items:
-                - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
 - name: 业务连续性
   items:
     - name: 概述
@@ -6535,7 +6527,7 @@
                   href: relational-databases/policy-based-management/subscribe-or-unsubscribe-a-database-to-a-policy-category.md
                 - name: 管理策略类别
                   href: relational-databases/policy-based-management/manage-policy-categories.md
-                - name: 存储器
+                - name: 存储
                   href: relational-databases/policy-based-management/policy-based-management-storage.md
                 - name: 配置策略失败的警报
                   href: relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md
@@ -6933,7 +6925,7 @@
                       href: relational-databases/performance-monitor/sql-server-xtp-io-governor.md
                     - name: 虚拟处理器
                       href: relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
-                    - name: 存储器
+                    - name: 存储
                       href: relational-databases/performance-monitor/sql-server-xtp-storage.md
                     - name: 事务日志
                       href: relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
@@ -7167,7 +7159,7 @@
                 - name: 内存中体系结构
                   href: relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
                   items:
-                    - name: 存储器
+                    - name: 存储
                       href: relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
                     - name: 比较存储模式
                       href: relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
@@ -9285,7 +9277,7 @@
                       href: ssms/agent/delete-jobs.md
                     - name: 一个或多个作业
                       href: ssms/agent/delete-one-or-more-jobs.md
-                    - name: 运算符
+                    - name: 操作员
                       href: ssms/agent/delete-operator.md
                 - name: 指定
                   items:
