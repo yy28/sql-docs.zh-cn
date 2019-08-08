@@ -15,12 +15,12 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e0c26e32425f204f7dab29aa65c66f3a11f09d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e00ceeae68ccc791c3680e029e13844fa6ec683
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212120"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731072"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定义和修改列筛选器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改列筛选器。  
@@ -46,7 +46,7 @@ ms.locfileid: "68212120"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以在新建发布向导的 **“项目”** 页上定义列筛选器。 有关使用新建发布向导的详细信息，请参阅[创建发布](create-a-publication.md)。  
   
- 在“发布属性 - \<发布>”对话框的“项目”页上定义和修改列筛选器。   有关发布和项目属性的详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+ 在“发布属性 - \<发布>”对话框的“项目”页上定义和修改列筛选器。 有关发布和项目属性的详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-column-filter"></a>定义列筛选器  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68212120"
   
 #### <a name="to-modify-column-filtering"></a>修改列筛选  
   
-1.  在“发布属性 - \<发布>”对话框的“项目”页上，在“要发布的对象”窗格中展开要筛选的表。     
+1.  在“发布属性 - \<发布>”对话框的“项目”页上，在“要发布的对象”窗格中展开要筛选的表。  
   
 2.  清除要筛选的每个列旁边的复选框，并确保选中每个应包含在项目中的列的复选框。  
   
@@ -74,17 +74,17 @@ ms.locfileid: "68212120"
   
 2.  在发布服务器的发布数据库中，执行 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)。 这将定义要包括在项目中或要从项目中删除的列。  
   
-    -   如果仅发布拥有许多列的表中的几个列，请对要添加的每个列执行一次 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) 。 为 **@column** 指定列名称并将 **@operation** 的值指定为 **@operation** 中定义和修改列筛选器。  
+    -   如果仅发布拥有许多列的表中的几个列，请对要添加的每个列执行一次 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) 。 为 "  **\@列**" 指定列名称, 为 "  **\@运算**" 指定值。  
   
-    -   如果发布拥有许多列的表中的大部分列，请执行 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)，同时将 **@column** 的值指定为 **@column** 指定列名称并将 **@operation** 的值指定为 **@operation** ，以添加所有列。 然后，对每个要排除的列执行一次 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)，同时将 **@operation** 的值指定为 **@operation** 并为 **@column** 中定义和修改列筛选器。  
+    -   如果发布包含许多列的表中的大部分列, 请执行[sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), 将 **\@**  **\@** column 的值指定为**null** , 并将值**添加**到操作以添加所有列。 然后, 对每个要排除的列执行一次[sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), 为 "  **\@**  **\@** 操作" 指定值 "**删除**", 并为 "列" 指定排除的列名称。  
   
-3.  在发布服务器的发布数据库中，执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 为 **@publication** 指定发布名称并为 **@article** 中定义和修改列筛选器。 这将为筛选的项目创建同步对象。  
+3.  在发布服务器的发布数据库中，执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 指定发布的发布名称 **\@** , 并为 **\@项目**指定已筛选项目的名称。 这将为筛选的项目创建同步对象。  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布中发布的项目更改列筛选器以包括其他列  
   
-1.  在发布服务器的发布数据库中，对要添加的每个列执行一次 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) 。 为 **@column** 指定列名称并将 **@operation** 的值指定为 **@operation** 中定义和修改列筛选器。  
+1.  在发布服务器的发布数据库中，对要添加的每个列执行一次 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) 。 为 "  **\@列**" 指定列名称, 为 "  **\@运算**" 指定值。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 为 **@publication** 指定发布名称并为 **@article** 中定义和修改列筛选器。 如果发布拥有现有订阅，请将 **@change_active** 的值指定为 **@change_active** 中定义和修改列筛选器。 这将为已筛选的项目重新创建同步对象。  
+2.  在发布服务器的发布数据库中，执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 指定发布的发布名称 **\@** , 并为 **\@项目**指定已筛选项目的名称。 如果发布具有现有订阅, 请将 **\@change_active**的值指定为**1** 。 这将为已筛选的项目重新创建同步对象。  
   
 3.  对发布重新运行快照代理作业以生成更新的快照。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "68212120"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布中发布的项目更改列筛选器以删除列  
   
-1.  在发布服务器的发布数据库中，对要删除的每个列执行一次 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) 。 为 **@column** 指定列名称并将 **@operation** 的值指定为 **@operation** 中定义和修改列筛选器。  
+1.  在发布服务器的发布数据库中，对要删除的每个列执行一次 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) 。 为 "  **\@列**" 指定列名称, 为 "  **\@运算**" 指定值。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 为 **@publication** 指定发布名称并为 **@article** 中定义和修改列筛选器。 如果发布拥有现有订阅，请将 **@change_active** 的值指定为 **@change_active** 中定义和修改列筛选器。 这将为已筛选的项目重新创建同步对象。  
+2.  在发布服务器的发布数据库中，执行 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)。 指定发布的发布名称 **\@** , 并为 **\@项目**指定已筛选项目的名称。 如果发布具有现有订阅, 请将 **\@change_active**的值指定为**1** 。 这将为已筛选的项目重新创建同步对象。  
   
 3.  对发布重新运行快照代理作业以生成更新的快照。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "68212120"
   
 2.  在发布服务器的发布数据库中，执行 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)。 这将定义要包括在项目中或要从项目中删除的列。  
   
-    -   如果仅发布拥有许多列的表中的几个列，请对要添加的每个列执行一次 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 。 为 **@column** 指定列名称并将 **@operation** 的值指定为 **@operation** 中定义和修改列筛选器。  
+    -   如果仅发布拥有许多列的表中的几个列，请对要添加的每个列执行一次 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 。 为 "  **\@列**" 指定列名称, 为 "  **\@运算**" 指定值。  
   
-    -   如果发布拥有许多列的表中的大部分列，请执行 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)，同时将 **@column** 的值指定为 **@column** 指定列名称并将 **@operation** 的值指定为 **@operation** ，以添加所有列。 然后，对每个要排除的列执行一次 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)，同时将 **@operation** 的值指定为 **@operation** 并为 **@column** 中定义和修改列筛选器。  
+    -   如果发布包含多个列的表中的大部分列, 请执行[sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), 将 **\@**  **\@** column 的值指定为**null** , 并将值**添加**到操作以全部添加表列. 然后, 对每个要排除的列执行一次[sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), 为 "  **\@**  **\@** 操作" 指定值 "**删除**", 并为 "列" 指定排除的列名称。  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>为合并发布中发布的项目更改列筛选器以包括其他列  
   
-1.  在发布服务器的发布数据库中，对要添加的每个列执行一次 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 。 为 **@column** 指定列名称，将 **@operation** 的值指定为 **@operation** 指定列名称并将 **@change_active** 和 **@force_invalidate_snapshot** 的值都指定为 **@force_reinit_subscription** 中定义和修改列筛选器。  
+1.  在发布服务器的发布数据库中，对要添加的每个列执行一次 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 。 **\@** 为 " **force_invalidate_snapshot" 和 "force_reinit_" 的列指定列名称, 为 "操作添加值", 并将值1指定为1。 \@**  **\@**  **\@订阅**。  
   
 2.  对发布重新运行快照代理作业以生成更新的快照。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68212120"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>为合并发布中发布的项目更改列筛选器以删除列  
   
-1.  在发布服务器的发布数据库中，对要删除的每个列执行一次 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 。 为 **@column** 指定列名称，将 **@operation** 的值指定为 **@operation** 指定列名称并将 **@change_active** 和 **@force_invalidate_snapshot** 的值都指定为 **@force_reinit_subscription** 中定义和修改列筛选器。  
+1.  在发布服务器的发布数据库中，对要删除的每个列执行一次 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 。 为 **\@** **" \@**  **\@** 操作" 指定列名称, 为 "运算" 指定 "force_invalidate_snapshot  **",将"值"指定为"1"。\@订阅**。  
   
 2.  对发布重新运行快照代理作业以生成更新的快照。  
   
