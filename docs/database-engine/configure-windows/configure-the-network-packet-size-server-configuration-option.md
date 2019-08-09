@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb0cde5c787e721e99bfa41caa37c7b793141385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012490"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731113"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>配置 network packet size 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +54,9 @@ ms.locfileid: "68012490"
   
 -   对于加密连接，network packet size 的最大值为 16,383 字节。  
   
+> [!NOTE]  
+> 如果启用了 MARS，则 SMUX 提供程序会在进行 SSL 加密之前向数据包添加 16 字节标头，从而将最大网络数据包大小减小到 16368 字节。
+   
 ###  <a name="Recommendations"></a> 建议  
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  

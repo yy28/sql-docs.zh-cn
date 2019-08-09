@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129832"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769464"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 复制“订阅属性”对话框 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>发布服务器属性
 使用发布服务器上的 **“订阅属性”** 对话框可以查看和设置推送订阅的属性。 您还可以查看请求订阅的某些属性，订阅服务器上的 **“订阅属性”** 对话框可以显示其他属性，并允许修改属性。  
@@ -46,7 +46,8 @@ ms.locfileid: "68129832"
  如果某个选项显示为只读，则只能在创建订阅时对其进行设置。 若要设置在新建订阅向导中不可用的选项，请使用存储过程创建订阅。 有关详细信息，请参阅 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 > [!NOTE]  
->  如果还没有为订阅创建分发代理或合并代理作业，许多订阅属性将不会显示。 若要为请求订阅创建代理作业，请执行 [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)（适用于快照发布或事务发布的订阅）或 [sp_addmergepullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)（适用于合并发布的订阅）。  
+>  - 如果还没有为订阅创建分发代理或合并代理作业，许多订阅属性将不会显示。 若要为请求订阅创建代理作业，请执行 [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)（适用于快照发布或事务发布的订阅）或 [sp_addmergepullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)（适用于合并发布的订阅）。  
+> - 对于快照复制和事务复制，Azure SQL 数据库托管实例可以是发布服务器、分发服务器和订阅服务器。 对于快照复制和事务复制，Azure SQL 数据库单一数据库和共用数据库只能是推送订阅服务器。 有关详细信息，请参阅[使用 Azure SQL 数据库进行事务复制](/azure/sql-database/sql-database-managed-instance-transactional-replication)。 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>用于所有订阅的发布服务器选项  
  **安全性**  

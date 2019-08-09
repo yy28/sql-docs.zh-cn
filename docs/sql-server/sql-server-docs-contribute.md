@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136389"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693189"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 
@@ -32,14 +32,24 @@ SQL 内容团队会对所有公开发表的内容进行验证，以确保技术�
 
 ## <a id="githubui"></a>在浏览器中编辑
 
-可以在浏览器中对 SQL Server 内容进行简单编辑，然后将其提交到 Microsoft。 [Microsoft Docs 参与者指南概述](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)一文中记录了完整过程。 下面的视频演示了在浏览器中提交更改的完整过程：
+可以在浏览器中对 SQL Server 内容进行简单编辑，然后将其提交到 Microsoft。 有关详细信息, 请参阅 [Microsoft Docs 参与者指南概述](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)。 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+以下步骤概述了这一过程： 
 
-> [!TIP]
-> 请注意，“编辑”  按钮的位置与视频中显示的位置略有不同，但过程相同。
->
-> ![编辑按钮](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. 在要进行反馈的页面上，选择右上角的“编辑”  链接。
+1. 在下一页中，选择右上角的铅笔  图标。
+1. 在下一页上的“编辑文件”  文本窗口中，对要更改的文本直接进行编辑。
+    如果需要有关对新文本或更改的文本设置格式的帮助，请参阅 [Markdown 速查表](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)。
+1. 进行编辑之后，请在“提交更改”  下：
+    1. 在第一个文本框中，输入所进行的更改的简要说明。
+    1. 在“添加一个可选的扩展说明”  框中，提供对更改的简短解释。
+1. 选择“建议文件更改”  。
+1. 在“比较更改”  页面上，选择“创建拉取请求”  。 
+1. 在“打开拉取请求”  页面上，选择“创建拉取请求”  。 
+
+下面的 GIF 演示了在浏览器中提交更改的完整过程：
+
+![编辑 SQL 文档](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a>使用工具在本地编辑
 

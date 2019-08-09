@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100264"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715297"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -224,7 +224,7 @@ GO
 
 [可提高 T-SQL 性能的内存中 OLTP 技术](https://msdn.microsoft.com/library/mt694156.aspx)   
 有关使用内存中 OLTP 的性能演示，请参阅：[in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
-[17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) （介绍和演示内存中 OLTP 的 17 分钟视频）（演示在 8 分 25 秒处）   
+[介绍和演示内存中 OLTP 的 17 分钟视频](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
 [用于启用内存中 OLTP 和设置推荐选项的脚本](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [有关内存中 OLTP 的主要文档](in-memory-oltp-in-memory-optimization.md)   
 [Azure SQL 数据库中的内存中 OLTP 的性能和资源使用率优势](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043199"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661229"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -149,11 +149,11 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 - 如果结合使用随机加密和已启用 enclave 的 CEK 来加密列，可能会导致列中存储的数据顺序泄露，因为此类列支持范围比较。 例如，如果包含员工薪金的加密列有索引，恶意 DBA 可以通过扫描此索引来查找最高加密薪金值，并确定薪金最高的员工（假设员工姓名未加密）。 
 - 如果使用 Always Encrypted 来防止 DBA 未经授权地访问敏感数据，请不要将列主密钥或列加密密钥与 DBA 共享。 借助 enclave 内的列加密密钥缓存，DBA 无需拥有对密钥的直接访问权限，即可管理加密列上的索引。
 
-## <a name="considerations-for-alwayson-and-database-migration"></a>AlwaysOn 和数据库迁移的注意事项
+## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性组和数据库迁移的注意事项
 
 配置支持使用 enclave 的查询所需的 AlwaysOn 可用性组时，必须确保在可用性组中托管数据库的所有 SQL Server 实例都支持含安全 enclave 的 Always Encrypted，并且已配置 enclave。 如果主数据库支持 enclave，但次要副本不支持，任何尝试使用含安全 enclave 的 Always Encrypted 功能的查询都会失败。
 
-如果数据库使用含安全 enclave 的 Always Encrypted 功能，同时你在未配置 enclave 的 SQL Server 实例上还原它的备份文件，还原操作会成功，且不依赖 enclave 的所有功能都可用。 不过，所有使用 enclave 功能的后续查询都会失败，使用随机加密且已启用 enclave 的列上的索引也会失效。  在未配置 enclave 的实例上附加使用含安全 enclave 的 Always Encrypted 的数据库时，亦是如此。
+如果数据库使用含安全 enclave 的 Always Encrypted 功能，同时你在未配置 enclave 的 SQL Server 实例上还原它的备份文件，还原操作会成功，且不依赖 enclave 的所有功能都可用。 不过，所有使用 enclave 功能的后续查询都会失败，使用随机加密且已启用 enclave 的列上的索引也会失效。 在未配置 enclave 的实例上附加使用含安全 enclave 的 Always Encrypted 的数据库时，亦是如此。
 
 如果数据库包含使用随机加密且已启用 enclave 的列上的索引，请务必先在数据库中启用[加速数据库恢复 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr)，再创建数据库备份。 ADR 可确保数据库（包括索引）在你还原数据库后立即可用。 有关详细信息，请参阅[数据库恢复](#database-recovery)。
 

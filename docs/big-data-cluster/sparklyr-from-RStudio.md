@@ -1,7 +1,7 @@
 ---
-title: 使用 RStudio 从 sparklyr
+title: 在 RStudio 中使用 Sparklyr
 titleSuffix: SQL Server big data clusters
-description: 连接到使用 RStudio 从 sparklyr 的大数据群集。
+description: 在 RStudio 中使用 sparklyr 连接到大数据群集。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,31 +10,31 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67728374"
 ---
-# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 sparklyr
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 Sparklyr
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr 适用于 Apache Spark 提供的 R 接口。 Sparklyr 是 R 开发人员使用 Spark 一种流行方式。 本文介绍如何在使用 RStudio 的 SQL Server 2019 大数据群集 （预览版） 中使用 sparklyr。
+Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 Spark 的常用方法。 本文介绍如何使用 RStudio 在 SQL Server 2019 大数据群集（预览版）中使用 sparklyr。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [部署 SQL Server 2019 大数据群集](quickstart-big-data-cluster-deploy.md)。
 
 ### <a name="install-rstudio-desktop"></a>安装 RStudio Desktop
 
-安装和配置**RStudio Desktop**通过执行以下步骤：
+使用以下步骤安装和配置 RStudio Desktop：
 
-1. 如果你在 Windows 客户端上运行[下载并安装 R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4)。
+1. 如果在 Windows 客户端运行，请[下载并安装 R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4)。
 
 1. [下载并安装 RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。
 
-1. 安装完成后，运行 RStudio Desktop 内的以下命令以安装所需的包：
+1. 安装完成后，在 RStudio Desktop 内运行以下命令以安装所需的包：
 
    ```RStudioDesktop
    install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
@@ -42,14 +42,14 @@ Sparklyr 适用于 Apache Spark 提供的 R 接口。 Sparklyr 是 R 开发人�
    install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## <a name="connect-to-spark-in-a-big-data-cluster"></a>大数据群集中连接到 Spark
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>连接到大数据群集中的 Spark
 
-Sparklyr 可用于从客户端连接到大数据群集使用 Livy 和 HDFS/Spark 网关。 
+可使用 sparklyr 从客户端连接到使用 Livy 和 HDFS/Spark 网关的大数据群集。 
 
-在 RStudio 中，创建一个 R 脚本并连接到 Spark，如以下示例所示：
+在 RStudio 中，创建 R 脚本并连接到 Spark，如以下示例所示：
 
 > [!TIP]
-> 有关`<USERNAME>`和`<PASSWORD>`值，请使用 （如根） 的用户名和密码在大数据群集部署过程中设置。 有关`<IP>`并`<PORT>`值，请参阅的文档[连接到大数据群集](connect-to-big-data-cluster.md)。
+> 对于 `<USERNAME>` 和 `<PASSWORD>` 值，请使用在大数据群集部署过程中设置的用户名（如 root）和密码。 有关 `<IP>` 和 `<PORT>` 值，请参阅有关[连接到大数据群集](connect-to-big-data-cluster.md)的文档。
 
 ```r
 library(sparklyr)
@@ -68,7 +68,7 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
 
 ## <a name="run-sparklyr-queries"></a>运行 sparklyr 查询
 
-连接到 Spark 后，可以运行 sparklyr。 以下示例对使用 sparklyr 鸢尾花数据集执行查询：
+连接到 Spark 后，可以运行 sparklyr。 下面的示例使用 sparklyr 对 iris 数据集执行查询：
 
 ```r
 iris_tbl <- copy_to(sc, iris)
@@ -78,11 +78,11 @@ iris_count <- dbGetQuery(sc, "SELECT COUNT(*) FROM iris")
 iris_count
 ```
 
-## <a name="distributed-r-computations"></a>分布式的 R 计算
+## <a name="distributed-r-computations"></a>分布式 R 计算
 
-Sparklyr 的一项功能是能够[R 计算分布](https://spark.rstudio.com/guides/distributed-r/)与[spark_apply](https://spark.rstudio.com/reference/spark_apply/)。
+sparklyr 的一项功能是能够使用 [spark_apply](https://spark.rstudio.com/reference/spark_apply/) 来[分布 计算](https://spark.rstudio.com/guides/distributed-r/)。
 
-由于大数据群集使用 Livy 连接，因此必须设置`packages = FALSE`对的调用中**spark_apply**。 有关详细信息，请参阅[Livy 部分](https://spark.rstudio.com/guides/distributed-r/#livy)sparklyr 文档上分布式 R 计算。 使用此设置，你只能使用传递给 R 代码中在 Spark 群集已安装的 R 包**spark_apply**。 下面的示例演示了此功能：
+由于大数据群集使用 Livy 连接，因此必须在对“spark_apply”的调用中设置 `packages = FALSE`。 有关详细信息，请参阅关于分布式 R 计算的 sparklyr 文档的 [Livy 部分](https://spark.rstudio.com/guides/distributed-r/#livy)。 使用此设置，只能在传递给“spark_apply”的 R 代码中使用已安装在 Spark 群集上的 R 包。 下面的示例对此功能进行了演示：
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)

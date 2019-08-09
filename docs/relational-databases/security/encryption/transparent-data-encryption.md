@@ -18,12 +18,12 @@ author: aliceku
 ms.author: aliceku
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b01b076e696b5c607b6c9257e309f74c6d53ef55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef9e0378d3a7ca0b5749788471b4ef97832d179d
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111865"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670589"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -241,7 +241,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 同样，以下语法将恢复 TDE 加密扫描：
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
 为了显示加密扫描的当前状态，已将 `encryption_scan_state` 添加到了 `sys.dm_database_encryption_keys` 动态管理视图中。 还有一个名为 `encryption_scan_modify_date` 的新列，此列将包含上次加密扫描状态更改的日期和时间。 另请注意，如果在加密扫描处于暂停状态时重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，启动时系统将在错误日志中记录一条消息，指示存在已暂停的现有扫描。

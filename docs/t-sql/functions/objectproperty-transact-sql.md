@@ -22,12 +22,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 176a5d39efc5e0501d425100e458235a971d87da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8865d5c4331fc9414d4621f98d6b21f85561f15f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914798"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702765"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUserTable|表|用户定义的表。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|“查看”|视图。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|任何架构范围内的对象|对象的所有者。<br /><br /> **注意：** 架构所有者不一定是对象所有者。 例如，子对象（其 parent_object_id 为非 null）将始终返回与父对象相同的所有者 ID  。<br /><br /> Nonnull = 对象所有者的数据库用户 ID。|  
+|SchemaId|任何架构范围内的对象| 对象所属架构的架构 ID。| 
 |TableDeleteTrigger|表|表具有 DELETE 触发器。<br /><br /> >1 = 指定类型的第一个触发器的 ID。|  
 |TableDeleteTriggerCount|表|表具有指定数目的 DELETE 触发器。<br /><br /> >0 = DELETE 触发器数目。|  
 |TableFullTextMergeStatus|表|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表所具有的全文检索当前是否正在合并。<br /><br /> 0 = 表没有全文检索，或者全文检索未在合并。<br /><br /> 1 = 全文检索正在合并。|  

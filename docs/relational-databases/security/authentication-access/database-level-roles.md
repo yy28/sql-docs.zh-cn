@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b345e8084b491adeadb5a814655284e9699f5550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094915"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742842"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 
@@ -73,7 +73,7 @@ ms.locfileid: "68094915"
 |固定数据库角色名|描述|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定数据库角色的成员可以执行数据库的所有配置和维护活动，还可以删除 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的数据库。 （在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中，某些维护活动需要服务器级别权限，并且不能由 **db_owners**执行。）|  
-|**db_securityadmin**|db_securityadmin  固定数据库角色的成员可以仅修改自定义角色的角色成员资格、创建无登录名的用户和管理权限。 向此角色中添加主体可能会导致意外的权限升级。|  
+|**db_securityadmin**|db_securityadmin  固定数据库角色的成员可以仅修改自定义角色的角色成员资格和管理权限。 此角色的成员可能会提升其权限，应监视其操作。|  
 |**db_accessadmin**|**db_accessadmin** 固定数据库角色的成员可以为 Windows 登录名、Windows 组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名添加或删除数据库访问权限。|  
 |**db_backupoperator**|**db_backupoperator** 固定数据库角色的成员可以备份数据库。|  
 |**db_ddladmin**|**db_ddladmin** 固定数据库角色的成员可以在数据库中运行任何数据定义语言 (DDL) 命令。|  
@@ -86,7 +86,7 @@ ms.locfileid: "68094915"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]的特殊角色
 
 这些数据库角色仅存在于虚拟 master 数据库中。 他们的权限仅限于在 master 中执行的操作。 只能向这些角色添加 master 中的数据库用户。 无法向这些角色添加登录名，但可以基于登录名创建用户，然后向角色添加用户。 也可以向这些角色添加 master 中包含的数据库用户。 不过，如果向 master 中的 dbmanager  角色添加包含的数据库用户，这些用户无法用于新建数据库。
 

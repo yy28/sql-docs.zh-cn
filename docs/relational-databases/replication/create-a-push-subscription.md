@@ -16,16 +16,19 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b5a52597f2d81fc3d2431d0ab9e97ac0e64f63f9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903040"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768649"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建推送订阅。 有关为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器创建推送订阅的信息，请参阅[为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -90,19 +93,19 @@ ms.locfileid: "67903040"
   
     -   如果 **allow_push** 的值为 **1**，则支持推送订阅。  
   
-    -   如果 **allow_push** 的值为 **0**，则执行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，将 **allow_push** 指定为 **@property** ，将 **@value** 指定为 **@value** 。  
+    -   如果 allow_push  的值为 0  ，则执行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，将 \@property  指定为 allow_push  ，将 \@value  指定为 true  。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** ，将 **@destination_db** 。 将 **@subscription_type** 指定为 **@subscription_type** 。 有关如何更新 Subscription 的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 \@publication  、\@subscriber  和 \@destination_db  。 将 \@subscription_type  的值指定为 push  。 有关如何更新 Subscription 的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
-    -   分发服务器中的分发代理运行时所使用的 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** 和 **@publication** 参数。  
+    -   \@subscriber  、\@subscriber_db  和 \@publication  参数。  
   
-    -   分发服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** ，将 **@job_password** 。  
+    -   分发服务器中的分发代理运行时所使用的 \@job_login  和 \@job_password  指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据。  
   
-        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** ，将 **@job_password** 。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用由 \@job_login  和 \@job_password  指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
-    -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password** 。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
+    -   （可选）\@subscriber_security_mode  的 0  值以及 \@subscriber_login  和 \@subscriber_password  指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
     -   该订阅的分发代理作业计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -114,29 +117,29 @@ ms.locfileid: "67903040"
   
     -   如果 **allow_push** 的值为 **1**，则发布支持推送订阅。  
   
-    -   如果 **allow_push** 的值不为 **1**，则执行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，将 **allow_push** 指定为 **@property** ，将 **@value** 指定为 **@value** 。  
+    -   如果 allow_push  的值不为 1  ，则执行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，将 \@property  指定为 allow_push  ，将 \@value  指定为 true  。  
   
 2.  在发布服务器的发布数据库中，执行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)，并指定以下参数：  
   
-    -   **@publication** 。 这是发布的名称。  
+    -   **\@publication**。 这是发布的名称。  
   
-    -   **@subscriber_type** 。 对于客户端订阅，请指定 **local** ，对于服务器订阅，请指定 **global**。  
+    -   **\@subscriber_type**。 对于客户端订阅，请指定 **local** ，对于服务器订阅，请指定 **global**。  
   
-    -   **@subscription_priority** 。 对于服务器订阅，请指定订阅的优先级（从**0.00** 到 **99.99**）。  
+    -   **\@subscription_priority**。 对于服务器订阅，请指定订阅的优先级（从**0.00** 到 **99.99**）。  
   
          有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
-    -   订阅服务器中的分发代理运行时所使用的 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** 和 **@publication** 参数。  
+    -   \@subscriber  、\@subscriber_db  和 \@publication  参数。  
   
-    -   分发服务器中的合并代理运行时所使用的 **@job_login** ，将 **@job_password** 。  
+    -   分发服务器中的合并代理运行时所使用的 \@job_login  和 \@job_password  指定的 Windows 凭据。  
   
-        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** ，将 **@job_password** 。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        > **注意：** 使用 Windows 集成身份验证进行的连接始终使用由 \@job_login  和 \@job_password  指定的 Windows 凭据。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
-    -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password** 。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
+    -   （可选）\@subscriber_security_mode  的 0  值以及 \@subscriber_login  和 \@subscriber_password  指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
-    -   （可选） **0** 指定为 **@publisher_security_mode** 值以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** ，将 **@publisher_password** 。 如果您需要在连接到发布服务器时使用 SQL Server 身份验证，则指定这些值。  
+    -   （可选）\@publisher_security_mode  的 0  值以及 \@publisher_login  和 \@publisher_password  指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到发布服务器时使用 SQL Server 身份验证，则指定这些值。  
   
     -   该订阅的合并代理作业计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -192,7 +195,7 @@ ms.locfileid: "67903040"
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。  
   
-    > 重要提示！！在具有远程分发服务器的发布服务器上创建推送订阅时，为所有属性（包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>）提供的值将作为纯文本发送到分发服务器  。 调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法之前，应先对发布服务器与其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    > **重要说明！！ **在具有远程分发服务器的发布服务器上创建推送订阅时，为所有属性（包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>）提供的值将作为纯文本发送到分发服务器。 调用 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法之前，应先对发布服务器与其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>创建合并发布的推送订阅  
   

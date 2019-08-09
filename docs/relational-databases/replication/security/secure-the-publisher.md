@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095639"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769643"
 ---
 # <a name="secure-the-publisher"></a>保护发布服务器的安全
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  以下复制代理将连接到发布服务器：  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
--   日志读取器代理  
+以下复制代理将连接到发布服务器：  
   
--   快照代理  
-  
+-   日志读取器代理
+-   快照代理
 -   队列读取器代理  
-  
 -   合并代理  
   
  建议您为这些代理提供合适的登录名，遵循授予所需的最小权限的原则，并保护所有密码的存储。 有关每个代理所需权限的信息，请参阅 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  

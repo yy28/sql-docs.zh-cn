@@ -2373,12 +2373,16 @@
       items:
         - name: 下载 Microsoft SQL Server JDBC 驱动程序
           href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: 分析结果
+          href: ../connect/jdbc/parsing-the-results.md
         - name: JDBC 驱动程序的发行说明
           href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
         - name: JDBC 驱动程序的系统要求
           href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
         - name: 使用 JDBC 驱动程序
           href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: 使用 useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
         - name: 了解 Java EE 支持
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: 部署 JDBC 驱动程序
@@ -2538,6 +2542,8 @@
               href: ../connect/jdbc/understanding-data-type-differences.md
             - name: 使用多个结果集
               href: ../connect/jdbc/using-multiple-result-sets.md
+            - name: 使用 NTLM 身份验证
+              href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
             - name: 使用保持能力
               href: ../connect/jdbc/using-holdability.md
             - name: 使用 Azure Active Directory 身份验证连接
@@ -2627,7 +2633,7 @@
                   href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
-    - name: 适用于 SQL Server 的 Node.js 驱动程序
+    - name: 用于 SQL Server 的 Node.js 驱动程序
       href: ../connect/node-js/node-js-driver-for-sql-server.md
     - name: 第 1 步：配置用于 Node.js 开发的开发环境
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
@@ -5621,7 +5627,7 @@
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
-    - name: 适用于 SQL Server 的 Ruby 驱动程序
+    - name: 用于 SQL Server 的 Ruby 驱动程序
       href: ../connect/ruby/ruby-driver-for-sql-server.md
     - name: 第 1 步：配置用于 Ruby 开发的开发环境
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md

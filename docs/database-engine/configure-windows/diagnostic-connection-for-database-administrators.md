@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011873"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670472"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011873"
     -   如果在与此会话关联的 sys.dm_os_tasks 中没有任何任务，但是在执行 KILL 命令后该会话仍然出现在 sys.dm_exec_sessions 中，则表明没有可用的工作线程。 选择某个当前正在运行的任务（在 sys.dm_os_tasks 视图中列出的 `sessions_id <> NULL`的任务），并终止与其关联的会话以释放工作线程。 请注意，终止单个会话可能不够，可能需要终止多个会话。  
   
 ## <a name="dac-port"></a>DAC 端口  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 TCP 端口 1434（如果可用）上侦听 DAC，或者在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 启动时动态分配的 TCP 端口上侦听 DAC。 错误日志包含所侦听的 DAC 所在的端口号。 默认情况下，DAC 侦听器只接受本地端口上的连接。 有关激活远程管理连接的代码示例的详细信息，请参阅 [remote admin connections 服务器配置选项](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 TCP 端口 1434（如果可用）上侦听 DAC，或者在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 启动时动态分配的 TCP 端口上侦听 DAC。 [错误日志](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)包含所侦听的 DAC 所在的端口号。 默认情况下，DAC 侦听器只接受本地端口上的连接。 有关激活远程管理连接的代码示例的详细信息，请参阅 [remote admin connections 服务器配置选项](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)。  
   
  配置远程管理连接之后，会立即启用 DAC 侦听器而不必重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且客户端可以立即远程连接到 DAC。 通过先在本地使用 DAC 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，然后再执行 sp_configure 存储过程接受远程连接，则即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止响应，DAC 侦听器仍然可以接受远程连接。  
   

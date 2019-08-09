@@ -1,7 +1,7 @@
 ---
 title: 数据库引擎服务启动选项 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011967"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763229"
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
 
@@ -82,8 +82,9 @@ ms.locfileid: "68011967"
  最好在每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时使用某些启动选项。 完成这些选项（如用跟踪标志启动）的最简单方法是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器来配置启动参数。 这些工具将启动选项保存为注册表项，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将始终用这些启动选项来启动。  
   
 ## <a name="compatibility-support"></a>兼容性支持  
- **不支持**  -h [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]参数。 启用 AWE 时，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的 32 位实例使用此参数以便为热添加内存元数据保留虚拟内存地址空间。 有关详细信息，请参阅 [SQL Server 2016 中不再使用的 SQL Server 功能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。  
-  
+
+有关已从以前版本中删除的选项，请参阅 [sqlservr 应用程序](../../tools/sqlservr-application.md#compatibility-support)。
+
 ## <a name="related-tasks"></a>Related Tasks  
 [配置 scan for startup procs 服务器配置选项](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

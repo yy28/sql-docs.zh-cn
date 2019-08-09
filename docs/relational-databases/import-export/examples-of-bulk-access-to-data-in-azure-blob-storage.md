@@ -16,15 +16,15 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbf0e39b5187f91495f36624ca133d02b87f764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8ae6afaf55bbd146fc2fbd0984d5b430b1653f3
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035786"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742869"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>批量访问 Azure Blob 存储中数据的示例
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 `BULK INSERT` 和 `OPENROWSET` 语句可以直接访问 Azure Blob 存储中的文件。 下面的示例使用 CSV（逗号分隔值）文件（名为 `inv-2017-01-19.csv`）中的数据，该文件存储在容器（名为 `Week3`）中，该容器存储在存储帐户（名为 `newinvoices`）中。 可以使用格式文件的路径，但这些示例不包含该路径。 
 
@@ -32,7 +32,6 @@ ms.locfileid: "68035786"
 
 > [!IMPORTANT]
 >  blob 上容器和文件的所有路径都是 `CASE SENSITIVE`。 如果不正确，它可能会返回错误，如“无法进行大容量加载。 文件 "file.csv" 不存在或你没有文件访问权限。”
-> "
 
 
 ## <a name="create-the-credential"></a>创建凭据   
@@ -42,23 +41,26 @@ ms.locfileid: "68035786"
 > [!IMPORTANT]
 >  必须借助一个使用 `SHARED ACCESS SIGNATURE` 标识的数据库范围凭据创建外部数据源。 若要为存储帐户创建共享访问签名，请查看 Azure 门户中存储帐户属性页上的“共享访问签名”属性。  有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 有关凭据的详细信息，请参阅 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。  
  
-使用必须属于 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 创建数据库范围凭据。 使用 Azure 门户中的机密。 例如：  
+使用必须属于 `SHARED ACCESS SIGNATURE` 的 `IDENTITY` 创建数据库范围凭据。 使用为 blob 存储帐户生成的 SAS 令牌。 验证 SAS 令牌是否没有前导 `?`、你是否至少对应加载的对象拥有读取权限以及有效期是否有效（所有日期都采用 UTC 时间）。 
+
+例如：  
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
+SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
 
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>访问引用 Azure Blob 存储位置的 CSV 文件中的数据   
-下面的示例使用指向名为 `newinvoices` 的 Azure 存储帐户的外部数据源。   
+下面的示例使用指向名为 `newinvoices` 的 Azure 存储帐户的外部数据源。  
+
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net', 
-        CREDENTIAL = UploadInvoices  
+        CREDENTIAL = 'UploadInvoices';
     );
 ```   
 
@@ -67,7 +69,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```
 
 使用 `BULK INSERT` 时，请使用容器和文件说明：
@@ -96,7 +98,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```   
 
 使用 `BULK INSERT` 时，请不要在文件说明中使用该容器名称： 

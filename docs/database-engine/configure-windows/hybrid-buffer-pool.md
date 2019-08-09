@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998053"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697558"
 ---
 # <a name="hybrid-buffer-pool"></a>混合缓冲池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 混合缓冲池使数据库引擎能够直接访问存储在持久内存 (PMEM) 设备上的数据库文件中的数据页。 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] 中引入了此功能。
 
-在没有 PMEM 的传统系统中，SQL Server 将数据页缓存在基于 DRAM 的缓冲池中。 使用混合缓冲池，SQL Server 会跳过将页副本执行到缓冲池的基于 DRAM 的部分。 相反，它直接在 PMEM 设备上的数据库文件中访问页。 使用内存映射 I/O (MMIO)（也称为 SQL Server 中数据文件的“启用 (enlightenment)”）来访问 PMEM 设备上用于混合缓冲池的数据文件  。
+在没有 PMEM 的传统系统中，SQL Server 将数据页缓存在缓冲池中。 使用混合缓冲池，SQL Server 会跳过将页面副本执行到缓冲池的基于 DRAM 的部分，直接在 PMEM 设备上的数据库文件上访问该页面。 对混合缓冲池的 PMEM 设备上的数据文件的读取访问直接通过追随指向 PMEM 设备上数据页的指针来执行。  
 
-只能在 PMEM 设备上直接访问干净页。 当页被标记为脏时，它会先被复制到基于 DRAM 的缓冲池，最后被写回 PMEM 设备并再次标记为干净。 此过程发生在常规检查点操作期间。
+只能在 PMEM 设备上直接访问干净页。 当页面被标记为脏时，它会先被复制到 DRAM 缓冲池，最后被写回 PMEM 设备并再次标记为干净。 这将在常规检查点操作期间发生。 用于将文件从 PMEM 设备复制到 DRAM 的机制是直接内存映射 I/O (MMIO)，也称为 SQL Server 中的数据文件的 enlightenment  。
+
 
 混合缓冲池功能同时适用于 Windows 和 Linux。 必须使用支持 DAX (DirectAccess) 的文件系统来格式化 PMEM 设备。 XFS、EXT4、NTFS 文件系统都支持 DAX。 SQL Server 将自动检测数据文件是否驻留在格式正确的 PMEM 设备上，并在用户空间中执行内存映射。 当连接、还原、创建新数据库或为数据库启用混合缓冲池功能时，将在启动时发生此映射。
 

@@ -1,7 +1,7 @@
 ---
-title: 将数据引入到 SQL Server 数据池
+title: 将数据引入 SQL Server 数据池
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何将数据引入到 SQL Server 2019 大数据群集 （预览版） 的数据池。
+description: 本教程演示如何将数据引入 SQL Server 2019 大数据群集（预览版）数据池中。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,28 +9,28 @@ ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957790"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670520"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：使用 Transact-SQL 将数据引入 SQL Server 数据池
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何使用 TRANSACT-SQL 将数据加载到[数据池](concept-data-pool.md)的 SQL Server 2019 大数据群集 （预览版）。 使用 SQL Server 大数据群集时，可以引入并分布在数据池实例从各种源的数据。
+本教程演示如何使用 Transact-SQL 将数据加载到 SQL Server 2019 大数据群集（预览版）的[数据池](concept-data-pool.md)。 使用 SQL Server 大数据群集，可以跨数据池实例引入和分布来自各种源的数据。
 
-在本教程中，您学习如何：
+在本教程中，你将了解如何执行以下操作：
 
 > [!div class="checklist"]
 > * 在数据池中创建外部表。
-> * 数据池表中插入示例 web 点击流数据。
-> * 带有本地表数据池表中联接数据。
+> * 将示例 Web 点击流数据插入到数据池表中。
+> * 将数据池中的数据与本地表联接在一起。
 
 > [!TIP]
-> 如果您愿意，可以下载并运行本教程中的所有命令的脚本。 有关说明，请参阅[数据池示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub 上。
+> 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的[数据池示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)。
 
 ## <a id="prereqs"></a> 先决条件
 
@@ -38,26 +38,26 @@ ms.locfileid: "67957790"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-- [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
+- [将示例数据加载到大数据群集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>在数据池中创建外部表
 
-以下步骤创建外部表中名为的数据池**web_clickstream_clicks_data_pool**。 此表可以然后使用作为位置的数据引入到大数据群集。
+以下步骤将在名为 web_clickstream_clicks_data_pool 的数据池中创建一个外部表。 然后，可以将此表用作将数据引入到大数据群集的位置。
 
-1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
+1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 在该连接上双击**服务器**窗口以显示 SQL Server 主实例的服务器仪表板。 选择**新查询**。
+1. 双击“服务器”窗口中的连接以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
 
    ![SQL Server 主实例查询](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. 运行以下 TRANSACT-SQL 命令，以将上下文更改为**销售**主实例中的数据库。
+1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库。
 
    ```sql
    USE Sales
    GO
    ```
 
-1. 如果尚不存在，请创建到数据池外部数据源。
+1. 如果尚未创建数据池的外部数据源，请创建该数据源。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -65,7 +65,7 @@ ms.locfileid: "67957790"
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. 创建命名的外部表**web_clickstream_clicks_data_pool**中数据池。
+1. 在数据池中创建一个名为 web_clickstream_clicks_data_pool 的外部表。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -78,25 +78,25 @@ ms.locfileid: "67957790"
       );
    ```
   
-1. 在 CTP 3.1 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. 在 CTP 3.1 中，数据池的创建是异步的，但还无法确定其完成时间。 等待两分钟，确保在数据池创建完成之后再继续。
 
 ## <a name="load-data"></a>加载数据
 
-以下步骤将示例 web 点击流数据引入到使用前面步骤中创建的外部表的数据池。
+以下步骤使用在先前步骤中创建的外部表将示例 Web 点击流数据引入该数据池。
 
-1. 使用`INSERT INTO`语句来查询的结果插入到数据池 ( **web_clickstream_clicks_data_pool**外部表)。
+1. 使用 `INSERT INTO` 语句将查询结果插入数据池（web_clickstream_clicks_data_pool 外部表）。
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
    SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-     FROM sales.dbo.web_clickstreams_hdfs_parquet
+     FROM sales.dbo.web_clickstreams_hdfs
    INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
                            AND wcs_user_sk IS NOT NULL)
    GROUP BY wcs_user_sk, i_category_id
    HAVING COUNT_BIG(*) > 100;
    ```
 
-1. 检查与两个 SELECT 查询插入的数据。
+1. 使用两个 SELECT 查询检查插入的数据。
 
    ```sql
    SELECT count(*) FROM [dbo].[web_clickstream_clicks_data_pool]
@@ -105,7 +105,7 @@ ms.locfileid: "67957790"
 
 ## <a name="query-the-data"></a>查询数据
 
-联接中的数据池与在本地数据的查询的存储的结果**销售**表。
+在包含 Sales 表中本地数据的数据池中，联接查询的存储结果。
 
 ```sql
 SELECT TOP (100)
@@ -126,7 +126,7 @@ INNER JOIN (SELECT DISTINCT i_category_id, i_category FROM item) as i
 GROUP BY w.wcs_user_sk;
 ```
 
-## <a name="clean-up"></a>清理
+## <a name="clean-up"></a>清除
 
 使用以下命令删除本教程中创建的数据库对象。
 
@@ -136,6 +136,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 
 ## <a name="next-steps"></a>后续步骤
 
-了解如何将数据引入到 Spark 作业具有的数据池：
+了解如何通过 Spark 作业将数据引入到数据池中：
 > [!div class="nextstepaction"]
-> [引入数据与 Spark 作业](tutorial-data-pool-ingest-spark.md)
+> [使用 Spark 作业引入数据](tutorial-data-pool-ingest-spark.md)

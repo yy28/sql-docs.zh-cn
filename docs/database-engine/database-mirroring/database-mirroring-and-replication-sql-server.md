@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9296bd28852eda3abd29e8a54984ec37f726c8b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006455"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661435"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68006455"
   
 3.  配置镜像的分发。 将镜像名称指定为发布服务器，并指定主体数据库使用的同一分发服务器和快照文件夹。 例如，如果想使用存储过程配置复制，可以在分发服务器上执行 [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) ，然后在镜像上执行 [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) 。 对于 **sp_adddistpublisher**：  
   
-    -   将 **@publisher** 参数的值设置为镜像的网络名称。  
+    -   将 \@publisher  参数的值设置为镜像的网络名称。  
   
-    -   将 **@working_directory** 参数的值设置为主体数据库使用的快照文件夹。  
+    -   将 \@working_directory  参数的值设置为主体数据库使用的快照文件夹。  
   
 4.  为“-PublisherFailoverPartner”代理参数指定镜像名称  。 下列代理在故障转移后需要使用此代理参数来标识镜像：  
   
@@ -134,12 +134,12 @@ ms.locfileid: "68006455"
   
 -   当使用存储过程或复制管理对象 (RMO) 在镜像数据库上管理复制时，对于需要指定发布服务器名称的情况，必须指定已经为复制启用了数据库的实例的名称。 若要确定相应的名称，请使用函数 [publishingservername](../../t-sql/functions/replication-functions-publishingservername.md)。  
   
-     如果对发布数据库做了镜像，则镜像数据库中存储的复制元数据与主体数据库中存储的元数据相同。 因此，对于为主体数据库上的复制启用的发布数据库，在镜像数据库上的系统表中存储的发布服务器实例名称是主体数据库的名称，而不是镜像数据库的名称。 如果发布数据库故障转移到镜像数据库，则这种情况会影响复制的配置和维护。 例如，如果故障转移后使用镜像数据库上的存储过程配置复制，并且希望添加对主体数据库上启用的发布数据库的请求订阅，则必须为 **@publisher** 或 **sp_addmergepullsubscription** 的 **@publisher**。  
+     如果对发布数据库做了镜像，则镜像数据库中存储的复制元数据与主体数据库中存储的元数据相同。 因此，对于为主体数据库上的复制启用的发布数据库，在镜像数据库上的系统表中存储的发布服务器实例名称是主体数据库的名称，而不是镜像数据库的名称。 如果发布数据库故障转移到镜像数据库，则这种情况会影响复制的配置和维护。 例如，如果故障转移后使用镜像数据库上的存储过程配置复制，并且希望添加对主体数据库上启用的发布数据库的请求订阅，则必须为 sp_addpullsubscription  或 sp_addmergepullsubscription  的 \@publisher  参数指定主体数据库名称，而不是镜像数据库名称。  
   
-     如果故障转移到镜像数据库后在镜像数据库上启用发布数据库，则存储在系统表中的发布服务器实例名称是镜像数据库的名称；在此情况下，应将镜像数据库的名称用于 **@publisher** 参数。  
+     如果故障转移到镜像数据库后在镜像数据库上启用发布数据库，则存储在系统表中的发布服务器实例名称是镜像数据库的名称；在此情况下，应将镜像数据库的名称用于 \@publisher  参数。  
   
     > [!NOTE]  
-    >  某些情况下，如 **sp_addpublication**，只有非 **@publisher** @publisher[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数；在这些情况下，它与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库镜像无关。  
+    >  某些情况下，如 sp_addpublication  ，只有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器支持 \@publisher  参数；在这些情况下，它与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库镜像无关。  
   
 -   若要在故障转移后在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中同步订阅：请同步来自订阅服务器的请求订阅以及来自活动发布服务器的推送订阅。  
   

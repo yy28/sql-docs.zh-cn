@@ -21,12 +21,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001684"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697495"
 ---
 # <a name="data-type-conversion-database-engine"></a>数据类型转换（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +57,44 @@ CAST ( $157.27 AS VARCHAR(10) )
 以下图例显示了可对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统提供的数据类型执行的所有显式和隐式数据类型转换。 这些包括 xml、bigint 和sql_variant    。 不存在对 sql_variant 数据类型的赋值进行的隐式转换，但是存在转换为 sql_variant 的隐式转换   。
   
 ![数据类型转换表](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
-  
+
+虽然上面的图表说明了 SQL Server 中允许的所有显式和隐式转换，但并未指出转换的结果数据类型。 当 SQL Server 执行显式转换时，语句本身会确定结果数据类型。 对于隐式转换，赋值语句（例如设置变量的值或在列中插入值）将产生由变量声明或列定义所定义的数据类型。 对于比较运算符或其他表达式，结果数据类型取决于数据类型优先级的规则。
+
+例如，以下脚本定义一个类型为 `varchar` 的变量，将 `int` 类型值赋给该变量，然后选择该变量与字符串的串联。
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+`1` 的 `int` 值会转换为 `varchar`，因此 `SELECT` 语句返回值 `1 is a string.`。
+
+下面的示例演示改为使用 `int` 变量的类似脚本：
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+在此例中，`SELECT` 语句会引发以下错误：
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+为了计算表达式 `@notastring + ' is not a string.'`，SQL Server 先遵循数据类型优先级的规则来完成隐式转换，然后才能计算表达式的结果。 由于 `int` 的优先级高于 `varchar`，因此 SQL Server 会尝试将字符串转换为整数，但是会失败，因为此字符串无法转换为整数。 如果表达式提供可以转换的字符串，则该语句会成功，如以下示例所示：
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+在此例中，字符串 `1` 可以转换为整数值 `1`，因而此 `SELECT` 语句会返回值 `2`。 请注意，当提供的数据类型为整数时，`+` 运算符会成为加法而不是串联。
+
 ## <a name="data-type-conversion-behaviors"></a>数据类型转换行为
+
 将一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的数据类型转换为另一种数据类型时，不支持某些隐式和显式数据类型转换。 例如，nchar 值无法被转换为 image 值   。 nchar 只能显式转换为 binary，而不支持隐式转换为 binary    。 但是，nchar 既可以显式也可以隐式转换为 nvarchar   。
   
 以下各主题说明各对应数据类型展示的转换行为：

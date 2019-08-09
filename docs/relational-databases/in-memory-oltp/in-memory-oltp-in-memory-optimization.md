@@ -1,7 +1,7 @@
 ---
 title: 内存中 OLTP（内存中优化）| Microsoft Docs
 ms.custom: ''
-ms.date: 06/24/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,27 +14,21 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4908caa8c45b4c4f4cd1cdbbc539fe4da3265677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ab822203fa55e32a3b310f6c5a3ecfe3269d8ed
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050221"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715913"
 ---
-# <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
+# <a name="in-memory-oltp-and-memory-optimization"></a>内存中 OLTP 和内存优化
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可显著改善事务处理、数据引入和数据加载的性能以及暂时数据方案。  若要跳转到快速测试自己的内存优化表和本机编译的存储过程所需的基本代码和知识，请参阅
  -  [快速入门 1：可提高 Transact SQL 性能的内存中 OLTP 技术](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。  
  
-说明内存中 OLTP 并演示性能优势的 17 分钟视频：
-
--  [In-Memory OLTP in SQL Server 2016](https://www.youtube.com/watch?v=l5l5eophmK4)（SQL Server 2016 中的内存中 OLTP）。
-
-下载视频中所用的内存中 OLTP 的性能演示： 
-
-- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+我们向 YouTube 上传了说明 SQL Server 上的内存中 OLTP 并演示性能优势的 [17 分钟视频](#anchorname-17minute-video)  。
 
 深入了解内存中 OLTP 的详细概述以及查看显示技术中性能优势的方案：
 
@@ -70,10 +64,13 @@ ms.locfileid: "68050221"
 |[对内存中 OLTP 数据库的高可用性支持](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|讨论 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中的可用性组和故障转移群集。|  
 |[对内存中 OLTP 的 SQL Server 支持](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|列出支持内存优化表的新增和更新的语法和功能。|  
 |[迁移到内存中 OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|论述如何将基于磁盘的表迁移到内存优化的表。|  
-  
- 有关 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的详细信息，请参阅：  
+| &nbsp; | &nbsp; |
 
-- [说明内存中 OLTP 并演示性能优势的视频](https://www.youtube.com/watch?v=l5l5eophmK4)。
+## <a name="links-to-other-websites"></a>其他网站的链接
+
+此部分提供其他网站的链接，这些网站包含有关 SQL Server 上的内存中 OLTP 的信息。
+
+- [说明内存中 OLTP 并演示性能优势的视频  ](#anchorname-17minute-video)
 
 - [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -86,7 +83,56 @@ ms.locfileid: "68050221"
 -   [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)  
   
 -   [内存中 OLTP 博客](https://go.microsoft.com/fwlink/?LinkId=311696)  
-  
+
+## <a name="anchorname-17minute-video"></a>已编制索引的 17分钟视频
+
+- _视频标题：_ **SQL Server 2016 中的内存中 OLTP**
+- _发布日期：_ 2019-03-10
+- _持续时间：_ 17:32
+- _：_ SQL Server 高级项目经理 Jos de Bruijn
+
+### <a name="demo-can-be-downloaded"></a>可以下载演示
+
+在时间标记 08:09 处，视频会运行两次演示。 可以通过以下链接下载视频中使用的可运行性能演示：
+
+- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+
+视频中所示的常规步骤如下：
+
+1. 演示首先使用一个常规表来运行。
+2. 接下来，我们会看到如何通过在 SQL Server Management Studio (SSMS) 中单击几次来创建和填充表的内存优化版本。
+3. 随后演示使用内存优化表重新运行。 可测量到速度大幅提高。
+
+### <a name="index-to-each-section-in-the-video"></a>视频中每节的索引
+
+| 时间标记链接 | 节标题 |
+| :------------- | :------------ |
+| A.&nbsp;[00:00](https://www.youtube.com/watch?v=l5l5eophmK4&t=0) | 开头。 |
+| <br/>B.&nbsp;[00:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=56) | <br/>客户为何应关注内存中 OLTP。 |
+| &nbsp; &nbsp; [01:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=63) | 新式硬件需要数据库系统的新式体系结构。 |
+| &nbsp; &nbsp; [02:10](https://www.youtube.com/watch?v=l5l5eophmK4&t=130) | 所生成数据的分解；操作需要是即时的（低延迟）。 |
+| &nbsp; &nbsp; [03:19](https://www.youtube.com/watch?v=l5l5eophmK4&t=199) | 降低 TCO — 使用拥有的资源完成更多工作。 |
+| <br/>C.&nbsp;[03:33](https://www.youtube.com/watch?v=l5l5eophmK4&t=213) | <br/>什么是内存中 OLTP。<br/>使用内存优化技术优化了性能。 |
+| &nbsp; &nbsp; [05:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=303) | 事务处理速度提高多达 30 倍。 |
+| &nbsp; &nbsp; [05:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=322) | 完全持久 — 数据可在发生服务器故障时保留下来。 |
+| &nbsp; &nbsp; [06:15](https://www.youtube.com/watch?v=l5l5eophmK4&t=375) | 完整集成在 SQL Server 中。 因此无需学习新语言或工具。 |
+| &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | 在 SQL Server 2014 中首次发布，但是在 2016 中进行了重大改进。 |
+| &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | 也在 Azure SQL 数据库中可用（云中）。 |
+| <br/>D.&nbsp;[08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>性能演示。<br/> 使用一个常规表运行演示。 |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 上下文菜单：“报表”  &gt;“事务性能分析”  |
+| &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS 上下文菜单：**内存优化顾问**<br/> &nbsp; &nbsp; 通过常规表实际创建内存优化表，以及迁移数据。 |
+| &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | 重新运行演示，速度提高 45 倍。 |
+| <br/>E.&nbsp;[12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>在 SQL Server 2016 中更易于使用内存中 OLTP（与 2014 相比）。 |
+| &nbsp; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | 简化了分析以帮助进行应用迁移。 |
+| &nbsp; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | 通过改进的 Transact-SQL 语言支持（例如，具有外键和触发器）降低了应用迁移的复杂性。 |
+| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | 提高了可管理性。<br/> &nbsp; &nbsp; 例如，更改架构和索引、统计信息的自动更新。 |
+| <br/>F.&nbsp;[14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>改进了可伸缩性。 |
+| &nbsp; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | 大型内存优化表（每个数据库多达 2TB）。 |
+| &nbsp; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | 更好地缩放。 |
+| &nbsp; &nbsp; [16:41](https://www.youtube.com/watch?v=l5l5eophmK4&t=1001) | 使用已拥有的资源完成更多工作！ |
+| <br/>G.&nbsp;[16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>最终注释。 （17:32 结束。） |
+| &nbsp; | &nbsp; |
+
 ## <a name="see-also"></a>另请参阅  
  [数据库功能](../../relational-databases/database-features.md)  
   

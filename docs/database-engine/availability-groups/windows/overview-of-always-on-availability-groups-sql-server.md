@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adef2650015edadfe61d331c6358fa85c0099c99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014648"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742934"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014648"
   
 -   **对一个或多个辅助副本（可读辅助副本）的只读访问权限**  
   
-     可以对任何可用性副本进行配置，以便允许在其履行辅助角色时对其本地数据库进行只读访问，尽管不会完全支持某些操作。 此外，如果您想要禁止在主副本上产生只读工作负荷，则可以将副本配置为在以主角色运行时仅允许读写访问。 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+     可以对任何次要可用性副本进行配置，以便仅允许对其本地数据库进行只读访问，尽管不会完全支持某些操作。 这会阻止对次要副本进行读写连接尝试。 还可以通过仅允许进行读写访问来阻止主要  副本上的只读工作负载。 这会阻止对主要副本建立只读连接。 有关详细信息，请参阅[活动次要副本：可读次要副本（Always On 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
      如果某一可用性组当前拥有一个可用性组侦听程序以及一个或多个可读次要副本，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以将读意向连接请求路由到其中一个可读次要副本（*只读路由*）。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)概念。  
   

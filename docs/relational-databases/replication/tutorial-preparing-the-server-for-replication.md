@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895434"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742946"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教程：为复制准备 SQL Server（发布服务器、分发服务器、订阅服务器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ ms.locfileid: "67895434"
 >[!NOTE]
 > 如果 SQL 代理不启动，右键单击 SSMS 中的 SQL Server 代理，然后选择“刷新”  。 如果仍处于停止状态，请从 SQL Server 配置管理器中手动启动它。    
   
-### <a name="set-database-permissions-at-the-publisher"></a>在发布服务器中设置数据库权限  
+## <a name="set-database-permissions"></a>设置数据库权限  
   
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展开“安全性”，右键单击“登录名”，然后选择“新建登录名”    ：  
 
@@ -233,6 +233,8 @@ ms.locfileid: "67895434"
 5. 重复步骤 1-4，为其他本地帐户（repl_distribution、repl_logreader 和 repl_merge）创建登录名。 这些登录名也必须映射到属于“distribution”  数据库和“AdventureWorks”  数据库中“db_owner”  固定数据库角色成员的用户。  
 
    ![对象资源管理器中所有四个帐户的视图](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. 对于分发代理和合并代理，在订阅服务器上重复步骤 1-4，将计算机名称更改为订阅服务器的名称。 
   
   
 有关详细信息，请参阅：

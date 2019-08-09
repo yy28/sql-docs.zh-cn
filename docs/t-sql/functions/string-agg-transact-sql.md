@@ -16,14 +16,14 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3af59410ed151e54a5cc7ea7a546f8979a318693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906868"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632123"
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
+# <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 串联字符串表达式的值，并在其间放置分隔符值。 不能在字符串末尾添加分隔符。
@@ -95,6 +95,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 结果中不返回 `name` 单元格中的 `NULL` 值。   
+
 > [!NOTE]  
 >  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。   
 
@@ -127,16 +128,17 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。   
+> 如果使用 Management Studio 查询编辑器，“结果显示为网格”选项无法实现回车符  。 可切换到“结果显示为文本”，以便正确查看结果集  。
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. 返回带有相关标记的新闻文章 
+### <a name="d-return-news-articles-with-related-tags"></a>D. 返回带有相关标记的新闻文章
+
 文章及其标记被分隔到不同的表中。 开发人员想在返回时将每篇文章及其所有相关标记作为一行。 请使用以下查询：
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -144,9 +146,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |标记 |
 |--- |--- |--- |
-|172 |参选方民调结果不相上下 |政治,民意调查,市参议会 | 
+|172 |参选方民调结果不相上下 |政治,民意调查,市参议会 |
 |176 |新高速公路有望减少交通拥塞 |NULL |
-|177 |狗继续比猫更受人喜爱 |民意调查,动物| 
+|177 |狗继续比猫更受人喜爱 |民意调查,动物|
+
+> [!NOTE]
+> 如果 `STRING_AGG` 函数不是 `SELECT` 列表中的唯一项，则需要子句 `GROUP BY`。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 生成按城市分类的电子邮件列表
 

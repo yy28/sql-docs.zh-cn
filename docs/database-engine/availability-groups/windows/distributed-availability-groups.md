@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7fadeded7c979631cabc763d1be8d037b5913d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968302"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702740"
 ---
 # <a name="distributed-availability-groups"></a>分布式可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ GO
 
 ![前置查询的示例输出](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>通过 DMV 列出分布式 AG 运行状况
+### <a name="dmv-to-list-distributed-ag-health"></a>通过 DMV 列出分布式 AG 运行状况
 
 在 SQL Server Management Studio 中，仪表板和其他区域中显示的任何状态都仅用于该可用性组内的本地同步。 若要显示分布式可用性组的运行状况，请查询动态管理视图。 下面的示例查询可扩展和优化前面的查询：
 

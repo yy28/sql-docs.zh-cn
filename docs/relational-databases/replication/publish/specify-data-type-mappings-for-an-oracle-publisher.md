@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a5b5a6215127b59d90e1de1188223281024304f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f86c97036c74024c47d71150586135022543588
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113909"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661317"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 发布服务器的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,29 @@ ms.locfileid: "68113909"
   
 1.  如果尚不存在 Oracle 发布，请创建一个。  
   
-2.  在分发服务器上，执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 将 **@use_default_datatypes** 的值指定为 **@use_default_datatypes** 中指定 Oracle 发布服务器的数据类型映射。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+2.  在分发服务器上，执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 将 \@use_default_datatypes  的值指定为 0  。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 3.  在分发服务器上，执行 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) 以查看已发布项目中某列的现有映射。  
   
-4.  在分发服务器上，执行 [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)。 为 **@publisher** 指定 Oracle 发布服务器的名称，并指定 **@publication** 、 **@article** 和 **@column** 以定义已发布的列。 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @type **@type** 指定 Oracle 发布服务器的名称，并指定 **@length** 、 **@precision** 和 **@scale** 。  
+4.  在分发服务器上，执行 [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)。 为 \@publisher  指定 Oracle 发布服务器的名称，并指定 \@publication  、\@article  和 \@column  以定义已发布的列。 为 \@type  指定要映射到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的名称，并在必要时指定 \@length  、\@precision  和 \@scale  。  
   
 5.  在分发服务器上，执行 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 这将创建用于从 Oracle 发布生成快照的视图。  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>将映射指定为数据类型的默认映射  
   
-1.  （可选）在分发服务器上，对任意一个数据库执行 [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。 指定 **@source_dbms** 、 **@source_type** 、 **@destination_dbms** 、 **@destination_version** 以及标识源 DBMS 所需的其他任何参数。 将使用输出参数返回有关目标 DBMS 中当前映射的数据类型的信息。  
+1.  （可选）在分发服务器上，对任意一个数据库执行 [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。 指定 \@source_dbms  、\@source_type  、\@destination_dbms  、\@destination_version  以及标识源 DBMS 所需的其他任何参数。 将使用输出参数返回有关目标 DBMS 中当前映射的数据类型的信息。  
   
-2.  （可选）在分发服务器上，对任意一个数据库执行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 指定 **@source_dbms** 以及筛选结果集所需的其他任何参数。 记下结果集中所需映射的 **mapping_id** 的值。  
+2.  （可选）在分发服务器上，对任意一个数据库执行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 指定 \@source_dbms  以及筛选结果集所需的其他任何参数。 记下结果集中所需映射的 **mapping_id** 的值。  
   
 3.  在分发服务器上，对任意一个数据库执行 [sp_setdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)。  
   
-    -   如果知道在步骤 2 中获得的 **mapping_id** 的值，请对 **@mapping_id** 中指定 Oracle 发布服务器的数据类型映射。  
+    -   如果知道在步骤 2 中获取的 mapping_id  的所需值，请为 \@mapping_id  指定该值。  
   
-    -   如果不知道 **mapping_id**，请指定 **@source_dbms** 、 **@source_type** 、 **@destination_dbms** 、 **@destination_type** 参数以及标识现有映射所需的其他任何参数。  
+    -   如果不知道 mapping_id  ，请指定 \@source_dbms  、\@source_type  、\@destination_dbms  、\@destination_type  参数以及标识现有映射所需的其他任何参数。  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>查找针对给定的 Oracle 数据类型的有效数据类型  
   
-1.  在分发服务器上，对任何一个数据库执行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 将 **@source_dbms** 的值指定为 **@source_dbms** 以及筛选结果集所需的其他任何参数。  
+1.  在分发服务器上，对任何一个数据库执行 [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)。 将 \@source_dbms  的值指定为 ORACLE  ，并指定筛选结果集所需的其他任何参数。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例将对其类型为 Oracle 数据类型 NUMBER 的列进行更改，以将该列映射到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型 **numeric**(38,38) 而非默认数据类型 **float**中指定 Oracle 发布服务器的数据类型映射。  

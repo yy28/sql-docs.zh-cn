@@ -31,14 +31,15 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329284"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731132"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回指定的 startdate 和 enddate 之间所跨的指定 datepart 边界的计数（作为带符号整数值）   。
@@ -54,13 +55,13 @@ DATEDIFF ( datepart , startdate , enddate )
 ```  
   
 ## <a name="arguments"></a>参数  
+
 *datepart*  
-指定所跨边界类型的 startdate 和 enddate 的一部分   。
+DATEDIFF  用于报告 startdate  与 enddate  之间差异的单位。 常用 datepart  单位包括 `month` 或 `second`。
 
-> [!NOTE]
-> `DATEDIFF` 不会接受来自用户定义的变量或作为带引号的字符串的 datepart 值  。 
+datepart  值不能在变量中指定，也不能指定为带引号的字符串，如 `'month'`。
 
-此表列出了所有有效的 datepart 参数名称和缩写  。
+下表列出了所有有效的 datepart 值  。 DATEDIFF  接受 datepart  的全名或任何列出的全名缩写形式。
 
 |datepart 名称 |datepart 缩写 |  
 |-----------|------------|
@@ -76,6 +77,7 @@ DATEDIFF ( datepart , startdate , enddate )
 |millisecond |ms |  
 |microsecond |mcs |  
 |nanosecond |ns |  
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > 每个特定的 datepart 名称及其相应名称的缩写将返回相同的值   。
@@ -99,7 +101,10 @@ enddate
  **int**  
   
 ## <a name="return-value"></a>返回值  
-startdate 与 enddate 之间的 int 差异，以 datepart 设置的 coundary 表示     。
+
+startdate 与 enddate 之间的 int 差异，以 datepart 设置的边界表示     。
+  
+例如，`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` 返回 -2，提示 2036 必须为闰年。 这种情况意味着如果从 _startdate_ '2036-03-01' 开始，然后计数 -2 天，则会得到 _enddate_ '2036-02-28'。
   
 若 bigint 的返回值超出范围（-2,147,483,648 到 +2,147,483,647），`DATEDIFF` 返回错误  。  对于 millisecond，startdate 和 enddate 之间的最大差值为 24 天 20 小时 31 分钟 23.647 秒    。 对于 second，最大差值为 68 年 19 天 3 小时 14 分 7 秒  。
   
@@ -113,8 +118,9 @@ startdate 与 enddate 之间的 int 差异，以 datepart 设置的 coundary 表
   
 如果 startdate 和 enddate 具有不同的日期数据类型，并且其中一个的时间部分或秒小数部分精度比另一个高，`DATEDIFF` 会将另一个的所缺部分设置为 0   。
   
-## <a name="datepart-boundaries"></a>datepart 边界  
-以下语句具有相同的 startdate 和 enddate 值   。 这些日期是相邻的，它们在时间上相差一百纳秒（0.0000001 秒）。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界    。 每个语句都返回 1。 
+## <a name="_datepart_-boundaries"></a>datepart  边界
+
+以下语句具有相同的 startdate 和 enddate 值   。 这些日期是相邻的，它们在时间上相差一百纳秒（0.0000001 秒）。 每个语句中 startdate 与 enddate 之间的差跨其 datepart 的一个日历或时间边界    。 每个语句都返回 1。
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -201,13 +207,18 @@ SELECT DATEDIFF(day,
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)   
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)
     AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays  
+SELECT
+    DATEDIFF(
+            day,
+            '2007-05-07 09:53:01.0376635',
+            DATEADD(day, 1, SYSDATETIME())
+        ) AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 ```  
@@ -250,8 +261,9 @@ GO
 
 ```sql
 -- DOES NOT ACCOUNT FOR LEAP YEARS
-DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
-DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100);
+DECLARE @years INT, @months INT, @days INT,
+    @hours INT, @minutes INT, @seconds INT, @milliseconds INT;
 
 SET @date1 = '1900-01-01 00:00:00.000'
 SET @date2 = '2018-12-12 07:08:01.123'
@@ -294,9 +306,12 @@ SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
      + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
      + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
      + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
-          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
-               ELSE '' END 
-          + ' seconds','')
+     + CASE
+            WHEN @milliseconds > 0
+                THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+            ELSE ''
+       END 
+     + ' seconds','')
 
 SELECT @result
 ```

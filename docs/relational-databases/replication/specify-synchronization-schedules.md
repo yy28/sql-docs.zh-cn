@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 970e982ccc5e2d7f7af7643f08e90b2dc791f7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 43b5d4f59ae68f52968fc4aaa10a400e0d8f8ff3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907586"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769540"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步计划
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步计划。 在创建订阅时，可以定义同步计划以控制何时运行订阅的复制代理。 如果没有指定计划参数，则订阅将使用默认计划。  
   
  订阅由分发代理（对于快照复制和事务复制）或合并代理（对于合并复制）进行同步。 代理可以连续运行、按需运行或按计划运行。  
@@ -146,49 +147,49 @@ ms.locfileid: "67907586"
   
  计划由以下计划参数定义，而计划的行为从 [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 继承：  
   
--   **@frequency_type** - 计划代理时所用的频率类型。  
+-   \@frequency_type  - 计划代理时所用的频率类型。  
   
--   **@frequency_interval** - 星期几运行代理。  
+-   \@frequency_interval  - 星期几运行代理。  
   
--   **@frequency_relative_interval** - 计划每月运行代理的给定月份的星期。  
+-   \@frequency_relative_interval  - 计划每月运行代理的给定月份的星期。  
   
--   **@frequency_recurrence_factor** - 同步之间发生的频率类型单位数值。  
+-   \@frequency_recurrence_factor  - 同步之间发生的频率类型单位数值。  
   
--   **@frequency_subday** - 一天内多次运行代理时的频率单位。  
+-   \@frequency_subday  - 一天内多次运行代理时的频率单位。  
   
--   **@frequency_subday_interval** - 一天内多次运行代理时运行之间的频率单位数值。  
+-   \@frequency_subday_interval  - 一天内多次运行代理时运行之间的频率单位数值。  
   
--   **@active_start_time_of_day** - 在给定日将要开始运行代理的最早时间。  
+-   \@active_start_time_of_day  - 在给定日将要开始运行代理的最早时间。  
   
--   **@active_end_time_of_day** - 在给定日将要开始运行代理的最晚时间。  
+-   \@active_end_time_of_day  - 在给定日将要开始运行代理的最晚时间。  
   
--   **@active_start_date** - 代理计划生效的第一天。  
+-   \@active_start_date  - 代理计划生效的第一天。  
   
--   **@active_end_date** - 代理计划生效的最后一天。  
+-   \@active_end_date  - 代理计划生效的最后一天。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>为事务发布的请求订阅定义同步计划  
   
 1.  对事务发布创建一个新的请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_name **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 \@publisher  、\@publisher_db  和 \@publication  ，并为 \@job_name  和 \@password  指定订阅服务器的分发代理运行时使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>为事务发布的推送订阅定义同步计划  
   
 1.  对事务发布创建一个新的推送订阅。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定 \@subscriber  、\@subscriber_db  和 \@publication  ，并为 \@job_name  和 \@password  指定订阅服务器的分发代理运行时使用的 Windows 凭据。 指定上面详细说明的同步参数，为同步订阅的分发代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>为合并发布的请求订阅定义同步计划  
   
 1.  对合并发布创建一个新的请求订阅。 有关详细信息，请参阅 [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 \@publisher  、\@publisher_db  和 \@publication  ，并为 \@job_name  和 \@password  指定订阅服务器的合并代理运行时使用的 Windows 凭据。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>为合并发布的推送订阅定义同步计划  
   
 1.  对合并发布创建一个新的推送订阅。 有关详细信息，请参阅 [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)。  
   
-2.  在订阅服务器上，执行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** 或复制管理对象 (RMO) 在 **@publication** ，并为 **@job_name** 和 **@password** 。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
+2.  在订阅服务器上，执行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定 \@subscriber  、\@subscriber_db  和 \@publication  ，并为 \@job_name  和 \@password  指定订阅服务器的合并代理运行时使用的 Windows 凭据。 指定上面详细说明的同步参数，为同步订阅的合并代理作业定义计划。  
   
 ##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  复制使用 SQL Server 代理为定期发生的活动计划作业（如快照生成和订阅同步）。 可以编程的方式使用复制管理对象 (RMO) 为复制代理作业指定计划。  

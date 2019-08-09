@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 07/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfdbf22c09dcc57025fd0b3820b7e12bd9097bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c2aa732a98079fd88ebfcafa476f20566e6dc5a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940096"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68698297"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -615,6 +615,9 @@ column_name <data_type>
 
 \<column_definition> [ ,...n  ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则功能。 不能对外部表使用 DEFAULT CONSTRAINT。
 
+> [!NOTE]
+> 对于 Azure SQL 数据库，`Text`、`nText` 和 `XML` 不是受外部表中的列支持的数据类型。
+
 列定义（包括数据类型和列数）必须与外部文件中的数据匹配。 如果存在不匹配，则在查询实际数据时会拒绝文件行。
 
 分片外部表选项
@@ -746,6 +749,9 @@ column_name <data_type>
 { database_name.schema_name.table_name | schema_name.table_name | table_name } 要创建的表的一到三部分名称  。 对于外部表，SQL 数据仓库仅存储表元数据以及有关 Azure Data Lake、Hadoop 或 Azure blob 存储中引用的文件或文件夹的基本统计信息。 在 SQL 数据仓库中不移动或存储任何实际数据。
 
 \<column_definition> [ ,...n  ] CREATE EXTERNAL TABLE 支持配置列名、数据类型、为 Null 性和排序规则功能。 不能对外部表使用 DEFAULT CONSTRAINT。
+
+> [!NOTE]
+> 对于 Azure SQL 仓库，`Text`、`nText` 和 `XML` 不是受外部表中的列支持的数据类型。
 
 列定义（包括数据类型和列数）必须与外部文件中的数据匹配。 如果存在不匹配，则在查询实际数据时会拒绝文件行。
 
@@ -885,10 +891,10 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
     FORMAT_TYPE = DELIMITEDTEXT 
-    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|'
-       , STRINGDELIMITER = ''
-      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
-      , USETYPE_DEFAULT = FALSE
+    , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
+       , STRING_DELIMITER = ''
+      , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
+      , USE_TYPE_DEFAULT = FALSE
       )
 )
 
@@ -923,7 +929,7 @@ AS SELECT * FROM
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 数据库](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL 数据<br />数据仓库](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

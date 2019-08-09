@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df3f1e188593e3e193faed98b7932a3dffa1adde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005363"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769660"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   用作快照和事务复制订阅服务器（不包括对等事务复制）的表可以配置为内存优化表。 其他复制配置与内存优化表不兼容。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本支持此功能。  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68005363"
   
 -   **将订阅服务器数据库配置为支持复制到内存优化表**  
   
-     通过使用 [sp_addsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 将 **@memory_optimized** 属性设置为 **true**。  
+     通过使用 [sp_addsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 将 \@memory_optimized  属性设置为 true  。  
   
 -   **将项目配置为支持复制到内存优化表**  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68005363"
   
 2.  向发布添加项目。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 存储过程的 **@schema_option** 参数设置为   
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle  存储过程的 \@schema_option  参数设置为   
     **0x40000000000**及更高版本支持此功能。  
   
 3.  在项目属性窗口中，将“启用内存优化”  设置为“true”  。  
@@ -55,16 +56,16 @@ ms.locfileid: "68005363"
   
 1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅”  设置为“true”  。 只有在重新初始化订阅之后，系统才会应用这些更改。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 **@memory_optimized** 存储过程的 **@memory_optimized** 参数设置为“true”。  
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addsubscription  存储过程的 \@memory_optimized  参数设置为 true。  
   
 2.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的发布项目属性，然后将“启用内存优化”  设置为“true”。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 存储过程的 **@schema_option** 参数设置为   
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle  存储过程的 \@schema_option  参数设置为   
     **0x40000000000**及更高版本支持此功能。  
   
 3.  内存优化表不支持聚集索引。 若要让复制能够通过在目标上将聚集索引转换成非聚集索引来处理此情况，请将“为内存优化项目将聚集索引转换成非聚集索引”  设置为“true”。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 存储过程的 **@schema_option** 参数设置为  **0x0000080000000000**及更高版本支持此功能。  
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle  存储过程的 \@schema_option  参数设置为 0x0000080000000000  。  
   
 4.  重新生成快照。  
   

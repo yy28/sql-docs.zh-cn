@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13a883b6b36bfb2863caa5b066e58216cbad1549
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903055"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768660"
 ---
 # <a name="create-a-pull-subscription"></a>创建请求订阅
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建请求订阅。  
   
  可以通过脚本设置 P2P 复制的请求订阅，但是不能通过向导这样做。  
@@ -91,24 +92,24 @@ ms.locfileid: "67903055"
   
     -   如果结果集中 **allow_pull** 的值为 **1**，则发布支持请求订阅。  
   
-    -   如果 **allow_push** 的值为 **0**，则执行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，并将 **@property** 指定为 **allow_pull**，将 **@value** 指定为 **true**。  
+    -   如果 allow_pull  的值为 0  ，则执行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，将 \@property  指定为 allow_pull  ，将 \@value  指定为 true  。  
   
-2.  在订阅服务器上，执行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 **@publisher** 和 **@publication** 中通过 FTP 传递快照。 有关更新订阅的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。   
+2.  在订阅服务器上，执行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 \@publisher  和 \@publication  。 有关更新订阅的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。   
   
 3.  在订阅服务器上，执行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定下列各项：  
   
-    -   订阅服务器中的分发代理运行时所使用的 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 参数。  
+    -   \@publisher  、\@publisher_db  和 \@publication  参数。  
   
-    -   订阅服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据： **@job_login** ，将 **@job_password** 。  
+    -   订阅服务器中的分发代理运行时所使用的 \@job_login  和 \@job_password  指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据。  
   
         > [!NOTE]  
-        >  使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** 和 **@job_password** 中为非 SQL Server 订阅服务器创建订阅。 分发代理始终使用 Windows 集成身份验证与订阅服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到分发服务器。  
+        >  使用 Windows 集成身份验证进行的连接始终使用由 \@job_login  和 \@job_password  指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与订阅服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到分发服务器。  
   
-    -   （可选） **@distributor_security_mode** 的值 **0**，以及 SQL Server 登录信息 **@distributor_login** 和 **@distributor_password** （如果在连接到分发服务器时需要使用 SQL Server 身份验证）。  
+    -   （可选）\@distributor_security_mode  的 0  值以及 \@distributor_login  和 \@distributor_password  的 SQL Server 登录信息，如果需要在连接到分发服务器时使用 SQL Server 身份验证，请指定这些参数。  
   
     -   该订阅的分发代理作业计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
-4.  在发布服务器上，执行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 以注册请求订阅。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 和 **@destination_db** 文件夹中打开。 将 **@subscription_type** 指定为 **@subscription_type** 。  
+4.  在发布服务器上，执行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 以注册请求订阅。 指定 \@publication  、\@subscriber  和 \@destination_db  。 将 \@subscription_type  的值指定为 pull  。  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>创建合并发布的请求订阅  
   
@@ -116,32 +117,32 @@ ms.locfileid: "67903055"
   
     -   如果结果集中 **allow_pull** 的值为 **1**，则发布支持请求订阅。  
   
-    -   如果 **allow_push** 的值为 **0**，则执行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，并将 **@property** 指定为 **allow_pull**，将 **@value** 指定为 **true**。  
+    -   如果 allow_pull  的值为 0  ，则执行 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，将 \@property  指定为 allow_pull  ，将 \@value  指定为 true  。  
   
-2.  在订阅服务器上，执行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 或复制管理对象 (RMO) 在 **@publication** 以及下列参数：  
+2.  在订阅服务器上，执行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 \@publisher  、\@publisher_db  、\@publication  以及下列参数：  
   
-    -   **@subscriber_type** – 对于客户端订阅指定 **local** ，对于服务器订阅指定 **global** 。  
+    -   \@subscriber_type  – 对于客户端订阅指定 local  ，对于服务器订阅指定 global  。  
   
-    -   **@subscription_priority** – 指定订阅的优先级（从**0.00** 到 **99.99**）。 只有服务器订阅要求指定优先级。  
+    -   \@subscription_priority  – 指定订阅的优先级（从 0.00  到 99.99  ）。 只有服务器订阅要求指定优先级。  
   
          有关详细信息，请参阅 [高级合并复制冲突的检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在订阅服务器上，执行 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定下列参数：  
   
-    -   **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 。  
+    -   \@publisher  、\@publisher_db  和 \@publication  。  
   
-    -   订阅服务器中的合并代理运行时所使用的 Windows 凭据： **@job_login** ，将 **@job_password** 。  
+    -   订阅服务器中的合并代理运行时所使用的 \@job_login  和 \@job_password  指定的 Windows 凭据。  
   
         > [!NOTE]  
-        >  使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** ，将 **@job_password** 。 合并代理始终使用 Windows 集成身份验证与订阅服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到分发服务器和发布服务器。  
+        >  使用 Windows 集成身份验证进行的连接始终使用由 \@job_login  和 \@job_password  指定的 Windows 凭据。 合并代理始终使用 Windows 集成身份验证与订阅服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到分发服务器和发布服务器。  
   
-    -   （可选） **0** 指定为 **@distributor_security_mode** 值以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@distributor_login** ，将 **@distributor_password** 登录信息，如果需要在连接到分发服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请指定这些参数。  
+    -   （可选）\@distributor_security_mode  的 0  值以及 \@distributor_login  和 \@distributor_password  的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息，如果需要在连接到分发服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请指定这些参数。  
   
-    -   （可选） **0** 指定为 **@publisher_security_mode** 值以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** ，将 **@publisher_password** 登录信息，如果需要在连接到分发服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请指定这些参数。  
+    -   （可选）\@publisher_security_mode  的 0  值以及 \@publisher_login  和 \@publisher_password  的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息，如果需要在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请指定这些参数。  
   
     -   该订阅的合并代理作业计划。 有关详细信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
-4.  在发布服务器上，执行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** ，并将 **@subscription_type** 指定为 **@subscription_type** 。 这样便可注册请求订阅。  
+4.  在发布服务器上，执行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db，并将 \@subscription_type 的值指定为 pull      。 这样便可注册请求订阅。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例创建事务发布的请求订阅。 第一个批处理在订阅服务器中执行，第二个批处理在发布服务器中执行。 登录名和密码在运行时使用 sqlcmd 脚本变量进行提供。  

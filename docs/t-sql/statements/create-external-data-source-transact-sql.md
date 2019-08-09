@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67902717"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
@@ -73,7 +73,7 @@ WITH
 
 ## <a name="arguments"></a>参数
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 指定数据源的用户定义名称。 该名称在 SQL Server 数据库中必须唯一。
 
@@ -110,7 +110,7 @@ WITH
 - `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
 - 要确保在 Hadoop `Namenode` 故障转移期间成功进行 PolyBase 查询，请考虑针对 Hadoop 群集的 `Namenode` 使用虚拟 IP 地址。 如果不这样做，请执行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
-### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = key_value_pair 
+### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = key_value_pair 
 
 通过 `ODBC` 连接到外部数据源时指定其他选项。
 
@@ -126,7 +126,7 @@ WITH
 
 通过[提示][hint_pb]实现在查询级别启用或禁用下推。
 
-### <a name="credential--credentialname"></a>CREDENTIAL = credential_name 
+### <a name="credential--credential_name"></a>CREDENTIAL = credential_name 
 
 指定用于对外部数据源进行身份验证的数据库范围凭据。
 
@@ -142,19 +142,19 @@ WITH
 
 要创建数据库范围凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = [HADOOP | BLOB_STORAGE ] 
+### <a name="type---hadoop--blob_storage-"></a>TYPE = [HADOOP | BLOB_STORAGE ] 
 
 指定要配置的外部数据源的类型。 此参数并非总是必需的。
 
 - 如果外部数据源是 Cloudera、Hortonworks、Azure Blob 存储，请使用 HADOOP。
-- 在使用 [BULK INSERT][bulk_insert] , or [OPENROWSET][openrowset] 和 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
+- 在使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 对 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 执行批量操作时，可使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
 有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#e-create-external-data-source-to-reference-azure-blob-storage)。
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' 
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' 
 
 连接到 Hortonworks 或 Cloudera 时配置此可选值。
 
@@ -317,7 +317,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作
 
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-对使用 [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
+对使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -406,7 +406,7 @@ WITH
 
 ## <a name="arguments"></a>参数
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 指定数据源的用户定义名称。 该名称在 SQL 数据库 (SQL DB) 中必须唯一。
 
@@ -429,7 +429,7 @@ WITH
 
 - 创建对象时，SQL 数据库引擎不会验证外部数据源是否存在。 要进行验证，请使用外部数据源创建外部表。
 
-### <a name="credential--credentialname"></a>CREDENTIAL = credential_name 
+### <a name="credential--credential_name"></a>CREDENTIAL = credential_name 
 
 指定用于对外部数据源进行身份验证的数据库范围凭据。
 
@@ -446,18 +446,18 @@ WITH
 
 要创建数据库范围凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
-### <a name="type---blobstorage--rdbms--shardmapmanager"></a>TYPE = [ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER] 
+### <a name="type---blob_storage--rdbms--shard_map_manager"></a>TYPE = [ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER] 
 
 指定要配置的外部数据源的类型。 此参数并非总是必需的。
 
 - 使用 RDBMS 通过 SQL 数据库中的弹性查询进行跨数据库查询。  
 - 在连接到分片的 SQL 数据库时，使用 SHARD_MAP_MANAGER 创建外部数据源。
-- 在使用 [BULK INSERT][bulk_insert] , or [OPENROWSET][openrowset] 执行批量操作时，可使用 BLOB_STORAGE。
+- 在使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 执行批量操作时，可使用 BLOB_STORAGE。
 
 > [!IMPORTANT]
 > 如果使用任何其他外部数据源，请勿设置 `TYPE`。
 
-### <a name="databasename--databasename"></a>DATABASE_NAME = database_name 
+### <a name="database_name--database_name"></a>DATABASE_NAME = database_name 
 
 当 `TYPE` 设置为 `RDBMS` 或 `SHARD_MAP_MANAGER` 时，配置此参数。
 
@@ -468,7 +468,7 @@ WITH
 
 有关如何创建 `TYPE` = `RDBMS` 的外部数据源的示例，请参阅[创建 RDBMS 外部数据源](#b-create-an-rdbms-external-data-source)
 
-### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = shard_map_name 
+### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = shard_map_name 
 
 将 `TYPE` 参数设置为 `SHARD_MAP_MANAGER` 时使用，仅用于设置分片映射的名称。
 
@@ -544,7 +544,7 @@ WITH
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. 创建外部数据源以用于从 Azure Blob 存储检索数据的批量操作
 
-对使用 [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
+对使用 [BULK INSERT][bulk_insert] 或 [OPENROWSET][openrowset] 的批量操作使用以下数据源。 凭据必须设置 `SHARED ACCESS SIGNATURE` 作为标识、不应在 SAS 令牌中具有前导 `?`、必须对应加载的文件（例如 `srt=o&sp=r`）至少具有读取权限，并且有效期应有效（所有日期均采用 UTC 时间）。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)][sas_token]。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -630,7 +630,7 @@ WITH
 
 ## <a name="arguments"></a>参数
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 指定数据源的用户定义名称。 该名称在 SQL 数据仓库 (SQL DW) 中必须唯一。
 
@@ -655,7 +655,7 @@ WITH
 - 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
 - `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
 
-### <a name="credential--credentialname"></a>CREDENTIAL = credential_name 
+### <a name="credential--credential_name"></a>CREDENTIAL = credential_name 
 
 指定用于对外部数据源进行身份验证的数据库范围凭据。
 
@@ -666,7 +666,7 @@ WITH
 
 要创建数据库范围凭据，请参阅 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]。
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = [HADOOP | BLOB_STORAGE ] 
+### <a name="type---hadoop--blob_storage-"></a>TYPE = [HADOOP | BLOB_STORAGE ] 
 
 指定要配置的外部数据源的类型。 此参数并非总是必需的。
 
@@ -849,7 +849,7 @@ WITH
 
 ## <a name="arguments"></a>参数
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 指定数据源的用户定义名称。 该名称必须在 Analytics 平台系统（并行数据仓库或 PDW）中的服务器上是唯一的。
 
@@ -876,7 +876,7 @@ WITH
 - `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
 - 要确保在 Hadoop `Namenode` 故障转移期间成功进行 PolyBase 查询，请考虑针对 Hadoop 群集的 `Namenode` 使用虚拟 IP 地址。 如果不这样做，请执行 [ALTER EXTERNAL DATA SOURCE][alter_eds] 命令以指向新位置。
 
-### <a name="credential--credentialname"></a>CREDENTIAL = credential_name 
+### <a name="credential--credential_name"></a>CREDENTIAL = credential_name 
 
 指定用于对外部数据源进行身份验证的数据库范围凭据。
 
@@ -896,7 +896,7 @@ WITH
 
 有关使用 `TYPE` = `HADOOP` 从 Azure Blob 存储加载数据的示例，请参阅[创建外部数据源以引用 Azure Blob 存储](#d-create-external-data-source-to-reference-azure-blob-storage)。
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' 
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' 
 
 连接到 Hortonworks 或 Cloudera 时配置此可选值。
 
