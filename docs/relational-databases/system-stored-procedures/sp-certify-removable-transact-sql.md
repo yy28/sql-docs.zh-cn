@@ -24,12 +24,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68045936"
 ---
-# <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
+# <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   验证是否正确配置数据库以便在可移动介质上分发，并向用户报告所有问题。  
   
-> **重要说明!!** [!包括[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md)相反。  
+> **重要说明!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
