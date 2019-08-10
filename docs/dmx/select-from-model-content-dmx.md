@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。内容 (DMX) |Microsoft Docs
+title: 选择 " &lt;从&gt;模型"。内容 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906732"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892833"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。内容 (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>选择 " &lt;从&gt;模型"。内容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   返回指定数据挖掘模型的挖掘模型架构行集。  
@@ -46,12 +46,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
- **SELECT FROM** _\<模型 >_ **。内容**语句可以返回特定于每个算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 可以使用**SELECT FROM\<模型 >。内容**语句来返回模型的 NODE_RULE 列中的值。  
+ 从 _\<模型_ **中选择**> **。CONTENT**语句返回特定于每种算法的内容。 例如，您可能希望在自定义应用程序中，使用某个关联规则模型的所有规则的说明。 您可以使用 "**从模型\<中选择" >。CONTENT**语句来返回模型的 NODE_RULE 列中的值。  
   
  下表列出了挖掘模型内容中包含的列。  
   
 > [!NOTE]  
->  算法可能会为了正确表示内容而对列做出不同的解释。 有关挖掘模型内容的每个算法和有关如何解释和查询挖掘模型内容的每个模型类型提示的说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+>  算法可能会为了正确表示内容而对列做出不同的解释。 有关每种算法的挖掘模型内容的说明, 以及有关如何解释和查询每种模型类型的挖掘模型内容的提示, 请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  
   
 |CONTENT 行集列|描述|  
 |---------------------------|-----------------|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 下面的查询使用**IsDescendant**函数以返回前面的查询中返回的节点的直接子级。  
+ 以下查询使用**IsDescendant**函数返回上一个查询中返回的节点的直接子节点。  
   
 > [!NOTE]  
->  由于 NODE_NAME 的值是一个字符串，不能使用嵌套 select 语句返回 node_id，以作为的参数**IsDescendant**函数。  
+>  因为 NODE_NAME 的值是一个字符串, 所以不能使用子 select 语句将 NODE_ID 作为参数返回到**IsDescendant**函数。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  预期的结果：  
   
- 由于该模型是一个决策树模型，所以模型父节点的后代中包含一个边际统计信息节点、一个表示可预测属性的节点以及多个包含输入属性和值的节点。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 由于该模型是一个决策树模型，所以模型父节点的后代中包含一个边际统计信息节点、一个表示可预测属性的节点以及多个包含输入属性和值的节点。 有关详细信息，请参阅 [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)。  
   
 ## <a name="using-the-flattened-keyword"></a>使用 FLATTENED 关键字  
  挖掘模型内容常常将模型的相关重要信息包含在嵌套表列中。 您可以使用 FLATTENED 关键字，从嵌套表列中检索数据，而无需使用支持分层行集的提供程序。  
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>请参阅  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展&#40;插件&#41; DMX 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

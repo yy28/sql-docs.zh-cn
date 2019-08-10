@@ -8,22 +8,22 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105414"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891212"
 ---
 # <a name="identifiers-mdx"></a>标识符 (MDX)
 
 
-  标识符是 Analysis Services 对象的名称。 每个对象可以并且必须具有标识符。 这些对象包括多维数据集、维度、层次结构、级别、成员等等。 可以使用对象的标识符在多维表达式 (MDX) 语句中引用对象。  
+  标识符是 Analysis Services 对象的名称。 每个对象都可以并且必须具有标识符。 这些对象包括多维数据集、维度、层次结构、级别、成员等等。 可以使用对象的标识符在多维表达式 (MDX) 语句中引用对象。  
   
  根据命名对象的方式，对象标识符可以是常规标识符，也可以是分隔标识符。  
   
 > [!NOTE]  
->  正则和带分隔符的标识符必须包含 1 到 100 个字符。  
+>  常规标识符和分隔标识符包含的字符数必须介于1到100之间。  
   
 ## <a name="using-regular-identifiers"></a>使用常规标识符  
  常规标识符是符合成为常规标识符的下列格式规则的对象名称。 常规标识符可以和分隔符一起使用，也可以不和分隔符一起使用。  
@@ -32,19 +32,19 @@ ms.locfileid: "68105414"
   
 1.  第一个字符必须是下列字符之一：  
   
-    -   由 Unicode 标准 2.0 定义的字母。 除了其他语言的字母字符外，Unicode 定义的字母还包括从 a 到 z 以及从 A 到 Z 的拉丁字符。  
+    -   由 Unicode 标准2.0 定义的字母。 除了其他语言的字母字符外，Unicode 定义的字母还包括从 a 到 z 以及从 A 到 Z 的拉丁字符。  
   
     -   下划线 (_)。  
   
 2.  后续字符可以是：  
   
-    -   在 Unicode 标准 2.0 中定义的字母。  
+    -   Unicode 标准2.0 中定义的字母。  
   
     -   基本拉丁字符或其他国家/地区字符中的十进制数字。  
   
     -   下划线 (_)。  
   
-3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息，请参阅[保留关键字&#40;MDX 语法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。  
+3.  标识符一定不能是 MDX 保留关键字。 MDX 中的保留关键字区分大小写。 有关详细信息, 请参阅[保留&#40;关键字 MDX&#41;语法](../mdx/reserved-keywords-mdx-syntax.md)。  
   
 4.  不允许嵌入空格或特殊字符。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68105414"
   
 -   当对象的名称或名称中的一部分使用保留关键字时。  
   
-     建议不要将保留关键字用作对象名称。 从早期版本的升级数据库[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含标识符，其中包括不保留字在早期版本中，但现在保留的。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
+     建议不要将保留关键字用作对象名称。 从早期版本的升级的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库可能包含标识符, 这些标识符包含早期版本中未保留的单词, 但现在已保留。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
   
 -   当对象的名称使用未被列为限定标识符的字符时。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68105414"
   
 ## <a name="see-also"></a>请参阅  
  [MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识 (Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 查询基础知识 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX 语法元素&#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

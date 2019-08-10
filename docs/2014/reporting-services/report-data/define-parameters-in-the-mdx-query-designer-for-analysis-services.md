@@ -1,5 +1,5 @@
 ---
-title: Analysis Services （报表生成器和 SSRS） 的 MDX 查询设计器中定义参数 |Microsoft Docs
+title: 在 MDX 查询设计器中定义用于 Analysis Services (报表生成器和 SSRS) 的参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c1b3696612ab9d0693b3c0135b6aff34137906b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fc220eb4b3dc74e5550312c5658760b6cb699c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107313"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892176"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）
   若要参数化 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的 MDX 查询，则必须向查询添加查询参数。 在 MDX 查询设计器中，在设计模式和查询模式下都可以通过指定筛选器来添加查询参数。 使用查询参数定义查询后，Reporting Services 会自动创建报表参数和数据集，以提供有效值的列表。 这样用户就可以指定要直接传递给查询的值。  
@@ -59,9 +59,9 @@ ms.locfileid: "66107313"
   
 2.  在工具栏上单击 **“设计”** 以切换到查询模式。  
   
-3.  在 MDX 查询设计器工具栏上，单击“查询参数”（![“查询参数”对话框图标](../../analysis-services/media/iconqueryparameter.gif "“查询参数”对话框图标")）  。 此时将打开“查询参数”对话框。  
+3.  在 MDX 查询设计器工具栏上，单击“查询参数”（![“查询参数”对话框图标](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "“查询参数”对话框图标")）。 此时将打开“查询参数”对话框。  
   
-4.  在“参数”列中，单击“\<输入参数>”，然后键入参数的名称   。  
+4.  在“参数”列中，单击“\<输入参数>”，然后键入参数的名称。  
   
 5.  在“ **维度** ”列中，从下拉列表中选择一个值。  
   

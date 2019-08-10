@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务编辑器 （挖掘模型选项卡） |Microsoft Docs
+title: 数据挖掘查询任务编辑器 ("挖掘模型" 选项卡) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7019fd6fd3d7f2bc763098d30abca9aee670e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059926"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890777"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>数据挖掘查询任务编辑器（“挖掘模型”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“挖掘模型”** 选项卡指定要使用的挖掘结构和挖掘模型。  
   
- 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ## <a name="general-options"></a>常规选项  
  **名称**  
@@ -38,7 +38,7 @@ ms.locfileid: "66059926"
   
 ## <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
  **“连接”**  
- 从列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击  “新建”创建新的连接管理器。  
+ 从列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击“新建”创建新的连接管理器。  
   
  **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66059926"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [数据挖掘查询任务编辑器（“查询”选项卡）](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [数据挖掘查询任务编辑器（“输出”选项卡）](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [数据挖掘设计器](../analysis-services/data-mining/data-mining-designer.md)  
+ [数据挖掘设计器](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

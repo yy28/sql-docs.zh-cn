@@ -15,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cd5890df8ddc080aaa3e647c77b3c09d8d35216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832585"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890411"
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
   数据挖掘查询任务根据 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]内置的数据挖掘模型运行预测查询。 预测查询通过使用挖掘模型来创建对新数据的预测。 例如，预测查询可以预测夏季可能销售多少帆板，或生成可能购买帆板的预期客户列表。  
@@ -36,9 +36,9 @@ ms.locfileid: "62832585"
 ## <a name="prediction-queries"></a>预测查询  
  查询是数据挖掘扩展 (DMX) 语句。 DMX 语言是 SQL 语言的扩展，为对挖掘模型的操作提供支持。 有关如何使用 DMX 语言的详细信息，请参阅[数据挖掘扩展插件 (DMX) 引用](/sql/dmx/data-mining-extensions-dmx-reference)。  
   
- 该任务可以查询根据同一挖掘结构生成的多个挖掘模型。 挖掘模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的某种数据挖掘算法生成的。 数据挖掘查询任务引用的挖掘结构可能包含使用不同算法生成的多个挖掘模型。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)和[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 该任务可以查询根据同一挖掘结构生成的多个挖掘模型。 挖掘模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的某种数据挖掘算法生成的。 数据挖掘查询任务引用的挖掘结构可能包含使用不同算法生成的多个挖掘模型。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)和[数据挖掘算法（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
- 数据挖掘查询任务运行的预测查询可返回单行或数据集结果。 返回单行的查询称为单独查询。例如，预测夏季可能销售多少帆船的查询将返回一个数字。 有关返回单行的预测查询的详细信息，请参阅[数据挖掘查询接口](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 数据挖掘查询任务运行的预测查询可返回单行或数据集结果。 返回单行的查询称为单独查询。例如，预测夏季可能销售多少帆船的查询将返回一个数字。 有关返回单行的预测查询的详细信息, 请参阅[数据挖掘查询接口](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
   
  查询结果将保存到表中。 如果数据挖掘查询任务指定名称的表已经存在，则任务可以在相同名称后追加数字来创建新表，也可以覆盖表内容。  
   

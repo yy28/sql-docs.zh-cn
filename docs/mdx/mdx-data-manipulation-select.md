@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a209fe7fbd62082d467077a147b52a3f142b8214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003542"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891142"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 数据操作 - SELECT
 
@@ -116,10 +116,10 @@ FROM
   
  使用 subselect 语句中的 NON VISUAL 选项，可以筛选出成员，同时保留实际总数，而不是筛选出的总数。 这样，您可以查询前十位的销售（人员/产品/地区），并获取所有查询成员的实际销售总数，而不是返回的前十位的销售总数。 有关详细信息，请参阅下面的示例。  
   
- 计算的成员可以包括在\<SELECT 查询轴子句 > 每当打开该连接已使用连接字符串参数*子查询 = 1*; 请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)并<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>有关参数的用法。 下面是有关嵌套 select 语句中的计算成员的示例。  
+ 当使用连接字符串参数\<*子查询 = 1*打开连接时, 计算成员可以包含在 SELECT query axis 子句中 >; 请参阅[支持的&#40;xmla&#41;属性 xmla](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>用于参数用法。 下面是有关嵌套 select 语句中的计算成员的示例。  
   
 ## <a name="autoexists"></a>Autoexists  
- 在 SELECT 语句中使用维度的两个或更多属性时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。 例如，假定您在处理来自 Geography 维度的属性。 如果您有一个表达式，返回所有成员从市县属性和另一个表达式中的成员的国家/地区属性向所有国家/地区在欧洲，则这将导致 City 成员限制为属于的城市在欧洲国家/地区。 Analysis Services 的这一特性称为 Autoexists，并且仅适用于同一维度内的属性。 Autoexists 仅适用于同一维度中的属性，因为它试图阻止在一个属性表达式中排除的维度记录被包括在其他属性表达式中。 也可以将 Autoexists 理解为不同的属性表达式产生的维度记录的交集。 请参阅下面的以下示例：  
+ 在 SELECT 语句中使用维度的两个或更多属性时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。 例如，假定您在处理来自 Geography 维度的属性。 如果您有一个表达式返回 City 属性中的所有成员, 另一个表达式将 Country 属性中的成员限定为欧洲的所有国家/地区, 则这将导致城市成员仅限于属于欧洲国家/地区。 Analysis Services 的这一特性称为 Autoexists，并且仅适用于同一维度内的属性。 Autoexists 仅适用于同一维度中的属性，因为它试图阻止在一个属性表达式中排除的维度记录被包括在其他属性表达式中。 也可以将 Autoexists 理解为不同的属性表达式产生的维度记录的交集。 请参阅下面的以下示例：  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
   
@@ -339,10 +339,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 可以修改 Autoexists 的行为使用 AUTOEXISTS = [1 | 2 | 3] 参数; 在连接字符串请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)并<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>有关参数的用法。  
+ 使用连接字符串中的 AUTOEXISTS = [1 | 2 | 3] 参数可以修改 Autoexists 行为;请参阅[支持的&#40;xmla&#41;属性 xmla](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>参数用法。  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回的总和`Measures.[Order Quantity]`成员，包含在 2003年日历年度前八个月内的聚合`Date`维度中，从**Adventure Works**多维数据集。  
+ 下面的示例返回从**艾德工作**多维`Measures.[Order Quantity]`数据集中包含`Date`在维度中的前八个月的日历年2003的成员的总和。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -361,7 +361,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 若要了解**NON VISUAL**下面的示例是用于查询 [Adventure Works] 若要获取 [Reseller Sales Amount] 数字，在表格中的产品类别为列，分销商业务类型为行。 请注意，会给出产品和分销商的总数。  
+ 若要理解**非视觉对象,** 以下示例为 [艾德作品] 的查询, 以获取表中产品类别为列, 分销商业务类型为行的表中的 "分销商销售额" 数字。 请注意，会给出产品和分销商的总数。  
   
  以下 SELECT 语句：  
   
@@ -377,7 +377,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|服装 |**Components**|  
+||**All Products**|**Accessories**|**Bikes**|服装|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -435,7 +435,7 @@ WHERE
   
  与上述结果比较时，您可以观察到 [All Resellers] 行现在是将 [Value Added Reseller] 和 [Warehouse] 仓库的显示值相加，但 [All Products] 列会显示所有产品的总值，包括那些未显示的值。  
   
- 下面的示例说明如何使用嵌套 select 中的计算成员来筛选值。 若要能够重新生成此示例，必须在建立连接使用的连接字符串参数*的子查询 = 1*。  
+ 下面的示例说明如何使用嵌套 select 中的计算成员来筛选值。 为了能够重现此示例, 必须使用连接字符串参数*子查询 = 1*建立连接。  
   
  `select Measures.allmembers on 0`  
   
@@ -463,9 +463,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念 (Analysis Services)](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [用查询轴和切片器轴限定查询&#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [MDX 中的重要概念 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX 数据操作语句&#40;mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [用查询轴和切片器轴&#40;限定查询&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: 创建 Analysis Services 项目 （数据挖掘基础教程） |Microsoft Docs
+title: 创建 Analysis Services 项目 (数据挖掘基础教程) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855187"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893344"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>创建 Analysis Services 项目（数据挖掘基础教程）
   每个 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目可以在单个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中定义对象。 一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库可以包含很多不同类型的对象  
@@ -30,9 +30,9 @@ ms.locfileid: "62855187"
   
  在本教程中，您将使用一个关系数据仓库 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]作为数据源。 你将所有数据挖掘对象部署到名为 `BasicDataMining` 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，它仅用于数据挖掘。  
   
- 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用新项目的“localhost”  实例。 如果使用命名实例或者另一台服务器，则必须首先创建和打开该项目，然后更改实例名称。  
+ 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用新项目的“localhost” 实例。 如果使用命名实例或者另一台服务器，则必须首先创建和打开该项目，然后更改实例名称。  
   
- 有关详细信息[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目，请参阅[创建 Analysis Services 项目](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)。  
+ 有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目的详细信息, 请参阅[创建 Analysis Services 项目](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)。  
   
 ### <a name="to-create-an-analysis-services-project"></a>创建 Analysis Services 项目  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62855187"
   
 4.  在 **“模板”** 窗格中选择 **“Analysis Services 多维和数据挖掘项目”** 。  
   
-5.  在中**名称**框中，将新项目命名`BasicDataMining`。  
+5.  在 "**名称**" 框中, 将新`BasicDataMining`项目命名为。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62855187"
  [创建数据源&#40;数据挖掘基础教程&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [生成 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [创建 Analysis Services 项目 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [生成 Analysis Services 项目 (SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [创建 Analysis Services 项目 (SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

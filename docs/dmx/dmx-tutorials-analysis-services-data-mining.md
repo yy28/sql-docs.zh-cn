@@ -1,5 +1,5 @@
 ---
-title: DMX 教程 (Analysis Services-数据挖掘) |Microsoft Docs
+title: DMX 教程 (Analysis Services 数据挖掘) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061736"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892779"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 教程（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "68061736"
  在本教程中，您将学习如何创建用于预测哪些商品有可能会被同时购买的挖掘模型。 本教程还演示如何在数据挖掘中使用嵌套表。  
   
 ## <a name="reference"></a>参考  
- [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [数据挖掘扩展&#40;插件&#41;的 DMX 语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [数据挖掘扩展插件 (DMX) 数据定义语句](../dmx/dmx-statements-data-definition.md)  
   
- [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)  
+ [数据挖掘扩展&#40;插件&#41; DMX 数据操作语句](../dmx/dmx-statements-data-manipulation.md)  
   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>相关章节  
- [多维模型数据访问&#40;Analysis Services-多维数据&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [多维模型数据访问&#40;Analysis Services 多维数据&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>请参阅  
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

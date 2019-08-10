@@ -19,18 +19,18 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922039"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890347"
 ---
 # <a name="full-database-backups-sql-server"></a>完整数据库备份 (SQL Server)
   完整数据库备份可对整个数据库进行备份。 这包括对部分事务日志进行备份，以便在还原完整数据库备份之后，能够恢复完整数据库备份。 完整数据库备份表示备份完成时的数据库。  
   
 > [!TIP]  
->  随着数据库不断增大，完整备份需花费更多时间才能完成，并且需要更多的存储空间。 因此，对于大型数据库而言，您可以用一系列“差异数据库备份”  来补充完整数据库备份。 有关详细信息，请参阅 [差异备份 (SQL Server)](differential-backups-sql-server.md)。  
+>  随着数据库不断增大，完整备份需花费更多时间才能完成，并且需要更多的存储空间。 因此，对于大型数据库而言，您可以用一系列“差异数据库备份”来补充完整数据库备份。 有关详细信息，请参阅 [差异备份 (SQL Server)](differential-backups-sql-server.md)。  
   
 > [!IMPORTANT]  
 >  针对数据库备份，TRUSTWORTHY 设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
@@ -104,6 +104,6 @@ GO
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
- [备份和还原 Analysis Services 数据库](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
+ [备份和还原 Analysis Services 数据库](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: db9afc06a02825b8db449492d8cec6ee6d67801d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fb2918e5fb89d85d7f6fa1cc12622481e585d848
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715126"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887666"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何使用 olapR 在 R 中创建 MDX 查询
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "68715126"
 
 下面的示例基于 AdventureWorks 数据市场和多维数据集项目, 因为该项目在多个版本中广泛可用, 包括可以轻松还原到 Analysis Services 的备份文件。 如果没有现有的多维数据集, 请使用以下任一选项获取示例多维数据集:
 
-+ 按照 Analysis Services 教程中的第4课, 创建在这些示例中使用的多维数据集:[创建 OLAP 多维数据集](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
++ 按照 Analysis Services 教程中的第4课, 创建在这些示例中使用的多维数据集:[创建 OLAP 多维数据集](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ 下载现有的多维数据集作为备份, 并将其还原到 Analysis Services 的实例。 例如, 此站点提供压缩格式的完全处理的多维数据集:[艾德作品多维模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件, 然后将其还原到 SSAS 实例。 有关详细信息, 请参阅[备份和还原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)或[.asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
++ 下载现有的多维数据集作为备份, 并将其还原到 Analysis Services 的实例。 例如, 此站点提供压缩格式的完全处理的多维数据集:[艾德作品多维模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 提取文件, 然后将其还原到 SSAS 实例。 有关详细信息, 请参阅[备份和还原](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)或[.asdatabase Cmdlet](https://docs.microsoft.com/analysis-services/powershell/restore-asdatabase-cmdlet)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.带切片器的基本 MDX
 
@@ -91,8 +91,8 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + 在列上可将多个度量值指定为逗号分隔字符串的元素。
 + “行”轴使用“产品系列”维度的所有可能的值（所有成员）。 
-+ 此查询将返回包含三列的表, 其中包含所有国家/地区的 Internet 销售额的_汇总_摘要。
-+ WHERE 子句指定_切片器轴_。 在此示例中, 切片器使用**SalesTerritory**维度的成员来筛选查询, 以便在计算中仅使用澳大利亚的销售额。
++ 此查询将返回包含三列的表, 其中包含所有国家/地区的 Internet 销售额的 _摘要。
++ WHERE 子句指定 _。 在此示例中, 切片器使用**SalesTerritory**维度的成员来筛选查询, 以便在计算中仅使用澳大利亚的销售额。
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>使用 olapR 中提供的函数生成此查询
 

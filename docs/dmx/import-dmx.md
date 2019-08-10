@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74b718515fc03d0babbda36851f61d96f07e854a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074773"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892757"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,10 +44,10 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
- [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展&#40;插件&#41; DMX 数据定义语句](../dmx/dmx-statements-data-definition.md)   
+ [数据挖掘扩展&#40;插件&#41; DMX 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
+ [数据挖掘扩展&#40;插件&#41; DMX 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
  [导出&#40;DMX&#41;](../dmx/export-dmx.md)   
- [导出和导入数据挖掘对象](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [导出和导入数据挖掘对象](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

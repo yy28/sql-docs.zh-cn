@@ -16,15 +16,15 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c273e453d4eec6d754f38d6be03385957ad50fec
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107140"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890949"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>关系查询设计器用户界面（报表生成器）
-  报表生成器提供了图形查询设计器和基于文本的查询设计器可帮助您创建查询，以指定要检索的数据[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]并[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]关系数据库和[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]报表数据集。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
+  报表生成器提供了图形查询设计器和基于文本的查询设计器, 可帮助您创建一个查询来指定要[!INCLUDE[msCoName](../../../includes/msconame-md.md)]从和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]关系数据库中检索的[!INCLUDE[msCoName](../../../includes/msconame-md.md)]数据, 并[!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]对于报表数据集。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
   
 > [!NOTE]  
 >  在报表生成器中，必须使用基于文本的查询设计器才能为 Oracle、OLE DB、ODBC 和 Teradata 等数据源类型指定查询。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](text-based-query-designer-user-interface-report-builder.md)。  
@@ -42,11 +42,11 @@ ms.locfileid: "66107140"
   
  下图显示了用于表或视图的图形查询设计器。  
   
- ![用于查询的图形设计器](../../analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
+ ![用于查询的图形设计器](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
   
  下图显示了用于存储过程或表值函数的图形查询设计器。  
   
- ![图形查询设计器中的存储过程](../../analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
+ ![图形查询设计器中的存储过程](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
   
  下表介绍了每个窗格的功能。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66107140"
   
  下表列出各种聚合并提供其简要说明。  
   
-|Aggregate|Description|  
+|Aggregate|描述|  
 |---------------|-----------------|  
 |Avg|返回组中各值的平均值。 实现 SQL AVG 聚合。|  
 |Count|返回组中项数。 实现 SQL COUNT 聚合。|  
@@ -155,7 +155,7 @@ ms.locfileid: "66107140"
   
 -   **左表** ：显示联接关系中第一个表的名称。  
   
--   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”**。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 JOIN 的类型的详细信息，请参阅 msdn.microsoft.com 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687) 中的“JOIN Fundamentals”（JOIN 基础知识）。  
+-   **联接类型** ：显示自动生成的查询中所使用的 SQL JOIN 语句的类型。 默认情况下，如果检测到外键约束，将会使用 INNER JOIN。 其他联接类型可以为 LEFT JOIN 或 RIGHT JOIN。 如果不应用所有这些联接类型，则 **“联接类型”** 列将显示 **“无关”** 。 不会为无关表创建 CROSS JOIN 联接；相反，您必须通过联接左表和右表中的列来手动创建关系。 有关 JOIN 的类型的详细信息，请参阅 msdn.microsoft.com 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=141687) 中的“JOIN Fundamentals”（JOIN 基础知识）。  
   
 -   **右表** ：显示联接关系中第二个表的名称。  
   
@@ -184,14 +184,14 @@ ms.locfileid: "66107140"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  关系查询设计器工作栏提供了以下按钮，帮助您指定或查看查询结果。  
   
-|Button|Description|  
+|Button|描述|  
 |------------|-----------------|  
 |**编辑为文本**|切换到基于文本的查询设计器，可查看自动生成的查询，也可以修改查询。|  
 |**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  
 |**运行查询**|运行查询。 “查询结果”窗格显示结果集。|  
   
 ## <a name="understanding-automatically-generated-queries"></a>了解自动生成的查询  
- 当您在“数据库视图”窗格中选择表和列或存储过程及视图时，查询设计器将从数据库架构中检索主键与外键的基本关系。 通过分析这些关系，查询设计器会检测到两个表之间的关系并将联接添加到查询中。 然后，您即可通过添加分组和聚合、添加或更改关系并添加筛选器来修改查询。 若要查看显示要从中检索数据的列、表之间的联接以及任何分组或聚合的查询文本，请单击 **“编辑为文本”**。  
+ 当您在“数据库视图”窗格中选择表和列或存储过程及视图时，查询设计器将从数据库架构中检索主键与外键的基本关系。 通过分析这些关系，查询设计器会检测到两个表之间的关系并将联接添加到查询中。 然后，您即可通过添加分组和聚合、添加或更改关系并添加筛选器来修改查询。 若要查看显示要从中检索数据的列、表之间的联接以及任何分组或聚合的查询文本，请单击 **“编辑为文本”** 。  
   
 ## <a name="text-based-query-designer"></a>基于文本的查询设计器  
  若要最大限度地控制查询，请使用基于文本的查询设计器。 若要切换到基于文本的查询设计器，请在工具栏中单击“编辑为文本”。 在基于文本的查询设计器中编辑查询之后，就不能再使用关系查询设计器了。 随后，查询将始终在基于文本的查询设计器中打开。 有关详细信息，请参阅[基于文本的查询设计器用户界面（报表生成器）](text-based-query-designer-user-interface-report-builder.md)。  

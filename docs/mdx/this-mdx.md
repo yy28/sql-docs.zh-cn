@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2486f23170ec19f16dca31672696c09815a2e83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036637"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893562"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -28,7 +28,7 @@ This
 ```  
   
 ## <a name="remarks"></a>备注  
- **这**函数可以使用到位置的任何子多维数据集表达式，以提供 MDX 计算脚本中的当前作用域内当前子多维数据集。 **这**函数必须使用作为赋值的左侧。  
+ **此**函数可用于在任何子多维数据集表达式的位置提供当前范围内的当前子多维数据集。 必须在赋值的左侧使用**此**函数。  
   
 ## <a name="examples"></a>示例  
  以下 MDX 脚本片段说明如何将 This 关键字用于 SCOPE 语句来为子多维数据集进行分配：  
@@ -75,6 +75,6 @@ This
   
 ## <a name="see-also"></a>请参阅  
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
- [计算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [计算](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   
   

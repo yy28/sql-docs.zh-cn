@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 01be0e2d0ead01a3b6c630e0ddd0f53e55620104
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008322"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893933"
 ---
 # <a name="modeling-flags-dmx"></a>建模标志 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68008322"
  **MODEL_EXISTENCE_ONLY**  
  是否存在特性比特性列值更重要。 该标志是在挖掘模型列中定义的。  
   
- 第三方算法可能支持其他建模标志。 若要确定哪些建模标志算法支持，请使用**SUPPORTED_MODELING_FLAGS**架构行集。 您还可以查询服务器上的挖掘服务，以确定特定算法支持哪些建模标志。 例如，下面的查询返回当前服务器上 Microsoft 线性回归算法支持的建模标志：  
+ 第三方算法可能支持其他建模标志。 若要确定算法支持的建模标志, 请使用**SUPPORTED_MODELING_FLAGS**架构行集。 您还可以查询服务器上的挖掘服务，以确定特定算法支持哪些建模标志。 例如，下面的查询返回当前服务器上 Microsoft 线性回归算法支持的建模标志：  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -44,21 +44,21 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>在挖掘模型中指定建模标志  
- 有关语法的示例，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持用于指定标志在挖掘结构列，请参阅[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
+ 有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持对挖掘结构列指定标志的语法的示例, 请参阅[创建挖掘结构&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
   
- 在挖掘模型列中指定建模标志的语法的示例，请参阅[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 有关在挖掘模型列上指定建模标志的语法的示例, 请参阅[ALTER 挖掘 STRUCTURE &#40;&#41;DMX](../dmx/alter-mining-structure-dmx.md)。  
   
- 有关使用挖掘模型列的详细信息，请参阅[挖掘模型列](../analysis-services/data-mining/mining-model-columns.md)。  
+ 有关使用挖掘模型列的详细信息, 请参阅[挖掘模型列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
- [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
- [数据挖掘扩展插件&#40;DMX&#41;语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [数据挖掘扩展&#40;插件&#41;的 DMX 语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [数据挖掘扩展&#40;插件&#41; DMX 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [数据挖掘扩展&#40;插件&#41; DMX 运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [数据挖掘扩展&#40;插件&#41; DMX 语句参考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [数据挖掘扩展&#40;插件&#41;的 DMX 语法约定](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [一般预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

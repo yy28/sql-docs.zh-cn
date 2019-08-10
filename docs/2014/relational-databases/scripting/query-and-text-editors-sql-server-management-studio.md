@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063882"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891760"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
   您可以使用任一 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器以交互方式编辑并测试 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 脚本，或者编辑 XML 或纯文本文件。 每种编辑器都有特定于语言的服务提供的支持，该服务可以标出关键字颜色，并能检查语法和用法错误。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器包括一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可使用该调试器帮助修复 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的问题。  
@@ -65,7 +65,7 @@ ms.locfileid: "66063882"
  此窗口用于查看查询结果。 该窗口可以在网格或文本中显示结果，或者可将结果定向到某个文件。 结果网格能以单独的选项卡式窗口的形式显示。  
   
  **IntelliSense**  
- 在编辑器的“编辑”  菜单上，指向“IntelliSense”  ，以查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。  
+ 在编辑器的“编辑”菜单上，指向“IntelliSense”，以查看 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。  
   
  **颜色编码**  
  为每种类型的语法元素显示不同颜色，以提高复杂语句的可读性。  
@@ -108,8 +108,8 @@ ms.locfileid: "66063882"
 |任务说明|主题|  
 |----------------------|-----------|  
 |介绍如何查看和使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的基本功能。|[数据库引擎查询编辑器 (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)|  
-|介绍如何查看和使用 MDX 查询编辑器的基本功能。|[MDX 查询编辑器（Analysis Services - 多维数据）](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|介绍如何查看和使用 DMX 查询编辑器的基本功能。|[DMX 查询编辑器（Analysis Services - 数据挖掘）](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|介绍如何查看和使用 MDX 查询编辑器的基本功能。|[MDX 查询编辑器（Analysis Services - 多维数据）](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|介绍如何查看和使用 DMX 查询编辑器的基本功能。|[DMX 查询编辑器（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |介绍如何查看和使用 XML/A 编辑器的基本功能。|[XML 编辑器 (SQL Server Management Studio)](xml-editor-sql-server-management-studio.md)|  
 |介绍如何配置各种编辑器的选项，如行编号和 IntelliSense 选项。|[配置编辑器 (SQL Server Management Studio)](configure-editors-sql-server-management-studio.md)|  
 |介绍可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开编辑器的各种方法。|[打开编辑器 (SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)|  

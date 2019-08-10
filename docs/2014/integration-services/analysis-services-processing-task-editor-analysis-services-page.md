@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 处理任务编辑器 （Analysis Services 页） |Microsoft Docs
+title: Analysis Services 处理任务编辑器 (Analysis Services 页) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061471"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890370"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 处理任务编辑器（Analysis Services 页）
   可以使用 **“Analysis Services 处理任务编辑器”** 对话框的 **Analysis Services** 页指定 Analysis Services 连接管理器，选择要处理的分析对象，以及设置处理选项和错误处理选项。  
@@ -38,7 +38,7 @@ ms.locfileid: "66061471"
   
 ## <a name="options"></a>选项  
  **Analysis Services 连接管理器**  
- 从列表中选择现有的 Analysis Services 连接管理器，或单击  “新建”以创建新的连接管理器。  
+ 从列表中选择现有的 Analysis Services 连接管理器，或单击“新建”以创建新的连接管理器。  
   
  **新建**  
  创建新的 Analysis Services 连接管理器。  
@@ -46,18 +46,18 @@ ms.locfileid: "66061471"
  **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
- |属性|Description|  
+ |属性|描述|  
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
 |**类型**|列出指定对象的类型。|  
-|**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[多维模型对象处理](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[多维模型对象处理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**设置**|列出指定对象的处理设置。|  
   
  **“添加”**  
  将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象添加到列表中。  
   
  **删除**  
- 选择对象，再单击“删除”  。  
+ 选择对象，再单击“删除”。  
   
  **影响分析**  
  对所选对象进行影响分析。  
@@ -65,7 +65,7 @@ ms.locfileid: "66061471"
  **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批设置摘要**  
- |属性|Description|  
+ |属性|描述|  
 |--------------|-----------------|  
 |**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
 |**事务模式**|指定按顺序处理时的事务模式。|  

@@ -10,12 +10,12 @@ ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2d8a3c6a47a9f353f44a9ec9c4a0cbb2c3cd3505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b77948b3ae5b27d7ecb82c277424057fe39ff7a0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094699"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891040"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>在运行管理中心的 Web 前端服务器上安装 ADOMD.NET
   如果您将 PowerPivot for SharePoint 安装到具有管理中心拓扑，但没有 Excel Services 或 PowerPivot for SharePoint 的场中，并且希望对 PowerPivot 管理面板中的内置报表具有完全访问权限，则需下载和安装 Microsoft ADOMD.NET 客户端库。 该面板中的某些报表将使用 ADOMD.NET 来访问内部数据，内部数据可提供有关 PowerPivot 查询处理和场中服务器运行状况的报告数据。  
@@ -42,9 +42,9 @@ ms.locfileid: "66094699"
   
 3.  单击 **“版本”** 。  
   
-4.  验证版本包含 12.00。\<内部版本号 > 以及说明是否为 Microsoft.AnalysisService.AdomdClient。  
+4.  验证版本是否包含12.00。\<> 的内部版本号, 并且说明为 AdomdClient。  
   
 ## <a name="see-also"></a>请参阅  
- [PowerPivot 管理仪表板和使用情况数据](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
+ [PowerPivot 管理仪表板和使用情况数据](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

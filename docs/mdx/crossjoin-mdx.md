@@ -1,5 +1,5 @@
 ---
-title: Crossjoin (MDX) |Microsoft Docs
+title: 交叉结合 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047158"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892938"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -39,14 +39,14 @@ Set_Expression1 * Set_Expression2 [* ...n]
  返回集的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **叉积**函数返回叉积的两个或多个指定集。 所得集中元组的顺序取决于要联接的集的顺序以及其成员的顺序。 例如，第一组包含的 {x1，x2，...，x*n*}，第的第二个集由 {y1，y2，...，y*n*}，个这些集的叉积为：  
+ **交叉结合**函数返回两个或更多个指定集的叉积。 所得集中元组的顺序取决于要联接的集的顺序以及其成员的顺序。 例如, 如果第一个集由 {x1, x2,..., x*n*} 组成, 第二个集由 {y1, y2, ..., y*n*} 组成, 则这两个集的叉积为:  
   
- {(x1，y1)，(x1，y2)，...，(x1，y*n*)，(x2，y1)，(x2，y2)，...，  
+ {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2, y2),..。,  
   
- (x2，y*n*)，...，(x*n*，y1)，(x*n*，y2)，...，(xn，y*n*)}  
+ (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  如果交叉联接中的集由同一维度中不同属性层次结构中的元组组成，此函数将只返回实际存在的那些元组。 有关详细信息，请参阅[MDX 中的重要概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
+>  如果交叉联接中的集由同一维度中不同属性层次结构中的元组组成，此函数将只返回实际存在的那些元组。 有关详细信息, 请参阅[MDX &#40;Analysis Services&#41;中的关键概念](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)。  
   
 ## <a name="examples"></a>示例  
  以下查询说明在查询的列轴和行轴上使用 Crossjoin 函数的简单示例：  

@@ -1,5 +1,5 @@
 ---
-title: 使用多维数据集和子多维数据集表达式 |Microsoft Docs
+title: 使用多维数据集表达式和子多维数据集表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b3e6cd4a38d45f2b63fa5333526832ba31e1ce9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097192"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893531"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用多维数据集表达式和子多维数据集表达式
 
@@ -23,7 +23,7 @@ ms.locfileid: "68097192"
 ## <a name="cube-expressions"></a>多维数据集表达式  
  多维数据集表达式包含多维数据集标识符或 CURRENTCUBE 关键字，因此只能是简单表达式。 许多 MDX 语句使用 CURRENTCUBE 关键字标识当前多维数据集上下文，而不要求使用多维数据集标识符。  
   
- 显示为多维数据集标识符*Cube_Name* MDX 语句的 BNF 表示法说明中。  
+ 多维数据集标识符在 MDX 语句的 BNF 表示法说明中显示为*Cube_Name* 。  
   
  多维数据集表达式可以出现在多个位置。 在 MDX SELECT 语句中，这些表达式指定要在其中检索数据的多维数据集。 在以下的示例查询中，表达式 [Adventure Works] 指的是该名称的多维数据集：  
   
@@ -66,12 +66,12 @@ ms.locfileid: "68097192"
   
  `END SCOPE;`  
   
- 显示为子多维数据集标识符*Subcube_Name*。 在 MDX 语句的 BNF 表示法说明。  
+ 子多维数据集标识符显示为*Subcube_Name*。 在 MDX 语句的 BNF 表示法说明中。  
   
 ## <a name="see-also"></a>请参阅  
- [基本 MDX 查询 (MDX)](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [构建在 MDX 中的子多维数据集&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [CREATE SUBCUBE 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [基本 MDX 查询 (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [在 MDX &#40;mdx 中生成子多维数据&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [创建子多维&#40;数据集语句 MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [SCOPE 语句 (MDX)](../mdx/mdx-scripting-scope.md)  
   

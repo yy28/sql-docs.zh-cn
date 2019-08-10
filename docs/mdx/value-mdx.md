@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 299004e869aeab826e5f1207a0ecc4d31639e2c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f373f626d778c4d77ec5843dca5bb11da728451d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037937"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887446"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -32,7 +32,7 @@ Member_Expression[.Value]
  返回成员的有效多维表达式 (MDX)。  
   
 ## <a name="remarks"></a>备注  
- **值**函数返回以字符串形式的指定成员的值。 **值**参数是可选的因为成员的值的默认属性的成员，并且如果未不指定任何其他值的成员返回的值。 有关成员属性的详细信息，请参阅[内部成员属性&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)并[用户定义成员属性&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
+ **值**函数将指定成员的值作为字符串返回。 **值**参数是可选的, 因为成员的值是成员的默认属性, 并且是在没有指定其他值时为成员返回的值。 有关成员的属性的详细信息, 请参阅[内部成员&#40;属性&#41; mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)和[用户定义成员属性&#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)。  
   
 ## <a name="examples"></a>示例  
  下例将返回成员值并显式返回该成员的名称。  
@@ -55,8 +55,8 @@ from [Adventure Works]
 ## <a name="see-also"></a>请参阅  
  [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
  [属性 (MDX)](../mdx/properties-mdx.md)   
- [名称&#40;MDX&#41;](../mdx/name-mdx.md)   
- [唯一名称&#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [命名&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

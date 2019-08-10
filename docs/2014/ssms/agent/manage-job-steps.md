@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189158"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893135"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
   作业步骤是作业对数据库或服务器执行的操作。 每个作业必须至少有一个作业步骤。 作业步骤可以为：  
@@ -50,7 +50,7 @@ ms.locfileid: "68189158"
   
  每个作业步骤都在特定的安全上下文中运行。 如果作业步骤指定一个代理，该作业步骤将在该代理凭据的安全上下文中运行。 如果作业步骤没有指定代理，该作业步骤将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的上下文中运行。 只有 sysadmin 固定服务器角色成员可以创建没有显式指定代理的作业。  
   
- 由于作业步骤在特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户的上下文中运行，所以该用户必须具有执行作业步骤所需的权限和配置。 例如，如果您创建一个需要驱动器号或通用命名约定 (UNC) 路径的作业，则在测试任务时，可使用您的 Windows 用户帐户来运行作业步骤。 但是，运行作业步骤的 Windows 用户还必须具有所需的权限、驱动器号配置权限或对所需驱动器的访问权限。 否则，作业步骤会失败。 为了防止出现这种问题，请确保每个作业步骤的代理都具有该作业步骤所执行任务的必要权限。 有关详细信息，请参阅[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。  
+ 由于作业步骤在特定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户的上下文中运行，所以该用户必须具有执行作业步骤所需的权限和配置。 例如，如果您创建一个需要驱动器号或通用命名约定 (UNC) 路径的作业，则在测试任务时，可使用您的 Windows 用户帐户来运行作业步骤。 但是，运行作业步骤的 Windows 用户还必须具有所需的权限、驱动器号配置权限或对所需驱动器的访问权限。 否则，作业步骤会失败。 为了防止出现这种问题，请确保每个作业步骤的代理都具有该作业步骤所执行任务的必要权限。 有关详细信息, 请参阅[SQL Server 数据库引擎和 AZURE SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。  
   
 ## <a name="job-step-logs"></a>作业步骤日志  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以将某些作业步骤的输出写入操作系统文件，也可以将其写入 msdb 数据库中的 sysjobstepslogs 表。 下列类型的作业步骤的输出可以写入以上两个目标位置：  
@@ -75,7 +75,7 @@ ms.locfileid: "68189158"
   
 -   命令成功完成时返回的进程退出代码。  
   
--   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是程序名称以及程序参数，例如：C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"   
+-   要执行的命令。 若要执行操作系统命令，只需指定该命令本身。 对于外部程序，这就是程序名称以及程序参数，例如：C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"  
   
     > [!NOTE]  
     >  如果系统路径或执行作业步骤的用户的路径指定的目录中不包含此可执行程序，则必须提供可执行程序的完整路径。  
@@ -89,7 +89,7 @@ ms.locfileid: "68189158"
   
  还可以选择将现有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文件作为作业步骤的命令打开。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息，请参阅[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户。 而是由作业步骤的所有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户（如果作业步骤的所有者是 sysadmin 固定服务器角色的成员）运行作业步骤。 Sysadmin 固定服务器角色的成员还可以使用 sp_add_jobstep 存储过程的 [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *参数来指定* 作业步骤在其他用户的上下文中运行。 有关详细信息, 请[参阅&#40;sp_add_jobstep transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 > [!NOTE]  
 >  一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含多个批处理。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤可以包含嵌入的 GO 命令。  
@@ -166,7 +166,7 @@ Set oServer = nothing
   
 -   键入要执行的语句。 该语句必须是一个多维表达式 (MDX) 查询。  
   
- 有关 MDX 的详细信息，请参阅[MDX 查询基础知识&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)。  
+ 有关 MDX 的详细信息, 请参阅[Mdx Query &#40;基础&#41;Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)。  
   
 ## <a name="integration-services-packages"></a>Integration Services 包  
  当创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包作业步骤时，必须执行下列操作：  
@@ -191,7 +191,7 @@ Set oServer = nothing
   
 -   添加或修改命令行选项。  
   
- 请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”  选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
+ 请注意，如果将包部署到 SSIS 目录并且指定 **SSIS 目录**作为包的来源，则会自动获取包中的大多数此类配置信息。 在“配置”选项卡下，可以指定环境、参数值、连接管理器值、属性重写以及包是否在 32 位运行时环境下运行。  
   
  有关创建运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的作业步骤的详细信息，请参阅[包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   
@@ -211,7 +211,7 @@ Set oServer = nothing
 |说明如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.sysjobstepslogs &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [sysjobstepslogs &#40;transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [创建作业](create-jobs.md)   
  [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

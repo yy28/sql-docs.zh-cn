@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ba563c848179e8cf3dc12f64d2b3c4233955159
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098477"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892167"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX 数据定义 - CREATE CELL CALCULATION
 
@@ -74,12 +74,12 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 >  巴科斯-诺尔范式 (BNF) 的 `{*(<comment> | <whitespace> | <newline>)}` 将分析为 `{*}`，以实现向后兼容。  
   
 ## <a name="see-also"></a>请参阅  
- [创建会话作用域的计算的单元](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [创建查询作用域的单元计算 (MDX)](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [构建在 MDX 中的单元格计算&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [使用单元属性 (MDX)](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [FORMAT_STRING 内容 (MDX)](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [FORE_COLOR 和 BACK_COLOR 内容&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
- [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [创建会话作用域的计算单元](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
+ [创建查询作用域的单元计算 (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
+ [在 MDX &#40;mdx 中生成单元计算&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
+ [使用单元属性 (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
+ [FORMAT_STRING 内容 (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
+ [FORE_COLOR 和 BACK_COLOR 内容&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
+ [MDX 数据定义语句&#40;mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

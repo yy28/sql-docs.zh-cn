@@ -5,16 +5,16 @@ description: 在 SQL Server 大数据群集（预览版）上使用 PySpark 通�
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: HT
+ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811208"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893959"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>在 SQL Server 大数据群集上创建和导出 Spark 机器学习模型以及对其评分
 
@@ -24,7 +24,7 @@ ms.locfileid: "68811208"
 
 ![使用 spark 训练评分导出](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 此示例的所有文件均位于 [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml) 中。
 
@@ -41,7 +41,7 @@ ms.locfileid: "68811208"
 
 在此示例中，人口普查数据 (**AdultCensusIncome.csv**) 用于生成 Spark ML 管道模型。
 
-1. 使用 [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) 文件从 Internet 下载数据集，并将其放在 SQL Server 大数据群集的 HDFS 上。 这可让 Spark 访问它。
+1. 使用 [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/setup.sh) 文件从 Internet 下载数据集，并将其放在 SQL Server 大数据群集的 HDFS 上。 这可让 Spark 访问它。
 
 1. 然后下载示例笔记本 [train_score_export_ml_models_with_spark.ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb)。 从 PowerShell 或 bash 命令行运行以下命令，以下载该笔记本：
 
@@ -56,15 +56,15 @@ ms.locfileid: "68811208"
 数据会先读入 Spark 并拆分成训练和测试数据集。 然后，代码使用训练数据训练管道模型。 最后，它将模型导出为 MLeap 捆绑包。
 
 > [!TIP]
-> 还可以在 [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) 文件中的笔记本外部查看或运行与这些步骤关联的 Python 代码。
+> 还可以在 [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_pyspark.py) 文件中的笔记本外部查看或运行与这些步骤关联的 Python 代码。
 
 ## <a name="model-scoring-with-sql-server"></a>使用 SQL Server 进行模型评分
 
 由于 Spark ML 管道模型采用常见的序列化 [MLeap 捆绑包](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)格式，因此可以在没有 Spark 的情况下，在 Java 中对模型进行评分。 
 
-此示例使用 SQL Server 中的 [Java 语言扩展](../language-extensions/language-extensions-overview.md)。 若要在 SQL Server 中对模型进行评分，首先需要生成一个可以将模型加载到 Java 中并对其进行评分的 Java 应用程序。 可以在 [mssql-mleap-app 文件夹](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app)中找到此 Java 应用程序的示例代码。
+此示例使用 SQL Server 中的 [Java 语言扩展](../language-extensions/language-extensions-overview.md)。 若要在 SQL Server 中对模型进行评分，首先需要生成一个可以将模型加载到 Java 中并对其进行评分的 Java 应用程序。 可以在 [mssql-mleap-app 文件夹](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app)中找到此 Java 应用程序的示例代码。
 
-生成示例后，可以使用 Transact-SQL 调用 Java 应用程序，并使用数据库表对模型进行评分。 这可以在 [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) 源文件中看到。
+生成示例后，可以使用 Transact-SQL 调用 Java 应用程序，并使用数据库表对模型进行评分。 这可以在 [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py) 源文件中看到。
 
 ## <a name="next-steps"></a>后续步骤
 

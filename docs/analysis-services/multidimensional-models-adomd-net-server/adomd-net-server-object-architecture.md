@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f5ad515251a783705e3f8e04c73674a8e978348
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63059428"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889990"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 服务器对象体系结构
-  ADOMD.NET 服务器对象是可用于创建用户定义函数 (Udf) 或中的存储的过程的帮助程序对象[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  ADOMD.NET 服务器对象是 helper 对象, 可用于在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建用户定义的函数 (udf) 或存储过程。  
   
 > [!NOTE]  
->  若要使用**Microsoft.AnalysisServices.AdomdServer**命名空间 （以及这些对象），对 msmgdsrv.dll 的引用必须添加到 UDF 项目或存储的过程。  
+>  若要使用**Microsoft.analysisservices.sharepoint.integration.dll AdomdServer**命名空间 (以及这些对象), 必须将对 msmgdsrv.dll 的引用添加到 UDF 项目或存储过程。  
   
- ![显示 ADOMD.NET 服务器中的对象关系](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "显示 ADOMD.NET 服务器中的对象关系")  
+ ![显示 ADOMD.NET 服务器中的对象关系](https://docs.microsoft.com/analysis-services/analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "显示 ADOMD.NET 服务器中的对象关系")  
 ADOMD.NET 对象模型  
   
  与 ADOMD.NET 对象层次结构的交互通常从最顶层的一个或多个对象开始（如下表所述）。  

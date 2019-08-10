@@ -1,5 +1,5 @@
 ---
-title: Analysis Services MDX 查询设计器用户界面 （报表生成器） |Microsoft Docs
+title: Analysis Services MDX 查询设计器用户界面 (报表生成器) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 456989b83877b0c94c07f9074719666ebac3a873
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1d0a5738384a738c3e0882d16bbffb0f2a4d00a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66109998"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891561"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services MDX 查询设计器用户界面（报表生成器）
   报表生成器提供一个图形查询设计器，用于为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动选定的多维数据集的成员，以创建可在处理报表时检索数据的 MDX 查询。  
@@ -34,11 +34,11 @@ ms.locfileid: "66109998"
   
  下图列出了设计模式的窗格。  
   
- ![Analysis Services MDX 查询设计器，设计视图](../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
+ ![Analysis Services MDX 查询设计器，设计视图](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
   
  下表列出了查询模式下的窗格：  
   
-|Pane|函数|  
+|Pane|Functions|  
 |----------|--------------|  
 |选择“多维数据集”按钮 ( **...** )|显示当前选定的多维数据集。|  
 |“元数据”窗格|显示在选定多维数据集中定义的度量值、关键绩效指标 (KPI) 和维度的层次列表。|  
@@ -46,7 +46,7 @@ ms.locfileid: "66109998"
 |“筛选器”窗格|用于选择维度和相关的层次结构，以筛选源中的数据并限制返回报表的数据。|  
 |“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。 .|  
   
- 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果选中工具栏上的“自动执行”（![自动执行查询](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）切换按钮，则每次将元数据对象拖到“数据”窗格时，查询设计器都将运行查询  。 可以使用工具栏上的“运行”（![运行查询](../analysis-services/media/rsqdicon-run.gif "Run the query")）按钮手动运行查询  。  
+ 可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果选中工具栏上的“自动执行”（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）切换按钮，则每次将元数据对象拖到“数据”窗格时，查询设计器都将运行查询。 可以使用工具栏上的“运行”（![运行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")）按钮手动运行查询。  
   
  在此模式下创建 MDX 查询时，下面的附加属性将会自动包含到查询中：  
   
@@ -62,33 +62,33 @@ ms.locfileid: "66109998"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>设计模式下的图形 MDX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表列出了这些按钮及其功能。  
   
-|Button|Description|  
+|Button|描述|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
-|![更改为 MDX 查询视图](../analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|切换到命令类型 MDX。|  
-|![刷新结果数据](../analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|刷新数据源的元数据。|  
-|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。|  
-|![切换显示空单元格](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
-|![自动执行查询](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
-|![“显示聚合”按钮](../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|在“数据”窗格中显示聚合。|  
-|![删除](../analysis-services/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
-|![“查询参数”对话框图标](../analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|显示 **“查询参数”** 对话框。 指定查询参数的值时，会自动创建具有相同名称的报表参数。 查询参数的值设置为引用该报表参数的表达式。|  
-|![“准备查询”按钮](../analysis-services/media/rsqdicon-preparequery.gif "“准备查询”按钮")|准备查询。|  
-|![运行查询](../analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  
-|![取消查询](../analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|取消查询。|  
-|![切换到设计模式](../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|在设计模式和查询模式之间切换。|  
+|![更改为 MDX 查询视图](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|切换到命令类型 MDX。|  
+|![刷新结果数据](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|刷新数据源的元数据。|  
+|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。|  
+|![切换显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
+|![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
+|![“显示聚合”按钮](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|在“数据”窗格中显示聚合。|  
+|![删除](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
+|![“查询参数”对话框图标](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|显示 **“查询参数”** 对话框。 指定查询参数的值时，会自动创建具有相同名称的报表参数。 查询参数的值设置为引用该报表参数的表达式。|  
+|![“准备查询”按钮](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-preparequery.gif "“准备查询”按钮")|准备查询。|  
+|![运行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  
+|![取消查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|取消查询。|  
+|![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|在设计模式和查询模式之间切换。|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>查询模式下的图形 MDX 查询设计器  
  若要将图形查询设计器更改为 **“查询”** 模式，请单击工具栏上的 **“设计模式”** 按钮。  
   
  下图列出了查询模式的窗格。  
   
- ![Analysis Services MDX 查询设计器，查询视图](../analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX query designer, query view")  
+ ![Analysis Services MDX 查询设计器，查询视图](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX query designer, query view")  
   
  下表列出了查询模式下的窗格：  
   
-|Pane|函数|  
+|Pane|Functions|  
 |----------|--------------|  
 |选择“多维数据集”按钮 ( **...** )|显示当前选定的多维数据集。|  
 |元数据/函数/模板窗格|显示在选定多维数据集中定义的度量值、KPI 和维度的层次列表。|  
@@ -106,13 +106,13 @@ ms.locfileid: "66109998"
   
 -   **编辑为文本**  
   
--   **添加计算成员** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **添加计算成员** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **显示空单元格**（![切换显示空单元格](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
+-   **显示空单元格**（![切换显示空单元格](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
   
--   **自动执行**（![自动执行查询](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）  
+-   **自动执行**（![自动执行查询](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）  
   
--   **显示聚合**（![“显示聚合”按钮](../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")）  
+-   **显示聚合**（![“显示聚合”按钮](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")）  
   
 ## <a name="see-also"></a>请参阅  
  [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)  

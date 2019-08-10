@@ -10,19 +10,19 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0361e58bac4468fd41d62547c8b93adb849d39ac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107215"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891990"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 连接类型 (SSRS)
   若要包含来自 OLE DB 数据访问接口的数据，您必须具有一个基于 OLE DB 类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 数据处理扩展插件。  
   
  OLE DB 是一项数据访问技术，客户端通过该技术可以连接到各种数据访问接口。 在选择数据源类型 OLE DB 之后，您必须选择特定的数据访问接口。 是否支持参数和凭据之类的功能取决于您所选择的数据访问接口。  
   
- 使用本主题中的信息来生成一个数据源。 有关分步说明，请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 使用本主题中的信息来生成一个数据源。 有关分步说明, 请参阅[添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
   
 ##  <a name="Connection"></a> 连接字符串  
  用于 OLE DB 数据处理扩展插件的连接字符串取决于您想要的数据访问接口。 典型的连接字符串包含数据访问接口支持的名称/值对。 例如，下面的连接字符串为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 AdventureWorks 数据库指定 OLE DB 访问接口。  
@@ -42,7 +42,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。  
   
- 有关详细信息，请参阅[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
+ 有关详细信息, 请参阅[Reporting Services 中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)。  
   
 ###### <a name="special-characters-in-a-password"></a>密码中的特殊字符  
  如果将 OLE DB 数据源配置为提示输入密码或在连接字符串中包含密码，并且用户输入了带有如标点符号之类特殊字符的密码，则某些基础数据源驱动程序无法验证这些特殊字符。 处理报表时，可能会出现“密码无效”这一消息来指示此问题。  
@@ -62,7 +62,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  若要成功检索到想要的数据，则必须提供数据访问接口支持的查询语法。 参数支持因数据访问接口而异。 有关详细信息，请参阅针对所选数据访问接口的主题。 例如：  
   
--   [Analysis Services OLE DB 提供程序（Analysis Services - 多维数据）](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+-   [Analysis Services OLE DB 提供程序（Analysis Services - 多维数据）](https://docs.microsoft.com/analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data)  
   
 -   [使用 .NET Framework Data Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
@@ -86,7 +86,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
- [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [将数据添加到报表&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

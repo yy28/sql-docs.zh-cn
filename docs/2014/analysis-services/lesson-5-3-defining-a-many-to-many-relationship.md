@@ -10,12 +10,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef5fd5e081804abf27ede8d0cd7ad65f888b870c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6e375c2f2931890228d0accc45b167cda609e53
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078471"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888166"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定义多对多关系
   在定义维度时，通常每个事实联接且仅联接到一个维度成员，而一个维度成员可以与许多不同的事实相关联。 例如，每个客户可以具有很多订单，但每个订单只属于一个客户。 在关系数据库术语中，这称为“一对多关系”。 但有时一个事实可联接多个维度成员。 在关系数据库术语中，这称为“多对多关系”。 例如，一个客户进行采购的原因可以有多个，而一个采购原因可以与多个采购相关联。 联接表用于定义与每个采购相关的销售原因。 在由此类关系构建的 Sales Reason 维度中，将有多个成员与一个销售事务相关联。 多对多维度可将维度模型扩展到经典星型架构范围之外，并在维度不直接与事实数据表相关联的情况下支持复杂分析。  
@@ -25,7 +25,7 @@ ms.locfileid: "66078471"
  利用多对多维度，可通过不同方式对值进行合计，这意味着这些值不能对“所有”成员多次聚合。  
   
 > [!NOTE]  
->  为了支持多对多维度关系，必须在所涉及的所有表之间的数据源视图中定义主键-外键关系。 否则，在“多维数据集设计器”的“维度用法”选项卡中建立关系时，无法选择正确的中间度量值组。  
+>  为了支持多对多维度关系, 必须在所涉及的所有表之间的数据源视图中定义主键-外键关系。 否则，在“多维数据集设计器”的“维度用法”选项卡中建立关系时，无法选择正确的中间度量值组。  
   
  有关详细信息，请参阅[维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定义多对多关系和多对多关系属性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66078471"
   
 1.  打开 **Adventure Works DW 2012** 数据源视图的数据源视图设计器。  
   
-2.  中的任意位置右击**关系图组织程序**窗格中，单击**新关系图**，并指定`Internet Sales Order Reasons`作为此新关系图的名称。  
+2.  右键单击 "**关系图组织**程序" 窗格中的任意位置, 单击 " `Internet Sales Order Reasons` **新建关系图**", 并将指定为此新关系图的名称。  
   
 3.  将 **InternetSales** 表从“表”窗格拖动到“关系图”窗格中。  
   
@@ -43,17 +43,17 @@ ms.locfileid: "66078471"
   
 5.  在“添加/删除表”对话框中，将 **DimSalesReason** 表和 **FactInternetSalesReason** 表添加到“包含的对象”列表中，然后单击“确定”。  
   
-     请注意，自动建立所涉及的表之间的主键-外键关系因为基础关系数据库中定义这些关系。 如果未在基础关系数据库中定义这些关系，则必须在数据源视图中对其进行定义。  
+     请注意, 所涉及的表之间的主键-外键关系会自动建立, 因为这些关系是在基础关系数据库中定义的。 如果未在基础关系数据库中定义这些关系，则必须在数据源视图中对其进行定义。  
   
 6.  在“格式”菜单上，指向“自动布局”，再单击“关系图”。  
   
-7.  在属性窗口中更改**FriendlyName**的属性**DimSalesReason**表`SalesReason`，然后将更改**FriendlyName**属性**FactInternetSalesReason**表向`InternetSalesReason`。  
+7.  在属性窗口中, 将**DimSalesReason**表的`SalesReason` **friendlyname**属性更改为, 然后将 FactInternetSalesReason 表的**friendlyname**属性更改为 `InternetSalesReason`。  
   
 8.  在“表”窗格中，展开“InternetSalesReason (dbo.FactInternetSalesReason)”，单击“SalesOrderNumber”，然后在“属性”窗口中查看此数据列的“DataType”属性。  
   
      注意，“SalesOrderNumber”列的数据类型为字符串数据类型。  
   
-9. 查看中的其他列的数据类型`InternetSalesReason`表。  
+9. 查看`InternetSalesReason`表中其他列的数据类型。  
   
      您会看到此表中其他两列的数据类型为数值数据类型。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66078471"
   
      您会看到对于每个订单内的每个行号，均有一个键值标识采购该行中项的销售原因，如下图所示。  
   
-     ![密钥值来标识购买的销售原因](../../2014/tutorials/media/l5-many-to-many-1.gif "密钥值来标识购买的销售原因")  
+     ![标识购买原因的密钥值](../../2014/tutorials/media/l5-many-to-many-1.gif "标识购买原因的密钥值")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>定义中间度量值组  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078471"
   
 2.  右键单击“度量值”窗格中的任意位置，然后单击“新建度量值组”。 有关详细信息。请参阅 [在多维模型中创建度量值和度量值组](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
-3.  在中**新建度量值组**对话框中，选择`InternetSalesReason`中**从数据源视图选择一个表**列表，，然后单击**确定**。  
+3.  在 "**新建度量值组**" 对话框中`InternetSalesReason` , 在 "**从数据源视图中选择一个表**" 列表中选择, 然后单击 **"确定"** 。  
   
      请注意，“Internet 销售原因”度量值组现在显示在“度量值”窗格中。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078471"
   
 5.  选择“Internet 销售原因记数”，然后在“属性”窗口中查看此度量值的属性。  
   
-     请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 选择了**计数**因为基础数据类型为字符串数据类型。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。  
+     请注意，此度量值的“AggregateFunction”属性定义为“Count”，而不是“Sum”。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]由于基础数据类型是字符串数据类型, 因此选择 "**计数**"。 由于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将基础事实数据表中的其他两列检测为数字键而非实际度量值，因此未将这两列选作度量值。 有关详细信息，请参阅[定义半累加行为](multidimensional-models/define-semiadditive-behavior.md)。  
   
 6.  在“属性”窗口中，将“Internet Sales Reason Count”度量值的“Visible”属性更改为“False”。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66078471"
   
      下图显示了“Internet 销售原因计数”度量值的属性。  
   
-     ![为 Internet 销售原因计数度量值的属性](../../2014/tutorials/media/l5-many-to-many-2.gif "Internet 销售原因计数度量值的属性")  
+     " ![Internet 销售原因计数" 度量值的属性]" (../../2014/tutorials/media/l5-many-to-many-2.gif "Internet 销售原因计数\" 度量值的属性")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>定义多对多维度  
   
@@ -99,33 +99,33 @@ ms.locfileid: "66078471"
   
 4.  在“指定源信息”页上，确保选中 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 数据源视图。  
   
-5.  在中**主表**列表中，选择`SalesReason`。  
+5.  在 "**主表**" 列表中`SalesReason`, 选择。  
   
 6.  在“键列”列表中，确保列出了“SalesReasonKey”。  
   
 7.  在“名称列”列表中，选择“SalesReasonName”。  
   
-8.  单击“下一步” 。  
+8.  单击“下一步”。  
   
-9. 在“选择维度属性”页上，由于“销售原因键”属性是键属性，因此它将自动处于选中状态。 选择旁边的复选框**销售原因原因类型**属性，其名称更改为`Sales Reason Type`，然后单击**下一步**。  
+9. 在“选择维度属性”页上，由于“销售原因键”属性是键属性，因此它将自动处于选中状态。 选中 "**销售原因原因类型**" 属性旁边的复选框, 将其名称`Sales Reason Type`更改为, 然后单击 "**下一步**"。  
   
 10. 在“完成向导”页上，单击“完成”创建“销售原因”维度。  
   
-11. 在“文件”  菜单上，单击“全部保存” 。  
+11. 在“文件” 菜单上，单击“全部保存”。  
   
-12. 在**特性**维度的维度设计器窗格**销售原因**维度，选择**销售原因键**，然后将更改**名称**属性窗口中的属性 `Sales Reason.`  
+12. 在 "**销售原因**" 维度的 "维度设计器" 的 "**属性**" 窗格中, 选择 "**销售原因键**", 然后将属性窗口中的 "**名称**" 属性更改为。`Sales Reason.`  
   
-13. 在中**层次结构**窗格中的维度设计器中，创建**销售原因**用户层次结构包含`Sales Reason Type`级别并**销售原因**级别，请在该顺序。  
+13. 在维度设计器的 "**层次结构**" 窗格中, 以该顺序创建包含 " `Sales Reason Type`级别" 和 "**销售原因**" 级别的 "**销售原因**" 用户层次结构。  
   
-14. 在属性窗口中，定义`All Sales Reasons`的值作为**AllMemberName**的销售原因层次结构属性。  
+14. 在属性窗口中, 将`All Sales Reasons`定义为 "销售原因" 层次结构的 " **AllMemberName** " 属性的值。  
   
-15. 定义`All Sales Reasons`的值作为**AttributeAllMemberName**销售原因维度的属性。  
+15. 将`All Sales Reasons`定义为 "销售原因" 维度的 " **AttributeAllMemberName** " 属性的值。  
   
 16. 若要将新建的维度作为多维数据集维度添加到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集，请切换到“多维数据集设计器”。 在“多维数据集结构”选项卡上，右键单击“维度”窗格，并选择“添加多维数据集维度”。  
   
 17. 在“添加多维数据集维度”对话框中，选择“销售原因”，然后单击“确定”。  
   
-18. 在“文件”  菜单上，单击“全部保存” 。  
+18. 在“文件” 菜单上，单击“全部保存”。  
   
 ## <a name="defining-the-many-to-many-relationship"></a>定义多对多关系  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66078471"
   
      请注意，“销售原因”维度定义了与“Internet 销售原因”度量值组的常规关系，但没有定义与“Internet 销售”或“分销商销售”度量值组之间的关系。 另注意，“Internet 销售订单详细信息”维度定义了与“Internet 销售原因”度量值组的常规关系，后者与“Internet 销售”度量值组具有**事实关系**。 如果不存在此维度（或不存在与“Internet 销售原因”和“Internet 销售”度量值组具有关系的其他维度），则无法定义多对多关系。  
   
-2.  单击“Internet 销售”度量值组和“销售原因”维度相交处的单元，然后单击浏览按钮 (**...**)。  
+2.  单击“Internet 销售”度量值组和“销售原因”维度相交处的单元，然后单击浏览按钮 ( **...** )。  
   
 3.  在“定义关系”对话框的“选择关系类型”列表中，选择“多对多”。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "66078471"
   
      下图显示了“定义关系”对话框中的更改。  
   
-     ![定义关系对话框](../../2014/tutorials/media/l5-many-to-many-3.gif "定义关系对话框")  
+     !["定义关系" 对话框](../../2014/tutorials/media/l5-many-to-many-3.gif "\"定义关系\" 对话框")  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”** 。  
   
      您将看到表示“销售原因”维度和“Internet 销售”度量值组之间关系的多对多图标。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "66078471"
   
 5.  在元数据窗格中，依次展开“客户”、“位置”、“客户所在地域”、“成员”、“所有客户”、“澳大利亚”，然后右键单击“Queensland”，再单击“添加到筛选器”。  
   
-6.  展开的每个成员`Sales Reason Type`级别，以查看与 Queensland 中的客户提供给他们购买的每个原因相关联的美元值[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]Internet 上的产品。  
+6.  展开`Sales Reason Type`级别的每个成员, 以查看与 Queensland 中的客户为其通过 Internet 购买[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]产品的每个原因相关联的美元值。  
   
      您会看到与所有销售原因相关联的合计超过了销售总额。 这是因为某些客户为其采购陈述了多个原因。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "66078471"
      ![多维数据集设计器的筛选器和数据窗格](../../2014/tutorials/media/l5-many-to-many-5.gif "多维数据集设计器的筛选器和数据窗格")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [定义度量值组中的维度粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+ [定义度量值组中的维度粒度](https://docs.microsoft.com/analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group)  
   
 ## <a name="see-also"></a>请参阅  
  [使用数据源视图设计器中的关系图 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   

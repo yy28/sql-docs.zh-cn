@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务编辑器 （输出选项卡） |Microsoft Docs
+title: 数据挖掘查询任务编辑器 ("输出" 选项卡) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059778"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890471"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>数据挖掘查询任务编辑器（“输出”选项卡）
   可以使用 **“数据挖掘查询任务编辑器”** 对话框的 **“输出”** 选项卡指定预测查询的目标。  
   
- 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ## <a name="general-options"></a>常规选项  
  **名称**  
@@ -38,7 +38,7 @@ ms.locfileid: "66059778"
   
 ## <a name="output-tab-options"></a>“输出”选项卡选项  
  **“连接”**  
- 从列表中选择连接管理器，或单击“新建”  以创建新的连接管理器。  
+ 从列表中选择连接管理器，或单击“新建”以创建新的连接管理器。  
   
  **新建**  
  创建新的连接管理器。 只能使用 ADO.NET 和 OLE DB 连接管理器类型。  
@@ -53,6 +53,6 @@ ms.locfileid: "66059778"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [数据挖掘查询任务编辑器（“挖掘模型”选项卡）](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [数据挖掘查询任务编辑器（“查询”选项卡）](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [数据挖掘设计器](../analysis-services/data-mining/data-mining-designer.md)  
+ [数据挖掘设计器](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

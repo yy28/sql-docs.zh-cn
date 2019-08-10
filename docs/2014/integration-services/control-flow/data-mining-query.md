@@ -12,12 +12,12 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832375"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890330"
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
   设计窗格包含数据挖掘预测查询生成器，可用于生成数据挖掘预测查询。 您可以基于输入表设计预测查询，也可以设计单独预测查询。 切换到结果视图可运行查询并查看结果。 查询视图将显示由预测查询生成器创建的数据挖掘扩展插件 (DMX) 查询。  
@@ -63,7 +63,7 @@ ms.locfileid: "62832375"
  指定应用于该列的条件表达式或用户表达式。 可以将列从包含挖掘模型的表和输入列中拖动到单元。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘查询接口](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [数据挖掘查询接口](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [数据挖掘扩展插件 (DMX) 语句引用](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

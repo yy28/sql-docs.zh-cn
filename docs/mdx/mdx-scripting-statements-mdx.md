@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4799cf21da7acec0e909f302a68a95b0eb23e2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116230"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893328"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 脚本编写语句 (MDX)
 
@@ -26,15 +26,15 @@ ms.locfileid: "68116230"
 |-----------|-----------------|  
 |[CALCULATE 语句 (MDX)](../mdx/mdx-scripting-calculate.md)|计算子多维数据集，还可以确定子多维数据集中所包含维度的求解次序。|  
 |[CASE 语句 (MDX)](../mdx/case-statement-mdx.md)|允许您有条件地从多次比较中返回特定值。|  
-|[EXISTING 关键字 (MDX)](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|强制在当前上下文中计算所指定的集。|  
+|[EXISTING 关键字 (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword)|强制在当前上下文中计算所指定的集。|  
 |[FREEZE 语句 (MDX)](../mdx/mdx-scripting-freeze.md)|将所指定子多维数据集的单元值锁定为其当前值。|  
 |[IF 语句 (MDX)](../mdx/mdx-scripting-if.md)|如果条件为真，则执行语句。|  
 |[SCOPE 语句 (MDX)](../mdx/mdx-scripting-scope.md)|将指定 MDX 语句的作用域限制于指定的子多维数据集。|  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 语句参考&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [MDX 脚本编写基础知识 (Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 语句引用&#40;mdx&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [MDX 数据定义语句&#40;mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [MDX 数据操作语句&#40;mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [MDX 脚本编写基础知识 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   
   

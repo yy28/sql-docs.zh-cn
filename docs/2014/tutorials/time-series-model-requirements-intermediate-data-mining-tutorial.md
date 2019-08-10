@@ -1,5 +1,5 @@
 ---
-title: 了解时序模型要求 （数据挖掘中级教程） |Microsoft Docs
+title: 了解时序模型的要求 (数据挖掘中级教程) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042993"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892962"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>了解时序模型的要求（数据挖掘中级教程）
   准备要在预测模型中使用的数据时，必须确保数据包含可用于标识时序中的步长的列。 该列将被指定为 `Key Time` 列。 由于这是一个键列，所以列中必须包含唯一数值。  
@@ -31,41 +31,41 @@ ms.locfileid: "63042993"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>标识预测模型的时间键  
   
-1.  在窗格中， **SalesByRegion.dsv [设计]**，右键单击表 vTimeSeries 并选择**浏览数据**。  
+1.  在 " **salesbyregion.dsv [设计]** " 窗格中, 右键单击表 "vTimeSeries", 然后选择 "**浏览数据**"。  
   
-     一个新的选项卡随即打开，标题为**浏览 vTimeSeries 表**。  
+     此时将打开一个新的选项卡, 标题为 "**浏览 VTimeSeries 表**"。  
   
-2.  上**表**选项卡上，查看 TimeIndex 和报告日期列中使用的数据。  
+2.  在 "**表**" 选项卡上, 查看在 "TimeIndex" 和 "报告日期" 列中使用的数据。  
   
      两列都是具有唯一值的序列并且都可用作时序键；但是，这两列的数据类型不同。 Microsoft 时序算法不需要 `datetime` 数据类型，只是这些值必须是非重复的且有序的。 因此，这两个列均可用作预测模型的时间键。  
   
-3.  在数据源视图设计图面上选择的列，报告日期并选择**属性**。 接下来，单击 TimeIndex 的列，然后选择**属性**。  
+3.  在数据源视图设计图面中, 选择 "报表日期" 列, 然后选择 "**属性**"。 接下来, 单击 "TimeIndex" 列, 然后选择 "**属性**"。  
   
-     TimeIndex 字段具有的数据类型为 System.Int32，而字段报告日期具有数据类型为 System.DateTime。 很多数据仓库都将日期/时间值转换为整数，并将整数列用作键，以提高索引性能。 但是，如果您使用此列，Microsoft 时序算法将使用未来值（如 201014、201014，依此类推）进行预测。 因为你想要表示销售额数据预测使用日历日期，您将使用报告日期列作为唯一的序列标识符。  
+     字段 TimeIndex 的数据类型为 System.object, 而字段报表日期的数据类型为 system.string。 很多数据仓库都将日期/时间值转换为整数，并将整数列用作键，以提高索引性能。 但是，如果您使用此列，Microsoft 时序算法将使用未来值（如 201014、201014，依此类推）进行预测。 由于您想要使用日历日期来表示您的销售数据预测, 因此您将使用 "报告日期" 列作为唯一的序列标识符。  
   
 ### <a name="to-set-the-key-in-the-data-source-view"></a>在数据源视图中设置键  
   
-1.  在窗格中**SalesByRegion.dsv**，选择 vTimeSeries 表。  
+1.  在 " **salesbyregion.dsv**" 窗格中, 选择 "vTimeSeries" 表。  
   
-2.  右键单击列中，报告的日期，然后选择**设置逻辑主键**。  
+2.  右键单击 "报告日期" 列, 然后选择 "**设置逻辑主键**"。  
   
 ## <a name="handling-missing-data-optional"></a>处理缺少的数据（可选）  
  如果任何序列有缺失数据，则您尝试处理模型时可能会遇到错误。 您可以通过以下多种方法来处理缺失数据：  
   
--   可以让 Analysis Services 通过计算均值或使用前一个值来填充缺失值。 可以通过对挖掘模型设置 MISSING_VALUE_SUBSTITUTION 参数来实现此目的。 有关此参数的详细信息，请参阅[Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。 有关如何更改现有挖掘模型的参数的信息，请参阅[查看或更改算法参数](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md)。  
+-   可以让 Analysis Services 通过计算均值或使用前一个值来填充缺失值。 可以通过对挖掘模型设置 MISSING_VALUE_SUBSTITUTION 参数来实现此目的。 有关此参数的详细信息, 请参阅[Microsoft 时序算法技术参考](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)。 有关如何更改现有挖掘模型上的参数的信息, 请参阅[查看或更改算法参数](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md)。  
   
--   可以更改数据源或筛选基础视图，以消除不规则序列或替换各值。 您可以在关系数据源中实现此目的，或者可以通过创建自行命名的查询或命名计算来修改数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。 本课程后面的一个任务将演示如何生成命名查询和自定义计算。  
+-   可以更改数据源或筛选基础视图，以消除不规则序列或替换各值。 您可以在关系数据源中实现此目的，或者可以通过创建自行命名的查询或命名计算来修改数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)。 本课程后面的一个任务将演示如何生成命名查询和自定义计算。  
   
  对于本方案，某一序列的起始位置缺失了某些数据，即：在 2007 年 7 月之前，T1000 产品系列不存在数据。 除此之外，所有序列都在同一天终止，且没有任何缺失值。  
   
- Microsoft 时序算法的要求是所有序列都包括单个模型中应都具有相同**结束**点。 由于 T1000 型号的自行车是在 2007 年引进的，此序列数据的开始日期晚于其他型号自行车数据的开始日期，但此序列的结束日期与其他序列相同；因此，该数据是可使用的。  
+ Microsoft 时序算法的要求是, 在单个模型中包含的任何序列都应具有相同的**结束**点。 由于 T1000 型号的自行车是在 2007 年引进的，此序列数据的开始日期晚于其他型号自行车数据的开始日期，但此序列的结束日期与其他序列相同；因此，该数据是可使用的。  
   
 #### <a name="to-close-the-data-source-view-designer"></a>关闭数据源视图设计器  
   
--   右键单击选项卡上，**浏览 vTimeSeries 表**，然后选择**关闭**。  
+-   右键单击该选项卡,**浏览 VTimeSeries 表**, 然后选择 "**关闭**"。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [创建预测结构和模型&#40;数据挖掘中级教程&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [创建预测结构和模型&#40;中间数据挖掘教程&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 时序算法](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  

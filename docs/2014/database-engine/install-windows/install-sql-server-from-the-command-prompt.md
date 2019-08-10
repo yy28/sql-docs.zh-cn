@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44c5318ce79c191eecf9d5dde6c9a1701e6e9bde
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: f4079d633e542f47d6b38261e083413d2f295332
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284831"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889469"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Install SQL Server 2014 from the Command Prompt
   在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序之前，请查阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)。  
@@ -142,13 +142,13 @@ ms.locfileid: "67284831"
   
 -   支持 /INSTANCEDIR=c:\Path。  
   
--   /INSTANCEDIR="c:\Path" is supported  
+-   支持/INSTANCEDIR = "c:\Path" 受支持  
   
 > [!NOTE]
 >  -   关系服务器值支持路径的其他终止反斜杠格式（反斜杠或两个反斜杠字符）。  
 > -   参数 /PID 的值应该使用双引号引起来。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-parameters"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数  
+## <a name="includessnoversionincludesssnoversion-mdmd-parameters"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Parameters  
  以下各节给出了开发命令行安装脚本以用于安装、更新和修复方案的参数。  
   
  列出的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的参数特定于该组件。 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 和 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Browser 参数适用。  
@@ -180,7 +180,7 @@ ms.locfileid: "67284831"
 ##  <a name="Install"></a> 安装参数  
  使用下表中的参数可开发用于安装的命令行脚本。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> 安装|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -192,8 +192,8 @@ ms.locfileid: "67284831"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> - 或 -<br /><br /> /ROLE<br /><br /> **必需**|指定要安装的组件。<br /><br /> 选择 **/FEATURES** 可指定要安装的各个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 有关详细信息，请参阅 [功能参数](#Feature) 。<br /><br /> 选择 [角色参数](#Role) 可指定安装角色。 安装角色在预先确定的配置中安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示安装参数的用法选项。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认值为 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDWOWDIR<br /><br /> **可选**|为 32 位共享组件指定一个非默认安装目录。 仅在 64 位系统上受支持。<br /><br /> 默认值为 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认为% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDWOWDIR<br /><br /> **可选**|为 32 位共享组件指定一个非默认安装目录。 仅在 64 位系统上受支持。<br /><br /> 默认为% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ INSTANCEDIR<br /><br /> **可选**|为特定于实例的组件指定一个非默认安装目录。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCEID<br /><br /> **可选**|为 [InstanceID](#InstanceID)指定一个非默认值。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../sql-server/install/instance-configuration.md)。|  
@@ -206,30 +206,30 @@ ms.locfileid: "67284831"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的帐户。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的密码。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCSTARTUPTYPE<br /><br /> **可选**|指定 [代理服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\backup<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\backup|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。 默认值：<br /><br /> Latin1_General_CI_AS|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器模式。 有效值为 MULTIDIMENSIONAL、POWERPIVOT 或 TABULAR。 **ASSERVERMODE** 区分大小写。 所有值必须以大写形式表示。 有关有效值的详细信息，请参阅 [Install Analysis Services in Tabular Mode](../../analysis-services/instances/install-windows/install-analysis-services.md)。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\config<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\config|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\data<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\data|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\log<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\log|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器模式。 有效值为 MULTIDIMENSIONAL、POWERPIVOT 或 TABULAR。 **ASSERVERMODE** 区分大小写。 所有值必须以大写形式表示。 有关有效值的详细信息，请参阅 [Install Analysis Services in Tabular Mode](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的帐户。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的密码。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **必需**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员凭据。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 临时文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Temp。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Temp。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 临时文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\ \\[!INCLUDE[msCoName](../../includes/msconame-md.md)] \>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\< i < ASInstanceID\>\olap\temp<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\temp|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **可选**|指定 MSOLAP 提供程序是否可以在进程中运行。 默认值：<br /><br /> 1=启用|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **对于 SPI_AS_NewFarm 是必需的**|指定用于在场中运行 SharePoint 管理中心服务和其他重要服务的域用户帐户。<br /><br /> 此参数仅用于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过安装的实例[角色参数](#Role)= SPI_AS_NEWFARM。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMACCOUNT<br /><br /> **对于 SPI_AS_NewFarm 是必需的**|指定用于在场中运行 SharePoint 管理中心服务和其他重要服务的域用户帐户。<br /><br /> 此参数仅[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于通过[Role Parameters](#Role)= SPI_AS_NEWFARM 安装的实例。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **对于 SPI_AS_NewFarm 是必需的**|指定场帐户的密码。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **对于 SPI_AS_NewFarm 是必需的**|指定用于向 SharePoint 场添加其他应用程序服务器或 Web 前端服务器的通行短语。<br /><br /> 此参数仅用于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过安装的实例[角色参数](#Role)= SPI_AS_NEWFARM。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **对于 SPI_AS_NewFarm 是必需的**|指定用于连接 SharePoint 管理中心 Web 应用程序的端口。<br /><br /> 此参数仅用于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]通过安装的实例[角色参数](#Role)= SPI_AS_NEWFARM。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **对于 SPI_AS_NewFarm 是必需的**|指定用于向 SharePoint 场添加其他应用程序服务器或 Web 前端服务器的通行短语。<br /><br /> 此参数仅[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于通过[Role Parameters](#Role) = SPI_AS_NEWFARM 安装的实例。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **对于 SPI_AS_NewFarm 是必需的**|指定用于连接 SharePoint 管理中心 Web 应用程序的端口。<br /><br /> 此参数仅[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用于通过[Role Parameters](#Role) = SPI_AS_NEWFARM 安装的实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 [Browser 服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **可选**|为 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装启用运行身份凭据。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。 默认值：<br /><br /> 对于 64 上的 WOW 模式的位: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 对于所有其他安装:% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。 如果未提供此参数，则支持仅 Windows 身份验证模式。 支持的值：<br /><br /> SQL|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **可选**|将添加到当前用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`sysadmin`固定的服务器角色。 当安装 Express 版本或使用 /Role=ALLFeatures_WithDefaults 时，可以使用 /ADDCURRENTUSERASSQLADMIN 参数。 有关详细信息，请参阅[/ROLE](#Role)下面。 使用 /ADDCURRENTUSERASSQLADMIN 是可选的，但 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 是必需的。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本为 True<br /><br /> 对于所有其他版本为 False|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **可选**|将当前用户添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin`固定服务器角色。 当安装 Express 版本或使用 /Role=ALLFeatures_WithDefaults 时，可以使用 /ADDCURRENTUSERASSQLADMIN 参数。 有关详细信息, 请参阅下面的[/ROLE](#Role) 。 使用 /ADDCURRENTUSERASSQLADMIN 是可选的，但 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 是必需的。 默认值：<br /><br /> 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本为 True<br /><br /> 对于所有其他版本为 False|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动帐户。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
@@ -245,9 +245,9 @@ ms.locfileid: "67284831"
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。 默认值：<br /><br /> NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置|/NPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 Named Pipes 协议的状态。 支持的值：<br /><br /> 0＝禁用 Named Pipes 协议<br /><br /> 1＝启用 Named Pipes 协议|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置|/TCPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 TCP 协议的状态。 支持的值：<br /><br /> 0＝禁用 TCP 协议<br /><br /> 1＝启用 TCP 协议|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **可选**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。 支持的值：<br /><br /> SharePointFilesOnlyMode<br /><br /> DefaultNativeMode<br /><br /> FilesOnlyMode<br /><br /> 注意：如果安装包括[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]，则默认 RSINSTALLMODE 为 DefaultNativeMode。<br /><br /> 如果安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，默认的 RSINSTALLMODE 为 FilesOnlyMode。<br /><br /> 如果你选择 DefaultNativeMode，但安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，则安装会自动将 RSINSTALLMODE 更改为 FilesOnlyMode。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络配置|/NPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 Named Pipes 协议的状态。 支持的值：<br /><br /> 0＝禁用 Named Pipes 协议<br /><br /> 1＝启用 Named Pipes 协议|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络配置|/TCPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 TCP 协议的状态。 支持的值：<br /><br /> 0＝禁用 TCP 协议<br /><br /> 1＝启用 TCP 协议|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **可选**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。 支持的值：<br /><br /> SharePointFilesOnlyMode<br /><br /> DefaultNativeMode<br /><br /> FilesOnlyMode<br /><br /> 注意：如果安装包括[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], 则默认 RSINSTALLMODE 为 DefaultNativeMode。<br /><br /> 如果安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，默认的 RSINSTALLMODE 为 FilesOnlyMode。<br /><br /> 如果你选择 DefaultNativeMode，但安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，则安装会自动将 RSINSTALLMODE 更改为 FilesOnlyMode。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
@@ -264,14 +264,14 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 ##  <a name="SysPrep"></a> 参数  
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 的详细信息，请参阅  
   
- [SQL Server 2014 使用 SysPrep 安装](install-sql-server-using-sysprep.md)。  
+ [使用 SysPrep 安装 2014 SQL Server](install-sql-server-using-sysprep.md)。  
   
 #### <a name="prepare-image-parameters"></a>准备映像参数  
  使用下表中的参数可开发用于准备但不配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的命令行脚本。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。支持的值：<br /><br /> PrepareImage|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。支持的值:<br /><br /> PrepareImage|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。|  
@@ -281,7 +281,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示安装参数的用法选项。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口隐藏或关闭。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认值为 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认为% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ INSTANCEDIR<br /><br /> **可选**|为特定于实例的组件指定一个非默认安装目录。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2（2013 年 1 月）之前 **必需**<br /><br /> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2 开始，对于实例功能为 **必需** 。|指定正在准备的实例的 InstanceID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/Q<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
@@ -297,7 +297,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>完成映像参数  
  使用下表中的参数可开发用于完成和配置已准备好的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的命令行脚本。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> CompleteImage|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -308,7 +308,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2（2013 年 1 月）之前 **必需**<br /><br /> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2 开始 **可选**|使用在准备映像步骤中指定的实例 ID。 支持的值：<br /><br /> 已准备实例的 InstanceID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2（2013 年 1 月）之前 **必需**<br /><br /> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2 开始 **可选**|为正在完成的实例指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../sql-server/install/instance-configuration.md)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的产品密钥。 如果未指定此参数，则使用 Evaluation。<br /><br /> 注意：如果在安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with tools 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Express with Advanced Services，预定义 PID。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的产品密钥。 如果未指定此参数，则使用 Evaluation。<br /><br /> 注意：如果要安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] express、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] express with tools 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] express with Advanced Services, 则会预定义 PID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/Q<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/QS<br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能使用情况报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11))（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
@@ -316,9 +316,9 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的帐户。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的密码。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCSTARTUPTYPE<br /><br /> **可选**|指定 [代理服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定[启动](#Accounts)模式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器服务。支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务的[启动](#Accounts)模式。支持的值:<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **可选**|为 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 安装启用运行身份凭据。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。 默认值：<br /><br /> 对于 64 上的 WOW 模式的位: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 对于所有其他安装:% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。 如果未提供此参数，则支持仅 Windows 身份验证模式。 支持的值：<br /><br /> SQL|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup|  
@@ -335,8 +335,8 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 是用来帮助保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 控制管理器来更改服务帐户和启用全文功能。 默认值：<br /><br /> Local Service 帐户|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置|/NPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 Named Pipes 协议的状态。 支持的值：<br /><br /> 0＝禁用 Named Pipes 协议<br /><br /> 1＝启用 Named Pipes 协议|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置|/TCPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 TCP 协议的状态。 支持的值：<br /><br /> 0＝禁用 TCP 协议<br /><br /> 1＝启用 TCP 协议|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络配置|/NPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 Named Pipes 协议的状态。 支持的值：<br /><br /> 0＝禁用 Named Pipes 协议<br /><br /> 1＝启用 Named Pipes 协议|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络配置|/TCPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 TCP 协议的状态。 支持的值：<br /><br /> 0＝禁用 TCP 协议<br /><br /> 1＝启用 TCP 协议|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **可选**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
@@ -354,7 +354,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> 升级参数  
  使用下表中的参数可开发用于升级的命令行脚本。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> 升级<br /><br /> EditionUpgrade<br /><br /> 值 EditionUpgrade 用于将现有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到另一版本。 有关支持的版本升级的详细信息，请参阅 [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -374,7 +374,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能使用情况报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11))（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口将隐藏或关闭。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 [Browser 服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文索引|/FTUPGRADEOPTION<br /><br /> **可选**|指定全文目录升级选项。 支持的值：<br /><br /> REBUILD<br /><br /> RESET<br /><br /> IMPORT|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文|/FTUPGRADEOPTION<br /><br /> **可选**|指定全文目录升级选项。 支持的值：<br /><br /> REBUILD<br /><br /> RESET<br /><br /> IMPORT|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。 默认值：<br /><br /> NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
@@ -392,7 +392,7 @@ Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> 修复参数  
  使用下表中的参数可开发用于修复的命令行脚本。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示修复工作流。 支持的值：<br /><br /> Repair|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -411,7 +411,7 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> 重新生成系统数据库参数  
  使用下表中的参数可开发命令行脚本来重新生成 master、model、msdb 和 tempdb 系统数据库。 有关详细信息，请参阅 [重新生成系统数据库](../../relational-databases/databases/system-databases.md)。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示重新生成数据库工作流。 支持的值：<br /><br /> Rebuilddatabase|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../sql-server/install/instance-configuration.md)。|  
@@ -423,9 +423,9 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> 卸载参数  
  使用下表中的参数可开发用于卸载的命令行脚本。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示卸载工作流。 支持的值：<br /><br /> Uninstall|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示卸载工作流。 支持的值：<br /><br /> 卸载|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](install-sql-server-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要卸载的 [组件](#Feature) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
@@ -462,7 +462,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 #### <a name="integrated-install-failover-cluster-parameters"></a>集成安装故障转移群集参数  
  使用下表中的参数可开发用于故障转移群集安装的命令行脚本。  
   
- 有关集成安装的详细信息，请参阅[AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+ 有关集成安装的详细信息, 请参阅[AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 > [!NOTE]  
 >  若要在安装完成后添加更多节点，请使用[添加节点](#AddNode)操作。  
@@ -480,8 +480,8 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要安装的 [组件](#Feature) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认值为 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDWOWDIR<br /><br /> **可选**|为 32 位共享组件指定一个非默认安装目录。 仅在 64 位系统上受支持。<br /><br /> 默认值为 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认为% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDWOWDIR<br /><br /> **可选**|为 32 位共享组件指定一个非默认安装目录。 仅在 64 位系统上受支持。<br /><br /> 默认为% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ INSTANCEDIR<br /><br /> **可选**|为特定于实例的组件指定一个非默认安装目录。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCEID<br /><br /> **可选**|为 [InstanceID](#InstanceID)指定一个非默认值。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../sql-server/install/instance-configuration.md)。|  
@@ -495,19 +495,19 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必需**|指定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集的网络名称。 此名称用于在网络中标识新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的帐户。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的密码。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：<br /><br /> -   Latin1_General_CI_AS|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\backup<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\backup|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：<br /><br /> - Latin1_General_CI_AS|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\config<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\config|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\data<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\data|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\log<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\log|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **必需**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员凭据。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 临时文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Temp。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Temp。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 临时文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\temp<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\temp|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **可选**|指定 MSOLAP 提供程序是否可以在进程中运行。 默认值：<br /><br /> 1=启用|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器模式。 群集方案中的有效值为 MULTIDIMENSIONAL 或 TABULAR。 **ASSERVERMODE** 区分大小写。 所有值必须以大写形式表示。 有关有效值的详细信息，请参阅“在表格模式下安装 Analysis Services”。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。<br /><br /> 数据目录必须指定且必须位于共享群集磁盘上。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。 如果未提供此参数，则支持仅 Windows 身份验证模式。 支持的值：<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<I n > \ \<i d > \MSSQL\Backup。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动帐户。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
@@ -528,7 +528,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
   
- <sup>1</sup>我们建议你使用服务 SID 来代替域组。  
+ <sup>1</sup>我们建议你使用服务 SID, 而不是域组。  
   
 ##### <a name="additional-notes"></a>其他说明：  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是唯一识别群集的组件。 其他功能不能识别群集，且不具有故障转移的高可用性。  
@@ -543,7 +543,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>准备故障转移群集参数  
  使用下表中的参数可开发用于故障转移群集准备的命令行脚本。 这是高级群集安装的第一步，在此步骤中您必须在故障转移群集的所有节点上准备故障转移群集实例。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集准备工作流。 支持的值：<br /><br /> PrepareFailoverCluster|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -555,8 +555,8 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FEATURES<br /><br /> **必需**|指定要安装的 [组件](#Feature) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HELP、H、?<br /><br /> **可选**|显示这些参数的用法选项。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认值为 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDWOWDIR<br /><br /> **可选**|为 32 位共享组件指定一个非默认安装目录。 仅在 64 位系统上受支持。<br /><br /> 默认值为 %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDDIR<br /><br /> **可选**|为 64 位共享组件指定一个非默认安装目录。<br /><br /> 默认为% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTALLSHAREDWOWDIR<br /><br /> **可选**|为 32 位共享组件指定一个非默认安装目录。 仅在 64 位系统上受支持。<br /><br /> 默认为% Program Files (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 不能设置为% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ INSTANCEDIR<br /><br /> **可选**|为特定于实例的组件指定一个非默认安装目录。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCEID<br /><br /> **可选**|为 [InstanceID](#InstanceID)指定一个非默认值。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../sql-server/install/instance-configuration.md)。|  
@@ -583,7 +583,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
   
- <sup>1</sup>我们建议你使用服务 SID 来代替域组。  
+ <sup>1</sup>我们建议你使用服务 SID, 而不是域组。  
   
 ###### <a name="sample-syntax"></a>示例语法：  
  针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]执行故障转移群集高级安装方案的“准备”步骤。  
@@ -603,7 +603,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>完成故障转移群集参数  
  使用下表中的参数可开发用于执行故障转移群集完成操作的命令行脚本。 这是高级故障转移群集安装选项的第二步。 在所有的故障转移群集节点上运行了 prepare 后，在拥有共享磁盘的节点上运行此命令。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示故障转移群集完成工作流。 支持的值：<br /><br /> CompleteFailoverCluster|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -622,23 +622,23 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必需**|指定编码的 IP 地址。 编码以分号 (;) 分隔，采用格式：\<IP 类型>;\<地址>;\<网络名称>;\<子网掩码>。 支持的 IP 类型包括 DHCP、IPv4 和 IPv6。<br />可以指定多个故障转移群集 IP 地址，地址之间用空格分隔。 请参阅以下示例：<br /><br /> FAILOVERCLUSTERIPADDRESSES=DEFAULT<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1<br /><br /> FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必需**|指定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集的网络名称。 此名称用于在网络中标识新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIRMIPDEPENDENCYCHANGE|指示对于多子网故障转移群集，同意将 IP 地址资源依赖关系设置为 OR。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。 支持的值：<br /><br /> 0 = False（默认值）<br /><br /> 1 = True|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\backup<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\backup|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。 默认值：<br /><br /> Latin1_General_CI_AS|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ \<INSTANCEDIR >\\< ASInstanceID\>\OLAP\Log。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ \<INSTANCEDIR >\\< ASInstanceID\>\OLAP\Log。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\config<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\config|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< i < ASInstanceID\>\olap\data<br /><br /> 对于所有其他安装:% Program Files%\\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]< i\>\\< ASInstanceID\>\olap\data|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\<[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ i > < ASInstanceID\>\olap\log<br /><br /> 对于所有其他安装:% Program Files%\\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<[!INCLUDE[msCoName](../../includes/msconame-md.md)]i >\\< ASInstanceID\>\olap\log|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **可选**|指定 Analysis Services 实例的服务器模式。 群集方案中的有效值为 MULTIDIMENSIONAL 或 TABULAR。 **ASSERVERMODE** 区分大小写。 所有值必须以大写形式表示。 有关有效值的详细信息，请参阅“在表格模式下安装 Analysis Services”。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **必需**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的管理员凭据。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 临时文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ \<INSTANCEDIR >\\< ASInstanceID\>\OLAP\Temp。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ \<INSTANCEDIR >\\< ASInstanceID\>\OLAP\Temp。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 临时文件的目录。 默认值：<br /><br /> 对于64位上的 WOW 模式:% Program Files (x86)%\\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\<[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ i > < ASInstanceID\>\olap\temp<br /><br /> 对于所有其他安装:% Program Files%\\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<[!INCLUDE[msCoName](../../includes/msconame-md.md)]i >\\< ASInstanceID\>\olap\temp|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **可选**|指定 MSOLAP 提供程序是否可以在进程中运行。 默认值：<br /><br /> 1=启用|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。<br /><br /> 数据目录必须指定且必须位于共享群集磁盘上。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式。 支持的值：<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<I n > \ \<i d > \MSSQL\Backup。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定用于 tempdb 的 l 文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **在“仅文件”模式下可用。**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。|  
@@ -659,9 +659,9 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ```  
   
 #### <a name="upgrade-failover-cluster-parameters"></a>升级故障转移群集参数  
- 使用下表中的参数可开发用于故障转移群集升级的命令行脚本。 有关详细信息，请参阅[升级 SQL Server 故障转移群集实例&#40;安装程序&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)并[AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+ 使用下表中的参数可开发用于故障转移群集升级的命令行脚本。 有关详细信息, 请参阅[Upgrade a SQL Server 故障转移&#40;群集&#41;实例安装](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)和[AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> 升级|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -681,7 +681,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/HIDECONSOLE<br /><br /> **可选**|指定控制台窗口隐藏或关闭。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/FAILOVERCLUSTERROLLOWNERSHIP|指定升级过程中的 [故障转移行为](#RollOwnership) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务|/BROWSERSVCSTARTUPTYPE<br /><br /> **可选**|指定 [Browser 服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文索引|/FTUPGRADEOPTION<br /><br /> **可选**|指定全文目录升级选项。 支持的值：<br /><br /> REBUILD<br /><br /> RESET<br /><br /> IMPORT|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文|/FTUPGRADEOPTION<br /><br /> **可选**|指定全文目录升级选项。 支持的值：<br /><br /> REBUILD<br /><br /> RESET<br /><br /> IMPORT|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。 默认值：<br /><br /> NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
@@ -691,7 +691,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a>添加节点参数  
  使用下表中的参数可开发用于 AddNode 的命令行脚本。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 AddNode 工作流。 支持的值：<br /><br /> AddNode|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
@@ -731,7 +731,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>删除节点参数  
  使用下表中的参数可开发用于 RemoveNode 的命令行脚本。 若要卸载故障转移群集，必须在每个故障转移群集节点上运行 RemoveNode。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|描述|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示 RemoveNode 工作流。 支持的值：<br /><br /> RemoveNode|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](install-sql-server-using-a-configuration-file.md) 。|  
@@ -767,17 +767,17 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT|/RSSVCPASSWORD|/RSSVCStartupType|  
   
 ##  <a name="Feature"></a> 功能参数  
- 若要安装特定功能，请使用 /FEATURES 参数并指定下表中的父功能或功能值： 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 若要安装特定功能，请使用 /FEATURES 参数并指定下表中的父功能或功能值： 有关各个版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持的功能列表, 请参阅 SQL Server 2014 的各个[版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ||||  
 |-|-|-|  
-|父功能参数|功能参数|Description|  
+|父功能参数|功能参数|描述|  
 |SQL||安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、复制、全文组件和 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。|  
 ||SQLEngine|仅安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 ||复制|将复制组件与 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]一起安装。|  
 ||FullText|将全文组件与 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]一起安装。|  
 ||DQ|复制完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装所需的文件。 在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后，必须运行 DQSInstaller.exe 文件来完成[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]安装。 有关详细信息，请参阅[运行 DQSInstaller.exe 以便完成数据质量服务器安装](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。 这也将安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
-|AS||安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
+|方式||安装所有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件。|  
 |RS||安装所有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
 |DQC||安装 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。|  
 |IS||安装所有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。|  
@@ -786,19 +786,19 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||BC|安装向后兼容组件。|  
 ||BOL|安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书组件以便查看和管理帮助内容。|  
 ||Conn|安装连接组件。|  
-||SSMS|安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理工具-基本。 其中包括：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为支持[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]， [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]， **sqlcmd**实用程序，和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell 提供程序|  
-||ADV_SSMS|安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理工具-完整。 除基本版本中的组件，完整版还包括以下组件：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的支持<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理|  
+||SSMS|安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理工具-基本。 其中包括：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持、 、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **sqlcmd**实用工具和 PowerShell 提供程序[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
+||ADV_SSMS|安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理工具-完整。 除基本版本中的组件，完整版还包括以下组件：<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的支持<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实用工具管理|  
 ||DREPLAY_CTLR|安装 Distributed Replay 控制器|  
 ||DREPLAY_CLT|安装 Distributed Replay 客户端|  
-||SNAC_SDK|安装适用于 SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端|  
+||SNAC_SDK|安装用于 Native [!INCLUDE[msCoName](../../includes/msconame-md.md)] Client 的 SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 ||SDK|安装软件开发工具包。|  
 ||LocalDB<sup>1</sup>|安装 LocalDB，它是面向程序开发人员的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 执行模式。|  
   
- <sup>1</sup> LocalDB 是安装的任何 SKU 时的一个选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Express。 有关详细信息，请参阅[SQL Server 2014 Express LocalDB](../configure-windows/sql-server-2016-express-localdb.md)。  
+ <sup>1</sup> LocalDB 是安装 Express 的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]任何 SKU 时的一个选项。 有关详细信息, 请参阅[SQL Server 2014 Express LocalDB](../configure-windows/sql-server-2016-express-localdb.md)。  
   
 ### <a name="feature-parameter-examples"></a>功能参数示例：  
   
-|参数和值|Description|  
+|参数和值|描述|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，不带复制和全文组件。|  
 |/FEATURES=SQLEngine, FullText|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文组件。|  
@@ -806,15 +806,15 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书组件以便查看和管理帮助内容。|  
   
 ##  <a name="Role"></a> 角色参数  
- 安装角色或 /Role 参数用于安装预配置的所选功能。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 角色在现有 SharePoint 场或未配置的新场中安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 对于每种方案，分别提供了两个安装角色来支持它们。 一次只能选择一个安全角色来进行安装。 如果您选择了安装角色，安装程序将安装属于此角色的功能和组件。 您不能改变为该角色指定的功能和组件。 有关如何使用功能角色参数的详细信息，请参阅[从命令提示符安装 PowerPivot](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)。  
+ 安装角色或 /Role 参数用于安装预配置的所选功能。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 角色在现有 SharePoint 场或未配置的新场中安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 对于每种方案，分别提供了两个安装角色来支持它们。 一次只能选择一个安全角色来进行安装。 如果您选择了安装角色，安装程序将安装属于此角色的功能和组件。 您不能改变为该角色指定的功能和组件。 有关如何使用功能角色参数的详细信息, 请参阅[从命令提示符安装 PowerPivot](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)。  
   
  AllFeatures_WithDefaults 角色是各版本 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认行为，可减少向用户提供的对话框数量。 当安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 时，可以从命令行指定此角色。  
   
-|角色|Description|安装…|  
+|Role|描述|安装…|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装在现有 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场或独立服务器上。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算引擎，为内存中数据存储和处理而预先配置的。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|  
 |SPI_AS_NewFarm|将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 作为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例安装在新的、未配置的 Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场或独立服务器上。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在功能角色安装过程中配置场。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 计算引擎，为内存中数据存储和处理而预先配置的。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 配置工具<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|安装当前版本中提供的所有功能。<br /><br /> 将添加到当前用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`sysadmin`固定的服务器角色。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中，当操作系统不是域控制器时， [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户。<br /><br /> 默认情况下在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本中启用此角色。 对于所有其他版本，不启用此角色，但可以通过 UI 或使用命令行参数指定此角色。|对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的各版本，只安装相应版本中提供的那些功能。 对于其他版本，安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。<br /><br /> **AllFeatures_WithDefaults** 参数可以与其他覆盖 **AllFeatures_WithDefaults** 参数设置的参数结合使用。 例如，使用 **AllFeatures_WithDefaults** 参数和 **/Features=RS** 参数会覆盖用于安装所有功能的命令，而只安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但建议选择 **AllFeatures_WithDefaults** 参数以便将默认服务帐户用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。<br /><br /> 当将 **AllFeatures_WithDefaults** 参数与 **/ADDCURRENTUSERASSQLADMIN=FALSE** 结合使用时，当前用户不会自动填充设置对话框。 添加 **/AGTSVCACCOUNT** 和 **/AGTSVCPASSWORD** 以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理指定服务帐户和密码。|  
+|AllFeatures_WithDefaults|安装当前版本中提供的所有功能。<br /><br /> 将当前用户添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin`固定服务器角色。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中，当操作系统不是域控制器时， [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户。<br /><br /> 默认情况下在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本中启用此角色。 对于所有其他版本，不启用此角色，但可以通过 UI 或使用命令行参数指定此角色。|对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的各版本，只安装相应版本中提供的那些功能。 对于其他版本，安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。<br /><br /> **AllFeatures_WithDefaults** 参数可以与其他覆盖 **AllFeatures_WithDefaults** 参数设置的参数结合使用。 例如，使用 **AllFeatures_WithDefaults** 参数和 **/Features=RS** 参数会覆盖用于安装所有功能的命令，而只安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但建议选择 **AllFeatures_WithDefaults** 参数以便将默认服务帐户用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。<br /><br /> 当将 **AllFeatures_WithDefaults** 参数与 **/ADDCURRENTUSERASSQLADMIN=FALSE** 结合使用时，当前用户不会自动填充设置对话框。 添加 **/AGTSVCACCOUNT** 和 **/AGTSVCPASSWORD** 以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理指定服务帐户和密码。|  
   
 ##  <a name="RollOwnership"></a> 使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数控制故障转移行为  
  若要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则必须从被动节点开始逐个在每个故障转移群集节点上运行安装程序。 安装程序根据故障转移群集实例中的节点总数以及已经升级的节点数来确定何时故障转移到已升级的节点。 如果有一半或更多节点已经升级，则默认情况下，安装程序将导致故障转移到已升级的节点。  
@@ -830,24 +830,24 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="InstanceID"></a> 实例 ID 或 InstanceID 配置  
  实例 ID 或 /InstanceID 参数用于指定实例组件的安装位置以及实例的注册表路径。 “INSTANCEID”的值为字符串且必须唯一。  
   
--   SQL 实例 ID:MSSQL12。\<INSTANCEID >  
+-   SQL 实例 ID: MSSQL12.MSSQLSERVER。\<INSTANCEID >  
   
--   AS 实例 ID:MSAS12。\<INSTANCEID >  
+-   AS Instance ID: MSAS12。\<INSTANCEID >  
   
--   RS 实例 ID:MSRS12。\<INSTANCEID >  
+-   RS Instance ID: MSRS12。\<INSTANCEID >  
   
  识别实例的组件安装在以下位置：  
   
- %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< SQLInstanceID\>  
+ % Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<\\i d\>  
   
- %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< ASInstanceID\>  
+ % Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<\\ASInstanceID\>  
   
- %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< RSInstanceID\>  
+ % Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<\\RSInstanceID\>  
   
 > [!NOTE]  
 >  如果在命令行中未指定 INSTANCEID，则默认情况下安装程序用 \<INSTANCENAME> 替代 \<INSTANCEID>。  
   
 ## <a name="see-also"></a>请参阅  
- [从安装向导安装 SQL Server 2014&#40;安装程序&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
+ [从安装向导&#40;安装程序安装 SQL Server 2014&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server 故障转移群集安装](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [安装 SQL Server 2014 BI 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)  

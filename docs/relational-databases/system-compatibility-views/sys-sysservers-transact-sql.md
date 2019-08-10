@@ -1,5 +1,5 @@
 ---
-title: sys.sysservers (Transact SQL) |Microsoft Docs
+title: sys. sysservers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018115"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941103"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,22 +54,22 @@ ms.locfileid: "68018115"
 |**querytimeout**|**int**|对服务器进行查询的超时设置。|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = 服务器为远程服务器。<br /><br /> 0 = 服务器为链接服务器。|  
-|**rpc**|**bit**|1 = **sp_serveroption@rpc** 设置为**true**或**上**。<br /><br /> 0 = **sp_serveroption@rpc** 设置为**false**或**关闭**。|  
-|**pub**|**bit**|1 = **sp_serveroption@pub** 设置为**true**或**上**。<br /><br /> 0 = **sp_serveroption@pub** 设置为**false**或**关闭**。|  
-|**sub**|**bit**|1 = **sp_serveroption@sub** 设置为**true**或**上**。<br /><br /> 0 = **sp_serveroption@sub** 设置为**false**或**关闭**。|  
-|**dist**|**bit**|1 = **sp_serveroption@dist** 设置为**true**或**上**。<br /><br /> 0 = **sp_serveroption@dist** 设置为**false**或**关闭**。|  
-|**dpub**|**bit**|1 = **sp_serveroption@dpub** 设置为**true**或**上**。<br /><br /> 0 = **sp_serveroption@dpub** 设置为**false**或**关闭**。|  
-|**rpcout**|**bit**|1 =  **sp_serveroption@rpc出**设置为**true**或**上**。<br /><br /> 0 =  **sp_serveroption@rpc出**设置为**false**或**关闭**。|  
-|**dataaccess**|**bit**|1 =  **sp_serveroption@data访问权限**设置为**true**或**上**。<br /><br /> 0 =  **sp_serveroption@data访问权限**设置为**false**或**关闭**。|  
-|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation兼容**设置为**true**或**上**。<br /><br /> 0 =  **sp_serveroption@collation兼容**设置为**false**或**关闭**。|  
-|**system**|**bit**|1 = **sp_serveroption@system** 设置为**true**或**上**。<br /><br /> 0 = **sp_serveroption@system** 设置为**false**或**关闭**。|  
-|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote排序规则**设置为**true**或**上**。<br /><br /> 0 =  **sp_serveroption@remote排序规则**设置为**false**或**关闭**。|  
-|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy架构验证**设置为**true**或**上**。<br /><br /> 0 =  **sp_serveroption@lazy架构验证**设置为**false**或**关闭**。|  
-|**排序规则**|**sysname**|所设置的服务器排序规则 **sp_serveroption@collation名称**。|  
+|**rpc**|**bit**|1 = **sp_serveroption\@rpc**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc**设置为**false**或**off**。|  
+|**pub**|**bit**|1 = **sp_serveroption\@pub**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@pub**设置为**false**或**off**。|  
+|**sub**|**bit**|1 = **sp_serveroption\@子**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@子**集合设置为**false**或**off**。|  
+|**dist**|**bit**|1 = **sp_serveroption\@dist**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dist**设置为**false**或**off**。|  
+|**dpub**|**bit**|1 = **sp_serveroption\@dpub**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dpub**设置为**false**或**off**。|  
+|**rpcout**|**bit**|1 = **sp_serveroption\@rpc out**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc out**设置为**false**或**off**。|  
+|**dataaccess**|**bit**|1 = **sp_serveroption\@数据访问**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@数据访问**设置为**false**或**off**。|  
+|**collationcompatible**|**bit**|1 = **sp_serveroption\@排序规则兼容性**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@排序规则兼容**集设置为**false**或**off**。|  
+|**system**|**bit**|1 = **sp_serveroption\@system**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@系统**设置为**false**或**off**。|  
+|**useremotecollation**|**bit**|1 = **sp_serveroption\@远程排序规则**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@远程排序规则**设置为**false**或**off**。|  
+|**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@惰性架构验证**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@惰性架构验证**设置为**false**或**off**。|  
+|**归类**|**sysname**|按**sp_serveroption\@排序规则名称**设置的服务器排序规则。|  
 |**nonsqlsub**|bit|0 = 服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例<br /><br /> 1 = 服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例|  
   
 ## <a name="see-also"></a>请参阅  
- [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [将系统表映射到系统&#40;视图 transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

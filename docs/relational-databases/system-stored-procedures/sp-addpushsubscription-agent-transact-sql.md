@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 754180cfa1ff907e9590b70ba074cd28eaaa804e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769093"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894042"
 ---
-# <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
+# <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   添加新的预定代理作业，以使推送订阅与事务发布同步。 此存储过程在发布服务器上对发布数据库执行。  
@@ -71,7 +71,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**, 无默认值。  
   
-`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的值为**sysname**, 默认值为 NULL。  
+`[ @subscriber = ] 'subscriber'`订阅服务器实例的名称, 如果订阅服务器数据库为可用性组, 则为 AG 侦听器的名称。 *订阅服务器*的值为**sysname**, 默认值为 NULL。 
   
 `[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的值为**sysname**, 默认值为 NULL。 对于非 SQL Server 订阅服务器, 请将*subscriber_db*的值指定为 **(默认目标)** 。  
   
@@ -116,7 +116,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`分发代理的日期。 当*frequency_type*设置为**32** (每月相对) 时, 使用此参数。 *frequency_relative_interval*的数据值为**int**, 可以是下列值之一。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**1** （默认值）|第一个|  
 |**2**|第二个|  
@@ -128,7 +128,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`在定义的时间段内重新计划的频率。 *frequency_subday*的数据值为**int**, 可以是下列值之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二个|  

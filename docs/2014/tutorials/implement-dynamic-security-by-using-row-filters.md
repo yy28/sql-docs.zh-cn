@@ -1,5 +1,5 @@
 ---
-title: 通过使用行筛选器实现动态安全性 |Microsoft Docs
+title: 使用行筛选器实现动态安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,23 +10,23 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 9ce4f0a9735c14aed6289527b47f76995e1c10d2
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285020"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893605"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>通过使用行筛选器实现动态安全性
-  在本补充课程中，您将另外创建一个实现动态安全性的角色。 动态安全性提供了基于当前登录用户的用户名或登录 ID 的行级别安全性。 若要了解详细信息，请参阅[角色（SSAS 表格）](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
+  在本补充课程中，您将另外创建一个实现动态安全性的角色。 动态安全性提供了基于当前登录用户的用户名或登录 ID 的行级别安全性。 若要了解详细信息，请参阅[角色（SSAS 表格）](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular)。  
   
  若要实现动态安全性，您必须向模型中添加一个表，该表中包含那些可以创建与模型的连接作为数据源并可浏览模型对象和数据的用户的 Windows 用户名。 您使用本教程创建的模型位于 Adventure Works Corp. 上下文中；但是，若要完成本课程，您必须添加一个表，其中包含来自您自己域的用户。 您不需要将添加的用户名的密码。 若要使用您自己域中的少量示例用户创建一个 Employee Security 表，您需要使用粘贴功能，从 Excel 电子表格中粘贴员工数据。 在实际应用场景中，包含添加到模型中的用户名的表通常将使用实际数据库中的表作为数据源；例如，实际的 dimEmployee 表。  
   
- 为了实现动态安全性，您将使用两个新的 DAX 函数：[USERNAME 函数&#40;DAX&#41; ](/dax/username-function-dax)并[LOOKUPVALUE 函数&#40;DAX&#41;](/dax/lookupvalue-function-dax)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 然后，用户可以浏览仅指定的角色的行筛选器的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
+ 为了实现动态安全性, 您将使用两个新的 DAX 函数:[用户名函数&#40;dax&#41; ](/dax/username-function-dax)和[LOOKUPVALUE function &#40;dax&#41;](/dax/lookupvalue-function-dax)。 这两个函数在新角色中进行定义，应用在行筛选器公式中。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 然后, 用户可以仅浏览该角色的行筛选器指定的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
   
  若要完成本补充课程，您将需要完成一系列任务。 这些任务是此 Adventure Works 表格模型方案所特有的，但并不一定适用于实际的应用场景。 每个任务都包含描述任务目的的附加信息。  
   
- 估计的时间才能完成本课程中：**30 分钟**  
+ 学完本课的估计时间:**30分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
  本补充课程主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
@@ -36,11 +36,11 @@ ms.locfileid: "67285020"
   
 #### <a name="to-add-the-dimsalesterritory-table"></a>添加 dimSalesTerritory 表  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“现有连接”** 。  
   
 2.  在“现有连接”对话框中，确认已选中“Adventure Works DB from SQL”数据源连接，然后单击“打开”。  
   
-     如果出现模拟凭据对话框中，键入在第 2 课中所使用的模拟凭据：添加数据。  
+     如果出现 "模拟凭据" 对话框, 请键入在第2课中使用的模拟凭据:添加数据。  
   
 3.  在“选择如何导入数据”页上，保持选中“从表和视图的列表中进行选择，以便选择要导入的数据”，然后单击“下一步”。  
   
@@ -85,14 +85,14 @@ ms.locfileid: "67285020"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
-    |1|3|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
-    |2|4|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
-    |3|5|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
+    |1|2|\<用户名字 >|\<用户姓氏 >|\<域 \ 用户名 >|  
+    |1|3|\<用户名字 >|\<用户姓氏 >|\<域 \ 用户名 >|  
+    |2|4|\<用户名字 >|\<用户姓氏 >|\<域 \ 用户名 >|  
+    |3|5|\<用户名字 >|\<用户姓氏 >|\<域 \ 用户名 >|  
   
 3.  在新工作表中，将 first name、last name 和 domain\username 替换为您组织中的三个用户的姓名和登录 ID。 将同一个用户置于前两行，Employee Id 为 1。 这表示此用户属于多个销售区域。 保持 Employee Id 和 Sales Territory Id 字段不变。  
   
-4.  保存该工作表作为`Sample Employee`。  
+4.  将工作表另`Sample Employee`存为。  
   
 5.  在该工作表中，选择包含员工数据的所有单元（包括标题），在所选数据上右键单击，然后单击“复制”。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67285020"
   
      如果“粘贴”灰显，请单击模型设计器窗口中的任意表中的任意列，然后依次单击“编辑”菜单和“粘贴”。  
   
-7.  在中**粘贴预览**对话框中**表名**，类型`Employee Security`。  
+7.  在 "**粘贴预览**" 对话框中的 "**表名**" `Employee Security`中, 键入。  
   
 8.  在“要粘贴的数据”中，确认数据包含“Sample Employee”工作表中的所有用户数据和标题。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67285020"
      注意，此关系的 Active 属性为 False，表示它不活动。 这是因为 Internet Sales 表已有另一个在度量值中使用的活动关系。  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>在客户端应用程序中隐藏 Employee Security 表  
- 在本任务中，将隐藏 Employee Security 表，防止它显示在客户端应用程序的字段列表中。 请记住，隐藏表并不会保护表安全。 用户仍可以查询 Employee Security 表数据，如果他们知道怎么查询的话。 若要保护 Employee Security 表数据的安全，以阻止用户能够查询其任何数据，您将需要在后面的任务中应用筛选器。  
+ 在此任务中, 您将隐藏 Employee Security 表, 使其不显示在客户端应用程序的字段列表中。 请记住，隐藏表并不会保护表安全。 用户仍可以查询 Employee Security 表数据，如果他们知道怎么查询的话。 若要保护 Employee Security 表数据的安全，以阻止用户能够查询其任何数据，您将需要在后面的任务中应用筛选器。  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>在客户端应用程序中隐藏 Employee 表  
   
@@ -130,17 +130,17 @@ ms.locfileid: "67285020"
  在此任务中，您将创建一个新的用户角色。 此角色将包含一个行筛选器，用于定义 Sales Territory 表的哪些行对用户可见。 然后，此筛选器将在一对多关系方向中应用于与 Sales Territory 相关的所有其他表。 您还将应用一个简单的筛选器，使属于此角色成员的所有用户都无法查询整个 Employee Security 表。  
   
 > [!NOTE]  
->  您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果你将用户添加为成员为 Sales Employees by Territory 角色也存在于角色的成员在创建[第 12 课：创建角色](../analysis-services/lesson-11-create-roles.md)，您将获得权限组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，该用户将具有角色组合所确定的更大权限。  
+>  您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果将某个用户作为成员添加到 "按区域划分的销售员工" 角色, 并且该用户也作为第12课[中创建的角色中的成员存在:创建角色](https://docs.microsoft.com/analysis-services/lesson-11-create-roles), 你将获得权限的组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，该用户将具有角色组合所确定的更大权限。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>创建 Sales Employees by Territory 用户角色  
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“模型”菜单，然后单击“角色”。  
   
-2.  在 **“角色管理器”** 对话框中，单击 **“新建”**。  
+2.  在 **“角色管理器”** 对话框中，单击 **“新建”** 。  
   
      一个具有“无”权限的新角色将添加到列表中。  
   
-3.  单击新角色，然后在**名称**列中，重命名为`Sales Employees by Territory`。  
+3.  单击新角色, 然后在 "**名称**" 列中, 将角色重命名为`Sales Employees by Territory`。  
   
 4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "67285020"
   
 7.  单击“行筛选器”选项卡。  
   
-8.  有关`Employee Security`表，在**DAX 筛选器**列中，键入以下公式。  
+8.  对于表, 在 " **DAX 筛选器**" 列中键入以下公式。 `Employee Security`  
   
      `=FALSE()`  
   
@@ -177,7 +177,7 @@ ms.locfileid: "67285020"
   
 #### <a name="to-test-the-sales-employees-by-territory-user-role"></a>测试 Sales Employees by Territory 用户角色  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”**。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“在 Excel 中分析”** 。  
   
 2.  在“在 Excel 中分析”对话框的“指定用于连接到模型的用户名或角色”中，选择“其他 Windows 用户”，然后单击“浏览”。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "67285020"
      此用户不能浏览或查询其所属的区域之外的区域的任何 Internet 销售数据，因为在 Sales Employees by Territory 用户角色中为 Sales Territory 表定义的行筛选器有效地保护了与其他销售区域相关的所有数据。  
   
 ## <a name="see-also"></a>请参阅  
- [USERNAME 函数&#40;DAX&#41;](/dax/username-function-dax)   
+ [用户名函数&#40;DAX&#41;](/dax/username-function-dax)   
  [LOOKUPVALUE 函数&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
  [CUSTOMDATA 函数&#40;DAX&#41;](/dax/customdata-function-dax)  
   

@@ -18,12 +18,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62992358"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891617"
 ---
 # <a name="securing-sql-server"></a>保护 SQL Server
   可将保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视为一系列步骤，它涉及四个方面：平台、身份验证、对象（包括数据）以及访问系统的应用程序。 下列主题将指导您完成创建和实现有效安全计划的过程。  
@@ -51,7 +51,7 @@ ms.locfileid: "62992358"
 |---------------------------|---------|  
 |为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |为使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[为访问 SSIS 服务配置 Windows 防火墙](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|为使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|为使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[将 Windows 防火墙配置为允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |打开防火墙上的特定端口以便启用对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |通过使用渠道绑定和服务绑定，配置对针对验证的扩展保护的支持|[使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   

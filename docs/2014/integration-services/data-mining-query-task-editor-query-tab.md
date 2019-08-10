@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘查询任务编辑器 （查询选项卡） |Microsoft Docs
+title: 数据挖掘查询任务编辑器 ("查询" 选项卡) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec0c3e2187bc0fb97af733021e39b405470fc373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059850"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890713"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“查询”** 选项卡，基于挖掘模式创建预测查询。 在此对话框中还可以将参数和结果集绑定到变量。  
   
- 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ## <a name="general-options"></a>常规选项  
  **名称**  
@@ -40,12 +40,12 @@ ms.locfileid: "66059850"
  **数据挖掘查询**  
  键入数据挖掘查询。  
   
- **相关主题：**[数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **相关主题：** [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **生成新查询**  
  使用图形工具创建数据挖掘查询。  
   
- **相关主题：**[数据挖掘查询](control-flow/data-mining-query.md)  
+ **相关主题：** [数据挖掘查询](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>“参数映射”选项卡选项  
  **参数名称**  
@@ -82,6 +82,6 @@ ms.locfileid: "66059850"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [数据挖掘查询任务编辑器（“挖掘模型”选项卡）](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [数据挖掘查询任务编辑器（“输出”选项卡）](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [数据挖掘设计器](../analysis-services/data-mining/data-mining-designer.md)  
+ [数据挖掘设计器](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

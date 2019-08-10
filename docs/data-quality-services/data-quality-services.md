@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 898bbf0f1bdbdbd96ab6ca129fb43b87ad743a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ee5d831c6fcc9361ba75b48a6b0cffad6f6d5d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935378"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893200"
 ---
 # <a name="data-quality-services"></a>“数据库引擎服务”
 
@@ -28,23 +28,23 @@ ms.locfileid: "67935378"
  有关安装 DQS 的信息，请参阅 [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)。 如果想要从当前 DQS 版本升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请参阅[升级 Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md)。  
   
  **按区域浏览内容**  
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [Data Quality Client 应用程序](../data-quality-services/data-quality-client-application.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [Data Quality Client 应用程序](../data-quality-services/data-quality-client-application.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [数据质量项目](../data-quality-services/data-quality-projects-dqs.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [数据质量项目](../data-quality-services/data-quality-projects-dqs.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [数据清理](../data-quality-services/data-cleansing.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [数据清理](../data-quality-services/data-cleansing.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [数据匹配](../data-quality-services/data-matching.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [数据匹配](../data-quality-services/data-matching.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 中的 Reference Data Services](../data-quality-services/reference-data-services-in-dqs.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 中的 Reference Data Services](../data-quality-services/reference-data-services-in-dqs.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 中的数据事件探查和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 中的数据事件探查和通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 管理](../data-quality-services/dqs-administration.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 管理](../data-quality-services/dqs-administration.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 安全性](../data-quality-services/dqs-security.md)  
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") [DQS 安全性](../data-quality-services/dqs-security.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Data Quality Services 简介](../data-quality-services/introduction-to-data-quality-services.md)   

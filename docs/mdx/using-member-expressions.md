@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097116"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893517"
 ---
 # <a name="using-member-expressions"></a>使用成员表达式
 
@@ -56,10 +56,10 @@ Dimension_Name
   
 ```  
   
- 存在返回成员的许多 MDX 函数。 有关完整列表，请参阅[MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ 存在返回成员的许多 MDX 函数。 有关完整列表, 请参阅[Mdx 函数引用&#40;mdx&#41; ](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  有关成员名称和成员键的详细信息，请参阅[使用成员、 元组和集&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
+>  有关成员名称和成员键的详细信息, 请参阅[使用成员、元组和集&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)。  
   
 ## <a name="see-also"></a>请参阅  
  [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

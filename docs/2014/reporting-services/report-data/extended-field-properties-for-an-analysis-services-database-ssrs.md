@@ -10,19 +10,19 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107292"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892025"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 您可以通过编写通过使用内置`Fields`集合按名称指定扩展字段属性值的表达式, 在报表中包含这些值。  
   
  扩展属性包括预定义属性和自定义属性。 预定义属性是多个数据源中通用的属性，它们映射到特定字段属性名称并可通过内置 `Fields` 集合按名称进行访问。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
- 在图形模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询设计器定义查询时，一组预定义的单元属性和维度属性会自动添加到 MDX 查询。 您只能使用在您的报表的 MDX 查询中专门列出的扩展属性。 根据您的报表，可能需要修改默认 MDX 命令文本才能包含多维数据集中定义的其他维度或自定义属性。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源中的可用扩展字段的详细信息，请参阅[创建和使用属性值 (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md)。  
+ 在图形模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询设计器定义查询时，一组预定义的单元属性和维度属性会自动添加到 MDX 查询。 您只能使用在您的报表的 MDX 查询中专门列出的扩展属性。 根据您的报表，可能需要修改默认 MDX 命令文本才能包含多维数据集中定义的其他维度或自定义属性。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源中的可用扩展字段的详细信息，请参阅[创建和使用属性值 (MDX)](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx)。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>在报表中使用字段属性  
  扩展字段属性包括预定义属性和数据访问接口特定属性。 即使字段属性位于为数据集生成的查询中，它们也不会与字段列表一起显示在 **“报表数据”** 窗格中，因此，不能将字段属性拖至报表设计图面中。 相反，您必须将字段拖至报表，然后将字段的 `Value` 属性更改为要使用的属性。 例如，如果已设置多维数据集的单元格数据的格式，则可以通过表达式 `=Fields!FieldName.FormattedValue`，来使用 FormattedValue 字段属性。  
@@ -46,7 +46,7 @@ ms.locfileid: "66107292"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|指定字段的数据值。|  
 |`IsMissing`|`Boolean`|指示是否在结果数据集中找到了该字段。|  
-|`UniqueName`|`String`|返回级别的完全限定名称。 例如，`UniqueName`值可能为某位员工 *[Employee]。 [雇员所在部门]。[部门].& [Sales]。 （& a) [北美销售经理]。 [272] &* 。|  
+|`UniqueName`|`String`|返回级别的完全限定名称。 例如, 雇员的`UniqueName`值可能是 *[employee]. [员工部]。[部门]. & [Sales]. & [北美销售经理]. & [272]* 。|  
 |`BackgroundColor`|`String`|返回数据库中为该字段定义的背景颜色。|  
 |`Color`|`String`|返回数据库中为该项定义的前景色。|  
 |`FontFamily`|`String`|返回数据库中为该项定义的字体的名称。|  
@@ -54,7 +54,7 @@ ms.locfileid: "66107292"
 |`FontWeight`|`String`|返回数据库中为该项定义的字体的粗细。|  
 |`FontStyle`|`String`|返回数据库中为该项定义的字体的样式。|  
 |`TextDecoration`|`String`|返回数据库中为该项定义的特殊文本格式设置。|  
-|`FormattedValue`|`String`|返回度量值或关键数字的格式值。 例如，`FormattedValue`属性**销售配额**返回货币格式，如 $1,124,400.00。|  
+|`FormattedValue`|`String`|返回度量值或关键数字的格式值。 例如, " `FormattedValue` **销售额配额**" 的属性返回货币格式, 如 $1124400.00。|  
 |`Key`|`Object`|返回级别的键。|  
 |`LevelNumber`|`Integer`|针对父子层次结构返回级别号或维度编号。|  
 |`ParentUniqueName`|`String`|针对父子层次结构返回父级的完全限定名称。|  

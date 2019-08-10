@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006263"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891206"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 数据操作 - DRILLTHROUGH
 
@@ -42,16 +42,16 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  以逗号分隔的维度属性和度量值列表。  
   
 ## <a name="remarks"></a>备注  
- 钻取是一种操作，最终用户可通过该操作选择多维数据集中的一个单元，然后在该单元的源数据中检索结果集，以获取更加详细的信息。 默认情况下，钻取结果集来自表行（通过求值来计算选定的多维数据集单元的值）。 如果最终用户要执行钻取操作，则他们的客户端应用程序必须支持此功能。 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，除非查询 ROLAP 分区或维度直接从 MOLAP 存储检索的结果。  
+ 钻取是一种操作，最终用户可通过该操作选择多维数据集中的一个单元，然后在该单元的源数据中检索结果集，以获取更加详细的信息。 默认情况下，钻取结果集来自表行（通过求值来计算选定的多维数据集单元的值）。 如果最终用户要执行钻取操作，则他们的客户端应用程序必须支持此功能。 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中, 除非查询 ROLAP 分区或维度, 否则将直接从 MOLAP 存储中检索结果。  
   
 > [!IMPORTANT]  
 >  钻取安全性基于为多维数据集定义的常规安全选项。 如果无法用 MDX 获取一些数据，钻取也将以同样的方式限制用户。  
   
- MDX 语句指定了目标单元。 指定的值**最大行数**参数指示的最大应由所得到的行返回的行数。  
+ MDX 语句指定了目标单元。 **MAXROWS**参数指定的值指示生成的行集应返回的最大行数。  
   
- 默认情况下，返回的最大行数为 10000 行。 这意味着，如果您离开**最大行数**未指定，将获取 10,000 行或更少。 如果此值为对于您的方案而言过低，则可以设置**最大行数**到较大的数字，如`MAXROWS 20000`。 如果其总体得太低，则可以通过更改增加默认值**OLAP\Query\DefaultDrillthroughMaxRows**服务器属性。 有关更改此属性的详细信息，请参阅[Analysis Services 中的服务器属性](../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+ 默认情况下，返回的最大行数为 10000 行。 这意味着, 如果未指定**MAXROWS** , 则会收到10000行或更少的行。 如果此值对于你的方案来说太小, 则可以将**MAXROWS**设置为更大的数字`MAXROWS 20000`, 如。 如果此值太低, 则可以通过更改**OLAP\Query\DefaultDrillthroughMaxRows**服务器属性来增加默认值。 有关更改此属性的详细信息, 请参阅[中的服务器属性 Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)。  
   
- 除非另行指定，否则返回的列包括与指定度量值的度量值组相关的所有维度（多对多维度除外）的所有粒度属性。 多维数据集维度带有 $ 前缀，以区分维度和度量值组。 **返回**子句用于指定钻取查询返回的列。 以下函数可应用于单个属性或通过测量**返回**子句。  
+ 除非另行指定，否则返回的列包括与指定度量值的度量值组相关的所有维度（多对多维度除外）的所有粒度属性。 多维数据集维度带有 $ 前缀，以区分维度和度量值组。 **RETURN**子句用于指定钻取查询返回的列。 以下函数可通过**RETURN**子句应用于单个属性或度量值。  
   
  Name(attribute_name)  
  返回指定属性成员的名称。  
@@ -97,6 +97,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 数据操作语句&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX 数据操作语句&#40;mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 针对商业智能的 SQL Server Management Studio 简介 |Microsoft Docs
+title: 商业智能 SQL Server Management Studio 简介 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab38a4465ec03415f9c1d903419ccbe2b07e6a86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a914aeeae889189453b4f4e6f47ebfbcd0fc44c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015900"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892276"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio for Business Intelligence 简介
   若要访问、配置和管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，请使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 虽然这三种商业智能技术均依赖于 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，但与每种技术关联的管理任务却略有不同。  
@@ -32,7 +32,7 @@ ms.locfileid: "63015900"
   
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 脚本项目，可在其中开发并保存使用多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 和 XML for Analysis (XMLA) 编写的脚本。 可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 脚本项目在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中执行管理任务或重新创建对象（如数据库和多维数据集）。 例如，可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 脚本项目中开发一个 XMLA 脚本，以直接在现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中创建新的对象。 可以将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 脚本项目保存为解决方案的一部分，以及与源代码管理集成在一起。  
   
- 有关如何使用详细信息[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，请参阅[SQL Server Management Studio 中的 Analysis Services 脚本项目](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)。  
+ 有关如何使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的详细信息, 请参阅[SQL Server Management Studio 中的 Analysis Services 脚本项目](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)。  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理 Integration Services 解决方案  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理包并监视正在运行的包。 还可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 将包组织到文件夹中、运行包、导入和导出包、迁移 Data Transformation Services (DTS) 包以及升级 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
@@ -57,7 +57,7 @@ ms.locfileid: "63015900"
 -   [启用和禁用 Reporting Services 的客户端打印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
 ## <a name="see-also"></a>请参阅  
- [使用 SQL Server Data Tools 创建多维模型 (SSDT)](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [SQL Server Data Tools 中的 reporting Services &#40;SSDT&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
+ [使用 SQL Server Data Tools 创建多维模型 (SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)   
+ [SQL Server Data Tools &#40;SSDT 中的 Reporting Services&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
   
   

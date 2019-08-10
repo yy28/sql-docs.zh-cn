@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 126a419f52ee88349d1d64fcfe756fcb3681c03a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069183"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893314"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68069183"
   
  有关 Kerberos 的详细信息，请参阅下列文章：  
   
--   [Kerberos Technical Supplement for Windows（针对 Windows 的 Kerberos 技术补充信息）](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows（针对 Windows 的 Kerberos 技术补充信息）](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -72,18 +72,18 @@ ms.locfileid: "68069183"
  新的连接行为由客户端实现，因此这种行为不特定于某个版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-servers-and-delegation"></a>链接服务器和委托  
- 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 @provstr 参数可用于指定服务器和故障转移伙伴的 SPN  。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：它是更简单且更可靠地建立使用 Kerberos 身份验证的连接。  
+ 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 @provstr 参数可用于指定服务器和故障转移伙伴的 SPN。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：建立使用 Kerberos 身份验证的连接更简单且更可靠。  
   
  使用链接服务器的委托要求 Kerberos 身份验证。  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>应用程序指定的 SPN 的管理方面  
  选择在应用程序中通过连接字符串还是以编程方式通过连接属性指定 SPN（而不是依赖于默认访问接口生成的 SPN）时，请考虑以下因素：  
   
--   安全性：指定的 SPN 是否公开受保护的信息？  
+-   安全性：指定的 SPN 是否会泄露受保护的信息？  
   
--   可靠性：若要启用的默认 Spn，在其中的服务帐户使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例运行必须具有足够的特权更新 Active Directory 对 kdc。  
+-   可靠性若要启用默认 spn, 运行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的服务帐户必须具有足够的权限来更新 KDC 上的 Active Directory。  
   
--   方便性和位置透明性：应用程序的 Spn 将如何影响的数据库移到不同如果[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例？ 如果使用数据库镜像，则这种情况适用于主体服务器及其故障转移伙伴。 如果服务器更改意味着必须更改 SPN，则这种情况将如何影响应用程序？ 是否将管理所有更改？  
+-   便利性和位置透明性:如果应用程序的数据库移到其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例, 会如何影响该应用程序的 spn？ 如果使用数据库镜像，则这种情况适用于主体服务器及其故障转移伙伴。 如果服务器更改意味着必须更改 SPN，则这种情况将如何影响应用程序？ 是否将管理所有更改？  
   
 ## <a name="specifying-the-spn"></a>指定 SPN  
  您可以使用对话框和代码指定 SPN。 本节论述了可以指定 SPN 的方式。  
@@ -105,7 +105,7 @@ ms.locfileid: "68069183"
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>支持 SPN 的 ODBC 和 OLE DB 语法  
  有关特定于语法的信息，请参阅以下主题：  
   
--   [服务主体名称&#40;Spn&#41;客户端连接中&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [服务主体命名&#40;客户&#41;端连接&#40;中的 spn ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
 -   [客户端连接中的服务主体名称 (SPN) (OLE DB)](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
