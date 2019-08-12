@@ -1,29 +1,28 @@
 ---
-title: 在 Linux 上安装 PolyBase | Microsoft Docs
-description: 本文介绍如何在 Linux 上安装 SQL Server 全文搜索。
+title: 在 Linux 上安装 PolyBase
+titlesuffix: SQL Server
+description: 本文介绍如何在 Linux 上安装 SQL Server PolyBase。
 author: aboke
 ms.author: aboke
 ms.date: 4/12/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 33a6a4415b5ced4bb2a5ca4448ccca8618f96832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c53eb5db9238f1da32cb207dafb9e36b7748914
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062146"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495354"
 ---
 # <a name="install-polybase-on-linux"></a>在 Linux 上安装 PolyBase
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-以下步骤在 Linux 上安装 [PolyBase](../../relational-databases/search/full-text-search.md) (mssql-server-polybase)。 PolyBase 允许针对远程数据源运行外部查询。 
+以下步骤在 Linux 上安装 [PolyBase](../../relational-databases/search/full-text-search.md) (mssql-server-polybase)  。 PolyBase 允许针对远程数据源运行外部查询。 
 
 >[!NOTE]
-> 在安装 Polybase 前，请首先[安装 SQL Server](../../linux/sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-polybase 包时要用到的密钥和存储库。
+> 在安装 Polybase 前，请首先[安装 SQL Server](../../linux/sql-server-linux-setup.md#platforms)。 这将配置安装 mssql-server-polybase 包时要用到的密钥和存储库  。
 
 > 当前无法在 Linux 上对 PolyBase 进行横向扩展。
 
@@ -38,7 +37,7 @@ ms.locfileid: "68062146"
 
 ## <a name="RHEL">在 RHEL 上安装</a>
 
-通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-polybase。 
+通过下列命令在 Red Hat Enterprise Linux 上安装 mssql-server-polybase  。 
 
 ```bash
 sudo yum install -y mssql-server-polybase
@@ -57,7 +56,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="ubuntu">在 Ubuntu 上安装</a>
 
-通过下列命令在 Ubuntu 上安装 mssql-server-polybase。 
+通过下列命令在 Ubuntu 上安装 mssql-server-polybase  。 
 
 ```bash
 sudo apt-get install mssql-server-polybase
@@ -76,7 +75,7 @@ sudo systemctl restart mssql-server
 
 ## <a name="SLES">在 SLES 上安装</a>
 
-通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-polybase。 
+通过下列命令在 SUSE Linux Enterprise Server 上安装 mssql-server-polybase  。 
 
 ```bash
 sudo zypper install mssql-server-polybase
@@ -106,7 +105,7 @@ RECONFIGURE [WITH OVERRIDE];
 
 ## <a name="update-polybase"></a>更新 PolyBase
 
-如果已安装 mssql-server-polybase，可使用下列命令将其更新至最新版本：
+如果已安装 mssql-server-polybase，可使用下列命令将其更新至最新版本  ：
 
 ### <a name="rhel"></a>RHEL
 
@@ -154,8 +153,6 @@ sudo systemctl restart mssql-server
 >安装后，必须[启用 PolyBase 功能](#enable)。
 
 ## <a name="next-steps"></a>后续步骤
-
-### <a name="supported-external-data-sources-on-linux"></a>Linux 上支持的外部数据源
 
 Linux 上的 PolyBase 可以访问以下数据源。 遵循提供的链接，详细了解如何从已启用 PolyBase 的数据源创建外部表。 
 

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a5513c6f1f326984c93a760afdd88f949dc18b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007986"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388404"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -88,6 +88,14 @@ ms.locfileid: "68007986"
     -   [灵活的文件目标](../integration-services/data-flow/flexible-file-destination.md)
 
 -   Azure Blob、Azure Data Lake Store 和 Data Lake Storage Gen2 文件枚举器。 请参阅 [Foreach 循环容器](../integration-services/control-flow/foreach-loop-container.md)
+
+## <a name="use-tls-12"></a>使用 TLS 1.2
+
+Azure 功能包使用的 TLS 版本遵循系统 .NET Framework 设置。
+若要使用 TLS 1.2，请使用以下两个注册表项下的数据 `1` 添加名称为 `SchUseStrongCrypto` 的 `REG_DWORD` 值。
+
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
+2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
 ## <a name="scenario-processing-big-data"></a>方案：处理大数据
  使用 Azure Connector 可完成以下大数据处理工作：

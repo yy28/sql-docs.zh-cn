@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2019 扩展 （预览版）
+title: SQL Server 2019 扩展（预览版）
 titleSuffix: Azure Data Studio
-description: SQL Server 2019 预览适用于 Azure Data Studio 扩展
+description: Azure Data Studio 的 SQL Server 2019 预览扩展
 ms.custom: seodec18
 ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
@@ -11,179 +11,179 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959218"
 ---
-# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展 （预览版）
+# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展（预览版）
 
-SQL Server 2019 扩展 （预览版） 提供新功能和工具支持的寄送的预览支持[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 这包括支持预览版[SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)，一个集成[笔记本体验](../big-data-cluster/notebooks-guidance.md)，和 PolyBase [Create External Table 向导](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
+SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和工具提供预览支持。 这包括 [SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)的预览支持，集成的[笔记本体验](../big-data-cluster/notebooks-guidance.md)和 PolyBase 的[“创建外部表”向导](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>安装 SQL Server 2019 扩展 （预览版）
+## <a name="install-the-sql-server-2019-extension-preview"></a>安装 SQL Server 2019 扩展（预览版）
 
-若要安装 SQL Server 2019 扩展 （预览版），下载并安装关联的.vsix 文件。
+要安装 SQL Server 2019 扩展（预览版），请下载并安装关联的 .vsix 文件。
 
-1. SQL Server 2019 扩展 （预览版）.vsix 文件下载到本地目录：
+1. 将 SQL Server 2019 扩展（预览版）.vsix 文件下载到本地目录：
 
    |平台|下载|发布日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25日日 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25日日 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25日日 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25 日 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25 日 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25 日 |0.14.1
 
-1. 在 Azure Data Studio 中选择**安装 VSIX 包中的扩展插件**从**文件**菜单，然后选择已下载的.vsix 文件。
+1. 在 Azure Data Studio 中，从“文件”菜单中选择“从 VSIX 包安装扩展”，然后选择下载的 .vsix 文件   。
 
-1. 选择**是**当系统提示你确认已安装并等待安装成功的通知。
+1. 在收到确认安装的提示时选择“是”，并等待安装成功的通知  。
 
-1. 選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
+1. 选择“重新加载”以启用扩展（仅在第一次安装扩展时需执行该操作）  。
 
-1. 重新加载后，该扩展将安装依赖项。 你可以查看在输出窗口中，进度，可能需要几分钟的时间。
+1. 重载后，扩展将安装依赖项。 可以在“输出”窗口中查看进度，这可能需要几分钟时间。
 
-1. 依赖项后完成的安装，关闭并重新打开 Azure Data Studio。 **SQL Server 大数据群集**之前重新启动 Azure Data Studio，连接类型不可用。
+1. 安装完依赖项后，关闭并重新打开 Azure Data Studio。 在重启 Azure Data Studio 之前，“SQL Server 大数据群集”连接类型不可用  。
 
 ## <a name="changes-in-release-0141"></a>版本 0.14.1 中的更改
-* CTP 3.1 数据源支持的支持
+* 支持 CTP 3.1 数据源支持
 
 ## <a name="changes-in-release-0121"></a>版本 0.12.1 中的更改
 
-* **SQL Server 大数据群集**连接类型已在此版本中被删除。 从 SQL Server 大数据群集连接以前提供的所有功能现都已推出的 SQL Server 连接。
-* HDFS 浏览可以下找到**Data Services**文件夹
-* 笔记本的 PySpark 和其他大数据内核工作时连接到 SQL Server 大数据群集中的 SQL Server 主实例。
-* 创建外部表向导：
-  * 用于创建使用现有的外部数据源的外部表的支持。
-  * 在向导的性能改进。
-  * 改进的对象名称包含特殊字符处理。 在某些情况下这些导致了该向导失败
-  * 对象映射页的可靠性改进。
-  * 已删除的系统数据库的: DWConfiguration、 DWDiagnostics、 DWQueue-从数据库下拉列表。
-  * 对设置外部文件格式对象的名称支持**从 CSV 文件创建外部表**向导。
-  * 添加到的第一页的刷新按钮**从 CSV 文件创建外部表**向导。
+* 此版本中已删除 SQL Server 大数据群集连接类型  。 之前 SQL Server 大数据群集连接提供的所有功能现在都可以在 SQL Server 连接中获取。
+* 可以在“数据服务”文件夹下找到 HDFS 浏览 
+* 对于笔记本，PySpark 和其他大数据内核在连接到 SQL Server 大数据群集中的 SQL Server 主实例时可以正常工作。
+* “创建外部表”向导：
+  * 支持使用现有外部数据源创建外部表。
+  * 对整个向导进行了性能改进。
+  * 改进了对具有特殊字符的对象名称的处理效果。 在某些情况下，这些字符曾导致向导发生故障
+  * 增强了“对象映射”页的可靠性。
+  * 从数据库下拉列表中删除了系统数据库“DWConfiguration”、“DWDiagnostics”、“DWQueue”。
+  * 支持在“从 CSV 文件创建外部表”向导中设置外部文件格式对象的名称  。
+  * 在“从 CSV 文件创建外部表”向导的第一页中添加了一个刷新按钮  。
 
-## <a name="release-notes-v0110"></a>发行说明 (v0.11.0)
+## <a name="release-notes-v0110"></a>发行说明 (v 0.11.0)
 
-* Jupyter Notebook 支持，专门为 Python3 和 Spark 内核时，支持已移到 Azure Data Studio。 此扩展插件不再需要使用笔记本。
-* 在外部数据向导中的多个 bug 修复：
-  * Oracle 类型映射已更新以匹配在 SQL Server 2019 CTP 2.3 中提供的更改。
-  * 修复了其中已丢失的表映射控件中键入新架构。
-  * 修复了在其中检查表映射中的数据库节点没有导致所有表和视图被检查。
+* Jupyter Notebook 支持，特别是对 Python3 和 Spark 内核的支持，已转移到 Azure Data Studio 中。 使用 Notebook 时不再需要此扩展。
+* 修复了外部数据向导中的多个 Bug：
+  * Oracle 类型映射已更新，以匹配 SQL Server 2019 CTP 2.3 中的更改。
+  * 修复了问题：在表映射控件中键入的新架构会丢失。
+  * 修复了问题：检查表映射中的数据库节点时未检查全部表和视图。
 
 
-## <a name="release-notes-v0102"></a>发行说明 (v0.10.2)
+## <a name="release-notes-v0102"></a>发行说明 (v 0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 支持
-已更新的 SQL Server 2019 支持。 连接到 SQL Server 大数据群集实例的新_Data Services_文件夹会在资源管理器树中。 此项操作，例如打开针对连接的新笔记本、 提交 Spark 作业，以及使用 HDFS 的启动点。 请注意，对于某些操作如_创建外部数据_HDFS 文件/文件夹，通过_SQL Server 2019 预览版_必须安装扩展。
+对 SQL Server 2019 的支持已更新。 在连接到 SQL Server 大数据群集实例时，资源管理器树中会显示一个新的“数据服务”文件夹  。 其中包含一些操作的启动点，这些操作包括针对连接打开新 Notebook、提交 Spark 作业以及使用 HDFS 等。 请注意，对于某些操作，例如通过 HDFS 文件/文件夹创建外部数据，需要安装 SQL Server 2019（预览版）扩展   。
 
 ### <a name="notebook-support"></a>Notebook 支持
-我们在此版本中的 Notebook 用户界面进行了大幅更新。 我们的重点是使其易于读取与你共享的笔记本。 这意味着删除所有概述单元格周围的框，除非选择或悬停，对于简单单元格级别的操作而不需要选择一个单元格添加悬停支持并阐明通过添加执行计数，一个经过动画处理的执行状态_停止正在运行_按钮和的详细信息。 我们还添加了的键盘快捷方式_新的 Notebook_ (`Ctrl+Shift+N`)，_运行的单元格_(`F5`)，_新的代码单元格_(`Ctrl+Shift+C`)， _新的文本单元格_(`Ctrl+Shift+T`)。 我们将力求通过快捷方式，让我们了解你缺少具有可启动的所有密钥操作开幕 ！
+我们对此版本中的 Notebook 用户界面进行了较大程度的更新。 我们的目标是使用户能够轻松读取与之共享的 Notebook。 这意味着删除单元格周围的所有边框（已选中或鼠标悬停的单元格除外）、添加悬停支持以便于无需选择单元格即可轻松实施单元格级操作、通过添加执行计数和一个动态“停止运行”按钮等内容来明确执行状态  。 我们还为后列操作添加了键盘快捷方式：新建笔记本 (`Ctrl+Shift+N`)、运行单元 (`F5`)、新代码单元 (`Ctrl+Shift+C`)、新文本单元 (`Ctrl+Shift+T`)     。 展望未来，我们的目标是通过快捷方式实现所有关键操作，你只需告诉我们还缺少哪些快捷方式！
 
 其他改进和修复包括：
-* _SQL Server 2019 预览版_扩展现在提示使用选择 Python 依赖项安装目录。 它还不能再包括中的 Python `.vsix file`，减少总体扩展大小。 因此使用这些安装此扩展需要支持 Spark 和 Python3 内核时，所需的 Python 依赖项。
-* 添加了支持用于启动命令行中的新笔记本。 使用参数启动`--command=notebook.command.new --server=myservername`应打开一个新的 notebook 并连接到此服务器。
-* 性能修复的大型代码长度在单元格的笔记本。 如果代码的单元格则会添加一个滚动条的 250 多个行。
-* 改进了.ipynb 文件支持。 现在支持 3 个或更高版本。 请注意，在保存文件将更新到版本 4 或更高版本。
-* `notebook.enabled`用户设置是否已删除现在的内置笔记本中查看器是稳定
-* 高对比度主题现在支持有很多的对象布局的修补程序在这种情况下。
-* 已修复 #3680 输出有时显示的数`,,,`字符不正确
-* 修复的 #3602 编辑器为单元格消失后导航离开 azure 数据 studio
-* 添加了支持使用网格视图`application/vnd.dataresource+json`输出 MIME 类型。 这意味着使用此选项的多个笔记本 (例如通过设置`pd.options.display.html.table_schema`Python notebook 中) 将有更好的表格输出固定 #3959 Azure Data Studio 关闭 notebook 后，两次会尝试将关闭 notebook 服务器
+* SQL Server 2019（预览版）扩展现会提示用户为 Python 依赖项选取安装目录  。 它也不再在 `.vsix file` 中包含 Python，从而减少了整体扩展大小。 需要 Python 依赖项来支持 Spark 和 Python3 内核，因此需要安装此扩展以使用这些内核。
+* 新增对后列操作的支持：从命令行启动新笔记本。 使用参数 `--command=notebook.command.new --server=myservername` 启动时应会打开一个新笔记本并连接到此服务器。
+* 对单元格中代码长度较长的笔记本进行了性能修复。 如果代码单元格超过 250 行，会添加一个滚动条。
+* 改进了 .ipynb 文件支持。 现在支持版本 3 或更高版本。 请注意，保存的文件将更新为版本 4 或更高版本。
+* 由于内置的 Notebook 查看器稳定，因此删除了 `notebook.enabled` 用户设置
+* 现在支持高对比度主题，并在此前提下对对象布局进行了一些修复。
+* 修复了 #3680 问题：输出有时会错误地显示一些 `,,,` 字符
+* 修复了 #3602 问题：在离开 azure data studio 后编辑器消失
+* 添加了支持：为 `application/vnd.dataresource+json` 输出 MIME 类型使用“网格”视图。 这意味着许多使用此功能的 Notebook（例如通过在 Python 笔记本中设置 `pd.options.display.html.table_schema`）将有更好的表格输出。修复了 #3959 问题：关闭笔记本后，Azure Data Studio 尝试两次关闭笔记本服务器
 
 #### <a name="known-issues"></a>已知问题
-* 在打开笔记本将显示安装 python 对话框。 取消此安装将导致内核并附加到下拉列表未显示预期的值。 解决方法是完成 Python 安装。
-* 使用不受支持的内核打开笔记本时，内核和_将附加到_下拉列表将导致 Azure Data Studio 挂起。 将需要关闭 Azure Data Studio，并确保使用支持的内核 (Python3、 Spark |R、 Spark |PySpark、 Scala PySpark3)
-* 使用 PySpark3 或针对 SQL Server 终结点的其他 Spark 内核时，Spark UI 链接失败。 作为一种解决方法请单击仪表板中，Spark UI 或使用 SQL Server 大数据群集连接类型，因为这将产生正确的 Spark UI 超链接进行连接
+* 打开 Notebook 时，会出现“安装 python”对话框。 取消此安装后，“内核”和“附加到”下拉列表不会显示预期值。 暂时的解决方法是完成 Python 安装。
+* 使用不受支持的内核打开笔记本时，“内核”和“附加到”下拉列表会导致 Azure Data Studio 挂起  。 需要关闭 Azure Data Studio，并确保使用受支持的内核（Python3、Spark | R、Spark | Scala、PySpark、PySpark3）
+* 当对 SQL Server 终结点使用 PySpark3 或其他 Spark 内核时，Spark UI 链接失败。 一个暂时的解决方法是，在仪表板中单击“Spark UI”，或使用 SQL Server 大数据群集连接类型进行连接，因为这会得到正确的 Spark UI 超链接
 
-### <a name="extensibility-improvements"></a>可扩展性的改进
-在此版本中添加了大量改进，可帮助扩展程序
-* 一个新`ObjectExplorerNodeProvider`API 允许扩展参与 SQL Server 或其他连接节点下的文件夹。 这是如何`Data Services`下 SQL Server 2019 实例添加节点，但可用于轻松地将监视或其他文件夹添加到 UI。
-* 两个新的上下文键值是可用于帮助对仪表板的显示/隐藏贡献。
+### <a name="extensibility-improvements"></a>扩展性改进
+此版本中添加了许多可优化扩展程序控件的改进
+* 通过一个新的 `ObjectExplorerNodeProvider` API，扩展能够在 SQL Server 或其他连接节点下贡献文件夹。 这是在 SQL Server 2019 实例下添加 `Data Services` 节点的方式，但可以用于将“监视”文件夹或其他文件夹轻松添加到 UI。
+* 有两个新的上下文键值可用于帮助显示/隐藏对仪表板的贡献。
   * `mssql:iscluster` 指示这是否是 SQL Server 2019 大数据群集
-  * `mssql:servermajorversion` 具有服务器版本 (SQL Server 2019，14 个 SQL Server 2017 和等等的 15)。 这可以帮助是否功能应仅显示适用于 SQL Server 2017 或更高版本，例如。
+  * `mssql:servermajorversion` 指示服务器版本（15 为 SQL Server 2019，14 为 SQL Server 2017，依此类推）。 如果只显示（例如）SQL Server 2017 或更高版本的功能，可以使用这个键。
 
 
-## <a name="release-notes-v080"></a>发行说明 (v0.8.0)
-*笔记本*:
-* 添加单元格之前 / 之后现有单元格现在支持通过单击"更多操作"单元格按钮
-* **添加新的连接**选项已添加到在"附加到"下拉列表中的连接
-* 一个**重新安装依赖项 Notebook**为了帮助进行 Python 程序包更新，并解决其中安装已暂停停滞不前关闭应用程序的情况下，已添加命令。 这可以从命令面板中运行 (使用`Ctrl/Cmd+Shift+P`并键入`Reinstall Notebook Dependencies`)
-* PROSE python 包已更新到 1.1.0，并且包括许多 bug 修复程序。 使用**重新安装依赖项 Notebook**命令以更新此包
-* 一个**清除输出**通过单击现在支持命令**更多操作**单元按钮
-* 修复了以下客户报告的问题：
-  * 笔记本会话无法启动在 Windows 上由于路径问题
-  * 无法从根文件夹的驱动器，例如 C:\ 或 D:\ 启动笔记本
-  * [# 2820年](https://github.com/Microsoft/azuredatastudio/issues/2820)无法编辑从广告在 VS Code 中创建的笔记本
-  * 运行 Spark 内核时，Spark UI 链接现在可以正常工作
-  * 重命名为"托管包""安装包"
+## <a name="release-notes-v080"></a>发行说明 (v 0.8.0)
+*Notebooks*：
+* 现在是通过单击“更多操作”单元格按钮来支持在现有单元格之前/之后添加单元格
+* 已向“附加到”下拉列表中的连接中添加了“添加新连接”选项 
+* 添加了“重新安装 Notebook 依赖项”命令，用于协助 Python 程序包更新，同时，可通过关闭应用程序解决安装过程中途停止的问题  。 该命令可通过命令面板运行（使用 `Ctrl/Cmd+Shift+P` 并键入 `Reinstall Notebook Dependencies`）
+* PROSE python 包已更新到 1.1.0 并修复了许多 Bug。 使用“重新安装 Notebook 依赖项”命令更新此包 
+* 现在，单击“更多操作”单元格按钮，可使用“清除输出”命令  
+* 修复了客户报告的以下问题：
+  * 由于 PATH 问题，笔记本会话无法在 Windows 上启动
+  * 无法从驱动器的根文件夹启动 Notebook，例如 C:\ 或 D:\
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) 无法在 VS Code 中编辑从 ADS 创建的笔记本
+  * 现在，运行 Spark 内核时，Spark UI 链接可正常运行
+  * 将“托管包”重命名为“安装包”
 
-*创建外部数据*:
+*创建外部数据*：
 
-* 错误消息是可复制和已拆分为的摘要和详细视图变得更容易
-* 改进了的 UI 布局并显著提高了的可靠性和错误处理
-* 修复了以下客户报告的问题：
-  * 具有无效的列映射的表将显示为已禁用并且警告解释该错误
+* 错误消息可以复制，并已拆分为摘要和详细视图，以便于查看
+* 改进了 UI 布局，且显著提高了可靠性和错误处理效果
+* 修复了客户报告的以下问题：
+  * 具有无效列映射的表显示为“禁用”，并会显示一个说明错误的警告
 
-## <a name="release-notes-v072"></a>发行说明 (v0.7.2)
-* Azure 资源浏览器现已内置到 Azure Data Studio，并已从此扩展。 感谢你对此的反馈 ！
-* 提高的性能的笔记本与多 Markdown 的单元格。
-* 在 Notebook 中的自动调整大小的代码单元格。 这仍具有最小大小基于单元格工具栏上。
-* 安装笔记本依赖项时通知用户。 在 Windows 上具体而言这可能需要很长时间，因此，通知现在显示在任务视图中。
-* 重新安装笔记本依赖项的支持。 这是很有用，如果用户以前关闭的 Azure Data Studio 仅完成安装。
-* 取消在 Notebook 中的单元格执行的支持。
-* 使用向导创建外部数据时提高的可靠性，特别是连接中发生错误时。
-* 如果 PolyBase 未启用或目标服务器中正在运行，则阻止使用创建外部数据向导。
-* 拼写检查和命名与 SQL Server 2019 和创建外部数据相关的修复。
-* 从 Azure Data Studio 调试控制台中删除大量错误。
+## <a name="release-notes-v072"></a>发行说明 (v 0.7.2)
+* Azure 资源浏览器现已内置于 Azure Data Studio 中，并已从此扩展中删除。 非常感谢你提供反馈！
+* 改进了具有许多 Markdown 单元格的笔记本的性能。
+* Notebook 中提供自动调整大小的代码单元格。 该单元格仍具有基于单元格工具栏的最小大小。
+* 安装 Notebook 依赖项时通知用户。 特别是在 Windows 上，这可能需要很长时间，因此通知现在显示在“任务”视图中。
+* 支持重新安装 Notebook 依赖项。 如果用户之前在安装途中关闭了 Azure Data Studio，此功能会很有用。
+* 支持在 Notebook 中取消单元格执行。
+* 提高了使用“创建外部数据”向导时的可靠性，特别是在发生连接错误时。
+* 如果未在目标服务器中启用或运行 PolyBase，则阻止使用“创建外部数据”向导。
+* 修复了与 SQL Server 2019 和创建外部数据相关的拼写和命名问题。
+* 消除了 Azure Data Studio 调试控制台中的大量错误。
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 大数据群集支持
 
-* 单击**添加连接**中*对象资源管理器*，然后选择**SQL Server 大数据群集**作为连接类型。
+* 单击“对象资源管理器”中的“添加连接”，然后选择“SQL Server 大数据群集”作为连接类型    。
 
    > [!TIP]
-   > 如果没有看到**SQL Server 大数据群集**连接类型，请重新启动 Azure Data Studio。
+   > 如果未看到 SQL Server 大数据群集连接类型，请重启 Azure Data Studio  。
 
-* 输入主机名或 IP 地址的群集终结点以及用户名和密码用于连接。
-* （可选） 包含中的友好显示名称**名称**字段。
-* 单击**Connect** ，然后可以启动的常见任务在仪表板中，浏览**HDFS**中对象资源管理器，并从那里运行的上下文中任务。
-* 若要提交针对群集的 Spark 作业，右键单击服务器节点上*对象资源管理器*，然后选择**提交 Spark 作业**以显示提交对话框。
-* 若要打开笔记本，请参阅下一节。
+* 输入群集终结点的主机名或 IP 地址以及用于连接的用户名和密码。
+* （可选）在“名称”字段中包含友好显示名称  。
+* 单击“连接”，然后可以从仪表板启动常见任务，在对象资源管理器中浏览 HDFS，并在其中运行上下文任务   。
+* 要针对群集提交 Spark 作业，请右键单击“对象资源管理器”中的“服务器节点”，然后选择“提交 Spark 作业”以打开提交对话框   。
+* 要打开 Notebook，请参阅下一部分。
 
 有关详细信息，请参阅[大数据群集](../big-data-cluster/big-data-cluster-overview.md)。
 
 
-## <a name="azure-data-studio-notebooks"></a>Azure 数据 Studio 笔记本
+## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebooks
 
-* 通过以下方式之一打开笔记本：
-  * 打开从新的 notebook*命令面板*。
-  * 打开 SQL Server 2019 大数据群集，并为该 HDFS 对象资源管理器树：
-    * 右键单击服务器节点上，然后选择**新的 Jupyter 笔记本**。
-    * 右键单击 CSV 文件，然后选择**在 Notebook 中的分析**。
-  * 打开现有.ipynb 文件从**文件**菜单或文件资源管理器 *（.ipynb 文件必须升级到版本 4 或更高版本才能正确加载）*
-* 选择一个内核。 对于本地 notebook 执行，选择 Python 3。 为远程执行选择 PySpark 或 Spark |Scala。
-* 选择 SQL Server 大数据群集终结点连接到远程执行 （这是不必要的本地开发和 Python 3）。
-* 在笔记本标题中添加代码或 markdown 通过按钮的单元格。 删除具有垃圾桶图标左侧的每个单元格的单元格。
-* 使用代码单元格的播放按钮运行的单元格和切换 markdown 编辑和预览的眼睛图标
+* 使用以下方法之一打开一个笔记本：
+  * 通过命令面板打开一个新笔记本  。
+  * 打开 SQL Server 2019 大数据群集的 HDFS 对象资源管理器树，并执行以下任一操作：
+    * 右键单击服务器节点，然后选择“新建 Jupyter Notebook”  。
+    * 右键单击 CSV 文件，然后选择“在 Notebook 中分析”  。
+  * 从“文件”菜单或文件资源管理器打开现有的 .ipynb 文件（必须将 .ipynb 文件升级到版本 4 或更高版本才能正确加载）  
+* 选择内核。 对于本地笔记本执行，请选择 Python 3。 要进行远程执行，请选择 PySpark 或 Spark | Scala。
+* 如果要远程执行，请选择要连接的 SQL Server 大数据群集终结点（如果使用 Python 3 进行本地开发，这不是必需的）。
+* 通过笔记本标题中的按钮添加代码或 markdown 单元格。 使用每个单元格左侧的垃圾桶图标删除单元格。
+* 使用代码单元格的播放按钮运行单元格，并使用眼睛图标在 markdown 编辑和预览之间进行切换
 
-## <a name="polybase-create-external-table-wizard"></a>PolyBase 创建外部表向导
+## <a name="polybase-create-external-table-wizard"></a>PolyBase“创建外部表”向导
 
-* 从 SQL Server 2019 实例*创建外部表向导*可打开以下三种方式：
-  * 右键单击服务器上，选择**管理**，单击选项卡上的 SQL Server 2019 （预览版），然后选择**Create External Table**。
-  * 使用 SQL Server 2019 实例中所选*对象资源管理器*，打开*创建外部向导*通过*命令面板*。
-  * 右键单击 SQL Server 2019 数据库中*对象资源管理器*，然后选择**Create External Table**。
-* 在此版本的扩展，可能会创建外部表以访问远程 SQL Server 和 Oracle 表。
+* 在 SQL Server 2019 实例中，可以通过三种方式打开“创建外部表向导”  ：
+  * 右键单击服务器，选择“管理”，单击 SQL Server 2019 （预览版）的选项卡，然后选择“创建外部表”   。
+  * 在“对象资源管理器”中选择 SQL Server 2019 实例后，通过“命令面板”调出“创建外部向导”    。
+  * 右键单击“对象资源管理器”中的 SQL Server 2019 数据库，然后选择“创建外部表”   。
+* 在此版本的扩展中，可以创建外部表以访问远程 SQL Server 和 Oracle 表。
 
   > [!NOTE]
-  > SQL 2019 功能的外部表功能时，远程 SQL Server 可能运行早期版本的 SQL Server。
+  > 虽然外部表功能是 SQL 2019 功能，但远程 SQL Server 可能正在运行早期版本的 SQL Server。
 
-* 选择是否要在向导的第一页中访问 SQL Server 或 Oracle 并继续。
-* 系统会提示创建数据库主密钥，如果其中一个不已创建 （不足复杂性的密码将被阻止）。
-* 创建数据源连接和远程服务器命名凭据。
-* 选择要将映射到新的外部表的对象。
-* 选择**生成脚本**或**创建**以完成该向导。
-* 外部表的创建后, 立即出现在对象树中的数据库的创建位置。
+* 在向导的第一页上选择是访问 SQL Server 还是访问 Oracle，然后继续。
+* 如果尚未创建数据库主密钥，系统将提示创建数据库主密钥（复杂度不足的密码将被阻止）。
+* 为远程服务器创建数据源连接和命名的凭据。
+* 选择要映射到新外部表的对象。
+* 选择“生成脚本”或“创建”以完成向导   。
+* 创建外部表后，它会直接显示在创建时所在的数据库的对象树中。
 
 
 ## <a name="known-issues"></a>已知问题
 
-* 如果创建的连接时，不保存密码，如提交 Spark 作业的某些操作可能不会成功。
-* 现有.ipynb 笔记本必须升级到版本 4 或更高版本才能加载查看器中的内容。
-* 运行**重新安装依赖项 Notebook**命令可能会显示 2 个任务在任务视图中，其中之一失败。 这不会导致安装失败
-* 选择**添加新连接**在 Notebook，并单击取消将导致**选择连接**来显示，即使你已连接。
+* 如果在创建连接时未保存密码，则某些操作（如提交 Spark 作业）可能会失败。
+* 需要将现有 .ipynb 笔记本升级到版本 4 或更高版本才能在查看器中加载内容。
+* 运行“重新安装 Notebook 依赖项”命令可能会在任务视图中显示 2 个任务，其中一个任务会失败  。 这不会导致安装失败
+* 在 Notebook 中选择“添加新连接”并单击“取消”后会显示“选择连接”，即使已连接   。

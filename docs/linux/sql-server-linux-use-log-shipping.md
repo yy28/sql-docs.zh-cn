@@ -1,6 +1,6 @@
 ---
-title: 配置日志传送 Linux 上的 SQL Server
-description: 本教程演示如何将 Linux 上的 SQL Server 实例复制到第二个实例使用日志传送的基本示例。
+title: 为 Linux 上的 SQL Server 配置日志传送
+description: 本教程举例说明如何使用日志传送将 Linux 上的 SQL Server 实例复制到辅助实例。
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/19/2017
@@ -8,28 +8,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032198"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上的日志传送入门
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器复制到一个或多个辅助服务器上。 简单地说，可将源数据库的备份还原到辅助服务器上。 随后，主服务器会定期创建事务日志备份，辅助服务器会还原备份，同时更新数据库的辅助副本。 
+SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器复制到一个或多个辅助服务器上。 简单地说，可将源数据库的备份还原到辅助服务器上。 随后，主服务器会定期创建事务日志备份，辅助服务器会还原备份，同时更新数据库的次要副本。 
 
   ![日志传送](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-中所述的图片，日志传送会话涉及以下步骤：
+如图片所示，日志传送过程包含以下步骤：
 
-- 备份主 SQL Server 实例上的事务日志文件
-- 通过网络事务日志备份文件复制到一个或多个辅助 SQL Server 实例
-- 还原的辅助 SQL Server 实例上的事务日志备份文件
+- 在 SQL Server 主实例上备份事务日志文件
+- 将事务日志备份文件通过网络复制到一个或多个辅助 SQL Server 实例
+- 还原辅助 SQL Server 实例上的事务日志备份文件
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 - [在 Linux 上安装 SQL Server 代理](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>使用 CIFS 为日志传送设置网络共享 
@@ -38,13 +38,13 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 > 本教程使用 CIFS 和 Samba 设置网络共享。 如果想使用 NFS，请留下评论，我们会将其添加到文档。       
 
 ### <a name="configure-primary-server"></a>配置主服务器
--   运行以下命令安装 Samba
+-   运行以下命令以安装 Samba
 
     ```bash
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   创建一个目录来存储日志的日志传送并为 mssql 提供所需的权限
+-   创建用于存储日志传送的日志的目录，并为 mssql 提供所需权限
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -52,7 +52,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   编辑 /etc/samba/smb.conf 文件 （需要根权限为此，） 并添加以下节：
+-   编辑 /etc/samba/smb.conf 文件（需要根权限）并添加以下部分：
 
     ```bash
     [tlogs]
@@ -77,13 +77,13 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
  
 ### <a name="configure-secondary-server"></a>配置辅助服务器
 
--   运行以下命令安装 CIFS 客户端
+-   运行以下命令以安装 CIFS 客户端
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   创建一个文件来存储你的凭据。 使用最近为 mssql Samba 帐户设置的密码 
+-   创建文件以存储凭据。 使用最近为 mssql Samba 帐户设置的密码 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -91,7 +91,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
         domain=<domain>
         password=<password>
 
--   运行以下命令创建一个空的目录用于装载并正确设置权限和所有权
+-   运行以下命令创建空目录，用于装载并正确设置权限和所有权
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -100,7 +100,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   将行添加到 etc/fstab 以保留共享 
+-   将此行添加到 etc/fstab 以保留共享 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
@@ -283,9 +283,9 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>验证日志传送是否正常工作
+## <a name="verify-log-shipping-works"></a>验证日志传送是否正常运行
 
-- 验证日志传送工作由主服务器上启动以下作业
+- 通过在主服务器上启动以下作业来验证日志传送是否正常运行
 
     ```sql
     USE msdb ;  
@@ -295,7 +295,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
     GO  
     ```
 
-- 验证日志传送工作通过辅助服务器上启动以下作业
+- 通过在辅助服务器上启动以下作业来验证日志传送是否正常运行
  
     ```sql
     USE msdb ;  

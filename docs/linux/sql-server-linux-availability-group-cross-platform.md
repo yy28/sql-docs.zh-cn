@@ -1,6 +1,6 @@
 ---
-title: 配置 SQL Server Always On 可用性组在 Windows 和 Linux 上
-description: Windows 和 Linux 上的副本，配置 SQL Server 可用性组。
+title: 在 Windows 和 Linux 上配置 SQL Server AlwaysOn 可用性组
+description: 使用 Windows 和 Linux 上的副本配置 SQL Server 可用性组。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,71 +11,71 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68045195"
 ---
-# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>配置 SQL Server Always On 可用性组在 Windows 和 Linux （跨平台） 上
+# <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>在 Windows 和 Linux 上配置 SQL Server AlwaysOn 可用性组（跨平台）
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-此文章介绍了创建具有 Windows 服务器上的一个副本和 Linux 服务器上的其他副本的 Always On 可用性组 (AG) 的步骤。 此配置是跨平台，因为副本位于不同的操作系统。 迁移到另一个平台或灾难恢复 (DR) 的使用此配置。 此配置不支持高可用性，因为没有群集的解决方案来管理跨平台配置。 
+本文介绍后述操作的步骤：创建“Always On 可用性组 (AG)”，且一个副本在 Windows 服务器上，另一个副本在 Linux 服务器上。 此配置是跨平台的，因为副本在不同的操作系统上。 使用此配置从一个平台迁移到另一个平台或实现灾难恢复 (DR)。 此配置不支持高可用性，因为没有可用于管理跨平台配置的群集解决方案。 
 
-![混合 None](./media/sql-server-linux-availability-group-overview/image1.png)
+![无混合](./media/sql-server-linux-availability-group-overview/image1.png)
 
-在继续之前，应熟悉安装和配置 Windows 和 Linux 上的 SQL Server 实例。 
+在继续之前，应熟悉 Windows 和 Linux 上 SQL Server 实例的安装和配置。 
 
 ## <a name="scenario"></a>应用场景
 
-在此方案中，两个服务器是在不同操作系统上。 名为 Windows Server 2016`WinSQLInstance`承载主副本。 名为的 Linux 服务器`LinuxSQLInstance`承载辅助副本。
+在此方案中，两台服务器使用不同的操作系统。 名为 `WinSQLInstance` 的 Windows Server 2016 承载主副本。 名为 `LinuxSQLInstance` 的 Linux 服务器承载次要副本。
 
-## <a name="configure-the-ag"></a>配置可用性组 
+## <a name="configure-the-ag"></a>配置 AG 
 
-若要创建可用性组的步骤是创建读取缩放工作负荷的可用性组的步骤相同。 可用性组群集类型为 NONE，因为没有群集管理器。 
+创建 AG 的步骤与为“读取缩放”工作负荷创建 AG 的步骤相同。 AG 群集类型为 NONE，因为没有群集管理器。 
 
    >[!NOTE]
-   >这篇文章中的脚本，对于角度方括号`<`和`>`标识你需要更换为您的环境的值。 在尖括号内本身不需要的脚本。 
+   >对于本文中的脚本，尖括号 `<` 和 `>` 用于标识需要为环境替换的值。 脚本不需要尖括号本身。 
 
-1. Windows Server 2016 上安装 SQL Server 2017 中，启用 Always On 可用性组从 SQL Server 配置管理器中，并将混合的模式身份验证设置。 
+1. 在 Windows Server 2016 上安装 SQL Server 2017，从 SQL Server 配置管理器启用 AlwaysOn 可用性组，并设置混合模式身份验证。 
 
    >[!TIP]
-   >如果您要验证此解决方案在 Azure 中的，将这两个服务器置于同一可用性集中，以确保它们在数据中心之间用。 
+   >如果要在 Azure 中验证此解决方案，请将两个服务器放在同一可用性集中，以确保它们在数据中心中相互独立。 
 
    **启用可用性组**
 
-   有关说明，请参阅[启用和禁用 Always On 可用性组 (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。
+   有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。
 
    ![启用可用性组](./media/sql-server-linux-availability-group-cross-platform/1-sqlserver-configuration-manager.png)
 
-   SQL Server 配置管理器说明计算机不是故障转移群集中的节点。 
+   SQL Server 配置管理器指出计算机不是故障转移群集中的节点。 
 
    启用可用性组后，重新启动 SQL Server。
 
-   **设置混合的模式身份验证**
+   **设置混合模式身份验证**
 
-   有关说明，请参阅[更改服务器身份验证模式](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)。
+   如需相关说明，请参阅[更改服务器身份验证模式](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)。
 
-1. 在 Linux 上安装 SQL Server 2017。 有关说明，请参阅[安装 SQL Server](sql-server-linux-setup.md)。 启用`hadr`mssql-conf 通过
+1. 在 Linux 上安装 SQL Server 2017。 有关说明，请参阅[安装 SQL Server](sql-server-linux-setup.md)。 通过 mssql-conf 启用 `hadr`。
 
-   若要启用`hadr`mssql conf 从 shell 提示符下，通过发出以下命令：
+   要从 shell 提示符通过 mssql-conf 启用 `hadr`，请发出以下命令：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
    ```
 
-   启用后`hadr`，重新启动 SQL Server 实例。  
+   启用 `hadr` 后，重新启动 SQL Server 实例。  
 
-   下图显示了此步骤中完成。
+   下图显示了此完整步骤。
 
    ![启用可用性组 Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
-1. 配置两个服务器上的 hosts 文件或 DNS 中注册的服务器的名称。
+1. 同时在两台服务器上配置 hosts 文件或向 DNS 注册服务器名称。
 
-1. 打开防火墙端口 TPC 1433 和 5022 在 Windows 和 Linux 上。
+1. 同时在 Windows 和 Linux 上为 TPC 1433 和 5022 打开防火墙端口。
 
-1. 在主副本上创建数据库登录名和密码。
+1. 在主副本上，创建数据库登录名和密码。
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -83,7 +83,7 @@ ms.locfileid: "68045195"
    GO
    ```
 
-1. 在主副本上创建主密钥和证书，然后使用私钥备份的证书。
+1. 在主副本上，创建主密钥和证书，然后使用私钥备份证书。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -97,23 +97,23 @@ ms.locfileid: "68045195"
    GO
    ```
 
-1. 在复制到 Linux 服务器 （辅助副本） 的证书和私钥`/var/opt/mssql/data`。 可以使用`pscp`若要将文件复制到 Linux 服务器。 
+1. 将证书和私钥复制到 Linux 服务器（次要副本）的 `/var/opt/mssql/data` 处。 可以使用 `pscp` 将文件复制到 Linux 服务器。 
 
-1. 设置组和私有密钥和证书的所有权`mssql:mssql`。
+1. 将私钥和证书的组和所有权设置为 `mssql:mssql`。
 
-   以下脚本设置的组和文件的所有权。 
+   以下脚本设置文件的组和所有权。 
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.pvk
    sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.cer
    ```
 
-   在下图中，所有权和组设置是正确的证书和密钥。
+   下图中为证书和密钥正确设置了所有权和组。
 
    ![启用可用性组 Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
-1. 在辅助副本上创建数据库登录名和密码并创建一个主密钥。
+1. 在次要副本上，创建数据库登录名和密码并创建主密钥。
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -123,7 +123,7 @@ ms.locfileid: "68045195"
    GO
    ```
 
-1. 在辅助副本上还原该证书复制到`/var/opt/mssql/data`。 
+1. 在次要副本上，还原复制到 `/var/opt/mssql/data` 的证书。 
 
    ```sql
    CREATE CERTIFICATE dbm_certificate   
@@ -136,7 +136,7 @@ ms.locfileid: "68045195"
    GO
    ```
 
-1. 在主副本上创建一个终结点。
+1. 在主副本上，创建终结点。
 
    ```sql
    CREATE ENDPOINT [Hadr_endpoint]
@@ -152,26 +152,26 @@ ms.locfileid: "68045195"
    ```
 
    >[!IMPORTANT]
-   >防火墙必须打开侦听器的 TCP 端口。 在前面的脚本中，端口为 5022。 使用任何可用 TCP 端口。 
+   >必须为侦听器 TCP 端口打开防火墙。 在上面的脚本中，端口是 5022。 使用任何可用的 TCP 端口。 
 
-1. 在辅助副本上创建终结点。 重复上述脚本创建的终结点在辅助副本上。 
+1. 在次要副本上，创建终结点。 在次要副本上重复上述脚本以创建端点。 
 
-1. 在主副本上创建具有 AG `CLUSTER_TYPE = NONE`。 示例脚本使用`SEEDING_MODE = AUTOMATIC`创建可用性组。 
+1. 在主副本上，使用 `CLUSTER_TYPE = NONE` 创建 AG。 示例脚本使用 `SEEDING_MODE = AUTOMATIC` 创建 AG。 
 
    >[!NOTE]
-   >当 SQL Server 的 Windows 实例数据和日志文件，自动种子设定到 SQL Server 的 Linux 实例失败，因为这些路径不存在辅助副本上使用不同的路径。 若要使用以下脚本为跨平台可用性组，数据库的 Windows 服务器上的数据和日志文件需要相同的路径。 或者，你可以更新脚本以设置`SEEDING_MODE = MANUAL`，然后备份和还原的数据库`NORECOVERY`植入到数据库。 
+   >当 SQL Server 的 Windows 实例对数据和日志文件使用不同的路径时，SQL Server 的 Linux 实例的自动种子设定将失败，因为这些路径在次要副本上不存在。 若要对跨平台 AG 使用以下脚本，数据库要求数据和日志文件在 Windows 服务器上具有相同的路径。 或者，还可以更新脚本以设置 `SEEDING_MODE = MANUAL`，然后使用 `NORECOVERY` 备份和还原数据库，从而为数据库设定种子。 
    >
    >此行为适用于 Azure Marketplace 映像。 
    >
-   >自动种子设定的详细信息，请参阅[自动种子设定的磁盘布局](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout)。 
+   >有关自动种子设定的详细信息，请参阅[自动种子设定 - Disk Layout](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout)。 
 
-   运行该脚本之前，更新 ag 的值。
+   在运行脚本之前，请更新 AG 的值。
 
-      * 替换为`<WinSQLInstance>`主要副本 SQL Server 实例的服务器名称。
+      * 将 `<WinSQLInstance>` 替换为主副本 SQL Server 实例的服务器名称。
 
-      * 替换为`<LinuxSQLInstance>`辅助副本的 SQL Server 实例的服务器名称。 
+      * 将 `<LinuxSQLInstance>` 替换为次要副本 SQL Server 实例的服务器名称。 
 
-   若要创建可用性组，请更新的值并在主副本上运行该脚本。  
+   若要创建 AG，请更新值并在主副本上运行脚本。  
 
    ```sql
    CREATE AVAILABILITY GROUP [ag1]
@@ -196,9 +196,9 @@ ms.locfileid: "68045195"
    GO
    ```
    
-   有关详细信息，请参阅[CREATE AVAILABILITY GROUP (TRANSACT-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)。
+   有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)。
 
-1. 在辅助副本上加入可用性组。
+1. 在次要副本上，联接 AG。
 
    ```sql
    ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
@@ -206,17 +206,17 @@ ms.locfileid: "68045195"
    GO
    ```
 
-1. 适用于可用性组创建数据库。 示例步骤使用一个名为数据库`<TestDB>`。 如果你使用自动种子设定，设置数据和日志文件的相同路径。 
+1. 为 AG 创建数据库。 示例步骤使用名为 `<TestDB>` 的数据库。 如果使用自动种子设定，请为数据和日志文件设置相同的路径。 
 
-   运行该脚本之前，更新你的数据库的值。
+   在运行脚本之前，请更新数据库的值。
 
-      * 替换为`<TestDB>`与数据库的名称。
+      * 将 `<TestDB>` 替换为数据库的名称。
 
-      * 替换为`<F:\Path>`数据库和日志文件的路径。 对于数据库和日志文件使用相同的路径。 
+      * 将 `<F:\Path>` 替换为数据库和日志文件的路径。 为数据库和日志文件使用相同的路径。 
 
-      此外可以使用的默认路径。 
+      也可以使用默认路径。 
 
-    若要创建你的数据库，运行脚本。 
+    若要创建数据库，请运行该脚本。 
 
    ```sql
    CREATE DATABASE [<TestDB>]
@@ -226,27 +226,27 @@ ms.locfileid: "68045195"
    GO
    ```
 
-1. 执行完整备份的数据库。 
+1. 完整备份数据库。 
 
-1. 如果不使用自动种子设定，还原次要副本 (Linux) 服务器上的数据库。 [将 SQL Server 数据库从 Windows 迁移到使用备份和还原 Linux](sql-server-linux-migrate-restore-database.md)。 将数据库还原`WITH NORECOVERY`辅助副本上。 
+1. 如果不使用自动种子设定，请在次要副本 (Linux) 服务器上还原数据库。 [使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux](sql-server-linux-migrate-restore-database.md)。 在次要副本上还原数据库 `WITH NORECOVERY`。 
 
-1. 将数据库添加到可用性组。 更新的示例脚本。 替换为`<TestDB>`与数据库的名称。 在主副本上运行 SQL 查询以将数据库添加到可用性组。
+1. 将数据库添加到 AG。 更新示例脚本。 将 `<TestDB>` 替换为数据库的名称。 在主副本上，运行 SQL 查询以将数据库添加到 AG。
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>
    GO
    ```
 
-1. 验证获取辅助副本上填充该数据库。 
+1. 验证是否在次要副本上填充了数据库。 
 
-## <a name="fail-over-the-primary-replica"></a>故障转移的主副本
+## <a name="fail-over-the-primary-replica"></a>故障转移主副本
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-这篇文章查看创建跨平台可用性组以支持迁移或读取缩放工作负荷的步骤。 它可用于手动灾难恢复。 它还介绍了如何将 AG 故障转移。 跨平台可用性组使用群集类型`NONE`和不支持高可用性，因为没有任何群集工具跨平台。 
+本文回顾了创建跨平台 AG 以支持迁移或“读取缩放”工作负荷的步骤。 它可用于手动灾难恢复。 还介绍了如何对 AG 进行故障转移。 跨平台 AG 使用群集类型 `NONE`，并且不支持高可用性，因为没有跨平台的群集工具。 
 
 ## <a name="next-steps"></a>后续步骤
 
-[Always On 可用性组概述](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+[AlwaysOn 可用性组概述](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 
-[SQL Server 可用性 Linux 部署的基础知识](sql-server-linux-ha-basics.md)
+[有关 Linux 部署的 SQL Server 可用性基础知识](sql-server-linux-ha-basics.md)

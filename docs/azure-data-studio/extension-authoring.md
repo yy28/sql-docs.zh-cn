@@ -1,7 +1,7 @@
 ---
 title: 创建扩展
 titleSuffix: Azure Data Studio
-description: 了解如何创建和将扩展添加到 Azure Data Studio
+description: 了解如何创建扩展并将其添加到 Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,55 +11,55 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959606"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>通过创建 Azure Data Studio 扩展来扩展功能
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充模組提供一個簡單的方式，可以新增更多功能至基礎 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的扩展提供向基本 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安装添加更多功能的简便方法。
 
-扩展是团队提供的 Azure Data Studio (Microsoft) 以及第三方社区 （你 ！）。
+扩展由 Azure Data Studio 团队 (Microsoft) 以及第三方社区（你）提供。
 
 
-## <a name="author-an-extension"></a>创作了一个扩展
+## <a name="author-an-extension"></a>编写扩展
 
-如果有兴趣扩展 Azure Data Studio，可以创建自己的扩展，并将其发布到扩展库。
+如果你对扩展 Azure Data Studio 感兴趣，则可创建自己的扩展并将其发布到扩展库。
 
 **编写扩展**
 
 ***先决条件***
 
-若要开发扩展需要 Node.js 已安装并在你 $PATH 中可用。 Node.js 包含 npm，Node.js 包管理器，它将用于安装的扩展生成器。
+若要开发扩展，你需要在 $PATH 中安装并提供 Node.js。 Node.js 包含 npm（即 Node.js 包管理器），它将用于安装扩展生成器。
 
-若要启动新的扩展名，可以使用 Azure 数据 Studio 扩展生成器。 Yeoman[扩展生成器](https://www.npmjs.com/package/generator-azuredatastudio)可以非常轻松创建简单的扩展项目。 若要启动生成器，请在命令提示符下键入以下内容：
+若要启动新的扩展，可使用 Azure Data Studio 扩展生成器。 借助 Yeoman [扩展生成器](https://www.npmjs.com/package/generator-azuredatastudio)，可非常轻松地创建简单的扩展项目。 若要启动生成器，请在命令提示符中键入以下内容：
 
 `npm install -g yo generator-azuredatastudio`
 
 `yo azuredatastudio`
 
 
-**扩展引用**
+**扩展性参考**
 
-若要了解有关 Azure 数据 Studio 可扩展性，请参阅[扩展性概述](extensibility.md)。 您还可以查看有关如何使用现有 API 的示例[示例](https://github.com/Microsoft/azuredatastudio/tree/master/samples)。
+若要了解 Azure Data Studio 扩展性，请参阅[扩展性概述](extensibility.md)。 还可在现有[示例](https://github.com/Microsoft/azuredatastudio/tree/master/samples)中查看如何使用 API 的示例。
 
 
 ## <a name="debug-an-extension"></a>调试扩展
 
-您可以调试你使用 Visual Studio Code 扩展的新扩展[Azure 数据 Studio 调试](https://github.com/kevcunnane/sqlops-debug)。
+可使用 Visual Studio Code 扩展 [Azure Data Studio 调试](https://github.com/kevcunnane/sqlops-debug)来调试新扩展。
 
 步骤
-- 打开你的扩展使用[Visual Studio Code](https://code.visualstudio.com/)
-- 安装 Azure 数据 Studio 调试扩展
-- 按**F5**或单击调试图标，然后单击**启动**。
-- Azure Data Studio 的新实例启动 （扩展开发主机） 以特殊模式，此新实例现已了解你的扩展。
+- 使用 [Visual Studio Code](https://code.visualstudio.com/) 打开扩展
+- 安装 Azure Data Studio 调试扩展
+- 按“F5”或单击“调试”图标，然后单击“启动”   。
+- Azure Data Studio 的新实例在特殊模式（扩展开发主机）下启动，此新实例现在可以识别你的扩展。
 
 
 ## <a name="create-an-extension-package"></a>创建扩展包
 
-在编写您的扩展插件之后, 您需要创建 VSIX 包，以便能够将其安装在 Azure Data Studio。 可以使用[vsce](https://github.com/Microsoft/vscode-vsce)创建 VSIX 包。
+编写扩展后，需要创建 VSIX 包，以便能够在 Azure Data Studio 中安装它。 可使用 [vsce](https://github.com/Microsoft/vscode-vsce) 来创建 VSIX 包。
 
 `npm install -g vsce`
 
@@ -68,13 +68,13 @@ ms.locfileid: "67959606"
 
 ## <a name="publish-an-extension"></a>发布扩展
 
-若要发布到 Azure Data Studio 的新的扩展名：
+若要将新扩展发布到 Azure Data Studio，请执行以下操作：
 
-1. 添加你的扩展 https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
-2. 我们目前没有支持添加到主机的第三方扩展，因此，Azure Data Studio 而不是下载的扩展，必须浏览到下载页的选项。 若要设置您的扩展插件的下载页，设置资产"Microsoft.AzureDataStudio.DownloadPage"的值。
-3. 创建针对发布/扩展分支的拉取请求。
+1. 将扩展添加到 https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
+2. 我们目前不支持托管第三方扩展，因此，Azure Data Studio 提供浏览到下载页的选项，而不会下载扩展。 若要为扩展设置下载页，请设置资产“Microsoft.AzureDataStudio.DownloadPage”的值。
+3. 针对发布/扩展分支创建 PR。
 4. 向团队发送评审请求。
 
-您的扩展插件将进行审查和添加到扩展库。
+你的扩展将接受评审并添加到扩展库中。
 
-**发布扩展更新**发布更新的过程是类似于发布扩展。 请确保在 package.json 中更新版本
+**发布扩展更新** 发布更新的过程与发布扩展的过程类似。 请确保在 package.json 中更新版本

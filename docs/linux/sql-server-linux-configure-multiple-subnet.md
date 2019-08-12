@@ -1,5 +1,5 @@
 ---
-title: 在 Linux 上配置多子网 Alwayson 可用性组和故障转移群集实例
+title: 在 Linux 上配置多子网 Always On 可用性组和故障转移群集实例
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,35 +9,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077592"
 ---
-# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>配置多子网 Alwayson 可用性组和故障转移群集实例
+# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>配置多子网 Always On 可用性组和故障转移群集实例
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-当 Always On 可用性组 (AG) 或故障转移群集实例 (FCI) 跨多个站点，每个站点通常具有其自己的网络。 这通常意味着，每个站点都有其自己的 IP 地址。 例如，站点 A 的地址以 192.168.1 开头。*x*和站点 B 的地址开头 192.168.2。*x*，其中*x*是仅适用于服务器的 IP 地址的一部分。 而无需某种形式的路由已到位在网络层，这些服务器将不能相互通信。 有两种方法来处理这种情况： 设置网络，用于桥接两个不同子网，名为 VLAN，或配置子网之间路由。
+如果 Always On 可用性组 (AG) 或故障转移群集实例 (FCI) 跨越多个站点，则通常每个站点都有其自己的网络。 这通常意味着每个站点都有其自己的 IP 地址。 例如，站点 A 的地址以 192.168.1 x 开头，站点 B 的地址以 192.168.2 x 开头，其中 x 是服务器独有的 IP 地址部分    。 如果网络层中不存在某种类型的路由，则这些服务器将无法相互通信。 处理该情况有两种方法：设置桥接两个不同子网的网络（称为 VLAN），或配置子网之间的路由。
 
 ## <a name="vlan-based-solution"></a>基于 VLAN 的解决方案
  
-**先决条件**:对于基于 VLAN 的解决方案，参与可用性组或 FCI 的每台服务器需要两个网卡 (Nic) 以正确的可用性 （双端口 NIC 是单一物理服务器上的故障点），，，以便可以将有关其本机的子网，以及一个 IP 地址分配在 VLAN。 其中不包括任何其他网络需要，如 iSCSI，还需要其自身的网络。
+先决条件  ：对于基于 VLAN 的解决方案，每个参与 AG 或 FCI 的服务器都需要两个网卡 (NIC) 才能实现良好的可用性（双重端口 NIC 是物理服务器上的单一故障点），以便可以在其本机子网和 VLAN 中分配 IP 地址。 这是对其他网络需求的补充，如 iSCSI 需要自己的网络。
 
-AG 或 FCI 的 IP 地址创建 VLAN 上完成。 在以下示例中，VLAN 具有 192.168.3 的子网。*x*，因此创建 AG 或 FCI 的 IP 地址是 192.168.3.104。 任何其他需要配置，因为没有分配到 AG 或 FCI 的单个 IP 地址。
+在 VLAN 上为 AG 或 FCI 创建 IP 地址。 在以下示例中，VLAN 具有 192.168.3 x 的子网，因此为 AG 或 FCI 创建的 IP 地址为 192.168.3.104  。 因为 AG 或 FCI 分配有一个 IP 地址，所以无需配置其他内容。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
-## <a name="configuration-with-pacemaker"></a>配置与 Pacemaker
+## <a name="configuration-with-pacemaker"></a>具有 Pacemaker 的配置
 
-在 Windows 世界中，Windows Server 故障转移群集 (WSFC) 以本机方式支持多个子网和多个 IP 地址通过 IP 地址上的或依赖关系的处理。 在 Linux 上，没有任何 OR 依赖关系，但没有本机实现正确的多子网与 Pacemaker，一种方法按以下所示。 不能只需使用普通的 Pacemaker 命令行来修改的资源来执行此操作。 您需要修改群集信息基础 （上）。 上为 Pacemaker 配置具有的 XML 文件。
+在 Windows 环境中，Windows Server 故障转移群集 (WSFC) 本机支持多个子网，并通过 IP 地址上的 OR 依赖项来处理多个 IP 地址。 Linux 上没有 OR 依赖项，但有一种方法可以使用 Pacemaker 本机实现适当的多子网，如下所示。 若仅仅使用普通的 Pacemaker 命令行来修改资源，则无法做到这一点。 需要修改群集信息库 (CIB)。 CIB 是具有 Pacemaker 配置的 XML 文件。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
-### <a name="update-the-cib"></a>更新上
+### <a name="update-the-cib"></a>更新 CIB
 
-1.  导出。
+1.  导出 CIB。
 
     **Red Hat Enterprise Linux (RHEL) 和 Ubuntu**
 
@@ -51,9 +51,9 @@ AG 或 FCI 的 IP 地址创建 VLAN 上完成。 在以下示例中，VLAN 具�
     sudo cibadmin -Q > <filename>
     ```
 
-    其中*文件名*是你想要调用上的名称。
+    其中文件名是要调用 CIB 的名称  。
 
-2.  编辑已生成的文件。 查找`<resources>`部分。 你将看到为 AG 或 FCI 创建的各种资源。 查找与 IP 地址相关联。 添加`<instance attributes>`节替换高于或低于现有，第二个 IP 地址的信息之前`<operations>`。 它是类似于以下语法：
+2.  编辑生成的文件。 查找 `<resources>` 部分。 你会看到为 AG 或 FCI 创建的各种资源。 查找与 IP 地址相关联的资源。 添加 `<instance attributes>` 部分，其中包含第二个 IP 地址的信息，该 IP 地址位于现有 IP 地址的上方或下方，但在 `<operations>` 前。 与以下语法类似：
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -65,7 +65,7 @@ AG 或 FCI 的 IP 地址创建 VLAN 上完成。 在以下示例中，VLAN 具�
     </instance attributes>
     ```
     
-    其中*NameForAttribute*是此属性的唯一名称*分数*是分配给该属性，必须高于主要子网，数字*RuleName*是规则的名称*表达式名称*是该表达式的名称*NodeNameInSubnet2*的其他子网中的节点名称*NameForSecondIP*是第二个 IP 地址，与关联的名称*IPAddress*是第二个子网的 IP 地址*NameForSecondIPNetmask*是子网掩码，与关联的名称和*子网掩码*是第二个子网的网络掩码。
+    其中，NameForAttribute 是该属性的唯一名称，Score 是分配给该属性的数字（这一数字必须大于分配给主子网的数字），RuleName 是规则的名称，ExpressionName 是表达式的名称，NodeNameInSubnet2 是另一子网中节点的名称，NameForSecondIP 是与第二个 IP 地址相关联的名称，IPAddress 是第二个子网的 IP 地址，NameForSecondIPNetmask 是与网络掩码关联的名称，Netmask 是第二个子网的网络掩码          。
     
     下面显示了一个示例。
     
@@ -79,7 +79,7 @@ AG 或 FCI 的 IP 地址创建 VLAN 上完成。 在以下示例中，VLAN 具�
     </instance attributes>
     ```
 
-3.  导入已修改的上并重新配置 Pacemaker。
+3.  导入修改后的 CIB，重新配置 Pacemaker。
 
     **RHEL/Ubuntu**
     
@@ -93,11 +93,11 @@ AG 或 FCI 的 IP 地址创建 VLAN 上完成。 在以下示例中，VLAN 具�
     sudo cibadmin -R -x <filename>
     ```
 
-    其中*文件名*是使用修改后的 IP 地址信息的上文件的名称。
+    其中 filename 是包含已修改的 IP 地址信息的 CIB 文件的名称  。
 
 ### <a name="check-and-verify-failover"></a>检查并验证故障转移
 
-1.  使用更新的配置已成功应用上之后，ping 与 Pacemaker 中的 IP 地址资源关联的 DNS 名称。 它应反映与当前正在承载可用性组或 FCI 的子网关联的 IP 地址。
-2.  故障到另一个子网的 AG 或 FCI。
-3.  AG 或 FCI 完全处于联机状态后，执行 ping 操作相关联的 IP 地址的 DNS 名称。 它应反映中第二个子网的 IP 地址。
-4.  如果需要，故障回复到原始子网可用性组或 FCI。
+1.  CIB 成功应用更新的配置后，请在 Pacemaker 中对与 IP 地址资源关联的 DNS 名称执行 Ping 命令。 结果应反映与当前承载 AG 或 FCI 的子网关联的 IP 地址。
+2.  阻止 AG 或 FCI 转移到另一个子网。
+3.  AG 或 FCI 完全联机后，对与 IP 地址关联的 DNS 名称执行 Ping 命令。 结果应反映第二个子网中的 IP 地址。
+4.  如果需要，请阻止 AG 或 FCI 回到原始子网。

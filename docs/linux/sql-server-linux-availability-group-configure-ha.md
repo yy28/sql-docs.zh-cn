@@ -1,7 +1,7 @@
 ---
 title: 配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 titleSuffix: SQL Server
-description: 了解如何在 Linux 上创建 SQL Server 始终在可用性组 (AG) 以实现高可用性。
+description: 了解如何在 Linux 上创建 SQL Server Always On 可用性组 (AG) 以实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,53 +11,53 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027254"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何在 Linux 上创建 SQL Server 始终在可用性组 (AG) 以实现高可用性。 有两种配置类型的 Ag。 一个*高可用性*配置使用群集管理器来提供业务连续性。 此配置还可以包括读取缩放副本。 本文档介绍如何创建可用性组以实现高可用性。
+本文介绍如何在 Linux 上创建 SQL Server Always On 可用性组 (AG) 以实现高可用性。 AG 有两种配置类型。 高可用性配置使用群集管理器提供业务连续性  。 此配置还可包括读取缩放副本。 本文档介绍了如何创建 AG 以实现高可用性。
 
-您还可以创建无群集可用性组的管理器*读取缩放*。 用于读取缩放可用性组只提供性能横向扩展只读副本。它不提供高可用性。 若要创建读取缩放可用性组，请参阅[Linux 上配置读取缩放 SQL Server 可用性组](sql-server-linux-availability-group-configure-rs.md)。
+还可以在不使用群集管理器的情况下创建 AG 来实现读取缩放  。 用于读取缩放的 AG 仅提供用于性能横向扩展的只读副本。它不提供高可用性。 若要创建用于读取缩放的 AG，请参阅[在 Linux 上配置 SQL Server 可用性组用于读取缩放](sql-server-linux-availability-group-configure-rs.md)。
 
-保证高可用性和数据保护的配置需要两个或三个同步提交副本。 具有三个同步副本，即使一台服务器不可用，可以自动将恢复可用性组。 有关详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 
+用于保证高可用性和数据保护的配置需要两个或三个同步提交副本。 如果使用三个同步副本，即使一个服务器不可用，AG 也可以自动恢复。 有关详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 
 
-所有服务器必须都是物理还是虚拟的并且虚拟服务器都必须位于相同虚拟化平台。 此要求是因为隔离代理是特定于平台。 请参阅[来宾群集的策略](https://access.redhat.com/articles/29440#guest_policies)。
+所有服务器必须是物理服务器或虚拟服务器，并且虚拟服务器必须位于同一虚拟化平台上。 此要求是因为隔离代理是特定于平台的。 请参阅[来宾群集策略](https://access.redhat.com/articles/29440#guest_policies)。
 
 ## <a name="roadmap"></a>路线图
 
-若要以实现高可用性的 Linux 服务器上创建可用性组的步骤是不同于在 Windows Server 故障转移群集的步骤。 以下列表介绍的高级步骤： 
+在 Linux 服务器上创建 AG 以获得高可用性的步骤与 Windows Server 故障转移群集上的步骤不同。 下面的列表对高级步骤进行了说明： 
 
-1. [三个群集服务器上配置 SQL Server](sql-server-linux-setup.md)。
+1. [在三个群集服务器上配置 SQL Server](sql-server-linux-setup.md)。
 
    >[!IMPORTANT]
-   >可用性组中的所有三个服务器需要位于同一平台的物理或虚拟的因为 Linux 高可用性使用隔离代理来隔离服务器上的资源。 隔离代理是为每个平台特定的。
+   >AG 中的所有三个服务器都需要在同一个平台上（物理或虚拟），因为 Linux 高可用性使用隔离代理来隔离服务器上的资源。 隔离代理特定于每个平台。
 
 2. 创建 AG。 本文介绍了此步骤。 
 
-3. 配置 Pacemaker 之类的群集资源管理器。
+3. 配置 Pacemaker 等群集资源管理器。
    
-   配置群集资源管理器的方式取决于特定的 Linux 分发版。 请参阅以下链接，了解分发的具体说明： 
+   配置群集资源管理器的方式取决于特定的 Linux 分发版。 有关特定于分发的说明，请参阅以下链接： 
 
    * [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
    * [SUSE](sql-server-linux-availability-group-cluster-sles.md)
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    >[!IMPORTANT]
-   >生产环境需要 STONITH 之类的隔离代理，以获得高可用性。 本文档中的演示不使用隔离代理。 演示仅用于测试和验证目的。 
+   >生产环境需要 STONITH 等隔离代理，以实现高可用性。 本文档中的演示不使用隔离代理。 演示仅用于测试和验证。 
    
-   >Linux 群集使用隔离将群集返回到已知状态。 配置隔离的方式取决于分发和环境。 目前，隔离不是在某些云环境中可用的。 有关详细信息，请参阅[RHEL 高可用性群集的虚拟化平台的支持策略](https://access.redhat.com/articles/29440)。
+   >Linux 群集使用隔离将群集返回到某个已知状态。 配置隔离的方式取决于分发和环境。 目前，在某些云环境中无法使用隔离。 有关详细信息，请参阅 [RHEL 高可用性群集的支持策略 - 虚拟化平台](https://access.redhat.com/articles/29440)。
    
-   >SLES，请参阅[SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)。
+   >关于 SLES，请参阅 [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)（SUSE Linux 企业高可用性扩展）。
 
-5. 将可用性组添加为群集中的资源。  
+5. 将 AG 添加为群集中的资源。  
 
-   若要将可用性组添加为群集中的资源的方式取决于 Linux 分发版。 请参阅以下链接，了解分发的具体说明： 
+   将 AG 添加为群集中的资源的方式取决于 Linux 分发。 有关特定于分发的说明，请参阅以下链接： 
 
    * [RHEL](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)
    * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
@@ -67,37 +67,37 @@ ms.locfileid: "68027254"
 
 ## <a name="create-the-ag"></a>创建 AG
 
-在本部分中的示例说明如何创建使用 Transact SQL 可用性组。 此外可以使用 SQL Server Management Studio 可用性组向导。 使用向导创建 AG 时，它将返回错误时将副本联接到可用性组。 若要解决此问题，请授予`ALTER`， `CONTROL`，和`VIEW DEFINITIONS`到所有副本上可用性组上的 pacemaker。 后主副本上授予权限，将节点联接到可用性组通过向导，但若要正常运行，请授予权限的所有副本上的高可用性。
+本节中的示例说明如何使用 Transact-SQL 创建可用性组。 还可以使用 SQL Server Management Studio 可用性组向导。 使用向导创建 AG 时，在将副本加入 AG 时，会返回错误。 若要解决此问题，请向 pacemaker 授予对所有副本上 AG 的 `ALTER`、`CONTROL` 和 `VIEW DEFINITIONS` 权限。 在主副本上授予权限后，通过向导将节点加入 AG，但为了使 HA 正常运行，请为所有副本授予权限。
 
-对于高可用性配置，以确保自动故障转移，可用性组要求至少三个副本。 以下配置之一可以支持高可用性：
+若要实现可确保自动故障转移的高可用性配置，AG 至少需要三个副本。 以下任一配置均支持高可用性：
 
 - [三个同步副本](sql-server-linux-availability-group-ha.md#threeSynch)
 
-- [两个同步副本以及配置副本](sql-server-linux-availability-group-ha.md#twoSynch)
+- [两个同步副本和一个配置副本](sql-server-linux-availability-group-ha.md#twoSynch)
 
-有关信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。
+有关详细信息，请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。
 
 >[!NOTE]
->可用性组可以包括其他的同步或异步副本。 
+>可用性组可以包括其他同步或异步副本。 
 
-在 Linux 上创建可用性组以实现高可用性。 使用[创建可用性组](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql)与`CLUSTER_TYPE = EXTERNAL`。 
+在 Linux 上创建 AG 以实现高可用性。 配合使用 [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) 与 `CLUSTER_TYPE = EXTERNAL`。 
 
-* 可用性组-`CLUSTER_TYPE = EXTERNAL`指定外部群集实体管理可用性组。 Pacemaker 是外部群集实体的示例。 当可用性组群集类型是外部的 
+* 可用性组 - `CLUSTER_TYPE = EXTERNAL` 指定：由外部群集实体管理 AG。 Pacemaker 是外部群集实体的一个示例。 当 AG 群集类型为外部时， 
 
-* 设置主要和次要副本`FAILOVER_MODE = EXTERNAL`。 
-   指定将副本与一个外部群集管理器，如 Pacemaker 进行交互。 
+* 设置主副本和次要副本 `FAILOVER_MODE = EXTERNAL`。 
+   指定：副本与外部群集管理器（如 Pacemaker）交互。 
 
-以下 TRANSACT-SQL 脚本创建名为的高可用性的 AG `ag1`。 脚本使用 `SEEDING_MODE = AUTOMATIC` 配置 AG 副本。 此设置会导致 SQL Server 在每个辅助服务器上自动创建数据库。 为环境更新以下脚本。 替换`<node1>`， `<node2>`，或`<node3>`具有承载副本的 SQL Server 实例的名称的值。 替换为`<5022>`与端口设置为数据镜像终结点。 若要创建可用性组，请在承载主副本的 SQL Server 实例上运行以下 TRANSACT-SQL。
+以下 Transact-SQL 脚本为名为 `ag1` 的高可用性创建 AG。 脚本使用 `SEEDING_MODE = AUTOMATIC` 配置 AG 副本。 此设置会导致 SQL Server 在每个辅助服务器上自动创建数据库。 为环境更新以下脚本。 将 `<node1>`、`<node2>` 或 `<node3>` 值替换为托管副本的 SQL Server 实例的名称。 将 `<5022>` 替换为为数据镜像终结点设置的端口。 若要创建 AG，请在承载主副本的 SQL Server 实例上运行以下 Transact-SQL。
 
-运行**只有一个**的以下脚本： 
+仅运行以下脚本之一  ： 
 
 - [创建具有三个同步副本的可用性组](#threeSynch)。
-- [创建具有两个同步副本和配置副本的可用性组](#configOnly)
+- [创建具有两个同步副本和一个配置副本的可用性组](#configOnly)
 - [创建具有两个同步副本的可用性组](#readScale)。
 
 <a name="threeSynch"></a>
 
-- 创建具有三个同步副本的可用性组
+- 创建具有三个同步副本的 AG
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1]
@@ -129,13 +129,13 @@ ms.locfileid: "68027254"
    ```
 
    >[!IMPORTANT]
-   >运行上述脚本创建具有三个同步副本的可用性组后，不运行以下脚本：
+   >运行前一个脚本创建具有三个同步副本的 AG 后，请不要运行以下脚本：
 
 <a name="configOnly"></a>
-- 创建具有两个同步副本和配置副本的可用性组：
+- 创建具有两个同步副本和一个配置副本的 AG：
 
    >[!IMPORTANT]
-   >此体系结构允许任何版本的 SQL Server 以承载第三个副本。 例如，可以在 SQL Server Enterprise Edition 上承载第三个副本。 在 Enterprise Edition 中，唯一有效的终结点类型是`WITNESS`。 
+   >此体系结构允许任何版本的 SQL Server 承载第三个副本。 例如，第三个副本可以托管在 SQL Server Enterprise Edition 上。 在 Enterprise Edition 上，唯一有效的终结点类型是 `WITNESS`。 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -161,12 +161,12 @@ ms.locfileid: "68027254"
    ```
 <a name="readScale"></a>
 
-- 创建具有两个同步副本的可用性组
+- 创建具有两个同步副本的 AG
 
-   包括两个副本同步的可用性模式。 例如，以下脚本将创建名为 AG `ag1`。 `node1` 和`node2`驻留在同步模式下，使用自动种子设定和自动故障转移的副本。
+   包括具有同步可用性模式的两个副本。 例如，以下脚本创建一个名为 `ag1` 的 AG。 `node1` 和 `node2` 以同步模式承载副本，具有自动种子设定和自动故障转移功能。
 
    >[!IMPORTANT]
-   >仅运行以下脚本来创建具有两个同步副本的 AG。 如果您运行前面的脚本，则不运行以下脚本。 
+   >仅运行以下脚本以创建具有两个同步副本的 AG。 如果运行了前面任一脚本，则不要运行以下脚本。 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1]
@@ -189,18 +189,18 @@ ms.locfileid: "68027254"
    ```
 
 
-你还可以配置具有 AG`CLUSTER_TYPE=EXTERNAL`使用 SQL Server Management Studio 或 PowerShell。 
+还可以使用 SQL Server Management Studio 或 PowerShell 配置带有 `CLUSTER_TYPE=EXTERNAL` 的 AG。 
 
-### <a name="join-secondary-replicas-to-the-ag"></a>将辅助副本联接到可用性组
+### <a name="join-secondary-replicas-to-the-ag"></a>将次要副本联接到 AG
 
-Pacemaker 用户需要`ALTER`， `CONTROL`，和`VIEW DEFINITION`上所有副本的可用性组的权限。 若要授予权限，请运行以下 TRANSACT-SQL 脚本后立即添加到可用性组中之后，在主副本和每个辅助副本上创建可用性组。 在运行该脚本之前，替换`<pacemakerLogin>`pacemaker 用户帐户的名称。
+Pacemaker 用户需要具有对所有副本上可用性组的 `ALTER`、`CONTROL` 和 `VIEW DEFINITION` 权限。 若要授予权限，在创建可用性组且将主副本和每个次要副本添加到可用性组之后，请在这些副本上立即运行以下 Transact-SQL 脚本。 在运行脚本之前，请将 `<pacemakerLogin>` 替换为 pacemaker 用户帐户的名称。
 
 ```Transact-SQL
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
-以下 TRANSACT-SQL 脚本将 SQL Server 实例加入名为 AG `ag1`。 为环境更新脚本。 每个承载辅助副本的 SQL Server 实例上运行以下 TRANSACT-SQL 加入可用性组。
+以下 Transact-SQL 脚本将 SQL Server 实例加入名为 `ag1` 的 AG。 为环境更新脚本。 在托管次要副本的每个 SQL Server 实例上运行以下 Transact-SQL，以加入 AG。
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -211,23 +211,23 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->创建可用性组后，你必须配置与 Pacemaker 等群集技术以实现高可用性的集成。 使用 Ag，从开始读取缩放配置[!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)]，则不需要设置群集。
+>创建 AG 后，必须配置与 Pacemaker 等群集技术的集成，以实现高可用性。 对于使用 AG 的读取缩放配置，从 [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)] 开始，不再需要设置群集。
 
-如果您遵循本文档中的步骤，则必须尚未群集的可用性组。 下一步是添加该群集。 此配置对读取缩放/负载均衡方案有效，不完整的高可用性。 以实现高可用性，需要将可用性组添加为群集资源。 请参阅[后续步骤](#next-steps)有关的说明。 
+如果执行本文档中的步骤，会得到尚未群集化的 AG。 下一步是添加群集。 此配置对于读取缩放/负载均衡方案有效，但对于高可用性而言并不完整。 为实现高可用性，需要将 AG 添加为群集资源。 有关说明，请参阅[后续步骤](#next-steps)。 
 
 ## <a name="notes"></a>说明
 
 >[!IMPORTANT]
->在配置群集，并将可用性组添加为群集资源之后，不能使用 TRANSACT-SQL 进行故障转移可用性组资源。 Linux 上的 SQL Server 群集资源与此操作系统的耦合性不及 Windows Server 故障转移群集 (WSFC) 上的高。 SQL Server 服务不知道此群集的存在。 所有业务流程都通过群集管理工具完成。 在 RHEL 或 Ubuntu 中使用`pcs`。 在 SLES 中使用`crm`。 
+>配置群集并将 AG 添加为群集资源后，无法使用 Transact-SQL 对 AG 资源进行故障转移。 Linux 上的 SQL Server 群集资源与此操作系统的耦合性不及在 Windows Server 故障转移群集 (WSFC) 上的耦合性高。 SQL Server 服务无法识别此群集是否存在。 所有业务流程都通过群集管理工具完成。 在 RHEL 或 Ubuntu 中，使用 `pcs`。 在 SLES 中使用 `crm`。 
 
 >[!IMPORTANT]
->如果可用性组群集资源，其中强制故障转移到异步副本的数据丢失不起作用的当前版本没有已知的问题。 此问题将在即将发布的版本中得到解决。 手动或自动故障转移到同步副本会成功。
+>如果 AG 是群集资源，则当前版本中存在一个已知问题，即在数据丢失时强制故障转移到异步副本不起作用。 此问题将在即将发布的版本中得到解决。 手动或自动故障转移到同步副本成功。
 
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置 SQL Server 可用性组群集资源的 Red Hat Enterprise Linux 群集](sql-server-linux-availability-group-cluster-rhel.md)
+[为 SQL Server 可用性组群集资源配置 Red Hat Enterprise Linux 群集](sql-server-linux-availability-group-cluster-rhel.md)
 
 [为 SQL Server 可用性组群集资源配置 SUSE Linux Enterprise Server 群集](sql-server-linux-availability-group-cluster-sles.md)
 
-[配置 Ubuntu 群集 SQL Server 可用性组群集资源](sql-server-linux-availability-group-cluster-ubuntu.md)
+[为 SQL Server 可用性组群集资源配置 Ubuntu 群集](sql-server-linux-availability-group-cluster-ubuntu.md)

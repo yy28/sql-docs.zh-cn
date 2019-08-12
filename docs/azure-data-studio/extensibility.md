@@ -1,7 +1,7 @@
 ---
 title: 通过扩展性添加其他功能
 titleSuffix: Azure Data Studio
-description: 了解如何扩展模型和用于扩展的 Azure Data Studio 功能的重要扩展功能区域
+description: 了解用于扩展 Azure Data Studio 功能的扩展性模型和关键扩展性区域
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,53 +11,53 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959590"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>开始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]扩展性
+# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 扩展性入门
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 有几种扩展性机制，以自定义用户体验并使这些自定义项可供整个用户社区。 核心[!INCLUDE[name-sos](../includes/name-sos.md)]平台基于 Visual Studio Code 中，因此 Visual Studio Code 扩展性 Api 的大部分都是可用。 此外，我们提供了其他扩展点进行数据管理特定于活动。
+[!INCLUDE[name-sos](../includes/name-sos.md)] 具有多种扩展性机制，可以自定义用户体验并使这些自定义项可供整个用户社区使用。 核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台基于 Visual Studio Code 构建，因此大多数 Visual Studio Code 扩展性 API 都可用。 此外，我们还为特定于数据管理的活动提供了额外的扩展点。
 
 下面是一些关键扩展点：
 
-- Visual Studio Code 扩展性 Api
-- 创作工具的 azure Data Studio 扩展
-- 管理仪表板选项卡面板组件
-- 通过操作体验的见解
-- Azure Data Studio 扩展性 Api
-- 自定义数据提供程序 Api
+- Visual Studio Code 扩展性 API
+- Azure Data Studio 扩展创作工具
+- 管理仪表板选项卡面板贡献
+- 包含操作体验的见解
+- Azure Data Studio 扩展性 API
+- 自定义数据提供程序 API
 
-## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 扩展性 Api
+## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 扩展性 API
 
-由于核心[!INCLUDE[name-sos](../includes/name-sos.md)]平台基于 Visual Studio Code、 关于 Visual Studio Code 扩展性 Api 的详细信息，请参阅[扩展插件创作](https://code.visualstudio.com/docs/extensions/overview)并[扩展 API](https://code.visualstudio.com/docs/extensionAPI/overview)Visual Studio Code 网站上的文档。
+由于核心 [!INCLUDE[name-sos](../includes/name-sos.md)] 平台是基于 Visual Studio Code 构建的，因此，Visual Studio Code 网站上的[扩展创作](https://code.visualstudio.com/docs/extensions/overview)和[扩展 API](https://code.visualstudio.com/docs/extensionAPI/overview) 文档中提供了有关 Visual Studio Code 扩展性 API 的详细信息。
 
-## <a name="manage-dashboard-tab-panel-contributions"></a>管理仪表板选项卡面板组件
+## <a name="manage-dashboard-tab-panel-contributions"></a>管理仪表板选项卡面板贡献
 
-有关详细信息，请参阅[贡献点](#contribution-points)并[上下文变量](#context-variables)。
+有关详细信息，请参阅[贡献点](#contribution-points)和[上下文变量](#context-variables)。
 
-## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 扩展性 Api
+## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 扩展性 API
 
-有关详细信息，请参阅[扩展性 Api](extensibility-apis.md)。
+有关详细信息，请参阅[扩展性 API](extensibility-apis.md)。
 
 
 ## <a name="contribution-points"></a>贡献点
 
-本部分介绍在 package.json 扩展清单中定义的各种贡献点。
+本部分介绍 package.json 扩展清单中定义的各种贡献点。
 
-在 azuredatastudio 内支持 IntelliSense。
+azuredatastudio 中支持 IntelliSense。
 
-## <a name="contributes-dashboard"></a>提供仪表板
+## <a name="contributes-dashboard"></a>贡献仪表板
 
-参与选项卡、 容器、 见解小组件到仪表板。
+向仪表板贡献选项卡、容器、见解小组件。
 
 ![面板](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
-Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对象的数组。  
+Dashboard.tabs 用于在仪表板页面内创建选项卡部分。 它需要对象或对象数组。  
 
 ```json
 "dashboard.tabs": [
@@ -76,7 +76,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 `dashboard.containers`
 
-而不是指定仪表板容器内联 （在内部 dashboard.tab)。 你可以注册使用 dashboard.containers 的容器。 它接受一个对象的数组。
+可以使用 dashboard.containers 注册容器， 而不是内联指定仪表板容器（在 dashboard.tab 内）。 它接受对象或对象数组。
 
 ```json
 "dashboard.containers": [
@@ -95,7 +95,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 ]
 ```
 
-若要引用已注册的容器，请指定容器的 id
+若要引用已注册的容器，请指定该容器的 ID
 
 ```json
 "dashboard.tabs": [
@@ -112,7 +112,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 `dashboard.insights`
 
-你可以注册使用 dashboard.insights 的见解。 它类似于[教程：生成自定义见解小组件](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+可以使用 dashboard.insights 注册见解。 这类似于[教程：生成自定义见解小组件](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -131,15 +131,15 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 ```
 
 
-### <a name="dashboard-container-types"></a>仪表板的容器类型
+### <a name="dashboard-container-types"></a>仪表板容器类型
 
-目前有四个支持的容器类型：
+目前有四种受支持的容器类型：
 
 1. `widgets-container`
 
     ![小组件容器](media/extensibility/widgets-container.png)
 
-    将容器中显示的小组件的列表。 它是流布局。 它接受小组件的列表。
+    将在容器中显示的小组件的列表。 它采用流布局。 它接受小组件列表。
 
     ```json
     "container": {
@@ -164,7 +164,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
     ![webview 容器](media/extensibility/webview-container.png)
 
-    Web 视图将显示在整个容器。 它需要 web 视图 id 为也是选项卡 ID
+    webview 将显示在整个容器中。 它要求 webview ID 与选项卡 ID 相同
 
     ```json
     "container": {
@@ -176,7 +176,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
    ![网格容器](media/extensibility/grid-container.png)
 
-   小组件或将网格布局中显示的 webview 的列表
+   将在网格布局中显示的小组件或 webview 的列表
 
     ```json
     "container": {
@@ -226,7 +226,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 4.  `nav-section`
 
-    ![nav 部分](media/extensibility/nav-section.png)
+    ![导航部分](media/extensibility/nav-section.png)
 
     导航部分将显示在容器中
 
@@ -263,9 +263,9 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 ## <a name="context-variables"></a>上下文变量
 
-有关在 Visual Studio Code 和 Azure Data Studio 随后的上下文的常规信息，请参阅[扩展性](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)。
+有关 Visual Studio Code 中的上下文以及随后的 Azure Data Studio 的常规信息，请参阅[扩展性](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)。
 
-在 Azure Data Studio，我们有特定的上下文信息可用于扩展数据库连接。
+在 Azure Data Studio 中，我们有关于数据库连接的特定上下文，可用于扩展。
 
 ### <a name="dashboard"></a>面板
 
@@ -273,8 +273,8 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 |上下文变量| description|
 |:---|:---|
-|`connectionProvider` | 当前连接的提供程序的标识符的字符串。 例如： `connectionProvider == 'MSSQL'`。|
-|`serverName`|当前连接的服务器名称的字符串。 例如： `serverName == 'localhost'`。|
-|`databaseName` | 当前连接的数据库名称的字符串。 例如： `databaseName == 'master'`。|
-|`connection` | 当前连接 (IConnectionProfile) 的完整的连接配置文件对象|
-|`dashboardContext` | 在目前的仪表板的页面的上下文字符串。 数据库或者服务器。 例如： `dashboardContext == 'database'`|
+|`connectionProvider` | 当前连接的提供程序的标识符字符串。 例如： `connectionProvider == 'MSSQL'` 列中的一个值匹配。|
+|`serverName`|当前连接的服务器名称字符串。 例如： `serverName == 'localhost'` 列中的一个值匹配。|
+|`databaseName` | 当前连接的数据库名称字符串。 例如： `databaseName == 'master'` 列中的一个值匹配。|
+|`connection` | 当前连接的完整连接配置文件对象 (IConnectionProfile)|
+|`dashboardContext` | 当前打开的仪表板页面的上下文字符串。 “database”或“server”。 例如： `dashboardContext == 'database'`|

@@ -1,7 +1,7 @@
 ---
 title: SQL Server 代理扩展
 titleSuffix: Azure Data Studio
-description: 安装和使用适用于 Azure Data Studio SQL Server 代理扩展 （预览版）
+description: 安装和使用 Azure Data Studio 的 SQL Server 代理扩展（预览版）
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
@@ -11,43 +11,43 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959181"
 ---
-# <a name="sql-server-agent-extension-preview"></a>SQL Server 代理扩展 （预览版）
+# <a name="sql-server-agent-extension-preview"></a>SQL Server 代理扩展（预览版）
 
-SQL Server 代理扩展 （预览版） 是用于管理和故障排除 SQL 代理作业和配置扩展。 此扩展当前处于预览状态。
+SQL Server 代理扩展（预览版）用于管理 SQL 代理作业和配置并对其进行故障排除。 此扩展当前处于预览状态。
 
-密钥的操作包括：
-- 列出 SQL Server 代理作业上的 SQL Server 配置
-- 查看作业历史记录与作业执行结果
-- 基本作业控件启动和停止作业
+关键操作包括：
+- 列出 SQL Server 上配置的 SQL Server 代理作业
+- 查看作业历史记录中的作业执行结果
+- 用于启动和停止作业的基本作业控制
 
 ## <a name="install-the-sql-server-agent-extension"></a>安装 SQL Server 代理扩展
 
-1. 若要開啟擴充管理員及存取可用的擴充功能，選取 [擴充功能] 圖示，或選取**檢視**功能表中的**擴充功能**。
-2. 选择要查看其详细信息的可用扩展。
+1. 若要打开扩展管理器并访问可用扩展，请选择扩展图标，或在“视图”菜单中选择“扩展”   。
+2. 选择可用的扩展以查看其详细信息。
 
    ![安装代理](media/extensions/sql-server-agent-extension/install-sql-agent.png)
 
-1. 选择所需的扩展并**安装**它。
-2. 選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
-1. 透過滑鼠右鍵點選伺服器或資料庫並點選**管理**，瀏覽您的管理儀表板。
-2. 已安裝的擴充功能會以索引標籤方式顯示在您的管理儀表板上：
+1. 选择所需的扩展，然后选择“安装”进行安装  。
+2. 选择“重新加载”以启用扩展（仅在第一次安装扩展时是必需的）  。
+1. 右键单击服务器或数据库，然后选择“管理”，导航到管理仪表板  。
+2. 已安装的扩展在管理仪表板上显示为选项卡：
 
    ![查看代理](media/extensions/sql-server-agent-extension/view-sql-agent.png)
 
 ## <a name="view-jobs"></a>查看作业
 
-当您连接到 SQL Server 代理扩展时，您看到的第一件事是所有代理作业的列表。
+连接到 SQL Server 代理扩展时，首先看到的就是所有代理作业的列表。
 
    ![查看作业](media/extensions/sql-server-agent-extension/job-view.png)
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 代理的详细信息[检查我们的文档。](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017)
+若要了解有关 SQL Server 代理的详细信息，请[查看我们的文档。](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017)
 
 

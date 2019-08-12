@@ -1,7 +1,7 @@
 ---
-title: SUSE Linux Enterprise Server 上的 SQL Server 的无人参与的安装
+title: SQL Server 在 SUSE Linux Enterprise Server 上的无人参与安装
 titleSuffix: SQL Server
-description: SQL Server 脚本示例-SUSE Linux Enterprise Server 上的无人参与安装
+description: SQL Server 脚本示例 - SUSE Linux Enterprise Server 上的无人参与安装
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,29 +9,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: eb19357b739dbc52b3eb19cf2390f225e4205d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67910455"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>示例：适用于 SUSE Linux Enterprise Server 的无人参与的 SQL Server 安装脚本
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>示例：SUSE Linux Enterprise Server 的无人参与 SQL Server 安装脚本
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此示例 Bash 脚本而无需交互式输入的 SUSE Linux Enterprise Server (SLES) v12 SP2 上安装 SQL Server 2017。 它提供了安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 （可选） 可以安装全文搜索，并创建一个管理用户。
+此示例 Bash 脚本在没有交互式输入的 SUSE Linux Enterprise Server(SLES) v12 SP2上安装 SQL Server 2017。 它提供了安装数据库引擎、SQL Server 命令行工具、SQL Server 代理和执行安装后步骤的示例。 可以选择安装全文搜索并创建管理用户。
 
 > [!TIP]
-> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[快速入门： SLES](quickstart-install-connect-suse.md)。 有关其他安装程序的信息，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
+> 如果不需要无人参与的安装脚本，则安装 SQL Server 最快的方法是遵循 [SLES 的快速入门](quickstart-install-connect-suse.md)。 有关其他设置信息，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-- 需要至少 2 GB 的内存来在 Linux 上运行 SQL Server。
-- 必须在文件系统**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
-- 其他系统要求，请参阅[Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
+- 至少需要 2GB 内存才能运行 Linux 上的 SQL Server。
+- 文件系统必须是 XFS 或 EXT4   。 其他文件系统（如 BTRFS）均不受支持  。
+- 有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 > [!IMPORTANT]
-> SQL Server 2017 需要 libsss_nss_idmap0，不由默认 SLES 存储库提供。 您可以从 SLES v12 SP2 SDK 安装它。
+> SQL Server 2017 需要 libsss_nss_idmap0，默认的 SLES 存储库未提供此资源。 可以从 SLES v12 SP2 SDK 安装它。
 
 ## <a name="sample-script"></a>示例脚本
 
@@ -159,9 +159,9 @@ echo Done!
 
 运行该脚本
 
-1. 将示例粘贴到你最喜欢的文本编辑器并将其保存为便于记忆的名称，如`install_sql.sh`。
+1. 将示例粘贴到你最喜爱的文本编辑器中，并使用便于记忆的名称保存，比如 `install_sql.sh`。
 
-1. 自定义`MSSQL_SA_PASSWORD`， `MSSQL_PID`，和任何其他你想要更改的变量。
+1. 自定义 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 和要更改的任何其他变量。
 
 1. 将脚本标记为可执行文件
 
@@ -176,39 +176,39 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解脚本
-Bash 脚本执行的第一项操作是设置几个变量。 这些可以是脚本变量，如以下示例或环境变量。 在变量`MSSQL_SA_PASSWORD`是**必需**通过 SQL Server 安装，有些则是为脚本创建的自定义变量。 示例脚本执行以下步骤：
+Bash 脚本执行的第一件事是设置几个变量。 它们可以是脚本变量，如示例或环境变量。 `MSSQL_SA_PASSWORD` 变量是安装 SQL Server 所必需的变量，其余变量是为脚本创建的自定义变量  。 示例脚本执行以下步骤：
 
 1. 导入公共 Microsoft GPG 密钥。
 
-1. 注册 SQL Server 和命令行工具的 Microsoft 存储库。
+1. 注册用于 SQL Server 的 Microsoft 存储库和命令行工具。
 
 1. 更新本地存储库
 
 1. 安装 SQL Server
 
-1. 配置 SQL Server 与```MSSQL_SA_PASSWORD```并自动接受最终用户许可协议。
+1. 将 SQL Server 配置为 ```MSSQL_SA_PASSWORD``` 并自动接受最终用户许可协议。
 
-1. 自动接受最终用户许可协议为 SQL Server 命令行工具、 安装它们，并安装 unixodbc 开发人员包。
+1. 自动接受 SQL Server 命令行工具的最终用户许可协议，安装这些工具，然后安装 unixodbc-dev 包。
 
-1. 将 SQL Server 命令行工具添加到易于使用的路径。
+1. 为便于使用，请将 SQL Server 命令行工具添加到路径。
 
-1. 如果安装 SQL Server 代理的脚本变量```SQL_INSTALL_AGENT```，在默认情况下设置。
+1. 如果已设置 ```SQL_INSTALL_AGENT``` 变量的脚本，则将默认安装 SQL Server 代理。
 
-1. 如果选择安装 SQL Server 全文搜索变量```SQL_INSTALL_FULLTEXT```设置。
+1. 如果已设置 ```SQL_INSTALL_FULLTEXT``` 变量，则可以选择安装 SQL Server 全文搜索。
 
-1. 取消阻止对 TCP 系统在防火墙上，从另一个系统连接到 SQL Server 所必需的端口 1433年。
+1. 在系统防火墙上取消阻止 TCP 端口 1433，以连接到其他系统中的 SQL Server。
 
-1. 可以选择设置死锁跟踪的跟踪标志。 （需要取消注释行）
+1. （可选）设置跟踪标志以进行死锁跟踪。 （需要取消评论行）
 
-1. 现已安装 SQL Server，以使其可操作，重新启动该进程。
+1. SQL Server 现已安装，若要使其可操作，请重启该过程。
 
-1. 验证 SQL Server 安装了正确，而隐藏所有错误消息。
+1. 验证是否已正确安装 SQL Server，并隐藏任何错误消息。
 
-1. 如果创建新的服务器管理员用户```SQL_INSTALL_USER```和```SQL_INSTALL_USER_PASSWORD```均设置。
+1. 如果同时设置 ```SQL_INSTALL_USER``` 和 ```SQL_INSTALL_USER_PASSWORD```，则将创建新的服务器管理用户。
 
 ## <a name="next-steps"></a>后续步骤
 
-简化多个无人参与的安装，并创建一个独立的 Bash 脚本，设置适当的环境变量。 您可以删除任何示例脚本使用，并将其放在其自己的 Bash 脚本的变量。
+简化多个无人参与的安装，并创建独立的 Bash 脚本来设置适当的环境变量。 可删除该示例脚本使用的任何变量，并将其放入自己的 Bash 脚本。
 
 ```bash
 #!/bin/bash
@@ -225,4 +225,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux 上 SQL Server 的详细信息，请参阅[SQL Server Linux 概述](sql-server-linux-overview.md)。
+有关 Linux 上的 SQL Server 的详细信息，请参阅 [Linux 上的 SQL Server 概述](sql-server-linux-overview.md)。

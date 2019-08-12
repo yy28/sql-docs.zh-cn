@@ -1,6 +1,6 @@
 ---
-title: 加密连接到 Linux 上的 SQL Server
-description: 本文介绍在 Linux 上的加密与 SQL Server 的连接。
+title: 加密与 Linux 上 SQL Server 的连接
+description: 本文介绍如何加密与 Linux 上 SQL Server 的连接。
 ms.date: 01/30/2018
 author: vin-yu
 ms.author: vinsonyu
@@ -11,38 +11,38 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077292"
 ---
-# <a name="encrypting-connections-to-sql-server-on-linux"></a>加密连接到 Linux 上的 SQL Server
+# <a name="encrypting-connections-to-sql-server-on-linux"></a>加密与 Linux 上 SQL Server 的连接
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Linux 上可以使用传输层安全性 (TLS) 通过客户端应用程序和实例之间的网络传输的数据进行加密[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上支持相同的 TLS 协议：TLS 1.2、 1.1 和 1.0。 但是，若要配置 TLS 的步骤是特定于其上的操作系统[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正在运行。  
+Linux 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用传输层安全性 (TLS) 对通过网络在客户端应用程序与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间传输的数据进行加密。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上支持相同的 TLS 协议：TLS 1.2、1.1 和 1.0。 但是，配置 TLS 的步骤特定于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的操作系统。  
 
-## <a name="requirements-for-certificates"></a>对证书的要求 
-开始之前，您需要确保你的证书符合以下要求：
-- 当前系统时间必须晚于证书的属性从属性，该证书并有效之前有效。
-- 该证书必须用于服务器身份验证。 这要求指定服务器身份验证 (1.3.6.1.5.5.7.3.1) 的证书的增强型密钥用法属性。
-- 通过使用 AT_KEYEXCHANGE KeySpec 选项，必须创建该证书。 通常情况下，证书的密钥用法属性 (KEY_USAGE) 还包括密钥加密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
-- 证书的 Subject 属性必须指明公用名 (CN) 为主机名或服务器计算机的完全限定的域名 (FQDN) 是相同。 注意:支持通配符证书。
+## <a name="requirements-for-certificates"></a>证书要求 
+在开始之前，需要确保证书符合以下要求：
+- 当前系统时间必须晚于证书的“有效起始时间”属性，并早于证书的“有效截止时间”属性。
+- 该证书必须用于服务器身份验证。 这就要求，证书的“增强型密钥使用”属性必须指定“服务器身份验证(1.3.6.1.5.5.7.3.1)”。
+- 必须使用 AT_KEYEXCHANGE 的 KeySpec 选项创建证书。 证书的密钥使用属性 (KEY_USAGE) 通常还包括密钥加密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
+- 证书的“使用者”属性必须指明，证书公用名称 (CN) 与服务器计算机的主机名或完全限定的域名 (FQDN) 相同。 注意：支持通配符证书。
 
-## <a name="configuring-the-openssl-libraries-for-use-optional"></a>（可选） 用于配置 OpenSSL 库
-可创建中的符号链接`/opt/mssql/lib/`引用其中的目录`libcrypto.so`和`libssl.so`库应该用于加密。 这是你想要强制使用 OpenSSL 而不使用默认系统提供的特定版本的 SQL Server 的情况下很有用。 如果这些符号链接不存在，SQL Server 将加载在系统上的默认配置 OpenSSL 库。
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>配置要使用的 OpenSSL 库（可选）
+可以在 `/opt/mssql/lib/` 目录中创建符号链接，以引用应当用于加密的 `libcrypto.so` 和 `libssl.so` 库。 若要强制 SQL Server 使用特定的 OpenSSL 版本，而不是系统提供的默认版本，此方法非常有用。 如果未提供这些符号链接，SQL Server 将在系统上加载默认配置的 OpenSSL 库。
 
-这些符号链接应命名为`libcrypto.so`并`libssl.so`并放置在`/opt/mssql/lib/`目录。
+这些符号链接应命名为 `libcrypto.so` 和 `libssl.so`，并放在 `/opt/mssql/lib/` 目录中。
 
 ## <a name="overview"></a>概述
-TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 正确配置时，TLS 提供隐私和数据完整性的客户端和服务器之间的通信。  TLS 连接可以是启动的客户端或服务器启动。 
+TLS 用于加密从客户端应用程序到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的连接。 正确配置后，TLS 可为客户端和服务器之间的通信提供隐私和数据完整性。  TLS 连接可以是客户端启动的或服务器启动的。 
 
 ## <a name="client-initiated-encryption"></a>客户端启动的加密 
-- **生成证书**（/CN 应在 SQL Server 完全限定的域名与主机名匹配）
+- **生成证书**（/CN 应与 SQL Server 主机完全限定的域名匹配）
 
 > [!NOTE]
-> 对于此示例，我们使用自签名证书，这应不用于生产方案。 应使用 CA 证书。 
+> 在本示例中，我们使用自签名证书，此证书不应用于生产方案。 你应该使用 CA 证书。 
 
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
@@ -59,18 +59,18 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
-- **注册客户端计算机 （Windows、 Linux 或 macOS） 上的证书**
+- **在客户端计算机（Windows、Linux 或 macOS）上注册证书**
 
-    -   如果使用 CA 签名的证书，你必须复制到客户端计算机上而不是用户证书的证书颁发机构 (CA) 证书。 
-    -   如果使用自签名的证书，只需将.pem 文件复制到分发到相应的以下文件夹并执行命令来启用它们 
-        - **Ubuntu**:向复制证书```/usr/share/ca-certificates/```重命名为.crt 的扩展插件使用 dpkg 重新配置 ca 证书，使它作为系统 CA 证书。 
-        - **RHEL**:向复制证书```/etc/pki/ca-trust/source/anchors/```使用```update-ca-trust```，使它作为系统 CA 证书。
-        - **SUSE**:向复制证书```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```，使它作为系统 CA 证书。
-        -  Windows：作为当前用户下的证书的.pem 文件-> 导入受信任的根证书颁发机构证书->
+    -   如果使用 CA 签名证书，则必须将证书颁发机构 (CA) 证书而不是用户证书复制到客户端计算机。 
+    -   如果使用自签名证书，只需根据分发版将 .pem 文件复制到以下文件夹中，然后执行命令启用它们 
+        - **Ubuntu**：将证书复制到 ```/usr/share/ca-certificates/```，将扩展名重命名为 .crt，使用 dpkg-reconfigure ca-certificates 将其作为系统 CA 证书启用。 
+        - **RHEL**：将证书复制到 ```/etc/pki/ca-trust/source/anchors/```，使用 ```update-ca-trust``` 将其作为系统 CA 证书启用。
+        - **SUSE**：将证书复制到 ```/usr/share/pki/trust/anchors/```，使用 ```update-ca-certificates``` 将其作为系统 CA 证书启用。
+        -  Windows：在当前用户 -> 受信任的根证书颁发机构 -> 证书下将 .pem 文件作为证书导入
         - **macOS**： 
-           - 将复制到证书 ```/usr/local/etc/openssl/certs```
-           - 运行以下命令以获取哈希值： ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 重命名为值的证书。 例如： ```mv mssql.pem dc2dd900.0```。 请确保在 dc2dd900.0 ```/usr/local/etc/openssl/certs```
+           - 将证书复制到 ```/usr/local/etc/openssl/certs```
+           - 运行以下命令获取哈希值：```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - 将证书重命名为值。 例如： ```mv mssql.pem dc2dd900.0```。 确保 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
     
 -   **连接字符串示例** 
 
@@ -90,9 +90,9 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
     
             "encrypt=true; trustServerCertificate=false;" 
 
-## <a name="server-initiated-encryption"></a>由服务器启动的加密 
+## <a name="server-initiated-encryption"></a>服务器启动的加密 
 
-- **生成证书**（/CN 应匹配你的 SQL Server 主机完全限定域名名）
+- **生成证书**（/CN 应与 SQL Server 主机完全限定的域名匹配）
         
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
@@ -125,13 +125,13 @@ TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../inclu
             "encrypt=false; trustServerCertificate=false;" 
             
 > [!NOTE]
-> 设置**TrustServerCertificate**为 true; 如果客户端无法连接到用于验证证书的真实性的 CA
+> 如果客户端无法连接到 CA 来验证证书的真实性，请将“TrustServerCertificate”设置为 True 
 
 ## <a name="common-connection-errors"></a>常见的连接错误  
 
 |错误消息 |Fix |
 |--- |--- |
-|由不受信任的颁发机构颁发的证书链。  |当客户端将无法验证 SQL Server 在 TLS 握手期间提供的证书上签名时，将发生此错误。 请确保客户端信任是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]直接，证书或 CA 签名的 SQL Server 证书。 |
-|目标主体名称不正确。  |请确保 SQL Server 的证书公用名称字段匹配客户端的连接字符串中指定的服务器名称。 |  
-|远程主机强行关闭现有连接。 |客户端不支持所需的 SQL Server 的 TLS 协议版本时，可能发生此错误。 例如，如果[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置为需要 TLS 1.2，请确保你的客户端还支持 TLS 1.2 协议。 |
+|证书链是由不受信任的颁发机构颁发的。  |如果客户端在 TLS 握手期间无法验证 SQL Server 提供的证书上的签名，则会发生此错误。 请确保客户端直接信任 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 证书，或者信任签署 SQL Server 证书的 CA。 |
+|目标主体名称不正确。  |确保 SQL Server 证书上的“公用名”字段与客户端连接字符串中指定的服务器名称匹配。 |  
+|远程主机强行关闭现有连接。 |如果客户端不支持 SQL Server 所需的 TLS 协议版本，则会发生此错误。 例如，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置为需要 TLS 1.2，请确保客户端也支持 TLS 1.2 协议。 |
 | | |   

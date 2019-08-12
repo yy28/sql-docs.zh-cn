@@ -1,7 +1,7 @@
 ---
-title: 查询存储池中的 HDFS 数据
+title: 在存储池中查询 HDFS 数据
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何查询 SQL Server 2019 大数据群集 （预览版） 中的 HDFS 数据。 你对在存储池中的数据创建外部表，然后运行查询。
+description: 本教程演示如何在 SQL Server 2019 大数据群集（预览版）中查询 HDFS 数据。 可以为存储池中的数据创建外部表，然后运行查询。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,26 +10,26 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957709"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中的查询 HDFS
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中查询 HDFS
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何查询 SQL Server 2019 大数据群集 （预览版） 中的 HDFS 数据。
+本教程演示如何在 SQL Server 2019 大数据群集（预览版）中查询 HDFS 数据。
 
-在本教程中，您学习如何：
+在本教程中，你将学习如何执行以下操作：
 
 > [!div class="checklist"]
-> * 创建外部表指向 HDFS 的大数据群集中的数据。
-> * 将此数据与高价值的数据联接主实例中。
+> * 创建指向大数据群集中 HDFS 数据的外部表。
+> * 将此数据与主实例中的高值数据联接起来。
 
 > [!TIP]
-> 如果您愿意，可以下载并运行本教程中的所有命令的脚本。 有关说明，请参阅[数据虚拟化示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub 上。
+> 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的[数据虚拟化示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)。
 
 ## <a id="prereqs"></a> 先决条件
 
@@ -37,26 +37,26 @@ ms.locfileid: "67957709"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-- [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
+- [将示例数据加载到大数据群集](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-to-hdfs"></a>创建到 HDFS 的外部表
+## <a name="create-an-external-table-to-hdfs"></a>为 HDFS 创建外部表
 
-存储池包含 web 点击流数据存储在 HDFS 中的 CSV 文件中。 使用以下步骤来定义可以访问该文件中的数据的外部表。
+存储池包含存储在 HDFS 中的 CSV 文件中的 Web 点击流数据。 使用以下步骤定义可访问该文件中的数据的外部表。
 
-1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
+1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 在该连接上双击**服务器**窗口以显示 SQL Server 主实例的服务器仪表板。 选择**新查询**。
+1. 双击“服务器”窗口中的连接以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
 
    ![SQL Server 主实例查询](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-1. 运行以下 TRANSACT-SQL 命令，以将上下文更改为**销售**主实例中的数据库。
+1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库  。
 
    ```sql
    USE Sales
    GO
    ```
 
-1. 定义要从 HDFS 读取的 CSV 文件格式。 按 F5 运行该语句。
+1. 定义从 HDFS 读取的 CSV 文件格式。 按 F5 运行本语句。
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -70,7 +70,7 @@ ms.locfileid: "67957709"
    );
    ```
 
-1. 如果尚不存在，请创建存储池到外部数据源。
+1. 如果尚未创建存储池的外部数据源，请创建该数据源。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -80,7 +80,7 @@ ms.locfileid: "67957709"
    END
    ```
 
-1. 创建外部表可以读取`/clickstream_data`从存储池。 **SqlStoragePool**可从大数据群集的主实例进行访问。
+1. 创建可以从存储池读取 `/clickstream_data` 的外部表。 可以从大数据群集的主实例访问 SqlStoragePool  。
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -96,7 +96,7 @@ ms.locfileid: "67957709"
 
 ## <a name="query-the-data"></a>查询数据
 
-运行以下查询加入 HDFS 数据`web_clickstream_hdfs`本地中的关系数据的外部表`Sales`数据库。
+运行以下查询，将 `web_clickstream_hdfs` 外部表中的 HDFS 数据与本地 `Sales` 数据库中的关系数据联接起来。
 
 ```sql
 SELECT  
@@ -118,7 +118,7 @@ GROUP BY  wcs_user_sk;
 GO
 ```
 
-## <a name="clean-up"></a>清理
+## <a name="clean-up"></a>清除
 
 使用以下命令删除本教程中使用的外部表。
 
@@ -129,6 +129,6 @@ GO
 
 ## <a name="next-steps"></a>后续步骤
 
-转到下一步的文章，了解如何从大数据群集查询 Oracle。
+请继续学习下一篇文章，了解如何从大数据群集查询 Oracle。
 > [!div class="nextstepaction"]
-> [在 Oracle 中的查询外部数据](tutorial-query-oracle.md)
+> [查询 Oracle 中的外部数据](tutorial-query-oracle.md)

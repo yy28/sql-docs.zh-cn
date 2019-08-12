@@ -1,7 +1,7 @@
 ---
 title: 使用 curl 将数据加载到 HDFS |Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 使用 curl 在 SQL Server 2019 大数据群集上将数据加载到 HDFS。
+description: 使用 curl 将数据加载到 SQL Server 2019 大数据群集上的 HDFS 中。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,32 +10,32 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958634"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>使用 curl 在 SQL Server 大数据群集上将数据加载到 HDFS
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>使用 curl 将数据加载到 SQL Server 大数据群集上的 HDFS 中
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何使用**curl**将数据加载到 HDFS，SQL Server 2019 大数据群集 （预览版） 上。
+本文介绍如何使用 curl 将数据加载到 SQL Server 2019 大数据群集（预览版）上的 HDFS 中  。
 
-## <a name="obtain-the-service-external-ip"></a>获取服务的外部 IP
+## <a name="obtain-the-service-external-ip"></a>获取服务外部 IP
 
-在完成部署，并且其访问权限将经历 Knox 启动 WebHDFS。 通过名为的 Kubernetes 服务公开的 Knox 终结点**网关 svc 外部**。  若要创建要上传/下载文件的必要 WebHDFS URL，需要**网关 svc 外部**服务外部的 IP 地址和大数据群集的名称。 可以获取**网关 svc 外部**服务外部的 IP 地址通过运行以下命令：
+WebHDFS 在部署完成后启动，其访问通过 Knox 进行。 Knox 终结点通过名为“gateway-svc-external”的 Kubernetes 服务公开  。  要创建必需的 WebHDFS URL 来上传/下载文件，需要 gateway-svc-external 服务外部 IP 地址和大数据群集的名称  。 可以通过运行以下命令获取 gateway-svc-external 服务外部 IP 地址  ：
 
 ```bash
 kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> `<big data cluster name>`下面是你在部署配置文件中指定群集的名称。 默认名称是`mssql-cluster`。
+> 这里的 `<big data cluster name>` 是在部署配置文件中指定的群集的名称。 默认名称为 `mssql-cluster`。
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>构造用于访问 WebHDFS 的 URL
 
-现在，您可以构造用于访问 WebHDFS，如下所示的 URL:
+现在，可以按如下方式构造用于访问 WebHDFS 的 URL：
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
@@ -45,23 +45,23 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 ## <a name="list-a-file"></a>列出文件
 
-下列表文件**hdfs: / / airlinedata**，使用以下 curl 命令：
+要列出 hdfs:///airlinedata 下的文件，请使用以下 curl 命令  ：
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
-## <a name="put-a-local-file-into-hdfs"></a>将本地文件放置在 HDFS
+## <a name="put-a-local-file-into-hdfs"></a>将本地文件放入 HDFS
 
-若要将新文件放**test.csv**从本地目录更改为 airlinedata 目录，请使用以下 curl 命令 (**内容类型**参数是必需的):
+要将新文件“test.csv”从本地目录放入 airlinedata 目录，请使用以下 curl 命令（Content-Type 参数是必需的）   ：
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
-## <a name="create-a-directory"></a>创建一个目录
+## <a name="create-a-directory"></a>创建目录
 
-若要创建一个目录**测试**下`hdfs:///`，使用以下命令：
+要在 `hdfs:///` 下创建目录测试，请使用以下命令  ：
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
@@ -69,4 +69,4 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 SQL Server 大数据群集的详细信息，请参阅[什么是 SQL Server 大数据群集？](big-data-cluster-overview.md)。
+有关 SQL Server 大数据群集的更多详细信息，请参阅[什么是 SQL Server 大数据群集？](big-data-cluster-overview.md)。

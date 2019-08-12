@@ -1,7 +1,7 @@
 ---
-title: 部署配置文件引用
+title: 部署配置文件参考
 titleSuffix: SQL Server big data clusters
-description: 适用于大数据群集部署配置文件的引用。
+description: 大数据群集部署配置文件的参考。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958248"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>对于大数据群集的部署配置文件引用
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>大数据群集的部署配置文件参考
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍 SQL Server 2019 大数据群集部署配置文件的结构的 JSON 文件。
+本文提供了一个 JSON 文件，用于记录 SQL Server 2019 大数据群集部署配置文件的结构。
 
 > [!TIP]
-> 不要使用此操作，作为您实际部署的配置文件。 相反，按照中的说明[部署指南](deployment-guidance.md#configfile)有关如何使用配置文件。
+> 不要将它用作实际的部署配置文件。 相反，请遵循[部署指南](deployment-guidance.md#configfile)中的说明，了解如何使用配置文件。
 
 ## <a name="deployment-configuration-file"></a>部署配置文件
 
-使用以下 JSON 文件作为参考的结构和大数据群集部署配置文件中的设置。
+在大数据群集部署配置文件中，请使用以下 JSON 文件作为结构和设置的参考。
 
 ```json
 {
@@ -453,4 +453,4 @@ ms.locfileid: "67958248"
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何使用和自定义部署配置文件的详细信息，请参阅[如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md#configfile)。
+有关如何使用和自定义部署配置文件的详细信息，请参阅[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md#configfile)。

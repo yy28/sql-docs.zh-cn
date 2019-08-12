@@ -1,7 +1,7 @@
 ---
-title: 在 Azure Data Studio 中使用见解小组件，用于监视服务器和数据库
+title: 使用 Azure Data Studio 中的见解小组件监视服务器和数据库
 titleSuffix: Azure Data Studio
-description: 了解如何在 Azure Data Studio 见解小组件
+description: 了解 Azure Data Studio 中的见解小组件
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,24 +11,24 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959527"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>管理服务器和见解小组件中使用的数据库 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的见解小组件管理服务器和数据库
 
-见解小组件需要使用来监视服务器和数据库的 TRANSACT-SQL (T-SQL) 查询并将其转换为见解深刻的可视化效果。
+见解小组件使用用于监视服务器和数据库的 Transact-SQL (T-SQL) 查询，并将其转化为富有见解力的可视化效果。
 
-Insights 是可自定义图表和图形添加到服务器和数据库监视仪表板。 查看一眼见解的服务器和数据库，然后深入了解更多详细信息，并启动的已定义的管理操作。
+见解是指添加到服务器和数据库监视仪表板的可自定义图表和图形。 查看服务器和数据库的一览式见解，然后深入了解更多详细信息，并启动所定义的管理操作。
 
-您可以构建令人惊叹服务器和数据库管理仪表板类似于下面的示例：
+可以生成类似于以下示例的出色服务器和数据库管理仪表板：
 
 ![数据库仪表板](media/insight-widgets/database-dashboard.png)
 
 
-若要在跳转，并开始创建不同类型的见解小组件，请查看以下教程：
+若要直入正题，开始创建不同类型的见解小组件，请查看以下教程：
 
 - [生成自定义见解小组件](tutorial-build-custom-insight-sql-server.md)
 - *启用内置见解小组件*
@@ -38,21 +38,21 @@ Insights 是可自定义图表和图形添加到服务器和数据库监视仪�
 
 ## <a name="sql-queries"></a>SQL 查询
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 尝试避免引入但另一个语言或大量用户界面以便尝试使用 T-SQL 尽可能多地使用最小 JSON 配置。 使用 T-SQL 配置见解小组件利用无数的现有源的查询可以转换为见解深刻的小组件的非常有用的 T-SQL 查询数。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 试图避免引入另一种语言或繁杂的用户界面，因此它尽可能多地使用 JSON 配置最少的 T-SQL。 通过使用 T-SQL 配置见解小组件，可以利用无数个现有的有用 T-SQL 查询源，这些查询可转化为富有见解力的小组件。
 
-见解小组件组成一个或两个 T-SQL 查询：
-* *见解小组件查询*是必需的并且是在小组件中返回显示的数据的查询。
-* *了解详细信息查询*是仅在需要创建一个了解详细信息页。
+见解小组件由一个或两个 T-SQL 查询组成：
+* *见解小组件查询*是必需的，并且是返回小组件中所示数据的查询。
+* 仅当创建见解详细信息页面时，才需要*见解详细信息查询*。
 
-见解小组件查询定义呈现计数、 图表或图形的数据集。 了解详细信息查询用于列出相关的见解以了解详细信息面板中的表格格式的详细信息。 
+见解小组件查询定义用于呈现计数、图表或图形的数据集。 见解详细信息查询用于在见解详细信息面板中以表格格式列出相关见解详细信息。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 执行见解小组件查询并将查询结果集映射到图表的数据集，然后将其呈现。 当用户打开了某个见解的详细信息时，它执行了解详细信息查询，并打印出在对话框中的网格视图中的结果。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 执行见解小组件查询，并将查询结果集映射到某个图表的数据集，然后呈现它。 当用户打开某个见解的详细信息时，它会执行见解详细信息查询，并在对话框的网格视图中输出结果。
 
-基本理念是一种方法中编写 T-SQL 查询，以便它可以用作数据集的计数、 图表和图形小组件。 
+基本思路是以某种方式编写 T-SQL 查询，以便将其用作计数、图表和图形小组件的数据集。 
 
 ## <a name="summary"></a>“摘要”
 
-T-SQL 查询，其结果集确定见解小组件行为。 编写查询的图表类型或映射正确的图表类型的现有查询是关键的考虑因素，以生成有效的见解小组件。
+T-SQL 查询及其结果集决定了见解小组件的行为。 为图表类型编写查询或为现有查询映射正确的图表类型是生成有效见解小组件的关键考虑因素。
 
 
 

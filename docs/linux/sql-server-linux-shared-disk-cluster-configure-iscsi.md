@@ -1,5 +1,5 @@
 ---
-title: 配置故障转移群集实例存储 iSCSI-Linux 上的 SQL Server
+title: 配置故障转移群集实例存储 iSCSI - Linux 上的 SQL Server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,49 +9,49 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032401"
 ---
-# <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例-iSCSI-Linux 上的 SQL Server
+# <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>配置故障转移群集实例 - iSCSI - Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何在 Linux 上配置 iSCSI 存储为故障转移群集实例 (FCI)。 
+本文介绍如何在 Linux 上为故障转移群集实例 (FCI) 配置 iSCSI 存储。 
 
 ## <a name="configure-iscsi"></a>配置 iSCSI 
-iSCSI 使用网络来提供从服务器到服务器的已知目标磁盘。 连接到 iSCSI 目标服务器需要配置 iSCSI 发起程序。 在目标上的磁盘提供显式权限，以便能够对其进行访问的发起程序可以这样做。 高可用性和可靠性，应为目标本身。
+iSCSI 使用网络将名为“目标”的服务器中的磁盘呈现给服务器。 连接到 iSCSI 目标的服务器要求已配置 iSCSI 发起程序。 目标上的磁盘具有显式权限，因此只有能够访问它们的发起程序才能执行此操作。 目标本身应该是高度可用和可靠的。
 
 ### <a name="important-iscsi-target-information"></a>重要的 iSCSI 目标信息
-虽然本部分将介绍如何配置 iSCSI 目标，因为它是特定于你将使用的源的类型，请确保配置将由群集节点的磁盘的安全性。  
+虽然本部分不介绍如何配置 iSCSI 目标，因为此过程特定于要使用的源类型，但请确保已配置（群集节点将使用的）磁盘的安全性。  
 
-如果使用基于 Linux 的 iSCSI 目标，目标应永远不会配置任何 FCI 节点上。 有关性能和可用性，iSCSI 网络应独立于所使用的源服务器和客户端服务器上的常规网络流量。 用于 iSCSI 的网络应该速度很快。 请记住该网络不使用某些处理器带宽，因此如果使用常规服务器相应地规划。
-要确保的最重要一点是在目标上完成是将创建的磁盘分配适当的权限，以便仅在 FCI 中加入这些服务器有权访问它们。 从 Microsoft iSCSI 目标其中 linuxnodes1 是创建，名称，在这种情况下，节点的 IP 地址分配，以便向其显示 NewFCIDisk1.vhdx 下面显示了一个示例。
+如果使用基于 Linux 的 iSCSI 目标，则不应在任何 FCI 节点上配置目标。 处于性能和可用性的考虑，应将 iSCSI 网络与源服务器和客户端服务器上常规网络流量所使用的网络分开。 用于 iSCSI 的网络速度应很快。 请记住，网络确实会消耗一些处理器带宽，所以如果使用的是常规服务器，请相应进行规划。
+在目标上需要确保的最重要的事是为创建的磁盘分配适当的权限，以便只有那些参与 FCI 的服务器才能访问它们。 下面显示了一个示例 Microsoft iSCSI 目标，其中 linuxnodes1 是创建的名称，在这种情况下，分配了节点的 IP 地址，以便向其显示 NewFCIDisk1.vhdx。
 
 ![Initiator][1]
 
 ### <a name="instructions"></a>Instructions
 
-本部分将介绍如何将充当 FCI 节点的服务器上配置 iSCSI 发起程序。 在 RHEL 和 Ubuntu，说明应适用。
+本部分介绍如何在用作 FCI 节点的服务器上配置 iSCSI 发起程序。 此说明同样适用于 RHEL 和 Ubuntu。
 
-ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链接：
+有关支持的分发的 iSCSI 发起程序的更多信息，请访问以下链接：
 - [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
-1.  在 FCI 配置中选择一个将加入的服务器。 并不重要哪一个。 iSCSI 应为在专用网络中，因此配置 iSCSI 以便识别和使用该网络。 运行`sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`其中`<iSCSIIfaceName>`是网络的唯一或友好名称。 下面的示例使用`iSCSINIC`:
+1.  选择将参与 FCI 配置的其中一个服务器。 选择任何一个均可。 iSCSI 应位于专用网络上，因此请配置 iSCSI 以识别和使用该网络。 运行 `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`，其中 `<iSCSIIfaceName>` 是网络的唯一或友好名称。 下面的示例使用 `iSCSINIC`：
    
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
     ![7-setiscsinetwork][6]
  
-2.  编辑`/var/lib/iscsi/ifaces/iSCSIIfaceName`。 请确保它已完全填写以下值：
+2.  编辑 `/var/lib/iscsi/ifaces/iSCSIIfaceName`。 确保已完整填写以下值：
 
-    - iface.net_ifacename 并在操作系统中所示的网络卡的名称。
-    - iface.hwaddress 是将创建以下此接口的唯一名称的 MAC 地址。
+    - iface.net_ifacename 是操作系统中显示的网卡名称。
+    - iface.hwaddress 是将在下面为此接口创建的唯一名称的 MAC 地址。
     - iface.ipaddress
     - iface.subnet_Mask 
 
@@ -59,13 +59,13 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
 
     ![iSCSITargetSettings][2]
 
-3.  发现 iSCSI 目标。
+3.  查找 iSCSI 目标。
 
     ```bash
     sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
     ```
 
-     \<iSCSINetName > 是在网络中，唯一/友好名称\<TargetIPAddress > 是 iSCSI 目标的 IP 地址和\<TargetPort > 是 iSCSI 目标的端口。 
+     \<iSCSINetName> 是网络的唯一/友好名称，\<TargetIPAddress> 是 iSCSI 目标的 IP 地址，\<TargetPort> 是 iSCSI 目标的端口。 
 
     ![iSCSITargetResults][3]
 
@@ -76,11 +76,11 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
     sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
     ```
 
-    \<iSCSIIfaceName > 是网络的唯一/友好名称和\<TargetIPAddress > 是 iSCSI 目标的 IP 地址。
+    \<iSCSINetName> 是网络的唯一/友好名称，\<TargetIPAddress> 是 iSCSI 目标的 IP 地址。
 
     ![iSCSITargetLogin][4]
 
-5.  检查连接到 iSCSI 目标。
+5.  检查是否存在与 iSCSI 目标的连接。
 
     ```bash
     sudo iscsiadm -m session
@@ -89,7 +89,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
     ![iSCSIVerify][5]
 
  
-6.  检查 iSCSI 附加磁盘
+6.  检查 iSCSI 附加的磁盘
 
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
@@ -102,7 +102,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
     sudo pvcreate /dev/<devicename>
     ```
 
-    \<devicename > 是上一步中的设备的名称。 
+    \<devicename> 是上一步中的设备的名称。 
 
  
 8.  在 iSCSI 磁盘上创建卷组。 分配给单个卷组的磁盘被视为池或集合。 
@@ -111,85 +111,85 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
     sudo vgcreate <VolumeGroupName> /dev/devicename
     ```
 
-    \<VolumeGroupName > 是卷组的名称和\<devicename > 是从步骤 6 设备的名称。 
+    \<VolumeGroupName> 是卷组的名称，\<devicename> 是步骤 6 中设备的名称。 
  
-9.  创建并验证逻辑磁盘卷。
+9.  创建并验证磁盘的逻辑卷。
 
     ```bash
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<大小 > 是要进行创建，卷的大小，可以使用 G （千兆字节为单位） 和 T （兆兆字节） 等，指定\<LogicalVolumeName > 是逻辑卷的名称和\<VolumeGroupName > 是从卷组的名称上一步。 
+    \<size> 是要创建的卷的大小，可以用 G（千兆字节）、T（兆字节）等指定，\<logical volume name> 是逻辑卷的名称，\<volume group name> 是上一步中卷组的名称。 
 
-    下面的示例创建的 25 GB 卷。
+    下面的示例创建了一个 25GB 的卷。
  
     ![Create25GBVol][10]
 
-10. 执行`sudo lvs`若要查看已创建 LVM。
+10. 执行 `sudo lvs` 以查看创建的 LVM。
  
-11. 格式化逻辑卷与受支持的文件系统。 对于 EXT4，请使用下面的示例：
+11. 使用支持的文件系统格式化逻辑卷。 对于 EXT4，使用以下示例：
 
     ```bash
     sudo mkfs.ext4 /dev/<VolumeGroupName>/<LogicalVolumeName>
     ```
 
-    \<VolumeGroupName > 是上一步中的卷组的名称。 \<LogicalVolumeName > 是在上一步中的逻辑卷的名称。  
+    \<volumeGroupName> 是上一步中卷组的名称。 \<LogicalVolumeName> 是上一步中逻辑卷的名称。  
 
-12. 对于系统数据库或存储在默认数据位置的任何内容，请执行以下步骤。 否则，跳到步骤 13。
+12. 对于系统数据库或存储在默认数据位置的任何内容，请执行以下步骤。 否则则，请跳至步骤 13。
 
-   *    请确保 SQL Server 已停止正在努力在服务器上。
+   *    确保正在使用的服务器上的 SQL Server 已停止运行。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    开关完全是超级用户。 如果成功，将不会收到任何确认。
+   *    彻底切换为超级用户。 如果成功，不会收到任何确认信息。
 
     ```bash
     sudo -i
     ```
 
-   *    要使用 mssql 用户的开关。 如果成功，将不会收到任何确认。
+   *    切换为 mssql 用户。 如果成功，不会收到任何确认信息。
 
     ```bash
     su mssql
     ```
 
-   *    创建一个临时目录来存储 SQL Server 数据和日志文件。 如果成功，将不会收到任何确认。
+   *    创建一个临时目录来存储 SQL Server 数据和日志文件。 如果成功，不会收到任何确认信息。
 
     ```bash
     mkdir <TempDir>
     ```
 
-    \<TempDir > 是文件夹的名称。 下面的示例创建一个名为 /var/opt/mssql/TempDir 文件夹。
+    \<TempDir> 是文件夹名称。 以下示例创建名为 /var/opt/mssql/TempDir 的文件夹。
 
     ```bash
     mkdir /var/opt/mssql/TempDir
     ```
     
-   *    将 SQL Server 数据和日志文件复制到临时目录。 如果成功，将不会收到任何确认。
+   *    将 SQL Server 的数据和日志文件复制到临时目录。 如果成功，不会收到任何确认信息。
 
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<TempDir > 是上一步中的文件夹的名称。
+    \<TempDir> 是上一步中的文件夹的名称。
     
-   *    验证文件在目录中。
+   *    验证文件是否位于目录中。
 
     ```bash
     ls \<TempDir>
     ```
-    \<TempDir > 是从步骤 d 文件夹的名称。
+    \<TempDir> 是步骤 d 中文件夹的名称。
 
-   *    从现有的 SQL Server 数据目录中删除的文件。 如果成功，将不会收到任何确认。
+   *    删除现有 SQL Server 数据目录中的文件。 如果成功，不会收到任何确认信息。
 
     ```bash
     rm - f /var/opt/mssql/data/*
     ```
 
-   *    验证已删除的文件。 下图显示了从 c 到 h 的整个序列示例。
+   *    验证文件是否已删除。 下图显示了从 c 到 h 的整个序列的示例。
 
     ```bash
     ls /var/opt/mssql/data
@@ -197,127 +197,127 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
 
     ![45-CopyMove][8]
  
-   *    类型`exit`若要切换回根用户。
+   *    键入 `exit` 切换回根用户。
 
-   *    安装 SQL Server 数据文件夹中的 iSCSI 逻辑卷。 如果成功，将不会收到任何确认。
+   *    将 iSCSI 逻辑卷装入 SQL Server 数据文件夹中。 如果成功，不会收到任何确认信息。
 
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 是卷组的名称和\<LogicalVolumeName > 是已创建的逻辑卷的名称。 下面的示例语法匹配的卷组和前一命令的逻辑卷。
+    \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称。 以下示例语法与上一个命令中的卷组和逻辑卷匹配。
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
     ``` 
 
-   *    更改为 mssql 装载的所有者。 如果成功，将不会收到任何确认。
+   *    将装载的所有者更改为 mssql。 如果成功，不会收到任何确认信息。
 
     ```bash
     chown mssql /var/opt/mssql/data
     ```
 
-   *    装载的组的所有权更改为 mssql。 如果成功，将不会收到任何确认。
+   *    将装载组的所有权更改为 mssql。 如果成功，不会收到任何确认信息。
 
     ```bash
     chgrp mssql /var/opt/mssql/data
     ``` 
 
-   *    切换到 mssql 用户。 如果成功，将不会收到任何确认。
+   *    切换为 mssql 用户。 如果成功，不会收到任何确认信息。
 
     ```bash
     su mssql
     ``` 
 
-   *    将文件从临时目录 /var/opt/mssql/data 复制。 如果成功，将不会收到任何确认。
+   *    从临时目录 /var/opt/mssql/data 复制文件。 如果成功，不会收到任何确认信息。
 
     ```bash
     cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
     ``` 
 
-   *    验证文件存在。
+   *    验证文件是否存在。
 
     ```bash
     ls /var/opt/mssql/data
     ``` 
  
-   *    输入`exit`不为 mssql。
+   *    输入 `exit` 以退出 mssql 身份。
     
-   *    输入`exit`使其不作为根。
+   *    输入 `exit` 以退出 root 身份。
 
-   *    启动 SQL Server。 如果已正确复制所有内容和应用的安全设置是否正确，SQL Server 应显示为已启动。
+   *    启动 SQL Server。 如果正确复制了所有内容并正确应用了安全性，SQL Server 应显示为已启动。
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ``` 
  
-   *    停止 SQL Server，并验证它关闭的情况下。
+   *    停止 SQL Server 并验证它是否已关闭。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ``` 
 
-13. 为系统数据库，例如，用户数据库或备份以外的内容，请执行以下步骤。 如果只使用了默认位置，请跳至步骤 14。
+13. 对于系统数据库以外的其他内容，例如用户数据库或备份，请按照以下步骤操作。 如果仅使用默认位置，请跳至步骤 14。
 
-   *    切换到是超级用户。 如果成功，将不会收到任何确认。
+   *    切换为超级用户。 如果成功，不会收到任何确认信息。
 
     ```bash
     sudo -i
     ```
 
-   *    创建 SQL Server 将使用的文件夹。 
+   *    创建将由 SQL Server 使用的文件夹。 
 
     ```bash
     mkdir <FolderName>
     ```
 
-    \<文件夹名 > 是文件夹的名称。 文件夹的完整路径需要指定如果不在正确的位置。 下面的示例创建一个名为 /var/opt/mssql/userdata 文件夹。
+    \< 为文件夹名称。 如果不在正确的位置，则需要指定文件夹的完整路径。 以下示例创建名为 /var/opt/mssql/userdata 的文件夹。
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   *    装载的文件夹中的上一步中创建 iSCSI 逻辑卷。 如果成功，将不会收到任何确认。
+   *    将 iSCSI 逻辑卷装载到上一步中创建的文件夹中。 如果成功，不会收到任何确认信息。
     
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName > 是卷组的名称\<LogicalVolumeName > 是已创建的逻辑卷的名称和\<文件夹名 > 是文件夹的名称。 示例语法如下所示。
+    \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称，\<FolderName> 是文件夹的名称。 示例语法如下所示。
 
     ```bash
     mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
     ```
 
-   *    更改到 mssql 创建的文件夹的所有权。 如果成功，将不会收到任何确认。
+   *    将创建的文件夹的所有权更改为 mssql。 如果成功，不会收到任何确认信息。
 
     ```bash
     chown mssql <FolderName>
     ```
 
-    \<文件夹名 > 是已创建的文件夹的名称。 以下是一个示例。
+    \<FolderName> 是已创建的文件夹的名称。 以下是一个示例。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
     ```
   
-   *    更改到 mssql 创建的文件夹的组。 如果成功，将不会收到任何确认。
+   *    将创建的文件夹组更改为 mssql。 如果成功，不会收到任何确认信息。
 
     ```bash
     chown mssql <FolderName>
     ```
 
-    \<文件夹名 > 是已创建的文件夹的名称。 以下是一个示例。
+    \<FolderName> 是已创建的文件夹的名称。 以下是一个示例。
 
     ```bash
     chown mssql /var/opt/mssql/userdata
     ```
 
-   *    类型`exit`不再是超级用户身份。
+   *    键入 `exit` 以退出超级用户身份。
 
-   *    若要测试，请在该文件夹中创建数据库。 如下所示的示例使用 sqlcmd 创建数据库，将上下文切换到它，验证文件存在于 OS 级别，然后删除该临时位置。 可以使用 SSMS。
+   *    要进行测试，请在该文件夹中创建数据库。 以下示例使用 sqlcmd 创建数据库，将上下文切换到该数据库，验证操作系统级别是否存在文件，然后删除临时位置。 可以使用 SSMS。
   
     ![50-ExampleCreateSSMS][9]
 
@@ -327,38 +327,38 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
     sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName > 是卷组的名称\<LogicalVolumeName > 是已创建的逻辑卷的名称和\<文件夹名 > 是文件夹的名称。 示例语法如下所示。
+    \<VolumeGroupName> 是卷组的名称，\<LogicalVolumeName> 是已创建的逻辑卷的名称，\<FolderName> 是文件夹的名称。 示例语法如下所示。
 
     ```bash
     sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
     ```
 
-14. 配置服务器，以便该唯一 Pacemaker 可以激活的卷组。
+14. 配置服务器，以便只有 Pacemaker 可以激活卷组。
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
-15. 生成服务器上的卷组的列表。 列出不的任何内容的 iSCSI 磁盘可供系统，如对 OS 磁盘。
+15. 生成服务器上卷组的列表。 列出的任何非 iSCSI 磁盘内容都由系统使用，例如用于 OS 磁盘的内容。
 
     ```bash
     sudo vgs
     ```
 
-16. 修改文件 /etc/lvm/lvm.conf 的激活配置节。 配置以下行：
+16. 修改文件 /etc/lvm/lvm.conf 的激活配置部分。 配置下列行：
 
     ```bash
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker > 是输出中将不能由 FCI 的步骤 20 个卷组的列表。 将逗号分隔每个用引号引起来的独立。 以下是一个示例。
+    \<ListOfVGsNotUsedByPacemaker> 是步骤 20 的输出中 FCI不 使用的卷组列表。 将每个卷组括在引号中并用逗号分隔。 以下是一个示例。
 
     ![55-ListOfVGs][11]
  
  
-17. Linux 启动时，它将安装文件系统。 若要确保仅 Pacemaker 可以装载的 iSCSI 磁盘，请重新生成的根文件系统映像。 
+17. 当 Linux 启动时，它将装载文件系统。 要确保只有 Pacemaker 可以装入 iSCSI 磁盘，请重新生成根文件系统映像。 
 
-    运行以下命令，这可能需要一些时间才能完成。 如果成功，将返回收到任何消息。
+    运行以下命令，可能需要一些时间才能完成。 运行成功后不会收到任何消息。
 
     ```bash
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)
@@ -366,29 +366,29 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
 
 18. 重新启动服务器。
 
-19. 在将参与 FCI 的另一台服务器，执行步骤 1-6。 这将为 SQL Server 提供 iSCSI 目标。 
+19. 在将参与 FCI 的另一台服务器上，执行步骤 1 - 6。 这将向 iSCSI 服务器呈现 iSCSI 目标。 
  
-20. 生成服务器上的卷组的列表。 它应显示前面创建的卷组。 
+20. 生成服务器上卷组的列表。 列表中应会显示之前创建的卷组。 
 
     ```bash
     sudo vgs
     ``` 
-23. 启动 SQL Server，并验证此服务器上启动它。
+23. 启动 SQL Server 并验证它是否可以在此服务器上启动。
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
 
-24. 停止 SQL Server，并验证它已关闭。
+24. 停止 SQL Server 并验证它是否已关闭。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. 重复步骤 1-6 将参与 FCI 的任何其他服务器上。
+25. 在将参与 FCI 的任何其他服务器上重复步骤 1 - 6。
 
-你现已准备好配置 FCI。
+现在可以配置 FCI 了。
 
 |Distribution |主题 
 |----- |-----
@@ -397,7 +397,7 @@ ISCSI 发起程序的受支持的分发版的详细信息，请参阅以下链�
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置故障转移群集实例-Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)
+[配置故障转移群集实例 - Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/05-initiator.png

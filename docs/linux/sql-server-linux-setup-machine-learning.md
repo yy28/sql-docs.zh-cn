@@ -1,6 +1,6 @@
 ---
-title: 在 Linux 上安装 SQL Server 机器学习服务 （R、 Python）
-description: Red Hat、 Ubuntu 和 SUSE 上了解如何安装 SQL Server 机器学习服务 （R、 Python）。
+title: 在 Linux 上安装 SQL Server 机器学习服务（R、Python）
+description: 了解如何在 Red Hat、Ubuntu 和 SUSE 上安装 SQL Server 机器学习服务（R、Python）。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -10,30 +10,32 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
-ms.translationtype: MT
+ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834686"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476201"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>安装 SQL Server 2019 机器学习在 Linux 上的服务 （R、 Python）
+# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>在 Linux 上安装 SQL Server 2019 机器学习服务（R、Python）
 
-[SQL Server 机器学习服务](../advanced-analytics/what-is-sql-server-machine-learning.md)启动 SQL Server 2019 此预览版本中的 Linux 操作系统上运行。 按照这篇文章，若要安装的机器学习对 R 和 Python 的扩展中的步骤。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-机器学习和编程扩展插件是到数据库引擎外的接程序。 尽管你可以[同时安装数据库引擎和机器学习服务](#install-all)，它是安装和配置 SQL Server 数据库引擎第一次，以便可以添加更多之前解决任何问题的最佳做法组件。 
+从 SQL Server 2019 的此预览版开始，[SQL Server 机器学习服务](../advanced-analytics/index.yml)在 Linux 操作系统上运行。 按照本文中的步骤安装适用于 R 和 Python 的机器学习扩展。
 
-R 和 Python 扩展的包位置是在 SQL Server Linux 源存储库中。 如果你已配置的数据库引擎安装源代码存储库，则可以运行**mssql mlservices**包使用相同的存储库注册的安装命令。
+机器学习和编程扩展是数据库引擎的附加产品。 虽然可以[同时安装数据库引擎和机器学习服务](#install-all)，但最好先安装并配置 SQL Server 数据库引擎，以便在添加更多组件之前解决所有问题。 
 
-机器学习服务还支持在 Linux 容器上。 使用机器学习服务，我们不会提供预建的容器，但您可以创建一个从使用 SQL Server 容器[可在 GitHub 上的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)。
+R 和 Python 扩展的包位置位于 SQL Server Linux 源存储库中。 如果已为数据库引擎安装配置了源存储库，则可以使用相同的存储库注册运行 mssql-mlservices 包安装命令  。
+
+Linux 容器也支持机器学习服务。 我们不提供带有机器学习服务的预构建容器，但你可以使用 [GitHub 中的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)在 SQL Server 容器中创建一个容器。
 
 ## <a name="uninstall-previous-ctp"></a>卸载以前的 CTP
 
-在过去几个 CTP 版本中，从而导致较少的包已更改的包列表。 我们建议卸载 CTP 2.x 安装 CTP 3.1 之前删除所有以前的包。 不支持通过并行安装多个版本。
+包列表在最近几个 CTP 版本中发生了更改，减少了包的数量。 我们建议先卸载 CTP 2.x 以删除所有以前的包，然后再安装 CTP 3.2。 不支持并行安装多个版本。
 
 ### <a name="1-confirm-package-installation"></a>1.确认包安装
 
-你可能想要检查存在以前安装的第一步。 以下文件针对的是现有的安装： checkinstallextensibility.sh、 exthost、 快速启动板。
+首先可能要检查是否存在以前的安装。 以下文件表示现有安装：checkinstallextensibility.sh、exthost、launchpad。
 
 ```bash
 ls /opt/microsoft/mssql/bin
@@ -41,12 +43,12 @@ ls /opt/microsoft/mssql/bin
 
 ### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.卸载以前的 CTP 2.x 包
 
-卸载包最低级别。 会自动卸载依赖于较低级别程序包任何上游包。
+在最低的包级别进行卸载。 依赖于较低级别包的所有上游包都会自动卸载。
 
-  + 对于 R 集成删除**microsoft r open***
-  + 对于 Python 集成删除**mssql mlservices python**
+  + 对于 R 集成，请删除 **microsoft-r-open***
+  + 对于 Python 集成，请删除 **mssql-mlservices-python**
 
-有关删除包的命令也显示在下表中。
+下表显示了用于删除包的命令。
 
 | 平台  | 包删除命令 | 
 |-----------|----------------------------|
@@ -55,30 +57,30 @@ ls /opt/microsoft/mssql/bin
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 3.4.4 两个或三个包组成，具体取决于该 CTP 版本之前安装。 （foreachiterators 包已合并到 CTP 2.2 中的主要 mro 包。）如果任何这些包保留删除 microsoft-r-打开-mro-3.4.4 后，你应分别将其删除。
+> Microsoft R Open 3.4.4 由两个或三个包组成，具体取决于之前安装的 CTP 版本。 （foreachiterators 包已合并到 CTP 2.2 中的主 mro 包中。）如果在删除 microsoft-r-open-mro-3.4.4 后，这些包中的任何包仍然存在，则应单独删除它们。
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-31-install"></a>3.继续 CTP 3.1 安装
+### <a name="3-proceed-with-ctp-32-install"></a>3.继续进行 CTP 3.2 安装
 
-安装的最高级别包为操作系统在本文中使用的说明。
+使用本文中针对操作系统的说明在最高包级别进行安装。
 
-为每个特定于操作系统的集的安装说明*最高的包级别*可以是**示例 1-完整安装**一系列完整的包，或**示例 2-最小安装**的最小的可行安装所需的包的数字。
+对于每个特定于 OS 的安装说明集，“最高包级别”是“示例 1 - 完全安装”（完整的包集）或“示例 2 - 最小安装”（可行安装所需的最少的包数量）    。
 
-1. 对于 R 集成开始[MRO](#mro)因为它是一项必备条件。 如果没有它，不会安装 R 集成。
+1. 对于 R 集成，请从 [MRO](#mro) 开始，因为它是必备组件。 如果没有该组件，则无法安装 R 集成。
 
-2. 运行安装命令使用你的操作系统的程序包管理器和语法： 
+2. 使用操作系统的包管理器和语法运行安装命令： 
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-+ Linux 版本必须是[SQL Server 支持的](sql-server-linux-release-notes-2019.md#supported-platforms)，但不包括 Docker 引擎。 支持的版本包括：
++ Linux 版本必须[受 SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms) 支持，但不包括 Docker 引擎。 支持的版本包括：
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -86,27 +88,27 @@ ls /opt/microsoft/mssql/bin
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ (仅适用于 R)[Microsoft R Open](#mro)提供基础 R 发行版的 SQL Server 中 R 功能
++ （仅限 R）[Microsoft R Open](#mro) 为 SQL Server 中的 R 功能提供基本 R 发行版
 
-+ 应具有用于运行 T-SQL 命令的工具。 查询编辑器是必需的安装后配置和验证。 我们建议[Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux)，在 Linux 运行的免费下载。
++ 应安装用于运行 T-SQL 命令的工具。 需要使用查询编辑器进行安装后配置和验证。 我们建议使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux)，它是在 Linux 上运行的免费下载。
 
 <a name="mro"></a>
 
 ### <a name="microsoft-r-open-mro-installation"></a>Microsoft R Open (MRO) 安装
 
-Microsoft 的 R 基础分发是使用 RevoScaleR、 MicrosoftML 和使用机器学习服务安装其他 R 包的先决条件。
+要使用通过机器学习服务安装的 RevoScaleR、MicrosoftML 和其他 R 包，Microsoft 的 R 基础发行版是先决条件。
 
-所需的版本是 MRO 3.5.2。
+所需版本为 MRO 3.5.2。
 
-选择从以下两种方法安装 MRO:
+从以下两种安装 MRO 的方法中进行选择：
 
-+ 从 MRAN 下载 MRO tarball，解压缩它，并运行其 install.sh 脚本。 可以按照[MRAN 的安装说明](https://mran.microsoft.com/releases/3.5.2)如果希望此方法。
++ 从 MRAN 下载 MRO tarball，解压缩并运行其 install.sh 脚本。 如果要使用此方法，可以按照 [MRAN 上的安装说明](https://mran.microsoft.com/releases/3.5.2)进行操作。
 
-+ 或者，注册**packages.microsoft.com**如下所述安装两个包组成 MRO 分发存储库： microsoft r open mro 和 microsoft r open mkl。 
++ 或者，如下所述注册 **packages.microsoft.com** 存储库以安装包含 MRO 发行版的两个软件包：microsoft-r-open-mro 和 microsoft-r-open-mkl。 
 
-以下命令注册存储库提供 MRO。 注册后，用于安装其他 R 包，例如 mssql-mlservices-mml-r，命令将作为包依赖项中自动包括 MRO。
+以下命令可注册提供 MRO 的存储库。 注册后，用于安装其他 R 包的命令（如 mssql-mlservices-mml-r）将自动包含作为包依赖项的 MRO。
 
-#### <a name="mro-on-ubuntu"></a>在 Ubuntu 上 MRO
+#### <a name="mro-on-ubuntu"></a>Ubuntu 上的 MRO
 
 ```bash
 # Install as root
@@ -126,7 +128,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### <a name="mro-on-rhel"></a>在 RHEL 上 MRO
+#### <a name="mro-on-rhel"></a>RHEL 上的 MRO
 
 ```bash
 # Import the Microsoft repository key
@@ -141,7 +143,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
-#### <a name="mro-on-suse"></a>在 SUSE 上 MRO
+#### <a name="mro-on-suse"></a>SUSE 上的 MRO
 
 ```bash
 # Install as root
@@ -157,33 +159,33 @@ zypper update
 
 ## <a name="package-list"></a>包列表
 
-在与 internet 连接的设备，包下载并安装独立于数据库引擎的每个操作系统使用包安装程序。 下表描述了所有可用的包，但对 R 和 Python，指定提供完整功能安装或最小功能安装的包。
+在已连接 Internet 的设备上，将使用每个操作系统的包安装程序来独立于数据库引擎下载和安装包。 下表介绍了所有可用包，但对于 R 和 Python，需要指定提供完整功能安装或最小功能安装的包。
 
-| 包名称 | Applies-to | 描述 |
+| 包名称 | 适用对象 | 描述 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | 用于运行 R 和 Python 代码的可扩展性框架。 |
-| microsoft-openmpi  | Python, R | 消息传递接口 Revo * 库用于 Linux 上的并行化。 |
-| mssql-mlservices-python | Python | 开放源代码分发 Anaconda 和 Python。 |
-|mssql-mlservices-mlm-py  | Python | *完整安装*。 提供了 revoscalepy，microsoftml，预先训练的图像特征化和文本情绪分析的模型。| 
-|mssql-mlservices-packages-py  | Python | *最小安装*。 提供了 revoscalepy 和 microsoftml。 <br/>不包括预先训练的模型。 | 
-| [microsoft-r-open*](#mro) | R | 开放源代码 R 分发版中，三个包组成。 |
-|mssql-mlservices-mlm-r  | R | *完整安装*。 提供了第 sqlRUtils RevoScaleR，MicrosoftML、 olapR，预先训练的图像特征化和文本情绪分析的模型。| 
-|mssql-mlservices-packages-r  | R | *最小安装*。 提供了 RevoScaleR，sqlRUtils，MicrosoftML、 olapR。 <br/>不包括预先训练的模型。 | 
-|mssql-mlservices-mml-py  | 仅 CTP 2.0 2.1 | 由于 Python 包整合到 mssql mslservices python，在 CTP 2.2 中已过时。 提供了 revoscalepy。 不包括预先训练的模型和 microsoftml。| 
-|mssql-mlservices-mml-r  | 仅 CTP 2.0 2.1 | 由于 R 包整合到 mssql mslservices python，在 CTP 2.2 中已过时。 提供 RevoScaleR、 sqlRUtils、 olapR。 不包括预先训练的模型和 MicrosoftML。  |
+| microsoft-openmpi  | Python、R | Revo* 库在 Linux 上进行并行化所使用的消息传递接口。 |
+| mssql-mlservices-python | Python | Anaconda 和 Python 的开放源代码发行版。 |
+|mssql-mlservices-mlm-py  | Python | 完全安装  。 提供用于图像特征化和文本情绪分析的 revoscalepy、microsoftml、预先训练的模型。| 
+|mssql-mlservices-packages-py  | Python | 最小安装  。 提供 revoscalepy 和 microsoftml。 <br/>不包括预先训练的模型。 | 
+| [microsoft-r-open*](#mro) | R | 由三个包组成的 R 的开放源代码发行版。 |
+|mssql-mlservices-mlm-r  | R | 完全安装  。 提供用于图像特征化和文本情绪分析的 RevoScaleR、MicrosoftML、sqlRUtils、olapR、预先训练的模型。| 
+|mssql-mlservices-packages-r  | R | 最小安装  。 提供 RevoScaleR、sqlRUtils、MicrosoftML、olapR。 <br/>不包括预先训练的模型。 | 
+|mssql-mlservices-mml-py  | 仅限 CTP 2.0-2.1 | 由于 Python 包合并到 mssql-mslservices-python 中，因此在 CTP 2.2 中已过时。 提供 revoscalepy。 不包括预先训练的模型和 microsoftml。| 
+|mssql-mlservices-mml-r  | 仅限 CTP 2.0-2.1 | 由于 R 包合并到 mssql-mslservices-python 中，因此在 CTP 2.2 中已过时。 提供 RevoScaleR、sqlRUtils、olapR。 不包括预先训练的模型和 MicrosoftML。  |
 
 <a name="RHEL"></a>
 
 ## <a name="redhat-commands"></a>RedHat 命令
 
-可以安装语言支持任何组合中需要 （一个或多个语言）。 对 R 和 Python，有两个包可供选择。 一个提供了所有可用的功能，分为*完全安装*。 其他选项不包括预先训练的机器学习模型，并被视为*最小安装*。
+可以安装所需的任何语言支持组合（一种或多种语言）。 对于 R 和 Python，有两个包可供选择。 其中一个包提供所有可用功能，其特征为完全安装  。 替代选项不包括预先训练的机器学习模型，被认为是最小安装  。
 
 > [!Tip]
-> 如果可能，运行`yum clean all`刷新之前安装系统上的包。
+> 如果可以，请在安装之前运行 `yum clean all` 以刷新系统中的包。
 
-### <a name="example-1----full-installation"></a>示例 1-完整安装 
+### <a name="example-1----full-installation"></a>示例 1 - 完全安装 
 
-包括开放源代码 R 和 Python，可扩展性框架，microsoft openmpi，扩展插件 （R、 Python），使用机器学习库和预先训练的模型对 R 和 Python。 
+包括开放源代码 R 和 Python、扩展性框架、microsoft-openmpi、扩展（R、Python）以及机器学习库和 R 和 Python 的预先训练模型。 
 
 ```bash
 # Install as root or sudo
@@ -193,9 +195,9 @@ sudo yum install mssql-mlservices-mlm-py-9.4.7*
 sudo yum install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### <a name="example-2---minimum-installation"></a>示例 2-最小安装 
+### <a name="example-2---minimum-installation"></a>示例 2 - 最小安装 
 
-对 R 和 Python 中包括的开源 R 和 Python，extensibility framework、 microsoft openmpi、 core Revo * 库和机器学习库。 不包括预先训练的模型。
+包括开放源代码 R 和 Python、扩展性框架、microsoft-openmpi、核心 Revo * 库以及 R 和 Python 的机器学习库。 不包括预先训练的模型。
 
 ```bash
 # Install as root or sudo
@@ -209,14 +211,14 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 
 ## <a name="ubuntu-commands"></a>Ubuntu 命令
 
-可以安装语言支持任何组合中需要 （一个或多个语言）。 对 R 和 Python，有两个包可供选择。 一个提供了所有可用的功能，分为*完全安装*。 其他选项不包括预先训练的机器学习模型，并被视为*最小安装*。
+可以安装所需的任何语言支持组合（一种或多种语言）。 对于 R 和 Python，有两个包可供选择。 其中一个包提供所有可用功能，其特征为完全安装  。 替代选项不包括预先训练的机器学习模型，被认为是最小安装  。
 
 > [!Tip]
-> 如果可能，运行`apt-get update`刷新之前安装系统上的包。 此外，Ubuntu 某些 docker 映像可能没有 https apt 传输选项。 若要安装它，请使用`apt-get install apt-transport-https`。
+> 如果可以，请在安装之前运行 `apt-get update` 以刷新系统中的包。 此外，Ubuntu 的一些 docker 映像可能没有 https apt 传输选项。 若要进行安装，请使用 `apt-get install apt-transport-https`。
 
-### <a name="example-1----full-installation"></a>示例 1-完整安装 
+### <a name="example-1----full-installation"></a>示例 1 - 完全安装 
 
-包括开放源代码 R 和 Python，可扩展性框架，microsoft openmpi，扩展插件 （R、 Python），使用机器学习库和预先训练的模型对 R 和 Python。 
+包括开放源代码 R 和 Python、扩展性框架、microsoft-openmpi、扩展（R、Python）以及机器学习库和 R 和 Python 的预先训练模型。 
 
 ```bash
 # Install as root or sudo
@@ -226,9 +228,9 @@ sudo apt-get install mssql-mlservices-mlm-py
 sudo apt-get install mssql-mlservices-mlm-r 
 ```
 
-### <a name="example-2---minimum-installation"></a>示例 2-最小安装 
+### <a name="example-2---minimum-installation"></a>示例 2 - 最小安装 
 
-对 R 和 Python 中包括的开源 R 和 Python，extensibility framework、 microsoft openmpi、 core Revo * 库和机器学习库。 不包括预先训练的模型。 
+包括开放源代码 R 和 Python、扩展性框架、microsoft-openmpi、核心 Revo * 库以及 R 和 Python 的机器学习库。 不包括预先训练的模型。 
 
 ```bash
 # Install as root or sudo
@@ -242,11 +244,11 @@ sudo apt-get install mssql-mlservices-packages-r
 
 ## <a name="suse-commands"></a>SUSE 命令
 
-可以安装语言支持任何组合中需要 （一个或多个语言）。 对 R 和 Python，有两个包可供选择。 一个提供了所有可用的功能，分为*完全安装*。 其他选项不包括预先训练的机器学习模型，并被视为*最小安装*。
+可以安装所需的任何语言支持组合（一种或多种语言）。 对于 R 和 Python，有两个包可供选择。 其中一个包提供所有可用功能，其特征为完全安装  。 替代选项不包括预先训练的机器学习模型，被认为是最小安装  。
 
-### <a name="example-1----full-installation"></a>示例 1-完整安装 
+### <a name="example-1----full-installation"></a>示例 1 - 完全安装 
 
-包括开放源代码 R 和 Python，可扩展性框架，microsoft openmpi，扩展插件 （R、 Python），使用机器学习库和预先训练的模型对 R 和 Python。 
+包括开放源代码 R 和 Python、扩展性框架、microsoft-openmpi、扩展（R、Python）以及机器学习库和 R 和 Python 的预先训练模型。 
 
 ```bash
 # Install as root or sudo
@@ -256,9 +258,9 @@ sudo zypper install mssql-mlservices-mlm-py-9.4.7*
 sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
-### <a name="example-2---minimum-installation"></a>示例 2-最小安装 
+### <a name="example-2---minimum-installation"></a>示例 2 - 最小安装 
 
-对 R 和 Python 中包括的开源 R 和 Python，extensibility framework、 microsoft openmpi、 core Revo * 库和机器学习库。 不包括预先训练的模型。 
+包括开放源代码 R 和 Python、扩展性框架、microsoft-openmpi、核心 Revo * 库以及 R 和 Python 的机器学习库。 不包括预先训练的模型。 
 
 ```bash
 # Install as root or sudo
@@ -268,18 +270,18 @@ sudo zypper install mssql-mlservices-packages-py-9.4.7*
 sudo zypper install mssql-mlservices-packages-r-9.4.7*
 ```
 
-## <a name="post-install-config-required"></a>安装后配置 （必需）
+## <a name="post-install-config-required"></a>安装后配置（必需）
 
-其他配置是主要通过[mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)。
+其他配置主要通过 [mssql-conf 工具](sql-server-linux-configure-mssql-conf.md)来完成。
 
 
-1. 添加用于运行 SQL Server 服务 mssql 用户帐户。 如果还没有以前运行安装程序，这是必需的。
+1. 添加用于运行 SQL Server 服务的 mssql 用户帐户。 如果之前未运行过该安装程序，则必须这样做。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. 接受许可协议对开放源代码 R 和 Python。 有几种方法来执行此操作。 如果以前接受的 SQL Server 许可，并且现在要添加的 R 或 Python 的扩展，以下命令将为您的同意条款：
+2. 接受开放源代码 R 和 Python 的许可协议。 可以通过多种方式来完成此项工作。 如果之前已接受 SQL Server 许可并且现将添加 R 或 Python 扩展，则以下命令可表示你同意其条款：
 
    ```bash
    # Run as SUDO or root
@@ -287,9 +289,9 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
    ```
 
-   备用的工作流是如果你未接受许可协议的 SQL Server 数据库引擎，安装程序检测 mssql mlservices 包并会提示你输入的 EULA 接受时`mssql-conf setup`运行。 有关最终用户许可协议参数的详细信息，请参阅[使用 mssql-conf 工具配置 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-eula)。
+   另一种工作流是，如果未接受过 SQL Server 数据库引擎许可协议，则在运行 `mssql-conf setup` 时，安装程序会检测 mssql-mlservices 包，并提示你接受 EULA。 有关 EULA 参数的详细信息，请参阅[使用 mssql-conf 工具配置 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-eula)。
 
-3. 启用出站网络访问。 默认情况下，出站网络访问处于禁用状态。 若要启用出站请求，请使用 mssql-conf 工具的布尔属性设置"outboundnetworkaccess"。 有关详细信息，请参阅[在 Linux 上使用 mssql conf 配置 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)。
+3. 启用出站网络访问。 默认情况下，出站网络访问处于禁用状态。 若要启用出站请求，请使用 mssql-conf 工具设置“outboundnetworkaccess”布尔属性。 有关详细信息，请参阅[使用 mssql-conf 配置 Linux 上的 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)。
 
    ```bash
    # Run as SUDO or root
@@ -297,13 +299,13 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. 适用于 R 功能集成唯一，将**MKL_CBWR**环境变量[确保一致的输出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel Math Kernel Library (MKL) 的计算。
+4. （仅适用于 R 功能集成）请设置“MKL_CBWR”环境变量，以确保从 Intel 数学核心函数库 (MKL) 计算得到[一致的输出结果](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)  。
 
-   + 编辑或创建名为的文件 **.bash_profile**用户主目录中添加的代码行`export MKL_CBWR="AUTO"`的文件。
+   + 在用户主目录中编辑或创建名为 .bash_profile 的文件，并将行 `export MKL_CBWR="AUTO"` 添加到该文件中  。
 
-   + 通过键入来执行此文件`source .bash_profile`bash 命令提示符处。
+   + 通过在 bash 命令提示符处键入 `source .bash_profile` 来执行此文件。
 
-5. 重新启动 SQL Server Launchpad 服务和数据库引擎实例读取 INI 文件的更新的值。 重新启动消息提醒您在每当修改扩展性相关的设置。  
+5. 重启 SQL Server Launchpad 服务和数据库引擎实例，以从 INI 文件中读取更新后的值。 每当修改与扩展性相关的设置时，都会收到重启消息提示。  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -311,24 +313,24 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
    systemctl restart mssql-server.service
    ```
 
-6. 启用外部脚本执行，使用 Azure Data Studio 或 SQL Server Management Studio (仅 Windows) 等其他工具运行 Transact SQL。 
+6. 使用 Azure Data Studio 或使用运行 Transact-SQL 的其他工具（如 SQL Server Management Studio，仅限 Windows）来启用外部脚本执行。 
 
    ```bash
    EXEC sp_configure 'external scripts enabled', 1 
    RECONFIGURE WITH OVERRIDE 
    ```
 
-7. 再次重新启动 Launchpad 服务。
+7. 再次重启 Launchpad 服务。
 
 ## <a name="verify-installation"></a>验证安装
 
-R 库 （MicrosoftML、 RevoScaleR，等），请参阅`/opt/mssql/mlservices/libraries/RServer`。
+可在 `/opt/mssql/mlservices/libraries/RServer` 中找到 R 库（MicrosoftML、RevoScaleR 及其他库）。
 
-Python 库 （microsoftml 并 revoscalepy），请参阅`/opt/mssql/mlservices/libraries/PythonServer`。
+可在 `/opt/mssql/mlservices/libraries/PythonServer` 中找到 Python 库（microsoftml 和 revoscalepy）。
 
-若要验证安装，请运行执行系统存储过程调用 R 或 Python 的 T-SQL 脚本。 此任务需要查询工具。 Azure Data Studio 是一个不错的选择。 其他常用工具如 SQL Server Management Studio 或 PowerShell 也仅限 Windows 的。 如果必须使用这些工具的 Windows 计算机，使用它连接到数据库引擎的 Linux 安装。
+若要验证安装，请运行可执行调用 R 或 Python 的系统存储过程的 T-SQL 脚本。 需要使用查询工具来完成此任务。 Azure Data Studio 就是不错的选择。 其他常用工具（如 SQL Server Management Studio 或 PowerShell）仅适用于 Windows。 如果 Windows 计算机上安装了这些工具，请使用其连接到数据库引擎的 Linux 安装。
 
-执行以下的 SQL 命令，以测试 SQL Server 中 R 执行。 如果脚本未运行，请尝试重新启动服务， `sudo systemctl restart mssql-server.service`。
+请执行以下 SQL 命令以测试 SQL Server 中的 R 执行。 如果脚本未运行，则尝试重启服务，`sudo systemctl restart mssql-server.service`。
 
 ```r
 EXEC sp_execute_external_script   
@@ -340,7 +342,7 @@ WITH RESULT SETS (([hello] int not null));
 GO 
 ```
  
-执行测试 Python 执行 SQL Server 中的以下 SQL 命令。 
+请执行以下 SQL 命令以测试 SQL Server 中的 Python 执行。 
  
 ```python
 EXEC sp_execute_external_script  
@@ -355,70 +357,70 @@ GO
 
 <a name="install-all"></a>
 
-## <a name="chained-combo-install"></a>链接"组合"安装
+## <a name="chained-combo-install"></a>链式“组合”安装
 
-可以安装和配置数据库引擎和机器学习服务一个过程中，通过附加 R 或 Python 包和上安装数据库引擎的命令的参数。 
+通过在安装数据库引擎的命令上附加 R 或 Python 包和参数，可在一个过程中安装和配置数据库引擎和机器学习服务。 
 
-1. 对于 R 集成安装[Microsoft R Open](#mro)作为必备组件。 如果您未安装 R 功能，请跳过此步骤。
+1. 对于 R 集成，请安装 [Microsoft R Open](#mro)，将其作为必备组件。 如果没有安装 R 功能，请跳过此步骤。
 
-2. 提供的命令行，包含数据库引擎和语言扩展功能。
+2. 提供包含数据库引擎的命令行以及语言扩展功能。
 
-  您可以添加单个功能，例如 Python 集成到数据库引擎安装。
+  可以将单项功能（如 Python 集成）添加到数据库引擎安装中。
 
   ```bash
   sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* 
   ```
 
-  或者，添加这两种扩展 （R、 Python）。
+  或者，同时添加两项扩展（R、Python）。
 
   ```bash
   sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* mssql-mlservices-packages-py-9.4.7*
   ```
 
-3. 接受许可协议并完成安装后配置。 使用**mssql conf**此任务的工具。
+3. 接受许可协议并完成安装后的配置。 请使用 mssql-conf 工具完成此任务  。
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  系统将提示您接受数据库引擎的许可协议，选择版本，以及设置管理员密码。 系统会提示接受许可证协议的机器学习服务。
+  系统将提示你接受数据库引擎的许可协议，选择版本，以及设置管理员密码。 系统还会提示你接受机器学习服务的许可协议。
 
-4. 如果系统提示你执行此操作，重新启动该服务。
+4. 如果系统出现重启提示，请重启服务。
 
   ```bash
   sudo systemctl restart mssql-server.service
   ```
 
-## <a name="unattended-installation"></a>无人参与的安装
+## <a name="unattended-installation"></a>无人参与安装
 
-使用[无人参与的安装](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended)数据库引擎中，将添加 mssql mlservices 和 Eula 的包。
+对数据库引擎使用[无人参与安装](https://docs.microsoft.com/sql/linux/sql-server-linux-setup?view=sql-server-2017#unattended)，添加 mssql-mlservices 和 EULA 的包。
 
-回想一下，安装程序或者 mssql-conf 工具将提示提供接受许可协议。 如果已配置 SQL Server 数据库引擎并接受其最终用户许可协议，使用特定于 mlservices 的最终用户许可协议参数之一的开放源代码 R 和 Python 分发版：
+回想一下，安装程序或 mssql-conf 工具会提示接受许可协议。 如果已配置 SQL Server 数据库引擎且已接受其 EULA，请使用开放源代码 R 和 Python 发行版的某个特定于 mlservices 的 EULA 参数：
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 ```
 
-中记录了所有可能排列的 EULA 接受[在 Linux 上使用 mssql-conf 工具配置 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-eula)。
+EULA 接受的所有可能的排列方式都记录在[使用 mssql-conf 工具配置 Linux 上的 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-eula) 中。
 
 ## <a name="offline-installation"></a>脱机安装
 
-请按照[脱机安装](sql-server-linux-setup.md#offline)步骤包的安装说明进行操作。 查找您的下载站点，然后下载特定包使用以下包列表。
+有关安装包的步骤，请按照[脱机安装](sql-server-linux-setup.md#offline)说明进行操作。 找到下载网站，然后按照下面的包列表下载特定的包。
 
 > [!Tip]
-> 多个包管理工具提供可帮助你的命令确定包的依赖项。 对于 yum，使用`sudo yum deplist [package]`。 对于 Ubuntu，请使用`sudo apt-get install --reinstall --download-only [package name]`跟`dpkg -I [package name].deb`。
+> 一些包管理工具提供可帮助确定包依赖项的命令。 对于 yum，请使用 `sudo yum deplist [package]`。 对于 Ubuntu，请在使用 `sudo apt-get install --reinstall --download-only [package name]` 之后使用 `dpkg -I [package name].deb`。
 
 
 #### <a name="download-site"></a>下载站点
 
-您可以从程序包下载[ https://packages.microsoft.com/ ](https://packages.microsoft.com/)。 所有 R 和 Python 的 mlservices 包都是与数据库引擎包共置。 基 mlservices 包版本是 （适用于 CTP 2.0) 9.4.5 9.4.6 （CTP 2.1 和更高版本）。 回想一下，microsoft r open 包位于[不同的存储库](#mro)。
+可以从 [https://packages.microsoft.com/](https://packages.microsoft.com/) 下载包。 R 和 Python 的所有 mlservices 包都与数据库引擎包位于相同位置。 mlservices 包的基本版本为 9.4.5（适用于 CTP 2.0）、9.4.6（适用于 CTP 2.1 及更高版本）。 回想一下，microsoft-r-open 包位于[其他存储库](#mro)中。
 
 #### <a name="rhel7-paths"></a>RHEL/7 路径
 
 |||
 |--|----|
 | mssql/mlservices 包 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
-| microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
+| microsoft-r-open 包 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 路径
@@ -426,18 +428,18 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 |||
 |--|----|
 | mssql/mlservices 包 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
-| microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
+| microsoft-r-open 包 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>SLES/12 路径
 
 |||
 |--|----|
 | mssql/mlservices 包 | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
-| microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
+| microsoft-r-open 包 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>包列表
 
-具体取决于哪些扩展，你想要使用，请下载所需的特定语言包。 确切的文件名中使用后缀，包括平台的信息，但以下文件名称应足够接近，从而确定要获取的文件。
+根据要使用的扩展，下载特定语言所需的包。 确切文件名的后缀中包含平台信息，但下面的文件名应足够接近以确定要获取的文件。
 
 ```
 # Core packages 
@@ -461,7 +463,7 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 ## <a name="add-more-rpython-packages"></a>添加更多 R/Python 包 
  
-可以安装其他 R 和 Python 包，并在 SQL Server 2019 执行的脚本中使用它们。
+可以安装其他 R 和 Python 包，并在从 SQL Server 2019 上执行的脚本中使用它们。
 
 ### <a name="r-packages"></a>R 包 
  
@@ -471,18 +473,18 @@ mssql-mlservices-mlm-py-9.4.7.64
    # sudo /opt/mssql/mlservices/bin/R/R 
    ```
 
-2. 安装 R 包名为[粘附](https://mran.microsoft.com/package/glue)以测试包的安装。
+2. 安装名为 [glue](https://mran.microsoft.com/package/glue) 的 R 包以测试包安装。
 
    ```r
    # install.packages("glue",lib="/opt/mssql/mlservices/libraries/RServer") 
    ```
-   或者，可以从命令行安装 R 包 
+   也可以从命令行安装 R 包 
 
    ```r
    # sudo /opt/mssql/mlservices/bin/R/R CMD INSTALL -l /opt/mssql/mlservices/libraries/RServer glue_1.1.1.tar.gz 
    ```
 
-3. 导入中的 R 包[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+3. 在 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中导入 R 包。
 
    ```r
    EXEC sp_execute_external_script  
@@ -492,13 +494,13 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 ### <a name="python-packages"></a>Python 包 
  
-1. 安装名为的 Python 包[httpie](https://httpie.org/)使用 pip。 
+1. 使用 pip 安装名为 [httpie](https://httpie.org/) 的 Python 包。 
 
    ```python
    # sudo /opt/mssql/mlservices/bin/python/python -m pip install httpie 
    ``` 
 
-2. 导入中的 Python 包[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+2. 在 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中导入 Python 包。
  
    ```python
    EXEC sp_execute_external_script  
@@ -506,35 +508,35 @@ mssql-mlservices-mlm-py-9.4.7.64
    @script = N'import httpie' 
    ```
 
-## <a name="limitations-in-ctp-releases"></a>在 CTP 版本中的限制
+## <a name="limitations-in-ctp-releases"></a>CTP 版本的限制
 
-Linux 上的 R 和 Python 集成仍处于活跃开发阶段。 以下功能尚未启用的预览版本中。
+Linux 上的 R 和 Python 集成仍处于积极开发阶段。 预览版本中尚未启用以下功能。
 
-+ 隐式身份验证目前不在 Linux 上的机器学习服务在此期间，这意味着您无法重新连接到服务器中访问数据或其他资源的进行中的 R 或 Python 脚本。 
++ 目前，Linux 上的机器学习服务中不提供隐式身份验证，这意味着无法从进程中的 R 或 Python 脚本连接回服务器以访问数据或其他资源。 
 
 ### <a name="resource-governance"></a>资源调控
 
-没有 Linux 和 Windows 的之间的奇偶校验[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)外部资源池，但的统计信息[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)当前具有Linux 上的不同单位。 在将来的 ctp 版本中将对齐单元。
+Linux 和 Windows 之间存在用于外部资源池进行[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)的奇偶校验，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的统计信息目前在 Linux 上具有不同的单位。 单位将在即将推出的 CTP 中保持一致。
  
 | 列名   | 描述 | Linux 上的值 | 
 |---------------|--------------|---------------|
-|peak_memory_kb | 最大资源池使用的内存量。 | 在 Linux 上，此统计信息来源于 CGroups 内存子系统，其中的值是 memory.max_usage_in_bytes |
-|write_io_count | 写入自重置资源调控器统计信息以来发出的 Io 总数。 | 在 Linux 上，此统计信息来源于其中的值写入行是 blkio.throttle.io_serviced 的 CGroups blkio 子系统 | 
-|read_io_count | 读取自重置资源调控器统计信息以来发出的 Io 总数。 | 在 Linux 上，此统计信息来源于 CGroups blkio 子系统，其中读取的行的值是 blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | 累计 CPU 用户内核时间以毫秒为单位由于自重置资源调控器统计信息。 | 在 Linux 上，此统计信息来源于 CGroups cpuacct 子系统，其中用户行上的值是 cpuacct.stat |  
-|total_cpu_user_ms | 以毫秒为单位自重置资源调控器统计信息以来累积 CPU 用户时间。| 在 Linux 上，此统计信息来源于 CGroups cpuacct 子系统，其中系统行值的值是 cpuacct.stat | 
-|active_processes_count | 在请求的时间点运行的外部进程数。| 在 Linux 上，此统计信息来源于其中的值是 pids.current GGroups pid 子系统 | 
+|peak_memory_kb | 资源池使用的最大内存量。 | 在 Linux 上，此统计信息来自 CGroups 内存子系统，其中的值为 memory.max_usage_in_bytes |
+|write_io_count | 自重置 Resource Governor 统计信息以来发出的写入 IO 总数。 | 在 Linux 上，此统计信息来自 CGroups blkio 子系统，其中写入行上的值为 blkio.throttle.io_serviced | 
+|read_io_count | 自重置 Resource Governor 统计信息以来发出的读取 IO 总数。 | 在 Linux 上，此统计信息来自 CGroups blkio 子系统，其中读取行上的值为 blkio.throttle.io_serviced | 
+|total_cpu_kernel_ms | 自重置 Resource Governor 统计信息以来的累计 CPU 用户内核时间（以毫秒为单位）。 | 在 Linux 上，此统计信息来自 CGroups cpuacct 子系统，其中用户行上的值为 cpuacct.stat |  
+|total_cpu_user_ms | 自重置 Resource Governor 统计信息以来的累计 CPU 用户时间（以毫秒为单位）。| 在 Linux 上，此统计信息来自 CGroups cpuacct 子系统，其中系统行值上的值为 cpuacct.stat | 
+|active_processes_count | 请求时运行的外部进程数。| 在 Linux 上，此统计信息来自 GGroups pids 子系统，其值为 pids.current | 
 
 ## <a name="next-steps"></a>后续步骤
 
-R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 配合工作的基础知识。 下一步，请参阅以下链接：
+R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
 + [教程：在 T-SQL 中运行 R](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [教程：R 开发人员的数据库内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教程：适用于 R 开发人员的数据库内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Python 开发人员可以了解如何将 Python 与 SQL Server 使用按照这些教程：
+Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 一起使用：
 
 + [教程：在 T-SQL 中运行 Python](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [教程：面向 Python 开发人员的数据库内分析](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [教程：适用于 Python 开发人员的数据库内分析](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-若要查看基于实际场景的机器学习示例，请参阅[机器学习教程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)。
+若要查看基于真实场景的机器学习示例，请参阅[机器学习教程](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)。

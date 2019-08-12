@@ -1,7 +1,7 @@
 ---
-title: 教程：使用 TRANSACT-SQL 编辑器来创建数据库对象
+title: 教程：使用 Transact-SQL 编辑器创建数据库对象
 titleSuffix: Azure Data Studio
-description: 本教程演示简化使用 T-SQL 在 Azure Data Studio 中的主要功能。
+description: 本教程演示 Azure Data Studio 中用于简化 T-SQL 的使用的主要功能。
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,70 +11,70 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959015"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程：使用 TRANSACT-SQL 编辑器来创建数据库对象， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程：使用 Transact-SQL 编辑器创建数据库对象 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-创建并运行查询、存储过程、脚本等是数据库专业人员的核心任务。 本教程演示如何在 T-SQL 编辑器中创建数据库对象的主要功能。
+创建和运行查询、存储过程、脚本等是数据库专业人员的核心任务。 本教程演示 T-SQL 编辑器中用于创建数据库对象的主要功能。
 
-您可以在本教學課程中，了解如何使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 來完成下列工作：
+在本教程中，你将了解如何使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 执行以下操作：
 > [!div class="checklist"]
 > * 搜索数据库对象
 > * 编辑表数据 
-> * 使用代码段快速编写 T-SQL
-> * 使用查看数据库对象详细信息*速览定义*和*转到定义*
+> * 使用片段快速编写 T-SQL
+> * 使用“速览定义”和“转到定义”   查看数据库对象详细信息
 
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必备条件
 
-本教程需要安装 SQL Server 或 Azure SQL 数据库*TutorialDB*。 若要创建*TutorialDB*数据库，请完成以下快速入门之一：
+本教程需要使用 SQL Server 或 Azure SQL 数据库 TutorialDB  。 若要创建 TutorialDB  数据库，请完成以下其中一项快速入门：
 
-- [使用 SQL Server 连接和查询 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Azure SQL 数据库使用连接和查询 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 SQL Server](quickstart-sql-server.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据库](quickstart-sql-database.md)
 
 
-## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>快速找到数据库对象并执行常见任务
+## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>快速查找数据库对象并执行常见任务
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 提供了搜索小组件以快速查找数据库对象。 结果列表中与所选对象相关的常见任务提供了上下文菜单等*编辑数据*表。
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 提供搜索小组件以快速查找数据库对象。 结果列表为与所选对象相关的常见任务提供了上下文菜单，如表的“编辑数据”  。
 
-1. 打开服务器侧栏 (**Ctrl + G**)，展开**数据库**，然后选择**TutorialDB**。 
+1. 打开“服务器”边栏 (Ctrl+G)  ，展开“数据库”，然后选择“TutorialDB”   。 
 
-1. 打开*TutorialDB 仪表板*通过右击**TutorialDB** ，然后选择**管理**从上下文菜单：
+1. 右键单击“TutorialDB”，从上下文菜单中选择“管理”，打开“TutorialDB 仪表板”    ：
 
-   ![上下文菜单-管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
+   ![上下文菜单 - 管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. 在仪表板中，右键单击**dbo。客户**（在搜索小组件），然后选择**编辑数据**。
+1. 在仪表板上，右键单击“dbo.Customers”（在搜索小组件中），选择“编辑数据”   。
    
    > [!TIP]
-   > 对于具有多个对象的数据库，使用搜索小组件来快速查找表、 视图、 你正在寻找的等。
+   > 对于包含多个对象的数据库，使用搜索小组件可以快速找到要查找的表、视图等。
 
    ![快速搜索小组件](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 编辑**电子邮件**列中的第一行，类型 *orlando0@adventure-works.com* ，然后按**Enter**以保存更改。
+1. 编辑第一行中的“Email”列  ，键入 orlando0@adventure-works.com  ，然后按 Enter 保存更改  。
 
    ![编辑数据](./media/tutorial-sql-editor/edit-data.png)
 
-## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 代码段创建存储的过程
+## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>使用 T-SQL 片段创建存储过程
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 用于快速创建语句提供了许多内置的 T-SQL 代码片段。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供了许多用于快速创建语句的内置 T-SQL 片段。
 
 
-1. 按打开新查询编辑器**Ctrl + N**。
+1. 按 Ctrl + N，打开新的查询编辑器  。
 
-2. 类型**sql**在编辑器中，向下箭头**sqlCreateStoredProcedure**，然后按*选项卡*密钥 (或*Enter*) 以加载创建存储过程代码段。
+2. 在编辑器中键入“sql”，使用向下键移动到“sqlCreateStoredProcedure”，然后按 Tab（或 Enter）以加载创建存储过程片段     。
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![片段列表](./media/tutorial-sql-editor/snippet-list.png)
 
-3. 创建存储的过程代码片段有两个字段设置以进行快速编辑*StoredProcedureName*并*SchemaName*。 选择*StoredProcedureName*，右键单击，然后选择**更改所有匹配项**。 现在，键入*getCustomer*和全部*StoredProcedureName*条目更改为*getCustomer*。
+3. 创建存储过程片段设置了两个字段（StoredProcedureName 和 SchemaName），以便快速进行编辑   。 选择“StoredProcedureName”  ，右键单击并选择“更改所有匹配项”  。 接下来键入 getCustomer，所有 StoredProcedureName 条目都会更改为 getCustomer    。
 
-   ![代码片段](./media/tutorial-sql-editor/snippet.png)
+   ![片段](./media/tutorial-sql-editor/snippet.png)
 
-5. 更改所有匹配项*SchemaName*到*dbo*。 
-6. 代码段中包含占位符参数和需要更新的正文文本。 *EXECUTE*语句还包含占位符文本，因为它不知道该过程将具有的参数的数目。 对于本教程中更新该代码段因此看起来如以下代码：
+5. 将所有出现的 SchemaName 更改为 dbo   。 
+6. 该片段包含需要更新的占位符参数和正文文本。 EXECUTE  语句还包含占位符文本，因为它不知道该过程将具有多少参数。 对于本教程，请更新该片段，使其类似于以下代码：
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -107,36 +107,36 @@ ms.locfileid: "67959015"
     GO
     ```
     
-5. 若要创建存储的过程并对其进行测试运行，按**F5**。
+5. 若要创建存储过程并为对其运行测试，请按 F5  。
 
-现已创建存储的过程，并**结果**窗格将显示在 JSON 中返回的客户。 若要查看格式化的 JSON，请单击返回的记录。 
+存储过程现已创建，“结果”  窗格将显示 JSON 中返回的客户。 若要查看格式化的 JSON，请单击返回的记录。 
 
 
-## <a name="use-peek-definition"></a>使用查看定义 
+## <a name="use-peek-definition"></a>使用速览定义 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供的功能，若要查看使用窥视定义功能的对象定义。 本部分中创建第二个存储的过程，并使用查看定义查看一个表以快速创建存储过程的正文中包括的列。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供使用速览定义功能查看对象定义的功能。 本部分将创建另一个存储过程，并使用速览定义查看表中哪些列可快速创建存储过程的正文。
 
-1. 按打开的新编辑器**Ctrl + N**。 
+1. 按 Ctrl + N，打开新的编辑器  。 
 
-2. 类型*sql*在编辑器中，向下箭头*sqlCreateStoredProcedure*，然后按*选项卡*密钥 (或*Enter*) 以加载创建存储过程代码段。
-3. 在键入*setCustomer*有关*StoredProcedureName*并*dbo*为*SchemaName*
+2. 在编辑器中键入“sql”，使用向下键移动到“sqlCreateStoredProcedure”，然后按 Tab（或 Enter）以加载创建存储过程片段     。
+3. 对于 StoredProcedureName，键入“setCustomer”，对于 SchemaName，键入“dbo”    
 
-3. 替换为@param占位符替换以下参数定义：
+3. 将 @param 占位符替换为以下参数定义：
 
    ```sql
    @json_val nvarchar(max)
    ```
 
-4. 存储过程的主体替换为以下代码：
+4. 将存储过程的正文替换为以下代码：
    ```sql
    INSERT INTO dbo.Customers
    ```
 
-5. 在中*插入*行只是添加了，右键单击**dbo。客户**，然后选择**查看定义**。
+5. 在刚刚添加的 INSERT 行中，右键单击“dbo.Customers”并选择“速览定义”    。
 
-   ![查看定义](./media/tutorial-sql-editor/peek-definition.png)
+   ![速览定义](./media/tutorial-sql-editor/peek-definition.png)
 
-6. 表定义会显示您可以快速查看表中包括的列。 请参阅要轻松地填写你的存储过程的语句的列列表。 完成创建您以前添加来完成的存储过程的正文并关闭速览定义窗口的 INSERT 语句：
+6. 随即将显示表定义，方便你快速查看哪些列存在于表中。 请参阅“列”列表，轻松完成存储过程的语句。 完成先前添加的 INSERT 语句的创建，以完成存储过程的正文，并关闭速览定义窗口：
 
    ```sql
    INSERT INTO dbo.Customers (CustomerId, Name, Location, Email)
@@ -148,8 +148,8 @@ ms.locfileid: "67959015"
                Email nvarchar(50)
     )
    ```
-7. 刪除 （或註解）查詢底下的 *EXECUTE* 命令。
-8. 整个语句应如以下代码所示：
+7. 删除（或注释掉）查询底部的“EXECUTE”命令  。
+8. 整个语句应类似于以下代码：
 
    ```sql
    -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
@@ -178,22 +178,22 @@ ms.locfileid: "67959015"
    GO
    ```
 
-8. 若要创建*setCustomer*存储过程中，按**F5**。
+8. 若要创建 setCustomer 存储过程，请按 F5   。
 
-## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用将查询结果保存为 JSON，以便测试 setCustomer 存储过程
+## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用“将查询结果保存为 JSON”来测试 setCustomer 存储过程
 
-*SetCustomer*在上一节中创建的存储的过程需要 JSON 数据传递到 *@json_val* 参数。 本部分演示如何获取少量格式正确的 JSON 传递到参数，以便可以测试存储的过程。
+在上一部分中创建的 setCustomer 存储过程要求将 JSON 数据传递到 @json_val   参数中。 本部分演示如何获取格式正确的 JSON 位，并将其传入参数，以便可以测试存储过程。
 
-1. 在中**服务器**右键单击侧栏*dbo。客户*表，然后单击**选择前 1000年行**。
+1. 在“服务器”边栏中，右键单击 “dbo.Customers”表，然后单击“选择前 1000 行”    。
 
-2. 在结果视图中选择的第一行，请确保选择整行 （单击最左边的列中的数字 1），然后选择**另存为 JSON**。  
-3. 将文件夹更改为你会记得以便可以删除的文件更高版本 （对于示例桌面版） 并单击的位置**保存**。 JSON 格式设置文件随即打开。
+2. 在结果视图中选择第一行，确保选中整行（单击最左侧列中的数字 1）并选择“另存为 JSON”  。  
+3. 将文件夹更改到你能记住的位置，以便以后可以删除文件（例如桌面），然后单击“保存”  。 打开 JSON 格式的文件。
 
-   ![将另存为 JSON](./media/tutorial-sql-editor/save-as-json.png)
+   ![另存为 JSON](./media/tutorial-sql-editor/save-as-json.png)
 
-4. 在编辑器中选择的 JSON 数据并将其复制。
-5. 按打开的新编辑器**Ctrl + N**。
-6. 上一步骤演示了如何轻松地获取格式正确的数据，以完成对调用*setCustomer*过程。 您可以看到下面的代码与新客户详细信息使用相同的 JSON 格式，因此我们可以测试*setCustomer*过程。 语句包含语法来声明参数和运行新的 get 和 set 过程。 可以粘贴前一部分中复制的数据并对其进行编辑，因此，以下示例中，与相同或只需将以下语句粘贴到查询编辑器。
+4. 在编辑器中选择 JSON 数据并复制它。
+5. 按 Ctrl + N，打开新的编辑器  。
+6. 前面的步骤演示了如何轻松地获取格式正确的数据，以完成对 setCustomer 过程的调用  。 可以看到以下代码对新客户详细信息使用了相同的 JSON 格式，因此我们可以测试 setCustomer 过程  。 语句包含用于声明参数并运行新的 get 和 set 过程的语法。 可以从上一节中粘贴已复制的数据，并对其进行编辑，使其与下面的示例相同，或只需将以下语句粘贴到查询编辑器中。
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -213,20 +213,20 @@ ms.locfileid: "67959015"
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. 执行该脚本通过按**F5**。 该脚本插入新客户，并以 JSON 格式返回新客户的信息。 单击要打开格式化的视图的结果。
+7. 按 F5 执行该脚本  。 此脚本插入新客户，并以 JSON 格式返回新客户的信息。 单击该结果可打开格式化视图。
 
    ![测试结果](./media/tutorial-sql-editor/test-result.png)
 
 ## <a name="next-steps"></a>后续步骤
-在本教程中，你将了解：
+在本教程中，你了解了如何执行以下操作：
 > [!div class="checklist"]
 > * 快速搜索架构对象
 > * 编辑表数据 
-> * 编写使用代码段的 T-SQL 脚本
-> * 了解如何使用查看定义的数据库对象详细信息，并转到定义
+> * 使用片段编写 T-SQL 脚本
+> * 使用速览定义和转到定义了解数据库对象详细信息
 
 
-若要了解如何启用**五个最慢的查询**小组件中，完成下一教程：
+若要了解如何启用“5 个速度最慢的查询”  小组件，请完成下一教程：
 
 > [!div class="nextstepaction"]
-> [启用速度慢的查询示例见解小组件](tutorial-qds-sql-server.md)
+> [启用慢查询示例见解小组件](tutorial-qds-sql-server.md)

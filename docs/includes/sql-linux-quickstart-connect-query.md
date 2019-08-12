@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215636"
 ---
 ## <a name="connect-locally"></a>本地连接
@@ -24,7 +24,7 @@ ms.locfileid: "68215636"
 
 1. 如果成功，应会显示 sqlcmd  命令提示符：`1>`。
 
-1. 如果连接失败，请首先尝试根据错误消息诊断问题。 然后查看[连接故障排除建议](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
+1. 如果连接失败，先尝试诊断错误消息中所述的问题。 然后查看[连接故障排除建议](../linux/sql-server-linux-troubleshooting-guide.md#connection)。
 
 ## <a name="create-and-query-data"></a>创建和查询数据
 下面各部分将逐步介绍如何使用 sqlcmd  新建数据库、添加数据并运行简单查询。
@@ -52,7 +52,7 @@ ms.locfileid: "68215636"
    ```
 
 > [!TIP]
-> 若要了解有关编写 TRANSACT-SQL 语句和查询的详细信息，请参阅[教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。
+> 若要详细了解如何编写 Transact-SQL 语句和查询，请参阅[教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)。
 
 ### <a name="insert-data"></a>插入数据
 
@@ -106,20 +106,20 @@ ms.locfileid: "68215636"
 QUIT
 ```
 
-## <a name="performance-best-practices"></a>性能最佳实践
+## <a name="performance-best-practices"></a>性能最佳做法
 
-在 Linux 上安装 SQL Server 后, 查看配置 Linux 和 SQL Server 来提高生产方案的性能的最佳做法。 有关详细信息，请参阅[的性能最佳实践和 Linux 上的 SQL Server 配置准则](../linux/sql-server-linux-performance-best-practices.md)。
+在 Linux 上安装 SQL Server 后，请查看配置 Linux 和 SQL Server 以提高生产性能的最佳做法。 有关详细信息，请参阅 [Linux 上的 SQL Server 的性能最佳做法和配置指南](../linux/sql-server-linux-performance-best-practices.md)。
 
 ## <a name="cross-platform-data-tools"></a>跨平台数据工具
 
-除了**sqlcmd**，可以使用以下跨平台工具来管理 SQL Server:
+除“sqlcmd”以外，还可以使用以下跨平台工具来管理 SQL Server  :
 
 |||
 |---|---|
 | [Azure Data Studio](../azure-data-studio/index.md) | 跨平台 GUI 数据库管理实用程序。 |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 运行 TRANSACT-SQL 语句，mssql 扩展通过一个跨平台 GUI 代码编辑器。 |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 基于 cmdlet 一个跨平台自动化和配置工具。 |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 用于运行 TRANSACT-SQL 命令的跨平台命令行界面。 |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 一种跨平台 GUI 代码编辑器，它使用 mssql 扩展运行 Transact-SQL 语句。 |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 基于 cmdlet 的跨平台自动化和配置工具。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 用于运行 Transact-SQL 命令的跨平台命令行接口。 |
 
 ## <a name="connecting-from-windows"></a>从 Windows 连接
 
@@ -145,9 +145,9 @@ Windows 上的 SQL Server 工具连接到 Linux 上的 SQL Server 实例，操�
 | [脱机安装](../linux/sql-server-linux-setup.md#offline) | 了解如何手动下载脱机安装程序包 |
 
 > [!TIP]
-> 有关常见问题的解答，请参阅[SQL Server Linux 常见问题](../linux/sql-server-linux-faq.md)。
+> 有关常见问题的解答，请参阅 [Linux 上的 SQL Server 常见问题解答](../linux/sql-server-linux-faq.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [在 Linux 上的 SQL Server 浏览的教程](../linux/sql-server-linux-migrate-restore-database.md)
+> [浏览有关 Linux 上的 SQL Server 的教程](../linux/sql-server-linux-migrate-restore-database.md)

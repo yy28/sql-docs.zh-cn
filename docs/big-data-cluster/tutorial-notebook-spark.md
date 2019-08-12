@@ -1,7 +1,7 @@
 ---
-title: 运行示例 notebook |Microsoft Docs
+title: 运行示例笔记本 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何可以加载 SQL Server 2019 大数据群集 （预览版） 上的示例 Spark 笔记本将运行。
+description: 本教程介绍如何在 SQL Server 2019 大数据群集（预览版）上加载并运行示例 Spark 笔记本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,20 +10,20 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957733"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教程：SQL Server 大数据群集上运行的示例笔记本
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集上运行示例笔记本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何加载和笔记本在 Azure 数据 Studio 中运行 SQL Server 2019 大数据群集 （预览版） 上。 这允许数据科学家和数据工程师针对群集中运行 Python、 R 或 Scala 代码。
+本教程演示如何在 SQL Server 2019 大数据群集（预览版）上的 Azure Data Studio 中加载和运行笔记本。 数据科学家和数据工程师可针对群集运行 Python、R 或 Scala 代码。
 
 > [!TIP]
-> 如果您愿意，可以下载并运行本教程中的所有命令的脚本。 有关说明，请参阅[Spark 示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)GitHub 上。
+> 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的 [Spark 示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)。
 
 ## <a id="prereqs"></a> 先决条件
 
@@ -31,43 +31,43 @@ ms.locfileid: "67957733"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-- [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
+- [将示例数据加载到大数据群集](tutorial-load-sample-data.md)
 
-## <a name="download-the-sample-notebook-file"></a>下载示例 notebook 文件
+## <a name="download-the-sample-notebook-file"></a>下载示例笔记本文件
 
-使用以下说明示例 notebook 文件加载**spark sql.ipynb**到 Azure Data Studio。
+按照以下说明将示例笔记本文件 spark-sql.ipynb 加载到 Azure Data Studio 中  。
 
 1. 打开 bash 命令提示符 (Linux) 或 Windows PowerShell。
 
-1. 导航到想要下载的示例 notebook 文件的目录。
+1. 导航到要将示例笔记本文件下载到其中的目录。
 
-1. 运行以下**curl**命令，从 GitHub 下载笔记本文件：
+1. 运行以下 curl 命令，从 GitHub 下载笔记本文件  ：
 
    ```bash
    curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
-## <a name="open-the-notebook"></a>打开 notebook
+## <a name="open-the-notebook"></a>打开笔记本
 
 以下步骤演示如何在 Azure Data Studio 中打开笔记本文件：
 
-1. 在 Azure Data Studio，连接到你的大数据群集的主实例。 有关详细信息，请参阅[连接到大数据群集](connect-to-big-data-cluster.md)。
+1. 在 Azure Data Studio 中，连接到大数据群集的主实例。 有关详细信息，请参阅[连接到大数据群集](connect-to-big-data-cluster.md)。
 
-1. 中的 HDFS/Spark 网关连接上双击**服务器**窗口。 然后选择**打开 Notebook**。
+1. 双击“服务器”窗口中的 HDFS/Spark 网关连接  。 然后选择“打开笔记本”  。
 
-   ![打开 notebook](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
+   ![打开笔记本](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
 
-1. 等待**内核**和目标上下文 (**附加到**) 填充。 设置**内核**到**PySpark3**，并设置**将附加到**到大数据群集终结点的 IP 地址。
+1. 等待要填充的 Kernel 和目标上下文（“附加到”）   。 将 Kernel 设置为 PySpark3，将“附加到”设置为大数据群集终结点的 IP 地址    。
 
-   ![设置的内核并将附加到](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
+   ![设置 Kernel 和“附加到”](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
 
-## <a name="run-the-notebook-cells"></a>运行 notebook 单元
+## <a name="run-the-notebook-cells"></a>运行笔记本单元格
 
-通过按播放按钮的单元格的左侧，可以运行每个 notebook 单元格中。 该单元格完成运行后结果显示在 notebook 中。
+可以通过按单元格左侧的“播放”按钮来运行每个笔记本单元格。 单元格完成运行后，结果会显示在笔记本中。
 
-![运行 notebook 单元格](media/tutorial-notebook-spark/run-notebook-cell.png)
+![运行笔记本单元格](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-在连续示例笔记本中运行每个单元格。 笔记本中使用的 SQL Server 大数据群集的详细信息，请参阅以下资源：
+连续运行示例笔记本中的每个单元格。 有关将笔记本与 SQL Server 大数据群集配合使用的详细信息，请参阅以下资源：
 
 - [如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)
 - [如何管理 Azure Data Studio 中的笔记本](notebooks-how-to-manage.md)
@@ -76,4 +76,4 @@ ms.locfileid: "67957733"
 
 了解有关笔记本的详细信息：
 > [!div class="nextstepaction"]
-> [了解有关笔记本](notebooks-guidance.md)
+> [了解笔记本](notebooks-guidance.md)

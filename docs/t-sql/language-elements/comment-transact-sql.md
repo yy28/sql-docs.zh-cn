@@ -1,7 +1,7 @@
 ---
 title: --（注释）(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26bf88d13dd69ea6ac113713175d3ccfea5e1351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950232"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495474"
 ---
 # <a name="---comment-transact-sql"></a>--（注释）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67950232"
  包含注释文本的字符串。  
   
 ## <a name="remarks"></a>Remarks  
- 将两个连字符 (--) 用于单行或嵌套的注释。 用 -- 插入的注释由换行符终止。 注释没有最大长度限制。 下表列出了可用来注释或取消注释文本的键盘快捷键：  
+将两个连字符 (“--”) 用于单行或嵌套的注释  。 使用 -- 插入的注释通过一个新行终止，该新行由回车符 (u + 000A)、换行符 (u + 000D) 或二者的组合指定  。 注释没有最大长度限制。 下表列出了可用来注释或取消注释文本的键盘快捷键：
   
 |操作|Standard|  
 |------------|--------------|  

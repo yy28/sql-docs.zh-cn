@@ -1,6 +1,6 @@
 ---
-title: 为 SQL Server 配置 Red Hat Enterprise Linux 共享的群集
-description: 为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集实现高可用性。
+title: 配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享群集
+description: 通过配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集来实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,47 +10,47 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032277"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍如何为 Red Hat Enterprise Linux 上的 SQL Server 创建两节点共享磁盘群集。 群集层基于 Red Hat Enterprise Linux (RHEL) 上[HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)基础上构建[Pacemaker](https://clusterlabs.org/)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
+本指南介绍如何在 Red Hat Enterprise Linux 上为 SQL Server 创建两节点的共享磁盘群集。 此群集层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
 
 > [!NOTE] 
-> 对 Red Hat HA 加载项和文档的访问需要一个订阅。 
+> 需拥有订阅才能访问 Red Hat HA 加载项和文档。 
 
-如以下关系图所示，存储将呈现给两个服务器。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 一台服务器具有到存储资源和 SQL Server 的活动连接。 当 Pacemaker 检测到故障时，群集组件负责管理将资源移到另一个节点。  
+如下图所示，存储将呈现给两个服务器。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 其中一个服务器具有活动连接，可连接至存储资源以及 SQL Server。 当 Pacemaker 检测到故障时，群集组件会设法将资源移到另一个节点。  
 
-![Red Hat Enterprise Linux 7 共享磁盘的 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Red Hat Enterprise Linux 7 共享磁盘 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-有关群集配置、 资源代理选项和管理的详细信息，请访问[RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+有关群集配置、资源代理选项和管理的详细信息，请访问 [RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 
 > [!NOTE] 
-> 这种情况下，SQL Server 与 Pacemaker 的集成不及与 Windows 版的 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，并且 Pacemaker.将该服务作为一个独立实例控制。 此外例如，群集 dmv sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 将无任何记录。
-若要使用指向字符串服务器名称的连接字符串而不使用 IP，他们将需要注册其 DNS 服务器中创建虚拟 IP 资源 （如以下各节中所述） 所使用的 IP 与所选的服务器名称。
+> 此时，SQL Server 与 Pacemaker 的集成不及与在 Windows 上与 WSFC 集成的耦合性高。 在 SQL 内部，无法了解到群集是否存在，所有业务流程都是由外至内，且 Pacemaker 将该服务作为一个独立实例控制。 另外，例如，群集 dmvs sys.dm_os_cluster_nodes 和 sys.dm_os_cluster_properties 不会有记录。
+为了使用指向字符串服务器名称的连接字符串，且不使用 IP，它们需要在其 DNS 服务器中注册用于创建使用选定服务器名称的虚拟 IP 资源的 IP（如以下部分所述）。
 
 以下各部分介绍了设置故障转移群集解决方案的步骤。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-若要完成以下端到端方案，需要两台计算机部署两个节点群集和另一台服务器，若要配置 NFS 服务器。 以下步骤概述了如何配置这些服务器。
+若要完成下面的端到端方案，需要两台计算机来部署两个节点群集，还需要一台服务器来配置 NFS 服务器。 以下步骤概述了如何配置这些服务器。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>在每个群集节点上安装和配置操作系统
 
-第一步是在群集节点上配置操作系统。 对于此演练，将 RHEL 用于 HA 加载项的有效订阅。 
+第一步是在群集节点上配置操作系统。 对于此演练，将通过 HA 加载项的有效订阅使用 RHEL。 
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装和配置 SQL Server
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装并配置 SQL Server
 
-1. 在两个节点上安装和设置 SQL Server。  有关详细说明，请参阅[Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 同时在两个节点上安装并设置 SQL Server。  有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
 
-1. 出于配置目的，请将一个节点指定为主要节点，而将另一个指定为辅助节点。 使用以下术语，按照此指南操作。  
+1. 出于配置目的，请将一个节点指定为主节点，另一个指定为辅助节点。 使用以下术语，按照此指南操作。  
 
 1. 在辅助节点上，停止并禁用 SQL Server。
 
@@ -61,15 +61,15 @@ ms.locfileid: "68032277"
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> 为 SQL Server 实例生成并放置在一个服务器主密钥在安装时`/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，其标识不是在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
+> 在设置时，将为 SQL Server 实例生成一个服务器主密钥并将其置于 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
-1. 在主节点上为 Pacemaker 创建 SQL server 登录名并授予登录权限以运行`sp_server_diagnostics`。 Pacemaker 使用此帐户来验证哪个节点正在运行 SQL Server。 
+1. 在主节点上，为 Pacemaker 创建 SQL Server 登录名并授予登录权限以运行 `sp_server_diagnostics`。 Pacemaker 使用此帐户验证哪个节点正在运行 SQL Server。 
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
-   连接到 SQL Server`master`使用 sa 帐户数据库并运行以下命令：
+   使用 sa 帐户连接到 SQL Server `master` 数据库并运行以下命令：
 
    ```bashsql
    USE [master]
@@ -78,11 +78,11 @@ ms.locfileid: "68032277"
 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
-   或者，可以在更精细的级别设置权限。 Pacemaker 登录需要`VIEW SERVER STATE`sp_server_diagnostics，与查询运行状况状态`setupadmin`和`ALTER ANY LINKED SERVER`通过运行 sp_dropserver 和 sp_addserver 使用的资源名称更新 FCI 实例名称。 
+   此外，也可以在更精细的级别设置权限。 Pacemaker 登录要求 `VIEW SERVER STATE` 通过 sp_server_diagnostics、`setupadmin` 和 `ALTER ANY LINKED SERVER` 查询运行状况，以便通过运行 sp_dropserver 和 sp_addserver，使用资源名称来更新 FCI 实例名称。 
 
 1. 在主节点上，停止并禁用 SQL Server。 
 
-1. 配置每个群集节点的主机文件。 主机文件必须包含每个群集节点的 IP 地址和名称。 
+1. 为每个群集节点配置主机文件。 主机文件必须包含每个群集节点的 IP 地址和名称。 
 
     检查每个节点的 IP 地址。 以下脚本显示当前节点的 IP 地址。 
 
@@ -90,12 +90,12 @@ ms.locfileid: "68032277"
    sudo ip addr show
    ```
 
-   在每个节点上设置计算机名。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将其添加到设置的计算机名称`/etc/hosts`。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
+   在每个节点上设置计算机名称。 为每个节点提供长度不超过 15 个字符的唯一名称。 通过将其添加到 `/etc/hosts` 来设置计算机名。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   下面的示例演示`/etc/hosts`并补充了两个名节点`sqlfcivm1`和`sqlfcivm2`。
+   以下示例显示了 `/etc/hosts` 以及名为 `sqlfcivm1` 和 `sqlfcivm2` 的两个节点。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -108,17 +108,17 @@ ms.locfileid: "68032277"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>配置共享存储并移动数据库文件 
 
-有多种解决方案可用于提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 我们建议您遵循最佳做法，并使用 Kerberos 保护 NFS (您可以找到这里举个例子： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) 。 
+有多种解决方案可提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 建议按照最佳做法进行操作，并使用 Kerberos 保护 NFS（可在此处找到示例： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) ）。 
 
 >[!Warning]
->如果不保护 NFS，然后将能够访问你的数据文件的任何人可以访问你的网络和欺骗 SQL 节点的 IP 地址。 与往常一样，请确保在将系统投入生产前，对系统建立威胁模型。 另一种存储方法是使用 SMB 文件共享。
+>如果不保护 NFS，则可访问网络以及能够欺骗 SQL 节点 IP 地址的任何人均能访问你的数据文件。 与往常一样，请确保在将系统投入生产前对其进行威胁建模。 另一种存储方法是使用 SMB 文件共享。
 
-### <a name="configure-shared-storage-with-nfs"></a>使用 NFS 配置共享的存储
+### <a name="configure-shared-storage-with-nfs"></a>使用 NFS 配置共享存储
 
 > [!IMPORTANT] 
-> 托管版本的 NFS 服务器上的数据库文件 < 4 不支持此版本中。 这包括使用共享的磁盘故障转移群集以及数据库在非群集实例上的 NFS。 我们正在努力实现其他 NFS 服务器版本中即将发布的版本。 
+> 此版本不支持在版本 <4 的 NFS 服务器上托管数据库文件。 这包括将 NFS 用于共享磁盘故障转移群集，以及非群集实例上的数据库。 我们正在设法使后续版本能够利用其他版本的 NFS 服务器。 
 
-NFS 服务器上执行以下步骤：
+在 NFS 服务器上执行以下操作：
 
 1. 安装 `nfs-utils`
 
@@ -126,19 +126,19 @@ NFS 服务器上执行以下步骤：
    sudo yum -y install nfs-utils
    ```
 
-1. 启用和启动 `rpcbind`
+1. 启用并启动 `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. 启用和启动 `nfs-server`
+1. 启用并启动 `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  编辑`/etc/exports`导出你想要共享的目录。 您希望每个共享需要 1 行。 例如： 
+1.  编辑 `/etc/exports` 以导出要共享的目录。 每个所需共享需要 1 行。 例如： 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -150,7 +150,7 @@ NFS 服务器上执行以下步骤：
    sudo exportfs -rav
    ```
 
-1. 验证路径是否为已共享/已导出，从 NFS 服务器运行
+1. 验证路径是否是从 NFS 服务器共享/导出、运行
 
    ```bash
    sudo showmount -e
@@ -173,7 +173,7 @@ NFS 服务器上执行以下步骤：
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>配置所有群集节点，以连接到 NFS 共享存储
 
-执行以下步骤在所有群集节点上。
+在所有群集节点上执行以下步骤。
 
 1.  安装 `nfs-utils`
 
@@ -200,13 +200,13 @@ NFS 服务器上执行以下步骤：
 
 有关如何使用 NFS 的详细信息，请参阅以下资源：
 
-* [NFS 服务器和 firewalld |Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [装载 NFS 卷 |Linux 网络管理员指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS 服务器配置 |Red Hat 客户门户](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [NFS 服务器和 firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [装载 NFS 卷 | Linux 网络管理员指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS 服务器配置 | Red Hat 客户门户](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
-### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>装载数据库文件目录，指向共享存储
+### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>装载数据库文件目录，使其指向共享存储
 
-1.  **仅在主节点上**，将数据库文件保存到临时位置。以下脚本，创建一个新的临时目录，将数据库文件复制到新的目录中删除旧的数据库文件。 以本地用户 mssql 身份运行 SQL Server 时，需要确保将数据传输到装载的共享后，本地用户对共享具有读写权限。 
+1.  仅在主节点上，将数据库文件保存到一个临时位置。以下脚本将创建一个新的临时目录，将数据库文件复制到新的目录中并删除旧的数据库文件  。 以本地用户 mssql 身份运行 SQL Server 时，需要确保将数据传输到装载的共享后，本地用户对共享具有读写权限。 
 
    ``` 
    $ sudo su mssql
@@ -216,23 +216,23 @@ NFS 服务器上执行以下步骤：
    $ exit
    ``` 
 
-1.  在所有群集节点上编辑`/etc/fstab`文件以包括装载命令。  
+1.  在所有群集节点上编辑 `/etc/fstab` 文件以包含装载命令。  
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr 
    ```
    
-   以下脚本说明此类编辑的一个示例。  
+   以下脚本显示了一个编辑示例。  
 
    ``` 
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->如果使用文件系统 (FS) 资源的建议此处，，则无需保留 /etc/fstab 中的装载命令。 Pacemaker 将负责在启动 FS 群集资源时装载文件夹。 帮助隔离的情况下，它将确保永远不会两次装载 FS。 
+>如果按照此处的建议使用文件系统 (FS) 资源，则无需保留 /etc/fstab 中的装载命令。 Pacemaker 将负责在启动 FS 群集资源时装载文件夹。 借助隔离，可确保永远不会重复装载 FS。 
 
-1.  运行`mount -a`命令获取系统来更新已装载的路径。  
+1.  对系统运行 `mount -a` 命令以更新装载路径。  
 
-1.  保存到的数据库和日志文件复制`/var/opt/mssql/tmp`到新装载的共享`/var/opt/mssql/data`。 这只需要完成**主节点上**。 请确保为 mssql 本地用户授予读的写权限。
+1.  将保存到 `/var/opt/mssql/tmp` 的数据库和日志文件复制到新装载的共享 `/var/opt/mssql/data`。 此操作仅需在主节点上执行  。 请确保为“mssql”本地用户提供读写权限。
 
    ``` 
    $ sudo chown mssql /var/opt/mssql/data
@@ -243,7 +243,7 @@ NFS 服务器上执行以下步骤：
    $ exit
    ``` 
  
-1.  验证 SQL Server 是否已成功通过新文件路径启动。 对每个节点均执行此操作。 此时，一次应只有一个节点运行 SQL Server。 它们不能同时运行，因为两者将同时尝试访问数据文件（要避免同时在两个节点上意外启动 SQL Server，请使用文件系统群集资源来确保共享未由不同的节点装载两次）。 以下命令可启动 SQL Server，检查状态，然后停止 SQL Server。
+1.  验证 SQL Server 是否已成功通过新文件路径启动。 对每个节点均执行此操作。 此时，一次应只有一个节点运行 SQL Server。 它们不能同时运行，因为两者将同时尝试访问数据文件（若要避免同时在两个节点上意外启动 SQL Server，请使用文件系统群集资源来确保共享不会由不同的节点装载两次）。 以下命令可启动 SQL Server、检查状态，然后停止 SQL Server。
  
    ```bash
    sudo systemctl start mssql-server
@@ -273,10 +273,10 @@ NFS 服务器上执行以下步骤：
    sudo firewall-cmd --reload
    ```
 
-   > 如果正在使用不具有内置的高可用性配置的另一个防火墙，则需要为 Pacemaker 将无法与群集中的其他节点通信打开以下端口
+   > 如果使用的是没有内置高可用性配置的其他防火墙，则需要打开以下端口，Pacemaker 才能与群集中的其他节点通信
    >
-   > * TCP:端口 2224、 3121、 21064
-   > * UDP:端口 5405
+   > * TCP：端口 2224、3121、21064
+   > * UDP：端口 5405
 
 1. 在每个节点上安装 Pacemaker 包。
 
@@ -294,7 +294,7 @@ NFS 服务器上执行以下步骤：
 
     
 
-3. 启用并启动 `pcsd` 服务和 Pacemaker。 这样，节点将可以在重新启动后重新加入群集。 在两个节点上运行以下命令。
+3. 启用并启动 `pcsd` 服务和 Pacemaker。 这样，节点将可以在重新启动后重新加入群集。 在这两个节点上运行以下命令。
 
    ```bash
    sudo systemctl enable pcsd
@@ -302,7 +302,7 @@ NFS 服务器上执行以下步骤：
    sudo systemctl enable pacemaker
    ```
 
-4. 为 SQL Server 安装 FCI 资源代理。 在两个节点上运行以下命令。 
+4. 为 SQL Server 安装 FCI 资源代理。 在这两个节点上运行以下命令。 
 
    ```bash
    sudo yum install mssql-server-ha
@@ -318,26 +318,26 @@ NFS 服务器上执行以下步骤：
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA 加载项具有 VMWare 和 KVM 的隔离代理。 需要在所有其他虚拟机监控程序上禁用隔离。 不建议在生产环境中禁用隔离代理。 截至时间范围内，有 HyperV 或云环境中的隔离代理。 如果正在运行其中一种配置，您需要禁用隔离。 \**建议不要在生产系统中 ！* *
+   > RHEL HA 加载项具有适用于 VMWare 和 KVM 的隔离代理。 需要在所有其他虚拟机监控程序上禁用隔离。 不建议在生产环境中禁用隔离代理。 在时间范围内，没有适用于 HyperV 或云环境的隔离代理。 如果正在运行这些配置之一，则需要禁用隔离。 \*不建议在生产系统中使用  ！*
 
-   以下命令禁用隔离代理。
+   以下命令可禁用隔离代理。
 
    ```bash
    sudo pcs property set stonith-enabled=false
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. 为 SQL Server、文件系统和虚拟 IP 资源配置群集资源，并将配置推送到群集。 您需要以下信息：
+2. 为 SQL Server、文件系统和虚拟 IP 资源配置群集资源，并将配置推送到群集。 需要以下信息：
 
-   - **SQL Server 资源名称**:群集 SQL Server 资源的名称。 
-   - **浮动 IP 资源名称**:虚拟 IP 地址资源的名称。
-   - **IP 地址**:客户端将用于连接到 SQL Server 的群集实例 IP 地址。 
-   - **文件系统资源名称**:文件系统资源的名称。
-   - **设备**:在 NFS 共享路径
-   - **设备**:本地路径装载到共享
-   - **fstype**:文件共享类型 (例如 nfs)
+   - **SQL Server 资源名称**：群集 SQL Server 资源的名称。 
+   - **浮动 IP 资源名称**：虚拟 IP 地址资源的名称。
+   - **IP 地址**：客户端用于连接到 SQL Server 群集实例的 IP 地址。 
+   - **文件系统资源名称**：文件系统资源的名称。
+   - **设备**：NFS 共享路径
+   - **设备**：装载到共享的本地路径
+   - **fstype**：文件共享类型（即 nfs）
 
-   更新以下脚本为您的环境中的值。 在一个节点上运行，以配置并启动群集服务。  
+   为环境更新以下脚本的值。 在一个节点上运行，以配置并启动群集服务。  
 
    ```bash
    sudo pcs cluster cib cfg 
@@ -349,7 +349,7 @@ NFS 服务器上执行以下步骤：
    sudo pcs cluster cib-push cfg
    ```
 
-   例如，以下脚本将创建一个名为的 SQL Server 群集资源`mssqlha`，并使用 IP 地址的浮动 IP 资源`10.0.0.99`。 它还可创建一个文件系统资源并添加约束，将所有资源并置到同一节点上作为 SQL 资源。 
+   例如，以下脚本可创建一个名为 `mssqlha` 的 SQL Server 群集资源以及 IP 地址为 `10.0.0.99` 的浮动 IP 资源。 它还可创建一个文件系统资源并添加约束，将所有资源并置到同一节点上用作 SQL 资源。 
 
    ```bash
    sudo pcs cluster cib cfg
@@ -361,7 +361,7 @@ NFS 服务器上执行以下步骤：
    sudo pcs cluster cib-push cfg
    ```
 
-   推送配置后，将在一个节点上启动 SQL Server。 
+   推送配置后，SQL Server 将在一个节点上启动。 
 
 3. 验证 SQL Server 是否已启动。 
 
@@ -369,7 +369,7 @@ NFS 服务器上执行以下步骤：
    sudo pcs status 
    ```
 
-   下面的示例显示时 Pacemaker 已成功启动 SQL Server 的群集的实例的结果。 
+   以下示例展示了 Pacemaker 已成功启动 SQL Server 的群集实例时的结果。 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1
@@ -388,8 +388,8 @@ NFS 服务器上执行以下步骤：
 
 ## <a name="additional-resources"></a>其他资源
 
-* [从头开始群集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)pacemaker 的指南
+* Pacemaker 的[从头开始构建群集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)指南
 
 ## <a name="next-steps"></a>后续步骤
 
-[Red Hat Enterprise Linux 共享的磁盘群集上运行 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[在 Red Hat Enterprise Linux 共享磁盘群集上操作 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

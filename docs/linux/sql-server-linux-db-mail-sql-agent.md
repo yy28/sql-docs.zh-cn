@@ -1,6 +1,6 @@
 ---
-title: DB 邮件和电子邮件警报与 Linux 上的 SQL 代理
-description: 本文介绍如何使用 Linux 上的 SQL Server 数据库邮件和电子邮件警报
+title: Linux 上的 SQL 代理的 DB 邮件和电子邮件警报
+description: 本文介绍如何在 Linux 上的 SQL Server 中使用 DB 邮件和电子邮件警报
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -9,19 +9,19 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077452"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 邮件和电子邮件警报与 Linux 上的 SQL 代理
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Linux 上的 SQL 代理的 DB 邮件和电子邮件警报
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-以下步骤显示如何设置数据库邮件并将其用于 SQL Server 代理 (**mssql server 代理**) 在 Linux 上。 
+以下步骤说明了如何设置 DB 邮件以及如何与 Linux 上的 SQL Server 代理 (mssql-server-agent) 一起使用  。 
 
-## <a name="1-enable-db-mail"></a>1.启用数据库邮件
+## <a name="1-enable-db-mail"></a>1.启用 DB 邮件
 
 ```sql
 USE master 
@@ -52,7 +52,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 GO
 ```
 
-## <a name="3-create-a-default-profile"></a>3.创建一个默认配置文件
+## <a name="3-create-a-default-profile"></a>3.创建默认配置文件
 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profile_sp 
@@ -61,7 +61,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4.将数据库邮件帐户添加到数据库邮件配置文件
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4.将数据库邮件帐户添加到数据库邮件配置文件中
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -69,7 +69,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 @is_default = 1 ; 
  ```
  
-## <a name="5-add-account-to-profile"></a>5.将帐户添加到配置文件 
+## <a name="5-add-account-to-profile"></a>5.将帐户添加到配置文件中 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profileaccount_sp   
 @profile_name = 'default',   
@@ -79,7 +79,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6.发送测试电子邮件
 > [!NOTE]
-> 可能需要转到你的电子邮件客户端并启用"允许不安全的客户端发送邮件"。 并非所有客户端识别为一个电子邮件守护程序，数据库邮件。
+> 你可能需要转到电子邮件客户端，启用“允许不太安全的客户端发送邮件。” 并非所有客户端都将 DB 邮件识别为电子邮件守护程序。
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -90,8 +90,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7.设置数据库邮件配置文件使用 mssql conf 或环境变量
-可以使用 mssql-conf 实用工具或环境变量以注册你的数据库邮件配置文件。 在这种情况下，让我们称我们默认配置文件。
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7.使用 mssql-conf 或环境变量设置 DB 邮件配置文件
+可以使用 mssql-conf 实用程序或环境变量来注册 DB 邮件配置文件。 在这种情况下，我们会调用配置文件默认值。
 
 ```bash
 # via mssql-conf
@@ -111,7 +111,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9.代理测试作业成功时发送电子邮件 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9.“代理测试作业”成功后发送电子邮件 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -122,4 +122,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>后续步骤
-有关如何使用 SQL Server 代理来创建、 安排和运行作业的详细信息，请参阅[在 Linux 上运行的 SQL Server 代理作业](sql-server-linux-run-sql-server-agent-job.md)。
+有关如何使用 SQL Server 代理创建、计划和运行作业的详细信息，请参阅[在 Linux 上运行 SQL Server 代理作业](sql-server-linux-run-sql-server-agent-job.md)。

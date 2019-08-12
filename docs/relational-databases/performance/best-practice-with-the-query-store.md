@@ -1,7 +1,7 @@
 ---
 title: Query Store 最佳做法 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4528b916e70ed838ab8f3665de9293646d94ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985026"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495393"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67985026"
   
  当 Query Store 收集查询、执行计划和统计信息时，其在数据库中的大小会一直增长，直至达到此限制。 达到此限制后，Query Store 会自动将操作模式更改为只读，并停止收集新数据，这意味着你的性能分析自此不再精确。  
   
- 如果你的工作负荷会生成大量不同的查询和计划，或者你想要让查询历史记录保存较长的时间，则默认值 (100 MB) 可能不够大。 跟踪当前的空间使用情况，增大“最大大小(MB)”以防 Query Store 转换到只读模式。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或执行以下脚本，以便获取有关 Query Store 大小的最新信息：  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认值为 100 MB，如果你的工作负荷会生成大量不同的查询和计划，或者你想要让查询历史记录保存较长的时间，则默认值可能不够大。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，默认值是 1 GB。 跟踪当前的空间使用情况，增大“最大大小(MB)”以防 Query Store 转换到只读模式。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或执行以下脚本，以便获取有关 Query Store 大小的最新信息：  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -109,11 +109,13 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **查询存储捕获模式：** 指定查询存储的查询捕获策略。  
   
--   **All** - 捕获所有查询。 这是默认选项。  
+-   **All** - 捕获所有查询。 这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认选项。  
   
--   **Auto** - 忽略不太频繁的查询以及编译和执行持续时间不长的查询。 执行计数、编译和运行时持续时间的阈值由内部决定。  
+-   **Auto** - 忽略不太频繁的查询以及编译和执行持续时间不长的查询。 执行计数、编译和运行时持续时间的阈值由内部决定。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，这是默认选项。  
   
 -   **None** - 查询存储停止捕获新查询。  
+
+-   **Custom** - 允许其他控件和微调数据收集策略。 新的自定义设置定义在内部捕获策略时间阈值（计算可配置条件的时间边界）内执行的操作，如果所有值为 true，则查询存储可以捕获查询。
   
  以下脚本将“查询捕获模式”设置为“Auto”：  
   
@@ -121,7 +123,64 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
+
+### <a name="examples"></a>示例
+以下示例将“查询捕获”模式设置为“自动”，并在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中设置其他建议选项：  
   
+```sql  
+ALTER DATABASE [QueryStoreDB]   
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```  
+
+以下示例将“查询捕获”模式设置为“自动”，并在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中设置其他建议选项以包括等待统计信息：  
+
+```sql
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+以下示例将“查询捕获”模式设置为“自动”，并在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中设置其他建议选项，且可以选择使用默认值设置自定义捕获策略：  
+
+```sql
+ALTER DATABASE [QueryStoreDB]  
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
 ## <a name="how-to-start-with-query-performance-troubleshooting"></a>如何开始进行查询性能故障排除  
  Query Store 工作流的故障排除很简单，如下图所示：  
   
@@ -132,8 +191,8 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
-  
- Query Store 收集能够准确代表工作负荷的数据集需要一定的时间。 通常情况下，即使是很复杂的工作负荷，一天的时间也足够了。 但是，在启用此功能后，你就可以立即开始浏览数据并确定需要注意的查询。   
+
+Query Store 收集能够准确代表工作负荷的数据集需要一定的时间。 通常情况下，即使是很复杂的工作负荷，一天的时间也足够了。 但是，在启用此功能后，你就可以立即开始浏览数据并确定需要注意的查询。   
 导航到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的对象资源管理器中数据库节点下的 Query Store 子文件夹，以便打开特定方案的故障排除视图。   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 查询存储视图在操作时使用一组执行度量值，每个度量值都表示为下述任意统计函数：  
   
@@ -246,7 +305,7 @@ FROM sys.database_query_store_options;
   
  如果问题仍然存在，则表明磁盘上的查询存储数据已永久损坏。
  
- 对于 SQL 2017 及更高版本，可通过在受影响的数据库内执行 sp_query_store_consistency_check  存储过程来恢复查询存储。 对于 SQL 2016，需要从查询存储中清除数据，如下所示。
+ 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储  。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，需要从查询存储中清除数据，如下所示。
  
  如果没有效果，可在请求读写模式之前尝试清除查询存储。  
   
@@ -271,10 +330,14 @@ FROM sys.database_query_store_options;
   
 |查询捕获模式|应用场景|  
 |------------------------|--------------|  
-|All|对工作负荷进行彻底的分析，分析所有查询形状及其执行频率和其他统计信息。<br /><br /> 确定工作负荷中的新查询。<br /><br /> 检测是否使用了即席查询来确定是否有机会进行用户参数化或自动参数化。|  
-|Auto|注重相关的可操作查询，即那些定期执行的查询或资源消耗很大的查询。|  
+|All|对工作负荷进行彻底的分析，分析所有查询形状及其执行频率和其他统计信息。<br /><br /> 确定工作负荷中的新查询。<br /><br /> 检测是否使用了即席查询来确定是否有机会进行用户参数化或自动参数化。<br /><br />**注意：** 这是 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中的默认捕获模式。|  
+|Auto|注重相关的可操作查询，即那些定期执行的查询或资源消耗很大的查询。<br /><br />**注意：** 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，这是默认捕获模式。|  
 |None|你已经捕获了需要在运行时监视的查询集，因此需消除其他查询可能会带来的干扰。<br /><br /> “无”适用于测试和基准测试环境。<br /><br /> “无”也适用于需要提供已配置的 Query Store 配置来监视其应用程序工作负荷的软件供应商。<br /><br /> 在使用“无”时应格外小心，因为你可能无法跟踪和优化重要的新查询。 避免使用“无”，除非你的特定方案需要使用它。|  
-  
+|自定义|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 在 `ALTER DATABASE SET QUERY_STORE` 命令下引入自定义捕获模式。 启用后，在新的“查询存储捕获策略”设置下有额外可用的查询存储配置，可用于微调特定服务器中的数据收集。<br /><br />新的自定义设置定义在内部捕获策略时间阈值（计算可配置条件的时间边界）内执行的操作，如果所有值为 true，则查询存储可以捕获查询。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|  
+
+> [!NOTE]
+> 当查询捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。
+
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>在 Query Store 中保留最相关数据  
  将 Query Store 配置为只包含最相关的数据，使之在持续运行的时候对你的常规工作负荷的影响最小，方便你进行故障排除。  
 下表提供最佳实践：  
@@ -310,7 +373,6 @@ FROM sys.database_query_store_options;
 Query Store 会将查询条目与包含对象（存储过程、函数和触发器）相关联。  重新创建包含对象时，将会针对同一查询文本生成新的查询条目。 这会阻止你跟踪该查询在一定时段内的性能统计信息，并会使用计划强制机制。 若要避免这种问题，请尽可能使用 `ALTER <object>` 过程来更改包含对象定义。  
   
 ##  <a name="CheckForced"></a> 定期检查强制计划的状态  
-
 可以方便地使用计划强制机制来修复关键查询的性能问题，使这些查询的结果更可预测。 但与计划提示和计划指南一样，强制实施某项计划并不能确保在今后的执行过程中会用到它。 通常情况下，如果对数据库架构的更改导致执行计划所引用的对象被更改或删除，计划强制就会失败。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会回退到重新编译查询，而强制失败实际原因则显示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 以下查询返回强制计划的相关信息：  
   
 ```sql  
@@ -340,10 +402,14 @@ WHERE is_forced_plan = 1;
   
 -  跟踪标志 7752 启用了查询存储的异步加载。 这会使数据库变为联机状态，并且在查询存储完全恢复之前执行查询。 默认行为是同步加载查询存储。 默认行为可在恢复查询存储之前防止执行查询，但同时也可在数据集合中防止遗漏任何查询。
 
+   > [!NOTE]
+   > 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，此行为由引擎控制，跟踪标志 7752 不再有效。
+
 > [!IMPORTANT]
 > 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。 
 
 ## <a name="see-also"></a>另请参阅  
+[ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     

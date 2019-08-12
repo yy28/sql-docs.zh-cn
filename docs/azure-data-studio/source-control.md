@@ -11,42 +11,42 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959280"
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用原始碼控制
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 中使用源代码管理
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]支援 Git 版本/原始碼控制。
-
-
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的 Git 支援
-
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]內附 Git 原始碼控制管理員 (SCM)，但是在使用功能之前，您仍然需要[安裝 Git (2.0.0 版或更新版本)](https://git-scm.com/download)。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 支持用于版本/源代码管理的 Git。
 
 
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的 Git 支持
 
-## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 儲存庫
-
-1. 在**檔案**功能表下，選取**開啟資料夾...**
-2. 瀏覽至包含 git 追蹤檔案的資料夾，然後按一下 **選取資料夾**。 在這裡可以選取本機儲存庫的子資料夾。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 附带 Git 源控制管理器 (SCM)，但仍需要[安装 Git（版本 2.0.0 或更高版本）](https://git-scm.com/download)，然后才能使用这些功能。 
 
 
-## <a name="initialize-a-new-git-repository"></a>初始化新的 git 存储库
 
-1. 选择**源代码管理**，然后选择 git 图标。
+## <a name="open-an-existing-git-repository"></a>打开现有 Git 存储库
 
-   ![源控件的 git 图标](media/source-control/source-control.png)
+1. 在“文件”菜单下，选择“打开文件夹...”  
+2. 浏览到包含 Git 所跟踪文件的文件夹，然后单击“选择文件夹”  。 可在此处选择本地存储库中的子文件夹。
 
-1. 輸入您想要初始化為 Git 儲存庫的資料夾路徑然後按下**Enter**。
+
+## <a name="initialize-a-new-git-repository"></a>初始化新 Git 存储库
+
+1. 选择“源代码管理”，然后选择 Git 图标  。
+
+   ![源代码管理 Git 图标](media/source-control/source-control.png)
+
+1. 输入指向要初始化为 Git 存储库的文件夹的路径，然后按 Enter  。
 
    ![初始化 Git 存储库](media/source-control/initialize-git-repository.png)
 
-## <a name="working-with-git-repositories"></a>使用 Git 儲存庫
+## <a name="working-with-git-repositories"></a>使用 Git 存储库
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 會從 VS Code 繼承其 Git 實作，但目前不支援其他 SCM 提供者。 在您開啟或初始化儲存庫之後，如需使用 Git 的詳細資訊，請參閱 [VS Code 中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 从 VS Code 继承其 Git 实现，但目前不支持其他 SCM 提供程序。 有关在打开或初始化存储库后使用 Git 的详细信息，请参阅 [VS Code 中的 Git 支持](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
 
 
 ## <a name="additional-resources"></a>其他资源

@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909582"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476261"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 
@@ -71,11 +71,28 @@ ms.locfileid: "67909582"
 
 <sup>1</sup> 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。
 
-这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。
+> [!TIP]
+> 这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。 例如，如果给定索引主要用于扫描操作，则删除碎片可以提高这些操作的性能。 对于主要用于查找操作的索引，性能优势不太明显。 同样，删除堆中的碎片（不包含聚集索引的表）对于非聚集索引扫描操作特别有用，但在查找操作中不起作用。
+
 通常情况下，非常低的碎片级别（小于 5%）不应通过这些命令来解决，因为删除如此少量的碎片所获得的收益始终远低于重新组织或重新生成索引的开销。 有关 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 的详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。
 
 > [!NOTE]
 > 重新生成或重新组织小索引不会减少碎片。 小索引的页面有关存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少小索引中的碎片。
+
+### <a name="index-defragmentation-considerations"></a>索引碎片整理注意事项
+在某些情况下，如果非聚集索引记录中包含的物理或逻辑标识符需要更改，则重新生成聚集索引将自动重新生成引用聚集键的任何非聚集索引。
+
+强制在表上自动重新生成所有非聚集索引的方案：
+
+-  在表上创建聚集索引
+-  删除聚集索引，从而使表存储为堆
+-  更改聚集键以包括或排除列
+
+不需要在表上自动重新生成所有非聚集索引的方案：
+
+-  重新生成唯一聚集索引
+-  重新生成非唯一聚集索引
+-  更改索引架构，例如将分区方案应用于聚集索引或将聚集索引移到其他文件组
 
 ### <a name="Restrictions"></a> 限制和局限
 
@@ -96,7 +113,7 @@ ms.locfileid: "67909582"
 
 #### <a name="Permissions"></a> 权限
 
-要求对表或视图具有 ALTER 权限。 用户至少必须是以下某个角色的成员：
+要求具有对表或视图的 `ALTER` 权限。 用户至少必须是以下某个角色的成员：
 
 - db_ddladmin 数据库角色 <sup>1</sup> 
 - db_owner 数据库角色 

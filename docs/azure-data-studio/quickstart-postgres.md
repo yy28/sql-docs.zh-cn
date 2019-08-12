@@ -1,7 +1,7 @@
 ---
-title: 快速入门：连接和查询 PostgreSQL
+title: 快速入门：连接并查询 PostgreSQL
 titleSuffix: Azure Data Studio
-description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 PostgreSQL，并运行查询
+description: 本快速入门介绍如何使用 Azure Data Studio 连接到 PostgreSQL 并运行查询
 ms.custom: seodec18
 ms.date: 03/19/2019
 ms.prod: sql
@@ -11,85 +11,85 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959465"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入门：连接和查询 PostgreSQL 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-本快速入门介绍如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]若要连接到 Postgres，以及如何将 SQL 语句来创建数据库*tutorialdb*和对其进行查询。
+# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 PostgreSQL
+本快速入门介绍如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 Postgres，然后使用 SQL 语句创建数据库 *tutorialdb* 并对其进行查询。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-若要完成本快速入门教程，需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，适用于的 PostgreSQL 扩展 [!INCLUDE[名称 sos](../includes/name-sos-short.md)，并且有权 PostgreSQL 服务器。
+若要完成本快速入门，需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md) 的 PostgreSQL 扩展以及对 PostgreSQL 服务器的访问权限。
 
-- [安装[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
-- [安装适用于 Azure Data Studio PostgreSQL 扩展](postgres-extension.md)。
-- [安装 PostgreSQL](https://www.postgresql.org/download/)。 (或者，可以创建一个 Postgres 数据库中云采用[向上 az postgres](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli))。 
+- [安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)。
+- [安装 Azure Data Studio 的 PostgreSQL 扩展](postgres-extension.md)。
+- [安装 PostgreSQL](https://www.postgresql.org/download/)。 （或者，可以使用 [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli) 在云中创建 Postgres 数据库）。 
 
 ## <a name="connect-to-postgresql"></a>连接到 PostgreSQL
 
 1. 启动 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 。
 
-2. 首次启动[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**对话框随即打开。 如果**连接**对话框未打开，请单击**服务器**页面中的**新的连接**图标：
+2. 第一次启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 时，将打开“连接”对话框  。 如果未打开“连接”对话框，请单击“服务器”页中的“新建连接”图标    ：
 
-   ![新的连接图标](media/quickstart-postgresql/new-connection-icon.png)
+   ![新建连接图标](media/quickstart-postgresql/new-connection-icon.png)
 
-3. 在弹出表单中，转到**连接类型**，然后选择**PostgreSQL**从下拉列表。
+3. 在弹出的窗体中，转到“连接类型”，然后从下拉列表中选择“PostgreSQL”   。
 
 
-4. 填写其余字段使用用于 PostgreSQL 服务器的服务器名称、 用户名和密码。 
+4. 使用 PostgreSQL 服务器的服务器名称、用户名和密码填写其余字段。 
 
-   ![新连接屏幕](media/quickstart-postgresql/new-connection-screen.png)  
+   ![新建连接屏幕](media/quickstart-postgresql/new-connection-screen.png)  
 
    | 设置       | 示例值 | 描述 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **服务器名称** | localhost | 完全限定的服务器名称 |
-   | **用户名** | postgres | 你想要登录的用户名。 |
-   | **密码（SQL 登录名）** | *password* | 中的登录帐户的密码。 |
-   | **密码** | *检查* | 如果不想要连接的每次都输入密码，请选中此框。 |
-   | **数据库名称** | \<默认\> | 如果你想要指定数据库的连接，请填写此。 |
-   | **服务器组** | \<默认\> | 此选项可让你可以将此连接分配到特定服务器组中创建。 | 
-   | **名称 （可选）** | *将保留为空* | 此选项可以指定你的服务器的友好名称。 | 
+   | **User name** | postgres | 要用来登录的用户名。 |
+   | **密码（SQL 登录名）** | password  | 用于登录的帐户的密码。 |
+   | **密码** | *检查* | 如果不想每次连接时都输入密码，请选中此框。 |
+   | **数据库名称** | \<Default\> | 如果希望连接指定数据库，请填写此项。 |
+   | **服务器组** | \<Default\> | 使用此选项可以将此连接分配给你创建的特定服务器组。 | 
+   | **名称(可选)** | *留空* | 使用此选项可以为服务器指定一个易记名称。 | 
 
 5. 选择“连接”  。 
 
-在中打开你的服务器成功连接后，**服务器**侧栏。
+成功连接后，你的服务器将在“服务器”侧栏中打开  。
 
 
 ## <a name="create-a-database"></a>创建数据库
 
-以下步骤创建一个名为数据库**tutorialdb**:
+以下步骤会创建一个名为“tutorialdb”的数据库  ：
 
-1. 右键单击在 PostgreSQL 服务器**服务器**侧栏，然后选择**新查询**。
+1. 右键单击“服务器”侧栏中的 PostgreSQL 服务器，选择“新建查询”   。
 
-2. 在打开查询编辑器中粘贴此 SQL 语句。
+2. 将此 SQL 语句粘贴到打开的查询编辑器中。
 
    ```sql
    CREATE DATABASE tutorialdb;
    ```
 
-3. 从工具栏中选择**运行**以执行查询。 通知出现在**消息**窗格来显示查询进度。
+3. 从工具栏中选择“运行”以执行查询  。 通知显示在“消息”窗格中，以显示查询进度  。
 
 >[!TIP]
-> 可以使用**F5**上执行语句，而不是使用你键盘**运行**。
+> 可以使用键盘上的“F5”而不是使用“运行”来执行语句   。
 
-在查询完成后，右键单击**数据库**，然后选择**刷新**以查看**tutorialdb**下的列表中**数据库**节点.
+查询完成后，右键单击“数据库”并选择“刷新”，可在“数据库”节点下的列表中看到“tutorialdb”     。
 
 
 ## <a name="create-a-table"></a>创建表
 
- 以下步骤中创建表**tutorialdb**:
+ 以下步骤会在“tutorialdb”中创建一个表  ：
 
-1. 更改到的连接上下文**tutorialdb**在查询编辑器中使用下拉列表。 
+1. 使用查询编辑器中的下拉列表将连接上下文更改为“tutorialdb”  。 
 
    ![更改上下文](media/quickstart-postgresql/change-context.png)
 
-2. 以下 SQL 语句粘贴到查询编辑器，然后单击**运行**。 
+2. 将以下 SQL 语句粘贴到查询编辑器中，并单击“运行”  。 
 
    > [!NOTE]
-   > 可以将其追加或覆盖在编辑器中的现有查询。 单击**运行**执行突出显示查询。 如果突出显示任何内容时，单击**运行**执行所有查询编辑器中。
+   > 可以在编辑器中追加此语句或覆盖现有查询。 单击“运行”将仅执行突出显示的查询  。 如果未突出显示任何内容，则单击“运行”将执行编辑器中的所有查询  。
 
    ```sql
    -- Drop the table if it already exists
@@ -105,7 +105,7 @@ ms.locfileid: "67959465"
 
 ## <a name="insert-rows"></a>插入行
 
-将以下代码段粘贴到查询窗口中，然后单击**运行**：
+将以下代码片段粘贴到查询窗口中，并单击“运行”  ：
 
    ```sql
    -- Insert rows into table 'customers'
@@ -120,17 +120,17 @@ ms.locfileid: "67959465"
 
 ## <a name="query-the-data"></a>查询数据
 
-1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
+1. 将以下代码片段粘贴到查询编辑器中，并单击“运行”  ：
    
    ```sql
    -- Select rows from table 'customers'
    SELECT * FROM customers; 
    ```
 
-2. 显示查询的结果：
+2. 将显示查询结果：
 
    ![查看结果](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>后续步骤
+## <a name="next-steps"></a>Next Steps
 
-了解如何[方案可用于在 Azure Data Studio Postgres](postgres-extension.md)。 
+了解 [Azure Data Studio 中可用于 Postgres 的方案](postgres-extension.md)。 

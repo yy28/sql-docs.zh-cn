@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的智能查询处理 | Microsoft Docs
 description: 智能查询处理功能，用于提高 SQL Server 和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354622"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388365"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-智能查询处理 (QP) 功能系列包含有广泛影响的功能，既能提升现有工作负荷的性能，还能最大限度地减少实现工作量。 
+智能查询处理 (IQP) 功能系列包含有广泛影响的功能，既能提升现有工作负荷的性能，还能最大限度地减少实现工作量。 
 
 ![智能查询处理](./media/iqp-feature-family.png)
 
-可以通过对数据库启用适当的数据库兼容性级别使工作负荷自动符合只能查询处理条件。 可使用 Transact-SQL 进行此设置。 例如：  
+可以通过对数据库启用适当的数据库兼容性级别使工作负荷自动符合只能查询处理条件。 可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行此设置。 例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 | **IQP 功能** | **在 Azure SQL 数据库中是否受支持** | **在 SQL Server 中是否受支持** |**Description** |
 | --- | --- | --- |--- |
-| [自适应联接（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|自适应联接在运行时期间根据实际输入行自动选择联接类型。|
-| [非重复近似计数](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 是，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，公共预览版|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
-| [行存储上的批处理模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
-| [交错执行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|请使用在首次编译时遇到的多语句表值函数的实际基数，而不是一个固定猜测值。|
-| [内存授予反馈（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
-| [内存授予反馈（行模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
-| [标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 转换为“内联”在调用查询中的等效关系表达式，这通常会大幅提升性能。|
-| [表变量延迟编译](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|请使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。|
+| [自适应联接（批处理模式）](#batch-mode-adaptive-joins) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|自适应联接在运行时期间根据实际输入行自动选择联接类型。|
+| [非重复近似计数](#approximate-query-processing) | 是，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
+| [行存储上的批处理模式](#batch-mode-on-rowstore) | 是，兼容性级别为 150，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起，兼容性级别为 150，公共预览版|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
+| [交错执行](#interleaved-execution-for-mstvfs) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|请使用在首次编译时遇到的多语句表值函数的实际基数，而不是一个固定猜测值。|
+| [内存授予反馈（批处理模式）](#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
+| [内存授予反馈（行模式）](#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
+| [标量 UDF 内联](#scalar-udf-inlining) | 否 | 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 转换为“内联”在调用查询中的等效关系表达式，这通常会大幅提升性能。|
+| [表变量延迟编译](#table-variable-deferred-compilation) | 是，兼容性级别为 150，公共预览版| 是，自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 起，兼容性级别为 150，公共预览版|请使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。|
 
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
+利用一个缓存计划，批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后  。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
 
-借助此功能，可以在执行期间使用一个缓存计划，将计划动态切换为采用更优质的联接策略。
-
-通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后  。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
-工作原理如下：
--  如果生成联接输入的行计数足够小，以致于嵌套循环联接优于哈希联接，则计划将切换到嵌套循环算法。
--  如果生成联接输入超过特定行计数阈值，则不会进行切换并且计划将通过哈希联接继续。
-
-以下查询用于说明自适应联接示例：
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-查询将返回 336 行。 启用[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)后，将看到以下计划：
-
-![查询生成 336 行](./media/4_AQPStats336Rows.png)
-
-在计划中，将看到以下信息：
-1. 我们具有用于为哈希联接生成阶段提供行的列存储索引扫描。
-1. 我们拥有新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。 对于该示例，阈值为 78 行。 包含 &gt;= 78 行的任何示例均将使用哈希联接。 如果小于阈值，将使用嵌套循环联接。
-1. 由于我们将返回 336 行，超过了阈值，因此第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
-1. 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 现将计划与同一查询进行对比，但此次针对表格中只有一行的的 Quantity 值  ：
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-查询将返回一行。 启用实时查询统计信息后，将看到以下计划：
-
-![查询生成一行](./media/5_AQPStatsOneRow.png)
-
-在计划中，将看到以下信息：
-- 返回一行后，聚集索引搜索现已有行流经它。
-- 并且，由于哈希联接生成阶段未继续进行，因此没有行流经第二个分支。
-
-### <a name="adaptive-join-benefits"></a>自适应联接优点
-小型和大型联接输入扫描之间频繁振荡的工作负荷将从此功能获益最大。
-
-### <a name="adaptive-join-overhead"></a>自适应联接开销
-自适应联接引入了比索引嵌套循环联接等效计划更高的内存要求。 它会请求额外的内存，就像嵌套循环属于哈希联接一样。 此外还有作为断断续续操作而不是嵌套循环流式处理等效联接的生成阶段的开销。 这笔额外成本产生的同时也实现了行计数可在生成输入中波动的方案灵活性。
-
-### <a name="adaptive-join-caching-and-re-use"></a>自适应联接缓存和重复使用
-批处理模式自适应联接适用于语句的初始执行，编译后，根据编译的自适应联结阈值和流经外部输入生成阶段的运行时行，连续执行将保持自适应状态。
-
-### <a name="tracking-adaptive-join-activity"></a>跟踪自适应联接活动
-自适应联接运算符具有以下计划运算符属性：
-
-| 计划属性 | 描述 |
-|--- |--- |
-| AdaptiveThresholdRows | 显示用于从哈希联接切换到嵌套循环联接的阈值。 |
-| EstimatedJoinType | 可能的联接类型。 |
-| ActualJoinType | 在实际计划中，显示根据阈值最终选择的联接算法。 |
-
-估计的计划显示自适应联接计划形状，以及定义的自适应联接阈值和估计的联接类型。
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>自适应联接和查询存储互操作性
-查询存储可捕获并强制执行批处理模式自适应联接计划。
-
-### <a name="adaptive-join-eligible-statements"></a>符合自适应联接条件的语句
-以下多个条件可使逻辑联接符合批处理模式自适应联接的条件：
-- 数据库兼容级别为 140。
-- 查询是 SELECT 语句（数据修改语句当前不符合条件）。
-- 联接符合同时由索引嵌套循环联接或哈希联接物理算法执行的条件。
-- 哈希联接将通过整体查询中的列存储索引状态或联接正在直接引用的列存储索引表使用批处理模式。
-- 嵌套循环联接和哈希联接生成的替代解决方案的第一个子级（外部引用）应相同。
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>自适应联接和嵌套循环效率
-如果自适应联接切换到嵌套循环操作，它将使用哈希联接生成已经读取的行。 运算符不会  再次重新读取外部引用行。
-
-### <a name="adaptive-threshold-rows"></a>自适应阈值行
-下图显示了哈希联接的成本与嵌套循环联接替代的成本之间的示例交集。 在这个交点处，确定了阈值，该阈值将反过来确定将实际用于联接操作的算法。
-
-![联接阈值](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用自适应联接
-
-可在数据库或语句范围内禁用自适应联接，同时将数据库兼容性级别维持在 140 或更高。  
-若要对源自数据库的所有查询执行禁用自适应联接，请在对应数据库的上下文中执行以下命令：
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-启用后，此设置在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 将显示为已启用。
-若要对源自数据库的所有查询执行重新启用自适应联接，请在对应数据库的上下文中执行以下命令：
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-此外，将 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可为特定查询禁用自适应联接。 例如：
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
+有关详细信息，请参阅 [理解自适应联接](../../relational-databases/performance/joins.md#adaptive)。
 
 ## <a name="batch-mode-memory-grant-feedback"></a>批处理模式内存授予反馈
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查询执行后的计划包括执行所需的最小内存和能将所有行纳入内存的理想内存授予大小。 如果内存授予大小不正确，性能将受到影响。 如果授予过量，则会导致内存浪费，减少并发执行。 如果内存授予不足，则会导致到磁盘的昂贵溢出。 通过解决重复工作负荷，批处理模式内存授予反馈可重新计算查询所需的实际内存，并更新缓存计划的授予值。 执行相同的查询语句时，查询将使用修改后的内存授予大小，减少影响并发的过量内存授予，并修复造成到磁盘的昂贵溢出的估计不足的内存授予。
@@ -212,7 +92,11 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 可在数据库或语句范围内禁用内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 若要对源自数据库的所有查询执行禁用批处理模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 启用后，此设置在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 将显示为已启用。
@@ -220,7 +104,11 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 若要对源自数据库的所有查询执行重新启用批处理模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 此外，将 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可为特定查询禁用批处理模式内存授予反馈。 例如：
@@ -354,14 +242,22 @@ MSTVF 中简单的 `SELECT *` 不会获益于交错执行。
 可在数据库或语句范围内禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。  若要对源自数据库的所有查询执行禁用交错执行，请在对应数据库的上下文中执行以下命令：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 启用后，此设置在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 将显示为已启用。
 若要对源自数据库的所有查询执行重新启用交错执行，请在适用的数据库的上下文中执行以下命令：
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 此外，将 `DISABLE_INTERLEAVED_EXECUTION_TVF` 指定为 [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)也可对特定查询禁用交错执行。 例如：

@@ -1,7 +1,7 @@
 ---
-title: 在 Ubuntu 上的 SQL Server 入门
+title: Ubuntu 上的 SQL Server 入门
 titleSuffix: SQL Server
-description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 或 SQL Server 2019 然后创建和查询使用 sqlcmd 数据库。
+description: 本快速入门介绍如何在 Ubuntu 上安装 SQL Server 2017 或 SQL Server 2019，然后使用 sqlcmd 创建和查询数据库。
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/28/2019
@@ -11,49 +11,49 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910462"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server，在 Ubuntu 上创建数据库
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server 并在 Ubuntu 上创建数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入门，在 Ubuntu 16.04 上安装 SQL Server 2017 或 SQL Server 2019 preview。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
+本快速入门介绍如何在 Ubuntu 16.04 上安装 SQL Server 2017 或 SQL Server 2019（预览版）。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入门，在 Ubuntu 16.04 上安装 SQL Server 2019 预览版。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
+本快速入门介绍如何在 Ubuntu 16.04 上安装 SQL Server 2019（预览版）。 然后使用 sqlcmd 进行连接，创建第一个数据库并运行查询  。
 
 ::: moniker-end
 
 > [!TIP]
-> 本教程需要用户输入和 Internet 连接。 如果想在无人参与或脱机安装过程中，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
+> 本教程需要用户输入和 internet 连接。 如果对无人参与或脱机安装过程感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-您必须具有的 Ubuntu 16.04 计算机**至少 2 GB**的内存。
+需配备 Ubuntu 16.04 计算机，且至少具有 2 GB 内存  。
 
-若要在自己的计算机上安装 Ubuntu 16.04，请转到[ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/)。 此外可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[创建和管理 Linux Vm 使用 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
+要在自己的计算机上安装 Ubuntu 16.04，请转到[http://releases.ubuntu.com/xenial/](http://releases.ubuntu.com/xenial/)。 还可以在 Azure 中创建 Ubuntu 虚拟机。 请参阅[使用 Azure CLI 创建和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)。
 
 > [!NOTE]
-> 在此期间，[适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标不支持 Windows 10。
+> 目前，不支持将适用于 Windows 10 的 [Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标。
 
-其他系统要求，请参阅[Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
+有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="install"></a>安装 SQL Server
 
-若要在 Ubuntu 上配置 SQL Server ，在终端中运行以下命令安装**mssql server**包。
+要在 Ubuntu 上配置 SQL Server，请在终端中运行以下命令以安装 mssql-server 包  。
 
 1. 导入公共存储库 GPG 密钥：
 
@@ -68,7 +68,7 @@ ms.locfileid: "67910462"
    ```
 
    > [!TIP]
-   > 如果你想要试用 SQL Server 2019，则必须改为注册**预览版 (2019)** 存储库。 对于 SQL Server 2019 安装中使用以下命令：
+   > 如果想试用 SQL Server 2019，需改为注册预览版 (2019) 存储库  。 使用以下命令安装 SQL Server 2019：
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
@@ -81,27 +81,27 @@ ms.locfileid: "67910462"
    sudo apt-get install -y mssql-server
    ```
 
-4. 程序包安装完成后，请运行 **mssql-conf setup** 命令并按提示设置 SA 密码，然后选择版本。
+4. 包安装完成后，运行 mssql-conf setup，按照提示设置 SA 密码并选择版本  。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > 以下 SQL Server 2017 版本自由地授予使用许可：评估、 开发人员版和 Express。
+   > 以下 SQL Server 2017 版本是免费提供许可的：评估版、开发人员版和 Express 版。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
 
-5. 配置完成后，请验证服务是否正在运行：
+5. 完成配置后，验证服务是否正在运行：
 
    ```bash
    systemctl status mssql-server --no-pager
    ```
 
-6. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。
+6. 如果计划远程连接，可能还需要在防火墙上打开 SQL Server TCP 端口（默认值为 1433）。
 
-在此情况下，SQL Server 在 Ubuntu 计算机上运行并已准备好使用 ！
+此时，SQL Server 已在 Ubuntu 计算机上运行，随时可以使用！
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -109,7 +109,7 @@ ms.locfileid: "67910462"
 
 ## <a id="install"></a>安装 SQL Server
 
-若要在 Ubuntu 上配置 SQL Server ，在终端中运行以下命令安装**mssql server**包。
+要在 Ubuntu 上配置 SQL Server，请在终端中运行以下命令以安装 mssql-server 包  。
 
 1. 导入公共存储库 GPG 密钥：
 
@@ -117,7 +117,7 @@ ms.locfileid: "67910462"
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. 注册 SQL Server 2019 预览版的 Microsoft SQL Server Ubuntu 存储库：
+2. 为 SQL Server 2019（预览版）注册 Microsoft SQL Server Ubuntu 存储库:
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
@@ -130,7 +130,7 @@ ms.locfileid: "67910462"
    sudo apt-get install -y mssql-server
    ```
 
-4. 程序包安装完成后，请运行 **mssql-conf setup** 命令并按提示设置 SA 密码，然后选择版本。
+4. 包安装完成后，运行 mssql-conf setup，按照提示设置 SA 密码并选择版本  。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -139,23 +139,23 @@ ms.locfileid: "67910462"
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
 
-5. 配置完成后，请验证服务是否正在运行：
+5. 完成配置后，验证服务是否正在运行：
 
    ```bash
    systemctl status mssql-server --no-pager
    ```
 
-6. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。
+6. 如果计划远程连接，可能还需要在防火墙上打开 SQL Server TCP 端口（默认值为 1433）。
 
-在此情况下，SQL Server 2019 预览版在 Ubuntu 计算机上运行并已准备好使用 ！
+此时，SQL Server 2019（预览版）已在 Ubuntu 计算机上运行，随时可以使用！
 
 ::: moniker-end
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库，需要使用一个能够在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤安装 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
+要创建数据库，需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 
-使用以下步骤来安装**mssql 工具**Ubuntu 上。 
+通过下列步骤在 Ubuntu 上安装 mssql-tools  。 
 
 1. 导入公共存储库 GPG 密钥。
 
@@ -177,21 +177,21 @@ ms.locfileid: "67910462"
    ```
 
    > [!Note] 
-   > 若要更新到最新版**mssql 工具**运行以下命令：
+   > 若要将 mssql-tools 更新至最新版本，请运行以下命令  ：
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **可选**:添加`/opt/mssql-tools/bin/`为你**路径**bash shell 中的环境变量。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。
 
-   若要使**sqlcmd/bcp**可从登录会话的 bash shell 访问修改你**路径**中 **~/.bash_profile**文件使用以下命令：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   若要使**sqlcmd/bcp**能从交互式/非登录会话，bash shell 访问修改**路径**中 **~/.bashrc**文件使用以下命令：
+   要使 sqlcmd/bcp 能从交互式/非登录会话的 bash shell 进行访问，请使用下列命令修改 ~/.bashrc 文件中的 PATH    ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

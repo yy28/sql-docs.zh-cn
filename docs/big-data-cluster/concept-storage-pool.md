@@ -1,7 +1,7 @@
 ---
 title: 什么是存储池？
 titleSuffix: SQL Server big data clusters
-description: 本文介绍在 SQL Server 2019 大数据群集的存储池。
+description: 本文介绍 SQL Server 2019 大数据群集中的存储池。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,31 +10,31 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958650"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>什么是存储池 （SQL Server 大数据群集）？
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>什么是存储池（SQL Server 大数据群集）？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍的角色*SQL Server 存储池*SQL Server 2019 大数据群集 （预览版） 中。 以下部分介绍的体系结构和功能的 SQL 存储池。
+本文介绍 SQL Server 2019 大数据群集（预览版）中“SQL Server 存储据池”的角色  。 以下部分介绍了 SQL 存储池的体系结构和功能。
 
 ## <a name="storage-pool-architecture"></a>存储池体系结构
 
-存储池包含的节点包含 SQL server on Linux、 Spark 和 HDFS 的存储。 SQL 大数据群集中的所有存储节点都是 HDFS 群集的成员。
+存储池包含由 Linux 上的 SQL Server、Spark 和 HDFS 组成的存储节点。 SQL 大数据群集中的所有存储节点均为 HDFS 群集的成员。
 
 ![存储池体系结构](media/concept-storage-pool/scale-big-data-on-demand.png)
 
-## <a name="responsibilities"></a>职责
+## <a name="responsibilities"></a>责任
 
 存储节点负责：
 
-- 通过 Spark 的数据引入。
-- HDFS （Parquet 格式） 中的数据存储。 HDFS 还提供了数据持久性、 HDFS 数据分散存储在 SQL 大数据群集中的所有存储节点。
-- 通过 HDFS 和 SQL Server 终结点的数据访问。
+- 通过 Spark 进行数据引入。
+- HDFS 中的数据存储（Parquet 格式）。 HDFS 还提供数据持久性，因为 HDFS 数据分散到 SQL 大数据群集中的所有存储节点上。
+- 通过 HDFS 和 SQL Server 终结点进行数据访问。
 
 ## <a name="next-steps"></a>后续步骤
 

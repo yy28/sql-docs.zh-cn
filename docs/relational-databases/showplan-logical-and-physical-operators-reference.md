@@ -137,12 +137,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46578b4795bc02b0d426564b357dea580665ceeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03ba5529d7ad01f010e08e90ea9f4713b2544a91
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048842"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388434"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "68048842"
   
 |图形执行计划图标|Showplan 运算符|描述|  
 |-----------------------------------|-----------------------|-----------------|  
-|![自适应联接运算符图标](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join operator icon")|**自适应联接**|通过自适应联接运算符，在扫描第一个输入后可延迟选择哈希联接或嵌套循环联接方法  。 | 
+|![自适应联接运算符图标](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join operator icon")|**自适应联接**|通过“自适应联接”运算符，在扫描第一个输入后可延迟选择哈希联接或嵌套循环联接方法  。 “自适应联接”运算符是一个物理运算符  。 有关详细信息，请参阅[理解自适应联接](../relational-databases/performance/joins.md#adaptive)。 | 
 |None|**Aggregate**|**Aggregate** 运算符计算包含 MIN、MAX、SUM、COUNT 或 AVG 的表达式。 **Aggregate** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Arithmetic Expression 运算符图标](../relational-databases/media/arithmetic-expression-32x-2.gif "Arithmetic Expression 运算符图标")|**Arithmetic Expression**|**Arithmetic Expression** 运算符根据行中的现有值计算新值。 **中未使用** 算术表达式 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]| 
 |None|**Async Concat**|Async Concat 运算符仅用于远程查询中（分布式查询）  。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 Asnyc Concat 同时向所有子节点发出 `open()` 调用，然后将位图应用于每个子节点  。 对于为 1 的每个位， **Async Concat** 按需向父节点发送输出行。| 
@@ -225,7 +225,7 @@ ms.locfileid: "68048842"
 |![Foreign Key References Check 运算符图标](../relational-databases/media/fk-references-32x.gif "Foreign key references check operator icon")|**Foreign Key References Check**|Foreign Key References Check  运算符通过将修改行与引用表中的行进行比较，就地执行引用完整性检查，以便验证修改不会中断引用完整性。 当相同主键或唯一键上存在超过 253 个外键引用时，将使用 Foreign Key References Check  运算符。 Foreign Key References Check  是逻辑和物理运算符。| 
 |None|**Full Outer Join**|**Full Outer Join** 逻辑运算符从第一个（顶端）输入与第二个（底端）输入相联接的行中返回每个满足联接谓词的行。 它还可以从下列输入返回行：<br /><br /> \- 在第二个输入中没有匹配项的第一个输入。<br /><br /> \- 在第一个输入中没有匹配项的第二个输入。<br /><br /> 不包含匹配值的输入将作为空值返回。 **Full Outer Join** 是一个逻辑运算符。| 
 |![Gather Streams 并行度运算符图标](../relational-databases/media/parallelism-32x.gif "Gather Streams 并行度运算符图标")|**Gather Streams**|**Gather Streams** 运算符仅用在并行查询计划中。 **Gather Streams** 运算符处理几个输入流并通过组合这几个输入流生成单个记录输出流。 记录的内容和格式不会改变。 如果此运算符保留顺序，则所有的输入流都必须有序。 如果输出已排序，则 **Argument** 列会包含一个 ORDER BY:() 谓词和正在排序的列名称。 **Gather Streams** 是一个逻辑运算符。| 
-|![Hash Match 运算符图标](../relational-databases/media/hash-match-32x.gif "Hash Match 运算符图标")|**Hash Match**|**Hash Match** 运算符通过计算其生成输入中每行的哈希值生成哈希表。 HASH:() 谓词以及一个用于创建哈希值的列的列表会出现在 **Argument** 列中。 然后，该谓词为每个探测行（如果适用）计算哈希值（使用相同的哈希函数）并在哈希表内查找匹配项。 如果存在残留谓词（由 **Argument** 列中的 RESIDUAL:() 标识），则还须满足此残留谓词，只有这样行才能被视为是匹配项。 行为取决于所执行的逻辑操作：<br /><br /> \- 对于联接，使用第一个（顶端）输入生成哈希表，使用第二个（底端）输入探测哈希表。 按联接类型规定的模式输出匹配项（或不匹配项）。 如果多个联接使用相同的联接列，这些操作将分组为一个哈希组。<br /><br /> \- 对于非重复或聚合运算符，使用输入生成哈希表（删除重复项并计算聚合表达式）。 生成哈希表时，扫描该表并输出所有项。<br /><br /> \- 对于 union 运算符，使用第一个输入生成哈希表（删除重复项）。 使用第二个输入（它必须没有重复项）探测哈希表，返回所有没有匹配项的行，然后扫描该哈希表并返回所有项。<br /><br /> **Hash Match** 是一个物理运算符。| 
+|![Hash Match 运算符图标](../relational-databases/media/hash-match-32x.gif "Hash Match 运算符图标")|**Hash Match**|**Hash Match** 运算符通过计算其生成输入中每行的哈希值生成哈希表。 HASH:() 谓词以及一个用于创建哈希值的列的列表会出现在 **Argument** 列中。 然后，该谓词为每个探测行（如果适用）计算哈希值（使用相同的哈希函数）并在哈希表内查找匹配项。 如果存在残留谓词（由 **Argument** 列中的 RESIDUAL:() 标识），则还须满足此残留谓词，只有这样行才能被视为是匹配项。 行为取决于所执行的逻辑操作：<br /><br /> \- 对于联接，使用第一个（顶端）输入生成哈希表，使用第二个（底端）输入探测哈希表。 按联接类型规定的模式输出匹配项（或不匹配项）。 如果多个联接使用相同的联接列，这些操作将分组为一个哈希组。<br /><br /> \- 对于非重复或聚合运算符，使用输入生成哈希表（删除重复项并计算聚合表达式）。 生成哈希表时，扫描该表并输出所有项。<br /><br /> \- 对于 union 运算符，使用第一个输入生成哈希表（删除重复项）。 使用第二个输入（它必须没有重复项）探测哈希表，返回所有没有匹配项的行，然后扫描该哈希表并返回所有项。<br />**Hash Match** 是一个物理运算符。 有关详细信息，请参阅[理解哈希联接](../relational-databases/performance/joins.md#hash)。| 
 |![If 语言元素图标](../relational-databases/media/if-32x.gif "If 语言元素图标")|**如果**|**If** 运算符执行基于表达式的有条件处理。 **If** 是一个语言元素。| 
 |None|**Inner Join**|**Inner Join** 逻辑运算符返回满足联接第一个（顶端）输入与第二个（底端）输入的每一行。| 
 |![Insert（数据库引擎）运算符图标](../relational-databases/media/insert-32x.gif "Insert（数据库引擎）运算符图标")|**Insert**|**Insert** 逻辑运算符将每行从其输入插入 **Argument** 列内指定的对象中。 相应的物理运算符为 **Table Insert**、 **Index Insert**或 **Clustered Index Insert** 运算符。| 
@@ -240,8 +240,8 @@ ms.locfileid: "68048842"
 |None|**Left Semi Join**|当第二个（底端）输入中没有匹配行时， **Left Semi Join** 运算符则返回第一个（顶端）输入中的每一行。 如果 **Argument** 列内不存在任何联接谓词，则每行都是一个匹配行。 **Left Semi Join** 是一个逻辑运算符。| 
 |![Log Row Scan 运算符图标](../relational-databases/media/log-row-scan-32x.gif "Log Row Scan 运算符图标")|**Log Row Scan**|**Log Row Scan** 运算符用于扫描事务日志。 **Log Row Scan** 既是一个逻辑运算符，也是一个物理运算符。| 
 |![Merge Interval 运算符图标](../relational-databases/media/merge-interval-32x.gif "Merge Interval 运算符图标")|**Merge Interval**|**Merge Interval** 运算符可合并多个（可能重叠的）间隔以得出最小的不重叠间隔，然后将其用于查找索引项。 此运算符通常出现在 **Constant Scan** 运算符中的一个或多个 **Compute Scalar** 运算符上方，Constant Scan 运算符构造了此运算符所合并的间隔（表示为一行中的列）。 **Merge Interval** 既是一个逻辑运算符，也是一个物理运算符。| 
-|![Merge Join 运算符图标](../relational-databases/media/merge-join-32x.gif "Merge Join 运算符图标")|**合并联接**|**Merge Join** 运算符执行内部联接、左外部联接、左半部联接、左反半部联接、右外部联接、右半部联接、右反半部联接和联合逻辑运算。<br /><br /> 在 **Argument** 列中，如果操作执行一对多联接，则 **Merge Join** 运算符将包含 MERGE:() 谓词；如果操作执行多对多联接，则该运算符将包含 MANY-TO-MANY MERGE:() 谓词。 **Argument** 列还包含一个用于执行操作的列的列表，该列表以逗号分隔。 **Merge Join** 运算符要求在各自的列上对两个输入进行排序，这可以通过在查询计划中插入显式排序操作来实现。 如果不需要显式排序（例如，如果数据库内有合适的 B 树索引或可以对多个操作（如合并联接和对汇总分组）使用排序顺序），则合并联接尤其有效。 **Merge Join** 是一个物理运算符。| 
-|![Nested Loops 运算符图标](../relational-databases/media/nested-loops-32x.gif "Nested Loops 运算符图标")|**Nested Loops**|**Nested Loops** 运算符执行内部联接、左外部联接、左半部联接和左反半部联接逻辑运算。 嵌套循环联接通常使用索引，针对外部表的每一行在内部表中执行搜索。 查询处理器根据预计的开销来决定是否对外部输入进行排序，以改进内部输入索引上的搜索定位。 将基于所执行的逻辑操作返回所有满足 **Argument** 列中的（可选）谓词的行。 **Nested Loops** 是一个物理运算符。| 
+|![Merge Join 运算符图标](../relational-databases/media/merge-join-32x.gif "Merge Join 运算符图标")|**合并联接**|**Merge Join** 运算符执行内部联接、左外部联接、左半部联接、左反半部联接、右外部联接、右半部联接、右反半部联接和联合逻辑运算。<br /><br /> 在 **Argument** 列中，如果操作执行一对多联接，则 **Merge Join** 运算符将包含 MERGE:() 谓词；如果操作执行多对多联接，则该运算符将包含 MANY-TO-MANY MERGE:() 谓词。 **Argument** 列还包含一个用于执行操作的列的列表，该列表以逗号分隔。 **Merge Join** 运算符要求在各自的列上对两个输入进行排序，这可以通过在查询计划中插入显式排序操作来实现。 如果不需要显式排序（例如，如果数据库内有合适的 B 树索引或可以对多个操作（如合并联接和对汇总分组）使用排序顺序），则合并联接尤其有效。 **Merge Join** 是一个物理运算符。 有关详细信息，请参阅[理解合并联接](../relational-databases/performance/joins.md#merge)。| 
+|![Nested Loops 运算符图标](../relational-databases/media/nested-loops-32x.gif "Nested Loops 运算符图标")|**Nested Loops**|**Nested Loops** 运算符执行内部联接、左外部联接、左半部联接和左反半部联接逻辑运算。 嵌套循环联接通常使用索引，针对外部表的每一行在内部表中执行搜索。 查询处理器根据预计的开销来决定是否对外部输入进行排序，以改进内部输入索引上的搜索定位。 将基于所执行的逻辑操作返回所有满足 **Argument** 列中的（可选）谓词的行。 如果 OPTIMIZED 特性设置为“True”，则表示使用了优化的嵌套循环（或批处理排序）  。 **Nested Loops** 是一个物理运算符。 有关详细信息，请参阅[了解嵌套循环联接](../relational-databases/performance/joins.md#nested_loops)。| 
 |![Nonclustered Index Delete 运算符图标](../relational-databases/media/nonclust-index-delete-32x.gif "Nonclustered Index Delete 运算符图标")|**Nonclustered Index Delete**|**Nonclustered Index Delete** 运算符通过 **Argument** 列中指定的非聚集索引删除输入行。 **Nonclustered Index Delete** 是一个物理运算符。| 
 |![Nonclustered Index Insert 运算符图标](../relational-databases/media/nonclust-index-insert-32x.gif "Nonclustered Index Insert 运算符图标")|**Index Insert**|**Index Insert** 运算符用于将行从其输入插入到 **Argument** 列中指定的非聚集索引中。 **Argument** 列还包含一个 SET:() 谓词，用于指示为每一列设置的值。 **Index Insert** 是一个物理运算符。| 
 |![Nonclustered Index Scan 运算符图标](../relational-databases/media/nonclustered-index-scan-32x.gif "Nonclustered Index Scan 运算符图标")|**Index Scan**|**Index Scan** 运算符从 **Argument** 列中指定的非聚集索引中检索所有行。 如果可选的 WHERE:() 谓词出现在 **Argument** 列中，则仅返回满足此谓词的那些行。 **Index Scan** 既是一个逻辑运算符，也是一个物理运算符。| 

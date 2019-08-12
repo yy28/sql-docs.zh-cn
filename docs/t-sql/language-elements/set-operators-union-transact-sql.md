@@ -20,25 +20,34 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0480cb7b3692a5101271ea69cc8700c4ff09ada0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072276"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495473"
 ---
 # <a name="set-operators---union-transact-sql"></a>集运算符 - UNION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-将两个或多个查询的结果合并到一个结果集中。 此结果集包含属于并集中所有查询的全部行。 UNION 运算不同于使用联接合并两个表中的列的运算。  
+将两个查询的结果连接到一个结果集中。 可控制结果集是否包含重复行：
+
+- **UNION ALL** - 包括重复行。
+- **UNION** - 排除重复行。
+
+UNION 操作不同于 [JOIN](../queries/from-transact-sql.md) 操作   ：
+
+- UNION 连接两个查询中的结果集  。 但 UNION 不会从两个表收集的列中创建单独的行  。
+- JOIN 比较两个表中的列，以创建由两个表中的列组成的结果行  。
   
-下面列出了使用 UNION 合并两个查询结果集的基本规则：  
+下面列出了使用 UNION 合并两个查询结果集的基本规则  ：  
   
 -   所有查询中的列数和列的顺序必须相同。  
   
 -   数据类型必须兼容。  
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,7 +74,7 @@ ALL
 ### <a name="a-using-a-simple-union"></a>A. 使用简单 UNION  
 在下面的示例中，结果集同时包含 `ProductModelID` 和 `Name` 表中的 `ProductModel` 与 `Gloves` 列中的内容。  
  
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -94,7 +103,7 @@ GO
 ### <a name="b-using-select-into-with-union"></a>B. 将 SELECT INTO 与 UNION 一起使用  
 在下面的示例中，第二个 `SELECT` 语句中的 `INTO` 子句指定，`ProductResults` 表保留 `ProductModel` 和 `Gloves` 表中选定列的并集的最终结果集。 `Gloves` 表是在第一个 `SELECT` 语句中创建。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.ProductResults', 'U') IS NOT NULL  
@@ -123,13 +132,12 @@ GO
   
 SELECT ProductModelID, Name   
 FROM dbo.ProductResults;  
-  
 ```  
   
 ### <a name="c-using-union-of-two-select-statements-with-order-by"></a>C. 将 ORDER BY 与两个 SELECT 语句的 UNION 一起使用  
 在 UNION 子句中使用的某些参数的顺序非常重要。 下面的示例通过两个 `UNION` 语句说明 `SELECT` 的错误用法和正确用法（在这两个语句的输出中将重命名一个列）。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -165,7 +173,6 @@ SELECT ProductModelID, Name
 FROM dbo.Gloves  
 ORDER BY Name;  
 GO  
-  
 ```  
   
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. 使用三个 SELECT 语句的 UNION 来说明 ALL 和括号的作用  
@@ -173,7 +180,7 @@ GO
   
 第三个示例将 `ALL` 用于第一个 `UNION`，并用括号将没有使用 `ALL` 的第二个 `UNION` 括起来。 第二个 `UNION` 因位于括号内而首先得到处理，并返回 5 行，这是因为未使用 `ALL` 选项，重复行遭删除。 通过使用 `SELECT` 关键字将这 5 行与第一个 `UNION ALL` 的结果组合在一起。 下面的示例不删除两个 5 行结果集之间的重复行。 最终结果有 10 行。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.EmployeeOne', 'U') IS NOT NULL  
@@ -244,7 +251,7 @@ GO
 ### <a name="e-using-a-simple-union"></a>E. 使用简单 UNION  
 在下面的示例中，结果集同时包含 `FactInternetSales` 和 `DimCustomer` 表中的 `CustomerKey` 列中的内容。 由于未使用 ALL 关键字，因此重复行会从结果中排除。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -258,7 +265,7 @@ ORDER BY CustomerKey;
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. 将 ORDER BY 与两个 SELECT 语句的 UNION 一起使用  
  当 UNION 语句中的任何 SELECT 语句包含 ORDER BY 子句时，该子句应置于所有 SELECT 语句之后。 下面的示例通过两个 `SELECT` 语句说明 `UNION` 的错误用法和正确用法（在这两个语句中使用 ORDER BY 对一个列排序）。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT  
@@ -284,7 +291,7 @@ ORDER BY CustomerKey;
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. 将 WHERE 和 ORDER BY 与两个 SELECT 语句的 UNION 一起使用  
 下面的示例通过两个 `SELECT` 语句说明 `UNION` 的错误用法和正确用法（在这两个语句中需要 WHERE 和 ORDER BY）。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT   
@@ -316,7 +323,7 @@ ORDER BY CustomerKey;
   
 第三个示例将 `ALL` 用于第一个 `UNION`，并用括号将没有使用 `ALL` 的第二个 `UNION` 括起来。 首先处理第二个 `UNION`，因为它位于括号中。 仅从表返回非重复行，因为未使用 `ALL` 选项，重复行遭删除。 通过使用 `UNION ALL` 关键字将这些行与第一个 `SELECT` 的结果合并在一起。 下面的示例不删除两个结果集之间的重复行。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, FirstName, LastName  
@@ -352,6 +359,3 @@ FROM DimCustomer
 ## <a name="see-also"></a>另请参阅  
 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
 [SELECT 示例 (Transact-SQL)](../../t-sql/queries/select-examples-transact-sql.md)  
-  
-  
-

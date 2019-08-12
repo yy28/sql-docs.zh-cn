@@ -1,6 +1,6 @@
 ---
-title: 开始使用 Linux 上的 SQL Server 的性能功能
-description: 本文提供的 Linux 用户刚接触 SQL Server 的 SQL Server 性能功能的介绍。 许多这些示例适用于所有平台，但这篇文章的上下文是 Linux。
+title: Linux 上 SQL Server 的性能功能入门
+description: 本文为刚接触 SQL Server 的 Linux 用户介绍 SQL Server 的性能功能。 其中许多示例适用于所有平台，但本文的上下文为 Linux 环境。
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -9,25 +9,25 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67896166"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux 上 SQL Server 的性能功能演练
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-如果你是刚接触 SQL Server 的 Linux 用户，以下任务会指导你完成某些性能任务。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 在每个示例中，均提供该领域的详细文档链接。
+如果你是刚接触 SQL Server 的 Linux 用户，以下任务可帮助你了解某些性能功能。 虽然这些并非 Linux 独有或特定的任务，但能有助于你了解需要深入了解的领域。 每个示例中均提供了该领域的详细文档链接。
 
 > [!NOTE]
-> 以下示例使用 AdventureWorks 示例数据库。 有关如何获取和安装此示例数据库的说明，请参阅[SQL Server 数据库从 Windows 还原到 Linux](sql-server-linux-migrate-restore-database.md)。
+> 以下示例使用 AdventureWorks 示例数据库。 有关如何获取并安装此示例数据库的说明，请参阅[将 SQL Server 数据库从 Windows 还原到 Linux](sql-server-linux-migrate-restore-database.md)。
 
 ## <a name="create-a-columnstore-index"></a>创建列存储索引
 列存储索引是使用列式数据格式（称为列存储）存储和查询大量数据的技术。  
 
-1. 将列存储索引添加到 SalesOrderDetail 表中，通过执行以下 TRANSACT-SQL 命令：
+1. 通过执行以下 Transact-SQL 命令将列存储索引添加到 SalesOrderDetail 表：
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -36,7 +36,7 @@ ms.locfileid: "67896166"
    GO
    ```
 
-2. 执行以下查询使用列存储索引扫描表：
+2. 执行以下查询，使用列存储索引扫描表：
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -62,7 +62,7 @@ ms.locfileid: "67896166"
 SQL Server 提供的内存中 OLTP 功能可极大提升应用程序系统的性能。  《评估指南》中的本节内容将介绍如何创建存储在内存中的内存优化表，以及创建无需编译或解释即可访问表的本机编译的存储过程。
 
 ### <a name="configure-database-for-in-memory-oltp"></a>配置内存中 OLTP 的数据库
-1. 建议将数据库设置为至少 130，以使用内存中 OLTP 的兼容性级别。  使用以下查询检查 AdventureWorks 的当前兼容性级别：  
+1. 建议将数据库的兼容级别至少设置为 130，以使用内存中 OLTP。  使用以下查询检查 AdventureWorks 的当前兼容级别：  
 
    ```sql
    USE AdventureWorks
@@ -81,14 +81,14 @@ SQL Server 提供的内存中 OLTP 功能可极大提升应用程序系统的性
    GO
    ```
 
-2. 当事务涉及基于磁盘的表和内存优化表时，必须在事务隔离级别运行事务的内存优化部分名为快照。  若要可靠地对跨容器事务中的内存优化表强制执行此级别，请执行以下脚本：
+2. 当事务同时涉及基于磁盘的表和内存优化表时，事务的内存优化部分必须在名为“快照”的事务隔离级别运行。  若要可靠地对跨容器事务中的内存优化表强制执行此级别，请执行以下脚本：
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. 必须先创建 Memory Optimized FILEGROUP 和数据文件的容器，然后才能创建内存优化表：
+3. 需要先创建 Memory Optimized FILEGROUP 和数据文件的容器，然后才能创建内存优化表：
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -122,9 +122,9 @@ SQL Server 提供的内存中 OLTP 功能可极大提升应用程序系统的性
    ```
 
 ### <a name="natively-compiled-stored-procedure"></a>本机编译的存储过程
-SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL 语句编译为机器代码并存储为本机 DLL，能够比传统 T-SQL 更快地访问数据，更高效地执行查询。   使用 NATIVE_COMPILATION 标记的存储过程将本机编译。 
+SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL 语句编译为机器代码并存储为本机 DLL，能够比传统 T-SQL 更快地访问数据，更高效地执行查询。   对使用 NATIVE_COMPILATION 来标记的存储过程执行本机编译。 
 
-1. 执行以下脚本创建本机编译的存储过程，在 ShoppingCart 表中插入大量记录：
+1. 执行以下脚本创建本机编译的存储过程，该过程在 ShoppingCart 表中插入大量记录：
 
 
    ```sql
@@ -148,7 +148,7 @@ SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL �
    EXEC usp_InsertSampleCarts 1000000 
    ```
 
-3. 验证是否已插入行：
+3. 验证是否已插入这些行：
 
    ```sql
    SELECT COUNT(*) FROM dbo.ShoppingCart 
@@ -166,7 +166,7 @@ SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL �
 ## <a name="use-query-store"></a>使用查询存储
 查询存储区收集有关查询、执行计划和运行时统计信息的详细性能信息。
 
-默认情况下，查询存储不处于活动状态，可使用 ALTER DATABASE 启用：
+默认情况下，查询存储不处于活动状态，可通过 ALTER DATABASE 启用：
 
    ```sql
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
@@ -186,7 +186,7 @@ SQL Server 支持访问内存优化表的本机编译的存储过程。 T-SQL �
 ## <a name="query-dynamic-management-views"></a>查询动态管理视图
 动态管理视图返回可用于监视服务器实例的运行状况、诊断故障以及优化性能的服务器状态信息。
 
-若要查询 dm_os_wait 统计信息动态管理视图：
+要查询 dm_os_wait 统计信息动态管理视图：
 
    ```sql
    SELECT wait_type, wait_time_ms

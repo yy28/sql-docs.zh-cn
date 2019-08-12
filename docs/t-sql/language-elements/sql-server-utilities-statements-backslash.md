@@ -1,7 +1,7 @@
 ---
 title: 反斜杠（行继续符）(Transact SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,14 +28,15 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cc949553b66e1bd8e8d501a40a367d23559bb96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121674"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495435"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜杠（行继续符）(Transact SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\` 将一个长字符串常量、字符或二进制分成两行或更多行，以方便阅读。  
@@ -57,7 +58,7 @@ ms.locfileid: "68121674"
  是字符串的后面部分。  
   
 ## <a name="remarks"></a>Remarks  
- 该命令将字符串的第一部分和后续部分作为一个字符串返回，中间没有反斜杠。  
+该命令将字符串的第一部分和后续部分作为一个字符串返回，中间没有反斜杠。 反斜杠后的新行必须是换行符 (U + 000A) 或回车符 (U + 000D) 和换行符 (U + 000A) 的组合。 
 
 ## <a name="examples"></a>示例  
 
@@ -84,7 +85,7 @@ def' AS [ColumnResult];
 以下示例使用反斜杠和回车符将二进制字符串分成两行。  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

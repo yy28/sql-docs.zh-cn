@@ -1,6 +1,6 @@
 ---
-title: 如何使用分布式的事务和 Docker 上的 SQL Server
-description: 本文介绍如何使用 Linux 上配置 MSDTC Dprovides 演练。
+title: 如何在 Docker 上使用 SQL Server 的分布式事务
+description: 本文演示如何在 Linux 上配置 MSDTC。
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/25/2018
@@ -8,53 +8,53 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: fab3934a86994b3c4a0d7d7ecfc7768f65660023
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 8304bc95a15a5a9cf74ab23bc2e8e47bf7cf72d1
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077682"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476050"
 ---
-# <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何使用分布式的事务和 Docker 上的 SQL Server
+# <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何在 Docker 上使用 SQL Server 的分布式事务
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何设置 SQL Server Linux 容器在 Docker 上的分布式事务。
+本文介绍如何在 Docker 上设置用于分布式事务的 SQL Server Linux 容器。
 
-从 SQL Server 2019 preview 开始，容器映像才支持 Microsoft 分布式事务处理协调器 (MSDTC) 所需的分布式事务。 若要了解 MSDTC 的通信要求，请参阅[如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)](sql-server-linux-configure-msdtc.md)。 本文介绍的特殊要求和与 SQL Server Docker 容器相关的方案。
+从 SQL Server 2019 预览版开始，容器映像支持分布式事务所需的 Microsoft 分布式事务处理协调器 (MSDTC)。 若要理解 MSDTC 的通信要求，请参阅[如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)](sql-server-linux-configure-msdtc.md)。 本文介绍与 SQL Server Docker 容器相关的特殊要求和方案。
 
 ## <a name="configuration"></a>配置
 
-若要启用 docker 的容器中的 MSDTC 事务，必须设置两个新的环境变量：
+若要启用 Docker 容器中的 MSDTC 事务，则必须设置两个新的环境变量：
 
-- **MSSQL_RPC_PORT**: RPC 终结点映射程序服务将绑定到并侦听的 TCP 端口。  
-- **MSSQL_DTC_TCP_PORT**: 端口 MSDTC 服务配置为在其上侦听。
+- MSSQL_RPC_PORT：RPC 端点映射程序服务绑定和侦听的 TCP 端口  。  
+- MSSQL_DTC_TCP_PORT：配置 MSDTC 服务侦听的端口  。
 
-### <a name="pull-and-run"></a>请求和运行
+### <a name="pull-and-run"></a>请求并运行
 
-下面的示例演示如何使用这些环境变量来请求和运行为 MSDTC 配置单个 SQL Server 容器。 这使得它可以与任何主机上的任何应用程序进行通信。
+以下示例演示如何使用这些环境变量来请求和运行为 MSDTC 配置的单个 SQL Server 容器。 通过此操作，该容器可以与任何主机上的任一应用程序通信。
 
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 > [!IMPORTANT]
-> 前一个命令仅适用于 Linux 上运行的 Docker。 适用于 Windows 的 Docker，Windows 主机已在上侦听端口 135。 您可以删除`-p 135:135`Docker 上 Windows，但它的参数有一些限制。 生成的容器可以然后不用于分布式事务涉及的进程内主机。仅在主机上的 docker 容器之间的分布式事务可以参与。
+> 前一命令仅适用于在 Linux 上运行的 Docker。 对于 Windows 上的 Docker，Windows 主机已侦听 135 端口。 可以在 Windows 上删除 Docker 的 `-p 135:135` 参数，但该操作存在一些限制。 生成的容器则不能用于涉及主机的分布式事务，只能参与主机上 Docker 容器之间的分布式事务。
 
-在此命令中， **RPC 端点映射程序**服务已绑定到端口 135，并**MSDTC**服务已绑定到端口 51000 docker 虚拟网络中。 SQL Server TDS 通信时 docker 虚拟网络中的端口 1433年上使用。 这些端口都已从外部公开到 TDS 端口 51433、 RPC 终结点映射器端口 135 和 MSDTC 端口 51000 所在的主机。
+在此命令中，RPC 端点映射程序服务已绑定到 135 端口，并且 MSDTC 服务已绑定到 Docker 虚拟网络中的 51000 端口   。 SQL Server TDS 通信发生在 Docker 虚拟网络中的 1433 端口。 这些端口已对外公开给主机，即 TDS 51433 端口、RPC 终结点映射器 135 端口和 MSDTC 51000 端口。
 
 > [!NOTE]
-> RPC 终结点映射器和 MSDTC 端口不需要在主机和容器上相同。 因此虽然 RPC 端点映射程序端口已配置为在容器上 135，它无法可能映射到端口 13501 或任何其他可用的端口在主机服务器上。
+> RPC 端点映射程序和 MSDTC 端口在主机和容器上不必相同。 因此，若 RPC 端点映射程序端口在容器上配置为 135，它可能会映射到 13501 端口或主机服务器上的任何其他可用端口。
 
 ## <a name="configure-the-firewall"></a>配置防火墙
 
-为了与和通过主机通信，还必须在用于容器的主机服务器上配置防火墙。 打开防火墙以允许所有端口 docker 容器公开为外部通信。 在上一示例中，这将是端口 135、 51433 和 51000。 这些是主机本身上的端口和不它们将映射到容器中的端口。 因此，如果 RPC 终结点映射器端口 51000 的容器已映射到主机端口 51001，然后端口应与主机的通信在防火墙中打开 51001 (不 51000)。  
+为了与主机通信和通过主机通信，还必须在主机服务器上为容器配置防火墙。 为 Docker 容器公开用于外部通信的所有端口打开防火墙。 前一示例中，这些端口是 135 端口、51433 端口和 51000 端口。 这些端口是主机本身的端口，不是容器中映射到的端口。 因此，如果将容器的 RPC 端点映射程序 51000 端口映射到主机 51001 端口，则应在防火墙中打开 51001 端口（而非 51000 端口），以便与主机通信。  
 
-下面的示例演示如何在 Ubuntu 上创建这些规则。
+以下示例演示如何在 Ubuntu 上创建这些规则。
 
 ```bash
 sudo ufw allow from any to any port 51433 proto tcp
@@ -62,7 +62,7 @@ sudo ufw allow from any to any port 51000 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
 ```
 
-下面的示例演示如何完成 Red Hat Enterprise Linux (RHEL) 上：
+以下示例演示如何在 Red Hat Enterprise Linux (RHEL) 上完成此操作：
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
@@ -71,12 +71,12 @@ sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
-## <a name="configure-port-routing-on-the-host"></a>配置端口在主机上的路由
+## <a name="configure-port-routing-on-the-host"></a>在主机上配置端口路由
 
-在上一示例中，因为单个 Docker 容器将 RPC 端口 135 映射到端口 135 的主机上，分布式的事务的主机应现在适用于无需进一步配置。 请注意，它能直接使用端口 135 的容器中，因为 SQL Server 在使用提升的权限，在容器中运行。 对于 SQL Server 容器外，必须使用一个不同的临时端口，然后必须到该端口路由流量发往端口 135。
+在前一示例中，由于单个 Docker 容器将 RPC 135 端口映射到主机上的 135 端口，所以主机的分布式事务现在不应进行进一步的配置。 请注意，因为 SQL Server 在容器中使用提升的权限运行，所以可直接在容器中使用 135 端口。 对于容器外的 SQL Server，必须使用不同的临时端口，然后必须将进入 135 端口的流量路由到该端口。
 
-但是，如果您未决定将容器的端口 135 给不同的端口在主机上，如 13500 映射，然后必须配置端口在主机上的路由。 这样，要参与分布式事务与主机和与其他外部服务器的 docker 容器。 有关详细信息，请参阅[配置端口路由](sql-server-linux-configure-msdtc.md#configure-port-routing)。
+但是，如果决定将容器的 135 端口映射到主机上的其他端口（如 13500 端口），则必须在主机上配置端口路由。 这样，Docker 容器便可参与主机和其他外部服务器的分布式事务。 有关详细信息，请参阅[配置端口路由](sql-server-linux-configure-msdtc.md#configure-port-routing)。
 
 ## <a name="next-steps"></a>后续步骤
 
-Linux 上 MSDTC 的详细信息，请参阅[如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)](sql-server-linux-configure-msdtc.md)。
+有关 Linux 上 MSDTC 的详细信息，请参阅[如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)](sql-server-linux-configure-msdtc.md)。

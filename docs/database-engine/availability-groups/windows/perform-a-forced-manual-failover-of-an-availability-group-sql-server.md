@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014616"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388357"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>执行 Always On 可用性组的强制手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68014616"
   
  在以下紧急情况下需要执行强制的故障转移：  
   
--   在对 WSFC 群集执行强制仲裁（“强制仲裁”）后，你需要强制故障转移每个可用性组（可能会丢失数据）。 强制故障转移是必需的，因为 WSFC 群集值的真实状态可能已丢失。 但是，如果您在强制仲裁前能够在承载作为主副本的副本的服务器实例上强制故障转移，或者在强制仲裁前能够故障转移到已同步的辅助副本，则可以避免数据丢失。 有关详细信息，请参阅本主题后面的 [强制仲裁后避免数据丢失的可能方法](#WaysToAvoidDataLoss)。  
+-   在对 WSFC 群集执行强制仲裁（“强制仲裁”  ）后，你需要强制故障转移每个可用性组（可能会丢失数据）。 强制故障转移是必需的，因为 WSFC 群集值的真实状态可能已丢失。 但是，如果您在强制仲裁前能够在承载作为主副本的副本的服务器实例上强制故障转移，或者在强制仲裁前能够故障转移到已同步的辅助副本，则可以避免数据丢失。 有关详细信息，请参阅本主题后面的 [强制仲裁后避免数据丢失的可能方法](#WaysToAvoidDataLoss)。  
   
     > [!IMPORTANT]  
     >  如果仲裁以自然的方式重新获得而不是强制进行的，则可用性副本将经历正常的恢复工程。 如果在重新获得仲裁后主副本仍不可用，则您可以执行计划的手动故障转移到同步的辅助副本。  
@@ -55,7 +55,7 @@ ms.locfileid: "68014616"
   
 -   在可用性组强制故障转移期间可能会丢失数据。 此外，如果在启动强制故障转移时主副本正在运行，客户端可能仍连接到以前的主数据库。 因此，我们强烈建议您仅在以下情况下才强制执行故障转移：主副本不再运行，并且您为了还原对可用性组中数据库的访问而愿意承担丢失数据的风险。  
   
--   当辅助数据库处于 REVERTING 或 INITIALIZING 状态时，强制故障转移将导致该数据库无法作为主数据库启动。 如果数据库处于 INTIAILIZGING 状态，则您将需要从数据库备份应用丢失的日志记录或者完全从头还原数据库。 如果数据库处于 REVERTING 状态，则您将需要从备份完全还原数据库。  
+-   当辅助数据库处于 REVERTING 或 INITIALIZING 状态时，强制故障转移将导致该数据库无法作为主数据库启动。 如果数据库处于 INTIAILIZGING 状态，则需要从数据库备份中应用缺失的日志记录，或者从头开始完全还原数据库。 如果数据库处于 REVERTING 状态，则您将需要从备份完全还原数据库。  
   
 -   故障转移命令将在故障转移目标接受它之后立即返回。 但是，在可用性组完成故障转移之后，数据库恢复操作将以异步方式执行。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "68014616"
   
 1.  在对象资源管理器中，连接到一个服务器实例，该服务器实例承载需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本，然后展开服务器树。  
   
-2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
+2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
   
-3.  右键单击要进行故障转移的可用性组，然后选择“故障转移”命令。  
+3.  右键单击要进行故障转移的可用性组，然后选择“故障转移”  命令。  
   
 4.  这将启动“故障转移可用性组向导”。 有关详细信息，请参阅本主题后面的 [使用故障转移可用性组向导 (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "68014616"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **强制故障转移（可能丢失数据）**  
   
-1.  将目录 (cd) 更改为一个服务器实例，该实例托管需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本。  
+1.  将目录 (cd) 更改为一个服务器实例，该实例托管需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本  。  
   
 2.  采用以下形式之一将 **Switch-SqlAvailabilityGroup** cmdlet 与 **AllowDataLoss** 参数结合使用：  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68014616"
   
 1.  执行强制故障转移之后，故障转移到的辅助副本将变成新的主副本。 但是，要使客户端可访问可用性副本，您可能需要重新配置 WSFC 仲裁或调整可用性组的可用性模式配置，如下所示：  
   
-    -   如果将故障转移到 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外：调整 WSFC 节点的仲裁投票，以反映新的可用性组配置。 如果承载目标辅助副本的 WSFC 节点不具有 WSFC 仲裁投票，则可能需要强制 WSFC 仲裁。  
+    -   如果将故障转移到 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 之外  ：调整 WSFC 节点的仲裁投票，以反映新的可用性组配置。 如果承载目标辅助副本的 WSFC 节点不具有 WSFC 仲裁投票，则可能需要强制 WSFC 仲裁。  
   
         > [!NOTE]  
         >  仅当两个可用性副本（包含之前的主副本）都配置为使用同步提交模式和自动故障转移时， [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 才存在。  
@@ -203,7 +203,7 @@ ms.locfileid: "68014616"
   
         -   [在无仲裁情况下强制启动 WSFC 群集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   如果将故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外：我们建议你考虑调整新的主要副本上和其他次要副本上的可用性模式和故障转移模式，以反映你所需的同步提交模式和自动故障转移配置。  
+    -   如果将故障转移到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 之外  ：我们建议你考虑调整新的主要副本上和其他次要副本上的可用性模式和故障转移模式，以反映你所需的同步提交模式和自动故障转移配置。  
   
         > [!NOTE]  
         >  只有在当前主副本配置为同步提交模式时， [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 才存在。  

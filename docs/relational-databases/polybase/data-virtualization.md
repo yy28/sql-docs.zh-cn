@@ -4,17 +4,17 @@ description: 此页面详细介绍了为关系数据源使用“创建外部表�
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041116"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418773"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>对关系数据源使用“外部表”向导
 
@@ -22,7 +22,7 @@ SQL Server 2019 CTP 2.0 的重要方案之一是能够虚拟化数据。 此过�
 
 ## <a name="start-the-external-table-wizard"></a>启动外部表向导
 
-使用通过 [mssqlctl cluster endpoints list](../../big-data-cluster/deployment-guidance.md#endpoints) 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例   。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
+使用通过 [azdata cluster endpoints list](../../big-data-cluster/deployment-guidance.md#endpoints) 命令获取的 sql-server-master 终结点的 IP 地址/端口号连接到主实例   。 在对象资源管理器中展开  数据库节点。 然后从现有 SQL Server 实例中选择一个要虚拟化数据的数据库。 右键单击该数据库，并选择“创建外部表”以启动虚拟化数据向导  。 还可以从命令面板启动虚拟化数据向导。 在 Windows 中使用 Ctrl+Shift+P，或在 Mac 中使用 Cmd+Shift+P。
 
 ![虚拟化数据向导](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>选择数据源

@@ -1,7 +1,7 @@
 ---
-title: Ubuntu 上的 SQL Server 的无人参与的安装
+title: 在 Ubuntu 上以无人参与的方式安装 SQL Server
 titleSuffix: SQL Server
-description: SQL Server 脚本示例-在 Ubuntu 上的无人参与安装
+description: SQL Server 脚本示例 - Ubuntu 上的无人参与安装
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,26 +9,26 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910485"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例：适用于 Ubuntu 的无人参与的 SQL Server 安装脚本
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>示例：Ubuntu 的无人参与 SQL Server 安装脚本
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此示例 Bash 脚本而无需交互式输入安装在 Ubuntu 16.04 上的 SQL Server 2017。 它提供了安装数据库引擎、 SQL Server 命令行工具，SQL Server 代理的示例，并执行安装后步骤。 （可选） 可以安装全文搜索，并创建一个管理用户。
+此示例 Bash 脚本可在 Ubuntu 16.04 上安装 SQL Server 2017，且无需交互式输入。 它提供数据库引擎、SQL Server 命令行工具和 SQL Server 代理的安装示例，并执行安装后步骤。 你可以选择安装全文搜索并创建管理用户。
 
 > [!TIP]
-> 如果不需要的无人参与的安装脚本，安装 SQL Server 的最快方法是遵循[快速入门适用于 Ubuntu](quickstart-install-connect-ubuntu.md)。 有关其他安装程序的信息，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
+> 如果不需要无人参与安装脚本，则安装 SQL Server 最快速的方法是遵循 [Ubuntu 的快速入门](quickstart-install-connect-ubuntu.md)。 有关其他设置信息，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-- 需要至少 2 GB 的内存来在 Linux 上运行 SQL Server。
-- 必须在文件系统**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
-- 其他系统要求，请参阅[Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
+- 至少需要 2 GB 内存才能在 Linux 上运行 SQL Server。
+- 文件系统必须是 **XFS** 或 **EXT4**。 其他文件系统（如 **BTRFS**）均不受支持。
+- 有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>示例脚本
 
@@ -157,9 +157,9 @@ echo Done!
 
 运行该脚本
 
-1. 将示例粘贴到你最喜欢的文本编辑器并将其保存为便于记忆的名称，如`install_sql.sh`。
+1. 将示例粘贴到你最喜欢的文本编辑器中，并使用便于记忆的名称保存它，例如 `install_sql.sh`。
 
-1. 自定义`MSSQL_SA_PASSWORD`， `MSSQL_PID`，和任何其他你想要更改的变量。
+1. 自定义 `MSSQL_SA_PASSWORD`、`MSSQL_PID` 以及要更改的任何其他变量。
 
 1. 将脚本标记为可执行文件
 
@@ -174,39 +174,39 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解脚本
-Bash 脚本执行的第一项操作是设置几个变量。 这些可以是脚本变量，如以下示例或环境变量。 在变量`MSSQL_SA_PASSWORD`是**必需**通过 SQL Server 安装，有些则是为脚本创建的自定义变量。 示例脚本执行以下步骤：
+该 Bash 脚本做的第一件事就是设置一些变量。 它们可以是脚本变量（例如本示例），也可以是环境变量。 变量 `MSSQL_SA_PASSWORD` 是安装 SQL Server **所必需的**，其他变量则是为该脚本创建的自定义变量。 示例脚本执行以下步骤：
 
 1. 导入公共 Microsoft GPG 密钥。
 
-1. 注册 SQL Server 和命令行工具的 Microsoft 存储库。
+1. 注册用于 SQL Server 的 Microsoft 存储库和命令行工具。
 
 1. 更新本地存储库
 
 1. 安装 SQL Server
 
-1. 配置 SQL Server 与```MSSQL_SA_PASSWORD```并自动接受最终用户许可协议。
+1. 使用 ```MSSQL_SA_PASSWORD``` 配置 SQL Server 并自动接受最终用户许可协议。
 
-1. 自动接受最终用户许可协议为 SQL Server 命令行工具、 安装它们，并安装 unixodbc 开发人员包。
+1. 自动接受 SQL Server 命令行工具的最终用户许可协议，安装这些工具，然后安装 unixodbc-dev 包。
 
-1. 将 SQL Server 命令行工具添加到易于使用的路径。
+1. 将 SQL Server 命令行工具添加到路径中，以便于使用。
 
-1. 如果安装 SQL Server 代理的脚本变量```SQL_INSTALL_AGENT```，在默认情况下设置。
+1. 如果设置了脚本变量 ```SQL_INSTALL_AGENT```（默认为“开”），则安装 SQL Server 代理。
 
-1. 如果选择安装 SQL Server 全文搜索变量```SQL_INSTALL_FULLTEXT```设置。
+1. （可选）如果设置了变量 ```SQL_INSTALL_FULLTEXT```，则安装 SQL Server 全文搜索。
 
-1. 取消阻止对 TCP 系统在防火墙上，从另一个系统连接到 SQL Server 所必需的端口 1433年。
+1. 在系统防火墙上取消阻止 TCP 端口 1433，这是从另一个系统连接到 SQL Server 所必需的。
 
-1. 可以选择设置死锁跟踪的跟踪标志。 （需要取消注释行）
+1. （可选）为死锁跟踪设置跟踪标志。 （需要取消注释行）
 
-1. 现已安装 SQL Server，以使其可操作，重新启动该进程。
+1. 现在安装了 SQL Server，若要使其正常运行，请重新启动该进程。
 
-1. 验证 SQL Server 安装了正确，而隐藏所有错误消息。
+1. 验证是否已正确安装 SQL Server，并隐藏所有错误消息。
 
-1. 如果创建新的服务器管理员用户```SQL_INSTALL_USER```和```SQL_INSTALL_USER_PASSWORD```均设置。
+1. 如果同时设置了 ```SQL_INSTALL_USER``` 和 ```SQL_INSTALL_USER_PASSWORD```，则创建新的服务器管理员用户。
 
 ## <a name="next-steps"></a>后续步骤
 
-简化多个无人参与的安装，并创建一个独立的 Bash 脚本，设置适当的环境变量。 您可以删除任何示例脚本使用，并将其放在其自己的 Bash 脚本的变量。
+简化多个无人参与安装，并创建独立的 Bash 脚本来设置适当的环境变量。 可以删除示例脚本使用的任何变量，并将它们放在其自己的 Bash 脚本中。
 
 ```bash
 #!/bin/bash
@@ -223,4 +223,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux 上 SQL Server 的详细信息，请参阅[SQL Server Linux 概述](sql-server-linux-overview.md)。
+有关 Linux 上的 SQL Server 的详细信息，请参阅 [Linux 上的 SQL Server 概述](sql-server-linux-overview.md)。

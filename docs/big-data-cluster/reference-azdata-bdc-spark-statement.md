@@ -1,7 +1,7 @@
 ---
-title: azdata bdc spark 语句参考
+title: azdata bdc spark statement 参考
 titleSuffix: SQL Server big data clusters
-description: Azdata bdc spark 语句命令的参考文章。
+description: azdata bdc spark statement 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,26 +10,26 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 778980ac6b93e7db79d59182fbd18ab4cfdb8b75
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426087"
 ---
-# <a name="azdata-bdc-spark-statement"></a>azdata bdc spark 语句
+# <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-以下文章提供了**azdata**工具中的**bdc spark 语句**命令参考。 有关其他**azdata**命令的详细信息, 请参阅[azdata reference](reference-azdata.md)
+以下文章为“azdata”工具中的“bdc spark statement”命令提供了参考   。 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md) 
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[azdata bdc spark 语句列表](#azdata-bdc-spark-statement-list) | 列出给定 Spark 会话中的所有语句。
-[azdata bdc spark 语句创建](#azdata-bdc-spark-statement-create) | 在给定的会话中创建新的 Spark 语句。
-[azdata bdc spark 语句信息](#azdata-bdc-spark-statement-info) | 获取有关给定 Spark 会话中请求的语句的信息。
-[azdata bdc spark 语句取消](#azdata-bdc-spark-statement-cancel) | 取消给定 Spark 会话内的语句。
-## <a name="azdata-bdc-spark-statement-list"></a>azdata bdc spark 语句列表
+[azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | 列出给定 Spark 会话中的所有语句。
+[azdata bdc spark statement create](#azdata-bdc-spark-statement-create) | 在给定的会话中创建新的 Spark 语句。
+[azdata bdc spark statement info](#azdata-bdc-spark-statement-info) | 获取给定 Spark 会话中有关请求的语句信息。
+[azdata bdc spark statement cancel](#azdata-bdc-spark-statement-cancel) | 取消给定 Spark 会话内的语句。
+## <a name="azdata-bdc-spark-statement-list"></a>azdata bdc spark statement list
 列出给定 Spark 会话中的所有语句。
 ```bash
 azdata bdc spark statement list --session-id -i 
@@ -49,13 +49,13 @@ Spark 会话 ID 号。
 #### `--help -h`
 显示此帮助消息并退出。
 #### `--output -o`
-输出格式。  允许的值: json、jsonc、table、tsv。  默认值: json。
+输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关[http://jmespath.org/](http://jmespath.org/])详细信息和示例, 请参阅。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
 #### `--verbose`
-提高日志记录详细程度。 使用--debug 获取完整的调试日志。
-## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark 语句创建
-这会在给定会话中创建并执行一个新语句。  如果 execute 为 quick, 则结果包含执行的输出。  否则, 在完成语句后, 可以使用 "spark 会话信息" 来检索结果。
+提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
+## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
+这会在给定会话中创建并执行新语句。  如果执行速度很快，则结果包含执行的输出。  此外，在语句完成后，可以使用“spark session info”检索结果。
 ```bash
 azdata bdc spark statement create --session-id -i 
                                   --code -c
@@ -69,26 +69,26 @@ azdata spark statement create --session-id 0 --code "2+2"
 #### `--session-id -i`
 Spark 会话 ID 号。
 #### `--code -c`
-字符串, 其中包含作为语句的一部分执行的代码。
+包含要作为语句一部分执行的代码的字符串。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
 #### `--help -h`
 显示此帮助消息并退出。
 #### `--output -o`
-输出格式。  允许的值: json、jsonc、table、tsv。  默认值: json。
+输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关[http://jmespath.org/](http://jmespath.org/])详细信息和示例, 请参阅。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
 #### `--verbose`
-提高日志记录详细程度。 使用--debug 获取完整的调试日志。
-## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark 语句信息
-如果语句已完成, 则将获取执行状态和执行结果。 语句 id 从 "spark 语句创建" 返回。
+提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
+## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
+如果语句已完成，则将获取执行状态和执行结果。 语句 ID 从“spark statement create”返回。
 ```bash
 azdata bdc spark statement info --session-id -i 
                                 --statement-id -s
 ```
 ### <a name="examples"></a>示例
-获取 ID 为0、语句 ID 为0的会话的语句信息。
+获取 ID 为 0 且语句 ID 为 0 的会话的语句信息。
 ```bash
 azdata spark statement info --session-id 0 --statement-id 0
 ```
@@ -103,13 +103,13 @@ Spark 会话 ID 号。
 #### `--help -h`
 显示此帮助消息并退出。
 #### `--output -o`
-输出格式。  允许的值: json、jsonc、table、tsv。  默认值: json。
+输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关[http://jmespath.org/](http://jmespath.org/])详细信息和示例, 请参阅。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
 #### `--verbose`
-提高日志记录详细程度。 使用--debug 获取完整的调试日志。
-## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark 语句取消
-这会取消给定 Spark 会话内的语句。 语句 id 从 "spark 语句创建" 返回。
+提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
+## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
+这会取消给定 Spark 会话内的语句。 语句 ID 从“spark statement create”返回。
 ```bash
 azdata bdc spark statement cancel --session-id -i 
                                   --statement-id -s
@@ -130,12 +130,12 @@ Spark 会话 ID 号。
 #### `--help -h`
 显示此帮助消息并退出。
 #### `--output -o`
-输出格式。  允许的值: json、jsonc、table、tsv。  默认值: json。
+输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关[http://jmespath.org/](http://jmespath.org/])详细信息和示例, 请参阅。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
 #### `--verbose`
-提高日志记录详细程度。 使用--debug 获取完整的调试日志。
+提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他**azdata**命令的详细信息, 请参阅[azdata reference](reference-azdata.md)。 有关如何安装**azdata**工具的详细信息, 请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)  。 有关如何安装“azdata”工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)  。

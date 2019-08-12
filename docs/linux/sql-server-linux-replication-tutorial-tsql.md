@@ -1,6 +1,6 @@
 ---
-title: 在 Linux 上配置 SQL Server 复制
-description: 本教程演示如何在 Linux 上配置 SQL Server 快照复制。
+title: 配置 Linux 上的 SQL Server 复制
+description: 本教程介绍如何配置 Linux 上的 SQL Server 快照复制。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68130112"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 配置复制
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-在本教程将使用两个实例的 SQL Server 使用 TRANSACT-SQL 在 Linux 上配置 SQL Server 快照复制。 发布服务器和分发服务器上将同一个实例，并且订阅服务器将位于单独的实例上。
+在本教程中，将使用 Transact-SQL 通过两个 SQL Server 实例配置 Linux 上的 SQL Server 快照复制。 发布服务器和分发服务器将使用同一个实例，订阅服务器将位于单独的实例。
 
 > [!div class="checklist"]
-> * 启用在 Linux 上的 SQL Server 复制代理
+> * 启用 Linux 上的 SQL Server 复制代理
 > * 创建示例数据库
-> * 配置 SQL Server 代理访问的快照文件夹
+> * 配置用于 SQL Server 代理访问的快照文件夹
 > * 配置分发服务器
 > * 配置发布服务器
-> * 配置发布和项目
+> * 创建发布和项目
 > * 配置订阅服务器 
 > * 运行复制作业
 
-可以使用配置所有的复制配置[复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
+通过[复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)配置所有复制配置。
 
-## <a name="prerequisites"></a>先决条件  
-若要完成本教程中，将需要：
+## <a name="prerequisites"></a>必备条件  
+若要完成本教程，需要：
 
-- Linux 上的 SQL Server 的最新版本的 SQL Server 的两个实例
-- 发出 T-SQL 查询，以设置复制如 SQLCMD 或 SSMS 工具
+- 两个 SQL Server 实例和 Linux 上最新版本的 SQL Server
+- 用于发起 T-SQL 查询以设置复制的工具（例如 SQLCMD 或 SSMS）
 
   请参阅[使用 SSMS 管理 Linux 上的 SQL Server](./sql-server-linux-manage-ssms.md)。
 
 ## <a name="detailed-steps"></a>详细步骤
 
-1. 启用 Linux 启用 SQL Server 代理以使用复制代理上的 SQL Server 复制代理。 这两个主机上，在终端中运行以下命令。 
+1. 启用 Linux 上的 SQL Server 复制代理，启用 SQL Server 代理以使用复制代理。 在两台主机上，在终端中运行以下命令。 
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
   ```
 
-1. 创建示例数据库和表在发布服务器创建示例数据库和表将充当发布的项目。
+1. 创建示例数据库和表，在发布服务器上创建示例数据库和表，将其作为发布项目。
 
   ```sql
   CREATE DATABASE Sales
@@ -63,14 +63,14 @@ ms.locfileid: "68130112"
   INSERT INTO CUSTOMER (CustomerID, SalesAmount) VALUES (1,100),(2,200),(3,300)
   ```
 
-  在其他 SQL Server 实例上，订阅服务器上，创建要接收文章的数据库。
+  在另一个 SQL Server 实例，即订阅服务器上，创建用于接收这些项目的数据库。
 
   ```sql
   CREATE DATABASE Sales
   GO
   ```
 
-1. 创建 SQL Server 代理以读/写才能在分发服务器上创建快照文件夹，并为 mssql 用户授予访问权限的快照文件夹 
+1. 为 SQL Server 代理创建用于读取/写入的快照文件夹，在分发服务器上，创建快照文件夹并向“mssql”用户授予访问权限 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -78,7 +78,7 @@ ms.locfileid: "68130112"
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-1. 在此示例中配置分发服务器、 发布服务器也是分发服务器。 若要配置的实例以及分发在发布服务器上运行以下命令。
+1. 配置分发服务器，在本示例中，发布服务器也是分发服务器。 在发布服务器上运行以下命令，也为分发配置实例。
 
   ```sql
   DECLARE @distributor AS sysname
@@ -111,7 +111,7 @@ ms.locfileid: "68130112"
   GO
   ```
 
-1. 配置发布服务器在发布服务器上运行以下 TSQL 命令。
+1. 配置发布服务器，在发布服务器上运行以下 TSQL 命令。
 
   ```sql
   DECLARE @publisher AS sysname
@@ -136,7 +136,7 @@ ms.locfileid: "68130112"
   GO
   ```
 
-1. 配置发布服务器上的作业运行的发布以下 TSQL 命令。
+1. 配置发布作业，在发布服务器上运行以下 TSQL 命令。
 
   ```sql
   DECLARE @replicationdb AS sysname
@@ -175,7 +175,7 @@ ms.locfileid: "68130112"
   @publisher_password = @publisherpassword
   ```
 
-1. 文章从表中创建销售运行以下 TSQL 命令在发布服务器上。
+1. 通过“销售”表创建项目，在发布服务器上运行以下 TSQL 命令。
 
   ```sql
   use [Sales]
@@ -195,7 +195,7 @@ ms.locfileid: "68130112"
   @vertical_partition = N'false'
   ```
 
-1. 配置订阅运行以下 TSQL 命令在发布服务器上。
+1. 配置订阅，在发布服务器上运行以下 TSQL 命令。
 
   ```sql
   DECLARE @subscriber AS sysname
@@ -240,13 +240,13 @@ ms.locfileid: "68130112"
 
 1. 运行复制代理作业
 
-  运行以下查询以获取作业的列表：
+  运行以下查询以获取作业列表：
 
   ```sql
   SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
   ```
 
-  运行生成快照的快照复制作业：
+  运行快照复制作业以生成快照：
 
   ```sql
   USE msdb;  
@@ -255,7 +255,7 @@ ms.locfileid: "68130112"
   GO
   ```
 
-  运行生成快照的快照复制作业：
+  运行快照复制作业以生成快照：
 
   ```sql
   USE msdb;  
@@ -264,29 +264,29 @@ ms.locfileid: "68130112"
   GO
   ```
 
-1. 连接订阅服务器和查询复制的数据 
+1. 连接订阅服务器并查询复制数据 
 
-  在订阅服务器上，检查复制有效通过运行以下查询：
+  在订阅服务器上，通过运行以下查询检查复制是否正常工作：
 
   ```sql
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-在本教程中，通过使用 TRANSACT-SQL 的 SQL Server 的两个实例的 Linux 上配置 SQL Server 快照复制。
+在本教程中，将使用 Transact-SQL 通过两个 SQL Server 实例配置 Linux 上的 SQL Server 快照复制。
 
 > [!div class="checklist"]
-> * 启用在 Linux 上的 SQL Server 复制代理
+> * 启用 Linux 上的 SQL Server 复制代理
 > * 创建示例数据库
-> * 配置 SQL Server 代理访问的快照文件夹
+> * 配置用于 SQL Server 代理访问的快照文件夹
 > * 配置分发服务器
 > * 配置发布服务器
-> * 配置发布和项目
+> * 创建发布和项目
 > * 配置订阅服务器 
 > * 运行复制作业
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-有关复制的详细信息，请参阅[SQL Server 复制文档](../relational-databases/replication/sql-server-replication.md)。
+有关复制的详细信息，请参阅 [SQL Server 复制文档](../relational-databases/replication/sql-server-replication.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -1,7 +1,7 @@
 ---
-title: 生成数据整理任务的代码
+title: 生成用于执行数据整理任务的代码
 titleSuffix: Azure Data Studio
-description: 本文介绍如何使用 Azure 数据 Studio 中的 PROSE 代码加速器来自动生成的常见数据整理任务代码。
+description: 本文介绍如何在 Azure Data Studio 中使用 PROSE 代码加速器自动生成可用于执行常见数据整理任务的代码。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,42 +10,42 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957686"
 ---
-# <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码 Accelerator 数据 Wrangling
+# <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码加速器进行数据整理
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-PROSE 代码加速器生成你的数据整理任务的可读 Python 代码。 在 Azure Data Studio 中的笔记本中工作时，可以无缝的方式混合与您手动编写的代码生成的代码。 本文概述了如何使用代码加速器。
+PROSE 代码加速器可生成用于执行数据整理任务的可读 Python 代码。 在 Azure Data Studio 中的笔记本上工作时，可以无缝混合生成的代码和手动编写的代码。 本文概述了如何使用代码加速器。
 
  > [!NOTE]
- > 程序 Synthesis using Examples 也称为文本信息、 是生成使用 AI 的人工可读代码的 Microsoft 技术。 它会通过分析用户的意向以及数据、 生成多个候选程序，并选择使用排名算法的最佳计划。 若要了解有关 PROSE 技术的详细信息，请访问[PROSE 主页](https://microsoft.github.io/prose/)。
+ > Program Synthesis using Examples（又名 PROSE）是使用 AI 生成用户可读代码的一种 Microsoft 技术。 该技术通过分析用户的意图和数据，生成多个候选程序，使用排名算法来选取最佳程序来实现此目的。 若要了解有关 PROSE 技术的详细信息，请访问 [PROSE 主页](https://microsoft.github.io/prose/)。
 
-代码加速器可能已使用 Azure Data Studio 预安装。 您可以将其导入笔记本中的任何其他 Python 包等。 按照约定，我们导入为 cx 简称。
+代码加速器预安装有 Azure Data Studio。 可以像笔记本中其他的 Python 包那样导入它。 按照约定，我们以简写形式 cx 将其导入。
 
 ```python
 import prose.codeaccelerator as cx
 ```
 
-在当前版本中，代码加速器以智能方式生成 Python 代码的以下任务：
+在当前版本中，代码加速器可以智能地生成用于执行以下任务的 Python 代码：
 
-- 读取到 Pandas 数据文件或 Pyspark 数据帧。
-- 在数据帧中修复的数据类型。
-- 查找正则表达式表示的字符串列表中的模式。
+- 将数据文件读入 Pandas 或 Pyspark 数据帧。
+- 修复数据帧中的数据类型。
+- 查找表示字符串列表中模式的正则表达式。
 
-若要获取代码 Accelerator 方法的常规概述，请参阅[文档](https://aka.ms/prose-codeaccelerator-overview)。
+若要大致了解代码加速器方法，请参阅[文档](https://aka.ms/prose-codeaccelerator-overview)。
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>将数据从文件读取到数据帧
 
-通常情况下，读取文件复制到数据帧涉及查看文件的内容并确定要传递到数据加载库的正确参数。 根据文件的复杂性，确定正确的参数可能需要几次迭代。
+通常，将文件读取到数据帧需要查看文件内容，还需要确定要传到数据加载库的正确参数。 根据文件的复杂性，标识正确的参数可能需要进行多次迭代。
 
-PROSE 代码 Accelerator 解决此问题： 分析数据文件的结构，并自动生成代码以加载该文件。 在大多数情况下，生成的代码将正确分析数据。 在少数情况下，可能需要调整代码来满足你的需求。
+PROSE 代码加速器会分析数据文件的结构，并自动生成用以加载文件的代码，以解决此问题。 在大多数情况下，生成的代码可正确分析数据。 在少数情况下，可能需要调整代码以满足需求。
 
-请看下面的示例：
+请参考如下示例：
 
  ```python
 import prose.codeaccelerator as cx
@@ -60,7 +60,7 @@ builder = cx.ReadCsvBuilder(r'C:/911.txt')
 builder.learn().code()
  ```
 
-上一个代码块将打印以下的 python 代码，以读取带分隔符的文件。 请注意如何 PROSE 自动找出要跳过，标头、 quotechars、 分隔符等的行数。
+前一代码块打印以下 Python 代码，以读取带分隔符的文件。 了解 PROSE 如何自动算出要跳过的行数、标头、引用符、分隔符等等。
 
  ```python
 import pandas as pd
@@ -86,13 +86,13 @@ def read_file(file):
     return df
  ```
 
-代码加速器可以生成到分隔的负载、 JSON 和固定宽度文件复制到数据帧的代码。 用于读取固定宽度文件`ReadFwfBuilder`选择性地采用它可以解析，以获取的列位置的用户可读的架构文件。 若要了解详细信息，请参阅[文档](https://aka.ms/prose-codeaccelerator-docs)。
+代码加速器可以生成将带分隔符的文件、JSON 文件和固定宽度的文件加载到数据帧中的代码。 对于读取固定宽度的文件，`ReadFwfBuilder` 可以选择使用可进行分析以获取列位置的用户可读架构文件。 若要了解详细信息，请参阅[文档](https://aka.ms/prose-codeaccelerator-docs)。
 
-## <a name="fixing-data-types-in-a-dataframe"></a>在数据帧中修复的数据类型
+## <a name="fixing-data-types-in-a-dataframe"></a>修复数据帧中的数据类型
 
-它是很常见的 pandas 或 pyspark 使用错误的数据类型的数据帧。 通常情况下，这是由于几个不符合要求列中的值。 因此，整数被读取为浮点型或字符串，并读取以字符串形式的日期。 若要手动修复的数据类型所需的工作量成正比的列数。
+Pandas 或 Pyspark 数据帧的数据类型经常出现错误。 通常，这是由于列中存在一些类型不一致的值所致。 因此，整数读取为浮点数或字符串，日期读取为字符串。 手动修复数据类型所需的工作量与列数成正比。
 
-可以使用`DetectTypesBuilder`在这些情况下。 它分析的数据，并与其黑色框的方式修复的数据类型，它将生成代码以修复的数据类型。 该代码可作为起始点。 您可以查看、 使用，或根据需要对其进行修改。
+在这些情况下可以使用 `DetectTypesBuilder`。 它会分析数据（而不是以黑盒方式修复数据类型），生成用于修复数据类型的代码。 代码作为起点。 你可以根据需要查看、使用或修改代码。
 
 ```python
 import prose.codeaccelerator as cx
@@ -110,18 +110,18 @@ builder.learn().code()
 
 ## <a name="identifying-patterns-in-strings"></a>标识字符串中的模式
 
-另一个常见情况是检测来清理或分组的字符串列中的模式。 例如，你可能具有日期的日期列中多个不同的格式。 为了标准化值，你可能想要编写使用正则表达式的条件语句。
+另一种常见场景是检测字符串列中的模式，以便进行清除或分组。 例如，你的一个日期列中可能有多种不同格式的日期。 为了标准化这些值，你可能想要使用正则表达式来编写条件语句。
 
 
-|   |名称                      |BirthDate      |
+|   |“属性”                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-Apr-67      |
-| 4 |Maya de Villiers          |19 年 3 月 60      |
+| 4 |Maya de Villiers          |19-Mar-60      |
 
-根据的数量和多样性数据中的，编写列中的不同模式的正则表达式可以是非常耗时的任务。 `FindPatternsBuilder`是一个功能强大的代码加速工具，通过生成有关列表的字符串的正则表达式来解决上述问题。
+根据数据的数量和多样性，为列中的各种模式编写正则表达式可能是一项非常耗时的任务。 `FindPatternsBuilder` 是一个功能强大的代码加速工具，可以为字符串列表生成正则表达式，从而解决上述问题。
 
 ```python
 import prose.codeaccelerator as cx
@@ -134,7 +134,7 @@ builder = cx.FindPatternsBuilder(df['BirthDate'])
 builder.learn().regexes
 ```
 
-以下是由生成的正则表达式`FindPatternsBuilder`的上述数据。
+下面是由 `FindPatternsBuilder` 为上述数据生成的正则表达式。
 
 ```
 ^[0-9]{2}-[A-Z][a-z]+-[0-9]{2}$
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-除了生成正则表达式，`FindPatternsBuilder`还可以生成聚类分析基于生成正则表达式的值的代码。 它还可以添加一列中的所有值都符合生成正则表达式。 若要了解详细信息，请参阅其他有用的方案，请参阅[文档](https://aka.ms/prose-codeaccelerator-findpatterns)。
+除了生成正则表达式外，`FindPatternsBuilder` 还可以生成用于根据生成的正则表达式将这些值聚类的代码。 它还可以断言列中所有的值都符合生成的正则表达式。 若要了解详细信息并查看其他实用场景，请参阅[文档](https://aka.ms/prose-codeaccelerator-findpatterns)。

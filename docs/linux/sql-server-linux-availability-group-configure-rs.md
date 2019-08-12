@@ -1,7 +1,7 @@
 ---
-title: Linux 上配置读取缩放 SQL Server 可用性组
+title: 在 Linux 上配置 SQL Server 可用性组用于读取缩放
 titleSuffix: SQL Server
-description: 了解如何在 Linux 上配置 SQL Server 始终在可用性组 (AG) 的读取缩放工作负荷。
+description: 了解如何在 Linux 上配置 SQL Server AlwaysOn 可用性组 (AG) 用于“读取缩放”工作负载。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027262"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux 上配置读取缩放 SQL Server 可用性组
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>在 Linux 上配置 SQL Server 可用性组用于读取缩放
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-你可以在 Linux 上配置 SQL Server 始终在可用性组 (AG) 的读取缩放工作负荷。 存在两种类型的 AG 体系结构。 为实现高可用性体系结构使用群集管理器来改善的业务连续性。 此体系结构还可以包括读取缩放副本。 若要创建高可用性体系结构，请参阅[配置 SQL Server Always On 可用性组以实现高可用性 Linux 上](sql-server-linux-availability-group-configure-ha.md)。 其他体系结构只支持读取缩放工作负载。 本文介绍如何在不使用群集管理器的情况下创建 AG，用于读取缩放工作负载。 此体系结构仅提供读取缩放。 它不提供高可用性。
+可在 Linux 上配置 SQL Server AlwaysOn 可用性组 (AG) 用于读取缩放工作负载。 存在两种类型的 AG 体系结构。 高可用性 (HA) 体系结构利用群集管理器改善业务连续性。 此体系结构还可包括读取缩放副本。 若要创建高可用性体系结构，请参阅[配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性](sql-server-linux-availability-group-configure-ha.md)。 其他体系结构只支持读取缩放工作负载。 本文介绍如何在不使用群集管理器的情况下创建 AG，用于读取缩放工作负载。 此体系结构仅提供读取缩放。 它不提供高可用性。
 
 > [!NOTE]
 > 设置有 `CLUSTER_TYPE = NONE` 的可用性组可包括不同操作系统平台上托管的副本。 它无法支持高可用性。 
@@ -67,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-此 AG 不是高可用性配置。 如果需要高可用性，请按照的说明[Linux 上的 SQL Server 配置 Alwayson 可用性组](sql-server-linux-availability-group-configure-ha.md)。 具体而言，创建具有 AG `CLUSTER_TYPE=WSFC` （在 Windows) 或`CLUSTER_TYPE=EXTERNAL`（在 Linux 中)。 通过使用 Windows 或 Linux 上的 Pacemaker 群集是 Windows Server 故障转移，然后与群集管理器。
+此 AG 不是高可用性配置。 如果需要高可用性，请遵循[为 Linux 上的 SQL Server 配置 AlwaysOn 可用性组](sql-server-linux-availability-group-configure-ha.md)中的说明。 具体而言，用 `CLUSTER_TYPE=WSFC`（在 Windows 中）或 `CLUSTER_TYPE=EXTERNAL`（在 Linux 中）创建 AG。 然后通过在 Windows 上使用 Windows Server 故障转移群集或在 Linux 上使用 Pacemaker 来集成一个群集管理器。
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>连接到只读次要副本
 

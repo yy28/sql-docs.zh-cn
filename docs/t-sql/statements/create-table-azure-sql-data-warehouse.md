@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117000"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419609"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 
@@ -167,18 +167,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 聚集列存储索引是用于在 Azure SQL 数据仓库中创建表的默认索引。  ORDER 规范默认采用 COMPOUND 键。  排序始终为升序。 如果没有指定 ORDER 子句，则不会对列存储进行排序。 由于排序过程的原因，与具有无序聚集列存储索引的表相比，具有有序聚集列存储索引的表的数据加载时间可能更长。 如果加载数据时需要更多的 tempdb 空间，你可以减少每个插入的数据量。
 
-在预览版期间，可以运行此查询来检查已启用 ORDER 的一个或多个列。
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+由于表中的列按顺序排列，用户可以在 sys.index_columns 中查询 column_store_order_ordinal 列。  
 
 ### <a name="DataTypes"></a> 数据类型
 

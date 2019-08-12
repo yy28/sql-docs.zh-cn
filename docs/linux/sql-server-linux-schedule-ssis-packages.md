@@ -1,6 +1,6 @@
 ---
-title: Linux 上使用 cron 计划 SSIS 包
-description: 本文介绍如何安排与 cron 服务在 Linux 上的 SQL Server Integration Services (SSIS) 包。
+title: 使用 cron 在 Linux 上计划 SSIS 包
+description: 本文介绍如何使用 cron 服务在 Linux 上计划 SQL Server Integration Services (SSIS) 包。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,35 +9,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065164"
 ---
-# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>计划 SQL Server Integration Services 包在 Linux 上的使用 cron 执行
+# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>使用 cron 在 Linux 上计划 SQL Server Integration Services 包执行
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-当您在 Windows 上运行 SQL Server Integration Services (SSIS) 和 SQL Server 时，可以通过使用 SQL Server 代理自动执行 SSIS 包。 在 Linux 上运行 SQL Server 和 SSIS，但是，SQL Server 代理程序实用程序不可用来计划在 Linux 上的作业。 相反，您使用 cron 服务，这广泛用于在 Linux 平台上自动执行包。
+在 Windows 上运行 SQL Server Integration Services (SSIS) 和 SQL Server 时，可使用 SQL Server 代理自动执行 SSIS 包。 但是，在 Linux 上运行 SQL Server 和 SSIS 时，SQL Server 代理实用工具无法用于在 Linux 上计划作业。 可改为使用 cron 服务，其在 Linux 平台上广泛用于自动执行包。
 
-本文提供了示例，演示如何自动执行 SSIS 包的执行。 编写示例是在 Red Hat Enterprise 上运行。 代码是针对其他 Linux 发行版，例如 Ubuntu 类似。
+本文提供演示如何自动执行 SSIS 包的示例。 这些示例为在 Red Hat Enterprise 上运行而编写。 代码与其他 Linux 分发版（例如 Ubuntu）类似。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-使用 cron 服务运行作业之前，检查它您的计算机上运行。
+在使用 cron 服务运行作业前，请检查它是否在你的计算机上运行。
 
-若要检查 cron 服务的状态，请使用以下命令： `systemctl status crond.service`。
+若要检查 cron 服务的状态，请使用以下命令：`systemctl status crond.service`。
 
-如果该服务未处于活动状态 （即，它未运行），请查阅您的管理员安装并正确配置 cron 服务。
+如果服务未处于活动状态（即未在运行），请咨询管理员以正确设置和配置 cron 服务。
 
 ## <a name="create-jobs"></a>创建作业
 
-Cron 作业是可配置为按指定时间间隔定期运行的任务。 作业可以是简单，通常会在控制台中直接键入，或运行方式的 shell 脚本的命令。
+Cron 作业是可以配置为按指定间隔定期运行的任务。 作业可以像通常直接在控制台中键入的命令一样简单，也可以作为 shell 脚本运行。
 
-轻松管理和维护目的，我们建议您将在包执行的命令放在脚本中包含的描述性名称。
+为了便于管理和维护，我们建议将包执行命令放在包含描述性名称的脚本中。
 
-下面是有关运行包的简单的 shell 脚本的示例。 它包含只能有一个命令，但可以根据需要添加更多命令。
+以下是用于运行包的简单 shell 脚本的示例。 它仅包含一个命令，但你可以根据需要添加更多命令。
 
 ```bash
 # A simple shell script that contains a simple package execution command
@@ -48,11 +48,11 @@ Cron 作业是可配置为按指定时间间隔定期运行的任务。 作业�
 
 ## <a name="schedule-jobs-with-the-cron-service"></a>使用 cron 服务计划作业
 
-定义你的作业后，您可以将它们自动运行使用 cron 服务计划。
+定义作业后，可以使用 cron 服务将其计划为自动运行。
 
-若要添加的 cron 运行作业，请从 crontab 文件中添加作业。 若要在其中可以添加或更新作业的编辑器中打开 crontab 文件，请使用以下命令： `crontab -e`。
+若要添加作业以供 cron 运行，请在 crontab 文件中添加该作业。 若要在可以添加或更新作业的编辑器中打开 crontab 文件，请使用以下命令：`crontab -e`。
 
-若要计划每日凌晨 2:10 运行前面所述的作业，请将以下行添加到 crontab 文件：
+若要将上述作业计划为每天凌晨 2:10 运行，请将以下行添加到 crontab 文件中：
 
 ```
 # run <SSIS package name> at 2:10 AM every day
@@ -63,20 +63,20 @@ Cron 作业是可配置为按指定时间间隔定期运行的任务。 作业�
 
 若要了解示例命令的格式，请查看以下部分中的信息。
  
-## <a name="format-of-a-crontab-file"></a>从 crontab 文件的格式
+## <a name="format-of-a-crontab-file"></a>crontab 文件的格式
 
-下图显示了添加到 crontab 文件的作业行的格式说明。
+下图显示了添加到 crontab 文件中的作业行的格式说明。
 
-![从 crontab 文件中的条目的格式描述](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
+![crontab 文件中的条目的格式说明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
-若要获取 crontab 文件格式的更详细的说明，请使用以下命令： `man 5 crontab`。
+若要获得有关 crontab 文件格式的更加详细的说明，请使用以下命令：`man 5 crontab`。
 
-下面是输出，以帮助说明本文中的示例的部分示例：
+以下是有助于解释本文示例的输出的部分示例：
 
-![从 crontab 格式的详细部分的说明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+![crontab 格式的详细部分说明](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
-## <a name="related-content-about-ssis-on-linux"></a>有关在 Linux 上的 SSIS 的相关的内容
--   [提取、 转换和加载使用 SSIS 的 Linux 上的数据](sql-server-linux-migrate-ssis.md)
+## <a name="related-content-about-ssis-on-linux"></a>有关 Linux 上 SSIS 的相关内容
+-   [使用 SSIS 在 Linux 上提取、转换和加载数据](sql-server-linux-migrate-ssis.md)
 -   [在 Linux 上安装 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
--   [使用 ssis conf 配置 Linux 上的 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
--   [限制和 Linux 上的 SSIS 的已知的问题](sql-server-linux-ssis-known-issues.md)
+-   [使用 ssis-conf 在 Linux 上配置 SQL Server Integration Services](sql-server-linux-configure-ssis.md)
+-   [适用于 Linux 上 SSIS 的限制和已知问题](sql-server-linux-ssis-known-issues.md)

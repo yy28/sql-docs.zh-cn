@@ -1,6 +1,6 @@
 ---
-title: 运行 SQL Server 的 Red Hat Enterprise Linux 共享的群集
-description: 为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集实现高可用性。
+title: 对适用于 SQL Server 的 Red Hat Enterprise Linux 共享群集进行操作
+description: 通过配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集实现高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032241"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文档介绍如何在 Red Hat Enterprise Linux 的共享磁盘故障转移群集上为 SQL Server 执行以下任务。
+本文档介绍如何使用 Red Hat Enterprise Linux 在共享磁盘故障转移群集上为 SQL Server 执行以下任务。
 
 - 手动故障转移群集
 - 监视故障转移群集 SQL Server 服务
@@ -30,24 +30,24 @@ ms.locfileid: "68032241"
 
 ## <a name="architecture-description"></a>体系结构说明
 
-群集层基于 Red Hat Enterprise Linux (RHEL) 上[HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)基础上构建[Pacemaker](https://clusterlabs.org/)。 Corosync 和 Pacemaker 协调群集通信和资源管理。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
+集群层基于在 [Pacemaker](https://clusterlabs.org/) 的基础上构建的 Red Hat Enterprise Linux (RHEL) [HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 Corosync 和 Pacemaker 协调群集通信和资源管理。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
 
-下图说明了 SQL Server 的 Linux 群集中的组件。 
+下图显示了 SQL Server 的 Linux 群集中的组件。 
 
-![Red Hat Enterprise Linux 7 共享磁盘的 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Red Hat Enterprise Linux 7 共享磁盘 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-有关群集配置、 资源代理选项和管理的详细信息，请访问[RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+有关群集配置、资源代理选项和管理的更多信息，请访问 [RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 ## <a name = "failManual"></a>手动故障转移群集
 
-`resource move`命令创建强制资源在目标节点上启动的约束。  执行后`move`命令中，执行资源`clear`将删除该约束，以便可以再次移动资源或具有自动故障转移的资源。 
+`resource move` 命令创建一个约束，用于强制资源在目标节点上启动。  执行 `move` 命令后，执行资源 `clear` 将删除该约束，因此可以再次移动资源或自动故障转移资源。 
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
-以下示例将移动**mssqlha**到一个名为节点的资源**sqlfcivm2**，然后删除该约束，以便可以将资源移到另一个节点更高版本。  
+以下示例将 mssqlha 资源移到名为 sqlfcivm2 的节点中，然后删除该约束，以便稍后可以将资源移到其他节点   。  
 
 ```bash
 sudo pcs resource move mssqlha sqlfcivm2 
@@ -68,7 +68,7 @@ sudo pcs status 
 sudo crm_mon 
 ```
 
-查看资源代理日志 `/var/log/cluster/corosync.log`
+在 `/var/log/cluster/corosync.log` 查看资源代理日志
 
 ## <a name="add-a-node-to-a-cluster"></a>向群集添加节点
 
@@ -78,13 +78,13 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 为每个节点提供长度不超过 15 个字符的唯一名称。 默认情况下，在 Red Hat Linux 计算机名称是`localhost.localdomain`。 此默认名称可能不是唯一的，并且过长。 在新节点上设置计算机名称。 通过将其添加到设置的计算机名称`/etc/hosts`。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
+3. 为每个节点提供长度不超过 15 个字符的唯一名称。 默认情况下，在 Red Hat Linux 中，计算机名为 `localhost.localdomain`。 此默认名称可能不是唯一的，并且过长。 将新节点设为计算机名称。 通过将计算机名添加到 `/etc/hosts` 来设置该名称。 以下脚本可使用 `vi` 编辑 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
    ```
 
-   下面的示例演示`/etc/hosts`与名为三个节点的添加件`sqlfcivm1`， `sqlfcivm2`，和`sqlfcivm3`。
+   以下示例显示了 `/etc/hosts` 以及名为 `sqlfcivm1`、`sqlfcivm2` 和 `sqlfcivm3` 的三个节点。
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -121,7 +121,7 @@ sudo crm_mon
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr
    ```
 
-   运行`mount -a`的更改才会生效。
+   运行 `mount -a` 使更改生效。
    
 1. 在新节点上，创建一个文件来存储用于登录 Pacemaker 的 SQL Server 用户名和密码。 以下命令创建并填充此文件：
 
@@ -141,10 +141,10 @@ sudo crm_mon
    ```
 
    > [!NOTE]
-   > 如果正在使用不具有内置的高可用性配置的另一个防火墙，则需要为 Pacemaker 将无法与群集中的其他节点通信打开以下端口
+   > 如果使用的是未内置高可用性配置的其他防火墙，则需要打开以下端口，以便 Pacemaker 能与群集中的其他节点进行通信
    >
-   > * TCP:端口 2224、 3121、 21064
-   > * UDP:端口 5405
+   > * TCP：端口 2224、3121、21064
+   > * UDP：端口 5405
 
 1. 在新节点上安装 Pacemaker 包。
 
@@ -152,13 +152,13 @@ sudo crm_mon
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. 为安装 Pacemaker 和 Corosync 包时创建的默认用户设置密码。 使用相同的密码作为现有节点。 
+2. 为安装 Pacemaker 和 Corosync 包时创建的默认用户设置密码。 使用与现有节点相同的密码。 
 
    ```bash
    sudo passwd hacluster
    ```
  
-3. 启用并启动 `pcsd` 服务和 Pacemaker。 这样，新节点则可以在重新启动后重新加入群集。 在新节点上运行以下命令。
+3. 启用并启动 `pcsd` 服务和 Pacemaker。 这允许新节点在重新启动后重新加入群集。 在新节点上运行以下命令。
 
    ```bash
    sudo systemctl enable pcsd
@@ -179,7 +179,7 @@ sudo crm_mon
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    下面的示例添加一个名为节点**vm3**到群集。
+    下面的示例将名为 vm3 的节点添加到群集  。
 
     ```bash
     sudo pcs    cluster auth  
@@ -188,7 +188,7 @@ sudo crm_mon
 
 ## <a name="remove-nodes-from-a-cluster"></a>从群集中删除节点
 
-若要从运行以下命令的群集删除节点：
+若要从群集中删除节点，请运行以下命令：
 
 ```bash
 sudo pcs    cluster node remove <nodeName>  
@@ -200,28 +200,28 @@ sudo pcs    cluster node remove <nodeName> 
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
 ```
 
-以下示例将 mssql 资源的监视间隔设为 2 秒：
+以下示例将 mssql 资源的监视间隔时间设置为 2 秒：
 
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
 ## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行故障排除
 
-在对群集进行故障排除期间，有助于了解这三个守护程序是如何协同工作以管理群集资源的。 
+在对群集进行故障排除时，了解三个守护程序如何协同工作以管理群集资源可能会有所帮助。 
 
-| 后台程序 | 描述 
+| 守护程序 | 描述 
 | ----- | -----
-| Corosync | 提供仲裁成员身份并在群集节点之间发送消息。
-| Pacemaker | 驻留在 Corosync 顶部，并为资源提供状态机。 
-| PCSD | 管理通过 Corosync 和 Pacemaker`pcs`工具
+| Corosync | 提供仲裁成员身份并在群集节点之间传递消息。
+| Pacemaker | 位于 Corosync 之上，为资源提供状态机器。 
+| PCSD | 通过 `pcs` 工具管理 Pacemaker 和 Corosync
 
-必须运行 PCSD 才能使用`pcs`工具。 
+需要运行 PCSD 才能使用 `pcs` 工具。 
 
 ### <a name="current-cluster-status"></a>当前群集状态 
 
-`sudo pcs status` 返回有关每个节点的群集、 仲裁、 节点、 资源和守护程序状态的基本信息。 
+`sudo pcs status` 返回有关每个节点的群集、仲裁、节点、资源和守护程序状态的基本信息。 
 
-一个运行状况良好的 pacemaker 仲裁输出的示例如下：
+正常的 pacemaker 仲裁输出的示例如下：
 
 ```
 Cluster name: MyAppSQL 
@@ -246,23 +246,23 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-在示例中，`partition with quorum`意味着节点的大多数仲裁处于联机状态。 如果群集丢失节点多数仲裁`pcs status`将返回`partition WITHOUT quorum`，将停止所有资源。 
+在此示例中，`partition with quorum` 表示节点的大多数仲裁处于联机状态。 如果群集丢失节点的大多数仲裁，`pcs status` 将返回 `partition WITHOUT quorum`，并且所有资源都将停止。 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` 返回当前参与群集的所有节点的名称。 如果没有参与任何节点，`pcs status`返回`OFFLINE: [<nodename>]`。
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` 返回当前参与此群集所有节点的名称。 如果有任何节点未参与，`pcs status` 返回 `OFFLINE: [<nodename>]`。
 
 `PCSD Status` 显示每个节点的群集状态。
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>节点可能处于脱机状态的原因
 
-如果节点处于脱机状态，请检查以下各项。
+节点处于脱机状态时检查以下各项。
 
-- **防火墙**
+- **Firewall**
 
     需要在所有节点上打开以下端口，才能使 Pacemaker 进行通信。
     
-    - \* * TCP:2224、 3121、 21064
+    - **TCP：2224，3121，21064
 
-- **Pacemaker 或 Corosync 服务运行**
+- **正在运行的 Pacemaker 或 Corosync 服务**
 
 - **节点通信**
 
@@ -270,9 +270,9 @@ pacemaker: active/enabled
 
 ## <a name="additional-resources"></a>其他资源
 
-* [从头开始群集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)pacemaker 的指南
+* Pacemaker [从头开始构建群集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)指南
 
 ## <a name="next-steps"></a>后续步骤
 
-[为 SQL Server 配置 Red Hat Enterprise Linux 共享的磁盘群集](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+[配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

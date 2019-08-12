@@ -1,7 +1,7 @@
 ---
 title: 应用部署扩展
 titleSuffix: SQL Server big data clusters
-description: 将 Python 或 R 脚本部署为 SQL Server 2019 大数据群集 （预览版） 上的应用程序。
+description: 在 SQL Server 2019 大数据群集（预览版）上将 Python 或 R 脚本部署为应用程序。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,116 +10,116 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958913"
 ---
-# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 来部署应用程序到 SQL Server 大数据群集
+# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 将应用程序部署到 SQL Server 大数据群集
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何向 SQL Server 大数据群集应用程序部署扩展中使用 Visual Studio Code 部署应用程序。 CTP 2.3 中引入了此功能。 
+本文介绍如何使用带有应用部署扩展的 Visual Studio Code 将应用程序部署到 SQL Server 大数据群集。 CTP 2.3 中引入了此功能。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - [Visual Studio Code](https://code.visualstudio.com/)。
-- [SQL Server 大数据群集](big-data-cluster-overview.md)CTP 2.3 或更高版本。
+- [SQL Server 大数据群集](big-data-cluster-overview.md) CTP 2.3 或更高版本。
 
 ## <a name="capabilities"></a>功能
 
-在 Visual Studio Code 中，此扩展插件支持以下任务：
+此扩展支持 Visual Studio Code 中的以下任务：
 
 - 使用 SQL Server 大数据群集进行身份验证。
-- 从 GitHub 存储库部署的受支持运行时检索应用程序模板。
-- 管理用户的工作区中当前打开的应用程序模板。
-- 部署应用程序通过 YAML 格式规范。
-- 管理 SQL Server 大数据群集中部署的应用。
-- 查看所有已部署的应用中的其他信息的一侧栏。
-- 生成一个运行的规范，以使用该应用程序或从群集中删除该应用程序。
-- 使用已部署的应用，通过运行规范 YAML。
+- 从 GitHub 存储库中检索应用程序模板，以部署支持的运行时。
+- 在用户的工作区中管理当前打开的应用程序模板。
+- 通过 YAML 格式的规范来部署应用程序。
+- 管理 SQL Server 大数据群集中已部署的应用。
+- 在侧边栏中查看部署的所有应用以及附加信息。
+- 生成运行规范以使用应用或从群集中删除应用。
+- 通过运行规范 YAML 使用已部署的应用。
 
-以下部分逐步完成安装过程，并提供扩展的工作原理的概述。 
+以下部分介绍了安装过程，并概述了扩展的工作原理。 
 
 ### <a name="install"></a>安装
 
-在 VS Code 中首次安装应用程序部署扩展：
+首先在 VS Code 中安装应用部署扩展：
 
-1. 下载[应用将部署扩展](https://aka.ms/app-deploy-vscode)VS 代码的一部分安装扩展。
+1. 下载[应用部署扩展](https://aka.ms/app-deploy-vscode)以安装属于 VS Code 的扩展。
 
-1. 启动 VS Code 并导航到扩展侧栏。
+1. 启动 VS Code 并导航到“扩展”侧边栏。
 
-1. 单击`…`侧栏并选择顶部的上下文菜单`Install from vsix`。
+1. 单击侧边栏顶部的 `Install from vsix` 上下文菜单，然后选择 `…`。
 
    ![安装 VSIX](media/vs-extension/install_vsix.png)
 
-1. 查找`sqlservbdc-app-deploy.vsix`文件下载，然后选择要安装。
+1. 找到下载的 `sqlservbdc-app-deploy.vsix` 文件，然后选择要安装的文件。
 
-SQL Server 大数据群集应用程序部署后安装扩展，它会提示你重新加载 VS Code。 现在应看到在 SQL Server BDC 应用程序资源管理器在 VS Code 侧栏中。
+安装 SQL Server 大数据群集应用部署扩展后，系统会提示重载 VS Code。 现在应该会在 VS Code 侧边栏中看到 SQL Server BDC 应用资源管理器。
 
-### <a name="app-explorer"></a>应用程序资源管理器
+### <a name="app-explorer"></a>应用资源管理器
 
-单击侧栏以加载侧面板，其中显示在应用程序资源管理器中的扩展。 应用程序资源管理器的以下示例屏幕截图显示没有应用程序规范可用：
+单击侧边栏中的扩展，加载显示应用资源管理器的侧面板。 下面的应用资源管理器屏幕截图示例显示没有可用的应用或应用规范：
 
 <img src="media/vs-extension/app_explorer.png" width=350px></img>
 <!--![App Explorer](media/vs-extension/app_explorer.png)-->
 
-#### <a name="new-connection"></a>新的连接
+#### <a name="new-connection"></a>新建连接
 
-若要连接到群集终结点，请使用以下方法之一：
+若要连接到群集终结点，请使用下列方法之一：
 
-- 单击显示在底部状态栏上`SQL Server BDC Disconnected`。
-- 或单击`New Connection`通过箭头指向在门口到顶部的按钮。
+- 单击底部显示 `SQL Server BDC Disconnected` 的状态栏。
+- 也可以单击顶部箭头指向门口的 `New Connection` 按钮。
 
-   ![新的连接](media/vs-extension/connect_to_cluster.png)
+   ![新建连接](media/vs-extension/connect_to_cluster.png)
 
-VS Code 会提示输入相应的终结点、 用户名和密码。 如果给出正确的凭据和应用程序终结点，VS Code 会通知您已连接到群集，你将看到在侧栏中填充任何已部署的应用。 如果您已成功连接，保存你的终结点和用户名到`./sqldbc`作为用户配置文件的一部分。 曾经将保存没有密码或令牌。 时再次登录，在提示符下将预先填充你的已保存的主机和用户名，但始终要求你输入密码。 如果你想要连接到不同的群集终结点，只需单击`New Connection`试。 如果关闭 VS Code 或打开不同的工作区并将需要重新连接，连接会自动关闭。
+VS Code 提示输入相应的终结点、用户名和密码。 如果提供正确的凭据和应用终结点，VS Code 会通知你已连接到群集，并且你将看到所有部署的应用都填充到了侧边栏中。 如果成功连接，终结点和用户名将作为用户配置文件的一部分保存到 `./sqldbc`。 不保存任何密码或令牌。 重新登录时，提示将预先填写保存的主机和用户名，但始终会要求输入密码。 如果要连接到其他群集终结点，只需再次单击 `New Connection` 即可。 如果关闭 VS Code 或者如果打开其他工作区并且需要重新连接，则连接将自动关闭。
 
 ### <a name="app-template"></a>应用模板
 
-若要部署新的应用程序从某个我们的模板，请单击`New App Template`按钮上`App Specifications`窗格中，其中系统将提示输入名称、 运行时，以及你想要在本地计算机上将在此新应用程序的位置。 建议，您将其放在当前的 VS Code 工作区中，以便您可以使用的全部功能的扩展，但将其放在本地文件系统中的任意位置。
+若要从某个模板部署新应用，请单击 `App Specifications` 窗格上的 `New App Template` 按钮，系统将提示你输入名称、运行时以及要在本地计算机上放置新应用的位置。 建议将其放在当前的 VS Code 工作区中，以便可以使用扩展的全部功能，不过也可以将其放在本地文件系统中的任何位置。
 
-![新应用程序模板](media/vs-extension/new_app_template.png)
+![新建应用模板](media/vs-extension/new_app_template.png)
 
-完成后，新的应用程序模板已搭建基架为你在你指定的位置和部署`spec.yaml`将在你的工作区中打开。 如果您选择的目录是在工作区中，您还将看到下面列出`App Specifications`窗格：
+完成后，将在指定位置为你的一个新应用模板搭建基架，并在你的工作区中打开部署 `spec.yaml`。 如果所选的目录位于你的工作区中，还应该看到该目录在 `App Specifications` 窗格下列出：
 
-![加载应用程序模板](media/vs-extension/loading_app_template.png)
+![加载的应用模板](media/vs-extension/loading_app_template.png)
 
-模板是一个简单`Hello World`应用的布局方式，如下所示：
+此模板是一个简单的 `Hello World` 应用，其布局如下：
 
 - **spec.yaml**
-   - 指示如何将应用部署的群集
+   - 告知群集如何部署应用
 - **run-spec.yaml**
-   - 告知你希望如何调用您的应用程序的群集
+   - 告知群集你希望如何调用应用
 - **handler.py**
-   - 这是由指定源代码文件`src`中 `spec.yaml`
-   - 它具有名为的一个函数`handler`认为`entrypoint`应用程序中所示的`spec.yaml`。 采用名为的字符串输入`msg`，并返回字符串输出名为`out`。 中指定这些`inputs`并`outputs`的`spec.yaml`。
+   - 这是 `spec.yaml` 中 `src` 指定的源代码文件
+   - 该文件有一个名为 `handler` 的函数，它被视为应用的 `entrypoint`，如 `spec.yaml` 所示。 它采用名为 `msg` 的字符串输入，并返回一个名为 `out` 的字符串输出。 这些内容在 `spec.yaml` 的 `inputs` 和 `outputs` 中指定。
 
-如果您不希望已搭建基架的模板，只是希望`spec.yaml`你已生成的应用部署，请单击`New Deploy Spec`按钮旁边`New App Template`按钮，并通过相同的过程，但您只需接收`spec.yaml`，您可以修改您选择的方式。
+如果不想使用搭建基架的模板且只想通过 `spec.yaml` 来部署已构建的应用，请单击 `New App Template` 按钮旁边的 `New Deploy Spec` 按钮并完成相同的过程，不过你将仅收到 `spec.yaml`，但你可以修改选择方式。
 
-### <a name="deploy-app"></a>将应用部署
+### <a name="deploy-app"></a>部署应用
 
-可能会立即部署此应用程序中的通过代码小视窗`Deploy App`中`spec.yaml`或按快如闪电文件夹按钮旁边`spec.yaml`应用规范菜单中的文件。 该扩展将在目录中的所有文件进行都压缩，您`spec.yaml`所在并将您的应用程序部署到群集。 
+可以通过 `spec.yaml` 中的代码可重用功能区 `Deploy App` 立即部署此应用，也可以按“应用规范”菜单中 `spec.yaml` 文件旁边的闪电文件夹按钮来进行部署。 扩展将压缩 `spec.yaml` 所在目录中的所有文件，并将应用部署到群集。 
 
 >[!NOTE]
->请确保所有应用文件所在的同一目录中你`spec.yaml`。 `spec.yaml`必须是您应用的源代码目录的根级别。 
+>请确保所有应用文件都与 `spec.yaml` 位于同一目录中。 `spec.yaml` 必须位于应用源代码目录的根级别。 
 
-![部署应用程序按钮](media/vs-extension/deploy_app_lightning.png)
+![部署应用按钮](media/vs-extension/deploy_app_lightning.png)
 
 ![部署应用 CodeLens](media/vs-extension/deploy_app_codelens.png)
 
-应用可供在侧栏中应用的状态上基于消耗时，你将收到通知：
+根据侧边栏中应用的状态，你将在应用可以使用时收到通知：
 
-![部署应用](media/vs-extension/app_deploy.png)
+![应用已部署](media/vs-extension/app_deploy.png)
 
 ![应用就绪侧边栏](media/vs-extension/app_ready_side_bar.png)
 
 ![应用就绪通知](media/vs-extension/app_ready_notification.png)
 
-在窗格中，你将能够看到您的可用以下：
+在侧窗格中，你将看到向你提供的以下内容：
 
-使用以下信息在侧栏中，可以查看所有已部署的应用：
+在侧边栏中可以看到部署的所有应用以及以下信息：
 
 - state
 - version
@@ -127,37 +127,37 @@ VS Code 会提示输入相应的终结点、 用户名和密码。 如果给出�
 - 输出参数
 - 链接
   - swagger
-  - details
+  - 详细信息
 
-如果单击`Links`，你将看到，您可以访问`swagger.json`的已部署的应用，以便您可以编写您自己调用您的应用程序的客户端：
+如果单击 `Links`，你将发现你可以访问已部署应用的 `swagger.json`，从而可以编写你自己的可调用应用的客户端：
 
-![swagger](media/vs-extension/swagger.png)
+![Swagger](media/vs-extension/swagger.png)
 
-请参阅[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。
+有关详细信息，请参阅[在大数据群集上使用应用程序](big-data-cluster-consume-apps.md)。
 
 ### <a name="app-run"></a>应用运行
 
-应用程序准备就绪后，调用应用程序与`run-spec.yaml`提供作为应用程序模板的一部分：
+应用准备就绪后，使用作为应用模板的一部分提供的 `run-spec.yaml` 来调用应用：
 
 ![运行规范](media/vs-extension/run_spec.png)
 
-指定您希望替代的任何字符串`hello`，然后再次运行它通过代码可重用功能区链接或侧栏中的闪电形按钮旁边`run-spec.yaml`。 如果由于任何原因没有运行规范，请在群集中生成一个从已部署的应用：
+指定要替换 `hello` 的任意字符串，然后通过代码可重用功能区链接或 `run-spec.yaml` 旁边的侧边栏中的闪电按钮再次运行该字符串。 如果由于某种原因没有运行规范，请从群集中部署的应用生成一个规范：
 
 ![获取运行规范](media/vs-extension/get_run_spec.png)
 
-有一个并对其进行编辑你感到满意后，运行它。 应用程序运行完毕时，VS Code 将返回适当的反馈：
+已有规范且编辑到满意后，请运行该规范。 VS Code 在应用完成运行后返回相应的反馈：
 
-![应用程序输出](media/vs-extension/app_output.png)
+![应用输出](media/vs-extension/app_output.png)
 
-正如您所看到上述，临时中提供了输出`.json`工作区中的文件。 如果你想要保留此输出，可随时将其保存，否则，在右将删除下列它。 如果您的应用程序不有任何输出打印到文件，将仅获取`Successful App Run`底部的通知。 如果没有成功运行，你将收到相应的错误消息，这样有助于确定出错的原因。
+如上所示，工作区中的临时 `.json` 文件提供输出。 如果想保留此输出，请随时保存，否则，它将在关闭时删除。 如果应用没有要打印到文件的输出，则底部仅显示 `Successful App Run` 通知。 如果运行没有成功，你将收到相应的错误消息，它可以帮助你确定错误详情。
 
-当运行应用时，有多种方式将参数传递：
+运行应用时，可以通过多种方式传递参数：
 
-你可以指定通过所需的所有输入`.json`，即：
+可以通过 `.json` 指定所需的所有输入，即：
 
 - `inputs: ./example.json`
 
-当调用已部署的应用，如果任何输入的参数是与生俱来的应用程序或用户指定和给定的输入参数是基元，如数组、 向量、 的数据帧之外的任何内容的复杂 JSON 等指定参数类型直接在行时它调用应用程序中：
+在调用部署的应用时，如果任何输入参数是指定应用或用户的固有参数，并且给定的输入参数不是基元（如数组、向量、数据帧、复杂 JSON 等），请在调用应用时在代码行中直接指定参数类型，即：
 
 - 向量
     - `inputs:`
@@ -169,17 +169,17 @@ VS Code 会提示输入相应的终结点、 用户名和密码。 如果给出�
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
-或为一个字符串，提供的相对或绝对文件路径作为`.txt`， `.json`，或`.csv`，为所需的输入提供的应用所需的格式。 文件分析基于`Node.js Path library`，其中文件路径定义为`string that contains a / or \ character`。
+或者提供 `.txt`、`.json` 或 `.csv` 的相对或绝对文件路径字符串，以应用所需的格式提供所需的输入。 文件分析基于 `Node.js Path library`，其中文件路径定义为 `string that contains a / or \ character`。
 
-如果根据需要未提供输入的参数，则如果提供的字符串的文件路径，或该参数无效，具有不正确的文件路径将显示相应的错误消息。 负责提供给应用的创建者，以确保他们了解它们定义的参数。
+如果没有按需提供输入参数，系统将显示相应的错误消息，并显示错误文件路径（若提供了字符串文件路径）或参数无效。 应用创建者有责任确保他们了解他们定义的参数。
 
-若要删除应用，只需单击垃圾桶可按钮旁边的应用程序中`Deployed Apps`侧边窗格。
+要删除应用，只需单击 `Deployed Apps` 侧窗格中应用旁边的“回收站”按钮即可。
 
 ## <a name="next-steps"></a>后续步骤
 
-了解如何将大数据群集在您的应用程序的 SQL Server 上部署的应用程序进行集成[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。 此外可以对在其他示例引用[应用程序部署示例](https://aka.ms/sql-app-deploy)来尝试使用该扩展。
+如需了解如何将在 SQL Server 大数据群集上部署的应用集成到自己的应用程序中，请参阅[在大数据群集上使用应用程序](big-data-cluster-consume-apps.md)获取详细信息。 也可以参考[应用部署示例](https://aka.ms/sql-app-deploy)中的其他示例来试用扩展。
 
 有关 SQL Server 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
 
 
-我们的目标是为你进行此扩展很有用，我们非常感激你的反馈。 请将它们发送到[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]团队](https://aka.ms/sqlfeedback)。
+我们希望此扩展能够为你带来帮助，感谢你的反馈。 请将反馈发送给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](https://aka.ms/sqlfeedback)。

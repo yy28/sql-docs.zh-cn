@@ -1,7 +1,7 @@
 ---
 title: 从命令提示符安装 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ed047f78c316cc5bb6308e2bfe425884a649876
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991096"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419331"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -102,12 +102,12 @@ ms.locfileid: "67991096"
 > [!NOTE]
 > 通过命令提示符安装时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 /QS 开关仅显示进度，不接受任何输入，也不显示错误消息（如果遇到）。 仅当指定 /Action=install 时才支持 /QS 参数。  
   
- 无论使用哪种安装方法，您都需要作为个人或代表实体确认接受软件许可条款，除非您对于软件的使用受单独的协议（如 Microsoft 批量许可协议或与 ISV 或 OEM 之间的第三方协议）管辖。  
+ 无论使用哪种安装方法，你都需要作为个人或代表实体确认接受软件许可条款，除非你对于软件的使用受单独的协议（如 Microsoft 批量许可协议或与 ISV 或 OEM 之间的第三方协议）管辖。  
   
  将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 使用 /Q 或 /QS 参数进行无人参与安装时，必须包含 /IACCEPTSQLSERVERLICENSETERMS 参数。 可以通过 [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209)（Microsoft 软件许可条款）单独查看许可条款。  
   
 > [!NOTE] 
-> 根据您接收软件的方式（例如，通过 Microsoft 批量许可），您对软件的使用可能受其他条款和条件约束。  
+> 根据你接收软件的方式（例如，通过 Microsoft 批量许可），你对软件的使用可能受其他条款和条件约束。  
   
  在以下情况下支持命令提示符安装：  
   
@@ -277,8 +277,9 @@ ms.locfileid: "67991096"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|Python/机器学习服务（数据库内）|MPYCACHEDIRECTORY|保留供将来使用。 使用 %TEMP% 存储 Python .CAB 文件，以便在没有 Internet 连接的计算机上安装。 |  
-|R/机器学习服务（数据库内）|MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)安装 R 组件时，通常使用此设置。|  
+|Python/机器学习服务（数据库内）|/MPYCACHEDIRECTORY|保留供将来使用。 使用 %TEMP% 存储 Python .CAB 文件，以便在没有 Internet 连接的计算机上安装。 |  
+|R/机器学习服务（数据库内）|/MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)安装 R 组件时，通常使用此设置。|  
+|Java/机器学习服务（数据库内）| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **可选** | 从 SQL Server 2019 开始，指定通过机器学习服务安装 Java。 如果提供的 /SQL_INST_JAVA 不带 /SQLJAVADIR 参数，则表示假设你要安装由安装介质提供的祖鲁语 JRE。 <br /><br /> 为 /SQLJAVADIR 提供路径表示你要使用已安装的 JRE 或 JDK。 |
   
 ###### <a name="sample-syntax"></a>示例语法：  
  安装新的具有 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、复制和全文搜索组件的独立实例并启用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的即时文件初始化。 
