@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126202"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892296"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68126202"
  熟悉如何管理 Windows 防火墙的用户，以及对想要配置的防火墙设置有所了解的用户，可直接转而参阅更高级的文章  ：  
   
 -   [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [将 Windows 防火墙配置为允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> 基本防火墙信息  
@@ -159,7 +159,7 @@ ms.locfileid: "68126202"
   
  如果用户通过 IIS 和 Internet 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则必须打开 IIS 侦听的端口，并在客户端连接字符串中指定该端口。 在这种情况下，不需要打开任何端口就能直接访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 默认端口 2389 和端口 2382 应当与所有其他并非必需的端口一起受到限制。  
   
- 有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+ 有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置 Windows 防火墙的分步说明，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)。  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services 使用的端口  
 

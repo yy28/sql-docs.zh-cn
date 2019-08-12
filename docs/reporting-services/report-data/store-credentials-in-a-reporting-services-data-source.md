@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: c2ce0a9f30232f1d5c5c25fc92068be1e40bd2f5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264391"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891859"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>在 Reporting Services 数据源中存储凭据
 
@@ -33,7 +33,7 @@ ms.locfileid: "68264391"
 可以配置存储的凭据， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器可使用这些凭据来访问报表的外部数据。 如果报表在无人参与的状态下运行，则使用存储凭据，例如将报表作为电子邮件发布的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 计划或触发报表处理时，报表服务器将检索和使用这些凭据。 本主题向你说明了为本机模式下和 SharePoint 模式下的报表服务器配置存储凭据的过程。  
   
 ##  <a name="bkmk_top"></a> 存储凭据的安全策略要求  
- ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 要求为报表服务器上的以下其中一项安全策略配置用于存储凭据的帐户。 建议使用环境要求的最低级别权限来选择策略。  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 要求为报表服务器上的以下其中一项安全策略配置用于存储凭据的帐户。 建议使用环境要求的最低级别权限来选择策略。  
   
 1.  **允许在本地登录**。 有关详细信息，请参阅 [允许在本地登录](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68264391"
   
 8.  单击 **“应用”** 。  
   
-     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> 为特定于报表的数据源配置存储的凭据（SharePoint 模式）  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68264391"
   
 8.  单击 **ok**。  
   
-     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 为共享数据源配置存储凭据（本机模式）  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68264391"
   
 6.  单击 **“应用”** 。  
   
-     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> 为共享数据源配置存储凭据（SharePoint 模式）  
   
@@ -149,7 +149,7 @@ ms.locfileid: "68264391"
   
 7.  单击 **“确定”** 。  
   
-     ![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
+     ![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [适用于存储凭据的安全策略要求](#bkmk_top)  
   
 ## <a name="see-also"></a>另请参阅  
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030481"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810586"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68030481"
 |-|-|  
 |DATABASE ROLE|函数：内联表值|  
 |函数：多语句表值|函数：Scalar|  
-|索引：聚集|索引：非群集|  
+|索引：聚集|索引：非聚集|  
 |索引：特殊|索引：唯一|  
 |Login|权限|  
 |角色成员资格|SCHEMA|  

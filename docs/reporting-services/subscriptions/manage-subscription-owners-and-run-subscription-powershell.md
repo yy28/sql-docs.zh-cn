@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: 0c34f6c2cf7916b525a432d4481f991388ea93ca
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267522"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893429"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>管理订阅所有者并运行订阅 - PowerShell
 
@@ -22,7 +22,7 @@ ms.locfileid: "68267522"
 
 从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 开始，可通过编程方式将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅的所有权从一个用户转移给另一个用户。 本主题提供多个 Windows PowerShell 脚本，这些脚本可用于更改订阅所有权，或只是列出订阅所有权。 每个示例都包含本机模式和 SharePoint 模式的语法示例。 更改订阅的所有者后，订阅将在新所有者的安全上下文中执行，并且报表中的 User!UserID 字段将显示新所有者的值。 有关 PowerShell 示例调用的对象模型的详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
+![与 PowerShell 相关的内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
 
 ##  <a name="bkmk_top"></a> 本主题内容：
   

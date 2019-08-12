@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702897"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893988"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -46,7 +46,7 @@ ms.locfileid: "68702897"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---| 
-| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器重载。 此版本引入了“ClientCacheRefreshPolicy”属性  。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](../analysis-services/server-properties/general-properties.md)。 |
+| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器重载。 此版本引入了“ClientCacheRefreshPolicy”属性  。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
 | 联机附加  | 使用此功能，能够以联机操作的形式附加表格模型。 联机附加可用于本地查询横向扩展环境中只读副本的同步。 有关详细信息，请参阅[联机附加](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)。 |
 | &nbsp; | &nbsp; |
 

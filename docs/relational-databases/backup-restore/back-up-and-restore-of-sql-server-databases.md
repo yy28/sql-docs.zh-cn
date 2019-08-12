@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3c316db1e7333c5659bf0bc6b0be84eb972035e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b37e555c4118ca3199e132d20a6689c80b40bab
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941014"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893473"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67941014"
  除了在本地存储中存储备份外，SQL Server 还支持备份到 Windows Azure Blob 存储服务和从其还原。 有关详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 对于使用 Microsoft Azure Blob 存储服务存储的数据库文件， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供相应的选项让你使用 Azure 快照来实现接近实时的备份和更快的还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ##  <a name="why-back-up"></a>为何备份？  
--   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法。
+-   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。 备份是保护数据的唯一方法  。
 
      使用有效的数据库备份，可从多种故障中恢复数据，例如：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67941014"
   
 ##  <a name="glossary-of-backup-terms"></a>备份术语的术语表
  **备份** [动词]  
- 创建备份 [名词] 的过程，方法是通过复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据记录或复制其事务日志中的日志记录。  
+ 创建备份 [名词]  的过程，方法是通过复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据记录或复制其事务日志中的日志记录。  
   
  **备份** [名词]  
  可用于在出现故障后还原或恢复数据的数据副本。 数据库备份还可用于将数据库副本还原到新位置。  
@@ -149,7 +149,7 @@ ms.locfileid: "67941014"
  建议您为每个数据库维护一个操作手册。 此操作手册应记录备份的位置、备份设备名称（如果有），以及还原测试备份所需的时间。
 
 ## <a name="monitor-progress-with-xevent"></a>使用 xEvent 监视进度
-由于数据库的大小和所涉及操作的复杂性，备份和还原操作可能需要很长时间。 当任一操作出现问题时，可使用 backup_restore_progress_trace 扩展事件来监控实时进度。 有关扩展事件的详细信息，请参阅 [扩展事件](../extended-events/extended-events.md)。
+由于数据库的大小和所涉及操作的复杂性，备份和还原操作可能需要很长时间。 当任一操作出现问题时，可使用 backup_restore_progress_trace 扩展事件来监控实时进度  。 有关扩展事件的详细信息，请参阅 [扩展事件](../extended-events/extended-events.md)。
 
   >[!WARNING]
   > 使用 backup_restore_progress_trace 扩展事件可能会导致性能问题并使用大量磁盘空间。 请在短时间内谨慎使用，并在生产中实现前进行彻底测试。
@@ -270,7 +270,7 @@ GO
  [还原和恢复概述 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [备份和还原 Analysis Services 数据库](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [备份和还原 Analysis Services 数据库](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [备份和还原全文目录和索引](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [备份和还原复制的数据库](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   

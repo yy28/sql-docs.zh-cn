@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581350"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889832"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65581350"
   
 -   **报表服务器项目向导。** 选择报表服务器向导项目时，将自动创建一个报表服务器项目并打开报表向导。 在该向导中，您可以根据每个页面上的说明来创建报表：创建到数据源的连接字符串，设置数据源凭据，设计查询，添加表或矩阵数据区域，指定报表数据和组，选取字体和颜色样式，将报表发布到报表服务器，在本地预览报表。 使用该向导创建报表之后，您可以通过使用报表服务器项目中的报表设计器来更改报表数据和报表设计器。  
   
- ![SSDT 中新的项目模板](../../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![SSDT 中新的项目模板](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 报表设计器窗口和窗格  

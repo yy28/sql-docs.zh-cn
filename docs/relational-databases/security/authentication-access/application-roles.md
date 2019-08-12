@@ -1,7 +1,7 @@
 ---
 title: 应用程序角色 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,16 +21,16 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a64d707ff73f228d45a9e977c20be6ac57eed5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b26765281f650a73e7c21e40ce63916eeb9fa21f
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095054"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841590"
 ---
 # <a name="application-roles"></a>应用程序角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  应用程序角色是一个数据库主体，它使应用程序能够用其自身的、类似用户的权限来运行。 使用应用程序角色，可以只允许通过特定应用程序连接的用户访问特定数据。 与数据库角色不同的是，应用程序角色默认情况下不包含任何成员，而且是非活动的。 应用程序角色使用两种身份验证模式。 可以使用 **sp_setapprole**启用应用程序角色，该过程需要密码。 因为应用程序角色是数据库级主体，所以它们只能通过其他数据库中为 **guest**授予的权限来访问这些数据库。 因此，其他数据库中的应用程序角色将无法访问任何已禁用 **guest** 的数据库。  
+  应用程序角色是一个数据库主体，它使应用程序能够用其自身的、类似用户的权限来运行。 使用应用程序角色，可以只允许通过特定应用程序连接的用户访问特定数据。 与数据库角色不同的是，应用程序角色默认情况下不包含任何成员，而且是非活动的。 可以使用 **sp_setapprole**启用应用程序角色，该过程需要密码。 因为应用程序角色是数据库级主体，所以它们只能通过其他数据库中为 **guest**授予的权限来访问这些数据库。 因此，其他数据库中的应用程序角色将无法访问任何已禁用 **guest** 的数据库。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，应用程序角色无法访问服务器级元数据，因为它们不与服务器级主体关联。 若要禁用此限制，从而允许应用程序角色访问服务器级元数据，请设置全局标志 4616。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 和 [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)。  
   

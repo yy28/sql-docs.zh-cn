@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c91c4e9a432992475daef8a987dea2dc9adf913
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: e6215199f10eeec216d1a701755b49b12f576a69
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290377"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893166"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -539,9 +539,9 @@ Windows Management Instrumentation (WMI) 必须能够连接到 [!INCLUDE[ssDE](.
  在安装过程中指定的帐户将设置为 **RSExecRole** 数据库角色的成员。 有关详细信息，请参阅 [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
 ###  <a name="SSAS"></a>SSAS 预配  
- [!INCLUDE[ssAS](../../includes/ssas-md.md)] 服务帐户要求各不相同，具体取决于服务器的部署方式。 如果您正在安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会要求您将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务配置在域帐户下运行。 为了支持 SharePoint 中内置的托管帐户功能，需要域帐户。 为此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序没有为 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装提供默认服务帐户，如虚拟帐户。 有关设置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的详细信息，请参阅 [配置 Power Pivot 服务帐户](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)。  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)] 服务帐户要求各不相同，具体取决于服务器的部署方式。 如果您正在安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会要求您将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务配置在域帐户下运行。 为了支持 SharePoint 中内置的托管帐户功能，需要域帐户。 为此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序没有为 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装提供默认服务帐户，如虚拟帐户。 有关设置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的详细信息，请参阅 [配置 Power Pivot 服务帐户](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)。  
   
- 对于所有其他独立 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 安装，您可以将服务设置为在域帐户、内置系统帐户、托管帐户或虚拟帐户下运行。 有关帐户设置的详细信息，请参阅[配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。  
+ 对于所有其他独立 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 安装，您可以将服务设置为在域帐户、内置系统帐户、托管帐户或虚拟帐户下运行。 有关帐户设置的详细信息，请参阅[配置服务帐户 (Analysis Services)](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)。  
   
  对于群集安装，您必须指定一个域帐户或一个内置系统帐户。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 故障转移群集既不支持托管帐户，也不支持虚拟帐户。  
   

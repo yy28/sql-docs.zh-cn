@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 87be157406b169a0978fd282c9ee40e4808c2599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d519d0c298e3a92506902bc42d3fdb4e8b1d2cc7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057843"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893748"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
 
@@ -111,7 +111,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 事件观察器任务编辑器（“常规”页）
   可以使用 **“WMI 事件观察器任务编辑器”** 对话框的 **“常规”** 页，对 WMI 事件观察器任务进行命名和说明。  
   
- 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
+ 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)（利用 WQL 进行查询）。  
   
 ### <a name="options"></a>选项  
  **名称**  
@@ -126,7 +126,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>WMI 事件观察器任务编辑器（“WMI 选项”页）
   可以使用“WMI 事件观察器任务编辑器”  对话框的“WMI 选项”  页，指定 Windows Management Instrumentation 查询语言 (WQL) 查询的源以及 WMI 事件观察器任务响应 Microsoft Windows Instrumentation (WMI) 事件的方式。  
   
- 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
+ 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)（利用 WQL 进行查询）。  
   
 ### <a name="static-options"></a>静态选项  
  **WMIConnectionName**  

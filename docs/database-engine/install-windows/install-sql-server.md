@@ -14,12 +14,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dff9635858d1fba1f5c8999bd6b49a3d845c412b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d790ef532a66bf7f8e34f69b9f982bef3416d0a1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055946"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893978"
 ---
 # <a name="install-sql-server"></a>安装 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "68055946"
 |-----------|-----------------|  
 |[配置 Windows 防火墙以允许 SQL Server 访问](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|本文概述了防火墙配置和 Windows 防火墙配置方法。|  
 |[将多宿主计算机配置为允许 SQL Server 访问](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|本文介绍如何在多宿主环境中配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。|  
-|[配置 Windows 防火墙以允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|可以按照本文中提供的步骤配置端口和防火墙设置，以允许访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或用于 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|  
+|[配置 Windows 防火墙以允许 Analysis Services 访问](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|可以按照本文中提供的步骤配置端口和防火墙设置，以允许访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或用于 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|  
   
 ## <a name="related-sections"></a>相关章节  
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

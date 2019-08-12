@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091822"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893085"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091822"
   
 |技术|描述|  
 |--------------|---------------|  
-|[Analysis Services 教程 (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)|了解如何开发和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格或多维模型。 还了解如何使用 PowerPivot 之类的工具来分析模型中的数据。|  
+|[Analysis Services 教程 (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何开发和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格或多维模型。 还了解如何使用 PowerPivot 之类的工具来分析模型中的数据。|  
 |[数据库引擎教程](../relational-databases/database-engine-tutorials.md)|了解如何连接到数据库引擎实例并生成和运行 Transact-SQL 语句。|  
 |[企业信息管理教程](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|了解如何使用 Microsoft EIM 技术管理企业中的信息。|  
 |[Integration Services 教程](../integration-services/integration-services-tutorials.md)|了解如何创建和部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包。|  

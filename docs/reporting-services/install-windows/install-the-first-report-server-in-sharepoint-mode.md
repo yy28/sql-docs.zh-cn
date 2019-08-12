@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775775"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892283"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>在 SharePoint 模式下安装第一个 Report Server
 
@@ -142,7 +142,7 @@ ms.locfileid: "64775775"
   
 9. 如果您已选择“数据库引擎服务”，请在 **“实例配置”** 页上接受 **MSSQLSERVER** 的默认实例，然后单击 **“下一步”** 。  
   
-     ![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "请注意") 与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
+     ![请注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "请注意") 与以前的 Reporting Services 体系结构一样，Reporting Services SharePoint 服务体系结构不基于 SQL Server“实例”。  
   
 10. 如果您看到 **“服务器配置”** 页，则键入相应的凭据。 如果要使用 Reporting Services 数据警报或订阅功能，则需要将 SQL Server 代理的“启动类型”更改为“自动”   。 根据已在计算机上安装的项，您可能不会看到 **“服务器配置”** 页。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "64775775"
 15. 安装将需要几分钟时间。 您将看到 **“完成”** 页，其中列出了功能以及各功能的状态。 您可能会看到一个信息对话框，指示计算机需要重新启动。  
   
 ##  <a name="bkmk_install_SSRS_sharedservice"></a> 步骤 2：注册并启动 Reporting Services SharePoint 服务  
- ![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![与 PowerShell 相关的内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
 > [!NOTE]
 > 如果您要安装到现有 SharePoint 场，则不需要完成本节中的步骤。 当你在本文档的上一节中运行 SQL Server 安装向导时，就已经安装并启动了 Reporting Services SharePoint 服务。  
@@ -254,7 +254,7 @@ ms.locfileid: "64775775"
   
 11. 用于创建服务应用程序的过程可能会需要几分钟才能完成。 当它完成时，将显示确认消息和一个指向 **“设置订阅和警报”** 页的链接。 如果要使用 Reporting Services 订阅功能或数据警报功能，请完成此设置步骤。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
- ![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 有关使用 PowerShell 创建 Reporting Services 服务应用程序的信息，请参阅：  
+ ![与 PowerShell 相关的内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") 有关使用 PowerShell 创建 Reporting Services 服务应用程序的信息，请参阅：  
   
 -   请参阅下面的 [等同于步骤 1-4 的 Windows PowerShell 脚本](#bkmk_full_script)部分。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "64775775"
   
      打开浏览器找到所需的 SharePoint 网站。 例如 https://\<servername>/sites/bi  
   
-2.  选择“设置”![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")  。  
+2.  选择“设置”![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")  。  
   
 3.  选择“网站设置”  。  
   
@@ -391,13 +391,13 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  对于 SharePoint 2016，需要配置 [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) 以使用 Excel Services。 有关详细信息，请参阅以下白皮书。
  
- - [在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View](../../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
+ - [在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [在多层 SharePoint 2016 场中部署 SQL Server 2016 PowerPivot 和 Power View](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
+ - [在多层 SharePoint 2016 场中部署 SQL Server 2016 PowerPivot 和 Power View](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  对于 SharePoint 2016，你需要创建并配置一个 Excel Services 应用程序。 有关详细信息，请参见以下内容：  
   
--   [在 Power Pivot 模式下安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md) 中的“为 Analysis Services 集成配置 Excel Services”部分。  
+-   [在 Power Pivot 模式下安装 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode) 中的“为 Analysis Services 集成配置 Excel Services”部分。  
   
 -   [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)。  
 

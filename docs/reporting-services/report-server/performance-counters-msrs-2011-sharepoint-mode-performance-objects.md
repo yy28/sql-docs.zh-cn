@@ -16,12 +16,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1818d38ef9d877ef30e74ad95d7893bf197ae23a
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412671"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892225"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>MSRS 2011 SharePoint 模式性能对象的性能计数器
   本主题介绍作为 **SharePoint 模式部署一部分的** MSRS 2011 Web Service SharePoint Mode **和** MSRS 2011 Windows Service SharePoint Mode [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 性能对象的性能计数器。  
@@ -119,7 +119,7 @@ ms.locfileid: "67412671"
 |**总快照更新数**|报表执行快照更新的总数。|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell Cmdlet 返回列表  
- ![与 PowerShell 相关的内容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")下面的 Windows PowerShell 脚本将返回 CounterSetName 以“msr”开头的计数器集  
+ ![与 PowerShell 相关的内容](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")下面的 Windows PowerShell 脚本将返回 CounterSetName 以“msr”开头的计数器集  
   
 ```  
 get-counter -listset msr*  

@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 9f09757c009c9690c4348b722e498a8772033657
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6294e6313178c17edce2b85aab947a52aaa3fbc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264623"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892575"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 
@@ -39,14 +39,14 @@ ms.locfileid: "68264623"
 |使用移动设备访问报告||||[HTML 5（支持查看 10 MB 以内的文件）](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5（支持查看 250 MB 以内的文件）](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 设备上的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 设备上的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [适用于 Windows 10 的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |协作和共享|||[SharePoint 网站](https://docs.microsoft.com/sharepoint/getting-started)|[SharePoint 团队网站](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI 网站](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**公司 BI**|IT 专业人员||||||  
-|创建多维/表格公司模型||||||[Analysis Services](../analysis-services/analysis-services.md)|  
+|创建多维/表格公司模型||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
 |创建即席数据可视化|||[Power View for SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |创建面板|||[SharePoint 面板](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint 服务](https://technet.microsoft.com/library/ee424392.aspx)||[Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |创建操作报表||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |创建自定义和嵌入式报表|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**高级分析**|数据科学家||||||  
 |执行自助式预测分析||||||[Excel 数据挖掘外接程序](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
-|使用数据挖掘算法||||||[Analysis Services 中的数据挖掘](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|使用数据挖掘算法||||||[Analysis Services 中的数据挖掘](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  *Reporting Services 具有大量支持交付操作报表和自定义报表的功能，如交付新式分页报表。

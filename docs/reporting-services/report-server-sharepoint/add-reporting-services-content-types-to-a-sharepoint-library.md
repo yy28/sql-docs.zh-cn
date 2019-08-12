@@ -9,12 +9,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: adac7275de5663d8e30c2638c270c13b453aa0ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574576"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887748"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>将 Reporting Services 内容类型添加到 SharePoint 库
 
@@ -60,7 +60,7 @@ ms.locfileid: "65574576"
   
 2.  转到 **“站点设置”** 。  
   
-    -   在 SharePoint 2013 中，单击 **“设置”** 图标。 ![SharePoint 设置](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
+    -   在 SharePoint 2013 中，单击 **“设置”** 图标。 ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
   
     -   在 SharePoint 2010 中，单击 **“网站操作”** ，然后单击 **“网站设置”** 。  
   

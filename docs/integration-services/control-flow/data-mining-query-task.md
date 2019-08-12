@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: bf7fc37921ae37996b5d93b1ed1e913232a28b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a981ec4f29cd1fe5dd9629498799dd488f03e3f8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101574"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893228"
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
 
@@ -43,9 +43,9 @@ ms.locfileid: "68101574"
 ## <a name="prediction-queries"></a>预测查询  
  查询是数据挖掘扩展 (DMX) 语句。 DMX 语言是 SQL 语言的扩展，为对挖掘模型的操作提供支持。 有关如何使用 DMX 语言的详细信息，请参阅[数据挖掘扩展插件 (DMX) 引用](../../dmx/data-mining-extensions-dmx-reference.md)。  
   
- 该任务可以查询根据同一挖掘结构生成的多个挖掘模型。 挖掘模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的某种数据挖掘算法生成的。 数据挖掘查询任务引用的挖掘结构可能包含使用不同算法生成的多个挖掘模型。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)和[数据挖掘算法（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 该任务可以查询根据同一挖掘结构生成的多个挖掘模型。 挖掘模型是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的某种数据挖掘算法生成的。 数据挖掘查询任务引用的挖掘结构可能包含使用不同算法生成的多个挖掘模型。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)和[数据挖掘算法（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
- 数据挖掘查询任务运行的预测查询可返回单行或数据集结果。 返回单行的查询称为单独查询。例如，预测夏季可能销售多少帆船的查询将返回一个数字。 有关返回单行的预测查询的详细信息，请参阅 [数据挖掘查询工具](../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 数据挖掘查询任务运行的预测查询可返回单行或数据集结果。 返回单行的查询称为单独查询。例如，预测夏季可能销售多少帆船的查询将返回一个数字。 有关返回单行的预测查询的详细信息，请参阅 [数据挖掘查询工具](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)。  
   
  查询结果将保存到表中。 如果数据挖掘查询任务指定名称的表已经存在，则任务可以在相同名称后追加数字来创建新表，也可以覆盖表内容。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68101574"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>数据挖掘查询任务编辑器（“挖掘模型”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“挖掘模型”** 选项卡指定要使用的挖掘结构和挖掘模型。  
   
- 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ### <a name="general-options"></a>常规选项  
  **名称**  
@@ -103,7 +103,7 @@ ms.locfileid: "68101574"
 ## <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“查询”** 选项卡，基于挖掘模式创建预测查询。 在此对话框中还可以将参数和结果集绑定到变量。  
   
- 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ### <a name="general-options"></a>常规选项  
  **名称**  
@@ -159,7 +159,7 @@ ms.locfileid: "68101574"
 ## <a name="data-mining-query-task-editor-output-tab"></a>数据挖掘查询任务编辑器（“输出”选项卡）
   可以使用 **“数据挖掘查询任务编辑器”** 对话框的 **“输出”** 选项卡指定预测查询的目标。  
   
- 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](../../analysis-services/data-mining/data-mining-solutions.md)。  
+ 若要了解有关在包中实现数据挖掘的详细信息，请参阅 [数据挖掘查询任务](../../integration-services/control-flow/data-mining-query-task.md) 和 [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)。  
   
 ### <a name="general-options"></a>常规选项  
  **名称**  

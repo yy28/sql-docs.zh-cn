@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775974"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893377"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序
 
@@ -51,7 +51,7 @@ ms.locfileid: "64775974"
 ##  <a name="bkmk_3ways_to_install"></a> 安装方法概述  
  使用以下两种方法之一可以安装用于 SharePoint 产品的 SQL Server 2016 Reporting Services 外接程序：  
   
--   **安装向导：** ![请注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")在 SQL Server 2016 中，此外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”  页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。  
+-   **安装向导：** ![请注意](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")在 SQL Server 2016 中，此外接程序可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导进行安装。 在向导的“功能选择”  页上，选择“用于 SharePoint 产品的 Reporting Services 外接程序”  。  
   
 -   **rsSharepoint.msi：** 外接程序可从安装介质直接安装，也可以通过下载安装。 rsSharepoint.msi 同时支持图形用户界面和命令行安装。 您必须以管理员权限来运行 .msi：首先使用提升权限打开命令提示符，然后从命令行运行 rsSharepoint.msi。 有关如何下载外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   

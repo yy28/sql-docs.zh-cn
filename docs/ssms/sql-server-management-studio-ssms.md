@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 05/29/2019
-ms.openlocfilehash: aba53145a679503fde2a965b818949885edaa92a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8632bd86a19bdce57114e36247f0b805da6804e7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680746"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893265"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>什么是 SQL Server Management Studio (SSMS)？ 
 
@@ -56,7 +56,7 @@ ms.locfileid: "67680746"
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目，可在其中开发并保存使用多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 和 XML for Analysis (XMLA) 编写的脚本。 可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 实例中执行管理任务或重新创建对象（如数据库和多维数据集）。 例如，可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目中开发一个 XMLA 脚本，以直接在现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 实例中创建新的对象。 可以将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 脚本项目保存为解决方案的一部分，以及与源代码管理集成在一起。
   
-有关如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [使用 SQL Server Management Studio 进行开发和实现](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)
+有关如何使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的详细信息，请参阅 [使用 SQL Server Management Studio 进行开发和实现](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理 Integration Services 解决方案
 
@@ -97,7 +97,7 @@ ms.locfileid: "67680746"
 - [安装非英语语言版本的 SQL Server Management Studio (SSMS)](install-other-languages.md)
 - [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [教程：编写 Transact-SQL 语句](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
-- [使用 SQL Server Data Tools 进行开发和实现](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)
+- [使用 SQL Server Data Tools 进行开发和实现](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)
 - [SQL Server Data Tools 中的 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
 - [教程：SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
 
