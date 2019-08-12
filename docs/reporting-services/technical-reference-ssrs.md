@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd0f8310fa0b11b8816f15194da19c856230991b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301524"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892815"
 ---
 # <a name="technical-reference-ssrs"></a>技术参考 (SSRS)
 
   查找有关使用 SQL Server Reporting Services 或管理 SQL Server Reporting Services 的工具和 PowerShell 参考文档。  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "小文件文件夹图标") 错误和事件   
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小文件文件夹图标") 错误和事件   
  [Reporting Services 错误的原因和解决方法](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "小文件文件夹图标") 功能参考   
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小文件文件夹图标") 功能参考   
  [报表设计器的 F1 帮助](../reporting-services/tools/report-designer-f1-help.md)  
   
  [报表管理器的 F1 帮助](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
@@ -41,14 +41,14 @@ ms.locfileid: "63301524"
   
  [呈现扩展插件的设备信息设置 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![小文件文件夹图标](../analysis-services/media/filefolder-small.png "Small File Folder Icon") 报表服务器命令提示实用工具   
+ ![小文件文件夹图标](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") 报表服务器命令提示实用工具   
  [RS.exe 实用工具 (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig 实用工具 (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt 实用工具 (SSRS)](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") Reporting Services WMI 提供程序类库   
+ ![Small File Folder Icon](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") Reporting Services WMI 提供程序类库   
  [Reporting Services WMI 提供程序库引用 (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

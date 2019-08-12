@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 6a148af7be04bba6bdf5c16ca7e85e94f1a0de31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d0e3f3106b7f4a51cf4423497c248c801ed7d6f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049438"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891430"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 和 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)。  
+  数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) 和 [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="configuration-of-the-data-mining-model-training-destination"></a>数据挖掘模型定型目标的配置  
- 如果目标结构以及在该结构上生成的模型的事例级别列具有内容类型 KEY TIME 或 KEY SEQUENCE，则输入数据必须基于此列排序。 例如，用 Microsoft 时序算法生成的模型使用内容类型 KEY TIME。 如果输入数据未排序，则对模型的处理可能失败。 如果数据需要排序，您可以事先在数据流中使用排序转换对数据进行排序。 此要求不适用于具有 KEY 内容类型的列。 有关详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)和[排序转换](../../integration-services/data-flow/transformations/sort-transformation.md)。  
+ 如果目标结构以及在该结构上生成的模型的事例级别列具有内容类型 KEY TIME 或 KEY SEQUENCE，则输入数据必须基于此列排序。 例如，用 Microsoft 时序算法生成的模型使用内容类型 KEY TIME。 如果输入数据未排序，则对模型的处理可能失败。 如果数据需要排序，您可以事先在数据流中使用排序转换对数据进行排序。 此要求不适用于具有 KEY 内容类型的列。 有关详细信息，请参阅[内容类型（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)和[排序转换](../../integration-services/data-flow/transformations/sort-transformation.md)。  
   
 > [!NOTE]  
 >  数据挖掘模型定型目标的输入必须经过排序。 若要对数据进行排序，您可以将数据挖掘模型定型目标的排序目标上游包括到该数据流中。 有关详细信息，请参阅 [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md)。  

@@ -6,12 +6,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 1a0bd129fc535b53d8d19ad76f99f3a86ba10c11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65135233"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888584"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>使用服务 SID 授予对 SQL Server 中的服务的访问权限
 
@@ -24,9 +24,9 @@ SQL Server 使用[每个服务的安全标识符 (SID)](https://support.microsof
 - System Center Operations Manager 运行状况服务 (NT SERVICE\HealthService)
 - Windows Server 故障转移群集 (WSFC) 服务 (NT SERVICE\ClusSvc)
 
-默认情况下，某些服务没有服务 SID。 必须使用 [SC.exe](https://docs.microsoft.com/windows/desktop/services/configuring-a-service-using-sc) 创建服务 SID。 Microsoft System Center Operations Manager 管理员已采用[此方法](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/)授予对 SQL Server 中的 HealthService 的访问权限。
+默认情况下，某些服务没有服务 SID。 必须使用 [SC.exe](/windows/desktop/services/configuring-a-service-using-sc) 创建服务 SID。 Microsoft System Center Operations Manager 管理员已采用[此方法](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/)授予对 SQL Server 中的 HealthService 的访问权限。
 
-创建并确认了服务 SID 后，必须授予它在 SQL Server 中的权限。 使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或查询创建 Windows 登录名，从而完成权限授予。 创建登录名后，就可以像其他登录名一样授予其权限、将其添加到角色以及映射到数据库。
+创建并确认了服务 SID 后，必须授予它在 SQL Server 中的权限。 使用 [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 或查询创建 Windows 登录名，从而完成权限授予。 创建登录名后，就可以像其他登录名一样授予其权限、将其添加到角色以及映射到数据库。
 
 > [!TIP]
 > 如果收到错误 `Login failed for user 'NT AUTHORITY\SYSTEM'`，请验证所需服务的服务 SID 是否存在、是否在 SQL Server 中创建了服务 SID 登录名，以及是否已在 SQL Server 中为该服务 SID 授予了相应权限。
@@ -39,7 +39,7 @@ SQL Server 使用[每个服务的安全标识符 (SID)](https://support.microsof
 
 ### <a name="granular-permissions-to-system-accounts"></a>系统帐户的具体权限
 
-系统历来通过为 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190)（[NT AUTHORITY\SYSTEM，语言为 en-us](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)）或 [NetworkService](https://docs.microsoft.com/windows/desktop/Services/networkservice-account)（[NT AUTHORITY\NETWORK SERVICE，语言为 en-us](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)）帐户创建登录名并授予这些登录名权限，来授予系统帐户权限。 此方法在以系统帐户运行的 SQL 中授予任何进程或服务权限。
+系统历来通过为 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190)（[NT AUTHORITY\SYSTEM，语言为 en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)）或 [NetworkService](/windows/desktop/Services/networkservice-account)（[NT AUTHORITY\NETWORK SERVICE，语言为 en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)）帐户创建登录名并授予这些登录名权限，来授予系统帐户权限。 此方法在以系统帐户运行的 SQL 中授予任何进程或服务权限。
 
 使用服务 SID 允许对特定服务授予权限。 该服务在运行时只能访问已授予权限的资源。 例如，如果 `HealthService` 作为 `LocalSystem` 运行并被授予 `View Server State`，则 `LocalSystem` 帐户仅在 `HealthService` 的上下文中运行时才具有对 `View Server State` 的权限。 如果任何其他进程尝试像 `LocalSystem` 一样访问 SQL 的服务器状态，则将被拒绝访问。
 
@@ -102,10 +102,10 @@ GO
 
 ## <a name="next-steps"></a>后续步骤
 
-有关服务 SID 结构的详细信息，请参阅 [SERVICE_SID_INFO 结构](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info)。
+有关服务 SID 结构的详细信息，请参阅 [SERVICE_SID_INFO 结构](/windows/win32/api/winsvc/ns-winsvc-service_sid_info)。
 
-了解[创建登录名](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql)时可用的其他选项。
+了解[创建登录名](/sql/t-sql/statements/create-login-transact-sql)时可用的其他选项。
 
-要将基于角色的安全性与服务 SID 一起使用，请参阅 SQL Server 中的[创建角色](https://docs.microsoft.com/sql/t-sql/statements/create-role-transact-sql)。
+要将基于角色的安全性与服务 SID 一起使用，请参阅 SQL Server 中的[创建角色](/sql/t-sql/statements/create-role-transact-sql)。
 
-了解向 SQL Server 中的服务 SID [授予权限](https://docs.microsoft.com/sql/t-sql/statements/grant-transact-sql)的不同方法。
+了解向 SQL Server 中的服务 SID [授予权限](/sql/t-sql/statements/grant-transact-sql)的不同方法。
