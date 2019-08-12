@@ -9,18 +9,18 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed777391af3695da69e04c0e2693cff912c76771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426287"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894035"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-以下文章提供了 azdata  工具中的 bdc config  命令的相关参考。 有关其他 azdata  命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+以下文章提供了 azdata 工具中的 bdc config 命令的相关参考。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -57,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--force -f`
 强制覆盖目标文件。
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://aka.ms/azdata-eula 查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -66,7 +66,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
@@ -92,7 +92,7 @@ azdata bdc config list --config-profile aks-dev-test
 要查看的配置类型。
 `cluster`
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://aka.ms/azdata-eula 查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -101,7 +101,7 @@ azdata bdc config list --config-profile aks-dev-test
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
@@ -142,7 +142,7 @@ Json 密钥路径，通过该路径可找到配置中所需的部分或值（即
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
@@ -169,7 +169,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
@@ -196,7 +196,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
@@ -231,7 +231,7 @@ azdata bdc config replace --config-file custom/cluster.json --json-values '$.spe
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
@@ -275,10 +275,10 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 azdata  命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装“azdata”工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

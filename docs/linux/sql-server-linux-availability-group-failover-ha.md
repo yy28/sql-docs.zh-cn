@@ -1,5 +1,5 @@
 ---
-title: 管理可用性组故障转移-Linux 上的 SQL Server
+title: 管理可用性组故障转移 - Linux 上的 SQL Server
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,78 +10,78 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027217"
 ---
-# <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 always On 可用性组故障转移
+# <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always on 可用性组故障转移
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在可用性组 (AG) 的上下文中，主角色和辅助可用性副本的角色是通常可互换的过程称为故障转移。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”  。 自动和计划的手动故障转移会保留所有数据。 在可用性副本级别将 AG 故障转移。 也就是说，AG 故障转移到其中一个辅助副本 （当前故障转移目标）。 
+在可用性组 (AG) 的上下文中，可用性副本的主要角色和次要角色通常在称为故障转移的过程中可互换。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”  。 自动故障转移和计划的手动故障转移会保留所有数据。 AG 在可用性副本级别进行故障转移。 也就是说，AG 故障转移到其辅助副本之一（当前故障转移目标）。 
 
 有关故障转移的背景信息，请参阅[故障转移和故障转移模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
-## <a name="failover"></a>手动故障转移
+## <a name="failover">手动故障转移</a>
 
-使用群集管理工具进行故障转移 AG 由外部群集管理器管理。 例如，如果解决方案使用 Pacemaker 管理 Linux 群集，使用`pcs`RHEL 或 Ubuntu 上执行手动故障转移。 在 SLES 上使用`crm`。 
+使用群集管理工具对由外部群集管理器管理的 AG 进行故障转移。 例如，如果解决方案使用 Pacemaker 管理 Linux 集群，则使用 `pcs` 在 RHEL 或 Ubuntu 上执行手动故障转移。 在 SLES 中使用 `crm`。 
 
 > [!IMPORTANT]
-> 在正常操作中，请勿使用 Transact-SQL 或 SQL Server 管理工具（如 SSMS 或 PowerShell）进行故障转移。 当`CLUSTER_TYPE = EXTERNAL`，仅可接受的值`FAILOVER_MODE`是`EXTERNAL`。 借助这些设置，所有手动或自动故障转移操作都由外部群集管理器执行。 若要强制故障转移可能丢失数据的说明，请参阅[强制故障转移](#forceFailover)。
+> 在正常操作中，请勿使用 Transact-SQL 或 SQL Server 管理工具（如 SSMS 或 PowerShell）进行故障转移。 当 `CLUSTER_TYPE = EXTERNAL` 时，`FAILOVER_MODE` 唯一可接受的值为 `EXTERNAL`。 通过这些设置，所有手动或自动故障转移操作都由外部集群管理器执行。 有关强制故障转移（可能发生数据丢失）的说明，请参阅[强制故障转移](#forceFailover)。
 
 ### <a name="a-namemanualfailovermanual-failover-steps"></a><a name="manualFailover">手动故障转移步骤
 
-若要故障转移，将成为主副本的辅助副本必须同步。 如果辅助副本是异步的[更改的可用性模式](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)。
+要进行故障转移，将成为主副本的次要副本必须为同步副本。 如果次要副本是异步的，需要[更改可用性模式](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)。
 
-手动故障转移在两个步骤。
+通过两个步骤手动进行故障转移。
 
-   首先，[手动故障转移将 AG 资源移](#manualMove)从拥有到新节点的资源的群集节点。
+   首先，通过从拥有资源的群集节点[将 AG 资源移动到新节点来手动进行故障转移](#manualMove)。
 
-   在群集故障转移可用性组资源，并且添加位置约束。 此约束配置要在新节点上运行的资源。 为了成功地故障转移在将来删除此约束。
+   群集故障转移 AG 资源并添加位置约束。 此约束将资源配置为在新节点上运行。 删除此约束以便将来能顺利进行故障转移。
 
-   第二个，[删除位置约束](#removeLocConstraint)。
+   其次，[删除位置约束](#removeLocConstraint)。
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">第 1 步。 手动故障转移移动可用性组资源
+#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">步骤 1。 通过移动可用性组资源手动进行故障转移
 
-若要手动故障转移一个名为可用性组资源*ag_cluster*到群集节点名为*nodeName2*，运行于分发版的相应命令：
+要手动将名为 ag_cluster 的 AG 资源故障转移到名为 nodeName2 的群集节点，请运行适用于你的分发的命令   ：
 
-- **RHEL/Ubuntu 示例**
+- RHEL/Ubuntu 示例 
 
    ```bash
    sudo pcs resource move ag_cluster-master nodeName2 --master
    ```
 
-- **SLES 示例**
+- SLES 示例 
 
    ```bash
    crm resource migrate ag_cluster nodeName2
    ```
 
 >[!IMPORTANT]
->手动故障转移资源后，你需要删除位置约束，会自动添加。
+>手动故障转移资源后，需要删除自动添加的位置约束。
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> 第 2 步。 删除位置约束
+#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">步骤 2。 删除位置约束
 
-在手动故障转移期间`pcs`命令`move`或`crm`命令`migrate`添加新的目标节点上放置的资源的位置约束。 若要查看新约束，请在手动移动资源后运行以下命令：
+在手动故障转移期间，`pcs` 命令 `move` 或 `crm` 命令 `migrate` 会为要放置在新目标节点上的资源添加位置约束。 若要查看新约束，请在手动移动资源后运行以下命令：
 
-- **RHEL/Ubuntu 示例**
+- RHEL/Ubuntu 示例 
 
    ```bash
    sudo pcs constraint list --full
    ```
 
-- **SLES 示例**
+- SLES 示例 
 
    ```bash
    crm config show
    ```
 
-约束的手动故障转移而创建的示例。 
+因手动故障转移而创建的约束示例。 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
-- **RHEL/Ubuntu 示例**
+- RHEL/Ubuntu 示例 
 
    在以下命令中，`cli-prefer-ag_cluster-master` 是需要删除的约束的 ID。 `sudo pcs constraint list --full` 会返回此 ID。 
    
@@ -89,9 +89,9 @@ ms.locfileid: "68027217"
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
    
-- **SLES 示例**
+- SLES 示例 
 
-   在下面的命令`cli-prefer-ms-ag_cluster`是约束的 ID。 `crm config show` 会返回此 ID。 
+   在以下命令中，`cli-prefer-ms-ag_cluster` 是约束的 ID。 `crm config show` 会返回此 ID。 
    
    ```bash
    crm configure
@@ -104,20 +104,20 @@ ms.locfileid: "68027217"
 
 详细信息：
 - [Red Hat - 管理群集资源](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
-- [Pacemaker-手动移动资源](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
- [SLES 管理指南-资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
+- [Pacemaker - 手动移动资源](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
+ [SLES 管理指南 - 资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 ## <a name="forceFailover"></a> 强制故障转移 
 
-强制故障转移严格限制用于灾难恢复。 在这种情况下，您无法故障转移群集管理工具与因为主数据中心处于断开状态。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 如果您必须立即将服务还原到可用性组，并且愿意承担丢失数据的风险，仅强制故障转移。
+强制故障转移只用于灾难恢复。 在这种情况下，无法使用群集管理工具进行故障转移，因为主数据中心已关闭。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 仅在后述情况下才执行强制故障转移：需要立即恢复对 AG 的服务且愿意冒失去数据的风险。
 
-如果不能使用群集管理工具与群集-例如，进行交互，如果群集不响应由于灾难事件中的主数据中心，您可能需要强制故障转移，以绕过外部群集管理器。 此过程不被建议用于常规操作，因为数据丢失的风险。 在群集管理工具无法执行故障转移操作时，请使用它。 就功能而言，此过程非常类似于[执行强制手动故障转移](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)AG 在 Windows 上。
+如果无法使用群集管理工具与群集进行交互 - 例如，如果群集由于主数据中心中的灾难事件而无响应，则可能不得不执行强制故障转移来绕过外部群集管理器。 建议不要将此过程用于常规操作，因为存在数据丢失的风险。 仅在群集管理工具无法执行故障转移操作时使用它。 从功能上讲，此过程类似于在 Windows 中对 AG [执行强制手动故障转移](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。
  
-有关强制故障转移此过程是特定于 Linux 上的 SQL Server。
+此强制故障转移的过程特定于 Linux 上的 SQL Server。
 
-1. 验证可用性组资源不由管理群集任何更多。 
+1. 验证 AG 资源不再由群集管理。 
 
-      - 在目标群集节点上设置为非托管模式的资源。 此命令向发出信号停止资源监视和管理的资源代理。 例如： 
+      - 在目标群集节点上将资源设置为非托管模式。 此命令指示资源代理停止资源监视和管理。 例如： 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
@@ -130,46 +130,46 @@ ms.locfileid: "68027217"
       ```
 
       >[!NOTE]
-      >当你删除某个资源时，还将删除所有关联的约束。 
+      >删除某个资源时，还将删除所有关联的约束。 
 
-1. 在承载辅助副本的 SQL Server 实例中，设置会话上下文变量`external_cluster`。
+1. 在承载次要副本的 SQL Server 实例上，设置会话上下文变量 `external_cluster`。
 
    ```Transact-SQL
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. 使用 Transact SQL AG 故障转移。 在以下示例中，将为`<MyAg>`在可用性组的名称。 连接到托管目标次要副本的 SQL Server 实例，并运行以下命令：
+1. 使用 Transact-SQL 对 AG 进行故障转移。 在以下示例中，将 `<MyAg>` 替换为 AG 的名称。 连接到承载目标次要副本的 SQL Server 实例，并运行以下命令：
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <MyAg> FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```
 
-1.  在强制故障转移后将可用性组恢复到正常状态之前重新启动的群集资源监视和管理或重新创建可用性组资源。 审阅[强制故障转移后的重要任务](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp)。
+1.  强制故障转移后，先让 AG 恢复正常运行状态，再重新启动群集资源监视和管理，或重新创建 AG 资源。 查看[强制故障转移后的重要任务](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp)。
 
-1.  请重新启动群集资源监视和管理：
+1.  重启群集资源监视和管理：
 
-   若要重新启动的群集资源监视和管理，请运行以下命令：
+   要重新启动群集资源监视和管理，请运行以下命令：
 
    ```bash
    sudo pcs resource manage <resourceName>
    sudo pcs resource cleanup <resourceName>
    ```
 
-   如果你删除群集资源，重新创建它。 若要重新创建群集资源，请按照的说明[创建可用性组资源](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。
+   如果删除了群集资源，请重新创建它。 要重新创建群集资源，请按照[创建可用性组资源](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)中的说明进行操作。
 
 >[!Important]
->不要为灾难恢复演练中使用上述步骤，因为它们可能会丢失数据。 而是更改异步副本添加到同步的及其使用说明[正常的手动故障转移](#manualFailover)。
+>不要将上述步骤用于灾难恢复演练，因为可能会导致数据丢失。 而是将异步副本更改为同步，并安装[常规手动故障转移](#manualFailover)的说明操作。
 
 ## <a name="database-level-monitoring-and-failover-trigger"></a>数据库级别监视和故障转移触发器
 
-有关`CLUSTER_TYPE=EXTERNAL`，故障转移触发器语义会不同于 WSFC。 当可用性组的 WSFC 中的 SQL Server 实例上时，转换带`ONLINE`状态将在数据库会导致可用性组运行状况报告错误。 在响应中，群集管理器将触发故障转移操作。 在 Linux 上，SQL Server 实例不能与群集通信。 监视数据库运行状况*由外而内*。 如果用户选择的数据库级别的故障转移监视和故障转移 (通过将选项设置`DB_FAILOVER=ON`创建可用性组时)，群集将检查数据库状态是否`ONLINE`每次运行监视操作。 群集查询中的状态`sys.databases`。 不同于任何状态`ONLINE`，它将触发故障转移，自动 （如果满足自动故障转移条件）。 故障转移的实际时间取决于监视操作的频率以及 sys.databases 中正在更新的数据库状态。
+对于 `CLUSTER_TYPE=EXTERNAL`，故障转移触发器语义不同于 WSFC。 AG 位于 WSFC 中的 SQL Server 实例上时，转换数据库的 `ONLINE` 状态会导致 AG 运行状况报告错误。 在响应中，群集管理器触发故障转移操作。 在 Linux 上，SQL Server 实例不能与群集通信。 “由外而内”监视数据库运行状况  。 如果用户选择了数据库级故障转移监视和故障转移（通过在创建 AG 时设置选项 `DB_FAILOVER=ON`），则每次群集运行监视操作时，都会检查数据库状态是否为 `ONLINE`。 群集在 `sys.databases` 中查询状态。 对于不同于 `ONLINE` 的任何状态，群集将自动触发故障转移（如满足自动故障转移条件）。 故障转移的实际时间取决于监视操作的频率以及 sys.databases 中正在更新的数据库状态。
 
-自动故障转移要求至少一个同步副本。
+自动故障转移至少需要一个同步副本。
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置 SQL Server 可用性组群集资源的 Red Hat Enterprise Linux 群集](sql-server-linux-availability-group-cluster-rhel.md)
+[为 SQL Server 可用性组群集资源配置 Red Hat Enterprise Linux 群集](sql-server-linux-availability-group-cluster-rhel.md)
 
 [为 SQL Server 可用性组群集资源配置 SUSE Linux Enterprise Server 群集](sql-server-linux-availability-group-cluster-sles.md)
 
-[配置 Ubuntu 群集 SQL Server 可用性组群集资源](sql-server-linux-availability-group-cluster-ubuntu.md)
+[为 SQL Server 可用性组群集资源配置 Ubuntu 群集](sql-server-linux-availability-group-cluster-ubuntu.md)

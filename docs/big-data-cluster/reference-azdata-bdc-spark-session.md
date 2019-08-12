@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20b7ac3dcf72482e80278ce0f0df922026232a6d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 9bf2cdca204598d72f511364f59f45f551298703
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426097"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811291"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
@@ -52,7 +52,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>示例
 创建会话。
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>可选参数
 #### `--session-kind -k`
@@ -91,7 +91,7 @@ Spark 会话的名称。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
@@ -102,7 +102,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>示例
 列出所有活动会话。
 ```bash
-azdata spark session list
+azdata bdc spark session list
 ```
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
@@ -112,7 +112,7 @@ azdata spark session list
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
@@ -124,7 +124,7 @@ azdata bdc spark session info --session-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的会话的会话信息。
 ```bash
-azdata spark session info --session-id 0
+azdata bdc spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`
@@ -137,7 +137,7 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
@@ -149,7 +149,7 @@ azdata bdc spark session log --session-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的会话的会话日志。
 ```bash
-azdata spark session log --session-id 0
+azdata bdc spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`
@@ -162,7 +162,7 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
@@ -174,7 +174,7 @@ azdata bdc spark session state --session-id -i
 ### <a name="examples"></a>示例
 获取 ID 为 0 的会话的会话状态。
 ```bash
-azdata spark session state --session-id 0
+azdata bdc spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`
@@ -187,7 +187,7 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
@@ -199,7 +199,7 @@ azdata bdc spark session delete --session-id -i
 ### <a name="examples"></a>示例
 删除会话。
 ```bash
-azdata spark session delete --session-id 0
+azdata bdc spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--session-id -i`
@@ -212,10 +212,10 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 **azdata** 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装“azdata”工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

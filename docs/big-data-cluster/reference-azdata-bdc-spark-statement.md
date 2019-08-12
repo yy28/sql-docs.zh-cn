@@ -9,18 +9,18 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 778980ac6b93e7db79d59182fbd18ab4cfdb8b75
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 6e90887cf83d23dc80afa9e37b429ad958e841ad
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426087"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894023"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-以下文章为“azdata”工具中的“bdc spark statement”命令提供了参考   。 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md) 
+以下文章为“azdata”工具中的“bdc spark statement”命令提供了参考。 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -51,7 +51,7 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
@@ -78,7 +78,7 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
@@ -105,7 +105,7 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
@@ -132,10 +132,10 @@ Spark 会话 ID 号。
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)  。 有关如何安装“azdata”工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)  。
+有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装“azdata”工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

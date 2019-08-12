@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495410"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941129"
 ---
 # <a name="extended-events-overview"></a>扩展事件概述
 
@@ -52,7 +52,7 @@ ms.locfileid: "68495410"
   
 ## <a name="extended-events-architecture"></a>扩展事件体系结构  
 
-扩展事件是我们所谓的用于服务器系统的常规事件处理系统。 扩展事件基础结构支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中数据的关联，并且在某些情况下，还支持操作系统和数据库应用程序中数据的关联。 在操作系统的情况下，必须将扩展事件输出定向到 Windows 事件跟踪 (ETW)。 ETW 可将事件数据与操作系统或应用程序事件数据相关联。  
+扩展事件是我们所谓的用于服务器系统的常规事件处理系统。 扩展事件基础结构支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中数据的关联，并且在某些情况下，还支持操作系统和数据库应用程序中数据的关联。 在操作系统的情况下，必须将扩展事件输出定向到 Windows 事件跟踪 (ETW)。 ETW 可将事件数据与操作系统或应用程序事件数据相关联。  
 
 所有应用程序都具有在应用程序外部和内部均有用的执行点。 在应用程序内部，可以使用任务初始执行期间收集到的信息对异步处理进行排队。 在应用程序外部，执行点为监视实用程序提供信息。 此信息涉及受监视应用程序的行为和性能特征。  
 

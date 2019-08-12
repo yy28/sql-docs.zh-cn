@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 488394cbf4b52a952ffc46ab2ec6c9a273466bd5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 0a2891256bd6e45de356d620d3fa75256528b697
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426037"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894009"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -75,7 +75,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--config-profile -c`
 大数据群集配置配置文件，用于部署群集：['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，则可将环境变量 ACCEPT_EULA 设置为“是”。 可以在 https://aka.ms/azdata-eula 和 https://go.microsoft.com/fwlink/?LinkId=2002534 查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在[https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)中查看此产品的许可条款。
 #### `--node-label -l`
 大数据群集节点标签，用于指定要部署到的节点。
 #### `--force -f`
@@ -88,7 +88,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
@@ -116,10 +116,10 @@ azdata bdc delete --name <cluster_name>
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息和示例，请参阅 [http://jmespath.org/](http://jmespath.org/])。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 **azdata** 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装“azdata”工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

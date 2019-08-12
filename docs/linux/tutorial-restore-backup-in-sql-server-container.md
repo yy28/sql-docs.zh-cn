@@ -1,6 +1,6 @@
 ---
-title: 在 Docker 中的将 SQL Server 数据库还原
-description: 本教程演示如何还原新的 Linux Docker 容器中的 SQL Server 数据库备份。
+title: 在 Docker 中还原 SQL Server 数据库
+description: 本教程说明如何在新的 Linux Docker 容器中还原 SQL Server 数据库备份。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,52 +8,52 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31018f8285bd5f7609aada56b16ca9178b8d0860
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 0a91e3fd121cf5e49aca3bbe079d41416aca805a
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032122"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476211"
 ---
-# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的将 SQL Server 数据库还原
+# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中还原 SQL Server 数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-本教程演示如何移动和 SQL Server 备份文件还原到 SQL Server 2017 Linux 容器映像在 Docker 上运行。
+本教程演示如何将 SQL Server 备份文件移动和还原到在 Docker 上运行的 SQL Server 2017 Linux 容器映像。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-本教程演示如何移动和 SQL Server 备份文件还原到在 Docker 上运行 SQL Server 2019 预览 Linux 容器映像。
+本教程演示如何将 SQL Server 备份文件移动和还原到在 Docker 上运行的 SQL Server 2019 预览版 Linux 容器映像。
 
 ::: moniker-end
 
 > [!div class="checklist"]
-> * 请求和运行最新的 SQL Server Linux 容器映像。
-> * Wide World Importers 数据库文件复制到容器。
-> * 在容器中的将数据库还原。
-> * 运行 TRANSACT-SQL 语句来查看和修改数据库。
-> * 备份已修改的数据库。
+> * 拉取并运行最新的 SQL Server Linux 容器映像。
+> * 将 Wide World Importers 数据库文件复制到容器中。
+> * 还原容器中的数据库。
+> * 运行 Transact-SQL 语句来查看和修改数据库。
+> * 备份修改后的数据库。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>必备条件
 
-* 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
+* 任何受支持的 Linux 分发或用于 Mac/Windows 的 Docker 上的 Docker 引擎 1.8+。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
 * 至少 2 GB 的磁盘空间
 * 至少 2 GB 的 RAM
 * [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
-## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
+## <a name="pull-and-run-the-container-image"></a>拉取并运行容器映像
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 打开 bash 终端在 Linux/Mac 上的或在 Windows 上提升的 PowerShell 会话。
+1. 在 Linux/Mac 上打开 bash 终端，或在 Windows 上打开提升的 PowerShell 会话。
 
-1. 从 Docker Hub 中拉出 SQL Server 2017 Linux 容器映像。
+1. 从 Docker 中心请求 SQL Server 2017 Linux 容器映像。
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
@@ -64,7 +64,7 @@ ms.locfileid: "68032122"
    ```
 
    > [!TIP]
-   > 在本教程中，整个 docker 命令给出了示例 bash shell (Linux/Mac) 和 PowerShell (Windows)。
+   > 本教程中提供了分别适用于 bash shell (Linux/Mac) 和 PowerShell (Windows) 的 docker 命令示例。
 
 1. 要通过 Docker 运行容器映像，可使用下列命令：
 
@@ -82,10 +82,10 @@ ms.locfileid: "68032122"
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-   此命令创建 SQL Server 2017 容器与开发人员版 （默认值）。 SQL Server 端口**1433年**作为端口在主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用于保存 SQL Server 创建的数据。
+   此命令使用开发人员版本创建 SQL Server 2017 容器（默认）。 SQL Server 端口 1433 在主机上公开为端口 1401   。 可选的 `-v sql1data:/var/opt/mssql` 参数创建名为 sql1ddata  的数据卷容器。 这用于保留 SQL Server 创建的数据。
 
    > [!NOTE]
-   > 在容器中运行生产 SQL Server 版本的过程是略有不同。 有关详细信息，请参阅[运行生产容器映像](sql-server-linux-configure-docker.md#production)。 如果使用相同的容器名称和端口，本演练的其余部分仍适用生产容器。
+   > 在容器中运行 SQL Server 生产版本的过程略有不同。 有关详细信息，请参阅[运行生产容器映像](sql-server-linux-configure-docker.md#production)。 如果使用相同的容器名称和端口，本教程的其余部分仍适用于生产容器。
 
 1. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
@@ -110,20 +110,20 @@ ms.locfileid: "68032122"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 打开 bash 终端在 Linux/Mac 上的或在 Windows 上提升的 PowerShell 会话。
+1. 在 Linux/Mac 上打开 bash 终端，或在 Windows 上打开提升的 PowerShell 会话。
 
-1. 从 Docker 中心请求 SQL Server 2019 预览 Linux 容器映像。
+1. 从 Docker Hub 拉取 SQL Server 2019 预览版 Linux 容器映像。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    > [!TIP]
-   > 在本教程中，整个 docker 命令给出了示例 bash shell (Linux/Mac) 和 PowerShell (Windows)。
+   > 本教程中提供了分别适用于 bash shell (Linux/Mac) 和 PowerShell (Windows) 的 docker 命令示例。
 
 1. 要通过 Docker 运行容器映像，可使用下列命令：
 
@@ -131,17 +131,17 @@ ms.locfileid: "68032122"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
-   此命令创建 SQL Server 2019 预览版容器与开发人员版 （默认值）。 SQL Server 端口**1433年**作为端口在主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用于保存 SQL Server 创建的数据。
+   此命令使用开发人员版本创建 SQL Server 2019 预览版容器（默认）。 SQL Server 端口 1433 在主机上公开为端口 1401   。 可选的 `-v sql1data:/var/opt/mssql` 参数创建名为 sql1ddata  的数据卷容器。 这用于保留 SQL Server 创建的数据。
 
 1. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
@@ -168,11 +168,11 @@ ms.locfileid: "68032122"
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
-## <a name="copy-a-backup-file-into-the-container"></a>将备份文件复制到容器
+## <a name="copy-a-backup-file-into-the-container"></a>将备份文件复制到容器中
 
-本教程使用[Wide World Importers 示例数据库](../sample/world-wide-importers/wide-world-importers-documentation.md)。 使用以下步骤来下载并将 Wide World Importers 数据库备份文件复制到 SQL Server 容器。
+本教程使用 [Wide World Importers 示例数据库](../sample/world-wide-importers/wide-world-importers-documentation.md)。 使用以下步骤下载 Wide World Importers 数据库备份文件并将其复制到 SQL Server 容器。
 
-1. 首先，使用**docker exec**创建备份文件夹。 以下命令将创建 **/var/opt/mssql/backup**目录内的 SQL Server 容器。
+1. 首先，使用 docker exec  来创建备份文件夹。 以下命令在 SQL Server 容器中创建 /var/opt/mssql/backup 目录  。
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -182,7 +182,7 @@ ms.locfileid: "68032122"
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. 接下来，下载[Wideworldimporters-full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)到主机文件。 以下命令导航到主页/用户目录并下载备份文件作为**wwi.bak**。
+1. 接下来，将 [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 文件下载到主机。 以下命令导航到主页/用户目录，并将备份文件下载为 wwi.bak  。
 
    ```bash
    cd ~
@@ -193,7 +193,7 @@ ms.locfileid: "68032122"
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. 使用**docker cp**若要将备份文件复制到的容器中 **/var/opt/mssql/backup**目录。
+1. 使用 docker cp 将备份文件复制到 /var/opt/mssql/backup 目录的容器中   。
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -205,12 +205,12 @@ ms.locfileid: "68032122"
 
 ## <a name="restore-the-database"></a>还原数据库
 
-备份文件现在位于容器内。 在还原之前备份，它是必须知道的逻辑文件名称和在备份的文件类型。 以下 TRANSACT-SQL 命令检查备份和还原使用执行**sqlcmd**容器中。
+备份文件现在位于容器内。 在还原备份之前，请务必了解备份中的逻辑文件名和文件类型。 以下 Transact-SQL 命令使用容器中的 sqlcmd 检查备份并执行还原  。
 
 > [!TIP]
-> 本教程使用**sqlcmd**的容器中，因为容器附带了预安装此工具。 但是，您也可以运行 TRANSACT-SQL 语句与其他客户端在容器外的工具如[Visual Studio Code](sql-server-linux-develop-use-vscode.md)或[SQL Server Management Studio](sql-server-linux-manage-ssms.md)。 若要连接，请使用已映射到容器中的端口 1433年的主机端口。 在此示例中，这是**localhost，1401年**在主机上并**Host_IP_Address，1401年**远程。
+> 本教程在容器中使用 sqlcmd，因为容器内预安装了该工具  。 不过，也可以使用容器外的其他客户端工具，如 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 或 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)，来运行 Transact-SQL 语句。 若要连接，请使用映射到容器中的 1433 端口的主机端口。 在此示例中，为主机上的“localhost,1401”和远程的“Host_IP_Address,1401”   。
 
-1. 运行**sqlcmd**列出逻辑文件名和路径在备份容器内。 这通过**RESTORE FILELISTONLY** TRANSACT-SQL 语句。
+1. 在容器中运行 sqlcmd，列出备份中的逻辑文件名和路径  。 这是通过“RESTORE FILELISTONLY”Transact-SQL 语句实现的  。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -225,7 +225,7 @@ ms.locfileid: "68032122"
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   应看到类似于以下输出：
+   会得到类似于下面的输出：
 
    ```
    LogicalName   PhysicalName
@@ -236,7 +236,7 @@ ms.locfileid: "68032122"
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. 调用**RESTORE DATABASE**命令在容器内的将数据库还原。 为每个文件上, 一步中指定新路径。
+1. 调用 RESTORE DATABASE 命令，还原容器中的数据库  。 为上一步中的每个文件指定新路径。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -250,7 +250,7 @@ ms.locfileid: "68032122"
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   应看到类似于以下输出：
+   会得到类似于下面的输出：
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -278,9 +278,9 @@ ms.locfileid: "68032122"
    RESTORE DATABASE successfully processed 58455 pages in 18.069 seconds (25.273 MB/sec).
    ```
 
-## <a name="verify-the-restored-database"></a>确认还原的数据库
+## <a name="verify-the-restored-database"></a>验证还原的数据库
 
-运行以下查询以在容器中显示的数据库名称的列表：
+运行以下查询以在容器中显示数据库名称的列表：
 
 ```bash
 sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -294,13 +294,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    -Q "SELECT Name FROM sys.Databases"
 ```
 
-应会看到**WideWorldImporters**中的数据库列表。
+数据库列表中应会显示 WideWorldImporters  。
 
-## <a name="make-a-change"></a>进行更改
+## <a name="make-a-change"></a>做出更改
 
-以下步骤在数据库中进行更改。
+以下步骤在数据库做出更改。
 
-1. 运行查询以查看中的前 10 个项**Warehouse.StockItems**表。
+1. 运行查询，查看 Warehouse.StockItems 表中的前 10 项  。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -314,7 +314,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
-   您应该看到的项标识符和名称的列表：
+   应会看到项标识符和名称的列表：
 
    ```
    StockItemID StockItemName
@@ -331,7 +331,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
             10 USB food flash drive - chocolate bar
    ```
 
-1. 使用以下更新的第一项的说明**更新**语句：
+1. 用以下 UPDATE 语句更新第一项的说明  ：
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -345,7 +345,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   应看到类似于以下文本的输出：
+   会得到类似于下面文本的输出：
 
    ```
    (1 rows affected)
@@ -354,11 +354,11 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
              1 USB missile launcher (Dark Green)
    ```
 
-## <a name="create-a-new-backup"></a>创建新的备份
+## <a name="create-a-new-backup"></a>新建备份
 
-已将数据库还原到的容器之后，可能想要定期创建数据库备份正在运行的容器内。 步骤上一步骤，但按相反的顺序遵循类似的模式。
+将数据库还原到容器后，可能还需要定期在正在运行的容器中创建数据库备份。 步骤与之前步骤的模式类似，但顺序相反。
 
-1. 使用**备份数据库**Transact-SQL 命令以在容器中创建的数据库备份。 本教程中创建一个新的备份文件， **wwi_2.bak**，在以前创建 **/var/opt/mssql/backup**目录。
+1. 使用“BACKUP DATABASE”Transact-SQL 命令在容器中创建数据库备份  。 本教程在之前创建的 /var/opt/mssql/backup 目录中创建新的备份文件 wwi_2.bak  。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -372,7 +372,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "BACKUP DATABASE [WideWorldImporters] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
    ```
 
-   应看到类似于以下输出：
+   会得到类似于下面的输出：
 
    ```
    10 percent processed.
@@ -391,7 +391,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    BACKUP DATABASE successfully processed 59099 pages in 25.056 seconds (18.427 MB/sec).
    ```
 
-1. 接下来，将复制出的容器和主机上的备份文件。
+1. 接下来，将备份文件从容器中复制到主计算机上。
 
    ```bash
    cd ~
@@ -405,14 +405,14 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ls -l wwi*
    ```
 
-## <a name="use-the-persisted-data"></a>使用所保留的数据
+## <a name="use-the-persisted-data"></a>使用持久化数据
 
-除了保护您的数据执行数据库备份，还可以使用数据卷容器。 本教程中创建的开头**sql1**容器与`-v sql1data:/var/opt/mssql`参数。 **Sql1data**数据卷容器仍然存在 **/var/opt/mssql**数据即使在删除容器。 以下步骤中完全删除**sql1**容器，然后创建新的容器， **sql2**，使用所保留的数据。
+除了获取数据库备份来保护数据外，还可以使用数据卷容器。 本教程的开头使用 `-v sql1data:/var/opt/mssql` 参数创建了 sql1 容器  。 即使已删除了容器，sql1data 数据卷容器仍会保留 /var/opt/mssql 数据   。 以下步骤完全删除 sql1 容器  ，然后使用保存的数据创建新的容器 sql2  。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 停止**sql1**容器。
+1. 停止 sql1 容器  。
 
    ```bash
    sudo docker stop sql1
@@ -422,7 +422,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker stop sql1
    ```
 
-1. 删除容器。 这不会删除以前创建**sql1data**数据卷容器并在它所保留的数据。
+1. 删除容器。 这不会删除以前创建的 sql1data 数据卷容器和其中保存的数据  。
 
    ```bash
    sudo docker rm sql1
@@ -432,7 +432,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker rm sql1
    ```
 
-1. 创建新的容器， **sql2**，并重用**sql1data**数据卷容器。
+1. 创建新的容器 **sql2**，并重新使用 **sql1data** 数据卷容器。
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -446,7 +446,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-1. Wide World Importers 数据库现在位于新的容器。 运行一个查询，验证以前所做的更改。
+1. Wide World Importers 数据库现在位于新容器中。 运行查询以验证以前所做的更改。
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -461,13 +461,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > SA 密码不是为指定的密码**sql2**容器， `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`。 所有 SQL Server 数据已从还原**sql1**，包括本教程前面从更改的密码。 实际上，由于还原 /var/opt/mssql 中的数据会忽略如下一些选项。 出于此原因，密码是`<YourNewStrong!Passw0rd>`如下所示。
+   > SA 密码不是你为 sql2 容器指定的密码  `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`。 所有 SQL Server 数据都是从 sql1 还原的，其中包括本教程前面部分中已更改的密码  。 实际上，由于在 /var/opt/mssql. 中还原数据，与此类似的某些选项会被忽略。 出于此原因，密码是 `<YourNewStrong!Passw0rd>`，如下所示。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 停止**sql1**容器。
+1. 停止 sql1 容器  。
 
    ```bash
    sudo docker stop sql1
@@ -477,7 +477,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker stop sql1
    ```
 
-1. 删除容器。 这不会删除以前创建**sql1data**数据卷容器并在它所保留的数据。
+1. 删除容器。 这不会删除以前创建的 sql1data 数据卷容器和其中保存的数据  。
 
    ```bash
    sudo docker rm sql1
@@ -487,21 +487,21 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    docker rm sql1
    ```
 
-1. 创建新的容器， **sql2**，并重用**sql1data**数据卷容器。
+1. 创建新的容器 **sql2**，并重新使用 **sql1data** 数据卷容器。
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
     ```
 
-1. Wide World Importers 数据库现在位于新的容器。 运行一个查询，验证以前所做的更改。
+1. Wide World Importers 数据库现在位于新容器中。 运行查询以验证以前所做的更改。
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -516,7 +516,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > SA 密码不是为指定的密码**sql2**容器， `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`。 所有 SQL Server 数据已从还原**sql1**，包括本教程前面从更改的密码。 实际上，由于还原 /var/opt/mssql 中的数据会忽略如下一些选项。 出于此原因，密码是`<YourNewStrong!Passw0rd>`如下所示。
+   > SA 密码不是你为 sql2 容器指定的密码  `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`。 所有 SQL Server 数据都是从 sql1 还原的，其中包括本教程前面部分中已更改的密码  。 实际上，由于在 /var/opt/mssql. 中还原数据，与此类似的某些选项会被忽略。 出于此原因，密码是 `<YourNewStrong!Passw0rd>`，如下所示。
 
 ::: moniker-end
 
@@ -525,24 +525,24 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本教程中，您学习了如何在 Windows 上备份数据库并将其移到运行 SQL Server 2017 的 Linux 服务器。 你将了解到：
+在本教程中，已学习如何在 Windows 上备份数据库，并将其移动到运行 SQL Server 的 Linux 服务器 2017。 学习了如何：
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本教程中，您学习了如何在 Windows 上备份数据库并将其移到运行 SQL Server 2019 预览版的 Linux 服务器。 你将了解到：
+在本教程中，已学习如何在 Windows 上备份数据库，并将其移动到运行 SQL Server 的 Linux 服务器 2019 预览版。 学习了如何：
 
 ::: moniker-end
 
 > [!div class="checklist"]
 > * 创建 SQL Server Linux 容器映像。
 > * 将 SQL Server 数据库备份复制到容器中。
-> * 运行与在容器内的 TRANSACT-SQL 语句**sqlcmd**。
-> * 创建和提取在容器中的备份文件。
-> * 使用在 Docker 中的数据卷容器将 SQL Server 数据持久保存。
+> * 在容器中使用 sqlcmd 运行 Transact-SQL 语句  。
+> * 创建和从容器中提取备份文件。
+> * 使用 Docker 中的数据卷容器来持久保存 SQL Server 数据。
 
 接下来，查看其他 Docker 配置和故障排除方案：
 
 > [!div class="nextstepaction"]
->[SQL Server 2017 的 Docker 配置指南](sql-server-linux-configure-docker.md)
+>[Docker 上的 SQL Server 2017 配置指南](sql-server-linux-configure-docker.md)
