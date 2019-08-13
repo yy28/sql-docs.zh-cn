@@ -1,73 +1,92 @@
 ---
-title: SQL Server 2016 中的 R Services
-description: 对关系数据，包括数据科学和统计建模和预测分析、 数据可视化等集成的 R 任务的 SQL Server 中的 R。
+title: 什么是 SQL Server 2016 R Services？
+titleSuffix: ''
+description: R Services 是 SQL Server 2016 的一项功能, 它使你能够使用关系数据运行 R 脚本。 可以使用开源包和框架, 并使用 Microsoft R 包进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server R Services 的基础知识。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 08/12/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 973c09be9cff6e66043b056e1a772ab8974cebb4
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469910"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957483"
 ---
-# <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
+# <a name="what-is-sql-server-2016-r-services"></a>什么是 SQL Server 2016 R Services？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-R Services 是 SQL Server 2016 数据库引擎实例的附加组件，用于在 SQL Server 上执行 R 代码和函数。 代码在可扩展性框架中运行（与核心引擎进程隔离），但可作为存储过程、包含 R 语句的 T-SQL 脚本或包含 T-SQL 的 R 代码，此时完全适用于关系数据。 
-
-R Services 包括 R 的基本分发，与 Microsoft 的企业 R 包重叠，以便你可以加载和处理多个核心上的大量数据，并将结果聚合成一个统一输出。 Microsoft 的 R 函数和算法专为规模和实用性而设计：在 Microsoft 设计和支持的商业服务器产品中提供预测分析、统计建模、数据可视化功能和领先的机器学习算法。 
-
-R 库包括[**RevoScaleR**](ref-r-revoscaler.md)、 [**MicrosoftML (R)** ](ref-r-microsoftml.md)和其他。 由于 R Services 与数据库引擎集成，你可以使分析与数据位于较近的位置，并消除与数据移动相关的成本和安全风险。
+R Services 是 SQL Server 2016 的一项功能, 它使你能够使用关系数据运行 R 脚本。 可以使用开源包和框架, 并使用[Microsoft R 包](#packages)进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server R Services 的基础知识。
 
 > [!Note]
-> R Services 在 SQL Server 2017 及更高版本中已重命名为[SQL Server 机器学习服务](../what-is-sql-server-machine-learning.md), 反映了 Python 的添加。
+> R Services 在 SQL Server 2017 及更高版本中已重命名为[机器学习服务](../what-is-sql-server-machine-learning.md), 同时支持 Python 和 R。
 
-## <a name="components"></a>组件
+## <a name="what-is-r-services"></a>什么是 R Services？
 
-SQL Server 2016 仅适用于 R。 下表介绍了 SQL Server 2016 中的功能。
+SQL Server R Services 使你能够在数据库中执行 R 脚本。 您可以使用它来准备和清理数据, 执行特征工程, 以及在数据库中训练、评估和部署机器学习模型。 此功能在数据所在的位置运行脚本, 并消除跨网络到另一台服务器的数据传输。
 
-| 组件 | Description |
-|-----------|-------------|
-| SQL Server 快速启动板服务 | 用于管理外部 R 运行时和 SQL Server 实例之间的通信的服务。 |
-| R 包 | [**RevoScaleR**](ref-r-revoscaler.md)是主库的此库中的可缩放。此库中的函数是使用最广泛的函数。 在这些库中可以找到数据转换和操作、统计摘要、可视化以及许多形式的建模和分析。 此外，这些库中的函数可自动在可用内核之间分配工作负荷以进行并行处理，并且能够处理由计算引擎协调和管理的数据块。  <br/>[**MicrosoftML (R)** ](ref-r-microsoftml.md)添加了机器学习算法，用于创建用于文本分析、图像分析和情绪分析的自定义模型。 <br/>[**sqlRUtils** ](ref-r-sqlrutils.md)供了辅助函数，用于将R脚本放入T-SQL存储过程、向数据库注册存储过程以及从R开发环境中运行存储过程。<br/>[**olapR** ](ref-r-olapr.md)用于在 R 中指定的 MDX 查询|
-| Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) 是 Microsoft 提供的 R 的开源分发版。其中包括包和解释器。 请始终使用安装程序安装的 MRO 版本。 |
-| R 工具 | R 控制台窗口和命令提示符是 R 分发版中的标准工具。  |
-| R 示例和脚本 |  开源 R 和 RevoScaleR 包中包括内置数据集，以便你可以使用预安装的数据来创建和运行脚本 |
-| 在 R 中预先训练的模型 | 预先训练的模型为特定用例创建，由 Microsoft 的数据科学工程团队维护。 可以按原样使用预先训练的模型对文本中的积极/消极情绪进行评分，或者使用你提供的新数据输入检测图像中的特征。 这些模型在 R 服务中运行，但不能通过 SQL Server 安装程序安装。 有关详细信息，请参阅[在 SQL Server 上安装预先训练的机器学习模型](../install/sql-pretrained-models-install.md)。 |
+R 服务中包含 R 的基本分发版。 除了 Microsoft 包[RevoScaleR](../r/ref-r-revoscaler.md)、 [MicrosoftML](../r/ref-r-microsoftml.md)、[olapR] 以外, 还可以使用开源包和框架。/r/ref-r-olapr.md) 和[sqlrutils](../r/ref-r-sqlrutils.md) (适用于 r)。
 
-## <a name="using-r-services"></a>使用 R Services
+R Services 使用扩展性框架在 SQL Server 中运行 R 脚本。 详细了解此功能的工作原理:
 
-开发人员和分析师通常具有在本地 SQL Server 实例上运行的代码。 可以通过添加机器学习服务并启用外部脚本执行，在 SQL 服务器模式中运行 R 代码的能力： 存储过程中包装脚本、 存储模型中的 SQL Server 表，或结合查询中的 T-SQL 和 R 函数。
++ [扩展性框架](../concepts/extensibility-framework.md)
++ [R 扩展](../concepts/extension-r.md)
 
-数据库内分析的最常见方法是使用[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，将 R 脚本作为输入参数传递。
+## <a name="what-can-i-do-with-r-services"></a>如何处理 R Services？
 
-经典的客户端-服务器交互是另一种方法。 在具有 IDE 的任何客户端工作站中，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，然后编写代码，将执行（称为“远程计算上下文”）推送到数据，以及将操作推送到远程 SQL 服务器。 
+您可以使用 R Services 在 SQL Server 中生成和培训机器学习和深度学习模型。 你还可以将现有模型部署到 R 服务, 并将关系数据用于预测。
 
-最后，如果使用的是[独立服务器](r-server-standalone.md)和 Developer Edition，则可以使用相同的库和解释器在客户端工作站上构建解决方案，然后在 SQL Server 机器学习服务（数据库中）上部署生产代码。 
+SQL Server R Services 的预测类型的示例包括:
 
-## <a name="how-to-get-started"></a>如何开始
+|||
+|-|-|
+|分类/分类|自动将客户反馈划分为正值和负值类别|
+|回归/预测连续值|根据大小和位置预测房屋价格|
+|异常检测|检测欺诈银行交易 |
+|建议|根据客户以前购买的内容建议在线购物者可能希望购买的产品|
 
-从安装开始，将二进制文件附加到您最喜欢的开发工具上，并编写第一个脚本。
+### <a name="how-to-execute-r-scripts"></a>如何执行 R 脚本
 
-**步骤 1：** 安装和配置软件。 
+在 R Services 中执行 R 脚本的方法有两种:
 
-+ [安装 SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)
++ 最常见的方法是使用 T-sql 存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-**步骤 2：** 使用以下任一教程获取动手体验:
++ 你还可以使用首选的 R 客户端并编写脚本将执行 (称为*远程计算上下文*) 推送到远程 SQL Server。 有关详细信息, 请参阅如何[设置数据科学客户端开发](../r/set-up-a-data-science-client.md)。
 
-+ [教程：使用 R 了解数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [教程：带有 R 的端到端演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+<a name="packages"></a>
 
-**步骤 3：** 添加你最喜欢的 R 包, 并将其与 Microsoft 提供的包结合使用
+## <a name="r-packages"></a>R 包
 
-+ [SQL Server 的 R 包管理](install-additional-r-packages-on-sql-server.md)
+除了 Microsoft 的企业包外, 还可以使用开源包和框架。 大多数常见的开源 R 包都预安装在 R Services 中。 还包括 Microsoft 提供的以下 R 包:
 
+| package | 描述 |
+|-|-|
+| [RevoScaleR](../r/ref-r-revoscaler.md) | 可缩放的 R 的主包。数据转换和操作、统计汇总、可视化和多种形式的建模。 此外, 此包中的函数会自动在可用内核之间分发工作负载, 以便进行并行处理。 |
+| [MicrosoftML (R)](../r/ref-r-microsoftml.md) | 添加机器学习算法, 以便为文本分析、图像分析和情绪分析创建自定义模型。 |
+| [olapR](../r/ref-r-olapr.md) | R 函数, 用于针对 SQL Server Analysis Services OLAP 多维数据集的 MDX 查询。 |
+| [sqlrutils](../r/ref-r-sqlrutils.md) | 一种机制, 用于在 T-sql 存储过程中使用 R 脚本, 将该存储过程注册到数据库, 并从[R 开发环境](../r/set-up-a-data-science-client.md)运行存储过程。 |
+| [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) 是 Microsoft 的增强版本。 它是一个用于统计分析和数据科学的完整开源平台。 它基于与 R 兼容的 100%, 并且包括更多的性能和可再现性的功能。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="how-do-i-get-started-with-rservices"></a>如何实现 RServices 入门？
 
- [安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
+1. [安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
+
+1. 配置开发工具。 你可以使用:
+
+    + [Azure Data Studio](../../azure-data-studio/what-is.md)或[SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)使用 t-sql 和存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)来执行 R 脚本。
+    + 在自己的开发便携式计算机或工作站上运行脚本。 可以从本地向下拉取数据, 也可以远程推送执行, 以便 SQL Server [RevoScaleR](../r/ref-r-revoscaler.md)。 有关详细信息, 请参阅如何[设置数据科学客户端开发](../r/set-up-a-data-science-client.md)。
+
+1. 编写第一个 R 脚本
+
+    + 快速入门：[在 R 中运行 "Hello world" 脚本](../tutorials/quickstart-r-run-using-tsql.md)
+    + 快速入门：[在 R 中创建预测模型](../tutorials/quickstart-r-create-predictive-model.md)
+    + 教程：[在 t-sql 中使用 R](../tutorials/sqldev-in-database-r-for-sql-developers.md):探索数据, 执行特征工程, 定型和部署模型, 并进行预测 (五部分系列)
+    + 教程：[使用 r Services 中的 r Services](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md):探索数据, 创建图形和绘图, 执行特征工程, 定型和部署模型, 并进行预测 (六部分系列)
+
+## <a name="next-steps"></a>后续步骤
+
++ [安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [为 R 开发设置数据科学客户端](../r/set-up-a-data-science-client.md)

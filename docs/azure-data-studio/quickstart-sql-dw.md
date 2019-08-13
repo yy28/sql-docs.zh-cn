@@ -1,7 +1,7 @@
 ---
-title: 快速入门：连接和查询 Azure SQL 数据仓库
+title: 快速入门：连接并查询 Azure SQL 数据仓库
 titleSuffix: Azure Data Studio
-description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 Azure SQL 数据仓库并运行查询
+description: 本快速入门演示如何使用 Azure Data Studio 连接到 Azure SQL 数据仓库并运行查询
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,58 +11,58 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959409"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]进行连接和查询 Azure SQL 数据仓库中的数据
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 Azure SQL 数据仓库中的数据
 
-本快速入门演示如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 Azure SQL 数据仓库，然后使用 TRANSACT-SQL 语句来创建、 插入和选择数据。 
+本快速入门演示如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 Azure SQL 数据仓库，然后使用 Transact-SQL 语句创建、插入和选择数据。 
 
-## <a name="prerequisites"></a>必要條件
-若要完成本快速入门教程，需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 数据仓库。
+## <a name="prerequisites"></a>必备条件
+若要完成此快速入门，需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 和 Azure SQL 数据仓库。
 
-- [安装[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
+- [安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)。
 
 如果还没有 SQL 数据仓库，请参阅[创建 SQL 数据仓库](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)。
 
-请注意，服务器名称和登录凭据 ！
+请记下服务器名称和登录凭据！
 
 
 ## <a name="connect-to-your-data-warehouse"></a>连接到数据仓库
 
-使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]来建立与 Azure SQL 数据仓库服务器的连接。
+使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 建立与 Azure SQL 数据仓库服务器的连接。
 
-1. 首次运行[!INCLUDE[name-sos](../includes/name-sos-short.md)]**连接**应打开页面。 如果没有看到**连接**页上，单击**添加连接**，或**新连接**中的图标**服务器**边栏：
+1. 首次运行 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，应会打开“连接”页  。 如果无法看到“连接”页，请单击“SERVERS”边栏中的“添加连接”或“新建连接”图标     ：
    
-   ![新的连接图标](media/quickstart-sql-dw/new-connection-icon.png)
+   ![“新建连接”图标](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. 本文使用*SQL 登录名*，但*Windows 身份验证*也受支持。 填写字段，如下所示使用服务器名称、 用户名和密码*你*Azure SQL 服务器：
+2. 本文使用 SQL 登录名，但也支持 Windows 身份验证   。 使用 Azure SQL 服务器的服务器名称、用户名和密码，按如下所示填写字段  ：
 
-   | 设置       | 建议的值 | Description |
+   | 设置       | 建议的值 | 描述 |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **服务器名称** | 完全限定的服务器名称 | 名称应类似于此： **sqldwsample.database.windows.net** |
+   | **服务器名称** | 完全限定的服务器名称 | 名称应类似于：sqldwsample.database.windows.net  |
    | **身份验证** | SQL 登录名| 在本教程中使用 SQL 身份验证。 |
-   | **用户名** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
+   | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
-   | **是否保存密码？** | 是或否 | 如果您不想要每次都输入密码，请选择是。 |
-   | **数据库名称** | *将保留为空* | 要连接到的数据库的名称。 |
-   | **服务器组** | 选择<Default> | 如果你创建服务器组，您可以设置为特定的服务器组。 | 
+   | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
+   | **数据库名称** | 保留空白  | 要连接到的数据库的名称。 |
+   | **服务器组** | 选择 <Default> | 如果已创建服务器组，则可以设置为特定服务器组。 | 
 
-   ![新的连接图标](media/quickstart-sql-dw/new-connection-screen.png) 
+   ![“新建连接”图标](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 如果你的服务器的防火墙规则允许 Azure Data Studio，若要连接，没有**创建新的防火墙规则**窗体将打开。 完成窗体以创建新的防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
+3. 如果服务器没有可允许 Azure Data Studio 连接的防火墙规则，则会打开“新建防火墙规则”窗体  。 填写窗体以新建防火墙规则。 有关详细信息，请参阅[防火墙规则](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
-   ![新的防火墙规则](media/quickstart-sql-dw/firewall.png)  
+   ![新建防火墙规则](media/quickstart-sql-dw/firewall.png)  
 
-4. 在将服务器连接成功打开后*服务器*侧栏。
+4. 成功连接后，你的服务器将在“服务器”边栏中打开  。
 
 ## <a name="create-the-tutorial-data-warehouse"></a>创建教程数据仓库
-1. 在服务器上，在对象资源管理器中右键单击并选择**新查询。**
+1. 在对象资源管理器中右键单击服务器，选择“新建查询”  。
 
-1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
+1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
 
    ```sql
     IF NOT EXISTS (
@@ -80,17 +80,17 @@ ms.locfileid: "67959409"
 
 ## <a name="create-a-table"></a>创建表
 
-查询编辑器仍然连接到*master*数据库，但我们想在*TutorialDB*数据库中创建一个表。 
+查询编辑器仍连接到 master 数据库，但需要在 TutorialDB 数据库中创建一个表   。 
 
-1. 将连接上下文更改为**TutorialDB**:
+1. 将连接上下文更改为 TutorialDB  ：
 
    ![更改上下文](media/quickstart-sql-database/change-context.png)
 
 
-1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
+1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
 
    > [!NOTE]
-   > 您可以将其追加到编辑器中，或者覆盖编辑器中的前一个查询。 注意，单击**运行**只执行所选的查询。 如果没有选择，单击**运行**执行编辑器中的所有查询。
+   > 可在编辑器中将此片段追加到或覆盖之前的查询。 请注意，单击“运行”仅执行选定的查询  。 如果未选择任何内容，单击“运行”将执行编辑器中所有的查询  。
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -112,7 +112,7 @@ ms.locfileid: "67959409"
 
 ## <a name="insert-rows"></a>插入行
 
-1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
+1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -126,24 +126,24 @@ ms.locfileid: "67959409"
 
 
 ## <a name="view-the-result"></a>查看结果
-1. 以下代码片段粘贴到查询编辑器，然后单击**运行**:
+1. 将以下代码段粘贴到查询编辑器中，并单击“运行”  ：
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. 显示查询的结果：
+1. 显示查询结果：
 
    ![选择结果](media/quickstart-sql-dw/select-results.png)
 
 
 ## <a name="clean-up-resources"></a>清理资源
 
-在本快速入门生成此集合中的其他文章。 如果你打算继续使用后续快速入门，请执行不清理在本快速入门教程中创建的资源。 如果不打算继续，请使用以下步骤删除本快速入门在 Azure 门户中创建的资源。
+此集合中的其他项目将在本快速入门的基础上生成。 如果打算继续使用后续的快速入门，请勿清除在本快速入门中创建的资源。 如果不打算继续使用，请在 Azure 门户中按照以下步骤删除本快速入门创建的资源。
 通过删除不再需要的资源组来清理资源。 有关详细信息，请参阅[清理资源](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，你已成功连接到 Azure SQL 数据仓库，并运行查询，尝试[代码编辑器教程](tutorial-sql-editor.md)。
+现在已成功连接到 Azure SQL 数据仓库并运行查询，请试用[代码编辑器教程](tutorial-sql-editor.md)。

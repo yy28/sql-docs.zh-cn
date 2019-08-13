@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959389"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731062"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
@@ -137,8 +137,8 @@ ms.locfileid: "67959389"
 **解决方法：** 将在下一版本中修复。 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458)：如果使用了无效版本，则 Dacpac 提取会导致 SqlToolsService 出现故障 <br/>
 **解决方法：** 重新启动 Azure Data Studio 并确保使用正确的版本。
-- “新建笔记本”和“打开笔记本”图标丢失 <br/> 
-解决方法 **** ：弃用旧连接类型。 建议连接到 SQL Server 终结点，然后将按预期获取所有操作（新建笔记本、Spark 作业）。 
+- “新建笔记本”和“打开笔记本”图标丢失 <br/>
+**解决方法：** 弃用旧连接类型。 建议连接到 SQL Server 终结点，然后将按预期获取所有操作（新建笔记本、Spark 作业）。 
 
 ## <a name="february-2019"></a>2019 年 2 月
 

@@ -1,7 +1,7 @@
 ---
-title: Always On 可用性组运行 Linux 的容器
+title: 运行 Linux 的容器的 Always On 可用性组
 titleSuffix: SQL Server
-description: 本文介绍了 SQL Server 容器上的可用性组
+description: 本文介绍 SQL Server 容器上的可用性组
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,42 +11,42 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3910c74be803b7fc63c8bf560fc637387e06ee15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910471"
 ---
-# <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On 可用性组的 SQL Server 容器
+# <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server 容器的 AlwaysOn 可用性组
 
-SQL Server 2019 支持可用性组上的 Kubernetes 群集中的容器。 对于可用性组，部署 SQL Server [Kubernetes 运算符](https://coreos.com/blog/introducing-operators.html)到 Kubernetes 群集。 运算符可帮助包、 部署和管理可用性组在群集中。
+SQL Server 2019 支持 Kubernetes 群集中容器上的可用性组。 对于可用性组，将 SQL Server [Kubernetes 运算符](https://coreos.com/blog/introducing-operators.html)部署到 Kubernetes 群集。 运算符有助于打包、部署和管理群集中的可用性组。
 
 ![Kubernetes 容器中的 AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
-在上图中，四个节点 kubernetes 群集承载可用性组具有三个副本。 该解决方案包含以下组件：
+在上图中，四节点的 kubernetes 群集托管具有三个副本的可用性组。 此解决方案包含以下组件：
 
-* Kubernetes [*部署*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 部署包括运算符和配置映射。 这些提供容器映像、 软件和部署可用性组的 SQL Server 实例所需的说明。
+* Kubernetes [部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)  。 部署包含运算符和配置映射。 它们提供为可用性组部署 SQL Server 实例所需的容器映像、软件和说明。
 
-* 三个节点，每个托管[ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)。 包含 StatefulSet [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)。 包含每个 pod:
-  * 运行一个 SQL Server 实例的 SQL Server 容器。
+* 三个节点，每个节点都托管一个 [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)  。 StatefulSet 包含一个 [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)  。 每个 pod 包含：
+  * 运行 SQL Server 实例的 SQL Server 容器。
   * 可用性组代理。 
 
-* 两个[ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)与可用性组相关。 ConfigMaps 提供有关以下信息：
+* 与可用性组相关的两个 [ConfigMaps](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)  。 ConfigMaps 提供以下信息：
   * 运算符的部署。
   * 可用性组。
 
- * [*永久性卷*](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)是存储的片段。 一个*永久性卷声明*(PVC) 是由用户存储的请求。 每个容器隶属于数据和日志存储有关 PVC。 在 Azure Kubernetes 服务 (AKS) 中，你[创建永久性卷声明](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)到基于存储类自动预配存储。
+ * [永久性卷](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)是一系列存储区  。 永久性卷声明 (PVC) 是指用户对存储空间的请求  。 每个容器都与针对数据和日志存储的某个 PVC 相关联。 在 Azure Kubernetes Service (AKS) 中，可以[创建永久性卷声明](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)，以便基于存储类自动预配存储。
 
 
-此外，群集存储[*机密*](https://kubernetes.io/docs/concepts/configuration/secret/)密码、 证书、 密钥和其他敏感信息。
+此外，群集还存储密码、证书、密钥和其他敏感信息等的[机密](https://kubernetes.io/docs/concepts/configuration/secret/)  。
 
-## <a name="deploy-the-availability-group-in-kubernetes"></a>部署在 Kubernetes 中的可用性组
+## <a name="deploy-the-availability-group-in-kubernetes"></a>在 Kubernetes 中部署可用性组
 
-若要部署 Kubernetes 中的可用性组：
+若要在 Kubernetes 中部署可用性组：
 
 1. 创建 Kubernetes 群集
 
-   为可用性组，至少三个节点为创建 SQL Server 加上一个节点的母版。
+   对于一个可用性组，需要为 SQL Server 创建至少三个节点，并为主节点创建一个节点。
 
 1. 部署运算符
 
@@ -54,31 +54,31 @@ SQL Server 2019 支持可用性组上的 Kubernetes 群集中的容器。 对于
 
 1. 部署 StatefulSet
 
-   运算符侦听的说明部署 StatefulSet。 会自动在三个单独节点上创建的 SQL Server 实例和与外部群集管理器配置可用性组。
+   运算符侦听有关部署 StatefulSet 的说明。 它将在三个单独的节点上自动创建 SQL Server 实例，并使用外部群集管理器配置可用性组。
 
-1. 创建数据库并将它们附加到可用性组
+1. 创建数据库并将其附加到可用性组
 
-有关详细步骤，请参阅[Always On 可用性组的 SQL Server 容器](sql-server-ag-kubernetes.md)。
+有关详细步骤，请参阅[为 SQL Server 容器创建 Always On 可用性组](sql-server-ag-kubernetes.md)。
 
 ## <a name="sql-server-kubernetes-operator"></a>SQL Server Kubernetes 运算符
 
-在部署该运算符后，它将注册自定义 SQL Server 资源。 使用运算符将部署此资源。  每个资源对应的 SQL Server 实例，包含特定属性，如`sapassword`和`monitoring policy`。 运算符将分析资源和部署 Kubernetes StatefulSet。
+部署运算符后，它会注册自定义 SQL Server 资源。 使用运算符部署此资源。  每个资源都与某个 SQL Server 的实例相对应并包含特定属性，如 `sapassword` 和 `monitoring policy`。 运算符分析资源并部署 Kubernetes StatefulSet。
 
 StatfulSet 包含：
 
-* mssql server 容器
+* mssql-server 容器
 
-* mssql-ha-监督程序容器
+* mssql-ha-supervisor 容器
 
-运算符、 HA 监督程序和 SQL Server 的代码封装在名为的 Docker 映像`mcr.microsoft.com/mssql/ha`。 此映像包含以下二进制文件：
+运算符、HA 主管和 SQL Server 的代码封装在名为 `mcr.microsoft.com/mssql/ha` 的 Docker 映像中。 此映像包含以下二进制文件：
 
 * `mssql-operator`
 
-    此过程部署为单独的 Kubernetes 部署。 它会注册[Kubernetes 自定义资源](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)调用`SqlServer`(sqlservers.mssql.microsoft.com)。 然后它侦听此类资源正在创建或更新的 Kubernetes 群集中。 对于每个此类事件，它将创建或更新对应的实例的 Kubernetes 资源 (例如 StatefulSet 或`mssql-server-k8s-init-sql`作业)。
+    此过程部署为单独的 Kubernetes 部署。 它将注册名为 `SqlServer` (sqlservers.mssql.microsoft.com) 的 [Kubernetes 自定义资源](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)。 然后，它会侦听在 Kubernetes 群集中创建或更新的此类资源。 对于每个此类事件，它都会为相应的实例（例如 StatefulSet 或 `mssql-server-k8s-init-sql` 作业）创建或更新 Kubernetes 资源。
 
 * `mssql-server-k8s-health-agent`
 
-    此 web 服务器服务 Kubernetes[实时性探测](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)确定 SQL Server 实例的运行状况。 通过调用监视本地 SQL Server 实例的运行状况`sp_server_diagnostics`并将结果与监视器策略进行比较。
+    此 web 服务器提供 Kubernetes [运行情况探测](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)以确定 SQL Server 实例的运行状况。 通过调用 `sp_server_diagnostics` 并将结果与监视器策略进行比较来监视本地 SQL Server 实例的运行状况。
 
 * `mssql-ha-supervisor`
 
@@ -86,33 +86,33 @@ StatfulSet 包含：
 
 * `mssql-server-k8s-ag-agent`
   
-    此过程监视单个 SQL Server 实例上的可用性组副本的运行状况，并执行故障转移。
+    此过程监视单个 SQL Server 实例上的 AG 副本的运行状况，并执行故障转移。
 
-    它还维护群首选举。
+    它还维护引导符选择。
 
 * `mssql-server-k8s-init-sql`
   
-    此 Kubernetes[作业](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)适用于 SQL Server 实例的所需的状态配置。 每次创建或更新 SqlServer 资源时，将运算符创建作业。 它可确保与自定义资源对应的目标 SQL Server 实例具有所需的资源中所述的配置。
+    此 Kubernetes [作业](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)将所需状态配置应用于 SQL Server 实例。 每次创建或更新 SqlServer 资源时，运算符都会创建作业。 它确保与自定义资源对应的目标 SQL Server 实例具有资源中所述的所需配置。
 
-    例如，如果任何以下设置是必需的它完成它们：
-  * 更新的 SA 密码
+    例如，如果需要以下任何设置，它会完成这些设置：
+  * 更新 SA 密码
   * 为代理创建 SQL 登录名
-  * 创建了 DBM 端点
+  * 创建 DBM 终结点
 
 * `mssql-server-k8s-rotate-creds`
   
-    此 Kubernetes 作业实现轮换凭据任务。 创建此作业，以请求更新的 SA 密码、 代理 SQL 登录密码、 DBM 证书等。SA 密码指定为作业参数。 其他类型是自动生成。
+    此 Kubernetes 作业实现“轮换凭据”任务。 创建此作业以请求更新 SA 密码、代理 SQL 登录密码、DBM 证书等。SA 密码指定为作业参数。 其他几项自动生成。
 
 * `mssql-server-k8s-failover`
 
-   Kubernetes 作业实现手动故障转移工作流。
+   Kubernetes 作业，用于实现手动故障转移工作流。
 
 ### <a name="notes"></a>说明
 
-而不考虑可用性组配置中，运算符始终将部署 HA 监督程序。 如果 SqlServer 资源不会列出任何可用性组，该运算符将仍部署此容器。
+无论 AG 配置如何，运算符都将始终部署 HA 主管。 如果 SqlServer 资源未列出任何 AG，运算符仍将部署此容器。
 
-运算符映像的版本与 SQL Server 映像的版本相同。
+用于运算符映像的版本与用于 SQL Server 映像的版本相同。
 
 ## <a name="next-steps"></a>后续步骤
 
-> [在 Kubernetes 中的 SQL Server 容器](tutorial-sql-server-containers-kubernetes.md)
+> [Kubernetes 中的 SQL Server 容器](tutorial-sql-server-containers-kubernetes.md)
