@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463610"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941141"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
 
@@ -75,13 +75,13 @@ ms.locfileid: "67463610"
   
 1. **“参数”窗格** 报表查看器工具栏显示各个参数的提示和默认值。 可以在参数窗格中自定义参数布局。 有关详细信息，请参阅 [自定义报表中的参数窗格（报表生成器）](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中所创建的移动报表中使用。  
   
-2. **@SalesDate 参数**参数 @SalesDate 的数据类型为 DateTime  。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
+2. \@SalesDate 参数  参数 @SalesDate 的数据类型为 DateTime  。 文本框旁边会显示“选择日期”提示。 若要修改日期，请在文本框中键入新日期或使用日历控件。  
   
-3. **@ShowAll 参数**参数 @ShowAll 的数据类型为 Boolean  。 使用单选按钮指定 **True** 或 **False**。  
+3. \@ShowAll 参数  参数 @ShowAll 的数据类型为 Boolean  。 使用单选按钮指定 **True** 或 **False**。  
   
 4. **“显示或隐藏参数区域”控点** 在报表查看器工具栏上，单击此箭头可显示或隐藏参数窗格。  
   
-5. **@CategoryQuota 参数**参数 @CategoryQuota 的数据类型为 Float，因此它采用数值  。  @CategoryQuota 设置为允许多个值。  
+5. \@CategoryQuota 参数  参数 @CategoryQuota 的数据类型为 Float，因此它采用数值  。  @CategoryQuota 设置为允许多个值。  
   
 6. **查看报表** 输入参数值之后，单击“查看报表”  可运行报表。 如果所有参数都具有默认值，则报表会在第一次查看时自动运行。  
   

@@ -5,13 +5,13 @@
 - name: 概述
   expanded: true
   items:
-    - name: 机器学习服务（R、Python）
+    - name: 什么是机器学习服务（Python 和 R）？
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
-    - name: R Services
+    - name: 什么是 R Services？
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 独立服务器
       href: ../advanced-analytics/r/r-server-standalone.md
-    - name: 新增功能
+    - name: 新增功能？
       href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: 安装
   items:
@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: 安装 R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 安装独立服务器（R、Python）
+    - name: 安装独立服务器（Python、R）
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: 安装预先定型的模型
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

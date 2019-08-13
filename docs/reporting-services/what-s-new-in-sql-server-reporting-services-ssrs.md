@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264590"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893518"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -26,7 +26,7 @@ ms.locfileid: "68264590"
 
 有关 Power BI 报表服务器的信息，请参阅[什么是 Power BI 报表服务器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
 
-**下载** ![download](../analysis-services/media/download.png "download")
+**下载** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 若要下载 SQL Server 2017 Reporting Services，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55252)  。
 
@@ -34,7 +34,7 @@ ms.locfileid: "68264590"
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 预览版 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services 不适用于 CTP 3.1。 安装最新版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services 不适用于 CTP 3.2。 安装最新版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ Reporting Services 移动报表是针对各种外形规格进行了优化的专�
 2. 选择要在其中固定项的仪表板。
 3. 选择要在仪表板中更新磁贴的频率。
 
-![说明](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "说明") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。
+![说明](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "说明") 刷新由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅管理，固定项之后，可编辑该订阅并配置不同的刷新计划。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -204,7 +204,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 |||  
 |-|-|  
-|新版|Previous|  
+|新建|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **自定义参数窗格：** 现在可以自定义参数窗格。 利用报表生成器中的设计图面，可以将参数拖到参数窗格中的特定列和行。 你可以通过添加和删除列来更改窗格的布局。 有关详细信息，请参阅 [自定义报表中的参数窗格（报表生成器）](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中所创建的移动报表中使用。  

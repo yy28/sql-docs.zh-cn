@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序的系统要求 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9acd6eeec40421a778c1ab829b9633e1e93a80b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004264"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893974"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "68004264"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Java 运行时环境要求  
+
+ 自 Microsoft JDBC Driver 7.4 for SQL Server 起，支持 Java 开发工具包 (JDK) 12.0 和 Java 运行时环境 (JRE) 12.0。
 
  自 Microsoft JDBC Driver 7.2 for SQL Server 起，支持 Java 开发工具包 (JDK) 11.0 和 Java 运行时环境 (JRE) 11.0。
  
@@ -40,6 +42,31 @@ ms.locfileid: "68004264"
  从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，Java 数据库连接 (JDBC) 规范 API 的JDBC 驱动程序支持扩展为包括 JDBC 4.0 API。 已在 Java 开发工具包 (JDK) 6.0 和 Java 运行时环境 (JRE) 6.0 中引入了 JDBC 4.0 API。 JDBC 4.0 是 JDBC 3.0 API 的超集。
   
  当你在 Windows 和 UNIX 操作系统上部署 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，你必须分别使用安装包 sqljdbc_\<version>_enu.exe 和 sqljdbc_\<version>_enu.tar.gz   。 有关如何部署 JDBC 驱动程序的详细信息，请参阅[部署 JDBC 驱动程序](../../connect/jdbc/deploying-the-jdbc-driver.md)主题。  
+
+**Microsoft JDBC Driver 7.4 for SQL Server：**  
+
+  JDBC Driver 7.4 在每个安装包中包含三个 JAR 类库：mssql-jdbc-7.4.1.jre8.jar  、mssql-jdbc-7.4.1.jre11.jar  和 mssql-jdbc-7.4.1.jre12.jar  。
+
+  JDBC Driver 7.4 适用于各种主要 Java 虚拟机，且受到这些虚拟机的支持，但仅在 OpenJDK 1.8、OpenJDK 11.0、OpenJDK 12.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0 和 Azul Zulu JRE 12.0 上经过测试。
+  
+  下面汇总了 Microsoft JDBC Drivers 7.4 for SQL Server 随附的两个 JAR 文件所提供的支持：  
+  
+  |JAR|JDBC 版本法规遵从性|推荐的 Java 版本|描述|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-7.4.1. jre8|4.2|8|需要 Java Runtime Environment (JRE) 1.8。 使用 JRE 1.7 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括: JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |    
+|mssql-jdbc-7.4.1. jre11|4.3|11|需要 Java 运行时环境 (JRE) 11.0. 使用 JRE 10.0 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括: JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |  
+|mssql-jdbc-7.4.1. jre12|4.3|12|需要 Java Runtime Environment (JRE) 12.0。 使用 JRE 11.0 或更低版本会引发异常。<br /><br /> 7\.4 中的新功能包括: JDK 12 支持、NTLM 身份验证和 useFmtOnly。 |   
+
+
+  JDBC Driver 7.4 还适用于 Maven Central Repository，并且可以通过在 POM.XML 中添加以下代码来添加到 Maven 项目：  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.2 for SQL Server：**  
 

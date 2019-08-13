@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 384647c51e738bf96335ac481fcc250476748ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025597"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476269"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ ms.locfileid: "68025597"
   
 <a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力  。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
  -  从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
- -  然后减去等于“max server memory”控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即_堆栈大小 <sup>1</sup> \* 计算出的最大工作线程数 <sup>2</sup> + -g 启动参数 <sup>3</sup>（如果未设置 -g，则为 256 MB）_    。 所得结果就是一个实例设置的 max_server_memory 设置。
+ -  然后减去等于“max server memory”控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即 _    。 所得结果就是一个实例设置的 max_server_memory 设置。
  
 <sup>1</sup> 有关每个体系结构的线程堆栈大小的信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 
 <sup>2</sup> 有关为当前主机中给定数量的关联 CPU 计算得出的默认工作线程数的信息，请参阅介绍如何[配置最大工作线程数服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文档页。
 
-<sup>3</sup> 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页  。
+<sup>3</sup> 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页  。 仅适用于 32 位的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置内存选项的方式  
 使用“min server memory”  和“max server memory”  这两个服务器内存选项重新配置由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例管理的内存量 (MB)。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  

@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 常见问题解答 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956577"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892375"
 ---
-# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
+# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver 常见问题解答 (FAQ)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 本页是关于 Microsoft JDBC Driver for SQL Server 的常见问题解答。
 
-## <a name="frequently-asked-questions"></a>常见问题
+## <a name="frequently-asked-questions"></a>常见问题解答
 
 **如何帮助改进 JDBC 驱动程序？**  
 JDBC 驱动程序属于开放源代码，可以在 [GitHub](https://github.com/microsoft/mssql-jdbc) 上找到源代码。 可以通过归档问题和参与基本代码来帮助改进驱动程序。
@@ -35,7 +35,15 @@ JDBC 驱动程序属于开放源代码，可以在 [GitHub](https://github.com/m
 Microsoft JDBC Driver 的 GitHub 存储库提供的 JDBC 驱动程序文件是 JDBC 驱动程序的核心，并获得存储库中列出的开放源代码许可证的许可。 Microsoft 下载中心中的驱动程序包包括用于进行 Windows 集成身份验证和通过 JDBC 驱动程序启用 XA 事务的其他库。 这些其他库获得可下载包随附的许可证的许可。
 
 **升级驱动程序时，我应该知道什么？**
-Microsoft JDBC Driver 7.2 支持 JDBC 4.2 和 4.3（部分）规范，并且其安装包中包含以下两个 JAR 类库：
+Microsoft JDBC Driver 7.4 支持 JDBC 4.2 和 4.3（部分）规范，并且其安装包中包含以下三个 JAR 类库：
+
+| JAR                        | JDBC 规范            | 添加版本 |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.4.1. jre12 | JDBC 4.3（部分）和 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1. jre11 | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1. jre8  | JDBC 4.2                      | JDK 8.0     |
+
+ Microsoft JDBC Driver 7.2 支持 JDBC 4.2 和 4.3（部分）规范，并且其安装包中包含以下两个 JAR 类库：
 
 | JAR                        | JDBC 规范            | 添加版本 |
 | -------------------------- | ----------------------------- | ----------- |

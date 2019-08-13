@@ -1,5 +1,7 @@
 - name: 欢迎使用 SQL Server
   href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+- name: SQL 文档的版本控制
+  href: toc/versioning-system-monikers-ui-sql-server.md
 - name: 先前版本 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: 概述

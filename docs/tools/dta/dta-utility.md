@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132772"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809709"
 ---
 # <a name="dta-utility"></a>dta 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ dta -d AdventureWorks2012 ...
  指定将在新建议中考虑筛选的索引。 有关详细信息，请参阅 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
 **-fc**  
- 指定将在新建议中考虑的列存储索引。 DTA 将同时考虑聚集列存储索引和非聚集列存储索引。 有关详细信息，请参阅    
+ 指定将在新建议中考虑的列存储索引。 DTA 将考虑聚集列存储索引和非聚集列存储索引。 有关详细信息，请参阅    
 [数据引擎优化顾问 (DTA) 中的列存储索引建议](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
