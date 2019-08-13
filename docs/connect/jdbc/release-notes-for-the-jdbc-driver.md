@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 的发行说明 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,67 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 45af95d26da9b05b6e8e99dd78936e1f7bb6ed6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002438"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891288"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的发行说明
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 本文列出了 Microsoft JDBC Driver for SQL Server  的版本。 对于每个发行版本，将对所做的更改进行命名和说明。
+## <a name="741"></a>7.4.1
+
+### <a name="compliance"></a>遵从性
+
+2019年8月2日
+
+| 符合性更改 | 详细信息 |
+| :---------------- | :------ |
+| 下载 JDBC Driver 7.4 的最新更新。 | &bull; &nbsp; [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub，7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| 完全符合 JDBC API 规范 4.2。 | 根据 Java 版本兼容性命名 7.4 包中的 jar。<br/><br/>例如，7.4 包中的 mssql-jdbc-7.4.1.jre11.jar 文件应与 Java 11 配合使用。 |
+| 与 Java 开发工具包 (JDK) 版本12.0、11.0 和1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 7.4 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 12.0 兼容。 |
+| &nbsp; | &nbsp; |
+
+### <a name="support-for-jdk-12"></a>支持 JDK 12
+
+除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 7.4 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 12.0 兼容。
+
+### <a name="introduces-ntlm-authentication"></a>引入 NTLM 身份验证
+
+| NTLM 更改 | 详细信息 |
+| :--------- | :------ |
+| 支持 NTLM 身份验证模式。 | 此身份验证模式允许 Windows 和非 Windows 客户端使用 Windows 域用户对 SQL Server 其自身进行身份验证。 |
+| 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 NTLM 身份验证进行连接](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>介绍如何通过 _查询 java.sql.parametermetadata
+
+| useFmtOnly 更改 | 详细信息 |
+| :---------- | :------ |
+| 已添加**useFmtOnly**连接属性。 | 此功能允许用户根据需要通过`SET FMTONLY ON`旧 API 查询 java.sql.parametermetadata。 这对于`sp_describe_undeclared_parameters`不按预期执行的方案非常有用。 |
+| 更多详细信息和限制。 | 请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>更新了 Microsoft Azure Key Vault SDK for Java  版本 1.2.1
+
+| Key Vault SDK 更改 | 详细信息 |
+| :------------------- | :------ |
+| 已将 _Microsoft Azure Key Vault SDK for Java_ 的 Maven 依赖项更新为版本 1.2.1。 | &nbsp; |
+| 删除作为 Maven 依赖项的 _Microsoft Azure SDK for Key Vault WebKey_。 | &nbsp; |
+| 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+
+| 已知问题 | 详细信息 |
+| :----------- | :------ |
+| 使用 NTLM 身份验证时。 | 目前不支持同时启用扩展保护和加密连接。 |
+| 使用 useFmtOnly 时。 | 此功能存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。 有关更多详细信息和解决方法建议, 请参阅[使用 useFmtOnly](../../connect/jdbc/using-usefmtonly.md) 。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
@@ -43,7 +92,7 @@ ms.locfileid: "68002438"
 > 
 > 我们建议更新项目以使用 7.2.2 版本 jar。 有关详细信息，请查看 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 和 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2) 的发行说明。
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory 托管服务标识  (MSI) 身份验证
+### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Active Directory 托管服务标识  (MSI) 身份验证
 
 | MSI 更改 | 详细信息 |
 | :--------- | :------ |
@@ -51,7 +100,7 @@ ms.locfileid: "68002438"
 | 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>引入开放服务网关协议  (OSGi) 支持
+### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>引入开放服务网关协议  (OSGi) 支持
 
 | OSGi 更改 | 详细信息 |
 | :---------- | :------ |
@@ -59,7 +108,7 @@ ms.locfileid: "68002438"
 | 添加了  Activator 实现。 | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-sqlservererror-apis"></a>引入  SQLServerError API
+### <a name="introduces-_sqlservererror_-apis"></a>引入  SQLServerError API
 
 | 错误 API 更改 | 详细信息 |
 | :--------------- | :------ |
@@ -67,7 +116,7 @@ ms.locfileid: "68002438"
 | 其他详细信息。 | 请参阅[处理错误](../../connect/jdbc/handling-errors.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>更新了用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)  版本 1.6.3
+### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>更新了用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)  版本 1.6.3
 
 | ADAL4J 更改 | 详细信息 |
 | :------------ | :------ |
@@ -76,7 +125,7 @@ ms.locfileid: "68002438"
 | 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>更新了 Microsoft Azure Key Vault SDK for Java  版本 1.2.0
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>更新了 Microsoft Azure Key Vault SDK for Java  版本 1.2.0
 
 | Key Vault SDK 更改 | 详细信息 |
 | :------------------- | :------ |
@@ -178,7 +227,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。
 
 当使用的是表值参数 (TVP) 时，驱动程序现在支持数据类型 `datetime` 和 `smallDatetime`。
 
-### <a name="added-support-for-the-sqlvariant-datatype"></a>添加了对 sql_variant 数据类型的支持
+### <a name="added-support-for-the-sql_variant-datatype"></a>添加了对 sql_variant 数据类型的支持
 
 JDBC 驱动程序现在支持要用于 SQL Server 的 `sql_variant` 数据类型。 TVP 和大容量复制等功能也支持 `sql_variant` 数据类型，但具有以下限制：
 

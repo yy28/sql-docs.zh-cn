@@ -1,7 +1,7 @@
 ---
-title: “服务器内存”服务器配置选项 | Microsoft Docs
+title: “服务器内存”配置选项 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476269"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763173"
 ---
-# <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
+# <a name="server-memory-configuration-options"></a>“服务器内存”配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 使用“min server memory”  和“max server memory”  这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
@@ -49,19 +49,18 @@ ms.locfileid: "68476269"
 > **min server memory** 和 **max server memory** 选项都是高级选项。 如果使用 **sp_configure** 系统存储过程来更改这些设置，则只有在“显示高级选项”  设置为 1 时才能更改它们。 这些设置更改后会立即生效，不需要重新启动服务器。  
   
 <a name="min_server_memory"></a> 使用 min_server_memory 可以保证可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器使用的最小内存量  。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会在启动时立即分配 **min server memory** 中指定的内存量。 不过，除非降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **的值，否则当内存使用量由于客户端负荷而达到该值后，** 不能释放内存。 例如，同一个主机中可同时存在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，为了给实例保留内存，请设置 min_server_memory 参数而不是 max_server_memory。 此外，为了确保来自基础主机的内存压力不会尝试从来宾 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虚拟机 (VM) 上的缓冲池释放超过可接受性能所需的内存，在虚拟环境中设置 min_server_memory 值非常必要。
- 
-> [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量  。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
-  
-<a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力  。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
- -  从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
- -  然后减去等于“max server memory”控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即 _    。 所得结果就是一个实例设置的 max_server_memory 设置。
- 
+
+>[!NOTE]
+>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量  。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。
+
+<a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力  。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。
+
+- 从 OS 总内存中为 OS 自身分配足够的空间。
+- 然后减去等于“max server memory”  控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即 **_堆栈大小** <sup>1</sup> **\* 计算出的最大工作线程数**<sup>2</sup>。 所得结果就是一个实例设置的 max_server_memory 设置。
+
 <sup>1</sup> 有关每个体系结构的线程堆栈大小的信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 
 <sup>2</sup> 有关为当前主机中给定数量的关联 CPU 计算得出的默认工作线程数的信息，请参阅介绍如何[配置最大工作线程数服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文档页。
-
-<sup>3</sup> 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页  。 仅适用于 32 位的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 配置内存选项的方式  
 使用“min server memory”  和“max server memory”  这两个服务器内存选项重新配置由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例管理的内存量 (MB)。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
