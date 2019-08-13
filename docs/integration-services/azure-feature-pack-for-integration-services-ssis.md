@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 9241725a9f1da67ef93701b62c5cc4e8d9093a7a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388404"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892732"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 
@@ -27,7 +27,7 @@ ms.locfileid: "68388404"
 
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
 
-[![下载用于 Azure 的 SSIS 功能包](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798)下载 
+[![下载用于 Azure 的 SSIS 功能包](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798)下载 
 
 - 对于 SQL Server 2017 - [用于 Azure 的 Microsoft SQL Server 2017 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=54798)
 - 对于 SQL Server 2016 - [用于 Azure 的 Microsoft SQL Server 2016 Integration Services 功能包](https://www.microsoft.com/download/details.aspx?id=49492)
@@ -96,6 +96,60 @@ Azure 功能包使用的 TLS 版本遵循系统 .NET Framework 设置。
 
 1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
 2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
+
+## <a name="dependency-on-java"></a>Java 上的依赖项
+
+Java 需要使用某些功能。
+Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体系结构一致。
+已测试以下 Java 版本。
+
+- [Zulu OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle Java SE 运行时环境 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>安装 Zulu OpenJDK
+
+1. 下载并提取安装 zip 包。
+2. 从命令提示符处，运行 `sysdm.cpl`。
+3. 在“高级”选项卡上，选择“环境变量”   。
+4. 在“系统变量”部分中，选择“新建”   。
+5. 输入变量名称 `JAVA_HOME`  。
+6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹  。
+   然后选择“确定”，“变量值”将自动进行填充   。
+7. 选择“确定”，关闭“新建系统变量”对话框   。
+8. 选择“确定”，关闭“环境变量”对话框   。
+9. 选择“确定”以关闭“系统属性”对话框   。
+
+### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>在 Azure-SSIS Integration Runtime 上设置 Zulu 的 OpenJDK
+
+这应该通过 Azure-SSIS Integration Runtime 的[自定义设置界面](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)完成。
+假设使用 `zulu8.33.0.1-jdk8.0.192-win_x64.zip`。
+可以按以下方式组织 blob 容器：
+
+~~~
+main.cmd
+install_openjdk.ps1
+zulu8.33.0.1-jdk8.0.192-win_x64.zip
+~~~
+
+作为入口点，`main.cmd` 触发 PowerShell 脚本 `install_openjdk.ps1` 的执行，后面的脚本进而会相应地提取 `zulu8.33.0.1-jdk8.0.192-win_x64.zip` 并设置 `JAVA_HOME`。
+
+**main.cmd**
+
+~~~
+powershell.exe -file install_openjdk.ps1
+~~~
+
+**install_openjdk.ps1**
+
+~~~
+Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\zulu8.33.0.1-jdk8.0.192-win_x64\jre", "Machine")
+~~~
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>安装 Oracle Java SE 运行时环境
+
+1. 下载并运行 exe 安装程序。
+2. 按照安装程序说明完成安装。
 
 ## <a name="scenario-processing-big-data"></a>方案：处理大数据
  使用 Azure Connector 可完成以下大数据处理工作：

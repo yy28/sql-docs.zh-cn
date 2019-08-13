@@ -1,7 +1,7 @@
 ---
 title: 从命令提示符安装 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 94169ec75f542c27c47bc9f050b2ac36736d13de
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419331"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893008"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -227,7 +227,7 @@ ms.locfileid: "68419331"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式：`%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 对于所有其他安装：`%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器模式。 有效值为 MULTIDIMENSIONAL、POWERPIVOT 或 TABULAR。 **ASSERVERMODE** 区分大小写。 所有值必须以大写形式表示。 有关有效值的详细信息，请参阅 [安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器模式。 有效值为 MULTIDIMENSIONAL、POWERPIVOT 或 TABULAR。 **ASSERVERMODE** 区分大小写。 所有值必须以大写形式表示。 有关有效值的详细信息，请参阅 [安装 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的帐户。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务的密码。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式。 支持的值：<br /><br /> **自动**<br /><br /> **禁用**<br /><br /> **手动**|  
@@ -279,7 +279,7 @@ ms.locfileid: "68419331"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
 |Python/机器学习服务（数据库内）|/MPYCACHEDIRECTORY|保留供将来使用。 使用 %TEMP% 存储 Python .CAB 文件，以便在没有 Internet 连接的计算机上安装。 |  
 |R/机器学习服务（数据库内）|/MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)安装 R 组件时，通常使用此设置。|  
-|Java/机器学习服务（数据库内）| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **可选** | 从 SQL Server 2019 开始，指定通过机器学习服务安装 Java。 如果提供的 /SQL_INST_JAVA 不带 /SQLJAVADIR 参数，则表示假设你要安装由安装介质提供的祖鲁语 JRE。 <br /><br /> 为 /SQLJAVADIR 提供路径表示你要使用已安装的 JRE 或 JDK。 |
+|Java/语言扩展| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **可选** | 从 SQL Server 2019 开始，指定通过语言扩展安装 Java。 如果提供的 /SQL_INST_JAVA 不带 /SQLJAVADIR 参数，则表示假设你要安装由安装介质提供的 Zulu Open JRE。 <br /><br /> 为 /SQLJAVADIR 提供路径表示你要使用已安装的 JRE 或 JDK。 |
   
 ###### <a name="sample-syntax"></a>示例语法：  
  安装新的具有 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、复制和全文搜索组件的独立实例并启用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的即时文件初始化。 

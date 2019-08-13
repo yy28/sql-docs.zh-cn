@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996445"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810967"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux 上的 SQL Server VDI 客户端 SDK 规范
 
@@ -29,7 +29,7 @@ ms.locfileid: "67996445"
 - Linux 上的 SQL Server 不支持命名实例，因此删除了对实例名称的引用。 
 - 共享库在安装于 /opt/mssql/lib/libsqlvdi.so 的 libsqlvdi.so 中实现
 
-本文档是 vbackup.chm 的附录，详细列明了 Windows VDI 规范  。 下载 [Windows VDI 规范](https://www.microsoft.com/download/details.aspx?id=17282)。
+本文档是 vbackup.chm 的附录，详细列明了 Windows 的 MS SQL Server VDI 规范  。 下载 [Windows 的 SQL VDI 规范](https://www.microsoft.com/download/details.aspx?id=17282)。
 
 此外，请在 [SQL Server 示例 GitHub 存储库](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)上查看示例 VDI 备份解决方案。
 

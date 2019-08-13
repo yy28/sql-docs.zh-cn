@@ -1,7 +1,7 @@
 ---
 title: 使用安装向导安装 SQL Server 2016（安装程序）| Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419268"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742907"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -280,9 +280,9 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
   
      安装程序的其余工作流视你已为安装指定的功能而定。 你可能不会看到所有页，具体视你的选择而定。 
 
-1. 选择安装 Polybase 功能会将“PolyBase 配置”页添加到 SQL Server 安装程序，并显示在“实例配置”页之后   。 PolyBase 需要 Oracle JRE 7 更新 51（至少），如果未安装此更新，从 SQL Server 2019 开始，可以将 Azul Zulu Open JRE 与 SQL Server 一起安装。 在“Polybase 配置”页上，可以选择使用 SQL Server 作为一个启用了 Polybase 的独立实例，也可以将此 SQL Server 作为 PolyBase 横向扩展组的一部分  。 如果选择使用横向扩展组，需要指定最多 6 个（或更多）端口的端口范围。  在“Java 安装位置”页，可以选择安装 SQL Server 2019 安装所附带的 Azul Zulu Open JRE，或提供已在计算机上安装的另一个 JRE 或 JDK 的位置  。
+1. 从 SQL Server 2019 开始，Polybase 不再要求在安装该功能之前在计算机上预安装 Oracle JRE 7 Update 51（至少）。 选择安装 Polybase 功能会将“Java 安装位置”页添加到 SQL Server 安装程序，并显示在“实例配置”页之后   。 可以在“Java 安装位置”页上选择安装 SQL Server 2019 安装所附带的 Azul Zulu Open JRE，或提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
 
-1. 从 SQL Server 2019 开始，除 R 和 Python 外，机器学习服务和语言扩展的列表中还添加了 Java。 选择安装 Java 功能会将“Java 安装位置”页添加到 SQL Server 安装程序对话框窗口，并显示在“实例配置”页之后   。 在“Java 安装位置”页，可以选择安装 SQL Server 2019 安装所附带的 Azul Zulu Open JRE，或提供已在计算机上安装的另一个 JRE 或 JDK 的位置  。
+1. 从 SQL Server 2019 开始，Java 已经添加了语言扩展。 选择安装 Java 功能会将“Java 安装位置”页添加到 SQL Server 安装程序对话框窗口，并显示在“实例配置”页之后   。 可以在“Java 安装位置”页上选择安装 SQL Server 2019 安装所附带的 Zulu Open JRE，或提供已在计算机上安装的另一个 JRE 或 JDK 的位置  。
 
 1. 使用“服务器配置 - 服务帐户”  页指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户。 你在此页中配置的实际服务取决于你已选择安装的功能。 若要详细了解配置设置，请参阅[安装向导帮助](../../sql-server/install/instance-configuration.md#serverconfig)。
   

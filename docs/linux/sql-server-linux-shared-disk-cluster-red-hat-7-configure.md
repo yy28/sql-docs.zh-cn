@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032277"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810982"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
@@ -25,7 +25,7 @@ ms.locfileid: "68032277"
 > [!NOTE] 
 > 需拥有订阅才能访问 Red Hat HA 加载项和文档。 
 
-如下图所示，存储将呈现给两个服务器。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 其中一个服务器具有活动连接，可连接至存储资源以及 SQL Server。 当 Pacemaker 检测到故障时，群集组件会设法将资源移到另一个节点。  
+如下图所示，存储将呈现给两个服务器。 群集组件（Corosync 和 Pacemaker）负责协调通信和资源管理。 其中一个服务器具有活动连接，可连接至存储资源以及 SQL Server。 当 Pacemaker 检测到故障时，群集组件会设法将资源移到另一个节点。  
 
 ![Red Hat Enterprise Linux 7 共享磁盘 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -48,20 +48,20 @@ ms.locfileid: "68032277"
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>在每个群集节点上安装并配置 SQL Server
 
-1. 同时在两个节点上安装并设置 SQL Server。  有关详细说明，请参阅[在 Linux 上安装 SQL Server](sql-server-linux-setup.md)。
+1. 在两个节点上安装并设置 SQL Server。  有关详细说明，请参阅[安装 Linux 上的 SQL Server](sql-server-linux-setup.md)。
 
-1. 出于配置目的，请将一个节点指定为主节点，另一个指定为辅助节点。 使用以下术语，按照此指南操作。  
+1. 出于配置目的，请将一个节点指定为主节点，而将另一个指定为辅助节点。 本指南使用这些术语。  
 
 1. 在辅助节点上，停止并禁用 SQL Server。
 
-   以下示例将停止并禁用 SQL Server： 
+   以下示例会停止并禁用 SQL Server： 
 
    ```bash
    sudo systemctl stop mssql-server
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> 在设置时，将为 SQL Server 实例生成一个服务器主密钥并将其置于 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
+> 在设置时，为 SQL Server 实例生成服务器主密钥并将其置于 `/var/opt/mssql/secrets/machine-key`。 在 Linux 上，SQL Server 始终以名为 mssql 的本地帐户身份运行。 因为它是本地帐户，所以其标识不会在节点之间共享。 因此，需要将加密密钥从主节点复制到每个辅助节点，以便每个本地 mssql 帐户均可访问它，从而解密服务器主密钥。 
 
 1. 在主节点上，为 Pacemaker 创建 SQL Server 登录名并授予登录权限以运行 `sp_server_diagnostics`。 Pacemaker 使用此帐户验证哪个节点正在运行 SQL Server。 
 
@@ -108,7 +108,7 @@ ms.locfileid: "68032277"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>配置共享存储并移动数据库文件 
 
-有多种解决方案可提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 建议按照最佳做法进行操作，并使用 Kerberos 保护 NFS（可在此处找到示例： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) ）。 
+有多种解决方案可用于提供共享存储。 本演练演示如何使用 NFS 配置共享存储。 建议按照最佳做法进行操作，并使用 Kerberos 保护 NFS（可在此处找到示例： https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) ）。 
 
 >[!Warning]
 >如果不保护 NFS，则可访问网络以及能够欺骗 SQL 节点 IP 地址的任何人均能访问你的数据文件。 与往常一样，请确保在将系统投入生产前对其进行威胁建模。 另一种存储方法是使用 SMB 文件共享。
@@ -116,7 +116,7 @@ ms.locfileid: "68032277"
 ### <a name="configure-shared-storage-with-nfs"></a>使用 NFS 配置共享存储
 
 > [!IMPORTANT] 
-> 此版本不支持在版本 <4 的 NFS 服务器上托管数据库文件。 这包括将 NFS 用于共享磁盘故障转移群集，以及非群集实例上的数据库。 我们正在设法使后续版本能够利用其他版本的 NFS 服务器。 
+> 此版本不支持在版本 <4 的 NFS 服务器上托管数据库文件。 这包括将 NFS 用于共享磁盘故障转移群集，以及非聚集实例上的数据库。 我们正在设法使后续版本能够利用其他版本的 NFS 服务器。 
 
 在 NFS 服务器上执行以下操作：
 
@@ -243,7 +243,7 @@ ms.locfileid: "68032277"
    $ exit
    ``` 
  
-1.  验证 SQL Server 是否已成功通过新文件路径启动。 对每个节点均执行此操作。 此时，一次应只有一个节点运行 SQL Server。 它们不能同时运行，因为两者将同时尝试访问数据文件（若要避免同时在两个节点上意外启动 SQL Server，请使用文件系统群集资源来确保共享不会由不同的节点装载两次）。 以下命令可启动 SQL Server、检查状态，然后停止 SQL Server。
+1.  验证 SQL Server 是否已成功通过新文件路径启动。 对每个节点均执行此操作。 此时，一次应只有一个节点运行 SQL Server。 它们不能同时运行，因为两者将同时尝试访问数据文件（要避免同时在两个节点上意外启动 SQL Server，请使用文件系统群集资源来确保共享未由不同的节点装载两次）。 以下命令可启动 SQL Server、检查状态及随后停止 SQL Server。
  
    ```bash
    sudo systemctl start mssql-server
@@ -251,7 +251,7 @@ ms.locfileid: "68032277"
    sudo systemctl stop mssql-server
    ```
  
-此时，SQL Server 的两个实例均已配置为使用共享存储上的数据库文件运行。 下一步，为 Pacemaker 配置 SQL Server。 
+此时，SQL Server 的两个实例均已配置为使用共享存储上的数据库文件运行。 接下来，为 Pacemaker 配置 SQL Server。 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>在每个群集节点上安装和配置 Pacemaker
 

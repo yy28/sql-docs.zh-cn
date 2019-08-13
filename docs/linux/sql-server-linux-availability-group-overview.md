@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967513"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794990"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上的 Always On 可用性组
 
@@ -24,8 +24,8 @@ ms.locfileid: "67967513"
 
 从较高角度来看，Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 下的可用性组和基于 WSFC 的实现中的可用性组相同。 也就是说，所有限制和功能都相同，但存在一些例外情况。 主要区别包括：
 
--   在 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 中，Microsoft 分布式事务处理协调器 (DTC) 不受 Linux 支持。 如果应用程序需要使用分布式事务，并且需要 AG，请在 Windows 上部署 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。
--   基于 Linux 的部署使用 Pacemaker，而不是 WSFC。
+-   从 SQL Server 2017 CU16 开始，Microsoft 分布式事务处理协调器 (DTC) 受 Linux 支持。 但是，Linux 上的可用性组尚不支持 DTC。 如果应用程序需要使用分布式事务，并且需要 AG，请在 Windows 上部署 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。
+-   需要高可用性的基于 Linux 的部署使用 Pacemaker 进行群集，而不使用 WSFC。
 -   与 Windows 上的大多数 AG 配置（工作组群集方案除外）不同，Pacemaker 从不需要 Active Directory 域服务 (AD DS)。
 -   对于 Linux 和 Windows 来说，将 AG 从一个节点故障转移到另一个节点的方式不同。
 -   某些设置（例如 `required_synchronized_secondaries_to_commit`）在 Linux 上只能通过 Pacemaker 进行更改，而基于 WSFC 的安装则使用 Transact-SQL。

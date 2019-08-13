@@ -3,46 +3,48 @@ title: 如何在 Linux 上配置 MSDTC
 description: 本文提供在 Linux 上配置 MSDTC 的教程。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/21/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077612"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892518"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSTDC)。 SQL Server 2019 预览版引入了对 Linux 的 MSDTC 支持。
+本文介绍如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)。
+
+> [!NOTE]
+> 从累积更新 16 开始，SQL Server 2019 预览 SQL Server 2017 支持 Linux 上的 MSDTC。
 
 ## <a name="overview"></a>概述
 
 通过在 SQL Server 中引入 MSDTC 和 RPC 终结点映射程序功能，在 Linux 上的 SQL Server 中启用了分布式事务。 默认情况下，RPC 终结点映射进程在端口 135 上侦听传入的 RPC 请求，并向远程请求提供已注册的组件信息。 远程请求可以使用端点映射程序返回的信息与已注册的 RPC 组件（如 MSDTC 服务）进行通信。 进程需要超级用户权限才能绑定到 Linux 上的已知端口（端口号小于 1024）。 为了避免以 RPC 终结点映射程序进程的根权限启动 SQL Server，系统管理员需要使用 iptable 创建网络地址转换，以将端口 135 上的流量路由到 SQL Server 的 RPC 终结点映射程序进程。
 
-SQL Server 2019 为 mssql-conf 实用程序引入了两个配置参数。
+MSDTC 为 mssql-conf 实用程序引入了两个配置参数：
 
 | mssql-conf 设置 | 描述 |
 |---|---|
 | **network.rpcport** | RPC 终结点映射程序进程绑定到的 TCP 端口。 |
 | **distributedtransaction.servertcpport** | MSDTC 服务器侦听的端口。 如果未设置，MSDTC 服务在服务重新启动时使用随机临时端口，并且需要重新配置防火墙例外情况以确保 MSDTC 服务可以继续通信。 |
 
-有关这些设置和其他相关 MSDTC 设置的详细信息，请参阅[使用 mssql-conf 工具在 Linux 上配置 SQL Server](sql-server-linux-configure-mssql-conf.md#msdtc)。
+有关这些设置和其他相关 MSDTC 设置的详细信息，请参阅[使用 mssql-conf 工具在 Linux 上配置 SQL Server](sql-server-linux-configure-mssql-conf.md)。
 
 ## <a name="supported-msdtc-configurations"></a>支持的 MSDTC 配置
 
 支持使用以下 MSDTC 配置：
 
 - 针对 Linux 上的 SQL Server、适用于 ODBC 提供程序的 OLE-TX 分布式事务。
-- 针对 Linux 上的 SQL Server、使用 JDBC 和 ODBC 提供程序的 XA 分布式事务。 要使用 ODBC 提供程序执行 XA 事务，需要使用 Microsoft ODBC Driver for SQL Server 17.3 或更高版本。
-- 链接服务器上的分布式事务。
 
-有关预览版 MSDTC 的限制和已知问题，请参阅 [Linux 上 SQL Server 2019 预览版发行说明](sql-server-linux-release-notes-2019.md#msdtc)。
+- 针对 Linux 上的 SQL Server、使用 JDBC 和 ODBC 提供程序的 XA 分布式事务。 要使用 ODBC 提供程序执行 XA 事务，需要使用 Microsoft ODBC Driver for SQL Server 17.3 或更高版本。 有关详细信息，请参阅[了解 XA 事务](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)。
+
+- 链接服务器上的分布式事务。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC 配置步骤
 
@@ -184,9 +186,24 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 | 设置 | 描述 |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | 仅为分布式事务配置安全的 RPC 调用。 |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | 为分布式事务配置“仅安全”的 RPC 调用。 |
-| **distributedtransaction.turnoffrpcsecurity**               | 为分布式事务启用或禁用 RPC 安全性。 |
+| **distributedtransaction.allowonlysecurerpccalls**          | 仅为分布式事务配置安全的 RPC 调用。 默认值为 0。 |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | 为分布式事务配置“仅安全”的 RPC 调用。 默认值为 0。 |
+| **distributedtransaction.turnoffrpcsecurity**               | 为分布式事务启用或禁用 RPC 安全性。 默认值为 0。 |
+
+## <a name="additional-guidance"></a>其他指南
+
+### <a name="active-directory"></a>Active Directory
+
+如果 SQL Server 已在 Active Directory (AD) 配置中注册，那么 Microsoft 建议使用启用了 RPC 的 MSDTC。 如果 SQL Server 配置为使用 AD 身份验证，则 MSDTC 默认使用相互身份验证 RPC 安全性。
+
+### <a name="windows-and-linux"></a>Windows 和 Linux
+
+如果 Windows 操作系统上的客户端需要使用 Linux 上的 SQL Server 登记到分布式事务中，则必须具有以下最低版本的 Windows 操作系统：
+
+| 操作系统 | 最低版本 | 操作系统内部版本 |
+|---|---|---|
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>后续步骤
 
