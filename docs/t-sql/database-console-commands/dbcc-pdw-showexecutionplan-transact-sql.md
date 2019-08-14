@@ -12,14 +12,14 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039068"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809838"
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 显示在特定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
@@ -43,13 +43,13 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 ```  
   
 ## <a name="arguments"></a>参数  
- distribution_id  
+ distribution_id   
  正在运行查询计划的分发的标识符。 这必须为整数，并且不能为 NULL。 以 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 为目标时使用。  
   
- pdw_node_id  
+ pdw_node_id   
  正在运行查询计划的节点的标识符。 这必须为整数，并且不能为 NULL。 以设备为目标时使用。  
   
- spid  
+ spid   
  正在运行查询计划的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话的标识符。 这必须为整数，并且不能为 NULL。  
   
 ## <a name="permissions"></a>权限  
@@ -59,7 +59,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN 基本语法  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN 基本语法  
  在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 实例上运行时，修改上述查询以同时选择 distribution_id。  
   
 ```sql
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN 基本语法  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN 基本语法  
  运行时间太长的查询运行的是 DMS 查询计划操作或 SQL 查询计划操作。  
   
 如果查询运行的是 DMS 查询计划操作，对于未完成的步骤，可以使用以下查询来检索节点 ID 和 会话 ID 的列表。

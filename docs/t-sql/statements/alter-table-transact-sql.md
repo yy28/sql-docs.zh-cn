@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf8c6b3de78a1140b1cc153418672fd5b1194e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070414"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889812"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -761,7 +761,7 @@ source_partition_number_expression 和 target_partition_number_expression 是可
 
 - 主键必须包含分区键。
 - 唯一索引必须包含分区键。 不过，在现有唯一索引中添加分区键可能会改变唯一性。
-- 所有非聚集索引都必须包含分区键，才能切换分区。
+- 所有非聚集索引都必须包含分区键才能切换分区。
 
 有关使用复制时的 SWITCH 限制的信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)  。
 
@@ -1407,7 +1407,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![用于“返回页首”链接的箭头图标](../../analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[示例](#Example_Top)
+![用于“返回页首”链接的箭头图标](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[示例](#Example_Top)
 
 ### <a name="alter_column"></a>更改列定义
 

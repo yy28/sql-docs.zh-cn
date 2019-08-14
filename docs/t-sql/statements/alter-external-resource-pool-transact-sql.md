@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -17,27 +17,31 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 92a1d932f0fe90369f44cf143897b802f08f9b85
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: ebab091b0e674339141c4ee2ea6d7c7993ccbabf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471153"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893685"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 更改一个 Resource Governor 外部池，该池用于指定外部进程可使用的资源。 
 
-+ 对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
+::: moniker-end
 
-+ 对于 SQL Server 2017 中的[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制前一版本中列出的 R 进程以及 `python.exe`、`BxlServer.exe` 及它们生成的其他进程。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+对于 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制 `rterm.exe`、`python.exe`、`BxlServer.exe`，以及它们生成的其他进程。
+::: moniker-end
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>语法
 
-```sql
+```
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -63,23 +67,19 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 现有用户定义外部资源池或安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时创建的默认外部资源池的名称。
 与 `ALTER EXTERNAL RESOURCE POOL` 一起使用时，"default" 必须用引号 ("") 引起来或用方括号 ([]) 括起来，以免与系统保留字 `DEFAULT` 冲突。
 
-
 MAX_CPU_PERCENT =value   
-指定在存在 CPU 争用时外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。
-
+指定在存在 CPU 争用时外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 是一个整数  。 value 的允许范围是 1 到 100  。
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
-将外部资源池附加到特定的 CPU。 默认值为 AUTO。
+将外部资源池附加到特定的 CPU。
 
 AFFINITY CPU = ( \<CPU_range_spec> ) 将外部资源池映射到给定 CPU_ID 标识的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU   。 使用 AFFINITY NUMANODE = ( \<NUMA_node_range_spec> ) 时，外部资源池将关联到与给定 NUMA 节点或一系列节点相对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU   。
 
-
 MAX_MEMORY_PERCENT =value   
-指定此外部资源池中的请求可使用的总服务器内存量。 value 为整数且默认设置为 100  。 value 的允许范围是 1 到 100  。
-
+指定此外部资源池中的请求可使用的总服务器内存量。 value 是一个整数  。 value 的允许范围是 1 到 100  。
 
 MAX_PROCESSES =value   
-指定外部资源池允许的最大进程数。 指定 0 以便为池设置无限阈值，此阈值之后仅受计算机资源约束。 默认值为 0。
+指定外部资源池允许的最大进程数。 指定 0 以便为池设置无限阈值，此阈值之后仅受计算机资源约束。
 
 ## <a name="remarks"></a>Remarks
 
@@ -110,18 +110,11 @@ GO
 
 ## <a name="see-also"></a>另请参阅
 
-[SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)
-
-[“已启用外部脚本”服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-
-[CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
-
-[DROP EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
-
-[ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-
-[CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)
-
-[资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-
-[ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md) 
++ [SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [“已启用外部脚本”服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
++ [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
++ [DROP EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
++ [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)
++ [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)
++ [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
++ [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md) 

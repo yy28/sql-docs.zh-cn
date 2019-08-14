@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495430"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823120"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS 18.2 正式发布 (GA) 版本现已推出，它是为 [!INCLUDE[sql-server-
 
 **[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果安装了 SSMS 18.2 (GA)，请安装 SSMS 18.2 将其升级到 18.2。 如果安装了较早的 SSMS 18.x 预览版，请在安装 SSMS 18.2 之前将其卸载  。
+SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果安装了 SSMS 18 的上一代 GA 版本，请安装 SSMS 18.2 将其升级到 18.2。 如果安装了较早的 SSMS 18.x 预览版，请在安装 SSMS 18.2 之前将其卸载  。
 
 **版本信息**
 
@@ -81,8 +81,7 @@ SQL Server Management Studio 18.2：
 | 查询执行或结果 | 在消息中添加了一个“完成时间”，以跟踪给定查询执行完毕的时间。 |
 | 查询执行或结果  | 允许显示更多数据（结果转换为文本）以及将其存储在单元中（结果转换为网格）。 对于这两种情况，SSMS 当前最多支持 2 百万个字符（之前分别为 25.6 万和 6.4 万）。 这还解决了用户无法从网格单元中获取超过 43680 个字符的问题。 |
 | 显示计划 | 在启用了内联标量 UDF 特性 (ContainsInlineScalarTsqlUdfs) 的情况下，在 QueryPlan 中添加了新的属性。 |
-| SMO | 添加了对“功能限制”*的支持。 有关功能本身的详细信息，请参阅[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 |
-| SMO  | 评估扩展。 请参阅<we need a link to something> |
+| SMO | 添加了对“功能限制”*的支持。 有关功能本身的信息，请参阅[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 有关评估扩展的信息，请参阅 [SQL 评估 API 简介](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570)。 |
 | Integration Services (SSIS) | Azure 中 SSIS 包计划程序的性能优化 |
 |  |  |
 

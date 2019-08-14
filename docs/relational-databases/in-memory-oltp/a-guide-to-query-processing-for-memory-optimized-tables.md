@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7d326e03c684a17d976d13c27a37aa97ae16792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091408"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811155"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -260,7 +260,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>本机编译存储过程中的查询运算符  
  下表对本机编译存储过程中支持的查询运算符进行了总结：  
   
-|运算符|示例查询|说明|  
+|操作员|示例查询|说明|  
 |--------------|------------------|-----------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`||  

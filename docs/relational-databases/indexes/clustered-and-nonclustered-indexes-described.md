@@ -14,12 +14,12 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b903668a68752edaad612b4ada31329e7dd80a77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3b0fdb182b3623f4461544d94347544d7d19bf6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081748"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811128"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
 
@@ -49,7 +49,7 @@ ms.locfileid: "68081748"
 
 ## <a name="indexes-and-constraints"></a>索引和约束
 
-对表列定义了 PRIMARY KEY 约束和 UNIQUE 约束时，会自动创建索引。 例如，在你生成有 UNIQUE 约束的表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 自动创建非聚集索引。 如果你配置 PRIMARY KEY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 会自动创建聚集索引（除非聚集索引已存在）。 如果你尝试对现有表强制执行 PRIMARY KEY 约束，且此表上已有聚集索引，SQL Server 使用非聚集索引强制执行主键。
+对表列定义了 PRIMARY KEY 约束和 UNIQUE 约束时，会自动创建索引。 例如，在创建带 UNIQUE 约束的表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 自动创建非聚集索引。 如果你配置 PRIMARY KEY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 会自动创建聚集索引（除非聚集索引已存在）。 如果你尝试对现有表强制执行 PRIMARY KEY 约束，且此表上已有聚集索引，SQL Server 使用非聚集索引强制执行主键。
 
 有关详细信息，请参阅 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) 和 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。
 

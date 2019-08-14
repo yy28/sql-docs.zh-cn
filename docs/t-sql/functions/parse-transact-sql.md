@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9182cb55fa1d5e2fd8ffb5f635d801d14f7624ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914417"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892503"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|荷兰语|1043|nl-NL|  
 |Norsk|挪威语|2068|nn-NO|  
 |Português|葡萄牙语|2070|pt-PT|  
-|Suomi|芬兰语|1035|fi|  
+|Suomi|芬兰语|1035|fi-FI|  
 |Svenska|瑞典语|1053|sv-SE|  
 |čeština|捷克语|1029|Cs-CZ|  
 |magyar|匈牙利语|1038|Hu-HU|  
@@ -120,7 +120,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |български|保加利亚语|1026|bg-BG|  
 |русский|俄语|1049|Ru-RU|  
 |Türkçe|土耳其语|1055|Tr-TR|  
-|British|英国英语|2057|en-GB|  
+|British|英语（英国）|2057|en-GB|  
 |eesti|爱沙尼亚语|1061|Et-EE|  
 |latviešu|拉脱维亚语|1062|lv-LV|  
 |lietuvių|立陶宛语|1063|lt-LT|  
@@ -129,7 +129,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |한국어|朝鲜语|1042|Ko-KR|  
 |简体中文|简体中文|2052|zh-CN|  
 |阿拉伯语|阿拉伯语|1025|ar-SA|  
-|ไทย|泰国语|1054|Th-TH|  
+|ไทย|泰语|1054|Th-TH|  
   
 ## <a name="examples"></a>示例  
   

@@ -13,12 +13,12 @@ ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a31be55598d3a3df42a9d5a5fd39832fdbc08754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909284"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809974"
 ---
 # <a name="index-json-data"></a>对 JSON 数据编制索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  ![执行计划](../../relational-databases/json/media/jsonindexblog2.png "执行计划")  
   
- 虽然查询具有 `ORDER BY` 子句，但执行计划不使用 Sort 运算符。 此时已根据塞尔维亚西里尔文规则对 JSON 索引进行了排序。 因此 SQL Server 便可使用其中结果已经过排序的非聚集索引。  
+ 虽然查询具有 `ORDER BY` 子句，但执行计划不使用 Sort 运算符。 此时已根据塞尔维亚西里尔文规则对 JSON 索引进行了排序。 因此 SQL Server 可使用其中的结果已经过排序的非聚集索引。  
   
  但是，如果更改 `ORDER BY` 表达式的排序规则（例如，如果将 `COLLATE French_100_CI_AS_SC` 添加到 `JSON_VALUE` 函数之后），会得到其他查询执行计划。  
   

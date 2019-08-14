@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a7bd22ee9317e60d1b755e8ef3755735e0d845
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098727"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893793"
 ---
-# <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
+# <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，返回表达式的结果（已转换为请求的数据类型）；如果强制转换失败，则返回 Null。 TRY_PARSE 仅用于从字符串转换为日期/时间和数字类型。  
@@ -101,7 +101,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|荷兰语|1043|nl-NL|  
 |Norsk|挪威语|2068|nn-NO|  
 |Português|葡萄牙语|2070|pt-PT|  
-|Suomi|芬兰语|1035|fi|  
+|Suomi|芬兰语|1035|fi-FI|  
 |Svenska|瑞典语|1053|sv-SE|  
 |čeština|捷克语|1029|Cs-CZ|  
 |magyar|匈牙利语|1038|Hu-HU|  
@@ -114,7 +114,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |български|保加利亚语|1026|bg-BG|  
 |русский|俄语|1049|Ru-RU|  
 |Türkçe|土耳其语|1055|Tr-TR|  
-|British|英国英语|2057|en-GB|  
+|British|英语（英国）|2057|en-GB|  
 |eesti|爱沙尼亚语|1061|Et-EE|  
 |latviešu|拉脱维亚语|1062|lv-LV|  
 |lietuvių|立陶宛语|1063|lt-LT|  
@@ -123,11 +123,11 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |한국어|朝鲜语|1042|Ko-KR|  
 |简体中文|简体中文|2052|zh-CN|  
 |阿拉伯语|阿拉伯语|1025|ar-SA|  
-|ไทย|泰国语|1054|Th-TH|  
+|ไทย|泰语|1054|Th-TH|  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-simple-example-of-tryparse"></a>A. TRY_PARSE 的简单示例  
+### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE 的简单示例  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -143,7 +143,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>B. 检测 TRY_PARSE 的 Null 值  
+### <a name="b-detecting-nulls-with-try_parse"></a>B. 检测 TRY_PARSE 的 Null 值  
   
 ```  
 SELECT  
@@ -164,7 +164,7 @@ True
 (1 row(s) affected)  
 ```  
   
-### <a name="c-using-iif-with-tryparse-and-implicit-culture-setting"></a>C. 将 IIF 用于 TRY_PARSE 和隐式区域性设置  
+### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. 将 IIF 用于 TRY_PARSE 和隐式区域性设置  
   
 ```  
 SET LANGUAGE English;  

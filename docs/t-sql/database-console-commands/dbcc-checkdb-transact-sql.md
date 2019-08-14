@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102112"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809889"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 如果 DBCC CHECKDB 命令成功，则数据库将在物理上是一致的，并且数据库状态将设置为 ONLINE。 但是，数据库可能包含一种或多种事务不一致的情况。 我们建议运行 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) 来标识任何业务逻辑缺陷，并立即备份数据库。
 如果 DBCC CHECKDB 命令失败，则无法修复数据库。
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>在复制的数据库中运行具有 REPAIR_ALLOW_DATA_LOSS 的 DBCC CHECKDB    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>在复制的数据库中运行具有 REPAIR_ALLOW_DATA_LOSS 的 DBCC CHECKDB    
 运行具有 REPAIR_ALLOW_DATA_LOSS 选项的 DBCC CHECKDB 命令可能会影响用户数据库（发布数据库和订阅数据库）以及由复制使用的分发数据库。 发布数据库和订阅数据库包括已发布的表和复制元数据表。 请注意这些数据库中的下列潜在问题：
 -   已发布的表。 可能不会复制由 CHECKDB 进程为修复损坏的用户数据而执行的操作：    
 -   合并复制使用触发器跟踪对已发布的表所做的更改。 如果 CHECKDB 进程插入、更新或删除了行，则触发器不会激发；因此，更改将不会复制。

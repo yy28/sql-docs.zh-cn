@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071354"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809807"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -754,7 +754,7 @@ Online index rebuild 可使用 RESUMABLE = ON 选项指定为可恢复。
 
  有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>具有联机索引操作的 WAIT_AT_LOW_PRIORITY  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>具有联机索引操作的 WAIT_AT_LOW_PRIORITY  
   
  要执行联机索引重新生成的 DDL 语句，必须完成对某一特定表运行的所有活动阻塞事务。 在联机索引重新生成执行时，它会阻塞准备对此表执行的所有新事务。 尽管联机索引重新生成锁的持续时间非常短，但等待某一给定表的所有打开的事务完成并阻塞新事务启动可能对吞吐量造成很大影响，导致工作负荷变慢或超时，并严重限制对基础表的访问。 **WAIT_AT_LOW_PRIORITY** 选项允许 DBA 管理联机索引重新生成需要的 S 锁和 Sch-M 锁，并允许他们选择 3 个选项之一。 在所有 3 种情况下，如果等待期间 ( (MAX_DURATION = n [minutes]) ) 没有阻塞活动，则联机索引重新生成会立即执行，而不等待 DDL 语句完成。  
   

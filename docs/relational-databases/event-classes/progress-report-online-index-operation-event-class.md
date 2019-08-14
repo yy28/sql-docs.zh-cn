@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940640"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811140"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Progress Report:Online Index Operation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67940640"
 |EndTime|**datetime**|联机索引操作完成的时间。|15|是|  
 |EventClass|**int**|事件类型 = 190。|27|否|  
 |EventSequence|**int**|给定事件在请求中的顺序。|51|否|  
-|EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 启动<br /><br /> 2 = 阶段 1 执行开始<br /><br /> 3 = 阶段 1 执行结束<br /><br /> 4 = 阶段 2 执行开始<br /><br /> 5 = 阶段 2 执行结束<br /><br /> 6 = 已插入行计数<br /><br /> 7 = 完成<br /><br /> 阶段 1 表示基对象（聚集索引或堆）或者索引操作是否仅涉及一个非聚集索引。 在索引生成操作同时涉及原始重新生成以及附加的非聚集索引时，使用阶段 2。  例如，如果某一对象具有聚集索引和若干非聚集索引，则“全部重新生成”将生成所有索引。 基对象（聚集索引）在阶段 1 重新生成，然后，所有非聚集索引在阶段 2 重新生成。|21|是|  
+|EventSubClass|**int**|事件子类的类型。<br /><br /> 1 = 启动<br /><br /> 2 = 阶段 1 执行开始<br /><br /> 3 = 阶段 1 执行结束<br /><br /> 4 = 阶段 2 执行开始<br /><br /> 5 = 阶段 2 执行结束<br /><br /> 6 = 已插入行计数<br /><br /> 7 = 完成<br /><br /> 阶段 1 表示基对象（聚集索引或堆）或者索引操作是否仅涉及一个非聚集索引。 在索引生成操作同时涉及原始重新生成以及附加的非聚集索引时，使用阶段 2。  例如，如果某个对象具有一个聚集索引和多个非聚集索引，则“全部重新生成”可重新生成所有索引。 基对象（聚集索引）在阶段 1 中重新生成，然后，所有非聚集索引在阶段 2 中重新生成。|21|是|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IndexID|**int**|受事件影响的对象的索引的 ID。|24|是|  

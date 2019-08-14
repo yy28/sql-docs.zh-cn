@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059027"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811280"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>数据库引擎中的新增功能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68059027"
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 现在提供图形数据库功能，可对更具意义的面向关系的数据建模。 包括用于创建节点和边界表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 语法，以及用于查询的关键字 [MATCH](../t-sql/queries/match-sql-graph.md)。 有关详细信息，请参阅[使用 SQL Server 2017 进行图形处理](../relational-databases/graphs/sql-graph-overview.md)。   
 - 新一代的查询处理改进，将对应用程序工作负荷的运行时状况采用优化策略。 对于这款适应性查询处理功能系列初版，我们进行了 3 项新的改进：批处理模式自适应联接、批处理模式内存授予反馈，以及针对多语句表值函数的交错执行     。  请参阅 [SQL 数据库中的智能查询处理](../relational-databases/performance/intelligent-query-processing.md)。
 - 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 中的自动优化功能会在检测到潜在性能问题时发出通知，并允许应用更正措施或 [!INCLUDE[ssde-md](../includes/ssde-md.md)] 自动解决性能问题。 有关详细信息，请参阅[自动优化](../relational-databases/automatic-tuning/automatic-tuning.md)。
-- 针对内存优化表上的非群集索引生成的性能增强。 显著优化了数据库恢复期间 MEMORY_OPTIMIZED 表的 bwtree（非群集）索引重新生成的性能。 这一改进明显缩短了使用非群集索引时的数据库恢复时间。  
+- 针对内存优化表上的非群集索引生成的性能增强。 显著优化了数据库恢复期间 MEMORY_OPTIMIZED 表的 bwtree（非聚集）索引重新生成的性能。 这一改进明显缩短了使用非聚集索引时的数据库恢复时间。  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三个新列：socket_count、cores_per_socket、numa_node_count。 这在 VM 中运行服务器时非常有用，因为超出 NUMA 会导致过度使用主机，这最终会转化为性能问题。
 - 在 [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中引入了新列 modified_extent_page_count\,，用于跟踪数据库的每个数据库文件中的差异更改。 使用新列 modified_extent_page_count 可生成智能备份解决方案，如果数据库中发生更改的页面的百分比低于阈值（假设为 70-80%），此解决方案将执行差异备份；否则将执行完整数据库备份。
 - SELECT INTO ...ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 现支持将表加载到文件组，使用 SELECT INTO TSQL 语法中添加的 ON 关键字的用户的默认文件组除外  。

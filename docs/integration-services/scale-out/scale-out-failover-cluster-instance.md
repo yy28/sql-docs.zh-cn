@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1206d81fb146c851f11ececdcc7ae38fe20eb79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064603"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811196"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持
 
@@ -36,7 +36,7 @@ ms.locfileid: "68064603"
 向现有 SQL Server 故障转移群集中添加辅助节点。
 
 ## <a name="3-install-scale-out-master-on-the-primary-node"></a>3.在主节点上安装 Scale Out Master
-使用非群集安装的安装向导，在主节点上安装 Integration Services 和 Scale Out Master。 
+使用非聚集安装的安装向导，在主节点上安装 Integration Services 和 Scale Out Master。 
 
 安装过程中，在 Scale Out Master 证书的 CN 中添加 SQL Server 网络名称。
 

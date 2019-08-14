@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050398"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811171"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,9 +143,9 @@ SELECT COUNT(DISTINCT [Col2])
   
 有三个哈希索引，所以哈希索引占用的内存为 3 * 64MB = 192MB。  
   
-#### <a name="memory-for-non-clustered-indexes"></a>非聚集索引占用的内存  
+#### <a name="memory-for-nonclustered-indexes"></a>非聚集索引占用的内存  
   
-非聚集索引采用 B 树实现（内部节点包含索引键和指向后续节点的指针）。  叶节点包含索引键和指向内存中表行的指针。  
+非聚集索引采用 B 树实现，其内部节点包含索引键和指向后续节点的指针。  叶节点包含索引键和指向内存中表行的指针。  
   
 与哈希索引不同的是，非聚集索引的 Bucket 大小不固定。 非聚集索引随数据动态扩展/收缩。  
   
@@ -155,7 +155,7 @@ SELECT COUNT(DISTINCT [Col2])
     对于典型配置，分配给非叶节点的内存只占索引所占用的整个内存的很小的百分比。 其占用的内存少到可以安全地忽略。  
   
 - **叶节点占用的内存**   
-    叶节点对于表中的每个唯一键都具有 1 行，并且指向具有该唯一键的数据行。  如果多行具有相同的键（即，存在不唯一的非聚集索引），则索引页节点中只有一行指向这些行中的某一个，其他行则相互链接在一起。  因此，可通过下面的公式估算所需的总内存：
+    叶节点对于表中的每个唯一键都具有 1 行，并且指向具有该唯一键的数据行。  如果多行具有相同的键（即，存在不唯一的非聚集索引），则索引页节点中只有一行指向其中某一行，其他行则相互链接在一起。  因此，可通过下面的公式估算所需的总内存：
   - 非聚集索引所需内存 = （指针大小 + Sum (键列数据类型大小))* 唯一键行数  
   
  非聚集索引的最佳应用是范围查找，下面的查询即为例证：  

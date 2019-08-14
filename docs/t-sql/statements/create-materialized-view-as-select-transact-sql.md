@@ -34,15 +34,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b58102644c596fde248861bb504bf06b932d6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912622"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893772"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)（预览）
 
@@ -120,11 +120,10 @@ Azure 数据仓库的具体化视图与 SQL Server 的索引视图非常相似�
 
 |应用场景|要添加到具体化视图的新列|注释|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | 具体化视图定义的 SELECT 列表缺少它 |COUNT_BIG (*) |通过具体化视图创建自动添加。  不需要任何用户操作。|
+|具体化视图定义的 SELECT 列表缺少 COUNT_BIG()| COUNT_BIG (*) |通过具体化视图创建自动添加。  不需要任何用户操作。|
 |由用户在具体化视图定义的 SELECT 列表中指定 SUM(a)，其中“a”是可为 null 的表达式 |COUNT_BIG (a) |用户需要手动将表达式“a”添加到具体化视图定义中。|
 |由用户在具体化视图定义的 SELECT 列表中指定 AVG(a)，其中“a”是表达式。|SUM(a), COUNT_BIG(a)|通过具体化视图创建自动添加。  不需要任何用户操作。|
-|由用户在具体化视图定义的 SELECT 列表中指定 STDEV(a)，其中“a”是表达式。|SUM(a),  
-COUNT_BIG(a) SUM(square(a))|通过具体化视图创建自动添加。  不需要任何用户操作。 |
+|由用户在具体化视图定义的 SELECT 列表中指定 STDEV(a)，其中“a”是表达式。|SUM(a), COUNT_BIG(a), SUM(square(a))|通过具体化视图创建自动添加。  不需要任何用户操作。 |
 | | | |
 
 创建后，SQL Server Management Studio 中的 Azure SQL 数据仓库实例的视图文件夹将显示具体化实体。

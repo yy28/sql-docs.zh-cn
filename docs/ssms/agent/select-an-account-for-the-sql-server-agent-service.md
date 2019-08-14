@@ -22,12 +22,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff6e63c05b380d1cee875c29570bd3cc4b97d051
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266767"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811550"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "68266767"
 ## <a name="supported-service-account-types"></a>支持的服务帐户类型  
 下表列出了可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的 Windows 帐户类型。  
   
-|服务帐户类型|非群集服务器|群集服务器|域控制器（非群集）|  
+|服务帐户类型|非聚集服务器|群集服务器|域控制器（非聚集）|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 域帐户（Windows 管理员组的成员）|是否支持|是否支持|是否支持|  
 |Windows 域帐户（非管理）|是否支持<br /><br />请参阅下面的限制 1。|是否支持<br /><br />请参阅下面的限制 1。|是否支持<br /><br />请参阅下面的限制 1。|  

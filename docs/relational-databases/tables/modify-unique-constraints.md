@@ -16,12 +16,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3ec5fed63d84ece9a3f54c5c2ae5304dcf8bd6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082621"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811335"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68082621"
     |--------|------------------------|  
     |更改与约束关联的列|1) 在“(常规)”下的网格中，单击“列”，再单击属性右侧的省略号 (…)    。<br /><br /> 2) 在“索引列”  对话框中，为索引指定新列和/或排序顺序。|  
     |重命名约束|在 **“标识”** 下的网格中，在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”  列表中的名称重复。|  
-    |设置聚集选项|在“表设计器”  下的网格中，选择“创建为群集索引”  ，再从下拉列表中选择“是”创建群集索引，或选择“否”创建非群集索引。 对于每个表，只允许存在一个聚集索引。 如果此表中已经存在聚集索引，则您必须首先对原始索引清除此设置。|  
+    |设置聚集选项|在“表设计器”  下的网格中，选择“创建为群集索引”  ，并从下拉列表中选择“是”创建群集索引，或选择“否”创建非聚集索引。 对于每个表，只允许存在一个聚集索引。 如果此表中已经存在聚集索引，则您必须首先对原始索引清除此设置。|  
     |定义填充因子|在 **“表设计器”** 下的网格中，展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。|  
   
 5.  在“文件”  菜单上，单击“保存”  以保存表名  。  

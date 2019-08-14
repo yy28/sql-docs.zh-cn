@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661229"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841572"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
     > [!NOTE]
     > 使用包含 BIN2 排序顺序的排序规则（即 BIN2 排序规则）的字符串列支持上面的操作。 对于使用非 BIN2 排序规则的字符串列，可以使用随机加密和已启用 enclave 的列加密密钥来加密列。 但是，可用于此类列的唯一新功能是就地加密。
 - 在使用随机加密的列上创建非聚集索引。
-- 计算列使用表达式，这些表达式包含使用随机加密的列上的 LIKE 谓词和比较运算符。
 
 [功能详细信息](always-encrypted-database-engine.md#feature-details)列出的适用于不含安全 enclave 的 Always Encrypted 的其他所有限制（上述增强功能未予以解决）也适用于含安全 enclave 的 Always Encrypted。
 
@@ -182,6 +181,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
     - char[n]、varchar[n]、binary[n]、varbinary[n]（如果 n 大于 7935 的话）。
 - 就地加密操作无法与列元数据的其他任何更改合并，更改同一代码页内的排序规则以及更改为 Null 性除外。 例如，在一个 ALTER TABLE 或 ALTER COLUMN Transact-SQL 语句中，既无法加密、重新加密或解密列，也无法更改列的数据类型。 请单独使用两个语句。
 - 不支持将已启用 enclave 的密钥用于内存中表内的列。
+- 定义计算列的表达式无法使用随机加密对启用 enclave 的列执行任何计算（即使是 LIKE 和范围比较计算）。
 - 用于存储已启用 enclave 的列主密钥的唯一受支持密钥存储是 Windows 证书存储和 Azure 密钥保管库。
 
 以下限制虽适用于 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]，但正在计划予以解决：

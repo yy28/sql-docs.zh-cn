@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdcac17ddc09223d63e7dd923fd561e0a334fc2
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68700050"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941164"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南 
 
@@ -65,7 +65,7 @@ SQL Server 技术文档为几种受支持的 SQL Server 版本和风格提供内
 
 ![SQL 文档版本筛选器](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-选择“SQL Server”   > “不隐藏任何内容”  确保所有内容都可见，以及没有任何内容隐藏在版本筛选器的后面。 
+选择“所有 SQL”   > “不隐藏任何内容”  可确保所有内容都可见，且没有任何内容隐藏在版本筛选器之后。 
 
 ## <a name="breadcrumbs"></a>痕迹导航
 

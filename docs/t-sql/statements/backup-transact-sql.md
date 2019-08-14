@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141222"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809730"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>参数
@@ -305,8 +305,10 @@ ENCRYPTION 用于指定将备份加密。 可指定加密备份所用的加密�
 
 如果决定加密，则还必须使用加密程序选项指定加密程序：
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+`SERVER CERTIFICATE` 和 `SERVER ASYMMETRIC KEY` 是在 `master` 数据库中创建的证书和非对称密钥。 有关详细信息，请分别参阅 [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) 和 [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。
 
 > [!WARNING]
 > 将加密与 `FILE_SNAPSHOT` 参数一起使用时，使用指定的加密算法对元数据文件本身进行加密，并且系统会验证是否已完成对数据库的[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。 不会再对数据本身进行其他加密。 如果未加密数据库或发出备份语句之前未完成加密，则备份失败。
@@ -1008,8 +1010,8 @@ ENCRYPTION 用于指定将备份加密。 可指定加密备份所用的加密�
 
 如果决定加密，则还必须使用加密程序选项指定加密程序：
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **备份集选项**
 

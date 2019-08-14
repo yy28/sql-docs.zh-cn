@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063975"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893186"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>创建新的 SQL Server 故障转移群集（安装程序）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063975"
   
 8.  在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”** 。  
   
-9. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+9. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68063975"
     > [!NOTE]  
     >  该名称在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的早期版本中被称为虚拟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 名称。  
   
-     **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例的默认方式都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请选中 **“实例 ID”** 框，并提供一个值。  
+     **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请选中 **“实例 ID”** 框，并提供一个值。  
   
     > [!NOTE]  
     >  典型的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例（无论是默认实例还是命名实例）不会对“实例 ID”  框使用非默认值。  
@@ -254,7 +254,7 @@ ms.locfileid: "68063975"
   
 9. 在“许可条款”页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 单击 **“下一步”** 继续。 若要结束安装程序，请单击 **“取消”** 。  
   
-10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+10. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选择复选框的任意组合，但仅有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、表格模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和多维模式下的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持故障转移群集。 其他所选组件将作为不带故障转移功能的独立功能在运行安装程序的当前节点上运行。 有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式的详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)。  
   
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "68063975"
   
 11. 在“实例配置”页上指定是安装默认实例还是命名实例。
   
-     **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例的默认方式都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请选中 **“实例 ID”** 文本框，并提供一个值。  
+     **实例 ID** - 默认情况下，实例名称用作实例 ID。 这用于标识 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的安装目录和注册表项。 默认实例和命名实例都是如此。 对于默认实例，实例名称和实例 ID 为 MSSQLSERVER。 若要使用非默认的实例 ID，请选中 **“实例 ID”** 文本框，并提供一个值。  
   
     > [!NOTE]  
     >  典型的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例（无论是默认实例还是命名实例）不会对“实例 ID”  文本框使用非默认值。  

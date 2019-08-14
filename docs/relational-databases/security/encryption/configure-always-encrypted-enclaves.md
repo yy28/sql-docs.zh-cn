@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ab035890dad4e51b6bc3a8d3f1c463e64143ac1
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 83a13dc043687096a2d2909e4573ebbc3ac4a1ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670607"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892708"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
 
@@ -373,7 +373,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -777,7 +777,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -793,8 +793,8 @@ CEK1 是已启用 enclave 的列加密密钥。
 以下是针对该表遵循参数化准则的查询示例：
 
 ```sql
-DECLARE @SSNPattern CHAR(11) = '%1111%'
-DECLARE @MinSalary INT = 1000
+DECLARE @SSNPattern [char](11) = '%1111%'
+DECLARE @MinSalary [money] = 1000
 SELECT *
 FROM [dbo].[Employees]
 WHERE SSN LIKE @SSNPattern
@@ -857,7 +857,7 @@ GO;
 
 ### <a name="set-up-your-visual-studio-project"></a>创建 Visual Studio 项目
 
-若要在 .NET Framework 应用程序中使用具有安全 enclave 的 Always Encrypted，需要确保应用程序是针对 .NET Framework 4.7.2 构建的并与 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet 集成。 此外，如果将列主密钥中存储在 Azure Key Vault 中，还需要将应用程序与 Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 2.2.0 或更高版本集成。 
+若要在 .NET Framework 应用程序中使用具有安全 enclave 的 Always Encrypted，需要确保应用程序是针对 .NET Framework 4.7.2 生成的并与 [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) 集成。 此外，如果将列主密钥中存储在 Azure Key Vault 中，还需要将应用程序与 [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider) 2.2.0 或更高版本集成。 
 
 1. 打开 Visual Studio。
 2. 创建新的 Visual C\# 项目，或打开现有项目。
@@ -878,13 +878,22 @@ GO;
 
 6. 选择项目并单击安装。
 7. 从项目中打开配置文件（例如 App.config 或 Web.config）。
-8. 找到\<配置\>部分。 在\<配置\>部分中，找到 \<configSections\> 部分。 将以下部分添加到 \<configSections\>：
+8. 找到 \<configuration\> 部分，并添加或更新 \<configSections\> 部分。
+
+   A. 如果 \<configuration\> 部分不包含 \<configSections\> 部分，请直接在 \<configuration\> 下添加以下内容  。
+   
+      ```xml
+      <configSections>
+         <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </configSections>
+      ```
+   B. 如果 \<configruation\> 部分已包含 \<configSections\> 部分，请在 \<configSections\> 内添加以下行：
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. 在配置部分的 \<configSections\> 下，添加以下部分，它指定一个 enclave 提供程序，用来证明并与 Intel SGX enclave 进行交互：
+9. 在配置部分的 \<configSections\> 下添加以下部分，它指定一个 enclave 提供程序，用来证明并与 VBS enclave 进行交互：
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>
@@ -894,6 +903,24 @@ GO;
    </SqlColumnEncryptionEnclaveProviders>
    ```
 
+下面是一个简单控制台应用程序的 app.config 文件的完整示例。
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </configSections>
+  <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
+      <add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders>
+</configuration>
+```
 ### <a name="develop-and-test-your-app"></a>开发和测试应用程序
 
 若要使用 Always Encrypted 和 enclave 计算，应用程序必须连接到数据库，同时在连接字符串中使用以下两个关键字：`Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation`（其中，xxxx 可以是 IP、域等）。
@@ -919,7 +946,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -969,7 +996,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
    SqlParameter MinSalary = cmd.CreateParameter();
    
    MinSalary.ParameterName = @"@MinSalary";
-   MinSalary.DbType = DbType.Int32;
+   MinSalary.DbType = DbType.Currency;
    MinSalary.Direction = ParameterDirection.Input;
    MinSalary.Value = 900;
    

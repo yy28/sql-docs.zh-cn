@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: afef865ed2440f278d61e8b0f4d3304867803853
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 418852430170e40308d1d37446b9868281960f49
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126191"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894052"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>安装 SQL Server 商业智能功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68126191"
 ## <a name="sql-server-bi-features"></a>SQL Server BI 功能  
  通过 SQL Server 安装程序安装包括 BI 组件在内的所有 SQL Server 功能 以下链接提供特定于每个 BI 功能的补充信息。  
   
--   [安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+-   [安装 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
--   [在 Power Pivot 模式下安装 Analysis Services。](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+-   [在 Power Pivot 模式下安装 Analysis Services。](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
 -   [安装 Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68126191"
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services (SSRS) 中的新功能](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
- [Analysis Services 中的新增功能](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [Analysis Services 中的新增功能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)   
  [Integration Services 中的新增功能](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [Master Data Services (MDS) 中的新增功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)   
  [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)   

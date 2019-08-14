@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b56627ea415a67016b4009c44556019e6fc20d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061042"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809755"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ ON <on_option> ] 
 [ ; ]  
   
---Create a non-clustered columnstore index on a disk-based table.  
+--Create a nonclustered columnstore index on a disk-based table.  
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ ,...n ] )  
@@ -139,7 +139,7 @@ ON [database_name.  [schema_name ] .  | schema_name .  ] *table_name*
   
 #### <a name="with-options"></a>WITH 选项
 
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON
 
    `DROP_EXISTING = ON` 指定删除现有的索引，并创建一个新的列存储索引。  
 ```sql
@@ -148,7 +148,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    DROP_EXISTING = OFF（默认值）要求索引名称与现有名称相同。 如果指定的索引名称已存在，则会出错。  
   
-##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism   
+##### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = max_degree_of_parallelism   
    在索引操作期间覆盖现有的最大并行度服务器配置。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
    max_degree_of_parallelism 可为以下值  ：  
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    有关详细信息，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
-###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    对于基于磁盘的表，delay 指定处于关闭状态的增量行组在 SQL Server 可以将它压缩为压缩行组之前，必须保持为增量行组的最小分钟数  。 由于基于磁盘的表不对单个行跟踪插入和更新时间，因此 SQL Server 会将该延迟应用于处于关闭状态的增量行组。  
    默认为 0 分钟。  
    
@@ -174,7 +174,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    有关何时使用 COMPRESSION_DELAY 的建议，请参阅[开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
-##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：   
 - `COLUMNSTORE` 是默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
 - `COLUMNSTORE_ARCHIVE` 将表或分区进一步压缩为更小的大小。 可在许多情况下使用此选项，例如，用于要求存储更小并且可以付出更多时间来进行存储和检索的存档。  
@@ -224,12 +224,12 @@ ON [database_name.  [schema_name ] .  | schema_name .  ] *table_name*
    指定包含该索引的由一部分、两部分或三部分名称组成的表。  
 
 #### <a name="with-options"></a>WITH 选项
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON：删除并重新生成现有索引。 指定的索引名称必须与当前的现有索引相同；但可以修改索引定义。 例如，可以指定不同的列或索引选项。
   
    DROP_EXISTING = OFF：如果指定的索引名称已存在，则会显示一条错误。 使用 DROP_EXISTING 不能更改索引类型。 在向后兼容的语法中，WITH DROP_EXISTING 等效于 WITH DROP_EXISTING = ON。  
 
-###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism   
+###### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = max_degree_of_parallelism   
    在索引操作期间覆盖[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
    max_degree_of_parallelism 可为以下值  ：  
@@ -250,10 +250,10 @@ ON [database_name.  [schema_name ] .  | schema_name .  ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    指定某一行在适合迁移到压缩行组之前，应在增量行组中保留的时间下限。 例如，客户可以说，如果某一行在 120 分钟内保持不变，则可以将其压缩为列存储格式。 对于基于磁盘的表中的列存储索引，我们不跟踪行的插入或更新时间，而是使用增量行组关闭时间作为行代理。 默认持续时间为 0 分钟。 一旦增量行组中累积了 100 万行，并且该行组标记为已关闭，就会将行迁移到列存储。  
   
-###### <a name="datacompression"></a>DATA_COMPRESSION  
+###### <a name="data_compression"></a>DATA_COMPRESSION  
    为指定的表、分区号或分区范围指定数据压缩选项。 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 选项如下所示：
    
 - `COLUMNSTORE` - 默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
@@ -261,7 +261,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
-##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
+##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    调用一个筛选器谓词，它指定哪些行包含在索引中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对筛选索引中的数据行创建筛选统计信息。  
   
@@ -487,7 +487,7 @@ GO
 1.  首先，创建要在此示例中使用的一个较小的表。  
   
     ```sql  
-    --Create a rowstore table with a clustered index and a non-clustered index.  
+    --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
         OrderDateKey [int] NOT NULL,  
@@ -498,14 +498,14 @@ GO
         CLUSTERED INDEX ( ProductKey )  
     );  
   
-    --Add a non-clustered index.  
+    --Add a nonclustered index.  
     CREATE INDEX my_index ON MyFactTable ( ProductKey, OrderDateKey );  
     ```  
   
 2.  从行存储表中删除所有非聚集索引。  
   
     ```sql  
-    --Drop all non-clustered indexes  
+    --Drop all nonclustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
   

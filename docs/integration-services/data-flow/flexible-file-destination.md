@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a8200ed17e9581f0c39693ee7386f7f33c566265
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 4572651bb90098c9afb3a01c574401356dac6706
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316629"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892303"
 ---
 # <a name="flexible-file-destination"></a>灵活的文件目标
 
@@ -39,7 +39,7 @@ ms.locfileid: "68316629"
 - **文件连接管理器类型：** 指定源连接管理器类型。 然后，从指定的类型中选择一个现成的或新建一个。
 - **文件夹路径：** 指定目标文件夹路径。
 - **文件名：** 指定目标文件名称。
-- **文件格式：** 指定目标文件格式。 支持格式为 Text、Avro、ORC 和 Parquet     。
+- **文件格式：** 指定目标文件格式。 支持格式为 Text、Avro、ORC 和 Parquet     。 ORC/Parquet 需要 Java。 请参阅[此处](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java)了解详细信息。
 - **列分隔符字符：** 指定要用作列分隔符的字符（不支持多字符分隔符）。
 - **作为列名称的第一行：** 指定是否将列名称写入第一行。
 - **压缩文件：** 指定是否压缩文件。
@@ -74,30 +74,3 @@ ms.locfileid: "68316629"
 对于写入权限，请从接收器文件系统开始授予至少“执行”权限，并授予接收器文件夹的“写入”权限   。
 或者，通过 RBAC 授予至少“存储 Blob 数据参与者”角色  。
 有关详细信息，请参阅[此](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)文章。
-
-**ORC/Parquet 文件格式的先决条件**
-
-需通过 Java 来使用 ORC/Parquet 文件格式。
-Java 版本的体系结构（32/64 位）应与要使用的 SSIS 运行时的体系结构一致。
-已测试以下 Java 版本。
-
-- [Zulu OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE 运行时环境 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**安装 Zulu OpenJDK**
-
-1. 下载并提取安装 zip 包。
-2. 从命令提示符处，运行 `sysdm.cpl`。
-3. 在“高级”选项卡上，选择“环境变量”   。
-4. 在“系统变量”部分中，选择“新建”   。
-5. 输入变量名称 `JAVA_HOME`  。
-6. 选择“浏览目录”，导航到已提取的文件夹，然后选择 `jre` 子文件夹  。
-   然后选择“确定”，“变量值”将自动进行填充   。
-7. 选择“确定”，关闭“新建系统变量”对话框   。
-8. 选择“确定”，关闭“环境变量”对话框   。
-9. 选择“确定”以关闭“系统属性”对话框   。
-
-**安装 Oracle Java SE 运行时环境**
-
-1. 下载并运行 exe 安装程序。
-2. 按照安装程序说明完成安装。

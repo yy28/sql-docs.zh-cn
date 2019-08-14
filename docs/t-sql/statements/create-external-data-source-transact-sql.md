@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 68060248693b33cead474f051f93d69208ce512f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67902717"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893574"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -642,7 +642,7 @@ WITH
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Blob 存储          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen 2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 位置路径：
 
@@ -651,6 +651,7 @@ WITH
 
 设置位置时的其他说明和指南：
 
+- 默认选项是在预配 Azure Data Lake Storage Gen 2 时使用“启用安全 SSL 连接”。 启用此链接后，必须选择在安全的 SSL 连接时使用 `abfss`。 请注意，`abfss` 也适用于不安全的 SSL 连接。 
 - 创建对象时，SQL 数据仓库引擎不会验证外部数据源是否存在。 要进行验证，请使用外部数据源创建外部表。
 - 查询 Hadoop 时，所有表使用相同的外部数据源，以确保查询语义一致。
 - `wasb` 是 Azure blob 存储的默认协议。 `wasbs` 是可选的，但建议使用，因为会使用安全的 SSL 连接发送数据。
@@ -725,9 +726,9 @@ WITH
 ;
 ```
 
-### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1"></a>B. 创建外部数据源以引用 Azure Data Lake Store Gen 1
+### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. 创建外部数据源以使用服务主体引用 Azure Data Lake Store Gen 1 或 Azure Data Lake Store Gen 2
 
-Azure Data Lake Store 连接基于 ADLS URI 和 Azure Active Directory 应用程序的服务主体。 可以在[使用 Active Directory 域服务进行 Data Lake Store 身份验证][azure_ad[]中找到有关创建此应用程序的文档。
+Azure Data Lake Store 连接可基于 ADLS URI 和 Azure Active Directory 应用程序的服务主体。 可以在 [使用 Active Directory 域服务进行 Data Lake Store 身份验证][azure_ad[] 中找到有关创建此应用程序的文档。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -742,6 +743,11 @@ WITH
 --,  SECRET     = '<KEY>'
 ,    SECRET     = 'BjdIlmtKp4Fpyh9hIvr8HJlUida/seM5kQ3EpLAmeDI='
 ;
+
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
 (    LOCATION       = 'adl://newyorktaxidataset.azuredatalakestore.net'
@@ -749,11 +755,21 @@ WITH
 ,    TYPE           = HADOOP
 )
 ;
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+(    LOCATION       = 'abfss://newyorktaxidataset.azuredatalakestore.net' -- Please note the abfss endpoint when your account has secure transfer enabled
+,    CREDENTIAL     = ADLS_credential
+,    TYPE           = HADOOP
+)
+;
 ```
 
-### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2"></a>C. 创建外部数据源以引用 Azure Data Lake Store (ADLS) Gen 2
-
-连接到 ADLS Gen 2 需要存储帐户密钥作为数据库范围凭据的密钥。 目前不提供对 Oauth2.0 的支持。
+### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-the-storage-account-key"></a>C. 创建外部数据源以使用存储帐户密钥引用 Azure Data Lake Store Gen 1 或 Azure Data Lake Store Gen 2
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -769,6 +785,7 @@ WITH
 ,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
+-- Note this example uses a Gen 2 endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
@@ -917,7 +934,7 @@ WITH
 | 7                   | 8050                          |
 
 有关受支持的 Hadoop 版本的完整列表，请参阅 [PolyBase 连接配置 (Transact-SQL)][connectivity_pb]。
-  
+
 > [!IMPORTANT]  
 > 创建外部数据源时，不会验证 RESOURCE_MANAGER_LOCATION 值。 每次尝试下推时，输入不正确的值都可能会导致查询执行失败，因为提供的值无法解析。
 
@@ -947,7 +964,7 @@ PolyBase 支持大多数外部数据源的基于代理的身份验证。 创建�
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. 创建外部数据源以引用 Hadoop
 
 若要创建外部数据源以引用 Hortonworks 或 Cloudera Hadoop 群集，请指定 Hadoop `Namenode` 的计算机名称或 IP 地址以及端口。 <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -960,7 +977,7 @@ WITH
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>B. 创建外部数据源以引用 Hadoop 并启用下推
 
 指定 `RESOURCE_MANAGER_LOCATION` 选项以便为 PolyBase 查询启用到 Hadoop 的下推计算。 启用后，PolyBase 会根据成本作出决策，以确定是否应将查询计算下推到 Hadoop。
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -974,7 +991,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>C. 创建外部数据源以引用受 Kerberos 保护的 Hadoop
 
 若要验证 Hadoop 群集是否受 Kerberos 保护，请检查 Hadoop core-site.xml 中的 hadoop.security.authentication 属性值。 若要引用受 Kerberos 保护的 Hadoop 群集，必须指定包含 Kerberos 用户名和密码的数据库范围凭据。 数据库主密钥用于加密数据库范围凭据密钥。
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
