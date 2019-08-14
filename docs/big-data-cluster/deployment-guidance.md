@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9696cf89d4177d8b78d9a0fe08cd27da5112650
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470762"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995834"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何在 Kubernetes 上部署 SQL Server 大数据群集
 
@@ -23,7 +23,7 @@ ms.locfileid: "68470762"
 SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下面概述了设置和配置步骤：
 
 - 在单个 VM、VM 群集或 Azure Kubernetes 服务 (AKS) 中设置 Kubernetes 群集。
-- 在自己的客户端计算机上安装群集配置工具 azdata  。
+- 在自己的客户端计算机上安装群集配置工具 azdata。
 - 在 Kubernetes 群集中部署 SQL Server 大数据群集。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
@@ -53,7 +53,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 | 部署 Kubernetes 的位置： | 描述 | 链接 |
 |---|---|---|
 | **Azure Kubernetes 服务 (AKS)** | Azure 中的托管 Kubernetes 容器服务。 | [说明](deploy-on-aks.md) |
-| **多台计算机 (kubeadm)** | 在使用 kubeadm 的物理计算机或虚拟机上部署的 Kubernetes 群集  | [说明](deploy-with-kubeadm.md) |
+| **多台计算机 (kubeadm)** | 在使用 kubeadm 的物理计算机或虚拟机上部署的 Kubernetes 群集 | [说明](deploy-with-kubeadm.md) |
 | **Minikube** | VM 中的单节点 Kubernetes 群集。 | [说明](deploy-on-minikube.md) |
 
 > [!TIP]
@@ -61,7 +61,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 
 ### <a name="verify-kubernetes-configuration"></a>验证 Kubernetes 配置
 
-运行 kubectl 命令以查看群集配置  。 确保 kubectl 指向正确的群集上下文。
+运行 kubectl 命令以查看群集配置。 确保 kubectl 指向正确的群集上下文。
 
 ```bash
 kubectl config view
@@ -85,52 +85,52 @@ JSON 配置文件中定义了大数据群集部署选项。 其中提供了三�
 | **kubeadm-dev-test** | 多台计算机 (kubeadm) |
 | **minikube-dev-test** | minikube |
 
-通过运行 azdata bdc create，即可部署大数据群集  。 此操作会提示你选择其中某个默认配置，然后指导你完成部署。
+通过运行 azdata bdc create，即可部署大数据群集。 此操作会提示你选择其中某个默认配置，然后指导你完成部署。
 
-第一次运行 `azdata` 时，必须包含 `--accept-eula` 才能接受最终用户许可协议 (EULA)。
+第一次运行 `azdata` 时，必须包含 `--accept-eula=yes` 才能接受最终用户许可协议 (EULA)。
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 在这种情况下，系统会提示你输入不属于默认配置（如密码）的任何设置。 
 
 > [!IMPORTANT]
-> 大数据群集的默认名称为 mssql-cluster  。 若要运行任何使用 `-n` 参数指定 Kubernetes 命名空间的 kubectl 命令，必须了解这一点  。
+> 大数据群集的默认名称为 mssql-cluster。 若要运行任何使用 `-n` 参数指定 Kubernetes 命名空间的 kubectl 命令，必须了解这一点。
 
 ## <a id="customconfig"></a> 自定义配置
 
 也可以自定义自己的部署配置文件。 可通过以下步骤完成操作：
 
-1. 首先从与 Kubernetes 环境匹配的标准部署配置文件开始。 可以使用 azdata bdc config list 命令列出它们  ：
+1. 首先从与 Kubernetes 环境匹配的标准部署配置文件开始。 可以使用 azdata bdc config list 命令列出它们：
 
    ```bash
    azdata bdc config list
    ```
 
-1. 若要自定义部署，请使用 azdata bdc config init 命令创建部署配置文件的副本  。 例如，下面的命令在名为 `custom` 的目标目录中创建 aks-dev-test 部署配置文件的副本  ：
+1. 若要自定义部署，请使用 azdata bdc config init 命令创建部署配置文件的副本。 例如，下面的命令在名为 `custom` 的目标目录中创建 aks-dev-test 部署配置文件的副本：
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
    ```
 
    azdata
-   > `--target` 根据 `--source` 参数指定包含配置文件、cluster.json 和 control.json 的目录   。
+   > `--target` 根据 `--source` 参数指定包含配置文件、cluster.json 和 control.json 的目录。
 
-1. 若要自定义部署配置文件中的设置，可以在适用于编辑 VS Code 等 JSON 文件的工具中编辑部署配置文件。 对于脚本式自动化，也可以使用 azdata bdc config 命令编辑自定义部署配置文件  。 例如，以下命令更改自定义部署配置文件，将部署群集的名称从默认 (mssql-cluster) 更改为 test-cluster   ：  
+1. 若要自定义部署配置文件中的设置，可以在适用于编辑 VS Code 等 JSON 文件的工具中编辑部署配置文件。 对于脚本式自动化，也可以使用 azdata bdc config 命令编辑自定义部署配置文件。 例如，以下命令更改自定义部署配置文件，将部署群集的名称从默认 (mssql-cluster) 更改为 test-cluster：  
 
    ```bash
    azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
    
 > [!TIP]
-> 也可以通过在 azdata create bdc 命令中使用 --name 参数，在部署时传入群集名称   。 命令中的参数优先于配置文件中的值。
+> 也可以通过在 azdata create bdc 命令中使用 --name 参数，在部署时传入群集名称。 命令中的参数优先于配置文件中的值。
 
    > 用于查找 JSON 路径的实用工具是 [JSONPath Online Evaluator](https://jsonpath.com/)。
 
    除了传递键值对之外，还可以提供内联 JSON 值或传递 JSON 补丁文件。 有关详细信息，请参阅[配置大数据群集的部署设置](deployment-custom-configuration.md)。
 
-1. 然后将自定义配置文件传递给 azdata bdc create  。 请注意，必须设置所需的[环境变量](#env)，否则系统将提示你输入相应值：
+1. 然后将自定义配置文件传递给 azdata bdc create。 请注意，必须设置所需的[环境变量](#env)，否则系统将提示你输入相应值：
 
    ```bash
    azdata bdc create --config-profile custom --accept-eula yes
@@ -144,15 +144,15 @@ azdata bdc create --accept-eula
 
 | 环境变量 | 要求 |描述 |
 |---|---|---|
-| **CONTROLLER_USERNAME** | Required |群集管理员的用户名。 |
+| **CONTROLLER_USERNAME** | 必填 |群集管理员的用户名。 |
 | **CONTROLLER_PASSWORD** | Required |群集管理员的密码。 |
-| **MSSQL_SA_PASSWORD** | Required |SQL 主实例的 SA 用户的密码。 |
-| **KNOX_PASSWORD** | Required |Knox 用户的密码。 |
+| **MSSQL_SA_PASSWORD** | 必填 |SQL 主实例的 SA 用户的密码。 |
+| **KNOX_PASSWORD** | 必填 |Knox 用户的密码。 |
 | **ACCEPT_EULA**| 首次使用 `azdata` 时为必需项| 不需要任何值。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula` 包含在内。|
 | **DOCKER_USERNAME** | 可选 | 当容器映像存储在专用存储库中时，用于访问容器映像的用户名。 有关如何使用专用 Docker 存储库部署大数据群集的更多详细信息，请参阅[脱机部署](deploy-offline.md)主题。|
 | **DOCKER_PASSWORD** | 可选 |用于访问上述专用存储库的密码。 |
 
-必须先设置这些环境变量，才能调用 azdata bdc create  。 如果未设置任何变量，则系统会提示输入变量。
+必须先设置这些环境变量，才能调用 azdata bdc create。 如果未设置任何变量，则系统会提示输入变量。
 
 以下示例介绍如何设置适用于 Linux (bash) 和 Windows (PowerShell) 的环境变量：
 
@@ -178,8 +178,8 @@ azdata bdc create --config-profile custom --accept-eula yes
 
 请注意以下原则：
 
-- 如果密码中含有任何特殊字符，请确保使用双引号将密码括起来。 可以将 MSSQL_SA_PASSWORD 设置为自己喜欢的任意形式，但请确保密码足够复杂，且请勿使用 `!`、`&` 或 `'` 字符  。 请注意，双引号分隔符仅适用于 bash 命令。
-- SA 登录名是安装过程中在 SQL Server 主实例上创建的系统管理员  。 创建 SQL Server 容器后，通过在容器中运行 `echo $MSSQL_SA_PASSWORD`，可发现指定的 MSSQL_SA_PASSWORD 环境变量  。 出于安全考虑，请根据[此处](../linux/quickstart-install-connect-docker.md#sapassword)所述的最佳做法更改 SA 密码。
+- 如果密码中含有任何特殊字符，请确保使用双引号将密码括起来。 可以将 MSSQL_SA_PASSWORD 设置为自己喜欢的任意形式，但请确保密码足够复杂，且请勿使用 `!`、`&` 或 `'` 字符。 请注意，双引号分隔符仅适用于 bash 命令。
+- SA 登录名是安装过程中在 SQL Server 主实例上创建的系统管理员。 创建 SQL Server 容器后，通过在容器中运行 `echo $MSSQL_SA_PASSWORD`，可发现指定的 MSSQL_SA_PASSWORD 环境变量。 出于安全考虑，请根据[此处](../linux/quickstart-install-connect-docker.md#sapassword)所述的最佳做法更改 SA 密码。
 
 ## <a id="unattended"></a> 无人参与安装
 
@@ -216,16 +216,16 @@ Cluster deployed successfully.
 
 部署脚本成功完成后，可以使用以下步骤获取大数据群集的外部终结点的 IP 地址。
 
-1. 部署完成后，可以从部署标准输出中查找控制器终结点的 IP 地址，也可以通过查看以下 kubectl 命令的 EXTERNAL-IP 输出来查找  ：
+1. 部署完成后，可以从部署标准输出中查找控制器终结点的 IP 地址，也可以通过查看以下 kubectl 命令的 EXTERNAL-IP 输出来查找：
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > 如果在部署过程中没有更改默认名称，请在上一个命令中使用 `-n mssql-cluster`。 mssql-cluster 是大数据群集的默认名称  。
+   > 如果在部署过程中没有更改默认名称，请在上一个命令中使用 `-n mssql-cluster`。 mssql-cluster 是大数据群集的默认名称。
 
-1. 使用 [azdata login](reference-azdata.md) 登录大数据群集。 将 --controller-endpoint 参数设置为控制器终结点的外部 IP 地址  。
+1. 使用 [azdata login](reference-azdata.md) 登录大数据群集。 将 --controller-endpoint 参数设置为控制器终结点的外部 IP 地址。
 
    ```bash
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -257,7 +257,7 @@ Cluster deployed successfully.
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-也可以通过运行以下 kubectl 命令获取为群集部署的所有服务终结点  ：
+也可以通过运行以下 kubectl 命令获取为群集部署的所有服务终结点：
 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
@@ -280,7 +280,7 @@ azdata bdc status show -o table
 ```
 
 > [!TIP]
-> 若要运行状态命令，必须先用上述终结点部分中所示的 azdata login 命令登录  。
+> 若要运行状态命令，必须先用上述终结点部分中所示的 azdata login 命令登录。
 
 下面显示了此命令的示例输出：
 
@@ -302,7 +302,7 @@ Storage  default        Ready
 
 这些命令的输出包含 Kibana 和 Grafana 仪表板的 URL，可用于更详细的分析。
 
-除了使用 azdata 之外，也可以使用 Azure Data Studio 查找终结点和状态信息  。 有关通过 azdata 和 Azure Data Studio 查看群集状态的详细信息，请参阅[如何查看大数据群集的状态](view-cluster-status.md)  。
+除了使用 azdata 之外，也可以使用 Azure Data Studio 查找终结点和状态信息。 有关通过 azdata 和 Azure Data Studio 查看群集状态的详细信息，请参阅[如何查看大数据群集的状态](view-cluster-status.md)。
 
 ## <a id="connect"></a> 连接到群集
 
