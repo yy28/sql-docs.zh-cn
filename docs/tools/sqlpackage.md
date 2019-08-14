@@ -240,7 +240,7 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 
 |参数|缩写|ReplTest1|描述|
 |---|---|---|---|
-|**/Action:**|**/a**|导出|指定要执行的操作。 |
+|**/Action:**|**/a**|Export|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定诊断日志记录是否输出到控制台。 默认为 False。 |
 |**/DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
@@ -278,7 +278,7 @@ SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件�
 
 |参数|缩写|ReplTest1|描述|
 |---|---|---|---|
-|**/Action:**|**/a**|导入|指定要执行的操作。 |
+|**/Action:**|**/a**|Import|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|指定诊断日志记录是否输出到控制台。 默认为 False。 |
 |**/DiagnosticsFile:**|**/df**|{string}|指定一个用于存储诊断日志的文件。 |
@@ -476,7 +476,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 
 |参数|缩写|ReplTest1|描述|
 |---|---|---|---|
-|**/Action:**|**/a**|脚本|指定要执行的操作。 |
+|**/Action:**|**/a**|Script|指定要执行的操作。 |
 |**/AccessToken:**|**/at**|{string}| 指定要在连接到目标数据库时使用的基于令牌的身份验证访问令牌。 |
 |**/DeployScriptPath:**|**/dsp**|{string}|指定用于输出部署脚本的可选文件路径。 对于 Azure 部署，如果有用于创建或修改 master 数据库的 TSQL 命令，脚本便会写入相同路径，不同之处在于使用“Filename_Master.sql”作为输出文件名。 |
 |**/DeployReportPath:**|**/drp**|{string}|指定用于输出部署报告 xml 文件的可选文件路径。 |
