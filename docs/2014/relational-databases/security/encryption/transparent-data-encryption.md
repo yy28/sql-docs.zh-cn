@@ -18,12 +18,12 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4581d91b9f57b48f22e66dc15ff03e6f7320d7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188039"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028544"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
   *透明数据加密* (TDE) 加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 数据文件，称为加密空闲数据。 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，如果遇到物理介质（如驱动器或备份磁带）被盗的情况，恶意破坏方只需还原或附加数据库即可浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -44,9 +44,9 @@ ms.locfileid: "63188039"
   
  **适用于 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的信息**  
   
- 当将 TDE 与 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12（[在某些区域是预览版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）一起使用时， [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]将为你自动创建存储在 master 数据库中的服务器级别的证书。 若要移动 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上的 TDE 数据库，必须解密该数据库、移动该数据库，然后在目标 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新启用 TDE。 有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上 TDE 的分步说明，请参阅 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)。  
+ 当将 TDE 与 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12（[在某些区域是预览版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）一起使用时， [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]将为你自动创建存储在 master 数据库中的服务器级别的证书。 若要移动 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上的 TDE 数据库，必须解密该数据库、移动该数据库，然后在目标 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新启用 TDE。 有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上 TDE 的分步说明，请参阅 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)。  
   
- 即使在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的版本系列 V12 现在宣布为处于公开发布状态的部分地理区域中，TDE 的状态预览也适用。 在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 宣布将 TDE 从预览提升为 GA 之前， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的 TDE 不适用于生产数据库。 有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 的详细信息，请参阅 [Azure SQL Database 中的新增功能](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)。  
+ 即使在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的版本系列 V12 现在宣布为处于公开发布状态的部分地理区域中，TDE 的状态预览也适用。 在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 宣布将 TDE 从预览提升为 GA 之前， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的 TDE 不适用于生产数据库。 有关 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 的详细信息，请参阅 [Azure SQL Database 中的新增功能](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)。  
   
  **适用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的信息**  
   
@@ -230,9 +230,9 @@ GO
  可在拥有内存中 OLTP 对象的数据库上启用 TDE。 如果启用 TDE，则内存中 OLTP 日志记录会被加密。 如果启用了 TDE，则不对 MEMORY_OPTIMIZED_DATA 文件组中的数据进行加密。  
   
 ## <a name="see-also"></a>请参阅  
- [移动受 TDE 保护的数据库添加到另一台 SQL 服务器](move-a-tde-protected-database-to-another-sql-server.md)   
+ [将受 TDE 保护的数据库移到另一个 SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
  [使用 EKM 启用 TDE](enable-tde-on-sql-server-using-ekm.md)   
- [使用 Azure SQL 数据库透明数据加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [透明数据加密 Azure SQL 数据库](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server 加密](sql-server-encryption.md)   
  [SQL Server 和数据库加密密钥（数据库引擎）](sql-server-and-database-encryption-keys-database-engine.md)   
  [SQL Server 数据库引擎和 Azure SQL 数据库的安全中心](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

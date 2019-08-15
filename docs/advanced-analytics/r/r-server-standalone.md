@@ -1,21 +1,21 @@
 ---
-title: 独立 R 服务器或 Machine Learning Server 安装
+title: 什么是独立的 Machine Learning Server 或 R Server SQL Server？
 description: SQL Server 安装程序中的独立 R 服务器和 Machine Learning Server 简介概述
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d4843aaf14a944e7beef73ef1330985666007498
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: cb7aef4502f42bc91067cdcbd598b9b2ea7477cf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715116"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028616"
 ---
-# <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (独立版) 和 Machine Learning Server (独立) SQL Server
+# <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>什么是独立的 Machine Learning Server 或 R Server SQL Server？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 为独立于 SQL Server 运行的独立 R Server 或 Machine Learning Server 提供安装支持。 根据 SQL Server 版本，独立服务器具有开放源 R 和 Python（可能具有）的基础，再加上可大规模添加统计和预测分析的 Microsoft 高性能库。 这些库还支持用 R 或 Python 编写脚本的机器学习任务。 
@@ -73,7 +73,7 @@ R 和 Python 开发人员通常选择独立的服务器, 使其超出开源 R �
   
   + [了解25个函数中的 R 和 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler):从基本的 R 命令开始, 然后对 RevoScaleR 可分发分析函数进行处理, 以提供高性能和缩放到 R 解决方案。 包括许多最流行的 R 建模包的可并行化版本，例如 K-均值聚类、决策树和决策林以及用于数据操作的工具。
 
-  + [起步使用 microsoftml Python 包](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)进行二元分类的示例:使用 microsoftml 中的函数和熟知的乳腺癌症数据集创建二进制分类模型。
+  + [快速入门：使用 microsoftml Python 包](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)进行二元分类的示例:使用 microsoftml 中的函数和熟知的乳腺癌症数据集创建二进制分类模型。
 
 选择最适合任务的语言。 使用 SQL 难以实现统计计算，但适合使用 R 来实现。 若要对数据进行基于集的操作, 请利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的强大功能来实现最大性能。 对列进行快速计算时，可使用内存数据库引擎。
 

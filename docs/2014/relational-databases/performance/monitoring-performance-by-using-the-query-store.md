@@ -10,33 +10,33 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150792"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028597"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 选项来配置查询存储。  
   
 ||  
 |-|  
-|**适用对象**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([获取它](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**适用对象**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([获取它](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
->  目前这是预览功能。 为了使用查询存储，你必须承认并同意查询存储的实现遵从你的许可协议的预览条款（如企业协议、Microsoft Azure 协议或 Microsoft 在线订阅协议），以及任何适用于 [Microsoft Azure 预览版的补充使用条款](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)。  
+>  目前这是预览功能。 为了使用查询存储，你必须承认并同意查询存储的实现遵从你的许可协议的预览条款（如企业协议、Microsoft Azure 协议或 Microsoft 在线订阅协议），以及任何适用于 [Microsoft Azure 预览版的补充使用条款](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)。  
   
 ##  <a name="Enabling"></a> 启用查询存储  
  默认情况下，新数据库的查询存储处于非活动状态。  
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>通过使用 Management Studio 中的查询存储页  
   
-1.  在对象资源管理器中，右键单击数据库，然后单击“属性”  。 （要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版。）  
+1.  在对象资源管理器中，右键单击数据库，然后单击“属性”。 （要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版。）  
   
-2.  在“数据库属性”  对话框中，选择“查询存储”  页。  
+2.  在“数据库属性” 对话框中，选择“查询存储” 页。  
   
-3.  在“启用”  框中，选择“True”  。  
+3.  在“启用” 框中，选择“True”。  
   
 #### <a name="by-using-transact-sql-statements"></a>通过使用 Transact-SQL 语句  
   
@@ -86,15 +86,15 @@ JOIN sys.query_store_query_text AS Txt
 
   
 ## <a name="using-the-regressed-queries-feature"></a>使用回归查询功能  
- 在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储”  部分。  
+ 在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储” 部分。  
   
- ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
+ ![查询存储](../../database-engine/media/querystore.PNG "查询存储")  
   
- 在选择“回归查询”  后，打开 **中的“回归查询”** [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 借助顶部的下拉列表框，可基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
+ 在选择“回归查询”后，打开 **中的“回归查询”** [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 借助顶部的下拉列表框，可基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
- 若要强制执行某一计划，请选择查询和计划，然后单击“强制计划”  你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。  
+ 若要强制执行某一计划，请选择查询和计划，然后单击“强制计划” 你只可以强制执行由查询计划功能保存且仍保留在查询计划缓存中的计划。  
   
 
   
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 请注意，不允许使用任意值-应使用以下项之一：1、 5、 10、 15、 30 和 60。  
+ 请注意, 不允许使用任意值-应使用以下值之一:1、5、10、15、30和60。  
   
  通过 `sys.database_query_store_options` 视图公开时间间隔的新值。  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  以上示例使用 `sp_query_store_remove_query` 扩展存储过程来删除不必要的数据。 你还可以使用其他两个过程。  
   
--   `sp_query_store_reset_exec_stats` -清除给定计划的运行时统计信息。  
+-   `sp_query_store_reset_exec_stats`-清除给定计划的运行时统计信息。  
   
--   `sp_query_store_remove_plan` -删除单个计划。  
+-   `sp_query_store_remove_plan`-删除单个计划。  
   
 
   
 ###  <a name="Peformance"></a> 性能审核和疑难解答  
  因为查询存储保存了整个查询执行过程中的编译历史记录和运行时度量，因此你可以轻松回答很多与你的工作负荷相关的不同问题。  
   
- **最后一个*n*在数据库上执行的查询。**  
+ **在数据库上执行的最后*n*个查询。**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -301,7 +301,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **每个查询的次数。**  
+ **每个查询的执行数。**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **与过去一小时内最长平均执行时间的查询数。**  
+ **过去一小时内具有最长平均执行时间的查询数。**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **在过去 24 小时，在相应的平均行计数和执行计数中读取的具有最大平均物理 IO 的查询数。**  
+ **在过去24小时内具有最大平均物理 IO 读取数的查询的数量, 其中包含相应的平均行计数和执行计数。**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **最近性能回归的查询 （对比不同点的时间）。** 以下查询示例返回了其执行时间因计划选择更改而在过去 48 小时内翻倍的所有查询。 并排查询所有的运行时统计信息时间间隔。  
+ **最近性能回归的查询 (比较不同时间点)。** 以下查询示例返回了其执行时间因计划选择更改而在过去 48 小时内翻倍的所有查询。 并排查询所有的运行时统计信息时间间隔。  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  如果你向查看所有性能回归（而不仅是计划选择更改造成的回归），只需从先前查询中删除条件 `AND p1.plan_id <> p2.plan_id` 。  
   
- **最近性能回归的查询 （对比近期执行和历史执行）。** 下一查询会根据执行时间段来比较查询执行。 在此特定示例中，查询对比了最近时期（1 小时）和历史时期（过去一天）中的执行，并标识了那些引入 additional_duration_workload 的查询。 此度量的计算方式是最近平均执行和历史平均执行之差，再乘以最近执行数量。 它实际上表示相对于历史记录，引入了多少额外的持续时间最近执行：  
+ **最近性能回归的查询 (比较最近的和历史执行)。** 下一查询会根据执行时间段来比较查询执行。 在此特定示例中，查询对比了最近时期（1 小时）和历史时期（过去一天）中的执行，并标识了那些引入 additional_duration_workload 的查询。 此度量的计算方式是最近平均执行和历史平均执行之差，再乘以最近执行数量。 它实际上表示相对于历史记录，引入了多少额外的持续时间最近执行：  
   
 ```  
 --- "Recent" workload - last 1 hour  

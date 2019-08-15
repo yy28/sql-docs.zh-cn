@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470997"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028593"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上的 SQL Server 大数据群集的数据暂留
 
@@ -45,7 +45,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
     }
 ```
 
-大数据群集的部署将使用持久存储来存储各种组件的数据、元数据和日志。 你可以自定义作为部署的一部分创建的持久卷声明的大小。 作为最佳做法，建议使用具有保留[回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)的存储类  。
+大数据群集的部署将使用持久存储来存储各种组件的数据、元数据和日志。 你可以自定义作为部署的一部分创建的持久卷声明的大小。 作为最佳做法，建议使用具有保留[回收策略](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)的存储类。
 
 > [!NOTE]
 > 在 CTP 3.2 中，无法在部署后修改存储配置设置。 此外，仅 `ReadWriteOnce` 支持整个群集的访问模式。
@@ -57,52 +57,52 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 
 ## <a name="aks-storage-classes"></a>AKS 存储类
 
-AKS 附带[两个内置存储类](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)（default 和 managed-premium），以及这两个类的动态预配程序   。 你可以指定其中一个，也可以创建自己的存储类来部署启用了持久存储的大数据群集。 默认情况下，用于 aks-dev-test 的内置群集配置文件附带使用“default”存储类的持久存储配置   。
+AKS 附带[两个内置存储类](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)（default 和 managed-premium），以及这两个类的动态预配程序。 你可以指定其中一个，也可以创建自己的存储类来部署启用了持久存储的大数据群集。 默认情况下，用于 aks-dev-test 的内置群集配置文件附带使用“default”存储类的持久存储配置。
 
 > [!WARNING]
-> 使用内置存储类“default”和“managed premium”创建的持久卷包含回收策略“删除”    。 因此，在删除 SQL Server 大数据群集时，持久卷声明会被删除，持久卷也会被删除。 可使用带有“保留”回收策略的 Azure 磁盘预配程序创建自定义存储类，如 [本文](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)所示   。
+> 使用内置存储类“default”和“managed premium”创建的持久卷包含回收策略“删除”。 因此，在删除 SQL Server 大数据群集时，持久卷声明会被删除，持久卷也会被删除。 可使用带有“保留”回收策略的 Azure 磁盘预配程序创建自定义存储类，如 [本文](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes)所示。
 
 
 ## <a name="minikube-storage-class"></a>Minikube 存储类
 
-Minikube 附带一个名为“standard”的内置存储类以及该类的一个动态预配程序  。 minikube minikube-dev-test 的内置配置文件具有控制平面规范中的存储配置设置  。所有池规范都将应用相同的设置。 你还可以自定义此文件的副本，并将其用于 minikube 上的大数据群集部署。 可手动编辑自定义文件，并更改特定池的持久卷声明的大小，以适应要运行的工作负载。 或者，参阅[配置存储](#config-samples)部分  ，了解如何使用 azdata 命令进行编辑的示例。
+Minikube 附带一个名为“standard”的内置存储类以及该类的一个动态预配程序。 minikube minikube-dev-test 的内置配置文件具有控制平面规范中的存储配置设置。所有池规范都将应用相同的设置。 你还可以自定义此文件的副本，并将其用于 minikube 上的大数据群集部署。 可手动编辑自定义文件，并更改特定池的持久卷声明的大小，以适应要运行的工作负载。 或者，参阅[配置存储](#config-samples)部分，了解如何使用 azdata 命令进行编辑的示例。
 
 ## <a name="kubeadm-storage-classes"></a>Kubeadm 存储类
 
-Kubeadm 没有内置存储类。 必须使用本地存储或首选预配程序（如 [Rook](https://github.com/rook/rook)）创建自己的存储类和持久卷。 在这种情况下，可以将“className”设置为配置的存储类  。 
+Kubeadm 没有内置存储类。 必须使用本地存储或首选预配程序（如 [Rook](https://github.com/rook/rook)）创建自己的存储类和持久卷。 在这种情况下，可以将“className”设置为配置的存储类。 
 
 > [!NOTE]
->  在 kubeadm kubeadm-dev-test 的内置部署配置文件中，没有为数据和日志存储指定存储类名  。 在部署之前，必须自定义配置文件并设置 className 的值，否则验证将失败。 部署还有一个验证步骤，用于检查存储类是否存在，但不是必需的持久卷。 必须确保根据群集的规模创建足够的卷。 在 CTP 3.1 中，对于默认群集大小，必须创建至少 23 个卷。 有关如何使用本地配置器创建持久卷的示例，请参阅[此处](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)。
+>  在 kubeadm kubeadm-dev-test 的内置部署配置文件中，没有为数据和日志存储指定存储类名。 在部署之前，必须自定义配置文件并设置 className 的值，否则验证将失败。 部署还有一个验证步骤，用于检查存储类是否存在，但不是必需的持久卷。 必须确保根据群集的规模创建足够的卷。 在 CTP 3.1 中，对于默认群集大小，必须创建至少 23 个卷。 有关如何使用本地配置器创建持久卷的示例，请参阅[此处](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)。
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>自定义每个池的存储配置
 
-对于所有自定义项，必须首先创建要使用的内置配置文件的副本。 例如，下面的命令在名为 `custom` 的子目录中创建 aks-dev-test 部署配置文件的副本  ：
+对于所有自定义项，必须首先创建要使用的内置配置文件的副本。 例如，下面的命令在名为 `custom` 的子目录中创建 aks-dev-test 部署配置文件的副本：
 
 ```bash
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-这将创建两个文件，即 cluster.json 和 control.json，可以通过手动编辑这两个文件进行自定义，也可以使用 azdata bdc config 命令    。 可以结合使用 jsonpath 和 jsonpatch 库以提供编辑配置文件的方法。
+这将创建两个文件，即 cluster.json 和 control.json，可以通过手动编辑这两个文件进行自定义，也可以使用 azdata bdc config 命令。 可以结合使用 jsonpath 和 jsonpatch 库以提供编辑配置文件的方法。
 
 
 ### <a id="config-samples"></a> 配置存储类名称和/或声明大小
 
 对于在群集中预配的每个 Pod，预配的持久卷声明的大小默认都是 10 GB。 可以在群集部署之前更新此值以适应你在自定义配置文件中运行的工作负载。
 
-下面的示例将“control.jsaon”中持久卷声明大小的大小更新为 32Gi  。 如果未在池级别重写，此设置将应用于所有池：
+下面的示例将“control.jsaon”中持久卷声明大小的大小更新为 32Gi。 如果未在池级别重写，此设置将应用于所有池：
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=100Gi"
 ```
 
-下面的示例演示如何修改 control.json 文件的存储类  ：
+下面的示例演示如何修改 control.json 文件的存储类：
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=<yourStorageClassName>"
 ```
 
-另一个选项是手动编辑自定义配置文件或使用 json 补丁，如下面的示例中所示，该补丁将更改存储池的存储类。 创建包含以下内容的 patch.json 文件  ：
+另一个选项是手动编辑自定义配置文件或使用 json 补丁，如下面的示例中所示，该补丁将更改存储池的存储类。 创建包含以下内容的 patch.json 文件：
 
 ```json
 {
@@ -131,7 +131,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 }
 ```
 
-应用补丁文件。 使用 azdata bdc config patch 命令应用 json 补丁文件中的更改  。 下面的示例将 patch.json 文件应用于目标部署配置文件 custom.json。
+应用补丁文件。 使用 azdata bdc config patch 命令应用 json 补丁文件中的更改。 下面的示例将 patch.json 文件应用于目标部署配置文件 custom.json。
 
 ```bash
 azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json

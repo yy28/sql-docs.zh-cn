@@ -13,21 +13,21 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe9a196424a8d3488a49c86f0996dece71eee0f7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049480"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028536"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动 WSFC 群集
   本主题说明如何在无仲裁情况下强制启动 Windows Server 故障转移群集 (WSFC) 群集节点。  在灾难恢复和多子网方案中，可能需要它来为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例恢复数据和完全重建高可用性。  
   
--   **开始之前：** [建议](#Recommendations)，[安全](#Security)  
+-   **开始之前：** [建议](#Recommendations)、[安全性](#Security)  
   
--   **若要强制群集启动而无需仲裁使用：** [使用故障转移群集管理器](#FailoverClusterManagerProcedure)，[使用 Powershell](#PowerShellProcedure)，[使用 Net.exe](#CommandPromptProcedure)  
+-   **若要在无仲裁情况下强制启动群集，请使用：** [使用故障转移群集管理器](#FailoverClusterManagerProcedure)、[使用 Powershell](#PowerShellProcedure)、[使用 Net.exe](#CommandPromptProcedure)  
   
--   **跟进：** [跟进：在强制仲裁情况下启动群集后](#FollowUp)  
+-   **跟进：** [跟进：在无仲裁情况下强制启动群集后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -43,11 +43,11 @@ ms.locfileid: "63049480"
   
 1.  打开故障转移群集管理器并连接到所需的群集节点，以强制联机。  
   
-2.  在“操作”窗格中，单击“强制启动群集”，然后单击“是 - 强制启动我的群集”    。  
+2.  在“操作”窗格中，单击“强制启动群集”，然后单击“是 - 强制启动我的群集”。  
   
 3.  在左窗格中，在 **“故障转移群集管理器”** 树中单击该群集名称。  
   
-4.  在摘要窗格中，确认当前**仲裁配置**值是：**警告：群集正在 ForceQuorum 状态**。  
+4.  在“摘要”窗格中，确认当前“仲裁配置”的值是否为：**警告：群集正在 ForceQuorum 状态下运行**。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在强制仲裁情况下启动群集后  
+##  <a name="FollowUp"></a> 跟进：在无仲裁情况下强制启动群集后  
   
 -   在使其他节点重新联机前，必须重新计算和重新配置 NodeWeight 值以正确构造新的仲裁。 否则，该群集可能再次脱机。  
   
@@ -122,7 +122,7 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [查看故障转移群集的事件和日志](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [查看故障转移群集的事件和日志](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
 -   [Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   

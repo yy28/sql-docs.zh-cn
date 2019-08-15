@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ab0624abf7a0479ac12f1ab51efd00c7e45a82a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893809"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028954"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**, 无默认值。  
   
-`[ @subscriber = ] 'subscriber'`订阅服务器实例的名称, 如果订阅服务器数据库为可用性组, 则为 AG 侦听器的名称。 *订阅服务器*的值为**sysname**, 默认值为 NULL。  
+`[ @subscriber = ] 'subscriber'`订阅服务器实例的名称, 如果订阅服务器数据库位于可用性组中, 则为 AG 侦听器的名称。 *订阅服务器*的值为**sysname**, 默认值为 NULL。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。  

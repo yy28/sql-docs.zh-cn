@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aabf68c2f1294dfb3873fdfcbec41827e4f80fec
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: abf6b2b3383377a0647f873a8c4a1f6aa9508455
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731079"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028549"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>使用 Spark History Server 调试和诊断 SQL Server 大数据群集上的 Spark 应用程序
 
@@ -203,5 +203,5 @@ Spark History Server 具有以下已知问题：
 
 ## <a name="next-steps"></a>后续步骤
 
-* [SQL Server 大数据群集入门](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [SQL Server 大数据群集入门](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [配置 Spark 设置](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

@@ -1,5 +1,5 @@
 ---
-title: “服务器内存”服务器配置选项 | Microsoft Docs
+title: “服务器内存”配置选项 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475967"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028692"
 ---
-# <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
+# <a name="server-memory-configuration-options"></a>“服务器内存”配置选项
   使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
   
  **min server memory** 的默认设置为 0， **max server memory** 的默认设置为 2147483647 MB。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
 > [!NOTE]  
->  将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用“-f”启动选项启动它，并将“max server memory”重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
+> 将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此选项之后无法启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请使用“-f”启动选项启动它，并将“max server memory”重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
   
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态使用内存时，它会定期查询系统以确定可用内存量。 保持此可用内存可避免操作系统 (OS) 进行分页。 如果可用内存较少， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会释放内存以供操作系统使用。 如果有更多的内存可用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会分配更多的内存。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在其工作负荷需要更多内存时才增加内存；空闲的服务器不会增加其虚拟地址空间的大小。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68475967"
 
 <sup>2</sup> 有关为当前主机中给定数量的关联 CPU 计算得出的默认工作线程数的信息，请参阅介绍如何[配置最大工作线程数服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)的文档页。
 
-<sup>3</sup> 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)的文档页。 Aplicable 仅适用于32位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。
+<sup>3</sup> 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)的文档页。 仅适用于 32 位的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。
 
 |操作系统类型|**最大服务器内存**允许的最小内存量|  
 |-------------|----------------------------------------------------------------|  

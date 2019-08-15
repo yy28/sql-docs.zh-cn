@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：创建 Windows Azure 存储帐户和容器 |Microsoft Docs
+title: 第 1 课：创建 Microsoft Azure 存储帐户和容器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9047c517fe4766ab5c3792d2fa2bf92eb7197965
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676203"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028497"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>第 1 课：创建 Windows Azure 存储帐户和容器
   必须先创建 Windows Azure 存储帐户和 blob 容器以及共享访问签名，然后才能将 SQL Server 数据文件存储在 Windows Azure 存储中。 第 1 课指导您完成登录到 Windows Azure 管理门户以及创建存储帐户、Blob 容器和共享访问签名的步骤。  
@@ -28,39 +28,39 @@ ms.locfileid: "62676203"
   
 -   使用存储的访问策略管理容器或其 Blob 的共享访问签名。 存储的访问策略提供针对共享访问签名的另外一种控制措施，还提供一种撤消这些措施的简单方法。  
   
- 有关详细信息，请参阅[管理对 Windows Azure 存储资源的访问](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
+ 有关详细信息, 请参阅[管理对 Windows Azure 存储资源的访问](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
   
 ## <a name="create-storage-account"></a>创建存储帐户  
  若要在 Windows Azure 管理门户上创建存储帐户，请执行以下步骤：  
   
-1.  登录到[Windows Azure 管理门户](https://manage.windowsazure.com)使用你的帐户。 如果您没有 Windows Azure 帐户，请访问[Windows Azure 免费试用版](http://www.windowsazure.com/pricing/free-trial/)。  
+1.  使用你的帐户登录到[Microsoft Azure 管理门户](https://manage.windowsazure.com)。 如果你没有 Windows Azure 帐户, 请访问[Windows azure 免费试用版](http://www.windowsazure.com/pricing/free-trial/)。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   
-2.  使用到的分步说明[创建存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。 注意，创建用于“Windows Azure 中的 SQL Server 数据文件”功能的存储帐户时，应取消选择或禁用地理复制。 这是因为对于参与地理复制的多个 Blob 无法保证写入顺序。 如果存储帐户经过地理复制，并且需要恢复，则发生损坏。  
+2.  使用分步说明[创建存储帐户](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。 注意，创建用于“Windows Azure 中的 SQL Server 数据文件”功能的存储帐户时，应取消选择或禁用地理复制。 这是因为对于参与地理复制的多个 Blob 无法保证写入顺序。 如果存储帐户经过地理复制，并且需要恢复，则发生损坏。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>创建 Blob 容器  
- 在 Windows Azure 中，容器用于集中一组 Blob。 所有 Blob 必须都在一个容器中。 一个存储帐户可含有无限数量的容器，但必须至少有一个容器。 一个容器可以存储无限数量的 Blob。 存储大小限制的最新信息，请参阅[如何在.NET 中使用 Windows Azure Blob 存储服务](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。  
+ 在 Windows Azure 中，容器用于集中一组 Blob。 所有 Blob 必须都在一个容器中。 一个存储帐户可含有无限数量的容器，但必须至少有一个容器。 一个容器可以存储无限数量的 Blob。 有关存储大小限制的最新信息, 请参阅[如何在 .net 中使用 Microsoft Azure Blob 存储服务](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。  
   
  若要在 Windows Azure 中创建容器，请执行以下步骤：  
   
-1.  登录到[Windows Azure 管理门户](https://manage.windowsazure.com)。  
+1.  登录到[Microsoft Azure 管理门户](https://manage.windowsazure.com)。  
   
-2.  选择存储帐户中，单击**容器**选项卡，单击**添加容器**在屏幕的底部，这会打开新建对话框。  
+2.  选择存储帐户, 单击 "**容器**" 选项卡, 然后单击屏幕底部的 "**添加容器**", 这将打开一个新的对话框。  
   
 3.  输入容器的名称。  
   
-4.  选择**私有**有关**访问类型**。 将访问权限设置为专用后，只有 Windows Azure 帐户所有者可读取容器和 Blob 数据。  
+4.  选择 "**专用**" 作为 "**访问类型**"。 将访问权限设置为专用后，只有 Windows Azure 帐户所有者可读取容器和 Blob 数据。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  若要以编程方式创建容器，还可使用 REST API。 有关详细信息，请参阅[创建容器](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)以及[Windows Azure 存储服务 REST API 参考](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
+>  若要以编程方式创建容器，还可使用 REST API。 有关详细信息, 请参阅[创建容器](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)和[Windows Azure 存储服务 REST API 引用](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
   
  **下一课：**  
   
- [第 2 课.在容器上创建策略并生成共享访问签名&#40;SAS&#41;键](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [第 2 课.在容器上创建策略并生成共享访问签名&#40;SAS 密钥&#41;](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

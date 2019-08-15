@@ -13,21 +13,21 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f41d86d0f757f9ccd0e698ac1bc81423a3118bb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832776"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028634"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 创建群集任务
-“Azure HDInsight 创建群集任务”  启用一个 SSIS 包来创建指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集。
+“Azure HDInsight 创建群集任务”启用一个 SSIS 包来创建指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集。
   
 > [!NOTE]  
 > - 新建 HDInsight 群集可能需要花费 10~20 分钟。  
-> - 这里存在与创建和运行 Azure HDInsight 群集相关的成本。 有关详细信息，请参阅 [HDInsight 定价](http://azure.microsoft.com/en-us/pricing/details/hdinsight/)。  
+> - 这里存在与创建和运行 Azure HDInsight 群集相关的成本。 有关详细信息，请参阅 [HDInsight 定价](https://azure.microsoft.com/pricing/details/hdinsight/)。  
   
-若要添加“Azure HDInsight 创建群集任务”  ，可将其拖放到 SSIS 设计器，然后双击或右键单击，再单击“编辑”  以查看以下“Azure HDInsight 创建群集任务编辑器”  对话框。  
+若要添加“Azure HDInsight 创建群集任务”，可将其拖放到 SSIS 设计器，然后双击或右键单击，再单击“编辑”以查看以下“Azure HDInsight 创建群集任务编辑器”对话框。  
   
 下表提供了此对话框中的字段说明。  
   
