@@ -219,8 +219,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在发布结束时, 所有约束都将作为一个集进行验证, 从而避免在发布过程中由 check 或 foreign key 约束导致的数据错误。 如果设置为“False”，则将发布约束而不检查对应的数据。|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|在发布脚本的末尾包括刷新语句。|
 |**/p:**|Storage=({File&#124;Memory})|指定在生成数据库模型时如何存储元素。 出于性能原因，默认值为 InMemory。 对于大型数据库，需要备份了文件的存储。|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否应将发布验证过程中遇到的错误视为警告。 在对目标数据库执行生成的部署计划之前，会先对该计划执行检查。 计划验证将检测仅有目标的对象（如索引）丢失等问题，必须解决这些问题以进行更改。 验证还检测以下情况：依赖项（如表或视图）因对复合项目的引用而存在，但未存在于目标数据库中。 你可以选择执行此操作以获取所有问题的完整列表, 而不是在第一个错误时停止发布操作。|
-|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在无法修改的对象中发现差异（例如，如果文件的大小或路径存在差异）时是否生成警告。|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否应将发布验证过程中遇到的错误视为警告。 在对目标数据库执行生成的部署计划之前，会先对该计划执行检查。 计划验证将检测仅有目标的对象（如索引）丢失等问题，必须解决这些问题以进行更改。 验证还检测以下情况：依赖项（如表或视图）因对复合项目的引用而存在，但未存在于目标数据库中。 你可以选择执行此操作以获取所有问题的完整列表, 而不是在第一个错误时停止发布操作。|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在无法修改的对象中发现差异（例如，如果文件的大小或路径存在差异）时是否生成警告。|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|指定是否验证排序规则兼容性。|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|指定在出现可能阻止成功发布的问题的情况下，是否应在发布前执行将停止发布操作的检查。 例如，如果具有在数据库项目中不存在的目标数据库上的外键并且在发布时导致错误，则发布操作可能会停止。|
 |
@@ -233,7 +232,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |-------------|-----------|---------------|  
 |**/Variables:{PropertyName}={Value}**||为特定于操作的变量指定名称值对；{VariableName}={Value}。 该 DACPAC 文件包含有效 SQLCMD 变量的列表。 如果没有为每个变量都提供值，则会发生错误。|  
   
-## <a name="export-parameters-and-properties"></a>导出参数和属性
+## <a name="export-parameters-and-properties"></a>导入参数和属性
 
 SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据库导出到 BACPAC 包（.bacpac 文件）。 默认情况下，所有表的数据将包含在 .bacpac 文件中。 你可以选择仅指定要为其导出数据的表的子集。 即使针对导出指定表的子集，对导出操作的验证可确保 Azure SQL 数据库对完整目标数据库的兼容性。  
   
