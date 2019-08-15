@@ -1994,7 +1994,7 @@
           href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
         - name: 部署
           href: relational-databases/data-tier-applications/deploy-a-data-tier-application.md
-        - name: 导出
+        - name: Export
           href: relational-databases/data-tier-applications/export-a-data-tier-application.md
         - name: 从数据库中提取 DAC
           href: relational-databases/data-tier-applications/extract-a-dac-from-a-database.md
@@ -10012,12 +10012,12 @@
           items:
             - name: SSMS 的支持策略
               href: ssms/support-policy.md
-            - name: 反馈和帮助
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: SSMS 中的用户协助
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名使用情况数据
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: 反馈 >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: 安装 sqlpackage
@@ -10044,9 +10044,9 @@
               href: tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md
             - name: 从跟踪文件或跟踪表派生模板
               href: tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
-            - name: 导出
+            - name: Export
               href: tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md
-            - name: 导入
+            - name: Import
               href: tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md
             - name: 运行 SQL Server Profiler 所需的权限
               href: tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md
