@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887886"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493748"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 课：定义透视和翻译
   在本课中，您将了解如何定义透视和翻译。 可以定义透视，以降低多维数据集的明显的复杂性，还可以定义翻译，以便让用户能够以他们选择的语言来查看多维数据集元数据。  
@@ -28,7 +28,7 @@ ms.locfileid: "68887886"
  [定义和浏览透视](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  在此任务中，您将定义和浏览透视，以便针对特定的用户或用途，对多维数据集的视图进行简化。  
   
- [定义和浏览翻译](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [定义和浏览翻译](lesson-9-2-defining-and-browsing-translations.md)  
  在此任务中，您将定义和浏览特定元数据按某种语言进行的翻译。  
   
 ## <a name="next-lesson"></a>下一课  

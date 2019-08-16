@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888066"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493776"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定义和浏览透视
   透视可以出于特定目的简化多维数据集的视图。 默认情况下，用户可以查看多维数据集内对其具有查看权限的所有元素。 用户查看整个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集时所看到的内容是该多维数据集的默认透视。 对于导航视图的用户，尤其对于只需与多维数据集的一小部分交互就能满足其商业智能和报表需求的用户来说，整个多维数据集的视图将是非常复杂的。  
@@ -191,7 +191,7 @@ ms.locfileid: "68888066"
      ![Internet 销售和分销商销售度量值](../../2014/tutorials/media/l9-perspectives-4.gif "Internet 销售和分销商销售度量值")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [定义和浏览翻译](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [定义和浏览翻译](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>请参阅  
  [视角](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

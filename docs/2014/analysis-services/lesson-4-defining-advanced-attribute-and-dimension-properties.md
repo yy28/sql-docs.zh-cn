@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888259"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493997"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级属性和维度属性
   在本课中，将了解如何使用特性、特性层次结构和维度属性的某些高级属性。  
@@ -34,7 +34,7 @@ ms.locfileid: "68888259"
  [自动将属性成员分组](lesson-4-3-automatically-grouping-attribute-members.md)  
  在该任务中，将基于成员在属性层次结构中的分布自动创建属性成员的分组。 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。  
   
- [隐藏和禁用属性层次结构](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [隐藏和禁用属性层次结构](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  在该任务中，将了解如何以及何时禁用或隐藏属性层次结构。  
   
  [根据辅助属性对属性成员进行排序](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6daa8c4fd9b46fc4dcfec08876d36c1cf0187a94
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887581"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493817"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 的开发人员参考
 
@@ -47,13 +47,13 @@ ms.locfileid: "68887581"
   
  ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[异常消息框编程](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[用 ADOMD.NET 进行开发](https://docs.microsoft.com/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net)  
+ ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[分析管理对象&#40;AMO&#41;进行开发](https://docs.microsoft.com/analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo)  
+ ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[分析管理对象&#40;AMO&#41;进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[开发 Analysis Services 脚本语言&#40;ASSL&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[用于数据挖掘的 OLE DB](https://docs.microsoft.com/analysis-services/dev-guide/ole-db-for-data-mining)  
+ ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[用于数据挖掘的 OLE DB](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
  ![小文件文件夹图标](../integration-services/media/filefolder-small.gif "小文件文件夹图标")[Integration Services 开发人员指南](../integration-services/integration-services-developer-documentation.md)  
   

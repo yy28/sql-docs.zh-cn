@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888106"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493826"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定义和使用钻取操作
   如果按事实维度来维度化事实数据，而不正确筛选查询返回的数据，则可能导致查询速度变慢。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
@@ -143,13 +143,13 @@ ms.locfileid: "68888106"
      ![发运给 Adam Powell 的订单](../../2014/tutorials/media/l8-action8.gif "发运给 Adam Powell 的订单")  
   
 ## <a name="next-lesson"></a>下一课  
- [第9课:定义透视和翻译](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [第9课:定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>请参阅  
  [操作&#40;Analysis Services 多维数据&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多维模型中的操作](multidimensional-models/actions-in-multidimensional-models.md)   
  [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [定义事实关系](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [定义事实关系](lesson-5-2-defining-a-fact-relationship.md)   
  [定义事实关系和事实关系属性](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

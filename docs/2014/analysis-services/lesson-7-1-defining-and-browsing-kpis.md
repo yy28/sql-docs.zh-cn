@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888091"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493796"
 ---
 # <a name="defining-and-browsing-kpis"></a>定义和浏览 KPI
   若要定义关键绩效指标 (KPI)，应该先定义与 KPI 关联的 KPI 名称和度量值组。 KPI 可以与所有度量值组或与单个度量值组关联。 然后定义以下 KPI 元素：  
@@ -268,6 +268,6 @@ ms.locfileid: "68888091"
      将显示 2007 财年第 3 季度北美洲分销商自行车销售的毛利润率。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 8 课：定义操作](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [第 8 课：定义操作](lesson-8-defining-actions.md)  
   
   

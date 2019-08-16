@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893344"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494034"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>创建 Analysis Services 项目（数据挖掘基础教程）
   每个 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目可以在单个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中定义对象。 一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库可以包含很多不同类型的对象  
@@ -32,7 +32,7 @@ ms.locfileid: "68893344"
   
  默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用新项目的“localhost” 实例。 如果使用命名实例或者另一台服务器，则必须首先创建和打开该项目，然后更改实例名称。  
   
- 有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目的详细信息, 请参阅[创建 Analysis Services 项目](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)。  
+ 有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目的详细信息, 请参阅[创建 Analysis Services 项目](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)。  
   
 ### <a name="to-create-an-analysis-services-project"></a>创建 Analysis Services 项目  
   

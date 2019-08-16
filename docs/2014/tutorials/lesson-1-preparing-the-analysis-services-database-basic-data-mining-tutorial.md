@@ -10,12 +10,12 @@ ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 15cd000f0bcf61743301d130709be29b327efcdc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892544"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494007"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>第 1 课：准备 Analysis Services 数据库 (数据挖掘基础教程)
   你是在中[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]设计商业智能应用程序的人员的新员工。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]希望利用您[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的数据挖掘经验来发现有关已购买自行车的人员的有趣且可操作的信息。 然后，他们希望您预测哪些预期客户将来最有可能购买自行车。  
@@ -40,6 +40,6 @@ ms.locfileid: "68892544"
  [多维模型中的数据源视图](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)   
  [数据源支持&#40;的 SSAS 多维&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)   
  [生成 Analysis Services 项目 (SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [创建 Analysis Services 项目](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)  
+ [创建 Analysis Services 项目](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
   
   

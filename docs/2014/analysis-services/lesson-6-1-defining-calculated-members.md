@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888184"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493886"
 ---
 # <a name="defining-calculated-members"></a>定义计算成员
   计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
@@ -287,7 +287,7 @@ ms.locfileid: "68888184"
      注意，附件的销售正在随时间而增长，但这些销售只构成总销售额的一小部分。 还要注意的是，附件销售的毛利润率比自行车还高。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [定义命名集](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [定义命名集](lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>请参阅  
  [考虑](multidimensional-models-olap-logical-cube-objects/calculations.md)   

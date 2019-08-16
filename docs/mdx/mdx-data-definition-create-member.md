@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 90db0be2372c3af9d3d079a187e4b3cbd8147566
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892130"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494076"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 数据定义 - CREATE MEMBER
 
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|在一个计算成员引用另一个计算成员（即计算成员相交）的情况下，计算成员的求解次序。|  
 |FORMAT_STRING|一种在显示单元值时客户端应用程序可以使用的 Office 样式格式字符串。|  
 |VISIBLE|指示计算成员在架构行集中是否可见的值。 可以使用[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函数将可见计算成员添加到集。 非零值表示计算成员可见。 此属性的默认值为*Visible*。<br /><br /> 不可见（此值设置为零时）的计算成员通常用作更复杂的计算成员中的中间步骤。 这些计算成员也可以由其他类型的成员（如度量值）引用。|  
-|NON_EMPTY_BEHAVIOR|解析空单元时，用来确定计算成员的行为的度量值或集。<br /><br /> **警告此属性\*已弃用。\* \* \*** 避免将其设置。 有关详细信息，请参阅 [SQL Server 2016 中不推荐使用的 Analysis Services 功能](https://docs.microsoft.com/analysis-services/deprecated-analysis-services-features-in-sql-server-2016) 。|  
+|NON_EMPTY_BEHAVIOR|解析空单元时，用来确定计算成员的行为的度量值或集。<br /><br /> **警告此属性\*已弃用。\* \* \*** 避免将其设置。 有关详细信息, 请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014)。|  
 |CAPTION|客户端应用程序用作成员标题的字符串。|  
 |DISPLAY_FOLDER|标识客户端应用程序用来显示成员的显示文件夹路径的字符串。 文件夹级别的分隔符由客户端应用程序定义。 对于提供[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的工具和客户端, 反斜杠 (\\) 是级别分隔符。 若要为已定义的成员提供多个显示文件夹, 请使用分号 (;)来分隔文件夹。|  
 |ASSOCIATED_MEASURE_GROUP|与此成员关联的度量值组的名称。|  

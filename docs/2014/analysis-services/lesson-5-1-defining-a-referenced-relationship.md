@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888282"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493935"
 ---
 # <a name="defining-a-referenced-relationship"></a>定义引用关系
   在本教程中到目前为止，您定义的每个多维数据集维度都基于一个按主键到外键的关系直接链接到度量值组事实数据表的表。 在本主题的各任务中，你会将“地域”维度通过一个称为“引用维度”的“分销商”维度链接到分销商销售额的事实数据表。 这允许用户按地域定义经销商销售额的维度。 有关详细信息，请参阅 [定义引用的关系和引用的关系属性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "68888282"
      !["定义关系" 对话框](../../2014/tutorials/media/l5-referencedrelationship-5.gif "\"定义关系\" 对话框")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [定义事实关系](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [定义事实关系](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>请参阅  
  [的维度设计器中，可以在“维度结构”视图的](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

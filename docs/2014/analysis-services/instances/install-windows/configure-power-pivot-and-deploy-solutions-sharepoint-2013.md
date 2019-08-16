@@ -10,12 +10,12 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48d96a731724717a398c2170d642c419a1f3e9da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888598"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493973"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>配置 PowerPivot 和部署解决方案 (SharePoint 2013)
   本主题介绍如何部署和配置 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 中 PowerPivot 功能的中间层增强功能，包括 PowerPivot 库、计划数据刷新、管理面板和数据提供程序。 运行 **PowerPivot for SharePoint 2013 配置** 工具以便完成以下任务：  
@@ -68,7 +68,7 @@ ms.locfileid: "68888598"
   
     5.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改默认值, 请在左窗口中查看以下页:**创建默认的 web 应用程序**并**部署 Web 应用程序解决方案**  
   
-5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个帐户的详细信息, 请参阅本主题中的[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41; ](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010)中的 "用于配置服务器的输入值" 部分。  
+5.  或者，查看用于完成各操作的剩余输入值。 单击左窗口中的每个操作以查看操作的详细信息。 有关每个帐户的详细信息, 请参阅本主题中的[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41; ](../../configure-repair-powerpivot-sharepoint-2010.md)中的 "用于配置服务器的输入值" 部分。  
   
 6.  您还可以删除不想在此时处理的任何操作。 例如，如果您想要在以后配置 Secure Store Service，则单击 **“配置 Secure Store Service”** ，然后清除 **“在任务列表中包括此操作”** 复选框。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68888598"
   
 8.  单击 **“运行”** 来处理该任务列表中的所有操作。 请注意， **“运行”** 将在您验证操作之后才可用。 如果 **“运行”** 未启用，请首先单击 **“验证”** 。  
   
- 有关详细信息, 请参阅[配置或修复 PowerPivot for SharePoint &#40;2010 PowerPivot 配置&#41;工具](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010)  
+ 有关详细信息, 请参阅[配置或修复 PowerPivot for SharePoint &#40;2010 PowerPivot 配置&#41;工具](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
 ##  <a name="bkmk_verify_powerpivot"></a>验证 PowerPivot 配置  
  **服务：**  

@@ -10,12 +10,12 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888744"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494022"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>创建数据源（数据挖掘基础教程）
   *数据源*是在项目中保存和管理并部署到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库的数据连接。 除了其他所有必需的连接属性外，数据源还包含源数据所在的服务器和数据库的名称。  
@@ -62,7 +62,7 @@ ms.locfileid: "68888744"
   
 ## <a name="see-also"></a>请参阅  
  [创建数据源（SSAS 多维）](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [定义数据源](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [定义数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)   
  [设置模拟选项（SSAS - 多维）](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

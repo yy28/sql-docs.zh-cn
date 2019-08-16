@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: a1e1b4dc2f66baf0ef7486a3105573d673a5eb7f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6552e6e2ed1ad168fb5e5ff9c0715227870bcb92
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891459"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493949"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 
@@ -31,7 +31,7 @@ ms.locfileid: "68891459"
 |**自助式 BI**|分析人员/最终用户||||||  
 |方便地发现并访问公共和公司数据||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure 数据目录](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
 |创建强大的数据模型||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|执行自助式预测分析||||||[Excel 数据挖掘外接程序](https://docs.microsoft.com/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins)|  
+|执行自助式预测分析||||||[Excel 数据挖掘外接程序](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |可视化和浏览数据||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |使用自然语言查询提问|||||[问答](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
 |使用移动设备访问报告||||[HTML 5（支持查看 10 MB 以内的文件）](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5（支持查看 250 MB 以内的文件）](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 设备上的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 设备上的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[适用于 Windows 10 的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  

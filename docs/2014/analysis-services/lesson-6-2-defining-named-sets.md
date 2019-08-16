@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888136"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493897"
 ---
 # <a name="defining-named-sets"></a>定义命名集
   命名集是一个返回一组维度成员的多维表达式 (MDX)。 可以定义命名集，并将它们另存为多维数据集定义的一部分；还可以在客户端应用程序中创建命名集。 通过合并多维数据集数据、算术运算符、数字和函数，可以创建命名集。 命名集可以由用户在客户端应用程序的 MDX 查询中使用，还可以用来定义子多维数据集中的集合。 子多维数据集是交叉联接集的集合，它将多维数据集空间限制为随后语句的定义的子空间。 定义受限的多维数据集空间是 MDX 脚本的一个基本概念。  
@@ -132,7 +132,7 @@ ms.locfileid: "68888136"
      ![包含两个命名集的筛选器窗格](../../2014/tutorials/media/l6-named-set-05.gif "包含两个命名集的筛选器窗格")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [第 7 课：定义关键绩效指标&#40;kpi&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [第 7 课：定义关键绩效指标&#40;kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>请参阅  
  [考虑](multidimensional-models-olap-logical-cube-objects/calculations.md)   

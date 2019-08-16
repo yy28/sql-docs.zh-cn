@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888387"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494015"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定义父子层次结构中的父特性属性
   父子层次结构是基于两个表列的维度中的层次结构。 这两个表列一起定义维度成员之间的层次结构关系。 第一列称为“成员键列”，用于标识每个维度成员。 另一列称为“父列”，用于标识每个维度成员的父项。 父特性的“NamingTemplate”属性决定父子层次结构中的每个级别的名称，而“MembersWithData”属性则决定是否应显示父成员的数据。  
@@ -104,7 +104,7 @@ ms.locfileid: "68888387"
      ![修改的员工层次结构](../../2014/tutorials/media/l4-employee-2.png "修改的员工层次结构")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [自动将属性成员分组](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [自动将属性成员分组](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>请参阅  
  [父子层次结构](multidimensional-models/parent-child-dimension.md)   

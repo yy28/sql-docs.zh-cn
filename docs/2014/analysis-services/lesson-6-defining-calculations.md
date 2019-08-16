@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888050"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493839"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
   在此课程中，将了解如何定义计算（多维表达式 (MDX) 表达式或脚本）。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
@@ -45,14 +45,14 @@ ms.locfileid: "68888050"
   
  本课程包含以下任务：  
   
- [定义计算成员](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [定义计算成员](lesson-6-1-defining-calculated-members.md)  
  在此任务中，将了解定义计算成员。  
   
- [定义命名集](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [定义命名集](lesson-6-2-defining-named-sets.md)  
  在此任务中，将了解定义命名集。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 7 课：定义关键绩效指标&#40;kpi&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [第 7 课：定义关键绩效指标&#40;kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 教程方案](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
