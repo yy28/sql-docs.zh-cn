@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ba51a979572bb91b840f41483081464e8cd044e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891087"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530911"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初始安装 (PowerPivot for SharePoint)
   使用本主题中的步骤可以配置 PowerPivot for SharePoint 的初始安装。 配置初始安装的最简单方法是使用 PowerPivot 配置工具。 该工具自动完成下述所有配置步骤。  
@@ -195,7 +195,7 @@ ms.locfileid: "68891087"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>第 3 部分：配置无人参与的 PowerPivot 数据刷新帐户  
  为 PowerPivot 数据访问创建无人参与的数据刷新帐户通常是数据刷新期间外部数据访问所必需的。 例如，如果未启用 Kerberos，则您必须创建 PowerPivot 服务可用于连接到外部数据源的无人参与的帐户。  
   
- 有关如何创建无人参与的 PowerPivot 数据刷新帐户或在数据刷新中使用的其他存储凭据的说明, 请参阅[配置 PowerPivot 无人参与&#40;的&#41;数据刷新帐户 PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint)和[配置用于 PowerPivot 数据刷新&#40;PowerPivot for SharePoint&#41;的存储凭据](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
+ 有关如何创建无人参与的 PowerPivot 数据刷新帐户或在数据刷新中使用的其他存储凭据的说明, 请参阅[配置 PowerPivot 无人参与&#40;的&#41;数据刷新帐户 PowerPivot for SharePoint](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)和[配置用于 PowerPivot 数据刷新&#40;PowerPivot for SharePoint&#41;的存储凭据](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
 ##  <a name="Usage"></a> 步骤 6：启用使用情况数据收集  
  PowerPivot for SharePoint 使用 SharePoint 使用情况数据收集基础结构来收集与 PowerPivot 在整个场中的使用情况有关的信息。 尽管使用情况数据始终是 SharePoint 安装的一部分，但可能需要首先启用它，然后才能使用它。 有关说明, 请参阅[为&#40;PowerPivot for SharePoint 配置使用情况数据收集](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)。  

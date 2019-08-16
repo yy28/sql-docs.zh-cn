@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493748"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530828"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 课：定义透视和翻译
   在本课中，您将了解如何定义透视和翻译。 可以定义透视，以降低多维数据集的明显的复杂性，还可以定义翻译，以便让用户能够以他们选择的语言来查看多维数据集元数据。  
@@ -35,7 +35,7 @@ ms.locfileid: "69493748"
  [第10课:定义管理角色](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 教程方案](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
  [多维建模&#40;艾德公司教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [视角](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [多维模型中的透视](multidimensional-models/perspectives-in-multidimensional-models.md)   

@@ -10,12 +10,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5fed7f199f80f59c1983ec5f17a4f922c836333
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888628"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530817"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安装 Analysis Services 多维建模教程的示例数据和项目
   可使用本主题中提供的说明和链接来安装 Analysis Services 教程中使用的所有数据和项目文件。  
@@ -145,7 +145,7 @@ ms.locfileid: "68888628"
 8.  启动 SQL Server Management Studio。 在 SQL Server Management Studio 中，连接到 Analysis Services。 验证名为 **Analysis Services Tutorial** 的数据库是否正在服务器上运行。  
   
 ## <a name="next-step"></a>下一步  
- 您现在可以使用本教程了。 有关如何入门的详细信息，请参阅[多维建模（Adventure Works 教程）](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)。  
+ 您现在可以使用本教程了。 有关如何入门的详细信息，请参阅[多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [从安装向导&#40;安装程序安装 SQL Server 2014&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

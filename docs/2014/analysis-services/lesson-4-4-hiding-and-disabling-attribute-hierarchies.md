@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888353"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530854"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>隐藏和禁用属性层次结构
   默认情况下，将为维度中的每个属性创建一个属性层次结构，并且每个层次结构均可用于确定事实数据的维度。 此层次结构由“全部”级别和包含该层次结构中所有成员的详细级别组成。 正如您已经了解到的，可以将属性组织到用户定义层次结构中，以提供在多维数据集中的导航路径。 在某些环境下，可能需要禁用或隐藏某些属性以及它们的层次结构。 例如，某些属性（如，社会保障号码或身份证号、付费率、出生日期和登录信息）不是用户将要用来维度化多维数据集信息的属性。 而这些信息通常只是作为特定属性成员的详细信息而显示。 您可能需要隐藏这些属性层次结构，使这些属性只在作为特定属性的成员属性时可见。 可能还需要使其他属性的成员（例如，客户名称或邮政编码）只在通过用户层次结构而不是单独通过属性层次结构进行查看时才可见。 这样做的一个理由可能是属性层次结构中不同成员的个数差异太大。 最后，为了改善处理性能，应该禁用用户不用于浏览的属性层次结构。  
@@ -126,6 +126,6 @@ ms.locfileid: "68888353"
      请注意，隐藏的级别“邮政编码”和“全名”在该用户定义层次结构中可见。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [根据辅助属性对属性成员进行排序](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
+ [根据辅助属性对属性成员进行排序](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

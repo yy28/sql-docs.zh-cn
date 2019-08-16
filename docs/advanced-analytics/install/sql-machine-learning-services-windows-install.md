@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715219"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531055"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务
 
@@ -244,6 +244,10 @@ ms.locfileid: "68715219"
 * [创建 SQLRUserGroup 的登录名](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [管理磁盘配额](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas), 以避免运行耗尽磁盘空间的任务的外部脚本
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+在 Windows SQL Server 2019 中, 隔离机制已发生更改。 这会影响**SQLRUserGroup**、防火墙规则、文件权限和隐含身份验证。 有关详细信息, 请参阅[机器学习服务的隔离更改](sql-server-machine-learning-services-2019.md)。
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ ms.locfileid: "68715219"
 
 现已完成了所有工作，你可能还希望优化服务器以支持机器学习，或者安装预先训练的模型。
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>添加更多的辅助角色帐户
 
 如果希望很多用户同时运行脚本, 则可以增加分配给快速启动板服务的辅助角色帐户的数目。 有关详细信息, 请参阅[Modify the user account pool for SQL Server 机器学习服务](../administration/modify-user-account-pool.md)。
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>优化服务器执行脚本
 
@@ -286,14 +292,14 @@ ms.locfileid: "68715219"
 
 ## <a name="next-steps"></a>后续步骤
 
-R 开发人员可以开始使用一些简单的示例, 并了解 R 如何与 SQL Server 相关的基础知识。 下一步, 请参阅以下链接:
+R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
-+ [教程：在 T-sql 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教程：在 T-SQL 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [教程：适用于 R 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 配合使用:
+Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 一起使用：
 
-+ [教程：在 T-sql 中运行 Python](../tutorials/run-python-using-t-sql.md)
++ [教程：在 T-SQL 中运行 Python](../tutorials/run-python-using-t-sql.md)
 + [教程：适用于 Python 开发人员的数据库内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-若要查看基于实际场景的机器学习示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。
+若要查看基于真实场景的机器学习示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。

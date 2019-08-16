@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890806"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530946"
 ---
 # <a name="developer39s-guide-database-engine"></a>开发&#39;人员指南 (数据库引擎)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了大量用于开发、管理和控制数据库应用程序的工具。  
@@ -52,7 +52,7 @@ ms.locfileid: "68890806"
  说明如何在应用程序中使用异常消息框编程接口，以提高对消息传送的控制，并使用户可以选择保存错误消息内容以供将来参考和从中获取有关消息的帮助。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘编程](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [数据挖掘编程](../analysis-services/dev-guide/data-mining-programming.md)   
  [开发人员指南&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [开发人员指南&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [开发人员指南&#40;复制&#41;](replication/concepts/replication-developer-documentation.md)   

@@ -10,12 +10,12 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893605"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530876"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>通过使用行筛选器实现动态安全性
   在本补充课程中，您将另外创建一个实现动态安全性的角色。 动态安全性提供了基于当前登录用户的用户名或登录 ID 的行级别安全性。 若要了解详细信息，请参阅[角色（SSAS 表格）](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular)。  
@@ -130,7 +130,7 @@ ms.locfileid: "68893605"
  在此任务中，您将创建一个新的用户角色。 此角色将包含一个行筛选器，用于定义 Sales Territory 表的哪些行对用户可见。 然后，此筛选器将在一对多关系方向中应用于与 Sales Territory 相关的所有其他表。 您还将应用一个简单的筛选器，使属于此角色成员的所有用户都无法查询整个 Employee Security 表。  
   
 > [!NOTE]  
->  您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果将某个用户作为成员添加到 "按区域划分的销售员工" 角色, 并且该用户也作为第12课[中创建的角色中的成员存在:创建角色](https://docs.microsoft.com/analysis-services/lesson-11-create-roles), 你将获得权限的组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，该用户将具有角色组合所确定的更大权限。  
+>  您在本课程中创建的 Sales Employees by Territory 角色将限制成员只浏览（或查询）其所属的销售区域的销售数据。 如果将某个用户作为成员添加到 "按区域划分的销售员工" 角色, 并且该用户也作为第12课[中创建的角色中的成员存在:创建角色](../analysis-services/lesson-11-create-roles.md), 你将获得权限的组合。 在某一用户是多个角色的成员时，为每个角色定义的权限和行筛选器将累积。 也就是说，该用户将具有角色组合所确定的更大权限。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>创建 Sales Employees by Territory 用户角色  
   

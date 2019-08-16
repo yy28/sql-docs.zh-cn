@@ -1,24 +1,24 @@
 ---
-title: 用于 T-sql 中的 "Hello World" 基本 Python 代码执行的快速入门
-description: SQL Server 中的 Python 脚本快速入门。 了解使用 sp_execute_external_script 系统存储过程在系统中调用 Python 脚本的基础知识。
+title: 快速入门：Python "Hello World"
+description: 本快速入门介绍如何通过在 SQL Server 机器学习服务上运行 "Hello World" Python 脚本来了解关键概念。 将使用 T-sql sp_execute_external_script 系统存储过程。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714825"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530969"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入门：SQL Server 中的 "Hello world" Python 脚本 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 上运行 "Hello world" Python 脚本机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入门中, 通过运行 "Hello World" Python script inT-SQL 了解关键概念, 并介绍**sp_execute_external_script**系统存储过程。 
+本快速入门介绍如何通过在 SQL Server 机器学习服务上运行 "Hello World" Python 脚本来了解关键概念。 将使用 T-sql **sp_execute_external_script**系统存储过程。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -98,4 +98,4 @@ GO
 现在, 你已运行了几个简单的 Python 脚本, 接下来详细介绍了如何构建输入和输出。
 
 > [!div class="nextstepaction"]
-> [起步处理输入和输出](quickstart-python-inputs-and-outputs.md)
+> [快速入门：处理输入和输出](quickstart-python-inputs-and-outputs.md)

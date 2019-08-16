@@ -1,5 +1,5 @@
 ---
-title: 工具和方法可用于处理 (Analysis Services) |Microsoft Docs
+title: 用于处理的工具和方法 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072822"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530938"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
   处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
@@ -46,13 +46,13 @@ ms.locfileid: "66072822"
  处理是由一组处理选项控制的高度可配置操作，这些选项决定在对象级别执行完全处理还是增量处理。 有关处理选项和对象的详细信息，请参阅[处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md) 和[处理 Analysis Services 对象](processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、 表或分区](../tabular-models/process-database-table-or-partition-analysis-services.md)并[处理数据&#40;SSAS 表格&#41;](../process-data-ssas-tabular.md)。  
+>  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息, 请参阅[处理数据库、表或分区](../tabular-models/process-database-table-or-partition-analysis-services.md)和[处理数据&#40;SSAS 表格&#41;](../process-data-ssas-tabular.md)。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中处理对象  
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到 Analysis Services。  
   
-2.  右键单击要处理的 Analysis Services 对象，然后单击“处理”  。 可以在以下任何级别处理数据：  
+2.  右键单击要处理的 Analysis Services 对象，然后单击“处理”。 可以在以下任何级别处理数据：  
   
     -   数据库  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66072822"
   
 5.  还可以单击 **“更改设置”** 来修改处理顺序、与特定类型的错误相关的处理行为或其他设置。  
   
-6.  单击“确定”  。  
+6.  单击 **“确定”** 。  
   
      “处理进度”对话框为每个命令提供当前状态。 如果状态消息被截断，则可以单击 **“查看详细信息”** 来读取完整消息。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66072822"
   
 2.  在解决方案资源管理器中，在已部署项目下，展开 **“维度”** 文件夹。  
   
-3.  右键单击某个维度，然后单击“处理”  。 您可以右键单击多个维度，以便一次处理多个对象。 有关详细信息，请参阅[批处理 (Analysis Services)](batch-processing-analysis-services.md)。  
+3.  右键单击某个维度，然后单击“处理”。 您可以右键单击多个维度，以便一次处理多个对象。 有关详细信息，请参阅[批处理 (Analysis Services)](batch-processing-analysis-services.md)。  
   
-4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”** 列中，验证此列的选项是否为 **“处理全部”** 。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”   。  
+4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”** 列中，验证此列的选项是否为 **“处理全部”** 。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”。  
   
 5.  单击 **“运行”** 。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66072822"
   
 1.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中处理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]对象之前，可以通过单击 **“处理对象”** 对话框之一中的 **“影响分析”** 来分析对相关对象的影响。  
   
-2.  右键单击某个维度、多维数据集、度量值组或分区，打开“处理对象”  对话框。  
+2.  右键单击某个维度、多维数据集、度量值组或分区，打开“处理对象”对话框。  
   
 3.  单击 **“影响分析”** 。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为与选定要处理的对象相关的对象扫描模型并报告重新处理要求。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66072822"
   
 1.  启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到 Analysis Services。  
   
-2.  右键单击待处理的对象，然后单击“处理”  。  
+2.  右键单击待处理的对象，然后单击“处理”。  
   
 3.  在 **“处理”** 对话框中，选择要使用的处理选项。 修改任何其他设置。 运行“影响分析”以标识您可能需要进行的任何更改。  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072822"
   
 1.  从本版本的 SQL Server 开始，您可以使用 Analysis Services PowerShell cmdlet 来处理对象。 可以通过交互方式或在脚本中运行以下 cmdlet：  
   
-    -   [Invoke-ProcessCube cmdlet](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension cmdlet](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition cmdlet](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd cmdlet](/sql/analysis-services/powershell/invoke-ascmd-cmdlet)可用于执行包含处理命令的 XMLA、MDX 或 DMX 脚本。  
+    -   [Invoke-ASCmd cmdlet](/powershell/module/sqlserver/invoke-ascmd)可用于执行包含处理命令的 XMLA、MDX 或 DMX 脚本。  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>使用 SQL Server Profiler 监视对象处理  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66072822"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，创建一个使用 Analysis Services 处理任务的包，以便在对源关系数据库进行定期更新时使用新数据自动填充对象。  
   
-2.  在“SSIS 工具箱”中，双击“Analysis Services 处理”将其添加到包中   。  
+2.  在“SSIS 工具箱”中，双击“Analysis Services 处理”将其添加到包中。  
   
 3.  编辑该任务，指定与数据库的连接、处理哪些对象以及处理选项。 有关如何执行此任务的详细信息，请参阅 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)。  
   

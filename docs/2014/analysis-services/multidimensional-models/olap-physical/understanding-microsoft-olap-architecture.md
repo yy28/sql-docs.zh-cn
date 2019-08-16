@@ -12,12 +12,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a18d9d54034ea98cf7a449c8f7147eaa54c65263
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889451"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530905"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 体系结构
   可以通过这些主题更好地理解 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据库，并规划如何在商业智能解决方案中实现多维数据库。  
@@ -46,7 +46,7 @@ ms.locfileid: "68889451"
  [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![小文件文件夹图标](../../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**国际化注意事项**  
- [Analysis Services Multidimensional 的全球化方案](https://docs.microsoft.com/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional)  
+ [Analysis Services Multidimensional 的全球化方案](../../globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## <a name="see-also"></a>请参阅  
  [技术参考&#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  

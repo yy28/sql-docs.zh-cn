@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493839"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530838"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
   在此课程中，将了解如何定义计算（多维表达式 (MDX) 表达式或脚本）。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  
@@ -55,8 +55,8 @@ ms.locfileid: "69493839"
  [第 7 课：定义关键绩效指标&#40;kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 教程方案](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [多维建模&#40;艾德公司教程&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   
+ [多维建模&#40;艾德公司教程&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [创建命名集](multidimensional-models/create-named-sets.md)   
  [创建计算成员](multidimensional-models/create-calculated-members.md)  
   

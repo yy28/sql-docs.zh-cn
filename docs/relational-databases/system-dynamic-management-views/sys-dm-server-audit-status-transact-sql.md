@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_audit_status (TRANSACT-SQL) |Microsoft Docs
+title: sys.databases _server_audit_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053219"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530861"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
+# <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对于每次服务器审核返回一行，以指示该审核的当前状态。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|审核的 ID。 映射到**audit_id**字段中**sys.audits**目录视图。|  
-|**name**|**sysname**|审核的名称。 与相同**名称**字段中**sys.server_audits**目录视图。|  
+|**audit_id**|**int**|审核的 ID。 映射到**sys.databases**目录视图中的**audit_id**字段。|  
+|**name**|**sysname**|审核的名称。 与**server_audits**目录视图中的**name**字段相同。|  
 |**status**|**smallint**|服务器审核的数值状态：<br /><br /> 0 = 未启动<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      运行时失败<br /><br /> 3 = 目标创建失败<br /><br /> 4 = 正在关闭|  
 |**status_desc**|**nvarchar(256)**|显示服务器审核状态的字符串：<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|审核的最后状态更改的时间戳（UTC 格式）。|  
-|**event_session_address**|**varbinary(8)**|与审核关联的扩展事件会话的地址。 与相关**sys.db_xe_sessions.address**目录视图。|  
+|**event_session_address**|**varbinary(8)**|与审核关联的扩展事件会话的地址。 与**sys.databases _xe_sessions**目录视图相关。|  
 |**audit_file_path**|**nvarchar(256)**|当前使用的审核文件目标的完整路径名和文件名。 仅对文件审核填充。|  
 |**audit_file_size**|**bigint**|审核文件的近似大小（字节数）。 仅对文件审核填充。|  
   
 ## <a name="permissions"></a>权限  
- 主体必须具有**VIEW SERVER STATE**并**选择**权限。  
+ 主体必须具有**VIEW SERVER STATE**和**SELECT**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

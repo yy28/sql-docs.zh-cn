@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957326"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530890"
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
   本主题介绍对象命名约定，以及无法在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的任何对象名称、代码或脚本中使用的保留字和字符。  
@@ -89,7 +89,7 @@ ms.locfileid: "68957326"
   
 ## <a name="see-also"></a>请参阅  
  [MDX 保留字](/sql/mdx/mdx-reserved-words)   
- [翻译&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [翻译&#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
  [XML for Analysis 符合&#40;性 XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

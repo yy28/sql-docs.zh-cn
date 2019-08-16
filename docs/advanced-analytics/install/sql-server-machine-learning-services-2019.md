@@ -1,22 +1,28 @@
 ---
-title: SQL Server 2019 中的差异
-description: SQL Server 2019 预览版中的 R 和 Python SQL Server 机器学习扩展的新增功能。
+title: Windows 的隔离更改
+description: 本文介绍 Windows 上 SQL Server 2019 中机器学习服务隔离机制的变化。 这些更改会影响 SQLRUserGroup、防火墙规则、文件权限和隐含身份验证。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 218ae9bd0685370f38942592fd32da75272fbcac
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470310"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531041"
 ---
-# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 中 SQL Server 机器学习服务安装之间的差异  
+# <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上的 SQL Server 2019:机器学习服务的隔离更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+本文介绍 Windows 上 SQL Server 2019 中机器学习服务隔离机制的变化。 这些更改会影响**SQLRUserGroup**、防火墙规则、文件权限和隐含身份验证。
+
+有关详细信息, 请参阅如何[在 Windows 上安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)。
+
+## <a name="changes-to-isolation-mechanism"></a>隔离机制的更改
 
 在 Windows 上, SQL Server 2019 安装程序将更改外部进程的隔离机制。 此更改会将本地辅助角色帐户替换为[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), 这是 Windows 上运行的客户端应用程序的隔离技术。 
 
@@ -63,5 +69,4 @@ SQL Server 实现, AppContainers 是一种内部机制。 尽管你不会在进�
 ## <a name="see-also"></a>请参阅
 
 + [在 Windows 上安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)
-
-+ [在 Linux 上安装 SQL Server 2019 机器学习服务](../../linux/sql-server-linux-setup-machine-learning.md)
++ [在 Linux 上安装 SQL Server 机器学习服务](../../linux/sql-server-linux-setup-machine-learning.md)
