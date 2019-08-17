@@ -20,12 +20,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29bf4991ce5dd52e9c66c31abade833e4fe319b2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893547"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561133"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68893547"
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|“查看”|是|是|  
+|视图|是|是|  
 |筛选索引|是**|否|  
 |筛选统计信息|是**|否|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|是|是|  
