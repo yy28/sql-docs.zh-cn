@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 69aef06a7a4c8a8cfbf15a541a98cf8979de2296
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cac46ccdef1440613e4caa3e8458f03031a6ba1b
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68212785"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969451"
 ---
 
 我们通过多组存档网页来留存较早版本的 Microsoft SQL Server 的相关文档。 搜索引擎（例如 Bing.com 和 Google.com）不会处理存档网页。 但是，可在 Docs previous-versions/sql/ 地址中看到这些存档  ：
@@ -22,4 +22,13 @@ ms.locfileid: "68212785"
 
 [SQL Server 2019 文档](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?toc=/sql/toc/toc.json&view=sql-server-ver15)在主要的 Docs 地址中提供。 然后使用页面顶部附近的“版本控制”下拉列表来选择其他感兴趣的版本。
 
-有关 SQL Server 早期版本的文档的详细信息，请参阅[以前版本的 SQL Server 文档](/sql/toc/previous-versions-sql-server?view=sql-server-previousversions)。
+有关 SQL Server 早期版本的文档的详细信息，请参阅[以前版本的 SQL Server 文档](/sql/toc/previous-versions-sql-server)。
+
+<!-- GM:
+On links to file 'previous-versions-sql-server.md', append 
+    '?view=sql-server-previousversions' 
+only when customer explicitly does so. 
+If our markdown ever needs to append a ?view= for the article, best is probably 
+    '?view=sql-server-2016' . 
+-->
+

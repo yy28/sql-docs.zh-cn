@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: b51f93b12c51bd7bc9659ee1661a7fdc068dd2bd
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419544"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028848"
 ---
 ## <a name="enabled-deployment-scenarios"></a>启用的部署方案
 
@@ -19,7 +19,7 @@ CTP 3.2 启用以下方案：
 
 ## <a name="support"></a>支持
 
-SQL Server 2019 CTP 3.2 是预览版软件。 它未公开支持操作。 使用 [SQL 早期采用者计划](http://aka.ms/sqleap)的客户可能经与 Microsoft 磋商后，可按特殊协议运行 SQL Server 2019 CTP 3.2。
+SQL Server 2019 CTP 3.2 是预览版软件。 它未公开支持操作。 使用 [SQL 早期采用者计划](https://aka.ms/sqleap)的客户可能经与 Microsoft 磋商后，可按特殊协议运行 SQL Server 2019 CTP 3.2。
 
 对于未使用早期采用计划的客户，可在以下位置之一找到有限支持：
 

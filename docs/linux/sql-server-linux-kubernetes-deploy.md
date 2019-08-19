@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952628"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028728"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>在 Kubernetes 群集上部署 SQL Server Always On 可用性组
 
@@ -36,7 +36,7 @@ ms.locfileid: "67952628"
 > [!NOTE]
 > 可使用任何类型的 Kubernetes 群集。 若要在 Azure Kubernetes 服务 (AKS) 上创建 Kubernetes 群集，请参阅[创建 AKS 群集](https://docs.microsoft.com/azure/aks/create-cluster)。
 >
-> 使用最新版本的 Kubernetes。 具体版本取决于用户的订阅和区域。 请参阅 [AKS 中支持的 Kubernetes 版本](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions)。  
+> 使用最新版本的 Kubernetes。 具体版本取决于用户的订阅和区域。 请参阅 [AKS 中支持的 Kubernetes 版本](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions)。  
 >
 > 以下脚本在 Azure 中创建了一个四节点 Kubernetes 群集。 运行脚本之前，请将 `<latest version>` 替换为最新的可用版本。 例如 `1.12.5`。
 >

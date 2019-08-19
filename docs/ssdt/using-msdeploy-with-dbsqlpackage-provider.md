@@ -52,21 +52,21 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 源  
  dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或是 .dacpac 文件磁盘路径的输入。  指定提供程序输入源的语法如下：  
   
-|输入|，则“默认”|描述|  
+|输入|默认|描述|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=** {*input*}| 不适用| input 是有效的 SQL Server 或 SQL Azure 连接字符串，或磁盘上的 .dacpac 文件的路径。<br /><br />**注意**：使用连接字符串作为输入源时，支持的唯一连接字符串属性为 InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate 和 ConnectionTimeout   。|  
+|**-source:dbSqlPackage=** {*input*}|**空值**| input 是有效的 SQL Server 或 SQL Azure 连接字符串，或磁盘上的 .dacpac 文件的路径。<br /><br />**注意**：使用连接字符串作为输入源时，支持的唯一连接字符串属性为 InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate 和 ConnectionTimeout   。|  
   
 如果输入源是到实时 SQL Server/SQL Azure 数据库的连接字符串，  dbSqlPackage 将从实时 SQL Server/SQL Azure 数据库提取 .dacpac 文件形式的数据库快照。  
   
  源参数包括：  
   
-|参数|，则“默认”|描述|  
+|参数|默认|描述|  
 |-------------|-----------|---------------|  
-|**Profile**:{ *string*}|N/A|指定 DAC 发布配置文件的文件路径。 该配置文件定义在生成结果 dacpac 时要使用的属性和变量的集合。 发布配置文件会被传递至目标，且在执行 Publish  、Script  或  DeployReport 操作之一时被用作默认选项。|  
+|**Profile**:{ *string*}|空值|指定 DAC 发布配置文件的文件路径。 该配置文件定义在生成结果 dacpac 时要使用的属性和变量的集合。 发布配置文件会被传递至目标，且在执行 Publish  、Script  或  DeployReport 操作之一时被用作默认选项。|  
 |**DacApplicationName**={ *string* }|数据库名称|定义要在 DACPAC 元数据中存储的应用程序名称。 默认字符串为数据库名称。|  
 |**DacMajorVersion** ={*integer*}|**1**|定义要在 DACPAC 元数据中存储的主版本。|  
 |**DacMinorVersion**={*integer*}|**0**|定义要在 DACPAC 元数据中存储的次版本。|  
-|**DacApplicationDescription**={ *string* }|N/A|定义要存储在 DACPAC 元数据中的应用程序说明。|  
+|**DacApplicationDescription**={ *string* }|空值|定义要存储在 DACPAC 元数据中的应用程序说明。|  
 |**ExtractApplicationScopedObjectsOnly={True &#124; False}**|**True**|如果为  True，则只从源中提取应用程序范围的对象。 如果为  False，则同时提取应用程序范围的对象和非应用程序范围的对象。|  
 |**ExtractReferencedServerScopedElements={True &#124; False}**|**True**|如果为  True，则提取源数据库对象所引用的登录对象、服务器审核对象和凭据对象。|  
 |**ExtractIgnorePermissions={True &#124; False}**|**False**|如果为  True，则忽略提取所有已提取对象的权限；如果为  False，则不这样做。|  
@@ -77,15 +77,15 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="dbsqlpackage-destination"></a>DbSqlPackage 目标  
  dbSqlPackage 提供程序接受是有效 SQL Server/SQL Azure 连接字符串或是 .dacpac 文件磁盘路径的输入作为目标输入。  指定提供程序目标的语法如下：  
   
-|输入|，则“默认”|描述|  
+|输入|默认|描述|  
 |---------|-----------|---------------|  
-|-**dest:dbSqlPackage**={*input*}|N/A| input 是有效的 SQL Server 或 SQL Azure 连接字符串，或磁盘上的 .dacpac 文件的完整或部分路径。 如果  input 是文件路径，则不可指定其他参数。|  
+|-**dest:dbSqlPackage**={*input*}|空值| input 是有效的 SQL Server 或 SQL Azure 连接字符串，或磁盘上的 .dacpac 文件的完整或部分路径。 如果  input 是文件路径，则不可指定其他参数。|  
   
 以下  目标参数可用于所有  dbSqlPackage 操作：  
   
-|属性|，则“默认”|描述|  
+|属性|默认|描述|  
 |------------|-----------|---------------|  
-|**Action={Publish&#124;DeployReport&#124;Script}**|N/A|可选参数，它们指定要在  目标处执行的操作。|  
+|**Action={Publish&#124;DeployReport&#124;Script}**|空值|可选参数，它们指定要在  目标处执行的操作。|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|指定 SqlClr  发布是否删除作为部署计划的一部分的阻塞程序集。 默认情况下，如果必须删除引用程序集，则任何阻塞或引用程序集将阻止程序集更新。|  
 |**AllowIncompatiblePlatform={True &#124; False}**|**False**|指定发布操作是否应继续进行，而不管可能存在的不兼容 SQL Server 平台。|  
 |**BackupDatabaseBeforeChanges={True &#124; False}**|**False**|在部署任何更改之前，备份数据库。|  
@@ -122,7 +122,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |**IgnoreFileSize= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新文件大小之间的差异。|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新填充因子之间的差异。|  
   
-|属性|，则“默认”|描述|  
+|属性|默认|描述|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|指定当您发布到数据库时，是忽略还是更新全文索引文件的路径之间的差异。|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|指定当您发布到数据库时，是忽略还是更新标识列的种子之间的差异。|  
@@ -171,9 +171,9 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 以下  目标参数仅限用于  DeployReport 和  Script 操作：  
   
-|参数|，则“默认”|描述|  
+|参数|默认|描述|  
 |-------------|-----------|---------------|  
-|**OutputPath**={ *string* }|N/A|可选参数，它通知  dbSqlPackage 在  string 指定的磁盘位置创建 DeployReport XML 输出文件或 Script SQL 输出文件。 此操作会覆盖当前驻留在 string 指定的位置的任何脚本。|  
+|**OutputPath**={ *string* }|空值|可选参数，它通知  dbSqlPackage 在  string 指定的磁盘位置创建 DeployReport XML 输出文件或 Script SQL 输出文件。 此操作会覆盖当前驻留在 string 指定的位置的任何脚本。|  
   
 > [!NOTE]  
 > 如果没有为  DeployReport 或  Script 操作提供  OutputPath 参数，则会以消息的形式返回输出结果。  

@@ -1,7 +1,5 @@
 ---
 title: SQL Server 代理 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265243"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552665"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”  。  
-  
-**本主题内容**  
-  
--   [SQL Server 代理的好处](#Benefits)  
-  
--   [SQL Server 代理的组件](#Components)  
-  
--   [SQL Server 代理管理的安全性](#Security)  
-  
-## <a name="Benefits"></a>SQL Server 代理的好处  
+
+## <a name="Benefits"></a>SQL Server 代理的好处 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储作业信息。 作业包含一个或多个作业步骤。 每个步骤都有自己的任务。例如，备份数据库。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以按照计划运行作业，也可以在响应特定事件时运行作业，还可以根据需要运行作业。 例如，如果希望在每个工作日下班后备份公司的所有服务器，就可以使该任务自动执行。 将备份安排在星期一到星期五的 22:00 之后运行，如果备份出现问题，SQL Server 代理可记录该事件并通知您。  

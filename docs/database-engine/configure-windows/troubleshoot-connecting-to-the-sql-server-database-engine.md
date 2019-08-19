@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b34746b028f4b7efa884fb7c55e5ce3bf4143b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac0c2a99577638d72c0db252b79b0a40780e0e6b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038844"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028763"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ms.locfileid: "68038844"
   * 启动 SQL Server Browser 服务。 请参阅有关如何[在 SQL Server 配置管理器中启动浏览器](#startbrowser)的说明。
   * SQL Server Browser 服务被防火墙阻止。 请在防火墙中打开 UDP 端口 1434。 返回到 [在防火墙中打开端口](#opening-a-port-in-the-firewall)一节。 请确保打开的是 UDP 端口，而不是 TCP 端口。
   * UDP 端口 1434 信息被路由器阻止。 UDP 通信（用户数据报协议）未设计为可通过路由器。 这可以防止网络被低优先级流量占满。 你也许可以将路由器配置为转发 UDP 流量，或者可以决定在连接时始终提供端口号。
-  * 如果客户端计算机正在使用 Windows 7 或 Windows Server 2008（或更新的操作系统），UDP 流量可能会被客户端操作系统删除，因为来自服务器的响应会从所查询 IP 地址以外的 IP 地址返回。 这是一项安全功能，目的是阻止“宽松源映射”。 有关详细信息，请参阅联机丛书主题[故障排除  ：超时时间已到](http://msdn.microsoft.com/library/ms190181.aspx)的“多个服务器 IP 地址”一节。 这篇文章来自 SQL Server 2008 R2，但大体内容仍然适用。 你也许可以将客户端配置为使用正确的 IP 地址，或者可以决定在连接时始终提供端口号。
+  * 如果客户端计算机正在使用 Windows 7 或 Windows Server 2008（或更新的操作系统），UDP 流量可能会被客户端操作系统删除，因为来自服务器的响应会从所查询 IP 地址以外的 IP 地址返回。 这是一项安全功能，目的是阻止“宽松源映射”。 有关详细信息，请参阅联机丛书主题[故障排除  ：超时时间已到](https://msdn.microsoft.com/library/ms190181.aspx)的“多个服务器 IP 地址”一节。 这篇文章来自 SQL Server 2008 R2，但大体内容仍然适用。 你也许可以将客户端配置为使用正确的 IP 地址，或者可以决定在连接时始终提供端口号。
 
 3. 可以使用 IP 地址（或 IP 地址和实例名称，如果是命名实例的话）进行连接后，立即尝试使用计算机名称（或计算机名称和实例名称，如果是命名实例的话）进行连接。 将 `tcp:` 放在计算机名称的前面，以强制建立 TCP/IP 连接。 例如，对于名为 `ACCNT27`的计算机上的默认实例，请使用 `tcp:ACCNT27` ；对于该计算机上名为 `PAYROLL`的命名实例，请使用 `tcp:ACCNT27\PAYROLL` 。如果可以使用 IP 地址进行连接，但不能使用计算机名称进行连接，则表明存在名称解析问题。 返回到 **测试 TCP/IP 连接**一节的第 4 节。
 

@@ -21,7 +21,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68019789"
 ---
-# <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
+# <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 此函数返回组中唯一非空值的近似数。 
@@ -41,7 +41,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>参数  
 *expression*  
-任意类型（“image”  、“sql_variant”  、“ntext”  或“text”  除外）的 [expression](../../t-sql/language-elements/expressions-transact-sql.md)。 
+任意类型（“**image**” 、“**sql_variant**” 、“**ntext**” 或“**text**” 除外）的 [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 
 
 ## <a name="return-types"></a>返回类型
  **bigint**  
@@ -62,7 +62,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-approxcountdistinct"></a>A. 使用 APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>A. 使用 APPROX_COUNT_DISTINCT 
 此示例返回订单表中不同订单键的近似数。
   
 ```sql
@@ -78,7 +78,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. 结合使用 APPROX_COUNT_DISTINCT 和 GROUP BY 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>B. 结合使用 APPROX_COUNT_DISTINCT 和 GROUP BY 
 此示例按订单状态返回订单表中不同订单键的近似数。 
   
 ```sql

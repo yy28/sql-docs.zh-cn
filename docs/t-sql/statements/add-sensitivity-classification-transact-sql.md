@@ -65,7 +65,7 @@ object_name  ([schema_name.]table_name.column_name)
 
 是要进行分类的数据库列的名称。 目前仅支持列分类。
     - schema_name  （可选）- 是已分类的列所属架构的名称。
-    - table_name  （可选）- 是已分类的列所属表的名称。
+    - *table_name* - 是已分类的列所属表的名称。
     - column_name  - 是正在进行分类的列的名称。
 
 LABEL 
@@ -85,7 +85,7 @@ INFORMATION_TYPE_ID
 是与信息类型相关联的标识符。 这通常由集中式信息保护平台用于唯一标识系统中的信息类型。
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 - 只能向单个对象添加一个分类。 向已进行分类的对象添加分类将覆盖现有分类。
 - 可以使用单个 `ADD SENSITIVITY CLASSIFICATION` 语句对多个对象进行分类。

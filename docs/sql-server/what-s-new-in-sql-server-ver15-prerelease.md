@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 191c5f2e603821a5bb9d85aa89a630c71800e660
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68424418"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028868"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>SQL Server 2019 CTP 公告存档
 
@@ -384,7 +384,7 @@ ms.locfileid: "68424418"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]为 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 引入或强化了以下新功能。
 
-#### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>新的 query_post_execution_plan_profile 扩展事件 (CTP 2.4)
+#### <a name="new-query_post_execution_plan_profile-extended-event-ctp-24"></a>新的 query_post_execution_plan_profile 扩展事件 (CTP 2.4)
 
 新的 `query_post_execution_plan_profile` 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 `query_post_execution_showplan` 不同。 有关详细信息，请参阅[查询分析基础结构](../relational-databases/performance/query-profiling-infrastructure.md)。
 
@@ -416,7 +416,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-#### <a name="new-dmf-sysdmexecqueryplanstats-ctp-24"></a>新的 DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
+#### <a name="new-dmf-sysdm_exec_query_plan_stats-ctp-24"></a>新的 DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
 新的 DMF `sys.dm_exec_query_plan_stats` 将基于轻型分析返回大多数查询的最后已知实际执行计划的等效项。 有关详细信息，请参阅 [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 和[查询分析基础结构](../relational-databases/performance/query-profiling-infrastructure.md)。 作为示例，请参见以下脚本：
 
@@ -556,7 +556,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 如果没有此功能，当索引创建失败，则必须再次执行联机索引创建操作，且必须从头开始重新启动该操作。
 
-在此版本中，我们将扩展可恢复功能，以将此功能添加到可用的[可恢复联机索引重新生成](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
+在此版本中，我们将扩展可恢复功能，以将此功能添加到可用的[可恢复联机索引重新生成](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
 
 此外，可以使用[面向联机和可恢复 DDL 操作的数据库范围的默认设置](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，将此功能设置为特定数据库的默认设置。
 
@@ -688,7 +688,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 `DBCC CLONEDATABASE` 创建仅限架构的数据库副本，其中包括在不复制数据的情况下对查询性能问题进行故障排除所需的所有元素。 在以前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，该命令不会复制所需的统计信息来准确地对列存储索引查询进行故障排除，且需要手动步骤来捕获此信息。 现在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，`DBCC CLONEDATABASE` 自动捕获列存储索引的统计信息 blob，因此不再需要任何手动步骤。
 
-#### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>向 sp_estimate_data_compression_savings 添加了新选项 (CTP 2.0)
+#### <a name="new-options-added-to-sp_estimate_data_compression_savings-ctp-20"></a>向 sp_estimate_data_compression_savings 添加了新选项 (CTP 2.0)
 
 `sp_estimate_data_compression_savings` 返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。 此过程当前支持三个选项：`NONE`、`ROW` 和 `PAGE`。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了两个新选项：`COLUMNSTORE` 和 `COLUMNSTORE_ARCHIVE`。 如果使用标准或存档列存储压缩在表中创建列存储索引，可以使用这些新选项来估计节省的空间。
 
@@ -712,7 +712,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 -  面向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的新连接器：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 向 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的外部数据引入了新连接器。
 
-#### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>新 sys.dm_db_page_info 系统函数返回页面信息 (CTP 2.0)
+#### <a name="new-sysdm_db_page_info-system-function-returns-page-information-ctp-20"></a>新 sys.dm_db_page_info 系统函数返回页面信息 (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` 返回有关数据库页面的信息。 该函数将返回包含页中标头信息的行，包括 `object_id`、`index_id` 和 `partition_id`。 在大多数情况下，此函数取代了使用 `DBCC PAGE` 的需要。 
 

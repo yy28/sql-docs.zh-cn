@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893988"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028914"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -36,7 +36,7 @@ ms.locfileid: "68893988"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |公共预览版 |在 CTP 3.2 之前，已向已注册的早期采用者提供 SQL Server 大数据群集。 此版本允许任何人体验 SQL Server 大数据群集的功能。 <br/><br/> 请参阅[开始使用 SQL Server 大数据群集](../big-data-cluster/deploy-get-started.md)。|
-|`azdata` |CTP 3.2 引入了 `azdata`，这是一个使用 Python 编写的命令行实用程序，可让群集管理员通过 REST API 启动和管理大数据群集。 `azdata` 替换 `mssqlctl`。 请参阅[安装 `azdata`](../big-data-cluster/deploy-install-azdata.md)。 |
+|`azdata` |CTP 3.2 引入了 `azdata`，这是一个使用 Python 编写的命令行实用程序，可让群集管理员通过 REST API 启动和管理大数据群集。 `azdata` 替换了 `mssqlctl`。 请参阅[安装 `azdata`](../big-data-cluster/deploy-install-azdata.md)。 |
 |PolyBase |外部表列名现可用于查询 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 数据源。 在以前的 CTP 版本中，仅基于目标上的序号绑定列，未使用外部表定义中的列名。|
 |HDFS 分层刷新 |引入了 HDFS 分层刷新功能，可刷新远程数据最新快照的现有装载。 请参阅 [HDFS 分层](../big-data-cluster/hdfs-tiering.md) |
 |基于笔记本的故障排除 |CTP 3.2 引入了 Jupyter 笔记本，帮助完成 SQL Server 大数据群集中组件的[部署](../big-data-cluster/deploy-notebooks.md)以及[发现、诊断和故障排除](../big-data-cluster/manage-notebooks.md)。 |
@@ -83,7 +83,6 @@ ms.locfileid: "68893988"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|功能限制| 防止某些形式的 SQL 注入泄漏有关数据库的信息（甚至是在 SQL 注入成功时）。 请参阅[功能限制](../relational-databases/security/feature-restrictions.md)|
 |对加密列创建索引|可以对使用随机加密和已启用 enclave 的密钥加密的列创建索引，以提升丰富查询的性能（使用 `LIKE` 和比较运算符）。 请参阅[包含安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 |暂停和恢复透明数据加密 (TDE) 的初始扫描|请参阅[透明数据加密 (TDE) 扫描 - 暂停和恢复](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |SQL Server 配置管理器中的证书管理|请参阅[证书管理（SQL Server 配置管理器）](../database-engine/configure-windows/manage-certificates.md)
