@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419275"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621669"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集中
 
@@ -25,7 +25,7 @@ ms.locfileid: "68419275"
 > [!TIP]
 > 可在 [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 存储库中找到 SQL Server 2019 大数据群集（预览版）的其他示例。 它们位于 **sql-server-samples/samples/features/sql-big-data-cluster/** 路径中。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
@@ -33,7 +33,7 @@ ms.locfileid: "68419275"
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> 加载示例数据
 
 以下步骤使用启动脚本下载 SQL Server 数据库备份并将数据加载到大数据群集中。 为了便于使用，这些步骤已划分为 [Windows](#windows) 和 [Linux](#linux) 部分。

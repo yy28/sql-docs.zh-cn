@@ -9,12 +9,12 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702869"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611418"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 S3 以实现 HDFS 分层
 
@@ -61,7 +61,7 @@ ms.locfileid: "68702869"
    
 1. 按照上面的说明设置环境变量 MOUNT_CREDENTIALS
 
-1. 使用 azdata bdc storage-pool mount create 在 Azure 中装载远程 HDFS 存储。 在运行以下命令之前替换占位符值：
+1. 使用**azdata bdc 存储池装载创建**在 S3 中装载远程 HDFS 存储。 在运行以下命令之前替换占位符值：
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>

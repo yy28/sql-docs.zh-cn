@@ -9,12 +9,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329340"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028846"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
 
@@ -23,7 +23,7 @@ ms.locfileid: "68329340"
 本文总结了已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SQL Server 可能会收集标准计算机信息，并可能会将有关使用情况和性能的数据传输给 Microsoft 进行分析，以便改进产品的质量、安全性和可靠性。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
 
 - Azure SQL Database
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - 数据库迁移助手
