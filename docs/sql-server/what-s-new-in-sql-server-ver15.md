@@ -38,7 +38,7 @@ ms.locfileid: "69028914"
 |公共预览版 |在 CTP 3.2 之前，已向已注册的早期采用者提供 SQL Server 大数据群集。 此版本允许任何人体验 SQL Server 大数据群集的功能。 <br/><br/> 请参阅[开始使用 SQL Server 大数据群集](../big-data-cluster/deploy-get-started.md)。|
 |`azdata` |CTP 3.2 引入了 `azdata`，这是一个使用 Python 编写的命令行实用程序，可让群集管理员通过 REST API 启动和管理大数据群集。 `azdata` 替换了 `mssqlctl`。 请参阅[安装 `azdata`](../big-data-cluster/deploy-install-azdata.md)。 |
 |PolyBase |外部表列名现可用于查询 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 数据源。 在以前的 CTP 版本中，仅基于目标上的序号绑定列，未使用外部表定义中的列名。|
-|HDFS 分层刷新 |引入了 HDFS 分层刷新功能，可刷新远程数据最新快照的现有装载。 请参阅 [HDFS 分层](../big-data-cluster/hdfs-tiering.md) |
+|HDFS 分层刷新 |引入了 HDFS 分层刷新功能，可刷新已有装载，获取远程数据的最新快照。 请参阅 [HDFS 分层](../big-data-cluster/hdfs-tiering.md) |
 |基于笔记本的故障排除 |CTP 3.2 引入了 Jupyter 笔记本，帮助完成 SQL Server 大数据群集中组件的[部署](../big-data-cluster/deploy-notebooks.md)以及[发现、诊断和故障排除](../big-data-cluster/manage-notebooks.md)。 |
 | &nbsp; | &nbsp; |
 
@@ -46,7 +46,7 @@ ms.locfileid: "69028914"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---| 
-| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器重载。 此版本引入了“ClientCacheRefreshPolicy”属性  。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
+| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器超载。 此版本引入了“ClientCacheRefreshPolicy”属性  。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
 | 联机附加  | 使用此功能，能够以联机操作的形式附加表格模型。 联机附加可用于本地查询横向扩展环境中只读副本的同步。 有关详细信息，请参阅[联机附加](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)。 |
 | &nbsp; | &nbsp; |
 
@@ -179,7 +179,7 @@ ms.locfileid: "69028914"
 | 新的空间引用标识符 (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) 提供了更为可靠和准确的数据，这些数据与全球定位系统提供的数据更加接近。 新 SRID 为：<br/><br/> - 7843 - 地理 2D<br/> - 7844 - 地理 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) 视图包含新 SRID 的定义。 |
 | &nbsp; | &nbsp; |
 
-### <a name="performance"></a>“性能”
+### <a name="performance"></a>性能
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
