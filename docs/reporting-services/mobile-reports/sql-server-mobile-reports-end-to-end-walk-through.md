@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502278"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028896"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -39,7 +39,7 @@ ms.locfileid: "62502278"
 *  或：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
 * 查看结果： 
   *   [注册 Power BI 服务](https://go.microsoft.com/fwlink/?LinkID=513879) 并
-  *  [下载 Power BI 移动应用](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
+  *  [下载 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
 
   
 ## <a name="create-a-shared-data-source"></a>创建共享数据源  
