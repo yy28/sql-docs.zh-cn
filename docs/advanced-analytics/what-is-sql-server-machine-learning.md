@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 59e005e0075c9bb26210c6be9be5f52a3aa9a164
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 4a1a9a3b0f712458466051ce2c67c0a725ef0a76
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926915"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957442"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什么是 SQL Server 机器学习服务 (Python 和 R)？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68926915"
 
 SQL Server 机器学习服务使你可以执行数据库中的 Python 和 R 脚本。 您可以使用它来准备和清理数据, 执行特征工程, 以及在数据库中训练、评估和部署机器学习模型。 此功能在数据所在的位置运行脚本, 并消除跨网络到另一台服务器的数据传输。
 
-Python 和 R 的基本分发包含在机器学习服务中。 除了适用于 Python 的 Microsoft 包[revoscalepy](python/ref-py-revoscalepy.md)和[Microsoftml](python/ref-py-microsoftml.md) , 以及[RevoScaleR](r/ref-r-revoscaler.md)、 [microsoftml](r/ref-r-microsoftml.md)、 [olapR](r/ref-r-olapr.md)外, 还可以使用开源包和框架, 如 PyTorch、TensorFlow 和 scikit-learn。适用于 R 的[sqlrutils](r/ref-r-sqlrutils.md)和。
+Python 和 R 的基本分发包含在机器学习服务中。 除了适用于 Python 的 Microsoft 包[revoscalepy](python/ref-py-revoscalepy.md)和[Microsoftml](python/ref-py-microsoftml.md) , 以及[RevoScaleR](r/ref-r-revoscaler.md)、 [microsoftml](r/ref-r-microsoftml.md)、[olapR](r/ref-r-olapr.md) 外, 还可以使用开源包和框架, 如 PyTorch、TensorFlow 和 scikit-learn。 和[sqlrutils](r/ref-r-sqlrutils.md) 。
 
 机器学习服务使用扩展性框架在 SQL Server 中运行 Python 和 R 脚本。 详细了解此功能的工作原理:
 

@@ -6,7 +6,7 @@
   items:
     - name: SQL Server 2016 Integration Services 中的新增功能
       href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md
-    - name: SQL Server 2017 Integration Services 中的新增功能
+    - name: SQL Server 2017 集成服务中的新增功能
       href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md
     - name: SQL Server 各个版本支持的 Integration Services 功能
       href: ../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md
@@ -1438,6 +1438,17 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Integration Services (SSIS) 中的 Hadoop 和 HDFS 支持
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
+- name: Microsoft Connector for Oracle
+  href: ../integration-services/data-flow/oracle-connector.md
+  items:
+    - name: Oracle 连接管理器
+      href: ../integration-services/data-flow/oracle-connection-manager.md
+    - name: Oracle 源
+      ref: ../integration-services/data-flow/oracle-source.md
+    - name: Oracle 目标
+      href: ../integration-services/data-flow/oracle-destination.md
+    - name: 数据类型支持
+      href: ../integration-services/data-flow/oracle-data-type-support.md
 - name: Attunity 推出的用于 Oracle 和 Teradata 的 Microsoft Connector
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server 导入和导出向导
