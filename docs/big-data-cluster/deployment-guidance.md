@@ -1,22 +1,22 @@
 ---
 title: 部署指南
 titleSuffix: SQL Server big data clusters
-description: 了解如何在 Kubernetes 上部署 SQL Server 2019 大数据群集（预览版）。
+description: 了解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上部署 (预览版)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995834"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652355"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何在 Kubernetes 上部署 SQL Server 大数据群集
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 
 ## <a id="prereqs"></a> Kubernetes 必备条件
 
-对于服务器和客户端 (kubectl)，SQL Server 大数据群集需要的最低 Kubernetes 版本至少为 v1.10。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]对于服务器和客户端 (kubectl), 至少需要至少 v 1.10 的 Kubernetes 版本。
 
 > [!NOTE]
 > 请注意，客户端和服务器 Kubernetes 版本应在 +1 或 -1 次要版本之内。 有关详细信息，请参阅 [Kubernetes 发行说明和版本偏差 SKU 策略](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
@@ -67,7 +67,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 kubectl config view
 ```
 
-配置 Kubernetes 群集后，可以继续部署新的 SQL Server 大数据群集。 如果要从以前的版本升级，请参阅[如何升级 SQL Server 大数据群集](deployment-upgrade.md)。
+配置 Kubernetes 群集后，可以继续部署新的 SQL Server 大数据群集。 如果要从以前的版本升级, 请参阅[如何升级[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
 
 ## <a id="deploy"></a> 部署概述
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由于下载大数据群集组件的容器映像所需的时间，整个部署可能需要很长时间。 但是，这个过程应不会长达几个小时。 如果你遇到部署问题，请参阅[监视 SQL Server 大数据群集并对其进行故障排除](cluster-troubleshooting-commands.md)。
+> 由于下载大数据群集组件的容器映像所需的时间，整个部署可能需要很长时间。 但是，这个过程应不会长达几个小时。 如果你的部署遇到问题, 请参阅[监视和故障排除[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
 
 部署完成后，输出会通知你成功：
 
@@ -314,4 +314,4 @@ Storage  default        Ready
 
 - [配置大数据群集的部署设置](deployment-custom-configuration.md)
 - [执行 SQL Server 大数据群集的脱机部署](deploy-offline.md)
-- [Workshop:Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)（研讨会：Microsoft SQL Server 大数据群集体系结构）
+- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

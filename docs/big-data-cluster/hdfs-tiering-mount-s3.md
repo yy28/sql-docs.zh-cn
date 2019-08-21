@@ -1,20 +1,20 @@
 ---
 title: 为 HDFS 分层装入 S3
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何配置 HDFS 分层以将外部 S3 文件系统装载到 SQL Server 2019 大数据群集（预览版）上的 HDFS 中。
+description: 本文介绍如何配置 HDFS 分层, 以将外部 S3 文件系统装载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611418"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652308"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 S3 以实现 HDFS 分层
 
@@ -61,10 +61,10 @@ ms.locfileid: "69611418"
    
 1. 按照上面的说明设置环境变量 MOUNT_CREDENTIALS
 
-1. 使用**azdata bdc 存储池装载创建**在 S3 中装载远程 HDFS 存储。 在运行以下命令之前替换占位符值：
+1. 使用**azdata bdc hdfs mount create**在 Azure 中装载远程 HDFS 存储。 在运行以下命令之前替换占位符值：
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> 删除装载
 
-要删除装载，请使用 azdata bdc storage-pool mount delete 命令，并在 HDFS 中指定装载路径：
+若要删除装载, 请使用**azdata bdc hdfs mount delete**命令, 并在 hdfs 中指定装载路径:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 SQL Server 2019 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。

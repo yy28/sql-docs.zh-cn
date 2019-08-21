@@ -1,26 +1,26 @@
 ---
 title: 为 HDFS 分层装入 ADLS Gen2
 titleSuffix: How to mount ADLS Gen2
-description: 本文介绍如何配置 HDFS 分层以将外部 Azure Data Lake Storage 文件系统装载到 SQL Server 2019 大数据群集（预览版）上的 HDFS 中。
+description: 本文介绍如何配置 HDFS 分层, 以将外部 Azure Data Lake Storage 文件系统装载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742736"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652311"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 ADLS Gen2 以实现 HDFS 分层
 
 以下部分展示了如何使用 Azure Data Lake Storage Gen2 数据源配置 HDFS 分层的示例。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - [部署大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
@@ -153,4 +153,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 SQL Server 2019 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。

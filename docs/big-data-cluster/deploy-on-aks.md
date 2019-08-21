@@ -1,26 +1,26 @@
 ---
 title: 配置 Azure Kubernetes 服务
 titleSuffix: SQL Server big data clusters
-description: 了解如何为 SQL Server 2019 大数据群集（预览版）部署配置 Azure Kubernetes 服务 (AKS)。
+description: 了解如何为[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署配置 Azure Kubernetes 服务 (AKS)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470818"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652388"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何为 SQL Server 2019 大数据群集（预览版）部署配置 Azure Kubernetes 服务 (AKS)。
+本文介绍如何为[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署配置 Azure Kubernetes 服务 (AKS)。
 
 通过 AKS，可轻松创建、配置和管理虚拟机群集，这些虚拟机已使用 Kubernetes 群集进行了预配置，可运行容器化应用程序。 这使用户能够使用现有技能或利用社区不断分享的丰富专业知识和经验在 Microsoft Azure 上部署和管理基于容器的应用程序。
 
@@ -29,7 +29,7 @@ ms.locfileid: "68470818"
 > [!TIP]
 > 还可以将 AKS 和大数据群集的部署脚本编写成一个步骤。 有关详细信息，请参阅 [python 脚本](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [笔记本](deploy-notebooks.md)，了解如何实现此操作。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [部署 SQL Server 2019 大数据工具](deploy-big-data-tools.md)：
    - **Kubectl**
@@ -69,7 +69,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    az account set --subscription <subscription id>
    ```
 
-1. 使用“az group create”命令创建资源组  。 以下示例在 `westus2` 位置创建名为 `sqlbdcgroup` 的资源组。
+1. 使用“az group create”命令创建资源组。 以下示例在 `westus2` 位置创建名为 `sqlbdcgroup` 的资源组。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -103,7 +103,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 ## <a name="create-a-kubernetes-cluster"></a>创建 Kubernetes 群集
 
-1. 使用 [az aks create](https://docs.microsoft.com/cli/azure/aks) 命令在 AKS 中创建 Kubernetes 群集。 以下示例创建一个名为“kubcluster”的 Kubernetes 群集，该群集具有一个 Standard_L8s 大小的 Linux 代理节点   。
+1. 使用 [az aks create](https://docs.microsoft.com/cli/azure/aks) 命令在 AKS 中创建 Kubernetes 群集。 以下示例创建一个名为“kubcluster”的 Kubernetes 群集，该群集具有一个 Standard_L8s 大小的 Linux 代理节点。
 
    在运行该脚本之前，请将 `<version number>` 替换为在上一步中标识的版本号。
 
@@ -165,4 +165,4 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 本文中的步骤在 AKS 中配置了 Kubernetes 群集。 下一步是在 AKS Kubernetes 群集上部署 SQL Server 2019 大数据群集。 有关如何部署大数据群集的详细信息，请参阅以下文章：
 
-[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)
+[如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署](deployment-guidance.md)

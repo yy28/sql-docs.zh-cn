@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715186"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634542"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server 上设置用于 Python 开发的数据科学客户端机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Anaconda 包括 Jupyter 笔记本。 下一步是创建笔记本, 并运行包�
 
 3. 输入`import revoscalepy`并运行命令, 加载一个特定于 Microsoft 的库。
 
-4. 输入并运行`print(revoscalepy.__version__)`以返回版本信息。 应会看到 "9.2.1" 或 "9.3.0"。 可以[在服务器上的 revoscalepy 中](../package-management/installed-package-information.md)使用这两个版本中的任何一个。 
+4. 输入并运行`print(revoscalepy.__version__)`以返回版本信息。 应会看到 "9.2.1" 或 "9.3.0"。 可以[在服务器上的 revoscalepy 中](../package-management/r-package-information.md)使用这两个版本中的任何一个。
 
 4. 输入一系列更复杂的语句。 此示例使用[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)通过本地数据集生成汇总统计信息。 其他函数获取示例数据的位置, 并为 xdf 文件创建数据源对象。
 
@@ -305,4 +305,4 @@ display.Image(data=image)
 现在, 你已有工具和 SQL Server 的工作连接, 请通过使用[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)通过 Python 快速入门来扩展你的技能。
 
 > [!div class="nextstepaction"]
-> [起步验证 Python 是否存在于 SQL Server](../tutorials/quickstart-python-verify.md)
+> [快速入门：验证 Python 是否存在于 SQL Server](../tutorials/quickstart-python-verify.md)

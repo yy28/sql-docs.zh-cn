@@ -5,22 +5,22 @@ description: 本文介绍 SQL Server 2019 大数据群集中的存储池。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958650"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652246"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>什么是存储池（SQL Server 大数据群集）？
+# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>什么是存储池 ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])？
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍 SQL Server 2019 大数据群集（预览版）中“SQL Server 存储据池”的角色  。 以下部分介绍了 SQL 存储池的体系结构和功能。
+本文介绍了中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] *SQL Server 存储池*的角色。 以下部分介绍了 SQL 存储池的体系结构和功能。
 
 ## <a name="storage-pool-architecture"></a>存储池体系结构
 
@@ -38,7 +38,7 @@ ms.locfileid: "67958650"
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下资源：
+若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下资源:
 
-- [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
-- [研讨会：Microsoft SQL Server 大数据群集体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

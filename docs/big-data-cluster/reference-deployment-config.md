@@ -5,16 +5,16 @@ description: 大数据群集部署配置文件的参考。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958248"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653490"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>大数据群集的部署配置文件参考
 
@@ -453,4 +453,4 @@ ms.locfileid: "67958248"
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何使用和自定义部署配置文件的详细信息，请参阅[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md#configfile)。
+有关如何使用和自定义部署配置文件的详细信息, 请参阅[如何在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 上部署](deployment-guidance.md#configfile)。

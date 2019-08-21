@@ -1,26 +1,26 @@
 ---
 title: 运行示例笔记本 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 本教程介绍如何在 SQL Server 2019 大数据群集（预览版）上加载并运行示例 Spark 笔记本。
+description: 本教程演示如何在上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]加载运行示例 Spark 笔记本。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 18e182a251e0f93127ffc376648a29c3e2d9cd02
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957733"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653260"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集上运行示例笔记本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何在 SQL Server 2019 大数据群集（预览版）上的 Azure Data Studio 中加载和运行笔记本。 数据科学家和数据工程师可针对群集运行 Python、R 或 Scala 代码。
+本教程演示如何在 Azure Data Studio 上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的中加载和运行笔记本。 数据科学家和数据工程师可针对群集运行 Python、R 或 Scala 代码。
 
 > [!TIP]
 > 如果需要，可以下载并运行本教程中的命令脚本。 有关说明，请参阅 GitHub 上的 [Spark 示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)。
@@ -35,13 +35,13 @@ ms.locfileid: "67957733"
 
 ## <a name="download-the-sample-notebook-file"></a>下载示例笔记本文件
 
-按照以下说明将示例笔记本文件 spark-sql.ipynb 加载到 Azure Data Studio 中  。
+按照以下说明将示例笔记本文件 spark-sql.ipynb 加载到 Azure Data Studio 中。
 
 1. 打开 bash 命令提示符 (Linux) 或 Windows PowerShell。
 
 1. 导航到要将示例笔记本文件下载到其中的目录。
 
-1. 运行以下 curl 命令，从 GitHub 下载笔记本文件  ：
+1. 运行以下 curl 命令，从 GitHub 下载笔记本文件：
 
    ```bash
    curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
@@ -53,11 +53,11 @@ ms.locfileid: "67957733"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的主实例。 有关详细信息，请参阅[连接到大数据群集](connect-to-big-data-cluster.md)。
 
-1. 双击“服务器”窗口中的 HDFS/Spark 网关连接  。 然后选择“打开笔记本”  。
+1. 双击“服务器”窗口中的 HDFS/Spark 网关连接。 然后选择“打开笔记本”。
 
    ![打开笔记本](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
 
-1. 等待要填充的 Kernel 和目标上下文（“附加到”）   。 将 Kernel 设置为 PySpark3，将“附加到”设置为大数据群集终结点的 IP 地址    。
+1. 等待要填充的 Kernel 和目标上下文（“附加到”）。 将 Kernel 设置为 PySpark3，将“附加到”设置为大数据群集终结点的 IP 地址。
 
    ![设置 Kernel 和“附加到”](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
 
@@ -67,7 +67,7 @@ ms.locfileid: "67957733"
 
 ![运行笔记本单元格](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-连续运行示例笔记本中的每个单元格。 有关将笔记本与 SQL Server 大数据群集配合使用的详细信息，请参阅以下资源：
+连续运行示例笔记本中的每个单元格。 有关将笔记本与配合[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]使用的详细信息, 请参阅以下资源:
 
 - [如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)
 - [如何管理 Azure Data Studio 中的笔记本](notebooks-how-to-manage.md)

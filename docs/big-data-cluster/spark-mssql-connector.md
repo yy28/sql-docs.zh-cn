@@ -5,16 +5,16 @@ description: 了解如何使用 Spark 中的 MSSQL Spark 连接器对 SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957833"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653304"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>如何使用 MSSQL Spark 连接器从 Spark 对 SQL Server 执行读写操作
 
@@ -39,13 +39,13 @@ SQL Server 2019 预览版为大数据群集提供 **MSSQL Spark 连接器**，�
 
 下表介绍已更改或新增的接口参数：
 
-| 属性名称 | 可选 | 描述 |
+| 属性名 | 可选 | 描述 |
 |---|---|---|
-| **isolationlevel** | 是 | 此参数描述连接的隔离级别。 MSSQL Spark 连接器的默认值为 **READ_COMMITTED** |
+| **isolationLevel** | 是 | 此参数描述连接的隔离级别。 MSSQL Spark 连接器的默认值为 **READ_COMMITTED** |
 
 连接器使用 SQL Server 批量写入 API。 任何批量写入参数都可由用户作为可选参数进行传递，并可由连接器按原样传递到基础 API。 有关批量写入操作的详细信息，请参阅 [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 大数据群集](deploy-get-started.md)。
 
@@ -68,9 +68,9 @@ SQL Server 2019 预览版为大数据群集提供 **MSSQL Spark 连接器**，�
 
 1. 启动 Azure Data Studio，并[连接到大数据群集](connect-to-big-data-cluster.md)。
 
-1. 右键单击大数据群集中的 HDFS 文件夹，然后选择“新建目录”  。 将目录命名为“spark_data”  。
+1. 右键单击大数据群集中的 HDFS 文件夹，然后选择“新建目录”。 将目录命名为“spark_data”。
 
-1. 右键单击“spark_data”目录，然后选择“上传文件”   。 上传“AdultCensusIncome.csv”文件  。
+1. 右键单击“spark_data”目录，然后选择“上传文件”。 上传“AdultCensusIncome.csv”文件。
 
    ![AdultCensusIncome CSV 文件](./media/spark-mssql-connector/spark_data.png)
 
@@ -78,7 +78,7 @@ SQL Server 2019 预览版为大数据群集提供 **MSSQL Spark 连接器**，�
 
 若要演示如何将 MSSQL Spark 连接器与此数据配合使用，可下载示例笔记本，在 Azure Data Studio 中打开它，然后运行每个代码块。 有关使用笔记本的详细信息，请参阅[如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)。
 
-1. 从 PowerShell 或 bash 命令行运行以下命令，以下载“mssql_spark_connector.ipynb”示例笔记本  ：
+1. 从 PowerShell 或 bash 命令行运行以下命令，以下载“mssql_spark_connector.ipynb”示例笔记本：
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
@@ -90,4 +90,4 @@ SQL Server 2019 预览版为大数据群集提供 **MSSQL Spark 连接器**，�
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息，请参阅[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)
+有关大数据群集的详细信息, 请参阅[如何在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 上部署](deployment-guidance.md)

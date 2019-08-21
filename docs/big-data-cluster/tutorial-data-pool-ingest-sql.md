@@ -1,26 +1,26 @@
 ---
 title: 将数据引入 SQL Server 数据池
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何将数据引入 SQL Server 2019 大数据群集（预览版）数据池中。
+description: 本教程演示如何将数据引入的数据池中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670520"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653315"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：使用 Transact-SQL 将数据引入 SQL Server 数据池
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何使用 Transact-SQL 将数据加载到 SQL Server 2019 大数据群集（预览版）的[数据池](concept-data-pool.md)。 使用 SQL Server 大数据群集，可以跨数据池实例引入和分布来自各种源的数据。
+本教程演示如何使用 Transact-sql 将数据加载到的[数据池中](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 对于[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 来自各种来源的数据可在数据池实例之间引入和分布。
 
 在本教程中，你将了解如何执行以下操作：
 
@@ -38,7 +38,7 @@ ms.locfileid: "68670520"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-- [将示例数据加载到大数据群集](tutorial-load-sample-data.md)
+- [将示例数据加载到大数据群集中](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>在数据池中创建外部表
 
@@ -46,7 +46,7 @@ ms.locfileid: "68670520"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
 
    ![SQL Server 主实例查询](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 

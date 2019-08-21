@@ -1,26 +1,26 @@
 ---
 title: 监视和故障排除
 titleSuffix: SQL Server big data clusters
-description: 本文提供了用于监视 SQL Server 2019 大数据群集（预览版）并对其进行故障排除的有用命令。
+description: 本文提供了用于监视和解决问题[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的有用命令。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841557"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653025"
 ---
-# <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>监视 SQL Server 大数据群集并对其进行故障排除
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>监视和故障排除[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍了几个有用的 Kubernetes 命令，可用于监视 SQL Server 2019 大数据群集（预览版）并对其进行故障排除。 其中介绍了如何深入了解位于大数据群集中的 Pod 或其他 Kubernetes 项目的详细信息。 本文也涵盖了一些常见任务，例如将文件复制到运行某个 SQL Server 大数据群集服务的容器中或从中进行复制。
+本文介绍可用于监视和排除故障的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]几个有用的 Kubernetes 命令。 其中介绍了如何深入了解位于大数据群集中的 Pod 或其他 Kubernetes 项目的详细信息。 本文也涵盖了一些常见任务，例如将文件复制到运行某个 SQL Server 大数据群集服务的容器中或从中进行复制。
 
 > [!TIP]
 > 在 Windows（cmd 或 PS）或 Linux (bash) 客户端计算机上运行以下 kubectl 命令。 它们需要该群集中的上一身份验证以及一个用于运行该身份验证的群集上下文。 例如，对于先前创建的 AKS 群集，可以运行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 以下载 Kubernetes 群集配置文件并设置群集上下文。
@@ -224,4 +224,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息，请参阅[什么是 SQL Server 大数据群集](big-data-cluster-overview.md)。
+有关大数据群集的详细信息, 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]是](big-data-cluster-overview.md)。

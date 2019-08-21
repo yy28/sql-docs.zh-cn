@@ -1,31 +1,31 @@
 ---
 title: 应用部署扩展
 titleSuffix: SQL Server big data clusters
-description: 在 SQL Server 2019 大数据群集（预览版）上将 Python 或 R 脚本部署为应用程序。
+description: 作为 (预览版) 上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的应用程序部署 Python 或 R 脚本。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 49a59650c406e3b48394da45ad0eeb4589fc4374
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958913"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653650"
 ---
-# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 将应用程序部署到 SQL Server 大数据群集
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>如何使用 Visual Studio Code 将应用程序部署到[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何使用带有应用部署扩展的 Visual Studio Code 将应用程序部署到 SQL Server 大数据群集。 CTP 2.3 中引入了此功能。 
+本文介绍如何将应用程序部署到包含应用部署扩展的 Microsoft Visual Studio 代码, 从而将应用程序部署到 SQL Server 大数据群集。 CTP 2.3 中引入了此功能。 
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
-- [Visual Studio Code](https://code.visualstudio.com/)。
-- [SQL Server 大数据群集](big-data-cluster-overview.md) CTP 2.3 或更高版本。
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [SQL Server 大数据群集](big-data-cluster-overview.md)CTP 2.3 或更高版本
 
 ## <a name="capabilities"></a>功能
 
@@ -44,11 +44,11 @@ ms.locfileid: "67958913"
 
 ### <a name="install"></a>安装
 
-首先在 VS Code 中安装应用部署扩展：
+首先在 Visual Studio Code 中安装应用部署扩展:
 
-1. 下载[应用部署扩展](https://aka.ms/app-deploy-vscode)以安装属于 VS Code 的扩展。
+1. 下载[应用部署扩展](https://aka.ms/app-deploy-vscode), 作为 Visual Studio Code 的一部分安装扩展。
 
-1. 启动 VS Code 并导航到“扩展”侧边栏。
+1. 启动 Visual Studio Code 并导航到 "扩展" 侧栏。
 
 1. 单击侧边栏顶部的 `Install from vsix` 上下文菜单，然后选择 `…`。
 
@@ -56,29 +56,48 @@ ms.locfileid: "67958913"
 
 1. 找到下载的 `sqlservbdc-app-deploy.vsix` 文件，然后选择要安装的文件。
 
-安装 SQL Server 大数据群集应用部署扩展后，系统会提示重载 VS Code。 现在应该会在 VS Code 侧边栏中看到 SQL Server BDC 应用资源管理器。
+安装 SQL Server 大数据群集应用程序部署扩展后, 它会提示你重新加载 Visual Studio Code。 现在, 应会在 Visual Studio Code 边栏中看到 SQL Server BDC 应用程序资源管理器。
 
 ### <a name="app-explorer"></a>应用资源管理器
 
 单击侧边栏中的扩展，加载显示应用资源管理器的侧面板。 下面的应用资源管理器屏幕截图示例显示没有可用的应用或应用规范：
 
-<img src="media/vs-extension/app_explorer.png" width=350px></img>
-<!--![App Explorer](media/vs-extension/app_explorer.png)-->
+![应用资源管理器](media/vs-extension/app_explorer.png)
 
-#### <a name="new-connection"></a>新建连接
+#### <a name="connect-to-cluster"></a>连接到群集
 
 若要连接到群集终结点，请使用下列方法之一：
 
 - 单击底部显示 `SQL Server BDC Disconnected` 的状态栏。
-- 也可以单击顶部箭头指向门口的 `New Connection` 按钮。
+- 也可以单击顶部箭头指向门口的 `Connect to Cluster` 按钮。
 
-   ![新建连接](media/vs-extension/connect_to_cluster.png)
+Visual Studio Code 提示输入适当的终结点、用户名和密码。
 
-VS Code 提示输入相应的终结点、用户名和密码。 如果提供正确的凭据和应用终结点，VS Code 会通知你已连接到群集，并且你将看到所有部署的应用都填充到了侧边栏中。 如果成功连接，终结点和用户名将作为用户配置文件的一部分保存到 `./sqldbc`。 不保存任何密码或令牌。 重新登录时，提示将预先填写保存的主机和用户名，但始终会要求输入密码。 如果要连接到其他群集终结点，只需再次单击 `New Connection` 即可。 如果关闭 VS Code 或者如果打开其他工作区并且需要重新连接，则连接将自动关闭。
+要连接的终结点是`Cluster Management Service`端口为30080的终结点。
+
+还可以通过命令行找到此终结点 
+
+```
+azdata bdc endpoint list
+```
+
+获取此信息的另一种方法是在 Azure Data Studio 的服务器上右键单击 "**管理**", 你将在其中找到列出的服务的终结点。
+
+![广告终结点](media/vs-extension/ads_end_point.png)
+
+找到要使用的终结点后, 连接到该群集。
+
+![新建连接](media/vs-extension/connect_to_cluster.png)
+
+ 如果提供了正确的凭据和应用终结点, Visual Studio Code 会通知你已连接到该群集, 并且你将看到在边栏中填充的任何已部署的应用。 如果成功连接，终结点和用户名将作为用户配置文件的一部分保存到 `./sqldbc`。 不保存任何密码或令牌。 重新登录时，提示将预先填写保存的主机和用户名，但始终会要求输入密码。 如果要连接到其他群集终结点，只需再次单击 `New Connection` 即可。 如果关闭 Visual Studio Code 或打开其他工作区并且需要重新连接, 连接将自动关闭。
 
 ### <a name="app-template"></a>应用模板
 
-若要从某个模板部署新应用，请单击 `App Specifications` 窗格上的 `New App Template` 按钮，系统将提示你输入名称、运行时以及要在本地计算机上放置新应用的位置。 建议将其放在当前的 VS Code 工作区中，以便可以使用扩展的全部功能，不过也可以将其放在本地文件系统中的任何位置。
+需要在要保存应用程序的项目 Visual Studio Code 中*打开工作区*。
+
+若要从某个模板部署新应用，请单击 `App Specifications` 窗格上的 `New App Template` 按钮，系统将提示你输入名称、运行时以及要在本地计算机上放置新应用的位置。 您提供的名称和版本应该是 DNS-1035 标签, 并且必须包含小写字母数字字符或 "-", 以字母字符开头, 以字母数字字符结尾。
+
+建议将其放在当前 Visual Studio Code 工作区中, 以便可以使用扩展的全部功能, 但可以将其放在本地文件系统中的任何位置。
 
 ![新建应用模板](media/vs-extension/new_app_template.png)
 
@@ -86,13 +105,16 @@ VS Code 提示输入相应的终结点、用户名和密码。 如果提供正�
 
 ![加载的应用模板](media/vs-extension/loading_app_template.png)
 
-此模板是一个简单的 `Hello World` 应用，其布局如下：
+此模板是一个简单`helloworld`的应用, 在 "应用规范" 窗格中布局如下:
 
 - **spec.yaml**
    - 告知群集如何部署应用
 - **run-spec.yaml**
    - 告知群集你希望如何调用应用
-- **handler.py**
+
+应用程序的源代码将在工作区文件夹中。
+
+- **源文件名**
    - 这是 `spec.yaml` 中 `src` 指定的源代码文件
    - 该文件有一个名为 `handler` 的函数，它被视为应用的 `entrypoint`，如 `spec.yaml` 所示。 它采用名为 `msg` 的字符串输入，并返回一个名为 `out` 的字符串输出。 这些内容在 `spec.yaml` 的 `inputs` 和 `outputs` 中指定。
 
@@ -127,9 +149,9 @@ VS Code 提示输入相应的终结点、用户名和密码。 如果提供正�
 - 输出参数
 - 链接
   - swagger
-  - 详细信息
+  - details
 
-如果单击 `Links`，你将发现你可以访问已部署应用的 `swagger.json`，从而可以编写你自己的可调用应用的客户端：
+如果单击`Links`, 你将看到你可以`swagger.json`访问已部署的应用的, 因此你可以编写自己的客户端来调用你的应用程序:
 
 ![Swagger](media/vs-extension/swagger.png)
 
@@ -145,7 +167,7 @@ VS Code 提示输入相应的终结点、用户名和密码。 如果提供正�
 
 ![获取运行规范](media/vs-extension/get_run_spec.png)
 
-已有规范且编辑到满意后，请运行该规范。 VS Code 在应用完成运行后返回相应的反馈：
+已有规范且编辑到满意后，请运行该规范。 Visual Studio Code 在应用完成运行后返回相应的反馈:
 
 ![应用输出](media/vs-extension/app_output.png)
 
@@ -177,9 +199,9 @@ VS Code 提示输入相应的终结点、用户名和密码。 如果提供正�
 
 ## <a name="next-steps"></a>后续步骤
 
-如需了解如何将在 SQL Server 大数据群集上部署的应用集成到自己的应用程序中，请参阅[在大数据群集上使用应用程序](big-data-cluster-consume-apps.md)获取详细信息。 也可以参考[应用部署示例](https://aka.ms/sql-app-deploy)中的其他示例来试用扩展。
+了解有关详细信息, 请参阅[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]如何在应用程序上将部署的应用集成到[大数据群集上的使用应用程序](big-data-cluster-consume-apps.md)。 也可以参考[应用部署示例](https://aka.ms/sql-app-deploy)中的其他示例来试用扩展。
 
-有关 SQL Server 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
 
 
 我们希望此扩展能够为你带来帮助，感谢你的反馈。 请将反馈发送给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](https://aka.ms/sqlfeedback)。

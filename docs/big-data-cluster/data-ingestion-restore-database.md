@@ -1,26 +1,26 @@
 ---
 title: 还原数据库
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何将数据库还原到 SQL Server 2019 大数据群集（预览版）的主实例中。
+description: 本文介绍如何将数据库还原到的主实例[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969489"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652236"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>将数据库还原到 SQL Server 大数据群集主实例
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何将现有数据库还原到 SQL Server 2019 大数据群集（预览版）的主实例中。 建议使用备份、复制和还原。
+本文介绍如何将现有数据库还原到的主实例[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 建议使用备份、复制和还原。
 
 ## <a name="backup-your-existing-database"></a>备份现有数据库
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下概述：
+若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下概述:
 
-- [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
+- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)

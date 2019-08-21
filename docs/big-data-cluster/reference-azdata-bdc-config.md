@@ -5,16 +5,16 @@ description: Azdata bdc 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 73db63c485b7a6cd2e9355be935ff574ef827a5d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894035"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653519"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -281,4 +281,4 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装“azdata”工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。

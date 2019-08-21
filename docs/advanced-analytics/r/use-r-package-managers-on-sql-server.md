@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1f6d828a7267ab2b4b1def17f9d1c6bf4a6018dc
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715021"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633617"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 R 包管理器在 SQL Server 上安装 R 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68715021"
 
 ## <a name="install-a-package-using-rgui"></a>使用 Rgui.exe 安装包
 
-1. [确定实例库的位置](../package-management/default-packages.md)。 导航到安装 R 工具的文件夹。 例如, SQL Server 2017 默认实例的默认路径如下所示:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [确定实例库的位置](../package-management/r-package-information.md)。 导航到安装 R 工具的文件夹。 例如, SQL Server 2017 默认实例的默认路径如下所示:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. 右键单击 "Rgui.exe", 然后选择 "以**管理员身份运行**"。 如果没有所需的权限, 请与数据库管理员联系, 并提供所需的包的列表。
 

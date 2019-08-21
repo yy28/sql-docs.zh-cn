@@ -5,22 +5,22 @@ description: azdata bdc pool status 的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d0a5925af4f16f2147988b2318880d9acec664c3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: eafc72c6d86d38eabd26b735a9d5dab967e2e6be
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426127"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653480"
 ---
 # <a name="azdata-bdc-pool-status"></a>azdata bdc pool status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-以下文章提供了 azdata 工具中 bdc pool status 命令的参考   。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)  。
+以下文章提供了 azdata 工具中 bdc pool status 命令的参考。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -68,10 +68,10 @@ azdata bdc pool status show --kind spark --name default
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取更多详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)  。
+有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。

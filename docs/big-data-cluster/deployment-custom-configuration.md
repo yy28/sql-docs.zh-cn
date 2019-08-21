@@ -5,16 +5,16 @@ description: 了解如何使用配置文件自定义大数据群集部署。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 02e922ca909cd863d496f9c49a60dd986df8bedb
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969496"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652395"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>配置大数据群集的部署设置
 
@@ -420,4 +420,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## <a name="next-steps"></a>后续步骤
 
-有关在大数据群集部署中使用配置文件的详细信息，请参阅[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md#configfile)。
+有关在大数据群集部署中使用配置文件的详细信息, 请参阅[如何[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 Kubernetes 上部署](deployment-guidance.md#configfile)。

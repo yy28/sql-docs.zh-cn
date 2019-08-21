@@ -5,24 +5,24 @@ description: 了解如何执行 SQL Server 大数据群集的脱机部署。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419366"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652360"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>执行 SQL Server 大数据群集的脱机部署
 
-本文介绍如何执行 SQL Server 2019 大数据群集（预览版）的脱机部署。 大数据群集必须有权访问从中拉取容器映像的 Docker 存储库。 脱机安装是指将所需的映像置于专用 Docker 存储库中。 然后，该专用存储库会用作新部署的映像源。
+本文介绍如何执行的脱机部署[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 大数据群集必须有权访问从中拉取容器映像的 Docker 存储库。 脱机安装是指将所需的映像置于专用 Docker 存储库中。 然后，该专用存储库会用作新部署的映像源。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
-- 任何受支持的 Linux 分发版上或用于 Mac/Windows 的 Docker 上的 Docker 引擎 1.8+。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
+- 任何受支持的 Linux 分发或用于 Mac/Windows 的 Docker 上的 Docker 引擎 1.8+。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68419366"
 > [!TIP]
 > 以下步骤说明这一过程。 但是，为简化任务，可以使用[自动化脚本](#automated)，而不是手动运行这些命令。
 
-1. 重复以下命令即可拉取大数据群集容器映像。 将 `<SOURCE_IMAGE_NAME>` 替换为每个[映像名称](#images)。 将 `<SOURCE_DOCKER_TAG>` 替换为大数据群集版本的标记，例如 2019-CTP3.2-ubuntu  。  
+1. 重复以下命令即可拉取大数据群集容器映像。 将 `<SOURCE_IMAGE_NAME>` 替换为每个[映像名称](#images)。 将 `<SOURCE_DOCKER_TAG>` 替换为大数据群集版本的标记，例如 2019-CTP3.2-ubuntu。  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -70,13 +70,13 @@ ms.locfileid: "68419366"
  - **mssql-monitor-influxdb**
  - **mssql-security-knox**
  - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-r-runtime**
+ - **mssql-mlserver-py-runtime**
  - **mssql-controller**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
- - **mssql-monitor-grafana**
+ - **mssql-monitor-kibana**
  - **mssql-service-proxy**
- - **mssql-service-proxy**
+ - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
  - **mssql-mleap-serving-runtime**
@@ -89,7 +89,7 @@ ms.locfileid: "68419366"
 > [!NOTE]
 > 使用该脚本的先决条件是 Python。 有关如何安装 Python 的详细信息，请参阅 [Python 文档](https://wiki.python.org/moin/BeginnersGuide/Download)。
 
-1. 使用 curl 从 Bash 或 PowerShell 下载脚本  ：
+1. 使用 curl 从 Bash 或 PowerShell 下载脚本：
 
    ```PowerShell
    curl -o push-bdc-images-to-custom-private-repo.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/offline/push-bdc-images-to-custom-private-repo.py"
@@ -113,11 +113,11 @@ ms.locfileid: "68419366"
 
 ## <a name="install-tools-offline"></a>脱机安装工具
 
-大数据群集部署需要多种工具，包括 Python、azdata 和 Kubectl    。 通过下列步骤在脱机服务器上安装这些工具。
+大数据群集部署需要多种工具，包括 Python、azdata 和 Kubectl。 通过下列步骤在脱机服务器上安装这些工具。
 
 ### <a id="python"></a> 脱机安装 Python
 
-1. 在具有 Internet 访问权限的计算机上，下载下列其中一个包含 Python 的压缩文件：
+1. 在具有 Internet 访问权限的计算机上，下载以下包含 Python 的压缩文件之一：
 
    | 操作系统 | 下载 |
    |---|---|
@@ -125,7 +125,7 @@ ms.locfileid: "68419366"
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |
    | OSX     | [https://go.microsoft.com/fwlink/?linkid=2065976](https://go.microsoft.com/fwlink/?linkid=2065976) |
 
-1. 将压缩文件复制到目标计算机，并将其解压缩到所选文件夹。
+1. 将压缩文件复制到目标计算机，并将其解压缩到所选文件夹中。
 
 1. 从该文件夹运行 `installLocalPythonPackages.bat`，并将完整路径作为参数传到同一文件夹，该操作仅适用于 Windows。
 
@@ -135,13 +135,13 @@ ms.locfileid: "68419366"
 
 ### <a id="azdata"></a> 脱机安装 azdata
 
-1. 在具有 Internet 访问权限和 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的计算机上，运行以下命令，以便将所有 azdata 包下载到当前文件  。
+1. 在具有 Internet 访问权限和 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的计算机上，运行以下命令，以便将所有 azdata 包下载到当前文件。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. 将下载的包和 requirements.txt 文件复制到目标计算机  。
+1. 将下载的包和 requirements.txt 文件复制到目标计算机。
 
 1. 在目标计算机上运行以下命令，指定将之前的文件复制到其中的文件夹。
 
@@ -151,15 +151,15 @@ ms.locfileid: "68419366"
 
 ### <a id="kubectl"></a> 脱机安装 Kubectl
 
-若要将 Kubectl 安装到脱机计算机，请使用以下步骤  。
+若要将 Kubectl 安装到脱机计算机，请使用以下步骤。
 
-1. 使用 curl 将 Kubectl 下载到所选文件夹   。 有关详细信息，请参阅[使用 curl 安装 Kubectl 二进制](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)。
+1. 使用 curl 将 Kubectl 下载到所选文件夹。 有关详细信息，请参阅[使用 curl 安装 Kubectl 二进制](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)。
 
 1. 将文件夹复制到目标计算机。
 
 ## <a name="deploy-from-private-repository"></a>从专用存储库进行部署
 
-若要从专用存储库进行部署，请使用[部署指南](deployment-guidance.md)中所述的步骤，但使用指定专用 Docker 存储库信息的自定义部署配置文件。 以下 azdata 命令演示如何在名为 control.json 的自定义部署配置文件中更改 Docker 设置   ：
+若要从专用存储库进行部署，请使用[部署指南](deployment-guidance.md)中所述的步骤，但使用指定专用 Docker 存储库信息的自定义部署配置文件。 以下 azdata 命令演示如何在名为 control.json 的自定义部署配置文件中更改 Docker 设置：
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,8 +167,8 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-部署会提示你提供 Docker 用户名和密码，你也可在 DOCKER_USERNAME 和 DOCKER_PASSWORD 环境变量中指定用户名和密码   。
+部署会提示你提供 Docker 用户名和密码，你也可在 DOCKER_USERNAME 和 DOCKER_PASSWORD 环境变量中指定用户名和密码。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集部署的详细信息，请参阅[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)。
+有关大数据群集部署的详细信息, 请参阅[如何在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 上部署](deployment-guidance.md)。

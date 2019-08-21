@@ -5,22 +5,22 @@ description: 在 RStudio 中使用 sparklyr 连接到大数据群集。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 04/08/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67728374"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653326"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中使用 Sparklyr
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 Spark 的常用方法。 本文介绍如何使用 RStudio 在 SQL Server 2019 大数据群集（预览版）中使用 sparklyr。
+Sparklyr 为 Apache Spark 提供 R 接口。 Sparklyr 是 R 开发人员使用 Spark 的常用方法。 本文介绍如何在中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用 sparklyr RStudio。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集](big-data-cluster-overview.md)。
+有关大数据群集的详细信息, 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是](big-data-cluster-overview.md)。

@@ -1,22 +1,22 @@
 ---
 title: 使用 MLeap 创建和导出 Spark 机器学习模型
 titleSuffix: SQL Server big data clusters
-description: 在 SQL Server 大数据群集（预览版）上使用 PySpark 通过 Spark 训练和创建机器学习模型。 使用 MLeap 导出，然后在 SQL Server 中使用 Java 对模型进行评分。
+description: 使用 PySpark 在 (预览版) 上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]使用 Spark 培训和创建机器学习模型。 使用 MLeap 导出，然后在 SQL Server 中使用 Java 对模型进行评分。
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893959"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653413"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>在 SQL Server 大数据群集上创建和导出 Spark 机器学习模型以及对其评分
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>在上创建、导出和评分 Spark 机器学习模型[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 以下示例演示如何使用 [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html) 生成模型，将模型导出到 [MLeap](http://mleap-docs.combust.ml/)，以及在 SQL Server 中使用其 [Java 语言扩展](../language-extensions/language-extensions-overview.md)对模型进行评分。 这是在 SQL Server 2019 大数据群集的上下文中完成的。
 
@@ -68,4 +68,4 @@ ms.locfileid: "68893959"
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息，请参阅[如何在 Kubernetes 上部署 SQL Server 大数据群集](deployment-guidance.md)
+有关大数据群集的详细信息, 请参阅[如何在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 上部署](deployment-guidance.md)

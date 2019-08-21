@@ -1,22 +1,22 @@
 ---
 title: 调试/诊断 Spark 应用程序
 titleSuffix: SQL Server big data clusters
-description: 使用 Spark History Server 调试和诊断在 SQL Server 2019 大数据群集上运行的 Spark 应用程序。
+description: 使用 Spark History Server 调试和诊断在上运行的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Spark 应用程序。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: abf6b2b3383377a0647f873a8c4a1f6aa9508455
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028549"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653678"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>使用 Spark History Server 调试和诊断 SQL Server 大数据群集上的 Spark 应用程序
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 spark History Server 中调试和诊断 spark 应用程序
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -203,5 +203,5 @@ Spark History Server 具有以下已知问题：
 
 ## <a name="next-steps"></a>后续步骤
 
-* [SQL Server 大数据群集入门](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [入门[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [配置 Spark 设置](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

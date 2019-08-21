@@ -1,20 +1,20 @@
 ---
 title: 查询 Oracle 中的外部数据
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何从 SQL Server 2019 大数据群集（预览版）中查询 Oracle 数据。 为 Oracle 中的数据创建外部表，然后运行查询。
+description: 本教程演示如何从[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]查询 Oracle 数据。 为 Oracle 中的数据创建外部表，然后运行查询。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-ms.date: 12/12/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ebad25ed0532ed6ba96dc803fa8e6dc2538977ae
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957710"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653254"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集中查询 Oracle
 
@@ -59,7 +59,7 @@ ms.locfileid: "67957710"
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. 将 inventory.csv 文件的内容导入到此表中  。 此文件由[先决条件](#prereqs)部分中的示例创建脚本创建。
+1. 将 inventory.csv 文件的内容导入到此表中。 此文件由[先决条件](#prereqs)部分中的示例创建脚本创建。
 
 ## <a name="create-an-external-data-source"></a>创建外部数据源
 
@@ -67,11 +67,11 @@ ms.locfileid: "67957710"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
 
    ![SQL Server 主实例查询](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
-1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库  。
+1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库。
 
    ```sql
    USE Sales
@@ -94,7 +94,7 @@ ms.locfileid: "67957710"
 
 ## <a name="create-an-external-table"></a>创建外部表
 
-接下来，在 Oracle 服务器上的 `INVENTORY` 表上创建名为 iventory_ora 的外部表  。
+接下来，在 Oracle 服务器上的 `INVENTORY` 表上创建名为 iventory_ora 的外部表。
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]

@@ -1,20 +1,20 @@
 ---
 title: 什么是控制器？
 titleSuffix: SQL Server big data clusters
-description: 本文介绍 SQL Server 2019 大数据群集（预览版）的控制器。
+description: 本文介绍了的控制器[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 643cb2b4e252e1818940bda2be54917c23cefe06
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419535"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652289"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
 
@@ -36,13 +36,13 @@ ms.locfileid: "68419535"
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服务
 
-控制器部署并托管在客户想要在其中生成大数据群集的同一 Kubernetes 命名空间中。 此服务由 Kubernetes 管理员在群集启动期间使用 **azdata** 命令行实用工具安装。 有关详细信息，请参阅[开始使用 SQL Server 大数据群集](deploy-get-started.md)。
+控制器部署并托管在客户想要在其中生成大数据群集的同一 Kubernetes 命名空间中。 此服务由 Kubernetes 管理员在群集启动期间使用 **azdata** 命令行实用工具安装。 有关详细信息, 请参阅[入门[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)。
 
 生成工作流将在 Kubernetes 之上布置一个功能齐全的 SQL Server 大数据群集，其中包含[概述](big-data-cluster-overview.md)一文中介绍的所有组件。 启动工作流首先创建控制器服务，一旦部署完成，控制器服务将协调主、计算、数据和存储池的其余服务部分的安装和配置。
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>通过控制器服务管理群集
 
-可以使用任一 **azdata** 命令通过控制器服务管理群集。 如果将其他 Kubernetes 对象（如 pod）部署到同一命名空间中，控制器服务不会管理或监视它们。 还可使用 **kubectl** 命令在 Kubernetes 级别管理群集。 有关详细信息，请参阅[监视 SQL Server 大数据群集并对其进行故障排除](cluster-troubleshooting-commands.md)。
+可以使用任一 **azdata** 命令通过控制器服务管理群集。 如果将其他 Kubernetes 对象（如 pod）部署到同一命名空间中，控制器服务不会管理或监视它们。 还可使用 **kubectl** 命令在 Kubernetes 级别管理群集。 有关详细信息, 请参阅[监视和[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]故障排除](cluster-troubleshooting-commands.md)。
 
 为大数据群集创建的控制器和 Kubernetes 对象（有状态集、pod、机密等）驻留在专用的 Kubernetes 命名空间中。 控制器服务将由 Kubernetes 群集管理员授予管理该命名空间内所有资源的权限。  此方案的 RBAC 策略使用 **azdata** 自动配置为初始群集部署的一部分。
 
@@ -61,7 +61,7 @@ ms.locfileid: "68419535"
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下资源：
+若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下资源:
 
-- [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
-- [Workshop:Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)（研讨会：Microsoft SQL Server 大数据群集体系结构）
+- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

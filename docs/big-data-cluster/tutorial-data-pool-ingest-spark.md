@@ -1,28 +1,28 @@
 ---
 title: 使用 Spark 作业引入数据
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何使用 Azure Data Studio 中的 Spark 作业将数据引入到 SQL Server 2019 大数据群集（预览版）的数据池中。
+description: 本教程演示如何在 Azure Data Studio 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]使用 Spark 作业将数据引入数据池。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957817"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653298"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：使用 Spark 作业将数据引入 SQL Server 数据池
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本教程演示如何使用 Spark 作业将数据加载到 SQL Server 2019 大数据群集（预览版）的[数据池](concept-data-pool.md)。 
+本教程演示如何使用 Spark 作业将数据加载到的[数据池中](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]。 
 
-在本教程中，你将学习如何执行以下操作：
+在本教程中，你将了解如何执行以下操作：
 
 > [!div class="checklist"]
 > * 在数据池中创建外部表。
@@ -42,11 +42,11 @@ ms.locfileid: "67957817"
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>在数据池中创建外部表
 
-以下步骤会在数据池中创建一个名为“web_clickstreams_spark_results”的外部表  。 然后，可以将此表用作将数据引入到大数据群集的位置。
+以下步骤会在数据池中创建一个名为“web_clickstreams_spark_results”的外部表。 然后，可以将此表用作将数据引入到大数据群集的位置。
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
 
    ![SQL Server 主实例查询](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "67957817"
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. 在数据池中创建一个名为“web_clickstreams_spark_results”的外部表  。
+1. 在数据池中创建一个名为“web_clickstreams_spark_results”的外部表。
 
    ```sql
    USE Sales
@@ -81,21 +81,21 @@ ms.locfileid: "67957817"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的主实例。 有关详细信息，请参阅[连接到大数据群集](connect-to-big-data-cluster.md)。
 
-1. 双击“服务器”窗口中的 HDFS/Spark 网关连接  。 然后选择“新建 Spark 作业”  。
+1. 双击“服务器”窗口中的 HDFS/Spark 网关连接。 然后选择“新建 Spark 作业”。
 
    ![新建 Spark 作业](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
 
-1. 在“新建作业”窗口的“作业名称”字段中输入一个名称   。
+1. 在“新建作业”窗口的“作业名称”字段中输入一个名称。
 
-1. 在“Jar/py 文件”下拉列表中，选择“HDFS”   。 然后输入以下 jar 文件路径：
+1. 在“Jar/py 文件”下拉列表中，选择“HDFS”。 然后输入以下 jar 文件路径：
 
    ```text
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
-1. 在“主类”字段中，输入 `FileStreaming`  。
+1. 在“主类”字段中，输入 `FileStreaming`。
 
-1. 在“参数”字段中，输入以下文本，并在 `<your_password>` 占位符中指定 SQL Server 主实例的密码  。 
+1. 在“参数”字段中，输入以下文本，并在 `<your_password>` 占位符中指定 SQL Server 主实例的密码。 
 
    ```text
    --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
@@ -116,7 +116,7 @@ ms.locfileid: "67957817"
    | 启用检查点 | True 或 False |
    | timeout | 退出前运行作业的时间（以毫秒为单位） |
 
-1. 按“提交”提交作业  。
+1. 按“提交”提交作业。
 
    ![Spark 作业提交](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
 

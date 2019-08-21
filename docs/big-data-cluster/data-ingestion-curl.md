@@ -1,30 +1,30 @@
 ---
 title: 使用 curl 将数据加载到 HDFS |Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 使用 curl 将数据加载到 SQL Server 2019 大数据群集上的 HDFS 中。
+description: 使用卷将数据加载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 729c3af97f98bafced482f7ead8ce85f93b55af3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958634"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652220"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>使用 curl 将数据加载到 SQL Server 大数据群集上的 HDFS 中
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>使用卷将数据加载到中的 HDFS[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何使用 curl 将数据加载到 SQL Server 2019 大数据群集（预览版）上的 HDFS 中  。
+本文介绍如何使用**卷**将数据加载到 (预览版) 上[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]的 HDFS 中。
 
 ## <a name="obtain-the-service-external-ip"></a>获取服务外部 IP
 
-WebHDFS 在部署完成后启动，其访问通过 Knox 进行。 Knox 终结点通过名为“gateway-svc-external”的 Kubernetes 服务公开  。  要创建必需的 WebHDFS URL 来上传/下载文件，需要 gateway-svc-external 服务外部 IP 地址和大数据群集的名称  。 可以通过运行以下命令获取 gateway-svc-external 服务外部 IP 地址  ：
+WebHDFS 在部署完成后启动，其访问通过 Knox 进行。 Knox 终结点通过名为“gateway-svc-external”的 Kubernetes 服务公开。  要创建必需的 WebHDFS URL 来上传/下载文件，需要 gateway-svc-external 服务外部 IP 地址和大数据群集的名称。 可以通过运行以下命令获取 gateway-svc-external 服务外部 IP 地址：
 
 ```bash
 kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
@@ -45,7 +45,7 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 ## <a name="list-a-file"></a>列出文件
 
-要列出 hdfs:///airlinedata 下的文件，请使用以下 curl 命令  ：
+要列出 hdfs:///airlinedata 下的文件，请使用以下 curl 命令：
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
@@ -53,7 +53,7 @@ curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP extern
 
 ## <a name="put-a-local-file-into-hdfs"></a>将本地文件放入 HDFS
 
-要将新文件“test.csv”从本地目录放入 airlinedata 目录，请使用以下 curl 命令（Content-Type 参数是必需的）   ：
+要将新文件“test.csv”从本地目录放入 airlinedata 目录，请使用以下 curl 命令（Content-Type 参数是必需的）：
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
@@ -61,7 +61,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="create-a-directory"></a>创建目录
 
-要在 `hdfs:///` 下创建目录测试，请使用以下命令  ：
+要在 `hdfs:///` 下创建目录测试，请使用以下命令：
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'

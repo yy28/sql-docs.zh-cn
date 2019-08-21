@@ -5,22 +5,22 @@ description: azdata 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 24a72683c423661a2981e5a16941bcbc180ac6d1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894007"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653091"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-以下文章为 [SQL Server 2019 大数据群集（预览版）](big-data-cluster-overview.md)的 **azdata** 工具提供了参考。 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+以下文章提供了[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (预览版)](big-data-cluster-overview.md)的**azdata**工具的参考。 有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -95,4 +95,4 @@ JMESPath 查询字符串。 有关详细信息, 请[http://jmespath.org/](http:/
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
+有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。

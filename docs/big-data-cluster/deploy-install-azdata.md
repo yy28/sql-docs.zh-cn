@@ -1,22 +1,22 @@
 ---
 title: 安装 azdata
 titleSuffix: SQL Server big data clusters
-description: 了解如何安装 azdata 工具以安装和管理 SQL Server 2019 大数据群集（预览版）。
+description: 了解如何安装用于安装和管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (预览) 的 azdata 工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: e95fe15877dd6d22ca575b79f9fb213b6104d3aa
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028557"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652418"
 ---
-# <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>安装 azdata 以管理 SQL Server 大数据群集
+# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>安装要管理的 azdata[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -109,4 +109,4 @@ pip3 install -U requests
 
 ## <a name="next-steps"></a>后续步骤
 
-有关大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关大数据群集的详细信息, 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。

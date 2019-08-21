@@ -1,26 +1,26 @@
 ---
 title: 配置 HDFS 分层
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake Storage 文件系统装载到 SQL Server 2019 大数据群集（预览版）上的 HDFS 中。
+description: 本文介绍如何配置 HDFS 分层, 以将外部 Azure Data Lake Storage 文件系统装载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419374"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652329"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>在 SQL Server 大数据群集上配置 HDFS 分层
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>配置 HDFS 分层[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-借助 HDFS 分层，可以在 HDFS 中装载与 HDFS 兼容的外部文件系统。 本文介绍如何为 SQL Server 2019 大数据群集（预览版）配置 HDFS 分层。 目前，我们支持连接到 Azure Data Lake Storage Gen2 和 Amazon S3。 
+借助 HDFS 分层，可以在 HDFS 中装载与 HDFS 兼容的外部文件系统。 本文介绍如何为[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (预览版) 配置 HDFS 分层。 目前，我们支持连接到 Azure Data Lake Storage Gen2 和 Amazon S3。 
 
 ## <a name="hdfs-tiering-overview"></a>HDFS 分层概述
 
@@ -38,7 +38,7 @@ ms.locfileid: "68419374"
 
 HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快照。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [部署大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快�
 
 ## <a id="issues"></a> 已知问题和限制
 
-以下列表提供了在 SQL Server 大数据群集中使用 HDFS 分层时的已知问题和当前限制：
+以下列表提供了在中使用 HDFS 分层时的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]已知问题和当前限制:
 
 - 如果装载长时间处于 `CREATING` 状态，则很可能已失败。 在这种情况下，请取消命令并在必要时删除装载。 在重试之前，请验证参数和凭据是否正确。
 
@@ -76,4 +76,4 @@ HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快�
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 SQL Server 2019 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
+有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715215"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634552"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 (R 和 Python) 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -274,7 +274,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="step-3-add-any-third-party-packages"></a>步骤 3：添加任何第三方包
 
-你可能已将其他开源或第三方包添加到包库。 由于反向绑定会切换默认包库的位置, 因此你必须将包重新安装到 R 和 Python 现在使用的库。 有关详细信息, 请参阅[默认包](../package-management/default-packages.md)、[安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)和[安装新的 Python 包](../python/install-additional-python-packages-on-sql-server.md)。
+你可能已将其他开源或第三方包添加到包库。 由于反向绑定会切换默认包库的位置, 因此你必须将包重新安装到 R 和 Python 现在使用的库。 有关详细信息, 请参阅[R 包信息](../package-management/r-package-information.md)和[安装](../package-management/install-additional-r-packages-on-sql-server.md), 以及[Python 包信息](../package-management/python-package-information.md)和[安装](../package-management/install-additional-python-packages-on-sql-server.md)。
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR 命令语法
 
