@@ -1,22 +1,22 @@
 ---
 title: 安全性概念
 titleSuffix: SQL Server big data clusters
-description: 本文介绍 SQL Server 2019 大数据群集（预览版）的安全性概念。 这包括介绍群集终结点和群集身份验证。
+description: 本文介绍了的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]安全概念。 这包括介绍群集终结点和群集身份验证。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958666"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652253"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的安全性概念
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>的安全概念[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -82,7 +82,7 @@ SQL 主 SA 密码：
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下资源：
+若要了解有关的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]详细信息, 请参阅以下资源:
 
-- [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
-- [Workshop:Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)（研讨会：Microsoft SQL Server 大数据群集体系结构）
+- [什么是[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
+- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

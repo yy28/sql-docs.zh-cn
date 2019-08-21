@@ -1,26 +1,26 @@
 ---
 title: 配置 minikube
 titleSuffix: SQL Server big data clusters
-description: 了解如何在单台计算机上为 SQL Server 2019 大数据群集（预览版）部署配置 minikube。
+description: 了解如何在一台计算机[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上配置 minikube 以进行部署。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1991176de132062c46f36f30f4f384e483c069f9
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: b2022fe6ad8a0aa23c4dd7d917e925ae1daba572
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969416"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652403"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 minikube
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何在单台计算机上为 SQL Server 2019 大数据群集（预览版）部署配置 **minikube**。 Minikube 是一种工具，可让用户在单台计算机（如笔记本电脑或台式机）上轻松运行 Kubernetes。 Minikube 在笔记本电脑上的 VM 内运行单节点 Kubernetes 群集，以供想要试用 Kubernetes 或使用它进行日常开发的用户使用。 
+本文介绍如何在一台计算机上配置**minikube**以进行[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]部署。 Minikube 是一种工具，可让用户在单台计算机（如笔记本电脑或台式机）上轻松运行 Kubernetes。 Minikube 在笔记本电脑上的 VM 内运行单节点 Kubernetes 群集，以供想要试用 Kubernetes 或使用它进行日常开发的用户使用。 
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -41,7 +41,7 @@ ms.locfileid: "68969416"
 
 ## <a name="install-minikube"></a>安装 minikube
 
-根据[v 1.3.0 版本](https://github.com/kubernetes/minikube/releases/tag/v1.3.0)的说明安装 minikube 版本。 SQL Server 2019 大数据群集 (预览版) 仅适用于版本1.0.0 和更高版本。
+根据[v 1.3.0 版本](https://github.com/kubernetes/minikube/releases/tag/v1.3.0)的说明安装 minikube 版本。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]仅适用于版本1.0.0 和更高版本。
 
 ## <a name="create-a-minikube-cluster"></a>创建 minikube 群集
 
@@ -71,4 +71,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 本文中的步骤配置了 minikube 群集。 下一步是部署 SQL Server 2019 大数据群集。 有关说明，请参阅以下文章：
 
-[在 Kubernetes 上部署 SQL Server 2019 大数据群集](deployment-guidance.md#deploy)
+[在[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Kubernetes 上部署](deployment-guidance.md#deploy)
