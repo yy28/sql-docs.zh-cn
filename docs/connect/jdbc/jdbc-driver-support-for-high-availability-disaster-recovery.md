@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序对高可用性和灾难恢复的支持 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 322a22c2236898876ae2fd5e942a1ad3617c1959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956384"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027954"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67956384"
   
  
   
-## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
+## <a name="connecting-with-multisubnetfailover"></a>使用 multiSubnetFailover 进行连接  
  在连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=true  。 multiSubnetFailover 可加快 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所有可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将积极地重试 TCP 连接。  
   
  multiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 将尝试通过试图连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库  。 如果对连接指定的是 MultiSubnetFailover=true  ，客户端重试 TCP 连接尝试的速度快于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
@@ -83,7 +83,7 @@ ms.locfileid: "67956384"
   
  如果将主副本配置为拒绝只读工作负荷且连接字符串包含 **ApplicationIntent=ReadOnly**，连接将失败。  
   
-## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>升级以便使用来自数据库镜像的多子网群集  
+## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>从数据库镜像升级到使用多子网群集  
  如果将当前使用数据库镜像的 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序升级到多子网方案，则应删除 failoverPartner 连接属性并替换成已设置为“true”的 multiSubnetFailover，并且还应使用可用性组侦听程序替换连接字符串中的服务器名称    。 如果连接字符串使用 failoverPartner 和 multiSubnetFailover=true，驱动程序将生成一个错误   。 但是，如果连接字符串使用 failoverPartner 和 multiSubnetFailover=false（或 ApplicationIntent=ReadWrite），则此应用程序将使用数据库镜像    。  
   
  如果数据库镜像在 AG 中的主数据库上使用，并且如果 multiSubnetFailover=true 用于连接到主数据库（而非可用性组侦听程序）的连接字符串中，驱动程序则将返回一个错误  。  
@@ -92,7 +92,7 @@ ms.locfileid: "67956384"
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>支持 multiSubnetFailover 和 applicationIntent 的新增方法  
+## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>支持 multiSubnetFailover 和 applicationIntent 的新方法  
  以下方法使你能够以编程方式访问**multiSubnetFailover**、 **applicationIntent**和**transparentNetworkIPResolution**连接字符串关键字:  
   
 -   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
@@ -112,7 +112,7 @@ ms.locfileid: "67956384"
  **GetMultiSubnetFailover**、 **setMultiSubnetFailover**、 **getApplicationIntent**、 **setApplicationIntent**、 **getTransparentNetworkIPResolution**和**setTransparentNetworkIPResolution**方法是还添加到[SQLServerDataSource 类](../../connect/jdbc/reference/sqlserverdatasource-class.md)、 [SQLServerConnectionPoolDataSource 类](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)和[SQLServerXADataSource 类](../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
   
 ## <a name="ssl-certificate-validation"></a>SSL 证书验证  
- 可用性组包含多个物理服务器。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 新增了对 SSL 证书中使用者替代名称的支持，因此多台主机可与同一个证书相关联  。 有关 SSL 的详细信息, 请参阅[了解 Ssl 支持](../../connect/jdbc/understanding-ssl-support.md)。  
+ 可用性组包含多个物理服务器。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 新增了对 SSL 证书中使用者替代名称的支持，因此多台主机可与同一个证书相关联  。 若要详细了解 SSL，请参阅[了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

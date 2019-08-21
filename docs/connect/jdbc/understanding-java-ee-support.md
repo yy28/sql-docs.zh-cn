@@ -1,7 +1,7 @@
 ---
 title: 了解 Java EE 支持 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892313"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027263"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支持
 
@@ -41,7 +41,7 @@ ms.locfileid: "68892313"
   
 无论何时使用 JDBC DriverManager 类加载驱动程序, 只要在任何驱动程序配置中指定驱动程序的类名, 就会使用类名称。 例如，配置 Java EE 应用程序服务器内的数据源可能要求输入驱动程序类名称。  
   
-## <a name="data-sources"></a>“数据源”
+## <a name="data-sources"></a>数据源
 
 JDBC 驱动程序为 Java EE / JDBC 3.0 数据源提供支持。 JDBC 驱动程序 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类由 `com.microsoft.sqlserver.jdbc.SQLServerXADataSource` 实现。  
   
@@ -74,8 +74,8 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-有关数据源属性的详细信息，请参阅[设置数据源属性](../../connect/jdbc/setting-the-data-source-properties.md)。  
+若要详细了解数据源属性，请参阅[设置数据源属性](../../connect/jdbc/setting-the-data-source-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

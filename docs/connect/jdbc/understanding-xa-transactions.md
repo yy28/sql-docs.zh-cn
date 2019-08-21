@@ -1,7 +1,7 @@
 ---
 title: 了解 XA 事务 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004152"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027219"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -38,7 +38,7 @@ ms.locfileid: "68004152"
 > [!NOTE]  
 > XA 分布式事务连接默认使用“提交读”隔离级别。  
   
-## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>使用 XA 事务的准则和限制  
+## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>XA 事务使用准则和限制  
 
 以下附加准则适用于紧密耦合的事务：  
 
@@ -152,7 +152,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
      意味着如果客户端不指定任何超时，所有事务将有 30 秒的超时（最大值）。 如果客户端指定了任何超时，则只要此时间小于 30 秒（最大值），就将使用它。  
   
-### <a name="upgrading-sqljdbcxadll"></a>升级 sqljdbc_xa.dll
+### <a name="upgrading-sqljdbc_xadll"></a>升级 sqljdbc_xa.dll
 
 您在安装新版本的 JDBC 驱动程序时，也应该使用新版本中的 sqljdbc_xa.dll 来升级服务器上的 sqljdbc_xa.dll。  
   
@@ -165,7 +165,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
     当 sqljdbc_xa.dll 中调用扩展过程时，将会加载新 DLL。 不需要重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来加载新定义。  
   
-### <a name="configuring-the-user-defined-roles"></a>配置用户定义的角色
+### <a name="configuring-the-user-defined-roles"></a>配置用户定义角色
 
 若要为特定用户授予使用 JDBC 驱动程序参与分布式事务的权限，请将该用户添加至 SqlJDBCXAUser 角色。 例如，使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码将名为“shelby”（SQL 标准登录用户名为“shelby”）的用户添加至 SqlJDBCXAUser 角色：  
 

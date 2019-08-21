@@ -1,7 +1,7 @@
 ---
 title: 使用 JDBC 驱动程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893658"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025774"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 
@@ -41,7 +41,7 @@ Microsoft JDBC Driver 6.0 for SQL Server 和 Microsoft JDBC Driver 4.2 for SQL S
   
 Microsoft JDBC Driver 4.1 for SQL Server 提供 sqljdbc41.jar  类库文件。
 
-你的选择还将确定可用功能。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+你的选择还将确定可用功能。 若要详细了解选择哪个 JAR 文件，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="setting-the-classpath"></a>设置 Classpath
 
@@ -227,10 +227,10 @@ Connection con = DriverManager.getConnection(connectionUrl);
 调用 DriverManager 类的 getConnection 方法时，会从已注册的 JDBC 驱动程序集中找到相应的驱动程序。 sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 文件包括“META-INF/services/java.sql.Driver”文件，其中包含 com.microsoft.sqlserver.jdbc.SQLServerDriver  作为注册驱动程序。 当前通过使用 Class.forName 方法加载驱动程序的现有应用程序将继续工作，无需进行修改。  
   
 > [!NOTE]  
-> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持的 JRE 版本的列表，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的 JRE 版本列表，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
 
-有关如何与数据源连接和使用连接 URL 的详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 和[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+若要详细了解如何与数据源连接，以及如何使用连接 URL，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 和[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 
-[JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

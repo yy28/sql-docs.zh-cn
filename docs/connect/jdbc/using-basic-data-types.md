@@ -1,7 +1,7 @@
 ---
 title: 使用基本数据类型 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916362"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026511"
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 
@@ -72,7 +72,7 @@ ms.locfileid: "67916362"
   
 以下几部分提供了如何使用 JDBC 驱动程序和基本数据类型的示例。 有关如何在 Java 应用程序中使用基本数据类型的更多详细示例，请参阅[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)。  
   
-## <a name="retrieving-data-as-a-string"></a>以字符串的格式检索数据
+## <a name="retrieving-data-as-a-string"></a>以字符串格式检索数据
 
 如果必须从映射到任意 JDBC 基本数据类型的数据源检索数据，并以字符串的格式查看这些数据，或者如果不需要强类型的数据，则可以使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法，如下所示：  
   
@@ -124,7 +124,7 @@ ms.locfileid: "67916362"
 > [!NOTE]  
 > 除返回的输出参数外，还可能返回一个结果集，包含此存储过程的运行结果。  
   
-有关如何将 JDBC 驱动程序用于存储过程和输出参数的详细信息, 请参阅将[存储过程与 Output 参数一起使用](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)。  
+有关如何将 JDBC 驱动程序用于存储过程和输出参数的详细信息, 请参阅将[存储过程与 output 参数一起使用](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)。  
 
 ## <a name="see-also"></a>另请参阅
 

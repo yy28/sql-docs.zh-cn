@@ -1,7 +1,7 @@
 ---
 title: 使用大容量复制 API 进行批处理 JDBC 驱动程序的批处理插入操作 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004139"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027097"
 ---
-# <a name="using-bulk-copy-api-for-batch-insert-operation"></a>将大容量复制 API 用于批插入操作
+# <a name="using-bulk-copy-api-for-batch-insert-operation"></a>将大容量复制 API 用于批量插入操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "68004139"
 
 此功能仅适用于 java.sql.preparedstatement 和 CallableStatement 的`executeBatch()`  &  `executeLargeBatch()` api。
 
-## <a name="pre-requisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 为批量插入启用大容量复制 API 有两个先决条件。
 
@@ -141,4 +141,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>另请参阅
 
-[借助 JDBC 驱动程序提高性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[通过 JDBC 驱动程序提升性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

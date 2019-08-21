@@ -1,7 +1,7 @@
 ---
-title: 使用带有输入参数的存储过程 | Microsoft Docs
+title: 使用含输入参数的存储过程 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916523"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026897"
 ---
-# <a name="using-a-stored-procedure-with-input-parameters"></a>使用带有输入参数的存储过程
+# <a name="using-a-stored-procedure-with-input-parameters"></a>使用含输入参数的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "67916523"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 有关 SQL 转义序列的详细信息, 请参阅[使用 Sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 有关 SQL 转义序列的详细信息, 请参阅[使用 sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 构造`call`转义序列时, 可通过使用来指定 IN 参数: 来指定 IN 参数。 此字符充当要传递给该存储过程的参数值的占位符。 若要指定参数的值, 可以使用 SQLServerPreparedStatement 类的 setter 方法之一。 可使用的 setter 方法由 IN 参数的数据类型决定。
 
@@ -56,4 +56,4 @@ public static void executeSprocInParams(Connection con) throws SQLException {
 
 ## <a name="see-also"></a>另请参阅
 
-[在存储过程中使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[结合使用语句和存储过程](../../connect/jdbc/using-statements-with-stored-procedures.md)

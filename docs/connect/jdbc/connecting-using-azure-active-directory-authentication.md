@@ -1,7 +1,7 @@
 ---
-title: 使用 Azure Active Directory 身份验证连接 | Microsoft Docs
+title: 使用 Azure Active Directory 身份验证进行连接 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956810"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028124"
 ---
-# <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证连接
+# <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证进行连接
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -54,7 +54,7 @@ ms.locfileid: "67956810"
 * Java 7 或更高版本
 * Microsoft JDBC Driver 6.0 (或更高版本) SQL Server
 * 如果你使用的是基于访问令牌的身份验证模式, 则需要使用[azure activedirectory 库的 java](https://github.com/AzureAD/azure-activedirectory-library-for-java)及其依赖项来运行本文中的示例。 有关详细信息, 请参阅**使用访问令牌进行连接**一节。
-* 如果使用的是**ActiveDirectoryPassword** authentication 模式, 则需要用于 java 及其依赖项的[azure activedirectory 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)。 有关详细信息, 请参阅**使用 ActiveDirectoryPassword Authentication 模式进行连接**一节。
+* 如果使用的是**ActiveDirectoryPassword** authentication 模式, 则需要用于 java 及其依赖项的[azure activedirectory 库](https://github.com/AzureAD/azure-activedirectory-library-for-java)。 有关详细信息, 请参阅**使用 ActiveDirectoryPassword authentication 模式进行连接**一节。
 * 如果你使用的是**ActiveDirectoryIntegrated**模式, 则需要用于 java 及其依赖项的 azure activedirectory 库。 有关详细信息, 请参阅**使用 ActiveDirectoryIntegrated Authentication 模式进行连接**一节。
 
 ## <a name="connecting-using-activedirectorymsi-authentication-mode"></a>使用 ActiveDirectoryMSI 身份验证模式进行连接
@@ -175,7 +175,7 @@ JDK 附带了`kinit`, 可用于从与 Azure Active Directory 联合的已加入�
 #### <a name="linux-and-mac"></a>Linux 和 Mac
 
 ##### <a name="requirements"></a>要求
-对已加入 Windows 域的计算机的访问权限, 用于查询 Kerberos 域控制器。
+访问 Windows 域加入计算机，以查询 Kerberos 域控制器。
 
 ##### <a name="step-1-find-kerberos-kdc"></a>步骤 1: 查找 Kerberos KDC
 - 运行于Windows 命令行 
@@ -206,14 +206,14 @@ JDK 附带了`kinit`, 可用于从与 Azure Active Directory 联合的已加入�
 > [!NOTE]
 >  域必须全部大写。
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>步骤 3: 测试票证授予票证检索
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>第 3 步：测试票证授予票证检索
 - **运行于**: Linux/Mac
 - **操作**：
   - 使用命令`kinit username@DOMAIN.COMPANY.COM`从 KDC 获取 TGT, 然后它会提示你输入域密码。
   - 使用`klist`查看可用的票证。 如果 kinit 成功, 应会看到 krbtgt/DOMAIN. .COM @ DOMAIN.COMPANY.COM 中的票证。
 
 ## <a name="connecting-using-activedirectorypassword-authentication-mode"></a>使用 ActiveDirectoryPassword 身份验证模式进行连接
-下面的示例展示了如何使用e `authentication=ActiveDirectoryPassword` 模式。
+下面的示例展示了如何使用 `authentication=ActiveDirectoryPassword` 模式。
 
 生成并运行该示例之前:
 1.  在客户端计算机上 (要在其上运行此示例), 下载适用于[azure 的 azure activedirectory](https://github.com/AzureAD/azure-activedirectory-library-for-java)库及其依赖项, 并将它们包含在 java 生成路径中

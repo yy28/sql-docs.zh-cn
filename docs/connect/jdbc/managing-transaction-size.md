@@ -1,7 +1,7 @@
 ---
 title: 管理事务大小 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b443e3541dbf86fd0cfa947f057faaf62e08226
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956356"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027902"
 ---
 # <a name="managing-transaction-size"></a>管理事务大小
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,6 +29,6 @@ ms.locfileid: "67956356"
  此外，如果预计您的应用程序会遇到阻止问题并因此需要超时，则确保使用锁定超时设置。 可以使用 [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md) 方法完成此操作。 锁定超时的默认值为 -1，这意味着它将无限期阻止，同时等待锁定。 您可以将锁定超时设置为 30 秒，这样，如果其他连接进行阻止，则可以使被阻止的连接超时 30 秒。  
   
 ## <a name="see-also"></a>另请参阅  
- [借助 JDBC 驱动程序提高性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序提升性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

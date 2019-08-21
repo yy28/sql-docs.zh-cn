@@ -57,10 +57,10 @@ CREATE COLUMN MASTER KEY key_name
 ```  
   
 ## <a name="arguments"></a>参数  
-key_name  
+key_name   
 数据库中的列主密钥的名称。  
   
-key_store_provider_name  
+key_store_provider_name   
 指定密钥存储提供程序的名称。 密钥存储提供程序是一个客户端软件组件，用于保存包含列主密钥的密钥存储。 
 
 启用了 Always Encrypted 的客户端驱动程序：
@@ -99,13 +99,13 @@ key_path
   
      其中：  
   
-    CertificateStoreLocation  
+    CertificateStoreLocation   
     证书存储位置，必须为当前用户或本地计算机。 有关详细信息，请参阅 [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx)（本地计算机和当前用户证书存储）。  
   
-    CertificateStore  
+    CertificateStore   
     证书存储名称，例如 My。  
   
-    CertificateThumbprint  
+    CertificateThumbprint   
     证书指纹。  
   
     **示例：**  
@@ -118,14 +118,14 @@ key_path
   
 -   **提供程序名称：** MSSQL_CSP_PROVIDER  
   
-    **密钥路径格式：***ProviderName*/*KeyIdentifier*  
+    **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
   
     其中：  
   
     *ProviderName*  
     列主密钥存储的加密服务提供程序（CSP，用于实现 CAPI）的名称。 如果使用 HSM 作为密钥存储，则提供程序名称必须是 HSM 供应商提供的 CSP 的名称。 提供程序必须安装在客户端计算机上。  
   
-    KeyIdentifier  
+    *KeyIdentifier*  
     密钥存储中的密钥标识符，用作列主密钥。  
   
     **示例：**  
@@ -136,14 +136,14 @@ key_path
   
 -   **提供程序名称：** MSSQL_CNG_STORE  
   
-    **密钥路径格式：***ProviderName*/*KeyIdentifier*  
+    **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
   
     其中：  
   
     *ProviderName*  
     列主密钥存储的密钥存储提供程序（KSP，用于实现下一代加密技术 [CNG] API）的名称。 如果使用 HSM 作为密钥存储，则提供程序名称必须是 HSM 供应商提供的 KSP 的名称。 提供程序必须安装在客户端计算机上。  
   
-    KeyIdentifier  
+    KeyIdentifier   
     密钥存储中的密钥标识符，用作列主密钥。  
   
     **示例：**  
@@ -154,17 +154,17 @@ key_path
 
 -   **提供程序名称：** AZURE_KEY_STORE  
   
-    **密钥路径格式：** KeyUrl  
+    **密钥路径格式：** KeyUrl   
   
     其中：  
   
-    KeyUrl  
+    KeyUrl   
     Azure Key Vault 中密钥的 URL
 
 ENCLAVE_COMPUTATIONS  
 指定列主密匙已启用 enclave。 可以与服务器端安全 enclave 共享使用列主密钥加密的所有列加密密钥，并将其用于 enclave 内的计算。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
-signature  
+signature   
 通过对*密钥路径*进行数字签名产生的二进制文本以及包含列主密钥的 ENCLAVE_COMPUTATIONS 设置。 签名反映是否指定了 ENCLAVE_COMPUTATIONS。 该签名可防止未经授权的用户更改签名的值。 启用了 Always Encrypted 的客户端驱动程序会验证签名，如果签名无效，则向应用程序返回错误。 必须使用客户端工具生成签名。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
   
   
@@ -175,7 +175,7 @@ signature
 
   
 ## <a name="permissions"></a>权限  
-需要 ALTER ANY COLUMN MASTER KEY 权限。  
+需要 ALTER ANY COLUMN MASTER KEY 权限  。  
   
 ## <a name="examples"></a>示例  
   

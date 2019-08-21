@@ -18,7 +18,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68007035"
 ---
-# <a name="mssqlserver802---database-engine-error"></a>MSSQLSERVER_802 - 数据库引擎错误
+# <a name="mssqlserver_802---database-engine-error"></a>MSSQLSERVER_802 - 数据库引擎错误
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -40,7 +40,7 @@ ms.locfileid: "68007035"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集以下内容的性能监视器计数器：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:Buffer Manager、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** :Memory Manager**。  
+2.  开始收集以下内容的性能监视器计数器：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Buffer Manager**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Memory Manager**。  
   
 3.  检查下面的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存配置参数：  
   

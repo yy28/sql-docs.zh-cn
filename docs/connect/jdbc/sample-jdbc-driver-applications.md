@@ -1,7 +1,7 @@
 ---
 title: 示例 JDBC 驱动程序应用程序 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e6a8ac2279446e70c6d31467eacbe54ad50386d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945839"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027801"
 ---
 # <a name="sample-jdbc-driver-applications"></a>示例 JDBC 驱动程序应用程序
 
@@ -31,7 +31,7 @@ ms.locfileid: "67945839"
 
 此部分的主题说明了如何配置和运行示例应用程序，还包括了对示例应用程序所说明内容的讨论。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
   
 | 主题                                                                                                        | 描述                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,5 +43,5 @@ ms.locfileid: "67945839"
   
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

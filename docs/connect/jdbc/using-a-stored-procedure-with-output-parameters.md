@@ -1,7 +1,7 @@
 ---
-title: 使用带有输出参数的存储过程 | Microsoft Docs
+title: 使用含输出参数的存储过程 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916496"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026835"
 ---
-# <a name="using-a-stored-procedure-with-output-parameters"></a>使用带有输出参数的存储过程
+# <a name="using-a-stored-procedure-with-output-parameters"></a>使用含输出参数的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "67916496"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> 有关 SQL 转义序列的详细信息, 请参阅[使用 Sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 有关 SQL 转义序列的详细信息, 请参阅[使用 sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 构造`call`转义序列时, 请使用？ 来指定 IN 参数。 此字符充当要从该存储过程返回的参数值的占位符。 要为 OUT 参数指定值，必须在运行存储过程前使用 SQLServerCallableStatement 类的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法指定各参数的数据类型。
 
@@ -88,4 +88,4 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 
 ## <a name="see-also"></a>另请参阅
 
-[在存储过程中使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[结合使用语句和存储过程](../../connect/jdbc/using-statements-with-stored-procedures.md)

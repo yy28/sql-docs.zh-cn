@@ -1,7 +1,7 @@
 ---
 title: 查找其他 JDBC 驱动程序信息 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c6137b51e1bb06e3797b0562cdbb0f9236834aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956580"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028187"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>查找 JDBC 驱动程序的其他信息
 
@@ -34,4 +34,4 @@ ms.locfileid: "67956580"
   
 ## <a name="see-also"></a>另请参阅  
 
- [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

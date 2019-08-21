@@ -1,7 +1,7 @@
 ---
-title: 使用不带参数的存储过程 | Microsoft Docs
+title: 使用不含参数的存储过程 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916499"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027023"
 ---
-# <a name="using-a-stored-procedure-with-no-parameters"></a>使用不带参数的存储过程
+# <a name="using-a-stored-procedure-with-no-parameters"></a>使用不含参数的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "67916499"
 `{call procedure-name}`
 
 > [!NOTE]  
-> 有关 SQL 转义序列的详细信息, 请参阅[使用 Sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
+> 有关 SQL 转义序列的详细信息, 请参阅[使用 sql 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。
 
 作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下存储过程：
 
@@ -59,4 +59,4 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 
 ## <a name="see-also"></a>另请参阅
 
-[在存储过程中使用语句](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[结合使用语句和存储过程](../../connect/jdbc/using-statements-with-stored-procedures.md)

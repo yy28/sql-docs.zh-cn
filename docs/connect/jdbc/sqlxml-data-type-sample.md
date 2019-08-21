@@ -1,7 +1,7 @@
 ---
 title: SQLXML 数据类型示例 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d5e616fa1a510633caf4e5e2e0b20266a1eb771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0cc8e3e48024e6d5af789919173454d0ee05e56
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004374"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027649"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 数据类型示例
 
@@ -62,4 +62,4 @@ showTransformer 方法演示如何使用 SAX 和 Transformer 从一个表中获�
 
 ## <a name="see-also"></a>另请参阅
 
-[使用数据类型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)
+[处理数据类型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)

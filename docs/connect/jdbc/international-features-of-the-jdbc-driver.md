@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序的国际功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956478"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028007"
 ---
-# <a name="international-features-of-the-jdbc-driver"></a>JDBC Driver 的国际功能
+# <a name="international-features-of-the-jdbc-driver"></a>JDBC 驱动程序的国际功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的国际化功能包括以下各项：  
@@ -63,6 +63,6 @@ ms.locfileid: "67956478"
 >  为非 Windows 平台编写的大多数解析程序软件基于 Internet DSN 标准，因此很可能为 IDN 使用 Punycode 格式，而专用网络上的基于 Windows 的 DNS 服务器可以配置为允许针对每个服务器使用 UTF-8 字符。  有关详细信息，请参阅 [Unicode 字符支持](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

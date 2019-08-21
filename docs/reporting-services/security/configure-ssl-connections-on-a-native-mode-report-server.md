@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ceab8f9d74aed85f51c91650d0efa1cb32f421e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b90383fb387f8593db7aa4ee4760181a7322a475
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175653"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028919"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留，以支持通过加密通道建立报表服务器连接。  
@@ -82,7 +82,7 @@ ms.locfileid: "66175653"
   
  SSL 绑定是 Microsoft Windows 中的共享资源。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器或诸如 IIS 管理器之类的其他工具所做的更改可能会影响同一计算机上的其他应用程序。 编辑绑定所用的工具最好与创建绑定所用的工具相同。  例如，如果使用配置管理器创建了 SSL 绑定，建议使用配置管理器来管理绑定的生命周期。 如果使用 IIS 管理器来创建绑定，建议使用 IIS 管理器来管理绑定的生命周期。 如果在安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 前在计算机上安装了 IIS，最好在配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]前查看 IIS 中的 SSL 配置。  
   
- 如果使用 Reporting Services 配置管理器删除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 绑定，则 SSL 可能在正在运行 Internet Information Services (IIS) 的服务器或其他 HTTP.SYS 服务器的网站上不再工作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器删除以下注册表项。 删除此注册表项时，还将删除 IIS 的 SSL 绑定。 如果没有此绑定，将不为 HTTPS 协议提供 SSL。 若要诊断此问题，请使用 IIS 管理器或 HTTPCFG.exe 命令行实用工具。 若要解决此问题，请使用 IIS 管理器还原网站的 SSL 绑定。 若要在将来避免此问题，请使用 IIS 管理器删除 SSL 绑定，然后使用 IIS 管理器还原所需网站的绑定。 有关详细信息，请参阅知识库文章 [删除 SSL 绑定后 SSL 将不再工作 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)。  
+ 如果使用 Reporting Services 配置管理器删除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 绑定，则 SSL 可能在正在运行 Internet Information Services (IIS) 的服务器或其他 HTTP.SYS 服务器的网站上不再工作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 删除以下注册表项: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0: 443**删除此注册表项时, 还将删除 IIS 的 SSL 绑定。 如果没有此绑定，将不为 HTTPS 协议提供 SSL。 若要诊断此问题，请使用 IIS 管理器或 HTTPCFG.exe 命令行实用工具。 若要解决此问题，请使用 IIS 管理器还原网站的 SSL 绑定。 为了防止将来出现此问题，请使用 IIS 管理器来删除 SSL 绑定，然后使用 IIS 管理器来还原相应网站的绑定。 有关详细信息，请参阅知识库文章 [删除 SSL 绑定后 SSL 将不再工作 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   

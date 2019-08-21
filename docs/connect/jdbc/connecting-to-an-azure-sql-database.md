@@ -1,7 +1,7 @@
 ---
 title: 连接到 Azure SQL 数据库 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956857"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028166"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 
@@ -74,11 +74,11 @@ shutdown /r /t 1
 :done  
 ```
 
-## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>将服务器名称追加到连接字符串中的 UserId  
+## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>将服务器名称追加到连接字符串中的 userId  
 
 在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 之前的版本中，连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时，要求将服务器名称追加到连接字符串中的 UserId。 例如， user@servername。 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，不再要求将 @@servername 追加到连接字符串中的 UserId。  
 
-## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密要求设置 hostNameInCertificate
+## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密需要设置 hostNameInCertificate
 
 在[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7.2 版之前, 当连接[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]到时, 如果指定了**encrypt = true** (如果连接字符串中的服务器名称为*短名称*, 则应指定**hostNameInCertificate** )。*domainName*, 请将**hostNameInCertificate**属性设置\*为。*domainName*。)。 此属性是驱动程序版本7.2 的可选属性。
 

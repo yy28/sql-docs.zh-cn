@@ -1,7 +1,7 @@
 ---
 title: 在 JDBC 驱动程序中使用 Always Encrypted |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916453"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026643"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > 有关如何在 Maven 项目中包含这些依赖项的示例, 请参阅[使用 Apache Maven 下载 ADAL4J 和 AKV 依赖项](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
-SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证书存储区中存储列主密钥。 使用 SQL Server Management Studio (SSMS) Always Encrypted 向导或其他受支持的工具, 在数据库中创建列主密钥和列加密密钥定义。 同一向导可用于在 Windows 证书存储中生成自签名证书, 该证书可用作始终加密数据的列主密钥。 有关列主密钥和列加密密钥 T-sql 语法的详细信息, 请参阅[CREATE COLUMN MASTER key](../../t-sql/statements/create-column-master-key-transact-sql.md)和[CREATE column encryption key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 。
+SQLServerColumnEncryptionCertificateStoreProvider，可以用于在 Windows 证书存储区中存储列主密钥。 使用 SQL Server Management Studio (SSMS) Always Encrypted 向导或其他受支持的工具, 在数据库中创建列主密钥和列加密密钥定义。 同一向导可用于在 Windows 证书存储中生成自签名证书, 该证书可用作 Always Encrypted 数据的列主密钥。 有关列主密钥和列加密密钥 T-sql 语法的详细信息, 请参阅[CREATE COLUMN MASTER key](../../t-sql/statements/create-column-master-key-transact-sql.md)和[CREATE column encryption key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 。
 
 SQLServerColumnEncryptionCertificateStoreProvider 的名称为 MSSQL_CERTIFICATE_STORE, 可由 provider 对象的 getName () API 查询。 它由驱动程序自动注册, 并且无需更改任何应用程序即可无缝使用。
 
@@ -543,7 +543,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 
 为防止发生此类错误，请确保：
 
-- 为面向加密列的应用程序查询（为连接字符串或特定查询）启用 Always Encrypted。
+- Always Encrypted 对定目标到加密列的应用程序查询（针对连接字符串或特定查询）启用。
 - 您可以使用预定义的语句和参数发送针对加密列的数据。 以下示例显示了一个查询，该查询按文本/常量对加密列 (SSN) 进行错误筛选，而不是以参数形式传递内部文本。 此查询将失败:
 
 ```java
@@ -651,4 +651,4 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 
 ## <a name="see-also"></a>另请参阅
 
-[始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

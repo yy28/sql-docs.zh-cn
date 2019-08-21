@@ -1,7 +1,7 @@
 ---
 title: 跟踪驱动程序操作 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916688"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027595"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -131,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>使用 Logging.Properties 文件启用跟踪  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>使用 logging.properties 文件启用跟踪  
  还可以使用 `logging.properties` 文件来启用跟踪，该文件可在 Java Runtime Environment (JRE) 安装文件的 `lib` 目录中找到。 该文件可用于设置记录程序和处理程序的默认值，在启用跟踪时会用到这些值。  
   
  以下是可在 `logging.properties` 文件中进行的设置的示例：  
@@ -159,6 +159,6 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 >  使用 java.util.logging 中的 LogManager 对象可设置 `logging.properties` 文件中的属性。  
   
 ## <a name="see-also"></a>另请参阅  
- [诊断与 JDBC 驱动程序有关的问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+ [诊断 JDBC 驱动程序问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

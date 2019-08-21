@@ -1,7 +1,7 @@
 ---
 title: 使用连接 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916087"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025474"
 ---
-# <a name="working-with-a-connection"></a>使用连接
+# <a name="working-with-a-connection"></a>处理连接
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ ds.setDatabaseName("AdventureWorks");
 Connection con = ds.getConnection();  
 ```
 
-## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>创建目标为非常特殊的数据源的连接
+## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>创建定目标到非常具体的数据源的连接
 
 如果必须创建目标为非常特殊的数据源的数据库连接，可以采用多种方法。 每种方法取决于使用此连接 URL 设置的属性。
 
@@ -95,7 +95,7 @@ String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integrated
 
 有关更多连接 URL 示例, 请参阅[生成连接 url](../../connect/jdbc/building-the-connection-url.md)。
 
-## <a name="creating-a-connection-with-a-custom-login-time-out"></a>创建具有自定义登录超时的连接
+## <a name="creating-a-connection-with-a-custom-login-time-out"></a>创建有自定义登录超时的连接
 
 如果必须调节服务器负载或网络流量，可以创建具有特定登录超时值（以秒为单位）的连接，如下所示：
 
@@ -103,7 +103,7 @@ String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integrated
 String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
 ```
 
-## <a name="create-a-connection-with-application-level-identity"></a>创建具有应用程序级别标识的连接
+## <a name="create-a-connection-with-application-level-identity"></a>创建有应用程序级别标识的连接
 
 如果必须记录日志并进行分析，则必须将连接标识为源于特定应用程序，如下所示：
 

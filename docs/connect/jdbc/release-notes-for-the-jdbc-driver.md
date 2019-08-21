@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 的发行说明 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891288"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027792"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的发行说明
 
@@ -47,7 +47,7 @@ ms.locfileid: "68891288"
 | 使用此身份验证模式的更多详细信息以及示例应用程序。 | 请参阅[使用 NTLM 身份验证进行连接](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>介绍如何通过 _查询 java.sql.parametermetadata
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>介绍如何通过_useFmtOnly_查询 java.sql.parametermetadata
 
 | useFmtOnly 更改 | 详细信息 |
 | :---------- | :------ |
@@ -158,11 +158,11 @@ Microsoft JDBC Driver 7.0 for SQL Server 现在提供对 SQL Server 空间数据
 
 Microsoft JDBC Driver 7.0 for SQL Server 现在实现了 `java.sql.Connection` 类中的 `beginRequest()` 和 `endRequest()` API。 这些 API 是使用 JDBC 4.3 规范和 JDK 9 引入的。 有关这些 API 的驱动程序实现的详细信息，请参阅 [JDBC 驱动程序的 JDBC 4.3 符合性](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)。
 
-### <a name="support-for-sql-data-discovery-and-classification"></a>支持“SQL 数据发现和分类”
+### <a name="support-for-sql-data-discovery-and-classification"></a>支持 SQL 数据发现和分类
 
-Microsoft JDBC Driver 7.0 for SQL Server 提供对 SQL 数据发现和分类的支持，以用于支持此功能的任何目标数据库。 驱动程序现在公开 `SQLServerResultSet.getSensitivityClassification()` API 以从提取的 `ResultSet` 中提取此信息。
+Microsoft JDBC Driver 7.0 for SQL Server 支持 SQL 数据发现和分类，以用于支持此功能的任何目标数据库。 驱动程序现在公开 `SQLServerResultSet.getSensitivityClassification()` API 以从提取的 `ResultSet` 中提取此信息。
 
-有关如何将此功能用于 JDBC 驱动程序的详细信息，请参阅 [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md)中的示例。
+若要详细了解如何将此功能用于 JDBC 驱动程序，请参阅 [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md)中的示例。
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>添加了连接属性：useBulkCopyForBatchInsert
 

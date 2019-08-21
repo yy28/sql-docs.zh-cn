@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault 示例 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 734d69388f644af93d794287174c19c036d278fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1ef38ec5175d97c3896c3e6450d6e403f7850fa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957437"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028444"
 ---
 # <a name="azure-key-vault-sample"></a>Azure Key Vault 示例
 
@@ -22,7 +22,7 @@ ms.locfileid: "67957437"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure Key Vault 功能的示例应用程序
 
-此应用程序可使用 JDBC Driver 7.0 及更高版本以及 Azure Keyvault (版本 1.0.0)、Adal4j (版本 1.6.0) 及其依赖项运行。  可以通过将这些库添加到项目的 pom 文件来解决基本依赖项, 如下所[述:](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+此应用程序可使用 JDBC Driver 7.0 及更高版本以及 Azure Keyvault (版本 1.0.0)、Adal4j (版本 1.6.0) 及其依赖项运行。  可以通过将这些库添加到项目的 pom 文件来解决基本依赖项, 如下所[述](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;

@@ -1,7 +1,7 @@
 ---
 title: 使用结果集 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d38cb92fbbf83f9b8a110d2e17f60af70c177ab4
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003834"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025442"
 ---
-# <a name="working-with-result-sets"></a>使用结果集
+# <a name="working-with-result-sets"></a>处理结果集
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -30,13 +30,13 @@ ms.locfileid: "68003834"
   
 此部分的主题说明了使用结果集来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中所包含数据的各种方法。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
   
 | 主题                                                                                        | 描述                                                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [结果集数据检索示例](../../connect/jdbc/retrieving-result-set-data-sample.md) | 说明如何使用结果集从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索数据，并将其显示出来。                                                         |
-| [结果集数据修改示例](../../connect/jdbc/modifying-result-set-data-sample.md)   | 说明如何使用结果集在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中插入、检索和修改数据。                                                      |
-| [结果集数据缓存示例](../../connect/jdbc/caching-result-set-data-sample.md)       | 说明如何使用结果集从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索大量数据，以及如何控制这些数据在客户端的缓存方式。 |
+| [检索结果集数据的示例](../../connect/jdbc/retrieving-result-set-data-sample.md) | 说明如何使用结果集从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索数据，并将其显示出来。                                                         |
+| [修改结果集数据的示例](../../connect/jdbc/modifying-result-set-data-sample.md)   | 说明如何使用结果集在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中插入、检索和修改数据。                                                      |
+| [缓存结果集数据的示例](../../connect/jdbc/caching-result-set-data-sample.md)       | 说明如何使用结果集从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索大量数据，以及如何控制这些数据在客户端的缓存方式。 |
   
 ## <a name="see-also"></a>另请参阅
 

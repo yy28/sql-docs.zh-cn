@@ -1,7 +1,7 @@
 ---
 title: 连接和检索数据 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd4751fe3d1acb7119c87e39ecd8694a0fa83c19
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956886"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028217"
 ---
 # <a name="connecting-and-retrieving-data"></a>连接和检索数据
 
@@ -30,7 +30,7 @@ ms.locfileid: "67956886"
   
 此部分中的主题介绍了各种用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的方法，以及各种用于检索数据的技术。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
   
 | 主题                                                                | 描述                                                                                                                                                   |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |

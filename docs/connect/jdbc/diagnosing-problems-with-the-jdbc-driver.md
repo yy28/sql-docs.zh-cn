@@ -1,7 +1,7 @@
 ---
 title: 诊断 JDBC 驱动程序的问题 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 39523acba6f13bd73130a3786f1421e0468084f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956693"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028098"
 ---
-# <a name="diagnosing-problems-with-the-jdbc-driver"></a>诊断与 JDBC 驱动程序有关的问题
+# <a name="diagnosing-problems-with-the-jdbc-driver"></a>诊断 JDBC 驱动程序问题
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   无论如何精心地设计和开发应用程序，都不可避免地会出现问题。 当设计和开发应用程序时，具有一些方法来诊断这些问题非常重要。 当使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，可能发生的一些共性问题包括不具备正确的驱动程序版本或无法连接到数据库。  
   
  本部分中各主题讨论的一些方法可用于诊断这些问题和其他问题，包括错误处理、检查驱动程序版本、跟踪和排除连接问题。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
   
 |主题|描述|  
 |-----------|-----------------|  
@@ -34,7 +34,7 @@ ms.locfileid: "67956693"
 |[连接性疑难解答](../../connect/jdbc/troubleshooting-connectivity.md)|介绍如何排除数据库连接问题。|  
 |[访问扩展事件日志中的诊断信息](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|介绍如何使用服务器扩展事件日志中的信息来了解连接失败数。|  
   
-## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>另请参阅 
+ [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

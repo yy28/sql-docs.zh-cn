@@ -1,7 +1,7 @@
 ---
 title: 执行批处理操作 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956223"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027917"
 ---
-# <a name="performing-batch-operations"></a>执行批处理操作
+# <a name="performing-batch-operations"></a>执行批量操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   为了提高对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库进行多项更新时的性能，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了将多项更新作为一个工作单元提交的功能，也称作“批”。  

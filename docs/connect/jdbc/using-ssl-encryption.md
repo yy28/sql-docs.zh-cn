@@ -1,7 +1,7 @@
 ---
 title: 使用 SSL 加密 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34a486a2bcde43ccccc053aed9ebd9392ce34e8c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003964"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026037"
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 
@@ -34,13 +34,13 @@ ms.locfileid: "68003964"
 > [!NOTE]  
 > 建议使用**hostNameInCertificate**连接属性验证 SSL 证书。  
 
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
 
 | 主题                                                                                                        | 描述                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [了解 SSL 支持](../../connect/jdbc/understanding-ssl-support.md)                                 | 介绍 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 如何支持 SSL 加密。                                              |
 | [使用 SSL 加密进行连接](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | 介绍如何使用 SSL 特定的新连接属性连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 |
-| [为 SSL 加密配置客户端](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | 描述如何在客户端配置默认的信任存储区以及如何将私钥证书导入到客户端计算机的信任存储区中。   |
+| [为客户端配置 SSL 加密](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | 描述如何在客户端配置默认的信任存储区以及如何将私钥证书导入到客户端计算机的信任存储区中。   |
   
 ## <a name="see-also"></a>另请参阅
 

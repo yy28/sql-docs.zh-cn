@@ -1,7 +1,7 @@
 ---
 title: 使用数据库镜像 (JDBC) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916254"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026428"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用数据库镜像 (JDBC)
 
@@ -33,7 +33,7 @@ ms.locfileid: "67916254"
 
 备用数据库镜像配置提供不同级别的性能和数据安全，并支持不同形式的故障转移。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“数据库镜像概述”。
 
-## <a name="programming-considerations"></a>编程时的注意事项
+## <a name="programming-considerations"></a>编程注意事项
 
 当主体数据库服务器失败时，客户端应用程序则接收错误以响应 API 调用，这指示与数据库之间的连接已丢失。 出现这种情况时，所有未提交的数据库更改都将丢失，当前事务将回滚。 如果发生这种情况，应用程序应关闭连接（或释放数据源对象）并尝试重新将其打开。 进行连接时，新连接将以透明方式重新定向到镜像数据库（此时充当主服务器），而无需客户端修改连接字符串或数据源对象。
 

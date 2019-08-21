@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序概述 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/18/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8b9fcab3a49f8cac08d35320cbad0f339cd42b2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956238"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027936"
 ---
-# <a name="overview-of-the-jdbc-driver"></a>JDBC 驱动程序的概述
+# <a name="overview-of-the-jdbc-driver"></a>JDBC 驱动程序概述
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Microsoft JDBC Driver for SQL Server 是类型 4 Java Database Connectivity (JDBC) 4.2 合规性驱动程序，该驱动程序提供对 SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 和 Azure SQL Database 的可靠数据访问。  
   
  本节中的主题提供了 JDBC 驱动程序的全面概述，包括使用它所需的系统要求、使用方法以及在何处可获取更多信息。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
   
 |主题|描述|  
 |-----------|-----------------|  

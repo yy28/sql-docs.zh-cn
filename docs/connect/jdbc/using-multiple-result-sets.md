@@ -1,7 +1,7 @@
 ---
 title: 使用多个结果集 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005959"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026267"
 ---
 # <a name="using-multiple-result-sets"></a>使用多个结果集
 
@@ -34,7 +34,7 @@ ms.locfileid: "68005959"
 
 [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
 
-在这种情况下，返回的结果集的数目为 2。 但是，如此编写代码是为了在返回了未知数目的结果集时，例如在调用存储过程时，这些结果集也会全部得到处理。 若要查看调用返回多个结果集和更新计数的存储过程的实例，请参阅[处理复杂语句](../../connect/jdbc/handling-complex-statements.md)。
+在这种情况下，返回的结果集的数目为 2。 但是，如此编写代码是为了在返回了未知数目的结果集时，例如在调用存储过程时，这些结果集也会全部得到处理。 若要查看返回多个结果集以及更新值的存储过程的调用示例，请参阅[处理复杂语句](../../connect/jdbc/handling-complex-statements.md)。
 
 > [!NOTE]  
 > 调用 SQLServerStatement 类的 getMoreResults 方法时, 会隐式关闭以前返回的结果集。

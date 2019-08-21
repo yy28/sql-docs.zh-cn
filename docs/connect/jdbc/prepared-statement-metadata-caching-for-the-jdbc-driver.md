@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序的预处理语句元数据缓存 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956205"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027842"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 驱动程序的预处理语句元数据缓存
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 本文介绍了实现的两个更改, 以提高驱动程序的性能。
 
-## <a name="batching-of-unprepare-for-prepared-statements"></a>预定义的语句的 Unprepare 批处理
+## <a name="batching-of-unprepare-for-prepared-statements"></a>预定义的语句的 unprepare 批处理
 自6.1.6 版本开始, 通过将服务器往返行程降到 SQL Server 来实现性能改进。 以前, 对于每个 prepareStatement 查询, 还会发送对 unprepare 的调用。 现在, 驱动程序正在批处理 unprepare 查询, 直到达到阈值 "ServerPreparedStatementDiscardThreshold", 其默认值为10。
 
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "67956205"
 > [!NOTE]  
 >  通过使用以下方法将 enablePrepareOnFirstPreparedStatementCall 设置为**true** , 用户可以将默认行为更改为以前版本的始终调用 Sp_prepexec: setEnablePrepareOnFirstPreparedStatementCall (布尔值)
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>此更改引入的新 Api 的列表, 用于 Unprepare 的预定义语句的批处理
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>此更改引入的新 Api 的列表, 用于 unprepare 的预定义语句的批处理
 
  **SQLServerConnection**
  
@@ -88,6 +88,6 @@ ms.locfileid: "67956205"
 |int getStatementPoolingCacheSize()|返回此连接的预定义语句缓存大小。 如果值小于 1, 则表示没有缓存。|
 
 ## <a name="see-also"></a>另请参阅  
- [借助 JDBC 驱动程序提高性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+ [通过 JDBC 驱动程序提升性能和可靠性](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

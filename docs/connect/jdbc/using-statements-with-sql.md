@@ -1,7 +1,7 @@
 ---
 title: Using 语句与 SQL |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 082671d3acf2873bb822e6b836599c00f42d6323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916163"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025831"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 语句
 
@@ -34,8 +34,8 @@ ms.locfileid: "67916163"
 
 | 主题                                                                                                                        | 描述                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [使用不带参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | 说明如何使用不包含参数的 SQL 语句。   |
-| [使用带参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | 说明如何使用包含参数的 SQL 语句。      |
+| [使用不含参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | 说明如何使用不包含参数的 SQL 语句。   |
+| [使用含参数的 SQL 语句](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | 说明如何使用包含参数的 SQL 语句。      |
 | [使用 SQL 语句修改数据库对象](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | 说明如何使用 SQL 语句修改数据库对象。   |
 | [使用 SQL 语句修改数据](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | 说明如何使用 SQL 语句修改数据库中的数据。 |
   

@@ -1,7 +1,7 @@
 ---
 title: 通过 useFmtOnly 检索 Java.sql.parametermetadata |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 29ee2c5c22baf77b6994a440f1d9d442ba2b812a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894089"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025497"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>通过 useFmtOnly 检索 Java.sql.parametermetadata
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

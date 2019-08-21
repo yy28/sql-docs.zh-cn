@@ -1,7 +1,7 @@
 ---
 title: 使用连接池 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ec9d1717d12624ffa7663479f1d98146aea1137f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916335"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026376"
 ---
 # <a name="using-connection-pooling"></a>使用连接池
 

@@ -1,7 +1,7 @@
 ---
 title: 排查连接问题 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004241"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027622"
 ---
 # <a name="troubleshooting-connectivity"></a>连接性疑难解答
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68004241"
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，JDBC 驱动程序要求安装带有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（默认为不启用）。 在安装或配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，应确保将此选项包含在内。  
   
 ## <a name="see-also"></a>另请参阅  
- [诊断与 JDBC 驱动程序有关的问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
+ [诊断 JDBC 驱动程序问题](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [通过 JDBC 驱动程序连接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

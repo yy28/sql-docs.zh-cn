@@ -1,7 +1,7 @@
 ---
 title: 使用高级数据类型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004062"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027012"
 ---
 # <a name="using-advanced-data-types"></a>使用高级数据类型
 
@@ -148,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了 xml 数据类型，该数据类型允许将 XML 文档和片段存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中  。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）    。 对于其他内置类型，在作为变量类型、参数类型、函数返回类型或在 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 和 CONVERT 函数中创建表时，可以使用 xml 数据类型作为列类型  。  
   
-在 JDBC 驱动程序中，xml 数据类型可以映射为字符串、字节数组、流、CLOB、BLOB 或 SQLXML 对象  。 String 为默认值。 从 JDBC Driver 2.0 开始，JDBC 驱动程序为 JDBC 4.0 API 提供支持，后者引入了 SQLXML 接口。 SQLXML 接口定义与 XML 数据交互以及操作 XML 数据的方法。 **SQLXML**数据类型映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**数据类型。 有关如何使用 SQLXML Java 数据类型从/向关系数据库读取和写入 XML 数据的详细信息，请参阅[支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)  。  
+在 JDBC 驱动程序中，xml 数据类型可以映射为字符串、字节数组、流、CLOB、BLOB 或 SQLXML 对象  。 String 为默认值。 从 JDBC Driver 2.0 开始，JDBC 驱动程序为 JDBC 4.0 API 提供支持，后者引入了 SQLXML 接口。 SQLXML 接口定义与 XML 数据交互以及操作 XML 数据的方法。 **SQLXML**数据类型映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**数据类型。 若要详细了解如何使用 SQLXML  Java 数据类型从/向关系数据库读取和写入 XML 数据，请参阅[支持 XML 数据](../../connect/jdbc/supporting-xml-data.md)。  
   
 在 JDBC 驱动程序中实现 xml 数据类型为以下各项提供了支持  ：  
   
@@ -162,7 +162,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 有关 xml 数据类型的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“xml 数据类型”  。  
   
-## <a name="user-defined-data-type"></a>用户定义的数据类型  
+## <a name="user-defined-data-type"></a>用户定义数据类型  
 
 通过允许在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储对象和自定义数据结构，在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了用户定义的类型 (UDT)，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 可使用 Microsoft .NET 公共语言运行时 (CLR)（生成可验证的代码）所支持的任意一种语言定义 UDT。 这些语言包括 Microsoft Visual C# 和 Visual Basic .NET。 数据被公开为基于 .NET Framework 的类或结构的字段和属性，行为由类或结构的方法定义。  
   
@@ -170,9 +170,9 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 有关用户定义的数据类型的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“使用和修改用户定义类型的实例”。  
   
-## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
+## <a name="sql_variant-data-type"></a>Sql_variant 数据类型
 
-有关 sql_variant 数据类型的信息, 请参阅[使用 Sql_variant 数据类型](../../connect/jdbc/using-sql-variant-datatype.md)。  
+有关 sql_variant 数据类型的信息, 请参阅[使用 sql_variant 数据类型](../../connect/jdbc/using-sql-variant-datatype.md)。  
 
 ## <a name="spatial-data-types"></a>空间数据类型
 

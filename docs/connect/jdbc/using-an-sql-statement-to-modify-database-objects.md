@@ -1,7 +1,7 @@
 ---
 title: 使用 SQL 语句修改数据库对象 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28c71784f8e51600aef111649b12f81b5878b324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de8e357328c151e3762f324dcbeba2525df53530
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916387"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026566"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>使用 SQL 语句修改数据库对象
 

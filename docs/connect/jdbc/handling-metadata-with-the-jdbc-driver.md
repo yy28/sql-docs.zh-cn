@@ -1,7 +1,7 @@
 ---
 title: 通过 JDBC 驱动程序处理元数据 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a5ac2591c10bc77ff4e4d1d9dcacd755a442b9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0176e1da9a64e4ed32ba6989496178f5f9741193
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956525"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028018"
 ---
-# <a name="handling-metadata-with-the-jdbc-driver"></a>使用 JDBC 驱动程序处理元数据
+# <a name="handling-metadata-with-the-jdbc-driver"></a>通过 JDBC 驱动程序处理元数据
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   可以通过多种方式使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的元数据。 JDBC 驱动程序可用于获取数据库、结果集或参数的元数据。  
@@ -35,7 +35,7 @@ ms.locfileid: "67956525"
 > [!NOTE]  
 >  就应用程序性能而言，本部分所讨论的元数据方法通常需要消耗大量资源，因此使用时应谨慎。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
   
 |主题|描述|  
 |-----------|-----------------|  
@@ -44,6 +44,6 @@ ms.locfileid: "67956525"
 |[使用参数元数据](../../connect/jdbc/using-parameter-metadata.md)|说明如何检索有关预定义语句参数和可调用语句参数的元数据信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

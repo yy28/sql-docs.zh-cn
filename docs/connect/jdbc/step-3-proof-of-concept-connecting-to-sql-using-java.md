@@ -1,7 +1,7 @@
 ---
 title: 步骤 3：使用 Java 连接到 SQL 的概念证明 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004285"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027512"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3：使用 Java 连接到 SQL 的概念证明
   
 此示例只应视为概念证明。 为清楚起见, 示例代码已简化, 不一定表示 Microsoft 推荐的最佳做法。  
   
-## <a name="step-1--connect"></a>步骤 1: 连接  
+## <a name="step-1-connect"></a>步骤 1: 连接  
   
 使用 connection 类连接到 SQL 数据库。   
   

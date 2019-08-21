@@ -1,7 +1,7 @@
 ---
 title: 应用程序安全性 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957469"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028516"
 ---
 # <a name="application-security"></a>应用程序安全性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -61,7 +61,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 ## <a name="protecting-server-communication"></a>保护服务器通信  
  使用 JDBC 驱动程序与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库进行通信时，可以使用 Internet 协议安全 (IPSEC) 和/或安全套接字层 (SSL) 来保护信道。  
   
- SSL 支持可用于在 IPSEC 保护措施之外提供另一层保护。 有关使用 SSL 的详细信息, 请参阅[使用 Ssl 加密](../../connect/jdbc/using-ssl-encryption.md)。  
+ SSL 支持可用于在 IPSEC 保护措施之外提供另一层保护。 有关使用 SSL 的详细信息, 请参阅[使用 ssl 加密](../../connect/jdbc/using-ssl-encryption.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [保护 JDBC 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)  

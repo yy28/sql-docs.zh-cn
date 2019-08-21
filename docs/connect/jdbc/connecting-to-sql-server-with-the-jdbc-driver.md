@@ -1,7 +1,7 @@
 ---
 title: 通过 JDBC 驱动程序连接到 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1b88d1824564a9b4fdd3d5340575a5afdff5ca3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956824"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028181"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>通过 JDBC 驱动程序连接到 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,14 +30,14 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
  本部分中的主题说明如何建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接以及如何使用该连接。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
   
 |主题|描述|  
 |-----------|-----------------|  
-|[创建连接 URL](../../connect/jdbc/building-the-connection-url.md)|说明如何构建连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接 URL。 并说明到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库指定实例的连接。|  
+|[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)|说明如何构建连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接 URL。 并说明到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库指定实例的连接。|  
 |[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)|说明各种连接属性以及如何在连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库时使用这些属性。|  
 |[设置数据源属性](../../connect/jdbc/setting-the-data-source-properties.md)|介绍如何在 Java Platform, Enterprise Edition 5 (Java EE) 环境中使用数据源。|  
-|[使用连接](../../connect/jdbc/working-with-a-connection.md)|说明创建与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接实例的各种方法。|  
+|[处理连接](../../connect/jdbc/working-with-a-connection.md)|说明创建与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接实例的各种方法。|  
 |[使用连接池](../../connect/jdbc/using-connection-pooling.md)|说明 JDBC 驱动程序如何支持使用连接池。|  
 |[使用数据库镜像 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|说明 JDBC 驱动程序如何支持使用数据库镜像。|  
 |[JDBC 驱动程序对高可用性和灾难恢复的支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|说明如何开发将连接到 AlwaysOn 可用性组的应用程序。|  
@@ -45,6 +45,6 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[连接到 Azure SQL 数据库](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|讨论 SQL Azure 数据库的连接问题。|  
   
 ## <a name="see-also"></a>另请参阅  
- [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

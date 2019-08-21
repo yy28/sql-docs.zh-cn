@@ -1,7 +1,7 @@
 ---
 title: 分析结果 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 163055a630f8e37678f99359a244bf211b035e7e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894069"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027861"
 ---
 # <a name="parsing-the-results"></a>分析结果
 
@@ -114,4 +114,4 @@ try (Statement statement = connection.createStatement();) {
 
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)

@@ -24,7 +24,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68108424"
 ---
-# <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
+# <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   将游标语句或批处理编译成执行计划，但并不创建游标。 编译的语句以后可供 sp_cursorexecute 使用。 此过程与 sp_cursorexecute 结合，具有相同的功能与 sp_cursoropen，但它拆分为两个阶段。 sp_cursorprepare 调用通过指定 ID = 3 在表格格式数据流 (TDS) 包中的。  
@@ -118,7 +118,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="examples"></a>示例  
  当*stmt*已参数化并*scrollopt* PARAMETERIZED_STMT 值为 ON，字符串的格式如下所示：  
   
- { *\<本地变量的名称 > * *\<数据类型 >* } [，...*n* ]  
+ { *\<本地变量的名称 > \*\*\<数据类型 >* } [，...*n* ]  
   
 ## <a name="see-also"></a>请参阅  
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: 检索结果集数据示例 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 31be5c4755415da348f19d1104f930e366ced6eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2ac13eff3840434e67321aeb0e151e377d4b929f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945821"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027780"
 ---
-# <a name="retrieving-result-set-data-sample"></a>结果集数据检索示例
+# <a name="retrieving-result-set-data-sample"></a>检索结果集数据的示例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -110,4 +110,4 @@ public class RetrieveResultSet {
 
 ## <a name="see-also"></a>另请参阅
 
-[使用结果集](../../connect/jdbc/working-with-result-sets.md)
+[处理结果集](../../connect/jdbc/working-with-result-sets.md)

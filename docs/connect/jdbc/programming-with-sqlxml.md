@@ -1,7 +1,7 @@
 ---
 title: 利用 SQLXML 进行编程 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956177"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027774"
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 进行编程
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "67956177"
   
 -   要将 SQLXML 对象存储在 xml  类型的数据库表列中，请使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 setSQLXML 方法。  
   
- [SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)中的示例代码演示了如何执行这些常见的 API 任务。  
+ [SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)中的示例代码展示了如何执行这些常见 API 任务。  
   
-## <a name="readable-and-writable-sqlxml-objects"></a>可读写的 SQLXML 对象  
+## <a name="readable-and-writable-sqlxml-objects"></a>可读写 SQLXML 对象  
  下表列出 JDBC API 提供的 setter、getter 和 updater 方法所支持的 SQLXML 对象类型。 表中的列引用以下内容：  
   
 -   “方法名”列列出 JDBC API 中受支持的 getter、setter 和 updater 方法。   
@@ -63,7 +63,7 @@ ms.locfileid: "67956177"
   
  如果应用程序通过使用 SQLXML 对象指定 scale 或 length 参数来调用 setObject 方法，则会忽略 scale 或 length 参数。  
   
-## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>使用 SQLXML 对象的指导原则和限制  
+## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>SQLXML 对象使用准则和限制  
  应用程序可以使用 SQLXML 对象从/向数据库中读取/写入 XML 数据。 下面的列表提供了有关使用 SQLXML 对象时的具体限制和准则的信息：  
   
 -   SQLXML 对象只能在创建它的事务的持续时间内保持有效。  

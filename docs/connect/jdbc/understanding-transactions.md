@@ -1,7 +1,7 @@
 ---
 title: 了解事务 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5a6caa9c9bf1766b59aa813719d1461b6ef1aa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916578"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027342"
 ---
 # <a name="understanding-transactions"></a>了解事务
 

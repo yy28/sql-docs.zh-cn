@@ -24,7 +24,7 @@ ms.locfileid: "68141002"
 您可以使用直观的数据编辑器查看、编辑和删除现有表中的数据。  
   
 > [!WARNING]  
-> 下面的过程利用在[连接的数据库开发](../ssdt/connected-database-development.md)一节的前面的过程中创建的实体。  
+> 下面的过程使用了前面[连接的数据库开发](../ssdt/connected-database-development.md)一节介绍的过程中创建的实体。  
   
 ### <a name="to-edit-data-in-a-table-visually-using-the-data-editor"></a>使用数据编辑器以直观的方式编辑表中的数据  
   

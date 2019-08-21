@@ -1,7 +1,7 @@
 ---
 title: 使用 Kerberos 集成身份验证连接到 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916235"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026194"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 集成身份验证连接到 SQL Server
 
@@ -37,7 +37,7 @@ ms.locfileid: "67916235"
 
 ## <a name="remarks"></a>Remarks
 
-在之前, 应用程序可以通过使用 **integratedSecurity** 连接属性并引用来指定集成身份验证 (使用 Kerberos 或 NTLM, 具体取决于可用的) [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] **sqljdbc_auth**, [如构建连接 URL](../../connect/jdbc/building-the-connection-url.md)中所述。
+在之前  , 应用程序可以通过使用 integratedSecurity 连接属性并引用 sqljdbc_auth 来指定集成身份验证 (使用 Kerberos 或 NTLM, 具体取决于可用的) **。** [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]介绍如何[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，应用程序可使用 authenticationScheme 连接属性指示它希望通过纯 Java Kerberos 实现连接到使用 Kerberos 集成身份验证的数据库  ：
 
@@ -159,7 +159,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 
 ```
 
-## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>验证可通过 Kerberos 访问 SQL Server
+## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>验证能否通过 Kerberos 访问 SQL Server
 
 在 SQL Server Management Studio 中运行以下查询：
 
