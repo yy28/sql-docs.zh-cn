@@ -180,7 +180,7 @@ ON
 指定显式定义用来存储数据库数据部分的磁盘文件（数据文件）。 当后面是以逗号分隔的、用以定义主文件组的数据文件的 \<filespec> 项列表时，需要使用 ON。 主文件组的文件列表可后跟以逗号分隔的、用以定义用户文件组及其文件的 \<filegroup> 项列表（可选）。
 
 PRIMARY     
-指定关联的 \<filespec> 列表定义主文件。 在主文件组的 \<filespec> 项中指定的第一个文件将成为主文件。 一个数据库只能有一个主文件。 有关详细信息，请参阅 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)。
+指定关联的 \<filespec> 列表定义主文件。 在主文件组的 \<filespec> 项中指定的第一个文件将成为主文件。 一个数据库只能有一个主文件。 有关详细信息，请参阅 [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)。
 
 如果没有指定 PRIMARY，那么 CREATE DATABASE 语句中列出的第一个文件将成为主文件。
 
@@ -280,7 +280,7 @@ FOR ATTACH 具有以下要求：
 - 所有数据文件（MDF 和 NDF）都必须可用。
 - 如果存在多个日志文件，这些文件都必须可用。
 
-如果一个可读/写数据库具有一个当前不可用的日志文件，并且进行附加操作前在没有使用用户或打开的事务的情况下关闭了该数据库，那么 FOR ATTACH 会自动重新生成日志文件并更新主文件。 相比之下，对于只读数据库，由于主文件不能更新，将不能重新生成日志。 因此，如果附加一个日志不可用的只读数据库，则必须在 FOR ATTACH 子句中提供日志文件或文件。
+如果一个可读/写数据库具有一个当前不可用的日志文件，并且进行附加操作前在没有使用用户或打开的事务的情况下关闭了该数据库，那么 FOR ATTACH 会自动重新生成日志文件并更新主文件。 相比之下，对于只读数据库，由于主文件不能更新，将不能重新生成日志。 因此，如果附加一个日志不可用的只读数据库，则必须提供日志文件，或提供 FOR ATTACH 子句中的文件。
 
 > [!NOTE]
 > 无法在早期版本的 SQL Server 中附加由较新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建的数据库。

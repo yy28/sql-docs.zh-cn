@@ -25,7 +25,7 @@ ms.locfileid: "68768303"
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
   
-1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框**中启用“使用 Windows 同步管理器对请求订阅进行同步”： 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
+1.  在“**订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框**中启用“使用 Windows 同步管理器对请求订阅进行同步”： 有关访问此对话框的详细信息，请参阅[查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)。  
   
 2.  通过 Windows 的 **“开始”** 菜单访问同步管理器。  
   

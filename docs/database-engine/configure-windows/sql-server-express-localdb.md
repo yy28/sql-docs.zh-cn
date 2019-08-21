@@ -76,7 +76,7 @@ LocalDB 支持两种类型的实例：自动实例和命名实例。
 
 - LocalDB 的自动实例是公共的。 系统自动为用户创建和管理此类实例，并可由任何应用程序使用。 安装在用户计算机上的每个 LocalDB 版本都存在一个自动 LocalDB 实例。 自动 LocalDB 实例提供无缝的实例管理。 无需创建实例；它可以自动执行工作。 此功能使得应用程序可以轻松地安装和迁移到另一台计算机。 如果目标计算机已安装指定版本的 LocalDB，则目标计算机也提供此版本的自动 LocalDB 实例。 自动 LocalDB 实例具有属于保留命名空间的特殊实例名称模式。 自动实例可以防止名称与 LocalDB 的命名实例发生冲突。 自动实例的名称为 **MSSQLLocalDB**。
 
-- LocalDB 的命名实例是专用的。 这些命名实例由负责创建和管理该实例的单个应用程序所拥有。 命名实例提供与其他实例的隔离，并可以通过减少与其他数据库用户的资源争用来提高性能。 命名实例必须由用户通过 LocalDB 管理 API 显式创建，或者通过托管应用程序的 app.config 文件隐式创建（尽管托管应用程序也会在需要时使用 API）。 LocalDB 的每个命名实例都具有关联的 LocalDB 版本，指向相应的 LocalDB 二进制文件集。 LocalDB 的命名实例为 sysname  数据类型并且可具有最多 128 个字符。 （这不同于常规的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例，此类命名实例将名称限制为 16 个 ASCII 字符的常规 NetBIOS 名称。）LocalDB 实例名称可包含在文件名内合法的任何 Unicode 字符。使用自动实例名称的命名实例将成为自动实例。
+- LocalDB 的命名实例是专用的。 这些命名实例由负责创建和管理该实例的单个应用程序所拥有。 命名实例提供与其他实例的隔离，并可以通过减少与其他数据库用户的资源争用来提高性能。 命名实例必须由用户通过 LocalDB 管理 API 显式创建，或者通过托管应用程序的 app.config 文件隐式创建（尽管托管应用程序也会在需要时使用 API）。 LocalDB 的每个命名实例都具有关联的 LocalDB 版本，指向相应的 LocalDB 二进制文件集。 LocalDB 的命名实例为 sysname  数据类型并且可具有最多 128 个字符。 （这不同于常规的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例，此类命名实例将名称限制为 16 个 ASCII 字符的常规 NetBIOS 名称。）LocalDB 实例名称可包含任何在文件名内合法的 Unicode 字符。使用自动实例名称的命名实例将成为自动实例。
 
 不同的计算机用户可具有同名的实例。 每个实例都是以不同的用户身份运行的不同的进程。
 
@@ -112,12 +112,12 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|“属性”|`LocalDBApp1`|
+|名称|`LocalDBApp1`|
 |版本|\<当前版本>|
 |共享名称|""|
 |“所有者”|"\<你的 Windows 用户>"|
 |自动创建|否|
-|State|运行|
+|状态|运行|
 |上次启动时间|\<日期和时间>|
 |实例管道名称|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
