@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5c5e2ca321deb2b7e82774db1e91c0b0149deb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f68dd33d2a6d7a91aad0ceb4b606efaaa39429
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024368"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969445"
 ---
-# <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
+# <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回原始种子值（返回形式为 numeric(@@MAXPRECISION,0)），该值是在表或视图中创建标识列时指定的   。 使用 DBCC CHECKIDENT 更改标识列的当前值不会更改此函数返回的值。  
+  返回在表或视图中创建标识列时指定的原始种子值。 使用 DBCC CHECKIDENT 更改标识列的当前值不会更改此函数返回的值。  
   
  ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
@@ -45,7 +44,7 @@ IDENT_SEED ( 'table_or_view' )
  指定表或视图以检查标识种子值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量，也可以是变量、函数或列名  。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar      。  
   
 ## <a name="return-types"></a>返回类型  
- **numeric**  
+numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>异常  
  出现错误时或调用方没有查看对象的权限时将返回 NULL。  
@@ -57,7 +56,7 @@ IDENT_SEED ( 'table_or_view' )
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 从指定表返回种子值  
  以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的种子值。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. 从多个表返回种子值  
  下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中带有种子值的标识列的表。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

@@ -7,12 +7,12 @@ ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892518"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995868"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)
 
@@ -21,7 +21,7 @@ ms.locfileid: "68892518"
 本文介绍如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)。
 
 > [!NOTE]
-> 从累积更新 16 开始，SQL Server 2019 预览 SQL Server 2017 支持 Linux 上的 MSDTC。
+> 自累积更新 16 起，SQL Server 2017 支持 Linux 上的 MSDTC。
 
 ## <a name="overview"></a>概述
 

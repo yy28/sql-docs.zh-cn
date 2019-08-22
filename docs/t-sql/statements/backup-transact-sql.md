@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 08/13/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809730"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028964"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -431,7 +431,7 @@ BLOCKSIZE =  { blocksize   | @  blocksize\_variable  } 指定物理块大小（�
 
 BUFFERCOUNT =  { buffercount   | @  buffercount\_variable  } 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。
 
-缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize  。
+缓冲区使用的总空间是由以下公式确定：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
 > 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。
@@ -1041,7 +1041,7 @@ BLOCKSIZE =  { blocksize   | @  blocksize\_variable  } 指定物理块大小（�
 
 BUFFERCOUNT =  { buffercount   | @  buffercount\_variable  } 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。
 
-缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize  。
+缓冲区使用的总空间是由以下公式确定：`BUFFERCOUNT * MAXTRANSFERSIZE`。
 
 > [!NOTE]
 > 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。

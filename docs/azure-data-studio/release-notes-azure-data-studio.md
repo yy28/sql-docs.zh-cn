@@ -9,17 +9,33 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/11/2019
-ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.date: 08/15/2019
+ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731062"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553108"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="august-2019"></a>2019 年 8 月
+
+2019 年 8 月 15 日&nbsp; / &nbsp;版本：1.10.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 发布 SandDance 1.3.1 扩展 | &bull; &nbsp; 智能图表检测 <br/>&bull; &nbsp; 3D 可视化效果 <br/> &bull; &nbsp; 数据筛选 |
+| 笔记本改进 | &bull; &nbsp; 在行中添加代码或文本单元 <br/>&bull; &nbsp; 新增了以下功能：右键单击 SQL 结果网格可以将结果另存为 CSV、JSON 等 <br/> &bull; &nbsp; 提升了笔记本加载性能，以便更快地加载 JSON <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)查看完整的改进列表 |
+| SQL Server 2019 支持 |  此版本中包括对其他 SQL Server 2019 大数据群集功能的支持，包括： <br/> &bull; &nbsp; 缩短了加载“对象映射”页上的表和列信息所需的时间。 <br/> &bull; &nbsp; 修复了在“连接详细信息”页上加载现有数据库范围凭据时出现的 bug。 <br/> &bull; &nbsp; 增加了用于 PROSE 分析的默认样本大小。 | 
+| Dacpac 扩展现在支持 AAD | 
+| Visual Studio Code 5 月发布合并 1.37 | 可在[此处](https://code.visualstudio.com/updates/v1_37)查看最新的改进内容。 |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2019"></a>2019 年 7 月
 
@@ -374,10 +390,10 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 
 | 更改 | 详细信息 |
 | :----- | :------ |
-| 适用于 SQL Operations Studio 的 SQL Server Profiler 预览版扩展初始版本 ** _** 。 | &nbsp; |
+| 适用于 SQL Operations Studio 的 SQL Server Profiler 预览版扩展初始版本  。 | &nbsp; |
 | 新的 SQL 数据仓库扩展包含丰富的可自定义仪表板小组件，可为数据仓库提供见解  。 | 这可以解锁关于数据仓库管理和优化的关键方案，以确保为获得一致的性能对其进行优化。 |
 | 编辑数据“筛选和排序”支持  。 | &nbsp; |
-| 针对作业和作业历史记录视图，适用于 SQL Operations Studio 的 SQL Server 代理预览版扩展改进 ** _** 。 | &nbsp; |
+| 针对作业和作业历史记录视图，适用于 SQL Operations Studio 的 SQL Server 代理预览版扩展改进  。 | &nbsp; |
 | 改进了“向导和对话框 UI 生成器框架”扩展性 API  。 | &nbsp; |
 | 更新 VS Code 平台源代码。 | 集成了以下发布：<br/>&bull; &nbsp; [2018 年 3 月 (1.22)](https://code.visualstudio.com/updates/v1_22)<br/>&bull; &nbsp; [2018 年 4 月 (1.23)](https://code.visualstudio.com/updates/v1_23) |
 | &nbsp; | &nbsp; |

@@ -1,6 +1,6 @@
 ---
 title: Attunity (SSIS) 推出的用于 Oracle 和 Teradata 的 Microsoft 连接器 | Microsoft Docs
-ms.date: 05/16/2017
+ms.date: 08/16/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -10,18 +10,21 @@ ms.topic: conceptual
 ms.assetid: ''
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 4bdd68dccdcf8c2b317c81b120feb6949bb96c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f7b6ebe42d98002627c170daaee00d4886804e8
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027571"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553193"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Attunity 推出的用于 Oracle 和 Teradata 的 Microsoft 连接器（用于 Integration Services (SSIS)）
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
+> [!NOTE]
+> 适用于 Oracle 和 Teradata 的 Attunity Connector 支持 SQL Server 2017 及更低版本。
+>
+> 自 SQL Server 2019 起，从此处获取适用于 Oracle 和 Teradata 的最新连接器：[Microsoft Connector for Oracle](data-flow/oracle-connector.md)
 
 可下载用于Attunity 提供的 Integration Services 的连接器，当在 SSIS 包中向 Oracle 或 Teradata 加载数据或从中下载数据时，该连接器可优化性能。
 

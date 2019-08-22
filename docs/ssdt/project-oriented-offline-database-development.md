@@ -43,7 +43,7 @@ ms.locfileid: "68110786"
 |[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|比较数据库和项目的架构并保持同步。|  
 |[如何：生成并部署到本地数据库](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|使用本地的按需运行的 SQL Server 实例，该实例是在你调试数据库项目时激活的。|  
 |[如何：更改目标平台并发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|将项目的目标 SQL Server 平台更改为 SQL Server 的任何支持的实例并验证语法。|  
-|[如何：创建项目快照](../ssdt/how-to-create-a-snapshot-of-a-project.md)|创建数据库架构的只读代理，并且在不想要的更改应用于项目时还原源项目。|  
+|[如何：创建项目快照](../ssdt/how-to-create-a-snapshot-of-a-project.md)|创建数据库架构的只读代理，当源项目出现了无用的修改，可将源项目还原。|  
 |[如何：在项目中使用 Microsoft SQL Server 2012 对象](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|向您的项目添加一个新的序列对象。|  
 |[如何：处理 CLR 数据库对象](../ssdt/how-to-work-with-clr-database-objects.md)|在 SQL Server Data Tools 数据库项目中创建和发布 CLR 对象。|  
 |[如何：将 Visual Studio 2010 数据库项目转换为 SQL Server 数据库项目并重新定位到其他平台](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|将在 Visual Studio 2010 中创建的现有 SQL Server 数据库、CLR 对象和数据层应用程序项目转换为 SQL Server Data Tools 数据库项目。|  

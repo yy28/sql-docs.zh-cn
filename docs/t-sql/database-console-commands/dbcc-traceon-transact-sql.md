@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040604"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553257"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 启用指定的跟踪标志。
   
@@ -48,7 +48,7 @@ trace#
 表示可指定多个跟踪标志的占位符。  
   
 -1  
-以全局方式打开指定的跟踪标记。  
+以全局方式打开指定的跟踪标记。 此参数在 Azure SQL 托管实例中是必需的。 
   
 WITH NO_INFOMSGS  
 取消显示所有信息性消息。  
@@ -61,7 +61,9 @@ WITH NO_INFOMSGS
 跟踪标记用于通过控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的运行方式来自定义某些特征。 启用的跟踪标记将在服务器中一直保持启用状态，直到执行 DBCC TRACEOFF 语句将其禁用为止。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有两种跟踪标志：会话和全局。 会话跟踪标志对某个连接是有效的，只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。 若要确定跟踪标记的状态，请使用 DBCC TRACESTATUS。 若要禁用跟踪标记，请使用 DBCC TRACEOFF。
   
 开启影响查询计划的跟踪标志后，执行 `DBCC FREEPROCCACHE;`，以便使用新的影响计划的行为重新编译缓存计划。
-  
+
+Azure SQL 数据库托管实例支持以下全局跟踪标志：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 和 11024
+
 ## <a name="result-sets"></a>结果集  
  DBCC TRACEON 返回以下结果集（消息）：  
   

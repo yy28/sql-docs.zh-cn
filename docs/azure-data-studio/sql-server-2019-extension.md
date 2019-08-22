@@ -3,19 +3,19 @@ title: SQL Server 2019 扩展（预览版）
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 的 SQL Server 2019 预览扩展
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 08/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959218"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494045"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展（预览版）
 
@@ -29,9 +29,9 @@ SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../inc
 
    |平台|下载|发布日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25 日 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25 日 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25 日 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019 年 8 月 15 日 |0.15.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019 年 8 月 15 日 |0.15.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019 年 8 月 15 日 |0.15.0
 
 1. 在 Azure Data Studio 中，从“文件”菜单中选择“从 VSIX 包安装扩展”，然后选择下载的 .vsix 文件   。
 
@@ -42,6 +42,13 @@ SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../inc
 1. 重载后，扩展将安装依赖项。 可以在“输出”窗口中查看进度，这可能需要几分钟时间。
 
 1. 安装完依赖项后，关闭并重新打开 Azure Data Studio。 在重启 Azure Data Studio 之前，“SQL Server 大数据群集”连接类型不可用  。
+
+## <a name="changes-in-release-015"></a>版本 0.15 变化
+* “创建外部表”向导：
+  * 缩短了加载“对象映射”页上的表和列信息所需的时间。
+  * 修复了在“连接详细信息”页上加载现有数据库范围凭据时出现的 bug。
+* “从 CSV 文件创建外部表”向导：
+  * 增加了用于 PROSE 分析的默认样本大小。
 
 ## <a name="changes-in-release-0141"></a>版本 0.14.1 中的更改
 * 支持 CTP 3.1 数据源支持

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 32b01cce82cd1fd2af018b002a3c551ea480c000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3856f1f651db485aa9e54758c2d2a92ebf2ea0a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897988"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028782"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 连接管理器
 
@@ -62,7 +62,7 @@ ms.locfileid: "67897988"
   
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器的许多配置选项取决于该连接管理器所使用的 .NET 访问接口。  
   
- 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题之一：  
+ 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
 -   [配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -89,6 +89,9 @@ ms.locfileid: "67897988"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 资源身份验证的托管标识
 在 [Azure 数据工厂中的 Azure-SSIS 集成运行时](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上运行 SSIS 包时，可以使用与数据工厂关联的[托管标识](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)进行 Azure SQL 数据库（或托管实例）身份验证。 指定的工厂可以使用此标识访问数据库数据或从/向数据库复制数据。
 
+> [!NOTE]
+>  使用 Azure AD 身份验证（包括托管标识身份验证）连接到 Azure SQL 数据库（或托管实例）时，有一些已知问题可能会导致包执行失败或意外行为变更。 有关详细信息，请参阅 [Azure AD 功能和限制](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)。
+
 要对 Azure SQL 数据库使用托管身份验证，请按照以下步骤配置数据库：
 
 1. **在 Azure AD 中创建组。** 使托管标识成为该组的成员。
@@ -109,7 +112,7 @@ ms.locfileid: "67897988"
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. 授予 Azure AD 组所需的权限，就像通常为 SQL 用户和其他用户所做的那样  。 例如，运行以下代码：
+1. 授予 Azure AD 组所需的权限，就像通常为 SQL 用户和其他用户所做的那样  。 有关相应角色，请参阅[数据库级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 例如，运行以下代码：
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -134,11 +137,11 @@ ms.locfileid: "67897988"
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **向数据工厂托管标识授予所需的权限**。 对要复制数据的数据库运行以下 T-SQL：
+1. **向数据工厂托管标识授予所需的权限**。 有关相应角色，请参阅[数据库级别角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)。 对要从/向其复制数据的数据库运行以下 T-SQL：
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 最后，为 ADO.NET 连接管理器“配置托管标识”  。 完成此操作的方法有两种。
@@ -152,7 +155,7 @@ ms.locfileid: "67897988"
     >  在 Azure-SSIS 集成运行时中，当使用托管标识身份验证来建立数据库连接时，ADO.NET 连接管理器上预配的所有其他身份验证方法（例如，集成身份验证、密码）将被“重写”  。
 
 > [!NOTE]
->  要在现有软件包上配置托管标识身份验证，请务必至少使用[最新 SSIS 设计器](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)重新生成一次 SSIS 项目，然后将该 SSIS 项目重新部署到 Azure-SSIS 集成运行时，以便新的连接管理器属性“ConnectUsingManagedIdentity”能自动添加到 SSIS 项目中的所有 ADO.NET 连接管理器  。
+>  若要在现有包上配置托管标识身份验证，首选方法是至少使用[最新 SSIS 设计器](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)重新生成一次 SSIS 项目，然后将此 SSIS 项目重新部署到 Azure-SSIS 集成运行时，这样新的连接管理器属性 ConnectUsingManagedIdentity  才会自动添加到 SSIS 项目中的所有 ADO.NET 连接管理器。 另一种方法是，直接在运行时结合使用属性重写和属性路径 \Package.Connections[{连接管理器名称}].Properties[ConnectUsingManagedIdentity]  。
 
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

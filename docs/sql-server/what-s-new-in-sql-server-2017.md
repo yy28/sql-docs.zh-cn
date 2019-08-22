@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76e5accd2894e05fd9a9b346ad9b4825ccd81bc7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893019"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494309"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 - 新的详细信息行  最终用户操作可显示聚合信息的详细信息  。 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 和 DETAILROWS  函数用于创建详细信息行表达式。 (CTP 1.1)
 - DAX IN  运算符可指定多个值。 (CTP 1.1)
 
-有关详细信息，请参阅 [SQL Server Analysis Services 2017 中的新增功能](https://docs.microsoft.com/analysis-services/what-s-new-in-sql-server-analysis-services-2017)。
+有关详细信息，请参阅 [SQL Server Analysis Services 中的新增功能](/analysis-services/what-s-new-in-analysis-services)。
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 不可再通过 SQL Server 安装程序安装 SQL Server Reporting Services。 请转到 Microsoft 下载中心以[下载 Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252)。 

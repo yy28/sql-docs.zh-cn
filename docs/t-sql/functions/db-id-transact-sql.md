@@ -1,7 +1,7 @@
 ---
 title: DB_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 08/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,14 +23,14 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2dc84cd224b8ea1863fd67561fdcf20a37c4544
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119015"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995743"
 ---
-# <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
+# <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回指定数据库的数据库标识 (ID) 号。
@@ -52,6 +52,9 @@ DB_ID ( [ 'database_name' ] )
 
 ## <a name="remarks"></a>Remarks
 `DB_ID` 仅可用于返回 Azure SQL 数据库中当前数据库的数据库标识符。 如果指定的数据库名称不是当前数据库，则返回 NULL。
+
+> [!NOTE]
+> 与 Azure SQL 数据库一起使用时，`DB_ID` 可能不会返回从 sys.databases  查询 `database_id` 得到的相同结果。 如果 `DB_ID` 的调用方将结果与其他 sys  视图进行比较，应改为查询 sys.databases  。
   
 ## <a name="permissions"></a>权限  
 如果 `DB_ID` 的调用方不具有特定的非 master 或非 tempdb 数据库，则至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 服务器级权限才能看到相应的 `DB_ID` 行   。 对于 master 数据库，`DB_ID` 至少需要 `CREATE DATABASE` 权限  。 调用方连接的数据库将始终出现在 sys.databases 中  。
@@ -77,7 +80,7 @@ SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];
 GO  
 ```  
   
-### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 DB_ID 来指定系统函数参数的值  
+### <a name="c-using-db_id-to-specify-the-value-of-a-system-function-parameter"></a>C. 使用 DB_ID 来指定系统函数参数的值  
 此示例使用 `DB_ID` 返回系统函数 `sys.dm_db_index_operational_stats` 中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的数据库 ID。 此函数将数据库 ID 作为第一个参数。
   
 ```sql

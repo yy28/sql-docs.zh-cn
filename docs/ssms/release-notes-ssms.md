@@ -122,7 +122,7 @@ SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 - 生成号：15.0.18131.0  
 - 发布日期：2019 年 6 月 11 日  
 
-[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
 SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
 
@@ -192,7 +192,7 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 - 生成号：15.0.18118.0  
 - 发布日期：2019 年 4 月 24 日
 
-[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
 ### <a name="whats-new-in-180"></a>18.0 的新增功能
 
@@ -236,7 +236,7 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 |Azure SQL 支持| 添加了对 vCore SKU（常规用途和业务关键）的支持：Gen4_24 和所有 Gen5。|
 |Azure SQL 托管实例|连接到 Azure SQL 托管实例时，在 SMO 和 SSMS 中添加了新的“AAD 登录”作为新登录类型。|
 |AlwaysOn|在 SSMS Always On 仪表板中重新处理 RTO（估计恢复时间）和 RPO（估计的数据丢失）。 请参阅 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) 中更新后的文档。|
-|始终加密| “连接到服务器”对话框中新“Always Encrypted”选项卡的“启用 Always Encrypted”复选框现在提供为数据库连接启用/禁用 Always Encrypted 的简便方法。|
+|Always Encrypted| “连接到服务器”对话框中新“Always Encrypted”选项卡的“启用 Always Encrypted”复选框现在提供为数据库连接启用/禁用 Always Encrypted 的简便方法。|
 |具有安全 Enclave 的 Always Encrypted| 已在 SQL Server 2019 预览版中进行多项增强来支持具有安全 Enclave 的 Always Encrypted：“连接到服务器”对话框（新的“Always Encrypted”选项卡）中指定 Enclave 证明 URL 的文本字段。  “新列主密钥”对话框中用于控制新列主密钥是否允许 Enclave 计算的新复选框。  其他 Always Encrypted 密钥管理对话框现在可公开列主密钥允许 Enclave 计算的信息。|
 |审核文件|已将身份验证方法从基于存储帐户密钥更改为基于 Azure AD 的身份验证。|
 |审核文件|对已知的审核操作列表进行了更新以包含 FEATURE RESTRICTION ADD/CHANGE GROUP/DROP。|
@@ -469,12 +469,12 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 > [!NOTE]
 > 如果安装在以下平台中，非英语本地化版本的 SSMS 17.x 需要 [KB 2862966 安全更新程序包](https://support.microsoft.com/kb/2862966)：Windows 8、Windows 7、Windows Server 2012 和 Windows Server 2008 R2。
 
-[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946"></a>![下载](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 公开发布 | 版本号：13.0.16106.4
 
-[中文（中国）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [英语（美国）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [法语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [德语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [意大利语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [日语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [朝鲜语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [俄语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [西班牙语](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 此版本已解决以下问题：
 
@@ -482,13 +482,13 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 * 用户可以部署包含 OData 连接管理器的 SSIS 包，这些包连接到 SSIS 目录的 Microsoft Dynamics AX/CRM Online 资源。 有关详细信息，请参阅 [OData 连接管理器](../integration-services/connection-manager/odata-connection-manager.md)。
 
-* 为现有表配置“始终加密”功能失败，在不相关的对象上出错。 [连接 ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+* 为现有表配置 Always Encrypted 功能失败，在不相关的对象上出错。 [连接 ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
-* 为现有数据库配置“始终加密”功能时，多个架构无法正常运行。 [连接 ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+* 为现有数据库配置 Always Encrypted 功能时，多个架构无法正常运行。 [连接 ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
 
-* 由于数据库包含引用系统视图的视图，“始终加密、已加密列”向导失败。 [连接 ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+* 由于数据库包含引用系统视图的视图，Always Encrypted、“已加密列”向导失败。 [连接 ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
 
-* 使用“始终加密”功能进行加密时，错误处理加密后刷新模块出现错误。
+* 使用 Always Encrypted 功能进行加密时，错误处理加密后刷新模块出现错误。
 
 * “打开最近的文件”菜单不显示最近保存的文件。  [连接 ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 

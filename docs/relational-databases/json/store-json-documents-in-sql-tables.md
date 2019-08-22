@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059570"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957444"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>在 SQL Server 或 SQL 数据库中存储 JSON 文档
-SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 现在可在 SQL Server 或 SQL 数据库中存储 JSON 文档并查询 JSON 数据，操作与在 NoSQL 数据库中类似。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
+SQL Server 和 Azure SQL 数据库包含可使用标准 SQL 语言分析 JSON 文档的本机 JSON 函数。 可以将 JSON 文档存储在 SQL Server 或 SQL 数据库中，并像在 NoSQL 数据库中一样查询 JSON 数据。 本文介绍在 SQL Server 或 SQL 数据库中存储 JSON 文档的相关选项。
+
+## <a name="json-storage-format"></a>JSON 存储格式
+
+第一个存储设计决策是，如何在表中存储 JSON 文档。 有以下两个可用选项：
+- **LOB 存储** - JSON 文档可按原样存储在 `NVARCHAR` 列中。 这是快速数据加载和引入的最佳方式，因为加载速度与字符串列的加载是匹配的。 如果没有为 JSON 值编制索引，这种方法可能会额外带来查询/分析时间方面的性能损失，因为必须在运行查询时分析原始 JSON 文档。 
+- **关系存储** - 使用 `OPENJSON`、`JSON_VALUE` 或 `JSON_QUERY` 函数将 JSON 文档插入表中时，可以分析这些文档。 输入 JSON 文档中的片段可以存储在 SQL 数据类型列中，也可以存储在包含 JSON 子元素的 NVARCHAR 列中。 这种方法会延长加载时间，因为 JSON 分析是在加载过程中完成的；但查询与关系数据的经典查询的性能是匹配的。
 
 ## <a name="classic-tables"></a>经典表
 

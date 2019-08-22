@@ -1,7 +1,7 @@
 ---
 title: 复制订阅服务器和 AlwaysOn 可用性组 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/16/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07865ca96c72e9501382212d75a2223fa652572f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5635d4ce579e01d88079e3a813cddaf3391addc
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014280"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969436"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68014280"
   当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务复制推送订阅服务器，如果订阅是使用 AG 侦听器名称创建的，则在故障转移后，分发代理会自动继续复制。 对于事务复制拉取订阅服务器，如果订阅是使用 AG 侦听器名称创建的，且原始订阅服务器已启动并正在运行，则在故障转移后，分发代理会自动继续复制。 这是因为仅在原始订阅服务器（AG 的主要副本）上创建分发代理作业。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  
   
 ## <a name="what-is-supported"></a>支持的操作  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持自动对发布服务器和事务订阅服务器进行故障转移。 合并订阅服务器可以属于可用性组，但必须在故障转移后手动配置新订阅服务器。 可用性组不能与 Websync 和 SQL Server Compact 方案结合使用。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制支持自动对发布服务器和事务订阅服务器进行故障转移。 合并订阅服务器可以属于可用性组，但必须在故障转移后通过手动操作来配置新订阅服务器。 可用性组无法与 Websync 和 SQL Server Compact 方案结合使用。  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>如何在 AlwaysOn 环境中创建事务订阅  
  对于事务复制，请执行以下步骤配置订阅服务器可用性组并对其进行故障转移：  
@@ -40,17 +40,13 @@ ms.locfileid: "68014280"
     > [!NOTE]  
     >  订阅必须通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本创建，不能使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]创建。  
   
-4.  如果创建请求订阅：  
+4.  若要创建请求订阅，请执行以下操作：  
   
-    1.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中的主订阅服务器节点上，打开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理树。  
+    1.  通过下面“创建事务复制请求订阅”  部分中的示例脚本，使用订阅服务器的可用性组侦听程序的名称来创建订阅。 
+   
+    2.  故障转移后，使用 sp_addpullsubscription_agent  存储过程，在新的主要副本上创建分发代理作业。 
   
-    2.  确定 **“请求分发代理”** 作业并编辑该作业。  
-  
-    3.  在 **“运行代理”** 作业步骤中，检查 `-Publisher` 和 `-Distributor` 参数。 确保这些参数包含发布服务器和分发服务器的正确的直接服务器和实例名称。  
-  
-    4.  将 `-Subscriber` 参数更改为订阅服务器的可用性组侦听器名称。  
-  
- 如果按照这些步骤创建订阅，则无需在故障转移后执行任何操作。  
+ 如果在每次故障转移后使用可用性组中的订阅数据库来创建请求订阅，建议在旧的主要副本上禁用分发代理作业，并在新的主要副本上启用此作业。  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>创建事务复制推送订阅  
   
@@ -69,6 +65,26 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
        @subscriber_db = N'<subscriber database name>',   
        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO  
+```  
+
+## <a name="creating-a-transactional-replication-pull-subscription"></a>创建事务复制请求订阅  
+  
+```  
+-- commands to execute at the subscriber, in the subscriber database:  
+use [<subscriber database name>]  
+EXEC sp_addpullsubscription @publisher= N'<publisher name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>',
+        @subscription_type = N'pull';
+Go
+
+EXEC sp_addpullsubscription_agent 
+        @publisher =  N'<publisher name>', 
+        @subscriber = N'<availability group listener name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>' ;
+        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
+GO
 ```  
   
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>在订阅服务器可用性组发生故障转移后恢复合并代理  

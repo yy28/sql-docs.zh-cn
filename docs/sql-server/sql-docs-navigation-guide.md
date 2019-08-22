@@ -1,6 +1,6 @@
 ---
-title: SQL Server 文档导航指南
-description: 用于导航 SQL Server 技术文档的指南 — 说明中心页、目录和标题等内容，以及如何使用痕迹导航和如何使用版本筛选器。
+title: SQL Server 文档导航提示
+description: SQL Server 技术文档导航提示和技巧 - 介绍了中心页、目录和标题等内容，以及如何使用痕迹导航和版本筛选器。
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941164"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028827"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南 
 
@@ -61,11 +60,11 @@ TOC 中带有 `>>` 的条目指示你会转到包含不同目录的技术文档�
 ## <a name="version-filter"></a>版本筛选器
 SQL Server 技术文档为几种受支持的 SQL Server 版本和风格提供内容。 功能可能因 SQL Server 的版本和风格而异，因此有时内容本身可能会有所不同。 
 
-可以使用版本筛选器确保在查看适当 SQL Server 版本和风格的内容： 
+使用[版本筛选器](versioning-system-monikers-ui-sql-server.md)，可确保所看到的内容符合 SQL Server 的相应版本和风格： 
 
 ![SQL 文档版本筛选器](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-选择“所有 SQL”   > “不隐藏任何内容”  可确保所有内容都可见，且没有任何内容隐藏在版本筛选器之后。 
+依次选择“所有 SQL”  \>“不隐藏任何内容”  ，可确保所有内容都可见，并且版本筛选器没有隐藏任何内容。 [不建议将“不隐藏任何内容”  选项用于常规用途](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。
 
 ## <a name="breadcrumbs"></a>痕迹导航
 

@@ -1,7 +1,7 @@
 ---
 title: “服务器内存”配置选项 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
-ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763173"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028742"
 ---
 # <a name="server-memory-configuration-options"></a>“服务器内存”配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,9 @@ ms.locfileid: "68763173"
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量  。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。
 
-<a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力  。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。
-
-- 从 OS 总内存中为 OS 自身分配足够的空间。
-- 然后减去等于“max server memory”  控制之外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即 **_堆栈大小** <sup>1</sup> **\* 计算出的最大工作线程数**<sup>2</sup>。 所得结果就是一个实例设置的 max_server_memory 设置。
+<a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力  。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
+- 从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
+- 然后，减去等于在“最大服务器内存”  控制范围外的潜在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存分配的值，即堆栈大小<sup>1</sup> \* 计算出的最大工作线程数<sup>2</sup>  。 所得结果就是一个实例设置的 max_server_memory 设置。
 
 <sup>1</sup> 有关每个体系结构的线程堆栈大小的信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 

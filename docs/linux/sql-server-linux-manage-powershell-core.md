@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952539"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028726"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>使用 PowerShell Core 管理 Linux 上的 SQL Server
 
@@ -52,15 +52,15 @@ Install-Module -Name SqlServer
 pwsh
 ```
 
-SQL Server 提供名为“SqlServer”的 PowerShell 模块  。 可以使用“SqlServer”模块将 SQL Server 组件（SQL Server 提供程序和 cmdlet）导入到 PowerShell 环境或脚本中  。
+SQL Server 提供名为“SqlServer”的 PowerShell 模块  。 可以使用 SqlServer 模块将 SQL Server 组件（SQL Server 提供程序和 cmdlet）导入到 PowerShell 环境或脚本  。
 
-在 PowerShell 提示符下复制并粘贴以下命令，将“SqlServer”模块导入到当前的 PowerShell 会话中  ：
+在 PowerShell 提示符处复制并粘贴以下命令，将 SqlServer 模块导入当前的 PowerShell 会话  ：
 
 ```powershell
 Import-Module SqlServer
 ```
 
-在 PowerShell 提示符下键入以下命令，验证是否已正确导入“SqlServer”模块  ：
+在 PowerShell 提示符处键入以下命令，验证是否已正确导入 SqlServer 模块  ：
 
 ```powershell
 Get-Module -Name SqlServer
@@ -81,9 +81,9 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 在 PowerShell 提示符下复制并粘贴以下命令。 运行这些命令时，PowerShell 将：
 - 显示一个对话框，提示你输入实例的主机名或 IP 地址
 - 显示“PowerShell 凭据请求”对话框，提示你输入凭据  。 可以使用 *SQL 用户名*和 *SQL 密码*连接到 Linux 上的 SQL Server 实例
-- 使用 **Get-SqlInstance** cmdlet 连接到**服务器**，并显示一些属性
+- 使用 Get-SqlInstance cmdlet 连接到服务器，并显示一些属性  
 
-也可以选择仅将 `$serverInstance` 变量替换为 SQL Server 实例的 IP 地址或主机名。
+也可选择仅将 `$serverInstance` 变量替换为 SQL Server 实例的 IP 地址或主机名。
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -104,7 +104,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 ```
 
 > [!NOTE]
-> 如果没有为这些值显示任何内容，则表示与目标 SQL Server 实例的连接很可能已失败。 请确保可以使用相同的连接信息从 SQL Server Management Studio 进行连接。 然后查看[连接故障排除建议](sql-server-linux-troubleshooting-guide.md#connection)。
+> 如果没有显示这些值的内容，与目标 SQL Server 实例的连接可能已失败。 请确保可以使用相同的连接信息从 SQL Server Management Studio 进行连接。 然后查看[连接故障排除建议](sql-server-linux-troubleshooting-guide.md#connection)。
 
 ## <a name="using-the-sql-server-powershell-provider"></a>使用 SQL Server PowerShell 提供程序
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>探索 PS Core 中当前可用的 cmdlet
-虽然 SqlServer 模块当前在 Windows PowerShell 中有 106 个可用的 cmdlet，但只有 59 个可在 PSCore 中使用。 下面提供了当前可用的 59 个 cmdlet 的完整列表。  有关 SqlServer 模块中所有 cmdlet 的深入文档，请参阅 SqlServer [cmdlet 参考](https://docs.microsoft.com/powershell/module/sqlserver/)。
+虽然 SqlServer 模块当前在 Windows PowerShell 中有 109 个 cmdlet 可用，但其中只有 62 个可用于 PSCore。 下面提供了当前可用的 59 个 cmdlet 的完整列表。  有关 SqlServer 模块中所有 cmdlet 的深入文档，请参阅 SqlServer [cmdlet 参考](https://docs.microsoft.com/powershell/module/sqlserver/)。
 
 以下命令将显示正在使用的 PowerShell 版本上可用的所有 cmdlet。
 
@@ -216,6 +216,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -266,6 +268,7 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>另请参阅

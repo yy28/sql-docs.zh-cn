@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809829"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553301"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 跟踪标志用于设置特定服务器特征或更改特定行为。 例如，跟踪标志 3226 是一种常用的启动跟踪标志，可取消显示错误日志中的成功备份消息。 跟踪标志经常用于诊断性能问题或调试存储过程或复杂的计算机系统，但 Microsoft 支持部门还可能建议将它们用于解决会对特定工作负载产生负面影响的行为。  当按照指示使用时，所有记录的跟踪标志和 Microsoft 支持部门推荐的跟踪标志在生产环境中都完全受支持。  请注意，此列表中的跟踪标志在其特定用途方面可能会有一些其他注意事项，因此建议仔细查看此处和/或支持工程师提供的所有建议。 此外，与 SQL Server 中的任何配置更改一样，最好在部署标志之前在非生产环境中全面测试该标志。
 
@@ -51,8 +51,10 @@ ms.locfileid: "68809829"
 
 ## <a name="trace-flags"></a>跟踪标志
 
-  
-下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的跟踪标志，并进行了说明。
+下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的跟踪标志，并进行了说明。 
+
+> [!NOTE]
+> Azure SQL 数据库托管实例支持以下全局跟踪标志：460、2301、2389、2390、2453、2467、7471、8207、9389、10316 和 11024。 托管实例尚不支持会话跟踪标志。
  
 > [!NOTE]
 > 特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中引入了一些跟踪标志。 有关适用版本的详细信息，请参阅与特定跟踪标志关联的 Microsoft 支持文章。

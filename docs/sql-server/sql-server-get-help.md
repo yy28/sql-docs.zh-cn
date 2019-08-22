@@ -24,7 +24,7 @@ ms.locfileid: "68926952"
 
 具有支持计划的客户可以通过 Microsoft 支持部门[票证](https://support.microsoft.com/en-us/hub/4343728/support-for-business)。  有关详细信息，请查看[适用于企业的支持选项](https://support.microsoft.com/en-us/help/4341255/support-for-business)。 
 
-没有支持计划的客户可以向社区寻求帮助，或通过 [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback) 上的 UserVoice 提交 bug。
+没有支持计划的客户可以向社区寻求帮助，或通过 [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback) 上的用户心声提交 bug。
 
 ## <a name="ask-community-for-help"></a>向社区寻求帮助
 
