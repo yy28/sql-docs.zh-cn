@@ -48,7 +48,7 @@ ms.locfileid: "68060974"
 
 创建新数据库。
 
-单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
+单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、备注、权限和示例。
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
@@ -164,7 +164,7 @@ CREATE DATABASE database_snapshot_name
 
 ## <a name="arguments"></a>参数
 
-database_name  新数据库的名称。 数据库名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。
+database_name  是新数据库的名称。 数据库名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。
 
 除非没有为日志文件指定逻辑名称，否则 database_name 最多可以包含 128 个字符  。 如果未指定逻辑日志文件名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会通过向 database_name 追加后缀来为日志生成 logical_file_name 和 os_file_name    。 这会将 *database_name* 限制为 123 个字符，从而使生成的逻辑文件名称不超过 128 个字符。
 
@@ -206,7 +206,7 @@ NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL } 适用于：[!INCLUDE[ssSQL11
 
 指定对数据库的非事务性 FILESTREAM 访问的级别。
 
-|ReplTest1|描述|
+|值|描述|
 |-----------|-----------------|
 |OFF|禁用非事务性访问。|
 |READONLY|可以通过非事务性进程读取此数据库中的 FILESTREAM 数据。|
@@ -302,7 +302,7 @@ ENABLE_BROKER
 指定对指定的数据库启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。 也就是说，启动了消息传递，并且在 sys.databases 目录视图中将 is_broker_enabled 设置为 true。 数据库保留现有的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符。
 
 NEW_BROKER     
-在 sys.databases 和还原数据库中都创建一个新的 service_broker_guid 值，并通过清除结束所有会话端点。 Broker 已启用，但未向远程会话端点发送消息。 必须使用新标识符重新创建任何引用旧 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符的路由。
+在 sys.databases 和还原数据库中都创建一个新的 service_broker_guid 值，并通过清除，结束所有会话端点。 Broker 已启用，但未向远程会话端点发送消息。 必须使用新标识符重新创建任何引用旧 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符的路由。
 
 ERROR_BROKER_CONVERSATIONS      
 结束所有会话，并产生一个错误指出数据库已附加或还原。 Broker 一直处于禁用状态直到此操作完成，然后再将其启用。 数据库保留现有的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 标识符。
@@ -450,7 +450,7 @@ AS SNAPSHOT OF source_database_name  指定要创建的数据库为 source_datab
 
 有关详细信息，请参阅“备注”部分的[数据库快照](#database-snapshots)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 创建、修改或删除用户数据库后，应备份 [master 数据库](../../relational-databases/databases/master-database.md)。
 
@@ -525,7 +525,7 @@ GO
 
 |||
 |-|-|
-|创建时间|修改以添加新文件|
+|创建|修改以添加新文件|
 |附加|备份|
 |分离|还原|
 
@@ -554,7 +554,7 @@ GO
 ```
 
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 创建指定数据和事务日志文件的数据库
-以下示例会创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。
+以下示例会创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 `Sales_log` 文件以 MB 为单位进行分配，因为 `SIZE` 参数中显式声明了 `MB` 后缀。
 
 ```sql
 USE master;
@@ -745,7 +745,7 @@ GO
 
 - `FileStreamDB_data` 包含行数据。 它包含一个文件，即带有默认路径的 `FileStreamDB_data.mdf`。
 - `FileStreamPhotos` 包含 FILESTREAM 数据。 它包含两个 FILESTREAM 数据容器，`FSPhotos`（位于 `C:\MyFSfolder\Photos`）和 `FSPhotos2`（位于 `D:\MyFSfolder\Photos`）。 它被标记为默认 FILESTREAM 文件组。
-- `FileStreamResumes` 包含 FILESTREAM 数据。 它包含一个位于位于 `FSResumes` 中的 FILESTREAM 数据容器 `C:\MyFSfolder\Resumes`。
+- `FileStreamResumes` 包含 FILESTREAM 数据。 它包含一个位于`C:\MyFSfolder\Resumes`中的 FILESTREAM 数据容器， `FSResumes` 。
 
 ```sql
 USE master;
@@ -1071,7 +1071,7 @@ source_server_name
 
 要复制的数据库的名称。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的数据库具有多个在创建数据库时设置的默认设置。 有关这些默认设置的详细信息，请参阅 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 中的值列表。
 
 `MAXSIZE` 提供限制数据库大小的功能。 如果数据库的大小达到其 `MAXSIZE`，你将收到错误代码 40544。 如果发生这种情况，您不能插入或更新数据或创建新的对象（如表、存储过程、视图和函数）。 不过，您仍可以读取和删除数据、截断表、删除表和索引以及重新建立索引。 然后，可以将 `MAXSIZE` 更新为比当前数据库大小更大的值，或者删除一些数据以释放存储空间。 在您可以插入新数据之前，可能有长达十五分钟的延迟。
@@ -1219,7 +1219,7 @@ Collation_name
 
 有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的数据库具有多个在创建数据库时设置的默认设置。 有关这些默认设置的详细信息，请参阅 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 中的值列表。
 
 > [!IMPORTANT]
