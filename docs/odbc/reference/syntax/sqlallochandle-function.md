@@ -77,20 +77,20 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>环境句柄分配错误  
  环境分配在驱动程序管理器和每个驱动程序中都发生。 **SQLAllocHandle**返回的*HandleType*为 SQL_HANDLE_ENV 的错误取决于错误发生的级别。  
   
- 如果在调用*HandleType*为 SQL_HANDLE_ENV 的**SQLAllocHandle**时, 驱动程序管理器无法为 *\*OutputHandlePtr*分配内存, 或者应用程序为*OutputHandlePtr*提供 null 指针, **SQLAllocHandle**返回 SQL_ERROR。 驱动程序管理器将 **OutputHandlePtr*设置为 SQL_NULL_HENV (除非应用程序提供了一个返回 SQL_ERROR 的空指针)。 没有用于关联其他诊断信息的句柄。  
+ 如果在调用*HandleType*为 SQL_HANDLE_ENV 的**SQLAllocHandle**时, 驱动程序管理器无法为 *\*OutputHandlePtr*分配内存, 或者应用程序为*OutputHandlePtr*提供 null 指针, **SQLAllocHandle**返回 SQL_ERROR。 驱动程序管理器将 *OutputHandlePtr*设置为 SQL_NULL_HENV (除非应用程序提供了一个返回 SQL_ERROR 的空指针)。 没有用于关联其他诊断信息的句柄。  
   
  在应用程序调用**SQLConnect**、 **SQLBrowseConnect**或**SQLDriverConnect**之前, 驱动程序管理器不会调用驱动程序级环境句柄分配函数。 如果驱动程序级别的**SQLAllocHandle**函数中出现错误, 则驱动程序管理器级别的**SQLConnect**、 **SQLBrowseConnect**或**SQLDriverConnect**函数将返回 SQL_ERROR。 诊断数据结构包含 SQLSTATE IM004 (驱动程序的**SQLAllocHandle**失败)。 连接句柄上返回错误。  
   
  有关驱动程序管理器和驱动程序之间的函数调用流的详细信息, 请参阅[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLAllocHandle**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过调用**SQLGetDiagRec**并将相应的*HandleType*和*句柄*设置为将 inputhandle 的值来获取关联的 SQLSTATE 值。  . 对于*OutputHandle*参数, 可返回 SQL_SUCCESS_WITH_INFO (但不是 SQL_ERROR)。 下表列出了通常由**SQLAllocHandle**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
+ 当**SQLAllocHandle**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过调用**SQLGetDiagRec**并将相应的*HandleType*和*句柄*设置为将 inputhandle 的值来获取关联的 SQLSTATE 值。. 对于*OutputHandle*参数, 可返回 SQL_SUCCESS_WITH_INFO (但不是 SQL_ERROR)。 下表列出了通常由**SQLAllocHandle**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
   
 |SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驱动程序特定的信息性消息。 (函数返回 SQL_SUCCESS_WITH_INFO。)|  
 |08003|连接未打开|(DM) *HandleType*参数是 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC, 但*将 inputhandle*参数指定的连接未打开。 必须成功完成连接过程 (并且必须打开连接), 驱动程序才能分配语句或描述符句柄。|  
-|HY000|一般错误|发生了一个错误, 该错误没有特定的 SQLSTATE, 没有为其定义实现特定的 SQLSTATE。 **MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
+|HY000|一般错误|发生了一个错误, 该错误没有特定的 SQLSTATE, 没有为其定义实现特定的 SQLSTATE。 *MessageText*缓冲区中的 **SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
 |HY001|内存分配错误|(DM) 驱动程序管理器无法为指定的句柄分配内存。<br /><br /> 驱动程序无法为指定的句柄分配内存。|  
 |HY009|空值指针的使用无效|(DM) *OutputHandlePtr*参数为 null 指针。|  
 |HY010|函数序列错误|(DM) *HandleType*参数是 SQL_HANDLE_DBC, 尚未调用**SQLSETENVATTR**来设置 SQL_ODBC_VERSION 环境属性。<br /><br /> (DM) 为**将 inputhandle**调用了异步执行的函数, 并且在**HANDLETYPE**设置为 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 的情况调用**SQLAllocHandle**函数时仍在执行该函数。|  

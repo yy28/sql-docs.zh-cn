@@ -24,7 +24,7 @@ ms.locfileid: "68219595"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>分析实际执行计划
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 计划分析功能分析实际图形化执行计划。 
+本主题介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 计划分析功能来分析实际的图形化执行计划。 
 
 > [!NOTE]
 > 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或批处理后，将生成实际的执行计划。 为此，实际的执行计划包含运行时信息，例如实际的行数、资源使用量度量值和运行时警告（如果有）。 有关详细信息，请参阅[显示实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。

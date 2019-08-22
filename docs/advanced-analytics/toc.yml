@@ -183,6 +183,8 @@
   items:
     - name: 连接
       items:
+        - name: 环回连接
+          href: ../advanced-analytics/connect/loopback-connection.md
         - name: 从 R 连接到 OLAP
           items:
             - name: 在 R 中使用来自 OLAP 多维数据集的数据
@@ -225,34 +227,22 @@
           href: ../advanced-analytics/sql-native-scoring.md
     - name: 包管理
       items:
-        - name: 默认包
-          href: ../advanced-analytics/package-management/default-packages.md
-        - name: 获取包信息
-          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: 安装新 Python 包
+          items:
+            - name: 获取 Python 包信息
+              href: ../advanced-analytics/package-management/python-package-information.md
+            - name: 安装 Python 包
+              href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
         - name: 安装新 R 包
           items:
+            - name: 获取 R 包信息
+              href: ../advanced-analytics/package-management/r-package-information.md
             - name: 安装 R 包
-              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-            - name: 使用 T-SQL
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: 使用包管理器
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: 使用 RevoScaleR
-              items:
-                - name: 使用 RevoScaleR 进行安装
-                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-                - name: 启用远程 R 包管理
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: 同步 R 包
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+              href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: 创建 miniCRAN 存储库
               href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
             - name: 使用 R 包的提示
               href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: 安装新 Python 包
-          items:
-            - name: 使用包管理器
-              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: 管理
       items:
         - name: 管理集成
@@ -287,7 +277,7 @@
           href: ../advanced-analytics/security/firewall-configuration.md
         - name: 为 SQLRUserGroup 创建登录名
           href: ../advanced-analytics/security/create-a-login-for-sqlrusergroup.md
-    - name: “性能”
+    - name: 性能
       items:
         - name: R
           items:

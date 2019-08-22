@@ -2142,7 +2142,7 @@
               href: relational-databases/clr-integration/clr-integration-what-s-new.md
             - name: 启用
               href: relational-databases/clr-integration/clr-integration-enabling.md
-            - name: “性能”
+            - name: 性能
               href: relational-databases/clr-integration/clr-integration-architecture-performance.md
             - name: 体系结构 - CLR 宿主环境
               href: relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md
@@ -10376,17 +10376,8 @@
             - name: 容器的高可用性
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: SQL Server 容器的 AlwaysOn 可用性组
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: 部署
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: 管理
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: 连接
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: 创建部署脚本
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: 在 Kubernetes 中配置容器
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Security
           href: linux/sql-server-linux-security-overview.md
           items:
@@ -10398,7 +10389,7 @@
               href: linux/sql-server-linux-active-directory-join-domain.md
             - name: 加密连接
               href: linux/sql-server-linux-encrypted-connections.md
-        - name: “性能”
+        - name: 性能
           items:
             - name: 最佳做法
               href: linux/sql-server-linux-performance-best-practices.md
