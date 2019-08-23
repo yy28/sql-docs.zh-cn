@@ -276,7 +276,7 @@ SQLRETURN SQLBindCol(
 ## <a name="implicit-resetting-of-count-field"></a>隐式重置计数字段  
  **SQLBindCol**设置的值 SQL_DESC_COUNT *ColumnNumber*参数仅当这会增加 SQL_DESC_COUNT 的值。 如果中的值*TargetValuePtr*参数是空指针，并且中的值*ColumnNumber*参数等于 SQL_DESC_COUNT （即，当取消绑定的最高绑定列），然后 SQL_DESC_计数设置为最高的其余绑定列数。  
   
-## <a name="cautions-regarding-sqldefault"></a>有关 SQL_DEFAULT 的注意事项  
+## <a name="cautions-regarding-sql_default"></a>有关 SQL_DEFAULT 的注意事项  
  若要成功检索列数据，应用程序必须确定正确的长度和应用程序缓冲区中的数据的起始点。 当应用程序指定了显式*TargetType*，轻松地检测到应用程序误解。 但是，当应用程序指定了*TargetType* SQL_DEFAULT 的**SQLBindCol**可应用于不同的数据类型的列从一个目标应用程序，从对更改元数据或通过将代码应用于不同的列。 在这种情况下，应用程序可能不总是确定的开始或提取的列数据的长度。 这可能会导致数据未报告的错误或内存冲突。  
   
 ## <a name="code-example"></a>代码示例  

@@ -24,7 +24,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67942383"
 ---
-# <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
+# <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   创建一个警报。  

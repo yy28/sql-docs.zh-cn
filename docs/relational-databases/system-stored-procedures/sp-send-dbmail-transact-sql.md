@@ -25,7 +25,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68126295"
 ---
-# <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
+# <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   向指定收件人发送电子邮件。 该邮件可能包含查询结果集和/或文件附件。 当邮件成功放入数据库邮件队列**sp_send_dbmail**返回**mailitem_id**的消息。 此存储的过程是在**msdb**数据库。  

@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770846"
 ---
-# <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
+# <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   为复制代理创建新的配置文件。 此存储过程在分发服务器上的任何数据库中执行。  

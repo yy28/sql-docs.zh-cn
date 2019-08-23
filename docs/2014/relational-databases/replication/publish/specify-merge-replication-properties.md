@@ -33,7 +33,7 @@ ms.locfileid: "68661307"
 -   如果在初始化订阅后指定项目仅用于下载，则所有收到该项目的客户端订阅必须重新初始化。 服务器订阅不必重新初始化。 有关属性更改的影响的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
- 在新建发布向导的“项目”  页或“项目属性 - \<项目>”  对话框的“属性”  选项卡上指定项目仅用于下载。 新建发布向导和“发布属性 - \<发布>”  对话框中提供了该对话框。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../publish/create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
+ 在新建发布向导的“项目”页或“项目属性 - \<项目>”对话框的“属性”选项卡上指定项目仅用于下载。 新建发布向导和“发布属性 - \<发布>”对话框中提供了该对话框。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../publish/create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>在“项目”页上指定项目仅用于下载  
   
@@ -41,13 +41,13 @@ ms.locfileid: "68661307"
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>在“项目属性 - \<项目>”对话框的“属性”选项卡上指定项目仅用于下载  
   
-1.  在新建发布向导或“发布属性 - \<发布>”  对话框的“项目”  页上，选择一个表，然后单击“项目属性”  。    
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。    
 2.  单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。    
-3.  在“项目属性 - \<项目>”  对话框的“属性”  选项卡的“目标对象”  部分中，为“同步方向”  指定以下值之一：    
+3.  在“项目属性 - \<项目>”对话框的“属性”选项卡的“目标对象”部分中，为“同步方向”指定以下值之一：    
     -   **下载到订阅服务器，禁止订阅服务器更改**    
     -   **下载到订阅服务器，允许订阅服务器更改**  
   
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。      
+4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
 
 ###  <a name="using-transact-sql"></a>使用 Transact-SQL  
   
@@ -84,16 +84,16 @@ ms.locfileid: "68661307"
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>为项目启用交互式冲突解决方法  
   
-1.  在新建发布向导或“发布属性 - \<发布>”  对话框的“项目”  页上，选择一个表。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。    
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。    
 2.  单击 **“项目属性”** ，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。    
-3.  在“项目属性 - \<项目>”  或“项目属性 - \<项目类型>”  页上，单击“冲突解决程序”  选项卡。    
+3.  在“项目属性 - \<项目>”或“项目属性 - \<项目类型>”页上，单击“冲突解决程序”选项卡。    
 4.  选择 **“允许订阅服务器在按需同步时交互式解决冲突”** 。    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  如果处于“发布属性 - \<发布>”  对话框中，请单击“确定”  以保存并关闭该对话框。  
+6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>指定订阅应使用交互式冲突解决方法  
   
-1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框中，为“以交互方式解决冲突”选项指定“True”值**   。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)。 
+1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框中，为“以交互方式解决冲突”选项指定“True”值**。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)。 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -128,14 +128,14 @@ ms.locfileid: "68661307"
 -   对于行级和列级跟踪，始终在行级执行冲突解决：入选行将覆盖落选行。 合并复制还允许您指定在逻辑记录级跟踪和解决冲突，但 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]没有提供这些选项。 有关在复制存储过程中设置这些选项的信息，请参阅 [定义合并表项目间的逻辑记录关系](../publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
   
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性”  对话框的“属性“  选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”  对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
+ 在“项目属性”对话框的“属性“选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="specify-row--or-column-level-tracking"></a>指定行级别或列级别跟踪  
   
-1.  在新建发布向导或“发布属性 - \<发布>”  对话框的“项目”  页上，选择一个表。    
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。    
 2.  单击 **“项目属性”** ，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。   
-3.  在“项目属性 \<项目>”对话框的“属性”选项卡上，为“跟踪级别”属性选择以下值之一：    “行级别跟踪”或“列级别跟踪”   。    
-4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
+3.  在“项目属性 \<项目>”对话框的“属性”选项卡上，为“跟踪级别”属性选择以下值之一：“行级别跟踪”或“列级别跟踪”。    
+4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 ###  <a name="using-transact-sql"></a>使用 Transact-SQL  
   
