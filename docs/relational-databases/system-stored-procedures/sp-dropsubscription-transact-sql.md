@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 21d90c94c73eb6e49fcfedf997fffe2881146a22
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903632"
 ---
-# <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
+# <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   删除对发布服务器上的特殊项目、发布或订阅集的订阅。 此存储过程在发布服务器上对发布数据库执行。  
@@ -46,7 +46,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 `[ @article = ] 'article'`项目的名称。 *项目*的值为**sysname**, 默认值为 NULL。 如果为**all**, 则删除针对每个指定发布和订阅服务器的所有项目的订阅。 对于允许立即更新的发布, 请使用**all** 。  
   
-`[ @subscriber = ] 'subscribe_r'`将删除其订阅的订阅服务器的名称。 *订阅服务器*的**sysname**, 无默认值。 如果为**all**, 则删除所有订阅服务器的所有订阅。  
+`[ @subscriber = ] 'subscriber'`将删除其订阅的订阅服务器的名称。 *订阅服务器*的**sysname**, 无默认值。 如果为**all**, 则删除所有订阅服务器的所有订阅。  
   
 `[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db*的值为**sysname**, 默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
   

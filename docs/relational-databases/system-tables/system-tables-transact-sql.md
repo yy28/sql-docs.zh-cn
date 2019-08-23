@@ -1,5 +1,5 @@
 ---
-title: 系统表 (TRANSACT-SQL) |Microsoft Docs
+title: 系统表 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 98f9a51b2248a1d218e9cbed576dc41bf64c91b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 292b6cdce6b2f13445e50f79c956f07eb8d33de7
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029618"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903595"
 ---
 # <a name="system-tables-transact-sql"></a>系统表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,14 @@ ms.locfileid: "68029618"
   
 |||  
 |-|-|  
-|[备份和还原表&#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[日志传送表 (Transact-SQL)](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
-|[更改数据捕获表&#40;Transact SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
-|[数据库维护计划表&#40;Transact SQL&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[SQL Server 代理表&#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
-|[SQL Server 扩展事件表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)|[sys.sysoledbusers &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
-|[Integration Services 表&#40;Transact SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
+|[备份和还原表&#40;transact-sql&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[日志传送表 (Transact-SQL)](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
+|[变更数据捕获表&#40;transact-sql&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[复制表 (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
+|[数据库维护计划表&#40;transact-sql&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[SQL Server 代理 Tables &#40;transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
+|[SQL Server 扩展事件表&#40;transact-sql&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[sysoledbusers &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
+|[Integration Services Tables &#40;transact-sql&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;transact-sql&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [兼容性视图&#40;Transact SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [兼容性&#40;视图 transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   
