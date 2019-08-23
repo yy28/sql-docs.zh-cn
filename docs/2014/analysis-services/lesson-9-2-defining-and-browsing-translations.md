@@ -104,7 +104,7 @@ ms.locfileid: "69493778"
   
      注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 相反, 它将在名为`Ventas del lnternet`的新显示文件夹中以西班牙语显示, 如下图所示。  
   
-     重新![填充元数据窗格]重新(../../2014/tutorials/media/l9-translations-6.gif "填充元数据窗格")  
+     重新![填充元数据窗格](../../2014/tutorials/media/l9-translations-6.gif "重新填充元数据窗格")  
   
 6.  在 "元数据" 窗格中, `Cantidad de las Ventas del Internet`右键单击, 然后选择 "**添加到查询**"。  
   

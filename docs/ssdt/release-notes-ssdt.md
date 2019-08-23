@@ -1,22 +1,22 @@
 ---
 title: SQL Server Data Tools (SSDT) 发行说明 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892477"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531026"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -43,6 +43,7 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2，&nbsp; SSDT for VS 2017
 
 发布时间：  &nbsp; 2019 年 7 月 17 日  
@@ -51,16 +52,14 @@ SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
-#### <a name="ssis"></a>SSIS
-
 | 新项 | 详细信息 |
-| :------- | :------ |
-| 添加 AzureEnabled 功能。 启用要在 Azure 数据工厂中的 SSIS 平台即服务 (PaaS) 上运行的项目的包 | &nbsp; |
-| 解决无法通过变量表达式设置 Oracle 连接器属性的问题 | &nbsp; |
-| 解决在调试以 SQL Server 2019 之前版本为目标的包时 Oracle 连接器具有 VS_NEEDSNEWMETATDATA 错误的问题 | &nbsp; |
-| 解决在包/项目使用连接管理器属性的表达式时 Oracle 连接器未能升级/降级包/项目的问题 | &nbsp; |
-| 解决 Web 服务任务编辑器的“下载 WSDL”按钮不支持 TLS 1.1 和 1.2 协议（针对 SQL Server 2019）的问题 | &nbsp; |
-| 解决保存后无法再次加载包含 DQS 连接管理器的包的问题 | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 添加 AzureEnabled 功能。 启用要在 Azure 数据工厂中的 SSIS 平台即服务 (PaaS) 上运行的项目的包 |
+| Integration Services (SSIS) | 解决无法通过变量表达式设置 Oracle 连接器属性的问题 |
+| Integration Services (SSIS) | 解决在调试以 SQL Server 2019 之前版本为目标的包时 Oracle 连接器具有 VS_NEEDSNEWMETATDATA 错误的问题 |
+| Integration Services (SSIS) | 解决在包/项目使用连接管理器属性的表达式时 Oracle 连接器未能升级/降级包/项目的问题 |
+| Integration Services (SSIS) | 修复了以下问题：Web 服务任务编辑器的“下载 WSDL”按钮不支持 TLS 1.1 和 1.2 协议（目标为 SQL Server 2019） |
+| Integration Services (SSIS) | 解决保存后无法再次加载包含 DQS 连接管理器的包的问题 |
 
 ### <a name="known-issues"></a>已知问题
 
@@ -82,17 +81,15 @@ SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
-#### <a name="ssis"></a>SSIS
-
 | 新项 | 详细信息 |
-| :------- | :------ |
-| 修复了在定位到以前的 SQL Server 版本时无法正确保留包部件的问题 | &nbsp; |
-| 修复了在使用包部件时无法将表达式添加到优先约束的问题 | &nbsp; |
-| 修复了 Power Query 源和连接管理器的“帮助”按钮不链接到正确文档的问题 | &nbsp; |
-| 修复了 VS 帮助窗口中不显示 SSIS 内部版本的问题 | &nbsp; |
-| 为 Ole DB 和平面文件连接管理器添加了属性“ConnectByProxy”，它可以在 Azure-SSIS IR 中使用自承载 IR 启用本地数据访问权限 | &nbsp; |
-| 修复了 ODBC 组件错误映射 DT_DBDATE 数据类型的问题 | &nbsp; |
-| 为 ADO.NET 和 OLE DB 连接管理器添加了属性“ConnectUsingManagedIdentity”，它启用了托管标识身份验证，可以连接到 Azure-SSIS IR 中的数据源 | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 修复了以下问题：在定目标到旧版 SQL Server 时，无法正确暂留包部件。 |
+| Integration Services (SSIS) | 修复了以下问题：在使用包部件时，无法将表达式添加到优先约束。 |
+| Integration Services (SSIS) | 修复了以下问题：Power Query 源和连接管理器的“帮助”按钮没有链接到正确文档。 |
+| Integration Services (SSIS) | 修复了以下问题：VS 帮助窗口中不显示 SSIS 内部版本。 |
+| Integration Services (SSIS) | 添加了适用于 Ole DB 和平面文件连接管理器的属性“ConnectByProxy”，此属性可使用 Azure-SSIS IR 中的自承载 IR 启用对本地数据的访问权限。 |
+| Integration Services (SSIS) | 修复了以下问题：ODBC 组件错误地映射到 DT_DBDATE 数据类型。 |
+| Integration Services (SSIS) | 添加了适用于 ADO.NET 和 OLE DB 连接管理器的属性“ConnectUsingManagedIdentity”，此属性可启用托管标识身份验证，以连接到 Azure-SSIS IR 中的数据源。 |
 
 ### <a name="known-issues"></a>已知问题
 
@@ -114,20 +111,19 @@ SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
-#### <a name="ssis"></a>SSIS
-
 | 新项 | 详细信息 |
-| :------- | :------ |
-| 在 ADF 2017 中为 SSIS 添加了 Power Query 源（预览版）。 | &nbsp; |
-| 重新添加对 SQL Server 2012 的支持。 | &nbsp; |
-| 为 SQL Server 2019 添加了 Oracle 源和目标。 | 定目标到 SQL Server 2019 的 Oracle 源和目标已由 SSDT 安装。<br/><br/>若要设计定目标到服务器版本 2017 或更低版本的包，请从 Microsoft 下载网站下载相应的 Oracle 连接器版本，并将它安装在 SSDT 计算机上。 <br/>[Attunity 推出的用于 Oracle 的 Microsoft Connector 5.0 版（定目标到 SQL Server 2017）](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Attunity 推出的用于 Oracle 的 Microsoft Connector 4.0 版（定目标到 SQL Server 2016）](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Attunity 推出的用于 Oracle 的 Microsoft Connector 3.0 版（定目标到 SQL Server 2014）](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Attunity 推出的用于 Oracle 的 Microsoft Connector 2.0 版（定目标到 SQL Server 2012）](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
-| 解决了从早期 SSIS 版本迁移时无法加载脚本任务/组件的问题。 | &nbsp; |
-| 解决了数据查看器在 Windows 7 SP1 和 Windows 8.1 上无法运行的问题。 | &nbsp; |
-| 解决了在某些情况下保存包导致 Visual Studio 崩溃的问题。 | &nbsp; |
-| 解决了在某些情况下无法执行包的问题。 | 在满足以下两个条件时，就会发生此问题：<br/><br/>&bull; &nbsp; 保护级别为 EncryptSensitiveWithPassword。<br/>&bull; &nbsp; 目标服务器版本低于 SQL Server 2017。 |
-| 修复了 SSDT 中未显示使用默认字体的注释的问题。 | &nbsp; |
-| ISDeploymentWizard 支持命令行模式下的 SQL 身份验证、Azure Active Directory 集成身份验证和 Azure Active Directory 密码身份验证。 | &nbsp; |
-| &nbsp; | &nbsp; |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 在 ADF 2017 中为 SSIS 添加了 Power Query 源（预览版）。 |
+| Integration Services (SSIS) | 重新添加对 SQL Server 2012 的支持。 |
+| Integration Services (SSIS) | 为 SQL Server 2019 添加了 Oracle 源和目标。 |
+| Integration Services (SSIS) | 定目标到 SQL Server 2019 的 Oracle 源和目标已由 SSDT 安装。 <br/></br> 若要设计定目标到服务器版本 2017 或更低版本的包，请从 Microsoft 下载网站下载相应的 Oracle 连接器版本，并将它安装在 SSDT 计算机上。 <br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 5.0（定目标到 SQL Server 2017）](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 4.0（定目标到 SQL Server 2016）](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 3.0（定目标到 SQL Server 2014）](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [适用于 Oracle 的 Attunity Microsoft Connector 版本 2.0（定目标到 SQL Server 2012）](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | 解决了从早期 SSIS 版本迁移时无法加载脚本任务/组件的问题。 |
+| Integration Services (SSIS) | 解决了数据查看器在 Windows 7 SP1 和 Windows 8.1 上无法运行的问题。 |
+| Integration Services (SSIS) | 解决了在某些情况下保存包导致 Visual Studio 崩溃的问题。 |
+| Integration Services (SSIS) | 解决了在某些情况下无法执行包的问题。 |
+| Integration Services (SSIS) | 同时满足以下两个条件时，就会出现此问题：< br />< br /> &bull;   保护级别为 EncryptSensitiveWithPassword。< br /> &bull;   目标服务器版本低于 SQL Server 2017。          |
+| Integration Services (SSIS) | 修复了 SSDT 中未显示使用默认字体的注释的问题。 |
+| Integration Services (SSIS) | ISDeploymentWizard 支持命令行模式下的 SQL 身份验证、Azure Active Directory 集成身份验证和 Azure Active Directory 密码身份验证。 |
 
 ### <a name="known-issues"></a>已知问题
 
@@ -149,7 +145,7 @@ SSDT for Visual Studio 2017。
 ### <a name="whats-new"></a>新增功能
 **SSIS：**
 
-修复了将包含包（包含脚本任务/平面文件目标）的 SSIS 项目部署到 Azure-SSIS，而导致该包无法在 Azure-SSIS 中执行的问题。 
+修复了以下问题：将包内有脚本任务/平面文件目标的 SSIS 项目部署到 Azure-SSIS 会导致包无法在 Azure-SSIS 中执行。 
 
 ### <a name="known-issues"></a>已知问题：
 
@@ -220,7 +216,7 @@ SSDT for Visual Studio 2017。
 ### <a name="known-issues"></a>已知问题：
 
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
-- 在 Windows 10 上安装 SSDT 并选择“为 Visual Studio 2017 实例安装新的 SQL Server Data Tools”时，安装将因“不支持所请求的元文件操作”而失败。 请重启计算机并再次启动 SSDT 安装程序以继续安装。
+- 在 Windows 10 上安装 SSDT 并选择“为 Visual Studio 2017 实例安装新的 SQL Server Data Tools”时，安装将因“不支持所请求的元文件操作”而失败。 重新启动计算机，并再次启动 SSDT 安装程序，以继续安装。
 
 ## <a name="1570nbsp-ssdt-for-vs-2017"></a>15.7.0，SSDT for VS 2017
 
@@ -258,7 +254,7 @@ SSDT for Visual Studio 2017。
 **SSIS：**
 
 - 修复问题：以 SQLServer2016 和 SQLServer2017 为目标时，AS 处理任务不记录任何处理步骤
-- 修复问题：在 SSDT 中打开具有很长非英文名称的 dtsx 时发生访问冲突
+- 修复了以下问题：在 SSDT 中打开具有很长非英语任务名称的 dtsx 时，发生访问冲突
 - 修复问题：ScriptTask 变量列表有时会在任务 UI 中消失
 - 修复问题：当包位置为 SQL Server 时，添加现有包的副本失败
 - 修复问题：访问某个编辑器对话框中的组合框时，焦点会卡住。
@@ -271,7 +267,7 @@ SSDT for Visual Studio 2017。
 **安装程序：**
 
 - 在隐私免责声明中添加“SQL Server Data Tools 客户体验改善计划”链接。
-- 修复问题：当选择“安装新的 SQL Server Data Tools for Visual Studio 2017 实例”时会弹出 VS 安装程序窗口
+- 修复了以下问题：选择“安装新 SQL Server Data Tools for Visual Studio 2017 实例”时，会看到 VS 安装程序弹出窗口
 
 ### <a name="known-issues"></a>已知问题：
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
@@ -324,7 +320,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 **安装程序**
 1. 安装程序 UI 已本地化。
-1. 将图标替换为更高质量的版本。
+1. 图标替换为更高质量的版本。
 
 **Integration Services (IS)**
 1. 在 ADF 中将包部署到 Azure SSIS IR 时，部署向导中添加了包验证步骤，可发现要在 Azure SSIS IR 中执行的 SSIS 包的潜在兼容性问题。 有关详细信息，请参阅[验证部署到 Azure 的 SSIS 包](../integration-services/lift-shift/ssis-azure-validate-packages.md)。
@@ -411,8 +407,8 @@ SSDT for Visual Studio 2017。
 - 修复了安装 Azure 功能包后导入/导出向导无法列出数据源的问题。
 - 修复了切换连接时编辑 SSIS Analysis Services 进程任务会引发异常的问题。
 - 修复了在应用添加 __$command_id 列的 SQL 修补程序后 CDC 组件会中断的问题。
-- 修复了面向旧版 SQL Server 时无法编辑和执行第三方包的问题。
-- 修复了双击 DTSWizard.exe 并选择“平面文件源”时“平面文件源”配置对话框无法正确显示的问题。
+- 修复了以下问题：定目标到旧版 SQL Server 时，无法编辑和执行第三方包。
+- 修复了以下问题：双击 DTSWizard.exe 并选择“平面文件源”时，“平面文件源”配置对话框没有正确显示。
 - 修复了面向 SQL Server 2017 时包含 Azure 功能包任务/组件的包无法执行的问题。
 
 
@@ -488,7 +484,7 @@ SSDT for Visual Studio 2015。
 - 大幅提升了在表格模型包含更大的元数据的情况下，提交模型更改（针对度量值、计算列的 DAX 编辑）时的性能
 - 修复了在 1400 兼容级别模型中使用 PowerQuery 导入数据的过程中出现的大量问题
    - 单击“导入”后需要很长时间才能完成导入，而 UI 不会显示任何状态
-   - 尝试选择要导入的表时，导航器视图上一系列表格非常缓慢
+   - 当尝试选择要非常慢地导入的表时，导航器视图上有表的大列表
    - 在查询编辑器视图中使用 35 个查询的列表时，查询编辑器的性能低下（PBI 桌面中也会出现该问题）
    - 导入多个表格会禁用工具栏，在某些情况下可能无法再完成该操作 
    - 使用 PQ 导入表格后，模型设计器处于禁用状态，并且未显示任何数据
@@ -530,7 +526,7 @@ SSDT for Visual Studio 2017。
 - 安装程序尚未本地化。
 - SSIS 尚未本地化。
 - 当 ExecuteOutofProcess 设置为 True 时，SSIS 执行包任务不支持调试   。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
-- 不可将包含第三方扩展的 SSIS 包切换为面向其他服务器版本。
+- 无法将包含第三方扩展的 SSIS 包切换为定目标到其他服务器版本。
 
 
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，SSDT for VS 2015
@@ -636,12 +632,12 @@ SSDT for Visual Studio 2015。
 
 **AS 项目：**
 - Analysis Services PowerQuery 集成（1400 兼容级别表格模型）：
-    - 如果用户已安装第三方驱动程序，则 DirectQuery 适用于 SQL Oracle 和 Teradata
+    - 如果用户已安装第三方驱动程序，DirectQuery 适用于 SQL、Oracle 和 Teradata
     - 在 PowerQuery 中按示例添加列
     - 1400 模型中的数据访问选项（M 引擎使用的模型级别属性）
         - 启用快速合并（默认为 false - 设置为 true 时，糅合引擎会在合并数据时忽略数据源隐私级别）
         - 启用旧版重定向（默认为 false - 设置为 true 时，糅合引擎会跟随可能不安全的 HTTP 重定向。  例如，从 HTTPS 到 HTTP URI 的重定向）  
-        - 返回错误值 Null（默认为 false - 设置为 true 时，单元格级别错误会返回 null。 如果设置为 false，单元格包含错误时会引发异常）  
+        - 返回错误值 Null（默认为 false - 设置为 true 时，单元格级别错误会返回 null。 若为 false，在单元格包含错误时抛出异常）  
     - 使用 PowerQuery 的其他数据源（文件数据源）
         - “导出” 
         - Text/CSV 
@@ -662,12 +658,12 @@ SSDT for Visual Studio 2015。
 ### <a name="bug-fixes"></a>Bug 修复
 **AS 项目：**
 - 解决了 BI 项目的模板优先级问题，使其不在 VS 新项目类别的最上面显示
-- 修复了在打开 SSIS、SSAS 或 SSRS 解决方案时极少数情况下发生的 VS 故障
+- 修复了在打开 SSIS、SSAS 或 SSRS 解决方案时，可能发生的罕见 VS 故障
 - 表格：针对 DAX 分析和公式栏的多种增强和性能修复。
 - 表格：如果没有打开 SSAS 表格项目，则不显示表格模型资源管理器。
 - 多维：解决了高 DPI 计算机上处理对话框不可用的问题。
 - 表格：解决了在已打开 SSMS 的情况下，打开任何 BI 项目将导致 SSDT 故障的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- 表格：解决了在 1103 模式下层次结构未正确保存到 bim 文件的问题。[连接项](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- 表格：修复了以下问题：在 1103 模式下层次结构未正确保存到 bim 文件。[连接项](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - 表格：解决了尽管不支持，但仍能在 32 位计算机上允许集成工作区模式的问题。
 - 表格：解决了在准选择模式下单击任何内容（例如键入 DAX 表达式，但单击一个度量值）可能导致崩溃的问题。
 - 表格：解决了部署向导将模型的 .Name 属性重置为“模型”的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
@@ -698,7 +694,7 @@ SSDT for Visual Studio 2015。
  
 
 **RS 项目：**
-- 解决了在 SSDT 中设计报表时多数更改会导致参数、数据源和数据集的树状视图发生折叠的问题 
+- 修复了以下问题：在 SSDT 中设计报表时，参数、数据源和数据集的树状视图会在大多数更改发生时折叠 
 - 解决了“保存”应该保存 RDL 的版本而非最新版本的问题。
 - 解决了当备份已关闭时，SSDT RS 备份文件的问题以及一些其他问题。
 - 解决了在报表生成器中单击“拆分单元格”时将显示错误的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
@@ -708,14 +704,14 @@ SSDT for Visual Studio 2015。
 - 解决了 run64bitruntime 设置不粘滞的问题。
 - 解决了 DataViewer 不保存所显示的列的问题。
 - 解决了包部件隐藏注释的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
-- 解决了包部件放弃数据流布局和注释的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- 修复了以下问题：包部件放弃数据流布局和注释。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - 解决了从 SQL 服务器导入项目时 SSDT 崩溃的问题。
 - 修复了 Hadoop 文件系统任务 TimeoutInMinutes 的问题：打开已保存的 SSIS 包后和在运行时，其默认值为 10。
 
 **数据库项目：**
 - SSDT DACPAC 重新部署并添加 IgnoreColumnOrder 设置 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
 - SSDT 在使用 STRING_SPLIT 的情况下会编译失败 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
-- 解决了 DeploymentContributors 有权访问公共模型，但支持架构尚未初始化的问题 [Github 问题](https://github.com/Microsoft/DACExtensions/issues/8)
+- 修复了以下问题：DeploymentContributors 有权访问公共模型，但支持架构尚未初始化。[GitHub 问题](https://github.com/Microsoft/DACExtensions/issues/8)
 - FILEGROUP 位置的 DacFx 临时修补程序
 - 修复了外部同义词的“未解析的引用”错误。 
 - Always Encrypted：联机加密无法禁用对取消项进行更改跟踪，并且如果在开始加密前尚未清除更改跟踪，联机加密也无法正常运行
@@ -744,7 +740,7 @@ SSDT for Visual Studio 2015。
 * DeployScriptPath（短名称：dsp）。 这是要将部署脚本写入到的可选路径。 对于 Azure 部署，如果使用 TSQL 命令创建或修改了数据库，则会将主脚本写入相同的路径，但使用“Filename_Master.sql”作为输出文件名。
 * DeployReportPath（短名称：drp）。 这是要将部署报告写入到的可选路径。
 
-请注意，对于脚本操作，应使用现有的输出路径参数或者新的脚本/报告特定的参数，但不能同时使用两者。
+对于脚本操作，应使用现有输出路径参数或新的脚本/报表专用参数，但不能两者同时使用。
 
 示例用法：
 
@@ -792,7 +788,7 @@ Console.WriteLine(result.DeploymentReport);
 **Database Tools**
 
 * [连接 bug 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) - 无法从使用显式架构的 CROSS APPLY OPENJSON 中选择列
-* 已修复 - 自动生成的历史记录表索引问题：重新部署时 DacFx 会删除索引
+* 修复了自动生成的历史记录表索引的以下问题：DacFx 在重新部署时删除索引
 * 已修复 - DacFx 批处理分析器无法分析转义的括号“]”字符，导致发布失败的问题
 * 已改进 - 现在，SqlPackage 将在帮助输出中包含每个操作的说明
 * 已修复 - 编辑“高级”选项以及编辑发布、架构比较和其他文件中保存的连接字符串时，不会保留连接对话框中的“记住密码”选项
@@ -805,7 +801,7 @@ Console.WriteLine(result.DeploymentReport);
 
 * 修复了 SSDT AS 表格设计器中的一个问题：在某些情况下，单击数据网格中的滚动条 Thumb 控件会导致崩溃
 * 修复了 SSDT AS 表格设计器中未提供以当前用户模拟连接的选项问题
-* 修复了 SSDT AS 表格设计器中的一个问题：过度展开公式栏可能导致项目无法重新打开
+* 修复了以下 SSDT AS 表格设计器问题：过度展开编辑栏可能会导致项目无法重新打开
 * 修复了在选择表选项卡后，按键时发生 SSDT AS 表格设计器崩溃的问题
 * 修复了 SSDT AS 项目中的一个问题：选择“在 Excel 中分析”不会连接到下层 AS 服务器版本
 
@@ -841,14 +837,14 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 * 修复了 SSDT 中的一个问题：编辑 DirectQuery 的 DAX 计算列时错误提示弹出窗口会妨碍操作。
 * 修复了 SSDT AS 表格网格中的一个问题：当 Windows 缩放系数设置为高 DPI 200% 以上时，KPI 图标不会显示在度量网格中。
 * 修复了 SSDT AS 中的一个问题：粘贴大型表数据可能导致表格项目无响应。
-* 修复了 SSDT AS 表格模型编辑器中的一个问题。现在，在重命名连接的友好名称时，会将模型标记为需要保存更改。
+* 修复了 SSDT AS 表格模型编辑器问题：现在，在重命名连接的易记名称时，会将模型标记为需要保存更改。
 * 修复了 SSDT AS 表格项目中的一个问题：无法调整管理关系对话框中的列宽。
 * 修复了 SSDT AS 表格 1200 级模型中的一个问题：使用“德语”等区域设置时，从 Excel 粘贴数据无法正确将逗号视为小数分隔符。
-* 修复了 SSDT AS 项目中的一个问题：某些 KPI 图标集可能会产生错误“无法检索此视觉对象的数据”。
+* 修复了以下 SSDT AS 项目问题：作为包含一些 KPI 图标集的项目，可能会生成错误“无法检索此视觉对象的数据”。
 * 修复了 SSDT AS 项目属性对话框中的一个问题。现在，在以高 DPI 缩放比例调整大小时，可以正确定位。
 * 修复了 SSDT AS 项目中一个可能会导致升级包含粘贴表的某些模型时出错的问题。
-* 修复了 SSDT AS 中的一个问题：从 Excel 粘贴所有工作表行时速度非常缓慢，并且会创建许多不需要的列。
-* 修复了 SSDT AS 中的一个问题：大型静态 DataTable 表达式的分析和突出显示速度非常缓慢，似乎已挂起。
+* 修复了以下 SSDT AS 问题：从 Excel 粘贴所有工作表行时速度非常缓慢，并且会创建许多不需要的列。
+* 修复了以下 SSDT AS 问题：大型静态 DataTable 表达式的分析和突出显示速度非常缓慢，似乎已挂起。
 * 修复了 SSDT AS 中的一个问题，现在会将度量值和 KPI 值添加到在编辑器中选择的当前透视图。
 * 修复了 SSDT 中的一个问题：从 SQL Azure 导入 AS 项目的数据不支持除“dbo”以外的架构类型。
 
@@ -863,7 +859,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 - **发行版本控制和编号：** 现在，发行版按编号顺序而不是按月份进行标记。 这符合新的 SSMS 策略；当某个月份推出多个版本或修补程序时，这种版本控制方式可以简化我们的工作。 此发行版为 16.3，表示自 RTM 发行版推出之后的第三次更新。 任何修补程序的版本从 16.3.1 开始递增，下一次更新（计划在下个月推出）的版本为 16.4。
 - **Analysis Services - 表格模型资源管理器：** 使用表格模型资源管理器可以方便地浏览模型中的各种元数据对象，例如数据源、表、度量值和关系。 它是以单独的工具窗口实现的，在 Visual Studio 中打开“视图”菜单，指向“其他窗口”，然后单击“表格模型资源管理器”即可显示。 表格模型资源管理器默认显示在单独选项卡上的“解决方案资源管理器”区域中。表格模型资源管理器在树结构中组织元数据对象，该结构和 1200 表格模型的架构很相似，并提供其他许多新功能。
 - **数据库工具 - Always Encrypted**：此发行版提供新的 [Always Encrypted 密钥管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 对话框，方便你在数据库项目中添加列主密钥或列加密密钥，或者在 SQL Server 对象资源管理器中添加实时数据库。 此发行版支持 Windows 证书存储中的证书。 以后的发行版将支持 Azure Key Vault 和 CNG 提供程序。
-    - 创建列主密钥或列加密密钥时，单击“更新数据库”后，更改可能不会立即显示在 SQL Server 对象资源管理器中。 若要解决此问题，可在 SQL Server 对象资源管理器中刷新数据库节点。
+    - 创建列主密钥或列加密密钥时，单击“更新数据库”后，更改可能不会立即显示在 SQL Server 对象资源管理器中。 若要解决此问题，请在 SQL Server 对象资源管理器中刷新数据库节点。
     - 如果尝试加密某个表中包含 SQL Server 对象资源管理器中数据的列，该操作可能会失败。 此功能目前仅在 SSDT 数据库项目和 SSMS 中受支持。 以后的发行版将会实现对 SQL Server 对象资源管理器的支持。
 
 
@@ -883,11 +879,11 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
     - **SSDT：**
         - 修复了服务器连接断开时无法保存表格模型的问题。
         - 修复了以下问题：由于 AS 中可能存在无限循环问题，SSDT 无响应。
-        - 修复了以下问题：根据 DAX 表达式的提交方式，该表达式会导致不一致的行为。
+        - 修复了以下 DAX 表达式问题：行为因表达式的提交方式不同而不一致。
         - 修复了创建 KPI 时 VS 崩溃的问题。
         - 修复了针对 SQL Server 2008 R2、2012 和 2014 生成无效报告的问题。
-        - 修复了导致 .dwpro 项目发生无限循环错误的层次结构顺序问题。
-        - 修复了一个 RS RDL 问题：降级 RDL 要求完全重新生成，使用户感到迷惑。
+        - 修复了以下层次结构顺序问题：.dwpro 项目发生无限循环错误。
+        - 修复了以下 RS RDL 问题：降级 RDL 要求完全重新生成，令用户感到迷惑。
         - 修复了一个 KPI 问题：“从客户端工具中隐藏”不起作用。
 
 ## <a name="july-2016nbsp-ssdt-for-vs-2015"></a>2016 年 7 月，SSDT for VS 2015
@@ -897,7 +893,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 适用于 SQL Server 2016。 
 
 **新增功能**  
-- **Always Encrypted 支持：** 对于包含 Always Encrypted 列的数据库，此发行版通过我们的核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
+- **Always Encrypted 支持：** 对于包含 Always Encrypted 列的数据库，此发行版通过核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
 - **临时表增强支持：** 可以在修改之前取消链接临时表，在完成修改后重新链接临时表，因此简化了体验。 这意味着，在受支持的操作方面，临时表的功能与其他表类型（标准表、内存中表）完全相同。 
 - **SqlPackage.exe 和安装更改：** 从 SQL Server 引擎中隔离 SSDT 的方式发生更改，SSMS 有了更新。 有关详细信息，请参阅 [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)（SSDT 和 SqlPackage.exe 安装与更新的更改）。
 

@@ -79,7 +79,7 @@ ms.locfileid: "69493904"
   
      下图显示了“上下班路程”属性层次结构的成员，这些成员按成员键的 ASCII 值进行排序。  
   
-     上![下班路程属性层次结构]上(../../2014/tutorials/media/l4-memberproperties-4.gif "下班路程属性层次结构")  
+     上![下班路程属性层次结构](../../2014/tutorials/media/l4-memberproperties-4.gif "上下班路程属性层次结构")  
   
 2.  在“客户”维度的维度设计器中，切换到“维度结构”选项卡，右键单击“数据源视图”窗格的 **Customer** 表中的“CommuteDistanceSort”，然后单击“从列新建属性”。  
   
