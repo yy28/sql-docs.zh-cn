@@ -4,17 +4,17 @@ description: 了解如何获取 SQL Server 机器学习服务上安装的 Python
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bccfc97fe75a718ce76ea0d1292bfc7ea6cb6564
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641174"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000447"
 ---
 # <a name="get-python-package-information"></a>获取 Python 包信息
 
@@ -77,19 +77,16 @@ EXECUTE sp_execute_external_script
 
 ## <a name="list-all-installed-python-packages"></a>列出所有已安装的 Python 包
 
-该`pip`模块是默认安装的, 除了支持标准 Python 支持的程序包之外, 还支持使用许多操作来列出已安装的包。 可以从 Python `pip`命令提示符运行, 但也可以从`sp_execute_external_script`调用某些 pip 函数。
-
 下面的示例脚本显示已安装包及其版本的列表。
 
 ```sql
 EXECUTE sp_execute_external_script 
   @language = N'Python', 
   @script = N'
-import pip
+import pkg_resources
 import pandas as pd
-installed_packages = pip.get_installed_distributions()
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
-   for i in installed_packages])
+installed_packages = pkg_resources.working_set
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 df = pd.DataFrame(installed_packages_list)
 OutputDataSet = df
   '
@@ -107,10 +104,9 @@ WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import pip
 import pkg_resources
 pckg_name = "scikit-learn"
-pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
+pckgs = pandas.DataFrame([(i.key) for i in pkg_resources.working_set], columns = ["key"])
 installed_pckg = pckgs.query(''key == @pckg_name'')
 print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
   '

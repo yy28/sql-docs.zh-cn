@@ -1,5 +1,5 @@
 ---
-title: sp_settriggerorder (TRANSACT-SQL) |Microsoft Docs
+title: sp_settriggerorder (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 910e615cc5257eb5be65fe88b1694e0a3bc218c5
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032936"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000816"
 ---
-# <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
+# <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指定第一个激发或最后一个激发的 AFTER 触发器。 在第一个和最后一个触发器之间激发的 AFTER 触发器将按未定义的顺序执行。  
@@ -43,61 +43,61 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` 是触发器和架构的名称为其所属，如果适用，其顺序是要设置或更改。 [_triggerschema_ **。** ]*triggername*是**sysname**。 如果名称与触发器不对应，或者名称与 INSTEAD OF 触发器对应，则该过程将返回错误。 *triggerschema*不能为 DDL 或登录触发器指定。  
+`[ @triggername = ] '[ _triggerschema.] _triggername'`触发器的名称及其所属的架构 (如果适用), 其顺序为 "已设置" 或 "已更改"。 [_triggerschema_ **.** ]*triggername*为**sysname**。 如果名称与触发器不对应，或者名称与 INSTEAD OF 触发器对应，则该过程将返回错误。 不能为 DDL 或登录触发器指定*triggerschema* 。  
   
-`[ @order = ] 'value'` 是触发器的新顺序的设置。 *值*是**varchar(10)** ，可以是下列值中的任何一个。  
+`[ @order = ] 'value'`触发器的新顺序的设置。 *值*为**varchar (10)** , 可以是下列值之一。  
   
 > [!IMPORTANT]  
->  **第一个**并**最后一个**触发器必须是两个不同的触发器。  
+>  **第一个**和**最后一个**触发器必须是两个不同的触发器。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**第一个**|触发器被第一个触发。|  
 |**上一次**|触发器被最后一个触发。|  
 |**无**|触发器以未定义的顺序触发。|  
   
-`[ @stmttype = ] 'statement_type'` 指定触发触发器的 SQL 语句。 *statement_type*是**varchar(50)** 可以是 INSERT、 UPDATE、 DELETE、 LOGON 或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中列出的语句事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 不能指定事件组。  
+`[ @stmttype = ] 'statement_type'`指定触发触发器的 SQL 语句。 *statement_type*为**varchar (50)** , 可以是 INSERT、UPDATE、DELETE、LOGON 或[!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出的任何语句事件。 不能指定事件组。  
   
- 触发器可以指定为**第一个**或**最后一个**为某个语句类型才为该语句类型的触发器已定义该触发器的触发器。 例如，触发**TR1**可以指定**第一个**表**T1**如果**TR1**定义为 INSERT 触发器。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]返回一个错误，如果**TR1**，其中已被定义为 INSERT 触发器，仅被设置为**第一个**，或**最后一个**，UPDATE 语句的触发器。 有关详细信息，请参阅“备注”部分。  
+ 只有在将触发器定义为该语句类型的触发器之后, 才能将该触发器指定为语句类型的**第一个**或**最后**一个触发器。 例如, 如果**TR1**定义为 insert 触发器, 则可以**先**将 trigger **TR1**指定为 table **T1**上的 insert。 如果仅将**TR1**定义为 INSERT 触发器, 则会将设置为 UPDATE 语句的**第一个**或最后一个触发器。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 有关详细信息，请参阅“备注”部分。  
   
- **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
- 当*triggername*为 DDL 触发器时， **@namespace** 指定是否*triggername*创建具有数据库作用域还是服务器作用域。 如果*triggername*是登录触发器，必须指定服务器。 有关 DDL 触发器作用域的详细信息，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定，或指定 NULL，则*triggername*是 DML 触发器。  
+ namespace = { **' 数据库 '**  |  **"SERVER"** |  **\@** 无效  
+ 当*triggername*是 DDL 触发器时,  **\@命名空间**指定是使用数据库作用域还是服务器作用域创建*triggername* 。 如果*triggername*是 logon 触发器, 则必须指定服务器。 有关 DDL 触发器作用域的详细信息, 请参阅[Ddl 触发器](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定或指定 NULL, 则*triggername*是 DML 触发器。  
   
 ||  
 |-|  
 |SERVER 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
 ## <a name="return-code-values"></a>返回代码值  
- 0 （成功） 和 1 （失败）  
+ 0 (成功) 和 1 (失败)  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="dml-triggers"></a>DML 触发器  
- 可能只有一个**第一个**和一个**最后一个**对单个表的每个语句的触发器。  
+ 对于单个表中的每个语句, 只能有一个和**最后**一个触发器。  
   
- 如果**第一个**表、 数据库或服务器上已定义触发器，不能指定为新的触发器**第一个**的同一个表、 数据库或服务器的相同*statement_type*. 此限制也适用**最后一个**触发器。  
+ 如果已在表、数据库或服务器上定义了**第一个**触发器, 则不能为同一*statement_type*的同一个表、数据库或服务器指定新的触发器。 此限制也适用于**最后一个**触发器。  
   
- 复制将为包含在立即更新订阅或排队更新订阅中的任意表自动生成第一个触发器。 复制要求其触发器为第一个触发器。 在尝试将带有第一个触发器的表包含在立即更新订阅或排队更新订阅中时，复制将引发错误。 如果在表已经包含在订阅中之后尝试使某个触发器成为第一个触发器， **sp_settriggerorder** 将返回错误。 如果您在复制触发器上使用 ALTER TRIGGER，或使用**sp_settriggerorder**若要更改将复制触发器改**上次**或**None**触发器，订阅执行无法正常工作。  
+ 复制将为包含在立即更新订阅或排队更新订阅中的任意表自动生成第一个触发器。 复制要求其触发器为第一个触发器。 在尝试将带有第一个触发器的表包含在立即更新订阅或排队更新订阅中时，复制将引发错误。 如果在表已经包含在订阅中之后尝试使某个触发器成为第一个触发器， **sp_settriggerorder** 将返回错误。 如果在复制触发器上使用 ALTER TRIGGER, 或使用**sp_settriggerorder**将复制触发器更改为**最后**一个触发器或**无**触发器, 则订阅将无法正常运行。  
   
 ## <a name="ddl-triggers"></a>DDL 触发器  
- 如果同一事件上存在具有数据库作用域的 DDL 触发器和具有服务器作用域内的 DDL 触发器，则可以指定这两种触发器是**第一个**触发器或**最后一个**触发器。 但是，服务器作用域的触发器始终最先触发。 一般情况下，同一事件中 DDL 触发器的执行顺序如下：  
+ 如果具有数据库作用域的 DDL 触发器和具有服务器作用域的 DDL 触发器存在于同一事件上, 则可以指定两个触发器都是**第一个**触发器或**最后**一个触发器。 但是，服务器作用域的触发器始终最先触发。 一般情况下，同一事件中 DDL 触发器的执行顺序如下：  
   
-1.  服务器级触发器标记**第一个**。  
+1.  标记为**First**的服务器级触发器。  
   
 2.  其他服务器级触发器。  
   
-3.  服务器级触发器标记**最后一个**。  
+3.  标记为**Last**的服务器级触发器。  
   
-4.  数据库级触发器标记**第一个**。  
+4.  标记为**First**的数据库级触发器。  
   
 5.  其他数据库级触发器。  
   
-6.  数据库级触发器标记**最后一个**。  
+6.  标记为**Last**的数据库级触发器。  
   
 ## <a name="general-trigger-considerations"></a>常规触发器注意事项  
- 如果 ALTER TRIGGER 语句更改了第一个或最后一个触发器，**第一个**或**上次**将删除最初在触发器上设置的属性，并且值被替换**None**。 必须使用重置顺序值**sp_settriggerorder**。  
+ 如果 ALTER TRIGGER 语句更改了第一个或最后一个触发器, 则会删除最初在触发器上设置的**第一个**或**最后**一个属性, 并且值将替换为 "**无**"。 必须使用**sp_settriggerorder**重置顺序值。  
   
- 如果必须将同一触发器指定为多个语句类型的第一个或最后一个顺序**sp_settriggerorder**必须针对每个语句类型执行。 此外，触发器之前，必须首先定义为某个语句类型指定为**第一个**或**最后一个**触发器被激发该语句类型。  
+ 如果必须将同一个触发器指定为多个语句类型的第一个或最后一个顺序, 则必须为每个语句类型执行**sp_settriggerorder** 。 此外, 必须首先为语句类型定义触发器, 然后才能将该触发器指定为要为该语句类型激发的**第一个**或**最后一个**触发器。  
   
 ## <a name="permissions"></a>权限  
  若要设置具有服务器作用域（使用 ON ALL SERVER 创建）的 DDL 触发器或登录触发器的顺序，需要具有 CONTROL SERVER 权限。  
@@ -128,7 +128,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
   
 ## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [数据库引擎存储过程&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   
