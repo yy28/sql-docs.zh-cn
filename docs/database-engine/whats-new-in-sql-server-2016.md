@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d2ade42e25593911ea25b2a16ad53372ced0438
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: e7eb7457723470056e60758c4ac560d5eb49dd74
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941109"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009367"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68941109"
 
 - [针对数据仓库的列存储索引](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
-- [列存储索引碎片整理](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
+- [重新组织和重新生成索引](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 
 ## <a name="database-scoped-configurations"></a>数据库作用域配置
@@ -380,7 +380,7 @@ SQL Server 2016 针对导入和导出 JSON 以及处理 JSON 字符串添加了�
 行级安全性引入了基于谓词的访问控制。 它采用灵活的、基于谓词的集中式评估，可以考虑元数据（例如标签）或管理员根据需要确定的任何其他条件。 谓词用作一个条件，以便基于用户属性来确定用户是否具有合适的数据访问权限。 可以使用基于谓词的访问控制来实现基于标签的访问控制。 有关详细信息，请参阅[行级安全性](../relational-databases/security/row-level-security.md)。
 
 
-### <a name="always-encrypted"></a>始终加密
+### <a name="always-encrypted"></a>Always Encrypted
 使用 Always Encrypted，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以对加密数据执行操作，最重要的是加密密钥与应用程序驻留在客户所信任的环境中，而不是驻留在服务器上。 始终加密保护客户的数据，因此 DBA 不需要访问纯文本数据。 数据的加密和解密在驱动程序级别透明地进行，这样在最大程度上减少了必须对现有应用程序所做的更改。 有关详细信息，请参阅 [Always Encrypted（数据库引擎）](../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
 

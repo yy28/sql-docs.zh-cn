@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742946"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653823"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教程：为复制准备 SQL Server（发布服务器、分发服务器、订阅服务器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -234,8 +234,6 @@ ms.locfileid: "68742946"
 
    ![对象资源管理器中所有四个帐户的视图](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
- 6. 对于分发代理和合并代理，在订阅服务器上重复步骤 1-4，将计算机名称更改为订阅服务器的名称。 
-  
   
 有关详细信息，请参阅：
 - [配置分发](../../relational-databases/replication/configure-distribution.md) 

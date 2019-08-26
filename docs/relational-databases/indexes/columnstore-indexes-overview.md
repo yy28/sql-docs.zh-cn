@@ -18,12 +18,12 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912095"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009408"
 ---
 # <a name="columnstore-indexes-overview"></a>列存储索引：概述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "67912095"
 |从列存储索引中删除行。|[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) 删除行。<br /><br /> **列存储行**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将行标记为已在逻辑上删除，但在重新生成索引前未回收行的物理存储。<br /><br /> **增量存储行**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在逻辑上和实际上都删除了行。|  
 |更新列存储索引中的行。|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) 更新行。<br /><br /> **列存储行**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将行标记为已在逻辑上删除，然后将更新后的行插入增量存储中。<br /><br /> **增量存储行**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在增量存储中更新行。|  
 |将数据加载到列存储索引中。|[列存储索引数据加载](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|强制增量存储中的所有行进入列存储。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [列存储索引碎片整理](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|结合使用 `ALTER INDEX` 和 `REBUILD` 选项，以强制所有行都转入列存储。|  
+|强制增量存储中的所有行进入列存储。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|结合使用 `ALTER INDEX` 和 `REBUILD` 选项，以强制所有行都转入列存储。|  
 |对列存储索引进行碎片整理。|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` 联机对列存储索引进行碎片整理。|  
 |合并具有列存储索引的表。|[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)||  
   
