@@ -84,7 +84,7 @@ SQLRETURN SQLAllocHandle(
  有关驱动程序管理器和驱动程序之间的函数调用流的详细信息, 请参阅[SQLConnect 函数](../../../odbc/reference/syntax/sqlconnect-function.md)。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLAllocHandle**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过调用**SQLGetDiagRec**并将相应的*HandleType*和*句柄*设置为将 inputhandle 的值来获取关联的 SQLSTATE 值。. 对于*OutputHandle*参数, 可返回 SQL_SUCCESS_WITH_INFO (但不是 SQL_ERROR)。 下表列出了通常由**SQLAllocHandle**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
+ 当**SQLAllocHandle**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过调用**SQLGetDiagRec**并将相应的*HandleType*和*句柄*设置为将 inputhandle 的值来获取关联的 SQLSTATE 值。 对于*OutputHandle*参数, 可返回 SQL_SUCCESS_WITH_INFO (但不是 SQL_ERROR)。 下表列出了通常由**SQLAllocHandle**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
   
 |SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  

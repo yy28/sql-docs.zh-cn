@@ -534,6 +534,6 @@ ms.locfileid: "68057746"
   
 ## <a name="related-content"></a>相关内容  
 
--   www.codeplex.com 上的 CodePlex 示例 [处理 XML 数据包示例](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
+-   [www.codeplex.com](www.codeplex.com) 上的 CodePlex 示例 [处理 XML 数据包示例](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   
   
