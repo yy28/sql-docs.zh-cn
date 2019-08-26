@@ -8152,7 +8152,7 @@
               items:
                 - name: 自带密钥 >
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
-            - name: 始终加密
+            - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
                 - name: 具有安全 enclave 的 Always Encrypted
