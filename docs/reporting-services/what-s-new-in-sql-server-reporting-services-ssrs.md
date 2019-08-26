@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893518"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000288"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -34,7 +34,8 @@ ms.locfileid: "68893518"
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 预览版 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services 不适用于 CTP 3.2。 安装最新版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]预览版 Reporting Services 可用, 可以从 **[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=100122)** 下载。
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
