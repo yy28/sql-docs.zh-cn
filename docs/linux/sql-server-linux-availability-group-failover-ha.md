@@ -24,7 +24,7 @@ ms.locfileid: "68027217"
 
 有关故障转移的背景信息，请参阅[故障转移和故障转移模式](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)。
 
-## <a name="failover">手动故障转移</a>
+## <a name="failover"></a>手动故障转移
 
 使用群集管理工具对由外部群集管理器管理的 AG 进行故障转移。 例如，如果解决方案使用 Pacemaker 管理 Linux 集群，则使用 `pcs` 在 RHEL 或 Ubuntu 上执行手动故障转移。 在 SLES 中使用 `crm`。 
 

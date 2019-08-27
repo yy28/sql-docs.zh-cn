@@ -134,7 +134,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Check 约束和外键**  
   
- 禁用的检查约束和外键不会引发错误。 但修改行时，不强制执行约束。 若要重新启用这些对象, 请在升级后通过调用**ALTER TABLE .。。CHECK 约束**。  
+ 禁用的检查约束和外键不会引发错误。 但修改行时，不强制执行约束。 若要重新启用这些对象, 请在升级后通过调用**ALTER TABLE ...CHECK 约束**。  
   
  **持久化计算列**  
   

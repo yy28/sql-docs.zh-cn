@@ -221,7 +221,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 2. 键入以下命令，查看可用实例列表： `SqlBindR.exe /list`
   
-   记下所列出的完整实例名称。 例如, 实例名称可能是 MSSQL14.。MSSQLSERVER 用于默认实例, 或类似于 SERVERNAME。MYNAMEDINSTANCE.
+   记下所列出的完整实例名称。 例如, 实例名称可能是 MSSQL14.MSSQLSERVER 用于默认实例, 或类似于 SERVERNAME。MYNAMEDINSTANCE.
 
 3. 使用 */bind*参数运行**SqlBindR**命令, 并使用上一步中返回的实例名称指定要升级的实例的名称。
 
