@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 CTP 公告存档 | Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 8c34126f84987f0255d815b972e87118f184d070
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028868"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653789"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>SQL Server 2019 CTP 公告存档
 
@@ -25,6 +25,39 @@ ms.locfileid: "69028868"
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本投入生产环境中后，将删除本文。
 
 有关最新信息，请参阅 [SQL Server 2019 中的新增功能](what-s-new-in-sql-server-ver15.md)。
+
+## <a name="ctp-32-july-2019"></a>CTP 3.2 2019 年 7 月
+
+### <a name="new-in-big-data-clusters"></a>大数据群集中的新增功能
+
+|新增功能或更新 | 详细信息 |
+|:---|:---|
+|公共预览版 |在 CTP 3.2 之前，已向已注册的早期采用者提供 SQL Server 大数据群集。 此版本允许任何人体验 SQL Server 大数据群集的功能。 <br/><br/> 请参阅[开始使用 SQL Server 大数据群集](../big-data-cluster/deploy-get-started.md)。|
+|`azdata` |CTP 3.2 引入了 `azdata`，这是一个使用 Python 编写的命令行实用程序，可让群集管理员通过 REST API 启动和管理大数据群集。 `azdata` 替换了 `mssqlctl`。 请参阅[安装 `azdata`](../big-data-cluster/deploy-install-azdata.md)。 |
+|PolyBase |外部表列名现可用于查询 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 数据源。 在以前的 CTP 版本中，仅基于目标上的序号绑定列，未使用外部表定义中的列名。|
+|HDFS 分层刷新 |引入了 HDFS 分层刷新功能，可刷新已有装载，获取远程数据的最新快照。 请参阅 [HDFS 分层](../big-data-cluster/hdfs-tiering.md) |
+|基于笔记本的故障排除 |CTP 3.2 引入了 Jupyter 笔记本，帮助完成 SQL Server 大数据群集中组件的[部署](../big-data-cluster/deploy-notebooks.md)以及[发现、诊断和故障排除](../big-data-cluster/manage-notebooks.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-analysis-services"></a>Analysis Services 中的新增功能
+
+| 新增功能或更新 | 详细信息 |
+|:---|:---| 
+| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器超载。 此版本引入了“ClientCacheRefreshPolicy”属性  。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
+| 联机附加  | 使用此功能，能够以联机操作的形式附加表格模型。 联机附加可用于本地查询横向扩展环境中只读副本的同步。 有关详细信息，请参阅[联机附加](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-language-extensions"></a>语言扩展的新增功能
+
+|新增功能或更新 | 详细信息 |
+|:---|:---|
+| 新默认 Java 运行时  | SQL Server 现在包括 Azul System 的 Zulu Embedded，用于在整个产品中提供 Java 支持。 有关详细信息，请参阅 [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/)（SQL Server 2019 现已提供免费支持的 Java）。 |
+
+### <a name="new-in-sql-server-on-linux"></a>Linux 上的 SQL Server 的新增功能
+
+|新增功能或更新 | 详细信息 |
+|:---|:---|
+| 变更数据捕获 (CDC) 支持 | Linux 上的 SQL Server 2019 现在支持变更数据捕获 (CDC)。 |
 
 ## <a name="ctp-31-june-2019"></a>CTP 3.1（2019 年 6 月）
 
@@ -282,14 +315,14 @@ ms.locfileid: "69028868"
 |从 HDFS 访问大数据。 | |
 |使用 Spark 运行高级分析和机器学习。 | |
 |使用 Spark 将数据流式传输到 SQL 数据池。 | |
-|在 Azure Data Studio 中提供笔记本体验的运行查询书籍  。|[数据工程](../azure-data-studio/what-is.md#data-engineering)|
+|在 Azure Data Studio 中运行提供 notebook 体验的查询书籍。 |[数据工程](../azure-data-studio/what-is.md#data-engineering)|
 | &nbsp; | &nbsp; |
 
 ### <a name="database-engine"></a>数据库引擎
 
 | 新增功能或更新 | 详细信息 |
 |:-----|:-----|
-|已添加数据库“COMPATIBILITY_LEVEL 150”  。 |[ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
+|已添加数据库 **“COMPATIBILITY_LEVEL 150”** 。 |[ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
 |可恢复联机索引创建。|[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
 |行模式内存授予反馈。 |[行模式内存授予反馈](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
 |近似 `COUNT DISTINCT`。|[近似查询处理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
@@ -367,7 +400,7 @@ ms.locfileid: "69028868"
 - `INSERT INTO SELECT` 支持数据池。(CTP 2.4)
 - 适用于外部表查询的 `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项子句。 (CTP 2.4)
 - [在 IntelliJ 中的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]大数据群集上提交 Spark 作业](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)。 (CTP 2.3)
-- 各种数据相关应用的[应用程序部署和管理体验](../big-data-cluster/big-data-cluster-create-apps.md)，包括使用 R 和 Python 操作化器学习模型、运行 SQL Server Integration Services (SSIS) 作业等。 (CTP 2.3)
+- 各种数据相关应用的[应用程序部署和管理体验](../big-data-cluster/big-data-cluster-create-apps.md)，包括使用 R 和 Python 操作机器学习模型、运行 SQL Server Integration Services (SSIS) 作业等。 (CTP 2.3)
 - [在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]大数据群集中使用 Sparklyr](../big-data-cluster/sparklyr-from-RStudio.md)。 (CTP 2.3)
 - 通过 [HDFS 分层](../big-data-cluster/hdfs-tiering.md)将兼容 HDFS 的外部存储装入大数据群集。 (CTP 2.3)
 - 在大数据群集上使用 Azure Data Studio 中的 SparkR。 (CTP 2.2)
@@ -486,7 +519,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 ASCII（拉丁）字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
 
-有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。
+有关详细信息，请参阅 [排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。
 
 **CTP 2.1** 现支持在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安装期间默认选择 UTF-8 排序规则。
 
@@ -539,7 +572,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="database-compatibility-level-ctp-20"></a>数据库兼容性级别 (CTP 2.0)
 
-已添加数据库“COMPATIBILITY_LEVEL 150”  。 若要启用特定用户数据库，请执行：
+已添加数据库 **“COMPATIBILITY_LEVEL 150”** 。 若要对特定用户数据库启用，请执行：
 
    ```sql
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;

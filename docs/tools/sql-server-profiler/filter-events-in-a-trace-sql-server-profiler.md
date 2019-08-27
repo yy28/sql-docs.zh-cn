@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07c8261bdfbae6bd05d6a543d500066a47868c3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8dc3d0c27b1fae754c4a6fb5f38984f4c8c4a324
+ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929968"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979490"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>在跟踪中筛选事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "67929968"
   
 1.  在 **“跟踪属性”** 或 **“跟踪模板属性”** 对话框中，单击 **“事件选择”** 选项卡。  
   
-     **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 事件类可能略有不同，这取决于所连接服务器的类型和版本。 事件类由网格的“事件” **“事件”** 列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
+     **“事件选择”** 选项卡包含一个网格控件。 网格控件是包含所有可跟踪事件类的表。 每个事件类在表中占一行。 事件类可能略有不同，这取决于所连接服务器的类型和版本。 事件类由网格的“事件”  列进行标识，并按事件类别进行分组。 其余列则列出每个事件类可以返回的数据列。  
   
 2.  单击 **“列筛选器”.**  
   
-     此时将显示“编辑筛选器”  对话框。 “编辑筛选器”对话框包含一个比较运算符列表，可以使用这些运算符在跟踪中筛选事件  。  
+     此时，“编辑筛选器”  对话框显示。 “编辑筛选器”  对话框包含比较运算符列表，可以使用这些运算符在跟踪中筛选事件。  
   
 3.  若要应用筛选器，请单击比较运算符，再键入要用于该筛选器的值。  
   
