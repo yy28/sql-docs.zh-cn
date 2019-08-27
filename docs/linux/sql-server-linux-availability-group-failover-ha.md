@@ -62,7 +62,7 @@ ms.locfileid: "68027217"
 >[!IMPORTANT]
 >手动故障转移资源后，需要删除自动添加的位置约束。
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">步骤 2。 删除位置约束
+#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> 步骤 2。 删除位置约束
 
 在手动故障转移期间，`pcs` 命令 `move` 或 `crm` 命令 `migrate` 会为要放置在新目标节点上的资源添加位置约束。 若要查看新约束，请在手动移动资源后运行以下命令：
 
