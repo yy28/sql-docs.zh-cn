@@ -1415,7 +1415,7 @@
             - name: 数据仓库
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: 碎片整理
-              href: relational-databases/indexes/columnstore-indexes-defragmentation.md
+              href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
     - name: SQL 图形
       href: relational-databases/graphs/sql-graph-overview.md
       items:
@@ -5722,8 +5722,10 @@
       items:
         - name: 新增功能
           href: dma/dma-whatsnew.md
-        - name: 评估
+        - name: 访问 SQL 数据库
           href: dma/dma-assesssqlonprem.md
+        - name: 访问 SQL Server Integration Services (SSIS)
+          href: dma/dma-assess-ssis.md
         - name: 确定适当的 Azure SQL 数据库 SKU
           href: dma/dma-sku-recommend-sql-db.md
         - name: 将 SQL Server 升级到更高版本
