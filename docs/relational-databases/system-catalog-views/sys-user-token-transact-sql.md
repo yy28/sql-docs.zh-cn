@@ -1,9 +1,9 @@
 ---
-title: sys.user_token (TRANSACT-SQL) |Microsoft Docs
+title: sys. user_token (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 08/27/2019
 ms.prod: sql
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 42214bc08d0d4eb24c3b51f3edd8010ba8bdb0e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e2f093083277d23bad91ea268da0026d6c4dc1a
+ms.sourcegitcommit: f517f1e2e7cac983fdb41229e60ca7ad019ecd48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095554"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064037"
 ---
-# <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sysuser_token-transact-sql"></a>sys.user_token (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中组成用户标记的每个数据库主体返回一行。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68095554"
 |**使用情况**|**nvarchar (128)**|指示服务器主体参与 GRANT 或 DENY 权限的鉴定，或用作验证器。<br /><br /> 此值可以为下列值之一：<br /><br /> GRANT 或 DENY<br /><br /> 仅 DENY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>请参阅  
- [sys.login_token &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
+ [login_token &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  
