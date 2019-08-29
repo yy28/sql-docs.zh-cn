@@ -21,13 +21,13 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 08/26/2019
 ms.locfileid: "68419603"
 ---
-# <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+# <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列  。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 `COLUMNS_UPDATED`，以测试触发器是否应执行某些操作。
@@ -74,7 +74,7 @@ WHERE TABLE_NAME = 'Person';
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. 使用 COLUMNS_UPDATED 测试表的前八列  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. 使用 COLUMNS_UPDATED 测试表的前八列  
 此示例将创建两个表：`employeeData` 和 `auditEmployeeData`。 `employeeData` 表包含敏感的员工工资信息，人力资源部的成员可以对此表进行修改。 如果员工的社会保险号码 (SSN)、年薪或银行帐户号码发生了更改，则将生成一个审核记录并插入到 `auditEmployeeData` 审核表中。
   
 通过 `COLUMNS_UPDATED()` 函数，我们可以快速对包含敏感员工信息的列所做的任何更改进行检测。 仅在尝试检测对表中前八列进行的更改时，以这种方式使用 `COLUMNS_UPDATED()` 才有效。
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. 使用 COLUMNS_UPDATED 测试八个以上的列  
+### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. 使用 COLUMNS_UPDATED 测试八个以上的列  
 若要对影响表中前八列以外的列的更新进行检测，请使用 `SUBSTRING` 函数测试由 `COLUMNS_UPDATED` 返回的正确位。 此示例对影响 `AdventureWorks2012.Person.Person` 表中的列 `3`、`5` 和 `9` 的更新进行检测。
   
 ```sql

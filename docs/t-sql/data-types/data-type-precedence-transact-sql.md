@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a1421c43f050e438898289a34e86ec4b87185a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020868"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030355"
 ---
 # <a name="data-type-precedence-transact-sql"></a>数据类型优先级 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 当两个不同数据类型的表达式用运算符组合后，优先级较低的数据类型首先转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误。 对于组合具有相同数据类型的操作数表达式的运算符时，运算的结果便为该数据类型。
   
@@ -56,12 +56,12 @@ ms.locfileid: "68020868"
 1. **图像**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. nvarchar（包括 nvarchar(max)）  
+1. nvarchar（包括 nvarchar(max)）    
 1. **nchar**  
-1. varchar（包括 varchar(max)）  
+1. varchar（包括 varchar(max)）    
 1. **char**  
-1. varbinary（包括 varbinary(max)）  
-1. binary（最低）  
+1. varbinary（包括 varbinary(max)）    
+1. binary（最低）   
   
 ## <a name="see-also"></a>另请参阅
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

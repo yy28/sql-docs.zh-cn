@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 46174db6dc0008dbeb9490cc96cf41cdef1bc3ed
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68823120"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123102"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -65,7 +65,7 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 此版本的 SSMS 可以安装在以下语言中：
 
 SQL Server Management Studio 18.2：  
-[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
+[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
@@ -74,14 +74,13 @@ SQL Server Management Studio 18.2：
 
 |  新项  |  详细信息  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 始终加密 | 更新了 Enclave Provider 以支持 Azure 证明。 |
+| Always Encrypted | 更新了 Enclave Provider 以支持 Azure 证明。 |
 | Intellisense/编辑器 | 添加了对数据分类的支持  |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | SSMS 索引对话框 - 添加了新索引选项 OPTIMIZE_FOR_SEQUENTIAL_KEY |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | 添加了 IntelliSense 支持 |
 | 查询执行或结果 | 在消息中添加了一个“完成时间”，以跟踪给定查询执行完毕的时间。 |
 | 查询执行或结果  | 允许显示更多数据（结果转换为文本）以及将其存储在单元中（结果转换为网格）。 对于这两种情况，SSMS 当前最多支持 2 百万个字符（之前分别为 25.6 万和 6.4 万）。 这还解决了用户无法从网格单元中获取超过 43680 个字符的问题。 |
 | 显示计划 | 在启用了内联标量 UDF 特性 (ContainsInlineScalarTsqlUdfs) 的情况下，在 QueryPlan 中添加了新的属性。 |
-| SMO | 添加了对“功能限制”*的支持。 有关功能本身的信息，请参阅[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 有关评估扩展的信息，请参阅 [SQL 评估 API 简介](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570)。 |
 | Integration Services (SSIS) | Azure 中 SSIS 包计划程序的性能优化 |
 |  |  |
 

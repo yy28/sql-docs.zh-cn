@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809862"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122997"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -62,7 +62,6 @@ SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | 查询执行或结果 | 在消息中添加了一个完成时间，以跟踪给定查询执行完毕的时间  。 |
 | 查询执行或结果 | 允许显示更多数据（结果转换为文本）以及将其存储在单元中（结果转换为网格）。 对于这两种情况，SSMS 当前最多支持 2 百万个字符（之前分别为 25.6 万和 6.4 万）。 这还解决了用户无法从网格单元中获取超过 43680 个字符的问题。 |
 | 显示计划 | 在启用了[内联标量 UDF 特性](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqludfs) 的情况下，在 QueryPlan 中添加了新的属性。 |
-| SMO | 添加了对功能限制的支持  。 有关功能本身的详细信息，请参阅[功能限制](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)。 |
 | SMO | 添加了对 SQL 评估 API  的支持。 有关详细信息，请参阅 [SQL 评估 API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview)。 |
 |  |  |
 
@@ -239,7 +238,6 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 |Always Encrypted| “连接到服务器”对话框中新“Always Encrypted”选项卡的“启用 Always Encrypted”复选框现在提供为数据库连接启用/禁用 Always Encrypted 的简便方法。|
 |具有安全 Enclave 的 Always Encrypted| 已在 SQL Server 2019 预览版中进行多项增强来支持具有安全 Enclave 的 Always Encrypted：“连接到服务器”对话框（新的“Always Encrypted”选项卡）中指定 Enclave 证明 URL 的文本字段。  “新列主密钥”对话框中用于控制新列主密钥是否允许 Enclave 计算的新复选框。  其他 Always Encrypted 密钥管理对话框现在可公开列主密钥允许 Enclave 计算的信息。|
 |审核文件|已将身份验证方法从基于存储帐户密钥更改为基于 Azure AD 的身份验证。|
-|审核文件|对已知的审核操作列表进行了更新以包含 FEATURE RESTRICTION ADD/CHANGE GROUP/DROP。|
 |数据分类| 重新组织了数据分类任务菜单：将子菜单添加到了数据库任务菜单中，并添加了从菜单中打开报表而无需先打开分类数据窗口的选项。|
 |数据分类|向 SMO 添加了新功能“数据分类”。 列对象公开新属性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId 和 IsClassified（只读）。 有关详细信息，请参阅 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |数据分类|向“数据分类”浮出控件添加了新的“分类报表”菜单项。|
