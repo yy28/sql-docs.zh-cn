@@ -1,7 +1,7 @@
 ---
 title: 安装向导帮助 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 08/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
-ms.openlocfilehash: edd2c17b106e536f1a2694fe0cb25e34b10d1138
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894066"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609299"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 
@@ -399,7 +399,7 @@ ms.locfileid: "68894066"
   
 * 使用 SMB 文件服务器时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须是域帐户。  
   
-* 用于安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帐户应对用作数据目录的 SMB 文件共享文件夹拥有完全控制 NTFS 权限。  
+* 如果帐户用于安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，应对用作数据目录的 SMB 文件共享文件夹拥有完全控制  NTFS 权限。  
   
 * 用于安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帐户应具有对 SMB 文件服务器的 SeSecurityPrivilege 特权。 若要授予此特权，请使用文件服务器上的“本地安全策略”控制台将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装帐户添加到 **“管理审核和安全日志”** 策略中。 在“本地安全策略”控制台中，可以在“用户权限分配”  部分中的“本地策略”  下找到此设置。  
   
@@ -417,11 +417,35 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="database-engine-configuration---maxdop-page"></a>“数据库引擎配置 - MaxDOP”页
+## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/>“数据库引擎配置 - MaxDOP”页
 
-“最大并行度(MaxDOP)”  决定了一个语句最多可以使用多少个处理器。 SQL Server 2019 引入了在安装过程中配置此选项的功能。 SQL Server 2019 还根据核心数自动为服务器检测推荐的 MaxDOP 设置。 默认的最大值为 8。  
+“最大并行度(MaxDOP)”  决定了一个语句最多可以使用多少个处理器。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了在安装过程中配置此选项的功能。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 还可以根据内核数自动为服务器检测建议的 MaxDOP 设置。  
 
-可以在此页上手动配置这一设置，并在安装后修改这一设置。 有关详细信息，请参阅[最大并行度](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。
+如果在安装过程中跳过此页，默认 MaxDOP 值就是此页中显示的建议值，而不是旧版本 (0) 的默认 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 值。 你还可以在此页上手动配置这一设置，并在安装后修改这一设置。 
+
+### <a name="uielement-list"></a>UIElement 列表
+
+* “最大并行度 (MaxDOP)”  是在并行执行一个语句期间使用的最大处理器数的值。 默认值遵循[配置服务器配置选项“最大并行度”](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。
+
+## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/>“数据库引擎配置 - 内存”页
+
+“最小服务器内存”  决定了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将用于缓冲池和其他缓存的内存下限。 默认值和建议值均为 0。 若要详细了解“最小服务器内存”  的影响，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
+
+“最大服务器内存”  决定了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将用于缓冲池和其他缓存的内存上限。 根据现有系统内存，默认值为 2,147,483,647MB，计算出的建议值遵循独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的[服务器内存配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。 若要详细了解“最大服务器内存”  的影响，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)。
+
+如果在安装过程中跳过此页，使用的“最大服务器内存”  默认值为 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 默认值 (2,147,483,647MB)。 选中“建议”  单选按钮后，即可在此页上手动配置这些设置，并在安装后修改这些设置。 有关详细信息，请参阅 [服务器内存配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
+
+### <a name="uielement-list"></a>UIElement 列表
+  
+**Default**：默认情况下，此单选按钮处于选中状态，并将“最小服务器内存”  和“最大服务器内存”  设置设为 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 默认值。 
+
+**建议**：必须选中此单选按钮，才能接受计算出的建议值，或将计算出的值更改为用户配置的值。  
+  
+**最小服务器内存(MB)** ：若要从计算出的建议值更改为用户配置的值，请输入“最小服务器内存”  值。  
+  
+**最大服务器内存(MB)** ：若要从计算出的建议值更改为用户配置的值，请输入“最大服务器内存”  值。  
+
+**单击此处接受用于 SQL Server 数据库引擎的建议内存配置**：选中此复选框，可以接受此服务器上计算出的建议内存配置。 如果“建议”  单选按钮处于选中状态，而此复选框处于未选中状态，那么安装程序将无法继续运行。
 
 ::: moniker-end
 

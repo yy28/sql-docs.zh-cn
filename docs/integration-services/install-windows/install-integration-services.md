@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9cbb85bafae51929676de93e4de285472bc5443
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023589"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621696"
 ---
 # <a name="install-integration-services"></a>安装集成服务
 
@@ -44,9 +44,9 @@ ms.locfileid: "68023589"
 -   [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
 ## <a name="install-standalone-or-side-by-side"></a>独立安装或并行安装    
-可以按下列配置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ：    
+可以按下列配置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]：    
     
--   你可以在没有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 先前实例的计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。    
+-   可以在没有旧 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。    
     
 -   可并行安装 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的现有实例。    
     
@@ -78,7 +78,7 @@ ms.locfileid: "68023589"
 
 ### <a name="configuring-ssis-event-logging"></a>配置 SSIS 事件日志记录
     
-默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将与运行包相关的事件记录到应用程序事件日志中。 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据收集器功能时，此设置可防止生成太多事件日志项。 未记录的事件包括 EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 0 更改为 1。    
+默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将与运行包相关的事件记录到应用程序事件日志中。 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据收集器功能时，此设置可防止生成太多事件日志项。 未记录的事件是，EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 0 更改为 1。    
     
 ## <a name="install-additional-components-for-integration-services"></a>安装 Integration Services 的其他组件
 
@@ -122,6 +122,6 @@ ms.locfileid: "68023589"
 
 -   **其他可选组件**。 根据需要，可以从 SQL Server 功能包下载其他第三方组件。
 
-    -   用于 Microsoft SQL ServerÂ® 的 MicrosoftÂ® Connector for SAP BW。 若要获取这些组件，请参阅 [MicrosoftÂ® SQL ServerÂ® 2017 功能包](https://www.microsoft.com/download/details.aspx?id=55992)。
+    -   用于 Microsoft SQL Server® 的 Microsoft® Connector for SAP BW。 要获取这些组件，请参阅 [Microsoft® SQL Server® 2017 功能包](https://www.microsoft.com/download/details.aspx?id=55992)。
 
     -   适用于 Oracle 的 Attunity Microsoft Connector 5.0 和适用于 Teradata 的 Attunity Microsoft Connector 5.0。 要获取这些组件，请参阅 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)（用于 Oracle 和 Teradata 的 Microsoft Connector v5.0）。

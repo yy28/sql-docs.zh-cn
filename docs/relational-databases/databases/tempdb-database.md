@@ -2,7 +2,7 @@
 title: tempdb 数据库 | Microsoft Docs
 description: 本主题提供有关在 SQL Server 和 Azure SQL 数据库中配置和使用 tempdb 数据库的详细信息
 ms.custom: P360
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e921c5b95a3d7fd4eb1e8c5b0cb9010c7d2344c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127141"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653775"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 
@@ -217,7 +217,7 @@ GO
 
 ## <a name="memory-optimized-tempdb-metadata"></a>内存优化 TempDB 元数据
 
-对于 SQL Server 上运行的许多工作负载，TempDB 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 tempdb 元数据，它可有效消除此瓶颈，并为 tempdb 繁重的工作负载解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 要选择加入此新功能，请使用以下脚本：
+对于 SQL Server 上运行的许多工作负载，TempDB 元数据争用历来是可伸缩性的瓶颈。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 tempdb 元数据，它可有效消除此瓶颈，并为 tempdb 繁重的工作负载解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引入了一个新功能，该功能属于[内存数据库](../in-memory-database.md)功能内存优化 tempdb 元数据，它可有效消除此瓶颈，并为 tempdb 繁重的工作负载解锁新级别的可伸缩性。 在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移到无闩锁的非持久内存优化表中。若要选择启用此新功能，请使用以下脚本：
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -319,7 +319,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a>另请参阅
-
-- [在 SQL Server 2005 中使用 tempdb](https://technet.microsoft.com/library/cc966545.aspx)  
-- [解决 tempdb 中磁盘空间不足的问题](https://msdn.microsoft.com/library/ms176029.aspx)

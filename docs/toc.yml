@@ -4153,6 +4153,8 @@
     - name: 升级 SQL Server
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: 兼容性认证
+          href: database-engine/install-windows/compatibility-certification.md
         - name: 支持的版本和版本升级 SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: 支持的版本和版本升级 SQL Server 2016
@@ -4190,6 +4192,8 @@
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
             - name: 更改数据库兼容性模式和使用查询存储
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: 使用查询优化助手更改数据库兼容性模式
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: 配置
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5700,7 +5704,7 @@
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
             - name: 视频 >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
-    - name: 数据库实验向导
+    - name: 数据库实验助手 (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
         - name: 入门
@@ -6555,7 +6559,7 @@
               items:
                 - name: 非对称密钥加密强度
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
-                - name: 检查磁盘输入和输出子系统是否存在 IO 延迟问题
+                - name: 检查磁盘输入和输入字系统是否存在 I/O 延迟问题
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: 检查磁盘 I/O 子系统是否存在读取重试问题
                   href: relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md
@@ -6925,7 +6929,7 @@
                       href: relational-databases/performance-monitor/sql-server-xtp-databases.md
                     - name: 垃圾回收
                       href: relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-                    - name: IO 调控器
+                    - name: I/O 调控器
                       href: relational-databases/performance-monitor/sql-server-xtp-io-governor.md
                     - name: 虚拟处理器
                       href: relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
@@ -7293,6 +7297,8 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: 升级后验证计划指南
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: 查询优化助手
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: Resource Governor
           href: relational-databases/resource-governor/resource-governor.md
           items:

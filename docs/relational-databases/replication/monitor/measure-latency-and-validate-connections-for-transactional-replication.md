@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 31e5f5e89a6421c72ecb381685f9450ac9ba9331
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770563"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633404"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,21 +113,21 @@ ms.locfileid: "68770563"
   
 2.  （可选）在发布服务器上，对发布数据库执行 [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 请验证订阅是否存在且状态是否处于活动状态。  
   
-3.  在发布服务器的发布数据库中，执行 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)，指定 **@publication** 。 请记录 **@tracer_token_id** 输出参数的值。  
+3.  在发布服务器上，对发布数据库执行 [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md)，同时指定“\@publication”  。 记录“\@tracer_token_id”  输出参数的值。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>确定事务发布的滞后时间并验证连接  
   
 1.  使用前一过程将跟踪令牌发送到发布。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，指定 **@publication** 。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中所需的 **tracer_id** 。  
+2.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，同时指定“\@publication”  。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中所需的 **tracer_id** 。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)，指定 **@publication** 以及步骤 2 提供的针对 **@tracer_id** 的跟踪令牌 ID。 这会返回所选跟踪令牌的滞后时间信息。  
+3.  在发布服务器上，对发布数据库执行 [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)，同时指定“\@publication”  ，以及第 2 步中“\@tracer_id”  对应的跟踪令牌 ID。 这会返回所选跟踪令牌的滞后时间信息。  
   
 #### <a name="to-remove-tracer-tokens"></a>删除跟踪令牌  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，指定 **@publication** 。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中要删除的跟踪令牌的 **tracer_id** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)，同时指定“\@publication”  。 这会返回发布到此发布的所有跟踪令牌的列表。 请记录结果集中要删除的跟踪令牌的 **tracer_id** 。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，指定 **@publication** 以及步骤 2 中要删除的针对 **@tracer_id** 的跟踪 ID。  
+2.  在发布服务器上，对发布数据库执行 [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)，同时指定“\@publication”  ，以及第 2 步中“@tracer_id”  对应的要删除跟踪的 ID。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本示例发送一个跟踪令牌记录并使用返回的已发送跟踪令牌的 ID 来查看滞后时间信息。  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028827"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621736"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 文档导航指南 
 
@@ -39,16 +39,15 @@ SQL Server 中心页可以在 [https://aka.ms/sqldocs](https://aka.ms/sqldocs) �
 
 ## <a name="toc-navigation-hints"></a>TOC 导航提示
 
-目录中 (TOC) 中在条目末尾带有 `>` 的条目指示你会离开 docs.microsoft.com。 
+目录 (TOC) 中以 `>` 结尾的条目表明，你会转到具有不同目录的技术文档。 
 
 ![toc 中的单个胡萝卜](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-TOC 中带有 `>>` 的条目指示你会转到包含不同目录的技术文档。 
+TOC 中包含 `>>` 的条目表明，你会离开 docs.microsoft.com。 
 
 ![TOC 导航标记](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-如果导航到这些页面之一，可以通过选择每个目录顶部的“欢迎使用 SQL Server >>”条目来返回到主 SQL Server 技术页面和目录。 
+如果转到这些页面之一，可以返回到 SQL Server 主技术页和目录，具体方法为选择每个目录顶部的“欢迎使用 SQL Server >”条目。 
 
 ![导航回到 SQL toc](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ SQL Server 技术文档为几种受支持的 SQL Server 版本和风格提供内
 
 ![SQL 文档版本筛选器](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-依次选择“所有 SQL”  \>“不隐藏任何内容”  ，可确保所有内容都可见，并且版本筛选器没有隐藏任何内容。 [不建议将“不隐藏任何内容”  选项用于常规用途](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。
+依次选择“所有 SQL”  \>“不隐藏任何内容”  ，可确保所有内容都可见，并且版本筛选器没有隐藏任何内容。 “不隐藏任何内容”  选项可能会在同一篇文章中显示与几个不同 SQL Server 版本相关的内容，这可能会令内容相互矛盾、不明确或产生混淆。 因此，[不建议将“不隐藏任何内容”  选项用于常规用途](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。 
 
 ## <a name="breadcrumbs"></a>痕迹导航
 

@@ -11,12 +11,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd114b329a479745fb8e0b1ce0967d025c10565
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912111"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009431"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "67912111"
 
 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可以创建非聚集 B 树索引作为聚集列存储索引中的辅助索引。 当列存储索引发生更改时，非聚集 B 树索引会更新。 这是一个可以带来优势的强大功能。 
 
-使用辅助 B 树索引可以有效搜索特定的行，而无需全面扫描所有行。  其他选项也可供使用。 例如，可以通过在 B 树索引中使用唯一约束来实施主键或外键约束。 由于不唯一的值无法插入 B 树索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法将值插入列存储。 
+使用辅助 B 树索引可以有效搜索特定的行，而无需全面扫描所有行。  其他选项也可供使用。 例如，可以通过在 B 树索引中使用唯一约束来实施主键或外键约束。 由于非唯一值无法插入 B 树索引中，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法将值插入列存储。 
 
 对于以下情况，请考虑使用基于列存储索引的 B 树索引：
 * 运行搜索特定值或小范围值的查询。
@@ -127,7 +127,7 @@ ms.locfileid: "67912111"
 
 例如：
 * 将 100 万行载入一个分区或非分区表。 获取一个包含 100 万行的压缩行组。 这非常适合用于提高数据压缩率和查询性能。
-* 将 100 万行均匀载入 10 个分区。 每个分区包含 10 万行，低于列存储压缩的最小阈值。 因此，列存储索引可以包含 10 个增量行组，每个行组包含 10 万行。 可通过某些方法强制将增量行组载入列存储。 但是，如果列存储索引中仅包含这些行，压缩的行组将会太小，无法实现最佳压缩和查询性能。
+* 将 100 万行均匀载入 10 个分区。 每个分区包含 10 万行，低于列存储压缩的最小阈值。 因此，列存储索引可以包含 10 个增量行组，每个行组包含 10 万行。 可通过某些方法强制将增量行组载入列存储。 不过，如果这些是列存储索引中的唯一行，压缩行组就会太小，无法实现最佳压缩和查询性能。
 
 有关分区的详细信息，请参阅 Sunil Agarwal 的博客文章 [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/)（我是否应该将列存储索引分区？）。
 
@@ -181,10 +181,9 @@ ms.locfileid: "67912111"
 |删除列存储索引|[DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)|删除列存储索引使用 B 树索引所用的标准 DROP INDEX 语法。 删除聚集列存储索引会将列存储表转换为堆。|  
 |从列存储索引中删除行|[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) 删除行。<br /><br /> **列存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将它标记为已逻辑删除但是未回收行的物理存储空间，直到重新生成索引。<br /><br /> **增量存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以逻辑和物理方式删除该行。|  
 |更新列存储索引中的行|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) 更新行。<br /><br /> **列存储** 行：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将它标记为已逻辑删除，然后将更新的行插入增量存储中。<br /><br /> **增量存储** 行： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在增量存储中更新它。|  
-|强制增量存储中的所有行进入列存储。|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) ...REBUILD<br /><br /> [列存储索引 - 碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|结合 REBUILD 选项的 ALTER INDEX 会强制所有行进入列存储。|  
+|强制增量存储中的所有行进入列存储。|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) ...REBUILD<br /><br /> [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|结合 REBUILD 选项的 ALTER INDEX 会强制所有行进入列存储。|  
 |对列存储索引进行碎片整理|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ...REORGANIZE 可在线对列存储索引进行碎片整理。|  
 |合并具有列存储索引的表。|[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)|
-
 
 ## <a name="next-steps"></a>后续步骤
 若要为以下服务创建空的列存储索引：

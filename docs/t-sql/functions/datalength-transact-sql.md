@@ -1,7 +1,7 @@
 ---
 title: DATALENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,26 +19,29 @@ helpviewer_keywords:
 - expressions [SQL Server], length
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62aa2b5249384405372afe662a84a73055f4a67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cca069fe3bb0aa0f489c13c022aeeebbd08db053
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026214"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653790"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 此函数返回用于表示任何表达式的字节数。
+
+> [!NOTE]
+> 若要返回字符串表达式中的字符数，请使用 [LEN](../../t-sql/functions/len-transact-sql.md) 函数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```
 DATALENGTH ( expression )   
 ```  
   
@@ -50,28 +53,28 @@ DATALENGTH ( expression )
 如果 expression 具有一个 nvarchar(max)、varbinary(max) 或 varchar(max) 数据类型，则为 bigint；否则为 int       。
   
 ## <a name="remarks"></a>Remarks  
-`DATALENGTH` 与数据类型配合使用时
-
+当与可以存储长度可变数据的数据类型一起使用时，`DATALENGTH` 会非常有用，如：
 - **图像**
 - **ntext**
 - **nvarchar**
 - **text**
 - **varbinary**
 - **varchar**
-
-尤其有用，因为这些数据类型可以存储可变长度数据。
   
 对于 NULL 值，`DATALENGTH` 返回 NULL。
   
 > [!NOTE]  
->  兼容级别可能影响返回值。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容性级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
-  
+> 兼容级别可能影响返回值。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容性级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+
+> [!NOTE]
+> 使用 [LEN](../../t-sql/functions/len-transact-sql.md) 返回编码到给定字符串表达式中的字符数，使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 返回给定字符串表达式的字节大小。 这些输出可能会因列中使用的数据类型和编码类型而异。 若要详细了解不同编码类型的存储区别，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
+
 ## <a name="examples"></a>示例  
 此示例查找 `Product` 表中的 `Name` 列的长度：
   
 ```sql
--- Uses AdventureWorks  
-  
+USE AdventureWorks2016  
+GO
 SELECT length = DATALENGTH(EnglishProductName), EnglishProductName  
 FROM dbo.DimProduct  
 ORDER BY EnglishProductName;  
@@ -83,6 +86,3 @@ GO
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [系统函数 (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
-  
-  
-

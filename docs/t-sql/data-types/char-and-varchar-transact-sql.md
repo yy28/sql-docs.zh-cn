@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8162c14620143aa70ea2e87f582ec99e613f234c
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354608"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "69653669"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68354608"
 ## <a name="arguments"></a>参数  
 char [ ( n ) ] 固定大小字符串数据   。 n 用于定义字符串大小（以字节为单位），并且它必须为 1 到 8,000 之间的值  。 对于单字节编码字符集（如拉丁文），存储大小为 n 个字节，并且可存储的字符数也为 n。    对于多字节编码字符集，存储大小仍为 n 个字节，但可存储的字符数可能小于 n。   char 的 ISO 同义词是 character   。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
-varchar [ ( n | max ) ] 可变大小字符串数据    。 n 用于定义字符串大小（以字节为单位），并且它可能为 1 到 8,000 之间的值  。 max 指示最大存储大小是 2^31-1 个字节 (2 GB)  。 对于单字节编码字符集（如拉丁文），存储大小为 n + 2 个字节，并且可存储的字符数也为 n。    对于多字节编码字符集，存储大小仍为 n + 2 个字节，但可存储的字符数可能小于 n   。 varchar 的 ISO 同义词是 charvarying 或 charactervarying    。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+varchar [ ( n | max ) ] 可变大小字符串数据    。 使用 n  定义字符串大小（以字节为单位），可以是介于 1 和 8,000 之间的值；或使用 max  指明列约束大小上限为最大存储 2^31-1 个字节 (2GB)。 对于单字节编码字符集（如拉丁文），存储大小为 n + 2 个字节，并且可存储的字符数也为 n。    对于多字节编码字符集，存储大小仍为 n + 2 个字节，但可存储的字符数可能小于 n   。 varchar 的 ISO 同义词是 charvarying 或 charactervarying    。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
 ## <a name="remarks"></a>Remarks  
 一个常见误解是，认为在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，n 定义字符数    。 但在 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 中，n 定义字符串的长度（以字节为单位）(0-8,000)     。 n 不会定义可存储的字符数  。 这类似于 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 的定义   。    

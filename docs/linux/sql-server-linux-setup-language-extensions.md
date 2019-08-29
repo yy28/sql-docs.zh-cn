@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476023"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653520"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>在 Linux 上安装 SQL Server 2019 语言扩展 (Java)
 
@@ -29,9 +29,9 @@ Java 扩展包位于 SQL Server Linux 源存储库中。 如果已为数据库�
 
 Linux 容器也支持语言扩展。 我们不提供带有语言扩展的预生成容器，但你可以使用 [GitHub 中提供的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)通过 SQL Server 容器创建一个。
 
-## <a name="uninstall-previous-ctp"></a>卸载以前的 CTP
+## <a name="uninstall-previous-ctp-version"></a>卸载旧版 CTP
 
-包列表在最近几个 CTP 版本中发生了更改，因而包的数量有所减少。 我们建议先卸载 CTP 2.x 以删除所有以前的包，然后再安装 CTP 3.2。 不支持并行安装多个版本。
+包列表在最近几个 CTP 版本中发生了更改，因而包的数量有所减少。 建议先通过卸载 CTP 版本来删除所有旧包，再安装 RC 1。 不支持并行安装多个版本。
 
 ### <a name="1-confirm-package-installation"></a>1.确认包安装
 
@@ -41,7 +41,7 @@ Linux 容器也支持语言扩展。 我们不提供带有语言扩展的预生�
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.卸载以前的 CTP 2.x 包
+### <a name="2-uninstall-previous-ctp-packages"></a>2.卸载旧 CTP 包
 
 在最低包级别进行卸载。 依赖于较低级别包的所有上游包都会自动卸载。
 
@@ -55,7 +55,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3.继续进行 CTP 3.2 安装
+### <a name="3-install-release-candidate-1-rc-1"></a>3.安装候选发布 1 (RC 1)
 
 使用本文中针对操作系统的说明在最高包级别进行安装。
 
@@ -85,14 +85,14 @@ ls /opt/microsoft/mssql/bin
 
 | 包名称 | 适用对象 | 描述 |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | 所有语言 | 用于运行 Java 代码的扩展性框架。 |
-|mssql-server-extensibility-java | Java | 用于加载 Java 执行环境的 Java 扩展。 没有适用于 Java 的其他库或包。 |
+|mssql-server-extensibility  | 所有语言 | 用于 Java 语言扩展的扩展性框架 |
+|mssql-server-extensibility-java | Java | 用于 Java 语言扩展的扩展性框架，包括支持的 Java 运行时 |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>安装语言扩展
 
-可通过安装 **mssql-server-extensibility-java** 在 Linux 上安装语言扩展和 Java。 安装 **mssql-server-extensibility-java** 时，包会自动安装 JRE 8（如果尚未安装）。 它还会将 JVM 路径添加到名为 JRE_HOME 的环境变量中。
+可通过安装 **mssql-server-extensibility-java** 在 Linux 上安装语言扩展和 Java。 当你安装 mssql-server-extensibility-java  时，包会自动安装 JRE 11（如果尚未安装的话）。 它还会将 JVM 路径添加到名为 JRE_HOME 的环境变量中。
 
 > [!Note]
 > 在已连接 Internet 的服务器上，将在主包安装过程中下载并安装包依赖项。 如果服务器未连接到 Internet，请参阅[脱机设置](#offline-install)了解更多详细信息。
@@ -286,7 +286,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>CTP 版本限制
+## <a name="limitations-in-the-rc-1-release"></a>RC 1 版本中的限制
 
 Linux 上的语言扩展和 Java 扩展性仍处于积极开发阶段。 预览版本尚未启用以下功能。
 
@@ -295,7 +295,7 @@ Linux 上的语言扩展和 Java 扩展性仍处于积极开发阶段。 预览�
 
 ### <a name="resource-governance"></a>资源调控
 
-Linux 和 Windows 之间存在供外部资源池进行[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)的奇偶校验，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的统计信息目前在 Linux 上具有不同的单位。 单位将在即将推出的 CTP 中保持一致。
+Linux 和 Windows 之间存在供外部资源池进行[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)的奇偶校验，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的统计信息目前在 Linux 上具有不同的单位。 
  
 | 列名   | 描述 | Linux 上的值 | 
 |---------------|--------------|---------------|

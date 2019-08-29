@@ -10,35 +10,32 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903621"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>使用 Azure Key Vault 中的客户托管密钥进行透明数据加密的常见错误
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-本文介绍了使用 Azure Key Vault 中的客户托管密钥进行透明数据加密 (TDE) 的要求，以及如何发现和解决常见错误。
+本文介绍了如何发现和解决 Azure Key Vault 密钥访问问题，这些问题导致配置为[结合使用透明数据加密 (TDE) 和 Azure Key Vault 中的客户托管密钥](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)的数据库变得无法访问。
 
-## <a name="requirements"></a>要求
+## <a name="introduction"></a>简介
+如果 TDE 配置为使用 Azure Key Vault 中的客户托管密钥，必须持续访问此 TDE 保护程序，才能让数据库保持联机状态。  如果逻辑 SQL Server 在 Azure Key Vault 中失去对客户托管 TDE 保护程序的访问权限，数据库就会拒绝所有连接，并在 Azure 门户中显示为无法访问。
 
-若要使用 Key Vault 中的客户托管 TDE 保护程序来排除 TDE 故障，必须满足以下要求：
+在最初的 48 小时内，如果基础 Azure Key Vault 密钥访问问题得到解决，数据库就会自动恢复并自动联机。  也就是说，对于所有间歇性和临时网络故障情况，无需执行任何用户操作，数据库就会自动联机。  在大多数情况下，需要执行用户操作来解决基础密钥保管库密钥访问问题。 
 
-- 逻辑 SQL Server 实例和密钥保管库必须位于同一区域内。
-- Azure Active Directory (Azure AD) 提供的逻辑 SQL Server 实例标识（即 Azure Key Vault 中的 AppId）必须是原始订阅中的租户。 如果服务器移到与创建位置不同的订阅中，必须重新创建服务器标识 (AppId)。
-- 必须启动并运行密钥保管库。 若要了解如何检查密钥保管库状态，请参阅 [Azure 资源运行状况](https://docs.microsoft.com/azure/service-health/resource-health-overview)。 若要注册接收通知，请阅读有关[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)的内容。
-- 在异地灾难恢复方案中，两个密钥保管库必须包含相同的密钥材料，这样故障转移才能生效。
-- 逻辑服务器必须有用于对密钥保管库进行身份验证的 Azure AD 标识 (AppId)。
-- AppId 必须有权访问密钥保管库，并且必须对已选为 TDE 保护程序的密钥拥有“获取、包装和取消包装”权限。
+如果不再需要无法访问的数据库，可以立即删除它，以停止产生成本。  在恢复对 Azure Key Vault 密钥的访问权限，且数据库恢复联机之前，不允许对数据库执行其他任何操作。   在无法访问使用客户托管密钥加密的数据库期间，也不支持在服务器上将 TDE 选项从客户托管密钥更改为服务托管密钥。 这是必要的，可以在对 TDE 保护程序的权限遭撤销期间保护数据免遭未经授权的访问。 
 
-有关详细信息，请参阅[使用 Azure Key Vault 配置 TDE 的指南](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault)。
+如果数据库无法访问的时长超过 48 小时，便无法再自动恢复。  如果所需的 Azure Key Vault 密钥访问已恢复，必须手动重新验证访问，这样数据库才能恢复联机。  在无法访问的时长超过 48 小时后，让数据库恢复联机可能需要相当长的时间（具体视数据库大小而定），目前需要使用支持票证。 在数据库恢复联机后，以前配置的设置（如异地链接（如果已配置 Geo-DR 的话）、PITR 历史记录和标记）则会丢失。  因此，建议使用[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)实现通知系统，以便在 48 小时内解决基础密钥保管库问题。 
 
-## <a name="common-misconfigurations"></a>常见错误配置
+
+## <a name="common-errors-causing-databases-to-become-inaccessible"></a>导致数据库无法访问的常见错误
 
 使用 Key Vault 进行 TDE 时，发生的大多数问题都是由下列错误配置之一引起的：
 
@@ -46,10 +43,11 @@ ms.locfileid: "68111533"
 
 - 密钥保管库遭意外删除。
 - 为 Azure Key Vault 配置的防火墙禁止访问 Microsoft 服务。
+- 间歇性网络错误导致密钥保管库不可用。
 
 ### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>无权访问密钥保管库或密钥不存在
 
-- 密钥遭意外删除。
+- 密钥遭意外删除、禁用或密钥已到期。
 - 逻辑 SQL Server 实例 AppId 遭意外删除。
 - 逻辑 SQL Server 实例移到其他订阅中。 如果逻辑服务器移到其他订阅中，必须新建 AppId。
 - 向 AppId 授予的密钥权限不足（即不包括“获取、包装和取消包装”权限）。
@@ -89,7 +87,7 @@ ms.locfileid: "68111533"
 若要了解详细信息，请参阅[将 Azure AD 标识分配给服务器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)。
 
 > [!IMPORTANT]
-> 如果在使用 Key Vault 对 TDE 进行初始配置后，逻辑 SQL Server 实例移到新订阅中，请重复 Azure AD 标识配置步骤，以新建 AppId。 然后，将 AppId 添加到密钥保管库，并向它分配正确的密钥权限。 
+> 如果在初始配置结合使用 TDE 和 Key Vault 后，逻辑 SQL Server 实例移到新租户中，请重复执行 Azure AD 标识配置步骤，以新建 AppId。 然后，将 AppId 添加到密钥保管库，并向它分配正确的密钥权限。 
 >
 
 ### <a name="missing-key-vault"></a>缺少密钥保管库
@@ -164,8 +162,82 @@ ms.locfileid: "68111533"
 - 如果 AppId 存在，请确保 AppID 拥有以下密钥权限：获取、包装和解包。
 - 如果 AppID 不存在，请使用“新增”  按钮进行添加。 
 
+## <a name="getting-tde-status-from-the-activity-log"></a>从活动日志中获取 TDE 状态
+
+为了监视由于 Azure Key Vault 密钥访问问题而导致的数据库状态，以下事件将根据 Azure 资源管理器 URL 和 Subscription+Resourcegroup+ServerName+DatabseName 记录到[活动日志](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)中，以获取资源 ID： 
+
+**当服务失去对 Azure Key Vault 密钥的访问权限时发生的事件**
+
+事件名称：MakeDatabaseInaccessible 
+
+状态：Started 
+
+说明:数据库已失去对 Azure Key Vault 密钥的访问权限，现在无法访问：<error message>   
+
+ 
+
+**当自愈的 48 小时等待时间开始时发生的事件** 
+
+事件名称：MakeDatabaseInaccessible 
+
+状态：正在进行 
+
+说明:数据库正在等待用户在 48 小时内重新建立 Azure Key Vault 密钥访问。   
+
+ 
+
+**当数据库自动恢复联机时发生的事件**
+
+事件名称：MakeDatabaseAccessible 
+
+状态：已成功 
+
+说明:已重新建立对 Azure Key Vault 密钥的数据库访问权限，数据库现在处于联机状态。 
+
+ 
+
+**当在 48 小时内未解决问题且必须手动验证 Azure Key Vault 密钥访问时发生的事件** 
+
+事件名称：MakeDatabaseInaccessible 
+
+状态：已成功 
+
+说明:数据库无法访问，要求用户修复 Azure Key Vault 错误，并使用重新验证密钥重新建立对 Azure Key Vault 密钥的访问权限。 
+
+ 
+
+**当在手动重新验证密钥后数据库联机时发生的事件**
+
+事件名称：MakeDatabaseAccessible 
+
+状态：已成功 
+
+说明:已重新建立对 Azure Key Vault 密钥的数据库访问权限，数据库现在处于联机状态。 
+
+ 
+
+**当已成功重新验证 Azure Key Vault 密钥访问且数据库恢复联机时发生的事件**
+
+事件名称：MakeDatabaseAccessible 
+
+状态：Started 
+
+说明:已开始恢复对 Azure Key Vault 密钥的数据库访问权限。 
+
+ 
+
+**当重新验证 Azure Key Vault 密钥访问失败时发生的事件**
+
+事件名称：MakeDatabaseAccessible 
+
+状态：失败 
+
+说明:无法恢复对 Azure Key Vault 密钥的数据库访问权限。 
+
+
 ## <a name="next-steps"></a>后续步骤
 
-- 请参阅[使用 Azure Key Vault 配置 TDE 的指南](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault)。
 - 了解 [Azure 资源运行状况](https://docs.microsoft.com/azure/service-health/resource-health-overview)。
-- 回顾如何[将 Azure AD 标识分配给服务器](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)。
+- 将[操作组](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)设置为，根据偏好设置（例如，电子邮件/短信/推送/语音、逻辑应用、Webhook、ITSM 或自动化 Runbook）接收通知和警报。 
+
+

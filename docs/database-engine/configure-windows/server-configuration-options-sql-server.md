@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025621"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609629"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "68025621"
   
 但有些选项需要在重新启动服务器后，新的配置值才能生效。 如果设置了新值并在没有重新启动服务器的情况下运行 sp_configure，则新值将出现在配置选项的“value”列中，而不是出现在“value_in_use”列中。   重新启动服务器之后，新值出现在“value_in_use”列中。   
   
-自配置选项是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据系统需要进行调整的选项。 大多数情况下，这使您无需手动设置值。 这方面的例子包括 **最小服务器内存** 、 **最大服务器内存** 和用户连接选项。  
+自配置选项是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据系统需要进行调整的选项。 大多数情况下，这使您无需手动设置值。 例如，“最大工作线程数”  选项和“用户连接数”选项。  
   
 ## <a name="configuration-options-table"></a>配置选项表  
  下表列出了所有可用的配置选项、可能的设置范围及其默认值。 配置选项按以下字母代码标记：  
@@ -69,7 +69,7 @@ ms.locfileid: "68025621"
   
 -   SC = 自配置选项。  
   
-    |配置选项|最小值|最大值|，则“默认”|  
+    |配置选项|最小值|最大值|默认|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[访问检查缓存桶计数](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[访问检查缓存配额](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  

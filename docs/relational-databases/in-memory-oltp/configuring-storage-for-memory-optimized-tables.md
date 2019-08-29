@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915278"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634570"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您需要配置存储容量和每秒输入/输出操作数 (IOPS)。  
   
 ## <a name="storage-capacity"></a>存储容量  
- 使用 [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 中的信息估计数据库的持久内存优化表的内存中大小。 由于未为内存优化表保留索引，因此不包括索引大小。 确定此大小后，您需要提供大小为持久内存中表大小的四倍的磁盘空间。  
+
+使用 [估算内存优化表的内存需求](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 中的信息估计数据库的持久内存优化表的内存中大小。 由于索引未对内存优化表暂留，因此不包括索引大小。 
+ 
+确定大小后，必须提供足够的磁盘空间来保留检查点文件，这些文件用于存储新更改的数据。 存储的数据不仅包含添加到内存中表的新行的内容，还包含现有行的新版本。 当有行插入或更新时，此存储会随之增大。 当日志截断发生时，将会合并行版本，并回收存储。 如果日志截断由于任何原因而延迟，内存中 OLTP 存储将会增大。
+
+为此区域确定存储大小的良好起点是，预留四倍于持久内存中表大小的空间。 监视空间使用情况，并准备在必要时扩展可用存储。
   
 ## <a name="storage-iops"></a>存储 IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 会大大增加您的工作负荷吞吐量。 因此，确保 IO 不成为瓶颈非常重要。  

@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2daf65d8c080700767fc4c94c5e4e9e0aeafa9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903590"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -148,8 +148,8 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   最小的维护成本  
   
- 转换现有表时，请考虑使用 **HIDDEN** 子句隐藏新的 **PERIOD** 列，以免影响未设计为处理新列的现有应用程序。  
-  
+ 转换现有表时，建议使用 HIDDEN  子句隐藏新的 PERIOD  列（datetime2 列“SysStartTime”  和“SysEndTime”  ），以免影响不旨在处理新列的现有应用程序。  
+
 ### <a name="adding-versioning-to-non-temporal-tables"></a>将版本控制添加到非临时表  
  如果你想要开始跟踪包含数据的非临时表的更改，则需要添加 **PERIOD** 定义，并可以选择为 SQL Server 将为你创建的空历史记录表提供名称：  
   

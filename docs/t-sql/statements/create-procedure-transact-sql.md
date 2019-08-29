@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006523"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000822"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +356,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>最佳实践  
  尽管并未列出所有最佳做法，这些建议还是可以提高过程性能。  
   
--   使用 SET NOCOUNT ON 语句作为过程主体中的第一个语句。 也就是说，将其放置于紧接着 AS 关键字之后。 这会禁止显示在执行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 语句后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送回客户端的消息。 通过消除这一不必要的网络开销可以提高数据库和应用程序的总体性能。 有关信息，请参阅 [SET NOCOUNT (Transact-SQL)](../../t-sql/statements/set-nocount-transact-sql.md)。  
+-   使用 SET NOCOUNT ON 语句作为过程主体中的第一个语句。 也就是说，将其放置于紧接着 AS 关键字之后。 这会禁止显示在执行任何 SELECT、INSERT、UPDATE、MERGE 和 DELETE 语句后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送回客户端的消息。 这可确保最大限度地减少生成的输出，以便一目了然。 不过，对于当前的硬件，没有可度量的性能优势。 有关信息，请参阅 [SET NOCOUNT (Transact-SQL)](../../t-sql/statements/set-nocount-transact-sql.md)。  
   
 -   当在过程中创建或引用数据库对象时使用架构名称。 如果不需要搜索多个架构，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 解析对象名称时所需的处理时间会更少。 它还可以防止在未指定架构的情况下，创建对象期间分配用户默认架构时导致的权限和访问问题。  
   

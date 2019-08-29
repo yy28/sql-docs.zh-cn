@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d632934b3b350077606d93ca162e8f859f0a533
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912152"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009453"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67912152"
 -   数据库兼容级别 130 和更高级别的快照隔离。  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>通过结合使用非聚集索引和列存储索引来提高性能  
- 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，可以在聚集列存储索引上定义非聚集索引。   
+ 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，可以对聚集列存储索引定义非聚集索引。   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例如：使用非聚集索引提高表查找的效率  
  若要提高数据仓库中表查找的效率，可以创建专用于运行查询的非聚集索引，这种查询对于表查找的效率最高。 例如，查找匹配值或返回较小范围值的查询对于 B 树索引效果更好，而不是列存储索引。 它们无需通过列存储索引进行完整表扫描，只需通过 B 树索引执行二进制搜索就可以更快地返回正确结果。  
@@ -131,6 +131,6 @@ END TRAN
  [列存储索引数据加载指南](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [开始使用列存储进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [列存储索引碎片整理](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

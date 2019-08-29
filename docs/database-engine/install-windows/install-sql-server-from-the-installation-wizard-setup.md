@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742907"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009385"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -54,8 +54,7 @@ ms.locfileid: "68742907"
 
 Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装的 Microsoft Visual C++ 2013 运行时二进制文件存在问题。 现在有可用的更新来修复该问题。 如果 Visual C++ 运行时二进制文件的此更新未安装，SQL Server 可能会在某些情况下出现稳定性问题。 安装 SQL Server 前，请先按照 [SQL Server 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)中的说明操作，以确定计算机是否需要 Visual C++ 运行时二进制文件的修补程序。 
 
-这不适用于 SQL Server 2019。  
-  
+这不适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]。
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>安装 SQL Server 2016 和 2017  
 
@@ -280,9 +279,9 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
   
      安装程序的其余工作流视你已为安装指定的功能而定。 你可能不会看到所有页，具体视你的选择而定。 
 
-1. 从 SQL Server 2019 开始，Polybase 不再要求在安装该功能之前在计算机上预安装 Oracle JRE 7 Update 51（至少）。 选择安装 Polybase 功能会将“Java 安装位置”页添加到 SQL Server 安装程序，并显示在“实例配置”页之后   。 可以在“Java 安装位置”页上选择安装 SQL Server 2019 安装所附带的 Azul Zulu Open JRE，或提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
+1. 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，PolyBase 不再要求在安装此功能前预先在计算机上安装 Oracle JRE 7 Update 51（最低版本）。 选择安装 Polybase 功能会将“Java 安装位置”页添加到 SQL Server 安装程序，并显示在“实例配置”页之后   。 在“Java 安装位置”页上，可以选择安装 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 安装随附的 Azul Zulu Open JRE，也可以提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
 
-1. 从 SQL Server 2019 开始，Java 已经添加了语言扩展。 选择安装 Java 功能会将“Java 安装位置”页添加到 SQL Server 安装程序对话框窗口，并显示在“实例配置”页之后   。 可以在“Java 安装位置”页上选择安装 SQL Server 2019 安装所附带的 Zulu Open JRE，或提供已在计算机上安装的另一个 JRE 或 JDK 的位置  。
+1. 自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，Java 已经添加了语言扩展。 选择安装 Java 功能会将“Java 安装位置”页添加到 SQL Server 安装程序对话框窗口，并显示在“实例配置”页之后   。 在“Java 安装位置”  页上，可以选择安装 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 安装随附的 Zulu Open JRE，也可以提供已在计算机上安装的另一个 JRE 或 JDK 的位置。
 
 1. 使用“服务器配置 - 服务帐户”  页指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户。 你在此页中配置的实际服务取决于你已选择安装的功能。 若要详细了解配置设置，请参阅[安装向导帮助](../../sql-server/install/instance-configuration.md#serverconfig)。
   
@@ -314,13 +313,29 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
      有关详细信息，请参阅[“数据库引擎配置 - 数据目录”页](../../sql-server/install/instance-configuration.md#datadir)。
 
      使用“数据库引擎配置 - TempDB”  页配置 tempdb  的文件大小、文件数、非默认安装目录和文件增长设置。 有关详细信息，请参阅[“数据库引擎配置 - TempDB”页](../../sql-server/install/instance-configuration.md#tempdb)。
-
+<<<<<<< HEAD
   
-     使用“[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 - MaxDOP”选项卡指定最大并行度  。 此设置决定了一个语句可以在执行期间使用多少个处理器。 系统自动在安装期间计算建议值。 有关详细信息，请参阅[最大并行度指南](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)。 此选项仅自 SQL Server 2019 起开始提供。 
+     使用“[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 - MaxDOP”页  指定最大并行度。 此设置决定了一个语句可以在执行期间使用多少个处理器。 系统自动在安装期间计算建议值。 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)。 
 
-     使用“数据库引擎配置 - 内存”  选项卡指定此 SQL Server 实例在启动后使用的最小和最大内存值。 可以使用默认值、计算出的建议值，也可以在选择“推荐”  选项后手动指定你自己的值。 此功能仅自 SQL Server 2019 起开始在安装程序内可用。 
+     使用“数据库引擎配置 - 内存”  页，指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在启动后使用的“最小服务器内存  和“最大服务器内存”  值。 可以使用默认值、计算出的建议值，也可以在选择“推荐”  选项后手动指定你自己的值。 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
+=======
 
-     使用“数据库引擎配置 - FILESTREAM”  页为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 FILESTREAM。 有关详细信息，请参阅[“数据库引擎配置 - FILESTREAM”页](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)。  
+     使用“[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 - MaxDOP”页  指定最大并行度。 此设置决定了一个语句可以在执行期间使用多少个处理器。 系统自动在安装期间计算建议值。 
+     
+    > [!NOTE]  
+    > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
+    
+    有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)。 
+
+     使用“数据库引擎配置 - 内存”  页，指定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例在启动后使用的“最小服务器内存  和“最大服务器内存”  值。 可以使用默认值、计算出的建议值，也可以在选择“推荐”  选项后手动指定你自己的值。
+     
+    > [!NOTE]  
+    > 仅自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，才能在“设置”中使用此页。 
+    
+    有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)。 
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
+
+     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. 使用“Analysis Services - 帐户预配”  页指定服务器模式，以及对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 拥有管理员权限的用户或帐户。 服务器模式决定了哪些内存和存储子系统用于服务器。 不同的解决方案类型在不同的服务器模式下运行。 如果计划在服务器上运行多维数据集数据库，请选择默认服务器模式选项“多维和数据挖掘”  。
 

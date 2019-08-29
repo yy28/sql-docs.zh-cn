@@ -1,21 +1,21 @@
 ---
-title: Linux 上的 SQL Server 2019 预览版的发行说明
-description: 本文包含 Linux 上运行的 SQL Server 2019 预览版的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
+title: Linux 上的 SQL Server 2019 的发行说明
+description: 本文包含 Linux 上运行的 SQL Server 2019 的发行说明和支持功能。 发行说明适用于最新版本和几个以前的版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 296581ab8052a7eab384721664fc10d675bb2d06
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: af3b6f82e3b76e2dd2b11403bccf4b3e0885912e
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476030"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890901"
 ---
-# <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux 上的 SQL Server 2019 预览版的发行说明
+# <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上的 SQL Server 2019 的发行说明
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "68476030"
 | Red Hat Enterprise Linux 7.3、7.4、7.5 或7.6 服务器 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
-| 适用于 Windows、Mac 或 Linux 的 Docker 引擎 1.8 及更高版本 | N/A | [安装指南](quickstart-install-connect-docker.md) | 
+| 适用于 Windows、Mac 或 Linux 的 Docker 引擎 1.8 及更高版本 | 空值 | [安装指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > 有关详细信息，请查看 Linux 上 SQL Server 的[系统要求](sql-server-linux-setup.md#system)。 有关 SQL Server 2017 的最新支持策略，请参阅 [Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
@@ -40,21 +40,22 @@ ms.locfileid: "68476030"
 
 以 SQL Server 为目标的大多数现有客户端工具可无缝转为以 Linux 上运行的 SQL Server 为目标。 某些工具与 Linux 配合使用时可能有特定的版本要求。 有关 SQL Server 工具的完整列表，请参阅[适用于 SQL Server 的 SQL 工具和实用程序](../tools/overview-sql-tools.md)。
 
-## <a name="release-history"></a>发行版本历史记录
+## <a name="release-history"></a>版本历史记录
 
-下表列出了 SQL Server 2019 预览版 CTP 版本的发型版本历史记录。
+下表列出了 SQL Server 2019 预览版的发布历史记录。
 
-| 发行版本               | 版本       | 发布日期 |
-|-----------------------|---------------|--------------|
-| [CTP 3.2](#CTP32)     | 15.0.1800.32  | 2019 年 7 月 24 日    |
-| [CTP 3.1](#CTP31)     | 15.0.1700.37  | 2019 年 6 月 26日    |
-| [CTP 3.0](#CTP30)     | 15.0.1600.8   | 2019 年 5 月 22 日    |
-| [CTP 2.5](#CTP25)     | 15.0.1500.28  | 2019 年 4 月 24 日    |
-| [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019 年 3 月 27 日    |
-| [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019 年 3 月 1 日    |
-| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018 年 12 月 11日   |
-| [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018 年 11 月 6 日   |
-| [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018 年 9 月 24 日   |
+| 发行版本                   | 版本       | 发布日期 |
+|---------------------------|---------------|--------------|
+| [候选发布](#rc)  | 15.0.1900.25  | 2019年 8 月 21 日    |
+| [CTP 3.2](#CTP32)         | 15.0.1800.32  | 2019 年 7 月 24 日    |
+| [CTP 3.1](#CTP31)         | 15.0.1700.37  | 2019 年 6 月 26日    |
+| [CTP 3.0](#CTP30)         | 15.0.1600.8   | 2019 年 5 月 22 日    |
+| [CTP 2.5](#CTP25)         | 15.0.1500.28  | 2019 年 4 月 24 日    |
+| [CTP 2.4](#CTP24)         | 15.0.1400.75  | 2019 年 3 月 27 日    |
+| [CTP 2.3](#CTP23)         | 15.0.1300.359 | 2019 年 3 月 1 日    |
+| [CTP 2.2](#CTP22)         | 15.0.1200.24  | 2018 年 12 月 11日   |
+| [CTP 2.1](#CTP21)         | 15.0.1100.94  | 2018 年 11 月 6 日   |
+| [CTP 2.0](#CTP20)         | 15.0.1000.34  | 2018 年 9 月 24 日   |
 
 ## <a id="cuinstall"></a> 如何安装更新
 
@@ -68,6 +69,20 @@ ms.locfileid: "68476030"
 - [在 Linux 上安装 SQL Server 2019 预览版的 Microsoft 机器学习服务 R 和 Python 支持](sql-server-linux-setup-machine-learning.md)
 - [安装 PolyBase 包](../relational-databases/polybase/polybase-linux-setup.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a id="rc"></a> 候选发布（2019 年 8 月）
+
+下面几个部分介绍了候选发布的包位置和已知问题。 若要详细了解 SQL Server 2019 上 Linux 的新功能，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动安装或脱机包安装，可以下载 RPM 和 Debian 包，其信息如下表所示：
+
+| “包” | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 15.0.1900.25-1 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
+| SLES RPM 包 | 15.0.1900.25-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[PolyBase RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
+| Ubuntu 16.04 Debian 包 | 15.0.1900.25-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1900.25-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1900.25-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1900.25-1_amd64.deb)</br>[扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1900.25-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1900.25-1_amd64.deb)</br>[PolyBase RPM 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1900.25-1_amd64.deb)|
 
 ## <a id="CTP32"></a> CTP 3.2（2019 年 7 月）
 

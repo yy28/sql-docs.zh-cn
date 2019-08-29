@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 70c86c40f290c26db5bcbc3526d66466c20504d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4803a99e0fb1435b545ec775b2a8abe063d9fd8d
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68214882"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890921"
 ---
-SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 创建 SQL Server 容器后，通过在容器中运行 `echo $MSSQL_SA_PASSWORD`，可发现指定的 `MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，请考虑更改 SA 密码。
+SA  帐户是在安装期间创建的 SQL Server 实例上的系统管理员。 创建 SQL Server 容器后，可以通过在容器中运行 `echo $MSSQL_SA_PASSWORD` 来发现指定的 `MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，请考虑更改 SA 密码：
 
 1. 选择 SA 用户要使用的强密码。
 
-1. 使用 `docker exec` 运行sqlcmd  ，以使用 Transact-SQL 更改密码。 将 `<YourStrong!Passw0rd>` 和 `<YourNewStrong!Passw0rd>` 替换为自己的密码值。
+1. 使用 `docker exec` 运行 sqlcmd  实用工具，以通过 Transact-SQL 语句来更改密码。 将 `<YourStrong!Passw0rd>` 和 `<YourNewStrong!Passw0rd>` 替换为你自己的密码值：
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \

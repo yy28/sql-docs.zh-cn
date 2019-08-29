@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316659"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621692"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
 
@@ -52,7 +52,7 @@ ms.locfileid: "68316659"
   
 -   Foreach ADO.NET 架构行集枚举器，用于枚举有关数据源的架构信息。 例如，可枚举并获取一组 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的表。  
   
--   Foreach 文件枚举器，用于枚举文件夹中的文件。 该枚举器可遍历子文件夹。 例如，可读取 Windows 文件夹及其子文件夹中所有具有 *.log 文件扩展名的文件。  
+-   Foreach 文件枚举器，用于枚举文件夹中的文件。 该枚举器可遍历子文件夹。 例如，可读取 Windows 文件夹及其子文件夹中所有具有 *.log 文件扩展名的文件。 请注意，无法指定文件检索顺序。  
   
 -   Foreach 源变量枚举器，用于枚举指定变量包含的可枚举对象。 可枚举对象可以是数组、ADO.NET **DataTable**和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 枚举器等。 例如，可以枚举包含服务器名称的数组中的值。  
   

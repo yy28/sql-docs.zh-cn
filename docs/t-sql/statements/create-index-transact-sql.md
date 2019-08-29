@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -51,15 +51,15 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-author: CarlRabeler
+author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809770"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009328"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -272,7 +272,8 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 筛选索引不适用于 XML 索引和全文检索。 对于 UNIQUE 索引，仅选定的行必须具有唯一的索引值。 筛选索引不允许有 IGNORE_DUP_KEY 选项。
 
-ON *partition_scheme_name* **( _column_name_ )**       
+ON partition_scheme_name ( column_name )        
+
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定分区方案，该方案定义要将分区索引的分区映射到的文件组。 须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，使数据库中存在该分区方案。 column_name 指定对已分区索引进行分区所依据的列  。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配  。 column_name 不限于索引定义中的列  。 除了在对 UNIQUE 索引分区时，必须从用作唯一键的列中选择 column_name 外，还可以指定基表中的任何列  。 通过此限制，[!INCLUDE[ssDE](../../includes/ssde-md.md)]可验证单个分区中的键值唯一性。
@@ -287,12 +288,14 @@ ON *partition_scheme_name* **( _column_name_ )**
 
 有关分区索引的详细信息，请参阅[已分区表和已分区索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。
 
-ON filegroup_name        
+ON filegroup_name       
+
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  ）
 
 为指定文件组创建指定索引。 如果未指定位置且表或视图尚未分区，则索引将与基础表或视图使用相同的文件组。 该文件组必须已存在。
 
-ON **"** default **"**       
+ON "default"        
+
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 在表或视图所在的文件组或分区方案上创建指定索引。
@@ -303,6 +306,7 @@ ON **"** default **"**
 > “default”不表示 CREATE INDEX 上下文中的数据库默认文件组。 这与 CREATE TABLE 不同，在 CREATE TABLE 中，“default”会在数据库默认文件组上找到表。
 
 [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]        
+
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  ）
 
 在创建聚集索引时，指定表的 FILESTREAM 数据的位置。 FILESTREAM_ON 子句用于将 FILESTREAM 数据移动到不同的 FILESTREAM 文件组或分区方案。
@@ -340,6 +344,7 @@ table_or_view_name
 指定创建索引时要使用的选项。
 
 PAD_INDEX = { ON | OFF }       
+
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定索引填充。 默认为 OFF。
@@ -354,7 +359,8 @@ PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX �
 
 在向后兼容的语法中，WITH PAD_INDEX 等效于 WITH PAD_INDEX = ON。
 
-FILLFACTOR **=** fillfactor        
+FILLFACTOR =fillfactor        
+
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 如果 fillfactor 为 100，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引  。
@@ -367,6 +373,7 @@ FILLFACTOR 设置仅在创建或重新生成索引时应用。 [!INCLUDE[ssDE](.
 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。
 
 SORT_IN_TEMPDB = { ON | OFF }       
+
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 指定是否在 tempdb 中存储临时排序结果  。 默认为 OFF。
@@ -412,7 +419,10 @@ OFF
 
 在向后兼容的语法中，WITH STATISTICS_NORECOMPUTE 等效于 WITH STATISTICS_NORECOMPUTE = ON。
 
-STATISTICS_INCREMENTAL = { ON | OFF }       
+STATISTICS_INCREMENTAL = { ON | OFF }      
+
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 为 ON 时，根据分区统计信息创建统计信息  。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息  。 默认为 **OFF**。
 
 如果不支持每个分区统计信息，将忽略该选项并生成警告。 对于以下统计信息类型，不支持增量统计信息：
@@ -448,7 +458,7 @@ OFF
 ONLINE = { ON | OFF }       
 指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。
 
-> [!NOTE]
+> [!IMPORTANT]
 > 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。
 
 ON      
@@ -456,6 +466,18 @@ ON
 
 OFF      
 在索引操作期间应用表锁。 创建、重新生成或删除聚集索引或者重新生成或删除非聚集索引的脱机索引操作将对表获取架构修改 (Sch-M) 锁。 这样可以防止所有用户在操作期间访问基础表。 创建非聚集索引的脱机索引操作将对表获取共享 (S) 锁。 这样可以防止更新基础表，但允许读操作（如 SELECT 语句）。
+
+有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
+
+可以联机创建索引（包括全局临时表中的索引），但以下情况除外：
+
+- XML 索引
+- 对本地临时表的索引
+- 视图的初始唯一聚集索引
+- 已禁用的聚集索引
+- 列存储索引
+- 聚集索引，前提是基础表包含 LOB 数据类型（image  、ntext  、text  ）和空间数据类型
+- varchar(max) 和 varbinary(max) 列不能是索引的一部分   。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，当表包含 varchar(max)  或 varbinary(max)  列时，可以使用 ONLINE  选项生成或重新生成包含其他列的聚集索引。 当基表包含 varchar(max)  或 varbinary(max)  列时，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不允许使用 ONLINE  选项
 
 有关详细信息，请参阅[联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)。
 
@@ -471,25 +493,17 @@ RESUMABLE **=** { ON | **OFF**}
  OFF      
 索引操作不可恢复。
 
-MAX_DURATION **=** *time* [**MINUTES**]，与 **RESUMABLE = ON** 一起使用（要求 **ONLINE = ON**）      
+MAX_DURATION **=** *time* [**MINUTES**]，与 **RESUMABLE = ON** 一起使用（要求 **ONLINE = ON**）   
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（公共预览版）
 
 指示可恢复联机索引操作在暂停之前执行的时间（以分钟为单位指定的整数值）。
 
-> [!WARNING]
+> [!IMPORTANT]
 > 有关可以联机执行的索引操作的更详细信息，请参阅[联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
 
- 可以联机创建包括全局临时表上的索引在内的索引，但下列索引例外：
-
-- XML 索引
-- 对局部临时表的索引。
-- 视图唯一的初始聚集索引。
-- 已禁用的聚集索引。
-- 聚集索引，前提是基础表包含 LOB 数据类型：image、ntext、text 和空间类型    。
-- varchar(max) 和 varbinary(max) 列不能是索引的一部分   。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中，当表包含 **varchar(max)** 或 **varbinary(max)** 列时，可以使用 **ONLINE** 选项来生成或重新生成包含其他列的聚集索引。 当基表包含 varchar(max) 或 varbinary(max) 列时，[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 不允许使用 ONLINE 选项    。
-
-有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。
+> [!NOTE] 
+> 列存储索引不支持可恢复联机索引重新生成。
 
 ALLOW_ROW_LOCKS = { ON | OFF }       
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -513,13 +527,12 @@ ON
 OFF      
 不使用页锁。
 
-
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF  }      
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
 
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅[顺序键](#sequential-keys)部分。
 
-MAXDOP = _max_degree_of_parallelism_      
+MAXDOP = *max_degree_of_parallelism*      
 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 在索引操作期间替代 max degree of parallelism 配置选项  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。
@@ -627,7 +640,7 @@ CREATE INDEX 语句同其他查询一样优化。 为了节省 I/O 操作，查�
 - INSERT、UPDATE、DELETE 或 MERGE 操作修改筛选索引中的数据。
 - 查询优化器使用该筛选索引生成查询计划。
 
-    |SET 选项|必需的值|默认服务器值|，则“默认”<br /><br /> OLE DB 和 ODBC 值|，则“默认”<br /><br /> DB-Library 值|
+    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
     |ANSI_NULLS|ON|ON|ON|OFF|
     |ANSI_PADDING|ON|ON|ON|OFF|
@@ -1127,6 +1140,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 索引体系结构和设计指南](../../relational-databases/sql-server-index-design-guide.md)     
+[联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  
 [索引和 ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     
