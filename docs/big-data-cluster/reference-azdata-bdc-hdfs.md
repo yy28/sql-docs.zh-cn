@@ -5,26 +5,27 @@ description: azdata bdc hdfs 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fab1f3e831f660a01ea2f03967a1144725baabde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: d63d0cbd9d3d36d2d76d5b1fa01337d17084306d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653465"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155225"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章为 **azdata** 工具中的 **bdc hdfs** 命令提供了参考。 有关其他 **azdata** 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+本文是**azdata**的参考文章。 
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
+[azdata bdc hdfs 状态](reference-azdata-bdc-hdfs-status.md) | Hdfs 服务状态命令。
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | HDFS shell 是用于 HDFS 文件系统的简单交互式命令 shell。
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | 列出给定文件或目录的状态。
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | 确定文件或目录是否存在。  如果存在，则返回 True；否则返回 False。
@@ -327,4 +328,6 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。
+- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

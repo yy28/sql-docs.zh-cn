@@ -5,22 +5,22 @@ description: Azdata bdc debug 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d2cdb04cfc0bf98e2143b8e7b5ae67a7b0db9069
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 9e14528baf80d08841f6e9e17a0476dfa81fd48d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653367"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153200"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章提供了有关 azdata 工具中 bdc debug 命令的参考。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+本文是**azdata**的参考文章。 
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -28,7 +28,7 @@ ms.locfileid: "69653367"
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | 复制日志。
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | 触发日志记录转储。
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
-从大数据群集复制调试日志 - 系统上需要 kube 配置。
+从大数据群集复制调试日志-Kubernetes 配置在您的系统上是必需的。
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
@@ -60,7 +60,7 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 #### `--verbose`
 提高日志记录详细程度。 使用 - 调试获取完整的调试日志。
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-触发日志记录转储，并将其从容器中复制出来 - 系统上需要 kube 配置。
+触发器日志记录转储, 并将其从 Kubernetes 复制到系统上。
 ```bash
 azdata bdc debug dump --namespace -n 
                       --container -c  
@@ -88,4 +88,6 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。
+- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

@@ -10,12 +10,12 @@ ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 077fb708f09db0182bc5f1510f0264b139beab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312070"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153399"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>第 4 课：从完整数据库备份执行还原
   本课演示如何使用 tsql 语句从上一课所创建的完整数据库备份中执行还原。  
@@ -40,9 +40,9 @@ ms.locfileid: "63312070"
   
     ```  
   
-5.  验证 T-SQL 语句，然后单击**Execute**  
+5.  验证 T-sql 语句, 然后单击 "**执行**"  
   
 ### <a name="return-to-tutorials-portal"></a>返回到教程入门  
- [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
+ [教程：SQL Server 备份和还原到 Azure Blob 存储服务](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  
   
   

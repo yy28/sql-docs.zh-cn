@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -30,12 +30,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a82d94e1a2dbf3f2155a93c8a3e8c46383dbde
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872167"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154555"
 ---
 # <a name="database-lifecycle-management"></a>数据库生命周期管理
   数据库生命周期管理 (DLM) 是一种基于策略的方法，用于管理数据库和数据资产。 DLM 不是一种产品而是管理数据库应用程序的数据库架构、 数据和元数据的一套全面的方法。 拥有周密、积极主动的 DLM 方法，组织可以根据相应的性能、保护、可用性和成本的级别来管理数据资源。  
@@ -45,10 +45,10 @@ ms.locfileid: "62872167"
  要查看完整主题，请参阅 [数据库生命周期管理 (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)。  
   
 ## <a name="see-also"></a>请参阅  
- [Windows Azure 主页](http://www.windowsazure.com/)   
- [Windows Azure 开发人员中心](http://www.windowsazure.com/develop/overview/)   
- [Windows Azure 管理中心](http://www.windowsazure.com/manage/overview/)   
- [Windows Azure 团队博客](http://www.windowsazure.com/community/blog/)   
- [Windows Azure 支持选项](http://www.windowsazure.com/support/contact/)  
+ [Azure 主页](http://www.windowsazure.com/)   
+ [Azure 开发人员中心](http://www.windowsazure.com/develop/overview/)   
+ [Azure 管理中心](http://www.windowsazure.com/manage/overview/)   
+ [Azure 团队博客](http://www.windowsazure.com/community/blog/)   
+ [Azure 支持选项](http://www.windowsazure.com/support/contact/)  
   
   

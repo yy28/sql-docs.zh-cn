@@ -14,12 +14,12 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cc8f84eb268fab041b65e4fc2faced7ee9b0103a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480625"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154442"
 ---
 # <a name="dqs-administration"></a>dqs 管理
   使用[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，您可以管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上执行的各种 DQS 活动、配置与 DQS 活动有关的服务器级属性、配置 Reference Data Services 设置以及 DQS 日志设置。 通过 **的** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能来执行这些操作。 根据您在 DQS 中的安全访问权限（角色），授权/拒绝您在此区域中执行某些功能。  
@@ -32,7 +32,7 @@ ms.locfileid: "65480625"
   
 -   使 DQS 管理员可以从 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 监视 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]上的各种 DQS 活动、根据需要 *终止* 正在运行的活动或 *停止* 活动中某个正在运行的过程。  
   
--   配置引用数据服务设置，如设置与 Microsoft Azure 市场的连接以及管理直接第三方引用数据服务提供程序。  
+-   配置引用数据服务设置, 如设置与 Azure Marketplace 的连接以及管理直接第三方引用数据服务提供程序。  
   
 -   配置清理和匹配活动的阈值。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65480625"
 ### <a name="configuration"></a>配置  
  DQS 管理员使用 **中的** “配置” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 屏幕执行以下操作：  
   
--   **引用数据**：配置引用数据服务提供程序：Microsoft Azure 市场或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 您还可以使用它指定连接到 Internet 的代理设置以使用 Microsoft Azure 市场。  
+-   **引用数据**：配置引用数据服务提供程序：Azure Marketplace 或直接引用数据服务提供商。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 它还使你能够指定用于连接到 Internet 的代理设置以使用 Azure Marketplace。  
   
 -   **常规设置**：指定数据清理和数据匹配的阈值，并指定是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中启用探查通知。 DQS 在执行数据质量项目中的计算机辅助的清理和匹配活动期间使用这些阈值。  
   

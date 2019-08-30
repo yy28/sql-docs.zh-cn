@@ -13,12 +13,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876814"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154830"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
   使用  **“备份数据库”** 对话框的 **“介质选项”** 页可以查看或修改数据库介质选项。  
@@ -33,12 +33,12 @@ ms.locfileid: "62876814"
 >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅[维护计划](../maintenance-plans/maintenance-plans.md)和[使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”  按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
   
 ## <a name="options"></a>选项  
   
 ### <a name="overwrite-media"></a>覆盖介质  
- **“覆盖介质”** 面板中的选项可以控制如何将备份写入介质。 如果在“备份数据库”对话框的“常规”页上选择了 URL（Windows Azure 存储）作为备份目标，则禁用“覆盖介质”部分下的选项。 可使用 `BACKUP TO URL.. WITH FORMAT` Transact-SQL 语句覆盖备份。 有关详细信息，请参阅 [SQL Server Backup to URL](sql-server-backup-to-url.md)。  
+ **“覆盖介质”** 面板中的选项可以控制如何将备份写入介质。 如果在 "备份数据库" 对话框的 "常规" 页上选择了 URL (Azure 存储) 作为备份目标, 则会禁用 "覆盖媒体" 部分下的选项。 可使用 `BACKUP TO URL.. WITH FORMAT` Transact-SQL 语句覆盖备份。 有关详细信息，请参阅 [SQL Server Backup to URL](sql-server-backup-to-url.md)。  
   
  仅支持选项 **“备份到新介质集并清除所有现有备份集”** 与加密选项一起使用。 如果选择 **“备份到现有介质”** 部分下的选项，则将禁用 **“备份选项”** 页上的加密选项。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62876814"
  如果备份到现有介质集，还可以要求备份操作验证备份集的名称和过期时间。  
   
  **介质集名称**  
- 如果选中了“检查媒体集名称和备份集过期时间”  ，还可以指定用于此备份操作的媒体集的名称。  
+ 如果选中了“检查媒体集名称和备份集过期时间”，还可以指定用于此备份操作的媒体集的名称。  
   
  **备份到新介质集并清除所有现有备份集**  
  使用新介质集，并清除以前的备份集。  

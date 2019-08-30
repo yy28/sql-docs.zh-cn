@@ -5,39 +5,42 @@ description: azdata bdc 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 44b0f8daafec86714bb8161c1d30130eed3d480d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653447"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155143"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章为 **azdata** 工具中的 **bdc** 命令提供了参考。 有关其他 **azdata** 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+本文是**azdata**的参考文章。 
 
 ## <a name="commands"></a>命令
-
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | 创建大数据群集。
 [azdata bdc delete](#azdata-bdc-delete) | 删除大数据群集。
 [azdata bdc config](reference-azdata-bdc-config.md) | 配置命令。
 [azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | 终结点命令。
-[azdata bdc status](reference-azdata-bdc-status.md) | 状态命令。
 [azdata bdc debug](reference-azdata-bdc-debug.md) | 调试命令。
-[azdata bdc control](reference-azdata-bdc-control.md) | 控制命令。
-[azdata bdc pool](reference-azdata-bdc-pool.md) | 池命令。
+[azdata bdc status](reference-azdata-bdc-status.md) | BDC 状态命令。
+[azdata bdc control](reference-azdata-bdc-control.md) | 控制服务命令。
+[azdata bdc sql](reference-azdata-bdc-sql.md) | Sql 服务命令。
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Hdfs 服务命令。
+[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 服务命令。
+[azdata bdc 网关](reference-azdata-bdc-gateway.md) | 网关服务命令。
+[azdata bdc 应用](reference-azdata-bdc-app.md) | 应用服务命令。
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模块提供用于访问 HDFS 文件系统的命令。
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令允许用户通过创建和管理会话、语句及批处理来与 Spark 系统交互。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-创建 SQL Server 大数据群集 - 系统中需要 kube 配置及以下环境变量：['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD']。
+创建 SQL Server 大数据群集-在系统上需要 Kubernetes 配置, 同时提供以下环境变量 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -46,15 +49,11 @@ azdata bdc create [--name -n]
                   [--force -f]
 ```
 ### <a name="examples"></a>示例
-
 引导式 BDC 部署体验 - 你将收到所需值的提示。
-
 ```bash
 azdata bdc create
 ```
-
 使用参数的 BDC 部署。
-
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
@@ -62,20 +61,17 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```bash
 azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
 ```
-
 使用参数的 BDC 部署 - 由于使用了 --force 标志，不会给出任何提示。
-
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 ```
-
 ### <a name="optional-parameters"></a>可选参数
 #### `--name -n`
 大数据群集名称，用于 kubernetes 命名空间。
 #### `--config-profile -c`
-大数据群集配置配置文件，用于部署群集：['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+大数据群集配置配置文件, 用于部署群集: [' aks '、' kubeadm '、' minikube '、' kubeadm-开发-测试 ']
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在[https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)中查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，则可将环境变量 ACCEPT_EULA 设置为“是”。 可以在 https://aka.ms/azdata-eula 和 https://go.microsoft.com/fwlink/?LinkId=2002534 查看此产品的许可条款。
 #### `--node-label -l`
 大数据群集节点标签，用于指定要部署到的节点。
 #### `--force -f`
@@ -92,13 +88,13 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
-删除 SQL Server 大数据群集 - 系统中需要 kube 配置及以下环境变量：['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD']。
+删除 SQL Server 大数据群集-系统上需要 Kubernetes 配置。
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
 ```
 ### <a name="examples"></a>示例
-BDC 删除，其中控制器用户名和密码已在系统环境中设置。
+BDC 删除。
 ```bash
 azdata bdc delete --name <cluster_name>
 ```
@@ -122,4 +118,6 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。
+- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

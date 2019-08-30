@@ -13,12 +13,12 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4ca791a1a0ce46929f4d409d234f8dbc7efdec3
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794951"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155382"
 ---
 # <a name="host-database-on-managed-instance"></a>托管实例上的主机数据库
 
@@ -36,7 +36,7 @@ ms.locfileid: "68794951"
 
 **数据库端:**
 
-1. 创建 Azure SQL 数据库托管实例包括虚拟网络。 [起步创建 Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
+1. 创建 Azure SQL 数据库托管实例包括虚拟网络。 [快速入门：创建 Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
 2. 配置点到站点连接。 [使用本机 Azure 证书身份验证配置与 VNet 的点到站点连接:Azure 门户](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)
 3. 配置 SQL 数据库托管实例 Azure Active Directory 身份验证。 [通过 SQL 配置和管理 Azure Active Directory 身份验证](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)
 
@@ -108,7 +108,7 @@ ms.locfileid: "68794951"
 
 **设置数据库和网站**
 
-1. 连接 Windows Azure 虚拟网络, 以确保可以连接到托管实例。
+1. 连接 Azure 虚拟网络, 以确保可以连接到托管实例。
 
     ![mds-SQLServer2019-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "mds-SQLServer2019-MI_P2SVPNConnect")  
 

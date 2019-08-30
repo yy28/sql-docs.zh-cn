@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652388"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160705"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
 
@@ -37,7 +37,7 @@ ms.locfileid: "69652388"
    - **SQL Server 2019 扩展**
    - **Azure CLI**
 
-- Kubernetes 服务器要求至少为 1.10 版。 对于 AKS，需要使用 `--kubernetes-version` 参数指定与默认版本不同的版本。
+- Kubernetes 服务器的最低1.13 版本。 对于 AKS，需要使用 `--kubernetes-version` 参数指定与默认版本不同的版本。
 
 - 验证 AKS 基本方案时，为获得最佳体验，请使用：
    - 8 个跨所有节点的 vCPU

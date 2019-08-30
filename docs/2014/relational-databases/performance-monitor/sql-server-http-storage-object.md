@@ -10,17 +10,17 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250542"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152681"
 ---
-# <a name="sql-server-httpstorageobject"></a>SQL Server，HTTP_STORAGE_OBJECT
-  **SQLServer:HTTP_STORAGE_OBJECT** 性能对象由监视 Windows Azure 存储帐户的性能计数器组成。 使用[在 Windows Azure 中的 SQL Server 数据文件](../databases/sql-server-data-files-in-microsoft-azure.md)功能，可以在 Windows Azure 存储 Blob 中存储数据库文件。 此性能对象将每一个 Windows Azure 存储帐户都视为不同的驱动器。  
+# <a name="sql-server-http_storage_object"></a>SQL Server，HTTP_STORAGE_OBJECT
+  **SQLServer: HTTP_STORAGE_OBJECT**性能对象由监视 Azure 存储帐户的性能计数器组成。 使用[azure 功能中的 SQL Server 数据文件](../databases/sql-server-data-files-in-microsoft-azure.md), 你可以在 Azure 存储 blob 中存储数据库文件。 此性能对象将每个 Azure 存储帐户视为不同的驱动器。  
   
-|计数器名称|Description|  
+|计数器名称|描述|  
 |------------------|-----------------|  
 |**Read Bytes/sec**|读取操作过程中每秒从 HTTP 存储传输的数据量。|  
 |**Write Bytes/sec**|写入操作过程中每秒从 HTTP 存储传输的数据量。|  

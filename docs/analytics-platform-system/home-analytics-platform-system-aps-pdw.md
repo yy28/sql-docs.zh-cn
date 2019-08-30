@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0f4fc55632b4effbe04776542b35aa54dcd9462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960841"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153362"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -23,7 +23,7 @@ Microsoft Analytics Platform System (APS) 是一种设计用于数据仓库和�
 
 Analytics Platform System 承载的 SQL Server 并行数据仓库 (PDW) 是运行大规模并行处理 (MPP) 数据仓库的软件。
 
-PolyBase 技术将关系 PDW 数据与来自多个源（包括 Hortonworks on Windows Server、Hortonworks on Linux、Cloudera on Linux、HDInsight 的 Windows Azure Blob 存储）的 Hadoop 数据结合在一起。 这些高级数据集成功能，加上与商业智能工具的深度集成，让 Analytics Platform System 能够返回集成分析，使业务决策人能够做出更好、有更深入见解的业务决策。
+PolyBase 技术将关系 PDW 数据与来自多个源的 Hadoop 数据组合在一起, 包括 Hortonworks on Windows Server、Hortonworks on Linux、Cloudera on Linux and HDInsight Azure blob 存储。 这些高级数据集成功能，加上与商业智能工具的深度集成，让 Analytics Platform System 能够返回集成分析，使业务决策人能够做出更好、有更深入见解的业务决策。
 
 Analytics Platform System 可作为预安装和预配了硬件和软件的设备发送到你的数据中心，以运行多个工作负荷。 购买 Analytics Platform System 时，会根据业务需求为 PDW 购买计算节点。
 
@@ -38,13 +38,13 @@ Analytics Platform System 不仅运行速度块，而且可缩放，其采用高
 
 除了实现突破性的查询性能外，PDW 还易于：
 
-- 增长到任何位置的数据仓库从几兆兆字节到单个设备，通过将"缩放单位"添加到现有系统中的数据超过 6 拍字节。
+- 通过向现有系统添加 "缩放单位", 将数据仓库增长到单个设备中从数 tb 到超过 6 pb 的数据。
 
-- 信任你的数据会在那里时需要由于内置高冗余和高可用性。
+- 由于内置的高冗余和高可用性, 需要信任你的数据。
 
-- 解决加载和合并数据的现代数据挑战。
+- 解决加载和合并数据的新式数据难题。
 
-- 通过使用 PDW 的高度并行化的 PolyBase 技术将 Hadoop 数据集成以快速分析关系数据。
+- 使用 PDW 的高度并行的 PolyBase 技术, 将 Hadoop 数据与关系数据集成, 以便快速进行分析。
 
 - 使用商业智能工具构建全面的端到端解决方案。
 

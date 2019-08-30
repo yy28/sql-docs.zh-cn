@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2ee3474d5fedd467170c601a7807117c23e37096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935406"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152576"
 ---
 # <a name="data-quality-client-home-screen"></a>数据质量客户端主屏幕
 
@@ -60,7 +60,7 @@ ms.locfileid: "67935406"
  显示与所连接的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]相关的所有活动（当前和历史活动）的状态的视图。 监视的活动类型包括知识管理、数据质量项目和基于 SSIS 的数据更正。  
   
  **Configuration**  
- 显示 Reference Data Services 帐户的配置属性（通过 Microsoft Azure 市场和直接针对 Reference Data Services）、常规设置（交互式清理、匹配和事件探查）以及日志严重级别设置。  
+ 显示引用数据服务帐户的配置属性 (包括通过 Azure Marketplace 和直接到引用数据服务)、常规设置 (交互式清理、匹配和分析) 和日志严重性设置。  
   
 ## <a name="see-also"></a>请参阅  
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)   

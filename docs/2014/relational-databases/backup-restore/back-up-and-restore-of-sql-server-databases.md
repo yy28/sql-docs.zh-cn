@@ -22,19 +22,19 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3854b9b49435cf9db453527deaa9d427b04e6f74
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890821"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155090"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
   本主题介绍备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的优点、基本的备份和还原术语，还介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的备份和还原策略以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的安全注意事项。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了最大限度地降低灾难性数据丢失的风险，您需要定期备份数据库以保留对数据所做的修改。 规划良好的备份和还原策略有助于防止数据库因各种故障而造成数据丢失。 通过还原一组备份，然后恢复数据库来测试您的策略，以便为有效地应对灾难做好准备。  
   
- 除了在本地存储中存储备份外，SQL Server 还支持备份到 Windows Azure Blob 存储服务和从其还原。 有关详细信息，请参阅 [SQL Server 备份和还原使用 Windows Azure Blob 存储服务](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 除了用于存储备份的本地存储以外, SQL Server 还支持备份到 Azure Blob 存储服务和从中还原。 有关详细信息, 请参阅[SQL Server 与 Azure Blob 存储服务进行备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "68890821"
   
     -   硬件故障（例如，磁盘驱动器损坏或服务器报废）。  
   
-    -   自然灾难。 通过使用 SQL Server 备份到 Windows Azure Blob 存储服务，您可以在本地位置之外的其他区域创建一个站外备份，这样在发生影响您的本地位置的自然灾难时仍可以使用数据库。  
+    -   自然灾难。 通过使用 SQL Server 备份到 Azure Blob 存储服务, 您可以在本地位置之外的其他区域创建一个异地备份, 以在发生影响本地位置的自然灾难时使用。  
   
 -   此外，数据库备份对于进行日常管理（如将数据库从一台服务器复制到另一台服务器、设置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像以及进行存档）非常有用。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68890821"
  可用于在出现故障后还原或恢复数据的数据副本。 数据库备份还可用于将数据库副本还原到新位置。  
   
  备份设备 (backup device)  
- 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Windows Azure Blob 存储服务，并且使用 **URL** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅 [SQL Server 备份和还原使用 Windows Azure Blob 存储服务](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务, 并且使用**URL**格式来指定备份文件的目标和名称。 有关详细信息, 请参阅[SQL Server 与 Azure Blob 存储服务进行备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  备份介质  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  

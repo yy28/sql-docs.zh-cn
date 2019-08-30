@@ -1,5 +1,5 @@
 ---
-title: sys.database_usage （Azure SQL 数据库） |Microsoft Docs
+title: database_usage (Azure SQL 数据库) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,36 +20,36 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d64f3e03db3eaf12755eb36d41814d4548a2ae52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079402"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155536"
 ---
-# <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
+# <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注意：这仅适用于 Azure SQL 数据库 V11。**  
+  **纪录这仅适用于 Azure SQL 数据库 V11。**  
   
- 列出在数量、 类型和持续时间的数据库[!INCLUDE[ssSDS](../../includes/sssds-md.md)]服务器。  
+ 列出[!INCLUDE[ssSDS](../../includes/sssds-md.md)]服务器上数据库的数量、类型和持续时间。  
   
- **Sys.database_usage**视图包含以下各列。  
+ **Database_usage**视图包含以下列。  
   
 |列名|描述|  
 |-----------------|-----------------|  
 |time|使用事件发生的日期。|  
-|sku|数据库服务层的类型：**Web**，**业务**，**基本**，**标准**，**高级**|  
+|sku|数据库的服务层类型:**Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
 |quantity|指定当天存在的 SKU 类型的数据库的最大数量。|  
   
 ## <a name="permissions"></a>权限  
- 对此视图的只读访问可供有权连接到的所有用户**主**数据库。  
+ 对此视图的只读访问权限可用于具有连接到**master**数据库的权限的所有用户。  
   
 ## <a name="remarks"></a>备注  
- **Sys.database_usage**视图的每一天的你的订阅返回一行。  
+ **Database_usage**视图为订阅的每一天返回一行。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL 数据库定价详细信息](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [帐户和 Windows Azure SQL Database 中的计费](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Azure SQL Database 中的帐户和计费](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

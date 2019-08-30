@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076522"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152898"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>创建数据源（SSAS 多维）
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维模型中，数据源对象表示与您正从其处理（或导入）数据的数据源的连接。 一个多维模型必须包含至少一个数据源对象，但您可以添加更多对象以便合并来自若干数据仓库的数据。 使用本主题中的说明可为您的模型创建数据源对象。 有关在此对象上设置属性的详细信息，请参阅[设置数据源属性（SSAS 多维）](set-data-source-properties-ssas-multidimensional.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "66076522"
  使用 Windows 身份验证的连接在数据源设计器的 **“模拟信息”** 选项卡上指定。 使用此选项卡选择在连接到外部数据源时 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行所基于的帐户。 并非在所有情况下都可以使用所有选项。 有关这些选项以及何时使用它们的详细信息，请参阅[设置模拟选项（SSAS - 多维）](set-impersonation-options-ssas-multidimensional.md)。  
   
 ### <a name="database-authentication"></a>数据库身份验证  
- 作为对 Windows 身份验证的替代方法，您可以指定使用数据库管理系统提供的身份验证服务的连接。 在某些情况下，需要使用数据库身份验证。 要求使用数据库身份验证的情况包括使用 SQL Server 身份验证连接到 Windows Azure SQL Database，或访问在不同的操作系统上或不受信任的域中运行的关系数据源。  
+ 作为对 Windows 身份验证的替代方法，您可以指定使用数据库管理系统提供的身份验证服务的连接。 在某些情况下，需要使用数据库身份验证。 使用数据库身份验证的情况包括使用 SQL Server 身份验证连接到 Azure SQL 数据库, 或访问在不同的操作系统上或在不受信任的域中运行的关系数据源。  
   
  对于使用数据库身份验证的数据源，在连接字符串上指定数据库登录名的用户名和密码。 当您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模型中设置数据源连接时，如果您在连接管理器中输入某一用户名和密码，则凭据将添加到连接字符串中。 请记住，应指定对数据具有读取权限的用户标识。  
   
@@ -72,23 +72,23 @@ ms.locfileid: "66076522"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，打开要在其中定义数据源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或连接到要在其中定义数据源的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。  
   
-2.  在“解决方案资源管理器”中，右键单击“数据源”文件夹，然后单击“新建数据源”以便启动“数据源向导”     。  
+2.  在“解决方案资源管理器”中，右键单击“数据源”文件夹，然后单击“新建数据源”以便启动“数据源向导”。  
   
 3.  在 **“选择如何定义连接”** 页中，选择 **“基于现有连接或新连接创建数据源”** ，然后单击 **“新建”** 以便打开 **“连接管理器”** 。  
   
-     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分，我们假定 SQL Server 数据库连接。  
+     在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分, 我们将采用 SQL Server 的数据库连接。  
   
 4.  选择要用于该连接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或本机 OLE DB 访问接口。  
   
      新连接的默认访问接口是“本机 OLE DB\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
   
-     您可以选择一个不同的访问接口来访问其他数据源。 有关提供程序和关系数据库支持的一系列[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[支持数据源&#40;SSAS 多维&#41;](supported-data-sources-ssas-multidimensional.md)。  
+     您可以选择一个不同的访问接口来访问其他数据源。 有关支持[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的提供程序和关系数据库的列表, 请参阅[支持&#40;SSAS 多维&#41;数据源](supported-data-sources-ssas-multidimensional.md)。  
   
-5.  输入选定访问接口连接到基础数据源所需的信息。 如果选中“本机 OLE DB\SQL Server Native Client”  访问接口，请输入以下信息：  
+5.  输入选定访问接口连接到基础数据源所需的信息。 如果选中“本机 OLE DB\SQL Server Native Client”访问接口，请输入以下信息：  
   
-    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果服务器作为命名实例安装，则必须包括实例名称 (例如，\<计算机名 >\\< 实例名\>)。  
+    1.  **“服务器名称”** 是数据库引擎实例的网络名称。 它可以指定为 IP 地址、计算机的 NETBIOS 名称或完全限定域名。 如果服务器作为命名实例安装, 则必须包括实例名称 (例如, \<computername >\\< instancename\>)。  
   
-    2.  **“登录到服务器”** 指定将对连接进行身份验证的方式。 **“使用 Windows 身份验证”** 使用 Windows 身份验证。 **“使用 SQL Server 身份验证”** 为支持混合模式身份验证的 Windows Azure SQL Database 或 SQL Server 实例指定数据库用户登录名。  
+    2.  **“登录到服务器”** 指定将对连接进行身份验证的方式。 **“使用 Windows 身份验证”** 使用 Windows 身份验证。 **使用 SQL Server 身份验证**为 Azure SQL 数据库或支持混合模式身份验证的 SQL Server 实例指定数据库用户登录名。  
   
         > [!IMPORTANT]  
         >  连接管理器对于使用 SQL Server 身份验证的连接包括一个 **“保存我的密码”** 复选框。 尽管显示此复选框，但并不总是使用它。  
@@ -105,7 +105,7 @@ ms.locfileid: "66076522"
   
          将在数据源向导的 **“选择如何定义连接”** 页的 **“数据连接”** 窗格中显示新连接。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。  
   
 7.  在 **“模拟信息”** 中，指定在连接到外部数据源时 Analysis Services 将使用的 Windows 凭据或用户标识。 如果您正在使用数据库身份验证，则出于连接目的，这些设置将被忽略。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66076522"
   
      您指定的帐户必须对数据源具有读取权限。  
   
-8.  单击“下一步”  。  在 **“完成向导”** 中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
+8.  单击“下一步”。  在 **“完成向导”** 中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
   
 9. 单击 **“完成”** 。  此时，解决方案资源管理器的 **“数据源”** 文件夹中将出现新数据源。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66076522"
   
  如果解决方案中具有多个数据源，并且您希望在同一位置维护连接字符串，则可以将当前数据源配置为引用其他数据源对象。  
   
- “数据源引用”  是与同一解决方案中的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象或数据源之间的关联。 引用提供了一种在解决方案的对象之间同步数据源的方式。 每次生成项目时，都会同步连接字符串信息。 若要更改引用另一对象的数据源的连接字符串，则必须更改被引用对象的连接字符串。  
+ “数据源引用” 是与同一解决方案中的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象或数据源之间的关联。 引用提供了一种在解决方案的对象之间同步数据源的方式。 每次生成项目时，都会同步连接字符串信息。 若要更改引用另一对象的数据源的连接字符串，则必须更改被引用对象的连接字符串。  
   
  您可以通过清除此复选框来删除该引用。 此操作将结束对象间的同步并允许您更改数据源中的连接字符串。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66076522"
  您可以创建多个数据源对象，以便支持与其他数据源的连接。 每个数据源都必须具有可以用来创建关系的列。  
   
 > [!NOTE]  
->  如果定义了多个数据源和从单个查询中的多个源查询数据，例如对于雪花型维度，则必须定义支持使用远程查询的数据源`OpenRowset`。 通常，此数据源将为 Microsoft SQL Server 数据源。  
+>  如果定义了多个数据源, 并且在单个查询中从多个源查询数据 (例如, 对于型维度), 则必须定义支持使用`OpenRowset`远程查询的数据源。 通常，此数据源将为 Microsoft SQL Server 数据源。  
   
  使用多个数据源的要求包括：  
   
@@ -165,14 +165,14 @@ ms.locfileid: "66076522"
   
 2.  创建数据源视图，使用 SQL Server 关系数据库作为数据源。 这是您的主数据源。  
   
-3.  在数据源视图设计器中，使用刚创建的数据源视图，在工作区的任何地方右键单击，然后选择“添加/删除表”  。  
+3.  在数据源视图设计器中，使用刚创建的数据源视图，在工作区的任何地方右键单击，然后选择“添加/删除表”。  
   
 4.  选择第二个数据源，然后选择您要添加的表。  
   
-5.  查找并选择您所添加的表。 右键单击该表，然后选择“新建关系”  。 选择包含匹配数据的源列和目标列。  
+5.  查找并选择您所添加的表。 右键单击该表，然后选择“新建关系”。 选择包含匹配数据的源列和目标列。  
   
 ## <a name="see-also"></a>请参阅  
- [支持的数据源&#40;SSAS 多维&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [数据源支持&#40;的 SSAS 多维&#41;](supported-data-sources-ssas-multidimensional.md)   
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)  
   
   

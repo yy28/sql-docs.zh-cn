@@ -1,5 +1,5 @@
 ---
-title: 第 8 课. 将数据库还原到 Windows Azure 存储 |Microsoft Docs
+title: 第 8 课. 将数据库还原到 Azure 存储 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090715"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153745"
 ---
-# <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>第 8 课. 将数据库还原到 Windows Azure 存储
-  在本课中，您将学习如何在本地创建备份文件，然后将其还原到 Windows Azure 存储。 注意，数据库可在本地，也可在 Windows Azure 的虚拟机中。 不需要学完第 4、5、6 和 7 课即可听懂本课。  
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>第 8 课. 将数据库还原到 Azure 存储
+  在本课中, 您将学习如何在本地创建备份文件, 然后将其还原到 Azure 存储。 请注意, 你可以在本地或 Azure 中的虚拟机上使用数据库。 不需要学完第 4、5、6 和 7 课即可听懂本课。  
   
  本课假定您已完成以下步骤：  
   
--   具有 Windows Azure 存储帐户。  
+-   你有 Azure 存储帐户。  
   
--   已在 Windows Azure 存储帐户下创建了容器。  
+-   在 Azure 存储帐户下创建了容器。  
   
 -   已在容器上创建了具有读取、写入和列表权限的策略。 还生成了 SAS 密钥。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66090715"
   
 -   已在源计算机中创建了数据库。  
   
- 若要将数据库还原到 Windows Azure 存储，可执行以下步骤：  
+ 若要将数据库还原到 Azure 存储, 可执行以下步骤:  
   
 1.  在源计算机中，启动 SQL Server Management Studio。  
   
@@ -67,29 +67,29 @@ ms.locfileid: "66090715"
   
      在此步骤结束时，您的容器应在管理门户上列出数据 (.mdf) 和 (.ldf) 文件。  
   
- 若要使用 SQL Server Management Studio 用户界面通过指向 Windows Azure 存储的数据和日志文件还原数据库，请执行以下步骤：  
+ 若要使用 SQL Server Management Studio 用户界面还原包含指向 Azure 存储的数据文件和日志文件的数据库, 请执行以下步骤:  
   
-1.  在中**对象资源管理器**，单击服务器名称以展开服务器树。  
+1.  在**对象资源管理器**中, 单击服务器名称以展开服务器树。  
   
-2.  展开**数据库**，然后选择数据库。  
+2.  展开 "**数据库**", 然后选择数据库。  
   
-3.  右键单击数据库，指向“任务”  ，再单击“还原”  。  
+3.  右键单击数据库，指向“任务”，再单击“还原”。  
   
-4.  上**常规**页上，在**还原**源部分中，单击**源**设备。  
+4.  在 "**常规**" 页上的 "**还原**源" 部分中, 单击 "**源**设备"。  
   
-5.  单击浏览按钮**源**设备文本框中，这将打开**选择备份设备**对话框。  
+5.  单击 "**源**设备" 文本框的浏览按钮, 这将打开 "**选择备份设备**" 对话框。  
   
-6.  在备份介质文本框中，选择**文件**，然后单击**添加**按钮查找备份 (.bak) 文件。 单击“确定”  。  
+6.  在 "备份介质" 文本框中, 选择 "**文件**", 然后单击 "**添加**" 按钮以找到备份 (.bak) 文件。 单击 **“确定”** 。  
   
-7.  单击**文件**第一页上。  
+7.  在第一页上单击 "**文件**"。  
   
-8.  在中**将数据库文件还原**下部分**还原为**字段中，键入以下内容：  
+8.  在 "将**数据库文件还原**为" 部分中的 "**还原为**" 字段下, 键入以下内容:  
   
-     对于数据文件，请键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`。 对于日志文件，请键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`。  
+     对于数据文件, 键入: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`。 对于日志文件, 键入: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
-9. 单击“确定”  。  
+9. 单击 **“确定”** 。  
   
  还原完后，登录到管理门户。 应该能在容器中看到 .mdf 和 .ldf 文件，如下所示：  
   
@@ -97,6 +97,6 @@ ms.locfileid: "66090715"
   
  **下一课：**  
   
- [第 9 课.从 Microsoft Azure 存储还原数据库](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [第 9 课.从 Azure 存储还原数据库](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

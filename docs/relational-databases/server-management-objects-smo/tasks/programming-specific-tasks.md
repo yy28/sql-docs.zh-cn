@@ -1,5 +1,5 @@
 ---
-title: 编程特定的任务 |Microsoft Docs
+title: 编程特定任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030228"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148397"
 ---
 # <a name="programming-specific-tasks"></a>编程特定的任务
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030228"
 |[实现全文搜索](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|介绍如何在 SMO 中实现全文搜索目录和索引。|  
 |[实现终结点](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|介绍如何创建端点以处理用于数据库镜像、SOAP 请求和 Service Broker 的负载。|  
 |[创建和更新统计信息](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|介绍如何在 SMO 中设置和监视有关数据库的统计信息。|  
-|[跟踪和重播事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|介绍如何使用**跟踪**并**重播**在 SMO 中的跟踪和重播事件的对象。|  
+|[跟踪和重播事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|介绍如何在 SMO 中使用**跟踪**和**重播**对象跟踪和重播事件。|  
   
   

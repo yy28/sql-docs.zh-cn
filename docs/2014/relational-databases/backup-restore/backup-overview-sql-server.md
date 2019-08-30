@@ -22,12 +22,12 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922118"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155004"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
@@ -38,7 +38,7 @@ ms.locfileid: "62922118"
   
 -   [备份压缩](#BackupCompression)  
   
--   [对 SQL Server 中的备份操作的限制](#Restrictions)  
+-   [SQL Server 中的备份操作的限制](#Restrictions)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62922118"
  [还原 (restore)](restore-and-recovery-overview-sql-server.md)  
  一种包括多个阶段的过程，用于将指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份中的所有数据和日志页复制到指定数据库，然后通过应用记录的更改使该数据在时间上向前移动，以前滚备份中记录的所有事务。  
   
- **类型的备份**  
+ **备份类型**  
   
  [仅复制备份](copy-only-backups-sql-server.md)  
  独立于正常 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份序列的特殊用途备份。  
@@ -67,7 +67,7 @@ ms.locfileid: "62922118"
  数据库的备份。 完整数据库备份表示备份完成时的整个数据库。 差异数据库备份只包含自最近完整备份以来对数据库所做的更改。  
   
  [差异备份 (differential backup)](full-database-backups-sql-server.md)  
- 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（  差异基准），仅包含自差异基准以来发生了更改的数据区。  
+ 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（差异基准），仅包含自差异基准以来发生了更改的数据区。  
   
  部分差异备份仅记录自上一次部分备份（称为“差异基准”）以来文件组中发生更改的数据区。  
   
@@ -77,16 +77,16 @@ ms.locfileid: "62922118"
  [日志备份 (log backup)](transaction-log-backups-sql-server.md)  
  包括以前日志备份中未备份的所有日志记录的事务日志备份。 （完整恢复模式）  
   
- [file backup](full-file-backups-sql-server.md)  
+ [文件备份](full-file-backups-sql-server.md)  
  一个或多个数据库文件或文件组的备份。  
   
  [部分备份](partial-backups-sql-server.md)  
  仅包含数据库中部分文件组的数据（包含主要文件组、每个读/写文件组以及任何可选指定的只读文件中的数据）。  
   
- **备份介质术语和定义**  
+ **备份媒体术语和定义**  
   
  [备份设备](backup-devices-sql-server.md)  
- 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Microsoft Azure Blob 存储服务，并且使用 **URL** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅 [SQL Server 备份和还原使用 Windows Azure Blob 存储服务](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务, 并且使用**URL**格式来指定备份文件的目标和名称。 有关详细信息, 请参阅[SQL Server 与 Azure Blob 存储服务进行备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  [备份介质](media-sets-media-families-and-backup-sets-sql-server.md)  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
@@ -100,13 +100,13 @@ ms.locfileid: "62922118"
  [介质集 (media set)](media-sets-media-families-and-backup-sets-sql-server.md)  
  备份介质（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入了一个或多个备份操作。  
   
- [镜像的介质集](mirrored-backup-media-sets-sql-server.md)  
+ [镜像介质集](mirrored-backup-media-sets-sql-server.md)  
  介质集的多个副本（镜像）。  
   
-##  <a name="BackupCompression"></a> 备份压缩  
+##  <a name="BackupCompression"></a>备份压缩  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持压缩备份，并且 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本可以还原压缩后的备份。 有关详细信息，请参阅[备份压缩 (SQL Server)](backup-compression-sql-server.md)。  
   
-##  <a name="Restrictions"></a> 对 SQL Server 中的备份操作的限制  
+##  <a name="Restrictions"></a>SQL Server 中的备份操作的限制  
  可以在数据库在线并且正在使用时进行备份。 但是，存在下列限制。  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>无法备份脱机数据  
@@ -136,7 +136,7 @@ ms.locfileid: "62922118"
  如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作总会等待第一个操作设置的锁超时。（超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续执行。 如果锁超时，则第二个操作失败。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
- **若要使用备份设备和备份介质**  
+ **使用备份设备和备份介质**  
   
 -   [为磁盘文件定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,9 +156,9 @@ ms.locfileid: "62922118"
   
 -   [从设备还原备份 (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
--   [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
- **若要创建备份**  
+ **创建备份**  
   
 > [!NOTE]  
 >  对于部分备份或仅复制备份，必须分别使用带 PARTIAL 或 COPY_ONLY 选项的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句。  
@@ -179,7 +179,7 @@ ms.locfileid: "62922118"
   
 -   [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   

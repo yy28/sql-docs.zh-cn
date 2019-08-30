@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0aeb3d94bf1b67674b59f756f330e1d460f0cde7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771125"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160708"
 ---
-# <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
+# <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   将数据库还原到非发起服务器、数据库或因其他原因而无法运行复制过程的系统时，删除复制设置。 如果将已复制数据库还原到执行备份的服务器或数据库以外的其他服务器或数据库，则将无法保留复制设置。 在还原时, 服务器直接调用**sp_restoredbreplication** , 自动从还原的数据库删除复制元数据。  
@@ -40,13 +40,17 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @srv_orig = ] 'original_server_name'`在其中创建备份的服务器的名称。 *original_server_name*的值为**sysname**, 无默认值。  
+`[ @srv_orig = ] 'original_server_name'`  
+ 创建备份的服务器的名称。 *original_server_name*的值为**sysname**, 无默认值。  
   
-`[ @db_orig = ] 'original_database_name'`已备份的数据库的名称。 *original_database_name*的值为**sysname**, 无默认值。  
+`[ @db_orig = ] 'original_database_name'`  
+ 已备份数据库的名称。 *original_database_name*的值为**sysname**, 无默认值。  
   
-`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或**1** (失败)  

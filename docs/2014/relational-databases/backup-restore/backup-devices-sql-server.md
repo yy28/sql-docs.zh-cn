@@ -25,15 +25,15 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922187"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155049"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”  ）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个介质集。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上执行备份操作期间，将备份的数据（“备份”）写入物理备份设备。 将介质集中的第一个备份写入物理备份设备时，便会初始化此备份设备。 包含一个或多个备份设备的集合的备份构成一个介质集。  
   
  **本主题内容：**  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62922187"
   
 -   [使用逻辑备份设备](#LogicalBackupDevice)  
   
--   [镜像备份媒体集](#MirroredMediaSets)  
+-   [镜像备份介质集](#MirroredMediaSets)  
   
--   [SQL Server 备份数据存档](#Archiving)  
+-   [存档 SQL Server 备份](#Archiving)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -61,12 +61,12 @@ ms.locfileid: "62922187"
  物理备份设备 (physical backup device)  
  磁带机或操作系统提供的磁盘文件。 可以将备份数据写入 1 到 64 个备份设备。 如果备份数据需要多个备份设备，则所有设备必须对应于一种设备类型（磁盘或磁带）。  
   
- 除了磁盘或磁带外，还可以将 SQL Server 备份写入 Windows Azure Blob 存储服务。  
+ 除了磁盘或磁带外, 还可以将 SQL Server 备份写入 Azure Blob 存储服务。  
   
-##  <a name="DiskBackups"></a> 使用磁盘备份设备  
+##  <a name="DiskBackups"></a>使用磁盘备份设备  
  **本节内容：**  
   
--   [指定备份文件的使用物理名称 (Transact SQL)](#BackupFileUsingPhysicalName)  
+-   [使用其物理名称指定备份文件 (Transact-sql)](#BackupFileUsingPhysicalName)  
   
 -   [指定磁盘备份文件的路径](#BackupFileDiskPath)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62922187"
 > [!IMPORTANT]  
 >  我们建议备份磁盘应不同于数据库数据和日志的磁盘。 这是数据或日志磁盘出现故障时访问备份数据必不可少的。  
   
-###  <a name="BackupFileUsingPhysicalName"></a> 指定备份文件的使用物理名称 (Transact SQL)  
+###  <a name="BackupFileUsingPhysicalName"></a>使用其物理名称指定备份文件 (Transact-sql)  
  使用物理设备名称指定备份文件的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语法为：  
   
  BACKUP DATABASE *database_name*  
@@ -109,7 +109,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
   
-###  <a name="BackupFileDiskPath"></a> 指定磁盘备份文件的路径  
+###  <a name="BackupFileDiskPath"></a>指定磁盘备份文件的路径  
  指定备份文件时，应输入其完整路径和文件名。 如果您在备份到文件时仅指定文件名或相对路径，则备份文件将存储到默认备份目录中。 默认备份目录为 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup，其中 *n* 是服务器实例号。 因此，对于默认服务器实例，默认备份目录为：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  为防止产生歧义，尤其是在脚本中，我们建议您在每个 DISK 子句中显式指定备份目录的路径。 但是，当您使用查询编辑器时这一点不再那么重要。 此时，如果您确定备份文件位于默认备份目录中，则可以省略 DISK 子句中的路径。 例如，下面的 `BACKUP` 语句将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到默认的备份目录中。  
@@ -123,7 +123,7 @@ GO
 > [!NOTE]  
 >  默认位置存储在 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 下的 **BackupDirectory**注册表项中。  
   
-###  <a name="NetworkShare"></a> 备份到网络共享上的文件  
+###  <a name="NetworkShare"></a>备份到网络共享上的文件  
  要让 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问远程磁盘文件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须有权访问网络共享。 这包括备份操作向网络共享中写入所需的权限以及还原操作从网络共享中读取所需的权限。 网络驱动器和权限的可用性取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务运行的环境：  
   
 -   若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用域用户帐户运行时备份到网络驱动器，共享驱动器必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行的会话中作为网络驱动器进行映射。 如果是通过命令行启动 Sqlservr.exe 的，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以看到在登录会话中映射的所有网络驱动器。  
@@ -146,22 +146,22 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="TapeDevices"></a> 使用磁带设备  
+##  <a name="TapeDevices"></a>使用磁带设备  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
   
  **本节内容：**  
   
--   [通过使用物理名称 (Transact SQL) 指定备份磁带](#BackupTapeUsingPhysicalName)  
+-   [使用物理名称指定备份磁带 (Transact-sql)](#BackupTapeUsingPhysicalName)  
   
--   [磁带专用的 BACKUP 选项和 RESTORE 选项 (Transact SQL)](#TapeOptions)  
+-   [特定于磁带的备份和还原选项 (Transact-sql)](#TapeOptions)  
   
 -   [管理打开的磁带](#OpenTapes)  
   
  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据备份到磁带时要求 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统支持一个或多个磁带机。 另外，对于给定的磁带机，我们建议您仅使用磁带机制造商推荐的磁带。 有关如何安装磁带机的详细信息，请参阅 Windows 操作系统的文档。  
   
- 在使用磁带机时，备份操作可能会写满一个磁带，并继续在另一个磁带上进行。 每个磁带包含一个介质标头。 使用的第一个介质称为“起始磁带  ”。 每个后续磁带称为“延续磁带”  ，其介质序列号比前一磁带的介质序列号大一。 例如，与四个磁带设备相关联的介质集至少含有四个起始磁带（如果该数据库过大，还会有四个系列的延续磁带）。 在追加备份集时，必须在序列中装入最后一个磁带。 如果没有装入最后一个磁带， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将向前扫描到已装入磁带的末尾，然后要求更换磁带。 此时，请装入最后一个磁带。  
+ 在使用磁带机时，备份操作可能会写满一个磁带，并继续在另一个磁带上进行。 每个磁带包含一个介质标头。 使用的第一个介质称为“起始磁带”。 每个后续磁带称为“延续磁带” ，其介质序列号比前一磁带的介质序列号大一。 例如，与四个磁带设备相关联的介质集至少含有四个起始磁带（如果该数据库过大，还会有四个系列的延续磁带）。 在追加备份集时，必须在序列中装入最后一个磁带。 如果没有装入最后一个磁带， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将向前扫描到已装入磁带的末尾，然后要求更换磁带。 此时，请装入最后一个磁带。  
   
  磁带备份设备的用法类似于磁盘设备，但下述情况例外：  
   
@@ -169,7 +169,7 @@ GO
   
 -   如果磁带备份设备在备份操作过程中已满，但还必须写入一些数据，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将提示更换新磁带并在加载新磁带后继续备份操作。  
   
-###  <a name="BackupTapeUsingPhysicalName"></a> 通过使用物理名称 (Transact SQL) 指定备份磁带  
+###  <a name="BackupTapeUsingPhysicalName"></a>使用物理名称指定备份磁带 (Transact-sql)  
  使用磁带机物理设备名称指定备份磁带的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语法为：  
   
  BACKUP { DATABASE | LOG } *database_name*  
@@ -190,7 +190,7 @@ GO
   
  FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
-###  <a name="TapeOptions"></a> 磁带专用的 BACKUP 选项和 RESTORE 选项 (Transact SQL)  
+###  <a name="TapeOptions"></a>特定于磁带的备份和还原选项 (Transact-sql)  
  为了便于磁带管理，BACKUP 语句提供了下列磁带专用的选项：  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -204,16 +204,16 @@ GO
 > [!NOTE]  
 >  有关 BACKUP 语法和参数的详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。 有关 RESTORE 语法和参数的详细信息，请分别参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql) 和 [RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。  
   
-###  <a name="OpenTapes"></a> 管理打开的磁带  
+###  <a name="OpenTapes"></a>管理打开的磁带  
  若要查看打开的磁带设备列表以及装入请求状态，请查询 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 动态管理视图。 此视图显示了所有打开的磁带。 其中包括正在使用的磁带，它们等待下一个 BACKUP 或 RESTORE 操作时暂时处于空闲状态。  
   
- 如果磁带已被意外处于打开状态，若要释放磁带的最快方法是使用以下命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
+ 如果意外使磁带处于打开状态，则释放磁带的最快方式是使用以下命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>使用 Windows Azure Blob 存储服务  
- 可以将 SQL Server 备份写入 Windows Azure Blob 存储服务。  有关如何将 Windows Azure Blob 存储服务用于您的备份的详细信息，请参阅 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 存储服务  
+ 可以将 SQL Server 备份写入 Azure Blob 存储服务。  有关如何使用 Azure Blob 存储服务进行备份的详细信息, 请参阅[使用 Azure Blob 存储服务进行备份和还原 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
-##  <a name="LogicalBackupDevice"></a> 使用逻辑备份设备  
- “逻辑备份设备  ”是指向特定物理备份设备（磁盘文件或磁带机）的可选用户定义名称。 通过逻辑备份设备，您可以在引用相应的物理备份设备时使用间接寻址。  
+##  <a name="LogicalBackupDevice"></a>使用逻辑备份设备  
+ “逻辑备份设备 ”是指向特定物理备份设备（磁盘文件或磁带机）的可选用户定义名称。 通过逻辑备份设备，您可以在引用相应的物理备份设备时使用间接寻址。  
   
  定义逻辑备份设备涉及为物理设备分配逻辑名称。 例如，逻辑设备 AdventureWorksBackups 可能被定义为指向 Z:\SQLServerBackups\AdventureWorks2012.bak 文件或 \\\\.\tape0 磁带驱动器。 备份和还原命令随后可以将 AdventureWorksBackups 指定为备份设备，而不是指定 DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' 或 TAPE = '\\\\.\tape0'。  
   
@@ -238,14 +238,14 @@ GO
   
 2.  定义新的逻辑备份设备，新设备使用原来的逻辑设备名称，但映射到不同的物理备份设备。 逻辑备份设备对于标识磁带备份设备尤为有用。  
   
-##  <a name="MirroredMediaSets"></a> 镜像备份媒体集  
+##  <a name="MirroredMediaSets"></a>镜像备份介质集  
  镜像备份介质集可减小备份设备故障的影响。 由于备份是防止数据丢失的最后防线，因此备份设备出现故障的后果是非常严重的。 随着数据库不断增大，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供物理备份设备冗余来提高备份的可靠性。 有关详细信息，请参阅[镜像备份媒体集 (SQL Server)](mirrored-backup-media-sets-sql-server.md)。  
   
 > [!NOTE]  
 >  只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份介质集。  
   
-##  <a name="Archiving"></a> SQL Server 备份数据存档  
- 建议您使用文件系统备份实用工具对磁盘备份数据进行存档，并将存档存储在另一个位置。 使用磁盘的优点是您可以使用网络将已存档的备份数据写入另一个位置的磁盘。 Windows Azure Blob 存储服务可作为站外存档选项。  您可以上载您的磁盘备份，或直接将备份写入 Windows Azure Blob 存储服务。  
+##  <a name="Archiving"></a>存档 SQL Server 备份  
+ 建议您使用文件系统备份实用工具对磁盘备份数据进行存档，并将存档存储在另一个位置。 使用磁盘的优点是您可以使用网络将已存档的备份数据写入另一个位置的磁盘。 Azure Blob 存储服务可用作站点外存档选项。  可以上传磁盘备份, 或直接将备份写入 Azure Blob 存储服务。  
   
  另一个常用的存档方法是将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入本地备份磁盘，将备份存档到磁带，然后在将磁带存储在站外位置。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 的版本支持的功能 |Microsoft Docs
+title: SQL Server 2014 的各个版本支持的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e50da40b080b6b6a45fb7a0cccb6c5cedc7841e7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62843486"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154198"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各个版本支持的功能
 
 
   本主题提供有关不同版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]所支持的功能的详细信息。 
 
- > **注意：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]是评估版具有 180 天试用期。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [试用软件网站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
+ > **注意:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]评估版中提供了180天的试用期。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [试用软件网站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
 > 
-> **注意**：有关 Evaluation 和 Developer 版本支持的功能，请参阅[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise 功能集。  
+> **注意：** 对于评估版和开发人员版支持的功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , 请参阅企业功能集。  
   
  若要导航到某种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技术相应的表，请单击其链接：  
   
- [转换箱规模限制](#CrossBoxScale)  
+ [跨框规模限制](#CrossBoxScale)  
   
  [高可用性](#High_availability)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62843486"
   
  [开发工具](#Dev_tools)  
   
- [可编程性](#Programmability)  
+ [实现](#Programmability)  
   
  [Integration Services](#SSIS)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62843486"
   
  [Analysis Services](#SSAS)  
   
- [BI 语义模型 （多维）](#BISemModel_multi)  
+ [BI 语义模型 (多维)](#BISemModel_multi)  
   
  [BI 语义模型（表格）](#BISemModel_tabular)  
   
@@ -81,13 +81,13 @@ ms.locfileid: "62843486"
 |功能名称|Enterprise|Business Intelligence|标准|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |单个实例使用的最大计算能力 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库引擎)<sup>1</sup>|操作系统支持的最大值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
-|使用单个实例 (Analysis Services、 Reporting Services) 的最大计算能力<sup>1</sup>|操作系统支持的最大值|操作系统支持的最大值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
+|单个实例使用的最大计算能力 (Analysis Services, Reporting Services) <sup>1</sup>|操作系统支持的最大值|操作系统支持的最大值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |利用的最大内存（每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎实例）|操作系统支持的最大值|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
 |利用的最大内存（每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|不可用|不可用|不可用|不可用|  
 |利用的最大内存（每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|64 GB|4 GB|不可用|不可用|  
 |最大关系数据库大小|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition 配合服务器 + 客户端访问许可证 (CAL) 基于许可 （对新协议不可用），限制为最多 20 个内核，每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+ <sup>1</sup>使用基于服务器 + 客户端访问许可证 (CAL) 的许可 (对新协议不可用) 的 Enterprise Edition 最多只能为每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例20个核心。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
 ##  <a name="High_availability"></a> 高可用性  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62843486"
 |数据库镜像|是|支持（仅支持“完全”安全级别）|支持（仅支持“完全”安全级别）|仅见证服务器|仅见证服务器|仅见证服务器|仅见证服务器|  
 |备份压缩|是|是|是|||||  
 |数据库快照|是|||||||  
-|AlwaysOn 故障转移群集实例|是 (节点支持：操作系统支持的最大值|是 (节点支持：2)|是 (节点支持：2)|||||  
+|AlwaysOn 故障转移群集实例|是 (节点支持:操作系统支持的最大值|是 (节点支持:2)|是 (节点支持:2)|||||  
 |AlwaysOn 可用性组|支持（最多 8 个辅助副本，包括 2 个同步辅助副本）|||||||  
 |连接控制器|是|||||||  
 |联机页面和文件还原|是|||||||  
@@ -111,11 +111,11 @@ ms.locfileid: "62843486"
 |加密备份|是|是|是|||||  
 |智能备份|是|是|是|否||||  
   
- <sup>1</sup>有关安装的详细信息[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]Server core，请参阅[Server Core 上安装 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+ <sup>1</sup>有关在 server core 上[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]安装的详细信息, 请参阅在[server core 上安装 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
- <sup>2</sup>此功能功能仅适用于 64 位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>2</sup>此功能仅适用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
-##  <a name="Scalability"></a> 可伸缩性和性能  
+##  <a name="Scalability"></a>可伸缩性和性能  
   
 |功能名称|Enterprise|Business Intelligence|标准|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -131,7 +131,7 @@ ms.locfileid: "62843486"
 |内存中 OLTP <sup>1</sup>|是|||||||  
 |延迟持续性|是|是|是|是|是|是|是|  
   
- <sup>1</sup>此功能功能仅适用于 64 位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>1</sup>此功能仅适用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Enterprise_security"></a> 安全性  
   
@@ -168,16 +168,16 @@ ms.locfileid: "62843486"
 |Distributed Replay - 管理工具|是|是|是|是|是|是||  
 |分布式重播 - 客户端|是|否|是|是||||  
 |分布式重播 - 控制器|支持（Enterprise 版支持最多 16 个客户端、Developer 版仅支持 1 个客户端）|否|支持（仅支持 1 个客户端）|支持（仅支持 1 个客户端）||||  
-|SQL Profiler|是|是|是|不<sup>2</sup>|不<sup>2</sup>|不<sup>2</sup>|不<sup>2</sup>|  
+|SQL Profiler|是|是|是|否<sup>2</sup>|否<sup>2</sup>|否<sup>2</sup>|否<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理|是|是|是|是||||  
 |Microsoft System Center Operations Manager 管理包|是|是|是|是||||  
 |数据库优化顾问 (DTA)|是|是|是<sup>3</sup>|是<sup>3</sup>||||  
-|将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库部署到 Windows Azure VM 向导|是|是|是|是|是|是|是|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows Azure 中的数据文件|是|是|是|是|是|是|是|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]将数据库部署到 Azure VM 向导|是|是|是|是|是|是|是|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Azure 中的数据文件|是|是|是|是|是|是|是|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] web [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]， [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools 和[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]具有高级服务可以使用探查[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]标准和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise edition。  
+ <sup></sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可使用[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Standardedition[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和 Enterprise edition 分析2个 Web、with Tools 和 with Advanced Services。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- <sup>3</sup>仅对 Standard 版本功能启用优化。  
+ <sup>3</sup>仅对 Standard edition 功能启用优化。  
   
 ##  <a name="RDBMS_mgmt"></a> RDBMS Manageability  
   
@@ -188,7 +188,7 @@ ms.locfileid: "62843486"
 |专用管理连接|是|是|是|是|支持（受跟踪标志控制）|支持（受跟踪标志控制）|支持（受跟踪标志控制）|  
 |PowerShell 脚本支持|是|是|是|是|是|是|是|  
 |SysPrep 支持<sup>1</sup>|是|是|是|是|是|是|是|  
-|支持数据层应用程序组件操作-提取、 部署、 升级和删除|是|是|是|是|是|是|是|  
+|支持数据层应用程序组件操作-提取、部署、升级、删除|是|是|是|是|是|是|是|  
 |策略自动执行（检查计划和更改）|是|是|是|是||||  
 |性能数据收集器|是|是|是|是||||  
 |能够作为多实例管理中的托管实例注册|是|是|是|是||||  
@@ -206,7 +206,7 @@ ms.locfileid: "62843486"
   
  <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
   
- <sup>2</sup>此功能功能仅适用于 64 位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>2</sup>此功能仅适用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
@@ -217,9 +217,9 @@ ms.locfileid: "62843486"
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|是|是|是|是|是|||  
 |SQL 查询编辑和设计工具<sup>1</sup>|是|是|是|||||  
 |版本控制支持<sup>1</sup>|是|是|是|||||  
-|MDX 编辑、 调试和设计工具<sup>1</sup>|是|是|是|||||  
+|MDX 编辑、调试和设计工具<sup>1</sup>|是|是|是|||||  
   
- <sup>1</sup>此功能不适用于 Standard 版的 64 位版本。  
+ <sup>1</sup>此功能不适用于64位版本的 Standard edition。  
   
 ##  <a name="Programmability"></a> Programmability  
   
@@ -228,7 +228,7 @@ ms.locfileid: "62843486"
 |公共语言运行时 (CLR) 集成|是|是|是|是|是|是|是|  
 |本机 XML 支持|是|是|是|是|是|是|是|  
 |XML 索引|是|是|是|是|是|是|是|  
-|MERGE 和 UPSERT 功能|是|是|是|是|是|是|是|  
+|MERGE & UPSERT 功能|是|是|是|是|是|是|是|  
 |FILESTREAM 支持|是|是|是|是|是|是|是|  
 |FileTable|是|是|是|是|是|是|是|  
 |日期和时间数据类型|是|是|是|是|是|是|是|  
@@ -305,11 +305,11 @@ ms.locfileid: "62843486"
 |高可用性|是|是|是|||||  
 |可编程性（AMO、ADOMD.Net、OLEDB、XML/A、ASSL）|是|是|是|||||  
   
-###  <a name="BISemModel_multi"></a> BI 语义模型 （多维）  
+###  <a name="BISemModel_multi"></a>BI 语义模型 (多维)  
   
 |功能名称|Enterprise|Business Intelligence|标准|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|半累加性度量值|是|是|不<sup>1</sup>|||||  
+|半累加性度量值|是|是|无<sup>1</sup>|||||  
 |层次结构|是|是|是|||||  
 |KPI|是|是|是|||||  
 |透视|是|是||||||  
@@ -340,7 +340,7 @@ ms.locfileid: "62843486"
 |直接写回|是|是||||||  
 |度量值表达式|是|是||||||  
   
- <sup>1</sup>standard edition 支持 LastChild 半累加性度量值，但其他半累加性度量值，例如 None、 FirstChild、 FirstNonEmpty、 LastNonEmpty、 AverageOfChildren 和 ByAccount。 在所有版本上都支持累加性度量值（如 Sum、Count、Min 和 Max）和非累加性度量值 (DistinctCount)。  
+ <sup>1</sup>Standard edition 支持 LastChild 半累加性度量值, 但不支持其他半累加性度量值, 例如 None、FirstChild、FirstNonEmpty、LastNonEmpty、AverageOfChildren 和 ByAccount。 在所有版本上都支持累加性度量值（如 Sum、Count、Min 和 Max）和非累加性度量值 (DistinctCount)。  
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
@@ -355,7 +355,7 @@ ms.locfileid: "62843486"
 |“度量值组”|是|是||||||  
 |内存中和 DirectQuery 存储模式（仅限表格）|是|是||||||  
   
-###  <a name="PowerPivot"></a> PowerPivot for SharePoint  
+###  <a name="PowerPivot"></a>PowerPivot for SharePoint  
   
 |功能名称|Enterprise|Business Intelligence|标准|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -374,20 +374,20 @@ ms.locfileid: "62843486"
 |数据挖掘工具（向导、编辑器、查询生成器）|是|是|是|||||  
 |交叉验证|是|是||||||  
 |挖掘结构数据的筛选子集的模型|是|是||||||  
-|时序：自定义混和 ARTXP 和 ARIMA 方法之间|是|是||||||  
-|时序：使用新数据的预测|是|是||||||  
+|时序:ARTXP 和 ARIMA 方法之间的自定义混合|是|是||||||  
+|时序:用新数据进行预测|是|是||||||  
 |无限制并发数据挖掘查询|是|是||||||  
-|高级的配置和优化数据挖掘算法的选项|是|是||||||  
+|用于数据挖掘算法的高级配置 & 优化选项|是|是||||||  
 |支持插件算法|是|是||||||  
 |并行模型处理|是|是||||||  
-|时序：跨序列预测|是|是||||||  
+|时序:跨序列预测|是|是||||||  
 |关联规则的无限制属性|是|是||||||  
 |序列预测|是|是||||||  
 |Naïve Bayes、神经网络和逻辑回归的多个预测目标|是|是||||||  
   
 ##  <a name="Reporting"></a> Reporting Services  
   
-###  <a name="Reporting_features"></a> Reporting Services 功能  
+###  <a name="Reporting_features"></a>Reporting Services 功能  
   
 |功能名称|Enterprise|Business Intelligence|标准|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -417,9 +417,9 @@ ms.locfileid: "62843486"
 |警报<sup>2</sup>|是|是||||||  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|是|是||||||  
   
- <sup>1</sup>有关详细信息中支持的数据源[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]，请参阅[支持的 Reporting Services 数据源&#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ <sup>1</sup>有关中[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]支持的数据源的详细信息, 请参阅[Reporting Services &#40;SSRS&#41;支持的数据源](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
- <sup>2</sup>需要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在 SharePoint 模式下。 有关详细信息，请参阅[Reporting Services SharePoint 模式下安装&#40;SharePoint 2010 和 SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ <sup>2</sup>需要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在 SharePoint 模式下运行。 有关详细信息, 请参阅[Reporting Services Sharepoint 模式&#40;安装 SharePoint 2010 和 sharepoint&#41;2013](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
 ### <a name="report-server-database-server-edition-requirements"></a>报表服务器数据库的服务器版本要求  
  创建报表服务器数据库时，并非所有版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 均可用来承载数据库。 下表显示了可用于特定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]版本。  
@@ -444,7 +444,7 @@ ms.locfileid: "62843486"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|是|是||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 是 Excel 外接程序，而不依赖于[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 但是，在 SharePoint 中与 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 工作簿共享和协作需要 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 。此功能在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence 版本中提供。  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]是 Excel 外接程序, 不依赖于[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 但是，在 SharePoint 中与 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 工作簿共享和协作需要 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 。此功能在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence 版本中提供。  
 > 2.  上表标识了仅启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；但是，这些功能可以访问在任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上承载的数据。  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
@@ -473,7 +473,7 @@ ms.locfileid: "62843486"
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 的产品规格](../../2014/getting-started/sql-server-2014-product-specifications.md)   
- [SQL Server 2014 安装](../database-engine/install-windows/installation-for-sql-server.md)   
+ [安装 SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [SQL Server 2014 安装快速入门](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

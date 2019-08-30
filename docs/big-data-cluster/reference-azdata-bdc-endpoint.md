@@ -5,22 +5,22 @@ description: Azdata bdc 终结点命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eb62b72958d5debecaf120195e6b1ab65f6bdf6a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 7dfbbf9c7b26fda5c426c6e2bf2915f2bb49926a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652198"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155244"
 ---
 # <a name="azdata-bdc-endpoint"></a>azdata bdc 终结点
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章提供“azdata”工具中“bdc 终结点”命令的相关参考。 有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。
+本文是**azdata**的参考文章。 
 
 ## <a name="commands"></a>命令
 |     |     |
@@ -49,4 +49,6 @@ JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org
 
 ## <a name="next-steps"></a>后续步骤
 
-有关其他 azdata 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。
+- 有关其他“azdata”命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)。 
+
+- 有关如何安装 **azdata** 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。

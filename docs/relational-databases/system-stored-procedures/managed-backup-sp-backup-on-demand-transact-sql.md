@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup. sp_backup_on_demand (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942054"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155402"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (TRANSACT-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   请求 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 执行对指定数据库的备份。  
   
- 使用此存储过程可对使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置的数据库执行即席备份。 这样做可以防止备份链中出现任何中断，[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 过程可识别并且备份存储在同一 Windows Azure Blob 存储容器中。  
+ 使用此存储过程可对使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置的数据库执行即席备份。 这会阻止备份链中的任何中断[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , 进程可感知, 备份存储在同一个 Azure Blob 存储容器中。  
   
  成功完成备份后，将返回完整的备份文件路径。 其中包括备份操作中生成的新备份文件的名称和位置。  
   
@@ -53,7 +53,7 @@ EXEC managed_backup.sp_backup_on_demand
  要对其执行备份的数据库的名称。 @database_name是 **SYSNAME**。  
   
  @type  
- 要执行的备份类型：数据库或日志。 @type参数是 **nvarchar (32)** 。  
+ 要执行的备份类型:数据库或日志。 @type参数是 **nvarchar (32)** 。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -61,10 +61,10 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求的成员身份**db_backupoperator**数据库角色的**ALTER ANY CREDENTIAL**权限，并且**EXECUTE**权限**sp_delete_backuphistory**存储过程。  
+ 要求具有**db_backupoperator**数据库角色的成员身份, 具有**ALTER ANY CREDENTIAL**权限以及对**sp_delete_backuphistory**存储过程的**EXECUTE**权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例将数据库 TestDB 的数据库备份请求。 此数据库启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+ 下面的示例为数据库 "TestDB" 创建数据库备份请求。 此数据库启用了 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
 ```  
 Use MSDB  

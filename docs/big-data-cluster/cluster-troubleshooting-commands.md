@@ -5,22 +5,25 @@ description: 本文提供了用于监视和解决问题[!INCLUDE[big-data-cluste
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653025"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153635"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>监视和故障排除[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍可用于监视和排除故障的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]几个有用的 Kubernetes 命令。 其中介绍了如何深入了解位于大数据群集中的 Pod 或其他 Kubernetes 项目的详细信息。 本文也涵盖了一些常见任务，例如将文件复制到运行某个 SQL Server 大数据群集服务的容器中或从中进行复制。
+
+> [!TIP]
+> 若要监视大数据群集组件的状态, 可以使用 Azure Data Studio 附带的[**azdata bdc 状态**](deployment-guidance.md#status)命令或内置[故障排除笔记本](manage-notebooks.md)。
 
 > [!TIP]
 > 在 Windows（cmd 或 PS）或 Linux (bash) 客户端计算机上运行以下 kubectl 命令。 它们需要该群集中的上一身份验证以及一个用于运行该身份验证的群集上下文。 例如，对于先前创建的 AKS 群集，可以运行 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` 以下载 Kubernetes 群集配置文件并设置群集上下文。

@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除外键 |Microsoft Docs
+title: 创建、更改和删除外键 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,27 +10,27 @@ ms.topic: reference
 helpviewer_keywords:
 - foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 787c0786719b1daa7f77495b8ce144f95796df79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4894535c0c9e7fc6908dd4e6a7129f874f16d4b5
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001348"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148508"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>创建、更改和删除外键
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中，外键由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 对象表示。  
   
- 若要在 SMO 中创建外键，则必须在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 对象的构造函数中指定在其上定义外键的表。 在该表中，必须至少选择一个列作为外键。 为此，请创建一个 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 对象变量并指定作为外键的列的名称。 然后指定被引用表和被引用列。 使用<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>方法将添加到列**列**对象属性。  
+ 若要在 SMO 中创建外键，则必须在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 对象的构造函数中指定在其上定义外键的表。 在该表中，必须至少选择一个列作为外键。 为此，请创建一个 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 对象变量并指定作为外键的列的名称。 然后指定被引用表和被引用列。 使用方法可将列添加到 Columns 对象属性中。 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>  
   
- 表示外键列会列在**列**对象的属性<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象。 外键引用的主键由在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 属性中指定的表中的 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 属性表示。  
+ 表示外键的列在<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>对象的**columns**对象属性中列出。 外键引用的主键由在 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> 属性中指定的表中的 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> 属性表示。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除外键  
  此代码示例演示如何在一个表的一个或多个列与另一个表的主键列之间创建外键关系。  
@@ -120,7 +120,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>示例：外键、 主键和唯一约束列  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>示例：外键、主键和唯一约束列  
  本示例演示：  
   
 -   在现有对象上查找外键。  

@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5898910a5280e797080c99fde978bb3da1c3c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19ef3eacc2fc1dbe6408ea1b51c5135ba37740e5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484217"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154472"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
   使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的数据质量解决方案，数据专员或 IT 专业人员可以维护数据的质量并确保数据满足业务使用的要求。 DQS 是一种知识驱动型解决方案，该解决方案通过计算机辅助方式和交互方式来管理数据源的完整性和质量。 使用 DQS 可以发现、生成和管理有关您数据的知识。 然后可以使用该知识执行数据清理、匹配和事件探查。 还可以在 DQS 数据质量项目中利用引用数据访问接口的基于云的服务。  
@@ -29,7 +29,7 @@ ms.locfileid: "65484217"
   
  利用 DQS，企业用户、信息工作者或 IT 专业人员（既不是数据库专家，也不是编程人员）可以创建、维护并执行组织的数据质量操作，而不会花费较长的安装或准备时间。  
   
-##  <a name="Answer"></a> 回答的需求与 DQS  
+##  <a name="Answer"></a>通过 DQS 回答需求  
  不采用绝对字词来定义数据质量。 它取决于数据对于其使用方式是否适用。 DQS 标识可能不正确的数据，并向您提供数据确实不正确的可能性评估。 DQS 向您提供数据的语义理解，以便您确定它的适合程度。 使用 DQS，您可以解决涉及不完整、不遵从、不一致、不准确、无效和数据重复的问题。  
   
  DQS 提供以下功能来解决数据质量问题。  
@@ -38,7 +38,7 @@ ms.locfileid: "65484217"
   
 -   **匹配：** 使用基于规则的过程标识语义重复项，使您可以确定哪些项是匹配项并消除重复项。 有关详细信息，请参阅 [Data Matching](../../2014/data-quality-services/data-matching.md)。  
   
--   **Reference Data Services：** 使用引用数据访问接口的服务验证数据的质量。 可以使用 Microsoft Azure 市场 DataMarket 的 Reference Data Services 来轻松地清理、验证、匹配和充实数据。 有关详细信息，请参阅 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
+-   **Reference Data Services：** 使用引用数据访问接口的服务验证数据的质量。 可以通过 Azure Marketplace DataMarket 使用 reference data services 来轻松地清理、验证、匹配和充实数据。 有关详细信息，请参阅 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
 -   **事件探查：** 分析数据源以在知识发现、域管理、匹配和数据清理过程的每个阶段了解数据的质量。 事件探查是 DQS 数据质量解决方案中的强大工具。 您可以创建一个数据质量解决方案，在该方案中事件探查与知识管理、匹配或数据清理同等重要。 有关详细信息，请参阅 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "65484217"
   
  DQS 知识驱动型解决方案使用两个基本步骤来清理数据：  
   
--   用于生成知识库的“知识管理”  过程  
+-   用于生成知识库的“知识管理” 过程  
   
--   根据知识库中的知识提出源数据更改建议的“数据质量项目”  。  
+-   根据知识库中的知识提出源数据更改建议的“数据质量项目” 。  
   
  有关详细信息，请参阅 [DQS 知识库和域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)和[数据质量项目 (DQS)](../../2014/data-quality-services/data-quality-projects-dqs.md)。  
   

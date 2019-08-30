@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4db43d34960de38343db3552cd83ea1147ffdf2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918036"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154636"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
   导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个逻辑备份，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的数据库的本地副本。  
@@ -93,17 +93,17 @@ ms.locfileid: "62918036"
   
 -   **保存到本地磁盘** - 在本地计算机上的目录中创建 BACPAC 文件。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
--   **保存到 Windows Azure** - 在 Windows Azure 容器中创建 BACPAC 文件。 若要验证此选项，则您必须连接到 Microsoft Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 请注意，将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
+-   **保存到 azure** -在 azure 容器中创建 BACPAC 文件。 若要验证此选项, 必须连接到 Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 请注意，将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
  若要指定要导出的表的子集，请使用 **“高级”** 选项。  
   
 ##  <a name="Validation"></a> “验证”页  
  使用验证页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”确保验证成功。  
   
- 若要继续，请单击 **“下一步”**。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导出操作，请单击 **“完成”**。 若要取消导出操作并退出向导，请单击 **“取消”**。  
+ 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导出操作，请单击 **“完成”** 。 若要取消导出操作并退出向导，请单击 **“取消”** 。  
   
 ##  <a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  

@@ -10,12 +10,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876505"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154748"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
   本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  
@@ -52,7 +52,7 @@ ms.locfileid: "62876505"
   
     ```  
   
-3.  **备份数据库：** 指定加密算法和要使用证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -71,16 +71,16 @@ ms.locfileid: "62876505"
   
  有关加密受 EKM 保护的备份的示例，请参阅[使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>备份到 Windows Azure 存储并加密  
- 如果使用 **“SQL Server 备份到 URL”** 选项向 Windows Azure 存储创建备份，则加密步骤相同，但必须使用 URL 作为目标，并使用 SQL 凭据向 Windows Azure 存储进行身份验证。 如果你想要配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]加密选项，请参阅[设置 SQL Server 托管备份到 Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)和[为可用性组设置SQLServer托管备份到WindowsAzure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+### <a name="backup-to-azure-storage-with-encryption"></a>备份到 Azure 存储并加密  
+ 如果使用 " **SQL Server 备份到 URL** " 选项创建到 Azure 存储的备份, 则加密步骤相同, 但必须使用 URL 作为目标, 并使用 SQL 凭据对 Azure 存储进行身份验证。 如果要配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]加密选项, 请参阅[设置 SQL Server 托管备份到 azure](enable-sql-server-managed-backup-to-microsoft-azure.md) , 并为[可用性组设置 SQL Server 托管备份到 azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)。  
   
  **先决条件：**  
   
--   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Windows Azure 存储对象](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)。  
+-   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Azure 存储对象](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)。  
   
 -   master 数据库的数据库主密钥以及 SQL Server 实例上的证书或非对称密钥。 有关加密要求和权限，请参阅 [Backup Encryption](backup-encryption.md)。  
   
-1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，连接到数据库引擎、 打开新查询窗口中，并复制并粘贴下面的示例然后单击**Execute**。  
+1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，请连接到数据库引擎、打开新查询窗口并复制和粘贴到下例，然后单击“执行”。  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -111,7 +111,7 @@ ms.locfileid: "62876505"
   
     ```  
   
-4.  **备份数据库：** 指定加密算法和要使用的证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

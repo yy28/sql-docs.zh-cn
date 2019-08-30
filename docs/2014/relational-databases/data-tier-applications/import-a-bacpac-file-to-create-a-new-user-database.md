@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918177"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154637"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
   导入数据层应用程序 (DAC) 文件 - .bacpac 文件 - 以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  
@@ -69,7 +69,7 @@ ms.locfileid: "62918177"
   
 1.  连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例（无论是在内部部署中还是在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中）。  
   
-2.  在“对象资源管理器”  中，右键单击“数据库”  ，然后选择“导入数据层应用程序”  菜单项以启动向导。  
+2.  在“对象资源管理器”中，右键单击“数据库”，然后选择“导入数据层应用程序” 菜单项以启动向导。  
   
 3.  完成向导对话框：  
   
@@ -92,18 +92,18 @@ ms.locfileid: "62918177"
   
 -   **不再显示此页。** - 选中此复选框可以停止在将来显示“简介”页。  
   
--   **下一步** - 进入“导入设置”页  。  
+-   **下一步** - 进入“导入设置”页。  
   
 -   **取消** - 取消操作并关闭向导。  
   
 ###  <a name="Import_settings"></a> “导入设置”页  
  使用此页可以指定要导入的 .bacpac 文件的位置。  
   
--   **从本地磁盘导入** - 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径  。 路径名必须包含文件名和 .bacpac 扩展名。  
+-   **从本地磁盘导入** - 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。 路径名必须包含文件名和 .bacpac 扩展名。  
   
--   **从 Windows Azure 导入**-从 Windows Azure 容器中导入 BACPAC 文件。 若要验证此选项，则您必须连接到 Microsoft Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
+-   **从 Azure 导入**-从 azure 容器导入 BACPAC 文件。 若要验证此选项, 必须连接到 Azure 容器。 请注意，此选项还要求您为临时文件指定一个本地目录。 将在指定位置创建临时文件，并且在操作完成后，临时文件将保留在该位置。  
   
-     在浏览 Microsoft Azure 时，您将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 请注意，您可以按 **“名称”** 、 **“大小”** 或 **“修改日期”** 对列进行排序。  
+     在浏览 Azure 时，你将能够在单一帐户内的不同容器之间进行切换。 您必须指定一个单独的 .bacpac 文件以继续导入操作。 请注意，您可以按 **“名称”** 、 **“大小”** 或 **“修改日期”** 对列进行排序。  
   
      若要继续，请指定要导入的 .bacpac 文件，然后单击 **“打开”** 。  
   
@@ -114,19 +114,19 @@ ms.locfileid: "62918177"
   
 -   **新数据库名称** - 提供导入的数据库的名称。  
   
--   **数据文件路径** - 提供数据文件的本地目录。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径  。  
+-   **数据文件路径** - 提供数据文件的本地目录。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。  
   
--   **日志文件路径** - 提供日志文件的本地目录。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径  。  
+-   **日志文件路径** - 提供日志文件的本地目录。 单击“浏览…”以导航本地计算机，或在提供的空间中指定路径。  
   
  若要继续，请单击 **“下一步”** 。  
   
- **为 SQL 数据库：**  
+ **对于 SQL 数据库:**  
   
 -   **新数据库名称** - 提供导入的数据库的名称。  
   
--   **版本的[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -指定[!INCLUDE[ssSDS](../../includes/sssds-md.md)]业务或[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Web。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的详细信息，请参阅此 [SQL Database](http://www.windowsazure.com/home/tour/database/) 网站。  
+-   **版本的[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -指定[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 或[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的详细信息，请参阅此 [SQL Database](http://www.windowsazure.com/home/tour/database/) 网站。  
   
--   **最大数据库大小 (GB)** -使用下拉列表菜单来指定你的数据库的最大大小。  
+-   **最大数据库大小 (GB)** -使用下拉菜单指定数据库的最大大小。  
   
  若要继续，请单击 **“下一步”** 。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62918177"
  若要继续，请单击 **“下一步”** 。  
   
 ###  <a name="Summary"></a> 摘要页  
- 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导入操作，请单击 **“完成”** 。 若要取消导入操作并退出向导，请单击“取消”  。  
+ 使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导入操作，请单击 **“完成”** 。 若要取消导入操作并退出向导，请单击“取消”。  
   
 ###  <a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  

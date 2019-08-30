@@ -5,33 +5,33 @@ description: azdata 命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653091"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155133"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
-以下文章提供了[ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (预览版)](big-data-cluster-overview.md)的**azdata**工具的参考。 有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | 用于从终端查看、运行和管理笔记本的命令。 |
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI 允许用户通过 T-SQL 与 SQL Server 交互。 |
 |[azdata app](reference-azdata-app.md) | 创建、删除、运行和管理应用程序。 |
 |[azdata bdc](reference-azdata-bdc.md) | 选择、管理和操作 SQL Server 大数据群集。 |
-|[azdata login](#azdata-login) | 登录到群集的控制器终结点。
-|[azdata logout](#azdata-logout) | 注销群集。
-
+|[azdata 控件](reference-azdata-control.md) | 创建、删除和管理控制平面。 |
+[azdata login](#azdata-login) | 登录到群集的控制器终结点。
+[azdata logout](#azdata-logout) | 注销群集。
 ## <a name="azdata-login"></a>azdata login
-部署群集后, 它将在部署期间列出控制器终结点, 你应该使用该终结点登录。  如果你不知道控制器终结点, 则可以通过将群集的 kube config 置于<user home>/.kube/config 的默认位置来登录, 或使用 KUBECONFIG env var, 即 export KUBECONFIG = path/to/. kube/config。
+部署群集时，它将在部署期间列出控制器终结点，你应该使用该终结点登录。  如果不知道控制器终结点，则可通过在系统上将群集的 kube 配置置于默认位置 <user home>/.kube/config 进行登录，或使用 KUBECONFIG 环境变量（即 export KUBECONFIG=path/to/.kube/config）进行登录。
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -43,7 +43,7 @@ azdata login [--cluster-name -n]
 ```bash
 azdata login
 ```
-登录（非交互式）。 通过将群集名称、控制器用户名、控制器终结点和接受 EULA 设置为参数进行登录。 必须设置 CONTROLLER_PASSWORD 环境变量。  如果不想指定控制器终结点, 请在计算机上的默认位置<user home>/.kube/config 中安装 kube 配置, 或使用 KUBECONFIG env var, 即 export KUBECONFIG = path/to/. kube/config。
+登录（非交互式）。 通过将群集名称、控制器用户名、控制器终结点和接受 EULA 设置为参数进行登录。 必须设置 CONTROLLER_PASSWORD 环境变量。  如果不想指定控制器终结点，请在计算机上将 kube 配置置于默认位置 <user home>/.kube/config，或使用 KUBECONFIG 环境变量（即 export KUBECONFIG=path/to/.kube/config）。
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -57,9 +57,9 @@ azdata login -n ClusterName
 #### `--controller-username -u`
 帐户用户。 如果不想使用此参数，则可设置环境变量 CONTROLLER_USERNAME。
 #### `--controller-endpoint -e`
-群集控制器终结点“https://host:port”。 如果不想使用此参数，则可在计算机上使用 kube 配置。 确保配置位于<user home>/.kube/config 的默认位置, 或使用 KUBECONFIG env var。
+群集控制器终结点“https://host:port”。 如果不想使用此参数，则可在计算机上使用 kube 配置。 请确保配置位于默认位置 <user home>/.kube/config 或使用 KUBECONFIG 环境变量。
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://aka.ms/azdata-eula 查看此产品的许可条款。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
@@ -68,7 +68,7 @@ azdata login -n ClusterName
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息, 请[http://jmespath.org/](http://jmespath.org/])参阅。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-logout"></a>azdata logout
@@ -89,10 +89,10 @@ azdata logout
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 有关详细信息, 请[http://jmespath.org/](http://jmespath.org/])参阅。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 
 ## <a name="next-steps"></a>后续步骤
 
-有关如何安装**azdata**工具的详细信息, 请参阅[install [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]azdata to manage ](deploy-install-azdata.md)。
+- 有关如何安装 azdata 工具的详细信息，请参阅[安装 azdata 以管理 SQL Server 2019 大数据群集](deploy-install-azdata.md)。
