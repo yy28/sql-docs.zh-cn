@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: e762354a2f391ba4c52f8bc0aa5fece537c79288
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030293"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155373"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的已知问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ SQL Server 2016 要求客户端上的 R 库与服务器上的 R 库完全匹配�
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9.远程计算上下文被 Azure 虚拟机上运行的 SQL Server 实例中的防火墙阻止
 
-如果已在 microsoft [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Azure 虚拟机上安装, 则可能无法使用要求使用虚拟机工作区的计算上下文。 这是因为, 默认情况下, Azure 虚拟机上的防火墙包含一个规则, 该规则阻止本地 R 用户帐户的网络访问。
+如果已在 Azure [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]虚拟机上安装, 则可能无法使用要求使用虚拟机工作区的计算上下文。 这是因为, 默认情况下, Azure 虚拟机上的防火墙包含一个规则, 该规则阻止本地 R 用户帐户的网络访问。
 
 解决方法: 在 Azure VM 上打开 "**高级安全 Windows 防火墙**", 选择 "**出站规则**", 并禁用以下规则:**阻止对 SQL Server 实例 MSSQLSERVER 中的 R 本地用户帐户进行网络访问**。 还可以启用规则, 但将安全属性更改为 "安全"。
 

@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目标编辑器 （连接管理器页） |Microsoft Docs
+title: ADO NET 目标编辑器 ("连接管理器" 页) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae5cc8303fa09eae7a4af6ef9ae6d589f43bcb2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061743"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154021"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目标编辑器（“连接管理器”页）
   可以使用 **“ADO NET 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接。 使用此页还可以选择数据库中的表或视图。  
@@ -30,7 +30,7 @@ ms.locfileid: "66061743"
   
 2.  在“数据流”选项卡上，双击 ADO NET 目标。  
   
-3.  在 **“ADO NET 目标编辑器”** 中，单击 **“连接管理器”**。  
+3.  在 **“ADO NET 目标编辑器”** 中，单击 **“连接管理器”** 。  
   
 ## <a name="static-options"></a>静态选项  
  **“ODBC 目标编辑器”**  
@@ -66,7 +66,7 @@ ms.locfileid: "66061743"
 >  有关详细信息，请参阅 [SET IDENTITY_INSERT (Transact SQL)](/sql/t-sql/statements/set-identity-insert-transact-sql) 和 [IDENTITY（属性）(Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property)。  
   
 ## <a name="external-resources"></a>外部资源  
- sqlcat.com 上的技术文章 [快速将数据加载到 Windows Azure SQL Database 中](https://go.microsoft.com/fwlink/?LinkId=244333)。  
+ Sqlcat.com 上的技术文章[快速将数据加载到 AZURE SQL 数据库](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
 ## <a name="see-also"></a>请参阅  
  [ADO NET 目标编辑器（“映射”页）](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

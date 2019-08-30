@@ -1,7 +1,7 @@
 ---
-title: azdata bdc pool status 参考
+title: azdata bdc 网关状态引用
 titleSuffix: SQL Server big data clusters
-description: azdata bdc pool status 的参考文章。
+description: Azdata bdc 网关状态命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,57 +9,47 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ee49ee09107c98047bd5aea849b9ae486eb6736a
+ms.openlocfilehash: f627eeedb6877b446deee0a2fc6800269b94b94f
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153114"
+ms.locfileid: "70158302"
 ---
-# <a name="azdata-bdc-pool-status"></a>azdata bdc pool status
+# <a name="azdata-bdc-gateway-status"></a>azdata bdc 网关状态
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 本文是**azdata**的参考文章。 
 
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[azdata bdc pool status show](#azdata-bdc-pool-status-show) | 池状态。
-## <a name="azdata-bdc-pool-status-show"></a>azdata bdc pool status show
-池状态。
+[azdata bdc 网关状态显示](#azdata-bdc-gateway-status-show) | 网关服务状态。
+## <a name="azdata-bdc-gateway-status-show"></a>azdata bdc 网关状态显示
+网关服务状态。
 ```bash
-azdata bdc pool status show --kind -k 
-                            [--name -n]
+azdata bdc gateway status show [--resource -r] 
+                               [--all -a]
 ```
 ### <a name="examples"></a>示例
-获取存储池的状态。
+获取网关服务的状态。
 ```bash
-azdata bdc pool status show --kind storage --name default
+azdata bdc gateway status show
 ```
-获取数据池的状态。
+获取所有实例的网关服务的状态。
 ```bash
-azdata bdc pool status show --kind data --name default
+azdata bdc gateway status show --all
 ```
-获取计算池的状态。
+获取网关服务中的网关资源的状态。
 ```bash
-azdata bdc pool status show --kind compute --name default
+azdata bdc gateway status show --resource gateway
 ```
-获取主池的状态。
-```bash
-azdata bdc pool status show --kind master --name default
-```
-获取 Spark 池的状态。
-```bash
-azdata bdc pool status show --kind spark --name default
-```
-### <a name="required-parameters"></a>必需的参数
-#### `--kind -k`
-大数据群集池种类。
 ### <a name="optional-parameters"></a>可选参数
-#### `--name -n`
-大数据群集池名称。
-`default`
+#### `--resource -r`
+在此服务中获取此资源。
+#### `--all -a`
+显示服务中每个资源的所有实例。
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。

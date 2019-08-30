@@ -5,16 +5,16 @@ description: 了解数据暂留如何在 SQL Server 2019 大数据群集中运�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028593"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155349"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上的 SQL Server 大数据群集的数据暂留
 
@@ -83,7 +83,7 @@ Kubeadm 没有内置存储类。 必须使用本地存储或首选预配程序�
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-这将创建两个文件，即 cluster.json 和 control.json，可以通过手动编辑这两个文件进行自定义，也可以使用 azdata bdc config 命令。 可以结合使用 jsonpath 和 jsonpatch 库以提供编辑配置文件的方法。
+这会创建两个文件, 即**bdc**和**控件 json** , 可以通过手动编辑它们进行自定义, 也可以使用**azdata bdc config**命令。 可以结合使用 jsonpath 和 jsonpatch 库以提供编辑配置文件的方法。
 
 
 ### <a id="config-samples"></a> 配置存储类名称和/或声明大小
@@ -109,7 +109,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -134,7 +134,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 应用补丁文件。 使用 azdata bdc config patch 命令应用 json 补丁文件中的更改。 下面的示例将 patch.json 文件应用于目标部署配置文件 custom.json。
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>后续步骤

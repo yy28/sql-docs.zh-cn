@@ -1,7 +1,7 @@
 ---
-title: azdata bdc control 参考
+title: azdata bdc 网关引用
 titleSuffix: SQL Server big data clusters
-description: azdata bdc control 命令的参考文章。
+description: Azdata bdc 网关命令的参考文章。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 716afd3476d8b040e387fac0cf9f2ca8c8b215ab
+ms.openlocfilehash: e9784f0ae0d1b94f359f000d97c8a6108de13433
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155261"
+ms.locfileid: "70158292"
 ---
-# <a name="azdata-bdc-control"></a>azdata bdc control
+# <a name="azdata-bdc-gateway"></a>azdata bdc 网关
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
@@ -25,7 +25,7 @@ ms.locfileid: "70155261"
 ## <a name="commands"></a>命令
 |     |     |
 | --- | --- |
-[azdata bdc control status](reference-azdata-bdc-control-status.md) | 控制服务状态命令。
+[azdata bdc 网关状态](reference-azdata-bdc-gateway-status.md) | 网关服务状态命令。
 
 ## <a name="next-steps"></a>后续步骤
 

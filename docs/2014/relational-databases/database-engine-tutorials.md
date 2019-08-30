@@ -10,12 +10,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872663"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154609"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
   本节包含针对 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]的教程。  
@@ -47,14 +47,14 @@ ms.locfileid: "62872663"
  [教程：使用基于策略的管理来评估最佳实践](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  本教程教授如何创建可用于针对已知问题分析[!INCLUDE[ssDE](../includes/ssde-md.md)]的实例的策略。  
   
- [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- 本教程说明如何将 SQL Server 备份和还原到 Windows Azure Blob 存储服务。  
+ [教程：SQL Server 备份和还原到 Azure Blob 存储服务](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ 本教程演示如何执行 SQL Server 备份和还原到 Azure Blob 存储服务。  
   
- [教程：在 Windows Azure 存储服务的 SQL Server 数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- 本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  
+ [教程：SQL Server Azure 存储服务中的数据文件](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ 本教程将帮助你了解如何将 SQL Server 数据文件直接存储在 Azure Blob 存储服务中。  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 教程](../tutorials/tutorials-for-sql-server-2014.md)   
+ [2014 SQL Server 教程](../tutorials/tutorials-for-sql-server-2014.md)   
  [：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

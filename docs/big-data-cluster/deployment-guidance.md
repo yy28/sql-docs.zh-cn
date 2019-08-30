@@ -5,16 +5,16 @@ description: 了解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../inc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652355"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153437"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
@@ -39,7 +39,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 
 ## <a id="prereqs"></a> Kubernetes 必备条件
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]对于服务器和客户端 (kubectl), 至少需要至少 v 1.10 的 Kubernetes 版本。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]对于服务器和客户端 (kubectl), 至少需要具有最低版本的 Kubernetes 版本。
 
 > [!NOTE]
 > 请注意，客户端和服务器 Kubernetes 版本应在 +1 或 -1 次要版本之内。 有关详细信息，请参阅 [Kubernetes 发行说明和版本偏差 SKU 策略](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
@@ -77,7 +77,7 @@ kubectl config view
 
 ## <a id="configfile"></a> 默认配置
 
-JSON 配置文件中定义了大数据群集部署选项。 其中提供了三个采用开发/测试环境的默认设置的标准部署配置文件：
+JSON 配置文件中定义了大数据群集部署选项。 你可以通过用于开发/测试环境的默认设置, 开始自定义部署配置文件中的群集部署:
 
 | 部署配置文件 | Kubernetes 环境 |
 |---|---|
@@ -115,7 +115,7 @@ azdata bdc create --accept-eula=yes
    ```
 
    azdata
-   > `--target` 根据 `--source` 参数指定包含配置文件、cluster.json 和 control.json 的目录。
+   > 根据参数指定包含配置文件、 **bdc**和**控件**json 的目录。 `--target` `--source`
 
 1. 若要自定义部署配置文件中的设置，可以在适用于编辑 VS Code 等 JSON 文件的工具中编辑部署配置文件。 对于脚本式自动化，也可以使用 azdata bdc config 命令编辑自定义部署配置文件。 例如，以下命令更改自定义部署配置文件，将部署群集的名称从默认 (mssql-cluster) 更改为 test-cluster：  
 
@@ -123,8 +123,8 @@ azdata bdc create --accept-eula=yes
    azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
    
-> [!TIP]
-> 也可以通过在 azdata create bdc 命令中使用 --name 参数，在部署时传入群集名称。 命令中的参数优先于配置文件中的值。
+   > [!TIP]
+   > 也可以通过在 azdata create bdc 命令中使用 --name 参数，在部署时传入群集名称。 命令中的参数优先于配置文件中的值。
 
    > 用于查找 JSON 路径的实用工具是 [JSONPath Online Evaluator](https://jsonpath.com/)。
 
@@ -145,7 +145,7 @@ azdata bdc create --accept-eula=yes
 | 环境变量 | 要求 |描述 |
 |---|---|---|
 | **CONTROLLER_USERNAME** | 必填 |群集管理员的用户名。 |
-| **CONTROLLER_PASSWORD** | Required |群集管理员的密码。 |
+| **CONTROLLER_PASSWORD** | 必填 |群集管理员的密码。 |
 | **MSSQL_SA_PASSWORD** | 必填 |SQL 主实例的 SA 用户的密码。 |
 | **KNOX_PASSWORD** | 必填 |Knox 用户的密码。 |
 | **ACCEPT_EULA**| 首次使用 `azdata` 时为必需项| 不需要任何值。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula` 包含在内。|
@@ -276,31 +276,128 @@ minikube ip
 部署完成后，可以通过 [azdata bdc status show](reference-azdata-bdc-status.md) 命令检查群集的状态。
 
 ```bash
-azdata bdc status show -o table
+azdata bdc status show
 ```
 
 > [!TIP]
 > 若要运行状态命令，必须先用上述终结点部分中所示的 azdata login 命令登录。
 
-下面显示了此命令的示例输出：
+以下显示了此命令的示例输出：
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
+
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ spark          ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
+
+
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-在此摘要状态中，也可以使用以下命令获取更详细的状态：
+还可以通过以下命令获取更详细的状态:
 
-- [azdata bdc control status](reference-azdata-bdc-control-status.md)
-- [azdata bdc pool status](reference-azdata-bdc-pool-status.md)
+- [azdata bdc 控件状态显示](reference-azdata-bdc-control-status.md)将返回与控制管理服务关联的所有组件的运行状况状态
+```
+azdata bdc control status show
+```
+示例输出:
+```output
+Control: ready                                                                                                                                                                                                      Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
 
-这些命令的输出包含 Kibana 和 Grafana 仪表板的 URL，可用于更详细的分析。
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+```
+
+- **azdata bdc sql 状态显示**将返回 SQL Server 服务的所有资源的运行状况状态
+```
+azdata bdc sql status show
+```
+示例输出:
+```output
+Sql: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+```
+
+> [!IMPORTANT]
+> 使用 **--all**参数时, 这些命令的输出包含 Kibana 和 Grafana 仪表板的 url, 以便进行更详细的分析。
 
 除了使用 azdata 之外，也可以使用 Azure Data Studio 查找终结点和状态信息。 有关通过 azdata 和 Azure Data Studio 查看群集状态的详细信息，请参阅[如何查看大数据群集的状态](view-cluster-status.md)。
 
