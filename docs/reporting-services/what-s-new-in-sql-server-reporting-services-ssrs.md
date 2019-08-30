@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 05/08/2019
-ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.date: 08/27/2019
+ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000288"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123111"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新增功能
 
@@ -32,9 +32,21 @@ ms.locfileid: "70000288"
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 预览版 Reporting Services
+## <a name="sql-server-2019-reporting-services-preview"></a>SQL Server 2019 Reporting Services 预览版
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]预览版 Reporting Services 可用, 可以从 **[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=100122)** 下载。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]可从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=100122)下载 Reporting Services 预览。
+
+### <a name="azure-sql-managed-instance-support"></a>Azure SQL 托管实例支持
+
+你现在可以在 Azure SQL 托管实例 (MI) 中承载用于在 VM 中或数据中心托管的 SQL Server Reporting Services (SSRS) 的数据库目录。 仅支持使用数据库凭据连接到 SQL MI。
+
+### <a name="power-bi-premium-dataset-support"></a>Power BI Premium 数据集支持
+
+您可以使用 Microsoft 报表生成器或 SQL Server Data Tools (SSDT) 连接到 Power BI 数据集。 然后, 可以使用 SQL Server Analysis Services 连接将这些报表发布到 SSRS 2019。 用户需要使用存储的 Windows 用户名和密码来启用此方案。
+
+### <a name="alttext-alternative-text-support-for-report-elements"></a>报表元素的 AltText (可选文本) 支持
+
+在创作报表时, 您可以使用工具提示为报表上的每个元素指定文本。 屏幕阅读器技术正确地识别这些工具提示。
 
 ::: moniker-end
 
@@ -67,7 +79,8 @@ ms.locfileid: "70000288"
 * 下载 [SQL Server 报表生成器](https://go.microsoft.com/fwlink/?LinkId=734968)。
 * 下载 [SQL Server Data Tools - 候选发布](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
 
-> 请注意  ：只能在 SQL Server 2016 及更高版本中内置的 SSAS 表格数据源中使用 DAX 查询设计器。
+> [!NOTE]
+> 只能在 SQL Server 2016 及更高版本中内置的 SSAS 表格数据源中使用 DAX 查询设计器。
 ::: moniker-end
 
 ## <a name="ssrs-2016"></a>SSRS 2016
