@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: 密码已过期
       href: ../database-engine/password-expired.md
-    - name: 连接到 Windows Azure 存储
+    - name: 连接到 Azure 存储
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
