@@ -42,12 +42,12 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfea092757a708e0a83cefd581f8321f08d344e3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154564"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175736"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
   使用 "将**SQL Server 数据库部署到 azure VM** " 向导, 将数据库从的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure 虚拟机 (VM) 中的。 此向导利用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
@@ -101,7 +101,7 @@ ms.locfileid: "70154564"
   
  此部署功能不支持与地缘组相关联的托管服务。 例如，在此向导的 **“部署设置”** 页上无法选择与某一地缘组相关联的存储帐户以供使用。  
   
- 虚拟机中的 SQL Server 版本必须等于或高于源 SQL Server 版本。 可使用此向导将数据库版本部署到 Azure VM SQL Server:  
+ 虚拟机中的 SQL Server 版本必须等于或高于源 SQL Server 版本。 可以使用此向导 SQL Server 可以部署到 Azure VM 的数据库版本:  
   
 -   SQL Server 2008  
   

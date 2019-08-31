@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 98430a626a628d4c8cc040b53a9cf24ad1752048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 829e7b0c51cd341193944fb2f28241f48618c407
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028777"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176224"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>项目设置 (Azure SQL DB) (SybaseToSQL)
-Azure SQL DB 项目设置可配置要在连接对话框中添加并允许在 Azure SQL DB 连接实施检测信号机制的 Azure SQL DB 数据库后缀。  
+利用 Azure SQL 数据库项目设置, 你可以配置要添加到连接对话框中的 Azure SQL DB 数据库后缀, 还允许在 Azure SQL DB 连接中实现检测信号机制。  
   
-Azure SQL DB 窗格现已推出**项目设置**并**默认项目设置**对话框。  
+"**项目设置**" 和 "**默认项目设置**" 对话框中提供了 "Azure SQL 数据库" 窗格。  
   
--   使用项目设置对话框中设置当前项目的配置选项。 若要访问 Azure SQL DB 设置中，在**工具**菜单中，选择**项目设置**，单击**常规**在左窗格中，并选择底部**Azure SQL DB**。  
+-   使用 "项目设置" 对话框可以设置当前项目的配置选项。 若要访问 Azure SQL DB 设置, 请在 "**工具**" 菜单上选择 "**项目设置**", 单击左侧窗格底部的 "**常规**", 然后选择 " **Azure sql DB**"。  
   
--   使用默认项目设置对话框中设置的所有项目的配置选项。 若要访问 Azure SQL DB 设置中，在**工具**菜单中，选择**DefaultProject 设置**，单击**常规**底部的左窗格中，然后再选择**Azure SQL DB**。  
+-   使用 "默认项目设置" 对话框可以为所有项目设置配置选项。 若要访问 Azure SQL DB 设置, 请在 "**工具**" 菜单上选择 " **DefaultProject 设置**", 单击左侧窗格底部的 "**常规**", 然后选择 " **Azure sql DB**"。  
   
 ## <a name="connectivity"></a>连接  
 **检测信号间隔**  
   
-指定要用于检测信号机制，以便在保持 Azure SQL DB 连接时间间隔分钟： 秒的格式。  
+指定一个时间间隔, 该时间间隔用于检测信号机制以使 Azure SQL DB 连接以 "分钟: 秒" 格式保持活动状态。  
   
-**默认值**:"4:45  
+**默认值**: "4:45"  
   
-应指定的值中是： ss 的格式 (例如，"4:45 或"0:50)。  
+应以 "m:ss" 格式 (例如, "4:45" 或 "0:50") 指定值。  
   
 **Azure SQL DB 服务器后缀**  
   
 指定 Azure SQL DB 服务器后缀  
   
-**默认值**: database.windows.net。  
+**默认值**: "database.windows.net"。  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 本机客户端构建应用程序 |Microsoft Docs
+title: 构建具有 SQL Server Native Client 的应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c6f7333b9a0fea3ef0408ed1eea4c8c84287222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213806"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175412"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 生成应用程序
   开发使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 库的应用程序时，会出现很多问题。 本节中的主题讨论了多个此类问题，包括如何从 MDAC 升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件，以及可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的各种连接字符串的概述。  

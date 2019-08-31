@@ -10,12 +10,12 @@ ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eda59ac47444eb589e17d6e1aab2428c77a991f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154520"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175574"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>第 5 课。 （可选）使用 TDE 加密数据库
   作为一个可选步骤，可加密新创建的数据库。 “透明数据加密”(TDE) 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 有关详细信息, 请[参阅&#40;透明数据加密&#41; TDE](security/encryption/transparent-data-encryption.md)和[将受 TDE 保护的数据库移到另一个 SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。  

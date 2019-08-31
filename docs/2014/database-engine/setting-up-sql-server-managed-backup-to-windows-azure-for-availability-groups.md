@@ -10,12 +10,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76b19ace362d147520b9f39cecae3ce1cc65d53b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: aa2cbce81827c9085f87112b366d532077915f58
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154097"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176096"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>为可用性组设置 SQL Server 托管备份到 Azure
   本主题是有关为参与 AlwaysOn 可用性组的数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的教程。  
@@ -68,7 +68,7 @@ ms.locfileid: "70154097"
 #### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]为可用性数据库启用和配置  
  本教程首先介绍为计算机 Node1 和 Node2 上的数据库 (AGTestDB) 启用和配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的步骤，然后介绍允许监视 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 运行状况的步骤。  
   
-1.  **创建 Azure 存储帐户:** 备份存储在 Azure Blob 存储服务中。 如果还没有 Azure 存储帐户, 则必须先创建一个。 有关详细信息, 请参阅[创建 Azure 存储帐户](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 记录下存储帐户的名称、访问密钥和存储帐户的 URL。 存储帐户名称和访问密钥用于创建 SQL 凭据。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在备份操作期间使用 SQL 凭据对存储帐户进行身份验证。  
+1.  **创建 Azure 存储帐户：** 备份存储在 Azure Blob 存储服务中。 如果还没有 Azure 存储帐户, 则必须先创建一个。 有关详细信息, 请参阅[创建 Azure 存储帐户](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 记录下存储帐户的名称、访问密钥和存储帐户的 URL。 存储帐户名称和访问密钥用于创建 SQL 凭据。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在备份操作期间使用 SQL 凭据对存储帐户进行身份验证。  
   
 2.  **创建 SQL 凭据:** 使用存储帐户的名称作为标识, 并使用存储访问密钥作为密码创建 SQL 凭据。  
   

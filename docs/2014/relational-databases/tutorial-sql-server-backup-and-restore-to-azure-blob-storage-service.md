@@ -10,12 +10,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8a9cbb46b04491be3fe97cb707ad79c98990ff19
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155333"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176117"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教程：将 SQL Server 备份和还原到 Azure Blob 存储服务
   欢迎使用使用 Azure Blob 存储服务进行备份和还原 SQL Server 教程的入门。 本教程将帮助您了解如何将备份写入 Azure Blob 存储服务以及如何从中还原。  
@@ -24,7 +24,7 @@ ms.locfileid: "70155333"
  本教程演示如何创建 Windows 存储帐户和 Blob 容器、创建用于访问存储帐户的凭据、将备份写入 Blob 服务和执行简单还原。 本教程分为四课：  
   
  [第 1 课：创建 Azure 存储对象](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
- 在本课程中, 将创建 Azure 存储帐户和 blob 容器。  
+ 在本课中，你将创建 Azure 存储帐户和 Blob 容器。  
   
  [第 2 课：创建 SQL Server 凭据](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  在本课中，你将创建凭据，以存储用于访问 Azure 存储帐户的安全信息。  
@@ -40,7 +40,7 @@ ms.locfileid: "70155333"
   
 -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的实例，以及安装了 AdventureWorks2012 数据库。  
   
-     SQL Server 实例可以是本地的, 也可以在 Azure 虚拟机中。  
+     SQL Server 实例可以在本地，也可以在 Azure 虚拟机中。  
   
      可以使用用户数据库代替 AdventureWorks2012，并相应地修改 tsql 语法。  
   

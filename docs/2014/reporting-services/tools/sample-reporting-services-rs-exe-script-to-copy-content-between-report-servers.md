@@ -10,12 +10,12 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c8434c0db2ca394ec3fbfbab3613b2ea69ac042d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2f8ccf455e9b20c4b8dffc4cc433ce68319a8251
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153814"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176156"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>用于在报表服务器之间迁移内容的示例 Reporting Services rs.exe 脚本
   本主题包括并说明一个示例 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS 脚本，该脚本使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. 本机模式和 SharePoint 模式下，RS.exe 都随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]一起安装。 脚本将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 项（例如，报表和订阅）从一个服务器复制到另一个服务器。 该脚本支持 SharePoint 模式和本机模式报表服务器。  
@@ -240,7 +240,7 @@ ms.locfileid: "70153814"
   
 ##  <a name="bkmk_parameter_description"></a> 参数说明  
   
-|参数|描述|Required|  
+|参数|描述|必填|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|源报表服务器的 URL|是|  
 |-u Domain\password -p password|源服务器的凭据。|可选，如果缺失则使用默认凭据|  

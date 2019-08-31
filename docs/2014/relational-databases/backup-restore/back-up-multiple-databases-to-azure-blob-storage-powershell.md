@@ -10,12 +10,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1be1f05ff09d85d29903e4e3be7f1f11600a7b1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f8d1917798137ed8aa96ddf106392ffd311ed9b1
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155032"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176006"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>使用 PowerShell 将多个数据库备份到 Azure Blob 存储服务
   本主题提供可用于通过 PowerShell cmdlet 自动备份到 Azure Blob 存储服务的示例脚本。  

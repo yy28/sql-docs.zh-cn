@@ -24,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7650f579a42453486a1d8483b9537496d454a036
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 42ede73866c45662cf653d538f59be48684c5a45
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155020"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176182"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
   本主题概述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。  
@@ -44,7 +44,7 @@ ms.locfileid: "70155020"
   
 -   [SQL Server Azure 虚拟机中的商业智能](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)。  
   
--   [使用 PowerShell 创建具有本机模式报表服务器的 AZURE VM](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)。  
+-   [使用 PowerShell 来创建带有本机模式报表服务器的 Azure VM](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)。  
   
 ##  <a name="bkmk_top"></a> 本主题内容  
   

@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152898"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175914"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>创建数据源（SSAS 多维）
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维模型中，数据源对象表示与您正从其处理（或导入）数据的数据源的连接。 一个多维模型必须包含至少一个数据源对象，但您可以添加更多对象以便合并来自若干数据仓库的数据。 使用本主题中的说明可为您的模型创建数据源对象。 有关在此对象上设置属性的详细信息，请参阅[设置数据源属性（SSAS 多维）](set-data-source-properties-ssas-multidimensional.md)。  

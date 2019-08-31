@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 806c8ad1023c10c0176d1608841138a7380a8def
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5ab74dc982416e3c18f2a0ad649e52de23770c5a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154457"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176044"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
   本主题介绍 **“指定副本”** 页的选项。 本页适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  

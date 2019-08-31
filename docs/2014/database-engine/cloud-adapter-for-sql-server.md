@@ -13,12 +13,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c4e690d13f8cd12992c2b26db8e5d640a971712
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154395"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176018"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server 的云适配器
   在 Azure VM 上进行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]预配时, 会创建云适配器服务。 云适配器服务在首次运行时生成自签名的 SSL 证书，然后作为“本地系统”帐户运行。 它生成用于配置自身的配置文件。 云适配器还创建一个 Windows 防火墙规则以允许默认端口 11435 上的传入 TCP 连接。  

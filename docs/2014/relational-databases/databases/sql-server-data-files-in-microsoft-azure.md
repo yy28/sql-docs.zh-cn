@@ -10,12 +10,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55f0ab0cf2f1d4a29c0fca252c45f9e92740851c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154542"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175693"
 ---
 # <a name="sql-server-data-files-in-azure"></a>SQL Server Azure 中的数据文件
   SQL Server Azure 中的数据文件, 可以对作为 Azure Blob 存储的 SQL Server 数据库文件提供本机支持。 通过此功能, 你可以在本地或 Azure 中的虚拟机上运行的 SQL Server 中创建数据库, 并在 Azure Blob 存储中为数据创建专用存储位置。 此增强功能使用分离和附加操作，简化了计算机之间的数据库移动。 此外, 它还允许从或向 Azure 存储还原, 为数据库备份文件提供备用存储位置。 因此，它在数据虚拟化、数据移动、安全性和可用性、轻松降低成本以及维护方面都具备优势，可实现高可用性和弹性扩展，支持几种混合解决方案。  
@@ -93,7 +93,7 @@ ON
   
 -   **本地 SQL Server：** SQL Server 2014 版本包括此功能。 要了解如何下载 SQL Server 2014，请参阅 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  
   
--   在 Azure 虚拟机中运行 SQL Server:如果要在 Azure 虚拟机上安装 SQL Server, 请安装 SQL Server 2014, 或更新现有实例。 同样, 还可以使用 SQL Server 2014 平台映像在 Azure 中创建新的虚拟机。 要了解如何下载 SQL Server 2014，请参阅 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  
+-   在 Azure 虚拟机中运行的 SQL Server：如果要在 Azure 虚拟机上安装 SQL Server, 请安装 SQL Server 2014, 或更新现有实例。 同样, 还可以使用 SQL Server 2014 平台映像在 Azure 中创建新的虚拟机。 要了解如何下载 SQL Server 2014，请参阅 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  
   
 ###  <a name="bkmk_Limitations"></a> 限制  
   

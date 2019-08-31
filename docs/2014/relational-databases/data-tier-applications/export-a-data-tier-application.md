@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4db43d34960de38343db3552cd83ea1147ffdf2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154636"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175975"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
   导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个逻辑备份，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的数据库的本地副本。  

@@ -10,12 +10,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89022104fef0b99412060290361961922b9d6b08
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155309"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176083"
 ---
 # <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>教程：SQL Server Azure 存储服务中的数据文件
   欢迎使用 Azure 存储服务中的 SQL Server 数据文件教程。 本教程将帮助你了解如何将 SQL Server 数据文件直接存储在 Azure Blob 存储服务中。  

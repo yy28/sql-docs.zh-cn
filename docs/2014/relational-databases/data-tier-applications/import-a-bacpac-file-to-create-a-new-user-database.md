@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 892ea01693d696508ec9dd5286d7b0a89306775e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154637"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175938"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
   导入数据层应用程序 (DAC) 文件 - .bacpac 文件 - 以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  

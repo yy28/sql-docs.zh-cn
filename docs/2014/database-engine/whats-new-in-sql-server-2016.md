@@ -13,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7cb79e9f369366b4144cf79b072b80cad17dde77
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154084"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176077"
 ---
 # <a name="what39s-new-database-engine"></a>新增&#39;功能 (数据库引擎)
   这一最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]引入了一些新功能和增强功能，这些功能可以提高设计、开发和维护数据存储系统的架构师、开发人员和管理员的能力和工作效率。 以下是[!INCLUDE[ssDE](../includes/ssde-md.md)]已增强的方面。  

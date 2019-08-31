@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f5dc758a6f9243fc553f597687552fdb22a481
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154404"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175992"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
   使用 "添加 Azure 副本" 向导来帮助你在混合 IT 中创建新的 Azure VM, 并将其配置为新的或现有 AlwaysOn 可用性组的辅助副本。  
@@ -41,7 +41,7 @@ ms.locfileid: "70154404"
   
 -   可用性组必须包含本地可用性副本。  
   
--   如果可用性组侦听器要在可用性组故障转移到 Azure 副本时保持与侦听器的连接, 则这些客户端必须能够连接到 Internet。  
+-   如果可用性组侦听器要在可用性组故障转移到 Azure 副本时保持与侦听器的连接, 则该可用性组侦听器的客户端必须连接到 Internet。  
   
 -   **使用完全初始数据同步的先决条件** 为了使该向导创建并访问备份，需要指定网络共享。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
   

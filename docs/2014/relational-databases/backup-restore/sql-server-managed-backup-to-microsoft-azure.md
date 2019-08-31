@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ec5e3eeb9158363e34f708d1f36355ffcb06c6c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ab44323dfabd389113351e413751b7a230c176e6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154663"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175763"
 ---
 # <a name="sql-server-managed--backup-to-azure"></a>将托管备份 SQL Server 到 Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]管理和自动执行将 SQL Server 备份到 Azure Blob 存储服务的备份。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用的备份策略基于保持期和数据库中的事务工作负载。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支持指定保持期的时间点还原。   

@@ -10,12 +10,12 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3f9775b98a2cf86690bf290543d6394e06cefe32
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 69d09b5b058af3404226905bdbe0ef83f33982cf
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153502"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176175"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>第 1 课：创建 Azure 存储帐户和容器
   必须先创建 Azure 存储帐户和 blob 容器以及共享访问签名, 然后才能开始将 SQL Server 数据文件存储在 Azure 存储中。 第1课逐步讲解登录到 Azure 管理门户、创建存储帐户、blob 容器和共享访问签名的步骤。  
