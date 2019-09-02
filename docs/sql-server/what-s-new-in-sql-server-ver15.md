@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903644"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026245"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -25,7 +25,7 @@ ms.locfileid: "69903644"
 
 有关详细信息和已知问题，请参阅 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明](sql-server-ver15-release-notes.md)。
 
-使用[最新工具](what-s-new-in-sql-server-ver15-prerelease.md#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验  。
+使用[最新工具](what-s-new-in-sql-server-ver15-prerelease.md#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验。
 
 >[!NOTE]
 >内容是针对 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布而发布的。 候选发布是预发布软件。 信息可能会发生变更。 若要详细了解支持方案，请参阅[支持](#support)。
@@ -91,7 +91,7 @@ ms.locfileid: "69903644"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|支持 UTF-8 字符编码 |支持使用 UTF-8 字符进行导入和导出编码，并用作字符串数据的数据库级别或列级别排序规则。 这支持将应用程序扩展到全球范围，其中提供全球多语言数据库应用程序和服务的要求对于满足客户需求和特定市场规范至关重要。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/>[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布为 PolyBase 外部表和 Always Encrypted 启用 UTF-8 支持。|
+|支持 UTF-8 字符编码 |支持使用 UTF-8 字符进行导入和导出编码，并用作字符串数据的数据库级别或列级别排序规则。 这支持将应用程序扩展到全球范围，其中提供全球多语言数据库应用程序和服务的要求对于满足客户需求和特定市场规范至关重要。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布为 PolyBase 外部表和 Always Encrypted 启用 UTF-8 支持。|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -99,7 +99,7 @@ ms.locfileid: "69903644"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |查询外部表 |外部表列名现可用于查询 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 数据源。 请参阅[什么是 PolyBase](../relational-databases/polybase/polybase-guide.md)。|
-|支持 UTF-8 字符编码|外部表支持 UTF-8 字符。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)|
+|支持 UTF-8 字符编码|外部表支持 UTF-8 字符。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。|
 | &nbsp; | &nbsp; |
 
 ### <a name="server-settings"></a>服务器设置
@@ -147,6 +147,7 @@ ms.locfileid: "69903644"
 |:---|:---|
 |加速数据库恢复 | 按数据库启用加速数据库恢复。 请参阅[加速数据库恢复](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)。|
 |强制快进和静态游标 | 查询存储计划强制支持快进和静态游标。 请参阅[计划强制支持快进和静态游标](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23)。|
+|资源调控| `REQUEST_MAX_MEMORY_GRANT_PERCENT` 和 `ALTER WORKLOAD GROUP` 的 `CREATE WORKLOAD GROUP` 选项的可配置值已从整数更改为浮点数数据类型，以允许更精细地控制内存限制。 请参阅[修改工作负载组](../t-sql/statements/alter-workload-group-transact-sql.md)和[创建工作负载组](../t-sql/statements/create-workload-group-transact-sql.md)。|
 |减少了对工作负荷的重新编译| 改进跨多个作用域使用临时表。 请参阅[减少了对工作负荷的重新编译](../relational-databases/tables/tables.md#ctp23) |
 |间接检查点可伸缩性 |请参阅[改进了间接检查点可伸缩性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)。|
 |内存优化 `tempdb` 元数据| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了属于[内存数据库](../relational-databases/in-memory-database.md)功能系列的新功能，即内存优化 `tempdb` 元数据，它可有效消除此瓶颈，并为 `tempdb` 繁重的工作负荷解锁新的可伸缩性级别。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 请参阅[内存优化 `tempdb` 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
@@ -154,7 +155,7 @@ ms.locfileid: "69903644"
 |行模式内存授予反馈 |通过调整批处理模式和行模式运算符的内存授予大小，扩展了批处理模式内存授予反馈功能。 这可以自动更正导致内存浪费和并发减少的过度授予，并更正导致费用高昂的溢出到磁盘的内存授予不足。 请参阅[行模式内存授予反馈](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。 |
 |表变量延迟编译|提升了引用表变量的查询的计划质量和整体性能。 在优化和初始编译期间，此功能传播基于实际表变量行计数的基数估计。 这种准确的行计数信息可优化下游计划操作。 请参阅[表变量延迟编译](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。 |
 |`APPROX_COUNT_DISTINCT `|对于绝对精度不重要、但响应速度很关键的情况，`APPROX_COUNT_DISTINCT` 使用比 `COUNT(DISTINCT())` 更少的资源跨大型数据集进行聚合，以实现高级并发。 请参阅[近似查询处理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)。|
-|行存储上的批处理模式|行存储上的批处理模式支持批处理模式执行，而无需使用列存储索引。 批处理模式执行在分析工作负荷期间更高效地使用 CPU，但低于 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的版本中，只有当查询包含具有列存储索引的运算时才使用它。 然而，有些应用程序可能会使用列存储索引不支持的功能，因此无法利用批处理模式。 自 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 起，批处理模式在符合条件的分析工作负荷上启用，这些工作负荷的查询包含具有任何类型索引（行存储或列存储）的运算。 请参阅[行存储上的批处理模式](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)。 |
+|行存储上的批处理模式|行存储上的批处理模式支持批处理模式执行，而无需使用列存储索引。 批处理模式执行在分析工作负荷期间更高效地使用 CPU，但低于 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的版本中，只有当查询包含具有列存储索引的运算时才使用它。 然而，有些应用程序可能会使用列存储索引不支持的功能，因此无法利用批处理模式。 自 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 起，批处理模式在符合条件的分析工作负载上启用，这些工作负载的查询包含具有任何类型索引（行存储或列存储）的运算。 请参阅[行存储上的批处理模式](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)。 |
 |标量 UDF 内联|自动将标量 UDF 转换为关系表达式，并将它们嵌入调用 SQL 查询。 此转换提升了利用标量 UDF 的工作负载的性能。 请参阅[标量 UDF 内联](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。|
 | &nbsp; | &nbsp; |
 
@@ -170,8 +171,8 @@ ms.locfileid: "69903644"
 
 |新增功能或更新 | 详细信息 | 
 |:---|:---| 
-|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。| 
-|新并行度设置选项 | 在安装过程中设置“最大并行度”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
+|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”和“最大服务器内存(MB)”服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。| 
+|新并行度设置选项 | 在安装过程中设置“最大并行度”服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
 | &nbsp; | &nbsp; |
 
 ### <a name="error-messages"></a>错误消息
@@ -193,14 +194,6 @@ ms.locfileid: "69903644"
 |`tempdb` 改进： | 默认情况下，Linux 上的 SQL Server 新安装会根据逻辑内核数创建多个 `tempdb` 数据文件（最多 8 个数据文件）。 这不适用于就地次要版本或主版本升级。 每个 `tempdb` 文件的大小为 8MB，且自动增长大小为 64MB。 此行为类似于 Windows 上的默认 SQL Server 安装。 |
 | Linux 上的 PolyBase | 在 Linux 上为非 Hadoop 连接器[安装 PolyBase](../relational-databases/polybase/polybase-linux-setup.md)。<br/><br/>[PolyBase 类型映射](../relational-databases/polybase/polybase-type-mapping.md)。 |
 | 变更数据捕获 (CDC) 支持 | Linux 上的 SQL Server 2019 现在支持变更数据捕获 (CDC)。 |
-| &nbsp; | &nbsp; |
-
-### <a name="setup"></a>设置
-
-|新增功能或更新 | 详细信息 |
-|:---|:---|
-|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 有关详细信息，请参阅[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。|
-|新并行度设置选项 | 在安装过程中设置“最大并行度”  服务器配置。 有关详细信息，请参阅[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a>SQL Server 机器学习服务
@@ -230,7 +223,7 @@ ms.locfileid: "69903644"
 |使用计算组动态设置度量值的格式 |通过此功能，可使用[计算组](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)有条件地更改度量值的格式字符串。 例如，通过货币转换，可以使用不同的外币格式显示度量值。|
 |表格模型中的多对多关系|[表格模型中的多对多关系](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24)|
 |资源管理的属性设置|[资源管理的属性设置](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24)|
-| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器超载。 此版本引入了“ClientCacheRefreshPolicy”属性  。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
+| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器超载。 此版本引入了“ClientCacheRefreshPolicy”属性。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
 | 联机附加  | 使用此功能，能够以联机操作的形式附加表格模型。 联机附加可用于本地查询横向扩展环境中只读副本的同步。 有关详细信息，请参阅[联机附加](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)。 |
 | &nbsp; | &nbsp; |
 
@@ -247,7 +240,7 @@ ms.locfileid: "69903644"
 
 ## <a name="next-steps"></a>后续步骤
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]发行说明](sql-server-ver15-release-notes.md)。
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明] (sql-server-ver15-release-notes.md)。
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]：技术白皮书](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />于 2018 年 9 月发布。 适用于面向 Windows、Linux 和 Docker 容器的 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0。
 

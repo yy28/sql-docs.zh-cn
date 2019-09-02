@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136652"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110273"
 ---
 # <a name="specify-parameters"></a>指定参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  如果默认值是包含嵌入空格或标点符号的字符串，或者以数字开头（例如，6xxx），那么该默认值必须用直的单引号引起来。  
+
+> [!NOTE] 
+> Azure SQL 数据仓库或并行数据仓库中不支持默认参数。 
   
  如果没有合适的值可以指定为参数的默认值，则指定 NULL 为默认值。 如果在未提供参数值的情况下执行过程，最好让过程返回自定义的消息。  
   

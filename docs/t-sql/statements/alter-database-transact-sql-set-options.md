@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495460"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110284"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -1783,7 +1783,7 @@ FORCED
 
 **\<query_store_options> ::=**
 
-ON | OFF | CLEAR [ ALL ]         
+打开|关闭|清除[全部]         
 控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。
 
 ON         
@@ -2516,7 +2516,7 @@ FORCED
 
 **\<query_store_options> ::=**         
 
-ON | OFF | CLEAR [ ALL ]         
+打开|关闭|清除[全部]         
 控制查询存储是否在此数据库中启用，同时控制是否删除查询存储的内容。
 
 ON         
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 要修改的数据库的名称。
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-适用于 Azure SQL 数据仓库（预览）
+适用于 Azure SQL 数据仓库（预览） 
 
 连接到 `master` 数据库时，必须运行此命令。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 在你为数据库禁用结果缓存后，以前保留的结果缓存会立即从 Azure SQL 数据仓库存储中删除。 `sys.databases` 中引入了新列 is_result_set_caching_on，用于显示数据库的结果缓存设置。  
 
@@ -2947,6 +2954,21 @@ OFF
 command|Like|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+适用于 Azure SQL 数据仓库（预览） 
+
+ON：在数据库级别启用 READ_COMMITTED_SNAPSHOT 选项。
+
+OFF：在数据库级别禁用 READ_COMMITTED_SNAPSHOT 选项。
+
+为数据库启用和禁用 READ_COMMITTED_SNAPSHOT 将终止与该数据库的所有活跃连接。  你可能希望在数据库维护时段进行此更改，也可能等到除了执行 ALTER DATABSE 命令的连接之外与数据库没有任何活跃的连接后再进行。  数据库不必处于单用户模式。  不支持在会话级别更改 READ_COMMITTED_SNAPSHOT 设置。  要验证数据库的此设置，请检查 sys.databases 中的 is_read_committed_snapshot_on 列。
+
+在启用了 READ_COMMITTED_SNAPSHOT 的数据库中，如果存在多个数据版本，则由于扫描版本，查询的性能可能会降低。 如果长时间打开的事务进行的数据更改因事务长时间打开而无法清理版本，则这些事务也会导致数据库大小增加。  
+
+
+
+
 ## <a name="remarks"></a>Remarks
 
 如果满足以下所有要求，则会为查询重用缓存的结果集：
@@ -2959,12 +2981,9 @@ command|Like|%DWResultCacheDb%|
 
 ## <a name="permissions"></a>权限
 
-需要以下权限：
+要设置 RESULT_SET_CACHING 选项，用户需要服务器级别主体登录名（在预配过程中创建的登录名）或者是 `dbmanager` 数据库角色的成员。  
 
-- 服务器级别主体登录名（由预配进程创建），或者
-- `dbmanager` 数据库角色的成员。
-
-数据库所有者无法更改数据库，除非所有者是 dbmanager 角色的成员。
+要设置 READ_COMMITTED_SNAPSHOT 选项，用户需要对数据库具有 ALTER 权限。
 
 ## <a name="examples"></a>示例
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>为数据库启用 Read_Committed_Snapshot 选项
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>另请参阅

@@ -1,9 +1,9 @@
 ---
 title: EXECUTE AS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/27/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -20,17 +20,19 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 1908228b12db7256351945b474016a707db56b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084445"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161338"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   设置会话的执行上下文。  
   
@@ -59,7 +61,7 @@ ms.locfileid: "68084445"
  指定要模拟的执行上下文是一个登录名。 模拟范围处于服务器级别。  
   
 > [!NOTE]  
->  此选项在包含的数据库或 SQL 数据库中不可用。  
+>  此选项在包含的数据库、SQL 数据库或 SQL 数据仓库中不可用。  
   
  User  
  指定要模拟的上下文是当前数据库中的用户。 模拟范围只限于当前数据库。 对数据库用户的上下文切换不会继承该用户的服务器级别权限。  
@@ -77,12 +79,12 @@ ms.locfileid: "68084445"
  有关详细信息，请参阅本主题后面的[指定用户名或登录名](#_user)。  
   
  NO REVERT  
- 指定上下文切换不能恢复到以前的上下文。 NO REVERT 选项只能在临时级别使用  。
+ 指定上下文切换不能恢复到以前的上下文。 NO REVERT 选项只能在临时级别使用  。  
   
  有关恢复到以前上下文的详细信息，请参阅 [REVERT (Transact-SQL)](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE INTO @varbinary_variable    
- 指定仅当调用 REVERT WITH COOKIE 语句包含正确的 @varbinary_variable 值时，执行上下文才能恢复回以前的上下文   。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 cookie 传递到 @varbinary_variable   。 COOKIE INTO 选项只能在临时级别使用  。  
+ COOKIE INTO @varbinary_variable   
+ 指定仅当调用 REVERT WITH COOKIE 语句包含正确的 @varbinary_variable 值时，执行上下文才能恢复回以前的上下文  。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 cookie 传递到 @varbinary_variable  。 COOKIE INTO 选项只能在临时级别使用  。  
   
  @varbinary_variable 是 varbinary(8000)    。  
   
@@ -90,9 +92,10 @@ ms.locfileid: "68084445"
 >  cookie OUTPUT 参数现记载为 varbinary(8000)，这是正确的最大长度   。 但是，当前执行返回 varbinary(100)  。 应用程序应保留 varbinary(8000)，以便当 cookie 在将来的版本中返回大小增量时，应用程序可继续正确运行  。  
   
  CALLER  
- 当在模块内部使用时，指定模块内部的语句在模块调用方的上下文中执行。  
-  
- 当在模块外部使用时，语句没有任何操作。  
+ 当在模块内部使用时，指定模块内部的语句在模块调用方的上下文中执行。
+当在模块外部使用时，语句没有任何操作。
+ > [!NOTE]  
+>  此选项在 SQL 数据仓库中不可用。  
   
 ## <a name="remarks"></a>Remarks  
  执行上下文中的更改在下列操作之一发生之前一直有效：  
@@ -125,9 +128,7 @@ ms.locfileid: "68084445"
 >  只要[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以解析该名称，就可以成功执行 EXECUTE AS 语句。 如果域用户存在，Windows 可能为[!INCLUDE[ssDE](../../includes/ssde-md.md)]解析用户，即使该 Windows 用户无权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可能导致这样的情况：无权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的登录名似乎登录了，尽管模拟的登录名仅具有给 public 或 guest 授予的权限。  
   
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
- 当 EXECUTE AS 语句包含可选的 WITH NO REVERT 子句时，不能通过 REVERT 语句或执行另一个 EXECUTE AS 语句来重置会话的执行上下文。 由该语句设置的上下文在删除会话之前一直保持有效。   请注意，如果启用了连接池，则 `sp_reset_connection` 将失败并且连接将断开。  事件日志中的错误消息为：
- 
-> 该连接已删除，因为打开它的主体后来假定了一个新的安全上下文，然后又试着在其模拟的安全上下文中重置该连接。 不支持这种情况。 请参阅联机丛书中的“模拟概述”。
+ 当 EXECUTE AS 语句包含可选的 WITH NO REVERT 子句时，不能通过 REVERT 语句或执行另一个 EXECUTE AS 语句来重置会话的执行上下文。 由该语句设置的上下文在删除会话之前一直保持有效。  
   
  当指定 WITH NO REVERT COOKIE = @varbinary_variable 子句时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将 cookie 值传递给 @varbinary_variable   。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable 语句包含相同的 @varbinary_variable 值时，该语句设置的执行上下文才能恢复为以前的上下文   。  
   

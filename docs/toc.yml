@@ -64,7 +64,11 @@
             - name: 安装大数据工具
               href: big-data-cluster/deploy-big-data-tools.md
             - name: 安装 azdata
-              href: big-data-cluster/deploy-install-azdata.md
+              items:
+                - name: 使用 Linux 包管理器
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: 使用 pip
+                  href: big-data-cluster/deploy-install-azdata.md
         - name: 部署
           items:
             - name: 部署指南
@@ -77,6 +81,8 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 脱机部署
               href: big-data-cluster/deploy-offline.md
+            - name: 部署高可用性
+              href: big-data-cluster/deployment-high-availability.md
             - name: Kubernetes 群集
               items:
                 - name: Azure Kubernetes 服务
@@ -169,6 +175,8 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: 通过笔记本进行管理
               href: big-data-cluster/manage-notebooks.md
+            - name: 通过控制器仪表板管理
+              href: big-data-cluster/manage-with-controller-dashboard.md
         - name: 笔记本
           items:
             - name: 笔记本概述
@@ -196,7 +204,15 @@
         - name: azdata 参考
           items:
             - name: azdata
-              href: big-data-cluster/reference-azdata.md
+              items:
+                - name: azdata
+                  href: big-data-cluster/reference-azdata.md
+                - name: 控件
+                  href: big-data-cluster/reference-azdata-control.md
+                - name: 笔记本
+                  href: big-data-cluster/reference-azdata-notebook.md
+                - name: sql
+                  href: big-data-cluster/reference-azdata-sql.md
             - name: 应用部署
               items:
                 - name: 应用
@@ -207,6 +223,10 @@
               items:
                 - name: bdc
                   href: big-data-cluster/reference-azdata-bdc.md
+                - name: bdc 应用
+                  href: big-data-cluster/reference-azdata-bdc-app.md
+                - name: bdc 应用状态
+                  href: big-data-cluster/reference-azdata-bdc-app-status.md
                 - name: bdc 配置
                   href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: bdc 控件
@@ -217,10 +237,16 @@
                   href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: bdc 终结点
                   href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: bdc 网关
+                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                - name: bdc 网关状态
+                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
                   href: big-data-cluster/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs 装载
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                - name: bdc hdfs 状态
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
                 - name: bdc 池
                   href: big-data-cluster/reference-azdata-bdc-pool.md
                 - name: bdc 池状态
@@ -233,6 +259,10 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-session.md
                 - name: bdc spark 语句
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                - name: bdc spark 状态
+                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                - name: bdc sql
+                  href: big-data-cluster/reference-azdata-bdc-sql.md
                 - name: bdc 状态
                   href: big-data-cluster/reference-azdata-bdc-status.md
 - name: 业务连续性
@@ -2510,7 +2540,7 @@
           items:
             - name: 组件
               href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-            - name: 连接到 Windows Azure
+            - name: 使用本机客户端连接到 Azure SQL
               href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
             - name: Dbmslpcn.dll 共享内存中的 ConnectionValidSharedMemory 函数
               href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md

@@ -14,27 +14,33 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: facdfe832b9bd7889d699f8c17f6397ba5d3dd4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934834"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122961"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   本部分中的文章可帮助将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎从先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-1.  [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) 开始升级之前，你需要了解各种不同的升级方法。 本文讨论升级方法和每个升级方法所涉及的步骤。  
+1.  [选择数据库引擎升级方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。 在开始升级之前，需要了解各种升级方法。 本文讨论升级方法和每个升级方法所涉及的步骤。  
   
-2.  [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) 查看升级方法后，便可开始为你的环境制定合适的升级方法，然后在升级现有环境之前对该升级方法进行测试。 本文讨论如何制定升级方法并对其进行测试。  
+2.  [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。 查看升级方法后，便可开始为你的环境制定合适的升级方法，然后在升级现有环境之前对该升级方法进行测试。 本文讨论如何制定升级方法并对其进行测试。  
   
-3.  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) 在数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，还需要完成一些步骤，包括进行新备份、启用新功能和重新填充全文目录。 本文讨论了这些步骤。  
+3.  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)。 在数据库引擎升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 并且数据库处于联机状态后，还需要完成一些步骤，包括制作新备份、升级数据库功能以启用新功能以及重新填充全文目录。 本文讨论了这些步骤。  
   
-4.  [更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，你要采取的一个步骤是通过更改数据库兼容性模式，然后使用查询存储以监视性能来启用新功能。 本文讨论了此过程，并提供建议的工作流。  
-  
-5.  [利用新的 SQL Server 功能](https://www.microsoft.com/sql-server/sql-server-2017) 最后，完成前面的步骤后，你就可以探索利用特定的新数据库引擎增强功能。 本文推荐了这些增强功能中的几个，并提供了获取详细信息的链接。  
+4.  升级[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)（适用于：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  ）。 当你的数据库在新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中处于联机状态后，要执行的一个步骤可能是，通过更改数据库兼容性级别来升级数据库功能模式以启用新功能。 这可以手动完成，也可以通过查询优化助手完成。 
+
+    - [更改数据库兼容性模式和使用查询存储](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 手动更改数据库兼容性级别后，使用查询存储来监视性能并识别可能的回归。 本文讨论建议的过程，并提供建议的工作流。  
+
+    - [使用查询优化助手更改数据库兼容性模式](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。 或者，要进行手动更改，请使用查询优化助手 (QTA) 作为指导，以完成更改数据库兼容性级别的建议过程  。 本文讨论此过程，并提供有关 QTA 工作流的说明。  
+
+    要详细了解更改数据库兼容性级别后可用的新功能和改进的行为，请参阅[兼容性级别之间的差异](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures)。
+
+5.  [使用新的 SQL Server 功能](https://www.microsoft.com/sql-server/sql-server-2017)。 最后，完成前面的步骤后，便可开始使用特定的新数据库引擎增强功能。 本文推荐了这些增强功能中的几个，并提供了获取详细信息的链接。  
   
   

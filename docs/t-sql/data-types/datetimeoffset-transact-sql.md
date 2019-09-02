@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086762"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148835"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "68086762"
 |用法|DECLARE \@MyDatetimeoffset datetimeoffset(7) <br /><br /> CREATE TABLE Table1 (Column1 datetimeoffset(7)) |  
 |默认字符串文字格式（用于下级客户端）|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
 |日期范围|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
-|时间范围|00:00:00 至 23:59:59.9999999（Informatica 不支持秒的小数部分）|  
-|时区偏移量范围|-14:00 到 +14:00（Informatica 中忽略时区偏移量）|  
-|各元素的范围|YYYY 是表示年份的四位数字，范围为 0001 到 9999。<br /><br /> MM 是表示指定年份中的月份的两位数字，范围为 01 到 12。<br /><br /> DD 是表示指定月份中的某一天的两位数字，范围为 01 到 31（最高值取决于相应月份）。<br /><br /> hh 是表示小时的两位数字，范围为 00 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 00 到 59。<br /><br /> ss 是表示秒钟的两位数字，范围为 00 到 59。<br /><br /> n* 是 0 到 7 位数字，范围为 0 到 9999999，它表示秒的小数部分。 Informatica 不支持秒的小数部分。<br /><br /> hh 是两位数，范围为 -14 到 +14。 Informatica 忽略时区偏移量。<br /><br /> mm 是两位数，范围为 00 到 59。 Informatica 忽略时区偏移量。|  
+|时间范围|00:00:00 到 23:59:59.9999999|  
+|时区偏移量范围|-14:00 到 +14:00|  
+|各元素的范围|YYYY 是表示年份的四位数字，范围为 0001 到 9999。<br /><br /> MM 是表示指定年份中的月份的两位数字，范围为 01 到 12。<br /><br /> DD 是表示指定月份中的某一天的两位数字，范围为 01 到 31（最高值取决于相应月份）。<br /><br /> hh 是表示小时的两位数字，范围为 00 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 00 到 59。<br /><br /> ss 是表示秒钟的两位数字，范围为 00 到 59。<br /><br /> n* 是 0 到 7 位数字，范围为 0 到 9999999，它表示秒的小数部分。<br /><br /> hh 是两位数，范围为 -14 到 +14。 <br /><br /> mm 是两位数，范围为 00 到 59。|  
 |字符长度|最低 26 位 (YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm) 到最高 34 位 (YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |精度、小数位数|请参阅下表。|  
 |存储大小|默认值为 10 个字节的固定大小，默认的秒的小数部分精度为 100ns。|  

@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715297"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059286"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "68715297"
 
 - [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)（Quorum 利用 Azure SQL 数据库中的内存中 OLTP，将主要数据库的工作负荷翻倍，同时降低了 70% 的资源使用率）
 - EdgeNet 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP 改进了批量数据加载性能，并且不再需要维护中间层缓存：[数据服务公司使用内存中技术获得实时访问产品数据的权限](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- 贝斯以色列女执事医疗中心利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，大幅提高了从域控制器引入数据的速率，同时可以处理剧增的工作负荷：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
+- 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，Beth Israel Deaconess Medical Center 显着提高了域控制器中的数据引入率，并处理工作负载高峰： https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### <a name="caching-and-session-state"></a>缓存和会话状态
 

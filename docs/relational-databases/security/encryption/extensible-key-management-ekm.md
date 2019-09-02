@@ -1,7 +1,7 @@
 ---
 title: 可扩展的密钥管理 (EKM) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16daf2968b80b5ca93ba117e850999a89411fb59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049882"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148791"
 ---
 # <a name="extensible-key-management-ekm"></a>可扩展的密钥管理 (EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据加密功能以及*可扩展的密钥管理* (EKM)，同时使用  “Microsoft 加密 API”(MSCAPI) 提供程序进行加密和生成密钥。 在临时密钥容器中可创建用于数据和密钥加密的加密密钥，并且必须先将它们从访问接口中导出，然后才能存储在数据库中。 这种方法使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
   
  随着法规遵从性和数据隐私问题方面的需求不断增长，组织正利用加密方法来提供“深度防御”解决方案。 如果仅使用数据库加密管理工具，则这种方法通常是不切实际的。 硬件供应商通过使用  “硬件安全模块”(HSM) 来提供能解决企业密钥管理的产品。 HSM 设备在硬件或软件模块上存储加密密钥。 由于加密密钥与加密数据分开存储，因此这是一种更安全的解决方案。  

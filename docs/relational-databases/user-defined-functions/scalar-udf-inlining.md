@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fc60a102a56aa5cb8c749db93290d20ec4b7f30e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126254"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030337"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -123,7 +123,7 @@ SQL Server 2017 （兼容级别 140 及更早版本）中此查询的执行计�
 
 ![没有内联的查询计划](./media/query-plan-without-udf-inlining.png)
 
-正如计划所示，SQL Server 在这里采用了一个简单的策略：对于 `CUSTOMER` 表中的每个元组，调用 UDF 并输出结果。 此策略还不成熟且效率低下。 通过内联，这些 UDF 被转换为等效的标量子查询，它们在调用查询中代替 UDF。
+正如计划所示，SQL Server 在这里采用了一个简单的策略：对于 `CUSTOMER` 表中的每个元组，调用 UDF 并输出结果。 此策略既简单又低效。 通过内联，这些 UDF 被转换为等效的标量子查询，它们在调用查询中代替 UDF。
 
 对于相同的查询，UDF 内联计划如下所示。
 

@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231741"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123119"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查询优化助手升级数据库
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 从较低版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新可用级别时，工作负载可能会面临性能回归风险。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级到任何较新版本时，出现此情况的可能性更小。
 
-自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，每个新版本的所有查询优化器更改均限制为最新的数据库兼容性级别，因此系统不会在升级后立即更改执行计划，而是在用户将 `COMPATIBILITY_LEVEL` 数据库选项更改为最新可用版本后更改。 有关 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中引入的查询优化器更改的详细信息，请参阅[基数估计器](../../relational-databases/performance/cardinality-estimation-sql-server.md)。 有关兼容性级别以及它们对升级的影响的详细信息，请参阅[兼容性级别和 SQL Server 升级](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)。
+自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，每个新版本的所有查询优化器更改均限制为最新的数据库兼容性级别，因此系统不会在升级后立即更改执行计划，而是在用户将 `COMPATIBILITY_LEVEL` 数据库选项更改为最新可用版本后更改。 有关 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中引入的查询优化器更改的详细信息，请参阅[基数估计器](../../relational-databases/performance/cardinality-estimation-sql-server.md)。 要详细了解兼容性级别及其对升级的影响，请参阅[兼容性级别和数据库引擎升级](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)。
 
 如果升级遵循以下建议工作流，那么将数据库兼容性级别提供的此限制功能与查询存储相结合，可在升级过程中拥有对查询性能很高的控制级别。 有关用于升级兼容性级别的建议工作流的详细信息，请参阅[更改数据库兼容性模式和使用查询存储](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 
 
@@ -210,7 +210,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
 需要的成员资格为 db_owner  角色。
   
 ## <a name="see-also"></a>另请参阅  
- [兼容性级别和 SQL Server 升级](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [兼容性级别和数据库引擎升级](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

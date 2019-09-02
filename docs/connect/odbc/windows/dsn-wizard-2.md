@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-ms.openlocfilehash: c997dd30b6d1e9844843ff4fa626c46b42fed463
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936576"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152570"
 ---
 # <a name="data-source-wizard-screen-2"></a>数据源向导屏幕 2
 
@@ -43,7 +43,7 @@ ms.locfileid: "67936576"
 
 ### <a name="with-active-directory-interactive-authentication"></a>使用 Active Directory 交互式身份验证
 
-通过提供登录 ID 指定驱动程序通过 Azure Active Directory 交互模式 SQL Server 进行身份验证。 这会触发 Windows Azure 身份验证提示对话框。
+通过提供登录 ID 指定驱动程序通过 Azure Active Directory 交互模式 SQL Server 进行身份验证。 这会触发 "Azure 身份验证提示" 对话框。
 
 ### <a name="login-id"></a>登录 ID
 

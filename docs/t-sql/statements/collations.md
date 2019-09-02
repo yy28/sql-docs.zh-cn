@@ -1,7 +1,7 @@
 ---
 title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 08/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b3b6a7987e4d02640bc1daadfd4cffe77b3354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbf588e3c9922f9b76363db64e9d4afade040b7f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141136"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190389"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -97,8 +97,6 @@ FROM fn_helpcollations();
 - 还原或附加数据库时，操作系统必须支持数据库的默认排序规则，并支持数据库中的任何 char、varchar 和 text 列或参数的排序规则    。
 
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例服务器排序规则为 SQL_Latin1_General_CP1_CI_AS  ，且不能更改。
->
 > char 和 varchar 数据类型支持代码页转换，但是 text 数据类型不支持    。 不报告代码页转换过程中的数据丢失。
 >
 > 如果被引用的对象所使用或指定的排序规则使用 Windows 不支持的代码页，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会显示错误。

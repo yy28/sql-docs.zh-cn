@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 6229d1df654aba2c83e10ee7b692464ed8e46897
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561117"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175551"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -28,8 +28,6 @@ ms.locfileid: "69561117"
 - 64 位 SQL Server 评估版。  
    
 - Microsoft .NET Framework 4.5。  
-
-- Oracle Java SE Runtime Environment (JRE)。 支持版本 7（从 7.51 开始）和版本 8。 [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 和 [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 都可以正常工作。 转到 [Java SE 下载](https://www.oracle.com/technetwork/java/javase/downloads/index.html)。 如果 JRE 不存在，则安装程序失败。 不支持 JRE9 和 JRE10。
 
 - 最小内存：4 GB。 
    

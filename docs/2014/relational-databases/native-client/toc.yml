@@ -73,7 +73,7 @@
       href: applications/using-ado-with-sql-server-native-client.md
     - name: SQL Server Native Client 的支持策略
       href: applications/support-policies-for-sql-server-native-client.md
-    - name: 使用 SQL Server Native Client 连接到 Azure SQL Database
+    - name: 使用 SQL Server Native Client 连接到 Azure SQL 数据库
       href: applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
 - name: SQL Server Native Client 的系统要求
   href: system-requirements-for-sql-server-native-client.md

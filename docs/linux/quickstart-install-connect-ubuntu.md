@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e21761c221ec83770be7c9aa19f8a4ec971617e2
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910462"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030318"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入门：安装 SQL Server 并在 Ubuntu 上创建数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -46,7 +46,10 @@ ms.locfileid: "67910462"
 > [!NOTE]
 > 目前，不支持将适用于 Windows 10 的 [Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标。
 
-有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统需求](sql-server-linux-setup.md#system)。
+有关其他系统要求，请参阅 [Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
+
+> [!NOTE]
+> Ubuntu 18.04 尚未获得正式支持，但可以通过[修改](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/)运行 SQL Server。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -74,21 +77,21 @@ ms.locfileid: "67910462"
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
    > ```
 
-3. 运行以下命令，安装 SQL Server：
+3. 运行以下命令以安装 SQL Server：
 
    ```bash
    sudo apt-get update
    sudo apt-get install -y mssql-server
    ```
 
-4. 包安装完成后，运行 mssql-conf setup，按照提示设置 SA 密码并选择版本  。
+4. 包安装完成后，运行 **mssql-conf setup**，按照提示设置 SA 密码并选择版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > 以下 SQL Server 2017 版本是免费提供许可的：评估版、开发人员版和 Express 版。
+   > 以下 SQL Server 2017 版本是免费提供许可的：Evaluation、Developer 和 Express 版。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
@@ -130,7 +133,7 @@ ms.locfileid: "67910462"
    sudo apt-get install -y mssql-server
    ```
 
-4. 包安装完成后，运行 mssql-conf setup，按照提示设置 SA 密码并选择版本  。
+4. 包安装完成后，运行 **mssql-conf setup**，按照提示设置 SA 密码并选择版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -153,7 +156,7 @@ ms.locfileid: "67910462"
 
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-要创建数据库，需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
+若要创建数据库，则需要使用可在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤安装 SQL Server 命令行工具：[sqlcmd](../tools/sqlcmd-utility.md) 和 [bcp](../tools/bcp-utility.md)。
 
 通过下列步骤在 Ubuntu 上安装 mssql-tools  。 
 

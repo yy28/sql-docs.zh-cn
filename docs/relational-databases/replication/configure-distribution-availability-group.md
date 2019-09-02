@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768693"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030321"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>在 Always On 可用性组中设置复制分发数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 A
 
 ## <a name="limitations-or-exclusions"></a>限制或排除
 
-- 不支持本地分发服务器。 例如，发布服务器和分发服务器必须为不同的 SQL Server 实例。 使用自身作为分发服务器（也称为 本地分发服务器）的发布服务器无法支持 AG 中的分发数据库。
+- 不支持本地分发服务器。 例如，发布服务器和分发服务器必须为不同的 SQL Server 实例。 这些实例可以托管在同一组节点上。  使用自身作为分发服务器（也称为 本地分发服务器）的发布服务器无法支持 AG 中的分发数据库。
 - 不支持 Oracle 发布服务器。
 - 不支持合并复制。
 - 不支持使用即时或排队更新订阅服务器的事务复制。
 - 不支持对等复制。
-- 托管分发数据库副本的所有 SQL Server 实例必须为 SQL Server 2017 CU 6 或更高版本。 
+- 托管分发数据库副本的所有 SQL Server 2017 实例必须是 SQL Server 2017 CU 6 或更高版本。 
+- 托管分发数据库副本的所有 SQL Server 2016 实例必须是 SQL Server 2016 SP2-CU3 或更高版本。
 - 托管分发数据库副本的所有 SQL Server 实例的版本必须相同，除非进行升级的时间范围较窄。
 - 分发数据库必须处于完全恢复模式。
 - 要恢复和允许事务日志截断，请配置完整备份和事务日志备份。

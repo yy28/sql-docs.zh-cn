@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553108"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059263"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553108"
 | 笔记本改进 | &bull; &nbsp; 在行中添加代码或文本单元 <br/>&bull; &nbsp; 新增了以下功能：右键单击 SQL 结果网格可以将结果另存为 CSV、JSON 等 <br/> &bull; &nbsp; 提升了笔记本加载性能，以便更快地加载 JSON <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)查看完整的改进列表 |
 | SQL Server 2019 支持 |  此版本中包括对其他 SQL Server 2019 大数据群集功能的支持，包括： <br/> &bull; &nbsp; 缩短了加载“对象映射”页上的表和列信息所需的时间。 <br/> &bull; &nbsp; 修复了在“连接详细信息”页上加载现有数据库范围凭据时出现的 bug。 <br/> &bull; &nbsp; 增加了用于 PROSE 分析的默认样本大小。 | 
 | Dacpac 扩展现在支持 AAD | 
-| Visual Studio Code 5 月发布合并 1.37 | 可在[此处](https://code.visualstudio.com/updates/v1_37)查看最新的改进内容。 |
+| Visual Studio Code 7 月发布合并 1.37 | 可在[此处](https://code.visualstudio.com/updates/v1_37)查看最新的改进内容。 |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)。 |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553108"
 | 架构比较改进 | &bull; &nbsp; 已添加排除/包含选项 <br/>&bull; &nbsp; “生成脚本”在脚本生成后打开脚本 <br/>&bull; &nbsp; 已删除双滚动条  <br/>&bull; &nbsp; 格式设置和布局改进 <br/>&bull; &nbsp; 可在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)查看完整的更改内容|
 | 将“消息”部分移动到专用选项卡 | 以前用户运行 SQL 查询时，结果和消息都在堆叠面板上。 现在它们会在面板中的单独选项卡上，例如在 SSMS 中。 |
 | SQL 笔记本改进 | &bull; &nbsp; 用户现在可以选择在笔记本上使用自己的 Python 3 或 Anaconda 安装 <br/>&bull; &nbsp; 多重稳定性 + 适应性/外观修复 <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)查看完整的改进列表|
-| Visual Studio Code 5 月发布合并 1.34 | 可在[此处](https://code.visualstudio.com/updates/v1_34)查看最新的改进内容 |
+| Visual Studio Code 4 月发布合并 1.34 | 可在[此处](https://code.visualstudio.com/updates/v1_34)查看最新的改进内容 |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)。 |
 | &nbsp; | &nbsp; |
 

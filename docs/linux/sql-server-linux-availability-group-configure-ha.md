@@ -5,17 +5,17 @@ description: 了解如何在 Linux 上创建 SQL Server Always On 可用性组 (
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027254"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030309"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
@@ -49,9 +49,9 @@ ms.locfileid: "68027254"
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    >[!IMPORTANT]
-   >生产环境需要 STONITH 等隔离代理，以实现高可用性。 本文档中的演示不使用隔离代理。 演示仅用于测试和验证。 
+   >生产环境需要 STONITH 等隔离代理，以实现高可用性。 本文档中的演示不使用隔离代理。 演示仅用于测试和验证目的。 
    
-   >Linux 群集使用隔离将群集返回到某个已知状态。 配置隔离的方式取决于分发和环境。 目前，在某些云环境中无法使用隔离。 有关详细信息，请参阅 [RHEL 高可用性群集的支持策略 - 虚拟化平台](https://access.redhat.com/articles/29440)。
+   >Linux 群集使用隔离将群集返回到某个已知状态。 配置隔离的方式取决于分发版和环境。 目前，在某些云环境中无法使用隔离。 有关详细信息，请参阅 [RHEL 高可用性群集的支持策略 - 虚拟化平台](https://access.redhat.com/articles/29440)。
    
    >关于 SLES，请参阅 [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing)（SUSE Linux 企业高可用性扩展）。
 
@@ -193,16 +193,16 @@ ms.locfileid: "68027254"
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>将次要副本联接到 AG
 
-Pacemaker 用户需要具有对所有副本上可用性组的 `ALTER`、`CONTROL` 和 `VIEW DEFINITION` 权限。 若要授予权限，在创建可用性组且将主副本和每个次要副本添加到可用性组之后，请在这些副本上立即运行以下 Transact-SQL 脚本。 在运行脚本之前，请将 `<pacemakerLogin>` 替换为 pacemaker 用户帐户的名称。
+Pacemaker 用户需要具有对所有副本上可用性组的 `ALTER`、`CONTROL` 和 `VIEW DEFINITION` 权限。 若要授予权限，在创建可用性组且将主副本和每个次要副本添加到可用性组之后，请在这些副本上立即运行以下 Transact-SQL 脚本。 在运行脚本之前，请将 `<pacemakerLogin>` 替换为 pacemaker 用户帐户的名称。 如果没有 pacemaker 的登录名，请[为 pacemaker 创建 SQL Server 登录名](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker)。
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 以下 Transact-SQL 脚本将 SQL Server 实例加入名为 `ag1` 的 AG。 为环境更新脚本。 在托管次要副本的每个 SQL Server 实例上运行以下 Transact-SQL，以加入 AG。
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

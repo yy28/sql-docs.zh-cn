@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 52d3a6f14042a5208803c84557d6b3b7e4e4f37e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986231"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190383"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -219,7 +219,8 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|在发布结束时, 所有约束都将作为一个集进行验证, 从而避免在发布过程中由 check 或 foreign key 约束导致的数据错误。 如果设置为“False”，则将发布约束而不检查对应的数据。|
 |**/p:**|ScriptRefreshModule=(BOOLEAN 'True')|在发布脚本的末尾包括刷新语句。|
 |**/p:**|Storage=({File&#124;Memory})|指定在生成数据库模型时如何存储元素。 出于性能原因，默认值为 InMemory。 对于大型数据库，需要备份了文件的存储。|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否应将发布验证过程中遇到的错误视为警告。 在对目标数据库执行生成的部署计划之前，会先对该计划执行检查。 计划验证将检测仅有目标的对象（如索引）丢失等问题，必须解决这些问题以进行更改。 验证还检测以下情况：依赖项（如表或视图）因对复合项目的引用而存在，但未存在于目标数据库中。 你可以选择执行此操作以获取所有问题的完整列表, 而不是在第一个错误时停止发布操作。|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在无法修改的对象中发现差异（例如，如果文件的大小或路径存在差异）时是否生成警告。|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|指定是否应将发布验证过程中遇到的错误视为警告。 在对目标数据库执行生成的部署计划之前，会先对该计划执行检查。 计划验证将检测仅有目标的对象（如索引）丢失等问题，必须解决这些问题以进行更改。 验证还检测以下情况：依赖项（如表或视图）因对复合项目的引用而存在，但未存在于目标数据库中。 你可以选择执行此操作以获取所有问题的完整列表, 而不是在第一个错误时停止发布操作。
+|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|指定在无法修改的对象中发现差异（例如，如果文件的大小或路径存在差异）时是否生成警告。|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|指定是否验证排序规则兼容性。|
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|指定在出现可能阻止成功发布的问题的情况下，是否应在发布前执行将停止发布操作的检查。 例如，如果具有在数据库项目中不存在的目标数据库上的外键并且在发布时导致错误，则发布操作可能会停止。|
 |
@@ -228,7 +229,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 
 下表介绍可用于重写发布操作过程中使用的 SQL 命令 (sqlcmd) 变量的值的选项的格式  。 命令行上指定的变量的值将重写分配给变量（例如，在发布配置文件中）的其他值。  
   
-|参数|，则“默认”|描述|  
+|参数|默认|描述|  
 |-------------|-----------|---------------|  
 |**/Variables:{PropertyName}={Value}**||为特定于操作的变量指定名称值对；{VariableName}={Value}。 该 DACPAC 文件包含有效 SQLCMD 变量的列表。 如果没有为每个变量都提供值，则会发生错误。|  
   
