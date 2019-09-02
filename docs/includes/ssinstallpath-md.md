@@ -6,4 +6,4 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "68212469"
 ---
- C:\Program Files\Microsoft SQL Server\\nnn\   
+ C:\Program Files\Microsoft SQL Server\\nnn\  \  
