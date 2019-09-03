@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e83ffa37af2a6e33cad2645105b0df034f59d9f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926180"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212338"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 事件实例化：ADO 和 WFC
-ADO 的 Windows 基础类 (ADO/WFC) 建立 ADO 事件模型，并提供简化的应用程序的编程接口。 一般情况下，ADO/WFC 截获 ADO 事件、 将事件参数合并到单个事件类，然后调用事件处理程序。  
+Windows 基础类 (ADO/WFC) 的 ADO 构建于 ADO 事件模型上, 并提供简化的应用程序编程接口。 通常情况下, ADO/WFC 会截获 ADO 事件, 将事件参数合并为单个事件类, 然后调用事件处理程序。  
   
-### <a name="to-use-ado-events-in-adowfc"></a>若要在 ADO/WFC 中使用 ADO 事件  
+### <a name="to-use-ado-events-in-adowfc"></a>在 ADO/WFC 中使用 ADO 事件  
   
-1.  定义你自己的事件处理程序处理事件。 例如，如果你想要处理**ConnectComplete**中的事件**ConnectionEvent**系列，可能会使用此代码：  
+1.  定义自己的事件处理程序以处理事件。 例如, 如果要处理**ConnectionEvent**系列中的**ConnectComplete**事件, 可以使用以下代码:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
@@ -31,34 +31,34 @@ ADO 的 Windows 基础类 (ADO/WFC) 建立 ADO 事件模型，并提供简化的
     }  
     ```  
   
-2.  定义处理程序对象来表示事件处理程序。 处理程序对象的数据类型应为**ConnectEventHandler**类型的事件**ConnectionEvent**，或数据类型**RecordsetEventHandler** 类型的事件**RecordsetEvent**。 例如，代码为下面你**ConnectComplete**事件处理程序：  
+2.  定义用于表示事件处理程序的处理程序对象。 对于**ConnectionEvent**类型的事件, 处理程序对象应为数据类型**ConnectEventHandler** , 对于**RecordsetEvent**类型的事件, 则为数据类型**RecordsetEventHandler** 。 例如, 为**ConnectComplete**事件处理程序编写以下代码:  
   
     ```  
     ConnectionEventHandler handler =   
         new ConnectionEventHandler(this, "onConnectComplete");  
     ```  
   
-     第一个参数**ConnectionEventHandler**构造函数是对包含在第二个参数中命名的事件处理程序的类的引用。  
+     **ConnectionEventHandler**构造函数的第一个参数是对类的引用, 该类包含第二个参数中命名的事件处理程序。  
   
-3.  将事件处理程序添加到指定用于处理特定类型的事件处理程序的列表。 使用带名称的方法，如 **加载项** *EventName*(*处理程序*)。  
+3.  将事件处理程序添加到指定用于处理特定事件类型的处理程序列表。 使用带有名称的方法, 如**加载**项_事件_(*处理程序*)。  
   
-4.  ADO/WFC 在内部实现所有 ADO 事件处理程序。 因此，事件会引起**连接**或**记录集**ADO/WFC 事件处理程序截获的操作。  
+4.  ADO/WFC 在内部实现所有 ADO 事件处理程序。 因此, 由**连接**或**记录集**操作导致的事件被 ADO/WFC 事件处理程序截获。  
   
-     ADO/WFC 事件处理程序将 ADO **ConnectionEvent** ADO/WFC 的实例中的参数**ConnectionEvent**类或 ADO **RecordsetEvent**中的参数实例的 ADO/WFC **RecordsetEvent**类。 这些 ADO/WFC 类合并 ADO 事件参数;也就是说，每个 ADO/WFC 类包含一个数据成员的每个唯一的参数中的 ADO **ConnectionEvent**或**RecordsetEvent**方法。  
+     ADO/WFC 事件处理程序在 ado/WFC **ConnectionEvent**类的实例中传递 ado **ConnectionEvent**参数, 或在 ado/wfc **RecordsetEvent**类的实例中传递 ado **RecordsetEvent**参数。 这些 ADO/WFC 类合并了 ADO 事件参数;也就是说, 每个 ADO/WFC 类对于所有 ADO **ConnectionEvent**或**RecordsetEvent**方法中的每个唯一参数都包含一个数据成员。  
   
-5.  ADO/WFC 然后调用事件处理程序中的使用 ADO/WFC 事件对象。 例如，你**onConnectComplete**处理程序具有的签名如下：  
+5.  ADO/WFC 随后将调用事件处理程序和 ADO/WFC 事件对象。 例如, **onConnectComplete**处理程序的签名如下所示:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     第一个参数是发送事件的对象的类型 ([连接](../../../ado/reference/ado-api/connection-object-ado.md)或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md))，并且第二个参数是 ADO/WFC 事件对象 (**ConnectionEvent**或**RecordsetEvent**)。  
+     第一个参数是发送事件的对象的类型 ([连接](../../../ado/reference/ado-api/connection-object-ado.md)或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)), 第二个参数是 ADO/WFC 事件对象 (**ConnectionEvent**或**RecordsetEvent**)。  
   
-     事件处理程序的签名是 ADO 事件比简单得多。 但是，仍必须了解要知道参数将应用于事件以及如何做出响应的 ADO 事件模型。  
+     事件处理程序的签名比 ADO 事件简单。 但是, 您仍然必须了解 ADO 事件模型, 才能了解哪些参数适用于事件以及如何做出响应。  
   
-6.  从事件处理程序返回到 ADO 事件的 ADO/WFC 处理程序。 ADO/WFC 相关 ADO/WFC 事件数据成员复制回 ADO 事件参数，并返回 ADO 事件处理程序。  
+6.  从事件处理程序返回到 ADO 事件的 ADO/WFC 处理程序。 ADO/WFC 将相关的 ADO/WFC 事件数据成员复制回 ADO 事件参数, 然后 ADO 事件处理程序返回。  
   
-7.  完成之后处理，从 ADO/WFC 事件处理程序的列表中删除您的处理程序。 使用带名称的方法，如 **removeOn** *EventName*(*处理程序*)。  
+7.  完成处理后, 从 ADO/WFC 事件处理程序列表中删除处理程序。 使用带有名称的方法, 如**removeOn**_事件_名称 (*处理程序*)。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
