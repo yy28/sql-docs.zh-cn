@@ -69,9 +69,9 @@ ms.locfileid: "67948757"
   
  如果选择此选项，请生成一个新的快照，用以在还原发布数据库后立即向重新初始化的订阅服务器传递。  
   
- 若要重新初始化订阅，请参阅 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)。  
+ 若要重新初始化订阅，请参阅 [重新初始化订阅](../../../relational-databases/replication/reinitialize-a-subscription.md)。  
   
- 若要创建并应用快照，请参阅 [Create 和 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 和 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+ 若要创建并应用快照，请参阅 [创建并应用初始快照](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 和 [为包含参数化筛选器的合并发布创建快照](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>备份和还原分发数据库  
  对于合并复制，应定期备份分发数据库，而且，只要所用备份的时间不超过使用分发服务器的所有发布的最短保持期，则无须考虑任何特殊事项即可还原分发数据库。 例如，如果三个发布的保持期分别为 10 天、20 天和 30 天，则用于还原数据库的备份的保持时间不应超过 10 天。 分发数据库在合并复制中的作用有限：它不存储更改跟踪中使用的任何数据，也不对将要转发到订阅数据库的合并复制更改提供临时存储（而事务复制中提供）。  
