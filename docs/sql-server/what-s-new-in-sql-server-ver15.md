@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026245"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155466"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -25,7 +25,7 @@ ms.locfileid: "70026245"
 
 有关详细信息和已知问题，请参阅 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明](sql-server-ver15-release-notes.md)。
 
-使用[最新工具](what-s-new-in-sql-server-ver15-prerelease.md#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验。
+使用[最新工具](what-s-new-in-sql-server-ver15-prerelease.md#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验  。
 
 >[!NOTE]
 >内容是针对 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布而发布的。 候选发布是预发布软件。 信息可能会发生变更。 若要详细了解支持方案，请参阅[支持](#support)。
@@ -40,15 +40,12 @@ ms.locfileid: "70026245"
 
 | 新增功能或更新 | 详细信息 |
 |:---|:---|
-| 可缩放的大数据解决方案 | [部署](../big-data-cluster/deploy-get-started.md) SQL Server、Spark 和在 Kubernetes 上运行的 HDFS 容器的可缩放群集 <br/><br/> 在 Transact-SQL 或 Spark 中读取、写入和处理大数据<br/><br/> 通过大容量大数据轻松合并和分析高价值关系数据<br/><br/>查询外部数据源<br/><br/>在由 SQL Server 管理的 HDFS 中存储大数据<br/><br/>通过群集查询多个外部数据源的数据<br/><br/> 将数据用于 AI、机器学习和其他分析任务<br/><br/> 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中部署和运行应用程序 <br/>|
+| 可缩放的大数据解决方案 | [部署](../big-data-cluster/deploy-get-started.md) SQL Server、Spark 和在 Kubernetes 上运行的 HDFS 容器的可缩放群集 <br/><br/> 在 Transact-SQL 或 Spark 中读取、写入和处理大数据<br/><br/> 通过大容量大数据轻松合并和分析高价值关系数据<br/><br/>查询外部数据源<br/><br/>在由 SQL Server 管理的 HDFS 中存储大数据<br/><br/>通过群集查询多个外部数据源的数据<br/><br/> 将数据用于 AI、机器学习和其他分析任务<br/><br/> 在 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] 中部署和运行应用程序 <br/><br/> SQL Server 主实例数据库使用 Always On 可用性组<br/>|
 | &nbsp; | &nbsp; |
 
 如需了解更多详情，请参阅[什么是 SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md)。
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) 公告存档](what-s-new-in-sql-server-ver15-prerelease.md)中列出了含有此功能的所有先前 CTP 版本中公告和更改的功能。
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>数据库引擎
 
@@ -171,8 +168,8 @@ ms.locfileid: "70026245"
 
 |新增功能或更新 | 详细信息 | 
 |:---|:---| 
-|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”和“最大服务器内存(MB)”服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。| 
-|新并行度设置选项 | 在安装过程中设置“最大并行度”服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
+|新内存设置选项 | 在安装过程中设置“最小服务器内存(MB)”  和“最大服务器内存(MB)”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - 内存”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY` 和 `SQLMAXMEMORY` 参数。 建议值遵循[服务器内存配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)中的内存配置准则。| 
+|新并行度设置选项 | 在安装过程中设置“最大并行度”  服务器配置。 有关详细信息，请参阅[“数据库引擎配置 - MaxDOP”页](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)，以及[通过命令提示符安装 SQL Server](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) 中的 `SQLMAXDOP` 参数。 默认值遵循[配置服务器配置选项“最大并行度”](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)中的最大并行度准则。| 
 | &nbsp; | &nbsp; |
 
 ### <a name="error-messages"></a>错误消息
@@ -223,7 +220,7 @@ ms.locfileid: "70026245"
 |使用计算组动态设置度量值的格式 |通过此功能，可使用[计算组](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24)有条件地更改度量值的格式字符串。 例如，通过货币转换，可以使用不同的外币格式显示度量值。|
 |表格模型中的多对多关系|[表格模型中的多对多关系](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24)|
 |资源管理的属性设置|[资源管理的属性设置](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24)|
-| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器超载。 此版本引入了“ClientCacheRefreshPolicy”属性。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
+| Power BI 缓存刷新的调控设置。  | Power BI 服务缓存 Live Connect 报告初始加载的仪表板磁贴数据和报告数据，导致向 SSAS 提交的缓存查询数目过多，在极端情况下导致服务器超载。 此版本引入了“ClientCacheRefreshPolicy”属性  。 此属性可用于替代此服务器级别的行为。 有关详细信息，请参阅[常规属性](https://docs.microsoft.com/analysis-services/server-properties/general-properties)。 |
 | 联机附加  | 使用此功能，能够以联机操作的形式附加表格模型。 联机附加可用于本地查询横向扩展环境中只读副本的同步。 有关详细信息，请参阅[联机附加](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)。 |
 | &nbsp; | &nbsp; |
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0da6d086754b63a2d796c4f7ff8e1b7fd2d2cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249811"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155725"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能  。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距  。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
@@ -63,7 +63,7 @@ ms.locfileid: "63249811"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 属性  
   
-|属性|类型|RW|，则“默认”|描述|  
+|属性|类型|RW|默认|描述|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|双精度|RW|报表设置|获取或设置左边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
 |MarginRight|双精度|RW|报表设置|获取或设置右边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
@@ -91,7 +91,7 @@ ms.locfileid: "63249811"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- 当在 Windows Azure SQL Reporting 中运行报表时，使用以下 CLSID 值。  
+ 当在 Azure SQL 报告中运行报表时，使用以下 CLSID 值。  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
