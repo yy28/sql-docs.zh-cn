@@ -50,7 +50,7 @@ SQLRETURN SQLFetch(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLFetch**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过使用*SQLGetDiagRec 的 HandleType*和 SQL_HANDLE_STMT 的*句柄*调用[StatementHandle 函数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)来获取关联的 SQLSTATE 值。  . 下表列出了通常由**SQLFetch**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。 如果对单个列发生错误, 则可以使用 SQL_DIAG_COLUMN_NUMBER 的*DiagIdentifier*调用[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) , 以确定发生错误的列;可以使用 SQL_DIAG_ROW_NUMBER 的*DiagIdentifier*调用和**SQLGetDiagField**来确定包含该列的行。  
+ 当**SQLFetch**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时, 可以通过使用*SQLGetDiagRec 的 HandleType*和 SQL_HANDLE_STMT 的*句柄*调用[StatementHandle 函数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLFetch**返回的 SQLSTATE 值, 并对该函数的上下文中的每个值进行了说明:"(DM)" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明, 否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。 如果对单个列发生错误, 则可以使用 SQL_DIAG_COLUMN_NUMBER 的*DiagIdentifier*调用[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) , 以确定发生错误的列;可以使用 SQL_DIAG_ROW_NUMBER 的*DiagIdentifier*调用和**SQLGetDiagField**来确定包含该列的行。  
   
  对于可以返回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR 的所有 SQLSTATEs (除了 01xxx SQLSTATEs), 如果在一个或多个 (但不是全部) 行上发生错误, 则将返回 SQL_SUCCESS_WITH_INFO; 如果发生错误, 则返回多行单行操作。  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |条件|新行集的第一行|  
 |---------------|-----------------------------|  
 |开始之前|1|  
-|*CurrRowsetStart*LastResultRow-RowsetSize [1]  \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
-| CurrRowsetStart > *LastResultRow-RowsetSize*[1]|结束后|  
+|*CurrRowsetStart*LastResultRow-RowsetSize [1] \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
+|CurrRowsetStart > *LastResultRow-RowsetSize*[1]|结束后|  
 |结束后|结束后|  
   
  [1] 如果行集大小在提取之间发生更改, 则这是与上一次提取一起使用的行集大小。  
