@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d5fa3b8a91147789dfafad6a69ac6210dfd8119
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a8ee23c8eb8a51328ccc9808207f04823e9b980
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940886"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176304"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>将多个数据库备份到 Azure Blob 存储 - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主题提供一些示例脚本，可用于通过 PowerShell cmdlet 自动备份到 Windows Azure Blob 存储服务。  
+  本主题提供一些示例脚本，可用于通过 PowerShell cmdlet 自动备份到 Azure Blob 存储服务。  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>用于备份和还原的 PowerShell cmdlet 的概述  
- **Backup-SqlDatabase** 和 **Restore-SqlDatabase** 是两个用于进行备份和还原操作的主要 cmdlet。 此外，可能还需要其他 cmdlet 才能自动备份到 Windows Azure Blob 存储，如这组 **SqlCredential** cmdlet。下面列出了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的用于备份和还原操作中的 PowerShell cmdlet。  
+ **Backup-SqlDatabase** 和 **Restore-SqlDatabase** 是两个用于进行备份和还原操作的主要 cmdlet。 此外，可能还需要其他 cmdlet 才能自动备份到 Azure Blob 存储，如这组 SqlCredential  cmdlet。下面列出了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的用于备份和还原操作中的 PowerShell cmdlet：  
   
  Backup-SqlDatabase  
  此 cmdlet 用于创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份。  
@@ -32,7 +32,7 @@ ms.locfileid: "67940886"
  用于还原数据库。  
   
  New-SqlCredential  
- 此 cmdlet 用于创建一个 SQL 凭据，后者用于 SQL Server 备份到 Windows Azure 存储。 有关凭据及其在 SQL Server 备份和还原中的使用情况的详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 此 cmdlet 用于创建一个 SQL 凭据，后者用于 SQL Server 备份到 Azure 存储。 有关凭据及其在 SQL Server 备份和还原中的使用情况的详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  Get-SqlCredential  
  此 cmdlet 用于检索凭据对象及其属性。  
@@ -44,7 +44,7 @@ ms.locfileid: "67940886"
  此 cmdlet 用于更改或设置 SQL 凭据对象的属性。  
   
 > [!TIP]  
->  凭据 cmdlet 用于备份和还原到 Windows Azure Blob 存储的场景中。  
+>  凭据 cmdlet 用于备份和还原到 Azure Blob 存储的场景中。  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>用于多数据库、多实例备份操作的 PowerShell  
  以下几个部分包含用于多种操作的脚本，如在多个 SQL Server 实例上创建 SQL 凭据，备份 SQL Server 实例中的所有用户数据库等。 可使用这些脚本根据所处环境的要求自动进行备份操作或安排备份操作。 此处提供的脚本仅为示例，可针对所处环境修改或扩展这些脚本。  
@@ -59,7 +59,7 @@ ms.locfileid: "67940886"
   
      有关详细信息，请参阅 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)。  
   
-3.  尽管可通过更改变量值独立尝试每个代码示例，但对于所有备份和还原到 Windows Azure Blob 存储服务的操作，创建 Windows Azure 存储帐户和 SQL 凭据均为先决条件和必备条件。  
+3.  尽管可通过更改变量值独立尝试每个代码示例，但对于所有备份和还原到 Azure Blob 存储服务的操作，创建 Azure 存储帐户和 SQL 凭据均为先决条件和必备条件。  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>在所有 SQL Server 实例上创建 SQL 凭据  
  下面有两个示例脚本，并且二者都在计算机上的所有 SQL Server 实例上创建 SQL 凭据“mybackupToURL”。 第一个示例比较简单，它创建凭据但不捕获异常。  例如，如果计算机的某个实例上已有同名的现有凭据，则该脚本将失败。 第二个示例捕获错误并允许脚本继续运行。  

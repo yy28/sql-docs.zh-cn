@@ -11,12 +11,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bf9d15a7816f7e51691146fc0ba927e45b7250f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134605"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155503"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "68134605"
 [教程：使用基于策略的管理来管理服务器](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 本教程教授如何创建强制执行网站管理标准的策略。  
   
-[教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-本教程说明如何将 SQL Server 备份和还原到 Windows Azure Blob 存储服务。  
+[教程：将 SQL Server 备份和还原到 Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+本教程说明如何将 SQL Server 备份和还原到 Azure Blob 存储服务。  
   
 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  
+本教程有助于了解如何将 SQL Server 数据文件直接存储在 Azure Blob 存储服务中。  
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 2016 教程](../sql-server/tutorials-for-sql-server-2016.md)  

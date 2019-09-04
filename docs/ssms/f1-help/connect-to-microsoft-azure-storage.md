@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7f3a8d7168e9e1b9e321a83e7e1d7143b5bcf1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265081"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155681"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>连接到 Microsoft Azure 存储
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-可使用“Windows Azure 存储连接”  对话框指定存储帐户并验证与 Windows Azure 的连接。  
+使用“Azure 存储连接”对话框指定存储帐户并验证与 Azure 的连接  。  
   
 ## <a name="options"></a>选项  
-指定有关 Windows Azure 帐户的以下信息，然后单击“下一步”  继续。  
+指定有关 Azure 帐户的以下信息，然后单击“下一步”  继续。  
   
 1.  **存储帐户** - 指定存储帐户名称。
 

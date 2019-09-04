@@ -10,12 +10,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136492"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155689"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ memory-optimized table DLLs.
   
 **解决方法：** 使用哈希索引时，检查查询和查询计划以确定查询是否可受益于对索引键子集的 Index Seek 操作或对不等谓词的 Index Seek 操作。 如果需要查找索引键子集，请使用非聚集索引或对需要查找的列使用哈希索引。 如果需要查找不等谓词，请使用非聚集索引而不是哈希索引。  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>在同一查询中使用内存优化表和内存优化表变量时，如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，就会失败  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>在同一查询中使用内存优化表和内存优化表变量时，如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，就会失败  
 **问题：** 如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，并访问用户事务上下文之外的同一语句中的内存优化表和内存优化表变量，则可能会看到以下错误消息：  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **解决方法：** 无。 对于本机编译存储过程中短时间运行的查询，不要依赖执行状态 DMV 中报告的 worker_time。  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>包含长表达式的本机编译存储过程使用 SHOWPLAN_XML 的错误  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>包含长表达式的本机编译存储过程使用 SHOWPLAN_XML 的错误  
 **问题：** 如果本机编译存储过程包含长表达式，使用 T-SQL 选项 SET SHOWPLAN_XML ON 或使用 Management Studio 中的“显示估计的执行计划”选项获取过程的 SHOWPLAN_XML 可能导致以下错误：  
   
 ```  
@@ -334,10 +334,10 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](https://go.microsoft.com/fwlink/?LinkID=391254)。  
   
-### <a name="AzureVM"></a>Microsoft Azure 虚拟机上的 SQL Server 2014 RTM  
+### <a name="AzureVM"></a> Azure 虚拟机上的 SQL Server 2014 RTM  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>在 Microsoft Azure 中配置可用性组侦听器时添加 Azure 副本向导返回错误  
-**问题：** 如果可用性组具有侦听器，当你尝试在 Microsoft Azure 中配置可用性组侦听器时，添加 Azure 副本向导将返回错误。  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>在 Azure 中配置可用性组侦听器时添加 Azure 副本向导返回错误  
+**问题：** 如果可用性组具有侦听器，当你尝试在 Azure 中配置可用性组侦听器时，添加 Azure 副本向导将返回错误。  
   
 此问题是因为可用性组侦听器需要在每个托管可用性组副本的子网中分配一个 IP 地址，包括 Azure 子网。  
   
@@ -345,9 +345,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  在“侦听器”页上，在将托管可用性组副本的 Azure 子网中为可用性组侦听器分配一个空闲的静态 IP 地址。  
   
-    此解决方法将允许向导在 Microsoft Azure 中完成添加副本的工作。  
+    此解决方法将允许向导在 Azure 中完成添加副本的工作。  
   
-2.  向导完成后，您将需要按照 [Windows Azure 中 AlwaysOn 可用性组的侦听器配置](https://msdn.microsoft.com/library/dn376546.aspx)中所述在 Windows Azure 中完成侦听器配置。  
+2.  向导完成后，将需要按照 [Azure 中 AlwaysOn 可用性组的侦听器配置](https://msdn.microsoft.com/library/dn376546.aspx)中所述在 Azure 中完成侦听器配置  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   

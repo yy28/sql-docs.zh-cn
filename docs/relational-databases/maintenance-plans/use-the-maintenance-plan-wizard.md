@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 402c417de43637f810366423fb4e66b9cb3c507c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115706"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155566"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68115706"
   
     4.  选择 **“每项任务单独计划”** 或 **“整个计划统筹安排或无计划”** 指定维护计划的重复执行计划。  
   
-        > **注意**：如果您选中 **“每项任务单独计划”** ，则需要为您维护计划中的每个任务按照 **e.** 下面的步骤执行操作。  
+        > **注意：** 如果您选中 **“每项任务单独计划”** ，则需要为您维护计划中的每个任务按照 **e.** 下面的步骤执行操作。  
   
     5.  如果您选择了 **“整个计划统筹安排或无计划”** ，则在 **“计划”** 下面单击 **“更改”** 。  
   
@@ -136,15 +136,15 @@ ms.locfileid: "68115706"
   
 6.  在 **“选择目标服务器”** 页上，选择要运行维护计划的服务器。 此页仅在配置为主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上可见。  
   
-    > **注意**：若要创建多服务器维护计划，必须配置包含一台主服务器和一台或多台目标服务器的多服务器环境，并且应将本地服务器配置为主服务器。 在多服务器环境中，此页显示“(本地)”  主服务器和所有相应的目标服务器。  
+    > **注意：** 若要创建多服务器维护计划，必须配置包含一台主服务器和一台或多台目标服务器的多服务器环境，并且应将本地服务器配置为主服务器。 在多服务器环境中，此页显示“(本地)”  主服务器和所有相应的目标服务器。  
   
 7.  在 **“选择维护任务”** 页上，选择一个或多个要添加到该计划中的维护任务。 当您已选择所有必要的任务时，请单击 **“下一步”** 。  
   
-    > **注意**：你在此处选择的任务将确定在“选择维护任务顺序”  页之后将需要完成的页。  
+    > **注意：** 你在此处选择的任务将确定在“选择维护任务顺序”  页之后将需要完成的页。  
   
 8.  在“选择维护任务顺序”页上，选择一个任务，然后单击“上移…”或“下移…”以更改其执行顺序    。 完成操作后，或如果您对当前任务的顺序感到满意时，请单击 **“下一步”** 。  
   
-    > **注意**：如果你在上面的“选择计划属性”  页中选择了“每项任务单独计划”  ，则无法在此页上更改维护任务的顺序。  
+    > **注意：** 如果你在上面的“选择计划属性”  页中选择了“每项任务单独计划”  ，则无法在此页上更改维护任务的顺序。  
   
 ## <a name="define-database-check-integrity-checkdb"></a>定义数据库检查完整性 (CHECKDB)  
   
@@ -257,7 +257,7 @@ ms.locfileid: "68115706"
   
      选中此选项还可激活“使用低优先级”（其使用 `WAIT_AT_LOW_PRIORITY` 选项）。 联机索引重新生成操作将等待低优先级锁 `MAX_DURATION` 分钟，从而允许其他操作在联机索引生成操作正在等待的同时继续进行。  
   
-    > **注意**：在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+    > **注意：** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
      “MAXDOP”  复选框  
      对于 DBCC CHECKDB，替代 sp_configure 的最大并行度配置选项。 有关详细信息，请参阅 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
@@ -366,12 +366,12 @@ ms.locfileid: "68115706"
      指定用来放置自动创建的数据库文件的文件夹。 如果选择 URL 作为备份目标，则禁用该选项。  
   
      **SQL 凭据**  
-     选择用于对 Windows Azure 存储进行身份验证的 SQL 凭据。 如果没有可使用的现有 SQL 凭据，则单击 **“创建”** 按钮可创建新的 SQL 凭据。  
+     选择可用于对 Azure 存储进行身份验证的 SQL 凭据。 如果没有可使用的现有 SQL 凭据，则单击 **“创建”** 按钮可创建新的 SQL 凭据。  
   
     > **重要说明！** 单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅 [创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 主题中的示例代码，使用 Transact-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”** ，依次选择 **“新建”** 和 **“凭据”** 。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
   
      **Azure 存储容器**  
-     指定 Windows Azure 存储容器的名称  
+     指定 Azure 存储容器的名称  
   
      **URL 前缀：**  
      这是基于在 SQL 凭据中存储的存储帐户信息以及您指定的 Azure 存储容器名称自动生成的。 我们建议你不要编辑此字段中的信息，除非你使用的域采用 **\<存储帐户>.blob.core.windows.net** 以外的格式。  

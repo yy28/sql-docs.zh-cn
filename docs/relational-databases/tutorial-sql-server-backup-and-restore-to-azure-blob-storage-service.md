@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893633"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155712"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>快速入门：将 SQL Server 备份和还原到 Azure Blob 存储服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ GO
 
 
 ## <a name="create-a-sql-server-credential"></a>创建 SQL Server 凭据
-SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源所需的身份验证信息。 在此处，SQL Server 备份和还原进程使用凭据对 Windows Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关凭据的详细信息，请参阅[凭据](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)。 
+SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源所需的身份验证信息。 在此处，SQL Server 备份和还原进程使用凭据对 Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关凭据的详细信息，请参阅[凭据](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)。 
 
   > [!IMPORTANT]
   > 创建下文描述的 SQL Server 凭据的要求特定于 SQL Server 的备份过程（[SQL Server 备份到 URL](backup-restore/sql-server-backup-to-url.md) 和 [Microsoft Azure 的 SQL Server 托管备份](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)）。 SQL Server 在访问 Azure 存储来读写备份时，使用存储帐户名称和访问密钥信息。
@@ -119,8 +119,8 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 
 1. 执行该语句以创建凭据。 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>将数据库备份到 Windows Azure Blob 存储服务
-在本部分中，将使用 T-SQL 语句执行到 Windows Azure Blob 存储服务的完整数据库备份。 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>将数据库备份到 Azure Blob 存储服务
+在本部分中，将使用 T-SQL 语句执行到 Azure Blob 存储服务的完整数据库备份。 
 
 1. 使用 SQL Server Management Studio 连接到 SQL Server。 
 1. 选择 SQLTestDB 数据库，并打开“新建查询”窗口   。 
@@ -138,7 +138,7 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 1. 执行该语句，将 SQLTestDB 数据库备份到 URL。 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>从 Windows Azure Blob 存储服务还原数据库
+## <a name="restore-database-from-azure-blob-storage-service"></a>从 Azure Blob 存储服务还原数据库
 在本部分中，将使用 T-SQL 语句以还原完整数据库备份。 
 
 1. 使用 SQL Server Management Studio 连接到 SQL Server。 

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a793ddb2f1b16c8b2f7596c348966e24d2785345
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 190ff2f2f7fe510722f73c03bdc4beba18273d2b
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013988"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176219"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68013988"
  **服务器实例**  
  显示将承载可用性副本的服务器实例的名称。  
   
- 如果“可用性副本”网格未列出计划用于托管次要副本的服务器实例，请单击“添加副本”按钮   。 如果在混合 IT 环境中配置可用性组（请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)），则可单击“添加 Azure 副本”  按钮以在 Windows Azure 中创建具有次要副本的虚拟机。  
+ 如果“可用性副本”网格未列出计划用于托管次要副本的服务器实例，请单击“添加副本”按钮   。 如果在混合 IT 环境中配置可用性组（请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)），则可单击“添加 Azure 副本”  按钮以在 Azure 中创建具有次要副本的虚拟机。  
   
  **初始角色**  
  指示新副本将执行的初始角色：主要或辅助密钥   。  
@@ -66,7 +66,7 @@ ms.locfileid: "68013988"
  单击此选项可将辅助副本添加到可用性组。  
   
  **添加 Azure 副本**  
- 单击此项以创建在可用性组中运行辅助副本的 Windows Azure 虚拟机。 此选项仅适用于混合 IT 中含有本地副本的可用性组。 有关详细信息，请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
+ 单击此项以创建在可用性组中运行辅助副本的 Azure 虚拟机。 此选项仅适用于混合 IT 中含有本地副本的可用性组。 有关详细信息，请参阅 [Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)。  
   
  **删除副本**  
  单击可从可用性组中删除选择的辅助副本。  

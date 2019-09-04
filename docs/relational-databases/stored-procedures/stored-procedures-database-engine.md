@@ -13,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136584"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148295"
 ---
 # <a name="stored-procedures-database-engine"></a>存储过程（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,18 +59,19 @@ ms.locfileid: "68136584"
  如果过程引用的表或数据有显著变化，则预编译的计划可能实际上会导致过程的执行速度减慢。 在此情况下，重新编译过程和强制新的执行计划可提高性能。  
   
 ## <a name="types-of-stored-procedures"></a>存储过程的类型  
- 用户定义  
+
+ **用户定义**  
  用户定义的过程可在用户定义的数据库中创建，或者在除了 **Resource** 数据库之外的所有系统数据库中创建。 该过程可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中开发，或者作为对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 方法的引用开发。  
   
- 临时  
+ **临时**  
  临时过程是用户定义过程的一种形式。 临时过程与永久过程相似，只是临时过程存储于 **tempdb**中。 临时过程有两种类型：本地过程和全局过程。 它们在名称、可见性以及可用性上有区别。 本地临时过程的名称以单个数字符号 (#) 开头；它们仅对当前的用户连接是可见的；当用户关闭连接时被删除。 全局临时过程的名称以两个数字符号 (##) 开头，创建后对任何用户都是可见的，并且在使用该过程的最后一个会话结束时被删除。  
   
- 系统  
+ **系统**  
  系统过程是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]随附的。 它们物理上存储在内部隐藏的 **Resource** 数据库中，但逻辑上出现在每个系统定义数据库和用户定义数据库的 **sys** 架构中。 此外， **msdb** 数据库还在 **dbo** 架构中包含用于计划警报和作业的系统存储过程。 因为系统过程以前缀 **sp_** 开头，所以，我们建议你在命名用户定义过程时不要使用此前缀。 有关系统过程的完整列表，请参阅[系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和外部程序之间提供一个接口以实现各种维护活动的系统过程。 这些扩展过程使用 xp_ 前缀。 有关扩展过程的完整列表，请参阅[常规扩展存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)。  
   
- 扩展的用户定义过程  
+ **扩展的用户定义**  
  扩展过程允许你使用编程语言（例如 C）创建外部例程。这些过程是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例可以动态加载和运行的 DLL。  
   
 > [!NOTE]  
@@ -94,6 +95,6 @@ ms.locfileid: "68136584"
 |介绍如何在存储过程中使用参数。|[参数](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>相关内容  
- [CLR 存储过程](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [CLR 存储过程](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [延迟名称解析](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   

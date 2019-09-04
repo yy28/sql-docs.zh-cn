@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912803"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154802"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>提取、发布和注册 .dacpac 文件
 本主题介绍可以通过在 SQL Server 对象资源管理器中右键单击连接的数据库来执行的四个过程：  
@@ -50,7 +50,7 @@ ms.locfileid: "67912803"
 在“高级发布设置”  对话框中提供其他发布配置，可以通过单击“高级”  按钮访问该对话框。  
   
 ## <a name="extract-data-tier-application"></a>提取数据层应用程序  
-您可以从数据库提取 .dacpac。 从一个活动 SQL Server 或 Windows Azure SQL Database 提取数据库快照文件 (.dacpac)，该文件除了包含数据库架构之外还可以包含用户表的数据。  
+您可以从数据库提取 .dacpac。 从一个活动 SQL Server 或 Azure SQL 数据库提取数据库快照文件 (.dacpac)，该文件除了包含数据库架构之外还可以包含用户表的数据。  
   
 指定要创建的 .dacpac 文件。 “DAC 属性”  按钮显示“DAC 属性”  对话框，可用于指定 .dacpac 文件的属性。  
   

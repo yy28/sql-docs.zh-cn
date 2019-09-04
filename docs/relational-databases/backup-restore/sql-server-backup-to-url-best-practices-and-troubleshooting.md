@@ -10,32 +10,32 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4c93f36ca78bbd6cdeedf8d88314f7374f34a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041381"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176362"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  本主题介绍 SQL Server 备份和还原到 Windows Azure Blob 服务的最佳做法和故障排除提示。  
+  本主题介绍 SQL Server 备份和还原到 Azure Blob 服务的最佳做法和故障排除提示。  
   
- 有关将 Windows Azure Blob 存储服务用于 SQL Server 备份或还原操作的详细信息，请参阅：  
+ 有关将 Azure Blob 存储服务用于 SQL Server 备份或还原操作的详细信息，请参阅：  
   
 -   [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：将 SQL Server 备份和还原到 Azure Blob 存储服务](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>管理备份  
  下表列出了管理备份的一般建议：  
   
 -   建议为每个备份使用唯一文件名以防止意外覆盖 blob。  
   
--   创建容器时，建议将访问级别设置为 **“私有”**，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
+-   创建容器时，建议将访问级别设置为 **“私有”** ，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
   
--   对于在 Windows Azure 虚拟机中运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，请使用与虚拟机相同区域中的存储帐户，以免产生区域之间的数据传输成本。 使用同一区域还可以确保备份和还原操作具有最佳性能。  
+-   对于在 Azure 虚拟机中运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，请使用与虚拟机相同区域中的存储帐户，以免产生区域之间的数据传输成本。 使用同一区域还可以确保备份和还原操作具有最佳性能。  
   
 -   失败的备份活动可能导致无效的备份文件。 我们建议定期标识失败的备份和删除 blob 文件。 有关详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
@@ -45,18 +45,18 @@ ms.locfileid: "68041381"
   
 ## <a name="handling-large-files"></a>处理大型文件  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Windows Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 Azure [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) 限制了 blob 的最大处理时间，你需要考虑这个限制。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 Azure [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) 限制了 blob 的最大处理时间，你需要考虑这个限制。  
   
 -   使用在[管理备份](##managing-backups)部分中建议的 `WITH COMPRESSION` 选项，在备份大型文件时这一点非常重要。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>备份到 URL 或从 URL 还原故障排除  
- 以下内容提供了在备份到 Windows Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
+ 以下内容提供了在备份到 Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
   
  要避免由于不支持的选项或限制导致的错误，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 一文，查看限制列表以及 BACKUP 和 RESTORE 命令的支持信息。  
   
  **身份验证错误：**  
   
--   `WITH CREDENTIAL` 是一个新选项，在备份到 Windows Azure Blob 存储服务或从中还原时需要该选项。 与凭据有关的失败可能包括：  
+-   `WITH CREDENTIAL` 是一个新选项，在备份到 Azure Blob 存储服务或从中还原时需要该选项。 与凭据有关的失败可能包括：  
   
      **BACKUP** 或 **RESTORE** 命令中指定的凭据不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68041381"
   
 -   凭据存在但是用于运行备份命令的登录帐户没有访问凭据的权限。 使用角色为 **db_backupoperator** 且拥有 ***更改任意凭据*** 权限的登录帐户。  
   
--   验证存储帐户名称和密钥值。 在凭据中存储的信息必须与您在备份和还原操作中使用的 Windows Azure 存储帐户的属性值匹配。  
+-   验证存储帐户名称和密钥值。 在凭据中存储的信息必须与你在备份和还原操作中使用的 Azure 存储帐户的属性值匹配。  
   
  **备份错误/失败：**  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68041381"
     -   `SqlException 3284 occurred. Severity: 16 State: 5  
         Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-        要解决此错误，请重新发布指定了 BLOCKSIZE = 65536 的 RESTORE 语句。  
+        要解决此错误，请重新发布指定了 BLOCKSIZE = 65536 的 RESTORE 语句   。  
   
 -   由于 blob 具有活动租约，备份期间出错：失败的备份活动可能导致 blob 产生活动租约。  
   

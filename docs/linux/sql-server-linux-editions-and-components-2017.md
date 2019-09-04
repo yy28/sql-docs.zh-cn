@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811189"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154648"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的各版本和支持的功能
 
@@ -110,7 +110,7 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 |镜像备份|是|否|否|否|
 |热插拔内存和 CPU|是|否|否|否|
 |加密备份|是|是|否|否|
-|Microsoft Azure 的混合备份（URL 的备份）|是|是|否|否|
+|Azure 的混合备份（URL 的备份）|是|是|否|否|
   
 <sup>1</sup> 在 Enterprise 版本中，节点数是操作系统支持的最大值。 Standard 版本中支持两个节点。 
 

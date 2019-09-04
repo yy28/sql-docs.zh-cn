@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dd03d9db824204bc4904e90af4e74055f6fa79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19556dc84e916598e63f6df7b101f4f495ac3855
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076034"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155387"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68076034"
   
  按照以下步骤向本地磁盘创建数据库的加密备份。 本例使用一个名为 MyTestDB 的用户数据库。  
   
-1.  **创建 master 数据库的数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+1.  **创建 master 数据库的数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”** 。  
   
     ```  
     -- Creates a database master key.   
@@ -42,7 +42,7 @@ ms.locfileid: "68076034"
   
     ```  
   
-2.  **创建备份证书：** 在 master 数据库中创建备份证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。  
+2.  **创建备份证书：** 在 master 数据库中创建备份证书。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
     ```  
     Use Master  
@@ -53,7 +53,7 @@ ms.locfileid: "68076034"
   
     ```  
   
-3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -74,16 +74,16 @@ ms.locfileid: "68076034"
   
  有关加密受 EKM 保护的备份的示例，请参阅[使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>备份到 Windows Azure 存储并加密  
- 如果使用 **“SQL Server 备份到 URL”** 选项向 Windows Azure 存储创建备份，则加密步骤相同，但必须使用 URL 作为目标，并使用 SQL 凭据向 Windows Azure 存储进行身份验证。 若要为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置加密选项，请参阅 [对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
+### <a name="backup-to-azure-storage-with-encryption"></a>备份到 Azure 存储并加密  
+ 如果使用“SQL Server 备份到 URL”  选项向 Azure 存储创建备份，则加密步骤相同，但必须使用 URL 作为目标，并使用 SQL 凭据向 Azure 存储进行身份验证。 若要为 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置加密选项，请参阅 [对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)。  
   
  **先决条件：**  
   
--   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Windows Azure 存储对象](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
+-   Windows 存储帐户和容器。 有关详细信息，请参阅 [第 1 课：创建 Azure 存储对象](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
   
 -   master 数据库的数据库主密钥以及 SQL Server 实例上的证书或非对称密钥。 有关加密要求和权限，请参阅 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)。  
   
-1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，请连接到数据库引擎、打开新查询窗口并复制和粘贴到下例，然后单击“执行”。  
+1.  **创建 SQL Server 凭据：** 若要创建 SQL Server 凭据，请连接到数据库引擎、打开新查询窗口并复制和粘贴到下例，然后单击“执行”  。  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -91,7 +91,7 @@ ms.locfileid: "68076034"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **创建数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”**。  
+2.  **创建数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。 连接到数据库引擎，启动新查询窗口并复制和粘贴下例，然后单击 **“执行”** 。  
   
     ```  
     -- Creates a database master key.  
@@ -114,7 +114,7 @@ ms.locfileid: "68076034"
   
     ```  
   
-4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

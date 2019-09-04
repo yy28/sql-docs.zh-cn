@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818bb9690153d862211739bcd134ba9fbdf11ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912656"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155659"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -308,7 +308,7 @@ SQL Server 规则允许你创建 \<loginname>@\<servername> 格式的 SQL Server
 
 在 SQL 数据库中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-有关 SQL 数据库登录的详细信息，请参阅[管理 Microsoft Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
+有关 SQL 数据库登录的详细信息，请参阅[管理 Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
 
 ## <a name="permissions"></a>权限
 
@@ -607,7 +607,7 @@ SQL Server 规则允许你创建 \<loginname>@\<servername> 格式的 SQL Server
 
 在 SQL 数据仓库中，对连接和服务器级别的防火墙规则进行身份验证时所需的登录数据会暂时缓存在每个数据库中。 此缓存定期刷新。 若要强制刷新身份验证缓存并确保数据库具有最新版本的登录表，请执行 [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。
 
-有关 SQL 数据仓库登录的详细信息，请参阅[管理 Microsoft Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
+有关 SQL 数据仓库登录的详细信息，请参阅[管理 Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
 
 ## <a name="permissions"></a>权限
 

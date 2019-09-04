@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940914"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155562"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67940914"
 ## <a name="options"></a>选项  
   
 ### <a name="overwrite-media"></a>覆盖介质  
- **“覆盖介质”** 面板中的选项可以控制如何将备份写入介质。 如果在“备份数据库”对话框的“常规”页上选择了 URL（Windows Azure 存储）作为备份目标，则禁用“覆盖介质”部分下的选项。 可使用 **BACKUP TO URL.WITH FORMAT** Transact-SQL 语句覆盖备份。 有关详细信息，请参阅 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
+ **“覆盖介质”** 面板中的选项可以控制如何将备份写入介质。 如果在“备份数据库”对话框的“常规”页上选择了 URL（Azure 存储）作为备份目标，则禁用“覆盖介质”部分下的选项。 可使用 **BACKUP TO URL.WITH FORMAT** Transact-SQL 语句覆盖备份。 有关详细信息，请参阅 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。  
 
  如果在“常规”页中选择了“URL”作为备份目标，则禁用“覆盖介质”选项。   
   

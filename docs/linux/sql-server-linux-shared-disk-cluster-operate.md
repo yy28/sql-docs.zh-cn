@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
+ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "68032295"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154573"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>运行故障转移群集实例 - Linux 上的 SQL Server
 
@@ -30,10 +30,10 @@ FCI 的故障转移类似于 Windows Server 故障转移群集 (WSFC)。 如果�
 
 故障转移的方式取决于 Linux 分发版。 按照 linux 分发版的说明进行操作。
 
-- [RHEL 或 Ubuntu](#-manual-failover-rhel-or-ubuntu)
-- [SLES](#-manual-failover-sles)
+- [RHEL 或 Ubuntu](#manual-failover-rhel-or-ubuntu)
+- [SLES](#manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 手动故障转移（RHEL 或 Ubuntu）
+## <a name="manual-failover-rhel-or-ubuntu"></a>手动故障转移（RHEL 或 Ubuntu）
 
 若要执行手动故障转移，请在 Red Hat Enterprise Linux (RHEL) 或 Ubuntu 服务器上执行以下步骤。
 1.  发出以下命令： 
@@ -54,7 +54,7 @@ FCI 的故障转移类似于 Windows Server 故障转移群集 (WSFC)。 如果�
 
 \<FCIResourceName > 是 FCI 的 Pacemaker 资源名称。 
 
-## <a name = "#-manual-failover-sles"></a> 手动故障转移 (SLES)
+## <a name="manual-failover-sles"></a>手动故障转移 (SLES)
 
 
 在 Suse Linux Enterprise Server (SLES) 中，使用 `migrate` 命令手动故障转移 SQL Server FCI。 例如：

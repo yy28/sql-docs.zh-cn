@@ -12,26 +12,26 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94860f25b8cb53ab3c273da2e020d0d6a506ad0b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076157"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155621"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>连接到 Microsoft Azure 存储（还原）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以使用此对话框来指定与 Windows Azure 存储帐户信息的连接，以检索 Windows Azure 存储帐户中的文件存储。 在指定所需信息后，请单击 **“连接”** 与 Windows Azure 存储建立连接。  
+  可使用该对话框来指定与 Azure 存储帐户信息的连接，以便检索 Azure 存储帐户中的文件存储。 在指定所需信息后，请单击“连接”  以与 Azure 存储建立连接。  
   
-## <a name="windows-azure-storage-account"></a>Windows Azure 存储帐户  
+## <a name="azure-storage-account"></a>Azure 存储帐户  
  **存储帐户**  
- 选择、键入或粘贴要使用的 Windows Azure 存储帐户名称。 下拉框会列出以前使用的帐户。  
+ 选择、键入或粘贴要使用的 Azure 存储帐户名称。 下拉框会列出以前使用的帐户。  
   
  **帐户密钥**  
- 指定 Windows Azure 存储帐户访问密钥。  
+ 指定 Azure 存储帐户访问密钥。  
   
  **使用安全端点 (HTTPS)** 复选框  
- 选择此选项可与 Windows Azure 存储建立安全连接（建议使用）。  
+ 选择此选项可与 Azure 存储建立安全连接（建议使用）。  
   
  **保存帐户密钥** 复选框  
  如果希望 SQL Server 记住此存储帐户的访问密钥，请选中此复选框。  

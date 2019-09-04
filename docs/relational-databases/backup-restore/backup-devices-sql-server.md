@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103786"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152134"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68103786"
  物理备份设备 (physical backup device)  
  磁带机或操作系统提供的磁盘文件。 可以将备份数据写入 1 到 64 个备份设备。 如果备份数据需要多个备份设备，则所有设备必须对应于一种设备类型（磁盘或磁带）。  
   
- 除了磁盘或磁带外，还可以将 SQL Server 备份写入 Windows Azure Blob 存储服务。  
+ 除了磁盘或磁带外，还可以将 SQL Server 备份写入 Azure Blob 存储服务。  
  
   
 ##  <a name="DiskBackups"></a> 使用磁盘备份设备  
@@ -101,7 +101,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **注意**：默认位置存储在 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 下的 **BackupDirectory**注册表项中。  
+> **注意：** 默认位置存储在 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 下的 **BackupDirectory**注册表项中。  
   
    
 ###  <a name="NetworkShare"></a> 备份到网络共享文件  
@@ -129,7 +129,7 @@ GO
  
 ##  <a name="TapeDevices"></a> 使用磁带设备  
   
-> **注意**：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
+> **注意：** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
    
  将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据备份到磁带时要求 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统支持一个或多个磁带机。 另外，对于给定的磁带机，我们建议您仅使用磁带机制造商推荐的磁带。 有关如何安装磁带机的详细信息，请参阅 Windows 操作系统的文档。  
   
@@ -173,7 +173,7 @@ GO
   
      您可以控制在备份或还原操作后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是保持磁带处于打开状态，还是在磁带满后释放磁带并倒带。 默认行为是倒带 (REWIND)。  
   
-> **注意**：有关 BACKUP 语法和参数的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。 有关 RESTORE 语法和参数的详细信息，请分别参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
+> **注意：** 有关 BACKUP 语法和参数的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。 有关 RESTORE 语法和参数的详细信息，请分别参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   
 ###  <a name="OpenTapes"></a> 管理打开的磁带  
  若要查看打开的磁带设备列表以及装入请求状态，请查询 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 动态管理视图。 此视图显示了所有打开的磁带。 其中包括正在使用的磁带，它们等待下一个 BACKUP 或 RESTORE 操作时暂时处于空闲状态。  
@@ -181,8 +181,8 @@ GO
  如果意外使磁带处于打开状态，则释放磁带的最快方式是使用以下命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)。  
   
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>使用 Windows Azure Blob 存储服务  
- 可以将 SQL Server 备份写入 Windows Azure Blob 存储服务。  有关如何将 Windows Azure Blob 存储服务用于你的备份的详细信息，请参阅 [使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 存储服务  
+ 可以将 SQL Server 备份写入 Azure Blob 存储服务。  有关如何将 Azure Blob 存储服务用于你的备份的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ##  <a name="LogicalBackupDevice"></a> 使用逻辑备份设备  
  “逻辑备份设备  ”是指向特定物理备份设备（磁盘文件或磁带机）的可选用户定义名称。 通过逻辑备份设备，您可以在引用相应的物理备份设备时使用间接寻址。  
@@ -199,7 +199,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **注意**：在给定的 BACKUP 或 RESTORE 语句中，逻辑备份设备名称和相应的物理备份设备名称可以互换。  
+> **注意：** 在给定的 BACKUP 或 RESTORE 语句中，逻辑备份设备名称和相应的物理备份设备名称可以互换。  
   
  使用逻辑备份设备的一个优点是比使用长路径简单。 如果准备将一系列备份数据写入相同的路径或磁带设备，则使用逻辑备份设备非常有用。 逻辑备份设备对于标识磁带备份设备尤为有用。  
   
@@ -214,11 +214,11 @@ GO
 ##  <a name="MirroredMediaSets"></a> 镜像备份媒体集  
  镜像备份介质集可减小备份设备故障的影响。 由于备份是防止数据丢失的最后防线，因此备份设备出现故障的后果是非常严重的。 随着数据库不断增大，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供物理备份设备冗余来提高备份的可靠性。 有关详细信息，请参阅本主题后面的 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)不熟悉的读者。  
   
-> **注意**：只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份介质集。  
+> **注意：** 只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份介质集。  
   
   
 ##  <a name="Archiving"></a> 存档 SQL Server 备份  
- 建议您使用文件系统备份实用工具对磁盘备份数据进行存档，并将存档存储在另一个位置。 使用磁盘的优点是您可以使用网络将已存档的备份数据写入另一个位置的磁盘。 Windows Azure Blob 存储服务可作为站外存档选项。  您可以上载您的磁盘备份，或直接将备份写入 Windows Azure Blob 存储服务。  
+ 建议您使用文件系统备份实用工具对磁盘备份数据进行存档，并将存档存储在另一个位置。 使用磁盘的优点是您可以使用网络将已存档的备份数据写入另一个位置的磁盘。 Azure Blob 存储服务可作为站外存档选项。  可以上载磁盘备份，或直接将备份写入 Azure Blob 存储服务。  
   
  另一个常用的存档方法是将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入本地备份磁盘，将备份存档到磁带，然后在将磁带存储在站外位置。  
 

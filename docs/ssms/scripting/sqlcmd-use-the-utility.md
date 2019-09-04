@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbdb412284c67fdccce8c3628aed41b6be0cae04
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de9d2f1c06704e7bedc4592aa7062dbc8a4b8569
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267626"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155747"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68267626"
   
 -   服务器选项 (-S)，用于标识 sqlcmd 连接到的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例   。  
   
--   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据     。 **注意**：-E  选项为默认选项，无需指定。  
+-   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据     。 **注意：** -E  选项为默认选项，无需指定。  
   
 -   输入选项（-Q、-q 和 -i），用于标识 sqlcmd 输入的位置     。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68267626"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **注意**：上述示例中，未指定 **-E** 选项，因为它是默认选项，而且 **sqlcmd** 使用 Windows 身份验证连接到默认实例。  
+    > **注意：** 上述示例中，未指定 **-E** 选项，因为它是默认选项，而且 **sqlcmd** 使用 Windows 身份验证连接到默认实例。  
   
 -   使用 Windows 身份验证连接到命名实例，以交互方式运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
@@ -473,7 +473,7 @@ ms.locfileid: "68267626"
   
  `SQLCMD returned 100 to the command shell`  
   
-### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. 使用 sqlcmd 在 Windows Azure SQL Database 上设置加密  
+### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. 使用 sqlcmd 在 Azure SQL 数据库上设置加密  
  可对与 **数据的连接执行**sqlcmd [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以指定加密和证书信任。 有两个 **sqlcmd**选项可供选择：  
   
 -   -N 开关，客户端使用它来请求加密连接。 此选项等同于 ADO.net 选项 `ENCRYPT = true`。  

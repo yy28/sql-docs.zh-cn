@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67c7ab63fcc152778add51725e5962028651345b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136520"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155697"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -225,11 +225,11 @@ DACFx 现在支持所有 DAC 方案和客户端工具中的 SXI 索引。 SXI �
   
 **对 SqlPackage.exe（DACFx 命令行工具）的更新**  
   
--   带数据提取 DACPAC - 从一个活动 SQL Server 或 Windows Azure SQL Database 创建数据库快照文件 (.dacpac)，该文件除了包含数据库架构之外还包含用户表的数据。 可以使用 SqlPackage.exe“发布”操作将这些包发布到新的或现有 SQL Server 或 Windows Azure SQL Database。 包中包含的数据将替代目标数据库中的现有数据。  
+-   带数据提取 DACPAC - 从一个活动 SQL Server 或 Azure SQL 数据库创建数据库快照文件 (.dacpac)，该文件除了包含数据库架构之外还包含用户表的数据。 可以使用 SqlPackage.exe“发布”操作将这些包发布到新的或现有 SQL Server 或 Azure SQL 数据库。 包中包含的数据将替代目标数据库中的现有数据。  
   
--   导出 BACPAC - 创建包含数据库架构和用户数据的活动 SQL Server 或 Windows Azure SQL Database 的逻辑备份文件 (.bacpac)，这些架构和数据可用于将数据库从内部 SQL Server 迁移到 Windows Azure SQL Database。 可以在支持的 SQL Server 版本间导出与 Azure 兼容的数据库，之后再导入。  
+-   导出 BACPAC - 创建包含数据库架构和用户数据的活动 SQL Server 或 Azure SQL 数据库的逻辑备份文件 (.bacpac)，这些架构和数据可用于将数据库从本地 SQL Server 迁移到 Azure SQL 数据库。 可以在支持的 SQL Server 版本间导出与 Azure 兼容的数据库，之后再导入。  
   
--   导入 BACPAC - 导入 .bacpac 文件以新建或填充空的 SQL Server 或 Windows Azure SQL Database。  
+-   导入 BACPAC - 导入 .bacpac 文件以新建或填充空的 SQL Server 或 Azure SQL 数据库。  
   
 MSDN 上的完整 SqlPackage.exe 文档可以在 [此处](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)找到。  
   

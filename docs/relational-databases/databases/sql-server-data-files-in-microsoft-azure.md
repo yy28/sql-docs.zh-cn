@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127161"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153106"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68127161"
 ## <a name="concepts-and-requirements"></a>概念和要求  
   
 ### <a name="azure-storage-concepts"></a>Azure 存储概念  
- 使用“Windows Azure 中的 SQL Server 数据文件”功能时，需要在 Windows Azure 中创建一个存储帐户和一个容器。 然后，需要创建一个 SQL Server 凭据，其中包括有关容器策略的信息以及访问容器所需的共享访问签名。  
+ 使用“Azure 中的 SQL Server 数据文件”功能时，需要在 Azure 中创建一个存储帐户和一个容器。 然后，需要创建一个 SQL Server 凭据，其中包括有关容器策略的信息以及访问容器所需的共享访问签名。  
   
  在 [Windows Azure](https://azure.microsoft.com)中， [Azure 存储](https://azure.microsoft.com/services/storage/) 帐户代表用于访问 Blob 的命名空间的最高级别。 一个存储帐户可包含无限数量的容器，前提是这些容器的总大小低于存储限制。 有关存储限制的最新信息，请参阅 [Azure 订阅与服务限制、配额和约束](https://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器对 [Blob](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器。 同样，一个容器可以存储无限数量的 Blob。 Azure 存储中可存储两类 Blob：块 Blob 和页 Blob。 这一新功能使用页 Blob，在文件字节数经常发生修改的情况下这些 Blob 更为高效。 你可以使用以下 URL 格式访问 Blob： `https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
@@ -124,7 +124,7 @@ ON
  通过引用 Blob 存储 URL 路径而不是文件路径，可以使用 PowerShell cmdlet 将 SQL Server 数据文件存储在 Azure Blob 存储服务中。 使用以下 URL 格式访问 Blob：`https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 对象和性能计数器支持  
- 从 SQL Server 2014 起，增加了一个与“Azure 存储中的 SQL Server 数据文件”功能结合使用的新 SQL Server 对象。 这个新的 SQL Server 对象称为 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 。系统监视器可使用它在用 Windows Azure 存储运行 SQL Server 时监视活动。  
+ 从 SQL Server 2014 起，增加了一个与“Azure 存储中的 SQL Server 数据文件”功能结合使用的新 SQL Server 对象。 这个新的 SQL Server 对象称为 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)。系统监视器可使用它在用 Azure 存储运行 SQL Server 时监视活动。  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支持  
  使用 SQL Server Management Studio 时，您可通过多个对话框窗口使用此功能。 例如，可以键入存储容器的 URL 路径，如 https://teststorageaccnt.blob.core.windows.net/testcontainer/ ：
