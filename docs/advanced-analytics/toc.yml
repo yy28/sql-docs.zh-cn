@@ -81,6 +81,16 @@
           href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
         - name: 使用 revoscalepy 创建 Python 模型
           href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
+        - name: 客户聚类分析（K 均值）
+          items:
+            - name: 1 - 简介
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
+            - name: 2 - 准备数据
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md
+            - name: 3 - 创建模型
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
+            - name: 4 - 部署模型
+              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
         - name: 面向 SQL 开发人员的 Python
           items:
             - name: 1 - 简介
