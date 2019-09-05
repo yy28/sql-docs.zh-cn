@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155143"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304736"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -40,7 +40,7 @@ ms.locfileid: "70155143"
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 模块提供用于访问 HDFS 文件系统的命令。
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 命令允许用户通过创建和管理会话、语句及批处理来与 Spark 系统交互。
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-创建 SQL Server 大数据群集-在系统上需要 Kubernetes 配置, 同时提供以下环境变量 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
+创建 SQL Server 大数据群集-在系统上需要 Kubernetes 配置，同时提供以下环境变量 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD ']。
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -69,9 +69,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 大数据群集名称，用于 kubernetes 命名空间。
 #### `--config-profile -c`
-大数据群集配置配置文件, 用于部署群集: [' aks '、' kubeadm '、' minikube '、' kubeadm-开发-测试 ']
+大数据群集配置配置文件，用于部署群集： [' aks '、' kubeadm '、' minikube '、' kubeadm-开发-测试 ']
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，则可将环境变量 ACCEPT_EULA 设置为“是”。 可以在 https://aka.ms/azdata-eula 和 https://go.microsoft.com/fwlink/?LinkId=2002534 查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://go.microsoft.com/fwlink/?LinkId=2002534 查看此产品的许可条款。
 #### `--node-label -l`
 大数据群集节点标签，用于指定要部署到的节点。
 #### `--force -f`

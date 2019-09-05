@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158212"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304726"
 ---
 # <a name="azdata-control"></a>azdata 控件
 
@@ -43,13 +43,13 @@ azdata control create
 ```
 ### <a name="optional-parameters"></a>可选参数
 #### `--name -n`
-控制平面名称, 用于 kubernetes 命名空间。
+控制平面名称，用于 kubernetes 命名空间。
 #### `--config-profile -c`
-用于部署群集的群集配置配置文件: [' aks '、' kubeadm '、' minikube '、' kubeadm-开发-测试 ']
+用于部署群集的群集配置配置文件： [' aks '、' kubeadm '、' minikube '、' kubeadm-开发-测试 ']
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://aka.ms/azdata-eula 查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 
 #### `--node-label -l`
-节点标签, 用于指定要部署到的节点。
+节点标签，用于指定要部署到的节点。
 #### `--force -f`
 强制创建，系统不会提示用户输入任何值且所有问题都将作为 stderr 的一部分输出。
 ### <a name="global-arguments"></a>全局参数
@@ -76,7 +76,7 @@ azdata control delete
 ```
 ### <a name="required-parameters"></a>必需的参数
 #### `--name -n`
-控制平面名称, 用于 kubernetes 命名空间。
+控制平面名称，用于 kubernetes 命名空间。
 ### <a name="optional-parameters"></a>可选参数
 #### `--force -f`
 强制删除控制平面。

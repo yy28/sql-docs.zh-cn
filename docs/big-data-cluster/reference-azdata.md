@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7f4cecd27865b069764944021639ae1a2e553d76
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155133"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304715"
 ---
 # <a name="azdata"></a>azdata
 
@@ -59,7 +59,7 @@ azdata login -n ClusterName
 #### `--controller-endpoint -e`
 群集控制器终结点“https://host:port”。 如果不想使用此参数，则可在计算机上使用 kube 配置。 请确保配置位于默认位置 <user home>/.kube/config 或使用 KUBECONFIG 环境变量。
 #### `--accept-eula -a`
-是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 可以在 https://aka.ms/azdata-eula 查看此产品的许可条款。
+是否接受许可条款？ [是/否]。 如果不想使用此参数，可以将环境变量 ACCEPT_EULA 设置为“yes”。 
 ### <a name="global-arguments"></a>全局参数
 #### `--debug`
 提高日志记录详细程度以显示所有调试日志。
