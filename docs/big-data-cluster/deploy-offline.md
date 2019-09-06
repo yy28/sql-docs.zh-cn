@@ -5,16 +5,16 @@ description: 了解如何执行 SQL Server 大数据群集的脱机部署。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652360"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155271"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>执行 SQL Server 大数据群集的脱机部署
 
@@ -33,7 +33,7 @@ ms.locfileid: "69652360"
 > [!TIP]
 > 以下步骤说明这一过程。 但是，为简化任务，可以使用[自动化脚本](#automated)，而不是手动运行这些命令。
 
-1. 重复以下命令即可拉取大数据群集容器映像。 将 `<SOURCE_IMAGE_NAME>` 替换为每个[映像名称](#images)。 将 `<SOURCE_DOCKER_TAG>` 替换为大数据群集版本的标记，例如 2019-CTP3.2-ubuntu。  
+1. 重复以下命令即可拉取大数据群集容器映像。 将 `<SOURCE_IMAGE_NAME>` 替换为每个[映像名称](#images)。 将`<SOURCE_DOCKER_TAG>`替换为大数据群集版本的标记, 例如**2019-RC1-ubuntu**。  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -60,27 +60,31 @@ ms.locfileid: "69652360"
 ### <a id="images"></a> 大数据群集容器映像
 
 脱机安装需要以下大数据群集容器映像：
+- **mssql-app-service-proxy**
+- **mssql-控制-监视器**
+- **mssql-controller**
+- **mssql-dns**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **mssql-security-domainctl**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **mssql-服务器-ha**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> 自动化脚本
 
@@ -89,7 +93,7 @@ ms.locfileid: "69652360"
 > [!NOTE]
 > 使用该脚本的先决条件是 Python。 有关如何安装 Python 的详细信息，请参阅 [Python 文档](https://wiki.python.org/moin/BeginnersGuide/Download)。
 
-1. 使用 curl 从 Bash 或 PowerShell 下载脚本：
+1. 使用 curl 从 Bash 或 PowerShell 下载脚本  ：
 
    ```PowerShell
    curl -o push-bdc-images-to-custom-private-repo.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/offline/push-bdc-images-to-custom-private-repo.py"
@@ -113,7 +117,7 @@ ms.locfileid: "69652360"
 
 ## <a name="install-tools-offline"></a>脱机安装工具
 
-大数据群集部署需要多种工具，包括 Python、azdata 和 Kubectl。 通过下列步骤在脱机服务器上安装这些工具。
+大数据群集部署需要多种工具, 包括**Python**、 `azdata`和**kubectl**。 通过下列步骤在脱机服务器上安装这些工具。
 
 ### <a id="python"></a> 脱机安装 Python
 
@@ -135,13 +139,13 @@ ms.locfileid: "69652360"
 
 ### <a id="azdata"></a> 脱机安装 azdata
 
-1. 在具有 Internet 访问权限和 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的计算机上，运行以下命令，以便将所有 azdata 包下载到当前文件。
+1. 在具有 Internet 访问权限和 [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 的计算机上，运行以下命令，以便将所有 `azdata` 包下载到当前文件。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. 将下载的包和 requirements.txt 文件复制到目标计算机。
+1. 将下载的包和`requirements.txt`文件复制到目标计算机。
 
 1. 在目标计算机上运行以下命令，指定将之前的文件复制到其中的文件夹。
 
@@ -151,15 +155,15 @@ ms.locfileid: "69652360"
 
 ### <a id="kubectl"></a> 脱机安装 Kubectl
 
-若要将 Kubectl 安装到脱机计算机，请使用以下步骤。
+若要将 Kubectl 安装到脱机计算机，请使用以下步骤  。
 
-1. 使用 curl 将 Kubectl 下载到所选文件夹。 有关详细信息，请参阅[使用 curl 安装 Kubectl 二进制](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)。
+1. 使用 curl 将 Kubectl 下载到所选文件夹   。 有关详细信息，请参阅[使用 curl 安装 Kubectl 二进制](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)。
 
 1. 将文件夹复制到目标计算机。
 
 ## <a name="deploy-from-private-repository"></a>从专用存储库进行部署
 
-若要从专用存储库进行部署，请使用[部署指南](deployment-guidance.md)中所述的步骤，但使用指定专用 Docker 存储库信息的自定义部署配置文件。 以下 azdata 命令演示如何在名为 control.json 的自定义部署配置文件中更改 Docker 设置：
+若要从专用存储库进行部署，请使用[部署指南](deployment-guidance.md)中所述的步骤，但使用指定专用 Docker 存储库信息的自定义部署配置文件。 以下`azdata`命令演示如何在名为`control.json`的自定义部署配置文件中更改 Docker 设置:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,7 +171,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-部署会提示你提供 Docker 用户名和密码，你也可在 DOCKER_USERNAME 和 DOCKER_PASSWORD 环境变量中指定用户名和密码。
+部署会提示你提供 docker 用户名和密码, 或者你可以在`DOCKER_USERNAME`和`DOCKER_PASSWORD`环境变量中指定它们。
 
 ## <a name="next-steps"></a>后续步骤
 

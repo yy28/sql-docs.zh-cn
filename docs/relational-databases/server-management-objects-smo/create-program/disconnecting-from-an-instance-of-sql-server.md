@@ -1,5 +1,5 @@
 ---
-title: 断开与 SQL server 实例 |Microsoft Docs
+title: 与 SQL Server 的实例断开连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - instances of SQL Server, disconnecting
 - disconnecting [SMO]
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68b2dcc56e52ca35359e8af5f4c829a0be1ed6f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de53acd4ef3d9feb6ed1a5026d8890f83e88d557
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126734"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148738"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>断开与 SQL Server 实例的连接
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -29,19 +29,19 @@ ms.locfileid: "68126734"
   不需要手动关闭和断开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 对象。 系统会根据需要打开和关闭连接。  
   
 ## <a name="connection-pooling"></a>连接池  
- 当[Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)方法调用时，不会自动释放连接。 [断开连接](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)必须显式调用方法来释放与连接池的连接。 您还可以请求不加入连接池的连接。 执行此操作通过设置[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)的属性<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>属性，引用[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象。  
+ 调用[Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)方法时, 不会自动释放连接。 必须显式调用[Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)方法才能释放到连接池的连接。 您还可以请求不加入连接池的连接。 通过设置引用 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 属性的 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) 属性，可以实现此目的。  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>断开 RMO 的 SQL Server 实例连接  
  在使用 RMO 进行编程时，关闭服务器连接的操作过程与使用 SMO 时略有不同。  
   
- 由于对 RMO 对象的服务器连接由维护[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象的实例中断开连接时也会使用此对象[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 RMO 进行编程。 若要关闭的连接通过使用[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象，请调用[断开连接](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)RMO 对象的方法。 在关闭连接之后，无法再使用 RMO 对象。  
+ 由于 RMO 对象的服务器连接由[microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象维护, 因此当你使用 RMO 进行编程时, 当与的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]断开连接时, 也会使用此对象。 若要使用[microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)对象关闭连接, 请调用 RMO 对象的[断开](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)连接方法。 在关闭连接之后，无法再使用 RMO 对象。  
   
 ## <a name="example"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-basic"></a>在 Visual Basic 中关闭和断开 SMO 对象  
- 此代码示例演示如何通过设置请求非池化连接[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)属性的<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>对象属性。  
+ 此代码示例演示如何通过设置<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>对象属性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)属性来请求非池连接。  
   
 ```VBNET
 Dim srv As Server
@@ -57,7 +57,7 @@ srv.ConnectionContext.Disconnect()
 ```
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-c"></a>在 Visual C# 中关闭和断开 SMO 对象  
- 此代码示例演示如何通过设置请求非池化连接[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)属性的<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>对象属性。  
+ 此代码示例演示如何通过设置<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>对象属性的[NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)属性来请求非池连接。  
   
 ```csharp  
 {   
@@ -76,6 +76,6 @@ srv.ConnectionContext.Disconnect();
   
 ## <a name="see-also"></a>请参阅  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
- [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)  
+ [Microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)  
   
   
