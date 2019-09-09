@@ -130,7 +130,7 @@ ms.locfileid: "67996551"
   
      系统管理员可以使用 **sp_dbmmonitorresults** 系统存储过程查看状态表，如果此状态表在前 15 秒内没有更新，则还可以选择对其进行更新。 此过程将调用 **sp_dbmmonitorupdate** 过程并返回一个或多个历史记录行，具体取决于过程调用中的请求量。 有关其结果集中状态的信息，请参阅 [sp_dbmmonitorresults (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)。  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>监视数据库镜像状态（由 dbm_monitor 成员执行）  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>监视数据库镜像状态（由 dbm_monitor 成员执行）  
  如上所述，当 **sp_dbmmonitorupdate** 首次运行时，便会在 **msdb** 数据库中创建 **dbm_monitor** 固定数据库角色。 **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 若要了解所显示的状态的保留时间，用户可以在“状态”  页上的“主体日志 (\<时间>)” **** 和“镜像日志 (\<时间>)” **** 标签上查看时间。  
   
  **dbm_monitor** 固定数据库角色成员使用  “数据库镜像监视器作业”定期更新状态表。 如果作业不存在，或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，则状态便会迅速变旧，并且不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能会分享相同的角色（主体或镜像）。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  

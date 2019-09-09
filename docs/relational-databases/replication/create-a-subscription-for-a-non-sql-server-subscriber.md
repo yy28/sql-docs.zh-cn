@@ -40,13 +40,13 @@ ms.locfileid: "68063107"
   
 2.  使用新建发布向导创建发布。 有关创建发布的详细信息，请参阅[创建发布](../../relational-databases/replication/publish/create-a-publication.md)和[从 Oracle 数据库创建发布](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)。 在新建发布向导中指定下列选项：  
   
-    -   在 **“发布类型”** 页上，选择 **“快照发布”** 或 **“事务发布”**。  
+    -   在 **“发布类型”** 页上，选择 **“快照发布”** 或 **“事务发布”** 。  
   
-    -   在 **“快照代理”** 页上，清除 **“立即创建快照”**。  
+    -   在 **“快照代理”** 页上，清除 **“立即创建快照”** 。  
   
          在为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布之后，再创建快照，这样可以确保快照代理生成适合非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的快照和初始化脚本。  
   
-3.  通过“发布属性 - \<PublicationName>”对话框为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布。 有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 。  
+3.  通过“发布属性 - \<PublicationName>”对话框为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布。  有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) 。  
   
 4.  使用新建订阅向导创建订阅。 本主题提供了有关此步骤的详细信息。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68063107"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-3.  右键单击发布，再单击 **“属性”**。  
+3.  右键单击发布，再单击 **“属性”** 。  
   
 4.  在 **“订阅选项”** 页上，为选项 **“允许非 SQL Server 订阅服务器”** 选择 **True**值。 选择此选项可更改多个属性，从而可以使发布与非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器兼容。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "68063107"
   
 1.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-2.  右键单击相应的发布，再单击 **“新建订阅”**。  
+2.  右键单击相应的发布，再单击 **“新建订阅”** 。  
   
 3.  在 **“分发代理位置”** 页上，确保已选中 **“在分发服务器上运行所有代理”** 。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器不支持在订阅服务器上运行代理。  
   
-4.  在 **“订阅服务器”** 页上，单击 **“添加订阅服务器”** ，再单击 **“添加非 SQL Server 订阅服务器”**。  
+4.  在 **“订阅服务器”** 页上，单击 **“添加订阅服务器”** ，再单击 **“添加非 SQL Server 订阅服务器”** 。  
   
 5.  在 **“添加非 SQL Server 订阅服务器”** 对话框中，选择订阅服务器的类型。  
   
@@ -97,15 +97,15 @@ ms.locfileid: "68063107"
   
     -   对于 IBM DB2，该数据库是在 DB2 连接字符串的“初始目录”  属性中指定的，DB2 连接字符串可以在此过程后面介绍的 **“其他连接选项”** 字段中输入。  
   
-8.  在 **“分发代理安全性”** 页上，单击订阅服务器旁边的属性按钮 (**...**) 来打开 **“分发代理安全性”** 对话框。  
+8.  在 **“分发代理安全性”** 页上，单击订阅服务器旁边的属性按钮 ( **...** ) 来打开 **“分发代理安全性”** 对话框。  
   
 9. 在 **“分发代理安全性”** 对话框中：  
   
-    -   在 **“进程帐户”**、 **“密码”** 和 **“确认密码”** 字段中输入运行分发代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户和密码，与分发服务器建立本地连接。  
+    -   在 **“进程帐户”** 、 **“密码”** 和 **“确认密码”** 字段中输入运行分发代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户和密码，与分发服务器建立本地连接。  
   
          该帐户需要下列最低权限：分发数据库中 **db_owner** 固定数据库角色的成员、发布访问列表 (PAL) 的成员、快照共享上的读取权限、OLE DB 访问接口的安装目录上的读取权限。 有关 PAL 的详细信息，请参阅[保护发布服务器](../../relational-databases/replication/security/secure-the-publisher.md)。  
   
-    -   在 **“连接到订阅服务器”** 下的 **“登录名”**、 **“密码”** 和 **“确认密码”** 字段中，输入用于连接到订阅服务器的登录名和密码。 该登录名应该已配置好且应该具有足够的权限可以在订阅数据库中创建对象。  
+    -   在 **“连接到订阅服务器”** 下的 **“登录名”** 、 **“密码”** 和 **“确认密码”** 字段中，输入用于连接到订阅服务器的登录名和密码。 该登录名应该已配置好且应该具有足够的权限可以在订阅数据库中创建对象。  
   
     -   在 **“其他连接选项”** 字段中，以连接字符串的形式为订阅服务器指定任意连接选项（Oracle 不需要其他选项）。 应使用分号分隔每个选项。 下面是 DB2 连接字符串的示例（分行符是为了阅读方便）：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68063107"
   
          字符串中的大多数选项都特定于正在配置的 DB2 服务器，但是应始终将“将二进制数作为字符处理”  选项设置为 **False**。 需要为“初始目录”  选项指定一个值以标识订阅数据库。  
   
-10. 在 **“同步计划”** 页上，从 **“代理计划”** 菜单中为分发代理选择一个计划（计划通常为 **“连续运行”**）。  
+10. 在 **“同步计划”** 页上，从 **“代理计划”** 菜单中为分发代理选择一个计划（计划通常为 **“连续运行”** ）。  
   
 11. 在 **“初始化订阅”** 页上，指定是否应该初始化订阅。如果应该，指定何时初始化：  
   
@@ -136,9 +136,9 @@ ms.locfileid: "68063107"
   
 1.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
-2.  右键单击发布，再单击 **“查看快照代理状态”**。  
+2.  右键单击发布，再单击 **“查看快照代理状态”** 。  
   
-3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。  
+3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。    
   
  快照代理生成快照后，将显示一条消息，如“[100%] 已生成 17 个项目的快照”。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "68063107"
         > [!NOTE]  
         >  在将 **enabled_for_het_sub** 更改为 **true**之前，必须删除发布的任何现有订阅。 当发布还支持更新订阅时，无法将 **enabled_for_het_sub** 设置为 **true** 。 更改 **enabled_for_het_sub** 将影响其他发布属性。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
-3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication**、 **@subscriber**、 **“订阅数据库”** @property **@destination_db**、 **@subscription_type** @property **@subscription_type**和 **@subscriber_type** 的值 3（指定 OLE DB 访问接口）。  
+3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 **@publication** 、 **@subscriber** 、 **“订阅数据库”** @property **@destination_db** 、 **@subscription_type** @property **@subscription_type** 和 **@subscriber_type** 的值 3（指定 OLE DB 访问接口）。  
   
 4.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
@@ -169,12 +169,12 @@ ms.locfileid: "68063107"
   
     -   **@subscriber_db** 的值 **（默认目标）**  
   
-    -   非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的属性 **@subscriber_provider**、**@subscriber_datasrc**、**@subscriber_location**、**@subscriber_provider_string** 和 **@subscriber_catalog**。  
+    -   非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的属性 **@subscriber_provider** 、 **@subscriber_datasrc** 、 **@subscriber_location** 、 **@subscriber_provider_string** 和 **@subscriber_catalog** 。  
   
-    -   分发服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** ，将 **@job_password**。  
+    -   分发服务器中的分发代理运行时所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** ，将 **@job_password** 。  
   
         > [!NOTE]  
-        >  使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** 和 **@job_password**中为非 SQL Server 订阅服务器创建订阅。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        >  使用 Windows 集成身份验证进行的连接始终使用由 **@job_login** 和 **@job_password** 中为非 SQL Server 订阅服务器创建订阅。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
     -   为 **@subscriber_security_mode** 指定值 **0**，并为 **@subscriber_login** 和 **@subscriber_password** 指定 OLE DB 提供程序登录信息。  
   
