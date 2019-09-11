@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771134"
 ---
-# <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
+# <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   返回有关发布的信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 对于发布,此存储过程在发布服务器上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对发布数据库执行。 对于 Oracle 发布，此存储过程在分发服务器上对任何数据库执行。  
@@ -98,8 +98,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_p2p_conflictdetection|**int**|指定分发代理是否为针对对等复制启用的发布检测冲突。 如果值为**1** , 则表示检测到冲突。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |originator_id|**int**|指定对等拓扑中某个节点的 ID。 如果**enabled_for_p2p_conflictdetection**设置为**1**, 则此 ID 用于冲突检测。 有关已经使用过的 ID 的列表，请查询 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系统表。|  
 |p2p_continue_onconflict|**int**|指定检测到冲突时分发代理是否继续处理更改。 如果值为**1** , 则表示代理将继续处理更改。<br /><br /> 请注意, 我们建议使用默认值**0**。 **\* \* \* \*** 如果将此选项设置为**1**, 则分发代理尝试通过应用具有最高发起方 ID 的节点的冲突行来聚合拓扑中的数据。 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。|  
-|allow_partition_switch|**int**|指定是否更改表 .。。SWITCH 语句可针对已发布的数据库执行。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-|replicate_partition_switch|**int**|指定是否更改表 .。。应将对已发布数据库执行的 SWITCH 语句复制到订阅服务器。 仅当*allow_partition_switch*设置为**1**时, 此选项才有效。|  
+|allow_partition_switch|**int**|指定是否更改表 ...SWITCH 语句可针对已发布的数据库执行。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+|replicate_partition_switch|**int**|指定是否更改表 ...应将对已发布数据库执行的 SWITCH 语句复制到订阅服务器。 仅当*allow_partition_switch*设置为**1**时, 此选项才有效。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或**1** (失败)  

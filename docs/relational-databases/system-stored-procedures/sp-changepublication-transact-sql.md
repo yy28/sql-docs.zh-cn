@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68762416"
 ---
-# <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
+# <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   更改发布的属性。 此存储过程在发布服务器上对发布数据库执行。  
@@ -55,8 +55,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|不能为给定发布创建匿名订阅。 对于对等发布，无法更改此属性。|  
 |**allow_initialize_from_backup**|**true**|订阅服务器可以从备份而非初始快照中初始化对此发布的订阅。 对于非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布, 无法更改此属性。|  
 ||**false**|订阅服务器必须使用初始快照。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
-|**allow_partition_switch**|**true**|ALTER TABLE .。。SWITCH 语句可针对已发布的数据库执行。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-||**false**|ALTER TABLE .。。不能对已发布数据库执行 SWITCH 语句。|  
+|**allow_partition_switch**|**true**|ALTER TABLE ...SWITCH 语句可针对已发布的数据库执行。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+||**false**|ALTER TABLE ...不能对已发布数据库执行 SWITCH 语句。|  
 |**allow_pull**|**true**|给定的发布允许请求订阅。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 ||**false**|给定的发布不允许进行请求订阅。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 |**allow_push**|**true**|给定的发布允许推送订阅。|  
@@ -99,8 +99,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**概述**|仅发布计划的同步事件。|  
 |**replicate_ddl**|**1**|复制在发布服务器上执行的数据定义语言 (DDL) 语句。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 ||**0**|不复制 DDL 语句。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。 使用对等复制时，无法禁用架构更改复制功能。|  
-|**replicate_partition_switch**|**true**|ALTER TABLE .。。应将对已发布数据库执行的 SWITCH 语句复制到订阅服务器。 仅当*allow_partition_switch*设置为 TRUE 时, 此选项才有效。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-||**false**|ALTER TABLE .。。不应将 SWITCH 语句复制到订阅服务器。|  
+|**replicate_partition_switch**|**true**|ALTER TABLE ...应将对已发布数据库执行的 SWITCH 语句复制到订阅服务器。 仅当*allow_partition_switch*设置为 TRUE 时, 此选项才有效。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+||**false**|ALTER TABLE ...不应将 SWITCH 语句复制到订阅服务器。|  
 |**retention**||**整数**, 表示订阅活动的保持期 (小时)。 如果订阅在保持期内不活动，则将其删除。|  
 |**snapshot_in_defaultfolder**|**true**|在默认快照文件夹中存储快照文件。 如果同时指定了*alt_snapshot_folder*, 则会将快照文件存储在默认位置和备用位置。|  
 ||**false**|快照文件存储在*alt_snapshot_folder*指定的备用位置。|  

@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769047"
 ---
-# <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
+# <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   为分发代理和合并代理添加计划。 此存储过程在发布服务器的任何数据库中执行。  
@@ -98,7 +98,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`第一次计划分发代理的时间, 格式为 HHMMSS。 *active_start_time_of_day*的值为**int**, 默认值为**0**。  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`停止计划分发代理的时间, 格式为 HHMMSS。 *active_end_time_of_day*的值为**int**, 默认值为 235959, 这意味着 11:59:59 P.M.。 以24小时制计量。  
+`[ @active_end_time_of_day = ] active_end_time_of_day`停止计划分发代理的时间, 格式为 HHMMSS。 *active_end_time_of_day*的值为**int**, 默认值为 235959, 这意味着 11:59:59 P.M。 以24小时制计量。  
   
 `[ @active_start_date = ] active_start_date`第一次计划分发代理的日期, 格式为 YYYYMMDD。 *active_start_date*的值为**int**, 默认值为**0**。  
   

@@ -103,7 +103,7 @@ ms.locfileid: "70176156"
 |订阅|是|是||  
 |历史记录设置|是|是|将迁移历史记录设置，但不迁移历史记录详细信息。|  
 |处理选项|是|是||  
-|高速缓存刷新选项|是|是|相关设置作为目录项的一部分迁移。 下面是该脚本的示例，它迁移报表 (.rdl) 以及高速缓存刷新选项之类的相关设置：<br /><br /> 正在迁移报表 TitleOnly.rdl 的参数: 找到了 0 项。<br /><br /> 正在迁移报表 Titleonly.rdl 的订阅:找到1个项目。<br /><br /> 正在迁移作为 \server\public\savedreports 中\\的订阅保存为 titleonly.rdl .。。成功<br /><br /> 正在迁移报表 Titleonly.rdl 的历史记录设置 .。。成功<br /><br /> 正在迁移报表 Titleonly.rdl 的处理选项 .。。找到 0 项。<br /><br /> 正在迁移报表 Titleonly.rdl 的高速缓存刷新选项 .。。成功<br /><br /> 正在迁移报表 Titleonly.rdl 的缓存刷新计划:找到1个项目。<br /><br /> 正在迁移缓存刷新计划 titleonly_refresh735amM2F .。。成功|  
+|高速缓存刷新选项|是|是|相关设置作为目录项的一部分迁移。 下面是该脚本的示例，它迁移报表 (.rdl) 以及高速缓存刷新选项之类的相关设置：<br /><br /> 正在迁移报表 TitleOnly.rdl 的参数: 找到了 0 项。<br /><br /> 正在迁移报表 Titleonly.rdl 的订阅:找到1个项目。<br /><br /> 正在迁移作为 \server\public\savedreports 中\\的订阅保存为 titleonly.rdl ...成功<br /><br /> 正在迁移报表 Titleonly.rdl 的历史记录设置 ...成功<br /><br /> 正在迁移报表 Titleonly.rdl 的处理选项 ...找到 0 项。<br /><br /> 正在迁移报表 Titleonly.rdl 的高速缓存刷新选项 ...成功<br /><br /> 正在迁移报表 Titleonly.rdl 的缓存刷新计划:找到1个项目。<br /><br /> 正在迁移缓存刷新计划 titleonly_refresh735amM2F ...成功|  
 |高速缓存刷新计划|是|是||  
 |映像|是|是||  
 |报表部件|是|是||  

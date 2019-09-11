@@ -39,7 +39,7 @@ ms.locfileid: "70212366"
   
 -   你使用的是 _\<位置 >_ 的 "**创建程序集**", 并且所有引用的程序集及其依赖项在 "  *\<位置 >* 中可用。  
   
--   你使用的是**CREATE ASSEMBLY FROM** _\<bytes .。。>,_ 并且所有引用都通过以空格分隔的字节来指定。  
+-   你使用的是**CREATE ASSEMBLY FROM** _\<bytes ...>,_ 并且所有引用都通过以空格分隔的字节来指定。  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**程序集都必须满足以下条件:  

@@ -46,7 +46,7 @@ ms.locfileid: "70148706"
  若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息, 请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中捕获异常  
- 此代码示例演示如何使用**Try .。。Catch .。。Finally 语句来**捕获SMO异常[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  
+ 此代码示例演示如何使用**Try...Catch...Finally 语句来**捕获SMO异常[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文档。  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -83,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>在 Visual C# 中捕获异常  
- 此代码示例演示如何使用**Try .。。Catch .。。Finally** Visual C#语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 Visual C# 文档。  
+ 此代码示例演示如何使用**Try...Catch...Finally** Visual C#语句来捕获 SMO 异常。 所有 SMO 异常的类型均为 SmoException，并且均列出在 SMO 引用中。 显示内部异常的顺序的目的在于揭示错误的根源。 有关详细信息，请参阅 Visual C# 文档。  
   
 ```csharp  
 {   

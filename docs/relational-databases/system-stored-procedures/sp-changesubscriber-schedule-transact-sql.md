@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770727"
 ---
-# <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
+# <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   更改订阅服务器的分发代理或合并代理调度。 此存储过程在发布服务器的任何数据库中执行。  
@@ -66,7 +66,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`第一次安排分发任务的时间。 *active_start_time_of_day*的值为**int**, 默认值为**0**。  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`停止安排分发任务的时间。 *active_end_time_of_day*的值为**int**, 默认值为**235959**, 这意味着 11:59:59 P.M.。 24小时制。  
+`[ @active_end_time_of_day = ] active_end_time_of_day`停止安排分发任务的时间。 *active_end_time_of_day*的值为**int**, 默认值为**235959**, 这意味着 11:59:59 P.M。 24小时制。  
   
 `[ @active_start_date = ] active_start_date`第一次安排分发任务的日期, 格式为 YYYYMMDD。 *active_start_date*的值为**int**, 默认值为**0**。  
   

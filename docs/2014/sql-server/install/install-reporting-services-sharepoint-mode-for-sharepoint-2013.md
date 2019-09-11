@@ -268,7 +268,7 @@ ms.locfileid: "68890278"
   
      打开浏览器找到所需的 SharePoint 网站。 例如 http://\<servername>/sites/bi  
   
-2.  单击 "**设置**" "![sharepoint 设置]" "(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 设置")"。  
+2.  单击 "**设置**" ![sharepoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint 设置")。  
   
 3.  单击 **“网站设置”** 。  
   

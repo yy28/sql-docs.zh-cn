@@ -129,7 +129,7 @@ ms.locfileid: "70176077"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED 和 NONCLUSTERED 的内联规范  
  对于基于磁盘的表，现在允许 `CLUSTERED` 和 `NONCLUSTERED` 索引的内联规范。 创建具有内联索引的表等效于发布一个 create table 命令，后随 `CREATE INDEX` 语句。 内联索引不支持包含列和筛选条件。  
   
-### <a name="select--into"></a>选择 .。。INTO  
+### <a name="select--into"></a>选择 ...INTO  
  `SELECT ... INTO` 语句得到了改进，现在可以并行操作。 数据库的兼容性级别必须至少为 110。  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>针对内存中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增强功能  

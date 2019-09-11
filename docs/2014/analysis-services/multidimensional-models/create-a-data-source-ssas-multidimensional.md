@@ -74,7 +74,7 @@ ms.locfileid: "70175914"
   
 2.  在“解决方案资源管理器”中，右键单击“数据源”文件夹，然后单击“新建数据源”以便启动“数据源向导”。  
   
-3.  在 **“选择如何定义连接”** 页中，选择 **“基于现有连接或新连接创建数据源”** ，然后单击 **“新建”** 以便打开 **“连接管理器”** 。  
+3.  在 **“选择如何定义连接”** 页中，选择 **“基于现有连接或新连接创建数据源”** ，然后单击 **“新建”** 以便打开 **“连接管理器”**。  
   
      在连接管理器中创建新连接。 在连接管理器中，选择一个访问接口，然后指定由该访问接口用来连接到基础数据的连接字符串属性。 所需的确切信息取决于选定的访问接口，但通常此类信息包括某个服务器或服务实例、登录到该服务器或服务实例所用的信息、数据库或文件名以及访问接口的其他特定设置。 对于此过程的其余部分, 我们将采用 SQL Server 的数据库连接。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "70175914"
   
      新连接的默认访问接口是“本机 OLE DB\\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”访问接口。 此访问接口用于连接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎实例。 要连接到 SQL Server 关系数据库，使用 Native OLE DB\SQL Server Native Client 11.0 通常要比使用备用访问接口要快。  
   
-     您可以选择一个不同的访问接口来访问其他数据源。 有关支持[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的提供程序和关系数据库的列表, 请参阅[支持&#40;SSAS 多维&#41;数据源](supported-data-sources-ssas-multidimensional.md)。  
+     您可以选择一个不同的访问接口来访问其他数据源。 有关支持 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的提供程序和关系数据库的列表, 请参阅[支持&#40;SSAS 多维&#41;数据源](supported-data-sources-ssas-multidimensional.md)。  
   
 5.  输入选定访问接口连接到基础数据源所需的信息。 如果选中“本机 OLE DB\SQL Server Native Client”访问接口，请输入以下信息：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "70175914"
         > [!IMPORTANT]  
         >  连接管理器对于使用 SQL Server 身份验证的连接包括一个 **“保存我的密码”** 复选框。 尽管显示此复选框，但并不总是使用它。  
         >   
-        >  在 Analysis Services 不使用此复选框的情况下，此时将包括刷新或处理在活动 Analysis Services 数据库中使用的 SQL Server 关系数据。 无论您是清除还是选中 **“保存我的密码”** ，Analysis Services 始终将加密和保存密码。 密码加密后同时存储在 .abf 和数据文件中。 之所以存在此行为，是因为 Analysis Services 不支持在服务器上存储基于会话的密码。  
+        >  在 Analysis Services 不使用此复选框的情况下，此时将包括刷新或处理在活动 Analysis Services 数据库中使用的 SQL Server 关系数据。 无论您是清除还是选中 **“保存我的密码”**，Analysis Services 始终将加密和保存密码。 密码加密后同时存储在 .abf 和数据文件中。 之所以存在此行为，是因为 Analysis Services 不支持在服务器上存储基于会话的密码。  
         >   
         >  此行为仅适用于满足以下条件的数据库：a) 在 Analysis Services 服务器实例上持久存在；b) 使用 SQL Server 身份验证刷新或处理关系数据。 它确实不适用于您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中设置的专用于会话期间的数据源连接。 尽管无法删除已经存储的密码，但您可以使用不同的凭据或 Windows 身份验证来覆盖当前随数据库存储的用户信息。  
   
@@ -101,11 +101,11 @@ ms.locfileid: "70175914"
   
     4.  在此对话框的左侧，单击 **“全部”** 可查看此连接的其他设置，其中包括此访问接口的所有默认设置。  
   
-    5.  根据环境需要更改设置并单击 **“确定”** 。  
+    5.  根据环境需要更改设置并单击 **“确定”**。  
   
          将在数据源向导的 **“选择如何定义连接”** 页的 **“数据连接”** 窗格中显示新连接。  
   
-6.  单击“下一步”。  
+6.  单击“下一步” 。  
   
 7.  在 **“模拟信息”** 中，指定在连接到外部数据源时 Analysis Services 将使用的 Windows 凭据或用户标识。 如果您正在使用数据库身份验证，则出于连接目的，这些设置将被忽略。  
   
@@ -117,9 +117,9 @@ ms.locfileid: "70175914"
   
      您指定的帐户必须对数据源具有读取权限。  
   
-8.  单击“下一步”。  在 **“完成向导”** 中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
+8.  单击“下一步” 。  在 **“完成向导”** 中，输入数据源名称或使用默认名称。 默认名称是在连接中指定的数据库的名称。 **“预览”** 窗格将显示此新数据源的连接字符串。  
   
-9. 单击 **“完成”** 。  此时，解决方案资源管理器的 **“数据源”** 文件夹中将出现新数据源。  
+9. 单击 **“完成”**。  此时，解决方案资源管理器的 **“数据源”** 文件夹中将出现新数据源。  
   
 ##  <a name="bkmk_connection"></a> 使用现有连接创建数据源  
  使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时，您的数据源可以基于解决方案中的现有数据源，也可以基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 数据源向导提供了几个用于创建数据源对象的选项，包括在同一个项目中使用现有连接。  
@@ -137,13 +137,13 @@ ms.locfileid: "70175914"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的解决方案资源管理器中双击数据源对象。  
   
-2.  单击 **“编辑”** ，然后在左侧的导航窗格中单击 **“所有”** 。  
+2.  单击 **“编辑”**，然后在左侧的导航窗格中单击 **“所有”** 。  
   
 3.  属性网格将出现，其中显示您正在使用的数据访问接口的可用属性。 有关这些属性的详细信息，请参阅访问接口的产品文档。  对于 SQL Server 本机客户端，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  如果解决方案中具有多个数据源，并且您希望在同一位置维护连接字符串，则可以将当前数据源配置为引用其他数据源对象。  
   
- “数据源引用” 是与同一解决方案中的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象或数据源之间的关联。 引用提供了一种在解决方案的对象之间同步数据源的方式。 每次生成项目时，都会同步连接字符串信息。 若要更改引用另一对象的数据源的连接字符串，则必须更改被引用对象的连接字符串。  
+ “数据源引用”  是与同一解决方案中的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象或数据源之间的关联。 引用提供了一种在解决方案的对象之间同步数据源的方式。 每次生成项目时，都会同步连接字符串信息。 若要更改引用另一对象的数据源的连接字符串，则必须更改被引用对象的连接字符串。  
   
  您可以通过清除此复选框来删除该引用。 此操作将结束对象间的同步并允许您更改数据源中的连接字符串。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "70175914"
   
 -   将一个数据源指定主数据源。 主数据源是用于创建数据源视图的数据源。  
   
--   主数据源必须支持 `OpenRowset` 函数。  有关 SQL Server 中该函数的详细信息，请参阅 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>。  
+-   主数据源必须支持 `OpenRowset` 函数。   有关 SQL Server 中该函数的详细信息，请参阅 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>。  
   
  使用以下方法可合并来自多个数据源的数据：  
   
