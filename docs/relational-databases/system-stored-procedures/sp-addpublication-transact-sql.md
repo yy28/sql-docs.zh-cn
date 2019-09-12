@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769100"
 ---
-# <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
+# <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   创建快照或事务发布。 此存储过程在发布服务器上对发布数据库执行。  
@@ -309,9 +309,9 @@ sp_addpublication [ @publication = ] 'publication'
 >  建议您使用默认值 FALSE。 如果此选项设置为 TRUE，则分发代理会尝试应用来自具有最高发起方 ID 的节点的冲突行来收敛拓扑中的数据。 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。  
   
   
-`[ \@allow_partition_switch = ] 'allow_partition_switch'`指定是否更改表 .。。SWITCH 语句可针对已发布的数据库执行。 *allow_partition_switch*的值为**nvarchar (5)** , 默认值为 FALSE。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
+`[ \@allow_partition_switch = ] 'allow_partition_switch'`指定是否更改表 ...SWITCH 语句可针对已发布的数据库执行。 *allow_partition_switch*的值为**nvarchar (5)** , 默认值为 FALSE。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
   
-`[ \@replicate_partition_switch = ] 'replicate_partition_switch'`指定是否更改表 .。。应将对已发布数据库执行的 SWITCH 语句复制到订阅服务器。 *replicate_partition_switch*的值为**nvarchar (5)** , 默认值为 FALSE。 仅当*allow_partition_switch*设置为 TRUE 时, 此选项才有效。  
+`[ \@replicate_partition_switch = ] 'replicate_partition_switch'`指定是否更改表 ...应将对已发布数据库执行的 SWITCH 语句复制到订阅服务器。 *replicate_partition_switch*的值为**nvarchar (5)** , 默认值为 FALSE。 仅当*allow_partition_switch*设置为 TRUE 时, 此选项才有效。  
 
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或**1** (失败)  
