@@ -39,7 +39,7 @@ ms.locfileid: "70176083"
  **[第4课:在 Azure 存储中创建数据库](../relational-databases/lesson-3-database-backup-to-url.md)**  
  在本课程中, 将使用 "创建数据库文件名" 选项在 Azure 存储中创建数据库。  
   
- **第5课。&#40;可选&#41;使用 TDE 加密数据库**  
+ **[第5课。&#40;可选&#41;使用 TDE 加密数据库](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  在本课中，您将使用透明数据加密 (TDE) 和服务器证书对数据库进行加密。  
   
  **[第6课:将数据库从本地源计算机迁移到 Azure 中的目标计算机](lesson-5-backup-database-using-file-snapshot-backup.md)**  
