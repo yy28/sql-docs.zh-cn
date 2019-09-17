@@ -1,35 +1,35 @@
 ---
-title: 使用动态管理视图 (Dmv) 监视 R 和 Python 脚本执行
-description: 使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务中的 R 和 Python 外部脚本执行。
+title: 使用 Dmv 监视 Python 和 R 脚本执行
+description: 使用动态管理视图（Dmv）监视 SQL Server 机器学习服务中的 Python 和 R 外部脚本执行。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715323"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978408"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-使用动态管理视图 (Dmv) 监视外部脚本 (R 和 Python) 的执行、使用的资源、诊断问题, 并 SQL Server 机器学习服务中优化性能。
+使用动态管理视图（Dmv）监视外部脚本（Python 和 R）的执行情况、使用的资源、诊断问题，并 SQL Server 机器学习服务中优化性能。
 
 在本文中, 你将找到特定于 SQL Server 机器学习服务的 Dmv。 你还将找到显示以下内容的示例查询:
 
 + 机器学习的设置和配置选项
-+ 运行外部 R 或 Python 脚本的活动会话
-+ 适用于 R 和 Python 的外部运行时的执行统计信息
++ 运行外部 Python 或脚本的活动会话
++ 用于 Python 和 R 的外部运行时的执行统计信息
 + 外部脚本的性能计数器
 + OS、SQL Server 和外部资源池的内存使用量
 + SQL Server 和外部资源池的内存配置
 + Resource Governor 资源池, 包括外部资源池
-+ 适用于 R 和 Python 的已安装包
++ 安装的 Python 和 R 包
 
 有关 Dmv 的更多常规信息, 请参阅[系统动态管理视图](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。
 
@@ -91,7 +91,7 @@ WHERE name = 'external scripts enabled';
 
 ![活动设置查询的输出](media/dmv-active-sessions.png "活动设置查询的输出")
 
-运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息, 请参阅[_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[sys.databases _exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)。
+运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息，请参阅[_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[sys.databases _exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)。
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -114,7 +114,7 @@ ON s.session_id = r.session_id;
 | database_name | 每个会话的当前数据库的名称。 |
 | login_name | 当前正在执行会话的 SQL Server 登录名。 |
 | wait_time | 如果请求当前被阻塞，则此列返回当前等待的持续时间（以毫秒为单位）。 不可为 null。 |
-| wait_type | 如果请求当前被阻塞，则此列返回等待类型。 有关等待类型的信息, 请参阅[_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 |
+| wait_type | 如果请求当前被阻塞，则此列返回等待类型。 有关等待类型的信息，请参阅[_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 |
 | last_wait_type | 如果此请求先前已经阻塞，则此列返回上次等待的类型。 |
 | total_elapsed_time | 请求到达后经过的总时间（毫秒）。 |
 | cpu_time | 请求所使用的 CPU 时间（毫秒）。 |
@@ -131,7 +131,7 @@ ON s.session_id = r.session_id;
 
 ![执行统计信息查询的输出](media/dmv-execution-statistics.png "执行统计信息查询的输出")
 
-运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息, 请参阅[_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 查询只返回多次执行的函数。
+运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息，请参阅[_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 查询只返回多次执行的函数。
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -154,7 +154,7 @@ ORDER BY language, counter_name;
 
 ![性能计数器查询的输出](media/dmv-performance-counters.png "性能计数器查询的输出")
 
-运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息, 请参阅[_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)。
+运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息，请参阅[_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)。
 
 ```sql
 SELECT counter_name, cntr_value
@@ -162,12 +162,12 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-**sys.databases _os_performance_counters**为外部脚本输出以下性能计数器:
+**sys.databases _os_performance_counters**为外部脚本输出以下性能计数器：
 
 | 计数器 | 描述 |
 |---------|-------------|
 | 执行总次数 | 由本地或远程调用启动的外部进程的数目。 |
-| 并行执行 | 脚本包括 _@parallel_ 规范[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]以及能够生成和使用并行查询计划的次数。 |
+| 并行执行 | 脚本包含 _\@并行_规范并且[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成和使用并行查询计划的次数。 |
 | 流式执行 | 已调用流式处理功能的次数。 |
 | SQL CC 执行 | 外部脚本运行的次数, 其中远程实例化调用并将 SQL Server 用作计算上下文。 |
 | 默示身份验证。登录名 | 使用隐含身份验证进行 ODBC 环回调用的次数;也就是说, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]代表发送脚本请求的用户执行调用。 |
@@ -180,7 +180,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 ![内存使用情况查询的输出](media/dmv-memory-usage.png "内存使用情况查询的输出")
 
-运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息, 请参阅[sys.databases _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) and [sys.databases _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。
+运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息，请参阅[sys.databases _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) and [sys.databases _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。
 
 ```sql
 SELECT physical_memory_kb, committed_kb
@@ -200,11 +200,11 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>内存配置
 
-查看 SQL Server 和外部资源池的最大内存配置的相关信息。 如果 SQL Server 运行时的默认值`max server memory (MB)`为, 则将其视为 100% 的 OS 内存。
+查看 SQL Server 和外部资源池的最大内存配置的相关信息。 如果 SQL Server 运行时的默认值`max server memory (MB)`为，则将其视为 100% 的 OS 内存。
 
 ![内存配置查询的输出](media/dmv-memory-configuration.png "内存配置查询的输出")
 
-运行以下查询以获取此输出。 有关所使用的视图的详细信息, 请参阅[sys.databases](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
+运行以下查询以获取此输出。 有关所使用的视图的详细信息，请参阅[sys.databases](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)和[_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -232,7 +232,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 ![资源池查询的输出](media/dmv-resource-pools.png "资源池查询的输出")
 
-运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息, 请参阅[sys.databases _resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) and [sys.databases _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
+运行以下查询以获取此输出。 有关使用的动态管理视图的详细信息，请参阅[sys.databases _resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) and [sys.databases _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
 ```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name

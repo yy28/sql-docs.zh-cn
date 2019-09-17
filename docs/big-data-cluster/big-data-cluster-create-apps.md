@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18e97a3567b50982bd2be11dcc3493951dfe8fa9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 93c94b8ca5688bd5c67369849094e20d1dae697e
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653156"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929726"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>如何在上部署应用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,13 +26,13 @@ ms.locfileid: "69653156"
 
 - 用于管理群集和应用程序的单个命令行实用程序。
 - 简化应用程序部署，同时通过规范文件提供精细控制。
-- 支持托管附加的应用程序类型-SSIS 和 MLeap (CTP 2.3 中的新增项)。
+- 支持托管附加的应用程序类型-SSIS 和 MLeap （CTP 2.3 中的新增项）。
 - 用于管理应用程序部署的[Visual Studio Code 扩展](app-deployment-extension.md)。
 
 使用 `azdata` 命令行实用程序部署和管理应用程序。 本文提供了有关如何从命令行部署应用的示例。 若要了解如何在中使用此方法 Visual Studio Code 参阅[Visual Studio Code 扩展](app-deployment-extension.md)。
 
 支持下列应用类型：
-- R 和 Python 应用 (函数、模型和应用)
+- R 和 Python 应用（函数、模型和应用）
 - MLeap 服务
 - SQL Server Integration Services (SSIS)
 
@@ -83,7 +83,7 @@ kubectl get svc controller-svc-external -n <name of your big data cluster>
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 或 Minikube
 
-如果使用的是 Kubeadm 或 Minikube, 请运行以下命令, 获取用于登录到群集的 IP 地址
+如果使用的是 Kubeadm 或 Minikube，请运行以下命令，获取用于登录到群集的 IP 地址
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,7 +105,7 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-这假设你的应用程序存储在 `addpy` 文件夹中。 此文件夹还应包含应用程序的规范文件 `spec.yaml`。 有关`spec.yaml`文件的详细信息, 请参阅["应用程序部署" 页](concept-application-deployment.md)。
+这假设你的应用程序存储在 `addpy` 文件夹中。 此文件夹还应包含应用程序的规范文件 `spec.yaml`。 有关`spec.yaml`文件的详细信息，请参阅["应用程序部署" 页](concept-application-deployment.md)。
 
 要部署此应用示例应用，请在名为 `addpy` 的目录中创建以下文件：
 
@@ -241,16 +241,14 @@ Init 命令为基架提供部署应用程序所需的相关生成工件。 下�
 azdata app init --name hello --version v1 --template python
 ```
 
-这将创建一个名为 hello 的文件夹。  可以使用 `cd` 进入目录并检查文件夹中生成的文件。 yaml 定义应用程序, 如名称、版本和源代码。 你可以编辑该规范, 以更改名称、版本、输入和输出。
+这将创建一个名为 hello 的文件夹。  可以使用 `cd` 进入目录并检查文件夹中生成的文件。 yaml 定义应用程序，如名称、版本和源代码。 你可以编辑该规范，以更改名称、版本、输入和输出。
 
 下面是将在文件夹中看到的 init 命令的示例输出
 
 ```
 hello.py
-README.md
 run-spec.yaml
 spec.yaml
-
 ```
 
 ## <a name="describe-an-app"></a>描述应用
@@ -295,6 +293,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>后续步骤
 
-了解有关详细信息, 请参阅[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]如何在应用程序上将部署的应用集成到[大数据群集上的使用应用程序](big-data-cluster-consume-apps.md)。 有关其他示例，请参阅[应用部署示例](https://aka.ms/sql-app-deploy)。
+了解有关详细信息，请参阅[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]如何在应用程序上将部署的应用集成到[大数据群集上的使用应用程序](big-data-cluster-consume-apps.md)。 有关其他示例，请参阅[应用部署示例](https://aka.ms/sql-app-deploy)。
 
-有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
+有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。

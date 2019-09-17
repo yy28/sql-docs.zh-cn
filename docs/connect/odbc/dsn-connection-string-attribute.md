@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702797"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和连接字符串关键字和属性
@@ -45,8 +45,8 @@ ms.locfileid: "68702797"
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(仅限 v 17.4 +, 仅 DSN)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(仅限 v 17.4 +, 仅 DSN) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)（仅限 v 17.4 +，仅 DSN）| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)（仅限 v 17.4 +，仅 DSN） | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -124,7 +124,7 @@ ms.locfileid: "68702797"
 
 用于描述数据源。
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 控制 ANSI 到 OEM 的数据转换。 
 
@@ -133,7 +133,7 @@ ms.locfileid: "68702797"
 | SQL_AO_OFF | （默认值）不执行转换。 |
 | SQL_AO_ON | 执行转换。 |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 控制 SQL Server 回退连接的使用。 此属性不再受支持。
 
@@ -146,7 +146,7 @@ ms.locfileid: "68702797"
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>新的连接字符串关键字和连接属性
 
-###  <a name="authentication---sqlcoptssauthentication"></a>身份验证 - SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>身份验证 - SQL_COPT_SS_AUTHENTICATION
 
 设置连接到 SQL Server 时要使用的身份验证模式。 有关详细信息，请参阅[使用 Azure Active Directory](using-azure-active-directory.md)。
 
@@ -163,7 +163,7 @@ ms.locfileid: "68702797"
 > [!NOTE]
 > 使用 `Authentication` 关键字或属性时，将 `Encrypt` 显式指定为连接字符串/DSN/连接属性中所需的值。 有关详细信息，请参阅[将连接字符串关键字用于 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
 控制透明列加密 (Always Encrypted)。 有关详细信息，请参阅[使用 Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md)。
 
@@ -173,7 +173,7 @@ ms.locfileid: "68702797"
 |禁用|SQL_CE_DISABLED|（默认值）禁用 Always Encrypted。|
 | |SQL_CE_RESULTSETONLY|仅启用解密（结果和返回值）。|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 控制透明网络 IP 解析功能，此功能与 MultiSubnetFailover 交互以允许更快的重新连接尝试。 有关详细信息，请参阅[使用透明网络 IP 解析](using-transparent-network-ip-resolution.md)。
 
@@ -191,7 +191,7 @@ ms.locfileid: "68702797"
 |否|（默认值）如果可用，请将 sp_describe_first_result_set 用于元数据。 |
 |是| 对元数据使用 SET FMTONLY。 |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 允许使用 Azure Active Directory 访问令牌进行身份验证。 有关详细信息，请参阅[使用 Azure Active Directory](using-azure-active-directory.md)。
 
@@ -200,7 +200,7 @@ ms.locfileid: "68702797"
 | NULL | （默认值）不提供任何访问令牌。 |
 | ACCESSTOKEN* | 指向访问令牌的指针。 |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 与加载的密钥存储提供程序库进行通信。 请参阅控制透明列加密 (Always Encrypted)。 此属性没有默认值。 有关详细信息，请参阅[自定义密钥存储提供程序](custom-keystore-providers.md)。
 
@@ -208,7 +208,7 @@ ms.locfileid: "68702797"
 |-|-|
 | CEKEYSTOREDATA * | 密钥存储提供程序库的通信数据结构 |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 为 Always Encrypted 加载密钥存储提供程序库，或检索已加载的密钥存储提供程序库的名称。 有关详细信息，请参阅[自定义密钥存储提供程序](custom-keystore-providers.md)。 此属性没有默认值。
 
@@ -216,13 +216,13 @@ ms.locfileid: "68702797"
 |-|-|
 | char * | 密钥存储提供程序库的路径 |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-要使用 XA 兼容事务处理器 (TP) 启用 XA 事务，应用程序需要使用 SQL_COPT_SS_ENLIST_IN_XA 和指向 `XACALLPARAM` 对象的指针调用 SQLSetConnectAttr  。 Windows（17.3 及更高版本）、Linux 和 Mac支持此选项。
+要使用 XA 兼容事务处理器 (TP) 启用 XA 事务，应用程序需要使用 SQL_COPT_SS_ENLIST_IN_XA 和指向 `XACALLPARAM` 对象的指针调用 SQLSetConnectAttr。 Windows（17.3 及更高版本）、Linux 和 Mac支持此选项。
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
- 要仅将 XA 事务与 ODBC 连接关联，请在调用 SQLSetConnectAttr 时使用 SQL_COPT_SS_ENLIST_IN_XA 而不是指针来提供 TRUE 或 FALSE  。 这仅在 Windows 上有效，不能用于通过客户端应用程序指定 XA 操作。 
+ 要仅将 XA 事务与 ODBC 连接关联，请在调用 SQLSetConnectAttr 时使用 SQL_COPT_SS_ENLIST_IN_XA 而不是指针来提供 TRUE 或 FALSE。 这仅在 Windows 上有效，不能用于通过客户端应用程序指定 XA 操作。 
  ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13306a16233195f4af686a5d9f8b68b6d1ccb2f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3aa589de707e6f2edaac83db40ba908bf7177ae
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997873"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212349"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例如：使用证书设置数据库镜像 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +262,7 @@ ms.locfileid: "67997873"
     ```  
   
     > [!NOTE]  
-    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL（默认设置），并在执行第二个 SET PARTNER 'partner_server' **** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
+    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL（默认设置），并在执行第二个 SET PARTNER **'** _partner_server_ **'** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
   
  [[示例顶部]](#ExampleH2)  
   

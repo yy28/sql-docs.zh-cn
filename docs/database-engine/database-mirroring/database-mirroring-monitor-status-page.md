@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 449633953c0561191471733fa3a3dcba0fb24b83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006402"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212359"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>数据库镜像监视器（状态页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "68006402"
 -   **带自动故障转移功能的高安全(同步)**  
   
 ## <a name="remarks"></a>Remarks  
- **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 它们依赖于“数据库镜像监视器作业”  来定期更新状态表。 若要了解所显示状态的保留时间，用户可以在“主体日志 (\<time>)”  和“镜像日志 (\<time>)”  标签上查看时间。  
+ **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 它们依赖于“数据库镜像监视器作业”  来定期更新状态表。 若要了解所显示的状态的保留时间，用户可以在“主体日志 (\<time>)”    和“镜像日志 (\<time>)”    标签上查看时间。  
   
  如果该作业不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，状态将变得越来越陈旧，并且可能不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能会分享相同的角色（主体或镜像）。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  
   

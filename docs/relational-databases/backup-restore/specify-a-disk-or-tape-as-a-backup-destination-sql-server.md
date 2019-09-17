@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e4eca65f3a5bde99adc49e8019080e6a59b496b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3119e81a462ff163f1ee3d0df0ee334a718ddba5
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041418"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280948"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>将磁盘或磁带指定为备份目标 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,7 @@ ms.locfileid: "68041418"
   
 4.  在 **“常规”** 页的 **“目标”** 部分，单击 **“磁盘”** 或 **“磁带”** 。 若要选择包含单个介质集的多个磁盘或磁带机（最多为 64 个）的路径，请单击 **“添加”** 。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
+   若要删除备份目标，请选择该备份目标并单击 **“删除”** 。 若要查看备份目标的内容，请选择该备份目标并单击 **“内容”** 。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

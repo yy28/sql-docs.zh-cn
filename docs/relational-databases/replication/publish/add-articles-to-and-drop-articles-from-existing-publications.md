@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b47a6c5822cb52e29c7d6f486b75aa2d6be4a63a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c81a1c6c99a9756cfeb7c52bdef89aa907150e1b
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764774"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846625"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68764774"
  添加项目涉及的操作有：将项目添加到发布、为发布创建新的快照、同步订阅以应用新项目的架构和数据。  
   
 > [!NOTE]
->  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 **@processing_order** 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 [@processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 **sp_addmergearticle** 的 **@processing_order** 的 **sp_changemergearticle**；为 **sp_changemergearticle** 的 **@processing_order** 的 **@processing_order**，为参数 **@article** 。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
+>  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 的 \@processing_order  参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle  的 \@processing_order  参数指定值 1  ；为 sp_changemergearticle  的 \@processing_order  参数指定值 2  ，为参数 \@article  指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
   
 1.  用以下方法之一添加一个或多个项目：  
   

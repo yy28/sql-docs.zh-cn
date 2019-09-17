@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f07a80d5667a91376c9e5936be2474c826d6569a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769614"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212295"
 ---
 # <a name="secure-the-subscriber"></a>保护订阅服务器的安全
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68769614"
  有关详细信息，请参阅[创建事务发布的可更新订阅](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)和[查看和修改复制安全性设置](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 syncobj_\<HexadecimalNumber>  ），请将其权限授予在每个订阅服务器上配置的帐户。  
+>  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 **syncobj_** _\<HexadecimalNumber>_ ），请将其权限授予在每个订阅服务器上配置的帐户。  
   
 ## <a name="queued-updating-subscriptions"></a>排队更新订阅  
  当配置排队更新订阅时，请谨记以下两个与安全性相关的方面：  

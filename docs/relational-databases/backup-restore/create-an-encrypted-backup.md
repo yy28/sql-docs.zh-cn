@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19556dc84e916598e63f6df7b101f4f495ac3855
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155387"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280811"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +55,7 @@ ms.locfileid: "70155387"
   
 3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    ```  
+    ```
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
@@ -68,8 +66,7 @@ ms.locfileid: "70155387"
        SERVER CERTIFICATE = MyTestDBBackupEncryptCert  
        ),  
       STATS = 10  
-    GO  
-  
+    GO
     ```  
   
  有关加密受 EKM 保护的备份的示例，请参阅[使用 Azure 密钥保管库的可扩展密钥管理 (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。  

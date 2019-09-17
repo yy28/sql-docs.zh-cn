@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c776fd176379e8a65bdc70f6bf4c56fd370bef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134378"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228410"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>数据库邮件：邮件已排队，但未送达 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 本主题说明如何解决电子邮件已成功排队但没有传送的问题。
 

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155466"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228461"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -88,7 +88,7 @@ ms.locfileid: "70155466"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|支持 UTF-8 字符编码 |支持使用 UTF-8 字符进行导入和导出编码，并用作字符串数据的数据库级别或列级别排序规则。 这支持将应用程序扩展到全球范围，其中提供全球多语言数据库应用程序和服务的要求对于满足客户需求和特定市场规范至关重要。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布为 PolyBase 外部表和 Always Encrypted 启用 UTF-8 支持。|
+|支持 UTF-8 字符编码 |支持使用 UTF-8 字符进行导入和导出编码，并用作字符串数据的数据库级别或列级别排序规则。 这支持将应用程序扩展到全球范围，其中提供全球多语言数据库应用程序和服务的要求对于满足客户需求和特定市场规范至关重要。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 候选发布为 PolyBase 外部表和 Always Encrypted 启用 UTF-8 支持。|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase

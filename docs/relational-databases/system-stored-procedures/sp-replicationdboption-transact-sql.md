@@ -1,5 +1,5 @@
 ---
-title: sp_replicationdboption (Transact-sql) |Microsoft Docs
+title: sp_replicationdboption （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac51409db23f4b8eefb3616d5daf5ca43b3ab0f6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b45da78b0a79130cbbbd6c39bee07f237de2ef89
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771252"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878727"
 ---
-# <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
+# <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   设置指定数据库的复制数据库选项。 此存储过程在发布服务器或订阅服务器上对任何数据库执行。  
@@ -42,21 +42,21 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 ## <a name="arguments"></a>参数  
  [ **@dbname=** ] **'***dbname***’**  
- 要设置其复制数据库选项的数据库。 *db_name*的值为**sysname**, 无默认值。  
+ 要设置其复制数据库选项的数据库。 *db_name*的值为**sysname**，无默认值。  
   
  [ **@optname=** ] **'***optname***’**  
- 要启用或禁用的复制数据库选项。 *optname*为**sysname**, 可以是下列值之一。  
+ 要启用或禁用的复制数据库选项。 *optname*为**sysname**，可以是下列值之一。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**合并发布**|数据库可用于合并发布。|  
 |**publish**|数据库可用于其他类型的发布。|  
 |**subscribe**|数据库为订阅数据库。|  
-|**与备份同步**|启用数据库以进行协调备份。 有关详细信息, 请参阅为[事务复制&#40;复制启用协调备份 transact-sql 编程&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
+|**与备份同步**|启用数据库以进行协调备份。 有关详细信息，请参阅为[事务复制&#40;复制启用协调备份 transact-sql 编程&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
-`[ @value = ] 'value'`指示是启用还是禁用给定的复制数据库选项。 *值*为**sysname**, 可以为**true**或**false**。 如果此值为**false** , 并且*optname*为**merge publish**, 则还将删除对合并发布数据库的订阅。  
+`[ @value = ] 'value'`指示是启用还是禁用给定的复制数据库选项。 *值*为**sysname**，可以为**true**或**false**。 如果此值为**false** ，并且*optname*为**merge publish**，则还将删除对合并发布数据库的订阅。  
   
-`[ @ignore_distributor = ] ignore_distributor`指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*的数据值为**bit**, 默认值为**0**, 表示应连接到分发服务器并使用发布数据库的新状态进行更新。 仅在无法访问分发服务器并且**sp_replicationdboption**用于禁用发布时, 才应指定值**1** 。  
+`[ @ignore_distributor = ] ignore_distributor`指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*的数据值为**bit**，默认值为**0**，表示应连接到分发服务器并使用发布数据库的新状态进行更新。 仅在无法访问分发服务器并且**sp_replicationdboption**用于禁用发布时，才应指定值**1** 。  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -66,9 +66,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="remarks"></a>备注  
  **sp_replicationdboption**用于快照复制、事务复制和合并复制。  
   
- 此过程根据给定的选项创建或删除特定的复制系统表、安全帐户，等等。 设置**sysdatabases**系统表中对应的类别位, 并创建所需的系统表。  
+ 此过程根据给定的选项创建或删除特定的复制系统表、安全帐户，等等。 在 is_published**系统表**中设置相应的 （transacational 或 snapshot 复制）、 **is_merge_published** （合并复制）或**is_distributor**位，并创建所需的系统张.  
   
- 若要禁用发布，发布数据库必须联机。 如果发布数据库存在数据库快照，则必须在禁用发布前将快照删除。 数据库快照是数据库的只读脱机副本, 与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
+ 若要禁用发布，发布数据库必须联机。 如果发布数据库存在数据库快照，则必须在禁用发布前将快照删除。 数据库快照是数据库的只读脱机副本，与复制快照无关。 有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员才能执行**sp_replicationdboption**。  
@@ -78,7 +78,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [删除发布](../../relational-databases/replication/publish/delete-a-publication.md)   
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sysdatabases &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc461f1653c0d135df49384c0ad8706082fdff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937626"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278769"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,27 +108,27 @@ ms.locfileid: "67937626"
     
 8. 若要查看或选择高级选项，在 **“选项”** 页的 **“还原选项”** 面板中，可以根据您的实际情况选择下列任意选项：    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  **WITH** 选项（可选）：    
+   1. **WITH** 选项（可选）：    
     
-        -   **覆盖现有数据库(WITH REPLACE)**    
+     - **覆盖现有数据库(WITH REPLACE)**    
     
-        -   **保留复制设置(WITH KEEP_REPLICATION)**    
+     - **保留复制设置(WITH KEEP_REPLICATION)**    
     
-        -   **限制对还原数据库的访问(WITH RESTRICTED_USER)**    
+     - **限制对还原数据库的访问(WITH RESTRICTED_USER)**    
     
-    2.  为 **“恢复状态”** 框选择一个选项。 此框确定还原操作之后的数据库状态。    
+   2. 为 **“恢复状态”** 框选择一个选项。 此框确定还原操作之后的数据库状态。    
     
-        -   **RESTORE WITH RECOVERY** 是默认行为，它通过回滚未提交的事务，使数据库处于可以使用的状态。 无法还原其他事务日志。 如果您要立即还原所有必要的备份，则选择此选项。    
+     - **RESTORE WITH RECOVERY** 是默认行为，它通过回滚未提交的事务，使数据库处于可以使用的状态。 无法还原其他事务日志。 如果您要立即还原所有必要的备份，则选择此选项。    
     
-        -   **RESTORE WITH NORECOVERY** 不对数据库执行任何操作，不回滚未提交的事务。 可以还原其他事务日志。 除非恢复数据库，否则无法使用数据库。    
+     - **RESTORE WITH NORECOVERY** 不对数据库执行任何操作，不回滚未提交的事务。 可以还原其他事务日志。 除非恢复数据库，否则无法使用数据库。    
     
-        -   **RESTORE WITH STANDBY** 使数据库处于只读模式。 它撤消未提交的事务，但将撤消操作保存在备用文件中，以便能够还原恢复结果。    
+     - **RESTORE WITH STANDBY** 使数据库处于只读模式。 它撤消未提交的事务，但将撤消操作保存在备用文件中，以便能够还原恢复结果。    
     
-    3.  **还原前进行结尾日志备份。** 并非所有还原方案都要求执行结尾日志备份。  有关详细信息，请参阅 **《Tail-Log Backups (SQL Server)》** （结尾日志备份 (SQL Server)）中的 [Scenarios That Require a Tail-Log Backup](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)（需要结尾日志备份的场景）。
-    4.  如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。    
-    5.  如果要在每个还原操作之间进行提示，请选择 **“还原每个备份之前进行提示”** 。 除非数据库过大并且您要监视还原操作的状态，否则通常没有必要选中该选项。    
+   3. **还原前进行结尾日志备份。** 并非所有还原方案都要求执行结尾日志备份。  有关详细信息，请参阅 **《Tail-Log Backups (SQL Server)》** （结尾日志备份 (SQL Server)）中的 [Scenarios That Require a Tail-Log Backup](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)（需要结尾日志备份的场景）。
+  
+   4. 如果存在与数据库的活动连接，则还原操作可能会失败。 选中 **“关闭现有连接”** 以确保关闭 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和数据库之间的所有活动连接。 此复选框可在执行还原操作之前将数据库设置为单用户模式，并在该操作完成后将数据库设置为多用户模式。    
+  
+   5. 如果要在每个还原操作之间进行提示，请选择 **“还原每个备份之前进行提示”** 。 除非数据库过大并且您要监视还原操作的状态，否则通常没有必要选中该选项。    
     
 有关这些还原选项的详细信息，请参阅[《Restore Database &#40;Options Page&#41;》](../../relational-databases/backup-restore/restore-database-options-page.md)（还原数据库（“选项”页））。    
     
@@ -212,29 +212,29 @@ ms.locfileid: "67937626"
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   在现有数据库上还原条带备份，并存在共享的访问签名。
 已经创建具有读取、写入、删除和列表权限的存储访问策略。  已经为容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`创建与存储访问策略相关联的共享访问签名。  如果已存在 SQL Server 凭据，则步骤几乎一样。  数据库 `Sales` 当前在服务器上。  备份文件为 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。  
-*  
-7.  如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名称。  
-8.  在“共享访问签名:”富文本框中输入共享访问签名。 
-9.  单击“确定”  将打开“在 Microsoft Azure 上定位备份文件”  对话框。
-10. 展开“容器”  并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-11. 按住 ctrl 并选择文件 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
-12. 单击“确定”  。
-13. 单击“确定”以返回到“常规”页。  
-14. 在“选择页”窗格中单击“选项”。  
-15. 在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。  
-16. 在“结尾日志备份”  部分中，取消选中“还原前执行结尾日志备份”  。
-17. 在“服务器连接”  部分，选中“关闭目标数据库的现有连接”  。
-18. 单击“确定”  。
+
+1.  如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名称。  
+1. 在“共享访问签名:”富文本框中输入共享访问签名。 
+1. 单击“确定”  将打开“在 Microsoft Azure 上定位备份文件”  对话框。
+1. 展开“容器”  并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+1. 按住 ctrl 并选择文件 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
+1. 单击“确定”  。
+1. 单击“确定”以返回到“常规”页。  
+1. 在“选择页”窗格中单击“选项”。  
+1. 在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。  
+1. 在“结尾日志备份”  部分中，取消选中“还原前执行结尾日志备份”  。
+1. 在“服务器连接”  部分，选中“关闭目标数据库的现有连接”  。
+1. 单击“确定”  。
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   共享访问签名不存在
 在本示例中数据库 `Sales` 当前不在服务器上。
-7.  单击  “添加”将打开  “连接到 Microsoft 订阅”对话框。  
-8.  完成  “连接到 Microsoft 订阅”对话框，然后单击  “确定”，返回到  “选择备份文件位置”对话框。  有关其他信息，请参阅[《Connect to a Microsoft Azure Subscription》](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)（连接到 Microsoft Azure 订阅）。
-9.  单击“选择备份文件位置”对话框中单击“确定”将打开“在 Microsoft Azure 上定位备份文件”对话框。   
-10. 展开“容器”  并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-11. 选择备份文件，再单击“确定”  。
-12. 单击“确定”以返回到“常规”页。  
-13. 单击“确定”  。
+1. 单击  “添加”将打开  “连接到 Microsoft 订阅”对话框。  
+1. 完成  “连接到 Microsoft 订阅”对话框，然后单击  “确定”，返回到  “选择备份文件位置”对话框。  有关其他信息，请参阅[《Connect to a Microsoft Azure Subscription》](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)（连接到 Microsoft Azure 订阅）。
+1. 单击“选择备份文件位置”对话框中单击“确定”将打开“在 Microsoft Azure 上定位备份文件”对话框。   
+1. 展开“容器”  并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+1. 选择备份文件，再单击“确定”  。
+1. 单击“确定”以返回到“常规”页。  
+1. 单击“确定”  。
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. 将本地备份还原到 Microsoft Azure 存储 (URL)
 将从位于 `E:\MSSQL\BAK` 的备份中将 `Sales` 数据库还原到 Microsoft Azure 存储容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  已创建 Azure 容器的 SQL Server 凭据。  必须已存在目标容器的 SQL Server 凭据，因为不能通过创建 **还原** 任务创建该凭据。  `Sales` 数据库当前不在服务器上。

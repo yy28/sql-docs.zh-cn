@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: be85bc9434e5a64c1aa4e5e28f6b0a4a772d9690
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b8160bd47061d226ecd6da01353da718b53dea
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134589"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228443"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>检查使用数据库邮件发送的电子邮件的状态
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题说明在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]检查通过数据库邮件发送的电子邮件的状态。  
   
 -   **开始之前：**  

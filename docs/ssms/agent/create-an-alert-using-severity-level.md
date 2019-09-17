@@ -16,12 +16,12 @@ ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de2e60339c05c9c6b7c98a5ee4c767c17df9809b
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 696527b77cba555ad5c70a8ee65c8409295d18e4
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553063"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846796"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "69553063"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
   
--   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 **xp_logevent** 为 **@database_name** 或 NULL，否则 **@database_name** 不触发警报。  
+-   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 \@database_name  为“master”  或 NULL，否则 xp_logevent  不会触发警报。  
   
 -   如果严重级别在 19 到 25 之间，就会向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 应用程序日志发送 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 消息，并触发一个警报。 对于严重级别小于 19 的事件，只有在使用 **sp_altermessage**、RAISERROR WITH LOG 或 **xp_logevent** 强制这些事件写入 Windows 应用程序日志时，才会触发警报。  
   

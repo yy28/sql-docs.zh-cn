@@ -20,19 +20,16 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f4fdc5f81ff01b77f0bb27e5782db6ecd41b004
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969455"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284597"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 中心页的反馈！](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 领域处于领先水平。 本文档可帮助你在 Windows 和 Linux 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。

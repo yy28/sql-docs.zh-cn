@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952610"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809954"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>有关 Linux 部署的 SQL Server 可用性基础知识
 
@@ -215,9 +215,6 @@ Pacemaker 群集的日志位置因分发版而异。
 -   Hyper-V 文档 - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)（使用来宾群集实现高可用性）
 -   白皮书（专为基于 Windows 的部署编写，但大多数概念仍然适用）- [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)（使用 VMware vSphere 规划高可用性、关键任务 SQL Server 部署）
 
->[!NOTE]
->Hyper-V 尚不支持带有 STONITH 的 Pacemaker 群集的 RHEL。 在得到支持之前，有关更多信息和更新，请参阅 [Support Policies for RHEL High Availability Clusters](https://access.redhat.com/articles/29440#3physical_host_mixing)（RHEL 高可用性群集的支持策略）。
-
 ### <a name="networking"></a>网络
 与 WSFC 不同，Pacemaker 不需要 Pacemaker 群集本身的专用名称或至少一个专用 IP 地址。 由于没有网络名称资源，AG 和 FCI 将需要 IP 地址（请参阅每个文档以获取更多信息），但不需要名称。 SLES 允许配置 IP 地址用于管理目的，但不是必需的，如[创建 Pacemaker 群集](sql-server-linux-deploy-pacemaker-cluster.md#create)中所示。
 
@@ -229,9 +226,6 @@ Pacemaker 群集的日志位置因分发版而异。
 仲裁配置和要求与 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 的 AG 或 FCI 特定部署相关。
 
 支持的 Pacemaker 群集需要 STONITH。 使用分发版中的文档来配置 STONITH。 相关示例，请参阅 SLES 的 [Storage-based Fencing](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html)（基于存储的隔离）。 对于基于 ESXi 的解决方案，还有一个针对 VMware vCenter 的 STONITH 代理。 有关详细信息，请参阅 [Stonith Plugin Agent for VMWare VM VCenter SOAP Fencing (Unofficial)](https://github.com/olafrv/fence_vmware_soap)（适用于 VMWare VM VCenter SOAP 隔离的 Stonith 插件代理（非正式））。
-
-> [!NOTE]
-> 在撰写本文时，Hyper-V 没有适用于 STONITH 的解决方案。 这适用于内部部署，还会影响使用某些分发版（如 RHEL）的基于 Azure 的 Pacemaker 部署。
 
 ### <a name="interoperability"></a>互操作性
 本部分介绍基于 Linux 的群集如何与 WSFC 或 Linux 的其他分发版进行交互。

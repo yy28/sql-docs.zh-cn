@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 834a5ba4ee456ad7e9dfd538468b66fe3472cd1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006537"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745464"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   创建新消息类型。 消息类型定义消息的名称，以及 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对具有该名称的消息执行的验证。 会话双方必须定义相同的消息类型。  
   
@@ -56,11 +56,11 @@ CREATE MESSAGE TYPE message_type_name
 ```  
   
 ## <a name="arguments"></a>参数  
- message_type_name  
+ message_type_name   
  要创建的消息类型的名称。 在当前数据库中创建一条新消息，并归 AUTHORIZATION 子句定义的主体数据库所有。 不能指定服务器、数据库和架构名称。  message_type_name 最多可具有 128 个字符。  
   
- AUTHORIZATION owner_name  
- 将消息类型所有者设置为指定数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可以为任意有效用户或角色的名称。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称。 如果省略此子句，则消息类型属于当前用户。  
+ AUTHORIZATION owner_name   
+ 将消息类型所有者设置为指定数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可以为任意有效用户或角色的名称    。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称  。 如果省略此子句，则消息类型属于当前用户。  
   
  VALIDATION  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对此类型消息的消息正文的验证方式。 如果未指定此子句，则验证默认为 NONE。  
@@ -74,20 +74,20 @@ CREATE MESSAGE TYPE message_type_name
  WELL_FORMED_XML  
  指定消息正文必须包含格式正确的 XML。  
   
- VALID_XML WITH SCHEMA COLLECTION schema_collection_name  
- 指定消息正文必须包含符合指定架构集合中的某一架构的 XML。schema_collection_name 必须是现有 XML 架构集合的名称。  
+ VALID_XML WITH SCHEMA COLLECTION schema_collection_name   
+ 指定消息正文必须包含符合指定架构集合中的某一架构的 XML。  schema_collection_name 必须是现有 XML 架构集合的名称。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 验证传入消息。 如果消息包含的消息正文与指定的验证类型不符，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将放弃此无效消息，并向发送此消息的服务返回一条错误消息。  
   
  会话双方必须定义相同的消息类型名称。 为便于排除故障，尽管 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 不要求会话双方使用相同的验证，但通常会话双方还是会为消息类型指定相同的验证。  
   
- 消息类型不能是临时对象。 允许使用以 # 开头的消息类型名称，但它们是永久对象。  
+ 消息类型不能是临时对象。 允许使用以 #  开头的消息类型名称，但它们是永久对象。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限。  
+ 默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限    。  
   
- 默认情况下，消息类型的所有者、db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有消息类型的 REFERENCES 权限。  
+ 默认情况下，消息类型的所有者、db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有消息类型的 REFERENCES 权限   。  
   
  如果 CREATE MESSAGE TYPE 语句指定了架构集合，则执行该语句的用户必须对指定的架构集合拥有 REFERENCES 权限。  
   

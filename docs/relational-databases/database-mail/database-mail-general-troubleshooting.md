@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01b58ac9ebbcb7cdfba9ac8c8fe3f58b67278547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134405"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228420"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>常规数据库邮件故障排除步骤 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 数据库邮件故障排除涉及到对数据库邮件系统进行下列方面的常规检查。 这些过程按逻辑顺序介绍，但可以按任何顺序进行评估。
 

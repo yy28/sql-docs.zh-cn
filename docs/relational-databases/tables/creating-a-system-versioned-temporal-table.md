@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 679260f7c8a7f50eb9a3f638f3547c82ac488cef
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903590"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238743"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,18 +34,17 @@ ms.locfileid: "69903590"
   
 ```  
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
 )    
-WITH (SYSTEM_VERSIONING = ON)   
-;  
-```  
+WITH (SYSTEM_VERSIONING = ON);
+```
   
 ### <a name="important-remarks"></a>重要提示  
   
@@ -68,22 +67,18 @@ WITH (SYSTEM_VERSIONING = ON)
 ## <a name="creating-a-temporal-table-with-a-default-history-table"></a>使用默认历史记录表创建临时表  
  如果想要控制命名并仍依赖于系统创建具有默认配置的历史记录表，使用默认历史记录表创建临时表是一个方便的选项。 在下面的示例中，将在显式定义历史记录表的名称的情况下，创建启用了系统版本控制的新表。  
   
-```  
+```
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
-)   
-WITH    
-   (   
-      SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory)   
-   )   
-;  
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL
+  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 ```  
   
 ### <a name="important-remarks"></a>重要提示  
@@ -99,34 +94,35 @@ WITH
  如果用户想要指定具有特定存储选项和其他索引的历史记录表，则使用用户定义的历史记录表创建临时表是一个方便的选项。 在下面的示例中，将使用与要创建的临时表一致的架构创建用户定义的历史记录表。 将为此用户定义的历史记录表创建聚集列存储索引和其他非聚集行存储（B 树）索引，以便进行点查找。 创建此用户定义的历史记录表后，将通过将用户定义的历史记录表指定为默认历史记录表，创建由系统控制版本的临时表。  
   
 ```  
-CREATE TABLE DepartmentHistory   
-(    
-     DeptID int NOT NULL  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 NOT NULL  
-   , SysEndTime datetime2 NOT NULL   
-);   
-GO   
-CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory   
-   ON DepartmentHistory;   
-CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS   
-   ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);   
-GO   
+CREATE TABLE DepartmentHistory
+(
+    DeptID INT NOT NULL
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 NOT NULL
+  , SysEndTime DATETIME2 NOT NULL
+);
+GO
+
+CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory
+    ON DepartmentHistory;
+CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS
+    ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);
+GO
+
 CREATE TABLE Department   
-(    
+(
     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL     
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
-)    
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))   
-;  
-```  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL     
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
+```
   
 ### <a name="important-remarks"></a>重要提示  
   
@@ -155,18 +151,19 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 ```  
 CREATE SCHEMA History;   
-GO   
+GO
+
+ALTER TABLE InsurancePolicy
+    ADD   
+        SysStartTime DATETIME2(0) GENERATED ALWAYS AS ROW START HIDDEN
+            CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
+      , SysEndTime DATETIME2(0) GENERATED ALWAYS AS ROW END HIDDEN
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2 (0), '9999-12-31 23:59:59'),
+        PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
+GO
+
 ALTER TABLE InsurancePolicy   
-   ADD   
-      SysStartTime datetime2(0) GENERATED ALWAYS AS ROW START HIDDEN    
-           CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()  
-      , SysEndTime datetime2(0) GENERATED ALWAYS AS ROW END HIDDEN    
-           CONSTRAINT DF_SysEnd DEFAULT CONVERT(datetime2 (0), '9999-12-31 23:59:59'),   
-      PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);   
-GO   
-ALTER TABLE InsurancePolicy   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy));
 ```  
   
 #### <a name="important-remarks"></a>重要提示  
@@ -195,10 +192,9 @@ ALTER TABLE ProjectTaskCurrent ALTER COLUMN [ValidTo] datetime2 NOT NULL;
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidFrom] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidTo] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskCurrent   
-   ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
+    ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
 ALTER TABLE ProjectTaskCurrent   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON));
 ```  
   
 #### <a name="important-remarks"></a>重要提示  
@@ -222,5 +218,3 @@ ALTER TABLE ProjectTaskCurrent
  [在系统版本控制临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
  [更改系统版本控制的临时表架构](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
  [停止对系统版本的临时表的系统版本控制](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
-  
-  

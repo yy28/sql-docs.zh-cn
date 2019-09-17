@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 643ffbb29267a9e26a66e1b35cc55f3a88ca8789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec01941d4e8b333f3c29a38fd701b051acf04721
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089654"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279489"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>例如：仅对某些文件组进行段落还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,18 +72,16 @@ ms.locfileid: "68089654"
   
 4.  对文件组 `B`进行联机还原。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Files in filegroup `B` are restored any time thereafter.  
+   在随后的任意时间还原文件组 `B` 中的文件。  
   
-    > [!NOTE]  
-    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
+   > [!NOTE]  
+   >  文件组 `B` 的备份是在该文件组成为只读以后进行的；因此，不需要前滚这些文件。  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
-    ```  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
+   ```  
   
-     All filegroups are now online.  
+   所有文件组现在都处于联机状态。  
   
 ## <a name="additional-examples"></a>其他示例  
   

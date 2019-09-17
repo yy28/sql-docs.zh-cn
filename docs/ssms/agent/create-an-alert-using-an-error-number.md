@@ -15,12 +15,12 @@ ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64a5683a0eceb6e0297309c26b2094cb2a2fc899
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: d1a701712ef879e17aaf2a91ff8d81b6c91e8b96
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553066"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846808"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用错误号创建警报
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "69553066"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
   
--   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 **xp_logevent** 为 **@database_name** 或 NULL，否则 **@database_name** 不触发警报。  
+-   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 \@database_name  为“master”  或 NULL，否则 xp_logevent  不会触发警报。  
   
 ### <a name="Security"></a>安全性  
   
