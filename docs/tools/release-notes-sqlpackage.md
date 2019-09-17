@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809450"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774180"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>18.3 sqlpackage
+
+|平台|下载|发布日期|版本|生成
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2102893)|2019年9月6日|18.3|15.0.4532.1|
+|macOS .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102894)|2019年9月6日| 18.3|15.0.4532.1|
+|Linux .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102978)|2019年9月6日| 18.3|15.0.4532.1|
+|Windows .NET Core （预览）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102979)|2019年9月6日| 18.3|15.0.4532.1|
+
+### <a name="features"></a>功能
+
+| 功能 | 详细信息 |
+| :------ | :------ |
+| Azure SQL 数据仓库（预览） | 添加支持以部署到 Azure SQL 数据仓库。 | 
+| 部署 | 将/p： DatabaseLockTimeout = （INT32 "60"）参数添加到 sqlpackage。 | 
+| 部署 | 将/p： LongRunningCommandTimeout = （INT32）参数添加到 sqlpackage。 |
+| 导出/提取 | 将/p： TempDirectoryForTableData = （STRING）参数添加到 sqlpackage。 |
+| 部署 | 允许从其他位置加载部署参与者。 部署参与者将从与目标相同的目录加载。正在部署的 dacpac、相对于 sqlpackage 二进制文件的扩展目录和添加到 sqlpackage 的/p： AdditionalDeploymentContributorPaths = （STRING）参数可以指定其他目录位置的位置。 |
+| 部署 | 添加对 OPTIMIZE_FOR_SEQUENTIAL_KEY 的支持。 |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>修复程序
+
+| Fix | 详细信息 |
+| :-- | :------ |
+| 部署 | 修复以忽略自动索引，使其不会在部署时删除。 | 
+| Always Encrypted | 修复 Always Encrypted varchar 列。 | 
+| 生成/部署 | 修复以解析 xml 列集的节点（）方法。| 
+| ScriptDom | 修复 "URL" 字符串被解释为顶级标记的其他情况。 | 
+| 图形 | 修复约束中的伪列引用的生成 TSQL。  | 
+| Export | 生成满足复杂性要求的随机密码。 | 
+| 部署 | 修复以在检索约束时遵循命令超时。 | 
+| .NET Core （预览） | 修复日志记录到文件的问题。 | 
+| .NET Core （预览） | 使用流式传输来导出表数据，以支持大型表。 | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>18.2 sqlpackage
 
-发布日期：&nbsp;2019 年 4 月 15 日  
-内部版本：&nbsp;15.0.4384.2 
+|平台|下载|发布日期|版本|生成
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2087429)|2019 年 4 月 15 日|18.2|15.0.4384.2|
+|macOS .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
+|Linux .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2087431)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>功能
 

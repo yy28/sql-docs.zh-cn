@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190383"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774207"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -86,7 +86,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定是否应忽略权限。|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|指定是否忽略用户和登录名之间的关系。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定在提取过程中使用的架构模型的后备存储的类型。|
-|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 指定包含或不带方括号的表名称, 格式如下: schema_name. table_identifier。|
+|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 指定包含或不带方括号的表名称，格式如下： schema_name. table_identifier。|
+|**/p:**| TempDirectoryForTableData = （STRING）|指定临时目录，该目录用于在写入包文件之前对表数据进行缓冲。|
 |**/p:**|VerifyExtraction=(BOOLEAN)|指定是否应验证提取的 dacpac。|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>发布参数、属性和 SQLCMD 变量
@@ -149,6 +150,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|此设置指示在部署过程中如何处理数据库的排序规则；默认情况下，如果目标数据库的排序规则与源所指定的排序规则不匹配，就将更新目标数据库的排序规则。 设置此选项后，应使用目标数据库（或服务器）的排序规则。|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|指定当您发布到数据库时，是否应更新目标数据库或是否应删除并重新创建目标数据库。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定义 Azure SQL 数据库的版本。|
+|**/p:**|DatabaseLockTimeout = （INT32 "60"）|指定针对 SQLServer 执行查询时的数据库锁超时（以秒为单位）。 使用-1 表示无限期等待。|
 |**/p:**|DatabaseMaximumSize=(INT32)|定义 Azure SQL 数据库的大小上限（以 GB 为单位）。|
 |**/p:**|DatabaseServiceObjective=(STRING)|定义 Azure SQL 数据库的性能级别，如“P0”或“S1”。|
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|如果为 true，则数据库在部署前将设置为单用户模式。|
@@ -207,6 +209,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|指定在发布到数据库时，是将忽略还是将更新外键的 WITH NOCHECK 子句值方面的差异。|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|将所有复合元素包含为单个发布操作的一部分。|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|指定在发布到数据库时，是否应在可能的位置使用事务性语句。|
+|**/p:**|LongRunningCommandTimeout = （INT32）|指定针对 SQL Server 执行查询时的长时间运行命令超时（以秒为单位）。 使用0表示无限期等待。|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定发布操作在存在差异时应始终删除并重新创建程序集，而不是发出 ALTER ASSEMBLY 语句。|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|指定当在目标数据库中创建新 FileGroup 时，是否也创建新文件。|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|指定是否向数据库服务器注册该架构。|
@@ -267,7 +270,8 @@ SqlPackage.exe 导出操作将活动数据库从 SQL Server 或 Azure SQL 数据
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定在提取过程中使用的架构模型的后备存储的类型。|
-|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 指定包含或不带方括号的表名称, 格式如下: schema_name. table_identifier。|
+|**/p:**|TableData=(STRING)|指示将从中提取数据的表。 指定包含或不带方括号的表名称，格式如下： schema_name. table_identifier。|
+|**/p:**|TempDirectoryForTableData = （STRING）|指定临时目录，该目录用于在写入包文件之前对表数据进行缓冲。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|指定应使用的目标引擎版本。 这会影响是否允许 Azure SQL 数据库服务器支持的对象在生成的 bacpac 中具有 V12 功能, 如内存优化表。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|指定是否验证适用于 Microsoft Azure SQL 数据库 v12 的受支持全文文档类型。|
   
