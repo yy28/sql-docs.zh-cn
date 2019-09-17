@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b32bbb0df1c5977e814eecca7a1e6d1ddee5eca4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992631"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874377"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>步骤 4：使用 PHP 实现对 SQL 的弹性连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "67992631"
   
 此代码示例的长度主要在捕获异常逻辑中到期。   
   
-[Sqlsrv_query ()](../../connect/php/sqlsrv-query.md)函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询和连接对象, 并返回一个结果集, 可以使用[sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md)循环访问该结果集。 
+[Sqlsrv_query （）](../../connect/php/sqlsrv-query.md)函数可用于针对 SQL 数据库从查询中检索结果集。 此函数实际上可接受任何查询和连接对象，并返回一个结果集，可以使用[sqlsrv_fetch_array （）](../../connect/php/sqlsrv-fetch-array.md)循环访问该结果集。 
   
 ```php
 
@@ -61,7 +61,7 @@ ms.locfileid: "67992631"
                 sqlsrv_close( $conn); 
                 break;  
             } else {    
-                // [A.4] Check whether the error code is on the whitelist of transients.  
+                // [A.4] Check whether the error code is on the list of allowed transients.  
                 $isTransientError = false;  
                 $errorCode = '';
                 if (($errors = sqlsrv_errors()) != null) {

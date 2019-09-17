@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6be64ffc819157b95729f855bb81a5e12c78a7f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 789d56e63572f6744055bb78e819e69e2e15c824
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134478"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211244"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   使用 **数据库邮件配置向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。 有关邮件配置文件的详细信息，请参阅 [数据库邮件配置文件](database-mail-configuration-objects.md)。
   
 -   **开始之前：** [先决条件](#Prerequisites)、[安全性](#Security)  

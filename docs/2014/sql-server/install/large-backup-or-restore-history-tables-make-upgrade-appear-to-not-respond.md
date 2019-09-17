@@ -1,5 +1,5 @@
 ---
-title: 很大的备份或还原历史记录表会使升级显得不响应 |Microsoft Docs
+title: 较大的备份或还原历史记录表会使升级显示为 "未响应" |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd0e8ad6c4230e01b689e5863b770cdd78ddfccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4d994eb6d345ab98e6cd51a44c7c90a74bafd3a
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094129"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874598"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>很大的备份或还原历史记录表会使升级显得不响应
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，一些备份和还原历史记录表中添加了若干新列。 若要升级这些表，则需要对它们进行更改以便添加新列。 如果一个或多个这样的表包含很多行，则执行向表添加列的 ALTER TABLE 语句时，升级过程将停顿很长时间。  
@@ -26,8 +26,8 @@ ms.locfileid: "66094129"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
- 如果以下备份或还原历史记录表中的任何表包含大量的行，则升级过程便可能出现挂起现象：  
+## <a name="description"></a>描述  
+ 如果以下任何备份或还原历史记录表中包含大量行，则升级可能会停止响应：  
   
 -   **backupfile**  
   

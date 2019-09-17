@@ -12,15 +12,15 @@ helpviewer_keywords:
 - capture mode [SMO]
 - SMO [SQL Server], capture mode
 ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cb36768300fb682305a37285fb7659238eeb104
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 649646f5bcced12e626236dc8189c723946048e6
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098168"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911186"
 ---
 # <a name="using-capture-mode"></a>使用捕获模式
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68098168"
   SMO 程序可以捕获和记录该程序发出的等效 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，代替（或外加）该程序执行的语句。 通过使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象，或者通过使用 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server> 属性，启用捕获模式。  
   
 ## <a name="example"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="enabling-capture-mode-in-visual-basic"></a>在 Visual Basic 中启用捕获模式  

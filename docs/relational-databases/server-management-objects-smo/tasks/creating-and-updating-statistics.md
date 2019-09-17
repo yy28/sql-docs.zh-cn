@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a52823c6a136f413826348174e5e7902c141e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a1a48bd559ee3af794129d7a6559efba65b30c8
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111467"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911159"
 ---
 # <a name="creating-and-updating-statistics"></a>创建和更新统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68111467"
  可以使用 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 和 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 对象创建任何列的统计信息。 可以运行 <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 方法以更新 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象中的统计信息。 可以在查询优化器中查看结果。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>在 Visual Basic 中创建和更新统计信息  
  此代码示例将对为其创建 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 对象和 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 对象的现有数据库创建新表。  

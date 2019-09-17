@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775167"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70392020"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,8 +26,11 @@ Microsoft OLE DB Driver for SQL Server（版本 18.2.1）添加了对 UTF-8 服�
 - [排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 支持](#ctp23)
 
+> [!IMPORTANT]
+> 适用于 SQL Server 的 Microsoft OLE DB 驱动程序使用[GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp)函数来确定 DBTYPE_STR 输入缓冲区的编码。 不支持 GetACP 返回 UTF-8 编码的情况。 如果缓冲区需要存储 Unicode 数据，则应将缓冲区数据类型设置为 DBTYPE_WSTR （UTF-16 编码）。
+
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>将数据插入到 UTF-8 编码的 CHAR 或 VARCHAR 列中
-创建输入参数缓冲区以便进行插入时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构将单个参数与使用者的缓冲区关联，并包含数据值的长度和类型等信息。 对于类型 CHAR 的输入参数缓冲区，DBBINDING 结构的 wType  应设置为 DBTYPE_STR。 对于类型 WCHAR 的输入参数缓冲区，DBBINDING 结构的 wType  应设置为 DBTYPE_WSTR。
+创建输入参数缓冲区以便进行插入时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构将单个参数与使用者的缓冲区关联，并包含数据值的长度和类型等信息。 对于类型 CHAR 的输入参数缓冲区，DBBINDING 结构的 wType 应设置为 DBTYPE_STR。 对于类型 WCHAR 的输入参数缓冲区，DBBINDING 结构的 wType 应设置为 DBTYPE_WSTR。
 
 执行包含参数的命令时，驱动程序将构造参数数据类型信息。 如果输入缓冲区类型与参数数据类型匹配，则不会在驱动程序中进行任何转换。 否则，驱动程序会将输入参数缓冲区转换为参数数据类型。 用户可以通过调用 [ICommandWithParameters::SetParameterInfo](https://go.microsoft.com/fwlink/?linkid=2071577) 来显式设置参数数据类型。 如果未提供信息，则驱动程序会通过以下方式派生参数数据类型信息：(a) 当语句准备好后，从服务器中检索列元数据，或 (b) 尝试从输入参数数据类型进行默认转换。
 
@@ -41,7 +44,7 @@ Microsoft OLE DB Driver for SQL Server（版本 18.2.1）添加了对 UTF-8 服�
 |DBTYPE_WSTR|DBTYPE_WSTR|服务器从 UTF-16 转换为列排序规则代码页。|无。|
 
 ## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>从 UTF-8 编码的 CHAR 或 VARCHAR 列进行数据检索
-为检索到的数据创建缓冲区时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构都会关联检索到的行中的单个列。 若要将列数据检索为 CHAR，请将 DBBINDING 结构的 wType  设置为 DBTYPE_STR。 若要将列数据检索为 WCHAR，请将 DBBINDING 结构的 wType  设置为 DBTYPE_WSTR。
+为检索到的数据创建缓冲区时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构都会关联检索到的行中的单个列。 若要将列数据检索为 CHAR，请将 DBBINDING 结构的 wType 设置为 DBTYPE_STR。 若要将列数据检索为 WCHAR，请将 DBBINDING 结构的 wType 设置为 DBTYPE_WSTR。
 
 对于结果缓冲区类型指示符 DBTYPE_STR，驱动程序将 UTF-8 编码的数据转换为客户端编码。 用户应确保客户端编码可以代表 UTF-8 列中的数据，否则可能会发生数据丢失。
 
@@ -57,7 +60,7 @@ Microsoft OLE DB Driver for SQL Server（版本 18.2.1）添加了对 UTF-8 服�
 
 此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 ASCII（拉丁）字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
 
-有关详细信息，请参阅 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
+有关详细信息，请参阅 [排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)。
 
 **CTP 2.1** 现支持在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 安装期间默认选择 UTF-8 排序规则。
 

@@ -1,20 +1,20 @@
 ---
 title: 为 HDFS 分层装入 ADLS Gen2
 titleSuffix: How to mount ADLS Gen2
-description: 本文介绍如何配置 HDFS 分层, 以将外部 Azure Data Lake Storage 文件系统装载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
+description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake Storage 文件系统装载到上的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652311"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774217"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 ADLS Gen2 以实现 HDFS 分层
 
@@ -33,33 +33,35 @@ ms.locfileid: "69652311"
 
 1. [使用 Data Lake Storage Gen2 功能创建存储帐户](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
 
-1. 在此存储帐户中为外部数据[创建 Blob 容器](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)。
+1. 在此存储帐户中为外部数据[创建 blob 容器/文件系统](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)。
 
 1. 将 CSV 或 Parquet 文件上传到容器中。 这是外部 HDFS 数据，该数据将被装载到大数据群集中的 HDFS。
 
 ## <a name="credentials-for-mounting"></a>装载凭据
 
-## <a name="use-oauth-credentials-to-mount"></a>使用 OAuth 凭据进行装载
+### <a name="use-oauth-credentials-to-mount"></a>使用 OAuth 凭据进行装载
 
 要使用 OAuth 凭据进行装载，需要执行以下步骤：
 
 1. 转到 [Azure 门户](https://portal.azure.com)
-1. 转到左侧导航窗格中的“服务”，然后单击“Azure Active Directory”
-1. 使用菜单中的“应用注册”，创建“Web 应用程序”并按向导内容操作。 记住在此处创建的名称。 稍后需要以授权用户的身份将此名称添加到 ADLS 帐户。
-1. 创建 Web 应用程序后，转到应用“设置”下的“密钥”。
-1. 选择密钥有效时间并单击“保存”。 保存生成的密钥。
-1.  返回“应用注册”页面，然后单击顶部的“终结点”按钮。 记下“令牌终结点”URL
+1. 导航到 "Azure Active Directory"。 你应会在左侧导航栏上看到此服务。
+1. 在右侧导航栏中选择 "应用注册"，并创建新的注册
+1. 创建 "Web 应用程序"，然后按照向导操作。 **请记住你在此处创建的应用程序的名称**。 稍后需要以授权用户的身份将此名称添加到 ADLS 帐户。 另请注意，在选择应用程序时概述中的应用程序客户端 ID。
+1. 创建 web 应用程序后，请参阅 "证书 & 机密" 并创建一个**新的客户端密钥**并选择一个密钥持续时间。 **添加**密钥。
+1.  返回到 "应用注册" 页，单击顶部的 "终结点"。 **记下 "OAuth 令牌终结点（v2）"** 链接
 1. 现在应为 OAuth 记下以下内容：
 
-    - 在上面步骤 3 中创建的 Web 应用的“应用程序 ID”
-    - 刚在步骤 5 中生成的密钥
-    - 步骤 6 中的令牌终结点
+    - Web 应用程序的 "应用程序客户端 ID"
+    - 客户端密码
+    - 令牌终结点
 
 ### <a name="adding-the-service-principal-to-your-adls-account"></a>将服务主体添加到 ADLS 帐户
 
-1. 再次访问门户并打开 ADLS 帐户，然后在左侧菜单中选择“访问控制”（标识和访问管理）。
-1. 选择“添加角色分配”并搜索在上面的步骤 3 中创建的名称（请注意，它不会显示在列表中，但用全名可以搜索到）。
-1. 现在添加“存储 Blob 数据参与者（预览）”角色。
+1. 再次转到门户，并导航到 ADLS 存储帐户文件系统，并在左侧菜单中选择 "访问控制（IAM）"。
+1. 选择 "添加角色分配" 
+1. 选择角色 "存储 Blob 数据参与者"
+1. 搜索前面创建的名称（请注意，它不会显示在列表中，但如果你搜索全名，则会找到此名称）。
+1. 保存角色。
 
 在使用凭据进行装载之前，请等待 5-10 分钟
 
@@ -70,9 +72,9 @@ ms.locfileid: "69652311"
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
-    fs.azure.account.oauth2.client.secret=[<key> from step5 above]
+    fs.azure.account.oauth2.client.endpoint=[token endpoint],
+    fs.azure.account.oauth2.client.id=[Application client ID],
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
 
 ## <a name="use-access-keys-to-mount"></a>使用访问密钥进行装载
@@ -137,7 +139,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## <a name="refresh-a-mount"></a>刷新装载
 
-以下示例刷新装载。
+以下示例刷新装载。 此刷新还将清除装载缓存。
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
@@ -145,7 +147,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> 删除装载
 
-若要删除装载, 请使用**azdata bdc hdfs mount delete**命令, 并在 hdfs 中指定装载路径:
+若要删除装载，请使用**azdata bdc hdfs mount delete**命令，并在 hdfs 中指定装载路径：
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -153,4 +155,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>后续步骤
 
-有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
+有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]，请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。

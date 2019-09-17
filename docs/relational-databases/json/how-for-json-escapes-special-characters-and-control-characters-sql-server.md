@@ -12,14 +12,15 @@ ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac718603c639fcbc8af7cb168b2aa131840c75ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 508a50443e039fa77f1190c5a00b6ffdbf93379a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909379"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910816"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON 如何转义特殊字符和控制字符 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本主题介绍了 SQL Server **SELECT** 语句的 **FOR JSON** 子句在 JSON 输出中如何转义特殊字符以及如何表示控制字符。  
@@ -33,7 +34,7 @@ ms.locfileid: "67909379"
 |**特殊字符**|**转义后的输出**|  
 |---------------------------|--------------------------|  
 |引号 (")|\\"|  
-|反斜杠 (\\)|\\\|  
+|反斜杠 (\\)|\\\\|  
 |正斜杠 (/)|\\/|  
 |退格键|\b|  
 |换页符|\f|  

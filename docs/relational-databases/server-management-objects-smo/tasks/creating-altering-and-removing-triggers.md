@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除触发器 |Microsoft Docs
+title: 创建、更改和删除触发器 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,24 +10,24 @@ ms.topic: reference
 helpviewer_keywords:
 - triggers [SMO]
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 735428d35b267168f76798f875ca63f3972a676c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd2aa0bce55273295cfde3b15d2863d7e35f3d26
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002662"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911258"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>创建、更改和删除触发器
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  在 SMO 中，触发器由 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象表示。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]通过设置触发器被激发时运行的代码<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>触发器对象的属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象的其他属性（如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 属性）可以设置触发器的类型。 这是一个布尔属性，指定是否由触发触发器**更新**父表上的记录。  
+  在 SMO 中，触发器由 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象表示。 触发器对象的<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>属性设置所激发的触发器时运行的代码。[!INCLUDE[tsql](../../../includes/tsql-md.md)] 使用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象的其他属性（如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 属性）可以设置触发器的类型。 这是一个布尔属性，该属性指定是否由对父表上的记录的**更新**触发触发器。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Trigger> 对象表示传统的数据操作语言 (DML) 触发器。 在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和更改版本中，也同样支持数据定义语言 (DDL) 触发器。 DDL 触发器由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger> 对象和 <xref:Microsoft.SqlServer.Management.Smo.ServerDdlTrigger> 对象表示。  
   
 ## <a name="example"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
  
   
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除触发器  

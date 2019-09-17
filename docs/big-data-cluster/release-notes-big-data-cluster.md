@@ -1,7 +1,7 @@
 ---
 title: 发行说明
 titleSuffix: SQL Server big data clusters
-description: 本文介绍了[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (预览版) 的最新更新和已知问题。
+description: 本文介绍了[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （预览版）的最新更新和已知问题。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160692"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988098"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的发行说明
 
@@ -22,7 +22,7 @@ ms.locfileid: "70160692"
 
 本文列出了最新版本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的更新和已知问题。
 
-## <a id="rc"></a>候选发布 (8 月)
+## <a id="rc"></a>候选发布（8月）
 
 以下部分介绍 SQL Server 2019 候选发布版本中大数据群集的新功能和已知问题。
 
@@ -30,14 +30,16 @@ ms.locfileid: "70160692"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|Always On 可用性组 SQL Server |部署 SQL Server 大数据群集时, 可以将部署配置为创建可用性组以提供:<br/><br/>-高可用性 <br/><br/>-读取-横向扩展 <br/><br/>-向数据池中扩展数据插入<br/><br>请参阅[高可用性部署](../big-data-cluster/deployment-high-availability.md)。 |
+|Always On 可用性组 SQL Server |部署 SQL Server 大数据群集时，可以将部署配置为创建可用性组以提供：<br/><br/>-高可用性 <br/><br/>-读取-横向扩展 <br/><br/>-向数据池中扩展数据插入<br/><br>请参阅[高可用性部署](../big-data-cluster/deployment-high-availability.md)。 |
 |`azdata` |简化了[安装管理器](./deploy-install-azdata-linux-package.md)的工具安装<br/><br/>[`azdata notebook`command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`command](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[下载 Azure Data Studio 的候选发布版本](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)。<br/><br/>通过 SQL Server 2019 指南 Jupyter Book 添加了疑难解答笔记本。<br/><br/>添加了控制器登录体验。<br/><br/>添加了控制器仪表板以查看服务终结点、查看群集运行状况状态和访问故障排除笔记本。<br/><br/>改善了笔记本单元输出/编辑性能。|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
 
-SQL Server 2019 大数据群集发布候选刷新生成号为`15.0.1900.47`。
+* SQL Server 2019 大数据群集发布候选刷新生成号为`15.0.1900.47`。
+
+* SQL Server 2019 大数据群集候选版本中不支持 "kubeadm" 部署配置文件和以上生成号。 请改用 Kubeadm 部署的 "kubeadm" 配置文件。
 
 ## <a id="ctp32"></a> CTP 3.2（7 月）
 
@@ -60,13 +62,13 @@ SQL Server 2019 大数据群集发布候选刷新生成号为`15.0.1900.47`。
 
 #### <a name="polybase"></a>PolyBase
 
-- 此版本不支持计数 > 1000 时下推 TOP 子句。 在这种情况下，将从远程数据源读取所有行。 (已在候选发布中修复)
+- 此版本不支持计数 > 1000 时下推 TOP 子句。 在这种情况下，将从远程数据源读取所有行。 （已在候选发布中修复）
 
 - 此版本不支持将并置连接下推到外部数据源。 例如，下推 ROUND_ROBIN 分布类型的两个数据池表会将数据发送给 SQL Master 实例或计算池实例，以执行联接操作。
 
 #### <a name="compute-pool"></a>计算池
 
-- 大数据群集部署仅支持具有一个实例的计算池。 (已在候选发布中修复)
+- 大数据群集部署仅支持具有一个实例的计算池。 （已在候选发布中修复）
 
 #### <a name="storage-pool"></a>存储池
 
@@ -167,7 +169,7 @@ SQL Server 2019 大数据群集发布候选刷新生成号为`15.0.1900.47`。
 
 #### <a name="kibana-logs-dashboards"></a>Kibana 日志仪表板
 
-- 在 Aris CTP 3.0 和 3.1 之间，Kibana 版本从 6.3.1 升级到 7.0.1。  这使得 Microsoft Edge 浏览器与 Kibana 不兼容。 在 Microsoft Edge 中加载当前版本的 Kibana 仪表板时，用户会看到一个空白页面。 请参阅[此处]( https://www.elastic.co/support/matrix#matrix_browse)，了解 Kibana.rs 支持的浏览器 
+- 在 Aris CTP 3.0 和 3.1 之间，Kibana 版本从 6.3.1 升级到 7.0.1。  这使得 Microsoft Edge 浏览器与 Kibana 不兼容。 在 Microsoft Edge 中加载 Kibana 仪表板的当前版本时，用户将看到一个空白页。 请参阅[此处]( https://www.elastic.co/support/matrix#matrix_browse)，了解 Kibana.rs 支持的浏览器 
 
 
 ## <a id="ctp30"></a> CTP 3.0（5 月）
@@ -816,4 +818,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>后续步骤
 
-有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], 请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
+有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。

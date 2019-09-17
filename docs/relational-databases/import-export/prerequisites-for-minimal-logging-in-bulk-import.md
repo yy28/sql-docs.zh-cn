@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307639"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910831"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68307639"
   
 -   当前没有复制表。  
   
--   指定了表锁定（使用 TABLOCK）。 对于具有聚集列存储索引的表，不需要使用 TABLOCK 进行最小日志记录。  此外，只会按最小方式记录加载到压缩行组的数据，这要求批大小为 102400 或更大。  
+-   指定了表锁定（使用 TABLOCK）。 
   
     > [!NOTE]  
-    >  尽管在最小日志记录的大容量导入操作过程中，数据插入操作没有记录在事务日志中，但每当为表分配新区时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 仍会记录区分配信息。  
+    >  尽管在最小日志记录的大容量导入操作过程中，数据插入操作没有记录在事务日志中，但每当为表分配新区时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]仍会记录区分配信息。  
   
 -   表不是内存优化表。  
   

@@ -18,15 +18,15 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 70f9bc727ba86d10a48dbc9265c9c2d3655d9fe0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754645"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874500"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
-  物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障都可能导致数据库镜像会话失败。 数据库镜像不会定期检查 Sqlservr.exe 所依赖的组件来验证组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误  ”。 为了检测可能未被注意的其他故障，数据库镜像采用了自己的超时机制。 发生镜像超时时，数据库镜像假定已发生故障并声明一个“软错误”  。 然而，某些在 SQL Server 实例级别发生的故障不会导致镜像超时，并且检测不到。  
+  物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障都可能导致数据库镜像会话失败。 数据库镜像不会定期检查 Sqlservr.exe 所依赖的组件来验证组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误”。 为了检测可能未被注意的其他故障，数据库镜像采用了自己的超时机制。 发生镜像超时时，数据库镜像假定已发生故障并声明一个“软错误”。 然而，某些在 SQL Server 实例级别发生的故障不会导致镜像超时，并且检测不到。  
   
 > [!IMPORTANT]  
 >  在数据库镜像会话中无法检测到数据库（除镜像数据库之外）故障。 此外，也无法检测到数据磁盘故障，除非数据库因为数据磁盘故障而重新启动。  
@@ -79,7 +79,7 @@ ms.locfileid: "62754645"
   
 -   诸如 TCP 链接超时、数据包被删除或损坏或数据包顺序错误等网络错误。  
   
--   操作系统、服务器或数据库处于挂起状态。  
+-   不响应的操作系统、服务器或数据库。  
   
 -   Windows 服务器超时。  
   

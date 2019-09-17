@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f4cecd27865b069764944021639ae1a2e553d76
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304715"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70391952"
 ---
 # <a name="azdata"></a>azdata
 
@@ -89,7 +89,7 @@ azdata logout
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 

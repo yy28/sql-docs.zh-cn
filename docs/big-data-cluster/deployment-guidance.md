@@ -1,7 +1,7 @@
 ---
 title: 部署指南
 titleSuffix: SQL Server big data clusters
-description: 了解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上部署 (预览版)。
+description: 了解如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上部署（预览版）。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153437"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878715"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
@@ -39,7 +39,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 
 ## <a id="prereqs"></a> Kubernetes 必备条件
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]对于服务器和客户端 (kubectl), 至少需要具有最低版本的 Kubernetes 版本。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]对于服务器和客户端（kubectl），至少需要具有最低版本的 Kubernetes 版本。
 
 > [!NOTE]
 > 请注意，客户端和服务器 Kubernetes 版本应在 +1 或 -1 次要版本之内。 有关详细信息，请参阅 [Kubernetes 发行说明和版本偏差 SKU 策略](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
@@ -67,7 +67,7 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 kubectl config view
 ```
 
-配置 Kubernetes 群集后，可以继续部署新的 SQL Server 大数据群集。 如果要从以前的版本升级, 请参阅[如何升级[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
+配置 Kubernetes 群集后，可以继续部署新的 SQL Server 大数据群集。 如果要从以前的版本升级，请参阅[如何升级[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
 
 ## <a id="deploy"></a> 部署概述
 
@@ -77,7 +77,7 @@ kubectl config view
 
 ## <a id="configfile"></a> 默认配置
 
-JSON 配置文件中定义了大数据群集部署选项。 你可以通过用于开发/测试环境的默认设置, 开始自定义部署配置文件中的群集部署:
+JSON 配置文件中定义了大数据群集部署选项。 你可以通过用于开发/测试环境的默认设置，开始自定义部署配置文件中的群集部署：
 
 | 部署配置文件 | Kubernetes 环境 |
 |---|---|
@@ -120,7 +120,7 @@ azdata bdc create --accept-eula=yes
 1. 若要自定义部署配置文件中的设置，可以在适用于编辑 VS Code 等 JSON 文件的工具中编辑部署配置文件。 对于脚本式自动化，也可以使用 azdata bdc config 命令编辑自定义部署配置文件。 例如，以下命令更改自定义部署配置文件，将部署群集的名称从默认 (mssql-cluster) 更改为 test-cluster：  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -146,8 +146,8 @@ azdata bdc create --accept-eula=yes
 |---|---|---|
 | **CONTROLLER_USERNAME** | 必填 |群集管理员的用户名。 |
 | **CONTROLLER_PASSWORD** | 必填 |群集管理员的密码。 |
-| **MSSQL_SA_PASSWORD** | 必填 |SQL 主实例的 SA 用户的密码。 |
-| **KNOX_PASSWORD** | 必填 |Knox 用户的密码。 |
+| **MSSQL_SA_PASSWORD** | Required |SQL 主实例的 SA 用户的密码。 |
+| **KNOX_PASSWORD** | 必填 |Knox **root**用户的密码。 请注意，在 "基本身份验证设置" 中，仅支持对 Knox 的用户使用**root**。|
 | **ACCEPT_EULA**| 首次使用 `azdata` 时为必需项| 不需要任何值。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula` 包含在内。|
 | **DOCKER_USERNAME** | 可选 | 当容器映像存储在专用存储库中时，用于访问容器映像的用户名。 有关如何使用专用 Docker 存储库部署大数据群集的更多详细信息，请参阅[脱机部署](deploy-offline.md)主题。|
 | **DOCKER_PASSWORD** | 可选 |用于访问上述专用存储库的密码。 |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> 必须将**root**用户用于 Knox gateway，其中包含上述密码。 **root**是在此基本身份验证（用户名/密码）安装中支持的唯一用户。 对于 SQL Server master，预配为与上述密码一起使用的用户名是**sa**。
+
 
 设置环境变量后，必须运行 `azdata bdc create` 才能触发部署。 本示例使用上面创建的群集配置文件：
 
@@ -201,7 +205,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 由于下载大数据群集组件的容器映像所需的时间，整个部署可能需要很长时间。 但是，这个过程应不会长达几个小时。 如果你的部署遇到问题, 请参阅[监视和故障排除[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
+> 由于下载大数据群集组件的容器映像所需的时间，整个部署可能需要很长时间。 但是，这个过程应不会长达几个小时。 如果你的部署遇到问题，请参阅[监视和故障排除[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)。
 
 部署完成后，输出会通知你成功：
 
@@ -354,7 +358,7 @@ Bdc: ready                                                                      
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-还可以通过以下命令获取更详细的状态:
+还可以通过以下命令获取更详细的状态：
 
 - [azdata bdc 控件状态显示](reference-azdata-bdc-control-status.md)将返回与控制管理服务关联的所有组件的运行状况状态
 ```
@@ -397,7 +401,7 @@ Sql: ready                                                                      
 ```
 
 > [!IMPORTANT]
-> 使用 **--all**参数时, 这些命令的输出包含 Kibana 和 Grafana 仪表板的 url, 以便进行更详细的分析。
+> 使用 **--all**参数时，这些命令的输出包含 Kibana 和 Grafana 仪表板的 url，以便进行更详细的分析。
 
 除了使用 azdata 之外，也可以使用 Azure Data Studio 查找终结点和状态信息。 有关通过 azdata 和 Azure Data Studio 查看群集状态的详细信息，请参阅[如何查看大数据群集的状态](view-cluster-status.md)。
 

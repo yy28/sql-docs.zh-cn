@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdbf53aae89ee6beb8e06fef9c51e1b72e34ab0e
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073670"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211336"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
   

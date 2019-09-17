@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653678"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878699"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]在 spark History Server 中调试和诊断 spark 应用程序
 
@@ -27,7 +27,7 @@ ms.locfileid: "69653678"
 开放源代码提供的 Spark History Server 用户体验丰富了以下内容，其中包括作业特定数据、作业图的交互式可视化效果和大数据群集数据流。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>通过 URL 打开 Spark History Server Web UI
-通过浏览到以下 URL 打开 Spark History Server，并将 `<Ipaddress>` 和 `<Port>` 替换为大数据群集特定信息。 要获取更多信息，请参阅：[部署 SQL Server 大数据群集](quickstart-big-data-cluster-deploy.md)
+通过浏览到以下 URL 打开 Spark History Server，并将 `<Ipaddress>` 和 `<Port>` 替换为大数据群集特定信息。 请注意，在基本身份验证（用户名/密码）大数据群集设置中，当系统提示登录网关（Knox）终结点时，必须提供用户**根**。 要获取更多信息，请参阅：[部署 SQL Server 大数据群集](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

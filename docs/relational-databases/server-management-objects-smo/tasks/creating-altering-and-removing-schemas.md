@@ -1,5 +1,5 @@
 ---
-title: 创建、 更改和删除架构 |Microsoft Docs
+title: 创建、更改和删除架构 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1184cc02ceb5507d254abffc17685f8379652b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c42b16ed0564154b75f60ff16e0e9bea170f2223
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939061"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911127"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>创建、更改和删除架构
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "67939061"
   <xref:Microsoft.SqlServer.Management.Smo.Schema> 对象表示数据库对象的所有权上下文。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Database> 属性表示 <xref:Microsoft.SqlServer.Management.Smo.Schema> 对象的集合。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>在 Visual Basic 中创建、更改和删除架构  
  此代码示例说明如何创建架构并将其分配给数据库对象。 接着，程序向用户授予权限，然后在该架构中创建一个新表。  

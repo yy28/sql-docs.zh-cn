@@ -10,12 +10,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bef75196b2106fd72e3f1f4989e70b994508723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 351ce45247fcc4fb76228ab792a97f4e1f915989
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233063"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874580"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>更改 SQL Server 身份验证用户密码 (OLE DB)
   此示例显示如何使用 OLE DB 更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证下的用户帐户密码。  
@@ -26,7 +26,7 @@ ms.locfileid: "63233063"
 ## <a name="example"></a>示例  
  在生成示例前，请更新 C++ 代码以指定用户 ID、旧密码和新密码。  
   
- 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
  使用 ole32.lib 和 oleaut32.lib 进行编译。  
   
@@ -205,7 +205,7 @@ void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError, B
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    has_sql_errors = 0;  

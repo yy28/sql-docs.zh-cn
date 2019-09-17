@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58d70878051df627e8dc788e414dc2ab1e88e839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221425"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874910"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>报表服务器的 Web 门户（SSRS 本机模式）
 

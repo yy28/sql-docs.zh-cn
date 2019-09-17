@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155349"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878737"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上的 SQL Server 大数据群集的数据暂留
 
@@ -28,7 +28,7 @@ SQL Server 大数据群集通过使用[存储类](https://kubernetes.io/docs/con
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>配置大数据群集存储设置
 
-与其他自定义类似，可在部署时为每个池和控制平面在群集配置文件中指定存储设置。 如果池规范中没有存储配置设置，则将使用控制平面存储设置。 以下为存储配置部分的示例，可包含在规范中：
+与其他自定义类似，你可以在部署时为**bdc**文件中的每个池指定部署时的存储设置，并为**控件 json**文件中的控件服务指定存储设置。 如果池规范中没有存储配置设置，则控制存储设置将用于**所有其他组件**，包括 SQL Server master （**主**资源）、HDFS （**存储 0**资源）或数据池子. 以下为存储配置部分的示例，可包含在规范中：
 
 ```json
     "storage": 
@@ -83,7 +83,7 @@ Kubeadm 没有内置存储类。 必须使用本地存储或首选预配程序�
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-这会创建两个文件, 即**bdc**和**控件 json** , 可以通过手动编辑它们进行自定义, 也可以使用**azdata bdc config**命令。 可以结合使用 jsonpath 和 jsonpatch 库以提供编辑配置文件的方法。
+这会创建两个文件，即**bdc**和**控件 json** ，可以通过手动编辑它们进行自定义，也可以使用**azdata bdc config**命令。 可以结合使用 jsonpath 和 jsonpatch 库以提供编辑配置文件的方法。
 
 
 ### <a id="config-samples"></a> 配置存储类名称和/或声明大小

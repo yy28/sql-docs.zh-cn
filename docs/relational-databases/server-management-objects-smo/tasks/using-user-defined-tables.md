@@ -1,5 +1,5 @@
 ---
-title: 使用用户定义表 |Microsoft Docs
+title: 使用用户定义的表 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26db752cffe88a06003f3255ea42c049d62af697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048926"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911220"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   用户定义表表示表格信息。 将表格数据传递到存储过程或用户定义函数中时，用户定义表可作为参数使用。 用户定义表不能用于表示数据库表中的列。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 对象。 每个<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>对象，集合具有**列**引用的集合的属性<xref:Microsoft.SqlServer.Management.Smo.Column>列出用户定义表中的列的对象。 使用 Add 方法可向用户定义表添加列。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 对象。 该<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>集合中的每个对象都有一个**Columns**属性，该属性<xref:Microsoft.SqlServer.Management.Smo.Column>引用列出了用户定义的表中的列的对象集合。 使用 Add 方法可向用户定义表添加列。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 对象定义新的用户定义表时，必须提供列和基于其中一列的主键。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "68048926"
  <xref:Microsoft.SqlServer.Management.Smo.DataType> 类用于指定与列和参数关联的数据类型。 使用此类型可指定用户定义表类型作为用户定义函数和存储过程的参数。  
   
 ## <a name="examples"></a>示例  
-若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>在 Visual Basic 中创建用户定义表  
- 对于此示例中，您必须包括类库，其中包含一条 imports 语句**StringCollection**类型。  
+ 对于此示例，必须包含包含**StringCollection**类型的类库的 imports 语句。  
   
  `Imports System.Collections.Specialized`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68048926"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>在 Visual C# 中创建用户定义表  
- 对于此示例中，您必须包括类库，其中包含一条 imports 语句**StringCollection**类型。  
+ 对于此示例，必须包含包含**StringCollection**类型的类库的 imports 语句。  
   
  `using System.Collections.Specialized;`  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68048926"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>在 PowerShell 中创建用户定义表  
- 对于此示例中，您必须包括类库，其中包含一条 imports 语句**StringCollection**类型。  
+ 对于此示例，必须包含包含**StringCollection**类型的类库的 imports 语句。  
   
  `using System.Collections.Specialized;`  
   

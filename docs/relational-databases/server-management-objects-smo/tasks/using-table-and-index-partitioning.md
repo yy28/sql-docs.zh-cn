@@ -13,15 +13,15 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], SMO
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3b7e2e8dfb255f8b0c9044694b500d23d75dd9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26aa24e28714f8fc89c7e384a122638d9773a262
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048938"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911117"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用表和索引分区
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68048938"
  每个 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 属性中指定其使用的分区方案，并在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定列。  
   
 ## <a name="example"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>在 Visual C# 中为表设置分区方案  
  此代码示例说明如何为 `TransactionHistory` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 表创建分区函数和分区方案。 这些分区是按日期划分的，这样做的目的是将以前的记录分离出来，放入 `TransactionHistoryArchive` 表中。  

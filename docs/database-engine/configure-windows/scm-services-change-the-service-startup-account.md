@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecc222a9f2c57aa92535d6f2e0c85586a6714108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024701"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212318"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 服务 - 更改服务启动帐户
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68024701"
   
 3.  在详细信息窗格中，右键单击要为其更改服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，再单击“属性”  。  
   
-4.  在“SQL Server \<instancename> 属性” **** 对话框中，单击“登录”  选项卡，并选择“登录身份”  帐户类型。  
+4.  在“SQL Server \<instancename> 属性”对话框中，单击“登录”选项卡，并选择“登录身份”帐户类型      。  
   
 5.  选择了新服务启动帐户后，单击 **“确定”** 。  
   

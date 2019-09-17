@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471046"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908408"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,11 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 除了更改服务器的排序规则外，无法更改系统数据库的排序规则。    
     
 数据库排序规则将应用于数据库中的所有元数据，并且是所有字符串列、临时对象、变量名称和数据库中使用的任何其他字符串的默认排序规则。 当更改用户数据库的排序规则时，如果在数据库访问临时表中进行查询，则可能出现排序规则冲突。 临时表始终存储在 tempdb 系统数据库中，该数据库使用实例的排序规则  。 如果排序规则导致计算字符数据时出现冲突，则比较用户数据库和 **tempdb** 之间的字符数据的查询可能会失败。 您可以通过在查询中指定 COLLATE 子句来解决此问题。 有关详细信息，请参阅[排序规则 (Transact-SQL)](~/t-sql/statements/collations.md)。    
-    
+
+> [!NOTE]
+> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能更改排序规则。
+
+
 #### <a name="column-level-collations"></a>列级排序规则    
 当您创建或更改表时，可使用 COLLATE 子句指定每个字符串列的排序规则。 如果未指定排序规则，则为该列分配数据库的默认排序规则。    
     

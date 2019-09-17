@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476201"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913564"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>在 Linux 上安装 SQL Server 2019 机器学习服务（R、Python）
+# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（R、Python）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,11 +31,11 @@ Linux 容器也支持机器学习服务。 我们不提供带有机器学习服�
 
 ## <a name="uninstall-previous-ctp"></a>卸载以前的 CTP
 
-包列表在最近几个 CTP 版本中发生了更改，减少了包的数量。 我们建议先卸载 CTP 2.x 以删除所有以前的包，然后再安装 CTP 3.2。 不支持并行安装多个版本。
+包列表在最近几个 CTP 版本中发生了更改，因而包的数量有所减少。 我们建议先卸载 CTP 2.x 以删除所有以前的包，然后再安装 CTP 3.2。 不支持并行安装多个版本。
 
 ### <a name="1-confirm-package-installation"></a>1.确认包安装
 
-首先可能要检查是否存在以前的安装。 以下文件表示现有安装：checkinstallextensibility.sh、exthost、launchpad。
+首先可能需要检查是否存在以前的安装。 以下文件指示现有安装：checkinstallextensibility.sh、exthost、launchpad。
 
 ```bash
 ls /opt/microsoft/mssql/bin
@@ -43,7 +43,7 @@ ls /opt/microsoft/mssql/bin
 
 ### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.卸载以前的 CTP 2.x 包
 
-在最低的包级别进行卸载。 依赖于较低级别包的所有上游包都会自动卸载。
+在最低包级别进行卸载。 依赖于较低级别包的所有上游包都会自动卸载。
 
   + 对于 R 集成，请删除 **microsoft-r-open***
   + 对于 Python 集成，请删除 **mssql-mlservices-python**
@@ -80,7 +80,7 @@ ls /opt/microsoft/mssql/bin
 
 ## <a name="prerequisites"></a>必备条件
 
-+ Linux 版本必须[受 SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms) 支持，但不包括 Docker 引擎。 支持的版本包括：
++ Linux 版本必须[受 SQL Server 支持](sql-server-linux-release-notes-2019.md#supported-platforms)，但不包括 Docker 引擎。 受支持的版本包括：
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -305,7 +305,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
 
    + 通过在 bash 命令提示符处键入 `source .bash_profile` 来执行此文件。
 
-5. 重启 SQL Server Launchpad 服务和数据库引擎实例，以从 INI 文件中读取更新后的值。 每当修改与扩展性相关的设置时，都会收到重启消息提示。  
+5. 重启 SQL Server Launchpad 服务和数据库引擎实例，以从 INI 文件中读取更新后的值。 每当修改与扩展性相关的设置时，都会收到重启消息提醒。  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -377,7 +377,7 @@ GO
   sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* mssql-mlservices-packages-py-9.4.7*
   ```
 
-3. 接受许可协议并完成安装后的配置。 请使用 mssql-conf 工具完成此任务  。
+3. 接受许可协议并完成安装后的配置。 使用 **mssql-conf** 工具完成此任务。
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
@@ -405,7 +405,7 @@ EULA 接受的所有可能的排列方式都记录在[使用 mssql-conf 工具�
 
 ## <a name="offline-installation"></a>脱机安装
 
-有关安装包的步骤，请按照[脱机安装](sql-server-linux-setup.md#offline)说明进行操作。 找到下载网站，然后按照下面的包列表下载特定的包。
+有关安装包的步骤，请按照[脱机安装](sql-server-linux-setup.md#offline)说明进行操作。 找到下载网站，然后使用下面的包列表下载特定的包。
 
 > [!Tip]
 > 一些包管理工具提供可帮助确定包依赖项的命令。 对于 yum，请使用 `sudo yum deplist [package]`。 对于 Ubuntu，请在使用 `sudo apt-get install --reinstall --download-only [package name]` 之后使用 `dpkg -I [package name].deb`。
@@ -439,7 +439,7 @@ EULA 接受的所有可能的排列方式都记录在[使用 mssql-conf 工具�
 
 #### <a name="package-list"></a>包列表
 
-根据要使用的扩展，下载特定语言所需的包。 确切文件名的后缀中包含平台信息，但下面的文件名应足够接近以确定要获取的文件。
+根据想要使用的扩展，下载特定语言所需的包。 确切文件名的后缀中包含平台信息，但下面的文件名应足够接近以确定要获取的文件。
 
 ```
 # Core packages 
@@ -516,11 +516,11 @@ Linux 上的 R 和 Python 集成仍处于积极开发阶段。 预览版本中�
 
 ### <a name="resource-governance"></a>资源调控
 
-Linux 和 Windows 之间存在用于外部资源池进行[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)的奇偶校验，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的统计信息目前在 Linux 上具有不同的单位。 单位将在即将推出的 CTP 中保持一致。
+Linux 和 Windows 之间存在供外部资源池进行[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)的奇偶校验，但 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 的统计信息目前在 Linux 上具有不同的单位。 单位将在即将推出的 CTP 中保持一致。
  
 | 列名   | 描述 | Linux 上的值 | 
 |---------------|--------------|---------------|
-|peak_memory_kb | 资源池使用的最大内存量。 | 在 Linux 上，此统计信息来自 CGroups 内存子系统，其中的值为 memory.max_usage_in_bytes |
+|peak_memory_kb | 资源池使用的最大内存量。 | 在 Linux 上，此统计信息来自 CGroups 内存子系统，其值为 memory.max_usage_in_bytes |
 |write_io_count | 自重置 Resource Governor 统计信息以来发出的写入 IO 总数。 | 在 Linux 上，此统计信息来自 CGroups blkio 子系统，其中写入行上的值为 blkio.throttle.io_serviced | 
 |read_io_count | 自重置 Resource Governor 统计信息以来发出的读取 IO 总数。 | 在 Linux 上，此统计信息来自 CGroups blkio 子系统，其中读取行上的值为 blkio.throttle.io_serviced | 
 |total_cpu_kernel_ms | 自重置 Resource Governor 统计信息以来的累计 CPU 用户内核时间（以毫秒为单位）。 | 在 Linux 上，此统计信息来自 CGroups cpuacct 子系统，其中用户行上的值为 cpuacct.stat |  

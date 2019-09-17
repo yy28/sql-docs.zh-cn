@@ -1,10 +1,7 @@
 ---
 title: 查询和文本编辑器 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +21,29 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266035"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988162"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   您可以使用任一 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器以交互方式编辑并测试 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 脚本，或者编辑 XML 或纯文本文件。 每种编辑器都有特定于语言的服务提供的支持，该服务可以标出关键字颜色，并能检查语法和用法错误。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器包括一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可使用该调试器帮助修复 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的问题。  
   
-## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 编辑器  
+## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 编辑器
+
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的四种编辑器共享共同的体系结构。 文本编辑器可实现基本功能，而且可用作文本文件的基本编辑器。 其他三个编辑器（或查询编辑器）可通过加入语言服务（用于定义 SQL Server 支持的其中一种语言的语法），对此基本功能进行扩展。 查询编辑器还可以对编辑器功能（如 IntelliSense 和调试）实现不同级别的支持。 查询编辑器包括用于生成包含 Transact-SQL 和 XQuery 语句的脚本的数据库引擎查询编辑器，用于 MDX 语言的 MDX 编辑器，用于 DMX 语言的 DMX 编辑器和用于 XML for Analysis 语言的 XML/A 编辑器。  
   
-## <a name="common-components"></a>常见组件  
+## <a name="common-components"></a>常见组件
+
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的所有编辑器共享以下组件：  
   
  **代码窗格**  
@@ -60,7 +63,8 @@ ms.locfileid: "68266035"
  **自动换行**  
  将较长的文本行或代码行以多行显示，以便您查看行中的所有内容。 在执行或打印文本时，自动换行选项不会影响文本的显示方式。 可以从 **“工具”** 、 **“选项”** 对话框（位于“文本编辑器”页、“所有语言”页、“常规”页或特定编辑器页上）中打开自动换行。  
   
-## <a name="code-editor-components"></a>代码编辑器组件  
+## <a name="code-editor-components"></a>代码编辑器组件
+
  除了与文本和 XML 编辑器共享的功能之外，代码编辑器还包含以下功能：  
   
  **结果**  
@@ -84,7 +88,8 @@ ms.locfileid: "68266035"
  **状态栏**  
  显示与查询编辑器窗口相关的系统信息，例如查询编辑器连接到哪个实例。  
   
-## <a name="database-engine-query-editor-components"></a>数据库引擎查询编辑器组件  
+## <a name="database-engine-query-editor-components"></a>数据库引擎查询编辑器组件
+
  以下组件仅在数据库引擎查询编辑器中提供：  
   
  **调试器**  
@@ -130,7 +135,6 @@ ms.locfileid: "68266035"
 |介绍如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器逐句运行代码，并查看诸如变量和参数中的值之类的调试信息。|[Transact-SQL 调试器](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |介绍如何为不同 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例设置自定义颜色，并将这些颜色设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中状态栏的背景。|[状态栏（数据库引擎查询编辑器）](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>另请参阅  
- [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>后续步骤
+
+ [SQL Server Management Studio 键盘快捷键](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

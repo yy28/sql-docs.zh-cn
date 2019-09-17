@@ -10,12 +10,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e4dd52a33fbfb84f65658db6c645a5317b39c44
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070875"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874482"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 库
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种专用的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
@@ -29,13 +29,13 @@ ms.locfileid: "66070875"
   
 -   [将 Excel 工作簿保存到 PowerPivot 库](#add)  
   
--   [创建新报表或基于已发布的 PowerPivot 工作簿的工作簿](#newdocs)  
+-   [基于已发布的 PowerPivot 工作簿创建新报表或工作簿](#newdocs)  
   
 -   [在整页模式下打开工作簿或报表](#view)  
   
--   [计划 PowerPivot 库中的 PowerPivot 工作簿的数据刷新](#newdr)  
+-   [计划 PowerPivot 库中 PowerPivot 工作簿的数据刷新](#newdr)  
   
--   [删除工作簿或 PowerPivot 库中的报表](#delete)  
+-   [删除 PowerPivot 库中的工作簿或报表](#delete)  
   
 -   [刷新缩略图](#image)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66070875"
   
 > [!NOTE]  
 >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。   
-> 若要在 Edge 中查看库内容，请单击 Power Pivot 库中的“库”  选项卡，然后将文档库视图更改为“所有文档”  。    
-> 若要更改默认视图，请单击“库”  选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
->  有关 Edge 支持哪些内容的详细信息，请参阅 Windows 博客[推陈出新，第 2 部分：告别 ActiveX、 VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+> 若要在 Microsoft Edge 中查看库内容，请单击 Power Pivot 库中的 "**库**" 选项卡，然后将文档库视图更改为 "**所有文档**"。    
+> 若要更改默认视图，请单击“库” 选项卡，然后单击“修改视图”。 单击“使其成为默认视图”，然后单击“确定”保存默认视图。  
+>  有关 Microsoft Edge 支持的功能的详细信息，请参阅 Windows 博客[，一段时间过去的一段时间，第2部分：说到 ActiveX、VBScript .。。](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  有关先决条件的完整列表，请参阅[创建和自定义 PowerPivot 库](create-and-customize-power-pivot-gallery.md)。  
   
-##  <a name="icons"></a> PowerPivot 库中的图标  
+##  <a name="icons"></a>PowerPivot 库中的图标  
  图标提供针对内容可用性和状态的可视指示器。  
   
 |图标|描述|  
@@ -64,18 +64,18 @@ ms.locfileid: "66070875"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|当您上载的文档无法在 PowerPivot 库中呈现时，不可用内容图标将出现。 支持的文档类型包括 PowerPivot 工作簿以及在 SQL Server 2008 R2 Reporting Services 报表生成器中创建的报表。<br /><br /> 如果您从回收站回收文档，此图标也会显示。<br /><br /> 如果您要针对先前呈现有效预览图像的文档获取此图标，则可以通过编辑文档属性并保存更改来刷新图像。|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|在特意为此文档禁用了缩略图时，锁定内容图标将出现。 对于不包含 PowerPivot 数据的 Excel 工作簿或不满足快照生成要求的 PowerPivot 工作簿或 Reporting Services 报表，PowerPivot 库不会生成缩略图。 有关详细信息，请参阅本主题中的“先决条件”部分。|  
   
-##  <a name="add"></a> 将 Excel 工作簿保存到 PowerPivot 库  
+##  <a name="add"></a>将 Excel 工作簿保存到 PowerPivot 库  
  您可以使用 Excel 2010 提供的所有共享方法将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿发布到库。 例如，在 Excel 2010 中，您可以使用“另存为”来指定库的完整或部分 SharePoint 路径。  
   
 1.  保存该文件。  
   
-2.  1.  **Excel 2010:** 在文件菜单中，单击**保存并发送**。  
+2.  1.  **Excel 2010：** 在 "文件" 菜单中，单击 "**保存" & 发送**"。  
   
     2.  单击 **“保存到 SharePoint”** 。  
   
     3.  如果希望使用“Excel Services 选项”选择要发布的各个工作表或参数，请单击 **“发布选项”** 。 例如，使用“Excel Services 选项”中的“参数”选项卡，可以选择在所发布的工作簿中显示哪些切片器。  
   
-    1.  **Excel 2013:** 在文件菜单中，单击**保存**。  
+    1.  **Excel 2013：** 在 "文件" 菜单中，单击 "**保存**"。  
   
     2.  如果希望使用“Excel Services 选项”选择要发布的各个工作表或参数，请单击 **“浏览器查看选项”** 。 例如，使用“Excel Services 选项”中的“参数”选项卡，可以选择在所发布的工作簿中显示哪些切片器。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66070875"
   
 3.  在 **“上载文档”** 中，选择某一上载选项，然后输入要上载的文件的名称和位置。 库设置决定文档的显示位置。 可能需要刷新浏览器窗口以查看最近添加的内容。  
   
-##  <a name="newdocs"></a> 创建新报表或基于已发布的 PowerPivot 工作簿的工作簿  
+##  <a name="newdocs"></a>基于已发布的 PowerPivot 工作簿创建新报表或工作簿  
  对于发布到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，可以创建更多使用已发布工作簿作为连接数据源的工作簿或 Reporting Services 报表。  
   
 |||  
@@ -118,14 +118,14 @@ ms.locfileid: "66070875"
   
  在浏览器中查看工作簿的另一种方法是在客户端工作站上的 Excel 中打开它。 必须拥有 Excel 2013 或 Excel 2010 和 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 外接程序才能查看文件。 您可以使用 Excel 2007 来打开文件，但不能使用它来透视数据。 因而，建议使用 Excel 2013 或 Excel 2010 查看和创建 PowerPivot 数据。 如果没有所需的应用程序，则必须使用浏览器查看 SharePoint 中的工作簿。  
   
-##  <a name="newdr"></a> 计划 PowerPivot 库中的 PowerPivot 工作簿的数据刷新  
+##  <a name="newdr"></a>计划 PowerPivot 库中 PowerPivot 工作簿的数据刷新  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
 |||  
 |-|-|  
 |![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|单击“管理数据刷新”按钮创建或查看一个计划，该计划从连接的数据源中检索已更新的数据。 有关如何创建计划的说明，请参阅[计划数据刷新&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)。|  
   
-##  <a name="delete"></a> 删除工作簿或 PowerPivot 库中的报表  
+##  <a name="delete"></a>删除 PowerPivot 库中的工作簿或报表  
  若要从库中删除文档，请先切换到“所有文档”视图。  
   
 1.  在 SharePoint 站点中，打开 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库。  
@@ -147,21 +147,21 @@ ms.locfileid: "66070875"
   
 3.  单击右侧的向下箭头，然后选择 **“编辑属性”** 。  
   
-4.  单击“保存”  。 保存文档将强制快照服务重新生成预览图像。  
+4.  单击“保存”。 保存文档将强制快照服务重新生成预览图像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知问题  
   
 ### <a name="document-type-is-not-supported"></a>不支持文档类型  
  不支持 **“PowerPivot 库文档”** 内容类型。 如果您为文档库启用 **“PowerPivot 库文档”** 内容类型，并尝试为该类型创建新文档，您将会看到如下所示内容之一的错误消息：  
   
--   新建文档要求 Microsoft Sharepoint Foundation 兼容应用程序和 web 浏览器。 若要将文档添加到此文档库中，单击上载文档按钮。  
+-   "新文档" 需要与 Microsoft Sharepoint Foundation 兼容的应用程序和 web 浏览器。 若要将文档添加到此文档库，请单击 "上载文档" 按钮。  
   
--   "Internet 地址 http://[server 名称] / testSite/Gallery/ReportGallery/Forms/Template.xlsx 无效。""Microsoft Excel 无法访问文件 ' http://[server 名称] / testSite/Gallery/ReportGallery/Forms/Template.xlsx。 下面是几种可能的原因：  
+-   "Internet 地址" http：//[server name]/Testsite/powerpivot gallery 库/ReportGallery/Forms/Template "无效。" "Microsoft Excel 无法访问文件 "http：//[server name]/Testsite/powerpivot gallery 库/ReportGallery/Forms/Template"。 下面是几种可能的原因：  
   
  **“PowerPivot 库文档”** 内容类型不是自动添加到文档库的。除非您启用不支持的内容类型，否则不会遇到此问题。  
   
 ## <a name="see-also"></a>请参阅  
- [在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [在管理中心中为 PowerPivot 站点创建受信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [删除 PowerPivot 库](delete-power-pivot-gallery.md)   
  [创建和自定义 PowerPivot 库](create-and-customize-power-pivot-gallery.md)   
  [计划数据刷新&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  

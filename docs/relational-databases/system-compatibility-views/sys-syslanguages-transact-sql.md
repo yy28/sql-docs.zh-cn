@@ -1,5 +1,5 @@
 ---
-title: sys.syslanguages (TRANSACT-SQL) |Microsoft Docs
+title: sys. sys.syslanguages （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053392"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874868"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "68053392"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|唯一语言 ID。|  
 |dateformat|**nchar(3)**|日期顺序，如 DMY。|  
-|datefirst|**tinyint**|一周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
+|datefirst|**tinyint**|每周的第一天：1代表星期一，2代表星期二，依此类推，直到7代表星期日。|  
 |upgrade|**int**|预留给系统使用。|  
-|name|**sysname**|正式语言名称，例如，Français。|  
+|name|**sysname**|官方语言名称，例如，结算。|  
 |alias|**sysname**|代替语言名称，如 French。|  
 |months|**nvarchar(372)**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
 |shortmonths|**nvarchar(132)**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
@@ -74,7 +74,7 @@ ms.locfileid: "68053392"
 |保加利亚语|1026|1026|  
 |俄语|1049|1049|  
 |土耳其语|1055|1055|  
-|英国英语|2057|2052|  
+|英语（英国）|2057|2052|  
 |爱沙尼亚语|1061|1061|  
 |拉脱维亚语|1062|1062|  
 |立陶宛语|1063|1063|  
@@ -83,10 +83,10 @@ ms.locfileid: "68053392"
 |朝鲜语|1042|1042|  
 |简体中文|2052|2052|  
 |阿拉伯语|1025|1025|  
-|泰国语|1054|1054|  
+|泰语|1054|1054|  
   
 ## <a name="see-also"></a>请参阅  
- [兼容性视图&#40;Transact SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [兼容性&#40;视图 transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [将系统表映射到系统&#40;视图 transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edd83dd3b96b80052c9920bd2cd6486273b4a1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083914"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212306"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "68083914"
   
     3.  输入远程计算机名称，然后单击 **“确定”** 。  
   
-3.  右键单击“WMI 控制(本地)”或“WMI 控制(RemoteComputerName)”，然后单击“属性”  ****  。  
+3.  右键单击“WMI 控制(本地)”  或 **“WMI 控制(** _RemoteComputerName_ **)”** ，然后单击“属性”  。  
   
 4.  在 **“WMI 控制属性”** 对话框中，单击 **“安全”** 选项卡。  
   

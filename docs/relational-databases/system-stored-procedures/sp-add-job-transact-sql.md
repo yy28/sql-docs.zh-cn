@@ -17,20 +17,23 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee2c2b825bd706284805bf91fb4c89ba46f265a6
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941741"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810609"
 ---
-# <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  添加由 SQLServerAgent 服务执行的新作业。  
+  添加 SQL 代理服务执行的新作业。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+ > [!IMPORTANT]  
+ > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ 
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -54,65 +57,65 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'` 作业的名称。 名称必须唯一且不能含有百分比 ( **%** ) 字符。 *job_name*是**nvarchar （128)** ，无默认值。  
+`[ @job_name = ] 'job_name'`作业的名称。 名称必须是唯一的，不能包含百分号（ **%** ）字符。 *job_name*的值为**nvarchar （128）** ，无默认值。  
   
-`[ @enabled = ] enabled` 指示添加的作业的状态。 *已启用*是**tinyint**，默认值为 1 （启用）。 如果**0**，不启用的作业并不会根据其计划运行; 但是，它可以手动运行。  
+`[ @enabled = ] enabled`指示添加的作业的状态。 *enabled*为**tinyint**，默认值为1（已启用）。 如果为**0**，则不启用作业，并且该作业不会根据其计划运行。但是，可以手动运行它。  
   
-`[ @description = ] 'description'` 作业的说明。 *描述*是**nvarchar(512)** ，默认值为 NULL。 如果*说明*是省略，使用"无说明"。  
+`[ @description = ] 'description'`作业的说明。 *description*的值为**nvarchar （512）** ，默认值为 NULL。 如果省略*说明*，则使用 "无可用说明"。  
   
-`[ @start_step_id = ] step_id` 要执行的作业的第一个步骤的标识号。 *step_id*是**int**，默认值为 1。  
+`[ @start_step_id = ] step_id`作业要执行的第一个步骤的标识号。 *step_id*的值为**int**，默认值为1。  
   
-`[ @category_name = ] 'category'` 作业类别。 *类别*是**sysname**，默认值为 NULL。  
+`[ @category_name = ] 'category'`作业的类别。 *category 的类型*为**sysname**，默认值为 NULL。  
   
-`[ @category_id = ] category_id` 独立于语言的机制，用于指定作业类别。 *category_id*是**int**，默认值为 NULL。  
+`[ @category_id = ] category_id`一种与语言无关的机制，用于指定作业类别。 *category_id*的值为**int**，默认值为 NULL。  
   
-`[ @owner_login_name = ] 'login'` 拥有作业的登录名的名称。 *登录名*是**sysname**，默认值为 NULL，它解释为当前的登录名。 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值 **@owner_login_name** 。 如果用户不是成员的**sysadmin**角色设置或更改的值 **@owner_login_name** ，此存储过程的执行会失败并返回错误。  
+`[ @owner_login_name = ] 'login'`拥有作业的登录名。 *login*的值为**sysname**，默认值为 NULL，它被解释为当前登录名。 只有**sysadmin**固定服务器角色的成员才能设置或更改的值 **@owner_login_name** 。 如果用户不是**sysadmin**角色的成员或更改的值 **@owner_login_name** ，则此存储过程的执行将失败并返回错误。  
   
-`[ @notify_level_eventlog = ] eventlog_level` 指示何时将放入此作业在 Microsoft Windows 应用程序日志条目的值。 *eventlog_level*是**int**，可以是下列值之一。  
+`[ @notify_level_eventlog = ] eventlog_level`一个值，该值指示何时将条目放入此作业的 Microsoft Windows 应用程序日志中。 *eventlog_level*的数据值为**int**，可以是下列值之一。  
   
-|值|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|从不|  
 |**1**|成功时|  
-|**2** （默认值）|在失败|  
+|**2** （默认值）|失败时|  
 |**3**|Always|  
   
-`[ @notify_level_email = ] email_level` 一个值，指示何时发送一封电子邮件时完成该作业。 *email_level*是**int**，默认值为**0**，指示从不。 *email_level*使用相同的值作为*eventlog_level*。  
+`[ @notify_level_email = ] email_level`一个值，该值指示在完成该作业后何时发送电子邮件。 *email_level*的值为**int**，默认值为**0**，表示从不。 *email_level*使用与*eventlog_level*相同的值。  
   
-`[ @notify_level_netsend = ] netsend_level` 一个值，指示何时发送网络消息的此作业完成后。 *netsend_level*是**int**，默认值为**0**，指示从不。 *netsend_level*使用相同的值作为*eventlog_level*。  
+`[ @notify_level_netsend = ] netsend_level`一个值，该值指示在完成该作业后何时发送网络消息。 *netsend_level*的值为**int**，默认值为**0**，表示从不。 *netsend_level*使用与*eventlog_level*相同的值。  
   
-`[ @notify_level_page = ] page_level` 一个值，指示何时完成该作业后发送页。 *page_level*是**int**，默认值为**0**，指示从不。 *page_level*使用相同的值作为*eventlog_level*。  
+`[ @notify_level_page = ] page_level`一个值，该值指示在完成该作业后何时发送页面。 *page_level*的值为**int**，默认值为**0**，表示从不。 *page_level*使用与*eventlog_level*相同的值。  
   
-`[ @notify_email_operator_name = ] 'email_name'` 向时发送电子邮件的人的电子邮件名称*email_level*为止。 *email_name*是**sysname**，默认值为 NULL。  
+`[ @notify_email_operator_name = ] 'email_name'`达到*email_level*时要向其发送电子邮件的人员的电子邮件名称。 *email_name*的值为**sysname**，默认值为 NULL。  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'` 完成此作业后，将网络消息发送到操作员的名称。 *netsend_name*是**sysname**，默认值为 NULL。  
+`[ @notify_netsend_operator_name = ] 'netsend_name'`完成此作业后发送网络消息的操作员的名称。 *netsend_name*的值为**sysname**，默认值为 NULL。  
   
-`[ @notify_page_operator_name = ] 'page_name'` 完成该作业后，寻呼接收人的名称。 *page_name*是**sysname**，默认值为 NULL。  
+`[ @notify_page_operator_name = ] 'page_name'`完成此作业时要分页的人员的姓名。 *page_name*的值为**sysname**，默认值为 NULL。  
   
-`[ @delete_level = ] delete_level` 一个值，指示何时删除作业。 *delete_value*是**int**，默认值为 0，表示从不删除。 *delete_level*使用相同的值作为*eventlog_level*。  
+`[ @delete_level = ] delete_level`指示何时删除作业的值。 *delete_value*的值为**int**，默认值为0，表示从不。 *delete_level*使用与*eventlog_level*相同的值。  
   
 > [!NOTE]  
->  当*delete_level*是**3**、 一次执行作业，而不考虑任何计划为作业定义。 而且，如果作业将自身删除，则将同时删除该作业的历史记录。  
+>  当*delete_level*为**3**时，仅执行一次作业，而不考虑为作业定义的任何计划。 而且，如果作业将自身删除，则将同时删除该作业的历史记录。  
   
-`[ @job_id = ] _job_idOUTPUT` 如果成功创建分配到作业的作业标识号。 *job_id*是类型的输出变量**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] _job_idOUTPUT`如果成功创建，则分配给作业的作业标识号。 *job_id*是**uniqueidentifier**类型的输出变量，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0** （成功） 或**1** （失败）  
+ **0** (成功) 或**1** (失败)  
   
 ## <a name="result-sets"></a>结果集  
  无  
   
 ## <a name="remarks"></a>备注  
- **@originating_server** 中存在**sp_add_job**但没有列在参数。 **@originating_server** 已保留供内部使用。  
+ **@originating_server** 存在于**sp_add_job 中，** 但未在 "参数" 下列出。 **@originating_server** 保留供内部使用。  
   
- 之后**sp_add_job**执行添加作业，请**sp_add_jobstep**可用于添加作业执行的活动的步骤。 **sp_add_jobschedule**可用于创建计划[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用来执行该作业。 使用**sp_add_jobserver**若要设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作业执行的位置的实例并**sp_delete_jobserver**若要从作业中删除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  
+ 执行**sp_add_job**以添加作业后，可以使用**sp_add_jobstep**来添加执行作业活动的步骤。 **sp_add_jobschedule**可用于创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用于执行作业的计划。 使用**sp_add_jobserver**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作业的执行实例，并使用**sp_delete_jobserver**从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中删除作业。  
   
- 如果该作业将在多服务器环境中的一个或多个目标服务器上执行，使用**sp_apply_job_to_targets**设置目标服务器或目标服务器组的作业。 若要从目标服务器或目标服务器组中删除作业，请使用**sp_remove_job_from_targets**。  
+ 如果作业将在多服务器环境中的一个或多个目标服务器上执行，请使用**sp_apply_job_to_targets**设置作业的目标服务器或目标服务器组。 若要从目标服务器或目标服务器组中删除作业，请使用**sp_remove_job_from_targets**。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储的过程，用户必须属于**sysadmin**固定服务器角色，或授予下列任一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理固定数据库角色，二者位于**msdb**数据库：  
+ 若要运行此存储过程，用户必须是**sysadmin**固定服务器角色的成员，或者被授予以下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理固定数据库角色之一，这些角色驻留在**msdb**数据库中：  
   
 -   **SQLAgentUserRole**  
   
@@ -120,9 +123,9 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- 信息的特定权限关联与每个这些固定数据库角色，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
+ 有关与这些固定数据库角色关联的特定权限的信息，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**固定的服务器角色可以设置或更改的值 **@owner_login_name** 。 如果用户不是成员的**sysadmin**角色设置或更改的值 **@owner_login_name** ，此存储过程的执行会失败并返回错误。  
+ 只有**sysadmin**固定服务器角色的成员才能设置或更改的值 **@owner_login_name** 。 如果用户不是**sysadmin**角色的成员或更改的值 **@owner_login_name** ，则此存储过程的执行将失败并返回错误。  
   
 ## <a name="examples"></a>示例  
   

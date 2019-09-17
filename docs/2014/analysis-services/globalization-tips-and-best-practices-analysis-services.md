@@ -1,5 +1,5 @@
 ---
-title: 全球化提示和最佳实践 (Analysis Services) |Microsoft Docs
+title: 全球化提示和最佳实践（Analysis Services） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080862"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874413"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
@@ -68,9 +68,9 @@ ms.locfileid: "66080862"
   
      在中国和新加坡，Microsoft 技术支持部门通常见到的是简体中文，简体中文以拼音作为首选的排序方式。 建议使用的排序规则是 Chinese_PRC（用于 SQL Server 2000）、Chinese_PRC_90（用于 SQL Server 2005）或 Chinese_Simplified_Pinyin_100（用于 SQL Server 2008 和更高版本）。  
   
-     在中国台湾地区，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
+     在台湾，更常见的情况是，使用建议的排序顺序基于笔画数更常见：Chinese_Taiwan_Stroke （适用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90 （适用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100 （适用于 SQL Server 2008 及更高版本）。  
   
-     其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在中国澳门，较常使用的是 Chinese_Traditional_Stroke_Count_100（在 SQL Server 2008 和更高版本上）。  
+     其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在澳门特别行政区，Chinese_Traditional_Stroke_Count_100 （SQL Server 在2008和更高版本上）使用相当频繁。  
   
 -   对于日语，最常使用的排序规则是 Japanese_CI_AS。 Japanese_XJIS_100 用于支持 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)的安装。 Japanese_BIN2 的使用通常见于数据迁移项目，用于由非 Windows 平台或数据源而非 SQL Server 关系数据引擎发出的数据。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66080862"
   
 |语言脚本|区分大小写|  
 |---------------------|----------------------|  
-|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 Id 将被视为相同：54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
+|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 Id 被认为是相同的：54321**abcdef**、54321**Abcdef**、54321**abcdef**。 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
 |**西里尔语，希腊语，科普特语，亚美尼亚语**|非拉丁语双脚本中的对象标识符（如西里尔语）总是区分大小写。 例如，Измерение 和 измерение 被视为两个不同值，尽管唯一的区别是首字母的大小写。|  
   
  **对象标识符区分大小写的意义**  
@@ -91,7 +91,7 @@ ms.locfileid: "66080862"
  仅对象标识符（而非对象名）受限于表中描述的大小写行为。 如果你看到解决方案工作方式有所变化（之前和之后的比较 - 安装 SQL Server 2012 SP2 或更高版本之后），它将最可能是一个处理问题。 查询不受对象标识符影响。 对于两种查询语言（DAX 和 MDX），公式引擎会使用对象名（而非标识符）。  
   
 > [!NOTE]  
->  与区分大小写相关的代码更改对某些应用程序来说是重大更改。 请参阅[SQL Server 2014 中 Analysis Services 功能的重大更改](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)有关详细信息。  
+>  与区分大小写相关的代码更改对某些应用程序来说是重大更改。 有关详细信息，请参阅[SQL Server 2014 中 Analysis Services 功能的重大更改](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)。  
   
 ##  <a name="bkmk_test"></a> 使用 Excel、SQL Server Profiler 和 SQL Server Management Studio 进行区域设置测试  
  测试翻译时，连接必须指定翻译的 LCID。 如 [从 SSAS 获取不同语言到 Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)中所述，你可以使用 Excel 测试你的翻译。  
@@ -102,7 +102,7 @@ ms.locfileid: "66080862"
   
 -   将 `Locale Identifier=1036` 添加到连接字符串。 保存并关闭该文件。  
   
--   打开 Excel |“数据”   | “现有连接”  。 在列表中筛选此计算机上的连接文件。 查找 Adventure Works 的连接（仔细查看名称；你可能发现不止一个）。 打开该连接。  
+-   打开 Excel |“数据” | “现有连接”。 在列表中筛选此计算机上的连接文件。 查找 Adventure Works 的连接（仔细查看名称；你可能发现不止一个）。 打开该连接。  
   
      你会看到 Adventure Works 示例数据库的法语翻译。  
   
@@ -112,13 +112,13 @@ ms.locfileid: "66080862"
   
  在 Management Studio 中，你可以指定服务器连接上的区域设置标识符。  
   
--   在对象资源管理器|“连接”   |    |   中，单击“其他连接参数” **Additional ion Parameters** 选项卡。  
+-   在对象资源管理器|“连接” |  | 中，单击“其他连接参数” **Additional ion Parameters** 选项卡。  
   
--   输入 `Local Identifier=1036` ，然后单击  “连接”。  
+-   输入 `Local Identifier=1036` ，然后单击“连接”。  
   
 -   对 Adventure Works 数据库执行 MDX 查询。 查询结果应为法语翻译。  
   
-     ![SSMS 中带法语翻译的 MDX 查询](media/ssas-localetest-ssms.png "SSMS 中带法语翻译的 MDX 查询")  
+     ![SSMS 中包含法语翻译的 MDX 查询](media/ssas-localetest-ssms.png "SSMS 中包含法语翻译的 MDX 查询")  
   
 ##  <a name="bkmk_mdx"></a> 在包含翻译的解决方案中撰写 MDX 查询  
  翻译提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象名称的显示信息，但是不翻译相同对象的标识符。 尽可能使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的标识符和键，而不使用翻译后的标题和名称。 例如，使用多维表达式 (MDX) 语句和脚本的成员键而不是成员名称以确保多种语言之间的可移植性。  
@@ -139,7 +139,7 @@ ms.locfileid: "66080862"
   
 3.  **使用 ISO 日期格式表示通用日期和时间信息**  
   
-     一个[Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx)了这一建议："我一直使用 ISO 日期格式年-月-日的任何日期字符串传递到 SQL 或 MDX 中的查询因为它很明确而且无论客户端或服务器的区域设置将起作用。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
+     一[Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx)提供此建议："对于传入到 SQL 或 MDX 中的查询的任何日期字符串，我始终将 ISO 日期格式设置为 yyyy-mm-dd，因为它是明确的，无论客户端或服务器的区域设置如何都有效。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66080862"
     ```  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services Multiidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Analysis Services Multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [编写国际化 Transact-SQL 语句](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

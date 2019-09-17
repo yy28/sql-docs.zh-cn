@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe629bc5d165489f733d0250b0f60bea8a3a677a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141280"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211438"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   从队列中检索一条或多条消息。 根据队列保持设置的不同，可以从队列中删除消息或更新队列中消息的状态。  
   

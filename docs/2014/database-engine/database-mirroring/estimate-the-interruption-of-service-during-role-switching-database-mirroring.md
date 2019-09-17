@@ -1,5 +1,5 @@
 ---
-title: 估计在角色切换 （数据库镜像） 期间的服务中断 |Microsoft Docs
+title: 估计角色切换期间服务的中断（数据库镜像） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806839"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874446"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
   在角色切换过程中，数据库镜像功能中断服务的时间取决于角色切换的类型和原因。  
@@ -37,7 +37,7 @@ ms.locfileid: "62806839"
 -   对于手动故障转移，中断时间仅指在发出故障转移命令后，数据库故障转移所需的时间。  
   
 ## <a name="error-detection"></a>错误检测  
- 系统发现错误的时间取决于错误类型；例如，网络错误几乎可以被立即注意到，而在默认情况下，注意到服务器挂起需要 10 秒（默认的超时期限）。  
+ 系统发现错误的时间取决于错误类型;例如，网络错误几乎立刻就会被发现，同时注意到没有响应的服务器将占用10秒（默认超时）。  
   
  有关可在数据库镜像会话期间导致失败以及在具有自动故障转移功能的高安全性模式下导致超时检测的错误的信息，请参阅 [数据库镜像期间可能出现的故障](possible-failures-during-database-mirroring.md))。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62806839"
 >  如果在先创建，后更改索引或表的事务中发生故障转移，则故障转移占用的时间可能长于通常所需的时间。  例如，在以下一系列操作过程中进行故障转移可能会延长故障转移时间：BEGIN TRANSACTION、在表上创建索引和选中表。 在通过 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句完成事务之前，该事务中故障转移时间延长的可能性一直存在。  
   
 ### <a name="the-redo-queue"></a>重做队列  
- 前滚数据库涉及应用镜像服务器上的重做队列中当前存在的任何日志记录。 “重做队列”  包括已写入镜像服务器的磁盘上、但尚未在镜像数据库中前滚的日志记录。  
+ 前滚数据库涉及应用镜像服务器上的重做队列中当前存在的任何日志记录。 “重做队列” 包括已写入镜像服务器的磁盘上、但尚未在镜像数据库中前滚的日志记录。  
   
  数据库的故障转移时间取决于镜像服务器前滚重做队列中日志的速度，此速度反过来主要由系统硬件和当前的工作负荷决定。 主体数据库可能会非常忙，以至于主体服务器将日志传送到镜像服务器的速度远远大于镜像服务器前滚日志的速度。 在这种情况下，当镜像服务器前滚重做队列中的日志时，故障转移可能占用大量时间。 若要了解重做队列当前的大小，请使用数据库镜像性能对象中的 **Redo Queue** 计数器。 有关详细信息，请参阅 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)。  
   

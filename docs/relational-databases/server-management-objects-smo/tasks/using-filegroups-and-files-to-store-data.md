@@ -1,5 +1,5 @@
 ---
-title: 使用文件组和存储数据文件 |Microsoft Docs
+title: 使用文件组和文件存储数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - files [SMO], about files
 - storage [SMO]
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82c248d89e89838e93d46940804cb145636a13fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fefe8f2a129d92b10c685e81a89079128c8c0a6
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030032"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911237"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>使用文件组和文件存储数据
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68030032"
  自动创建的每个数据库都具有一个名为“Primary”的文件组和一个与数据库同名的数据文件。 其他文件和组可以添加到集合中。  
   
 ## <a name="examples"></a>示例  
- 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 对于下列代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>在 Visual Basic 中将 FileGroups 和 DataFiles 添加到数据库  
  主文件组和数据文件将自动使用默认属性值创建。 代码示例指定了一些可以使用的属性值。 否则，将使用默认属性值。  

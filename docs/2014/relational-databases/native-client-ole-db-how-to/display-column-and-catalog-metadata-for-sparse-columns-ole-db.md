@@ -10,12 +10,12 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655548"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874560"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
   此示例将创建具有三个列的表，包括一个稀疏列、一个非稀疏列和一个列集列。 随后示例将显示 OLE DB 标志，指示非稀疏列和列集列的列及目录元数据。  
@@ -23,7 +23,7 @@ ms.locfileid: "62655548"
  此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>示例  
- 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ```  
 #include <stddef.h>  
@@ -112,7 +112,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

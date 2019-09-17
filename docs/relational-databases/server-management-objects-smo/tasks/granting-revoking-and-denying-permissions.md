@@ -1,5 +1,5 @@
 ---
-title: 授予、 撤消和拒绝的权限 |Microsoft Docs
+title: 授予、撤消和拒绝权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [SMO]
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8db1acd2f2ef408f1e9bed70949444bda5a1ef3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03b8a6f9750973cb86aaa1af3915ccfc0f172370
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111486"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911243"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>授予、撤消和拒绝权限
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68111486"
  可以使用 <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 对象和 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 对象以类似方式分配数据库权限和数据库对象权限。  
   
 ## <a name="example"></a>示例  
- 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[创建 Visual C&#35; Visual Studio.NET 中的 SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio&#35; .Net 中创建 Visual C SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>在 Visual Basic 中授予服务器权限  
  此代码示例将 Create Endpoint 和 Alter Any Endpoint 权限授予指定的登录名，然后枚举并显示权限。 将撤消其中一个权限，然后再次枚举权限。 此示例假定指定的登录名具有指定的起始操作权限。  

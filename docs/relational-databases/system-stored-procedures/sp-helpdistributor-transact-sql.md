@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor (Transact-sql) |Microsoft Docs
+title: sp_helpdistributor （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770945"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745385"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
+# <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   列出有关分发服务器、分发数据库、工作目录和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理用户帐户的信息。 该存储过程在发布服务器上对发布数据库或任何数据库执行。  
@@ -49,31 +49,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @distributor = ] 'distributor' OUTPUT`分发服务器的名称。 分发服务器的默认值为**sysname**, **%** 默认值为, 它是返回结果集的唯一值。  
+`[ @distributor = ] 'distributor' OUTPUT`分发服务器的名称。 分发服务器的默认值为**sysname**， **%** 默认值为，它是返回结果集的唯一值。  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`分发数据库的名称。 *distribdb*的类型为**sysname**, 默认 **%** 值为, 该值是返回结果集的唯一值。  
+`[ @distribdb = ] 'distribdb' OUTPUT`分发数据库的名称。 *distribdb*的类型为**sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @directory = ] 'directory' OUTPUT`工作目录。 *目录*的类型为**nvarchar (255)** , 默认 **%** 值为, 它是返回结果集的唯一值。  
+`[ @directory = ] 'directory' OUTPUT`工作目录。 *目录*的类型为**nvarchar （255）** ，默认 **%** 值为，它是返回结果集的唯一值。  
   
-`[ @account = ] 'account' OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)]是 Windows 用户帐户。 *帐户*为**nvarchar (255)** , 默认 **%** 值为, 它是返回结果集的唯一值。  
+`[ @account = ] 'account' OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)]是 Windows 用户帐户。 *帐户*为**nvarchar （255）** ，默认 **%** 值为，它是返回结果集的唯一值。  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT`最小分发保持期 (以小时为单位)。 *min_distretention*的值为**int**, 默认值为 **-1**。  
+`[ @min_distretention = ] _min_distretentionOUTPUT`最小分发保持期（以小时为单位）。 *min_distretention*的值为**int**，默认值为 **-1**。  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT`最大分发保持期 (以小时为单位)。 *max_distretention*的值为**int**, 默认值为 **-1**。  
+`[ @max_distretention = ] _max_distretentionOUTPUT`最大分发保持期（以小时为单位）。 *max_distretention*的值为**int**，默认值为 **-1**。  
   
-`[ @history_retention = ] _history_retentionOUTPUT`历史记录保持期 (以小时为单位)。 *history_retention*的值为**int**, 默认值为 **-1**。  
+`[ @history_retention = ] _history_retentionOUTPUT`历史记录保持期（以小时为单位）。 *history_retention*的值为**int**，默认值为 **-1**。  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`历史记录清除代理的名称。 *history_cleanupagent*的默认值为**nvarchar (100)** , 默认 **%** 值为, 该值是返回结果集的唯一值。  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`历史记录清除代理的名称。 *history_cleanupagent*的默认值为**nvarchar （100）** ，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`分发清除代理的名称。 *distrib_cleanupagent*的默认值为**nvarchar (100)** , 默认 **%** 值为, 该值是返回结果集的唯一值。  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`分发清除代理的名称。 *distrib_cleanupagent*的默认值为**nvarchar （100）** ，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**, 默认值为 NULL。  
+`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
   
-`[ @local = ] 'local'`是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应获得本地服务器值。 *local*为**nvarchar (5)** , 默认值为 NULL。  
+`[ @local = ] 'local'`是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应获得本地服务器值。 *local*为**nvarchar （5）** ，默认值为 NULL。  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`发出远程过程调用的服务器的名称。 *rpcsrvname*的类型为**sysname**, 默认 **%** 值为, 该值是返回结果集的唯一值。  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`发出远程过程调用的服务器的名称。 *rpcsrvname*的类型为**sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`发布服务器的发布服务器类型。 *publisher_type*的类型为**sysname**, 默认 **%** 值为, 该值是返回结果集的唯一值。  
+`[ @publisher_type = ] 'publisher_type' OUTPUT`发布服务器的发布服务器类型。 *publisher_type*的类型为**sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -98,19 +98,19 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="remarks"></a>备注  
  **sp_helpdistributor**用于所有类型的复制。  
   
- 如果在执行**sp_helpdistributor**时指定了一个或多个输出参数, 则在退出时将为设置为 NULL 的所有输出参数赋值, 并且不返回任何结果集。 如果未指定输出参数，则返回结果集。  
+ 如果在执行**sp_helpdistributor**时指定了一个或多个输出参数，则在退出时将为设置为 NULL 的所有输出参数赋值，并且不返回任何结果集。 如果未指定输出参数，则返回结果集。  
   
 ## <a name="permissions"></a>权限  
- 以下结果集列或输出参数将返回给发布服务器上**sysadmin**固定服务器角色的成员和发布数据库上的**db_owner**固定数据库角色:  
+ 以下结果集列或输出参数将返回给发布服务器上**sysadmin**固定服务器角色的成员和发布数据库上的**db_owner**固定数据库角色：  
   
 |结果集列|Output 参数|  
 |-----------------------|----------------------|  
-|account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
-|history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
+|account|**\@账号**|  
+|min distrib retention|**\@min_distretention**|  
+|max distrib retention|**\@max_distretention**|  
+|history retention|**\@history_retention**|  
+|history cleanup agent|**\@history_cleanupagent**|  
+|distribution cleanup agent|**\@distrib_cleanupagent**|  
 |rpc login name|无|  
   
  以下结果集列返回给分发服务器上的某个发布的发布访问列表中的用户:  
@@ -121,10 +121,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |结果集列|Output 参数|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|分发数据库 (distribution database)|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
-|publisher type|**@publisher_type**|  
+|distributor|**\@发行人**|  
+|分发数据库 (distribution database)|**\@distribdb**|  
+|rpc server name|**\@rpcsrvname**|  
+|publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

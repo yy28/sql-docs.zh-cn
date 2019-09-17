@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 28c13ad423cb8ba01e91c7d8810723538ec41eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025649"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212416"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM 服务 - 将实例设置为自动启动
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68025649"
   
 3.  在详细信息窗格中，右键单击要自动启动的实例的名称，然后单击“属性”  。  
   
-4.  在“SQL Server \<instancename> 属性”对话框中，将“启动模式”设置为“自动”。 ****    
+4.  在 **“SQL Server”\<** _“实例名”_ **>“属性”** 对话框中，将 **“启动模式”** 设置为 **“自动”** 。  
   
 5.  单击 **“确定”** ，然后关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   

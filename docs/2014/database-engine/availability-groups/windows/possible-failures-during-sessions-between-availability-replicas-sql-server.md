@@ -14,15 +14,15 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789175"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874469"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性副本之间的会话期间的可能故障 (SQL Server)
-  物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障都可能导致两个可用性副本之间的会话失败。 可用性副本不会定期检查 Sqlservr.exe 所依赖的组件来验证这些组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误  ”。 为了检测可能忽略的其他故障，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实施了自己的会话超时机制。 以秒为单位指定会话超时期限。 此超时期限是一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。 两个可用性副本之间发生会话超时时，可用性副本将假定已发生故障并声明一个“软错误  ”。  
+  物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障都可能导致两个可用性副本之间的会话失败。 可用性副本不会定期检查 Sqlservr.exe 所依赖的组件来验证这些组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误”。 为了检测可能忽略的其他故障，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实施了自己的会话超时机制。 以秒为单位指定会话超时期限。 此超时期限是一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。 两个可用性副本之间发生会话超时时，可用性副本将假定已发生故障并声明一个“软错误”。  
   
 > [!IMPORTANT]  
 >  无法检测到主数据库之外的数据库中的故障。 此外，也不太可能检测到数据磁盘故障，除非数据库因为数据磁盘故障而重新启动。  
@@ -75,21 +75,21 @@ ms.locfileid: "62789175"
   
 -   诸如 TCP 链接超时、数据包被删除或损坏或数据包顺序错误等网络错误。  
   
--   操作系统、服务器或数据库处于挂起状态。  
+-   不响应的操作系统、服务器或数据库。  
   
 -   Windows 服务器超时。  
   
 -   计算资源不足，例如 CPU 或磁盘超负荷运转，事务日志填满，或系统用完内存或线程。 在这些情况下，需要增加超时期限、降低工作负荷或更换硬件以处理相应的工作负荷。  
   
 ### <a name="the-session-timeout-mechanism"></a>会话超时机制  
- 由于软错误不能由服务器实例直接检测到，因此，软错误可能导致一个可用性副本无限期等待会话中另一个可用性副本的响应。 为了防止发生这种情况， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实施了会话超时机制，此机制基于以下条件：所连接的可用性副本会在每个打开的连接上按固定间隔发送 ping。 在超时期限内收到 ping 指示连接仍是开放的，且服务器实例正在通过此连接进行通信。 收到 ping 后，副本将重置此连接上的超时计数器。 有关可用性模式和会话超时的关系的信息，请参阅[可用性模式 （AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
+ 由于软错误不能由服务器实例直接检测到，因此，软错误可能导致一个可用性副本无限期等待会话中另一个可用性副本的响应。 为了防止发生这种情况， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实施了会话超时机制，此机制基于以下条件：所连接的可用性副本会在每个打开的连接上按固定间隔发送 ping。 在超时期限内收到 ping 指示连接仍是开放的，且服务器实例正在通过此连接进行通信。 收到 ping 后，副本将重置此连接上的超时计数器。 有关可用性模式和会话超时的关系的信息，请参阅[可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
   
  主副本和辅助副本相互 ping 以指示它们仍处于活动状态，会话超时限制防止一个副本无限期等待接收另一个副本的 ping。 会话超时限制是用户可配置的副本属性，默认值为 10 秒。 在超时期限内收到 ping 指示连接仍是开放的，且服务器实例正在通过此连接进行通信。 收到 ping 后，可用性副本将重置此连接的超时计数器。  
   
  如果在会话超时期限内没有收到来自另一个副本的 ping，该连接将超时。连接将关闭，超时的副本进入 DISCONNECTED 状态。 即使为同步提交模式配置了断开连接的副本，事务也将不等待该副本重新连接和重新同步。  
   
 ## <a name="responding-to-an-error"></a>响应错误  
- 无论出现何种错误类型，检测到错误的服务器都会根据实例的角色、会话可用性模式以及会话中任何其他连接的状态做出相应的响应。 有关丢失伙伴中出现的情况的信息，请参阅[可用性模式 （AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
+ 无论出现何种错误类型，检测到错误的服务器都会根据实例的角色、会话可用性模式以及会话中任何其他连接的状态做出相应的响应。 有关丢失伙伴后发生的情况的信息，请参阅[可用性模式（AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  **更改超时值（仅限同步提交可用性模式）**  
@@ -101,6 +101,6 @@ ms.locfileid: "62789175"
 -   查询 [sys.availability_replicas（Transact-SQL）](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)中的 **session_timeout**。  
   
 ## <a name="see-also"></a>请参阅  
- [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性组&#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

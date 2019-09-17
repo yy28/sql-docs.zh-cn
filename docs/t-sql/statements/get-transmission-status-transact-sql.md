@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6928832c352740774aeb1711c9d064c92731585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf05f923a5a7a6333bdca7278efae918aed71f32
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132064"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211418"
 ---
-# <a name="gettransmissionstatus-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   返回某一会话方上次传输的状态。  
   
@@ -48,13 +48,13 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
   
 ## <a name="arguments"></a>参数  
  *conversation_id*  
- 会话的会话句柄。 此参数的类型为 uniqueidentifier。  
+ 会话的会话句柄。 此参数的类型为 uniqueidentifier  。  
   
 ## <a name="return-types"></a>返回类型  
  **nchar**  
   
 ## <a name="remarks"></a>Remarks  
- 返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 在下列情况下都将返回一个空字符串：上次传输尝试成功；尚未进行任何传输尝试；或 conversation_handle 不存在。  
+ 返回一个字符串，该字符串说明指定会话上次传输尝试的状态。 在下列情况下都将返回一个空字符串：上次传输尝试成功；尚未进行任何传输尝试；或 conversation_handle 不存在  。  
   
  该函数返回的信息与管理视图 sys.transmission_queue 的 last_transmission_error 列中显示的信息相同。 但是，该函数可用于查找那些当前传输队列中没有消息的会话的传输状态。  
   

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304821"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745445"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>为群集资源和服务配置部署设置
 
@@ -126,7 +126,7 @@ ms.locfileid: "70304821"
 }
 ```
 
-如果要对与多个资源关联的服务应用相同的配置，则需要在 "**服务**" 部分中更新相应的**设置**。 例如，如果你想要跨存储池和 Spark 池为 Spark 设置相同的设置，则将更新 " **" 的**"**设置**"**部分。**
+如果要对与多个资源关联的服务应用相同的配置，则需要在 "**服务**" 部分中更新相应的**设置**。 例如，如果想要在存储池和 Spark 池中为 Spark 设置相同的设置，请**在 "spark" 配置文件**的 " **spark**服务" 部分中更新 "**设置**" 部分。
 
 ```json
 "services": {
