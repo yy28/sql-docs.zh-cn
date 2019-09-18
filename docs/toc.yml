@@ -289,9 +289,9 @@
               items:
                 - name: 备份到 URL
                   href: relational-databases/backup-restore/sql-server-backup-to-url.md
-                - name: 备份到 Azure Blob 存储 (PowerShell)
+                - name: 备份到 Azure Blob 存储
                   href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-                - name: 删除备份 blog 文件
+                - name: 删除备份日志文件
                   href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
                 - name: 还原
                   href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
@@ -525,6 +525,66 @@
                       href: relational-databases/backup-restore/select-backup-device.md
                     - name: 连接到 Azure 存储
                       href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+            - name: VDI 引用
+              items:
+                - name: VDI 概述
+                  href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+                - name: IClientVirtualDevice
+                  items:
+                    - name: CompleteCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+                    - name: GetCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+                - name: IClientVirtualDeviceSet2
+                  items:
+                    - name: 关闭
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+                    - name: CreateEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+                    - name: GetBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+                    - name: MapBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+                    - name: OpenInSecondaryEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+                - name: IServerVirtualDevice
+                  items:
+                    - name: CloseDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+                    - name: SendCommand
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+                - name: IServerVirtualDeviceSet2
+                  items:
+                    - name: AllocateBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+                    - name: BeginConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+                    - name: 关闭
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+                    - name: EndConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+                    - name: ExecuteCompletionAgent
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+                    - name: FreeBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+                    - name: IsSharedBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+                    - name: 打开
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+                    - name: RequestBuffers
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
     - name: AlwaysOn 可用性组
       href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
@@ -1583,7 +1643,7 @@
               href: relational-databases/tables/use-column-sets.md
             - name: 表值参数
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: 边缘约束
+        - name: Microsoft Edge 约束
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: 创建
@@ -8143,8 +8203,6 @@
               href: relational-databases/security/row-level-security.md
             - name: 动态数据屏蔽
               href: relational-databases/security/dynamic-data-masking.md
-            - name: 静态数据掩码
-              href: relational-databases/security/static-data-masking.md
             - name: 证书和非对称密钥
               href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
         - name: 身份验证访问
@@ -8281,7 +8339,7 @@
               href: azure-data-studio/enable-kerberos.md
             - name: 使用情况数据收集
               href: azure-data-studio/usage-data-collection.md
-        - name: 扩展项
+        - name: 扩展
           href: azure-data-studio/extensions.md
           items:
             - name: ibanPostgreSQL 扩展（预览版）
