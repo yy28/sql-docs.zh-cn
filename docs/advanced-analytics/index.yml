@@ -10,12 +10,12 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 09/12/2019
-  ms.openlocfilehash: e1851799ee4c46c8b639a2f50bce129e672aecfa
-  ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+  ms.openlocfilehash: 4e368143f525f836cc094e9f855dff998884a7aa
+  ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/12/2019
-  ms.locfileid: "70929552"
+  ms.lasthandoff: 09/18/2019
+  ms.locfileid: "71096893"
 landingContent:
 - title: 关于机器学习服务
   linkLists:
@@ -93,8 +93,8 @@ landingContent:
       url: concepts/extension-r.md
   - linkListType: concept
     links:
-    - text: Externsibility 框架的安全性
-      url: /concepts/security.md
+    - text: 扩展性框架的安全性
+      url: concepts/security.md
 - title: 管理 Python 和 R 包
   linkLists:
   - linkListType: how-to-guide
