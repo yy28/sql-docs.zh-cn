@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494309"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874823"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2017 跨出了重要的一步，它力求通过将 SQL Server 的强�
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 数据库引擎
 
 SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能改进。 
-- 现在可以将 CLR 程序集添加到白名单，作为 CTP 2.0 中介绍的 `clr strict security` 功能的变通方法  。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单 (RC1)。  
+- 现可将 CLR 程序集添加到受信任的程序集列表，作为 CTP 2.0 中介绍的 `clr strict security` 功能的变通方法  。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集列表 (RC1)。  
 - 可恢复的联机索引重新生成  可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作，或暂停并稍后恢复联机索引重新生成操作。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
 - 如果服务器意外重启或故障转移到辅助服务器，ALTER DATABASE SCOPED CONFIGURATION 的“IDENTITY_CACHE”  选项可使用户避免标识列值的差值。 请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
 - 新一代的查询处理改进，将对应用程序工作负荷的运行时状况采用优化策略。 对于这款适应性查询处理功能系列初版，我们进行了 3 项新的改进：批处理模式自适应联接、批处理模式内存授予反馈，以及针对多语句表值函数的交错执行     。  请参阅 [SQL 数据库中的智能查询处理](../relational-databases/performance/intelligent-query-processing.md)。
@@ -53,7 +53,7 @@ SQL Server 2017 包含许多新的数据库引擎功能、增强功能和性能�
 - 对于 CSV 和 Azure Blob 文件，可使用新的批处理访问选项  BULK INSERT 和 OPENROWSET(BULK...)）。 (CTP 1.1)
 - 内存优化对象增强功能  包括 sp_spaceused、消除内存优化表的 8 个索引限制、内存优化表的 sp_rename 和本机编译的 T-SQL 模块，以及适用于本机编译的 T-SQL 模块的 CASE 和 TOP (N) WITH TIES。 现在可在 Azure 存储中存储、备份和还原内存优化文件组文件。 (CTP 1.0)
 - “DATABASE SCOPED CREDENTIAL”  是一个新的安全对象类，支持 CONTROL、ALTER、REFERENCES、TAKE OWNERSHIP 和 VIEW DEFINITION 权限。 现在，ADMINISTER DATABASE BULK OPERATIONS 在 sys.fn_builtin_permissions 中可见。 (CTP 1.0)
-- 已添加数据库 COMPATIBILITY_LEVEL 140  。 (CTP 1.0)。  
+- 已添加数据库 **“COMPATIBILITY_LEVEL 150”** 。 (CTP 1.0)。  
 
 有关详细信息，请参阅 [SQL Server 2017 数据库引擎中的新增功能](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)。
 

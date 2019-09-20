@@ -1,7 +1,7 @@
 ---
 title: 内存优化表的索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050211"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929690"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-所有内存优化表都至少必须有一个索引，因为行正是通过索引才连接在一起。 在内存优化表中，每个索引也经过内存优化。 内存优化索引中的索引与基于磁盘的表中的传统索引在以下几个方面不同：  
+所有内存优化表都至少必须有一个索引，因为行正是通过索引才连接在一起。 在内存优化表中，每个索引也经过内存优化。 内存优化表中的索引与基于磁盘的表中的传统索引在以下几个方面不同：  
 
 - 由于数据行并未存储在页面上，因此既没有页面或盘区集合，也没有为了获取表的所有页面可以引用的分区或分配单元。 虽然可用索引类型之一存在索引页的概念，但它们的存储方式不同于本地表的索引。 它们不会在页面内累积典型的碎片类型，因而不具有填充因子。
 - 在数据控制期间对内存优化表的索引所做的更改绝不会写入磁盘， 只会将数据行和对数据做出的更改写入事务日志。 
@@ -59,6 +59,7 @@ ms.locfileid: "68050211"
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > 对于每个内存优化表或表类型，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的索引数限制为 8 个。 自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中不再有内存优化表和表类型专属的索引数量限制。
   

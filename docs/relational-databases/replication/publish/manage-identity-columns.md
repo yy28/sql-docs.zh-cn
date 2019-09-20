@@ -17,12 +17,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769850"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846666"
 ---
 # <a name="manage-identity-columns"></a>管理标识列
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,27 +97,27 @@ ms.locfileid: "68769850"
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>定义事务发布的项目时启用自动标识范围管理  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 如果要发布的源表具有标识列，则在为 **@threshold** 分配新标识范围之前，应将 **@identityrangemanagementoption** 的值指定为 **@pub_identity_range** ，指定分配给发布服务器的标识值范围 **@identity_range** ，指定分配给每个订阅服务器的标识值范围 **@threshold** 中管理标识列。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 如果要发布的源表具有标识列，则在为 \@threshold 分配新标识范围之前，应将 \@identityrangemanagementoption 的值指定为 auto，指定分配给发布服务器的标识值范围 \@pub_identity_range，指定分配给每个订阅服务器的标识值范围 \@identity_range，并指定所使用的总标识值的百分比      。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
     > [!NOTE]  
     >  确保标识列的数据类型足够大，从而能够支持分配到所有订阅服务器的标识总范围。  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>定义事务发布的项目时禁用自动标识范围管理  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 将 **@identityrangemanagementoption** 分配新标识范围之前，应将 **@identityrangemanagementoption** 中管理标识列。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 将 \@identityrangemanagementoption 的值指定为 manual   。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  将范围分配到订阅服务器上的标识项目列，以避免在更新订阅服务器时产生冲突。 有关详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)主题中的“为手动标识范围管理分配范围”部分。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>定义合并发布的项目时启用自动标识范围管理  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 如果要发布的源表具有标识列，则在为 **@threshold** 分配新标识范围之前，应将 **@identityrangemanagementoption** 的值指定为 **@pub_identity_range** ，指定为分配给服务器订阅的标识值范围 **@identity_range** ，指定分配给每个订阅服务器的标识值范围 **@threshold** 中管理标识列。 有关何时分配新标识范围的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)主题中的“分配标识范围”。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 如果要发布的源表具有标识列，则在为 \@threshold 分配新标识范围之前，应将 \@identityrangemanagementoption 的值指定为 auto，指定为分配给服务器订阅的标识值范围 \@pub_identity_range，指定为分配给发布服务器和每个客户端订阅的标识值范围 \@identity_range，并指定所使用的总标识值的百分比      。 有关何时分配新标识范围的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)主题中的“分配标识范围”。 有关如何定义项目的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
     > [!NOTE]  
     >  确保标识列的数据类型足够大，从而能够支持分配到所有订阅服务器（尤其是具有服务器订阅的订阅服务器）的标识总范围。  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>定义合并发布的项目时禁用自动标识范围管理  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 **@identityrangemanagementoption** 指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 \@identityrangemanagementoption 指定下列值之一  ：  
   
     -   **manual** - 必须手动分配标识范围以更新订阅服务器。  
   
@@ -133,9 +133,9 @@ ms.locfileid: "68769850"
   
 2.  如果结果集中 **identityrangemanagementoption** 的值为 **1**，则按下面的方法更改设置：  
   
-    -   若要更改已分配的标识范围，请在发布服务器上对发布数据库执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 。 将 **@property** 在 **identity_range** 分配新标识范围之前，应将 **@property** ，并为 **@value** 中管理标识列。  
+    -   若要更改已分配的标识范围，请在发布服务器上对发布数据库执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 。 将 \@property 的值指定为 identity_range 或 pub_identity_range，并为 \@value 指定新范围值     。  
   
-    -   若要更改用于分配新范围的阈值，在发布服务器上对发布数据库执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 。 将 **@property** 分配新标识范围之前，应将 **@property** ，并为 **@value** 中管理标识列。  
+    -   若要更改用于分配新范围的阈值，在发布服务器上对发布数据库执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 。 将 \@property 的值指定为 threshold，并为 \@value 指定新阈值    。  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>为合并发布中的现有项目更改自动标识范围管理设置  
   
@@ -143,11 +143,11 @@ ms.locfileid: "68769850"
   
 2.  如果结果集中 **identity_support** 的值为 **1**，则按下面的方法更改设置：  
   
-    -   若要更改已分配的标识范围，在发布服务器上对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 将 **@property** 在 **identity_range** 分配新标识范围之前，应将 **@property** ，并为 **@value** 中管理标识列。  
+    -   若要更改已分配的标识范围，在发布服务器上对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 将 \@property 的值指定为 identity_range 或 pub_identity_range，并为 \@value 指定新范围值     。  
   
-    -   若要更改用于分配新范围的阈值，在发布服务器上对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 将 **@property** 分配新标识范围之前，应将 **@property** ，并为 **@value** 中管理标识列。 有关何时分配新标识范围的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)主题中的“分配标识范围”。  
+    -   若要更改用于分配新范围的阈值，在发布服务器上对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 将 \@property 的值指定为 threshold，并为 \@value 指定新阈值    。 有关何时分配新标识范围的详细信息，请参阅[复制标识列](../../../relational-databases/replication/publish/replicate-identity-columns.md)主题中的“分配标识范围”。  
   
-    -   若要禁用自动标识范围管理，在发布服务器上对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 将 **identityrangemanagementoption** 分配新标识范围之前，应将 **@property** ，并将 **@identityrangemanagementoption** 在 **none** 分配新标识范围之前，应将 **@value** 中管理标识列。  
+    -   若要禁用自动标识范围管理，在发布服务器上对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 将 \@property 的值指定为 identityrangemanagementoption，并将 \@value 的值指定为 manual 或 none      。  
   
 ## <a name="see-also"></a>另请参阅  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810982"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809786"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
@@ -308,6 +308,10 @@ ms.locfileid: "68810982"
    sudo yum install mssql-server-ha
    ```
 
+## <a name="configure-fencing-agent"></a>配置隔离代理
+
+STONITH 设备提供隔离代理。 有关如何在 Azure 中为此群集创建 STONITH 设备的示例，请参阅[在 Azure 中的 Red Hat Enterprise Linux 上设置 Pacemaker](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices)。 修改环境的说明。
+
 ## <a name="create-the-cluster"></a>创建群集 
 
 1. 在其中一个节点上创建群集。
@@ -316,15 +320,6 @@ ms.locfileid: "68810982"
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > RHEL HA 加载项具有适用于 VMWare 和 KVM 的隔离代理。 需要在所有其他虚拟机监控程序上禁用隔离。 不建议在生产环境中禁用隔离代理。 在时间范围内，没有适用于 HyperV 或云环境的隔离代理。 如果正在运行这些配置之一，则需要禁用隔离。 \*不建议在生产系统中使用  ！*
-
-   以下命令可禁用隔离代理。
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. 为 SQL Server、文件系统和虚拟 IP 资源配置群集资源，并将配置推送到群集。 需要以下信息：
@@ -388,7 +383,7 @@ ms.locfileid: "68810982"
 
 ## <a name="additional-resources"></a>其他资源
 
-* Pacemaker 的[从头开始构建群集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)指南
+* Pacemaker [从头开始构建群集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)指南
 
 ## <a name="next-steps"></a>后续步骤
 

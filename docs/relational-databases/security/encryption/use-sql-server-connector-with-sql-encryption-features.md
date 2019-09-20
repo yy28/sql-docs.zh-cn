@@ -1,7 +1,7 @@
 ---
 title: 使用具有 SQL 加密功能的 SQL Server 连接器 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929745"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>使用具有 SQL 加密功能的 SQL Server 连接器
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "68329262"
 > [!NOTE]  
 >  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 密钥保管库的非对称密钥实现透明数据加密  
- 完成主题“Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）”的第 I 到 IV 部分之后，使用 Azure 密钥保管库密钥来加密使用 TDE 的数据库加密密钥。  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 密钥保管库的非对称密钥实现透明数据加密
+
+完成主题“Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）”的第 I 到 IV 部分之后，使用 Azure 密钥保管库密钥来加密使用 TDE 的数据库加密密钥。 有关使用 PowerShell 轮换密钥的详细信息，请参阅[使用 PowerShell 轮换透明数据加密 (TDE) 保护程序](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation)。
+ 
 你需要创建一个凭据和登录名，以及创建一个可以对数据库中的数据和日志进行加密的数据库加密密钥。 若要对数据库进行加密，需要有数据库的 **CONTROL** 权限。 下图显示了使用 Azure 密钥保管库时的加密密钥的层次结构。  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  

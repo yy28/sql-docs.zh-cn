@@ -1,7 +1,7 @@
 ---
 title: 使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2018
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316647"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929714"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -342,7 +342,7 @@ SQL Server 版本  |可再发行组件安装链接
   
 5.  **打开 Azure 密钥保管库密钥 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     如果按照上述第 II 部分所述导入了一个非对称密钥，请通过在以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本中提供密钥名称来打开密钥。  
+     无论是创建新密钥，还是按照第 II 部分所述导入非对称密钥，都需要打开该密钥。 通过在以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本中提供密钥名称来打开密钥。  
   
     -   将 `CONTOSO_KEY` 替换为希望该密钥在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中显示的名称。  
   

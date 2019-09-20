@@ -10,18 +10,18 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b04e7ffb9a1f1a00035b04994869c55d8173ad2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909289"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70910826"
 ---
 # <a name="import-json-documents-into-sql-server"></a>将 JSON 文档导入 SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本主题介绍如何将 JSON 文件导入 SQL Server。 目前有许多 JSON 文档存储在文件中。 例如 JSON 文件中的应用程序日志信息、JSON 文件中存储的传感器生成信息等。 必须能够读取文件中存储的 JSON 数据、将数据载入 SQL Server 和分析数据。
+本文介绍如何将 JSON 文件导入 SQL Server。 目前有许多 JSON 文档存储在文件中。 例如 JSON 文件中的应用程序日志信息、JSON 文件中存储的传感器生成信息等。 必须能够读取文件中存储的 JSON 数据、将数据载入 SQL Server 和分析数据。
 
 ## <a name="import-a-json-document-into-a-single-column"></a>将 JSON 文档导入单个列
 
@@ -139,9 +139,7 @@ SELECT value
  CROSS APPLY OPENJSON(BulkColumn)
 ```
 
-### <a name="example-2"></a>示例 2
-
-OPENROWSET 从文件中读取单个文本值，以 BulkColumn 的形式返回该值，并将其传递给 OPENJSON 函数。 OPENJSON 循环访问 BulkColumn 数组中 JSON 对象的数组，并在每行中返回一本 JSON 格式的书籍：
+上述 OPENROWSET 从文件中读取单个文本值。 OPENROWSET 将值作为 BulkColumn 返回，并将 BulkColumn 传递给 OPENJSON 函数。 OPENJSON 循环访问 BulkColumn 数组中 JSON 对象的数组，并在每行中返回一本书籍。 每行格式为 JSON，如下所示。
 
 ```json
 {"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
@@ -150,7 +148,7 @@ OPENROWSET 从文件中读取单个文本值，以 BulkColumn 的形式返回该
 {"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
-### <a name="example-3"></a>示例 3
+### <a name="example-2"></a>示例 2
 
 OPENJSON 函数可分析 JSON 内容，并将其转换为表或结果集。 下面的示例加载内容，分析加载的 JSON，然后以列的形式返回五个字段：
 

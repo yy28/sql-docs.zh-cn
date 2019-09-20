@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7f57ec339ffd1deed54fb780361792bee46d9126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013647"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910788"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68013647"
   
 -   始终将 AG 故障转移到同步提交的次要副本实例。 如果故障转移到异步提交的次要副本实例，数据库易丢失数据，且数据移动会自动暂停，直到手动恢复数据移动为止。  
   
--   在升级或更新任何其他的次要副本实例之前，不要升级主要副本实例。 已升级的主要副本不再将日志传送到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例尚未升级到同一版本的任何次要副本。 在挂起到辅助副本的数据移动时，对于该副本无法进行自动故障转移，且您的可用性数据库很可能发生数据丢失。  
+-   在升级或更新任何其他的次要副本实例之前，不要升级主要副本实例。 已升级的主要副本不再将日志传送到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例尚未升级到同一版本的任何次要副本。 在挂起到辅助副本的数据移动时，对于该副本无法进行自动故障转移，且您的可用性数据库很可能发生数据丢失。 这也适用于滚动升级过程，在此过程中将从旧的主要副本手动故障转移到新的主要副本。 因此，在升级旧的主要副本后，可能需要恢复同步。
   
 -   在故障转移 AG 前，请验证故障转移目标的同步状态为 SYNCHRONIZED。  
 

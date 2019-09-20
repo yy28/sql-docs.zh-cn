@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE（SQL 图形）| Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc76bc81bc1f8573430bec9cdeba62b04e25167f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116945"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846720"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE（SQL 图形）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,44 @@ ms.locfileid: "68116945"
 ```  
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( { <column_definition> } [ ,...n ] )   
+    ( { <column_definition> } 
+       | <computed_column_definition>
+       | <column_set_definition>
+       | [ <table_constraint> ] [ ,... n ]
+       | [ <table_index> ] }
+          [ ,...n ]
+    )   
     AS [ NODE | EDGE ]
-[ ; ]  
+    [ ON { partition_scheme_name ( partition_column_name )
+           | filegroup
+           | "default" } ]
+[ ; ] 
+
+< table_constraint > ::=
+[ CONSTRAINT constraint_name ]
+{
+    { PRIMARY KEY | UNIQUE }
+        [ CLUSTERED | NONCLUSTERED ]
+        (column [ ASC | DESC ] [ ,...n ] )
+        [
+            WITH FILLFACTOR = fillfactor
+           |WITH ( <index_option> [ , ...n ] )
+        ]
+        [ ON { partition_scheme_name (partition_column_name)
+            | filegroup | "default" } ]
+    | FOREIGN KEY
+        ( column [ ,...n ] )
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
+        [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ NOT FOR REPLICATION ]
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE { NO ACTION | CASCADE } ]
+    | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 ```  
   
   
@@ -69,7 +104,7 @@ CREATE TABLE
  schema_name     
  新表所属架构的名称。  
   
- *table_name*    
+ *table_name*      
  是节点或边界表的名称。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 除了本地临时表名（以单个数字符号 (#) 为前缀的名称）不能超过 116 个字符外，table_name 最多可包含 128 个字符  。  
   
  NODE   
@@ -77,6 +112,15 @@ CREATE TABLE
 
  EDGE  
  创建边界表。  
+ 
+ *table_constraint*   
+ 指定添加到表中的 PRIMARY KEY、UNIQUE、FOREIGN KEY、CONNECTION constraint、CHECK 约束或 DEFAULT 定义的属性
+ 
+ ON { partition_scheme | filegroup | "default" }    
+ 指定存储表的分区架构或文件组。 如果指定了 partition_scheme，则该表将成为已分区表，其分区存储在 partition_scheme 所指定的一个或多个文件组的集合中。 如果指定了 filegroup，则该表将存储在已命名文件组中。 数据库中必须存在该文件组。 如果指定了 default，或者根本未指定 ON，则该表将存储在默认文件组中。 CREATE TABLE 中指定的表的存储机制以后不能进行更改。
+
+ ON {partition_scheme | filegroup | "default"}    
+ 也可在 PRIMARY KEY 约束或 UNIQUE 约束中指定。 这些约束会创建索引。 如果 filegroup 未指定，则索引会存储在已命名文件组中。 如果指定了 default，或者根本未指定 ON，则索引将与表存储在同一文件组中。 如果 PRIMARY KEY 约束或 UNIQUE 约束创建聚集索引，则表的数据页将与索引存储在同一文件组中。 如果指定了 CLUSTERED 或约束另外创建了聚集索引，并且指定的 partition_scheme 不同于表定义的 partition_scheme 或 filegroup，或反之，则只接受约束定义，而忽略其他定义。
   
 ## <a name="remarks"></a>Remarks  
 不支持以节点或边界表的形式创建临时表。  
@@ -86,6 +130,8 @@ CREATE TABLE
 节点或边界表不支持延伸数据库。
 
 节点或边界表不能是外部表（PolyBase 不支持图形表）。 
+
+未分区的图节点/边界表不能更改为分区图节点/边界表。 
   
  
 ## <a name="examples"></a>示例  
@@ -119,7 +165,8 @@ CREATE TABLE
 ```
 
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅 
+ [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT（SQL 图形）](../../t-sql/statements/insert-sql-graph.md)]  
  [使用 SQL Server 2017 进行图形处理](../../relational-databases/graphs/sql-graph-overview.md)

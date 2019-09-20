@@ -3,19 +3,19 @@ title: SQL Server 2019 扩展（预览版）
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 的 SQL Server 2019 预览扩展
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494045"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878622"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展（预览版）
 
@@ -29,9 +29,9 @@ SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../inc
 
    |平台|下载|发布日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019 年 8 月 15 日 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019 年 8 月 15 日 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019 年 8 月 15 日 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019 年 9 月 11 日 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019 年 9 月 11 日 |0.16.0
 
 1. 在 Azure Data Studio 中，从“文件”菜单中选择“从 VSIX 包安装扩展”，然后选择下载的 .vsix 文件   。
 
@@ -42,6 +42,10 @@ SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../inc
 1. 重载后，扩展将安装依赖项。 可以在“输出”窗口中查看进度，这可能需要几分钟时间。
 
 1. 安装完依赖项后，关闭并重新打开 Azure Data Studio。 在重启 Azure Data Studio 之前，“SQL Server 大数据群集”连接类型不可用  。
+
+## <a name="changes-in-release-016"></a>版本 0.16 中的更改
+* “创建外部表”向导：
+  * 改进了在对象映射页上加载表和视图时的错误处理。
 
 ## <a name="changes-in-release-015"></a>版本 0.15 变化
 * “创建外部表”向导：
@@ -96,7 +100,7 @@ SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../inc
 
 #### <a name="known-issues"></a>已知问题
 * 打开 Notebook 时，会出现“安装 python”对话框。 取消此安装后，“内核”和“附加到”下拉列表不会显示预期值。 暂时的解决方法是完成 Python 安装。
-* 使用不受支持的内核打开笔记本时，“内核”和“附加到”下拉列表会导致 Azure Data Studio 挂起  。 需要关闭 Azure Data Studio，并确保使用受支持的内核（Python3、Spark | R、Spark | Scala、PySpark、PySpark3）
+* 使用不受支持的内核打开笔记本时，“内核”和“附加到”下拉列表会导致 Azure Data Studio 停止响应  。 需要关闭 Azure Data Studio，并确保使用受支持的内核（Python3、Spark | R、Spark | Scala、PySpark、PySpark3）
 * 当对 SQL Server 终结点使用 PySpark3 或其他 Spark 内核时，Spark UI 链接失败。 一个暂时的解决方法是，在仪表板中单击“Spark UI”，或使用 SQL Server 大数据群集连接类型进行连接，因为这会得到正确的 Spark UI 超链接
 
 ### <a name="extensibility-improvements"></a>扩展性改进

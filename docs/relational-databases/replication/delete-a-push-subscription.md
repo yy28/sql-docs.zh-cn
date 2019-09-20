@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c55e8bbd7001fb28b7661d31ced79e9bcb919894
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768191"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846701"
 ---
 # <a name="delete-a-push-subscription"></a>删除推送订阅
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "68768191"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>删除快照发布或事务发布的推送订阅  
   
-1.  在发布服务器上，对发布数据库执行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **@publication** 和 **@subscriber** 中通过 FTP 传递快照。 将 **@article** 的值指定为 **@article** 。 （可选）如果无法访问分发服务器，将 **@ignore_distributor** 的值指定为 **@ignore_distributor** ，以便在不删除分发服务器上相关对象的情况下删除订阅。  
+1.  在发布服务器上，对发布数据库执行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 \@publication 和 \@subscriber   。 将 \@article 的值指定为 all   。 （可选）如果无法访问分发服务器，请将 \@ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅   。  
   
 2.  在订阅服务器上，对订阅数据库执行 [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) 以删除订阅数据库中的复制元数据。  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>删除合并发布的推送订阅  
   
-1.  在发布服务器上，执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)，并指定 **@publication** 、 **@subscriber** 和 **@subscriber_db** 。 （可选）如果无法访问分发服务器，将 **@ignore_distributor** 的值指定为 **@ignore_distributor** ，以便在不删除分发服务器上相关对象的情况下删除订阅。  
+1.  在发布服务器上，执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)，并指定 \@publication、\@subscriber 和 \@subscriber_db    。 （可选）如果无法访问分发服务器，请将 \@ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅   。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 文件夹中打开。 这将会删除订阅数据库中的合并元数据。  
+2.  在订阅服务器上，对订阅数据库执行 [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)。 指定 \@publisher、\@publisher_db 和 \@publication    。 这将会删除订阅数据库中的合并元数据。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  该示例删除对事务发布的推送订阅。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b1a6778dd969f751fff51c54d9148b3cd0e5bf5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009949"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874284"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "68009949"
   
 -   诸如 TCP 链接超时、数据包被删除或损坏或数据包顺序错误等网络错误。  
   
--   操作系统、服务器或数据库处于挂起状态。  
+-   不响应的操作系统、服务器或数据库。  
   
 -   Windows 服务器超时。  
   

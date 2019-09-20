@@ -16,12 +16,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2229119fd5f6b8b2482c8bb201ac8bade8366596
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 74183916a438ea19536a7cac1abeb8d6cf7cc18a
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768116"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846686"
 ---
 # <a name="delete-a-pull-subscription"></a>删除请求订阅
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,15 +67,15 @@ ms.locfileid: "68768116"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>删除对快照发布或事务发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@publisher** 和 **@publisher_db** 文件夹中打开。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)。 指定 \@publication、\@publisher 和 \@publisher_db    。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 **@publication** 和 **@subscriber** 中通过 FTP 传递快照。 将 **@article** 的值指定为 **@article** 。 （可选）如果无法访问分发服务器，将 **@ignore_distributor** 的值指定为 **@ignore_distributor** ，以便在不删除分发服务器上相关对象的情况下删除订阅。  
+2.  在发布服务器上，对发布数据库执行 [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)。 指定 \@publication 和 \@subscriber   。 将 \@article 的值指定为 all   。 （可选）如果无法访问分发服务器，请将 \@ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅   。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>删除对合并发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@publisher** 和 **@publisher_db** 。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)。 指定 \@publication、\@publisher 和 \@publisher_db    。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 和 **@subscriber_db** 文件夹中打开。 将 **@subscription_type** 的值指定为 **@subscription_type** 。 （可选）如果无法访问分发服务器，将 **@ignore_distributor** 的值指定为 **@ignore_distributor** ，以便在不删除分发服务器上相关对象的情况下删除订阅。  
+2.  在发布服务器上，对发布数据库执行 [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db    。 将 \@subscription_type  的值指定为 pull  。 （可选）如果无法访问分发服务器，请将 \@ignore_distributor 的值指定为 1，以便在不删除分发服务器上相关对象的情况下删除订阅   。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例删除对事务发布的请求订阅。 第一个批处理在订阅服务器上执行，第二个批处理在发布服务器上执行。  

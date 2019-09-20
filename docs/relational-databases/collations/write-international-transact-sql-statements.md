@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140816"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913551"
 ---
 # <a name="write-international-transact-sql-statements"></a>编写国际化 Transact-SQL 语句
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   如果遵循以下指导原则，则使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的数据库和数据库应用程序将变得更易于在语言之间移植，或者将支持多种语言：  
 
--   从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，使用以下任一选项：
-    -   已启用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的排序规则结合使用的 char  、varchar  和 varchar(max)  数据类型。
-    -   与已启用[附属字符](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)的排序规则结合使用的 nchar  、nvarchar  和 nvarchar(max)  数据类型。      
+-   从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，使用以下任一选项：
+    -   具有已启用 [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 的排序规则的 char、varchar 和 varchar(max) 数据类型，并使用 UTF-8 对数据进行编码    。
+    -   具有已启用[附属字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则的 nchar、nvarchar 和 nvarchar(max) 数据类型，并使用 UTF-16 对数据进行编码    。 使用非 SC 排序规则会导致使用 UCS-2 对数据进行编码。      
 
     这避免了代码页转换问题。 有关其他注意事项，请参阅 [UTF-8 与 UTF-16 的存储差异](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。  
 
--   到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 为止，将 char、varchar 和 varchar(max) 数据类型的所有使用替换为 nchar、nvarchar 和 nvarchar(max)       。 这避免了代码页转换问题。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 
+-   到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 为止，将 char、varchar 和 varchar(max) 数据类型的所有使用替换为 nchar、nvarchar 和 nvarchar(max)       。 如果使用已启用[增补字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则，则使用 UTF-16 对数据进行编码。 使用非 SC 排序规则会导致使用 UCS-2 对数据进行编码。 这避免了代码页转换问题。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。 
+
     > [!IMPORTANT]
     > text 数据类型已弃用，不应在新的开发工作中使用此数据类型  。 计划将 text 数据转换为 varchar(max)   。
   

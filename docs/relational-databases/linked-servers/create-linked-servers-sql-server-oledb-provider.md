@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 577de413c318f1f1e442ad86009a0237671e9104
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68301353"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929653"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分布式查询：OLE DB 连接
 
@@ -479,7 +479,7 @@ SQL Server 使用参数化查询执行，以问号 (?) 作为 Transact-SQL 字�
 
 1. SQL Server 使用 `IDBCreateCommand::CreateCommand` 从 `Session` 对象创建 `Command` 对象。
 
-9. 如果 `Remote Query Timeout` 服务器配置选项设置为大于 0 的值，则 SQL Server 会使用 ICommandProperties::SetProperties 将 `Command` 对象上的 DBPROP_COMMANDTIMEOUT 属性设置为相同的值；必须调用 `ICommand :: SetCommandText` 以将命令文本设置为生成的 Transact-SQL 字符串。
+9. 如果 `Remote Query Timeout` 服务器配置选项设置为大于 0 的值，则 SQL Server 会使用 `ICommandProperties::SetProperties` 将 `Command` 对象上的 `DBPROP_COMMANDTIMEOUT` 属性设置为相同的值；必须调用 `ICommand::SetCommandText` 才能将命令文本设置为生成的 Transact-SQL 字符串。
 
 10. SQL Server 调用 `ICommandPrepare::Prepare` 来准备命令。 如果提供程序不支持此接口，则 SQL Server 将继续执行步骤 4。
 
@@ -744,7 +744,7 @@ comparison-operator ::= `< \| >` \| `<= \| >`= \| = \| `<>`
 
 `ORDER BY clause`
 
-order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\...
+order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\..
 
 sort-specification ::= { \| column-name } \[ASC \| DESC\]
 
@@ -786,7 +786,7 @@ base-table-identifier ::= user-defined-name
 
 column-identifier ::= user-defined-name
 
-user-defined-name ::= letter\[digit \| letter \| _\]\...
+user-defined-name ::= letter\[digit \| letter \| _\]\..
 
 unsigned-integer ::= {digit}...
 

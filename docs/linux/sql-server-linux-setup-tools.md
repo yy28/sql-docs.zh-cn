@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085725"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910791"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -77,9 +77,9 @@ ms.locfileid: "68085725"
    >   sudo yum update mssql-tools
    >   ```
 
-1. **可选**：向 bash shell 中的 **PATH** 环境变量添加 `/opt/mssql-tools/bin/`。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。
 
-   若要使 **sqlcmd/bcp** 能从登录会话的 bash shell 进行访问，请使用以下命令修改 **~/.bash_profile** 文件中的 **PATH**：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -116,15 +116,15 @@ ms.locfileid: "68085725"
    ```
 
    > [!Note] 
-   > 若要将 **mssql-tools** 更新至最新版本，请运行以下命令：
+   > 若要将 mssql-tools 更新至最新版本，请运行以下命令  ：
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **可选**：向 bash shell 中的 **PATH** 环境变量添加 `/opt/mssql-tools/bin/`。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。
 
-   若要使 **sqlcmd/bcp** 能从登录会话的 bash shell 进行访问，请使用以下命令修改 **~/.bash_profile** 文件中的 **PATH**：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -161,9 +161,9 @@ ms.locfileid: "68085725"
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **可选**：向 bash shell 中的 **PATH** 环境变量添加 `/opt/mssql-tools/bin/`。
+1. **可选**：向 bash shell 中的 PATH 环境变量添加 `/opt/mssql-tools/bin/`  。
 
-   若要使 **sqlcmd/bcp** 能从登录会话的 bash shell 进行访问，请使用以下命令修改 **~/.bash_profile** 文件中的 **PATH**：
+   要使 sqlcmd/bcp 能从登陆会话的 bash shell 进行访问，请使用下列命令修改 ~/.bash_profile 文件中的 PATH    ：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
@@ -197,7 +197,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-SQL Server 命令行工具包含在 Docker 映像中。 如果使用交互式命令提示符附加至此映像，则可在本地运行工具。
+如果[在 Docker 容器中运行 SQL Server](quickstart-install-connect-docker.md)，则 SQL Server 命令行工具已包含在 SQL Server Linux 容器映像中。 如果使用交互式 bash shell 附加到正在运行的容器，则可以在本地运行这些工具。
 
 ## <a name="offline-installation"></a>脱机安装
 

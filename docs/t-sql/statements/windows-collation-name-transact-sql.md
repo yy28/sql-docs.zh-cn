@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051430"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874462"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -79,7 +79,7 @@ VariationSelectorSensitivity
 **UTF8**  
 - **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
 
-- 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
+- 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 **BIN**  
 指定使用向后兼容的二进制排序顺序。
@@ -139,9 +139,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |阿姆哈拉语（埃塞俄比亚）|Latin1_General_100_|不可用|
 |亚美尼亚语（亚美尼亚）|Cyrillic_General_100_|不可用|
 |阿萨姆语（印度）|Assamese_100_ <sup>1</sup>|不可用|
+|孟加拉语（孟加拉国）|Bengali_100_<sup>1</sup>|不可用|
 |巴什基尔语（俄罗斯）|Bashkir_100_|不可用|
 |巴斯克语（巴斯克）|Latin1_General_100_|不可用|
-|孟加拉语（孟加拉）|Bengali_100_<sup>1</sup>|不可用|
 |孟加拉语（印度）|Bengali_100_<sup>1</sup>|不可用|
 |波斯尼亚语（波斯尼亚和黑塞哥维那，西里尔文）|Bosnian_Cyrillic_100_|不可用|
 |波斯尼亚语（波斯尼亚和黑塞哥维那，拉丁语）|Bosnian_Latin_100_|不可用|
@@ -187,7 +187,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |挪威语（博克马尔语，挪威）|Norwegian_100_|不可用|
 |挪威语（尼诺斯克语，挪威）|Norwegian_100_|不可用|
 |奥克西唐语（法国）|French_100_|不可用|
-|奥里雅语（印度）|Indic_General_100_<sup>1</sup>|不可用|
+|奥里亚语（印度）|Indic_General_100_<sup>1</sup>|不可用|
 |普什图语（阿富汗）|Pashto_100_<sup>1</sup>|不可用|
 |波斯语（伊朗）|Persian_100_|不可用|
 |旁遮普语（印度）|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -226,7 +226,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |威尔士语（英国）|Welsh_100_|不可用|
 |沃洛夫语（塞内加尔）|French_100_|不可用|
 |班图语/索萨语（南非）|Latin1_General_100_|不可用|
-|雅库特语（俄罗斯）|Yakut_100_|不可用|
+|萨哈语（俄罗斯）|Yakut_100_|不可用|
 |彝语（中国）|Latin1_General_100_|不可用|
 |约鲁巴语（尼日利亚）|Latin1_General_100_|不可用|
 |祖鲁语（南非）|Latin1_General_100_|不可用|
@@ -235,9 +235,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Lithuanian_Classic|Lithuanian_Classic|
 |不推荐使用；在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，在服务器级别不可用|Macedonian|Macedonian|
 
-<sup>1</sup>仅 Unicode 的 Windows 排序规则只能应用于列级或表达式级数据。 它们不能用作服务器或数据库排序规则。
+<sup>1</sup> 仅 Unicode 的 Windows 排序规则只能应用于列级或表达式级数据。 它们不能用作服务器或数据库排序规则。
 
-<sup>2</sup>与中文（台湾）排序规则类似，中文（澳门）使用简体中文的规则；与中文（台湾）不同，它使用代码页 950。
+<sup>2</sup> 与中文（中国台湾）排序规则类似，中文（澳门特别行政区）也使用简体中文的规则；与中文（中国台湾）不同，它使用代码页 950。
 
 ## <a name="see-also"></a>另请参阅
 

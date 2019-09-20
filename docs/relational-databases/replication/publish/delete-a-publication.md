@@ -16,12 +16,12 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 90c09b0d6c2d4c8e2a3c4fa7288d7a2ef2451ce0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ede5586c8ea7fab69360c12394834fa681eb113c
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769864"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846556"
 ---
 # <a name="delete-a-publication"></a>删除发布
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "68769864"
   
     -   若要删除单个发布，请在发布服务器上，对发布数据库执行 [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) 。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 **@type** @type **@type** 文件夹中删除发布。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force** 文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 \@type 指定 tran 值   。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1   。 （可选）如果未对发布数据库执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，请为 \@dbname 指定数据库的名称  。  
   
         > [!NOTE]  
-        >  将 **@force** @type **@force** 可能会使与复制相关的发布对象保留在数据库中。  
+        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中   。  
   
 2.  如果此数据库中没有任何其他发布，则执行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) 以禁止当前数据库使用快照复制或事务复制进行发布。  
   
@@ -75,10 +75,10 @@ ms.locfileid: "68769864"
   
     -   若要删除单个发布，请在发布服务器上对发布数据库执行 [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 **@type** @type **@type** 文件夹中删除发布。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 **@force** @type **@force** 文件夹中删除发布。 （可选）如果未对发布数据库执行 **@dbname** ，则为 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 指定数据库的名称。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 \@type 指定 merge 值   。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1   。 （可选）如果未对发布数据库执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，请为 \@dbname 指定数据库的名称  。  
   
         > [!NOTE]  
-        >  将 **@force** @type **@force** 可能会使与复制相关的发布对象保留在数据库中。  
+        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中   。  
   
 2.  如果此数据库中没有任何其他发布，则执行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) 以禁止当前数据库使用合并复制进行发布。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eab23cafc4e73efd16dd2feb096db12495d8f354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014531"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874530"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>“确定可用性副本之间的连接失败的可能原因
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "68014531"
   
 -   诸如 TCP 链接超时、数据包被删除或损坏或数据包顺序错误等网络错误。  
   
--   操作系统、服务器或数据库处于挂起状态。  
+-   不响应的操作系统、服务器或数据库。  
   
 -   Windows 服务器超时。  
   

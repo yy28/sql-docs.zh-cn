@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907766"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846756"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>定义和修改合并项目的参数化行筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67907766"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>为合并发布中的项目定义参数化行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 指定 **@publication** ，为 **@article** 指定项目名称，为 **@source_object** 指定要发布的表，为 **@subset_filterclause** 指定定义参数化筛选器的 WHERE 子句（不包括 `WHERE`），并为 **@partition_options** （说明从参数化行筛选器得出的分区类型）指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 指定 \@publication，为 \@article 指定项目名称，为 \@source_object 指定要发布的表，为 \@subset_filterclause 指定定义参数化筛选器的 WHERE 子句（不包括 `WHERE`），并为 \@partition_options（说明从参数化行筛选器得出的分区类型）指定下列值之一      ：  
   
     -   **0** - 对项目的筛选是静态的，或者不为每个分区生成唯一的数据子集（“重叠”分区）。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67907766"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>更改合并发布中的项目的参数化行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 指定 **@publication** 和 **@article** ，为 **@property** @property **@property** 值，为 **@value** 指定定义参数化筛选器的 WHERE 子句（不包括 `WHERE`），并将 **1** 和 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 中定义和修改参数化行筛选器。  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 指定 \@publication 和 \@article，为 \@property 指定 subset_filterclause 值，为 \@value 指定定义参数化筛选器的表达式（不包括 `WHERE`），并将 \@force_invalidate_snapshot 和 \@force_reinit_subscription 的值指定为 1         。  
   
-2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 指定 **@publication** 和 **@article** ，为 **@property** @property **@property** 值，并为 **@value** 指定最适合的选项，该选项可以为下列选项之一：  
+2.  如果此更改导致不同的分区行为，则再次执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 。 指定 \@publication 和 \@article，为 \@property 指定 partition_options 值，并为 \@value 指定最适合的选项，该选项可以为下列选项之一：      ：  
   
     -   **0** - 对项目的筛选是静态的，或者不为每个分区生成唯一的数据子集（“重叠”分区）。  
   

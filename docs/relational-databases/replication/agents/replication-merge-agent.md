@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085955"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846745"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 **@subscriber_upload_options** 的 **sp_addmergearticle** 。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 sp_addmergearticle 的 \@subscriber_upload_options   。  
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  指定合并代理用于枚举来自源的更改的源线程数。 在上载过程中，源是订阅服务器；在下载过程中，源是发布服务器。 默认值为 **3**。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 当运行的并发合并进程数达到由 **@max_concurrent_merge** 的 **@max_concurrent_merge**。 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
+ 当运行的并发合并进程数达到由 sp_addmergepublication 的 \@max_concurrent_merge 属性设置的限制时，合并代理等待的最大秒数   。 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 为 **2** （允许建立到 Jet 数据库的连接，而无需 ODBC 数据源名称 (DSN)），则为 Jet 数据库（.mdb 文件）的路径。  

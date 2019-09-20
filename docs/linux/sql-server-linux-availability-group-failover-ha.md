@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027217"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304841"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 Always on 可用性组故障转移
 
@@ -43,7 +43,7 @@ ms.locfileid: "68027217"
 
    其次，[删除位置约束](#removeLocConstraint)。
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">步骤 1。 通过移动可用性组资源手动进行故障转移
+#### <a name="manualMove"></a> 步骤 1. 通过移动可用性组资源手动进行故障转移
 
 要手动将名为 ag_cluster 的 AG 资源故障转移到名为 nodeName2 的群集节点，请运行适用于你的分发的命令   ：
 
@@ -62,7 +62,7 @@ ms.locfileid: "68027217"
 >[!IMPORTANT]
 >手动故障转移资源后，需要删除自动添加的位置约束。
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> 步骤 2。 删除位置约束
+#### <a name="removeLocConstraint"> </a> 步骤 2. 删除位置约束
 
 在手动故障转移期间，`pcs` 命令 `move` 或 `crm` 命令 `migrate` 会为要放置在新目标节点上的资源添加位置约束。 若要查看新约束，请在手动移动资源后运行以下命令：
 

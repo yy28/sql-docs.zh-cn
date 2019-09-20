@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9cff330e7dc69f4d99ffdbf3df82e2ff0b154ab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907822"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846610"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定义合并表项目间的逻辑记录关系
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "67907822"
   
     -   如果值为 **1**，则已使用预计算分区。  
   
-    -   如果值为 **0**，请在发布服务器上对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 将 **use_partition_groups** 的值指定为 **@property** 并将 **@value** 的值指定为 **@value** 。  
+    -   如果值为 **0**，请在发布服务器上对发布数据库执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 。 将 \@property 的值指定为 use_partition_groups，并将 \@value 的值指定为 true     。  
   
         > [!NOTE]  
         >  如果发布不支持预计算分区，则无法使用逻辑记录。 有关详细信息，请参阅[使用预计算分区优化参数化筛选器性能](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)主题中的“使用预计算分区的要求”。  
@@ -101,13 +101,13 @@ ms.locfileid: "67907822"
   
 2.  如果将包含逻辑记录的项目不存在，请在发布服务器上对发布数据库执行 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 。 为逻辑记录指定以下冲突检测和解决选项中的一项：  
   
-    -   若要检测并解决发生在逻辑记录的相关行之间的冲突，请将 **@value** 的值指定为 **@logical_record_level_conflict_detection** 和 **@logical_record_level_conflict_resolution** 。  
+    -   若要检测并解决发生在逻辑记录的相关行之间的冲突，请将 \@logical_record_level_conflict_detection 和 \@logical_record_level_conflict_resolution 的值指定为 true    。  
   
-    -   若要使用标准行级或列级冲突检测和解决方法，请将 **@logical_record_level_conflict_detection** 的值指定为 **@logical_record_level_conflict_detection** 和 **@logical_record_level_conflict_resolution** ，此为默认值。  
+    -   若要使用标准行级或列级冲突检测和解决方法，请将 \@logical_record_level_conflict_detection 和 \@logical_record_level_conflict_resolution 的值指定为 false，此为默认值    。  
   
 3.  为每个将包含逻辑记录的项目重复步骤 2。 您必须为逻辑记录中的每个项目使用相同的冲突检测和解决选项。 有关详细信息，请参阅 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
-4.  在发布服务器上，对发布数据库执行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 **@publication** ，将 **@article** 指定为该关系中一个项目的名称，将 **@join_articlename** 指定为第二个项目的名称，将 **@filtername** 指定为该关系的名称，将 **@join_filterclause** 指定为定义两个项目之间关系的子句，将 **@join_unique_key** 指定为联接的类型，并将 **@filter_type** 指定为以下值之一：  
+4.  在发布服务器上，对发布数据库执行 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)。 指定 \@publication，将 \@article 指定为该关系中一个项目的名称，将 \@join_articlename 指定为第二个项目的名称，将 \@filtername 指定为该关系的名称，将 \@join_filterclause 指定为定义两个项目之间关系的子句，将 \@join_unique_key 指定为联接的类型，并将 \@filter_type 指定为以下值之一        ：  
   
     -   **2** - 定义逻辑关系。  
   
@@ -122,15 +122,15 @@ ms.locfileid: "67907822"
   
 1.  检测和解决发生在逻辑记录中相关行之间的冲突：  
   
-    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 **@property** 的值指定为 **@property** 并将 **@value** 的值指定为 **@value** 。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 。  
+    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 logical_record_level_conflict_detection，并将 \@value 的值指定为 true     。 将 \@force_invalidate_snapshot 和 \@force_reinit_subscription 的值指定为 1    。  
   
-    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 **@property** 的值指定为 **@property** 并将 **@value** 的值指定为 **@value** 。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 。  
+    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 logical_record_level_conflict_resolution，并将 \@value 的值指定为 true     。 将 \@force_invalidate_snapshot 和 \@force_reinit_subscription 的值指定为 1    。  
   
 2.  使用标准行级或列级冲突检测和解决方法：  
   
-    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 **@property** 的值指定为 **@property** 并将 **@logical_record_level_conflict_detection** 的值指定为 **@value** 。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 。  
+    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 logical_record_level_conflict_detection，并将 \@value 的值指定为 false     。 将 \@force_invalidate_snapshot 和 \@force_reinit_subscription 的值指定为 1    。  
   
-    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 **@property** 的值指定为 **@property** 并将 **@logical_record_level_conflict_detection** 的值指定为 **@value** 。 将 **1** 的值指定为 **@force_invalidate_snapshot** 和 **@force_reinit_subscription** 。  
+    -   在发布服务器上，对发布数据库执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 将 \@property 的值指定为 logical_record_level_conflict_resolution，并将 \@value 的值指定为 false     。 将 \@force_invalidate_snapshot 和 \@force_reinit_subscription 的值指定为 1    。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>删除逻辑记录关系  
   
@@ -143,7 +143,7 @@ ms.locfileid: "67907822"
     > [!NOTE]  
     >  该查询返回的信息与 [sp_helpmergefilter](../../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)相同；然而，该系统存储过程仅返回有关逻辑记录关系（也是联接筛选器）的信息。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)。 指定 **@publication** ，为 **@article** 指定该关系中其中一个项目的名称，并为 **@filtername** 。  
+2.  在发布服务器上，对发布数据库执行 [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)。 指定 \@publication，为 \@article 指定该关系中其中一个项目的名称，并为 \@filtername 指定步骤 1 中关系的名称    。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例对现有发布启用预计算分区，并创建包含 `SalesOrderHeader` 和 `SalesOrderDetail` 表的两个新项目的逻辑记录。  

@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c636db57a13cc242fb152f8dd670eb247f962247
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 76f5014ec7a7c06496c3850354da528da89e67b2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764090"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846591"
 ---
 # <a name="view-and-modify-publication-properties"></a>查看和修改发布属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,29 +106,29 @@ ms.locfileid: "68764090"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>查看快照发布或事务发布的属性  
   
-1.  执行 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)，为 **@publication** 参数指定该发布的名称。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
+1.  执行 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)，为 \@publication 参数指定该发布的名称  。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>更改快照发布或事务发布的属性  
   
-1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，在 **@property** 参数中指定要更改的发布属性，并在 **@value** 参数指定该发布的名称。  
+1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值   。  
   
     > [!NOTE]  
-    >  如果该更改将要求生成新快照，则还必须将 **@force_invalidate_snapshot** 的值指定为 **@force_invalidate_snapshot** ，而如果该更改将要求重新初始化订阅服务器，则必须将 **@force_invalidate_snapshot** 的值指定为 **@force_reinit_subscription** 。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1     。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>查看合并发布的属性  
   
-1.  执行 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，为 **@publication** 参数指定该发布的名称。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
+1.  执行 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，为 \@publication 参数指定该发布的名称  。 如果未指定此参数，则会返回发布服务器上所有发布的相关信息。  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>更改合并发布的属性  
   
-1.  执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，在 **@property** 参数中指定要更改的发布属性，并在 **@value** 参数指定该发布的名称。  
+1.  执行 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，在 \@property 参数中指定要更改的发布属性，并在 \@value 参数中指定此属性的新值   。  
   
     > [!NOTE]  
-    >  如果该更改要求生成新快照，则还必须将 **@force_invalidate_snapshot** 的值指定为 **1**，而如果该更改要求重新初始化订阅服务器，则必须将 **@force_reinit_subscription** 的值指定为 **1**。有关那些在更改后要求生成新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果该更改将要求生成新快照，则还必须将 \@force_invalidate_snapshot 的值指定为 1，而如果该更改将要求重新初始化订阅服务器，则必须将 \@force_reinit_subscription 的值指定为 1。有关那些在更改后要求生成新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)     。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>查看快照的属性  
   
-1.  执行 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)，为 **@publication** 参数指定该发布的名称。  
+1.  执行 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)，为 \@publication 参数指定该发布的名称  。  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>更改快照的属性  
   

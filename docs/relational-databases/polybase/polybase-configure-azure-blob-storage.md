@@ -8,18 +8,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d9c17199ec6477b59ad4fdf4e4e670bf0b5e5a9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ac4cda37a211c73b9895bdface7e6ade56ad11
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020227"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874844"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 Hadoop 中的外部数据。
+本文介绍如何使用 SQL Server 实例上的 PolyBase 来查询 Azure Blob 存储中的外部数据。
 
 ## <a name="prerequisites"></a>必备条件
 

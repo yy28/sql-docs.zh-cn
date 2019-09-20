@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110284"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304807"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -732,9 +732,6 @@ OFF
 
 CLEAR         
 删除查询存储的内容。
-
-> [!NOTE]
-> 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，必须在用户数据库中执行 `ALTER DATABASE SET QUERY_STORE`。 不支持从另一个数据仓库实例中执行该语句。
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 描述查询存储的操作模式。 
@@ -2911,20 +2908,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2935,8 +2955,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 要修改的数据库的名称。
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-适用于 Azure SQL 数据仓库（预览） 
+**<auto_option> ::=**
+
+控制自动选项。
+
+AUTO_CREATE_STATISTICS { ON | OFF } ON 查询优化器根据需要在查询谓词中的单列上创建统计信息，以便改进查询计划和查询性能。 在查询优化器编译查询时创建这些单列统计信息。 这些单列统计信息只在尚不是现有统计信息对象的第一列的列上创建。
+
+默认值为 ON。 建议您对于大多数数据库使用默认设置。
+
+OFF 查询优化器在编译查询时不在查询谓词中的单列上创建统计信息。 将此选项设置为 OFF 可能导致并非最佳的查询计划以及查询性能下降。
+可通过查看 sys.databases 目录视图中的 is_auto_create_stats_on 列来确定此选项的状态。 还可以通过查看 DATABASEPROPERTYEX 函数的 IsAutoCreateStatistics 属性来确定状态。
+有关详细信息，请参阅“统计信息”中的“使用数据库范围的统计信息选项”部分。
+
+**<db_encryption_option> ::=**
+
+控制数据库加密状态。
+
+ENCRYPTION { ON | OFF } ON 将数据库设置为加密。
+
+OFF 将数据库设置为不加密。
+
+有关数据加密的详细信息，请参阅“透明数据加密”和“借助 Azure SQL 数据库实现透明数据加密”。
+
+在数据库级别启用加密时，所有文件组都将进行加密。 任何新的文件组都将继承加密的属性。 如果数据库中的任何文件组设置为 READ ONLY，则数据库加密操作将失败。
+可以通过使用 sys.dm_database_encryption_keys 动态管理视图来查看数据库的加密状态和加密扫描的状态。
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+控制是否在此数据仓库中启用查询存储。     
+
+ON         
+启用查询存储。
+
+OFF         
+禁用查询存储。 OFF 是默认值。
+
+> [!NOTE]
+> 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，必须在用户数据库中执行 `ALTER DATABASE SET QUERY_STORE`。 不支持从另一个数据仓库实例中执行该语句。
+
+**\<result_set_caching_option> ::=**    
+**适用对象**：Azure SQL 数据仓库（预览）
 
 连接到 `master` 数据库时，必须运行此命令。  对此数据库设置的更改立即生效。  缓存查询结果集会产生存储成本。 在你为数据库禁用结果缓存后，以前保留的结果缓存会立即从 Azure SQL 数据仓库存储中删除。 `sys.databases` 中引入了新列 is_result_set_caching_on，用于显示数据库的结果缓存设置。  
 
@@ -2954,22 +3013,7 @@ OFF
 command|Like|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-适用于 Azure SQL 数据仓库（预览） 
-
-ON：在数据库级别启用 READ_COMMITTED_SNAPSHOT 选项。
-
-OFF：在数据库级别禁用 READ_COMMITTED_SNAPSHOT 选项。
-
-为数据库启用和禁用 READ_COMMITTED_SNAPSHOT 将终止与该数据库的所有活跃连接。  你可能希望在数据库维护时段进行此更改，也可能等到除了执行 ALTER DATABSE 命令的连接之外与数据库没有任何活跃的连接后再进行。  数据库不必处于单用户模式。  不支持在会话级别更改 READ_COMMITTED_SNAPSHOT 设置。  要验证数据库的此设置，请检查 sys.databases 中的 is_read_committed_snapshot_on 列。
-
-在启用了 READ_COMMITTED_SNAPSHOT 的数据库中，如果存在多个数据版本，则由于扫描版本，查询的性能可能会降低。 如果长时间打开的事务进行的数据更改因事务长时间打开而无法清理版本，则这些事务也会导致数据库大小增加。  
-
-
-
-
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
 如果满足以下所有要求，则会为查询重用缓存的结果集：
 
@@ -2979,6 +3023,21 @@ OFF：在数据库级别禁用 READ_COMMITTED_SNAPSHOT 选项。
 
 数据库启用结果集缓存之后，将缓存所有查询（DateTime.Now() 等具有非确定性函数的查询除外）的结果，直到缓存已满。   在创建结果缓存时，具有大型结果集（例如，大于 1 百万行）的查询在第一次运行期间可能会遇到性能降低。
 
+**<snapshot_option> ::=**
+
+计算事务隔离级别。
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**适用对象**：Azure SQL 数据仓库（预览）
+
+ON：在数据库级别启用 READ_COMMITTED_SNAPSHOT 选项。
+
+OFF：在数据库级别禁用 READ_COMMITTED_SNAPSHOT 选项。
+
+为数据库启用和禁用 READ_COMMITTED_SNAPSHOT 将终止与该数据库的所有活跃连接。  你可能希望在数据库维护时段进行此更改，也可能等到除了执行 ALTER DATABSE 命令的连接之外与数据库没有任何活跃的连接后再进行。  数据库不必处于单用户模式。  不支持在会话级别更改 READ_COMMITTED_SNAPSHOT 设置。  要验证数据库的此设置，请检查 sys.databases 中的 is_read_committed_snapshot_on 列。
+
+在启用了 READ_COMMITTED_SNAPSHOT 的数据库中，如果存在多个数据版本，则由于扫描版本，查询的性能可能会降低。 如果长时间打开的事务进行的数据更改因事务长时间打开而无法清理版本，则这些事务也会导致数据库大小增加。  
+
 ## <a name="permissions"></a>权限
 
 要设置 RESULT_SET_CACHING 选项，用户需要服务器级别主体登录名（在预配过程中创建的登录名）或者是 `dbmanager` 数据库角色的成员。  
@@ -2987,28 +3046,90 @@ OFF：在数据库级别禁用 READ_COMMITTED_SNAPSHOT 选项。
 
 ## <a name="examples"></a>示例
 
-### <a name="enable-result-set-caching-for-a-database"></a>为数据库启用结果集缓存
+### <a name="a-enabling-the-query-store"></a>A. 启用查询存储
+
+下面的示例启用查询存储并配置查询存储参数。
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>B. 使用等待统计信息启用查询存储
+
+下面的示例启用查询存储并配置查询存储参数。
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>C. 使用自定义捕获策略选项启用查询存储
+
+下面的示例启用查询存储并配置查询存储参数。
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>D. 为数据库启用结果集缓存
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>为数据库禁用结果集缓存
+### <a name="d-disable-result-set-caching-for-a-database"></a>D. 为数据库禁用结果集缓存
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>检查数据库的结果集缓存设置
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. 检查数据库的结果集缓存设置
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>检查结果集是缓存命中和缓存失误的查询数
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>D. 检查结果集是缓存命中和缓存失误的查询数
 
 ```sql
 SELECT  
@@ -3028,7 +3149,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>检查查询的结果集是缓存命中还是缓存失误
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>D. 检查查询的结果集是缓存命中还是缓存失误
 
 ```sql
 If
@@ -3040,7 +3161,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>检查结果集是缓存命中的所有查询
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>D. 检查结果集是缓存命中的所有查询
 
 ```sql
 SELECT *  
@@ -3049,6 +3170,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>为数据库启用 Read_Committed_Snapshot 选项
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3064,3 +3186,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [SQL 数据仓库语言元素](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

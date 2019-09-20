@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bcd29d124982d5735be8838a0ff054a6a2150bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc78c62c83530a0e5b7d5ee280addfd67e593fb6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101536"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874731"
 ---
-# <a name="mssqlserver847"></a>MSSQLSERVER_847
+# <a name="mssqlserver_847"></a>MSSQLSERVER_847
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>详细信息  
@@ -29,11 +29,11 @@ ms.locfileid: "68101536"
 |事件 ID|847|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
-|符号名称|N/A|  
+|符号名称|空值|  
 |消息正文|等待闩锁时出现超时: 类“%ls”，id %p，类型 %d，任务 0x%p : %d，等待时间 %d，标志 0x%I64x，所属任务 0x%p。 将继续等待。|  
   
 ## <a name="explanation"></a>解释  
-计算机可能停止响应（挂起），或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将缓冲区闩锁错误写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志的同时可能出现超时或某些其他常规操作中断。  
+计算机可能停止响应，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将缓冲区闩锁错误写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志的同时可能出现超时或某些其他常规操作中断。  
   
 如果消息中的状态字段的值为 0x04 on，则表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在等待 I/O 操作。 也可能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中收到消息 [MSSQLSERVER_833](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md)。  
   

@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122997"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874548"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -109,7 +109,11 @@ SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 - 对于在网格、文本或文件中显示的 SSMS 结果中可以查看的数据大小，存在限制。
 
-可参考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 了解其他已知问题，并向产品团队提供反馈。 
+- 在对象资源管理器中删除 Azure SQL 数据库时接收错误出现问题，但实际上会成功接收。 任务显示的错误消息不准确。
+
+- 不管登录名的实际默认语言设置如何，SQL 登录名的默认语言在“登录属性”对话框中都可能显示为阿拉伯语。 若要查看给定登录名的实际默认语言，请使用 T-SQL 从 master.sys.server_principles 选择登录名的 default_language_name   。
+
+可参考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 了解其他已知问题，并向产品团队提供反馈。
 
 ## <a name="previous-ssms-releases"></a>SSMS 的早期版本
 

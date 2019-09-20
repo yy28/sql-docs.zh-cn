@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768642"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846708"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ ms.locfileid: "68768642"
 
 1.  创建快照发布、事务发布或合并发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 **@publication** 以及下列参数：  
+2.  执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 \@publication 以及下列参数  ：  
   
-    -   **@job_login，用于指定**快照代理在分发服务器上运行时所用的 Windows 身份验证凭据。  
+    -   **\@job_login**，用于指定快照代理在分发服务器上运行时所用的 Windows 身份验证凭据。  
   
-    -   **@job_password** ，为提供的 Windows 凭据的密码。  
+    -   **\@job_password**，为提供的 Windows 凭据的密码。  
   
-    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，则将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 。 在这种情况下，您还必须为 **@publisher_login** 和 **@publisher_password** 。  
+    -   （可选）如果代理在连接到发布服务器时将使用 SQL Server 身份验证，请将 \@publisher_security_mode 的值指定为 0   。 在这种情况下，还必须为 \@publisher_login 和 \@publisher_password 指定 SQL Server 身份验证的登录信息   。  
   
     -   （可选）快照代理作业的同步计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68768642"
   
 3.  向发布添加项目。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
   
-4.  在发布服务器上，对发布数据库执行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，并指定步骤 1 中 **@publication** 的值。  
+4.  在发布服务器上，对发布数据库执行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，并指定步骤 1 中 \@publication 的值  。  
   
 ## <a name="apply-a-snapshot"></a>应用快照  
 

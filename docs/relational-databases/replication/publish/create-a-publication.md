@@ -16,12 +16,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7e4676ec5360a235b1a5ec9f1bece8566f63625c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: dc432ca82662d098b970b2dbeab6a43243e2ead6
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769936"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846627"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,16 +110,16 @@ ms.locfileid: "68769936"
   
     -   如果无法确定已发布的数据库是否存在日志读取器代理作业，请在发布服务器上对发布数据库执行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。  
   
-    -   如果结果集为空，则创建日志读取器代理作业。 在发布服务器上，执行[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 将运行该代理时所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据指定给 **@job_name** 和 **@password** 中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password** 。 继续执行步骤 3。  
+    -   如果结果集为空，则创建日志读取器代理作业。 在发布服务器上，执行[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 为 \@job_name 和 \@password 指定运行该代理时所使用的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 凭据   。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则还必须将 \@publisher_security_mode 的值指定为 0 并为 \@publisher_login 和 \@publisher_password 指定 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息     。 继续执行步骤 3。  
   
-3.  在发布服务器上，执行[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 为 **@publication** 指定发布名称，并且对于 **@repl_freq** 参数，为快照发布指定 **snapshot** 值或为事务发布指定 **continuous** 值。 指定任何其他发布选项。 这便定义了发布。  
+3.  在发布服务器上，执行[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 为 \@publication指定发布名称，并且对于 \@repl_freq 参数，为快照发布指定 snapshot 值或为事务发布指定 continuous 值     。 指定任何其他发布选项。 这便定义了发布。  
   
     > [!NOTE]  
     >  发布名称不能包括下列字符：  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-4.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将步骤 3 中使用的发布名称指定给 **@publication** 指定在步骤 2 中使用的发布名称，并为 **@snapshot_job_name** 和 **@password** 中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password** 中对事务发布启用更新订阅。 此操作将为发布创建一个快照代理作业。  
+4.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 \@publication 指定为步骤 3 中使用的发布名称，并为 \@snapshot_job_name 和 \@password 指定运行该快照代理时所使用的 Windows 凭据    。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则还必须将 \@publisher_security_mode 的值指定为 0 并为 \@publisher_login 和 \@publisher_password 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息     。 此操作将为发布创建一个快照代理作业。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -132,14 +132,14 @@ ms.locfileid: "68769936"
   
 1.  在发布服务器上，执行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) 以允许使用合并复制发布当前数据库。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 为 **@publication** 指定发布的名称，并指定任何其他发布选项。 这便定义了发布。  
+2.  在发布服务器上，对发布数据库执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 为 \@publication 指定发布的名称，并指定任何其他发布选项  。 这便定义了发布。  
   
     > [!NOTE]  
     >  发布名称不能包括下列字符：  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-3.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 为 **@publication** 指定在步骤 2 中使用的发布名称，并为 **@snapshot_job_name** 和 **@password** 中对事务发布启用更新订阅。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则您还必须将 **@publisher_security_mode** 的值指定为 **@publisher_security_mode** 并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息指定给 **@publisher_login** 和 **@publisher_password** 中对事务发布启用更新订阅。 此操作将为发布创建一个快照代理作业。  
+3.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 \@publication 指定为步骤 2 中使用的发布名称，并为 \@snapshot_job_name 和 \@password 指定运行该快照代理时所使用的 Windows 凭据    。 如果代理在连接到发布服务器时使用 SQL Server 身份验证，则还必须将 \@publisher_security_mode 的值指定为 0 并为 \@publisher_login 和 \@publisher_password 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录信息     。 此操作将为发布创建一个快照代理作业。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  

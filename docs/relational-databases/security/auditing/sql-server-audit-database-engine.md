@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742877"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878683"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -144,13 +144,18 @@ ms.locfileid: "68742877"
 ### <a name="data-definition-language-statements"></a>数据定义语言语句  
  可以使用下列 DDL 语句创建、更改和删除审核规范：  
   
-|||  
+|DDL 语句|描述| 
 |-|-|  
-|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|  
+|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|更改安全对象的所有权。|  
+|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|使用 SQL Server 审核功能更改数据库审核规范对象。|  
+|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|使用 SQL Server 审核功能更改服务器审核对象。|  
+|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|使用 SQL Server 审核功能更改服务器审核规范对象。|  
+|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|使用 SQL Server 审核功能创建数据库审核规范对象。|  
+|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|使用 SQL Server 审核创建服务器审核对象。|  
+|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|使用 SQL Server 审核功能创建服务器审核规范对象。|  
+|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|使用 SQL Server 审核功能删除数据库审核规范对象。|  
+|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|使用 SQL Server Audit 功能删除服务器审核对象。|  
+|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|使用 SQL Server 审核功能删除服务器审核规范对象。|  
   
 ### <a name="dynamic-views-and-functions"></a>动态视图和函数  
  下表列出了可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核的动态视图和函数。  

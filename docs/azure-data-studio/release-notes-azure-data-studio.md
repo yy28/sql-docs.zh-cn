@@ -9,17 +9,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/15/2019
-ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.date: 09/11/2019
+ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059263"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878623"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="september-2019"></a>2019 年 9 月
+
+2019 年 9 月 10 日 &nbsp; / &nbsp; 版本：1.11.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 启用 SQLCMD 模式 | 查询编辑器现支持切换 SQLCMD 模式，以将查询作为 SQLCMD 脚本写入和编辑 |
+| Community 扩展插件：查询编辑器增强 | 查询编辑器增强是一种开放源代码扩展插件，旨在为经常编写查询的用户增强 Azure Data Studio 查询编辑器。 &bull; &nbsp; 将当前查询作为代码片段保存 <br/>&bull; &nbsp; 使用 Ctrl+U 切换数据库 <br/> &bull; &nbsp; 通过模板新建查询 <br/> &bull; &nbsp; 请在[此处](https://github.com/dzsquared/query-editor-boost)查看完整的改进列表 |
+| 笔记本改进 | &bull; &nbsp; 为支持大型笔记本文件而进行的性能改进 <br/> &bull; &nbsp; 请在[此处](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed)查看完整的改进列表 |
+| Visual Studio Code 8 月发布合并 1.38 | 可在[此处](https://code.visualstudio.com/updates/v1_38)查看最新的改进内容。 |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+- 笔记本
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) 罕见情况，错误序列化笔记本时出现
+
 
 ## <a name="august-2019"></a>2019 年 8 月
 

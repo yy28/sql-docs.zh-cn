@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78dd9533a33d3b28f4fffcb2bb0ff4cd6604713f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155814"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383823"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  不支持使用函数基对象的四部分名称。  
   
- 在动态 SQL 中可以创建、删除和引用同义词。  
+ 在动态 SQL 中可以创建、删除和引用同义词。
+ 
+ > [!NOTE]
+ > 同义词是特定于数据库的，其他数据库无法访问。
   
 ## <a name="permissions"></a>权限  
  若要在给定架构中创建同义词，则用户必须具有 CREATE SYNONYM 权限，并拥有架构或具有 ALTER SCHEMA 权限。  

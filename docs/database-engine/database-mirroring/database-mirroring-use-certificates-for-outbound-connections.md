@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044558"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846660"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>数据库镜像 - 使用证书进行出站连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68044558"
   
 ## <a name="procedure"></a>过程  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>配置用于出站镜像连接的服务器实例（在 HOST_A 上）  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>配置用于出站镜像连接的服务器实例（在 HOST_A 上）  
   
 1.  在 **master** 数据库上，创建数据库主密钥（如果不存在）。 若要查看数据库的现有密钥，请使用 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 目录视图。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68044558"
      例如，为 HOST_A 系统创建一个证书。  
   
     > [!IMPORTANT]  
-    >  如果您想要使用超过一年的证书，则通过在 CREATE CERTIFICATE 语句中使用 EXPIRY_DATE 选项，按 UTC 时间指定到期日期。 此外，我们建议您使用 SQL Server Management Studio 来创建基于策略的管理规则，以便在证书到期时提醒您。 使用策略管理的 **“创建新条件”** 对话框，在 **@ExpirationDate** 方面的 **“到期日期”** 字段中创建此规则。 有关详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)。  
+    >  如果您想要使用超过一年的证书，则通过在 CREATE CERTIFICATE 语句中使用 EXPIRY_DATE 选项，按 UTC 时间指定到期日期。 此外，我们建议您使用 SQL Server Management Studio 来创建基于策略的管理规则，以便在证书到期时提醒您。 使用策略管理的“创建新条件”对话框，在“证书”方面的“\@ExpirationDate”字段中创建此规则    。 有关详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)。  
   
     ```  
     USE master;  

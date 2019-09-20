@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/01/2019
-ms.openlocfilehash: 2011de961cc7f54a23b19928a7f6f9df8b962ac8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e73e3d8cc0b54f0251530327dbcea941546471d5
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262773"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212436"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>在 SQL Server Management Studio (SSMS) 崩溃后，获取诊断数据
 
@@ -33,42 +33,41 @@ ms.locfileid: "68262773"
 
 3. 打开命令提示符，并运行以下命令。
 
-    ```command prompt  <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
+    ```console
+    <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
-    If it prompts you to accept a license agreement, select *Agree*.
+    提示你接受许可协议时，请选择“同意”  。
 
-4. Start SSMS, if it hasn't started already.
+4. 如果尚未启动 SSMS，请启动它。
 
-5. Reproduce the issue.
+5. 重现问题。
 
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
+6. 关于写入转储文件的命令提示符中应该会出现文本，请等待此操作完成。
 
-7. Create a new folder and copy the *.dmp file that is written out to that folder.
+7. 新建文件夹，并将写入操作输出的 *.dmp 文件复制此文件夹中。
 
-8. Copy the following files into the same folder.
+8. 将下列文件复制到同一文件夹中。
 
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-    "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
+    “C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll”  “C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll”  “C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll”
 
-9. Zip up the folder
+9. 压缩此文件夹
 
-## Get full memory dump for an OutOfMemoryException
+## <a name="get-full-memory-dump-for-an-outofmemoryexception"></a>获取 OutOfMemoryException 的完整内存转储
 
-Get a full memory dump of SSMS when it throws an OutOfMemoryException.
+当 SSMS 引发 OutOfMemoryException 时，获取它的完整内存转储。
 
-You can get a full memory dump with any managed exception.
+可获取任何托管异常的完整内存转储。
 
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, follow the steps below.
+若要捕获诊断信息以排查 SSMS 引发的 OutOfMemoryException，请按照以下步骤操作。
 
-1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. 下载 [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx)。
 
-2. Unzip the download into a folder.
+2. 将下载内容解压缩到文件夹中。
 
-3. Open Command Prompt and run the following command.
+3. 打开命令提示符，并运行以下命令。
 
-    ```command prompt
+    ```console
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
     ```
 

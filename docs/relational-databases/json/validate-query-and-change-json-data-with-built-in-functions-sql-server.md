@@ -13,12 +13,12 @@ ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48edab2025adda718021f6e63815fc691540753c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 337a1b694023bfba9376c461255979d944330c5f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074205"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70908324"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>使用内置函数 (SQL Server) 验证、查询和更改 JSON 数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,62 +34,151 @@ JSON 的内置支持包括本主题简要介绍的下列内置函数。
 -   [JSON_MODIFY](#MODIFY) 更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。  
  
 ## <a name="json-text-for-the-examples-on-this-page"></a>此页上的示例 JSON 文本
-此页上的示例使用以下包含复杂元素的 JSON 文本。
 
-```sql 
-DECLARE @jsonInfo NVARCHAR(MAX)
+此页上的示例使用与以下示例中所示内容类似的 JSON 文本：
 
-SET @jsonInfo=N'{  
-     "info":{    
-       "type":1,  
-       "address":{    
-         "town":"Bristol",  
-         "county":"Avon",  
-         "country":"England"  
-       },  
-       "tags":["Sport", "Water polo"]  
-    },  
-    "type":"Basic"  
- }' 
+```json
+{
+  "id": "WakefieldFamily",
+  "parents": [
+      { "familyName": "Wakefield", "givenName": "Robin" },
+      { "familyName": "Miller", "givenName": "Ben" }
+  ],
+  "children": [
+      {
+        "familyName": "Merriam",
+        "givenName": "Jesse",
+        "gender": "female",
+        "grade": 1,
+        "pets": [
+            { "givenName": "Goofy" },
+            { "givenName": "Shadow" }
+        ]
+      },
+      { 
+        "familyName": "Miller",
+         "givenName": "Lisa",
+         "gender": "female",
+         "grade": 8 }
+  ],
+  "address": { "state": "NY", "county": "Manhattan", "city": "NY" },
+  "creationDate": 1431620462,
+  "isRegistered": false
+}
+```
+
+此 JSON 文档包含嵌套的复杂元素，存储在下面的示例表中：
+
+```sql
+CREATE TABLE Families (
+   id int identity constraint PK_JSON_ID primary key,
+   doc nvarchar(max)
+)
 ``` 
 
 ##  <a name="ISJSON"></a> 使用 ISJSON 函数验证 JSON 文本  
  **ISJSON** 函数测试字符串是否包含有效 JSON。  
   
-下面的示例将返回其列 `json_col` 包含有效 JSON 的行。  
+下面的示例将返回 JSON 列包含有效 JSON 文本的行。 请注意，如果没有显式 JSON 约束，则可在 NVARCHAR 列中输入任意文本：  
   
 ```sql  
-SELECT id, json_col
-FROM tab1
-WHERE ISJSON(json_col) > 0 
+SELECT *
+FROM Families
+WHERE ISJSON(doc) > 0 
 ```  
 
 有关详细信息，请参阅 [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)。  
   
 ##  <a name="VALUE"></a> 使用 JSON_VALUE 函数从 JSON 文本中提取值  
-**JSON_VALUE** 函数从 JSON 字符串中提取标量值。  
-  
-下面的示例将嵌套的 JSON 属性 `town` 的值提取到本地变量。  
-  
+**JSON_VALUE** 函数从 JSON 字符串中提取标量值。 下面的查询将返回其中 `id` JSON 字段与值 `AndersenFamily` 一致的文档，按 `city` 和 `state` JSON 字段排序：
+
 ```sql  
-SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       JSON_VALUE(f.doc, '$.address.county') AS County
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
+ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.state') ASC
 ```  
-  
+
+此查询结果显示在下表中：
+
+| “属性” | City | County |
+| --- | --- | --- |
+| AndersenFamily | NY | 曼哈顿 |
+
 有关详细信息，请参阅 [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)。  
   
 ##  <a name="QUERY"></a> 使用 JSON_QUERY 函数从 JSON 文本中提取对象或数组  
-**JSON_QUERY** 函数从 JSON 字符串中提取对象或数组。  
- 
-下面的示例演示了如何在查询结果中返回 JSON 片段。  
+
+**JSON_QUERY** 函数从 JSON 字符串中提取对象或数组。 下面的示例演示了如何在查询结果中返回 JSON 片段。  
   
-```sql  
-SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
-FROM Person.Person
-ORDER BY LastName
+```sql
+SELECT JSON_QUERY(f.doc, '$.address') AS Address,
+       JSON_QUERY(f.doc, '$.parents') AS Parents,
+       JSON_QUERY(f.doc, '$.parents[0]') AS Parent0
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
-  
+此查询结果显示在下表中：
+
+| Address | 父项 | Parent0 |
+| --- | --- | --- |
+| { "state":"NY", "county":"Manhattan", "city":"NY" } | [{ "familyName":"Wakefield", "givenName":"Robin" }, {"familyName":"Miller", "givenName":"Ben" } ]| { "familyName":"Wakefield", "givenName":"Robin" } |
+
 有关详细信息，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。  
-  
+
+## <a name="parse-nested-json-collections"></a>分析嵌套式 JSON 集合
+
+通过 `OPENJSON` 函数，可将 JSON 子数组转换为行集，然后将其与父元素联接在一起。 例如，可返回所有家庭文档，并将其与存储为内部 JSON 数组的 `children` 对象“联接”起来：
+
+```sql
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       c.givenName, c.grade
+FROM Families f
+        CROSS APPLY OPENJSON(f.doc, '$.children')
+            WITH(grade int, givenName nvarchar(100))  c
+```
+
+此查询结果显示在下表中：
+
+| “属性” | City | givenName | 年级 |
+| --- | --- | --- | --- |
+| AndersenFamily | NY | Jesse | 1 |
+| AndersenFamily | NY | Lisa | 8 |
+
+最终我们得到两个行，因为一个父行与通过分析子级子数组的两个元素产生的两个子行联接在一起。 `OPENJSON` 函数分析 `doc` 列中的 `children` 片段，并返回每个元素中的 `grade` 和 `givenName` 作为一个行集。 此行集可以与父文档进行联接。
+ 
+## <a name="query-nested-hierarchical-json-sub-arrays"></a>查询嵌套式分层 JSON 子数组
+
+可应用多个 `CROSS APPLY OPENJSON` 调用以查询嵌套式 JSON 结构。 本示例中使用的 JSON 文档具有名为 `children` 的嵌套数组，其中每个子级都有 `pets` 的嵌套数组。 下面的查询将分析每个文档中的子级，将每个数组对象作为行返回，然后分析 `pets` 数组：
+
+```sql
+SELECT  familyName,
+    c.givenName AS childGivenName,
+    c.firstName AS childFirstName,
+    p.givenName AS petName 
+FROM Families f 
+    CROSS APPLY OPENJSON(f.doc) 
+        WITH (familyName nvarchar(100), children nvarchar(max) AS JSON)
+        CROSS APPLY OPENJSON(children) 
+        WITH (givenName nvarchar(100), firstName nvarchar(100), pets nvarchar(max) AS JSON) as c
+            OUTER APPLY OPENJSON (pets)
+            WITH (givenName nvarchar(100))  as p
+```
+
+首次进行 `OPENJSON` 调用将使用 AS JSON 子句返回 `children` 数组的片段。 此数组片段将提供给第二个 `OPENJSON` 函数，该函数将返回每个小孩的 `firstName` 和 `givenName` 以及`pets` 数组。 `pets` 的数组将提供给第三个 `OPENJSON` 函数，该函数将返回宠物的 `givenName`。
+此查询结果显示在下表中：
+
+| familyName | childGivenName | childFirstName | petName |
+| --- | --- | --- | --- |
+| AndersenFamily | Jesse | Merriam | Goofy |
+| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Lisa | Miller| `NULL` |
+
+根文档与两个 `children` 行进行了联接，这两个行由生成两个行（或元组）的首次 `OPENJSON(children)` 调用返回。 然后，使用 `OUTER APPLY` 运算符将每行与由 `OPENJSON(pets)` 生成的新行进行联接。 Jesse 有两只宠物，因此 `(AndersenFamily, Jesse, Merriam)` 与为 Goofy 和 Shadow 生成的两行进行了联接。 Lisa 没有宠物，因此 `OPENJSON(pets)` 没有为该元组返回的任何行。 但是，由于我们使用的是 `OUTER APPLY`，因此这列的结果是 `NULL`。 如果我们使用 `CROSS APPLY` 而不是 `OUTER APPLY`，则不会在结果中返回 Lisa，因为没有可以与该元组联接的任何宠物行。
+
 ##  <a name="JSONCompare"></a> 对比 JSON_VALUE 与 JSON_QUERY  
 **JSON_VALUE** 和 **JSON_QUERY** 之间的主要区别在于 **JSON_VALUE** 返回标量值，而 **JSON_QUERY** 返回数组或对象。  
   
@@ -113,7 +202,7 @@ ORDER BY LastName
 |**$.b[0]**|1|NULL 或错误|  
 |**$.c**|hi|NULL 或错误|  
   
-## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>使用 AdventureWorks 示例数据库测试 JSON_VALUE 和 JSON_QUERY  
+## <a name="test-json_value-and-json_query-with-the-adventureworks-sample-database"></a>使用 AdventureWorks 示例数据库测试 JSON_VALUE 和 JSON_QUERY  
 通过使用 AdventureWorks 示例数据库运行以下示例，对本主题中所述的内置函数进行测试。 有关何处获取 AdventureWorks 的信息，以及如何通过运行脚本添加用于测试的 JSON 数据，请参阅[测试驱动的内置 JSON 支持](json-data-sql-server.md#test-drive-built-in-json-support-with-the-adventureworks-sample-database)。
   
 在下面的示例中，`SalesOrder_json` 表中的 `Info` 列包含了 JSON 文本。  
@@ -154,7 +243,7 @@ HAVING SUM(SubTotal)>1000
 ```  
   
 ##  <a name="MODIFY"></a> 使用 JSON_MODIFY 函数更新 JSON 文本中的属性值  
-JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串。  
+JSON_MODIFY 函数更新 JSON 字符串中属性的值，并返回已更新的 JSON 字符串  。  
   
 以下示例将更新包含 JSON 的变量中的 JSON 属性的值。  
   

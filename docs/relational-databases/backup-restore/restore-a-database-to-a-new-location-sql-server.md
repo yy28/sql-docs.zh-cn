@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bef38ae0b93eb43d508192c6f748a36320143689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937530"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278916"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>将数据库还原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "67937530"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在“源:设备:数据库”列表框中，选择应还原的数据库名称**。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称  。  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -107,64 +107,64 @@ ms.locfileid: "67937530"
   
 2.  使用 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 语句还原完整数据库备份。 默认情况下，数据文件和日志文件还原到它们的原位置。 若要重新定位数据库，请使用 MOVE 选项重新定位每个数据库文件并避免与现有文件发生冲突。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
+  将数据库还原到新位置并使其具有新名称的基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法如下：  
   
-     RESTORE DATABASE *new_database_name*  
+  RESTORE DATABASE *new_database_name*  
   
-     FROM *backup_device* [ ,...*n* ]  
+  FROM *backup_device* [ ,...*n* ]  
   
-     [ WITH  
+  [ WITH  
   
-     {  
+  {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  [ **RECOVERY** | NORECOVERY ]  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
-     }  
+  }  
   
-     ;  
+  ;  
   
-    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
+  > [!NOTE] 
+  > 准备将数据库重新定位到其他磁盘上时，应当验证是否有足够的可用空间并确定与现有文件之间的任何潜在冲突。 这涉及到使用 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 语句，该语句指定您计划在 RESTORE DATABASE 语句中使用的相同 MOVE 参数。  
   
-     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+  下表介绍了此 RESTORE 语句在将数据库还原到新位置时所涉及的参数。 有关这些参数的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
-     *new_database_name*  
-     The new name for the database.  
+  *new_database_name*  
+  数据库的新名称。  
   
-    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
+  > [!NOTE]
+  > 如果要将数据库还原到其他服务器实例，则可以使用原始数据库名称而不是新名称。  
   
-     *backup_device* [ **,**...*n* ]  
-     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
+  *backup_device* [ **,** ...*n* ]  
+  指定包含 1 到 64 个备份设备的逗号分隔的列表，数据库备份将从这些备份设备中还原。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  { DISK | TAPE } **=** _physical_backup_device_name_  
   
-     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+  有关详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
-     { **RECOVERY** | NORECOVERY }  
-     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
+  { **RECOVERY** | NORECOVERY }  
+  如果数据库使用完整恢复模式，则可能需要在还原该数据库后应用事务日志备份。 在这种情况下，请指定 NORECOVERY 选项。  
   
-     Otherwise, use the RECOVERY option, which is the default.  
+  否则，请使用默认值 RECOVERY 选项。  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
+  FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
+  标识要还原的备份集。 例如， *backup_set_file_number* 为 **1** 指示备份介质中的第一个备份集， *backup_set_file_number* 为 **2** 指示第二个备份集。 你可以通过使用 *RESTORE HEADERONLY* 语句来获取备份集的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
   
-     When this option is not specified, the default is to use the first backup set on the backup device.  
+  未指定此选项时，默认为使用备份设备上的第一个备份集。  
   
-     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  有关详细信息，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的“指定备份集”。  
   
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
+  MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
+  指定由 *logical_file_name_in_backup* 指定的数据或日志文件将还原到 *operating_system_file_name*指定的位置。 请为每个要从备份集还原到新位置的逻辑文件指定 MOVE 语句。  
   
-    |选项|描述|  
-    |------------|-----------------|  
-    |*logical_file_name_in_backup*|指定备份集中数据文件或日志文件的逻辑名称。 创建备份集时，备份集中的数据或日志文件的逻辑文件名与其在数据库中的逻辑名称匹配。<br /><br /> <br /><br /> 注意：若要从备份集中获取逻辑文件列表，请使用 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。|  
-    |*operating_system_file_name*|指定由 *logical_file_name_in_backup*指定的文件的新位置。 文件将还原到此位置。<br /><br /> 或者， *operating_system_file_name* 指定已还原文件的新文件名。 如果您在相同服务器实例上创建现有数据库的副本，则此操作是必需的。|  
-    |*n*|是指示可以指定其他 MOVE 语句的占位符。|  
+  |选项|描述|  
+  |------------|-----------------|  
+  |*logical_file_name_in_backup*|指定备份集中数据文件或日志文件的逻辑名称。 创建备份集时，备份集中的数据或日志文件的逻辑文件名与其在数据库中的逻辑名称匹配。<br /><br /> <br /><br /> 注意：若要从备份集中获取逻辑文件列表，请使用 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。|  
+  |*operating_system_file_name*|指定由 *logical_file_name_in_backup*指定的文件的新位置。 文件将还原到此位置。<br /><br /> 或者， *operating_system_file_name* 指定已还原文件的新文件名。 如果您在相同服务器实例上创建现有数据库的副本，则此操作是必需的。|  
+  |*n*|是指示可以指定其他 MOVE 语句的占位符。|  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例通过还原 `MyAdvWorks` 示例数据库的备份创建名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的一个新数据库，该数据库包括两个文件： [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log。 此数据库使用简单恢复模式。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库已经存在于服务器实例上，因此备份中的文件必须还原到一个新位置。 RESTORE FILELISTONLY 语句用于确定数据库中要还原的文件数和名称。 该数据库备份是备份设备上的第一个备份集。  

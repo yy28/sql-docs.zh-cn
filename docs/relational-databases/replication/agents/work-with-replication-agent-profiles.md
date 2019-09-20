@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 80d8d7d5f4a02c119a1b038023505d60eddec6ab
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a1a0b084175de3e06eb69f245c3c634c12dd8364
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768162"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846781"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "68768162"
   
 ###  <a name="Create_tsql"></a> 创建一个新的代理配置文件  
   
-1.  在分发服务器上，执行 [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)。 指定 **@name** ，将 **@profile_type** 的值指定为 **@profile_type** ，并为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)。 指定 \@name，将 \@profile_type 的值指定为 1，并为 \@agent_type 指定下列值之一     ：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -152,13 +152,13 @@ ms.locfileid: "68768162"
   
     -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     如果此配置文件将成为此复制代理类型的新默认配置文件，请将 **@profile_type** 的值指定为 **@default** 。 使用 **@profile_id** 输出参数可返回新配置文件的标识符。 这将会使用基于给定代理类型的默认配置文件的配置文件参数集创建新的配置文件。  
+     如果此配置文件将成为此复制代理类型的新默认配置文件，请将 \@default 的值指定为 1   。 使用 \@profile_id 输出参数可返回新配置文件的标识符  。 这将会使用基于给定代理类型的默认配置文件的配置文件参数集创建新的配置文件。  
   
 2.  在已创建新配置文件后，可添加、删除或修改默认参数以自定义该配置文件。  
   
 ###  <a name="Modify_tsql"></a> 修改现有代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 为 \@agent_type 指定下列值之一  ：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -172,24 +172,24 @@ ms.locfileid: "68768162"
   
      这将返回指定类型的代理的所有配置文件。 请记下要更改的配置文件在结果集中的 **profile_id** 值。  
   
-2.  在分发服务器上，执行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)。 为 **@profile_id** 。 这将返回该配置文件的所有参数。 请记下要从配置文件中修改或删除的任何参数的名称。  
+2.  在分发服务器上，执行 [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)。 为 \@profile_id 指定步骤 1 中的配置文件标识符  。 这将返回该配置文件的所有参数。 请记下要从配置文件中修改或删除的任何参数的名称。  
   
-3.  若要更改配置文件中的参数值，请执行 [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符，为 **@parameter_name** 指定要更改的参数的名称，并为 **@parameter_value** 。  
+3.  若要更改配置文件中的参数值，请执行 [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)。 为 \@profile_id 指定步骤 1 中的配置文件标识符，为 \@parameter_name 指定要更改的参数的名称，并为 \@parameter_value 指定一个新的参数值    。  
   
     > [!NOTE]  
     >  您不能将现有的代理配置文件更改为代理的默认配置文件。 相反，您必须创建一个新的配置文件以作为默认配置文件，如前面的过程所示。  
   
-4.  若要从配置文件中删除参数，请执行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符并为 **@parameter_name** 。  
+4.  若要从配置文件中删除参数，请执行 [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)。 为 \@profile_id 指定步骤 1 中的配置文件标识符并为 \@parameter_name 指定要删除的参数的名称   。  
   
 5.  若要向配置文件添加新的参数，必须执行下列操作：  
   
     -   查询分发服务器上的 [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) 表以确定可为每个代理类型设置哪些配置文件参数。  
   
-    -   在分发服务器上，执行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。 为 **@profile_id** 指定步骤 1 中的配置文件标识符，为 **@parameter_name** 指定要添加的有效参数的名称，并为 **@parameter_value** 。  
+    -   在分发服务器上，执行 [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。 为 \@profile_id 指定步骤 1 中的配置文件标识符，为 \@parameter_name 指定要添加的有效参数的名称，并为 \@parameter_value 指定参数的值    。  
   
 ###  <a name="Delete_tsql"></a> 删除代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 为 \@agent_type 指定下列值之一  ：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -203,11 +203,11 @@ ms.locfileid: "68768162"
   
      这将返回指定类型的代理的所有配置文件。 请记下要删除的配置文件在结果集中的 **profile_id** 值。  
   
-2.  在分发服务器上，执行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)。 为 **@profile_id** 。  
+2.  在分发服务器上，执行 [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)。 为 \@profile_id 指定步骤 1 中的配置文件标识符  。  
   
 ###  <a name="Synch_tsql"></a> 在同步期间使用代理配置文件  
   
-1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 为 **@agent_type** 指定下列值之一：  
+1.  在分发服务器上，执行 [sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)。 为 \@agent_type 指定下列值之一  ：  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

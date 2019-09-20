@@ -3,17 +3,17 @@ title: Linux 上 SQL Server 的安全限制
 description: 本文介绍 Linux 上的 SQL Server 限制。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/30/2018
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 9f54197c8613293b36c1eb1ec362a8ed4db835e4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065117"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929811"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux 上 SQL Server 的安全限制
 
@@ -21,7 +21,7 @@ ms.locfileid: "68065117"
 
 Linux 上的 SQL Server 当前具有以下限制：
 
-* 提供了标准密码策略。 MUST_CHANGE 是可以配置的唯一选项。  
+* 提供了标准密码策略。 MUST_CHANGE 是可以配置的唯一选项。 不支持 CHECK_POLICY 选项。
 * 不支持可扩展密钥管理。 
 * 不支持使用 Azure Key Vault 中存储的密钥。
 * SQL Server 生成自己的自签名证书，用于加密连接。 可以将 SQL Server 配置为使用用户提供的用于 TLS 的证书。 

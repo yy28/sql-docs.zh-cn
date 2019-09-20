@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531026"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874888"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
 
@@ -304,7 +304,7 @@ SSDT for Visual Studio 2017。
 
 除了安装程序的以下 bug 修复以外，Visual Studio 2017 (15.5.1) 与版本 15.5.0 相同：
 
-1.  修复安装程序在 SQL Server Integration Services 安装后挂起的问题。
+1.  修复安装程序在 SQL Server Integration Services 安装后停止响应的问题。
 2.  修复了安装失败后会显示以下错误消息的问题：“不支持请求的元文件操作(0x800707D3)”。
 
 除了这两个 bug 修复之外，以下有关 15.5.0 的详细信息也仍适用于 15.5.1
@@ -497,7 +497,7 @@ SSDT for Visual Studio 2015。
 - 修复了结构数据源上的 ChangeSource 在上下文表达式中不会持续更改的问题
 - 修复了 M 表达式错误可能导致无法更新模型，而不显示错误消息的问题
 - 修复了关闭 SSDT 时显示“The build must be stopped before the solution can be closed”错误的问题
-- 修复了在 1400 兼容级别模型中设置了错误的模拟模式时，VS 可能出现挂起状态的问题 
+- 修复了在 1400 兼容级别模型中设置了错误的模拟模式时，VS 可能停止响应的问题 
 - 目前，详细信息行属性不为空时，只会序列化为 JSON（更改了默认设置）
 - Oracle OLEDB 驱动程序现可用于表格直接查询模式下的列表中
 - 在 1400 兼容表格模型中添加 M 表达式，这一操作现在会在表格模型资源管理器 (TME) 中显示\刷新
@@ -844,7 +844,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 * 修复了 SSDT AS 项目属性对话框中的一个问题。现在，在以高 DPI 缩放比例调整大小时，可以正确定位。
 * 修复了 SSDT AS 项目中一个可能会导致升级包含粘贴表的某些模型时出错的问题。
 * 修复了以下 SSDT AS 问题：从 Excel 粘贴所有工作表行时速度非常缓慢，并且会创建许多不需要的列。
-* 修复了以下 SSDT AS 问题：大型静态 DataTable 表达式的分析和突出显示速度非常缓慢，似乎已挂起。
+* 修复了以下 SSDT AS 问题：大型静态 DataTable 表达式的分析和突出显示速度非常缓慢，似乎已停止响应。
 * 修复了 SSDT AS 中的一个问题，现在会将度量值和 KPI 值添加到在编辑器中选择的当前透视图。
 * 修复了 SSDT 中的一个问题：从 SQL Azure 导入 AS 项目的数据不支持除“dbo”以外的架构类型。
 

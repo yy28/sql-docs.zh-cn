@@ -15,12 +15,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbb1985f30dc87520273da62e62a34bc838d5b6a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f26e62210052e297cc47eef97f44ac9bfb462bb1
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764111"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846582"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定义和修改静态行筛选器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,15 +113,15 @@ ms.locfileid: "68764111"
   
 1.  定义要筛选的项目。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 为 **@article** 指定项目的名称，为 **@publication** 指定发布的名称，为 **@filter_name** 指定筛选器的名称，并为 **@filter_clause** 指定筛选子句（不包括 `WHERE`）。  
+2.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 为 \@article 指定项目的名称，为 \@publication 指定发布的名称，为 \@filter_name 指定筛选器的名称，并为 \@filter_clause 指定筛选子句（不包括 `WHERE`）     。  
   
-3.  如果还必须定义列筛选器，请参阅 [定义和修改列筛选器](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 否则，执行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 为 **@publication** 指定发布名称、为 **@article** 指定筛选项目的名称，并为 **@filter_clause** 中定义和修改静态行筛选器。 这将为筛选的项目创建同步对象。  
+3.  如果还必须定义列筛选器，请参阅 [定义和修改列筛选器](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 否则，执行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 为 \@publication 指定发布名称，为 \@article 指定筛选项目的名称，为 \@filter_clause 指定步骤 2 中指定的筛选子句    。 这将为筛选的项目创建同步对象。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布修改静态行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 为 **@article** 指定项目的名称，为 **@publication** 指定发布的名称，为 **@filter_name** 指定新筛选器的名称，并为 **@filter_clause** 指定筛选子句（不包括 `WHERE`）。 由于此更改将使现有订阅中的数据失效，因此请将 **@force_reinit_subscription** 的值指定为 **@force_reinit_subscription** 中定义和修改静态行筛选器。  
+1.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 为 \@article 指定项目的名称，为 \@publication 指定发布的名称，为 \@filter_name 指定新筛选器的名称，并为 \@filter_clause 指定新筛选子句（不包括 `WHERE`）     。 由于此更改将使现有订阅中的数据失效，因此请将 \@force_reinit_subscription 的值指定为 1   。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 为 **@publication** 指定发布名称、为 **@article** 指定筛选项目的名称，为 **@filter_clause** 中定义和修改静态行筛选器。 这将重新创建定义筛选项目的视图。  
+2.  在发布服务器上，对发布数据库执行 [sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)。 为 \@publication 指定发布名称，为 \@article 指定筛选项目的名称，为 \@filter_clause 指定步骤 1 中指定的筛选子句    。 这将重新创建定义筛选项目的视图。  
   
 3.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [创建并应用初始快照](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68764111"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布删除静态行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 为 **@article** 指定项目的名称，为 **@publication** 指定发布的名称，将 **@filter_name** 的值指定为 NULL，并将 **@filter_clause** 中定义和修改静态行筛选器。 由于此更改将使现有订阅中的数据失效，因此请将 **@force_reinit_subscription** 的值指定为 **@force_reinit_subscription** 中定义和修改静态行筛选器。  
+1.  在发布服务器上，对发布数据库执行 [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)。 为 \@article 指定项目的名称，为 \@publication 指定发布的名称，将 \@filter_name 的值指定为 NULL，并将 \@filter_clause 的值指定为 NULL     。 由于此更改将使现有订阅中的数据失效，因此请将 \@force_reinit_subscription 的值指定为 1   。  
   
 2.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [创建并应用初始快照](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
@@ -137,13 +137,13 @@ ms.locfileid: "68764111"
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>为合并发布定义静态行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 **@subset_filterclause** 指定筛选子句（不包括 `WHERE`）。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 为 \@subset_filterclause 指定筛选子句（不包括 `WHERE`）  。 有关详细信息，请参阅 [定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  如果还必须定义列筛选器，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>为合并发布修改静态行筛选器  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 为 **@publication** 指定发布名称、为 **@article** 指定筛选项目的名称，为 **@property** 的值指定为 **@property** 指定新筛选器的名称，并为 **@value** 指定筛选子句（不包括 `WHERE`）。 由于此更改将使现有订阅中的数据失效，因此请将 **@force_reinit_subscription** 中定义和修改静态行筛选器。  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 为 \@publication 指定发布名称，为 \@article 指定筛选项目的名称，为 \@property 指定 subset_filterclause 值，并为 \@value 指定新筛选子句（不包括 `WHERE`）      。 由于此更改将使现有订阅中的数据失效，因此请将 \@force_reinit_subscription 的值指定为 1  。  
   
 2.  对发布重新运行快照代理作业以生成更新的快照。 有关详细信息，请参阅 [创建并应用初始快照](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   

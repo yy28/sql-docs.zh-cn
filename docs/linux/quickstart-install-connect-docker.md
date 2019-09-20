@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: cc4eeb8c4e3d462d6df3aa76d972404ffe3120c1
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 9f68a633252b8d822fa91a2f88deb35c02788f6f
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608392"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929729"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 
@@ -102,7 +102,7 @@ any changes to one section should be duplicated in the other-->
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -110,7 +110,7 @@ any changes to one section should be duplicated in the other-->
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -126,11 +126,11 @@ any changes to one section should be duplicated in the other-->
 
    | 参数 | 描述 |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
-   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
+   | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
-   | **mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
+   | **-d mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
 3. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
@@ -213,7 +213,7 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" \
+   sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
@@ -221,7 +221,7 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
@@ -229,7 +229,7 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
@@ -245,8 +245,8 @@ SELECT @@SERVERNAME,
 
    | 参数 | 描述 |
    |-----|-----|
-   | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
-   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
+   | **-e "ACCEPT_EULA=Y"** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](https://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
    | **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** | SQL Server 2019 CTP3.2 Linux 容器映像。 |
@@ -304,16 +304,16 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" \
-      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" \
+      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong@Passw0rd>"'
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
-      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
-      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+      -S localhost -U SA -P "<YourStrong@Passw0rd>" `
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end
 
@@ -321,7 +321,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
    ```cmd
    docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -S localhost -U SA -P "<YourStrong!Passw0rd>" `
-      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong@Passw0rd>'"
    ```
    ::: zone-end
 
@@ -352,7 +352,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 2. 在容器内部使用 sqlcmd 进行本地连接。 默认情况下，sqlcmd 不在路径之中，因此需要指定完整路径。
 
    ```bash
-   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong!Passw0rd>"
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong@Passw0rd>"
    ```
 
    > [!TIP]
@@ -454,19 +454,19 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong@Passw0rd>"
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong@Passw0rd>"
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S <ip_address>,1433 -U SA -P "<YourNewStrong@Passw0rd>"
    ```
    ::: zone-end
 

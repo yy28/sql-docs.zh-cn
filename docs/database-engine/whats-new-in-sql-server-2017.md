@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 6c0889349631a543e970b11eff9bb24a6f2da208
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811280"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874453"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>数据库引擎中的新增功能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68811280"
 
 **增强功能**  
 
-- CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 现在可以将 CLR 程序集添加到白名单，作为 `clr strict security` 功能的变通方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集白名单。 有关详细信息，请参阅 [CLR 严格安全性](configure-windows/clr-strict-security.md)。  
+- CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 现在可以将 CLR 程序集添加到允许列表中，作为 `clr strict security` 功能的变通方法。 添加 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支持受信任的程序集允许列表。 有关详细信息，请参阅 [CLR 严格安全性](configure-windows/clr-strict-security.md)。  
 - 引入了新的 DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)，用于公开摘要级别特性和有关事务日志文件的信息；对于监视事务日志的运行状况很有用。  
 - 可恢复的联机索引重新生成。 可恢复的联机索引重新生成可从发生故障（例如到副本的故障转移或磁盘空间不足）后联机索引重新生成操作停止处恢复该操作。 还可暂停操作，随后再恢复联机索引重新生成操作。 例如，可能需要暂时释放系统资源，以便执行高优先级任务或在其他维护时段完成索引重新生成操作（如果可用的维护时段太短，不足以处理大型表格）。 最后一点，可恢复的联机索引重新生成操作不需要大量的日志空间，因此可以在可恢复的重新生成操作运行时执行日志截断。 请参阅 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[联机索引操作准则](../relational-databases/indexes/guidelines-for-online-index-operations.md)。
 - ALTER DATABASE SCOPED CONFIGURATION 的 IDENTITY_CACHE 选项  。 向 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 语句添加了新选项 IDENTITY_CACHE。 此选项设置为 `OFF` 时，如果服务器意外重启或故障转移到辅助服务器，数据库引擎可避免标识列的值中出现空白。 请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。   

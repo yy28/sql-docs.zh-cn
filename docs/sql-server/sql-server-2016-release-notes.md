@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a0bc3d50808c25999f1791a752e069bc02bed0d
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811559"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874925"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
  **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按 F1 时，将在浏览器中显示 F1 帮助文章的联机版本。 此问题在于基于浏览器的帮助，即使已配置并安装了本地帮助也不例外。
 
-**更新内容：** 在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。
+**更新内容：** 在 SQL Server Management Studio 和 Visual Studio 中，Help Viewer 应用程序可能会在添加文档的过程中停止响应。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。
 
 * 在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings |HlpViewer_VisualStudio14_en US.settings 文件，并将下面代码中的日期更改为在将来的某个日期。
 

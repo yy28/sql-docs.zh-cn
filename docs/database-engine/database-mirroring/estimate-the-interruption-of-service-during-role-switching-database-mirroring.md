@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997857"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874187"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997857"
 -   对于手动故障转移，中断时间仅指在发出故障转移命令后，数据库故障转移所需的时间。  
   
 ## <a name="error-detection"></a>错误检测  
- 系统发现错误的时间取决于错误类型；例如，网络错误几乎可以被立即注意到，而在默认情况下，注意到服务器挂起需要 10 秒（默认的超时期限）。  
+ 系统发现错误的时间取决于错误类型；例如，网络错误几乎可以被立即注意到，而注意到没有响应的服务器需要 10 秒（默认超时）。  
   
  有关可在数据库镜像会话期间导致失败以及在具有自动故障转移功能的高安全性模式下导致超时检测的错误的信息，请参阅 [数据库镜像期间可能出现的故障](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md))。  
   

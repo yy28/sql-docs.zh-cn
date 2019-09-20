@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942757"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276542"
 ---
 # <a name="manage-oracle-tablespaces"></a>管理 Oracle 表空间
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "67942757"
   
 -   使用 [sp_changearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 若要使用 **sp_changearticle**，请指定下列内容：  
   
-    -   为参数 **@publisher** 中的文件组。  
+    -   为参数 \@publisher 指定 Oracle 发布服务器的名称  。  
   
-    -   为参数 **@publication** 中的文件组。  
+    -   为参数 \@publication 指定 Oracle 发布的名称  。  
   
-    -   为参数 **@article** 中的文件组。  
+    -   为参数 \@article 指定项目的名称  。  
   
-    -   为参数 **@property** 中的文件组。  
+    -   为参数 \@property 指定“tablespace”值  。  
   
-    -   为参数 **@value** 中的文件组。  
+    -   为参数 \@value 指定表空间名称  。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

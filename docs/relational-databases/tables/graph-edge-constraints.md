@@ -1,7 +1,7 @@
 ---
 title: 图形边缘约束 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731050"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873880"
 ---
 # <a name="edge-constraints"></a>边缘约束
 
@@ -48,6 +48,14 @@ ms.locfileid: "67731050"
 ### <a name="indexes-on-edge-constraints"></a>边缘约束的索引
 
 创建边缘约束不会自动在边缘表中的 `$from_id` 和 `$to_id` 列上创建相应的索引。 如果拥有点查找查询或 OLTP 工作负载，建议在“`$from_id`，`$to_id`对上手动创建索引。
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>ON 删除边缘约束上的引用操作
+通过边缘约束上的级联操作，用户可以定义当某位用户删除给定边缘连接的节点时数据库引擎采取的操作。 可以定义以下引用操作：  
+不执行任何操作     
+尝试删除具有连接边缘的节点时，数据库引擎将引发错误。  
+
+级联     
+从数据库中删除某个节点时，会删除连接边缘。  
 
 ## <a name="working-with-edge-constraints"></a>使用边缘约束
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>定义对新边缘表的引用操作 
+
+下面的示例对“bought”边缘表创建边缘约束并定义删除级联引用操作  。 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 若要使用 Transact-SQL 修改边缘约束，必须首先删除现有的边缘约束，然后用新定义重新创建。
 
+
 ### <a name="view-edge-constraints"></a>查看边缘约束
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>相关任务
 
+[CREATE TABLE（SQL 图形）](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 若要了解 SQL Server 中的图形技术，请参阅[使用 SQL Server 和 Azure SQL 数据库进行图形处理](../graphs/sql-graph-overview.md?view=sql-server-2017)。
+

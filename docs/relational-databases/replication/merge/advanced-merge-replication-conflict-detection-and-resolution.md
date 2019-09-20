@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058123"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874861"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "68058123"
 ## <a name="conflict-resolution"></a>冲突解决  
  检测到冲突后，合并代理将启动选定的冲突解决程序，并使用该冲突解决程序来确定冲突解决入选方。 入选行将应用到发布服务器和订阅服务器，而落选行中的数据将写入冲突表。 除非选择交互解决冲突，否则冲突解决程序一经执行就会立即解决冲突。  
 
-解决合并复制冲突 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+解决合并复制冲突  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   当发布服务器与订阅服务器连接并进行同步时，合并代理将检测是否存在任何冲突。 如果检测到冲突，合并代理将使用冲突解决程序来确定将接受哪些数据并将其传播到其他站点。  
   
 > [!NOTE]  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134566"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211259"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>配置 SQL Server 代理邮件以使用数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134566"
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
+  > [!NOTE]
+  > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 [AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)，才能将 SQL 代理与数据库邮件绑定  。 
+  
 ###  <a name="Prerequisites"></a> 先决条件  
   
 -   [启用数据库邮件](../../relational-databases/database-mail/configure-database-mail.md)。  
   
 -    创建供[代理服务帐户使用的](../../relational-databases/database-mail/create-a-database-mail-account.md) 数据库邮件帐户 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
--   创建供[代理服务帐户使用的](../../relational-databases/database-mail/create-a-database-mail-profile.md) 数据库邮件配置文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并将用户添加到 **DatabaseMailUserRole** 数据库的 **DatabaseMailUserRole** 中。  
+-   创建供[代理服务帐户使用的](../../relational-databases/database-mail/create-a-database-mail-profile.md) 数据库邮件配置文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并将用户添加到 **DatabaseMailUserRole** 数据库的 **DatabaseMailUserRole** 中。
   
 -   将该配置文件设置为 **msdb** 数据库的默认配置文件。  
   
@@ -64,9 +67,9 @@ ms.locfileid: "68134566"
   
 -   在 **“邮件系统”** 列表中，选择 **“数据库邮件”** 。  
   
--   在 **“邮件配置文件列表”** 中，为数据库邮件选择一个邮件配置文件。  
+-   在 **“邮件配置文件列表”** 中，为数据库邮件选择一个邮件配置文件。 
   
--   重新启动 SQL Server 代理。  
+-   重启 SQL Server 代理。  
   
 ##  <a name="Follow_Up"></a> 后续任务  
  需要执行下列任务以完成对发送警报和通知的代理配置。  

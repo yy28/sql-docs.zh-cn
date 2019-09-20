@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c77649367b94cc2df914a121c068e5fa6db51234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083841"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846753"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>为包含参数化筛选器的合并发布创建快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,18 +120,18 @@ ms.locfileid: "68083841"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定下列参数：  
   
-    -   将 **@publication** 。  
+    -   将 \@publication 指定为发布的名称  。  
   
-    -   将 **true** 值指定为 **@allow_subscriber_initiated_snapshot** ，这样可使订阅服务器启动快照进程。  
+    -   将 true 值指定为 \@allow_subscriber_initiated_snapshot，这样可使订阅服务器启动快照进程   。  
   
-    -   （可选）将 **@max_concurrent_dynamic_snapshots** 。 如果正在运行的进程数达到了最大值，并且订阅服务器尝试生成快照，则该进程将被置于队列中。 默认情况下，并发进程的数量不受限制。  
+    -   （可选）将 \@max_concurrent_dynamic_snapshots 指定为可并发运行的动态快照进程数  。 如果正在运行的进程数达到了最大值，并且订阅服务器尝试生成快照，则该进程将被置于队列中。 默认情况下，并发进程的数量不受限制。  
   
-2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login [@password](../../relational-databases/replication/agents/replication-snapshot-agent.md) 和 **@job_login** 指定为用于运行 **@password** 。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password** 。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定在步骤 1 中对 \@publication 使用的发布名称以及[复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)针对 \@job_login和 \@password 运行的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据    。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 \@publisher_security_mode 的值指定为 0，并为 \@publisher_login 和 \@publisher_password 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息     。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-3.  执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，将项目添加到发布。 必须对发布中的每个项目执行一次此存储过程。 使用参数化筛选器时，必须使用 **@subset_filterclause** 参数为一个或多个项目指定参数化行筛选器。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+3.  执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，将项目添加到发布。 必须对发布中的每个项目执行一次此存储过程。 使用参数化筛选器时，必须使用 \@subset_filterclause 参数为一个或多个项目指定参数化行筛选器  。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 4.  如果将基于该参数化行筛选器筛选其他项目，请执行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 定义项目间的联接或逻辑记录关系。 必须对要定义的每个关系执行一次此存储过程。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
@@ -141,31 +141,31 @@ ms.locfileid: "68083841"
   
 1.  执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 创建发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 使用的发布名称以及快照代理针对 **@job_login** 指定为用于运行 **@password** 。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password** 。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定在步骤 1 中对 \@publication 使用的发布名称以及快照代理针对 \@job_login 和 \@password运行的 Windows 凭据    。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 \@publisher_security_mode 的值指定为 0，并为 \@publisher_login 和\@publisher_password 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息     。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-3.  执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，将项目添加到发布。 必须对发布中的每个项目执行一次此存储过程。 使用参数化筛选器时，必须使用 **@subset_filterclause** 参数为一个或多个项目指定参数化行筛选器。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+3.  执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，将项目添加到发布。 必须对发布中的每个项目执行一次此存储过程。 使用参数化筛选器时，必须使用 \@subset_filterclause 参数为一个项目指定参数化行筛选器  。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 4.  如果将基于该参数化行筛选器筛选其他项目，请执行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 定义项目间的联接或逻辑记录关系。 必须对要定义的每个关系执行一次此存储过程。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-5.  在发布服务器上，对发布数据库执行 [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，并指定步骤 1 中 **@publication** 的值。 请注意结果集中的 **snapshot_jobid** 值。  
+5.  在发布服务器上，对发布数据库执行 [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)，并指定步骤 1 中 \@publication 的值  。 请注意结果集中的 **snapshot_jobid** 值。  
   
 6.  将步骤 5 中得到的 **snapshot_jobid** 的值转换为 **uniqueidentifier**。  
   
-7.  在 **msdb** 数据库的发布服务器上，执行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，将 **@job_id** 指定为在步骤 6 中得到的转换后的值。  
+7.  在 msdb 数据库的发布服务器上，执行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，将 \@job_id 指定为在步骤 6 中得到的转换后的值   。  
   
-8.  在发布服务器上，对发布数据库执行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 将 **@publication** 指定为来自步骤 1 的发布名称，并将 **@suser_sname** （如果在筛选子句中使用 [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md)）或 **@host_name** （如果在筛选子句中使用 [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md)）指定为用于定义分区的值。  
+8.  在发布服务器上，对发布数据库执行 [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)。 为 \@publication 指定步骤 1 中发布的名称，并为 \@suser_sname（如果在筛选子句中使用 [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md)）或 \@host_name（如果在筛选子句中使用 [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md)）指定用于定义分区的值    。  
   
-9. 在发布服务器上，对发布数据库执行 [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)。 将 **@publication** 指定为来自步骤 1 的发布名称，并将 **@suser_sname** 或 **@host_name** 指定为来自步骤 8 的值，同时为作业指定一个计划。 此操作将创建为指定分区生成参数化快照的作业。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
+9. 在发布服务器上，对发布数据库执行 [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)。 为 \@publication 指定步骤 1 中发布的名称，并为 \@suser_sname 或 \@host_name 指定步骤 8 中的值，同时为作业指定一个计划    。 此操作将创建为指定分区生成参数化快照的作业。 有关详细信息，请参阅 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   
     > [!NOTE]  
     >  使用在步骤 2 中定义的初始快照作业的 Windows 帐户运行此作业。 若要删除参数化快照作业及其相关的数据分区，请执行 [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)。  
   
-10. 在发布服务器上，对发布数据库执行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)，并指定步骤 1 中 **@publication** 的值，以及步骤 8 中 **@suser_sname** 或 **@host_name** 的值。 请注意结果集中的 **dynamic_snapshot_jobid** 值。  
+10. 在发布服务器上的发布数据库中执行 [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)，指定步骤 1 中的 \@publication 值和步骤 8 中的 \@suser_sname 或 \@host_name 值    。 请注意结果集中的 **dynamic_snapshot_jobid** 值。  
   
-11. 在分发服务器上，对 **msdb** 数据库执行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，并将 **@job_id** 指定为在步骤 9 中获取的值。 此操作将启动分区的参数化快照作业。  
+11. 在分发服务器上，对 msdb 数据库执行 [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)，并为 \@job_id 指定在步骤 9 中获取的值   。 此操作将启动分区的参数化快照作业。  
   
 12. 重复步骤 8-11，分别为每个订阅生成一个分区快照。  
   
@@ -173,12 +173,12 @@ ms.locfileid: "68083841"
   
 1.  执行 [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 创建发布。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 使用的发布名称以及快照代理针对 **@job_login** 指定为用于运行 **@password** 。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 **@publisher_security_mode** 值指定为 **@publisher_security_mode** 指定为在步骤 1 中使用的发布名称，并将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** 指定为用于运行 **@publisher_password** 。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
+2.  在发布服务器上，执行[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定在步骤 1 中对 \@publication 使用的发布名称以及快照代理针对 \@job_login 和 \@password运行的 Windows 凭据    。 如果代理在连接到发布服务器时将使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，则还必须将 \@publisher_security_mode 的值指定为 0，并为 \@publisher_login 和\@publisher_password 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息     。 此操作将为发布创建一个快照代理作业。 有关生成初始快照和为快照代理定义自定义计划的详细信息，请参阅 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
     > [!IMPORTANT]  
     >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
-3.  执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，将项目添加到发布。 必须对发布中的每个项目执行一次此存储过程。 使用参数化筛选器时，必须使用 **@subset_filterclause** 参数为一个或多个项目指定参数化行筛选器。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+3.  执行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)，将项目添加到发布。 必须对发布中的每个项目执行一次此存储过程。 使用参数化筛选器时，必须使用 \@subset_filterclause 参数为至少一个项目指定参数化行筛选器  。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
 4.  如果将基于该参数化行筛选器筛选其他项目，请执行 [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 定义项目间的联接或逻辑记录关系。 必须对要定义的每个关系执行一次此存储过程。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)。  
   
@@ -202,11 +202,11 @@ ms.locfileid: "68083841"
 >  有关复制代理编程的详细信息，请参阅[复制代理可执行文件概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 此示例使用参数化筛选器创建合并发布，其中由订阅服务器启动快照生成过程。 使用脚本变量传入 **@job_login** 和 **@job_password** 的值。  
+ 此示例使用参数化筛选器创建合并发布，其中由订阅服务器启动快照生成过程。 \@job_login 和 \@job_password 的值通过脚本变量进行传递   。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_1.sql)]  
   
- 此示例使用参数筛选器创建发布，通过传递分区信息，其中的每个订阅服务器均有自己的分区（通过执行 [sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) 进行定义）和经过筛选的快照作业（通过执行 [sp_adddynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md) 来创建）。 使用脚本变量传入 **@job_login** 和 **@job_password** 的值。  
+ 此示例使用参数筛选器创建发布，通过传递分区信息，其中的每个订阅服务器均有自己的分区（通过执行 [sp_addmergepartition](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) 进行定义）和经过筛选的快照作业（通过执行 [sp_adddynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md) 来创建）。 \@job_login 和 \@job_password 的值通过脚本变量进行传递   。  
   
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/create-a-snapshot-for-a-_2.sql)]  
   

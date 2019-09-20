@@ -21,12 +21,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1a4e90dfaa5f513e3d197619afd26e8ec0898d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075224"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978600"
 ---
 # <a name="expressions-transact-sql"></a>表达式（Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,27 @@ GO
 ```  
   
  结果集中的每个行的表达式 `1+2` 的计算结果都为 `3`。 虽然表达式 `ProductID` 在结果集的每一行中产生一个唯一值，但每一行只有一个 `ProductID` 值。  
-  
+ 
+- Azure SQL 数据仓库为每个线程分配固定的最大内存量，因此，任何线程都无法占用所有内存。  其中一些内存用于存储查询的表达式。  如果查询包含太多表达式，并且其所需内存超出内部限制，则引擎不会执行该查询。  若要避免发生此问题，用户可以将查询更改为多个查询，使每个查询包含较少的表达式。 例如，在 WHERE 子句中有一个具有许多表达式的查询： 
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
+...
+
+```
+将此查询更改为：
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
+...
+```
+
 ## <a name="see-also"></a>另请参阅  
  [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   

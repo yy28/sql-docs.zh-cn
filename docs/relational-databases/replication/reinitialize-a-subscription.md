@@ -15,12 +15,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e38cd74e9f916484c804890686e2a3b03d9ec64c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768574"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846513"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化订阅
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,19 +103,19 @@ ms.locfileid: "68768574"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>重新初始化对事务发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)。 指定 \@publisher、\@publisher_db 和 \@publication    。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
   
 2.  （可选）在订阅服务器上启动分发代理，以使订阅同步。 有关详细信息，请参阅 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>重新初始化对事务发布的推送订阅  
   
-1.  在发布服务器上，执行 [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 和 **@destination_db** 文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
+1.  在发布服务器上，执行 [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md)。 指定 \@publication  、\@subscriber  和 \@destination_db  。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
   
 2.  （可选）在分发服务器上启动分发代理，以使订阅同步。 有关详细信息，请参阅 [同步推送订阅](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化对合并发布的请求订阅  
   
-1.  在订阅服务器上，对订阅数据库执行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 **@publisher** 或复制管理对象 (RMO) 在 **@publisher_db** 和 **@publication** 文件夹中打开。 若要在进行重新初始化之前从订阅服务器上载更改，请将 **@upload_first** @upload_first **@upload_first** 文件夹中打开。 这会将订阅标记为在下一次运行合并代理时将要重新初始化。  
+1.  在订阅服务器上，对订阅数据库执行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 \@publisher、\@publisher_db 和 \@publication    。 若要在进行重新初始化之前从订阅服务器上传更改，请将 \@upload_first 的值指定为 true   。 这会将订阅标记为在下一次运行合并代理时将要重新初始化。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -124,7 +124,7 @@ ms.locfileid: "68768574"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>重新初始化对合并发布的推送订阅  
   
-1.  在发布服务器上，执行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 和 **@subscriber_db** 文件夹中打开。 若要在进行重新初始化之前从订阅服务器上载更改，请将 **@upload_first** @upload_first **@upload_first** 文件夹中打开。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
+1.  在发布服务器上，执行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@subscriber_db    。 若要在进行重新初始化之前从订阅服务器上传更改，请将 \@upload_first 的值指定为 true   。 这会将订阅标记为在下一次运行分发代理时将要重新初始化。  
   
     > [!IMPORTANT]  
     >  如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。  
@@ -133,7 +133,7 @@ ms.locfileid: "68768574"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>创建新的合并发布时设置重新初始化策略  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，同时为 **@automatic_reinitialization_policy** 指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)，同时为 \@automatic_reinitialization_policy 指定下列值之一  ：  
   
     -   **1** - 在对订阅执行更改所要求的自动重新初始化操作之前，从订阅服务器上载更改。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68768574"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>更改现有合并发布的重新初始化策略  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，同时将 **@property** @upload_first **@property** 并为 **@value** 指定下列值之一：  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)，同时将 \@property 的值指定为 automatic_reinitialization_policy 并为 \@value 指定下列值之一    ：  
   
     -   **1** - 在对订阅执行更改所要求的自动重新初始化操作之前，从订阅服务器上载更改。  
   

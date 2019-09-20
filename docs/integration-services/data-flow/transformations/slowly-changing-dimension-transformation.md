@@ -1,7 +1,7 @@
 ---
 title: 渐变维度转换 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/31/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9b867d0f1d8dff2c424a7b23d9f7cfa30565f483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231d69585368660a63adab2b74b64e0c2e5c648b
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928155"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211305"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
 
@@ -50,7 +50,7 @@ ms.locfileid: "67928155"
   
 -   变化的属性更改覆盖现有记录。 此类更改等效于类型 1 更改。 渐变维度转换将这些行定向到名为 **“变化的属性更新输出”** 的输出。  
   
--   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将这些行定向到两个输出：“历史属性插入输出”和“新输出”。  
+-   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将这些行定向到两个输出：“历史属性插入输出”和“新输出”。    
   
 -   固定的属性更改指示不得更改列值。 渐变维度转换检测更改，并可将带有更改的行定向到名为 **“固定的属性输出”** 的输出。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "67928155"
 > [!NOTE]  
 >  渐变维度转换不支持类型 3 更改，该类型要求更改维度表。 通过标识具有固定的属性更新类型的列，可以捕获作为类型 3 更改候选项的数据值。  
   
- 在运行时，渐变维度转换首先尝试将传入行与查找表中的记录匹配。 如果找不到匹配项，则传入行是一条新记录；因此渐变维度转换将不再执行其他工作，而是将传入行定向到 **“新输出”**。  
+ 在运行时，渐变维度转换首先尝试将传入行与查找表中的记录匹配。 如果找不到匹配项，则传入行是一条新记录；因此渐变维度转换将不再执行其他工作，而是将传入行定向到 **“新输出”** 。  
   
- 如果找到匹配项，渐变维度转换检测传入行是否包含更改。 如果该行包含更改，渐变维度转换标识每列的更新类型，并将该行定向到 **“变化的属性更新输出”**、 **“固定的属性输出”**、 **“历史属性插入输出”** 或 **“推断成员更新输出”**。 如果该行未更改，渐变维度转换会将其定向到 **“不变的输出”**。  
+ 如果找到匹配项，渐变维度转换检测传入行是否包含更改。 如果该行包含更改，渐变维度转换标识每列的更新类型，并将该行定向到 **“变化的属性更新输出”** 、 **“固定的属性输出”** 、 **“历史属性插入输出”** 或 **“推断成员更新输出”** 。 如果该行未更改，渐变维度转换会将其定向到 **“不变的输出”** 。  
   
 ## <a name="slowly-changing-dimension-transformation-outputs"></a>渐变维度转换输出  
  渐变维度转换有一个输入和最多六个输出。 输出将行定向到与该行的更新和插入要求相对应的数据流的子集。 此转换不支持错误输出。  
@@ -111,6 +111,7 @@ ms.locfileid: "67928155"
   
 ## <a name="related-content"></a>相关内容  
   
--   blogs.msdn.com 上的博客文章 [优化渐变维度向导](https://go.microsoft.com/fwlink/?LinkId=199481)。  
+-   [Handling Slowly Changing Dimensions in SSIS](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)（处理 SSIS 中的渐变维度）
+-   [Optimizing the Slowly Changing Dimension Wizard](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)（优化渐变维度向导）
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 448870b31500b0a1f214b215d342ce27e3c36b61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b62c9aa125bf249ed3dc895055030feb8e178b1
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907901"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284019"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>从 Oracle 数据库创建发布
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,32 +117,32 @@ ms.locfileid: "67907901"
   
 2.  如果不存在远程分发服务器，请配置远程分发服务器。 有关详细信息，请参阅 [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   
-3.  在 Oracle 发布服务器将使用的远程分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。 为 **@publisher** 指定 Oracle 数据库实例的透明网络底层 (TNS) 名称，为 **@publisher_type** 在 **ORACLE** 指定值 **@publisher_type** 中从 Oracle 数据库创建发布。 `Specify` 从 Oracle 发布服务器连接到远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时使用的以下安全模式之一：  
+3.  在 Oracle 发布服务器将使用的远程分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。 为 \@publisher 指定 Oracle 数据库实例的透明网络底层 (TNS) 名称，为 \@publisher_type 指定值 ORACLE 或 ORACLE GATEWAY     。 `Specify` 从 Oracle 发布服务器连接到远程 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器时使用的以下安全模式之一：  
   
-    -   若要使用 Oracle 标准身份验证（默认值），请将 **@security_mode** 指定值 **@security_mode** ，并将 **@login** 和 **@password** 中从 Oracle 数据库创建发布。  
+    -   若要使用 Oracle 标准身份验证（默认值），请将 \@security_mode 的值指定为 0，并将 \@login 和 \@password 分别指定为 Oracle 发布服务器上创建的复制管理用户架构在配置过程中所设定的登录名和密码     。  
   
         > [!IMPORTANT]  
         >  如果可能，请在运行时提示用户输入安全凭据。 如果将凭据存储在脚本文件中，则必须确保文件的安全以防受到未经授权的访问。  
   
-    -   若要使用 Windows 身份验证，请将 **@security_mode** 指定值 **@security_mode** 中从 Oracle 数据库创建发布。  
+    -   若要使用 Windows 身份验证，请将 \@security_mode 的值指定为 1   。  
   
         > [!NOTE]  
         >  若要使用 Windows 身份验证，Oracle 服务器必须配置为允许使用 Windows 凭据的连接（有关更多信息，请参见 Oracle 文档）；而且，您当前必须使用为复制管理用户架构指定的同一 Microsoft Windows 帐户登录到计算机。  
   
 4.  为发布数据库创建日志读取器代理作业。  
   
-    -   如果不确定是否存在针对某个已发布数据库的日志读取器代理作业，请在该 Oracle 发布服务器使用的分发服务器的分发数据库中执行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。 为 **@publisher** 指定 Oracle 发布服务器的名称。 如果结果集为空，则必须创建一个日志读取器代理作业。  
+    -   如果不确定是否存在针对某个已发布数据库的日志读取器代理作业，请在该 Oracle 发布服务器使用的分发服务器的分发数据库中执行 [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)。 为 \@publisher 指定 Oracle 发布服务器的名称  。 如果结果集为空，则必须创建一个日志读取器代理作业。  
   
     -   如果已经存在针对该发布数据库的日志读取器代理作业，请继续执行步骤 5。  
   
-    -   在该 Oracle 发布服务器使用的分发服务器的分发数据库中，执行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 为 **@job_login** 和 **@job_password** 中从 Oracle 数据库创建发布。  
+    -   在该 Oracle 发布服务器使用的分发服务器的分发数据库中，执行 [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)。 为 \@job_login 和 \@job_password 指定运行该代理所用的 Windows 凭据   。  
   
         > [!NOTE]  
-        >  “完整” **@job_login** 参数必须与步骤 3 中提供的登录名匹配。 不要提供发布服务器安全信息。 日志读取器代理使用步骤 3 中提供的安全信息连接到发布服务器。  
+        >  \@job_login 参数必须与步骤 3 中提供的登录名匹配  。 不要提供发布服务器安全信息。 日志读取器代理使用步骤 3 中提供的安全信息连接到发布服务器。  
   
 5.  在分发服务器上的分发数据库中，执行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) 以创建发布。 有关详细信息，请参阅 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)。  
   
-6.  在分发服务器上的分发数据库中，执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 将 **@publication** 指定为在步骤 4 中使用的发布名称，并为 **@job_name** 和 **@password** 中从 Oracle 数据库创建发布。 若要在连接到发布服务器时使用 Oracle 标准身份验证，还必须将 **@security_mode** 指定值 **@publisher_security_mode** 值，并为 **@publisher_login** 和 **@publisher_password** 中从 Oracle 数据库创建发布。 此操作将为发布创建一个快照代理作业。  
+6.  在分发服务器上的分发数据库中，执行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 为 \@publication 指定在步骤 4 中使用的发布名称，并为 \@job_name 和 \@password 指定运行快照代理所用的 Windows 凭据    。 若要在连接到发布服务器时使用 Oracle 标准身份验证，还必须为 \@publisher_security_mode 指定 0 值，并为 \@publisher_login 和 \@publisher_password 指定 Oracle 登录信息     。 此操作将为发布创建一个快照代理作业。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
