@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcec50b2ddda2b8ddaef8135aee52cf54c1ae07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066036"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874527"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,7 @@ ALTER AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值为给定组定义“灵活的故障转移策略”  。 此灵活的故障转移策略向您提供对必须导致自动故障转移的条件的精确控制。 有关详细信息，请参阅[针对可用性组的自动故障转移的灵活的故障转移策略 (SQL Server)](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
  HEALTH_CHECK_TIMEOUT = milliseconds    
- 指定在 WSFC 群集假定服务器实例速度较慢或挂起前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本  。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移  。  
+ 指定在 WSFC 群集假定服务器实例速度较慢或无响应前，等待 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系统存储过程返回服务器运行状况信息的等待时间（毫秒）。 HEALTH_CHECK_TIMEOUT 在组级别设置，但仅针对为具有自动故障转移的同步-提交可用性模式 (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT) 配置的可用性副本  。  此外，只有在主要副本和次要副本均配置为自动故障转移模式 (FAILOVER_MODE = AUTOMATIC) 并且次要副本当前与主要副本同步的情况下，运行状况检查超时才可以触发自动故障转移  。  
   
  默认的 HEALTH_CHECK_TIMEOUT 值为 30000 毫秒（30 秒）。 最小值为 15000 毫秒（15 秒），最大值为 4294967295 毫秒。  
   
