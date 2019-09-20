@@ -1,39 +1,45 @@
 ---
-title: 有关 R 和 SQL 数据类型和对象的快速入门
-description: 在本快速入门教程中, 了解如何使用 R 和 SQL Server 中的数据类型和数据对象。
+title: 使用 R 和 SQL 数据类型和对象
+titleSuffix: SQL Server Machine Learning Services
+description: 本快速入门介绍如何使用 SQL Server 机器学习服务在 R 和 SQL Server 中使用数据类型和数据对象。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 09/17/2019
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb007525834c312952f9eb02809edadebaefa305
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715434"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149961"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入门：在 SQL Server 中使用 R 处理数据类型和对象
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 中使用 R 处理数据类型和对象机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在本快速入门中, 获取在 R 与 SQL Server 之间移动数据时发生的常见问题的简介。 在此练习中, 您可以在自己的脚本中使用数据时提供基本的背景知识。
+在本快速入门中，你将了解在 R 和 SQL Server 之间移动数据时发生的常见问题。 在此练习中, 您可以在自己的脚本中使用数据时提供基本的背景知识。
 
 提前了解常见问题包括:
 
-+ 数据类型有时不匹配
-+ 可能发生隐式转换
-+ 有时需要执行强制转换和转换操作
-+ R 和 SQL 使用不同的数据对象
+- 数据类型有时不匹配
+- 可能发生隐式转换
+- 有时需要执行强制转换和转换操作
+- R 和 SQL 使用不同的数据对象
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
-以前的快速入门,[验证 SQL Server 中是否存在 r](quickstart-r-verify.md), 提供了设置本快速入门所需的 R 环境的信息和链接。
+- 此快速入门要求使用安装 R 语言的[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)SQL Server 的实例。
+
+  SQL Server 实例可位于 Azure 虚拟机或本地。 请注意，默认情况下禁用外部脚本功能，因此在开始之前，您可能需要[启用外部脚本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证**SQL Server Launchpad 服务**是否正在运行。
+
+- 还需要一个用于运行包含 R 脚本的 SQL 查询的工具。 您可以使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，然后运行 T-sql 查询或存储过程。 本快速入门使用[SQL Server Management Studio （SSMS）](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
 
 ## <a name="always-return-a-data-frame"></a>始终返回数据帧
 
-当脚本将结果从 R 返回给 SQL Server 时，必须以 **data.frame** 的形式返回数据。 在脚本中生成的任何其他类型的对象 (无论是列表、系数、矢量还是二进制数据), 如果要在存储过程结果中输出, 则必须将其转换为数据帧。 幸运的是，有多个 R 函数支持将其他对象更改为数据框架。 你甚至可以序列化二进制模型并在数据框架中返回该模型。本教程稍后将介绍此操作。
+当脚本将结果从 R 返回给 SQL Server 时，必须以 **data.frame** 的形式返回数据。 在脚本中生成的任何其他类型的对象 (无论是列表、系数、矢量还是二进制数据), 如果要在存储过程结果中输出, 则必须将其转换为数据帧。 幸运的是，有多个 R 函数支持将其他对象更改为数据框架。 甚至可以序列化二进制模型，并在数据帧中返回它，稍后会在本快速入门中执行此操作。
 
 首先, 让我们试验一些 R basic R 对象-矢量、矩阵和列表, 并了解转换到数据帧的方式如何更改传递到 SQL Server 的输出。
 
@@ -60,7 +66,7 @@ EXECUTE sp_execute_external_script
 
 ## <a name="identify-schema-and-data-types"></a>标识架构和数据类型
 
-结果为何有这么大的差别？ 
+结果为何有这么大的差别？
 
 使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。
 
@@ -119,6 +125,22 @@ $ c..world..: Factor w/ 1 level "world": 1
 
 每个 R 数据对象都有自身的规则，指定在将值与其他数据对象组合时，如果两个数据对象具有相同的维度数目，或者如果任意数据对象包含异构数据类型，应如何处理值。
 
+首先，创建一个较小的测试数据表。
+
+```sql
+CREATE TABLE RTestData (col1 INT NOT NULL)
+
+INSERT INTO RTestData
+VALUES (1);
+
+INSERT INTO RTestData
+VALUES (10);
+
+INSERT INTO RTestData
+VALUES (100);
+GO
+```
+
 例如, 假定您运行以下语句来使用 R 执行矩阵乘法。您可以将具有三个值的单列矩阵乘以具有四个值的数组, 并期望4x3 矩阵为结果。
 
 ```sql
@@ -158,7 +180,7 @@ execute sp_execute_external_script
 现在，R 返回单个值作为结果。
 
 **结果**
-    
+
 |Col1|
 |---|
 |1542|
@@ -167,10 +189,8 @@ execute sp_execute_external_script
 
 > [!TIP]
 > 
-> 出现错误？ 这些示例需要表**RTestData**。 如果尚未创建测试数据表, 请返回到本主题来创建表:[处理输入和输出](../tutorials/rtsql-working-with-inputs-and-outputs.md)。
-> 
-> 如果已创建表但仍出现错误, 请确保在包含表的数据库的上下文中运行存储过程, 而不是在**master**或其他数据库中运行存储过程。
-> 
+> 出现错误？ 请确保在包含表的数据库的上下文中运行存储过程，而不是在**master**或其他数据库中运行该存储过程。
+>
 > 此外, 我们建议你避免在这些示例中使用临时表。 某些 R 客户端将终止批处理之间的连接, 从而删除临时表。
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>对不同长度的列进行合并或相乘
@@ -193,7 +213,7 @@ EXECUTE sp_execute_external_script
 为了填充数据框架，R 将以所需的次数重复从 RTestData 检索的元素，以匹配数组 `df1` 中的元素数目。
 
 **结果**
-    
+
 |*Col2*|*Col3*|
 |----|----|
 |1|1|
@@ -229,7 +249,7 @@ SELECT ReportingDate
 ```
 
 > [!NOTE]
-> 
+>
 > 您可以使用任何版本的 AdventureWorks, 或使用自己的数据库创建不同的查询。 要点是尝试处理包含文本、日期时间和数字值的某些数据。
 
 现在, 请尝试将此查询作为输入粘贴到存储过程。
@@ -262,25 +282,29 @@ STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M20
 STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
 ```
 
-+ 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
-+ 文本列 "ProductSeries" 已被标识为一个**系数**, 即分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
+- 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
+- 文本列 "ProductSeries" 已被标识为一个**系数**, 即分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
 
 ### <a name="summary"></a>总结
 
 从甚至这些简短的示例中, 您可以看到在将 SQL 查询作为输入进行传递时, 需要检查数据转换的影响。 由于 R 不支持某些 SQL Server 数据类型, 因此请考虑使用以下方法来避免错误:
 
-+ 提前测试数据, 并验证架构中的列或值在传递到 R 代码时可能会出现问题。
-+ 在输入数据源中单独指定列而不要使用 `SELECT *`，并知道如何处理每个列。
-+ 准备输入数据时请根据需要执行显式强制转换，避免出现意外。
-+ 避免传递导致错误的数据列 (例如 GUID 或 rowguid), 这对建模不起作用。
+- 提前测试数据, 并验证架构中的列或值在传递到 R 代码时可能会出现问题。
+- 在输入数据源中单独指定列而不要使用 `SELECT *`，并知道如何处理每个列。
+- 准备输入数据时请根据需要执行显式强制转换，避免出现意外。
+- 避免传递导致错误的数据列 (例如 GUID 或 rowguid), 这对建模不起作用。
 
 有关支持的和不支持的数据类型的详细信息, 请参阅[R 库和数据类型](../r/r-libraries-and-data-types.md)。
 
 有关对字符串的运行时转换到数值因素的性能影响的信息, 请参阅[SQL Server R Services 性能优化](../r/sql-server-r-services-performance-tuning.md)。
 
-## <a name="next-step"></a>下一步
+## <a name="next-steps"></a>后续步骤
 
-在下一个快速入门中, 你将了解如何将 R 函数应用于 SQL Server 数据。
+若要了解如何在 SQL Server 中编写高级 R 函数，请按照本快速入门：
 
 > [!div class="nextstepaction"]
-> [起步对 SQL Server 的数据使用 R 函数](quickstart-r-functions.md)
+> [通过 SQL Server 机器学习服务写入高级 R 函数](quickstart-r-functions.md)
+
+有关 SQL Server 机器学习服务的详细信息，请参阅：
+
+- [什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)

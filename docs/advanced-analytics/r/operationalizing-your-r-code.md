@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 248a2e12199466cfaf686bcfcf10341a75981ef7
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715678"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149893"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>在 SQL Server 中使用存储过程的操作 R 代码机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68715678"
 
 传统上, 数据科学解决方案的集成旨在支持性能和集成。 SQL Server 机器学习服务简化了此任务, 因为 R 和 Python 代码可以在 SQL Server 中运行, 并使用存储过程进行调用。 有关在存储过程中嵌入代码的机制的详细信息, 请参阅:
 
-+ [起步SQL Server 中的 "Hello world" R 脚本](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [在 SQL Server 中创建和运行简单的 R 脚本](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 [有关使用存储过程将 R 代码部署到生产中的更全面的示例, 请参阅教程:适用于 SQL 开发人员的 R 数据分析](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)

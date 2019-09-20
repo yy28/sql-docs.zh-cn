@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276667"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149940"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什么是 SQL Server 机器学习服务（Python 和 R）？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了 PyTorch、T
 
 1. 编写第一个 Python 或 R 脚本
 
-    + 快速入门：[在 Python](tutorials/quickstart-python-run-using-t-sql.md)或[R 中](tutorials/quickstart-r-run-using-tsql.md)运行 "Hello world" 脚本
-    + 快速入门：[在 Python](tutorials/quickstart-python-train-score-in-tsql.md)或[R 中](tutorials/quickstart-r-create-predictive-model.md)创建预测模型
+    + 快速入门：[在 SQL 中创建和运行简单的 R 脚本](tutorials/quickstart-r-create-script.md)
+    + 快速入门：[在 R 中创建和训练预测模型](tutorials/quickstart-r-train-score-model.md)
     + 教程：[在 t-sql 中使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)：探索数据，执行特征工程，定型和部署模型，并进行预测（五部分系列）
     + 教程：[在 t-sql 中使用 R](tutorials/sqldev-in-database-r-for-sql-developers.md)：探索数据，执行特征工程，定型和部署模型，并进行预测（五部分系列）
     + 教程：[使用 R 工具中的机器学习服务](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)：探索数据，创建图形和绘图，执行特征工程，定型和部署模型，并进行预测（六部分系列）
