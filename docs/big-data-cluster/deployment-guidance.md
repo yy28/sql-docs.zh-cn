@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878715"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174267"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
@@ -144,11 +144,11 @@ azdata bdc create --accept-eula=yes
 
 | 环境变量 | 要求 |描述 |
 |---|---|---|
-| **CONTROLLER_USERNAME** | 必填 |群集管理员的用户名。 |
-| **CONTROLLER_PASSWORD** | 必填 |群集管理员的密码。 |
+| **CONTROLLER_USERNAME** | Required |群集管理员的用户名。 |
+| **CONTROLLER_PASSWORD** | Required |群集管理员的密码。 |
 | **MSSQL_SA_PASSWORD** | Required |SQL 主实例的 SA 用户的密码。 |
-| **KNOX_PASSWORD** | 必填 |Knox **root**用户的密码。 请注意，在 "基本身份验证设置" 中，仅支持对 Knox 的用户使用**root**。|
-| **ACCEPT_EULA**| 首次使用 `azdata` 时为必需项| 不需要任何值。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula` 包含在内。|
+| **KNOX_PASSWORD** | Required |Knox **root**用户的密码。 请注意，在 "基本身份验证设置" 中，仅支持对 Knox 的用户使用**root**。|
+| **ACCEPT_EULA**| 首次使用 `azdata` 时为必需项| 设置为 "是"。 设置为环境变量时，它将 EULA 同时应用于 SQL Server 和 `azdata`。 如果未设置为环境变量，则可以在第一次使用 `azdata` 命令时将 `--accept-eula=yes` 包含在内。|
 | **DOCKER_USERNAME** | 可选 | 当容器映像存储在专用存储库中时，用于访问容器映像的用户名。 有关如何使用专用 Docker 存储库部署大数据群集的更多详细信息，请参阅[脱机部署](deploy-offline.md)主题。|
 | **DOCKER_PASSWORD** | 可选 |用于访问上述专用存储库的密码。 |
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
