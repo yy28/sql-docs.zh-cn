@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929805"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096937"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ WHERE ProductID = 63;
 -  通过 sp_executesql 提交的查询 
 -  预定义查询
 
-有关对错误参数探查问题进行故障排除的详细信息，请参阅[对具有参数敏感型查询执行计划问题的查询进行故障排除](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues)。
+有关对错误参数探查问题进行故障排除的详细信息，请参阅[对具有参数敏感型查询执行计划问题的查询进行故障排除](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)。
 
 > [!NOTE]
 > 对于使用 `RECOMPILE` 提示的查询，将探查参数值和局部变量的当前值。 探查的参数值和局部变量值在批处理中所处的位置刚好就在具有 `RECOMPILE` 提示的语句前面。 特别的是，对于参数，不会探查随批处理调用而出现的值。

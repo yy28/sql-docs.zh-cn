@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077292"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016862"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密与 Linux 上 SQL Server 的连接
 
@@ -69,7 +69,7 @@ TLS 用于加密从客户端应用程序到 [!INCLUDE[ssNoVersion](../includes/s
         -  Windows：在当前用户 -> 受信任的根证书颁发机构 -> 证书下将 .pem 文件作为证书导入
         - **macOS**： 
            - 将证书复制到 ```/usr/local/etc/openssl/certs```
-           - 运行以下命令获取哈希值：```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - 运行以下命令获取哈希值：```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
            - 将证书重命名为值。 例如： ```mv mssql.pem dc2dd900.0```。 确保 dc2dd900.0 在 ```/usr/local/etc/openssl/certs``` 中
     
 -   **连接字符串示例** 

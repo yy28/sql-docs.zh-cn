@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d0c587b7960d54f6dccb834f0831432aade30f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991284"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096931"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67991284"
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
 
-在分布式事务中，客户端应用程序和 Microsoft 分布式事务处理协调器（MS DTC 或 DTC）共同配合来确保多个数据源之间的事务一致性。 DTC 是在基于 Windows Server 的受支持操作系统上提供的服务。 DTC 充当分布式事务的“事务处理协调器”。 SQL Server 实例通常充当“资源管理器”。 当数据库位于可用性组中时，每个数据库需为其自身的资源管理器。 
+在分布式事务中，客户端应用程序和 Microsoft 分布式事务处理协调器（MS DTC 或 DTC）共同配合来确保多个数据源之间的事务一致性。 DTC 是在基于 Windows Server 的受支持操作系统上提供的服务。 DTC 充当分布式事务的“事务处理协调器”  。 SQL Server 实例通常充当“资源管理器”  。 当数据库位于可用性组中时，每个数据库需为其自身的资源管理器。 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 不能阻止可用性组中数据库的分布式事务 - 即使不为分布式事务配置可用性组也是如此。 但是，如果不为分布式事务配置可用性组，在某些情况下故障转移可能不会成功。 具体而言，新主要副本 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例可能无法从 DTC 获取事务结果。 若要启用 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例，以在故障转移后从 DTC 获取未决事务的结果，请为分布式事务配置可用性组。 
 
@@ -60,12 +60,12 @@ CREATE AVAILABILITY GROUP MyAG
       )
    FOR DATABASE DB1, DB2
    REPLICA ON
-      Server1 WITH (
+      'Server1' WITH (
          ENDPOINT_URL = 'TCP://SERVER1.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
-         )
-      Server2 WITH (
+         ),
+      'Server2' WITH (
          ENDPOINT_URL = 'TCP://SERVER2.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
