@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_unforce_plan (Transact-sql) |Microsoft Docs
+title: sp_query_store_unforce_plan （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,31 +21,30 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cdb3fc64a18965594c315b589922b14b66be49b
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 9cff3bb0491db53e195a692014b74a08c4fdcdee
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418914"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207710"
 ---
-# <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-sql)
+# <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  为特定查询启用取消强制执行特定计划。  
+  为特定查询启用取消强制执行先前强制计划。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**, 无默认值。  
+`[ @query_id = ] query_id`查询的 id。 *query_id*是**bigint**，无默认值。  
   
-`[ @plan_id = ] plan_id`将不再强制执行的查询计划的 id。 *plan_id*是**bigint**, 无默认值。  
+`[ @plan_id = ] plan_id`将不再强制执行的查询计划的 id。 *plan_id*是**bigint**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -58,7 +57,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="examples"></a>示例  
  下面的示例返回有关查询存储中的查询的信息。  
   
-```  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -67,9 +66,9 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 确定要取消强制执行的 query_id 和 plan_id 后, 请使用以下示例取消强制执行该计划。  
+ 确定要取消强制执行的 query_id 和 plan_id 后，请使用以下示例取消强制执行该计划。  
   
-```  
+```sql  
 EXEC sp_query_store_unforce_plan 3, 3;  
 ```  
   
@@ -80,6 +79,6 @@ EXEC sp_query_store_unforce_plan 3, 3;
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   
