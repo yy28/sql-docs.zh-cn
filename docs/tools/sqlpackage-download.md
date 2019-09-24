@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: HT
+ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874389"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016870"
 ---
 # <a name="download-and-install-sqlpackage"></a>下载并安装 sqlpackage
 
@@ -24,10 +24,10 @@ sqlpackage 在 Windows、macOS 和 Linux 上运行。
 
 |平台|下载|发布日期|版本|生成
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2102893)|2019年9月6日|18.3|15.0.4532.1|
-|macOS .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102894)|2019年9月6日| 18.3|15.0.4532.1|
-|Linux .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102978)|2019年9月6日| 18.3|15.0.4532.1|
-|Windows .NET Core （预览）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102979)|2019年9月6日| 18.3|15.0.4532.1|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 年 9 月 13 日|18.3.1|15.0.4538.1|
+|macOS .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
+|Linux .NET Core（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102978)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
+|Windows .NET Core （预览）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=2102979)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes-sqlpackage.md)。
 
@@ -46,7 +46,7 @@ sqlpackage 在 Windows、macOS 和 Linux 上运行。
 
 1. 下载[适用于 Windows 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2102979)。
 2. 若要提取文件，请在 Windows 资源管理器中右键单击该文件，然后选择 "全部提取 ..."，然后选择目标目录。
-3. 打开新的终端窗口，可以 cd 到 sqlpackage 的 exracted 位置：
+3. 打开新的终端窗口和 cd，到提取 sqlpackage 的位置：
 
    **.zip 安装：**
 

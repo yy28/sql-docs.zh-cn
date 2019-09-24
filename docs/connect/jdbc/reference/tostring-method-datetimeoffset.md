@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ef3cd31068c324475e8edfe8bf8f7c16acc4a2de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3acffe6a922084fd63e38a8e212b5cf86d6b278
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968510"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096909"
 ---
 # <a name="tostring-method-datetimeoffset"></a>toString 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ public String toString()
  **DateTimeOffset**对象的字符串表示形式。  
   
 ## <a name="remarks"></a>Remarks  
- 此字符串的格式为*YYYY*-*MM*-*DD * * hh*:*MM*:*ss*[。*fffffff*] [+ |-]*hh*:*mm*。  
+ 此字符串格式为 `YYYY-MM-DD HH:mm:ss[.fffffff] [+|-]HH:mm`。  
   
  返回的字符串的小数部分将用零填充到声明的精度。 例如, 值为 "2010-03-10 12:34: 08:00 56.78" 的**datetimeoffset (6)** 将由 datetimeoffset 格式设置为 "2010-03-10 12:34: 56.780000-08:00"。  
   
