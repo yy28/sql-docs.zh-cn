@@ -45,7 +45,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 ## <a name="arguments"></a>参数
 
-**-s***instance_name*指定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]要连接到的实例。 如果未指定命名实例， **sqlservr** 将启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的默认实例。
+**-s** *instance_name* 指定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]要连接到的实例。 如果未指定命名实例， **sqlservr** 将启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的默认实例。
 
 > [!IMPORTANT]
 >启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例时，必须在该实例的相应目录中使用 **sqlservr** 应用程序。 对于默认实例，从 \MSSQL\Binn 目录运行 **sqlservr** 。 对于命名实例，从 \MSSQL$ **instance_name** \Binn 目录运行*sqlservr*。
