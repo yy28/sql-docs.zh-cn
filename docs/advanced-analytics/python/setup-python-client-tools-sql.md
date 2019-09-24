@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 87c05fafb122e292c45033bb019548c84df44de0
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634542"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199476"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>在 SQL Server 上设置用于 Python 开发的数据科学客户端机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "69634542"
 
 对于 Python 开发, 你可以使用 Jupyter 笔记本, 它随附在 SQL Server 安装的 Anaconda 分发中。 本文介绍如何启动 Jupyter 笔记本, 以便可以在 SQL Server 本地和远程运行 Python 代码。
 
-SSMS 是一个单独的下载, 适用于在 SQL Server 上创建和运行存储过程, 包括包含 Python 代码的存储过程。 几乎在 Jupyter 笔记本中编写的任何 Python 代码都可以嵌入到存储过程中。 可以逐步执行其他快速入门, 了解[SSMS 和 Embedded Python](../tutorials/quickstart-python-verify.md)。
+SSMS 是一个单独的下载, 适用于在 SQL Server 上创建和运行存储过程, 包括包含 Python 代码的存储过程。 几乎在 Jupyter 笔记本中编写的任何 Python 代码都可以嵌入到存储过程中。 可以逐步执行其他快速入门, 了解[SSMS 和 Embedded Python](../tutorials/quickstart-python-create-script.md)。
 
 ## <a name="1---install-python-packages"></a>1-安装 Python 包
 
@@ -52,7 +52,7 @@ SSMS 是一个单独的下载, 适用于在 SQL Server 上创建和运行存储�
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py)安装 Microsoft Python 包的版本9.2.1。 此版本对应于默认 SQL Server 实例。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)安装 Microsoft Python 包版本9.3。 如果远程 SQL Server 实例[绑定到 Machine Learning Server 9.3](../install/upgrade-r-and-python.md), 则此版本是更好的选择。
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)安装 Microsoft Python 包版本9.3。 如果远程 SQL Server 实例[绑定到 Machine Learning Server 9.3](../install/upgrade-r-and-python.md)，则此版本是更好的选择。
 
 2. 使用提升的管理员权限打开 PowerShell 窗口 (右键单击 "以**管理员身份运行**")。
 
@@ -227,7 +227,7 @@ def send_this_func_to_sql():
 
 ### <a name="send-the-function-to-sql-server"></a>将函数发送到 SQL Server
 
-在此示例中, 创建远程计算上下文, 然后将该函数的执行发送到与[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)SQL Server。 **Rx_exec**函数很有用, 因为它将计算上下文作为参数接受。 要远程执行的任何函数都必须具有计算上下文参数。 某些函数 (如[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) ) 将直接支持此参数。 对于不执行的操作, 你可以使用**rx_exec**在远程计算上下文中传递你的代码。
+在此示例中，创建远程计算上下文，然后将该函数的执行发送到与[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)SQL Server。 **Rx_exec**函数很有用，因为它将计算上下文作为参数接受。 要远程执行的任何函数都必须具有计算上下文参数。 某些函数（如[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) ）将直接支持此参数。 对于不执行的操作，你可以使用**rx_exec**在远程计算上下文中传递你的代码。
 
 在此示例中, 不需要将原始数据从 SQL Server 传输到 Jupyter Notebook 中。 所有计算都发生在 Iris 数据库中, 并且仅将映像文件返回给客户端。
 
@@ -305,4 +305,4 @@ display.Image(data=image)
 现在, 你已有工具和 SQL Server 的工作连接, 请通过使用[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)通过 Python 快速入门来扩展你的技能。
 
 > [!div class="nextstepaction"]
-> [快速入门：验证 Python 是否存在于 SQL Server](../tutorials/quickstart-python-verify.md)
+> [快速入门：利用 SQL Server 机器学习服务创建和运行简单的 Python 脚本](../tutorials/quickstart-python-create-script.md)

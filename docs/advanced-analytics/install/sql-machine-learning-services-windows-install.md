@@ -1,22 +1,22 @@
 ---
-title: 在 Windows 上安装 SQL Server 机器学习服务 (Python、R)
+title: 在 Windows 上安装 SQL Server 机器学习服务（Python、R）
 titleSuffix: ''
 description: 本文介绍如何在 Windows 上安装 SQL Server 机器学习服务。 您可以使用机器学习服务来执行数据库中的 Python 和 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 58db08edb6afd8738a1aeecec6745e4419d2fd92
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634556"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199364"
 ---
-# <a name="install-sql-server-machine-learning-services-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -24,7 +24,7 @@ ms.locfileid: "69634556"
 
 ## <a name="bkmk_prereqs"></a>预安装清单
 
-+ 如果要安装 R 或 Python 语言支持机器学习服务, 则需要安装 SQL Server 2017 (或更高版本)。 如果你已 SQL Server 2016 安装介质, 则可以安装[SQL Server R Services (数据库内)](sql-r-services-windows-install.md)以获取 R 语言支持。
++ 如果要安装 R 或 Python 语言支持机器学习服务, 则需要安装 SQL Server 2017 (或更高版本)。 如果你已 SQL Server 2016 安装介质，则可以安装[SQL Server R Services （数据库内）](sql-r-services-windows-install.md)以获取 R 语言支持。
 
 + 数据库引擎实例为必需项。 不能只安装 R 或 Python 功能，但可以将它们逐步添加到现有实例中。
 
@@ -105,7 +105,7 @@ ms.locfileid: "69634556"
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
-仅适用于 R 功能集成, 应设置**MKL_CBWR**环境变量, 以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库 (MKL) 计算中进行一致的输出。
+仅适用于 R 功能集成，应设置**MKL_CBWR**环境变量，以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库（MKL）计算中进行一致的输出。
 
 1. 在控制面板中, 单击 "**系统和安全** > **系统** > " "**高级系统设置** > " "**环境变量**"。
 
@@ -246,7 +246,7 @@ ms.locfileid: "69634556"
 * [管理磁盘配额](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas), 以避免运行耗尽磁盘空间的任务的外部脚本
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-在 Windows SQL Server 2019 中, 隔离机制已发生更改。 这会影响**SQLRUserGroup**、防火墙规则、文件权限和隐含身份验证。 有关详细信息, 请参阅[机器学习服务的隔离更改](sql-server-machine-learning-services-2019.md)。
+在 Windows SQL Server 2019 中，隔离机制已发生更改。 这会影响**SQLRUserGroup**、防火墙规则、文件权限和隐含身份验证。 有关详细信息，请参阅[机器学习服务的隔离更改](sql-server-machine-learning-services-2019.md)。
 ::: moniker-end
 
 <a name="bkmk_configureAccounts"></a> 
@@ -289,7 +289,7 @@ ms.locfileid: "69634556"
 
 要通过 SQL Server 使用的包必须安装在实例使用的默认库中。 如果在计算机上单独安装 R，或者将软件包安装到用户库，则无法使用 T-SQL 中的这些包。
 
-若要安装和管理 R 包, 你可以将用户组设置为在每个数据库级别共享包, 或者配置数据库角色以使用户能够安装自己的包。 有关详细信息, 请参阅[在 SQL Server 中安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)。
+若要安装和管理 R 包，你可以将用户组设置为在每个数据库级别共享包，或者配置数据库角色以使用户能够安装自己的包。 有关详细信息, 请参阅[在 SQL Server 中安装新的 R 包](../r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="next-steps"></a>后续步骤
 

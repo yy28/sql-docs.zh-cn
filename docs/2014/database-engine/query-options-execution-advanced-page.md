@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118106"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199323"
 ---
 # <a name="query-options-execution-advanced-page"></a>“查询选项”中的“执行”（“高级”页）
 
@@ -58,11 +58,11 @@ ms.locfileid: "71118106"
 
 **显示完成时间**允许您在查询结果之后或在 "消息" 选项卡中打印查询执行完成的时间。
 
-**用于 VBS enclaves for Always Encrypted 的证明协议**允许你为 Always Encrypted 使用安全 enclaves 的基于虚拟化的安全（VBS） enclaves 设置证明协议。 
+**用于 VBS enclaves for Always Encrypted 的证明协议**允许你为基于虚拟化的安全（VBS） enclaves 设置一个证明协议，该协议是使用安全 enclaves 的始终加密所使用的。
 
-  当前支持的认证协议为：
+当前支持的认证协议为：
 
-  * 主机保护者服务–使用 Windows 主机保护者服务（HGS）的证明协议。
+* 主机保护者服务-使用 Windows 主机保护者服务（HGS）的证明协议。
 
 有关详细信息，请参阅[具有 secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions)和[secure Enclave 证明](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)的 Always Encrypted。
 

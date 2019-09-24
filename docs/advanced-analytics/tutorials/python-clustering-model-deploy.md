@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00ce4893cfe96fcf115227cc5a7fd38085584dda
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294372"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199352"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教程：在 Python 中部署模型，以便使用 SQL Server 机器学习服务对客户进行分类
 
@@ -186,7 +186,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 若要了解有关在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅：
 
-* [快速入门：在 SQL Server 上运行 "Hello world" Python 脚本机器学习服务](quickstart-python-run-using-t-sql.md)
+* [快速入门：利用 SQL Server 机器学习服务创建和运行简单的 Python 脚本](quickstart-python-create-script.md)
 * [适用于 SQL Server 机器学习服务的其他 Python 教程](sql-server-python-tutorials.md)
 * [通过 sqlmlutils 安装 Python 包](../package-management/install-additional-python-packages-on-sql-server.md)
 
