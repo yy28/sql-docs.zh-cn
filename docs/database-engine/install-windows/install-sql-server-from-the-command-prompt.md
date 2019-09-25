@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3249d8ffddeec75ae576cc2bbdd9478982029758
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 1b9411f3b8740d1e70f668d903b0b18b7016653d
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69609077"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149997"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -244,7 +244,7 @@ ms.locfileid: "69609077"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA  帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式。<br /><br /> 支持的值：**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认安装设置由操作系统 (OS) 区域设置确定。 服务器级排序规则可以在安装期间更改，也可以在安装前通过更改 OS 区域设置进行更改。 默认排序规则设置为与每个特定区域设置关联的最早可用版本。 这是出于向后兼容的原因。 因此，不推荐总是使用默认排序规则。 更改 Windows 排序规则的默认安装设置可充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 例如，对于 OS 区域设置“英语(美国)”（代码页 1252），安装过程中的默认排序规则是 SQL_Latin1_General_CP1_CI_AS，可将其更改为最接近的 Windows 对等排序规则 Latin1_General_100_CI_AS_SC    。 <br /><br />有关详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **可选**|将当前用户添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定服务器角色。 当安装 Express 版本或使用 /Role=ALLFeatures_WithDefaults 时，可以使用 /ADDCURRENTUSERASSQLADMIN 参数。 有关详细信息，请参阅下面的 /ROLE。<br /><br /> 使用 /ADDCURRENTUSERASSQLADMIN 是可选的，但 /ADDCURRENTUSERASSQLADMIN 或 /SQLSYSADMINACCOUNTS 是必需的。 默认值：<br /><br /> **True** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 对于所有其他版本则为**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动帐户。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  

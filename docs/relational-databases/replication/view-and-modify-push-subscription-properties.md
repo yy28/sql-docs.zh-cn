@@ -18,12 +18,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6647af394964f0b8ef88fd6cb9909ac0ef9bfbdf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769234"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174230"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>查看和修改推送订阅属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ ms.locfileid: "68769234"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>查看快照或事务发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** ，并为 **@article** 指定值 **@article** 中获取。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 \@publication、\@subscriber，并为 \@article 指定值 all     。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 **@subscriber** 中获取。  
+2.  在发布服务器上，对发布数据库执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 \@subscriber  。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>更改快照或事务发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)，同时指定 **@subscriber** 及任何参数。  
+1.  在发布服务器上，对发布数据库执行 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)，同时为要更改的订阅服务器属性指定 \@subscriber 及任何参数  。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 或复制管理对象 (RMO) 在 **@destination_db** ，为 **@article** 指定值 **@article** ，将 **@property** 指定为要更改的订阅属性，并将 **@value** 中获取。 这将更改推送订阅的安全设置。  
+2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 \@publication、\@subscriber、\@destination_db，为 \@article 指定值 all，将 \@property 指定为要更改的订阅属性，并将 \@value 指定为新值        。 这将更改推送订阅的安全设置。  
   
-3.  （可选）若要更改订阅的 Data Transformation Services (DTS) 包属性，请在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) 。 为 **@jobid** 指定分发代理作业的 ID，并指定以下 DTS 包属性：  
+3.  （可选）若要更改订阅的 Data Transformation Services (DTS) 包属性，请在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) 。 为 \@jobid 指定分发代理作业的 ID，并指定以下 DTS 包属性  ：  
   
-    -   **@dts_package_name**  
+    -   \@dts_package_name   
   
-    -   **@dts_package_password**  
+    -   \@dts_package_password   
   
-    -   **@dts_package_location**  
+    -   \@dts_package_location   
   
      此操作将更改订阅的 DTS 包属性。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "68769234"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>查看合并发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)。 指定 **@publication** 和 **@subscriber** 中获取。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)。 指定 \@publication 和 \@subscriber   。  
   
-2.  在发布服务器上，执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 **@subscriber** 中获取。  
+2.  在发布服务器上，执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 \@subscriber  。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>更改合并发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)。 指定 **@publication** 或复制管理对象 (RMO) 在 **@subscriber** 或复制管理对象 (RMO) 在 **@subscriber_db** ，将 **@property** 指定为要更改的订阅属性，并将 **@value** 中获取。  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber、\@subscriber_db，将 \@property 指定为要更改的订阅属性，并将 \@value 指定为新值      。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
   

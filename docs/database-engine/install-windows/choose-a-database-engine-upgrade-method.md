@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 309ef92b105ae022cfc543ce0e73107af6870331
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054241"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149988"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "68054241"
      ![为 SAN 存储使用分离和附加的新安装升级方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "为 SAN 存储使用分离和附加的新安装升级方法")  
   
 ## <a name="rolling-upgrade"></a>滚动升级  
- 在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下文章中记录了这些方案：  
+ 在涉及多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（这些实例必须以特定顺序进行升级以最大化运行时间、最小化风险和保留功能）的 SQL Server 解决方案环境中，需要执行滚动升级。 滚动升级实质上是多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例按特定顺序进行的升级，此方法在每个现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上执行就地升级，或者执行新安装升级作为升级项目的一部分来简化硬件和/或操作系统的升级。 在很多方案中你都需要使用滚动升级方法。 以下文章中记录了这些方案：  
   
 -   AlwaysOn 可用性组：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级 AlwaysOn 可用性组副本实例](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
 -   故障转移群集实例：有关在此环境中执行滚动升级的详细步骤，请参阅[升级 SQL Server 故障转移群集实例](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)    

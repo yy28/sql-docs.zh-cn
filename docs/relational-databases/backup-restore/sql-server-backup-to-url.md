@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176353"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118183"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176353"
 - 你可以备份到多个块 blob 以获得更好的备份和还原性能，并支持更大的数据库备份。
 - [块 blob](https://azure.microsoft.com/pricing/details/storage/blobs/) 比[页 blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/) 便宜。 
 
-备份到块 blob 时，可以指定的最大块大小为 4 MB。 单个块 blob 文件的最大大小为 4MB * 50000 = 195GB。 如果你的数据库大于 195 GB，我们建议：
-- 使用备份压缩
+将大型数据库备份到 blob 存储会受到[托管实例 T-SQL 差异、限制和已知问题](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)中所述限制的约束。
+
+ 如果数据库太大，请执行以下任一操作：
+- 使用备份压缩或
 - 备份到多个块 blob
 
 ###  <a name="Blob"></a> Microsoft Azure Blob 存储服务  

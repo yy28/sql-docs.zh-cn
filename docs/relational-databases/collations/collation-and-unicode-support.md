@@ -1,7 +1,7 @@
 ---
 title: 排序规则和 Unicode 支持 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-author: stevestein
+author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908408"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149914"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,11 @@ ms.locfileid: "70908408"
     
 ##  <a name="Terms"></a> 排序规则术语    
     
--   [排序规则](#Collation_Defn)    
+-   [排序规则](#Collation_Defn) 
+
+    - [排序规则集](#Collation_sets)
+    
+    - [排序规则级别](#Collation_levels)
     
 -   [区域设置](#Locale_Defn)    
     
@@ -70,21 +74,67 @@ ms.locfileid: "70908408"
 |区分重音 (\_AS)|区分重音字符和非重音字符。 例如，“a”和“ấ”视为不同字符。 如果未选择此选项，则排序规则将不区分重音。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将字母的重音形式和非重音形式视为相同。 通过指定 \_AI，可以显式选择不区分重音。|    
 |区分假名 (\_KS)|区分日语中的两种假名字符类型：平假名和片假名。 如果未选择此选项，则排序规则将不区分假名。 即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在排序时将平假名字符和片假名字符视为相同。 省略此选项是指定不区分假名的唯一方法。|    
 |区分全半角 (\_WS)|区分全角字符和半角字符。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在排序时将同一字符的全角和半角形式视为相同。 省略此选项是指定不区分全半角的唯一方法。|    
-|区分变体选择符 (\_VSS) | 区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符。 变体序列包含基本字符加上其他变体选择符。 如果未选择 \_VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，SQL Server 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 另请参阅  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库） <br/><br/> 全文搜索索引中不支持区分变体选择符 (\_VSS) 排序规则。 全文搜索索引仅支持区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\_WS) 选项。 SQL Server XML 和 CLR 引擎不支持 (\_VSS) 变体选择符。
-|UTF-8 (\_UTF8)|启用要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的 UTF-8 编码数据。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对适用的数据类型使用默认的非 Unicode 编码格式。| 
+|区分变体选择符 (\_VSS)|区分 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 中引入的日语排序规则 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中不同的象形变体选择符   。 变体序列包含基本字符加上其他变体选择符。 如果未选择 \_VSS 选项，排序规则不区分变体选择符，并且在比较中不考虑变体选择符。 也就是说，出于排序的考虑，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将具有不同变体选择符但基于相同基本字符的字符视为相同。 另请参阅 [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)（Unicode 象形变体数据库）。<br/><br/> 全文搜索索引中不支持区分变体选择符 (\_VSS) 排序规则。 全文搜索索引仅支持区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\_WS) 选项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和 CLR 引擎不支持 (\_VSS) 变体选择符。|      
+|二进制 (\_BIN) <sup>1</sup>|根据为每个字符定义的位模式对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据进行排序和比较。 二进制排序顺序不仅区分大小写，而且也区分重音。 二进制排序顺序的速度也最快。 有关详细信息，请参阅此页中的[二进制排序规则](#Binary-collations)部分。|      
+|二进制-码位 (\_BIN2) <sup>1</sup> | 根据 Unicode 数据的 Unicode 码位对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据进行排序和比较。 对于非 Unicode 数据，二进制-码位将使用与二进制排序相同的比较方式。<br/><br/> 使用二进制-码位排序顺序的优点是：对已排序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据进行比较的应用程序不必重新对数据进行排序。 因此，二进制-码位排序顺序使应用程序开发变得更加简单，从而可以提高性能。 有关详细信息，请参阅此页中的[二进制排序规则](#Binary-collations)部分。|
+|UTF-8 (\_UTF8)|启用要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的 UTF-8 编码数据。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对适用的数据类型使用默认的非 Unicode 编码格式。 有关详细信息，请参阅此页中的 [UTF-8 支持](#utf8)部分。| 
+
+<sup>1</sup> 如果选择二进制或二进制-码位，则区分大小写 (\_CS)、区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\WS) 选项均不可用。      
+
+#### <a name="examples-of-collation-options"></a>排序规则选项示例
+每个排序规则都由一系列定义大小写、重音、全半角或假名的后缀组合而成。 下列示例说明了各种后缀组合的排序顺序行为。
+
+|Windows 排序规则后缀|排序顺序说明|
+|------------|-----------------| 
+|\_BIN <sup>1</sup>|二进制排序。|
+|\_BIN2 <sup>1</sup> <sup>2</sup>|二进制-码位排序顺序。|
+|\_CI_AI <sup>2</sup>|不区分大小写、不区分重音、不区分假名、不区分全半角。|
+|\_CI_AI_KS <sup>2</sup>|不区分大小写、不区分重音、区分假名、不区分全半角|
+|\_CI_AI_KS_WS <sup>2</sup>|不区分大小写、不区分重音、区分假名、区分全半角|
+|\_CI_AI_WS <sup>2</sup>|不区分大小写、不区分重音、不区分假名、区分全半角|
+|\_CI_AS <sup>2</sup>|不区分大小写、区分重音、不区分假名、不区分全半角|
+|\_CI_AS_KS <sup>2</sup>|不区分大小写、区分重音、区分假名、不区分全半角|
+|\_CI_AS_KS_WS <sup>2</sup>|不区分大小写、区分重音、区分假名、区分全半角|
+|\_CI_AS_WS <sup>2</sup>|不区分大小写、区分重音、不区分假名、区分全半角|
+|\_CS_AI <sup>2</sup>|区分大小写、不区分重音、不区分假名、不区分全半角|
+|\_CS_AI_KS <sup>2</sup>|区分大小写、不区分重音、区分假名、不区分全半角|
+|\_CS_AI_KS_WS <sup>2</sup>|区分大小写、不区分重音、区分假名、区分全半角|
+|\_CS_AI_WS <sup>2</sup>|区分大小写、不区分重音、不区分假名、区分全半角|
+|\_CS_AS <sup>2</sup>|区分大小写、区分重音、不区分假名、不区分全半角|
+|\_CS_AS_KS <sup>2</sup>|区分大小写、区分重音、区分假名、不区分全半角|
+|\_CS_AS_KS_WS <sup>2</sup>|区分大小写、区分重音、区分假名、区分全半角|
+|\_CS_AS_WS <sup>2</sup>|区分大小写、区分重音、不区分假名、区分全半角|
+
+<sup>1</sup> 如果选择二进制或二进制-码位，则区分大小写 (\_CS)、区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\_WS) 选项均不可用。    
+
+<sup>2</sup> 如果添加 UTF-8 选项 (\_UTF8)，可使用 UTF-8 对 Unicode 数据进行编码。 有关详细信息，请参阅此页中的 [UTF-8 支持](#utf8)部分。 
+
+### <a name="Collation_sets"></a> 排序规则集
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下排序规则集：    
+
+-  [Windows 排序规则](#Windows-collations)
+
+-  [二进制排序规则](#Binary-collations)
+
+-  [SQL Server 排序规则](#SQL-collations)
     
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下排序规则集：    
-    
-#### <a name="windows-collations"></a>Windows 排序规则    
+#### <a name="Windows-collations"></a> Windows 排序规则    
 Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数据的存储规则。 在 Windows 排序规则中，使用与 Unicode 数据相同的算法实现非 Unicode 数据的比较。 Windows 基本排序规则指定应用字典排序时所用的字母表或语言，以及用于存储非 Unicode 字符数据的代码页。 Unicode 排序和非 Unicode 排序都与特定 Windows 版本中的字符串比较相兼容。 这保证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所有数据类型的一致性，还使开发人员能够使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的相同规则对应用程序中的字符串排序。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。    
     
-#### <a name="binary-collations"></a>二进制排序规则    
-二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们是区分大小写的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了所使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果。    
+#### <a name="Binary-collations"></a> 二进制排序规则    
+二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们是区分大小写的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了所使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果   。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)。   
     
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中有两种二进制排序规则：旧的 **BIN** 排序规则和新的 **BIN2** 排序规则。 在 **BIN2** 排序规则中，所有字符根据其码位排序。 在 **BIN** 排序规则中，仅首字符按照码位排序，其余字符根据其字节值排序。 （由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。）    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有两种类型的二进制排序规则：
+
+-  早期的 BIN 排序规则对 Unicode 数据执行的是不完整的逐码位比较  。 这些早期的二进制排序规则将第一个字符作为 WCHAR 比较，接下来是逐字节比较。 在 **BIN** 排序规则中，仅首字符按照码位排序，其余字符根据其字节值排序。
+
+-  更新的 BIN2 排序规则可实现纯码位比较  。 在 **BIN2** 排序规则中，所有字符根据其码位排序。 由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。     
     
-#### <a name="sql-server-collations"></a>SQL Server 排序规则    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_\*) 提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本兼容的排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。    
+#### <a name="SQL-collations"></a> SQL Server 排序规则    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_\*) 提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本兼容的排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。 
+
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，默认安装排序规则设置由操作系统 (OS) 区域设置确定。 服务器级排序规则可以在安装期间更改，也可以在安装前通过更改 OS 区域设置进行更改。 默认排序规则设置为与每个特定区域设置关联的最早可用版本。 这是出于向后兼容的原因。 因此，不推荐总是使用默认排序规则。 更改 Windows 排序规则的默认安装设置可充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 例如，对于 OS 区域设置“英语(美国)”（代码页 1252），安装过程中的默认排序规则是 SQL_Latin1_General_CP1_CI_AS，可将其更改为最接近的 Windows 对等排序规则 Latin1_General_100_CI_AS_SC    。
     
 > [!NOTE]    
 > 升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文实例时可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_\*)，以便与现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则是在安装过程中定义的，因此在以下情况下确保慎重指定排序规则设置：    
@@ -92,14 +142,257 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 > -   应用程序代码依赖早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则的行为。    
 > -   必须存储反映多种语言的字符数据。    
     
- 支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的下列级别设置排序规则：    
-    
-#### <a name="server-level-collations"></a>服务器级排序规则   
-默认服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中设置的，还将成为系统数据库和所有用户数据库的默认排序规则。 请注意，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中不能选择仅 Unicode 排序规则，因为不支持将它们用作服务器级排序规则。    
+### <a name="Collation_levels"></a> 排序规则级别
+支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的下列级别设置排序规则：    
+
+-  [服务器级排序规则](#Server-level-collations)
+
+-  [数据库级排序规则](#Database-level-collations)
+
+-  [列级排序规则](#Column-level-collations)
+
+-  [表达式级排序规则](#Expression-level-collations)
+
+#### <a name="Server-level-collations"></a> 服务器级排序规则   
+默认服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中设置的，还将成为系统数据库和所有用户数据库的默认排序规则。 
+
+下表显示由操作系统 (OS) 区域设置确定的默认排序规则标识，其中包括各自的 Windows 和 SQL 语言代码标识符 (LCID)：
+
+|Windows 区域设置|Windows LCID|SQL LCID|默认排序规则|
+|---------------|---------|---------|---------------|
+|南非荷兰语（南非）|0x0436|0x0409|Latin1_General_CI_AS|
+|阿尔巴尼亚语（阿尔巴尼亚）|0x041c|0x041c|Albanian_CI_AS|
+|阿尔萨斯语（法国）|0x0484|0x0409|Latin1_General_CI_AS|
+|阿姆哈拉语（埃塞俄比亚）|0x045e|0x0409|Latin1_General_CI_AS|
+|阿拉伯语（阿尔及利亚）|0x1401|0x0401|Arabic_CI_AS|
+|阿拉伯语（巴林）|0x3c01|0x0401|Arabic_CI_AS|
+|阿拉伯语（埃及）|0x0c01|0x0401|Arabic_CI_AS|
+|阿拉伯语（伊拉克）|0x0801|0x0401|Arabic_CI_AS|
+|阿拉伯语（约旦）|0x2c01|0x0401|Arabic_CI_AS|
+|阿拉伯语（科威特）|0x3401|0x0401|Arabic_CI_AS|
+|阿拉伯语（黎巴嫩）|0x3001|0x0401|Arabic_CI_AS|
+|阿拉伯语（利比亚）|0x1001|0x0401|Arabic_CI_AS|
+|阿拉伯语（摩洛哥）|0x1801|0x0401|Arabic_CI_AS|
+|阿拉伯语（阿曼）|0x2001|0x0401|Arabic_CI_AS|
+|阿拉伯语（卡塔尔）|0x4001|0x0401|Arabic_CI_AS|
+|阿拉伯语（沙特阿拉伯）|0x0401|0x0401|Arabic_CI_AS|
+|阿拉伯语（叙利亚）|0x2801|0x0401|Arabic_CI_AS|
+|阿拉伯语（突尼斯）|0x1c01|0x0401|Arabic_CI_AS|
+|阿拉伯语（阿拉伯联合酋长国）|0x3801|0x0401|Arabic_CI_AS|
+|阿拉伯语（也门）|0x2401|0x0401|Arabic_CI_AS|
+|亚美尼亚语（亚美尼亚）|0x042b|0x0419|Latin1_General_CI_AS|
+|阿萨姆语（印度）|0x044d|0x044d|在服务器级别不可用|
+|阿泽里语（阿塞拜疆，西里尔文）|0x082c|0x082c|不推荐使用，在服务器级别不可用|
+|阿泽里语（阿塞拜疆，拉丁语）|0x042c|0x042c|不推荐使用，在服务器级别不可用|
+|巴什基尔语（俄罗斯）|0x046d|0x046d|Latin1_General_CI_AI|
+|巴斯克语（巴斯克）|0x042d|0x0409|Latin1_General_CI_AS|
+|白俄罗斯语（白俄罗斯）|0x0423|0x0419|Cyrillic_General_CI_AS|
+|孟加拉语（孟加拉）|0x0845|0x0445|在服务器级别不可用|
+|孟加拉语（印度）|0x0445|0x0439|在服务器级别不可用|
+|波斯尼亚语（波斯尼亚和黑塞哥维那，西里尔文）|0x201a|0x201a|Latin1_General_CI_AI|
+|波斯尼亚语（波斯尼亚和黑塞哥维那，拉丁语）|0x141a|0x141a|Latin1_General_CI_AI|
+|布列塔尼语（法国）|0x047e|0x047e|Latin1_General_CI_AI|
+|保加利亚语（保加利亚）|0x0402|0x0419|Cyrillic_General_CI_AS|
+|加泰罗尼亚语（加泰罗尼亚）|0x0403|0x0409|Latin1_General_CI_AS|
+|中文（中国香港特别行政区）|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|中文（中国澳门特别行政区）|0x1404|0x1404|Latin1_General_CI_AI|
+|中文（中国澳门）|0x21404|0x21404|Latin1_General_CI_AI|
+|中文（中华人民共和国）|0x0804|0x0804|Chinese_PRC_CI_AS|
+|中文（中华人民共和国）|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
+|中文（新加坡）|0x1004|0x0804|Chinese_PRC_CI_AS|
+|中文（新加坡）|0x21004|0x20804|Chinese_PRC_Stroke_CI_AS|
+|中文（中国台湾）|0x30404|0x30404|Chinese_Taiwan_Bopomofo_CI_AS|
+|中文（中国台湾）|0x0404|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|科西嘉语（法国）|0x0483|0x0483|Latin1_General_CI_AI|
+|克罗地亚语（波斯尼亚和黑塞哥维那，拉丁语）|0x101a|0x041a|Croatian_CI_AS|
+|克罗地亚语（克罗地亚）|0x041a|0x041a|Croatian_CI_AS|
+|捷克语（捷克共和国）|0x0405|0x0405|Czech_CI_AS|
+|丹麦语（丹麦）|0x0406|0x0406|Danish_Norwegian_CI_AS|
+|达里语（阿富汗）|0x048c|0x048c|Latin1_General_CI_AI|
+|迪维西语（马尔代夫）|0x0465|0x0465|在服务器级别不可用|
+|荷兰语（比利时）|0x0813|0x0409|Latin1_General_CI_AS|
+|荷兰语（荷兰）|0x0413|0x0409|Latin1_General_CI_AS|
+|英语（澳大利亚）|0x0c09|0x0409|Latin1_General_CI_AS|
+|英语（伯利兹）|0x2809|0x0409|Latin1_General_CI_AS|
+|英语（加拿大）|0x1009|0x0409|Latin1_General_CI_AS|
+|英语（加勒比海）|0x2409|0x0409|Latin1_General_CI_AS|
+|英语（印度）|0x4009|0x0409|Latin1_General_CI_AS|
+|英语（爱尔兰）|0x1809|0x0409|Latin1_General_CI_AS|
+|英语（牙买加）|0x2009|0x0409|Latin1_General_CI_AS|
+|英语（马来西亚）|0x4409|0x0409|Latin1_General_CI_AS|
+|英语（新西兰）|0x1409|0x0409|Latin1_General_CI_AS|
+|英语（菲律宾）|0x3409|0x0409|Latin1_General_CI_AS|
+|英语（新加坡）|0x4809|0x0409|Latin1_General_CI_AS|
+|英语（南非）|0x1c09|0x0409|Latin1_General_CI_AS|
+|英语（特立尼达和多巴哥）|0x2c09|0x0409|Latin1_General_CI_AS|
+|英语（英国）|0x0809|0x0409|Latin1_General_CI_AS|
+|英语（美国）|0x0409|0x0409|SQL_Latin1_General_CP1_CI_AS|
+|英语（津巴布韦）|0x3009|0x0409|Latin1_General_CI_AS|
+|爱沙尼亚语（爱沙尼亚）|0x0425|0x0425|Estonian_CI_AS|
+|法罗语（法罗群岛）|0x0438|0x0409|Latin1_General_CI_AS|
+|菲律宾语（菲律宾）|0x0464|0x0409|Latin1_General_CI_AS|
+|芬兰语（芬兰）|0x040b|0x040b|Finnish_Swedish_CI_AS|
+|法语（比利时）|0x080c|0x040c|French_CI_AS|
+|法语（加拿大）|0x0c0c|0x040c|French_CI_AS|
+|法语（法国）|0x040c|0x040c|French_CI_AS|
+|法语（卢森堡）|0x140c|0x040c|French_CI_AS|
+|法语（摩纳哥）|0x180c|0x040c|French_CI_AS|
+|法语（瑞士）|0x100c|0x040c|French_CI_AS|
+|弗里西亚语（荷兰）|0x0462|0x0462|Latin1_General_CI_AI|
+|加利西亚语（西班牙）|0x0456|0x0409|Latin1_General_CI_AS|
+|格鲁吉亚语（格鲁吉亚）|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
+|格鲁吉亚语（格鲁吉亚）|0x0437|0x0419|Latin1_General_CI_AS|
+|德语 - 电话簿排序 (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
+|德语（奥地利）|0x0c07|0x0409|Latin1_General_CI_AS|
+|德语（德国）|0x0407|0x0409|Latin1_General_CI_AS|
+|德语（列支敦士登）|0x1407|0x0409|Latin1_General_CI_AS|
+|德语（卢森堡）|0x1007|0x0409|Latin1_General_CI_AS|
+|德语（瑞士）|0x0807|0x0409|Latin1_General_CI_AS|
+|希腊语（希腊）|0x0408|0x0408|Greek_CI_AS|
+|格陵兰语（格陵兰）|0x046f|0x0406|Danish_Norwegian_CI_AS|
+|古吉拉特语（印度）|0x0447|0x0439|在服务器级别不可用|
+|豪撒语（尼日利亚，拉丁语）|0x0468|0x0409|Latin1_General_CI_AS|
+|希伯来语（以色列）|0x040d|0x040d|Hebrew_CI_AS|
+|印地语（印度）|0x0439|0x0439|在服务器级别不可用|
+|匈牙利语（匈牙利）|0x040e|0x040e|Hungarian_CI_AS|
+|匈牙利语技术排序|0x1040e|0x1040e|Hungarian_Technical_CI_AS|
+|冰岛语（冰岛）|0x040f|0x040f|Icelandic_CI_AS|
+|伊博语（尼日利亚）|0x0470|0x0409|Latin1_General_CI_AS|
+|印度尼西亚语（印度尼西亚）|0x0421|0x0409|Latin1_General_CI_AS|
+|因纽特语（加拿大，拉丁语）|0x085d|0x0409|Latin1_General_CI_AS|
+|因纽特语（语音节）加拿大|0x045d|0x045d|Latin1_General_CI_AI|
+|爱尔兰语（爱尔兰）|0x083c|0x0409|Latin1_General_CI_AS|
+|意大利语（意大利）|0x0410|0x0409|Latin1_General_CI_AS|
+|意大利语（瑞士）|0x0810|0x0409|Latin1_General_CI_AS|
+|日语（日本 XJIS）|0x0411|0x0411|Japanese_CI_AS|
+|日语（日本）|0x040411|0x40411|Latin1_General_CI_AI|
+|卡纳达语（印度）|0x044b|0x0439|在服务器级别不可用|
+|哈萨克语（哈萨克斯坦）|0x043f|0x043f|Kazakh_90_CI_AS|
+|高棉语（柬埔寨）|0x0453|0x0453|在服务器级别不可用|
+|基切语（危地马拉）|0x0486|0x0c0a|Modern_Spanish_CI_AS|
+|卢旺达语（卢旺达）|0x0487|0x0409|Latin1_General_CI_AS|
+|孔卡尼语（印度）|0x0457|0x0439|在服务器级别不可用|
+|韩语（韩语字典排序）|0x0412|0x0412|Korean_Wansung_CI_AS|
+|柯尔克孜语（吉尔吉斯斯坦）|0x0440|0x0419|Cyrillic_General_CI_AS|
+|老挝语（老挝人民民主共和国）|0x0454|0x0454|在服务器级别不可用|
+|拉脱维亚语（拉脱维亚）|0x0426|0x0426|Latvian_CI_AS|
+|立陶宛语（立陶宛）|0x0427|0x0427|Lithuanian_CI_AS|
+|下索布语（德国）|0x082e|0x0409|Latin1_General_CI_AS|
+|卢森堡语（卢森堡）|0x046e|0x0409|Latin1_General_CI_AS|
+|马其顿语（马其顿，FYROM）|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|马来语（文莱达鲁萨兰国）|0x083e|0x0409|Latin1_General_CI_AS|
+|马来语（马来西亚）|0x043e|0x0409|Latin1_General_CI_AS|
+|马拉雅拉姆语（印度）|0x044c|0x0439|在服务器级别不可用|
+|马耳他语（马耳他）|0x043a|0x043a|Latin1_General_CI_AI|
+|毛利语（新西兰）|0x0481|0x0481|Latin1_General_CI_AI|
+|马普丹冈语（智利）|0x047a|0x047a|Latin1_General_CI_AI|
+|马拉地语（印度）|0x044e|0x0439|在服务器级别不可用|
+|莫霍克语（加拿大）|0x047c|0x047c|Latin1_General_CI_AI|
+|蒙古语（蒙古）|0x0450|0x0419|Cyrillic_General_CI_AS|
+|蒙古语（中国）|0x0850|0x0419|Cyrillic_General_CI_AS|
+|尼泊尔语（尼泊尔）|0x0461|0x0461|在服务器级别不可用|
+|挪威语（博克马尔语，挪威）|0x0414|0x0414|Latin1_General_CI_AI|
+|挪威语（尼诺斯克语，挪威）|0x0814|0x0414|Latin1_General_CI_AI|
+|奥克西唐语（法国）|0x0482|0x040c|French_CI_AS|
+|奥里雅语（印度）|0x0448|0x0439|在服务器级别不可用|
+|普什图语（阿富汗）|0x0463|0x0463|在服务器级别不可用|
+|波斯语（伊朗）|0x0429|0x0429|Latin1_General_CI_AI|
+|波兰语（波兰）|0x0415|0x0415|Polish_CI_AS|
+|葡萄牙语（巴西）|0x0416|0x0409|Latin1_General_CI_AS|
+|葡萄牙语（葡萄牙）|0x0816|0x0409|Latin1_General_CI_AS|
+|旁遮普语（印度）|0x0446|0x0439|在服务器级别不可用|
+|克丘亚语（玻利维亚）|0x046b|0x0409|Latin1_General_CI_AS|
+|克丘亚语（厄瓜多尔）|0x086b|0x0409|Latin1_General_CI_AS|
+|克丘亚语（秘鲁）|0x0c6b|0x0409|Latin1_General_CI_AS|
+|罗马尼亚语（罗马尼亚）|0x0418|0x0418|Romanian_CI_AS|
+|罗曼什语（瑞士）|0x0417|0x0417|Latin1_General_CI_AI|
+|俄语（俄罗斯）|0x0419|0x0419|Cyrillic_General_CI_AS|
+|萨米语（伊纳里，芬兰）|0x243b|0x083b|Latin1_General_CI_AI|
+|萨米语(律勒欧，挪威)|0x103b|0x043b|Latin1_General_CI_AI|
+|萨米语（律勒欧，瑞典）|0x143b|0x083b|Latin1_General_CI_AI|
+|萨米语（北方，芬兰）|0x0c3b|0x083b|Latin1_General_CI_AI|
+|萨米语(北方，挪威)|0x043b|0x043b|Latin1_General_CI_AI|
+|萨米语（北方，瑞典）|0x083b|0x083b|Latin1_General_CI_AI|
+|萨米语（斯科特，芬兰）|0x203b|0x083b|Latin1_General_CI_AI|
+|萨米语（南方，挪威）|0x183b|0x043b|Latin1_General_CI_AI|
+|萨米语（南方，瑞典）|0x1c3b|0x083b|Latin1_General_CI_AI|
+|梵语（印度）|0x044f|0x0439|在服务器级别不可用|
+|塞尔维亚语（波斯尼亚和黑塞哥维那，西里尔文）|0x1c1a|0x0c1a|Latin1_General_CI_AI|
+|塞尔维亚语（波斯尼亚和黑塞哥维那，拉丁语）|0x181a|0x081a|Latin1_General_CI_AI|
+|塞尔维亚语（塞尔维亚，西里尔语）|0x0c1a|0x0c1a|Latin1_General_CI_AI|
+|塞尔维亚语（塞尔维亚，拉丁语）|0x081a|0x081a|Latin1_General_CI_AI|
+|巴索托语/北索托语（南非）|0x046c|0x0409|Latin1_General_CI_AS|
+|茨瓦纳语/博茨瓦纳（南非）|0x0432|0x0409|Latin1_General_CI_AS|
+|僧伽罗语（斯里兰卡）|0x045b|0x0439|在服务器级别不可用|
+|斯洛伐克语（斯洛伐克）|0x041b|0x041b|Slovak_CI_AS|
+|斯洛文尼亚语（斯洛文尼亚）|0x0424|0x0424|Slovenian_CI_AS|
+|西班牙语（阿根廷）|0x2c0a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（玻利维亚）|0x400a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（智利）|0x340a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（哥伦比亚）|0x240a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（哥斯达黎加）|0x140a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（多米尼加共和国）|0x1c0a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（厄瓜多尔）|0x300a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（萨尔瓦多）|0x440a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（危地马拉）|0x100a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（洪都拉斯）|0x480a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（墨西哥）|0x080a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙（尼加拉瓜）|0x4c0a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（巴拿马）|0x180a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（巴拉圭）|0x3c0a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（秘鲁）|0x280a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（波多黎各）|0x500a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（西班牙）|0x0c0a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（西班牙，传统风格）|0x040a|0x040a|Traditional_Spanish_CI_AS|
+|西班牙语（美国）|0x540a|0x0409|Latin1_General_CI_AS|
+|西班牙语（乌拉圭）|0x380a|0x0c0a|Modern_Spanish_CI_AS|
+|西班牙语（委内瑞拉）|0x200a|0x0c0a|Modern_Spanish_CI_AS|
+|斯瓦希里语（肯尼亚）|0x0441|0x0409|Latin1_General_CI_AS|
+|瑞典语（芬兰）|0x081d|0x040b|Finnish_Swedish_CI_AS|
+|瑞典语（瑞典）|0x041d|0x040b|Finnish_Swedish_CI_AS|
+|叙利亚语（叙利亚）|0x045a|0x045a|在服务器级别不可用|
+|塔吉克语（塔吉克斯坦）|0x0428|0x0419|Cyrillic_General_CI_AS|
+|塔马塞特文（阿尔及利亚，拉丁语）|0x085f|0x085f|Latin1_General_CI_AI|
+|泰米尔语（印度）|0x0449|0x0439|在服务器级别不可用|
+|鞑靼语（俄罗斯）|0x0444|0x0444|Cyrillic_General_CI_AS|
+|泰卢固语（印度）|0x044a|0x0439|在服务器级别不可用|
+|泰语（泰国）|0x041e|0x041e|Thai_CI_AS|
+|藏语（中国）|0x0451|0x0451|在服务器级别不可用|
+|土耳其语（土耳其）|0x041f|0x041f|Turkish_CI_AS|
+|土库曼语（土库曼斯坦）|0x0442|0x0442|Latin1_General_CI_AI|
+|维吾尔语（中国）|0x0480|0x0480|Latin1_General_CI_AI|
+|乌克兰语（乌克兰）|0x0422|0x0422|Ukrainian_CI_AS|
+|上索布语（德国）|0x042e|0x042e|Latin1_General_CI_AI|
+|乌尔都语（巴基斯坦）|0x0420|0x0420|Latin1_General_CI_AI|
+|乌兹别克语（乌兹别克斯坦，西里尔文）|0x0843|0x0419|Cyrillic_General_CI_AS|
+|乌兹别克语（乌兹别克斯坦，拉丁语）|0x0443|0x0443|Uzbek_Latin_90_CI_AS|
+|越南语（越南）|0x042a|0x042a|Vietnamese_CI_AS|
+|威尔士语（英国）|0x0452|0x0452|Latin1_General_CI_AI|
+|沃洛夫语（塞内加尔）|0x0488|0x040c|French_CI_AS|
+|班图语/索萨语（南非）|0x0434|0x0409|Latin1_General_CI_AS|
+|雅库特语（俄罗斯）|0x0485|0x0485|Latin1_General_CI_AI|
+|彝语（中国）|0x0478|0x0409|Latin1_General_CI_AS|
+|约鲁巴语（尼日利亚）|0x046a|0x0409|Latin1_General_CI_AS|
+|祖鲁语（南非）|0x0435|0x0409|Latin1_General_CI_AS|
+
+> [!NOTE]
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中不能选择仅 Unicode 排序规则，因为不支持将它们用作服务器级排序规则。    
     
 除了导出所有数据库对象和数据、重新生成 **master** 数据库和导入所有数据库对象和数据以外，一旦为服务器分配了某一排序规则后，就无法更改该排序规则。 与更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的默认排序规则相反，您可在创建新数据库或数据库列时指定所需的排序规则。    
+
+若要查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的服务器排序规则，请使用下列 `SERVERPROPERTY` 函数：
+
+```sql
+SELECT CONVERT(varchar, SERVERPROPERTY('collation'));
+```
+
+若要查询服务器以找到所有可用的排序规则，请使用以下 `fn_helpcollations()` 内置函数：
+
+```sql
+SELECT * FROM sys.fn_helpcollations();
+```
     
-#### <a name="database-level-collations"></a>数据库级排序规则    
+#### <a name="Database-level-collations"></a> 数据库级排序规则    
 创建或修改数据库时，您可使用 CREATE DATABASE 或 ALTER DATABASE 语句的 COLLATE 子句指定默认数据库排序规则。 如果未指定排序规则，将为该数据库分配服务器排序规则。    
     
 除了更改服务器的排序规则外，无法更改系统数据库的排序规则。    
@@ -109,11 +402,31 @@ Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数
 > [!NOTE]
 > 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上创建数据库后，不能更改排序规则。
 
+可使用如下的 `ALTER DATABASE` 语句更改用户数据库的排序规则：
 
-#### <a name="column-level-collations"></a>列级排序规则    
+```sql
+ALTER DATABASE myDB COLLATE Greek_CS_AI;
+```
+
+> [!IMPORTANT]
+> 更改数据库级排序规则不会影响列级排序规则或表达式级排序规则。
+
+可以使用如下语句检索数据库的当前排序规则：
+
+```sql
+SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
+```
+
+#### <a name="Column-level-collations"></a> 列级排序规则    
 当您创建或更改表时，可使用 COLLATE 子句指定每个字符串列的排序规则。 如果未指定排序规则，则为该列分配数据库的默认排序规则。    
+
+可使用如下的 `ALTER TABLE` 语句更改列的排序规则：
+
+```sql
+ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
+```
     
-#### <a name="expression-level-collations"></a>表达式级排序规则    
+#### <a name="Expression-level-collations"></a> 表达式级排序规则    
 表达式级排序规则在语句运行时设置，并且影响结果集的返回方式。 这可以使 ORDER BY 排序结果特定于区域设置。 使用如下的 COLLATE 子句可以实现表达式级排序规则：    
     
 ```sql    
@@ -130,24 +443,40 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  排序顺序指定数据值的排序方式。 它影响数据比较的结果。 数据的排序通过使用排序规则而实现，且可使用索引对排序进行优化。    
     
 ##  <a name="Unicode_Defn"></a> Unicode 支持    
-Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 
-   
-客户端使用的代码页由操作系统设置确定。 若要在 Windows 操作系统上设置客户端代码页，请使用“控制面板”中的 **“区域设置”** 。    
+Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。
 
-非 Unicode 数据类型有明显的局限性， 这是因为非 Unicode 计算机只能使用单个代码页。 通过使用 Unicode 您可能会体验到性能提升，因为需要较少的代码页转换。 必须在数据库级、列级或表达式级单独选择 Unicode 排序规则，因为在服务器级不支持 Unicode 排序规则。    
-   
-在将数据从服务器移到客户端时，服务器排序规则可能无法由旧版本的客户端驱动程序识别。 将数据从 Unicode 服务器移到非 Unicode 客户端时，可能会出现此情况。 最好升级客户端操作系统，以使基础系统排序规则得以升级。 如果客户端上安装了数据库客户端软件，则可以考虑对数据库客户端软件应用服务更新。    
-    
-> [!TIP]
-> 还可以尝试针对服务器上的数据使用另一个排序规则。 选择一个映射到客户端上的代码页的排序规则。    
+### <a name="unicode-basics"></a>Unicode 基础知识
+当只使用字符数据和代码页时，在一个数据库内很难以多种语言存储数据。 也很难为数据库找到一种能存储所有需要的特定语言字符的代码页。 此外，当运行不同代码页的不同客户端读取和更新特殊字符时，很难保证正确转换这些字符。 支持国际化客户端的数据库应始终使用 Unicode 数据类型，而不应使用非 Unicode 数据类型。
 
+例如，有一个必须处理三种主要语言的北美洲客户的数据库：
+
+-  墨西哥使用的西班牙语名称和地址
+-  魁北克使用的法语名称和地址
+-  加拿大其余地区和美国使用的英语名称和地址
+
+当只使用字符列和代码页时，必须小心处理，确保与数据库一起安装的代码页能处理所有这三种语言的字符。 另外，还必须小心保证当运行某种语言的代码页的客户端读取另一种语言的字符时，能够正确转换字符。
+   
+> [!NOTE]
+> 客户端使用的代码页由操作系统 (OS) 设置确定。 若要在 Windows 操作系统上设置客户端代码页，请使用“控制面板”中的 **“区域设置”** 。    
+
+对于支持世界范围的读者所需的所有字符的字符数据类型，很难为其选择代码页。
+在国际化数据库中，最简单的字符数据管理方法是始终使用支持 Unicode 的数据类型。 
+
+### <a name="unicode-data-types"></a>Unicode 数据类型
 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中存储反映多种语言的字符数据，请使用 Unicode 数据类型（nchar  、nvarchar  和 ntext  ），而不是非 Unicode 数据类型（char  、varchar  和 text  ）。 
 
 > [!NOTE]
 > 对于 Unicode 数据类型，[!INCLUDE[ssde_md](../../includes/ssde_md.md)]最多可以使用 UCS-2 表示 65,535 个字符；或者，如果使用了附属字符，可表示整个 Unicode 范围（‭1,114,111 个字符）。 若要详细了解如何启用附属字符，请参阅[附属字符](#Supplementary_Characters)。
 
 或者，从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，如果使用已启用 UTF-8 的排序规则 (\_UTF8)，则以前的非 Unicode 数据类型（**char** 和 **varchar**）将变为 Unicode (UTF-8) 数据类型。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 不会更改以前存在的 Unicode (UTF-16) 数据类型（**nchar**、**nvarchar** 和 **ntext**）的行为。 如需了解更多详情，请参阅 [UTF-8 与 UTF-16 的存储差异](#storage_differences)。
-       
+
+### <a name="unicode-considerations"></a>Unicode 注意事项
+非 Unicode 数据类型有明显的局限性， 这是因为非 Unicode 计算机只能使用单个代码页。 通过使用 Unicode 您可能会体验到性能提升，因为需要较少的代码页转换。 必须在数据库级、列级或表达式级单独选择 Unicode 排序规则，因为在服务器级不支持 Unicode 排序规则。    
+
+在将数据从服务器移到客户端时，服务器排序规则可能无法由旧版本的客户端驱动程序识别。 将数据从 Unicode 服务器移到非 Unicode 客户端时，可能会出现此情况。 最好升级客户端操作系统，以使基础系统排序规则得以升级。 如果客户端上安装了数据库客户端软件，则可以考虑对数据库客户端软件应用服务更新。    
+    
+> [!TIP]
+> 还可以尝试针对服务器上的数据使用另一个排序规则。 选择一个映射到客户端上的代码页的排序规则。    
 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）中提供的 UTF-16 排序规则来改进对一些 Unicode 字符的搜索和排序（仅 Windows 排序规则），可以选择附属字符 (\_SC) 排序规则之一，或版本 140 排序规则之一。    
  
 若要使用 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中提供的 UTF-8 排序规则来改进对某些 Unicode 字符的搜索和排序（仅 Windows 排序规则），必须选择已启用 UTF-8 编码的排序规则 (\_UTF8)。
@@ -162,11 +491,11 @@ Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全�
     
 -   UTF8 标志不能应用于：    
     -   不支持补充字符 (\_SC) 或区分变体选择符 (\_VSS) 的 90 版本的排序规则    
-    -   BIN 或 BIN2<sup>2</sup> 二进制排序规则    
-    -   SQL\* 排序规则  
+    -   BIN 或 BIN2 <sup>2</sup> 二进制排序规则    
+    -   SQL\_* 排序规则  
     
-<sup>1</sup>自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 起。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 已将排序规则 UTF8_BIN2 替换为 Latin1_General_100_BIN2_UTF8。     
-<sup>2</sup>截至 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3。 
+<sup>1</sup>自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 起。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 已将排序规则 UTF8_BIN2 替换为 Latin1_General_100_BIN2_UTF8   。        
+<sup>2</sup>截至 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3。    
     
 若要评估与使用 Unicode 或非 Unicode 数据类型相关的问题，请测试您的具体方案以确定您所在环境下的性能差异大小。 最好对整个组织中的系统所使用的排序规则进行标准化，并尽可能部署 Unicode 服务器和客户端。    
     
@@ -226,7 +555,12 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000 和 10F
 |[匹配一个通配符](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [通配符 - 无需匹配的字符](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|增补字符支持所有通配符操作。|增补字符不支持这些通配符操作。 支持其他通配符运算符。|    
     
 ## <a name="GB18030"></a> GB18030 支持    
-GB18030 是在中华人民共和国用于对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过对从客户端应用程序进入服务器的 GB18030 编码字符进行确认，然后在本机将其转换并存储为 Unicode 字符，来对这些字符提供支持。 这些字符存储在服务器中后，在所有后续操作中均视为 Unicode 字符。 可以使用任何中文排序规则，最好使用最新的 100 版本。 所有 _100 级排序规则均支持使用 GB18030 字符进行语言排序。 如果数据中包含增补字符（代理项对），您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的 SC 排序规则来改进搜索和排序操作。    
+GB18030 是在中华人民共和国用于对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过对从客户端应用程序进入服务器的 GB18030 编码字符进行确认，然后在本机将其转换并存储为 Unicode 字符，来对这些字符提供支持。 这些字符存储在服务器中后，在所有后续操作中均视为 Unicode 字符。 
+
+可以使用任何中文排序规则，最好使用最新的 100 版本。 所有 \_100 级排序规则均支持使用 GB18030 字符进行语言排序。 如果数据中包含增补字符（代理项对），您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中提供的 SC 排序规则来改进搜索和排序操作。    
+
+> [!NOTE]
+> 确保 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 等客户端工具使用 Dengxian 字体来正确地显示包含 GB18030 编码字符的字符串。
     
 ## <a name="Complex_script"></a> 复杂文种支持    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支持输入、存储、更改和显示复杂文种。 复杂文种包括下列几种类型：    
@@ -255,7 +589,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 <a name="ctp23"></a>
 
 ## <a name="utf8"></a> UTF-8 支持
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，以及作为字符串数据的数据库级别或列级别排序规则。 UTF-8 受 char  和 varchar  数据类型支持，并在创建对象的排序规则或将其更改为带有 `UTF8` 后缀的排序规则时启用。 例如：将 `LATIN1_GENERAL_100_CI_AS_SC` 更改为 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 完全支持广泛使用的 UTF-8 字符编码作为导入或导出编码，以及作为字符串数据的数据库级别或列级别排序规则。 UTF-8 受 char  和 varchar  数据类型支持，并在创建对象的排序规则或将其更改为带有 `UTF8` 后缀的排序规则时启用。 例如，LATIN1_GENERAL_100_CI_AS_SC 到 LATIN1_GENERAL_100_CI_AS_SC_UTF8   。 
 
 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中所引入的。 nchar  和 nvarchar  仅支持 UCS-2 或 UTF-16 编码，并保持不变。
 
@@ -309,7 +643,9 @@ Unicode 联盟为每个字符都分配一个唯一码位（介于 000000 和 10F
 [“SQL Server 最佳实践 - 迁移到 Unicode”](https://go.microsoft.com/fwlink/?LinkId=113890)- 不再保留   
 [Unicode 联盟网站](https://go.microsoft.com/fwlink/?LinkId=48619)   
 [Unicode 标准](http://www.unicode.org/standard/standard.html)     
-[适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+[OLE DB Driver for SQL Server 中的 UTF-8 支持](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)      
+[SQL Server 排序规则名称 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)        
+[Windows 排序规则名称 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)     
 博客：[介绍 SQL Server 的 UTF-8 支持](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## <a name="see-also"></a>另请参阅    

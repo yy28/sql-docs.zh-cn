@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5199849b0f3dced34ced0ec7a102f03cb054d789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095201"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066884"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "68095201"
      数据库审核规范的名称。 这是在创建新服务器审核规范时自动生成的，但是您可以对其进行编辑。  
   
      **审核**  
-     现有数据库审核的名称。 或者键入审核的名称，或者从列表中选择一个名称。  
+     现有服务器审核对象的名称。 或者键入审核的名称，或者从列表中选择一个名称。  
   
      **审核操作类型**  
      指定要捕获的数据库级别审核操作组和审核操作。 有关数据库级别审核操作组和审核操作的列表以及它们所包含事件的说明，请参阅 [SQL Server 审核操作组和操作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  

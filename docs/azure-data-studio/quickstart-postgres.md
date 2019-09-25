@@ -3,26 +3,26 @@ title: 快速入门：连接并查询 PostgreSQL
 titleSuffix: Azure Data Studio
 description: 本快速入门介绍如何使用 Azure Data Studio 连接到 PostgreSQL 并运行查询
 ms.custom: seodec18
-ms.date: 03/19/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959465"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127243"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>快速入门：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接并查询 PostgreSQL
 本快速入门介绍如何使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 连接到 Postgres，然后使用 SQL 语句创建数据库 *tutorialdb* 并对其进行查询。
 
 ## <a name="prerequisites"></a>必备条件
 
-若要完成本快速入门，需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md) 的 PostgreSQL 扩展以及对 PostgreSQL 服务器的访问权限。
+若要完成本快速入门，需要 [!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md)] 的 PostgreSQL 扩展以及对 PostgreSQL 服务器的访问权限。
 
 - [安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)。
 - [安装 Azure Data Studio 的 PostgreSQL 扩展](postgres-extension.md)。

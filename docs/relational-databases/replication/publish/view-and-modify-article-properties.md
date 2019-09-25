@@ -22,12 +22,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfbe6ede99184ea806b24bb7f8565b616a561cd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b11273743ecdd54fa7a48aa4b8750d1925e8cca0
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769752"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174310"
 ---
 # <a name="view-and-modify-article-properties"></a>查看和修改项目属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,29 +104,29 @@ ms.locfileid: "68769752"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>查看属于快照发布或事务发布的项目的属性  
   
-1.  执行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)，为 **@publication** 参数指定发布名称，并为 **@article** 参数指定项目的名称。 如果未指定 **@article** ，将返回该发布中所有项目的信息。  
+1.  执行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)，为 \@publication 参数指定发布名称，并为 \@article 参数指定项目的名称   。 如果未指定 \@article，将返回该发布中所有项目的信息  。  
   
 2.  为表项目执行 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) 可列出基表中可用的所有列。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>修改属于快照发布或事务发布的项目的属性  
   
-1.  执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)，指定 **@property** 参数中要更改的项目属性，并为 **@value** 参数指定项目的名称。  
+1.  执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)，指定 \@property 参数中要更改的项目属性，并为 \@value 参数中的此属性指定新值   。  
   
     > [!NOTE]  
-    >  如果更改需要生成新的快照，则还必须为 **@force_invalidate_snapshot** 指定值 **@force_invalidate_snapshot** ，并且如果更改需要初始化订阅服务器，则还必须为 **@force_invalidate_snapshot** 指定值 **@force_reinit_subscription** 。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果更改需要生成新的快照，则还必须为 \@force_invalidate_snapshot 指定值 1，并且如果更改需要初始化订阅服务器，则还必须为 \@force_reinit_subscription 指定值 1     。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>查看属于合并发布的项目的属性  
   
-1.  执行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，为 **@publication** 参数指定发布名称，并为 **@article** 参数指定项目的名称。 如果未指定这些参数，将返回为发布或发布服务器中所有项目的信息。  
+1.  执行 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)，为 \@publication 参数指定发布的名称，并为 \@article 参数指定项目的名称   。 如果未指定这些参数，将返回为发布或发布服务器中所有项目的信息。  
   
 2.  为表项目执行 [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) 可列出基表中可用的所有列。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>修改属于合并发布的项目的属性  
   
-1.  执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 **@property** 参数中要更改的项目属性，并为 **@value** 参数指定项目的名称。  
+1.  执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 \@property 参数中要更改的项目属性，并为 \@value 参数中的此属性指定新值   。  
   
     > [!NOTE]  
-    >  如果更改需要生成新的快照，则还必须为 **@force_invalidate_snapshot** 指定值 **@force_invalidate_snapshot** ，并且如果更改需要初始化订阅服务器，则还必须为 **@force_invalidate_snapshot** 指定值 **@force_reinit_subscription** 。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果更改需要生成新的快照，则还必须为 \@force_invalidate_snapshot 指定值 1，并且如果更改需要初始化订阅服务器，则还必须为 \@force_reinit_subscription 指定值 1     。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此事务复制示例返回了已发布项目的属性。  

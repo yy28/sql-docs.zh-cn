@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938885"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038878"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  如果某个视图依赖于已删除的表（或视图），则当有人试图使用该视图时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将产生错误消息。 如果创建了新表或视图（该表的结构与以前的基表没有不同之处）以替换删除的表或视图，则视图将再次可用。 如果新表或视图的结构发生更改，则必须删除并重新创建该视图。  
   
- 如果未使用 SCHEMABINDING 子句创建视图，则对视图下影响视图定义的对象进行更改时，应运行 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)。 否则，当查询视图时，可能会生成意外结果。  
+ 如果未使用 SCHEMABINDING 子句创建视图，请在对视图下影响视图定义的对象进行更改时，运行 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)。 否则，当查询视图时，可能会生成意外结果。  
   
  创建视图时，有关该视图的信息将存储在下列目录视图中：[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 和 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)。 CREATE VIEW 语句的文本将存储在 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 目录视图中。  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  选择 `list`  
   
-    -   应在视图定义的列列表中选择成员表中的所有列。  
+    -   在视图定义的列列表中，选择成员表中的所有列。  
   
-    -   每个 `select list` 中的同一序号位置上的列应属于同一类型，包括排序规则。 列仅仅属于可隐式转换的类型（如通常情况下的 UNION）是不够的。  
+    -   确保每个 `select list` 中的同一序号位置上的列属于同一类型，包括排序规则。 列仅仅属于可隐式转换的类型（如通常情况下的 UNION）是不够的。  
   
-         此外，至少有一列（例如 `<col>`）必须按照相同的序号位置显示在所有选择列表中。 此 `<col>` 应按照以下方式定义：成员表 `T1, ..., Tn` 分别在 `C1, ..., Cn` 上定义了 CHECK 约束 `<col>`。  
+         此外，至少有一列（例如 `<col>`）必须按照相同的序号位置显示在所有选择列表中。 按照以下方式定义 `<col>`：成员表 `T1, ..., Tn` 分别在 `C1, ..., Cn` 上定义 CHECK 约束 `<col>`。  
   
          在表 `C1` 上定义的约束 `T1` 必须是以下格式：  
   
@@ -263,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   约束应按照以下方式定义：`<col>` 的任何指定值最多只能满足一个 `C1, ..., Cn` 约束，从而使约束形成一组不联接或不重叠的间隔。 定义不联接的约束的列 `<col>` 称为分区列。 请注意，分区列在基础表中可能有不同的名称。 约束应处于启用和信任状态，以使它们满足分区列的上述条件。 如果约束被禁用，则使用 ALTER TABLE 的 CHECK CONSTRAINT constraint_name 选项重新启用约束检查，并使用 WITH CHECK 选项对其进行验证  。  
+    -   约束必须按照以下方式定义：`<col>` 的任何指定值最多只能满足一个 `C1, ..., Cn` 约束，从而使约束形成一组不联接或不重叠的间隔。 定义不联接的约束的列 `<col>` 称为分区列。 请注意，分区列在基础表中可能有不同的名称。 约束必须处于启用和信任状态，以使它们满足分区依据列的上述条件。 如果约束被禁用，则使用 ALTER TABLE 的 CHECK CONSTRAINT constraint_name 选项重新启用约束检查，并使用 WITH CHECK 选项对其进行验证  。  
   
          以下示例显示有效的约束集合：  
   
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   分区列不能是计算列、标识列、默认列或 timestamp 列  。  
   
-    -   如果成员表中的同一列上存在多个约束，则数据库引擎将忽略所有约束，且在确定视图是否为分区视图时不考虑这些约束。 若要满足分区视图的条件，在分区列上应只有一个分区约束。  
+    -   如果成员表中的同一列上存在多个约束，则数据库引擎将忽略所有约束，且在确定视图是否为分区视图时不考虑这些约束。 若要满足分区视图的条件，确保在分区依据列上只有一个分区约束。  
   
     -   分区列的可更新性没有限制。  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   成员表不能对表中的计算列创建索引。  
   
-    -   成员表在编号相同的列上应具有所有 PRIMARY KEY 约束。  
+    -   成员表在编号相同的列上具有所有 PRIMARY KEY 约束。  
   
-    -   视图中的所有成员表都应具有相同的 ANSI 填充设置。 这可以使用 sp_configure 中的 user options 选项或 SET 语句进行设置   。  
+    -   视图中的所有成员表都具有相同的 ANSI 填充设置。 这可以使用 sp_configure 中的 user options 选项或 SET 语句进行设置   。  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>在分区视图中修改数据的条件  
  下面的限制适用于在分区视图中修改数据的语句：  
   
--   即使基础成员表对这些列具有 DEFAULT 约束或允许 NULL 值，INSERT 语句也必须为视图中的所有列提供值。 对于那些具有 DEFAULT 定义的成员表列，这些语句无法显式地使用关键字 DEFAULT。  
+-   即使基础成员表对这些列具有 DEFAULT 约束或允许 NULL 值，INSERT 语句也会为视图中的所有列提供值。 对于那些具有 DEFAULT 定义的成员表列，这些语句无法显式地使用关键字 DEFAULT。  
   
--   插入到分区列中的值应至少满足一个基础约束；否则，插入操作将因违反约束而失败。  
+-   插入到分区依据列中的值至少满足一个基础约束；否则，插入操作将因约束冲突而失败。  
   
 -   即使列中包含在相应成员表中定义的 DEFAULT 值，UPDATE 语句也不能指定 DEFAULT 关键字作为 SET 子句中的值。  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   将启动分布式事务以确保更新所影响的所有节点间的原子性。  
   
--   应将 XACT_ABORT SET 选项设置为 ON，以使 INSERT、UPDATE 或 DELETE 语句生效。  
+-   将 XACT_ABORT SET 选项设置为 ON，以使 INSERT、UPDATE 或 DELETE 语句生效。  
   
 -   在分区视图中引用的远程表的所有 smallmoney 类型的列都将映射为 money   。 因此，本地表中相应的列（在选择列表中的相同序号位置中）必须也为 money 类型  。  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>有关复制的考虑事项  
  若要对复制所涉及的成员表创建分区视图，需要考虑下列事项：  
   
--   如果基础表涉及到包含更新订阅的合并复制或事务复制，则 uniqueidentifier 列也应包含在选择列表中  。  
+-   如果基础表涉及到包含更新订阅的合并复制或事务复制，请确保 uniqueidentifier 列也包含在选择列表中  。 
   
      对分区视图进行的任何 INSERT 操作都必须为 uniqueidentifier 列提供 NEWID() 值  。 因为无法使用 DEFAULT 关键字，所以对 uniqueidentifier 列的任何 UPDATE 操作都必须提供 NEWID() 值  。  
   

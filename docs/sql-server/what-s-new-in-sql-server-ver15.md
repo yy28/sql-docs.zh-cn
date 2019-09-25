@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228461"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096889"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -53,7 +53,7 @@ ms.locfileid: "70228461"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|对加密列创建索引|可以对使用随机加密和已启用 enclave 的密钥加密的列创建索引，以提升丰富查询的性能（使用 `LIKE` 和比较运算符）。 请参阅[包含安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+|具有安全 Enclave 的 Always Encrypted|通过对服务器端安全隔离区中的纯文本数据启用计算，使用就地加密和丰富计算扩展 Always Encrypted。 就地加密可提高加密列、旋转列加密密钥等加密操作的性能和可靠性，因为这样可以避免将数据移出数据库。 对丰富计算（模式匹配和比较操作）的支持可将 Always Encrypted 解锁到一组更广泛的方案和应用程序，这些方案和应用程序需要敏感数据保护，同时还需要在 Transact-SQL 查询中使用更丰富的功能。 请参阅[包含安全 Enclave 的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。|
 |暂停和恢复透明数据加密 (TDE) 的初始扫描|请参阅[透明数据加密 (TDE) 扫描 - 暂停和继续](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)。|
 |SQL Server 配置管理器中的证书管理|请参阅[证书管理（SQL Server 配置管理器）](../database-engine/configure-windows/manage-certificates.md)。|
 | &nbsp; | &nbsp; |

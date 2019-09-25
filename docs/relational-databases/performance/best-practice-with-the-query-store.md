@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903606"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163889"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ Query Store 收集能够准确代表工作负荷的数据集需要一定的时�
 
 > [!NOTE]
 > 上面的图形针对特定的查询计划会显示不同的形状，以下是可能出现的每种形状的对应意义：<br />  
+> 
 > |形状|含义|  
 > |-------------------|-------------|
 > |Circle|查询完成（常规执行成功完成）|
 > |Square|取消（客户端发起的执行中止）|
 > |Triangle|失败（由异常引起的执行中止）|
+> 
 > 此外，形状大小反映指定时间间隔内的查询执行计数，执行数量较大时形状也会随之增大。  
 
 -   你可以认为，你的查询因为缺少索引而无法达到最佳执行效果。 此信息显示在查询执行计划中。 使用 Query Store 创建缺失的索引并检查查询性能。  
@@ -290,7 +292,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   最后，你应该考虑将“查询捕获模式”设置为“Auto”，因为这样通常可以筛选掉与工作负荷不太相关的查询。  
   
 ### <a name="error-state"></a>错误状态  
- 若要恢复 Query Store，可尝试显式设置读写模式，然后再次检查实际状态。  
+ 若要恢复查询存储，可尝试显式设置读写模式，然后再次检查实际状态。  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  如果问题仍然存在，则表明磁盘上的查询存储数据已永久损坏。
  
- 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储  。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，需要从查询存储中清除数据，如下所示。
+ 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可通过在受影响的数据库内执行 sp_query_store_consistency_check 存储过程来恢复查询存储  。 必须先禁用查询存储，然后才能尝试恢复操作。 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，需要从查询存储中清除数据，如下所示。
  
- 如果没有效果，可在请求读写模式之前尝试清除查询存储。  
+ 如果恢复失败，可先尝试清除查询存储，然后再设置读写模式。  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |自定义|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 在 `ALTER DATABASE SET QUERY_STORE` 命令下引入自定义捕获模式。 启用后，在新的“查询存储捕获策略”设置下有额外可用的查询存储配置，可用于微调特定服务器中的数据收集。<br /><br />新的自定义设置定义在内部捕获策略时间阈值（计算可配置条件的时间边界）内执行的操作，如果所有值为 true，则查询存储可以捕获查询。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。|  
 
 > [!NOTE]
-> 当查询捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。
+> 当查询捕获模式设置为“全部”、“自动”或“自定义”时，始终捕获游标、存储过程中的查询和本机编译的查询。 若要捕获本机编译的查询，请使用 [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用每个查询统计信息的收集。 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>在 Query Store 中保留最相关数据  
  将 Query Store 配置为只包含最相关的数据，使之在持续运行的时候对你的常规工作负荷的影响最小，方便你进行故障排除。  

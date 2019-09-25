@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009385"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149982"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -132,7 +132,11 @@ Microsoft 已发现，作为 SQL Server 2016 和 2017 系统必备组件安装�
     > [!NOTE]
     > 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，选中“向 SQL Server 数据库引擎服务授予执行卷维护任务权限”  复选框，可以让 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务帐户使用[数据库即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。
   
-     使用“服务器配置 - 排序规则”  页指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的非默认排序规则。 有关详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
+1. 使用“服务器配置 - 排序规则”页为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非默认排序规则  。    
+
+   默认安装设置由操作系统 (OS) 区域设置确定。 服务器级排序规则可以在安装期间更改，也可以在安装前通过更改 OS 区域设置进行更改。 默认排序规则设置为与每个特定区域设置关联的最早可用版本。 这是出于向后兼容的原因。 因此，不推荐总是使用默认排序规则。 更改 Windows 排序规则的默认安装设置可充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 例如，对于 OS 区域设置“英语(美国)”（代码页 1252），安装过程中的默认排序规则是 SQL_Latin1_General_CP1_CI_AS，可将其更改为最接近的 Windows 对等排序规则 Latin1_General_100_CI_AS_SC    。
+
+   有关详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 1. 使用“数据库配置 - 服务器配置”  页指定以下各个选项：  
   
