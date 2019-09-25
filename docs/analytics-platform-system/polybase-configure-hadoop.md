@@ -1,6 +1,6 @@
 ---
 title: 配置 PolyBase 以访问 Hadoop 中的外部数据 | Microsoft Docs
-description: 介绍如何在并行数据仓库，若要将连接到外部 Hadoop 配置 PolyBase。
+description: 介绍如何将 PolyBase 配置为并行数据仓库以连接到外部 Hadoop。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2e675b87c3c4f01f63e21bafd5d071cebb4ae4c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960271"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227127"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
-本文介绍如何在 Hadoop 中的查询外部数据的 APS 设备上使用 PolyBase。
+本文介绍如何在 AP 设备上使用 PolyBase 查询 Hadoop 中的外部数据。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 Hadoop 遵循其新版本的“Major.Minor.Version”模式，且主要和次要版本中支持的所有版本均受支持。 支持以下 Hadoop 提供程序：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
- - Linux 上的 Hortonworks HDP 2.1-2.6
- - Linux 上的 Hortonworks HDP 3.0 3.1
+ - Linux 上的 Hortonworks HDP 2.1-2。6
+ - Linux 上的 Hortonworks HDP 3.0-3。1
  - Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
  - Linux 上的 Cloudera CDH 4.3  
- - Cloudera CDH 5.1-5.5、 5.9-5.13 Linux 上
+ - Cloudera CDH 5.1-5.5、5.9-5.13、5.15 & Linux 上的5.16
 
 ### <a name="configure-hadoop-connectivity"></a>配置 Hadoop 连接
 
-首先，配置 AP 以使用特定的 Hadoop 提供程序。
+首先，将 AP 配置为使用特定的 Hadoop 提供程序。
 
 1. 使用“hadoop connectivity”运行 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 并为提供程序设置适当的值。 若要为提供程序查找值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。 
 
@@ -46,15 +46,15 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
    GO
    ```  
 
-2. 重新启动 APS 区域上，使用服务状态页[设备配置管理器](launch-the-configuration-manager.md)。
+2. 使用[设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
   
 ## <a id="pushdown"></a> 启用下推计算  
 
 若要提高查询性能，请对 Hadoop 群集启用下推计算：  
   
-1. 打开远程桌面连接到 PDW 控制节点。
+1. 打开与 PDW 控制节点的远程桌面连接。
 
-2. 找到文件**yarn-site.xml**在控制节点上。 通常情况下，该路径为：  
+2. 在控制节点上查找文件**yarn-site.xml** 。 通常情况下，该路径为：  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -62,11 +62,11 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 3. 对于 Hadoop 计算机，在 Hadoop 配置目录中查找类似文件。 在文件中，查找并复制配置密钥 yarn.application.classpath 的值。  
   
-4. 在控制节点上，在**yarn.site.xml 文件**查找**yarn.application.classpath**属性。 将 Hadoop 计算机的值粘贴到值元素中。  
+4. 在 "控制" 节点上的**yarn 文件中，** 找到**yarn**属性。 将 Hadoop 计算机的值粘贴到值元素中。  
   
 5. 对于所有 CDH 5.X 版本，你都需要将 mapreduce.application.classpath 配置参数添加到 yarn.site.xml 文件的末尾或添加到 mapred-site.xml 文件中。 HortonWorks 在 yarn.application.classpath 配置中包括了这些配置。 有关示例，请参阅 [PolyBase 配置](../relational-databases/polybase/polybase-configuration.md)。
 
-## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>示例 XML 文件 CDH 5.X 群集的默认值
+## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>CDH 5.x 群集默认值的示例 XML 文件
 
 包含 yarn.application.classpath 和 mapreduce.application.classpath 配置的 Yarn-site.xml。
 
@@ -101,7 +101,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 </configuration>
 ```
 
-如果您选择两个配置设置分解为 mapred-site.xml 和 yarn-site.xml，则文件将如下所示：
+如果选择将两个配置设置分解为 mapred-site.xml 和 yarn-site.xml，则文件将如下所示：
 
 **yarn-site.xml**
 
@@ -138,7 +138,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 **mapred-site.xml**
 
-注意，我们添加了属性 mapreduce.application.classpath。 在 CDH 5.x 中，你将在 Ambari 中查找相同的命名约定的配置值。
+注意，我们添加了属性 mapreduce.application.classpath。 在 CDH 1.x 中，你将在 Ambari 中找到相同命名约定下的配置值。
 
 ```xml
 <?xml version="1.0"?>
@@ -172,7 +172,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 </configuration>
 ```
 
-## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>示例 XML 文件 HDP 3.X 群集默认值
+## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>HDP 2.x 群集默认值的示例 XML 文件
 
 **yarn-site.xml**
 
@@ -211,7 +211,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 若要查询 Hadoop 数据源中的数据，必须定义外部表以在 Transact-SQL 查询中使用。 以下步骤介绍如何配置外部表。
 
-1. 在数据库上创建主密钥。 需要加密的凭据机密。
+1. 在数据库上创建主密钥。 需要加密凭据机密。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -285,7 +285,7 @@ PolyBase 适用于三个函数：
 
 ### <a name="ad-hoc-queries"></a>即席查询  
 
-下面的即席查询联接关系与 Hadoop 数据。 它将选择快 35 mph，联接结构化的客户数据存储在 AP 中使用存储在 Hadoop 中的汽车传感器数据驱动器的客户。  
+以下即席查询联接与 Hadoop 数据的关系。 它选择 mph 于35的客户，并将存储在 AP 中的结构化客户数据与 Hadoop 中存储的车载传感器数据联接在一起。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -298,7 +298,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)
 
 ### <a name="importing-data"></a>导入数据  
 
-下面的查询外部数据导入 APS。 此示例数据快速驱动程序导入 APS 进行更加深入的分析。 若要提高性能，它利用 AP 中的列存储技术。  
+以下查询将外部数据导入到 AP。 此示例将快速驱动程序的数据导入到 AP，以执行更深入的分析。 为了提高性能，它利用了接入点中的列存储技术。  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -317,7 +317,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>导出数据  
 
-以下查询将数据从 APS 导出到 Hadoop。 它可用于关系数据存档到 Hadoop 时仍将能够对其进行查询。
+以下查询将数据从 AP 导出到 Hadoop。 它可用于将关系数据存档到 Hadoop，同时仍然能够对其进行查询。
 
 ```sql
 -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
@@ -333,14 +333,14 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>在 SSDT 中查看 PolyBase 对象  
+## <a name="view-polybase-objects-in-ssdt"></a>查看 SSDT 中的 PolyBase 对象  
 
-在 SQL Server Data Tools，可以在单独的文件夹中显示外部表**外部表**。 外部数据源和外部文件格式位于“外部资源”  下的子文件夹中。  
+在 SQL Server Data Tools 中，外部表在单独的文件夹**外部表**中显示。 外部数据源和外部文件格式位于“外部资源”下的子文件夹中。  
   
-![在 SSDT 中的 PolyBase 对象](media/polybase/external-tables-datasource.png)  
+![SSDT 中的 PolyBase 对象](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 Hadoop 安全设置，请参阅[配置的 Hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
+有关 Hadoop 安全设置，请参阅[配置 hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
 有关 PolyBase 的详细信息，请参阅[什么是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

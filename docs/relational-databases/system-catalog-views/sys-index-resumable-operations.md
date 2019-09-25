@@ -1,5 +1,5 @@
 ---
-title: sys.index_resumable_operations (TRANSACT-SQL) |Microsoft Docs
+title: sys. index_resumable_operations （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/14/2019
 ms.prod: sql
@@ -19,34 +19,34 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122657"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227196"
 ---
-# <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**sys.index_resumable_operations**是系统的视图，用于监视并检查可恢复索引重新生成的当前执行状态。  
-**适用对象**：SQL Server 2017 和 Azure SQL 数据库
+**index_resumable_operations**是一个系统视图，用于监视和检查当前的执行状态以恢复索引重新生成。  
+**适用对象**：SQL Server 2017 和 Azure SQL Database
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此索引属于 (不可为 null) 的对象 ID。|  
-|**index_id**|**int**|(不可为 null) 的索引 ID。 **index_id**是只在对象中唯一的。|
-|**name**|**sysname**|索引的名称。 **名称**是只在对象中唯一的。|  
-|**sql_text**|**nvarchar(max)**|DDL T-SQL 的语句文本|
-|**last_max_dop**|**smallint**|上次使用的 MAX_DOP (默认值 = 0)|
-|**partition_number**|**int**|所属索引或堆中的分区号。 对于非分区表和索引或示例中的所有分区都正在重新生成值此列的为 NULL。|
-|**State**|**tinyint**|可恢复索引操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
-|**state_desc**|**nvarchar(60)**|（运行或暂停） 的可恢复索引操作状态的说明|  
-|**start_time**|**datetime**|索引操作开始时间 (不可为 null)|
-|**last_pause_time**|**日期时间**| 索引操作 (可以为 null) 的最后一个暂停时间。 如果操作已运行，而绝不会暂停，则为 NULL。|
-|**total_execution_time**|**int**|从开始时间以分钟为单位 (不可为 null) 的总执行时间|
-|**percent_complete**|**real**|索引操作正在进行中自动补全 %(不可以为 null)。|
-|**page_count**|**bigint**|由新的索引生成操作和映射索引 (不可以为 null) 分配的索引页的总数。
+|**object_id**|**int**|此索引所属的对象的 ID （不可为 null）。|  
+|**index_id**|**int**|索引的 ID （不可为 null）。 **index_id**仅在对象中是唯一的。|
+|**name**|**sysname**|索引的名称。 **名称**仅在对象中是唯一的。|  
+|**sql_text**|**nvarchar(max)**|DDL T-sql 语句文本|
+|**last_max_dop**|**smallint**|上次使用的 MAX_DOP （默认值 = 0）|
+|**partition_number**|**int**|所属索引或堆中的分区号。 对于未分区的表和索引，或者如果正在重新生成所有分区，则此列的值为 NULL。|
+|**State**|**tinyint**|可恢复索引的操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
+|**state_desc**|**nvarchar(60)**|可恢复索引的操作状态的说明（正在运行或已暂停）|  
+|**start_time**|**datetime**|索引操作开始时间（不可为 null）|
+|**last_pause_time**|**datatime**| 索引操作上次暂停时间（可以为 null）。 如果操作正在运行且从未暂停，则为 NULL。|
+|**total_execution_time**|**int**|开始时间的总执行时间（分钟）（不可为 null）|
+|**percent_complete**|**real**|索引操作进度完成百分比（不可为 null）。|
+|**page_count**|**bigint**|索引生成操作为新索引和映射索引（不可为 null）分配的索引页的总数。
 
 ## <a name="permissions"></a>权限
 

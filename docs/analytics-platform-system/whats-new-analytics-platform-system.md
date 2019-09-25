@@ -1,74 +1,88 @@
 ---
-title: 什么是分析平台系统-向外缩放数据仓库中的新增功能
-description: 请参阅什么是 Microsoft Analytics Platform System 承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备中的新增功能。
+title: 分析平台系统中的新增功能-横向扩展数据仓库
+description: 查看 Microsoft Analytics Platform System 中的新增功能，这是托管 MPP SQL Server 并行数据仓库的扩展本地设备。
 author: mzaman1
+manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d0ff3861912270091b6a63cbd3fd7b2e8e0e481
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959805"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227112"
 ---
-# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
-请参阅什么是最新的设备更新为 Microsoft Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
+# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>分析平台系统中的新增功能-横向扩展 MPP 数据仓库
+请参阅最新的设备更新 Microsoft Analytics Platform System （AP）的新增功能。 AP 是托管 MPP SQL Server 并行数据仓库的扩展本地设备。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.5"></a>
+## <a name="aps-cu75"></a>AP CU 7。5
+发布日期-2019 年9月
+
+### <a name="alter-external-data-source"></a>更改外部数据源
+客户将可以通过 CU 7.5 更新来更改外部数据源定义。 使用 Hadoop 名称节点高可用性的客户现在可以在发生故障转移时更改数据源以更改参数。 对于 AP，只能更改位置、RESOURCE_MANAGER_LOCATION 和凭据。 有关详细信息，请参阅[alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) 。
+
+### <a name="cdh-515-and-516-support-with-polybase"></a>支持 PolyBase 的 CDH 5.15 和5.16
+具有 CU 7.5 更新的接入点上的 PolyBase 现在支持来自 Cloudera 的 CDH 5.15 和5.16 版本的 Hadoop 分发版。 将选项6用于 CDH 4.x 版本。 
+
+### <a name="try_convert-and-try_cast-support"></a>Try_Convert 和 Try_Cast 支持
+CU 7.5 AP 现在支持[TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017)和[TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) tsql 函数。 如果转换成功，则这两个函数都将返回转换为指定数据类型的值;否则，将返回 null。
+
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4
-发布日期-2019 年 5
+发布日期-可能为2019
 
-### <a name="loading-large-rows-with-dwloader"></a>Dwloader 加载大型行
-APS CU7.4 从开始，客户将能够使用新 dwloader 加载到超过 32 KB （32,768 字节为单位） 的表的行。 新 dwloader 支持采用 32768 和 33554432 （以字节为单位） 之间的整数值加载大小大于 32 KB 的行-l 开关。 此开关将分配客户端和服务器上的更多内存并可能会减慢加载加载大型行 （大于 32 KB） 时，仅使用此选项。 您可以下载从新 dwloader[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。  
+### <a name="loading-large-rows-with-dwloader"></a>用 dwloader 加载大量行
+从 AP CU 7.4 开始，客户将能够使用新的 dwloader 将行加载到大于 32 KB （32768字节）的表中。 新的 dwloader 支持-l 开关，该开关使用介于32768和33554432之间的整数值（以字节为单位）来加载大于 32 KB 的行。 仅当加载较大的行（大于 32 KB）时才使用此选项，因为此开关将在客户端和服务器上分配更多的内存，并可能会减慢负载。 可以从[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)下载新 dwloader。  
 
-### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 和 3.1 支持使用 PolyBase
-PolyBase AP 上的现在支持 HDP 3.0 和 3.1 利用此更新。 选项 7 用于 HDP 3.x 版本。 有关详细信息，请参阅[PolyBase 连接](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql)页。
+### <a name="hdp-30-and-31-support-with-polybase"></a>支持 PolyBase 的 HDP 3.0 和3。1
+现在，PolyBase 接入点支持 HDP 3.0 和3.1 进行此更新。 将选项7用于 HDP 2.x 版本。 有关详细信息，请参阅[PolyBase 连接](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql)页。
 
-### <a name="utf16-file-support-with-polybase"></a>使用 PolyBase 的 UTF16 文件支持
-PolyBase 现在支持读取带分隔符的文本文件中 UTF16 (LE) 编码的。 请参阅[创建外部文件格式](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql)有关安装程序的详细信息。 
+### <a name="utf16-file-support-with-polybase"></a>与 PolyBase 的 UTF16 文件支持
+PolyBase 现在支持读取 UTF16 （LE）编码的带分隔符的文本文件。 有关设置的详细信息，请参阅[创建外部文件格式](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql)。 
 
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
-发布日期-2018 年 12 月
+发布日期-2018 年12月
 
 ### <a name="common-subexpression-elimination"></a>常见子表达式清除
-APS CU7.3 可以提高查询性能与在 SQL 查询优化器的公用子表达式消除。 改进提高了两种方法中的查询。 第一个好处是可以识别并消除此类表达式帮助减少 SQL 编译时间。 第二个和更重要的好处是这些冗余的子表达式的数据移动操作将消除因此执行时间的查询变得更快。 可以找到此功能的详细的说明[此处](common-sub-expression-elimination.md)。
+通过在 SQL 查询优化器中消除常见子表达式，可以通过 AP CU 7.3 提高查询性能。 改进通过两种方式改进了查询。 第一项优势是能够识别和消除此类表达式，有助于减少 SQL 编译时间。 第二个和更重要的优点是，这些冗余子表达式的数据移动操作被消除，因此查询的执行时间更快。 可在[此处](common-sub-expression-elimination.md)找到有关此功能的详细说明。
 
-### <a name="aps-informatica-connector-for-informatica-1020-published"></a>对于 Informatica 10.2.0 APS Informatica 连接器已发布
-我们发布了有关 APS Informatica 10.2.0 和 10.2.0 版本使用 Informatica 连接器的新版本修补程序 1。 可以从下载新连接器[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>AP Informatica connector for Informatica 10.2.0 已发布
+我们发布了新版本的 Informatica 连接器，适用于使用 Informatica 版本10.2.0 和10.2.0 修补程序1的 AP。 可以从[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)下载新的连接器。
 
 #### <a name="supported-versions"></a>支持的版本
 
-| APS 版本 | Informatica PowerCenter | 驱动程序 |
+| AP 版本 | Informatica PowerCenter | 驱动程序 |
 |:---|:---|:---|
-| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 和更高版本 | 10.2.0、 10.2.0 修补程序 1 | SQL Server Native Client 11.x |
+| APS 2016 | 9.6.1 | SQL Server Native Client 11. x |
+| AP 2016 及更高版本 | 10.2.0，10.2.0 修补程序1 | SQL Server Native Client 11. x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
-发布日期-2018 年 10 月
+发布日期-2018 年10月
 
-### <a name="support-for-tls-12"></a>支持 TLS 1.2
-APS CU7.2 支持 TLS 1.2。 客户端计算机到 APS 和 APS 节点内部进行通信可以立即被设置为仅通过 TLS1.2 进行通信。 SSDT、 SSIS 和 Dwloader 设置为仅通过 TLS 1.2 进行通信的客户端计算机上安装了之类的工具现在可以连接到 AP 使用 TLS 1.2。 默认情况下，AP 将支持 TLS （1.0、 1.1 和 1.2） 的所有版本的向后兼容性。 如果你想要设置 APS 设备为严格使用 TLS 1.2，您可以为此更改注册表设置。 
+### <a name="support-for-tls-12"></a>支持 TLS 1。2
+接入点 CU 7.2 支持 TLS 1.2。 现在可以将客户端计算机到 AP 和 AP 的内部通信设置为仅通过 TLS 1.2 进行通信。 安装在客户端计算机上且设置为仅在 TLS 1.2 上通信的 SSDT、SSIS 和 Dwloader 等工具现在可以使用 TLS 1.2 连接到 AP。 默认情况下，AP 将支持所有 TLS （1.0、1.1 和1.2）版本，以便向后兼容。 如果希望将你的 AP 设备设置为严格使用 TLS 1.2，你可以通过更改注册表设置来实现此目的。 
 
-有关详细信息，请参阅[AP 上配置 TLS1.2](configure-tls12-aps.md)。
+有关详细信息，请参阅[在 ap 上配置 tls 1.2](configure-tls12-aps.md)。
 
-### <a name="hadoop-encryption-zone-support-for-polybase"></a>为 PolyBase 支持 Hadoop 加密区域
-PolyBase 现在可以进行通信到 Hadoop 加密区域。 请参阅 APS 中所需的配置更改[配置的 Hadoop 安全性](polybase-configure-hadoop-security.md#encryptionzone)。
+### <a name="hadoop-encryption-zone-support-for-polybase"></a>适用于 PolyBase 的 Hadoop 加密区域支持
+PolyBase 现在可以与 Hadoop 加密区域通信。 请参阅[配置 Hadoop 安全性](polybase-configure-hadoop-security.md#encryptionzone)中所需的 ap 配置更改。
 
-### <a name="insert-select-maxdop-options"></a>Insert Select maxdop 选项
-我们添加了[功能开关](appliance-feature-switch.md)，可以选取大于 1 的 insert select 操作的 maxdop 设置。 现在，可以设置 maxdop 设置为 0、 1、 2 或 4。 默认值为 1。
+### <a name="insert-select-maxdop-options"></a>插入-选择 maxdop 选项
+我们添加了[功能开关](appliance-feature-switch.md)，使你可以为插入-选择操作选取大于1的 maxdop 设置。 你现在可以将 maxdop 设置设置为0、1、2或4。 默认值为 1。
 
 > [!IMPORTANT]  
-> 增加 maxdop 有时可能会较慢的操作或死锁错误导致。 如果发生这种情况，将设置更改回 maxdop 1，重试该操作。
+> 增加 maxdop 有时会导致操作缓慢或死锁错误。 如果出现这种情况，请将该设置改回为 maxdop 1，然后重试该操作。
 
 ### <a name="columnstore-index-health-dmv"></a>列存储索引运行状况 DMV
-您可以查看列存储索引运行状况信息使用**dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv。 使用以下视图来确定碎片并决定何时重新生成或重新组织列存储索引。
+可以使用**dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv 查看列存储索引运行状况信息。 使用以下视图来确定碎片，并决定何时重新生成或重新组织列存储索引。
 
 ```sql
 create view dbo.vCS_rg_physical_stats
@@ -95,91 +109,91 @@ select *
 from cte;
 ```
 
-### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>PolyBase 适用于 ORC 和 Parquet 文件的日期范围增加
-读取、 导入和导出现在使用 PolyBase 的日期数据类型支持 ORC 和 Parquet 文件类型日期 1970年-01-01 之前和之后 2038年-01-20。
+### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>ORC 和 Parquet 文件的 PolyBase 日期范围增加
+使用 PolyBase 读取、导入和导出日期数据类型现在支持 ORC 和 Parquet 文件类型之前1970-01-01 到2038-01-20 之前的日期。
 
-### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>为目标的 SQL Server 2017 的 SSIS 目标适配器
-支持 SQL Server 2017，作为部署目标可以从下载的新 APS SSIS 目标适配器[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。
+### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>作为目标的 SQL Server 2017 的 SSIS 目标适配器
+可以从[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)下载支持 SQL Server 2017 作为部署目标的新的 ap SSIS 目标适配器。
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
-发布日期-2018 年 7 月
+发布日期-2018 年7月
 
-### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不会消耗并发槽位 （行为更改）
-APS 支持 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)如[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 以前，这些命令将占用[并发槽](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)减少的用户负载/查询无法执行。 `DBCC`命令现在运行在不使用用户并发槽提高总体查询执行性能的本地队列中。
+### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不使用并发槽（行为更改）
+AP 支持 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)（如[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)）的子集。 以前，这些命令将使用一个[并发槽](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)来减少可执行的用户加载/查询的数量。 现在`DBCC` ，命令运行在不使用用户并发槽的本地队列中，从而提高了总体查询执行性能。
 
-### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>某些元数据的调用替换为目录对象
-使用目录对象的元数据调用，而不是使用 SMO 有 APS 中显示性能改进。 从 CU7.1 开始，某些元数据调用现在目录对象默认情况下使用。 可以通过关闭此行为[功能开关](appliance-feature-switch.md)如果使用元数据查询的客户遇到任何问题。
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>用目录对象替换某些元数据调用
+使用目录对象进行元数据调用，而不是使用 SMO 在 AP 中显示了性能改进。 从 CU 7.1 开始，某些元数据调用现在默认使用目录对象。 如果使用元数据查询的客户遇到任何问题，则可以通过[功能开关](appliance-feature-switch.md)禁用此行为。
 
 ### <a name="bug-fixes"></a>Bug 修复
-我们已升级到 SQL Server 2016 SP2 CU2 APS CU7.1 使用。 升级解决了如下所述的一些问题。
+我们已升级到 SQL Server 2016 SP2 CU2 与 AP CU 7.1。 升级修复了下面所述的一些问题。
 
-| 标题 | 描述 |
+| Title | 描述 |
 |:---|:---|
-| **潜在的元组搬运者进程死锁** |升级分布式事务和元组发动机后台线程中修复，长期的合作可能导致死锁。 在安装后 CU7.1，TF634 用于停止为 SQL Server 启动参数或全局跟踪标志的元组发动机的客户可以放心删除它。 | 
-| **某些 lag/lead 查询失败** |将错误的嵌套的 lag/lead 函数使用 CCI 表的某些查询现已修复此升级。 | 
+| **潜在元组移动器死锁** |升级修复了分布式事务和元组移动器后台线程中可能出现的死锁。 安装 CU 7.1 后，使用 TF634 停止元组移动器 SQL Server 启动参数或全局跟踪标志的客户可以安全地将其删除。 | 
+| **某些滞后/线索查询失败** |对于包含嵌套延迟/潜在顾客函数（将出错）的 CCI 表的某些查询，此升级现已修复。 | 
 
 
 <a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>APS AU7
-发布日期-2018 年 5 月
+发布日期-可能为2018
 
-APS 2016 后，才可以升级到 AU7。 APS AU7 中的新增功能如下：
+AP 2016 是升级到 AU7 的先决条件。 下面是 AP AU7 中的新功能：
 
 ### <a name="auto-create-and-auto-update-statistics"></a>自动创建和自动更新统计信息
-APS AU7 创建，并默认情况下将自动更新统计信息。 若要更新统计信息设置，管理员可以使用中的新功能切换菜单项[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能开关](appliance-feature-switch.md)控制不符、 自动更新和异步更新统计信息的行为。 此外可以更新使用的统计信息设置[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)语句。
+默认情况下，AP AU7 自动创建和更新统计信息。 若要更新统计信息设置，管理员可以在[Configuration Manager](appliance-configuration.md#CMTasks)中使用新功能切换菜单项。 [功能开关](appliance-feature-switch.md)控制统计信息的自动创建、自动更新和异步更新行为。 还可以通过[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)语句来更新统计信息设置。
 
 ### <a name="t-sql"></a>T-SQL
-选择@var现在支持。 有关详细信息，请参阅[选择本地变量](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+选择@var "现在支持"。 有关详细信息，请参阅[select 局部变量](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-现在支持哈希和 ORDER GROUP 查询提示。 有关详细信息，请参阅[Hints(Transact-SQL)-查询](/sql/t-sql/queries/hints-transact-sql-query)
+现在支持查询提示哈希和订单组。 有关详细信息，请参阅[提示（transact-sql）-查询](/sql/t-sql/queries/hints-transact-sql-query)
 
-### <a name="feature-switch"></a>功能开关
-APS AU7 引入了中的功能切换[Configuration Manager](launch-the-configuration-manager.md)。 AutoStatsEnabled 和 DmsProcessStopMessageTimeoutInSeconds 现在都可以由管理员更改的可配置选项。
+### <a name="feature-switch"></a>功能切换
+AP AU7 引入[Configuration Manager](launch-the-configuration-manager.md)中的功能开关。 AutoStatsEnabled 和 DmsProcessStopMessageTimeoutInSeconds 现在可以由管理员更改。
 
 ### <a name="known-issues"></a>已知问题
-APS AU7 软件还修复了描述为问题提供 Intel BIOS 更新*推理执行旁道攻击*。 攻击的目标是利用所谓*Spectre 和 Meltdown 漏洞*。 尽管与 APS 一起打包，手动安装 BIOS 更新而不是作为 APS AU7 软件安装的一部分。
+借助 AP AU7 software，提供 Intel BIOS 更新，可修复描述为*推理执行方通道攻击*的问题。 攻击旨在利用被称为*Spectre 和 Meltdown 漏洞的漏洞*。 尽管与 AP 一起打包，但 BIOS 更新是手动安装的，而不是作为 AP AU7 software 安装的一部分。
 
-Microsoft 建议所有客户，若要安装更新 BIOS。 Microsoft 已在各种环境中的各种 SQL 工作负荷上测量内核虚拟地址隐藏 (KVAS)、 内核页表间接寻址 (KPTI) 和间接分支预测缓解措施 (IBP) 的效果。 度量值上某些工作负荷找到显著下降。 根据结果，建议是测试对性能产生影响的生产环境中部署之前启用 BIOS 更新。 请参阅 SQL Server 指南[此处](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)。
+Microsoft 建议所有客户安装 BIOS 更新。 Microsoft 已衡量各种环境中各种 SQL 工作负荷的内核虚拟地址（KVAS）、内核页表间接寻址（KPTI）和间接分支预测缓解（IBP）的影响。 度量值明显降低了某些工作负荷。 根据结果，建议你在将 BIOS 更新部署到生产环境之前，对其进行测试，从而对性能产生影响。 请参阅[此处](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)SQL Server 指南。
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
-本部分针对 APS 2016 AU6 所述的新功能。
+本部分介绍了用于 AP 2016-AU6 的新增功能。
 
 ### <a name="sql-server-2016"></a>SQL Server 2016
 
-APS AU6 上最新的 SQL Server 2016 版本中，在运行，并使用默认数据库的兼容性级别 130。 SQL Server 2016 支持等新功能：
+AP AU6 在 2016 SQL Server 最新版本上运行，并使用默认的数据库兼容级别130。 SQL Server 2016 支持新功能，例如：
 
 - 聚集列存储索引的辅助索引。
-- Polybase Kerberos。
+- 用于 PolyBase 的 Kerberos。
 
 ### <a name="t-sql"></a>T-SQL
-APS AU6 支持这些 T-SQL 的兼容性改进。  这些其他语言元素，使其更轻松地从 SQL Server 和其他数据源迁移。 
+AP AU6 支持这些 T-sql 兼容性改进。  这些附加的语言元素使您可以更轻松地从 SQL Server 和其他数据源进行迁移。 
 
-- [列级 SQL 排序规则][]现在还支持，除了 Windows 排序规则。
-- [聚集列存储索引的非聚集索引][]改进搜索聚集列存储索引中的特定值的查询的性能。 
+- 除了 Windows 排序规则外，现在还支持[列级 SQL 排序规则][]。
+- [聚集列存储索引的非聚集索引][]可提高在聚集列存储索引中搜索特定值的查询的性能。 
 - [SELECT...INTO][] 
-- [sp_spaceused()][]显示的磁盘空间使用或保留的表或数据库中。
-- [宽表][]支持是 SQL Server 2016 相同。 32k 的行大小的上一限制不再存在。 
+- [sp_spaceused （）][]显示表或数据库中使用或保留的磁盘空间。
+- [宽表][]支持与 SQL Server 2016 相同。 对于行大小，先前的限制 32 K 已不再存在。 
 
 **数据类型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[VARBINARY(MAX)][]。 这些 LOB 数据类型具有的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 PolyBase 和 dwloader 当前不支持这些数据类型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[VARBINARY(MAX)][]。 这些 LOB 数据类型的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 PolyBase 和 dwloader 目前不支持这些数据类型。 
 - [SYSNAME][]
-- [唯一标识符][]
+- [UNIQUEIDENTIFIER][]
 - [NUMERIC][]和 DECIMAL 数据类型。
 
-**开窗函数**
+**窗口函数**
 
-- [ROWS 或 RANGE][] OVER 子句的 SELECT 语句中。
+- SELECT 语句的 OVER 子句中的[行或范围][]。
 - [FIRST_VALUE][]
 - [LAST_VALUE][]
 - [CUME_DIST][]
 - [PERCENT_RANK][]
 
-**安全函数**
+**安全功能**
 
 - [CHECKSUM()][]和[BINARY_CHECKSUM()][]
 - [HAS_PERMS_BY_NAME()][]
@@ -191,30 +205,30 @@ APS AU6 支持这些 T-SQL 的兼容性改进。  这些其他语言元素，使
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop 增强功能
 
-- 与的 Hortonworks HDP 2.4 和 HDP 2.5 兼容性
-- Kerberos 支持通过数据库范围凭据
-- 使用 Azure 存储 Blob 的凭据支持
+- 与 Hortonworks HDP 2.4 和 HDP 2.5 兼容
+- 通过数据库范围的凭据进行 Kerberos 支持
+- 凭据支持与 Azure 存储 Blob
 
 ### <a name="install-and-upgrade-enhancements"></a>安装和升级增强功能
 
-**企业体系结构更新**到 AP AU6 升级你现有的设备安装最新的固件和驱动程序更新，其中包括安全修补程序。 
+**企业体系结构更新**将现有设备升级到 AP AU6 将安装最新的固件和驱动程序更新（包括安全修补程序）。 
 
-新的设备从 HPE 或 DELL 包括所有最新的更新以及：
+HPE 或 DELL 提供的新设备包括所有最新的更新以及：
 
-- 最新生成处理器支持 (Broadwell)
-- 更新到采用 DDR4 Dimm
-- 改进了的 DIMM 吞吐量
+- 最新一代处理器支持（Broadwell）
+- 更新到 DDR4 Dimm
+- 提高了 DIMM 吞吐量
 
-**集成**
+**集成度**
 
-- 完全限定域名 (FQDN) 的支持使可能安装到设备的域信任。 
-- 若要使用 FQDN，您需要执行完全升级并且选择在升级过程。 
+- 完全限定的域名（FQDN）支持使你可以为设备设置域信任。 
+- 若要使用 FQDN，需要在升级过程中执行完整升级和选择加入。 
 
-**减少了停机时间**安装或升级到 AP AU6 更快，且需要较少的停机时间比以前的版本。 若要降低停机时间、 安装或升级： 
+**缩短停机时间**安装或升级到 AP AU6 速度更快，需要的停机时间比以前的版本更少。 为了减少停机时间，请安装或升级： 
 
- - 简化通过使用包含截至 2016 年 6 月的所有更新的映像应用 WSUS 更新
- - 应用安全更新的驱动程序和固件更新
- - 将最新修补程序和设备验证实用程序 (PAV) 置于你的设备这样他们就可以使用无需在下载之后进行安装。
+ - 通过使用包含6月2016的所有更新的映像，简化 WSUS 更新的应用
+ - 应用包含驱动程序和固件更新的安全更新
+ - 将最新的修补程序和设备验证实用程序（PAV）放在设备上，以便它们可以进行安装，而无需下载它们。
 
 ::: moniker-end
 
@@ -233,13 +247,13 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
-[sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
+[sp_spaceused （）]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [宽表]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp Utility]:/sql/tools/bcp-utility
-[唯一标识符]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
+[UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
-[ROWS 或 RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql
+[行或范围]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql
