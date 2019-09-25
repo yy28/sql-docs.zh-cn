@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68715175"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>在 SQL Server 上通过 R 创建 SSIS 和 SSRS 工作流
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-在 SSIS 设计器中, 创建[执行 SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)以执行**generate_iris_rx_model**存储过程。 模型被序列化并保存到 ssis_iris_models 表中。 **SQLStatement**的脚本如下所示:
+在 SSIS 设计器中，创建[执行 SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)以执行**generate_iris_rx_model**存储过程。 模型被序列化并保存到 ssis_iris_models 表中。 **SQLStatement**的脚本如下所示:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -137,13 +137,13 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 ![生成线性模型](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "生成线性模型")
 
-作为检查点, 在此任务完成后, 可以查询 ssis_iris_models 以查看它是否包含一个二进制模型。
+作为检查点，在此任务完成后，可以查询 ssis_iris_models 以查看它是否包含一个二进制模型。
 
 ### <a name="predict-score-outcomes-using-the-trained-model"></a>使用 "定型" 模型预测 (评分) 结果
 
 现在, 您已经有了用于加载定型数据并生成模型的代码, 但唯一的步骤是使用模型来生成预测。 
 
-为此, 请在 SQL 查询中放置 R 脚本, 以触发 ssis_iris_model 上的[rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict)内置 R 函数。 称为**predict_species_length**的存储过程完成此任务。
+为此，请在 SQL 查询中放置 R 脚本，以触发 ssis_iris_model 上的[rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict)内置 R 函数。 称为**predict_species_length**的存储过程完成此任务。
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-在 SSIS 设计器中, 创建执行**predict_species_length**存储过程以生成预测花瓣长度的[执行 SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)。
+在 SSIS 设计器中，创建执行**predict_species_length**存储过程以生成预测花瓣长度的[执行 SQL 任务](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)。
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

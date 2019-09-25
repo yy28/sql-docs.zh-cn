@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493778"
 ---
 # <a name="defining-and-browsing-translations"></a>定义和浏览翻译
-  翻译是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的名称在特定语言中的表示形式。 对象包括度量值组、度量值、维度、属性、层次结构、KPI、操作和计算成员。 翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通过使用这样的客户端，客户端就可以将区域设置标识符 (LCID) 传递给 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，该实例则使用 LCID 来确定在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象提供元数据时要使用哪一组翻译。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象不包含该语言的翻译或不包含指定对象的翻译，则在将该对象元数据返回给客户端时使用默认语言。 例如，如果一个法国的业务用户从使用法语区域设置的工作站访问多维数据集，则存在法语翻译时，此业务用户将看到法语的成员标题和成员属性值。 但是，如果一个德国的业务用户从使用德语区域设置的工作站上访问同一个多维数据集，则此业务用户将看到德语的成员标题和成员属性值。 有关详细信息, 请参阅[维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、[多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md) [ &#40;Analysis Services&#41;](translations-analysis-services.md)。  
+  翻译是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的名称在特定语言中的表示形式。 对象包括度量值组、度量值、维度、属性、层次结构、KPI、操作和计算成员。 翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通过使用这样的客户端，客户端就可以将区域设置标识符 (LCID) 传递给 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，该实例则使用 LCID 来确定在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象提供元数据时要使用哪一组翻译。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象不包含该语言的翻译或不包含指定对象的翻译，则在将该对象元数据返回给客户端时使用默认语言。 例如，如果一个法国的业务用户从使用法语区域设置的工作站访问多维数据集，则存在法语翻译时，此业务用户将看到法语的成员标题和成员属性值。 但是，如果一个德国的业务用户从使用德语区域设置的工作站上访问同一个多维数据集，则此业务用户将看到德语的成员标题和成员属性值。 有关详细信息，请参阅[维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、[多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md) [ &#40;Analysis Services&#41;](translations-analysis-services.md)。  
   
  在本主题的任务中，您将为“日期”维度中的一组有限的维度对象和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的多维数据集对象定义元数据翻译。 然后浏览这些维度和多维数据集对象，以检查元数据翻译。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "69493778"
   
      将出现另一个语言列，您将在其中定义法语翻译。  
   
-5.  在 "**日期**" 维度的 "**标题**" 对象行中, `Fecha`在`Temps` "**西班牙语 (西班牙**)" 翻译列中键入, 在 "**法语 (法国)** " 翻译列中键入。  
+5.  在 "**日期**" 维度的 "**标题**" 对象行中， `Fecha`在`Temps` "**西班牙语（西班牙**）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
   
-6.  在 "**月份名称**" 属性的 "**标题**" 对象行中, `Mes del Año`在`Mois d'Année` "**西班牙语 (西班牙**)" 翻译列中键入, 在 "**法语 (法国)** " 翻译列中键入。  
+6.  在 "**月份名称**" 属性的 "**标题**" 对象行中， `Mes del Año`在`Mois d'Année` "**西班牙语（西班牙**）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
   
-     请注意, 输入这些翻译时, 会显示省略号 ( **...** )。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
+     请注意，输入这些翻译时，会显示省略号（ **...** ）。 单击此省略号可以指定为属性层次结构的每个成员提供翻译的基础表中的列。  
   
-7.  单击 "**月份名称**" 属性的 "**西班牙语 (西班牙)** " 翻译的省略号 ( **...** )。  
+7.  单击 "**月份名称**" 属性的 "**西班牙语（西班牙）** " 翻译的省略号（ **...** ）。  
   
      “翻译属性数据”对话框将出现。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "69493778"
   
      !["属性数据转换" 对话框](../../2014/tutorials/media/l9-translations-4.gif "\"属性数据转换\" 对话框")  
   
-9. 单击 **"确定**", 然后单击 "**月份名称**" 属性的 "**法语 (法国)** 翻译" 的省略号 ( **...** )。  
+9. 单击 **"确定**"，然后单击 "**月份名称**" 属性的 "**法语（法国）** 翻译" 的省略号（ **...** ）。  
   
 10. 在“翻译列”列表中，选择“FrenchMonthName”，然后单击“确定”。  
   
@@ -80,11 +80,11 @@ ms.locfileid: "69493778"
   
      将出现另一个语言列，您将在其中定义法语翻译。  
   
-5.  在 "**日期**" 维度的 "**标题**" 对象行中, `Fecha`在`Temps` "**西班牙语 (西班牙**)" 翻译列中键入, 在 "**法语 (法国)** " 翻译列中键入。  
+5.  在 "**日期**" 维度的 "**标题**" 对象行中， `Fecha`在`Temps` "**西班牙语（西班牙**）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
   
-6.  在 " **Internet 销售**" 度量值组的 "**标题**" 对象行中`Ventas del lnternet` , 在 " `Ventes D'Internet`西班牙语 (西班牙)" 翻译列中键入, 在 "**法语 (法国)** " 翻译列中键入。  
+6.  在 " **Internet 销售**" 度量值组的 "**标题**" 对象行中`Ventas del lnternet` ，在 " `Ventes D'Internet`西班牙语（西班牙）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
   
-7.  在 "Internet 销售-销售额" 度量值的 "**标题**" 对象行中, `Cantidad de las Ventas del Internet`在 "**西班牙语**( `Quantité de Ventes d'Internet`西班牙)" 翻译列中键入, 在 "**法语 (法国)** " 翻译列中键入。  
+7.  在 "Internet 销售-销售额" 度量值的 "**标题**" 对象行中， `Cantidad de las Ventas del Internet`在 "**西班牙语**（ `Quantité de Ventes d'Internet`西班牙）" 翻译列中键入，在 "**法语（法国）** " 翻译列中键入。  
   
      此过程中的步骤阐释了为多维数据集对象定义元数据翻译的过程。  
   
@@ -102,13 +102,13 @@ ms.locfileid: "69493778"
   
 5.  在工具栏上，选择“语言”列表中的“西班牙语(西班牙)”。  
   
-     注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 相反, 它将在名为`Ventas del lnternet`的新显示文件夹中以西班牙语显示, 如下图所示。  
+     注意，“元数据”窗格中的项将重新填充。 重新填充“元数据”窗格中的项之后，注意“Internet 销售额”度量值将不再出现在“Internet 销售”显示文件夹中。 相反，它将在名为`Ventas del lnternet`的新显示文件夹中以西班牙语显示，如下图所示。  
   
      重新![填充元数据窗格](../../2014/tutorials/media/l9-translations-6.gif "重新填充元数据窗格")  
   
-6.  在 "元数据" 窗格中, `Cantidad de las Ventas del Internet`右键单击, 然后选择 "**添加到查询**"。  
+6.  在 "元数据" 窗格中， `Cantidad de las Ventas del Internet`右键单击，然后选择 "**添加到查询**"。  
   
-7.  在 "元数据" 窗格`Fecha`中, 展开 " **Fecha 日期**", 右键单击 " **Fecha 日期**", 然后选择 "**添加到筛选器**"。  
+7.  在 "元数据" 窗格`Fecha`中，展开 " **Fecha 日期**"，右键单击 " **Fecha 日期**"，然后选择 "**添加到筛选器**"。  
   
 8.  在“筛选器”窗格中，选择“CY 2007”作为筛选表达式。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "69493778"
      注意，月份名称现在将以法语显示，并且度量值名称现在也以法语显示。  
   
 ## <a name="next-lesson"></a>下一课  
- [第10课:定义管理角色](lesson-10-defining-administrative-roles.md)  
+ [第10课：定义管理角色](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>请参阅  
  [维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

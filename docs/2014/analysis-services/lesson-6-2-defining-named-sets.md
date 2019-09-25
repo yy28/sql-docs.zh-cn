@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493897"
 ---
 # <a name="defining-named-sets"></a>定义命名集
@@ -32,11 +32,11 @@ ms.locfileid: "69493897"
   
      在“计算”选项卡上定义新计算时，请记住，计算的解决是按它们出现在“脚本组织程序”窗格中的顺序来进行的。 在创建新计算时该窗格中的焦点确定了计算的执行顺序；新的计算将定义于紧靠有焦点的计算之后。  
   
-3.  在 "**名称**" 框中, 将新命名集的名称更改`[Core Products]`为。  
+3.  在 "**名称**" 框中，将新命名集的名称更改`[Core Products]`为。  
   
      在“脚本组织程序”窗格中，注意用于将命名集与脚本命令或计算成员区分开来的唯一图标。  
   
-4.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上, 依次展开`Members`"**产品**"、"类别" 和 "**所有产品**"。  
+4.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，依次展开`Members`"**产品**"、"类别" 和 "**所有产品**"。  
   
     > [!NOTE]  
     >  如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
@@ -47,11 +47,11 @@ ms.locfileid: "69493897"
   
 ## <a name="defining-a-large-resellers-named-set"></a>定义“大型分销商”命名集  
   
-1.  右键单击`[Core Products]` "**脚本组织**程序" 窗格, 然后单击 "**新建命名集**"。  
+1.  右键单击`[Core Products]` "**脚本组织**程序" 窗格，然后单击 "**新建命名集**"。  
   
-2.  在 "**名称**" 框中, 将此命名集的名称`[Large Resellers]`更改为。  
+2.  在 "**名称**" 框中，将此命名集的名称`[Large Resellers]`更改为。  
   
-3.  在 "**表达式**" 框中`Exists()`, 键入。  
+3.  在 "**表达式**" 框中`Exists()`，键入。  
   
      使用 Exists 函数来从“分销商名称”属性层次结构返回成员集合，而“分销商名称”属性层次结构将与有最大雇员数的“雇员数”属性层次结构中的成员集合相交互。  
   
@@ -67,25 +67,25 @@ ms.locfileid: "69493897"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     现在, 您已定义了 Exists 集表达式的第一个集, 接下来您可以添加第二组-"分销商" 维度的成员集, 其中包含数量最多的雇员。  
+     现在，您已定义了 Exists 集表达式的第一个集，接下来您可以添加第二组-"分销商" 维度的成员集，其中包含数量最多的雇员。  
   
-7.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上, 展开 "分销商" `Members`维度中**的员工数**, 展开, 然后展开 "**所有分销商**"。  
+7.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，展开 "分销商" `Members`维度中**的员工数**，展开，然后展开 "**所有分销商**"。  
   
      注意，此属性层次结构的成员没有分组。  
   
 8.  打开“分销商”维度设计器，然后在“属性”窗格中单击“雇员数目”。  
   
-9. 在属性窗口中, `DiscretizationMethod`将属性更改为 "**自动**", 然后将`DiscretizationBucketCount`属性更改为。 `5` 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。  
+9. 在属性窗口中， `DiscretizationMethod`将属性更改为 "**自动**"，然后将`DiscretizationBucketCount`属性更改为。 `5` 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。  
   
 10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
 11. 成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后在“计算”选项卡的工具栏上单击“重新连接”。  
   
-12. 在 "**计算工具**" 窗格的 "**元数据**" 选项卡上, 展开 "**分销商**" `Members`维度中**的员工数**, 展开, 然后展开 "**所有分销商**"。  
+12. 在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，展开 "**分销商**" `Members`维度中**的员工数**，展开，然后展开 "**所有分销商**"。  
   
      请注意，此属性层次结构的成员现在包含在编号为 0 到 4 的五个组中。 若要查看组的编号，请将指针暂停在组上以查看 InfoTip。 对于范围 `2 -17`，InfoTip 应包含 `[Reseller].[Number of Employees].&[0]`。  
   
-     此属性层次结构的成员被分组, 因为 DiscretizationBucketCount 属性设置为`5` , 并且 DiscretizationMethod 属性设置为 "**自动**"。  
+     此属性层次结构的成员被分组，因为 DiscretizationBucketCount 属性设置为`5` ，并且 DiscretizationMethod 属性设置为 "**自动**"。  
   
 13. 在“表达式”框中，在 Exists 集表达式中的 Members 函数之后和右括号之前添加逗号，再将 **83 - 100** 从“元数据”窗格拖放到逗号之后。  
   

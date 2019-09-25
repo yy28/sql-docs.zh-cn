@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493796"
 ---
 # <a name="defining-and-browsing-kpis"></a>定义和浏览 KPI
@@ -67,7 +67,7 @@ ms.locfileid: "69493796"
   
      ![显示窗格中的空白 KPI 模板](../../2014/tutorials/media/l7-kpi-2.gif "显示窗格中的空白 KPI 模板")  
   
-3.  在 "**名称**" 框中`Reseller Revenue`, 键入, 然后选择 "关联的**度量值组**" 列表中的 "**分销商销售额**"。  
+3.  在 "**名称**" 框中`Reseller Revenue`，键入，然后选择 "关联的**度量值组**" 列表中的 "**分销商销售额**"。  
   
 4.  在“计算工具”窗格中的“元数据”选项卡上，展开“度量值”，再展开“分销商销售”，然后将“分销商销售额”度量值拖到“值表达式”框中。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493796"
   
 1.  在“KPI”选项卡的工具栏上单击“窗体视图”按钮，然后单击“新建 KPI”按钮。  
   
-2.  在 "**名称**" 框中`Product Gross Profit Margin`, 键入, 然后验证 **\<"所有 > 都**显示在"**关联的度量值组**"列表中。  
+2.  在 "**名称**" 框中`Product Gross Profit Margin`，键入，然后验证 **\<"所有 > 都**显示在"**关联的度量值组**"列表中。  
   
 3.  在“计算工具”窗格内的“元数据”选项卡中，将“总 GPM”度量值拖到“值表达式”框中。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "69493796"
   
 2.  成功完成部署后，在“KPI”选项卡的工具栏上单击“重新连接”，然后单击“浏览器视图”。  
   
-     此时将显示 kpi,并显示Q3CY2007和北美销售区域`Product Gross Profit Margin`的 KPI 值。  
+     此时将显示 kpi，并显示Q3CY2007和北美销售区域`Product Gross Profit Margin`的 KPI 值。  
   
 3.  在“筛选器”窗格中，依次选择“维度”列表中的“产品”、“层次结构”列表中的“类别”、“运算符”列表中的“等于”和“筛选表达式”列表中的“自行车”，然后单击“确定”。  
   

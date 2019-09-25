@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68715372"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课：浏览和可视化数据
@@ -63,7 +63,7 @@ ms.locfileid: "68715372"
 
 若要创建绘图, 请使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)中提供的一个增强的 R 函数。 此步骤根据[!INCLUDE[tsql](../../includes/tsql-md.md)]查询中的数据绘制直方图。 可以将此函数包装在存储过程**PlotRxHistogram**中。
 
-1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中, 右键单击**NYCTaxi_Sample**数据库, 然后选择 "**新建查询**"。
+1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中，右键单击**NYCTaxi_Sample**数据库，然后选择 "**新建查询**"。
 
 2. 粘贴下面的脚本, 以创建绘制直方图的存储过程。 此示例命名为 **RPlotRxHistogram*。
 
@@ -92,7 +92,7 @@ ms.locfileid: "68715372"
 
 在此脚本中要理解的要点包括: 
   
-+ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。 对于作为外部进程运行的 R 脚本, 你应在脚本的输入之间具有一对一的映射, 并输入[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储过程, 用于在 SQL Server 上启动 R 会话。
++ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。 对于作为外部进程运行的 R 脚本，你应在脚本的输入之间具有一对一的映射，并输入[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储过程，用于在 SQL Server 上启动 R 会话。
   
 + 在 R 脚本中, 定义了一个`image_file`变量 () 来存储图像。 
 
@@ -165,7 +165,7 @@ ms.locfileid: "68715372"
 
 此存储过程使用**他**函数创建直方图, 并将二进制数据导出为常用格式, 如。JPG、。PDF 和。PNG. 
 
-1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中, 右键单击**NYCTaxi_Sample**数据库, 然后选择 "**新建查询**"。
+1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的对象资源管理器中，右键单击**NYCTaxi_Sample**数据库，然后选择 "**新建查询**"。
 
 2. 粘贴下面的脚本, 以创建绘制直方图的存储过程。 此示例名为**RPlotHist** 。
   

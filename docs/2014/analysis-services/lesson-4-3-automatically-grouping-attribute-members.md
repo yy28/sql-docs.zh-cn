@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69890838"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自动将属性成员分组
@@ -44,7 +44,7 @@ ms.locfileid: "69890838"
   
 4.  在“属性”窗格中，选择“年收入”。  
   
-5.  在属性窗口中, 将**DiscretizationMethod**属性的值更改为 "**自动**", 并将 " **DiscretizationBucketCount** " 属性的`5`值更改为。  
+5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**自动**"，并将 " **DiscretizationBucketCount** " 属性的`5`值更改为。  
   
      下图显示了修改后的“年收入”属性。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "69890838"
   
 4.  在“属性”窗格中，选择“病假时间”。  
   
-5.  在属性窗口中, 将**DiscretizationMethod**属性的值更改为 "**分类**", 并将 " **DiscretizationBucketCount** " 属性的`5`值更改为 ""。  
+5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**分类**"，并将 " **DiscretizationBucketCount** " 属性的`5`值更改为 ""。  
   
 6.  在“属性”窗格中，选择“休假时间”。  
   
-7.  在属性窗口中, 将**DiscretizationMethod**属性的值更改为**相等的区域**, 并将**DiscretizationBucketCount**属性的值更改为`5`。  
+7.  在属性窗口中，将**DiscretizationMethod**属性的值更改为**相等的区域**，并将**DiscretizationBucketCount**属性的值更改为`5`。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>浏览已修改的属性层次结构  
   

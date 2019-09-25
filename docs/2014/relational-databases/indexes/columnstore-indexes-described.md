@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68811036"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -111,10 +111,10 @@ ms.locfileid: "68811036"
  “行存储”是在逻辑上组织为包含行和列的表、在物理上以按行数据格式存储的数据。 这是存储关系表数据的传统方法。  
   
  行组和列段  
- 为获得高性能和高压缩率，列存储索引将表划分为由行构成的组，称为行组，然后以按列形式压缩每个行组。 行组中的行数必须足够大, 以便提高压缩率, 并且足够小, 以便从内存中操作中受益。  
+ 为获得高性能和高压缩率，列存储索引将表划分为由行构成的组，称为行组，然后以按列形式压缩每个行组。 行组中的行数必须足够大，以便提高压缩率，并且足够小，以便从内存中操作中受益。  
   
  行组  
- 行组是同时压缩为列存储格式的一组行。  
+ 行*组是同时压缩为列*存储格式的一组行。  
   
  列段  
  “列段”是来自行组内的数据列。  
@@ -128,21 +128,21 @@ ms.locfileid: "68811036"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  非聚集列存储索引  
- *非聚集列存储索引*是在现有聚集索引或堆表上创建的只读索引。 它包含列子集的副本，最高可包含表中的所有列。 如果表包含非聚集列存储索引, 则该表为只读。  
+ *非聚集列存储索引*是在现有聚集索引或堆表上创建的只读索引。 它包含列子集的副本，最高可包含表中的所有列。 如果表包含非聚集列存储索引，则该表为只读。  
   
  借助于非聚集列存储索引，可具有在对原始表执行只读操作的同时运行分析查询的列存储索引。  
   
  ![非聚集列存储索引](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "非聚集列存储索引")  
   
  聚集列存储索引  
- *聚集列存储索引*是整个表的物理存储, 是该表的唯一索引。 聚集索引不可更新。 您可以对索引执行插入、删除和更新操作，并且可以将数据大容量加载到索引中。  
+ *聚集列存储索引*是整个表的物理存储，是该表的唯一索引。 聚集索引不可更新。 您可以对索引执行插入、删除和更新操作，并且可以将数据大容量加载到索引中。  
   
  ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
  若要减少列段的碎片和改进性能，列存储索引可能会将一些数据暂时存储于称作增量存储的行存储表中，同时还存储针对已删除行的 ID 的 B 树。 增量存储操作在后台处理。 若要返回正确的查询结果，聚集列存储索引将合并来自列存储和增量存储的查询结果。  
   
  增量存储  
- 仅与聚集列存储索引一起使用时,*增量存储*是存储行的行存储表, 直到行数足够大, 才能移到列存储中。 增量存储用于聚集列存储索引，以便提高加载和其他 DML 操作的性能。  
+ 仅与聚集列存储索引一起使用时，*增量存储*是存储行的行存储表，直到行数足够大，才能移到列存储中。 增量存储用于聚集列存储索引，以便提高加载和其他 DML 操作的性能。  
   
  在大容量加载期间，大多数行直接转到列存储，而不通过增量存储中转。 在大容量加载结束时，某些行的数量可能无法满足行组的最小大小要求（即 102,400 行）。 在发生这种情况时，将最后的这些行转到增量存储而非列存储中。 对于少于 102,400 行的较小的大容量加载，所有行都直接转到增量存储中。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68811036"
 ##  <a name="dataload"></a>正在加载数据  
   
 ###  <a name="dataload_nci"></a>将数据加载到非聚集列存储索引  
- 若要将数据加载到非聚集列存储索引中, 请首先将数据加载到作为堆或聚集索引存储的传统行存储表中, 然后使用[CREATE 列存储&#40;索引 transact-sql&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建非聚集列存储索引.  
+ 若要将数据加载到非聚集列存储索引中，请首先将数据加载到作为堆或聚集索引存储的传统行存储表中，然后使用[CREATE 列存储&#40;索引 transact-sql&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)创建非聚集列存储索引.  
   
  ![将数据加载到列存储索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "将数据加载到列存储索引")  
   
@@ -209,7 +209,7 @@ ms.locfileid: "68811036"
   
 -   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql) , 重新生成或重新组织。  
+-   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql) ，重新生成或重新组织。  
   
 -   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   

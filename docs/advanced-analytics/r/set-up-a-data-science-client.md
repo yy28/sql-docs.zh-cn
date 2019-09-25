@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69633636"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>在 SQL Server 上为 R 开发设置数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-如果在[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 机器学习服务 (数据库内)](../install/sql-machine-learning-services-windows-install.md)安装中包括 r language 选项, 则 r 集成在 SQL Server 2016 或更高版本中可用。 
+如果在[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或[SQL Server 机器学习服务（数据库内）](../install/sql-machine-learning-services-windows-install.md)安装中包括 r language 选项，则 r 集成在 SQL Server 2016 或更高版本中可用。 
 
 若要为 SQL Server 开发和部署 R 解决方案, 请在开发工作站上安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) , 以获取[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他 R 库。 RevoScaleR 库在远程 SQL Server 实例上也是必需的, 用于协调两个系统之间的计算请求。 
 
@@ -49,20 +49,20 @@ Microsoft 的 R 包提供多种产品和服务。 在本地工作站上, 我们�
 
   N/A
 
-3. 创建 MKL_CBWR 系统环境变量, 以确保在 Intel 数学内核库 (MKL) 计算上进行一致的输出。
+3. 创建 MKL_CBWR 系统环境变量，以确保在 Intel 数学内核库（MKL）计算上进行一致的输出。
 
   + 在控制面板中, 单击 "**系统和安全** > **系统** > " "**高级系统设置** > " "**环境变量**"。
-  + 创建一个名为**MKL_CBWR**的新系统变量, 并将值设置为**AUTO**。
+  + 创建一个名为**MKL_CBWR**的新系统变量，并将值设置为**AUTO**。
 
 ## <a name="2---locate-executables"></a>2-查找可执行文件
 
 N/A 
 
-1. 在文件资源管理器中, 打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin 文件夹以确认 .exe 的位置。
+1. 在文件资源管理器中，打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin 文件夹以确认 .exe 的位置。
 
 2. 打开 x64 子文件夹以确认**rgui.exe**。 你将在下一步中使用此工具。
 
-3. 打开 C:\Program Files\Microsoft\R Client\R_SERVER\library, 查看随 R 客户端一起安装的包列表, 包括 RevoScaleR、MicrosoftML 和其他。
+3. 打开 C:\Program Files\Microsoft\R Client\R_SERVER\library，查看随 R 客户端一起安装的包列表，包括 RevoScaleR、MicrosoftML 和其他。
 
 
 <a name="R-tools"></a>
@@ -71,7 +71,7 @@ N/A
 
 当您使用SQL Server安装R时，您将获得与任何基本R安装(如RGui、Rterm等)标准相同的R工具。 这些工具是轻量级的，适用于检查包和库信息、运行特定命令或脚本或逐步完成教程。 您可以使用这些工具获取R版本信息并确认连接。
 
-1. 打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64, 然后双击**rgui.exe**以使用 r 命令提示符启动 R 会话。
+1. 打开 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64，然后双击**rgui.exe**以使用 r 命令提示符启动 R 会话。
 
   从 Microsoft program 文件夹启动 R 会话时, 会自动加载多个包, 包括 RevoScaleR。 
 
@@ -205,8 +205,8 @@ N/A
 
 1. 在 RStudio 中, 将[r 路径更新](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)为指向提供 RevoScaleR、Microsoft R Open 和其他 microsoft 包的 r 环境。 
 
-  + 对于 R 客户端安装, 请查看 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
-  + 对于独立服务器, 请查找 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 或 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
+  + 对于 R 客户端安装，请查看 C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64
+  + 对于独立服务器，请查找 C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library 或 C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library
 
 2. 关闭并打开 RStudio。
 

@@ -11,21 +11,21 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70154327"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>第 2 课：创建 SQL Server 凭据
-  **凭据：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , 备份和还原进程使用凭据对 Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、复制或重新生成存储帐户**访问密钥**的详细信息, 请参阅[存储帐户访问密钥](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+  **凭据：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，备份和还原进程使用凭据对 Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、复制或重新生成存储帐户**访问密钥**的详细信息，请参阅[存储帐户访问密钥](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  有关凭据的一般信息，请参阅 [凭据](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
  有关使用凭据的其他示例的信息，请参阅 [创建 SQL 代理的代理](../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 > [!IMPORTANT]  
->  创建如下所述的 SQL Server 凭据的要求特定于 SQL Server 备份过程 ([SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), 以及[SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 在访问 Azure 存储来读写备份时，SQL Server 使用存储账户名称和访问密钥信息。  有关在 Azure 存储中创建用于存储数据库文件的凭据的详细信息[, 请参阅第3课:创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  创建如下所述的 SQL Server 凭据的要求特定于 SQL Server 备份过程（[SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)，以及[SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)）。 在访问 Azure 存储来读写备份时，SQL Server 使用存储账户名称和访问密钥信息。  有关在 Azure 存储中创建用于存储数据库文件的凭据的详细信息[，请参阅第3课：创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>创建 SQL Server 凭据  
  若要创建 SQL Server 凭据，请使用以下步骤：  
@@ -49,7 +49,7 @@ ms.locfileid: "70154327"
   
 5.  验证 T-SQL 语句，然后单击 **“执行”** 。  
   
- 有关备份概念和要求的 Azure Blob 存储服务的详细信息, 请参阅[SQL Server Azure Blob 存储服务的备份和还原](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 有关备份概念和要求的 Azure Blob 存储服务的详细信息，请参阅[SQL Server Azure Blob 存储服务的备份和还原](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ### <a name="next-lesson"></a>下一课  
  [第 3 课：将完整数据库备份写入到 Azure Blob 存储服务](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)。  

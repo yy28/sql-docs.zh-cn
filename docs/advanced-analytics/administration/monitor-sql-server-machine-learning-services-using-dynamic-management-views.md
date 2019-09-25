@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70978408"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务
@@ -40,7 +40,7 @@ ms.locfileid: "70978408"
 
 监视 SQL Server 中的机器学习工作负荷时, 可以使用以下动态管理视图。 若要查询 dmv, 需要`VIEW SERVER STATE`对实例的权限。
 
-| 动态管理视图 | type | 描述 |
+| 动态管理视图 | 类型 | 描述 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 执行 | 为运行外部脚本的每个活动工作线程帐户都返回一行。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 执行 | 为每种类型的外部脚本请求返回一行。 |
