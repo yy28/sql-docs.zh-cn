@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a255b70b71f29f9cc28e4022ecfdf2741f9a838d
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715812"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271886"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R 服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何安装和配置 SQL Server 2016 R Services。 如果你有 SQL Server 2016，请安装此功能以在 SQL Server 中执行 R 代码。
 
-在 SQL Server 2017 中，[机器学习服务](../r/r-server-standalone.md)中提供了 R 集成，体现出添加了 Python。 如果你想要 R 集成并具有 SQL Server 2017 安装媒体, 请参阅[安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)以添加功能。 
+在 SQL Server 2017 中，[机器学习服务](../r/r-server-standalone.md)中提供了 R 集成，体现出添加了 Python。 如果你想要 R 集成并具有 SQL Server 2017 安装媒体，请参阅[安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)以添加功能。 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -28,7 +28,7 @@ ms.locfileid: "68715812"
 
 + 需要数据库引擎实例。 不能只安装 R，但可以将其逐步添加到现有实例。
 
-+ 对于业务连续性, R Services 支持[Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 必须在每个节点上安装 R Services 和配置包。
++ 对于业务连续性，R Services 支持[Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 必须在每个节点上安装 R Services 和配置包。
 
 + 不要在故障转移群集上安装 R Services。 用于隔离 R 进程的安全机制与 Windows Server 故障转移群集环境不兼容。
 
@@ -95,7 +95,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
-仅适用于 R 功能集成, 应设置**MKL_CBWR**环境变量, 以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库 (MKL) 计算中进行一致的输出。
+仅适用于 R 功能集成，应设置**MKL_CBWR**环境变量，以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库（MKL）计算中进行一致的输出。
 
 1. 在控制面板中, 单击 "**系统和安全** > **系统** > " "**高级系统设置** > " "**环境变量**"。
 
@@ -255,9 +255,9 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 ## <a name="next-steps"></a>后续步骤
 
-R 开发人员可以开始使用一些简单的示例, 并了解 R 如何与 SQL Server 相关的基础知识。 下一步, 请参阅以下链接:
+R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
-+ [教程：在 T-sql 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教程：在 T-SQL 中运行 R](../tutorials/quickstart-r-create-script.md)
 + [教程：适用于 R 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 若要查看基于实际场景的机器学习示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。

@@ -1,6 +1,6 @@
 ---
 title: 使用机器学习模型生成预测和预测
-description: 使用 rxPredict 或 sp_rxPredict 实时评分, 或预测 T-sql 以了解 SQL Server 机器学习中 R 和 Python 中的预测和预测的本机计分。
+description: 使用 rxPredict 或 sp_rxPredict 实时评分，或预测 T-sql 以了解 SQL Server 机器学习中 R 和 Python 中的预测和预测的本机计分。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715688"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271904"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何使用中的机器学习模型生成预测和预测 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ _评分_是一个两步过程。 首先, 指定已训练的模型以从表中加
 
 为了增加欺诈检测等方案的评分速度, SQL Server 将内置计分库添加为C++和 CLR 扩展, 以消除 R 和 Python 启动过程的开销。
 
-[**实时评分**](../real-time-scoring.md)是实现高性能计分的第一个解决方案。 在早期版本的 SQL Server 2017 和更高版本的更新中引入了 SQL Server 2016, 而实时评分依赖于在 RevoScaleR、MicrosoftML (R)、revoscalepy 和microsoftml (Python)。 通过使用**sp_rxPredict**存储过程从任何支持的模型类型生成评分, 而无需调用 R 或 Python 运行时。
+[**实时评分**](../real-time-scoring.md)是实现高性能计分的第一个解决方案。 在早期版本的 SQL Server 2017 和更高版本的更新中引入了 SQL Server 2016, 而实时评分依赖于在 RevoScaleR、MicrosoftML (R)、revoscalepy 和microsoftml (Python)。 通过使用**sp_rxPredict**存储过程从任何支持的模型类型生成评分，而无需调用 R 或 Python 运行时。
 
 [**本机计分**](../sql-native-scoring.md)是一项 SQL Server 2017 功能, 可作为本机C++库实现, 但仅适用于 RevoScaleR 和 revoscalepy 模型。 它是最快和更安全的方法, 但支持相对于其他方法的一组较小的函数。
 
@@ -84,7 +84,7 @@ _评分_是一个两步过程。 首先, 指定已训练的模型以从表中加
 
 **使用 SQL**
 
-通过 SQL 代码, 你可以使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)来训练模型, 并直接将定型模型插入表中的类型为**varbinary (max)** 的列。 有关简单示例, 请参阅[在 R 中创建 preditive 模型](../tutorials/rtsql-create-a-predictive-model-r.md)
+通过 SQL 代码，你可以使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)来训练模型，并直接将定型模型插入表中的类型为**varbinary （max）** 的列。 有关简单示例, 请参阅[在 R 中创建 preditive 模型](../tutorials/quickstart-r-train-score-model.md)
 
 **使用 R**
 

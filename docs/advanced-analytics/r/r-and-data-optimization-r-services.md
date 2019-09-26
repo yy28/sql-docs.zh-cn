@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715650"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271895"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services 的性能-数据优化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ c("fruit" = c(type = "factor", levels= c("apple", "orange", "banana")))
 
     如果 R 脚本可并行化, 并且如果 SQL 查询可并行化, 则数据库引擎会创建多个并行进程。 可创建的最大进程数等于实例的**最大并行度**(MAXDOP) 设置。 然后, 所有进程都运行相同的脚本, 但只接收部分数据。
     
-    因此, 此方法对于必须查看所有数据的脚本 (例如, 在训练模型时) 不起作用。 但是，在并行执行批量预测等任务时，这种方式却很有作用。 有关使用并行的`sp_execute_external_script`详细信息, 请参阅[在 transact-sql 中使用 R 代码](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)的**高级提示: 并行处理**部分。
+    因此, 此方法对于必须查看所有数据的脚本 (例如, 在训练模型时) 不起作用。 但是，在并行执行批量预测等任务时，这种方式却很有作用。 有关使用并行的`sp_execute_external_script`详细信息, 请参阅[在 transact-sql 中使用 R 代码](../tutorials/quickstart-r-create-script.md)的**高级提示: 并行处理**部分。
 
 -   **使用 numTasks = 1。** 在 SQL Server 计算上下文中使用**rx**函数时, 请将_numTasks_参数的值设置为你要创建的进程数。 创建的进程数永远不能超过**MAXDOP**;但是, 创建的进程的实际数量由数据库引擎确定, 可能小于你请求的进程数。
 

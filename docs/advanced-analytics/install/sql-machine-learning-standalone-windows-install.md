@@ -8,18 +8,18 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715838"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271952"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>使用 SQL Server 安装程序安装 Machine Learning Server (独立版) 或 R Server (独立版)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。 它被称为**Machine Learning Server (独立)** , 包括 R 和 Python。 
+SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。 它被称为**Machine Learning Server （独立）** ，包括 R 和 Python。 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 SQL Server 安装程序包含一个“共享功能”选项，用于安装在 SQL Server 外部运行且不支持实例的独立机器学习服务器。 在 SQL Server 2016 中，此功能称为“R Server（独立版）”。  
@@ -44,7 +44,7 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 通常，我们建议你将独立服务器和数据库引擎实例识别安装视为互斥安装以避免资源争用，但如果你有足够的资源，则不禁止在同一台物理计算机上进行这两种安装。
 
-计算机上只能有一台独立服务器: SQL Server Machine Learning Server (独立) 或 SQL Server R Server (独立版)。 请确保在添加新版本之前卸载一个版本。
+计算机上只能有一台独立服务器： SQL Server Machine Learning Server （独立）或 SQL Server R Server （独立版）。 请确保在添加新版本之前卸载一个版本。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -134,7 +134,7 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 ## <a name="set-environment-variables"></a>设置环境变量
 
-仅适用于 R 功能集成, 应设置**MKL_CBWR**环境变量, 以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库 (MKL) 计算中进行一致的输出。
+仅适用于 R 功能集成，应设置**MKL_CBWR**环境变量，以[确保](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)从 Intel 数学内核库（MKL）计算中进行一致的输出。
 
 1. 在控制面板中, 单击 "**系统和安全** > **系统** > " "**高级系统设置** > " "**环境变量**"。
 
@@ -157,7 +157,7 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (独立版) |  SQL Server 2017 安装向导 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (独立) |  Windows 独立安装程序 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|SQL Server 机器学习服务 (数据库内) |SQL Server 2017 安装向导, with R language 选项|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|SQL Server 机器学习服务（数据库内） |SQL Server 2017 安装向导, with R language 选项|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R Server (独立版) |  SQL Server 2016 安装向导 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (数据库内) |SQL Server 2016 安装向导|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
@@ -214,16 +214,16 @@ R 和 Python 环境是与 SQL Server 分离的独立服务器，可使用独立�
 
 ## <a name="next-steps"></a>后续步骤
 
-R 开发人员可以开始使用一些简单的示例, 并了解 R 如何与 SQL Server 相关的基础知识。 下一步, 请参阅以下链接:
+R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
-+ [教程：在 T-sql 中运行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教程：在 T-SQL 中运行 R](../tutorials/quickstart-r-create-script.md)
 + [教程：适用于 R 开发人员的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 配合使用:
+Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 一起使用：
 
-+ [教程：在 T-sql 中运行 Python](../tutorials/run-python-using-t-sql.md)
++ [教程：在 T-SQL 中运行 Python](../tutorials/run-python-using-t-sql.md)
 + [教程：适用于 Python 开发人员的数据库内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-若要查看基于实际场景的机器学习示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。
+若要查看基于真实场景的机器学习示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。
