@@ -115,7 +115,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @active_start_time = ] active_start_time`在*active_start_date*和*active_end_date*之间的任意日期开始执行作业的时间。 *active_start_time*的值为**int**，默认值为**000000**，表示凌晨12:00:00 并且必须使用 HHMMSS 格式输入。  
   
-`[ @active_end_time = ] active_end_time`在*active_start_date*和*active_end_date*之间的任意日期开始执行作业的时间。 *active_end_time*的值为**int**，默认值为**235959**，表示 11:59:59 P.M.。 并且必须使用 HHMMSS 格式输入。  
+`[ @active_end_time = ] active_end_time`在*active_start_date*和*active_end_date*之间的任意日期开始执行作业的时间。 *active_end_time*的值为**int**，默认值为**235959**，表示 11:59:59 P.M. 并且必须使用 HHMMSS 格式输入。  
   
 `[ @owner_login_name = ] 'owner_login_name'`拥有该计划的服务器主体的名称。 *owner_login_name*的类型为**sysname**，默认值为 NULL，指示计划由创建者拥有。  
   

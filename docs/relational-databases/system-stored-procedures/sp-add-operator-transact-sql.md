@@ -69,15 +69,15 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理在工作日（从星期一到星期五）向指定操作员发送寻呼通知的时间。 *weekday_pager_start_time*的值为**int**，默认值为**090000**，指示 9:00 A.M。 并且必须使用 HHMMSS 格式输入。  
   
-`[ @weekday_pager_end_time = ] weekday_pager_end_time`一个时间，在此时间之后， **SQLServerAgent**服务不再向星期一到星期五的工作日发送寻呼通知。 *weekday_pager_end_time*的值为**int**，默认值为180000，表示 6:00 P.M.。 并且必须使用 HHMMSS 格式输入。  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time`一个时间，在此时间之后， **SQLServerAgent**服务不再向星期一到星期五的工作日发送寻呼通知。 *weekday_pager_end_time*的值为**int**，默认值为180000，表示 6:00 P.M. 并且必须使用 HHMMSS 格式输入。  
   
 `[ @saturday_pager_start_time = ] saturday_pager_start_time`一个时间，在此时间之后， **SQLServerAgent**服务将寻呼通知发送到星期六上的指定操作员。 *saturday_pager_start_time*的值为**int**，默认值为090000，指示 9:00 A.M。 并且必须使用 HHMMSS 格式输入。  
   
-`[ @saturday_pager_end_time = ] saturday_pager_end_time`一个时间，在此之后， **SQLServerAgent**服务不再向星期六的指定操作员发送寻呼通知。 *saturday_pager_end_time*的值为**int**，默认值为**180000**，表示 6:00 P.M.。 并且必须使用 HHMMSS 格式输入。  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time`一个时间，在此之后， **SQLServerAgent**服务不再向星期六的指定操作员发送寻呼通知。 *saturday_pager_end_time*的值为**int**，默认值为**180000**，表示 6:00 P.M. 并且必须使用 HHMMSS 格式输入。  
   
 `[ @sunday_pager_start_time = ] sunday_pager_start_time`一个时间，在此之后， **SQLServerAgent**服务将寻呼通知发送到星期日上的指定操作员。 *sunday_pager_start_time*的值为**int**，默认值为**090000**，指示 9:00 A.M。 并且必须使用 HHMMSS 格式输入。  
   
-`[ @sunday_pager_end_time = ] sunday_pager_end_time`时间，在此之后， **SQLServerAgent**服务不再将寻呼通知发送到星期日上的指定操作员。 *sunday_pager_end_time*的值为**int**，默认值为**180000**，表示 6:00 P.M.。 并且必须使用 HHMMSS 格式输入。  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time`时间，在此之后， **SQLServerAgent**服务不再将寻呼通知发送到星期日上的指定操作员。 *sunday_pager_end_time*的值为**int**，默认值为**180000**，表示 6:00 P.M. 并且必须使用 HHMMSS 格式输入。  
   
 `[ @pager_days = ] pager_days`一个数字，用于指示操作员可用于页面的日期（受限于指定的开始/结束时间）。 *pager_days*的值为**tinyint**，默认值为**0** ，表示运算符从不可用于接收页面。 有效值为**0**至**127**。 *pager_days*是通过添加所需日期的各个值来计算的。 例如，从星期一到星期五是**2**+**4**+**8**+**16**+3262 = 。 下表列出了一周中每天的值。  
   
