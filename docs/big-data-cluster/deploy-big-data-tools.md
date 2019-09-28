@@ -1,7 +1,7 @@
 ---
 title: 安装大数据工具
 titleSuffix: SQL Server big data clusters
-description: 了解如何安装与（预览版） [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]一起使用的工具。
+description: 了解如何安装与 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （预览版）一起使用的工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: cbb34d5cd209281a5c97d819c7741503d234ad2d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238692"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342020"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍应安装的客户端工具，以便创建、管理和使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （预览）。 以下部分提供了工具列表和安装说明链接。 在部署大数据群集之前，请先配置 Windows 或 Linux 上标记为必需的工具。
+本文介绍应安装的客户端工具，以便创建、管理和使用 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （预览版）。 以下部分提供了工具列表和安装说明链接。 在部署大数据群集之前，请先配置 Windows 或 Linux 上标记为必需的工具。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -28,17 +28,17 @@ ms.locfileid: "70238692"
 
 下表列出了常见的大数据群集工具及其安装方式：
 
-| Tool | 必填 | 描述 | 安装 |
+| Tool | Required | 描述 | 安装 |
 |---|---|---|---|
 | **python** | 是 | Python 是一种使用动态语义解释的面向对象的高级编程语言。 SQL Server 大数据群集的许多部分都使用 python。 | [安装 python](#python)|
 | **azdata** | 是 | 用于安装和管理大数据群集的命令行工具。 | [安装](deploy-install-azdata.md) |
-| **kubectl**<sup>1</sup> | 是 | 用于监视基础 Kuberentes 群集的命令行工具（[详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/)）。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **kubectl**<sup>1</sup> | 是 | 用于监视基础 Kuberentes 群集的命令行工具（[详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/)）。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio SQL Server 2019 候选发布版本（RC）** | 是 | 用于查询 SQL Server 的跨平台图形工具。 | [安装](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
 | **SQL Server 2019 扩展** | 是 | 用于 Azure Data Studio 的扩展，支持连接到大数据群集。 还提供数据虚拟化向导。 | [安装](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | 针对 AKS | 用于管理 Azure 服务的新式命令行接口。 与 AKS 大数据群集部署配合使用（[详细信息](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)）。 | [安装](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 可选 | 用于查询 SQL Server 的新式命令行接口（[详细信息](https://github.com/dbcli/mssql-cli/blob/master/README.rst)）。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 针对某些脚本 | 用于查询 SQL Server 的旧式命令行工具（[详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)）。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
-| **curl** <sup>3</sup> | 针对某些脚本 | 使用 URL 传输数据的命令行工具。 | [Windows](https://curl.haxx.se/windows/)\| Linux：安装卷包 |
+| **curl** <sup>3</sup> | 针对某些脚本 | 使用 URL 传输数据的命令行工具。 | [Windows](https://curl.haxx.se/windows/)\| Linux: 安装卷包 |
 
 <sup>1</sup>你必须使用 kubectl 版本1.13 或更高版本。 此外，kubectl 的版本应该加或减 Kubernetes 群集的一个次要版本。 若要在 kubectl 客户端上安装特定版本，请参阅[通过 curl 安装 kubectl 二进制文件](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)（在 Windows 10 上，使用 cmd.exe 而不是 Windows PowerShell 来运行 curl）。
 
@@ -76,7 +76,7 @@ ms.locfileid: "70238692"
 
 1. 将压缩文件复制到目标计算机，并将其解压缩到所选文件夹中。
 
-1. （仅适用于 Windows）从该文件夹运行 `installLocalPythonPackages.bat`，并将完整路径作为参数传递到同一文件夹。
+1. 从该文件夹运行 `installLocalPythonPackages.bat`，并将完整路径作为参数传到同一文件夹，该操作仅适用于 Windows。
 
    ```PowerShell
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
@@ -216,4 +216,4 @@ Azure Data Studio SQL Server 2019 RC 为 SQL Server 2019 RC 提供专门功能�
 - [快速入门：在 Azure Kubernetes 服务 (AKS) 上部署 SQL Server 大数据群集](quickstart-big-data-cluster-deploy.md)
 - [如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署](deployment-guidance.md)
 
-有关大数据群集的详细信息，请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
+有关大数据群集的详细信息，请参阅[什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)。
