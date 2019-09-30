@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.ssms.ispackageprop.general.f1
 - sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff402435688d2471b7e6bd871a2e9a3f1cbd98c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008002"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298972"
 ---
 # <a name="package-properties-dialog-box"></a>“包属性”对话框
 
@@ -47,12 +47,12 @@ ms.locfileid: "68008002"
   
 4.  展开包含您要查看其属性的包的文件夹。  
   
-5.  右键单击该包，然后选择“属性”。  
+5.  右键单击该包，然后选择“属性”  。  
   
 ##  <a name="options"></a> 配置选项  
  使用 **“常规”** 页可以查看所选包的属性。  
   
- “常规”页上的所有属性都是只读的。  
+ “常规”  页上的所有属性都是只读的。  
   
  **名称**  
  显示包的名称。  
@@ -63,7 +63,7 @@ ms.locfileid: "68008002"
  **入口点**  
  **True** 的值表示将直接启动包。 值 **False** 表示该包由另一个包通过执行包任务启动。 默认值是 **True**秒。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中为父包和子包设置此属性，方法是在解决方案资源管理器中右键单击包，然后单击“入口点包”。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中为父包和子包设置此属性，方法是在解决方案资源管理器中右键单击包，然后单击“入口点包”  。  
   
  **Description**  
  显示包的可选说明。  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6cd6827a10bdacd11b092aa157b28604373aa018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019658"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294102"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -120,12 +120,12 @@ ms.locfileid: "68019658"
  指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认值为 **False**。  
   
  **MSMQConnection**  
- 选择现有 MSMQ 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
+ 选择现有 MSMQ 连接管理器，或单击“\<新建连接...>”  以创建新的连接管理器。  
   
  **相关主题**：[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **消息**  
- 指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”**，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”**，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”**。  
+ 指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”** ，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”** ，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”** 。  
   
 ## <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“发送”** 页，配置消息队列任务以便从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包发送消息。  
@@ -156,20 +156,20 @@ ms.locfileid: "68019658"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **DataFileMessage**  
- 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。  
+ 键入数据文件的路径，或单击省略号 (…) 后再定位到相应的文件。   
   
 #### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **VariableMessage**  
- 键入变量名称，或单击省略号 (…) 后再选择相应的变量。 各变量之间用逗号分隔。  
+ 键入变量名称，或单击省略号 (…) 后再选择相应的变量。  各变量之间用逗号分隔。  
   
  **相关主题：** 选择变量  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **StringMessage**  
- 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。  
+ 键入字符串消息，或单击省略号 (…) 后在“输入字符串消息”对话框中键入消息。    
   
 ## <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
-  可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列 (MSMQ) 消息。  
+  可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列 (MSMQ) 消息   。  
   
 ### <a name="options"></a>选项  
  **RemoveFromMessageQueue**  
@@ -195,7 +195,7 @@ ms.locfileid: "68019658"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 数据文件消息  
  **SaveFileAs**  
- 键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。  
+ 键入要使用的文件的路径，或单击省略号按钮 (…) 后再定位到该文件。   
   
  **Overwrite**  
  指示在保存数据文件消息的内容时是否覆盖现有文件中的数据。 默认值为 **False**。  
@@ -216,9 +216,9 @@ ms.locfileid: "68019658"
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
  **Identifier**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
   
- **相关主题：**[选择包](../../integration-services/control-flow/select-a-package.md)  
+ **相关主题：** [选择包](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **Filter**  
@@ -230,9 +230,9 @@ ms.locfileid: "68019658"
 |**来源包**|该消息仅接收来自指定包的消息。 选择该值将显示动态选项 **Identifier**。|  
   
  **变量**  
- 键入变量名称，或单击“\<新建变量…>”，然后配置新的变量。  
+ 键入变量名称，或单击“\<新建变量…>”，然后配置新的变量。   
   
- **相关主题：**[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>Filter 动态选项  
   
@@ -242,9 +242,9 @@ ms.locfileid: "68019658"
   
 ##### <a name="filter--from-package"></a>Filter = 来源包  
  **Identifier**  
- 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
+ 如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。   
   
- **相关主题：**[选择包](../../integration-services/control-flow/select-a-package.md)  
+ **相关主题：** [选择包](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **比较**  
@@ -258,7 +258,7 @@ ms.locfileid: "68019658"
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
   
  **CompareString**  
- 除非将 **Compare** 选项设置为“无”，否则请提供与消息进行比较的字符串。  
+ 除非将 **Compare** 选项设置为“无”  ，否则请提供与消息进行比较的字符串。  
   
 #### <a name="messagetype--string-message-to-variable"></a>MessageType = 变量的字符串消息  
  **比较**  
@@ -272,15 +272,15 @@ ms.locfileid: "68019658"
 |**包含**|消息必须包含 **CompareString** 选项中的字符串。|  
   
  **CompareString**  
- 除非将 **Compare** 选项设置为“无”，否则请提供与消息进行比较的字符串。  
+ 除非将 **Compare** 选项设置为“无”  ，否则请提供与消息进行比较的字符串。  
   
  **变量**  
- 键入保存接收到的消息的变量名，或单击“\<新建变量…>”，然后配置新的变量。  
+ 键入保存接收到的消息的变量名，或单击“\<新建变量…>”，然后配置新的变量。   
   
- **相关主题：**[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>选择变量
-  可以使用 **“选择变量”** 对话框，指定在消息队列任务的发送消息操作中使用的变量。 “可用变量”列表包括消息队列任务或其父容器作用域内的系统变量和用户定义变量。 该任务使用 **“所选变量”** 列表中的变量。  
+  可以使用 **“选择变量”** 对话框，指定在消息队列任务的发送消息操作中使用的变量。 “可用变量”列表包括消息队列任务或其父容器作用域内的系统变量和用户定义变量  。 该任务使用 **“所选变量”** 列表中的变量。  
   
 ### <a name="options"></a>选项  
  **可用变量**  
@@ -290,15 +290,15 @@ ms.locfileid: "68019658"
  选择一个或多个变量。  
   
  **右箭头**  
- 将所选变量移动到“所选变量”列表。  
+ 将所选变量移动到“所选变量”列表  。  
   
  **左箭头**  
- 将所选变量移回“可用变量”列表。  
+ 将所选变量移回“可用变量”  列表。  
   
  **新建变量**  
  创建新变量。  
   
- **相关主题：**[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：** [添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 任务](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流](../../integration-services/control-flow/control-flow.md)  

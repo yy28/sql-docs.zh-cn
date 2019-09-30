@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 796446e4254a9d2e62fc3e1ed302324a0e37baae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062977"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292938"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
 
@@ -49,7 +49,7 @@ ms.locfileid: "68062977"
   
  下表对可能的CDC 状态值进行了说明：  
   
-|State|描述|  
+|状态|描述|  
 |-----------|-----------------|  
 |(INITIAL)|这是在当前 CDC 组上运行任何包之前的初始状态。 这也是 CDC 状态为空时的状态。|  
 |ILSTART（初始加载已开始）|这是初始加载包已开始、 **MarkInitialLoadStart** 操作调用 CDC 控制任务后时的状态。|  
@@ -84,7 +84,7 @@ ms.locfileid: "68062977"
   
  不要向该变量赋予值来作为其定义的一部分。 该值必须由 CDC 控制任务设置。  
   
- 如果您计划将该 CDC 控制任务用于 **“自动状态持久化”**，则该 CDC 状态变量将从您指定的数据库状态表中读取并且在其值更改时将更新回该相同的表。 有关状态表的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)和 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)。  
+ 如果您计划将该 CDC 控制任务用于 **“自动状态持久化”** ，则该 CDC 状态变量将从您指定的数据库状态表中读取并且在其值更改时将更新回该相同的表。 有关状态表的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)和 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)。  
   
  如果您不将该 CDC 控制任务用于“自动状态持久化”，则必须从持久性存储区中加载该变量值，在该持久性存储区中，在上次包运行时保存了该变量值并且在当前处理范围完成后该变量值将写回持久性存储区。  
   

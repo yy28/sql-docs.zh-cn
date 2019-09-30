@@ -16,14 +16,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 48434ea86b3f8516ee1936256437dddf54f94005
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052131"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294930"
 ---
 # <a name="creating-a-package-programmatically"></a>以编程方式创建包
 
@@ -67,15 +67,15 @@ Module Module1
 End Module  
 ```  
   
- 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要使用 C# 编译器 (csc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用将 \<filename> 替换为 .cs 或 .vb 文件的名称，并为其选择一个 \<outputfilename>。  
+ 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要使用 C# 编译器 (csc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用将 \<filename> 替换为 .cs 或 .vb 文件的名称，并为其选择一个 \<outputfilename>    。  
   
  **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 若要使用 Visual Basic .NET 编译器 (vbc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用。  
+ 若要使用 Visual Basic .NET 编译器 (vbc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用  。  
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 区别是要先创建 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 对象，然后由任一应用程序已重载方法填充包对象：用于平面文件的 LoadPackage、用于保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的包的 LoadFromSQLServer，或用于保存到文件系统的包的 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
+ 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 区别是要先创建 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 对象，然后由任一应用程序已重载方法填充包对象：用于平面文件的 LoadPackage  、用于保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的包的 LoadFromSQLServer  ，或用于保存到文件系统的包的 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
   
 ```csharp  
 using System;  

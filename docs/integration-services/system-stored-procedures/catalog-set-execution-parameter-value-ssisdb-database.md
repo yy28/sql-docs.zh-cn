@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 320cb248cc51599628b26e60c3460aa1be701a35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897833"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295313"
 ---
-# <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
+# <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -81,7 +81,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |-----------|-----------------|  
 |0|None<br /><br /> 关闭日志记录。 仅记录包执行状态。|  
 |1|“基本”<br /><br /> 除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
-|2|“性能”<br /><br /> 仅记录性能统计信息、OnError 和 OnWarning 事件。|  
+|2|性能<br /><br /> 仅记录性能统计信息、OnError 和 OnWarning 事件。|  
 |3|“详细”<br /><br /> 记录所有事件，包括自定义事件和诊断事件。 <br />自定义事件包括 Integration Services 任务记录的那些事件。 有关详细信息，请参阅[日志记录的自定义消息](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|运行时沿袭<br /><br /> 收集跟踪数据流中的沿袭所需的数据。|  
 |100|自定义日志记录级别<br /><br /> 指定 CUSTOMIZED_LOGGING_LEVEL 参数中的设置。 有关可指定的值的详细信息，请参阅 [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)。<br /><br /> 有关自定义日志记录级别的详细信息，请参阅[在 SSIS 服务器上启用包执行的日志记录](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。|  

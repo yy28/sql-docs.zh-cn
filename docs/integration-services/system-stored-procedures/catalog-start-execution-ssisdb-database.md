@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: af383d7c8770a254ba4112194ab9452bbb9a1bab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038651"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296713"
 ---
-# <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution（SSISDB 数据库）
+# <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -33,17 +33,17 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
 ```  
   
 ## <a name="arguments"></a>参数  
- [@execution_id =] execution_id  
- 执行实例的唯一标识符。 execution_id 为 bigint。
+ [@execution_id =] execution_id   
+ 执行实例的唯一标识符。 execution_id 为 bigint   。
  
- [@retry_count =] retry_count  
- 执行失败时的重试次数。 仅当在 Scale Out 中执行时才生效。此参数可选。 如果未指定，其值设置为 0。 retry_count 为 int。
+ [@retry_count =] retry_count   
+ 执行失败时的重试次数。 仅当在 Scale Out 中执行时才生效。此参数可选。 如果未指定，其值设置为 0。 retry_count 为 int   。
   
 ## <a name="remarks"></a>Remarks  
  使用执行来指定参数值，包在单个包执行实例中将使用这些参数值。 在创建执行实例后，但在启动此实例之前，可能重新部署对应的项目。 在本例中，执行实例引用过时的项目。 这个无效引用导致存储过程失败。  
   
 > [!NOTE]  
->  只能启动执行一次。 要开始执行实例，它必须处于已创建状态（[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 视图中 status 列的值为 `1`）。  
+>  只能启动执行一次。 要开始执行实例，它必须处于已创建状态（[catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 视图中 status 列的值为 `1`）  。  
   
 ## <a name="example"></a>示例  
  以下示例调用 catalog.create_execution 来创建 Child1.dtsx 包的执行实例。 Integration Services Project1 包含该包。 该示例调用 catalog.set_execution_parameter_value 来设置 Parameter1、Parameter2 和 LOGGING_LEVEL 参数的值。 该示例调用 catalog.start_execution 启动一个执行实例。  

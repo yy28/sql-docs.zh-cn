@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29901bc63223da1004995b86e15f74cfd3d0b23c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011528"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294739"
 ---
 # <a name="edit-the-table-properties"></a>编辑表属性
 
@@ -50,7 +50,7 @@ ms.locfileid: "68011528"
   
     -   **替换现有捕获实例**：在此情况下，将删除当前捕获实例并用你创建的捕获实例替换。 如果为此表定义了两个捕获实例，则您必须选择要替换的一个实例。  
   
- **注意**：可以从“表”选项卡的表列表中删除某一捕获实例。  
+ **注意**：可以从“表”  选项卡的表列表中删除某一捕获实例。  
   
  在此对话框中输入完信息后，单击 **“确定”** 以接受更改。  
   

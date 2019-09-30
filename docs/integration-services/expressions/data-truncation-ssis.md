@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c7b122bde62bdae597498c0cf0992ff1c0732c6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 03b521f06925ad21847cf588b27c211167dbd425
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081133"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297647"
 ---
 # <a name="data-truncation-ssis"></a>数据截断 (SSIS)
 
@@ -31,15 +31,15 @@ ms.locfileid: "68081133"
   
  在以下情况中，可能会发生截断：  
   
--   将字符串数据从 DT_WSTR 转换成相同长度的 DT_STR（若原始字符串包含双字节字符）。  
+-   将字符串数据从 DT_WSTR 转换成相同长度的 DT_STR（若原始字符串包含双字节字符）   。  
   
--   强制将整数从 DT_I4 转换成 DT_I2，可能会丢失有效位。  
+-   强制将整数从 DT_I4 转换成 DT_I2，可能会丢失有效位   。  
   
 -   强制将无符号整数转换成带符号整数，可能会丢失有效位。  
   
--   强制将实数从 DT_R8 转换成 DT_R4，可能会丢失无效位  
+-   强制将实数从 DT_R8 转换成 DT_R4，可能会丢失无效位    
   
--   强制将整数从 DT_I4 转换成 DT_R4，可能会丢失无效位。  
+-   强制将整数从 DT_I4 转换成 DT_R4，可能会丢失无效位   。  
   
  在分析表达式时，表达式计算器会标识可能导致截断的显式转换并发出警告。 例如，如果要将 30 个字符的字符串转换为 20 个字符的字符串，则表达式计算器会发出警告。  
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 478bdc8d78b9b6740d0b29f3c9bcbd57e08bf195
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063704"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295672"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色（SSIS 服务）
 
@@ -106,7 +106,7 @@ ms.locfileid: "68063704"
   
 4.  在 **“包角色”** 对话框中，从 **“读取者角色”** 列表中选择一个读取者角色，并从 **“写入者角色”** 列表中选择一个写入者角色。  
   
-5.  单击“确定” 。
+5.  单击“确定”  。
 
 ## <a name="create"></a> 创建用户定义的角色
     
@@ -116,15 +116,15 @@ ms.locfileid: "68063704"
   
 2.  在 **“视图”** 菜单上，单击 **“对象资源管理器”** 。  
   
-3.  在对象资源管理器工具栏上，单击 **“连接”**，再单击 **“数据库引擎”**。  
+3.  在对象资源管理器工具栏上，单击 **“连接”** ，再单击 **“数据库引擎”** 。  
   
 4.  在 **“连接到服务器”** 对话框中，提供服务器名，并选择身份验证模式。 可以使用句点 (.)、(local) 或 **localhost** 来指示本地服务器。  
   
-5.  单击 **“连接”**。  
+5.  单击 **“连接”** 。  
   
 6.  展开“数据库”、“系统数据库”、“msdb”、“安全性”和“角色”。  
   
-7.  在“角色”节点中，右键单击“数据库角色”，再单击“新建数据库角色”。  
+7.  在“角色”节点中，右键单击“数据库角色”，再单击“新建数据库角色”  。  
   
 8.  在“常规”页上，提供一个名称，还可以指定一个所有者、拥有的架构以及添加角色成员。  
   
@@ -132,10 +132,10 @@ ms.locfileid: "68063704"
   
 10. 还可以单击 **“扩展属性”** ，配置任何扩展属性。  
   
-11. 单击“确定” 。
+11. 单击“确定”  。
 
 ## <a name="roles_dialog"></a>“包角色”对话框 UI 参考
-  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 数据库中存储的包。  
+  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”  对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 数据库中存储的包。  
   
  该对话框中列出的角色是 **msdb** 系统数据库的当前数据库角色。 如果未选择任何角色，将应用默认的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色。 默认情况下，读取者角色包括 **db_ssisadmin**、 **db_ssisoperator**以及创建包的用户。 作为以上任一角色的成员的用户或创建该包的用户，可以枚举、查看、导出和运行包。 默认情况下，写入者角色包括 **db_ssisadmin** 和创建包的用户。 作为此角色的成员的用户和创建该包的用户，可以导入、删除和更改包。  
   

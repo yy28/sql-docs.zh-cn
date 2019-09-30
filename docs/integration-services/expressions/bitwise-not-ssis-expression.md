@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a76e1690f93065a001094675f38c7ff388b2203a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b9ac40997cd2d9962d067d181a66e9614de477d1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034000"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297682"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ （位非）（SSIS 表达式）
 
@@ -37,10 +37,10 @@ ms.locfileid: "68034000"
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 整数数据类型的任何有效表达式。 integer_expression 是一个整数，该整数转换为二进制数以进行位运算。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 整数数据类型的任何有效表达式。 integer  _expression  是一个整数，该整数转换为二进制数以进行位运算。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="result-types"></a>结果类型  
- 返回 integer_expression 数据类型。  
+ 返回 integer_expression  数据类型。  
   
 ## <a name="remarks"></a>Remarks  
  None  
