@@ -183,7 +183,7 @@ ms.locfileid: "70846680"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 访问业务逻辑处理程序时使用的友好名称。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - 值为 **@is_dotnet_assembly**。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - 值为 **\@is_dotnet_assembly**。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>部署业务逻辑处理程序  
   
