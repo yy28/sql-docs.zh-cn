@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 602eed32ba52be9f7e4119a767f064d228440278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094563"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286577"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
 
@@ -43,58 +43,58 @@ ms.locfileid: "68094563"
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中创建新的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目，并打开默认的包进行编辑。  
   
-2.  变量。 打开“变量”窗口并定义以下变量：  
+2.  变量  。 打开“变量”  窗口并定义以下变量：  
   
-    -   `ExcelFile`，类型为字符串。 输入现有 Excel 工作簿的完整路径和文件名。  
+    -   `ExcelFile`，类型为字符串  。 输入现有 Excel 工作簿的完整路径和文件名。  
   
-    -   `ExcelTable`，类型为字符串。 输入以 `ExcelFile` 变量值命名的工作簿中的现有工作簿或指定范围的名称。 此值区分大小写。  
+    -   `ExcelTable`，类型为字符串  。 输入以 `ExcelFile` 变量值命名的工作簿中的现有工作簿或指定范围的名称。 此值区分大小写。  
   
-    -   `ExcelFileExists`，类型为布尔。  
+    -   `ExcelFileExists`，类型为布尔  。  
   
-    -   `ExcelTableExists`，类型为布尔。  
+    -   `ExcelTableExists`，类型为布尔  。  
   
-    -   `ExcelFolder`，类型为字符串。 输入至少包含一个 Excel 工作簿的文件夹的完整路径。  
+    -   `ExcelFolder`，类型为字符串  。 输入至少包含一个 Excel 工作簿的文件夹的完整路径。  
   
-    -   `ExcelFiles`，类型为对象。  
+    -   `ExcelFiles`，类型为对象  。  
   
-    -   `ExcelTables`，类型为对象。  
+    -   `ExcelTables`，类型为对象  。  
   
-3.  Imports 语句。 多数代码示例都要求您在脚本文件的开头处导入一个或两个下列 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间：  
+3.  Imports 语句  。 多数代码示例都要求您在脚本文件的开头处导入一个或两个下列 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 命名空间：  
   
-    -   System.IO，用于文件系统操作。  
+    -   System.IO  ，用于文件系统操作。  
   
-    -   System.Data.OleDb，用于将 Excel 文件作为数据源打开。  
+    -   System.Data.OleDb  ，用于将 Excel 文件作为数据源打开。  
   
-4.  引用。 从 Excel 文件读取构架信息的代码示例在脚本项目中需要对 System.Xml 命名空间的附加引用。  
+4.  引用  。 从 Excel 文件读取构架信息的代码示例在脚本项目中需要对 System.Xml  命名空间的附加引用。  
   
-5.  设置脚本组件的默认脚本语言，方法是使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
+5.  设置脚本组件的默认脚本语言，方法是使用“选项”  对话框的“常规”  页上的“脚本语言”  选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
 ##  <a name="example1"></a>示例 1 说明：检查 Excel 文件是否存在  
  本示例可确定 `ExcelFile` 变量中指定的 Excel 工作簿文件是否存在，然后根据该结果设置 `ExcelFileExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  将新的脚本添加到包中，并将其名称更改为 ExcelFileExists。  
+1.  将新的脚本添加到包中，并将其名称更改为 ExcelFileExists  。  
   
-2.  在“脚本任务编辑器”的“脚本”选项卡上，单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
+2.  在“脚本任务编辑器”  的“脚本”  选项卡上，单击“ReadOnlyVariables”  ，然后使用下列任一方法输入属性值：  
   
-    -   键入 ExcelFile。  
-  
-         -或 -  
-  
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
-  
-3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
-  
-    -   键入 ExcelFileExists。  
+    -   键入 ExcelFile  。  
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFileExists”变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量    。  
   
-4.  单击“编辑脚本”以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”  ，然后使用下列任一方法输入属性值：  
   
-5.  在脚本文件的顶部添加针对 System.IO 命名空间的 Imports 语句。  
+    -   键入 ExcelFileExists  。  
+  
+         -或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFileExists”变量    。  
+  
+4.  单击“编辑脚本”  以打开脚本编辑器。  
+  
+5.  在脚本文件的顶部添加针对 System.IO  命名空间的 Imports  语句。  
   
 6.  添加以下代码。  
   
@@ -144,29 +144,29 @@ public class ScriptMain
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  将新的脚本任务添加到包，并将其名称更改为 ExcelTableExists。  
+1.  将新的脚本任务添加到包，并将其名称更改为 ExcelTableExists  。  
   
-2.  在“脚本任务编辑器”的“脚本”选项卡上，单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
+2.  在“脚本任务编辑器”  的“脚本”  选项卡上，单击“ReadOnlyVariables”  ，然后使用下列任一方法输入属性值：  
   
-    -   键入用逗号. 分隔的 ExcelTable 和 ExcelFile。  
-  
-         -或 -  
-  
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTable”和“ExcelFile”变量。  
-  
-3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
-  
-    -   键入 ExcelTableExists。  
+    -   键入用逗号.  分隔的 ExcelTable  和 ExcelFile  。  
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选“ExcelTableExists”变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTable”和“ExcelFile”变量     。  
   
-4.  单击“编辑脚本”以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”  ，然后使用下列任一方法输入属性值：  
   
-5.  在脚本项目中添加对 System.Xml 程序集的引用。  
+    -   键入 ExcelTableExists  。  
   
-6.  在脚本文件的顶部添加针对 System.IO 和 System.Data.OleDb 命名空间的 Imports 语句。  
+         -或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选“ExcelTableExists”变量    。  
+  
+4.  单击“编辑脚本”  以打开脚本编辑器。  
+  
+5.  在脚本项目中添加对 System.Xml  程序集的引用。  
+  
+6.  在脚本文件的顶部添加针对 System.IO  和 System.Data.OleDb  命名空间的 Imports  语句。  
   
 7.  添加以下代码。  
   
@@ -251,27 +251,27 @@ public class ScriptMain
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  将新的脚本任务添加到包，并将其名称更改为 GetExcelFiles。  
+1.  将新的脚本任务添加到包，并将其名称更改为 GetExcelFiles  。  
   
-2.  打开“脚本任务编辑器”，在“脚本”选项卡上单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
+2.  打开“脚本任务编辑器”  ，在“脚本”  选项卡上单击“ReadOnlyVariables”  ，然后使用下列任一方法输入属性值：  
   
-    -   键入 ExcelFolder  
-  
-         -或 -  
-  
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFolder”变量。  
-  
-3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
-  
-    -   键入 ExcelFiles。  
+    -   键入 ExcelFolder   
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFolder”变量   。  
   
-4.  单击“编辑脚本”以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”  ，然后使用下列任一方法输入属性值：  
   
-5.  在脚本文件的顶部添加针对 System.IO 命名空间的 Imports 语句。  
+    -   键入 ExcelFiles  。  
+  
+         -或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量   。  
+  
+4.  单击“编辑脚本”  以打开脚本编辑器。  
+  
+5.  在脚本文件的顶部添加针对 System.IO  命名空间的 Imports  语句。  
   
 6.  添加以下代码。  
   
@@ -326,29 +326,29 @@ public class ScriptMain
   
 ### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  将新的脚本任务添加到包中，并将其名称更改为 GetExcelTables。  
+1.  将新的脚本任务添加到包中，并将其名称更改为 GetExcelTables  。  
   
-2.  打开“脚本任务编辑器”，在“脚本”选项卡上单击“ReadOnlyVariables”，然后使用下列任一方法输入属性值：  
+2.  打开“脚本任务编辑器”  ，在“脚本”  选项卡上单击“ReadOnlyVariables”  ，然后使用下列任一方法输入属性值：  
   
-    -   键入 ExcelFile。  
-  
-         -或 -  
-  
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量。  
-  
-3.  单击“ReadWriteVariables”，然后使用下列任一方法输入属性值：  
-  
-    -   键入 ExcelTables。  
+    -   键入 ExcelFile  。  
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTables”变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelFile”变量   。  
   
-4.  单击“编辑脚本”以打开脚本编辑器。  
+3.  单击“ReadWriteVariables”  ，然后使用下列任一方法输入属性值：  
   
-5.  在脚本项目中添加对 System.Xml 命名空间的引用。  
+    -   键入 ExcelTables  。  
   
-6.  在脚本文件的顶部添加针对 System.Data.OleDb 命名空间的 Imports 语句。  
+         -或 -  
+  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“选择变量”对话框中选择“ExcelTables”变量   。  
+  
+4.  单击“编辑脚本”  以打开脚本编辑器。  
+  
+5.  在脚本项目中添加对 System.Xml  命名空间的引用。  
+  
+6.  在脚本文件的顶部添加针对 System.Data.OleDb  命名空间的 Imports  语句。  
   
 7.  添加以下代码。  
   
@@ -435,23 +435,23 @@ public class ScriptMain
   
 ### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>配置用于显示本主题中的示例输出的脚本任务  
   
-1.  将新的脚本任务添加到包中，并将其名称更改为 DisplayResults。  
+1.  将新的脚本任务添加到包中，并将其名称更改为 DisplayResults  。  
   
-2.  将四个示例脚本任务彼此连接，以便每个任务在前一个任务成功完成后运行，然后将第四个示例任务连接到 DisplayResults 任务。  
+2.  将四个示例脚本任务彼此连接，以便每个任务在前一个任务成功完成后运行，然后将第四个示例任务连接到 DisplayResults  任务。  
   
-3.  在“脚本任务编辑器”中打开 DisplayResults 任务。  
+3.  在“脚本任务编辑器”  中打开 DisplayResults  任务。  
   
-4.  在“脚本”选项卡中单击“ReadOnlyVariables”然后使用下列任一方法添加[配置用于测试示例的包](#configuring)中列出的七个变量：  
+4.  在“脚本”  选项卡中单击“ReadOnlyVariables”  然后使用下列任一方法添加[配置用于测试示例的包](#configuring)中列出的七个变量：  
   
     -   键入用逗号分隔的每个变量的名称。  
   
          -或 -  
   
-    -   单击属性字段旁的省略号 (…) 按钮，然后在“”选择变量对话框中选择变量。  
+    -   单击属性字段旁的省略号 (…) 按钮，然后在“”选择变量对话框中选择变量   。  
   
-5.  单击“编辑脚本”以打开脚本编辑器。  
+5.  单击“编辑脚本”  以打开脚本编辑器。  
   
-6.  在脚本文件的顶部添加针对 Microsoft.VisualBasic 和 System.Windows.Forms 命名空间的 Imports 语句。  
+6.  在脚本文件的顶部添加针对 Microsoft.VisualBasic  和 System.Windows.Forms  命名空间的 Imports  语句。  
   
 7.  添加以下代码。  
   

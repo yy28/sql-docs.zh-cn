@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1de8d4676a5e288bcbc832b61136ac488de3fa56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2f94519318090c85a4885e429c85b314fe92245f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003724"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298377"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>列 Null 比率配置文件请求选项（数据事件探查任务）
 
@@ -32,7 +32,7 @@ ms.locfileid: "68003724"
  有关如何使用数据事件探查任务的详细信息，请参阅[设置数据事件探查任务](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 有关如何使用数据配置文件查看器分析数据事件探查任务输出的详细信息，请参阅 [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
 ## <a name="request-properties-options"></a>请求属性选项  
- 对于 **“列 Null 比率请求”**， **“请求属性”** 窗格显示下面的选项组：  
+ 对于 **“列 Null 比率请求”** ， **“请求属性”** 窗格显示下面的选项组：  
   
 -   **Data**，它包含 **TableOrView** 选项和 **Column** 选项  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68003724"
   
 #### <a name="column-options"></a>Column 选项  
  **IsWildCard**  
- 指定是否已选择通配符 **(\*)**。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  

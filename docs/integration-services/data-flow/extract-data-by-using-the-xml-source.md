@@ -12,14 +12,14 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8308a8449dd41d1eef7ad6784dffc8d8939f64f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f149ca01b71b7611264f28d14532d7827554585f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941539"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292544"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 源提取数据
 
@@ -42,9 +42,9 @@ ms.locfileid: "67941539"
   
     -   对于 **“XML 文件位置”** 访问模式，单击 **“浏览”** 找到包含该 XML 文件的文件夹。  
   
-    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。  
+    -   对于“来自变量的 XML 文件”访问模式，选择包含 XML 文件路径的用户定义变量。   
   
-    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。  
+    -   对于“来自变量的 XML 数据”访问模式，选择包含 XML 数据的用户定义变量。   
   
     > [!NOTE]  
     >  这些变量必须在包含该 XML 源的数据流任务的作用域内定义，或者在包的作用域内定义；此外，变量的数据类型必须为字符串。  
@@ -59,9 +59,9 @@ ms.locfileid: "67941539"
   
 8.  若要更新输出列的名称，请单击 **“列”** 并在 **“输出列”** 列表中编辑这些值。  
   
-9. 若要配置错误输出，请单击 **“错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
+9. 若要配置错误输出，请单击 **“错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-10. 单击“确定” 。  
+10. 单击“确定”  。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

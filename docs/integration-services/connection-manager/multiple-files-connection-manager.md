@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 758bf428032d0eb66cca054032c094d30fa85c30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104132"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294371"
 ---
 # <a name="multiple-files-connection-manager"></a>多文件连接管理器
 
@@ -61,7 +61,7 @@ ms.locfileid: "68104132"
   
  如果多文件连接管理器引用了多个文件和文件夹，那么文件和文件夹的路径应由竖线 (|) 分开。 连接管理器的 **ConnectionString** 属性的格式如下：  
   
- \<路径>|\<路径>  
+ \<路径>|\<路径>    
   
  也可以用通配符指定多个文件或文件夹。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\*.txt。  
   

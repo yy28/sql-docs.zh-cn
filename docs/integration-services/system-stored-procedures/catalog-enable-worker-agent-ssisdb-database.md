@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77c0c1218d1bde6c238d65206852f589a2ad8299
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8fd9d387d84836ca35c1b0bfb9fd564e2efd4a48
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007748"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281025"
 ---
-# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent（SSISDB 数据库）
+# <a name="catalogenable_worker_agent-ssisdb-database"></a>catalog.enable_worker_agent（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "68007748"
 catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>参数
-[@WorkerAgentId =] WorkerAgentId Scale Out Worker 的辅助角色代理 ID。 WorkerAgentId 为 uniqueidentifier。
+[@WorkerAgentId =] WorkerAgentId  Scale Out Worker 的辅助角色代理 ID。 WorkerAgentId 为 uniqueidentifier   。
 
 ## <a name="example"></a>示例
 此示例将在 MachineA 上启用 Scale Out Worker。

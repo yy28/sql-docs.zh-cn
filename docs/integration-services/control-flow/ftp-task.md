@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c41f2ba3fdd8b514a37951b623643584841c9a23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988215"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294144"
 ---
 # <a name="ftp-task"></a>FTP 任务
 
@@ -85,7 +85,7 @@ ms.locfileid: "67988215"
   
 ### <a name="options"></a>选项  
  **FtpConnection**  
- 选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
+ 选择现有 FTP 连接管理器，或单击“\<新建连接...>”  以创建连接管理器。  
   
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -148,27 +148,27 @@ ms.locfileid: "67988215"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- 选择现有的用户定义变量，或单击“\<新建变量...>”以创建用户定义变量。  
+ 选择现有的用户定义变量，或单击“\<新建变量...>”以创建用户定义变量  。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- 选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
+ 选择现有 FTP 连接管理器，或单击“\<新建连接...>”  以创建连接管理器。  
   
- **相关主题：**[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相关主题：** [FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 动态选项  
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- 选择现有的用户定义变量，或单击“\<新建变量...>”以创建变量。  
+ 选择现有的用户定义变量，或单击“\<新建变量...>”以创建变量  。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
+ **相关主题：** [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)、添加变量  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- 选择现有文件连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
+ 选择现有文件连接管理器，或单击“\<新建连接...>”以创建连接管理器  。  
   
  **相关主题**：[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

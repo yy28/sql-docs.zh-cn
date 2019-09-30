@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c03793ad98e2d4e71b34b095d158b9470cdbdae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 90778ec067d914a9f8fc3663ea00a5ff609247ab
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007216"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295377"
 ---
-# <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder（SSISDB 数据库）
+# <a name="catalogrename_folder-ssisdb-database"></a>catalog.rename_folder（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -33,11 +33,11 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @old_name = ] old_name  
- 文件夹的原始名称。 old_name 为 nvarchar(128)。  
+ [ @old_name = ] old_name   
+ 文件夹的原始名称。 old_name 为 nvarchar(128)   。  
   
- [ @new_name = ] new_name  
- 文件夹的新名称。 new_name 为 nvarchar(128)。  
+ [ @new_name = ] new_name   
+ 文件夹的新名称。 new_name 为 nvarchar(128)   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  None  

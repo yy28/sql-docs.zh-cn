@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9bef8a000619284cc46f96659d2ca6fd03ea5af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084363"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294616"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
 
@@ -130,7 +130,7 @@ ms.locfileid: "68084363"
   
 5.  保留从脚本执行过程返回 **DtsExecResult.Success** 的默认代码行。  
   
-6.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
+6.  关闭脚本开发环境和 **“脚本任务编辑器”** 。  
   
 #### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>使用执行 SQL 任务连接查询字符串  
   
@@ -141,11 +141,11 @@ ms.locfileid: "68084363"
   
 2.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
-    1.  对于 **ResultSet**，选择 **“单行”**。  
+    1.  对于 **ResultSet**，选择 **“单行”** 。  
   
     2.  配置到源数据库的有效连接。  
   
-    3.  对于 **SQLSourceType**，选择 **“直接输入”**。  
+    3.  对于 **SQLSourceType**，选择 **“直接输入”** 。  
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
@@ -202,6 +202,6 @@ ms.locfileid: "68084363"
 ## <a name="next-step"></a>下一步  
  在准备查询字符串和配置数据流任务之后，下一步就是创建用于从数据库检索变更数据的表值函数。  
   
- **下一个主题：**[创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+ **下一个主题：** [创建函数以检索变更数据](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ba2eaa75299181de8d8599ca67c53dfb85ac08e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d31bad0e0438ec331f674124e907fd098b2cefd7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057448"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296181"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
 
@@ -110,7 +110,7 @@ ms.locfileid: "68057448"
   
 7.  如果源代码管理软件是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe， **“Visual SourceSafe 登录”** 对话框就会打开。 在 **“Visual SourceSafe 登录”** 对话框中，提供用户名、密码和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库的名称。 单击 **“浏览”** 查找数据库。  
   
-    > **注意**：若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”  菜单上的“选项”  ，然后展开“源代码管理”  节点。  
+    > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”  菜单上的“选项”  ，然后展开“源代码管理”  节点。  
   
 8.  单击“确定”  ，将解决方案添加到 **解决方案资源管理器** ，并将项目添加到解决方案。  
   

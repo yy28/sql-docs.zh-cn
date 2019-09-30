@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84bd5a432886cfa3fe209688a6a6cde563eed970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6fe8a8e0fa76201ad4f363f0a91440d1c62958e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007896"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281032"
 ---
-# <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission（SSISDB 数据库）
+# <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -37,7 +37,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>参数  
  [ @object_type = ] *object_type*  
- 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint**_。_  
+ 安全对象的类型。 安全对象类型包括文件夹 (`1`）、项目 (`2`)、环境 (`3`) 和操作 (`4`)。*object_type* 为 **smallint** _。_  
   
  [ @object_id = ] *object_id*  
  安全对象的唯一标识符 (ID) 或主键。 *object_id* 为 **bigint**。  

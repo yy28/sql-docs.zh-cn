@@ -17,25 +17,25 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f12d6b633433cb01b19a57c969be8ac3f8f913d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904710"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294412"
 ---
 # <a name="http-connection-manager"></a>HTTP 连接管理器
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用此连接管理器。  
+  利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用此连接管理器。  
   
  将 HTTP 连接管理器添加到包时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 HTTP 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包的 **Connections** 集合。  
   
- 该连接管理器的 **ConnectionManagerType** 属性设置为 **HTTP.**。  
+ 该连接管理器的 **ConnectionManagerType** 属性设置为 **HTTP.** 。  
   
  可以通过下列方式配置 HTTP 连接管理器：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67904710"
  指定是否希望 HTTP 连接管理器使用客户端证书进行身份验证。  
   
  **证书**  
- 使用“选择证书”对话框从列表中选择证书。 文本框显示与此证书关联的名称。  
+ 使用“选择证书”对话框从列表中选择证书。  文本框显示与此证书关联的名称。  
   
  **超时值(秒)**  
  提供连接 Web 服务器时允许的超时值。 此属性的默认值为 30 秒。  
@@ -94,7 +94,7 @@ ms.locfileid: "67904710"
  提供用于写入数据的块区大小。  
   
  **测试连接**  
- 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。  
+ 在配置 HTTP 连接管理器后，请通过单击“测试连接”确认该连接是否正常。   
   
 ## <a name="http-connection-manager-editor-proxy-page"></a>HTTP 连接管理器编辑器（“代理”页）
   可以使用 **“HTTP 连接管理器编辑器”** 对话框的 **“代理”** 选项卡配置 HTTP 连接管理器以使用代理服务器。 利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。  
@@ -130,7 +130,7 @@ ms.locfileid: "67904710"
  键入要跳过代理服务器的地址。  
   
  **删除**  
- 选择某个地址，再单击“删除”即可将其删除。  
+ 选择某个地址，再单击“删除”  即可将其删除。  
   
 ## <a name="see-also"></a>另请参阅  
  [Web 服务任务](../../integration-services/control-flow/web-service-task.md)   

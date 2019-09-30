@@ -13,14 +13,14 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 056115b494d7b2b7aa45505f8f1960032ac028e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a8b9d523f3c0edd3a642caba8efc2396267e141
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112593"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291485"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
 
@@ -48,7 +48,7 @@ ms.locfileid: "68112593"
     > [!NOTE]  
     >  如果表达式无效，表达式文本将突出显示，列上的工具提示将对错误进行说明。  
   
-7.  在“派生列”列表中，选择“\<作为新列添加>”以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
+7.  在“派生列”  列表中，选择“\<作为新列添加>”  以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
   
      如果选择使用新列， **“派生列转换编辑器”** 对话框将对表达式求值，并根据数据类型、长度、精度、小数位数和代码页为列指定数据类型。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "68112593"
   
 9. 还可以在 **“派生列名称”** 列中修改这些值。  
   
-10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
+10. 若要配置错误输出，请单击 **“配置错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

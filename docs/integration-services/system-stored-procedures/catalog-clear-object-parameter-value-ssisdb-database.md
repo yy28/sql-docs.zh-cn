@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4535f674fb6494d6af1619cab514c94d9f30c450
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2ad9b1900c3933b2756d376f152ac714af91cc3d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023536"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281066"
 ---
-# <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value（SSISDB 数据库）
+# <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -38,19 +38,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ \@folder_name = ] *folder_name*  
- 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
  [ \@project_name = ] *project_name*  
- 项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ 项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
  [ \@object_type = ] *object_type*  
  对象的类型。 有效值包括 `20`（对应于项目）和 `30`（对应于包）。 *object_type* 为 **smallInt**。  
   
  [ \@ object _name = ] *object _name*  
- 包的名称。 *object _name* 为 **nvarchar(260)**。  
+ 包的名称。 *object _name* 为 **nvarchar(260)** 。  
   
  [ \@parameter_ name = ] *parameter_name*  
- 参数名。 *parameter_ name* 为 **nvarchar(128)**。  
+ 参数名。 *parameter_ name* 为 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

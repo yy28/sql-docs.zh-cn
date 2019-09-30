@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 97eddaf05a3ac7eec342d696691a6f38a9b57488
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060815"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294772"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
 
@@ -104,11 +104,11 @@ ms.locfileid: "68060815"
   
 2.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
-    1.  对于 **ResultSet**，选择 **“单行”**。  
+    1.  对于 **ResultSet**，选择 **“单行”** 。  
   
     2.  配置到源数据库的有效连接。  
   
-    3.  对于 **SQLSourceType**，选择 **“直接输入”**。  
+    3.  对于 **SQLSourceType**，选择 **“直接输入”** 。  
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
@@ -169,13 +169,13 @@ ms.locfileid: "68060815"
   
 3.  对于用于将执行 SQL 任务连接到脚本任务的优先约束，打开 **“优先约束编辑器”** 并选择以下选项：  
   
-    1.  对于 **“求值运算”**，选择 **“表达式和约束”**。  
+    1.  对于 **“求值运算”** ，选择 **“表达式和约束”** 。  
   
-    2.  对于 **“值”**，选择 **“成功”**。  
+    2.  对于 **“值”** ，选择 **“成功”** 。  
   
          约束值 **“成功”** 指上一任务成功。 在此例中，指执行 SQL 任务成功。  
   
-    3.  对于 **“表达式”**，输入 `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`。  
+    3.  对于 **“表达式”** ，输入 `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`。  
   
     4.  选择 **“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68060815"
   
 7.  保留从脚本执行过程返回 **DtsExecResult.Success** 的默认代码行。  
   
-8.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
+8.  关闭脚本开发环境和 **“脚本任务编辑器”** 。  
   
 #### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>使用执行 SQL 任务实现延迟  
   
@@ -215,13 +215,13 @@ ms.locfileid: "68060815"
   
 3.  对于用于连接两个执行 SQL 任务的优先约束，打开 **“优先约束编辑器”** 并选择以下选项：  
   
-    1.  对于 **“求值运算”**，选择 **“表达式和约束”**。  
+    1.  对于 **“求值运算”** ，选择 **“表达式和约束”** 。  
   
-    2.  对于 **“值”**，选择 **“成功”**。  
+    2.  对于 **“值”** ，选择 **“成功”** 。  
   
          约束值 **“成功”** 指上一执行 SQL 任务成功。  
   
-    3.  对于 **“表达式”**，输入 `@DataReady == 0`。  
+    3.  对于 **“表达式”** ，输入 `@DataReady == 0`。  
   
     4.  选择 **“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68060815"
   
 4.  在 **“执行 SQL 任务编辑器”** 中的 **“常规”** 页上，选择以下选项：  
   
-    1.  对于 **ResultSet**，选择 **“单行”**。  
+    1.  对于 **ResultSet**，选择 **“单行”** 。  
   
     2.  配置到源数据库的有效连接。  
   
-    3.  对于 **SQLSourceType**，选择 **“直接输入”**。  
+    3.  对于 **SQLSourceType**，选择 **“直接输入”** 。  
   
     4.  对于 **SQLStatement**，输入以下 SQL 语句：  
   
@@ -261,13 +261,13 @@ ms.locfileid: "68060815"
   
 4.  对于用于将执行 SQL 任务连接到脚本任务的优先约束，打开 **“优先约束编辑器”** 并选择以下选项：  
   
-    1.  对于 **“求值运算”**，选择 **“表达式和约束”**。  
+    1.  对于 **“求值运算”** ，选择 **“表达式和约束”** 。  
   
-    2.  对于 **“值”**，选择 **“成功”**。  
+    2.  对于 **“值”** ，选择 **“成功”** 。  
   
          约束值 **“成功”** 指上一任务成功。 在此例中，指执行 SQL 任务成功。  
   
-    3.  对于 **“表达式”**，输入 `@DataReady == 1 || @DataReady == 5`。  
+    3.  对于 **“表达式”** ，输入 `@DataReady == 1 || @DataReady == 5`。  
   
     4.  选择 **“逻辑与。所有约束的计算结果都必须为 True**（如果尚未选择）。  
   
@@ -333,11 +333,11 @@ ms.locfileid: "68060815"
   
     ```  
   
-8.  关闭脚本开发环境和 **“脚本任务编辑器”**。  
+8.  关闭脚本开发环境和 **“脚本任务编辑器”** 。  
   
 ## <a name="next-step"></a>下一步  
  在确定变更数据已准备就绪之后，下一步就是准备查询变更数据。  
   
- **下一个主题：**[准备查询变更数据](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **下一个主题：** [准备查询变更数据](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

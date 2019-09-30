@@ -9,28 +9,28 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dbf07e5a0583520b563bb33a0c5823c5fa458b4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901750"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296258"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>保存 SSIS 包（SQL Server 导入和导出向导）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  如果在“保存和运行包”页上指定要将设置保存为 SQL Server Integration Services (SSIS) 包，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导显示“保存 SSIS 包”。 在此页上，将指定用于保存由向导创建的包的附加选项。  
+  如果在“保存和运行包”  页上指定要将设置保存为 SQL Server Integration Services (SSIS) 包，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导显示“保存 SSIS 包”  。 在此页上，将指定用于保存由向导创建的包的附加选项。  
 
 “保存 SSIS 包”  页上显示的选项取决于你先前在“保存并运行包”  页上做出的选择（将包保存到 SQL Server 还是文件系统）。 若要再次查看“保存并运行包”  页，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。
  
 **什么是包？** 向导使用 SQL Server Integration Services (SSIS) 复制数据。 在 SSIS 中，基本单位是包。 当你在向导的各个页面之间移动并指定选项时，向导会在内存中创建 SSIS 包。
 
 ## <a name="screen-shot---common-options"></a>屏幕截图 — 常用选项
-以下屏幕截图显示向导的“保存 SSIS 包”页的第一部分。 该页的其余部分具有不定的选项，具体取决于所选的包目标。
+以下屏幕截图显示向导的“保存 SSIS 包”  页的第一部分。 该页的其余部分具有不定的选项，具体取决于所选的包目标。
 
 ![保存包 — 常用选项](../../integration-services/import-export-data/media/save-package-common-options.png)
 
@@ -46,14 +46,14 @@ ms.locfileid: "67901750"
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>屏幕截图 - 将包保存在 SQL Server 中
 
- 如果在“保存和运行包”页选择了“SQL Server”选项，则以下屏幕截图将显示向导的“保存 SSIS 包”。 
+ 如果在“保存和运行包”  页选择了“SQL Server”  选项，则以下屏幕截图将显示向导的“保存 SSIS 包”  。 
   
 ![导入和导出向导的 SSIS “保存包”页](../../integration-services/import-export-data/media/save-package2.png "Save SSIS Package page of the Import and Export Wizard")  
 
 ## <a name="options-to-specify-target--sql-server"></a>要指定的选项（目标 = SQL Server） 
 
  > [!NOTE]
- > 向导会将包保存在“sysssispackages”表中的“msdb”数据库。 此选项不会将包保存到 SSIS 目录数据库 (SSISDB)。  
+ > 向导会将包保存在“sysssispackages”表中的“msdb”数据库   。 此选项不会  将包保存到 SSIS 目录数据库 (SSISDB)。  
  
  **服务器名称**  
  键入或选择目标服务器名称。  
@@ -72,14 +72,14 @@ ms.locfileid: "67901750"
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>屏幕截图 - 将包保存在文件系统中
  
-如果选择了“保存并运行包”页上的“文件系统”选项，下面的屏幕截图将显示向导的“保存 SSIS 包”页。 
+如果选择了“保存并运行包”  页上的“文件系统”  选项，下面的屏幕截图将显示向导的“保存 SSIS 包”  页。 
   
 ![导入和导出向导的 SSIS “保存包”页](../../integration-services/import-export-data/media/save-package1.png "Save SSIS Package page of the Import and Export Wizard")  
 
 ## <a name="options-to-specify-target--file-system"></a>要指定的选项（目标 = 文件系统）
 
  **文件名**  
- 输入目标文件的路径和文件名，或使用“浏览”按钮选择目标。  
+ 输入目标文件的路径和文件名，或使用“浏览”  按钮选择目标。  
   
 > [!TIP]
 > 务必以输入或浏览的方式指定目标文件夹。 如果仅输入文件名而不输入路径，则不知道向导将包保存在什么位置。 此外，向导可能会尝试将包保存到你无权保存文件的位置，并引发错误。  
@@ -87,12 +87,12 @@ ms.locfileid: "67901750"
 >  请记住包文件的保存位置。  
   
  **“浏览”**  
- （可选）浏览以选择“保存包”对话框中的目标文件的路径。  
+ （可选）浏览以选择“保存包”  对话框中的目标文件的路径。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>关于包保存选项的两个页面  
  “保存 SSIS 包”  页是你在其上选择用于保存 SSIS 包的选项的两个页面之一。  
   
--   在上一页（“保存并执行包” ），可以选择是将包保存在 SQL Server 中，还是作为文件保存。 此外，还可以选择已保存包的安全设置。 若要再次查看“保存并运行包”  页，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
+-   在上一页（“保存并执行包”  ），可以选择是将包保存在 SQL Server 中，还是作为文件保存。 此外，还可以选择已保存包的安全设置。 若要再次查看“保存并运行包”  页，请参阅 [保存并运行包](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)。  
   
 -   在当前页上，提供包的名称以及有关其保存位置的详细信息。  
  
@@ -103,7 +103,7 @@ ms.locfileid: "67901750"
   
 -   若要从命令行或批处理文件运行包，请参阅 [dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)。  
   
--   如果包保存在 SQL Server 的 **msdb** 数据库中，请连接到 Integration Services 服务。 然后，在 SQL Server Management Studio 的对象资源管理器中，导航到“已存储的包”|“MSDB” ，右键单击该包并选择“运行包” 。
+-   如果包保存在 SQL Server 的 **msdb** 数据库中，请连接到 Integration Services 服务。 然后，在 SQL Server Management Studio 的对象资源管理器中，导航到“已存储的包”|“MSDB”  ，右键单击该包并选择“运行包”  。
 
 -   如果包保存在文件系统中，请参阅 [运行 Integration Services (SSIS) 包](../../integration-services/packages/run-integration-services-ssis-packages.md) 以便在开发环境中运行包。 必须将包添加到 Integration Services 项目才能打开和运行它。  
 
@@ -111,7 +111,7 @@ ms.locfileid: "67901750"
  若要了解如何自定义已保存的包，请参阅 [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)。  
   
 ## <a name="whats-next"></a>下一步是什么？  
- 指定用于保存包的附加选项后，下一个页面是“完成向导” 。 在此页上，你将查看你在向导中所做的选择，然后启动操作。 有关详细信息，请参阅 [完成向导](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)。  
+ 指定用于保存包的附加选项后，下一个页面是“完成向导”  。 在此页上，你将查看你在向导中所做的选择，然后启动操作。 有关详细信息，请参阅 [完成向导](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)。  
  
 ## <a name="see-also"></a>另请参阅  
 [保存包](../../integration-services/save-packages.md)  

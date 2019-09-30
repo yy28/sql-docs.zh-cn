@@ -11,29 +11,29 @@ f1_keywords:
 - sql13.dts.designer.afpcreatecltask.f1
 - sql14.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1420b0954faef9d031a6b80503f19dd981ec2b8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa9599ae0a4c3a38a409131b3f9f344bd478e15b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947323"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294314"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 创建群集任务
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-“Azure HDInsight 创建群集任务”启用一个 SSIS 包来创建指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集。
+“Azure HDInsight 创建群集任务”  启用一个 SSIS 包来创建指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集。
   
-“Azure HDInsight 创建群集任务”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
+“Azure HDInsight 创建群集任务”  是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
   
 > [!NOTE]  
 > - 新建 HDInsight 群集可能需要花费 10~20 分钟。  
 > - 这里存在与创建和运行 Azure HDInsight 群集相关的成本。 有关详细信息，请参阅 [HDInsight 定价](https://azure.microsoft.com/pricing/details/hdinsight/)。  
   
-若要添加“Azure HDInsight 创建群集任务”，可将其拖放到 SSIS 设计器，然后双击或右键单击，再单击“编辑”以查看以下“Azure HDInsight 创建群集任务编辑器”对话框。  
+若要添加“Azure HDInsight 创建群集任务”  ，可将其拖放到 SSIS 设计器，然后双击或右键单击，再单击“编辑”  以查看以下“Azure HDInsight 创建群集任务编辑器”  对话框。  
   
 下表提供了此对话框中的字段说明。  
   

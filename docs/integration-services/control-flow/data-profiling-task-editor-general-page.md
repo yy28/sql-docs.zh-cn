@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c7d215f956b02f33a14ba91fd769a691acdd622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003624"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294202"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
 
@@ -38,9 +38,9 @@ ms.locfileid: "68003624"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开具有该数据事件探查任务的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“控制流”选项卡上，双击数据事件探查任务。  
+2.  在“控制流”  选项卡上，双击数据事件探查任务。  
   
-3.  在 **“数据事件探查任务编辑器”** 中，单击 **“常规”**。  
+3.  在 **“数据事件探查任务编辑器”** 中，单击 **“常规”** 。  
   
 ## <a name="data-profiling-options"></a>数据事件探查选项  
  **超时**  
@@ -56,15 +56,15 @@ ms.locfileid: "68003624"
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：请在“目标”选项中指定要使用的文件连接管理器。|  
-|**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：请在“目标”选项中指定要使用的包变量。|  
+|**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：请在“目标”  选项中指定要使用的文件连接管理器。|  
+|**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：请在“目标”  选项中指定要使用的包变量。|  
   
  **目标**  
  指定哪个文件连接管理器或包变量包含数据配置文件输出：  
   
--   如果将 **“目标类型”** 选项设置为 **“文件连接”**，则 **“目标”** 选项显示可用文件连接服务器。 选择这些连接管理器中的一个，或选择“\<新建文件连接>”创建新的文件连接管理器。  
+-   如果将 **“目标类型”** 选项设置为 **“文件连接”** ，则 **“目标”** 选项显示可用文件连接服务器。 选择这些连接管理器中的一个，或选择“\<新建文件连接>”创建新的文件连接管理器。  
   
--   如果将 **“目标类型”** 选项设置为 **“变量”**，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择这些变量中的一个，或选择“\<新建变量>”创建新变量。  
+-   如果将 **“目标类型”** 选项设置为 **“变量”** ，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择这些变量中的一个，或选择“\<新建变量>”创建新变量。  
   
  **OverwriteDestination**  
  如果输出文件已经存在，则指定是否将其覆盖。 默认值为 **False**。 只有在“目标类型”选项设置为“文件连接”时才使用此属性的值。 当“目标类型”选项设置为变量时，任务将始终覆盖该变量以前的值。  
@@ -74,13 +74,13 @@ ms.locfileid: "68003624"
   
 ## <a name="other-options"></a>其他选项  
  **快速配置文件**  
- 显示“单个表快速配置文件窗体”。 此窗体使用默认设置简化了探查单个表或视图的任务。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
+ 显示“单个表快速配置文件窗体”  。 此窗体使用默认设置简化了探查单个表或视图的任务。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)。  
   
  **打开配置文件查看器**  
  打开数据配置文件查看器。 独立数据配置文件查看器显示数据事件探查任务的数据配置文件输出。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些数据配置文件输出。  
   
 > [!NOTE]  
->  还可以通过在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中运行 DataProfileViewer.exe 来打开数据配置文件查看器。  
+>  还可以通过在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中运行 DataProfileViewer.exe 来打开数据配置文件查看器  。  
   
 ## <a name="see-also"></a>另请参阅  
  [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

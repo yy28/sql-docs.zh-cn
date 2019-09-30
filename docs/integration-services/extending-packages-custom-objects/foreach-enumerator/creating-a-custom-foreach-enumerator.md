@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e61dfcb7cb06ac734067d2870f70e096c750a862
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ddc6240dbf0bf2ea0d6b8548763d25b6bc12126c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116304"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287219"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>创建自定义 Foreach 枚举器
 
@@ -37,7 +37,7 @@ ms.locfileid: "68116304"
   
 -   可以选择开发自定义用户界面。 对于 foreach 枚举器，这需要实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSForEachEnumeratorUI> 接口的类。  
   
- 自定义枚举器由 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器承载。 在运行时，<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器会调用自定义枚举器的 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 方法。 自定义枚举器会返回一个实现 IEnumerable 接口的对象，如 ArrayList。 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 随后循环访问该集合中的每个元素，并通过一个用户定义的变量将当前元素的值提供给控制流，然后在容器中执行控制流。  
+ 自定义枚举器由 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器承载。 在运行时，<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 容器会调用自定义枚举器的 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> 方法。 自定义枚举器会返回一个实现 IEnumerable 接口的对象，如 ArrayList   。 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 随后循环访问该集合中的每个元素，并通过一个用户定义的变量将当前元素的值提供给控制流，然后在容器中执行控制流。  
   
 ## <a name="getting-started-with-a-custom-foreach-enumerator"></a>自定义 ForEach 枚举器入门  
   
@@ -49,9 +49,9 @@ ms.locfileid: "68116304"
  将这两个项目配置为使用强名称密钥文件对在生成时产生的程序集进行签名。  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>应用 DtsForEachEnumerator 属性  
- 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性应用于您创建的类以将其标识为 foreach 枚举器。 此属性提供设计时信息，如 foreach 枚举器的名称和说明。 Name 属性显示在“Foreach 循环编辑器”对话框的“集合”选项卡上的可用枚举器下拉列表中。  
+ 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性应用于您创建的类以将其标识为 foreach 枚举器。 此属性提供设计时信息，如 foreach 枚举器的名称和说明。 Name 属性显示在“Foreach 循环编辑器”对话框的“集合”选项卡上的可用枚举器下拉列表中    。  
   
- 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 属性链接 foreach 枚举器与其自定义用户界面。 要获取此属性所需的公钥令牌，可使用 sn.exe -t 来显示要用于对用户界面程序集签名的密钥对 (.snk) 文件中的公钥令牌。  
+ 使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 属性链接 foreach 枚举器与其自定义用户界面。 要获取此属性所需的公钥令牌，可使用 sn.exe -t 来显示要用于对用户界面程序集签名的密钥对 (.snk) 文件中的公钥令牌  。  
   
 ```vb  
 Imports System  

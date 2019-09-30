@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff35dd828062554cd14c3600e9ddfe766edbc981
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081494"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296343"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>“列转换详细信息”对话框（SQL Server 导入和导出向导）
 
@@ -34,13 +34,13 @@ ms.locfileid: "68081494"
 在此示例中，可查看以下操作。
 -   源 SQL Server 表中的 `PersonID` 列为 `int` 类型。 向导通过引用数据类型映射文件 MSSQLToSSIS10.xml 将此类型映射到 SQL Server Integration Services (SSIS) `DT_I4` 数据类型，后者是一个四字节带符号整数。
 -   目标 SQL Server 表中的 `PersonID` 列也为 `int` 类型。 向导将此类型映射到相同的 SSIS 数据类型。
--   向导得出的结论是“此列不需要转换”。
+-   向导得出的结论是“此列不需要转换”  。
  
   
  ![导入和导出向导的“列转换”页](../../integration-services/import-export-data/media/column-conversion.png "Column conversion page of the Import and Export Wizard") 
   
 ## <a name="whats-next"></a>下一步是什么？  
- 查看列转换详细信息并单击“确认” 后，“列转换详细信息”  对话框将返回到“查看数据类型映射”  页。 有关详细信息，请参阅 [查看数据类型映射](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)。  
+ 查看列转换详细信息并单击“确认”  后，“列转换详细信息”  对话框将返回到“查看数据类型映射”  页。 有关详细信息，请参阅 [查看数据类型映射](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)。  
 
 ## <a name="see-also"></a>另请参阅
 [SQL Server 导入和导出向导中的数据类型映射](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

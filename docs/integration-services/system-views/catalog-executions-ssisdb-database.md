@@ -11,14 +11,14 @@ helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f7c22a7c8120e67034e8a22a42948e607bec177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104861"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295212"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions（SSISDB 数据库）
 
@@ -34,7 +34,7 @@ ms.locfileid: "68104861"
 |execution_id|**bigint**|执行实例的唯一标识符 (ID)。|  
 |folder_name|**sysname(nvarchar(128))**|包含项目的文件夹的名称。|  
 |project_name|**sysname(nvarchar(128))**|项目的名称。|  
-|package_name|nvarchar(260)|在执行过程中启动的第一个包的名称。|  
+|package_name|nvarchar(260) |在执行过程中启动的第一个包的名称。|  
 |reference_id|**bigint**|执行实例引用的环境。|  
 |reference_type|**char(1)**|指示环境是可以位于与项目相同的文件夹中（相对引用），还是位于其他文件夹中（绝对引用）中。 如果值为 `R`，则通过使用相对引用定位环境。 如果值为 `A`，则通过使用绝对引用定位环境。|  
 |environment_folder_name|**nvarchar(128)**|包含环境的文件夹的名称。|  

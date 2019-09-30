@@ -12,14 +12,14 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d6342cf8409a9133a5e21205b0864af97ceeac75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bd315c62eee3bc26fe858f194cbc851ced8feef0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928104"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291188"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用有条件拆分转换拆分数据集
 
@@ -57,9 +57,9 @@ ms.locfileid: "67928104"
   
 9. 对于不能匹配任何条件的数据行，如果需要，可以修改默认输出的名称。  
   
-10. 若要配置错误输出，请单击 **“配置错误输出”**。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
+10. 若要配置错误输出，请单击 **“配置错误输出”** 。 有关详细信息，请参阅 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

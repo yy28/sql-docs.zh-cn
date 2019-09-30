@@ -22,14 +22,14 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 798ec9b823c324ea67d50023dd12f4fe585c5de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100848"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295666"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
 
@@ -102,7 +102,7 @@ ms.locfileid: "68100848"
 ### <a name="progressexecution-result-tab"></a>“进度/执行结果”选项卡  
  在包运行过程中， **“进度”** 选项卡显示包的执行进度。 在包运行完毕后， **“执行结果”** 选项卡上就一直显示执行结果。  
   
-> **注意**：若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。  
+> **注意：** 若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。  
   
 #### <a name="connection-managers-area"></a>连接管理器区域  
  **“连接管理器”** 区域用于添加和修改包使用的连接管理器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括连接到多种数据源（如文本文件、OLE DB 数据库和 .Net 提供程序）的连接管理器。  

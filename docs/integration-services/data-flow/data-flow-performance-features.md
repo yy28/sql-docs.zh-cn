@@ -21,14 +21,14 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d02e9b3ab775305c5b7052f1535a612c836957e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 552d4b6094a4cc890124399039ee61ba775ec715
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049515"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293133"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
 
@@ -80,7 +80,7 @@ ms.locfileid: "68049515"
  不要将缓冲区大小增加到开始对磁盘进行分页的点。 与未经过优化的缓冲区大小相比，对磁盘进行分页对性能的阻碍作用更大。 若要确定是否在进行分页，可监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的性能管理单元中的“Buffers spooled”性能计数器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>将包配置为支持并行执行  
- 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持并行执行包中的不同任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两种属性：MaxConcurrentExecutables 和 EngineThreads。  
+ 并行执行能改善具有多个物理或逻辑处理器的计算机的性能。 为了支持并行执行包中的不同任务，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用两种属性：MaxConcurrentExecutables  和 EngineThreads  。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 属性  
  **MaxConcurrentExecutables** 属性是包本身的一个属性。 此属性定义可同时运行的任务的数量。 默认值为 -1，表示物理或逻辑处理器的个数加 2。  
@@ -178,7 +178,7 @@ ms.locfileid: "68049515"
   
 -   technet.microsoft.com 上的技术文章：[Integration Services:性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   SQLCAT 针对 BI 和 Analytics 的指南中的技术文章[通过将同步转换拆分为多个任务来增加管道的吞吐量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
+-   SQLCAT 针对 BI 和 Analytics 的指南中的技术文章[通过将同步转换拆分为多个任务来增加管道的吞吐量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) 
   
 -   msdn.microsoft.com 上的技术文章 [数据加载性能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   

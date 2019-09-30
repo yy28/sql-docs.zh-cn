@@ -11,14 +11,14 @@ helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1ef97c568d1e5704229be1713639ed5de3112f3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 106dba74e37f79e2f2e3811d97c108a56ae716cd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080977"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289727"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
 
@@ -56,7 +56,7 @@ expression1 == expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **“日期”、“时间”或“日期/时间”**：expression1 和 expression2 的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **“日期”、“时间”或“日期/时间”** ：expression1  和 expression2  的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -85,7 +85,7 @@ expression1 == expression2
   
 -   **Binary** ： *expression1* 和 *expression2* 的计算结果必须为 DT_BYTES 数据类型。  
   
--   **BLOB**：expression1 和 expression2 的计算结果必须为同一个二进制大型对象块 (BLOB) 数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB**：expression1 和 expression2 的计算结果必须为同一个二进制大型对象块 (BLOB) 数据类型：   DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   

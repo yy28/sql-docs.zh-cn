@@ -26,14 +26,14 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8367157d0b3547690b4675a9da7cc8f0bfc58966
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944410"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297939"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
 
@@ -109,10 +109,10 @@ ms.locfileid: "67944410"
   
 ### <a name="options"></a>选项  
  **“无缓存”**  
- 使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。  
+ 使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。   
   
  **新建**  
- 通过使用“配置 OLE DB 连接管理器”对话框创建新的连接。  
+ 通过使用“配置 OLE DB 连接管理器”  对话框创建新的连接。  
   
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“列”** 选项卡，指定用于对带有重复值的行进行分组的列。  
@@ -128,7 +128,7 @@ ms.locfileid: "67944410"
  选择是否在转换的输出中包含输入列。 用于分组的所有列将自动复制到输出中。 通过选中此列可以包含其他列。  
   
  **输入列**  
- 选择先前在“可用输入列”列表中选中的一个输入列。  
+ 选择先前在“可用输入列”  列表中选中的一个输入列。  
   
  **输出别名**  
  为相应的输出列输入一个描述性名称。 默认情况下，输出列名称与输入列名称相同。  

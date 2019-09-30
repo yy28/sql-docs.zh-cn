@@ -11,14 +11,14 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 95c486af4dbdabecb4b9c21a0362f5d838abf33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c312bd28a56dd3a22596e61b0612591a0a1a2712
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080861"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289902"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;=（大于或等于）（SSIS 表达式）
 
@@ -62,7 +62,7 @@ expression1 >= expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **“日期”、“时间”或“日期/时间”**：expression1 和 expression2 的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **“日期”、“时间”或“日期/时间”** ：expression1  和 expression2  的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  

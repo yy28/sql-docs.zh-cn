@@ -20,14 +20,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fedd86edddc93953a91d2fbfcbfe8de7b897fe3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104114"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298505"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
 
@@ -56,7 +56,7 @@ ms.locfileid: "68104114"
   
  当多平面文件连接管理器引用多个文件时，文件的路径由竖线 (|) 分隔。 连接管理器的 **ConnectionString** 属性的格式如下：  
   
- \<路径>|\<路径>  
+ \<路径>|\<路径>    
   
  也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件，可以将 **ConnectionString** 属性的值设置为 C:\\*.txt。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68104114"
 |**冒号 {:}**|标题行由冒号分隔。|  
 |**逗号 {,}**|标题行由逗号分隔。|  
 |**制表符 {t}**|标题行由制表符分隔。|  
-|**竖线 {&#124;}**。|标题行由竖线分隔。|  
+|**竖线 {&#124;}** 。|标题行由竖线分隔。|  
   
  **要跳过的标题行数**  
  指定要跳过的标题行数（如果有的话）。  
@@ -157,7 +157,7 @@ ms.locfileid: "68104114"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}**。|行由竖线分隔。|  
+|**竖线 {&#124;}** 。|行由竖线分隔。|  
   
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
@@ -171,10 +171,10 @@ ms.locfileid: "68104114"
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {&#124;}**。|列由竖线分隔。|  
+|**竖线 {&#124;}** 。|列由竖线分隔。|  
   
  **重置列**  
- 通过单击“重置列”可以删除除原始列之外的所有列。  
+ 通过单击“重置列”  可以删除除原始列之外的所有列。  
   
 #### <a name="format--fixed-width"></a>格式 = 固定宽度  
  **字体**  
@@ -187,7 +187,7 @@ ms.locfileid: "68104114"
  为各列添加分隔符之前，先指定行的长度。 或者，拖动预览窗口中的垂直线，以标记行尾。 行宽值将自动更新。  
   
  **重置列**  
- 通过单击“重置列”可以删除除原始列之外的所有列。  
+ 通过单击“重置列”  可以删除除原始列之外的所有列。  
   
 #### <a name="format--ragged-right"></a>格式 = 右边未对齐  
   
@@ -212,13 +212,13 @@ ms.locfileid: "68104114"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}**。|行由竖线分隔。|  
+|**竖线 {&#124;}** 。|行由竖线分隔。|  
   
  **重置列**  
- 通过单击“重置列”可以删除除原始列之外的所有列。  
+ 通过单击“重置列”  可以删除除原始列之外的所有列。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多平面文件连接管理器编辑器（“高级”页）
-  可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。  
+  可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。    
   
  默认情况下，字符串列的长度为 50 个字符。 您可以计算示例数据并自动调整这些列的长度，以免数据截断或超出列宽。 还可以更新其他元数据以便与目标列兼容。 例如，可以将只包含整型数据的列的数据类型更改为数值数据类型，例如 DT_I2。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68104114"
 |**InputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 对于分隔列，将忽略此值。<br /><br /> **注意** ：在对象模型中，此属性的名称为 ColumnWidth。|  
   
  **新建**  
- 单击“新建”添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
+ 单击“新建”  添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
@@ -256,13 +256,13 @@ ms.locfileid: "68104114"
 |**在其后插入**|在所选列后面插入新列。|  
   
  **删除**  
- 选择一列，然后单击“删除”来删除该列。  
+ 选择一列，然后单击“删除”  来删除该列。  
   
  **建议类型**  
- 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。 有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
+ 使用“提供列类型建议”对话框可以评估所选的第一个文件中的示例数据，并获取对每列的数据类型和长度的建议。  有关详细信息，请参阅 [“提供列类型建议”对话框 UI 参考](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)。  
   
 ## <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多平面文件连接管理器编辑器（“预览”页）
-  可以使用“多平面文件连接管理器编辑器”对话框的“预览”页，查看选择的第一个源文件在按定义的样式划分为多列后的显示情况。  
+  可以使用“多平面文件连接管理器编辑器”对话框的“预览”页，查看选择的第一个源文件在按定义的样式划分为多列后的显示情况。    
   
  若要了解有关多平面文件连接管理器的详细信息，请参阅 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)。  
   

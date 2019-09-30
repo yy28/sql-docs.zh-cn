@@ -1,5 +1,5 @@
 ---
-title: 第 1 步：复制第 5 课包 | Microsoft Docs
+title: 步骤 1：复制第 5 课包 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d8b47f2da5e16e83abf6846d33ac7ce9e38aa6af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4c895e71da13d7de38bf5dfc64f27829206d25
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911448"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283117"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>第 6-1 课：复制第 5 课包
 

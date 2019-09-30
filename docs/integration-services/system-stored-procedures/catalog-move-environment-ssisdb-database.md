@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4a6d69ef7cc1a10b31cdb03f2dd43e20687a3f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc0bc77fda49e715879dceec60d616143952c265
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007821"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296839"
 ---
-# <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment（SSISDB 数据库）
+# <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -36,13 +36,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>参数  
  [ @source_folder = ] *source_folder*  
- 此环境在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)**。  
+ 此环境在移动之前所在的源文件夹的名称。 *source_folder* 为 **nvarchar(128)** 。  
   
- [ @environment_name = ] environment_name  
- 要移动的环境的名称。 environment_name 为 nvarchar(128)。  
+ [ @environment_name = ] environment_name   
+ 要移动的环境的名称。 environment_name 为 nvarchar(128)   。  
   
  [ @destination_folder = ] *destination_folder*  
- 此环境在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)**。  
+ 此环境在移动之后所在的目标文件夹的名称。 *destination_folder* 为 **nvarchar(128)** 。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

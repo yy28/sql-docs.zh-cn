@@ -27,14 +27,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2782537178c00055e1db7cb7c653fb863ead8724
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913635"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282566"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
 
@@ -102,7 +102,7 @@ ms.locfileid: "67913635"
 |元素|描述|  
 |-------------|-----------------|  
 |Computer|发生日志事件的计算机的名称。|  
-|运算符|启动包的用户的标识。|  
+|操作员|启动包的用户的标识。|  
 |SourceName|发生日志事件的容器或任务的名称。|  
 |SourceID|发生日志事件的包、 For 循环容器、Foreach 循环容器、序列容器或任务的唯一标识符。|  
 |ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行一个包可能会创建有不同 ExecutionID 元素值的日志项目。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
@@ -415,7 +415,7 @@ ms.locfileid: "67913635"
 |None|关闭日志记录。 仅记录包执行状态。|  
 |“基本”|除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
 |运行时沿袭|收集跟踪数据流中的沿袭信息所需的数据。 可以分析此沿袭信息以映射任务之间的沿袭关系。 使用此信息，ISV 和开发人员可以构建自定义沿袭映射工具。|  
-|“性能”|仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **“执行性能”** 报表显示包数据流组件的活动时间和总时间。 仅当上次包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此信息才可用。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 视图显示数据流组件在执行的每个阶段的开始时间和结束时间。 仅当包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此视图才会为这些组件显示以上信息。|  
+|性能|仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **“执行性能”** 报表显示包数据流组件的活动时间和总时间。 仅当上次包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此信息才可用。 有关详细信息，请参阅 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 视图显示数据流组件在执行的每个阶段的开始时间和结束时间。 仅当包执行的日志记录级别设置为 **“性能”** 或 **“详细”** 时，此视图才会为这些组件显示以上信息。|  
 |“详细”|记录所有事件，包括自定义事件和诊断事件。<br /><br /> 自定义事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 任务记录的那些事件。 有关自定义事件的详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。<br /><br /> 诊断事件的一个例子就是“DiagnosticEx”  事件。 每当执行包任务执行子包时，此事件均将捕获传递给子包的参数值。<br /><br /> “DiagnosticEx”  事件还有助于获取其中出现行级错误的列的名称。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。  有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的消息列的值是 XML 文本。 若要查看包执行的消息文本，请查询 [catalog.operation_messages（SSISDB 数据库）](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md)视图。 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 每当数据流组件向下游组件发送数据时， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 视图就会显示一行。 日志记录级别必须设置为 **“详细”** ，才能在该视图中捕获此信息。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>使用“自定义日志记录级别管理”对话框来创建和管理自定义日志记录级别  

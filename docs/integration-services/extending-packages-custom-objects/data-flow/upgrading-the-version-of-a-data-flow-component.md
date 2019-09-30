@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4fb0ba18bf88d14320235452c73f4b5e74fb00e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 728308339d062c855a50372fd2cb001245dd6091
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116386"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287416"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>升级数据流组件的版本
 
@@ -48,7 +48,7 @@ ms.locfileid: "68116386"
 -   将版本元数据设置为当前的组件版本。  
   
 > [!NOTE]  
->  数据流引擎会将自己的版本号传递到 pipelineVersion 参数的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 方法中。 此参数在 1.0 版本的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中没有任何用处，但是在后续版本中可能有用。  
+>  数据流引擎会将自己的版本号传递到 pipelineVersion 参数的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 方法中  。 此参数在 1.0 版本的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中没有任何用处，但是在后续版本中可能有用。  
   
  示例代码只使用直接映射到自定义属性的先前布尔值的两个枚举值。 用户可以在高级编辑器中通过组件的自定义用户界面或以编程方式选择其他可用枚举值。 有关在高级编辑器中显示自定义属性的枚举值的信息，请参阅[数据流组件的设计时方法](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)中的“创建自定义属性”。  
   

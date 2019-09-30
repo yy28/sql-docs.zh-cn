@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 13ca11c107604c3da6d162b63a6d72ec6f76a201
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77ddbd16decffcf5250fbd1de6ba087e9647f0ec
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007808"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281171"
 ---
-# <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project（SSISDB 数据库）
+# <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project（SSISDB 数据库）
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -36,21 +36,21 @@ catalog.deploy_project [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>参数  
- [@folder_name =] folder_name  
- 在其中部署项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
+ [@folder_name =] folder_name   
+ 在其中部署项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)** 。  
   
- [@project_name =] project_name  
- 文件夹中新的或更新的项目的名称。 *project_name* 为 **nvarchar(128)**。  
+ [@project_name =] project_name   
+ 文件夹中新的或更新的项目的名称。 *project_name* 为 **nvarchar(128)** 。  
   
- [@projectstream =] projectstream  
+ [@projectstream =] projectstream   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署文件（扩展名为.ispac）的二进制内容。  
   
  您可以使用带 OPENROWSET 函数的 SELECT 语句以及大容量行集提供程序来检索该文件的二进制内容。 有关示例，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关 OPENROWSET 的详细信息，请参阅 [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)。  
   
- projectstream 为 varbinary(MAX)  
+ projectstream  为 varbinary(MAX)   
   
- [@operation_id =] operation_id  
- 返回部署操作的唯一标识符。 operation_id 为 bigint。  
+ [@operation_id =] operation_id   
+ 返回部署操作的唯一标识符。 operation_id 为 bigint   。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  
@@ -72,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   参数引用的对象不存在，参数试图创建的对象已存在，或者参数在某个其他方面无效  
   
--   参数 @project_name 的值与部署文件中的项目的名称不匹配。  
+-   参数 @project_name  的值与部署文件中的项目的名称不匹配。  
   
 -   用户不具备足够的权限  
   

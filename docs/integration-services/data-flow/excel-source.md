@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7921fa58dc8f318a1b1b0c6dd4c7e408a40b7a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941577"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292774"
 ---
 # <a name="excel-source"></a>Excel 源
 
@@ -69,10 +69,10 @@ ms.locfileid: "67941577"
   
 ### <a name="static-options"></a>静态选项  
  **“无缓存”**  
- 从列表中选择现有的 Excel 连接管理器，或单击“新建”创建新连接。  
+ 从列表中选择现有的 Excel 连接管理器，或单击“新建”  创建新连接。  
   
  **新建**  
- 使用“Excel 连接管理器”对话框创建一个新连接管理器。  
+ 使用“Excel 连接管理器”  对话框创建一个新连接管理器。  
   
  **数据访问模式**  
  指定从源选择数据的方法。  
@@ -80,12 +80,12 @@ ms.locfileid: "67941577"
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |表或视图|从 Excel 文件的工作表或指定范围中检索数据。|  
-|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：**[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：** [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL 命令|使用 SQL 查询从 Excel 文件中检索数据。 |  
 |变量中的 SQL 命令|在变量中指定 SQL 查询文本。|  
   
  **预览**  
- 通过使用“数据视图”对话框预览结果。 预览最多可以显示 200 行。  
+ 通过使用“数据视图”  对话框预览结果。 预览最多可以显示 200 行。  
   
 ### <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   
@@ -99,16 +99,16 @@ ms.locfileid: "67941577"
   
 #### <a name="data-access-mode--sql-command"></a>数据访问模式 = SQL 命令  
  **SQL 命令文本**  
- 输入 SQL 查询的文本，通过单击“生成查询”来生成查询，或通过单击“浏览”浏览至包含查询文本的文件。  
+ 输入 SQL 查询的文本，通过单击“生成查询”  来生成查询，或通过单击“浏览”  浏览至包含查询文本的文件。  
   
  **参数**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  
- 使用“查询生成器”对话框可直观地构造 SQL 查询。  
+ 使用“查询生成器”  对话框可直观地构造 SQL 查询。  
   
  **“浏览”**  
- 使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
+ 使用“打开”  对话框可定位到包含 SQL 查询文本的文件。  
   
  **分析查询**  
  验证查询文本的语法。  
@@ -118,7 +118,7 @@ ms.locfileid: "67941577"
  选择包含 SQL 查询文本的变量。  
   
 ## <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
-  可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
+  可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列   。  
   
 ### <a name="options"></a>选项  
  **可用外部列**  
@@ -138,12 +138,12 @@ ms.locfileid: "67941577"
  查看数据源的名称。  
   
  **列**  
- 查看在“Excel 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
+ 查看在“Excel 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。    
   
  **错误**  
  指定发生错误时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **相关主题：**[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相关主题：** [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  

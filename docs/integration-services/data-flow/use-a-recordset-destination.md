@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f8abb0adfb8c778017e45bf48ba2a7bcbf4e275
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079814"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290988"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
 
@@ -53,9 +53,9 @@ ms.locfileid: "68079814"
   
 7.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器的“控制流”选项卡上，添加 Foreach 循环容器，并在数据流任务之后连接此容器。 然后，打开 **“Foreach 循环编辑器”** ，使用以下设置来配置容器：  
   
-    1.  在 **“集合”** 页上，选择 Foreach ADO 枚举器。 然后，对于 **“ADO 对象源变量”**，选择包含该记录集的变量。  
+    1.  在 **“集合”** 页上，选择 Foreach ADO 枚举器。 然后，对于 **“ADO 对象源变量”** ，选择包含该记录集的变量。  
   
-    2.  在“变量映射”页上，将你要使用的每列的基于零的索引映射到适当的变量。  
+    2.  在“变量映射”  页上，将你要使用的每列的基于零的索引映射到适当的变量。  
   
          在循环的每次迭代中，枚举器使用当前行的列值来填充这些变量。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68079814"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，创建新的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在 **SSIS** 菜单上，选择 **“变量”**。  
+2.  在 **SSIS** 菜单上，选择 **“变量”** 。  
   
 3.  在 **“变量”** 窗口中，创建用来保存记录集和当前行的列值的变量：  
   
@@ -102,15 +102,15 @@ ms.locfileid: "68079814"
   
 1.  在 **设计器的** “控制流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上，将数据流任务添加到设计图面中。  
   
-2.  在 **“数据流”** tab, add an OLE DB source to the “数据流” task, and then open the **“OLE DB 源编辑器”**。  
+2.  在 **“数据流”** tab, add an OLE DB source to the “数据流” task, and then open the **“OLE DB 源编辑器”** 。  
   
 3.  在编辑器的 **“连接管理器”** 页上，使用以下设置来配置源：  
   
-    1.  对于 **“OLE DB 连接管理器”**，选择以前创建的 OLE DB 连接管理器。  
+    1.  对于 **“OLE DB 连接管理器”** ，选择以前创建的 OLE DB 连接管理器。  
   
-    2.  对于 **“数据访问模式”**，选择 **“SQL 命令”**。  
+    2.  对于 **“数据访问模式”** ，选择 **“SQL 命令”** 。  
   
-    3.  对于 **“SQL 命令文本”**，输入以下查询：  
+    3.  对于 **“SQL 命令文本”** ，输入以下查询：  
   
         ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
@@ -123,7 +123,7 @@ ms.locfileid: "68079814"
   
 4.  在 **“数据流”** 选项卡上，添加记录集目标，并在 OLE DB 源之后连接该目标。  
   
-5.  打开 **“记录集目标编辑器”**，并使用以下设置来配置目标：  
+5.  打开 **“记录集目标编辑器”** ，并使用以下设置来配置目标：  
   
     1.  在“组件属性”  选项卡上，为 **VariableName** 属性选择 **User::BonusRecordset**。  
   
@@ -133,31 +133,31 @@ ms.locfileid: "68079814"
   
 1.  在 **设计器的** “控制流” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 选项卡上，添加 Foreach 循环容器，并在数据流任务之后连接该容器。  
   
-2.  打开 **“Foreach 循环编辑器”**，并使用以下设置来配置容器：  
+2.  打开 **“Foreach 循环编辑器”** ，并使用以下设置来配置容器：  
   
-    1.  在“集合”  页上，为“枚举器” 选择“Foreach ADO 枚举器” ，并为“ADO 对象源变量” 选择 **User::BonusRecordset**。  
+    1.  在“集合”  页上，为“枚举器”  选择“Foreach ADO 枚举器”  ，并为“ADO 对象源变量”  选择 **User::BonusRecordset**。  
   
     2.  在“变量映射”  页中，将 **User::EmailAddress** 映射到索引 0，将 **User::FirstName** 映射到索引 1，将 **User::Bonus** 映射到索引 2。  
   
 3.  在 **“控制流”** 选项卡的 Foreach 循环容器中，添加发送邮件任务。  
   
-4.  打开 **“发送邮件任务编辑器”**，然后在 **“邮件”** 页上使用以下设置来配置任务：  
+4.  打开 **“发送邮件任务编辑器”** ，然后在 **“邮件”** 页上使用以下设置来配置任务：  
   
     1.  对于 **SmtpConnection**，选择以前配置的 SMTP 连接管理器。  
   
-    2.  对于“发件人”，输入适当的电子邮件地址。  
+    2.  对于“发件人”，输入适当的电子邮件地址。   
   
          如果使用自己的电子邮件地址，则可以确认包成功运行。 对于由发送邮件任务发送到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]中的虚构销售人员的邮件，您将收到关于无法投递的回执。  
   
-    3.  对于“收件人”，输入默认电子邮件地址。  
+    3.  对于“收件人”，输入默认电子邮件地址。   
   
          此值不会使用，但在运行时将替换为每位销售人员的电子邮件地址。  
   
-    4.  对于 **“主题”**，输入“Your annual bonus”。  
+    4.  对于 **“主题”** ，输入“Your annual bonus”。  
   
-    5.  对于 **MessageSourceType**，选择 **“直接输入”**。  
+    5.  对于 **MessageSourceType**，选择 **“直接输入”** 。  
   
-5.  在“发送邮件任务编辑器”的“表达式”页上，单击省略号按钮 (**...**)，以打开“属性表达式编辑器”。  
+5.  在“发送邮件任务编辑器”的“表达式”页上，单击省略号按钮 ( **...** )，以打开“属性表达式编辑器”。     
   
 6.  在 **“属性表达式编辑器”** 中，输入以下信息：  
   

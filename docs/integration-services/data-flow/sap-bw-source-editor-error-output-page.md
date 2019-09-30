@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d823b1155a07f7bb3dc44f84f852d747692ae58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9973a785efd0e3327ac7fe1e12360bd202601f1e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002373"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291829"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 源编辑器（“错误输出”页）
 
@@ -38,7 +38,7 @@ ms.locfileid: "68002373"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 源的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击“SAP BW 源”。  
+2.  在“数据流”  选项卡上，双击“SAP BW 源”。  
   
 3.  在 **“SAP BW 源编辑器”** 中单击 **“错误输出”** ，以打开编辑器的 **“错误输出”** 页。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68002373"
  查看数据源的名称。  
   
  **列**  
- 查看在“SAP BW 源编辑器”对话框的“列”页上选择的外部（源）列。 有关此对话框的详细信息，请参阅 [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
+ 查看在“SAP BW 源编辑器”  对话框的“列”  页上选择的外部（源）列。 有关此对话框的详细信息，请参阅 [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
   
  **错误**  
  指定发生错误时 SAP BW 源组件应执行的操作：忽略错误、重定向行或使组件失败。  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cb49dd2ea145d118a075ed21479047f1e42b4a3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947179"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294332"
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
 
@@ -125,9 +125,9 @@ ms.locfileid: "67947179"
   
 ### <a name="options"></a>选项  
  **“连接”**  
- 在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
+ 在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接  。  
   
- **相关主题：**[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **相关主题：** [OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  键入目标表或视图的名称，或在列表中选择表或视图。  
@@ -141,13 +141,13 @@ ms.locfileid: "67947179"
 |**指定**|指定格式。 选择此选项将显示动态选项 **RowDelimiter** 和 **ColumnDelimiter**。|  
   
  **File**  
- 在列表中选择一个文件或平面文件连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
+ 在列表中选择一个文件或平面文件连接管理器，或单击“\<新建连接…>”，创建一个新连接  。  
   
  文件位置与在此任务的连接管理器中指定的 SQL Server 数据库引擎有关。 该文本文件必须可被服务器本地硬盘上的 SQL Server 数据库引擎访问，或可通过 SQL Server 的共享驱动器或映射的驱动器访问。 SSIS 运行时不访问该文件。  
   
  如果通过使用平面文件连接管理器来访问源文件，则大容量插入任务不会使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
   
- **相关主题：**[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **相关主题：** [文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)、[平面文件连接管理器](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **刷新表**  
  刷新表和视图的列表。  
@@ -156,14 +156,14 @@ ms.locfileid: "67947179"
   
 #### <a name="format--use-file"></a>Format = 使用文件  
  **FormatFile**  
- 键入格式化文件的路径，或单击省略号按钮“(…)”定位到该格式化文件。  
+ 键入格式化文件的路径，或单击省略号按钮“(…)”定位到该格式化文件  。  
   
 #### <a name="format--specify"></a>Format = 指定  
  **RowDelimiter**  
- 指定源文件中的行分隔符。 默认值为 **{CR}{LF}**。  
+ 指定源文件中的行分隔符。 默认值为 **{CR}{LF}** 。  
   
  **ColumnDelimiter**  
- 指定源文件中的列分隔符。 默认值为 **“制表符”**。  
+ 指定源文件中的列分隔符。 默认值为 **“制表符”** 。  
   
 ## <a name="bulk-insert-task-editor-general-page"></a>大容量插入任务编辑器（“常规”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“常规”** 页，对大容量插入任务进行命名和说明。  

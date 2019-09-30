@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 71852015f9595e51c61f0840ebcec6e41431a660
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 733e6c8000f3a14127b0f3a8704b43af81fa0f85
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941415"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292333"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
 
@@ -38,7 +38,7 @@ ms.locfileid: "67941415"
   
 6.  选择数据访问方法。  
   
-    -   **表名 - 批处理**：选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”**。  
+    -   **表名 - 批处理**：选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”** 。  
   
     -   **表名 - 逐行**：选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项时，数据将一次一行加载到表中。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "67941415"
   
 9. 单击 **“映射”** ，然后将列从一个列表拖动到另一个列表，从而将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的列。  
   
-10. 若要配置错误输出，请单击 **“错误输出”**。  
+10. 若要配置错误输出，请单击 **“错误输出”** 。  
   
-11. 单击“确定” 。  
+11. 单击“确定”  。  
   
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

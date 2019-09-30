@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb521fa88cdfe5bc95cacceb7f5c0ebf521e337f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031280"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298217"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
 
@@ -104,7 +104,7 @@ ms.locfileid: "68031280"
 #### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
   
-#### <a name="new"></a>新版  
+#### <a name="new"></a>新建  
  单击 **“新建”** 。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
   
 #### <a name="data-access-mode"></a>数据访问模式  

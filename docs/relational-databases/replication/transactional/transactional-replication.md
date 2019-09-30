@@ -14,15 +14,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b3c7d1474164741ef8380ce1904f99a05e833456
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769307"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251079"
 ---
 # <a name="transactional-replication"></a>事务复制
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   事务复制通常从发布数据库对象和数据的快照开始。 创建了初始快照后，接着在发布服务器上所做的数据更改和架构修改通常在修改发生时（几乎实时）便传递给订阅服务器。 数据更改将按照其在发布服务器上发生的顺序和事务边界应用于订阅服务器，因此，在发布内部可以保证事务的一致性。  
   
  事务复制通常用于服务器到服务器环境中，在以下各种情况下适合采用事务复制：  
@@ -38,6 +38,8 @@ ms.locfileid: "68769307"
 -   发布服务器或订阅服务器不是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（例如，Oracle）。  
   
  默认情况下，事务发布的订阅服务器应视为只读，因为更改不会传播回发布服务器。 但是，事务复制确实提供了允许在订阅服务器上进行更新的选项。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ##  <a name="HowWorks"></a> 事务复制的工作机制  
  事务复制是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照代理、日志读取器代理和分发代理实现的。 快照代理准备快照文件（其中包含了已发布表和数据库对象的架构和数据），然后将这些文件存储在快照文件夹中，并在分发服务器中的分发数据库中记录同步作业。  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1120ffadb47e2494213b15a5859fcc6d591820dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112787"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298001"
 ---
 # <a name="cache-transform"></a>缓存转换
 
@@ -68,7 +68,7 @@ ms.locfileid: "68112787"
   
 ### <a name="options"></a>选项  
  **缓存连接管理器**  
- 使用列表选择现有的缓存连接管理器，或使用“新建”按钮创建新的连接。  
+ 使用列表选择现有的缓存连接管理器，或使用“新建”  按钮创建新的连接。  
   
  **新建**  
  使用“缓存连接管理器编辑器”对话框创建新的连接。  

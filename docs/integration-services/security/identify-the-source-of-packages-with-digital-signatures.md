@@ -16,14 +16,14 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 978e85814e403ea6fe0a510b1791b0b4d1cf9bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125311"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295697"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
 
@@ -45,7 +45,7 @@ ms.locfileid: "68125311"
 ## <a name="set-a-registry-value-to-check-package-signature"></a>设置注册表值以检查包的签名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还支持可选的注册表值 **BlockedSignatureStates**。你可以使用该值来管理组织用于加载签名包和未签名包的策略。 如果包未签名、签名无效或不可信，使用该注册表值将不允许加载该包。 有关如何设置此注册表值的详细信息，请参阅 [通过设置注册表值实现签名策略](#registry)。  
   
-> **注意**：可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
+> **注意：** 可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
 
 ## <a name="registry"></a> 通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  

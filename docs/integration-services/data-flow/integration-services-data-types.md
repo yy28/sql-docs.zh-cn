@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941460"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292416"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941460"
 ### <a name="converting-datetime-data-types"></a>转换日期/时间数据类型  
  可以更改具有日期/时间数据的列的数据类型，以便提取数据的日期或时间部分。 下表列出了将一种日期/时间数据类型更改为另一种日期/时间数据类型的结果。  
   
-#### <a name="converting-from-dtfiletime"></a>从 DT_FILETIME 转换  
+#### <a name="converting-from-dt_filetime"></a>从 DT_FILETIME 转换  
   
 |将 DT_FILETIME 转换为|结果|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941460"
 |DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdate"></a>从 DT_DATE 转换  
+#### <a name="converting-from-dt_date"></a>从 DT_DATE 转换  
   
 |将 DT_DATE 转换为|结果|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941460"
 |DT_DBTIMESTAMP2|转换该数据类型。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。|  
   
-#### <a name="converting-from-dtdbdate"></a>从 DT_DBDATE 转换  
+#### <a name="converting-from-dt_dbdate"></a>从 DT_DBDATE 转换  
   
 |将 DT_DBDATE 转换为|结果|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941460"
 |DT_DBTIMESTAMP2|将 DT_DBTIMESTAMP 数据类型的时间字段设置为零。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时间字段和时区字段设置为零。|  
   
-#### <a name="converting-from-dtdbtime"></a>从 DT_DBTIME 转换  
+#### <a name="converting-from-dt_dbtime"></a>从 DT_DBTIME 转换  
   
 |将 DT_DBTIME 转换为|结果|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941460"
 |DT_DBTIMESTAMP2|将 DT_DBTIMESTAMP2 数据类型的日期字段设置为当前日期。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的日期字段和时区字段分别设置为当前日期和零。|  
   
-#### <a name="converting-from-dtdbtime2"></a>从 DT_DBTIME2 转换  
+#### <a name="converting-from-dt_dbtime2"></a>从 DT_DBTIME2 转换  
   
 |将 DT_DBTIME2 转换为|结果|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941460"
 |DT_DBTIMESTAMP2|将 DT_DBTIMESTAMP2 数据类型的日期字段设置为当前日期。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的日期字段和时区字段分别设置为当前日期和零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>从 DT_DBTIMESTAMP 转换  
+#### <a name="converting-from-dt_dbtimestamp"></a>从 DT_DBTIMESTAMP 转换  
   
 |将 DT_DBTIMESTAMP 转换为|结果|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941460"
 |DT_DBTIMESTAMP2|当小数秒值的小数位数超过 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>从 DT_DBTIMESTAMP2 转换  
+#### <a name="converting-from-dt_dbtimestamp2"></a>从 DT_DBTIMESTAMP2 转换  
   
 |将 DT_DBTIMESTAMP2 转换为|结果|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941460"
 |DT_DBTIMESTAMP2|当小数秒值的小数位数超过目标 DT_DBTIMESTAMP2 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
 |DT_DBTIMESTAMPOFFSET|将 DT_DBTIMESTAMPOFFSET 数据类型的时区字段设置为零。<br /><br /> 当小数秒值的小数位数超过 DT_DBTIMESTAMPOFFSET 数据类型可以包含的小数位数时，删除该小数秒值。 删除小数秒值后，生成有关此数据截断的报告。 有关详细信息，请参阅 [数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>从 DT_DBTIMESTAMPOFFSET 转换  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>从 DT_DBTIMESTAMPOFFSET 转换  
   
 |将 DT_DBTIMESTAMPOFFSET 转换为|结果|  
 |--------------------------------------|------------|  

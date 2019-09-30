@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7b935ea743d052c9efa15fb1598d4cec1818e7b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034177"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298095"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目标编辑器（“映射”页）
 
@@ -35,7 +35,7 @@ ms.locfileid: "68034177"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含 SAP BW 目标的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
-2.  在“数据流”选项卡上，双击 SAP BW 目标。  
+2.  在“数据流”  选项卡上，双击 SAP BW 目标。  
   
 3.  在 **“SAP BW 目标编辑器”** 中单击 **“映射”** ，以打开编辑器的 **“映射”** 页。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68034177"
  **输入列**  
  查看您所选的输入列。  
   
- 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“\<ignore>”以从输出中排除该输入列。  
+ 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“\<ignore>”以从输出中排除该输入列  。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对该列进行映射。  

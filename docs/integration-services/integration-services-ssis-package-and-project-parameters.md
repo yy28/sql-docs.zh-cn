@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dfab14edde8351d014714e314c500c5319a265f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057494"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296162"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
 
@@ -106,7 +106,7 @@ ms.locfileid: "68057494"
 ## <a name="create-parameters"></a>Create Parameters
 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可以创建项目参数和包参数。 下面的过程提供了有关创建包参数/项目参数的分步说明。  
   
-> **注意**：若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用 **“Integration Services 项目转换向导”** 来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意：** 若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用 **“Integration Services 项目转换向导”** 来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="create-package-parameters"></a>创建包参数  
   
@@ -129,13 +129,13 @@ ms.locfileid: "68057494"
     |Required|需要首先指定并非设计默认值的值，包才能执行。|  
     |描述|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
-    > **注意**：在您向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
+    > **注意：** 在您向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
   
 4.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件中。  
   
     > **警告！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。  可以使用“删除 (X)”工具栏按钮来删除参数。  使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
-    > **注意**：如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。   
+    > **注意：** 如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。   
   
 ### <a name="create-project-parameters"></a>创建项目参数  
   

@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149914"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251090"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "71149914"
 |二进制-码位 (\_BIN2) <sup>1</sup> | 根据 Unicode 数据的 Unicode 码位对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据进行排序和比较。 对于非 Unicode 数据，二进制-码位将使用与二进制排序相同的比较方式。<br/><br/> 使用二进制-码位排序顺序的优点是：对已排序的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据进行比较的应用程序不必重新对数据进行排序。 因此，二进制-码位排序顺序使应用程序开发变得更加简单，从而可以提高性能。 有关详细信息，请参阅此页中的[二进制排序规则](#Binary-collations)部分。|
 |UTF-8 (\_UTF8)|启用要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的 UTF-8 编码数据。 如果未选择此选项，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会对适用的数据类型使用默认的非 Unicode 编码格式。 有关详细信息，请参阅此页中的 [UTF-8 支持](#utf8)部分。| 
 
-<sup>1</sup> 如果选择二进制或二进制-码位，则区分大小写 (\_CS)、区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\WS) 选项均不可用。      
+<sup>1</sup> 如果选择二进制或二进制-码位，则区分大小写 (\_CS)、区分重音 (\_AS)、区分假名 (\_KS) 和区分全半角 (\_WS) 选项均不可用。      
 
 #### <a name="examples-of-collation-options"></a>排序规则选项示例
 每个排序规则都由一系列定义大小写、重音、全半角或假名的后缀组合而成。 下列示例说明了各种后缀组合的排序顺序行为。
