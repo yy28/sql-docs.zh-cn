@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61879cb59b68a085dba07343b60ff0ddec27ee17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049692"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298630"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
 
@@ -111,7 +111,7 @@ ms.locfileid: "68049692"
   
  下表介绍了可用的选项。  
   
-|“属性”|，则“默认”|Min|Max|静态|描述|  
+|“属性”|默认|Min|Max|静态|描述|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |跟踪|False|-|-|False|可用值有：<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) 表中的 memory_limit 列。|  

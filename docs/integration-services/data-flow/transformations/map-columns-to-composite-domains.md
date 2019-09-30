@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 69583b01752e37f5b223e98aba105e21291ee4d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c33d928d7cba81c58053ecc983a3d32b4bffd59d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944167"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297860"
 ---
 # <a name="map-columns-to-composite-domains"></a>将列映射到复合域
 
@@ -30,7 +30,7 @@ ms.locfileid: "67944167"
   
 ### <a name="to-map-multiple-columns-to-a-composite-domain"></a>将多个列映射到一个复合域  
   
-1.  右键单击 DQS 清理转换，然后单击“编辑”。  
+1.  右键单击 DQS 清理转换，然后单击“编辑”  。  
   
 2.  在 **“连接管理器”** 选项卡上，确认复合域显示在可用域列表中。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "67944167"
   
 4.  对于 **“输入列”** 字段中列出的每个列，在 **“域”** 字段中选择一个单一域。 仅选择处于复合域中的单一域。  
   
-5.  根据需要，修改在 **“源别名”**、 **“输出别名”** 和 **“状态别名”** 字段中出现的名称。  
+5.  根据需要，修改在 **“源别名”** 、 **“输出别名”** 和 **“状态别名”** 字段中出现的名称。  
   
 6.  根据需要，在 **“高级”** 选项卡上设置属性。有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>将具有分隔值的列映射到复合域  
   
-1.  右键单击 DQS 清理转换，然后单击“编辑”。  
+1.  右键单击 DQS 清理转换，然后单击“编辑”  。  
   
 2.  在 **“连接管理器”** 选项卡上，确认复合域显示在可用域列表中。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67944167"
   
 4.  对于 **“输入列”** 字段中列出的列，在 **“域”** 字段中选择复合域。  
   
-5.  根据需要，修改在 **“源别名”**、 **“输出别名”** 和 **“状态别名”** 字段中出现的名称。  
+5.  根据需要，修改在 **“源别名”** 、 **“输出别名”** 和 **“状态别名”** 字段中出现的名称。  
   
 6.  根据需要，在 **“高级”** 选项卡上设置属性。有关属性的详细信息，请参阅 [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)。  
   

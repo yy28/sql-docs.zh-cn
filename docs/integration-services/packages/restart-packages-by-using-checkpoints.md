@@ -12,14 +12,14 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02fcad7bd52248f8bc1daf5066c90453c08718b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913755"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295775"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
 
@@ -89,11 +89,11 @@ ms.locfileid: "67913755"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开要配置的包所在的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
-2.  在“解决方案资源管理器”中，双击该包将其打开。  
+2.  在“解决方案资源管理器”  中，双击该包将其打开。  
   
 3.  单击 **“控制流”** 选项卡。  
   
-4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”。  
+4.  右键单击控制流设计图面背景中的任意位置，然后单击“属性”  。  
   
 5.  将 SaveCheckpoints 属性设置为 **True**。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "67913755"
   
 8.  配置包可以从中重新启动的任务和容器。  
   
-    -   右键单击任务或容器，然后单击“属性”。  
+    -   右键单击任务或容器，然后单击“属性”  。  
   
     -   将每个所选任务和容器的 FailPackageOnFailure 属性设置为 **True** 。  
     

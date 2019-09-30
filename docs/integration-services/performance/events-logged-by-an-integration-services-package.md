@@ -11,14 +11,14 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bebbaeb547039af49cff158939741c35164e0df1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913674"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282511"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 包记录的事件
 
@@ -46,7 +46,7 @@ ms.locfileid: "67913674"
 |12290|DTS_MSG_PACKAGECANCEL|包“%1!s!” 已取消。|包已取消，因此不再运行。|  
 |12291|DTS_MSG_PACKAGEFAILURE|包“”已失败。|包无法成功运行，已停止运行。|  
   
- 默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将有关包运行的某些事件记录到应用程序事件日志中。 使用当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的数据收集器功能时，此设置可防止生成过多的事件日志项。 未记录的事件包括 EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 1 更改为 0。 不过，在升级安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为记录这两个事件。 若要禁用记录功能，请将 LogPackageExecutionToEventLog 设置的值从 1 更改为 0。  
+ 默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将有关包运行的某些事件记录到应用程序事件日志中。 使用当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的数据收集器功能时，此设置可防止生成过多的事件日志项。 未记录的事件是，EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 1 更改为 0。 不过，在升级安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为记录这两个事件。 若要禁用记录功能，请将 LogPackageExecutionToEventLog 设置的值从 1 更改为 0。  
   
 ## <a name="messages-associated-with-package-logging"></a>与包日志记录关联的消息  
  如果已对包启用日志记录，应用程序事件日志将是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中可选的日志记录功能所支持的目标之一。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  

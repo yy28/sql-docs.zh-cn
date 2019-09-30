@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0ad340a2ec0d94dca701849dd2a658efc7bcab2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944154"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291257"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>通过使用 Union All 转换来合并数据
 
@@ -34,7 +34,7 @@ ms.locfileid: "67944154"
   
 ### <a name="to-combine-inputs-in-a-data-flow"></a>组合数据流中的输入  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中，双击解决方案资源管理器中的包将其在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中打开，然后单击“数据流”选项卡。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中，双击解决方案资源管理器中的包将其在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中打开，然后单击“数据流”选项卡。   
   
 2.  将 Union All 转换从 **“工具箱”** 拖动到 **“数据流”** 选项卡的设计图面。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67944154"
   
 4.  双击 Union All 转换。  
   
-5.  在 **“Union All 转换编辑器”** 中，通过单击行然后在输入列表中选择列，将输入中的列映射到 **“输出列的名称”** 列表中的列。 在输入列表中选择“\<ignore>”以跳过对该列的映射。  
+5.  在 **“Union All 转换编辑器”** 中，通过单击行然后在输入列表中选择列，将输入中的列映射到 **“输出列的名称”** 列表中的列。 在输入列表中选择“\<ignore>”以跳过对该列的映射  。  
   
     > [!NOTE]  
     >  两列间的映射要求各列的元数据相匹配。  
@@ -54,7 +54,7 @@ ms.locfileid: "67944154"
   
 7.  对每个输入中的每一列重复第 5 和第 6 步。  
   
-8.  单击“确定” 。  
+8.  单击“确定”  。  
   
 9. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

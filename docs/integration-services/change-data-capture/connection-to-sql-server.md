@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3dafccc85b6ca100177364ae9d33e55a8ddc93b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e87e29349cdef9db94e917f6fe543b327c5abf9f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060854"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298853"
 ---
 # <a name="connection-to-sql-server"></a>连接到 SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "68060854"
   
 -   Windows 身份验证  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”  和“密码”  。  
   
 ### <a name="options"></a>选项  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
@@ -45,9 +45,9 @@ ms.locfileid: "68060854"
   
 -   **执行超时值**：键入一个时间（秒），未超过该时间，程序将等待 SQL 命令执行完成，超过该时间后将生成超时错误。 默认值为 **30**。  
   
--   **加密连接**：选择“加密连接”可确保对正在建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接进行加密以保护隐私。  
+-   **加密连接**：选择“加密连接”  可确保对正在建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接进行加密以保护隐私。  
   
--   **高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
+-   **高级**：单击“高级”  并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对 CDC 服务的 SQL Server 连接所需权限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
