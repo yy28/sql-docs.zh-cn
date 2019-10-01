@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294999"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688302"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>在多台计算机上为 SQL Server 大数据群集部署配置 Kubernetes
 
@@ -33,6 +33,9 @@ ms.locfileid: "71294999"
    - 8 个 CPU
    - 64 GB 内存
    - 100 GB 存储
+ 
+> [!Important] 
+> 在开始大数据群集部署之前，请确保在部署面向的所有 Kubernetes 节点上同步时钟。 大数据群集具有适用于区分时间和时钟偏差的各种服务的内置运行状况属性，可能会导致不正确的状态。
 
 ## <a name="prepare-the-machines"></a>准备计算机
 

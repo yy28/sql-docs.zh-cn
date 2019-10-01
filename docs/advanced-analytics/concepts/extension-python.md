@@ -3,17 +3,17 @@ title: Python 编程语言扩展
 description: 了解 SQL Server 机器学习服务中的 Python 代码执行和内置 Python 库。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 09/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f3825a2b5085bf5a6e144a602c36cb20ccaca430
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715872"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688285"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 语言扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Microsoftml 和 revoscalepy 紧密耦合;microsoftml 中使用的数据源定义
 
 ### <a name="python-scripts-executed-in-database"></a>已在数据库中执行 Python 脚本
 
-在 SQL Server 中运行 Python 时, 必须将 Python 脚本封装在一个特殊的存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)中。
+在 SQL Server 中运行 Python 时，必须将 Python 脚本封装在一个特殊的存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)中。
 
 在将脚本嵌入到存储过程中后, 任何可进行存储过程调用的应用程序都可以启动 Python 代码的执行。  之后 SQL Server 按下图所概括的方式管理代码执行。
 
@@ -92,9 +92,11 @@ Microsoftml 和 revoscalepy 紧密耦合;microsoftml 中使用的数据源定义
 8. SQL 附属项管理与相关作业对象 SQL Server 和清理的通信。
 9. SQL Server 将结果传递回客户端。
 
-## <a name="see-also"></a>请参阅
+## <a name="next-steps"></a>后续步骤
 
 + [SQL Server 中的 revoscalepy 模块](../python/ref-py-revoscalepy.md)
 + [revoscalepy 函数引用](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server 中的扩展性框架](extensibility-framework.md)
 + [SQL Server 中的 R 和机器学习扩展](extension-r.md)
++ [获取 Python 包信息](../package-management/python-package-information.md)
++ [通过 sqlmlutils 安装 Python 包](../package-management/install-additional-python-packages-on-sql-server.md)

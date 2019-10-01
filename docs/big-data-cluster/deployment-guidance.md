@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174267"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688314"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>如何在 Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上部署
 
@@ -66,6 +66,9 @@ SQL Server 大数据群集在 Kubernetes 群集上部署为 docker 容器。 下
 ```bash
 kubectl config view
 ```
+
+> [!Important] 
+> 如果要在使用 kubeadm 引导的多节点 Kuberntes 群集上进行部署，则在启动大数据群集部署之前，请确保在部署所面向的所有 Kubernetes 节点上同步时钟。 大数据群集具有适用于区分时间和时钟偏差的各种服务的内置运行状况属性，可能会导致不正确的状态。
 
 配置 Kubernetes 群集后，可以继续部署新的 SQL Server 大数据群集。 如果要从以前的版本升级，请参阅[如何升级[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md)。
 
