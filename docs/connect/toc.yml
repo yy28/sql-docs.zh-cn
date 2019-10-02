@@ -12,9 +12,9 @@
   items:
     - name: 用于 SQL Server 的 Microsoft ADO.NET
       href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-    - name: 第 1 步：配置用于 ADO.NET 开发的开发环境
+    - name: 步骤 1：配置用于 ADO.NET 开发的开发环境
       href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-    - name: 第 2 步：创建用于 ADO.NET 开发的 SQL 数据库
+    - name: 步骤 2：创建用于 ADO.NET 开发的 SQL 数据库
       href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
     - name: 步骤 3：使用 ADO.NET 连接到 SQL 的概念证明
       href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
@@ -2362,9 +2362,9 @@
     - name: JDBC 驱动程序入门
       href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
       items:
-        - name: 第 1 步：配置用于 Java 开发的开发环境
+        - name: 步骤 1：配置用于 Java 开发的开发环境
           href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: 第 2 步：创建用于 Java 开发的 SQL 数据库
+        - name: 步骤 2：创建用于 Java 开发的 SQL 数据库
           href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
         - name: 步骤 3：使用 Java 连接到 SQL 的概念证明
           href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
@@ -2406,14 +2406,14 @@
           href: ../connect/jdbc/validating-user-input.md
         - name: 应用程序安全性
           href: ../connect/jdbc/application-security.md
-        - name: 使用 SSL 加密
+        - name: 使用加密
           href: ../connect/jdbc/using-ssl-encryption.md
           items:
-            - name: 了解 SSL 支持
+            - name: 了解加密支持
               href: ../connect/jdbc/understanding-ssl-support.md
-            - name: 使用 SSL 加密进行连接
+            - name: 使用加密进行连接
               href: ../connect/jdbc/connecting-with-ssl-encryption.md
-            - name: 为 SSL 加密配置客户端
+            - name: 为加密配置客户端
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS 模式
           href: ../connect/jdbc/fips-mode.md
@@ -2635,9 +2635,9 @@
   items:
     - name: 用于 SQL Server 的 Node.js 驱动程序
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: 第 1 步：配置用于 Node.js 开发的开发环境
+    - name: 步骤 1：配置用于 Node.js 开发的开发环境
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: 第 2 步：创建用于 Node.js 开发的 SQL 数据库
+    - name: 步骤 2：创建用于 Node.js 开发的 SQL 数据库
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
     - name: 步骤 3：使用 Node.js 连接到 SQL 的概念证明
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
@@ -2916,9 +2916,9 @@
                     - name: 基本 ODBC 应用程序步骤
                       href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
                       items:
-                        - name: 第 1 步：连接到数据源
+                        - name: 步骤 1：连接到数据源
                           href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
-                        - name: 第 2 步：初始化应用程序
+                        - name: 步骤 2：初始化应用程序
                           href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
                         - name: 步骤 3：生成并执行 SQL 语句
                           href: ../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md
@@ -5330,9 +5330,9 @@
     - name: 入门
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: 第 1 步：配置用于 PHP 开发的开发环境
+        - name: 步骤 1：配置用于 PHP 开发的开发环境
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: 第 2 步：创建用于 PHP 开发的 SQL 数据库
+        - name: 步骤 2：创建用于 PHP 开发的 SQL 数据库
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
         - name: 步骤 3：使用 PHP 连接到 SQL Server 的概念证明
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
@@ -5610,18 +5610,18 @@
     - name: Python SQL 驱动程序 - pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: 第 1 步：配置用于 pyodbc Python 开发的开发环境
+        - name: 步骤 1：配置用于 pyodbc Python 开发的开发环境
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: 第 2 步：创建用于 pyodbc Python 开发的 SQL 数据库
+        - name: 步骤 2：创建用于 pyodbc Python 开发的 SQL 数据库
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
         - name: 步骤 3：使用 pyodbc 连接到 SQL 的概念证明
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL 驱动程序 - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: 第 1 步：配置用于 pymssql Python 开发的开发环境
+        - name: 步骤 1：配置用于 pymssql Python 开发的开发环境
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: 第 2 步：创建用于 pymssql Python 开发的 SQL 数据库
+        - name: 步骤 2：创建用于 pymssql Python 开发的 SQL 数据库
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
         - name: 步骤 3：使用 pymssql 连接到 SQL 的概念证明
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
@@ -5629,9 +5629,9 @@
   items:
     - name: 用于 SQL Server 的 Ruby 驱动程序
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: 第 1 步：配置用于 Ruby 开发的开发环境
+    - name: 步骤 1：配置用于 Ruby 开发的开发环境
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: 第 2 步：创建用于 Ruby 开发的 SQL 数据库
+    - name: 步骤 2：创建用于 Ruby 开发的 SQL 数据库
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
     - name: 步骤 3：使用 Ruby 连接到 SQL 的概念证明
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
@@ -5957,9 +5957,9 @@
             - name: Internet 发布方案
               href: ../ado/guide/data/internet-publishing-scenario.md
               items:
-                - name: 第 1 步：设置 Visual Basic 项目
+                - name: 步骤 1：设置 Visual Basic 项目
                   href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
-                - name: 第 2 步：初始化主列表框
+                - name: 步骤 2：初始化主列表框
                   href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
                 - name: 步骤 3：填充字段列表框
                   href: ../ado/guide/data/step-3-populate-the-fields-list-box.md
@@ -6020,9 +6020,9 @@
     - name: RDS 教程
       href: ../ado/guide/remote-data-service/rds-tutorial.md
       items:
-        - name: 第 1 步：指定服务器程序（RDS 教程）
+        - name: 步骤 1：指定服务器程序（RDS 教程）
           href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
-        - name: 第 2 步：调用服务器程序（RDS 教程）
+        - name: 步骤 2：调用服务器程序（RDS 教程）
           href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
         - name: 步骤 3：服务器获取记录集（RDS 教程）
           href: ../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md
