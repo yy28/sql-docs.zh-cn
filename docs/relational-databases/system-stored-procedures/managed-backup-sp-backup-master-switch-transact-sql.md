@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> 参数  
  @state  
- 设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的状态。 @state参数是**位**。 将其值设置为 0 时，操作暂停；将其值设置为 1 时，操作继续进行。  
+ 设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的状态。 @state参数是 **位**。 将其值设置为 0 时，操作暂停；将其值设置为 1 时，操作继续进行。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
