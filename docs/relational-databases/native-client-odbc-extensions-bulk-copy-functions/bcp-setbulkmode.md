@@ -10,21 +10,21 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9de8b347aa0df4dc79570cae737525f0b1ca7eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f6dfcb6049811fa12899570b11c110b16dc400
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099443"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707475"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  bcp_setbulkmode 允许您指定在大容量复制操作中，在单个函数调用中设置列的所有属性的列格式。  
+  bcp_setbulkmode 可让你在大容量复制操作中指定列格式，并在单个函数调用中设置所有列特性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,14 +44,14 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
- property   
+ property  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
  *pField*  
  指向字段终止符值的指针。  
   
  *cbField*  
- 字段终止符值的长度 （以字节为单位）。  
+ 字段终止符值的长度（以字节为单位）。  
   
  *pRow*  
  指向行终止符值的指针。  
@@ -63,26 +63,26 @@ RETCODE bcp_setbulkmode (
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>备注  
- 可以使用 bcp_setbulkmode 外的查询或表大容量复制。 当 bcp_setbulkmode 用于大容量复制查询语句时，它必须调用使用 BCP_HINT bcp_control 之前调用它。  
+ bcp_setbulkmode 可用于从查询或表中大容量复制。 当 bcp_setbulkmode 用于向外大容量复制查询语句时，必须在使用 BCP_HINT 调用 bcp_control 之前调用它。  
   
- bcp_setbulkmode 是使用的替代方法[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)并[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)，其仅可让你可以指定每个函数调用某一列的格式。  
+ bcp_setbulkmode 是使用[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)和[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)的替代方法，只允许指定每个函数调用的一列的格式。  
   
- 下表列出了 property 参数的常量  。  
+ 下表列出了 property 参数的常量。  
   
 |属性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。Exe 文件，以及与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为**SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为**SQLNCHAR**。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。EXE 和与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为**SQLNCHAR**如果列类型为字符串 （默认如果不是 string）。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和与 bcp_setcolfmt **BCP_FMT_TYPE**属性设置为默认值。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE 和 bcp_setcolfmt，并将**BCP_FMT_TYPE**属性设置为**SQLCHARACTER**。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 bcp_setcolfmt，并将**BCP_FMT_TYPE**属性设置为**SQLNCHAR**。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。如果列类型是字符串，则为**BCP_FMT_TYPE**属性设置为**SQLNCHAR**的 EXE 和 bcp_setcolfmt （如果不是字符串，则为默认值）。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 bcp_setcolfmt，并将**BCP_FMT_TYPE**属性设置为默认值。|  
   
- 不应具有一系列函数调用，包括 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 使用 bcp_setbulkmode。 例如，不应调用 bcp_control(BCPTEXTFILE) 和 bcp_setbulkmode。  
+ 不应将 bcp_setbulkmode 与包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列一起使用。 例如，不应调用 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   
- 您可以调用 bcp_control 和 bcp_setbulkmode bcp_control 不与 bcp_setbulkmode 冲突的选项。 例如，可以调用 bcp_control(BCPFIRST) 和 bcp_setbulkmode。  
+ 对于不与 bcp_setbulkmode 冲突的 bcp_control 选项，可以调用 bcp_control 和 bcp_setbulkmode。 例如，可以调用 bcp_control （BCPFIRST）和 bcp_setbulkmode。  
   
- 如果尝试调用 bcp_setbulkmode 用包括 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 函数调用序列，其中一个函数调用将返回序列错误。 如果您选择更正错误，调用 bcp_init 重置所有设置并重新开始。  
+ 如果尝试使用包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列调用 bcp_setbulkmode，其中一个函数调用将返回序列错误失败。 如果选择纠正失败，请调用 bcp_init 以重置所有设置并重新开始。  
   
- 以下是造成函数序列错误的函数调用的一些示例：  
+ 下面是导致函数序列错误的函数调用的一些示例:  
   
 ```  
 bcp_init("table", DB_IN);  

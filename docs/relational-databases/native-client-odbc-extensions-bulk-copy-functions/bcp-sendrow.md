@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_sendrow function
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a8e4c35d752e8ee8bf34ac3ee754e57173f8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5bc7b03405d6e43a6b19cc2903875685177942e1
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099447"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707537"
 ---
-# <a name="bcpsendrow"></a>bcp_sendrow
+# <a name="bcp_sendrow"></a>bcp_sendrow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -41,21 +41,21 @@ RETCODE bcp_sendrow (
   
 ## <a name="arguments"></a>参数  
  *hdbc*  
- 是大容量复制启用 ODBC 连接句柄。  
+ 是启用大容量复制的 ODBC 连接句柄。  
   
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- **Bcp_sendrow**函数生成的行从程序变量，并将其发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ **Bcp_sendrow**函数从程序变量生成行并将其发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 然后再调用**bcp_sendrow**，您必须进行到调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，指定包含行数据的程序变量。  
+ 在调用**bcp_sendrow**之前，必须调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)以指定包含行数据的程序变量。  
   
- 如果**bcp_bind**指定长度可变的长整型数据类型，例如，调用*eDataType* SQLTEXT 和非 NULL 的参数*pData*参数，则**bcp_sendrow**发送整个数据值，就像任何其他数据类型的操作一样。 如果为，但是， **bcp_bind**具有 NULL *pData*参数， **bcp_sendrow**所有列指定数据都发送到后立即将控制权返回给应用程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 然后，应用程序可以调用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)反复将长、 可变长度数据发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，一次一个块。 有关详细信息，请参阅[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。  
+ 如果将**bcp_bind**指定为长度可变的长整型数据类型（例如， *eDataType*参数 SQLTEXT 和非 NULL *pData*参数），则**bcp_sendrow**将发送整个数据值，就像对任何其他数据一样。类别. 但是，如果**bcp_bind**具有空的*pData*参数，则**bcp_sendrow**将在指定了数据的所有列发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后立即将控制权返回给应用程序。 然后，应用程序可以重复调用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) ，以便一次将长度可变的长整型数据发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。  
   
- 当**bcp_sendrow**用于大容量复制行从程序变量到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，行时，将提交仅在用户调用[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). 用户可以选择调用**bcp_batch**后每个*n*行或之间的传入数据趋缓时。 如果**bcp_batch**是永远不会调用，会提交这些行时**bcp_done**调用。  
+ 当使用**bcp_sendrow**将行从程序变量大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中时，仅当用户调用[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)或[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)时才提交行。 用户可以选择每*n*行调用一次**bcp_batch** ，或在传入数据的时间段之间趋缓时调用。 如果永远不会调用**bcp_batch** ，则在调用**bcp_done**时，将提交行。  
   
- 信息的重要更改中大容量复制中的开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请参阅[执行大容量复制操作&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 有关从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始大容量复制的重大更改的信息，请参阅[执行大容量复制&#40;操作&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

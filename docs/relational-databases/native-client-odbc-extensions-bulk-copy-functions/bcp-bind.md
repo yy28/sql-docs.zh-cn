@@ -1,10 +1,7 @@
 ---
 title: bcp_bind | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 apiname:
@@ -15,28 +12,32 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
+ms.custom: ''
+ms.reviewer: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99da52886b15cf89b693fdfb5f1cc5d039e64905
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895734"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707740"
 ---
-# <a name="bcpbind"></a>bcp_bind
+# <a name="bcp_bind"></a>bcp_bind
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   将程序变量中的数据绑定到表列，以便大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
-  
-## <a name="syntax"></a>语法  
-  
+
+## <a name="syntax"></a>语法
+
 ```  
   
 RETCODE bcp_bind (  
-        HDBC hdbc,   
+        HDBC hdbc,
         LPCBYTE pData,  
         INT cbIndicator,  
         DBINT cbData,  
@@ -46,19 +47,20 @@ RETCODE bcp_bind (
         INT idxServerCol);  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  *hdbc*  
- 是大容量复制启用 ODBC 连接句柄。  
+ 是启用大容量复制的 ODBC 连接句柄。  
   
  *pData*  
- 指向已复制数据的指针。 如果*eDataType*为 SQLTEXT、 SQLNTEXT、 SQLXML、 SQLUDT、 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY、 SQLNCHAR 或 SQLIMAGE， *pData*可以为 NULL。 为空*pData*指示长数据值将发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用的区块[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)。 用户只应设置*pData*为 NULL，如果与用户绑定字段对应的列是 BLOB 列，否则**bcp_bind**将失败。  
+ 指向已复制数据的指针。 如果*eDataType*为 SQLTEXT、SQLNTEXT、SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、SQLNCHAR 或 SQLIMAGE，则*PDATA*可以为 NULL。 空*pData*表示将使用[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)将长数据值发送到块区 @no__t。 如果与用户绑定字段对应的列是一个 BLOB 列，则用户应仅将*pData*设置为 NULL **，否则将会失败**。  
   
- 如果数据中存在指示符，这些指示符则在内存中直接显示在数据之前。 *PData*参数指向指示符变量，在这种情况下和指示符，宽度*cbIndicator*参数，将正确使用对用户数据进行寻址的大容量复制。  
+ 如果数据中存在指示符，这些指示符则在内存中直接显示在数据之前。 在这种情况下， *pData*参数指向指示器变量，并且大容量复制使用指示器的宽度（ *cbIndicator*参数）正确地处理用户数据。  
   
  *cbIndicator*  
  列数据的长度或 Null 指示符的长度（以字节为单位）。 有效指示器长度值是 0（不使用任何指示器时）、1、2、4 或 8。 指示符在内存中直接显示在任何数据之前。 例如，可以使用以下结构类型定义通过大容量复制将整数值插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表：  
   
-```  
+```
 typedef struct tagBCPBOUNDINT  
     {  
     int iIndicator;  
@@ -66,66 +68,65 @@ typedef struct tagBCPBOUNDINT
     } BCPBOUNDINT;  
 ```  
   
- 在示例案例中， *pData*参数将设置到的地址的结构，即 bcpboundint 地址的声明实例*iIndicator*结构成员。 *CbIndicator*参数将设置为整数的大小 (sizeof(int))，并*cbData*也将参数设置为一个整数 (sizeof(int)) 大小。 大容量复制到包含 null 值的服务器的行值将绑定列，该实例的值*iIndicator*成员应设置为 SQL_NULL_DATA。  
+ 在本例中， *pData*参数将设置为结构的声明实例的地址，即 BCPBOUNDINT *iIndicator*结构成员的地址。 *CbIndicator*参数将设置为整数大小（sizeof （int））， *cbData*参数将再次设置为整数（sizeof （int））的大小。 若要将行大容量复制到包含绑定列的 NULL 值的服务器，该实例的*iIndicator*成员的值应设置为 SQL_NULL_DATA。  
   
  *cbData*  
  程序变量中数据的字节计数，不包括任何长度/Null 指示符或终止符的长度。  
   
- 设置*cbData*为 SQL_NULL_DATA 表示复制到服务器的所有行都包含 NULL 值的列。  
+ 将*cbData*设置为 SQL_NULL_DATA 表示复制到服务器的所有行都包含该列的 NULL 值。  
   
- 设置*cbData*为 SQL_VARLEN_DATA 指示系统将使用字符串终止符或其他方法，以确定数据长度复制。  
+ 如果将*cbData*设置为 SQL_VARLEN_DATA，则表示系统将使用字符串终止符或其他方法来确定复制的数据的长度。  
   
- 对于固定长度的数据类型（如整数），该数据类型指示系统中的数据的长度。 因此，对于固定长度的数据类型， *cbData*可以安全地采用 SQL_VARLEN_DATA 或数据的长度。  
+ 对于固定长度的数据类型（如整数），该数据类型指示系统中的数据的长度。 因此，对于固定长度的数据类型， *cbData*可以安全地是 SQL_VARLEN_DATA 或数据的长度。  
   
- 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符和二进制数据类型*cbData*可以是 SQL_VARLEN_DATA、 SQL_NULL_DATA、 某些正值或 0。 如果*cbData*为 SQL_VARLEN_DATA，则系统使用长度 /null 指示符 （如果存在） 或终止符序列来确定数据的长度。 如果同时提供指示符和终止符序列，系统则使用二者中可导致数据复制量最少的那一个。 如果*cbData*为 SQL_VARLEN_DATA，列的数据类型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定字符或二进制类型，并且既不名技术长度指示器和终止符序列，则系统将返回一条错误消息。  
+ 对于 @no__t 0 字符和二进制数据类型， *cbData*可以是 SQL_VARLEN_DATA、SQL_NULL_DATA、某些正值或0。 如果*cbData*为 SQL_VARLEN_DATA，则系统使用长度/空指示符（如果存在）或终止符序列来确定数据的长度。 如果同时提供指示符和终止符序列，系统则使用二者中可导致数据复制量最少的那一个。 如果*cbData*为 SQL_VARLEN_DATA，则列的数据类型为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 个字符或二进制类型，并且没有指定长度指示符和终止符序列，系统将返回一条错误消息。  
   
- 如果*cbData*为 0 或正值，则系统使用*cbData*作为数据长度。 但是，如果除了正*cbData*值，提供长度指示器或终止符序列，系统使用导致数据复制量最少的方法来确定数据长度。  
+ 如果*cbData*为0或正值，则系统使用*cbData*作为数据长度。 但是，如果除正*cbData*值外，还提供了一个长度指示器或终止符序列，则系统将通过使用导致数据复制量最少的方法来确定数据长度。  
   
- *CbData*参数值表示数据的字节计数。 如果字符数据由 Unicode 宽字符，则正*cbData*参数值表示的以字节为单位的每个字符的大小的乘积的字符数。  
+ *CbData*参数值表示数据的字节计数。 如果字符数据由 Unicode 宽字符表示，则正的*cbData*参数值表示字符数乘以每个字符的大小（以字节为单位）。  
   
  *pTerm*  
  指向标记该程序变量末尾的字节模式（如果有）的指针。 例如，ANSI 和 MBCS C 字符串通常采用 1 个字节的终止符 (\0)。  
   
- 如果变量没有终止符，则设置*pTerm*为 NULL。  
+ 如果变量没有终止符，则将*pTerm*设置为 NULL。  
   
- 您可以使用空字符串 ("") 将 C Null 终止符指定为程序变量终止符。 由于以 null 结尾的空字符串构成一个字节 （终止符字节自身），设置*cbTerm*为 1。 例如，若要指示中的字符串*szName*是以 null 结尾以及应使用该终止符指示长度：  
+ 您可以使用空字符串 ("") 将 C Null 终止符指定为程序变量终止符。 由于以 null 值结束的空字符串构成一个字节（终止符字节自身），因此请将*cbTerm*设置为1。 例如，若要指示*szName*中的字符串以 null 结尾并且应使用该终止符指示长度，请执行以下操作：  
   
-```  
+```
 bcp_bind(hdbc, szName, 0,  
    SQL_VARLEN_DATA, "", 1,  
    SQLCHARACTER, 2)  
-```  
-  
- 此示例中的非终止的形式可能表示从复制 15 个字符*szName*变量绑定的表的第二列：  
-  
-```  
-bcp_bind(hdbc, szName, 0, 15,   
+```
+
+ 此示例的示例形式可能表示将15个字符从*szName*变量复制到绑定表的第二列：  
+
+```
+bcp_bind(hdbc, szName, 0, 15,
    NULL, 0, SQLCHARACTER, 2)  
-```  
+```
+
+ 大容量复制 API 根据需要执行 Unicode 到 MBCS 的字符转换。 确保终止符字节字符串和字节字符串的长度均已正确设置。 例如，若要指示*szName*中的字符串是 unicode 宽字符串，则由 unicode null 终止符值终止：  
   
- 大容量复制 API 根据需要执行 Unicode 到 MBCS 的字符转换。 确保终止符字节字符串和字节字符串的长度均已正确设置。 例如，若要指示中的字符串*szName*是由 Unicode null 终止符值终止一个 Unicode 宽字符字符串：  
-  
 ```  
-bcp_bind(hdbc, szName, 0,   
+bcp_bind(hdbc, szName, 0,
    SQL_VARLEN_DATA, L"",  
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- 如果绑定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列是宽字符，将不执行任何转换[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列为 MBCS 字符类型，将数据发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时将执行从宽字符到多字节字符的转换。  
+ 如果绑定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列是宽字符，则不会对[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)执行任何转换。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列为 MBCS 字符类型，将数据发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时将执行从宽字符到多字节字符的转换。  
   
  *cbTerm*  
- 存在于程序变量的终止符（如果有）中的字节计数。 如果变量没有终止符，则设置*cbTerm*为 0。  
-  
- *eDataType*  
- 程序变量的 C 数据类型。 程序变量中的数据转换为数据库列的类型。 如果该参数为 0，则不执行转换。  
-  
- *EDataType*参数枚举[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlncli.h 中的数据类型标记、 不 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLINT2 类型指定一个两个字节的整数：ODBC 类型的 SQL_C_SHORT。  
-  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了对 SQLXML 和 SQLUDT 数据类型标记中支持 **_eDataType_** 参数。  
- 
- 下表列出了有效的枚举数据类型以及相应的 ODBC C 数据类型。
-  
-|eDataType|C 类型|  
+ 存在于程序变量的终止符（如果有）中的字节计数。 如果变量没有终止符，则将*cbTerm*设置为0。  
+
+*eDataType*是程序变量的 C 数据类型。 程序变量中的数据转换为数据库列的类型。 如果该参数为 0，则不执行转换。  
+
+*EDataType*参数由 sqlncli.msi 中的 @no__t 数据类型令牌枚举，而不是 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLINT2 类型指定一个两个字节的整数：ODBC 类型的 SQL_C_SHORT。  
+
+@no__t 0 在 **_eDataType_** 参数中引入了对 SQLXML 和 SQLUDT 数据类型标记的支持。  
+
+下表列出了有效的枚举数据类型以及相应的 ODBC C 数据类型。
+
+|eDataType|C 类型|
 |-----------------------|------------|  
 |SQLTEXT|char *|  
 |SQLNTEXT|wchar_t *|  
@@ -145,79 +146,81 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT2|short int|  
 |SQLINT4|INT|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1:SQLINT1<br /> 2:SQLINT2<br /> 4：SQLINT4<br /> 8:SQLINT8|  
-|SQLFLT4|FLOAT|  
-|SQLFLT8|FLOAT|  
-|SQLFLTN|*cbIndicator*<br /> 4：SQLFLT4<br /> 8:SQLFLT8|  
+|SQLINTN|*cbIndicator*<br /> 1：SQLINT1<br /> 2:SQLINT2<br /> 4：SQLINT4<br /> 8SQLINT8|  
+|SQLFLT4|浮点数|  
+|SQLFLT8|浮点数|  
+|SQLFLTN|*cbIndicator*<br /> 4：SQLFLT4<br /> 8SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|*cbIndicator*<br /> 4：SQLMONEY4<br /> 8:SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4：SQLMONEY4<br /> 8SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|*cbIndicator*<br /> 4：SQLDATETIM4<br /> 8:SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4：SQLDATETIM4<br /> 8SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
 |SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|除以下数据类型之外的任意数据类型  ：<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
-|SQLXML|支持的 C 数据类型： <br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
+|SQLVARIANT|除以下数据类型之外的任意数据类型：<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|支持的 C 数据类型：<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
+
+*idxServerCol*数据要复制到的数据库表中的列的序号位置。 表中的第一列为列 1。 列的序号位置由[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)报告。  
   
- *idxServerCol*  
- 数据复制的目标数据库表中的列的序号位置。 表中的第一列为列 1。 报告列的序号位置[SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)。  
+## <a name="returns"></a>返回
+
+ SUCCEED 或 FAIL。
+
+## <a name="remarks"></a>备注
+
+使用**bcp_bind** ，可以快速有效地将数据从程序变量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的表中。  
+
+在调用此或任何其他大容量复制函数之前调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 。 调用**bcp_init**将设置用于大容量复制的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标表。 在调用**bcp_init**以用于**bcp_bind**和[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)时，指示数据文件的**bcp_init** _szDataFile_参数设置为 NULL;**bcp_init**_eDirection_参数设置为 DB_IN。  
+
+为要复制到的 @no__t 1 表中的每一列创建一个单独的**bcp_bind**调用。 进行必要的**bcp_bind**调用后，调用**bcp_sendrow** ，将数据从程序变量发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支持重新绑定列。
+
+每当你想要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提交已收到的行时，请调用[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)。 例如，每1000行调用一次**bcp_batch** ，或按任何其他间隔调用。  
+
+如果不再有要插入的行，请调用[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)。 如果没有这样做，会导致错误。
+
+使用[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)指定的控件参数设置对**bcp_bind**行传输不起作用。  
+
+如果列的*pData*设置为 NULL，因为它的值将由对[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)的调用提供，且*EDATATYPE*设置为 SQLTEXT、SQLNTEXT、SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、还必须将 SQLNCHAR 或 SQLIMAGE 绑定到*pData*设置为 NULL，并且还必须通过调用**bcp_moretext**提供其值。  
+
+对于新的大值类型（如**varchar （max）** 、 **varbinary （max）** 或**nvarchar （max））** ，可以在*SQLNCHAR*参数中使用 SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY 和 eDataType 作为类型指示符。  
+
+如果*cbTerm*不是0，则任何值（1、2、4或8）对于前缀（*cbIndicator*）都有效。 在这种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将搜索终止符，计算与终止符（*i*）有关的数据长度，并将*cbData*设置为 "i" 的较小值和 "前缀" 的值。  
+
+如果*cbTerm*为0， *cbIndicator* （前缀）不为0，则*cbIndicator*必须是8。 8个字节的前缀可以采用以下值：  
+
+- 0xFFFFFFFFFFFFFFFF 表示字段为 Null 值。  
+
+- 0xFFFFFFFFFFFFFFFE 被视为一个特殊前缀值，用于有效地将块中的数据发送到服务器。 带有此特殊前缀的数据的格式为：  
+
+- < SPECIAL_PREFIX > \<0 或更多数据块 > < ZERO_CHUNK > 位置：  
+
+- SPECIAL_PREFIX 为 0xFFFFFFFFFFFFFFFE  
+
+- DATA_CHUNK 是包含块长度的4字节前缀，后跟其长度在4字节前缀中指定的实际数据。  
+
+- ZERO_CHUNK 是一个4字节的值，它包含表示数据结束的所有零（00000000）。  
+
+- 任何其他有效的8字节长度都被视为常规数据长度。  
+
+ 使用**bcp_bind**时调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)会导致错误。  
   
-## <a name="returns"></a>返回  
- SUCCEED 或 FAIL。  
+## <a name="bcp_bind-support-for-enhanced-date-and-time-features"></a>bcp_bind 对日期和时间增强功能的支持
+
+有关用于日期/时间类型的*eDataType*参数所使用的类型的信息，请参阅[OLE DB 和&#40;ODBC&#41;的增强日期和时间类型的大容量复制更改](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
+
+有关详细信息，请参阅[日期和时间&#40;改进&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+
+## <a name="example"></a>示例
   
-## <a name="remarks"></a>备注  
- 使用**bcp_bind**若要将数据从程序变量复制到的表中的快速、 高效的方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
-  
- 调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前调用此方法或任何其他大容量复制函数。 调用**bcp_init**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制的目标表。 调用时**bcp_init**用于**bcp_bind**并[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，则**bcp_init** _szDataFile_参数，指示数据文件中，设置为 NULL;**bcp_init**_eDirection_参数设置为 DB_IN。  
-  
- 单独**bcp_bind**为每个列调用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]你想要复制到其中的表。 所需的后**bcp_bind**的调用进行了，然后调用**bcp_sendrow**将数据的行发送到将程序变量中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支持重新绑定列。  
-  
- 每当你想要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要提交收到的行，请调用[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)。 例如，调用**bcp_batch**一次每插入 1000年行或在任何其他时间间隔。  
-  
- 如果没有更多的行插入，调用[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)。 如果没有这样做，会导致错误。  
-  
- 控制参数设置，使用指定[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)，不起任何作用**bcp_bind**行传输。  
-  
- 如果*pData*的列设置为 NULL，因为其值将通过调用提供[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)，与任何后续列*eDataType*设置为 SQLTEXT、 SQLNTEXT，SQLXML、 SQLUDT、 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY、 SQLNCHAR 或 SQLIMAGE 也必须绑定与*pData*设置为 NULL，且它们的值还必须提供通过调用**bcp_moretext**.  
-  
- 对于新的大值类型，如**varchar （max)** ， **varbinary （max)** ，或**nvarchar （max)** ，可以使用 SQLCHARACTER、 SQLVARCHAR、 SQLVARBINARY、 SQLBINARY 和SQLNCHAR 作为类型中的指示符*eDataType*参数。  
-  
- 如果*cbTerm*是不为 0，（1、 2、 4 或 8） 的任何值是有效的前缀 (*cbIndicator*)。 在此情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将搜索终止符，计算终止符的数据长度 (*我*)，并设置*cbData*为 i 和的值的小的值前缀。  
-  
- 如果*cbTerm*为 0 并*cbIndicator* （前缀） 不是 0， *cbIndicator*必须为 8。 此 8 个字节的前缀可以采用以下值：  
-  
--   0xFFFFFFFFFFFFFFFF 表示字段为 Null 值。  
-  
--   0xFFFFFFFFFFFFFFFE 被视为特殊前缀值，用于有效地向服务器成块发送数据。 带有此特殊前缀的数据的格式为：  
-  
--   < SPECIAL_PREFIX > \<0 个或多个数据区块 >< ZERO_CHUNK > 位置：  
-  
--   SPECIAL_PREFIX 为 0xFFFFFFFFFFFFFFFE  
-  
--   DATA_CHUNK 是包含块区长度的 4 个字节的前缀，后跟在该 4 个字节的前缀中指定其长度的实际数据。  
-  
--   ZERO_CHUNK 是全部由零组成的 4 个字节的值 (00000000)，指示数据结束。  
-  
--   任何其他有效的 8 个字节的长度均被视为常规数据长度。  
-  
- 调用[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)使用时**bcp_bind**会导致出现错误。  
-  
-## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>bcp_bind 对日期和时间增强功能的支持  
- 有关与一起使用的类型信息*eDataType*参数用于日期/时间类型，请参阅[的增强的日期和时间类型的大容量复制更改&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
-  
- 有关详细信息，请参阅[日期和时间改进&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
-  
-## <a name="example"></a>示例  
-  
-```  
+```
 #include sql.h  
 #include sqlext.h  
 #include odbcss.h  
@@ -231,7 +234,7 @@ char*      pTerm = "\t\t";
   
 // Application initiation, get an ODBC environment handle, allocate the  
 // hdbc, and so on.  
-...   
+...
   
 // Enable bulk copy prior to connecting on allocated hdbc.  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP, (SQLPOINTER) SQL_BCP_ON,  
@@ -245,7 +248,7 @@ if (!SQL_SUCCEEDED(SQLConnect(hdbc, _T("myDSN"), SQL_NTS,
    return;  
    }  
   
-// Initialize bcp.   
+// Initialize bcp.
 if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL  
    DB_IN) == FAIL)  
    {  
@@ -253,7 +256,7 @@ if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL
    return;  
    }  
   
-// Bind program variables to table columns.   
+// Bind program variables to table columns.
 if (bcp_bind(hdbc, (LPCBYTE) &idCompany, 0, sizeof(DBINT), NULL, 0,  
    SQLINT4, 1)    == FAIL)  
    {  
@@ -269,10 +272,10 @@ if (bcp_bind(hdbc, (LPCBYTE) szCompanyName, 0, SQL_VARLEN_DATA,
   
 while (TRUE)  
    {  
-   // Retrieve and process program data.   
+   // Retrieve and process program data.
    if ((bMoreData = getdata(&idCompany, szCompanyName)) == TRUE)  
       {  
-      // Send the data.   
+      // Send the data.
       if (bcp_sendrow(hdbc) == FAIL)  
          {  
          // Raise error and return.  
@@ -296,7 +299,6 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
-  
-  
+## <a name="see-also"></a>请参阅
+
+ [大容量复制函数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)

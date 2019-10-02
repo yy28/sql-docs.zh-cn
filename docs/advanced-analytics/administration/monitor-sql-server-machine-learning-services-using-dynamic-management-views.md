@@ -3,17 +3,17 @@ title: 使用 Dmv 监视 Python 和 R 脚本执行
 description: 使用动态管理视图（Dmv）监视 SQL Server 机器学习服务中的 Python 和 R 外部脚本执行。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70978408"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713181"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>使用动态管理视图 (Dmv) 监视 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>内存配置
 
-查看 SQL Server 和外部资源池的最大内存配置的相关信息。 如果 SQL Server 运行时的默认值`max server memory (MB)`为，则将其视为 100% 的 OS 内存。
+查看 SQL Server 和外部资源池的最大内存配置的相关信息。 如果 SQL Server 运行时的默认值为 `max server memory (MB)`，则将其视为 100% 的 OS 内存。
 
 ![内存配置查询的输出](media/dmv-memory-configuration.png "内存配置查询的输出")
 
