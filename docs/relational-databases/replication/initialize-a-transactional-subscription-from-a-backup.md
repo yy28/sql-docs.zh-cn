@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3e0848a5452ad7cdb189b00c5ed90a6ad1cb8a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127865"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251094"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>从备份初始化事务订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68127865"
 2.  对于新发布，在发布服务器上对发布数据库执行 [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 将 **allow_initialize_from_backup** 的值指定为 **true**。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
     > [!WARNING]  
-    >  为了避免丢失订阅服务器数据，在将 **sp_addpublication** 与 `@allow_initialize_from_backup = N'true'`一起使用时，始终使用 `@immediate_sync = N'true'`。  
+    >  为了避免丢失订阅服务器数据，在将 **sp_addpublication** 或 **sp_changepublication** 与 `@allow_initialize_from_backup = N'true'` 配合使用时，始终使用 `@immediate_sync = N'true'`。  
   
 3.  使用 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) 语句创建发布数据库的备份。  
   

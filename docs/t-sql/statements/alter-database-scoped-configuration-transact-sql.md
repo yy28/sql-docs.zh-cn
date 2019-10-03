@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065852"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227190"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -44,8 +44,9 @@ ms.locfileid: "68065852"
 - 启用或禁用对本机编译的 T-SQL 模块的执行统计信息收集。
 - 为支持 `ONLINE =` 语法的 DDL 语句启用或禁用默认联机选项。
 - 为支持 `RESUMABLE =` 语法的 DDL 语句启用或禁用默认可恢复选项。
-- 启用或禁用全局临时表的自动删除功能。
 - 启用或禁用[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能。
+- 启用或禁用加速计划强制实施。
+- 启用或禁用全局临时表的自动删除功能。
 - 启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
 - 启用或禁用新的 `String or binary data would be truncated` 错误消息。
 - 在 [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 中启用或禁用最后一个实际执行计划的收集。
@@ -82,6 +83,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
@@ -168,7 +170,7 @@ INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-允许用户在数据库或语句范围内启用或禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自适应查询处理的一个功能。 有关详细信息，请参阅[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)。
+允许用户在数据库或语句范围内启用或禁用多语句表值函数的交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自适应查询处理的一个功能。 有关详细信息，请参阅[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)。
 
 > [!NOTE]
 > 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
@@ -287,11 +289,20 @@ DEFERRED_COMPILATION_TV = { ON | OFF}
 > [!NOTE]
 > 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始）
+
+启用经过优化的查询计划强制实施机制，这适用于所有形式的计划强制实施，例如[查询存储强制实施计划](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)、[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction)或 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan) 查询提示。 默认值为 ON。
+
+> [!NOTE]
+> 不建议禁用加速计划强制实施。
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }  
 
 **适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
-允许为[全局临时表](create-table-transact-sql.md)设置自动删除功能。 默认值为 ON，这意味着如果没有任何会话使用全局临时表，系统会自动删除该表。 如果设置为 OFF，需要使用 DROP TABLE 语句显式删除或将在服务器重启时自动删除该表。
+允许为[全局临时表](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)设置自动删除功能。 默认值为 ON，这意味着如果没有任何会话使用全局临时表，系统会自动删除该表。 如果设置为 OFF，需要使用 DROP TABLE 语句显式删除或将在服务器重启时自动删除该表。
 
 - 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库和弹性池，可以在 SQL 数据库服务器的单个用户数据库中设置此选项。
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例中，要在 `TempDB` 中设置此选项且单个用户数据库的设置不起作用。
@@ -356,7 +367,7 @@ LAST_QUERY_PLAN_STATS = { ON | OFF}
 
 - `sp_configure` 设置由资源调控器设置替代。
 
-### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
 `QUERYTRACEON` 提示用于通过 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本或查询优化器修补程序启用 SQL Server 7.0 的默认查询优化器时，会成为查询提示和数据库范围配置设置之间的 OR 条件，也就是说，如果启用了两者中任意一个，都会应用数据库作用域内配置。
 
@@ -368,11 +379,11 @@ LAST_QUERY_PLAN_STATS = { ON | OFF}
 
 由于 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始）中的新功能，可影响数据库模式，因此架构的导出（有数据或没有数据）无法导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的旧版本（如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的导出无法导入到下级服务器。
 
-### <a name="elevateonline"></a>ELEVATE_ONLINE
+### <a name="elevate_online"></a>ELEVATE_ONLINE
 
 此选项仅适用于支持 `WITH (ONLINE = <syntax>)` 的 DDL 语句。 XML 索引不受影响。
 
-### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
+### <a name="elevate_resumable"></a>ELEVATE_RESUMABLE
 
 此选项仅适用于支持 `WITH (RESUMABLE = <syntax>)` 的 DDL 语句。 XML 索引不受影响。
 
@@ -404,7 +415,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
-### <a name="c-set-legacycardinalityestimation"></a>C. 设置 LEGACY_CARDINALITY_ESTIMATION
+### <a name="c-set-legacy_cardinality_estimation"></a>C. 设置 LEGACY_CARDINALITY_ESTIMATION
 本示例在异地复制方案中为辅助数据库将 LEGACY_CARDINALITY_ESTIMATION 设置为 ON。
 
 ```sql
@@ -417,7 +428,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
-### <a name="d-set-parametersniffing"></a>D. 设置 PARAMETER_SNIFFING
+### <a name="d-set-parameter_sniffing"></a>D. 设置 PARAMETER_SNIFFING
 本示例在异地复制方案中为主数据库将 PARAMETER_SNIFFING 设置为 OFF。
 
 ```sql
@@ -436,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
-### <a name="e-set-queryoptimizerhotfixes"></a>E. 设置 QUERY_OPTIMIZER_HOTFIXES
+### <a name="e-set-query_optimizer_hotfixes"></a>E. 设置 QUERY_OPTIMIZER_HOTFIXES
 在异地复制方案中为主数据库将 QUERY_OPTIMIZER_HOTFIXES 设置为 ON。
 
 ```sql
@@ -450,7 +461,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
-### <a name="g-set-identitycache"></a>G. 设置 IDENTITY_CACHE
+### <a name="g-set-identity_cache"></a>G. 设置 IDENTITY_CACHE
 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]（此功能为公开预览版）
 
 本示例禁用了标识缓存。
@@ -459,7 +470,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
+### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 本示例可在第一次编译批处理时启用要存储在缓存中的已编译计划存根。
@@ -468,7 +479,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevateonline"></a>I. 设置 ELEVATE_ONLINE
+### <a name="i-set-elevate_online"></a>I. 设置 ELEVATE_ONLINE
 **适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
 此示例将 ELEVATE_ONLINE 设置为 FAIL_UNSUPPORTED。
@@ -477,7 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
-### <a name="j-set-elevateresumable"></a>J. 设置 ELEVATE_RESUMABLE
+### <a name="j-set-elevate_resumable"></a>J. 设置 ELEVATE_RESUMABLE
 **适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
 
 此示例将 ELEVATE_RESUMABLE 设置为 WHEN_SUPPORTED。
@@ -502,26 +513,26 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 - [并行度](../../relational-databases/query-processing-architecture-guide.md#DOP)
 - [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/kb/2806535)（适用于 SQL Server 中的“max degree of parallelism”配置选项的建议和指南）
 
-### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 资源
+### <a name="legacy_cardinality_estimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 资源
 
 - [基数估计 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)
 
-### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 资源
+### <a name="parameter_sniffing-resources"></a>PARAMETER_SNIFFING 资源
 
 - [参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 - ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)（“我发现一个参数！”）
 
-### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 资源
+### <a name="query_optimizer_hotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 资源
 
 - [跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [SQL Server 查询优化器修补程序跟踪标志 4199 服务模型](https://support.microsoft.com/kb/974006)
 
-### <a name="elevateonline-resources"></a>ELEVATE_ONLINE 资源
+### <a name="elevate_online-resources"></a>ELEVATE_ONLINE 资源
 
 [联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-### <a name="elevateresumable-resources"></a>ELEVATE_RESUMABLE 资源
+### <a name="elevate_resumable-resources"></a>ELEVATE_RESUMABLE 资源
 
 [联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 

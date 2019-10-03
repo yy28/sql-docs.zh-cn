@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228401"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207739"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "70228401"
 查询提示指定应在整个查询中使用指示的提示。 它们影响语句中的所有运算符。 如果主查询中涉及 UNION，则只有最后一个涉及 UNION 运算符的查询可以包含 OPTION 子句。 查询提示作为 [OPTION 子句](../../t-sql/queries/option-clause-transact-sql.md)的一部分指定。 如果一个或多个查询提示导致查询优化器生成无效计划，便会导致错误 8622 生成。  
   
 > [!CAUTION]  
-> 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，因此我们建议资深开发人员和数据库管理员只有在不得已时才可使用提示。  
+> 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器通常会为查询选择最佳执行计划，我们建议资深开发人员和数据库管理员仅在不得已时使用提示。  
   
 **适用范围：**  
   
@@ -107,7 +107,8 @@ ms.locfileid: "70228401"
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -148,7 +149,7 @@ ms.locfileid: "70228401"
 如果在同一查询对特定表对的 FROM 子句中指定联接提示，那么在联接两个表时优先使用此联接提示。 不过，仍必须遵循查询提示。 面向表对的联接提示可能只限制在查询提示中选择可用的联接方法。 有关详细信息，请参阅[联接提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-join.md)。  
   
 EXPAND VIEWS  
-指定展开索引视图。 还指定查询优化器不将任何索引视图视为任何查询部分的替代部分。 当查询文本中的视图名称被视图定义替换时，视图展开。  
+指定展开索引视图。 此外，还指定查询优化器不将任何索引视图视为任何查询部分的替代。 当查询文本中的视图名称被视图定义替换时，视图展开。  
   
 实际上，该查询提示不允许在查询计划中直接使用索引视图和直接在索引视图上使用索引。  
   
@@ -235,7 +236,7 @@ OPTIMIZE FOR 可能会对优化器的默认参数检测行为起反作用。 创
 OPTIMIZE FOR UNKNOWN  
 指示查询优化器在编译和优化查询时，对所有本地变量使用统计数据，而不是初始值。 此优化包括使用强制参数化创建的参数。  
   
-如果你在同一查询提示中使用 OPTIMIZE FOR @variable_name = literal\_constant  和 OPTIMIZE FOR UNKNOWN，查询优化器会使用对具体值指定的 literal\_constant  。 查询优化器会对其余变量值使用 UNKNOWN。 这些值仅用于查询优化期间，而不会用于查询执行期间。  
+如果在同一查询提示中使用 OPTIMIZE FOR @variable_name = _literal\_constant_ 和 OPTIMIZE FOR UNKNOWN，查询优化器会使用为特定值指定的 _literal\_constant_。 查询优化器会对其余变量值使用 UNKNOWN。 这些值仅用于查询优化期间，而不会用于查询执行期间。  
   
 PARAMETERIZATION { SIMPLE | FORCED }     
 指定在编译查询时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器应用于查询的参数化规则。  
@@ -252,9 +253,9 @@ RECOMPILE
 RECOMPILE 是创建存储过程的实用替代方法。 如果必须仅重新编译存储过程中的一部分查询，而不是重新编译整个存储过程，RECOMPILE 使用 WITH RECOMPILE 子句。 有关详细信息，请参阅[重新编译存储过程](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。 在创建计划指南时，RECOMPILE 也很有用。  
   
 ROBUST PLAN  
-强制查询优化器尝试一个计划，该计划可能以性能为代价获得最大可能的行大小。 处理查询时，中间表和运算符可能需要存储和处理比任一输入行宽的行。 有时，行可能很宽，导致特定运算符无法处理行。 如果行这么宽，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会在查询执行期间生成错误。 通过使用 ROBUST PLAN，可以指示查询优化器不考虑所有可能会遇到此问题的查询计划。  
+强制查询优化器尝试一个计划，该计划可能以性能为代价获得可能的最大行大小。 处理查询时，中间表和运算符可能需要存储和处理比任一输入行宽的行。 有时，行可能很宽，导致特定运算符无法处理行。 如果行这么宽，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会在查询执行期间生成错误。 通过使用 ROBUST PLAN，可以指示查询优化器不考虑所有可能会遇到此问题的查询计划。  
   
-如果计划不可能是这样，查询优化器会返回错误，而不是将错误检测延迟到查询执行阶段。 行可以包含可变长度列；[!INCLUDE[ssDE](../../includes/ssde-md.md)]允许将行大小定义为超过[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力的最大可能的大小。 通常，应用程序存储实际大小在[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力范围内的行，而不管最大可能大小。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]遇到过长的行，便会返回执行错误。  
+如果此类计划不可行，则查询优化器会返回错误，而不是将错误检测延迟到查询执行阶段。 行可以包含可变长度列；[!INCLUDE[ssDE](../../includes/ssde-md.md)]允许将行大小定义为超过[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力的最大可能的大小。 通常，应用程序存储实际大小在[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力范围内的行，而不管最大可能大小。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]遇到过长的行，便会返回执行错误。  
  
 <a name="use_hint"></a> USE HINT ( '  hint\_name  '  )    
  适用范围  ：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -297,13 +298,13 @@ ROBUST PLAN
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    针对需要对其执行基数估计的任何前导索引列，启用自动生成的快速统计信息（直方图修正）。 用于评估基数的直方图将在查询编译时针对此列的实际最大值或最小值进行调整。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 等效。 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
-   启用查询优化器修补程序（SQL Server 累积更新和 Service Pack 中发布的更改）。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 `QUERY_OPTIMIZER_HOTFIXES = ON` 等效。
+   启用查询优化器修补程序（SQL Server 累积更新和服务包中发布的更改）。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 `QUERY_OPTIMIZER_HOTFIXES = ON` 等效。
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
    强制查询优化器使用与当前数据库兼容级别相对应的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示替代[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 `LEGACY_CARDINALITY_ESTIMATION = ON` 或[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    强制查询优化器使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 此提示名与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 `LEGACY_CARDINALITY_ESTIMATION = ON` 等效。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- 强制查询优化器行为发生在查询级别。 此行为就像使用数据库兼容性级别 n  编译查询（其中，n  是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n  支持的值。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起）。    
+ 强制查询优化器行为在查询级别发生。 此行为就像使用数据库兼容性级别 n  编译查询（其中，n  是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n  支持的值。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起）。    
 
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不替代默认或旧版基数估计设置（如果它是通过数据库范围内配置、跟踪标志或 QUERYTRACEON 等其他查询提示强制执行的话）。   
@@ -327,8 +328,8 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > 某些 USE HINT 提示可能与在全局或会话级别启用的跟踪标志或与数据库作用域配置设置存在冲突。 在这种情况下，查询级别提示 (USE HINT) 将始终优先。 如果 USE HINT 与另一个查询提示或在查询级别启用（例如由 QUERYTRACEON 启用）的跟踪标志存在冲突，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在尝试执行查询时生成错误。 
 
-USE PLAN N'_xml\_plan_'  
- 强制查询优化器对查询使用由 '  xml\_plan  '  指定的现有查询计划。 无法使用 INSERT、UPDATE、MERGE 或 DELETE 语句来指定 USE PLAN。  
+<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+ 强制查询优化器为查询使用由 **'** _xml\_plan_ **'** 指定的现有查询计划。 不能使用 INSERT、UPDATE、MERGE 或 DELETE 语句来指定 USE PLAN。  
   
 TABLE HINT (  exposed\_object\_name  [ ,  \<table_hint> [ [,  ]...n  ] ] )  将指定表提示应用于与 exposed\_object\_name  对应的表或视图。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。  
   
@@ -348,7 +349,7 @@ TABLE HINT (  exposed\_object\_name  [ ,  \<table_hint> [ [,  ]...n  ] ] )  将�
 > 指定带参数的 FORCESEEK 限制优化器可以考虑的计划数大于指定不带参数的 FORCESEEK 时的计划数。 这可能导致在更多情况下出现“无法生成计划”错误。 在未来的版本中，对优化器进行内部修改后可允许考虑更多计划。  
   
 ## <a name="remarks"></a>Remarks  
- 无法在 INSERT 语句中指定查询提示，除非在语句中使用了 SELECT 子句。  
+ 只有在 INSERT 语句中使用了 SELECT 子句时，才能在该语句中指定查询提示。  
   
  只能在顶级查询中指定查询提示，不能在子查询指定。 将表提示指定为查询提示时，可以在顶级查询或子查询中指定提示。 不过，在 TABLE HINT 子句中为 exposed\_object\_name  指定的值必须与查询或子查询中的公开名称完全匹配。  
   
@@ -385,7 +386,7 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. 使用 OPTIMIZE FOR  
- 下面的示例指示查询优化器对局部变量 `@city_name` 使用值 `'Seattle'`，并在优化查询时使用统计数据来确定局部变量 `@postal_code` 的值。 该示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
+ 以下示例指示查询优化器对局部变量 `@city_name` 使用值 `'Seattle'`，并在优化查询时使用统计数据来确定局部变量 `@postal_code` 的值。 该示例使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库。  
   
 ```sql  
 DECLARE @city_name nvarchar(30);  

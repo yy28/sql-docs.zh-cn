@@ -1,6 +1,6 @@
 ---
 title: SQL Server 文档 | Microsoft Docs
-ms.date: 08/08/2019
+ms.date: 09/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
-monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sql-server-previousversions||=sqlallproducts-allversions
+ms.openlocfilehash: 098f27712b99fd5606aeb367b284f3f5201b68e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284597"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299127"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数据库管理系统 (ODBMS) 领域处于领先水平。 本文档可帮助你在 Windows 和 Linux 上安装、配置和使用 SQL Server。 内容包括端到端示例、代码示例和视频。 有关 SQL Server 语言的主题，请参阅 [语言参考](../t-sql/language-reference.md)。
@@ -113,6 +113,27 @@ SQL Server 2014 及更低版本（包括 SQL Server 2005）的相关文档位于
 |![复制服务](../sql-server/media/replication-services.png "复制服务")|**[复制](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 复制是一组技术，用于在数据库间复制和分发数据和数据库对象，然后在数据库间进行同步操作以维持一致性。 使用复制时，可以通过局域网和广域网、拨号连接、无线连接和 Internet，将数据分发到不同位置以及分发给远程用户或移动用户。|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) 向您提供知识驱动型数据清理解决方案。 DQS 使您可以生成知识库，然后使用此知识库，同时采用计算机辅助方法和交互方法，执行数据更正和消除重复的数据。 您可以使用基于云的引用数据服务，并可以生成一个数据管理解决方案将 DQS 与 SQL Server Integration Services 和 Master Data Services 相集成。|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 是用于主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 基于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 生成的解决方案可帮助确保报表和分析均基于适当的信息。 使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您可以为主数据创建中央存储库，并随着主数据随时间变化而维护一个可审核的安全对象记录。|
+| &nbsp; | &nbsp; |
+
+## <a name="other-members-of-the-sql-server-family"></a>SQL Server 系列的其他成员
+
+| “属性” | Https URL 根 |
+| :--- | :------------- |
+| Azure SQL 数据库单一数据库 | [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) |
+| Azure SQL 数据库托管实例 | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
+| 虚拟机上 (VM) 的 SQL Server | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
+| SQL 数据仓库 | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
+| Analytics Platform System (APS) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/index.md) <br/><br/> _注意：_ APS 托管的 SQL Server [并行数据仓库 (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md) 是运行大规模并行处理 (MPP) 数据仓库的软件。 |
+| Linux 上的 SQL Server | [https://docs.microsoft.com/sql/linux/](../linux/index.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="cousins-of-sql-server"></a>SQL Server 的同类
+
+| “属性” | Https URL 根 |
+| :--- | :------------- |
+| PostgreSQL 数据库 | [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/) |
+| MySQL 数据库 | [https://docs.microsoft.com/azure/mysql/](/azure/mysql/) |
+| NoSQL：&nbsp; Azure Cosmos DB | [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/) |
 | &nbsp; | &nbsp; |
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

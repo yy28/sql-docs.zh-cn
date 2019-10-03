@@ -3,17 +3,17 @@ title: 利用 Resource Governor 管理 Python 和 R 工作负荷
 description: 了解如何使用 Resource Governor 管理 SQL Server 机器学习服务中的 Python 和 R 工作负荷的 CPU、物理 IO 和内存资源分配。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eec3d2762366252fbc170c2a6c4176fe0283edce
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 9000ab8bb15e8f9910b8b780aa38d134fa984032
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714311"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823537"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>利用 SQL Server 中的 Resource Governor 管理 Python 和 R 工作负荷机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,11 +31,11 @@ Python 和 R 中的机器学习算法通常会占用大量计算资源。 根据
 
 默认情况下，机器学习的外部脚本运行时限制为不超过总计算机内存的 20%。 这取决于您的系统, 但在一般情况下, 您可能会发现, 对于严重的机器学习任务 (如定型模型或预测多行数据), 此限制不够。 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>使用 Resource Governor 来控制管理
+## <a name="manage-resources-with-resource-governor"></a>用 Resource Governor 管理资源
  
 默认情况下，外部进程最多可使用本地服务器上的总主机内存的 20%。 您可以修改默认资源池, 以使 R 和 Python 进程利用您向外部进程提供的任何容量。
 
-另外, 还可以通过关联的工作负荷组和分类器来构造自定义*外部资源池*, 以确定源自特定程序、主机或其他条件的请求的资源分配。 外部资源池是中[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]引入的一种资源池, 用于帮助管理数据库引擎外部的 R 和 Python 进程。
+或者，你可以创建自定义的**外部资源池**，其中包含关联的工作负荷组和分类器，用于确定源自特定程序、主机或你提供的其他条件的请求的资源分配。 外部资源池是中[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]引入的一种资源池, 用于帮助管理数据库引擎外部的 R 和 Python 进程。
 
 1. [启用资源调控](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor)(默认情况下处于关闭状态)。
 

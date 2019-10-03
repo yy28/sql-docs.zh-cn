@@ -1,31 +1,37 @@
 ---
-title: 在 Linux 上安装 SQL Server 机器学习服务（R、Python）
-description: 了解如何在 Red Hat、Ubuntu 和 SUSE 上安装 SQL Server 机器学习服务（R、Python）。
+title: 在 Linux 上安装 SQL Server 机器学习服务（Python、R）
+description: 了解如何在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）：Red Hat、Ubuntu 和 SUSE。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913564"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271967"
 ---
-# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（R、Python）
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>在 Linux 上安装 SQL Server 机器学习服务（Python 和 R）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-从 SQL Server 2019 的此预览版开始，[SQL Server 机器学习服务](../advanced-analytics/index.yml)在 Linux 操作系统上运行。 按照本文中的步骤安装适用于 R 和 Python 的机器学习扩展。
+本文介绍如何在 Linux 上安装 [SQL Server 机器学习服务](../advanced-analytics/index.yml)。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
 
-机器学习和编程扩展是数据库引擎的附加产品。 虽然可以[同时安装数据库引擎和机器学习服务](#install-all)，但最好先安装并配置 SQL Server 数据库引擎，以便在添加更多组件之前解决所有问题。 
+支持以下 Linux 分发版：
 
-R 和 Python 扩展的包位置位于 SQL Server Linux 源存储库中。 如果已为数据库引擎安装配置了源存储库，则可以使用相同的存储库注册运行 mssql-mlservices 包安装命令  。
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise Server (SLES)
+- Ubuntu
+
+机器学习服务是数据库引擎的一项附加功能。 虽然可以[同时安装数据库引擎和机器学习服务](#install-all)，但最好先安装并配置 SQL Server 数据库引擎，以便在添加更多组件之前解决所有问题。 
+
+Python 和 R 扩展的包位于 SQL Server Linux 源存储库中。 如果已为数据库引擎安装配置了源存储库，则可以使用相同的存储库注册运行 mssql-mlservices 包安装命令  。
 
 Linux 容器也支持机器学习服务。 我们不提供带有机器学习服务的预构建容器，但你可以使用 [GitHub 中的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)在 SQL Server 容器中创建一个容器。
 
@@ -52,8 +58,8 @@ ls /opt/microsoft/mssql/bin
 
 | 平台  | 包删除命令 | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Red Hat   | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SUSE  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
@@ -74,7 +80,7 @@ ls /opt/microsoft/mssql/bin
 
 2. 使用操作系统的包管理器和语法运行安装命令： 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
@@ -128,7 +134,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### <a name="mro-on-rhel"></a>RHEL 上的 MRO
+#### <a name="mro-on-red-hat"></a>Red Hat 上的 MRO
 
 ```bash
 # Import the Microsoft repository key
@@ -143,6 +149,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
+
 #### <a name="mro-on-suse"></a>SUSE 上的 MRO
 
 ```bash
@@ -531,7 +538,7 @@ Linux 和 Windows 之间存在供外部资源池进行[资源调控](../t-sql/st
 
 R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 协同工作的基础知识。 有关下一步，请参阅以下链接：
 
-+ [教程：在 T-SQL 中运行 R](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教程：在 T-SQL 中运行 R](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [教程：适用于 R 开发人员的数据库内分析](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 开发人员可以通过以下教程了解如何将 Python 与 SQL Server 一起使用：

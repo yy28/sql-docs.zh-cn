@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1891180d7fa3b1a064cf0cdebc5295303ecf7b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086701"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314613"
 ---
-# <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
+# <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指示对象由指定证书或非对称密钥签名。  
@@ -44,20 +44,20 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  安全对象类的类型。  
   
- *@object_id*  
- 要测试的对象的 object_id。 @object_id 的类型为 int   。  
+ *\@object_id*  
+ 要测试的对象的 object_id。 *\@object_id* 为 **int** 类型。  
   
- *@class*  
+ *\@class*  
  对象的类：  
   
 -   “证书”  
   
 -   “非对称密钥”  
   
- @class 的数据类型为 sysname   。  
+ *\@class* 为 **sysname** 类型。  
   
- *@thumbprint*  
- 对象的 SHA 指纹。 @thumbprint 的类型为 varbinary(32)   。  
+ *\@thumbprint*  
+ 对象的 SHA 指纹。 *\@thumbprint* 为 **varbinary(32)** 类型。  
   
 ## <a name="returned-types"></a>返回类型  
  **int**  

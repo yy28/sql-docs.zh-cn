@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: b414cf8eb783a64deb65010ab549c9791e82580c
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: c33e212ea513cbb5271c1271f938b1009855559c
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495382"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326151"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
 
@@ -39,13 +39,13 @@ ms.locfileid: "68495382"
 PolyBase 将一些计算推送到 Hadoop 节点，以优化总体查询。 不过，PolyBase 外部访问不仅限于 Hadoop。 其他未结构化的非关系表也受支持，如带分隔符的文本文件。
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 为 PolyBase 引入了新的连接器，包括 SQL Server、Oracle、Teradata 和 MongoDB。 有关详细信息，请参阅 [SQL Server 2019 CTP 2.0 的 PolyBase 文档](polybase-guide.md?view=sql-server-ver15)
+> SQL Server 2019 为 PolyBase 引入了新的连接器，包括 SQL Server、Oracle、Teradata 和 MongoDB。 有关详细信息，请参阅 [SQL Server 2019 的 PolyBase 文档](polybase-guide.md?view=sql-server-ver15)
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-借助 PolyBase，SQL Server 实例可处理从外部数据源中读取数据的 Transact-SQL 查询。 SQL Server 2016 及更高版本可以访问 Hadoop 和 Azure Blob 存储中的外部数据。 自 SQL Server 2019 CTP 2.0 起，现在可以使用 PolyBase 访问 [SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md) 和 [MongoDB](polybase-configure-mongodb.md) 中的外部数据。
+借助 PolyBase，SQL Server 实例可处理从外部数据源中读取数据的 Transact-SQL 查询。 SQL Server 2016 及更高版本可以访问 Hadoop 和 Azure Blob 存储中的外部数据。 从 SQL Server 2019 开始，现在可以使用 PolyBase 访问 [SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md) 和 [MongoDB](polybase-configure-mongodb.md) 中的外部数据。
 
 访问外部数据的相同查询还可以定位 SQL Server 实例中的关系表。 这样可以将外部源中的数据与数据库中的高价值关系数据合并。 在 SQL Server 中，[外部表](../../t-sql/statements/create-external-table-transact-sql.md)或[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)提供对 Hadoop 的连接。
 
@@ -90,7 +90,7 @@ PolyBase 支持在 SQL Server 中使用以下方案：
 
 - **与 BI 工具集成** 结合使用 PolyBase 和 Microsoft 的商业智能和分析堆栈，或使用任何与 SQL Server 兼容的第三方工具。
 
-## <a name="performance"></a>“性能”
+## <a name="performance"></a>性能
 
 - **将计算推送到 Hadoop。** 查询优化器制定了基于成本的决策，以在执行此操作将提升查询性能时将计算推送到 Hadoop。  它使用外部表上的统计以制定基于开销的决策。 推送计算会创建 MapReduce 作业并利用 Hadoop 的分布计算资源。
 

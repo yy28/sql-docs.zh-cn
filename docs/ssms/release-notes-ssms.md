@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/04/2019
-ms.openlocfilehash: 10f5290275a921e923ca49492eab78e4fb019475
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.date: 09/24/2019
+ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149879"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326082"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -41,13 +41,68 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-182"></a>SSMS 18.2
+## <a name="ssms-183"></a>SSMS 18.3 
 
-下载：[下载 SSMS 18.2](download-sql-server-management-studio-ssms.md)  
+下载：[下载 SSMS 18.3](download-sql-server-management-studio-ssms.md)  
+生成号：15.0.18178.0  
+发布日期：2019 年 9 月 23 日
+
+SSMS 18.3 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
+
+18.3 是对 18.2 的更新，添加了以下新项并修复了以下 bug。
+
+## <a name="whats-new-in-183"></a>18.3 的新增功能
+
+| 新建项 | 详细信息 |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 数据分类 | 向列属性 UI 添加数据分类信息（*信息类型*、*信息类型 ID*、*敏感度标签*和*敏感度标签 ID* 未在 SSMS UI 中公开）。 |
+| Intellisense/编辑器 | 更新了对最近添加到 SQL Server 2019 中的功能的支持（例如，“ALTER SERVER CONFIGURATION”）。 | 
+| Integration Services | 添加新的选择菜单项 `Tools > Migrate to Azure > Configure Azure-enabled DTExec`，该菜单项将在Azure-SSIS Integration Runtime 上将 SSIS 包执行作为 ADF 管道中的“执行 SSIS 包”活动调用。 |
+| SMO/脚本 | 添加了对 Azure SQL DW 唯一约束的支持脚本的支持。 |
+| SMO/脚本 | 数据分类 </br> 添加了对 SQL 版本 10 (SQL 2008) 及更高版本的支持。 </br> - 为 SQL 版本 15 (SQL 2019) 和更高版本以及 Azure SQL DB 添加了新的敏感度属性“rank”。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 向规则集格式添加了版本控制。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了新的检查。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 添加了对 Azure SQL 数据库托管实例的支持。 |
+| SMO/脚本 | [SQL 评估 API](../sql-assessment-api/sql-assessment-api-overview.md) - 更新了 cmdlet 的默认视图，将结果作为表格显示。 |
+
+## <a name="bug-fixes-in-183"></a>18.3 中的 bug 修复
+
+| 新项 | 详细信息 |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Analysis Services | 修复了 MDX 查询编辑器中的缩放问题。|
+| Analysis Services | 修复了 XEvent UI 中阻止户创建新会话的问题。 |
+| 到 SQL Azure 的数据库部署 | 修复了导致此功能无法正常运行的问题（在 DacFx 中）。|
+| 常规 SSMS | 修复了导致 SSMS 在 XEvent 查看器使用排序功能时崩溃的问题。 |
+| 常规 SSMS | 修复了 SSMS 还原数据库可能无限期挂起的长期未解决的问题。 </br></br> 有关更多详细信息，请参阅 UserVoice 项目：  </br> [还原数据库 -“选择备份设备”加载缓慢](https://feedback.azure.com/forums/908035/suggestions/32899099/)。  </br> [SSMS 2016 在数据库还原对话框中运行缓慢](https://feedback.azure.com/forums/908035/suggestions/32900767/)。 </br> [还原数据库速度缓慢](https://feedback.azure.com/forums/908035/suggestions/32900224/)。  </br> [单击“...”还原数据库时设备挂起](https://feedback.azure.com/forums/908035/suggestions/34281658/)。  |
+| 常规 SSMS | 修复了所有登录名的默认语言显示为阿拉伯语的问题。 </br></br> 有关更多详细信息，请参阅 UserVoice 项目：[SSMS 18.2 默认语言显示错误](https://feedback.azure.com/forums/908035/suggestions/38236363)。 |
+| 常规 SSMS | 修复了难以看到“查询选项”对话框（当用户右键单击 T-SQL 编辑器窗口时）的问题  。|
+| 常规 SSMS | 现在可以在“工具”>“选项”>“查询执行”>“SQL Server”>“高级”>“显示完成时间”下配置“结果网格/文件”（在 SSMS 18.2 中引入）中显示的“完成时间”消息  。 |
+| 常规 SSMS | 在连接对话框中，将“Active Directory - 密码”和“Active Directory - 集成”分别替换为“Azure Active Directory - 密码”和“Azure Active Directory - 集成”     。 |
+| 常规 SSMS | 修复了以下问题：当用户位于 UTC 偏移量为负的 TZ 中时，用户无法使用 SSMS 配置对 SQL Azure 托管实例的审核。 |
+| 常规 SSMS | 修复了 XEvent UI 中将鼠标悬停在网格上导致行被选中的问题。 </br></br> 有关更多详细信息，请参阅 UserVoice 项目：[SSMS 扩展事件 UI 在鼠标悬停时选择操作](https://feedback.azure.com/forums/908035/suggestions/38262124)。 |
+| 导入平面文件 | 通过让用户在简单或丰富数据类型检测之间进行选择，修复了“导入平面文件”未导入所有数据的问题。</br></br> 有关更多详细信息，请参阅 UserVoice 项目：[SSMS“导入平面文件”未能导入所有数据](https://feedback.azure.com/forums/908035/suggestions/38096989)。 |
+| Integration Services | 为 SSIS 操作报表添加新的操作类型 *StartNonCatalogExecution*。|
+| SMO/脚本 | 修复了使用 **SMO.Server.SetDefaultInitFields(true)** 时导致 SMO 在提取属性时引发错误的问题。|
+| 查询存储 UI | 修复了在“跟踪查询”视图中选择“执行计数”指标时 Y 轴无法缩放的问题   。 |
+| 漏洞评估 | 禁用了 Azure SQL DB 的清除和批准基线。|
+
+### <a name="known-issues-183"></a>已知问题 (18.3)
+
+- 无法从计算机 B 修改通过在计算机 A 上运行的 SSMS 创建的数据库关系图（SSMS 崩溃）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
+
+- 在多个查询窗口之间切换时会出现重绘问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此问题的解决方法是在“工具”>“选项”下禁用硬件加速。
+
+可参考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 了解其他已知问题，并向产品团队提供反馈。
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本：
+
+## <a name="downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720"></a>![下载](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
+
+版本号：18.2  
 生成号：15.0.18142.0  
 发布日期：2019 年 7 月 25 日
-
-SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
 
 18.2 是对 18.1 的更新，添加了以下新项并修复了以下 bug。
 
@@ -93,7 +148,7 @@ SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | SQL 代理 | 修复了在添加、插入、编辑或删除作业步骤时，焦点重置到第一行而不是活动行的问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892)。 |
 | SMO/脚本 | 修复了“CREATE OR ALTER”不对包含扩展属性的对象编写脚本的问题  。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)。 |
 | SMO/脚本 | 修复了 SSMS 无法正确编写 CREATE EXTERNAL LIBRARY 的脚本的问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089)。 |
-| SMO/脚本 |  修复了尝试对包含几千个表的数据库运行“生成脚本”导致进度对话框似乎卡滞的问题  。 |
+| SMO/脚本 | 修复了尝试对包含几千个表的数据库运行“生成脚本”导致进度对话框似乎卡滞的问题  。 |
 | SMO/脚本 | 修复了 SQL 2019 中编写外部表的脚本不起作用的问题  。 |
 | SMO/脚本 | 修复了 SQL 2019 中编写外部数据源的脚本不起作用的问题  。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080)。 |
 | SMO/脚本 | 修复了面向 Azure SQL DB 时，未编写列扩展属性脚本的问题。** 有关更多详细信息，请参阅 [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)。 |
@@ -105,19 +160,13 @@ SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 - 无从在计算机 B 中修改从在计算机 A 上运行的 SSMS 创建的数据库关系图（这会导致 SSMS 出现故障）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
-- SSMS 18.0 在多个查询窗口之间切换时的重绘问题。 请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此问题的解决方法是在“工具”   > “选项”  下禁用硬件加速。
+- 在多个查询窗口之间切换时会出现重绘问题。 请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此问题的解决方法是在“工具”   > “选项”  下禁用硬件加速。
 
 - 对于在网格、文本或文件中显示的 SSMS 结果中可以查看的数据大小，存在限制。
 
-- 在对象资源管理器中删除 Azure SQL 数据库时接收错误出现问题，但实际上会成功接收。 任务显示的错误消息不准确。
+- 在对象资源管理器中删除 Azure SQL 数据库时接收错误出现问题，但实际上会成功接收。
 
 - 不管登录名的实际默认语言设置如何，SQL 登录名的默认语言在“登录属性”对话框中都可能显示为阿拉伯语。 若要查看给定登录名的实际默认语言，请使用 T-SQL 从 master.sys.server_principles 选择登录名的 default_language_name   。
-
-可参考 [UserVoice](https://feedback.azure.com/forums/908035-sql-server) 了解其他已知问题，并向产品团队提供反馈。
-
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本：
 
 ## <a name="downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583"></a>![下载](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
@@ -126,8 +175,6 @@ SSMS 18.2 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 - 发布日期：2019 年 6 月 11 日  
 
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
-
-SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早期版本，请参阅 [SSMS 的早期版本](release-notes-ssms.md#previous-ssms-releases)。
 
 18.1 是对 18.0 的一个小更新，修复了以下新项和 bug。
 
@@ -187,7 +234,9 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 
 - 关闭 SSMS 18.1 之后，“选项”->“文本编辑器”->“编辑器选项卡”和“状态栏”->“状态栏布局和颜色”下的“组连接”和“单服务器连接”颜色选项将消失   。 重新打开 SSMS 后，“状态栏布局和颜色”选项会还原为默认设置（白色）。
 
-- 对于在网格、文本或文件中显示的 SSMS 结果中可以查看的数据大小，存在限制
+- 对于在网格、文本或文件中显示的 SSMS 结果中可以查看的数据大小，存在限制。
+
+- 无法从计算机 B 修改通过在计算机 A 上运行的 SSMS 创建的数据库关系图（SSMS 崩溃）。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649"></a>![下载](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
@@ -455,6 +504,8 @@ SSMS 18.1 是当前 SSMS 的正式发布 (GA) 版本。 如果需要 SSMS 的早
 - 安装版本 18.0 时可能会遇到以下问题：无法运行 SQL Server Management Studio。 如果遇到此问题，请按照 [SSMS2018 - 已安装，但不运行](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run)一文中的步骤进行操作。
 
 - 对于在网格、文本或文件中显示的 SSMS 结果中可以查看的数据大小，存在限制
+
+- 在多个查询窗口之间切换时会出现重绘问题。 有关更多详细信息，请参阅 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)。 此问题的解决方法是在“工具”>“选项”下禁用硬件加速。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![下载](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 

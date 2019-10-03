@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035000"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199295"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定预先部署或后期部署脚本
-预先部署和后期部署脚本在从数据库项目生成的主部署脚本之前和之后执行 Transact\-SQL 语句。 一个项目只能有一个预先部署脚本和一个后期部署脚本。 这些脚本可用于许多用途。 例如：  
+预先部署和后期部署脚本在从数据库项目生成的主部署脚本之前和之后执行 Transact\-SQL 语句。 在 Visual Studio 中，从架构比较结果更新目标时，将不执行预部署脚本。 一个项目只能有一个预先部署脚本和一个后期部署脚本。 这些脚本可用于许多用途。 例如：  
   
 -   预先部署脚本可以从要更改的表中将数据复制到一个临时表，然后重新设置数据格式并在后期部署脚本中将数据应用于已更改表。  
   
@@ -30,7 +30,7 @@ BEGIN
     DELETE FROM [dbo].[MyReferenceTable]  
 END  
 ```  
-  
+
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>添加和修改预先部署或后期部署脚本  
   
 1.  在“解决方案资源管理器”  中，展开数据库项目以便显示“脚本”文件夹。  

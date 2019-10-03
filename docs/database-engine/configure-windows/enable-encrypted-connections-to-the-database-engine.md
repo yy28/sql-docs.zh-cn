@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874327"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314500"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ TLS 使用的加密级别是 40 位还是 128 位，取决于应用程序和数�
   
 2. 完成 **“证书导出向导”** ，将证书文件存储在方便的位置。  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>将服务器配置为强制使用加密连接的具体步骤  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>将服务器配置为强制使用加密连接的具体步骤
+
+> [!IMPORTANT]
+> SQL Server 服务帐户必须具有用于在 SQL Server 上强制加密的证书的读取权限。 对于非特权服务帐户，需要将读取权限添加到证书中， 否则可能会导致 SQL Server 服务重启失败。
   
 1. 在“SQL Server 配置管理器”  中，展开“SQL Server 网络配置”  右键单击“\<server instance>  的协议”  ，然后选择“属性”  。  
   

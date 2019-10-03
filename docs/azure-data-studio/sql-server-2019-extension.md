@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878622"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326023"
 ---
-# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展（预览版）
+# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>适用于 Azure Data Studio 的 SQL Server 2019 扩展（预览版）
 
-SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能和工具提供预览支持。 这包括 [SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)的预览支持，集成的[笔记本体验](../big-data-cluster/notebooks-guidance.md)和 PolyBase 的[“创建外部表”向导](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
+适用于 Azure Data Studio 的 SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供对新功能和工具的预览支持。 这包括 [SQL Server 2019 大数据群集](../big-data-cluster/big-data-cluster-overview.md)的预览支持，集成的[笔记本体验](../big-data-cluster/notebooks-guidance.md)和 PolyBase 的[“创建外部表”向导](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安装 SQL Server 2019 扩展（预览版）
 
@@ -143,58 +143,3 @@ SQL Server 2019 扩展（预览版）为支持 [!INCLUDE[sql-server-2019](../inc
 * 如果未在目标服务器中启用或运行 PolyBase，则阻止使用“创建外部数据”向导。
 * 修复了与 SQL Server 2019 和创建外部数据相关的拼写和命名问题。
 * 消除了 Azure Data Studio 调试控制台中的大量错误。
-
-##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 大数据群集支持
-
-* 单击“对象资源管理器”中的“添加连接”，然后选择“SQL Server 大数据群集”作为连接类型    。
-
-   > [!TIP]
-   > 如果未看到 SQL Server 大数据群集连接类型，请重启 Azure Data Studio  。
-
-* 输入群集终结点的主机名或 IP 地址以及用于连接的用户名和密码。
-* （可选）在“名称”字段中包含友好显示名称  。
-* 单击“连接”，然后可以从仪表板启动常见任务，在对象资源管理器中浏览 HDFS，并在其中运行上下文任务   。
-* 要针对群集提交 Spark 作业，请右键单击“对象资源管理器”中的“服务器节点”，然后选择“提交 Spark 作业”以打开提交对话框   。
-* 要打开 Notebook，请参阅下一部分。
-
-有关详细信息，请参阅[大数据群集](../big-data-cluster/big-data-cluster-overview.md)。
-
-
-## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebooks
-
-* 使用以下方法之一打开一个笔记本：
-  * 通过命令面板打开一个新笔记本  。
-  * 打开 SQL Server 2019 大数据群集的 HDFS 对象资源管理器树，并执行以下任一操作：
-    * 右键单击服务器节点，然后选择“新建 Jupyter Notebook”  。
-    * 右键单击 CSV 文件，然后选择“在 Notebook 中分析”  。
-  * 从“文件”菜单或文件资源管理器打开现有的 .ipynb 文件（必须将 .ipynb 文件升级到版本 4 或更高版本才能正确加载）  
-* 选择内核。 对于本地笔记本执行，请选择 Python 3。 要进行远程执行，请选择 PySpark 或 Spark | Scala。
-* 如果要远程执行，请选择要连接的 SQL Server 大数据群集终结点（如果使用 Python 3 进行本地开发，这不是必需的）。
-* 通过笔记本标题中的按钮添加代码或 markdown 单元格。 使用每个单元格左侧的垃圾桶图标删除单元格。
-* 使用代码单元格的播放按钮运行单元格，并使用眼睛图标在 markdown 编辑和预览之间进行切换
-
-## <a name="polybase-create-external-table-wizard"></a>PolyBase“创建外部表”向导
-
-* 在 SQL Server 2019 实例中，可以通过三种方式打开“创建外部表向导”  ：
-  * 右键单击服务器，选择“管理”，单击 SQL Server 2019 （预览版）的选项卡，然后选择“创建外部表”   。
-  * 在“对象资源管理器”中选择 SQL Server 2019 实例后，通过“命令面板”调出“创建外部向导”    。
-  * 右键单击“对象资源管理器”中的 SQL Server 2019 数据库，然后选择“创建外部表”   。
-* 在此版本的扩展中，可以创建外部表以访问远程 SQL Server 和 Oracle 表。
-
-  > [!NOTE]
-  > 虽然外部表功能是 SQL 2019 功能，但远程 SQL Server 可能正在运行早期版本的 SQL Server。
-
-* 在向导的第一页上选择是访问 SQL Server 还是访问 Oracle，然后继续。
-* 如果尚未创建数据库主密钥，系统将提示创建数据库主密钥（复杂度不足的密码将被阻止）。
-* 为远程服务器创建数据源连接和命名的凭据。
-* 选择要映射到新外部表的对象。
-* 选择“生成脚本”或“创建”以完成向导   。
-* 创建外部表后，它会直接显示在创建时所在的数据库的对象树中。
-
-
-## <a name="known-issues"></a>已知问题
-
-* 如果在创建连接时未保存密码，则某些操作（如提交 Spark 作业）可能会失败。
-* 需要将现有 .ipynb 笔记本升级到版本 4 或更高版本才能在查看器中加载内容。
-* 运行“重新安装 Notebook 依赖项”命令可能会在任务视图中显示 2 个任务，其中一个任务会失败  。 这不会导致安装失败
-* 在 Notebook 中选择“添加新连接”并单击“取消”后会显示“选择连接”，即使已连接   。

@@ -24,12 +24,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117719"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342005"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  一个整数值，指定删除和插入的开始位置。 如果 start 为负或为零，则返回空字符串  。 如果 start 的长度大于第一个 character_expression，则返回空字符串   。 start 的类型可以是 bigint   。  
   
  *length*  
- 一个整数，指定要删除的字符数。 如果 length 为负，则返回空字符串  。 如果 length 的长度大于第一个 character_expression，则最多可以删除到最后一个 character_expression 中的最后一个字符    。  如果 length 为零，则在字符串中第一个字符之前插入内容  。 length 的类型可以是 bigint   。
+ 一个整数，指定要删除的字符数。 如果 length 为负，则返回空字符串  。 如果 length 的长度大于第一个 character_expression，则最多可以删除到最后一个 character_expression 中的最后一个字符    。  如果 *length* 为零，则插入在 *start* 位置发生，并且不会删除任何字符。 length 的类型可以是 bigint   。
 
  replaceWith_expression   
  字符数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量，也可以是字符列或二进制数据列  。 此表达式从 start 开始替换 length 个字符的 character_expression    。 如果 replaceWith_expression 为 `NULL`，则在不插入任何内容的情况下删除字符  。   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014486"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250977"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014486"
   
 -   每台计算机的可用性组和可用性数据库的最大数目  ：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 已测试每台物理计算机多达 10 个 AG 和 100 个数据库，但这不是绑定限制。 根据服务器上的硬件规范和工作负载，可以在 SQL Server 的实例上放置更多数据库和可用性组。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
   
--   **不要使用故障转移群集管理器来操作可用性组：**  
+-   **不要使用故障转移群集管理器来操作可用性组**。 SQL Server 故障转移群集实例 (FCI) 的状态在 SQL Server 和 Windows故障转移群集 (WSFC) 之间共享，并且 SQL Server 保留的实例状态信息的详细程度超出群集所需的程度。 管理模型为 SQL Server 必须驱动事务，并负责使群集的状态视图与 SQL Server 的状态视图保持同步。 如果在 SQL Server 外部更改了群集的状态，则该状态有可能在 WSFC 和 SQL Server 之间不同步，这可能会导致意外行为。
   
      例如：  
   

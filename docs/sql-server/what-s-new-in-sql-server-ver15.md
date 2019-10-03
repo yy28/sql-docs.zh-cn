@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096889"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326188"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -77,11 +77,12 @@ ms.locfileid: "71096889"
 |可恢复联机行存储索引生成 | 请参阅[联机执行索引操作](../relational-databases/indexes/perform-index-operations-online.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>内存中数据库
+### <a name="in-memory-database"></a>内存中数据库
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|混合缓冲池的 DDL 控制 |使用[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)，可以在需要时直接访问位于永久性内存 (PMEM) 设备上数据库文件中的数据库页。|
+|混合缓冲池| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的新功能，可以在需要时直接访问位于永久性内存 (PMEM) 设备上数据库文件中的数据库页。 请参阅[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)。|
+|内存优化 `tempdb` 元数据| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了属于[内存数据库](../relational-databases/in-memory-database.md)功能系列的新功能，即内存优化 `tempdb` 元数据，它可有效消除此瓶颈，并为 `tempdb` 繁重的工作负荷解锁新的可伸缩性级别。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 请参阅[内存优化 `tempdb` 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Unicode 支持
@@ -99,13 +100,6 @@ ms.locfileid: "71096889"
 |支持 UTF-8 字符编码|外部表支持 UTF-8 字符。 请参阅[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>服务器设置
-
-|新增功能或更新 | 详细信息 |
-|:---|:---|
-|混合缓冲池| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的新功能，可以在需要时直接访问位于永久性内存 (PMEM) 设备上数据库文件中的数据库页。 请参阅[混合缓冲池](../database-engine/configure-windows/hybrid-buffer-pool.md)。|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>性能监视
 
 |新增功能或更新 | 详细信息 |
@@ -117,6 +111,7 @@ ms.locfileid: "71096889"
 |`sys.dm_exec_query_plan_stats` |新的 DMF 返回大多数查询的最后已知实际执行计划的等效项。 请参阅 [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)。|
 |`LAST_QUERY_PLAN_STATS` | 要启用 `sys.dm_exec_query_plan_stats` 的新数据库范围配置。 请参阅 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
 |`query_post_execution_plan_profile` | 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 `query_post_execution_showplan` 不同。 请参阅[查询分析基础结构](../relational-databases/performance/query-profiling-infrastructure.md)。|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | 新的 DMF 返回有关数据库中页面的信息。 请参阅 [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)。|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>语言扩展
@@ -147,7 +142,6 @@ ms.locfileid: "71096889"
 |资源调控| `REQUEST_MAX_MEMORY_GRANT_PERCENT` 和 `ALTER WORKLOAD GROUP` 的 `CREATE WORKLOAD GROUP` 选项的可配置值已从整数更改为浮点数数据类型，以允许更精细地控制内存限制。 请参阅[修改工作负载组](../t-sql/statements/alter-workload-group-transact-sql.md)和[创建工作负载组](../t-sql/statements/create-workload-group-transact-sql.md)。|
 |减少了对工作负荷的重新编译| 改进跨多个作用域使用临时表。 请参阅[减少了对工作负荷的重新编译](../relational-databases/tables/tables.md#ctp23) |
 |间接检查点可伸缩性 |请参阅[改进了间接检查点可伸缩性](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)。|
-|内存优化 `tempdb` 元数据| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引入了属于[内存数据库](../relational-databases/in-memory-database.md)功能系列的新功能，即内存优化 `tempdb` 元数据，它可有效消除此瓶颈，并为 `tempdb` 繁重的工作负荷解锁新的可伸缩性级别。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，管理临时表元数据时所涉及的系统表可以移动到无闩锁的非持久内存优化表中。 请参阅[内存优化 `tempdb` 元数据](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)。|
 |并发 PFS 更新|[PFS 页](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)是数据库文件中的特殊页面，SQL Server 用来在为对象分配空间时帮助定位可用空间的。 PFS 页上的页闩锁争用通常与 [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) 关联，但当有许多并发对象分配线程时，也可能会在用户数据库上发生。 此改进改变了使用 PFS 更新来管理并发的方式，这样就能在共享闩锁（而不是排他闩锁）下更新它们。 自 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 起，此行为在所有数据库（包括 `tempdb`）中默认处于启用状态。|
 |行模式内存授予反馈 |通过调整批处理模式和行模式运算符的内存授予大小，扩展了批处理模式内存授予反馈功能。 这可以自动更正导致内存浪费和并发减少的过度授予，并更正导致费用高昂的溢出到磁盘的内存授予不足。 请参阅[行模式内存授予反馈](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。 |
 |表变量延迟编译|提升了引用表变量的查询的计划质量和整体性能。 在优化和初始编译期间，此功能传播基于实际表变量行计数的基数估计。 这种准确的行计数信息可优化下游计划操作。 请参阅[表变量延迟编译](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)。 |

@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的标量 UDF 内联 | Microsoft Docs
 description: 标量 UDF 内联功能可提高在 SQL Server（2018 及更高版本）和 Azure SQL 数据库中调用标量 UDF 的查询性能。
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030337"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299140"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -154,7 +154,8 @@ SQL Server 2017 （兼容级别 140 及更早版本）中此查询的执行计�
 - UDF使用 `EXECUTE AS CALLER` 子句（如果未指定 `EXECUTE AS` 子句，则为默认行为）。
 - UDF 不引用表变量或表值参数。
 - 调用标量 UDF 的查询不会在其 `GROUP BY` 子句中引用标量 UDF 调用。
-- 使用 `DISTINCT` 子句在其 SELECT 列表中调用标量 UDF 的查询不会在其 `ORDER BY` 子句中引用标量 UDF 调用。
+- 使用 `DISTINCT` 子句在其选择列表中调用标量 UDF 的查询没有 `ORDER BY` 子句。
+- `ORDER BY` 子句中未使用 UDF。
 - UDF 不是本机编译的（支持互操作）。
 - UDF 不用于计算列或检查约束定义。
 - UDF 不引用用户定义类型。

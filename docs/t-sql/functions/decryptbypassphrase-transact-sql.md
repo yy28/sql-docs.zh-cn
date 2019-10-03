@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d24a636e47c6e969b339350caba0f8609a86d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079927"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314524"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 使用密钥加密的数据字符串。 ciphertext 具有 varbinary 数据类型   。  
  
 @ciphertext  
-varbinary 类型的变量，包含使用密钥加密的数据  。 @ciphertext 变量的最大大小为 8,000 字节  。  
+varbinary 类型的变量，包含使用密钥加密的数据  。 *\@ciphertext* 变量的最大大小为 8,000 字节。  
   
 add_authenticator   
 指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 add_authenticator 具有 1 值  。 add_authenticator 具有 int 数据类型   。  
   
 @add_authenticator  
-变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 @add_authenticator 的值为 1  。 @add_authenticator 具有 int 数据类型   。  
+变量，指示原始加密过程是否包含验证器和纯文本以及是否对其进行加密。 如果加密过程使用验证器，则 *\@add_authenticator* 具有值 1。 *\@add_authenticator* 具有 **int** 数据类型。  
 
 authenticator   
 用作验证器生成基础的数据。 authenticator 具有 sysname 数据类型   。  
   
 @authenticator  
-包含用作验证器生成基础的数据的变量。 @authenticator 具有 sysname 数据类型   。  
+包含用作验证器生成基础的数据的变量。 *\@authenticator* 具有 **sysname** 数据类型。  
   
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）  。  

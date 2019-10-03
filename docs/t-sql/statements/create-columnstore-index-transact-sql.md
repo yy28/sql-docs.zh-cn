@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b17fe334b1261d463e8389564912e48b7553dc7f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929679"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326105"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -396,7 +396,7 @@ filegroup_name
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 特定限制**  
 这些限制仅适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在此版本中，我们引入了可更新的聚集列存储索引。 非聚集列存储索引仍为只读。  
 
--   更改跟踪。 不能对非聚集列存储索引 (NCCI) 使用更改跟踪，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
+-   更改跟踪。 不能将更改跟踪与列存储索引配合使用。  
 -   变更数据捕获。 不能对非聚集列存储索引 (NCCI) 使用变更数据捕获，因为这类索引是只读的。 它适用于聚集列存储索引 (CCI)。  
 -   可读辅助副本。 不能通过 Always OnReadable 可用性组的可读辅助副本访问聚集列存储索引 (CCI)。  可以通过可读辅助副本访问非聚集列存储索引 (NCCI)。  
 -   多重活动结果集 (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 对包含列存储索引的表执行只读连接。 不过，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支持使用 MARS 对包含列存储索引的表执行并发数据操作语言 (DML) 操作。 如果发生这种情况，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会终止连接，并中止事务。  

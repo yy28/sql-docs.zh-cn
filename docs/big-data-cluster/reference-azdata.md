@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391952"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816653"
 ---
 # <a name="azdata"></a>azdata
 
@@ -27,9 +27,8 @@ ms.locfileid: "70391952"
 |[azdata sql](reference-azdata-sql.md) | SQL DB CLI 允许用户通过 T-SQL 与 SQL Server 交互。 |
 |[azdata app](reference-azdata-app.md) | 创建、删除、运行和管理应用程序。 |
 |[azdata bdc](reference-azdata-bdc.md) | 选择、管理和操作 SQL Server 大数据群集。 |
-|[azdata 控件](reference-azdata-control.md) | 创建、删除和管理控制平面。 |
-[azdata login](#azdata-login) | 登录到群集的控制器终结点。
-[azdata logout](#azdata-logout) | 注销群集。
+|[azdata login](#azdata-login) | 登录到群集的控制器终结点。
+|[azdata logout](#azdata-logout) | 注销群集。
 ## <a name="azdata-login"></a>azdata login
 部署群集时，它将在部署期间列出控制器终结点，你应该使用该终结点登录。  如果不知道控制器终结点，则可通过在系统上将群集的 kube 配置置于默认位置 <user home>/.kube/config 进行登录，或使用 KUBECONFIG 环境变量（即 export KUBECONFIG=path/to/.kube/config）进行登录。
 ```bash
@@ -68,7 +67,7 @@ azdata login -n ClusterName
 #### `--output -o`
 输出格式。  允许的值：json、jsonc、table、tsv。  默认值：json。
 #### `--query -q`
-JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/])，获取详细信息和示例。
+JMESPath 查询字符串。 请参阅 [http://jmespath.org/](http://jmespath.org/)，获取详细信息和示例。
 #### `--verbose`
 提高日志记录详细程度。 使用 --debug 获取完整的调试日志。
 ## <a name="azdata-logout"></a>azdata logout

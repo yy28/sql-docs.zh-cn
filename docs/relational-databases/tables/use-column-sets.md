@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140369"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326131"
 ---
 # <a name="use-column-sets"></a>使用列集
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -91,14 +91,14 @@ ms.locfileid: "68140369"
 -   在列集的 XML 表示中将忽略包含 null 值的稀疏列。  
   
 > [!WARNING]  
->  添加列集会更改 SELECT * 查询的行为。 此查询会将列集作为 XML 列返回，而不返回单个稀疏列。 架构设计人员和软件开发人员必须小心，不要破坏现有应用程序。  
+>  添加列集会更改 `SELECT *` 查询的行为。 此查询会将列集作为 XML 列返回，而不返回单个稀疏列。 架构设计人员和软件开发人员必须小心，不要破坏现有应用程序。  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>在列集中插入或修改数据  
  可以通过以下方法来执行稀疏列的数据操作：使用单个列的名称，或者引用列集的名称并使用列集的 XML 格式来指定列集的值。 稀疏列可以按任何顺序出现在 XML 列中。  
   
  当使用 XML 列集插入或更新稀疏列值时，插入基础稀疏列的值将从 **xml** 数据类型隐式转换为另一种类型。 对于数值列，数值列的 XML 中的空白值将转换为空字符串。 这会导致在数值列中插入零，如下面的示例所示。  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  在本示例中，没有为 `i`列指定值，但插入了 `0` 值。  
   
-## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 数据类型  
+## <a name="using-the-sql_variant-data-type"></a>使用 sql_variant 数据类型  
  **sql_variant** 日期类型可以存储多种不同的数据类型，如 **int** **char** 和 **date**。 列集会输出数据类型信息（例如与 **sql_variant** 值关联的小数位数、精度以及区域设置信息）作为生成的 XML 列中的属性。 如果尝试在自定义生成的 XML 语句中将这些属性作为对列集的插入或更新操作的输入提供，则其中一些属性是必需的，并会为一些属性分配默认值。 下表列出数据类型以及在未提供值时服务器所生成的默认值。  
   
 |数据类型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大长度|精度|小数位数|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  该表只有五列，以便易于显示和读取。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. 使用稀疏列的名称向表中插入数据  
  下面的示例向示例 A 中创建的表插入两行。这些示例使用稀疏列的名称，而不引用列集。  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. 使用列集的名称向表中插入数据  
  下面的示例向示例 A 中创建的表插入第三行。这一次不使用稀疏列的名称， 而是使用列集的名称，插入操作以 XML 格式为四个稀疏列中的两列提供值。  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. 观察使用 SELECT * 时的列集结果  
  下面的示例从包含列集的表中选择所有列。 它返回具有稀疏列的组合值的 XML 列， 而不是单独返回每个稀疏列。  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. 观察按名称选择列集的结果  
  因为生产部门对市场数据不感兴趣，所以本示例添加 `WHERE` 子句以限制输出。 本示例使用列集的名称。  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. 观察按名称选择稀疏列的结果  
  当表包含列集时，您仍然可以使用各列名称来查询表，如下例所示。  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. 使用列集来更新表  
  下面的示例用第三个记录所在行使用的两个稀疏列的新值来更新该记录。  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  下面的示例更新第三个记录，但仅仅指定两个已填充列的其中一列的值。 在 `ProductionLocation` 语句中未包括第二列 `UPDATE` ，所以该列更新为 NULL。  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

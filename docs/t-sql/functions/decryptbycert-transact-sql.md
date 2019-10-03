@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: febf3a874ba0632c90117d52e74ce31926bfbbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118952"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314535"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ varbinary 类型的变量，包含使用证书进行加密的数据  。
 用于加密证书私钥的密码。 cert_password 必须采用 Unicode 数据格式  。  
   
  @cert_password  
-类型为 nchar 或 nvarchar 的变量，其中包含用来加密证书私钥的密码   。 @cert_password 必须采用 Unicode 数据格式  。  
+类型为 nchar 或 nvarchar 的变量，其中包含用来加密证书私钥的密码   。 *\@cert_password* 必须具有 Unicode 数据格式。  
 
 ## <a name="return-types"></a>返回类型  
 varbinary（最大大小为 8,000 个字节）  。  

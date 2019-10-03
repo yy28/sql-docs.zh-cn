@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163926"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227181"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL)
 
@@ -3041,7 +3041,9 @@ command|Like|%DWResultCacheDb%|
 1. 新查询与生成结果集缓存的上一个查询之间存在完全匹配。
 1. 生成缓存结果集的表中没有任何数据或架构更改。  
 
-数据库启用结果集缓存之后，将缓存所有查询（DateTime.Now() 等具有非确定性函数的查询除外）的结果，直到缓存已满。   在创建结果缓存时，具有大型结果集（例如，大于 1 百万行）的查询在第一次运行期间可能会遇到性能降低。
+数据库启用结果集缓存后，将缓存所有查询的结果，直到缓存已满，但使用非确定性函数（例如 DateTime.Now()）的查询和返回行大小大于 64 KB 的数据的查询除外。   
+
+在创建结果缓存时，具有大型结果集（例如，大于 1 百万行）的查询在第一次运行期间可能会遇到性能降低。
 
 **<snapshot_option> ::=**        
 

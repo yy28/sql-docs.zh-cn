@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653775"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326120"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 
@@ -47,7 +47,9 @@ tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVers
   - 由数据修改事务为实现联机索引操作、多个活动的结果集 (MARS) 以及 AFTER 触发器等功能而生成的行版本。  
   
 **tempdb** 中的操作是最小日志记录操作，以便回滚事务。 每次启动**时都会重新创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，从而在系统启动时总是具有一个干净的数据库副本。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此 **tempdb** 中不会有什么内容从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话保存到另一个会话。 不允许对 **tempdb**进行备份和还原操作。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中 tempdb 的物理属性
 
 下表列出了 SQL Server 中 tempdb  数据和日志文件的初始配置值（基于模型数据库的默认设置）。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
@@ -242,9 +244,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. 针对内存优化表的查询不支持锁定和隔离提示，因此针对内存优化 TempDB 目录视图的查询将不会遵循锁定和隔离提示。 与 SQL Server 中的其他系统目录视图一样，针对系统视图的所有事务都将处于 READ COMMITTED（或在本例中为 READ COMMITTED SNAPSHOT）隔离。
-4. 启用了内存优化的 tempdb 元数据时，临时表上的列存储索引可能会存在一些问题。 对于此预览版，最好在使用内存优化 tempdb 元数据时避免在临时表上使用列存储索引。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. 如果启用内存优化的 tempdb 元数据，则无法在临时表上创建[列存储索引](../indexes/columnstore-indexes-overview.md)。
 
 > [!NOTE] 
 > 这些限制仅适用于引用 TempDB 系统视图的情况，如果需要，可在访问用户数据库中内存优化表的同一事务中创建临时表。
@@ -253,6 +253,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+如果启用内存优化的 TempDB 元数据后，服务器因任何原因未能启动，则可以使用 **-f** 启动选项以[最小配置](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)启动 SQL Server，从而绕过该功能。 这将使用户能够禁用该功能，然后在正常模式下重启 SQL Server。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量规划
 
