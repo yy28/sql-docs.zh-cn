@@ -105,7 +105,7 @@ ProductID               Result
 ...  
 ```  
   
- 下面的查询构造了包含产品特定信息的 XML。 此信息包括 ProductID、ProductName、ProductPrice 以及属于特定产品型号 (ProductModelID=19) 的所有产品的 ProductModelName（如果有）。 然后，XML 被分配给@x的变量**xml**类型。  
+ 下面的查询构造了包含产品特定信息的 XML。 此信息包括 ProductID、ProductName、ProductPrice 以及属于特定产品型号 (ProductModelID=19) 的所有产品的 ProductModelName（如果有）。 然后，XML 被分配给@x的变量 **xml** 类型。  
   
 ```sql
 declare @x xml  

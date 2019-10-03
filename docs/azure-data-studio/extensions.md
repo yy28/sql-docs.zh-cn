@@ -26,8 +26,8 @@ ms.locfileid: "70274832"
 
 ## <a name="add-azure-data-studio-extensions"></a>添加 Azure Data Studio 扩展
 
-1. 若要打开扩展管理器并访问可用扩展，请选择扩展图标，或在“视图”菜单中选择“扩展”   。
-    还可通过按 `Ctrl+Shift+X` (Windows/Linux) 或 `Command+Shift+X` (Mac) 来快速访问扩展管理器。
+1. 若要打开扩展管理器并访问可用扩展，请选择扩展图标，或在“视图”菜单中选择“扩展”   。\
+    还可通过按 `Ctrl+Shift+X` (Windows/Linux) 或 `Command+Shift+X` (Mac) 来快速访问扩展管理器。\
     ![扩展管理器图标](media/extensions/extension-manager-icon.png)
 
 2. 选择某个可用扩展以查看其详细信息。

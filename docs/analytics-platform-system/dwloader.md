@@ -135,7 +135,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用参数文件*parameter_file_name*来代替命令行参数。 *parameter_file_name*可以包含除*用户名*和*密码*以外的任何命令行参数。 如果在命令行和参数文件中指定了参数, 则命令行将覆盖 file 参数。  
   
-参数文件包含一个参数, 每行不 **-** 含前缀。  
+参数文件包含一个参数, 每行不**-** 含前缀。  
   
 例如：  
   
@@ -143,7 +143,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+**-S** *target_appliance*  
 指定将接收已加载数据的 SQL Server PDW 设备。  
   
 *对于无限连接*, 将*target_appliance*指定为 < 设备名称 >-SQLCTL01。 若要配置此命名连接, 请参阅[配置无限的网络适配器](configure-infiniband-network-adapters.md)。  
@@ -156,10 +156,10 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T***target_database_name。* [*架构*]。*table_name*  
+**-T** *target_database_name。*[*架构*]。*table_name*  
 目标表的由三部分构成的名称。  
   
-**-I***source_data_location*  
+**-I** *source_data_location*  
 要加载的一个或多个源文件的位置。 每个源文件都必须是使用 gzip 进行压缩的文本文件或文本文件。 只有一个源文件可以压缩到每个 gzip 文件中。  
   
 设置源文件的格式:  
@@ -603,7 +603,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-以下脚本代码片段使用 dwloader 将数据加载到 Dbo.dimaccount 表和 DimCurrency 表中。 此脚本使用的是以太网地址。 如果使用了 "无限", 则服务器将 *< appliance_name >* `-SQLCTL01`。  
+以下脚本代码片段使用 dwloader 将数据加载到 Dbo.dimaccount 表和 DimCurrency 表中。 此脚本使用的是以太网地址。 如果使用了 "无限", 则服务器将 *< appliance_name >*`-SQLCTL01`。  
   
 ```  
 set server=10.193.63.134  
@@ -694,7 +694,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-r \r\n*以回车符和换行符结尾指定 dbo.dimaccount 中的每一行。  
   
--   *-U < login_name >-P <password>* 指定有权执行加载的登录名和密码。  
+-   *-U < login_name >-P <password> *指定有权执行加载的登录名和密码。  
   
 
 <!-- MISSING LINK

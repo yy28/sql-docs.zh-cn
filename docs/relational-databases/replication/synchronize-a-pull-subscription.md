@@ -47,11 +47,11 @@ ms.locfileid: "68769396"
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地订阅”** 文件夹。  
   
-3.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
+3.  右键单击要同步的订阅，然后单击 **“查看同步状态”**。  
   
-4.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。   完成同步后，将显示消息 **“同步完成”** 。  
+4.  在“查看同步状态 - \<订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。 完成同步后，将显示消息 **“同步完成”** 。  
   
-5.  单击 **“关闭”** 。  
+5.  单击 **“关闭”**。  
   
 ##  <a name="ReplProg"></a> Replication Agents  
  可通过在命令提示符下调用相应的复制代理可执行文件，以编程方式按需同步请求订阅。 被调用的复制代理可执行文件将取决于请求订阅所属的发布的类型。 有关详细信息，请参阅 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)。  
@@ -85,7 +85,7 @@ ms.locfileid: "68769396"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68769396"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   

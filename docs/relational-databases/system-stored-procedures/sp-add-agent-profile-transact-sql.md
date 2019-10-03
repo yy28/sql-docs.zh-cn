@@ -62,7 +62,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @description = ] 'description'`配置文件的说明。 *description*的值为**nvarchar (3000)** , 无默认值。  
   
-`[ @default = ] default`指示配置文件是否为*agent_type * ** 的默认值。 *默认值*为**bit**, 默认值为**0**。 **1**指示要添加的配置文件将成为*agent_type*指定的代理的新默认配置文件。  
+`[ @default = ] default`指示配置文件是否为*agent_type* ** 的默认值。 *默认值*为**bit**, 默认值为**0**。 **1**指示要添加的配置文件将成为*agent_type*指定的代理的新默认配置文件。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** (成功) 或**1** (失败)  

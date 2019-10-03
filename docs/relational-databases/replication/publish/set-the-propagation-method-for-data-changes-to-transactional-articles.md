@@ -120,7 +120,7 @@ ms.locfileid: "68769777"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 \@publication  指定项目所属的发布的名称，为 \@article  指定项目的名称，为 \@source_object  指定要发布的数据库对象，并为包含值 0x02  （可自动生成自定义存储过程）的 \@schema_option  位掩码以及下列至少一个参数指定值：  
   
-    -   \@ins_cmd  - 指定 CALL sp_MSins_article_name*  *** 值，其中 article_name 是为 \@article  指定的值。  
+    -   \@ins_cmd  - 指定 CALL sp_MSins_*article_name* ** 值，其中 article_name 是为 \@article  指定的值。  
   
     -   \@del_cmd  - 指定 CALL sp_MSdel_article_name ***** * 或 XCALL sp_MSdel_article_name*  *** 值，其中 article_name 是为 \@article  指定的值。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68769777"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。 为 \@publication  指定项目所属的发布的名称，为 \@article  指定项目的名称，为 \@source_object  指定要发布的数据库对象，并为包含值 0x02  （可自动生成自定义存储过程）的 \@schema_option  位掩码以及下列至少一个参数指定值：  
   
-    -   \@ins_cmd  - 指定 CALL sp_MSins_article_name*  *** 值，其中 article_name 是为 \@article  指定的值。  
+    -   \@ins_cmd  - 指定 CALL sp_MSins_*article_name* ** 值，其中 article_name 是为 \@article  指定的值。  
   
     -   \@del_cmd  - 指定 CALL sp_MSdel_article_name ***** * 或 XCALL sp_MSdel_article_name*  *** 值，其中 article_name 是为 \@article  指定的值。  
   

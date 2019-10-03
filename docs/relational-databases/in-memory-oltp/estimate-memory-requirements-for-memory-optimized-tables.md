@@ -171,13 +171,13 @@ SELECT * FRON t_hk
   
 在任意时刻，内存中都可能存在一定数量的额外行等待垃圾回收周期释放其内存，因此，必须具有足够的内存来容纳这些额外的行。  
   
-可通过下面的公式估算额外行的数目：每秒行更新和行删除的高峰次数 * 执行事务所需的最长秒数（最少为 1）。  
+可通过下面的公式估算额外行的数目：每秒行更新和行删除的高峰次数 执行事务所需的最长秒数（最少为 1）。  
   
 再用该值乘以行大小即可获得行版本控制所需占用的字节数。  
   
 `rowVersions = durationOfLongestTransctoinInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
-可通过下面的公式估算陈旧行的内存需求：陈旧行数目 * 内存优化表的行大小（参见上文的 [表占用的内存](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) ）。  
+可通过下面的公式估算陈旧行的内存需求：陈旧行数目 内存优化表的行大小（参见上文的 [表占用的内存](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) ）。  
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
