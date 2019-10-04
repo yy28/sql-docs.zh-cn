@@ -1,5 +1,5 @@
 ---
-title: 在报表服务器站点 （升级顾问） 上检测到 ISAPI 筛选器 |Microsoft Docs
+title: 在 Report Server 站点上检测到 ISAPI 筛选器（升级顾问） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ISAPI filters
 - report servers [Reporting Services], upgrade issues
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 812fc3584f0d0742ea6065e4600da1f9a7755385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2b811955839eb22e3325d64c55454b92a6b1b8c
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094157"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952445"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>在报表服务器站点上检测到 ISAPI 筛选器（升级顾问）
-  升级顾问检测到承载报表服务器和报表管理器虚拟目录的网站上存在一个或多个 ISAPI 筛选器。 中不支持 ISAPI 筛选器[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+  升级顾问检测到承载报表服务器和报表管理器虚拟目录的网站上存在一个或多个 ISAPI 筛选器。 @No__t-0 @ no__t 中不支持 ISAPI 筛选器。  
   
 ||  
 |-|  
@@ -30,7 +30,7 @@ ms.locfileid: "66094157"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  升级之前，请验证 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序是否使用了网站上的 ISAPI 筛选器。 如果不需要 ISAPI 筛选器，您可以升级报表服务器。 安装程序将创建默认 URL，并且不为在 IIS 中运行的 ISAPI 筛选器提供支持。 如果需要 ISAPI 筛选器，则在找到承载 ISAPI 筛选器的其他方法（例如，使用 ISA Server 或继续在 IIS 中承载 ISAPI 筛选器）之前请不要进行升级。 在某些情况下，报表服务器支持 ASP.NET HTTPModules 作为 ISAPI 筛选器的替代项。 有关详细信息，请参阅 MSDN 上的 ASP.NET 文档。  
   
 ## <a name="corrective-action"></a>纠正措施  

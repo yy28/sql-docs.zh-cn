@@ -1,10 +1,10 @@
 ---
 title: sys.databases _exec_requests （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326170"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923777"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -47,7 +47,7 @@ ms.locfileid: "71326170"
 |database_id|**smallint**|对其执行请求的数据库的 ID。 不可为 null。|  
 |user_id|**int**|提交请求的用户的 ID。 不可为 null。|  
 |connection_id|**uniqueidentifier**|请求到达时所采用的连接的 ID。 可以为 Null。|  
-|blocking_session_id|**smallint**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而导致此时无法确定阻塞闩锁所有者的会话 ID。|  
+|blocking_session_id|**smallint**|正在阻塞请求的会话的 ID。 如果此列的值为 NULL 或等于0，则不会阻止该请求，或者阻塞会话的会话信息不可用（或无法识别）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而导致此时无法确定阻塞闩锁所有者的会话 ID。|  
 |wait_type|**nvarchar(60)**|如果请求当前被阻塞，则此列返回等待类型。 可以为 Null。<br /><br /> 有关等待类型的信息，请参阅[_os_wait_stats &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
 |wait_time|**int**|如果请求当前被阻塞，则此列返回当前等待的持续时间（以毫秒为单位）。 不可为 null。|  
 |last_wait_type|**nvarchar(60)**|如果此请求先前已经阻塞，则此列返回上次等待的类型。 不可为 null。|  
@@ -77,7 +77,7 @@ ms.locfileid: "71326170"
 |ansi_padding|**bit**|1 = ANSI_PADDING 设置对于该请求是 ON。<br /><br /> 否则，为0。<br /><br /> 不可为 null。|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS 设置对于该请求是 ON。 否则，为0。<br /><br /> 不可为 null。|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL 设置对于该请求是 ON。 否则，为0。<br /><br /> 不可为 null。|  
-|transaction_isolation_level|**smallint**|创建此请求的事务时使用的隔离级别。 不可为 null。<br /><br /> 0 = 未指定<br /><br /> 1 = 未提交读取<br /><br /> 2 = 已提交读取<br /><br /> 3 = 可重复<br /><br /> 4 = 可序列化<br /><br /> 5 = 快照|  
+|transaction_isolation_level|**smallint**|创建此请求的事务时使用的隔离级别。 不可为 null。<br /> 0 = 未指定<br /> 1 = 未提交读取<br /> 2 = 已提交读取<br /> 3 = 可重复<br /> 4 = 可序列化<br /> 5 = 快照|  
 |lock_timeout|**int**|此请求的锁定超时时间（毫秒）。 不可为 null。|  
 |deadlock_priority|**int**|请求的 DEADLOCK_PRIORITY 设置。 不可为 null。|  
 |row_count|**bigint**|已由此请求返回到客户端的行数。 不可为 null。|  
@@ -96,6 +96,7 @@ ms.locfileid: "71326170"
 |is_resumable |**bit** |**适用范围**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示请求是否为可恢复索引操作。 |  
 |page_resource |**binary(8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果`wait_resource`列包含页，则为页资源的8字节的十六进制表示形式。 有关详细信息，请参阅[fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**适用对象**：Azure SQL Database 超大规模<br /><br /> 此请求执行的页服务器读取次数。 不可为 null。|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>备注 
 若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。 由此动态管理视图返回的时间值不包括在抢先模式下花费的时间。
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 查找运行的批处理持有的所有锁
 
-下面的示例查询 **_exec_requests** ，以查找感兴趣的批，并将其`transaction_id`从输出中复制。
+下面的示例查询 **_exec_requests**以查找感兴趣的批，并将其 @no__t 从输出中复制。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-然后，若要查找锁定信息，请使用`transaction_id`与系统函数**sys.databases _tran_locks**一起复制的。  
+然后，若要查找锁定信息，请将复制的 `transaction_id` 与系统函数 **_tran_locks**一起使用。  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

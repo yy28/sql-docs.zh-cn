@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - report servers [Reporting Services], configuring
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6fd7ff677fdbbfa91b616fd6a561d3eb48c2de57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf32c8427679b342bee89d6541b051beed2e8ce
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096063"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952291"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>连接到本机模式的报表服务器
   使用此对话框连接到本地或远程 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器实例。 不能使用此工具连接到早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 一次仅能连接到一个实例。  
@@ -30,11 +30,11 @@ ms.locfileid: "66096063"
 >  不使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来配置和管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。 使用 SharePoint 管理中心和 PowerShell 脚本在 SharePoint 模式中配置报表服务器。 有关详细信息，请参阅 [安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器 (RSConfigTool.exe) 安装使用"highestavailable"权限级别。 这种行为是默认设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器要求与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 进行通信。 一些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信要求更高级别的权限或管理权限。  
+>  使用权限级别 "highestAvailable" 安装了 @ no__t-0 Configuration Manager （Rsconfigtool.exe）。 这种行为是默认设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器要求与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 进行通信。 一些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信要求更高级别的权限或管理权限。  
   
--   若要连接到本地报表服务器实例，请使用默认值并单击 **“连接”**。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器提供了本地服务器名称并可检测到默认实例。 在大多数情况下，您可以单击 **“连接”** 而不必更改值。 如果安装了多个实例，则必须选择要使用的实例。  
+-   若要连接到本地报表服务器实例，请使用默认值并单击 **“连接”** 。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器提供了本地服务器名称并可检测到默认实例。 在大多数情况下，您可以单击 **“连接”** 而不必更改值。 如果安装了多个实例，则必须选择要使用的实例。  
   
--   若要连接到远程报表服务器实例，请键入服务器名称，单击 **“查找”**，再选择该实例，然后单击 **“连接”**。  
+-   若要连接到远程报表服务器实例，请键入服务器名称，单击 **“查找”** ，再选择该实例，然后单击 **“连接”** 。  
   
  若要打开此对话框，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器。 启动此工具后，该对话框会立即显示出来。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   

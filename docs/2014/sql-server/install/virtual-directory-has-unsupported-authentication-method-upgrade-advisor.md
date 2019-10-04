@@ -1,5 +1,5 @@
 ---
-title: 虚拟目录具有不受支持的身份验证方法 （升级顾问） |Microsoft Docs
+title: 虚拟目录具有不受支持的身份验证方法（升级顾问） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 992e0f125d80a4735a356a853dab55439149e7ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091058"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952010"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>虚拟目录包含不支持的身份验证方法（升级顾问）
   升级顾问检测到报表管理器或报表服务器虚拟目录上存在不支持的身份验证方法。 升级不支持的身份验证方法包括匿名、摘要式和 .NET Passport 身份验证。  
@@ -29,7 +29,7 @@ ms.locfileid: "66091058"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  安装程序不能升级使用以下身份验证方法之一的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 系统  
   
 -   匿名  

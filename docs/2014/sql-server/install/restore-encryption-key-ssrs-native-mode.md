@@ -1,5 +1,5 @@
 ---
-title: 还原加密密钥 （SSRS 本机模式） |Microsoft Docs
+title: 还原加密密钥（SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092521"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952033"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>还原加密密钥（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 为确保您可以继续访问加密数据，请务必创建加密密钥的备份，以备以后因服务帐户发生变化而需要还原它或需要将它作为计划迁移的一部分还原时使用。 本主题概括了如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来还原密钥。  
@@ -31,7 +31,7 @@ ms.locfileid: "66092521"
  如果还原的是无效密钥，而不是用于加密数据的密钥，则无法解密当前存储在报表服务器数据库中的数据。 如果还原的是无效密钥，则应立即还原正确密钥的备份副本（如果有的话）。 如果没有用于加密数据的密钥的备份副本，则必须删除所有加密数据。 请单击 **加密密钥** 页上的 [“删除”](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) 按钮以执行此步骤。 在删除加密内容之后，必须手动更新所有订阅并重新指定为报表定义的所有存储凭据以及报表服务器上的所有数据驱动订阅。  
   
 ## <a name="restore-encryption-key-dialog"></a>“还原加密密钥”对话框  
- 有关在何处查找信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器中，请参阅[Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 有关在何处查找 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 的信息，请参阅[Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
  若要打开“还原加密密钥”对话框，请单击 **配置管理器导航窗格中的** “加密密钥” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然后单击 **“还原”** 。 当使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“服务帐户”页更新服务帐户时，也会显示此对话框。 有关更多信息  
   

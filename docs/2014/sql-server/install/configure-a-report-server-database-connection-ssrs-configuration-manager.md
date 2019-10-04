@@ -14,15 +14,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096192"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952633"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
   每个报表服务器实例都需要连接到存储由服务器管理的报表、报表模型、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库并配置连接的分步说明，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "66096192"
   
  若要验证实例是否接受远程连接，请依次单击“开始”、“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、“配置工具”、“SQL Server 配置管理器”，然后确认为每个服务启用了 TCP/IP 协议。  
   
- 启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”**、 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”**、 **“SQL Server 配置管理器”**、 **“SQL Server 网络配置”**，再单击 **“MSSQLSERVER 协议”**。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 启用或禁用服务器网络协议 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 启用远程连接时，也会启用客户端协议和服务器协议。 若要确认协议已启用，请依次单击 **“开始”** 、 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 、 **“SQL Server 配置管理器”** 、 **“SQL Server 网络配置”** ，再单击 **“MSSQLSERVER 协议”** 。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 启用或禁用服务器网络协议 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="defining-a-report-server-database-connection"></a>定义报表服务器数据库连接  
  若要配置连接，您必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器工具或 **rsconfig** 命令行实用工具。 报表服务器需要以下连接信息：  
@@ -64,7 +64,7 @@ ms.locfileid: "66096192"
 ### <a name="storing-database-connection-information"></a>存储数据库连接信息  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
   
- 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值 （即，使用服务帐户来建立连接），将连接配置 <`LogonUser`>，<`LogonDomain`>，和 <`LogonCred`> 将为空，按如下所示：  
+ 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户进行连接），则 < `LogonUser` >、< `LogonDomain` > 和 < @no__t > 将为空，如下所示：  
   
 ```  
 <Dsn></Dsn>  

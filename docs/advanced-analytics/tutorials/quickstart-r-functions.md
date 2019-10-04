@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 本快速入门介绍如何使用 SQL Server 机器学习服务为高级统计计算编写 R 函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/03/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cebd4ea6a356af6802a0e26f778667b2acc4b80c
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149910"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951866"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务写入高级 R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ as.data.frame(rnorm(100, mean = 50, sd = 3));
 若要从 t-sql 调用此 r 行，请在的`sp_execute_external_script`r 脚本参数中添加 r 函数，如下所示：
 
 ```sql
-EXEC sp_execute_external_script
+EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(100, mean = 50, sd =3));'
@@ -62,7 +62,7 @@ CREATE PROCEDURE MyRNorm (
     , @param3 INT
     )
 AS
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(mynumbers, mymean, mysd));'
     , @input_data_1 = N'   ;'
@@ -82,7 +82,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 现在，你已将 R 函数包装在了一个存储过程中，你可以轻松调用该函数并传入不同的值，如下所示：
 
 ```sql
-EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
+EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>使用 R 实用工具函数进行故障排除
@@ -103,9 +103,7 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> 许多用户喜欢使用 r 中的系统计时函数（如`system.time`和`proc.time`）来捕获 r 进程使用的时间，并分析性能问题。
-
-有关示例，请参阅本教程：[创建数据功能](../tutorials/walkthrough-create-data-features.md)。 在本演练中，R 计时函数嵌入在解决方案中，用于比较 R 函数与用于从数据创建功能的 t-sql 函数。
+> 许多用户喜欢使用 r 中的系统计时函数（如`system.time`和`proc.time`）来捕获 r 进程使用的时间，并分析性能问题。 有关示例，请参阅教程[创建数据功能](../tutorials/walkthrough-create-data-features.md)，其中 R 计时函数嵌入到解决方案中。
 
 ## <a name="next-steps"></a>后续步骤
 

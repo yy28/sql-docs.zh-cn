@@ -1,5 +1,5 @@
 ---
-title: 数据库 （SSRS 本机模式） |Microsoft Docs
+title: 数据库（SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095718"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952312"
 ---
 # <a name="database-ssrs-native-mode"></a>数据库（SSRS 本机模式）
   使用“数据库”页创建和配置为一个或多个报表服务器实例提供内部存储的报表服务器数据库。 如果要配置报表服务器以使用远程报表服务器数据库，则必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来创建该数据库。  
@@ -44,10 +44,10 @@ ms.locfileid: "66095718"
  启动一个向导以指导您完成创建或选择报表服务器数据库所需的所有步骤。  
   
  **凭据类型**  
- 指定报表服务器用来连接报表服务器数据库的凭据。 可以指定的凭据类型包括服务帐户、Windows 域用户、Windows 本地用户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。 有关选择凭据的详细信息，请参阅[配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+ 指定报表服务器用来连接报表服务器数据库的凭据。 可以指定的凭据类型包括服务帐户、Windows 域用户、Windows 本地用户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。 有关选择凭据的详细信息，请参阅[配置报表服务器数据库连接&#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
  **用户名**  
- 如果使用的是 Windows 凭据，请指定域用户帐户；如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果使用的 Windows 凭据，它们按以下格式指定： *\<域 >\\< 帐户\>* 。  
+ 如果使用的是 Windows 凭据，请指定域用户帐户；如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果你使用的是 Windows 凭据，请按以下格式指定： *\<domain > \\ < account @ no__t-3*。  
   
  **密码**  
  指定帐户的密码。  

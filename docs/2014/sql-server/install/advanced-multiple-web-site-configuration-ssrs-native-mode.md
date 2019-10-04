@@ -1,5 +1,5 @@
 ---
-title: 高级多网站配置 （SSRS 本机模式） |Microsoft Docs
+title: 高级多网站配置（SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096830"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952672"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高级多网站配置（SSRS 本机模式）
   使用此对话框可创建和管理用于访问报表服务器或报表管理器的 URL。 **“高级多网站配置”** 对话框用于创建附加 URL 和包含主机标头名称的自定义 URL，或者用于指定 IPv4 或 IPv6 格式的 IP 地址。  
@@ -40,17 +40,17 @@ ms.locfileid: "66096830"
   
 -   **127.0.0.1** 用于访问本地主机。 它支持对报表服务器计算机进行本地管理。 如果仅选择此值，则只有在本地登录到报表服务器计算机的用户可以访问应用程序。  
   
--   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果您的网络使用 IPv6 寻址，IP 地址将是 8 个 4 字节字段类似于以下格式为 128 位值：\<标头 >:*nnnn:nnnn:nnnn:nnnn*。  
+-   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，IP 地址将为 8 4 字节字段的128位值，其格式类似于以下格式： \<header >：*nnnn： nnnn： nnnn： nnnn*。  
   
      如果有多个网络适配器，您将看到每个网络适配器都有一个 IP 地址。 如果仅选择此值，它将限制对该 IP 地址（以及域名服务器映射到该地址的任何主机名）的应用程序访问。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。  
   
  **端口**  
- 指定报表服务器监视请求的端口。 端口 80 为默认端口。 如果使用端口 80，则不必将其包含在 URL 中。 如果使用其他任何端口号，你必须始终将其包含在 URL 中 (例如， http://localhost:8181/reports) 。  
+ 指定报表服务器监视请求的端口。 端口 80 为默认端口。 如果使用端口 80，则不必将其包含在 URL 中。 如果使用其他任何端口号，则必须始终将其包含在 URL 中（例如 http://localhost:8181/reports) 。  
   
  **主机标头**  
  如果已有一个在域名服务器上定义的主机标头解析为您的计算机，则可以在为报表服务器访问配置的 URL 中指定该主机标头。  
   
- 主机标头是允许多个网站共享一个 IP 地址和端口的唯一名称。 主机标头名称比 IP 地址和端口号更容易记住和键入。 这里有一个主机标头名称的示例：www.adventure-works.com。  
+ 主机标头是允许多个网站共享一个 IP 地址和端口的唯一名称。 主机标头名称比 IP 地址和端口号更容易记住和键入。 这里有一个主机标头名称的示例：www.adventure-works.com 。  
   
  **SSL 端口**  
  为 SSL 连接指定端口。 SSL 的默认端口为 443。  

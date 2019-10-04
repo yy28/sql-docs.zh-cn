@@ -1,5 +1,5 @@
 ---
-title: 报表服务器网站 （升级顾问） 上的客户端证书 |Microsoft Docs
+title: Report Server 网站上的客户端证书（升级顾问） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a0a8fb06eabb6fa07e503c00d3651020d52cff26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5588930efbadf785e78aa115ad0021bce64bd7f7
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096479"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952604"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>报表服务器网站上的客户端证书（升级顾问）
   升级顾问已检测到承载报表服务器或报表管理器虚拟目录的 IIS 网站存在一个或多个客户端证书。  
@@ -29,7 +29,7 @@ ms.locfileid: "66096479"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持使用客户端证书对用户进行身份验证。 可以继续升级，但升级后的报表服务器将不使用客户端证书。  
   
 ## <a name="corrective-action"></a>纠正措施  

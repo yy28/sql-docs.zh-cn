@@ -1,5 +1,5 @@
 ---
-title: 横向扩展部署 （本机模式报表服务器） |Microsoft Docs
+title: 扩展部署（本机模式报表服务器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,24 +9,24 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092433"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952418"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>扩展部署（本机模式报表服务器）
-  使用 **配置管理器中的** “扩展部署” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页可以查看扩展部署的初始化状态或将报表服务器联接到扩展部署。 “扩展部署”  是指共享单个报表服务器数据库的两个或多个报表服务器实例。  
+  使用 **配置管理器中的** “扩展部署” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页可以查看扩展部署的初始化状态或将报表服务器联接到扩展部署。 “扩展部署” 是指共享单个报表服务器数据库的两个或多个报表服务器实例。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
- “已初始化的报表服务器”  是指可以对报表服务器数据库中存储的敏感数据进行加密和解密的服务器（已存储凭据和连接字符串是存储在此数据库中的加密数据示例）。 报表服务器初始化是一项必需的报表服务器操作。  
+ “已初始化的报表服务器” 是指可以对报表服务器数据库中存储的敏感数据进行加密和解密的服务器（已存储凭据和连接字符串是存储在此数据库中的加密数据示例）。 报表服务器初始化是一项必需的报表服务器操作。  
   
- 在以下情形中使用“扩展部署”  ：  
+ 在以下情形中使用“扩展部署” ：  
   
 -   作为对服务器群集中的多个报表服务器进行负载平衡的必备条件。 在可以对多个报表服务器进行负载平衡之前，必须首先将它们配置为共享同一报表服务器数据库。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66092433"
  **服务器模式**  
  显示服务器和数据库的模式。 服务器模式为“本机”或“SharePoint 集成”。 这两种模式均支持扩展部署。  
   
- **Server**  
+ **服务**  
  显示报表服务器名称。 在大多数情况下，此为安装报表服务器的计算机的名称。  
   
  **实例**  
@@ -73,7 +73,7 @@ ms.locfileid: "66092433"
   
  请确保在删除密钥之前创建了该密钥的备份副本，作为一种防范措施。 一旦删除列表中最后一个报表服务器的加密密钥，将对该数据库的任何后续报表服务器初始化提出新的要求。 新的要求是初始化报表服务器之后，必须还原对称密钥的备份副本。 如果希望访问报表服务器数据库中当前存在的加密数据，还原对称密钥是必需的。  
   
- 如果不再需要加密数据或者没有密钥的备份副本，则必须删除该加密数据。 有关详细信息，请参阅[加密密钥&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
+ 如果不再需要加密数据或者没有密钥的备份副本，则必须删除该加密数据。 有关详细信息，请参阅[加密&#40;密钥 SSRS 本机&#41;模式](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

@@ -9,21 +9,21 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714741"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952024"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中的 R 中创建基于分区的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2019 中, 基于分区的建模是对已分区数据创建和定型模型的能力。 对于自然分成给定分类方案的分层数据 (例如地理区域、日期和时间、年龄或性别), 可以对整个数据集执行脚本, 并能够对保持不变的分区进行建模、定型和评分所有这些操作。 
 
-基于分区的建模通过[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)上的两个新参数启用:
+基于分区的建模通过[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)上的两个新参数启用：
 
-+ **input_data_1_partition_by_columns**, 指定要按其进行分区的列。
++ **input_data_1_partition_by_columns**，指定要按其进行分区的列。
 + **input_data_1_order_by_columns**指定排序所依据的列。 
 
 本教程介绍如何使用经典 NYC 出租车示例数据和 R 脚本进行基于分区的建模。 分区列是支付方法。
@@ -33,7 +33,7 @@ ms.locfileid: "68714741"
 > * 在每个分区上创建和训练模型, 并将对象存储在数据库中。
 > * 预测每个分区模型上的 tip 结果的概率, 使用为此目的而保留的示例数据。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
  
 若要完成本教程, 您必须具备以下各项:
 
@@ -41,7 +41,7 @@ ms.locfileid: "68714741"
 
 + 用于 T-sql 查询执行的工具, 如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-+ [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), 可以将其[下载并还原](demo-data-nyctaxi-in-sql.md)到本地数据库引擎实例。 文件大小约为 90 MB。
++ [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，可以将其[下载并还原](demo-data-nyctaxi-in-sql.md)到本地数据库引擎实例。 文件大小约为 90 MB。
 
 + SQL Server 2019 预览数据库引擎实例, 具有机器学习服务和 R 集成。
 
@@ -63,13 +63,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>连接到数据库
 
-启动 Management Studio 并连接到数据库引擎实例。 在对象资源管理器中, 验证[NYCTaxi_Sample 数据库](demo-data-nyctaxi-in-sql.md)是否存在。 
+启动 Management Studio 并连接到数据库引擎实例。 在对象资源管理器中，验证[NYCTaxi_Sample 数据库](demo-data-nyctaxi-in-sql.md)是否存在。 
 
 ## <a name="create-calculatedistance"></a>创建 CalculateDistance
 
 演示数据库附带了用于计算距离的标量函数, 但我们的存储过程更适合使用表值函数。 运行以下脚本, 以创建在以后的[培训步骤](#training-step)中使用的**CalculateDistance**函数。
 
-若要确认函数是否已创建, 请在对象资源管理器中检查**NYCTaxi_Sample**数据库下的 \Programmability\Functions\Table-valued 函数。
+若要确认函数是否已创建，请在对象资源管理器中检查**NYCTaxi_Sample**数据库下的 \Programmability\Functions\Table-valued 函数。
 
 ```sql
 USE NYCTaxi_sample
@@ -103,11 +103,11 @@ GO
 
 本教程在存储过程中包装 R 脚本。 在此步骤中, 你将创建一个存储过程, 该存储过程使用 R 创建输入数据集, 生成用于预测 tip 结果的分类模型, 然后将该模型存储在数据库中。
 
-在此脚本使用的参数输入中, 你将看到**input_data_1_partition_by_columns**和**input_data_1_order_by_columns**。 请记住, 这些参数是进行分区建模所使用的机制。 参数作为输入传递给[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) , 以处理每个分区执行一次的外部脚本的分区。 
+在此脚本使用的参数输入中，你将看到**input_data_1_partition_by_columns**和**input_data_1_order_by_columns**。 请记住, 这些参数是进行分区建模所使用的机制。 参数作为输入传递给[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) ，以处理每个分区执行一次的外部脚本的分区。 
 
 对于此存储过程, 请[使用并行度](#parallel)来加快完成时间。
 
-运行此脚本后, 应在对象资源管理器中的**NYCTaxi_Sample**数据库下的 \Programmability\Stored 过程中看到**train_rxLogIt_per_partition** 。 还应看到用于存储模型的新表: **nyctaxi_models**。
+运行此脚本后，应在对象资源管理器中的**NYCTaxi_Sample**数据库下的 \Programmability\Stored 过程中看到**train_rxLogIt_per_partition** 。 还应看到用于存储模型的新表： **nyctaxi_models**。
 
 ```sql
 USE NYCTaxi_Sample
@@ -167,14 +167,12 @@ GO
 
 ### <a name="parallel-execution"></a>并行执行
 
-请注意, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)输入包括 **@parallel= 1**, 用于启用并行处理。 与以前的版本相比, 在 SQL Server 2019 中, 设置 **@parallel= 1**会向查询优化器提供更强的提示, 从而使并行执行更可能会产生更多的结果。
+请注意， [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)输入包含 `@parallel=1`，用于启用并行处理。 与以前的版本相比，在 SQL Server 2019 中，设置 @no__t 将向查询优化器提供更强的提示，使并行执行更有可能的结果。
 
-默认情况下, 对于超过256行的表, 查询优化器在 **@parallel= 1**下运行, 但如果可以通过设置 **@parallel= 1**来显式处理此脚本, 如此脚本中所示。
+默认情况下，查询优化器通常会在256行以上的表中执行 `@parallel=1`，但如果可以通过设置 @no__t （如此脚本中所示）来显式处理此操作。
 
 > [!Tip]
-> 对于定型 workoads, 可以使用 **@parallel** 任何任意训练脚本, 甚至可以使用非 Microsoft rx 算法。 通常, 只有 RevoScaleR 算法 (带有 rx 前缀) 在 SQL Server 的定型方案中提供并行度。 但对于新参数, 可以并行化一个脚本来调用函数, 包括开源 R 函数, 而不是使用该功能专门设计的。 这是因为分区与特定线程关联, 因此, 在脚本中调用的所有操作都是在给定线程上按分区执行的。
-
-<a name="training-step"></a>
+> 对于定型 workoads，可以将 `@parallel` 与任何任意定型脚本（甚至使用非 Microsoft rx 算法的脚本）一起使用。 通常, 只有 RevoScaleR 算法 (带有 rx 前缀) 在 SQL Server 的定型方案中提供并行度。 但对于新参数, 可以并行化一个脚本来调用函数, 包括开源 R 函数, 而不是使用该功能专门设计的。 这样做的原因是，分区与特定线程关联，因此，在脚本中调用的所有操作都是在指定 @ no__t-0<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>运行该过程并训练模型
 
@@ -336,7 +334,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>后续步骤
 
-在本教程中, 你使用了[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)对已分区数据的操作进行迭代。 若要详细了解如何调用存储过程中的外部脚本和使用 RevoScaleR 函数, 请继续学习以下教程。
+在本教程中，你使用了[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)对已分区数据的操作进行迭代。 若要详细了解如何调用存储过程中的外部脚本和使用 RevoScaleR 函数, 请继续学习以下教程。
 
 > [!div class="nextstepaction"]
 > [R 和 SQL Server 演练](walkthrough-data-science-end-to-end-walkthrough.md)

@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL Server Reporting Services SharePoint 共享服务是已安装并排显示 （升级顾问） |Microsoft Docs
+title: Microsoft SQL Server Reporting Services SharePoint 共享服务并行安装（升级顾问） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6ae1017e-129b-4702-9ea7-00ac9b024062
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cfa2eb99a475cb8f8bce8a0a1101edd767997aef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529e07dc7beed8dc37741f6c9dab0b0b080d4898
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091859"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952694"
 ---
 # <a name="microsoft-sql-server-reporting-services-sharepoint-shared-service-is-installed-side-by-side-upgrade-advisor"></a>并行安装 Microsoft SQL Server Reporting Services SharePoint 共享服务（升级顾问）
-  升级顾问检测到[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与早期版本的并行安装 SharePoint 共享服务[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+  升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @no__t SharePoint 共享服务与以前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 并行安装。  
   
 ||  
 |-|  
@@ -27,8 +27,8 @@ ms.locfileid: "66091859"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
- 升级顾问检测到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 共享服务安装与以前版本的并行[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的不基于 SharePoint 共享服务体系结构。 因为计算机同时并行安装了新旧两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 相关技术，所以阻止升级。  
+## <a name="description"></a>描述  
+ 升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @no__t SharePoint 共享服务与以前版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 并行安装，但该版本不基于 SharePoint 共享服务体系结构。 因为计算机同时并行安装了新旧两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 相关技术，所以阻止升级。  
   
 ## <a name="corrective-action"></a>纠正措施  
  若要继续升级，必须卸载现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装之一。 删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装之后，重新运行升级顾问以确认没有任何其他升级问题。  

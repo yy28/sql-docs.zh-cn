@@ -1,5 +1,5 @@
 ---
-title: 加密密钥 （SSRS 本机模式） |Microsoft Docs
+title: 加密密钥（SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095418"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952170"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密密钥（SSRS 本机模式）
   使用“加密密钥”页可以管理用于对报表服务器中数据进行加密和解密的对称密钥。 管理加密密钥是报表服务器配置的一个重要方面。 在创建报表服务器数据库时，自动创建并应用对称密钥。 创建对称密钥的备份副本，以便您可以执行例行的维护操作。 您需要具有对称密钥的有效副本，才可执行以下维护任务：  
@@ -48,15 +48,15 @@ ms.locfileid: "66095418"
  **备份**  
  将对称密钥复制到您指定的文件。 对称密钥决不能以纯文本形式存储。 您必须键入密码来保护该文件。  
   
- **还原**  
+ **Restore**  
  将以前保存的对称密钥的副本应用于报表服务器数据库。 您必须提供密码对文件进行解锁。  
   
- 还原后的对称密钥副本将覆盖当前连接的报表服务器实例还原前的对称密钥副本。 还原对称密钥后，必须初始化使用该报表服务器数据库的所有报表服务器。 有关初始化报表服务器的详细信息，请参阅[初始化报表服务器&#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
+ 还原后的对称密钥副本将覆盖当前连接的报表服务器实例还原前的对称密钥副本。 还原对称密钥后，必须初始化使用该报表服务器数据库的所有报表服务器。 有关初始化报表服务器的详细信息，请参阅[初始化报表服务器&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
- **更改**  
+ **转**  
  重新创建对称密钥并对报表服务器数据库中的所有加密值重新进行加密。 请确保在重新创建对称密钥前停止报表服务器服务。  
   
- 在扩展部署中，对称密钥的所有副本都将替换为新的版本。 在更改对称密钥前，请务必检查加入扩展部署的服务器的列表，以确认仅对有效的报表服务器实例授予了对新密钥的访问权限。 “扩展部署”页列出了扩展部署中包含的服务器  。 在重新创建密钥前，请停止部署中包含的各个报表服务器上的报表服务器服务。  
+ 在扩展部署中，对称密钥的所有副本都将替换为新的版本。 在更改对称密钥前，请务必检查加入扩展部署的服务器的列表，以确认仅对有效的报表服务器实例授予了对新密钥的访问权限。 “扩展部署”页列出了扩展部署中包含的服务器 。 在重新创建密钥前，请停止部署中包含的各个报表服务器上的报表服务器服务。  
   
  请注意，如果您具有许多数据源和订阅，则重新生成对称密钥的过程可能需要耗费较长的时间。  
   

@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 配置管理器 F1 帮助主题 （SSRS 本机模式） |Microsoft Docs
+title: Reporting Services 配置管理器 F1 帮助主题（SSRS 本机模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092669"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952046"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 配置管理器 F1 帮助主题（SSRS 本机模式）
   本节提供 Reporting Services 配置管理器的 F1 帮助。  
@@ -36,7 +36,7 @@ ms.locfileid: "66092669"
   
 -   [高级多网站配置](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
--   [“数据库”](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
+-   [数据库](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
 -   [更改数据库向导](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66092669"
   
 -   [还原加密密钥](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [横向扩展部署](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [扩展部署](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 配置管理器&#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
