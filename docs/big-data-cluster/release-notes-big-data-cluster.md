@@ -1,7 +1,7 @@
 ---
 title: 发行说明
 titleSuffix: SQL Server big data clusters
-description: 本文介绍了[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （预览版）的最新更新和已知问题。
+description: 本文介绍了最新的更新和 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] （预览版）的已知问题。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 758e87a0c74df695c06cb0f0005f6a19d8978625
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988098"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974387"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的发行说明
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文列出了最新版本[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的更新和已知问题。
+本文列出了 @no__t 的最新版本的更新和已知问题。
 
 ## <a id="rc"></a>候选发布（8月）
 
@@ -31,13 +31,13 @@ ms.locfileid: "70988098"
 |新增功能或更新 | 详细信息 |
 |:---|:---|
 |Always On 可用性组 SQL Server |部署 SQL Server 大数据群集时，可以将部署配置为创建可用性组以提供：<br/><br/>-高可用性 <br/><br/>-读取-横向扩展 <br/><br/>-向数据池中扩展数据插入<br/><br>请参阅[高可用性部署](../big-data-cluster/deployment-high-availability.md)。 |
-|`azdata` |简化了[安装管理器](./deploy-install-azdata-linux-package.md)的工具安装<br/><br/>[`azdata notebook`command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`command](./reference-azdata-bdc-status.md) |
+|`azdata` |简化了[安装管理器](./deploy-install-azdata-linux-package.md)的工具安装<br/><br/>[`azdata notebook` 命令](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` 命令](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[下载 Azure Data Studio 的候选发布版本](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)。<br/><br/>通过 SQL Server 2019 指南 Jupyter Book 添加了疑难解答笔记本。<br/><br/>添加了控制器登录体验。<br/><br/>添加了控制器仪表板以查看服务终结点、查看群集运行状况状态和访问故障排除笔记本。<br/><br/>改善了笔记本单元输出/编辑性能。|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
 
-* SQL Server 2019 大数据群集发布候选刷新生成号为`15.0.1900.47`。
+* SQL Server 2019 大数据群集发布候选刷新生成号 `15.0.1900.47`。
 
 * SQL Server 2019 大数据群集候选版本中不支持 "kubeadm" 部署配置文件和以上生成号。 请改用 Kubeadm 部署的 "kubeadm" 配置文件。
 
@@ -49,7 +49,7 @@ ms.locfileid: "70988098"
 
 |新增功能或更新 | 详细信息 |
 |:---|:---|
-|公共预览版 |在 CTP 3.2 之前，已向已注册的早期采用者提供 SQL Server 大数据群集。 此版本允许任何人体验 SQL Server 大数据群集的功能。 <br/><br/> 请参阅[开始处理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)。|
+|公共预览版 |在 CTP 3.2 之前，已向已注册的早期采用者提供 SQL Server 大数据群集。 此版本允许任何人体验 SQL Server 大数据群集的功能。 <br/><br/> 请参阅[开始处理 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)。|
 |`azdata` |CTP 3.2 引入了 `azdata`，这是一个使用 Python 编写的命令行实用程序，可让群集管理员通过 REST API 启动和管理大数据群集。 `azdata` 替换了 `mssqlctl`。 请参阅[安装 `azdata`](deploy-install-azdata.md)。 |
 |PolyBase |外部表列名现可用于查询 SQL Server、Oracle、Teradata、MongoDB 和 ODBC 数据源。 在以前的 CTP 版本中，外部数据源中的列仅基于序号位置绑定，并且未使用 EXTERNAL TABLE 定义中指定的名称。 |
 |HDFS 分层刷新 |引入了 HDFS 分层刷新功能，可刷新已有装载，获取远程数据的最新快照。 请参阅 [HDFS 分层](hdfs-tiering.md) |
@@ -169,7 +169,7 @@ ms.locfileid: "70988098"
 
 #### <a name="kibana-logs-dashboards"></a>Kibana 日志仪表板
 
-- 在 Aris CTP 3.0 和 3.1 之间，Kibana 版本从 6.3.1 升级到 7.0.1。  这使得 Microsoft Edge 浏览器与 Kibana 不兼容。 在 Microsoft Edge 中加载 Kibana 仪表板的当前版本时，用户将看到一个空白页。 请参阅[此处]( https://www.elastic.co/support/matrix#matrix_browse)，了解 Kibana.rs 支持的浏览器 
+- 在 CTP 3.0 与3.1 之间，Kibana 版本从6.3.1 升级到7.0.1。  这使得 Microsoft Edge 浏览器与 Kibana 不兼容。 在 Microsoft Edge 中加载 Kibana 仪表板的当前版本时，用户将看到一个空白页。 请参阅[此处]( https://www.elastic.co/support/matrix#matrix_browse)了解适用于 Kibana 的支持的浏览器。
 
 
 ## <a id="ctp30"></a> CTP 3.0（5 月）
@@ -498,9 +498,9 @@ make: *** [deploy-clean] Error 2
 
 | 新增功能或更新 | 详细信息 |
 | :---------- | :------ |
-| 在 IntelliJ 中的大数据群集上提交 Spark 作业。 | [在 IntelliJ 中的[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]中提交 Spark 作业](spark-submit-job-intellij-tool-plugin.md) |
-| 用于应用程序部署和群集管理的常见 CLI。 | [如何在上部署应用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| 将应用程序部署到大数据群集的 VS Code 扩展。 | [如何使用 VS Code 将应用程序部署到[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
+| 在 IntelliJ 中的大数据群集上提交 Spark 作业。 | [在 IntelliJ 中的 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上提交 Spark 作业](spark-submit-job-intellij-tool-plugin.md) |
+| 用于应用程序部署和群集管理的常见 CLI。 | [如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上部署应用](big-data-cluster-create-apps.md) |
+| 将应用程序部署到大数据群集的 VS Code 扩展。 | [如何使用 VS Code 将应用程序部署到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | 对 azdata 工具命令用法进行了更改。 | 有关详细信息，请参阅 [azdata 的已知问题](#azdatactp23)。 |
 | 在大数据群集中使用 Sparklyr | [在 SQL Server 2019 大数据群集中使用 Sparklyr](sparklyr-from-RStudio.md) |
 | 通过 **HDFS 分层**将兼容 HDFS 的外部存储装入大数据群集。 | 请参阅 [HDFS 分层](hdfs-tiering.md)。 |
@@ -693,7 +693,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>已知问题
 
-以下各节提供 CTP 2.1 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的已知问题。
+以下各节提供 CTP 2.1 中 @no__t 的已知问题。
 
 #### <a name="deployment"></a>部署
 
@@ -768,7 +768,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>已知问题
 
-以下各节提供 CTP 2.0 中[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]的已知问题。
+以下各节提供 CTP 2.0 中 @no__t 的已知问题。
 
 #### <a name="deployment"></a>部署
 
@@ -818,4 +818,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>后续步骤
 
-有关的详细信息[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]，请参阅[什么[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]是？](big-data-cluster-overview.md)。
+有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅[什么是 @no__t？](big-data-cluster-overview.md)。

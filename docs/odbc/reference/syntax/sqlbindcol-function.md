@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3860243580981d995e6581d883e12afe3f033d3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3bb9eeb85b8d651d89d58d78868d262b49e242b
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036217"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974339"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函数
-**符合性**  
- 版本引入了：ODBC 1.0 标准符合性：ISO 92  
+**度**  
+ 引入的版本：ODBC 1.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLBindCol**将应用程序数据缓冲区绑定到结果集中的列。  
@@ -48,44 +48,44 @@ SQLRETURN SQLBindCol(
   
 ## <a name="arguments"></a>参数  
  *StatementHandle*  
- [输入]语句句柄。  
+ 送语句句柄。  
   
  *ColumnNumber*  
- [输入]要绑定的列集的结果数。 列中从 0 开始，其中第 0 列书签列的列顺序递增编号。 如果不使用书签-也就是说，SQL_ATTR_USE_BOOKMARKS 语句属性设置为 SQL_UB_OFF-然后列号从 1 开始。  
+ 送要绑定的结果集列的编号。 列按递增的列顺序编号，从0开始，其中列0是书签列。 如果未使用书签，即 SQL_ATTR_USE_BOOKMARKS 语句特性设置为 SQL_UB_OFF，则列号从1开始。  
   
  *TargetType*  
- [输入]C 数据类型的标识符\* *TargetValuePtr*缓冲区。 当它从数据源检索数据**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，或者**SQLSetPos**、驱动程序将数据转换为此类型;当其将数据发送到数据源**SQLBulkOperations**或**SQLSetPos**，驱动程序将数据从这种类型转换。 有关有效的 C 数据类型和类型标识符的列表，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)附录 d： 中的部分数据类型。  
+ 送@No__t-0*TargetValuePtr*缓冲区的 C 数据类型的标识符。 当从具有**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**或**SQLSetPos**的数据源检索数据时，驱动程序会将数据转换为此类型;当它通过**SQLBulkOperations**或**SQLSetPos**将数据发送到数据源时，驱动程序将转换此类型的数据。 有关有效 C 数据类型和类型[标识符的列表](../../../odbc/reference/appendixes/c-data-types.md)，请参阅附录 D：数据类型。  
   
- 如果*TargetType*参数中的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段设置为间隔数据类型，默认时间间隔的前导精度 (2) 和默认时间间隔的秒精度 (6)，ARD，分别用于数据。 如果*TargetType*参数是 SQL_C_NUMERIC，默认的精度 （驱动程序定义） 和 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置默认小数位数 (0)，用于数据。 如果任何默认精度或小数位数不适当，应用程序显式应通过调用设置适当的描述符字段**SQLSetDescField**或**SQLSetDescRec**。  
+ 如果*TargetType*参数是 interval 数据类型，则为每个 ARD 的 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 字段中设置的默认间隔前导精度（2）和默认间隔秒精度（6）用于数据。 如果*TargetType*参数为 SQL_C_NUMERIC，则在 ARD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段中设置的默认精度（驱动程序定义）和默认刻度（0）将用于数据。 如果任何默认的精度或小数位数不合适，则应用程序应通过调用**SQLSetDescField**或**SQLSetDescRec**显式设置相应的描述符字段。  
   
- 此外可以指定扩展的 C 数据类型。 有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
+ 还可以指定扩展的 C 数据类型。 有关详细信息，请参阅[ODBC 中的 C 数据类型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
  *TargetValuePtr*  
- 延迟的输入/输出指向要绑定到的列的数据缓冲区的指针。 **SQLFetch**并**SQLFetchScroll**在此缓冲区中返回数据。 **SQLBulkOperations**在此返回数据缓冲区时*操作*是 SQL_FETCH_BY_BOOKMARK; 它检索的数据从该缓冲区时*操作*SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK。 **SQLSetPos**在此返回数据缓冲区时*操作*是 SQL_REFRESH; 它检索的数据从该缓冲区时*操作*是 SQL_UPDATE。  
+ [延迟的输入/输出]指向要绑定到列的数据缓冲区的指针。 **SQLFetch**和**SQLFetchScroll**返回此缓冲区中的数据。 当*操作*为 SQL_FETCH_BY_BOOKMARK 时， **SQLBulkOperations**返回此缓冲区中的数据;当*Operation*为 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK 时，它将从此缓冲区检索数据。 当*操作*为 SQL_REFRESH 时， **SQLSetPos**返回此缓冲区中的数据;当 SQL_UPDATE*操作*时，它将从此缓冲区检索数据。  
   
- 如果*TargetValuePtr*是 null 指针，该驱动程序取消绑定列的数据缓冲区。 应用程序可以通过调用取消绑定所有列**SQLFreeStmt**使用 SQL_UNBIND 选项。 应用程序可以取消绑定列的数据缓冲区，但如果仍有长度/指示器缓冲区列中，发往*TargetValuePtr*调用中的参数**SQLBindCol**是 null 指针，但*StrLen_or_IndPtr*参数是有效的值。  
+ 如果*TargetValuePtr*为 null 指针，则驱动程序将为列解除数据缓冲区的绑定。 应用程序可以通过使用 SQL_UNBIND 选项调用**SQLFreeStmt**来解除所有列的绑定。 如果对**SQLBindCol**的调用中的*TargetValuePtr*参数为 Null 指针，但*StrLen_or_IndPtr*参数是有效的，则应用程序可以解除列的数据缓冲区的绑定，但仍具有绑定到列的长度/指示器缓冲区负值.  
   
  *BufferLength*  
- [输入]长度 **TargetValuePtr*以字节为单位的缓冲区。  
+ 送@No__t-0*TargetValuePtr*缓冲区的长度（以字节为单位）。  
   
- 驱动程序使用*BufferLength*以免超出末尾的编写\* *TargetValuePtr*缓冲时它将返回长度可变的数据，如字符或二进制数据。 请注意，该驱动程序，它返回字符数据时都计的 null 终止字符\* *TargetValuePtr*。 **TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
+ 当驱动程序返回长度可变的数据（如字符或二进制数据）时，驱动程序使用*BufferLength*来避免写入超过 \**TargetValuePtr*缓冲区的末尾。 请注意，当驱动程序将字符数据返回到 \**TargetValuePtr*时，驱动程序会对 null 终止字符进行计数。 \**TargetValuePtr*因此必须包含空间的 null 终止字符或驱动程序将截断数据。  
   
- 当驱动程序返回固定长度的数据，如整数或日期结构时，驱动程序会忽略*BufferLength*并假定缓冲区足够大以保存数据。 因此，务必要为固定长度的数据分配缓冲区足够大的应用程序或驱动程序将写入缓冲区的结束。  
+ 当驱动程序返回固定长度的数据（如整数或日期结构）时，驱动程序将忽略*BufferLength* ，并假定缓冲区足以容纳数据。 因此，应用程序必须为固定长度的数据分配足够大的缓冲区，否则驱动程序将写入超过缓冲区的末尾。  
   
- **SQLBindCol**返回 SQLSTATE HY090 （字符串或缓冲区长度无效） 时*BufferLength*是小于 0，但不是在时*BufferLength*为 0。 但是，如果*TargetType*指定字符的类型，不应设置应用程序*BufferLength*为 0，因为符合 ISO CLI 的驱动程序返回 SQLSTATE HY090 （字符串或缓冲区长度无效），用例。  
+ 当*BufferLength*小于0但当*BufferLength*为0时， **SQLBindCol**返回 SQLSTATE HY090 （无效的字符串或缓冲区长度）。 但是，如果*TargetType*指定了字符类型，则应用程序不应将*BufferLength*设置为0，因为在这种情况下，符合 ISO CLI 的驱动程序将返回 SQLSTATE HY090 （无效的字符串或缓冲区长度）。  
   
  *StrLen_or_IndPtr*  
- 延迟的输入/输出要绑定到的列的长度/指示器缓冲区的指针。 **SQLFetch**并**SQLFetchScroll**此缓冲区中返回值。 **SQLBulkOperations**检索一个值，从该缓冲区何时*操作*是 SQL_ADD、 SQL_UPDATE_BY_BOOKMARK，还是 SQL_DELETE_BY_BOOKMARK。 **SQLBulkOperations**返回一个值，在此缓冲区何时*操作*是 SQL_FETCH_BY_BOOKMARK。 **SQLSetPos**返回一个值，在此缓冲区何时*操作*是 SQL_REFRESH; 它检索一个值，从该缓冲区时*操作*是 SQL_UPDATE。  
+ [延迟的输入/输出]指向要绑定到列的长度/指示器缓冲区的指针。 **SQLFetch**和**SQLFetchScroll**返回此缓冲区中的值。 当*Operation*为 SQL_ADD、SQL_UPDATE_BY_BOOKMARK 或 SQL_DELETE_BY_BOOKMARK 时， **SQLBulkOperations**从此缓冲区检索值。 当*操作*为 SQL_FETCH_BY_BOOKMARK 时， **SQLBulkOperations**将在此缓冲区中返回一个值。 当*操作*为 SQL_REFRESH 时， **SQLSetPos**在此缓冲区中返回值;当 SQL_UPDATE*操作*时，它将从此缓冲区检索值。  
   
- **SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，并且**SQLSetPos**可以返回的长度/指示器缓冲区中的以下值：  
+ **SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**和**SQLSetPos**可以返回长度/指示器缓冲区中的以下值：  
   
--   可用于返回的数据的长度  
+-   可供返回的数据的长度  
   
 -   SQL_NO_TOTAL  
   
 -   SQL_NULL_DATA  
   
- 应用程序可以将以下值放在与一起使用的长度/指示器缓冲区**SQLBulkOperations**或**SQLSetPos**:  
+ 应用程序可以在长度/指示器缓冲区中放置以下值，以便与**SQLBulkOperations**或**SQLSetPos**一起使用：  
   
 -   正在发送的数据的长度  
   
@@ -99,124 +99,124 @@ SQLRETURN SQLBindCol(
   
 -   SQL_COLUMN_IGNORE  
   
- 如果指示器缓冲区和长度的缓冲区是单独的缓冲区，指示器缓冲区可返回仅 SQL_NULL_DATA，而长度缓冲区可以返回所有其他值。  
+ 如果指示器缓冲区和长度缓冲区是单独的缓冲区，则指示器缓冲区只能返回 SQL_NULL_DATA，而长度缓冲区可以返回所有其他值。  
   
- 有关详细信息，请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)， [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)， [SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)，和[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+ 有关详细信息，请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)和[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
- 如果*StrLen_or_IndPtr*是使用空指针、 没有长度或指示器值。 当提取数据和数据为 NULL 时，这是一个错误。  
+ 如果*StrLen_or_IndPtr*为 null 指针，则不使用长度或指示器值。 这是提取数据时出错，数据为 NULL。  
   
- 请参阅[ODBC 64-Bit 信息](../../../odbc/reference/odbc-64-bit-information.md)，如果你的应用程序将在 64 位操作系统上运行。  
+ 如果你的应用程序将在64位操作系统上运行，请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
   
 ## <a name="returns"></a>返回  
- SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLBindCol**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常由返回的 SQLSTATE 值**SQLBindCol** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
+ 当**SQLBindCol**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*SQLGetDiagRec 的 HandleType*和*SQL_HANDLE_STMT*的*句柄*调用**StatementHandle**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLBindCol**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码为 SQL_ERROR。  
   
 |SQLSTATE|Error|描述|  
 |--------------|-----------|-----------------|  
-|01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|07006|受限制的数据类型属性冲突|（数据挖掘） *ColumnNumber*参数为 0，并且*TargetType* SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK 参数不是。|  
-|07009|描述符索引无效|为参数指定的值*ColumnNumber*超出最大结果集中的列数。|  
-|HY000|常规错误|有关其中没有任何特定的 SQLSTATE 和为其定义任何特定于实现的 SQLSTATE 出错。 返回的错误消息**SQLGetDiagRec**中 *\*MessageText*缓冲区描述错误以及其原因。|  
-|HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
-|HY003|无效的应用程序缓冲区类型|自变量*TargetType*是有效的数据类型既不 SQL_C_DEFAULT。|  
-|HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLBindCol**调用。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 的调用以异步方式执行的函数*StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。|  
-|HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY090|字符串或缓冲区长度无效|(DM) 的参数指定的值*BufferLength*小于 0。<br /><br /> (DM) 驱动程序是 ODBC 2。*x*驱动程序， *ColumnNumber*参数设置为 0，并为该参数指定的值*BufferLength*不是等于 4。|  
-|HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未实现的可选功能|驱动程序或数据源不支持指定的组合来转换*TargetType*参数和特定于驱动程序的 SQL 数据类型的相应列。<br /><br /> 自变量*ColumnNumber*为 0 时，该驱动程序不支持书签。<br /><br /> 该驱动程序支持仅 ODBC 2。*x*和参数*TargetType*是以下之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 和中列出的 C 间隔数据类型的任何[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中附录 d:数据类型。<br /><br /> 该驱动程序仅支持之前需 3.50 和参数的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
-|HYT01|连接超时时间已到|连接超时期限过期之前的数据源响应此请求。 通过设置连接超时期**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驱动程序不支持此函数|(DM) 驱动程序与相关联*StatementHandle*不支持该函数。|  
+|01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|07006|受限制的数据类型属性冲突|（DM） *ColumnNumber*参数为0， *TargetType*参数不是 SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK。|  
+|07009|描述符索引无效|为参数*ColumnNumber*指定的值超出了结果集中的最大列数。|  
+|HY000|一般错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 *@No__t 2MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
+|HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
+|HY003|应用程序缓冲区类型无效|参数*TargetType*既不是有效的数据类型，也不是 SQL_C_DEFAULT。|  
+|HY010|函数序列错误|（DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLBindCol**时仍在执行此异步函数。<br /><br /> （DM）为*StatementHandle*调用了**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，并返回了 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数，并且在调用此函数时仍在执行该函数。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSETPOS**调用了*StatementHandle*并返回了 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
+|HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
+|HY090|字符串或缓冲区长度无效|（DM）为参数*BufferLength*指定的值小于0。<br /><br /> （DM）驱动程序是一个 ODBC 2。*x*驱动程序， *ColumnNumber*参数设置为0，为参数*BufferLength*指定的值不等于4。|  
+|HY117|由于未知的事务状态，连接被挂起。 仅允许断开连接和只读函数。|（DM）有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYC00|未实现的可选功能|驱动程序或数据源不支持通过*TargetType*参数和相应列的特定于驱动程序的 SQL 数据类型组合指定的转换。<br /><br /> 参数*ColumnNumber*为0，驱动程序不支持书签。<br /><br /> 驱动程序仅支持 ODBC 2。*x*和参数*TargetType*为以下其中一项：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 附录 D：中的[c 数据类型](../../../odbc/reference/appendixes/c-data-types.md)中列出的任何时间间隔 c 数据类型：数据类型。<br /><br /> 驱动程序仅支持3.50 之前的 ODBC 版本，参数*TargetType*为 SQL_C_GUID。|  
+|HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT 设置。|  
+|IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
   
 ## <a name="comments"></a>注释  
- **SQLBindCol**用于将相关联，或*绑定，* 结果中的列设置为数据缓冲区和应用程序中的长度/指示器缓冲区。 当应用程序调用**SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**来提取数据，该驱动程序返回的数据绑定的列指定缓冲区中; 对于详细信息，请参阅[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)。 当应用程序调用**SQLBulkOperations**若要更新或插入行或**SQLSetPos**更新的行，该驱动程序中检索数据对于绑定列指定的缓冲区中; 有关详细信息请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。 有关绑定的详细信息，请参阅[检索结果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
+ **SQLBindCol**用于将结果集中的列关联或*绑定*到应用程序中的数据缓冲区和长度/指示器缓冲区。 当应用程序调用**SQLFetch**、 **SQLFetchScroll**或**SQLSetPos**获取数据时，驱动程序将为指定缓冲区中的绑定列返回数据;有关详细信息，请参阅[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)。 当应用程序调用**SQLBulkOperations**更新或插入行或**SQLSetPos**以更新行时，驱动程序将从指定的缓冲区中检索绑定列的数据;有关详细信息，请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。 有关绑定的详细信息，请参阅[检索结果（基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
   
- 请注意，列不需要将绑定到从其检索数据。 应用程序还可以调用**SQLGetData**来从列中检索数据。 尽管可以将绑定中的行和调用的某些列，但**SQLGetData**对于其他操作系统，这会受到某些限制。 有关详细信息，请参阅[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
+ 请注意，不需要绑定列来从它们中检索数据。 应用程序还可以调用**SQLGetData**来检索列中的数据。 尽管可以绑定行中的某些列并为其他列调用**SQLGetData** ，但这可能会受到某些限制。 有关详细信息，请参阅[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
   
-## <a name="binding-unbinding-and-rebinding-columns"></a>绑定、 取消绑定操作，和重新绑定列  
- 列可以绑定、 未绑定，或在任何时候，从结果集中提取数据，即使重新绑定。 新绑定使用的绑定的函数调用的下一步时间生效。 例如，假设应用程序绑定中的列的结果集和调用**SQLFetch**。 该驱动程序绑定的缓冲区中返回的数据。 现在假设应用程序绑定到一组不同的缓冲区的列。 该驱动程序不会在新绑定的缓冲区中将只是提取行的数据。 相反，它将等待，直至**SQLFetch**再次调用，然后在新绑定的缓冲区的下一步的行的数据。  
+## <a name="binding-unbinding-and-rebinding-columns"></a>绑定、取消绑定和重新绑定列  
+ 即使已从结果集中提取数据，也可以随时绑定、取消绑定或重新绑定列。 新绑定将在下一次调用使用绑定的函数时生效。 例如，假设应用程序绑定结果集中的列并调用**SQLFetch**。 驱动程序将返回绑定缓冲区中的数据。 现在，假设应用程序将列绑定到一组不同的缓冲区。 该驱动程序不会将提取行的数据放入新绑定的缓冲区中。 相反，它会一直等待，直到再次调用**SQLFetch** ，然后将数据放置到新绑定的缓冲区中的下一行。  
   
 > [!NOTE]  
->  语句属性 SQL_ATTR_USE_BOOKMARKS 应始终设置绑定到列 0 之前。 这不是必需的但强烈建议。  
+>  应始终设置语句属性 SQL_ATTR_USE_BOOKMARKS，然后将列绑定到列0。 这不是必需的，但强烈建议这样做。  
   
 ## <a name="binding-columns"></a>绑定列  
- 若要将列绑定，应用程序调用**SQLBindCol** ，并将传递列号、 类型、 地址和长度的数据缓冲区和长度/指示器缓冲区的地址。 有关如何使用这些地址的信息，请参阅"缓冲区的地址，"更高版本在本部分中。 有关绑定列的详细信息，请参阅[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  
+ 若要绑定列，应用程序将调用**SQLBindCol**并传递列号、类型、地址和数据缓冲区的长度以及长度/指示器缓冲区的地址。 有关如何使用这些地址的信息，请参阅本部分后面的 "缓冲区地址"。 有关绑定列的详细信息，请参阅[Using SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  
   
- 使用这些缓冲区被延迟;也就是说，应用程序将绑定中对其**SQLBindCol**但该驱动程序访问它们中的其他函数-即**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 它是应用程序的责任，以确保在指定指针**SQLBindCol**保持有效，前提是该绑定将保持有效。 如果该应用程序允许这些指针变为无效-例如，它将释放缓冲区-，然后调用预计这些无效的函数，结果不确定。 有关详细信息，请参阅[延迟的缓冲区](../../../odbc/reference/develop-app/deferred-buffers.md)。  
+ 这些缓冲区的使用会延迟;也就是说，应用程序将其绑定到**SQLBindCol**中，但驱动程序将从其他函数（即**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**或**SQLSetPos**）进行访问。 应用程序负责确保只要绑定保持有效， **SQLBindCol**中指定的指针仍然有效。 如果应用程序允许这些指针变为无效（例如，它释放缓冲区，然后调用一个预期其有效的函数），则结果是不确定的。 有关详细信息，请参阅[延迟缓冲区](../../../odbc/reference/develop-app/deferred-buffers.md)。  
   
- 绑定保持有效，直到它替换为新的绑定，该列为未绑定，或释放该语句。  
+ 绑定将保持有效，直到它被新绑定替换、列未绑定或释放该语句。  
   
-## <a name="unbinding-columns"></a>正在取消绑定列  
- 若要取消绑定的单个列，应用程序调用**SQLBindCol**与*ColumnNumber*设置为的列数和*TargetValuePtr*设置为 null 指针。 如果*ColumnNumber*未绑定的列，是指**SQLBindCol**仍将返回 SQL_SUCCESS。  
+## <a name="unbinding-columns"></a>拆散列  
+ 若要取消对单个列的绑定，应用程序将调用**SQLBindCol** ，并将*ColumnNumber*设置为该列的数目，并将*TargetValuePtr*设置为 null 指针。 如果*ColumnNumber*引用了未绑定的列， **SQLBINDCOL**仍返回 SQL_SUCCESS。  
   
- 若要取消绑定所有列，应用程序调用**SQLFreeStmt**与*fOption*设置为 SQL_UNBIND。 这还会通过设置为零 ARD SQL_DESC_COUNT 字段来完成。  
+ 若要取消绑定所有列，应用程序将调用**SQLFreeStmt** ，并将*FOPTION*设置为 SQL_UNBIND。 还可以通过将 ARD 的 SQL_DESC_COUNT 字段设置为零来实现此目的。  
   
 ## <a name="rebinding-columns"></a>重新绑定列  
- 应用程序可以执行两项操作才能更改绑定之一：  
+ 应用程序可以执行以下两个操作之一来更改绑定：  
   
--   调用**SQLBindCol**以指定新的绑定已绑定的列。 该驱动程序将使用新覆盖旧的绑定。  
+-   调用**SQLBindCol**为已绑定的列指定新绑定。 驱动程序用新的绑定覆盖旧的绑定。  
   
--   指定要添加到绑定调用中所指定的缓冲区地址的偏移量**SQLBindCol**。 有关详细信息，请参阅下一部分中，"绑定偏移量。"  
+-   指定要添加到由对**SQLBindCol**的绑定调用指定的缓冲区地址的偏移量。 有关详细信息，请参阅下一节 "绑定偏移量"。  
   
-## <a name="binding-offsets"></a>绑定的偏移量  
- 绑定偏移量是一个值，添加到的数据和长度/指示器缓冲区的地址 (中指定的那样*TargetValuePtr*并*StrLen_or_IndPtr*参数) 它们取消引用之前。 当使用偏移量时，绑定是一个"模板"的应用程序的缓冲区的布局方式，并在应用程序可以移动此"模板"到不同区域的内存更改偏移量。 由于相同的偏移量添加到每个绑定中的每个地址，为不同的列在缓冲区之间的相对偏移量必须是相同的缓冲区每组中。 在使用按行绑定; 时，这是始终，则返回 true应用程序必须仔细设置此属性为 true 时使用按列绑定其缓冲区布局。  
+## <a name="binding-offsets"></a>绑定偏移量  
+ 绑定偏移量是在取消引用之前，添加到数据和长度/指示器缓冲区（在*TargetValuePtr*和*StrLen_or_IndPtr*参数中指定）的地址的值。 使用偏移量时，绑定是应用程序缓冲区布局方式的 "模板"，应用程序可以通过更改偏移量将此 "模板" 移到不同的内存区域。 由于每个绑定中的每个地址都添加了相同的偏移量，因此每个缓冲区集中的不同列的缓冲区间的相对偏移量必须相同。 当使用按行绑定时，这始终为 true;应用程序必须仔细地布局其缓冲区，以便在使用按列绑定时，此属性为 true。  
   
- 使用绑定的偏移量基本上具有相同的效果重新绑定列，通过调用**SQLBindCol**。 不同之处在于新调用**SQLBindCol**指定的数据缓冲区和长度/指示器缓冲区的新地址，而使用绑定偏移量不会更改地址，但只需向其添加偏移量。 只要想，并且此偏移量始终添加到最初绑定地址，该应用程序可以指定新的偏移量。 具体而言，如果偏移量设置为 0 或语句属性设置为 null 指针，该驱动程序将使用最初绑定的地址。  
+ 使用绑定偏移量与通过调用**SQLBindCol**重新绑定列基本相同。 不同之处是，对**SQLBindCol**的新调用指定了数据缓冲区和长度/指示器缓冲区的新地址，而使用绑定偏移量不会更改地址，只是向其添加偏移量。 应用程序可以在需要时指定新的偏移量，并且始终会将此偏移量添加到最初绑定的地址。 尤其是，如果偏移量设置为0，或者如果语句特性设置为 null 指针，则驱动程序将使用最初绑定的地址。  
   
- 若要指定绑定偏移量，该应用程序设置为 SQLINTEGER 缓冲区的地址的 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性。 应用程序调用一个函数，使用绑定之前，它会在此缓冲区中的字节将偏移量。 若要确定要使用的缓冲区的地址，驱动程序会添加到绑定中的地址偏移量。 地址和偏移量的总和必须为有效的地址，但不是需要是有效的偏移量添加到的地址。 有关如何使用绑定的偏移量的详细信息，请参阅"缓冲区的地址，"更高版本在本部分中。  
+ 为了指定绑定偏移量，应用程序会将 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性设置为 SQLINTEGER 缓冲区的地址。 在应用程序调用使用绑定的函数之前，它会在此缓冲区中的偏移量（以字节为单位）。 为了确定要使用的缓冲区的地址，驱动程序将偏移量添加到绑定中的地址。 地址与偏移量之和必须是有效地址，但偏移量的添加地址不一定有效。 有关如何使用绑定偏移量的详细信息，请参阅本部分后面的 "缓冲区地址"。  
   
 ## <a name="binding-arrays"></a>绑定数组  
- 如果大于 1 的行集大小 （SQL_ATTR_ROW_ARRAY_SIZE 语句属性的值），该应用程序将绑定的而不是单个缓冲区的缓冲区的数组。 有关详细信息，请参阅[块状游标](../../../odbc/reference/develop-app/block-cursors.md)。  
+ 如果行集大小（SQL_ATTR_ROW_ARRAY_SIZE 语句特性的值）大于1，则应用程序将绑定缓冲区数组而不是单个缓冲区。 有关详细信息，请参阅[块游标](../../../odbc/reference/develop-app/block-cursors.md)。  
   
- 应用程序可以将数组绑定通过两种方式：  
+ 应用程序可以通过两种方式绑定数组：  
   
--   将数组绑定到每个列。 这被称为*按列绑定*因为每个数据结构 （数组） 包含对单个列的数据。  
+-   将数组绑定到每个列。 这称为按*列绑定*，因为每个数据结构（数组）都包含单个列的数据。  
   
--   定义一种结构来保存整个行的数据，并将绑定这些结构的数组。 这被称为*按行绑定*因为每个数据结构包含单个行的数据。  
+-   定义一个结构来保存整行的数据，并绑定这些结构的数组。 这称为按*行绑定*，因为每个数据结构包含单个行的数据。  
   
- 每个缓冲区数组作为行集的大小必须至少多少元素。  
+ 每个缓冲区数组都必须具有至少与行集大小相同的元素。  
   
 > [!NOTE]  
->  应用程序必须验证对齐方式有效。 有关对齐方式的详细信息，请参阅[对齐](../../../odbc/reference/develop-app/alignment.md)。  
+>  应用程序必须验证对齐是否有效。 有关对齐注意事项的详细信息，请参阅[对齐](../../../odbc/reference/develop-app/alignment.md)。  
   
 ## <a name="column-wise-binding"></a>按列绑定  
  在按列绑定中，应用程序将单独的数据和长度/指示器数组绑定到每个列。  
   
- 若要使用按列绑定，应用程序首先将 SQL_ATTR_ROW_BIND_TYPE 语句属性设置为 SQL_BIND_BY_COLUMN。 （这是默认值）。对于要绑定每个列，该应用程序执行以下步骤：  
+ 若要使用按列绑定，应用程序首先将 SQL_ATTR_ROW_BIND_TYPE 语句属性设置为 SQL_BIND_BY_COLUMN。 （这是默认值。）对于每个要绑定的列，应用程序执行以下步骤：  
   
 1.  分配数据缓冲区数组。  
   
 2.  分配长度/指示器缓冲区的数组。  
   
     > [!NOTE]  
-    >  如果在使用按列绑定时，应用程序将直接写入描述符，独立的数组可以用于长度和指示器数据。  
+    >  当使用按列绑定时，如果应用程序直接写入描述符，则可以使用单独的数组作为长度和指示器数据。  
   
-3.  调用**SQLBindCol**使用以下参数：  
+3.  调用具有以下参数的**SQLBindCol** ：  
   
-    -   *TargetType*是数据缓冲区数组中的单个元素的类型。  
+    -   *TargetType*是数据缓冲区数组中单个元素的类型。  
   
     -   *TargetValuePtr*是数据缓冲区数组的地址。  
   
-    -   *BufferLength*是数据缓冲区数组中的单个元素的大小。 *BufferLength*固定长度的数据的数据时，将忽略参数。  
+    -   *BufferLength*是数据缓冲区数组中单个元素的大小。 当数据为固定长度数据时，将忽略*BufferLength*参数。  
   
     -   *StrLen_or_IndPtr*是长度/指示器数组的地址。  
   
- 有关如何使用此信息的详细信息，请参阅"缓冲区的地址，"更高版本在本部分中。 按列绑定的详细信息，请参阅[按列绑定](../../../odbc/reference/develop-app/column-wise-binding.md)。  
+ 有关如何使用此信息的详细信息，请参阅本部分后面的 "缓冲区地址"。 有关按列绑定的详细信息，请参阅按[列绑定](../../../odbc/reference/develop-app/column-wise-binding.md)。  
   
 ## <a name="row-wise-binding"></a>按行绑定  
- 在按行绑定中，应用程序定义的结构，包含要绑定每个列的数据和长度/指示器缓冲区。  
+ 在按行绑定中，应用程序将定义一个结构，该结构包含每个要绑定的列的数据和长度/指示器缓冲区。  
   
- 若要使用按行绑定，应用程序，请执行以下步骤：  
+ 若要使用按行绑定，应用程序需要执行以下步骤：  
   
-1.  定义一个结构以容纳单个行的数据 （包括数据和长度/指示器缓冲区），并分配这些结构的数组。  
+1.  定义用于保存单个数据行（包括数据和长度/指示器缓冲区）的结构，并分配这些结构的数组。  
   
     > [!NOTE]  
-    >  如果在使用按行绑定时，应用程序将直接写入描述符，单独的字段可用于长度和指示器数据。  
+    >  当使用按行绑定时，如果应用程序直接写入描述符，则可以将单独的字段用于长度和指示器数据。  
   
-2.  包含单个数据行的结构的大小或实例的结果列将绑定到其中的缓冲区大小设置 SQL_ATTR_ROW_BIND_TYPE 语句属性。 长度必须包括所有绑定的列，以及结构或缓冲区，以确保当绑定列的地址与指定的长度递增时，结果将点到下一行中的同一列开头的任何填充大小的空间。 使用时*sizeof* ANSI C 中的运算符，将保证该行为。  
+2.  将 SQL_ATTR_ROW_BIND_TYPE 语句特性设置为结构的大小，该结构包含单个数据行或结果列将绑定到的缓冲区的实例大小。 长度必须包含所有绑定列的空间以及结构或缓冲区的任何填充，以确保当绑定列的地址递增指定的长度时，结果将指向下一行中同一列的开头。 在 ANSI C 中使用*sizeof*运算符时，此行为是保证的。  
   
-3.  调用**SQLBindCol**与要绑定每个列的以下参数：  
+3.  对于每个要绑定的列，调用**SQLBindCol** ，并提供以下参数：  
   
     -   *TargetType*是要绑定到列的数据缓冲区成员的类型。  
   
@@ -226,63 +226,63 @@ SQLRETURN SQLBindCol(
   
     -   *StrLen_or_IndPtr*是要绑定的长度/指示器成员的地址。  
   
- 有关如何使用此信息的详细信息，请参阅"缓冲区的地址，"更高版本在本部分中。 按列绑定的详细信息，请参阅[按行绑定](../../../odbc/reference/develop-app/row-wise-binding.md)。  
+ 有关如何使用此信息的详细信息，请参阅本部分后面的 "缓冲区地址"。 有关按列绑定的详细信息，请参阅按[行绑定](../../../odbc/reference/develop-app/row-wise-binding.md)。  
   
 ## <a name="buffer-addresses"></a>缓冲区地址  
- *缓冲区地址*是数据或长度/指示器缓冲区的实际地址。 它将写入到缓冲区 （如期间提取时间） 之前，驱动程序计算的缓冲区地址。 从下面的公式，使用中指定的地址计算*TargetValuePtr*并*StrLen_or_IndPtr*自变量、 绑定偏移量和行号：  
+ *缓冲区地址*是数据或长度/指示器缓冲区的实际地址。 驱动程序在写入缓冲区之前（例如在提取时）计算缓冲区地址。 它是通过下面的公式计算的，它使用*TargetValuePtr*和*StrLen_or_IndPtr*参数中指定的地址、绑定偏移量和行号：  
   
- *绑定地址* + *绑定偏移量*+ ((*行号*-1) x*元素大小*)  
+ *绑定地址* + *绑定偏移量*+ （（*行号*-1） x*元素大小*）  
   
- 其中公式的变量定义如下表中所述。  
+ 公式变量的定义位置如下表中所述。  
   
 |变量|描述|  
 |--------------|-----------------|  
-|*绑定地址*|数据缓冲区，使用指定的地址*TargetValuePtr*中的参数**SQLBindCol**。<br /><br /> 长度/指示器缓冲区，使用指定的地址*StrLen_or_IndPtr*中的参数**SQLBindCol**。 有关详细信息，请参阅"描述符和 SQLBindCol"部分中的"附加注释"。<br /><br /> 如果绑定的地址为 0，不返回任何数据值，即使上面的公式计算得出的地址为非零值。|  
-|*绑定偏移量*|如果使用按行绑定，则使用 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性将指定的地址上存储的值。<br /><br /> 如果使用按列绑定或 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性的值为 null 指针，*绑定的偏移量*为 0。|  
-|*行号*|从 1 开始的行集中的行数。 对于单行提取操作，这是默认值，这是 1。|  
-|*元素大小*|绑定的数组中的元素的大小。<br /><br /> 如果使用按列绑定，则这是**sizeof(SQLINTEGER)** 的长度/指示器缓冲区。 它是值的数据缓冲区*BufferLength*中的参数**SQLBindCol**如果数据类型是可变长度和数据类型的大小的数据类型固定长度。<br /><br /> 如果使用按行绑定，则这是数据和长度/指示器缓冲区将 SQL_ATTR_ROW_BIND_TYPE 语句属性的值。|  
+|*绑定地址*|对于数据缓冲区，为**SQLBindCol**中的*TargetValuePtr*参数指定的地址。<br /><br /> 对于长度/指示器缓冲区，为**SQLBindCol**中的*StrLen_or_IndPtr*参数指定的地址。 有关详细信息，请参阅 "描述符和 SQLBindCol" 部分中的 "其他注释"。<br /><br /> 如果绑定地址是0，则不会返回任何数据值，即使之前公式计算的地址不为零。|  
+|*绑定偏移量*|如果使用按行绑定，则值存储在使用 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性指定的地址上。<br /><br /> 如果使用按列绑定，或 SQL_ATTR_ROW_BIND_OFFSET_PTR 语句特性的值为 null 指针，则*绑定偏移量*为0。|  
+|*行号*|行集中从1开始的行号。 对于单行读取（默认值），此值为1。|  
+|*元素大小*|绑定数组中元素的大小。<br /><br /> 如果使用按列绑定，则为长度/指示器缓冲区的**sizeof （SQLINTEGER）** 。 对于数据缓冲区，如果数据类型为可变长度，则为*BufferLength*参数的值 **; 如果数据**类型为固定长度，则为数据类型的大小。<br /><br /> 如果使用按行绑定，则这是数据和长度/指示器缓冲区的 SQL_ATTR_ROW_BIND_TYPE 语句特性的值。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>描述符和 SQLBindCol  
- 以下各节介绍如何**SQLBindCol**与描述符进行交互。  
+ 以下各节介绍了**SQLBindCol**如何与描述符交互。  
   
 > [!CAUTION]  
->  调用**SQLBindCol**为一条语句可能会影响其他语句。 当与语句相关联 ARD 显式分配，并且仍与其他语句相关联时，将发生这种情况。 因为**SQLBindCol**修改描述符，所做的修改将应用于此说明符与之关联的所有语句。 如果这不是所需的行为，应用程序应取消关联此描述符的其他语句之前它将调用**SQLBindCol**。  
+>  对一个语句调用**SQLBindCol**可能会影响其他语句。 如果与该语句关联的 ARD 已显式分配并与其他语句相关联，则会发生这种情况。 由于**SQLBindCol**修改了描述符，因此修改应用于与此描述符关联的所有语句。 如果这不是所需的行为，应用程序应在调用**SQLBindCol**之前，将此描述符与其他语句取消关联。  
   
 ## <a name="argument-mappings"></a>参数映射  
- 从概念上讲， **SQLBindCol**序列中执行以下步骤：  
+ 从概念上讲， **SQLBindCol**按顺序执行以下步骤：  
   
-1.  调用**SQLGetStmtAttr**以获得 ARD 句柄。  
+1.  调用**SQLGetStmtAttr**以获取 ARD 句柄。  
   
-2.  调用**SQLGetDescField**若要获取此描述符 SQL_DESC_COUNT 字段中，并且如果中的值*ColumnNumber*自变量超出 SQL_DESC_COUNT，调用的值**SQLSetDescField** SQL_DESC_COUNT 到值增加*ColumnNumber*。  
+2.  调用**SQLGetDescField**以获取此描述符的 SQL_DESC_COUNT 字段，如果*ColumnNumber*参数中的值超出 SQL_DESC_COUNT 的值，则调用**SQLSetDescField**以将 SQL_DESC_COUNT 的值增加到*ColumnNumber*。  
   
-3.  调用**SQLSetDescField**多次将值分配到 ARD 的以下字段：  
+3.  多次调用**SQLSetDescField** ，将值分配给 ARD 的以下字段：  
   
-    -   设置的值的 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE *TargetType*，只不过如果*TargetType*是一个 datetime 或间隔子类型的简洁标识符，它将 SQL_DESC_TYPE 设置为 SQL_日期时间或 SQL_INTERVAL，分别;设置 SQL_DESC_CONCISE_TYPE 为简明的标识符;和集 SQL_DESC_DATETIME_INTERVAL_CODE 到相应的日期时间或间隔子代码。  
+    -   将 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 设置为*TargetType*的值，只不过当*targettype*是 datetime 或 interval 子类型的简洁标识符之一时，它将 SQL_DESC_TYPE 分别设置为 SQL_DATETIME 或 SQL_INTERVAL。将 SQL_DESC_CONCISE_TYPE 设置为简洁标识符;并将 SQL_DESC_DATETIME_INTERVAL_CODE 设置为相应的 DATETIME 或 INTERVAL 子代码。  
   
-    -   将一个或多个 SQL_DESC_LENGTH、 SQL_DESC_PRECISION、 SQL_DESC_SCALE 和 SQL_DESC_DATETIME_INTERVAL_PRECISION，设置为适合*TargetType*。  
+    -   根据*TargetType*的需要，设置一个或多个 SQL_DESC_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE 和 SQL_DESC_DATETIME_INTERVAL_PRECISION。  
   
-    -   设置的值的 SQL_DESC_OCTET_LENGTH 字段*BufferLength*。  
+    -   将 SQL_DESC_OCTET_LENGTH 字段设置为*BufferLength*的值。  
   
-    -   设置 SQL_DESC_DATA_PTR 字段的值*TargetValue*。  
+    -   将 SQL_DESC_DATA_PTR 字段设置为*TargetValue*的值。  
   
-    -   SQL_DESC_INDICATOR_PTR 字段设置为值*StrLen_or_Ind*。 （请参阅下面的段落中。）  
+    -   将 SQL_DESC_INDICATOR_PTR 字段设置为*StrLen_or_Ind*的值。 （请参阅下一段。）  
   
-    -   SQL_DESC_OCTET_LENGTH_PTR 字段设置为值*StrLen_or_Ind*。 （请参阅下面的段落中。）  
+    -   将 SQL_DESC_OCTET_LENGTH_PTR 字段设置为*StrLen_or_Ind*的值。 （请参阅下一段。）  
   
- 该变量的*StrLen_or_Ind*参数是指用于指示符和长度的信息。 如果提取遇到 null 值的列，它将 SQL_NULL_DATA 存储在此变量，例如：否则，它将在此变量中存储的数据长度。 传递 null 指针视为*StrLen_or_Ind*保持从返回的数据长度的提取操作但会提取失败，如果它遇到 null 值而无法返回 SQL_NULL_DATA。  
+ *StrLen_or_Ind*参数引用的变量用于指示器和长度信息。 如果提取遇到列的 null 值，则它将 SQL_NULL_DATA 存储在此变量中;否则，它会将数据长度存储在此变量中。 将 null 指针作为*StrLen_or_Ind*传递会使提取操作返回数据长度，但如果它遇到 null 值并且无法返回 SQL_NULL_DATA，则会使提取失败。  
   
- 如果在调用**SQLBindCol**失败，该值将设置在 ARD 的描述符字段的内容是不确定和 ARD SQL_DESC_COUNT 字段的值保持不变。  
+ 如果对**SQLBindCol**的调用失败，则它将在 ARD 中设置的描述符字段的内容是未定义的，并且 ARD 的 SQL_DESC_COUNT 字段的值不变。  
   
-## <a name="implicit-resetting-of-count-field"></a>隐式重置计数字段  
- **SQLBindCol**设置的值 SQL_DESC_COUNT *ColumnNumber*参数仅当这会增加 SQL_DESC_COUNT 的值。 如果中的值*TargetValuePtr*参数是空指针，并且中的值*ColumnNumber*参数等于 SQL_DESC_COUNT （即，当取消绑定的最高绑定列），然后 SQL_DESC_计数设置为最高的其余绑定列数。  
+## <a name="implicit-resetting-of-count-field"></a>计数字段的隐式重置  
+ **SQLBindCol**将 SQL_DESC_COUNT 设置为*ColumnNumber*参数的值，前提是这会增加 SQL_DESC_COUNT 的值。 如果*TargetValuePtr*参数中的值为 null 指针，并且*ColumnNumber*参数中的值等于 SQL_DESC_COUNT （即，解除绑定最大的列时），则 SQL_DESC_COUNT 设置为最高其余绑定列。  
   
-## <a name="cautions-regarding-sql_default"></a>有关 SQL_DEFAULT 的注意事项  
- 若要成功检索列数据，应用程序必须确定正确的长度和应用程序缓冲区中的数据的起始点。 当应用程序指定了显式*TargetType*，轻松地检测到应用程序误解。 但是，当应用程序指定了*TargetType* SQL_DEFAULT 的**SQLBindCol**可应用于不同的数据类型的列从一个目标应用程序，从对更改元数据或通过将代码应用于不同的列。 在这种情况下，应用程序可能不总是确定的开始或提取的列数据的长度。 这可能会导致数据未报告的错误或内存冲突。  
+## <a name="cautions-regarding-sql_default"></a>关于 SQL_DEFAULT 的注意事项  
+ 若要成功检索列数据，应用程序必须确定应用程序缓冲区中数据的长度和起点。 当应用程序指定显式*TargetType*时，可以轻松检测到应用程序误解。 但是，当应用程序指定 SQL_DEFAULT 的*TargetType*时，可以将**SQLBindCol**应用于应用程序所需的数据类型的列，无论是对元数据的更改还是通过将代码应用到其他该列. 在这种情况下，应用程序可能不会始终确定提取的列数据的开始或长度。 这可能会导致未报告的数据错误或内存冲突。  
   
 ## <a name="code-example"></a>代码示例  
- 在以下示例中，应用程序执行**选择**来返回结果集的客户 Id、 名称和电话号码的 Customers 表的语句按名称排序。 然后，它调用**SQLBindCol**要绑定到的本地缓冲区的数据的列。 最后，应用程序读取的数据与每一行**SQLFetch**并输出每个客户的名称、 ID 和电话号码。  
+ 在下面的示例中，应用程序对 Customers 表执行**SELECT**语句以返回客户 id、名称和电话号码的结果集，按名称排序。 然后，它调用**SQLBindCol**将数据的列绑定到本地缓冲区。 最后，应用程序通过**SQLFetch**提取每个数据行，并打印每个客户的姓名、ID 和电话号码。  
   
- 有关更多的代码示例，请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)， [SQLColumns 函数](../../../odbc/reference/syntax/sqlcolumns-function.md)， [SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)，和[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ 有关更多代码示例，请参阅[SQLBulkOperations 函数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 函数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)和[SQLSetPos 函数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
 ```cpp  
 // SQLBindCol_ref.cpp  
@@ -373,12 +373,12 @@ int main() {
   
 |有关信息|请参阅|  
 |---------------------------|---------|  
-|在结果集中返回列的相关信息|[SQLDescribeCol 函数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|提取的数据块或滚动浏览结果集|[SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|正在提取多行数据|[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|释放语句列缓冲区|[SQLFreeStmt 函数](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|正在提取部分或全部的数据列|[SQLGetData 函数](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|返回数的结果集列|[SQLNumResultCols 函数](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
+|返回有关结果集中的列的信息|[SQLDescribeCol 函数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|提取数据块或滚动结果集|[SQLFetchScroll 函数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|提取多行数据|[SQLFetch 函数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|释放语句上的列缓冲区|[SQLFreeStmt 函数](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|提取部分或全部数据列|[SQLGetData 函数](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|返回结果集列的数目|[SQLNumResultCols 函数](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
