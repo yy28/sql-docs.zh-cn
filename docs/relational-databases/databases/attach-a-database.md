@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071706"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816762"
 ---
 # <a name="attach-a-database"></a>附加数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,35 +56,33 @@ ms.locfileid: "68071706"
   
 2.  右键单击“数据库”  ，然后单击“附加”  。  
   
-3.  在 **“附加数据库”** 对话框中，若要指定要附加的数据库，请单击 **“添加”** ，然后在 **“定位数据库文件”** 对话框中选择数据库所在的磁盘驱动器并展开目录树，以查找并选择数据库的 .mdf 文件。例如：  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  在 **“附加数据库”** 对话框中，若要指定要附加的数据库，请单击 **“添加”** ，然后在 **“定位数据库文件”** 对话框中选择数据库所在的磁盘驱动器并展开目录树，以查找并选择数据库的 .mdf 文件。例如：
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > 尝试选择已附加的数据库将生成错误。  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **要附加的数据库**  
+     显示所选数据库的有关信息。  
   
-     \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     \<无列标题>  
+     显示一个图标，用以指示附加操作的状态。 下面的 **“状态”** 说明中介绍可能的图标。  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **MDF 文件位置**  
+     显示选定 MDF 文件的路径和文件名。  
   
      **Database Name**  
-     Displays the name of the database.  
+     显示数据库的名称。  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **附加为**  
+     根据需要，可以指定要附加数据库的其他名称。  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **“所有者”**  
+     提供数据库可能所有者的下拉列表，您可以根据需要从其中选择其他所有者。  
   
-     **Status**  
-     Displays the status of the database according to the following table.  
+     **“状态”**  
+     显示下表中相应的数据库状态。  
   
     |图标|状态文本|描述|  
     |----------|-----------------|-----------------|  
@@ -95,32 +93,32 @@ ms.locfileid: "68071706"
     |包含左、右两个黑色象限和上、下两个白色象限的圆圈|已停止|由于用户停止了附加操作，该操作未成功完成。|  
     |包含一个指向逆时针方向的曲线箭头的圆圈|已回滚|附加操作已成功，但已对其进行回滚，因为在附加其他对象的过程中出现了错误。|  
   
-     **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     **消息**  
+     显示空消息或“找不到文件”超链接。  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **“添加”**  
+     查找必需的主数据库文件。 当用户选择 .mdf 文件时，就会在 **“要附加的数据库”** 网格的相应字段中自动填充合适的信息。  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **删除**  
+     从 **“要附加的数据库”** 网格中删除选定文件。  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **”数据库详细信息**  
+     显示要附加的文件的名称。 若要验证或更改文件的路径名，请单击“浏览”按钮 (…)   。  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > 如果文件不存在，则 **“消息”** 列显示“找不到”。 如果找不到日志文件，则说明它位于其他目录中或者已被删除。 您需要更新 **“数据库详细信息”** 网格中该文件的路径使其指向正确的位置，或者从网格中删除该日志文件。 如果找不到 .ndf 数据文件，则需要更新网格中该文件的路径使其指向正确的位置。  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **原始文件名**  
+     显示属于数据库的已附加文件的名称。  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **文件类型**  
+     指示文件类型，即 **“数据”** 或 **“日志”** 。  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **当前文件路径**  
+     显示所选数据库文件的路径。 可以手动编辑该路径。  
   
-     **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     **消息**  
+     显示空消息或 **“找不到文件”** 超链接。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

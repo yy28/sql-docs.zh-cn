@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154648"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687392"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上 SQL Server 2017 的各版本和支持的功能
 
@@ -161,15 +161,15 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
   
 |功能|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|专用管理连接|是|是|是|支持（使用跟踪标志）|支持（使用跟踪标志）|   
+|专用管理连接|是|是|是|支持（使用跟踪标志）|   
 |PowerShell 脚本支持|是|是|是|是| 
 |支持数据层应用程序组件操作 - 提取、部署、升级、删除|是|是|是|是| 
-|策略自动执行（检查计划和更改）|是|是|是|否|否|   
-|性能数据收集器|是|是|是|否|否| 
-|标准性能报表|是|是|是|否|否| 
-|计划指南和计划指南的计划冻结|是|是|是|否|否|   
+|策略自动执行（检查计划和更改）|是|是|是|否|  
+|性能数据收集器|是|是|是|否|
+|标准性能报表|是|是|是|否|
+|计划指南和计划指南的计划冻结|是|是|是|否| 
 |使用 NOEXPAND 提示的索引视图的直接查询|是|是|是|是| 
-|自动索引视图维护|是|是|是|否|否| 
+|自动索引视图维护|是|是|是|否|
 |分布式分区视图|是|否|否|否| 
 |并行索引操作|是|否|否|否|  
 |查询优化器自动使用索引视图|是|否|否|否| 
@@ -188,10 +188,10 @@ Linux 上的 SQL Server 2017 支持 SQL Server 数据库引擎。 下表介绍�
 |MERGE 和 UPSERT 功能|是|是|是|是|   
 |日期和时间数据类型|是|是|是|是|  
 |国际化支持|是|是|是|是| 
-|全文和语义搜索|是|是|是|是|否| 
-|查询中的语言规范|是|是|是|是|否|   
-|Service Broker（消息传递）|是|是|不支持（仅客户端）|不支持（仅客户端）|不支持（仅客户端）|   
-|Transact-SQL 端点|是|是|是|否|否| 
+|全文和语义搜索|是|是|是|是|
+|查询中的语言规范|是|是|是|是|
+|Service Broker（消息传递）|是|是|不支持（仅客户端）|不支持（仅客户端）|
+|Transact-SQL 端点|是|是|是|否|
 |图形|是|是|是|是|  
 
 

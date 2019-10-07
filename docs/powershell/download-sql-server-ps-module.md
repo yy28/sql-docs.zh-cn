@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 82daddf2589970c415a53ca756599ac892be1a35
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68697278"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713197"
 ---
 # <a name="install-sql-server-powershell-module"></a>安装 SQL Server PowerShell 模块
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68697278"
 
 模块的预发布版本可能会被更频繁地使用：请参阅本页底部部分，了解如何获得此类模块的版本。
 
-要从 PowerShell 库安装 SqlServer  模块，请启用 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) 会话并使用以下命令。 如果在安装过程中出现问题，请参阅[安装模块文档](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module)和[安装模块参考](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)。
+要从 PowerShell 库安装 SqlServer  模块，请启用 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) 会话并使用以下命令。 如果在安装过程中出现问题，请参阅[安装模块文档](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1)和[安装模块参考](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)。
 
 安装 SqlServer 模块  ：
 

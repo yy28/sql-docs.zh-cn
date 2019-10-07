@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71066878"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708279"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,8 +99,6 @@ AdventureWorks_snapshot_evening
   
 2.  使用 AS SNAPSHOT OF 子句对文件执行 CREATE DATABASE 语句。 创建快照需要指定源数据库的每个数据库文件的逻辑名称。 语法如下：  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -117,10 +115,10 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     其中，source_database_name  是源数据库，logical_file_name  是引用该文件时在 SQL Server 中使用的逻辑名称，os_file_name  是创建该文件时操作系统使用的路径和文件名，database_snapshot_name  是将数据库恢复到的快照的名称。 有关该语法的完整描述，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
     > [!NOTE]  
-    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
+    >  创建数据库快照时，CREATE DATABASE 语句中不允许有日志文件、脱机文件、还原文件和不起作用的文件。  
   
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
   

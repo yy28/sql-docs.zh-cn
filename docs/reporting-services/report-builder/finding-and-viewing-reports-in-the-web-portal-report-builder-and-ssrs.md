@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492842"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923790"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在 Web 门户中查找和查看报表（报表生成器和 SSRS）
   报表管理器是一种基于 Web 的工具，该工具包含查看和管理报表的功能。 它是报表服务器安装的一部分。 若要打开报表管理器，请在浏览器窗口中键入报表管理器 URL。 有关浏览器要求的信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。 有关如何可在报表服务器上配置报表管理器 URL 的详细信息，请与系统管理员联系。 有关详细信息，请参阅[配置报表管理器（本机模式）](../../reporting-services/report-server/configure-report-manager-native-mode.md)。  

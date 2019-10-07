@@ -7,14 +7,14 @@ ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a619f67d951ba7407aa0987b2ca9fb65373de95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061972"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710456"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -46,7 +46,7 @@ ms.locfileid: "68061972"
 
 ||||
 |-|-|-| 
-|运算符类型|可推送到 Hadoop|可推送到 Blob 存储|
+|运算符类型 |可推送到 Hadoop |可推送到 Blob 存储 |
 |列投影|是|否|
 |谓词|是|否|
 |聚合|Partial|否|

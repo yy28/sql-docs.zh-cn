@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0b7ea891c0c4ee5dfbcd8301cff4e364dcd5cae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f621bf9839e5f0e36051461f144a4070ff715489
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909229"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710402"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切换可更新事务性订阅的更新模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "67909229"
   
 1.  通过对请求订阅执行 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) 或对推送订阅执行 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) ，验证订阅是否支持故障转移。 如果结果集中 **update mode** 的值为 **3** 或 **4**，则支持故障转移。  
   
-2.  在订阅服务器上，对订阅数据库执行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 **@publisher** 、 **@publisher_db** 、 **@publication** 并为 **@failover_mode** 指定以下值之一：  
+2.  在订阅服务器上，对订阅数据库执行 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)。 指定 `@publisher`、 `@publisher_db`和 `@publication`，并为 `@failover_mode`指定以下值之一：  
   
     -   **queued** - 在短暂断开连接时将故障转移到排队更新。  
   

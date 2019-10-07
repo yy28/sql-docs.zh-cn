@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.openlocfilehash: 47726a76f853b8728369a2b406de1fdc8456facd
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059286"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961934"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ETL 工作流通常包括将数据加载到临时表、转换数据和将数据�
 
 可使用下面的脚本在默认数据文件夹中创建文件组，然后配置推荐设置：
 
-- [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+- [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 
 下面的脚本介绍了可在数据库中创建的内存中 OLTP 对象：
 
@@ -225,7 +225,7 @@ GO
 [可提高 T-SQL 性能的内存中 OLTP 技术](https://msdn.microsoft.com/library/mt694156.aspx)   
 有关使用内存中 OLTP 的性能演示，请参阅：[in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [介绍和演示内存中 OLTP 的 17 分钟视频](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
-[用于启用内存中 OLTP 和设置推荐选项的脚本](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
+[用于启用内存中 OLTP 和设置推荐选项的脚本](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)   
 [有关内存中 OLTP 的主要文档](in-memory-oltp-in-memory-optimization.md)   
 [Azure SQL 数据库中的内存中 OLTP 的性能和资源使用率优势](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  
 [使用内存优化改进临时表和表变量性能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   

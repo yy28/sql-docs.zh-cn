@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009377"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816718"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 
@@ -154,8 +154,6 @@ FROM FactResellerSalesXL_CCI
 使用字符串谓词下推，执行查询时针对字典中的值计算谓词，如果它符合条件，引用字典值的所有行都将自动符合条件。 这在两个方面提高了性能：
 1.  仅返回符合条件的行，从而减少了需要传递出 SCAN 节点的行数。 
 2.  显著减少了字符串比较次数。 在此示例中，只需要 100 次字符串比较，而不用比较 100 万次。 如下所述，有一些限制：    
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   不能对增量行组执行字符串谓词下推。 增量行组中的列没有字典。    
     -   如果字典大小超过 64 KB，则不能执行字符串谓词下推。    

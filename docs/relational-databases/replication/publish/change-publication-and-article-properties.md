@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764361"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710959"
 ---
 # <a name="change-publication-and-article-properties"></a>更改发布和项目属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68764361"
 |描述|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |删除项目|**sp_droparticle**|所有参数。|项目可以在创建订阅之前删除。 使用存储过程，可以删除项目的订阅；如果使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，则必须删除整个订阅，然后再重新创建订阅并进行同步。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
-|更改列筛选器。|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|新建快照。<br /><br /> 重新初始化订阅。|  
+|更改列筛选器。|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|新建快照。<br /><br /> 重新初始化订阅。|  
 |添加行筛选器。|**sp_articlefilter**|所有参数。|新建快照。<br /><br /> 重新初始化订阅。|  
-|删除行筛选器。|**sp_articlefilter**|**@article**|新建快照。<br /><br /> 重新初始化订阅。|  
-|更改行筛选器。|**sp_articlefilter**|**@filter_clause**|新建快照。<br /><br /> 重新初始化订阅。|  
+|删除行筛选器。|**sp_articlefilter**|`@article`|新建快照。<br /><br /> 重新初始化订阅。|  
+|更改行筛选器。|**sp_articlefilter**|`@filter_clause`|新建快照。<br /><br /> 重新初始化订阅。|  
 |更改行筛选器。|**sp_changearticle**|**filter**|新建快照。<br /><br /> 重新初始化订阅。|  
 |更改架构选项。|**sp_changearticle**|**schema_option**|新建快照。|  
 |更改应用快照之前处理订阅服务器上的表的方式。|**sp_changearticle**|**pre_creation_cmd**|新建快照。|  
@@ -58,7 +58,7 @@ ms.locfileid: "68764361"
 |更改 INSERT、UPDATE 和 DELETE 命令。|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|新建快照。<br /><br /> 重新初始化订阅。|  
 |更改目标表名称|**sp_changearticle**|**dest_table**|新建快照。<br /><br /> 重新初始化订阅。|  
 |更改目标表所有者（架构）。|**sp_changearticle**|**destination_owner**|新建快照。<br /><br /> 重新初始化订阅。|  
-|更改数据类型映射（仅适用于 Oracle 发布）。|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|新建快照。<br /><br /> 重新初始化订阅。|  
+|更改数据类型映射（仅适用于 Oracle 发布）。|**sp_changearticlecolumndatatype**|`@type` <br /><br /> `@length` <br /><br /> `@precision`<br /><br /> `@scale`|新建快照。<br /><br /> 重新初始化订阅。|  
   
 ## <a name="publication-properties-for-merge-replication"></a>合并复制的发布属性  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68764361"
 |更改快照前或快照后脚本。|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|新建快照（更改脚本内容时也需要）。<br /><br /> 对订阅服务器应用新脚本需要进行重新初始化。|  
 |添加联接筛选器或逻辑记录。|**sp_addmergefilter**|所有参数。|新建快照。<br /><br /> 重新初始化订阅。|  
 |删除联接筛选器或逻辑记录。|**sp_dropmergefilter**|所有参数。|新建快照。<br /><br /> 重新初始化订阅。|  
-|更改联接筛选器或逻辑记录。|**sp_changemergefilter**|**@property**<br /><br /> **@value**|新建快照<br /><br /> 重新初始化订阅。|  
+|更改联接筛选器或逻辑记录。|**sp_changemergefilter**|`@property`<br /><br /> `@value`|新建快照<br /><br /> 重新初始化订阅。|  
 |禁用参数化筛选器（启用参数化筛选器不需要任何特殊操作）。|**sp_changemergepublication**|**false** 的 **false**值|新建快照。<br /><br /> 重新初始化订阅。|  
 |启用或禁用预计算分区。|**sp_changemergepublication**|**use_partition_groups**|新建快照。|  
 |启用或禁用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 分区优化。|**sp_changemergepublication**|**keep_partition_changes**|重新初始化订阅。|  
@@ -86,7 +86,7 @@ ms.locfileid: "68764361"
 |删除在发布中使用最新参数化筛选器的项目。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  
 |删除在联接筛选器或逻辑记录中处于父级的项目（这对删除联接有副作用）。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  
 |删除所有其他环境中的项目。|**sp_dropmergearticle**|所有参数|新建快照。|  
-|包括以前未发布的列筛选器。|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|新建快照。<br /><br /> 重新初始化订阅。|  
+|包括以前未发布的列筛选器。|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|新建快照。<br /><br /> 重新初始化订阅。|  
 |添加、删除或更改行筛选器。|**sp_changemergearticle**|**subset_filterclause**|新建快照。<br /><br /> 重新初始化订阅。<br /><br /> 如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。<br /><br /> 如果项目未包含在任何联接筛选器中，您可以用不同的行筛选器删除并再次添加此项目，而无需重新初始化整个订阅。 有关添加和删除项目的详细信息，请参阅[向现有发布添加项目和从中删除项目](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |更改架构选项。|**sp_changemergearticle**|**schema_option**|新建快照。|  
 |将跟踪从列级更改为行级（从行级跟踪更改为列级跟踪不需要任何特殊操作）。|**sp_changemergearticle**|**false** 的 **false**值|新建快照。<br /><br /> 重新初始化订阅。|  
