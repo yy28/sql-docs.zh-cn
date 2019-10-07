@@ -123,12 +123,12 @@
       href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
     - name: SQL Server 各版本中的 Reporting Services 功能
       href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: 安装 Reporting Services
+- name: 安装各 Reporting Services 版本
   items:
-    - name: 安装 Reporting Services 2017
+    - name: 安装 Reporting Services
       href: ../reporting-services/install-windows/install-reporting-services.md
       items:
-        - name: 查找 Reporting Services 2017 的产品密钥
+        - name: 查找 Reporting Services 的产品密钥
           href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
     - name: 在本机模式下安装 Reporting Services 2016
       href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
@@ -1430,7 +1430,7 @@
       href: ../reporting-services/manage-my-data-alerts-in-data-alert-manager.md
     - name: 向用户和警报管理员授予权限
       href: ../reporting-services/grant-permissions-to-users-and-alerting-administrators.md
-- name: 扩展项
+- name: 扩展
   href: ../reporting-services/extensions-ssrs.md
   items:
     - name: 在 RSReportServer.Config 中自定义呈现扩展插件参数
