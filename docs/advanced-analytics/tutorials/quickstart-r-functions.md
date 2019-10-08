@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 本快速入门介绍如何使用 SQL Server 机器学习服务为高级统计计算编写 R 函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951866"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006024"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>快速入门：通过 SQL Server 机器学习服务写入高级 R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71951866"
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>创建一个存储过程来生成随机数字
 
-为简单起见，我们使用 r 包`stats` ，默认情况下，在安装了 r 的 SQL Server 机器学习服务中安装和加载了 r 包。 此包中包含数百个用于执行常用统计任务的函数，其中，`rnorm` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
+为简单起见，我们使用 R `stats` 包，默认情况下，安装和加载的 SQL Server 机器学习服务中安装了 R。 此包中包含数百个用于执行常用统计任务的函数，其中，`rnorm` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
 
 例如，在给定标准偏差为3的50情况下，以下 R 代码将返回100的平均值。
 
@@ -40,7 +40,7 @@ ms.locfileid: "71951866"
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-若要从 t-sql 调用此 r 行，请在的`sp_execute_external_script`r 脚本参数中添加 r 函数，如下所示：
+若要从 T-sql 调用此 R 行，请在 `sp_execute_external_script` 的 R 脚本参数中添加 R 函数，如下所示：
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -103,9 +103,14 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> 许多用户喜欢使用 r 中的系统计时函数（如`system.time`和`proc.time`）来捕获 r 进程使用的时间，并分析性能问题。 有关示例，请参阅教程[创建数据功能](../tutorials/walkthrough-create-data-features.md)，其中 R 计时函数嵌入到解决方案中。
+> 许多用户喜欢使用 R 中的系统计时函数（如 @no__t 0 和 `proc.time`）来捕获 R 进程使用的时间并分析性能问题。 有关示例，请参阅教程[创建数据功能](../tutorials/walkthrough-create-data-features.md)，其中 R 计时函数嵌入到解决方案中。
 
 ## <a name="next-steps"></a>后续步骤
+
+若要在 SQL Server 中使用 R 创建机器学习模型，请按照以下快速入门：
+
+> [!div class="nextstepaction"]
+> [使用 SQL Server 机器学习服务创建和评分预测模型](quickstart-r-train-score-model.md)
 
 有关 SQL Server 机器学习服务的详细信息，请参阅：
 

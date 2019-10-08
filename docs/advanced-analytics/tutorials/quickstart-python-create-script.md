@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 使用 SQL Server 机器学习服务在 SQL Server 实例中创建和运行简单的 Python 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6f7fe62f746a8f6e74ebdf9f766b76c0edc720a
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: ecf99f1ae70cf44b32955ae164dbe3017bdf5f24
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204294"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006114"
 ---
 # <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>快速入门：利用 SQL Server 机器学习服务创建和运行简单的 Python 脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ print(c, d)
 
 1. 在连接到 SQL Server 实例**SQL Server Management Studio**中打开新的查询窗口。
 
-1. 将完整的 Python 脚本传递给`sp_execute_external_script`存储过程。
+1. 将完整的 Python 脚本传递到 @no__t 0 存储过程。
 
-   通过`@script`参数传递脚本。 参数内的`@script`所有内容都必须是有效的 Python 代码。
+   通过 @no__t 参数传递脚本。 @No__t-0 参数内的所有内容都必须是有效的 Python 代码。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -60,7 +60,7 @@ print(c, d)
     '
     ```
 
-1. 计算正确的结果，Python `print`函数将结果返回到 "**消息**" 窗口。
+1. 计算正确的结果，Python `print` 函数将结果返回到 "**消息**" 窗口。
 
    其外观应与下面类似。
 
@@ -83,7 +83,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-存储过程的`sp_execute_external_script`输入包括：
+@No__t 0 存储过程的输入包括：
 
 | | |
 |-|-|
@@ -100,9 +100,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>使用输入和输出
 
-默认情况下`sp_execute_external_script` ，接受单个数据集作为输入，该数据集通常以有效的 SQL 查询的形式提供。 然后，它返回单个 Python 数据帧作为输出。
+默认情况下，`sp_execute_external_script` 接受单个数据集作为输入，通常以有效的 SQL 查询的形式提供。 然后，它返回单个 Python 数据帧作为输出。
 
-现在，让我们使用的默认输入和输出变量`sp_execute_external_script`：**InputDataSet**和**OutputDataSet**。
+现在，让我们使用默认的输入和输出变量 `sp_execute_external_script`：**InputDataSet**和**OutputDataSet**。
 
 1. 创建一个较小的测试数据表。
 
@@ -120,7 +120,7 @@ GO
     GO
     ```
 
-1. `SELECT`使用语句查询表。
+1. 使用 `SELECT` 语句查询表。
   
     ```sql
     SELECT *
@@ -131,7 +131,7 @@ GO
 
     ![PythonTestData 表的内容](./media/select-pythontestdata.png)
 
-1. 运行以下 Python 脚本。 它使用`SELECT`语句从表中检索数据，通过 Python 运行时传递数据，并以数据帧的形式返回数据。 子句定义了 SQL 返回的数据表的架构，并添加了列名*NewColName。* `WITH RESULT SETS`
+1. 运行以下 Python 脚本。 它使用 `SELECT` 语句从表中检索数据，并通过 Python 运行时传递数据，并以数据帧的形式返回数据。 @No__t-0 子句定义为 SQL 返回的数据表的架构，并添加列名称*NewColName*。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -155,12 +155,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    请注意，Python 区分大小写。 Python 脚本（**SQL_out**， **SQL_in**）中使用的输入和输出变量需要与和`@input_data_1_name` `@output_data_1_name`（包括大小写）一起定义的名称匹配。
+    请注意，Python 区分大小写。 Python 脚本（**SQL_out**， **SQL_in**）中使用的输入和输出变量需要与使用 @no__t 2 和 @no__t （包括大小写）定义的名称匹配。
 
    > [!TIP]
-   > 仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是, 你可以从 Python 代码内调用其他数据集, 还可以返回其他类型的输出和数据集。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。
+   > 仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，你可以从 Python 代码内调用其他数据集，还可以返回其他类型的输出和数据集。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。
 
-1. 你还可以使用没有输入数据的 Python 脚本生成值（`@input_data_1`设置为空白）。
+1. 你还可以使用没有输入数据的 Python 脚本生成值（@no__t 设置为空白）。
 
    下面的脚本输出文本 "hello" 和 "world"。
 
@@ -177,7 +177,7 @@ GO
 
    **结果**
 
-   ![使用@script作为输入的查询结果](./media/python-data-generated-output.png)
+   ![使用 @script 作为输入的查询结果](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python 使用前导空格对语句进行分组。 因此，当嵌入的 Python 脚本跨越多行时（如前面的脚本中所述），请勿尝试将 Python 命令缩进到与 SQL 命令串联在一起。 例如，以下脚本将生成错误：
@@ -206,7 +206,7 @@ print(sys.version)
 GO
 ```
 
-Python `print`函数将该版本返回到 "**消息**" 窗口。 在下面的示例输出中，可以看到，在这种情况下，将安装 Python 版本3.5.2。
+Python `print` 函数将该版本返回到 "**消息**" 窗口。 在下面的示例输出中，可以看到，在这种情况下，将安装 Python 版本3.5.2。
 
 **结果**
 
@@ -231,7 +231,7 @@ for i in pip.get_installed_distributions():
 GO
 ```
 
-输出来自`pip.get_installed_distributions()` Python 中，并作为`STDOUT`消息返回。
+输出来自 Python `pip.get_installed_distributions()`，并作为 @no__t 消息返回。
 
 **结果**
 
@@ -254,12 +254,13 @@ toolz 0.8.2
 
 ## <a name="next-steps"></a>后续步骤
 
-若要在 SQL Server 中使用 Python 创建机器学习模型，请按照以下快速入门：
+若要了解如何在 SQL Server 机器学习服务中使用 Python 时使用数据结构，请按照以下快速入门：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server 机器学习服务在 Python 中创建和评分预测模型](quickstart-python-train-score-model.md)
+> [在 SQL Server 中使用 Python 处理数据类型和对象机器学习服务](quickstart-python-data-structures.md)
 
-有关 SQL Server 机器学习服务的详细信息，请参阅以下文章。
+有关在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅以下文章：
 
-- [在 SQL Server 中使用 Python 处理数据类型和对象机器学习服务](quickstart-python-data-structures.md)
+- [通过 SQL Server 机器学习服务写入高级 Python 函数](quickstart-python-functions.md)
+- [使用 SQL Server 机器学习服务在 Python 中创建和评分预测模型](quickstart-python-train-score-model.md)
 - [什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)

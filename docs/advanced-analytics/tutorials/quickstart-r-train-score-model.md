@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 使用 SQL Server 机器学习服务在 R 中创建一个简单的预测模型，然后使用新数据预测结果。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aad027f84bc1116aa57c6b0bc0d7b0893519c36
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150330"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005976"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>快速入门：使用 SQL Server 机器学习服务创建和评分预测模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "71150330"
    );
    ```
 
-1. 插入内置数据集中`mtcars`的数据。
+1. 插入内置数据集中的数据 `mtcars`。
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,13 +72,13 @@ ms.locfileid: "71150330"
    ```
 
    > [!TIP]
-   > R 运行时包含许多或大或小的数据集。 若要获取随 r 一起安装的数据集列表`library(help="datasets")` ，请在 r 命令提示符下键入。
+   > R 运行时包含许多或大或小的数据集。 若要获取随 R 一起安装的数据集列表，请在 R 命令提示符下键入 `library(help="datasets")`。
 
 ### <a name="create-and-train-the-model"></a>创建和训练模型
 
-Car 速度数据包含两列：数值：动力（`hp`）和权重（`wt`）。 在此数据中，你将创建一个通用线性模型（GLM），该模型会估算车辆已调整为手动传输的概率。
+Car 速度数据包含两列：数字：动力（`hp`）和权重（`wt`）。 在此数据中，你将创建一个通用线性模型（GLM），该模型会估算车辆已调整为手动传输的概率。
 
-若要生成模型, 请在 R 代码中定义公式, 并将数据作为输入参数传递。
+若要生成模型，请在 R 代码中定义公式，并将数据作为输入参数传递。
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -98,7 +98,7 @@ END;
 GO
 ```
 
-- 的第一个参数`glm`是*公式*参数, 该参数`am` `hp + wt`定义为依赖于。
+- @No__t 的第一个参数是*公式*参数，它将 `am` 定义为依赖于 @no__t 3。
 - 输入数据存储在 SQL 查询填充的变量 `MTCarsData` 中。 如果未将特定的名称分配到输入数据，默认变量名称将是 _InputDataSet_。
 
 ### <a name="store-the-model-in-the-sql-database"></a>在 SQL 数据库中存储模型
@@ -107,7 +107,7 @@ GO
 
 1. 创建一个表来存储模型。
 
-   创建模型的 R 包的输出通常是一个二进制对象。 因此, 存储模型的表必须提供**varbinary (max)** 类型的列。
+   创建模型的 R 包的输出通常是一个二进制对象。 因此，存储模型的表必须提供**varbinary （max）** 类型的列。
 
    ```sql
    CREATE TABLE GLM_models (
@@ -138,7 +138,7 @@ GO
 
 ### <a name="create-a-table-of-new-data"></a>创建新数据表
 
-首先, 使用新数据创建一个表。
+首先，使用新数据创建一个表。
 
 ```sql
 CREATE TABLE dbo.NewMTCars(
@@ -170,7 +170,7 @@ GO
 1. 获取新的输入数据
 1. 调用与该模型兼容的 R 预测函数
 
-随着时间的推移，表可能包含多个 R 模型、使用不同的参数或算法生成，或在不同的数据子集上定型。 在此示例中，我们将使用名为`default model`的模型。
+随着时间的推移，表可能包含多个 R 模型、使用不同的参数或算法生成，或在不同的数据子集上定型。 在此示例中，我们将使用名为 `default model` 的模型。
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3)));
 ```
 
-上述脚本执行以下步骤:
+上述脚本执行以下步骤：
 
 - 使用 SELECT 语句从表中获取单个模型，并将它作为输入参数传递。
 
@@ -201,7 +201,7 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 - 将带有相应参数的 `predict` 函数应用到该模型，并提供新的输入数据。
 
 > [!NOTE]
-> 在此示例中, `str`在测试阶段添加了函数, 以检查从 R 返回的数据的架构。稍后可以删除该语句。
+> 在此示例中，在测试阶段添加了 `str` 函数，以检查从 R 返回的数据的架构。稍后可以删除该语句。
 >
 > R 脚本中使用的列名不必传递到存储过程输出。 此处使用 WITH RESULTS 子句来定义一些新的列名。
 
@@ -213,12 +213,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解如何在 SQL Server 中处理 R 数据类型，请遵循以下快速入门：
+有关 SQL Server 机器学习服务的详细信息，请参阅：
 
-> [!div class="nextstepaction"]
-> [在 SQL Server 中使用 R 处理数据类型和对象机器学习服务](quickstart-r-data-types-and-objects.md)
-
-有关 SQL Server 机器学习服务的详细信息，请参阅以下文章。
-
-- [通过 SQL Server 机器学习服务写入高级 R 函数](quickstart-r-functions.md)
 - [什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)

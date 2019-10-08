@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: 使用 SQL Server 机器学习服务在 SQL Server 实例中创建和运行简单的 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d723fa9b90659eb31e96626a3a85c1299c17fa2f
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: e49b01d3c3a4ac743d6614d66cc7864aee946460
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150310"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006040"
 ---
 # <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>快速入门：利用 SQL Server 机器学习服务创建和运行简单的 R 脚本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ print(c(c, d))
 
 1. 打开**SQL Server Management Studio** ，然后连接到 SQL Server 实例。
 
-1. 将完整的 R 脚本传递给`sp_execute_external_script`存储过程。
+1. 将完整的 R 脚本传递到 @no__t 0 存储过程。
 
-   通过`@script`参数传递脚本。 参数内的`@script`所有内容都必须是有效的 R 代码。
+   通过 @no__t 参数传递脚本。 @No__t 参数内的所有内容都必须是有效的 R 代码。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -62,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. 计算正确的结果，并且 R `print`函数将结果返回到 "**消息**" 窗口。
+1. 计算正确的结果，并且 R `print` 函数将结果返回到 "**消息**" 窗口。
 
    其外观应与下面类似。
 
@@ -85,7 +85,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-存储过程的`sp_execute_external_script`输入包括：
+@No__t 0 存储过程的输入包括：
 
 | | |
 |-|-|
@@ -102,9 +102,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>使用输入和输出
 
-默认情况下`sp_execute_external_script` ，接受单个数据集作为输入，该数据集通常以有效的 SQL 查询的形式提供。 然后，它返回单个 R 数据帧作为输出。
+默认情况下，`sp_execute_external_script` 接受单个数据集作为输入，通常以有效的 SQL 查询的形式提供。 然后，它返回单个 R 数据帧作为输出。
 
-现在，让我们使用的默认输入和输出变量`sp_execute_external_script`：**InputDataSet**和**OutputDataSet**。
+现在，让我们使用默认的输入和输出变量 `sp_execute_external_script`：**InputDataSet**和**OutputDataSet**。
 
 1. 创建一个较小的测试数据表。
 
@@ -122,7 +122,7 @@ GO
     GO
     ```
 
-1. `SELECT`使用语句查询表。
+1. 使用 `SELECT` 语句查询表。
   
     ```sql
     SELECT *
@@ -133,7 +133,7 @@ GO
 
     ![RTestData 表的内容](./media/select-rtestdata.png)
 
-1. 运行以下 R 脚本。 它使用`SELECT`语句从表中检索数据，通过 R 运行时传递数据，并以数据帧的形式返回数据。 子句定义了 SQL 返回的数据表的架构，并添加了列名*NewColName。* `WITH RESULT SETS`
+1. 运行以下 R 脚本。 它使用 `SELECT` 语句从表中检索数据，并通过 R 运行时传递数据，并以数据帧的形式返回数据。 @No__t-0 子句定义为 SQL 返回的数据表的架构，并添加列名称*NewColName*。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -157,12 +157,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    请注意，R 区分大小写。 R 脚本（**SQL_out**， **SQL_in**）中使用的输入和输出变量需要与和`@input_data_1_name` `@output_data_1_name`（包括大小写）一起定义的名称匹配。
+    请注意，R 区分大小写。 R 脚本（**SQL_out**， **SQL_in**）中使用的输入和输出变量需要与使用 @no__t 2 和 @no__t （包括大小写）定义的名称匹配。
 
    > [!TIP]
    > 仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，可以从 R 代码内调用其他数据集，并且除数据集以外，还可以返回其他类型的输出。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。
 
-1. 你还可以使用没有输入数据的 R 脚本生成值（`@input_data_1`设置为空白）。
+1. 你还可以使用没有输入数据的 R 脚本生成值（@no__t 设置为空白）。
 
    下面的脚本输出文本 "hello" 和 "world"。
 
@@ -178,7 +178,7 @@ GO
 
     **结果**
 
-    ![使用@script作为输入的查询结果](./media/r-data-generated-output.png)
+    ![使用 @script 作为输入的查询结果](./media/r-data-generated-output.png)
 
 ## <a name="check-r-version"></a>检查 R 版本
 
@@ -190,7 +190,7 @@ EXECUTE sp_execute_external_script @language = N'R'
 GO
 ```
 
-R `print`函数将该版本返回到 "**消息**" 窗口。 在下面的示例输出中，可以看到，在这种情况下，将安装 R 版本3.4.4。
+R `print` 函数将版本返回到 "**消息**" 窗口。 在下面的示例输出中，可以看到，在这种情况下，将安装 R 版本3.4.4。
 
 **结果**
 
@@ -232,7 +232,7 @@ WITH result sets((
             ));
 ```
 
-输出来自`installed.packages()` R，并作为结果集返回。
+输出来自 R `installed.packages()`，作为结果集返回。
 
 **结果**
 
@@ -240,13 +240,13 @@ WITH result sets((
 
 ## <a name="next-steps"></a>后续步骤
 
-若要在 SQL Server 中使用 R 创建机器学习模型，请按照以下快速入门：
+若要了解如何在 SQL Server 机器学习服务中使用 R 时使用数据结构，请按照以下快速入门：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server 机器学习服务创建和评分预测模型](quickstart-r-train-score-model.md)
+> [在 SQL Server 中使用 R 处理数据类型和对象机器学习服务](quickstart-r-data-types-and-objects.md)
 
-有关 SQL Server 机器学习服务的详细信息，请参阅以下文章。
+有关在 SQL Server 机器学习服务中使用 R 的详细信息，请参阅以下文章：
 
-- [在 SQL Server 中使用 R 处理数据类型和对象机器学习服务](quickstart-r-data-types-and-objects.md)
 - [通过 SQL Server 机器学习服务写入高级 R 函数](quickstart-r-functions.md)
+- [使用 SQL Server 机器学习服务创建和评分预测模型](quickstart-r-train-score-model.md)
 - [什么是 SQL Server 机器学习服务（Python 和 R）？](../what-is-sql-server-machine-learning.md)
