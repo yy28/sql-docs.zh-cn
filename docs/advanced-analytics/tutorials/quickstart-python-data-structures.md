@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006056"
+ms.locfileid: "72008427"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 中使用 Python 处理数据类型和对象机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ SQL Server 依赖于 Python **pandas**包，后者非常适合使用表格数据
 - 数据帧的单个值称为 "单元"，并由 "索引" 访问。
 
 如果数据帧需要表格结构，如何将计算的单个结果公开为数据帧？ 一种答案是将单个标量值表示为序列，这可以轻松地转换为数据帧。 
+
+> [!NOTE]
+> 返回日期时，SQL 中的 Python 使用日期时间范围为 1753-01-01 （-53690）到 9999-12-31 （2958463）的日期时间。 
 
 ## <a name="prerequisites"></a>先决条件
 
